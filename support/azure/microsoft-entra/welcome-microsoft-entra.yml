@@ -22,7 +22,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Microsoft Entra ID troubleshooting documentation
-            url: ../entra-id/welcome-entra-id.yml
+            url: entra-id/welcome-entra-id.yml
 
  # Card
   - title: Global Secure Access
@@ -30,7 +30,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Global Secure Access client For Windows issues
-            url: ../entra-id/dir-dmns-obj/troubleshoot-global-secure-access-client-windows-issues.md
+            url: global-secure-access/troubleshoot-global-secure-access-client-windows-issues.md
 
  # Card
   - title: Get support
@@ -38,6 +38,6 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Send Microsoft Authenticator logs and get an incident ID
-            url: ../entra-id/ad-dmn-services/send-microsoft-authenticator-logs.md
+            url: entra-id/ad-dmn-services/send-microsoft-authenticator-logs.md
           - text: Support data collection
-            url: ../entra-id/ad-dmn-services/support-data-collection-diagnostic-logs.md
+            url: entra-id/ad-dmn-services/support-data-collection-diagnostic-logs.md

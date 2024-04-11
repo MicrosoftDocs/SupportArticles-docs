@@ -3859,6 +3859,736 @@
         "source_path": "virtual-machine-scale-sets/vm-extension-provisioning-errors.md",
         "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/extensions/vm-extension-provisioning-errors",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/troubleshoot-global-secure-access-client-windows-issues.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/global-secure-access/troubleshoot-global-secure-access-client-windows-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/faq-set-up-enterprise-work-remotely.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/faq-set-up-enterprise-work-remotely",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/upgrade-fails-error-code-1603.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/upgrade-fails-error-code-1603",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/unable-configure-pwd-writeback-error.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/unable-configure-pwd-writeback-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/unable-install-aad-module-powershell.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/unable-install-aad-module-powershell",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/unable-authenticate-credentials.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/unable-authenticate-credentials",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/unable-communicate-windows-service.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/unable-communicate-windows-service",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/troubleshoot-permission-issue-sync-service-manager.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/troubleshoot-permission-issue-sync-service-manager",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/troubleshoot-pwd-sync.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/troubleshoot-pwd-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/troubleshoot-aad-connect-fails-to-install-upgraded-version.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/troubleshoot-aad-connect-fails-to-install-upgraded-version",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/troubleshoot-aad-connect-objects-attributes.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/troubleshoot-aad-connect-objects-attributes",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/size-limit-exceeded.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/size-limit-exceeded",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/slow-performance-high-cpu-usage.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/slow-performance-high-cpu-usage",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/services-sync-not-start.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/services-sync-not-start",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/sg-mail-enabled-sync.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/sg-mail-enabled-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/rpc-errors-affecting-aadconnect.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/rpc-errors-affecting-aadconnect",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/separate-pwds-required-computer-work-account.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/separate-pwds-required-computer-work-account",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/pwd-not-sync.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/pwd-not-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/resolve-model-database-corruption-sqllocaldb.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/resolve-model-database-corruption-sqllocaldb",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/pwd-hash-sync-stops-work.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/pwd-hash-sync-stops-work",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/pwd-hash-sync-stop-work-fim.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/pwd-hash-sync-stop-work-fim",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/proxyaddresses-attribute-populate.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/proxyaddresses-attribute-populate",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/pwd-hash-sync-auto-enable.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/pwd-hash-sync-auto-enable",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/password-writeback-not-compliant-on-premises-ad-pwd-policy.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/password-writeback-not-compliant-on-premises-ad-pwd-policy",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/password-writeback-servers-need-time-catch-up.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/password-writeback-servers-need-time-catch-up",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/password-writeback-error-code-sspr-009.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/password-writeback-error-code-sspr-009",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/password-writeback-error-code-sspr-0029.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/password-writeback-error-code-sspr-0029",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/password-writeback-general-troubleshooting-steps.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/password-writeback-general-troubleshooting-steps",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/password-writeback-microsoft-365-admin-center.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/password-writeback-microsoft-365-admin-center",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/objects-dont-sync-ad-sync-tool.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/objects-dont-sync-ad-sync-tool",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/outdate-information-displays.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/outdate-information-displays",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/password-writeback-access-rights-permissions.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/password-writeback-access-rights-permissions",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/password-writeback-error-code-8023062c.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/password-writeback-error-code-8023062c",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/number-add-username-email-address.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/number-add-username-email-address",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/object-deletions-not-sync.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/object-deletions-not-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/installation-configuration-wizard-errors.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/installation-configuration-wizard-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/load-file-or-assembly-error.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/load-file-or-assembly-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/new-msoldomain-cmdle-add-subdomain.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/new-msoldomain-cmdle-add-subdomain",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/high-cpu-usage.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/high-cpu-usage",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/failed-get-address-method.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/failed-get-address-method",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/fail-connect-azure-information-protection-powershell.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/fail-connect-azure-information-protection-powershell",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/exclude-user-primary-group.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/exclude-user-primary-group",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/error-code-1789-configuration-wizard.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/error-code-1789-configuration-wizard",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/exceed-number-objects-synced.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/exceed-number-objects-synced",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/directory-sync-stop-register.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/directory-sync-stop-register",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/domain-based-filtering-fail-sync.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/domain-based-filtering-fail-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/email-addresses-not-sync.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/email-addresses-not-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/computers-3-hour-delay-boot.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/computers-3-hour-delay-boot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/could-not-verify-account-reset-pwd.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/could-not-verify-account-reset-pwd",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/computer-must-joined-domain.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/computer-must-joined-domain",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/cannot-work-automatic-upgrade.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/cannot-work-automatic-upgrade",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/certificate-based-authenticate-issue.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/certificate-based-authenticate-issue",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/cannot-manage-objects.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/cannot-manage-objects",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/cannot-run-scripts-powershell.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/cannot-run-scripts-powershell",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/cannot-signin-convert-domain-federated.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/cannot-signin-convert-domain-federated",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/admin-credentials-supplied-not-valid.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/admin-credentials-supplied-not-valid",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/cannot-enable-device-writeback.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/cannot-enable-device-writeback",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/aad-management-agent-hangs-during-import.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/aad-management-agent-hangs-during-import",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/aad-sync-services-config-wizard-error.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/aad-sync-services-config-wizard-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/unknown-error-occurred-sign-in-assistant.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/unknown-error-occurred-sign-in-assistant",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/user-displayed-disabled-or-enabled-mfa.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/user-displayed-disabled-or-enabled-mfa",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/user-name-pwd-incorrect.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/user-name-pwd-incorrect",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/unable-reset-pwd-response-call.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/unable-reset-pwd-response-call",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/unable-sync-system-discovery-mailbox.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/unable-sync-system-discovery-mailbox",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/unexpected-error-reset-pwd.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/unexpected-error-reset-pwd",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/text-voice-call-verification-code-mfa-not-send.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/text-voice-call-verification-code-mfa-not-send",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/troubleshoot-azure-mfa-issue.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/troubleshoot-azure-mfa-issue",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/federation-service-identifier-specified.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/federation-service-identifier-specified",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/multi-factor-auth-second-verification.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/multi-factor-auth-second-verification",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/request-not-processed-reset-pwd.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/request-not-processed-reset-pwd",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/federated-users-forced-sign-in.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/federated-users-forced-sign-in",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/federated-users-sign-in-two-times-mfa.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/federated-users-sign-in-two-times-mfa",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/faulty-split-brain-dns-configuration-prevent-sso.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/faulty-split-brain-dns-configuration-prevent-sso",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/federated-user-prompt-enter-credentials.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/federated-user-prompt-enter-credentials",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/esr-settings-not-sync-mfa-enabled.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/esr-settings-not-sync-mfa-enabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/event-id-6065-user-cant-sign.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/event-id-6065-user-cant-sign",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/cant-set-up-mfa-five-devices-registered.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/cant-set-up-mfa-five-devices-registered",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/code-403-azure-seamless-sso-win10.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/code-403-azure-seamless-sso-win10",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/confirm-signin-info-workplace-join.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/confirm-signin-info-workplace-join",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/cannot-connect-cloud-services-powershell.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/cannot-connect-cloud-services-powershell",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/cannot-use-mfa-signin-lose-phone.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/cannot-use-mfa-signin-lose-phone",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/cannot-verify-account-reset-pwd.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/cannot-verify-account-reset-pwd",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/authorization-request-denied-graph-api.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/authorization-request-denied-graph-api",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/adal-authenticate-android-devices-fail.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/adal-authenticate-android-devices-fail",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/authentication-fails-with-error.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/authentication-fails-with-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/mfa/account-lockout-adfs-window-server.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/mfa/account-lockout-adfs-window-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/governance/unknown-actors-in-audit-reports.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/governance/unknown-actors-in-audit-reports",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/governance/verify-first-party-apps-sign-in.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/governance/verify-first-party-apps-sign-in",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/troubleshoot-user-creation-deletion-issues.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/troubleshoot-user-creation-deletion-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/troubleshoot-dynamic-groups.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/troubleshoot-dynamic-groups",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/remove-msoluser-user-not-found-recyclebin.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/remove-msoluser-user-not-found-recyclebin",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/term-cmdlet-name-not-recognized-aad-cmdlet.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/term-cmdlet-name-not-recognized-aad-cmdlet",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/pwd-change-not-save.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/pwd-change-not-save",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/no-local-admin-privileges-azure-ad-joined-device.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/no-local-admin-privileges-azure-ad-joined-device",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/pending-devices.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/pending-devices",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/method-invocation-failed-error.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/method-invocation-failed-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/cannot-delete-directory-azure-portal.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/cannot-delete-directory-azure-portal",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/cant-open-aad-module-powershell.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/cant-open-aad-module-powershell",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/cant-perform-workplace-join.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/dir-dmns-obj/cant-perform-workplace-join",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/b2c/server-error-application.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/b2c/server-error-application",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/b2c/server-error-application-exception.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/b2c/server-error-application-exception",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/b2c/cannot-delete-directory.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/b2c/cannot-delete-directory",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/b2c/error-sign-into-app.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/b2c/error-sign-into-app",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/unable-delete-app.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/unable-delete-app",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/troubleshoot-adding-apps.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/troubleshoot-adding-apps",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/troubleshoot-sign-in-saml-based-apps.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/troubleshoot-sign-in-saml-based-apps",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/reply-url-redirected-to-localhost.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/reply-url-redirected-to-localhost",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/send-notification-details.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/send-notification-details",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-aadsts7000112-application-is-disabled.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-aadsts7000112-application-is-disabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-aadsts7000110-request-is-ambiguous.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-aadsts7000110-request-is-ambiguous",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-aadsts500571-guest-user-account-is-disabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-aadsts50057-user-account-is-disabled.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-aadsts50057-user-account-is-disabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-AADSTS75011-auth-method-mismatch.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-AADSTS75011-auth-method-mismatch",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/app-doesnt-appear.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/app-doesnt-appear",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/app-takes-long-time-appear.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/app-takes-long-time-appear",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-AADSTS50003-cert-or-key-not-configured.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-AADSTS50003-cert-or-key-not-configured",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-AADSTS50011-redirect-uri-mismatch.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-AADSTS50011-redirect-uri-mismatch",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-AADSTS50011-reply-url-mismatch.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-AADSTS50011-reply-url-mismatch",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-AADSTS50020-user-account-identity-provider-does-not-exist",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-AADSTS50105-user-not-assigned-role.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-AADSTS50105-user-not-assigned-role",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-AADSTS70001-app-not-found-in-directory.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-AADSTS70001-app-not-found-in-directory",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-AADSTS75005-not-a-valid-saml-request.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-AADSTS75005-not-a-valid-saml-request",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-AADSTS650056-misconfigured-app.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-AADSTS650056-misconfigured-app",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/app-integration/error-code-AADSTS750054-saml-request-not-present.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/app-integration/error-code-AADSTS750054-saml-request-not-present",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/send-microsoft-authenticator-logs.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/send-microsoft-authenticator-logs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/support-data-collection-diagnostic-logs.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/support-data-collection-diagnostic-logs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/understand-ad-fs-sign-in-events-azure-ad-connect-health.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/understand-ad-fs-sign-in-events-azure-ad-connect-health",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/idfix-not-valid-win32-application.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/idfix-not-valid-win32-application",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/maximum-number-of-devices-joined-workplace.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/maximum-number-of-devices-joined-workplace",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/reference-connect-device-disappearance.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/reference-connect-device-disappearance",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/security-context-not-associate-domian.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/security-context-not-associate-domian",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/azure-ad-ipv6-support.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/azure-ad-ipv6-support",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/cant-connect-service-error-register-device.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/cant-connect-service-error-register-device",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/enable-support-tls-environment.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/enable-support-tls-environment",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/azure-ad-hybrid-sync-no-privileges-install-msi.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/azure-ad-hybrid-sync-no-privileges-install-msi",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/azure-ad-hybrid-sync-no-such-object-on-server.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/azure-ad-hybrid-sync-no-such-object-on-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/azure-ad-hybrid-sync-agent-install-welcome.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/azure-ad-hybrid-sync-agent-install-welcome",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/azure-ad-hybrid-sync-gmsa-set-logon-service.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/azure-ad-hybrid-sync-gmsa-set-logon-service",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/aad-connect-health-data-freshness.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/ad-dmn-services/aad-connect-health-data-freshness",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/yellow-exclamation-mark-office2013.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/yellow-exclamation-mark-office2013",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/user-object-missing-filtered.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/user-object-missing-filtered",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/use-upn-matching-identity-sync.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/use-upn-matching-identity-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/unknown-error-0x80005000.md",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/unknown-error-0x80005000",
+        "redirect_document_id": true
       }
   ]
 }
