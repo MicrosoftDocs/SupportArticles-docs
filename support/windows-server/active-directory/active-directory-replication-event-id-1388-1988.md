@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication Event ID 1388 or 1988 - A lingering object is detected
 description: Helps you troubleshoot Active Directory Replication Event ID 1388 and 1988.
-ms.date: 12/26/2023
+ms.date: 04/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -28,13 +28,17 @@ If a destination domain controller logs [Event ID 1388](#event-id-1388) or [Even
 This event indicates that a destination domain controller that does not have strict replication consistency enabled received a request to update an object that does not reside in the local copy of the Active Directory database. In response, the destination domain controller requested the full object from the source replication partner. In this way, a lingering object was replicated to the destination domain controller. Therefore, the lingering object was reintroduced into the directory.
 
 > [!IMPORTANT]
-> When Event ID 1388 occurs, you cannot use Lingering Object Liquidator v2 (aka LOLv2) or the Repadmin tool to remove lingering objects.   
-> For information about how to remove lingering objects in this case, see:  
-> [Lingering objects may remain after you bring an out-of-date global catalog server back online](lingering-objects-remain.md).  
-> [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)  
-> [Introducing Lingering Object Liquidator v2](/archive/blogs/askds/introducing-lingering-object-liquidator-v2)  
-> [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)  
+> When Event ID 1388 occurs, you cannot use Lingering Object Liquidator v2 (aka LOLv2) or the Repadmin tool to remove lingering objects.
+>
+> For information about how to remove lingering objects in this case, see:
+>
+> - [Lingering objects may remain after you bring an out-of-date global catalog server back online](lingering-objects-remain.md).  
+> - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)  
+> - [Introducing Lingering Object Liquidator v2](/archive/blogs/askds/introducing-lingering-object-liquidator-v2)  
+> - [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+>
 > The procedures and information in this article apply to the removal of lingering objects from global catalog servers as well as from domain controllers that are not global catalog servers.
+
 The event text identifies the source domain controller and the outdated (lingering) object. The following is an example of the event text:
 
 > Log Name: Directory Service  
@@ -101,8 +105,7 @@ To remove lingering objects, do the following:
     1. The directory partition of the object
     2. The source domain controller that attempted replication of the lingering object
 2. [Use Repadmin to identify the GUID of an authoritative domain controller](#use-repadmin-to-identify-the-guid-of-an-authoritative-domain-controller).
-1. Use [LOLv2 ](https://www.microsoft.com/en-us/download/details.aspx?id=56051)or [Repadmin ](#use-repadmin-to-remove-lingering-objects)to remove lingering objects.
-
+3. Use [LOLv2](https://www.microsoft.com/download/details.aspx?id=56051) or [Repadmin](#use-lolv2-or-repadmin-to-remove-lingering-objects)to remove lingering objects.
 4. [Enable strict replication consistency](#enable-strict-replication-consistency), if necessary.
 5. [Ensure that strict replication consistency is enabled for newly promoted domain controllers](#ensure-that-strict-replication-consistency-is-enabled-for-newly-promoted-domain-controllers), if necessary.
 
@@ -138,15 +141,15 @@ Requirements:
 - Membership in **Domain Admins** in the domain of the domain controller that has lingering objects, or **Enterprise Admins** if the directory partition that has lingering objects is the configuration or schema directory partition, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 - Operating system: supported version of Windows Server.
 
-- The preferred method to remove lingering objects is using [LOLv2](https://www.microsoft.com/en-us/download/details.aspx?id=56051). In some cases, wherein LOLv2 cannot be used, you can use Repadmin.exe
+- The preferred method to remove lingering objects is using [LOLv2](https://www.microsoft.com/download/details.aspx?id=56051). In some cases, wherein LOLv2 cannot be used, you can use Repadmin.exe
 
-More information about Lingering Object Liquidator v2 (LoLv2):  
-[Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)   
-[Introducing Lingering Object Liquidator v2](/archive/blogs/askds/introducing-lingering-object-liquidator-v2)   
-[Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+More information about Lingering Object Liquidator v2 (LoLv2):
 
-####   
-Steps to use Repadmin to remove lingering objects:
+- [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)
+- [Introducing Lingering Object Liquidator v2](/archive/blogs/askds/introducing-lingering-object-liquidator-v2)
+- [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+
+#### Steps to use Repadmin to remove lingering objects:
 
 1. Open a Command Prompt as an administrator: On the **Start** menu, right-click **Command Prompt**, and then click **Run as administrator**. If the **User Account Control** dialog box appears, provide Domain Admins or Enterprise Admins credentials, if required, and then click **Continue**.
 
