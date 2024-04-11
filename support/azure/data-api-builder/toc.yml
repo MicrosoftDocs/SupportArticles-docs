@@ -1,6 +1,6 @@
 - name: Welcome
   href: index.yml
-- name: Troubleshoot installation
+- name: Troubleshoot Data API builder installation
   href: installation.md
 - name: Troubleshoot usage
   href: usage.md
