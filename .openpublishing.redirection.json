@@ -11159,6 +11159,11 @@
       "source_path": "support/system-center/vmm/creating-protection-group-fails.md",
       "redirect_url": "/troubleshoot/azure/site-recovery/creating-protection-group-fails",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/information-mats-sdp.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": true
     }
   ]
 }
