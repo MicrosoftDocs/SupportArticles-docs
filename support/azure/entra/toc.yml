@@ -7,7 +7,7 @@
     href: entra-id/welcome-entra-id.yml
 - name: Global Secure Access
   items:
-  - name: Troubleshoot Global Secure Access client for Windows issues
+  - name: Global Secure Access troubleshooting documentation
     href: global-secure-access/welcome-global-secure-access.yml
 - name: Get support
   items:
