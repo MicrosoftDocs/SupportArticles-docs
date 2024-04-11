@@ -3874,11 +3874,6 @@
         "source_path": "cloud-services/extended/deploy/index.md",
         "redirect_url": "/troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended",
         "redirect_document_id": false
-      },
-      {
-        "source_path": "cloud-services/extended/deploy/index.md",
-        "redirect_url": "/troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended",
-        "redirect_document_id": false
       }
   ]
 }
