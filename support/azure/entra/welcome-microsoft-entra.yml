@@ -29,8 +29,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot Global Secure Access client For Windows issues
-            url: global-secure-access/troubleshoot-global-secure-access-client-windows-issues.md
+          - text: Global Secure Access client troubleshooting documentation
+            url: global-secure-access/welcome-global-secure-access.yml
 
  # Card
   - title: Get support
