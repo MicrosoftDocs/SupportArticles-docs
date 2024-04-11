@@ -7,7 +7,7 @@ ms.author: abizerh
 editor: v-jsitser
 ms.reviewer: tdetzner, pudwivedi, joflore, shacharrozin, azureidcic, v-leedennis
 ms.service: entra-id
-ms.custom: sap:Devices
+ms.custom: sap:Private Access
 ---
 # Troubleshoot issues in the Global Secure Access client for Windows
 
