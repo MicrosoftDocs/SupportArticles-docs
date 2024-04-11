@@ -23,6 +23,8 @@
           href: ../administration/incorrect-settings.md
         - name: Can't connect to Outlook using POP/IMAP
           href: ../administration/cannot-connect-mailbox-pop-imap-outlook.md
+        - name: Can't connect to Security & Compliance PowerShell
+          href: ../administration/cannot-connect-to-security-compliance-powershell.md
         - name: Can't disable the Enable Forwarding option
           href: ../administration/convert-value-error-disabling-enable-forwarding-option.md
         - name: Can't manage Send on Behalf permissions
