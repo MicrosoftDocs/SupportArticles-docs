@@ -3721,6 +3721,236 @@
         "redirect_document_id": false
       },
       {
+        "source_path": "azure-monitor/app-insights/agent/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-monitor/app-insights/availability/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-monitor/app-insights/data/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-monitor/app-insights/debug/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-monitor/app-insights/telemetry/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/linux-agents/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/windows-agents/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/workspaces/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/linux-agent-missing-heartbeats.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agents/linux-agent-missing-heartbeats",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/linux-agent-performance-counter-missing.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agents/linux-agent-performance-counter-missing",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/ssl-connectivity-mma-windows-powershell.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/windows-agents/ssl-connectivity-mma-windows-powershell",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/troubleshoot-webpages-issues.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/troubleshoot-webpages-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/javascript-sdk-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/javascript-sdk-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/java-2x-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/java-2x-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/java-standalone-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/java-standalone-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/asp-net-troubleshoot-no-data.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/asp-net-troubleshoot-no-data",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/availability-monitoring-common-issues-faq.yml",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/availability/availability-monitoring-common-issues-faq",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/workspace-data-export-faq.yml",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspaces/workspace-data-export-faq",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/error-code-0x80090016-keyset-does-not-exist.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspaces/error-code-0x80090016-keyset-does-not-exist",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/resolve-windows-agent-installation-issues.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/windows-agents/resolve-windows-agent-installation-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/windows-could-not-start-mma.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/windows-agents/windows-could-not-start-mma",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/troubleshoot-app-insights-nodejs.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/data/troubleshoot-app-insights-nodejs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/troubleshoot-portal-connectivity.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/availability/troubleshoot-portal-connectivity",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/usage-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/availability/usage-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/webpages-not-get-request-context-header.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/webpages-not-get-request-context-header",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/opentelemetry-troubleshooting-nodejs.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/opentelemetry-troubleshooting-nodejs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/opentelemetry-troubleshooting-python.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/opentelemetry-troubleshooting-python",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/profiler-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/availability/profiler-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/status-monitor-v2-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/agent/status-monitor-v2-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/missing-cpu-total-committed-memory-metrics.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/availability/missing-cpu-total-committed-memory-metrics",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/opentelemetry-troubleshooting-java.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/opentelemetry-troubleshooting-java",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/intermittent-test-failure-protocol-error.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/availability/intermittent-test-failure-protocol-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/internal-server-availability-tests-firewall.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/availability/internal-server-availability-tests-firewall",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/diagnose-ping-test-failure.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/availability/diagnose-ping-test-failure",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/duplicate-telemetry-data.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/duplicate-telemetry-data",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/enable-self-diagnostics.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/enable-self-diagnostics",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/how-to-update-third-party-server-configuration.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/data/how-to-update-third-party-server-configuration",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/daily-cap-unexpected-behaviors.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/availability/daily-cap-unexpected-behaviors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/change-analysis-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/agent/change-analysis-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/code-optimizations-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/availability/code-optimizations-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/mma-troubleshoot-basics.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/windows-agents/mma-troubleshoot-basics",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/snapshot-debugger-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/debug/snapshot-debugger-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/opentelemetry-troubleshooting-dotnet.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/opentelemetry-troubleshooting-dotnet",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/erased-proxy-settings-microsoft-monitoring-agent.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/windows-agents/erased-proxy-settings-microsoft-monitoring-agent",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/auto-instrumentation-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/telemetry/windows-agents/auto-instrumentation-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/investigate-missing-telemetry.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/telemetry/windows-agents/investigate-missing-telemetry",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "virtual-machine-scale-sets/delete/index.md",
         "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
         "redirect_document_id": false
