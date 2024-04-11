@@ -14,7 +14,7 @@ This article helps you resolve an error in Microsoft SQL Server that prevents a 
 
 ## Symptoms
 
-You might receive the following error message if there is a mismatch in encryption settings both on the client and server:
+You might receive the following error message if there's a mismatch in encryption settings both on the client and server:
 
 > An existing connection was forcibly closed by the remote host (OS error 10054)
 
@@ -37,7 +37,7 @@ To resolve this error, modify the following registry key value on the server to 
 
 Enabling RSA encryption on the server usually doesn't create any security risk for your environment.
 
-For more details about the TLS and RSA configuration, see [Restrict cryptographic algorithms and protocols](../../../windows-server/certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md).
+For more information about the Transport Layer Security (TLS) and RSA configuration, see [Restrict cryptographic algorithms and protocols](../../../windows-server/certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md).
 
 ## See also
 
