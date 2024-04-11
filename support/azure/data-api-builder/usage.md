@@ -70,7 +70,7 @@ To resolve this issue, follow these steps:
 
 If you still encounter the error, ensure that you select **"Allow Azure services and resources to access this server"** for the **Exceptions** in the networking page of your Azure Database resource. This option configures the firewall to allow connections from IP addresses allocated to any Azure service or asset, including connections from the subscriptions of other customers.
 
-![Selected the "Allow Azure services and resources to access this server" checkbox](media/allow-azure-resources-to-access-server.png)
+ :::image type="content" source="media/usage/allow-azure-resources-to-access-server.png" alt-text="Screenshot that shows the 'Allow Azure services and resources to access this server' checkbox.":::
 
 ## REST endpoints
 
