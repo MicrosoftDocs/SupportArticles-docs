@@ -3911,6 +3911,16 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "azure-monitor/app-insights/auto-instrumentation-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/telemetry/windows-agents/auto-instrumentation-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/investigate-missing-telemetry.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/telemetry/windows-agents/investigate-missing-telemetry",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "virtual-machine-scale-sets/delete/index.md",
         "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
         "redirect_document_id": false

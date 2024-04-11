@@ -276,4 +276,4 @@ If tests performed by using PowerShell or curl fail to send telemetry to the ing
 - The ingestion endpoint that the SDK connects to may require TLS 1.2, but your application may by default use TLS 1.0 or TLS 1.1.
 - You may have more than one [Azure Monitor Private Link](/azure/azure-monitor/logs/private-link-security) impacting your private network, which may overwrite your DNS entries to resolve the ingestion endpoint to the wrong private IP address.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

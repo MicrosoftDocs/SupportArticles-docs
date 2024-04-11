@@ -50,4 +50,4 @@ You can collect self-diagnostic logs for the Application Insights SDK to diagnos
 
 If you have questions about Application Insights auto-instrumentation, you can post a question on our [Microsoft Q&A question page](/answers/topics/azure-monitor.html).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
