@@ -249,4 +249,4 @@ For example, in the following runtime configuration file, the role `role1` is de
 
 If your issue isn't resolved, provide feedback or report it in the [data-api-builder Discussions](https://github.com/azure/data-api-builder/discussions).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
