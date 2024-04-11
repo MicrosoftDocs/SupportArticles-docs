@@ -3,7 +3,7 @@ title: Troubleshooting throttling errors in Azure
 description: Throttling errors, retries and backoff in Azure Compute.
 services: virtual-machines
 documentationcenter: ''
-author: changov
+author: changov, viveksingla
 manager: dcscontentpm
 tags: azure-resource-manager,azure-service-management
 ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-arm-template
@@ -29,7 +29,7 @@ When an Azure API client gets a throttling error, the HTTP status is 429 Too Man
 
 | Header                            | Value format                           | Example                               | Description                                                                                                                                                                                               |
 |-----------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| x-ms-ratelimit-remaining-resource |```<source RP>/<policy or bucket>;<count>```| Microsoft.Compute/HighCostGet3Min;159 | Remaining API call count for the throttling policy covering the resource bucket or operation group including the target of this request                                                                   |
+| x-ms-ratelimit-remaining-resource |```<source RP>/<policy or bucket>;<count>```| Microsoft.Compute/HighCostGet;159 | Remaining API call count for the throttling policy covering the resource bucket or operation group including the target of this request                                                                   |
 | x-ms-request-charge               | ```<count>```                             | 1                                     | The number of call counts “charged” for this HTTP request toward the applicable policy’s limit. This is most typically 1. Batch requests, such as for scaling a virtual machine scale set, can charge multiple counts. |
 
 Note that an API request can be subjected to multiple throttling policies. There will be a separate `x-ms-ratelimit-remaining-resource` header for each policy.
@@ -37,9 +37,9 @@ Note that an API request can be subjected to multiple throttling policies. There
 Here is a sample response to delete virtual machine scale set request.
 
 ```
-x-ms-ratelimit-remaining-resource: Microsoft.Compute/DeleteVMScaleSet3Min;107 
-x-ms-ratelimit-remaining-resource: Microsoft.Compute/DeleteVMScaleSet30Min;587 
-x-ms-ratelimit-remaining-resource: Microsoft.Compute/VMScaleSetBatchedVMRequests5Min;3704 
+x-ms-ratelimit-remaining-resource: Microsoft.Compute/DeleteVMScaleSet;107 
+x-ms-ratelimit-remaining-resource: Microsoft.Compute/DeleteVMScaleSet;587 
+x-ms-ratelimit-remaining-resource: Microsoft.Compute/VMScaleSetBatchedVMRequests;3704 
 x-ms-ratelimit-remaining-resource: Microsoft.Compute/VmssQueuedVMOperations;4720 
 ```
 
@@ -49,8 +49,7 @@ The 429 HTTP status is commonly used to reject a request because a call rate lim
 
 ```
 HTTP/1.1 429 Too Many Requests
-x-ms-ratelimit-remaining-resource: Microsoft.Compute/HighCostGet3Min;46
-x-ms-ratelimit-remaining-resource: Microsoft.Compute/HighCostGet30Min;0
+x-ms-ratelimit-remaining-resource: Microsoft.Compute/HighCostGet;0
 Retry-After: 1200
 Content-Type: application/json; charset=utf-8
 {
@@ -59,15 +58,15 @@ Content-Type: application/json; charset=utf-8
   "details": [
     {
       "code": "TooManyRequests",
-      "target": "HighCostGet30Min",
-      "message": "{\"operationGroup\":\"HighCostGet30Min\",\"startTime\":\"2018-06-29T19:54:21.0914017+00:00\",\"endTime\":\"2018-06-29T20:14:21.0914017+00:00\",\"allowedRequestCount\":800,\"measuredRequestCount\":1238}"
+      "target": "HighCostGet",
+      "message": "{\"operationGroup\":\"HighCostGet\",\"startTime\":\"2018-06-29T19:54:21.0914017+00:00\",\"endTime\":\"2018-06-29T20:14:21.0914017+00:00\",\"allowedRequestCount\":300,\"measuredRequestCount\":1238}"
     }
   ]
 }
 
 ```
 
-The policy with remaining call count of 0 is the one due to which the throttling error is returned. In this case that is `HighCostGet30Min`. The overall format of the response body is the general Azure Resource Manager API error format (conformant with OData). The main error code, `OperationNotAllowed`, is the one Compute Resource Provider uses to report throttling errors (among other types of client errors). The `message` property of the inner error(s) contains a serialized JSON structure with the details of the throttling violation.
+The policy with remaining call count of 0 is the one due to which the throttling error is returned. In this case that is `HighCostGet`. The overall format of the response body is the general Azure Resource Manager API error format (conformant with OData). The main error code, `OperationNotAllowed`, is the one Compute Resource Provider uses to report throttling errors (among other types of client errors). The `message` property of the inner error(s) contains a serialized JSON structure with the details of the throttling violation.
 
 As illustrated above, every throttling error includes the `Retry-After` header, which provides the minimum number of seconds the client should wait before retrying the request.
 
