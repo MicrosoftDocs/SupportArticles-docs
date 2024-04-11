@@ -613,7 +613,7 @@ When you report an issue to GitHub, you might be asked to gather certain logs to
 
 ### Storage Explorer logs
 
-Storage Explorer logs various things to its own application logs. You can easily get to these logs by selecting **Help** > **Open Logs Directory**. By default, Storage Explorer logs at a low level of verbosity. To change the verbosity level, go to **Settings** (the **gear** symbol on the left) > **Application** > **Logging** > **Log Level**. You can then set the log level as needed. For troubleshooting, the debug log level is recommended.
+Storage Explorer logs various things to its own application logs. You can easily get to these logs by selecting **Help** > **Open Logs Directory**. By default, Storage Explorer logs at a low level of verbosity. To change the verbosity level, go to **Settings** (the **gear** symbol on the left) > **Application** > **Logging** > **Log Level**. You can then set the log level as needed. For troubleshooting, the Trace log level is recommended (as it is the most verbose level).
 
 Logs are split into folders for each session of Storage Explorer that you run. For whatever log files you need to share, place them in a zip archive, with files from different sessions in different folders.
 
