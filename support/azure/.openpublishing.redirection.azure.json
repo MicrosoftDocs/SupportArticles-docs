@@ -4346,6 +4346,101 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "synapse-analytics/dedicated-sql/backup-restore/index.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/welcome-synapse-analytics-dedicated-sql",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "synapse-analytics/dedicated-sql/query-execution-performance/index.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/welcome-synapse-analytics-dedicated-sql",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "synapse-analytics/dedicated-sql/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/welcome-synapse-analytics-dedicated-sql",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "synapse-analytics/serverless-sql/query-perf/index.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/serverless-sql/welcome-synapse-analytics-serverless-sql",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "synapse-analytics/spark/perf/index.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/spark/welcome-synapse-analytics-spark",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "synapse-analytics/workspace/synapse-studio/index.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/workspace/welcome-synapse-analytics-workspace",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "synapse-analytics/workspace/wrk-conn-synapse-studio.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/workspace/synapse-studio/wrk-conn-synapse-studio",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/spark/spark-jobexec-storage-access.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/spark/perf/spark-jobexec-storage-access",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/serverless-sql/ssql-perf-optimize-querying.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/serverless-sql/query-perf/ssql-perf-optimize-querying",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/serverless-sql/ssql-perf-cetas.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/serverless-sql/query-perf/ssql-perf-cetas",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/serverless-sql/ssql-perf-optimize-cost.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/serverless-sql/query-perf/ssql-perf-optimize-cost",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/serverless-sql/ssql-perf-optimize-synapse-link.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/serverless-sql/query-perf/ssql-perf-optimize-synapse-link",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/dedicated-sql/dsql-conn-dropped-connections.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/connectivity/dsql-conn-dropped-connections",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/dedicated-sql/dsql-maint-backup-restore-guidance.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/backup-restore/dsql-maint-backup-restore-guidance",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/dedicated-sql/troubleshoot-dsql-perf-slow-query.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/troubleshoot-dsql-perf-slow-query",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/dedicated-sql/dsql-perf-common-query-errors.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-common-query-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/dedicated-sql/dsql-perf-cci-health.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-cci-health",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/dedicated-sql/dsql-perf-stats-accuracy.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-stats-accuracy",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/dedicated-sql/dsql-perf-tempdb-errors.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-tempdb-errors",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "entra-id/dir-dmns-obj/troubleshoot-global-secure-access-client-windows-issues.md",
         "redirect_url": "/troubleshoot/azure/entra/global-secure-access/troubleshoot-global-secure-access-client-windows-issues",
         "redirect_document_id": true
