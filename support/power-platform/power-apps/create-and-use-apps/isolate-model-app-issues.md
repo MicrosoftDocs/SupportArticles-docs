@@ -3,7 +3,7 @@ title: Isolate issues in model-driven apps
 description: Learn about techniques to narrow down the cause of errors in model-driven apps.
 author: tahoon
 ms.reviewer: matp
-ms.date: 10/23/2023
+ms.date: 04/11/2024
 ms.author: tahoon
 ms.custom: sap:Running model-driven app forms
 search.audienceType: 
@@ -88,11 +88,12 @@ If any of the following aren't working, try re-creating them. It can be a simpli
 
 ## Ensure all required components are added to an app
 
-App components include tables, and their related tables, forms, columns, views, charts, dashboards, and business process flows. For performance reasons, only components added to an app will be downloaded.
+[Model-driven app components](/power-apps/maker/model-driven-apps/model-driven-app-components) include tables and their related tables, forms, columns, views, charts, dashboards, and business process flows. For performance reasons, only components added to an app will be downloaded.
 
-If a component isn't showing up or is behaving inconsistently, check if it's added to the app. For example, if the _Teams_ table isn't showing up in a lookup control in a form but other tables are, the table might not have been added to the app.
+If a component doesn't appear or behaves inconsistently, check if it's added to the app. For example, if the `_Teams_` table doesn't appear in a form's lookup control, but other tables do, the table might not have been added to the app.
 
-Adding these components to an app can be done in the modern app designer.
+You can add the following components to an app using the [modern app designer](/power-apps/maker/model-driven-apps/app-designer-overview).
+
 - Tables and related tables: [create a Dataverse table page](/power-apps/maker/model-driven-apps/create-remove-pages#create-a-page)
 - Forms: [add forms to an app](/power-apps/maker/model-driven-apps/create-add-remove-forms-views-dashboards#add-or-remove-forms-from-an-app)
 - Columns (form fields): [add columns to a form](/power-apps/maker/model-driven-apps/add-move-or-delete-fields-on-form#add-columns-to-a-form)
@@ -102,7 +103,7 @@ Adding these components to an app can be done in the modern app designer.
 
 You can also [add these components using the classic app designer](/power-apps/maker/model-driven-apps/add-edit-app-components).
 
-For tables to be used offline, they have to be [added to an offline profile](/power-apps/mobile/setup-mobile-offline#add-a-table-to-an-offline-profile-and-apply-filters). Learn more about [mobile offline guidelines](/power-apps/mobile/mobile-offline-guidelines#dont-miss-the-data-your-users-need).
+For tables to be used offline, they have to be [added to an offline profile](/power-apps/mobile/setup-mobile-offline#add-a-table-to-an-offline-profile-and-apply-filters). For more information, see [mobile offline guidelines](/power-apps/mobile/mobile-offline-guidelines#dont-miss-the-data-your-users-need).
 
 ## Find out if the issue occurs when getting data or showing data
 
