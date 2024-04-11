@@ -7,7 +7,7 @@ ms.author: sidandrews
 ms.reviewer: ouryba, v-jayaramanp
 ms.service: cosmos-db
 ms.date: 01/18/2024
-ms.custom: devx-track-arm-template
+ms.custom: sap:Account Administration, devx-track-arm-template
 ---
 
 # Deployment of private endpoints for Azure Cosmos DB fails
@@ -33,4 +33,4 @@ Make sure that the deploying principal is granted the `Microsoft.Network/virtual
 - [What is a private endpoint?](/azure/private-link/private-endpoint-overview)
 - [Create an Azure Cosmos DB Account with a private endpoint](/samples/azure/azure-quickstart-templates/cosmosdb-private-endpoint/)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
