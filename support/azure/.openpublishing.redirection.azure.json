@@ -2582,8 +2582,8 @@
       },
       {
         "source_path": "microsoft-entra/troubleshoot-global-secure-access-client-windows-issues.md",
-        "redirect_url": "/troubleshoot/azure/microsoft-entra/global-secure-access/troubleshoot-global-secure-access-client-windows-issues",
-        "redirect_document_id": true
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/troubleshoot-global-secure-access-client-windows-issues",
+        "redirect_document_id": false
       },
       {
         "source_path": "virtual-machines/customscript-reruns-previous-command.md",
