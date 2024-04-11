@@ -14,13 +14,13 @@ This article helps you resolve errors that occur when a connection to the linked
 
 ## Symptoms
 
-The following error entries are logged in the \<LogName\> log.
+The following error messages are logged in the SQL Server error log.
 
 > TCP Provider: An existing connection was forcibly closed by the remote host.
 
 > OLE DB provider "MSOLEDBSQL" for linked server "LinkedServer Name" returned message "Client unable to establish connection". (Microsoft SQL Server, Error: 10054)
 
-You might also receive the following messages:
+You might also see the following phrases, which indicate the version and edition of the source and destination SQL Server instances that initiates the connection to the linked server. It's important to determine the version and edition compatibility between the SQL Server instances.
 
 > Source SQL Version SQL 2019 Enterprise Edition
 
