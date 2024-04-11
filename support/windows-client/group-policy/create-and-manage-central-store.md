@@ -1,7 +1,7 @@
 ---
 title: Create and manage Central Store
 description: Describes how to create a Central Store on a domain controller to store and replicate registry-based policies for Windows.
-ms.date: 12/26/2023
+ms.date: 04/11/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -40,13 +40,10 @@ _Original KB number:_ &nbsp; 3087759
 
 To view ADMX spreadsheets of the new settings that are available in later operating system versions, see the following spreadsheets:
 
-- [Group Policy Settings Reference Spreadsheet for Windows 11 2023 Update (23H2)](https://www.microsoft.com/en-pk/download/details.aspx?id=105668)
-
+- [Group Policy Settings Reference Spreadsheet for Windows 11 2023 Update (23H2)](https://www.microsoft.com/download/details.aspx?id=105668)
 - [Group Policy Settings Reference Spreadsheet for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103506)
-
 - [Group Policy Settings Reference Spreadsheet for Windows 10 November 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103668)
-
-- [Group Policy Settings Reference Spreadsheet for Windows 10 2022 Update (22H2)](https://)
+- [Group Policy Settings Reference Spreadsheet for Windows 10 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104678)
 
 ## Overview
 
