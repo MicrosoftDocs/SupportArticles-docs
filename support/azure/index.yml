@@ -103,7 +103,7 @@ productDirectory:
   - title: Microsoft Entra
     imageSrc: "../media/hub-landing/microsoft-entra.svg"
     links:
-    - url: microsoft-entra/welcome-microsoft-entra.yml
+    - url: entra/welcome-entra.yml
       text: Troubleshooting articles for Microsoft Entra
   - title: Site Recovery
     imageSrc: "https://static.docs.com/ui/media/product/azure/recovery-services-vaults.svg"
