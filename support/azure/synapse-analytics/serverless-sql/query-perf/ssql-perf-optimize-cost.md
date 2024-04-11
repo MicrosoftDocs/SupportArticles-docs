@@ -5,6 +5,7 @@ ms.date: 02/21/2023
 author: scott-epperly
 ms.author: goventur
 ms.reviewer: scepperl
+ms.custom: sap:Query Execution and Performance
 ---
 
 # Manage costs for Azure Synapse Analytics serverless SQL pool
