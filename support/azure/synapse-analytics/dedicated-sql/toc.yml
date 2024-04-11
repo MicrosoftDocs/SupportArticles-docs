@@ -3,8 +3,8 @@
 
 - name: Connectivity
   items:
-- name: Troubleshoot connectivity issues on a dedicated SQL pool
-  href: connectivity/dsql-conn-dropped-connections.md
+  - name: Troubleshoot connectivity issues on a dedicated SQL pool
+    href: connectivity/dsql-conn-dropped-connections.md
 
 - name: Query Execution and Performance
   items:
