@@ -3912,12 +3912,12 @@
       },
       {
         "source_path": "azure-monitor/app-insights/auto-instrumentation-troubleshoot.md",
-        "redirect_url": "/troubleshoot/azure/azure-monitor/telemetry/windows-agents/auto-instrumentation-troubleshoot",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/auto-instrumentation-troubleshoot",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-monitor/app-insights/investigate-missing-telemetry.md",
-        "redirect_url": "/troubleshoot/azure/azure-monitor/telemetry/windows-agents/investigate-missing-telemetry",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/telemetry/investigate-missing-telemetry",
         "redirect_document_id": true
       },
       {
