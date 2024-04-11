@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-microsoft-entra.yml
+  href: welcome-entra.yml
 
 - name: Microsoft Entra ID
   items:
@@ -8,7 +8,7 @@
 - name: Global Secure Access
   items:
   - name: Troubleshoot Global Secure Access client for Windows issues
-    href: global-secure-access/troubleshoot-global-secure-access-client-windows-issues.md
+    href: global-secure-access/welcome-global-secure-access.yml
 - name: Get support
   items:
   - name: Send Microsoft Authenticator logs and get an incident ID
