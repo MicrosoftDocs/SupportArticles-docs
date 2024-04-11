@@ -3,6 +3,7 @@ title: A protected VM goes into a resync state
 description: A protected virtual machine that uses Azure Site Recovery goes into a resynchronization state repeatedly.
 ms.date: 04/09/2024
 ms.reviewer: wenca, markstan
+ms.custom: sap:I need help getting started with Site Recovery
 ---
 # A virtual machine that Azure Site Recovery helps protect goes into a resynchronization state
 
