@@ -13,7 +13,7 @@ This article resolves an issue that one or more Active Directory Domain Services
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2643629
 
-[!INCLUDE [Feedback](../../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../../includes/feedback.md)]
 
 ## Symptoms
 
@@ -242,4 +242,4 @@ The Windows PowerShell commands that are mentioned in this article require the A
 For more information about filtering directory synchronization by attributes, see the following Microsoft TechNet wiki article:  
 [List of Attributes that are Synced by the Azure Active Directory Sync Tool](/archive/technet-wiki/19901.dirsync-list-of-attributes-that-are-synced-by-the-azure-active-directory-sync-tool)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

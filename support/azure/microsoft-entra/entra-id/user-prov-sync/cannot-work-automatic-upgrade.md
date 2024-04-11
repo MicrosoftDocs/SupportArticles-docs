@@ -80,4 +80,4 @@ To work around this issue, follow these steps:
 3. If you have previously enabled the password synchronization feature or the password writeback feature, verify that the feature remains enabled after the upgrade is complete.
 4. If any of the features is disabled after the upgrade, select **Customize synchronization options** in the Microsoft Entra Connect wizard, and then manually enable the feature.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

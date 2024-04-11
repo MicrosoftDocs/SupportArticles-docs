@@ -53,4 +53,4 @@ To resolve this issue, follow these steps.
         Import-Module MSOnline
         ```  
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

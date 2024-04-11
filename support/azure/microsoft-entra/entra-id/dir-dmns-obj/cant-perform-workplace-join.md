@@ -124,4 +124,4 @@ Run [Windows Update](https://support.microsoft.com/windows/3c5ae7fc-9fb6-9af1-19
 
 If you try to do a Workplace Join to your local Active Directory, verify that there's a rule to enable incoming TCP connections to EnterpriseRegistration. **domain_name**. **domain_extension**. It should allow for traffic to pass through to the DRS server.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
