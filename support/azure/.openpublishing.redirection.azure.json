@@ -4351,7 +4351,7 @@
         "redirect_document_id": false
       },
       {
-        "source_path": "synapse-analytics/dedicated-sql/bquery-execution-performance/index.md",
+        "source_path": "synapse-analytics/dedicated-sql/query-execution-performance/index.md",
         "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/welcome-synapse-analytics-dedicated-sql",
         "redirect_document_id": false
       },
