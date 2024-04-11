@@ -2582,7 +2582,7 @@
       },
       {
         "source_path": "microsoft-entra/troubleshoot-global-secure-access-client-windows-issues.md",
-        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/troubleshoot-global-secure-access-client-windows-issues",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/global-secure-access/troubleshoot-global-secure-access-client-windows-issues",
         "redirect_document_id": true
       },
       {
@@ -2713,6 +2713,41 @@
       {
         "source_path": "azure-functions/monitoring/index.md",
         "redirect_url": "/troubleshoot/azure/azure-functions/welcome-azure-functions",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/app-integration/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/b2c/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/governance/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/mfa/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
         "redirect_document_id": false
       },
       {
@@ -3861,7 +3896,7 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "entra-id/troubleshoot-global-secure-access-client-windows-issues.md",
+        "source_path": "entra-id/dir-dmns-obj/troubleshoot-global-secure-access-client-windows-issues.md",
         "redirect_url": "/troubleshoot/azure/microsoft-entra/global-secure-access/troubleshoot-global-secure-access-client-windows-issues",
         "redirect_document_id": true
       },
@@ -4589,6 +4624,11 @@
         "source_path": "entra-id/user-prov-sync/unknown-error-0x80005000.md",
         "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/user-prov-sync/unknown-error-0x80005000",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/welcome-entra-id.yml",
+        "redirect_url": "/troubleshoot/azure/microsoft-entra/entra-id/welcome-entra-id",
+        "redirect_document_id": false
       }
   ]
 }

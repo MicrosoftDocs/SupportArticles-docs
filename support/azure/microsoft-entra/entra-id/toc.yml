@@ -117,7 +117,7 @@
       - name: Pending devices
         href: dir-dmns-obj/pending-devices.md
       - name: Troubleshoot Global Secure Access client for Windows issues
-        href: ../global-secure-access/global-secure-accesstroubleshoot-global-secure-access-client-windows-issues.md
+        href: ../global-secure-access/troubleshoot-global-secure-access-client-windows-issues.md
   - name: Directories
     items:
     - name: Can't delete a directory using portal
