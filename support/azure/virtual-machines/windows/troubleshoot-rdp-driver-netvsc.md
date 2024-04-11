@@ -7,13 +7,13 @@ author: genlin
 manager: dcscontentpm
 editor: v-jesits
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 11/19/2018
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Cannot connect remotely to a Windows 10 or Windows Server 2016 VM in Azure because of netvsc.sys

@@ -1,7 +1,7 @@
 ---
 title: Garmin isn't compatible with Windows 10
 description: Fixes an issue that prevents Garmin wearable devices from working after you've upgraded your computer or device to Windows 10.
-ms.date: 12/26/2023
+ms.date: 04/08/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -38,6 +38,6 @@ This issue is documented by Garmin at the following site:
 
 [Device is not detected in Windows 10 after updating to the Anniversary update](https://static.garmin.com/com.garmin.static-pages/cf-maintenance-500.html?site=forums).
 
-To download the latest Garmin Express tool, go to [Garmin Express](https://software.garmin.com/express.html).
+To download the latest Garmin Express tool, go to [Garmin Express](https://www.garmin.com/software/express/windows).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
