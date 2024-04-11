@@ -58,6 +58,5 @@
     href: connectivity/manage-vip-swap-powershell.md
   - name: RDP connections fail occasionally
     href: connectivity/intermittent-connection-failures-rdp.md
-
-- name: Allow internet traffic by using an application gateway
-  href: allow-internet-traffic-cses-application-gateway.md
+  - name: Allow internet traffic by using an application gateway
+    href: connectivity/allow-internet-traffic-cses-application-gateway.md

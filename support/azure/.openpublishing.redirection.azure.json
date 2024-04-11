@@ -3896,6 +3896,11 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "cloud-services/extended/allow-internet-traffic-cses-application-gateway.md",
+        "redirect_url": "/troubleshoot/azure/cloud-services/extended/connectivity/allow-internet-traffic-cses-application-gateway",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "cloud-services/classic/deploy/index.md",
         "redirect_url": "/troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic",
         "redirect_document_id": false
