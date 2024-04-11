@@ -6,6 +6,7 @@ ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: markstan
+ms.custom: sap:I need help getting started with Site Recovery
 ---
 # Vault registration fails in Azure Site Recovery with error: The DRA server is already registered in vault
 
@@ -45,4 +46,4 @@ To fix this error and enable the ASR Provider and agent setup to complete succes
 3. Delete the registry key that you backed up in step 2.
 4. Restart the Provider and agent setup.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

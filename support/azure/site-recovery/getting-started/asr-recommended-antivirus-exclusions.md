@@ -6,6 +6,7 @@ ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: markstan
+ms.custom: sap:I need help getting started with Site Recovery
 ---
 # Recommended antivirus exclusions for Azure Recovery Services
 
@@ -34,7 +35,7 @@ Also exclude items from the following location:
 
 For information about recommended exclusions for Cluster Services, see the following article:
 
-[Antivirus software that isn't cluster-aware may cause problems with Cluster Services](../../windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue.md)
+[Antivirus software that isn't cluster-aware may cause problems with Cluster Services](../../../windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue.md)
 
 #### Azure Site Recovery Hyper-V to Azure deployment: Antivirus exclusion guidance
 
@@ -80,4 +81,4 @@ Exclude the installation path of the Recovery Services agent, which is `C:\Progr
 
 Guest virtual machines (VMs) that are protected by Azure Recovery Services should exclude the installation folder where the guest agent is installed. The default path is `C:\Program Files (x86)\Azure Site Recovery`.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

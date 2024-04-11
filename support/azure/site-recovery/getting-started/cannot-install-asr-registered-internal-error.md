@@ -6,6 +6,7 @@ ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: NicholaD
+ms.custom: sap:I need help getting started with Site Recovery
 ---
 # Error when you try to install Microsoft Azure Site Recovery Provider: ASR cannot be registered due to an internal error
 
@@ -62,4 +63,4 @@ Then, add the retrieved VmmID value to the following registry subkey on the VMM 
 
 Microsoft Azure Site Recovery Provider should now install successfully.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

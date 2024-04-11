@@ -6,6 +6,7 @@ ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: markstan
+ms.custom: sap:I need help with Azure Backup
 ---
 # Storage account setting is blank in Azure Site Recovery
 
@@ -33,4 +34,4 @@ To fix this issue, follow these steps:
 3. Click Save to commit the change.
 4. Restart the Create Protection Group wizard.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -5,6 +5,7 @@ ms.date: 09/30/2020
 author: genlin
 ms.author: genli
 ms.service: site-recovery
+ms.custom: sap:I need help getting started with Site Recovery
 ---
 # Mandatory update for Microsoft Azure Recovery Services Agent: April 2018
 
@@ -30,7 +31,7 @@ The MARS Agent Offline Backup workflow now supports Azure Resource Manager Stora
 - Central monitoring and management of Azure Import Jobs
     Customers of MARS Agent-based offline backup can now move to the new Azure portal to monitor and track automatically created Azure Resource Manager Import Jobs from a single Import/Export Jobs page in the Azure portal, and update shipping details directly from the portal.
 - More secure access to Azure Resources
-    Azure Backup’s new workflow for Offline Backup eliminates the need for the Classic Azure Publish Settings file, uses secure Azure logon during the workflow, and uses a Microsoft Entra application to provide secure and scoped access to the Azure Import Service.
+    Azure Backup's new workflow for Offline Backup eliminates the need for the Classic Azure Publish Settings file, uses secure Azure logon during the workflow, and uses a Microsoft Entra application to provide secure and scoped access to the Azure Import Service.
 
     > [!NOTE]
     > The new workflow described here applies only to the Offline Backup of files and folders directly to Azure through the MARS Agent. Offline Backup workflow that's performed by using System Center Data Protection Manager to Azure or by using Microsoft Azure Backup Server remains unchanged.
@@ -69,7 +70,7 @@ If your servers are registered to one or more Recovery Services Vaults, you can 
 
     :::image type="content" source="media/ars-agent-update-april-2018/protected-servers.png" alt-text="Screenshot shows steps to select the Azure Backup Agent item as the Backup Management Type." lightbox="media/ars-agent-update-april-2018/protected-servers.png":::
 
-1. On the blade that appears, select a server for which the Agent version number is earlier than **2.0.9118.0**. On the server’s detail blade, click **Connect**. A Remote Desktop Connection file is downloaded that you can use to connect to the server, copy the update installer, and then run the installer to update the MARS Agent on the server.
+1. On the blade that appears, select a server for which the Agent version number is earlier than **2.0.9118.0**. On the server's detail blade, click **Connect**. A Remote Desktop Connection file is downloaded that you can use to connect to the server, copy the update installer, and then run the installer to update the MARS Agent on the server.
 
     :::image type="content" source="media/ars-agent-update-april-2018/server-detail-blade.png" alt-text="Screenshot shows how to connect a protected server." lightbox="media/ars-agent-update-april-2018/server-detail-blade.png":::
 
@@ -77,7 +78,7 @@ If your servers are registered to one or more Recovery Services Vaults, you can 
 
 ### Restart information
 
-If you are using Windows Server 2008 (SP2 and R2 SP1, any version), you must restart the computer after you apply this update. Users who installed MARS Agent on other Windows Server versions don’t have to restart the computer after applying this update.
+If you are using Windows Server 2008 (SP2 and R2 SP1, any version), you must restart the computer after you apply this update. Users who installed MARS Agent on other Windows Server versions don't have to restart the computer after applying this update.
 
 ### Replacement information
 
@@ -89,4 +90,4 @@ If you use System Center 2016 Data Protection Manager (SC DPM), Microsoft recomm
 
 If you use System Center 2012 R2 Data Protection Manager (SC DPM), apply [Update Rollup 12](https://support.microsoft.com/help/3209592/) for System Center 2012 R2 Data Protection Manager or a later version.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
