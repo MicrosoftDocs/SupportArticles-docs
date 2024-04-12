@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD replication error -2146893022
 description: This article describes how to troubleshoot a problem in which Active Directory replication fails and generates an error (-2146893022).
-ms.date: 12/26/2023
+ms.date: 04/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -9,11 +9,11 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
-# Active Directory replication error -2146893022: The target principal name is incorrect
+# Active Directory replication error -2146893022 (0x80090322): The target principal name is incorrect
 
 This article describes how to troubleshoot a problem in which Active Directory replication fails and generates an error (-2146893022: The target principal name is incorrect).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2090913
 
 > [!NOTE]
@@ -111,13 +111,13 @@ When this problem occurs, you experience one or more of the following symptoms:
 **The target principal name is incorrect**
 
     Right-clicking on the connection object from a source DC and then selecting **replicate now** fails. The on-screen error message is as follows:
-
+    
     > Dialog title text: Replicate Now  
     > Dialog message text: The following error occurred during the attempt to contact the domain controller \<source DC name>:  
     > The target principal name is incorrect  
     > Buttons in Dialog: OK
 
-- NTDS Knowledge Consistency Checker (KCC), NTDS General, or **Microsoft-Windows-ActiveDirectory_DomainService** events that have the **-2146893022** status are logged in the directory service event log.
+   - NTDS Knowledge Consistency Checker (KCC), NTDS General, or **Microsoft-Windows-ActiveDirectory_DomainService** events that have the **-2146893022** status are logged in the directory service event log.
 
     Active Directory events that commonly cite the **-2146893022** status include but aren't limited to the following ones:
 

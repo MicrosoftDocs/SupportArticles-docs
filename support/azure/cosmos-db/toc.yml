@@ -1,8 +1,14 @@
 - name: Welcome
   href: index.yml
-- name: Troubleshoot emulator
-  href: emulator.md
-- name: Failed private endpoints deployment
-  href: private-endpoints.md
-- name: Data Explorer fails to connect
-  href: data-explorer.md
+
+- name: Tools and connectors
+  items: 
+  - name: Troubleshoot emulator
+    href: tools-connectors/emulator.md
+
+- name: Accounts
+  items: 
+  - name: Failed private endpoints deployment
+    href: account-admin/private-endpoints.md
+  - name: Data Explorer fails to connect
+    href: account-admin/data-explorer.md
