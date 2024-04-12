@@ -5254,6 +5254,21 @@
         "source_path": "entra/global-secure-access/index.md",
         "redirect_url": "/troubleshoot/azure/entra/global-secure-access/welcome-global-secure-access",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "data-api-builder/index.yml",
+        "redirect_url": "/troubleshoot/azure/cosmos-db/data-api-builder/index",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "data-api-builder/installation.yml",
+        "redirect_url": "/troubleshoot/azure/cosmos-db/data-api-builder/installation",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "data-api-builder/usage.yml",
+        "redirect_url": "/troubleshoot/azure/cosmos-db/data-api-builder/usage",
+        "redirect_document_id": true
       }
   ]
 }
