@@ -99,7 +99,7 @@ The following are logged in ScanAgent.log on the client:
 
 ## WSUS server location
 
-After the client receives the UpdateSource policy, the client has the necessary configuration to initiate a scan. Howeer, policy updates won't initiate immediate scans. A scan can be triggered manually through the Configuration Manager control panel or will occur automatically at the next scheduled time. At this point, the client locates the WSUS computer with the content version specified in the policy. This process is very similar to the way that the client finds the location of a distribution point for a specific package and version. 
+After receiving the UpdateSource policy, the client has the necessary configuration to initiate a scan. However, policy updates won't initiate immediate scans. A scan can be triggered manually through the Configuration Manager control panel or occur automatically at the next scheduled time. At this point, the client locates the WSUS computer with the content version specified in the policy. This process is very similar to the way that the client finds the location of a distribution point for a specific package and version. 
 
 ### Step 1: Scan Agent creates a scan request based on the available policy
 
