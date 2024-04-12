@@ -5304,6 +5304,86 @@
         "source_path": "general/sdp-342a3d014-6535-4e1f-9bd4-b0c32e71e3bf-sql.md",
         "redirect_url": "/troubleshoot/azure/index",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "general/synapse-analytics-apache-spark-pools-diagnostic-logs.md",
+        "redirect_url": "troubleshoot/azure/synapse-analytics-spark/perf/synapse-analytics-apache-spark-pools-diagnostic-logs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/fabric-logs/fabric-logs.md",
+        "redirect_url": "troubleshoot/azure/service-fabric/cluster/fabric-logs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md",
+        "redirect_url": "troubleshoot/azure/virtual-network/connectivity/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/troubleshoot-aip-issues/troubleshoot-aip-issues.md",
+        "redirect_url": "troubleshoot/azure/information-protection/troubleshoot-aip-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/azure-stack-edge-support-package-device-logs/azure-stack-edge-support-package-device-logs.md",
+        "redirect_url": "troubleshoot/azure/azure-stack-edge/azure-stack-edge-support-package-device-logs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/request-throttling-http-403/request-throttling-http-403.md",
+        "redirect_url": "troubleshoot/azure/api-mgmt/availability/request-throttling-http-403",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/performance-hit-api-calls/performance-hit-api-calls.md",
+        "redirect_url": "troubleshoot/azure/api-mgmt/availability/performance-hit-api-calls",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/unauthorized-errors-invoke-apis/unauthorized-errors-invoke-apis.md",
+        "redirect_url": "troubleshoot/azure/api-mgmt/availability/unauthorized-errors-invoke-apis",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/soap-based-api-return-404-http-code/soap-based-api-return-404-http-code.md",
+        "redirect_url": "troubleshoot/azure/api-mgmt/availability/soap-based-api-return-404-http-code",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/api-return-blank-response/api-return-blank-response.md",
+        "redirect_url": "troubleshoot/azure/api-mgmt/availability/api-return-blank-response",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/apim-troubleshooting-series/apim-troubleshooting-series.md",
+        "redirect_url": "troubleshoot/azure/api-mgmt/availability/apim-troubleshooting-series",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/capture-debug-stream-automation-runbook/capture-debug-stream-automation-runbook.md",
+        "redirect_url": "troubleshoot/azure/automation/runbooks/capture-debug-stream-automation-runbook",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/find-azurermresource-fails/find-azurermresource-fails.md",
+        "redirect_url": "troubleshoot/azure/automation/updates/find-azurermresource-fails",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/reinstall-oms-agent-linux/reinstall-oms-agent-linux.md",
+        "redirect_url": "troubleshoot/azure/automation/runbooks/reinstall-oms-agent-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/automation-scripted-diagnostic-capture/automation-scripted-diagnostic-capture.md",
+        "redirect_url": "troubleshoot/azure/automation/runbooks/automation-scripted-diagnostic-capture",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/modifications-not-reflect-portal/modifications-not-reflect-portal.md",
+        "redirect_url": "troubleshoot/azure/automation/configuration/modifications-not-reflect-portal",
+        "redirect_document_id": true
       }
   ]
 }
