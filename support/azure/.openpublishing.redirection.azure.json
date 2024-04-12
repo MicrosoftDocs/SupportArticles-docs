@@ -3657,17 +3657,17 @@
       },
       {
         "source_path": "azure-container-instances/configuration-setup/index.md",
-        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances",
         "redirect_document_id": false
       },
       {
         "source_path": "azure-container-instances/management/index.md",
-        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances",
         "redirect_document_id": false
       },
       {
         "source_path": "azure-container-instances/connectivity/index.md",
-        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances",
         "redirect_document_id": false
       },
       {
