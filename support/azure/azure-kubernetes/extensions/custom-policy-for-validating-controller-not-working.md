@@ -1,14 +1,14 @@
 ---
 title: Custom Azure Policy for validating controllers doesn't work
 description: Provide a solution to an issue where a custom Azure Policy for validating controllers doesn't work.
-ms.date: 04/09/2024
+ms.date: 04/12/2024
 ms.reviewer: momajed, cssakscic
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Custom Azure Policy for validating controllers doesn't work
 
-This article provides a solution to an issue where a custom policy for validating controllers doesn't work when you use Azure Policy with an Azure Kubernetes Service (AKS) cluster.
+This article provides a solution to an issue where a custom policy created to validate controllers doesn't work when you use Azure Policy with an Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
@@ -16,13 +16,13 @@ A custom policy created for validating controllers fails with an error.
 
 ## Cause
 
-The custom policy isn't defined with the correct syntax.
+The custom policy isn't defined using the correct syntax.
 
 ## Solution
 
 To resolve this issue, follow these steps to ensure that the custom policy works correctly and meets the necessary requirements:
 
-1. Generate the custom policy with the correct syntax by using the Visual Studio Code extension designed for Azure Policy.
+1. Generate the custom policy definition with the correct syntax by using the Azure Policy Visual Studio Code extension.
 
     Using this tool to generate a custom policy ensures that it can be properly defined and adhere to the required format.
    
