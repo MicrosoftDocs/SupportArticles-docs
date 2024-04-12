@@ -38,8 +38,6 @@ items:
   href: explicit-spn-is-misplaced.md
 - name: KRB_AP_ERR_TKT_EXPIRED error in Kerberos tickets
   href: expired-tickets-issue.md 
-- name: How to determine if the authentication type is Kerberos
-  href: determine-the-authentication-type.md
 - name: Intermittent or periodic network issues
   href: intermittent-periodic-network-issue.md
 - name: Intermittent or periodic authentication issues
