@@ -5261,12 +5261,12 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "data-api-builder/installation.yml",
+        "source_path": "data-api-builder/installation.md",
         "redirect_url": "/troubleshoot/azure/cosmos-db/data-api-builder/installation",
         "redirect_document_id": true
       },
       {
-        "source_path": "data-api-builder/usage.yml",
+        "source_path": "data-api-builder/usage.md",
         "redirect_url": "/troubleshoot/azure/cosmos-db/data-api-builder/usage",
         "redirect_document_id": true
       }
