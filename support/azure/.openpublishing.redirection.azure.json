@@ -5261,18 +5261,18 @@
         "redirect_document_id": false
       },
       {
-        "source_path": "cosmos-db/tools-connectors/data-api-builderindex.md",
+        "source_path": "cosmos-db/tools-connectors/data-api-builder/index.md",
         "redirect_url": "/troubleshoot/azure/cosmos-db/index",
         "redirect_document_id": false
       },
       {
         "source_path": "data-api-builder/installation.md",
-        "redirect_url": "/troubleshoot/azure/cosmos-db/data-api-builder/installation",
+        "redirect_url": "/troubleshoot/azure/cosmos-db/tools-connectors/data-api-builder/installation",
         "redirect_document_id": true
       },
       {
         "source_path": "data-api-builder/usage.md",
-        "redirect_url": "/troubleshoot/azure/cosmos-db/data-api-builder/usage",
+        "redirect_url": "/troubleshoot/azure/cosmos-db/tools-connectors/data-api-builder/usage",
         "redirect_document_id": true
       }
   ]
