@@ -3,7 +3,7 @@ title: Isolate issues in model-driven apps
 description: Learn about techniques to narrow down the cause of errors in model-driven apps.
 author: tahoon
 ms.reviewer: matp
-ms.date: 04/11/2024
+ms.date: 04/12/2024
 ms.author: tahoon
 ms.custom: sap:Running model-driven app forms
 search.audienceType: 
@@ -90,7 +90,7 @@ If any of the following aren't working, try re-creating them. It can be a simpli
 
 [Model-driven app components](/power-apps/maker/model-driven-apps/model-driven-app-components) include tables and their related tables, forms, columns, views, charts, dashboards, and business process flows. For performance reasons, only components added to an app will be downloaded.
 
-If a component doesn't appear or behaves inconsistently, check if it's added to the app. For example, if the `_Teams_` table doesn't appear in a form's lookup control, but other tables do, the table might not have been added to the app.
+If a component doesn't appear or behaves inconsistently, check if it's added to the app. For example, if the _Teams_ table doesn't appear in a form's lookup control, but other tables do, then the _Teams_ table might not have been added to the app.
 
 You can add the following components to an app using the [modern app designer](/power-apps/maker/model-driven-apps/app-designer-overview).
 
