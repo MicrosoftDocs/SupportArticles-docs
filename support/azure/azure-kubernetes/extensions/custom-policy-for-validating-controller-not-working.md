@@ -22,7 +22,7 @@ The custom policy isn't defined using the correct syntax.
 
 To resolve this issue, follow these steps to ensure that the custom policy works correctly and meets the necessary requirements:
 
-1. Generate the custom policy definition with the correct syntax by using the Azure Policy Visual Studio Code extension.
+1. Generate the custom policy definition with the correct syntax by using Visual Studio Code extension for Azure Policy.
 
     Using this tool to generate a custom policy ensures that it can be properly defined and adhere to the required format.
    
