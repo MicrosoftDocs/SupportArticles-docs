@@ -2,7 +2,7 @@
 title: Default permissions and user rights in IIS
 description: This article describes the default permissions and user rights that are set on certain folders and files. These folders and files are installed in IIS 7.0 and later.
 ms.date: 04/01/2020
-ms.custom: sap:WWW authentication and authorization
+ms.custom: sap:WWW Administration and Management\General configuration settings
 ms.reviewer: mlaing
 ms.topic: article
 ms.subservice: www-authentication-authorization

@@ -3,6 +3,7 @@ title: Do basic file I/O in Visual C#
 description: Describes how to do basic file I/O in Visual C#. This article also provides a code sample to illustrate how to perform this task.
 ms.date: 04/13/2020
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Use Visual C# to do basic file I/O
 

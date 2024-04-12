@@ -4,6 +4,7 @@ description: Provides the code samples to help you to update a SQL Server databa
 ms.date: 04/22/2020
 ms.reviewer: karthikr, estraley
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C++
 ---
 # Update a SQL Server database by using the SqlDataAdapter object in Visual C++
 

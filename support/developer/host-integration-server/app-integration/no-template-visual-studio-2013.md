@@ -2,7 +2,7 @@
 title: HIS 2013 doesn't work with Visual Studio
 description: This article provides resolutions for the problem where Host Integration Server 2013 doesn't work out-of-box with Visual Studio 2013.
 ms.date: 05/11/2020
-ms.custom: sap:Application integration (Transaction Integrator)
+ms.custom: sap:Application Integration (Transaction Integrator)
 ---
 # Host Integration Server 2013 doesn't work out-of-box with Visual Studio 2013
 

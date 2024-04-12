@@ -5,6 +5,7 @@ ms.date: 04/02/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Servicing updates and service packs
 ---
 # Error "KBXXXXXX requires a member of the Visual Studio 2015 family to be present or is blocked by another condition on your computer"
 

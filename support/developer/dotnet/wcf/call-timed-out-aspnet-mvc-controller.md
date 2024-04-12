@@ -3,6 +3,7 @@ title: WCF calls timed out in ASP.NET MVC controller
 description: This article provides resolutions for the WCF problem where calls timed out if you create the WCF service host inside ASP.NET MVC controller.
 ms.date: 08/24/2020
 ms.reviewer: wzhao, amitap
+ms.custom: sap:WCF
 ---
 # The WCF calls timed out if you create the WCF service host inside ASP.NET MVC controller
 

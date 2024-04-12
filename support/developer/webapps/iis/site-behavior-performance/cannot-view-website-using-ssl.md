@@ -2,7 +2,7 @@
 title: Web browsers can't connect by using SSL
 description: This article provides resolutions for the problem where you cannot use a web browser to view a website by using SSL after KB2661254 is installed.
 ms.date: 04/07/2020
-ms.custom: sap:Site behavior and performance
+ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
 ms.subservice: site-behavior-performance
 ms.reviewer: radomirz, bretb, mlaing, jtinder
 ---

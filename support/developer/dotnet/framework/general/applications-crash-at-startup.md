@@ -2,6 +2,7 @@
 title: .NET applications crash at startup
 description: Event ID 5000 occurs when a user starts a .NET application. This article provides a resolution for this problem
 ms.date: 05/06/2020
+ms.custom: sap:Installation and Deployment
 ---
 # .NET applications may crash at startup for specific users if the user.config file is corrupt
 

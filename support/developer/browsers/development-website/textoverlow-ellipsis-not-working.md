@@ -2,6 +2,7 @@
 title: Text-overlow ellipsis not working in Internet Explorer 11
 description: Describes a display problem in Internet Explorer 11. This issue occurs when you use the text-overlow ellipsis attribute.
 ms.date: 04/26/2020
+ms.custom: sap:Development and Website Issues
 ---
 # Internet Explorer doesn't handle the text-overlow ellipsis attribute correctly
 
