@@ -5311,7 +5311,7 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "service-fabric/fabric-logs/fabric-logs.md",
+        "source_path": "service-fabric/fabric-logs.md",
         "redirect_url": "/troubleshoot/azure/service-fabric/cluster/fabric-logs",
         "redirect_document_id": true
       },
