@@ -23,5 +23,5 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Microsoft Azure Service Fabric Logs
-            url: fabric-logs.md
+            url: cluster/fabric-logs.md
                                                                                  

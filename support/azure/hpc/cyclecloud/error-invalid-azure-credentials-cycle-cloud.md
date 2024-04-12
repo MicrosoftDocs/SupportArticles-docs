@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: arrhpcglobal, v-leedennis
 ms.service: azure-common-issues-support
 #Customer intent: As an Azure CycleCloud user, I want to resolve an invalid Azure credentials error message that I received while I was setting up a CycleCloud server. I want to resolve this error so that I can set up my server successfully.
+ms.custom: sap:Azure CycleCloud
 ---
 
 # "Invalid Azure credentials provided" error when setting up CycleCloud server
