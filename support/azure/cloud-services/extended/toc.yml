@@ -1,54 +1,62 @@
 - name: Welcome
   href: welcome-cloud-services-extended.yml
-  
-- name: Troubleshooting series for developers
-  items:
-  - name: Use Azure DevOps to publish Cloud Services (extended support)
-    href: azure-devops-publish-cloud-service-extended.md
 
-- name: Troubleshooting Cloud Services (extended support)
+- name: Application and Service Availability
   items:
   - name: Allocation failure
-    href: allocation-failure.md
-  - name: Allow internet traffic by using an application gateway
-    href: allow-internet-traffic-cses-application-gateway.md
+    href: availability/allocation-failure.md
   - name: Application pool is crashing
-    href: application-pool-crashes.md
-  - name: Configure instance-level public IP addresses (PIPs)
-    href: ../classic/instance-level-public-ip-address-configuration.md
-  - name: Disk partition preservation
-    href: disk-partition-preservation.md
-  - name: Enable HTTPS communication
-    href: enable-https-communication.md
-  - name: FAQ about role instance restarts due to OS upgrades
-    href: role-instance-restarts-faq.yml
-  - name: Gather log files for offline analysis and preservation
-    href: gather-log-files-offline-analysis-preservation.md
-  - name: Grant a virtual network sole access to your cloud service
-    href: grant-virtual-network-sole-access.md
-  - name: Manage virtual IP address (VIP) swaps using PowerShell
-    href: manage-vip-swap-powershell.md
+    href: availability/application-pool-crashes.md
   - name: No space on the E or F drive
-    href: no-space-e-f-drive.md
-  - name: RDP connections fail occasionally
-    href: intermittent-connection-failures-rdp.md
+    href: availability/no-space-e-f-drive.md
   - name: Read key vault certificate secrets from an app
-    href: read-key-vault-certificate-secrets-from-cloud-service-app.md
+    href: availability/read-key-vault-certificate-secrets-from-cloud-service-app.md
   - name: Retrieve Cloud Service (extended support) detail via PowerShell
-    href: retrieve-cloud-service-extended-support-detail-powershell.md
+    href: availability/retrieve-cloud-service-extended-support-detail-powershell.md
   - name: Role instance restarts due to OS upgrades
-    href: role-instance-restarts-os-upgrade.md
+    href: availability/role-instance-restarts-os-upgrade.md
   - name: Roles that fail to start
-    href: role-startup-failure.md
-  - name: Update failed during migration from classic to extended support
-    href: ../classic/failed-update-ongoing-migration-process.md
+    href: availability/role-startup-failure.md
   - name: Update or change the certificate used
-    href: update-or-change-certificate-used.md
+    href: availability/update-or-change-certificate-used.md
   - name: Troubleshoot with App Insights-features overview
-    href: troubleshoot-with-app-insights-features-overview.md
+    href: availability/troubleshoot-with-app-insights-features-overview.md
   - name: Troubleshoot with App Insights-common scenarios
-    href: troubleshoot-common-scenario-use-app-insights.md
+    href: availability/troubleshoot-common-scenario-use-app-insights.md
   - name: Use App Insights to track logical drive free space
-    href: app-insights-track-free-space-logical-drive.md
+    href: availability/app-insights-track-free-space-logical-drive.md
   - name: Windows PaaS compute diagnostic data
-    href: windows-azure-paas-compute-diagnostic-data.md
+    href: availability/windows-azure-paas-compute-diagnostic-data.md
+
+- name: Problems Deploying Cloud Services
+  items:
+  - name: Install .NET Core with Azure Batch start task
+    href: deploy/install-dotnet-core-linux.md
+  - name: Support for Linux and open-source technology in Azure
+    href: ../../virtual-machines/linux/support-linux-open-source-technology.md?context=/troubleshoot/azure/cloud-services/extended/context/context
+  - name: Configure instance-level public IP addresses (PIPs)
+    href: ../classic/deploy/instance-level-public-ip-address-configuration.md
+  - name: Disk partition preservation
+    href: deploy/disk-partition-preservation.md
+  - name: Enable HTTPS communication
+    href: deploy/enable-https-communication.md
+  - name: FAQ about role instance restarts due to OS upgrades
+    href: deploy/role-instance-restarts-faq.yml
+  - name: Update failed during migration from classic to extended support
+    href: ../classic/deploy/failed-update-ongoing-migration-process.md
+
+- name: Configuration and Setup Related Issue
+  items:
+  - name: Gather log files for offline analysis and preservation
+    href: config-setup/gather-log-files-offline-analysis-preservation.md
+
+- name: Problem Connecting To or From Cloud Service
+  items:
+  - name: Grant a virtual network sole access to your cloud service
+    href: connectivity/grant-virtual-network-sole-access.md
+  - name: Manage virtual IP address (VIP) swaps using PowerShell
+    href: connectivity/manage-vip-swap-powershell.md
+  - name: RDP connections fail occasionally
+    href: connectivity/intermittent-connection-failures-rdp.md
+  - name: Allow internet traffic by using an application gateway
+    href: connectivity/allow-internet-traffic-cses-application-gateway.md

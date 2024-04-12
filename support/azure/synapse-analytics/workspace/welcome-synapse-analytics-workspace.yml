@@ -23,4 +23,4 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Resolve Azure Synapse Studio connectivity issues
-            url: wrk-conn-synapse-studio.md
+            url: synapse-studio/wrk-conn-synapse-studio.md
