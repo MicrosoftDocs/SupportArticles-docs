@@ -5,6 +5,7 @@ ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
 # Error "Windows Program Compatibility mode is on. Turn it off and then try Setup again"

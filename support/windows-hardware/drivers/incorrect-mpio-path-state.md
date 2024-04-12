@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.date: 09/02/2020
 ms.reviewer: seijit
 ms.subservice: storage-driver
+ms.custom: sap:Storage Driver
 ---
 # The iSCSI initiator may show an incorrect MPIO path state
 

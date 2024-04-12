@@ -23,12 +23,12 @@ landingContent:
       - linkListType: how-to-guide
         links:                                                               
           - text: Automation modifications aren't reflected in the portal
-            url: modifications-not-reflect-portal.md
+            url: configuration/modifications-not-reflect-portal.md
           - text: Find-AzureRmResource returns error
-            url: find-azurermresource-fails.md
+            url: updates/find-azurermresource-fails.md
           - text: How to capture Azure Automation-scripted diagnostics
-            url: automation-scripted-diagnostic-capture.md
+            url: runbooks/automation-scripted-diagnostic-capture.md
           - text: How to capture debug stream
-            url: capture-debug-stream-automation-runbook.md
+            url: runbooks/capture-debug-stream-automation-runbook.md
           - text: Reinstall Operations Management Suite Agent
-            url: reinstall-oms-agent-linux.md
+            url: runbooks/reinstall-oms-agent-linux.md

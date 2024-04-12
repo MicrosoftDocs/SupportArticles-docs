@@ -2,7 +2,7 @@
 title: Maximum number of statements has reached
 description: This article provides resolutions for the problem where the maximum number of statements has been reached for the current connection.
 ms.date: 03/18/2020
-ms.custom: sap:Data integration (DB2, host files)
+ms.custom: sap:Data Integration (DB2, Host Files)
 ---
 # The maximum number of statements has been reached for the current connection
 

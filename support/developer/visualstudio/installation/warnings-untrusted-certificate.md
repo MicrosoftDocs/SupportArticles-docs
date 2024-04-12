@@ -2,7 +2,7 @@
 title: Warnings about an untrusted certificate
 description: Describes a problem that triggers warnings about an untrusted certificate after you install Visual Studio 2015 Update 3. Provides a resolution.
 ms.date: 04/22/2020
-ms.custom: sap:Installation
+ms.custom: sap:Installation\Offline Install
 ms.reviewer: soshir, jarrettr
 ---
 # Warnings about an untrusted certificate after you install Visual Studio 2015 Update 3
