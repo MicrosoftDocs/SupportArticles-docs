@@ -90,7 +90,7 @@ This section lists various causes that are related to aspects such as database, 
 - [Database is offline](#database-is-offline)
 - [Database permissions](#database-permissions)
 - [User has not logged in](#user-has-not-logged-in)
-- [Linked Server Account Mapping](#linked-server-account-mapping)
+- [Linked server connectivity errors in SQL Server](#linked-server-connectivity-errors-in-sql-server)
 - [Proxy account doesn't have permissions](#proxy-account-doesnt-have-permissions)
 - [Unable to log in to SQL Server database](#unable-to-log-in-to-sql-server-database)
 - [Metadata of the linked server is inconsistent](#metadata-of-the-linked-server-is-inconsistent)
@@ -99,7 +99,7 @@ This section lists various causes that are related to aspects such as database, 
 
 This section lists various causes that are related to connection string.
 
-- [Bad server name in connection string](#bad-server-name-in-connection-string)
+- [Incorrect server name in connection string](#incorrect-server-name-in-a-connection-string)
 - [Wrong database name in connection string](#wrong-database-name-in-connection-string)
 - [Wrong explicit SPN account](#wrong-explicit-spn-account)
 - [Explicit SPN is missing](#explicit-spn-is-missing)
@@ -115,7 +115,7 @@ This section lists various issues that might occur because of problems in permis
 - [Only administrators can log in](#only-administrators-can-log-in)
 - [Service account isn't trusted for delegation](#service-account-isnt-trusted-for-delegation)
 - [Local security subsystem errors](#local-security-subsystem-errors)
-- [User profile is corrupted](#user-profile-is-corrupted)
+- [Windows user profile can't be loaded in SQL Server](#windows-user-profile-cant-be-loaded-in-sql-server)
 - [Credential guard is enabled](#credential-guard-is-enabled)
 
 ## Causes specific to NT LAN Manager (NTLM)
@@ -203,9 +203,9 @@ Refers to enabling or restricting access to SQL Server database. For more inform
 
 Refers to the Anonymous Logon Account error. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
-### Linked Server Account Mapping
+### Linked server connectivity errors in SQL Server
 
-You experience an authentication process issue that affects linked servers in the context of SQL Server. For more information, see [linked servers](linked-server-account-mapping-error.md).
+You experience an authentication process issue that affects linked servers in the context of SQL Server. For more information, see [Linked server connectivity errors in SQL Server](linked-server-account-mapping-error.md).
 
 ### Proxy account doesn't have permissions
 
@@ -221,9 +221,9 @@ Refers to a scenario in which metadata of the linked server is inconsistent or d
 
 A view or stored procedure queries the tables or views in the linked server but receives login failures although a distributed `SELECT` statement that's copied from the procedure doesn't. This issue might occur if the view was created and then the linked server was re-created, or a remote table was modified without rebuilding the View. To resolve this issue, refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
 
-### Bad server name in connection string
+### Incorrect server name in a connection string
 
-This issue might occur if the specified server name is incorrect or can't be found. For more information, see [bad server name in connection string](bad-server-name-connection-string-error.md).
+This issue might occur if the specified server name is incorrect or can't be found. For more information, see [incorrect server name in connection string](bad-server-name-connection-string-error.md).
 
 ### Wrong database name in connection string
 
@@ -274,9 +274,9 @@ This kind of issue usually occurs if a service account is not allowed to assign 
 
 These error refers to a consistent authentication issue that's related to the unresponsive LSASS. For more information, see [Troubleshoot LSASS errors with SQL Server authentication](local-security-subsystem-errors.md).
 
-### User profile is corrupted
+### Windows user profile can't be loaded in SQL Server
 
-Refers to the Windows user profile issue. For more information about how to troubleshoot corrupted user profiles, see the [Windows user profile issue](corrupt-user-profile.md).
+Refers to the Windows user profile issue. For more information about how to troubleshoot corrupted user profiles, see the [Windows user profile can't be loaded in SQL Server](corrupt-user-profile.md).
 
 ### Credential guard is enabled
 
