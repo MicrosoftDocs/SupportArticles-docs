@@ -5,6 +5,14 @@
   items: 
   - name: Troubleshoot emulator
     href: tools-connectors/emulator.md
+- name: Data API builder
+  items: 
+    - name: Troubleshoot Data API builder installation
+      href: tools-connectors/data-api-builder/installation.md
+    - name: Troubleshoot usage
+      href: tools-connectors/data-api-builder/usage.md
+    - name: Known issues
+      href: https://github.com/azure/data-api-builder/labels/known-issue
 
 - name: Accounts
   items: 
