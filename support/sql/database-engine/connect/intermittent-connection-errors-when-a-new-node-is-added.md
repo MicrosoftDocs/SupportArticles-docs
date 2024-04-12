@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Intermittent connection errors occur when adding a node to the Always On environment
+# Intermittent connection errors occur when adding a node to the Always On environment in SQL Server
 
 You experience intermittent connection errors when you add a new node to the existing Always On environment.
 
