@@ -9921,6 +9921,71 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/azure/general/modifications-not-reflect-portal.md",
+      "redirect_url": "/troubleshoot/azure/automation/modifications-not-reflect-portal",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/automation-scripted-diagnostic-capture.md",
+      "redirect_url": "/troubleshoot/azure/automation/automation-scripted-diagnostic-capture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/find-azurermresource-fails.md",
+      "redirect_url": "/troubleshoot/azure/automation/find-azurermresource-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/capture-debug-stream-automation-runbook.md",
+      "redirect_url": "/troubleshoot/azure/automation/capture-debug-stream-automation-runbook",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/reinstall-oms-agent-linux.md",
+      "redirect_url": "/troubleshoot/azure/automation/reinstall-oms-agent-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/apim-troubleshooting-series.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/apim-troubleshooting-series",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/api-return-blank-response.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/api-return-blank-response",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/soap-based-api-return-404-http-code.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/soap-based-api-return-404-http-code",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/unauthorized-errors-invoke-apis.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/unauthorized-errors-invoke-apis",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/performance-hit-api-calls.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/performance-hit-api-calls",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/request-throttling-http-403.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/request-throttling-http-403",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md",
+      "redirect_url": "/troubleshoot/azure/virtual-network/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/fabric-logs.md",
+      "redirect_url": "/troubleshoot/azure/service-fabric/fabric-logs",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/general/access-denied-execute-azure-batch-job.md",
       "redirect_url": "/troubleshoot/azure/hpc-batch/access-denied-execute-azure-batch-job",
       "redirect_document_id": true
