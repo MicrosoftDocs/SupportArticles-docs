@@ -30,4 +30,4 @@
 - name:  Support Diagnostic Packages
   items:
   - name: Azure Stack Edge support package and device logs
-    href: azure-stack-edge/azure-stack-edge-support-package-device-logs.md
+    href: ../azure-stack-edge/azure-stack-edge-support-package-device-logs.md

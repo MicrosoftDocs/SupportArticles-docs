@@ -22,4 +22,4 @@ The following tables list the log data that will be collected to troubleshoot yo
 |  Apache Spark Executor Logs |Spark Executors are worker nodes-related processes that are in charge of running individual tasks in a given Spark job. They are started at the beginning of a Spark application, and typically run for the entire lifetime of an application. After Spark Executors run the task, they send the results to the driver application. Executor logs contain details about how the individual tasks of your application performed, and whether any of them failed.   |
 |  Apache Spark Event Logs | Spark Event logs contain execution-related and performance-related metrics of all the executors. They also contain the list of scheduler stages and tasks, and the execution environment information. |
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
