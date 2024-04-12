@@ -282,7 +282,7 @@
 - name: Extensions, Policies and Add-Ons
   items:
   - name: AKS Cost Analysis add-on issues
-    href: aks-cost-analysis-add-on-issues.md
+    href: extensions/aks-cost-analysis-add-on-issues.md
   - name: Azure policy reports 'ConstraintNotProcessed' for container
     href: extensions/error-azure-policy-constraintnotprocessed.md
   - name: Can't pull images from container registry to cluster
