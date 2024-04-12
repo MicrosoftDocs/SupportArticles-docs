@@ -11,6 +11,9 @@ ms.reviewer: danis
 ---
 # Swap file isn't  re-created after a Linux VM restarts
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 This article provides a resolution to an issue in which the swap file can't be re-created after a restart of a Linux virtual machine.
 
 _Original product version:_ &nbsp; Azure, Virtual Machine running Linux  

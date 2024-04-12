@@ -6,6 +6,9 @@ ms.custom: linux-related-content
 ---
 # BlueStripe Collector support by operating system
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 The tables in this article show the minimum version of the BlueStripe Collector required for a particular operating system (OS) version. If your operating system version is not listed, contact BlueStripe support for assistance.
 
 _Original product version:_ &nbsp; BlueStripe  

@@ -7,6 +7,9 @@ ms.reviewer: sureshka
 ---
 # Technical support policy for Microsoft SQL Server
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 This article describes the support policy for Microsoft SQL Server.
 
 _Original product version:_ &nbsp; SQL Server 2017 on Linux (all editions), SQL Server 2017 on Windows (all editions)  

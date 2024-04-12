@@ -8,6 +8,9 @@ author: ahmetmithat
 ---
 # Part 1.1 - Create a Linux virtual machine in Azure and connecting to it
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 **Goal of this part**

@@ -12,6 +12,9 @@ ms.collection: linux
 
 # Troubleshoot UEFI boot failures in Azure Linux virtual machines
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 Linux partner images in Azure Marketplace are tagged and configured for both BIOS generation 1 boot and Unified Extensible Firmware Interface (UEFI) generation 2 boot.
 
 When you deploy generation 2 Linux virtual machines (VMs) in Azure, you may encounter UEFI boot failures. This article discusses some scenarios where UEFI boot failures occur and provides solutions.

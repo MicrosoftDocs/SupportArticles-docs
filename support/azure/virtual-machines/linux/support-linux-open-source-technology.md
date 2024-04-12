@@ -12,6 +12,9 @@ ms.custom: linux-related-content
 
 # Support for Linux and open-source technology in Azure
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), MSfC Azure-Azure Apps (IaaS)  
 _Original KB number:_ &nbsp; 2941892
 

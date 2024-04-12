@@ -8,6 +8,9 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Can't upgrade an Azure VM to a size that contains more than 64 vCPUs
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 _Original product version:_ &nbsp; Virtual Machine running Windows, Virtual Machine running Linux, Virtual Machine running RedHat, Virtual Machine running Ubuntu  
 _Original KB number:_ &nbsp; 4131519
 

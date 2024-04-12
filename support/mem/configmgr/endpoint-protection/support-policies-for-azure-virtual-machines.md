@@ -7,6 +7,9 @@ ms.custom: sap:Endpoint Protection\Antimalware Policies
 ---
 # System Center 2012 Configuration Manager and System Center 2012 Endpoint Protection support for Azure Virtual Machines
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 This article introduces the support policy for Microsoft System Center 2012 Configuration Manager and System Center 2012 Endpoint Protection to manage server software in the Microsoft Azure Virtual Machine environment (infrastructure-as-a-service).
 
 _Original product version:_ &nbsp; Microsoft System Center 2012 Configuration Manager, System Center 2012 Endpoint Protection  

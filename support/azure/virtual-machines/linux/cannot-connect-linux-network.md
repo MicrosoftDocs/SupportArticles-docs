@@ -11,6 +11,9 @@ ms.reviewer:
 ---
 # Can't connect to Azure Linux VM through network
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 This article fixes an issue in which network errors prevent you from connecting to Azure Linux virtual machines.
 
 _Original product version:_ &nbsp; Virtual Machine running Linux  

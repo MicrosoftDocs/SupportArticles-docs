@@ -17,6 +17,9 @@ ms.author: genli
 
 # Chroot environment in a Linux rescue VM
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 This article describes how to troubleshoot the chroot environment in the rescue virtual machine (VM) in Linux.
 
 ## Ubuntu 16.x && Ubuntu 18.x && Ubuntu 20.04

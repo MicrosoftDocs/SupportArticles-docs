@@ -12,6 +12,9 @@ ms.topic: troubleshooting
 ---
 # Azure Linux virtual machine fails to boot after applying kernel changes
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 This article provides solutions to an issue in which a Linux virtual machine (VM) can't boot after applying kernel changes.
 
 ## Prerequisites

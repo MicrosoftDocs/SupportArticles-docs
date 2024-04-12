@@ -9,6 +9,9 @@ ms.reviewer: kendownie
 
 # Troubleshoot NFS Azure file shares
 
+> [!CAUTION]
+> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+
 This article lists common issues related to NFS Azure file shares and provides potential causes and workarounds.
 
 > [!IMPORTANT]
