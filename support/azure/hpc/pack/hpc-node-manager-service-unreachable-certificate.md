@@ -6,6 +6,7 @@ ms.service: hpcpack
 ms.author: genli
 author: genlin
 ms.reviewer: hclvteam
+ms.custom: sap:HPC Pack
 ---
 
 # Node error "HPC Node Manager Service Unreachable"

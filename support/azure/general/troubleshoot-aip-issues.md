@@ -7,6 +7,7 @@ ms.service: information-protection
 ms.author: genli
 author: genlin
 ms.reviewer: 
+ms.custom: sap:Protecting and opening content
 ---
 # How to troubleshoot Azure Information Protection policy issues
 

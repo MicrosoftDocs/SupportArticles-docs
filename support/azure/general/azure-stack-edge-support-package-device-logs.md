@@ -6,6 +6,7 @@ ms.service: azure-stack
 ms.author: genli
 author: genlin
 ms.reviewer: Andrew.Brenner
+ms.custom: sap:Device Configuration and Setup
 ---
 
 # Azure Stack Edge support package and device logs

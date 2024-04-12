@@ -6,6 +6,7 @@ ms.service: api-management
 ms.author: genli
 author: genlin
 ms.reviewer: 
+ms.custom: sap:Availability or Unexpected API Responses
 ---
 # Azure API is returning blank response
 

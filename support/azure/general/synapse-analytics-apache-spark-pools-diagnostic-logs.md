@@ -6,6 +6,7 @@ author: genlin
 ms.author: genli
 ms.service: azure-diagnostics-support
 ms.reviewer: 
+ms.custom: sap:Job Execution and Performance
 ---
 # Apache Spark diagnostic logs in Azure Synapse Analytics
 

@@ -6,6 +6,7 @@ ms.service: automation
 ms.author: genli
 author: genlin
 ms.reviewer: 
+ms.custom: sap:Update Management
 ---
 # Find-AzureRmResource fails or cannot be found after you update Azure modules
 

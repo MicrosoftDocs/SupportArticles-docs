@@ -6,6 +6,7 @@ ms.service: automation
 ms.author: genli
 author: genlin
 ms.reviewer: jfanjoy
+ms.custom: sap:Runbook not working as expected
 ---
 # How to capture Azure Automation-scripted diagnostics
 

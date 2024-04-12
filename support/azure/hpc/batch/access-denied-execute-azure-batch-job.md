@@ -4,6 +4,7 @@ description: Provides solutions for access issues when you execute Azure Batch j
 ms.date: 09/20/2022
 ms.service: batch
 ms.reviewer: biny, v-weizhu
+ms.custom: sap:Azure Batch
 ---
 # Access denied when executing Azure Batch jobs
 

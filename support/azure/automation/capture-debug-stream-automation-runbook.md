@@ -6,6 +6,7 @@ ms.service: automation
 ms.author: genli
 author: genlin
 ms.reviewer: 
+ms.custom: sap:Update Management
 ---
 # How to capture debug stream in Azure Automation runbooks
 

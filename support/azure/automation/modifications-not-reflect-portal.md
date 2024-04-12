@@ -6,6 +6,7 @@ author: genlin
 ms.author: genli
 ms.service: automation
 ms.reviewer: pfreitas
+ms.custom: sap:State Configuration (DSC)
 ---
 # Modifications to the configuration mode of an Azure Automation Configuration Node aren't reflected in the portal
 

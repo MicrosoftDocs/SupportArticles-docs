@@ -6,6 +6,7 @@ author: genlin
 ms.author: genli
 ms.service: api-management
 ms.reviewer: 
+ms.custom: sap:Availability or Unexpected API Responses
 ---
 # SOAP-based API is returning 404 and 500 HTTP status codes
 

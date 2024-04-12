@@ -6,6 +6,7 @@ ms.author: genli
 ms.service: service-fabric
 ms.date: 08/14/2020
 ms.reviewer: 
+ms.custom: sap:Cluster related issues
 ---
 # Microsoft Azure Service Fabric Logs
 

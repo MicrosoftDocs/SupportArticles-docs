@@ -6,6 +6,7 @@ ms.service: automation
 ms.author: genli
 author: genlin
 ms.reviewer: 
+ms.custom: sap:Runbook not working as expected
 ---
 # How to reinstall Operations Management Suite (OMS) Agent for Linux
 

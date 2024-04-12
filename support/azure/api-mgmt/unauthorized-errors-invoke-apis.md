@@ -6,6 +6,7 @@ author: genlin
 ms.author: genli
 ms.service: api-management
 ms.reviewer: 
+ms.custom: sap:Availability or Unexpected API Responses
 ---
 # Unauthorized errors (401) while invoking APIs
 
