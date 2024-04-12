@@ -2,7 +2,7 @@
 title: Setup fails when rollback is disabled
 description: An error appears when you install or remove the .NET Framework. This article provides a resolution.
 ms.date: 05/06/2020
-ms.custom: sap:Installation
+ms.custom: sap:Installation and Deployment
 ms.reviewer: CWOJA
 ---
 # Error when you install or remove .NET Framework: You must enable rollback to continue with setup

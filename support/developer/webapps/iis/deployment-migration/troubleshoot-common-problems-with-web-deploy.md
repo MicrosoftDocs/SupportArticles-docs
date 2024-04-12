@@ -2,7 +2,7 @@
 title: Troubleshoot common problems related to Web Deploy
 description: This article describes how to diagnose and fix common problems with Web Deploy, including common errors seen while publishing from Visual Studio 2010.
 ms.date: 04/20/2012
-ms.custom: sap:Deployment and migration
+ms.custom: sap:Deployment and Migration\Web Deploy installation
 ms.subservice: deployment-migration
 ms.reviewer: johnhart, ellhamai, chihshen, v-sidong
 ---
