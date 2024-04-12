@@ -2,7 +2,7 @@
 title: Navigate XML with the XPathNavigator class
 description: This article describes some sample steps and sample code to navigate XML by using the XPathNavigator class in Visual Basic 2005 or in Visual Basic .NET.
 ms.date: 10/10/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\Visual Basic .NET (VB.NET)
 ms.topic: how-to
 ---
 # Navigate XML with the XPathNavigator class by using Visual Basic  

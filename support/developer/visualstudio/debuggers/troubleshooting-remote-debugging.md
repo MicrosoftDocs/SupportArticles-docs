@@ -5,6 +5,7 @@ ms.date: 08/03/2022
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: mikejo
+ms.custom: sap:Debuggers and Analyzers\Visual Studio Remote Debugger
 ---
 # Troubleshoot remote debugging
 

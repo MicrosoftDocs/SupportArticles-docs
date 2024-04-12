@@ -5,6 +5,7 @@ ms.date: 04/22/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
 # Error - There is not enough space on the disk

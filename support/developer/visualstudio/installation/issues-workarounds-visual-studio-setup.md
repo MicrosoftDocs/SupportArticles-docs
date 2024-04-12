@@ -3,7 +3,7 @@ title: Common issues in Visual Studio setup
 description: This article describes common issues during Visual Studio installation and provides suggested workarounds.
 ms.date: 07/27/2022
 ms.reviewer: v-jayaramanp
-ms.custom: sap:Installation
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 # Common issues and workarounds in Visual Studio setup
 
