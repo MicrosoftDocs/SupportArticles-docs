@@ -3,6 +3,7 @@ title: SQL packages may fail in the local administrator account
 description: Describes an issue where SQL packages may fail when the local administrator account doesn't have certain rights when installing Visual Studio 2015.
 ms.date: 05/25/2022
 ms.reviewer: v-sidong
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
 # SQL packages may fail when the local administrator account doesn't have certain rights

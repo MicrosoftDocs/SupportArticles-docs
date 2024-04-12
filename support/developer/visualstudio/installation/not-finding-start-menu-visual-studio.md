@@ -5,6 +5,7 @@ ms.date: 04/27/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Other
 ---
 
 # Can't find Visual Studio 2015 on the Start menu

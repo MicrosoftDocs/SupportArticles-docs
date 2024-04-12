@@ -4,6 +4,7 @@ description: This article provides resolutions for the problems that a user may 
 ms.date: 12/11/2020
 ms.reviewer: LPrete
 ms.subservice: general
+ms.custom: sap:Health, Diagnostic, and Performance Features\Event logging
 ---
 # Users cannot access Web sites when the security event log is full
 
