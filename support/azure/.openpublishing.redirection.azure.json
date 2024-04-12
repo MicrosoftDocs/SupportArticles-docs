@@ -5459,6 +5459,11 @@
         "source_path": "service-fabric/cluster/index.md",
         "redirect_url": "troubleshoot/azure/service-fabric/welcome-service-fabric",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "synapse-analytics-spark/perf/index.md",
+        "redirect_url": "troubleshoot/azure/synapse-analytics-spark/welcome-synapse-analytics-spark",
+        "redirect_document_id": false
       }
   ]
 }
