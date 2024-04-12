@@ -170,4 +170,4 @@ You need to understand who is throwing these HTTP 404 and 500 responses, APIM, o
 
     :::image type="content" source="media/soap-based-api-return-404-500-http-code/intb-value.png" alt-text="Screenshot of the intB value that is set to zero.":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

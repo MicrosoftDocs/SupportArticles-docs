@@ -54,4 +54,4 @@ This is a debug message.
 
 This occurs because the statement $GLOBAL:DebugPreference="Continue" tells PowerShell to display debug messages and then continue and the addition of 5>&1 to the end of any statement, which tells PowerShell to redirect stream 5 (debug) to stream 1 (output).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

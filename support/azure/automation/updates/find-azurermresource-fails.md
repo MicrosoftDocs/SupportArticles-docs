@@ -27,4 +27,4 @@ Starting in Microsoft AzureRM 6.0.0, the `Find-AzureRmResource` cmdlet functiona
 
 To fix this issue, update your runbooks to use `Get-AzureRmResource` instead of `Find-AzureRmResource`. For more information, see the [usage of Get-AzureRmResource](/powershell/module/azurerm.resources/get-azurermresource?view=azurermps-6.1.0&preserve-view=true).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

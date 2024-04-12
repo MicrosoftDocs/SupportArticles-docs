@@ -9921,11 +9921,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/azure/general/fabric-logs.md",
-      "redirect_url": "/troubleshoot/azure/service-fabric/fabric-logs",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/azure/general/access-denied-execute-azure-batch-job.md",
       "redirect_url": "/troubleshoot/azure/hpc-batch/access-denied-execute-azure-batch-job",
       "redirect_document_id": true

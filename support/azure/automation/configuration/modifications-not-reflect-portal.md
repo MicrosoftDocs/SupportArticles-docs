@@ -28,4 +28,4 @@ Either method modifies the configuration mode in the DscLocalConfigurationManage
 
 This is known issue that affects only how the configuration mode is displayed in the Azure portal. The DSC Node still functions correctly per the settings in DscLocalConfigurationManager.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
