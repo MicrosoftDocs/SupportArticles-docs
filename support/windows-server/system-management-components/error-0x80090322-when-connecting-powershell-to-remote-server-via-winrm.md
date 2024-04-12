@@ -82,7 +82,7 @@ The Kerberos request would look like the following example after making the regi
 You can also use the `reg add` command:
 
 ```console
-reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client /v spn_prefix /t REG_SZ /d "HOST" /f
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client /v spn_prefix /t REG_SZ /d "WSMAN" /f
 ```
 
 After that, add the following SPNs to the computer account:
