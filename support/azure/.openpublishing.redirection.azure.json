@@ -5307,16 +5307,16 @@
       },
       {
         "source_path": "general/synapse-analytics-apache-spark-pools-diagnostic-logs.md",
-        "redirect_url": "/troubleshoot/azure/synapse-analytics-spark/perf/synapse-analytics-apache-spark-pools-diagnostic-logs",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/spark/perf/synapse-analytics-apache-spark-pools-diagnostic-logs",
         "redirect_document_id": true
       },
       {
-        "source_path": "general/fabric-logs/fabric-logs.md",
+        "source_path": "service-fabric/fabric-logs/fabric-logs.md",
         "redirect_url": "/troubleshoot/azure/service-fabric/cluster/fabric-logs",
         "redirect_document_id": true
       },
       {
-        "source_path": "general/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md",
+        "source_path": "virtual-network/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md",
         "redirect_url": "/troubleshoot/azure/virtual-network/connectivity/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet",
         "redirect_document_id": true
       },
