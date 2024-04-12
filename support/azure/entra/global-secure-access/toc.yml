@@ -1,0 +1,5 @@
+- name: Welcome
+  href: welcome-global-secure-access.yml
+
+- name: Troubleshoot Global Secure Access client for Windows issues
+  href: troubleshoot-global-secure-access-client-windows-issues.md
