@@ -5,6 +5,7 @@ ms.date: 12/28/2020
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: roriddle, dev_triage
+ms.custom: sap:Class Library Namespaces
 ---
 # Time-out occurs when an application calls the Poll method
 

@@ -2,6 +2,7 @@
 title: Internet Explorer flickers on computers with hybrid graphics
 description: Describes a problem with flickering that may be seen on certain notebook POCs, and describes a workaround.
 ms.date: 03/16/2020
+ms.custom: sap:Stability and Performance
 ---
 # Internet Explorer may flicker on computers with hybrid graphics
 

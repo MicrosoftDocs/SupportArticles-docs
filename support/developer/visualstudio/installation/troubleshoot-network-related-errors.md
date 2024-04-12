@@ -5,6 +5,7 @@ ms.date: 04/18/2023
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: meghaanand
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 # Troubleshoot network-related errors when you install, update, or use Visual Studio
 

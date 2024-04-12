@@ -3,6 +3,7 @@ title: High memory when you use EnlistDurable
 description: Describes high memory usage when using EnlistDurable.
 ms.date: 05/11/2020
 ms.reviewer: jcarley
+ms.custom: sap:Common Language Runtime (CLR)
 ---
 # You experience high memory usage when using EnlistDurable
 
