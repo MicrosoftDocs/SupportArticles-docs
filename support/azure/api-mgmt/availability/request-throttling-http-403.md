@@ -65,4 +65,4 @@ Apart from the above, we are also encountering **HTTP 429 - Too many requests** 
 
 Read more about [ip-filter](/azure/api-management/api-management-access-restriction-policies#RestrictCallerIPs)  and [rate-limit-by-key](/azure/api-management/api-management-access-restriction-policies#LimitCallRateByKey) policies in APIM.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

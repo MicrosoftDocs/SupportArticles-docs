@@ -29,4 +29,4 @@ Troubleshooting scenarios:
 - [Scenario 4 - Performance hit in API calls](performance-hit-api-calls.md).
 - [Scenario 5 - Request throttling problems and HTTP 403 - Forbidden issues](request-throttling-http-403.md).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

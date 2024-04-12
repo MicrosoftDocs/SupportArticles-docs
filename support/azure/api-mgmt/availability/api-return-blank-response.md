@@ -50,4 +50,4 @@ To debug this kind of issues, the best approach is collect [APIM inspector trace
 
 Read about the [forward-request](/azure/api-management/api-management-advanced-policies#ForwardRequest) policy to know more about it.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
