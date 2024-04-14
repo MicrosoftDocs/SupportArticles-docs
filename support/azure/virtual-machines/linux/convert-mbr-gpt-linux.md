@@ -11,11 +11,10 @@ ms.date: 04/14/2024
 
 ## Environment
 
-ALL Linux Distribution's
+This document covers supported [Endorsed Linux distros](/azure/virtual-machines/linux/endorsed-distros).  
 
 > [!IMPORTANT]
 > Disclaimer! This could only be done in a data disk, not an OS disk. If this is done is an OS disk, this will end up in a no boot situation.  
-> This document covers supported [Endorsed Linux distros](/azure/virtual-machines/linux/endorsed-distros).  
 > Red Hat created on 11 September 2022 the following article mentioning that it isn't possible to convert msdos to gpt label without losing data. Refer: https://access.redhat.com/solutions/1261843. This document is for best effort only the other option is to take a full backup of the data on the disk and recreate gpt partition table instead.
 
 
