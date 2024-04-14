@@ -5,17 +5,18 @@ author: brfett
 ms.author: brfett
 ms.service: virtual-machines
 ms.topic: how-to #Don't change
-ms.date: 12/24/2024
+ms.date: 04/14/2024
 ---
-# Unable to resize MBR partition with more than 2 TB on Data Disk
+# Unable to resize a data disk MBR partition with more than 2 TB in a Linux virtual machine
 
 ## Environment
 
 ALL Linux Distribution's
 
->[!IMPORTANT]
->Disclaimer! This could only be done in a data disk, not an OS disk. If this is done is an OS disk, this will end up in a no boot situation.
->Red Hat created on 11 September 2022 the following article mentioning that it isn't possible to convert msdos to gpt label without losing data. Refer: https://access.redhat.com/solutions/1261843. This document is         for best effort only the other option is to take a full backup of the data on the disk and recreate gpt partition table instead.
+> [!IMPORTANT]
+> Disclaimer! This could only be done in a data disk, not an OS disk. If this is done is an OS disk, this will end up in a no boot situation.
+> This document covers supported [Endorsed Linux distros](/azure/virtual-machines/linux/endorsed-distros)
+> Red Hat created on 11 September 2022 the following article mentioning that it isn't possible to convert msdos to gpt label without losing data. Refer: https://access.redhat.com/solutions/1261843. This document is for best effort only the other option is to take a full backup of the data on the disk and recreate gpt partition table instead.
 
 
 ## Problem Description
@@ -24,8 +25,8 @@ Unable to resize an MBR partition for a data disk with a size bigger than 2 TB
   
 Refer to the below WARNING message when we use fdisk command to resize the partition.
 
-[!IMPORTANT]
-  >WARNING: The size of this disk is 8.8 TB. DOS partition table format can't be used on drives for volumes larger than 2 TB for 512-byte sectors. Use parted(1) and GUID partition table format (GPT).
+> [!IMPORTANT]
+> The size of this disk is 8.8 TB. DOS partition table format can't be used on drives for volumes larger than 2 TB for 512-byte sectors. Use parted(1) and GUID partition table format (GPT).
 
   ```bash
   sudo fdisk /dev/sdd
@@ -110,7 +111,7 @@ Refer to the below WARNING message when we use fdisk command to resize the parti
 
 ## Cause
 
-The MBR, which contains the partition boundaries and partition (file system) type information, has an addressing limit of 2^32 sectors. It's this 32-bit address limitation within the MBR partition data structures that    ultimately limits the size of the disk and partition.
+The MBR, which contains the partition boundaries and partition (file system) type information, has an addressing limit of 2^32 sectors. It's this 32-bit address limitation within the MBR partition data structures that ultimately limits the size of the disk and partition.
 
 With 512-byte sectors that is 2 TiB.
 
@@ -125,8 +126,8 @@ GPT partition tables don't have this sector address limit and are recommended fo
 
 ### Identify the current partition table type
 
->[!IMPORTANT] 
->Take a snapshot of the Data disk before doing any change. https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk
+> [!IMPORTANT] 
+> Take a [snapshot](/azure/virtual-machines/snapshot-copy-managed-disk) of the Data disk before doing any change. 
 
 To check if the current data disk is MBR or GPT, you can use any of the following utilities.
 
@@ -166,10 +167,10 @@ To check if the current data disk is MBR or GPT, you can use any of the followin
 
 ---
 
->[!NOTE]
->In this Example we're going to use `gdisk` to recreate the partition
+> [!NOTE]
+> In this Example we're going to use `gdisk` to recreate the partition
 
-1. Install `gdisk` tool if not already installed in teh Linux virtual machine:
+1. Install `gdisk` tool if not already installed in the Linux virtual machine:
 
 ### [Red Hat 7.x](#tab/rhel7)
 
@@ -207,28 +208,23 @@ sudo gdisk -l /dev/sdd | grep Disk | grep sectors
   Disk /dev/sdd: 17179869184 sectors, 8.0 TiB
 ```
 
+3. Stop the application running on the Virtual Machine and unmount the filesystem
 
-
-3. Stop the application running on the Virtual Machine and umount the filesystem
-
->[!NOTE]
->Both myapp.service and /appext4 are sample entries.
+> [!NOTE]
+> Both `myapp.service` and `/appext4` are sample entries.
 
 ```bash
 sudo systemctl stop myapp.service
 sudo umount /appext4
 ```
 
+> [!NOTE]
+> If you need to increase the size you can do it now through your account in Azure. A disk resize in the Azure portal will need downtime. Please review [How to expand data disk document](/azure/virtual-machines/linux/expand-disks?tabs=ubuntu#expand-an-azure-managed-disk)
 
->[!NOTE]
->If you need to increase the size you can do it now through your account in Azure. A disk resize in the Azure portal will need downtime. Please review following Link: https://learn.microsoft.com/en-us/azure/virtual-machines/linux/expand-disks?tabs=ubuntu#expand-an-azure-managed-disk
-
-
-4. Use `gdisk` to recreate the partition number 1.
+4. Use `gdisk` to recreate the partition number 1
 
 ```bash
 sudo gdisk /dev/sdd
-
 ```
 
 ```output
@@ -337,19 +333,7 @@ sudo fsck.ext4 -fy /dev/sdd1
 sudo mount /appext4
 ```
 
-
 * **If the file system is `ext4`:**
-
-```bash
-sudo resize2fs /dev/sdd1
-```
-
-* **If the file system is `XFS`:**
-
-```bash
-sudo xfsgrowfs /dev/sdd1
-```
-
 
 ```bash
 sudo resize2fs /dev/sdd1
@@ -360,6 +344,12 @@ sudo resize2fs /dev/sdd1
   Filesystem at /dev/sdd1 is mounted on /appext4; on-line resizing required
   old_desc_blocks = 256, new_desc_blocks = 1024
   The filesystem on /dev/sdd1 is now 2147483387 blocks long.
+```
+
+* **If the file system is `XFS`:**
+
+```bash
+sudo xfsgrowfs /dev/sdd1
 ```
 
 8. Next verify the new size. We can see the new partition size.
@@ -403,5 +393,3 @@ sudo ls -l /appext4
   drwx------.  2 root root 16384 Dec  1 19:47 lost+found
   drwxr-xr-x. 20 root root  4096 Dec  1 19:50 datalog
 ```
-
-
