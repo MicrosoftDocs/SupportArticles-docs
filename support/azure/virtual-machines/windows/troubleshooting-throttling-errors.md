@@ -10,7 +10,7 @@ ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.date: 04/15/2024
-ms.reviewer: changov, viveksinglam, vashan, rajraj, v-weizhu
+ms.reviewer: changov, viveksingla, vashan, rajraj, v-weizhu
 ---
 # Troubleshooting API throttling errors
 
