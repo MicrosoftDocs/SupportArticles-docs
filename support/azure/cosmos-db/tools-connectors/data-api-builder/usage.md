@@ -8,6 +8,7 @@ ms.reviewer: jerrynixon
 ms.service: data-api-builder
 ms.topic: troubleshooting-general
 ms.date: 04/01/2024
+ms.custom: sap:Tools and Connectors
 ---
 
 # Troubleshoot usage in Data API builder for Azure databases

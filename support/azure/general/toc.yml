@@ -24,6 +24,8 @@
   items:
   - name: Fail to sign up for an Azure subscription
     href: cannot-sign-up-subscription.md
+  - name: Enterprise Agreement user can't create a VM
+    href: cannot-create-vm-ea.md
   - name: Users and groups lists disappear
     href: cannot-see-users-groups-list-iam.md
 

@@ -1,10 +1,10 @@
 ---
 title: Can't find Visual Studio 2015 on the Start menu
 description: Provides a resolution for not finding the Visual Studio icon on the Start menu.
-ms.date: 04/27/2022
+ms.date: 04/15/2024
 author: jasonchlus
 ms.author: jasonchlus
-ms.reviewer: terry.g.lee
+ms.reviewer: terry.g.lee, jagbal
 ms.custom: sap:Installation\Other
 ---
 

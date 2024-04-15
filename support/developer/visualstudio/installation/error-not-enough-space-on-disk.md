@@ -1,10 +1,10 @@
 ---
 title: Error - There is not enough space on the disk
 description: This article helps you resolve an error that occurs if you don't have enough space on the hard disk to download Visual Studio 2015.
-ms.date: 04/22/2022
+ms.date: 04/15/2024
 author: jasonchlus
 ms.author: jasonchlus
-ms.reviewer: terry.g.lee
+ms.reviewer: terry.g.lee, jagbal
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 

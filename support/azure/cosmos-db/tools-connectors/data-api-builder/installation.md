@@ -4,6 +4,7 @@ description: Troubleshoot common problems that might occur when you install the 
 ms.reviewer: jerrynixon, sidandrews
 ms.service: data-api-builder
 ms.date: 04/10/2024
+ms.custom: sap:Tools and Connectors
 ---
 # Troubleshoot the installation of Data API builder for Azure databases
 
@@ -58,4 +59,4 @@ echo $PATH | tr ":" "\n"
 
 If your issue isn't resolved, provide feedback or report it in the [data-api-builder Discussions](https://github.com/azure/data-api-builder/discussions).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
