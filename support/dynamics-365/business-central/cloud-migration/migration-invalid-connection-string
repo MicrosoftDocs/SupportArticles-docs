@@ -16,6 +16,10 @@ This article explains how to troubleshoot the **Invalid database connection stri
 
 ## Symptom
 
+The symptom is the following error message:
+
+- **Invalid database connection string provided**
+
 This issue often appears together with the **Keyword not supported:**  or  **Value cannot be null** error.
 
 ## Cause
