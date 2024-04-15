@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot DPM protection agent installation issues
 description: Troubleshoot some of the most common problems when installing System Center Data Protection Manager protection agent.
-ms.date: 04/08/2024
+ms.date: 04/15/2024
 ms.reviewer: Mjacquet
 ---
 # Troubleshoot Data Protection Manager protection agent installation issues
@@ -73,18 +73,18 @@ To fix the issue, go through the following checklist:
 
 9. Is the Admin$ share accessible?
 
-    From an administrator command prompt, connect to the Admin$ share and then disconnect by using the following commands:
+    From an administrator command prompt, connect to the Admin$ share, and then disconnect by using the following commands:
 
     ```console
     net use * \\servername\Admin$
     net use z: /d
     ```
 
-    If you receive the following error message, make sure that file and print services are enabled on the network interface card (NIC), and DNS is working properly.
+    If you receive the following error message, make sure that file and print services are enabled on the network interface card (NIC) and that DNS is working properly.
 
     > System error 53 has occurred
 
-    If you receive the "Access denied" error message, verify that "Everyone" and "Authenticated users" has the "Access this computer from the network" right on the protected server. To check the setting, in Local Group Policy Editor, select **Local Computer Policy** > **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Polices** > **User Rights Assignments**.
+    If you receive the "Access denied" error message, verify that "Everyone" and "Authenticated users" have the "Access this computer from the network" right on the protected server. To check the setting, in **Local Group Policy Editor**, select **Local Computer Policy** > **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies** > **User Rights Assignments**.
 
 10. Is Windows Management Instrumentation (WMI) working?
 
@@ -139,9 +139,9 @@ To fix the issue, verify COM permissions on the protected computer.
 
 ## Protection agent upgrade fails
 
-To fix the issue, following these steps:
+To fix the issue, follow these steps:
 
-1. If there is an entry for DPM protection agent in the installed programs list, try upgrading the agent by using *DPMAgentInstaller.exe*. The latest agent can be copied from the DPM server from the DPM installation folder path:
+1. If there's an entry for the DPM protection agent in the list of installed programs, try upgrading the agent by using *DPMAgentInstaller.exe*. The latest agent can be copied from the DPM server's DPM installation folder path:
 
     *C:\Program Files\Microsoft System Center\\\<version>\DPM\DPM\ProtectionAgents\RA\\\<Build number>\amd64*
 
