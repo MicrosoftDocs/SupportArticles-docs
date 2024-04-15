@@ -78,7 +78,8 @@
   "redirection_files": [
     ".openpublishing.redirection.json",
     ".openpublishing.redirection.developer.json",
-    "azure/.openpublishing.redirection.azure.json"
+    "support/azure/.openpublishing.redirection.azure.json",
+    "support/system-center/.openpublishing.redirection.systemcenter"
   ],
   "need_generate_pdf_url_template": true
 }
