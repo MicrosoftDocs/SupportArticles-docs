@@ -1,10 +1,10 @@
 ---
 title: Update requires a member to be present or is blocked by another condition
 description: Provides a resolution for the issue where you receive the error "KBXXXXXX requires a member of the Visual Studio 2015 family to be present or is blocked by another condition on your computer".
-ms.date: 04/02/2022
+ms.date: 04/15/2024
 author: jasonchlus
 ms.author: jasonchlus
-ms.reviewer: terry.g.lee
+ms.reviewer: terry.g.lee, jagbal
 ms.custom: sap:Installation\Servicing updates and service packs
 ---
 # Error "KBXXXXXX requires a member of the Visual Studio 2015 family to be present or is blocked by another condition on your computer"

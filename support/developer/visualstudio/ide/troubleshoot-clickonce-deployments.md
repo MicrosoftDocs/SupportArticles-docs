@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting errors with ClickOnce deployments
 description: Describes common errors that can occur when you deploy a ClickOnce application and provides steps to resolve each problem.
-ms.date: 11/04/2016
+ms.date: 04/15/2024
 f1_keywords: 
   - Microsoft.VisualStudio.Publish.ClickOnceProvider.ErrorPrompt.UncRequired
   - Microsoft.VisualStudio.Publish.ClickOnceProvider.ErrorPrompt.NoInstallUrl
@@ -11,7 +11,7 @@ dev_langs:
   - C++
 author: HaiyingYu
 ms.author: haiyingyu
-ms.reviewer: mikejo
+ms.reviewer: mikejo, jagbal
 ms.custom: sap:Tools and Utilities\MSI and ClickOnce Setup development tools
 ---
 # Troubleshoot specific errors in ClickOnce deployments
