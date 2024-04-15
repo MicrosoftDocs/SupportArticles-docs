@@ -4,6 +4,7 @@ description: Provides a solution for an issue where HPC Management Service fails
 ms.date: 09/14/2022
 ms.service: hpcpack
 ms.reviewer: hclvteam, v-weizhu
+ms.custom: sap:HPC Pack
 ---
 # HPC Management Service fails to start after restoring database
 

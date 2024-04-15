@@ -4,6 +4,7 @@ description: Provides the cause and some suggestions for an issue where an Azure
 ms.date: 04/19/2023
 ms.reviewer: biny, v-weizhu
 ms.service: batch
+ms.custom: sap:Azure Batch
 ---
 # Azure Batch task is stuck in the Running state
 

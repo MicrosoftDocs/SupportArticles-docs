@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: cargonz, v-leedennis
 ms.service: hpcpack
 #Customer intent: As a Microsoft HPC Pack user, I want to resolve a reporting database connection problem in the HPC Cluster Manager so that I can successfully use a high-performance computing (HPC) management database.
+ms.custom: sap:HPC Pack
 ---
 # Resolve an HPC reporting database connection problem
 

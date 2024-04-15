@@ -10,6 +10,7 @@ f1_keywords:
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: ghogen
+ms.custom: sap:Integrated Development Environment (IDE)\Other
 ---
 # Troubleshoot Windows Communication Foundation (WCF) or WCF Data Services references in Visual Studio
 

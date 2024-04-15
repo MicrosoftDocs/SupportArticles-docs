@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: biny, v-leedennis
 ms.service: batch
 #Customer intent: As an Azure Batch user, I want to troubleshoot why a batch pool deletion attempt fails so that I can successfully continue to use the Azure Batch service after I delete a batch pool.
+ms.custom: sap:Azure Batch
 ---
 # Azure batch pool deletion failure
 

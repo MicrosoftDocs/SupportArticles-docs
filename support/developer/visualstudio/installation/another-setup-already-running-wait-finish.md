@@ -5,6 +5,7 @@ ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
 # Error "Another setup is already running. Please wait for it to finish before trying again"

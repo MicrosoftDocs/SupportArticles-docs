@@ -4,6 +4,7 @@ description: An Azure batch pool creation failure occurs. You can review the sym
 ms.date: 11/22/2022
 ms.reviewer: biny, v-weizhu
 ms.service: batch
+ms.custom: sap:Azure Batch
 ---
 # Azure batch pool creation failure
 

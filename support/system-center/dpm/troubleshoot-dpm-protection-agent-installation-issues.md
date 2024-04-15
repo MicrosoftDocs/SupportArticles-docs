@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot DPM protection agent installation issues
-description: Troubleshoot some of the most common problems when installing System Center 2016 Data Protection Manager protection agent.
-ms.date: 04/08/2024
+description: Troubleshoot some of the most common problems when installing System Center Data Protection Manager protection agent.
+ms.date: 04/15/2024
 ms.reviewer: Mjacquet
 ---
-# Troubleshoot Data Protection Manager 2016 protection agent installation issues
+# Troubleshoot Data Protection Manager protection agent installation issues
 
-This guide helps you understand and troubleshoot some of the most common problems when installing System Center 2016 Data Protection Manager (DPM) protection agent.
+This guide helps you understand and troubleshoot some of the most common problems when installing System Center Data Protection Manager (DPM) protection agent.
 
-_Original product version:_ &nbsp; System Center 2016 Data Protection Manager  
+_Original product version:_ &nbsp; System Center Data 2019 Protection Manager, System Center 2022 Data Protection Manager  
 _Original KB number:_ &nbsp; 4052731
 
 Before you start troubleshooting, we recommend that you first try to install the protection agents manually. For detailed instructions, see [Install the agent manually](/system-center/dpm/deploy-dpm-protection-agent#BKMK_Manual).
@@ -24,18 +24,6 @@ Make sure that COM+ services are running on the protected computers, then try to
 ### Verify required applications are installed
 
 Make sure that you have [the required applications](/system-center/dpm/prepare-environment-for-dpm#protected-workloads) installed on the protected computers, then try to reinstall the protection agent.
-
-## Unexpected restarts during DPM agent deployment
-
-When Microsoft Visual C++ 2012 Redistributable (x64) version 11.0.51106 or a later version isn't preinstalled, agent deployment fails, and a forced restart occurs without warning. This occurs even you clear the automatically restart option.
-
-To fix this issue, verify that the required version of Microsoft Visual C++ 2012 Redistributable (x64) is installed. To do this, at the command prompt, type the following command to query the related registry entries:
-
-```console
-reg query \\<ComputerName>\HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall /s /f "Microsoft Visual C++ 2012 x64"
-```
-
-If no results are returned, install Microsoft Visual C++ 2012 Redistributable (x64) version 11.0.51106 or a later version.
 
 ## Agent installation (or setdpmserver) fails with fatal error 0x80004005
 
@@ -57,7 +45,7 @@ To fix the issue, go through the following checklist:
 
 2. Does the protected computer have a supported Windows operating system installed?
 
-    Verify the operating system on the computer to be protected.
+    Verify the operating system on the computer to be protected. For more information, see [DPM support matrix](/system-center/dpm/dpm-protection-matrix).
 
 3. Is a firewall enabled on the computer to be protected that could be blocking requests from the DPM server?
 
@@ -82,6 +70,41 @@ To fix the issue, go through the following checklist:
 8. Is the boot volume on the computer formatted as file allocation table (FAT)?
 
     Convert the boot volume to NTFS file system if you have sufficient space.
+
+9. Is the Admin$ share accessible?
+
+    From an administrator command prompt, connect to the Admin$ share, and then disconnect by using the following commands:
+
+    ```console
+    net use * \\servername\Admin$
+    net use z: /d
+    ```
+
+    If you receive the following error message, make sure that file and print services are enabled on the network interface card (NIC) and that DNS is working properly.
+
+    > System error 53 has occurred
+
+    If you receive the "Access denied" error message, verify that "Everyone" and "Authenticated users" have the "Access this computer from the network" right on the protected server. To check the setting, in **Local Group Policy Editor**, select **Local Computer Policy** > **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies** > **User Rights Assignments**.
+
+10. Is Windows Management Instrumentation (WMI) working?
+
+    From an administrator command prompt, test the remote WMI by using the following command:
+
+    ```console
+    Wmic /node:"ServerName" OS list brief
+    ```
+
+    For more information, see [WMI Troubleshooting](/windows/win32/wmisdk/wmi-troubleshooting).
+
+11. Is the Microsoft Distributed Transaction Coordinator (MSDTC) service running?
+
+    From an administrator command prompt, check the service status by running the following command:
+
+    ```console
+    sc \\servername query |find /i "msdtc"
+    ```
+
+    Start the service if it isn't started.
 
 ## DPM protection agent doesn't uninstall from a computer
 
@@ -116,9 +139,12 @@ To fix the issue, verify COM permissions on the protected computer.
 
 ## Protection agent upgrade fails
 
-To fix the issue, following these steps:
+To fix the issue, follow these steps:
 
-1. If there is an entry for DPM protection agent in the installed programs list, try upgrading the agent by using DPMAgentInstaller.exe.
+1. If there's an entry for the DPM protection agent in the list of installed programs, try upgrading the agent by using *DPMAgentInstaller.exe*. The latest agent can be copied from the DPM server's DPM installation folder path:
+
+    *C:\Program Files\Microsoft System Center\\\<version>\DPM\DPM\ProtectionAgents\RA\\\<Build number>\amd64*
+
 2. If the previous step fails, uninstall the agent from **Programs and Features** and install it again by running the following command:
 
     ```console
@@ -149,17 +175,6 @@ After you install a protection agent on a back-end server to protect a Windows S
 
 No action is required. DPM protects the back-end servers internally if the Windows SharePoint Services farm has data on the server.
 
-## The application has failed to start because the application configuration is incorrect
-
-This issue occurs if the software requirements aren't met on the protected computer.
-
-To fix the issue, install the .NET Framework 3.5 with Service Pack 1 (SP1), and then reinstall the protection agent.
-
-If you are protecting a server released earlier than Windows Server 2012, you must install the appropriate version of Windows Management Framework (WMF) before you install the DPM agent:
-
-- [WMF 3.0](https://www.microsoft.com/download/details.aspx?id=34595) for Windows Server 2008 SP2
-- [WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616) for Windows 7, Windows Embedded Standard 7, and Windows Server 2008 R2
-
 ## Backup of data sources fails with agent upgrade error
 
 This issue occurs if the protection agent on some members of the cluster has not been upgraded.
@@ -173,15 +188,3 @@ If a protected domain controller or secondary server becomes unavailable, the pr
 For disaster recovery scenarios, in DPM Administrator console, you must wait for the scheduled installation list refresh which is a maximum of 30 minutes.
 
 To manually refresh the protection agents, in the **Management** task area, select the **Agents** tab, select the computer, and then in the **Actions** pane, select **Refresh information**.
-
-## DPM agent install fails with Error 347: An error occurred when the agent operation attempted to create the DPM Agent Coordinator service
-
-This issue typically occurs because a prerequisite isn't installed. Most frequently, Windows Management Framework (WMF) must be updated.
-
-To fix the issue, follow these steps:
-
-1. Upgrade [WMF](https://www.microsoft.com/download/details.aspx?id=54616) on the production server to version 5.1.
-2. Make sure all other [prerequisites](/system-center/dpm/prepare-environment-for-dpm#protected-workloads) are installed.
-3. Try to install the DPM agent again.
-
-For more information, see [DPM agent installation fails with error 347](agent-installation-error-347.md).

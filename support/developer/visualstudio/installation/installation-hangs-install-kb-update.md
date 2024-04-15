@@ -5,6 +5,7 @@ ms.date: 04/02/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Servicing updates and service packs
 ---
 # The installation hangs when you try to install a KB update
 

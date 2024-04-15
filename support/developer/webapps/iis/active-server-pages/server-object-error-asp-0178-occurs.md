@@ -2,7 +2,7 @@
 title: Error ASP 0178 when you instantiate COM object
 description: This article provides resolutions for the ASP 0178 error that occurs when you instantiate COM object.
 ms.date: 09/24/2020
-ms.custom: sap:Active Server Pages
+ms.custom: sap:Active Server Pages\Debugging
 ---
 # Server object error 'ASP 0178' when you instantiate COM object
 

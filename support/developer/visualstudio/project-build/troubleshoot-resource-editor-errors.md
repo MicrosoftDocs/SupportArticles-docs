@@ -7,6 +7,7 @@ f1_keywords:
 - msvse_resedit.err.nameblank
 - msvse_resedit.err.duplicatename
 ms.reviewer: tglee, v-jayaramanp
+ms.custom: sap:Project - Build System\Build Issues
 ---
 
 # Troubleshoot errors in the Resource Editor

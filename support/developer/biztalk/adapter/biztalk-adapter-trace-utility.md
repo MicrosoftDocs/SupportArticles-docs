@@ -2,7 +2,7 @@
 title: Install and use the Adapter Trace Utility
 description: This article explains how to install the BizTalk Adapter Trace Utility and enable tracing. Trace files can be useful tools for debugging problems.
 ms.date: 03/04/2020
-ms.custom: sap:Adapter
+ms.custom: sap:Adapters
 ---
 # Install and use the BizTalk Adapter Trace Utility in BizTalk Server
 

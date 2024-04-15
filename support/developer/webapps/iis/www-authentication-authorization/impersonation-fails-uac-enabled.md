@@ -2,7 +2,7 @@
 title: Impersonation fails when UAC is enabled
 description: This article provides resolutions for the problem where an impersonation fails with IIS Express when UAC is enabled.
 ms.date: 04/03/2020
-ms.custom: sap:WWW authentication and authorization
+ms.custom: sap:WWW Authentication and Authorization\Windows Authentication
 ms.reviewer: robmcm
 ms.subservice: www-authentication-authorization
 ---
