@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-business-central
   author: SusanneWindfeldPedersen
   ms.author: solsen
-  ms.date: 02/23/2024
+  ms.date: 04/15/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -38,6 +38,8 @@ landingContent:
         links:
           - text: Troubleshoot user personalization can't be started
             url: client/client-user-personalization.md
+          - text: Troubleshoot profile configuration can't be started
+            url: client/client-profile-configuration.md
           - text: Troubleshoot client returns wrong `ClientType`
             url: client/client-returns-wrong-clienttype.md
           - text: Troubleshoot device date is causing connectivity issues
