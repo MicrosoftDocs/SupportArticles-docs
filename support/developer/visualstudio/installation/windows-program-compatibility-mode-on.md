@@ -1,10 +1,10 @@
 ---
 title: Windows Program Compatibility mode is on
 description: Provides a resolution for the error "Windows Program Compatibility mode is on. Turn it off and then try Setup again".
-ms.date: 04/07/2022
+ms.date: 04/15/2024
 author: jasonchlus
 ms.author: jasonchlus
-ms.reviewer: terry.g.lee
+ms.reviewer: terry.g.lee, jagbal
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
