@@ -10716,6 +10716,36 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/system-center/scsm/disable-diagnostics-connectivity-data.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/object-type-monitoringclass-not-found.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/could-not-load-type-error.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/cannot-impersonate-user-data-source.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/data-warehouse-base-library-mp-shows-failed-status.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/cannot-upgrade-to-system-center-2012-r2-service-manager.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/dynamics/gp/cannot-create-inventory-valuation-and-gmroi-and-inventory-turns-reports.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
@@ -10891,9 +10921,364 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/system-center/dpm/agent-installation-error-319.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/agent-installation-error-347.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/protection-agent-crashes.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/error-restore-dpmdb-bak-file.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/restore-database-error-470.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/disks-not-enumeratd-fail-to-add.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/dpm-service-crashes-event-917.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/sub-menu-items-show-more-than-once.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/troubleshoot-end-user-recovery-issues.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/host-level-backup-error-0x8007173d.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/configure-cluster-networks.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/hyper-v-backup-fails-error-30112.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/deduplicated-volumes-backup-fails.md",
+      "redirect_url": "/system-center/dpm/dpm-support-issues#the-dedup-file-system-cant-be-protected-to-a-secondary-dpm-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/cannot-run-sql-instance-to-upgrade-dpm.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/consistency-check-error-0x80070005.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/list-dpm-2012-sp1-error-codes.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/configure-smtp-server-information-error-2013.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/upgrade-dpm-vmware-vm-protection.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/cannot-restore-renamed-sharepoint-site.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/cannot-protect-sql-database.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/databases-with-multiple-backslash-characters-fail-restore.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/fail-to-inventory-ibm-35xx-tape-library.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/all-hosts-receive-zero-rating.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/apostrophe-causes-vmm-crash.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/app-controller-basic-troubleshooter.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/cannot-enable-mac-spoofing.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/cannot-upgrade-to-licensed-version.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/convert-between-vhd-vhdx-formats.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/database-error-upgrading-scvmm.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/determine-version-update-rollups.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/enable-vm-protection-error-25035.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/incorrect-agent-status.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/manage-host-fails-error-2911.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/manage-hyper-v-hosts-error-0x8033803b.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/microsoft-application-support-policy.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/network-properties-show-not-connected.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/not-enough-disk-space-run-v2v-conversion.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/p2v-conversion-fails-with-gpt-partitions.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/p2v-conversion-stops-at-40-percent.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/reinstallation-deserialize-object-error.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/reinstall-vmm-agent.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/self-service-user-cannot-view-service.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/server-app-v-agent-custom-actions.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/server-app-v-sequencer-custom-actions.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/shared-nothing-live-migration-error-0x8007274d.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/third-party-applications-support-policy.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/protected-vm-resync-state.md",
+      "redirect_url": "/troubleshoot/azure/site-recovery/protected-vm-resync-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/system-center/vmm/creating-protection-group-fails.md",
+      "redirect_url": "/troubleshoot/azure/site-recovery/creating-protection-group-fails",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/sql/general/information-mats-sdp.md",
       "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/system-center/scom/maintenance-mode-heartbeat-alerts.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/import-avicode-templates-after-upgrade.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/configure-windows-authentication.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/avicode-agent-installation-fails-with-invalid-character.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/activate-factfinder-management-server-license-file.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/minimum-bluestripe-collector-version-required.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/bluestripe-management-server-firewall-rules.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/check-bluestripe-collector-status.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/check-bluestripe-collector-version.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/configure-windows-authentication-on-bluestripe-management-server.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/factfinder-heap-space-configuration.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/generate-export-support-data-package.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/bluestripe-collector-installation-flags.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/upgrade-bluestripe-collector.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/use-custom-certificate.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/bluestripe-factfinder-new-functions.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/upgrade-configmgr-management-pack-error.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/configure-sharepoint-2010-management-pack.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/dns-management-pack-discovery-fails.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/event-id-4625-audit-failure.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/exchange-2010-management-pack-guidance.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/setup-not-completed-error.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scom/troubleshoot-oms-onboarding-issues.md",
+      "redirect_url": "/troubleshoot/system-center/scom/welcome-scom",
+      "redirect_document_id": false
     }
   ]
 }
