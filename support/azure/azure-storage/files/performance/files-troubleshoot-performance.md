@@ -3,14 +3,14 @@ title: Azure Files performance troubleshooting guide
 description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
 ms.service: azure-file-storage
 ms.custom: sap:Performance, linux-related-content
-ms.date: 09/28/2023
+ms.date: 04/15/2024
 ms.reviewer: kendownie, v-weizhu
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
 ---
 # Troubleshoot Azure Files performance issues
 
 > [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+> CentOS referenced in this article is a Linux distribution and will reach End Of Life (EOL). Consider your use and plan accordingly. For more information, see [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 This article lists common problems related to Azure file share performance, and provides potential causes and workarounds. To get the most value from this troubleshooting guide, we recommend first reading [Understand Azure Files performance](/azure/storage/files/understand-performance).
 
