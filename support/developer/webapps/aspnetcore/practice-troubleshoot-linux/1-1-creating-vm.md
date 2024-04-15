@@ -8,7 +8,7 @@ author: ahmetmithat
 ---
 # Part 1.1 - Create a Linux virtual machine in Azure and connecting to it
 
-[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
+[!INCLUDE [CentOS End Of Life](../../../../includes/centos-end-of-life-note.md)]
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
