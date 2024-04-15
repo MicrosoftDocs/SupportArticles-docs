@@ -2,7 +2,7 @@
 title: Error at thread exit if FLS callback isn't freed
 description: A process may crash at thread exit with an Access Violation exception if it had dynamically loaded a native C++ DLL that was statically linked with C Runtime, and the DLL generated an unhandled exception during its initialization or shutdown.
 ms.date: 04/22/2020
-ms.custom: sap:C and C++ Libraries
+ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
 ms.reviewer: ScotBren, gaurap
 ---
 # Fatal error at thread exit if FLS callback isn't freed

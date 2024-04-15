@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:nested-virtualization, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Nested Virtualization, csstroubleshoot
 ---
 # How to retrieve data from a Windows XP Mode virtual machine on Windows 8 or Windows 10
 

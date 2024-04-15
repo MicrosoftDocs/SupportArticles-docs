@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:schema-update-known-issues-best-practices-workflow-review, csstroubleshoot
+ms.custom: sap:Active Directory\Schema Updates, csstroubleshoot
 ---
 # Finding the current Schema Version
 

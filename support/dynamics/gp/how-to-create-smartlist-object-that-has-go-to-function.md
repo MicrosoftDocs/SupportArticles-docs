@@ -1,9 +1,10 @@
 ---
 title: How to use SmartList Builder to create SmartList object
 description: Describes how to create a SmartList object that has a Go To function for the Sales Transaction Entry window in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 04/22/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to use SmartList Builder to create a SmartList object that has a "Go To" function for the Sales Transaction Entry window
 

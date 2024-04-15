@@ -2,7 +2,7 @@
 title: SNA LU6.2 Resync TP fails to start
 description: This article describes that the SNA LU6.2 Resync TP service (Resyncsvc.exe) fails to start on a Host Integration Server 2000 or HIS 2004 server that is operating in client mode when configured to connect to an SNA Server 4.0 system.
 ms.date: 10/13/2020
-ms.custom: sap:Network integration (SNA gateway)
+ms.custom: sap:Network Integration (SNA Gateway)
 ms.topic: article
 ---
 # SNA LU6.2 Resync TP Service logs event 131 and fails to Start in Host Integration Server 2000 or 2004

@@ -1,9 +1,10 @@
 ---
 title: Errors when creating an ODBC source file
 description: Provides a solution to errors that occur when you create an Open Database Connectivity (ODBC) integration source file to connect to a SQL Server 2005 database in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error messages when you create an ODBC integration source file to connect to a SQL Server 2005 database in Microsoft Dynamics GP
 

@@ -5,6 +5,7 @@ ms.reviewer: matp
 ms.date: 12/21/2023
 author: jeparson
 ms.author: jeparson
+ms.custom: sap:Working with Solutions\Solution Checker
 ---
 # Solution checker enforcement in Managed Environments blocks or warns on import
 

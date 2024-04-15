@@ -33,7 +33,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: OperationNotAllowed
-            url: vmss-operation-not-allowed.md
+            url: delete/vmss-operation-not-allowed.md
 
    # Card
   - title: Deployment errors
@@ -41,13 +41,13 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Public IP count limit exceeded
-            url: vmss-public-ip-count-limit-exceeded.md
+            url: deploy/vmss-public-ip-count-limit-exceeded.md
           - text: InvalidParameter - Fault domain count
-            url: vmss-invalid-parameter-fault-domain-count.md
+            url: deploy/vmss-invalid-parameter-fault-domain-count.md
           - text: InvalidParameter - SinglePlacementGroup
-            url: vmss-invalid-parameter-single-placement-group.md
+            url: deploy/vmss-invalid-parameter-single-placement-group.md
           - text: OutboundConnectivityNotEnabledOnVM
-            url: vmss-outbound-connectivity-not-enabled.md
+            url: deploy/vmss-outbound-connectivity-not-enabled.md
 
    # Card
   - title: Extension issues
@@ -55,7 +55,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: VM extension provisioning errors
-            url: ./vm-extension-provisioning-errors.md
+            url: extensions/vm-extension-provisioning-errors.md
   
     # Card
   - title: Frequently asked questions (FAQ)
@@ -70,7 +70,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: QuotaExceeded error when scaling virtual machine scale sets
-            url: virtual-machine-scale-sets-quota-exceeded.md
+            url: scaling/virtual-machine-scale-sets-quota-exceeded.md
           - text: Resolve errors for resource quotas
             url: /azure/azure-resource-manager/templates/error-resource-quota
    # Card
@@ -79,8 +79,8 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Resource Health shows Degraded state in VMSS
-            url:  resource-health-degraded-state.md
+            url:  restart-stop/resource-health-degraded-state.md
           - text: VMSS instances remain in "Unhealthy" state and aren't repaired
-            url:  instances-not-repaired.md
+            url:  restart-stop/instances-not-repaired.md
           - text: VM is unavailable for 15 minutes
-            url:  ../virtual-machines/azure-vm-unavailable.md
+            url:  ../virtual-machines/windows/azure-vm-unavailable.md

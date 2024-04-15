@@ -11,67 +11,11 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 10/19/2022
+  ms.date: 04/12/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-
- # Card
-  - title: Azure API Management
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Azure API is returning blank response
-            url: ./api-return-blank-response.md
-          - text: Request throttling problems and HTTP 403 - Forbidden issues
-            url: ./request-throttling-http-403.md
-          - text: Troubleshooting overview
-            url: ./apim-troubleshooting-series.md
-          - text: Unauthorized errors 401 while invoking APIs
-            url: ./unauthorized-errors-invoke-apis.md
-
-# Card
-  - title: Azure Automation
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: How to capture Azure Automation-scripted diagnostics
-            url: ./automation-scripted-diagnostic-capture.md
-          - text: How to capture debug stream in Azure Automation runbooks
-            url: ./capture-debug-stream-automation-runbook.md
-
-# Card
-  - title: Azure Batch
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Access denied when executing Azure Batch jobs
-            url: ./access-denied-execute-azure-batch-job.md
-          - text: AccountEncryptionKeyUnavailable error when you try to list pools in Azure Batch
-            url: ./error-accountencryptionkeyunavailable.md
-          - text: Batch node creation delays when restarting or reimaging
-            url: ./batch-node-creation-delay-restart-reimage.md
-          - text: Batch pool deletion failure
-            url: ./azure-batch-pool-deletion-failure.md
-          - text: Use managed identities in a Batch account or a Batch pool
-            url: ./use-managed-identities-azure-batch-account-pool.md
-
-# Card
-  - title: Azure Information Protection
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: How to troubleshoot Azure Information Protection policy issues
-            url: ./troubleshoot-aip-issues.md
-
-# Card
-  - title: Azure Service Fabric
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Microsoft Azure Service Fabric Logs
-            url: ./fabric-logs.md
 
 # Card
   - title: General
@@ -85,18 +29,14 @@ landingContent:
           - text: Domains used by Microsoft support agents
             url: ./email-domains-support-agent.md    
 
+
 # Card
   - title: Other common issues
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Error when creating a VM as an Azure Enterprise user - Contact your reseller for accurate pricing
-            url: ./cannot-create-vm-ea.md
           - text: Can't sign up for a Microsoft Azure subscription
             url: ./cannot-sign-up-subscription.md
           - text: Can't see a list of users or groups when adding permissions in Access Control in the Azure portal
             url: ./cannot-see-users-groups-list-iam.md
-          - text: Connection status is incorrect on the portal
-            url: ./connection-status-not-display-correctly-portal.md
                                                                                  
-

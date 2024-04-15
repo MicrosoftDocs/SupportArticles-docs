@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtualized-domain-controller-errors-and-questions, csstroubleshoot
+ms.custom: sap:Active Directory\Virtualized domain controller (errors and questions), csstroubleshoot
 ---
 # Things to consider when you host Active Directory domain controllers in virtual hosting environments
 

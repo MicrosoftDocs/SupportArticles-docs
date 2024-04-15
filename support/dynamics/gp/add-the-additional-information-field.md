@@ -1,9 +1,10 @@
 ---
 title: Add the Additional Information field 
 description: Describes how to add the Additional Information field from the Internet Information window to the SOP Blank Invoice Form report.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to add the Additional Information field from the Internet Information window to the SOP Blank Invoice Form report
 

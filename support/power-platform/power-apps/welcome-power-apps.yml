@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/31/2021
+  ms.date: 04/01/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -22,17 +22,17 @@ landingContent:
           - text: Best practices when updating a flow
             url: connections/best-practices-when-updating-a-flow.md
           - text: Common issues and resolutions for Power Apps
-            url: isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md
+            url: create-and-use-apps/common-issues-and-resolutions.md
           - text: General Power Apps debugging strategies
-            url: isolate-and-troubleshoot-common-issues/isolate-common-issues.md
+            url: create-and-use-apps/isolate-common-issues.md
           - text: Isolate issues in canvas apps
-            url: isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md
+            url: create-and-use-apps/isolate-canvas-app-issues.md
           - text: Isolate issues in model-driven app
-            url: isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md
+            url: create-and-use-apps/isolate-model-app-issues.md
           - text: Troubleshoot startup issues for Power Apps
-            url: isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md
+            url: sign-in/troubleshooting-startup-issues.md
           - text: Troubleshoot Power Query issues
-            url: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
+            url: connections/troubleshoot-power-query-issues.md
 
   # Card
   - title: Create and use apps

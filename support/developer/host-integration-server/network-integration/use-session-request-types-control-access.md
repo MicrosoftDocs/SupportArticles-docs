@@ -2,7 +2,7 @@
 title: Use session request types to control access
 description: This article describes how to use session request types to control access to TN3270 sessions.
 ms.date: 10/13/2020
-ms.custom: sap:Network integration (SNA gateway)
+ms.custom: sap:Network Integration (SNA Gateway)
 ms.topic: how-to
 ---
 # Use session request types to control access to TN3270 sessions

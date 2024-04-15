@@ -3,20 +3,24 @@
   items:
   - name: Azure Container Instances
     href: azure-container-instances/welcome-container-instances.yml
-  - name: Microsoft Entra ID
-    href: active-directory/welcome-azure-ad.yml
   - name: Microsoft Entra
-    href: microsoft-entra/welcome-microsoft-entra.yml
-  - name: Microsoft Entra ID
-    href: active-directory/welcome-azure-ad.yml
+    href: entra/welcome-entra.yml
   - name: Azure Kubernetes Services
     href: azure-kubernetes/welcome-azure-kubernetes.yml
   - name: Azure Monitor
     href: azure-monitor/welcome-azure-monitor.yml
-  - name: Cloud Services
-    href: cloud-services/welcome-cloud-services.yml
-  - name: Virtual Machines
-    href: virtual-machines/welcome-virtual-machines.yml
+  - name: Cloud Services (classic)
+    href: cloud-services/classic/welcome-cloud-services-classic.yml
+  - name: Cloud Services (extended support)
+    href: cloud-services/extended/welcome-cloud-services-extended.yml
+  - name: Linux Virtual Machines
+    href: virtual-machines/linux/welcome-virtual-machines-linux.yml
+  - name: Windows Virtual Machines
+    href: virtual-machines/windows/welcome-virtual-machines-windows.yml
+  - name: Linux Virtual Machines
+    href: virtual-machines/linux/welcome-virtual-machines-linux.yml
+  - name: Windows Virtual Machines
+    href: virtual-machines/windows/welcome-virtual-machines-windows.yml
   - name: Virtual Machine Scale Sets
     href: virtual-machine-scale-sets/welcome-virtual-machine-scale-sets.yml
   - name: Virtual Desktop

@@ -316,8 +316,8 @@ In this scenario, you receive an error message that resembles the following:
 
 - [IIS 8.0 Using ASP.NET 3.5 and ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45).
 
-- [ASP.NET 2.0 and ASP.NET 3.5 do not work after you uninstall ASP.NET 4.5 in Windows 8 or Windows Server 2012](/troubleshoot/aspnet/aspnet-35-aspnet-2-not-work).
+- [ASP.NET 2.0 and ASP.NET 3.5 do not work after you uninstall ASP.NET 4.5 in Windows 8 or Windows Server 2012](../../../../developer/webapps/aspnet/development/aspnet-35-aspnet-2-not-work.md).
 
 - [Installing the Failover Cluster Feature and Tools in Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733).
 
-- [Understand the .NET Framework requirements for various versions of SQL Server](/troubleshoot/sql/install/understanding-dotnet-framework-requirements).
+- [Understand the .NET Framework requirements for various versions of SQL Server](understanding-dotnet-framework-requirements.md).

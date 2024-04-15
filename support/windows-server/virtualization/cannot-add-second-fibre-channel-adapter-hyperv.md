@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, rblume, v-lianna
-ms.custom: sap:storage-configuration, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Storage configuration, csstroubleshoot
 ---
 # Can't add a second Fibre Channel adapter to a Hyper-V virtual machine
 

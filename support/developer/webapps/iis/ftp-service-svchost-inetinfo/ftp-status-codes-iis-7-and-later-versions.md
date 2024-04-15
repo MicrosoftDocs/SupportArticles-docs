@@ -2,7 +2,7 @@
 title: The FTP status codes in IIS 7.0 and later versions
 description: This article describes the FTP status codes in IIS 7.0.
 ms.date: 12/11/2020
-ms.custom: sap:FTP Service and Svchost or Inetinfo Process Operation
+ms.custom: sap:FTP Administration and Management\FTP logging and messages
 ms.reviewer: mlaing
 ms.subservice: ftp-service-svchost-inetinfo
 ---
@@ -193,7 +193,7 @@ This section describes the FTP substatus codes that IIS 7.0 uses:
 
 ## References
 
-- For more information about the HTTP status codes in IIS 7.0 and later versions, see [The HTTP status code in IIS 7.0 and later versions](/troubleshoot/iis/http-status-code).
+- For more information about the HTTP status codes in IIS 7.0 and later versions, see [The HTTP status code in IIS 7.0 and later versions](../www-administration-management/http-status-code.md).
 
 - For more information about the FTP Publishing Service in IIS, see [FTP Publishing Service](https://www.iis.net/downloads/microsoft/ftp).
 

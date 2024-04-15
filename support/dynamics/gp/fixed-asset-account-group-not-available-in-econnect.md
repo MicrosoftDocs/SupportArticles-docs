@@ -1,9 +1,10 @@
 ---
 title: Fixed Asset Account Group not available
 description: The Fixed Asset Account Group field is not available to be mapped in the eConnect Destination Adapter in Integration Manager for Microsoft Dynamics GP.
-ms.reviewer: dlanglie
+ms.reviewer: theley, dlanglie
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # Fixed Asset Account Group not available to be mapped in eConnect Destination Adapter in Integration Manager
 
