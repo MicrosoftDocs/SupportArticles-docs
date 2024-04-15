@@ -80,18 +80,18 @@ To fix the issue, go through the following checklist:
     net use z: /d
     ```
 
-    If you receive the following error message, make sure that file and print services are enabled on the network interface card (NIC), and check DNS is working properly.
+    If you receive the following error message, make sure that file and print services are enabled on the network interface card (NIC), and DNS is working properly.
 
     > System error 53 has occurred
 
-    If you receive the "Access denied" error message, verify that "Everyone" and "Authenticated users" has the "Access this computer from the network" right on the protected server. To check the setting in Local Group Policy Editor, select **Local Computer Policy** > **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Polices** > **User Rights Assignments**.
+    If you receive the "Access denied" error message, verify that "Everyone" and "Authenticated users" has the "Access this computer from the network" right on the protected server. To check the setting, in Local Group Policy Editor, select **Local Computer Policy** > **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Polices** > **User Rights Assignments**.
 
 10. Is Windows Management Instrumentation (WMI) working?
 
     From an administrator command prompt, test the remote WMI by using the following command:
 
     ```console
-    Wmic /node:"ServerName" OS list brief    (USE THE " ")
+    Wmic /node:"ServerName" OS list brief
     ```
 
     For more information, see [WMI Troubleshooting](/windows/win32/wmisdk/wmi-troubleshooting).
