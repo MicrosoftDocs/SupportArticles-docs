@@ -3,7 +3,7 @@ title: Recover Azure Linux VM from boot issue due to VFAT disabled
 description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot after disabling VFAT.
 author: divargas-msft
 ms.author: divargas
-ms.date: 10/10/2022
+ms.date: 04/15/2024
 ms.reviewer: jofrance
 ms.service: virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
@@ -12,8 +12,7 @@ ms.topic: troubleshooting
 ---
 # Azure Linux virtual machine fails to boot after VFAT file system type is disabled
 
-> [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article provides solutions to an issue in which an Azure Linux virtual machine (VM) can't boot after disabling the virtual file allocation table (VFAT) file system type.
 

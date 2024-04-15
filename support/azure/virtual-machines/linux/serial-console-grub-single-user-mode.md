@@ -12,14 +12,13 @@ ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 05/09/2022
+ms.date: 04/15/2024
 ms.author: genli
 ---
 
 # Use Serial Console to access GRUB and single-user mode
 
-> [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 GRand Unified Bootloader (GRUB) is likely the first thing you see when you boot a virtual machine (VM). Because it's displayed before the operating system has started, GRUB isn't accessible via SSH. In GRUB, you can modify your boot configuration to boot into single-user mode, among other things.
 

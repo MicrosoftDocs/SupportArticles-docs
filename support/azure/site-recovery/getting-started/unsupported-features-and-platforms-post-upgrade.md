@@ -4,14 +4,13 @@ description: Describes the information about Unsupported Features and Platforms 
 author: genlin
 ms.author: genli
 ms.service: site-recovery
-ms.date: 08/14/2020
+ms.date: 04/15/2024
 ms.reviewer: mabisth
 ms.custom: sap:I need help getting started with Site Recovery
 ---
 # Unsupported Features and Platforms post upgrade to Azure Recovery Services Scout 8.0.1
 
-> [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 _Original product version:_ &nbsp; Azure Site Recovery  
 _Original KB number:_ &nbsp; 3120174

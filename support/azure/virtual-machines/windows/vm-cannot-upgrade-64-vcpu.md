@@ -1,15 +1,14 @@
 ---
 title: Can't upgrade Azure VM to contain more than 64 vCPUs
 description: Describes an issue in which you cannot upgrade an Azure VM to a size that contains more than 64 vCPUs.
-ms.date: 07/21/2020
+ms.date: 04/15/2024
 ms.reviewer: 
 ms.service: virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Can't upgrade an Azure VM to a size that contains more than 64 vCPUs
 
-> [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 _Original product version:_ &nbsp; Virtual Machine running Windows, Virtual Machine running Linux, Virtual Machine running RedHat, Virtual Machine running Ubuntu  
 _Original KB number:_ &nbsp; 4131519

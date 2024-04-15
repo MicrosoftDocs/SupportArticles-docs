@@ -1,7 +1,7 @@
 ---
 title: Configure multiple network interfaces in Azure Linux virtual machines
 description: Describes how to configure multiple network interfaces in Azure Linux virtual machines running the most common Linux distributions.
-ms.date: 05/16/2023
+ms.date: 04/15/2024
 ms.author: divargas
 author: divargas-msft
 ms.reviewer: malachma
@@ -12,8 +12,7 @@ ms.collection: linux
 
 # Configure multiple network interfaces in Azure Linux virtual machines
 
-> [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article discusses how to configure multiple virtual network interfaces in Azure Linux virtual machines (VMs) that run the most common Linux distributions.
 

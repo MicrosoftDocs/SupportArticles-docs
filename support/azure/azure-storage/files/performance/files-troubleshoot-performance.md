@@ -9,8 +9,7 @@ ms.reviewer: kendownie, v-weizhu
 ---
 # Troubleshoot Azure Files performance issues
 
-> [!CAUTION]
-> CentOS referenced in this article is a Linux distribution and will reach End Of Life (EOL). Consider your use and plan accordingly. For more information, see [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+[!INCLUDE [CentOS End Of Life](../../../../includes/centos-end-of-life-note.md)]
 
 This article lists common problems related to Azure file share performance, and provides potential causes and workarounds. To get the most value from this troubleshooting guide, we recommend first reading [Understand Azure Files performance](/azure/storage/files/understand-performance).
 

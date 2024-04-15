@@ -13,13 +13,12 @@ ms.collection: linux
 ms.workload: na
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 12/09/2021
+ms.date: 04/15/2024
 ms.author: srijangupta
 ---
 # Troubleshoot Resource Manager deployment issues with creating a new Linux virtual machine in Azure
 
-> [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and plan accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 [!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-opening](../../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-opening-include.md)]
 
