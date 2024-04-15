@@ -2,7 +2,7 @@
 title: Read the XML data from a file
 description: This article describes how to use the XmlTextReader class to read the XML data from a file. Describes how to do fast, tokenized stream access to the XML data instead of using an object model, such as the XML DOM.
 ms.date: 09/24/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C++
 ms.reviewer: willchen
 ms.topic: how-to
 ---

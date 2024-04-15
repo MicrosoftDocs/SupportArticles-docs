@@ -4,6 +4,7 @@ description: An Azure batch pool resizing failure occurs. You can review the sym
 ms.date: 02/20/2024
 ms.reviewer: biny, v-weizhu
 ms.service: batch
+ms.custom: sap:Azure Batch
 ---
 # Azure batch pool resizing failure
 

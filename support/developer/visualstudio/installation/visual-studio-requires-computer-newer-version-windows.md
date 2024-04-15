@@ -5,6 +5,7 @@ ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
 # Error "This version of Visual Studio requires a computer with a newer version of Windows"

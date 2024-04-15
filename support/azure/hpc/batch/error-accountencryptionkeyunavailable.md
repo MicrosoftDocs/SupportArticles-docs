@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: biny, v-leedennis
 ms.service: batch
 #Customer intent: As an Azure Batch user, I want to understand how to proceed when I receive an AccountEncryptionKeyUnavailable error message that prevents me from listing pools so that I can use Azure Batch effectively.
+ms.custom: sap:Azure Batch
 ---
 
 # "AccountEncryptionKeyUnavailable" error when you try to list pools in Azure Batch

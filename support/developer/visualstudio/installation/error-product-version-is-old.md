@@ -5,6 +5,7 @@ ms.date: 04/27/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Servicing updates and service packs
 ---
 
 # Error - Product version that is being installed is old

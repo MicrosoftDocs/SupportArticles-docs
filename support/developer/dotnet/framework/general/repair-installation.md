@@ -4,6 +4,7 @@ description: Describes how to repair the installation of the .NET Framework if y
 ms.date: 05/06/2020
 ms.reviewer: V-JEFFBO
 ms.topic: how-to
+ms.custom: sap:Installation and Deployment
 ---
 # Repair an existing installation of .NET Framework
 

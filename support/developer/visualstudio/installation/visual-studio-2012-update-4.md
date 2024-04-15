@@ -3,6 +3,7 @@ title: Description of Visual Studio 2012 Update 4
 description: This article describes Visual Studio 2012 Update 4 and lists the new features and fixed issues in Visual Studio 2012 Update 4.
 ms.date: 06/11/2020
 ms.reviewer: lisafeig
+ms.custom: sap:Installation\Servicing updates and service packs
 ---
 # Description of Visual Studio 2012 Update 4
 

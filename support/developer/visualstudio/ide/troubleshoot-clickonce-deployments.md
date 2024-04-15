@@ -12,6 +12,7 @@ dev_langs:
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: mikejo
+ms.custom: sap:Tools and Utilities\MSI and ClickOnce Setup development tools
 ---
 # Troubleshoot specific errors in ClickOnce deployments
 

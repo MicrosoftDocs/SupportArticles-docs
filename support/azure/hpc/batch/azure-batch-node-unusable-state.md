@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: zhangjerry, maheshallu, v-weizhu, v-leedennis
 ms.service: batch
 #customer intent: As an Azure Batch user, I want to resolve Unusable state errors so that I can avoid Batch node issues and extra charges.
+ms.custom: sap:Azure Batch
 ---
 # Azure Batch node gets stuck in the Unusable state because of configuration issues
 

@@ -3,6 +3,7 @@ title: RSS feeds not listed or subscribed in Internet Explorer
 description: Describes a solution for an issue in Internet Explorer in which RSS feeds are not listed or in which you cannot subscribe to RSS feeds.
 ms.date: 03/08/2020
 ms.reviewer: bchee
+ms.custom: sap:Core Features
 ---
 # RSS feeds are not listed or you cannot subscribe to RSS feeds in Internet Explorer
 

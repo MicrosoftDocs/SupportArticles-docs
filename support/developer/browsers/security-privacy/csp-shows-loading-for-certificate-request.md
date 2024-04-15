@@ -3,6 +3,7 @@ title: Failed to submit certificate application
 description: Describes a problem that occurs because active scripting is disabled for the security zone to which the application enterprise CA belongs. A resolution is provided.
 ms.date: 06/03/2020
 ms.reviewer: okang
+ms.custom: sap:Security and Privacy
 ---
 # CSP shows Loading when using Advanced Certificate Request to submit a request to an enterprise CA
 
