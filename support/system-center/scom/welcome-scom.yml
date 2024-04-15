@@ -27,14 +27,6 @@ landingContent:
           - text: Troubleshoot UNIX/Linux agent discovery in Operations Manager
             url: troubleshoot-unix-linux-agent-discovery.md
 
- # Card 2
-  - title: Setup or deployment
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Troubleshoot Operations Management Suite onboarding issues
-            url: troubleshoot-oms-onboarding-issues.md
-            
  # Card 3
   - title: Operations or infrastructure
     linkLists:
