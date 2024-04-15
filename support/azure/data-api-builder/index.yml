@@ -1,0 +1,28 @@
+### YamlMime:Landing
+
+title: Data API builder for Azure databases troubleshooting documentation
+summary: Welcome to Data API builder for Azure databases troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might experience when you use Data API builder. In the navigation pane, browse through the article list or use the search to find specific issues and solutions.
+metadata:
+  title: Troubleshoot Data API builder for Azure databases issues
+  description: Documentation for troubleshooting common issues with Azure Cosmos DB.
+  author: seesharprun
+  ms.author: sidandrews
+  ms.service: data-api-builder
+  ms.topic: landing-page
+  ms.date: 04/15/2024
+
+landingContent:
+  - title: General troubleshooting
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Troubleshoot installation
+            url: installation.md
+          - text: Troubleshoot usage
+            url: usage.md
+  - title: Issues
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Known issues
+            url: https://github.com/azure/data-api-builder/labels/known-issue
