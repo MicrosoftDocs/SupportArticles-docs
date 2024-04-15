@@ -91,6 +91,6 @@ The PowerShell cmdlets are using a REST service API, which can be easily called 
 
 ## Next steps
 
-For more information about retry guidance for other services in Azure, see [Retry guidance for specific services](/azure/architecture/best-practices/retry-service-specific)
+For more information about retry guidance for other services in Azure, see [Retry guidance for specific services](/azure/architecture/best-practices/retry-service-specific).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
