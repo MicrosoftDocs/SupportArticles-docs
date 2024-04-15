@@ -1,5 +1,5 @@
 ---
-title: Identify whether an email is from Microsoft support
+title: How to determine if an email from Microsoft support is genuine?
 description: Explains how to determine if an email claiming to be from Microsoft support is genuine or a phishing scam
 ms.date: 04/15/2024
 ms.reviewer: 
