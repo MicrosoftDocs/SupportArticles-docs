@@ -3,16 +3,12 @@
   items:
     - name: Business Central
       items: 
-      - name: Data replication
+      - name: Cloud migration
         items:
           - name: Troubleshoot data replication issues in cloud migration
             href: data-replication/migration-data-replication.md
           - name: Troubleshoot data replication issues for large tables in cloud migration
-            href: data-replication/migration-data-replication-large-tables.md  
-      - name: Cloud migration setup
-        items:
-          - name: 
-            href: 
+            href: data-replication/migration-data-replication-large-tables.md
       - name: Client
         items:
           - name: Troubleshoot user personalization can't be started

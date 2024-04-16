@@ -16,21 +16,23 @@ metadata:
 landingContent:
 
   # Card
-  - title: Data replication
+  - title: Data replication during cloud migration
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot data replication issues in cloud migration
-            url: data-replication/migration-data-replication.md
+            url: cloud-migration/migration-data-replication.md
           - text: Troubleshoot data replication issues for large tables in cloud migration
-            url: data-replication/migration-data-replication-large-tables.md
+            url: cloud-migration/migration-data-replication-large-tables.md
   # Card
-  - title: Cloud migration setup
+  - title: Cloud migration
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Something
-            url: data-replication/migration-data-replication.md      
+          - text: Activity timed out
+            url: cloud-migration/migration-activity-timeout.md      
+          - text: Troubleshoot cannot connect to SQL database
+            url: cloud-migration/migration-cannot-connect.md      
   # Card
   - title: Client
     linkLists:
