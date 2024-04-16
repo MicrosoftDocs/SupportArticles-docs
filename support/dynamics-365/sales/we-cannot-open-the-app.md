@@ -3,7 +3,7 @@ title: We cannot open the app
 description: Provides a solution to an error that occurs when attempting to open the Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # "We can't open the app because the user's mailbox is inactive" error appears in Dynamics 365 App for Outlook

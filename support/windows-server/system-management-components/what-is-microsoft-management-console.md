@@ -1,17 +1,13 @@
 ---
 title: What is MMC
 description: Describe the functions of the Microsoft Management Console.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
-ms.technology: windows-server-system-management-components
+ms.custom: sap:System Management Components\Microsoft Management Console (MMC), csstroubleshoot
 ---
 # What is Microsoft Management Console?
 

@@ -18,12 +18,12 @@ _Original KB number:_ &nbsp; 2565113
 When you install a Cumulative Update or a Service Pack for a SQL Server instance, the setup process may fail with one of the following error messages:
 
 ```output
-The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive   points to a valid directory.
+The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive points to a valid directory.
 Error code: 0x851A0043
 ```
 
 ```output
-The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive  points to a valid directory.
+The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory.
 Error code: 0x851A0044
 ```
 
@@ -35,14 +35,14 @@ When the problem occurs, the SQL Server Setup log file *Summary.txt* has one of 
 
 ```output
 Detailed results:
-  Feature:                       Database Engine Services
-  Status:                        Failed: see logs for details
-  Reason for failure:            An error occurred during the setup process of the feature.
-  Next Step:                     Use the following information to resolve the error, and then try the setup process again.
-  Component name:                SQL Server Database Engine Services Instance Features
-  Component error code:          0x851A0043
-  Error description:             The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive points to a valid directory.
-  Error help link:               http://go.microsoft.com/fwlink?LinkId=20476&ProdName=Microsoft+SQL+Server&EvtSrc=setup.rll&EvtID=50000&ProdVer=11.0.7001.0&EvtType=0xD8FB5EBA%400x97A656BB%401306%4067&EvtType=0xD8FB5EBA%400x97A656BB%401306%4067
+  Feature:                       Database Engine Services
+  Status:                        Failed: see logs for details
+  Reason for failure:            An error occurred during the setup process of the feature.
+  Next Step:                     Use the following information to resolve the error, and then try the setup process again.
+  Component name:                SQL Server Database Engine Services Instance Features
+  Component error code:          0x851A0043
+  Error description:             The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive points to a valid directory.
+  Error help link:               http://go.microsoft.com/fwlink?LinkId=20476&ProdName=Microsoft+SQL+Server&EvtSrc=setup.rll&EvtID=50000&ProdVer=11.0.7001.0&EvtType=0xD8FB5EBA%400x97A656BB%401306%4067&EvtType=0xD8FB5EBA%400x97A656BB%401306%4067
 ```
 
 ```output
@@ -82,27 +82,27 @@ You can set the default data directory and log directory values to valid folder 
 1. Open SQL Server Configuration Manager and select **SQL Server Services**.
 1. Double-click your instance and select the **Advanced** tab.
 1. Review the **Data Path** property and see if the value is correct. The value is grayed out and can't be modified from here.
-1. If the value is incorrect, use [Method 2](#method-2-using-registry-editor) to update it to the correct path.
+1. If the value is incorrect, use [Method 2](#method-2-use-registry-editor) to update it to the correct path.
 
-##### Method 2: Using registry editor
+##### Method 2: Use registry editor
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. Serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
 1. Start Registry Editor (*Regedit.exe*) from the command line.
-1. Locate and then select the registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL{nn}.Instance\MSSQLServer`.
+1. Locate and then select the registry subkey `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL{nn}.Instance\MSSQLServer`.
 
    > [!NOTE]
    > In this registry subkey, `MSSQL{nn}.Instance` represents the corresponding value for your system. To obtain this value, locate and then select the registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL\`.
 
 1. In the right panel, select the **DefaultData** registry entry and enter a valid path, if it's pointing to an incorrect location.
 1. In the right panel, select the **DefaultLog** registry entry and enter a valid path, if it's pointing to an incorrect location.
-1. Locate and then select the registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL{nn}.Instance\Setup`.
+1. Locate and then select the registry subkey `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL{nn}.Instance\Setup`.
 1. In the right panel, select the **SQLDataRoot** registry entry and enter a valid path, if it's pointing to an incorrect location.
 
-#### Step 2: Retry the installation of Service Pack or Cumulative Update 
+#### Step 2: Retry the installation of Service Pack or Cumulative Update
 
-Once you have corrected the data and log paths for the affected instance, you can retry the installation. 
+Once you have corrected the data and log paths for the affected instance, you can retry the installation.
 
 The setup program may show that the instance has already been upgraded and it may not allow you to select just the Database Services component. You need to select all the features for that instance for the setup program to continue.
 

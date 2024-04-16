@@ -1,7 +1,7 @@
 ---
 title: CU doesn't apply to your installation
 description: This article provides a resolution for the problem that occurs when you use WSUS, Microsoft Update, or Microsoft System Center Configuration Manager Software Updates to apply updates to Microsoft SQL Server.
-ms.date: 1/11/2021
+ms.date: 01/11/2021
 ms.custom: sap:Database Engine
 ms.reviewer: troymoen 
 ---

@@ -2,9 +2,9 @@
 title: HTTP Error 403.16 when you access a website
 description: This article describes the problem where an HTTP 403.16 error occurs when you try to access a website that's hosted by IIS 7.0.
 ms.date: 03/26/2020
-ms.custom: sap:Health, diagnostic, and performance features
+ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing
-ms.technology: iis-health-diagnostic-performance
+ms.subservice: health-diagnostic-performance
 ---
 # HTTP Error 403.16 when you try to access a website that's hosted on IIS 7.0
 

@@ -1,17 +1,13 @@
 ---
 title: TCP/IP performance known issues
 description: Describes several TCP/IP performance known issues about slow throughput and underlying networks.
-ms.date: 2/2/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rabhardw, anupamk
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Known issues of TCP/IP performance
 

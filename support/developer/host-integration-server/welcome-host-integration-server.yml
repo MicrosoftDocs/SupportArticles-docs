@@ -5,7 +5,7 @@ summary: Welcome to Host Integration Server troubleshooting. These articles expl
 metadata:
   title: Host Integration Server troubleshooting document
   description: This article lists Knowledge Base (KB) and other Support articles for Host Integration Server. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: host-integration-server
+  ms.service: host-integration-server
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.

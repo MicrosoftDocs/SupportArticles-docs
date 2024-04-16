@@ -1,17 +1,13 @@
 ---
 title: IP and default gateway settings are assigned incorrectly
 description: Works around an issue where IP address and default gateway settings are assigned incorrectly.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # IP address and default gateway settings are assigned incorrectly in Windows
 

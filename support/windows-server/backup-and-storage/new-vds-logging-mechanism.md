@@ -1,17 +1,13 @@
 ---
 title: New logging mechanism for VDS
 description: The old VDS logging mechanism is removed in Windows 8 and a new one is introduced.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lichunli
-ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
 ---
 # Introduce the new logging mechanism for the VDS
 

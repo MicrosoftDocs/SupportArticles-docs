@@ -2,9 +2,9 @@
 title: Fail to generate the certificate request
 description: This article discusses an error that occurs when you try to create a certificate request in IIS.
 ms.date: 03/30/2020
-ms.custom: sap:Site behavior and performance
+ms.custom: sap:IISAdmin Service and Inetinfo Process Operation\Machine key issues
 ms.reviewer: v-jomcc
-ms.technology: iis-site-behavior-performance
+ms.subservice: site-behavior-performance
 ---
 # Error when you create a certificate request in IIS: Failed to generate the certificate request
 

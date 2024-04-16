@@ -1,17 +1,13 @@
 ---
 title: Guidance for troubleshooting RDS session connectivity
 description: Introduces general guidance for troubleshooting scenarios related to RDS session connectivity.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
 ---
 # RDS session connectivity troubleshooting guidance
 
@@ -120,5 +116,5 @@ The traces will be stored in a zip file in the *C:\\MS_DATA* folder, which can b
 - [Clients can't connect and see "No licenses available" error](cannot-connect-rds-no-license-server.md)
 - ["Remote Desktop Service is currently busy" error when connecting](/windows-server/remote/remote-desktop-services/troubleshoot/remote-desktop-service-currently-busy)
 - [Remote Desktop client disconnects and can't reconnect to the same session](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session)
-- [Poor performance or application problems during remote desktop connection](/windows-server/remote/remote-desktop-services/troubleshoot/poor-performance-or-application-problems)
-- [User can't authenticate or must authenticate twice](/windows-server/remote/remote-desktop-services/troubleshoot/cannot-authenticate-or-must-authenticate-twice)
+- [Poor performance or application problems during remote desktop connection](poor-performance-application-problems-rdc.md)
+- [User can't authenticate or must authenticate twice](cannot-authenticate-must-authenticate-twice.md)

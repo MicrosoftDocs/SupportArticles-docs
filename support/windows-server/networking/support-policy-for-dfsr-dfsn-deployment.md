@@ -1,17 +1,13 @@
 ---
 title: Unsupported DFS-R and DFS-N deployment scenario
 description: This article describes a DFS-R and DFS-N deployment scenario that Microsoft does not support.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, luche
-ms.custom: sap:dfsr, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
 ---
 # Information about Microsoft support policy for a DFS-R and DFS-N deployment scenario
 

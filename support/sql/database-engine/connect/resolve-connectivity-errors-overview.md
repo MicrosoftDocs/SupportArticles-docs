@@ -22,7 +22,7 @@ Before you start troubleshooting, check [Recommended prerequisites and checklist
 
 ## Common connectivity issues
 
-Use the list below to navigate to the appropriate article page for detailed troubleshooting steps for your scenario:
+Use the following list to navigate to the appropriate article page for detailed troubleshooting steps for your scenario:
 
 - [A network-related or instance-specific error occurred while establishing a connection to SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
 

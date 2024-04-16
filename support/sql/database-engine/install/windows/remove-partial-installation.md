@@ -1,14 +1,15 @@
 ---
-title: Remove a partial installation of SQL server
-description: This article describes the procedure to remove a partial installation of SQL server.
+title: Remove a partial installation of SQL Server
+description: This article describes the procedure to remove a partial installation of SQL Server.
 ms.date: 09/25/2020
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: amylewis
 ms.topic: how-to
 ---
-# Remove a partial installation of SQL server
 
-This article describes the procedure to remove a partial installation of SQL server.
+# Remove a partial installation of SQL Server
+
+This article describes the procedure to remove a partial installation of SQL Server.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 955404
@@ -19,7 +20,7 @@ When you try to reinstall an instance of SQL Server after it fails to install th
 
 ## Cause
 
-This problem occurs because after the first installation fails, a partly installed instance of SQL Server exists on the server. The SQL Server Setup program does not roll back the installation if the installation fails. The partly installed instance does not include the edition of SQL Server that you were trying to install, such as the Enterprise edition, the Standard edition, or the Evaluation edition. When you try to install the same version on the same server, the Setup program finds the existing instance. However, the Setup program cannot determine which version of SQL Server to install. Therefore, the installation fails.
+This problem occurs because after the first installation fails, a partly installed instance of SQL Server exists on the server. The SQL Server Setup program doesn't roll back the installation if the installation fails. The partly installed instance doesn't include the edition of SQL Server that you were trying to install, such as the Enterprise edition, the Standard edition, or the Evaluation edition. When you try to install the same version on the same server, the Setup program finds the existing instance. However, the Setup program can't determine which version of SQL Server to install. Therefore, the installation fails.
 
 ## Resolution
 
@@ -29,14 +30,14 @@ Use the following procedure to resolve the problem:
 
 1. Navigate to *Summary.Txt* file setup log file and note down the setup command suggested by the setup program.
 
-1. Using an elevated command prompt, navigate to the location of 'setup.exe' for \<SQL Version upgrading to> installation media directory and execute the command from Step 1.
+1. Using an elevated command prompt, navigate to the location of 'setup.exe' for \<SQL Version upgrading to\> installation media directory and execute the command from Step 1.
 
     > [!NOTE]
-    > It is very important to ensure you are running the commands against the right instance or else you may end up uninstalling a working instance.
+    > It's very important to ensure you are running the commands against the right instance or else you may end up uninstalling a working instance.
 
-1. Launch the Installation Center wizard GUI from either the SQL Server Program group or by rerunning the setup  program.
+1. Launch the **Installation Center** wizard GUI from either the SQL Server Program group or by rerunning the setup program.
 
-1. Navigate to the Tools menu item and click on Installed SQL Server features discovery report  and verify there are no more \<instance name>.INACTIVE instances shown in the report.
+1. Navigate to the **Tools** menu and select the **Installed SQL Server features discovery report** and verify there are no more \<instance name\>.INACTIVE instances shown in the report.
 
 1. Retry the setup program that was originally failing to complete.
 

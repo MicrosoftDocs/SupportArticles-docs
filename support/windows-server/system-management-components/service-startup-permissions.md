@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot service startup permissions
 description: Describes how to troubleshoot Service Startup permissions in a Windows Server 2003 environment.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BOBQIN
-ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
-ms.technology: windows-server-system-management-components
+ms.custom: sap:System Management Components\Microsoft Management Console (MMC), csstroubleshoot
 ---
 # Troubleshoot service startup permissions in Windows Server 2003  
 

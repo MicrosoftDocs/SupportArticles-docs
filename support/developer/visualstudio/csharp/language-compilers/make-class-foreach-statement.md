@@ -4,6 +4,7 @@ description: Describes how to make a Visual C# class usable in a foreach stateme
 ms.date: 04/14/2020
 ms.reviewer: zakramer
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Make a Visual C# class usable in a foreach statement  
 
@@ -51,7 +52,7 @@ public IEnumerator GetEnumerator()
 
 ## When to use which interface
 
-Initially, you might find it confusing to use these interfaces. The `IEnumerator` interface provides iteration over a collection-type object in a class. The `IEnumerable` interface permits enumeration by using a `foreach` loop. However, the `GetEmunerator` method of the `IEnumerable` interface returns an `IEnumerator` interface. So to implement `IEnumerable`, you must also implement `IEnumerator`. If you don't implement `IEnumerator`, you can't cast the return value from the `GetEnumerator` method of `IEnumerable` to the `IEnumerator` interface.
+Initially, you might find it confusing to use these interfaces. The `IEnumerator` interface provides iteration over a collection-type object in a class. The `IEnumerable` interface permits enumeration by using a `foreach` loop. However, the `GetEnumerator` method of the `IEnumerable` interface returns an `IEnumerator` interface. So to implement `IEnumerable`, you must also implement `IEnumerator`. If you don't implement `IEnumerator`, you can't cast the return value from the `GetEnumerator` method of `IEnumerable` to the `IEnumerator` interface.
 
 In summary, the use of `IEnumerable` requires that the class implement `IEnumerator`. If you want to provide support for `foreach`, implement both interfaces.
 

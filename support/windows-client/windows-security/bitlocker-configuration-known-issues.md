@@ -1,14 +1,12 @@
 ---
 title: 'BitLocker configuration: known issues'
 description: Describes common issues that involve your BitLocker configuration and BitLocker's general functionality, and provides guidance for addressing those issues.
-ms.date: 11/21/2022
+ms.date: 12/26/2023
 ms.reviewer: kaushika, v-tappelgate
-ms.technology: windows-client-security
-ms.prod: windows-client
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---
@@ -48,7 +46,7 @@ Several other areas of BitLocker were improved in versions of Windows released a
   - Windows PowerShell
   - Windows Management Interface (WMI)
 
-- **Integration with Azure Active Directory** (Azure AD) -  BitLocker can store recovery information in Azure AD to make it easier to recover.
+- **Integration with Microsoft Entra ID** (Microsoft Entra ID) -  BitLocker can store recovery information in Microsoft Entra ID to make it easier to recover.
 
 - **[Direct memory access (DMA) Port Protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt)** - By using MDM policies to manage BitLocker, a device's DMA ports can be blocked which secures the device during its startup.
 

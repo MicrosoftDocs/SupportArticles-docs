@@ -3,7 +3,7 @@ title: IE opens flashes and closes immediately when starting it
 description: Helps resolve issues where Internet Explorer opens, flashes, and then closes immediately.
 ms.date: 10/13/2020
 ms.reviewer: lip, ramakoni
-ms.technology: internet-explorer-stability-performance
+ms.custom: sap:Stability and Performance
 ---
 # Internet Explorer opens, flashes, and then closes immediately when you start it
 

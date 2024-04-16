@@ -2,7 +2,7 @@
 title: No response when selecting back button in Unified Interface apps
 description: Works around an issue in which you aren't returned to the previous page when you select the back button in a Unified Interface app.
 ms.reviewer: xianc
-ms.topic: troubleshooting
+ms.custom: sap:Running model-driven app forms
 ms.date: 08/10/2021
 author: xianc0908
 ms.author: xianc

@@ -41,17 +41,17 @@ Here are some things to consider if you decide to tune your autogrow and autoshr
 
 ## Considerations for AUTO_SHRINK
 
-AUTO_SHRINK is a database option in SQL Server. When you enable this option for a database, this database becomes eligible for shrinking by a background task. This background task evaluates all databases that satisfy the criteria for shrinking and shrink the data or log files.
+`AUTO_SHRINK` is a database option in SQL Server. When you enable this option for a database, this database becomes eligible for shrinking by a background task. This background task evaluates all databases that satisfy the criteria for shrinking and shrink the data or log files.
 
 You have to carefully evaluate setting this option for the databases in a SQL Server instance. Frequent grow and shrink operations can lead to various performance problems.
 
 - If multiple databases undergo frequent shrink and grow operations, then this will easily lead to file system level fragmentation. This can have a severe impact on performance. This is true whether you use the automatic settings or whether you manually grow and shrink the files frequently.
 
-- After AUTO_SHRINK successfully shrinks the data or log file, a subsequent DML or DDL operation can slow down significantly if space is required and the files need to grow.
+- After `AUTO_SHRINK` successfully shrinks the data or log file, a subsequent DML or DDL operation can slow down significantly if space is required and the files need to grow.
 
-- The AUTO_SHRINK background task can take up resources when there are many databases that need shrinking.
+- The `AUTO_SHRINK` background task can take up resources when there are many databases that need shrinking.
 
-- The AUTO_SHRINK background task will need to acquire locks and other synchronization that can conflict with other regular application activity.
+- The `AUTO_SHRINK` background task will need to acquire locks and other synchronization that can conflict with other regular application activity.
 
 Consider setting databases to a required size and pre-grow them. Leave the unused space in the database files if you think the application usage patterns will need them again. This can prevent frequent shrink and growth of the database files.
 

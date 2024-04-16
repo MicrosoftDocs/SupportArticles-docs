@@ -37,7 +37,7 @@ The version of SQL Server Reporting Services (SSRS) is displayed on the Reportin
 
 ## SQL Server Integration Services
 
-The version of SQL Server Integration Services aligns with the version of SQL server that you had installed.
+The version of SQL Server Integration Services aligns with the version of SQL Server that you had installed.
 
 ## SQL Server Analysis Services
 
@@ -173,7 +173,7 @@ To determine the version of SQL Server Writer, check the following registry subk
 
 ## Microsoft .NET Framework
 
-To determine the version of .NET Framework on your system, see [Determine which versions and service pack levels of .NET Framework are installed](/troubleshoot/dotnet/framework/determine-dotnet-versions-service-pack-levels).
+To determine the version of .NET Framework on your system, see [Determine which versions and service pack levels of .NET Framework are installed](../../developer/dotnet/framework/general/determine-dotnet-versions-service-pack-levels.md).
 
 For more information, see [Understanding the .NET Framework requirements for various versions of SQL Server](https://support.microsoft.com/help/2027770).
 

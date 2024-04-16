@@ -1,9 +1,10 @@
 ---
 title: Troubleshooting the Intune Exchange Connector
 description: Troubleshoot the configuration of and issues related to the Intune on-premises Exchange Connector.
-ms.date: 12/13/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 ---
 # Troubleshooting the Intune Exchange Connector
 
@@ -62,7 +63,7 @@ When an Exchange ActiveSync device isn't discovered from Exchange, [monitor the 
 
 - Make sure users have an Intune license. If not, the Exchange connector won't discover their devices.
 
-- If the user's primary SMTP address is different from the user principal name (UPN) in Azure Active Directory (Azure AD), the Exchange connector won't discover any devices for that user. Fix the primary SMTP address to resolve the issue.
+- If the user's primary SMTP address is different from the user principal name (UPN) in Microsoft Entra ID, the Exchange connector won't discover any devices for that user. Fix the primary SMTP address to resolve the issue.
 
 - If you have both Exchange 2010 and Exchange 2013 mailbox servers in your environment, we recommend pointing the Exchange connector to an Exchange 2013 Client Access server (CAS). If the Exchange connector is set up to communicate with an Exchange 2010 CAS, the Exchange connector won't discover any user devices on Exchange 2013.
 
@@ -70,7 +71,7 @@ When an Exchange ActiveSync device isn't discovered from Exchange, [monitor the 
 
 ## Users don't receive the notification email message
 
-To support Conditional Access for on-premises mailboxes on devices that don't run Android Knox, make sure Intune enrollment starts from the "Get Started Now" email message that the Intune Exchange connector sends. Starting enrollment from the message ensures that the device receives a unique `ActiveSyncID` across all platforms (Exchange, Azure AD, Intune).
+To support Conditional Access for on-premises mailboxes on devices that don't run Android Knox, make sure Intune enrollment starts from the "Get Started Now" email message that the Intune Exchange connector sends. Starting enrollment from the message ensures that the device receives a unique `ActiveSyncID` across all platforms (Exchange, Microsoft Entra ID, Intune).
 
 A user might not receive the notification email message because:
 

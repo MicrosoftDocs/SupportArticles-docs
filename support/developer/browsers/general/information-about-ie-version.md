@@ -3,7 +3,7 @@ title: Internet Explorer versions information
 description: This article contains a list of Internet Explorer versions.
 ms.date: 06/09/2020
 ms.reviewer: 
-ms.technology: internet-explorer-general
+ms.custom: sap:Core Features
 ---
 # Information about Internet Explorer versions
 

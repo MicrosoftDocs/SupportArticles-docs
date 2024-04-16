@@ -3,6 +3,7 @@ title: Store custom information from a configuration file
 description: This article describes how to store and retrieve custom information from an application configuration file by using Visual C#.
 ms.date: 04/28/2020
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Use Visual C# to store and retrieve custom information from an application configuration file
 
@@ -113,7 +114,8 @@ To create a console application that reads the contents of an associated configu
 
     ```csharp
      foreach (string s in sAll.AllKeys)
-     Console.WriteLine("Key: "+ s + " Value: " + sAll.Get(s));
+         Console.WriteLine("Key: "+ s + " Value: " + sAll.Get(s));
+    
      Console.ReadLine();
     ```
 

@@ -2,8 +2,8 @@
 title: Web Deployment error with non-admin user
 description: This article provides a resolution to error message when performing a Web Deploy operation that requires administrative permissions.
 ms.date: 03/23/2020
-ms.custom: sap:Deployment and migration
-ms.technology: iis-deployment-migration
+ms.custom: sap:Deployment and Migration\Windows Management Service (WMSVC)
+ms.subservice: deployment-migration
 ---
 # Error when you use the Web Deployment tool as a non-administrative user
 

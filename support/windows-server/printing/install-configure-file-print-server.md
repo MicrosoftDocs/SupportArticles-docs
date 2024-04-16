@@ -1,17 +1,13 @@
 ---
 title: Install and configure a file and print server
 description: Describes how to configure your Windows Server 2003 as a file and print server.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-and-configuration:-installing-print-drivers, csstroubleshoot
-ms.technology: windows-server-printing
+ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---
 # How to install and configure a file and print server
 

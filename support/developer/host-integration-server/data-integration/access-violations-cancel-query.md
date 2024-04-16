@@ -2,7 +2,7 @@
 title: Access violations when you cancel a DB2 query
 description: This article provides a resolution for the problem that occurs when a user cancels a linked server query against an IBM DB2 database.
 ms.date: 10/13/2020
-ms.custom: sap:Data integration (DB2, host files)
+ms.custom: sap:Data Integration (DB2, Host Files)
 ---
 # SQL Server may experience access violations when canceling a DB2 query
 

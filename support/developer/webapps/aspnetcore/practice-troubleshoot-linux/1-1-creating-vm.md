@@ -2,9 +2,8 @@
 title: Create a Linux virtual machine in Azure
 description: This article introduces how to create a Linux virtual machine in Azure and connect to it.
 ms.date: 03/08/2021
-ms.prod: aspnet-core
+ms.custom: sap:General Development Questions, linux-related-content
 ms.reviewer: ramakoni, ahmetmb
-ms.technology: aspnetcore-practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Part 1.1 - Create a Linux virtual machine in Azure and connecting to it

@@ -1,21 +1,17 @@
 ---
 title: Stop 7F, 0x00000008 (double-fault) error
 description: Provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error.
-ms.date: 08/08/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
 # Stop 7F, 0x00000008 (double-fault) error occurs because of a single-bit error in the ESP register
 
-This article provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error. This error message may be displayed when a single-bit error occurs in the  Electric Service Provider (ESP) register of a processor that is running on the computer.
+This article provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error. This error message may be displayed when a single-bit error occurs in the ESP register of a processor that is running on the computer.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 842465

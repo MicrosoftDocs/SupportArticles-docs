@@ -11,7 +11,7 @@ metadata:
    title: Microsoft troubleshooting documentation | Microsoft Learn
    description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
    ms.topic: hub-page  
-   ms.date: 02/06/2020
+   ms.date: 12/26/2023
 
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -60,6 +60,11 @@ productDirectory:
     imageSrc: "media/hub-landing/microsoft-365-logo.png"
     summary: Troubleshooting articles for Microsoft 365
     url: /office/troubleshoot
+
+  - title: Microsoft Copilot for Sales
+    imageSrc: "media/hub-landing/sales-copilot.svg"
+    summary: Troubleshooting articles for Microsoft Copilot for Sales
+    url: sales-copilot/welcome-sales-copilot.yml
 
   - title: Microsoft Dynamics
     imageSrc: "media/hub-landing/microsoft.png"

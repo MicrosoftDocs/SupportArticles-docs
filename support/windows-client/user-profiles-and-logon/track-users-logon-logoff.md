@@ -1,17 +1,13 @@
 ---
 title: How to track users logon/logoff
 description: Describes how to track users logon/logoff.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-logon-fails, csstroubleshoot
-ms.technology: windows-client-user-profiles
+ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
 ---
 # How to track users logon/logoff
 

@@ -3,7 +3,7 @@ title: How to set Group Policy Preference settings
 description: This article introduces how to configure Group Policy Preference settings for Internet Explorer 11.
 ms.date: 10/13/2020
 ms.reviewer: ajayps, kaushika, ramakoni
-ms.technology: internet-explorer-administration
+ms.custom: sap:Administration
 ---
 # How to configure Group Policy Preference settings for Internet Explorer 11 in Windows
 
@@ -38,4 +38,4 @@ After installing the tools, you can use the following procedure to configure Int
 
 ## References
 
-For more information, see [How to set advanced settings in Internet Explorer by using Group Policy objects](/troubleshoot/browsers/advanced-settings).
+For more information, see [How to set advanced settings in Internet Explorer by using Group Policy objects](advanced-settings.md).

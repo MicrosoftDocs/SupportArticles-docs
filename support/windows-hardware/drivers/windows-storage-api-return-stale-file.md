@@ -2,7 +2,8 @@
 title: Windows.Storage APIs can return stale file
 description: This article describes a problem that Windows.Storage APIs can return stale file or stream sizes after a file on an MTP 2.0 device is updated.
 ms.date: 09/01/2020
-ms.technology: windows-hardware-storage-driver
+ms.subservice: storage-driver
+ms.custom: sap:Storage Driver
 ---
 # Windows.Storage APIs can return stale file or stream sizes after a file on an MTP 2.0 device is updated
 

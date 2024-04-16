@@ -5,8 +5,10 @@ metadata:
   ms.date: 07/14/2020  
   ms.reviewer: ramakoni
   ms.topic: faq
-  ms.technology: internet-explorer-development-website
-  ms.prod: internet-explorer
+  ms.subservice: development-website
+  ms.service: internet-explorer
+  ms.custom: sap:Development and Website Issues
+
 title: Internet Explorer document modes FAQ
 summary: |
   [!INCLUDE [](../../../includes/browsers-important.md)]

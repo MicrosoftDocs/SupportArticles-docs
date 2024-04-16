@@ -3,7 +3,7 @@ title: Troubleshoot Server-Side Synchronization
 description: Describes how to troubleshooting Server-Side Synchronization.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Troubleshooting Server-Side Synchronization

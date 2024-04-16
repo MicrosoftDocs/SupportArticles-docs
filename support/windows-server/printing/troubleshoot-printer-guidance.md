@@ -1,17 +1,13 @@
 ---
 title: Guidance for troubleshooting printing issues
 description: Introduces general guidance for troubleshooting scenarios related to printers.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: windows-server-printing
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Printing issue troubleshooting guidance
 

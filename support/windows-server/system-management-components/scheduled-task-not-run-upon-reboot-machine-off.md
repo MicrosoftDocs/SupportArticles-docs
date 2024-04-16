@@ -1,17 +1,13 @@
 ---
 title: Scheduled task may not run upon reboot if machine was off at time of task
 description: Helps to solve an issue where a scheduled task may not run upon reboot if the machine is off at the time of the task.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:task-scheduler, csstroubleshoot
-ms.technology: windows-server-system-management-components
+ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
 ---
 # Scheduled task may not run upon reboot if the machine is off at the time of task
 

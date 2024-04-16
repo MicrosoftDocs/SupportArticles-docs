@@ -3,7 +3,7 @@ title: Invalid HTML in Internet Explorer design mode
 description: Internet Explorer 9 or a later version creates invalid HTML in design mode. A workaround is provided.
 ms.date: 04/21/2020
 ms.reviewer: apinho
-ms.technology: internet-explorer-development-website
+ms.custom: sap:Development and Website Issues
 ---
 # Internet Explorer 9 or a later version may generate invalid HTML in design mode
 

@@ -2,9 +2,9 @@
 title: HTTP Error 405.0 when you visit Internet Information Services (IIS) websites
 description: Describes a problem that occurs because a client request uses an HTTP verb that doesn't comply with the HTTP specifications, or because a client uses the POST methods to send a request to a static HTML page.
 ms.date: 04/16/2020
-ms.custom: sap:Health, diagnostic, and performance features
+ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing
-ms.technology: iis-health-diagnostic-performance
+ms.subservice: health-diagnostic-performance
 ---
 # HTTP Error 405.0 when you visit a website that is hosted on a server that is running IIS
 

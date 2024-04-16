@@ -1,23 +1,19 @@
 ---
 title: Set up your small business network
 description: Explains how to set up the network for your small business.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Set up your small business network
 
 This article walks you through the steps of evaluating, preparing, and setting up your small business network. The article is for IT Pros who help set up your small business network.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 10064
 
 ## Evaluate network types
@@ -1134,7 +1130,7 @@ If you have a combined modem and router, follow these instructions:
 
 #### Complete the modem and router setup
 
-To complete the modem and router setup， follow the instructions:
+To complete the modem and router setup,  follow the instructions:
 
 1. Click **Start**.
 2. Click **Control Panel**.

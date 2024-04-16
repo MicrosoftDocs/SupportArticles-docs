@@ -1,9 +1,10 @@
 ---
 title: You cannot be in the accounting system
 description: Provides a solution to an error that occurs when you start Microsoft Dynamics GP.
-ms.reviewer: kyouells
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Your login has been removed from the user activity file and you cannot be in the accounting system" Error message when you start Microsoft Dynamics GP
 
@@ -14,7 +15,7 @@ _Original KB number:_ &nbsp; 916679
 
 ## Symptoms
 
-When you start Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 9.0, you receive the following error message:
+When you start Microsoft Dynamics GP, you receive the following error message:
 
 > Your login has been removed from the user activity file and you cannot be in the accounting system.
 
@@ -72,5 +73,4 @@ If no user can sign in to the system, remove the automatic client update from th
 
 ## Status
 
-Microsoft has confirmed that it's a problem in the Microsoft products that are listed in the Applies to section.
-This problem isn't scheduled to be fixed.
+Microsoft has confirmed that it's a problem in the Microsoft products that are listed in the Applies to section. This problem isn't scheduled to be fixed.

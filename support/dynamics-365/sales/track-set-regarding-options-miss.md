@@ -3,7 +3,7 @@ title: Track and Set Regarding options miss
 description: Provides a solution to an issue where the Track and Set Regarding options are missing.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-client-outlook
 ---
 # Track and Set Regarding options are missing in Microsoft Dynamics 365 App for Outlook

@@ -1,17 +1,13 @@
 ---
 title: Error 0x7B after you reconfigure hardware devices
 description: Discusses that you receive a Stop error (INACCESSIBLE_BOOT_DEVICE) after you reconfigure critical hardware devices.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
 # Stop error (INACCESSIBLE_BOOT_DEVICE) after you reconfigure critical hardware devices
 

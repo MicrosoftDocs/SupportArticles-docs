@@ -43,7 +43,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | Bug reference | Description | Fix area | Component | Platform |
 |---|---|---|---|---|
 | <a id="13410674">[13410674](#13410674)</a> | [FIX: ISDBUpgradeWizard.exe throws error when you try to upgrade SSISDB after restoring from earlier versions in SQL Server 2019 (KB4547890)](https://support.microsoft.com/help/4547890) | Integration Services | DTS | Windows |
-| <a id="13410658">[13410658](#13410658)</a> | Allow DTSWizard to support AAD when the selected driver is MSOLEDBSQL. | Integration Services | Integration Services | Windows |
+| <a id="13410658">[13410658](#13410658)</a> | Allow DTSWizard to support Microsoft Entra ID when the selected driver is MSOLEDBSQL. | Integration Services | Integration Services | Windows |
 | <a id="13405530">[13405530](#13405530)</a> | "The JSON DDL request is missing the database name" error occurs when you delete the database property from the descriptive table under the JSON code in SQL Server 2019. | Openness and Interoperability | Protocols | Windows |
 | <a id="13378659">[13378659](#13378659)</a> | [FIX: sp_execute_external_script doesn't run when you install SQL Server 2019 with Machine Learning Services and a customized Shared feature directory (KB4540121)](https://support.microsoft.com/help/4540121) | SQL Server Engine | Extensibility | Windows |
 | <a id="13404121">[13404121](#13404121)</a> | [FIX: Fail to access openmpi path when running rx jobs in parallel mode with Revo package in Linux SQL Server 2019 (KB4548131)](https://support.microsoft.com/help/4548131) | SQL Server Engine | Extensibility | Linux |
@@ -642,8 +642,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -713,7 +713,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

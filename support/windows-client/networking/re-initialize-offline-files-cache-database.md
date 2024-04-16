@@ -1,17 +1,13 @@
 ---
 title: How to reinitialize the offline files cache and database in Windows XP
 description: Provides two methods to reinitialize the offline files cache and database.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom: sap:Network Connectivity and File Sharing\Offline Files and Folders (CSC), csstroubleshoot
 ---
 # How to reinitialize the offline files cache and database in Windows XP
 
@@ -60,7 +56,7 @@ Key Value: 1
 You can also automate the process of setting this registry value by using the Reg.exe command line editor. To do this, type the following command in the Reg.exe window:
 
 ```console
-REG.EXE. REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\NetCache" /v FormatDatabase /t REG_DWORD /d 1 /f
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\NetCache" /v FormatDatabase /t REG_DWORD /d 1 /f
 ```
 
 > [!NOTE]

@@ -1,17 +1,13 @@
 ---
 title: Recommended updates for Windows Server 2008 R2-based server clusters
 description: Discusses the recommended hotfixes and updates for Windows Server 2008 R2-based server clusters, and describes these hotfixes and updates.
-ms.date: 3/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:replacing-hardware-and-updating-the-operating-system, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.custom: sap:Clustering and High Availability\Replacing hardware and updating the operating system, csstroubleshoot
 ---
 # Recommended hotfixes and updates for Windows Server 2008 R2-based server clusters
 

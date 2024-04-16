@@ -1,16 +1,12 @@
 ---
 title: Software Defined Networking overview
 description: Overview of Software Defined Networking troubleshooting articles.
-ms.date: 6/17/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-server-sdn
 ---
 # Software Defined Networking troubleshooting documentation
 
@@ -18,4 +14,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Software Defined Networking sub category
 
+- Troubleshooting guidance: SDN
+- Troubleshoot SDN
+- Troubleshoot the Windows Server Software Defined Networking Stack
 - Internal DNS Server for SDN

@@ -18,6 +18,10 @@ productDirectory:
     imageSrc: "../media/hub-landing/power-automate.svg"
     summary: Troubleshooting articles for Power Automate
     url: power-automate/welcome-power-automate.yml
+  - title: Power Pages
+    imageSrc: "../media/hub-landing/power-pages.svg"
+    summary: Troubleshooting articles for Power Pages
+    url: power-pages/welcome-power-pages.yml
   - title: AI Builder
     imageSrc: "../media/hub-landing/ai-builder.svg"
     summary: Troubleshooting articles for AI Builder

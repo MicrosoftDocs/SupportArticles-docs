@@ -3,7 +3,7 @@ title: Error when using server-side sync
 description: Provides a solution to an error that occurs when you use Server-Side Synchronization in Dynamics 365.
 ms.reviewer: dmartens
 ms.topic: troubleshooting
-ms.date: 9/22/2022
+ms.date: 09/22/2022
 ms.subservice: d365-sales-email-office-integration
 ---
 # 401 Unauthorized exception occurs in Microsoft Dynamics 365 when using Server-Side Synchronization
@@ -54,5 +54,5 @@ To fix this issue, use the following steps:
 5. If you're using Dynamics 365 (online) with Exchange on-premises, verify Basic authentication is enabled for EWS (Exchange Web Services). For more information, see the Prerequisites section of [Connect Dynamics 365 (online) to Exchange Server (on-premises)](/previous-versions/dynamicscrm-2016/administering-dynamics-365/mt622059(v=crm.8)).
 6. If the user or mailbox that had been deleted was later recreated by using the same email address:
 
-    1. Make sure that the previously existing user or mailbox was permanently deleted. By default, a user who is deleted from Azure Active Directory (Azure AD) can have their account restored within 30 days. For more information, see [Permanently delete a user](/azure/active-directory/fundamentals/active-directory-users-restore#permanently-delete-a-user).
+    1. Make sure that the previously existing user or mailbox was permanently deleted. By default, a user who is deleted from Microsoft Entra ID can have their account restored within 30 days. For more information, see [Permanently delete a user](/azure/active-directory/fundamentals/active-directory-users-restore#permanently-delete-a-user).
     2. After verifying that no user or mailbox uses the same email address, you can try to test and enable the mailbox again. If you still receive the error message, the issue can be caused by the result of caching. It may take up to 72 hours for the cache to be cleared. If you can't wait for 72 hours, contact [Microsoft Support](https://support.microsoft.com).

@@ -3,7 +3,7 @@ title: The record could not be deleted
 description: Provides a solution to an error that occurs when attempting to delete a solution in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-apps-addons
 ---
 # "The record could not be deleted because of an association" error occurs in Microsoft Dynamics 365

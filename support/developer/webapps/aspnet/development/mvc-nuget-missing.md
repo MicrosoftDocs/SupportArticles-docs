@@ -3,7 +3,6 @@ title: MVC3 NuGet Package Manager is missing
 description: This article provides resolutions for the problem that you might receive the error message that could not create a new ASP.NET MVC project because the required component NuGet Package Manager is missing or out of date. Install it and try again.
 ms.date: 04/07/2020
 ms.custom: sap:Development
-ms.technology: 
 ms.reviewer: mlaing
 ---
 # ASP.NET MVC 3 NuGet Package Manager is missing or out of date

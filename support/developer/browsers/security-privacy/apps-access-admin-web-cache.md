@@ -3,10 +3,7 @@ title: Applications try to access web cache content that belongs to the local Ad
 description: Describes an issue where IE or Edge does not function correctly because the user's profile is owned by the Administrator account.
 ms.date: 08/28/2020
 ms.reviewer: joelba, DEV_Triage, v-tappelgate
-ms.custom: 
-  - CI 122170
-  - CSSTroubleshooting
-ms.technology: internet-explorer-security-privacy
+ms.custom: sap:Security and Privacy, CI 122170, CSSTroubleshooting
 ---
 
 # Applications try to access web cache content that belongs to the local Administrator account

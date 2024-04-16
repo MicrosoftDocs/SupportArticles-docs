@@ -1,17 +1,13 @@
 ---
 title: Dynamic Memory allocation in a Virtual Machine does not change although there is available memory on the host
 description: Provides a solution to an issue where Dynamic Memory allocation in a virtual machine does not change
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon
-ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: hyper-v
+ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine settings, csstroubleshoot
 ---
 # Dynamic Memory allocation in a virtual machine does not change although there is available memory on the host
 

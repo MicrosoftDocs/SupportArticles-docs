@@ -2,9 +2,9 @@
 title: HTTP Error 404.13 when you visit website
 description: This article describes a problem that occurs because a client request contains a Content-Length header that is larger than the value that is specified for this header in the ApplicationHost.config file.
 ms.date: 04/17/2020
-ms.custom: sap:Health, diagnostic, and performance features
+ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing
-ms.technology: iis-health-diagnostic-performance
+ms.subservice: health-diagnostic-performance
 ---
 # HTTP Error 404.13 - CONTENT_LENGTH_TOO_LARGE when you visit a web site that is hosted on a server that is running IIS 7.0
 

@@ -3,7 +3,7 @@ title: This solution package cannot be imported
 description: Describes a solution to the 8004801a error that occurs when you try to import a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # This solution package cannot be imported because it contains invalid XML error occurs in Microsoft Dynamics 365

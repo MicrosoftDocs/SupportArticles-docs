@@ -1,17 +1,13 @@
 ---
 title: Run programs on non-Microsoft hardware virtualization software
 description: Describes the type of support that Microsoft provides for programs that are run in a virtual environment.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
-ms.technology: hyper-v
+ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot
 ---
 # Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software
 

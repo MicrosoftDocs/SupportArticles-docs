@@ -1,15 +1,13 @@
 ---
 title: Issues after Autoplay is disabled in Group Policy
 description: Describes issues after Autoplay is disabled in Group Policy, and provides the resolutions.
-ms.date: 06/07/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, kimberj, olturcio, v-lianna
-ms.custom: sap:desktop-shell, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe init, themes, colors, icons, recycle bin), csstroubleshoot
 ---
 # Issues after Autoplay is disabled in Group Policy
 

@@ -2,7 +2,7 @@
 title: Picked quantity isn't sufficient during packing slip generation
 description: Provides a resolution for the issue that the outbound load contains a picked quantity that doesn't match the created work quantity on the load line when you create a packing slip.
 author: Mirzaab
-ms.date: 5/31/2021
+ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: WHSLoadTable_WHSSalesPackingSlipPost,WHSLoadPlanningListPage_WHSSalesPackingSlipPost,WHSLoadPlanningWorkbench_WHSSalesPackingSlipPost
 audience: Application User

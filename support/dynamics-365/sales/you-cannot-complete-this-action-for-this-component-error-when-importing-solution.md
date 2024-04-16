@@ -3,7 +3,7 @@ title: You cannot complete this action for this component error when importing a
 description: When you try to import a solution in Microsoft Dynamics 365, you may receive an error that states you cannot complete this action for this component because of the configuration of its managed properties. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # "You cannot complete this action for this component" error when importing a solution

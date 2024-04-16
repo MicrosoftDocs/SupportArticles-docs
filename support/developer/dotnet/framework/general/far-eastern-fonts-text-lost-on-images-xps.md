@@ -2,7 +2,6 @@
 title: Text from East Asian fonts is lost on an image
 description: This article describes text may be lost when you render an XPS DocumentPage to an image.
 ms.date: 06/17/2020
-ms.technology: dotnet-general
 ---
 # Text may be lost when you render an XPS DocumentPage to an image
 

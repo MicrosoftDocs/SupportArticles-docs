@@ -1,8 +1,9 @@
 ---
 title: Troubleshoot MDT
 description: Troubleshooting reference for the Microsoft Deployment Toolkit (MDT)
-ms.date: 09/09/2016
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Operating Systems Deployment (OSD)\MDT Integration or User Driven Installation (UDI)
 ---
 
 # Troubleshooting Reference for the Microsoft Deployment Toolkit
@@ -953,9 +954,9 @@ Flow charts are provided for the following phases of ZTI deployment with Configu
 
 Microsoft provides Premier and Professional level support for Microsoft Deployment Toolkit.  
 
-- Professional level support: [https://support.microsoft.com/](https://support.microsoft.com/)  
+- [Professional level support](https://support.microsoft.com/)  
 
-- Premier level support: [https://premier.microsoft.com/](https://premier.microsoft.com/)  
+- [Premier level support](https://www.microsoft.com/unifiedsupport/premier)  
 
 > [!NOTE]
 > When contacting support, be clear that the issue is with MDT and the specific version.

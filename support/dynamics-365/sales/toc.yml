@@ -435,6 +435,8 @@
           href: seller-voice-unheard-by-other-customer.md
         - name: Duplicate phone calls in Sales accelerator
           href: duplicate-phone-calls.md
+        - name: Fail to call through contact, account, or lead records
+          href: fail-to-call-through-contact-account-lead.md
         - name: Seller can't hear customers
           href: cannot-hear-other-customer.md
         - name: Seller can't make phone calls to PSTN

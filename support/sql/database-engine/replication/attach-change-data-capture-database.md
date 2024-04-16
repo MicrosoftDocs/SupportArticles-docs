@@ -1,12 +1,12 @@
 ---
 title: Can't attach CDC-enabled database
-description: This article provides resolutions for the problem that you can't attach a database with Change Data Capture enabled to a SQL Server 2016 or SQL Server 2017 on Windows instance after you detach it on SQL Server 2014 or an earlier version.
+description: This article provides resolutions for the problem where you can't attach a database with Change Data Capture enabled to a SQL Server 2016 or SQL Server 2017 on Windows instance after you detach it on SQL Server 2014 or an earlier version.
 ms.date: 03/16/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ---
 # Error when you attach a CDC-enabled database to an instance of SQL Server 2016 or SQL Server 2017 on Windows
 
-This article helps you resolve the problem that you can't attach a CDC-enabled database to an instance of SQL Server 2016 or SQL Server 2017 on Windows.
+This article helps you resolve the problem where you can't attach a CDC-enabled database to an instance of SQL Server 2016 or SQL Server 2017 on Windows.
 
 _Original product version:_ &nbsp; SQL Server 2008 and the later versions  
 _Original KB number:_ &nbsp; 3200464

@@ -1,9 +1,10 @@
 ---
 title: You cannot mark the option Post Through General Ledger Files error when marking Post Through General Ledger Files
 description: You cannot mark the option Post Through General Ledger Files for Computer Checks as Analytical Accounting has been activated. This error occurs when you mark the Post Through General Ledger Files option. This is by design.
-ms.reviewer: jaredha
+ms.reviewer: theley, jaredha
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "You cannot mark the option Post Through General Ledger Files for Computer Checks as Analytical Accounting has been activated" error when marking the Post Through General Ledger Files option
 

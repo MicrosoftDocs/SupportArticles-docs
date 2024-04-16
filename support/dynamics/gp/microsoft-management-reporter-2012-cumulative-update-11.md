@@ -1,8 +1,9 @@
 ---
 title: Microsoft Management Reporter 2012 Cumulative Update 11 (CU11) is available
 description: Lists the fixes of cumulative update 11 for Management Report 2012.
-ms.reviewer: gbyer, jopankow
-ms.date: 03/31/2021
+ms.reviewer: theley, gbyer, jopankow
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # Microsoft Management Reporter 2012 Cumulative Update 11 (CU11) is available
 
@@ -77,4 +78,3 @@ New features included with CU11:
 |3209403|Data mart integration fails when the collation is different between tempdb and the data mart database|
 |3213527|Performance issues generating reports|
 |3240510|Performance issues and data base growth when dimension combinations are integrated into all companies in a partition|
-  

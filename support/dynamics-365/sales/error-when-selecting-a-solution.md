@@ -3,7 +3,7 @@ title: Error when selecting a solution
 description: Provides a solution to an error that occurs when you select a solution and then select the Apply Solution Upgrade button.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # "The [Solution Name] solution doesn't have an upgrade that is ready to be applied" error message appears in Microsoft Dynamics 365

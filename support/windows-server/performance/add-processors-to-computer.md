@@ -1,17 +1,13 @@
 ---
 title: Add processors to a computer
 description: Describes how to add processors to a computer.
-ms.date: 3/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: joscon, kaushika
-ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
 ---
 # How to add processors to a computer
 

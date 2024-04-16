@@ -3,7 +3,6 @@ title: Printing a range of pages fails when you use a WPF application
 description: This article discusses a problem in which the process of printing pages fails when you use Windows Presentation Foundation (WPF) application.
 ms.date: 03/22/2022
 ms.reviewer: hiroakii
-ms.technology: dotnet-general
 ---
 # Printing a range of pages fails when you use a WPF application
 

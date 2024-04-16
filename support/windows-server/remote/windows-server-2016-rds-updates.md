@@ -1,17 +1,13 @@
 ---
 title: Available Remote Desktop Services updates in Windows Server 2016
 description: Introduce recommended hotfixes and updates for Remote Desktop Services in Windows Server 2016.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # Available Remote Desktop Services updates in Windows Server 2016
 

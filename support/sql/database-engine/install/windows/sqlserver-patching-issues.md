@@ -78,7 +78,7 @@ To fix this issue, follow these steps:
 1. Connect to the SQL Server instance by using SQL Server Management Studio (SSMS).
 1. Right-click the SQL Server instance in the **Object Explorer** and select **Properties** > **Database Settings**.
 1. Under **Database Default locations**, make sure that the folders in **Data** and **Log** are correct.
-1. In the SQL Server Configuration Manager, select **SQL Server Services**, double-click the affected SQL Server Service, select the **Advanced** tab, and make sure the value of **Data Path** is correct. The value is grayed out and can't be modified. However, if you want to correct it, follow **Method 2** in [Error that Data or Log directory in the registry is not valid when installing SQL Server Cumulative Update or a Service Pack](user-data-log-directory-invalid.md#method-2-using-registry-editor) to modify the **SQLDataRoot** registry entry.
+1. In the SQL Server Configuration Manager, select **SQL Server Services**, double-click the affected SQL Server Service, select the **Advanced** tab, and make sure the value of **Data Path** is correct. The value is grayed out and can't be modified. However, if you want to correct it, follow **Method 2** in [Error that Data or Log directory in the registry is not valid when installing SQL Server Cumulative Update or a Service Pack](user-data-log-directory-invalid.md#method-2-use-registry-editor) to modify the **SQLDataRoot** registry entry.
 1. Retry the CU or SP installation.
 
 ## Misconfigured Windows Server Failover Clustering (WSFC) nodes

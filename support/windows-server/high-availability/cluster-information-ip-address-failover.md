@@ -1,17 +1,13 @@
 ---
 title: Clustering information on IP address failover
 description: Describes the clustering information on IP address failover.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, gregorh
-ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
 ---
 # Clustering Information on IP Address Failover
 

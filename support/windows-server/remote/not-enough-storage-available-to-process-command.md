@@ -1,17 +1,13 @@
 ---
 title: New user fails to log on through RDP
 description: Describes an issue in which a new user receives an error message after the user types a new password.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
 ---
 # "Not enough storage is available to process this command" error when a new user tries to log on through RDP in Windows Server 2008 R2
 

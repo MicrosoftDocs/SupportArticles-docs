@@ -1,24 +1,20 @@
 ---
 title: Event ID 300 - Windows Hello successfully created in Windows 10
-description: This event is created when a Windows Hello for Business is successfully created and registered with Azure Active Directory (Azure AD).
-ms.date: 08/25/2022
-ms.prod: windows-client
-author: Deland-Han
-ms.author: delhan
+description: This event is created when a Windows Hello for Business is successfully created and registered with Microsoft Entra ID.
+ms.date: 12/26/2023
 manager: dcscontentpm
 ms.reviewer: prsriva, aaroncz
 ms.collection: M365-identity-device-management
 ms.topic: troubleshooting
-ms.technology: windows-client-user-profiles
-ms.custom: sap:hello-for-business, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Biometric, Passwordless Authentication, SSO, and Windows Hello, csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---
 # Event ID 300 - Windows Hello successfully created
 
-This event is created when Windows Hello for Business is successfully created and registered with Azure Active Directory (Azure AD). Applications or services can trigger actions on this event. For example, a certificate provisioning service can listen to this event and trigger a certificate request.
+This event is created when Windows Hello for Business is successfully created and registered with Microsoft Entra ID. Applications or services can trigger actions on this event. For example, a certificate provisioning service can listen to this event and trigger a certificate request.
 
-_Applies to:_ &nbsp; Windows 10, Windows 11  
+_Applies to:_ &nbsp; Windows 10, Windows 11
 
 ## Event details
 

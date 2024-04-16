@@ -1,17 +1,13 @@
 ---
 title: "\"Error 720: Can't connect to a VPN Connection\" when you try to establish a VPN connection"
 description: Discusses how to troubleshoot error 720 that occurs when you try to establish a VPN connection.
-ms.date: 12/7/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
 ---
 # "Error 720: Can't connect to a VPN Connection" when you try to establish a VPN connection
 

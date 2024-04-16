@@ -4,7 +4,7 @@ description: This article describes that browser default action for CTRL+P canno
 ms.date: 01/04/2021
 ms.reviewer: 
 ms.topic: article
-ms.technology: internet-explorer-development-website
+ms.custom: sap:Development and Website Issues
 ---
 # Browser default action for CTRL+P cannot be prevented
 

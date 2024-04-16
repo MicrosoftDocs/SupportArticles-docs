@@ -9,6 +9,16 @@ items:
   href: description-update-cache-folder.md
 - name: Different errors when installing SQL Server 2008 R2
   href: error-install-sql-server-2008-r2.md
+- name: Driver installation check
+  items:
+  - name: Driver installation check
+    href: driver-install-checking.md
+  - name: .NET driver installation check
+    href: net-driver-install-check.md
+  - name: ODBC driver installation check
+    href: odbc-driver-install-checking.md
+  - name: OLE DB driver installation check
+    href: oledb-driver-install-check.md
 - name: Error code 1642 though update is applied
   href: error-code-1642-update-applied.md
 - name: Error if you change shared component directory
@@ -25,7 +35,7 @@ items:
   href: user-data-log-directory-invalid.md
 - name: Permission error when you use a volume mount point
   href: permission-error-use-volume-mount-point.md
-- name: Remove a partial installation of SQL server
+- name: Remove a partial installation of SQL Server
   href: remove-partial-installation.md
 - name: Restore the missing Windows Installer cache files
   href: restore-missing-windows-installer-cache-files.md

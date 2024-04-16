@@ -1,0 +1,77 @@
+- name: Dynamics 365 Field Service
+  href: welcome-field-service.yml
+  items:
+    - name: Administration and settings
+      items:
+        - name: Can't find a user when setting up frontline workers
+          href: administration/cannot-find-user-set-up-frontline-workers.md
+        - name: Can't identify the user in an error message
+          href: administration/cant-identify-user.md
+        - name: Date Window Start/End fields don't exist
+          href: administration/date-window-fields-missing.md
+        - name: Error with AttributeMap when upgrading
+          href: administration/attibutemap-error-upgrade.md
+        - name: Entity record names have duplicated numbers
+          href: administration/entity-names-duplicated-numbers.md
+        - name: '"The user has not been assigned any roles" error'
+          href: administration/user-has-no-roles.md
+    - name: Customization
+      items:
+        - name: Can't delete record due to a restrict-delete association
+          href: customization/restrict-delete-relationships.md
+        - name: Forms show an error about being read-only
+          href: customization/forms-record-read-only-error.md
+    - name: Integrations
+      items:
+        - name: Create permissions error in Microsoft Outlook or Teams
+          href: integrations/create-permissions-error.md
+        - name: Viva Connections dashboard doesn't show the correct tiles
+          href: integrations/viva-incorrect-tiles.md
+    - name: IoT and Connected Field Service
+      items:
+        - name: Can't change Time Series Insights instance
+          href: iot/change-time-series-insights-instance.md
+        - name: IoT Edge modules data is aggregated in charts
+          href: iot/edge-module-data-aggregated.md
+        - name: No records after pulling IoT device data
+          href: iot/no-device-history-properties.md
+        - name: Troubleshoot issues with IoT capabilities
+          href: iot/troubleshoot-iot-issues-logic-app.md
+
+    - name: Mobile app
+      items: 
+        - name: Booking timestamp is created with an incorrect time
+          href: mobile-app/booking-timestamp-incorrect-time.md
+        - name: Camera pictures are blurry or not focused
+          href: mobile-app/camera-picture-not-focused.md
+        - name: Duplicated inspection responses
+          href: mobile-app/duplicate-inspection-responses.md
+        - name: Incorrect or missing data in offline mode
+          href: mobile-app/incorrect-missing-data-offline-mode.md
+        - name: Troubleshoot issues with publishing a mobile offline profile
+          href: mobile-app/publish-mobile-offline-profile.md
+        - name: '"Validations have been restarted in the background" error'
+          href: mobile-app/validation-restarted-background.md
+
+    - name: Resource Scheduling Optimization add-in
+      items: 
+        - name: Optimization request fails to modify some bookings
+          href: rso/system-failed-modify-bookings-error.md
+        - name: '"Object reference not set to an instance of an object" error'
+          href: rso/object-reference-not-set-instance-object.md
+        - name: Requirements not scheduled
+          href: rso/requirement-not-scheduled-in-rso.md
+        - name: '"SAS Key has not been configured" error'
+          href: rso/sas-key-not-configured-error.md
+        - name: Troubleshoot issues with bookings
+          href: rso/troubleshoot-bookings-in-rso.md
+        - name: Troubleshoot issues with deployments
+          href: rso/troubleshoot-rso-deployment.md
+        - name: '"User lacks privileges" error'
+          href: rso/user-lacks-privileges-error.md
+
+    - name: Scheduling
+      items: 
+        - name: Issue with cascading crew changes when assigning a booking
+          href: scheduling/cascade-crew-changes-booking.md
+

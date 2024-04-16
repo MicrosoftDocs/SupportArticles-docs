@@ -1,17 +1,13 @@
 ---
 title: Task Manager may display incorrect memory information
 description: Works around an issue in which Task Manager may show the memory speed to be higher or lower than the speed that is reported in the BIOS.
-ms.date: 7/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
 ---
 # Task Manager may display incorrect memory information
 

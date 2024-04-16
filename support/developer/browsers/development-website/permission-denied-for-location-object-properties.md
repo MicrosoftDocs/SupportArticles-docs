@@ -3,7 +3,7 @@ title: Permission denied if reading Location object property
 description: This article provides the methods that help you to solve the Permission denied error message that occurs when you read properties of the Location object that is inside an HTML Application.
 ms.date: 03/05/2020
 ms.reviewer: v-vmaru
-ms.technology: internet-explorer-development-website
+ms.custom: sap:Development and Website Issues
 ---
 # Permission denied error when reading properties of an HTML Application Location object
 

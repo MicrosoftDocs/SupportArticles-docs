@@ -30,7 +30,7 @@ There are no known issues in this cumulative update.
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -49,7 +49,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13491012">[13491012](#13491012)</a> | Msg 3628 (The Database Engine may receive a floating point exception from the operating system while processing a user request) may occur during a clustered columnstore index rebuild. | SQL Server Engine | Column Stores | Windows |
 | <a id="13522185">[13522185](#13522185)</a> | [FIX: sp_execute_external_script may fail to run R scripts that use the RxLocalParallel compute context or the doParallel R package in SQL Server 2019 (KB4563195)](https://support.microsoft.com/help/4563195) | SQL Server Engine | Extensibility | Windows |
 | <a id="13532909">[13532909](#13532909)</a> | [FIX: Allow external resource pool to use more than one processor group in SQL Server 2019 on Windows (KB4563044)](https://support.microsoft.com/help/4563044) | SQL Server Engine | Extensibility | Windows |
-| <a id="13526506">[13526506](#13526506)</a> | When a Windows principal that's not mapped to a specific database user accesses a database by using membership in a windows group or AAD group, a user ID of 0 may be assigned to the user. When the user tries to use libraries that are installed by other `dbo`/`sysadmin` user, the user may not see any external libraries. After applying this update, a user ID of 0 would have access to external libraries installed by the `dbo` (libraries in public scope). Since there's no database user that's mapped to the Windows principal, the user with user ID 0 can't create or install external libraries. | SQL Server Engine | Extensibility | Windows |
+| <a id="13526506">[13526506](#13526506)</a> | When a Windows principal that's not mapped to a specific database user accesses a database by using membership in a Windows group or Microsoft Entra group, a user ID of 0 may be assigned to the user. When the user tries to use libraries that are installed by other `dbo`/`sysadmin` user, the user may not see any external libraries. After applying this update, a user ID of 0 would have access to external libraries installed by the `dbo` (libraries in public scope). Since there's no database user that's mapped to the Windows principal, the user with user ID 0 can't create or install external libraries. | SQL Server Engine | Extensibility | Windows |
 | <a id="13421891">[13421891](#13421891)</a> | [FIX: Access violation may occur when enumerating files in a FileTable in SQL Server (KB4540896)](https://support.microsoft.com/help/4540896) | SQL Server Engine | FileStream and FileTable | Windows |
 | <a id="13508776">[13508776](#13508776)</a> | [FIX: Availability Group failover generates lot of dumps as DTC support is toggled between PER_DB and NONE multiple times (KB4562173)](https://support.microsoft.com/help/4562173) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id="13522235">[13522235](#13522235)</a> | [FIX: SQL Server may still read data from secondary replica when ALLOW_CONNECTIONS is set to NO (KB4560051)](https://support.microsoft.com/help/4560051) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
@@ -913,8 +913,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -984,7 +984,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
