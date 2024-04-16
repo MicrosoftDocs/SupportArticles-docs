@@ -2,7 +2,7 @@
 title: Supported file systems in BizTalk
 description: Discusses the file systems that are supported when you use the BizTalk Server File Receive function and the BizTalk Server File Adapter.
 ms.date: 03/16/2020
-ms.custom: sap:Adapter
+ms.custom: sap:Adapters
 ms.reviewer: tracey
 ---
 # Supported file systems when you use the BizTalk Server File Receive function and BizTalk Server File Adapter

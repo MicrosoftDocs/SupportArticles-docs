@@ -2,7 +2,7 @@
 title: Run SQL Server stored procedures from an ASP Page
 description: This article describes how to run SQL Server stored procedures and use parameters from an ASP page.
 ms.date: 09/24/2020
-ms.custom: sap:Active Server Pages
+ms.custom: sap:Active Server Pages\Application
 ms.reviewer: JAYAPST
 ---
 # Run SQL Server stored procedures from an ASP Page

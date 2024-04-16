@@ -4,6 +4,7 @@ description: Describes how to implement a custom collection in Visual C#. Also i
 ms.date: 04/13/2020
 ms.reviewer: bobbym
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Use Visual C# to implement custom collections  
 

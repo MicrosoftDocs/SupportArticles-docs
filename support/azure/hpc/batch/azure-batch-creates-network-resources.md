@@ -5,6 +5,7 @@ ms.date: 02/21/2024
 author: genlin
 ms.author: cabermu
 ms.service: batch
+ms.custom: sap:HPC Pack
 --- 
 
 # Understanding Azure Batch Network resources creation
