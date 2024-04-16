@@ -218,7 +218,7 @@ All the following commands should be run by using root privileges or by specifyi
 > sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
 > sudo yum install rhui-azure-rhel-X-X-X
 > ```
-> Replace `rhui-microsoft-azure-rhelX-X-X-X`accordingly.
+> Replace `rhui-microsoft-azure-rhelX-X-X-X` and `rhui-azure-rhel-X-X-X` accordingly.
 
 #### Non-EUS RHUI package installation
 
@@ -293,7 +293,7 @@ All the following commands should be run by using root privileges or by specifyi
 > sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
 > sudo yum install rhui-azure-rhel-X-X-X
 > ```
-> Replace `rhui-microsoft-azure-rhelX-X-X-X`accordingly.
+> Replace `rhui-microsoft-azure-rhelX-X-X-X` and `rhui-azure-rhel-X-X-X` accordingly.
 
 #### RHEL 7 SAP/E4S/HANA RHUI package installation
 
@@ -430,7 +430,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
 > sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
 > sudo yum install rhui-azure-rhel-X-X-X
 > ```
-> Replace `rhui-microsoft-azure-rhelX-X-X-X` accordingly.
+> Replace `rhui-microsoft-azure-rhelX-X-X-X` and `rhui-azure-rhel-X-X-X` accordingly.
 
 #### RHEL 8 SAP/E4S/HANA RHUI package installation
 
@@ -504,14 +504,15 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 ---
 
-> [!NOTE] If you are using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command won't work because it doesn't include your proxy settings. In this case, use the following commands:
+> [!NOTE]
+> If you are using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command won't work because it doesn't include your proxy settings. In this case, use the following commands:
 >
 > ```bash 
 > sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
 > sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
 > sudo yum install rhui-azure-rhel-X-X-X
 > ```
-> Replace `rhui-microsoft-azure-rhelX-X-X-X` accordingly.
+> Replace `rhui-microsoft-azure-rhelX-X-X-X` and `rhui-azure-rhel-X-X-X` accordingly.
 
 #### RHEL 9 SAP/HANA RHUI package installation
 
@@ -593,7 +594,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 > sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
 > sudo yum install rhui-azure-rhel-X-X-X
 > ```
-> Replace `rhui-microsoft-azure-rhelX-X-X-X` accordingly.
+> Replace `rhui-microsoft-azure-rhelX-X-X-X` and `rhui-azure-rhel-X-X-X` accordingly.
 
 ## Cause 4: SSL CA certificate is missing
 
