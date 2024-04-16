@@ -62,7 +62,7 @@ This error might indicate an issue with the configuration you provided when link
 
 To resolve this issue, follow these steps:
 
-1. Validate that your database credentials is valid in a tool like Azure Data Studio or SQL Server Management Studio (SSMS).
+1. Validate that your database credentials are valid in a tool like Azure Data Studio or SQL Server Management Studio (SSMS).
 1. Unlink/Relink the connected database.
 
 If you still encounter the error, ensure that you select **"Allow Azure services and resources to access this server"** for the **Exceptions** on the networking page of your Azure Database resource. This option configures the firewall to allow connections from IP addresses allocated to any Azure service or asset, including connections from other customers' subscriptions.
@@ -180,7 +180,7 @@ When you configure Data API builder to use Microsoft Entra ID authentication, yo
 
 - The access token has expired.
 - The access token isn't meant for the Data API builder's API (wrong access token audience).
-- The acccess token isn't created by the expected authority (invalid access token issuer).
+- The access token isn't created by the expected authority (invalid access token issuer).
 
 To resolve this error, make sure to meet the following conditions:
 
