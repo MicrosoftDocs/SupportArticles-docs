@@ -3,6 +3,7 @@ title: Web page pop-up username and password box
 description: This article describes that when you use different windows authentication, the Internet Explorer prompts you to enter valid credentials.
 ms.date: 06/03/2020
 ms.reviewer: clinth
+ms.custom: sap:Security and Privacy
 ---
 # Internet Explorer may prompt you for a password
 

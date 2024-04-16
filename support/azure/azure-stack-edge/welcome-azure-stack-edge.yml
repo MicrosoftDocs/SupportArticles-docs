@@ -1,0 +1,26 @@
+### YamlMime:Landing
+
+title: Troubleshoot common issues with Azure Stack Edge
+summary: These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Stack Edge. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Stack Edge
+  description: Documentation for troubleshooting common issues with Azure Stack Edge. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: azure-stack #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/12/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+  - title: Azure Stack Edge
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Tips for finding Microsoft troubleshooting content
+            url: azure-stack-edge-support-package-device-logs.md

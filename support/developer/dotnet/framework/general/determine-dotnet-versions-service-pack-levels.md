@@ -3,6 +3,7 @@ title: .NET Framework versions and service pack levels
 description: This article describes how to determine which versions of the .NET Framework are installed on a computer, and helps you determine which .NET Framework service packs have been applied.
 ms.date: 05/06/2020
 ms.topic: how-to
+ms.custom: sap:Installation and Deployment
 ---
 # Determine which versions and service pack levels of .NET Framework are installed
 

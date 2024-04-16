@@ -2,7 +2,7 @@
 title: Trace and debug
 description: This article describes how to trace and debug in Visual C# and provides some sample steps to explain related information.
 ms.date: 10/09/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C#
 ms.topic: how-to
 ---
 # Trace and debug in Visual C sharp

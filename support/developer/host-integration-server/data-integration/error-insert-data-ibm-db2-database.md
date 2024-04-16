@@ -2,7 +2,7 @@
 title: Error when you insert data into IBM DB2 database
 description: The following error occurs when using SQL Server Integration Services and the Microsoft OLE DB Provider for DB2 to insert NULL TimeStamp or Date values into IBM DB2 database when using FastLoad.
 ms.date: 10/13/2020
-ms.custom: sap:Data integration (DB2, host files)
+ms.custom: sap:Data Integration (DB2, Host Files)
 ---
 # Error message when using SQL Server Integration Services to insert data into IBM DB2 database
 

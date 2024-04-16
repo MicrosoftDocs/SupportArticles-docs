@@ -2,7 +2,7 @@
 title: Information associated with IIS site isn't deleted
 description: This article provides resolutions for the problem where information associated with IIS site isn't deleted during programmatic site deletion.
 ms.date: 12/11/2020
-ms.custom: sap:WWW Authentication and Authorization
+ms.custom: sap:Development\Using AHAdmin
 ms.reviewer: paulboc
 ms.subservice: www-authentication-authorization
 ---

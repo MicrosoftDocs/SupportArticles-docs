@@ -2,7 +2,7 @@
 title: Navigate XML documents with XPathNavigator
 description: Describes how to navigate Extensible Markup Language (XML) documents by using an XPathNavigator object that is created from an XPathDocument object.
 ms.date: 04/20/2020
-ms.custom: sap:Language or compilers
+ms.custom: sap:Language or Compilers\C#
 ms.reviewer: JAYAPST
 ms.topic: how-to
 ---

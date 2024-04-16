@@ -7,6 +7,7 @@ ms.reviewer: biny, v-leedennis
 ms.service: batch
 ms.topic: how-to
 #Customer intent: As an Azure Batch user, I want to learn how to use managed identities so that I can understand the differences in managed identity usage between a Batch account and a Batch pool.
+ms.custom: sap:Azure Batch
 ---
 # Use managed identities in an Azure Batch account or pool
 

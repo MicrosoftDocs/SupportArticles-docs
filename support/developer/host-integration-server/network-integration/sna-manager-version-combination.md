@@ -2,7 +2,7 @@
 title: SNA Manager version combinations
 description: This article introduces the information of SNA Manager version combinations.
 ms.date: 05/11/2020
-ms.custom: sap:SNA Manager
+ms.custom: sap:Network Integration (SNA Gateway)
 ms.topic: article
 ---
 # SNA Manager version combinations

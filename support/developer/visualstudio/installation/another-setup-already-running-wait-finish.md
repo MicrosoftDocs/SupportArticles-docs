@@ -1,10 +1,11 @@
 ---
 title: Wait for setup to finish before trying again
 description: Provides a resolution to the error "Another setup is already running. Please wait for it to finish before trying again".
-ms.date: 04/07/2022
+ms.date: 04/15/2024
 author: jasonchlus
 ms.author: jasonchlus
-ms.reviewer: terry.g.lee
+ms.reviewer: terry.g.lee, jagbal
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
 # Error "Another setup is already running. Please wait for it to finish before trying again"

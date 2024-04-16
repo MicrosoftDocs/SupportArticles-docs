@@ -2,7 +2,7 @@
 title: Adapter for MQSeries 2.0 doesn't retrieves messages
 description: This article provides workarounds for the problem where MQSeries Adapter no longer retrieves messages from a clustered MQSeries queue manager when the queue manager fails over to a different cluster node.
 ms.date: 08/25/2020
-ms.custom: sap:Adapter
+ms.custom: sap:Adapters
 ms.reviewer: xuehongg, v-paulsh
 ---
 # The MQSeries Adapter no longer retrieves messages from a clustered MQSeries queue manager when the queue manager fails over to a different cluster node
