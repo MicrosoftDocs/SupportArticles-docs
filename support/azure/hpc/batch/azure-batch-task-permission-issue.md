@@ -4,6 +4,7 @@ description: Provides causes and solutions for issues where an Azure Batch task 
 ms.date: 02/23/2024
 ms.reviewer: biny, v-weizhu
 ms.service: batch
+ms.custom: sap:HPC Pack
 ---
 # Azure Batch tasks fail due to permission issues 
 

@@ -4,6 +4,7 @@ description: This article helps you troubleshoot IIS 7.x installation issues.
 ms.date: 04/09/2012
 ms.reviewer: puneetg, johnhart, senyum, v-jayaramanp
 ms.topic: troubleshooting
+ms.custom: sap:WWW Administration and Management\Installation
 ---
 
 # Troubleshooting IIS 7.x installation problems
@@ -85,4 +86,3 @@ C:\Windows\Logs\CBS\CBS.log
 ```
 
 Only when both the tools run successfully, proceed with your troubleshooting. There's a good chance that running these steps could fix whatever corruption was present in CBS. If these tools do find problems in CBS engine, it can help you narrow down the issue and save time in troubleshooting.
-
