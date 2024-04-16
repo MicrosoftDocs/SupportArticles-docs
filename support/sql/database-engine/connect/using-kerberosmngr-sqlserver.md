@@ -8,7 +8,7 @@ ms.custom: sap:Connection Issues
 
 # Overview of the Kerberos Configuration Manager for SQL Server
 
-_Applies to:_&nbsp;SQL Server
+_Applies to:_&nbsp;SQL Server 2012-2019 (not 2022)
 
 _Original KB number:_ 2985455
 
