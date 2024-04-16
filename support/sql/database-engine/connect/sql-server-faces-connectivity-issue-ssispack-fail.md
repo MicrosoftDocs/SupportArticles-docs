@@ -1,6 +1,6 @@
 ---
-title: Connectivity error 0x80004005 occur when SQL Server Integration Services packages fail to run
-description: This article helps you resolve errors that occur when you try to run SSIS packages by using SQL Server Agent.
+title: Connectivity error 0x80004005 occurs when SQL Server Integration Services packages fail to run
+description: This article helps you resolve the 0x80004005 error that might arise when you try to run SSIS packages by using the SQL Server Agent.
 ms.date: 03/28/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -8,9 +8,9 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Connectivity error 0x80004005 arising from SQL Sever Agent SSIS failures
+# Connectivity error 0x80004005 occurs from SQL Sever Agent SSIS failures
 
-This article provides a resolution to a connectivity issue in which SQL Server Integration Services (SSIS) packages that use an SQL agent fail to run.
+This article provides a resolution to a connectivity issue in which SQL Server Integration Services (SSIS) packages that use an SQL Agent fail to run.
 
 ## Symptoms
 

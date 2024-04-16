@@ -1,7 +1,7 @@
 ---
 title: Connection to the linked server fails
 description: This article explains about the errors that might occur if the connection to the linked server fails.
-ms.date: 03/07/2024
+ms.date: 04/16/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -18,13 +18,15 @@ The following error messages are logged in the SQL Server error log.
 
 > TCP Provider: An existing connection was forcibly closed by the remote host.
 
-> OLE DB provider "MSOLEDBSQL" for linked server "LinkedServer Name" returned message "Client unable to establish connection". (Microsoft SQL Server, Error: 10054)
+> OLE DB provider "MSOLEDBSQL" for linked server "</LinkedServerName/>" returned message "Client unable to establish connection". (Microsoft SQL Server, Error: 10054)
 
-You might also see the following phrases, which indicate the version and edition of the source and destination SQL Server instances that initiates the connection to the linked server. It's important to determine the version and edition compatibility between the SQL Server instances.
+You may encounter the following expressions, which indicate the version and edition of the source and destination SQL Server instances that establish the connection to the linked server.
 
 > Source SQL Version SQL 2019 Enterprise Edition
 
 > Destination SQL Version SQL 2016 Enterprise Edition
+
+Event ID 36874 is a Schannel error that occurs in the Windows Event Viewer. The error indicates that the client and server support different sets of cipher suites which causes a failure in connection.
 
   :::image type="content" source="media/connection-to-linked-server-failed/connection-to-linked-server-failed.png" alt-text="Screenshot that shows that multiple errors occur after the connection to the linked server fails.":::
 

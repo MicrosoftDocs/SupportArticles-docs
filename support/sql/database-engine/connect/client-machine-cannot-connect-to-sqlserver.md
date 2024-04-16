@@ -1,7 +1,7 @@
 ---
 title: Local SQL Server can't connect to a linked server when RSA encryption is used
 description: This article provides a resolution for an error that prevents a client computer from connecting to the linked server.
-ms.date: 03/28/2024
+ms.date: 04/16/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
