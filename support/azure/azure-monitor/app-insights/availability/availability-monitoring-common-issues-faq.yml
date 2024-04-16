@@ -86,7 +86,7 @@ sections:
       - question: |
           How can I allow other users to view my availability test results?
         answer: |
-          To enable another user to view your availability test results in Application Insights, you must grant them at least read access to the resource group containing your Application Insights resource. Availability tests are separate Azure resources, identified as [Microsoft.Insights/webtests](azure/templates/microsoft.insights/webtests?pivots=deployment-language-arm-template). They are created within the same resource group as your Application Insights resource. For detailed steps on how to control access, see [Control access in the resource group](/azure/azure-monitor/app/resources-roles-access-control#access).
+          To enable other users to view your availability test results in Application Insights, you must grant them at least read access to the resource group containing your Application Insights resources. Availability tests are separate Azure resources, identified as [Microsoft.Insights/webtests](azure/templates/microsoft.insights/webtests?pivots=deployment-language-arm-template). They are created within the same resource group as your Application Insights resources. For detailed steps on how to control access, see [Control access in the resource group](/azure/azure-monitor/app/resources-roles-access-control#access).
 
 additionalContent: |
 
