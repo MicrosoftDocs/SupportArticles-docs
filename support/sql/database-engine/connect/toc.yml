@@ -11,10 +11,6 @@ items:
   href: consistent-sql-network-connectivity-issue.md
 - name: Incorrect server name in SQL Server connection string
   href: bad-server-name-connection-string-error.md
-- name: How to determine if the authentication type is Kerberos
-  href: determine-the-authentication-type.md
-- name: Windows user profile can't be loaded in SQL Server
-  href: corrupt-user-profile.md
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
@@ -52,8 +48,6 @@ items:
   href: jdbc-config-troubleshoot.md
 - name: Login failed for user
   href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
-- name: KRB_AP_ERR_TKT_EXPIRED error in Kerberos tickets
-  href: expired-tickets-issue.md
 - name: Network access issues in SQL Server
   href: network-login-disallowed.md
 - name: Local security subsystem errors in SQL Server
