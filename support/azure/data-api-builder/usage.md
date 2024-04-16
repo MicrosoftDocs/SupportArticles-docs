@@ -2,12 +2,10 @@
 title: Troubleshooting usage
 titleSuffix: Data API builder
 description: Troubleshoot common problems that might occur and their solutions when using the Data API builder for Azure databases.
-author: seesharprun
-ms.author: sidandrews
-ms.reviewer: jerrynixon
+ms.reviewer: jerrynixon, sidandrews
 ms.service: data-api-builder
 ms.topic: troubleshooting-general
-ms.date: 04/01/2024
+ms.date: 04/15/2024
 ms.custom: sap:Tools and Connectors
 ---
 
@@ -238,6 +236,8 @@ For example, with the following runtime configuration file where the role `role1
 ## Provide feedback
 
 If you're unsable to find a solution to your issue in this article, provide feedback or report bugs at the [azure/data-api-builder](https://github.com/azure/data-api-builder/discussions) GitHub repository.
+
+[!INCLUDE[Azure Help Support](../../includes/azure-help-support.md)]
 
 ## Related content
 
