@@ -48,11 +48,11 @@ So, the values you must use at the beginning of the URL paths for the REST and G
 ```
 
 > [!NOTE]
-> When using Data API builder with the Static Web Apps using the Database Connections feature, the URL path begins with `/data-api`. You can add the value of your desired endpoint after that value. For example, `/data-api/api/<entity>` for REST and `/data-api/graphql` for GraphQL.
+> When using Data API builder with the Static Web Apps using the Database Connections feature, the URL path begins with `/data-api`. You can add the value of your desired endpoint after this value. For example, `/data-api/api/<entity>` for REST and `/data-api/graphql` for GraphQL.
 
 ### Static Web Apps Database Connections configuration issue
 
-When you use Data API builder with the Static Web Apps Database Connections feature, you encounter the error "Response status code does not indicate success: 400 (Bad Request)." in the response body:
+When you use Data API builder with the Static Web Apps Database Connections feature, you encounter the error "Response status code does not indicate success: 400 (Bad Request)" in the response body:
 
 ```json
 {"Message":"{\u0022Message\u0022:\u0022Response status code does not indicate success: 400 (Bad Request).\u0022,\u0022ActivityId\u0022:\u0022<GUID>\u0022}","ActivityId":"<GUID>"}
