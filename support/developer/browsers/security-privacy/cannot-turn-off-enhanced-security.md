@@ -3,6 +3,7 @@ title: Cannot turn off Internet Explorer Enhanced Security
 description: Provides information about symptoms and various steps you can take to solve them, depending on the scenario.
 ms.date: 07/14/2020
 ms.reviewer: ramakoni
+ms.custom: sap:Security and Privacy
 ---
 # Standard users can't turn off Internet Explorer Enhanced Security feature
 

@@ -2,7 +2,7 @@
 title: Data collection strategies of common IIS Web Server-related issues
 description: This article describes the data collection strategies to troubleshoot common IIS Web Server-related issues in Windows Server.
 ms.date: 10/28/2020
-ms.custom: sap:Health, diagnostic, and performance features
+ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: paulboc
 ms.subservice: health-diagnostic-performance
 ---

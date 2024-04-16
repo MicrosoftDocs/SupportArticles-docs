@@ -183,8 +183,6 @@
     href: ./framework/installation/clickonce-app-install-launch-fail.md
   - name: Setup diagnostics
     href: ./framework/installation/setup-diagnostics.md
-  - name: Setup fails when rollback is disabled
-    href: ./framework/installation/enable-rollback-continue-setup.md
 
 - name: WCF
   items:

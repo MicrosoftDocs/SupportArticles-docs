@@ -2,7 +2,7 @@
 title: Check if program is running
 description: This article describes how to determine if your program is running in the Visual Basic integrated development environment or as a compiled executable file.
 ms.date: 10/12/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\Visual Basic .NET (VB.NET)
 ms.topic: how-to
 ---
 # Check If program is running in the IDE or an EXE File

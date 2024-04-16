@@ -4,6 +4,7 @@ description: This article provides various troubleshooting scenarios and resolut
 ms.topic: troubleshooting 
 ms.date: 04/09/2012
 ms.reviewer: kaushalp, johnhart, v-jayaramanp
+ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
 ---
 
 # Troubleshooting SSL related issues (Server Certificate)

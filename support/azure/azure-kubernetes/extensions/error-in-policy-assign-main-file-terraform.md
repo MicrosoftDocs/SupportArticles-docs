@@ -1,5 +1,5 @@
 ---
-title: Error in policy assignments Main.tf file of Terraform.
+title: Error in policy assignments Main.tf file of Terraform
 description: This article provides a solution to an error that you encounter during policy assignments.
 ms.date: 03/27/2024
 ms.reviewer: chiragpa, andbar, haitch, v-leedennis
@@ -12,7 +12,7 @@ This article provides a solution to the "Policy definition not found" error that
 
 ## Symptoms
 
-When you try to run the following policy assignments that are configured in the Main.tf file of the Terraform tool, you receive the "Policy definition not found" error message:
+When you try to run the following policy assignments that are configured in the *Main.tf* file of the Terraform tool, you receive the "Policy definition not found" error message:
 
 ```
 resource "azurerm_policy_assignment" "kubernetes" {
@@ -30,7 +30,7 @@ The error occurs if the policy assignment references the policy initiative defin
 
 ## Solution
 
-In your Terraform configuration, include a 'depends_on' parameter within the policy assignment resource, as shown the following example. This value makes sure that the policy assignment is generated only after the creation of the policy set definition. 
+In your Terraform configuration, include a `depends_on` parameter within the policy assignment resource, as shown the following example. This value makes sure that the policy assignment is generated only after the creation of the policy set definition. 
 
 ```
 resource "azurerm_policy_assignment" "kubernetes" {

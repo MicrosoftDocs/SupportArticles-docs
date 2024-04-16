@@ -1,18 +1,18 @@
 ---
-title: Azure policy reports 'ConstraintNotProcessed' for a running container
-description: This article provides a solution to an issue in which Azure Policy reports a running container as 'ConstraintNotProcessed'.
+title: Azure policy reports ConstraintNotProcessed for a running container
+description: This article provides a solution to an issue in which Azure Policy reports a running container as ConstraintNotProcessed.
 ms.date: 03/27/2024
-ms.reviewer: Mosbah.Majed
+ms.reviewer: momajed
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Azure policy reports 'ConstraintNotProcessed' for running container
 
-This article provides a solution to the error that you encounter when Azure Policy reports a running container as **ConstraintNotProcessed**.
+This article provides a solution to the error that you encounter when Azure Policy reports a running container as `ConstraintNotProcessed`.
 
 ## Symptoms
 
-A container such as Gatekeeper is running. However, Azure Policy reports the container as 'ConstraintNotProcessed'.
+A container such as Gatekeeper is running. However, Azure Policy reports the container as `ConstraintNotProcessed`.
 
 ## Cause
 

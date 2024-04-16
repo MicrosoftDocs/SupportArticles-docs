@@ -23,10 +23,10 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Performance tuning guidance for serverless SQL pool
-            url: ssql-perf-optimize-querying.md
+            url: query-perf/ssql-perf-optimize-querying.md
           - text: Troubleshoot issues with CREATE EXTERNAL TABLE AS SELECT (CETAS) serverless SQL pools
-            url: ssql-perf-cetas.md
+            url: query-perf/ssql-perf-cetas.md
           - text: Manage your costs on serverless SQL pool
-            url: ssql-perf-optimize-cost.md
+            url: query-perf/ssql-perf-optimize-cost.md
           - text: Troubleshooting Synapse Link for serverless SQL pool
-            url: ssql-perf-optimize-synapse-link.md
+            url: query-perf/ssql-perf-optimize-synapse-link.md

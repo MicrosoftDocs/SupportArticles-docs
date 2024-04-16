@@ -121,6 +121,8 @@
       href: troubleshoot-linux-rhui-certificate-issues.md
     - name: Red Hat RHUI connectivity issues
       href: linux-rhui-connectivity-issues.md
+    - name: Yum and dnf common Issues
+      href: yum-dnf-common-issues.md 
 
 - name: Serial Console for Linux
   href: serial-console-linux.md
