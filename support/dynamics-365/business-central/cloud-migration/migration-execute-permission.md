@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot the EXECUTE (or SELECT) permission was denied on the object
+title: Troubleshoot "The EXECUTE (or SELECT) permission was denied on the object"
 description: Troubleshooting article for EXECUTE (or SELECT) permission issues in Business Central cloud migration
 ms.author: jswymer 
 ms.reviewer: jswymer 
@@ -8,7 +8,7 @@ ms.date: 04/15/2024
 ms.custom: bap-template
 ---
 
-# The EXECUTE (or SELECT) permission was denied on the object
+# Troubleshoot "The EXECUTE (or SELECT) permission was denied on the object"
 
 ## Prerequisites
 

@@ -8,7 +8,7 @@ ms.date: 04/15/2024
 ms.custom: bap-template
 ---
 
-# "You shared a link in Teams, but users get a message that they can only view data"
+# Troubleshoot "You shared a link in Teams, but users get a message that they can only view data"
 
 ## Symptoms
 
