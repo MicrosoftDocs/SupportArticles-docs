@@ -978,10 +978,6 @@
     items:
     - name: 'Troubleshooting guidance: Modern, Inbox, and Microsoft Store Apps'
       href: ./shell-experience/modern-inbox-store-apps-troubleshooting-guidance.md
-    - name: Troubleshoot Apps failing to start using Process Monitor
-      href: ./shell-experience/troubleshoot-apps-start-failure-use-process-monitor.md
-    - name: Troubleshoot Apps failing to start using Windows Package Manager
-      href: ./shell-experience/troubleshoot-apps-start-failure-use-windows-package-manager.md
     - name: Can't open Microsoft Store when making a VPN connection
       href: ./shell-experience/microsoft-store-not-open-domain-joine-computer-vpn.md
     - name: Can't play audio in a system with DisplayPort
@@ -1004,6 +1000,10 @@
       href: ./shell-experience/apps-not-start-without-user-profile-programdata.md
     - name: Store app used by multiple users won't open after update
       href: ./shell-experience/store-app-not-start-after-update.md
+    - name: Troubleshoot Apps failing to start using Process Monitor
+      href: ./shell-experience/troubleshoot-apps-start-failure-use-process-monitor.md
+    - name: Troubleshoot Apps failing to start using Windows Package Manager
+      href: ./shell-experience/troubleshoot-apps-start-failure-use-windows-package-manager.md
   - name: Windows Media Player
     items:
     - name: Videos don't play in Windows Media Player 11
