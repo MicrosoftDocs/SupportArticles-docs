@@ -1,6 +1,9 @@
 - name: Welcome
   href: welcome-virtual-machines-linux.yml
 
+- name: Virtual Machine running Windows
+  href: ../windows/welcome-virtual-machines-windows.yml
+  
 - name: Support for Linux and open-source technology in Azure
   href: support-linux-open-source-technology.md
 
@@ -193,6 +196,3 @@
     href: customscript-reruns-previous-command.md
   - name: Linux - version 2
     href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/linux/context/context
-
-- name: Virtual Machine running Windows
-  href: ../windows/welcome-virtual-machines-windows.yml
