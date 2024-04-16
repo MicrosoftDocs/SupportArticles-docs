@@ -65,7 +65,7 @@ To resolve this issue, follow these steps:
 1. Validate that your database credentials are valid in a tool like Azure Data Studio or SQL Server Management Studio (SSMS).
 1. Unlink/Relink the connected database.
 
-If you still encounter the error, ensure that you select **"Allow Azure services and resources to access this server"** for the **Exceptions** on the networking page of your Azure Database resource. This option configures the firewall to allow connections from IP addresses allocated to any Azure service or asset, including connections from other customers' subscriptions.
+If you still encounter the error, ensure that you select **Allow Azure services and resources to access this server** for the **Exceptions** on the networking page of your Azure Database resource. This option configures the firewall to allow connections from IP addresses allocated to any Azure service or asset, including connections from other customers' subscriptions.
 
  :::image type="content" source="media/usage/allow-azure-resources-to-access-server.png" alt-text="Screenshot that shows the 'Allow Azure services and resources to access this server' checkbox." lightbox="media/usage/allow-azure-resources-to-access-server.png":::
 
