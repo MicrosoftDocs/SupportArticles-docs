@@ -20,7 +20,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Activity timed out
+          - text: "Activity timed out"
             url: cloud-migration/migration-activity-timeout.md      
           - text: Troubleshoot cannot connect to SQL database
             url: cloud-migration/migration-cannot-connect.md      
@@ -44,22 +44,22 @@ landingContent:
             url: client/client-profile-configuration.md
           - text: Troubleshoot client returns wrong `ClientType`
             url: client/client-returns-wrong-clienttype.md
-          - text: Troubleshoot device date is causing connectivity issues
+          - text: "Device date is causing connectivity issues"
             url: client/client-device-date-connectivity-issues.md
-          - text: Troubleshoot icon font not loaded
+          - text: "Icon font not loaded"
             url: client/client-icon-font-not-loaded.md
   # Card
   - title: Microsoft 365 access
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot "You shared a link in Teams, but users get a message that they can only view data"
+          - text: "You shared a link in Teams, but users get a message that they can only view data"
             url: m365-access/m365-only-view-data.md
-          - text: Troubleshoot "Microsoft 365 access has been enabled, but users get a permission error"
+          - text: "Microsoft 365 access has been enabled, but users get a permission error"
             url: m365-access/m365-permission-error.md
-          - text: Troubleshoot "This page uses data from related tables that you do not have access to"
+          - text: "This page uses data from related tables that you do not have access to"
             url: m365-access/m365-related-tables-no-access.md
-          - text: Troubleshoot "Card from shared link is minimal and doesn't include Details button"
+          - text: "Card from shared link is minimal and doesn't include Details button"
             url: m365-access/m365-shared-card-no-details.md
   # Card
   - title: Documentation and training
