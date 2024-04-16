@@ -571,7 +571,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9-ha.config' install rhui-azure-rhel9-ha
    ```
 
-3. Lock the `releasever` level. Currently, it has to be 9.0 or 9.2.
+2. Lock the `releasever` level. Currently, it has to be 9.0 or 9.2.
 
    ```bash
    sudo sh -c 'echo 9.2 > /etc/dnf/vars/releasever'
