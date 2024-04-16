@@ -1,16 +1,13 @@
 ---
 title: Modern, Inbox, and Microsoft Store Apps troubleshooting guidance
 description: Provides guidance to troubleshoot Modern, Inbox, and Microsoft Store Apps.
-ms.date: 08/25/2023
-author: v-lianna
-ms.author: v-lianna
+ms.date: 04/16/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 ms.technology: windows-client-shell-experience
-ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
-ms.reviewer: kaushika, warrenw, traceytu, iovoicul, kimberj
+ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
+ms.reviewer: kaushika, warrenw, traceytu, iovoicul, kimberj, v-lianna
 localization_priority: medium
 ---
 # Modern, Inbox, and Microsoft Store Apps troubleshooting guidance
