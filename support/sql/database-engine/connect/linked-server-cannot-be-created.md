@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Linked server couldn't be created after moving on-premises server to Azure
+# A linked server couldn't be created after transition to a Windows 2022 OnPrem or Azure VM
 
 This article helps you resolve a scenario when a linked server can't be created after moving the on-premises server to Azure.
 
