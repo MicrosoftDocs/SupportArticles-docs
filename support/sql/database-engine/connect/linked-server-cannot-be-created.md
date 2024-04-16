@@ -1,6 +1,6 @@
 ---
 title: Linked server couldn't be created after moving on-premises SQL Server to Azure
-description: This article provides a resolution to a problem when a linked server can't be created after you migrate on-premises SQL Server.
+description: This article provides a resolution to a problem when a linked server can't be created after you migrate on-premises SQL Server to Azure.
 ms.date: 03/22/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -26,7 +26,7 @@ You might receive the following error messages:
 
 > [Microsoft OLE DB Driver for SQL Server]: TCP Provider: An existing connection has been forced to be interrupted by the remote host.
 
-Here, the remote server receives the TLS messages when the server tries to connect to SQL Server. An unrecoverable alert is generated and sent to the remote end. This error might terminate the connection. The TLS protocol defined fatal error code is **40**. The Windows Schannel error status is **1205**.
+Here, the remote server receives the TLS messages when the server tries to connect to SQL Server. An unrecoverable alert will be generated and sent to the remote end. This error might terminate the connection. The TLS protocol defined fatal error code is **40**. The Windows SChannel error status is **1205**.
 
 ## Resolution
 
