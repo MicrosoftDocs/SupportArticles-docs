@@ -6,10 +6,14 @@ metadata:
    ms.topic: hub-page
    services: service
    ms.service: power-platform
-   ms.date: 04/01/2021
+   ms.date: 04/16/2024
 
 productDirectory:
   items:
+  - title: Microsoft Dataverse
+    imageSrc: "../media/hub-landing/power-apps.svg"
+    summary: Troubleshooting articles for Microsoft Dataverse
+    url: dataverse/welcome-dataverse.yml
   - title: Power Apps
     imageSrc: "../media/hub-landing/power-apps.svg"
     summary: Troubleshooting articles for Power Apps

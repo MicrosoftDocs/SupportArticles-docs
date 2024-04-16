@@ -1,0 +1,58 @@
+### YamlMime:Landing
+
+title: Microsoft Dataverse troubleshooting # < 60 chars
+summary: Welcome to Microsoft Dataverse troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Dataverse. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Dataverse troubleshooting
+  description: Landing page for Microsoft Dataverse troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: power-automate #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: rahulmital #Required; your GitHub user alias, with correct capitalization.
+  ms.author: rahulmital #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/16/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+ # Card
+- title: Dataverse Web API and SDK
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Microsoft Dataverse Troubleshooting
+          url: welcome-dataverse.yml
+
+# Card
+- title: Email and Microsoft 365 Integration
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Microsoft Dataverse Troubleshooting
+          url: welcome-dataverse.yml
+
+# Card
+- title: Working with solutions
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Microsoft Dataverse Troubleshooting
+          url: welcome-dataverse.yml
+
+# Card
+- title: Documentation and training
+  linkLists:
+    - linkListType: reference
+      links:
+        - text: Microsoft Dataverse documentation
+          url: /power-apps/maker/data-platform/data-platform-intro
+        - text: Microsoft Dataverse training
+          url: /training/paths/get-started-cds/
+
+# Card
+- title: Support Resources
+  linkLists:
+    - linkListType: reference
+      links:
+        - text: Microsoft Dataverse Community forum
+          url: https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps
+

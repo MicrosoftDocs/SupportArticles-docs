@@ -1,0 +1,19 @@
+- name: Microsoft Dataverse Troubleshooting
+  href: welcome-dataverse.yml
+  items:
+    - name: Dataverse Web API and SDK
+      items:
+        - name: Microsoft Dataverse Troubleshooting
+          href: welcome-dataverse.yml
+    - name: Email and Microsoft 365 Integration
+      items:
+        - name: Microsoft Dataverse Troubleshooting
+          href: welcome-dataverse.yml
+    - name: Working with solutions
+      items:
+        - name: Microsoft Dataverse Troubleshooting
+          href: welcome-dataverse.yml
+    - name: Support resources
+      items:
+        - name: Microsoft Dataverse forum
+          href: https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps
