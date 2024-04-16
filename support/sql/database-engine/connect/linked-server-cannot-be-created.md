@@ -1,7 +1,7 @@
 ---
-title: Linked server couldn't be created after moving on-premises server to Azure
-description: This article offers a solution to the issue of being unable to create a linked server after moving an on-premises server to Azure.
-ms.date: 04/16/2024
+title: Linked server couldn't be created after moving on-premises SQL Server to Azure
+description: This article provides a resolution to a problem when a linked server can't be created after you migrate on-premises SQL Server.
+ms.date: 03/22/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -10,11 +10,15 @@ ms.custom: sap:Connection issues
 
 # A linked server couldn't be created after transition to a Windows 2022 OnPrem or Azure VM
 
-This article helps you resolve a scenario when a linked server can't be created after moving the on-premises server to Azure.
+This article helps you resolve a problem in which you try to create a linked server after you move an instance of Microsoft SQL Server to Azure.
 
 ## Symptoms
 
-This problem can occur if you are connecting from a Windows Server 2022 or later to a SQL Server running on a lower version of Windows. This issue occurs when using the SQL Server linked server functionality.
+This problem can occur if you are connecting from a Windows Server 2022 or later to a SQL Server running on a lower version of Windows using the SQL Server Linked Server functionality.
+
+## Cause
+
+The presence of support for TLS 1.2 can be a possible cause of the problem in connecting to the SQL Server 2012 with the Azure virtual machines.
 
 You might receive the following error messages:
 
@@ -23,10 +27,6 @@ You might receive the following error messages:
 > [Microsoft OLE DB Driver for SQL Server]: TCP Provider: An existing connection has been forced to be interrupted by the remote host.
 
 Here, the remote server receives the TLS messages when the server tries to connect to SQL Server. An unrecoverable alert is generated and sent to the remote end. This error might terminate the connection. The TLS protocol defined fatal error code is **40**. The Windows Schannel error status is **1205**.
-
-## Cause
-
-The presence of support for TLS 1.2 can be a possible cause of the problem in connecting to the SQL Server 2012 with the Azure virtual machines.
 
 ## Resolution
 
