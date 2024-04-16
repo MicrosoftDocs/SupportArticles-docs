@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication Event ID 1388 or 1988 - A lingering object is detected
 description: Helps you troubleshoot Active Directory Replication Event ID 1388 and 1988.
-ms.date: 12/26/2023
+ms.date: 04/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article helps you troubleshoot Active Directory replication Event ID 1388 and 1988.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 4469619
 
 ## Summary
@@ -28,7 +28,16 @@ If a destination domain controller logs [Event ID 1388](#event-id-1388) or [Even
 This event indicates that a destination domain controller that does not have strict replication consistency enabled received a request to update an object that does not reside in the local copy of the Active Directory database. In response, the destination domain controller requested the full object from the source replication partner. In this way, a lingering object was replicated to the destination domain controller. Therefore, the lingering object was reintroduced into the directory.
 
 > [!IMPORTANT]
-> When Event ID 1388 occurs, if either the source domain controller (the replication partner that is outbound-replicating the lingering object) or the destination domain controller (the inbound replication partner that reports Event ID 1388) is running Windows 2000 Server, you cannot use the Repadmin tool to remove lingering objects. For information about how to remove lingering objects in this case, see [Lingering objects may remain after you bring an out-of-date global catalog server back online](lingering-objects-remain.md). The procedures and information in this article apply to the removal of lingering objects from global catalog servers as well as from domain controllers that are not global catalog servers.
+> When Event ID 1388 occurs, you cannot use Lingering Object Liquidator v2 (LOLv2) or the Repadmin tool to remove lingering objects.
+>
+> For information about how to remove lingering objects in this case, see:
+>
+> - [Lingering objects may remain after you bring an out-of-date global catalog server back online](lingering-objects-remain.md).  
+> - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)  
+> - [Introducing Lingering Object Liquidator v2](/archive/blogs/askds/introducing-lingering-object-liquidator-v2)  
+> - [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+>
+> The procedures and information in this article apply to the removal of lingering objects from global catalog servers as well as from domain controllers that are not global catalog servers.
 
 The event text identifies the source domain controller and the outdated (lingering) object. The following is an example of the event text:
 
@@ -88,7 +97,7 @@ An object that has been permanently deleted from AD DS (that is, its tombstone h
 
 ## Resolution
 
-If replication of a lingering object is detected, you can remove the object from AD DS, along with any read-only replicas of the object, by identifying the domain controllers that might store this object (including global catalog servers) and running a repadmin command to remove lingering objects on these servers (`repadmin /removelingeringobjects`). This command is available on domain controllers that are running Windows Server 2008. It is also available on domain controllers that are not running Windows Server 2008 but are running the version of Repadmin.exe that is included with Windows Support Tools in Windows Server 2003.
+If replication of a lingering object is detected, you can remove the object from AD DS, along with any read-only replicas of the object, using LOLv2 by identifying the domain controllers that might store this object (including global catalog servers) and remove it using the LOLv2 tool or by running a repadmin command to remove lingering objects on these servers (`repadmin /removelingeringobjects`). This command is available on domain controllers that are running supported version of Windows Server.
 
 To remove lingering objects, do the following:
 
@@ -96,11 +105,11 @@ To remove lingering objects, do the following:
     1. The directory partition of the object
     2. The source domain controller that attempted replication of the lingering object
 2. [Use Repadmin to identify the GUID of an authoritative domain controller](#use-repadmin-to-identify-the-guid-of-an-authoritative-domain-controller).
-3. [Use Repadmin to remove lingering objects](#use-repadmin-to-remove-lingering-objects).
+3. Use [LOLv2](https://www.microsoft.com/download/details.aspx?id=56051) or [Repadmin](#use-lolv2-or-repadmin-to-remove-lingering-objects)to remove lingering objects.
 4. [Enable strict replication consistency](#enable-strict-replication-consistency), if necessary.
 5. [Ensure that strict replication consistency is enabled for newly promoted domain controllers](#ensure-that-strict-replication-consistency-is-enabled-for-newly-promoted-domain-controllers), if necessary.
 
-### Use Repadmin to identify the GUID of an authoritative domain controller
+### Use Repadmin to identify the GUID of an authoritative domain controller:
 
 To perform the procedure that removes lingering objects, you must identify the globally unique identifier (GUID) of an up-to-date domain controller that has a writable replica of the directory partition that contains the lingering object that has been reported. The directory partition is identified in the event message.
 The object GUID of a domain controller is stored in the **objectGUID** attribute of the NTDS Settings object.
@@ -110,7 +119,7 @@ Requirements:
 - Membership in **Domain Admins** in the domain of the domain controller whose GUID you want to identify is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 - Tool: Repadmin.exe
 
-#### Steps to identify the GUID of a domain controller
+#### Steps to identify the GUID of a domain controller:
 
 1. At a command prompt, type the following command, and then press ENTER:
 
@@ -125,17 +134,22 @@ Requirements:
 
 2. In the first section of the output, locate the **objectGuid** entry. Select and copy the GUID value into a text file so that you can use it elsewhere.
 
-### Use Repadmin to remove lingering objects
-
-If the destination domain controller and source domain controller are running either Windows Server 2003 or Windows Server 2008, you can use this procedure to remove lingering objects with Repadmin. If either domain controller is running Windows 2000 Server, follow the instructions in [Lingering objects may remain after you bring an out-of-date global catalog server back online](lingering-objects-remain.md).
+### Use LOLv2 or Repadmin to remove lingering objects:
 
 Requirements:
 
 - Membership in **Domain Admins** in the domain of the domain controller that has lingering objects, or **Enterprise Admins** if the directory partition that has lingering objects is the configuration or schema directory partition, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
-- Operating system: Windows Server 2003 or Windows Server 2008 for \<ServerName> and \<ServerGUID>
-- Tool: Repadmin.exe
+- Operating system: supported version of Windows Server.
 
-#### Steps to use Repadmin to remove lingering objects
+- The preferred method to remove lingering objects is using [LOLv2](https://www.microsoft.com/download/details.aspx?id=56051). In some cases, wherein LOLv2 cannot be used, you can use Repadmin.exe
+
+More information about LOLv2:
+
+- [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)
+- [Introducing Lingering Object Liquidator v2](/archive/blogs/askds/introducing-lingering-object-liquidator-v2)
+- [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+
+#### Steps to use Repadmin to remove lingering objects:
 
 1. Open a Command Prompt as an administrator: On the **Start** menu, right-click **Command Prompt**, and then click **Run as administrator**. If the **User Account Control** dialog box appears, provide Domain Admins or Enterprise Admins credentials, if required, and then click **Continue**.
 
@@ -160,19 +174,17 @@ Requirements:
 > [!NOTE]
 > The \<ServerName> parameter uses the DC_LIST syntax for repadmin, which allows the use of * for all domain controllers in the forest and gc: for all global catalog servers in the forest. To see the DC_LIST syntax, type `repadmin /listhelp`. For information about the syntax of the `/regkey` and `/removelingeringobjects` parameters, type `repadmin /experthelp`.
 
-### Enable strict replication consistency
+### Enable strict replication consistency:
 
-To ensure that lingering objects cannot be replicated if they occur, enable strict replication consistency on all domain controllers. The setting for replication consistency is stored in the registry on each domain controller. However, on domain controllers that are running Windows Server 2003 with Service Pack 1 (SP1), Windows Server 2003 with Service Pack 2 (SP2), Windows Server 2003 R2, or Windows Server 2008, you can use Repadmin to enable strict replication consistency on one or all domain controllers.
+To ensure that lingering objects cannot be replicated if they occur, enable strict replication consistency on all domain controllers. The setting for replication consistency is stored in the registry on each domain controller. However, on domain controllers that are running supported version of Windows Server, you can use Repadmin to enable strict replication consistency on one or all domain controllers.
 
-On domain controllers running Windows Server 2003 without SP1 or running any version of Windows 2000 Server, you must edit the registry to enable the setting.
+#### Use Repadmin to enable strict replication consistency:
 
-#### Use Repadmin to enable strict replication consistency
-
-Use this procedure to remove lingering objects on a domain controller that is running Windows Server 2003 with SP1, Windows Server 2003 with SP2, Windows Server 2003 R2, or Windows Server 2008.
+Use this procedure to remove lingering objects on a domain controller that is running supported version of Windows Server.
 
 Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure on a single domain controller. Membership in **Enterprise Admins**, or equivalent, is the minimum required to complete this procedure on all domain controllers in the forest. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
-##### Steps to use Repadmin to enable strict replication consistency  
+##### Steps to use Repadmin to enable strict replication consistency:
 
 1. Open a Command Prompt as an administrator: On the **Start** menu, right-click **Command Prompt**, and then click **Run as administrator**. If the **User Account Control** dialog box appears, provide Domain Admins or Enterprise Admins credentials, if required, and then click **Continue**.
 
@@ -193,19 +205,20 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 > [!NOTE]
 > For more naming options and information about the syntax of the <DC_LIST> parameter, at the command prompt type `repadmin /listhelp`. For information about the syntax of the `/regkey` and `/removelingeringobjects` parameters, type `repadmin /experthelp`.
 
-#### Use Regedit to enable strict replication consistency  
+#### Use Regedit to enable strict replication consistency:
 
-As an alternative to using Repadmin, you can enable strict replication consistency by editing the registry directly. The registry method is required for a domain controller that is running a version of Windows Server that is earlier than Windows Server 2003 with SP1. The setting for replication consistency is stored in the **Strict Replication Consistency** entry in `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`.
+As an alternative to using Repadmin, you can enable strict replication consistency by editing the registry directly. The setting for replication consistency is stored in the **Strict Replication Consistency** entry in `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`.
 
 The values for the **Strict Replication Consistency** registry entry are as follows:
 
 - Value: 1 (0 to disable)
-- Default: 1 (enabled) in a new Windows Server 2003 or Windows Server 2008 forest; otherwise 0.
+- Default: 1 (enabled) in a new Windows Server; otherwise 0.
+
 - Data type: REG_DWORD
 
 Requirements:
 
-- Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10))).
+- Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 - Tool: Regedit.exe
 
 > [!NOTE]
@@ -220,7 +233,7 @@ Requirements:
 
 ### Ensure that strict replication consistency is enabled for newly promoted domain controllers
 
-If you are upgrading a forest that was originally created using a computer running Windows 2000 Server, you should ensure that the forest is configured to enable strict replication consistency on newly promoted domain controllers to help avoid lingering objects. After you update the forest as described in ([Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731188(v=ws.10))), all new domain controllers that you subsequently add to the forest are created with strict replication consistency disabled. However, you can implement a forest configuration change that causes new domain controllers to have strict replication consistency enabled. To ensure that new domain controllers that you add to the forest have strict replication consistency enabled, you can use the Ldifde.exe tool to create an object in the configuration directory partition of the forest. This object is responsible for enabling strict replication consistency on any Windows Server 2003 or Windows Server 2008 domain controller that is promoted into the forest.
+If you are upgrading a forest that was originally created using a computer running Windows 2000 Server, you should ensure that the forest is configured to enable strict replication consistency on newly promoted domain controllers to help avoid lingering objects. After you update the forest as described in ([Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731188(v=ws.10))), all new domain controllers that you subsequently add to the forest are created with strict replication consistency disabled. However, you can implement a forest configuration change that causes new domain controllers to have strict replication consistency enabled. To ensure that new domain controllers that you add to the forest have strict replication consistency enabled, you can use the Ldifde.exe tool to create an object in the configuration directory partition of the forest. This object is responsible for enabling strict replication consistency on any new domain controller that is promoted into the forest.
 
 The object that you create is an operational GUID with the following name:
 
