@@ -5,11 +5,11 @@
       items: 
       - name: Cloud migration
         items:
-          - name: Troubleshoot activity timed out
+          - name: Troubleshoot "Activity timed out"
             href: cloud-migration/migration-activity-timeout.md
           - name: Troubleshoot cannot connect to SQL database
             href: cloud-migration/migration-cannot-connect.md
-          - name: Troubleshoot the EXECUTE (or SELECT) permission was denied on the object
+          - name: Troubleshoot "The EXECUTE (or SELECT) permission was denied on the object"
             href: cloud-migration/migration-execute-permission.md
           - name: Troubleshoot "Failed to enable your replication"
             href: cloud-migration/migration-general-error.md
@@ -31,9 +31,9 @@
             href: client/client-profile-configuration.md
           - name: Troubleshoot client returns wrong clienttype
             href: client/client-returns-wrong-clienttype.md
-          - name: Troubleshoot device date is causing connectivity issues
+          - name: Troubleshoot "Device date is causing connectivity issues"
             href: client/client-device-date-connectivity-issues.md
-          - name: Troubleshoot icon font not loaded
+          - name: Troubleshoot "Icon font not loaded"
             href: client/client-icon-font-not-loaded.md
       - name: Microsoft 365 access
         items:
