@@ -31,9 +31,13 @@ This issue occurs if Windows Management Instrumentation (WMI) isn't listed as a 
 
 To fix the issue, follow these steps:
 
-1. On the **Select Administrative and Other Options** page of the **Security Configuration Wizard**, select the **Remote WMI** option.
-2. Apply the security policy.
-3. Reinstall DPM agent.
+1. Enable WMI traffic through the firewall by using the following command:
+
+    ```console
+    netsh advfirewall firewall set rule group="windows management instrumentation (wmi)" new enable=yes
+    ```
+
+1. Reinstall DPM agent.
 
 ## DPM protection agent doesn't install on a computer
 
