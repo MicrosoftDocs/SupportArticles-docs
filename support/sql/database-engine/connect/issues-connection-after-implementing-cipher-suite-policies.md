@@ -1,14 +1,14 @@
 ---
-title: Client is unable to connect after implementing cipher suite policies
-description: This article provides a resolution for an issue that occurs after you implement cipher suite policies on a server.
-ms.date: 04/04/2024
+title: Client is unable to connect after implementing cipher suite policies 
+description: This article provides a resolution for an issue that occurs after you implement cipher suite policies on a SQL Server machine.
+ms.date: 04/16/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# "Client unable to establish connection" error after implementing the Cipher suite policies on a SQL server
+# "Client unable to establish connection" error after implementing the cipher suite policies on a SQL Server machine
 
 This article helps you resolve issues that occur after you implement cipher suite policies on a server. If the cipher suites supported on a client and server don't match, the connection might fail.
 
