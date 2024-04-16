@@ -510,3 +510,6 @@
 
 - name: Issue with Azure Virtual Desktop
   href: how-to-videos-windows-virtual-desktop.md
+
+- name: Virtual Machine running Linux
+  href: ../linux/toc.yml
