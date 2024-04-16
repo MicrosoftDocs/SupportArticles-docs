@@ -2,6 +2,7 @@
 title: .NET control does not load in Internet Zone
 description: This article discusses an important change made in Internet Explorer 8 and later versions that could impact developers or users.
 ms.date: 03/16/2020
+ms.custom: sap:Development and Website Issues
 ---
 # .NET control does not load in Internet Explorer in Internet Zone
 

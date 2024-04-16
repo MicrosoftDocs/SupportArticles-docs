@@ -2,7 +2,7 @@
 title: I/O timeout is 10 times shorter
 description: This article provides resolutions for the problem in which the actual I/O timeout is 10 times shorter than the specified value in User-Mode Driver Framework 2.0.
 ms.date: 01/29/2021
-ms.custom: sap:Developer Tools\Windows Driver Kit (WDK, HLK)\Windows Driver Kit 10\Windows Device Driver Interface (DDI)\User-Mode Driver Framework (UMDF)Developer Tools\Windows Driver Kit (WDK, HLK)\Windows Driver Kit 8.1\Windows Device Driver Interface (DDI)\User-Mode Driver Framework (UMDF)
+ms.custom: sap:Other Driver
 ms.reviewer: heikom
 ms.subservice: other-driver
 ---

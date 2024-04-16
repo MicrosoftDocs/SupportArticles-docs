@@ -2,7 +2,7 @@
 title: Fail to connect to SQL Server instance
 description: This article provides a resolution for the problem that occurs when you use a protocol other than TCP/IP to connect to SQL Server on a port other than 1433.
 ms.date: 10/12/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C#
 ---
 # You cannot connect to SQL Server on any port other than 1433 if you use a protocol other than TCP/IP
 

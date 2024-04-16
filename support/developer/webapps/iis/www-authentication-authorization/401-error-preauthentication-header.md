@@ -2,7 +2,7 @@
 title: HTTP error 401.1 with pre-authentication headers
 description: An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and Internet Information Services (IIS).
 ms.date: 04/03/2020
-ms.custom: sap:WWW authentication and authorization
+ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: bretb, mlaing
 ms.subservice: www-authentication-authorization
 ---

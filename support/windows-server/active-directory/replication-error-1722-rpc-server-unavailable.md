@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot replication error 1722
 description: Fixes error 1722 of Active Directory replication in Windows Server 2008 R2 and earlier versions.
-ms.date: 12/26/2023
+ms.date: 04/10/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article helps fix the error 1722 of Active Directory replication.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2102154
 
 ## Symptoms

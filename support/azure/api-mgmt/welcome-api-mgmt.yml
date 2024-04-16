@@ -23,15 +23,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Azure API is returning blank response
-            url: api-return-blank-response.md
+            url: availability/api-return-blank-response.md
           - text: HTTP 404 and 500 status codes
-            url: soap-based-api-return-404-http-code.md
+            url: availability/soap-based-api-return-404-http-code.md
           - text: Performance issues in API calls
-            url: performance-hit-api-calls.md
+            url: availability/performance-hit-api-calls.md
           - text: Request throttling problems and HTTP 403 - Forbidden issues
-            url: request-throttling-http-403.md
+            url: availability/request-throttling-http-403.md
           - text: Troubleshooting overview
-            url: apim-troubleshooting-series.md
+            url: availability/apim-troubleshooting-series.md
           - text: Unauthorized errors 401 while invoking APIs
-            url: unauthorized-errors-invoke-apis.md
+            url: availability/unauthorized-errors-invoke-apis.md
                                                                                 

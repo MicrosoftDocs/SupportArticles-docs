@@ -25,13 +25,13 @@ landingContent:
           - text: Configure instance-level public IP addresses (PIPs)
             url: instance-level-public-ip-address-configuration.md
           - text: InvalidModel exception
-            url: troubleshoot-mismatched-config.md
+            url: deploy/troubleshoot-mismatched-config.md
           - text: Role recycle threshold exceptions
-            url: troubleshoot-role-recycle-swap.md
+            url: deploy/troubleshoot-role-recycle-swap.md
           - text: SubscriptionPolicyCountExceeded exception
-            url: troubleshoot-subscription-policy.md
+            url: deploy/troubleshoot-subscription-policy.md
           - text: Virtual IP address (VIP) swap failures
-            url: troubleshoot-vip-swap.md
+            url: deploy/troubleshoot-vip-swap.md
 
  # Card
   - title: Troubleshooting Series for developers
@@ -39,8 +39,8 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: ZipEngine role is stuck between Restarting and Busy state
-            url: dev-zipengine-role-stuck-busy-restart.md
+            url: develop/dev-zipengine-role-stuck-busy-restart.md
           - text: AssemblyBinder role throws Not enough space error
-            url: dev-assemblybinder-role-instance-stuck-busy-restart.md
+            url: develop/dev-assemblybinder-role-instance-stuck-busy-restart.md
           - text: Autoscale is not triggering for FileUploader role
-            url: dev-autoscale-not-trigger-fileuploader.md
+            url: develop/dev-autoscale-not-trigger-fileuploader.md

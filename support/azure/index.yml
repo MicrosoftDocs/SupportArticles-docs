@@ -7,7 +7,7 @@ metadata:
    services: service
    ms.service: azure-common-issues-support
    ms.author: genlin
-   ms.date: 03/27/2024
+   ms.date: 04/10/2024
 
 productDirectory:
   items:
@@ -33,8 +33,6 @@ productDirectory:
       text: Troubleshooting articles for Blob Storage
     - url: azure-storage/files/welcome-files-storage.yml
       text: Troubleshooting articles for Files Storage
-    - url: azure-storage/common/welcome-storage-tool-metric.yml
-      text: Troubleshooting articles for Storage Tools and Metrics
   - title: Azure Cosmos DB
     imageSrc: "https://static.docs.com/ui/media/product/azure/cosmos-db.svg"
     links:
@@ -102,11 +100,11 @@ productDirectory:
       text: Troubleshooting articles for Azure CycleCloud
     - url: hpc/pack/welcome-hpc-pack.yml
       text: Troubleshooting articles for Azure HPC Pack
-  - title: Microsoft Entra ID
+  - title: Microsoft Entra
     imageSrc: "../media/hub-landing/microsoft-entra.svg"
     links:
-    - url: entra-id/welcome-entra-id.yml
-      text: Troubleshooting articles for Microsoft Entra ID
+    - url: entra/welcome-entra.yml
+      text: Troubleshooting articles for Microsoft Entra
   - title: Site Recovery
     imageSrc: "https://static.docs.com/ui/media/product/azure/recovery-services-vaults.svg"
     links:

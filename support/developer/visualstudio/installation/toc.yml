@@ -6,8 +6,6 @@
   href: ./unable-install-vs-admin-updates-sccm-wsus.md
 - name: Can't update Visual Studio using the Help menu
   href: ./unable-update-using-help-menu.md
-- name: Description of Visual Studio 2012 Update 4
-  href: ./visual-studio-2012-update-4.md
 - name: Error message for installing an additional language pack
   href: ./error-installing-additional-language-pack.md
 - name: Error - Microsoft Visual Studio Enterprise is required
@@ -60,20 +58,14 @@
   href: ./specified-program-requires-newer-version-windows.md
 - name: The trial will expire after you sign in to the IDE
   href: ./sign-into-ide-trial-expire.md
-- name: The version of Visual Studio requires the April 2014 update
-  href: ./visual-studio-requires-computer-newer-version-windows.md
 - name: Troubleshoot installation and upgrade issues
   href: ./troubleshoot-installation-issues.md
 - name: Uninstall third-party applications in Visual Studio 2015
   href: ./secondary-installer-third-party-app.md
-- name: Uninstall Visual Studio 2012
-  href: ./uninstall-visual-studio-2012.md
 - name: Update deployed via Configuration Manager fails to install
   href: ./update-deployed-via-configuration-manager-fails-install.md
 - name: Update requires a member to be present or is blocked by another condition
   href: ./member-visual-studio-family-present.md
-- name: Visual Studio 2013 known issues
-  href: ./known-issues-visual-studio-2013.md
 - name: Visual Studio 2015 and 2013 features doesn't work
   href: ./visual-studio-2015-2013-feature-not-work.md
 - name: Visual Studio 2015 is stuck while installing KB2999226

@@ -1,7 +1,7 @@
 ---
 title: Management server can't contact the data warehouse database
 description: Describes an issue that occurs when the System Center Operations Manager 2012 management server tries to communicate with the instance of SQL Server that used to host the data warehouse database.
-ms.date: 07/06/2020
+ms.date: 04/15/2024
 ---
 # Events 31551 and 31565 when Operations Manager management server contacts the data warehouse database
 

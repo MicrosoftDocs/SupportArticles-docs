@@ -23,8 +23,8 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Backup service and Recovery Services Agent versions do not match
-            url: ./backup-service-mars-agent-versions-not-match.md
+            url: backup/backup-service-mars-agent-versions-not-match.md
           - text: Recovery Services Agent update failed
-            url: ./upgrade-mars-agent.md
+            url: backup/upgrade-mars-agent.md
           - text: Recovery Services Agent System States backup failure with error ID 8007007B
-            url: ./mars-agent-system-state-backup-failure.md
+            url: backup/mars-agent-system-state-backup-failure.md
