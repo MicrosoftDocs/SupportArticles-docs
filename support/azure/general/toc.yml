@@ -1,122 +1,16 @@
 - name: Welcome
   href: welcome-general.yml
-- name: Azure Automation
-  items:
-  - name: Automation modifications aren't reflected in the portal
-    href: ../automation/modifications-not-reflect-portal.md
-  - name: Capture diagnostics information
-    href: ../automation/automation-scripted-diagnostic-capture.md
-  - name: Find-AzureRmResource returns error
-    href: ../automation/find-azurermresource-fails.md
-  - name: How to capture debug stream
-    href: ../automation/capture-debug-stream-automation-runbook.md
-  - name: Reinstall Operations Management Suite Agent
-    href: ../automation/reinstall-oms-agent-linux.md
-
-- name: Azure API Management
-  items:
-  - name: Troubleshooting overview
-    href: ../api-mgmt/apim-troubleshooting-series.md
-  - name: Blank response is returned
-    href: ../api-mgmt/api-return-blank-response.md
-  - name: HTTP 404 and 500 status codes
-    href: ../api-mgmt/soap-based-api-return-404-http-code.md
-  - name: Unauthorized errors (401)
-    href: ../api-mgmt/unauthorized-errors-invoke-apis.md
-  - name: Performance issues in API calls
-    href: ../api-mgmt/performance-hit-api-calls.md
-  - name: HTTP 403 - Forbidden issues
-    href: ../api-mgmt/request-throttling-http-403.md
-
-- name: Azure Stack Edge
-  items:
-  - name: Azure Stack Edge support package and device logs
-    href: azure-stack-edge-support-package-device-logs.md
-
-- name: Azure Information Protection
-  items:
-  - name: Troubleshoot Azure Information Protection policy issues
-    href: troubleshoot-aip-issues.md
-
-- name: Azure Virtual Network
-  items:
-  - name: Virtual Network troubleshooter
-    href: ../virtual-network/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
-
-- name: Azure Service Fabric
-  items:
-  - name: Azure Service Fabric troubleshooter
-    href: ../service-fabric/fabric-logs.md
-
-- name: Azure Batch
-  items:
-  - name: Access to storage account is denied
-    href: ../hpc/batch/access-denied-execute-azure-batch-job.md
-  - name: AccountEncryptionKeyUnavailable error message
-    href: ../hpc/batch/error-accountencryptionkeyunavailable.md
-  - name: Batch node creation delays when restarting or reimaging
-    href: ../hpc/batch/batch-node-creation-delay-restart-reimage.md
-  - name: Batch node is stuck in Unusable state
-    href: ../hpc/batch/azure-batch-node-unusable-state.md
-  - name: Batch pool creation failure
-    href: ../hpc/batch/azure-batch-pool-creation-failure.md
-  - name: Batch pool deletion failure
-    href: ../hpc/batch/azure-batch-pool-deletion-failure.md
-  - name: Batch task is stuck in Running state
-    href: ../hpc/batch/azure-batch-task-stuck-in-running-state.md
-  - name: Batch pool resizing failure
-    href: ../hpc/batch/azure-batch-pool-resizing-failure.md
-  - name: Batch tasks fail due to permission issues 
-    href: ../hpc/batch/azure-batch-task-permission-issue.md
-  - name: Batch task fails without stdout or stderr
-    href: ../hpc/batch/azure-batch-task-failure-no-stdout-stderr-log.md
-  - name: Identify resources created by Azure Batch
-    href: ../hpc/batch/azure-batch-creates-network-resources.md
-  - name: Use managed identities in a Batch account or a Batch pool
-    href: ../hpc/batch/use-managed-identities-azure-batch-account-pool.md
-
-- name: CycleCloud
-  items:
-  - name: Error "Client secret key is expired"
-    href: ../hpc/cyclecloud/invalid-client-secret.md
-  - name: Error "Invalid Azure credentials provided" 
-    href: ../hpc/cyclecloud/error-invalid-azure-credentials-cycle-cloud.md
-
-- name: HPC Pack
-  items:
-  - name: Failed Linux compute node agent extension installation
-    href: ../hpc/pack/troubleshoot-install-failure-hpc-pack-linux-node-agent.md
-  - name: HPC jobs are stuck in canceling mode, and new jobs don't start
-    href: ../hpc/pack/job-stuck-canceling-mode.md
-  - name: HPC Management Service fails to start after restoring database
-    href: ../hpc/pack/hpc-management-service-not-start.md
-  - name: HPC compute nodes aren't shown or are in error state
-    href: ../hpc/pack/compute-node-not-shown-error-state.md
-  - name: HPC node manager service unreachable
-    href: ../hpc/pack/hpc-node-manager-service-unreachable-certificate.md
-  - name: HPC Pack Excel offloading job is stalled
-    href: ../hpc/pack/hpc-pack-excel-offloading-job-stalled.md
-  - name: HPC reporting database connection problem
-    href: ../hpc/pack/hpc-management-reporting-database-connection-issue.md
-  - name: HPC reporting database permission problem
-    href: ../hpc/pack/hpc-management-reporting-database-permission-problem.md
-  - name: Error "No virtual network found" when you enter the application ID
-    href: ../hpc/pack/error-no-virtual-network-found.md
 
 - name: General
   items:
-  - name: Associate a custom domain with Azure websites
-    href: associate-custom-domain-secure-communication.md
+  - name: Map your own custom domain
+    href: /azure/app-service/app-service-web-tutorial-custom-domain
   - name: Azure dependency availability by country/region
     href: dependency-availability-by-country.md
   - name: Azure region access request process
     href: region-access-request-process.md
   - name: Container support policy
     href: support-policy-containers.md
-  - name: Delete a corrupted Azure Analysis Services database
-    href: delete-corrupted-azure-analysis-services-database.md
-  - name: Deploy TLS 1.2 in Azure Pack
-    href: tls-support-deployment-guide.md 
   - name: Error when you try to copy content to Azure
     href: error-run-copy-activity-azure.md
   - name: Tips for finding Microsoft troubleshooting content
@@ -128,29 +22,14 @@
 
 - name: Other common issues
   items:
-  - name: Can't load VM metrics
-    href: problem-occur-loading-metrics.md
-  - name: Delete button doesn't work
-    href: delete-button-not-work-portal.md
-  - name: Enterprise Agreement user can't create a VM
-    href: cannot-create-vm-ea.md
   - name: Fail to sign up for an Azure subscription
     href: cannot-sign-up-subscription.md
-  - name: Loading error occurs in Azure Data Factory
-    href: loading-error-data-factory.md
+  - name: Enterprise Agreement user can't create a VM
+    href: cannot-create-vm-ea.md
   - name: Users and groups lists disappear
     href: cannot-see-users-groups-list-iam.md
-  - name: WebUI "Oops" error message in StorSimple
-    href: storsimple-user-receives-web-ui-error.md
-  - name: Connection status is incorrect on portal
-    href: connection-status-not-display-correctly-portal.md
 
 - name:  Support Diagnostic Packages
   items:
-  - name: Diagnostic logs for Apache Spark pools
-    href: synapse-analytics-apache-spark-pools-diagnostic-logs.md
-  - name: Diagnostic logs for SQL Server 
-    href: sql-vm-logs.md
-  - name: SQL database data collector
-    href: sdp-342a3d014-6535-4e1f-9bd4-b0c32e71e3bf-sql.md
-
+  - name: Azure Stack Edge support package and device logs
+    href: ../azure-stack-edge/azure-stack-edge-support-package-device-logs.md

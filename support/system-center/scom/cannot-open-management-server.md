@@ -1,7 +1,7 @@
 ---
 title: Can't open the Management Server view
 description: Fixes an issue where you receive the System.ArgumentOutOfRangeException error when you open the Management Server view in the Operations Manager console.
-ms.date: 07/07/2020
+ms.date: 04/15/2024
 ---
 # System.ArgumentOutOfRangeException error when opening the Management Server view
 

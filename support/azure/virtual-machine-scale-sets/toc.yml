@@ -1,44 +1,42 @@
 - name: Welcome
   href: welcome-virtual-machine-scale-sets.yml
 
-- name: Troubleshoot allocation failures
+- name: Troubleshoot deployment errors
   items:
   - name: "Error: AllocationFailed or ZonalAllocationFailed"
-    href: allocationfailed-or-zonalallocationfailed.md
+    href: deploy/allocationfailed-or-zonalallocationfailed.md
+  - name: Public IP count limit exceeded
+    href: deploy/vmss-public-ip-count-limit-exceeded.md
+  - name: InvalidParameter - Fault domain count
+    href: deploy/vmss-invalid-parameter-fault-domain-count.md
+  - name: InvalidParameter - SinglePlacementGroup
+    href: deploy/vmss-invalid-parameter-single-placement-group.md
+  - name: OutboundConnectivityNotEnabledOnVM
+    href: deploy/vmss-outbound-connectivity-not-enabled.md
 
 - name: Troubleshoot compute health
   items:
   - name: VMSS instances remain in "Unhealthy" state and aren't repaired
-    href: instances-not-repaired.md
+    href: restart-stop/instances-not-repaired.md
   - name: Resource Health shows Degraded state in VMSS
-    href: resource-health-degraded-state.md
+    href: restart-stop/resource-health-degraded-state.md
   - name: VM is unavailable for 15 minutes
-    href: ../virtual-machines/windows/azure-vm-unavailable.md
+    href: ../virtual-machines/windows/azure-vm-unavailable.md?context=/troubleshoot/azure/virtual-machine-scale-sets/context/context
+
 - name: Troubleshoot scaling errors
   items:
   - name: QuotaExceeded error when scaling virtual machine scale sets
-    href: virtual-machine-scale-sets-quota-exceeded.md
+    href: scaling/virtual-machine-scale-sets-quota-exceeded.md
   - name: Resolve errors for resource quotas
-    href: /azure/azure-resource-manager/templates/error-resource-quota
-
-- name: Troubleshoot deployment errors
-  items:
-  - name: Public IP count limit exceeded
-    href: vmss-public-ip-count-limit-exceeded.md
-  - name: InvalidParameter - Fault domain count
-    href: vmss-invalid-parameter-fault-domain-count.md
-  - name: InvalidParameter - SinglePlacementGroup
-    href: vmss-invalid-parameter-single-placement-group.md
-  - name: OutboundConnectivityNotEnabledOnVM
-    href: vmss-outbound-connectivity-not-enabled.md
+    href: /azure/azure-resource-manager/templates/error-resource-quota?context=/troubleshoot/azure/virtual-machine-scale-sets/context/context
 
 - name: Troubleshoot deletion errors
   items:
   - name: OperationNotAllowed
-    href: vmss-operation-not-allowed.md
+    href: /delete/vmss-operation-not-allowed.md
 
 - name: Troubleshoot extension issues
   items:
   - name: VM extension provisioning errors
-    href: vm-extension-provisioning-errors.md
+    href: extensions/vm-extension-provisioning-errors.md
 

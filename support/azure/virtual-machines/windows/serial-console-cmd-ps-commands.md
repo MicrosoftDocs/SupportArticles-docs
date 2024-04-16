@@ -7,13 +7,13 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
-ms.subservice: vm-troubleshooting-tools
 ms.collection: windows
 ms.topic: article
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
 ms.date: 08/14/2018
 ms.author: genli
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Windows Commands - CMD and PowerShell

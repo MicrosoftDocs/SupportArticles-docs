@@ -4,8 +4,8 @@ description: This article can help you troubleshoot authentication errors that o
 ms.date: 06/09/2023
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
+ms.custom: sap:Cannot connect to my VM
 ---
 # Troubleshoot authentication errors when you use RDP to connect to Azure VM
 

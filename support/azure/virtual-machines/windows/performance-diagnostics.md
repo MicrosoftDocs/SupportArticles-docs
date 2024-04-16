@@ -8,7 +8,6 @@ manager: dcscontentpm
 editor: przlplx
 tags: ''
 ms.service: virtual-machines
-ms.subservice: vm-performance
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows

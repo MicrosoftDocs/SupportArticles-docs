@@ -5,7 +5,7 @@ ms.date: 05/12/2023
 editor: v-jsitser
 ms.reviewer: macla, azurevmcptcic, v-leedennis
 ms.service: virtual-machines
-ms.subservice: vm-health
+ms.custom: sap:VM Performance
 ---
 # VM availability might be inaccurate during VM restarts
 

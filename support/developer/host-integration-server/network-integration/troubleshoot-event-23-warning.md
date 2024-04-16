@@ -2,7 +2,7 @@
 title: Troubleshooting on Event 23 warnings
 description: This article discusses about Event 23 warnings in HIS 2010.
 ms.date: 05/11/2020
-ms.custom: sap:Network integration (SNA gateway)
+ms.custom: sap:Network Integration (SNA Gateway)
 ms.topic: article
 ---
 # Troubleshooting on Host Integration Server Event 23 warnings

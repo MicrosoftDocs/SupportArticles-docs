@@ -7,13 +7,13 @@ author: genlin
 manager: dcscontentpm
 tags: ''
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services
 ms.date: 02/18/2024
 ms.author: genli
 ms.reviewer: yutorigo, v-weizhu
+ms.custom: sap:VM restarted or stopped unexpectedly
 ---
 
 # Understand a system reboot for Azure VM
@@ -30,7 +30,7 @@ For more information about availability sets, see [Manage the availability of VM
 
 ## Resource Health information
 
-Azure Resource Health is a service that exposes the health of individual Azure resources and provides actionable guidance for troubleshooting problems. In a cloud environment where it isn’t possible to directly access servers or infrastructure elements, the goal of Resource Health is to reduce the time that you spend on troubleshooting. In particular, the aim is to reduce the time that you spend determining whether the root of the problem lies in the application or in an event inside the Azure platform. For more information, see [Understand and use Resource Health](/azure/service-health/resource-health-overview).
+Azure Resource Health is a service that exposes the health of individual Azure resources and provides actionable guidance for troubleshooting problems. In a cloud environment where it isn't possible to directly access servers or infrastructure elements, the goal of Resource Health is to reduce the time that you spend on troubleshooting. In particular, the aim is to reduce the time that you spend determining whether the root of the problem lies in the application or in an event inside the Azure platform. For more information, see [Understand and use Resource Health](/azure/service-health/resource-health-overview).
 
 If Azure has further information about the root cause of a platform-initiated unavailability for a Virtual Machine, that information may be posted in resource health up to 72 hours after the initial unavailability.
 

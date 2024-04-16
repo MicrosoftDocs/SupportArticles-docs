@@ -2,7 +2,7 @@
 title: Troubleshoot HIS Event 230 warnings
 description: This article introduces that how to troubleshoot Host Integration Server Event 230 warnings.
 ms.date: 05/11/2020
-ms.custom: sap:Network integration (SNA gateway)
+ms.custom: sap:Network Integration (SNA Gateway)
 ms.topic: how-to
 ---
 # Troubleshooting on Host Integration Server Event 230 warnings

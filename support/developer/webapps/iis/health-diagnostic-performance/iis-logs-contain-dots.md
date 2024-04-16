@@ -2,7 +2,7 @@
 title: IIS logs contain dots instead of logging field value
 description: This article provides resolutions for the problem where IIS logs contain ... instead of expected logging field value.
 ms.date: 12/11/2020
-ms.custom: sap:Health, Diagnostic, and Performance Features
+ms.custom: sap:Health, Diagnostic, and Performance Features\IIS logging
 ms.reviewer: mlaing, bretb
 ms.subservice: health-diagnostic-performance
 ---

@@ -2,12 +2,11 @@
 title: Repair a Windows VM by using the Azure Virtual Machine repair commands
 description: This article details how to use Azure VM repair commands to connect the disk to another Windows VM to fix any errors, then rebuild your original VM.
 services: virtual-machines
-ms.subservice: vm-backup-restore
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: virtual-machines
-ms.custom: devx-track-azurecli
+ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurecli
 ms.service: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting

@@ -4,8 +4,7 @@ description: Describes the minimum version support for Linux and Windows virtual
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-extensions-not-operating
-ms.custom: linux-related-content
+ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 ---
 # Minimum version support for virtual machine agents in Azure
 

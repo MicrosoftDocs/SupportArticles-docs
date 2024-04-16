@@ -4,6 +4,7 @@ description: This article describes that Internet Information Services Express i
 ms.date: 07/17/2020
 ms.topic: article
 ms.subservice: general
+ms.custom: sap:IIS Extensions, Tools, and Add-Ons\Unlisted
 ---
 # Internet Information Services Express isn't supported in a production environment
 

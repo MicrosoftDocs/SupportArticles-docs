@@ -3,6 +3,7 @@ title: DIV tags with 100% relative height not resized
 description: Discusses a by design behavior that DIV tags with 100% relative height can't be resized in Internet Explorer 9 and later versions.
 ms.date: 04/21/2020
 ms.reviewer: jeanr
+ms.custom: sap:Development and Website Issues
 ---
 # DIV tags with 100% relative height are not resized in Internet Explorer
 

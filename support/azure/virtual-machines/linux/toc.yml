@@ -1,6 +1,9 @@
 - name: Welcome
   href: welcome-virtual-machines-linux.yml
 
+- name: Support for Linux and open-source technology in Azure
+  href: support-linux-open-source-technology.md
+
 - name: VM restarts or stops unexpectedly
   items:
   - name: Understand a system reboot
@@ -12,6 +15,12 @@
   
 - name: VM Performance
   items:
+  - name: Performance diagnostics (PerfInsights)
+    items:
+    - name: Performance diagnostics in the Azure Portal
+      href: ../windows/performance-diagnostics.md
+    - name: PerfInsights in Linux
+      href: how-to-use-perfinsights-linux.md
   - name: Isolate bottlenecks in Linux
     href: troubleshoot-performance-bottlenecks-linux.md
   - name: Troubleshoot performance issues through monitoring
@@ -39,16 +48,12 @@
     
 - name: Cannot connect to my VM
   items:
-  - name: Serial Console for Linux
-    href: serial-console-linux.md
   - name: Debian Linux VM
     href: cannot-connect-debian-linux.md
   - name: Detailed SSH troubleshooting
     href: detailed-troubleshoot-ssh-connection.md
   - name: Fail to connect to VM through SSH due to SELinux misconfiguration
     href: linux-selinux-troubleshooting.md
-  - name: Troubleshoot Linux VM UEFI boot failures
-    href: azure-linux-vm-uefi-boot-failures.md
   - name: Network issues
     href: cannot-connect-linux-network.md
   - name: SSH connection fails due to permission and ownership issues
@@ -116,6 +121,8 @@
       href: troubleshoot-linux-rhui-certificate-issues.md
     - name: Red Hat RHUI connectivity issues
       href: linux-rhui-connectivity-issues.md
+    - name: Yum and dnf common Issues
+      href: yum-dnf-common-issues.md 
 
 - name: Serial Console for Linux
   href: serial-console-linux.md
@@ -185,4 +192,4 @@
   - name: Previous command is re-run
     href: customscript-reruns-previous-command.md
   - name: Linux - version 2
-    href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
+    href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/linux/context/context

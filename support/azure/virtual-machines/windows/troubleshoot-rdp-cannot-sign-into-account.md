@@ -6,13 +6,13 @@ documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 10/18/2021
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Can't sign into your account when you try to connect to an Azure Windows VM

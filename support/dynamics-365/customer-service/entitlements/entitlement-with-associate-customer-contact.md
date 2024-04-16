@@ -4,6 +4,7 @@ description: Resolves an error that occurs when selecting an active entitlement 
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 03/14/2024
+ms.custom: sap:Cases or Incidents\Errors during case creation
 ---
 # "Select an active entitlement that belongs to the specified customer, contact, or product" error
 

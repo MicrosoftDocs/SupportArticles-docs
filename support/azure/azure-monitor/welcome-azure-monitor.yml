@@ -21,19 +21,19 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Diagnose common problems that cause your ping tests to fail in availability monitoring
-            url: ./app-insights/diagnose-ping-test-failure.md
+            url: ./app-insights/availability/diagnose-ping-test-failure.md
           - text: Portal connectivity issues
-            url: ./app-insights/troubleshoot-portal-connectivity.md
+            url: ./app-insights/availability/troubleshoot-portal-connectivity.md
           - text: Troubleshooting auto-instrumentation issues
-            url: ./app-insights/auto-instrumentation-troubleshoot.md
+            url: ./app-insights/telemetry/auto-instrumentation-troubleshoot.md
 
   - title: Troubleshooting Azure Log Analytics issues
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Basic troubleshooting of Microsoft Monitoring Agent
-            url: ./log-analytics/mma-troubleshoot-basics.md
+            url: ./log-analytics/windows-agents/mma-troubleshoot-basics.md
           - text: Error code 0x80090016 Keyset does not exist in event viewer or agent logs
-            url:  ./log-analytics/error-code-0x80090016-keyset-does-not-exist.md
+            url:  ./log-analytics/workspaces/error-code-0x80090016-keyset-does-not-exist.md
           - text: Microsoft Monitoring Agent couldn't start
-            url:  ./log-analytics/windows-could-not-start-mma.md
+            url:  ./log-analytics/windows-agents/windows-could-not-start-mma.md

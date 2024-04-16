@@ -4193,6 +4193,7 @@
     {
       "source_path": "support/developer/visualstudio/installation/issues-workarounds-visual-studio-2012-setup.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/installation/issues-workarounds-visual-studio-setup",
+      "redirect_document_id": false
     },
     {
       "source_path": "support/developer/webapps/index.md",
@@ -4658,6 +4659,41 @@
       "source_path": "support/sql/database-engine/security/windows-prevents-unconstrained-delegation.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/windows-prevents-unconstrained-delegation",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/answers-questions-msdt.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/known-issues-visual-studio-2013.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/known-issues-visual-studio-2013",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/uninstall-visual-studio-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/uninstall-visual-studio-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/enable-rollback-continue-setup.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/enable-rollback-continue-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/visual-studio-2012-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/visual-studio-2012-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/visual-studio-2012-update-4.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/visual-studio-2012-update-4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/visual-studio-requires-computer-newer-version-windows.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/visual-studio-requires-computer-newer-version-windows",
+      "redirect_document_id": false
     }
   ]
 }

@@ -5,6 +5,7 @@ ms.reviewer: matp
 ms.date: 07/26/2023
 author: nhelgren
 ms.author: nhelgren
+ms.custom: sap:Working with Solutions\Solution import - Other errors
 ---
 # "Full formXml is expected to create a form" error when importing a solution
 

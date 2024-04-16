@@ -3,6 +3,7 @@ title: How to solve Internet Explorer 9 installation issues
 description: This article helps solve the error messages such as 0x800F081E that may occur during the installation of Internet Explorer 9.
 ms.date: 12/10/2020
 ms.reviewer: mlaing
+ms.custom: sap:Installation
 ---
 # How to troubleshoot Internet Explorer 9 installation problems
 

@@ -3,11 +3,10 @@ title: Azure Linux virtual machine boot enters dracut emergency shell
 description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot because the OS file system isn't accessible from RAMdisk.
 author: divargas-msft
 ms.author: divargas
-ms.date: 03/06/2023
+ms.date: 03/28/2024
 ms.reviewer: jofrance
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
-ms.custom: linux-related-content
+ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
 ms.topic: troubleshooting
 ---
@@ -187,7 +186,7 @@ To resolve this issue, locate the swap path `rd.lvm.lv=VG/SwapVol` in the GRUB c
 * If you're in the Azure serial console:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
     2. Go to the line starting with `linux`, locate the `rd.lvm.lv=VG/SwapVol` parameter and remove it.
-    3. Select `<kbd>Ctrl</kbd>+<kbd>X</kbd>` to boot the VM.
+    3. Select <kbd>Ctrl</kbd>+<kbd>X</kbd> to boot the VM.
     4. Once the VM successfully boots, modify the `/etc/default/grub` file, remove the `rd.lvm.lv=VG/SwapVol` parameter, and then update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file) section.
 
 ### <a id="dracut-grub-misconf-dup-params"></a>Duplicated parameters in GRUB configuration file

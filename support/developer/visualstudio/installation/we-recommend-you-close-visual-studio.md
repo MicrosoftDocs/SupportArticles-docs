@@ -5,6 +5,7 @@ ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Offline Install
 ---
 
 # Error "We recommend you close Visual Studio now before setup continues"

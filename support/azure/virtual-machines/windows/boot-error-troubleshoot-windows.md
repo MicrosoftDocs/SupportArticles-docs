@@ -6,13 +6,13 @@ documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 12/19/2019
 ms.author: tibasham
+ms.custom: sap:Cannot start or stop my VM
 ---
 
 # Azure Windows VM shutdown is stuck on "Restarting", "Shutting Down", or "Stopping services"

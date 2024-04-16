@@ -3,7 +3,6 @@ title: Troubleshoot Azure Windows VM Agent issues
 description: Understand how to troubleshoot issues that prevent the Azure Windows VM Agent from running successfully.
 services: virtual-machines
 ms.service: virtual-machines
-ms.subservice: vm-extensions-not-operating
 ms.collection: windows
 author: kegregoi
 ms.tgt_pltfrm: vm-windows
@@ -12,6 +11,7 @@ ms.date: 07/21/2023
 ms.author: kegregoi
 editor: v-jsitser
 ms.reviewer: v-leedennis, scotro
+ms.custom: sap:VM Extensions not operating correctly
 ---
 # Troubleshoot Azure Windows VM Agent issues
 
