@@ -5,7 +5,7 @@ summary: Welcome to Microsoft Dataverse troubleshooting. These articles explain 
 metadata:
   title: Microsoft Dataverse troubleshooting
   description: Landing page for Microsoft Dataverse troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: power-automate #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: rahulmital #Required; your GitHub user alias, with correct capitalization.
   ms.author: rahulmital #Required; microsoft alias of author; optional team alias.

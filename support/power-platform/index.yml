@@ -11,7 +11,7 @@ metadata:
 productDirectory:
   items:
   - title: Microsoft Dataverse
-    imageSrc: "../media/hub-landing/power-apps.svg"
+    imageSrc: "../media/hub-landing/dataverse.svg"
     summary: Troubleshooting articles for Microsoft Dataverse
     url: dataverse/welcome-dataverse.yml
   - title: Power Apps
