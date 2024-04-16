@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot invalid database connection string provided
+title: Troubleshoot "Invalid database connection string provided"
 description: Troubleshooting article for invalid database connection string issues in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
@@ -8,7 +8,7 @@ ms.date: 04/15/2024
 ms.custom: bap-template
 ---
 
-# Invalid database connection string provided
+# Troubleshoot "Invalid database connection string provided"
 
 This article explains how to troubleshoot the **Invalid database connection string provided** error in Business Central cloud migration.
 

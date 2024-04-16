@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot the failed to enable your replication error
+title: Troubleshoot "Failed to enable your replication"
 description: Troubleshooting article for general error messages during Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
@@ -8,7 +8,7 @@ ms.date: 04/15/2024
 ms.custom: bap-template
 ---
 
-# Failed to enable your replication
+# Troubleshoot "Failed to enable your replication"
 
 This error is a general error message that's shown to the end user.
 

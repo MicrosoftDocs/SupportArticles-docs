@@ -5,6 +5,20 @@
       items: 
       - name: Cloud migration
         items:
+          - name: Troubleshoot activity timed out
+            href: cloud-migration/migration-activity-timeout.md
+          - name: Troubleshoot cannot connect to SQL database
+            href: cloud-migration/migration-cannot-connect.md
+          - name: Troubleshoot the EXECUTE (or SELECT) permission was denied on the object
+            href: cloud-migration/migration-execute-permission.md
+          - name: Troubleshoot "Failed to enable your replication"
+            href: cloud-migration/migration-general-error.md
+          - name: Troubleshoot "Invalid database connection string provided"
+            href: cloud-migration/migration-invalid-connection-string.md
+          - name: Troubleshoot permission issues in Business Central cloud migration
+            href: cloud-migration/migration-permission-issues.md
+      - name: Data replication in cloud migration
+        items:
           - name: Troubleshoot data replication issues in cloud migration
             href: data-replication/migration-data-replication.md
           - name: Troubleshoot data replication issues for large tables in cloud migration
@@ -20,4 +34,14 @@
           - name: Troubleshoot device date is causing connectivity issues
             href: client/client-device-date-connectivity-issues.md
           - name: Troubleshoot icon font not loaded
-            href: client/client-icon-font-not-loaded.md  
+            href: client/client-icon-font-not-loaded.md
+      - name: M365 Access
+        items:
+          - name: Troubleshoot "You shared a link in Teams, but users get a message that they can only view data"
+            href: m365-access/m365-only-view-data.md
+          - name: Troubleshoot "Microsoft 365 access has been enabled, but users get a permission error"
+            href: m365-access/m365-permission-error.md
+          - name: Troubleshoot "This page uses data from related tables that you do not have access to"
+            href: m365-access/m365-related-tables-no-access.md
+          - name: Troubleshoot "Card from shared link is minimal and doesn't include Details button"
+            href: m365-access/m365-shared-card-no-details.md
