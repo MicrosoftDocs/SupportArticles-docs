@@ -192,7 +192,7 @@
   - name: Previous command is re-run
     href: customscript-reruns-previous-command.md
   - name: Linux - version 2
-    href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
+    href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
 - name: Virtual Machine running Windows
   href: ../windows/toc.yml
