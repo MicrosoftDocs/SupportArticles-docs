@@ -1761,6 +1761,10 @@ items:
       href: ./networking/incorrect-ip-address-returned-ping-netbios.md
     - name: Install and configure IP version 6
       href: ./networking/install-configure-ip-version-6.md
+  - name: Network Connection Status Indicator (NCSI)
+    items:
+    - name: 'Troubleshooting guidance: Network Connection Status Indicator (NCSI)'
+      href: ./networking/troubleshoot-ncsi-guidance.md  
   - name: Network Load Balancing (NLB)
     items:
     - name: Configure network infrastructure to support NLB operation mode
