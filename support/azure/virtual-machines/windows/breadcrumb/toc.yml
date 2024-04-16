@@ -43,7 +43,15 @@
       - name: Virtual Machine running Windows
         tocHref: /azure/backup/
         topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
- 
+
+    - name: Azure
+      tocHref: /azure/virtual-machines/
+      topicHref: /troubleshoot/azure/index
+      items:
+      - name: Virtual Machine running Windows
+        tocHref: /azure/virtual-machines/
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
+
   - name: Troubleshoot
     tocHref: /troubleshoot/
     topicHref: /troubleshoot/index

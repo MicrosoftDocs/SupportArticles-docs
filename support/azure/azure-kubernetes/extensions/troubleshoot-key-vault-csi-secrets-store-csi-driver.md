@@ -3,7 +3,7 @@ title: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver on AKS
 description: Troubleshoot and resolve common issues that occur when you use the Azure Key Vault Provider for Secrets Store CSI Driver on Azure Kubernetes Service (AKS).
 editor: v-jsitser
 ms.service: azure-kubernetes-service
-ms.date: 02/23/2024
+ms.date: 04/16/2024
 ms.reviewer: nickoman, cssakscic, v-ntjandra, v-leedennis
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
@@ -20,7 +20,7 @@ This article discusses common issues that you might experience when you use the 
 
 - The [Kubernetes Secrets Store CSI Driver](https://github.com/kubernetes-sigs/secrets-store-csi-driver) add-on, enabled on the AKS cluster
 
-- The client URL ([curl](/virtualization/community/team-blog/2017/20171219-tar-and-curl-come-to-windows)) tool
+- The client URL ([curl](https://techcommunity.microsoft.com/t5/containers/tar-and-curl-come-to-windows/ba-p/382409)) tool
 
 - The [Netcat](https://linux.die.net/man/1/nc) (`nc`) command-line tool for TCP connections
 
