@@ -1,6 +1,9 @@
 - name: Welcome
   href: welcome-virtual-machines-windows.yml
 
+- name: Virtual Machine running Linux
+  href: ../linux/welcome-virtual-machines-linux.yml
+  
 - name: Get additional support for VM-specific issues
   href: /azure/virtual-machines/vm-support-help?context=/troubleshoot/azure/virtual-machines/windows/context/context
 - name: How to create an Azure support request
@@ -510,6 +513,3 @@
 
 - name: Issue with Azure Virtual Desktop
   href: how-to-videos-windows-virtual-desktop.md
-
-- name: Virtual Machine running Linux
-  href: ../linux/welcome-virtual-machines-linux.yml
