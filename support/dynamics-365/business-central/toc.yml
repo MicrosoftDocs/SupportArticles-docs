@@ -35,7 +35,7 @@
             href: client/client-device-date-connectivity-issues.md
           - name: Troubleshoot icon font not loaded
             href: client/client-icon-font-not-loaded.md
-      - name: M365 Access
+      - name: Microsoft 365 access
         items:
           - name: Troubleshoot "You shared a link in Teams, but users get a message that they can only view data"
             href: m365-access/m365-only-view-data.md
