@@ -3,7 +3,7 @@ title: Troubleshooting Data API builder installation
 description: Troubleshoot common problems that might occur when you install the Data API builder for Azure databases.
 ms.reviewer: jerrynixon, sidandrews
 ms.service: data-api-builder
-ms.date: 04/15/2024
+ms.date: 04/16/2024
 ms.custom: sap:Tools and Connectors
 ---
 # Troubleshoot the installation of Data API builder for Azure databases
@@ -60,8 +60,3 @@ echo $PATH | tr ":" "\n"
 If you're unsable to find a solution to your issue in this article, provide feedback or report bugs at the [azure/data-api-builder](https://github.com/azure/data-api-builder/discussions) GitHub repository.
 
 [!INCLUDE[Azure Help Support](../../includes/azure-help-support.md)]
-
-## Related content
-
-- [Troubleshoot usage](usage.md)
-- [Known issues](https://github.com/azure/data-api-builder/labels/known-issue)
