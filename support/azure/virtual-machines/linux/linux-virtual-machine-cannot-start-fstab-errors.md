@@ -13,10 +13,12 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 09/10/2022
+ms.date: 04/15/2024
 ms.author: saimsh
 ---
 # Troubleshoot Linux VM boot issues due to fstab errors
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 The Linux filesystem table, fstab is a configuration table which is designed to configure rules where specific file systems are detected and mounted in an orderly manner during the system boot process. 
 This article discusses multiple conditions where a wrong fstab configuration can lead to boot issue and provides troubleshooting guidance.
