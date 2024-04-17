@@ -1,7 +1,7 @@
 ---
 title: Support for Linux and open-source technology in Azure
 description: Describes support for Linux images in Microsoft Azure.
-ms.date: 03/28/2024
+ms.date: 04/15/2024
 ms.reviewer: divargas, hokamath, genli, v-leedennis, v-weizhu
 author: patcatun
 ms.author: patcatun
@@ -11,6 +11,8 @@ ms.custom: linux-related-content
 ---
 
 # Support for Linux and open-source technology in Azure
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), MSfC Azure-Azure Apps (IaaS)  
 _Original KB number:_ &nbsp; 2941892

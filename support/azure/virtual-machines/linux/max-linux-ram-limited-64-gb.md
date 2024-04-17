@@ -1,13 +1,15 @@
 ---
 title: The maximum ram of a Linux VM is limited to 64 GB on Azure
 description: The maximum memory of an Azure Linux virtual machine is limited to 64 GB due to a bug in Linux with the kernel version prior to 3.10.
-ms.date: 09/18/2023
+ms.date: 04/15/2024
 ms.reviewer: 
 ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.collection: linux
 ---
 # The maximum memory of an Azure Linux virtual machine is limited to 64 GB
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article provides a solution to an issue in which the maximum memory of an Azure Linux virtual machine is limited to 64 GB in Linux with the kernel version prior to 3.10.
 
