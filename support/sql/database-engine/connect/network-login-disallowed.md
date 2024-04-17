@@ -1,7 +1,7 @@
 ---
 title: Problem with the user account's access to the network login
 description: This article provides the resolution steps when users have insufficient permissions to log in to a networked system.
-ms.date: 04/10/2024
+ms.date: 04/17/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
