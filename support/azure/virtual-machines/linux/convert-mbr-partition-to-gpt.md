@@ -395,4 +395,4 @@ To check if the current data disk is MBR or GPT, use any of the following method
     drwxr-xr-x. 20 root root  4096 Dec  1 19:50 datalog
     ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
