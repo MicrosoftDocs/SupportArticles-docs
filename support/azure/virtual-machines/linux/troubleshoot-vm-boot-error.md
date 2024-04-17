@@ -171,8 +171,29 @@ The following screenshot shows the error message:
     # ls -l /boot/grub2/i386-pc
     # cp -rp /usr/lib/grub/i386-pc /boot/grub2
     ```
+4. If the content of `/boot` partition is empty, use the following commands to recreate it:
 
-4. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
+    * **RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI (BIOS based - Gen1)**
+
+   4.1. Under the chroot process, reinstall the grub.
+    ```bash
+    #grub2-install /dev/sd[X]
+    ```
+   4.2. Make sure the `/etc/resolv.conf` has a valid DNS entry in order to resolve the name of the repository.
+    ```bash
+    #cat /etc/resolv.conf
+    ```
+   4.3. Reinstall the kernel
+    ```bash
+    #yum reinstall $(rpm -qa | grep -i kernel)
+    ```
+   4.4. Create the grub.cfg
+    ```bash
+    grub2-mkconfig -o /boot/grub2/grub.cfg
+    sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
+    ```
+    
+5. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
 ## <a id="no-such-partition"></a>Error: no such partition
 
