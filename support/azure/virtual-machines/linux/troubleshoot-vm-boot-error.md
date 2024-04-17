@@ -101,14 +101,14 @@ This error might be associated with one of the following issues:
 2. Reinstall GRUB and regenerate the corresponding GRUB configuration file by using one of the following commands:
 
 
-    ## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI(BIOS Based - Gen1 )](#tab/rhel-gen1)
+## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI(BIOS Based - Gen1 )](#tab/rhel-gen1)
    
-        ```bash
-        sudo grub2-install /dev/sdX
-        sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-        sudo sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
-        ```
-    ## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs with UEFI ( Gen2 )](#tab/rhel-gen2)
+       ```bash
+       sudo grub2-install /dev/sdX
+       sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+       sudo sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
+       ```
+## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs with UEFI ( Gen2 )](#tab/rhel-gen2)
     
         ```bash
         sudo grub2-install /dev/sdX
@@ -118,7 +118,7 @@ This error might be associated with one of the following issues:
 
       If the VM is running CentOS, replace `redhat` with `centos` in the *grub.cfg* file absolute path */boot/efi/EFI/centos/grub.cfg*.
 
-    ## [SLES 12/15 Gen1 and Gen2 ](#tab/sles)
+## [SLES 12/15 Gen1 and Gen2 ](#tab/sles)
 
         ```bash
         sudo grub2-install /dev/sdX
@@ -126,12 +126,14 @@ This error might be associated with one of the following issues:
         sudo sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
         ```
 
-    ## [Ubuntu 20.04+](#tab/ubuntu)
+## [Ubuntu 20.04+](#tab/ubuntu)
 
         ```bash
         sudo grub-install /dev/sdX
         sudo update-grub
         ```
+
+---
   
 4. Go to step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
@@ -157,7 +159,7 @@ To resolve this issue, follow these steps:
 
 ## <a id="normal-mod-file-not-found"></a>Error: file '/boot/grub2/i386-pc/normal.mod' not found
 
-The following screenshot shows the error message:
+T he following screenshot shows the error message:
 
 :::image type="content" source="./media/troubleshoot-vm-boot-error/grub-normal-file-not-found.png" alt-text="Screenshot of grub error normal.mod not found.":::
 
@@ -173,7 +175,7 @@ The following screenshot shows the error message:
     ```
 4. If the content of `/boot` partition is empty, use the following commands to recreate it:
 
-   ## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI(BIOS Based - Gen1 )](#tab/rhel-gen1)
+## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI(BIOS Based - Gen1 )](#tab/rhel-gen1)
 
    4.1. Under the chroot process, reinstall the grub.
     ```bash
@@ -192,7 +194,11 @@ The following screenshot shows the error message:
     # grub2-mkconfig -o /boot/grub2/grub.cfg
     # sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
     ```
+
+---
+  
     
+
 5. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
 ## <a id="no-such-partition"></a>Error: no such partition
