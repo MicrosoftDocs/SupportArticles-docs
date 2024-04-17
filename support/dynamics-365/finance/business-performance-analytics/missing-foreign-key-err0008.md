@@ -1,6 +1,6 @@
 ---
 title: Missing foreign key reference error
-description: Provides information about the Missing foreign key reference error (error code ERR00008) in business performance analytics in Microsoft Dynamics 365 Finance.
+description: Provides information about the Missing foreign key reference error (error code ERR00008) in Business performance analytics in Microsoft Dynamics 365 Finance.
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
@@ -11,7 +11,7 @@ audience: Application User
 # Missing foreign key reference: Error code: ERR00008 [Type: Warning]
 
 > [!NOTE]
-> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
+> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [Business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
 
 ## Symptoms
 
@@ -19,7 +19,7 @@ Error code *ERR00008* is logged in the **Bpa self help logs** table in Microsoft
 
 ## Resolution
 
-No immediate action is required, because this issue might be caused by data synchronization delays. We recommend observing the next two to three business performance analytics runs to see if the error resolves itself.
+No immediate action is required, because this issue might be caused by data synchronization delays. We recommend observing the next two to three Business performance analytics runs to see if the error resolves itself.
 
 If the issue persists and the error is still in the **Bpa self help logs** table, contact Microsoft Support for further assistance.
 
