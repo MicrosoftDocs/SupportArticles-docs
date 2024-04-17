@@ -101,7 +101,7 @@ This error might be associated with one of the following issues:
 2. Reinstall GRUB and regenerate the corresponding GRUB configuration file by using one of the following commands:
 
 
-## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI(BIOS Based - Gen1 )](#tab/rhel-gen1)
+## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs with BIOS ( Gen1 )](#tab/rhel-gen1)
    
 ```bash
 sudo grub2-install /dev/sdX
@@ -175,9 +175,9 @@ T he following screenshot shows the error message:
     ```
 4. If the content of `/boot` partition is empty, use the following commands to recreate it:
 
-## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI(BIOS Based - Gen1 )](#tab/rhel-gen1)
+## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs with BIOS ( Gen1 )](#tab/rhel-gen1)
 
-   4.1. Under the chroot process, reinstall the grub.
+   4.1. Under the chroot process, reinstall the grub. Replace /dev/sd[X] accordingly with the corresponding copy of the OS disk attached to the repair/rescue VM.
  ```bash
  grub2-install /dev/sd[X]
  ```
@@ -186,14 +186,15 @@ T he following screenshot shows the error message:
  cat /etc/resolv.conf
  ```
   4.3. Reinstall the kernel
-```bash
-yum reinstall $(rpm -qa | grep -i kernel)
-```
+ ```bash
+ yum reinstall $(rpm -qa | grep -i kernel)
+ ```
   4.4. Create the grub.cfg
-```bash
+ ```bash
  grub2-mkconfig -o /boot/grub2/grub.cfg
  sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
-```
+ ```
+
 ---
   
 
