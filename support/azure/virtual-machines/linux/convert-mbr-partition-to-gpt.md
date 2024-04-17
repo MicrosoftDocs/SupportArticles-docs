@@ -120,9 +120,9 @@ Here are two methods to use GPT for the data disk:
 
 #### Step 1: Identify the current partition table type
 
-To check if the current data disk is MBR or GPT, use any of the following methods.
+To check if the current data disk is MBR or GPT, use one of the following tools.
 
-#### [Using fdisk](#tab/fdisk)
+#### [fdisk](#tab/fdisk)
 
  ```bash
  sudo fdisk -l /dev/sdd | grep -i type
@@ -132,7 +132,7 @@ To check if the current data disk is MBR or GPT, use any of the following method
  Disk label type: dos
  ```
 
-#### [Using parted](#tab/parted)
+#### [parted](#tab/parted)
 
  ```bash
  sudo parted /dev/sdd print | grep -i '^Partition Table'
@@ -142,10 +142,10 @@ To check if the current data disk is MBR or GPT, use any of the following method
  Partition Table: msdos
  ```
 
-#### [Using gdisk](#tab/gdisk)
+#### [gdisk](#tab/gdisk)
 
 ```bash
- sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
+sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
 ```
 
 ```output
@@ -161,7 +161,7 @@ To check if the current data disk is MBR or GPT, use any of the following method
 ### Step 2: Recreate the partition
 
 > [!NOTE]
-> In this article, the `gdisk` tool is used to recreate the partition as an example.
+> In this section, the `gdisk` tool is used to recreate the partition as an example.
 
 1. Install the `gdisk` tool if it's not installed in the Linux virtual machine:
 
@@ -207,9 +207,6 @@ To check if the current data disk is MBR or GPT, use any of the following method
     sudo systemctl stop myapp.service
     sudo umount /appext4
     ```
-
-    > [!NOTE]
-    > Both `myapp.service` and `/appext4` are sample entries.
 
     > [!NOTE]
     > - Both `myapp.service` and `/appext4` are sample entries. Replace them accordingly.
@@ -273,13 +270,11 @@ To check if the current data disk is MBR or GPT, use any of the following method
     The operation has completed successfully.
     ```
 
-5. Verify the partition:
+5. Verify the partition style is changed to GPT:
 
     ```bash
     sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
     ```
-
-    As this command sample shows, GPT is presented now.
     
     ```output
     Partition table scan:
@@ -307,7 +302,7 @@ To check if the current data disk is MBR or GPT, use any of the following method
     └─sdd1            part ext4                 2T  0 /appext4
     ```
 
-7. Unmount the filesystem that was mounted automaically and run a `fsck` command:
+7. Unmount the filesystem that was mounted automaically and repair it:
 
     ```bash
     sudo umount /appext4
