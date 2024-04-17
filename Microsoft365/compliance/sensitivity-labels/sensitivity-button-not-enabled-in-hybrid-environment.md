@@ -26,7 +26,7 @@ ms.date: 04/17/2024
 
 ## Symptoms
 
-Your organization uses sensitivity labels to classify and protect email messages in a hybrid Microsoft Exchange Server environment. However, Outlook for Microsoft 365 users who connect to on-premises mailboxes can't apply sensitivity labels because the **Sensitivity** button in new messages isn't enabled and appears dimmed.
+Your organization uses sensitivity labels to classify and protect email messages in a hybrid Microsoft Exchange Server environment. However, Outlook for Microsoft 365 users who connect to on-premises mailboxes can't apply sensitivity labels because the **Sensitivity** button in new messages isn't enabled and not available.
 
 ## Cause
 
