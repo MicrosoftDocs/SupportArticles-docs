@@ -2463,6 +2463,8 @@ items:
       href: ./remote/terminal-server-licensing.md
     - name: 'Troubleshooting guidance: RDS Licensing'
       href: ./remote/troubleshoot-rds-licensing-guidance.md
+    - name: '"Your session will be disconnected in 60 minutes" message when you connect to RDS'
+      href: ./remote/your-session-will-be-disconnected-in-60-minutes.md
   - name: Remote desktop sessions
     items:
     - name: Applications crash if another user logs off
