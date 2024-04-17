@@ -25,13 +25,13 @@ When you use the Remote Desktop Web portal (RD Web portal) or a direct remote de
 
 This message is a result of the soft enforcement licensing feature that was introduced in Windows Server 2016 for per-device licensing, and in Windows Server 2019 for per-user licensing. It indicates a problem in the RD Licensing server, or a problem that's preventing communication between the RD Licensing server and the Remote Desktop Session Host (RD Session Host) server.
 
-In cases where normal licensing enforcement prevents a user from connecting to RD Session Host, soft enforcement allows the user to connect for 60-minutes at a time. The user receives the message when they connect. After 60 minutes, the user is disconnected. However, the user can reconnect to the same session.
+In cases where normal licensing enforcement prevents a user from connecting to RD Session Host, soft enforcement allows the user to connect for 60 minutes at a time. The user receives the message when they connect. After 60 minutes, the user is disconnected. However, the user can reconnect to the same session.
 
-This article treats the per-user and perd-device licensing scenarios separately.
+This article treats the per-user and per-device licensing scenarios separately.
 
 ### Soft enforcement of per-user licensing (Windows Server 2019)
 
-In per-user licensing scenarios, (Windows Server 2019 only) the licensing soft enforcement behavior differs from that in per-device scenarios. If users see this message in a per-user scenario, make sure that all of the remote desktop servers have the latest updates installed. If the issue persists, contact Microsoft Technical Support.
+In a per-user licensing scenario (Windows Server 2019 only), the licensing soft enforcement behavior differs from that in per-device scenarios. If users see this message in a per-user scenario, make sure that all of the remote desktop servers have the latest updates installed. If the issue persists, contact Microsoft Technical Support.
 
 > [!IMPORTANT]  
 > The Remote Desktop Licensing (RD Licensing) soft-enforcement feature was removed in Windows Server 2022.
@@ -40,7 +40,7 @@ In per-user licensing scenarios, (Windows Server 2019 only) the licensing soft e
 
 In a per-device licensing scenario, the most common causes of this message include the following:
 
-- Remote Desktop Licensing service is not running.
+- Remote Desktop Licensing service isn't running.
 - Licensing properties aren't correctly configured.
 - The RD Session Hosts can't connect to the RD Licensing server.
 - The RD Session hosts and/or the RD Licensing server and/or the users are in different domains and the trust between the domains isn't correctly configured for RDS.
@@ -49,7 +49,7 @@ In a per-device licensing scenario, the most common causes of this message inclu
 
 Before you start troubleshooting, check the following points:
 
-- See [License your RDS deployment with client access licenses (CALs)](/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility) to make sure that the versions of the client access licenses (CALs) that you're using are compatible with both your RD Session Host versions and your RD Licensing server versions.
+- Make sure that the versions of the client access licenses (CALs) that you're using are compatible with both your RD Session Host versions and your RD Licensing server versions.For more information, see [License your RDS deployment with client access licenses (CALs)](/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility).
 - If you have an RDS farm that uses an RD Connection Broker server, try to reproduce the issue by using the RD Web connection app to connect to the RD Session Host server.
 - If you have an RDS farm that doesn't use an RD Connection Broker server, try to reproduce the issue by using Microsoft Terminal Services Client (MSTSC) to connect to the RD Session Host server.
 
@@ -61,17 +61,17 @@ If the Remote Desktop Licensing service isn't running, the RD Licensing server c
 
 You can use the Services MMC snap-in (Services.msc, also available on the **Tools** menu in Server Manager) to manage the services locally or remotely. You can also use PowerShell to manage the services locally or remotely (if the remote computer is configured to accept remote PowerShell cmdlets).
 
-Check the status of the Remote Desktop Licensing service. If the service is not running, start it.
+Check the status of the Remote Desktop Licensing service. If the service isn't running, start it.
 
 ### Check the RD Licensing role
 
-You use Server Manager to check that the server roles have been correctly assigned.
+Use Server Manager to check that the server roles have been correctly assigned.
 
-- In Server Manager, select **Remote Desktop Services**, and in the **Overview**pane, check the **Deployment Servers** list. Make sure that all of the server roles are associated with the correct servers.
+In Server Manager, select **Remote Desktop Services**, and in the **Overview**pane, check the **Deployment Servers** list. Make sure that all of the server roles are associated with the correct servers.
 
 ### Check the RD Licensing configuration
 
-You can use any of three methods to check the RD Licensing configuration, depending on how you manage your servers
+You can use any of the following methods to check the RD Licensing configuration, depending on how you manage your servers.
 
 - [Use the Remote Desktop Services console in Server Manager](#servermgr).
 - [Use domain or local Group Policy](#gpo).
@@ -100,7 +100,7 @@ You can also use [Registry Editor](#registry) to check the licensing configurati
 
 For more information about licensing configurations, see [License Remote Desktop session hosts](/windows-server/remote/remote-desktop-services/rds-license-session-hosts#configure-licensing-for-an-rds-deployment-that-includes-only-the-rd-session-host-role-and-the-rd-licensing-role).
 
-<a name="registry" ></a>You can use Registry Editor to check the licensing configuration. Open Registry Editor (or connect to the registry) on the RD Session Host. The subkeys that hold his information vary depending on how you manage your servers.
+<a name="registry" ></a>You can use Registry Editor to check the licensing configuration. Open Registry Editor (or connect to the registry) on the RD Session Host. The subkeys that hold this information vary depending on how you manage your servers.
 
 If you use group policy to manage remote desktop services, check the following subkey and entries:
 
@@ -116,7 +116,7 @@ If you use the Remote Desktop Services console in Server Manager, check the foll
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TermService\Parameters\LicenseServers\SpecifiedLicenseServers`
   - `SpecifiedLicenseServers` (Multi-string value)
    > [!NOTE]  
-   > This only exists if you used the Remote Desktop Services console to configure licensing.  
+   > This entry only exists if you used the Remote Desktop Services console to configure licensing.  
 
 For more information about `LicensingMode`, see [LicensingMode](/windows-hardware/customize/desktop/unattend/microsoft-windows-terminalservices-remoteconnectionmanager-licensingmode#values).
 
