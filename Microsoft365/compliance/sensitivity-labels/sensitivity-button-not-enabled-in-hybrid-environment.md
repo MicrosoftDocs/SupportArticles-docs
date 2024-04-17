@@ -52,7 +52,7 @@ For each affected user, use the following steps on the computer that has the use
    ```notepad
    Windows Registry Editor Version 5.00
   
-   \[HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\ExperimentEcs\Overrides\]
+   [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\ExperimentEcs\Overrides]
    "Microsoft.Office.Security.CLP.CG.EnableSensitivityFlyoutByDocumentContentType"="false"
    "Microsoft.Office.Security.CLP.CG.EnableSensitivityFlyoutByDocumentContentType2"="false"
    ```
