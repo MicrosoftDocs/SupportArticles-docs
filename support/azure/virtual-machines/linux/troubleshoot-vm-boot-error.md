@@ -101,39 +101,38 @@ This error might be associated with one of the following issues:
 2. Reinstall GRUB and regenerate the corresponding GRUB configuration file by using one of the following commands:
 
 
-## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs with BIOS ( Gen1 )](#tab/rhel-gen1)
-   
-```bash
-sudo grub2-install /dev/sdX
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-sudo sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
-```
-## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs with UEFI ( Gen2 )](#tab/rhel-gen2)
-    
-```bash
-sudo grub2-install /dev/sdX
-sudo grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg
-sudo sed -i 's/hd2/hd0/g' /boot/efi/EFI/redhat/grub.cfg
-```
+    * **RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI (BIOS based - Gen1)**
 
-If the VM is running CentOS, replace `redhat` with `centos` in the *grub.cfg* file absolute path */boot/efi/EFI/centos/grub.cfg*.
+        ```bash
+        grub2-install /dev/sdX
+        grub2-mkconfig -o /boot/grub2/grub.cfg
+        sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
+        ```
 
-## [SLES 12/15 Gen1 and Gen2 ](#tab/sles)
+    * **RHEL/CentOS/Oracle 7.x/8.x Linux VMs with UEFI (Gen2)**
 
-```bash
-sudo grub2-install /dev/sdX
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-sudo sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
-```
+        ```bash
+        grub2-install /dev/sdX
+        grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg
+        sed -i 's/hd2/hd0/g' /boot/efi/EFI/redhat/grub.cfg
+        ```
 
-## [Ubuntu 20.04+](#tab/ubuntu)
+      If the VM is running CentOS, replace `redhat` with `centos` in the *grub.cfg* file absolute path */boot/efi/EFI/centos/grub.cfg*.
 
-```bash
-sudo grub-install /dev/sdX
-sudo update-grub
-```
+    * **SLES 12/15 Gen1 and Gen2**
 
----
+        ```bash
+        grub2-install /dev/sdX
+        grub2-mkconfig -o /boot/grub2/grub.cfg
+        sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
+        ```
+
+    * **Ubuntu 18.04/20.04**
+
+        ```bash
+        grub-install /dev/sdX
+        update-grub
+        ```
   
 4. Go to step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
@@ -175,28 +174,25 @@ T he following screenshot shows the error message:
     ```
 4. If the content of `/boot` partition is empty, use the following commands to recreate it:
 
-## [RHEL/CentOS/Oracle 7.x/8.x Linux VMs with BIOS ( Gen1 )](#tab/rhel-gen1)
+* **RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI (BIOS based - Gen1)**
 
    4.1. Under the chroot process, reinstall the grub. Replace /dev/sd[X] accordingly with the corresponding copy of the OS disk attached to the repair/rescue VM.
- ```bash
- grub2-install /dev/sd[X]
- ```
+    ```bash
+    grub2-install /dev/sd[X]
+    ```
   4.2. Make sure the `/etc/resolv.conf` has a valid DNS entry in order to resolve the name of the repository.
- ```bash
- cat /etc/resolv.conf
- ```
+   ```bash
+   cat /etc/resolv.conf
+   ```
   4.3. Reinstall the kernel
- ```bash
- yum reinstall $(rpm -qa | grep -i kernel)
- ```
+   ```bash
+   yum reinstall $(rpm -qa | grep -i kernel)
+   ```
   4.4. Create the grub.cfg
- ```bash
- grub2-mkconfig -o /boot/grub2/grub.cfg
- sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
- ```
-
----
-  
+   ```bash
+   grub2-mkconfig -o /boot/grub2/grub.cfg
+   sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
+   ```
 
 5. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
