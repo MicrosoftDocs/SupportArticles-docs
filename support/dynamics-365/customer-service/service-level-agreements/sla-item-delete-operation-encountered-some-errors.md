@@ -2,7 +2,7 @@
 title: The uninstall operation will delete the base layer for the component
 description: Resolves an error that occurs when you try to delete an SLA item for an SLA with multiple solutions in Microsoft Dynamics Customer Service.
 ms.reviewer: sdas, v-psuraty
-ms.author: v-psuraty
+ms.author: ankugupta
 ms.date: 03/14/2024
 ms.custom: sap:Service Level Agreements\Issue with importing or exporting or upgrading SLA
 ---
