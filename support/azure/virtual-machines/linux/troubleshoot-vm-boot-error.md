@@ -10,12 +10,14 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.topic: troubleshooting
-ms.date: 11/27/2023
+ms.date: 04/15/2024
 ms.author: divargas
 ms.reviewer: ekpathak, v-leedennis
 ---
 
 # Linux virtual machine boots to GRUB rescue
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article discusses multiple conditions that cause GRUB rescue issues and provides troubleshooting guidance.
 
