@@ -398,7 +398,7 @@ To resolve the boot error, follow these steps:
 2. Run the following [YaST](https://yast.opensuse.org) command in the chroot environment:  
 
    ```bash
-   sudo yast2 bootloader
+   yast2 bootloader
    ```
 
 3. Clear the "x" from the **Enable Secure Boot Support** option, and then select <kbd>F10</kbd> to save the change.
