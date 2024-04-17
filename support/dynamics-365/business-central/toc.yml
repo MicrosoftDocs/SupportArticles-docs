@@ -33,3 +33,13 @@
           href: client/client-device-date-connectivity-issues.md
         - name: '"Icon font not loaded"'
           href: client/client-icon-font-not-loaded.md
+    - name: Microsoft 365 access
+      items:
+        - name: '"You shared a link in Teams, but users get a message that they can only view data"'
+          href: m365-access/m365-only-view-data.md
+        - name: '"Microsoft 365 access has been enabled, but users get a permission error"'
+          href: m365-access/m365-permission-error.md
+        - name: '"This page uses data from related tables that you do not have access to"'
+          href: m365-access/m365-related-tables-no-access.md
+        - name: '"Card from shared link is minimal and doesn''t include Details button"'
+          href: m365-access/m365-shared-card-no-details.md
