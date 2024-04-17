@@ -275,6 +275,8 @@
           items:
             - name: NDR and SMTP errors
               href: ../email-delivery/ndr/non-delivery-reports-in-exchange-online.md
+            - name: 450 4.4.317 Cannot connect to remote server [Message=UntrustedRoot]
+              href: ../email-delivery/ndr/fix-error-code-450-4-4-317-untrusted-root.md
             - name: 451 4.7.500-699 (ASxxx)
               href: ../email-delivery/ndr/fix-error-code-451-4-7-500-699-asxxx-in-exchange-online.md
             - name: 5.4.6 or 5.4.14
