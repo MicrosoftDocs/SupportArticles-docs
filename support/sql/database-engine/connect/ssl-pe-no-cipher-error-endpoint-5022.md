@@ -1,7 +1,7 @@
 ---
 title: SSL_PE_NO_CIPHER error at endpoint 5022
 description: This article provides the steps to resolve the SSL_PE_NO_CIPHER error on endpoint 5022.
-ms.date: 04/10/2024
+ms.date: 04/17/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
