@@ -22,7 +22,7 @@ description: Describes how to run self-help diagnostics for Teams admins
 
 # Self-help diagnostics for Microsoft Teams administrators
 
-To keep pace with the growth in usage of Microsoft Teams, Microsoft has developed Teams-specific diagnostic scenarios that cover top support topics and the most common tasks for which administrators request help with configuration. It is important to note that while these diagnostics can't make changes to your tenant, they do provide insight into known issues and provide  instructions to fix the issues quickly.
+To keep apace with the growth in usage of Microsoft Teams, Microsoft has developed Teams-specific diagnostic scenarios that cover top support topics and the most common tasks for which administrators request help with configuration. It is important to note that while these diagnostics can't make changes to your tenant, they do provide insight into known issues and provide  instructions to fix the issues quickly.
 
 > [!NOTE]
 > These diagnostics aren't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
