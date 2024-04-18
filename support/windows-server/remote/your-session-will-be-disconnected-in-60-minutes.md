@@ -49,7 +49,7 @@ In a per-device licensing scenario, the most common causes of this message inclu
 
 Before you start troubleshooting, check the following points:
 
-- Make sure that the versions of the client access licenses (CALs) that you're using are compatible with both your RD Session Host versions and your RD Licensing server versions.For more information, see [License your RDS deployment with client access licenses (CALs)](/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility).
+- Make sure that the versions of the client access licenses (CALs) that you're using are compatible with both your RD Session Host versions and your RD Licensing server versions.For more information, see [License your RDS deployment with client access licenses (CALs): RDS CAL version compatibility](/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility).
 - If you have an RDS farm that uses an RD Connection Broker server, try to reproduce the issue by using the RD Web connection app to connect to the RD Session Host server.
 - If you have an RDS farm that doesn't use an RD Connection Broker server, try to reproduce the issue by using Microsoft Terminal Services Client (MSTSC) to connect to the RD Session Host server.
 
