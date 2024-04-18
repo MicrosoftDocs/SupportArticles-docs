@@ -4,7 +4,7 @@ description: Troubleshoot common issues with cloud tiering in an Azure File Sync
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 11/02/2023
+ms.date: 04/18/2024
 ms.author: kendownie
 ms.reviewer: v-weizhu
 ms.custom: sap:File Sync
@@ -144,7 +144,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x8007052e | -2147023570 | ERROR_LOGON_FAILURE | Operation failed due to an authentication failure. | If the error persists for more than a day, create a support request. |
 | 0x8002802b | -2147319765 | TYPE_E_ELEMENTNOTFOUND | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80072f00 | -2147012864 | WININET_E_FORCE_RETRY | A connection with the service could not be established. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
-| 0x80C86093 | -2134351785 | ECS_E_STABLEVERSION_SVID_CHECK_FAILED | The file can't be tiered due to a known issue. | No action required. Ignore the error and it will no longer appear once a fix is released. |
+| 0x80C86093 | -2134351785 | ECS_E_STABLEVERSION_SVID_CHECK_<br/>FAILED | The file can't be tiered due to a known issue. | No action required. Ignore the error and it will no longer appear once a fix is released. |
 
 ## How to troubleshoot files that fail to be recalled
 
@@ -212,10 +212,10 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x80190193 | -2145844845 | HTTP_E_STATUS_FORBIDDEN | Forbidden (403) error occurred. | Update Azure file share access policy. [Learn more](/azure/role-based-access-control/built-in-roles). |
 | 0x80c8604e | -2134351794 | ECS_E_AZURE_FILE_SNAPSHOT_NOT_<br/>FOUND_ON_CONFLICT_FILE | Unable to recall sync conflict loser file from Azure file share. | If this error is happening for a tiered file that is a sync conflict file, this file might not be needed by end users anymore. If the original file is available and valid, you may remove this file from the server endpoint. |
 | 0x80c80075 | -2134376331 | ECS_E_ACCESS_TOKEN_CATASTROPHIC<br/>_FAILURE | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. |
-| 0x80c8005b | -2134376357 | ECS_E_AZURE_FILE_SERVICE_UNAVAILABLE | The Azure File Service is currently unavailable. | If the error persists for more than a day, create a support request. |
+| 0x80c8005b | -2134376357 | ECS_E_AZURE_FILE_SERVICE_<br/>UNAVAILABLE | The Azure File Service is currently unavailable. | If the error persists for more than a day, create a support request. |
 | 0x80c83099 | -2134364007 | ECS_E_PRIVATE_ENDPOINT_ACCESS_<br/>BLOCKED | Private endpoint configuration access blocked. | Check the private endpoint configuration and allow access to the Azure File Sync service. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80c86000 | -2134351872 | ECS_E_AZURE_AUTHENTICATION_FAILED | Server failed to authenticate the request. | Check the network configuration and make sure the storage account accepts the server IP address. You can do this by adding the server IP, adding the server's IP subnet, or adding the server vnet to the authorized access control list to access the storage account. [Learn more](/azure/storage/file-sync/file-sync-deployment-guide#optional-configure-firewall-and-virtual-network-settings). |
-| 0x80072ef1 | -2147012879 | ERROR_WINHTTP_OPERATION_CANCELLED | A connection with the service could not be established. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
+| 0x80072ef1 | -2147012879 | ERROR_WINHTTP_OPERATION_</br>CANCELLED | A connection with the service couldn't be established. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80c80338 | -2134375624 | ECS_E_CERT_CN_INVALID | The server's SSL certificate contains incorrect hostnames. The certificate can't be used to establish the SSL connection. | Check with your organization's tech support to get help. If you need further investigation, create a support request. |
 | 0x80c8000c | -2134376436 | ECS_E_SYNC_UNKNOWN_URI | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. |
 | 0x80c8033a | -2134375622 | ECS_E_SECURITY_CHANNEL_ERROR | There was a problem validating the server's SSL certificate. | Check with your organization's tech support to get help. If you need further investigation, create a support request. |
@@ -223,21 +223,22 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x80c8603d | -2134351811 | ECS_E_AZURE_UNKNOWN_FAILURE | An unexpected error occurred. | No action required. If the error persists for more than a day, create a support request. |
 | 0x80c8033f | -2134375617 | ECS_E_TOKEN_LIFETIME_IS_TOO_LONG | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. |
 | 0x80190190 | -2145844848 | HTTP_E_STATUS_BAD_REQUEST | A connection with the service could not be established. | No action required. If the error persists for more than a day, create a support request. |
-| 0x80c86036 | -2134351818 | ECS_E_AZURE_FILE_PARENT_NOT_FOUND | The specified parent path for the file does not exist | You have likely performed an unsupported operation. [Learn more](/azure/storage/file-sync/file-sync-disaster-recovery-best-practices). Please find the original copy of the file and overwrite the tiered file in the server endpoint. |
+| 0x80c86036 | -2134351818 | ECS_E_AZURE_FILE_PARENT_NOT_<br>FOUND | The specified parent path for the file does not exist | You have likely performed an unsupported operation. [Learn more](/azure/storage/file-sync/file-sync-disaster-recovery-best-practices). Please find the original copy of the file and overwrite the tiered file in the server endpoint. |
 | 0x80c86049 | -2134351799 | ECS_E_AZURE_SHARE_SNAPSHOT_FILE_<br/>NOT_FOUND | File not found in the share snapshot. | You have likely performed an unsupported operation. [Learn more](/azure/storage/file-sync/file-sync-disaster-recovery-best-practices). Please find the original copy of the file and overwrite the tiered file in the server endpoint. |
 | 0x80c80311 | -2134375663 | ECS_E_DOWNLOAD_SESSION_HASH_<br/>CONFLICT | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0x800700a4 | -2147024732 | ERROR_MAX_THRDS_REACHED | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. |
-| 0x80070147 | -2147024569 | ERROR_OFFSET_ALIGNMENT_VIOLATION | An internal error occurred. | If the error persists for more than a day, create a support request. |
+| 0x80070147 | -2147024569 | ERROR_OFFSET_ALIGNMENT_<br/>VIOLATION | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0x80090321 | -2146893023 | SEC_E_BUFFER_TOO_SMALL | An internal error occurred. | If the error persists for more than a day, create a support request. |
-| 0x801901a0 | -2145844832 | HTTP_E_STATUS_RANGE_NOT_SATISFIABLE | An internal error occurred. | If the error persists for more than a day, create a support request. |
+| 0x801901a0 | -2145844832 | HTTP_E_STATUS_RANGE_NOT_<br/>SATISFIABLE | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0x80c80066 | -2134376346 | ECS_E_CLUSTER_ID_MISMATCH | There is a mismatch between the cluster ID returned from cluster API and the cluster ID saved during the registration. | Please create a support request for further investigation of the issue. |
 | 0x80c8032d | -2134375635 | ECS_E_PROXY_AUTH_REQUIRED | The proxy server used to access the internet needs your current credentials. | If your proxy requires authentication, update the proxy credentials. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#proxy). |
 | 0x8007007a | -2147024774 | ERROR_INSUFFICIENT_BUFFER | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. |
 | 0x8019012e | -2145844946 | HTTP_E_STATUS_REDIRECT | Azure File Sync does not support HTTP redirection. | Disable HTTP redirect on your proxy server or network device. |
 | 0x800706be | -2147023170 | RPC_S_CALL_FAILED | An unknown error occurred. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80072747 | -2147014841 | WSAENOBUFS | An internal error occurred. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
-| 0x80C86093 | -2134351785 | ECS_E_STABLEVERSION_SVID_CHECK_FAILED | The file can't be recalled due to a known issue. | Copy the file manually from a different endpoint or the cloud share. If you can't copy the file manually, create a support ticket. |
-| 0x80C80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_TRAILING_DOT | The file tiering or download failed because of a trailing dot in the path. | Rename the trailing dot in the folder or file name. |
+| 0x80C86093 | -2134351785 | ECS_E_STABLEVERSION_SVID_CHECK_<br/>FAILED | The file can't be recalled due to a known issue. | Copy the file manually from a different endpoint or the cloud share. If you can't copy the file manually, create a support ticket. |
+| 0x80C80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_<br/>TRAILING_DOT | The file tiering or download failed because of a trailing dot in the path. | Rename the trailing dot in the folder or file name. |
+| 0x80c83096 | -2134364010 | ECS_E_MGMT_<br/>STORAGEACLSBYPASSNOTSET | This error occurs if the firewall and virtual network settings are enabled on the storage account and the "Allow trusted Microsoft services to access this storage account" exception isn't checked. | To resolve this issue, follow the steps documented in [Configure firewall and virtual network settings](/azure/storage/file-sync/file-sync-deployment-guide#optional-configure-firewall-and-virtual-network-settings). |
 
 ## Tiered files are not accessible on the server after deleting a server endpoint
 
