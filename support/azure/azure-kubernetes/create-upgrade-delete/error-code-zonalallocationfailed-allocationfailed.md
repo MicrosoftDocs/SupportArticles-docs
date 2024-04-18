@@ -49,25 +49,9 @@ Or, when you use dedicated hosts in a cluster and try to create or scale up a no
 >
 > Message="**Allocation failed. VM allocation to the dedicated host failed. Please ensure that the dedicated host has enough capacity or try allocating elsewhere.**"
 
-
 ## Cause 1: Limited zone availability in a SKU
 
 You're trying to deploy a cluster in a zone that has limited availability for the specific SKU.
-
-## Cause 2: Too many constraints for a virtual machine to accommodate
-
-If you receive an `OverconstrainedAllocationRequest` error code, the Azure Compute platform can't allocate a new virtual machine (VM) to accommodate the required constraints. These constraints usually (but not always) include the following items:
-
-- VM size
-- VM SKU
-- Accelerated networking
-- Availability zone
-- Ephemeral disk
-- Proximity placement group (PPG)
-
-## Cause 3: Not enough dedicated hosts or fault domains
-
-You're trying to deploy a node pool in a dedicated host group that has limited capacity and/or that doesn't satisfy the fault domain constraint.
 
 ## Solution 1: Use a different SKU, zone, or region
 
@@ -80,9 +64,24 @@ Try one or more of the following methods:
 
 For more information about how to fix this error, see [Resolve errors for SKU not available](/azure/azure-resource-manager/troubleshooting/error-sku-not-available).
 
+## Cause 2: Too many constraints for a virtual machine to accommodate
+
+If you receive an `OverconstrainedAllocationRequest` error code, the Azure Compute platform can't allocate a new virtual machine (VM) to accommodate the required constraints. These constraints usually (but not always) include the following items:
+
+- VM size
+- VM SKU
+- Accelerated networking
+- Availability zone
+- Ephemeral disk
+- Proximity placement group (PPG)
+
 ## Solution 2: Don't associate a proximity placement group with the node pool
 
-If you receive an `OverconstrainedAllocationRequest` error code, you can also try to create a new node pool that isn't associated with a proximity placement group.
+If you receive an `OverconstrainedAllocationRequest` error code, you can try to create a new node pool that isn't associated with a proximity placement group.
+
+## Cause 3: Not enough dedicated hosts or fault domains
+
+You're trying to deploy a node pool in a dedicated host group that has limited capacity and/or that doesn't satisfy the fault domain constraint.
 
 ## Solution 3: Ensure you have enough dedicated hosts for your AKS nodes/VMSS
 
