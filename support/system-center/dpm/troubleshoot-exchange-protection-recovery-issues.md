@@ -63,7 +63,7 @@ Configure the DPMRA port and select a nondefault port by using the following ste
 
 1. Verify that a new entry is created in the following registry subkey:
 
-    `HKEY_LOCAL_MACHINE \Software\Microsoft\Microsoft Data Protection Manager\Agent\2.0\PsPortConfig`
+    `HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft Data Protection Manager\Agent\2.0\PsPortConfig`
 
 1. Copy the *setagentcfg.exe* file from the DPM server to the following folder on the protected server.
 
