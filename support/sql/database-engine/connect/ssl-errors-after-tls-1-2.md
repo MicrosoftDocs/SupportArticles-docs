@@ -44,13 +44,13 @@ If you have a network capture, it might resemble the following screenshot that s
   
 To resolve these errors, follow these steps:
 
-1. Open SQL Server Configuration Manager, right-click **Protocols for InstanceName**, and then select **Properties**.
+1. Open SQL Server Configuration Manager, right-click **Protocols for \<InstanceName\>**, and then select **Properties**.
 
 1. Select the **Certificate** tab, and check which certificate is being used.
 
    :::image type="content" source="media/ssl-errors-after-tls-1-2/protocols-for-server-cert-tab.png" alt-text="Screenshot of the Certificate tab that shows which certificate is used.":::
 
-   - If a certificate exists, select **View** to examine it, and then select **Clear**. Then, go to step 6.
+   - If a certificate exists, select **View** to examine it, and then select **Clear**. Then, go to step 4.
 
    - If no certificate exists, examine the SQL Server error log file to get the hash code. You might see one of the following entries:
 
@@ -69,8 +69,8 @@ To resolve these errors, follow these steps:
    1. Locate the certificate in MMC.
    1. In MMC, right-click the certificate, and then select **Properties**.
    1. On the **General** tab, either disable the certificate completely or selectively disable **Server Authentication**.
-   
-   :::image type="content" source="media/ssl-errors-after-tls-1-2/mmc-cert-properties.png" alt-text="Select Properties from SQL Server Configuration Manager.":::
+
+        :::image type="content" source="media/ssl-errors-after-tls-1-2/mmc-cert-properties.png" alt-text="Select Properties from SQL Server Configuration Manager.":::
 
 1. Save the changes.
 1. Restart SQL Server.
