@@ -13,14 +13,14 @@ ms.custom:
   - CI 189881
 appliesto:
   - Exchange Server 2013
+  - Microsoft 365 Enterprise
+  - Office 365 Enterprise
 ms.reviewer: johage
 search.appverid: MET150
 ms.date: 04/18/2024
 ---
 
 # Exchange Server 2013 end of support roadmap
-
-*This article applies to both Microsoft 365 Enterprise and Office 365 Enterprise.*
 
 Support for Exchange Server 2013 ended **April 11, 2023**. If you haven't already migrated from Exchange Server 2013 to Microsoft 365, Office 365, or Exchange Server 2019, now's the time to start planning.
 
