@@ -1,6 +1,6 @@
 ---
 title: Exchange Server 2013 end of support roadmap
-description: Support for Exchange Server 2013 ended in April 2023. Use this planning roadmap to prepare to upgrade to Exchange Online or a later version of Exchange Server.
+description: A planning roadmap to prepare for upgrade to Exchange Online or a later version of Exchange Server.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2013
   - Microsoft 365 Enterprise
   - Office 365 Enterprise
-ms.reviewer: johage
+ms.reviewer: johage, v-trisshores
 search.appverid: MET150
 ms.date: 04/18/2024
 ---
