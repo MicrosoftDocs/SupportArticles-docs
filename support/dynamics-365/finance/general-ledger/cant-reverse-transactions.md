@@ -13,7 +13,7 @@ audience: Application User
 # ms.devlang: 
 ms.reviewer: kfend
 # ms.tgt_pltfrm: 
-# ms.custom: 
+ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with reversals
 ms.search.region: Global 
 # ms.search.industry: 
 ms.author: kweekley

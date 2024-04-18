@@ -5,7 +5,7 @@ title: Setoff rule error when you run a tax settlement
 description: Provides troubleshooting information that can help fix the setoff rule error that might occur during a tax settlement.
 author: yungu
 manager: beya
-ms.date: 10/28/2022
+ms.date: 04/18/2024
 
 # optional metadata
 
@@ -14,11 +14,11 @@ audience: Application user
 
 # ms.devlang
 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm
 
-# ms.custom
+ms.custom: sap:Tax - India tax\Issues with India goods and service tax (IN GST)
 
 ms.search.region: India
 

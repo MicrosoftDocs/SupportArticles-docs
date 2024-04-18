@@ -4,17 +4,17 @@
 title: Incorrect field values on the GSTR report
 description: Provides troubleshooting information that can help when field values on the generated GSTR report are incorrect.
 author: yungu
-ms.date: 11/01/2022
+ms.date: 04/18/2024
 
 # optional metadata
 
 #ms.search.form:
 audience: Application user
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm: 
-# ms.custom: 
+ms.custom: sap:Tax - India tax\Issues with India goods and service tax (IN GST)
 ms.search.region: India
 # ms.search.industry: 
 ms.author: wangchen

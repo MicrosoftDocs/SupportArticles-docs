@@ -4,17 +4,17 @@
 title: Tax configuration errors
 description: Provides troubleshooting information that can help with tax configuration errors.
 author: peter-xu
-ms.date: 10/27/2022
+ms.date: 04/18/2024
 
 # optional metadata
 
 #ms.search.form:
 audience: Application user
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm: 
-# ms.custom: 
+ms.custom: sap:Tax - India tax\Issues with generic tax engine (GTE)
 ms.search.region: India
 # ms.search.industry: 
 ms.author: wangchen

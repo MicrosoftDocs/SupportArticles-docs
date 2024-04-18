@@ -4,17 +4,17 @@
 title: Incorrect field value in invoice journal or voucher
 description: Provides troubleshooting information that can help when a field value in an invoice journal or voucher is incorrect.
 author: yungu
-ms.date: 11/02/2022
+ms.date: 04/18/2024
 
 # optional metadata
 
 #ms.search.form:
 audience: Application user
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm: 
-# ms.custom: 
+ms.custom: sap:Tax - India tax\Issues with India goods and service tax (IN GST)
 ms.search.region: India
 # ms.search.industry: 
 ms.author: wangchen

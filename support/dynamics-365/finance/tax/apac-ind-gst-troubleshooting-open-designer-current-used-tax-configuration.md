@@ -4,7 +4,7 @@
 title: Open the designer for the current tax configuration
 description: Introduces how to open the designer for the tax configuration that is currently used.
 author: yungu
-ms.date: 10/28/2022
+ms.date: 04/18/2024
 
 # optional metadata
 
@@ -13,11 +13,11 @@ audience: Application user
 
 # ms.devlang
 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm
 
-# ms.custom
+ms.custom: sap:Tax - India tax\Issues with generic tax engine (GTE)
 
 ms.search.region: India
 

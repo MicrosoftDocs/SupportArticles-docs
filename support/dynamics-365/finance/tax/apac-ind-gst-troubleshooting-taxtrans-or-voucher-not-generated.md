@@ -6,7 +6,7 @@ title: TaxTrans or voucher isn't generated
 description: Provides troubleshooting information to help resolve an issue where the TaxTrans record or voucher isn't generated.
 author: shaoling
 manager: beya
-ms.date: 10/27/2022
+ms.date: 04/18/2024
 
 # optional metadata
 
@@ -15,11 +15,11 @@ audience: Application user
 
 # ms.devlang
 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm
 
-# ms.custom
+ms.custom: sap:Tax - India tax\Issues with India goods and service tax (IN GST)
 
 ms.search.region: India
 

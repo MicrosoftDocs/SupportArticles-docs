@@ -13,7 +13,7 @@ audience: Application User
 # ms.devlang: 
 ms.reviewer: twheeloc
 # ms.tgt_pltfrm: 
-# ms.custom: 
+ms.custom: sap:General ledger - Period end and year-end tasks\Issues with year-end close
 ms.search.region: Global 
 # ms.search.industry: 
 ms.author: kweekley

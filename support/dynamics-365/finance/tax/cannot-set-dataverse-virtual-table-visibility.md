@@ -6,11 +6,12 @@ ms.date: 07/26/2022
 ms.topic: troubleshooting
 ms.search.form: ERSolutionTable_RCSSetVirtualTableVisibility
 audience: Application User
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 ms.search.region: Global
 ms.author: hshi
 ms.search.validFrom: 2022-07-26
 ms.dyn365.ops.version: 10.0.30
+ms.custom: sap:Tax - indirect tax\Issues with tax calculation service
 ---
 
 # Error 400 or 401 when you set Dataverse virtual table visibility

@@ -5,7 +5,7 @@
 title: Tax transaction ID is incorrect
 description: Provides steps to correct the tax transaction ID.
 author: shaoling
-ms.date: 10/27/2022
+ms.date: 04/18/2024
 
 # optional metadata
 
@@ -14,11 +14,11 @@ audience: Application user
 
 # ms.devlang
 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm
 
-# ms.custom
+ms.custom: sap:Tax - India tax\Issues with India goods and service tax (IN GST)
 
 ms.search.region: India
 

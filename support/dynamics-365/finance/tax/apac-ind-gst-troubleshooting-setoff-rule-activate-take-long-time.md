@@ -5,17 +5,17 @@ title: Activating the setoff rule takes a long time
 description: Provides troubleshooting information to help speed up the activation process for setoff rules.
 author: shaoling
 manager: beya
-ms.date: 11/02/2022
+ms.date: 04/18/2024
 
 # optional metadata
 
 #ms.search.form:
 audience: Application user
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm: 
-# ms.custom: 
+ms.custom: sap:Tax - India tax\Issues with India goods and service tax (IN GST)
 ms.search.region: India
 # ms.search.industry: 
 ms.author: wangchen
