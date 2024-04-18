@@ -7,6 +7,8 @@ ms.reviewer: sureshka
 ---
 # Technical support policy for Microsoft SQL Server
 
+[!INCLUDE [CentOS End Of Life](../../includes/centos-end-of-life-note.md)]
+
 This article describes the support policy for Microsoft SQL Server.
 
 _Original product version:_ &nbsp; SQL Server 2017 on Linux (all editions), SQL Server 2017 on Windows (all editions)  

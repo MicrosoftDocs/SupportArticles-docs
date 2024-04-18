@@ -1,11 +1,13 @@
 ---
 title: Support policies for Azure Virtual Machines
 description: Describes the support policy for System Center 2012 Configuration Manager and System Center 2012 Endpoint Protection to manage server software in the Azure Virtual Machine environment.
-ms.date: 12/05/2023
+ms.date: 04/15/2024
 ms.reviewer: kaushika, mikecure
 ms.custom: sap:Endpoint Protection\Antimalware Policies
 ---
 # System Center 2012 Configuration Manager and System Center 2012 Endpoint Protection support for Azure Virtual Machines
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article introduces the support policy for Microsoft System Center 2012 Configuration Manager and System Center 2012 Endpoint Protection to manage server software in the Microsoft Azure Virtual Machine environment (infrastructure-as-a-service).
 
