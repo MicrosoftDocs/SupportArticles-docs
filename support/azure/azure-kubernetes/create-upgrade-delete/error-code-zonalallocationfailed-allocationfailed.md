@@ -81,11 +81,11 @@ If you receive an `OverconstrainedAllocationRequest` error code, you can try to 
 
 ## Cause 3: Not enough dedicated hosts or fault domains
 
-You're trying to deploy a node pool in a dedicated host group that has limited capacity and/or that doesn't satisfy the fault domain constraint.
+You're trying to deploy a node pool in a dedicated host group that has limited capacity or doesn't satisfy the fault domain constraint.
 
 ## Solution 3: Ensure you have enough dedicated hosts for your AKS nodes/VMSS
 
-As per [Planning for ADH Capacity on AKS](/azure/aks/use-azure-dedicated-hosts#planning-for-adh-capacity-on-aks), you're responsible for planning enough dedicated hosts to span as many fault domains as your AKS VMSS require. For example, if the AKS VMSS is created with *FaultDomainCount=2*, you will need at least 2 dedicated hosts in different fault domains (*FaultDomain 0* and *FaultDomain 1*).
+As per [Planning for ADH Capacity on AKS](/azure/aks/use-azure-dedicated-hosts#planning-for-adh-capacity-on-aks), you're responsible for planning enough dedicated hosts to span as many fault domains as required by your AKS VMSS. For example, if the AKS VMSS is created with *FaultDomainCount=2*, you need at least two dedicated hosts in different fault domains (*FaultDomain 0* and *FaultDomain 1*).
 
 ## More information
 
