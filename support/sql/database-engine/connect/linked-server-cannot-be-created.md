@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Creation of the linked server failed due to a TLS version mismatch
+# Problem connecting from Windows Server 2022+ to SQL Server on older Windows version
 
 This article helps you resolve a scenario when a linked server can't be created due to the mismatch in the TLS version.
 
