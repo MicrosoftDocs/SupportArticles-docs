@@ -1,6 +1,6 @@
 ---
-title: Linked server couldn't be created after moving on-premises server to Azure
-description: This article offers a solution to the issue of being unable to create a linked server after moving an on-premises server to Azure.
+title: Linked server couldn't be created due to a mismatch in TLS version
+description: This article provides a resolution for the challenge of creating a linked server when encountering a TLS version disparity from higher to lower versions.
 ms.date: 04/18/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -8,9 +8,9 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Linked server couldn't be created after moving on-premises server to Azure
+# Creation of the linked server failed due to a TLS version mismatch
 
-This article helps you resolve a scenario when a linked server can't be created after moving the on-premises server to Azure.
+This article helps you resolve a scenario when a linked server can't be created due to the mismatch in the TLS version.
 
 ## Symptoms
 
