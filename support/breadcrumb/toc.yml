@@ -190,10 +190,10 @@ items:
       - name: Site Recovery
         tocHref: /troubleshoot/azure/site-recovery/
         topicHref: /troubleshoot/azure/site-recovery/welcome-site-recovery
-      - name: Linux Virtual Machine
+      - name: Linux Virtual Machines
         tocHref: /troubleshoot/azure/virtual-machines/linux/
         topicHref: /troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux
-      - name: Windows Virtual Machine 
+      - name: Windows Virtual Machines 
         tocHref: /troubleshoot/azure/virtual-machines/windows/
         topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
       - name: Virtual Machine Scale Sets
