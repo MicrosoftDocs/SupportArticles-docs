@@ -8,7 +8,7 @@ ms.reviewer: Mjacquet
 
 With System Center Data Protection Manager, the majority of the problems with Exchange data sources are caused by an issue on the Exchange server.
 
-_Original product version:_ &nbsp; System Center 2012 Data Protection Manager, System Center 2012 R2 Data Protection Manager  
+_Original product version:_ &nbsp; System Center Data Protection Manager  
 _Original KB number:_ &nbsp; 10061
 
 Investigation of the Exchange server event logs during the time of the DPM failure will usually point to the root cause. Some general examples are missing logs, database or copies not in a healthy state, or perhaps something preventing the Exchange writer or information store from truncating the logs after a backup is complete.
