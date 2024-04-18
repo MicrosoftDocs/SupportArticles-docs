@@ -61,8 +61,6 @@ To resolve these errors, follow these steps:
 
 1. Open the **Computer Certificate Store** in the Microsoft Management Console (MMC).
 
-   :::image type="content" source="media/ssl-errors-after-tls-1-2/mmc-cert-properties.png" alt-text="Select Properties from SQL Server Configuration Manager.":::
-
    1. Navigate to **Personal Certificates**.
    1. Expand the **Intended Purposes** column, and double-click certificates that are enabled for server authentication.
    1. Check whether the thumbprint matches the thumbprint in the error log file. If it doesn't, try another certificate.
@@ -71,6 +69,8 @@ To resolve these errors, follow these steps:
    1. Locate the certificate in MMC.
    1. In MMC, right-click the certificate, and then select **Properties**.
    1. On the **General** tab, either disable the certificate completely or selectively disable **Server Authentication**.
+   
+   :::image type="content" source="media/ssl-errors-after-tls-1-2/mmc-cert-properties.png" alt-text="Select Properties from SQL Server Configuration Manager.":::
 
 1. Save the changes.
 1. Restart SQL Server.
