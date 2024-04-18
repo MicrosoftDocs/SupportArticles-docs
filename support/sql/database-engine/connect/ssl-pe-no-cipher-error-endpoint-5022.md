@@ -1,20 +1,20 @@
 ---
-title: Troubleshooting the SSL_PE_NO_CIPHER error
-description: This article helps you to resolve the SSL_PE_NO_CIPHER error that occurs on endpoint 5022.
-ms.date: 03/08/2024
+title: SSL_PE_NO_CIPHER error at endpoint 5022
+description: This article provides the steps to resolve the SSL_PE_NO_CIPHER error on endpoint 5022.
+ms.date: 04/17/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# The SSL_PE_NO_CIPHER error occurs on endpoint 5022
+# The SSL_PE_NO_CIPHER error occurs on endpoint 5022 in SQL Server
 
-This article helps you resolve the error related to the `SSL_PE_NO_CIPHER`. It also provides scripts for enforcing Transport Layer Security (TLS) on different versions of .NET Framework.
+This article helps you resolve the error related to the `SSL_PE_NO_CIPHER` that occurs on endpoint 5022. It also provides scripts for enforcing Transport Layer Security (TLS) on different versions of .NET Framework.
 
 ## Symptoms
 
-The Security Socket Layer (SSL) "SSL_PE_NO_CIPHER" error occurs on endpoint port 5022, and there is a time delay longer than 15 seconds, potentially leading to timeouts. It occurs when the SSL handshake fails due to a lack of compatible cipher suites between the client and server. This can happen if outdated or weak encryption algorithms are used.
+The Security Socket Layer (SSL) "SSL_PE_NO_CIPHER" error occurs on endpoint port 5022, and there's a time delay longer than 15 seconds, potentially leading to timeouts. It occurs when the SSL handshake fails due to a lack of compatible cipher suites between the client and server. This can happen if outdated or weak encryption algorithms are used.
 
 ## Resolution
 
