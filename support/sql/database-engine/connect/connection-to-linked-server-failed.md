@@ -18,7 +18,7 @@ The following error messages are logged in the SQL Server error log.
 
 > TCP Provider: An existing connection was forcibly closed by the remote host.
 
-> OLE DB provider "MSOLEDBSQL" for linked server "</LinkedServerName/>" returned message "Client unable to establish connection". (Microsoft SQL Server, Error: 10054)
+> OLE DB provider "MSOLEDBSQL" for linked server "\<LinkedServerName\>" returned message "Client unable to establish connection". (Microsoft SQL Server, Error: 10054)
 
 The following screenshot shows the event ID 36874. This is a Schannel error that occurs in the Windows Event Viewer which indicates that the client and server support different sets of cipher suites which causes a failure in connection.
 
