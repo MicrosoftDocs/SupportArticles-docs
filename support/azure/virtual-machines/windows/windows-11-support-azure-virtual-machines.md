@@ -16,9 +16,7 @@ This article provides details about the applicable processors for Microsoft Azur
 
 ## Product support matrix
 
-<details>
-
-<summary>Windows 11 support details for different Azure VM product families</summary>
+**Windows 11 support details for different Azure VM product families**
 
 |VM product family|Windows 11 support|
 |:----|:----|
@@ -82,8 +80,6 @@ This article provides details about the applicable processors for Microsoft Azur
 |NVv4-Series|Yes|
 |NVadsA10_v5|Yes|
 |NP-Series|Yes|
-
-</details>
 
 > [!NOTE]
 >
