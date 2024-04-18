@@ -43,7 +43,7 @@ It's a great time to explore your options and prepare a migration plan. You can:
 - Upgrade your on-premises servers from Exchange Server 2013 to Exchange Server 2019.
 
 > [!IMPORTANT]
-> If your organization chooses to migrate mailboxes to Microsoft 365 but plans to keep using Microsoft Entra Connect to manage user accounts in Active Directory, you need to keep at least one Microsoft Exchange server on-premises. If you remove all Exchange servers, you won't be able to make changes to Exchange recipients in Exchange Online because the source of authority is your on-premises Active Directory. In this scenario, you have the following options:
+> If your organization chooses to migrate mailboxes to Microsoft 365 but plans to keep using Microsoft Entra Connect to manage user accounts in Active Directory, you need to keep at least one Microsoft Exchange Server. If you remove all Exchange servers, you won't be able to make changes to Exchange recipients in Exchange Online because the source of authority is your on-premises Active Directory. In this scenario, you have the following options:
 >
 >- *Recommended:* Migrate your mailboxes to Microsoft 365 and upgrade your environment to Exchange Server 2019. Use Exchange Server 2013 to connect to Microsoft 365 and migrate mailboxes. Next, upgrade from Exchange Server 2013 to Exchange Server 2019, and decommission servers running Exchange Server 2013.
 >- Upgrade from Exchange Server 2013 to Exchange Server 2019 first, and then use Exchange Server 2019 to migrate mailboxes to Microsoft 365.
@@ -124,7 +124,7 @@ Here are things to consider about minimal hybrid migration:
 
 For more information, see [Use Minimal Hybrid to quickly migrate Exchange mailboxes to Office 365](/Exchange/mailbox-migration/use-minimal-hybrid-to-quickly-migrate).
 
-### Full hybrid
+### Full hybrid migration
 
 In a full hybrid migration, you have many hundreds, up to tens of thousands, of mailboxes, and you move some or all to Microsoft 365. Because these migrations are typically longer-term, hybrid migrations make it possible to:
 
@@ -147,7 +147,7 @@ Things to consider about full-hybrid migration:
 - Users don't need to set up a new Outlook profile on most of their devices, although some older Android phones might need a new profile. Users won't need to redownload their email.
 
 > [!IMPORTANT]
-> If your organization chooses to migrate mailboxes to Microsoft 365 but plans to keep Microsoft Entra Connect to manage user accounts in Active Directory, you need to keep at least one Exchange server on-premises. If all Exchange servers are removed, you won't be able to make changes to Exchange recipients. This is because the source of authority is Active Directory and changes need to be made there.
+> If your organization chooses to migrate mailboxes to Microsoft 365 but plans to keep Microsoft Entra Connect to manage user accounts in Active Directory, you need to keep at least one Exchange Server. If all Exchange servers are removed, you won't be able to make changes to Exchange recipients. This is because the source of authority is Active Directory and changes need to be made there.
 
 If a full hybrid migration sounds right for you, see the following helpful resources:
 
@@ -157,7 +157,7 @@ If a full hybrid migration sounds right for you, see the following helpful resou
 - [Hybrid Configuration Wizard FAQs](/exchange/hybrid-configuration-wizard-faqs)
 - [Hybrid deployment prerequisites](/exchange/hybrid-deployment-prerequisites)
 
-## Upgrade to a newer version of Exchange Server on-premises
+## Upgrade to a newer version of Exchange Server
 
 We strongly believe that you get the best value and user experience by migrating fully to Microsoft 365. But we understand that some organizations need to keep some Exchange servers on-premises. This might be because of regulatory requirements, to guarantee data isn't stored in a foreign datacenter, because you have unique settings or requirements that can't be met in the cloud, or because you need Exchange to manage cloud mailboxes because you still use Active Directory on-premises. In any case, if you keep Exchange on-premises, you should ensure your Exchange Server 2013 environment is upgraded.
 
