@@ -175,7 +175,6 @@ The following table describes important things to know about upgrading from Exch
 
 |Item|More information|
 |---|---|
-|End of support dates|Like Exchange Server 2013, each version of Exchange has its own end-of-support date. For Exchange Server 2013, that date is April 2023|
 |Migration path to Exchange Server 2019|The migration path from Exchange Server 2013 to a newer version is simple: <p> Install Exchange Server 2019 into your existing Exchange Server 2013 organization. <p> Move services and data from Exchange Server 2013 to Exchange Server 2019 and decommission Exchange Server 2013 servers.|
 |Server hardware|Server hardware requirements have changed from Exchange Server 2013. Make sure your hardware is compatible. Find out more about hardware requirements here: <p> [Exchange Server 2019 system requirements](/exchange/plan-and-deploy/system-requirements?view=exchserver-2019&preserve-view=true) <p>With the significant improvements in Exchange performance and the increased computing power and storage capacity in newer servers, you'll likely need fewer servers to support the same number of mailboxes.|
 |Operating system version|The minimum supported operating system version for Exchange Server 2019 is Windows Server 2019. Windows Server 2022 support is coming soon <p> You can find more information about operating system support at [Exchange Supportability Matrix](/exchange/plan-and-deploy/supportability-matrix).|
