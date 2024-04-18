@@ -22,7 +22,7 @@ ms.date: 04/18/2024
 
 # Exchange Server 2013 end of support roadmap
 
-Support for Exchange Server 2013 ended **April 11, 2023**. If you haven't already migrated from Exchange Server 2013 to Microsoft 365, Office 365, or Exchange Server 2019, now's the time to start planning.
+Support for Exchange Server 2013 ended on **April 11, 2023**. If you haven't already migrated from Exchange Server 2013 to Microsoft 365, Office 365, or Exchange Server 2019, now's the time to start planning.
 
 ## What does *end of support* mean?
 
@@ -33,14 +33,14 @@ Most Microsoft products have a support lifecycle during which they get new featu
 - Security fixes for vulnerabilities that might make the server vulnerable to security breaches.
 - Time zone updates.
 
-Although your installation of Exchange Server 2013 continues to run, because of the listed changes, we strongly recommend that you migrate from Exchange Server 2013 to Exchange Server 2019 as soon as possible.
+Although your installation of Exchange Server 2013 has continued to run, because of the listed changes, we strongly recommend that you migrate from Exchange Server 2013 to Exchange Server 2019 as soon as possible.
 
 ## What are my options?
 
 It's a great time to explore your options and prepare a migration plan. You can:
 
 - Migrate to Microsoft 365. Migrate mailboxes, public folders, and other data using cutover, minimal hybrid, or full hybrid migration. Then, remove on-premises Exchange servers and Active Directory.
-- Upgrade Exchange Server 2013. Move to Exchange Server 2019 for your on-premises servers.
+- Upgrade your on-premises servers from Exchange Server 2013 to Exchange Server 2019.
 
 > [!IMPORTANT]
 > If your organization chooses to migrate mailboxes to Microsoft 365 but plans to keep using Microsoft Entra Connect to manage user accounts in Active Directory, you need to keep at least one Microsoft Exchange server on-premises. If you remove all Exchange servers, you won't be able to make changes to Exchange recipients in Exchange Online because the source of authority is your on-premises Active Directory. In this scenario, you have the following options:
@@ -48,11 +48,11 @@ It's a great time to explore your options and prepare a migration plan. You can:
 >- *Recommended:* Migrate your mailboxes to Microsoft 365 and upgrade your environment to Exchange Server 2019. Use Exchange Server 2013 to connect to Microsoft 365 and migrate mailboxes. Next, upgrade from Exchange Server 2013 to Exchange Server 2019, and decommission servers running Exchange Server 2013.
 >- Upgrade from Exchange Server 2013 to Exchange Server 2019 first, and then use Exchange Server 2019 to migrate mailboxes to Microsoft 365.
 
-The following sections discuss paths that you can take to upgrade from Exchange Server 2013.
+The following sections discuss upgrade paths from Exchange Server 2013.
 
 ## Migrate to Microsoft 365
 
-Migrating to Microsoft 365 is the best and simplest option to help you retire your Exchange Server 2013 deployment. With a migration to Microsoft 365, you make a single hop away from old technology, and benefit from new features such as these:
+Migrating to Microsoft 365 is the best and simplest option to help you retire your Exchange Server 2013 deployment. When you migrate to Microsoft 365, you make a single hop away from old technology, and benefit from new features such as these:
 
 - Larger mailboxes with greater data resilience.
 - Security capabilities such as anti-spam and anti-malware protection.
@@ -78,10 +78,6 @@ Depending on your organization, you have a few options to get to Microsoft 365. 
 - Whether you want a seamless integration between your on-premises environment and Microsoft 365 during the migration.
 
 The following table shows your migration options and the most important factors that determine which method to use.
-
-<br>
-
-****
 
 |Migration option|Organization size|Duration|
 |---|---|---|
@@ -168,10 +164,6 @@ We strongly believe that you get the best value and user experience by migrating
 For the best experience, we recommend that you upgrade your remaining on-premises environment to Exchange Server 2019. You don't need to install Exchange Server 2016 because you can go directly from Exchange Server 2013 to Exchange Server 2019. Exchange Server 2019 most closely matches the experience available with Microsoft 365, although some features are available only in Microsoft 365.
 
 The following table describes important things to know about upgrading from Exchange Server 2013.
-
-<br>
-
-****
 
 |Item|More information|
 |---|---|
