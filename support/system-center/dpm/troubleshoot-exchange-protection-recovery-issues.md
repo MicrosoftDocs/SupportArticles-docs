@@ -43,7 +43,7 @@ You can get this error if network ports 5718 and 5719 on the Exchange server are
 
 ### Resolution 1: Configure DPM to use other ports
 
-Configure the DPMRA port and select a non-default port by using the following steps:
+Configure the DPMRA port and select a nondefault port by using the following steps:
 
 1. On the DPM server, open an administrative command prompt and change the directory to the location where the *SetAgentCfg.exe* utility is located.
 
@@ -59,7 +59,7 @@ Configure the DPMRA port and select a non-default port by using the following st
     ```
 
     > [!NOTE]
-    > In this command, the \<alternative_port> boilerplate represents a free non-default port.
+    > In this command, the \<alternative_port> boilerplate represents a free nondefault port.
 
 1. Verify that a new entry is created in the following registry subkey:
 
@@ -98,29 +98,59 @@ The most likely cause is a corrupted Exchange transaction log on the Exchange se
 
 `C:\Program Files\Microsoft System Center\DPM\DPM\Volumes\Replica\ vol_<VOL GUID>\<GUID>\Full\C-Vol\E0400121F44.log`
 
-To resolve this issue, rename the log file that's mentioned in the error message and copy a known good version from another DAG member. If the corrupted file is on the DPM server's replica volume, replace the file by using the following steps and then run a consistency check. Using the PowerShell commands to mount a replica volume and locate the offending or corrupt log file.
+To resolve this issue, rename the log file that's mentioned in the error message and copy a known good version from another DAG member. If the corrupted file is on the DPM server's replica volume, replace the file by using the following steps and then run a consistency check. Using the PowerShell commands to mount a replica volume and locate the offending or corrupted log file.
 
-1. Get all protection groups by using the following commands:
+1. Get all protection groups by using the following cmdlets:
 
     ```powershell
     $pg = get-protectiongroup
     $pg
     ```
 
-1. Get all data sources in the selected protection group based on the zero-based `$pg[index#]` by using the following commands:
+1. Get all data sources in the selected protection group based on the zero-based `$pg[index#]` by using the following cmdlets:
 
     ```powershell
     $ds=get-datasource $pg[#]
     $ds
     ```
 
-1. Mount the replica volume by only specifying the 
+1. Mount the replica volume by only specifying the `-datasource` parameter and the zero-based `$pg[index#]`:
 
+    ```powershell
+    mount-dpmrecoverypoint -datasource $ds[#]
+    ```
 
+1. Note the mount path that the replica was mounted under. For example:
 
+    `C:\Program Files\Microsoft System Center\DPM\DPM\Volumes\Replica\<VOL GUID>`
 
+1. Download the [PsExec tool](/sysinternals/downloads/psexec).
 
+1. From an administrative command prompt, run the following command to run a new *cmd.exe* in the system context.
 
+    ```console
+    Psexec.exe -s -i cmd.exe
+    ```
+
+1. Change directory to the replica path. For example:
+
+    `CD C:\Program Files\Microsoft System Center\DPM\DPM\Volumes\Replica\<VOL GUID>`
+
+1. Locate the corrupted log file by using the following command:
+
+    ```console
+    `DIR /S E0400121F44.log`
+    ```
+
+1. Rename the corrupted log and copy a known good version from another DAG member. Then, close the command prompt.
+
+1. Dismount the replica for the same data source by using the following cmdlet:
+
+    ```powershell
+    dismount-dpmrecoverypoint -datasource $ds[#]
+    ```
+
+1. Run a consistency check.
 
 ## The replica is inconsistent
 
