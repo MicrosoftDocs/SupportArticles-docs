@@ -33,7 +33,7 @@ Most Microsoft products have a support lifecycle during which they get new featu
 - Security fixes for vulnerabilities that might make the server vulnerable to security breaches.
 - Time zone updates.
 
-Although your installation of Exchange Server 2013 has continued to run, because of the listed changes, we strongly recommend that you migrate from Exchange Server 2013 to Exchange Server 2019 as soon as possible.
+Although your installation of Exchange Server 2013 continues to run, we strongly recommend that you migrate from Exchange Server 2013 to Exchange Server 2019 as soon as possible.
 
 ## What are my options?
 
