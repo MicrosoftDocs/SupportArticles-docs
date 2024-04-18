@@ -50,14 +50,14 @@ To resolve these errors, follow these steps:
 
    :::image type="content" source="media/ssl-errors-after-tls-1-2/protocols-for-server-cert-tab.png" alt-text="Screenshot of the Certificate tab that shows which certificate is used.":::
 
-1. If a certificate exists, select **View** to examine it, and then select **Clear**. Then, go to step 6.
+   - If a certificate exists, select **View** to examine it, and then select **Clear**. Then, go to step 6.
 
-1. If no certificate exists, examine the SQL Server error log file to get the hash code. You might see one of the following entries:
+   - If no certificate exists, examine the SQL Server error log file to get the hash code. You might see one of the following entries:
 
      `2023-05-30 14:59:30.89 spid15s The certificate [Cert Hash(sha1) "B3029394BB92AA8EDA0B8E37BAD09345B4992E3D"] was successfully loaded for encryption.`
       or
      `2023-05-19 04:58:56.42 spid11s A self-generated certificate was successfully loaded for encryption.`
-    If the certificate is self-generated, skip to step 2.
+      If the certificate is self-generated, skip to step 2.
 
 1. Open the **Computer Certificate Store** in the Microsoft Management Console (MMC).
 
