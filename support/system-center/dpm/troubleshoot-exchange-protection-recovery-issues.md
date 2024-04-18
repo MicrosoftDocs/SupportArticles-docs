@@ -98,7 +98,27 @@ The most likely cause is a corrupted Exchange transaction log on the Exchange se
 
 `C:\Program Files\Microsoft System Center\DPM\DPM\Volumes\Replica\ vol_<VOL GUID>\<GUID>\Full\C-Vol\E0400121F44.log`
 
-To resolve this issue, rename the log file that's mentioned in the error message and copy a known good version from another DAG member. If the corrupted file is on the DPM server's replica volume, replace the file by using the following steps and then run a consistency check.
+To resolve this issue, rename the log file that's mentioned in the error message and copy a known good version from another DAG member. If the corrupted file is on the DPM server's replica volume, replace the file by using the following steps and then run a consistency check. Using the PowerShell commands to mount a replica volume and locate the offending or corrupt log file.
+
+1. Get all protection groups by using the following commands:
+
+    ```powershell
+    $pg = get-protectiongroup
+    $pg
+    ```
+
+1. Get all data sources in the selected protection group based on the zero-based `$pg[index#]` by using the following commands:
+
+    ```powershell
+    $ds=get-datasource $pg[#]
+    $ds
+    ```
+
+1. Mount the replica volume by only specifying the 
+
+
+
+
 
 
 
