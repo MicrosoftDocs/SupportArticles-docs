@@ -4,8 +4,7 @@ description: Troubleshooting article for Microsoft 365 permission error in Busin
 ms.author: mikebc
 ms.reviewer: jswymer
 ms.topic: troubleshooting 
-ms.date: 04/15/2024
-ms.custom: bap-template
+ms.date: 04/18/2024
 ---
 
 # Troubleshoot "Microsoft 365 access has been enabled, but users get a permission error"

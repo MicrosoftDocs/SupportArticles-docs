@@ -2,7 +2,7 @@
 title: Troubleshoot profile configuration can't be started
 description: Learn how to troubleshoot issues with profile configuration.
 ms.custom: na
-ms.date: 04/15/2024
+ms.date: 04/18/2024
 ms.reviewer: solsen
 ms.topic: troubleshooting
 author: SusanneWindfeldPedersen

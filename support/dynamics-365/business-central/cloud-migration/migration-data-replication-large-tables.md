@@ -4,8 +4,7 @@ description: Troubleshooting article for data replication process in Business Ce
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.topic: troubleshooting 
-ms.date: 01/02/2024
-ms.custom: bap-template
+ms.date: 04/18/2024
 ---
 
 # Troubleshoot data replication issues for large tables in cloud migration

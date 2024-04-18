@@ -4,8 +4,7 @@ description: Troubleshooting article for general error messages during Business 
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.topic: troubleshooting 
-ms.date: 04/15/2024
-ms.custom: bap-template
+ms.date: 04/18/2024
 ---
 
 # Troubleshoot "Failed to enable your replication"

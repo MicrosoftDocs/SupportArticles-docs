@@ -4,8 +4,7 @@ description: Troubleshooting article for non-accessible tables in Business Centr
 ms.author: mikebc
 ms.reviewer: jswymer
 ms.topic: troubleshooting 
-ms.date: 04/15/2024
-ms.custom: bap-template
+ms.date: 04/18/2024
 ---
 
 # Troubleshoot "This page uses data from related tables that you do not have access to"

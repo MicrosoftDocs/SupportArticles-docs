@@ -4,8 +4,7 @@ description: Troubleshooting article for Microsoft 365 Teams link error message 
 ms.author: mikebc
 ms.reviewer: jswymer
 ms.topic: troubleshooting 
-ms.date: 04/15/2024
-ms.custom: bap-template
+ms.date: 04/18/2024
 ---
 
 # Troubleshoot "You shared a link in Teams, but users get a message that they can only view data"

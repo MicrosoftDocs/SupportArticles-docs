@@ -4,8 +4,7 @@ description: Troubleshooting article for the activity timed out error in Busines
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.topic: troubleshooting 
-ms.date: 04/15/2024
-ms.custom: bap-template
+ms.date: 04/18/2024
 ---
 
 # Activity timed out

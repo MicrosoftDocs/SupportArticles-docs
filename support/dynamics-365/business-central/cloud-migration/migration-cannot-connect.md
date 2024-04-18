@@ -4,8 +4,7 @@ description: Troubleshooting article for connection issues to SQL database in Bu
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.topic: troubleshooting 
-ms.date: 04/15/2024
-ms.custom: bap-template
+ms.date: 04/18/2024
 ---
 
 # Troubleshoot "Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect"
