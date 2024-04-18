@@ -65,14 +65,14 @@ Configure the DPMRA port and select a nondefault port by using the following ste
 
     `HKEY_LOCAL_MACHINE \Software\Microsoft\Microsoft Data Protection Manager\Agent\2.0\PsPortConfig`
 
-1. Copy the *setagentcfg.exe* file from the CPM server to the following folder on the protected server.
+1. Copy the *setagentcfg.exe* file from the DPM server to the following folder on the protected server.
 
     `%PROGRAMFILES%\Microsoft Data Protection Manager\DPM\bin`
 
 1. Run the following command on the protected server:
 
     ```console
-    setagentcfg.exe e DPMRA <alternative port>
+    setagentcfg.exe e DPMRA <alternative_port>
     ```
 
     > [!NOTE]
@@ -96,7 +96,7 @@ CRC errors with Exchange server protection are often indicated by an error messa
 
 The most likely cause is a corrupted Exchange transaction log on the Exchange server. However, pay attention to the path in the error message. If the path looks similar to the one below, there is a possibility that the log is corrupted on the DPM server:
 
-`C:\Program Files\Microsoft System Center\DPM\DPM\Volumes\Replica\ vol_<VOL GUID>\<GUID>\Full\C-Vol\E0400121F44.log`
+`C:\Program Files\Microsoft System Center\DPM\DPM\Volumes\Replica\vol_<VOL GUID>\<GUID>\Full\C-Vol\E0400121F44.log`
 
 To resolve this issue, rename the log file that's mentioned in the error message and copy a known good version from another DAG member. If the corrupted file is on the DPM server's replica volume, replace the file by using the following steps and then run a consistency check. Using the PowerShell commands to mount a replica volume and locate the offending or corrupted log file.
 
@@ -110,7 +110,7 @@ To resolve this issue, rename the log file that's mentioned in the error message
 1. Get all data sources in the selected protection group based on the zero-based `$pg[index#]` by using the following cmdlets:
 
     ```powershell
-    $ds=get-datasource $pg[#]
+    $ds = get-datasource $pg[#]
     $ds
     ```
 
@@ -132,7 +132,7 @@ To resolve this issue, rename the log file that's mentioned in the error message
     Psexec.exe -s -i cmd.exe
     ```
 
-1. Change directory to the replica path. For example:
+1. Change the directory to the replica path. For example:
 
     `CD C:\Program Files\Microsoft System Center\DPM\DPM\Volumes\Replica\<VOL GUID>`
 
