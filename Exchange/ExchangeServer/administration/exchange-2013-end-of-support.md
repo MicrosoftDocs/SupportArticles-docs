@@ -89,7 +89,7 @@ The following sections give you an overview of these methods. For more informati
 
 ### Cutover migration
 
-In a cutover migration, you migrate all your mailboxes, distribution groups, contacts, and so on, to Office 365 at a set date and time. When you're done, you shut down your on-premises Exchange servers and start using Microsoft 365 exclusively.
+In a cutover migration, you migrate all your mailboxes, distribution groups, contacts, and so on, to Microsoft 365 at a set date and time. When you're done, you shut down your on-premises Exchange servers and start using Microsoft 365 exclusively.
 
 Cutover migration is great for small organizations that don't have many mailboxes, want to get to Microsoft 365 quickly, and don't want to deal with the complexity of the other methods. But it should be completed in a week or less. And it requires users to reconfigure their Outlook profiles. Cutover migration can migrate up to 2,000 mailboxes, but we recommend you use it for a maximum of 150. If you try to migrate more, you could run out of time to transfer all the mailboxes before your deadline, and your IT support staff might get overwhelmed with requests to help users reconfigure Outlook.
 
@@ -107,7 +107,7 @@ Here are things to consider about cutover migration:
 To learn more about cutover migration, see:
 
 - [What you need to know about a cutover email migration](/Exchange/mailbox-migration/what-to-know-about-a-cutover-migration)
-- [Perform a cutover migration of email to Office 365](/Exchange/mailbox-migration/cutover-migration-to-office-365)
+- [Perform a cutover migration](/Exchange/mailbox-migration/cutover-migration-to-office-365)
 
 ### Minimal hybrid migration
 
@@ -122,7 +122,7 @@ Here are things to consider about minimal hybrid migration:
 - You'll need a Microsoft 365 license that includes Exchange Online for each user mailbox that you migrate.
 - Users won't need to set up a new Outlook profile on most of their devices, though some older Android phones might need a new profile. Users won't need to redownload their email.
 
-For more information, see [Use Minimal Hybrid to quickly migrate Exchange mailboxes to Office 365](/Exchange/mailbox-migration/use-minimal-hybrid-to-quickly-migrate).
+For more information, see [Use Minimal Hybrid to quickly migrate Exchange mailboxes to Microsoft 365](/Exchange/mailbox-migration/use-minimal-hybrid-to-quickly-migrate).
 
 ### Full hybrid migration
 
@@ -131,7 +131,7 @@ In a full hybrid migration, you have many hundreds, up to tens of thousands, of 
 - Show on-premises users the free/busy calendar information for users in Microsoft 365, and vice versa.
 - See a unified global address list that contains recipients in both on-premises and Microsoft 365.
 - View full Outlook recipient properties for all users, regardless of whether they're on-premises or in Microsoft 365.
-- Secure email communication between on-premises Exchange servers and Office 365 using TLS and certificates.
+- Secure email communication between on-premises Exchange servers and Microsoft 365 using TLS and certificates.
 - Treat messages sent between on-premises Exchange servers and Microsoft 365 as internal, enabling them to:
   - Be properly evaluated and processed by transport and compliance agents targeting internal messages.
   - Bypass anti-spam filters.
