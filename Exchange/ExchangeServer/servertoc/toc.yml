@@ -101,6 +101,8 @@
           href: ../administration/insufficient-access-rights-perform-operation.md
         - name: EWS App pool crashes
           href: ../administration/ews-app-pool-crashes.md
+        - name: Exchange 2013 end of support roadmap
+          href: ../administration/exchange-2013-end-of-support.md
         - name: Exchange CU installation fails
           href: ../administration/cannot-install-exchange-cu-localized-windows.md
         - name: Fail to add mailbox database copy
