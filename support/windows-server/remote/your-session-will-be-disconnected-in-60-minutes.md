@@ -92,7 +92,7 @@ You can also use [Registry Editor](#registry) to check the licensing configurati
 
 1. Depending on whether you want to configure Group Policy centrally from your domain or locally on each session host:
 1. Do one of the following:
-   - If you are managing group policy at the domain level, open the Group Policy Management Console (GPMC), select the Group Policy Object (GPO) that targets your RD Session Hosts, and then select **Edit**. This operation opens the Group Policy Editor.
+   - If you are managing group policy at the domain level, open the Group Policy Management Console (GPMC), right-click the Group Policy Object (GPO) that targets your RD Session Hosts, and then select **Edit**. This operation opens the Group Policy Editor.
    - If you are managing group policy at the server level, on the RD Session Host, open the Local Group Policy Editor.
 1. Select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Licensing**.
 1. Check the licensing mode and the list of licensing servers.
