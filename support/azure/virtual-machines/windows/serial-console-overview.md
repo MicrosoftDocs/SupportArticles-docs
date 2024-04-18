@@ -45,6 +45,8 @@ Serial Console is available in the following regions:
 - France South
 - Germany North
 - Germany West Central
+- Israel Central
+
 - Italy North
 - Japan East
 - Japan West
@@ -94,7 +96,7 @@ Serial Console for VMs and virtual machine scale set is accessible through the A
 
 Serial Console for VMs is as straightforward as clicking on **Serial console** within the **Help** section in the Azure portal.
 
-  1. Open the [Azure portal](https://portal.azure.com).
+1. Open the [Azure portal](https://portal.azure.com).
 
   1. Navigate to **All resources** and select a Virtual Machine. The overview page for the VM opens.
 
@@ -106,7 +108,7 @@ Serial Console for VMs is as straightforward as clicking on **Serial console** w
 
 Serial Console is available for virtual machine scale sets, accessible on each instance within the scale set. You will have to navigate to the individual instance of a virtual machine scale set before seeing the **Serial console** button. If your virtual machine scale set does not have boot diagnostics enabled, ensure you update your virtual machine scale set model to enable boot diagnostics, and then upgrade all instances to the new model in order to access serial console.
 
-  1. Open the [Azure portal](https://portal.azure.com).
+1. Open the [Azure portal](https://portal.azure.com).
 
   1. Navigate to **All resources** and select a Virtual Machine Scale Set. The overview page for the virtual machine scale set opens.
 
