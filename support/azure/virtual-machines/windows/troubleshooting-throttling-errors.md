@@ -9,7 +9,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-arm-template
 ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
-ms.date: 04/15/2024
+ms.date: 04/18/2024
 ms.reviewer: changov, viveksingla, vashan, rajraj, v-weizhu
 ---
 # Troubleshooting API throttling errors
