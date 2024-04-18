@@ -20,7 +20,7 @@ items:
     href: client-machine-cannot-connect-to-sqlserver.md
   - name: Connection to the linked server failed
     href: connection-to-linked-server-failed.md
-  - name: Connectivity issues from SQL Server Agent SSIS failures
+  - name: Error 0x80004005 occurs from SQL Sever Agent SSIS failures
     href: sql-server-faces-connectivity-issue-ssispack-fail.md
   - name: SQL Server Agent fails to start due to TLS issues
     href: unable-to-start-sql-agent.md
