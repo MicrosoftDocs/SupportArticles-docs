@@ -1,7 +1,7 @@
 ---
 title: Local SQL Server can't connect to a linked server when RSA encryption is used
 description: This article provides a resolution for an error that prevents a client computer from connecting to the linked server.
-ms.date: 04/16/2024
+ms.date: 04/18/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -20,7 +20,7 @@ You might receive the following error message if there's a mismatch in encryptio
 
 ## Cause
 
-The error might occur in the following situations:
+The 10054 error might occur in the following situations:
 
 - If the SQL Server certificate uses RSA to encrypt the public key but cipher suites for the client and server differ.
 
