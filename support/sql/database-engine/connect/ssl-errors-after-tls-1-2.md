@@ -1,7 +1,7 @@
 ---
 title: SSL errors after upgrading to TLS 1.2 in SQL Server
 description: This article provides information about the SSL errors that you might encounter after you upgrade to TLS 1.2 in SQL Server.
-ms.date: 04/10/2024
+ms.date: 04/18/2024
 ms.custom: sap:Connection issues
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -71,8 +71,6 @@ To resolve these errors, follow these steps:
    1. Locate the certificate in MMC.
    1. In MMC, right-click the certificate, and then select **Properties**.
    1. On the **General** tab, either disable the certificate completely or selectively disable **Server Authentication**.
-
-      :::image type="content" source="media/ssl-errors-after-tls-1-2/add-security-snapins.png" alt-text="Disable the certificate or the server authentication.":::
 
 1. Save the changes.
 1. Restart SQL Server.
