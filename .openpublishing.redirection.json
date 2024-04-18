@@ -1627,7 +1627,7 @@
     },
     {
       "source_path": "support/azure/virtual-machines/index.md",
-      "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/welcome-virtual-machines",
       "redirect_document_id": false
     },
     {

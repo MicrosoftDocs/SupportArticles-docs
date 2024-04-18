@@ -1,7 +1,7 @@
 - name: Welcome
   href: welcome-virtual-machines-windows.yml
 
-- name: Virtual Machine running Linux
+- name: Azure Linux Virtual Machines troubleshooting documentation
   href: ../linux/welcome-virtual-machines-linux.yml
   
 - name: Get additional support for VM-specific issues
@@ -9,6 +9,32 @@
 - name: How to create an Azure support request
   href: /azure/azure-portal/supportability/how-to-create-azure-support-request?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
+- name: What log files are collected during troubleshooting
+  items:
+  - name: Microsoft Azure IaaS VM logs and diagnostic information
+    href: iaas-logs.md
+  - name: Microsoft Azure PaaS VM logs
+    href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
+
+- name: Increase Quota Limits
+  items:
+  - name: Increase compute vCPU limits (Quota)
+    items:
+    - name: Resource Manager (ARM) quota increases
+      items:
+      - name: Increase VM series vCPU limit
+        href: /azure/azure-portal/supportability/per-vm-quota-requests?context=/troubleshoot/azure/virtual-machines/windows/context/context
+      - name: Increase total regional vCPU limit
+        href: /azure/azure-portal/supportability/regional-quota-requests?context=/troubleshoot/azure/virtual-machines/windows/context/context
+      - name: Increase spot quota limit
+        href: /azure/azure-portal/supportability/low-priority-quota?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: ASM (Classic) quota increases
+      href: /azure/azure-portal/supportability/classic-deployment-model-quota-increase-requests?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Networking quota increases
+      items:
+      - name: Increase networking limits
+        href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/windows/context/context
+          
 - name: Cannot connect to my VM
   items:
   - name: Cannot RDP because "You must change your password before logging on the first time" error
@@ -83,33 +109,36 @@
       href: reset-local-password-without-agent.md
     - name: Redeploy Windows virtual machine to new Azure node
       href: redeploy-to-new-node-windows.md
-    
-- name: VM Administration
+
+- name: Windows Update, Guest Patching and OS Upgrades
   items:
-  - name: Support statements
+  - name: Upgrade VM to contain more than 64 vCPUs
+    href: vm-cannot-upgrade-64-vcpu.md
+
+- name: Support statements
+  items:
+  - name: What Microsoft server software is supported in Azure virtual machines
+    href: server-software-support.md
+  - name: What 32-bit operating systems are supported?
+    href: support-32-bit-operating-systems-virtual-machines.md
+  - name: Windows 11 support on Azure Virtual Machines
+    href: windows-11-support-azure-virtual-machines.md
+  - name: Windows Server 2008 R2 Support statements
     items:
-    - name: What Microsoft server software is supported in Azure virtual machines
-      href: server-software-support.md
-    - name: What 32-bit operating systems are supported?
-      href: support-32-bit-operating-systems-virtual-machines.md
-    - name: Windows 11 support on Azure Virtual Machines
-      href: windows-11-support-azure-virtual-machines.md
-    - name: Windows Server 2008 R2 Support statements
-      items:
-        - name: Upgrade Windows Server 2008 and Windows Server 2008 R2
-          href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-        - name: Windows Server 2008/2008 R2 Extended Security Updates
-          href: /windows-server/get-started/uploading-specialized-ws08-image-to-azure?context=/troubleshoot/azure/virtual-machines/windows/context/context
-        - name: Upload a Windows Server 2008/2008 R2 specialized image to Azure
-          href: /windows-server/get-started/modernize-windows-server-2008?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Windows Server 2003 on Azure statement
-      href: run-win-server-2003.md
-    - name: Citrix services support policy
-      href: support-policy-citrix-services.md
-    - name: Retirement of the hybrid use benefit images
-      href: retirement-hybrid-use-benefit-images.md
-    - name: Windows Server images updated to .NET Framework 4.7
-      href: updates-included-windows-server-images.md
+      - name: Upgrade Windows Server 2008 and Windows Server 2008 R2
+        href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
+      - name: Windows Server 2008/2008 R2 Extended Security Updates
+        href: /windows-server/get-started/uploading-specialized-ws08-image-to-azure?context=/troubleshoot/azure/virtual-machines/windows/context/context
+      - name: Upload a Windows Server 2008/2008 R2 specialized image to Azure
+        href: /windows-server/get-started/modernize-windows-server-2008?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Windows Server 2003 on Azure statement
+    href: run-win-server-2003.md
+  - name: Citrix services support policy
+    href: support-policy-citrix-services.md
+  - name: Retirement of the hybrid use benefit images
+    href: retirement-hybrid-use-benefit-images.md
+  - name: Windows Server images updated to .NET Framework 4.7
+    href: updates-included-windows-server-images.md
 
 - name: Disk Management
   items:
@@ -141,12 +170,6 @@
   - name: FAQ
     href: /azure/virtual-machines/windows/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/windows/context/context
  
-- name: What log files are collected during troubleshooting
-  items:
-  - name: Microsoft Azure IaaS VM logs and diagnostic information
-    href: iaas-logs.md
-  - name: Microsoft Azure PaaS VM logs
-    href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
 - name: Remote troubleshooting for VM tools
   href: remote-tools-troubleshoot-azure-vm-issues.md
   items:
@@ -206,10 +229,6 @@
     href: gpu-disabled-upgrade-ubuntu.md
   - name: In-place system upgrade for Windows-based Azure VMs
     href: in-place-system-upgrade.md
-  - name: Out of memory error in Linux VM
-    href: oom-swap-file-linux-vm.md
-  - name: Upgrade VM to contain more than 64 vCPUs
-    href: vm-cannot-upgrade-64-vcpu.md
   - name: VM stuck in failed state
     href: vm-stuck-in-failed-state.md
   - name: VM is unavailable for 15 minutes
@@ -396,25 +415,6 @@
       href: activation-watermark-appears.md
   - name: KMS endpoints - new endpoints
     href: windows-activation-stopped-working.md
-
-- name: Configuration and Setup
-  items:
-  - name: Increase compute vCPU limits (Quota)
-    items:
-    - name: Resource Manager (ARM) quota increases
-      items:
-      - name: Increase VM series vCPU limit
-        href: /azure/azure-portal/supportability/per-vm-quota-requests?context=/troubleshoot/azure/virtual-machines/windows/context/context
-      - name: Increase total regional vCPU limit
-        href: /azure/azure-portal/supportability/regional-quota-requests?context=/troubleshoot/azure/virtual-machines/windows/context/context
-      - name: Increase spot quota limit
-        href: /azure/azure-portal/supportability/low-priority-quota?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: ASM (Classic) quota increases
-      href: /azure/azure-portal/supportability/classic-deployment-model-quota-increase-requests?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Networking quota increases
-      items:
-      - name: Increase networking limits
-        href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
 - name: VM performance
   items:

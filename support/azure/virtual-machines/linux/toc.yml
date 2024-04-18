@@ -1,9 +1,9 @@
 - name: Welcome
   href: welcome-virtual-machines-linux.yml
 
-- name: Virtual Machine running Windows
+- name: Azure Windows Virtual Machines troubleshooting documentation
   href: ../windows/welcome-virtual-machines-windows.yml
-  
+
 - name: Support for Linux and open-source technology in Azure
   href: support-linux-open-source-technology.md
 
@@ -26,6 +26,8 @@
       href: how-to-use-perfinsights-linux.md
   - name: Isolate bottlenecks in Linux
     href: troubleshoot-performance-bottlenecks-linux.md
+  - name: Out of memory error in Linux VM
+    href: oom-swap-file-linux-vm.md
   - name: Troubleshoot performance issues through monitoring
     href: troubleshoot-performance-virtual-machine-linux-windows.md
 

@@ -2571,11 +2571,6 @@
         "redirect_document_id": false
       },
       {
-        "source_path": "virtual-machines/welcome-virtual-machines.yml",
-        "redirect_url": "/troubleshoot/azure/",
-        "redirect_document_id": false
-      },
-      {
         "source_path": "virtual-machines/windows-11-support-azure-virtual-machines.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-11-support-azure-virtual-machines",
         "redirect_document_id": true
@@ -5433,6 +5428,26 @@
       {
         "source_path": "synapse-analytics-spark/perf/index.md",
         "redirect_url": "/troubleshoot/azure/synapse-analytics-spark/welcome-synapse-analytics-spark",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machines/windows/oom-swap-file-linux-vm.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/oom-swap-file-linux-vm",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machines/welcome-virtual-machines.yml",
+        "redirect_url": "/troubleshoot/azure/",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "general/cannot-create-vm-ea.md",
+        "redirect_url": "/azure/cost-management-billing/troubleshoot-billing/cannot-create-vm",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "general/cannot-sign-up-subscription.md",
+        "redirect_url": "/azure/cost-management-billing/troubleshoot-subscription/cannot-sign-up-subscription",
         "redirect_document_id": false
       }
   ]
