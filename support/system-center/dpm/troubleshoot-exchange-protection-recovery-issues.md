@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Exchange protection and recovery issues
 description: Describes how to troubleshoot Exchange protection and recovery issues in Data Protection Manager.
-ms.date: 04/08/2024
+ms.date: 04/18/2024
 ms.reviewer: Mjacquet
 ---
 # Troubleshoot Exchange protection and recovery issues in Data Protection Manager
@@ -43,7 +43,7 @@ You can get this error if network ports 5718 and 5719 on the Exchange server are
 
 ### Resolution 1: Configure DPM to use other ports
 
-Configure the DPMRA port and select a nondefault port by using the following steps:
+Configure the DPMRA port and select a nondefault port by following these steps:
 
 1. On the DPM server, open an administrative command prompt and change the directory to the location where the *SetAgentCfg.exe* utility is located.
 
@@ -76,7 +76,7 @@ Configure the DPMRA port and select a nondefault port by using the following ste
     ```
 
     > [!NOTE]
-    > Use the same port number that is specified in step 2.
+    > Use the same port number that's specified in step 2.
 
 1. Restart the DPM server.
 
@@ -94,11 +94,11 @@ CRC errors with Exchange server protection are often indicated by an error messa
 
 > DPM encountered an error while performing an operation for \\\\?\GLOBALROOTDevice\HarddiskVoIumeShadowCopyGUID.log on \<servername> (ID 2033 Details Data error (cyclic redundancy check) (0x80070017))
 
-The most likely cause is a corrupted Exchange transaction log on the Exchange server. However, pay attention to the path in the error message. If the path looks similar to the one below, there is a possibility that the log is corrupted on the DPM server:
+The most likely cause is a corrupted Exchange transaction log on the Exchange server. However, pay attention to the path in the error message. If the path looks similar to the following one, there's a possibility that the log on the DPM server is corrupted:
 
 `C:\Program Files\Microsoft System Center\DPM\DPM\Volumes\Replica\vol_<VOL GUID>\<GUID>\Full\C-Vol\E0400121F44.log`
 
-To resolve this issue, rename the log file that's mentioned in the error message and copy a known good version from another DAG member. If the corrupted file is on the DPM server's replica volume, replace the file by using the following steps and then run a consistency check. Using the PowerShell commands to mount a replica volume and locate the offending or corrupted log file.
+To resolve this issue, rename the log file that's mentioned in the error message and copy a known good version from another DAG member. If the corrupted file is on the DPM server's replica volume, use the following steps to replace the file, and then run a consistency check. Use the PowerShell commands to mount a replica volume and locate the offending or corrupted log file.
 
 1. Get all protection groups by using the following cmdlets:
 
@@ -114,19 +114,19 @@ To resolve this issue, rename the log file that's mentioned in the error message
     $ds
     ```
 
-1. Mount the replica volume by only specifying the `-datasource` parameter and the zero-based `$pg[index#]`:
+1. Mount the replica volume only by specifying the `-datasource` parameter and the zero-based `$pg[index#]`:
 
     ```powershell
     mount-dpmrecoverypoint -datasource $ds[#]
     ```
 
-1. Note the mount path that the replica was mounted under. For example:
+1. Note the mount path where the replica was mounted. For example:
 
     `C:\Program Files\Microsoft System Center\DPM\DPM\Volumes\Replica\<VOL GUID>`
 
 1. Download the [PsExec tool](/sysinternals/downloads/psexec).
 
-1. From an administrative command prompt, run the following command to run a new *cmd.exe* in the system context.
+1. From an administrative command prompt, run a new *cmd.exe* in the system context by using the following command:
 
     ```console
     Psexec.exe -s -i cmd.exe
@@ -144,7 +144,7 @@ To resolve this issue, rename the log file that's mentioned in the error message
 
 1. Rename the corrupted log and copy a known good version from another DAG member. Then, close the command prompt.
 
-1. Dismount the replica for the same data source by using the following cmdlet:
+1. Dismount the replica of the same data source by using the following cmdlet:
 
     ```powershell
     dismount-dpmrecoverypoint -datasource $ds[#]
