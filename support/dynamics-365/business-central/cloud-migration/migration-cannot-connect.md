@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot "Cannot connect to SQL database"
+title: Troubleshoot "Can't connect to SQL database"
 description: Troubleshooting article for connection issues to SQL database in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
@@ -7,15 +7,13 @@ ms.topic: troubleshooting
 ms.date: 04/18/2024
 ---
 
-# Troubleshoot "Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect"
+# Troubleshoot "Can't connect to SQL Database, ErrorCode=SqlFailedToConnect"
 
-This article explains how to troubleshoot the **Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect** error message when you try to connect to a SQL database.
-
-## Prerequisites
+This article explains how to troubleshoot the **Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect** error message when you try to connect to an SQL database.
 
 ## Symptom
 
-You get the **Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect** error message when you try to connect to a SQL database. This error often occurs together with the error **Check the linked service configuration is correct, and make sure the SQL Database firewall allows the integration runtime to access.**
+You get the **Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect** error message when you try to connect to an SQL database. This error often occurs together with the error **Check the linked service configuration is correct, and make sure the SQL Database firewall allows the integration runtime to access.**
 
 ## Cause
 

@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot "Card from shared link is minimal and doesn't include Details button"
-description: Troubleshooting article for Microsoft 365 permission error in Business Central.
+description: Troubleshooting article for Microsoft 365 when sharing links to Business Central.
 ms.author: mikebc
 ms.reviewer: jswymer
 ms.topic: troubleshooting 

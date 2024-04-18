@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot data replication issues for large tables in cloud migration
-description: Troubleshooting article for data replication process in Business Central cloud migration
+description: Troubleshooting article for data replication process for large tables in Business Central cloud migration
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.topic: troubleshooting 

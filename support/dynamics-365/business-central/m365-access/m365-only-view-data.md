@@ -15,8 +15,8 @@ When you share a link in Teams as a Business Central user, others get the error 
 
 ## Cause
 
-When sharing a Business Central link to a Teams chat or channels, navigating a link will always navigate out of Microsoft Teams where the data no longer becomes accessible to a person having a Microsoft 365 license.
+When someone shares a Business Central link to a Teams chat or channels, navigating a link will always navigate out of Microsoft Teams where the data no longer becomes accessible to a person having a Microsoft 365 license.
 
 ## Resolution
 
-When sharing pages or records, either include the link preview as a card, or share data as a tab in the chat or channel.
+When someone shares pages or records, either include the link preview as a card, or share data as a tab in the chat or channel.
