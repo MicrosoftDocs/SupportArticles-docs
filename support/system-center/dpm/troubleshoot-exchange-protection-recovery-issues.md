@@ -6,7 +6,7 @@ ms.reviewer: Mjacquet
 ---
 # Troubleshoot Exchange protection and recovery issues in Data Protection Manager
 
-With System Center 2012 Data Protection Manager (DPM 2012) or System Center 2012 R2 Data Protection Manager (DPM 2012 R2), the majority of the problems with Exchange data sources are caused by an issue on the Exchange server.
+With System Center Data Protection Manager, the majority of the problems with Exchange data sources are caused by an issue on the Exchange server.
 
 _Original product version:_ &nbsp; System Center 2012 Data Protection Manager, System Center 2012 R2 Data Protection Manager  
 _Original KB number:_ &nbsp; 10061
@@ -43,7 +43,44 @@ You can get this error if network ports 5718 and 5719 on the Exchange server are
 
 ### Resolution 1: Configure DPM to use other ports
 
-In DPM 2012, run `SetAgentConfig` to configure DPM to use another port. See [Update Rollup 3 for System Center 2012 R2 Data Protection Manager](https://support.microsoft.com/help/2966014) for more information.
+Configure the DPMRA port and select a non-default port by using the following steps:
+
+1. On the DPM server, open an administrative command prompt and change the directory to the location where the *SetAgentCfg.exe* utility is located.
+
+    > [!NOTE]
+    > By default, the utility is located in the following folder:
+    >
+    > `%PROGRAMFILES%/Microsoft System Center/DPM/DPM/Setup`
+
+1. Run the *SetAgentCfg.exe* utility by using the following command:
+
+    ```console
+    setagentcfg.exe s <protected_server_FQDN> <alternative_port>
+    ```
+
+    > [!NOTE]
+    > In this command, the \<alternative_port> boilerplate represents a free non-default port.
+
+1. Verify that a new entry is created in the following registry subkey:
+
+    `HKEY_LOCAL_MACHINE \Software\Microsoft\Microsoft Data Protection Manager\Agent\2.0\PsPortConfig`
+
+1. Copy the *setagentcfg.exe* file from the CPM server to the following folder on the protected server.
+
+    `%PROGRAMFILES%\Microsoft Data Protection Manager\DPM\bin`
+
+1. Run the following command on the protected server:
+
+    ```console
+    setagentcfg.exe e DPMRA <alternative port>
+    ```
+
+    > [!NOTE]
+    > Use the same port number that is specified in step 2.
+
+1. Restart the DPM server.
+
+1. Restart the DPMRA service on the protected server.
 
 ### Resolution 2: Configure the conflicting application to use another port
 
@@ -59,9 +96,11 @@ CRC errors with Exchange server protection are often indicated by an error messa
 
 The most likely cause is a corrupted Exchange transaction log on the Exchange server. However, pay attention to the path in the error message. If the path looks similar to the one below, there is a possibility that the log is corrupted on the DPM server:
 
-`C:\Program Files\Microsoft DPM\DPM\Volumes\Replica\Microsoft Exchange Replica Writer\vol_<VOL GUID>\<GUID>\Full\C-Vol\E0400121F44.log`
+`C:\Program Files\Microsoft System Center\DPM\DPM\Volumes\Replica\ vol_<VOL GUID>\<GUID>\Full\C-Vol\E0400121F44.log`
 
-To resolve this issue, rename the log file that's mentioned in the error message and copy a known good version from another DAG member. If the corrupted file is on the DPM server's replica volume, replace the file in the same way and retry the CRC.
+To resolve this issue, rename the log file that's mentioned in the error message and copy a known good version from another DAG member. If the corrupted file is on the DPM server's replica volume, replace the file by using the following steps and then run a consistency check.
+
+
 
 ## The replica is inconsistent
 
@@ -130,11 +169,11 @@ Many Exchange server recovery issues involve user mailboxes not visible in the D
 
 If you try to enumerate user mailboxes on the recovery tab of the DPM console and nothing is there, most likely the SG\DB was renamed, which is not supported.
 
-To fix the issue in DPM 2012, complete the following steps:
+To fix the issue in DPM, complete the following steps:
 
 1. Remove protection while retaining data for the Exchange database.
 2. Ensure that the Exchange services or server has been restarted, as the VSS writers will not update until this is done.
-3. Reprotect the data source and run a consistency check. Recoverable items should appear.
+3. Refresh the protected server. Then, reprotect the data source and run a consistency check. Recoverable items should appear.
 
 > [!NOTE]
 > There will be a gap in the enumeration for any days that backup occurred and the Exchange writer metadata was not updated. These cannot be restored but will eventually be removed as retention expires.
