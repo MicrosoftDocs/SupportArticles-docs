@@ -1,7 +1,7 @@
 ---
 title: Linked server couldn't be created after moving on-premises server to Azure
 description: This article offers a solution to the issue of being unable to create a linked server after moving an on-premises server to Azure.
-ms.date: 04/16/2024
+ms.date: 04/18/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -49,9 +49,13 @@ To resolve this error, follow these steps.
 
 1. Open PowerShell.
 
-1. To get the current language list, run `Get-WinUserLanguageList`.
+1. To get the current language list, run the following command:
 
-1. To set the language as English (United States), run `Set-WinUserLanguageList -LanguageList en-US`.
+   `Get-WinUserLanguageList`
+
+1. To set the language as English (United States), run the following command:
+
+   `Set-WinUserLanguageList -LanguageList en-US`
 
 1. Restart the server.
 
