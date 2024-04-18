@@ -29,4 +29,4 @@ The user who runs the cloud migration setup has insufficient permissions.
 - Make sure the user running the setup is assigned the SUPER permission set in Business Central online. 
 - If the user running the setup is a delegated admin, make sure that the customer has consented.
 
-For more information, see [Run cloud migration setup](/dynamics365/business-central/dev-itpro/administration/migration-setup.md).
+For more information, see [Run cloud migration setup](/dynamics365/business-central/dev-itpro/administration/migration-setup).

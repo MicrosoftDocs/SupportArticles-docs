@@ -27,4 +27,4 @@ The wrong SQL connection string was configured in the **Cloud Migration Setup** 
 
 ## Resolution
 
-Run the **Cloud Migration Setup** guide again and verify the connection string is correct. For more information, see [Define the SQL Connection](/dynamics365/business-central/dev-itpro/administration/migration-setup.md).
+Run the **Cloud Migration Setup** guide again and verify the connection string is correct. For more information, see [Define the SQL Connection](/dynamics365/business-central/dev-itpro/administration/migration-setup).
