@@ -5438,12 +5438,12 @@
       {
         "source_path": "general/cannot-create-vm-ea.md",
         "redirect_url": "/azure/cost-management-billing/troubleshoot-billing/cannot-create-vm",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "general/cannot-sign-up-subscription.md",
         "redirect_url": "/azure/cost-management-billing/troubleshoot-subscription/cannot-sign-up-subscription",
-        "redirect_document_id": true
+        "redirect_document_id": false
       }
   ]
 }
