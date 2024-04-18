@@ -139,7 +139,7 @@ To resolve this issue, rename the log file that's mentioned in the error message
 1. Locate the corrupted log file by using the following command:
 
     ```console
-    `DIR /S E0400121F44.log`
+    DIR /S E0400121F44.log
     ```
 
 1. Rename the corrupted log and copy a known good version from another DAG member. Then, close the command prompt.
