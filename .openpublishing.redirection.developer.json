@@ -4904,6 +4904,26 @@
       "source_path": "support/developer/biztalk/welcome-biztalk-server.yml",
       "redirect_url": "/previous-versions/troubleshoot/biztalk/welcome-biztalk-server",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/sql-base-diagnostics-collector.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/rs-diagnostics-collector-information.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/connectivity-diagnostics-collector.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/setup-data-collection-diagnostic-tool.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
     }
   ]
 }
