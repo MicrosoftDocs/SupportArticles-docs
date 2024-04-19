@@ -3255,7 +3255,7 @@ items:
     href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
   - name: Error when installing ESU product key for Windows Server 2012 R2 or 2012
     href: ./windows-server-eos-faq/error-installing-esu-product-key-windows-server-2012-or-2012-r2.md
-- name: Windows Troubleshooters
+- name: Support Tools
   items:
   - name: TroubleShootingScript toolset (TSS)
     items:
@@ -3285,5 +3285,5 @@ items:
         href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
   - name: Performance Monitoring Tools
     items:
-    - name: Troubleshoot high CPU usage issues by using Process Explorer
+    - name: Using Process Explorer
       href: ./support-tools/troubleshoot-high-cpu-usage-issues-process-explorer.md
