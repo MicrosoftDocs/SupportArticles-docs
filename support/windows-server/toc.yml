@@ -3283,3 +3283,7 @@ items:
       items:
       - name: Gather information for user experience-related issues
         href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
+  - name: Performance Monitoring Tools
+    items:
+    - name: Troubleshoot high CPU usage issues by using Process Explorer
+      href: ./support-tools/troubleshoot-high-cpu-usage-issues-process-explorer.md
