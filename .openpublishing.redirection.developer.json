@@ -4698,7 +4698,7 @@
     {
       "source_path": "support/sql/general/sql-base-diagnostics-collector.md",
       "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/sql/general/rs-diagnostics-collector-information.md",
