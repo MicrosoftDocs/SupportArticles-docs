@@ -20,8 +20,10 @@ ms.author: wangchen
 ms.search.validFrom: 2021-10-26
 ms.dyn365.ops.version: 10.0.21
 ---
-
 # The tax features list is empty in the Tax calculation parameters page
+
+> [!NOTE]
+> This article is applicable to version 10.0.38 or earlier.
 
 ## Symptoms
 
