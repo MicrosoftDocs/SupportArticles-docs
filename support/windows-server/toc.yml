@@ -3259,6 +3259,8 @@ items:
   items:
   - name: TroubleShootingScript toolset (TSS)
     items:
+    - name: Introduction to TroubleShootingScript toolset (TSS)
+      href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
     - name: Deployment (DnD)
       items:
       - name: Gather information for deployment-related issues
@@ -3269,8 +3271,6 @@ items:
         href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
       - name: Gather information for Group Policy issues
         href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
-    - name: Introduction to TroubleShootingScript toolset (TSS)
-      href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
     - name: Storage and High Availability (SHA)
       items:
       - name: Gather information for Hyper-V related issues
