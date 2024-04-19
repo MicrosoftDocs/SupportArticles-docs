@@ -54,7 +54,6 @@
     "fileMetadata": {
       "uhfHeaderId": {
         "azure/**.*": "Azure",
-        "developer/biztalk/**.*": "MSDocsHeader-BizTalk",
         "developer/browsers/**.*": "MSDocsHeader-MSEdge",
         "developer/dotnet/**.*": "MSDocsHeader-DotNet",
         "developer/host-integration-server/**.*": "MSDocsHeader-His",
@@ -225,7 +224,6 @@
         "developer/visualstudio/visual-basic/**/*.md": "dotnet",
         "developer/visualstudio/visual-basic/ide/*.md": "visual-basic-6",
         "developer/browsers/**/*.md": "internet-explorer",
-        "developer/biztalk/**/*.md": "biztalk-server",
         "developer/host-integration-server/**/*.md": "host-integration-server",
         "developer/webapps/aspnet/**/*.md": "aspnet",
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
@@ -341,14 +339,6 @@
         "system-center/scsm/**/*.md": "service-manager",
         "system-center/scom/**/*.md": "operations-manager",
         "developer/webapps/aspnetcore/practice-troubleshoot-linux/**/*.md": "practice-troubleshoot-linux",
-        "developer/biztalk/setup-config/*.md": "setup-config",
-        "developer/biztalk/adapter/*.md": "biztalk-server-adapter",
-        "developer/biztalk/dev-deploy/*.md": "dev-deploy",
-        "developer/biztalk/esb-toolkit/*.md": "esb-toolkit",
-        "developer/biztalk/accelerators/*.md": "biztalk-accelerators",
-        "developer/biztalk/entsso/*.md": "entsso",
-        "developer/biztalk/management-operations/*.md": "management-operations",
-        "developer/biztalk/performance/*.md": "performance",
         "developer/host-integration-server/network-integration/**/*.md": "network-integration",
         "developer/host-integration-server/app-integration/**/*.md": "app-integration",
         "developer/host-integration-server/data-integration/**/*.md": "data-integration",
@@ -360,7 +350,6 @@
         "windows-hardware/drivers/**/*.md": ""
       },
       "titleSuffix": {
-        "developer/biztalk/**/*.md": "BizTalk Server",
         "developer/dotnet/**/*.md": ".NET",
         "developer/dotnet/framework/**/*.md": ".NET Framework",
         "developer/dotnet/wcf/**/*.md": "Windows Communication Foundation",
@@ -412,10 +401,6 @@
         "dynamics/gp/*.md": "Dynamics GP"
       },
       "searchScope": {
-        "developer/biztalk/**/*.md": [
-          "Troubleshoot",
-          "BizTalk Server"
-        ],
         "developer/dotnet/**/*.md": [
           "Troubleshoot",
           ".NET"
