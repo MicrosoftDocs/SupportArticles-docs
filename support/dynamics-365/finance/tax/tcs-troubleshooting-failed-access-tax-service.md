@@ -20,10 +20,12 @@ ms.author: hangwan
 ms.search.validFrom: 02/16/2022
 ms.dyn365.ops.version: 10.0.21
 ---
-
 # "Failed to access tax service" error when selecting a value in Feature setup name
 
 This article explains how to fix the "Failed to access tax service" error of the Tax Calculation service.
+
+> [!NOTE]
+> This article is applicable to version 10.0.38 or earlier.
 
 ## Symptoms
 
