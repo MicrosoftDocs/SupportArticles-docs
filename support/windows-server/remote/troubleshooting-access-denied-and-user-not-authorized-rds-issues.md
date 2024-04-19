@@ -116,7 +116,7 @@ If you use local security policy, follow these steps:
 
 The message "Account restriction is preventing this user from signing in" typically means that [Credential Guard](/windows/security/identity-protection/credential-guard/) is restricting user access.
 
-Credential Guard only affects direct connections to remote computers. It's not supported for connections that use RD Connection Broker or RD Gateway. For more information about using Credential Guard, see [User can't authenticate or must authenticate twice](cannot-authenticate-must-authenticate-twice#users-are-denied-access-on-a-deployment-that-uses-remote-credential-guard-with-multiple-rd-connection-brokers.md).
+Credential Guard only affects direct connections to remote computers. It's not supported for connections that use RD Connection Broker or RD Gateway. For more information about using Credential Guard, see [User can't authenticate or must authenticate twice](cannot-authenticate-must-authenticate-twice.md).
 
 ### Troubleshoot SAM access restriction
 
