@@ -64,7 +64,7 @@ The following sections provide more specific troubleshooting information:
 - [Troubleshoot user access rights](#troubleshoot-user-access-rights).
 - [Troubleshoot "Account restriction is preventing this user from signing in."](#troubleshoot-account-restriction-is-preventing-this-user-from-signing-in)
 - [Troubleshoot SAM access restriction](#troubleshoot-sam-access-restriction).
-- [Troubleshooting Remote Destop Services service issues](#troubleshooting-remote-destop-services-service-issues).
+- [Troubleshoot Remote Desktop Services service issues](#troubleshoot-remote-desktop-services-service-issues).
 
 ### Troubleshoot permissions
 
@@ -130,7 +130,7 @@ To check this policy, follow these steps:
    > [!IMPORTANT]  
    > This policy is a security setting that can't be added or removed by using predefined Group Policy settings. It does, however, have an audit-only mode. The linked article provides information about this setting, how to configure audit-only mode, and how to use audit-only mode in a test environment.
 
-### Troubleshooting Remote Desktop Services service issues
+### Troubleshoot Remote Desktop Services service issues
 
 You can use the Services MMC snap-in (Services.msc, also available on the **Tools** menu in Server Manager) to manage the services locally or remotely. You can also use PowerShell to manage the services locally or remotely (if the remote computer is configured to accept remote PowerShell cmdlets).
 
