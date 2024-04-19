@@ -1,7 +1,7 @@
 ---
 title: Ask your admin to create an environment for you when opening Copilot for Sales
 description: Resolves the Ask your admin to create an environment for you error that occurs in Microsoft Copilot for Sales when a user tries to open the app.
-ms.date: 04/16/2024
+ms.date: 04/19/2024
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
@@ -29,7 +29,7 @@ When a user tries to open Microsoft Copilot for Sales, the following error is di
 
 ## Cause
 
-When the first user in the tenant tries to open Microsoft Copilot for Sales, no administrator exists to create an environment.
+This error occurs when the first user in a tenant tries to [open Microsoft Copilot for Sales](/microsoft-sales-copilot/open-app), and the tenant doesn't have any administrators assigned to create the environment.
 
 ## Resolution
 
