@@ -13,12 +13,14 @@ ms.search.validFrom: 2022-07-26
 ms.dyn365.ops.version: 10.0.30
 ms.custom: sap:Tax - indirect tax\Issues with tax calculation service
 ---
-
 # Error 400 or 401 when you set Dataverse virtual table visibility
 
 Error code: SYS81183
 
 This article describes the error codes (400 and 401) that can occur when you set Microsoft Dataverse virtual table visibility for Tax calculation service in a Regulatory Configuration Service (RCS) environment. It also explains what causes the issues and how to fix them.
+
+> [!NOTE]
+> This article is applicable to version 10.0.38 or earlier.
 
 ## Error 400 with "InternalServerError"
 
