@@ -2,9 +2,9 @@
 title: IIS may reject requests with HTTP 403.7 or 403.16 errors
 description: This article provides resolutions for the problem where IIS 8 may reject client certificate requests with HTTP 403.7 or 403.16 errors.
 ms.date: 12/11/2020
-ms.custom: sap:WWW Authentication and Authorization
+ms.custom: sap:WWW Authentication and Authorization\SSL client certificates and certificate mapping
 ms.reviewer: emmanubo
-ms.technology: iis-www-authentication-authorization
+ms.subservice: www-authentication-authorization
 ---
 # IIS may reject client certificate requests with HTTP 403.7 or 403.16 errors
 

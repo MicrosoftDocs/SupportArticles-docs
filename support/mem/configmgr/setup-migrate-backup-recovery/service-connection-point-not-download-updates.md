@@ -1,8 +1,9 @@
 ---
 title: A service connection point doesn't download updates
 description: Fixes an issue where a service connection point in Configuration Manager doesn't download updates. This issue occurs when the Baltimore CyberTrust Root certificate is missing, expired, or corrupted.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Site Server and Roles\Service Connection Point Operations
 ---
 # Configuration Manager service connection point doesn't download updates
 

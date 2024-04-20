@@ -1,7 +1,7 @@
 ---
 title: The APM feature causes a crash for the IIS application pool
 description: Fixes an issue in which the Application Performance Monitoring feature in System Center 2016 Operations Manager agent causes a crash for the IIS application pool running under .NET Framework 2.0 runtime.
-ms.date: 07/06/2020
+ms.date: 04/15/2024
 ---
 # APM feature causes a crash for the IIS application pool running under .NET Framework 2.0 runtime
 

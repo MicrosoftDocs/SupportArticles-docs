@@ -3,7 +3,7 @@ title: Cannot sign in to Visual Studio Team Services
 description: Describes an issue that prevents you from signing in to Visual Studio Team Services through Internet Explorer or Microsoft Edge.
 ms.date: 03/26/2020
 ms.reviewer: delhan
-ms.technology: internet-explorer-security-privacy
+ms.custom: sap:Security and Privacy
 ---
 # Can't sign in to Visual Studio Team Services through Internet Explorer or Microsoft Edge
 

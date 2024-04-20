@@ -3,7 +3,7 @@ title: Set Java security in Internet Explorer
 description: This article provides the steps that help you to set Java security in Internet Explorer.
 ms.date: 03/02/2020
 ms.reviewer: juanf
-ms.technology: internet-explorer-security-privacy
+ms.custom: sap:Security and Privacy
 ---
 # How to set Java security in Internet Explorer
 

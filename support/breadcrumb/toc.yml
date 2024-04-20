@@ -62,6 +62,10 @@ items:
       tocHref: /troubleshoot/sql/
       topicHref: /troubleshoot/sql/welcome-sql-server
 
+    - name: Microsoft Copilot for Sales
+      tocHref: /troubleshoot/sales-copilot/
+      topicHref: /troubleshoot/sales-copilot/welcome-sales-copilot
+
     - name: Microsoft Identity Manager
       tocHref: /troubleshoot/microsoft-identity-manager/
       topicHref: /troubleshoot/microsoft-identity-manager/welcome-identity-manager
@@ -104,46 +108,94 @@ items:
       - name: Azure App Service
         tocHref: /troubleshoot/azure/app-service/
         topicHref: /troubleshoot/azure/app-service/welcome-app-service
+      - name: API Management Service
+        tocHref: /troubleshoot/azure/api-mgmt/
+        topicHref: /troubleshoot/azure/api-mgmt/welcome-api-mgmt
+      - name: Azure Automation
+        tocHref: /troubleshoot/azure/automation/
+        topicHref: /troubleshoot/azure/automation/welcome-automation
+      - name: Azure Batch
+        tocHref: /troubleshoot/azure/hpc/batch/
+        topicHref: /troubleshoot/azure/hpc/batch/welcome-hpc-batch
       - name: Azure Cosmos DB
         tocHref: /troubleshoot/azure/cosmos-db/
         topicHref: /troubleshoot/azure/cosmos-db/
+      - name: Azure Container Instances
+        tocHref: /troubleshoot/azure/azure-container-instances/
+        topicHref: /troubleshoot/azure/azure-container-instances/welcome-container-instances
+      - name: Azure CycleCloud
+        tocHref: /troubleshoot/azure/hpc/cyclecloud/
+        topicHref: /troubleshoot/azure/hpc/cyclecloud/welcome-hpc-cyclecloud
       - name: Azure Functions
         tocHref: /troubleshoot/azure/azure-functions
         topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
+      - name: Azure HPC Pack
+        tocHref: /troubleshoot/azure/hpc/pack/
+        topicHref: /troubleshoot/azure/hpc/pack/welcome-hpc-pack
       - name: Azure Kubernetes Service
         tocHref: /troubleshoot/azure/azure-kubernetes/
         topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
       - name: Azure Monitor
         tocHref: /troubleshoot/azure/azure-monitor/
         topicHref: /troubleshoot/azure/azure-monitor/welcome-azure-monitor
-      - name: Azure Storage
-        tocHref: /troubleshoot/azure/azure-storage/
-        topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
-      - name: Azure Synapse Analytics
-        tocHref: /troubleshoot/azure/synapse-analytics
-        topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
-      - name: Cloud Services
-        tocHref: /troubleshoot/azure/cloud-services/
-        topicHref: /troubleshoot/azure/cloud-services/welcome-cloud-services
+      - name: Service Fabric
+        tocHref: /troubleshoot/azure/service-fabric/
+        topicHref: /troubleshoot/azure/service-fabric/welcome-service-fabric
+      - name: Blob Storage
+        tocHref: /troubleshoot/azure/azure-storage/blobs
+        topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
+      - name: Data API builder
+        tocHref: /troubleshoot/azure/data-api-builder/
+        topicHref: /troubleshoot/azure/data-api-builder/index.yml
+      - name: Files Storage
+        tocHref: /troubleshoot/azure/azure-storage/files
+        topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
+      - name: Synapse Analytics Apache Spark Pool
+        tocHref: /troubleshoot/azure/synapse-analytics/spark
+        topicHref: /troubleshoot/azure/synapse-analytics/spark/welcome-synapse-analytics-spark
+      - name: Synapse Analytics Dedicated SQL Pool
+        tocHref: /troubleshoot/azure/synapse-analytics/dedicated-sql
+        topicHref: /troubleshoot/azure/synapse-analytics/dedicated-sql/welcome-synapse-analytics-dedicated-sql
+      - name: Synapse Analytics Serverless SQL Pool
+        tocHref: /troubleshoot/azure/synapse-analytics/serverless-sql
+        topicHref: /troubleshoot/azure/synapse-analytics/serverless-sql/welcome-synapse-analytics-serverless-sql
+      - name: Synapse Analytics Workspace
+        tocHref: /troubleshoot/azure/synapse-analytics/workspace
+        topicHref: /troubleshoot/azure/synapse-analytics/workspace/welcome-synapse-analytics-workspace
+      - name: Virtual Network
+        tocHref: /troubleshoot/azure/virtual-network/
+        topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network
+      - name: Cloud Services (classic)
+        tocHref: /troubleshoot/azure/cloud-services/classic/
+        topicHref: /troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic
+      - name: Cloud Services (extended support)
+        tocHref: /troubleshoot/azure/cloud-service/extended/
+        topicHref: /troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended
       - name: DevOps Services
         tocHref: /troubleshoot/azure/devops/
         topicHref: /troubleshoot/azure/devops/welcome-azure-devops
       - name: General
         tocHref: /troubleshoot/azure/general/
         topicHref: /troubleshoot/azure/general/welcome-general
-      - name: Microsoft Entra
-        tocHref: /troubleshoot/azure/microsoft-entra/
-        topicHref: /troubleshoot/azure/microsoft-entra/welcome-microsoft-entra
+      - name: Entra
+        tocHref: /troubleshoot/azure/entra/
+        topicHref: /troubleshoot/azure/entra/welcome-entra
         items:
-        - name: Azure Active Directory
-          tocHref: /troubleshoot/azure/active-directory/
-          topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
+        - name: Entra ID
+          tocHref: /troubleshoot/azure/entra/entra-id/
+          topicHref: /troubleshoot/azure/entra/entra-id/welcome-entra-id
+        - name: Global Secure Access
+          tocHref: /troubleshoot/azure/entra/global-secure-access/
+          topicHref: /troubleshoot/azure/entra/global-secure-access/welcome-global-secure-access
       - name: Site Recovery
         tocHref: /troubleshoot/azure/site-recovery/
         topicHref: /troubleshoot/azure/site-recovery/welcome-site-recovery
-      - name: Virtual Machines
-        tocHref: /troubleshoot/azure/virtual-machines/
-        topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
+      - name: Virtual Machine running Linux
+        tocHref: /troubleshoot/azure/virtual-machines/linux/
+        topicHref: /troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux
+      - name: Virtual Machine running Windows
+        tocHref: /troubleshoot/azure/virtual-machines/windows/
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
       - name: Virtual Machine Scale Sets
         tocHref: /troubleshoot/azure/virtual-machine-scale-sets/
         topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets
@@ -173,6 +225,12 @@ items:
       - name: Dynamics 365 Supply Chain Management
         tocHref: /troubleshoot/dynamics-365/supply-chain/
         topicHref: /troubleshoot/dynamics-365/supply-chain/welcome-supply-chain
+      - name: Dynamics 365 Guides
+        tocHref: /troubleshoot/dynamics-365/guides/
+        topicHref: /troubleshoot/dynamics-365/guides/welcome-guides
+      - name: Dynamics 365 Remote Assist
+        tocHref: /troubleshoot/dynamics-365/remote-assist/
+        topicHref: /troubleshoot/dynamics-365/remote-assist/welcome-remote-assist
 
     - name: Microsoft Power Platform
       tocHref: /troubleshoot/power-platform/
@@ -195,3 +253,7 @@ items:
       - name: Microsoft Dynamics GP
         tocHref: /troubleshoot/dynamics/gp/
         topicHref: /troubleshoot/dynamics/gp/welcome-gp
+
+    - name: Microsoft Copilot for Sales
+      tocHref: /troubleshoot/sales-copilot/
+      topicHref: /troubleshoot/sales-copilot/

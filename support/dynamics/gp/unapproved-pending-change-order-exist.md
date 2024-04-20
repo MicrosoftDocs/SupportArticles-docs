@@ -1,9 +1,10 @@
 ---
 title: Unapproved/Pending change order exist
 description: Provides a solution to an error that occurs when you try to bill a cost category in Microsoft Dynamics GP 9.0.
-ms.reviewer: Lmuelle
+ms.reviewer: theley, Lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # "You cannot bill this line item; Unapproved/Pending change order exist" Error message when you try to bill a cost category in Microsoft Dynamics GP 9.0
 

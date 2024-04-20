@@ -87,8 +87,6 @@ items:
     href: general/use-registry-keys.md
   - name: Design customization IIS log file field names
     href: general/customize-iis-log-file-field-names.md
-  - name: Expression Web 4.0 FAQs
-    href: general/expression-web-faq.yml
   - name: IIS Express isn't supported in production environment
     href: general/express-not-supported-production-environment.md
   - name: Instances where HTTP.sys doesn't cache
@@ -190,6 +188,8 @@ items:
     href: www-authentication-authorization/configure-many-to-one-client-mappings.md
   - name: Default permissions and user rights
     href: www-authentication-authorization/default-permissions-user-rights.md
+  - name: Diagnostic pages for Windows Integrated Authentication
+    href: www-authentication-authorization/diagnostics-pages-windows-integrated-authentication.md
   - name: Digest authentication fails
     href: www-authentication-authorization/digest-authentication.md
   - name: Errors when you install certificates
@@ -235,8 +235,3 @@ items:
     href: www-modules-features/troubleshooting-iis-compression-issues-in-iis6-iis7x.md
   - name: WebSocketModule is not loaded
     href: www-modules-features/websocketmodule-is-not-loaded.md
-
-- name: WWW service and Svchost operation
-  items:
-  - name: WinHTTP SDP package information
-    href: www-service-svchost/disable-winhttp-tracing-sdp.md

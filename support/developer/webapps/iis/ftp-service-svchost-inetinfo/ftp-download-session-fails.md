@@ -2,8 +2,8 @@
 title: FTP download session fails when connection is closed
 description: This article provides workarounds for the FTP download session fails problem that occurs when FTP control connection is closed.
 ms.date: 12/11/2020
-ms.custom: sap:FTP Service and Svchost or Inetinfo Process Operation
-ms.technology: iis-ftp-service-svchost-inetinfo
+ms.custom: sap:FTP Authentication and Authorization\FTP authentication
+ms.subservice: ftp-service-svchost-inetinfo
 ---
 # FTP download session fails when FTP control connection is closed
 

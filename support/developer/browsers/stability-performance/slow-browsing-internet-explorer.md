@@ -4,7 +4,7 @@ description: This article provides a resolution for the problem where an issue c
 ms.date: 01/04/2021
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.technology: internet-explorer-stability-performance
+ms.custom: sap:Stability and Performance
 ---
 # Slow browsing in Internet Explorer because of multiple isInNet function calls
 
@@ -66,4 +66,4 @@ function FindProxyForURL(url, host)
 
 ## References
 
-For more information, see [Optimizing performance with automatic proxy-configuration scripts (PAC)](/troubleshoot/browsers/optimize-pac-performance).
+For more information, see [Optimizing performance with automatic proxy-configuration scripts (PAC)](../connectivity-navigation/optimize-pac-performance.md).

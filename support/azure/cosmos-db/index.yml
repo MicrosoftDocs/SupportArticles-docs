@@ -5,12 +5,13 @@ summary: Welcome to Azure Cosmos DB troubleshooting. These articles explain how 
 metadata:
   title: Troubleshoot Azure Cosmos DB issues
   description: Documentation for troubleshooting common issues with Azure Cosmos DB.
+  author: seesharprun
+  editor: v-jsitser
+  ms.author: sidandrews
+  ms.reviewer: ouryba, v-jayaramanp
   ms.service: cosmos-db
-  author: oury-msft
-  ms.author: ouryba
-  ms.reviewer: v-jayaramanp
   ms.topic: landing-page
-  ms.date: 09/25/2023
+  ms.date: 01/18/2024
 
 landingContent:
   - title: General troubleshooting
@@ -21,3 +22,5 @@ landingContent:
             url: ./emulator.md
           - text: Failed private endpoints deployment
             url: ./private-endpoints.md
+          - text: Data Explorer fails to connect
+            url: ./data-explorer.md

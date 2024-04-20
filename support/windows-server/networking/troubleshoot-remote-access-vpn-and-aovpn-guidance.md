@@ -1,17 +1,13 @@
 ---
 title: Guidance for troubleshooting Remote Access (VPN and AOVPN)
 description: Introduces general guidance for troubleshooting scenarios related to Remote Access (VPN and AOVPN).
-ms.date: 07/13/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:vpn, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
 ---
 # Remote Access (VPN and AOVPN) troubleshooting guidance
 
@@ -60,7 +56,7 @@ The listed resources in this article can help you resolve issues that you experi
 
 - [Always On VPN client connection issues](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#always-on-vpn-client-connection-issues) - A small misconfiguration can cause the client connection to fail. Finding the cause can be challenging. An AOVPN client goes through several steps before it establishes a connection.
 
-- [Unable to delete the certificate from the VPN connectivity blade](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#unable-to-delete-the-certificate-from-the-vpn-connectivity-blade) - Certificates on the VPN connectivity blade cannot be deleted. (Azure AD Conditional Access connection issues.)
+- [Unable to delete the certificate from the VPN connectivity blade](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#unable-to-delete-the-certificate-from-the-vpn-connectivity-blade) - Certificates on the VPN connectivity blade cannot be deleted. (Microsoft Entra Conditional Access connection issues.)
 
 ## Data collection
 

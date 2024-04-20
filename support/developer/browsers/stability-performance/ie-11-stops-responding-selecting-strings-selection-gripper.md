@@ -3,7 +3,7 @@ title: Internet Explorer 11 stops responding when selecting strings
 description: Provides a workaround for the issue that Internet Explorer 11 stops responding when selecting strings with the selection gripper.
 ms.date: 09/28/2021
 ms.reviewer: ramakoni, yuhara
-ms.technology: internet-explorer-stability-performance
+ms.custom: sap:Stability and Performance
 ---
 # Internet Explorer 11 stops responding when selecting strings with the selection gripper
 

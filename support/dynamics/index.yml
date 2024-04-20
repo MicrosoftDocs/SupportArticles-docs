@@ -5,7 +5,7 @@ summary: Technical content to troubleshoot issues in Microsoft Dynamics
 metadata:
    ms.topic: hub-page
    services: service
-   ms.prod: dynamics
+   ms.service: dynamics
    ms.date: 11/17/2021
 
 productDirectory:

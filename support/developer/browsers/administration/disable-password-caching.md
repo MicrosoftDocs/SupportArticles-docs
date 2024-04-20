@@ -2,7 +2,7 @@
 title: How to disable Internet Explorer password caching
 description: Provides the steps that you can use to disable Internet Explorer password caching.
 ms.date: 02/26/2020
-ms.technology: internet-explorer-administration
+ms.custom: sap:Administration
 ---
 # How to disable Internet Explorer password caching
 

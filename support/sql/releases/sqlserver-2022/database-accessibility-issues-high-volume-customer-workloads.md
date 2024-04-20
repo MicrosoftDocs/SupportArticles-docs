@@ -12,7 +12,7 @@ ms.reviewer: mireks, vanto, rajat.jain, chrisbrower, arupp, v-cuichen
 
 ## Symptoms
 
-High-volume customer workloads that use [Extensible Key Management (EKM)](/sql/relational-databases/security/encryption/extensible-key-management-ekm) may experience intermittent database accessibility issues. These accessibility issues are caused by the frequent creation or rotation of the virtual log file (VLF) that requires access to Azure Key Vault (AKV). If AKV or supporting services such as Azure Active Directory (Azure AD) aren't accessible during this creation or rotation, you can't perform the creation or rotation of the VLF. Additionally, it causes database accessibility issues.
+High-volume customer workloads that use [Extensible Key Management (EKM)](/sql/relational-databases/security/encryption/extensible-key-management-ekm) may experience intermittent database accessibility issues. These accessibility issues are caused by the frequent creation or rotation of the virtual log file (VLF) that requires access to Azure Key Vault (AKV). If AKV or supporting services such as Microsoft Entra ID aren't accessible during this creation or rotation, you can't perform the creation or rotation of the VLF. Additionally, it causes database accessibility issues.
 
 VLFs can be created or rotated frequently when the transaction log files are small, or the automatic growth (autogrow) increment of the transaction log is small, instead of large enough to stay ahead of the needs of the workload transactions. For more information, see [Manage the size of the transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file).
 

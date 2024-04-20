@@ -1,9 +1,10 @@
 ---
 title: Reprint checks in Payables Management
 description: Describes how to reprint checks that have already been processed or posted in Payables Management in Microsoft Dynamics GP.
-ms.reviewer: dbader
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to reprint checks that have already been processed or posted in Payables Management in Microsoft Dynamics GP
 
@@ -14,13 +15,13 @@ _Original KB number:_ &nbsp; 954623
 
 ## Introduction
 
-In Payables Management in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains 8.0, the reprint feature can only be used if checks haven't yet been processed or posted. This article describes how to reprint checks that have already been posted without using the reprint feature. The checks are reprinted using the same check numbers.
+In Payables Management in Microsoft Dynamics GP, the reprint feature can only be used if checks haven't yet been processed or posted. This article describes how to reprint checks that have already been posted without using the reprint feature. The checks are reprinted using the same check numbers.
 
 ## More information
 
 1. Void posted checks in the history tables.
 
-    For more information about voiding posted checks in history tables, see [How to void transactions in Payables Management in Microsoft Dynamics GP](https://support.microsoft.com/help/858373).
+    For more information about voiding posted checks in history tables, see [How to void transactions in Payables Management in Microsoft Dynamics GP](void-transactions-payables-management.md).
 
 2. Verify that the option to allow duplicate check numbers in the Checkbook Maintenance window is marked.
 
@@ -30,11 +31,13 @@ In Payables Management in Microsoft Dynamics GP and in Microsoft Business Soluti
     4. Select **Save**, and then close the Checkbook Maintenance window.
 
 3. Re-create the check batch using the same restrictions, settings, and options as the original check batch.
+
     1. On the **Transactions** menu, point to **Purchasing**, and then select **Select Checks**.
     2. In the Batch ID field, type a new or use an existing batch ID.
     3. Use the same restrictions as the original batch.
     4. Use the same settings and options as the original batch.
     5. To build the batch, select **Build Batch**.
+
 4. Print the checks.
     1. In the Select Payables Checks window, select **Print Checks**.
     2. In the **Batch ID** list, select the batch ID from step 3.

@@ -2,9 +2,9 @@
 title: Configuring IIS World Wide Web Publishing Service
 description: This article describes how to configure IIS World Wide Web Publishing Service in a Windows Server failover cluster.
 ms.date: 03/31/2020
-ms.custom: sap:WWW authentication and authorization
+ms.custom: sap:WWW Administration and Management\Cluster Services
 ms.reviewer: bretb, ahmedb, ctimon, mlaing
-ms.technology: iis-www-authentication-authorization
+ms.subservice: www-authentication-authorization
 ---
 # Configuring IIS World Wide Web Publishing Service in a Windows Server failover cluster
 

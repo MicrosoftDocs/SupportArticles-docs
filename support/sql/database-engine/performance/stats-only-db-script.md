@@ -63,7 +63,7 @@ To script each database that is referenced by your query, follow these steps:
     |Script Collation     | True  |
     |Script Logins     | True  |
     |Script Object Level Permissions      | True |
-    |Script Statistics      | True |
+    |Script Statistics      |Script statistics and histograms|
     |Script Indexes     | True |
     |Script Triggers     | True |
 
@@ -117,7 +117,7 @@ Therefore, it isn't recommended that you script individual objects unless the da
     |Script Collation      |  True       |
     |Script Logins     |  True       |
     |Script Object Level Permissions |  True       |
-    |Script Statistics     | True        |
+    |Script Statistics     | Script statistics and histograms|
     |Script USE DATABASE     | True        |
     |Script Indexes     | True         |
     |Script Triggers      | True        |
@@ -170,3 +170,4 @@ The following tables help explain how the query optimizer uses this information 
 - [Data-tier Applications](/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-ver15&preserve-view=true)
 
 - [Use PowerShell to Script SQL Database Objects](https://devblogs.microsoft.com/scripting/use-powershell-to-script-sql-database-objects/)
+

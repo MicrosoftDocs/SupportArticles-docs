@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot managed device to Network Device Enrollment Service (NDES) communication in Microsoft Intune
 description: Troubleshoot managed device to NDES server communication when using Simple Certificate Enrollment Protocol (SCEP) certificate profiles to deploy certificates with Intune.
-ms.date: 09/10/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, lacranda
 search.appverid: MET150
+ms.custom: sap:Configure Devices - iOS\SCEP Certificates
 ---
 # Troubleshooting device to NDES server communication for SCEP certificate profiles in Microsoft Intune
 
@@ -248,9 +249,9 @@ When you browse to the SCEP server URL, you receive the following error:
 
 :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png" alt-text="Screenshot of the Gatewaytimeout error." border="false":::
 
-- **Cause**: The **Microsoft Azure AD Application Proxy Connector** service isn't started.
+- **Cause**: The **Microsoft Entra application proxy Connector** service isn't started.
 
-  **Solution**:  Run **services.msc**, and then make sure that the **Microsoft Azure AD Application Proxy Connector** service is running and **Startup Type** is set to **Automatic**.
+  **Solution**:  Run **services.msc**, and then make sure that the **Microsoft Entra application proxy Connector** service is running and **Startup Type** is set to **Automatic**.
 
 ### HTTP 414 Request-URI Too Long
 
@@ -280,7 +281,7 @@ When you browse to the SCEP server URL, you receive the following error: `HTTP 4
 
 ### This page can't be displayed
 
-You have Azure AD Application Proxy configured. When you browse to the SCEP server URL, you receive the following error:
+You have Microsoft Entra application proxy configured. When you browse to the SCEP server URL, you receive the following error:
 
 `This page can't be displayed`
 

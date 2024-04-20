@@ -55,7 +55,7 @@ This issue occurs if the Open Authorization (OAuth) URL or tenant ID is incorrec
 2. Confirm that the OAuth URL and tenant ID are correct. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
 
     - The OAuth URL is a hard-coded value: `https://login.windows.net/`.
-    - To find the correct tenant ID, sign in to the [Azure portal](https://portal.azure.com) by using the same account that you use to sign in to Dataverse and RCS. Select **Azure Active Directory**, and then select your instance of Azure Active Directory (Azure AD). The tenant ID or primary domain appears in the **Tenant** field.
+    - To find the correct tenant ID, sign in to the [Azure portal](https://portal.azure.com) by using the same account that you use to sign in to Dataverse and RCS. Select **Microsoft Entra ID**, and then select your instance of Microsoft Entra ID. The tenant ID or primary domain appears in the **Tenant** field.
 
 ## Error 400 with "Application with identifier {ApplicationId} not found"
 

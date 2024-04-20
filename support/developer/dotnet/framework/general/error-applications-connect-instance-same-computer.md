@@ -4,7 +4,6 @@ description: This article provides three workarounds for the problem that occurs
 ms.date: 01/07/2021
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.technology: dotnet-general
 ---
 # Known issue in the December Security and Quality Rollups 3210137 and 3210138 for the .NET Framework 4.5.2 on Windows 8.1, Windows Server 2012 R2, and Windows Server 2012
 

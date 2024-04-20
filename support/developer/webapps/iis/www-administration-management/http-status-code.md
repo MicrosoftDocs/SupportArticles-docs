@@ -2,9 +2,9 @@
 title: HTTP status code overview
 description: This article provides a list of the HTTP status codes in IIS 7.0 and later versions.
 ms.date: 02/16/2023
-ms.custom: sap:WWW Administration and Management
+ms.custom: sap:Health, Diagnostic, and Performance Features\HTTP error logging
 ms.reviewer: v-jayc
-ms.technology: iis-www-administration-management
+ms.subservice: www-administration-management
 ---
 
 # HTTP status codes in IIS

@@ -1,18 +1,16 @@
 ---
 title: You can't add the Price unit field to the Purchase agreement page
 description: Provides more information about the issue that you can't personalize the page by adding the Price unit field in the overview of the line when you open the Purchase agreement page in a line view mode.
-author: GalynaFedorova
+author: Henrikan
 ms.date: 05/31/2021
-ms.topic: troubleshooting
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: gfedorova
+ms.author: henrikan
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ---
-
 # You can't add the Price unit field to the Purchase agreement page
 
 ## Symptoms

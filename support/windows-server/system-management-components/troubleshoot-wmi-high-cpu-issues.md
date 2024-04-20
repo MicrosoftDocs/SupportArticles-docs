@@ -1,15 +1,13 @@
 ---
 title: Troubleshoot WMI high CPU usage issues
 description: Describes how to diagnose Windows Management Instrumentation (WMI) high CPU issues on any Windows operating system.
-ms.date: 06/01/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, krpg, warrenw, anleito, mistoyan, v-lianna
-ms.custom: sap:wmi, csstroubleshoot
-ms.technology: windows-client-system-management-components
+ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
 # Troubleshoot WMI high CPU usage issues
 
@@ -142,8 +140,6 @@ Here's an example:
 ```PowerShell
 tasklist /m ntevt.dll 
 ```
-
-Currently, the output shows that the *CIMWin32.dll* provider is loaded in two different *WmiPrvse.exe* instances and their PIDs.
 
 :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/tasklist-output.png" alt-text="Screenshot shows the tasklist output of the ntevt.dll file.":::
 

@@ -1,14 +1,10 @@
 ---
 title: Error 0x80090322 when connecting PowerShell to a remote server via WinRM
 description: Provides a resolution to the 0x80090322 error when connecting PowerShell to a remote server.
-author: Deland-Han
-ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 05/05/2023
+ms.date: 12/26/2023
 ms.reviewer: kaushika
-ms.prod: windows-server
-ms.technology: windows-server-system-management-components
-ms.custom: sap:winrm, csstroubleshoot, ikb2lmc
+ms.custom: sap:System Management Components\WinRM, including event forwarding and collections, csstroubleshoot, ikb2lmc
 ---
 # Error 0x80090322 when you connect PowerShell to a remote server via WinRM
 
@@ -86,7 +82,7 @@ The Kerberos request would look like the following example after making the regi
 You can also use the `reg add` command:
 
 ```console
-reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client /v spn_prefix /t REG_SZ /d "HOST" /f
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client /v spn_prefix /t REG_SZ /d "WSMAN" /f
 ```
 
 After that, add the following SPNs to the computer account:

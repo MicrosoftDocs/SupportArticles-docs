@@ -1,23 +1,19 @@
 ---
 title: Disable screen saver passwords by using policies
 description: Describes how to disable screen saver passwords by using policies.
-ms.date: 10/19/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, CCLAY
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-client-group-policy
+ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 ---
 # Disable screen saver passwords by using policies
 
 This article describes how to make screen saver password locks unavailable on systems in a site, domain, or organizational unit, by using the policies available.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 272304
 
 ## Disable screen saver passwords
@@ -35,7 +31,7 @@ To make screen saver password locks unavailable, follow these steps:
 
 5. Click **Close**.
 6. Expand **User Configuration**, and then expand **Administrative Templates**.
-7. Expand **Control Panel**, and then click **Display**.
+1. Expand **Control Panel**, and then click **Personalization**.
 8. In the right pane, double-click **Password protect the screen saver**.
 9. Select Disable on the **Policy** tab. This prevents users from setting passwords on screen savers for this computer or domain.
 10. Click the **Explain** tab for information about how to use this policy.

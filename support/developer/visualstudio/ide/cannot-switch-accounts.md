@@ -2,7 +2,7 @@
 title: Can't switch between different accounts
 description: This article describes a problem that prevents you from switching between different organizational accounts in Visual Studio Online. Resolution requires installation of a Visual Studio update.
 ms.date: 04/24/2020
-ms.custom: sap:Integrated development environment (IDE)
+ms.custom: sap:Team Explorer - Version Control\Connecting to TFS
 ms.reviewer: acabello
 ---
 # You can't switch between different organizational accounts in Visual Studio Online

@@ -5,7 +5,6 @@ ms.date: 01/21/2021
 ms.custom: sap:Connectivity and Navigation
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.technology: internet-explorer-connectivity-navigation
 ---
 # Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On
 

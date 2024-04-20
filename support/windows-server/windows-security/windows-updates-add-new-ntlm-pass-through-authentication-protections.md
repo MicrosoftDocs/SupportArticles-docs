@@ -1,17 +1,13 @@
 ---
 title: Windows updates add new NTLM pass-through authentication protections
 description: Describes the new NTLM pass-through authentication protections for CVE-2022-21857 introduced in Windows updates.
-ms.date: 03/31/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 03/28/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ptomas, jsimmons, lindakup, arrenc, rizhang, clfish, herbertm, ruudv
-ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
 ---
 # Windows updates add new NTLM pass-through authentication protections for CVE-2022-21857
 
@@ -176,28 +172,6 @@ The netdom.exe tool can initiate the new PDC trust scanner operations, and set a
 
   This command can only initiate the operation. To find out the result, look in the system event log for the new LSA events, and enable LSA tracing if needed.
 
-- Set security check exemption flag.
-
-  - For a specific trusting domain (domain trust case), the flag is defined as follows:
-
-    `#define TRUST_ATTRIBUTE_DISABLE_AUTH_TARGET_VALIDATION 0x00001000`
-
-    This operation sets or clears a new trust attribute flag on the trusted domain object (TDO) for the trusting domain. For more information, see the [Issue mitigations](#issue-mitigations) section.
-  - For a specific trusting child domain (forest trust case), the flag is defined as follows:
-
-    `#define LSA_SCANNER_INFO_DISABLE_AUTH_TARGET_VALIDATION ( 0x00000001L )`
-
-    The command is as follows:
-
-    ```console
-    netdom trust <localdomain> /Domain:<trustingforest> [[/AuthTargetValidation[:{yes | no}] /ChildDomain:<childdomain>
-    ```
-
-     > [!NOTE]
-     > If `/AuthTargetValidation` isn't specified, the default value is 'yes'.
-
-    This operation sets or clears a new LSA forest trust record flag on the Scanner record for the specific child domain from the specific trusting forest. The operation provides a way to constrain the scope of the exemption to just that domain name. For more information, see the [Issue mitigations](#issue-mitigations) section.
-
 ## Investigating failed NTLM pass-through authentications
 
 > [!NOTE]
@@ -245,10 +219,7 @@ The trust scanner may fail with the following reasons:
 
 ## Issue mitigations
 
-If authentications fail due to domain name collisions, misconfiguration, or unforeseen circumstances, use the following options to mitigate the issue:
-
-- Rename the colliding domain(s) to prevent collision.
-- Temporarily set exemption flags on the corresponding TDOs, or on the Scanner records in the `msDS-TrustForestTrustInfo` attribute. It's a temporary method until the domain renaming prevents the issue.
+If authentications fail due to domain name collisions, misconfiguration, or unforeseen circumstances, rename the colliding domain(s) to prevent collision for mitigating the issue.
 
 If authentications over an RODC secure channel trust fail, contact Microsoft support for this issue because there are no mitigation methods.
 
@@ -264,7 +235,7 @@ If PDC trust scanner fails, the mitigation depends on specific context. For exam
     A2: No. Administrators can invoke it manually if needed, otherwise the new forest will be scanned at the next regular interval.
 - Q3: Can the new Scanner records be modified by domain administrators?
 
-    A3: Yes, but it isn't recommended or supported except when the new exemption flag (LSA_SCANNER_INFO_DISABLE_AUTH_TARGET_VALIDATION) needs to be set by using the *netdom.exe* tool. If Scanner records are created, modified, or deleted unexpectedly, the PDC trust scanner will revert the changes the next time it runs.
+    A3: Yes, but it isn't recommended or supported. If Scanner records are created, modified, or deleted unexpectedly, the PDC trust scanner will revert the changes the next time it runs.
 - Q4: I'm sure that NTLM isn't used in my environment. How can I turn off this behavior?
 
     A4: In general, the new behaviors can't be turned off. The RODC specific security validations can't be disabled. You can set a security check exemption flag for a domain trust case or a forest trust case.

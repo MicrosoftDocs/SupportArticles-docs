@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where the changes to an SLA ite
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 08/18/2023
+ms.custom: sap:Service Level Agreements\Issue with importing or exporting or upgrading SLA
 ---
 # The changes to an SLA item record through an upgrade solution don't appear even after a successful upgrade
 

@@ -27,11 +27,11 @@ When you try to create an Azure RM automatic subscription-based service connecti
 
 Check the behavior on the billing page (**Organization settings > Billing > Change billing**).
 
-This problem occurs if an AAD refresh token expires.
+This problem occurs if a Microsoft Entra refresh token expires.
 
 ### Cause
 
-This scenario might occur if multi-factor authentication (MFA) is enabled in the Azure AD directory (AAD) to which the subscription is linked. This resolution fixes the issue for MFA-enabled AAD. Alternatively, as a quick workaround, you can disable MFA.
+This scenario might occur if multi-factor authentication (MFA) is enabled in the Microsoft Entra ID to which the subscription is linked. This resolution fixes the issue for MFA-enabled Microsoft Entra ID. Alternatively, as a quick workaround, you can disable MFA.
 
 ### Resolution
 
@@ -108,11 +108,11 @@ Consider a scenario when you try to create a new Azure RM automatic subscription
 
 A maximum of 50 Azure subscriptions are listed. If the subscription isn't listed when you create a service connection, follow these steps:
 
-1. Create a native Azure AD user in the Azure AD instance of your Azure subscription.
+1. Create a native Microsoft Entra user in the Microsoft Entra instance of your Azure subscription.
 
-1. Set up the new Azure AD user so that it has the appropriate permissions to set up billing or create service connections. For more information, see [Add a user to manage billing](/azure/devops/organizations/billing/add-backup-billing-managers).
+1. Set up the new Microsoft Entra user so that it has the appropriate permissions to set up billing or create service connections. For more information, see [Add a user to manage billing](/azure/devops/organizations/billing/add-backup-billing-managers).
 
-1. Add the Azure AD user to the Azure DevOps organization to have the Stakeholder access level, and then add it to the **Project Collection Administrators group (for billing)**. Or, make sure that you have sufficient permissions in the Team Project to create service connections.
+1. Add the Microsoft Entra user to the Azure DevOps organization to have the Stakeholder access level, and then add it to the **Project Collection Administrators group (for billing)**. Or, make sure that you have sufficient permissions in the Team Project to create service connections.
 
 1. Log in to Azure DevOps by using the new user credentials, and then set up a billing. You will see only one Azure subscription in the list.
 

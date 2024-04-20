@@ -239,7 +239,7 @@ items:
       items:
       - name: Troubleshoot the Enrollment Status Page
         href: device-enrollment/understand-troubleshoot-esp.md
-      - name: Troubleshoot Azure AD device registration and Windows Autopilot
+      - name: Troubleshoot Microsoft Entra device registration and Windows Autopilot
         href: device-enrollment/azure-ad-device-registration-autopilot.md
       - name: Error importing Windows Autopilot CSV files
         href: device-enrollment/import-windows-autopilot-device-csv-files-errors.md
@@ -269,7 +269,7 @@ items:
     href: device-management/troubleshoot-device-actions.md
   - name: Remove duplicate mobile device management objects
     href: device-management/remove-duplicate-mobile-device-management.md
-  - name: Remove disabled Azure AD user's device from Intune
+  - name: Remove disabled Microsoft Entra user's device from Intune
     href: device-management/orphaned-device-upn-shown-as-none.md
   - name: Help desk operators can't perform remote tasks
     href: device-management/help-desk-operator-fails-remote-tasks.md

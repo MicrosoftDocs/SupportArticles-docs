@@ -1,8 +1,9 @@
 ---
 title: A log with a line exceeding 8000 characters is truncated in CMTrace log viewer
 description: Fixes an issue in which a line of a log that exceeds 8000 characters causes the log to be truncated in the CMTrace log viewer.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, erinwi, mansee, jarrettr, clintk
+ms.custom: sap:Admin Console, Role-Based Access and Reporting\Console Extensions
 ---
 # A log that has a line exceeding 8000 characters is truncated in the CMTrace log viewer
 

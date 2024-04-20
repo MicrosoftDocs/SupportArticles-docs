@@ -3,7 +3,7 @@ title: Internet Explorer cannot display the webpage
 description: This article describes that Internet Explorer cannot open any webpage and provides troubleshooting solutions.
 ms.date: 06/09/2020
 ms.reviewer: 
-ms.technology: internet-explorer-connectivity-navigation
+ms.custom: sap:Connectivity and Navigation
 ---
 # Internet Explorer cannot display the webpage error when you try to access a webpage
 

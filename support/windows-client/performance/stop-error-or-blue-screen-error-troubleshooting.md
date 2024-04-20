@@ -1,15 +1,13 @@
 ---
 title: Stop error, bug check, or blue screen error troubleshooting
 description: Learn advanced options for troubleshooting stop errors, also known as blue screen errors or bug check errors.
-ms.date: 07/25/2023
-ms.prod: windows-client
-ms.technology: windows-client-performance
+ms.date: 12/26/2023
 ms.topic: troubleshooting
 author: aczechowski
 ms.author: aaroncz
 manager: dcscontentpm
 ms.collection: highpri
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ms.reviewer: kaushika
 audience: itpro
 localization_priority: medium

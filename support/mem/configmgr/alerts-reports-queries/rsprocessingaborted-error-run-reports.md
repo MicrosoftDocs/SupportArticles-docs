@@ -1,8 +1,9 @@
 ---
 title: Fails to run reports in Configuration Manager
 description: Resolves an issue in which reports don't run in Microsoft Endpoint Configuration Manager if SQL Server 2019 is used.
-ms.date: 06/16/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, maosesro, v-six
+ms.custom: sap:Admin Console, Role-Based Access and Reporting\Reports and subscriptions
 ---
 # rsProcessingAborted error when you run reports in Configuration Manager
 

@@ -1,0 +1,65 @@
+### YamlMime:Landing
+
+title: Microsoft Dynamics 365 Remote Assist troubleshooting
+summary: Welcome to Microsoft Dynamics 365 Remote Assist troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Guides. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Dynamics 365 Remote Assist troubleshooting
+  description: Landing page for Microsoft Dynamics 365 Remote Assist troubleshooting articles.
+  ms.topic: landing-page
+  ms.service: remote-assist
+  author: v-wendysmith
+  ms.author: v-wendysmith
+  ms.reviewer: v-wendysmith, mhart
+  ms.date: 11/16/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Remote assist app
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Assets tab indicates to contact IT admin
+            url: application-functionality/no-assets-admin.md
+          - text: Assets don't appear or aren't as expected
+            url: application-functionality/assets-not-appear-or-expected.md
+          - text: Can't sign in to Dynamics 365 Remote Assist
+            url: setup-and-configuration/cannot-sign-in-to-remote-assist.md
+          - text: Contacts don't appear or aren't as expected
+            url: application-functionality/contacts-not-appear-or-expected.md
+          - text: Incoming call notifications aren't received
+            url: application-functionality/no-incoming-call-notification.md
+          - text: Mixed Reality toolbar doesn't appear on Teams during a Dynamics 365 Remote Assist call
+            url: application-functionality/mixed-reality-toolbar-not-show-on-teams-call.md
+          - text: Dynamics 365 Remote Assist not responding
+            url: application-functionality/remote-assist-stops-responding.md
+
+  # Card
+  - title: Model-driven app
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't find the Dynamics 365 Remote Assist model-driven app
+            url: setup-and-configuration/can't-find-model-driven-app.md
+          - text: Troubleshoot Remote Assist model-driven app installation failures
+            url: setup-and-configuration/troubleshoot-model-driven-app-installation.md
+
+
+    # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Remote Assist documentation
+            url: /dynamics365/mixed-reality/remote-assist/
+          - text: Remote Assist training
+            url: /training/dynamics365/
+
+  # Card
+  - title: Support Resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Dynamics 365 Remote Assist Community Forum
+            url: https://community.dynamics.com/forums/thread/?partialUrl=remoteassist

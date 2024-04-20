@@ -80,7 +80,7 @@ You can choose one of following two options to resolve the problem.
 
 ### Option 1: Execute the steps directly in a notebook via Azure Data Studio
 
-[!INCLUDE [Install Azure Data Studio note](../../../includes/install-azure-data-studio-note.md)]
+[!INCLUDE [Install Azure Data Studio note](../../../includes/azure/install-azure-data-studio-note.md)]
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting_PagelatchEX_LastPageInsert.ipynb)

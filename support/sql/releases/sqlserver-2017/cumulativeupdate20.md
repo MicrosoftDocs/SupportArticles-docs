@@ -2,7 +2,7 @@
 title: Cumulative update 20 for SQL Server 2017 (KB4541283)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 20 (KB4541283).
 ms.date: 08/04/2023
-ms.custom: KB4541283
+ms.custom: KB4541283, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows
 - SQL Server 2017 on Linux
@@ -22,11 +22,11 @@ This article describes Cumulative Update package 20 (CU20) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-Under certain circumstances, there's a known uninstall issue with this SQL Server 2017 CU20.  If you uninstall this CU, SQL server doesn’t come online, and you find the following SQL Server error log message:
+Under certain circumstances, there's a known uninstall issue with this SQL Server 2017 CU20.  If you uninstall this CU, SQL Server doesn’t come online, and you find the following SQL Server error log message:
 
 > The script level for 'system_xevents_modification.sql' in database 'master' cannot be downgraded from XXXXXXXXX to XXXXXXXXX, which is supported by this server. This usually implies that a future database was attached and the downgrade path is not supported by the current installation. Install a newer version of SQL Server and re-try opening the database.
 
-Mitigation is to enable Trace Flag - T902, then SQL server will come online and you're done. You don’t need to uninstall it again. To upgrade to new CU, you need to remove this flag first.
+Mitigation is to enable Trace Flag - T902, then SQL Server will come online and you're done. You don’t need to uninstall it again. To upgrade to new CU, you need to remove this flag first.
 
 SQL Server 2017 CU21 or any later CU release contains the fix.
 

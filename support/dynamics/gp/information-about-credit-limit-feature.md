@@ -1,8 +1,9 @@
 ---
 title: Credit Limit feature used in Receivables Management and in National Accounts in Microsoft Dynamics GP
 description: Information about the Credit Limit feature that is used in Receivables Management and in National Accounts in Microsoft Dynamics GP.
-ms.reviewer:
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Information about the Credit Limit feature that is used in Receivables Management and in National Accounts in Microsoft Dynamics GP
 

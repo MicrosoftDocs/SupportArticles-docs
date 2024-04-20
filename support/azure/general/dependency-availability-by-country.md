@@ -1,7 +1,7 @@
 ---
 title: Azure dependency availability by country/region
-description: Many product features have Azure dependencies that might not be available in all countries/regions".
-ms.date: 09/16/2021
+description: Many product features have Azure dependencies that might not be available in all countries/regions.
+ms.date: 11/01/2023
 ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
@@ -27,7 +27,7 @@ Many product features have Azure dependencies that might not be available in all
 
 ## Availability by primary country/region
 
-Primary countries/regions that have Azure dependencies availability as of April 2022:
+Primary countries/regions that have Azure dependencies availability as of October 2023:
 
 - Australia
 - Brazil
@@ -37,6 +37,8 @@ Primary countries/regions that have Azure dependencies availability as of April 
 - India
 - Japan
 - Norway
+- Qatar*
+- Singapore*
 - South Africa
 - South Korea
 - Sweden*
@@ -46,10 +48,5 @@ Primary countries/regions that have Azure dependencies availability as of April 
 - United States of America
 
 Countries/regions with an asterisk (\*) appended have recently obtained Azure dependencies. All solutions are working on unlocking their features in these regions. Check Microsoft Center documentations to see when specific solutions will go live for these regions.
-
-Countries/regions that are planned to get Azure dependencies availability soon:
-
-- Qatar
-- Singapore
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -2,8 +2,8 @@
 title: FTP authorization rules aren't inherited
 description: This article provides resolutions for the problem that with User name physical directory (enable global virtual directories), FTP authorization rules aren't inherited in IIS.
 ms.date: 04/15/2020
-ms.custom: sap:FTP authentication and authorization
-ms.technology: iis-ftp-authentication-authorization
+ms.custom: sap:FTP Authentication and Authorization\Authorization rules and permissions
+ms.subservice: ftp-authentication-authorization
 ms.reviewer: nanram
 ---
 # FTP authorization rules aren't inherited with user isolation setting in FTP sites in IIS

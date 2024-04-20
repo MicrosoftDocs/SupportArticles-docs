@@ -2,7 +2,7 @@
 title: Creating a linked server to DB2
 description: This article describes a sample SQL script for creating a linked server to DB2 using sp_addlinkedserver, and issues a few queries to illustrate the Distributed Query Processing.
 ms.date: 10/14/2020
-ms.custom: sap:Data integration (DB2, host files)
+ms.custom: sap:Data Integration (DB2, Host Files)
 ms.reviewer: syedw
 ---
 # Creating a linked server to DB2 using Microsoft OLE DB provider for DB2

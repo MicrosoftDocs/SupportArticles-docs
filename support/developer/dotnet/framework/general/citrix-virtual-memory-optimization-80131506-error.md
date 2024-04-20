@@ -3,7 +3,6 @@ title: Citrix Memory Optimization causes 80131506 error
 description: In a small number of cases, having .NET Framework applications running along with the Citrix Virtual Memory Optimization Service can lead to memory corruption in the managed process.
 ms.date: 05/06/2020
 ms.reviewer: shorne, scotbren
-ms.technology: dotnet-general
 ---
 # Citrix Virtual Memory Optimization Service can lead to .NET application corruption
 

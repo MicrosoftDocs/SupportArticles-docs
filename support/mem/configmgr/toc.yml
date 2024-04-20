@@ -59,8 +59,6 @@ items:
       href: client-installation/policyagentinstanceprovider-warning-install-client.md
     - name: Software update installations stop responding
       href: client-installation/software-update-installations-stop-responding.md
-    - name: Support for Mac, Linux and UNIX clients
-      href: client-installation/support-for-mac-linux-and-unix-clients.md
     - name: There was a problem starting PolicyAgentProvider.dll
       href: client-installation/client-installation-fails-with-policyagentprovider-dll.md
 - name: Client management

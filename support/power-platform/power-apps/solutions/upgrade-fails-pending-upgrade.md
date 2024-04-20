@@ -5,6 +5,7 @@ ms.reviewer: jdaly
 ms.date: 10/10/2023
 author: swatimadhukargit
 ms.author: swatim
+ms.custom: sap:Working with Solutions\Update, upgrade and stage for upgrade of solutions
 ---
 # Solution upgrade fails due to a previously pending upgrade
 

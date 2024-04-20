@@ -1,8 +1,9 @@
 ---
 title: A deployment property change isn't saved
 description: This article provides a solution for the issue that a property change of a deployment isn't saved in System Center 2012 Configuration Manager.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, erinwi, mansee
+ms.custom: sap:Content Management\Distribution Point Installation, Upgrade or Configuration
 ---
 # Changing a property of a deployment doesn't appear to be saved in System Center 2012 Configuration Manager
 

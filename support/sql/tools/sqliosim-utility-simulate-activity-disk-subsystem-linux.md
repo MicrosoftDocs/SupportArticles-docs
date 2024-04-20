@@ -6,7 +6,7 @@ ms.author: haiyingyu
 ms.reviewer: amitkh, dansha, rafidl, Suresh.Kandoth, randolphwest
 ms.date: 07/14/2023
 ms.topic: how-to
-ms.custom: sap:Other tools
+ms.custom: sap:Other tools, linux-related-content
 ---
 # Use the SQLIOSim utility to simulate SQL Server activity on a disk subsystem on Linux
 

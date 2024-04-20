@@ -2,9 +2,9 @@
 title: HTTP error 501 when you use unknown methods
 description: This article discusses a by-design HTTP 501 error when you use an unknown method from an Internet client.
 ms.date: 07/17/2020
-ms.custom: sap:Health, Diagnostic, and Performance Features
+ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: robmcm
-ms.technology: iis-health-diagnostic-performance
+ms.subservice: health-diagnostic-performance
 ---
 # HTTP/1.1 Error 501 - Not Implemented
 

@@ -5,7 +5,7 @@ ms.date: 02/28/2022
 Author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: hirotoh
-ms.technology: dotnet-general
+ms.custom: sap:Class Library Namespaces
 ---
 # PreviewKeyDown event of TextBox control can't be triggered by Microsoft IME in WPF apps
 

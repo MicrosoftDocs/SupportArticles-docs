@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: rassadi, brstor
 ms.date: 09/01/2023
+ms.custom: sap:Deployment and provisioning\Issues with e-commerce custom domains and Azure Front Door
 ---
 # How to restrict access to a storefront during testing or development
 
@@ -24,7 +25,7 @@ To restrict user access to storefront pages in Commerce site builder, follow the
 1. In the properties pane, select **Requires sign-in?** > **Finish editing**.
 1. Select **Publish**.
 
-To block the creation of new users in Azure AD, follow these steps:
+To block the creation of new users in Microsoft Entra ID, follow these steps:
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Select the Azure AD B2C application that you created for your site access.

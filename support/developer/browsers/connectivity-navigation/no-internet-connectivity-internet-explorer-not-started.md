@@ -4,7 +4,7 @@ description: This article describes a problem where you may not be able to get I
 ms.date: 01/04/2021
 ms.reviewer: pierrelc, aloot, andyriv
 ms.topic: article
-ms.technology: internet-explorer-connectivity-navigation
+ms.custom: sap:Connectivity and Navigation
 ---
 # No Internet connectivity if Internet Explorer is not started once
 

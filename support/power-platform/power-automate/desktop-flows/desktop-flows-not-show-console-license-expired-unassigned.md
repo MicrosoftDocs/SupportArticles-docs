@@ -3,7 +3,7 @@ title: Desktop flows don't appear in console after license expired or unassigned
 description: Provides a resolution for the issue that desktop flows aren't visible if you don't have an active license in Power Automate for desktop.
 ms.reviewer: pefelesk
 ms.date: 09/21/2022
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Administration and Licensing
 ---
 # Desktop flows don't show in Power Automate console after the license expired or unassigned
 

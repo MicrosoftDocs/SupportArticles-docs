@@ -3,7 +3,7 @@ title: Connect to a running instance of Internet Explorer
 description: This article describes how to connect to a running instance of Internet Explorer through C++ code.
 ms.date: 06/03/2020
 ms.reviewer: scotrobe
-ms.technology: internet-explorer-development-website
+ms.custom: sap:Development and Website Issues
 ---
 # How to connect to a running instance of Internet Explorer
 

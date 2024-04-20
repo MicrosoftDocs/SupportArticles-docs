@@ -1,9 +1,10 @@
 ---
 title: Correct an overpayment that's made to an employee in Payroll in Microsoft Dynamics GP
 description: Provides steps to correct an overpayment that was made to an employee in Payroll in Microsoft Dynamics GP 10.0 or in Microsoft Dynamics GP 9.0.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # How to correct an overpayment that is made to an employee in Payroll in Microsoft Dynamics GP
 

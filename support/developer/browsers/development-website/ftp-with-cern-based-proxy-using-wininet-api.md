@@ -3,7 +3,7 @@ title: How to use FTP with CERN-based proxy using WinInet API
 description: This article discusses using Wininet APIs with CERN-based Web proxy to retrieve data via FTP.
 ms.date: 03/03/2020
 ms.reviewer: weihua
-ms.technology: internet-explorer-development-website
+ms.custom: sap:Development and Website Issues
 ---
 # How to use FTP with a CERN-based proxy using WinInet APIs
 

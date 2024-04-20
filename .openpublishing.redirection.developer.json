@@ -4193,6 +4193,7 @@
     {
       "source_path": "support/developer/visualstudio/installation/issues-workarounds-visual-studio-2012-setup.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/installation/issues-workarounds-visual-studio-setup",
+      "redirect_document_id": false
     },
     {
       "source_path": "support/developer/webapps/index.md",
@@ -4388,6 +4389,541 @@
       "source_path": "support/azure/microsoft-entra/index.yml",
       "redirect_url": "/troubleshoot/azure/microsoft-entra/welcome-microsoft-entra",
       "redirect_document_id": true
+    },  
+    {
+      "source_path": "support/azure/virtual-machines/error-code-0xc000000f.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/boot-error-0xc000000f",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-service-svchost/disable-winhttp-tracing-sdp.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/disable-winhttp-tracing-sdp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/general/expression-web-faq.yml",
+      "redirect_url": "/previous-versions/troubleshoot/iis/expression-web-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/description-of-windows-mobile-device-center.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/description-of-windows-mobile-device-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/vari8fromcy-produces-incorrect-value.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/vari8fromcy-produces-incorrect-value",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/two-dll-hosts-start-com-plus-enabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/two-dll-hosts-start-com-plus-enabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/descriptions-workings-ole-threading-models.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/descriptions-workings-ole-threading-models",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/calling-systemparametersinfo-work-incorrectly.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/calling-systemparametersinfo-work-incorrectly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/getmessage-ignores-posted-messages.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/getmessage-ignores-posted-messages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/icon-overlay-handlers-windows-shell.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/icon-overlay-handlers-windows-shell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/pathisdirectory-may-blocked.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/pathisdirectory-may-blocked",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/desktop-bridge-app-fail-start-run-as-administrator.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/desktop-bridge-app-fail-start-run-as-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/hook-procedure-not-receiving-vk-convert-message.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/hook-procedure-not-receiving-vk-convert-message",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/hard-error-popup-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/hard-error-popup-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/warning-1946-when-you-install-installer-package.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/warning-1946-when-you-install-installer-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/screen-saver-command-line.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/screen-saver-command-line",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/ktmrm-service-event-id-0x80070005.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/ktmrm-service-event-id-0x80070005",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/midi-device-app-hangs.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/midi-device-app-hangs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/wia-2-not-support-duplex.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/wia-2-not-support-duplex",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/win32-raw-data-to-printer.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/win32-raw-data-to-printer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/modify-printer-settings-setprinter-api.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/modify-printer-settings-setprinter-api",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/s1023-error-when-you-install-directx-sdk.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/s1023-error-when-you-install-directx-sdk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/v4-print-driver-raw-mode-pcl-postscript.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/v4-print-driver-raw-mode-pcl-postscript",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/dwm-drop-direct3d-10-application-frame.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/dwm-drop-direct3d-10-application-frame",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/dxgi-cannot-draw-cursor.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/dxgi-cannot-draw-cursor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/printer-device-fonts.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/printer-device-fonts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/printer-print-job-status.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/printer-print-job-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/writeprinter-raw-data-not-print.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/writeprinter-raw-data-not-print",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/close-non-blocked-socket-memory-leak.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/close-non-blocked-socket-memory-leak",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/setfilecompletionnotificationmodes-causes-io-completion.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/setfilecompletionnotificationmodes-causes-io-completion",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/beginread-causes-invalidoperationexception.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/beginread-causes-invalidoperationexception",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/header-library-requirement-socket-ipproto-ip.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/header-library-requirement-socket-ipproto-ip",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/data-segment-tcp-winsock.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/data-segment-tcp-winsock",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/use-dnsquery-resolve-host-names.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/use-dnsquery-resolve-host-names",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/get-information-authenticode-signed-executables.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/get-information-authenticode-signed-executables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/change-krbtgt-password-may-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/change-krbtgt-password-may-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/limitation-10-smart-card-readers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/limitation-10-smart-card-readers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/asynchronous-disk-io-synchronous.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/asynchronous-disk-io-synchronous",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/msxml-not-support-dotnet-application.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/msxml-not-support-dotnet-application",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/custom-virtual-channel-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/custom-virtual-channel-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/evtformatmessage-formatted-string-event.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/evtformatmessage-formatted-string-event",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/createprocess-cannot-eliminate-duplicate-variables.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/createprocess-cannot-eliminate-duplicate-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/setsystemtimeadjustment-less-than-16.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/setsystemtimeadjustment-less-than-16",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/troubleshoot-event-message-not-found.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/troubleshoot-event-message-not-found",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/file-copy-operation-deletes-content.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/file-copy-operation-deletes-content",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/handle-dates-and-times-dst.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/handle-dates-and-times-dst",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/heap-manager-may-not-decommit-memory.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/heap-manager-may-not-decommit-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/access-violation-bex-appcrash.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/access-violation-bex-appcrash",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/receive-cd-rom-notification.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/receive-cd-rom-notification",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/msi-packages-wmi-queries-cannot-run.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/msi-packages-wmi-queries-cannot-run",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/aac-audio-not-playing-for-mpeg-2-ts-file-windows-8-1.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/aac-audio-not-playing-for-mpeg-2-ts-file-windows-8-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/directshow-not-connect-downstream-filter.md",
+      "redirect_url": "/troubleshoot/windows/win32/welcome-windowsdeveloper",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/assembly-version-assembly-file-version.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/general/assembly-version-assembly-file-version",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/security/windows-prevents-unconstrained-delegation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/windows-prevents-unconstrained-delegation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/answers-questions-msdt.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/known-issues-visual-studio-2013.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/known-issues-visual-studio-2013",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/uninstall-visual-studio-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/uninstall-visual-studio-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/enable-rollback-continue-setup.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/enable-rollback-continue-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/visual-studio-2012-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/visual-studio-2012-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/visual-studio-2012-update-4.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/visual-studio-2012-update-4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/visual-studio-requires-computer-newer-version-windows.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/visual-studio-requires-computer-newer-version-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/adapter/biztalk-adapter-tibco-ems-text-message-type.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/adapter/biztalk-adapter-tibco-ems-text-message-type",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/adapter/biztalk-adapter-trace-utility.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/adapter/biztalk-adapter-trace-utility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/adapter/adapter-mqseries-cannot-retrieves-messages.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/adapter/adapter-mqseries-cannot-retrieves-messages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/entsso/upgrading-not-upgrade-enterprise-sso.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/entsso/upgrading-not-upgrade-enterprise-sso",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/performance/troubleshoot-memory-leak.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/performance/troubleshoot-memory-leak",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/tracking-profiles-global-tracking-enabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/tracking-profiles-global-tracking-enabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/dev-deploy/systems-sql-server-biztalk.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/dev-deploy/systems-sql-server-biztalk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/sql-server-agent-jobs-biztalk.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/sql-server-agent-jobs-biztalk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/send-edi-interchange.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/send-edi-interchange",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/segment-terminator-x12-encoded-interchange.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/segment-terminator-x12-encoded-interchange",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/override-edi-header-values.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/override-edi-header-values",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/messagestolob-messagecontent-btarn.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/messagestolob-messagecontent-btarn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/maintain-troubleshoot-database.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/maintain-troubleshoot-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/performance/known-issues-biztalk-server-2013.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/performance/known-issues-biztalk-server-2013",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/isa16-cannot-part-payload.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/isa16-cannot-part-payload",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/performance/high-cpu-execute-bre-policy.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/performance/high-cpu-execute-bre-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/fail-install-security-post-2871997-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/fail-install-security-post-2871997-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/esb-toolkit/esb-configuration-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/esb-toolkit/esb-configuration-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/performance/error-message-application-log-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/performance/error-message-application-log-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/domain-migration-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/domain-migration-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/common-issues-resolutions-biztalk.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/common-issues-resolutions-biztalk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/dev-deploy/change-scripting-function-boolean-parameter.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/dev-deploy/change-scripting-function-boolean-parameter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/esb-toolkit/call-into-pipelineobjects-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/esb-toolkit/call-into-pipelineobjects-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/call-hl7-pipelines-orchestration-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/call-hl7-pipelines-orchestration-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/dev-deploy/build-failed-error-when-you-use-64-bit-version.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/dev-deploy/build-failed-error-when-you-use-64-bit-version",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/biztalk-server-supportability-on-vm.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/biztalk-server-supportability-on-vm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/biztalkmsgboxdb-connection-issue.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/biztalkmsgboxdb-connection-issue",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/biztalk-message-queuing-configuration.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/biztalk-message-queuing-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/biztalk-hotfixes-cumulative-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/biztalk-hotfixes-cumulative-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/biztalk-host-instance-cannot-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/biztalk-host-instance-cannot-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/biztalk-explorer-operations-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/biztalk-explorer-operations-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/biztalk-edias2-runtime-feature-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/biztalk-edias2-runtime-feature-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/biztalk-default-whitespace-behavior.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/biztalk-default-whitespace-behavior",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/availability-for-mqsagent-com-plus.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/availability-for-mqsagent-com-plus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/adta03-file-biztalk-accelerator-hl7.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/adta03-file-biztalk-accelerator-hl7",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/dev-deploy/add-generated-items-not-generate-xsd.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/dev-deploy/add-generated-items-not-generate-xsd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/999-acknowledgments-hipaa-5010.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/999-acknowledgments-hipaa-5010",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/cannot-configure-biztalk-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/cannot-configure-biztalk-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/time-out-expired-error-when-you-use-uddi-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/time-out-expired-error-when-you-use-uddi-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/adapter/file-system-in-biztralk-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/adapter/file-system-in-biztralk-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/adapter/http-error-biztalk-sharepoint-adapter.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/adapter/http-error-biztalk-sharepoint-adapter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/welcome-biztalk-server.yml",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/welcome-biztalk-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/sql-base-diagnostics-collector.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/rs-diagnostics-collector-information.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/connectivity-diagnostics-collector.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/setup-data-collection-diagnostic-tool.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
     }
   ]
 }

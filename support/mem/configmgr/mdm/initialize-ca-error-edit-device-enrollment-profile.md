@@ -1,7 +1,7 @@
 ---
 title: Initialize CA Error editing a device enrollment profile
 description: Describes an issue in which you receive Initialize CA Error when you try to edit a device enrollment profile in Configuration Manager current branch version 1902.
-ms.date: 06/15/2020
+ms.date: 12/05/2023
 ms.custom: sap:Mobile Device Management
 ms.reviewer: kaushika
 ---

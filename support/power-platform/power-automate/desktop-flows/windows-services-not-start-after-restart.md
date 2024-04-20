@@ -5,7 +5,7 @@ ms.reviewer: guco, tapanm
 author: johndund
 ms.author: johndund
 ms.date: 03/31/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Power Automate service won't start automatically after restarting
 
