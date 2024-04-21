@@ -13,12 +13,12 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article explains that the Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to the same state that they were in after successfully completing Dcpromo and that it's best to use this tool only in disaster recovery scenario.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 833783
 
 ## Symptoms
 
-The documentation for the Dcgpofix.exe tool incorrectly indicates that the Dcgpofix tool will restore security settings in the Default Domain Controller Policy to the same state that they were in immediately after Dcpromo successfully completed. This isn't the case.
+The documentation for the Dcgpofix.exe, It Recreates the default Group Policy Objects (GPOs) for a domain.
 
 It's best to use the Dcgpofix tool only in disaster recovery scenarios. The Dcpromo operation modifies the security of the domain in an incremental manner, based on the existing security settings on that server. Therefore, after you run Dcpromo, the final set of security settings in the Default Domain Controller Policy depends on both the Dcpromo operation and the security state of the system that existed before you ran Dcpromo. Before you run Dcpromo, the security state of the system can be modified by a number of mechanisms. For example, when you install some server applications, changes may be made to user rights that are granted to local user accounts, such as the SUPPORT_388945a0 account.
 
