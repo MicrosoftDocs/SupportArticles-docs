@@ -13,8 +13,8 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article describes how to use the new .admx and .adml files to create and to administer registry-based policy settings in Windows Vista, and how the Central Store is used to store and to replicate Windows Vista policy files in a domain environment.
 
-_Applies to:_ &nbsp; Windows Vista  
-_Original KB number:_ &nbsp; 929841
+*Applies to:* Windows client (All supported versions)  
+*Original KB number:* &nbsp; 929841
 
 ## Overview
 
@@ -60,4 +60,4 @@ Windows Vista doesn't include Administrative Templates that have an .adm extensi
 
 In Group Policy for versions of Windows earlier than Windows Vista, if you change Administrative template policy settings on local computers, the Sysvol share on a domain controller within your domain is automatically updated with the new .ADM files. In turn, those changes are replicated to all other domain controllers in the domain. It might result in increased network load and storage requirements. In Group Policy for Windows Server 2008 and Windows Vista, if you change Administrative template policy settings on local computers, Sysvol won't be automatically updated with the new .ADMX or .ADML files. This change in behavior is implemented to reduce network load and disk storage requirements, and to prevent conflicts between .ADMX files and .ADML files when edits to Administrative template policy settings are made across different locales. To make sure that any local updates are reflected in Sysvol, you must manually copy the updated .ADMX or .ADML files from the PolicyDefinitions file on the local computer to the Sysvol\PolicyDefinitions folder on the appropriate domain controller.
 
-To download the Administrative template files for Windows Server 2008, see [Administrative Templates (ADMX) for Windows Server 2008](https://www.microsoft.com/download/details.aspx?id=14355).
+To download the administrative template files for Windows Server (All supported versions), see [https://learn.microsoft.com/en-us/troubleshoot/windows-client/group-policy/create-and-manage-central-store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
