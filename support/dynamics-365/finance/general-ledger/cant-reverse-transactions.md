@@ -2,7 +2,7 @@
 # required metadata
 
 title: Can't reverse a transaction
-description: Describes different reasons why transactions can't be reversed. It also lists solutions to this issue in Microsoft Dynamics 365 Finance.
+description: Describes the different reasons why transactions can't be reversed. It also lists solutions to this issue in Microsoft Dynamics 365 Finance.
 author: kweekley
 ms.date: 04/19/2024
 
@@ -22,7 +22,7 @@ ms.dyn365.ops.version: 10.0.20
 ---
 # Can't reverse a transaction
 
-This article describes different reasons why transactions can't be reversed in Microsoft Dynamics 365 Finance, and provides solutions to this issue. Although this article focuses on transactions in Microsoft Dynamics 365 Finance, some of the concepts and validation can be applied to other apps, such as Dynamics 365 Supply Chain Management. Also, this document is not exhaustive. There are too many combinations of where a transaction can be entered and reversed. 
+This article describes the different reasons why transactions can't be reversed in Microsoft Dynamics 365 Finance, and provides solutions to this issue. Although this article focuses on transactions in Microsoft Dynamics 365 Finance, some of the concepts and validation can be applied to other apps, such as Dynamics 365 Supply Chain Management. Also, this document isn't exhaustive. There are too many combinations of transactions that can be entered and reversed. 
 
 ## Symptoms
 
@@ -32,11 +32,11 @@ You may encounter a situation where a transaction that has been posted can't be 
 
 Transactions must meet specific criteria before they can be reversed. The [More information](#more-information) section of this article provides the validation for each module.
 
-Additionally, the place from where a transaction is reversed might affect whether it can be reversed or not. For example, a vendor payment that is posted as a check can be reversed only from the **Checks** section on the transaction page for the bank accounts. It can't be reversed from the **Voucher transactions** page in General ledger.
+Additionally, the place where a transaction is reversed might affect whether it can be reversed. For example, a vendor payment that is posted as a check can be reversed only from the **Checks** section on the transaction page for the bank accounts. It can't be reversed from the **Voucher transactions** page in General ledger.
 
 For some types of transactions, more than one transaction at a time can be selected and reversed from the journal that it was posted from, or from the **Voucher transactions** page. 
 
-Some subledger transactions can be reversed from the journal (general journal) or the **Voucher transactions** page. They don't have to be reversed from the subledger page. For example, a vendor invoice journal could previously be reversed only from the **Vendor transactions** page. However, it can also be reversed from the General ledger side, from the journal or the **Voucher transactions** page. 
+Some subledger transactions can be reversed from the journal (general journal) or the **Voucher transactions** page. They don't have to be reversed from the subledger page. For example, a vendor invoice journal could previously be reversed only from the **Vendor transactions** page. However, it can also be reversed from the General ledger side, the journal, or the **Voucher transactions** page.
 
 For more information about reversing an entire journal, see [Reverse journal posting](/dynamics365/finance/general-ledger/reverse-journal-posting).
 
@@ -46,8 +46,9 @@ For more information about reversing an entire journal, see [Reverse journal pos
 
 General ledger adjustments are entered only by using ledger accounts. Therefore, they update only General ledger.
 
-- Most general ledger adjustments can be reversed individually from the **Transactions for \<main account>** page for the ledger (**LedgerTransAccount**). (The exact title of the page varies, depending on the selected main account.) The page shows each transaction that has been posted to the main account. It's typically opened from the **Trial balance list** page, or by selecting **Transactions** on the **Voucher transactions** page.
-- One or more general ledger vouchers can be reversed from the **Voucher transactions** page, and from the journal that the transaction was posted from. The exceptions are General ledger foreign currency revaluation, consolidation, and year-end close transactions. Those transactions are reversed from the pages from which the process was run from.
+Most general ledger adjustments can be reversed individually from the **Transactions for \<main account>** page for the ledger (**LedgerTransAccount**). (The exact title of the page varies, depending on the selected main account.) The page shows each transaction that has been posted to the main account. It's typically opened from the **Trial balance list** page, or by selecting **Transactions** on the **Voucher transactions** page.
+
+One or more general ledger vouchers can be reversed from the **Voucher transactions** page, and from the journal that the transaction was posted from. The exceptions are General ledger foreign currency revaluation, consolidation, and year-end close transactions. Those transactions are reversed from the pages on which the process was run.
 
 #### Reasons why transactions can't be reversed
 
@@ -104,11 +105,11 @@ Transactions can't be reversed for the following reasons:
 
   - Year-end close transactions (both closing and opening transactions) can be reversed in these ways:
 
-    - If the General ledger parameter **Delete existing year-end entries when re-closing the year** is set to **Yes**, the opening and closing balances will be deleted when closing the fiscal year again. This also rerun the year end close and will create new closing and opening balances.
+    - If the General ledger parameter **Delete existing year-end entries when re-closing the year** is set to **Yes**, the opening and closing balances will be deleted when closing the fiscal year again. This also reruns the year-end close and will create new closing and opening balances.
     - If you want to delete the closing and opening balances without re-closing the year, select the company and fiscal year records that were created for the year-end close on the **Year-end close** page, and then select **Reverse year-end close**.
 
     > [!NOTE]
-    > The reversal of the year-end close actually deletes the closing and opening transactions. A reversing voucher is never posted. This is because the opening balance is simply a summarization of the balances from the previous year, and doesn’t represent new business transactions.
+    > The reversal of the year-end close actually deletes the closing and opening transactions. A reversing voucher is never posted. This is because the opening balance is simply a summarization of the balances from the previous year, and doesn't represent new business transactions.
 
 ### Accounts payable
 
