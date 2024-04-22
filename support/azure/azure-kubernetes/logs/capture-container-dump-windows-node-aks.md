@@ -9,7 +9,7 @@ ms.custom: sap:Monitoring and Logging
 ---
 # Capture a Windows container dump from a Windows node in an AKS cluster
 
-Windows container may crash when you're using a Microsoft Azure Kubernetes Service (AKS) cluster. To help investigate these issues, this article explains how to capture a Windows container dump from a Windows node in an AKS cluster, and then download the dump to your local machine.
+If a Windows container crashes on a Microsoft Azure Kubernetes Service (AKS) cluster, you may need to examine the Windows container dump to investigate the root cause. This guide provides steps to capture a Windows container dump from a Windows node in an AKS cluster. It also includes instructions on how to download the dump to your local machine for further analysis.
 
 ## Prerequisites
 
@@ -17,11 +17,11 @@ Windows container may crash when you're using a Microsoft Azure Kubernetes Servi
 
 - The Windows agent pools are created after `3/13/2024` or the node image has been upgraded to AKS Windows image versions equal to or newer than `20240316`. Users also can check the AKS Windows CSE script package version (`v0.0.39` or newer) in the CSE log `WindowsCSEScriptsPackage` is in *C:\AzureData\CustomDataSetupScript.log* in the Windows nodes.
 
-## Step 1: Add annotations in your deployment
+## Step 1: Add annotations metadata in your deployment
 
-You need to mount a host folder in the container and add annotations to request Windows containerd to store the dump in the folder.
+Mount a host folder in the container and add the annotations metadata to request Windows container to store the dump in a designated folder.
 
-```dockerfile
+```yaml
 metadata:
   ...
   annotations:
@@ -62,9 +62,9 @@ If you have an SSH key, [create an SSH connection to the Windows node](/azure/ak
 
 ### [RDP](#tab/rdp)
 
-If you don't have an SSH key, connect using RDP and the Windows admin password. What if you don't have this password for your cluster? Then reset the password in Azure CLI by running the [az aks update](/cli/azure/aks#az-aks-update) command. Specify the resource group, cluster name, and the new password. The command displays the cluster details after it completes.
+If you don't have an SSH key, connect using RDP and the Windows admin password. If you don't have this password for your cluster, reset the password in Azure CLI by running the [az aks update](/cli/azure/aks#az-aks-update) command. Specify the resource group, cluster name, and the new password. The command displays the cluster details after it completes.
 
-```azurecli-interactive
+```azurecli-interactivel
 az aks update \
     --resource-group <myResourceGroup> \
     --name <myAKSCluster> \
