@@ -10,7 +10,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.topic: troubleshooting
-ms.date: 04/15/2024
+ms.date: 04/22/2024
 ms.author: divargas
 ms.reviewer: ekpathak, v-leedennis
 ---
@@ -134,7 +134,7 @@ This error might be associated with one of the following issues:
         update-grub
         ```
   
-4. Go to step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
+3. Go to step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
 ## <a id="error15"></a>Error 15: File not found
 
@@ -174,25 +174,30 @@ T he following screenshot shows the error message:
     ```
 4. If the content of `/boot` partition is empty, use the following commands to recreate it:
 
-* **RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI (BIOS based - Gen1)**
+    > [!NOTE]
+    > The following steps apply to RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI (BIOS based - Gen1).
 
-   4.1. Under the chroot process, reinstall the grub. Replace /dev/sd[X] accordingly with the corresponding copy of the OS disk attached to the repair/rescue VM.
-    ```bash
-    grub2-install /dev/sd[X]
-    ```
-  4.2. Make sure the `/etc/resolv.conf` has a valid DNS entry in order to resolve the name of the repository.
-   ```bash
-   cat /etc/resolv.conf
-   ```
-  4.3. Reinstall the kernel
-   ```bash
-   yum reinstall $(rpm -qa | grep -i kernel)
-   ```
-  4.4. Create the grub.cfg
-   ```bash
-   grub2-mkconfig -o /boot/grub2/grub.cfg
-   sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
-   ```
+   1. Under the chroot process, reinstall the grub. Replace `/dev/sd[X]` accordingly with the corresponding copy of the OS disk attached to the repair/rescue VM.
+
+        ```bash
+        grub2-install /dev/sd[X]
+        ```
+  2. Make sure the `/etc/resolv.conf` has a valid DNS entry in order to resolve the name of the repository:
+
+       ```bash
+       cat /etc/resolv.conf
+       ```
+  3. Reinstall the kernel:
+  
+       ```bash
+       yum reinstall $(rpm -qa | grep -i kernel)
+       ```
+  4. Create the grub.cfg:
+  
+       ```bash
+       grub2-mkconfig -o /boot/grub2/grub.cfg
+       sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
+       ```
 
 5. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
