@@ -1,64 +1,42 @@
 ---
-title: Fix 550 5.1.8 Access denied in Exchange Online
-ms.date: 01/24/2024
+title: NDR error code 550 5.1.8 (Access denied, bad outbound sender)
+description: Provides a fix for NDR 550 5.1.8.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six
-audience: Admin
+audience: ITPro
 ms.topic: troubleshooting
-ms.localizationpriority: medium
-f1.keywords:
-- CSH
+localization_priority: Normal
 ms.custom: 
   - sap:Mail Flow
   - Exchange Online
   - CSSTroubleshoot
-  - CI 167832
-search.appverid:
-- BCS160
-- MOE150
-- MET150
-ms.assetid: 303238b8-658d-46b6-8f45-a789acd2173b
-description: Learn how to fix email delivery for error code 5.1.8 (550 5.1.8 Access denied) in Exchange Online (the account has been blocked for sending too much spam), when mail is not delivered.
+  - CI 189901
+ms.reviewer: arindamt, lusassl, meerak, v-trisshores
+appliesto:
+  - Exchange Online
+search.appverid: MET150
+ms.date: 04/22/2024
 ---
 
-# Fix NDR error "550 5.1.8 Access denied" in Exchange Online
+# NDR error code "550 5.1.8 Access denied, bad outbound sender"
 
-Getting an error message that means the mail you sent wasn't delivered is frustrating. This topic tells you what to do if you get error code 550 5.1.8 Access denied in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN), and mail isn't delivered.
+The complete NDR error message is as follows:
 
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
-|---|---|---|---|
-|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix it?](#i-got-this-bounce-message-how-do-i-fix-it)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How do I fix this email delivery issue?](#im-an-email-admin-how-do-i-fix-this-email-delivery-issue)|
+"Your message couldn't be delivered because you weren't recognized as a valid sender. The most common reason for this is that your email address is suspected of sending spam and it's no longer allowed to send email. Contact your email admin for assistance. Remote Server returned 550 5.1.8 Access denied, bad outbound sender."
 
-## What is 550 5.1.8 and why did I get this bounce message?
+This NDR is generated if a user tries to send an email message after their account exceeds the [sending limits in Exchange Online](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits).
 
-You received this NDR with error code 5.1.8 because your account has been blocked for sending too much spam. Typically, this problem occurs because your account has been compromised (hacked) by phishing or malware.
+## How do I fix this?
 
-## I got this bounce message. How do I fix it?
+If you're a user, follow these steps:
 
-First, you need to reset your password and scan your devices for malware. However, the hacker might have configured other settings on your mailbox (for example, created Inbox rules to auto-forward email messages or added additional mailbox delegates). So, follow the additional steps in [How to determine whether your account has been compromised](/office365/troubleshoot/sign-In/determine-account-is-compromised).
+1. [Determine whether your account is compromised](/microsoft-365/troubleshoot/sign-in/determine-account-is-compromised).
 
-Then, you need to tell your email admin that you think your account has been compromised. Your admin will need to unblock your account before you can send email again.
+2. If your account is compromised, follow the steps in [Respond to a compromised email account in Exchange Online](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account).
 
-## I'm an email admin. How do I fix this email delivery issue?
+3. Ask your administrator to unblock your account so that you can send email.
 
-The sending account might be compromised. You'll need to:
+If you're an email admin, you can unblock user accounts on the **Restricted entities** page in the [Microsoft 365 Defender portal](https://security.microsoft.com/restrictedusers). After you unblock a user account, all restrictions are usually removed within one hour.
 
-- [Determine if the account is compromised](/office365/troubleshoot/sign-In/determine-account-is-compromised). If the account is compromised, follow the steps in [Responding to a Compromised Email Account in Exchange Online](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account).
-
-- Go to the **Restricted users** page in the Microsoft 365 Defender portal at [https://security.microsoft.com/restrictedusers](https://security.microsoft.com/restrictedusers) to unblock the account. After you unblock the account, the user should be able to resume sending messages *within a few hours*.
-
-- To help prevent future account compromises, follow the recommendations in [Top 10 ways to secure Microsoft 365 for business plans](/microsoft-365/admin/security-and-compliance/secure-your-business-data).
-
-## Still need help with error code 5.1.8?
-
-[:::image type="icon" source="media/community-forum-icon.png":::](https://answers.microsoft.com/)
-
-[:::image type="icon" source="media/create-service-request-icon.png":::](https://admin.microsoft.com/AdminPortal/Home#/support)
-
-[:::image type="icon" source="media/call-support-icon.png":::](/microsoft-365/Admin/contact-support-for-business-products)
-
-## See also
-
-[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)
+For more information, see [Remove blocked users from the Restricted entities page](/microsoft-365/security/office-365-security/outbound-spam-restore-restricted-users). To help prevent future account compromises, follow the recommendations in [Top 10 ways to secure your business data](/microsoft-365/admin/security-and-compliance/secure-your-business-data#top-10-ways-to-secure-your-business-data).
