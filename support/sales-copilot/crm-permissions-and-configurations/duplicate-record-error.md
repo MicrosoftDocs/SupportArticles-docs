@@ -4,6 +4,7 @@ description: Resolves the error that occurs due to duplicate detection rules in 
 ms.date: 04/22/2024
 author: sbmjais
 ms.author: shjais
+ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 
 # Record creation error due to duplicate detection rules in CRM
