@@ -144,7 +144,7 @@ Get-MailboxFolderPermission -Identity <delegator's UserPrincipalName>:\calendar 
 Check whether the **AccessRights** parameter contains a value of **Editor**. If not, run this command to grant the permission:
 
 ```powershell
-Set-MailboxFolderPermission -Identity <delegator's UserPrincipalName>\Calendar -User <delegate's UserPrincipalName> -AccessRights Editor
+Add-MailboxFolderPermission -Identity <delegator's UserPrincipalName>\Calendar -User <delegate's UserPrincipalName> -AccessRights Editor
 ```
 
 Alternatively, ask the delegator to follow the steps in [this article](https://support.microsoft.com/office/allow-someone-else-to-manage-your-mail-and-calendar-41c40c04-3bd1-4d22-963a-28eafec25926) to reconfigure the delegation in the Outlook client.
