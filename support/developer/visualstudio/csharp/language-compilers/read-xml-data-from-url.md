@@ -4,6 +4,7 @@ description: Describes how to use the XmlTextReader class to read XML from a URL
 ms.date: 04/13/2020
 ms.reviewer: INDIRAD
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Use Visual C# to read XML data from a URL
 

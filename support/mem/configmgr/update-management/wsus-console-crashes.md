@@ -3,6 +3,7 @@ title: The Windows Server Update Services console crashes
 description: Fixes an issue where the Windows Server Update Services (WSUS) console crashes because of the corrupted application cache.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Software Update Management (SUM)\WSUS Performance or Crashes
 ---
 # The Windows Server Update Services console crashes when browsing for updates
 

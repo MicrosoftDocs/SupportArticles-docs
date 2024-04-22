@@ -4,8 +4,6 @@
   href: ./developer-license-notification-not-dismiss.md
 - name: Can't switch between organizational accounts
   href: ./cannot-switch-accounts.md
-- name: Overview of Visual Studio 2012 updates
-  href: ./visual-studio-2012-updates.md
 - name: Performance and crashes issues
   href: ./performance-crash-issue.md
 - name: Release Management Client crashes 

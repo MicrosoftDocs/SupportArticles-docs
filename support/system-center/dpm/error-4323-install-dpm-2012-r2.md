@@ -1,7 +1,8 @@
 ---
 title: Error 4323 installing DPM
 description: Fixes an issue in which you get the DPM Setup failed to add a user to the local group error message when you install System Center Data Protection Manager.
-ms.date: 06/27/2022
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet
 ---
 # DPM installation fails and generates error 4323: A member could not be added
 

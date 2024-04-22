@@ -102,7 +102,7 @@ We recommend that you gather the information listed in this section using one of
 
 ### Option 1: Use the SQL Check tool to gather the required information
 
-If you can sign in locally to the SQL Server computer and have administrator access, use  SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki). This tool provides most of the information required for troubleshooting in one file. Review the tool's home page for more information on using the tool and the information it gathers.  You can also check the recommended [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and checklist page.
+If you can sign in locally to the SQL Server computer and have administrator access, use [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK). This tool provides most of the information required for troubleshooting in one file. Review the tool's home page for more information on using the tool and the information it gathers.  You can also check the recommended [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and checklist page.
 
 ### Option 2: Collect the data individually using the following procedures
 
@@ -147,9 +147,9 @@ In most cases, you connect to the Database Engine on another computer by using t
 
 ## Step 1：Verify that the instance is running
 
-### Option 1: Use the output file from the SQLCheck tool
+### Option 1: Use the SQLCHECK output file
 
-1. Search the output from SQLCheck file for "SQL Server Information".
+1. Search the SQLCHECK output file for "SQL Server Information".
 1. In the section titled "Services of Interest", find your SQL Server instance under **Name** and **Instance** (for named instances) columns and check its status by using **Started** column. If the value is **True**, the services are started. Otherwise the service is currently not running.  
 1. If the service isn't running, [start the service](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services) by using either SQL Server management studio, SQL Server Configuration manager, [PowerShell](/powershell/module/sqlserver/start-sqlinstance), or Services applet.
 
@@ -181,9 +181,9 @@ Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Inc
 > [!NOTE]
 > This step is required only for troubleshooting connectivity issues with named instances.
 
-### Option 1: Use the output file from SQLCheck tool
+### Option 1: Use the SQLCHECK output file
 
-1. Search the output from SQLCheck file for "SQL Server Information".
+1. Search the SQLCHECK output file for "SQL Server Information".
 1. In the section titled "Services of Interest", search for SQLBrowser in the **Name** column and check its status using the **Started** column. If the value is True, the service is started. Otherwise, the service is currently not running, and you need to start it. For more information, see [Start, stop, pause, resume, restart SQL Server services](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).
 
 ### Option 2: Use SQL Server Configuration Manager
@@ -202,7 +202,7 @@ For more information on stopping and starting SQL Services, see [Start, stop, pa
 You often encounter errors when an incorrect server name is specified in the connection string. Make sure that the server name matches the one that you retrieved in the previous steps.
 
 > [!NOTE]
-> If you are using the SQLCheck tool, review the **NetBios Name/FQDN** values in the **Computer Information** section of the output file.
+> If you are using the SQLCHECK tool, review the **NetBios Name/FQDN** values in the **Computer Information** section of the output file.
 
 - For examples on connection strings, see [SQL Server Connection Strings](https://www.connectionstrings.com/sql-server/).
 - For more detailed examples, see [Proof of concept connecting to SQL using ADO.NET](/sql/connect/ado-net/step-3-connect-sql-ado-net) under [Homepage for SQL client programming](/sql/connect/homepage-sql-connection-programming).
@@ -214,9 +214,9 @@ Aliases are often used in client environments when you connect to SQL Server wit
 > [!NOTE]
 > The following options only apply to the applications that use [SQL Server Native Client](/sql/relational-databases/native-client/SQL-server-native-client) to connect to SQL Server.
 
-### Option 1: Use the output file from the SQLCheck tool
+### Option 1: Use the SQLCHECK output file
 
-1. In the SQLCheck output file, search for the string SQL Aliases. (This string will be inside the **Client Security and Driver Information** section of the file)
+1. In the SQLCHECK output file, search for the string SQL Aliases. (This string will be inside the **Client Security and Driver Information** section of the file)
 1. Review the entries in the table. If there's none present, there are no aliases on the computer. If there's an entry, review the information to ensure the server name and port number are set to the correct values.
 
 Example output:  
@@ -265,7 +265,7 @@ You can verify the firewall configuration depending on the default instance or n
 A default instance typically runs on port 1433. Some installations also use a non-standard port (other than 1433) to run SQL instances. The firewall may block either port. To check the port number further, follow these steps:
 
 1. Determine the port your SQL instance is running on, see [Get the TCP port of the instance](#get-the-tcp-port-of-the-instance).
-1.
+1. 
     - If your SQL Server is configured to listen on port 1433, make sure that firewalls on the network between the client and the server allow traffic on that port. Review [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) and work with your network administrator to implement necessary solutions.
     - If your SQL Server default instance isn't using 1433, try to append the port number of SQL Server to the server name by using the format `<servername>,<portnumber>` and see whether it works. For example, your SQL instance name is *MySQLDefaultinstance* and it's running on port 2000. Specify the server name as *MySQLServer, 2000* and see whether it works.
         - If it doesn't work, it indicates the firewall is blocking the port. You can follow the instructions at [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) or work with your network administrator to add the port to the firewall exclusion list.
@@ -295,9 +295,9 @@ If your SQL instance is a named instance, it may be configured to use either dyn
 
 In some installations of SQL Server, connections to the Database Engine from another computer aren't enabled unless an administrator manually enables them. You can use one of the following options to check and enable the necessary protocols to allow remote connections to SQL Server Database Engine.
 
-### Option 1: Use the output file from SQLCheck tool
+### Option 1: Use the SQLCHECK output file
 
-1. Search the SQLCheck output file for "Details for SQL Server instance" section and locate the information section for your SQL Server instance.
+1. Search the SQLCHECK output file for "Details for SQL Server instance" section and locate the information section for your SQL Server instance.
 1. In the section, find the values listed in the following table to determine if the SQL Server protocols are enabled:
 
     |Value name |Implication|More information|
@@ -390,6 +390,10 @@ Once you can connect by using TCP on the same computer, it's time to try to conn
     1. On the client computer, use SQL Server Configuration Manager. In the left-pane, expand **SQL Native Client \<version> Configuration**, and then select **Client Protocols**.
     1. On the right-pane, make sure that **TCP/IP** is enabled. If **TCP/IP** is disabled, right-click **TCP/IP** and select **Enable**.
     1. Make sure that the protocol order for TCP/IP is a smaller number than the named pipes (or VIA on older versions) protocols. Generally, you should leave shared memory as order 1 and TCP/IP as order 2. Shared memory is only used when the client and SQL Server are running on the same computer. All enabled protocols are tried in order until one succeeds, but shared memory is skipped when the connection isn't on the same computer.
+
+## Step 10: Check user permissions
+
+If you are using Named Pipes to connect, check if a user has permissions to log into Windows. For more information, see [Troubleshooting the Named Pipes connections issue](named-pipes-connection-fail-no-windows-permission.md).
 
 ## See also
 

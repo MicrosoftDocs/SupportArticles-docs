@@ -1,19 +1,19 @@
 ---
 title: Active Directory Replication Error 8451
 description: provides a resolution for Active Directory Replication Error 8451 "The replication operation encountered a database error".
-ms.date: 12/26/2023
+ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, toddmax
-ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.reviewer: kaushika, toddmax, sagiv
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Active Directory Replication Error 8451: "The replication operation encountered a database error"
 
 This article provides a resolution for Active Directory Replication Error 8451: "The replication operation encountered a database error".  
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; All supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2645996
 
 >[!NOTE]
@@ -128,7 +128,7 @@ You might experience one of more of the following symptoms:
 
 ### How to decode error codes
 
-You can use Microsoft Exchange Server Error Code Lookup to decode the error codes that are described in this article. Decoding the error codes that relate to the 8451 error and accompanying errors produces the following information:  
+You can use [Microsoft Error Lookup Tool](https://www.microsoft.com/download/details.aspx?id=100432) to decode the error codes that are described in this article. Decoding the error codes that relate to the 8451 error and accompanying errors produces the following information:  
 >C:\>err 8451  
 for decimal 8451 / hex 0x2103 :  
 ERROR_DS_DRA_DB_ERROR  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; winerror.h  

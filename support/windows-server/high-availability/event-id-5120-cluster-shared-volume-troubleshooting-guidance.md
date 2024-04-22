@@ -7,7 +7,7 @@ ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom: sap:csv, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Cluster Shared Volume (CSV), csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika
 ---

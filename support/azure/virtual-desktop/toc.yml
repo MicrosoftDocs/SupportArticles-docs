@@ -4,4 +4,6 @@
 - name: Virtual Desktop Issues
   items:
   - name: Windows Virtual Desktop sign-in screen is blank
-    href: windows-virtual-desktop-blank-screen.md
+    href: /previous-versions/troubleshoot/windows-server/windows-virtual-desktop-blank-screen
+
+

@@ -3,7 +3,7 @@ title: Keychain error -25244 when enrolling macOS devices in Intune
 description: Describes an issue in which you can't enroll a macOS device in Microsoft Intune because of stale or corrupted keychain entries.
 ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:iOS/iPadOS enrollment
+ms.custom: sap:Enroll Devices - macOS\Advisory
 ms.reviewer: kaushika, luche
 ---
 # Keychain error -25244 (errSecInvalidOwnerEdit) when you enroll a macOS device in Intune

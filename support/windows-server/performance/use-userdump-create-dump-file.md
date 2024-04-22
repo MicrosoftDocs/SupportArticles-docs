@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:shutdown-is-slow-or-hangs, csstroubleshoot
+ms.custom: sap:System Performance\Shutdown Performance (slow, unresponsive), csstroubleshoot
 ---
 # Use the Userdump.exe tool to create a dump file
 

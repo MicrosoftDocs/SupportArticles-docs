@@ -2,6 +2,7 @@
 title: Troubleshoot Dataverse bulk operation errors
 description: Provides resolutions for system errors that might occur while using bulk operations with Microsoft Dataverse.
 ms.date: 11/09/2023
+ms.custom: sap:Bulk deleting data\Bulk delete job reporting failures
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -63,6 +64,6 @@ This error isn't related to the use of bulk operations. Review any custom plug-i
 
 You might encounter errors caused by issues in the bulk operation requests being sent. If you encounter a client error when using bulk operations, see [Troubleshoot Dataverse client errors](client-errors.md).
 
-### See also
+## See also
 
 [Scalable Customization Design in Microsoft Dataverse](/power-apps/developer/data-platform/scalable-customization-design/overview)

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:server-manager, csstroubleshoot
+ms.custom: sap:System Management Components\Server Manager, csstroubleshoot
 ---
 # You are unable to view Roles and Features and receive error code 0x800706BE in Server Manager
 

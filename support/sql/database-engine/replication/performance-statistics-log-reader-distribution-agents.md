@@ -135,19 +135,3 @@ The following is the description of each performance statistic:
 | sincelaststats\reader wait||The value represents the cumulative wait-for-writer time since the last stats event. The value shows the time that is spent waiting for the writer thread to finish using the data buffer before reader can fill the data buffer again. |
 | sincelaststats\writer||The value represents the cumulative time that writer spent since the last stats event. The time excludes the idle time and the wait-for-reader time.|
 | sincelaststats\writer wait||The value represents the wait-for-reader time since the last stats event. The value shows the time that is spent waiting for the reader thread to finish populating the data buffer before writer can apply the data buffer. |
-  
-## Script to load MSlogreader_history and MSdistribution_history run statistics from XML data into a table that can be queried easily
-
-There are four script samples help you extract the performance statistics into a permanent table that can be easily queried. There is also a stored procedure that approximately correlates the Log Reader Agent performance statistics to the Distribution Agent performance statistics (that is, to the `perf_stats_tab` table).
-
-To obtain the script samples, visit [this sample](https://gallery.technet.microsoft.com/extract-the-performance-777f02b8) and click KB2892631.zip, and then uncompress file KB2892631.zip, you will see the following four script files:
-
-- Original version of the _Perf_stats_script.sql_ file: _perf_stats_script.sql_
-- Revised _Usp_move_stats_to_table.sql_ file: _usp_move_stats_to_table.sql_
-- Revised _Sp_endtoend_stats.sql_ file: _sp_endtoend_stats.sql_
-- Another script to read the data in real time or from a distribution database backup: _Additional_Script.sql_
-
-> [!NOTE]
->
-> - The `perf_stats_tab` table contains performance statistics for both the Log Reader Agent and the Distribution Agent. The statistics can be queried independently by using the `WHERE TYPE='Distrib'` clause or the `WHERE TYPE='LogRead'` clause.
-> - The `move_stats_to_tab` stored procedure opens a cursor on the `mslogreader_history` table and the `msdistribution_history` table and then calls the `move_stats_to_tab` stored procedure for each row in order to extract the XML performance statistics data into the `perf_stats_tab` table.

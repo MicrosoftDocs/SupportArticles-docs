@@ -1,9 +1,10 @@
 ---
 title: Historical Inventory Trial Balance report is missing transactions in Microsoft Dynamics GP
 description: Provides a solution to an issue where posted transactions are missing from the Historical Inventory Trial Balance report.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # The Historical Inventory Trial Balance report is missing transactions in Microsoft Dynamics GP
 

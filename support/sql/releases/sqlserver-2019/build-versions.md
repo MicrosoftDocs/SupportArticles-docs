@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 build versions (KB4518398)
 description: This article lists cumulative update and GDR builds for SQL Server 2019.
-ms.date: 02/15/2024
+ms.date: 04/11/2024
 ms.custom: KB4518398
 appliesto:
 - SQL Server 2019
@@ -15,7 +15,8 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 
 | Cumulative update name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|--------------|-------------------|------------|----------------|------------------------------------|--------------------|
-| CU25 (Latest) | 15.0.4355.3  | 2019.150.4355.3   | 15.0.35.45 | 2018.150.35.45 | [KB5033688](cumulativeupdate25.md) | February 15, 2024  |
+| CU26 (Latest) | 15.0.4365.2  | 2019.150.4365.2   | 15.0.35.45 | 2018.150.35.45 | [KB5035123](cumulativeupdate26.md) | April 11, 2024     |
+| CU25          | 15.0.4355.3  | 2019.150.4355.3   | 15.0.35.45 | 2018.150.35.45 | [KB5033688](cumulativeupdate25.md) | February 15, 2024  |
 | CU24          | 15.0.4345.5  | 2019.150.4345.5   | 15.0.35.41 | 2018.150.35.41 | [KB5031908](cumulativeupdate24.md) | December 14, 2023  |
 | CU23          | 15.0.4335.1  | 2019.150.4335.1   | 15.0.35.41 | 2018.150.35.41 | [KB5030333](cumulativeupdate23.md) | October 12, 2023   |
 | CU22          | 15.0.4322.2  | 2019.150.4322.2   | 15.0.35.41 | 2018.150.35.41 | [KB5027702](cumulativeupdate22.md) | August 14, 2023    |
@@ -46,6 +47,8 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 
 | GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date|
 |-------------------------|--------------|------------------|------------|----------------|---------------------------------------------------------|-------------------|
+| CU25 + GDR              | 15.0.4360.2  | 2019.150.4360.2  | 15.0.35.45 | 2018.150.35.45 | [KB5036335](https://support.microsoft.com/help/5036335) | April 9, 2024  |
+| GDR                     | 15.0.2110.4  | 2019.150.2110.4  | 15.0.32.62 | 2018.150.32.62 | [KB5035434](https://support.microsoft.com/help/5035434) | April 9, 2024  |
 | CU22 + GDR              | 15.0.4326.1  | 2019.150.4326.1  | 15.0.35.41 | 2018.150.35.41 | [KB5029378](https://support.microsoft.com/help/5029378) | October 10, 2023  |
 | GDR                     | 15.0.2104.1  | 2019.150.2104.1  | 15.0.32.62 | 2018.150.32.62 | [KB5029377](https://support.microsoft.com/help/5029377) | October 10, 2023  |
 | CU18 + GDR              | 15.0.4280.7  | 2019.150.4280.7  | 15.0.35.35 | 2018.150.35.35 | [KB5021124](https://support.microsoft.com/help/5021124) | February 14, 2023 |
