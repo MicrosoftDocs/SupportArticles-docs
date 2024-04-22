@@ -9,7 +9,7 @@ ms.custom: sap:Monitoring and Logging
 ---
 # Capture a Windows container dump from a Windows node in an AKS cluster
 
-If a Windows container crashes on a Microsoft Azure Kubernetes Service (AKS) cluster, you may need to examine the Windows container dump to investigate the root cause. This guide provides steps to capture a Windows container dump from a Windows node in an AKS cluster. It also includes instructions on how to download the dump to your local machine for further analysis.
+If a Windows container crashes on a Microsoft Azure Kubernetes Service (AKS) cluster, you may need to examine the Windows container dump to investigate the root cause. This article provides steps to capture a Windows container dump from a Windows node in an AKS cluster. It also includes instructions on how to download the dump to your local machine for further analysis.
 
 ## Prerequisites
 
@@ -89,7 +89,7 @@ To transfer the capture files to your machine, you need to redirect a disk drive
 
     :::image type="content" source="./media/capture-tcp-dump-windows-node-aks/remote-desktop-connection-local-devices-and-resources.png" alt-text="Screenshot of a new Remote Desktop Connection dialog box, showing the full expanded list of drives that you can choose to use in the remote session." border="false":::
 
-Then finish connecting to the Windows virtual machine that you set up earlier.
+Then connect to the Windows virtual machine that you set up earlier.
 
 ---
 
