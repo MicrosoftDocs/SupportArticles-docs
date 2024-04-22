@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, wincicadsec, jitha
-ms.custom: sap:active-directory-certificate-services, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
 # How to set up certificate-based authentication across forests without trust for a web server
 

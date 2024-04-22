@@ -4,6 +4,7 @@ description: Troubleshoot the use of Public Key Cryptography Standards (PKCS) pr
 ms.date: 12/05/2023
 ms.reviewer: kaushika, lacranda
 search.appverid: MET150
+ms.custom: sap:Configure Devices - iOS\PKCS Certificates
 ---
 # Troubleshooting PKCS certificate deployment in Intune
 

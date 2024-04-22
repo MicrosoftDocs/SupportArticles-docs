@@ -1,19 +1,19 @@
 ---
 title: Use Group Policy to remotely install software
 description: Describes how to use Group Policy to remotely install software.
-ms.date: 12/26/2023
+ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:deploying-software-through-group-policy, csstroubleshoot
+ms.custom: sap:Group Policy\Deploying software through Group Policy , csstroubleshoot
 ---
 # Use Group Policy to remotely install software
 
 This article describes how to use Group Policy to automatically distribute programs to client computers or users.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 816102
 
 ## Summary

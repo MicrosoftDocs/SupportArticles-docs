@@ -3,6 +3,7 @@ title: Error when you publish ClickOnce apps
 description: Describes a problem that when you can't publish a ClickOnce application in Visual Studio 2010 and the .NET Framework 4.5 with custom prerequisites. Provides a solution.
 ms.date: 05/08/2020
 ms.reviewer: tanyaso, davean, danru
+ms.custom: sap:Installation and Deployment
 ---
 # Error when you publish a ClickOnce application in Visual Studio 2010 and the .NET Framework 4.5 with custom prerequisites
 

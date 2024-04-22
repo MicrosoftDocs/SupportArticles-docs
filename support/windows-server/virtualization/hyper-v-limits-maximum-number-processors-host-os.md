@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: arichard, kaushika
-ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine settings, csstroubleshoot
 ---
 # Hyper-V limits the maximum number of processors in the Hyper-V host OS to 64
 

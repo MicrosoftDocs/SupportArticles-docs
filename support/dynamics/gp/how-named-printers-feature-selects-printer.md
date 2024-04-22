@@ -2,8 +2,9 @@
 title: How the named printers feature selects a printer in Microsoft Dynamics GP
 description: Describes how the named printers feature selects a printer in Microsoft Dynamics GP. The named printers feature is a workstation-based feature.
 ms.topic: how-to
-ms.reviewer: Kyouells
-ms.date: 03/31/2021
+ms.reviewer: theley, Kyouells
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How the named printers feature selects a printer in Microsoft Dynamics GP
 

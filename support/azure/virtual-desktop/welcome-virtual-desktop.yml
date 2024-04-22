@@ -23,4 +23,4 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Azure Virtual Desktop sign-in screen is blank
-            url: ./windows-virtual-desktop-blank-screen.md
+            url: /previous-versions/troubleshoot/windows-server/windows-virtual-desktop-blank-screen

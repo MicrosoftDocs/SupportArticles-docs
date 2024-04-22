@@ -4,6 +4,7 @@ description: Describes how to obtain a hash value and how to compare two hash va
 ms.date: 04/13/2020
 ms.reviewer: v-ingor
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Use Visual C# to compute and compare hash values
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, wesk, amirsc
-ms.custom: sap:driver-installation-or-driver-update, csstroubleshoot
+ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
 ---
 # USB device drivers are removed unexpectedly after Windows 10 is updated
 

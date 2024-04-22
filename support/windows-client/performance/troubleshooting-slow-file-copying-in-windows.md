@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:slow-performance, csstroubleshoot
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
 ---
 # Troubleshooting slow file copying in Windows
 

@@ -4,6 +4,7 @@ description: Learn how to use the built-in Intune troubleshooting feature, and g
 ms.date: 12/05/2023
 ms.reviewer: kaushika, jlynn
 search.appverid: MET150
+ms.custom: sap:Configure Devices - Android\Assign profiles
 ---
 # Troubleshooting policies and profiles in Microsoft Intune
 

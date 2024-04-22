@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, chadbee, philipd, kimnich
-ms.custom: sap:dpi-and-display-issues, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\DPI and Display Issues, csstroubleshoot
 ---
 # Display configuration reverts to "Second screen only" after you resume from standby
 

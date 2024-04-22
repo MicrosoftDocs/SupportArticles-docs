@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, waltere
-ms.custom: sap:webclient-and-webdav, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\WebClient and WebDAV, csstroubleshoot
 ---
 # You can't access a WebDAV Web folder from a Windows-based client computer
 

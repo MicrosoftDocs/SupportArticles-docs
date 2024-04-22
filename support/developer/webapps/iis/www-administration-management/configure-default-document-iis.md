@@ -2,7 +2,7 @@
 title: Configure the default document in IIS
 description: This article describes how to configure the default document in Internet Information Services.
 ms.date: 01/29/2021
-ms.custom: sap:WWW Administration and Management
+ms.custom: sap:WWW Modules and Features\Default Document
 ms.topic: how-to
 ms.subservice: www-administration-management
 ---
@@ -46,7 +46,7 @@ To configure default document settings in IIS:
 
 ## Troubleshooting
 
-For more information about how to troubleshoot issues with document settings in IIS, see: [Common HTTP status codes and the causes](/troubleshoot/iis/http-status-code#common-http-status-codes-and-the-causes).
+For more information about how to troubleshoot issues with document settings in IIS, see: [Common HTTP status codes and the causes](http-status-code.md).
 
 ## References
 

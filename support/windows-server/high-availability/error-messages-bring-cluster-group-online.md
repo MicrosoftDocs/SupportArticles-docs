@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
 ---
 # Error messages occur if you try to bring a cluster group online after a cluster stops
 

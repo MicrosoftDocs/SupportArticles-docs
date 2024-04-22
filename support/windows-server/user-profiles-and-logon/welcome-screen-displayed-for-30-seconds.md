@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-profiles, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
 # The Welcome screen may be displayed for 30 seconds, and the logon script interacts with me when I try to log on to a computer that is running Windows Vista or Windows Server 2008
 

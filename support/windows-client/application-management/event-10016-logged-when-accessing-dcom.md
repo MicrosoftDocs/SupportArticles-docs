@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: high
 ms.reviewer: kaushika, hikono
-ms.custom: sap:dcom-service-startup-and-permissions, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\DCOM service startup and permissions, csstroubleshoot
 adobe-target: true
 ---
 # DCOM event ID 10016 is logged in Windows

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Troubleshoot problems with promoting a domain controller to a global catalog server
 

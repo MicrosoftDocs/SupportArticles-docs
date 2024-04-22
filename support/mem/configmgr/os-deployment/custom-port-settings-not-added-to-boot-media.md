@@ -3,6 +3,7 @@ title: Custom port settings aren't added to boot media
 description: Describes an issue in which custom port settings aren't added to boot media in Configuration Manager.
 ms.date: 12/05/2023
 ms.reviewer: kaushika, brianhun
+ms.custom: sap:Operating Systems Deployment (OSD)\PXE
 ---
 # Custom port settings aren't added to boot media in Configuration Manager
 

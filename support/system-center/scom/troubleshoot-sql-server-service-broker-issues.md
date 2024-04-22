@@ -4,7 +4,7 @@ description: Describes common troubleshooting steps for SQL Server Service Broke
 author: helenclu
 ms.author: ibnajjar
 ms.reviewer: ahalmada
-ms.date: 05/08/2021
+ms.date: 04/15/2024
 appliesto: 
 - System Center Operations Manager
 ---

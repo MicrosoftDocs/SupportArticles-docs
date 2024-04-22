@@ -1,8 +1,9 @@
 ---
 title: Description of the Fiscal Period Modifier tool
 description: Description of the Fiscal Period Modifier tool in Microsoft Dynamics.
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Description of the Fiscal Period Modifier tool in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: How to use the Microsoft Intune troubleshooting pane to help you tr
 ms.date: 12/05/2023
 ms.reviewer: kaushika, mghadial
 search.appverid: MET150
+ms.custom: sap:AppDeployment - Windows\Store
 ---
 # Troubleshooting Intune app installation issues
 
@@ -21,8 +22,6 @@ Intune provides app troubleshooting details based on the apps installed on a spe
 3. Click **Select user** to go to the **Select users** pane.
 4. Type the name or email address of the user you want to troubleshoot, and then click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane.
 5. Select the device that you want to troubleshoot from the **Devices** list.
-
-    :::image type="content" source="media/troubleshoot-app-install/devices.png" alt-text="Screenshot of the Intune Troubleshooting pane." border="false" lightbox="media/troubleshoot-app-install/devices.png":::
 
 6. Select **Managed Apps** from selected device pane. A list of managed apps is displayed.
 

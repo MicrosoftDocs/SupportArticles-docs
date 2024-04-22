@@ -3,6 +3,7 @@ title: Troubleshoot WSUS connection failures
 description: Introduce several methods to troubleshoot WSUS issues.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Software Update Management (SUM)\WSUS Installation or Configuration
 ---
 # How to troubleshoot WSUS connection failures
 

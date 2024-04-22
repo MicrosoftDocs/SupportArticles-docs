@@ -4,6 +4,7 @@ description: Suggestions for troubleshooting device enrollment issues in Microso
 ms.date: 12/05/2023
 ms.reviewer: kaushika, damionw
 search.appverid: MET150
+ms.custom: sap:Enroll Device - Windows\Advisory
 ---
 # Troubleshooting device enrollment in Intune
 

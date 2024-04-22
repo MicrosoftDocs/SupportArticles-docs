@@ -3,6 +3,7 @@ title: IE security zones registry entries for advanced users
 description: Describes how and where Internet Explorer security zones and privacy settings are stored and managed in the registry.
 ms.date: 10/13/2020
 ms.reviewer: ramakoni
+ms.custom: sap:Security and Privacy
 ---
 # Internet Explorer security zones registry entries for advanced users
 

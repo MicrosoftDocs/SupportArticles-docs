@@ -4,6 +4,7 @@ description: This article helps you troubleshoot problems related to Forms Authe
 ms.date: 11/22/2023
 ms.reviewer: senyum, apurvajo, v-jayaramanp
 ms.topic: troubleshooting
+ms.custom: sap:WWW Authentication and Authorization\Forms authentication
 ---
 
 # Troubleshooting Forms Authentication

@@ -2,7 +2,7 @@
 title: Cumulative update 30 for SQL Server 2017 (KB5013756)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 30 (KB5013756).
 ms.date: 08/04/2023
-ms.custom: KB5013756
+ms.custom: KB5013756, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows
 - SQL Server 2017 on Linux
@@ -1084,4 +1084,3 @@ The third-party products that are discussed in this article are manufactured by 
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
 - [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
 - [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)
-

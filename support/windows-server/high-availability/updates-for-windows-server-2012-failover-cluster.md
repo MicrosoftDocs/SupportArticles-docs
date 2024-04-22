@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: cpuckett, kaushika
-ms.custom: sap:cluster-aware-updating-cau, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Cluster-Aware Updating (CAU), csstroubleshoot
 ---
 # Recommended hotfixes and updates for Windows Server 2012-based failover clusters
 

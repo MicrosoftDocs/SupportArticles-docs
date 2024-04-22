@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2022 build versions (KB5023451)
 description: This article lists cumulative update and GDR builds for SQL Server 2022.
-ms.date: 01/11/2024
+ms.date: 03/14/2024
 ms.custom: KB5023451
 appliesto:
 - SQL Server 2022
@@ -15,7 +15,8 @@ This article lists the Microsoft SQL Server 2022 builds that were released after
 
 | Cumulative update name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|-------------|-----------------|-------------|-----------------|------------------------------------|--------------------|
-| CU11 (Latest) | 16.0.4105.2 | 2022.160.4105.2 | 16.0.43.222 | 2022.160.43.222 | [KB5032679](cumulativeupdate11.md) | January 11, 2024   |
+| CU12 (Latest) | 16.0.4115.5 | 2022.160.4115.5 | 16.0.43.229 | 2022.160.43.229 | [KB5033663](cumulativeupdate12.md) | March 14, 2024     |
+| CU11          | 16.0.4105.2 | 2022.160.4105.2 | 16.0.43.222 | 2022.160.43.222 | [KB5032679](cumulativeupdate11.md) | January 11, 2024   |
 | CU10          | 16.0.4095.4 | 2022.160.4095.4 | 16.0.43.222 | 2022.160.43.222 | [KB5031778](cumulativeupdate10.md) | November 16, 2023  |
 | CU9           | 16.0.4085.2 | 2022.160.4085.2 | 16.0.43.222 | 2022.160.43.222 | [KB5030731](cumulativeupdate9.md)  | October 12, 2023   |
 | CU8           | 16.0.4075.1 | 2022.160.4075.1 | 16.0.43.221 | 2022.160.43.221 | [KB5029666](cumulativeupdate8.md)  | September 14, 2023 |
@@ -32,6 +33,8 @@ This article lists the Microsoft SQL Server 2022 builds that were released after
 
 | GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------|-------------|-----------------|-------------|-----------------|---------------------------------------------------------|-------------------|
+| CU12 + GDR  | 16.0.4120.1 | 2022.160.4120.1 | 16.0.43.229 | 2022.160.43.229 | [KB5036343](https://support.microsoft.com/help/5036343) | April 9, 2024  |
+| GDR         | 16.0.1115.1 | 2022.160.1115.1 | 16.0.42.216 | 2022.160.42.216 | [KB5035432](https://support.microsoft.com/help/5035432) | April 9, 2024  |
 | CU10 + GDR  | 16.0.4100.1 | 2022.160.4100.1 | 16.0.43.222 | 2022.160.43.222 | [KB5033592](https://support.microsoft.com/help/5033592) | January 9, 2024  |
 | GDR        | 16.0.1110.1 | 2022.160.1110.1 | 16.0.42.216 | 2022.160.42.216 | [KB5032968](https://support.microsoft.com/help/5032968) | January 9, 2024  |
 | CU8 + GDR  | 16.0.4080.1 | 2022.160.4080.1 | 16.0.43.221 | 2022.160.43.221 | [KB5029503](https://support.microsoft.com/help/5029503) | October 10, 2023  |

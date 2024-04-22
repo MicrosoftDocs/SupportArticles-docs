@@ -37,6 +37,8 @@ To resolve this issue, use one of the following methods:
 
 ### Method 2: To allow only the one guest user or configure on a per user basis
 
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+
 1. Open Windows PowerShell.
 2. Run the following cmdlet:
 

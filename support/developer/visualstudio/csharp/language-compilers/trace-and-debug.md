@@ -2,7 +2,7 @@
 title: Trace and debug
 description: This article describes how to trace and debug in Visual C# and provides some sample steps to explain related information.
 ms.date: 10/09/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C#
 ms.topic: how-to
 ---
 # Trace and debug in Visual C sharp
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 815788
 
 ## Summary
 
-For a Microsoft Visual Basic .NET version of this article, see [Use Trace and Debug classes in Visual Basic .NET](/troubleshoot/dotnet/visual-basic/trace-debug).  
+For a Microsoft Visual Basic .NET version of this article, see [Use Trace and Debug classes in Visual Basic .NET](../../visual-basic/language-compilers/trace-debug.md).  
 
 This article refers to the .NET Framework Class Library namespace System. Diagnostics and describes how to use the `Debug` and the `Trace` classes. These classes are available in the .NET Framework. You can use these classes to provide information about the performance of an application either during application development, or after deployment to production. These classes are only one part of the instrumentation features that are available in the .NET Framework.
 

@@ -1,8 +1,9 @@
 ---
 title: Information about the new connection objects in VBA
 description: This article describes the new connection objects that were added to VBA from the GPConn.dll file in Microsoft Dynamics GP 10.0.
-ms.reviewer: dclauson
-ms.date: 03/31/2021
+ms.reviewer: theley, dclauson
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Information about the new connection objects in VBA that replace the RetrieveGlobals.dll and RetrieveGlobals9.dll files in Microsoft Dynamics GP 10.0
 
