@@ -11,7 +11,7 @@ ms.search.region: Global
 ms.author: rcarlson
 ms.search.validFrom: 2022-08-30
 ms.dyn365.ops.version: 10.0.30
-ms.custom: sap:General ledger - Setup, transactions and reporting
+ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with general journals
 ---
 
 # Troubleshoot issues with the General ledger adjustments page
