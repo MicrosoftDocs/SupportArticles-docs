@@ -23,7 +23,7 @@ ms.date: 04/22/2024
 
 The complete NDR error message is as follows:
 
-"Your message couldn't be delivered because you weren't recognized as a valid sender. The most common reason for this is that your email address is suspected of sending spam and it's no longer allowed to send email. Contact your email admin for assistance. Remote Server returned 550 5.1.8 Access denied, bad outbound sender."
+> Your message couldn't be delivered because you weren't recognized as a valid sender. The most common reason for this is that your email address is suspected of sending spam and it's no longer allowed to send email. Contact your email admin for assistance. Remote Server returned 550 5.1.8 Access denied, bad outbound sender.
 
 This NDR is generated if a user tries to send an email message after their account exceeds the [sending limits in Exchange Online](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits).
 

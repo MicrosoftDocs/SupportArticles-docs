@@ -25,7 +25,7 @@ ms.date: 04/22/2024
 
 The complete NDR error message is as follows:
 
-> Your message can't be delivered because messages to \<recipients\> are blocked by your organization using Tenant Allow Block List.
+> 550 5.7.703 Your message can't be delivered because messages to \<recipient\> are blocked by your organization using Tenant Allow Block List.
 
 This NDR is generated if a user in your organization sends mail to an email address or domain that is blocked in the [tenant allow/block list](/microsoft-365/security/office-365-security/tenant-allow-block-list-about#block-entries-in-the-tenant-allowblock-list). The tenant allow/block list specifies external senders that are blocked from emailing users in your organization, and vice versa. If even one recipient or domain in an email message is blocked, all other internal and external recipients in the message are blocked.
 
@@ -37,7 +37,7 @@ Only an email admin in your organization can change the tenant allow/block list.
 
 The complete NDR error message is as follows:
 
-> 5.7.705 Access denied, tenant has exceeded threshold.
+> 550 5.7.705 Access denied, tenant has exceeded threshold.
 
 Exchange Online blocks your outgoing mail, and this NDR is generated, if your organization sends too much spam or bulk mail.
 
@@ -69,7 +69,7 @@ After you address the underlying cause of the issue, contact Microsoft Support t
 
 The complete NDR error message is as follows:
 
-> 5.7.708 Access denied, traffic not accepted from this IP.
+> 550 5.7.708 Access denied, traffic not accepted from this IP.
 
 This NDR is generated if you send an email message from an IP address that has a low reputation. The issue is more likely to affect new customers, such as those who have a Microsoft 365 trial subscription.
 
@@ -83,9 +83,9 @@ If you're an email admin, and you receive this error during a trial subscription
 
 The complete NDR error message is as follows:
 
-> 5.7.750 Client blocked from sending from unregistered domain
+> 550 5.7.750 Client blocked from sending from unregistered domain
 
-This NDR is typically generated if a large volume of email messages is sent from a domain that isn't added as an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in Microsoft 365. Microsoft 365 allows only a certain amount of email messages to be sent from an unregistered (unaccepted) domain.
+This NDR is typically generated if a large volume of email messages is sent from a domain that isn't added as an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in Microsoft 365. Microsoft 365 allows only a certain number of email messages to be sent from an unregistered (unaccepted) domain.
 
 A less common cause is having one or more incorrectly configured connectors.
 
