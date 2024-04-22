@@ -182,17 +182,17 @@ T he following screenshot shows the error message:
         ```bash
         grub2-install /dev/sd[X]
         ```
-  2. Make sure the `/etc/resolv.conf` has a valid DNS entry in order to resolve the name of the repository:
+   2. Make sure the `/etc/resolv.conf` has a valid DNS entry in order to resolve the name of the repository:
 
        ```bash
        cat /etc/resolv.conf
        ```
-  3. Reinstall the kernel:
+   3. Reinstall the kernel:
   
        ```bash
        yum reinstall $(rpm -qa | grep -i kernel)
        ```
-  4. Create the grub.cfg:
+   4. Create the grub.cfg:
   
        ```bash
        grub2-mkconfig -o /boot/grub2/grub.cfg
