@@ -2,6 +2,7 @@
 title: Capture a Windows container dump from a Windows node in an AKS cluster
 description: Understand how to capture a Windows container dump from a Windows node within an Azure Kubernetes Service (AKS) cluster.
 ms.date: 04/17/2024
+ms.author: abelch
 ms.reviewer: genli
 ms.service: azure-kubernetes-service
 ms.custom: sap:Monitoring and Logging
@@ -14,13 +15,13 @@ Windows container may crash when you're using a Microsoft Azure Kubernetes Servi
 
 - An AKS cluster. If you don't have an AKS cluster, [create one using Azure CLI](/azure/aks/kubernetes-walkthrough) or [through the Azure portal](/azure/aks/kubernetes-walkthrough-portal).
 
-- The Windows agent pools are created after `3/13/2024` or the node image has been upgraded to AKS Windows image versions equal to or newer than `20240316`. Users also can check the AKS Windows CSE script package version (`v0.0.39` or newer) in the CSE log `WindowsCSEScriptsPackage is ` in `C:\AzureData\CustomDataSetupScript.log` in the Windows nodes.
+- The Windows agent pools are created after `3/13/2024` or the node image has been upgraded to AKS Windows image versions equal to or newer than `20240316`. Users also can check the AKS Windows CSE script package version (`v0.0.39` or newer) in the CSE log `WindowsCSEScriptsPackage` is in *C:\AzureData\CustomDataSetupScript.log* in the Windows nodes.
 
 ## Step 1: Add annotations in your deployment
 
 You need to mount a host folder in the container and add annotations to request Windows containerd to store the dump in the folder.
 
-```
+```dockerfile
 metadata:
   ...
   annotations:
