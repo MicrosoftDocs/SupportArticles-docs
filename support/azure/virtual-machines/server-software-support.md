@@ -1,8 +1,8 @@
 ---
 title: Microsoft server software support for Microsoft Azure Virtual Machines
 description: Discusses the support policy for Microsoft server software in a Microsoft Azure Virtual Machine environment.
-ms.date: 04/03/2023
-ms.reviewer: drewm, coreysa
+ms.date: 04/22/2024
+ms.reviewer: drewm, coreysa, v-weizhu
 ms.service: virtual-machines
 ms.subservice: vm-support-statements
 ms.collection: windows
@@ -108,7 +108,10 @@ Team Foundation Server 2012 and later versions are supported.
 
 ## Windows Server
 
-Standard editions of Windows Server 2016, Windows Server 2019, and Windows Server 2022 aren't available in Azure Marketplace. To use them, [upload an image](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).  Note: With the exception of [Hybrid Benefit](https://learn.microsoft.com/windows-server/get-started/azure-hybrid-benefit) scenarios, the license cost for any Windows VM is the same, so the only reason to opt for Standard Edition over Datacenter Edition would be compatibility requirements.
+Standard editions of Windows Server 2016, Windows Server 2019, and Windows Server 2022 aren't available in Azure Marketplace. To use them, [upload an image](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
+
+> [!NOTE]
+> Except for [Hybrid Benefit](/windows-server/get-started/azure-hybrid-benefit) scenarios, the license cost for any Windows VM is identical. Therefore, the only reason to opt for the Standard Edition over the Datacenter Edition would be compatibility requirements.
 
 Windows Server 2003 and later versions are supported for deployment in Microsoft Azure. Click [here](https://support.microsoft.com/help/3206074) to see more information about running Windows Server 2003 on Azure.
 
