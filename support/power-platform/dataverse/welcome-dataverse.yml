@@ -14,7 +14,7 @@ metadata:
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
- # Card
+# Card
 - title: Bulk deleting data
   linkLists:
     - linkListType: how-to-guide
@@ -22,7 +22,7 @@ landingContent:
         - text: Bulk operation errors
           url: bulk-deleting-data/bulk-operation-errors.md
 
- # Card
+# Card
 - title: Dataverse Web API and SDK
   linkLists:
     - linkListType: how-to-guide
@@ -32,23 +32,23 @@ landingContent:
         - text: Web API client errors
           url: dataverse-web-api-and-sdk/web-api-client-errors.md
 
- # Card
- - title: Plug-in execution
-   linkLists:
-     - linkListType: how-to-guide
-       links:
-         - text: Dataverse plug-ins
-           url: plug-in-execution/dataverse-plug-ins-errors.md
+# Card
+- title: Plug-in execution
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Dataverse plug-ins
+          url: plug-in-execution/dataverse-plug-ins-errors.md
 
-  # Card
- - title: User permissions
-   linkLists:
-      - linkListType: how-to-guide
-        links:         
-          - text: Clean up inherited access
-            url: user-permissions/cleanup-inherited-access.md
-          - text: Dataverse client errors
-            url: user-permissions/client-errors.md
+# Card
+- title: User permissions
+  linkLists:
+    - linkListType: how-to-guide
+      links:         
+        - text: Clean up inherited access
+          url: user-permissions/cleanup-inherited-access.md
+        - text: Dataverse client errors
+          url: user-permissions/client-errors.md
 # Card
 - title: Working with solutions
   linkLists:
