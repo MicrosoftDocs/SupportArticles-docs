@@ -1,9 +1,10 @@
 ---
 title: Salesforce permission error
 description: Resolves the errors displayed in the record type cards in the Microsoft Copilot for Sales panel in Outlook.
-ms.date: 03/04/2024
+ms.date: 04/22/2024
 author: sbmjais
 ms.author: shjais
+ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 
 # Salesforce permission error
@@ -23,9 +24,7 @@ This article helps you troubleshoot and resolve the errors displayed in the reco
 
 ## Symptoms
 
-When a user opens the Copilot for Sales pane, the error messages are displayed in the record type cards. 
-
-`image`
+When a user opens the Copilot for Sales pane, the error messages are displayed in the record type cards.
 
 ## Cause
 

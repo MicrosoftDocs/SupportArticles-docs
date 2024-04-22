@@ -1,9 +1,10 @@
 ---
 title: Required fields missing error
 description: Resolve the required fields missing error in the Microsoft Copilot for Sales panel in Outlook.
-ms.date: 03/04/2024
+ms.date: 04/22/2024
 author: sbmjais
 ms.author: shjais
+ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 
 # Required fields missing error
@@ -24,9 +25,7 @@ This article helps you troubleshoot and resolve the required fields missing erro
 
 ## Symptoms
 
-When a user tries to create a contact or another record from the Copilot for Sales pane in Outlook, the "Required fields are missing error" is displayed.
-
-`image`
+When a user tries to create a contact or another record from the Copilot for Sales pane in Outlook, the "Required fields are missing" error is displayed.
 
 ## Cause
 
@@ -37,7 +36,7 @@ Salesforce object configuration is updated with a required field but it is not a
 1. [Access admin settings in Teams.](/microsoft-sales-copilot/administrator-settings-for-viva-sales#access-administrator-settings)
 2. Select **Forms**, and then select the object for which the error is displayed.
 3. Select **Refresh data**.
-4. Select **Add fields**, find all the fields marked as required, and then add them to the form.
+4. Select **Add fields**, find all the fields in the list that are marked as required in the CRM, and then add them to the form.
 5. Publish the changes.
 
 ## Resolution 2: Change the required field property in Salesforce
