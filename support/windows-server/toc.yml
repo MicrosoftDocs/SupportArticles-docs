@@ -3286,4 +3286,4 @@ items:
   - name: Performance Monitoring Tools
     items:
     - name: Using Process Explorer
-      href: ./support-tools/troubleshoot-high-cpu-usage-issues-process-explorer.md
+      href: ./support-tools/troubleshoot-issues-process-explorer.md
