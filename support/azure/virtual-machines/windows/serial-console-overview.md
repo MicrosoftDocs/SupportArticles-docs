@@ -3,15 +3,14 @@ title: Azure Serial Console
 description: The Azure Serial Console allows you to connect to your VM when SSH or RDP are not available.
 services: virtual-machines
 documentationcenter: ''
-author: mbifeld
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 08/04/2023
-ms.author: mbifeld
+ms.date: 04/22/2024
+ms.reviewer: mbifeld, v-weizhu
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
@@ -98,11 +97,11 @@ Serial Console for VMs is as straightforward as clicking on **Serial console** w
 
 1. Open the [Azure portal](https://portal.azure.com).
 
-  1. Navigate to **All resources** and select a Virtual Machine. The overview page for the VM opens.
+1. Navigate to **All resources** and select a Virtual Machine. The overview page for the VM opens.
 
-  1. Scroll down to the **Help** section and select **Serial console**. A new pane with the serial console opens and starts the connection.
+1. Scroll down to the **Help** section and select **Serial console**. A new pane with the serial console opens and starts the connection.
 
-     :::image type="content" source="media/serial-console-overview/connect-vm.gif" alt-text="Animated GIF shows process of starting the connection to the serial console for VM.":::
+   :::image type="content" source="media/serial-console-overview/connect-vm.gif" alt-text="Animated GIF shows process of starting the connection to the serial console for VM.":::
 
 ### Access Serial Console for Virtual Machine Scale Sets via Azure portal
 
@@ -110,15 +109,15 @@ Serial Console is available for virtual machine scale sets, accessible on each i
 
 1. Open the [Azure portal](https://portal.azure.com).
 
-  1. Navigate to **All resources** and select a Virtual Machine Scale Set. The overview page for the virtual machine scale set opens.
+1. Navigate to **All resources** and select a Virtual Machine Scale Set. The overview page for the virtual machine scale set opens.
 
-  1. Navigate to **Instances**
+1. Navigate to **Instances**
 
-  1. Select a virtual machine scale set instance
+1. Select a virtual machine scale set instance
 
-  1. From the **Help** section, select **Serial console**. A new pane with the serial console opens and starts the connection.
+1. From the **Help** section, select **Serial console**. A new pane with the serial console opens and starts the connection.
 
-     :::image type="content" source="media/serial-console-overview/connect-vm-scale-sets.gif" alt-text="Animated GIF shows process of starting the connection to the serial console for VM Scale Sets.":::
+   :::image type="content" source="media/serial-console-overview/connect-vm-scale-sets.gif" alt-text="Animated GIF shows process of starting the connection to the serial console for VM Scale Sets.":::
 
 ### Access Serial Console via Azure CLI
 
