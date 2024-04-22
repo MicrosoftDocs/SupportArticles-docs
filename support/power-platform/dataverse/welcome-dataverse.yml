@@ -9,34 +9,95 @@ metadata:
   ms.topic: landing-page # Required
   author: rahulmital #Required; your GitHub user alias, with correct capitalization.
   ms.author: rahulmital #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/16/2024
+  ms.date: 04/22/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
  # Card
+- title: Bulk deleting data
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Bulk operation errors
+          url: bulk-deleting-data/bulk-operation-errors.md
+
+ # Card
 - title: Dataverse Web API and SDK
   linkLists:
     - linkListType: how-to-guide
       links:
-        - text: Microsoft Dataverse Troubleshooting
-          url: welcome-dataverse.yml
+        - text: Required fields are missing in Dataverse records
+          url: dataverse-web-api-and-sdk/dataverse-records-missing-required-fields.md
+        - text: Web API client errors
+          url: dataverse-web-api-and-sdk/web-api-client-errors.md
 
-# Card
-- title: Email and Microsoft 365 Integration
-  linkLists:
-    - linkListType: how-to-guide
-      links:
-        - text: Microsoft Dataverse Troubleshooting
-          url: welcome-dataverse.yml
+ # Card
+ - title: Plug-in execution
+   linkLists:
+     - linkListType: how-to-guide
+       links:
+         - text: Dataverse plug-ins
+           url: plug-in-execution/dataverse-plug-ins-errors.md
 
+  # Card
+ - title: User permissions
+   linkLists:
+      - linkListType: how-to-guide
+        links:         
+          - text: Clean up inherited access
+            url: user-permissions/cleanup-inherited-access.md
+          - text: Dataverse client errors
+            url: user-permissions/client-errors.md
 # Card
 - title: Working with solutions
   linkLists:
     - linkListType: how-to-guide
       links:
-        - text: Microsoft Dataverse Troubleshooting
-          url: welcome-dataverse.yml
+        - text: Active unmanaged layer after importing a managed solution
+          url: working-with-solutions/unmanaged-active-layer-created-after-solution-import.md
+        - text: '"An entitykey with the selected attributes already exists" error'
+          url: working-with-solutions/entitykey-selected-attributes-already-exists.md
+        - text: Can't import solutions or publish changes
+          url: working-with-solutions/cannot-import-solutions-publish-changes.md
+        - text: Can't install managed solution previously deployed as unmanaged
+          url: working-with-solutions/failure-converting-to-managed-solution.md          
+        - text: Changes not effective after solution import
+          url: working-with-solutions/changes-not-effective-solution-import.md
+        - text: Concurrent solution operation failures
+          url: working-with-solutions/concurrent-solution-operation-failures.md
+        - text: Duplicate security roles after solution import
+          url: working-with-solutions/duplicate-security-roles.md
+        - text: Data source references not updated after solution import
+          url: working-with-solutions/dataverse-environment-variables.md
+        - text: '"Failed deleting solution" error due to circular dependencies between solutions'
+          url: working-with-solutions/circular-dependencies-between-solutions.md
+        - text: Form doesn't appear in target environment after import
+          url: working-with-solutions/form-not-appear-after-import.md
+        - text: '"Full formXml is expected to create a form" error'
+          url: working-with-solutions/full-formxml-expected-to-create-form-error.md
+        - text: Failure when multiple publishers have shared components
+          url: working-with-solutions/multiple-publisher-shared-component-failure.md
+        - text: Label text doesn't display in other languages
+          url: working-with-solutions/label-text-not-displayed.md
+        - text: Maximum row size exceeds the allowed maximum
+          url: working-with-solutions/maximum-row-size-exceeds.md
+        - text: Missing dependencies during solution import
+          url: working-with-solutions/missing-dependency-on-solution-import.md
+        - text: Newly added components don't appear in the app
+          url: working-with-solutions/newly-added-components-dont-appear.md
+        - text: '"PrimaryName attribute not found for entity" error'
+          url: working-with-solutions/primaryname-attribute-not-found.md
+        - text: Solution import or app installation fails due to missing privileges
+          url: working-with-solutions/install-failure-priviledge-not-assigned.md
+        - text: Solution checker enforcement in Managed Environments blocks or warns on import
+          url: working-with-solutions/solution-checker-enforcement-import-issues.md
+        - text: '"Solution cannot be deleted due to dependencies" error'
+          url: working-with-solutions/solution-cannot-be-deleted-due-to-dependencies.md
+        - text: Solution upgrade fails due to a pending upgrade
+          url: working-with-solutions/upgrade-fails-pending-upgrade.md
+        - text: '"You cannot delete this form because it is the only fallback form" error'
+          url: working-with-solutions/you-cannot-delete-this-form-only-fallback.md
 
 # Card
 - title: Documentation and training
@@ -55,4 +116,3 @@ landingContent:
       links:
         - text: Microsoft Dataverse Community forum
           url: https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps
-
