@@ -6891,6 +6891,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/virtual-desktop/windows-virtual-desktop-blank-screen.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-virtual-desktop-blank-screen",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss",
       "redirect_document_id": true
