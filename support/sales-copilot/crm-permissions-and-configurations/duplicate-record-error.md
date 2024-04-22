@@ -1,7 +1,7 @@
 ---
 title: Record creation error due to duplicate detection rules in CRM
 description: Resolves the error that occurs due to duplicate detection rules in CRM when a user tries to create a record from within Copilot for Sales.
-ms.date: 02/23/2024
+ms.date: 04/22/2024
 author: sbmjais
 ms.author: shjais
 ---
