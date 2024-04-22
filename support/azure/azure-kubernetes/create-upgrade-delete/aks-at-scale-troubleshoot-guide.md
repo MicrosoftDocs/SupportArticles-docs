@@ -50,9 +50,9 @@ For clusters that run at a relatively large scale (more than 500 nodes), we reco
 
 If you're not using Managed NAT, see [Troubleshoot source network address translation (SNAT) exhaustion and connection timeouts][Troubleshoot SNAT exhaustion and connection timeouts] to understand and resolve SNAT port exhaustion issues.
 
-## I can't scale up to 5000 nodes using the Azure portal
+## I can't scale up to 5,000 nodes using the Azure portal
 
-Use Azure CLI to scale up to a maximum of 5,000 nodes by follow these steps:
+Use the Azure CLI to scale up to a maximum of 5,000 nodes by following these steps:
 
 1. Create a minimum number of node pools in the cluster (because the maximum node pool node limit is 1,000) by running the following command:
 
