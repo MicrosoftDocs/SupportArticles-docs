@@ -11,10 +11,6 @@
           href: dataverse-web-api-and-sdk/dataverse-records-missing-required-fields.md
         - name: Web API client errors
           href: dataverse-web-api-and-sdk/web-api-client-errors.md
-    - name: Email and Microsoft 365 Integration
-      items:
-        - name: Microsoft Dataverse Troubleshooting
-          href: welcome-dataverse.yml
     - name: Plug-in execution
       items:
         - name: Dataverse plug-ins
