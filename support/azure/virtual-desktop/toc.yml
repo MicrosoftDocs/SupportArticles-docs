@@ -1,3 +1,9 @@
+- name: Welcome
+  href: welcome-virtual-desktop.yml
 
+- name: Virtual Desktop Issues
+  items:
+  - name: Windows Virtual Desktop sign-in screen is blank
+    href: windows-virtual-desktop-blank-screen.md
 
 
