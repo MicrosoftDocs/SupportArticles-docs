@@ -4,6 +4,7 @@ description: Provides a resolution for Internet Explorer Zonemapping failures wh
 ms.date: 08/21/2023
 ms.reviewer: axelr, davean, v-sidong
 ms.author: heikom
+ms.custom: sap:Development and Website Issues
 ---
 # Troubleshoot "Internet Explorer Zonemapping" failures when processing Group Policy
 

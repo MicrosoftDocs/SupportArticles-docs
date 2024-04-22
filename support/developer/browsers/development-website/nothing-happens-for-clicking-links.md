@@ -3,6 +3,7 @@ title: Nothing happens when you click a link in Internet Explorer
 description: Describes how to troubleshoot the problem when hyperlinks do not work in Internet Explorer.
 ms.date: 06/08/2020
 ms.reviewer: 
+ms.custom: sap:Development and Website Issues
 ---
 # Nothing happens when you click a link in Internet Explorer
 

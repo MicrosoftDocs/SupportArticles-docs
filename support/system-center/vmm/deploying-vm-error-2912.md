@@ -1,7 +1,8 @@
 ---
 title: Error 2912 when deploying a virtual machine
 description: Fixes an issue in which you receive error 0x80190193 when you deploy a virtual machine.
-ms.date: 04/29/2020
+ms.date: 04/09/2024
+ms.reviewer: wenca
 ---
 # Deploying a VM with Virtual Machine Manager fails with error (2912) - Forbidden (403) (0x80190193)
 

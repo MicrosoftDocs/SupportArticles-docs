@@ -3378,7 +3378,7 @@
     {
       "source_path": "support/azure/azure-monitor/index.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/virtual-machines/rdp.md",
@@ -6888,6 +6888,11 @@
     {
       "source_path": "support/power-platform/ai-builder/index.md",
       "redirect_url": "/troubleshoot/power-platform/ai-builder/welcome-ai-builder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-desktop/windows-virtual-desktop-blank-screen.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-virtual-desktop-blank-screen",
       "redirect_document_id": false
     },
     {
@@ -10716,36 +10721,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/system-center/scsm/disable-diagnostics-connectivity-data.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/scsm/object-type-monitoringclass-not-found.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/scsm/could-not-load-type-error.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/scsm/cannot-impersonate-user-data-source.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/scsm/data-warehouse-base-library-mp-shows-failed-status.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/scsm/cannot-upgrade-to-system-center-2012-r2-service-manager.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/dynamics/gp/cannot-create-inventory-valuation-and-gmroi-and-inventory-turns-reports.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
@@ -10768,6 +10743,161 @@
     {
       "source_path": "support/windows-server/windows-security/expand-maximum-extension-size-limit-ad-cs.md",
       "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/customer-service/service-level-agreements/sla-deletion-error-messages.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-service/import-export-or-upgrade/sla-deletion-error-messages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/common-issues-and-resolutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-canvas-app-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-common-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-common-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-model-app-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/minimal-canvas-app-repro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-canvas-app-date-time-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-canvas-app-date-time-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/sign-in/troubleshooting-startup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-model-driven-app-date-time-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-lookup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-model-driven-app-lookup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/connections/troubleshoot-power-query-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/vanilla-model-driven-app-repro.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/vanilla-model-driven-app-repro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps/dataverse-records-missing-required-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/dataverse-records-missing-required-fields",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/the-training-document-is-not-displayed-on-the-form-processing-model-details-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aibuilder-actions-are-disabled-deactivated.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/aibuilder-actions-are-disabled-deactivated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aibuilder-show-trial-license-but-license-purchased.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/aibuilder-show-trial-license-but-license-purchased",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aimodels-fail-to-be-imported-in-a-new-environment.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/aimodels-fail-to-be-imported-in-a-new-environment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/all-ai-builder-credits-have-been-consumed.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/all-ai-builder-credits-have-been-consumed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/business-card-reader-do-not-work-for-some-users.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/business-card-reader-do-not-work-for-some-users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/dependency-timeout-error-when-using-a-form-processing-model-in-power-automate.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/dependency-timeout-error-when-using-a-form-processing-model-in-power-automate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/fields-could-not-be-loaded-for-this-document-error-in-form-processing.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/fields-could-not-be-loaded-for-this-document-error-in-form-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/pages-parameter-generates-an-error-when-saving-a-form-processing-flow.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/pages-parameter-generates-an-error-when-saving-a-form-processing-flow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/prevent-users-from-creating-ai-builder-custom-models.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/prevent-users-from-creating-ai-builder-custom-models",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/the-current-environment-donot-meet-the-minimum-requirements-error-message.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/the-current-environment-donot-meet-the-minimum-requirements-error-message",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/too-many-requests-error-in-power-automate.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/too-many-requests-error-in-power-automate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/training-failed-and-the-model-cannot-be-used-error-in-form-processing.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/training-failed-and-the-model-cannot-be-used-error-in-form-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/when-i-scan-images-using-aibuilder-components-in-powerapps-the-output-image-rotation-is-wrong.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/when-i-scan-images-using-aibuilder-components-in-powerapps-the-output-image-rotation-is-wrong",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/your-model-uses-a-preview-functionality-which-has-expired.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/your-model-uses-a-preview-functionality-which-has-expired",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/information-mats-sdp.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
       "redirect_document_id": true
     }
   ]

@@ -2,6 +2,7 @@
 title: Troubleshoot Dataverse plug-ins
 description: Contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
 ms.date: 02/18/2024
+ms.custom: sap:Plug-in execution
 author: divkamath
 ms.author: dikamath
 ms.reviewer: phecke

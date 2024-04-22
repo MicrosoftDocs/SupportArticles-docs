@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, vimalsh, shijithk, kaushika, wcheng, jodav
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
 ---
 # Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images
 
@@ -89,21 +89,33 @@ To resolve this issue, remove the package for the user who's running sysprep, an
 > [!NOTE]
 > To prevent Microsoft Store from updating apps, unplug the Internet connection or disable Automatic Updates in Audit mode before you create the image.
 
-1. Run the Import-Module Appx PowerShell cmdlet.
-2. Run Import-Module Dism.
-3. Run `Get-AppxPackage -AllUsers | Where PublisherId -eq 8wekyb3d8bbwe | Format-List -Property PackageFullName,PackageUserInformation`.
+1. Run the following PowerShell cmdlets:
 
-    > [!NOTE]  
-    >
-    > - In the output of this last cmdlet, check the users for whom the package is showing up as Installed. Delete these user accounts from the reference computer, or log on to the computer by using these user accounts. Then, run the cmdlet in step 4 to remove the `Appx` package.
-    > - This command lists all packages that were published by Microsoft and installed by any user of that reference computer. Because the computer is to be sysprepped, we assume that these user profiles no longer require the package.
-    > - If you have manually provisioned apps that belong to other publishers, run the following command to list them:  
-    > Get-AppxPackage -AllUsers | Format-List -Property PackageFullName,PackageUserInformation
+    ```powershell
+    Import-Module Appx
+    Import-Module Dism
+    Get-AppxPackage -AllUsers | Where PublisherId -eq 8wekyb3d8bbwe | Format-List -Property PackageFullName,PackageUserInformation
+    ```
 
-4. Run `Remove-AppxPackage -Package \<packagefullname>`.
-5. Remove the provisioning by running the following cmdlet:
+  > [!NOTE]  
+  >
+  > - In the output of this last cmdlet, check the users for whom the package is showing up as Installed. Delete these user accounts from the reference computer, or log on to the computer by using these user accounts. Then, run the cmdlet in step 2 to remove the `Appx` package.
+  > - This command lists all packages that were published by Microsoft and installed by any user of that reference computer. Because the computer is to be sysprepped, we assume that these user profiles no longer require the package.
+  > - If you have manually provisioned apps that belong to other publishers, run the following command to list them:  
+  > 
+  > `Get-AppxPackage -AllUsers | Format-List -Property PackageFullName,PackageUserInformation`
 
-    Remove-AppxProvisionedPackage -Online -PackageName \<packagefullname>
+2. Remove `Appx` package by running the following cmdlet:
+
+    ```powershell
+    Remove-AppxPackage -Package <packagefullname>
+    ```
+
+3. Remove the provisioning by running the following cmdlet:
+
+    ```powershell
+    Remove-AppxProvisionedPackage -Online -PackageName <packagefullname>
+    ```
 
 If you try to recover from an update issue, you can reprovision the app after you follow these steps.
 

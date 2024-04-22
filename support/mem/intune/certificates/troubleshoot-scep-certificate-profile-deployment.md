@@ -59,8 +59,6 @@ To validate a profile was sent to the device you expect, in the [Microsoft Intun
 
 3. Review when the device last checked in with Intune.
 
-![Validate the iOS/iPadOS device policy](./media/troubleshoot-scep-certificate-profile-deployment/validate-policy-ios.png)
-
 ### Validate the policy reached the iOS or iPadOS device
 
 Review the [devices debug log](troubleshoot-scep-certificate-profiles.md#logs-for-ios-and-ipados-devices). Look for entries that resemble the following examples, which are logged when the device gets the profile from Intune:
@@ -85,8 +83,6 @@ To validate the profile was sent to the device you expect, in the [Microsoft Int
 2. Review the user's group membership to ensure they are in the security group you used with the SCEP certificate profile.
 
 3. Review when the device last checked in with Intune.
-
-![Validate the Windows device policy](./media/troubleshoot-scep-certificate-profile-deployment/validate-policy-windows.png)
 
 ### Validate the policy reached the Windows device
 

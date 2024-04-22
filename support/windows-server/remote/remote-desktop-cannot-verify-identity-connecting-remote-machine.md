@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
 ---
 # "Remote Desktop cannot verify the identity of the remote computer" when connecting to a remote machine
 
@@ -70,7 +70,7 @@ To check if port exhaustion exists on the affected machine, open system logs in 
 
 If any of the events are reported in the system logs, there may be a process or service causing the TCP port to exhaust.
 
-To troubleshoot a TCP port exhaustion issue, see [Troubleshoot port exhaustion issues](/troubleshoot/windows-client/networking/tcp-ip-port-exhaustion-troubleshooting) to understand how to identify the misbehaving process.
+To troubleshoot a TCP port exhaustion issue, see [Troubleshoot port exhaustion issues](../../windows-client/networking/tcp-ip-port-exhaustion-troubleshooting.md) to understand how to identify the misbehaving process.
 
 Finally, when the issue occurs, stop the misbehaving process, and then sign in via RDP using domain credentials and see if it succeeds.
 

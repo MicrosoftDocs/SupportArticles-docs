@@ -2,6 +2,7 @@
 title: Data source references based on environment variables aren't updated during solution import
 description: Describes an issue when importing a solution to a different environment, data source references based on environment variables aren't updated.
 ms.reviewer: tapanm
+ms.custom: sap:Working with Solutions\Solution import - Other errors
 ms.date: 06/30/2022
 author: lancedMicrosoft
 ms.author: lanced

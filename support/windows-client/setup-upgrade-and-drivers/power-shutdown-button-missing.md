@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:power-management, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Power management, csstroubleshoot
 ---
 # Power/shutdown button may be missing from the Windows 8.1 start screen
 

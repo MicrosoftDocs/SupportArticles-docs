@@ -2,7 +2,7 @@
 title: Content types for HTTP compression
 description: This article describes how to add more content types for HTTP compression in Internet Information Services.
 ms.date: 07/17/2020
-ms.custom: sap:WWW Administration and Management
+ms.custom: sap:WWW Administration and Management\General configuration settings
 ms.reviewer: mlaing
 ms.topic: how-to
 ms.subservice: www-administration-management

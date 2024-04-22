@@ -1,7 +1,7 @@
 ---
 title: Antivirus scanning exclusions
 description: This article describes the system processes that you should consider excluding from antivirus scanning on computers that are running Team Foundation Server.
-ms.date: 02/09/2022
+ms.date: 03/25/2024
 ms.custom: sap:Installation, Migration, and Move
 ms.reviewer: vimalt, manojm
 ms.topic: article
@@ -63,7 +63,7 @@ Azure DevOps Server, Azure DevOps Services (self-hosted agents):
 
 ## More information
 
-For better performance of source control and other TFS/Azure DevOps Server operations, we recommend adding the Internet Information Services (IIS) worker process (_w3wp.exe_) to the list of antivirus exclusions. This is not a requirement for TFS/Azure DevOps Server.
+For better performance of source control and other TFS/Azure DevOps Server operations, we recommend adding the Internet Information Services (IIS) worker process (_w3wp.exe_) to the list of antivirus exclusions. This is not a requirement for Azure DevOps Services.
 
 The _w3wp.exe_ process is typically located at _C:\Windows\System32\inetsrv\w3wp.exe_. You can also locate this process by following these steps:
 

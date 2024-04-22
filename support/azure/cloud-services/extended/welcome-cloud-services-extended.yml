@@ -7,7 +7,7 @@ metadata:
   title: Troubleshoot Azure Cloud Services (extended support) issues
   description: Documentation for troubleshooting common issues with Azure Cloud Services (extended support). # Required; article description that is displayed in search results. < 160 chars.
   services: cloud-services
-  ms.service: cloud-services #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: cloud-services-extended-support #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
@@ -23,25 +23,25 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Application pool is crashing
-            url: application-pool-crashes.md
+            url: availability/application-pool-crashes.md
           - text: Disk partition preservation
-            url: disk-partition-preservation.md
+            url: deploy/disk-partition-preservation.md
           - text: Enable HTTPS communication
-            url: enable-https-communication.md
+            url: deploy/enable-https-communication.md
           - text: FAQ about role instance restarts due to OS upgrades
-            url: role-instance-restarts-faq.yml
+            url: deploy/role-instance-restarts-faq.yml
           - text: Gather log files for offline analysis and preservation
-            url: gather-log-files-offline-analysis-preservation.md
+            url: config-setup/gather-log-files-offline-analysis-preservation.md
           - text: No space on the E or F drive
-            url: no-space-e-f-drive.md
+            url: availability/no-space-e-f-drive.md
           - text: Read key vault certificate secrets from an app
-            url: read-key-vault-certificate-secrets-from-cloud-service-app.md
+            url: availability/read-key-vault-certificate-secrets-from-cloud-service-app.md
           - text: Role instance restarts due to OS upgrades
-            url: role-instance-restarts-os-upgrade.md
+            url: availability/role-instance-restarts-os-upgrade.md
           - text: Roles that fail to start
-            url: role-startup-failure.md
+            url: availability/role-startup-failure.md
           - text: Windows PaaS compute diagnostic data
-            url: windows-azure-paas-compute-diagnostic-data.md
+            url: availability/windows-azure-paas-compute-diagnostic-data.md
 
  # Card
   - title: Troubleshooting Series for developers
@@ -49,4 +49,4 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Use Azure DevOps to publish Cloud Services (extended support)
-            url: azure-devops-publish-cloud-service-extended.md
+            url: ../classic/develop/azure-devops-publish-cloud-service-extended.md

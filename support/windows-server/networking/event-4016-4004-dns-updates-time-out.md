@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ANRATH, tfairman, v-lianna
-ms.custom: sap:dns, csstroubleshoot, ikb2lmc
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot, ikb2lmc
 ---
 # Event IDs 4016 and 4004 when DNS updates time out
 

@@ -5,6 +5,7 @@ ms.reviewer: matp
 ms.date: 08/02/2023
 author: nhelgren
 ms.author: nhelgren
+ms.custom: sap:Working with Solutions\Solution import - Other errors
 ---
 # "An entitykey with the selected attributes already exists" error occurs during solution import
 
