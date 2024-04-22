@@ -45,7 +45,6 @@ Serial Console is available in the following regions:
 - Germany North
 - Germany West Central
 - Israel Central
-
 - Italy North
 - Japan East
 - Japan West
@@ -111,9 +110,9 @@ Serial Console is available for virtual machine scale sets, accessible on each i
 
 1. Navigate to **All resources** and select a Virtual Machine Scale Set. The overview page for the virtual machine scale set opens.
 
-1. Navigate to **Instances**
+1. Navigate to **Instances**.
 
-1. Select a virtual machine scale set instance
+1. Select a virtual machine scale set instance.
 
 1. From the **Help** section, select **Serial console**. A new pane with the serial console opens and starts the connection.
 
