@@ -13,8 +13,8 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article describes how to use the new .admx and .adml files to create and to administer registry-based policy settings in Windows Vista, and how the Central Store is used to store and to replicate Windows Vista policy files in a domain environment.
 
-*Applies to:* Windows client (All supported versions)  
-*Original KB number:* &nbsp; 929841
+_Applies to:_ Windows client (All supported versions)  
+_Original KB number:_ &nbsp; 929841
 
 ## Overview
 
