@@ -1,22 +1,22 @@
 ---
-title: Linked server couldn't be created due to a mismatch in TLS version
-description: This article provides a resolution for the challenge of creating a linked server when encountering a TLS version disparity from higher to lower versions.
-ms.date: 04/18/2024
+title: Problem connecting higher to Lower version of SQL server using SQL Server linked server functionality
+description: This article provides a resolution for the challenge of connecting higher to Lower version of SQL server using SQL Server linked server functionality.
+ms.date: 04/23/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Problem connecting from Windows Server 2022+ to SQL Server on older Windows version
+# Problem connecting higher to Lower version of SQL server using SQL Server linked server functionality
 
-This article helps you resolve a scenario when a linked server can't be created due to the mismatch in the TLS version.
+This article helps you to find the solution of connectivity issue using SQL Server Linked Server functionality from a Windows Windows Server 2022 or newer to a SQL Server hosted on an older version of Windows.
 
 ## Symptoms
 
-This problem can occur if you are connecting from a Windows Server 2022 or later to a SQL Server running on a lower version of Windows. This issue occurs when using the SQL Server linked server functionality.
+This problem can occur if you are connecting from a Windows Server 2022 or later to a SQL Server running on a lower version of Windows using the SQL Server linked server functionality.
 
-You might receive the following error messages:
+You might receive one of the following error messages:
 
 > [Microsoft OLE DB Driver for SQL Server]: Client unable to Establish connection
 
@@ -45,7 +45,7 @@ You might receive the following error message after you install updates on the S
 To resolve this error, follow these steps.
 
   > [!NOTE]
-  > Make sure that you have the English (United States) language pack installed before you run the commands in this procedure.
+  > Ensure that you have the English (United States) language pack installed before you run the commands in this procedure.
 
 1. Open PowerShell.
 
