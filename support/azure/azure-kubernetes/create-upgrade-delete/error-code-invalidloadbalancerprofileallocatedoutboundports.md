@@ -45,7 +45,7 @@ Before running an operation which changes a cluster's node count, the number of 
 ```
 
 > [!NOTE]
-> When performing this check make sure you account for node surges which happen during cluster upgrades and other operations. AKS defaults to 1 buffer node for upgrade operations but this number may be modified using the [maxSurge](https://learn.microsoft.com/en-us/azure/aks/upgrade-aks-cluster#customize-node-surge-upgrade) parameter.
+> When performing this check make sure you account for node surges which happen during cluster upgrades and other operations. AKS defaults to 1 buffer node for upgrade operations but this number may be modified using the [maxSurge](https://learn.microsoft.com/azure/aks/upgrade-aks-cluster#customize-node-surge-upgrade) parameter.
 
 ## References
 
