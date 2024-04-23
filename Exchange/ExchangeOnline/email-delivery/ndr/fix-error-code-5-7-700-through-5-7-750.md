@@ -73,7 +73,7 @@ This NDR is generated if you send an email message from an IP address that has a
 
 **How do I fix this?**
 
-Only an email admin in your organization can fix this issue. If you're an email admin, and you receive this error during a trial subscription, contact Microsoft Support to request an IP address exception until you assign Exchange Online licenses.
+If you're an email admin, and you receive this error during a trial subscription, contact Microsoft Support to request an IP address exception until you assign Exchange Online licenses.
 
 ## 550 5.7.750
 
