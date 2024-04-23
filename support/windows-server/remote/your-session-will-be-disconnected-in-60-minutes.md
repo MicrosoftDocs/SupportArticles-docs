@@ -42,8 +42,8 @@ In a per-device licensing scenario, the most common causes of this message inclu
 
 - Remote Desktop Licensing service isn't running.
 - Licensing properties aren't configured correctly.
-- The RD Session Hosts can't connect to the RD Licensing server.
-- The RD Session hosts, RD Licensing server, and users are in different domains, and the trust between the domains isn't configured correctly for RDS.
+- The RD Session Host servers can't connect to the RD Licensing server.
+- The RD Session Host servers, RD Licensing server, and users aren't in a single domain, and the trust between the domains isn't configured correctly for RDS.
 
 ## Resolution
 
