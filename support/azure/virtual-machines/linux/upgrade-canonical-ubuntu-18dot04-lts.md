@@ -9,7 +9,7 @@ ms.reviewer: clausw, divargas, rondom, azurevmlnxcic, v-weizhu
 ---
 # Canonical Ubuntu 18.04 LTS is out of standard support on 31 May 2023
 
-Even though Canonical Ubuntu 18.04 LTS is out of standard support, you can continue to use existing Azure Linux VMs running it. However, security, feature, and maintenance updates will no longer be provided by Canonical and may leave your systems vulnerable. We recommend that you either migrate to the next Ubuntu LTS release or upgrade to Ubuntu Pro to gain access to extended security and maintenance from Canonical.
+Even though Canonical Ubuntu 18.04 LTS is out of standard support on 31 May 2023, you can continue to use existing Azure Linux VMs running it. However, security, feature, and maintenance updates will no longer be provided by Canonical and may leave your systems vulnerable. We recommend that you either migrate to the next Ubuntu LTS release or upgrade to Ubuntu Pro to gain access to extended security and maintenance from Canonical.
 
 ## Upgrade to Ubuntu 20.04 LTS or Ubuntu 22.04
 
@@ -23,7 +23,5 @@ Transitioning to the latest operating system, such as [Ubuntu 20.04 LTS](https:/
 Ubuntu Pro includes security patching for all Ubuntu packages because of Extended Security Maintenance (ESM) for Infrastructure and Applications and optional full-time (24 hours a day, seven days a week) telephone and ticket support. Ubuntu Pro 18.04 LTS will remain fully supported until April 2028. Ubuntu Pro is available for free for personal and small-scale commercial users on up to five VMs and with transparent, per-machine pricing for enterprises. New VMs that run Ubuntu Pro can be deployed from the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic?tab=Overview). You can also upgrade existing VMs to [Ubuntu Pro](https://ubuntu.com/pro) by purchasing from Canonical. For more information about Ubuntu 18.04 LTS End of Standard Support, see [Ubuntu 18.04 LTS (Bionic Beaver) on Azure](https://ubuntu.com/18-04/azure). 
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
-
-[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
