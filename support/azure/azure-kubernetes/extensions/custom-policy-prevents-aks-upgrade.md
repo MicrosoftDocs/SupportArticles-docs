@@ -16,7 +16,7 @@ This article discusses how to resolve a scenario in which a Kubernetes upgrade f
 
 ## Symptoms
 
-You see a message that indicates that your AKS cluster is compliant with your Azure custom policy. However, when you try to upgrade AKS, the custom policy blocks the upgrade attempt.
+You see a message in the Azure portal that indicates that your AKS cluster is compliant with your Azure custom policy. However, when you try to upgrade AKS, the custom policy blocks the upgrade attempt.
 
 ## Cause
 
