@@ -12,7 +12,7 @@ ms.custom: sap:Connection issues
 > - Consistent authentication errors are usually due to bad settings, while intermittent failures are usually due to a dropped connection, low performance, or timeout issues.
 > - We recommend that you turn file extensions on in Windows File Explorer.
 
-## Capturre Windows settings using SQLCHECK
+## Capture Windows settings using SQLCHECK
 
 Run SQLCHECK on client machines, server machines, and any other related systems, such as a web server or SQL Server linked server intermediate machine.
 
@@ -29,21 +29,21 @@ Run SQLCHECK on client machines, server machines, and any other related systems,
 1. Make sure that `BIDTrace=yes` is set.
 1. Make sure that `BIDProviderList` conforms to the driver your application is using.
 
-   The built-in System.Data.SqlClient .NET drivers are auto-enabled. If these aren't the drivers your application is using, comment this line using the `#` character and uncomment one of the others, such as the ODBC section or the OLEDB section. If you aren't sure, ask the DBA or application developer, or use the 4th `BIDProviderList`, which encompasses all drivers currently in use.
+   The built-in System.Data.SqlClient .NET drivers are autoenabled. If these aren't the drivers your application is using, comment this line using the `#` character and uncomment one of the others, such as the ODBC section or the OLEDB section. If you aren't sure, ask the DBA or application developer, or use the fourth `BIDProviderList`, which encompasses all drivers currently in use.
 
 1. Save the file.
 
 ## Configure the network trace
 
-The networking section is auto-configured with `Network=yes` and `NETSH=yes`. These shouldn't be changed without good reason.
+The networking section is autoconfigured with `Network=yes` and `NETSH=yes`. These shouldn't be changed without good reason.
 
 If you're tracing a local connection, make sure the application is using TCP/IP and not Shared Memory or Named Pipes. Install and use [WireShark](https://www.wireshark.org/download.html) for the network capture as it supports LoopBack captures. WireShark also captures VPN traffic quite well.
 
 ## Configure the authentication traces
 
-The Auth section is auto-configured with `Auth=yes` and a number of other settings.
+The Auth section is autoconfigured with `Auth=yes` and a number of other settings.
 
-You may also want to set `FlushTickets=yes` in the MISC section. This will flush Kerbreos tickets for all users and services on the machine.
+You might also want to set `FlushTickets=yes` in the MISC section. This will flush Kerberos tickets for all users and services on the machine.
 
 ## Enable BID traces
 
@@ -67,8 +67,8 @@ Once all the changes to the *SQLTrace.ini* file have been saved, BID Traces must
 
 An output folder is generated in the current directory and you can use it for further analysis.
 
-The trace may take a minute or two to completely stop since downloading the event logs may take a while.
+The trace might take a minute or two to completely stop since downloading the event logs might take a while.
 
 You can start and stop the trace any number of times without having to redo the configuration steps. Each time it's taken a new folder will be created with a timestamp as part of the folder name. The time corresponds with the time the trace was started.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
