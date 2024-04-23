@@ -101,7 +101,7 @@ For more information about licensing configurations, see [License Remote Desktop
 
 <a name="registry" ></a>You can use Registry Editor to check the licensing configuration. Open Registry Editor (or connect to the registry) on the RD Session Host. The subkeys that hold this information vary depending on how you manage your servers.
 
-If you use Group Policy to manage remote desktop services, check the following subkey and entries:
+If you use Group Policy to manage RDS, check the following subkey and entries:
 
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services`
   - `LicenseServers` (string value)
@@ -119,7 +119,7 @@ If you use the Remote Desktop Services console in Server Manager, check the foll
 
 For more information about `LicensingMode`, see [LicensingMode](/windows-hardware/customize/desktop/unattend/microsoft-windows-terminalservices-remoteconnectionmanager-licensingmode#values).
 
-### Check for blocked ports between the remote desktop services servers
+### Check for blocked ports between the Remote Desktop Services servers
 
 Make sure that the required ports are open on the firewalls between the RD Session Host and the RD Licensing server.
 
