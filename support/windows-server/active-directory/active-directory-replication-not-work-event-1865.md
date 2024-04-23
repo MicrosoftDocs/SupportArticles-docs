@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article helps fix an issue where Active Directory replication doesn't work and event IDs 1865 and 1311 are logged.
 
-_Applies to:_ &nbsp; All supported versions of Windows Server  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 944351
 
 ## Symptoms
