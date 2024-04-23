@@ -1113,6 +1113,8 @@ items:
       href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
 - name: TroubleShootingScript toolset (TSS)
   items:
+  - name: Introduction to TroubleShootingScript toolset (TSS)
+    href: ./windows-tss/introduction-to-troubleshootingscript-toolset-tss.md
   - name: Deployment (DnD)
     items:
     - name: Gather information for deployment-related issues
@@ -1125,8 +1127,6 @@ items:
       href: ./windows-tss/gather-information-using-tss-ad-replication.md
     - name: Gather information for Group Policy issues
       href: ./windows-tss/gather-information-using-tss-group-policy.md
-  - name: Introduction to TroubleShootingScript toolset (TSS)
-    href: ./windows-tss/introduction-to-troubleshootingscript-toolset-tss.md
   - name: Storage and High Availability (SHA)
     items:
     - name: Gather information for Hyper-V related issues

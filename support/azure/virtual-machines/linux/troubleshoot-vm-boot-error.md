@@ -10,9 +10,9 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.topic: troubleshooting
-ms.date: 04/15/2024
+ms.date: 04/23/2024
 ms.author: divargas
-ms.reviewer: ekpathak, v-leedennis
+ms.reviewer: ekpathak, v-leedennis, v-weizhu
 ---
 
 # Linux virtual machine boots to GRUB rescue
@@ -100,20 +100,21 @@ This error might be associated with one of the following issues:
 
 2. Reinstall GRUB and regenerate the corresponding GRUB configuration file by using one of the following commands:
 
+
     * **RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI (BIOS based - Gen1)**
 
         ```bash
-        # grub2-install /dev/sdX
-        # grub2-mkconfig -o /boot/grub2/grub.cfg
-        # sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
+        grub2-install /dev/sdX
+        grub2-mkconfig -o /boot/grub2/grub.cfg
+        sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
         ```
 
     * **RHEL/CentOS/Oracle 7.x/8.x Linux VMs with UEFI (Gen2)**
 
         ```bash
-        # grub2-install /dev/sdX
-        # grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg
-        # sed -i 's/hd2/hd0/g' /boot/efi/EFI/redhat/grub.cfg
+        grub2-install /dev/sdX
+        grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg
+        sed -i 's/hd2/hd0/g' /boot/efi/EFI/redhat/grub.cfg
         ```
 
       If the VM is running CentOS, replace `redhat` with `centos` in the *grub.cfg* file absolute path */boot/efi/EFI/centos/grub.cfg*.
@@ -121,16 +122,16 @@ This error might be associated with one of the following issues:
     * **SLES 12/15 Gen1 and Gen2**
 
         ```bash
-        # grub2-install /dev/sdX
-        # grub2-mkconfig -o /boot/grub2/grub.cfg
-        # sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
+        grub2-install /dev/sdX
+        grub2-mkconfig -o /boot/grub2/grub.cfg
+        sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
         ```
 
     * **Ubuntu 18.04/20.04**
 
         ```bash
-        # grub-install /dev/sdX
-        # update-grub
+        grub-install /dev/sdX
+        update-grub
         ```
   
 3. Go to step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
@@ -168,11 +169,37 @@ The following screenshot shows the error message:
 3. When you're located inside chroot, verify the contents in the */boot/grub2/i386-pc* directory. If the contents are missing, copy the contents from */usr/lib/grub/i386-pc*. To do this, use the following commands:
 
     ```bash
-    # ls -l /boot/grub2/i386-pc
-    # cp -rp /usr/lib/grub/i386-pc /boot/grub2
+    ls -l /boot/grub2/i386-pc
+    cp -rp /usr/lib/grub/i386-pc /boot/grub2
     ```
+4. If the contents of the `/boot` partition are empty, use the following commands to re-create it:
 
-4. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
+    > [!NOTE]
+    > The following steps apply to RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI (BIOS based - Gen1).
+
+   1. Under the chroot process, reinstall the grub. Replace `/dev/sd[X]` accordingly with the corresponding copy of the OS disk attached to the repair/rescue VM:
+
+        ```bash
+        grub2-install /dev/sd[X]
+        ```
+   2. Make sure `/etc/resolv.conf` has a valid DNS entry in order to resolve the name of the repository:
+
+       ```bash
+       cat /etc/resolv.conf
+       ```
+   3. Reinstall the kernel:
+  
+       ```bash
+       yum reinstall $(rpm -qa | grep -i kernel)
+       ```
+   4. Create the *grub.cfg* file:
+  
+       ```bash
+       grub2-mkconfig -o /boot/grub2/grub.cfg
+       sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
+       ```
+
+5. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
 ## <a id="no-such-partition"></a>Error: no such partition
 
@@ -194,7 +221,7 @@ If the /boot partition is missing, re-create it by following these steps:
 2. Identify if the partition table is created as the **dos** or **GPT** type by using the following command:
 
     ```bash
-    # fdisk -l /dev/sdX
+    sudo fdisk -l /dev/sdX
     ```
 
     * **Dos partition table**
@@ -216,13 +243,13 @@ If the /boot partition is missing, re-create it by following these steps:
 1. Re-create the /boot partition by using the following command:
 
     ```bash
-    # fdisk /dev/sdX
+    sudo fdisk /dev/sdX
     ```
 
     Use the default values in the **First** and **Last** sectors, and **partition type** (83). Make sure the /boot partition table is marked as bootable by using the `a` option in the `fdisk` tool, as shown in the following output:
 
     ```output
-    # fdisk /dev/sdc
+    sudo fdisk /dev/sdc
     
     The device presents a logical sector size that is smaller than
     the physical sector size. Aligning to a physical sector (or optimal
@@ -274,11 +301,11 @@ If the /boot partition is missing, re-create it by following these steps:
 2. After you re-create the missing /boot partition, check whether the /boot file system is detected. You should be able to see an entry for `/dev/sdX1` (the missing /boot partition).
 
     ```bash
-    # blkid /dev/sdX1
+    sudo blkid /dev/sdX1
     ```
 
     ```output
-    # blkid /dev/sdc1
+    sudo blkid /dev/sdc1
     /dev/sdc1: UUID="<UUID>" TYPE="ext4"
     ```
 
@@ -289,13 +316,13 @@ If the /boot partition is missing, re-create it by following these steps:
 1. Re-create the /boot partition by using the following command:
 
     ```bash
-    # gdisk /dev/sdX
+    sudo gdisk /dev/sdX
     ```
 
     Use the default values in the **First** and **Last** sectors, and **partition type** (8300), as shown in the following output:
 
     ```output
-    # gdisk /dev/sdc
+    sudo gdisk /dev/sdc
     GPT fdisk (gdisk) version 1.0.3
     
     Partition table scan:
@@ -347,13 +374,13 @@ If the /boot partition is missing, re-create it by following these steps:
 2. Check whether the /boot file system is detected by the system by using the following command:
 
     ```bash
-    # blkid /dev/sdX1
+    sudo blkid /dev/sdX1
     ```
 
     You should be able to see an entry for `/dev/sdX1` (the missing /boot partition).
 
     ```output
-    # blkid /dev/sdc1
+    sudo blkid /dev/sdc1
     /dev/sdc1: UUID="<UUID>" BLOCK_SIZE="4096" TYPE="xfs" PARTLABEL="Linux filesystem" PARTUUID="<PARTUUID>"
     ```
 
