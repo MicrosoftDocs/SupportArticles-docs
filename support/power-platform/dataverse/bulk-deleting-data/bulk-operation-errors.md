@@ -58,11 +58,11 @@ This error and its underlying deadlock exception are likely to occur when trying
 
 ### Resolution
 
-This error isn't related to the use of bulk operations. Review any custom plug-ins that might be executed as part of your request. For more information about these errors, see [Transaction errors](dataverse-plug-ins-errors.md#transaction-errors).
+This error isn't related to the use of bulk operations. Review any custom plug-ins that might be executed as part of your request. For more information about these errors, see [Transaction errors](~/power-platform/dataverse/plug-in-execution/dataverse-plug-ins-errors.md#transaction-errors).
 
 ## Client errors
 
-You might encounter errors caused by issues in the bulk operation requests being sent. If you encounter a client error when using bulk operations, see [Troubleshoot Dataverse client errors](client-errors.md).
+You might encounter errors caused by issues in the bulk operation requests being sent. If you encounter a client error when using bulk operations, see [Troubleshoot Dataverse client errors](~/power-platform/dataverse/user-permissions/client-errors.md).
 
 ## See also
 
