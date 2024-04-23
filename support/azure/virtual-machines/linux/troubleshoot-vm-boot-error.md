@@ -158,7 +158,7 @@ To resolve this issue, follow these steps:
 
 ## <a id="normal-mod-file-not-found"></a>Error: file '/boot/grub2/i386-pc/normal.mod' not found
 
-T he following screenshot shows the error message:
+The following screenshot shows the error message:
 
 :::image type="content" source="./media/troubleshoot-vm-boot-error/grub-normal-file-not-found.png" alt-text="Screenshot of grub error normal.mod not found.":::
 
@@ -172,17 +172,17 @@ T he following screenshot shows the error message:
     ls -l /boot/grub2/i386-pc
     cp -rp /usr/lib/grub/i386-pc /boot/grub2
     ```
-4. If the content of `/boot` partition is empty, use the following commands to recreate it:
+4. If the contents of the `/boot` partition are empty, use the following commands to re-create it:
 
     > [!NOTE]
     > The following steps apply to RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI (BIOS based - Gen1).
 
-   1. Under the chroot process, reinstall the grub. Replace `/dev/sd[X]` accordingly with the corresponding copy of the OS disk attached to the repair/rescue VM.
+   1. Under the chroot process, reinstall the grub. Replace `/dev/sd[X]` accordingly with the corresponding copy of the OS disk attached to the repair/rescue VM:
 
         ```bash
         grub2-install /dev/sd[X]
         ```
-   2. Make sure the `/etc/resolv.conf` has a valid DNS entry in order to resolve the name of the repository:
+   2. Make sure `/etc/resolv.conf` has a valid DNS entry in order to resolve the name of the repository:
 
        ```bash
        cat /etc/resolv.conf
@@ -192,7 +192,7 @@ T he following screenshot shows the error message:
        ```bash
        yum reinstall $(rpm -qa | grep -i kernel)
        ```
-   4. Create the grub.cfg:
+   4. Create the *grub.cfg* file:
   
        ```bash
        grub2-mkconfig -o /boot/grub2/grub.cfg
