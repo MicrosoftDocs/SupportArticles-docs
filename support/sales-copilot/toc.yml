@@ -5,6 +5,8 @@
       items:
         - name: '"Align missing fields" error'
           href: crm-permissions-and-configurations/align-missing-fields-error.md
+        - name: '"Ask your admin to create an environment for you" error'
+          href: crm-permissions-and-configurations/no-admin-exists-error.md          
         - name: Can't update records due to missing record access in Salesforce CRM
           href: crm-permissions-and-configurations/missing-record-update-edit-access.md
         - name: Can't update records due to missing object access in Salesforce CRM

@@ -176,6 +176,14 @@ Verify that port 2049 is open on your client by running the following command. I
 sudo nc -zv <storageaccountnamehere>.file.core.windows.net 2049
 ```
 
+### Cause 5: Storage account deleted
+
+If you're unable to mount the file share due to **error: connection timed out**, it's possible that the storage account containing the file share was deleted accidentally.
+
+#### Solution
+
+[Recover the storage account](/azure/storage/common/storage-account-recover), and then delete and re-create the private endpoint so it's associated with the new storage account resource ID.
+
 ## ls hangs for large directory enumeration on some kernels
 
 ### Cause: A bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5

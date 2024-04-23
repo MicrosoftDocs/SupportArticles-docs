@@ -236,6 +236,9 @@ items:
       tocHref: /troubleshoot/power-platform/
       topicHref: /troubleshoot/power-platform/
       items:
+      - name: Microsoft Dataverse
+        tocHref: /troubleshoot/power-platform/dataverse/
+        topicHref: /troubleshoot/power-platform/dataverse/welcome-dataverse
       - name: AI Builder
         tocHref: /troubleshoot/power-platform/ai-builder/
         topicHref: /troubleshoot/power-platform/ai-builder/welcome-ai-builder

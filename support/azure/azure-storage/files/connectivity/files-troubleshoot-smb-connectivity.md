@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 01/16/2024
+ms.date: 04/22/2024
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -198,6 +198,16 @@ You can use either of the following steps to work around the problem:
   `Echo new-smbMapping ... | powershell -command –`
 
 - Put double quotation marks around the key to work around this problem--unless the forward slash is the first character. If it is, either use the interactive mode and enter your password separately or regenerate your keys to get a key that doesn't start with a forward slash.
+
+### <a id=newpsdrive></a>New-PSDrive command fails with "the network resource type is not correct"
+
+#### Cause
+
+You might see this error message if the file share isn't reachable, for example if [port 445 is blocked](#cause-1-port-445-is-blocked) or if there's a DNS resolution issue.
+
+#### Solution
+
+Make sure port 445 is open and [check DNS resolution and connectivity to your file share](files-troubleshoot.md#check-dns-resolution-and-connectivity-to-your-azure-file-share).
 
 ### [Linux](#tab/linux)
 
