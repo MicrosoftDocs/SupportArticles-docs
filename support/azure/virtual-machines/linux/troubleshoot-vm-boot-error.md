@@ -10,9 +10,9 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.topic: troubleshooting
-ms.date: 04/22/2024
+ms.date: 04/23/2024
 ms.author: divargas
-ms.reviewer: ekpathak, v-leedennis
+ms.reviewer: ekpathak, v-leedennis, v-weizhu
 ---
 
 # Linux virtual machine boots to GRUB rescue
