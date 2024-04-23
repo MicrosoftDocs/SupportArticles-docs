@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: hesham.elkouha@microsoft.com, kaushika, v-tappelgate
+ms.reviewer: hesham.elkouha, kaushika, v-tappelgate
 ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # Troubleshooting access denied and user not authorized issues in Microsoft Remote Desktop Services
