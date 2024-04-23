@@ -359,6 +359,8 @@ items:
       href: ./active-directory/event1644reader-analyze-ldap-query-performance.md
   - name: Domain join issues
     items:
+    - name: 'Troubleshooting guidance: Active Directory domain join'
+      href: ./active-directory/active-directory-domain-join-troubleshooting-guidance.md
     - name: Active Directory installation fails
       href: ./active-directory/creating-ntds-settings-object-for-ad-dc.md
     - name: Cannot contect to the Internet or the domain
@@ -379,8 +381,6 @@ items:
       href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
     - name: Troubleshooting AD Replication error 1908
       href: ./active-directory/ad-replication-error-1908-not-find-domain-controller.md
-    - name: 'Troubleshooting guidance: Active Directory domain join'
-      href: ./active-directory/active-directory-domain-join-troubleshooting-guidance.md
     - name: Unable to join computers to a domain
       href: ./active-directory/cannot-join-computer-to-domain.md
     - name: Using domain join UI to join a computer to AD domain fails
@@ -689,6 +689,8 @@ items:
       href: ./backup-and-storage/cannot-configure-clustered-mount-points-shadow-copies.md
   - name: Data corruption and disk errors
     items:
+    - name: 'Troubleshooting guidance: Data corruption and disk errors'
+      href: ./backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md
     - name: Backup doesn't start after you perform BMR
       href: ./backup-and-storage/backup-not-start-after-performing-bmr.md
     - name: Can't delete files on NTFS file system
@@ -707,8 +709,6 @@ items:
       href: ./backup-and-storage/set-partmgr-attributes-with-powershell.md
     - name: System logs multiple events that specify Event ID 640
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
-    - name: 'Troubleshooting guidance: Data corruption and disk errors'
-      href: ./backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md
   - name: Deduplication
     items:
     - name: Clone or duplicate a Windows installation
@@ -941,6 +941,8 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail.md
   - name: Smart card logon
     items:
+    - name: 'Troubleshooting guidance: Active Directory replication'
+      href: ./certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance.md
     - name: A Certification Authority can't use a certificate template
       href: ./certificates-and-public-key-infrastructure-pki/ca-cant-use-certificate-template.md
     - name: Back up recovery agent EFS private key
@@ -983,8 +985,6 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/set-enterprise-subordinate-ca-validity-period.md
     - name: Set up certificate-based authentication across forests without trust for a web server
       href: ./certificates-and-public-key-infrastructure-pki/set-up-certificate-based-authentication-across-forest-without-trust.md
-    - name: 'Troubleshooting guidance: Active Directory replication'
-      href: ./certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance.md
     - name: Valid root CA certificates are untrusted
       href: ./certificates-and-public-key-infrastructure-pki/valid-root-ca-certificates-untrusted.md
     - name: Version 3 templates don't appear in certificate web enrollment
@@ -1085,6 +1085,8 @@ items:
       href: ./group-policy/adm-template-disable-drivers.md
   - name: Problems applying Group Policy objects to users or computers
     items:
+    - name: 'Troubleshooting guidance: Applying Group Policy'
+      href: ./group-policy/applying-group-policy-troubleshooting-guidance.md
     - name: A Group Policy setting isn't available in the security policy settings list
       href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
@@ -1125,8 +1127,6 @@ items:
       href: ./group-policy/settings-applied-group-policy.md
     - name: Some Group Policy areas are missing
       href: ./group-policy/group-policy-areas-missing.md
-    - name: 'Troubleshooting guidance: Applying Group Policy'
-      href: ./group-policy/applying-group-policy-troubleshooting-guidance.md
     - name: Use Group Policy to add MaxTokenSize registry entry
       href: ./group-policy/group-policy-add-maxtokensize-registry-entry.md
     - name: User-based GPO settings aren't applied when signing in with shadow principals
@@ -1167,14 +1167,16 @@ items:
     href: ./high-availability/high-availability-overview.md
   - name: Cannot bring a resource online
     items:
-    - name: Active Route removed
-      href: ./high-availability/active-route-removed.md
+    - name: 'Troubleshooting guidance: Cannot bring a resource online'
+      href: ./high-availability/troubleshoot-cannot-bring-resource-online-guidance.md
     - name: Can't bring a network name online
       href: ./high-availability/troubleshoot-cannot-bring-network-name-online.md
     - name: Can't bring an IP address online
       href: ./high-availability/troubleshoot-cannot-bring-ip-address-online.md
     - name: Can't bring a physical disk online
       href: ./high-availability/troubleshoot-cannot-bring-physical-disk-online.md
+    - name: Active Route removed
+      href: ./high-availability/active-route-removed.md
     - name: Cluster disk resource fails to come online
       href: ./high-availability/cluster-disk-resource-not-come-online.md
     - name: Cluster fileshare resource fails
@@ -1201,8 +1203,6 @@ items:
       href: ./high-availability/recover-deleted-computer-object-failover-cluster.md
     - name: '"The parameter is incorrect" error'
       href: ./high-availability/parameter-incorrect-error-cluster-validation-fails.md
-    - name: 'Troubleshooting guidance: Cannot bring a resource online'
-      href: ./high-availability/troubleshoot-cannot-bring-resource-online-guidance.md
   - name: Cannot failover a group
     items:
     - name: SMB 3.0 features in Windows Server 2012 file server
@@ -1217,6 +1217,8 @@ items:
       href: ./high-availability/corrupted-memory-dump-file.md
   - name: Cluster service fails to start
     items:
+    - name: 'Troubleshooting guidance: Cluster service fails to start'
+      href: ./high-availability/troubleshoot-cluster-service-fails-to-start.md
     - name: Cluster service startup options
       href: ./high-availability/switches-start-cluster-service.md
     - name: Cluster Service Stops Responding on a Cluster Node
@@ -1227,8 +1229,6 @@ items:
       href: ./high-availability/troubleshoot-cluster-event-id-1135.md
     - name: Troubleshoot Cluster service startup issues
       href: ./high-availability/troubleshoot-cluster-service-startup-issues.md
-    - name: 'Troubleshooting guidance: Cluster service fails to start'
-      href: ./high-availability/troubleshoot-cluster-service-fails-to-start.md
   - name: Cluster Shared Volume (CSV)
     items:
     - name: 'Troubleshooting guidance: Event ID 5120 Cluster Shared Volume'
@@ -1295,12 +1295,12 @@ items:
       href: ./high-availability/hotfixes-for-windows-server-2008-r2-server-cluster.md
   - name: Root cause of an unexpected failover
     items:
+    - name: 'Troubleshooting guidance: Unexpected cluster failover'
+      href: ./high-availability/troubleshoot-unexpected-cluster-failover-issue.md
     - name: Failover behavior on clusters of three or more nodes
       href: ./high-availability/groups-fail-logic-three-more-cluster-node-members.md
     - name: Run chkdsk /f command on a shared cluster disk
       href: ./high-availability/run-chkdsk-f-command-shared-cluster-disk.md
-    - name: 'Troubleshooting guidance: Unexpected cluster failover'
-      href: ./high-availability/troubleshoot-unexpected-cluster-failover-issue.md
     - name: Updates for Windows Server 2012 R2-based failover clusters
       href: ./high-availability/updates-for-windows-server-2012-r2-failover-cluster.md
   - name: Setup and configuration of clustered services and applications
@@ -1355,6 +1355,12 @@ items:
     href: ./installing-updates-features-roles/installing-updates-features-roles-overview.md
   - name: Failure to install Windows Updates
     items:
+    - name: 'Troubleshooting guidance: Installing Windows features or roles'
+      href: ./installing-updates-features-roles/troubleshoot-install-features-roles-guidance.md
+    - name: 'Troubleshooting guidance: Windows Server update'
+      href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
+    - name: 'Troubleshooting guidance: Windows Update for Business reports'
+      href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
     - name: Can't connect to WSUS Administration Website
       href: ./installing-updates-features-roles/cannot-connect-to-wsus-administration-website.md
     - name: Can't install .NET Framework 3.5 on OEM Windows installation
@@ -1413,12 +1419,6 @@ items:
       href: ./installing-updates-features-roles/system-partition-offline-install-3rd-party-disk.md
     - name: Temporarily deactivate the kernel mode filter driver
       href: ./installing-updates-features-roles/deactivate-kernel-mode-filter-driver.md
-    - name: 'Troubleshooting guidance: Installing Windows features or roles'
-      href: ./installing-updates-features-roles/troubleshoot-install-features-roles-guidance.md
-    - name: 'Troubleshooting guidance: Windows Server update'
-      href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
-    - name: 'Troubleshooting guidance: Windows Update for Business reports'
-      href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
     - name: Why you may be prompted to restart your computer
       href: ./installing-updates-features-roles/why-prompted-restart-computer.md
     - name: Windows Server 2008 Service Pack 2
@@ -1491,6 +1491,10 @@ items:
     href: ./networking/networking-overview.md
   - name: Access to remote file shares (SMB or DFS Namespace)
     items:
+    - name: 'Troubleshooting guidance: DFS Namespace'
+      href: ./networking/troubleshoot-dfs-namespace-guidance.md
+    - name: 'Troubleshooting guidance: SMB'
+      href: ./networking/troubleshoot-smb-guidance.md
     - name: Can't create a domain-based DFS namespace
       href: ./networking/cant-create-domain-based-dfs-namespace.md
     - name: Can't use different credentials for a network share
@@ -1565,10 +1569,6 @@ items:
       href: ./networking/tcp-three-way-handshake-fails.md
     - name: Troubleshoot DFSN access failures
       href: ./networking/dfsn-access-failures.md
-    - name: 'Troubleshooting guidance: DFS Namespace'
-      href: ./networking/troubleshoot-dfs-namespace-guidance.md
-    - name: 'Troubleshooting guidance: SMB'
-      href: ./networking/troubleshoot-smb-guidance.md
   - name: Background Intelligent Transfer Service (BITS)
     items:
     - name: '"Content file download failed" error when downloading a file by BITS'
@@ -1605,6 +1605,8 @@ items:
       href: ./networking/support-policy-for-dfsr-dfsn-deployment.md
   - name: DNS
     items:
+    - name: 'Troubleshooting guidance: DNS'
+      href: ./networking/troubleshoot-dns-guidance.md
     - name: Accessing a server locally by using its FQDN or CNAME alias fails
       href: ./networking/accessing-server-locally-with-fqdn-cname-alias-denied.md
     - name: Active Directory-integrated DNS zone serial number behavior
@@ -1697,14 +1699,14 @@ items:
       href: ./networking/troubleshoot-dns-event-id-4013.md
     - name: Troubleshoot DNS name resolution on the Internet
       href: ./networking/troubleshoot-dns-name-resolution.md
-    - name: 'Troubleshooting guidance: DNS'
-      href: ./networking/troubleshoot-dns-guidance.md
     - name: Verify that SRV DNS records have been created
       href: ./networking/verify-srv-dns-records-have-been-created.md
     - name: WINS registration fails if a server points to itself for WINS name resolution
       href: ./networking/wins-registration-fails-if-server-point-to-itself-for-wins-name-resolution.md
   - name: Dynamic Host Configuration Protocol (DHCP)
     items:
+    - name: 'Troubleshooting guidance: DHCP'
+      href: ./networking/troubleshoot-dhcp-guidance.md
     - name: Can't add a DHCP reservation
       href: ./networking/cant-add-dhcp-reservation.md
     - name: DHCP client can't get a DHCP-assigned IP address
@@ -1731,8 +1733,6 @@ items:
       href: ./networking/dhcp-servers-report-different-failover-states.md
     - name: PXE clients don't start
       href: ./networking/pxe-clients-not-start-dhcp-60-66-67-option.md
-    - name: 'Troubleshooting guidance: DHCP'
-      href: ./networking/troubleshoot-dhcp-guidance.md
     - name: Troubleshoot problems on the DHCP client
       href: ./networking/troubleshoot-problems-dhcp-client.md
     - name: Use Netsh utility to export and import DHCP scopes
@@ -1761,6 +1761,10 @@ items:
       href: ./networking/incorrect-ip-address-returned-ping-netbios.md
     - name: Install and configure IP version 6
       href: ./networking/install-configure-ip-version-6.md
+  - name: Network Connection Status Indicator (NCSI)
+    items:
+    - name: 'Troubleshooting guidance: Network Connection Status Indicator (NCSI)'
+      href: ./networking/troubleshoot-ncsi-guidance.md  
   - name: Network Load Balancing (NLB)
     items:
     - name: Configure network infrastructure to support NLB operation mode
@@ -1769,12 +1773,16 @@ items:
       href: ./networking/network-load-balancing-concept-notes.md
   - name: RADIUS - Network Policy Server (NPS) or Internet Authentication Service (IAS)
     items:
-    - name: Certificate requirements when you use EAP-TLS
-      href: ./networking/certificate-requirements-eap-tls-peap.md
     - name: 'Troubleshooting guidance: Network Policy Server'
       href: ./networking/troubleshoot-network-policy-server.md
+    - name: Certificate requirements when you use EAP-TLS
+      href: ./networking/certificate-requirements-eap-tls-peap.md
   - name: Remote access
     items:
+    - name: 'Troubleshooting guidance: DirectAccess'
+      href: ./networking/troubleshoot-directaccess-guidance.md
+    - name: 'Troubleshooting guidance: Remote access (VPN and AOVPN)'
+      href: ./networking/troubleshoot-remote-access-vpn-and-aovpn-guidance.md
     - name: Can't connect to Internet on a VPN server
       href: ./networking/cannot-connect-to-internet-vpn-server.md
     - name: Configure remote access client account lockout
@@ -1823,12 +1831,12 @@ items:
       href: ./networking/troubleshoot-directaccess-server-console-6to4.md
     - name: Troubleshoot error 720 when establishing a VPN connection
       href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
-    - name: 'Troubleshooting guidance: DirectAccess'
-      href: ./networking/troubleshoot-directaccess-guidance.md
-    - name: 'Troubleshooting guidance: Remote access (VPN and AOVPN)'
-      href: ./networking/troubleshoot-remote-access-vpn-and-aovpn-guidance.md
   - name: TCP/IP communications
     items:
+    - name: 'Troubleshooting guidance: TCP/IP communication'
+      href: ./networking/troubleshoot-tcp-ip-communication-guidance.md
+    - name: 'Troubleshooting guidance: TCP/IP performance'
+      href: ./networking/troubleshoot-tcp-ip-performance-guidance.md
     - name: Accessing websites hosted on Akamai CDN fails
       href: ./networking/access-denied-visit-website-hosted-akamai-cdn.md
     - name: Address Resolution Protocol (ARP) caching behavior
@@ -1925,10 +1933,6 @@ items:
       href: ./networking/automatic-metric-for-ipv4-routes.md
     - name: The default dynamic port range for TCP/IP has changed
       href: ./networking/default-dynamic-port-range-tcpip-chang.md
-    - name: 'Troubleshooting guidance: TCP/IP communication'
-      href: ./networking/troubleshoot-tcp-ip-communication-guidance.md
-    - name: 'Troubleshooting guidance: TCP/IP performance'
-      href: ./networking/troubleshoot-tcp-ip-performance-guidance.md
     - name: Troubleshoot Web Application Proxy
       href: ./networking/troubleshoot-web-application-proxy.md
     - name: Use WHOIS to research Internet domains
@@ -1945,12 +1949,12 @@ items:
       href: ./networking/credentials-prompt-access-webdav-fqdn-sites.md
   - name: Windows Firewall with Advanced Security (WFAS)
     items:
+    - name: 'Troubleshooting guidance: Windows Firewall with Advanced Security'
+      href: ./networking/troubleshoot-windows-firewall-with-advanced-security-guidance.md
     - name: Error 0x000006D9 when you share a printer
       href: ./networking/error-0x000006d9-when-you-share-printer.md
     - name: How to disable stealth mode
       href: ./networking/disable-stealth-mode.md
-    - name: 'Troubleshooting guidance: Windows Firewall with Advanced Security'
-      href: ./networking/troubleshoot-windows-firewall-with-advanced-security-guidance.md
     - name: UDP communication is blocked
       href: ./networking/windows-fireware-rule-block-udp-communication.md
     - name: Use netsh advfirewall firewall context
@@ -1977,12 +1981,12 @@ items:
       href: ./networking/windows-internet-name-service-replication-related-errors.md
   - name: Wireless networking and 802.1X authentication
     items:
+    - name: 'Troubleshooting guidance: wireless technology'
+      href: ./networking/troubleshoot-wireless-technologies.md
     - name: Configure L2TP/IPsec server behind NAT-T device
       href: ./networking/configure-l2tp-ipsec-server-behind-nat-t-device.md
     - name: Set up Internet Connection Sharing
       href: ./networking/set-up-internet-connection-sharing.md
-    - name: 'Troubleshooting guidance: wireless technology'
-      href: ./networking/troubleshoot-wireless-technologies.md
 - name: Performance
   items:
   - name: Performance
@@ -2003,6 +2007,8 @@ items:
       href: ./performance/values-process-control-parameters.md
   - name: Blue Screen/Bugcheck
     items:
+    - name: 'Troubleshooting guidance: stop errors and unexpected restart'
+      href: ./performance/troubleshoot-stop-errors-guidance.md
     - name: Disable or enable Dr. Watson program
       href: ./performance/disable-enable-dr-watson-program.md
     - name: Error 0x00000007B after you reconfigure hardware devices
@@ -2033,8 +2039,6 @@ items:
       href: ./performance/stop-0x0000000a-error-processor-c1-idle-state.md
     - name: Toggle Terminal Services to Application Server mode
       href: ./performance/toggle-terminal-services-application-server-mode.md
-    - name: 'Troubleshooting guidance: stop errors and unexpected restart'
-      href: ./performance/troubleshoot-stop-errors-guidance.md
     - name: Troubleshoot the "STOP 0xC000021A" error
       href: ./performance/troubleshoot-stop-0xc000021a-error.md
     - name: Use Dumpchk.exe to check a memory dump file
@@ -2131,6 +2135,8 @@ items:
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
     items:
+    - name: 'Troubleshooting guidance: High CPU usage'
+      href: ./performance/troubleshoot-high-cpu-usage-guidance.md
     - name: Add processors to a computer
       href: ./performance/add-processors-to-computer.md
     - name: Error occurs while deleting registry keys
@@ -2147,8 +2153,6 @@ items:
       href: ./performance/slow-performance-when-using-power-plan.md
     - name: Slow performance with files over the network
       href: ./performance/slow-performance-file-server.md
-    - name: 'Troubleshooting guidance: High CPU usage'
-      href: ./performance/troubleshoot-high-cpu-usage-guidance.md
   - name: System Hang
     items:
     - name: Cannot restart a Windows Server computer that uses Credential Guard and Hyper-V
@@ -2173,6 +2177,8 @@ items:
   items:
   - name: Printing
     href: ./printing/printing-overview.md
+  - name: 'Troubleshooting guidance: Printing'
+    href: ./printing/troubleshoot-printer-guidance.md
   - name: 'Errors and troubleshooting: General issues'
     items:
     - name: Can't print after installing a service pack or printer hotfix
@@ -2241,8 +2247,6 @@ items:
     items:
     - name: Back up and restore printers when upgrading
       href: ./printing/back-up-restore-printers.md
-  - name: 'Troubleshooting guidance: Printing'
-    href: ./printing/troubleshoot-printer-guidance.md
   - name: Troubleshoot printing issues
     items:
     - name: Troubleshoot printing and best practices
@@ -2425,6 +2429,8 @@ items:
       href: ./remote/remoteapp-sessions-disconnected.md
   - name: Remote Desktop Services (Terminal Services) licensing
     items:
+    - name: 'Troubleshooting guidance: RDS Licensing'
+      href: ./remote/troubleshoot-rds-licensing-guidance.md
     - name: Cannot connect to RDS because no RD Licensing servers are available
       href: ./remote/cannot-connect-rds-no-license-server.md
     - name: Configure RDP listener certificates
@@ -2457,10 +2463,10 @@ items:
       href: ./remote/terminal-server-license-for-deployment.md
     - name: Terminal Server licensing
       href: ./remote/terminal-server-licensing.md
-    - name: 'Troubleshooting guidance: RDS Licensing'
-      href: ./remote/troubleshoot-rds-licensing-guidance.md
   - name: Remote desktop sessions
     items:
+    - name: 'Troubleshooting guidance: RDS session connectivity'
+      href: ./remote/troubleshoot-rds-session-connectivity-guidance.md
     - name: Applications crash if another user logs off
       href: ./remote/applications-crash-if-another-user-logs-off-session.md
     - name: Available updates for Terminal Services (Remote Desktop Services)
@@ -2515,8 +2521,6 @@ items:
       href: ./remote/terminal-server-commands-msg.md
     - name: Terminal Server User's Home Directory is not set correctly
       href: ./remote/terminal-server-users-home-directory-not-set-correctly.md
-    - name: 'Troubleshooting guidance: RDS session connectivity'
-      href: ./remote/troubleshoot-rds-session-connectivity-guidance.md
     - name: User can't authenticate or must authenticate twice
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
     - name: User receives "Remote Desktop Service is currently busy" message
@@ -2709,12 +2713,12 @@ items:
   items:
   - name: Software Defined Networking
     href: ./software-defined-networking/software-defined-networking-overview.md
+  - name: 'Troubleshooting guidance: SDN'
+    href: ./software-defined-networking/troubleshoot-sdn-guidance.md
   - name: Internal DNS Server for SDN
     items:
     - name: Software Defined Data Center and Software Defined Networking
       href: ./software-defined-networking/software-defined-data-center-and-networking.md
-  - name: 'Troubleshooting guidance: SDN'
-    href: ./software-defined-networking/troubleshoot-sdn-guidance.md
   - name: Troubleshoot SDN
     href: ./software-defined-networking/troubleshoot-software-defined-networking.md
   - name: Troubleshoot the Windows Server Software Defined Networking Stack
@@ -2981,12 +2985,12 @@ items:
       href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md
   - name: Live Migration
     items:
+    - name: 'Troubleshooting guidance: Live Migration'
+      href: ./virtualization/troubleshoot-live-migration-guidance.md
     - name: Can't migrate a virtual machine from one host to another
       href: ./virtualization/unable-migrate-virtual-machine-processor-not-compatible-host.md
     - name: Starting or live migrating Hyper-V VMs fails
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
-    - name: 'Troubleshooting guidance: Live Migration'
-      href: ./virtualization/troubleshoot-live-migration-guidance.md
     - name: Troubleshoot live migration issues
       href: ./virtualization/troubleshoot-live-migration-issues.md
   - name: Shielded VMs
@@ -3081,6 +3085,8 @@ items:
       href: ./windows-security/use-eventcombmt-to-search-logs-for-account-lockout.md
   - name: Bitlocker
     items:
+    - name: 'Troubleshooting guidance: MBAM'
+      href: ./windows-security/troubleshoot-mbam-guidance.md
     - name: Computer Record is Rejected in MBAM
       href: ./windows-security/computer-record-rejected-in-mbam.md
     - name: Error when opening reports in MBAM
@@ -3097,8 +3103,6 @@ items:
       href: ./windows-security/error-mbam-take-ownership-tpm.md
     - name: MBAM setup fails if SSRS is not configured properly
       href: ./windows-security/mbam-setup-fails.md
-    - name: 'Troubleshooting guidance: MBAM'
-      href: ./windows-security/troubleshoot-mbam-guidance.md
   - name: Domain and forest trusts
     items:
     - name: Can't set up a trust between a Windows-based domain and an AD-based domain
@@ -3121,6 +3125,8 @@ items:
       href: ./windows-security/description-support-suite-b-cryptographic-ipsec.md
   - name: Kerberos authentication
     items:
+    - name: 'Troubleshooting guidance: Kerberos authentication'
+      href: ./windows-security/kerberos-authentication-troubleshooting-guidance.md
     - name: Active Directory authentication fails with klist error 0x8009030e
       href: ./windows-security/active-directory-authentication-fails-klist-error-0x8009030e.md
     - name: Authentication failure on NTLM and Kerberos servers
@@ -3157,8 +3163,6 @@ items:
       href: ./windows-security/tgs-request-for-krbtgt-account-fails.md
     - name: The Fingerprint Registration Wizard doesn't run
       href: ./windows-security/fingerprint-registration-wizard-not-run-install-fingerprint-reader.md
-    - name: 'Troubleshooting guidance: Kerberos authentication'
-      href: ./windows-security/kerberos-authentication-troubleshooting-guidance.md
     - name: Unable to log on to a domain
       href: ./windows-security/trust-relationship-between-workstation-domain-fail.md
   - name: Legacy authentication (NTLM)
@@ -3255,6 +3259,8 @@ items:
   items:
   - name: TroubleShootingScript toolset (TSS)
     items:
+    - name: Introduction to TroubleShootingScript toolset (TSS)
+      href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
     - name: Deployment (DnD)
       items:
       - name: Gather information for deployment-related issues
@@ -3265,8 +3271,6 @@ items:
         href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
       - name: Gather information for Group Policy issues
         href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
-    - name: Introduction to TroubleShootingScript toolset (TSS)
-      href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
     - name: Storage and High Availability (SHA)
       items:
       - name: Gather information for Hyper-V related issues

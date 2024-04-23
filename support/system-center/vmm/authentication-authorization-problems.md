@@ -1,8 +1,8 @@
 ---
 title: Missing or incorrect service principal names
 description: Fixes authentication and authorization problems in System Center Virtual Machine Manager due to missing or incorrect service principal names.
-ms.date: 04/26/2020
-ms.reviewer: steveth
+ms.date: 04/09/2024
+ms.reviewer: wenca, steveth
 ---
 # Authentication and authorization problems in System Center Virtual Machine Manager
 
@@ -30,18 +30,6 @@ For virtual console support for Hyper-V hosts (VMConnect.exe), the following SPN
 
 - `setspn -s computername "Microsoft Virtual Console Service/hostname"`
 - `setspn -s computername "Microsoft Virtual Console Service/hostname.fqdn.etc"`
-
-For P2V support, the following SPNs are required:
-
-- `setspn -s computername "Microsoft Virtual System Migration Service/hostname.fqdn.etc"`
-- `setspn -s computername "Microsoft Virtual System Migration Service/hostname"`
-
-For Microsoft Virtual Server 2005 hosts and the Virtual Machine Remote Control (VMRC) utility, the following SPNs are required:
-
-- `setspn -s computername vmrc/hostname.fqdn.etc:5900`
-- `setspn -s computername vmrc/hostname:5900`
-- `setspn -s computername vssrvc/hostname.fqdn.etc`
-- `setspn -s computername vssrvc/hostname`
 
 For RDP support, the following SPNs are required:
 
@@ -73,4 +61,4 @@ For a default instance, the following SPNs are required:
 For more information, see the following resources:
 
 - [How to Implement Kerberos Constrained Delegation with SQL Server 2008](/previous-versions/sql/sql-server-2008/ee191523(v=sql.100)?redirectedfrom=MSDN)
-- [How to use SPNs when you configure web applications that are hosted on Internet Information Services](https://support.microsoft.com/help/929650)
+- [How to use SPNs when you configure web applications that are hosted on Internet Information Services](https://techcommunity.microsoft.com/t5/iis-support-blog/how-to-use-spns-when-you-configure-web-applications-that-are/ba-p/324648)

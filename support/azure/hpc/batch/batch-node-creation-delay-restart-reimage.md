@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: jaygong, biny
 ms.service: batch
 #Customer intent: As an Azure Batch user, I want to be able to install the Python runtime and packages quickly so that I can avoid delays and unexpected errors when I create a batch node and a batch node pool to run Python applications.
+ms.custom: sap:Azure Batch
 ---
 # Resolve batch node creation delays when restarting or reimaging
 

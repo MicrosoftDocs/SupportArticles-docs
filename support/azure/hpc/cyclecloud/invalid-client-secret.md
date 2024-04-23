@@ -4,6 +4,7 @@ description: Provides a solution for a Client secret key is expired error that o
 ms.date: 09/15/2022
 ms.service: cyclecloud
 ms.reviewer: hclvteam, v-weizhu
+ms.custom: sap:Azure CycleCloud
 ---
 # Client secret key is expired error occurs when deploying or terminating virtual machines
 

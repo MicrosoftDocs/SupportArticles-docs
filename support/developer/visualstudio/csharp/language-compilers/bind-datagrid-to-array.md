@@ -2,7 +2,7 @@
 title: Bind a DataGrid control to an array of objects
 description: Describes how to bind a DataGrid control to an array of objects or of structures in Visual C#. Also gives a code sample to explain the related information.
 ms.date: 04/20/2020
-ms.custom: sap:Language or compilers
+ms.custom: sap:Language or Compilers\C#
 ms.topic: how-to
 ---
 # Use Visual C# to bind a DataGrid control to an array of objects or of structures

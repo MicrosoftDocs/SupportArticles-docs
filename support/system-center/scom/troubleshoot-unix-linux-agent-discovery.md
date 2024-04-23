@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot UNIX/Linux agent discovery
 description: This article helps troubleshoot common errors that may be encountered during the discovery process of UNIX or Linux computers.
-ms.date: 10/06/2022
+ms.date: 04/15/2024
 ms.custom: linux-related-content
 ---
 # Troubleshoot UNIX/Linux agent discovery in Operations Manager

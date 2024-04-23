@@ -1,7 +1,7 @@
 ---
 title: Operations Manager reports fail to deploy
 description: Describes an issue in which a DeploymentException error occurs when you deploy Operations Manager reports together with SQL Server Reporting Services.
-ms.date: 10/10/2022
+ms.date: 04/15/2024
 ms.custom: sap:Reporting server installation
 ---
 # Operations Manager reports fail to deploy

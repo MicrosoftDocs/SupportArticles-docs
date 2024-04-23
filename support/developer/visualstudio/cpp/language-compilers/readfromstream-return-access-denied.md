@@ -2,7 +2,7 @@
 title: ReadFromStream() returns Access Denied
 description: "Describes that Access Denied error occurs when your application uses CComVariant::ReadFromStream() to read data from a stream."
 ms.date: 04/27/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C++
 ms.reviewer: prabhatt
 ---
 # CComVariant::ReadFromStream() returns an error (Access Denied) for stream > 1 MB

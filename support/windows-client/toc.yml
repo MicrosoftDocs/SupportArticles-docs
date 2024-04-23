@@ -249,6 +249,8 @@ items:
     href: ./installing-updates-features-roles/installing-updates-features-roles-overview.md
   - name: Failure to install Windows Updates
     items:
+    - name: 'Troubleshooting guidance: Windows Update'
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
     - name: Additional resources for Windows Update
       href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
     - name: Analyze log file entries that SFC.exe generates
@@ -321,8 +323,6 @@ items:
       href: ./installing-updates-features-roles/processor-not-supported-together-with-windows-version.md
     - name: The same update is offered repeately
       href: ./installing-updates-features-roles/repeatedly-offer-the-same-update.md
-    - name: 'Troubleshooting guidance: Windows Update'
-      href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
     - name: Update Windows Update Agent to latest version
       href: ./installing-updates-features-roles/update-windows-update-agent.md
     - name: view system registry with 64-bit versions of Windows
@@ -451,6 +451,8 @@ items:
       href: ./networking/windows-connection-manager-disconnects-wlan.md
   - name: TCP/IP communications
     items:
+    - name: RPC error troubleshooting guidance
+      href: ./networking/rpc-errors-troubleshooting.md
     - name: Additional gateways appear in persistent routes
       href: ./networking/incorrect-default-gateways-in-persistent-routes.md
     - name: Can't install SNMP and WMI SNMP Provider
@@ -481,8 +483,6 @@ items:
       href: ./networking/network-gets-disconnected-computer-not-used-after-sign-in.md
     - name: Port Scanning Prevention Filter behavior
       href: ./networking/lots-disk-io-writes-wfpdiag-etl-log.md
-    - name: RPC error troubleshooting guidance
-      href: ./networking/rpc-errors-troubleshooting.md
     - name: Settings for minimizing periodic WAN traffic
       href: ./networking/settings-for-minimizing-periodic-wan-traffic.md
     - name: Set up your small business network
@@ -1009,6 +1009,8 @@ items:
       href: ./shell-experience/monitor-powers-off-when-pc-locked.md
   - name: Modern, Inbox and Microsoft Store Apps
     items:
+    - name: 'Troubleshooting guidance: Modern, Inbox, and Microsoft Store Apps'
+      href: ./shell-experience/modern-inbox-store-apps-troubleshooting-guidance.md
     - name: Can't open Microsoft Store when making a VPN connection
       href: ./shell-experience/microsoft-store-not-open-domain-joine-computer-vpn.md
     - name: Can't play audio in a system with DisplayPort
@@ -1111,6 +1113,8 @@ items:
       href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
 - name: TroubleShootingScript toolset (TSS)
   items:
+  - name: Introduction to TroubleShootingScript toolset (TSS)
+    href: ./windows-tss/introduction-to-troubleshootingscript-toolset-tss.md
   - name: Deployment (DnD)
     items:
     - name: Gather information for deployment-related issues
@@ -1123,8 +1127,6 @@ items:
       href: ./windows-tss/gather-information-using-tss-ad-replication.md
     - name: Gather information for Group Policy issues
       href: ./windows-tss/gather-information-using-tss-group-policy.md
-  - name: Introduction to TroubleShootingScript toolset (TSS)
-    href: ./windows-tss/introduction-to-troubleshootingscript-toolset-tss.md
   - name: Storage and High Availability (SHA)
     items:
     - name: Gather information for Hyper-V related issues

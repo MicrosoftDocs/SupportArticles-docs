@@ -3,6 +3,7 @@ title: How to set Group Policy Preference settings
 description: This article introduces how to configure Group Policy Preference settings for Internet Explorer 11.
 ms.date: 10/13/2020
 ms.reviewer: ajayps, kaushika, ramakoni
+ms.custom: sap:Administration
 ---
 # How to configure Group Policy Preference settings for Internet Explorer 11 in Windows
 

@@ -1,8 +1,8 @@
 ---
 title: Generation 2 VMs can't start with error 23352
 description: Describes an issue in which you cannot start generation 2 VMs that are created by using System Center 2012 R2 Virtual Machine Manager.
-ms.date: 05/07/2020
-ms.reviewer: greggo, jchornbe
+ms.date: 04/09/2024
+ms.reviewer: wenca, greggo, jchornbe
 ---
 # Generation 2 VMs created in System Center 2012 R2 Virtual Machine Manager cannot start
 

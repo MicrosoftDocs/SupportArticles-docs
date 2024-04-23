@@ -21,8 +21,6 @@
 - name: System Center
   href: system-center/index.yml
 - name: Welcome
-  href: developer/biztalk/welcome-biztalk-server.yml
-- name: Welcome
   href: developer/browsers/welcome-browsers.yml
 - name: Welcome
   href: azure/index.yml
@@ -34,3 +32,5 @@
   href: power-platform/index.yml
 - name: Welcome
   href: dynamics/index.yml
+- name: Welcome
+  href: sales-copilot/welcome-sales-copilot.yml
