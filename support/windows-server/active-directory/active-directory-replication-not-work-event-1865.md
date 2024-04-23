@@ -27,9 +27,9 @@ Event Source: NTDS KCC
 Event Category: Knowledge Consistency Checker  
 Event ID: 1865  
 Date: <date>  
-Time: <time>  
+Time: \<time\>  
 User: NT AUTHORITY\ANONYMOUS LOGON  
-Computer: <DC Name>  
+Computer: \<DC Name\>  
 Description:  
 The Knowledge Consistency Checker (KCC) was unable to form a complete spanning tree network topology. As a result, the following list of sites cannot be reached from the local site.
 >
