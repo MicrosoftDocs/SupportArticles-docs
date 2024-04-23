@@ -138,4 +138,4 @@ If the issue involves a direct RDP connection to the remote computer, check the 
 
 If you're using a larger-scale deployment of RD Session Host servers, check the status of the service on the RD Session Host servers. If the service isn't running, start it.
 
-If you're running versions of Windows Server that are older than Windows Server 2016, you might encounter an issue in which the remote computer or RD Session Host server can't query the domain controller correctly for user information. If you suspect that you have this issue, see [Server freezes or user logon is slow when connecting to Windows Server 2012 R2 by using RDP](../performance/sbsl-issue-create-rdp-connection-to-computer.md).
+If you're running versions of Windows Server that are earlier than Windows Server 2016, you might encounter an issue in which the remote computer or RD Session Host server can't query the domain controller correctly for user information. If you suspect that you have this issue, see [Server freezes or user logon is slow when connecting to Windows Server 2012 R2 by using RDP](../performance/sbsl-issue-create-rdp-connection-to-computer.md).
