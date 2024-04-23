@@ -11,7 +11,7 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 ---
 # Description of group policy restricted groups
 
-This article provides a description of group policy restricted groups in Windows Server (All supported versions).
+This article provides a description of group policy restricted groups in Windows Server.
 
 _Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 279301
