@@ -26,7 +26,7 @@ On the Inter-Site Topology Generator (ISTG) Domain Controllers, the following ev
 Event Source: NTDS KCC  
 Event Category: Knowledge Consistency Checker  
 Event ID: 1865  
-Date: <date>  
+Date: \<date\>  
 Time: \<time\>  
 User: NT AUTHORITY\ANONYMOUS LOGON  
 Computer: \<DC Name\>  
@@ -40,15 +40,15 @@ CN=\<sitename>,CN=Sites,CN=Configuration,DC=\<domain>,DC=com
 Event Source: NTDS KCC  
 Event Category: Knowledge Consistency Checker  
 Event ID: 1311  
-Date: <date>  
-Time: <time>  
+Date: \<date\>  
+Time: \<time\>  
 User: NT AUTHORITY\ANONYMOUS LOGON  
-Computer: <DC Name>  
+Computer: \<DC Name\>  
 Description:  
 The Knowledge Consistency Checker (KCC) has detected problems with the following directory partition.
 >
 > Directory partition:  
-CN=Configuration,DC=\<domain>,DC=com
+CN=Configuration,DC=\<domain\>,DC=com
 
 ## Cause
 
