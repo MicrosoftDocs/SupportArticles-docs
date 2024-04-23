@@ -31,7 +31,7 @@ This NDR is generated if a user in your organization sends mail to an email addr
 
 **How do I fix this?**
 
-Only an email admin in your organization can fix this issue by modifying the tenant allow/block list.
+An email admin in your organization can fix this issue by modifying the tenant allow/block list.
 
 ## 550 5.7.705
 
@@ -51,7 +51,7 @@ Any of the following scenarios can cause spam or bulk mail to pass through your 
 
 **How do I fix this?**
 
-Only an email admin in your organization can fix this issue by using the following information to protect your organization from threats:
+An email admin in your organization can fix this issue by using the following information to protect your organization from threats:
 
 - [Responding to a compromised email account](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account)
 
@@ -73,7 +73,7 @@ This NDR is generated if you send an email message from an IP address that has a
 
 **How do I fix this?**
 
-Only an email admin in your organization can fix this issue. If you're an email admin, and you receive this error during a trial subscription, contact Microsoft Support to request an IP address exception until you assign Exchange Online licenses.
+If you're an email admin, and you receive this error during a trial subscription, contact Microsoft Support to request an IP address exception until you assign Exchange Online licenses.
 
 ## 550 5.7.750
 
@@ -87,7 +87,7 @@ A less common cause is having one or more incorrectly configured connectors.
 
 **How do I fix this?**
 
-Only an email admin in your organization can fix this issue by following these recommendations:
+An email admin in your organization can fix this issue by following these recommendations:
 
 - [Add and validate all domains in Microsoft 365](/microsoft-365/admin/setup/add-domain) that you use to send email messages. This is the most common solution.
 
