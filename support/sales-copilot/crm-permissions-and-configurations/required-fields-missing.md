@@ -1,7 +1,7 @@
 ---
 title: Required fields missing error
 description: Resolve the required fields missing error in the Microsoft Copilot for Sales panel in Outlook.
-ms.date: 04/22/2024
+ms.date: 04/23/2024
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
@@ -25,7 +25,11 @@ This article helps you troubleshoot and resolve the required fields missing erro
 
 ## Symptoms
 
-When a user tries to create a contact or another record from the Copilot for Sales pane in Outlook, the "Required fields are missing" error is displayed.
+When a user tries to create a contact or another record from the Copilot for Sales pane in Outlook, the following error message is displayed with the error code `SFRequiredFieldMissing`:
+
+> Required fields are missing
+
+:::image type="content" source="media/required-field-missing/required-field-missing.png" alt-text="Screenshot that shows the error that occurs when required fields are missing.":::
 
 ## Cause
 

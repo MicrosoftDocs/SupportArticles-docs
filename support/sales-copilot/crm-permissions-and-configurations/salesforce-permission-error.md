@@ -1,15 +1,15 @@
 ---
-title: Salesforce permission error
-description: Resolves the errors displayed in the record type cards in the Microsoft Copilot for Sales panel in Outlook.
-ms.date: 04/22/2024
+title: Salesforce CRM users can't view, edit, or save data in Copilot for Sales
+description: Resolves an issue where users are unable to view, edit, or save data in Microsoft Copilot for Sales.
+ms.date: 04/23/2024
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 
-# Salesforce permission error
+# Salesforce CRM users can't view, edit, or save data in Copilot for Sales
 
-This article helps you troubleshoot and resolve the errors displayed in the record type cards in the Microsoft Copilot for Sales panel in Outlook. 
+This article helps you troubleshoot and resolve an issue where users can't view, edit, or save data in Microsoft Copilot for Sales.
 
 ## Who is affected?
 
@@ -20,15 +20,21 @@ This article helps you troubleshoot and resolve the errors displayed in the reco
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce      |
-|**Users**     | Users who do not have permissions to view fields added in Copilot for Sales forms cannot save, edit, or view the form  |
+|**Users**     | Users who don't have permissions to view fields added in Copilot for Sales forms cannot save, edit, or view the form  |
 
 ## Symptoms
 
-When a user opens the Copilot for Sales pane, the error messages are displayed in the record type cards.
+When a user opens Copilot for Sales in Outlook, the following error message is displayed with the error code as either `SFTypeNotSupported` or `SFInvalidField`:
+
+> Something went wrong
+
+:::image type="content" source="media/salesforce-permission-error/sf-perm-error.png" alt-text="Screenshot that shows the error that occurs when users don't have permissions in CRM for the objects to view, create, or edit them.":::
 
 ## Cause
 
-User does not have permissions for the objects to view, create, or edit them in Copilot for Sales. At least read permissions are required for the objects to view them in Copilot for Sales. For example, if a user does not have read permissions for the Contact entity, contacts are not displayed in Copilot for Sales.
+User doesn't have permissions in Salesforce CRM for the objects to view, create, or edit them. As a result, Copilot for Sales can't reference that object as expected in the configuration.
+
+At least read permissions are required for the objects to display them in Copilot for Sales. For example, if a user does not have read permissions for the Contact entity, contacts are not displayed in Copilot for Sales.
 
 ## Resolution
 
