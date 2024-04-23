@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, v-tappelgate
+ms.reviewer: hesham.elkouha@microsoft.com, kaushika, v-tappelgate
 ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # Troubleshooting access denied and user not authorized issues in Microsoft Remote Desktop Services
@@ -29,7 +29,7 @@ The most common "access denied" messages, and the most likely causes or circumst
 
 - **Access is denied.** This error usually indicates that the user who is trying to connect doesn't have the necessary permission to access the remote server.
 - **The connection was denied because the user account is not authorized for remote login.** This error suggests that the user's account doesn't have the correct user access rights to establish an RDP connection to the target server.
-- **To sign in remotely, you need the right to sign in through Remote Desktop Services.** This error is usually related to Remote Desktop Services (connecting to the RDS farm), not a standalone RDP connection.
+- **To sign in remotely, you need the right to sign in through Remote Desktop Services.** This error is usually related to Remote Desktop Services (connecting to an RDS farm), not a standalone RDP connection.
 - **The requested session access is denied** or **Account restriction is preventing this user from signing in.** This error usually means that restrictions such as Credential Guard are preventing access.
 
 ## Troubleshooting checklist
