@@ -25,7 +25,7 @@
           href: crm-permissions-and-configurations/required-fields-missing.md
         - name: Salesforce CRM users can't see data in Copilot for Sales
           href: crm-permissions-and-configurations/no-column-error.md
-        - name: Salesforce permission error
+        - name: Salesforce CRM users can't view, edit, or save data in Copilot for Sales
           href: crm-permissions-and-configurations/salesforce-permission-error.md
     - name: Outlook side panel
       items:
