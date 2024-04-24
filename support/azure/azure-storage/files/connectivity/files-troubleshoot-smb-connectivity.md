@@ -199,11 +199,11 @@ You can use either of the following steps to work around the problem:
 
 - Put double quotation marks around the key to work around this problem--unless the forward slash is the first character. If it is, either use the interactive mode and enter your password separately or regenerate your keys to get a key that doesn't start with a forward slash.
 
-### <a id=newpsdrive></a>New-PSDrive command fails with "the network resource type is not correct"
+### <a id="newpsdrive"></a>New-PSDrive command fails with "the network resource type is not correct" error
 
 #### Cause
 
-You might see this error message if the file share isn't reachable, for example if [port 445 is blocked](#cause-1-port-445-is-blocked) or if there's a DNS resolution issue.
+You might see this error message if the file share isn't accessible. For example, [port 445 is blocked](#cause-1-port-445-is-blocked) or there's a DNS resolution issue.
 
 #### Solution
 
