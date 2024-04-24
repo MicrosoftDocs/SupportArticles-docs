@@ -21,7 +21,7 @@ Test and Enable failed because the associated Exchange mailbox is not enabled fo
 1. Verify that the mailbox has an Exchange online license:
 
    1. Sign in to the Microsoft 365 portal (https://portal.office.com) as an admin.
-   2. Click **users and groups**, and then click **active users**.
+   2. Click **Users and groups**, and then click **Active users**.
    3. Click **Filter** (:::image type="icon" source="media/error-code-8005e274/filter-icon.png":::), and then in the drop-down box, click **Unlicensed users**.
 
       > [!NOTE]
