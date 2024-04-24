@@ -4,6 +4,7 @@ description: Provides a solution to an issue where you're unable to resize a Mas
 ms.service: virtual-machines
 ms.date: 04/17/2024
 ms.reviewer: brfett, v-weizhu
+ms.custom: sap:Assistance with resizing a disk
 ---
 # Unable to resize MBR partition for a data disk larger than 2 TB in Linux virtual machine
 
