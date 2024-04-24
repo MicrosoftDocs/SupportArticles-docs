@@ -55,8 +55,6 @@ landingContent:
             url: m365-access/m365-only-view-data.md
           - text: "Microsoft 365 access has been enabled, but users get a permission error"
             url: m365-access/m365-permission-error.md
-          - text: "This page uses data from related tables that you do not have access to"
-            url: m365-access/m365-related-tables-no-access.md
           - text: "Card from shared link is minimal and doesn't include Details button"
             url: m365-access/m365-shared-card-no-details.md
   # Card
