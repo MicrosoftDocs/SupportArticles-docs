@@ -22,7 +22,7 @@ Test and Enable failed because the associated Exchange mailbox is not enabled fo
 
    1. Sign in to the Microsoft 365 portal (https://portal.office.com) as an admin.
    2. Click **Users and groups**, and then click **Active users**.
-   3. Click **Filter** (:::image type="icon" source="media/error-code-8005e274/filter-icon.png":::), and then in the drop-down box, click **Unlicensed users**.
+   3. Click **Filter** (:::image type="icon" source="media/error-code-8005e274/filter-icon.svg":::), and then in the drop-down box, click **Unlicensed users**.
 
       > [!NOTE]
       > To assign a license to a user, double-click the user. On the "Assign licenses" page, click to select the check boxes next to the items that you want to assign, and then click save.
