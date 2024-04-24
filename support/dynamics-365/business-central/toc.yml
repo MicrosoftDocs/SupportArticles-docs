@@ -2,40 +2,40 @@
   href: welcome-business-central.yml
   items:
     - name: Client
-        items:
-          - name: User personalization can't be started
-            href: client/client-user-personalization.md
-          - name: Profile configuration can't be started
-            href: client/client-profile-configuration.md
-          - name: Client returns wrong clienttype
-            href: client/client-returns-wrong-clienttype.md
-          - name: Icon font not loaded
-            href: client/client-icon-font-not-loaded.md
+      items:
+        - name: User personalization can't be started
+          href: client/client-user-personalization.md
+        - name: Profile configuration can't be started
+          href: client/client-profile-configuration.md
+        - name: Client returns wrong clienttype
+          href: client/client-returns-wrong-clienttype.md
+        - name: Icon font not loaded
+          href: client/client-icon-font-not-loaded.md
     - name: Integration
-        items:
-          - name: '"You shared a link in Teams, but users get a message that they can only view data"'
-            href: m365-access/m365-only-view-data.md
-          - name: '"Microsoft 365 access has been enabled, but users get a permission error"'
-            href: m365-access/m365-permission-error.md
-          - name: '"Card from shared link is minimal and doesn''t include Details button"'
-            href: m365-access/m365-shared-card-no-details.md
+      items:
+        - name: '"You shared a link in Teams, but users get a message that they can only view data"'
+          href: m365-access/m365-only-view-data.md
+        - name: '"Microsoft 365 access has been enabled, but users get a permission error"'
+          href: m365-access/m365-permission-error.md
+        - name: '"Card from shared link is minimal and doesn''t include Details button"'
+          href: m365-access/m365-shared-card-no-details.md
     - name: Migration
-        items:
-          - name: '"Activity timed out"'
-            href: cloud-migration/migration-activity-timeout.md
-          - name: '"Can''t connect to SQL database"'
-            href: cloud-migration/migration-cannot-connect.md
-          - name: '"The EXECUTE (or SELECT) permission was denied on the object"'
-            href: cloud-migration/migration-execute-permission.md
-          - name: '"Failed to enable your replication"'
-            href: cloud-migration/migration-general-error.md
-          - name: '"Invalid database connection string provided"'
-            href: cloud-migration/migration-invalid-connection-string.md
-          - name: Permission issues in Business Central cloud migration
-            href: cloud-migration/migration-permission-issues.md
-          - name: Data replication issues in cloud migration
-            href: cloud-migration/migration-data-replication.md
-          - name: Data replication issues for large tables in cloud migration
-            href: cloud-migration/migration-data-replication-large-tables.md
+      items:
+        - name: '"Activity timed out"'
+          href: cloud-migration/migration-activity-timeout.md
+        - name: '"Can''t connect to SQL database"'
+          href: cloud-migration/migration-cannot-connect.md
+        - name: '"The EXECUTE (or SELECT) permission was denied on the object"'
+          href: cloud-migration/migration-execute-permission.md
+        - name: '"Failed to enable your replication"'
+          href: cloud-migration/migration-general-error.md
+        - name: '"Invalid database connection string provided"'
+          href: cloud-migration/migration-invalid-connection-string.md
+        - name: Permission issues in Business Central cloud migration
+          href: cloud-migration/migration-permission-issues.md
+        - name: Data replication issues in cloud migration
+          href: cloud-migration/migration-data-replication.md
+        - name: Data replication issues for large tables in cloud migration
+          href: cloud-migration/migration-data-replication-large-tables.md
     
     
