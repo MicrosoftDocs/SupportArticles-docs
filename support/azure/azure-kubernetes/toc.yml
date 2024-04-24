@@ -283,6 +283,8 @@
   items:
   - name: Troubleshoot Azure Policy Add-on for AKS
     items:
+    - name: AKS upgrade fails when using an Azure custom policy
+      href: extensions/custom-policy-prevents-aks-upgrade.md
     - name: Azure policy failure alert shows an empty list of affected resources
       href: extensions/policy-failure-alert-show-empty-list-of-affected-resources.md
     - name: Azure Policy fails to exclude privileged containers from AKS
@@ -295,6 +297,8 @@
       href: extensions/error-in-policy-assign-main-file-terraform.md
     - name: Azure policy reports 'ConstraintNotProcessed' for container
       href: extensions/error-azure-policy-constraintnotprocessed.md
+    - name: Retain privileged mode while adding capabilities
+      href: extensions/retain-privileged-mode-add-capabilities.md
   - name: AKS Cost Analysis add-on issues
     href: extensions/aks-cost-analysis-add-on-issues.md
   - name: Can't pull images from container registry to cluster
