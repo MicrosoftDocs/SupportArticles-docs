@@ -1,7 +1,7 @@
 ---
 title: Support for Linux and open-source technology in Azure
 description: Describes support for Linux images in Microsoft Azure.
-ms.date: 04/15/2024
+ms.date: 04/24/2024
 ms.reviewer: divargas, hokamath, genli, v-leedennis, v-weizhu
 author: patcatun
 ms.author: patcatun
