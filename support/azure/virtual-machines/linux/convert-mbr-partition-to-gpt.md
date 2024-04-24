@@ -2,7 +2,7 @@
 title: Failed to resize MBR partitions for a data disk larger than 2 TB
 description: Provides a solution to an issue where you're unable to resize a Master Boot Record (MBR) partition for a data disk larger than 2 TB in an Azure Linux virtual machine.
 ms.service: virtual-machines
-ms.date: 04/17/2024
+ms.date: 04/24/2024
 ms.reviewer: brfett, v-weizhu
 ms.custom: sap:Assistance with resizing a disk
 ---
@@ -70,31 +70,33 @@ the next reboot or after you run partprobe(8) or kpartx(8)
 Syncing disks.
 ```
 
-\< What's the purpose of this command?>
+To verify the new size, follow these steps:
 
-```bash
-sudo partprobe /dev/sdd
-```
+1. Inform the disk of the partition table change by running the following command:
 
-Check the new size for the partition `/dev/sdd1` by running the following command:
+    ```bash
+    sudo partprobe /dev/sdd
+    ```
 
-```bash
-sudo lsblk -o NAME,TYPE,FSTYPE,LABEL,SIZE,RO,MOUNTPOINT
-```
-The command output shows the partition was resized only with 2 TB. Here's a command output example:
+2. Check the new size for the partition `/dev/sdd1` by running the following command:
 
-```output
-NAME              TYPE FSTYPE      LABEL  SIZE RO MOUNTPOINT
-sda               disk                     32G  0
-├─sda1            part vfat               500M  0 /boot/efi
-├─sda2            part xfs                500M  0 /boot
-├─sda3            part xfs                 31G  0 /
-└─sda4            part                      2M  0
-sdb               disk                    256G  0
-└─sdb1            part ext4               256G  0 /mnt
-sdd               disk                      8T  0
-└─sdd1            part ext4                 2T  0 /appext4
-```
+    ```bash
+    sudo lsblk -o NAME,TYPE,FSTYPE,LABEL,SIZE,RO,MOUNTPOINT
+    ```
+    The command output shows the partition was resized only with 2 TB. Here's a command output example:
+    
+    ```output
+    NAME              TYPE FSTYPE      LABEL  SIZE RO MOUNTPOINT
+    sda               disk                     32G  0
+    ├─sda1            part vfat               500M  0 /boot/efi
+    ├─sda2            part xfs                500M  0 /boot
+    ├─sda3            part xfs                 31G  0 /
+    └─sda4            part                      2M  0
+    sdb               disk                    256G  0
+    └─sdb1            part ext4               256G  0 /mnt
+    sdd               disk                      8T  0
+    └─sdd1            part ext4                 2T  0 /appext4
+    ```
 
 ## Cause
 
@@ -369,7 +371,7 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
     └─sdd1            part ext4                 8T  0 /appext4
     sde               disk                      1T  0
     ```
-11. What's the purpose of this command:
+11. Display the size and space usage of the file system in a human-readable format by running the this command:
   
     ```bash
     sudo df -h /appext4
@@ -379,7 +381,7 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
     Filesystem      Size  Used Avail Use% Mounted on
     /dev/sdd1       7.9T  1.5G  7.6T   1% /appext4
     ```
-12. What's the purpose of this command:
+12. Display detailed information of non-hidden files and directories by running this command:
 
     ```bash
     sudo ls -l /appext4
