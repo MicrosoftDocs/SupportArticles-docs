@@ -139,7 +139,24 @@ For more information, see the [LmCompatibilityLevel](/previous-versions/windows/
 
 Revert the `LmCompatibilityLevel` value to the default value of 3 in the following registry subkey:
 
-`HKLM\SYSTEM\CurrentControlSet\Control\Lsa`
+`HKLM\SYSTEM\CurrentControlSet\Control\Lsa`  
+
+### <a id="error53-67-87"></a> Failed with Error Code: 0x800704b3 the network path was either typed incorrectly, does not exist, or the network provider is not currently available.
+
+#### Cause:
+This error can occur if any core windows network related services are disabled as any services that explicitly depends on it will fail to start.   
+
+#### Solutions
+Check if any of the below mentioned services are in **Stopped** state in the Azure Windows VM and if you find any, please start it and retry to mount the Azure file share:  
+
+- Network Connections  
+- Network List Service  
+- Network Location Awareness  
+- Network Store Interface Service  
+- DHCP Client  
+- TCP/IP NetBIOS Helper  
+- Workstation
+  
 
 ### <a id="cannotaccess"></a>Application or service can't access a mounted Azure Files drive
 
