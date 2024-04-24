@@ -248,6 +248,9 @@ items:
       - name: Power Automate
         tocHref: /troubleshoot/power-platform/power-automate/
         topicHref: /troubleshoot/power-platform/power-automate/welcome-power-automate
+      - name: Power Pages
+        tocHref: /troubleshoot/power-platform/power-pages/
+        topicHref: /troubleshoot/power-platform/power-pages/welcome-power-pages
 
     - name: Microsoft Dynamics
       tocHref: /troubleshoot/dynamics/
