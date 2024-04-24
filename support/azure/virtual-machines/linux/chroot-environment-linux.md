@@ -11,11 +11,13 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
-ms.date: 04/23/2023
+ms.date: 04/15/2024
 ms.author: genli
 ---
 
 # Chroot environment in a Linux rescue VM
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article describes how to troubleshoot the chroot environment in the rescue virtual machine (VM) in Linux.
 

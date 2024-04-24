@@ -144,6 +144,9 @@ items:
       - name: Blob Storage
         tocHref: /troubleshoot/azure/azure-storage/blobs
         topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
+      - name: Data API builder
+        tocHref: /troubleshoot/azure/data-api-builder/
+        topicHref: /troubleshoot/azure/data-api-builder/index.yml
       - name: Files Storage
         tocHref: /troubleshoot/azure/azure-storage/files
         topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
@@ -233,6 +236,9 @@ items:
       tocHref: /troubleshoot/power-platform/
       topicHref: /troubleshoot/power-platform/
       items:
+      - name: Microsoft Dataverse
+        tocHref: /troubleshoot/power-platform/dataverse/
+        topicHref: /troubleshoot/power-platform/dataverse/welcome-dataverse
       - name: AI Builder
         tocHref: /troubleshoot/power-platform/ai-builder/
         topicHref: /troubleshoot/power-platform/ai-builder/welcome-ai-builder

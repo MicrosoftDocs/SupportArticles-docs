@@ -3,7 +3,7 @@ metadata:
   title: Azure Application Insights availability monitoring common issues FAQ
   description: Review a list of frequently asked questions (FAQ) about common issues that occur when you use Application Insights availability monitoring.
   ms.topic: faq
-  ms.date: 01/11/2024
+  ms.date: 04/16/2024
   ms.reviewer: v-leedennis, toddfous, v-weizhu
   ms.service: azure-monitor
   ms.custom: sap:Availability Tests
@@ -83,6 +83,10 @@ sections:
         answer: |
           It is an expected behavior. Depending on how close the deadline for the scheduled execution of the next iteration is, availability tests may not be stopped in time before they perform the next iteration. In the same way, when you create, disable, or manipulate new tests, there is a delay.
 
+      - question: |
+          How can I allow other users to view my availability test results?
+        answer: |
+          To enable other users to view your availability test results in Application Insights, you must grant them at least read access to the resource group containing your Application Insights resources. Availability tests are separate Azure resources, identified as [Microsoft.Insights/webtests](/azure/templates/microsoft.insights/webtests?pivots=deployment-language-arm-template). They are created within the same resource group as your Application Insights resources. For detailed steps on how to control access, see [Control access in the resource group](/azure/azure-monitor/app/resources-roles-access-control#access).
 
 additionalContent: |
 

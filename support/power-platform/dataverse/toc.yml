@@ -1,0 +1,73 @@
+- name: Microsoft Dataverse Troubleshooting
+  href: welcome-dataverse.yml
+  items:
+    - name: Bulk deleting data
+      items:
+        - name: Bulk operation errors
+          href: bulk-deleting-data/bulk-operation-errors.md
+    - name: Dataverse Web API and SDK
+      items:
+        - name: Required fields are missing in Dataverse records
+          href: dataverse-web-api-and-sdk/dataverse-records-missing-required-fields.md
+        - name: Web API client errors
+          href: dataverse-web-api-and-sdk/web-api-client-errors.md
+    - name: Plug-in execution
+      items:
+        - name: Dataverse plug-ins
+          href: plug-in-execution/dataverse-plug-ins-errors.md
+    - name: User permissions
+      items:
+        - name: Clean up inherited access
+          href: user-permissions/cleanup-inherited-access.md
+        - name: Dataverse client errors
+          href: user-permissions/client-errors.md
+    - name: Working with solutions
+      items:
+        - name: Active unmanaged layer after importing a managed solution
+          href: working-with-solutions/unmanaged-active-layer-created-after-solution-import.md
+        - name: '"An entitykey with the selected attributes already exists" error'
+          href: working-with-solutions/entitykey-selected-attributes-already-exists.md
+        - name: Can't import solutions or publish changes
+          href: working-with-solutions/cannot-import-solutions-publish-changes.md
+        - name: Can't install managed solution previously deployed as unmanaged
+          href: working-with-solutions/failure-converting-to-managed-solution.md          
+        - name: Changes not effective after solution import
+          href: working-with-solutions/changes-not-effective-solution-import.md
+        - name: Concurrent solution operation failures
+          href: working-with-solutions/concurrent-solution-operation-failures.md
+        - name: Duplicate security roles after solution import
+          href: working-with-solutions/duplicate-security-roles.md
+        - name: Data source references not updated after solution import
+          href: working-with-solutions/dataverse-environment-variables.md
+        - name: '"Failed deleting solution" error due to circular dependencies between solutions'
+          href: working-with-solutions/circular-dependencies-between-solutions.md
+        - name: Form doesn't appear in target environment after import
+          href: working-with-solutions/form-not-appear-after-import.md
+        - name: '"Full formXml is expected to create a form" error'
+          href: working-with-solutions/full-formxml-expected-to-create-form-error.md
+        - name: Failure when multiple publishers have shared components
+          href: working-with-solutions/multiple-publisher-shared-component-failure.md
+        - name: Label text doesn't display in other languages
+          href: working-with-solutions/label-text-not-displayed.md
+        - name: Maximum row size exceeds the allowed maximum
+          href: working-with-solutions/maximum-row-size-exceeds.md
+        - name: Missing dependencies during solution import
+          href: working-with-solutions/missing-dependency-on-solution-import.md
+        - name: Newly added components don't appear in the app
+          href: working-with-solutions/newly-added-components-dont-appear.md
+        - name: '"PrimaryName attribute not found for entity" error'
+          href: working-with-solutions/primaryname-attribute-not-found.md
+        - name: Solution import or app installation fails due to missing privileges
+          href: working-with-solutions/install-failure-priviledge-not-assigned.md
+        - name: Solution checker enforcement in Managed Environments blocks or warns on import
+          href: working-with-solutions/solution-checker-enforcement-import-issues.md
+        - name: '"Solution cannot be deleted due to dependencies" error'
+          href: working-with-solutions/solution-cannot-be-deleted-due-to-dependencies.md
+        - name: Solution upgrade fails due to a pending upgrade
+          href: working-with-solutions/upgrade-fails-pending-upgrade.md
+        - name: '"You cannot delete this form because it is the only fallback form" error'
+          href: working-with-solutions/you-cannot-delete-this-form-only-fallback.md
+    - name: Support resources
+      items:
+        - name: Microsoft Dataverse forum
+          href: https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps

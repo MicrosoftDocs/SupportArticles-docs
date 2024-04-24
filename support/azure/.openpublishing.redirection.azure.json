@@ -5256,6 +5256,21 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "cosmos-db/tools-connectors/data-api-builder/index.md",
+        "redirect_url": "/troubleshoot/azure/data-api-builder/index",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "cosmos-db/tools-connectors/data-api-builder/installation.md",
+        "redirect_url": "/troubleshoot/azure/data-api-builder/installation",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "cosmos-db/tools-connectors/data-api-builder/usage.md",
+        "redirect_url": "/troubleshoot/azure/data-api-builder/usage",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "general/associate-custom-domain-secure-communication.md",
         "redirect_url": "https://support.microsoft.com/help/10065",
         "redirect_document_id": false
@@ -5418,6 +5433,16 @@
       {
         "source_path": "synapse-analytics-spark/perf/index.md",
         "redirect_url": "/troubleshoot/azure/synapse-analytics-spark/welcome-synapse-analytics-spark",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "general/cannot-create-vm-ea.md",
+        "redirect_url": "/azure/cost-management-billing/troubleshoot-billing/cannot-create-vm",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "general/cannot-sign-up-subscription.md",
+        "redirect_url": "/azure/cost-management-billing/troubleshoot-subscription/cannot-sign-up-subscription",
         "redirect_document_id": false
       }
   ]

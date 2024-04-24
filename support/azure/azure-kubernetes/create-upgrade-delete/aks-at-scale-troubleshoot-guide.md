@@ -1,8 +1,8 @@
 ---
 title: Common issues when you run or scale large AKS clusters FAQ
 description: Review common issues when you run or scale large AKS clusters. The article includes troubleshooting tips for resolving these issues.
-ms.date: 10/21/2022
-ms.reviewer: paahluwalia, v-leedennis
+ms.date: 04/23/2024
+ms.reviewer: paahluwalia, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 keywords:
@@ -50,9 +50,9 @@ For clusters that run at a relatively large scale (more than 500 nodes), we reco
 
 If you're not using Managed NAT, see [Troubleshoot source network address translation (SNAT) exhaustion and connection timeouts][Troubleshoot SNAT exhaustion and connection timeouts] to understand and resolve SNAT port exhaustion issues.
 
-## I can't scale beyond 1,000 nodes by using the portal
+## I can't scale up to 5,000 nodes using the Azure portal
 
-Azure portal hasn't yet updated the experience to support the new 5,000-node limit. You can scale up your clusters by using the Azure CLI up to a maximum of 5,000 nodes if the node limit quota for the cluster was increased. Follow these steps:
+Use the Azure CLI to scale up to a maximum of 5,000 nodes by following these steps:
 
 1. Create a minimum number of node pools in the cluster (because the maximum node pool node limit is 1,000) by running the following command:
 
