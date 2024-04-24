@@ -1,7 +1,7 @@
 ---
 title: Advanced Secure Sockets Layer data capture
-description: Describes advanced Secure Sockets Layer data capture.
-ms.date: 04/23/2024
+description: Describes steps for advanced Secure Sockets Layer data capture.
+ms.date: 04/24/2024
 ms.reviewer: prmadhes, jopilov, v-sidong
 ms.custom: sap:Connection issues
 ---
@@ -29,7 +29,7 @@ Run SQLCHECK on client machines, server machines, and any other related systems,
 1. Make sure that `BIDTrace=yes` is set.
 1. Make sure that `BIDProviderList` conforms to the driver your application is using.
 
-   The built-in System.Data.SqlClient .NET drivers are autoenabled. If these aren't the drivers your application is using, comment this line using the `#` character and uncomment one of the others, such as the ODBC section or the OLEDB section. If you aren't sure, ask the DBA or application developer, or use the fourth `BIDProviderList`, which encompasses all drivers currently in use.
+   The built-in System.Data.SqlClient .NET drivers are autoenabled. If these aren't the drivers your application is using, comment this line using the `#` character and uncomment one of the others, such as the ODBC section or the OLEDB section. If you aren't sure, ask the DBA or application developer, or use the fourth `BIDProviderList`, which contains all drivers currently in use.
 
 1. Save the file.
 
@@ -41,7 +41,7 @@ If you're tracing a local connection, make sure the application is using TCP/IP 
 
 ## Configure the authentication traces
 
-The Auth section is autoconfigured with `Auth=yes` and a number of other settings.
+The Auth section is autoconfigured with `Auth=yes` and many other settings.
 
 You might also want to set `FlushTickets=yes` in the MISC section. This will flush Kerberos tickets for all users and services on the machine.
 
@@ -50,8 +50,18 @@ You might also want to set `FlushTickets=yes` in the MISC section. This will flu
 Once all the changes to the *SQLTrace.ini* file have been saved, BID Traces must be enabled before tracing can begin.
 
 1. Open PowerShell as an administrator.
-1. Change the directory to the folder containing *SQLTrace.ps1*. For example, `CD \MSDATA`.
-1. Run `.\SQLTrace.ps1 -setup` to initialize the BID Tracing registry.
+1. Change the directory to the folder containing *SQLTrace.ps1*.
+
+   ```powershell
+   CD C:\MSDATA
+   ```
+
+1. Initialize the BID Tracing registry.
+
+   ```powershell
+   .\SQLTrace.ps1 -setup
+   ```
+
 1. Restart the service or application you wish to trace or the application won't be traced.
 
 ## Collect the trace data
@@ -60,10 +70,23 @@ Once all the changes to the *SQLTrace.ini* file have been saved, BID Traces must
 > Make sure the previous steps have been completed on all machines before continuing.
 
 1. Open PowerShell on all machines being traced as an administrator. Complete the starting steps on all machines before reproducing the issue.
-1. Change the directory to the folder containing *SQLTrace.ps1*. For example, `CD \MSDATA`.
-1. Run `.\SQLTrace.ps1 -start`.
+1. Change the directory to the folder containing *SQLTrace.ps1*.
+
+   ```powershell
+   CD C:\MSDATA
+   ```
+
+1. Start the trace collection.
+
+   ```powershell
+   .\SQLTrace.ps1 -start
+   ```
 1. Reproduce the issue When the command prompt appears.
-1. Run `.\SQLTrace.ps1 -stop` to stop the trace.
+1. Stop the trace.
+
+   ```powershell
+   .\SQLTrace.ps1 -stop
+   ```
 
 An output folder is generated in the current directory and you can use it for further analysis.
 
