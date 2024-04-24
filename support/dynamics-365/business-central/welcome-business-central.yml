@@ -44,9 +44,7 @@ landingContent:
             url: client/client-profile-configuration.md
           - text: Client returns wrong `ClientType`
             url: client/client-returns-wrong-clienttype.md
-          - text: "Device date is causing connectivity issues"
-            url: client/client-device-date-connectivity-issues.md
-          - text: "Icon font not loaded"
+          - text: Icon font not loaded
             url: client/client-icon-font-not-loaded.md
   # Card
   - title: Microsoft 365 access

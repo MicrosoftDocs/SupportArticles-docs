@@ -9,9 +9,7 @@
             href: client/client-profile-configuration.md
           - name: Client returns wrong clienttype
             href: client/client-returns-wrong-clienttype.md
-          - name: '"Device date is causing connectivity issues"'
-            href: client/client-device-date-connectivity-issues.md
-          - name: '"Icon font not loaded"'
+          - name: Icon font not loaded
             href: client/client-icon-font-not-loaded.md
     - name: Integration
         items:
@@ -19,8 +17,6 @@
             href: m365-access/m365-only-view-data.md
           - name: '"Microsoft 365 access has been enabled, but users get a permission error"'
             href: m365-access/m365-permission-error.md
-          - name: '"This page uses data from related tables that you do not have access to"'
-            href: m365-access/m365-related-tables-no-access.md
           - name: '"Card from shared link is minimal and doesn''t include Details button"'
             href: m365-access/m365-shared-card-no-details.md
     - name: Migration
