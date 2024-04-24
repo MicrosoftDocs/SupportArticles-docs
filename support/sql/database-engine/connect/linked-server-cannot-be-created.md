@@ -1,6 +1,6 @@
 ---
-title: Problem connecting higher to lower version of SQL server using SQL Server linked server functionality
-description: This article provides a resolution for the challenge of connecting higher to lower version of SQL server using SQL Server linked server functionality.
+title: Problem connecting higher to lower version of SQL Server using SQL Server linked server functionality
+description: This article provides a resolution for the challenge of connecting higher to lower version of SQL Server using SQL Server Linked Server functionality.
 ms.date: 04/23/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -8,9 +8,9 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Problem connecting higher to lower version of SQL server using SQL Server linked server functionality
+# Problem connecting higher to lower version of SQL Server using SQL Server linked server functionality
 
-This article helps you to find the solution of connectivity issue using SQL Server Linked Server functionality from a Windows Windows Server 2022 or newer to a SQL Server hosted on an older version of Windows.
+This article helps you to find the solution of connectivity issue using SQL Server Linked Server functionality from a Windows Server 2022 or newer to a SQL Server hosted on an older version of Windows.
 
 ## Symptoms
 
