@@ -5,7 +5,7 @@
       items:
         - name: '"Activity timed out"'
           href: cloud-migration/migration-activity-timeout.md
-        - name: '"Can't connect to SQL database"'
+        - name: '"Can''t connect to SQL database"'
           href: cloud-migration/migration-cannot-connect.md
         - name: '"The EXECUTE (or SELECT) permission was denied on the object"'
           href: cloud-migration/migration-execute-permission.md
