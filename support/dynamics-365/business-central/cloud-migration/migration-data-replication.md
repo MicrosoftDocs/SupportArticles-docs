@@ -11,10 +11,6 @@ ms.date: 04/18/2024
 
 This article explains how to fix errors that you might encounter when you run data replication during cloud migration.
 
-## Prerequisites
-
-You need administrator permissions in Business Central.
-
 ## Symptoms
 
 The symptom can be one of the following:
@@ -24,6 +20,9 @@ The symptom can be one of the following:
 - A database operation failed with the following error: 'Couldn't find stored procedure ' … '
 
 ## Resolution
+
+> [!NOTE]
+> You need administrator permissions in Business Central.
 
 - Make sure that the machine hosting Integration Runtime stays online all the time.
 - Shutting down the Integration Runtime host temporarily can be used to cancel an ongoing migration run, but if the host stays offline for too long, all cloud migration infrastructure might be automatically cleaned up, making resuming migrations impossible.

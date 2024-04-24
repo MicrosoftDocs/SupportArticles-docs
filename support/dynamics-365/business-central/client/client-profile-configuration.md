@@ -13,15 +13,14 @@ ms.author: solsen
 
 When there are issues preventing the profile configuration in Business Central, the user gets an error message, and isn't able to start the profile configuration. When the configuration is started, all customization records are loaded and compiled together. If one of these records causes a compilation error, then the profile configuration can't be started.
 
-## Prerequisites
-
-You need tenant administrator permissions in Business Central.
-
 ## Symptoms
 
 The user sees the following error message "Sorry, something went wrong and personalization could not be started. Please try again later, or contact your system administrator."
 
 ## Resolution
+
+> [!NOTE]
+> You need tenant administrator permissions in Business Central.
 
 As a tenant administrator, you can do the following to mitigate the issue. The steps below describe how to remove the profile configurations with errors or alternatively, exporting the profile and fix the code issues.
 

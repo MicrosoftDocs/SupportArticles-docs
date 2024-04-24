@@ -12,15 +12,14 @@ ms.date: 04/24/2024
 
 When there are issues preventing the user personalization in Business Central, the user will get an error message, and not be able to start user personalization.
 
-## Prerequisites
-
-You need tenant administrator permissions in Business Central.
-
 ## Symptoms
 
 The user sees the following error message "Sorry, something went wrong and personalization could not be started. Please try again later, or contact your system administrator."
 
 ## Resolution
+
+> [!NOTE]
+> You need tenant administrator permissions in Business Central.
 
 Do the following to mitigate the issue. 
 
