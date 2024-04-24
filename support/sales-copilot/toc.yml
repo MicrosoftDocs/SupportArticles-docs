@@ -1,5 +1,6 @@
 - name: Microsoft Copilot for Sales
   href: welcome-sales-copilot.yml
+- name: CRM permissions and configurations
   items:
     - name: CRM permissions and configurations
       items:

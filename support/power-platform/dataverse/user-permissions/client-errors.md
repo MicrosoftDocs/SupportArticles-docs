@@ -18,7 +18,7 @@ contributors:
 ---
 # Troubleshoot Dataverse client errors
 
-This article describes common client errors you might encounter when using Microsoft Dataverse and how to avoid them. For Web API-specific client errors, see [Troubleshoot Dataverse Web API client errors](web-api-client-errors.md).
+This article describes common client errors you might encounter when using Microsoft Dataverse and how to avoid them. For Web API-specific client errors, see [Troubleshoot Dataverse Web API client errors](~/power-platform/dataverse/dataverse-web-api-and-sdk/web-api-client-errors.md).
 
 ## Error: "Principal user is missing privilege on OTC for entity"
 
