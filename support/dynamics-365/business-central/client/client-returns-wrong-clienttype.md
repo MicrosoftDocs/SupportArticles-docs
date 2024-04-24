@@ -1,15 +1,14 @@
 ---
-title: Troubleshoot client returns wrong `ClientType`
+title: Client returns wrong `ClientType`
 description: Learn how to ensure that the correct client type is returned for each client.
-ms.custom: na
-ms.date: 04/18/2024
+ms.date: 04/24/2024
 ms.reviewer: na
 ms.topic: troubleshooting
 author: SusanneWindfeldPedersen
 ms.author: solsen
 ---
 
-# Troubleshoot client returns wrong `ClientType`
+# Client returns wrong `ClientType`
 
 When you run the Business Central tablet client and the Business Central phone client simultaneously in the same browser session, you might get the same `ClientType` returned for both clients.
 

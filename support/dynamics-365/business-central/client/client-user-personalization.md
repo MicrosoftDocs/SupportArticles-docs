@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot user personalization can't be started
+title: User personalization can't be started
 description: Learn how to troubleshoot issues with user personalization.
 author: SusanneWindfeldPedersen
 ms.author: solsen
 ms.reviewer: solsen
 ms.topic: troubleshooting
-ms.date: 04/18/2024
+ms.date: 04/24/2024
 ---
 
-# Troubleshoot user personalization can't be started
+# User personalization can't be started
 
 When there are issues preventing the user personalization in Business Central, the user will get an error message, and not be able to start user personalization.
 

@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot profile configuration can't be started
+title: Profile configuration can't be started
 description: Learn how to troubleshoot issues with profile configuration.
 ms.custom: na
 ms.date: 04/18/2024
@@ -9,7 +9,7 @@ author: SusanneWindfeldPedersen
 ms.author: solsen
 ---
 
-# Troubleshoot profile configuration can't be started
+# Profile configuration can't be started
 
 When there are issues preventing the profile configuration in Business Central, the user gets an error message, and isn't able to start the profile configuration. When the configuration is started, all customization records are loaded and compiled together. If one of these records causes a compilation error, then the profile configuration can't be started.
 

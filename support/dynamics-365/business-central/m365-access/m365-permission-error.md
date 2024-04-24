@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot "Microsoft 365 access has been enabled, but users get a permission error"
+title: "Microsoft 365 access has been enabled, but users get a permission error"
 description: Troubleshooting article for Microsoft 365 permission error in Business Central.
 ms.author: mikebc
 ms.reviewer: jswymer
 ms.topic: troubleshooting 
-ms.date: 04/18/2024
+ms.date: 04/24/2024
 ---
 
-# Troubleshoot "Microsoft 365 access has been enabled, but users get a permission error"
+# "Microsoft 365 access has been enabled, but users get a permission error"
 
 This article helps you troubleshoot the error message "Microsoft 365 access has been enabled, but users get a permission error" in Business Central.
 

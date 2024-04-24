@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot "This page uses data from related tables that you do not have access to"
+title: "This page uses data from related tables that you do not have access to"
 description: Troubleshooting article for non-accessible tables in Business Central.
 ms.author: mikebc
 ms.reviewer: jswymer
 ms.topic: troubleshooting 
-ms.date: 04/18/2024
+ms.date: 04/24/2024
 ---
 
-# Troubleshoot "This page uses data from related tables that you do not have access to"
+# "This page uses data from related tables that you do not have access to"
 
 This article helps you troubleshoot the error message "This page uses data from related tables that you do not have access to" in Business Central.
 

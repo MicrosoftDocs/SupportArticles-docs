@@ -5,7 +5,7 @@
       items:
         - name: '"Activity timed out"'
           href: cloud-migration/migration-activity-timeout.md
-        - name: Troubleshoot cannot connect to SQL database
+        - name: '"Can't connect to SQL database"'
           href: cloud-migration/migration-cannot-connect.md
         - name: '"The EXECUTE (or SELECT) permission was denied on the object"'
           href: cloud-migration/migration-execute-permission.md
@@ -13,21 +13,21 @@
           href: cloud-migration/migration-general-error.md
         - name: '"Invalid database connection string provided"'
           href: cloud-migration/migration-invalid-connection-string.md
-        - name: Troubleshoot permission issues in Business Central cloud migration
+        - name: Permission issues in Business Central cloud migration
           href: cloud-migration/migration-permission-issues.md
     - name: Data replication in cloud migration
       items:
-        - name: Troubleshoot data replication issues in cloud migration
+        - name: Data replication issues in cloud migration
           href: cloud-migration/migration-data-replication.md
-        - name: Troubleshoot data replication issues for large tables in cloud migration
+        - name: Data replication issues for large tables in cloud migration
           href: cloud-migration/migration-data-replication-large-tables.md
     - name: Client
       items:
-        - name: Troubleshoot user personalization can't be started
+        - name: User personalization can't be started
           href: client/client-user-personalization.md
-        - name: Troubleshoot profile configuration can't be started
+        - name: Profile configuration can't be started
           href: client/client-profile-configuration.md
-        - name: Troubleshoot client returns wrong clienttype
+        - name: Client returns wrong clienttype
           href: client/client-returns-wrong-clienttype.md
         - name: '"Device date is causing connectivity issues"'
           href: client/client-device-date-connectivity-issues.md

@@ -1,17 +1,15 @@
 ---
-title: Troubleshoot permission issues in Business Central cloud migration
+title: Permission issues in Business Central cloud migration
 description: Troubleshooting article for permission issues in Business Central cloud migration
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.topic: troubleshooting 
-ms.date: 04/18/2024
+ms.date: 04/24/2024
 ---
 
-# Troubleshoot permission issues in Business Central cloud migration
+# Permission issues in Business Central cloud migration
 
 This article explains how to diagnose and fix problems that you might encounter when you try to set up cloud migration.
-
-## Prerequisites
 
 ## Symptoms
 

@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot "Card from shared link is minimal and doesn't include Details button"
+title: "Card from shared link is minimal and doesn't include Details button"
 description: Troubleshooting article for Microsoft 365 when sharing links to Business Central.
 ms.author: mikebc
 ms.reviewer: jswymer
 ms.topic: troubleshooting 
-ms.date: 04/18/2024
+ms.date: 04/24/2024
 ---
 
-# Troubleshoot "Card from shared link is minimal and doesn't include Details button"
+# "Card from shared link is minimal and doesn't include Details button"
 
 This article helps you troubleshoot the error message "Card from shared link is minimal and doesn't include Details button" in Business Central.
 

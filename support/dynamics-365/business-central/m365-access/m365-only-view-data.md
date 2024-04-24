@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot "You shared a link in Teams, but users get a message that they can only view data"
+title: "You shared a link in Teams, but users get a message that they can only view data"
 description: Troubleshooting article for Microsoft 365 Teams link error message in Business Central.
 ms.author: mikebc
 ms.reviewer: jswymer
 ms.topic: troubleshooting 
-ms.date: 04/18/2024
+ms.date: 04/24/2024
 ---
 
-# Troubleshoot "You shared a link in Teams, but users get a message that they can only view data"
+# "You shared a link in Teams, but users get a message that they can only view data"
 
 ## Symptoms
 

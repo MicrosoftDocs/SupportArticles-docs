@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot "Can't connect to SQL database"
+title: "Can't connect to SQL database"
 description: Troubleshooting article for connection issues to SQL database in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.topic: troubleshooting 
-ms.date: 04/18/2024
+ms.date: 04/24/2024
 ---
 
-# Troubleshoot "Can't connect to SQL Database, ErrorCode=SqlFailedToConnect"
+# "Can't connect to SQL Database, ErrorCode=SqlFailedToConnect"
 
 This article explains how to troubleshoot the **Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect** error message when you try to connect to an SQL database.
 

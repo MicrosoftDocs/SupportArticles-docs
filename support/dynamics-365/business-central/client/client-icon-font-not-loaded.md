@@ -1,14 +1,13 @@
 ---
-title: Troubleshoot "Icon font not loaded"
+title: "Icon font not loaded"
 description: Learn how to fix icon font issues on client types.
-ms.custom: na
-ms.date: 04/18/2024
+ms.date: 04/24/2024
 ms.reviewer: na
 ms.topic: troubleshooting
 author: SusanneWindfeldPedersen
 ---
 
-# Troubleshoot "Icon font not loaded"
+# "Icon font not loaded"
 
 When the icon font is missing on the Business Central web client, Business Central tablet client, or Business Central phone client, it causes issues with the user interface.
 

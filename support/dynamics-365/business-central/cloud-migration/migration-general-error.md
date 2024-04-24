@@ -1,17 +1,15 @@
 ---
-title: Troubleshoot "Failed to enable your replication"
+title: "Failed to enable your replication"
 description: Troubleshooting article for general error messages during Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.topic: troubleshooting 
-ms.date: 04/18/2024
+ms.date: 04/24/2024
 ---
 
-# Troubleshoot "Failed to enable your replication"
+# "Failed to enable your replication"
 
 This error is a general error message that's shown to the end user.
-
-## Prerequisites
 
 ## Symptom
 

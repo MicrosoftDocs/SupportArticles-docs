@@ -1,15 +1,13 @@
 ---
-title: Troubleshoot "Activity timed out"
+title: "Activity timed out"
 description: Troubleshooting article for the activity timed out error in Business Central cloud migration
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.topic: troubleshooting 
-ms.date: 04/18/2024
+ms.date: 04/24/2024
 ---
 
-# Activity timed out
-
-## Prerequisites
+# "Activity timed out"
 
 ## Symptom
 
