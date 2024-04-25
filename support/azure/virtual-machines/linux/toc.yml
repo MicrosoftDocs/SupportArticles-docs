@@ -111,7 +111,7 @@
 
 - name: Issue resizing a disk
   items:
-  - name: Unable to resize MBR partition for a data disk larger than 2 TB
+  - name: Can't resize MBR partition for a data disk larger than 2 TB
     href: convert-mbr-partition-to-gpt.md
     
 - name: Linux repositories

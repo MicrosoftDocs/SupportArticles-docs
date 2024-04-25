@@ -1,6 +1,6 @@
 ---
 title: Failed to resize MBR partitions for a data disk larger than 2 TB
-description: Provides a solution to an issue where you're unable to resize a Master Boot Record (MBR) partition for a data disk larger than 2 TB in an Azure Linux virtual machine.
+description: Provides a solution to an issue where you can't resize a Master Boot Record (MBR) partition for a data disk larger than 2 TB in an Azure Linux virtual machine.
 ms.service: virtual-machines
 ms.date: 04/25/2024
 ms.reviewer: brfett, v-weizhu
@@ -8,10 +8,10 @@ ms.custom: sap:Assistance with resizing a disk
 ---
 # Unable to resize MBR partition for a data disk larger than 2 TB in Linux virtual machine
 
-This article provides a solution to an issue where you fail to resize a Master Boot Record (MBR) partition for a data disk with a size larger than 2 TB in an Azure Linux virtual machine.
+This article provides a solution to an issue where you fail to resize a Master Boot Record (MBR) partition for a data disk larger than 2 TB in an Azure Linux virtual machine.
 
 > [!IMPORTANT]
-> This article applies to supported [Endorsed Linux distros](/azure/virtual-machines/linux/endorsed-distros).
+> This article applies to supported [endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros).
 
 ## Symptoms
 
@@ -72,18 +72,18 @@ Syncing disks.
 
 To verify the new size, follow these steps:
 
-1. Inform the operation system of the partition table change by running the following command:
+1. Inform the operating system (OS) of the partition table change by running the following command:
 
     ```bash
     sudo partprobe /dev/sdd
     ```
 
-2. Check the new size for the partition `/dev/sdd1` by running the following command:
+2. Check the new size of the partition `/dev/sdd1` by running the following command:
 
     ```bash
     sudo lsblk -o NAME,TYPE,FSTYPE,LABEL,SIZE,RO,MOUNTPOINT
     ```
-    The command output shows the partition was resized only with 2 TB. Here's a command output example:
+    The command output shows the partition was resized only to 2 TB. Here's a command output example:
     
     ```output
     NAME              TYPE FSTYPE      LABEL  SIZE RO MOUNTPOINT
@@ -100,30 +100,30 @@ To verify the new size, follow these steps:
 
 ## Cause
 
-The MBR that contains the partition boundaries and partition (file system) type information has an addressing limit of 2^32 sectors. The 32-bit address limitation within the MBR partition data structures limits the size of the disk and partition.
+The MBR, which contains the partition boundaries and partition (file system) type information, has an addressing limit of 2^32 sectors. The 32-bit address limitation within the MBR partition data structure limits the size of the disk and partition.
 
-For 512-byte sectors, the address limitation for an MBR partition is 2 TB. For newer 4Kn devices, it would be 2^32 x 4,096 bytes per logical sector, or 16 TB.
+For 512-byte sectors, the address limitation for an MBR partition is 2 TB. For newer 4Kn devices, each logical sector is 2^32 x 4,096 bytes, or 16 TB.
 
 ## Solution
 
-Because GPT partition tables don't have the sector address limit, we recommend using GPT for a data disk with 2 TB or larger in size. 
+Because the GUID Partition Table (GPT) has no sector address limitations, we recommend using GPT for a data disk of 2 TB or larger. 
 
-Here are two methods to use GPT for the data disk:
+Here are two methods to use GPT on data disks:
 
 - [Change the partition type from MBR to GPT](#change-the-partition-type-from-mbr-to-gpt).
 
-- Take a full backup of the data on the disk and recreate GPT partition table.
+- Take a full backup of the data on the disk and re-create the GPT.
 
 ### Change the partition type from MBR to GPT
 
 > [!IMPORTANT] 
 > - Take a [snapshot](/azure/virtual-machines/snapshot-copy-managed-disk) of the data disk before making any change. 
-> - This change could only be done in a data disk, not an OS disk. If it's done in an OS disk, it will end up in a no boot situation.  
-> - For Red Hat, [it isn't possible to convert MSDOS label to GPT without losing data](https://access.redhat.com/solutions/1261843).
+> - This change can only be done on a data disk, not an OS disk. If it's done on an OS disk, it will end up in a no boot situation.  
+> - For Red Hat, [it isn't possible to convert the MSDOS label to GPT without losing data](https://access.redhat.com/solutions/1261843).
 
 #### Step 1: Identify the current partition table type
 
-To check if the current data disk is MBR or GPT, use one of the following tools.
+Use one of the following tools to check if the current data disk is MBR or GPT.
 
 #### [fdisk](#tab/fdisk)
 
@@ -161,32 +161,32 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
 
 ---
 
-### Step 2: Recreate the partition
+#### Step 2: Re-create the partition
 
 > [!NOTE]
-> In this section, the `gdisk` tool is used to recreate the partition as an example.
+> This section uses the `gdisk` tool to re-create the partition as an example.
 
-1. Install the `gdisk` tool if it's not installed in the Linux virtual machine:
+1. Install the `gdisk` tool if it isn't installed in the Linux virtual machine:
 
-    ### [Red Hat 7.x](#tab/rhel7)
+    #### [Red Hat 7.x](#tab/rhel7)
     
     ```bash
     sudo yum install gdisk -y
     ```
     
-    ### [Red Hat 8.x/9.x](#tab/rhel89)
+    #### [Red Hat 8.x/9.x](#tab/rhel89)
     
     ```bash
     sudo dnf install gdisk -y
     ```
     
-    ### [Ubuntu](#tab/ubuntu)
+    #### [Ubuntu](#tab/ubuntu)
     
     ```bash
     sudo apt -y install gdisk
     ```
     
-    ### [SUSE](#tab/sles)
+    #### [SUSE](#tab/sles)
     
     ```bash
     sudo zypper install gdisk
@@ -204,7 +204,7 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
     Disk /dev/sdd: 17179869184 sectors, 8.0 TiB
     ```
 
-3. Stop the application running on the virtual machine and unmount the filesystem:
+3. Stop the application running on the virtual machine and unmount the file system:
 
     ```bash
     sudo systemctl stop myapp.service
@@ -212,10 +212,10 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
     ```
 
     > [!NOTE]
-    > - Both `myapp.service` and `/appext4` are sample entries. Replace them accordingly.
-    > - If you need to increase the size of the data disk, you can do it now through your Azure account. A disk resize in the Azure portal needs downtime. For more information, see [Expand an Azure Managed Disk](/azure/virtual-machines/linux/expand-disks?tabs=ubuntu#expand-an-azure-managed-disk).
+    > - Both `myapp.service` and `/appext4` are example entries. Replace them accordingly.
+    > - If you need to increase the data disk size, you can do it now through your Azure account. A disk resizing in the Azure portal needs downtime. For more information, see [Expand an Azure Managed Disk](/azure/virtual-machines/linux/expand-disks?tabs=ubuntu#expand-an-azure-managed-disk).
 
-4. Recreate the partition number 1 by using the `gdisk` command: 
+4. Re-create the partition number 1 by using the `gdisk` command: 
 
     ```bash
     sudo gdisk /dev/sdd
@@ -273,7 +273,7 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
     The operation has completed successfully.
     ```
 
-5. Verify the partition style is changed to GPT:
+5. Verify that the partition style is changed to GPT:
 
     ```bash
     sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
@@ -286,7 +286,7 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
       APM: not present
       GPT: present    
     ```
-6. Check the size for the partition by running the following command:
+6. Check the size of the partition by running the following command:
 
     ```bash
     sudo lsblk -o NAME,TYPE,FSTYPE,LABEL,SIZE,RO,MOUNTPOINT
@@ -305,7 +305,7 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
     └─sdd1            part ext4                 2T  0 /appext4
     ```
 
-7. Unmount the filesystem that was mounted automaically and repair it:
+7. Unmount the file system that was mounted automatically and repair it:
 
     ```bash
     sudo umount /appext4
@@ -322,13 +322,13 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
     /dev/sdd1: 6728/134217728 files (0.2% non-contiguous), 8849024/536870655 blocks
     ```
 
-8. Mount the filesystem back:
+8. Remount the file system:
 
     ```bash
     sudo mount /appext4
     ```
 
-9. Resize the filesystem:
+9. Resize the file system:
  
     If the file system is `ext4`, run the following command:
     
@@ -371,5 +371,7 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
     └─sdd1            part ext4                 8T  0 /appext4
     sde               disk                      1T  0
     ```
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
