@@ -50,8 +50,8 @@ Test and Enable failed because the associated Exchange mailbox is not enabled fo
 
    6. When you're done, select **Save**.
 
-### Test and Enable the mailbox again to verify
+3. Test and Enable the mailbox again to verify
 
-1. Open the mailbox record if it is not already open.
-2. Select the **Test & Enable Mailbox** button.
-3. Wait for the "Test & Enable" process to complete. If the test results are not Success, review the **Alerts** area within the mailbox record.
+   1. Open the mailbox record if it is not already open.
+   2. Select the **Test & Enable Mailbox** button.
+   3. Wait for the "Test & Enable" process to complete. If the test results are not Success, review the **Alerts** area within the mailbox record.
