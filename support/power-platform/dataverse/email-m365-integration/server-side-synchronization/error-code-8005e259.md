@@ -27,11 +27,11 @@ Please assign a security role to the user or team that has the missing privilege
 5. Select the **Member's privilege inheritance** list, and then select **Direct User/Basic access level and Team privileges**.
 6. Go to each tab and set the appropriate privileges on each table.
 
-> [!NOTE] 
-> To change the access level for a privilege, keep selecting the access level symbol until you see the one you want. The access levels available depend on whether the record type is organization-owned or user-owned.
+   > [!NOTE] 
+   > To change the access level for a privilege, keep selecting the access level symbol until you see the one you want. The access levels available depend on whether the record type is organization-owned or user-owned.
 
-### Test and Enable the mailbox again to verify
+7. Test and Enable the mailbox again to verify
 
-1. Open the mailbox record if it is not already open.
-2. Select the **Test & Enable Mailbox** button.
-3. Wait for the "Test & Enable" process to complete. If the test results are not Success, review the **Alerts** area within the mailbox record.
+   1. Open the mailbox record if it is not already open.
+   2. Select the **Test & Enable Mailbox** button.
+   3. Wait for the "Test & Enable" process to complete. If the test results are not Success, review the **Alerts** area within the mailbox record.
