@@ -219,3 +219,5 @@ Look at the following counters that are monitored for different performance aspe
 - [LOGMAN (perfmon)](https://ss64.com/nt/logman.html)
 - [How to: Use Performance Monitor to Collect Event Trace Data](/dynamics365/business-central/dev-itpro/administration/monitor-use-performance-monitor-collect-event-trace-data)
 - [User Mode Versus Privileged Mode Processor Usage](/archive/blogs/perfguide/user-mode-versus-privileged-mode-processor-usage)
+
+[!INCLUDE [Third-party information and solution disclaimer](../../includes/third-party-information-solution-disclaimer.md)]
