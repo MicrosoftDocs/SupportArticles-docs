@@ -2,7 +2,7 @@
 title: Failed to resize MBR partitions for a data disk larger than 2 TB
 description: Provides a solution to an issue where you're unable to resize a Master Boot Record (MBR) partition for a data disk larger than 2 TB in an Azure Linux virtual machine.
 ms.service: virtual-machines
-ms.date: 04/24/2024
+ms.date: 04/25/2024
 ms.reviewer: brfett, v-weizhu
 ms.custom: sap:Assistance with resizing a disk
 ---
@@ -72,7 +72,7 @@ Syncing disks.
 
 To verify the new size, follow these steps:
 
-1. Inform the disk of the partition table change by running the following command:
+1. Inform the operation system of the partition table change by running the following command:
 
     ```bash
     sudo partprobe /dev/sdd
@@ -370,27 +370,6 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
     sdd               disk                      8T  0
     └─sdd1            part ext4                 8T  0 /appext4
     sde               disk                      1T  0
-    ```
-11. Display the size and space usage of the file system in a human-readable format by running the this command:
-  
-    ```bash
-    sudo df -h /appext4
-    ```
-    
-    ```output
-    Filesystem      Size  Used Avail Use% Mounted on
-    /dev/sdd1       7.9T  1.5G  7.6T   1% /appext4
-    ```
-12. Display detailed information of non-hidden files and directories by running this command:
-
-    ```bash
-    sudo ls -l /appext4
-    ```
-    
-    ```output
-    total 20
-    drwx------.  2 root root 16384 Dec  1 19:47 lost+found
-    drwxr-xr-x. 20 root root  4096 Dec  1 19:50 datalog
     ```
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
