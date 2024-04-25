@@ -42,7 +42,7 @@ Task Manager consists of live data tables and charts that're populated from diff
 >
 > To get the full view, at the bottom of the Task Manager window, select **More details**.
 
-For a general introduction to Task Manager, see [Task Manager](shows/inside/task-manager).
+For a general introduction to Task Manager, see [Task Manager](/shows/inside/task-manager).
 
 ### Examples of how to use Task Manager to troubleshoot
 
