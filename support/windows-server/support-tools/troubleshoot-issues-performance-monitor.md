@@ -54,7 +54,7 @@ You can add counters as needed. Open an elevated command prompt and run the foll
 2. Start the data collector set:
 
     ```console
-    logman start CORE_%computername%  
+    logman start CORE_%computername%
     ```
 
 3. Stop the trace that will be stored under *c:\\perflogs\\Admin*:
@@ -65,7 +65,7 @@ You can add counters as needed. Open an elevated command prompt and run the foll
 
 ## Run Performance Monitor remotely
 
-To set up Performance Monitor to monitor the remote system,  open an elevated command prompt and run the following commands:
+To set up Performance Monitor to monitor the remote system, open an elevated command prompt and run the following commands:
 
 1. Create a data collector set:
 
@@ -90,7 +90,7 @@ To set up Performance Monitor to monitor the remote system,  open an elevated co
 
 The Performance Monitor log will be located in the *C:\\PERFLOGS* folder. Then, zip the `.blg` file and upload it to the workspace after the issue occurs.
 
-After running Performance Monitor for one or two working days,  you can analyze the log to see if any patterns exist. Which processes spike the CPU? And, are the processes the same or different each day or hour?
+After running Performance Monitor for one or two working days, you can analyze the log to see if any patterns exist. Which processes spike the CPU? And, are the processes the same or different each day or hour?
 
 Based on the findings, go further to the next steps to find out more about what causes them to spike the CPU. Identify the root cause by tracing the sequence of processes, threads, modules, and functions.
 
@@ -106,7 +106,7 @@ TSS can get a high CPU usage trace when the CPU hits a certain threshold:
 2. From an elevated PowerShell command prompt, run the following cmdlet from the *C:\\tss* folder.
 
     ```PowerShell
-    .\TSS.ps1  -perfmon general -WaitEvent HighCPU:90 -StopWaitTimeInSec 100
+    .\TSS.ps1 -perfmon general -WaitEvent HighCPU:90 -StopWaitTimeInSec 100
     ```
 
     > [!NOTE]
@@ -129,7 +129,7 @@ TSS can get a high CPU usage trace when the CPU hits a certain threshold:
 3. From a new elevated PowerShell command prompt, run the following cmdlet from the *C:\\tss* folder.
 
     ```PowerShell
-    .\TSS.ps1  -Stop
+    .\TSS.ps1 -Stop
     ```
 
     > [!NOTE]
