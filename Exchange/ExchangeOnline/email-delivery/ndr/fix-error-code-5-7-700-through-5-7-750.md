@@ -67,7 +67,7 @@ After you address the underlying cause of the issue, contact Microsoft Support t
 
 The complete NDR error message is as follows:
 
-> 550 5.7.708 Access denied, traffic not accepted from this IP.
+> 550 5.7.708 Service unavailable. Access denied, traffic not accepted from this IP.
 
 This NDR is generated if you send an email message from an IP address that has a low reputation. The issue is more likely to affect new customers, such as those who have a Microsoft 365 trial subscription.
 
