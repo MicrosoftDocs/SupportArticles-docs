@@ -256,10 +256,6 @@ items:
         tocHref: /troubleshoot/dynamics/gp/
         topicHref: /troubleshoot/dynamics/gp/welcome-gp
 
-    - name: Microsoft Copilot for Sales
-      tocHref: /troubleshoot/sales-copilot/
-      topicHref: /troubleshoot/sales-copilot/
-
     - name: Surface
       tocHref: /troubleshoot/devices/
       topicHref: /troubleshoot/devices/
