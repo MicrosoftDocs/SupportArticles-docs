@@ -36,11 +36,6 @@ productDirectory:
     summary: Troubleshooting articles for Azure 
     url: azure/index.yml
 
-  - title: BizTalk Server
-    imageSrc: "media/hub-landing/biztalk.svg"
-    summary: Troubleshooting articles for BizTalk Server
-    url: developer/biztalk/welcome-biztalk-server.yml
-
   - title: Endpoint management
     imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Endpoint management

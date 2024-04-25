@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft, pagienge, v-weizhu
 editor: v-jsitser
-ms.date: 04/16/2024
+ms.date: 04/22/2024
 ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -665,7 +665,7 @@ The system tries to connect to a server that contains a certificate that's signe
 The default system policy setting is `DEFAULT`. In this scenario, the default setting was changed from `DEFAULT` to `FUTURE` or `CUSTOM`. The `FUTURE` policy disables some algorithms that use 2048 bits, such as SHA-1, RSA, and Diffie-Hellman. The `CUSTOM` policy might also disable these algorithms. To identify the current policy setting mode, run the following [update-crypto-policies](https://www.systutorials.com/docs/linux/man/8-update-crypto-policies/) command:
 
 ```bash
-# update-crypto-policies --show
+sudo update-crypto-policies --show
 DEFAULT:FUTURE
 ```
 

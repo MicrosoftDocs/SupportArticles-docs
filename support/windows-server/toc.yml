@@ -2463,6 +2463,10 @@ items:
       href: ./remote/terminal-server-license-for-deployment.md
     - name: Terminal Server licensing
       href: ./remote/terminal-server-licensing.md
+    - name: Troubleshooting access denied and user not authorized issues in RDS
+      href: ./remote/troubleshooting-access-denied-and-user-not-authorized-rds-issues.md
+    - name: '"Your session will be disconnected in 60 minutes" message when you connect to RDS'
+      href: ./remote/your-session-will-be-disconnected-in-60-minutes.md
   - name: Remote desktop sessions
     items:
     - name: 'Troubleshooting guidance: RDS session connectivity'
@@ -3255,10 +3259,12 @@ items:
     href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
   - name: Error when installing ESU product key for Windows Server 2012 R2 or 2012
     href: ./windows-server-eos-faq/error-installing-esu-product-key-windows-server-2012-or-2012-r2.md
-- name: Windows Troubleshooters
+- name: Support Tools
   items:
   - name: TroubleShootingScript toolset (TSS)
     items:
+    - name: Introduction to TroubleShootingScript toolset (TSS)
+      href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
     - name: Deployment (DnD)
       items:
       - name: Gather information for deployment-related issues
@@ -3269,8 +3275,6 @@ items:
         href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
       - name: Gather information for Group Policy issues
         href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
-    - name: Introduction to TroubleShootingScript toolset (TSS)
-      href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
     - name: Storage and High Availability (SHA)
       items:
       - name: Gather information for Hyper-V related issues
@@ -3283,3 +3287,7 @@ items:
       items:
       - name: Gather information for user experience-related issues
         href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
+  - name: Performance Monitoring Tools
+    items:
+    - name: Using Process Explorer
+      href: ./support-tools/troubleshoot-issues-process-explorer.md
