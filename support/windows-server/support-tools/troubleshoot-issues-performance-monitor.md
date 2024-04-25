@@ -91,6 +91,7 @@ To set up Performance Monitor to monitor the remote system,  open an elevated co
 The Performance Monitor log will be located in the *C:\\PERFLOGS* folder. Then, zip the `.blg` file and upload it to the workspace after the issue occurs.
 
 After running Performance Monitor for one or two working days,  you can analyze the log to see if any patterns exist. Which processes spike the CPU? And, are the processes the same or different each day or hour?
+
 Based on the findings, go further to the next steps to find out more about what causes them to spike the CPU. Identify the root cause by tracing the sequence of processes, threads, modules, and functions.
 
 ## Troubleshooting examples
@@ -123,7 +124,7 @@ TSS can get a high CPU usage trace when the CPU hits a certain threshold:
       .\TSS.ps1 -PerfMonLong SMB -PerfLongIntervalMin 11 -WaitEvent HighCPU:90
       ```
 
-     `PerfMonLong` represents Performance Monitor with a long interval.
+      `PerfMonLong` represents Performance Monitor with a long interval.
 
 3. From a new elevated PowerShell command prompt, run the following cmdlet from the *C:\\tss* folder.
 
@@ -142,7 +143,7 @@ Start capturing performance counters with the `General` counter set by running t
 .\TSS.ps1 -PerfMon General
 ```
 
-If you want to change the interval for the performance log, use `-PerfIntervalSec` (the unit is second) or `-PerfIntervalMin` (the unit is minute). For example, `.\TSS.ps1 -PerfMon General -PerfIntervalSec 1`specifies an interval of one second.
+If you want to change the interval for the performance log, use `-PerfIntervalSec` (the unit is second) or `-PerfIntervalMin` (the unit is minute). For example, `.\TSS.ps1 -PerfMon General -PerfIntervalSec 1` specifies an interval of one second.
 
 Here are more examples of the `.\TSS.ps1 -PerfMon <CounterSetName>` cmdlet:
 
