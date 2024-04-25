@@ -1,6 +1,6 @@
 ---
 title: Using Task Manager to troubleshoot processes
-description: describes the features of Task Manager and provides examples of how to apply those features when troubleshooting.
+description: Describes the features of Task Manager and provides examples of how to apply those features when troubleshooting.
 ms.date: 04/29/2024
 author: Deland-Han
 ms.author: delhan
@@ -30,7 +30,7 @@ Task Manager consists of live data tables and charts that're populated from diff
 | Tab | Data types |
 | --- | --- |
 | **Processes** | List of apps and background processes, and the resource usage of each. |
-| **Performance** | Lists and graphs of performance data. Separate sub-pages are available for CPU performance and memory performance, and other performance categories (depending on the computer's configuration). |
+| **Performance** | Lists and graphs of performance data. Separate views are available for CPU performance and memory performance, and other performance categories (depending on the computer's configuration). |
 | **Users** | List of signed-in users, and the processes that run under that user's context. Additional data, such as resource usage for each process, is available. |
 | **Details** | List of the processes running on the computer, regardless of whether they're apps or background processes. Additional data, such as user context, resource usage, and description is available. |
 | **Services** | List of the services running on the computer. The list format resembles that of the Services MMC console (*services.msc*). You can stop and start services from this page, or go from this page to the Services console. |
@@ -48,7 +48,7 @@ For a general introduction to Task Manager, see [Task Manager](https://learn.mic
 
 #### Examining CPU load
 
-When using its default view, the **Performance** tab shows the overall CPU load for the computer, regardless of the number of physical or logical processors.
+When you use the default view, the **Performance** tab shows the overall CPU load for the computer, regardless of the number of physical or logical processors.
 
 :::image type="content" source="media/support-tools-task-manager/task-mgr-cpu.png" alt-text="Screenshot that shows the overall CPU display on the Performance tab of Task Manager.":::
 
