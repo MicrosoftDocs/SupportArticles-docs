@@ -210,8 +210,8 @@ Look at the following counters that are monitored for different performance aspe
 |---------|---------|
 |**Processor Queue Length (PQL)**     |If there are two or more instances per processor and the CPU usage is high, check processes for high CPU consumption. Also, check **Context Switches**, **% DPC Time**, and **% Interrupt Time**.         |
 |**% Processor Time**     |0-50%: healthy.<br>50-80%: monitor/warning monitor.<br>80-100%: critical. The system might work slowly.|
-|**% DPC Time**     |**% Processor Time** > 85% and **% DPC Time** > 15%: investigate if they're constantly above these levels. Short spikes are okay.<br>For example, only on one processor with 100% **% Processor Time** and more than 50% **% DPC Time**.|
-|**% Interrupt Time**     |High CPU interrupt time: more than 30% interrupt time. A high amount of **% Interrupt Time** in the processor might indicate a hardware or driver problem.<br>Very high CPU interrupt time: more than 50% interrupt time. A very high amount of **% Interrupt Time** in the processor might indicate a hardware or driver problem.|
+|**% DPC Time**     |**% Processor Time** > 85% and **% DPC Time** > 15%: investigate if they're constantly above these levels. Short spikes are okay.<br><br>For example, only on one processor with 100% **% Processor Time** and more than 50% **% DPC Time**.|
+|**% Interrupt Time**     |High CPU interrupt time: more than 30% interrupt time. A high amount of **% Interrupt Time** in the processor might indicate a hardware or driver problem.<br><br>Very high CPU interrupt time: more than 50% interrupt time. A very high amount of **% Interrupt Time** in the processor might indicate a hardware or driver problem.|
 
 ## References
 
