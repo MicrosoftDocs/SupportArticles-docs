@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: <sap/see CI>, csstroubleshoot
+ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
 keywords: Task Manager
 ---
 
@@ -38,7 +38,7 @@ Task Manager consists of live data tables and charts that're populated from diff
 > [!NOTE]  
 > The first time that you open Task Manager, you might see its condensed view. This view resembles the following:
 >
-> ![graphic](media/support-tools-task-manager/task-mgr-minimized.png)
+>:::image type="content" source="media/support-tools-task-manager/task-mgr-minimized.png" alt-text="Screenshot that shows the condensed view of Task Manager.":::
 >
 > To get the full view, at the bottom of the Task Manager window, select **More details**.
 
@@ -50,11 +50,11 @@ For a general introduction to Task Manager, see [Task Manager](https://learn.mic
 
 When using its default view, the **Performance** tab shows the overall CPU load for the computer, regardless of the number of physical or logical processors.
 
-![graphic](media/support-tools-task-manager/task-mgr-cpu.png)
+:::image type="content" source="media/support-tools-task-manager/task-mgr-cpu.png" alt-text="Screenshot that shows the overall CPU display on the Performance tab of Task Manager.":::
 
 You can break down this data in terms of the load produced by kernel processes and the load produced by user processes. To do this, right-click the graph, and then select **Show kernel times**. The trace on the graph splits into two colors, one for kernel processes and one for user processes.
 
-![graphic](media/support-tools-task-manager/task-mgr-cpu-kernel-detail.png)
+:::image type="content" source="media/support-tools-task-manager/task-mgr-cpu-kernel-detail.png" alt-text="Screenshot that shows the overall CPU display on the Performance tab of Task Manager, using the Show kernel times feature.":::
 
 You can also break down the data in terms of the load on each logical processor. When you look at the overall (default) graph, you can calculate the approximate load per processor by dividing the load by the number of processors. For example, on a computer that has eight logical processors, you can calculate the load per processor (at 100% capacity) as follows:
 
@@ -64,7 +64,7 @@ Each processor carries 12.5% of the CPU load. Conversely, if a process uses 12.5
 
 To view more precise load information, right-click the graph, and then select **Change graph to** > **Logical processors**. The graph splits into multiple graphs, one for each processor.
 
-![graphic](media/support-tools-task-manager/task-mgr-cpu-logical-detail.png)
+:::image type="content" source="media/support-tools-task-manager/task-mgr-cpu-logical-detail.png" alt-text="Screenshot that shows the logical CPU display on the Performance tab of Task Manager.":::
 
 As you can see here, different logical processors carry different loads.
 
@@ -74,12 +74,12 @@ You can use the **Processes**, **Users**, and **Details** tabs to view the activ
 
 You can change the displayed columns by right-clicking one of the column heads and then selecting **Select columns**. In the following image, the **Threads** column has been added:
 
-![graphic](media/support-tools-task-manager/task-mgr-process-detail.png)
+:::image type="content" source="media/support-tools-task-manager/task-mgr-process-detail.png" alt-text="Screenshot that shows the process list on the Details tab of Task Manager.":::
 
 Task Manager doesn't provide details about the individual threads. However, you can dump detailed information about a process to analyze or to provide to your support vendor.
 
 To do this, in any of the process list tabs, right-click the process and then select **Create memory dump file**.
 
-![graphic](media/support-tools-task-manager/task-mgr-create-mem-dump.png)
+:::image type="content" source="media/support-tools-task-manager/task-mgr-create-mem-dump.png" alt-text="Screenshot that shows the Create memory dump file command on the context menu of a process in Task Manager.":::
 
 You can also use Task Manager to analyze the wait chain of a process. For more information, see [Tip of the Day: Wait Chain Analyzer](/archive/blogs/tip_of_the_day/tip-of-the-day-wait-chain-analyzer).
