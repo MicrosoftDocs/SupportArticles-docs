@@ -3291,3 +3291,5 @@ items:
     items:
     - name: Using Process Explorer
       href: ./support-tools/troubleshoot-issues-process-explorer.md
+    - name: Using Task Manager to troubleshoot processes
+      href: ./support-tools/support-tools-task-manager.md
