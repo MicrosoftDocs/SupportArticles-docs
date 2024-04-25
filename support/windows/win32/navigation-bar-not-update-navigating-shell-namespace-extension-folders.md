@@ -2,7 +2,7 @@
 title: File Explorer's navigation bar doesn't update when navigating shell namespace extension folders
 description: Describes a problem where File Explorer's navigation bar doesn't update when navigating folders in a shell namespace extension.
 ms.reviewer: davean, v-sidong
-ms.custom: 
+ms.custom: sap:Desktop app UI development\Windows Shell API
 ms.date: 04/25/2024
 ---
 
