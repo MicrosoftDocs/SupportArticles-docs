@@ -23,7 +23,7 @@
     - name: Salesforce CRM users can't see data in Copilot for Sales
       href: crm-permissions-and-configurations/no-column-error.md
     - name: '"This contact already exists" error when creating a CRM record'
-      href: crm-permissions-and-configurations/duplicate-record-error
+      href: crm-permissions-and-configurations/duplicate-record-error.md
 - name: Outlook side panel
   items:
     - name: Sign-in issue when opening the Copilot for Sales pane in Outlook
