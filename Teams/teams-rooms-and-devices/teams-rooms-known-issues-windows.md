@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 02/22/2024
+ms.date: 04/24/2024
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -42,6 +42,7 @@ ms.date: 02/22/2024
 |Resolution and scaling settings aren't applied as specified|If you're using an XML configuration file to apply scaling and resolution settings to Front of Room displays, the settings aren't applied correctly anymore after you update the Teams Rooms app to version 4.18.35. Instead, Windows display default settings for scaling and resolution override them.|To work around the issue, reapply the resolution and scaling settings manually by using Teams Rooms admin settings. See [Front of Room display settings](/MicrosoftTeams/rooms/rooms-operations#front-of-room-display-settings?view=exchange-ps&preserve-view=true) for more information.|  
 |Video of remote participants has low resolution in SIP and H.323 calls|On a Teams Rooms device that is running either version 4.18.35 or 4.18.43 of the Teams Rooms app, the remote participant's video is set to a default resolution of 360p when using either SIP or H.323 dialing for Teams calls.|To fix the issue, upgrade the Teams Rooms app to version 4.19.57.0.|
 |Mismatch between time and calendar display on Teams Rooms device and Front of Room display|If a Teams Rooms device on Windows is idle for more than 2 hours, the time and calendar display on the device freezes. As a result, there's a mismatch between the time and calendar information in the Front of Room display and on the console. This issue occurs intermittently.|To fix the issue, upgrade the Teams Rooms app to version 4.19.57.0.|
+|New features in the new Teams Rooms app aren't available.|You won't be able to use the new Teams Rooms app unless you install WebView2 runtime version 110.0.1587.63 or higher for all users on your device.|Install WebView2 runtime by using the following steps:<ol><li>Download the [Evergreen Bootstrapper](https://developer.microsoft.com/microsoft-edge/webview2/?form=MA13LH) file to a location on the device that can be accessed by a local admin account.</li><li>Right-click the `MicrosoftEdgeWebview2Setup.exe` file and select **Run as Administrator**.<br/> Alternatively, open an elevated remote PowerShell session and run the following command:<br/>`.\MicrosoftEdgeWebview2Setup.exe /install /silent`.</li><li>Restart the device.</li></ol>|
 
 ## Hardware issues
 
