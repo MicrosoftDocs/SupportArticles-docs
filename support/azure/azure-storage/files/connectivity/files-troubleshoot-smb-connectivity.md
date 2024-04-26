@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 04/22/2024
+ms.date: 04/26/2024
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -141,13 +141,21 @@ Revert the `LmCompatibilityLevel` value to the default value of 3 in the followi
 
 `HKLM\SYSTEM\CurrentControlSet\Control\Lsa`  
 
-### <a id="error53-67-87"></a> Failed with Error Code: 0x800704b3 the network path was either typed incorrectly, does not exist, or the network provider is not currently available.
+### <a id="error-0x800704b3"></a> Failed with error code 0x800704b3
 
-#### Cause:
-This error can occur if any core windows network related services are disabled as any services that explicitly depends on it will fail to start.   
+When you connect to or mount an Azure file share, you recieve the following error:
 
-#### Solutions
-Check if any of the below mentioned services are in **Stopped** state in the Azure Windows VM and if you find any, please start it and retry to mount the Azure file share:  
+> Error code: 0x800704b3  
+> Symbolic Name: ERROR_NO_NET_OR_BAD_PATH  
+> Error description: The network path was either typed incorrectly, does not exist, or the network provider is not currently available. Please try retyping the path or contact your network administrator.
+
+#### Cause
+
+This error can occur if any core Windows network related services are disabled as any service that explicitly depends on it will fail to start.   
+
+#### Solution
+
+Check if any services below are in a **Stopped** state in the Azure Windows VM:
 
 - Network Connections  
 - Network List Service  
@@ -156,7 +164,8 @@ Check if any of the below mentioned services are in **Stopped** state in the Azu
 - DHCP Client  
 - TCP/IP NetBIOS Helper  
 - Workstation
-  
+
+If you find any, start the service(s) and retry mounting the Azure file share. 
 
 ### <a id="cannotaccess"></a>Application or service can't access a mounted Azure Files drive
 
