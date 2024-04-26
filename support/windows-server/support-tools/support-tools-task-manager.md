@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot processess using Task Manager
+title: Troubleshoot processes by using Task Manager
 description: Describes the features of Task Manager and provides examples of how to apply those features when troubleshooting.
 ms.date: 04/29/2024
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM
 keywords: Task Manager
 ---
 
-# Troubleshoot processess using Task Manager
+# Troubleshoot processes by using Task Manager
 
 This article describes the features of Task Manager and provides examples of how to apply those features when troubleshooting.
 
@@ -90,7 +90,7 @@ To see the wait chain of a running process, follow these steps:
 
 1. Select the **Details** tab, and then select the process. Make sure that the value in the **Status** column is **Running**. You can't view the wait chain of a suspended process.
 1. Right-click the process, and then select **Analyze wait chain**.  
-   If the process is running normally and is not waiting for any other processes, Task Manager displays a message that resembles the following message:
+   If the process is running normally and isn't waiting for any other processes, Task Manager displays a message that resembles the following message:
    > \<*Process*> is running normally.
 
       > [!NOTE]  
