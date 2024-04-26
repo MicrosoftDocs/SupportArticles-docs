@@ -3289,5 +3289,7 @@ items:
         href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
   - name: Performance Monitoring Tools
     items:
+    - name: Using Performance Monitor
+      href: ./support-tools/troubleshoot-issues-performance-monitor.md
     - name: Using Process Explorer
       href: ./support-tools/troubleshoot-issues-process-explorer.md
