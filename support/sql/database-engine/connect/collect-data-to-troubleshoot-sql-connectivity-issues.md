@@ -46,7 +46,7 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 1. Start the network capture on all computers.
 
-1. If you are using NETSH, run the `NETSH TRACE START CAPTURE=YES TRACEFILE=C:\TEMP%computername%.ETL` command (use an appropriate file or path name).
+1. If you're using NETSH, run the `NETSH TRACE START CAPTURE=YES TRACEFILE=C:\TEMP%computername%.ETL` command (use an appropriate file or path name).
 
 1. Flush the DNS cache on all computers by running the `IPCONFIG /FLUSHDNS` command.
 
@@ -78,7 +78,7 @@ You can collect the following information about the components of the client com
 - What is the operating system name, edition, and version (WinVer)?
 - What is the name and version of the SQL Server driver or provider?
 - What are the computer name and IP address?
-- Is the computer domain-joined? If yes, what is the domain name?
+- What is the computer's domain status? If it's joined to a domain, what's the domain name?
 - What application run-time environment is used? For example, IIS, Windows Forms, Web Sphere, or SSIS Job.
 - Which application language is used?
 - What is the connection string used?
@@ -87,7 +87,7 @@ You can collect the following information about the components of the client com
 - Is constrained delegation used?
 - What are the application service account and domain?
 - Which type of service is used? Is it physical, virtual, or cloud? For example, IaaS, Web App, Web Role, or Power BI.
-- Is the client driver JDBC or does it run on Linux or Mac?
+- What is the client driver? Is it JDBC, or does it run on Linux or Mac?
 
 > [!NOTE]
 > The workflows are currently more Windows-oriented.
@@ -95,9 +95,9 @@ You can collect the following information about the components of the client com
 - Does the issue affect only legacy providers, such as `Provider=SQLOLEBD` or `Driver={SQL Server}`, and not SQL Native client and later drivers (or vice versa)?
 - Does the issue occur in only one application or in multiple applications?
 - Does a UDL file fail when it tries to connect to other SQL Server-based servers, or does it fail to only the server that has the issue?
-- Can you log in to the SQL Server-based server and connect using SQL Server Management Studio (SSMS)?
+- Does the user log in to the SQL Server-based server and connect using SQL Server Management Studio (SSMS)?
 - Does the issue occur only when you use the NETBIOS name of the server and not when you use the FQDN (or vice versa)? Does it work by using the IP address?
-- If the client is running Windows 10 Enterprise Edition, is the Credential Guard feature turned on? If yes, this might affect full delegation scenarios.
+- Does the client running Windows 10 Enterprise Edition have the Credential Guard feature turned on? If yes, this might affect full delegation scenarios.
 
 ## Server computer
 
@@ -114,15 +114,15 @@ For a Linked Server, collect server information for both the mid-tier server and
 - Which is the port that the server listens on?
 - What is the name of the server pipe? You can find this information in the error log.
 - Which type of environment is used? Is it physical, virtual, or cloud? For example, IaaS (SQL in an Azure VM) or PaaS (Azure SQL Database, SQL MI).
-- Is the database standalone, clustered, mirrored, or Always On?
+- Is the database deployed as standalone, clustered, mirrored, or using Always On?
 - What is the Failover partner name and IP address?
 - What is the Virtual cluster name or Listener name and port?
 - Which is the Virtual IP or Listener IP?
 - Which operating system is the database installed on? Is it Windows, Linux, or Mac? This might affect data collection.
-- Is the database located in Azure?
-- Is the server on the latest Service Pack and Cumulative Update? There’s no point in debugging an issue that is already fixed.
+- What is the location of the database? Is it situated in Azure?
+- What is the current status of the server in terms of the latest Service Pack and Cumulative Update? There's no point in debugging an issue that's already fixed.
 - Has SQL Server been upgraded recently to support TLS 1.2? Were the clients also updated? Has TLS 1.0 been turned off?
-- Is the SQL Server service currently running?
+- What is the current status of the SQL Server service, is it running?
 - Is the SQL Browser service running?
 - Is the issue specific to a service account? If you run the server using a different service account, does the issue get resolved?
 
