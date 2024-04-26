@@ -255,6 +255,8 @@
     href: logs/capture-tcp-dump-windows-node-aks.md
   - name: Capture TCP packets from pod
     href: logs/packet-capture-pod-level.md
+  - name: Capture container dump from Windows node
+    href: logs/capture-container-dump-windows-node-aks.md
 
 - name: Storage
   items:
@@ -281,22 +283,28 @@
 
 - name: Extensions, Policies and Add-Ons
   items:
+  - name: Troubleshoot Azure Policy Add-on for AKS
+    items:
+    - name: AKS upgrade fails when using an Azure custom policy
+      href: extensions/custom-policy-prevents-aks-upgrade.md
+    - name: Azure policy failure alert shows an empty list of affected resources
+      href: extensions/policy-failure-alert-show-empty-list-of-affected-resources.md
+    - name: Azure Policy fails to exclude privileged containers from AKS
+      href: extensions/privileged-container-exclusion-not-working.md
+    - name: Custom Azure Policy for validating controllers doesn't work
+      href: extensions/custom-policy-for-validating-controller-not-working.md
+    - name: Container CPU and memory limits aren't enforced
+      href: extensions/enforce-container-cpu-memory-limits.md
+    - name: Policy definition not found error during policy-assignments at Terraform
+      href: extensions/error-in-policy-assign-main-file-terraform.md
+    - name: Azure policy reports 'ConstraintNotProcessed' for container
+      href: extensions/error-azure-policy-constraintnotprocessed.md
+    - name: Retain privileged mode while adding capabilities
+      href: extensions/retain-privileged-mode-add-capabilities.md
   - name: AKS Cost Analysis add-on issues
     href: extensions/aks-cost-analysis-add-on-issues.md
-  - name: Azure policy reports 'ConstraintNotProcessed' for container
-    href: extensions/error-azure-policy-constraintnotprocessed.md
   - name: Can't pull images from container registry to cluster
     href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
-  - name: Policy definition not found error during policy-assignments at Terraform
-    href: extensions/error-in-policy-assign-main-file-terraform.md
-  - name: Azure policy failure alert shows an empty list of affected resources
-    href: extensions/policy-failure-alert-show-empty-list-of-affected-resources.md
-  - name: Azure Policy fails to exclude privileged containers from AKS
-    href: extensions/privileged-container-exclusion-not-working.md
-  - name: Custom Azure Policy for validating controllers doesn't work
-    href: extensions/custom-policy-for-validating-controller-not-working.md
-  - name: Container CPU and memory limits aren't enforced
-    href: extensions/enforce-container-cpu-memory-limits.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: extensions/troubleshoot-key-vault-csi-secrets-store-csi-driver.md
   - name: Troubleshoot cluster extension deployment errors
