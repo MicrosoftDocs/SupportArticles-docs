@@ -140,9 +140,9 @@ $ldapQuery = "(&(objectClass=user)(msExchArchiveAddress=*))"
 $ldapQuery = "(&(objectClass=user)(msExchArchiveAddress=*)(!(&(msExchArchiveGuid=*)(!(msExchArchiveDatabaseLink=*))(msExchArchiveAddress=$TenantCloudDomain))))"
 }
 if ($Domain.Length -eq 0) {
-# default domain to computer's domai
+# default domain to computer's domain
 $computer = Get-WmiObject -Class Win32_ComputerSystem
-$Domain = $computer.Domai
+$Domain = $computer.Domain
 }
 if ($FindAllUsersInForest -and $Fix) {
 throw "You cannot specify -FindAllUsersInForest when running in -Fix mode, only one domain can be cleaned up at a time."
@@ -158,7 +158,7 @@ $m = Get-ADObject -Server $Domain -LDAPFilter $ldapQuery -ResultSetSize $null -P
 $elapsed = [DateTime](Get-Date) - $tsStart
 if ($m -eq $null) {
 Write-Host "No objects need to be cleaned up."
-retur
+return
 }
 $cleanedCount = 0
 $failedCount = 0
