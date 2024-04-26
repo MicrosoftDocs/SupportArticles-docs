@@ -151,11 +151,11 @@ When you connect to or mount an Azure file share, you recieve the following erro
 
 #### Cause
 
-This error can occur if any core Windows network related services are disabled as any service that explicitly depends on it will fail to start.   
+This error can occur if any core Windows network related services are disabled as any service that explicitly depends on those network services will fail to start. 
 
 #### Solution
 
-Check if any services below are in a **Stopped** state in the Azure Windows VM:
+Check if any of these services below are in a **Stopped** state in the Windows VM:
 
 - Network Connections  
 - Network List Service  
