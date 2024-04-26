@@ -1,8 +1,8 @@
 ---
 title: Configure antivirus exclusions in Service Manager
 description: Describes how to configure antivirus exclusions in System Center Service Manager.
-ms.date: 08/04/2020
-ms.reviewer: brunoga
+ms.date: 04/08/2024
+ms.reviewer: brunoga, khusmeno
 ---
 # Configure antivirus exclusions in a System Center Service Manager environment
 

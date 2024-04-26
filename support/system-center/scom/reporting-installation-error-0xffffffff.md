@@ -1,7 +1,7 @@
 ---
 title: Reporting installation or upgrade fails with error 0xffffffff
 description: Error 0xffffffff occurs when installing or upgrading to System Center 2012 Operations Manager Reporting.
-ms.date: 06/30/2020
+ms.date: 04/15/2024
 ---
 # Installation or upgrade of System Center 2012 Operations Manager Reporting fails with error 0xffffffff
 

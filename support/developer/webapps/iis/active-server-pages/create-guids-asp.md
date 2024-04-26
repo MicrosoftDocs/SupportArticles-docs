@@ -2,7 +2,7 @@
 title: Create GUIDs by using Active Server Pages
 description: This article provides introduction about how to create GUIDs in IIS by using Active Server Pages (ASP) pages.
 ms.date: 04/15/2020
-ms.custom: sap:Active Server Pages
+ms.custom: sap:Active Server Pages\Application
 ms.subservice: active-server-pages
 ms.reviewer: robmcm, jameshow
 ---

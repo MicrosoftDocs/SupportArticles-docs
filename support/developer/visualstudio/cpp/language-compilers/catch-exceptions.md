@@ -2,7 +2,7 @@
 title: How to catch exceptions in Visual C++
 description: Describes how to use a try-catch-finally block to catch an exception. A try-catch-finally block is a wrapper that you put around any code where an exception might occur.
 ms.date: 04/22/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C++
 ms.topic: how-to
 ---
 # Catch exceptions in Visual C++

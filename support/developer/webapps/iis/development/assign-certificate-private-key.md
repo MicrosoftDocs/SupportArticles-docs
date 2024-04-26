@@ -2,7 +2,7 @@
 title: Assign a private key to a new certificate
 description: Describes how to recover a private key after you use the Certificates Management Console snap-in to delete the original certificate in Internet Information Services (IIS).
 ms.date: 03/23/2020
-ms.custom: sap:Development
+ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
 ms.topic: how-to
 ms.subservice: development
 ---

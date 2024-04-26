@@ -3,6 +3,7 @@ title: Use Trace and debug classes in Visual Basic .NET
 description: This article describes how to use the Debug and Trace classes in Visual Basic .NET.
 ms.date: 04/29/2020
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\Visual Basic .NET (VB.NET)
 ---
 # Use Trace and Debug classes in Visual Basic .NET
 

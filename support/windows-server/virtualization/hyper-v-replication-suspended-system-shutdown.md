@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, nookawa
-ms.custom: sap:hyper-v-replica, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Hyper-V Replica (HVR), csstroubleshoot
 ---
 # Hyper-V replication is suspended at system shutdown
 

@@ -3,6 +3,7 @@ title: DP installation, upgrade, and configuration
 description: Describes Distribution points installation, upgrade, configuration changes, removal, and how these operations work.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Content Management\Distribution Point Installation, Upgrade or Configuration
 ---
 # Distribution points installation, upgrade, and configuration
 

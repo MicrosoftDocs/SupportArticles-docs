@@ -1,8 +1,9 @@
 ---
 title: Description of the source of the value in Actual Demand
 description: Describes where Microsoft Dynamics GP looks when it determines the value of the Actual Demand field in the Manufacturing Entry window in Microsoft Dynamics GP.
-ms.reviewer: aeckman
-ms.date: 03/31/2021
+ms.reviewer: theley, aeckman
+ms.date: 03/20/2024
+ms.custom: sap:Manufacturing Series
 ---
 # Description of the source of the value in the "Actual Demand" field in the Manufacturing Entry window in Microsoft Dynamics GP
 

@@ -7,6 +7,7 @@ metadata:
   ms.topic: faq
   ms.subservice: security-privacy
   ms.service: internet-explorer
+  ms.custom: sap:Security and Privacy
 title: FAQ about Internet Explorer Enhanced Security Configuration (ESC)
 summary: |
   [!INCLUDE [](../../../includes/browsers-important.md)]
@@ -165,6 +166,6 @@ sections:
       - question: |
           Internet Explorer doesn't seem to work after you disable ESC by using Server Manager
         answer: |
-          To troubleshoot this scenario, refer to [Standard users can't turn off Internet Explorer Enhanced Security feature on a Windows Server 2003-based terminal server or a later version](/troubleshoot/browsers/cannot-turn-off-enhanced-security). Basically, you may have to enable or disable ESC again. Targeting the registry may be the easiest way to resolve this problem.
+          To troubleshoot this scenario, refer to [Standard users can't turn off Internet Explorer Enhanced Security feature on a Windows Server 2003-based terminal server or a later version](cannot-turn-off-enhanced-security.md). Basically, you may have to enable or disable ESC again. Targeting the registry may be the easiest way to resolve this problem.
           
    

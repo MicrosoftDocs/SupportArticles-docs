@@ -4,6 +4,7 @@ description: Provides a resolution for the Modern flow is not valid for ExecuteW
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 01/22/2024
+ms.custom: sap:Service Level Agreements\Issue related to SLA flow
 ---
 # "Modern flow is not valid for ExecuteWorkflow" error
 

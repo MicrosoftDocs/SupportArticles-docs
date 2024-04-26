@@ -2,6 +2,7 @@
 title: Incorrect date value from standard time to DST
 description: Describes an Internet Explorer issue that occurs during construction of a JavaScript Date object for dates when Daylight Saving Time (DST) begins or ends.
 ms.date: 04/20/2020
+ms.custom: sap:Core Features
 ---
 # Error in Date value at beginning of DST in certain time zones
 

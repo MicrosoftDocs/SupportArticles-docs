@@ -3,6 +3,7 @@ title: A named window can't be found in Internet Explorer
 description: A window name cannot be found when Internet Explorer is started by using Terminal Services RemoteApp.
 ms.date: 06/09/2020
 ms.reviewer: 
+ms.custom: sap:Development and Website Issues
 ---
 # Named browser windows cannot be found when Internet Explorer is started as a published application
 

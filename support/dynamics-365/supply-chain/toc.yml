@@ -1,385 +1,384 @@
 - name: Dynamics 365 Supply Chain Management
   href: welcome-supply-chain.yml
+- name: Inventory costing and closing
   items:
-    - name: Inventory costing and closing
+    - name: An update conflict occurs when the inventory valuation method is either standard cost or moving average
+      href: costing/update-conflict-standard-cost-moving-average-inventory-valuation.md
+    - name: Functional gaps between inventory value/aging reports and their storage versions
+      href: costing/function-gaps-storage-reports.md
+    - name: Inventory aging report discrepancies
+      href: costing/aging-report-discrepancies.md
+    - name: Missing field settings on copying item model groups to another legal entity
+      href: costing/missing-field-settings-copy-item-model-groups.md
+    - name: Purchase accrual posted with amount zero for zero-value product receipt
+      href: costing/posting-to-purchase-accrual-with-zero-if-posted-receipt-has-zero.md
+    - name: Physically received purchase orders don't appear in the inventory closing report
+      href: costing/check-open-quantities-not-show-physically-received-purchase-orders.md
+    - name: System times out when generating historical or deleted inventory value reports
+      href: costing/system-times-out-when-generating-historical-or-deleted-inventory-value-reports.md
+    - name: The Indirect costs in process report includes deleted production orders
+      href: costing/indirect-costs-process-report-has-deleted-orders.md
+    - name: There is no From date on the Active prices tab of the Item price page
+      href: costing/no-from-date-active-prices-tab-item-price.md
+    - name: Warnings or errors on changing ledger period status without closing inventory
+      href: costing/errors-change-ledger-period-without-closing.md
+- name: Inventory management
+  items:
+    - name: Inventory journal workflow never completes and the journal can't be processed
+      href: inventory/cant-post-inventory-journal.md
+    - name: Inventory journal workflow conditions apply at the journal level, not line level
+      href: inventory/journal-workflow-conditions.md
+    - name: Maximum number of decimals for the stock keeping unit is 0
+      href: inventory/maximum-number-of-decimals-for-stock-keeping-unit-is-0.md
+    - name: Multiple inventory transactions for batch numbers without "On physical update"
+      href: inventory/multiple-inventory-transactions-on-physical-update-disabled.md
+    - name: Picking list report doesn't show new notes that are attached to a journal
+      href: inventory/picking-list-report-not-show-new-notes-attached-to-journal.md
+    - name: Quantity on a started quarantine order doesn't update when the order is split
+      href: inventory/quantity-started-quarantine-order-not-updated.md
+    - name: Reversing a report as finished creates an unexpected open transaction
+      href: inventory/reverse-report-as-finished-creates-open-transaction.md
+    - name: The unit and unit quantity aren't working correctly in the inventory journal
+      href: inventory/journal-unit-quantity-incorrect.md
+    - name: The filter pane on the On-hand list page doesn't work as expected
+      href: inventory/on-hand-filter-unexpected.md
+    - name: The Last tested date field isn't updated when multiple quality orders are created
+      href: inventory/last-tested-date-not-updated.md
+    - name: When a catch-weight quantity is split, minimum quantity is used instead of nominal quantity
+      href: inventory/minimum-quantity-pick-qty-catch-weight-quantity-split-into-batches.md
+    - name: You can't find the "Workflow" drop-down dialog box for inventory journals
+      href: inventory/cant-find-workflow-dropdown.md
+    - name: Your inventory journal is locked and the workflow batch job doesn't work
+      href: inventory/inventory-journal-locked-workflow.md
+- name: Master planning
+  items:
+    - name: BOM explosion behaves differently for firmed and estimated production orders
+      href: planning/bom-explosion-works-differently.md
+    - name: Can't update the forecasted unit cost when you import demand forecast records
+      href: planning/unable-to-update-forecasted-unit-cost.md
+    - name: Can't remove the warehouse demand forecast dimension from forecast lines
+      href: planning/warehouse-removal-from-forest-lines-not-work.md
+    - name: Directly derived firmed orders are processed by an in-review workflow
+      href: planning/firmed-directly-derived-orders-processed-by-in-review-workflow.md
+    - name: Item can't have a BOM or formula
+      href: planning/item-cannot-have-bom-formula.md
+    - name: Master planning generates planned orders for phantom products
+      href: planning/planned-orders-created-for-phantom-products-master-planning.md
+    - name: Master planning is scheduling more than the available capacity
+      href: planning/master-planning-not-respect-capacity-limitations.md
+    - name: Not enough capacity could be found
+      href: planning/not-enough-capacity-error.md
+    - name: Parameters for master plan do not exist
+      href: planning/no-parameters-for-master-plan.md
+    - name: Product is on hold for transactions
+      href: planning/product-is-on-hold.md
+    - name: Planned orders take a long time to update
+      href: planning/planned-order-long-update.md
+    - name: Planned orders are generated for in-stock with production orders
+      href: planning/planned-orders-in-stock-items.md
+    - name: Planned purchase order created when a purchase exists within negative days
+      href: planning/planning-optimization-creates-planned-purchase-order-negative-days.md
+    - name: Production scheduling doesn't consider the safety margins
+      href: planning/production-schedule-not-consider-safety-margins.md
+    - name: The system can't find a planned order when operating on multiple orders
+      href: planning/planned-order-not-exist.md
+    - name: The delay value isn't updated when you reschedule a planned order
+      href: planning/delay-value-not-updated.md
+    - name: The planned production order must be scheduled before it can be firmed
+      href: planning/planned-order-must-be-scheduled.md
+    - name: The selected formula number is not approved for a batch order.
+      href: planning/selected-formula-not-approved.md
+    - name: You receive an error when running the built-in master planning engine
+      href: planning/deprecated-master-planning-error.md
+    - name: You can't filter master planning items by their related coverage group values
+      href: planning/cant-filter-master-planning-batch-items-by-coverage-group-values.md
+    - name: You're prompted to save item coverage settings even though you made no changes
+      href: planning/prompted-to-save-item-coverage-settings-without-changes.md
+    - name: Vendor code isn't authorized for a specific product and date
+      href: planning/vendor-code-not-authorized.md
+    - name: Vendor is not specified when firming planned orders
+      href: planning/vendor-not-specified.md
+- name: Purchase order, procurement, and sourcing
+  items:
+    - name: A purchase order receipt doesn't include all charges
+      href: procurement/po-receipt-missing-charges.md
+    - name: An exception occurs during vendor invoice posting
+      href: procurement/invocation-target-exception.md
+    - name: Accounting distributions are either over- or under-distributed
+      href: procurement/over-under-distribution.md
+    - name: A vendor rebate isn't cumulated based on invoices
+      href: procurement/vendor-rebate-not-cumulated.md
+    - name: A product receipt voucher number is consumed even when not generating a voucher
+      href: procurement/voucher-number-consumed.md
+    - name: Can't add a line to a purchase requisition after requesting a change
+      href: procurement/cant-add-line-to-purchase-requisition-after-change.md
+    - name: Can't change the effective date for an approved vendor
+      href: procurement/approved-vendor-effective-date.md
+    - name: Canceled purchase orders appear in the draft list in the workspace
+      href: procurement/canceled-po-in-draft-list.md
+    - name: Cancelling delivery remainder moves purchase order to a Confirmed state
+      href: procurement/change-management-canceled-remainder.md
+    - name: Default tax group and cash discount aren't filled in from the invoice account
+      href: procurement/default-tax-group-and-discount.md
+    - name: Error "Object reference not set" occurs during purchase order confirmation
+      href: procurement/object-reference-not-set.md
+    - name: Imported purchase orders show incorrect line numbers
+      href: procurement/line-number-increments.md
+    - name: Purchase order line data discrepancies
+      href: procurement/purchase-order-line-data-issues.md
+    - name: Purchase orders don't reflect the language settings of the legal entity
+      href: procurement/purchase-order-language-not-reflect-legal-entity-settings.md
+    - name: Transactions can be posted to a suspended ledger account
+      href: procurement/canceled-receipts-posted.md
+    - name: The delivery name isn't synced after changing a purchase order delivery address
+      href: procurement/delivery-name-isnt-synced.md
+    - name: The purchase agreement maximum limit isn't effective on a purchase requisition
+      href: procurement/max-limit-on-requisition.md
+    - name: The Post to charge account in ledger setting isn't turned on
+      href: procurement/post-setting-turned-off.md
+    - name: Trade agreement currency conversion issues
+      href: procurement/trade-agreement-currencies.md
+    - name: Trade agreement conditions aren't applied to imported order lines
+      href: procurement/trade-agreement-not-applied.md
+    - name: Trade agreements can be created from rejected RFQs
+      href: procurement/trade-agreements-from-rejected-rfq.md
+    - name: Unit prices on purchase orders aren't calculated based on the unit conversion
+      href: procurement/po-unit-prices-not-calculated.md
+    - name: You can only complete a purchase order action for fully distributed line numbers
+      href: procurement/action-requires-full-distribution.md
+    - name: You can't add the Price unit field to the Purchase agreement page
+      href: procurement/personalize-purchase-agreement-price.md
+    - name: You can't consolidate multiple product receipts into a single purchase order
+      href: procurement/consolidate-multiple-receipts.md
+    - name: You can't invoice a customer-facing sales order
+      href: procurement/cant-invoice-original-sales-order-direct-delivery-purchase-order.md
+- name: Product management
+  items:
+    - name: Integers incorrectly rounded when product configuration models are calculated
+      href: products/integers-incorrectly-rounded.md
+    - name: Item text is overwritten when a product is configured on a sales order line
+      href: products/text-overwritten-configured-item.md
+    - name: Purchase orders don't show translated product text
+      href: products/purchase-orders-not-show-translated-product-text.md
+    - name: You can't delete a released product
+      href: products/cant-delete-released-prod.md
+    - name: You can't apply a template to create a released product
+      href: products/cant-apply-template-create-released-product.md
+    - name: You can't import an item by using the Released products V2 entity
+      href: products/cannot-import-item-with-released-products-v-2-entity.md
+- name: Manufacturing and Production
+  items:
+    - name: Backflush costing calculation error during inventory closing
+      href: production/backflush-costing-calculation-error.md
+    - name: Batch number is cleared on selecting a new lot ID
+      href: production/batch-number-cleared-new-lot-id-selected.md
+    - name: Can't end a production order because of a BOM consumptionCost value error
+      href: production/bom-consumption-cost-error.md
+    - name: Can't insert bill of material and route when creating a new production order
+      href: production/cant-insert-bom-route-number.md
+    - name: Can't trace serial numbers of finished goods against those of consumed goods
+      href: production/trace-finished-goods-consumed-goods.md
+    - name: Can't reserve or release work because processes are currently being used
+      href: production/warehouse-management-processes-used.md
+    - name: Error when changing status of production order from Reported as finished to End
+      href: production/production-order-status-error.md
+    - name: Error when the Report as finished journal is posted
+      href: production/quantity-ordered-cant-reduced-post-report-as-finished-journal.md
+    - name: Flushing principle settings on BOM lines aren't respected
+      href: production/flushing-principle-not-respected-bom-lines.md
+    - name: Item RM can't be fully reserved when a production order is released
+      href: production/item-rm-not-reserved.md
+    - name: Late selection not respected when resetting production orders via batch job
+      href: production/late-selection-not-respected-reset-status-recurring-batch-job.md
+    - name: Previous in-progress jobs are ended when reporting partial quantity on last job
+      href: production/in-progress-jobs-ended.md
+    - name: Production orders aren't shown on the Marking page
+      href: production/production-orders-marking-page.md
+    - name: Report as finished update fails with a missing quantity error
+      href: production/missing-report-finished-quantity.md
+    - name: Resource name isn't updated after changing a worker name in the address book
+      href: production/resource-name-not-updated.md
+    - name: Total good quantity error when trying to end a production order
+      href: production/total-good-quantity-order-error.md
+    - name: The warehouse in the picking list journal is not updated on a BOM line
+      href: production/picking-list-warehouse-not-updated-bom-line.md
+    - name: Users can unpick material lines for products that have been reported as finished
+      href: production/unpick-raw-material-lines-for-reported-as-finished-products.md
+- name: Rebate management
+  items:
+    - name: Cumulating customer rebates using item rebate groups fails
+      href: rebates/cumulate-customer-rebates-fails.md
+- name: Sales order processing
+  items:
+    - name: A bundle item isn't supported in an intercompany process
+      href: sales/bundle-item-intercompany-process.md
+    - name: Can't cancel an intercompany purchase order that's linked to a sales order
+      href: sales/cancel-intercompany-purchase-order.md
+    - name: Can't change the sales quantity of a service item on a sales quotation line
+      href: sales/service-item-sales-quantity.md
+    - name: If two trade agreements exist for overlapping dates, the same one is always selected
+      href: sales/same-trade-agreement-selected.md
+    - name: Reservations cannot be removed when canceling an order
+      href: sales/cancel-order-reservations-not-removed.md
+    - name: Sales update history cleanup job fails or has performance issues
+      href: sales/sales-update-history-cleanup-job-performance-issues.md
+    - name: System administrators can't clear order holds because they aren't authorized
+      href: sales/system-administrator-cant-clear-order-holds.md
+    - name: Tax information isn't updated if location on a sales order header is changed
+      href: sales/tax-information-not-updated.md
+    - name: The quantity can't be reduced when canceling sales order
+      href: sales/quantity-cannot-be-reduced.md
+- name: Transportation management
+  items:
+    - name: Can only add the main account as the credit account for reconciliation reasons
+      href: transportation/add-only-main-account-as-credit-reconciliation-reason.md
+- name: Warehouse management
+  items:
+    - name: Warehouse mobile app
       items:
-        - name: An update conflict occurs when the inventory valuation method is either standard cost or moving average
-          href: costing/update-conflict-standard-cost-moving-average-inventory-valuation.md
-        - name: Functional gaps between inventory value/aging reports and their storage versions
-          href: costing/function-gaps-storage-reports.md
-        - name: Inventory aging report discrepancies
-          href: costing/aging-report-discrepancies.md
-        - name: Missing field settings on copying item model groups to another legal entity
-          href: costing/missing-field-settings-copy-item-model-groups.md
-        - name: Purchase accrual posted with amount zero for zero-value product receipt
-          href: costing/posting-to-purchase-accrual-with-zero-if-posted-receipt-has-zero.md
-        - name: Physically received purchase orders don't appear in the inventory closing report
-          href: costing/check-open-quantities-not-show-physically-received-purchase-orders.md
-        - name: System times out when generating historical or deleted inventory value reports
-          href: costing/system-times-out-when-generating-historical-or-deleted-inventory-value-reports.md
-        - name: The Indirect costs in process report includes deleted production orders
-          href: costing/indirect-costs-process-report-has-deleted-orders.md
-        - name: There is no From date on the Active prices tab of the Item price page
-          href: costing/no-from-date-active-prices-tab-item-price.md
-        - name: Warnings or errors on changing ledger period status without closing inventory
-          href: costing/errors-change-ledger-period-without-closing.md
-    - name: Inventory management
-      items:
-        - name: Inventory journal workflow never completes and the journal can't be processed
-          href: inventory/cant-post-inventory-journal.md
-        - name: Inventory journal workflow conditions apply at the journal level, not line level
-          href: inventory/journal-workflow-conditions.md
-        - name: Maximum number of decimals for the stock keeping unit is 0
-          href: inventory/maximum-number-of-decimals-for-stock-keeping-unit-is-0.md
-        - name: Multiple inventory transactions for batch numbers without "On physical update"
-          href: inventory/multiple-inventory-transactions-on-physical-update-disabled.md
-        - name: Picking list report doesn't show new notes that are attached to a journal
-          href: inventory/picking-list-report-not-show-new-notes-attached-to-journal.md
-        - name: Quantity on a started quarantine order doesn't update when the order is split
-          href: inventory/quantity-started-quarantine-order-not-updated.md
-        - name: Reversing a report as finished creates an unexpected open transaction
-          href: inventory/reverse-report-as-finished-creates-open-transaction.md
-        - name: The unit and unit quantity aren't working correctly in the inventory journal
-          href: inventory/journal-unit-quantity-incorrect.md
-        - name: The filter pane on the On-hand list page doesn't work as expected
-          href: inventory/on-hand-filter-unexpected.md
-        - name: The Last tested date field isn't updated when multiple quality orders are created
-          href: inventory/last-tested-date-not-updated.md
-        - name: When a catch-weight quantity is split, minimum quantity is used instead of nominal quantity
-          href: inventory/minimum-quantity-pick-qty-catch-weight-quantity-split-into-batches.md
-        - name: You can't find the "Workflow" drop-down dialog box for inventory journals
-          href: inventory/cant-find-workflow-dropdown.md
-        - name: Your inventory journal is locked and the workflow batch job doesn't work
-          href: inventory/inventory-journal-locked-workflow.md
-    - name: Master planning
-      items:
-        - name: BOM explosion behaves differently for firmed and estimated production orders
-          href: planning/bom-explosion-works-differently.md
-        - name: Can't update the forecasted unit cost when you import demand forecast records
-          href: planning/unable-to-update-forecasted-unit-cost.md
-        - name: Can't remove the warehouse demand forecast dimension from forecast lines
-          href: planning/warehouse-removal-from-forest-lines-not-work.md
-        - name: Directly derived firmed orders are processed by an in-review workflow
-          href: planning/firmed-directly-derived-orders-processed-by-in-review-workflow.md
-        - name: Item can't have a BOM or formula
-          href: planning/item-cannot-have-bom-formula.md
-        - name: Master planning generates planned orders for phantom products
-          href: planning/planned-orders-created-for-phantom-products-master-planning.md
-        - name: Master planning is scheduling more than the available capacity
-          href: planning/master-planning-not-respect-capacity-limitations.md
-        - name: Not enough capacity could be found
-          href: planning/not-enough-capacity-error.md
-        - name: Parameters for master plan do not exist
-          href: planning/no-parameters-for-master-plan.md
-        - name: Product is on hold for transactions
-          href: planning/product-is-on-hold.md
-        - name: Planned orders take a long time to update
-          href: planning/planned-order-long-update.md
-        - name: Planned orders are generated for in-stock with production orders
-          href: planning/planned-orders-in-stock-items.md
-        - name: Planned purchase order created when a purchase exists within negative days
-          href: planning/planning-optimization-creates-planned-purchase-order-negative-days.md
-        - name: Production scheduling doesn't consider the safety margins
-          href: planning/production-schedule-not-consider-safety-margins.md
-        - name: The system can't find a planned order when operating on multiple orders
-          href: planning/planned-order-not-exist.md
-        - name: The delay value isn't updated when you reschedule a planned order
-          href: planning/delay-value-not-updated.md
-        - name: The planned production order must be scheduled before it can be firmed
-          href: planning/planned-order-must-be-scheduled.md
-        - name: The selected formula number is not approved for a batch order.
-          href: planning/selected-formula-not-approved.md
-        - name: You receive an error when running the built-in master planning engine
-          href: planning/deprecated-master-planning-error.md
-        - name: You can't filter master planning items by their related coverage group values
-          href: planning/cant-filter-master-planning-batch-items-by-coverage-group-values.md
-        - name: You're prompted to save item coverage settings even though you made no changes
-          href: planning/prompted-to-save-item-coverage-settings-without-changes.md
-        - name: Vendor code isn't authorized for a specific product and date
-          href: planning/vendor-code-not-authorized.md
-        - name: Vendor is not specified when firming planned orders
-          href: planning/vendor-not-specified.md
-    - name: Purchase order, procurement, and sourcing
-      items:
-        - name: A purchase order receipt doesn't include all charges
-          href: procurement/po-receipt-missing-charges.md
-        - name: An exception occurs during vendor invoice posting
-          href: procurement/invocation-target-exception.md
-        - name: Accounting distributions are either over- or under-distributed
-          href: procurement/over-under-distribution.md
-        - name: A vendor rebate isn't cumulated based on invoices
-          href: procurement/vendor-rebate-not-cumulated.md
-        - name: A product receipt voucher number is consumed even when not generating a voucher
-          href: procurement/voucher-number-consumed.md
-        - name: Can't add a line to a purchase requisition after requesting a change
-          href: procurement/cant-add-line-to-purchase-requisition-after-change.md
-        - name: Can't change the effective date for an approved vendor
-          href: procurement/approved-vendor-effective-date.md
-        - name: Canceled purchase orders appear in the draft list in the workspace
-          href: procurement/canceled-po-in-draft-list.md
-        - name: Cancelling delivery remainder moves purchase order to a Confirmed state
-          href: procurement/change-management-canceled-remainder.md
-        - name: Default tax group and cash discount aren't filled in from the invoice account
-          href: procurement/default-tax-group-and-discount.md
-        - name: Error "Object reference not set" occurs during purchase order confirmation
-          href: procurement/object-reference-not-set.md
-        - name: Imported purchase orders show incorrect line numbers
-          href: procurement/line-number-increments.md
-        - name: Purchase order line data discrepancies
-          href: procurement/purchase-order-line-data-issues.md
-        - name: Purchase orders don't reflect the language settings of the legal entity
-          href: procurement/purchase-order-language-not-reflect-legal-entity-settings.md
-        - name: Transactions can be posted to a suspended ledger account
-          href: procurement/canceled-receipts-posted.md
-        - name: The delivery name isn't synced after changing a purchase order delivery address
-          href: procurement/delivery-name-isnt-synced.md
-        - name: The purchase agreement maximum limit isn't effective on a purchase requisition
-          href: procurement/max-limit-on-requisition.md
-        - name: The Post to charge account in ledger setting isn't turned on
-          href: procurement/post-setting-turned-off.md
-        - name: Trade agreement currency conversion issues
-          href: procurement/trade-agreement-currencies.md
-        - name: Trade agreement conditions aren't applied to imported order lines
-          href: procurement/trade-agreement-not-applied.md
-        - name: Trade agreements can be created from rejected RFQs
-          href: procurement/trade-agreements-from-rejected-rfq.md
-        - name: Unit prices on purchase orders aren't calculated based on the unit conversion
-          href: procurement/po-unit-prices-not-calculated.md
-        - name: You can only complete a purchase order action for fully distributed line numbers
-          href: procurement/action-requires-full-distribution.md
-        - name: You can't add the Price unit field to the Purchase agreement page
-          href: procurement/personalize-purchase-agreement-price.md
-        - name: You can't consolidate multiple product receipts into a single purchase order
-          href: procurement/consolidate-multiple-receipts.md
-        - name: You can't invoice a customer-facing sales order
-          href: procurement/cant-invoice-original-sales-order-direct-delivery-purchase-order.md
-    - name: Product management
-      items:
-        - name: Integers incorrectly rounded when product configuration models are calculated
-          href: products/integers-incorrectly-rounded.md
-        - name: Item text is overwritten when a product is configured on a sales order line
-          href: products/text-overwritten-configured-item.md
-        - name: Purchase orders don't show translated product text
-          href: products/purchase-orders-not-show-translated-product-text.md
-        - name: You can't delete a released product
-          href: products/cant-delete-released-prod.md
-        - name: You can't apply a template to create a released product
-          href: products/cant-apply-template-create-released-product.md
-        - name: You can't import an item by using the Released products V2 entity
-          href: products/cannot-import-item-with-released-products-v-2-entity.md
-    - name: Manufacturing and Production
-      items:
-        - name: Backflush costing calculation error during inventory closing
-          href: production/backflush-costing-calculation-error.md
-        - name: Batch number is cleared on selecting a new lot ID
-          href: production/batch-number-cleared-new-lot-id-selected.md
-        - name: Can't end a production order because of a BOM consumptionCost value error
-          href: production/bom-consumption-cost-error.md
-        - name: Can't insert bill of material and route when creating a new production order
-          href: production/cant-insert-bom-route-number.md
-        - name: Can't trace serial numbers of finished goods against those of consumed goods
-          href: production/trace-finished-goods-consumed-goods.md
-        - name: Can't reserve or release work because processes are currently being used
-          href: production/warehouse-management-processes-used.md
-        - name: Error when changing status of production order from Reported as finished to End
-          href: production/production-order-status-error.md
-        - name: Error when the Report as finished journal is posted
-          href: production/quantity-ordered-cant-reduced-post-report-as-finished-journal.md
-        - name: Flushing principle settings on BOM lines aren't respected
-          href: production/flushing-principle-not-respected-bom-lines.md
-        - name: Item RM can't be fully reserved when a production order is released
-          href: production/item-rm-not-reserved.md
-        - name: Late selection not respected when resetting production orders via batch job
-          href: production/late-selection-not-respected-reset-status-recurring-batch-job.md
-        - name: Previous in-progress jobs are ended when reporting partial quantity on last job
-          href: production/in-progress-jobs-ended.md
-        - name: Production orders aren't shown on the Marking page
-          href: production/production-orders-marking-page.md
-        - name: Report as finished update fails with a missing quantity error
-          href: production/missing-report-finished-quantity.md
-        - name: Resource name isn't updated after changing a worker name in the address book
-          href: production/resource-name-not-updated.md
-        - name: Total good quantity error when trying to end a production order
-          href: production/total-good-quantity-order-error.md
-        - name: The warehouse in the picking list journal is not updated on a BOM line
-          href: production/picking-list-warehouse-not-updated-bom-line.md
-        - name: Users can unpick material lines for products that have been reported as finished
-          href: production/unpick-raw-material-lines-for-reported-as-finished-products.md
-    - name: Rebate management
-      items:
-        - name: Cumulating customer rebates using item rebate groups fails
-          href: rebates/cumulate-customer-rebates-fails.md
-    - name: Sales order processing
-      items:
-        - name: A bundle item isn't supported in an intercompany process
-          href: sales/bundle-item-intercompany-process.md
-        - name: Can't cancel an intercompany purchase order that's linked to a sales order
-          href: sales/cancel-intercompany-purchase-order.md
-        - name: Can't change the sales quantity of a service item on a sales quotation line
-          href: sales/service-item-sales-quantity.md
-        - name: If two trade agreements exist for overlapping dates, the same one is always selected
-          href: sales/same-trade-agreement-selected.md
-        - name: Reservations cannot be removed when canceling an order
-          href: sales/cancel-order-reservations-not-removed.md
-        - name: Sales update history cleanup job fails or has performance issues
-          href: sales/sales-update-history-cleanup-job-performance-issues.md
-        - name: System administrators can't clear order holds because they aren't authorized
-          href: sales/system-administrator-cant-clear-order-holds.md
-        - name: Tax information isn't updated if location on a sales order header is changed
-          href: sales/tax-information-not-updated.md
-        - name: The quantity can't be reduced when canceling sales order
-          href: sales/quantity-cannot-be-reduced.md
-    - name: Transportation management
-      items:
-        - name: Can only add the main account as the credit account for reconciliation reasons
-          href: transportation/add-only-main-account-as-credit-reconciliation-reason.md
-    - name: Warehouse management
-      items:
-        - name: Warehouse mobile app
-          items:
-            - name: Trust anchor for certification path not found when setting up app connection
-              href: warehousing/certification-path-app-connection-error.md
-            - name: Trust anchor for certification path not found when updating and migrating to WMS
-              href: warehousing/upgrade-migration-certification-path-error.md
-            - name: Unexpected difference between request and session data during testing
-              href: warehousing/request-session-data-difference.md
-        - name: An error occurs when choosing the location during picking list registration
-          href: warehousing/error-cannot-update-quantity-with-new-dimensions.md
-        - name: Auto-reservation prompt for batch number is shown even with available inventory
-          href: warehousing/auto-reservation-prompt-shown.md
-        - name: Can only use administrator role to access the mobile device app emulator
-          href: warehousing/mobile-app-emulator-administrator.md
-        - name: Can't create load line for return sales order due to invalid inventory dimensions
-          href: warehousing/return-order-invalid-dimensions.md
-        - name: Can't release a load for partial quantity with batch-above reservation hierarchy
-          href: warehousing/specify-dimensions-above-location.md
-        - name: Can't cancel a packing slip after it's posted from a sales order
-          href: warehousing/cancel-posted-packing-slip.md
-        - name: Can't confirm a shipment because quantity exceeds overdelivery percentage
-          href: warehousing/quantity-exceeds-overdelivery-percentage.md
-        - name: Can't re-release a partially shipped load to the warehouse
-          href: warehousing/rerelease-partially-shipped-load.md
-        - name: Can't confirm a shipment because quantity exceeds underdelivery percentage
-          href: warehousing/quantity-exceeds-underdelivery-percentage.md
-        - name: Can't select Inventory status change in the Work type column
-          href: warehousing/inventory-status-change-work-type.md
-        - name: Can't unreserve inventory on a sales order line
-          href: warehousing/unreserve-inventory-sales-line.md
-        - name: Can't update a load line because the released quantity would be negative
-          href: warehousing/released-qty-cannot-be-negative.md
-        - name: Canceled product receipts don't update transactions status to registered
-          href: warehousing/canceled-product-receipts-not-updated-to-registered.md
-        - name: Can't post packing slip for a stopped a sales order line
-          href: warehousing/cant-post-packing-slip-for-stopped-sales-order-line.md
-        - name: Can't move license plate if serial number has Blank issue and Blank receipt allowed
-          href: warehousing/cant-move-license-plate.md
-        - name: Can't move inventory to a location that is license plate-controlled
-          href: warehousing/cant-reduce-picked-quantities.md
-        - name: Can't use the Warehouse Management mobile app to do partial picking
-          href: warehousing/partial-picking-warehouse-app.md
-        - name: Cluster profile can't be found
-          href: warehousing/cluster-profile-not-found-error.md
-        - name: Delivery note correction can't be processed
-          href: warehousing/delivery-note-correction.md
-        - name: Direct delivery not able to process for WMS-enabled warehouse
-          href: warehousing/direct-delivery-wms-enabled-warehouse.md
-        - name: Decimal rounding of the physical updating quantity is incorrect
-          href: warehousing/decimal-rounding-of-physical-updating-quantity-unit-incorrect-error.md
-        - name: Enable inventory status change for partial quantity work
-          href: warehousing/partial-quantity-inventory-status.md
-        - name: Error when confirming shipment after creating a transfer order for a serial item
-          href: warehousing/dimension-location-left-blank.md
-        - name: Inventory types are being mixed when using a dock management profile
-          href: warehousing/dock-management-inventory-mixing.md
-        - name: Invalid license plate error when scanning license plate ID in the mobile app
-          href: warehousing/invalid-license-plate.md
-        - name: Inventory owner not allowed when processing movements in the warehouse app
-          href: warehousing/inventory-owner-not-allowed.md
-        - name: Invalid license plate or location error when scanning in the mobile app
-          href: warehousing/license-plate-location-invalid.md
-        - name: Issues moving from basic warehousing to advanced warehousing
-          href: warehousing/move-basic-to-advanced-warehousing.md
-        - name: License plate quantity is not valid when registering inbound orders
-          href: warehousing/license-plate-quantity-not-valid.md
-        - name: License plate specification error when confirming shipment for a transfer order
-          href: warehousing/license-plate-specified-location.md
-        - name: Load weight error and update canceled when processing work between locations
-          href: warehousing/load-weight-positive-numbers.md
-        - name: Location profile disallows negative inventory, but negative on-hand is permitted
-          href: warehousing/location-profile-set.md
-        - name: Multiple SKU option doesn't evaluate multiple location directive actions
-          href: warehousing/evaluate-multiple-location-directive-actions.md
-        - name: Mixed license plate receiving doesn't work for any disposition code but Credit
-          href: warehousing/mixed-license-plate-receiving.md
-        - name: Not enough work found for cluster when using System directed cluster picking
-          href: warehousing/not-enough-work-for-cluster.md
-        - name: One of the lines is already on a load
-          href: warehousing/line-already-on-load.md
-        - name: Order status remains Partially released even after the sales order is invoiced
-          href: warehousing/order-status-partially-released.md
-        - name: Only one label is printed for multiple work headers on a single receipt
-          href: warehousing/one-label-printed-for-multiple-work-headers-receipt.md
-        - name: Print a delivery note or packing content by warehouse or site
-          href: warehousing/print-documents-by-warehouse.md
-        - name: Picking work isn't generated immediately when outbound load is released
-          href: warehousing/generate-work-immediately-load-release.md
-        - name: Packing station doesn't show product notes
-          href: warehousing/packing-station-not-show-product-notes.md
-        - name: Physical remaining quantity in the unit must be other than zero
-          href: warehousing/physical-remaining-quantity-unit-must-other-than-zero.md
-        - name: Picked quantity is not sufficient during packing slip generation
-          href: warehousing/picked-quantity-not-sufficient-error.md
-        - name: Picking work can't be unblocked because of unfinished replenishment work
-          href: warehousing/blocked-unfinished-replenishment-work.md
-        - name: Quantity exceeds over-delivery percentage during packing slip generation
-          href: warehousing/quantity-exceeds-over-pack-slip.md
-        - name: Quantity that you are trying to update exceeds the quantity received/delivered
-          href: warehousing/quantity-exceeds-received-delivered-quantity.md
-        - name: Quantity exceeds under-delivery percentage during packing slip generation
-          href: warehousing/quantity-exceeds-under-pack-slip.md
-        - name: Quantity not valid when there's picking work with multiple LPs in one location
-          href: warehousing/quantity-invalid-multiple-license-plates.md
-        - name: Quantity is not valid when performing a split pick across multiple batches
-          href: warehousing/quantity-invalid-split-pick.md
-        - name: System can't update inventory quantity because of insufficient transactions
-          href: warehousing/inventory-quantity-insufficient-transactions.md
-        - name: System can't make reservations because 0.00 are available in the inventory
-          href: warehousing/reservations-0-inventory-available.md
-        - name: Sales order could not be released with outbound warehouse operations
-          href: warehousing/sales-order-not-released.md
-        - name: Shipment for load has been confirmed, but no lines are posted
-          href: warehousing/shipment-confirmed-no-posting.md
-        - name: Slotting templates don't consider on-hand inventory for batch-above items
-          href: warehousing/slotting-templates-inventory-batch-above.md
-        - name: The last closed work line must be a put
-          href: warehousing/the-last-closed-work-link-must-be-a-put-error.md
-        - name: The weight fields on load lines don't match the weight fields on the load
-          href: warehousing/weight-fields-on-load-lines-dont-match-weight-fields-error.md
-        - name: Unconfirmed purchase orders are confirmed after running Update product receipts
-          href: warehousing/unconfirmed-purchase-orders-confirmed.md
-        - name: Wave isn't eligible for cleanup
-          href: warehousing/wave-is-not-eligible.md
-        - name: Weight must be positive
-          href: warehousing/weight-must-be-positive-error.md
-        - name: Work can't be cancelled because it is blocked
-          href: warehousing/work-cannot-be-canceled-blocked.md
-        - name: Work can't be canceled because of status
-          href: warehousing/work-cannot-be-canceled-status.md
-        - name: Work isn't blocked
-          href: warehousing/work-is-not-blocked.md
-        - name: Work remains blocked
-          href: warehousing/work-remains-blocked.md
-        - name: You can't cancel work that is on a user
-          href: warehousing/you-cannot-cancel-work-on-user-error.md
-        - name: You can't confirm a shipment because of an issue with the calendar
-          href: warehousing/calendar-type-requires-appointment-checked-in-out-error.md
-        - name: You can't confirm a shipment because of incomplete or missing work
-          href: warehousing/shipment-for-load-could-not-confirmed-all-work-must-complete.md
-        - name: You can't confirm a shipment because items haven't been picked
-          href: warehousing/some-items-not-picked-moved-to-final-shipping-location.md
-        - name: You can't confirm a shipment because there is zero quantity
-          href: warehousing/picked-quantity-is-zero.md
-        - name: You can't confirm a shipment because customer is on hold
-          href: warehousing/shipment-cannot-be-confirmed-customer-is-on-hold-error.md
-        - name: You can't confirm a shipment because load lines have quantity zero
-          href: warehousing/load-line-quantity-is-zero.md
+        - name: Trust anchor for certification path not found when setting up app connection
+          href: warehousing/certification-path-app-connection-error.md
+        - name: Trust anchor for certification path not found when updating and migrating to WMS
+          href: warehousing/upgrade-migration-certification-path-error.md
+        - name: Unexpected difference between request and session data during testing
+          href: warehousing/request-session-data-difference.md
+    - name: An error occurs when choosing the location during picking list registration
+      href: warehousing/error-cannot-update-quantity-with-new-dimensions.md
+    - name: Auto-reservation prompt for batch number is shown even with available inventory
+      href: warehousing/auto-reservation-prompt-shown.md
+    - name: Can only use administrator role to access the mobile device app emulator
+      href: warehousing/mobile-app-emulator-administrator.md
+    - name: Can't create load line for return sales order due to invalid inventory dimensions
+      href: warehousing/return-order-invalid-dimensions.md
+    - name: Can't release a load for partial quantity with batch-above reservation hierarchy
+      href: warehousing/specify-dimensions-above-location.md
+    - name: Can't cancel a packing slip after it's posted from a sales order
+      href: warehousing/cancel-posted-packing-slip.md
+    - name: Can't confirm a shipment because quantity exceeds overdelivery percentage
+      href: warehousing/quantity-exceeds-overdelivery-percentage.md
+    - name: Can't re-release a partially shipped load to the warehouse
+      href: warehousing/rerelease-partially-shipped-load.md
+    - name: Can't confirm a shipment because quantity exceeds underdelivery percentage
+      href: warehousing/quantity-exceeds-underdelivery-percentage.md
+    - name: Can't select Inventory status change in the Work type column
+      href: warehousing/inventory-status-change-work-type.md
+    - name: Can't unreserve inventory on a sales order line
+      href: warehousing/unreserve-inventory-sales-line.md
+    - name: Can't update a load line because the released quantity would be negative
+      href: warehousing/released-qty-cannot-be-negative.md
+    - name: Canceled product receipts don't update transactions status to registered
+      href: warehousing/canceled-product-receipts-not-updated-to-registered.md
+    - name: Can't post packing slip for a stopped a sales order line
+      href: warehousing/cant-post-packing-slip-for-stopped-sales-order-line.md
+    - name: Can't move license plate if serial number has Blank issue and Blank receipt allowed
+      href: warehousing/cant-move-license-plate.md
+    - name: Can't move inventory to a location that is license plate-controlled
+      href: warehousing/cant-reduce-picked-quantities.md
+    - name: Can't use the Warehouse Management mobile app to do partial picking
+      href: warehousing/partial-picking-warehouse-app.md
+    - name: Cluster profile can't be found
+      href: warehousing/cluster-profile-not-found-error.md
+    - name: Delivery note correction can't be processed
+      href: warehousing/delivery-note-correction.md
+    - name: Direct delivery not able to process for WMS-enabled warehouse
+      href: warehousing/direct-delivery-wms-enabled-warehouse.md
+    - name: Decimal rounding of the physical updating quantity is incorrect
+      href: warehousing/decimal-rounding-of-physical-updating-quantity-unit-incorrect-error.md
+    - name: Enable inventory status change for partial quantity work
+      href: warehousing/partial-quantity-inventory-status.md
+    - name: Error when confirming shipment after creating a transfer order for a serial item
+      href: warehousing/dimension-location-left-blank.md
+    - name: Inventory types are being mixed when using a dock management profile
+      href: warehousing/dock-management-inventory-mixing.md
+    - name: Invalid license plate error when scanning license plate ID in the mobile app
+      href: warehousing/invalid-license-plate.md
+    - name: Inventory owner not allowed when processing movements in the warehouse app
+      href: warehousing/inventory-owner-not-allowed.md
+    - name: Invalid license plate or location error when scanning in the mobile app
+      href: warehousing/license-plate-location-invalid.md
+    - name: Issues moving from basic warehousing to advanced warehousing
+      href: warehousing/move-basic-to-advanced-warehousing.md
+    - name: License plate quantity is not valid when registering inbound orders
+      href: warehousing/license-plate-quantity-not-valid.md
+    - name: License plate specification error when confirming shipment for a transfer order
+      href: warehousing/license-plate-specified-location.md
+    - name: Load weight error and update canceled when processing work between locations
+      href: warehousing/load-weight-positive-numbers.md
+    - name: Location profile disallows negative inventory, but negative on-hand is permitted
+      href: warehousing/location-profile-set.md
+    - name: Multiple SKU option doesn't evaluate multiple location directive actions
+      href: warehousing/evaluate-multiple-location-directive-actions.md
+    - name: Mixed license plate receiving doesn't work for any disposition code but Credit
+      href: warehousing/mixed-license-plate-receiving.md
+    - name: Not enough work found for cluster when using System directed cluster picking
+      href: warehousing/not-enough-work-for-cluster.md
+    - name: One of the lines is already on a load
+      href: warehousing/line-already-on-load.md
+    - name: Order status remains Partially released even after the sales order is invoiced
+      href: warehousing/order-status-partially-released.md
+    - name: Only one label is printed for multiple work headers on a single receipt
+      href: warehousing/one-label-printed-for-multiple-work-headers-receipt.md
+    - name: Print a delivery note or packing content by warehouse or site
+      href: warehousing/print-documents-by-warehouse.md
+    - name: Picking work isn't generated immediately when outbound load is released
+      href: warehousing/generate-work-immediately-load-release.md
+    - name: Packing station doesn't show product notes
+      href: warehousing/packing-station-not-show-product-notes.md
+    - name: Physical remaining quantity in the unit must be other than zero
+      href: warehousing/physical-remaining-quantity-unit-must-other-than-zero.md
+    - name: Picked quantity is not sufficient during packing slip generation
+      href: warehousing/picked-quantity-not-sufficient-error.md
+    - name: Picking work can't be unblocked because of unfinished replenishment work
+      href: warehousing/blocked-unfinished-replenishment-work.md
+    - name: Quantity exceeds over-delivery percentage during packing slip generation
+      href: warehousing/quantity-exceeds-over-pack-slip.md
+    - name: Quantity that you are trying to update exceeds the quantity received/delivered
+      href: warehousing/quantity-exceeds-received-delivered-quantity.md
+    - name: Quantity exceeds under-delivery percentage during packing slip generation
+      href: warehousing/quantity-exceeds-under-pack-slip.md
+    - name: Quantity not valid when there's picking work with multiple LPs in one location
+      href: warehousing/quantity-invalid-multiple-license-plates.md
+    - name: Quantity is not valid when performing a split pick across multiple batches
+      href: warehousing/quantity-invalid-split-pick.md
+    - name: System can't update inventory quantity because of insufficient transactions
+      href: warehousing/inventory-quantity-insufficient-transactions.md
+    - name: System can't make reservations because 0.00 are available in the inventory
+      href: warehousing/reservations-0-inventory-available.md
+    - name: Sales order could not be released with outbound warehouse operations
+      href: warehousing/sales-order-not-released.md
+    - name: Shipment for load has been confirmed, but no lines are posted
+      href: warehousing/shipment-confirmed-no-posting.md
+    - name: Slotting templates don't consider on-hand inventory for batch-above items
+      href: warehousing/slotting-templates-inventory-batch-above.md
+    - name: The last closed work line must be a put
+      href: warehousing/the-last-closed-work-link-must-be-a-put-error.md
+    - name: The weight fields on load lines don't match the weight fields on the load
+      href: warehousing/weight-fields-on-load-lines-dont-match-weight-fields-error.md
+    - name: Unconfirmed purchase orders are confirmed after running Update product receipts
+      href: warehousing/unconfirmed-purchase-orders-confirmed.md
+    - name: Wave isn't eligible for cleanup
+      href: warehousing/wave-is-not-eligible.md
+    - name: Weight must be positive
+      href: warehousing/weight-must-be-positive-error.md
+    - name: Work can't be cancelled because it is blocked
+      href: warehousing/work-cannot-be-canceled-blocked.md
+    - name: Work can't be canceled because of status
+      href: warehousing/work-cannot-be-canceled-status.md
+    - name: Work isn't blocked
+      href: warehousing/work-is-not-blocked.md
+    - name: Work remains blocked
+      href: warehousing/work-remains-blocked.md
+    - name: You can't cancel work that is on a user
+      href: warehousing/you-cannot-cancel-work-on-user-error.md
+    - name: You can't confirm a shipment because of an issue with the calendar
+      href: warehousing/calendar-type-requires-appointment-checked-in-out-error.md
+    - name: You can't confirm a shipment because of incomplete or missing work
+      href: warehousing/shipment-for-load-could-not-confirmed-all-work-must-complete.md
+    - name: You can't confirm a shipment because items haven't been picked
+      href: warehousing/some-items-not-picked-moved-to-final-shipping-location.md
+    - name: You can't confirm a shipment because there is zero quantity
+      href: warehousing/picked-quantity-is-zero.md
+    - name: You can't confirm a shipment because customer is on hold
+      href: warehousing/shipment-cannot-be-confirmed-customer-is-on-hold-error.md
+    - name: You can't confirm a shipment because load lines have quantity zero
+      href: warehousing/load-line-quantity-is-zero.md

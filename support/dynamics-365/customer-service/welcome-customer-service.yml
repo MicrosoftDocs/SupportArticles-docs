@@ -39,7 +39,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Can't delete SLAs or SLA Items in upgrade or manual deletion
-            url: service-level-agreements/sla-deletion-error-messages.md
+            url: import-export-or-upgrade/sla-deletion-error-messages.md
           - text: Can't delete managed solution consisting of SLA-enabled entity
             url: service-level-agreements/unable-delete-sla-enabled-entity-managed-solution.md
           - text: Error when updating a case

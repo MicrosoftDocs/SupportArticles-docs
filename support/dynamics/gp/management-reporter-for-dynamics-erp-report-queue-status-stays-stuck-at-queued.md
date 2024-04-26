@@ -1,9 +1,10 @@
 ---
 title: Report Queue Status window stays stuck at Queued
 description: Discusses potential resolutions for being unable to process reports through Management Reporter.
-ms.reviewer: ryansand, kevogt
+ms.reviewer: theley, ryansand, kevogt
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # Management Reporter for Dynamics ERP Report Queue Status window stays stuck at Queued
 
