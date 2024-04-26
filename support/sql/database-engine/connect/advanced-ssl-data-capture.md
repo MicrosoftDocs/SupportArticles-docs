@@ -94,6 +94,6 @@ An output folder is generated in the current directory and you can use it for fu
 
 The trace might take a minute or two to completely stop since downloading the event logs might take a while.
 
-You can start and stop the trace several times without redoing the configuration steps. Each time it's taken, a new folder is created with a timestamp as part of the folder name. The time corresponds to the time the trace was started.
+You can start and stop the trace several times without redoing the configuration steps. Each time it's taken, a new folder is created with a timestamp as part of the folder name. The time corresponds to the time when the trace starts.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
