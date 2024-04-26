@@ -255,6 +255,8 @@
     href: logs/capture-tcp-dump-windows-node-aks.md
   - name: Capture TCP packets from pod
     href: logs/packet-capture-pod-level.md
+  - name: Capture container dump from Windows node
+    href: logs/capture-container-dump-windows-node-aks.md
 
 - name: Storage
   items:
