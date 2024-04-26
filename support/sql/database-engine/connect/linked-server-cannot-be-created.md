@@ -1,5 +1,5 @@
 ---
-title: Problem connecting higher to lower version of SQL Server using SQL Server Linked Server functionality
+title: Error connecting higher SQL Server version to lower SQL Server version
 description: This article provides a resolution for the challenge of connecting higher to lower version of SQL Server using SQL Server Linked Server functionality.
 ms.date: 04/23/2024
 author: prmadhes-msft
