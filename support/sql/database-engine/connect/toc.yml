@@ -16,7 +16,7 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
-  - name: Errors are seen after upgrading the version of SQL Server
+  - name: Error 10054 occurs in SQL Server after a program upgrade
     href: error-messages-areshown-after-upgrade-sql-version.md
   - name: Client machine can't connect to SQL Server by using SQL authentication
     href: client-machine-cannot-connect-to-sqlserver.md
