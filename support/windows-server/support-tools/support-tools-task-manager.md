@@ -1,5 +1,5 @@
 ---
-title: Using Task Manager to troubleshoot processes
+title: Troubleshoot processess using Task Manager
 description: Describes the features of Task Manager and provides examples of how to apply those features when troubleshooting.
 ms.date: 04/29/2024
 author: Deland-Han
@@ -13,11 +13,11 @@ ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM
 keywords: Task Manager
 ---
 
-# Using Task Manager to troubleshoot processes
+# Troubleshoot processess using Task Manager
 
 This article describes the features of Task Manager and provides examples of how to apply those features when troubleshooting.
 
-_Applies to:_ &nbsp; Windows Server, all supported versions, Windows 11, and Windows 10
+_Applies to:_ &nbsp;  All supported versions of Windows Server and Windows Client
 
 ## Summary
 
@@ -82,4 +82,16 @@ To do this, in any of the process list tabs, right-click the process and then se
 
 :::image type="content" source="media/support-tools-task-manager/task-mgr-create-mem-dump.png" alt-text="Screenshot that shows the Create memory dump file command on the context menu of a process in Task Manager.":::
 
-You can also use Task Manager to analyze the wait chain of a process. For more information, see [Tip of the Day: Wait Chain Analyzer](/archive/blogs/tip_of_the_day/tip-of-the-day-wait-chain-analyzer).
+#### Examining Wait chain Analyzer
+
+Applications that are not responding might be waiting for other processes to finish, or for system resources to become available, before they can continue. You can also use Task Manager to analyze the wait chain of a process.
+
+1. Right-click the executable name of the process you want to analyze, and then click **Analyze Wait Chain**.
+2. If the process is running normally and is not waiting for any other processes, no wait chain information will be displayed.
+    
+    If the process is waiting for another process, a tree organized by dependency on other processes will be displayed.
+    
+> [!NOTE]
+> Many system processes depend on other processes and services for normal operation. Resource Monitor will display wait chain information for any process. If a process entry in the table is not red, if the process status is <STRONG>Running</STRONG>, and if the program is operating normally, no user action should be required. 
+
+3.  If a wait chain tree is displayed, you can end one or more of the processes in the tree by selecting the check boxes next to the process names and clicking **End process**.
