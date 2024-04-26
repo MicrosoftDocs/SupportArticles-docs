@@ -3293,5 +3293,5 @@ items:
       href: ./support-tools/troubleshoot-issues-performance-monitor.md
     - name: Using Process Explorer
       href: ./support-tools/troubleshoot-issues-process-explorer.md
-    - name: Using Task Manager to troubleshoot processes
+    - name: Using Task Manager
       href: ./support-tools/support-tools-task-manager.md
