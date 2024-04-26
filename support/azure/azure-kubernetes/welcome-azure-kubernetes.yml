@@ -170,6 +170,8 @@ landingContent:
             url: ./capture-tcp-dump-windows-node-aks.md
           - text: Capture TCP packets from pod
             url: ./packet-capture-pod-level.md
+          - text: Capture container dump from Windows node
+            url: logs/capture-container-dump-windows-node-aks.md
 
  # Card
   - title: Troubleshoot AKS cluster performance issues
