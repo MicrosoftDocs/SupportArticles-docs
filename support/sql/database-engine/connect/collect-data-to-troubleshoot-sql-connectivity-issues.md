@@ -92,10 +92,10 @@ You can collect the following information about the components of the client com
 > [!NOTE]
 > The workflows are currently more Windows-oriented.
 
-- Does the issue affect only legacy providers, such as Provider=SQLOLEBD or Driver={SQL Server}, and not SQL Native client and later drivers (or vice versa)?
+- Does the issue affect only legacy providers, such as `Provider=SQLOLEBD` or `Driver={SQL Server}`, and not SQL Native client and later drivers (or vice versa)?
 - Does the issue occur in only one application or in multiple applications?
 - Does a UDL file fail when it tries to connect to other SQL Server-based servers, or does it fail to only the server that has the issue?
-- Can you log in to the SQL Server-based server and connect using Management Studio?
+- Can you log in to the SQL Server-based server and connect using SQL Server Management Studio (SSMS)?
 - Does the issue occur only when you use the NETBIOS name of the server and not when you use the FQDN (or vice versa)? Does it work by using the IP address?
 - If the client is running Windows 10 Enterprise Edition, is the Credential Guard feature turned on? If yes, this might affect full delegation scenarios.
 
@@ -143,7 +143,7 @@ If the user is remote to the client application, collect the following details:
 - Are sticky sessions or session affinity being used?
 - Is the user logging in to a terminal server or jump box and accessing the application?
 - Does the issue affect only users in particular organizational units (OUs)?
-- Has the user, client, or server moved to a different OU in Active Directory?
+- Has the user, client, or server moved to a different organizational unit (OU) in Active Directory?
 - Does the issue affect only non-administrative users?
 - Does the issue affect all or only some of the users in a particular domain?
 
@@ -176,7 +176,7 @@ The following set of questions is designed to help you identify the category of 
 ## New or existing issue
 
 - Has the issue always existed (new installation) or did the application function correctly for some time before it recently broke?
-- If the application used to function correctly, what changes were made to the environment? For example, installed updates, upgraded domain controllers, changes in the firewall settings, decommissioned domain controllers, or a move to a different organizational unit (OU) in the domain.
+- If the application used to function correctly, what changes were made to the environment? For example, installed updates, upgraded domain controllers, changes in the firewall settings, decommissioned domain controllers, or a move to a different OU in the domain.
 
 ## See also
 
