@@ -82,16 +82,22 @@ To do this, in any of the process list tabs, right-click the process and then se
 
 :::image type="content" source="media/support-tools-task-manager/task-mgr-create-mem-dump.png" alt-text="Screenshot that shows the Create memory dump file command on the context menu of a process in Task Manager.":::
 
-#### Examining Wait chain Analyzer
+#### Examining a wait chain
 
-Applications that are not responding might be waiting for other processes to finish, or for system resources to become available, before they can continue. You can also use Task Manager to analyze the wait chain of a process.
+Many applications and processes depend on other processes and services for normal operation. An unresponsive process might be waiting for other processes to finish, or for system resources to become available. In such a case, Task Manager can display this information as a *wait chain*&mdash;a tree that shows process dependencies.
 
-1. Right-click the executable name of the process you want to analyze, and then click **Analyze Wait Chain**.
-2. If the process is running normally and is not waiting for any other processes, no wait chain information will be displayed.
-    
-    If the process is waiting for another process, a tree organized by dependency on other processes will be displayed.
-    
-> [!NOTE]
-> Many system processes depend on other processes and services for normal operation. Resource Monitor will display wait chain information for any process. If a process entry in the table is not red, if the process status is <STRONG>Running</STRONG>, and if the program is operating normally, no user action should be required. 
+To see the wait chain of a running process, follow these steps:
 
-3.  If a wait chain tree is displayed, you can end one or more of the processes in the tree by selecting the check boxes next to the process names and clicking **End process**.
+1. Select the **Details** tab, and then select the process. Make sure that the value in the **Status** column is **Running**. You can't view the wait chain of a suspended process.
+1. Right-click the process, and then select **Analyze wait chain**.  
+   If the process is running normally and is not waiting for any other processes, Task Manager displays a message that resembles the following message:
+   > \<*Process*> is running normally.
+
+      > [!NOTE]  
+      > In this message, /<*Process*> is the name of the process that you selected.
+
+   If the process is waiting for another process, Task Manager displays the wait chain tree.
+
+1. If an unresponsive process has a wait chain, you might be able to unblock the process by ending one or more of the dependent processes. To do this, follow these steps:
+   1. In the wait chain tree, select the check box next to any process that you want to end.
+   1. Select **End process**.
