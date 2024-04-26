@@ -15,8 +15,7 @@ If a Windows container fails on a Microsoft Azure Kubernetes Service (AKS) clust
 
 - An AKS cluster. If you don't have an AKS cluster, [create one by using Azure CLI](/azure/aks/kubernetes-walkthrough) or [through the Azure portal](/azure/aks/kubernetes-walkthrough-portal).
 
-- Windows agent pools that are created after `3/13/2024` or a node image that was upgraded to AKS Windows image version `20240316` or a later version. Users can also check whether the AKS Windows CSE script package (version `0.0.39` or later) that's in the `WindowsCSEScriptsPackage` CSE log is also in *C:\AzureData\CustomDataSetupScript.log* in the Windows nodes.
-
+- Windows agent pools that are created after `3/13/2024` or a node image that was upgraded to AKS Windows image version `20240316` or a later version. Alternatively, verify whether the WindowsCSEScriptsPackage version is v0.0.39 or newer, which can be located in `C:\AzureData\CustomDataSetupScript.log` on the Windows nodes.
 ## Step 1: Add annotations metadata to your deployment
 
 Mount a host folder in the container, and add the annotations metadata in order to request that the Windows container store the dump file in a designated folder:
