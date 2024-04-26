@@ -1,7 +1,7 @@
 ---
-title: Collecting data to troubleshoot SQL Server connectivity issues
+title: Collect data to troubleshoot connectivity issues with SQL Server
 description: This article provides questions based on several components that you can use to effectively troubleshoot SQL Server connectivity issues.
-ms.date: 02/27/2024
+ms.date: 04/26/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, prmadhes, v-jayaramanp, haiyingyu
@@ -157,7 +157,7 @@ If the user is remote to the client application, collect the following details:
 
 ## Big picture questions
 
-The following questions can help you understand the category of issue so that you can troubleshoot in the right direction:
+The following set of questions is designed to help you identify the category of the issue, guiding you towards troubleshooting in the right direction:
 
 - Does the issue affect only database connections, or does it also affect web and file share connections? Many cases are reported to the SQL Server team because they occur on the database server. However, it might be possible that the issue isn't related to the database at all and might require more general Windows or Active Directory support.
 - If the user domain, client domain, or server domain are different, what is the trust relationship between them? Is it external, forest, one-way, two-way, or none?
