@@ -5,12 +5,14 @@ author: adelgadohell
 ms.author: adelgadohell
 ms.reviewer: divargas
 ms.topic: troubleshooting
-ms.date: 01/31/2024
+ms.date: 04/15/2024
 ms.service: virtual-machines
 ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.collection: linux
 ---
 # SSH connection to Azure Linux virtual machines fails due to SELinux misconfiguration
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article provides a solution to an issue where the Secure Shell (SSH) connection to an Azure virtual machine (VM) fails because of SELinux misconfiguration.
 

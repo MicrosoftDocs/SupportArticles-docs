@@ -6891,6 +6891,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/virtual-desktop/windows-virtual-desktop-blank-screen.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-virtual-desktop-blank-screen",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-desktop/welcome-virtual-desktop.yml",
+      "redirect_url": "/azure/virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss",
       "redirect_document_id": true
@@ -10716,36 +10726,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/system-center/scsm/disable-diagnostics-connectivity-data.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/scsm/object-type-monitoringclass-not-found.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/scsm/could-not-load-type-error.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/scsm/cannot-impersonate-user-data-source.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/scsm/data-warehouse-base-library-mp-shows-failed-status.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/scsm/cannot-upgrade-to-system-center-2012-r2-service-manager.md",
-      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/dynamics/gp/cannot-create-inventory-valuation-and-gmroi-and-inventory-turns-reports.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
@@ -10921,243 +10901,148 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/system-center/dpm/agent-installation-error-319.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/agent-installation-error-347.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/protection-agent-crashes.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/error-restore-dpmdb-bak-file.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/restore-database-error-470.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/disks-not-enumeratd-fail-to-add.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/dpm-service-crashes-event-917.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/sub-menu-items-show-more-than-once.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/troubleshoot-end-user-recovery-issues.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/host-level-backup-error-0x8007173d.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/configure-cluster-networks.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/hyper-v-backup-fails-error-30112.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/deduplicated-volumes-backup-fails.md",
-      "redirect_url": "/system-center/dpm/dpm-support-issues#the-dedup-file-system-cant-be-protected-to-a-secondary-dpm-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/cannot-run-sql-instance-to-upgrade-dpm.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/consistency-check-error-0x80070005.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/list-dpm-2012-sp1-error-codes.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/configure-smtp-server-information-error-2013.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/upgrade-dpm-vmware-vm-protection.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/cannot-restore-renamed-sharepoint-site.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/cannot-protect-sql-database.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/databases-with-multiple-backslash-characters-fail-restore.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/dpm/fail-to-inventory-ibm-35xx-tape-library.md",
-      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/all-hosts-receive-zero-rating.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/apostrophe-causes-vmm-crash.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/app-controller-basic-troubleshooter.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/cannot-enable-mac-spoofing.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/cannot-upgrade-to-licensed-version.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/convert-between-vhd-vhdx-formats.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/database-error-upgrading-scvmm.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/determine-version-update-rollups.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/enable-vm-protection-error-25035.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/incorrect-agent-status.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/manage-host-fails-error-2911.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/manage-hyper-v-hosts-error-0x8033803b.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/microsoft-application-support-policy.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/network-properties-show-not-connected.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/not-enough-disk-space-run-v2v-conversion.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/p2v-conversion-fails-with-gpt-partitions.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/p2v-conversion-stops-at-40-percent.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/reinstallation-deserialize-object-error.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/reinstall-vmm-agent.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/self-service-user-cannot-view-service.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/server-app-v-agent-custom-actions.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/server-app-v-sequencer-custom-actions.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/shared-nothing-live-migration-error-0x8007274d.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/third-party-applications-support-policy.md",
-      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/system-center/vmm/protected-vm-resync-state.md",
-      "redirect_url": "/troubleshoot/azure/site-recovery/protected-vm-resync-state",
+      "source_path": "support/sql/general/information-mats-sdp.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/system-center/vmm/creating-protection-group-fails.md",
-      "redirect_url": "/troubleshoot/azure/site-recovery/creating-protection-group-fails",
+      "source_path": "support/power-platform/power-apps/dataverse/bulk-operation-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/bulk-deleting-data/bulk-operation-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/dataverse-records-missing-required-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/dataverse-records-missing-required-fields",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/web-api-client-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/web-api-client-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/dataverse-plug-ins-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/plug-in-execution/dataverse-plug-ins-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/cleanup-inherited-access.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/user-permissions/cleanup-inherited-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/client-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/user-permissions/client-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/missing-dependency-on-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/missing-dependency-on-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/circular-dependencies-between-solutions.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/circular-dependencies-between-solutions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/solution-cannot-be-deleted-due-to-dependencies.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/solution-cannot-be-deleted-due-to-dependencies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/you-cannot-delete-this-form-only-fallback.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/you-cannot-delete-this-form-only-fallback",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/solution-checker-enforcement-import-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/solution-checker-enforcement-import-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/changes-not-effective-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/changes-not-effective-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/form-not-appear-after-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/form-not-appear-after-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/newly-added-components-dont-appear.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/newly-added-components-dont-appear",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/cannot-import-solutions-publish-changes.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/cannot-import-solutions-publish-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/concurrent-solution-operation-failures.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/concurrent-solution-operation-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/dataverse-environment-variables.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/dataverse-environment-variables",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/duplicate-security-roles.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/duplicate-security-roles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/entitykey-selected-attributes-already-exists.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/entitykey-selected-attributes-already-exists",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/failure-converting-to-managed-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/full-formxml-expected-to-create-form-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/full-formxml-expected-to-create-form-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/install-failure-priviledge-not-assigned.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/install-failure-priviledge-not-assigned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/label-text-not-displayed.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/label-text-not-displayed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/maximum-row-size-exceeds.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/maximum-row-size-exceeds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/primaryname-attribute-not-found.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/primaryname-attribute-not-found",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/multiple-publisher-shared-component-failure.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/multiple-publisher-shared-component-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/unmanaged-active-layer-created-after-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/unmanaged-active-layer-created-after-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/upgrade-fails-pending-upgrade.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/upgrade-fails-pending-upgrade",
       "redirect_document_id": true
     }
   ]

@@ -30,10 +30,6 @@ items:
       tocHref: /troubleshoot/developer/browsers/
       topicHref: /troubleshoot/developer/browsers/welcome-browsers
 
-    - name: BizTalk Server
-      tocHref: /troubleshoot/developer/biztalk/
-      topicHref: /troubleshoot/developer/biztalk/welcome-biztalk-server
-
     - name: .NET
       tocHref: /troubleshoot/developer/dotnet/
       topicHref: /troubleshoot/developer/dotnet/welcome-dotnet-landing
@@ -144,12 +140,12 @@ items:
       - name: Blob Storage
         tocHref: /troubleshoot/azure/azure-storage/blobs
         topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
+      - name: Data API builder
+        tocHref: /troubleshoot/azure/data-api-builder/
+        topicHref: /troubleshoot/azure/data-api-builder/index.yml
       - name: Files Storage
         tocHref: /troubleshoot/azure/azure-storage/files
         topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
-      - name: Storage Tools and Metrics
-        tocHref: /troubleshoot/azure/azure-storage/common
-        topicHref: /troubleshoot/azure/azure-storage/common/welcome-storage-tool-metric
       - name: Synapse Analytics Apache Spark Pool
         tocHref: /troubleshoot/azure/synapse-analytics/spark
         topicHref: /troubleshoot/azure/synapse-analytics/spark/welcome-synapse-analytics-spark
@@ -177,9 +173,16 @@ items:
       - name: General
         tocHref: /troubleshoot/azure/general/
         topicHref: /troubleshoot/azure/general/welcome-general
-      - name: Microsoft Entra ID
-        tocHref: /troubleshoot/azure/entra-id/
-        topicHref: /troubleshoot/azure/entra-id/welcome-entra-id
+      - name: Entra
+        tocHref: /troubleshoot/azure/entra/
+        topicHref: /troubleshoot/azure/entra/welcome-entra
+        items:
+        - name: Entra ID
+          tocHref: /troubleshoot/azure/entra/entra-id/
+          topicHref: /troubleshoot/azure/entra/entra-id/welcome-entra-id
+        - name: Global Secure Access
+          tocHref: /troubleshoot/azure/entra/global-secure-access/
+          topicHref: /troubleshoot/azure/entra/global-secure-access/welcome-global-secure-access
       - name: Site Recovery
         tocHref: /troubleshoot/azure/site-recovery/
         topicHref: /troubleshoot/azure/site-recovery/welcome-site-recovery
@@ -229,6 +232,9 @@ items:
       tocHref: /troubleshoot/power-platform/
       topicHref: /troubleshoot/power-platform/
       items:
+      - name: Microsoft Dataverse
+        tocHref: /troubleshoot/power-platform/dataverse/
+        topicHref: /troubleshoot/power-platform/dataverse/welcome-dataverse
       - name: AI Builder
         tocHref: /troubleshoot/power-platform/ai-builder/
         topicHref: /troubleshoot/power-platform/ai-builder/welcome-ai-builder
@@ -238,6 +244,9 @@ items:
       - name: Power Automate
         tocHref: /troubleshoot/power-platform/power-automate/
         topicHref: /troubleshoot/power-platform/power-automate/welcome-power-automate
+      - name: Power Pages
+        tocHref: /troubleshoot/power-platform/power-pages/
+        topicHref: /troubleshoot/power-platform/power-pages/welcome-power-pages
 
     - name: Microsoft Dynamics
       tocHref: /troubleshoot/dynamics/
@@ -246,3 +255,7 @@ items:
       - name: Microsoft Dynamics GP
         tocHref: /troubleshoot/dynamics/gp/
         topicHref: /troubleshoot/dynamics/gp/welcome-gp
+
+    - name: Surface
+      tocHref: /troubleshoot/devices/
+      topicHref: /troubleshoot/devices/

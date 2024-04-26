@@ -4,6 +4,7 @@ description: This article provides a workaround for the issue that occurs when y
 ms.date: 08/27/2020
 ms.reviewer: riwaida
 ms.subservice: network-driver
+ms.custom: sap:Network Driver
 ---
 # Wi-Fi connection settings are lost after a Windows Embedded Compact 7 device restarts
 

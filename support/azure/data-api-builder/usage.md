@@ -1,32 +1,26 @@
 ---
-title: Troubleshooting usage
-titleSuffix: Data API builder
-description: Troubleshoot common problems that might occur and their solutions when using the Data API builder for Azure databases.
-author: seesharprun
-ms.author: sidandrews
-ms.reviewer: jerrynixon
+title: Troubleshooting Data API builder usage
+description: Troubleshoot common issues that might occur when you use Data API builder for Azure databases.
+ms.reviewer: jerrynixon, sidandrews, v-weizhu
 ms.service: data-api-builder
-ms.topic: troubleshooting-general
-ms.date: 04/01/2024
+ms.date: 04/16/2024
+ms.custom: sap:Tools and Connectors
 ---
+# Troubleshoot the usage of Data API builder for Azure databases
 
-# Troubleshoot usage in Data API builder for Azure databases
+This article provides solutions to common errors that might occur when you use Data API builder for Azure databases.
 
-This article provides solutions to common problems that might arise when you're using Data API builder.
+## Generic endpoint: HTTP 400 "Bad Request" error
 
-## Generic Endpoint Errors
+The following sections describe the causes and solutions to the HTTP 400 "Bad Request" error.
 
-This section includes generic endpoint errors you might experience.
+### Invalid Data API builder endpoint
 
-### HTTP 400 "Bad Request"
+The base of the URL path component maps to the Data API builder's REST or GraphQL endpoint. When the base of the URL path component doesn't match the value set in the Data API builder's runtime configuration, Data API builder returns an HTTP 400 "Bad Request" error.
 
-The most common endpoint error is for an HTTP 400 "bad request" exception.
+You can configure the root paths for the GraphQL and REST endpoints in the `runtime` section of the Data API builder's runtime configuration. You must use the values to begin the URL paths for the REST and GraphQL endpoints.
 
-#### Invalid Data API builder endpoint
-
-DAB returns an HTTP 400 bad request error when the base of the URL path component doesn't match a value set in your runtime configuration. The base of the URL path component maps to DAB's REST or GraphQL endpoint.
-
-You configure the root path of the GraphQL and REST endpoints in the `runtime` section of DAB's runtime configuration. For example, the following configuration sets `/api` as the root of the REST endpoint and `/graphql` as the root of the GraphQL endpoint:
+For example, the following configuration sets `/api` as the root path of the REST endpoint and `/graphql` as the root of the GraphQL endpoint:
 
 ```json
 "runtime": {
@@ -43,7 +37,7 @@ You configure the root path of the GraphQL and REST endpoints in the `runtime` s
 }
 ```
 
-In other words, the above runtime configuration defines what value you must use at the beginning of your path for the REST and GraphQL endpoints, respectively:
+So, the values you must use at the beginning of the URL paths for the REST and GraphQL endpoints are:
 
 ```https
 /api/<entity>
@@ -54,34 +48,30 @@ In other words, the above runtime configuration defines what value you must use 
 ```
 
 > [!NOTE]
-> When using Data API builder with Static Web Apps using the Database Connections feature, the beginning of the URL path is `/data-api`. You can then add the value for your desired endpoint after that value. For example, `/data-api/api/<entity>` for REST and `/data-api/graphql` for GraphQL.
+> When using Data API builder with the Static Web Apps using the Database Connections feature, the URL path begins with `/data-api`. You can add the value of your desired endpoint after this value. For example, `/data-api/api/<entity>` for REST and `/data-api/graphql` for GraphQL.
 
-#### Static Web Apps Database Connections configuration error
+### Static Web Apps Database Connections configuration issue
 
-When you use Data API builder with the Static Web Apps Database Connections feature, you encountered an HTTP 400 error with the primary message "Response status code doesn't indicate success: 400 (Bad Request)." in the response body:
+When you use Data API builder with the Static Web Apps Database Connections feature, you encounter the error "Response status code does not indicate success: 400 (Bad Request)" in the response body:
 
 ```json
 {"Message":"{\u0022Message\u0022:\u0022Response status code does not indicate success: 400 (Bad Request).\u0022,\u0022ActivityId\u0022:\u0022<GUID>\u0022}","ActivityId":"<GUID>"}
 ```
 
-This error might indicate an issue with the configuration you supplied when linking your database.
+This error might indicate an issue with the configuration you provided when linking your database.
 
-To troubleshoot:
+To resolve this issue, follow these steps:
 
-1. Validate your database credentials work in a tool like Azure Data Studio or SQL Server Management Studio (SSMS).
+1. Validate that your database credentials are valid in a tool like Azure Data Studio or SQL Server Management Studio (SSMS).
 1. Unlink/Relink the connected database.
 
-If you still encounter the same error after troubleshooting, ensure that you select the Exceptions checkbox in the networking page of your Azure Database resource to **"Allow Azure services and resources to access this server"**. The Azure portal's description of this option:
+If you still encounter the error, ensure that you select **Allow Azure services and resources to access this server** for the **Exceptions** on the networking page of your Azure Database resource. This option configures the firewall to allow connections from IP addresses allocated to any Azure service or asset, including connections from other customers' subscriptions.
 
-> This option configures the firewall to allow connections from IP addresses allocated to any Azure service or asset, including connections from the subscriptions of other customers.
+ :::image type="content" source="media/usage/allow-azure-resources-to-access-server.png" alt-text="Screenshot that shows the 'Allow Azure services and resources to access this server' checkbox." lightbox="media/usage/allow-azure-resources-to-access-server.png":::
 
-![Selected checkbox to allow Azure services and resources to access this server](media/allow-azure-resources-to-access-server.png)
+## REST endpoint: HTTP 404 "Not Found" error
 
-## REST endpoints
-
-### HTTP 404 "Not Found" Errors
-
-An HTTP 404 error is returned if the requested URL points to a route not associated with any entity. By default, the name of the entity is also the route name. For example, if you configured the sample `Todo` entity in the configuration file like in the following sample:
+If the requested URL points to a route that's not associated with any entity, an HTTP 404 error is returned. By default, the entity's name is also the route name. For example, if you configure the sample `Todo` entity in the configuration file like the following example:
 
 ```json
 "Todo": {
@@ -90,13 +80,13 @@ An HTTP 404 error is returned if the requested URL points to a route not associa
     }
 ```
 
-The entity `Todo` is reachable via the following route:
+Then, the `Todo` entity is reachable via the following route:
 
 ```https
 /<rest-route>/Todo
 ```
 
-If you specified the `rest.path` property in the entity configuration to `todo` as shown in the following example:
+If you specify the `rest.path` property in the entity configuration to `todo`, as shown in the following example:
 
 ```json
 "Todo": {
@@ -108,35 +98,38 @@ If you specified the `rest.path` property in the entity configuration to `todo` 
   }
 ```
 
-Then the URL route for the `Todo` entity is `todo` with all lower case characters matching the exact value defined in the runtime configuration:
+Then, the URL route for the `Todo` entity is `todo`, with all lowercase characters matching the exact value defined in the runtime configuration:
 
 ```https
 /<rest-route>/todo
 ```
 
-## GraphQL endpoints
+## GraphQL endpoint: HTTP 400 "Bad Request" error
 
-## HTTP 400 "Bad Request" Error
+A GraphQL request results in an HTTP 400 "Bad Request" error every time the GraphQL request is constructed incorrectly. It might be due to a non-existing entity field or a misspelled entity name. Data API builder returns a descriptive error and error details in the response payload.
 
-GraphQL requests result in an HTTP 400 "Bad Request" error every time the GraphQL request is improperly constructed. It could be that a nonexisting entity field is specified, or that the entity name is misspelled. Data API builder returns a descriptive error in the response payload with details about the error itself.
+When you send a `GET` request to the GraphQL endpoint, the response body of the returned error states, "Either the parameter query or the parameter ID has to be set." Make sure to send your GraphQL requests using HTTP `POST`.
 
-The response body of the returned error states *"Either the parameter query or the parameter ID has to be set."* when you send a `GET` request to the GraphQL endpoint. Make sure you're sending your GraphQL requests using HTTP `POST`.
+## GraphQL endpoint: HTTP 404 "Not Found" error
 
-## HTTP 404 "Not Found" Error
+Make sure the GraphQL request is sent to the configured GraphQL endpoint by using the HTTP `POST` method. By default, the GraphQL endpoint route is `/graphql`.
 
-Make sure the GraphQL request is sent using the HTTP POST method to the configured GraphQL endpoint. By default, the GraphQL endpoint route is `/graphql`.
+## GraphQL endpoint: "The object type Query has to at least define one field in order to be valid" error
 
-## Error "The object type Query has to at least define one field in order to be valid."
+When the Data API builder startup fails to generate a GraphQL schema based on your runtime configuration, you receive the error message:
 
-The error message `The object type Query has to at least define one field in order to be valid.` is returned when Data API builder startup fails to generate a GraphQL schema based on your runtime configuration. The GraphQL specification requires at least one *Query* object be defined in a GraphQL schema. You must validate that your runtime config has one of the following properties:
+> The object type Query has to at least define one field in order to be valid.
 
-- `read` action defined for at least one GraphQL enabled entity. GraphQL is enabled on entities by default, so ensure that you **aren't** applying this mitigation to an entity configured with `{"graphql": false}`.
-- `{ "graphql": { "operation": query" } }` is defined on at least one stored procedure entity when you're only exposing stored procedures, which override the default stored procedure GraphQL operation type `mutation`.
-  - You must have at least one stored procedure, which only reads and doesn't modify data. Otherwise, GraphQL schema generation fails due to an empty `query` field in the schema.
+The GraphQL specification requires at least one `Query` object be defined in the GraphQL schema. You must validate that your runtime configuration meets one of the following conditions:
 
-## Introspection doesn't work with my GraphQL endpoint
+- The `read` action is defined for at least one GraphQL-enabled entity. GraphQL is enabled on entities by default, so ensure that you *don't* apply this mitigation to an entity configured with `{"graphql": false}`.
+- When you only expose stored procedures, define `{ "graphql": { "operation": query" } }` on at least one stored procedure entity, which overrides the default stored procedure GraphQL operation type `mutation`.
+  
+    You must have at least one stored procedure that only reads and doesn't modify the data. Otherwise, GraphQL schema generation fails due to an empty `query` field in the schema.
 
-Tooling that supports GraphQL normally utilizes GraphQL schema introspection without extra setup. Make sure you set the runtime configuration property `allow-introspection` to `true` in the `runtime.graphql` configuration section. For example:
+## GraphQL endpoint: Introspection doesn't work with the GraphQL endpoint
+
+Tools that support GraphQL normally utilize GraphQL schema introspection without requiring extra setup. Make sure you set the runtime configuration property `allow-introspection` to `true` in the `runtime.graphql` configuration section. For example:
 
 ```json
 "runtime": {
@@ -150,20 +143,18 @@ Tooling that supports GraphQL normally utilizes GraphQL schema introspection wit
 }
 ```
 
-## Error "The mutation operation <operation_name> was successful but the current user is unauthorized to view the response due to lack of read permissions"
+## GraphQL endpoint: "The mutation operation \<operation_name> was successful but the current user is unauthorized to view the response due to lack of read permissions" error
 
-For a graphQL mutation operation to receive a valid response, read permission should be configured in addition to the respective mutation operation type -  create/update/delete. As the error suggests, the mutation operation(create/update/delete) was successful at the database layer but the lack of read permission is causing Data API builder to return an error message. So, make sure to configure read permission either in the Anonymous role or the role with which you would like to execute the mutation operation.
+For a GraphQL mutation operation to receive a valid response, read permissions should be configured in addition to the respective mutation operation type - create, update, and delete. As the error suggests, the mutation operation (create/update/delete) was successful at the database layer, but the lack of read permission caused Data API builder to return an error message. So, make sure to configure read permissions either in the "Anonymous" role or the role with which you want to execute the mutation operation.
 
-## General errors
+## General error: HTTP 500 error returned by requests
 
-## Request returns an HTTP 500 error
+HTTP 500 errors indicate that Data API builder can't properly operate on the backend database. Make sure to meet the following conditions:
 
-HTTP 500 errors indicate that Data API builder can't properly operate on the backend database. Make sure that
+- Data API builder can still connect to the configured database.
+- The database objects used by Data API builder are still available and accessible.
 
-- Data API builder can still connect to the configured database
-- The database objects used by Data API builder are still available and accessible
-
-To allow DAB to return specific database errors in responses, you need to set the `runtime.host.mode` configuration property to `development`.
+To allow Data API builder to return specific database errors in responses, set the `runtime.host.mode` configuration property to `development`:
 
 ```json
 "runtime": {
@@ -175,26 +166,29 @@ To allow DAB to return specific database errors in responses, you need to set th
 }
 ```
 
-By default DAB runs with `runtime.host.mode`set to `production`. In `production` mode, Data API builder doesn't return detailed errors in the response payload.
+By default, Data API builder runs with `runtime.host.mode` that's set to `production`. In `production` mode, Data API builder doesn't return detailed errors in the response payload.
 
-In both `development` or `production` modes, DAB writes detailed errors to the console to help with troubleshooting.
+In both `development` and `production` modes, Data API builder writes detailed errors to the console to help with troubleshooting.
 
-## Unauthenticated and unauthorized requests
+## General errors due to unauthenticated and unauthorized requests
 
-### HTTP 401 "Unauthorized" Errors
+### HTTP 401 "Unauthorized" error
 
-HTTP 401 errors occur when the endpoint and entity being accessed require authentication and the requestor doesn't supply valid authentication metadata with their request.
+HTTP 401 errors occur when the endpoint and entity being accessed require authentication and the requestor doesn't provide valid authentication metadata in their request.
 
-When you configure DAB to use Microsoft Entra ID authentication, your requests result in HTTP 401 errors when the provided bearer (access) token is invalid. There are many reasons an access token might be invalid. A nonexhaustive list of reasons are:
+When you configure Data API builder to use Microsoft Entra ID authentication, your requests result in HTTP 401 errors when the provided bearer (access) token is invalid. An access token can be invalid for many reasons. Here are some of them:
 
-- Expired access token
-- Access token isn't meant for DAB's API (wrong access token audience)
-- Access token isn't created from the expected authority (invalid access token issuer).
+- The access token has expired.
+- The access token isn't meant for the Data API builder's API (wrong access token audience).
+- The access token isn't created by the expected authority (invalid access token issuer).
 
-Make sure that you generated an access token using the `issuer` value defined in the `authentication` section of the runtime config.
-Make sure that your access token is generated for the `audience` value defined in the `authentication` section of the runtime config.
+To resolve this error, make sure to meet the following conditions:
 
-For example, in this sample configuration:
+- You generate an access token using the `issuer` value defined in the `authentication` section of the runtime configuration.
+
+- Your access token is generated for the `audience` value defined in the `authentication` section of the runtime configuration.
+
+Here's a sample configuration:
 
 ```json
 "authentication": {
@@ -206,26 +200,28 @@ For example, in this sample configuration:
 }
 ```
 
-You must generate a token valid for the defined audience. When using the Azure CLI, you can get an access token by explicitly specifying the audience in the `resource` parameter:
+You must generate a valid token for the defined audience. When using the Azure CLI, you can get an access token by specifying the audience in the `resource` parameter:
 
 ```azurecli
 az account get-access-token --resource "b455fa3c-15fa-4864-8bcd-88fd83d686f3"
 ```
 
-### HTTP 403 "Forbidden" Errors
+### HTTP 403 "Forbidden" error
 
-If you're sending an authenticated request, either using Static Web Apps integration or Microsoft Entra ID, you might receive the error HTTP 403 "Forbidden."
+If you send an authenticated request using Static Web Apps integration or Microsoft Entra ID, you might receive an HTTP 403 "Forbidden" error. This error indicates that you try to use a role that doesn't exist in the configuration file.
 
-An HTTP 403 Forbidden occurs in the following circumstances: This error indicates that you're trying to use a role that doesn't exist in the configuration file.
+This error occurs when: 
 
-1. You don't supply a `X-MS-API-ROLE` HTTP header specifying a role name. (This scenario only applies when you intend to use a nonsystem role (not `authenticated` nor `anonymous`) because by default, **authenticated** requests execute in the context of the system role `authenticated`).
-1. The role you define in the `X-MS-API-ROLE` isn't configured in DAB's runtime configuration file.
-1. The role you define in the `X-MS-API-ROLE` header doesn't match a role in your access token.
+- You don't provide an `X-MS-API-ROLE` HTTP header specifying a role name.
 
-For example, with the following runtime configuration file where the role `role1` is defined, you must supply a `X-MS-API-ROLE` HTTP header with the value `role1`.
+    Because **authenticated** requests are executed in the context of the system role `authenticated` by default, this scenario only applies when you use a non-system role (not `authenticated` nor `anonymous`).
+- The role you define in the `X-MS-API-ROLE` header isn't configured in the Data API builder's runtime configuration file.
+- The role you define in the `X-MS-API-ROLE` header doesn't match the role in your access token.
 
-> [!CAUTION]
-> Roles name matching is case-sensitive
+For example, in the following runtime configuration file, the role `role1` is defined, so you must provide an `X-MS-API-ROLE` HTTP header with the value `role1`.
+
+> [!NOTE]
+> Role name matching is case-sensitive.
 
 ```json
 "Todo": {
@@ -234,11 +230,14 @@ For example, with the following runtime configuration file where the role `role1
 }
 ```
 
-## Provide feedback
+## References
 
-If you're unsable to find a solution to your issue in this article, provide feedback or report bugs at the [azure/data-api-builder](https://github.com/azure/data-api-builder/discussions) GitHub repository.
+- [Troubleshoot the installation of Data API builder for Azure databases](installation.md)
+- [Known issues in the Azure/data-api-builder GitHub repository](https://github.com/azure/data-api-builder/labels/known-issue)
 
-## Related content
+## Next step
 
-- [Troubleshoot installation](installation.md)
-- [Known issues](https://github.com/azure/data-api-builder/labels/known-issue)
+If your issue isn't resolved, provide feedback or report it in the [data-api-builder Discussions](https://github.com/azure/data-api-builder/discussions).
+
+[!INCLUDE[Azure Help Support](../../includes/azure-help-support.md)]
+

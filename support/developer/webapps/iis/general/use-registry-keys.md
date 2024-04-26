@@ -4,6 +4,7 @@ description: This article describes the registry keys that are used by Microsoft
 ms.date: 02/16/2023
 ms.reviewer: finbarr
 ms.subservice: general
+ms.custom: sap:WWW Administration and Management\General configuration settings
 ---
 # Description of the registry keys that are used by Internet Information Services
 

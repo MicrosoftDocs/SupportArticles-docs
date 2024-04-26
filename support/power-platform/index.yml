@@ -6,10 +6,18 @@ metadata:
    ms.topic: hub-page
    services: service
    ms.service: power-platform
-   ms.date: 04/01/2021
+   ms.date: 04/23/2024
 
 productDirectory:
   items:
+  - title: AI Builder
+    imageSrc: "../media/hub-landing/ai-builder.svg"
+    summary: Troubleshooting articles for AI Builder
+    url: ai-builder/welcome-ai-builder.yml
+  - title: Microsoft Dataverse
+    imageSrc: "../media/hub-landing/dataverse.svg"
+    summary: Troubleshooting articles for Microsoft Dataverse
+    url: dataverse/welcome-dataverse.yml
   - title: Power Apps
     imageSrc: "../media/hub-landing/power-apps.svg"
     summary: Troubleshooting articles for Power Apps
@@ -22,10 +30,6 @@ productDirectory:
     imageSrc: "../media/hub-landing/power-pages.svg"
     summary: Troubleshooting articles for Power Pages
     url: power-pages/welcome-power-pages.yml
-  - title: AI Builder
-    imageSrc: "../media/hub-landing/ai-builder.svg"
-    summary: Troubleshooting articles for AI Builder
-    url: ai-builder/welcome-ai-builder.yml
 
 additionalContent:
 # Supports up to 3 sections

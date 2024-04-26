@@ -4,13 +4,15 @@ description: Discusses multiple scenarios that could lead to boot issues with UE
 author: saimsh-msft
 ms.author: saimsh
 ms.topic: troubleshooting
-ms.date: 06/27/2022
+ms.date: 04/15/2024
 ms.service: virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
 ---
 
 # Troubleshoot UEFI boot failures in Azure Linux virtual machines
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 Linux partner images in Azure Marketplace are tagged and configured for both BIOS generation 1 boot and Unified Extensible Firmware Interface (UEFI) generation 2 boot.
 
