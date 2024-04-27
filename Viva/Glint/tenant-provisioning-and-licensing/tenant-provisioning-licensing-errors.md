@@ -13,7 +13,7 @@ ms.custom:
 localization_priority: Normal
 ---
 
-# Tenant provisioning and licensing errors in Viva Glint
+# Tenant provisioning and licensing errors
 
 When you try to provision a tenant or set up a new survey in Microsoft Viva Glint, you receive one of the error messages that are listed in the following tables. The tables are arranged by category and provide information that you can use to resolve the errors.
 
