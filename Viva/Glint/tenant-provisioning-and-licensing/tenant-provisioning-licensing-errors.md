@@ -1,8 +1,8 @@
 ---
-title: Tenant provisioning and licensing errors in Viva Glint
-description: Provides information about errors during tenant 
+title: Tenant provisioning and licensing errors 
+description: Provides resolutions for errors in Viva Glint when setting up a tenant or creating a new program. 
 manager: dcscontentpm
-ms.reviewer: aweixelman
+ms.reviewer: aweixelman; meerak
 ms.date: 04/26/2024
 audience: ITPro
 ms.topic: troubleshooting
