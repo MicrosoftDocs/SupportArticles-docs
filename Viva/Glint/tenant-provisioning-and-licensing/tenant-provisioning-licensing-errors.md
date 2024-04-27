@@ -21,12 +21,12 @@ When you try to provision a tenant or set up a new survey in Microsoft Viva Glin
 
 | Error message | More information |
 |-|-|
-| `**We were unable to provision your tenant**<br>Your tenant does not have enough active user licenses. A minimum of 50 active user licenses is required to provision your Glint tenant. Please contact your Microsoft Account Manager or purchase more licenses in the Microsoft Admin Center.` | See [Set up a Microsoft Viva Glint tenant](/viva/glint/setup/viva-glint-tenant-provision#customers-entitled-for-viva-glint-provisioning") |
-| `**We ran into an issue**<br>We're sorry, we couldn't get your tenant ready. Request support.` | Select the **Request support** link in the error message.<br>Alternatively, you can file a support request by using the **Contact Support** tab in the Microsoft 365 admin center. |
+| **We were unable to provision your tenant**<br>*Your tenant does not have enough active user licenses. A minimum of 50 active user licenses is required to provision your Glint tenant. Please contact your Microsoft Account Manager or purchase more licenses in the Microsoft Admin Center.* | See [Set up a Microsoft Viva Glint tenant](/viva/glint/setup/viva-glint-tenant-provision#customers-entitled-for-viva-glint-provisioning") |
+| **We ran into an issue**<br>*We're sorry, we couldn't get your tenant ready. Request support.* | Select the **Request support** link in the error message.<br>Alternatively, you can file a support request by using the **Contact Support** tab in the Microsoft 365 admin center. |
 
 ## Licensing errors
 
 | Error message | More information |
 |-|-|
-| `You have reached *>100%* Glint License utilization. You have *x* days left of your grace period.` | See [Viva Glint Licensing](/viva/glint/setup/glint-order-teams#notifications-for-exceeding-licenses) |
-| `You have run out of Viva Glint licenses. You can no longer create new surveys and programs.` | You're past the 45-day grace period.<br>See [Viva Glint Licensing](/viva/glint/setup/glint-order-teams#notifications-for-exceeding-licenses). |
+| *You have reached *>100%* Glint License utilization. You have *x* days left of your grace period.* | See [Viva Glint Licensing](/viva/glint/setup/glint-order-teams#notifications-for-exceeding-licenses) |
+| *You have run out of Viva Glint licenses. You can no longer create new surveys and programs.* | You're past the 45-day grace period.<br>See [Viva Glint Licensing](/viva/glint/setup/glint-order-teams#notifications-for-exceeding-licenses). |
