@@ -4,7 +4,7 @@
 title: Year-end close missing opening balances 
 description: Explains why opening balances might be missing when you close a year, and how to rebuild those balances if they're missing in Microsoft Dynamics 365 Finance.
 author: kweekley
-ms.date:04/28/2024
+ms.date: 04/28/2024
 
 # optional metadata
 
