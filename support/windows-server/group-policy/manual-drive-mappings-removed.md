@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Managing network configuration (mapped drives, 802.1
 
 This article provides a solution to an issue where manual drive mappings are removed after drive maps are deployed through Group Policy Preferences.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 3091116
 
 ## Symptoms
