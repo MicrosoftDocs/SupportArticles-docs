@@ -143,7 +143,7 @@ Revert the `LmCompatibilityLevel` value to the default value of 3 in the followi
 
 ### <a id="error-0x800704b3"></a> Failed with error code 0x800704b3
 
-When you connect to or mount an Azure file share, you recieve the following error:
+When you try to mount an Azure file share, you recieve the following error:
 
 > Error code: 0x800704b3  
 > Symbolic Name: ERROR_NO_NET_OR_BAD_PATH  
