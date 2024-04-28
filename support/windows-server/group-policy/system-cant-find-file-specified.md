@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article provides a solution to errors that occur when you use the Adprep tool together with the `/gpprep` argument.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2743345
 
 ## Symptoms
