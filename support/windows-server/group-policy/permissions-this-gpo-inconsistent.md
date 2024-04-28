@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article provides a solution to a permissions issue that occurs when you run Group Policy Management Console in a Windows 2008 or Windows Server 2003 domain.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2838154
 
 ## Symptoms
@@ -42,8 +42,10 @@ If you have permissions to modify security on the default GPOs, select **OK** in
 If you still receive the message, follow these steps:
 
 1. Make sure that you're running the latest service pack for the system. For more information, see:
-    - [How to obtain the latest service pack for Windows Server 2008](https://support.microsoft.com/help/968849)
-
+   - [https://support.microsoft.com/en-gb/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059](https://support.microsoft.com/en-gb/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
+      
+   - [https://support.microsoft.com/en-gb/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee](https://support.microsoft.com/en-gb/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
+      
 2. Check whether the List object permission is set for the Authenticated Users group and whether the Authenticated Users group is missing from the **Delegation** tab of the Group Policy Object.
 
     :::image type="content" source="media/permissions-this-gpo-inconsistent/authenticated-users.png" alt-text="Check whether the Authenticated Users group is missing.":::
