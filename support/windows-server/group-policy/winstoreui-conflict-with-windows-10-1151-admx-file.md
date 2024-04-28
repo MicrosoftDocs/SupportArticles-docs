@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article provides help to solve a WinStoreUI.admx conflict that occurs when Central Store is updated by using Windows 10 Version 1511 ADMX files.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 3190327
 
 ## Symptoms
