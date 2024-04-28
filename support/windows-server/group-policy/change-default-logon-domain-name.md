@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article describes how to use Group Policy Objects (GPOs) to change default logon domain name.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 2908796
 
 ## Symptoms
