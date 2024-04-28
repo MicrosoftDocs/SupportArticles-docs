@@ -244,7 +244,7 @@ The following procedure starts a Windows `netsh` network tracing on the replicas
 
     ```console
     PS C:\Users\sqladmin> Schtasks /Delete /tn Event35206Task /F
-    PS C:\Users\sqladmin> Schtasks /Delete /tn Event35206Task /F
+    PS C:\Users\sqladmin> Schtasks /Delete /tn Event35267Task /F
     ```
 
 Analysis of the network trace is outside the scope of this troubleshooter. If you can't interpret the network trace, contact the Microsoft SQL Server Support team and provide the trace along with other requested log files for root cause analysis.
