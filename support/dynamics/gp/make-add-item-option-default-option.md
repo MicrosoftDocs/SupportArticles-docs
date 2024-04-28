@@ -3,7 +3,7 @@ title: Make the Add Item option a default option in the Sales Order Processing a
 description: Steps to make the Add Item option a default option in the Sales Order Processing and Purchase Order Processing modules in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 04/26/2024
+ms.date: 04/28/2024
 ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to make the Add Item option a default option in the Sales Order Processing and Purchase Order Processing modules in Microsoft Dynamics GP
@@ -27,7 +27,7 @@ When the **Add Item** option is selected in these windows and you enter an inven
 
 ## About the "Add Item" option
 
-The **Add Item** option is available when you're entering a transaction in the Sales Order Processing or Purchase Order Processing modules. To select this option in Microsoft Dynamics GP click **Extras**, point to **Options**, and then click **Add Item**. 
+The **Add Item** option is available when you're entering a transaction in the Sales Order Processing or Purchase Order Processing modules. To select this option in Microsoft Dynamics GP, select **Extras**, point to **Options**, and then select **Add Item**. 
 
 If the **Add Item** option is selected, you can take any one of the following actions every time that you enter a new item in the Purchase Order Processing or Sales Order Processing modules:
 
@@ -46,6 +46,6 @@ To install the Additem.cnk file, follow these steps:
 1. [Download the AddItem.zip file to each workstation](https://mbs2.microsoft.com/fileexchange/?fileID=b133e642-b862-44b1-a36e-c1422a7bdc51). Save the file to the folder where Microsoft Dynamics GP is installed.
 1. Extract the contents of the AddItem.zip file to the same folder.
 1. Start Microsoft Dynamics GP.
-1. When you receive the following message, click **Yes**:
+1. When you receive the following message, select **Yes**:
 
     Do you want to include new code?
