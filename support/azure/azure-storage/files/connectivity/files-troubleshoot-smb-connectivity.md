@@ -155,7 +155,7 @@ This error can occur if any core Windows network related services are disabled a
 
 #### Solution
 
-Check if any of these services below are in a **Stopped** state in the Windows VM:
+Check if any of the following services are in a **Stopped** state in the Windows VM:
 
 - Network Connections  
 - Network List Service  
