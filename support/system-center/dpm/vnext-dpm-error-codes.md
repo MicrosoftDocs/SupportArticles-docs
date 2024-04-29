@@ -1,7 +1,7 @@
 ---
 title: System Center vNext DPM error codes
 description: Lists error codes that may occur in System Center vNext Data Protection Manager.
-ms.date: 04/6/2024
+ms.date: 04/29/2024
 ms.reviewer: Mjacquet, aaronmax, jchornbe, sooryar
 ---
 # System Center vNext Data Protection Manager error codes
@@ -2418,7 +2418,7 @@ _Original KB number:_ &nbsp; 3041345
 |100201|The current operation failed due to an internal service error **Authorization Failed**. Retry the operation after some time.|If the issue persists, contact Microsoft support.|
 |100202|The current operation failed due to an internal service error **Authentication Failed**. Retry the operation after some time.|If the issue persists, contact Microsoft support.|
 |100203|All folders which were part of the backup spec are not found.|Add the missing folders and try again.|
-|100204|ACS to AAD migration has failed.|Restart the service.|
+|100204|ACS to Microst Entra ID migration has failed.|Restart the service.|
 |100205|Microsoft Azure Recovery Services Agent was unable to complete the operation.|Retry the operation. If the issue persists, contact Microsoft support.|
 |100206|Backup failed because Azure Backup could not initialize the metadata vhd at the configured cache location. This could be due to errors in the disk containing the cache location.|Move the cache location to a different disk and try this operation again.  For more information about how to update the cache location, see [Manage the backup cache folder](/azure/backup/backup-azure-file-folder-backup-faq#manage-the-backup-cache-folder).|
 |100207|Retention policy could not be updated as Retention Range cannot be less than 7 days for daily backups, 4 weeks for weekly backups, 3 months for monthly backups and 1 year for yearly backups.|Update your retention policy and try again.|
