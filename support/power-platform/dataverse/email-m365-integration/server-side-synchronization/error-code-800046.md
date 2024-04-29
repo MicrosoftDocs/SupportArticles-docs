@@ -10,7 +10,7 @@ ms.author: rahulmital
 
 ## Symptoms
 
-When you try to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Microsoft Dataverse, the test fails with error code 800046.
+When a user tries to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Microsoft Dataverse, the test fails with error code 800046.
 
 ## Cause
 
