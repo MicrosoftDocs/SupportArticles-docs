@@ -120,7 +120,7 @@ sections:
       - question:
           ASEv3 Migration isn't yet ready.
         answer:
-          This is because the underlying infrastructure isn't ready to support ASE v3. For more information about the migration tools and to review the migration path decision tree, see this link. If the migration tools aren't available for your situation, we recommend using one of the [manual migration options](/azure/app-service/environment/migration-alternatives) if you want to migrate immediately.
+          This is because the underlying infrastructure isn't ready to support ASE v3. For more information about the migration tools and to review the migration path decision tree, see [What tooling is available to help with the upgrade to App Service Environment v3?](/azure/app-service/environment/upgrade-to-asev3#what-tooling-is-available-to-help-with-the-upgrade-to-app-service-environment-v3). If the migration tools aren't available for your situation, we recommend using one of the [manual migration options](/azure/app-service/environment/migration-alternatives) if you want to migrate immediately.
 
       - question:
           Migration is invalid. Your ASE needs to be upgraded to the lasted build to ensure successful migration.
