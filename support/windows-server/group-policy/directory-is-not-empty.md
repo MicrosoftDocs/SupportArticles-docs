@@ -13,7 +13,8 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article provides solutions to an issue where importing a saved GPO using Group Policy Management Console (GPMC) fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)
+
 _Original KB number:_ &nbsp; 2667462
 
 ## Symptoms
@@ -33,8 +34,8 @@ To prevent the conflicting operations from occurring, use DFSRDIAG.EXE to suspen
 1. Open an administrative Command Prompt window.
 2. Run this command: `DFSRDIAG StopNow /rgname:"Domain System Volume" /partner:<DcName> /time:<number of minutes to suspend replication>`.
 
-    > [!NOTE]
-    > In this command, \<*DcName*> represents the domain controller name, and \<*number of minutes to suspend replication*> represents how long replication is suspended.
+> [!NOTE]
+> In this command, \<*DcName*> represents the domain controller name, and \<*number of minutes to suspend replication*> represents how long replication is suspended.
 3. Import the Group Policy.
 
 > [!NOTE]
@@ -104,4 +105,24 @@ To make DFSR read the new settings from AD, run `dfsrdiag PollAD`.
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps below :
+1. Download [TSS](https://aka.ms/getTSS) and extract it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.  
+> [!NOTE]
+> Don't use the Windows PowerShell Integrated Scripting Environment (ISE).
+3. Run the following cmdlets:
+
+    ```powershell
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    ```
+
+    ```powershell
+    .\TSS.ps1 -Scenario ADS_GPOEx -SDP Dom 
+    ```
+
+4.Reproduce the issue and type **Y** once done  
+
+> [!NOTE]
+>
+> - The traces are stored in a compressed file in the *C:\\MS_DATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
+
