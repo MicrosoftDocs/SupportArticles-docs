@@ -8,6 +8,8 @@ ms.author: rahulmital
 ---
 # Help with error code 800046
 
+This article provides a resolution for error code 800046 that occurs when you test and enable a mailbox for server-side synchronization in Microsoft Dataverse.
+
 ## Symptoms
 
 When a user tries to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Microsoft Dataverse, the test fails with error code 800046.
@@ -20,10 +22,10 @@ This issue occurs because the Microsoft Graph user associated with the email add
 
 As an administrator, follow these steps to make sure the user has a valid Exchange license .
 
-1. [Assign a license to the user by using the "Licenses" page](/microsoft-365/admin/manage/assign-licenses-to-users?view=o365-worldwide#assign-licenses-by-using-the-licenses-page) in the Microsoft 365 admin center.
+1. [Assign a license to the user by using the "Licenses" page](/microsoft-365/admin/manage/assign-licenses-to-users#assign-licenses-by-using-the-licenses-page) in the Microsoft 365 admin center.
 
    > [!IMPORTANT]
-   > Licensed users must be assigned [at least one security role to access customer engagement apps](/power-platform/admin/plan-for-deployment-and-administration). [Security roles can be assigned either directly or indirectly as a group team member](/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide#assign-admin-roles-to-users-using-roles).
+   > Licensed users must be assigned [at least one security role to access customer engagement apps](/power-platform/admin/plan-for-deployment-and-administration). [Security roles can be assigned either directly or indirectly as a group team member](/microsoft-365/admin/add-users/assign-admin-roles#assign-admin-roles-to-users-using-roles).
 
    > [!NOTE]
    > After assigning the Microsoft Dynamics 365 license to the user, this change may take a few minutes to sync between Microsoft 365 and Microsoft Dynamics 365. Exchange might also need additional time to create a mailbox for the user.
