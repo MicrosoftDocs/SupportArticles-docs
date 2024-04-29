@@ -13,31 +13,24 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article helps you resolve the problem of applying the Group Policy loopback function when a user signs in to a computer in a specific organizational unit.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 231287
 
 ## Summary
 
-Group Policy applies to the user or computer in a manner that depends on where both the user and the computer objects are located in Active Directory. In some cases, users may need policy applied to them based on the location of the computer object alone. You can use the Group Policy loopback feature to apply Group Policy Objects (GPOs) that depend only on which computer the user signs in to.
+Group Policy applies to the user or computer in a manner that depends on where both the user and the computer objects are located in Active Directory. However, in some cases, users may need policies applied to them based on the location of both the user object and the computer object, or the location of the computer object alone." In that case, you can use the Group Policy Loopback feature to apply Group Policy Objects (GPOs) correspondingly.
 
 ## More information
 
 To set user configuration per computer, follow these steps:
 
 1. In the Group Policy Microsoft Management Console (MMC), select **Computer Configuration**.
-2. Locate **Administrative Templates**, select **System**, select **Group Policy**, and then enable the **Loopback Policy** option.
+1. Locate **Administrative Templates**, select **System**, select **Group Policy**, and then enable the option **Configure user Group Policy loopback processing mode**.
 
 This policy directs the system to apply the set of GPOs for the computer to any user who logs on to a computer affected by this policy. This policy is intended for special-use computers where you must modify the user policy based on the computer that's being used. For example, computers in public areas, in laboratories, and in classrooms.
 
 > [!NOTE]
-> Loopback is supported only in an Active Directory environment. Both the computer account and the user account must be in Active Directory. If a Microsoft Windows NT 4.0 based domain controller manages either account, the loopback does not function. The client computer must be a running one of the following operating systems:
->
-> - Windows XP Professional
-> - Windows 2000 Professional
-> - Windows 2000 Server
-> - Windows 2000 Advanced Server
-> - Windows Server 2003
-
+> Loopback is supported only in an Active Directory environment. Both the computer account and the user account must be in Active Directory. 
 When users work on their own workstations, you may want Group Policy settings applied based on the location of the user object. So we recommend you to configure policy settings based on the organizational unit in which the user account resides. When a computer object resides in a specific organizational unit, the user settings of a policy should be applied based on the location of the computer object instead of the user object.
 
 > [!NOTE]
