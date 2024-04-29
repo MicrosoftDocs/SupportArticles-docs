@@ -1,175 +1,179 @@
 ### YamlMime:FAQ
 metadata:
-  title: FAQ about ASE - App Service Environment Migration
-  desciption: Describe common question and answers about ASE Migration
+  title: FAQ about App Service Environment migration
+  desciption: Describes common questions and answers about App Service Environment migration.
   services: app-service
-  author: hepiet, amymcel
-  ms.reviewer:
+  ms.reviewer: hepiet, amymcel, v-weizhu
   ms.topic: faq
-  ms.date: 04/25/2024
-  ms.author: hepiet
+  ms.date: 04/29/2024
   ms.service: app-service
-title: Frequently asked questions about ASE Migration
+title: Frequently asked questions about App Service Environment migration
 summary: 
-  This article answers common questions about [ASE Migration] (https://learn.microsoft.com/en-us/azure/app-service/environment/upgrade-to-asev3) from ASE v1/v2 to ASE v3. Also included are the common error messages that may occur during the migration pre-check process.
+  This article answers common questions about [App Service Environment (ASE) migration] (/azure/app-service/environment/upgrade-to-asev3) from ASE v1/v2 to ASE v3, and provides solutions to common errors that might occur during the migration pre-check process.
+  
   [!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
 sections:
-  - name: Common Questions
+  - name: Common questions
     questions:
       - question:
-          How do I choose which migration option is right for me?
+          How do I know which migration option is right for me?
         answer:
-          Review the [migration path decision tree](https://learn.microsoft.com/en-us/azure/app-service/environment/upgrade-to-asev3#migration-path-decision-tree) to decide which option is best for your use case.
-        
-          The [in-place migration feature](https://learn.microsoft.com/en-us/azure/app-service/environment/migrate) is best for customers who want to migrate to App Service Environment v3 with minimal changes to their networking configurations and can support about one hour of application downtime. 
-          The in-place migration feature creates your App Service Environment v3 in the same subnet as your existing environment and uses the same networking infrastructure. You might have to account for the inbound and outbound IP address changes if you have any dependencies on these specific IPs. The in-place migration feature will also shut down and delete the old environment, and all of your apps are migrated to the new environment. Your old environment is no longer accessible. A rollback to the old environment isn't possible.
+          Review the [migration path decision tree](/azure/app-service/environment/upgrade-to-asev3#migration-path-decision-tree) to decide which option is best for your use case.
 
-          If you can't support downtime, see the [side-by-side migration feature](https://learn.microsoft.com/en-us/azure/app-service/environment/side-by-side-migrate). The side-by-side feature creates a new App Service Environment v3 with all of your apps in a different subnet. Your existing App Service Environment isn't deleted until you initiate its deletion at the end of the migration process. Because of this process, there's a rollback option if you need to cancel your migration. This migration option is best for customers who want to migrate to App Service Environment v3 with zero downtime and can support using a different subnet for their new environment.
+          For customers who want to migrate to ASE v3 with minimal changes to their networking configurations, the [in-place migration feature](/azure/app-service/environment/migrate) is best and can support about one hour of application downtime. 
+          
+          The in-place migration feature creates your ASE v3 in the same subnet as your existing environment and uses the same networking infrastructure. You might have to account for the inbound and outbound IP address changes if you have any dependencies on these specific IPs. The in-place migration feature will also shut down and delete the old environment, and all of your apps are migrated to the new environment. Your old environment is no longer accessible. A rollback to the old environment isn't possible.
 
-          For manual migration options that allow you to migrate at your own pace, see [manual migration options](https://learn.microsoft.com/en-us/azure/app-service/environment/migration-alternatives).
+          If you can't support downtime, see the [side-by-side migration feature](/azure/app-service/environment/side-by-side-migrate). The side-by-side feature creates a new ASE v3 with all of your apps in a different subnet. Your existing ASE isn't deleted until you initiate its deletion at the end of the migration process. Because of this process, there's a rollback option if you need to cancel your migration. This migration option is best for customers who want to migrate to ASE v3 with zero downtime and can support using a different subnet for their new environment.
+
+          For manual migration options that allow you to migrate at your own pace, see [manual migration options](/azure/app-service/environment/migration-alternatives).
 
       - question: 
           Will there be any downtime during migration?
         answer:
-          It depends on the migration tooling you're using. With the [in-place migration feature](https://learn.microsoft.com/en-us/azure/app-service/environment/migrate), you'll experience about 1 hour of downtime during the four to six hour service window this migration process takes, so plan accordingly. 
-          
-          If you have a different App Service Environment that you can point traffic to while you migrate using the in-place migration feature, you can eliminate application downtime. 
+          It depends on the migration tool you're using. With the [in-place migration feature](/azure/app-service/environment/migrate), you'll experience about 1 hour of downtime during the four to six hour service window this migration process takes, so plan accordingly. 
 
-          With the [side-by-side migration feature](https://learn.microsoft.com/en-us/azure/app-service/environment/side-by-side-migrate), you won't experience any downtime. Your apps continue to run on your existing App Service Environment until you complete the final step of the migration where DNS changes are effective immediately. Once you complete the final step, your old App Service Environment is shut down and deleted.
+          While you migrate using the in-place migration feature, if you have a different ASE that you can point traffic to, you can eliminate application downtime. 
+
+          With the [side-by-side migration feature](/azure/app-service/environment/side-by-side-migrate), you won't experience any downtime. Your apps continue to run on your existing ASE until you complete the final step of the migration where DNS changes are effective immediately. Once you complete the final step, your old ASE is shut down and deleted.
 
       - question:
-          Are there any pre-requisites or limitations to be aware of before migrating?
+          Are there any pre-requisites or limitations before migrating?
         answer:
-          It depends on the migration tooling you're using. See the documentation for the two migration tools, the [in-place migration feature](https://learn.microsoft.com/en-us/azure/app-service/environment/migrate) or the [side-by-side migration feature](https://learn.microsoft.com/en-us/azure/app-service/environment/side-by-side-migrate) to determine if there are pre-requisites for that specific migration feature. 
+          It depends on the migration tool you're using. See the documentation for the two migration tools, the [in-place migration feature](/azure/app-service/environment/migrate) or the [side-by-side migration feature](/azure/app-service/environment/side-by-side-migrate) to determine if there are pre-requisites for the migration tool or feature. 
 
-          If your App Service Environment isn't supported for migration with the migration tooling, you must use one of the [manual methods](https://learn.microsoft.com/en-us/azure/app-service/environment/migration-alternatives) to migrate to App Service Environment v3. 
+          If your ASE isn't supported for migration with the migration tool, you must use one of the [manual methods](/azure/app-service/environment/migration-alternatives) to migrate to ASE v3. 
 
       - question:
-          Will I need to do anything to my apps after the migration to get them running on the new App Service Environment?
+          Do I need to do anything to my apps after the migration for them to run on the new ASE?
         answer:
           No, all of your apps running on the old environment are automatically migrated to the new environment and run like before. No user input is needed.
 
       - question:
-          What properties of my App Service Environment will change?
+          What properties of my ASE will change?
         answer:
-          You're on App Service Environment v3 so be sure to review the [features and feature differences](https://learn.microsoft.com/en-us/azure/app-service/environment/overview#feature-differences) compared to previous versions. For ILB App Service Environment, you keep the same ILB IP address. For internet facing App Service Environment, the public IP address and the outbound IP address change. Note for ELB App Service Environment, previously there was a single IP for both inbound and outbound. For App Service Environment v3, they're separate. For more information, see [App Service Environment v3 networking](https://learn.microsoft.com/en-us/azure/app-service/environment/networking#addresses). For a full comparison of the App Service Environment versions, see [App Service Environment version comparison](https://learn.microsoft.com/en-us/azure/app-service/environment/version-comparison).
+          You're on ASE v3 so be sure to review the [features and feature differences](/azure/app-service/environment/overview#feature-differences) compared to earlier versions. For ILB ASE, you keep the same ILB IP address. For internet facing ASE, the public IP address and the outbound IP address change. For ELB ASE, previously there was a single IP for both inbound and outbound. For ASE v3, they're separate. For more information, see [ASE v3 networking](/azure/app-service/environment/networking#addresses). For a full comparison of the ASE versions, see [ASE version comparison](/azure/app-service/environment/version-comparison).
 
       - question:
           Will my IPs change?
         answer:
-          The platform will create a [new inbound IP (if you're migrating an ELB App Service Environment) and the new outbound IP](https://learn.microsoft.com/en-us/azure/app-service/environment/networking#addresses) addresses. While these IPs are getting created, activity with your existing App Service Environment isn't interrupted, however, you can't scale or make changes to your existing environment. This process takes about 15 minutes to complete.
+          The platform will create a [new inbound IP (if you're migrating an ELB ASE) and the new outbound IP](/azure/app-service/environment/networking#addresses) addresses. While these IPs are getting created, activity with your existing ASE isn't interrupted, however, you can't scale or make changes to your existing environment. This process takes about 15 minutes to complete.
 
-          When completed, you'll be given the new IPs that your future App Service Environment v3 uses. These new IPs have no effect on your existing environment. 
-          
-          The IPs used by your existing environment continue to be used up until your existing environment is shut down either by the [in-place migration feature](https://learn.microsoft.com/en-us/azure/app-service/environment/migrate) or by you when your ASE v1/v2 is no longer needed. 
+          When completed, you'll be given the new IPs that your future ASE v3 uses. These new IPs have no effect on your existing environment. 
+
+          The IPs used by your existing environment continue to be used up until your existing environment is shut down by the [in-place migration feature](/azure/app-service/environment/migrate) or by you when your ASE v1/v2 is no longer needed. 
 
       - question: 
-          Is there any cost to migrate my App Service Environment?
+          Is there any cost to migrate my ASE?
         answer:
-          There's no cost to migrate your App Service Environment. You stop being charged for your previous App Service Environment as soon as it shuts down during the migration process, and you begin getting charged for your new App Service Environment v3 as soon as it's deployed.
+          There's no cost to migrate your ASE. You stop being charged for your previous ASE as soon as it's shut down during the migration process, and you begin getting charged for your new ASE v3 as soon as it's deployed.
 
-          Migrating App Service Environment from previous versions to V3, can help reduce your monthly cost.
+          Migrating ASE from an earlier version to V3 can help reduce your monthly cost.
 
-          For more information about App Service Environment v3 pricing, see the [pricing details](https://learn.microsoft.com/en-us/azure/app-service/environment/overview#pricing).
+          For more information about ASE v3 pricing, see the [pricing details](/azure/app-service/environment/overview#pricing).
 
       - question:
-          What if my App Service Environment has a custom domain suffix?
+          What if my ASE has a custom domain suffix?
         answer:
-          The migration tooling supports this scenario. See the documentation for details for [in-place migration feature](https://learn.microsoft.com/en-us/azure/app-service/environment/migrate#supported-scenarios) and [side-by-side migration feature](https://learn.microsoft.com/en-us/azure/app-service/environment/side-by-side-migrate#supported-scenarios).
+          The migration tool supports this scenario. For more information, see [in-place migration feature](/azure/app-service/environment/migrate#supported-scenarios) and [side-by-side migration feature](/azure/app-service/environment/side-by-side-migrate#supported-scenarios).
 
       - question:
-          What if my App Service Environment is zone pinned?
+          What if my ASE is zone pinned?
         answer:
-          Zone pinned App Service Environment v2 is a supported scenario for migration using the in-place migration feature. App Service Environment v3 doesn't support zone pinning. When migrating to App Service Environment v3, you can choose to configure zone redundancy or not.
- 
-          The side-by-side migration feature doesn't support this [migration scenario](https://learn.microsoft.com/en-us/azure/app-service/environment/side-by-side-migrate#supported-scenarios) at this time.
+          Zone pinned ASE v2 is a supported scenario for migration using the in-place migration feature. ASE v3 doesn't support zone pinning. When migrating to ASE v3, you can choose to configure zone redundancy or not.
+
+          The side-by-side migration feature doesn't support this [migration scenario](/azure/app-service/environment/side-by-side-migrate#supported-scenarios) at this time.
 
       - question:
-          What if my App Service Environment has IP SSL addresses? 
+          What if my ASE has IP SSL addresses? 
         answer:
-          IP SSL isn't supported on App Service Environment v3. You must remove all IP SSL bindings before migrating using the migration feature or one of the manual options. If you intend to use the migration tooling, once you remove all IP SSL bindings, you pass that validation check and can proceed with the automated migration.
+          IP SSL isn't supported on ASE v3. You must remove all IP SSL bindings before migrating using the migration feature or one of the manual options. If you intend to use the migration tool, once you remove all IP SSL bindings, you pass that validation check and can proceed with the automated migration.
 
       - question:
-          Is backup and restore supported for moving apps from App Service Environment V2 to V3?
+          Is backup and restore supported for moving apps from ASE V2 to V3?
         answer:
-          Yes. The [back up and restore](https://learn.microsoft.com/en-us/azure/app-service/manage-backup?tabs=portal) feature allows you to keep your app configuration, file content, and database connected to your app when migrating to your new environment. Make sure you review the [details](https://learn.microsoft.com/en-us/azure/app-service/manage-backup?tabs=portal#automatic-vs-custom-backups) of this feature.
+          Yes. The [back up and restore](/azure/app-service/manage-backup?tabs=portal) feature allows you to keep your app configuration, file content, and database connected to your app when migrating to your new environment. Make sure you review the [details](/azure/app-service/manage-backup?tabs=portal#automatic-vs-custom-backups) of this feature.
 
-          You can select a custom backup and restore it to an App Service in your App Service Environment v3. You must create the App Service you'll restore to before restoring the app. You can choose to restore the backup to the production slot, an existing slot, or a newly created slot that you can create during the restoration process.
+          You can select a custom backup and restore it to an App Service in your ASE v3. You must create the App Service you'll restore to before restoring the app. You can choose to restore the backup to the production slot, an existing slot, or a newly created slot that you can create during the restoration process.
 
-          For more information please check [Migration alternatives, backup and restore](https://learn.microsoft.com/en-us/azure/app-service/environment/migration-alternatives#back-up-and-restore).
+          For more information, see [Migration alternatives, backup and restore](/azure/app-service/environment/migration-alternatives#back-up-and-restore).
 
       - question:
-          What will happen to my App Service Environment V1/V2 resources after August 31, 2024?
+          What will happen to my ASE V1/V2 resources after August 31, 2024?
         answer:
-          After 31 August 2024, if you haven't migrated, your App Service Environment v1/v2s and the apps deployed on them will no longer be available. App Service Environment v1/v2 is hosted on App Service scale units running on [Cloud Services (classic)](https://learn.microsoft.com/en-us/azure/cloud-services/cloud-services-choose-me) architecture that will be [retired on 31 August 2024](https://azure.microsoft.com/en-us/updates/cloud-services-retirement-announcement/). Because of this, [App Service Environment v1/v2 will no longer be available after that date](https://azure.microsoft.com/en-us/updates/app-service-environment-v1-and-v2-retirement-announcement/). Migrate to App Service Environment v3 to keep your apps running or save or back up any resources or data that you need to maintain.
+          After 31 August 2024, if you haven't migrated, your ASE v1/v2 and the apps deployed on them will no longer be available. ASE v1/v2 is hosted on App Service scale units running on [Cloud Services (classic)](/azure/cloud-services/cloud-services-choose-me) architecture that will be [retired on 31 August 2024](https://azure.microsoft.com/updates/cloud-services-retirement-announcement/). Because of this, [ASE v1/v2 will no longer be available after that date](https://azure.microsoft.com/updates/app-service-environment-v1-and-v2-retirement-announcement/). Migrate to ASE v3 to keep your apps running or save or back up any resources or data that you need to maintain.
 
       - question:
           What should I expect during migration?
         answer:
-          Migration consists of a series of steps that must be followed in order. Key points are given for a subset of the steps. It's important to understand what happens during these steps and how your environment and apps are impacted. These steps differ slightly depending on which migration feature you execute. For more details, check [in-place migration process overview](https://learn.microsoft.com/en-us/azure/app-service/environment/migrate?WT.mc_id=Portal-Microsoft_Azure_Support#overview-of-the-migration-process-using-the-in-place-migration-feature) or [side-by-side migration process overview](https://learn.microsoft.com/en-us/azure/app-service/environment/side-by-side-migrate#overview-of-the-migration-process-using-the-side-by-side-migration-feature). After reviewing the process overview information and when you're ready to migrate, follow the guide for the migration process you're executing, either [in-place migration guide](https://learn.microsoft.com/en-us/azure/app-service/environment/how-to-migrate?pivots=experience-azp) or [side-by-side migration guide](https://learn.microsoft.com/en-us/azure/app-service/environment/how-to-side-by-side-migrate).
+          Migration consists of a series of steps that must be followed in order. Key points are given for a subset of the steps. It's important to understand what happens during these steps and how your environment and apps are impacted. These steps differ slightly depending on which migration feature you execute. For more information, check [in-place migration process overview](/azure/app-service/environment/migrate?WT.mc_id=Portal-Microsoft_Azure_Support#overview-of-the-migration-process-using-the-in-place-migration-feature) or [side-by-side migration process overview](/azure/app-service/environment/side-by-side-migrate#overview-of-the-migration-process-using-the-side-by-side-migration-feature). After reviewing the process overview information and when you're ready to migrate, follow the guide for the migration process you're executing, either [in-place migration guide](/azure/app-service/environment/how-to-migrate?pivots=experience-azp) or [side-by-side migration guide](/azure/app-service/environment/how-to-side-by-side-migrate).
 
-          Migration requires a four to six hour service window for App Service Environment v2 to v3 migrations. Up to a six hour service window is required depending on environment size for v1 to v3 migrations. During migration, scaling and environment configurations. When migration is complete, the apps that were on the old App Service Environment are running on the new App Service Environment v3.
+          Migration requires a four to six hour service window for ASE v2 to v3 migrations. Up to a six hour service window is required depending on environment size for v1 to v3 migrations. During migration, scaling and environment configurations. When migration is complete, the apps that were on the old ASE are running on the new ASE v3.
 
       - question:
-          What happens if migration fails or there is an unexpected issue during the migration?
+          What happens if the migration fails or there is an unexpected issue during the migration?
         answer:
           If there's an unexpected issue, support teams are on hand. You should migrate dev environments before touching any production environments to learn about the migration process and see how it impacts your workloads.
 
-  - name: Error Messages
+  - name: Error messages
     questions:
       - question:
           ASEv3 Migration isn't yet ready.
         answer:
-          This is because the underlying infrastructure isn't ready to support App Service Environment v3. For more information concerning what tooling we have available and to review the migration path decision tree, see this link. If our migration tools aren't available for your situation, our recommendation is to migrate using one of the [manual migration options](https://learn.microsoft.com/en-us/azure/app-service/environment/migration-alternatives) if you want to migrate immediately.
+          This is because the underlying infrastructure isn't ready to support ASE v3. For more information about the migration tools and to review the migration path decision tree, see this link. If the migration tools aren't available for your situation, we recommend using one of the [manual migration options](/azure/app-service/environment/migration-alternatives) if you want to migrate immediately.
 
       - question:
           Migration is invalid. Your ASE needs to be upgraded to the lasted build to ensure successful migration.
         answer:
-          This is because your App Service Environment isn't on the minimum build required for migration. 
-          An upgrade will be started and your App Service Environment won't be impacted, but you won't be able to scale or make changes to your App Service Environment while the upgrade is in progress. You won't be able to migrate until the upgrade finishes. Build upgrades may take some time to complete. Our recommendation is to wait until the upgrade finishes and then migrate.
+          This is because your ASE isn't on the minimum build required for migration. 
+          
+          An upgrade will be started and your ASE won't be impacted, but you won't be able to scale or make changes to your ASE while the upgrade is in progress. You won't be able to migrate until the upgrade finishes. Build upgrades may take some time to complete. We recommend waiting until the upgrade finishes and then migrate.
 
       - question:
           Migrate can't be called on this ASE until the active upgrade has finished.
         answer:
-          This is because App Service Environments can't be migrated during platform upgrades. You can set your [upgrade preference](https://learn.microsoft.com/en-us/azure/app-service/environment/how-to-upgrade-preference?pivots=experience-azp) from the Azure portal. In some cases, an upgrade is initiated when visiting the migration page if your App Service Environment isn't on the current build.
+          This is because ASEs can't be migrated during platform upgrades. You can set your [upgrade preference](/azure/app-service/environment/how-to-upgrade-preference?pivots=experience-azp) from the Azure portal. In some cases, an upgrade is initiated when visiting the migration page if your ASE isn't on the current build.
 
       - question:
-          App Service Environment management operation in progress
+          ASE management operation in progress.
         answer:
-          This is because your App Service Environment is undergoing a management operation. These operations can include activities such as deployments or upgrades. Migration is blocked until these operations are complete.
-          Management operations may take some time to complete. Our recommendation is wait until these operations are complete to migrate.
+          This is because your ASE is undergoing a management operation. These operations can include activities such as deployments or upgrades. Migration is blocked until these operations are complete.
+          Management operations may take some time to complete. We recommend waiting until these operations are complete to migrate.
 
       - question:
           Migrate can't be called if IP SSL is enabled on any of the sites.
         answer:
-          This is because your App Service Environment has sites with IP SSL enabled that can't be migrated. IP SSL isn't supported on App Service Environment v3. You must remove all IP SSL bindings before migrating using the migration features or one of the manual options. If you intend to use the migration tooling, once you remove all IP SSL bindings, and you pass that validation check you can proceed with the automated migration.
+          This is because your ASE has sites with IP SSL enabled that can't be migrated. IP SSL isn't supported on ASE v3. You must remove all IP SSL bindings before migrating using the migration features or one of the manual options. If you intend to use the migration tool, once you remove all IP SSL bindings and you pass that validation check, you can proceed with the automated migration.
 
       - question:
           Your InternalLoadBalancingMode isn't currently supported.
         answer:
-          This is because App Service Environments that have InternalLoadBalancingMode set to certain values can't be migrated using the migration feature at this time.
-          Our recommendations are to migrate using one of the [manual migration options](https://learn.microsoft.com/en-us/azure/app-service/environment/migration-alternatives) if you want to migrate immediately.
+          This is because ASEs that have `InternalLoadBalancingMode` set to certain values can't be migrated using the migration feature at this time.
+          
+          We recommend migrating using one of the [manual migration options](/azure/app-service/environment/migration-alternatives) if you want to migrate immediately.
 
       - question:
           <ZoneRedundant><DedicatedHosts><ASEv3.ASE> isn't available in this location.
         answer:
-          This is caused if you're trying to migrate an App Service Environment in a region that doesn't support one of your requested features.
-          Our recommendation is to migrate using one of the [manual migration options](https://learn.microsoft.com/en-us/azure/app-service/environment/migration-alternatives) if you want to migrate immediately. Otherwise, wait for the migration feature to support this App Service Environment configuration.
+          This error occurs if you try to migrate an ASE in a region that doesn't support one of your requested features.
+          
+          We recommend migrating using one of the [manual migration options](/azure/app-service/environment/migration-alternatives) if you want to migrate immediately. Otherwise, wait for the migration feature to support this ASE configuration.
 
       - question:
-          Subscription has too many App Service Environments. Please remove some before trying to create more.
+          Subscription has too many ASEs. Please remove some before trying to create more.
         answer:
-          This is because the App Service Environment [quota for your subscription](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits) has been met.
-          Our recommendation is to remove unneeded environments or contact support to review your options.
+          This is because the ASE [quota for your subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits) has been met.
+          
+          We recommend removing unneeded environments or contact support to review your options.
 
       - question:
           Migrate isn't available for this subscription.
         answer:
-          Our recommendation is to open a support case to engage support to resolve your issue.
+          We recommend opening a support case to resolve your issue.
 
       - question:
           Full migration can't be called before IP addresses are generated.
         answer:
-          This is caused if you attempt to migrate before finishing the pre-migration steps. Our recommendation is that you ensure you have completed all pre-migration steps before you attempt to migrate. See the [step-by-step guide for migrating](https://learn.microsoft.com/en-us/azure/app-service/environment/how-to-migrate?pivots=experience-azp).
+          This error occurs if you try to migrate before finishing the pre-migration steps. We recommend that you ensure you have completed all pre-migration steps before you try to migrate. See the [step-by-step guide for migrating](/azure/app-service/environment/how-to-migrate?pivots=experience-azp).
 
           [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
