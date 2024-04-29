@@ -1,7 +1,7 @@
 ---
 title: The Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to their original state
 description: Explains that the Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to the same state that they were in after successfully completing Dcpromo and that it's best to use this tool only in disaster recovery scenario.
-ms.date: 04/28/2024
+ms.date: 04/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -28,11 +28,11 @@ If you have a new installation of Windows Server and no security changes are mad
 
 For general backup and restore of the Default Domain Policy and Default Domain Controller Policy, and also for other GPOs, we recommend that you use the Group Policy Management Console (GPMC) to create regular backups of these GPOs. You can then use GPMC in conjunction with these backups to restore the exact security settings that are contained in these GPOs.
 
-If you're in a disaster recovery scenario and you don't have any backed-up versions of the Default Domain Policy or the Default Domain Controller Policy, you may consider using the Dcgpofix tool. If you use the Dcgpofix tool, we recommends that as soon as you run it, you review the security settings in these GPOs and manually adjust the security settings to suit your requirements. A fix isn't scheduled to be released because we recommend you use GPMC to back up and restore all GPOs in your environment. The Dcgpofix tool is a disaster-recovery tool that will restore your environment to a functional state only. It is best not to use it as a replacement for a backup strategy using GPMC. It is best to use the Dcgpofix tool only when a GPO backup for the Default Domain Policy and Default Domain Controller Policy doesn't exist.
+If you're in a disaster recovery scenario and you don't have any backed-up versions of the Default Domain Policy or the Default Domain Controller Policy, you may consider using the Dcgpofix tool. If you use the Dcgpofix tool, we recommend that as soon as you run it, you review the security settings in these GPOs and manually adjust the security settings to suit your requirements. A fix isn't scheduled to be released because we recommend you use GPMC to back up and restore all GPOs in your environment. The Dcgpofix tool is a disaster-recovery tool that will restore your environment to a functional state only. It is best not to use it as a replacement for a backup strategy using GPMC. It is best to use the Dcgpofix tool only when a GPO backup for the Default Domain Policy and Default Domain Controller Policy doesn't exist.
 
 ## More information
 
-The following table lists differences in security settings in the Default Domain Controller Policy after you run the Dcgpofix tool and the settings on a new installation of Windows Server after you run Dcpromo. We recommends that you adjust these security settings to match the requirements in your environment after you run the Dcgpofix tool.
+The following table lists differences in security settings in the Default Domain Controller Policy after you run the Dcgpofix tool and the settings on a new installation of Windows Server after you run Dcpromo. We recommend that you adjust these security settings to match the requirements in your environment after you run the Dcgpofix tool.
 
 |Setting in Default Domain Controller Policy|Value after running DCPromo on cleanly installed Windows Server|Value after running DCGPOFIX|
 |---|---|---|
