@@ -1,7 +1,7 @@
 ---
 title: Introduction to consistent authentication issues
 description: This article discusses consistent authentication issues in SQL Server, related error messages, and workarounds to troubleshoot various issues.
-ms.date: 03/29/2024
+ms.date: 04/29/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
@@ -139,7 +139,7 @@ This section lists various causes and scenarios that are related to directory se
 - [Domain Controller is offline](#domain-controller-is-offline)
 - [Selective authentication is disabled](#selective-authentication-is-disabled)
 - [Account migration failed](#account-migration-is-incorrect)
-- [Login is from untrusted domain](#login-is-from-an-untrusted-domain)
+- [Login is from an untrusted domain](#login-is-from-an-untrusted-domain)
 
 ## Causes and scenarios related to Kerberos authentication
 
@@ -272,7 +272,7 @@ This kind of issue usually occurs if a service account is not allowed to assign 
 
 ### Local security subsystem errors
 
-These error refers to a consistent authentication issue that's related to the unresponsive LSASS. For more information, see [Troubleshoot LSASS errors with SQL Server authentication](local-security-subsystem-errors.md).
+These error refers to a consistent authentication issue that's related to the unresponsive LSASS. For more information, see [Local security subsystem errors in SQL Server](local-security-subsystem-errors.md).
 
 ### Windows user profile can't be loaded in SQL Server
 
@@ -334,7 +334,7 @@ If old user accounts can't connect to the server but newly created accounts can,
 
 This issue is related to the trust level between domains. You might see the following error message: "Login failed. The login is from an untrusted domain and cannot be used with Windows authentication. (18452)."
 
-Error 18452 indicates that the login uses Windows Authentication but the login is an unrecognized Windows principal. An unrecognized Windows principal indicates that the login can't be verified by Windows. This might occur because the Windows login is from an untrusted domain. The trust level between domains might cause failures in account authentication or the visibility of Service Provider Name (SPN)s. To resolve this error, follow these steps:
+[Error 18452](/sql/relational-databases/errors-events/mssqlserver-18452-database-engine-error) indicates that the login uses Windows Authentication but the login is an unrecognized Windows principal. An unrecognized Windows principal indicates that the login can't be verified by Windows. This might occur because the Windows login is from an untrusted domain. The trust level between domains might cause failures in account authentication or the visibility of Service Provider Name (SPN)s. To resolve this error, follow these steps:
 
  1. List SPNs for the service account using the `- setspn -l` command.
  1. [Register the SPNs](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11)) if required using the `- setspn -s` link.
