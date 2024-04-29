@@ -16,6 +16,8 @@
     href: faqs-app-service-linux.yml
   - name: Deployment FAQs for Web Apps
     href: web-apps-deployment-faqs.md
+  - name: FAQs about App Service Environment migration
+    href: ase-migration-faq.yml
   - name: FAQs about scaling web apps
     href: ./scaling-web-app-faq.yml
   - name: Open-source technologies FAQs for Web Apps
