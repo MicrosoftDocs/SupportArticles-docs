@@ -8,8 +8,7 @@ ms.reviewer: chrisarnoldmsft
 ms.date: 08/09/2022
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: viva
-ms.subservice: viva-learning
+ms.service: viva-learning
 search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
