@@ -8,6 +8,8 @@ ms.author: rahulmital
 ---
 # Help with error code 8005E274
 
+This article provides a resolution for error code 8005E274 that occurs when you test and enable a mailbox for server-side synchronization in Microsoft Dataverse.
+
 ## Symptoms
 
 When a user tries to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Microsoft Dataverse, the test fails with error code 8005E274.
