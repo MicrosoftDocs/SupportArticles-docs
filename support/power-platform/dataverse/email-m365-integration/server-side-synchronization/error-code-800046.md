@@ -6,7 +6,7 @@ ms.custom:
 author: rahulmital
 ms.author: rahulmital
 ---
-# Help with Error code 800046
+# Help with error code 800046
 
 ## Symptoms
 
