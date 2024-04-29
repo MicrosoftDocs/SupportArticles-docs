@@ -1,37 +1,40 @@
 ---
-title: Help with error code 8005E259
-description: Provides a resolution for the error code 8005E259 in Microsoft Dataverse.
-ms.date: 04/23/2024
+title: Error code 8005E259 when you test and enable a mailbox
+description: Provides a resolution for error code 8005E259 that occurs when you test and enable a mailbox during server-side synchronization.
+ms.date: 04/29/2024
 ms.custom: 
 author: rahulmital
 ms.author: rahulmital
 ---
-# Help with Error code: 8005E259
+# Help with error code 8005E259
 
 ## Symptoms
 
-When a user tries to Test and Enable a mailbox and missing privilege.
+When a user tries to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Microsoft Dataverse, the test fails with error code 8005E259.
 
 ## Cause
 
-When a user tries to Test and Enable a mailbox, the user or team associated with the Dataverse mailbox is missing the privilege.
+This issue occurs because the user or team associated with the Dataverse mailbox lacks privileges.
 
 ## Resolution
 
-Please assign a security role to the user or team that has the missing privilege.
+As an administrator, assign a security role that has the missing privileges to the user or team.
 
-1. Sign in to the Power Platform admin center, select **Environments** in the navigation pane, and then select an environment.
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select **Environments** in the navigation pane, and then select an environment.
 2. Select **Settings** > **Users + permissions** > **Security roles**.
-3. Select **New**.
-4. Enter the name of the new security role.
-5. Select the **Member's privilege inheritance** list, and then select **Direct User/Basic access level and Team privileges**.
+3. Select **New** to [create a security role](/power-platform/admin/create-edit-security-role#create-a-security-role).
+5. Select the **Member's privilege inheritance** option list, and then select **Direct User (Basic) access level and Team privileges**.
 6. Go to each tab and set the appropriate privileges on each table.
 
    > [!NOTE] 
    > To change the access level for a privilege, keep selecting the access level symbol until you see the one you want. The access levels available depend on whether the record type is organization-owned or user-owned.
 
-7. Test and Enable the mailbox again to verify
-
-   1. Open the mailbox record if it is not already open.
+7. Test and enable the mailbox again to verify that the issue is resolved.
+   
+   1. Open the mailbox record if it isn't already open.
    2. Select the **Test & Enable Mailbox** button.
-   3. Wait for the "Test & Enable" process to complete. If the test results are not Success, review the **Alerts** area within the mailbox record.
+   3. Wait for the "Test & Enable" process to complete. If the test results aren't **Success**, review the **Alerts** area within the mailbox record.
+
+## More information
+
+[Security roles and privileges](/power-platform/admin/security-roles-privileges)
