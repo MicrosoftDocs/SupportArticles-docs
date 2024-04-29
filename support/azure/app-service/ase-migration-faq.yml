@@ -1,7 +1,7 @@
 ### YamlMime:FAQ
 metadata:
   title: FAQs about App Service Environment migration
-  desciption: Describes common questions and answers about App Service Environment migration.
+  desciption: Describes common questions/errors and answers about App Service Environment migration.
   services: app-service
   ms.reviewer: hepiet, amymcel, v-weizhu
   ms.topic: faq
@@ -115,7 +115,7 @@ sections:
         answer:
           If there's an unexpected issue, support teams are on hand. You should migrate dev environments before touching any production environments to learn about the migration process and see how it impacts your workloads.
 
-  - name: Error messages
+  - name: Common errors
     questions:
       - question:
           ASEv3 Migration isn't yet ready.
