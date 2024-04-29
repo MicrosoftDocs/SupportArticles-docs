@@ -1,7 +1,7 @@
 ---
 title: Fail to use Adprep with /gpprep argument
 description: Discusses errors that occur when you use the Adprep tool together with the /gpprep argument.
-ms.date: 12/26/2023
+ms.date: 04/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -18,8 +18,7 @@ _Original KB number:_ &nbsp; 2743345
 
 ## Symptoms
 
-You use the Adprep tool together with the `/gpprep` argument in Windows Server 2012 R2. For example, you run the following arguments:
-  
+You use the Adprep tool together with the `/gpprep` argument in Windows Server. For example, you run the following arguments:  
 `adprep.exe /domainprep /gpprep`
 
 When you do this, you receive the following error:
@@ -48,7 +47,7 @@ Check the log file ADPrep.log in the C:\Windows\debug\adprep\logs\20120809082547
 > Adprep encountered a Win32 error.  
 Error code: 0x2 Error message: The system cannot find the file specified.
 
-If you use the Adprep.exe that is included with Windows Server 2012 R2, Adprep.exe crashes, and you receive an error that resembles the following:
+If you use the Adprep.exe that is included with Windows Server, Adprep.exe crashes, and you receive an error that resembles the following:
 
 > Nt5DS has stopped working
 >
@@ -109,5 +108,4 @@ Notes
 - Gpprep was introduced in Windows Server 2003.
 - Disjoint namespaces aren't a Microsoft best practice.
 
-For more information about Disjoint Namespace support and limitations in AD DS, go to the following Microsoft TechNet website:  
-[https://technet.microsoft.com/library/cc731125(v=WS.10).aspx](https://technet.microsoft.com/library/cc731125%28v=ws.10%29.aspx)
+For more information about Disjoint Namespace support and limitations in AD DS, see [Disjoint Namespace](/previous-versions/windows/it-pro/windows-server-2003/cc731125%28v=ws.10%29.aspx).
