@@ -1,53 +1,46 @@
 ---
-title: Help with error code 800046
-description: Provides a resolution for the error code 800046 in Microsoft Dataverse.
-ms.date: 04/23/2024
+title: Error code 800046 when you test and enable a mailbox
+description: Provides a resolution for error code 800046 that occurs when you test and enable a mailbox for server-side synchronization.
+ms.date: 04/29/2024
 ms.custom: 
 author: rahulmital
 ms.author: rahulmital
 ---
-# Help with Error code: 800046
+# Help with Error code 800046
 
 ## Symptoms
 
-When a user tries to Test and Enable a mailbox and the associated Graph user does not have an Exchange subscription.
+When you try to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Microsoft Dataverse, the test fails with error code 800046.
 
 ## Cause
 
-Test and Enable failed because the user associated with the email address does not have a valid Exchange license.
+This issue occurs because the Microsoft Graph user associated with the email address doesn't have a valid Exchange license or the user isn't in administrative access mode.
 
 ## Resolution
 
-Verify that the user has a valid Exchange license assigned. Step by Step process to fix this problem:
+As an administrator, follow these steps to make sure the user has a valid Exchange license .
 
-1. Assign licenses by using the Licenses page.
-
-   1. In the admin center, go to the **Billing** > **Licenses** page.
-   2. Select product.
-   3. On the product details page, select **Assign licenses**.
-   4. In the **Assign licenses to user's** pane, begin typing a name, and then choose it from the results to add it to the list. You can add up to 20 users at a time.
-   5. Select **Turn apps and services on or off** to assign or remove access to specific items.
-   6. When you're finished, select **Assign**, then close the right pane.
+1. [Assign a license to the user by using the "Licenses" page](/microsoft-365/admin/manage/assign-licenses-to-users?view=o365-worldwide#assign-licenses-by-using-the-licenses-page) in the Microsoft 365 admin center.
 
    > [!IMPORTANT]
-   > Licensed users must be assigned at least one security role to access customer engagement apps. Security roles can be assigned either directly or indirectly as a member of a group team.
+   > Licensed users must be assigned [at least one security role to access customer engagement apps](/power-platform/admin/plan-for-deployment-and-administration). [Security roles can be assigned either directly or indirectly as a group team member](/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide#assign-admin-roles-to-users-using-roles).
 
    > [!NOTE]
-   > After assigning the Microsoft Dynamics 365 license to the user, it may take a few minutes for this change to sync from Office 365 to Microsoft Dynamics 365. Exchange may also need to create a mailbox for the user which can take additional time.
+   > After assigning the Microsoft Dynamics 365 license to the user, this change may take a few minutes to sync between Microsoft 365 and Microsoft Dynamics 365. Exchange might also need additional time to create a mailbox for the user.
 
-2. Verify the user is not in administrative access mode.
+2. Make sure the user is in administrative access mode.
 
-   1. Sign in to your Microsoft Dynamics 365 organization as a user with the System Administrator role.
-   2. Navigate to Settings and then select **Email Configuration**.
-   3. Select **Mailboxes**.
-   4. Change the selected view from My Active Mailboxes to **Active Mailboxes**.
-   5. Open the user's mailbox record.
-   6. Select the user selected in the **Owner** field to open the User record.
-   7. Expand the **Administration** tab.
-   8. Verify the **Access Mode** is set to **Read-Write**.
+   1. Sign in to your Microsoft Dynamics 365 organization as a user with the "System Administrator" role.
+   2. Navigate to **Settings** > **Email Configuration** > **Mailboxes**.
+   3. Change the selected view from **My Active Mailboxes** to **Active Mailboxes**.
+   4. Open the user's mailbox record.
+   5. Select the user selected in the **Owner** field to open the user record.
+   6. Expand the **Administration** tab.
+   7. Set the **Access Mode** to **Read-Write**.
 
-3. Test and Enable the mailbox again.
+3. Test and enable the mailbox again.
 
-   1. Open the mailbox record if it is not already open.
+   1. Open the mailbox record if it isn't already open.
    2. Select the **Test & Enable Mailbox** button.
-   3. Wait for the Test & Enable process to complete. If the test results are not Success, review the **Alerts** area within the mailbox record.
+   3. Wait for the "Test & Enable" process to complete. If the test results aren't **Success**, review the **Alerts** area within the mailbox record.
+
