@@ -6,8 +6,7 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting
-ms.service: viva
-ms.subservice: viva-connections
+ms.service: viva-connections
 localization_priority: Normal
 ms.custom: 
   - CI 169239
