@@ -7,8 +7,7 @@ author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: viva
-ms.subservice: viva-engage
+ms.service: viva-engage
 localization_priority: Normal
 search.appverid:
  - MET150
