@@ -1,7 +1,7 @@
 ---
 title: Support for Linux and open-source technology in Azure
 description: Describes support for Linux images in Microsoft Azure.
-ms.date: 03/28/2024
+ms.date: 04/24/2024
 ms.reviewer: divargas, hokamath, genli, v-leedennis, v-weizhu
 author: patcatun
 ms.author: patcatun
@@ -11,6 +11,8 @@ ms.custom: linux-related-content
 ---
 
 # Support for Linux and open-source technology in Azure
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), MSfC Azure-Azure Apps (IaaS)  
 _Original KB number:_ &nbsp; 2941892
@@ -22,7 +24,7 @@ This article describes the support policies for [Endorsed Linux distributions](/
 
 ## Linux in Azure
 
-The endorsed Linux distributions are created and published by Linux partners for use in Azure environments. We recommend that you use an [Endorsed Linux distribution](/azure/virtual-machines/linux/endorsed-distros) because these are maintained by some of the most well-known Linux vendors in the world. Take the opportunity to explore the marketplace to find systems from other vendors, such as Rocky, AlmaLinux, and Kali. Microsoft will support distributions such as these but may require customers to engage the vendor to allow collaboration between the organizations for support. Fixes that are distribution-specific must be provided by the vendor.
+The endorsed Linux distributions are created and published by Linux partners for use in Azure environments. We recommend that you use an [Endorsed Linux distribution](/azure/virtual-machines/linux/endorsed-distros) because these are maintained by some of the most well-known Linux vendors in the world. Take the opportunity to explore the marketplace to find systems from other vendors, such as Rocky, AlmaLinux, and Kali. Microsoft supports distributions such as these but may require customers to engage the vendor to allow collaboration between the organizations for support. Fixes that are distribution-specific must be provided by the vendor.
 
 ## Linux support matrix
 

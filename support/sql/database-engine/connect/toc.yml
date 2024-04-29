@@ -18,7 +18,7 @@ items:
     href: client-machine-cannot-connect-to-sqlserver.md
   - name: Connection to the linked server failed
     href: connection-to-linked-server-failed.md
-  - name: Connectivity issues arising from SQL Sever Agent SSIS failures
+  - name: Error 0x80004005 occurs from SQL Sever Agent SSIS failures
     href: sql-server-faces-connectivity-issue-ssispack-fail.md
   - name: SQL Server Agent fails to start due to TLS issues
     href: unable-to-start-sql-agent.md
@@ -30,7 +30,7 @@ items:
     href: issues-connection-after-implementing-cipher-suite-policies.md
   - name: The SSL_PE_NO_CIPHER error occurs on endpoint 5022
     href: ssl-pe-no-cipher-error-endpoint-5022.md
-  - name: Intermittent connection errors with SQLCMD
+  - name: Intermittent connection errors when using SQLCMD utility
     href: intermittent-connection-errors-sqlcmd.md
 - name: Explicit misplaced SPN problem in SQL Server
   href: explicit-spn-is-misplaced.md
@@ -44,7 +44,7 @@ items:
   href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
 - name: KRB_AP_ERR_TKT_EXPIRED error in Kerberos tickets
   href: expired-tickets-issue.md
-- name: Network access issues in SQL Server
+- name: User account is restricted from using the network login type
   href: network-login-disallowed.md
 - name: Local security subsystem errors in SQL Server
   href: local-security-subsystem-errors.md

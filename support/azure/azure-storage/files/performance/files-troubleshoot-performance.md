@@ -3,11 +3,13 @@ title: Azure Files performance troubleshooting guide
 description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
 ms.service: azure-file-storage
 ms.custom: sap:Performance, linux-related-content
-ms.date: 09/28/2023
+ms.date: 04/24/2024
 ms.reviewer: kendownie, v-weizhu
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
 ---
 # Troubleshoot Azure Files performance issues
+
+[!INCLUDE [CentOS End Of Life](../../../../includes/centos-end-of-life-note.md)]
 
 This article lists common problems related to Azure file share performance, and provides potential causes and workarounds. To get the most value from this troubleshooting guide, we recommend first reading [Understand Azure Files performance](/azure/storage/files/understand-performance).
 
@@ -132,6 +134,7 @@ To determine whether most of your requests are metadata-centric, start by follow
 #### Workarounds
 
 - Check to see whether the application can be modified to reduce the number of metadata operations.
+- If you're using premium SMB Azure file shares, use [metadata caching](/azure/storage/files/smb-performance#metadata-caching-for-premium-smb-file-shares).
 - Separate the file share into multiple file shares within the same storage account.
 - Add a virtual hard disk (VHD) on the file share and mount the VHD from the client to perform file operations against the data. This approach works for single writer/reader scenarios or scenarios with multiple readers and no writers. Because the file system is owned by the client rather than Azure Files, this allows metadata operations to be local. The setup offers performance similar to that of local directly attached storage. However, because the data is in a VHD, it can't be accessed via any other means other than the SMB mount, such as REST API or through the Azure portal.
     1. From the machine which needs to access the Azure file share, mount the file share using the storage account key and map it to an available network drive (for example, Z:).

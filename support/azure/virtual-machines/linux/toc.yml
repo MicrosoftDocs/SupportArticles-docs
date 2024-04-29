@@ -109,6 +109,11 @@
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
 
+- name: Issue resizing a disk
+  items:
+  - name: Can't resize MBR partition for a data disk larger than 2 TB
+    href: convert-mbr-partition-to-gpt.md
+    
 - name: Linux repositories
   items:
   - name: SUSE
@@ -121,6 +126,8 @@
       href: troubleshoot-linux-rhui-certificate-issues.md
     - name: Red Hat RHUI connectivity issues
       href: linux-rhui-connectivity-issues.md
+    - name: Yum and dnf common Issues
+      href: yum-dnf-common-issues.md 
 
 - name: Serial Console for Linux
   href: serial-console-linux.md
@@ -190,4 +197,4 @@
   - name: Previous command is re-run
     href: customscript-reruns-previous-command.md
   - name: Linux - version 2
-    href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
+    href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/linux/context/context

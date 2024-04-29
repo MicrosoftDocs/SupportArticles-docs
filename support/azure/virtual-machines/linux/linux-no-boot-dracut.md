@@ -3,7 +3,7 @@ title: Azure Linux virtual machine boot enters dracut emergency shell
 description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot because the OS file system isn't accessible from RAMdisk.
 author: divargas-msft
 ms.author: divargas
-ms.date: 03/28/2024
+ms.date: 04/15/2024
 ms.reviewer: jofrance
 ms.service: virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
@@ -12,6 +12,8 @@ ms.topic: troubleshooting
 ---
 
 # Azure Linux virtual machine fails to boot and enters dracut emergency shell
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article provides solutions to an issue in which an Azure Linux virtual machine (VM) can't boot because the operating system (OS) file system isn't accessible from the RAMdisk. The VM lands in the dracut emergency shell.
 

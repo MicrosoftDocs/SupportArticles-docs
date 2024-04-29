@@ -1,7 +1,8 @@
 ---
 title: ClickOnce apps fail to install or launch
 description: When the ampersand special character is used within the folder structure of the published ClickOnce application, the installation and launching will fail. You'll receive the Application cannot be started error and the Value does not fall within the expected range log.
-ms.date: 05/06/2020
+ms.date: 04/15/2024
+ms.reviewer: jagbal
 ms.custom: sap:Installation and Deployment
 ---
 # ClickOnce installation fails with the Application cannot be started error message

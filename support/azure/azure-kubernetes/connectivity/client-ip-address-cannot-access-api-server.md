@@ -1,7 +1,7 @@
 ---
 title: Client IP address can't access the API server
 description: Troubleshoot issues caused when the client IP address can't access the API server on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 12/06/2021
+ms.date: 04/16/2024
 ms.reviewer: rissing, chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want the AKS API server to allow access to my client IP address so that I can successfully connect to my AKS cluster.
@@ -14,7 +14,7 @@ This article describes how to fix issues that occur when you can't connect to an
 ## Prerequisites
 
 - [Azure CLI](/cli/azure/install-azure-cli).
-- The client URL ([curl](/virtualization/community/team-blog/2017/20171219-tar-and-curl-come-to-windows)) tool.
+- The client URL ([curl](https://techcommunity.microsoft.com/t5/containers/tar-and-curl-come-to-windows/ba-p/382409)) tool.
 
 ## Symptoms
 

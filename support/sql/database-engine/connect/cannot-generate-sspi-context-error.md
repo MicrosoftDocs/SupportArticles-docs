@@ -74,7 +74,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```
 
-For more information, see [Determine If I Am Connected to SQL Server using Kerberos Authentication](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Determine-If-I-Am-Connected-to-SQL-Server-using-Kerberos-Authentication).
+For more information, see [How to determine if the authentication type is Kerberos](determine-the-authentication-type.md).
 
 ### How to create SPNs for SQL Server?
 
@@ -205,6 +205,7 @@ Use the output above to determine the next steps (see examples below) and use [S
 |SPN doesn't exist |Add the required SPN(s) for your SQL Server service account. |
 |Duplicate SPNs |Delete the SPN that is registered for your SQL Service under the incorrect account. |
 |SPN under incorrect account |Delete the registered SPN for your SQL Service under the incorrect account, and then register the SPN under the correct service account. |
+|Incorrect SPN is registered| Delete the incorrect SPN and register the correct SPN.|
   
 > [!NOTE]
 >

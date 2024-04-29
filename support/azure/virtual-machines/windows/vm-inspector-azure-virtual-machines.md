@@ -1,13 +1,15 @@
 ---
 title: VM Inspector for Azure Virtual Machines (Preview)
 description: Describes the VM Inspector tool for Azure virtual machines for troubleshooting issues on Windows or Linux virtual machines.
-ms.date: 06/06/2023
+ms.date: 04/15/2024
 ms.reviewer: v-leedennis
 ms.service: virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS), linux-related-content
 #Customer intent: As a customer, support agent, or third-party personnel with privileged access, I want to learn about VM Inspector so that I understand how to use collect logs and configuration files remotely on an Azure virtual machine.
 ---
 # VM Inspector for Azure virtual machines (Preview)
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 The VM Inspector tool helps you troubleshoot issues related to the operating system (OS) that can affect a Windows or Linux virtual machine (VM). It's designed as a self-help diagnostic tool that lets customers, support agents, or third-party personnel who have privileged access collect logs and configuration files directly on the OS disk of an Azure VM. VM Inspector is a fast and secure way for an authorized user to retrieve well-known log files from a VM OS disk to diagnose Guest OS issues.
 

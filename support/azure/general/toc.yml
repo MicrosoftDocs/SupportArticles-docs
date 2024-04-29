@@ -22,8 +22,6 @@
 
 - name: Other common issues
   items:
-  - name: Fail to sign up for an Azure subscription
-    href: cannot-sign-up-subscription.md
   - name: Users and groups lists disappear
     href: cannot-see-users-groups-list-iam.md
 
