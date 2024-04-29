@@ -1,7 +1,7 @@
 ---
 title: Recommendations for managing Group Policy administrative template (.adm) files
 description: Describes how ADM files work, the policy settings that are available to manage their operation, and recommendations about how to handle common ADM file management scenarios
-ms.date: 12/26/2023
+ms.date: 04/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -17,7 +17,7 @@ _Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (Al
 _Original KB number:_ &nbsp; 816662
 
 > [!NOTE]
-> We recommend that you use Windows Vista to manage the Group Policy infrastructure by using a central store. This recommendation holds true even when the environment has a mix of down-level clients and servers, such as computers that are running Windows XP or Windows Server 2003. Windows Vista uses a new model that employs ADMX and ADML files to manage Group Policy templates.
+> We recommend that you use Windows that released later than Windows Vista to manage the Group Policy infrastructure by using a central store. This recommendation holds true even when the environment has a mix of down-level clients and servers, such as computers that are running Windows XP or Windows Server 2003. Windows Vista uses a new model that employs ADMX and ADML files to manage Group Policy templates.
 >
 > For more information, visit the following Web sites:
 >
