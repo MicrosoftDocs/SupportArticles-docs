@@ -9,7 +9,7 @@ metadata:
   ms.service: app-service
 title: Frequently asked questions about App Service Environment migration
 summary: 
-  This article answers common questions about [App Service Environment (ASE) migration] (/azure/app-service/environment/upgrade-to-asev3) from ASE v1/v2 to ASE v3, and provides solutions to common errors that might occur during the migration pre-check process.
+  This article answers common questions about [App Service Environment (ASE) migration](/azure/app-service/environment/upgrade-to-asev3) from ASE v1/v2 to ASE v3, and provides solutions to common errors that might occur during the migration pre-check process.
   
   [!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
 sections:
