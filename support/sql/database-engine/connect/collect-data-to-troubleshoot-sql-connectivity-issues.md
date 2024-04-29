@@ -42,7 +42,7 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 1. On the client computer, start **Problem Steps Recorder** (psr.exe), and then select **Start Record**.
 
-   This will accurately capture all user actions that preceded the issue, and save the results to a .zip file.
+   This tool will accurately capture all user actions that preceded the issue, and save the results to a .zip file.
 
 1. Start the network capture on all computers.
 
@@ -92,7 +92,7 @@ You can collect the following information about the components of the client com
 > [!NOTE]
 > The workflows are currently more Windows-oriented.
 
-- Does the issue affect only legacy providers, such as `Provider=SQLOLEBD` or `Driver={SQL Server}`, and not SQL Native client and later drivers (or vice versa)?
+- Does the issue affect only legacy providers, such as `Provider=SQLOLEBD` or `Driver={SQL Server}`, and not SQL Native Client and later drivers (or vice versa)?
 - Does the issue occur in only one application or in multiple applications?
 - Does a Universal Data Link (UDL) file fail when it tries to connect to other SQL Server-based servers, or does it fail to only the server that has the issue?
 - Does the user log in to the SQL Server-based server and connect using SQL Server Management Studio (SSMS)?
@@ -107,20 +107,21 @@ For a Linked Server, collect server information for both the mid-tier server and
 - What is the name and version of the database?  
 - What is the name of the computer?
 - What is the IP address?
-- Is the computer domain-joined? If yes, what is the domain name?
+- What is the domain name if the computer is domain-joined?
 - What is the SQL Server service account and domain?
 - What is the name of the SQL Server instance?
 - Which protocols are enabled?
 - Which is the port that the server listens on?
 - What is the name of the server pipe? You can find this information in the error log.
-- Which type of environment is used? Is it physical, virtual, or cloud? For example, IaaS (SQL in an Azure VM) or PaaS (Azure SQL Database, SQL MI).
+- Which type of environment is used? Is it physical, virtual, or cloud? For example, IaaS (SQL in an Azure Virtual Machine (VM) or PaaS (Azure SQL Database, SQL Managed Instance (MI)).
 - Is the database deployed as standalone, clustered, mirrored, or using Always On?
 - What is the Failover partner name and IP address?
 - What is the Virtual cluster name or Listener name and port?
 - Which is the Virtual IP or Listener IP?
 - Which operating system is the database installed on? Is it Windows, Linux, or Mac? This might affect data collection.
 - What is the location of the database? Is it situated in Azure?
-- What is the current status of the server in terms of the latest Service Pack and Cumulative Update? There's no point in debugging an issue that's already fixed.
+- What is the current status of the server in terms of the latest Service Pack and Cumulative Update?
+  There's no point in debugging an issue that's already fixed.
 - Has SQL Server been upgraded recently to support Transport Layer Security (TLS) 1.2? Were the clients also updated? Has TLS 1.0 been turned off?
 - What is the current status of the SQL Server service? Is it running?
 - What is the status of the SQL Browser service? Is it running?
@@ -150,7 +151,7 @@ If the user is remote to the client application, collect the following details:
 ## Log information
 
 - What is the exact error message in the call stack?
-- Was the log collected from the SQL Server ERRORLOG and ERRORLOG.1 files?
+- Was the log collected from the SQL Server *ERRORLOG* and *ERRORLOG.1* files?
 - Were the application event logs collected from the client and server?
 - Were the client application log files and configuration files collected? For example, *web.config, rsreportserver.config*, **.config*, or **.ini*.
 - Is there an available visual representation of the network that shows the computers, routers, and so on?
@@ -159,8 +160,9 @@ If the user is remote to the client application, collect the following details:
 
 The following set of questions is designed to help you identify the category of the issue, guiding you towards troubleshooting in the right direction:
 
-- Does the issue affect only database connections, or does it also affect web and file share connections? Many cases are reported to the SQL Server team because they occur on the database server. However, it might be possible that the issue isn't related to the database at all and might require more general Windows or Active Directory support.
-- If the user domain, client domain, or server domain are different, what is the trust relationship between them? Is it external, forest, one-way, two-way, or none?
+- Does the issue affect only database connections, or does it also affect web and file share connections?
+  Many cases are reported to the SQL Server team because they occur on the database server. However, it might be possible that the issue isn't related to the database at all and might require more general Windows or Active Directory support.
+- Does a trust relationship exist between the user domain, client domain, or server domain if they are different? Is it external, forest, one-way, two-way, or none?
 - Does the connection work correctly if all the resources are in the same domain?
 - Does the issue occur intermittently (or periodically) or is it consistent?
 - Does the issue occur only if more than one user is using the application? Does it occur more often if more users are using it?  
