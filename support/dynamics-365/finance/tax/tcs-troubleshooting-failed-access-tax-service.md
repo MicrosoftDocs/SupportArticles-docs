@@ -4,26 +4,28 @@
 title: Failed to access tax service error
 description: Provides a resolution for the Failed to access tax service error that occurs when you try to access the Tax Calculation service.
 author: hangwan
-ms.date: 10/31/2022
+ms.date: 04/30/2024
 
 # optional metadata
 
 ms.search.form: TaxIntegrationTaxServiceParameters_lookupFeatureSetupName
 audience: Application User
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 # ms.tgt_pltfrm: 
-# ms.custom: 
+ms.custom: sap:Tax - indirect tax\Issues with tax calculation service
 ms.search.region: Global
 # ms.search.industry: 
 ms.author: hangwan
 ms.search.validFrom: 02/16/2022
 ms.dyn365.ops.version: 10.0.21
 ---
-
 # "Failed to access tax service" error when selecting a value in Feature setup name
 
 This article explains how to fix the "Failed to access tax service" error of the Tax Calculation service.
+
+> [!NOTE]
+> This article is applicable to version 10.0.38 or earlier.
 
 ## Symptoms
 
