@@ -185,7 +185,7 @@ Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/
 
 ### SQL Server logins are not enabled
 
-Refers to the scenario in which you try to connect to a Microsoft SQL Server instance by using SQL Server authentication, but the login that's associated with the account is disabled. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
+Refers to a scenario in which you try to connect to a Microsoft SQL Server instance by using SQL Server authentication, but the login that's associated with the account is disabled. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
 ### Named Pipes connections fail because the user doesn't have permission to log in to Windows
 
@@ -231,7 +231,7 @@ This issue occurs if the database name that's provided for authentication is inc
 
 ### Wrong explicit SPN account
 
-This issue might occur if the SPN is associated with the wrong account in Active Directory. For more information, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
+This issue might occur if the SPN is associated with the wrong account in AD. For more information, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
 
 ### Explicit SPN is missing
 
@@ -239,7 +239,7 @@ This issue occurs if the SPN isn't configured or registered correctly. For more 
 
 ### Explicit misplaced SPN
 
-This issue occurs if the SPN is associated with the wrong account in Active Directory. For more information, [Explicit misplaced SPN](explicit-spn-is-misplaced.md).
+Refers to an SPN that has been incorrectly associated with a particular service or account. For more information, [Explicit misplaced SPN](explicit-spn-is-misplaced.md).
 
 ### Explicit SPN is duplicated
 
@@ -272,7 +272,7 @@ This kind of issue usually occurs if a service account is not allowed to assign 
 
 ### Local security subsystem errors
 
-These error refers to a consistent authentication issue that's related to the unresponsive LSASS. For more information, see [Local security subsystem errors in SQL Server](local-security-subsystem-errors.md).
+When you experience local security subsystem errors, particularly those linked to Local Security Authority Subsystem Service (LSASS) becoming unresponsive, it might indicate underlying issues with authentication. For more information, see [Local security subsystem errors in SQL Server](local-security-subsystem-errors.md).
 
 ### Windows user profile can't be loaded in SQL Server
 
@@ -328,7 +328,7 @@ Selective authentication is a feature of domain trusts that allows the domain ad
 
 ### Account migration is incorrect
 
-If old user accounts can't connect to the server but newly created accounts can, account migration might not be correct. This issue is related to Active Directory. For more information, see [Transfer logins and passwords between instances of SQL Server](../security/transfer-logins-passwords-between-instances.md).
+If old user accounts can't connect to the server but newly created accounts can, account migration might not be correct. This issue is related to AD. For more information, see [Transfer logins and passwords between instances of SQL Server](../security/transfer-logins-passwords-between-instances.md).
 
 ### Login is from an untrusted domain
 
@@ -346,9 +346,9 @@ This scenario might occur when an SPN that's related to a SQL Sever instance is 
 
 ### SPN is associated with a wrong account
 
-This issue might occur if an SPN is associated with the wrong account in Active Directory. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+This issue might occur if an SPN is associated with the wrong account in AD. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
-You might receive an error message if your SPN is configured on the wrong account in Active Directory. To resolve the error, follow these steps:
+You might receive an error message if your SPN is configured on the wrong account in AD. To resolve the error, follow these steps:
 
 1. Use `SETSPN -Q spnName` to locate the SPN and its current account.
 1. Use `SETSPN -D` to delete the existing SPNs.
@@ -360,11 +360,11 @@ This scenario refers to a situation in which two or more SPNs are identical with
 
 ### Delegating sensitive accounts to other services
 
-Some accounts may be marked as Sensitive in Active Directory. These accounts can't be delegated to another service in a double-hop scenario. Sensitive accounts are critical to providing security but can affect authentication. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
+Some accounts may be marked as Sensitive in AD. These accounts can't be delegated to another service in a double-hop scenario. Sensitive accounts are critical to providing security but can affect authentication. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
 ### Service account can't be trusted for delegation
 
-In a double-hop scenario, the service account of the mid-tier service must be trusted for delegation in Active Directory. If the service account isn't trusted for delegation, Kerberos authentication can fail. If you're an administrator, enable the **Trusted for delegation** option.
+In a double-hop scenario, the service account of the mid-tier service must be trusted for delegation in AD. If the service account isn't trusted for delegation, Kerberos authentication can fail. If you're an administrator, enable the **Trusted for delegation** option.
 
 ### An incorrect DNS suffix is appended to the NetBIOS name
 
@@ -388,7 +388,7 @@ If constrained delegation is enabled for a particular service account, Kerberos 
 
 ### Disjoint DNS namespace
 
-Refers to a consistent authentication issue that might occur if the DNS suffix doesn't match between the domain member and DNS. You might experience authentication issues if you use a disjoint namespace. If the organizational hierarchy in Active Directory and in DNS don't match, the wrong SPN might be generated if you use the NETBIOS name in the database application connection string. In this situation, the SPN isn't found, and NTLM credentials are used instead of Kerberos credentials. To mitigate the issue, use the FQDN of the server or specify the SPN name in the connection string. For information about FQDN, see [Computer Naming](/windows-server/identity/ad-ds/plan/computer-naming).
+Refers to a consistent authentication issue that might occur if the DNS suffix doesn't match between the domain member and DNS. You might experience authentication issues if you use a disjoint namespace. If the organizational hierarchy in AD and in DNS don't match, the wrong SPN might be generated if you use the NETBIOS name in the database application connection string. In this situation, the SPN isn't found, and NTLM credentials are used instead of Kerberos credentials. To mitigate the issue, use the FQDN of the server or specify the SPN name in the connection string. For information about FQDN, see [Computer Naming](/windows-server/identity/ad-ds/plan/computer-naming).
 
 ### Choose constrained delegation instead of NTLM
 
