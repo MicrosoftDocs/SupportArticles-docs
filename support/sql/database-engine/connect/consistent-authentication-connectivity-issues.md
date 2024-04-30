@@ -47,7 +47,7 @@ This section describes error types and related information.
 
 - Directory services errors
 
-  If the SQL Server error log file contains either or both of the following messages, then this error is related to Active Directory (AD). This error might occur if the DC can't be contacted by Windows on the SQL Server-based computer, or the local security service (LSASS) is experiencing an issue.
+  If the SQL Server error log file contains either or both of the following messages, then this error is related to Active Directory (AD). This error might also occur if the Domain Controller (DC) can't be contacted by Windows on the SQL Server-based computer, or the local security service (LSASS) is experiencing an issue.
 
   ```output
    Error -2146893039 (0x80090311): No authority could be contacted for authentication.
@@ -209,7 +209,7 @@ You experience an authentication process issue that affects linked servers in th
 
 ### Proxy account doesn't have permissions
 
-An SSIS job that's run by SQL Agent might need permissions other than those that the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
+An SQL Server Integration Service (SSIS) job that's run by SQL Agent might need permissions other than those that the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
 
 ### Unable to log in to SQL Server database
 
@@ -217,7 +217,7 @@ The inability to log in can cause failures in authentication. For more informati
 
 ### Metadata of the linked server is inconsistent
 
-Refers to a scenario in which metadata of the linked server is inconsistent or doesn't match the expected metadata.
+Refers to an issue in which metadata of the linked server is inconsistent or doesn't match the expected metadata.
 
 A view or stored procedure queries the tables or views in the linked server but receives login failures although a distributed `SELECT` statement that's copied from the procedure doesn't. This issue might occur if the view was created and then the linked server was re-created, or a remote table was modified without rebuilding the View. To resolve this issue, refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
 
@@ -268,7 +268,7 @@ To resolve this issue, follow these steps:
 
 ### Service account isn't trusted for delegation
 
-This kind of issue usually occurs if a service account is not allowed to assign credentials to other servers. This issue can affect services that require delegation. If a delegation scenario isn't enabled, check the SQL Server *secpol.msc*  to determine whether the SQL Server service account is listed under the **Local Policies > User Rights Assignment > Impersonate a client after authentication** security policy settings. For more information, see [Enable computer and user accounts to be trusted for delegation](/windows/security/threat-protection/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation).
+This kind of issue usually occurs if a service account isn't allowed to assign credentials to other servers. This issue can affect services that require delegation. If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to determine whether the SQL Server service account is listed under the **Local Policies > User Rights Assignment > Impersonate a client after authentication** security policy settings. For more information, see [Enable computer and user accounts to be trusted for delegation](/windows/security/threat-protection/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation).
 
 ### Local security subsystem errors
 
@@ -400,7 +400,7 @@ Per-service-SID is a security feature of SQL Server that limits local connection
 
 ### Some legacy providers don't support Kerberos over Named Pipes
 
-The legacy OLE DB Provider (SQLOLEDB) and ODBC Driver (SQL Server) that are provided together with Windows don't support Kerberos over Named Pipes, only over NTLM. Use a TCP connection to allow Kerberos.
+The legacy OLE DB Provider (SQLOLEDB) and ODBC Driver (SQL Server) bundled with Windows don't offer support for Kerberos authentication over Named Pipes. Instead, they only support NTLM authentication. Use a TCP connection to allow Kerberos.
 
 ### Kernel-mode authentication
 
@@ -416,7 +416,7 @@ If the website has a host header name, the HOSTS SPN can't be used. An explicit 
 
 ### HOSTS file is incorrect
 
-The HOSTS file overrides DNS lookups and might generate an unexpected SPN name. This situation causes NTLM credentials to be used. If an unexpected IP address is in the HOSTS file, the SPN that's generated might not match the back-end that's pointed to.
+The HOSTS file can disrupt DNS lookups and might generate an unexpected SPN name. This situation causes NTLM credentials to be used. If an unexpected IP address is in the HOSTS file, the SPN that's generated might not match the back-end server that's pointed to.
 
 ### Assign permissions to a file share without proper constraints
 
@@ -432,7 +432,7 @@ A SQL Server alias might cause an unexpected SPN to be generated. This results i
 
 ### Integrated authentication isn't enabled
 
-This situation might be related to integrated authentication issues. To resolve this kind of error, make sure that the **Integrated Windows Authentication** option is enabled in **Internet Options**.
+Refers to a configuration issue where Integrated Windows Authentication (IWA) is not configured correctly. To resolve this issue, make sure that the **Integrated Windows Authentication** option is enabled in **Internet Options** settings.
 
 ### Wrong Internet zone
 
@@ -440,4 +440,4 @@ This might occur if you try to access a website that isn't in the correct Intern
 
 ### IIS Authentication isn't allowed
 
-Configure the website to enable Windows Authentication and set the `<identity impersonate="true"/>` value in the *Web.config* file.
+This issue occurs due to misconfigurations in the IIS. The authentication settings defined in the web.config file of the web application may conflict with the settings configured in IIS, leading to authentication issues. To resolve this issue, configure the website to enable Windows Authentication and set the `<identity impersonate="true"/>` value in the *Web.config* file.
