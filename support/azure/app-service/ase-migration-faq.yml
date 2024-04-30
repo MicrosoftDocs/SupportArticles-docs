@@ -63,7 +63,7 @@ sections:
       - question:
           Will my IPs change?
         answer:
-          The platform will create the [new inbound IP (if you're migrating an ELB ASE) outbound IP](/azure/app-service/environment/networking#addresses) addresses. When these IPs are created, the activity with your existing ASE isn't interrupted. However, you can't scale or change your existing environment. This process takes about 15 minutes to complete.
+          The platform will create the [new inbound IP (if you're migrating an ELB ASE) and outbound IP](/azure/app-service/environment/networking#addresses) addresses. When these IPs are created, the activity with your existing ASE isn't interrupted. However, you can't scale or change your existing environment. This process takes about 15 minutes to complete.
 
           
           When completed, you'll get the new IPs that your future ASE v3 uses. These new IPs don't affect your existing environment. 
