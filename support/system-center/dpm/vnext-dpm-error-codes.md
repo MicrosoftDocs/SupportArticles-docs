@@ -1,7 +1,7 @@
 ---
 title: System Center vNext DPM error codes
 description: Lists error codes that may occur in System Center vNext Data Protection Manager.
-ms.date: 04/29/2024
+ms.date: 04/30/2024
 ms.reviewer: Mjacquet, aaronmax, jchornbe, sooryar
 ---
 # System Center vNext Data Protection Manager error codes
@@ -78,7 +78,7 @@ _Original KB number:_ &nbsp; 3041345
 |94|The data source <_DatasourceType_><_DatasourceName_> on <_ServerName_> is no longer protected, and DPM no longer has a replica of it. The replica was probably deleted because the **Stop Protection without retaining replica** task was run for this data source.|Wait for the replica creation operation to complete. Then, retry the job. No action is required. Wait for the DPM database to be updated to reflect that this data source is no longer protected.|
 |95|Job failure on replica of <_DatasourceName_> on <_ServerName_> was caused by an ongoing synchronization operation.|Cancel the ongoing synchronization operation, or wait for it to complete. Then retry the operation.|
 |96|Job failure on replica of <_DatasourceName_> on <_ServerName_> was caused by an ongoing replica creation.|Cancel the consistency check operation, or wait for it to complete. Then retry the job.|
-|97|Job failure on replica of <_DatasourceName_> on <_ServerName_> was caused by an ongoing consistency check operation.|Wait for it to complete. Then retry the job.|
+|97|Job failure on replica of <_DatasourceName_> on <_ServerName_> was caused by an ongoing consistency check operation.|Wait for ongoing consistency check operation to complete. Then retry the job.|
 |98|Job failure on replica of <_DatasourceName_> on <_ServerName_> was caused by a recovery operation currently in progress.|Cancel the recovery operation, or wait for it to complete. Then retry the job.|
 |99|Job failure on replica of <_DatasourceName_> on <_ServerName_> was caused by an ongoing stop-protection job.|Cancel the stop-protection operation, or wait for it to complete. Then retry the job.|
 |100|Job failure on replica of <_DatasourceName_> on <_ServerName_> was caused by an ongoing recovery point creation.|Cancel the recovery point operation, or wait for it to complete. Then retry the operation.|
