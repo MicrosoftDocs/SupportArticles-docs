@@ -12,9 +12,9 @@ ms.search.form: HcmBudgetPurposeType, HcmPositionForecast
 # ROBOTS: 
 audience: Application User
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: kfend, saurabhgupta
 # ms.tgt_pltfrm: 
-ms.custom: 88253
+ms.custom: sap:Budgeting, 88253
 ms.assetid: c44df01b-8700-4022-b4c6-c4b1cb84d31d
 ms.search.region: Global
 # ms.search.industry: 
@@ -33,10 +33,10 @@ Forecast positions have been moved to Budgeting.
 
 ## Why can't I delete a budget cost element?
 
-You can't delete a budget cost element that's assigned to a forecast position. Before you can delete a budget cost element, remove the budget from all forecast positions.
+You can't delete a budget cost element that's assigned to a forecast position or used as a calculation basis for another cost element. Before you can delete a budget cost element, remove the budget from all forecast positions.
 
 > [!TIP]
-> To find all the positions that a budget cost element is assigned to, select the cost element on the **Budget cost elements** page, and then select **Update positions**. The positions that use the cost element are listed in the upper grid.
+> To find the reference in other cost elements, select the other cost element, and then check the **Calculation basis** FastTab. To find all the positions that a budget cost element is assigned to, select the cost element on the **Budget cost elements** page, and then select **Update positions**. The positions that use the cost element are listed in the upper grid.
 
 ## How can I remove a cost element from multiple forecast positions without opening each one?
 
@@ -47,7 +47,9 @@ You can't remove a cost element. However, if you change the start and end dates 
 
 ## Why can't I enter an annual amount on the Cost calculation FastTab for the budget cost element?
 
-You can’t enter an annual amount if there are budget cost elements on the **Calculation basis** FastTab, because the system requires a percentage in order to calculate the value. To change the value, remove all budget cost elements from the **Calculation basis** FastTab.
+You can't enter an annual amount if there are budget cost elements on the **Calculation basis** FastTab, because the system requires a percentage to calculate the value. To change the value, remove all budget cost elements from the **Calculation basis** FastTab.
+
+If there are no budget cost elements on the **Calculation basis** FastTab and the **Percent** is **0.0**, you can enter an annual amount.
 
 ## Why can't I change the budget cost type from earning to another budget cost type?
 
