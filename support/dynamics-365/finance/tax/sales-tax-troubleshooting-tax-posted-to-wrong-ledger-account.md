@@ -14,7 +14,7 @@ audience: Application user
 ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm: 
-# ms.custom: 
+# ms.custom: sap:Tax - indirect tax
 ms.search.region: Global
 # ms.search.industry: 
 ms.author: wangchen
