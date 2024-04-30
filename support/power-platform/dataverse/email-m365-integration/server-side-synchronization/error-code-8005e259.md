@@ -2,11 +2,11 @@
 title: Error code 8005E259 when you test and enable a mailbox
 description: Provides a resolution for error code 8005E259 that occurs when you test and enable a mailbox during server-side synchronization.
 ms.date: 04/29/2024
-ms.custom: 
+ms.custom: sap:E-mail and Microsoft 365 Integration\Set up and configuration of server-side synchronization
 author: rahulmital
 ms.author: rahulmital
 ---
-# Help with error code 8005E259
+# Error code 8005E259 when you test and enable mailbox
 
 This article provides a resolution for error code 8005E259 that occurs when you test and enable a mailbox for server-side synchronization in Microsoft Dataverse.
 
