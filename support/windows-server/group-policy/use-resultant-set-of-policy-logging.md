@@ -1,7 +1,7 @@
 ---
 title: Use Rsop.msc to gather computer policy
 description: Describes how to use the Resultant Set of Policy utility to gather only computer-specific policy information.
-ms.date: 12/26/2023
+ms.date: 04/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article describes how to use the Resultant Set of Policy utility (Rsop.msc) to gather only computer-specific policy information.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 312321
 
 ## Use Rsop.msc
@@ -33,3 +33,7 @@ When using the Resultant Set of Policy utility, you can gather only computer-spe
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).
+
+## Disclaimer
+
+Starting with Microsoft Windows Vista Service Pack 1 (SP1), the Resultant Set of Policies (RSOP) report does not show all Microsoft Group Policy settings. To see the full set of Microsoft Group Policy settings applied for a computer or a user, use the command-line tool *gpresult*.

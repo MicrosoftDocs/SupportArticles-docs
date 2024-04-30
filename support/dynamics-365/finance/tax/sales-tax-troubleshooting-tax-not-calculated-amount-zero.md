@@ -4,17 +4,17 @@
 title: Tax isn't calculated or tax amount is zero
 description: Provides troubleshooting information that can help when the tax amount is 0 (zero) or tax isn't calculated.
 author: shtao
-ms.date: 10/31/2022
+ms.date: 04/30/2024
 
 # optional metadata
 
 # ms.search.form:
 audience: Application user
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm: 
-# ms.custom: 
+# ms.custom: sap:Tax - indirect tax
 ms.search.region: Global
 # ms.search.industry: 
 ms.author: wangchen
