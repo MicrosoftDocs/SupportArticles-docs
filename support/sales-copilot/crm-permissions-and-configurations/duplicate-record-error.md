@@ -1,7 +1,7 @@
 ---
 title: Contact already exists error when creating a CRM record
 description: Resolves an error that occurs due to a duplicate detection rule in CRM when a user tries to create a record from Copilot for Sales.
-ms.date: 04/28/2024
+ms.date: 04/30/2024
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
