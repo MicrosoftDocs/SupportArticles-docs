@@ -55,7 +55,7 @@ sections:
       - question:
           What properties of my ASE will change?
         answer:
-          You're on ASE v3, so be sure to review the [features and hwo they differ](/azure/app-service/environment/overview#feature-differences) from earlier versions. 
+          You're on ASE v3, so be sure to review the [features and how they differ](/azure/app-service/environment/overview#feature-differences) from earlier versions. 
           
           
           For ILB ASE, you keep the same ILB IP address. For internet-facing ASE, the public and outbound IP addresses change. For ELB ASE, there was previously a single IP for both inbound and outbound. For ASE v3, they're separate. For more information, see [ASE v3 networking](/azure/app-service/environment/networking#addresses). For a full comparison of the ASE version, see [ASE version comparison](/azure/app-service/environment/version-comparison).
@@ -75,7 +75,7 @@ sections:
         answer:
           There's no cost to migrate your ASE. You no longer have to pay for your previous ASE as soon as it's shut down during the migration process, and you start paying for your new ASE v3 as soon as it's deployed.
 
-          Migrating ASE from an earlier version to V3 can help reduce your monthly cost.
+          Migrating ASE from an earlier version to v3 can help reduce your monthly cost.
 
           For more information about ASE v3 pricing, see the [pricing details](/azure/app-service/environment/overview#pricing).
 
@@ -101,6 +101,7 @@ sections:
         answer:
           Yes. The [backup and restore](/azure/app-service/manage-backup?tabs=portal) feature allows you to keep your app configuration, file content, and database connected to your app when migrating to your new environment. Make sure you review the [details](/azure/app-service/manage-backup?tabs=portal#automatic-vs-custom-backups) of this feature.
 
+          
           You can select a custom backup and restore it to an App Service in your ASE v3. You must create the App Service you'll restore to before restoring the app. You can choose to restore the backup to the production slot, an existing slot, or a newly created slot that you can create during the restoration process.
 
           For more information, see [Migration alternatives, backup, and restore](/azure/app-service/environment/migration-alternatives#back-up-and-restore).
