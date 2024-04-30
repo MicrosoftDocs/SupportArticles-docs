@@ -4,7 +4,6 @@ description: Describes the steps for advanced Secure Sockets Layer data capture.
 ms.date: 04/26/2024
 ms.reviewer: prmadhes, jopilov, v-sidong
 ms.custom: sap:Connection issues
-ms.topic: how-to
 ---
 
 # Advanced Secure Sockets Layer data capture
@@ -13,6 +12,26 @@ ms.topic: how-to
 > - This article is for Windows only.
 > - Consistent authentication errors are usually due to incorrect settings, while intermittent failures are usually due to a dropped connection, poor performance, or time-out issues.
 > - We recommend that you turn file extensions on in Windows File Explorer.
+
+## Symptoms
+
+You might encounter some of the following errors when using TLS/SSL:
+
+**Named Pipes**
+> A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - No process on the other end of the pipe) Microsoft SQL Server, Error: 233.
+
+**TCP**
+> A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The connection was forcibly closed by remote host 10054) Microsoft SQL Server, Error: 233.
+
+Troubleshooting these SSL errors might involve some of the following steps:
+
+1. Update an expired or incorrect certificate.
+1. Enable TLS protocols.
+1. Ensure that there're matching cipher suites on the client and server.
+
+For details of these steps, see [SSL errors are reported after upgrading to TLS 1.2](ssl-errors-after-tls-1-2.md).
+
+If these steps don't work, use the following steps to collect more detailed logs to get insight into the root cause of these errors.
 
 ## Capture Windows settings using SQLCHECK
 
