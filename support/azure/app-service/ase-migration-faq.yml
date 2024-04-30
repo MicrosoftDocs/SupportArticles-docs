@@ -68,7 +68,7 @@ sections:
           
           When completed, you'll get the new IPs that your future ASE v3 uses. These new IPs don't affect your existing environment. 
 
-          The IPs used by your existing environment continue to be used up until your existing environment is shut down by the [in-place migration feature](/azure/app-service/environment/migrate) or you shut down your ASE v1/v2 when it's no longer needed. 
+          The IPs used by your existing environment continue to be used up until your existing environment is shut down by the [in-place migration feature](/azure/app-service/environment/migrate) or by you when your ASE v1/v2 is no longer needed. 
 
       - question: 
           Is there any cost to migrate my ASE?
