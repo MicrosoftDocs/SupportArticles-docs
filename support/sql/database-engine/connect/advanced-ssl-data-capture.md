@@ -56,7 +56,7 @@ Run SQLCHECK on client machines, server machines, and any other related systems,
 
 ## Configure the network trace
 
-The **networking** section is automatically configured with `Network=yes` and `NETSH=yes`. These shouldn't be changed without good reason.
+The **networking** section is automatically configured with `Network=yes` and `NETSH=yes`. These settings shouldn't be changed without good reason.
 
 If you're tracing a local connection, make sure the application uses TCP/IP rather than Shared Memory or Named Pipes. Install and use [WireShark](https://www.wireshark.org/download.html) for the network capture, as it supports LoopBack captures. WireShark also captures VPN traffic quite well.
 
@@ -64,7 +64,7 @@ If you're tracing a local connection, make sure the application uses TCP/IP rath
 
 The **Auth** section is automatically configured with `Auth=yes` and many other settings.
 
-You might also need to set `FlushTickets=yes` in the **MISC** section. This will flush Kerberos tickets for all users and services on the machine.
+You might also need to set `FlushTickets=yes` in the **MISC** section. It will flush Kerberos tickets for all users and services on the machine.
 
 ## Enable BID traces
 
