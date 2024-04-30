@@ -61,6 +61,14 @@ To learn more about how to incorporate Azure roles together with ACLs and how th
 
 If the storage firewall configuration isn't configured to allow access from the machine where AzCopy is running, AzCopy operations will return an HTTP 403 error.
 
+### Permitted scope for copy operations
+
+The AllowedCopyScope property of a storage account is used to specify the environments from which data can be copied to the destination account. It is displayed in the Azure portal as configuration setting Permitted scope for copy operations (preview). The property is not set by default and does not return a value until you explicitly set it. It has three possible values:
+
+(null) (default): Allow copying from any storage account to the destination account.
+Microsoft Entra ID: Permits copying only from accounts within the same Microsoft Entra tenant as the destination account.
+PrivateLink: Permits copying only from storage accounts that have private links to the same virtual network as the destination account.
+
 #### Transfer data from or to a local machine
 
 If you're uploading or downloading data between a storage account and an on-premises machine, make sure that the machine that runs AzCopy is able to access either the source or destination storage account. You might have to use IP network rules in the firewall settings of either the source or destination accounts to allow access from the public IP address of the machine.
@@ -70,6 +78,8 @@ If you're uploading or downloading data between a storage account and an on-prem
 403 authorization errors can prevent you from transferring data between accounts by using the client machine where AzCopy is running.
 
 If you're copying data between storage accounts, make sure that the machine that runs AzCopy is able to access both the source and the destination account. You might have to use IP network rules in the firewall settings of both the source and destination accounts to allow access from the public IP address of the machine. The service will use the IP address of the AzCopy client machine to authorize the source to destination traffic. To learn how to add a public IP address to the firewall settings of a storage account, see [Grant access from an internet IP range](/azure/storage/common/storage-network-security#grant-access-from-an-internet-ip-range).
+
+
 
 In case your VM doesn't or can't have a public IP address, consider using a private endpoint. See [Use private endpoints for Azure Storage](/azure/storage/common/storage-private-endpoints).
 
