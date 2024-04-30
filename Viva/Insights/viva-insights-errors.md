@@ -5,8 +5,7 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 ms.date: 12/20/2023
-ms.service: viva
-ms.subservice: viva-insights
+ms.service: viva-insights
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
