@@ -1,19 +1,19 @@
 ---
 title: Importing a GPO using GPMC fails with an error (The Directory is not empty)
 description: Provides solutions to an issue when you import a saved GPO using GPMC.
-ms.date: 12/26/2023
+ms.date: 04/30/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, nedpyle, oweindl
+ms.reviewer: kaushika, nedpyle, oweindl, esolomou
 ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # Importing a GPO using GPMC fails with "The Directory is not empty"
 
 This article provides solutions to an issue where importing a saved GPO using Group Policy Management Console (GPMC) fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2667462
 
 ## Symptoms
@@ -104,4 +104,23 @@ To make DFSR read the new settings from AD, run `dfsrdiag PollAD`.
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).
+If you need assistance from Microsoft support, we recommend you collect the information by using the following steps:
+
+1. Download [TSS](https://aka.ms/getTSS) and extract it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.  
+    > [!NOTE]
+    > Don't use the Windows PowerShell Integrated Scripting Environment (ISE).
+3. Run the following cmdlets:
+
+    ```powershell
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    ```
+
+    ```powershell
+    .\TSS.ps1 -Scenario ADS_GPOEx -SDP Dom 
+    ```
+
+4.Reproduce the issue and type *Y* once done.
+
+> [!NOTE]
+> The traces are stored in a compressed file in the *C:\\MS_DATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
