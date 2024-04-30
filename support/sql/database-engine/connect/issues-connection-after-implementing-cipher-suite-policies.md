@@ -1,7 +1,7 @@
 ---
 title: Client is unable to connect after implementing cipher suite policies 
 description: This article provides a resolution for an issue that occurs after you implement cipher suite policies on a SQL Server machine.
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
