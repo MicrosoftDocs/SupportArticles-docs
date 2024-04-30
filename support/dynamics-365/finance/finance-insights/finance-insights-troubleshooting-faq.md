@@ -21,6 +21,7 @@ ms.search.region: Global
 ms.author: twheeloc
 ms.search.validFrom: 2021-08-20
 ms.dyn365.ops.version: AX 10.0.20
+ms.custom: sap:Finance insights\Issues with customer payment predictions
 ---
 # Troubleshoot Finance insights setup issues
 

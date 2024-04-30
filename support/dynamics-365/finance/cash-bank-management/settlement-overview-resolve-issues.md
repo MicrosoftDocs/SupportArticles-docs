@@ -21,6 +21,7 @@ ms.search.region: Global
 ms.author: twheeloc
 ms.search.validFrom: 2018-10-31
 ms.dyn365.ops.version: 8.1
+ms.custom: sap:Cash and bank management - banking\Issues with bank transactions
 ---
 # Troubleshoot issues with transactions that can't be settled
 
