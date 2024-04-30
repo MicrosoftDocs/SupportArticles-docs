@@ -4,24 +4,26 @@
 title: Empty tax feature list in Tax calculation parameters
 description: Explains how to solve an issue where the list of tax features on the Tax calculation parameters page is empty.
 author: wangchen
-ms.date: 10/31/2022
+ms.date: 04/30/2024
 
 # optional metadata
 
 ms.search.form: TaxIntegrationTaxServiceParameters
 audience: Application User
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 # ms.tgt_pltfrm: 
-# ms.custom:  
+ms.custom: sap:Tax - indirect tax\Issues with tax calculation service
 ms.search.region: Global
 # ms.search.industry: 
 ms.author: wangchen
 ms.search.validFrom: 2021-10-26
 ms.dyn365.ops.version: 10.0.21
 ---
-
 # The tax features list is empty in the Tax calculation parameters page
+
+> [!NOTE]
+> This article is applicable to version 10.0.38 or earlier.
 
 ## Symptoms
 

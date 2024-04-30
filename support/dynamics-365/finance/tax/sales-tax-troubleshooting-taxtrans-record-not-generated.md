@@ -4,14 +4,14 @@
 title: TaxTrans record isn't created
 description: Provides troubleshooting information that can help when a TaxTrans record isn't generated.
 author: qire
-ms.date: 10/31/2022
+ms.date: 04/30/2024
 
 # optional metadata
 
 #ms.search.form:
 audience: Application user
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm: 
 # ms.custom: 

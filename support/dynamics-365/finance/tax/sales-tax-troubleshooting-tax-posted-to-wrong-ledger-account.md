@@ -4,14 +4,14 @@
 title: Tax is posted to the wrong ledger account in the voucher
 description: Provides troubleshooting information that can help when tax is posted to the wrong ledger account in the voucher.
 author: qire
-ms.date: 10/31/2022
+ms.date: 04/30/2024
 
 # optional metadata
 
 #ms.search.form:
 audience: Application user
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm: 
 # ms.custom: 
