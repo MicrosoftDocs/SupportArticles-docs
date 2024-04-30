@@ -4,7 +4,7 @@
 title: Troubleshoot Finance insights setup issues
 description: Provides resolutions for the common issues that can occur when you use Finance insights capabilities in Microsoft Dynamics 365 Finance.
 author: twheeloc 
-ms.date: 12/07/2023
+ms.date: 04/30/2024
 
 # optional metadata
 
@@ -21,6 +21,7 @@ ms.search.region: Global
 ms.author: twheeloc
 ms.search.validFrom: 2021-08-20
 ms.dyn365.ops.version: AX 10.0.20
+ms.custom: sap:Finance insights\Issues with customer payment predictions
 ---
 # Troubleshoot Finance insights setup issues
 
