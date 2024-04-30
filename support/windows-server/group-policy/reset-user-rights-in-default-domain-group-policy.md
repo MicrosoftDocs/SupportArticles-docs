@@ -1,19 +1,19 @@
 ---
 title: Reset user rights in the default domain GPO
-description: Describes how to reset user rights in the default domain Group Policy object (GPO) in Windows Server 2003.
-ms.date: 12/26/2023
+description: Describes how to reset user rights in the default domain Group Policy object (GPO) in Windows Server.
+ms.date: 04/30/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, cenki
+ms.reviewer: kaushika, cenki, esolomou
 ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
-# How to reset user rights in the default domain group policy in Windows Server 2003
+# How to reset user rights in the default domain group policy in Windows Server
 
-This article describes how to reset user rights in the default domain Group Policy object (GPO) in Windows Server 2003.
+This article describes how to reset user rights in the default domain Group Policy object (GPO) in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 324800
 
 ## Summary
@@ -44,32 +44,33 @@ To edit the Gpttmpl.inf file, follow these steps.
 3. To completely reset the user rights to the default settings, replace the existing information in the Gpttmpl.inf file with the following default user-rights information. To do so, paste the following text in the appropriate section of your current Gpttmpl.inf file:
 
     ```inf
+    [Unicode]
     Unicode=yes  
     [System Access]  
-    MinimumPasswordAge = 0  
+    MinimumPasswordAge = 1  
     MaximumPasswordAge = 42  
-    MinimumPasswordLength = 0  
-    PasswordComplexity = 0  
-    PasswordHistorySize = 1  
+    MinimumPasswordLength = 7  
+    PasswordComplexity = 1  
+    PasswordHistorySize = 24  
     LockoutBadCount = 0  
     RequireLogonToChangePassword = 0  
     ForceLogoffWhenHourExpire = 0  
-    ClearTextPassword = 0  
+    ClearTextPassword = 0
+    LSAAnonymousNameLookup = 0  
     [Kerberos Policy]  
     MaxTicketAge = 10  
     MaxRenewAge = 7  
     MaxServiceAge = 600  
     MaxClockSkew = 5  
-    TicketValidateClient = 1  
+    TicketValidateClient = 1
+    [Registry Values]
+    MACHINE\System\CurrentControlSet\Control\Lsa\NoLMHash=4,1  
     [Version]  
     signature="$CHICAGO$"  
     Revision=1
     ```
 
 4. On the **File** menu, click **Save**, and then click **Exit**.
-
-    > [!NOTE]
-    > The permissions settings that result from this procedure are the same as the permissions that are compatible with pre-Microsoft Windows 2000 users and permissions that are compatible only with Windows 2000 users.
 
 #### Edit the Gpt.ini File
 
@@ -95,8 +96,8 @@ Apply the new GPO by using the GPUpdate tool to manually reapply all policy sett
 
 4. Type exit and then press ENTER to quit the command prompt.
 
-    > [!NOTE]
-    > To look for errors in policy processing, review the event log.
+> [!NOTE]
+> To look for errors in policy processing, review the event log.
 
 Use Event Viewer to verify that the GPO was successfully applied. To do so:
 
