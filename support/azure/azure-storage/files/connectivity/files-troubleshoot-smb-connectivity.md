@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 04/22/2024
+ms.date: 04/28/2024
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -139,7 +139,33 @@ For more information, see the [LmCompatibilityLevel](/previous-versions/windows/
 
 Revert the `LmCompatibilityLevel` value to the default value of 3 in the following registry subkey:
 
-`HKLM\SYSTEM\CurrentControlSet\Control\Lsa`
+`HKLM\SYSTEM\CurrentControlSet\Control\Lsa`  
+
+### <a id="error-0x800704b3"></a> Failed with error code 0x800704b3
+
+When you try to mount an Azure file share, you recieve the following error:
+
+> Error code: 0x800704b3  
+> Symbolic Name: ERROR_NO_NET_OR_BAD_PATH  
+> Error description: The network path was either typed incorrectly, does not exist, or the network provider is not currently available. Please try retyping the path or contact your network administrator.
+
+#### Cause
+
+This error can occur if any core Windows network related services are disabled as any service that explicitly depends on those network services will fail to start. 
+
+#### Solution
+
+Check if any of the following services are in a **Stopped** state in the Windows VM:
+
+- Network Connections  
+- Network List Service  
+- Network Location Awareness  
+- Network Store Interface Service  
+- DHCP Client  
+- TCP/IP NetBIOS Helper  
+- Workstation
+
+If you find any, start the service(s) and retry mounting the Azure file share. 
 
 ### <a id="cannotaccess"></a>Application or service can't access a mounted Azure Files drive
 
@@ -199,11 +225,11 @@ You can use either of the following steps to work around the problem:
 
 - Put double quotation marks around the key to work around this problem--unless the forward slash is the first character. If it is, either use the interactive mode and enter your password separately or regenerate your keys to get a key that doesn't start with a forward slash.
 
-### <a id=newpsdrive></a>New-PSDrive command fails with "the network resource type is not correct"
+### <a id="newpsdrive"></a>New-PSDrive command fails with "the network resource type is not correct" error
 
 #### Cause
 
-You might see this error message if the file share isn't reachable, for example if [port 445 is blocked](#cause-1-port-445-is-blocked) or if there's a DNS resolution issue.
+You might see this error message if the file share isn't accessible. For example, [port 445 is blocked](#cause-1-port-445-is-blocked) or there's a DNS resolution issue.
 
 #### Solution
 

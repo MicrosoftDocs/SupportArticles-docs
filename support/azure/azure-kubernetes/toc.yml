@@ -255,6 +255,8 @@
     href: logs/capture-tcp-dump-windows-node-aks.md
   - name: Capture TCP packets from pod
     href: logs/packet-capture-pod-level.md
+  - name: Capture container dump from Windows node
+    href: logs/capture-container-dump-windows-node-aks.md
 
 - name: Storage
   items:
@@ -283,18 +285,36 @@
   items:
   - name: Troubleshoot Azure Policy Add-on for AKS
     items:
+    - name: AKS upgrade fails when using an Azure custom policy
+      href: extensions/custom-policy-prevents-aks-upgrade.md
     - name: Azure policy failure alert shows an empty list of affected resources
       href: extensions/policy-failure-alert-show-empty-list-of-affected-resources.md
     - name: Azure Policy fails to exclude privileged containers from AKS
       href: extensions/privileged-container-exclusion-not-working.md
-    - name: Custom Azure Policy for validating controllers doesn't work
-      href: extensions/custom-policy-for-validating-controller-not-working.md
-    - name: Container CPU and memory limits aren't enforced
-      href: extensions/enforce-container-cpu-memory-limits.md
-    - name: Policy definition not found error during policy-assignments at Terraform
-      href: extensions/error-in-policy-assign-main-file-terraform.md
     - name: Azure policy reports 'ConstraintNotProcessed' for container
       href: extensions/error-azure-policy-constraintnotprocessed.md
+    - name: Container CPU and memory limits aren't enforced
+      href: extensions/enforce-container-cpu-memory-limits.md
+    - name: Custom Azure Policy for validating controllers doesn't work
+      href: extensions/custom-policy-for-validating-controller-not-working.md
+    - name: Policy definition not found error during policy-assignments at Terraform
+      href: extensions/error-in-policy-assign-main-file-terraform.md
+    - name: Retain privileged mode while adding capabilities
+      href: extensions/retain-privileged-mode-add-capabilities.md
+  - name: Troubleshoot the Istio-based service mesh add-on
+    items:
+    - name: General Istio add-on troubleshooting
+      href: extensions/istio-add-on-general-troubleshooting.md
+    - name: Feature-specific troubleshooting
+      items:
+      - name: Istio add-on ingress gateway troubleshooting
+        href: extensions/istio-add-on-ingress-gateway.md
+      - name: Istio add-on MeshConfig troubleshooting
+        href: extensions/istio-add-on-meshconfig.md
+      - name: Istio add-on minor revision upgrade troubleshooting
+        href: extensions/istio-add-on-minor-revision-upgrade.md
+      - name: Istio add-on plug-in CA certificate troubleshooting
+        href: extensions/istio-add-on-plug-in-ca-certificate.md
   - name: AKS Cost Analysis add-on issues
     href: extensions/aks-cost-analysis-add-on-issues.md
   - name: Can't pull images from container registry to cluster
