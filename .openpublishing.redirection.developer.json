@@ -4694,6 +4694,236 @@
       "source_path": "support/developer/visualstudio/installation/visual-studio-requires-computer-newer-version-windows.md",
       "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/visual-studio-requires-computer-newer-version-windows",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/adapter/biztalk-adapter-tibco-ems-text-message-type.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/adapter/biztalk-adapter-tibco-ems-text-message-type",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/adapter/biztalk-adapter-trace-utility.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/adapter/biztalk-adapter-trace-utility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/adapter/adapter-mqseries-cannot-retrieves-messages.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/adapter/adapter-mqseries-cannot-retrieves-messages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/entsso/upgrading-not-upgrade-enterprise-sso.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/entsso/upgrading-not-upgrade-enterprise-sso",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/performance/troubleshoot-memory-leak.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/performance/troubleshoot-memory-leak",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/tracking-profiles-global-tracking-enabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/tracking-profiles-global-tracking-enabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/dev-deploy/systems-sql-server-biztalk.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/dev-deploy/systems-sql-server-biztalk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/sql-server-agent-jobs-biztalk.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/sql-server-agent-jobs-biztalk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/send-edi-interchange.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/send-edi-interchange",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/segment-terminator-x12-encoded-interchange.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/segment-terminator-x12-encoded-interchange",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/override-edi-header-values.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/override-edi-header-values",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/messagestolob-messagecontent-btarn.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/messagestolob-messagecontent-btarn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/maintain-troubleshoot-database.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/maintain-troubleshoot-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/performance/known-issues-biztalk-server-2013.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/performance/known-issues-biztalk-server-2013",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/isa16-cannot-part-payload.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/isa16-cannot-part-payload",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/performance/high-cpu-execute-bre-policy.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/performance/high-cpu-execute-bre-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/fail-install-security-post-2871997-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/fail-install-security-post-2871997-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/esb-toolkit/esb-configuration-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/esb-toolkit/esb-configuration-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/performance/error-message-application-log-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/performance/error-message-application-log-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/domain-migration-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/domain-migration-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/common-issues-resolutions-biztalk.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/common-issues-resolutions-biztalk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/dev-deploy/change-scripting-function-boolean-parameter.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/dev-deploy/change-scripting-function-boolean-parameter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/esb-toolkit/call-into-pipelineobjects-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/esb-toolkit/call-into-pipelineobjects-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/call-hl7-pipelines-orchestration-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/call-hl7-pipelines-orchestration-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/dev-deploy/build-failed-error-when-you-use-64-bit-version.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/dev-deploy/build-failed-error-when-you-use-64-bit-version",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/biztalk-server-supportability-on-vm.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/biztalk-server-supportability-on-vm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/biztalkmsgboxdb-connection-issue.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/biztalkmsgboxdb-connection-issue",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/biztalk-message-queuing-configuration.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/biztalk-message-queuing-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/biztalk-hotfixes-cumulative-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/biztalk-hotfixes-cumulative-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/biztalk-host-instance-cannot-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/biztalk-host-instance-cannot-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/biztalk-explorer-operations-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/biztalk-explorer-operations-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/biztalk-edias2-runtime-feature-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/biztalk-edias2-runtime-feature-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/biztalk-default-whitespace-behavior.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/biztalk-default-whitespace-behavior",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/availability-for-mqsagent-com-plus.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/availability-for-mqsagent-com-plus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/adta03-file-biztalk-accelerator-hl7.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/adta03-file-biztalk-accelerator-hl7",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/dev-deploy/add-generated-items-not-generate-xsd.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/dev-deploy/add-generated-items-not-generate-xsd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/accelerators/999-acknowledgments-hipaa-5010.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/accelerators/999-acknowledgments-hipaa-5010",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/setup-config/cannot-configure-biztalk-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/setup-config/cannot-configure-biztalk-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/management-operations/time-out-expired-error-when-you-use-uddi-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/management-operations/time-out-expired-error-when-you-use-uddi-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/adapter/file-system-in-biztralk-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/adapter/file-system-in-biztralk-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/adapter/http-error-biztalk-sharepoint-adapter.md",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/adapter/http-error-biztalk-sharepoint-adapter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/welcome-biztalk-server.yml",
+      "redirect_url": "/previous-versions/troubleshoot/biztalk/welcome-biztalk-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/sql-base-diagnostics-collector.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/rs-diagnostics-collector-information.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/connectivity-diagnostics-collector.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/setup-data-collection-diagnostic-tool.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": false
     }
   ]
 }

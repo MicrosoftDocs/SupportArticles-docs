@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft, pagienge, v-weizhu
 editor: v-jsitser
-ms.date: 04/16/2024
+ms.date: 04/28/2024
 ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -68,7 +68,7 @@ The Azure Red Hat Linux VM has the RHUI Azure package already installed. However
 If the RHUI certificate was removed from the VM by mistake, the following error message appears when you try to install or update a package:
 
 ```output
-# yum install <package-name>
+sudo yum install <package-name>
 Red Hat Enterprise Linux X for x86_64 - XXXX  0.0  B/s |   0  B     00:00  
 Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-eus-rhui-rpms':  
   - Curl error (58): Problem with the local SSL certificate for https://rhui-3.microsoft.com/pulp/repos/content/eus/rhel8/rhui/X.X/x86_64/XXXXX/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:02001002:system library:fopen:No such file or directory, (no key found, wrong pass phrase, or wrong file format?)]
@@ -84,6 +84,8 @@ All the commands in the following steps should be run by using root privileges o
 
    ```bash
    sudo rpm -qa | grep -i azure
+   ```
+   ```output
    rhui-azure-rhelX-<>-X.X-XXX.noarch
    ```
 
@@ -129,7 +131,7 @@ The RHUI EUS, non-EUS, or SAP/E4S package is missing from the Red Hat VM, but th
 When you try to install or update a package, you receive the following error message:
 
 ```output
-# yum install <package-name>  
+sudo yum install <package-name>  
 Red Hat Enterprise Linux X for x86_64 - XXXX  0.0  B/s |   0  B     00:00  
 Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-XXX-rhui-rpms':  
   - Curl error (58): Problem with the local SSL certificate for https://rhui-3.microsoft.com/pulp/repos/content/eus/rhel8/rhui/X.X/x86_64/XXXXX/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:02001002:system library:fopen:No such file or directory, (no key found, wrong pass phrase, or wrong file format?)]
@@ -665,7 +667,9 @@ The system tries to connect to a server that contains a certificate that's signe
 The default system policy setting is `DEFAULT`. In this scenario, the default setting was changed from `DEFAULT` to `FUTURE` or `CUSTOM`. The `FUTURE` policy disables some algorithms that use 2048 bits, such as SHA-1, RSA, and Diffie-Hellman. The `CUSTOM` policy might also disable these algorithms. To identify the current policy setting mode, run the following [update-crypto-policies](https://www.systutorials.com/docs/linux/man/8-update-crypto-policies/) command:
 
 ```bash
-# update-crypto-policies --show
+sudo update-crypto-policies --show
+```
+```output
 DEFAULT:FUTURE
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 26 for SQL Server 2019 (KB5035123)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 26 (KB5035123).
-ms.date: 04/11/2024
+ms.date: 04/22/2024
 ms.custom: KB5035123
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4365.2
 
 ## Summary
 
-This article describes Cumulative Update package 26 (CU26) for Microsoft SQL Server 2019. This update contains 23 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 25, and it updates components in the following builds:
+This article describes Cumulative Update package 26 (CU26) for Microsoft SQL Server 2019. This update contains 24 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 25, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4365.2**, file version: **2019.150.4365.2**
 - Analysis Services - Product version: **15.0.35.45**, file version: **2018.150.35.45**
@@ -58,6 +58,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2693196>[2693196](#2693196) </a> | Fixes the following errors that you encounter when using `sp_addsubscription` to create the Subscriber on secondary replicas if the distribution database is in an availability group: </br></br>Msg 20032, Level 16, State 1, Procedure distribution.dbo.sp_MSadd_subscription, Line \<LineNumber> [Batch Start Line 33] </br>\<SubscriberName> is not defined as a Subscriber for \<PublisherName>. </br>Msg 14070, Level 16, State 1, Procedure sys.sp_MSrepl_changesubstatus, Line \<LineNumber> [Batch Start Line 33]</br>Could not update the distribution database subscription table. The subscription status could not be changed. </br>Msg 14057, Level 16, State 1, Procedure sys.sp_MSrepl_addsubscription_article, Line \<LineNumber> [Batch Start Line 33] </br>The subscription could not be created. | SQL Server Engine | Replication | All |
 | <a id=2937228>[2937228](#2937228) </a> | Fixes an issue in which [error 18482](/sql/relational-databases/errors-events/mssqlserver-18482-database-engine-error) is caused when using `sp_adddistributor` to add a remote distributor if the Publisher server name contains lowercase characters and the Distributor server has the case-sensitive (_CS) collation.| SQL Server Engine | Replication | All |
 | <a id=2877235>[2877235](#2877235) </a> | Adds the following fields to the `sqlserver.fulltext_filter_usage` Extended Event (XEvent) to improve the telemetry reporting for the XEvent: </br></br>- min_input_size </br>- max_input_size </br>- min_output_size </br>- max_output_size | SQL Server Engine | Search| Windows |
+| <a id=2924913>[2924913](#2924913) </a> | Fixes an issue in which the full-text auto crawl function might stop working when you use full-text search. | SQL Server Engine | Search | All |
 | <a id=2958811>[2958811](#2958811) </a> | Fixes an overflow issue of the word occurrence that you encounter during the full-text merging process.| SQL Server Engine | Search| All |
 | <a id=3014264>[3014264](#3014264) </a> | Limits the extra number of user tokens created by `sys.sysprocesses` or `sys.dm_exec_requests` by using trace flag 4673. | SQL Server Engine | Security Infrastructure | All |
 | <a id=2907885>[2907885](#2907885) </a> | Fixes an issue that causes the SQL Server Agent to terminate with the following error message: </br></br>Exception 5 caught at line \<LineNumber> of file \<FileName>. SQLServerAgent initiating self-termination. | SQL Server Engine |SQL Agent| All |

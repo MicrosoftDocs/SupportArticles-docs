@@ -6891,6 +6891,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/virtual-desktop/windows-virtual-desktop-blank-screen.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-virtual-desktop-blank-screen",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-desktop/welcome-virtual-desktop.yml",
+      "redirect_url": "/azure/virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss",
       "redirect_document_id": true
@@ -10893,6 +10903,146 @@
     {
       "source_path": "support/sql/general/information-mats-sdp.md",
       "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/bulk-operation-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/bulk-deleting-data/bulk-operation-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/dataverse-records-missing-required-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/dataverse-records-missing-required-fields",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/web-api-client-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/web-api-client-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/dataverse-plug-ins-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/plug-in-execution/dataverse-plug-ins-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/cleanup-inherited-access.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/user-permissions/cleanup-inherited-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/client-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/user-permissions/client-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/missing-dependency-on-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/missing-dependency-on-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/circular-dependencies-between-solutions.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/circular-dependencies-between-solutions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/solution-cannot-be-deleted-due-to-dependencies.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/solution-cannot-be-deleted-due-to-dependencies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/you-cannot-delete-this-form-only-fallback.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/you-cannot-delete-this-form-only-fallback",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/solution-checker-enforcement-import-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/solution-checker-enforcement-import-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/changes-not-effective-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/changes-not-effective-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/form-not-appear-after-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/form-not-appear-after-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/newly-added-components-dont-appear.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/newly-added-components-dont-appear",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/cannot-import-solutions-publish-changes.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/cannot-import-solutions-publish-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/concurrent-solution-operation-failures.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/concurrent-solution-operation-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/dataverse-environment-variables.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/dataverse-environment-variables",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/duplicate-security-roles.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/duplicate-security-roles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/entitykey-selected-attributes-already-exists.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/entitykey-selected-attributes-already-exists",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/failure-converting-to-managed-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/full-formxml-expected-to-create-form-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/full-formxml-expected-to-create-form-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/install-failure-priviledge-not-assigned.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/install-failure-priviledge-not-assigned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/label-text-not-displayed.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/label-text-not-displayed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/maximum-row-size-exceeds.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/maximum-row-size-exceeds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/primaryname-attribute-not-found.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/primaryname-attribute-not-found",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/multiple-publisher-shared-component-failure.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/multiple-publisher-shared-component-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/unmanaged-active-layer-created-after-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/unmanaged-active-layer-created-after-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/upgrade-fails-pending-upgrade.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/upgrade-fails-pending-upgrade",
       "redirect_document_id": true
     }
   ]
