@@ -50,21 +50,21 @@ Run SQLCHECK on client machines, server machines, and any other related systems,
 1. Make sure that `BIDTrace=yes` is set.
 1. Make sure that `BIDProviderList` conforms to the driver your application is using.
 
-   The built-in System.Data.SqlClient .NET drivers are automatically enabled. If these aren't the drivers your application is using, comment this line using the `#` character and uncomment one of the others, such as the ODBC section or the OLEDB section. If you aren't sure, ask the DBA or application developer, or use the fourth `BIDProviderList`, which contains all drivers currently in use.
+   The built-in System.Data.SqlClient .NET drivers are automatically enabled. If these aren't the drivers your application is using, comment this line using the `#` character and uncomment one of the others, such as the **ODBC** section or the **OLEDB** section. If you aren't sure, ask the database administrator (DBA) or application developer, or use the fourth `BIDProviderList`, which contains all drivers currently in use.
 
 1. Save the file.
 
 ## Configure the network trace
 
-The networking section is automatically configured with `Network=yes` and `NETSH=yes`. These shouldn't be changed without good reason.
+The **networking** section is automatically configured with `Network=yes` and `NETSH=yes`. These shouldn't be changed without good reason.
 
 If you're tracing a local connection, make sure the application uses TCP/IP rather than Shared Memory or Named Pipes. Install and use [WireShark](https://www.wireshark.org/download.html) for the network capture, as it supports LoopBack captures. WireShark also captures VPN traffic quite well.
 
 ## Configure the authentication trace
 
-The Auth section is automatically configured with `Auth=yes` and many other settings.
+The **Auth** section is automatically configured with `Auth=yes` and many other settings.
 
-You might also need to set `FlushTickets=yes` in the MISC section. This will flush Kerberos tickets for all users and services on the machine.
+You might also need to set `FlushTickets=yes` in the **MISC** section. This will flush Kerberos tickets for all users and services on the machine.
 
 ## Enable BID traces
 
