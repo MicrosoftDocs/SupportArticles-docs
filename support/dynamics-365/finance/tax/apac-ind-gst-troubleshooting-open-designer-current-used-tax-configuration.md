@@ -4,7 +4,7 @@
 title: Open the designer for the current tax configuration
 description: Introduces how to open the designer for the tax configuration that is currently used.
 author: yungu
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 
 # optional metadata
 

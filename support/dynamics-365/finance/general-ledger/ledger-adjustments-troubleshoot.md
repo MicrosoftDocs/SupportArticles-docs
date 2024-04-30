@@ -2,7 +2,7 @@
 title: Troubleshoot with the General ledger adjustments page 
 description: This article explains why you might use the General ledger adjustments page to fix issues.
 author: RyanCCarlson2
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 ms.topic: troubleshooting
 ms.search.form: 
 audience: Application User

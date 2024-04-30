@@ -5,7 +5,7 @@ title: Tax isn't calculated
 description: Provides troubleshooting information that can help when tax isn't calculated on tax documents.
 author: peter-xu
 manager: beya
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 
 # optional metadata
 

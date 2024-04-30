@@ -4,7 +4,7 @@
 title: Tax isn't calculated or tax amount is zero
 description: Provides troubleshooting information that can help when the tax amount is 0 (zero) or tax isn't calculated.
 author: shtao
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 
 # optional metadata
 

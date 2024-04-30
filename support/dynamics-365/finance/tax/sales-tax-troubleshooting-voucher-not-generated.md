@@ -4,7 +4,7 @@
 title: Voucher isn't created on Voucher transactions
 description: Provides troubleshooting information that can help when a voucher should be generated on the Voucher transactions page but isn't.
 author: qire
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 
 # optional metadata
 

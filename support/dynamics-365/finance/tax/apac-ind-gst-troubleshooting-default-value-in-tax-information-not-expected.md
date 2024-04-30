@@ -4,7 +4,7 @@
 title: Default field value in tax information isn't as expected
 description: Provides troubleshooting information that can help when the default value of a tax information field isn't what you expect.
 author: yungu
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 
 # optional metadata
 

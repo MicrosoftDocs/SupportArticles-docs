@@ -4,7 +4,7 @@
 title: Tax calculation performance affects transactions
 description: Provides troubleshooting information related to tax calculation performance and its effect on transactions.
 author: shtao
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 
 # optional metadata
 

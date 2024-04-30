@@ -2,7 +2,7 @@
 title: Error 400 or 401 when you set Dataverse virtual table visibility
 description: This article provides information about the error codes (400 and 401) that can occur when you set Microsoft Dataverse virtual table visibility for Tax calculation service in a Regulatory Configuration Service (RCS) enviromnment.
 author: hshi-ms
-ms.date: 07/26/2022
+ms.date: 04/30/2024
 ms.topic: troubleshooting
 ms.search.form: ERSolutionTable_RCSSetVirtualTableVisibility
 audience: Application User

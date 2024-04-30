@@ -4,7 +4,7 @@
 title: Troubleshoot issues with tax engine (GTE)
 description: Provides information about the issues you might encounter while using the tax engine (GTE) and explains how to fix them.
 author: EricWangChen
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 
 # optional metadata
 

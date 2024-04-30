@@ -5,7 +5,7 @@ title: Activating the setoff rule takes a long time
 description: Provides troubleshooting information to help speed up the activation process for setoff rules.
 author: shaoling
 manager: beya
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 
 # optional metadata
 

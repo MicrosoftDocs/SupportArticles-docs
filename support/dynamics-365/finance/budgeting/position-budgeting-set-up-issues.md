@@ -4,7 +4,7 @@
 title: Position budgeting troubleshooting
 description: Provides answers to frequently asked questions related to position budgeting and how to create budget cost elements, compensation groups, and compensation grids. 
 author: aprilolson
-ms.date: 11/02/2022
+ms.date: 04/30/2024
 
 # optional metadata
 

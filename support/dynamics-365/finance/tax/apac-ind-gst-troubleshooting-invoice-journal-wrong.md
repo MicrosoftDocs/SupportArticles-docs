@@ -4,7 +4,7 @@
 title: Incorrect field value in invoice journal or voucher
 description: Provides troubleshooting information that can help when a field value in an invoice journal or voucher is incorrect.
 author: yungu
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 
 # optional metadata
 

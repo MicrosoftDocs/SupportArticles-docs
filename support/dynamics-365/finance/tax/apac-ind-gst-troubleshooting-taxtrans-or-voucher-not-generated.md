@@ -6,7 +6,7 @@ title: TaxTrans or voucher isn't generated
 description: Provides troubleshooting information to help resolve an issue where the TaxTrans record or voucher isn't generated.
 author: shaoling
 manager: beya
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 
 # optional metadata
 

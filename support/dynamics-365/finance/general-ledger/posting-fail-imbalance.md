@@ -4,7 +4,7 @@
 title: Journal posting failure due to imbalance
 description: Provides a resolution for an issue where you can't post a journal if the debits and credits aren't balanced in voucher transactions in Microsoft Dynamics 365 Finance. 
 author: kweekley
-ms.date: 04/18/2024
+ms.date: 04/30/2024
 
 # optional metadata
 
