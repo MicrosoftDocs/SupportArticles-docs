@@ -20,9 +20,11 @@ ms.author: anandh
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
-The performance diagnostics tool helps you troubleshoot performance issues that can affect a Windows or Linux virtual machine (VM). Supported troubleshooting scenarios include quick checks on known issues and best practices, and complex problems that involve slow VM performance or high usage of CPU, disk space, or memory.
+Performance diagnostics offers two ways to identify and troubleshoot performance issues on your Windows or Linux virtual machine (VM). Continuous diagnostics is a lightweight process that collects data and reports insights about resource usage at five-second intervals. To troubleshoot an ongoing performance issue, use the on-demand diagnostics option, which provides more in-depth data, insights, and recommendations based on data collected at a single point in time.  
 
 You can run performance diagnostics directly from the Azure portal, where you can also review insights and a report on various logs, rich configuration, and diagnostics data. We recommend that you run performance diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
+
+This article explains how to use the performance diagnostics tool and what the continuous and on-demand performance diagnostics options offer. 
 
 > [!NOTE]
 > For Windows, continuous and on-demand diagnostics are currently supported on VMs that have .NET SDK version 4.5 or a later version installed. For the steps to run performance diagnostics on classic VMs, see [Azure Performance Diagnostics VM extension](performance-diagnostics-vm-extension.md).
