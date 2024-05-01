@@ -936,8 +936,8 @@ System service name: **WinRM**
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
-|WinRM 1.1 and earlier|TP|The default HTTP port is TCP 80, and the default HTTPS port is TCP 443.|
-|WinRM 2.0|TP|The default HTTP port is TCP 5985, and the default HTTPS port is TCP 5986.|
+|WinRM 1.1 and earlier|TCP|The default HTTP port is TCP 80, and the default HTTPS port is TCP 443.|
+|WinRM 2.0|TCP|The default HTTP port is TCP 5985, and the default HTTPS port is TCP 5986.|
   
 For more information, see [Installation and Configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 
