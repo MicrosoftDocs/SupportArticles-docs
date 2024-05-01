@@ -28,12 +28,12 @@ The error would be similar to the below one with the exceptions that the redirec
 
 ## Prerequisites
 
-That pre-deployed CPOS is based on the Retail SDK. The last CSU version where the Retail SDK was supported is 10.0.37 which was [retired](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/get-started/public-preview-releases#targeted-release-schedule-dates-subject-to-change)  on March 15 2024.
+That pre-deployed CPOS is based on the Retail SDK. The last CSU version where the Retail SDK was supported is 10.0.37 which was [retired](h/dynamics365/fin-ops-core/dev-itpro/get-started/public-preview-releases#targeted-release-schedule-dates-subject-to-change)  on March 15 2024.
 In order to make sure our internal infrastructure is compliant with Microsoft's policies, we had to make changes to CPOS First Party AAD applications which resulted in the Reply URLs corresponding to those VMs no longer being valid.
 
 ### Possible causes
 
 Customers should not use pre-deployed CPOS as well as other parts of CSU, such as Retail Server because they are based on the Retail SDK which is no longer supported.
-To continue development against CSU, the Commerce SDK must be utilized which requires customers to create and maintain their own AAD applications: [Migrate to Commerce SDK](https://learn.microsoft.com/en-us/dynamics365/commerce/dev-itpro/retail-sdk/migrate-commerce-sdk)
+To continue development against CSU, the Commerce SDK must be utilized which requires customers to create and maintain their own AAD applications: [Migrate to Commerce SDK](/dynamics365/commerce/dev-itpro/retail-sdk/migrate-commerce-sdk)
 
-In case a customer, for any reason, still wants to leverage those VMs where CPOS was pre-deployed, they still have to create their own AAD applications: [Configure Store Commerce for web to use a custom Microsoft Entra app](https://learn.microsoft.com/en-us/dynamics365/commerce/dev-itpro/cpos-custom-aad)
+In case a customer, for any reason, still wants to leverage those VMs where CPOS was pre-deployed, they still have to create their own AAD applications: [Configure Store Commerce for web to use a custom Microsoft Entra app](/dynamics365/commerce/dev-itpro/cpos-custom-aad)
