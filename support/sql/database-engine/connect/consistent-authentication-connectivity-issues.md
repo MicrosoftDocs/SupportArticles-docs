@@ -1,7 +1,7 @@
 ---
 title: Introduction to consistent authentication issues
 description: This article discusses consistent authentication issues in SQL Server, related error messages, and workarounds to troubleshoot various issues.
-ms.date: 04/29/2024
+ms.date: 05/01/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
@@ -17,7 +17,7 @@ _Applies to:_ &nbsp; SQL Server
 
 A consistent authentication issue that occurs in Microsoft SQL Server typically refers to issues that are related to authentication and authorization of users or applications that try to access the SQL Server database. These issues can cause authentication failures, access denied errors, or other security-related problems.
 
-Before you start to troubleshoot errors, it's important to understand what each error message means and also the error type. Some errors might appear in more than one category. You can use the troubleshooting information that's mentioned in the ["Errors"](#errors) section to resolve the error. If you continue to experience issues, check the possible causes, solutions, and workarounds in the following sections:
+Before you start to troubleshoot errors, it's important to understand what each error message means and also the error type. Some errors might appear in more than one category. You can use the troubleshooting information that's mentioned in the ["Errors"](#errors) section to resolve the error. If you continue to experience issues, check the possible causes and solutions in the following sections:
 
 - [Causes and scenarios specific to various aspects of SQL Server](#causes-and-scenarios-specific-to-various-aspects-of-sql-server)
 
@@ -59,7 +59,7 @@ This section describes error types and related information.
   When you troubleshoot the "Login Failed" error message, the SQL Server error log can provide more information that's related to error code 18456, including the specific state value. The state value provides more context about the error. For more information, see the SQL Server error log file in [SQL state value](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information). You can try to fix the issue according to the description of the state value.
 
   This section lists some specific "Login Failed" error messages and their possible causes and solutions.
- 
+
   |Error message  |More information  |
   |---------|---------|
   |"Login failed for user '\<username\>'. Reason: Password did not match that for the login provided."|This error might occur if an incorrect password is used. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).|
@@ -70,7 +70,7 @@ This section describes error types and related information.
   |"Login failed for user \<username\>." | This error can occur if the [proxy account](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md) isn't properly authenticated.    |
   |"Login Failed for user: 'NT AUTHORITY\ANONYMOUS LOGON'"|This error might occur if the [SPN is missing, SPN is duplicated, or the SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).|
   |"Login failed for user \<username\>." </br> "Login failed for user '\<database\username\>"</br>    | Check if there's a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the user doesn't belong to a local group used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).    |
-  |"Cannot generate SSPI context" | The explicit SPN account might be [wrong](wrong-explicit-spn-account-connection-string.md), missing, or misplaced. |
+  |"Cannot generate SSPI context" | The explicit SPN account might be [wrong](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended), missing, or misplaced. |
   |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
   |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
 
@@ -284,7 +284,7 @@ This scenario indicates that the Credential Guard feature is enabled on a Window
 
 ### Access is denied for NTLM peer logins
 
-When communicating between computers that are either in workstations or in domains that don't trust one another, you can set up identical accounts on both computers and use NTLM peer authentication. Logins work only if both the user account and the password match on both computers. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
+When communicating between computers that are either in workstations or in domains that don't trust one another, you can set up identical accounts on both computers and use NTLM peer authentication. Logins work only if both the user account and the password match on both computers. NTLM authentication might be disabled or not supported on either the client or server side, leading to authentication failures. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
 ### Loopback protection isn't set correctly
 
@@ -304,7 +304,7 @@ The LAN Manager (LANMAN) authentication issue usually occurs if there is a misma
 
 ### An account is disabled
 
-You might experience this scenario if the user account was disabled by an administrator or by a user. In such a case, you can't log in by using this account or use this account to start a service. This might cause consistent authentication issues because it can prevent you from accessing resources or performing actions that require authentication.
+You might experience this scenario if the user account was disabled by an administrator or by a user. In such a case, you can't log in by using this account or you can't use this account to start a service. This might cause consistent authentication issues because it can prevent you from accessing resources or performing actions that require authentication.
 
 ### An account isn't in the group
 
