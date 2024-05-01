@@ -1,7 +1,7 @@
 ---
 title: An existing connection was forcibly closed (OS error 10054)
 description: Describes scenarios in which an existing connection was forcibly closed by the remote host and provides resolutions.
-ms.date: 01/31/2024
+ms.date: 05/01/2024
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
@@ -115,20 +115,20 @@ In systems with high workloads on SQL Server 2017 and earlier, you might observe
 
 A shortage of IOCP workers and SOS Worker resources allocated to handling authentication and encryption operations is the main cause of the TCP three-way handshake timeouts and additional login timeouts. SQL Server 2019 includes several performance improvements in this area. One notable enhancement is the implementation of a dedicated login dispatcher pool. This optimizes the allocation of resources for login-related tasks, which reduces the occurrence of timeouts and improves overall system performance.
 
-## Other TLS connection failed scenarios
+## Other scenarios where TLS connections fail
 
-If none of the previous scenarios match the error message that you encounter, see the following scenarios:
+If the error message you encounter doesn't correspond to any of the previous scenarios, refer to the following additional scenarios:
 
-- [Intermittent connection errors occur when a new node is added to the Always On environment](intermittent-connection-errors-when-a-new-node-is-added.md).
-- [The SSL_PE_NO_CIPHER error occurs on endpoint 5022](ssl-pe-no-cipher-error-endpoint-5022.md).
-- [SQL Server faces connectivity issue when SSIS packages run by SQL agent fails to execute.](sql-server-faces-connectivity-issue-ssispack-fail.md)
-- [Intermittent connection errors with SQLCMD](intermittent-connection-errors-sqlcmd.md).
-- [There are issues in connection after implementing the Cipher suite policies](issues-connection-after-implementing-cipher-suite-policies.md).
-- [Connection to the linked server failed](connection-to-linked-server-failed.md).
-- [Unable to start SQL agent](unable-to-start-sql-agent.md).
-- [Client machine cannot connect to SQL Server by SSMS using SQL authentication](client-machine-cannot-connect-to-sqlserver.md).
-- [A linked server couldn't be created after moving on-premises server to Azure](linked-server-cannot-be-created.md).
-- [Errors are shown after upgrading SQL version](error-message-when-you-connect.md).
+- [Local SQL Server can't connect to a linked server when RSA encryption is used](client-machine-cannot-connect-to-sqlserver.md)
+- [Connection error 10054 occurs in SQL Server post upgrade](error-messages-areshown-after-upgrade-sql-version.md)
+- [Intermittent connection errors occur when adding a node to the Always On environment in SQL Server](intermittent-connection-errors-when-a-new-node-is-added.md)
+- [Intermittent connection errors occur when using SQLCMD utility](intermittent-connection-errors-sqlcmd.md)
+- [The SSL_PE_NO_CIPHER error occurs on endpoint 5022 in SQL Server](ssl-pe-no-cipher-error-endpoint-5022.md).
+- [Connectivity error 0x80004005 occurs from SQL Sever Agent SSIS failures](sql-server-faces-connectivity-issue-ssispack-fail.md)
+- ["Client unable to establish connection" error occurs after implementing the cipher suite policies on a SQL Server machine](issues-connection-after-implementing-cipher-suite-policies.md).
+- ["Connection to the linked server has failed" error after you update Windows Server](connection-to-linked-server-failed.md).
+- [SQL Server Agent fails to start while connecting to SQL Server](unable-to-start-sql-agent.md).
+- [Error connecting higher to lower version of SQL Server using SQL Server Linked Server functionality](linked-server-cannot-be-created.md).
 
 ## See also
 
