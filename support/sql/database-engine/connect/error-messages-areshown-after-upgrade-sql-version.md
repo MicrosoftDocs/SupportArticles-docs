@@ -1,7 +1,7 @@
 ---
 title: Connection error 10054 occurs in SQL Server post upgrade
 description: This article provides a resolution for the 10054 error that you might experience after you upgrade SQL Server.
-ms.date: 04/30/2024
+ms.date: 05/01/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
