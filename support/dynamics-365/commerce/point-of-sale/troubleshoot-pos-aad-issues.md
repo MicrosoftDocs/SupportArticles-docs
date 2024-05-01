@@ -3,7 +3,7 @@ title: "Known issues: Commerce POS"
 description: "Troubleshooting AAD sign-in issues with POS."
 author: raybennett-msft
 ms.author: bennettray
-ms.service: pos
+ms.service: commerce
 ms.topic: troubleshooting-known-issue
 ms.date: 05/01/2024
 
@@ -28,7 +28,7 @@ The error would be similar to the below one with the exceptions that the redirec
 
 ## Prerequisites
 
-That pre-deployed CPOS is based on the Retail SDK. The last CSU version where the Retail SDK was supported is 10.0.37 which was [retired](h/dynamics365/fin-ops-core/dev-itpro/get-started/public-preview-releases#targeted-release-schedule-dates-subject-to-change)  on March 15 2024.
+That pre-deployed CPOS is based on the Retail SDK. The last CSU version where the Retail SDK was supported is 10.0.37 which was [retired](dynamics365/fin-ops-core/dev-itpro/get-started/public-preview-releases#targeted-release-schedule-dates-subject-to-change)  on March 15 2024.
 In order to make sure our internal infrastructure is compliant with Microsoft's policies, we had to make changes to CPOS First Party AAD applications which resulted in the Reply URLs corresponding to those VMs no longer being valid.
 
 ### Possible causes
