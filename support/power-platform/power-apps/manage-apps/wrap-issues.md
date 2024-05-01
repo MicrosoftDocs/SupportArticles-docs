@@ -73,7 +73,7 @@ If you can't sign in to your wrapped mobile app, verify that:
 - Your Microsoft Entra app is properly configured.
 - All API permissions for the app have been added correctly. For more information about how to see and configure API permissions for the app, see the following screenshot and [Configure API Permissions](/power-apps/maker/common/wrap/wrap-how-to#step-4-register-app).
 
-  :::image type="content" source="media/wrap-issues/api-permissions.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/wrap-issues/api-permissions.png":::
+  :::image type="content" source="media/wrap-issues/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/wrap-issues/api-permissions-2.png":::
 
 - The `Add-AdminAllowedThirdPartyApps` script has run successfully. For more information, see [Allow registered apps in your environment](/power-apps/maker/common/wrap/how-to).
 - Your Microsoft Entra app type is **Multitenant**. Under your Microsoft Entra app's **Authentication** tab, the supported account type should be **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)**.
