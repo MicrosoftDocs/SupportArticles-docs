@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, v-lianna
-ms.custom: sap:windows-tss-dnd, csstroubleshoot
+ms.custom: sap:Support Tools\TSS DnD, csstroubleshoot
 ---
 # Gather information by using TSS for Windows Update for Business reports-related issues
 

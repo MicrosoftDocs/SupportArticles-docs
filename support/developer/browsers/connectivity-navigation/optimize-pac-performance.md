@@ -3,6 +3,7 @@ title: Optimize performance with automatic proxy-configuration scripts
 description: This article describes how to optimize the performance of an automatic proxy-configuration script (PAC file, also known as Wpad.dat).
 ms.date: 02/17/2022
 ms.reviewer: heikom
+ms.custom: sap:Connectivity and Navigation
 ---
 # Optimizing performance with automatic proxy-configuration scripts (PAC)
 
@@ -108,7 +109,7 @@ If the script contains any syntax error (for example, a missing ")" character in
 > [!NOTE]
 > Starting in Windows 10, you can no longer use file-based PAC files. For more information, see the following articles:
 >
-> - [Windows 10 does not read a PAC file referenced by a file protocol](/troubleshoot/browsers/cannot-read-pac-file)
+> - [Windows 10 does not read a PAC file referenced by a file protocol](../administration/cannot-read-pac-file.md)
 > - [Debugging Proxy Configuration Scripts in the new Edge](https://textslashplain.com/2020/03/25/debugging-proxy-configuration-scripts-in-the-new-edge/)
 
 ## Testing with Autoprox.exe

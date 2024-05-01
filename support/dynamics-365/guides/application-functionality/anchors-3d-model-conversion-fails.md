@@ -5,7 +5,7 @@ ms.author: alwinv
 author: alwinv
 ms.date: 11/14/2023
 ms.reviewer: v-wendysmith, mhart
-ms.custom: bap-template
+ms.custom: sap:Application Functionality
 ---
 # Fail to convert a 3D model to an object anchor
 

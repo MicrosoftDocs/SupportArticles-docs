@@ -4,6 +4,7 @@ description: Describes how to expand an array pointer to view all array elements
 ms.date: 04/16/2020
 ms.reviewer: shaunm
 ms.topic: how-to
+ms.custom: sap:Debuggers and Analyzers\Visual Studio Debugger
 ---
 # Expand an array pointer in the Visual C++ debugger Watch window
 

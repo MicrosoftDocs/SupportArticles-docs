@@ -2,6 +2,7 @@
 title: Assembly Manifest doesn't match reference
 description: This article describes a problem that cdf-ms files may be deleted when the Framework 3.5 Service pack 1 is installed and the ClickOnce store is used for the first time, and provides a resolution.
 ms.date: 05/06/2020
+ms.custom: sap:Installation and Deployment
 ---
 # The located assembly's manifest definition doesn't match the assembly reference
 

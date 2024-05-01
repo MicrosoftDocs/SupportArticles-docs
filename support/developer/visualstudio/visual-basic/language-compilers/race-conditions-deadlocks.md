@@ -3,6 +3,7 @@ title: Race conditions and deadlocks
 description: This article describes that Visual Basic offers the ability to use threads in Visual Basic applications for the first time. Threads introduce debugging issues such as race conditions and deadlocks.
 ms.date: 04/13/2020
 ms.reviewer: heikkiri, zakramer
+ms.custom: sap:Language or Compilers\Visual Basic .NET (VB.NET)
 ---
 # Race conditions and deadlocks
 

@@ -1,0 +1,21 @@
+- name: Welcome
+  href: welcome-hpc-pack.yml
+- name: Failed Linux compute node agent extension installation
+  href: troubleshoot-install-failure-hpc-pack-linux-node-agent.md
+- name: HPC jobs are stuck in canceling mode, and new jobs don't start
+  href: job-stuck-canceling-mode.md
+- name: HPC Management Service fails to start after restoring database
+  href: hpc-management-service-not-start.md
+- name: HPC compute nodes aren't shown or are in error state
+  href: compute-node-not-shown-error-state.md
+- name: HPC node manager service unreachable
+  href: hpc-node-manager-service-unreachable-certificate.md
+- name: HPC Pack Excel offloading job is stalled
+  href: hpc-pack-excel-offloading-job-stalled.md
+- name: HPC reporting database connection problem
+  href: hpc-management-reporting-database-connection-issue.md
+- name: HPC reporting database permission problem
+  href: hpc-management-reporting-database-permission-problem.md
+- name: Error "No virtual network found" when you enter the application ID
+  href: error-no-virtual-network-found.md
+

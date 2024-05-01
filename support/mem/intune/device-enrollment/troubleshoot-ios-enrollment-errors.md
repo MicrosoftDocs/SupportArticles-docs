@@ -1,9 +1,10 @@
 ---
 title: Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common enrollment and sync token errors when enrolling iOS/iPadOS devices in Intune.
-ms.reviewer: kaushika, mghadial
-ms.date: 12/05/2023
+ms.reviewer: kaushika, mghadial, annovich
+ms.date: 03/08/2024
 search.appverid: MET150
+ms.custom: sap:Enroll Devices - iOS\ADE/ ABM
 ---
 
 # Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune
@@ -35,9 +36,9 @@ This section includes token sync errors related to Apple Automated Device Enroll
 
 |Error message| Cause | Solution|
 |-------------|-----|----------|
-| Expired or invalid token | The token may be expired, revoked, or malformed. | Expired tokens can be renewed, Invalid token will need to have a new token created in Intune.<br/> The new token can be used on an existing MDM Server in Apple Business Manager/Apple School Manager (ABM/ASM): Edit option > MDM Server settings > Upload public key |
-| Access denied | Intune can't talk to Apple anymore. For example, Intune has been removed from the MDM server list in ABM/ASM. The token has possibly expired. | 1. Verify whether your token has expired, and if a new token was created.<br/>2. Check to see if Intune is in the MDM server list |
-| Terms and conditions not accepted | New terms and conditions (T&C) need to be accepted in ABM/ASM. | Accept the new T&C in Apple ABM/ASM Portal.<br/>**Note:** This must be done by a user with the Administrator role in ABM/ASM. |
+| Expired or invalid token | The token may be expired, revoked, or malformed. | Expired tokens can be renewed, Invalid token will need to have a new token created in Intune.<br/> The new token can be used on an existing MDM Server in Apple Business Manager or Apple School Manager: Edit option > MDM Server settings > Upload public key |
+| Access denied | Intune can't talk to Apple anymore. For example, Intune has been removed from the MDM server list in Apple Business Manager or Apple School Manager. The token has possibly expired. | 1. Verify whether your token has expired, and if a new token was created.<br/>2. Check to see if Intune is in the MDM server list |
+| Terms and conditions not accepted | New terms and conditions (T&C) need to be accepted in Apple Business Manager or Apple School Manager. | Accept the new T&C in Apple Apple Business Manager or Apple School Manager Portal.<br/>**Note:** This must be done by a user with the Administrator role in Apple Business Manager or Apple School Manager. |
 | Internal server error | Needs further investigation | Contact the [Intune support team](/mem/get-support), as additional logs are needed |
 | Invalid support phone number | The support phone number is invalid. | Edit the support phone number for your profiles. |
 | Invalid configuration profile name | The configuration profile name is either invalid, empty, or too long. | Edit the name of the profile. |
@@ -46,6 +47,60 @@ This section includes token sync errors related to Apple Automated Device Enroll
 | Required cursor | The cursor was not initially set by Intune during the sync. | Contact the [Intune support team](/mem/get-support) to fix the sync and return the cursor. |
 | Apple profile not found | Multiple possible causes | Create a new profile, and assign the profile to devices. |
 | Invalid department entry | The department field entry is invalid | Edit the department field for your profiles. |
+
+### Error: An error occurred while uploading the Enrollment Program token
+
+If the ADE token upload fails, you might see an error message that resembles the following:
+
+> An error occurred.  
+> An error occurred while uploading the Enrollment Program token. Request ID: AjaxError: ajaxExtended call failed
+
+In this case, try the following steps to create a new token:
+
+1. Sign in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) as an Intune administrator.
+
+1. Run a `GET` request to enumerate the tokens in the tenant by using the following URL:
+
+    `https://graph.microsoft.com/beta/deviceManagement/depOnboardingSettings`
+
+    If necessary, grant consent and rerun the request.
+
+1. Find the GUID of the token that needs to be renewed.
+
+1. Run a `GET` request to get the public encryption key of the token by using the following URL:
+
+    `https://graph.microsoft.com/beta/deviceManagement/depOnboardingSettings/<TokenGuid>/getEncryptionPublicKey`
+
+    The response looks like the following example:
+
+    ```output
+    {
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Edm.String",
+    "value": "-----BEGIN CERTIFICATE-----SOMEBASE64STRING==-----END CERTIFICATE-----"
+    }
+    ```
+
+1. Copy the value from the response and create a text file as follows. Then, save the text file as a *.pem* file. For example, *token.pem*.
+
+    > [!IMPORTANT]
+    > The file contains three lines, and there are no link breaks in the base64 string.
+
+    ```output
+    -----BEGIN CERTIFICATE-----
+    SOMEBASE64STRING==
+    -----END CERTIFICATE-----
+    ```
+
+1. Sign in to Apple Business Manager or Apple School Manager and find the token server that needs to be updated. Then, select **Edit**.
+
+1. In the **MDM Server Settings** section, upload the *.pem* file, and then select **Save**.
+
+    > [!NOTE]
+    > If you receive an error message indicating the file format is incorrect, make sure that the file is created according to step 5. After the file format is fixed, close the page and select **Edit** again.
+
+1. Select **Download Token** to download the new token.
+
+1. Sign in to Intune and select to refresh the downloaded token.
 
 ## Other errors and issues
 
@@ -58,13 +113,13 @@ This section provides troubleshooting steps for these additional scenarios:
 - [The configuration could not be downloaded...Invalid Profile](#the-configuration-for-your-iphoneipad-could-not-be-downloaded-from-company-name-invalid-profile)
 - [ADE enrollment doesn't start](#ade-enrollment-doesnt-start)
 - [ADE enrollment stuck at user login](#ade-enrollment-stuck-at-user-login)
-- [Authentication doesn’t redirect to the government cloud](#authentication-doesnt-redirect-to-the-government-cloud)
+- [Authentication doesn't redirect to the government cloud](#authentication-doesnt-redirect-to-the-government-cloud)
 
 ### Verify WS-Trust 1.3 is enabled
 
 Enrolling ADE devices with user affinity requires WS-Trust 1.3 Username/Mixed endpoint to be enabled to request user tokens. Active Directory enables this endpoint by default. If WS-Trust 1.3 is not enabled, Automated Device Enrollment (ADE) iOS/iPadOS devices can't be enrolled.
 
-To get a list of enabled endpoints, use the Get-AdfsEndpoint PowerShell cmdlet and looking for the trust/13/UsernameMixed endpoint. For example:
+To get a list of enabled endpoints, use the `Get-AdfsEndpoint` PowerShell cmdlet and looking for the trust/13/UsernameMixed endpoint. For example:
 
 ```powershell
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
@@ -137,14 +192,14 @@ When you turn on an ADE-managed device that is assigned an enrollment profile, t
 
 **Solution:** Disable MFA, and then re-enroll the device.
 
-### Authentication doesn’t redirect to the government cloud 
+### Authentication doesn't redirect to the government cloud 
 
 Government users signing in from another device are redirected to the public cloud for authentication rather than the government cloud. 
 
 **Cause:** Microsoft Entra ID does not yet support redirecting to the government cloud when signing in from another device. 
 
 **Solution:**
-Use the iOS Company Portal **Cloud** setting in the **Settings** app to redirect government users’ authentication towards the government cloud. By default, the **Cloud** setting is set to **Automatic** and Company Portal directs authentication towards the cloud that is automatically detected by the device (such as Public or Government). Government users who are signing in from another device will need to manually select the government cloud for authentication. 
+Use the iOS Company Portal **Cloud** setting in the **Settings** app to redirect government users' authentication towards the government cloud. By default, the **Cloud** setting is set to **Automatic** and Company Portal directs authentication towards the cloud that is automatically detected by the device (such as Public or Government). Government users who are signing in from another device will need to manually select the government cloud for authentication. 
 
 Open the **Settings** app and select Company Portal. In the Company Portal settings, select **Cloud**. Set the **Cloud** to Government.
 

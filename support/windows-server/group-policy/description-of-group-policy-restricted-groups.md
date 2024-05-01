@@ -7,13 +7,13 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # Description of group policy restricted groups
 
-This article provides a description of group policy restricted groups in Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2 Service Pack 1.
+This article provides a description of group policy restricted groups in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 279301
 
 Restricted groups allow an administrator to define the following two properties for security-sensitive (restricted) groups:

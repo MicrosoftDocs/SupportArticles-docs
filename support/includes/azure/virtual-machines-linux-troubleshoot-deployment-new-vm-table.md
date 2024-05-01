@@ -1,6 +1,7 @@
 ---
 author: cynthn
 ms.service: virtual-machines-linux
+ms.custom: linux-related-content
 ms.topic: include
 ms.date: 10/26/2018
 ms.author: cynthn
@@ -11,4 +12,3 @@ The following table lists the possible upload and capture combinations of Linux 
 | --- | --- | --- | --- | --- |
 | Linux gen. |N<sup>1</sup> |Y |N<sup>3</sup> |Y |
 | Linux spec. |Y |N<sup>2</sup> |Y |N<sup>4</sup> |
-

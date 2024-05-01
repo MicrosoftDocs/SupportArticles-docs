@@ -5,6 +5,7 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 ms.date: 01/03/2024
+ms.custom: sap:Data Ingestion\Connect to a Power Query data source
 ---
 # Data refresh fails and dataflow refresh is skipped
 

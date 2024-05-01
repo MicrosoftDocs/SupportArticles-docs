@@ -2,7 +2,7 @@
 title: Event handles may leak
 description: This article provides resolutions for the problem where ASP_PERFMON_- [XX] event handles may leak when you query performance counter objects on a local computer.
 ms.date: 12/11/2020
-ms.custom: sap:Site Behavior and Performance
+ms.custom: sap:Active Server Pages\Debugging
 ms.reviewer: nmallick, bariscag
 ms.subservice: site-behavior-performance
 ---

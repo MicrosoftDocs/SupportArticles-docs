@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 25 for SQL Server 2019 (KB5033688)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 25 (KB5033688).
-ms.date: 02/15/2024
+ms.date: 03/05/2024
 ms.custom: KB5033688
 ms.reviewer: v-qianli2
 appliesto:
@@ -49,7 +49,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2842801>[2842801](#2842801) </a> | Fixes an issue in which an upgrade process in Master Data Services models might fail if you set an inappropriate entity name such as "Entity". | Master Data Services| Master Data Services | Windows|
 | <a id=2820559>[2820559](#2820559) </a> | Fixes an issue in which a Volume Shadow Copy Service (VSS) restore process with the **Restore with Move** feature might restore an incorrect file or fail if the file path for the `.mdf` file includes a trailing space. Additionally, you receive the following error message if the restore process fails: </br></br>NativeError: 1384 </br>The file '\<FilePath> ' cannot be overwritten. It is being used by database '\<DatabaseName>'| SQL Server Engine| Backup Restore| Windows|
 | <a id=2932327>[2932327](#2932327) </a> | Fixes an issue that might cause the database file to be associated with an incorrect filegroup in the clone database created by using `DBCC CLONEDATABASE`.| SQL Server Engine| DB Management | All|
-| <a id=2343632>[2343632](#2343632) </a> | Fixes an assertion failure (Location: ucsconnectionsend.cpp:103; Expression: 'm_pcscBoxcar->GetMessageCount () > 0') that you might encounter when a clusterless Always On availability group (AG) has a large number of databases.| SQL Server Engine| High Availability and Disaster Recovery | Windows|
+| <a id=2343632>[2343632](#2343632) </a> | Prevents the creation of read-scale availability groups that have a large number of databases to avoid the subsequent assertion failure (Location: ucsconnectionsend.cpp:103; Expression: 'm_pcscBoxcar->GetMessageCount () > 0').| SQL Server Engine| High Availability and Disaster Recovery | Windows|
 | <a id=2926845>[2926845](#2926845) </a> | Fixes an issue that you encounter in `sys.dm_hadr_database_replica_cluster_states` for read-scale availability groups after you install SQL Server 2019 CU24 or later versions, which causes the **Availability Databases** folder in SQL Server Management Studio (SSMS) not to show the databases in the availability group (AG).| SQL Server Engine| High Availability and Disaster Recovery | Windows|
 | <a id=2843374>[2843374](#2843374) </a> | Fixes a deadlock issue that you encounter when creating or updating statistics by turning off the blocking Auto Stats feature. The blocking Auto Stats feature is turned on when you use PolyBase. Turning off the blocking Auto Stats feature might cause a different query plan and execution time because query compilation isn't blocked by statistics collection. | SQL Server Engine| PolyBase| All|
 | <a id=2833604>[2833604](#2833604) </a> | Adds mitigation to avoid an assertion failure (Location: lobss.cpp:707; Expression: 'FALSE' Lob not found for read) that you might encounter when you run a complex query that uses large value data types such as **varchar(max)**. </br></br>**Note**: The mitigation doesn't apply in all situations. | SQL Server Engine| Query Execution | All|

@@ -1,0 +1,53 @@
+### YamlMime:Landing
+
+title: Power Pages troubleshooting # < 60 chars
+summary: Welcome to Power Pages troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Power Pages. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Power Pages troubleshooting
+  description: Landing page for Power Pages troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: power-pages #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: #Required; your GitHub user alias, with correct capitalization.
+  ms.author: #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/12/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  # - title: Troubleshoot common Power Pages issues
+  #  linkLists:
+  #    - linkListType: how-to-guide
+  #      links:
+          #- text: Best practices for troubleshooting
+            #url: best-practices-troubleshooting.md
+
+  # Card
+  - title: Site customization or browsing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Missing filter label text in list components
+            url: filter-label-list-components.md
+
+  # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Power Pages documentation
+            url: /power-Pages/
+          - text: Power Pages training
+            url: /training/browse/?products=power-pages
+
+  # Card
+  - title: Support Resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Power Pages support
+            url: https://powerpages.microsoft.com/support/
+          - text: Power Pages Community forum
+            url: https://powerusers.microsoft.com/t5/Forums/ct-p/mpp_forums
+          - text: Power Pages Ideas forum
+            url: https://ideas.powerpages.microsoft.com/d365community/forum/1edba0ec-30cf-ec11-a7b5-000d3a545c96

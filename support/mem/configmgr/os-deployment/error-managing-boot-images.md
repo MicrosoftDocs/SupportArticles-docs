@@ -3,6 +3,7 @@ title: Can't manage boot images in Configuration Manager
 description: Describes an issue in which you can't manager boot images in Configuration Manager if the WIMMount service is corrupted, misconfigured, or missing.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Operating Systems Deployment (OSD)\Boot Images
 ---
 # Error when managing boot images in Configuration Manager
 

@@ -162,7 +162,7 @@ Your first step would be to see if you can connect to the remote server through 
 
 The above steps assume that you have NTLM Authentication turned on in IIS. Basic Authentication does not use Kerberos.
 
-For more information, see [Troubleshoot Kerberos failures in Internet Explorer](/troubleshoot/iis/troubleshoot-kerberos-failures-ie).
+For more information, see [Troubleshoot Kerberos failures in Internet Explorer](../../iis/www-authentication-authorization/troubleshoot-kerberos-failures-ie.md).
 
 For more information on IIS authentication methods, see [Visual Studio 2003 Retired Technical documentation](https://www.microsoft.com/download/details.aspx?id=55979).
 

@@ -3,7 +3,7 @@ title: Troubleshoot Windows 10 devices that can't sync with Intune after enrollm
 description: Gives the resolution for when a Windows 10 device can't sync with Microsoft Intune after it's enrolled for two minutes to two days.
 ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:device management
+ms.custom: sap:Enroll Device - Windows\MDM only
 ms.reviewer: kaushika
 ---
 # Windows 10 devices can't sync with Intune after enrollment

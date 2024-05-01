@@ -5,7 +5,7 @@ ms.author: davepinch
 author: davepinch
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
-ms.custom: bap-template
+ms.custom: sap:Application Functionality
 ---
 # "Step content failed to load" error occurs in the HoloLens app
 

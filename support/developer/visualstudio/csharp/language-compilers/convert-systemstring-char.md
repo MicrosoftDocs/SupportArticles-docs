@@ -2,7 +2,7 @@
 title: Convert from System String to Char
 description: "This article describes several ways to convert from System::String* to char* by using managed extensions in Visual C++."
 ms.date: 10/10/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C#
 ms.topic: how-to
 ---
 # Convert from System::String to Char in Visual C++  

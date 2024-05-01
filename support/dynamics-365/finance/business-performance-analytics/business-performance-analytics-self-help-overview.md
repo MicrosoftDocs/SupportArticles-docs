@@ -1,18 +1,18 @@
 ---
 title: Business performance analytics self-help
-description: Provides information about business performance analytics self-help in Microsoft Dynamics 365 Finance.
+description: Provides information about Business performance analytics self-help in Microsoft Dynamics 365 Finance.
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 02/05/2024
-ms.custom:
+ms.date: 04/30/2024
+ms.custom: sap:Business intelligence, reporting, analytics
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
 # Business performance analytics self-help
 
 > [!NOTE]
-> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
+> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [Business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
 
 To maintain the accuracy of report data, business performance analytics assesses the quality of the source data. If the assessments don't meet defined rules, business performance analytics logs information in the **Bpa self help logs** table in Microsoft Dataverse. This table provides insights into issues and helps you take appropriate action.
 
@@ -22,7 +22,7 @@ To access the **Bpa self help logs** table, follow these steps.
 
 1. Open the [Power Apps maker portal](https://make.preview.powerapps.com/).
 2. Go to **Tables** > **All**.
-3. Search for **BPA\Slef\Help\ Logs**.
+3. Search for **BPA\Self\Help\Logs**.
 
 ## Understand the "Bpa self help logs" table
 

@@ -1,9 +1,10 @@
 ---
 title: HITB report and GL Trial Balance do not reconcile
 description: Provides a resolution for the issue that the HITB report and GL Trial Balance do not reconcile in Microsoft Dynamics GP.
-ms.reviewer: beckyber, ppeterso
+ms.reviewer: theley, beckyber, ppeterso
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # The HITB report and GL Trial Balance do not reconcile
 

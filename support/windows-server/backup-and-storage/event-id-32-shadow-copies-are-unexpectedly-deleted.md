@@ -4,7 +4,7 @@ description: Introduces a workaround for an issue in which shadow copy volume is
 ms.topic: troubleshooting
 ms.date: 12/26/2023
 ms.reviewer: kaushika, cdascoli, bechinch, khoffman
-ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS) , csstroubleshoot
 ---
 # Event ID 32 occurs, and shadow copies are unexpectedly deleted
 
