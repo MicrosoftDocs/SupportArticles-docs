@@ -18,6 +18,8 @@ items:
   items:
   - name: Client can't connect to SQL Server with SQL authentication
     href: client-machine-cannot-connect-to-sqlserver.md
+  - name: Connection error 10054 occurs in SQL Server post upgrade
+    href: error-messages-areshown-after-upgrade-sql-version.md
   - name: Connection to the linked server failed
     href: connection-to-linked-server-failed.md
   - name: Error 0x80004005 occurs from SQL Sever Agent SSIS failures
