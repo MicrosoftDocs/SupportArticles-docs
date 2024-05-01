@@ -56,14 +56,14 @@ _Original KB number:_ &nbsp; 2200187
     <#> consecutive failure(s).  
     Last success @ \<date> \<time>.
 
-3. NTDS KCC, NTDS Replication, or ActiveDirectory_DomainService events with the 1256 status are logged in the directory service event log.  
+1. NTDS KCC, NTDS Replication, or ActiveDirectory_DomainService events with the 1256 status are logged in the directory service event log.  
 
-    | Event Source| Event ID| Event String |
-    |---|---|---|
-    | NTDS Replication ActiveDirectory_DomainService| 1085 *| Internal event: Active Directory Domain Services could not synchronize the following directory partition with the directory service at the following network address. |
-    | NTDS KCC ActiveDirectory_DomainService| 1308| The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following domain controller has consistently failed. The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following directory service has consistently failed. |
-
-    > [!NOTE]
+   | Event Source| Event ID| Event String |
+   |---|---|---|
+   | NTDS Replication ActiveDirectory_DomainService| 1085 *|Internal event: Active Directory Domain Services could not synchronize the following directory partition with the directory service at the following network address. |
+   | NTDS KCC ActiveDirectory_DomainService| 1308|The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following directory service has consistently failed. |
+   
+       > [!NOTE]
     > Event 1085 is only logged if the NTDS Diagnostics value **5 Replication Events** has been set to a value of 1 or higher.
 
 ## Cause
