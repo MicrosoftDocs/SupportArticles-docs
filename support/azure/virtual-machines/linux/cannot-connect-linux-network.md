@@ -1,7 +1,7 @@
 ---
 title: Can't connect to Azure Linux VM through network
 description: Describes network errors on Azure Linux virtual machines that are logged in serial logs. These errors prevent you from connecting to the VMs. A resolution is provided.
-ms.date: 07/21/2020
+ms.date: 04/15/2024
 author: genlin
 ms.author: genli
 ms.service: virtual-machines
@@ -10,6 +10,8 @@ ms.collection: linux
 ms.reviewer: 
 ---
 # Can't connect to Azure Linux VM through network
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article fixes an issue in which network errors prevent you from connecting to Azure Linux virtual machines.
 
