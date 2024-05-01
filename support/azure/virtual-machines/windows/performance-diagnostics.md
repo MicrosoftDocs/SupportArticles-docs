@@ -63,7 +63,7 @@ The following distributions are currently supported for on-demand diagnostics:
 | Azure Linux                | 2.0 |
 
 > [!NOTE]
-> [`*`] Please refer to [Known issues](../linux/how-to-use-perfinsights-linux.md#known-issues)
+> [`*`] See [Known issues](../linux/how-to-use-perfinsights-linux.md#known-issues)
 
 ## Install and run performance diagnostics on your VM
 
@@ -92,8 +92,8 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
     | Option | Description |
     | ------ | ----------- |
     | Enable continuous diagnostics | Select this option to collect continuous insights... |
-    | Run on-demand diagnostics | Select this option to immediately run on-demand diagnostics immediately after installation is completed, depending on the performance issue that you are having. The following performance analysis scenarios are available:<br/><ul><li>**Performance analysis**<br/>Includes all checks in the **Quick analysis** scenario, and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes, depending on the selected duration. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Quick analysis**<br/>Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Advanced performance analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and collects one or more of the traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require additional traces. Running this scenario for longer periods will increase the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li><li>**Azure file analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and captures a network trace and SMB counters. Use this scenario to troubleshoot the performance of Azure files. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li></ul> |
-    | Storage account | Optionally, if you want to use a single storage account to store the performance diagnostics results for multiple VMs, you can select a storage account from the dropdown. If you do not specify a storage account, a new storage account is created by default. |
+    | Run on-demand diagnostics | Select this option to immediately run on-demand diagnostics immediately after installation is completed, depending on the performance issue that you're having. The following performance analysis scenarios are available:<br/><ul><li>**Performance analysis**<br/>Includes all checks in the **Quick analysis** scenario, and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes, depending on the selected duration. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Quick analysis**<br/>Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Advanced performance analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and collects one or more of the traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require more traces. Running this scenario for longer periods increases the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li><li>**Azure file analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and captures a network trace and SMB counters. Use this scenario to troubleshoot the performance of Azure files. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li></ul> |
+    | Storage account | Optionally, if you want to use a single storage account to store the performance diagnostics results for multiple VMs, you can select a storage account from the dropdown. If you don't specify a storage account, a new storage account is created by default. |
 
     > [!NOTE]
     > [`*`] These analysis scenarios are only supported on Windows.
@@ -132,7 +132,7 @@ After the upload, a new diagnostics report is listed in the Azure portal.
 
 ## How to change performance diagnostics settings
 
-Use the **Settings** toolbar button to change the storage account where the diagnostics insights and output can be stored. You can use the same storage account for multiple VMs that use performance diagnostics. When you change the storage account, the old reports and insights are not deleted. However, they will no longer be displayed in the list of diagnostics reports.
+Use the **Settings** toolbar button to change the storage account where the diagnostics insights and output can be stored. You can use the same storage account for multiple VMs that use performance diagnostics. When you change the storage account, the old reports and insights aren't deleted. However, they'll no longer be displayed in the list of diagnostics reports.
 
 > [!NOTE]
 > Performance diagnostics insights and reports are stored in your own storage account. Insights are stored in Azure Tables, and reports are stored as compressed files in a binary large object (BLOB) container that is named *azdiagextnresults*.
@@ -176,7 +176,7 @@ You can use the **Reports** list to find all the on-demand diagnostics reports t
 
 Each performance diagnostics report may contain several insights and indicate an impact level of High, Medium, or Low. Each insight also contains recommendations to help lessen the concern. Insights are grouped for easy filtering.
 
-Impact levels represent the potential for performance issues, based on factors such as misconfiguration, known problems, or issues that are reported by other users. You might not yet be experiencing one or more of the listed issues. For example, you may have SQL log files and database files on the same data disk. This condition has a high potential for bottlenecks and other performance issues if the database usage is high, whereas you might not notice an issue if the usage is low.
+Impact levels represent the potential for performance issues, based on factors such as misconfiguration, known problems, or issues that are reported by other users. You might not yet be experiencing one or more of the listed issues. For example, you might have SQL log files and database files on the same data disk. This condition has a high potential for bottlenecks and other performance issues if the database usage is high, whereas you might not notice an issue if the usage is low.
 
 :::image type="content" source="media/performance-diagnostics/performance-diagnostics-report-overview.png" alt-text="Screenshot of Performance diagnostics report overview blade.":::
 
@@ -188,7 +188,7 @@ You can select an insight to view more details about the affected resources, sug
 
 ### Download and review the full performance diagnostics report
 
-You can use the **Download report** button to download an HTML report that contains additional rich diagnostics information, such as storage and network configuration, performance counters, traces, list of processes, and logs. The content depends on the selected analysis. For advanced troubleshooting, the report may contain additional information and interactive charts that are related to high CPU usage, high disk usage, and processes that consume excessive memory. For more information about the performance diagnostics report, see [Windows](how-to-use-perfinsights.md#review-the-diagnostics-report) or [Linux](../linux/how-to-use-perfinsights-linux.md#review-the-diagnostics-report).
+You can use the **Download report** button to download an HTML report that contains richer diagnostics information, such as storage and network configuration, performance counters, traces, list of processes, and logs. The content depends on the selected analysis. For advanced troubleshooting, the report might contain additional information and interactive charts that are related to high CPU usage, high disk usage, and processes that consume excessive memory. For more information about the performance diagnostics report, see [Windows](how-to-use-perfinsights.md#review-the-diagnostics-report) or [Linux](../linux/how-to-use-perfinsights-linux.md#review-the-diagnostics-report).
 
 > [!NOTE]
 > Performance diagnostics reports can be downloaded from the **Performance Diagnostics** blade within 30 days after they are created. After 30 days, you may get an error when you download a report from the **Performance Diagnostics** blade. To get a report after 30 days, go to the storage account and download it from a binary large object (BLOB) container that's named *azdiagextnresults*. You can view the storage account information by using the **Settings** button on the toolbar.
@@ -199,7 +199,7 @@ You can delete one or more performance diagnostics reports by using the **Delete
 
 ## How to uninstall performance diagnostics
 
-You can uninstall performance diagnostics from a VM. This action removes the VM extension but does not affect any diagnostics data that is in the storage account.
+You can uninstall performance diagnostics from a VM. This action removes the VM extension but doesn't affect any diagnostics data that is in the storage account.
 
 :::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with Uninstall button highlighted.":::
 
@@ -220,17 +220,17 @@ You can view the storage account information by using the Settings button on the
 There are multiple ways to share the diagnostics report with Microsoft.
 
 **Option 1:** Automatically share the latest report  
-When you open a support ticket with Microsoft, it is important to share the performance diagnostics report. If you opted to share this information with Microsoft while you run the diagnostics (by selecting the "**I agree to share diagnostics information with Microsoft**" check box), Microsoft will be able to access the report from your storage account using a SAS link to the output zip file for up to 30 days from the run date. Only the latest report is available to the support engineer.
+When you open a support ticket with Microsoft, it's important to share the performance diagnostics report. If you opt to share this information with Microsoft while you run the diagnostics (by selecting the "**I agree to share diagnostics information with Microsoft**" check box), Microsoft can access the report from your storage account using a SAS link to the output zip file for up to 30 days from the run date. Only the latest report is available to the support engineer.
 
 **Option 2:** Generate a Shared Access Signature for the diagnostics report compressed file  
-You may share a link to the reports compressed file by using Shared Access Signatures. To do this, follow these steps:
+You can share a link to the reports compressed file by using Shared Access Signatures. To do this:
 
 1. In the Azure portal, browse to the storage account in which the diagnostics data is stored.
 1. Select **Containers** under the **Data Storage** section.".
 1. Select the **azdiagextnresults** container.
 1. Select the Performance diagnostics output compressed file that you want to share.
 1. On the **Generate SAS** tab, select the criteria for sharing.
-1. Click **Generate blob SAS token and URL**.
+1. Select **Generate blob SAS token and URL**.
 1. Copy the **Blob SAS URL**, and share it with the support engineer.
 
 **Option 3:** Download the report from the storage account
@@ -244,6 +244,6 @@ Each performance diagnostics run has two stages:
 1. Install or update the performance diagnostics VM extension.
 1. Run the diagnostics for the specified duration.
 
-Currently there is no easy way to know exactly when the VM extension installation is complete. Generally it takes about 45 seconds to 1 minute to install the VM extension. After the VM extension is installed, you can run your repro steps to have the performance diagnostics capture the correct set of data for troubleshooting.
+Currently there's no easy way to know exactly when the VM extension installation is complete. Generally it takes about 45 seconds to 1 minute to install the VM extension. After the VM extension is installed, you can run your repro steps to have the performance diagnostics capture the correct set of data for troubleshooting.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
