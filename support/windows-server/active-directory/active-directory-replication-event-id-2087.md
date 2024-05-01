@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides a solution to the Active Directory replication Event ID 2087 that occurs when a Domain Name System (DNS) lookup failure causes replication to fail.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+*Applies to:*   Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 4469661
 
 ## Symptoms
@@ -111,11 +111,11 @@ This command displays the Netlogon and SYSVOL shares, indicating that the server
 
 ### Clean up domain controller metadata
 
-If tests show that the domain controller is no longer functioning but you still see objects representing the domain controller in the Active Directory Sites and Services snap-in, replication will continue to be attempted, and you must remove these objects from AD DS manually. You must use the Ntdsutil tool to clean up (delete) the metadata for the defunct domain controller.
+If tests show that the domain controller is no longer functioning but you still see objects representing the domain controller in the Active Directory Sites and Services snap-in, replication will continue to be attempted, and you must remove these objects from AD DS manually. You must use "Active Directory Users and Computers snap-in" or Ntdsutil tool to clean up (delete) the metadata for the defunct domain controller.
 
 If the defunct domain controller is the last domain controller in the domain, you should also remove the metadata for the domain. Allow sufficient time for all global catalog servers in the forest to inbound-replicate the domain deletion before you promote a new domain with the same name.
 
-The process for cleaning up metadata is improved in the version of Ntdsutil that is included with Windows Server 2003 Service Pack 1 (SP1). Instructions for cleaning up metadata with the Windows Server 2003 version of Ntdsutil and the Windows Server 2003 SP1 version of Ntdsutil are provided in the following procedure.
+The process for cleaning up metadata is improved in the version of Ntdsutil that is included with any supported version of Windows Server. Instructions for cleaning up metadata with Ntdsutil are provided in the following procedure.
 
 Requirements:
 
@@ -124,34 +124,42 @@ Requirements:
 
 #### Steps to clean up server metadata
 
-1. Open a Command Prompt.
+The convenient method to clean up domain controller's metadata is using the "Active Directory Users and Computers" snap-in:  
+[Step-By-Step: Manually Removing A Domain Controller Server](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-manually-removing-a-domain-controller-server/ba-p/280564)
+
+[Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)  
+  
+Alternatively, you can use ntdsutil:
+
+1. Open an elevated Command Prompt.
+
 2. At the Command Prompt, type the `ntdsutil` command, and then press ENTER.
 3. At the ntdsutil command prompt, type the `metadata cleanup` command, and then press ENTER.
-4. Perform metadata cleanup as follows:
+1. Perform metadata cleanup as follows:
 
-    > [!NOTE]
+       > [!NOTE]
     > If you are removing domain metadata as well as server metadata, skip the following procedure and use the procedure that begins at step 1.
 
-    - If you are performing server metadata cleanup only and you are using the version of Ntdsutil.exe that is included with Windows Server 2003 SP1, at the `metadata cleanup:` command prompt, type the following command, and then press ENTER:
-
-        ```console
+   - If you are performing server metadata cleanup only and you are using the version of Ntdsutil.exe that is included with a supported version of Windows Server, at the `metadata cleanup:` command prompt, type the following command, and then press ENTER:
+   
+             ```console
         remove selected server <ServerName>
         ```
 
-        Or
+             Or
 
-        ```console
+             ```console
         remove selected server <ServerName1> on <ServerName2>
         ```
 
-        |Parameter|Description|
-        |---|---|
-        |\<ServerName>, \<ServerName1>|The distinguished name of the domain controller whose metadata you want to remove, in the form cn=\<ServerName>,cn=Servers,cn=\<SiteName>, cn=Sites,cn=Configuration,dc=\<ForestRootDomain>|
-        |\<ServerName2>|The DNS name of the domain controller to which you want to connect and from which you want to remove server metadata.|
+       |Parameter|Description|
+  |---|---|
+  |\<ServerName>, \<ServerName1>|The distinguished name of the domain controller whose metadata you want to remove, in the form cn=\<ServerName>,cn=Servers,cn=\<SiteName>, cn=Sites,cn=Configuration,dc=\<ForestRootDomain>|
+  |\<ServerName2>|The DNS name of the domain controller to which you want to connect and from which you want to remove server metadata.|
 
-    - If you are performing metadata cleanup by using the version of Ntdsutil.exe that is included with Windows Server 2003 with no service pack, or if you are performing both domain metadata cleanup and server metadata cleanup, perform metadata cleanup as follows:
-
-        1. At the `metadata cleanup:` prompt, type the `connection` command, and then press ENTER.
+   - If you are performing metadata cleanup by using the version of Ntdsutil.exe, or if you are performing both domain metadata cleanup and server metadata cleanup, perform metadata cleanup as follows:
+   
+   1. At the `metadata cleanup:` prompt, type the `connection` command, and then press ENTER.
         2. At the `server connections:` prompt, type the `connect to server <Server>` command, and then press ENTER.
         3. At the `connection:` prompt, type the `quit` command, and then press ENTER.
         4. At the `metadata cleanup:` prompt, type the `select operation target` command, and then press ENTER.
@@ -166,12 +174,12 @@ Requirements:
         13. If the server whose metadata you have removed is the last domain controller in the domain and you want to remove the domain metadata, at the `metadata cleanup:` prompt, type the `remove selected domain` command, and then press ENTER. Metadata for the domain that you selected in step h is removed.
         14. At the `metadata cleanup:` and `ntdsutil:` prompts, type `quit`, and then press ENTER.
 
-        |Parameter|Description|
-        |--|--|
-        |\<Server>|The DNS name of a domain controller that you want to connect to.|
-        |\<SiteNumber>|The number that is associated with the site of the server that you want to clean up, which appears in the list.|
-        |\<DomainNumber>|The number that is associated with the domain of the server that you want to clean up, which appears in the list.|
-        |\<ServerNumber>|The number that is associated with the server that you want to clean up, which appears in the list.|
+     |Parameter|Description|
+  |--|--|
+  |\<Server>|The DNS name of a domain controller that you want to connect to.|
+  |\<SiteNumber>|The number that is associated with the site of the server that you want to clean up, which appears in the list.|
+  |\<DomainNumber>|The number that is associated with the domain of the server that you want to clean up, which appears in the list.|
+  |\<ServerNumber>|The number that is associated with the server that you want to clean up, which appears in the list.|
 
 ### Use Dcdiag to diagnose DNS problems
 
@@ -188,26 +196,17 @@ Before you begin these procedures, gather the following information, which is co
 - The FQDN of the source domain controller and destination domain controller
 - The IP address of the source domain controller
 
-The updated version of Dcdiag that is included in Windows Support Tools in Windows Server 2003 SP1 contains tests that provide consolidated and improved testing of basic and advanced DNS features. You can use this tool to diagnose basic DNS functionality and dynamic updates.
+The updated version of Dcdiag that is included in any supported version of Windows Server contains tests that provide consolidated and improved testing of basic and advanced DNS features. You can use this tool to diagnose basic DNS functionality and dynamic updates.
 
-When you use the enhanced SP1 version of Dcdiag for DNS testing, there are specific requirements that do not apply to all Dcdiag tests.
+When you use Dcdiag for DNS testing, there are specific requirements that do not apply to all Dcdiag tests.
 
 Requirements:
 
-- Membership in **Enterprise Admins**, or equivalent, is the minimum required to complete the new DNS tests that are available in the SP1 version of Dcdiag. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
+- Membership in **Enterprise Admins**, or equivalent, is the minimum required to complete the DNS tests. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 - Tool: Dcdiag.exe
 - Operating system:
-  - You can run the enhanced version of Dcdiag on computers running the following operating systems:
-
-    - Windows XP Professional
-    - Windows Server 2003
-    - Windows Server 2003 with SP1
-  - You can run the new Dcdiag DNS tests against Microsoft DNS servers that are installed on domain controllers running the following operating systems:
-    - Windows 2000 Server with Service Pack 3 (SP3)
-    - Windows 2000 Server with Service Pack 4 (SP4)
-    - Windows Server 2003
-    - Windows Server 2003 with SP1
-
+  - Any Supported versions of Windows Server or client with RSAT
+  
 > [!NOTE]
 > You can use the `/f:` switch in Dcdiag commands to save the output to a text file. Use `/f: FileName` to generate the file in the location that is indicated in *FileName*, for example, `/f:c:\Test\DnsTest.txt`.
 
@@ -256,7 +255,7 @@ If the basic DNS test shows no errors, continue by verifying that resource recor
 
 #### Verify resource record registration
 
-The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server 2003 with SP1 can locate source replication partners by using FQDNs-or, if that fails, NetBIOS names-the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.
+The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers can locate source replication partners by using FQDNs (or, if that fails, NetBIOS names) the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.
 
 You can use Dcdiag to verify registration of all resource records that are essential for domain controller location by using the `dcdiag /test:dns /DnsRecordRegistration` test. This test verifies registration of the following resource records in DNS:
 
@@ -380,11 +379,11 @@ Requirements:
 13. Repeat steps 2 through 11, but in step 3, type the name of the source domain controller, for example, DC03.
 14. In Notepad, compare the values of the two GUIDs.
 15. If the values do not match, the destination domain controller must receive replication of the valid GUID. Check the GUID value on other domain controllers and attempt replication on the destination domain controller with a different domain controller that has the correct GUID.
-16. If the values match, verify that the GUID matches the GUID in the Dsa_Guid._msdcs.Dns_Domain_Nameresource record for the source domain controller, as follows:
+1. If the values match, verify that the GUID matches the GUID in the Dsa_Guid._msdcs.Dns_Domain_Nameresource record for the source domain controller, as follows:
     1. Note the primary DNS servers that each domain controller identifies in the TCP/IP properties in their Network Settings. All the DNS servers that are listed in the respective TCP/IP properties should be able to indirectly or directly resolve this alias (CNAME) resource record.
-    2. From the servers that are listed, identify the authoritative name server or servers for this domain zone by looking at the server names that are listed for the name server (NS) resource records at the root of the zone. (In the DNS snap-in, select the forward lookup zone for the root domain, and then view the name server (NS) records in the details pane.)
-    3. On the name server or servers obtained in step b, open the DNS snap-in, and double-click the forward lookup zone for the forest root domain name. Double-click the _msdcs folder, and note the alias (CNAME) resource records that exist for your server name.
-
+   1. From the servers that are listed, identify the authoritative name server or servers for this domain zone by looking at the server names that are listed for the name server (NS) resource records at the root of the zone. (In the DNS snap-in, select the forward lookup zone for the root domain, and then view the name server (NS) records in the details pane.)
+   1. On the name server or servers obtained in step b, open the DNS snap-in, and double-click the forward lookup zone for the forest root domain name. Double-click the _msdcs folder, and note the alias (CNAME) resource records that exist for your server name.
+      
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
