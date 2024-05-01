@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # A connection error 10054 might occur post SQL Server upgrade
 
-After a Microsoft SQL Server upgrade, you experience a connection error. The error might continue even after you use the local system account for the SQL Server Agent service.
+After a Microsoft SQL Server upgrade, you experience a connection error. The error is likely to continue even after you use the local system account for the SQL Server Agent service.
 
 ## Symptoms
 
@@ -24,7 +24,7 @@ After you upgrade Microsoft SQL Server Standard Edition (STD), SQL Server Agent 
 
 ## Cause
 
-One possible cause of the error is that Transport Layer Security (TLS) might be disabled. Also, check whether the TLS protocol continues to be disabled after the upgrade is installed.
+Sometimes after a Microsoft SQL Server upgrade, TLS is disabled and you might experience a connection error. Check whether the TLS protocol is disabled after the upgrade is installed.
 
 ## Resolution
 
