@@ -9,7 +9,7 @@ ms.date: 04/24/2024
 
 # "Failed to enable your replication"
 
-This error is a general error message that's shown to the end user.
+This error is a general error message that's shown to the user when running the **Cloud Migration Setup** assisted setup guide in Business Central, which is part the data migration process from on-premises to Business Central online. [Learn more about cloud migration setup](/dynamics365/business-central/dev-itpro/administration/migration-setup).
 
 ## Symptom
 
