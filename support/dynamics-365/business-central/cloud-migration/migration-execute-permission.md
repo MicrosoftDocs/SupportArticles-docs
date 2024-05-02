@@ -32,4 +32,4 @@ Make sure that SQL user that's specified in the Self-hosted Integration Runtime 
   
 - db_owner database role
 
-   [Learn more about database-level roles](/sql/relational-databases/security/authentication-access/database-level-roles).
+  [Learn more about database-level roles](/sql/relational-databases/security/authentication-access/database-level-roles).
