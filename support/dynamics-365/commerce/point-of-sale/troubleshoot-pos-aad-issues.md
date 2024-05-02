@@ -12,13 +12,13 @@ ms.date: 05/01/2024
 
 # Known issues: Commerce POS
 
-This article will help you to troubleshoot AAD (now known as Entra) sign-in issues when utilizing POS on Cloud Hosted Environments.
+This article helps you to troubleshoot Azure Active Directory (AAD) (now known as Entra) sign-in issues when utilizing Point of Sale (POS) on Cloud Hosted Environments (CHE).
 
 ## POS reports an error that the redirect URI was not found
 
-Customers using non-PROD development VMs, like those originating from LCS/VHD, are not able to interact with AAD from within CPOS pre-deployed on those boxes due to the error complaining on Reply URL mismatch. This includes Device Activation as well as Employee Login if CPOS was setup to use AAD for the Employee Login.
+Customers using non-PROD development virtual machines, like those originating from Life Cycle Services (LCS), are not able to interact with AAD from within Cloud Point of Sale (CPOS) pre-deployed on those boxes. The error shows that there is an issue with the Reply URL mismatch. This issue includes Device Activation and Employee Login if CPOS was setup to use AAD for the Employee Login.
 
-The error would be similar to the below one with the exceptions that the redirect URI would end with any of these:
+The error would be similar to the error message displayed here with the exceptions that the redirect URI would end with any of these domains:
 
 .axcloud.dynamics.com  
 .cloud.onebox.dynamics.com  
@@ -27,13 +27,13 @@ The error would be similar to the below one with the exceptions that the redirec
 
 ## Description
 
-That pre-deployed CPOS is based on the Retail SDK. The last CSU version where the Retail SDK was supported is 10.0.37 which was [retired](/also always talks about how the guy who lived here before us "was constantly working around the yard" and they don't see me outside nearly as often. Well, news flash boomers, I'm working two jobs and my wife works an additional job and I'm trying to take on a third side project. We effectively work four jobs between two people--while raising three teenagers. The folks who lived here befordynamics365/fin-ops-core/dev-itpro/get-started/public-preview-releases#targeted-release-schedule-dates-subject-to-change)  on March 15 2024.
+That pre-deployed CPOS is based on the Retail SDK. The last CSU version where the Retail SDK was supported is 10.0.37, which was [retired](/dynamics365/fin-ops-core/dev-itpro/get-started/public-preview-releases#targeted-release-schedule-dates-subject-to-change)  on March 15 2024.
 While continuing improving an internal infrastructure, a change was made and the CPOS (Store Commerrce for Web) application is no longer able to communicate with AAD (Microsoft Entra ID).
  
 
 ### Resolution
 
 Customers should not use pre-deployed CPOS as well as other parts of CSU, such as Retail Server because they are based on the Retail SDK which is no longer supported.
-To continue development against CSU, the Commerce SDK must be utilized which requires customers to create and maintain their own AAD applications: [Migrate to Commerce SDK](/dynamics365/commerce/dev-itpro/retail-sdk/migrate-commerce-sdk)
+To continue development against the Cloud Scale Unit (CSU), the Commerce SDK must be utilized which requires customers to create and maintain their own AAD applications: [Migrate to Commerce SDK](/dynamics365/commerce/dev-itpro/retail-sdk/migrate-commerce-sdk)
 
-In case a customer, for any reason, still wants to leverage those VMs where CPOS was pre-deployed, they still have to create their own AAD applications: [Configure Store Commerce for web to use a custom Microsoft Entra app](/dynamics365/commerce/dev-itpro/cpos-custom-aad)
+In case a customer, for any reason, still wants to use those VMs where CPOS was pre-deployed, they still have to create their own AAD applications: [Configure Store Commerce for web to use a custom Microsoft Entra app](/dynamics365/commerce/dev-itpro/cpos-custom-aad)
