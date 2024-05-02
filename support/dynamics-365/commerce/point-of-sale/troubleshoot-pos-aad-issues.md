@@ -21,17 +21,18 @@ Customers using non-PROD development VMs, like those originating from LCS/VHD, a
 
 The error would be similar to the below one with the exceptions that the redirect URI would end with any of these:
 
-.axcloud.dynamics.com
-.cloud.onebox.dynamics.com
+.axcloud.dynamics.com  
+.cloud.onebox.dynamics.com  
 
 ![Example of an error message encountered.](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/104783217/73659af1-b3aa-4ab7-8582-69517b21ac28)
 
-## Prerequisites
+## Description
 
 That pre-deployed CPOS is based on the Retail SDK. The last CSU version where the Retail SDK was supported is 10.0.37 which was [retired](dynamics365/fin-ops-core/dev-itpro/get-started/public-preview-releases#targeted-release-schedule-dates-subject-to-change)  on March 15 2024.
-In order to make sure our internal infrastructure is compliant with Microsoft's policies, we had to make changes to CPOS First Party AAD applications which resulted in the Reply URLs corresponding to those VMs no longer being valid.
+While continuing improving an internal infrastructure, a change was made and the CPOS (Store Commerrce for Web) application is no longer able to communicate with AAD (Microsoft Entra ID).
+ 
 
-### Possible causes
+### Resolution
 
 Customers should not use pre-deployed CPOS as well as other parts of CSU, such as Retail Server because they are based on the Retail SDK which is no longer supported.
 To continue development against CSU, the Commerce SDK must be utilized which requires customers to create and maintain their own AAD applications: [Migrate to Commerce SDK](/dynamics365/commerce/dev-itpro/retail-sdk/migrate-commerce-sdk)
