@@ -188,7 +188,7 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 9._x_ - EUS](#tab/rhel9-eus)
 
-1. Install the `rhui-azure-rhel9` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
+1. Install the `rhui-azure-rhel9-eus` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
 
    ```bash
    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9-eus.config' install rhui-azure-rhel9-eus
