@@ -36,4 +36,4 @@ While Microsoft is continuing to improve on internal infrastructure, a change wa
 Customers shouldn't use predeployed CPOS or other parts of CSU, such as Retail Server because they're based on the Retail SDK, which is no longer supported.
 To continue development against the Cloud Scale Unit (CSU), the Commerce SDK must be utilized which requires customers to create and maintain their own Entra applications: [Migrate to Commerce SDK](/dynamics365/commerce/dev-itpro/retail-sdk/migrate-commerce-sdk).
 
-In case a customer, for any reason, still wants to use those VMs where CPOS was predeployed, they still have to create their own Entra applications: [Configure Store Commerce for web to use a custom Microsoft Entra app](/dynamics365/commerce/dev-itpro/cpos-custom-Entra).
+In case a customer, for any reason, still wants to use those VMs where CPOS was predeployed, they still have to create their own Entra applications: [Configure Store Commerce for web to use a custom Microsoft Entra app](/dynamics365/commerce/dev-itpro/cpos-custom-aad).
