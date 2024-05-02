@@ -19,7 +19,7 @@ When someone shares a Business Central link to a Teams chat or channels, navigat
 
 ## Resolution
 
-When you shares pages or records do one of the follwoing:
+When you shares pages or records do one of the following steps:
 
 - Include the link preview as a card. [Learn more](https://learn.microsoft.com/en-us/dynamics365/business-central/across-teams-tab).
 - Share data as a tab in the chat or channel. [Learn more](/dynamics365/business-central/across-teams-tab).
