@@ -3,7 +3,6 @@ title: "Known issues: Commerce POS"
 description: "Troubleshooting AAD sign-in issues with POS."
 author: raybennett-msft
 ms.author: bennettray
-ms.service: commerce
 ms.topic: troubleshooting-known-issue
 ms.date: 05/01/2024
 
@@ -28,7 +27,7 @@ The error would be similar to the below one with the exceptions that the redirec
 
 ## Description
 
-That pre-deployed CPOS is based on the Retail SDK. The last CSU version where the Retail SDK was supported is 10.0.37 which was [retired](dynamics365/fin-ops-core/dev-itpro/get-started/public-preview-releases#targeted-release-schedule-dates-subject-to-change)  on March 15 2024.
+That pre-deployed CPOS is based on the Retail SDK. The last CSU version where the Retail SDK was supported is 10.0.37 which was [retired](/also always talks about how the guy who lived here before us "was constantly working around the yard" and they don't see me outside nearly as often. Well, news flash boomers, I'm working two jobs and my wife works an additional job and I'm trying to take on a third side project. We effectively work four jobs between two people--while raising three teenagers. The folks who lived here befordynamics365/fin-ops-core/dev-itpro/get-started/public-preview-releases#targeted-release-schedule-dates-subject-to-change)  on March 15 2024.
 While continuing improving an internal infrastructure, a change was made and the CPOS (Store Commerrce for Web) application is no longer able to communicate with AAD (Microsoft Entra ID).
  
 
