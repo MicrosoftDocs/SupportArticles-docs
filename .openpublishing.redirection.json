@@ -11048,7 +11048,7 @@
     {
       "source_path": "support/sql/database-engine/connect/bad-server-name-connection-string.md",
       "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
