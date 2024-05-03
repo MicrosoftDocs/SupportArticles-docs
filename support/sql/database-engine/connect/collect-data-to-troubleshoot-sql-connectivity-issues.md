@@ -1,5 +1,5 @@
 ---
-title: Collect data to troubleshoot connectivity issues with SQL Server
+title: Collect data to troubleshoot connectivity issues in SQL Server
 description: This article provides questions based on several components that you can use to effectively troubleshoot SQL Server connectivity issues.
 ms.date: 05/03/2024
 author: Malcolm-Stewart
@@ -20,7 +20,7 @@ This section provides a comprehensive list of questions that are classified base
 - [User information](#user-information)
 - [Log information](#log-information)
 - [Big picture questions](#big-picture-questions)
-- [New or existing issue](#new-or-existing-issue)
+- [New or existing issues](#new-or-existing-issues)
 
 ## Method of collecting data
 
@@ -113,7 +113,7 @@ For a Linked Server, collect server information for both the mid-tier server and
 - Which protocols are enabled?
 - Which is the port that the server listens on?
 - What is the name of the server pipe? You can find this information in the error log.
-- Which type of environment is used? Is it physical, virtual, or cloud? For example, IaaS (SQL in an Azure Virtual Machine (VM) or PaaS (Azure SQL Database, SQL Managed Instance (MI)).
+- Which type of environment is used? Is it physical, virtual, or cloud? For example, IaaS (SQL in an Azure Virtual Machine (VM)) or PaaS (Azure SQL Database, SQL Managed Instance (MI)).
 - Is the database deployed as standalone, clustered, mirrored, or using Always On?
 - What is the Failover partner name and IP address?
 - What is the Virtual cluster name or Listener name and port?
@@ -133,7 +133,7 @@ For a Linked Server, collect server information for both the mid-tier server and
 - Is the user a service, such as SQL Agent? Is the process identity being used or a stored credential is being used?
 - What is the type of authentication used to connect to the client application? Is it Windows, Forms authentication, or AAD?
 - Does the user connect to the server using integrated security?
-- What are the user name and domain name?
+- What are the username and domain name?
 
 If the user is remote to the client application, collect the following details:
 
@@ -149,6 +149,8 @@ If the user is remote to the client application, collect the following details:
 - Does the issue affect all or only some of the users in a particular domain?
 
 ## Log information
+
+Collect the following information from the log files:
 
 - What is the exact error message in the call stack?
 - Was the log collected from the SQL Server *ERRORLOG* and *ERRORLOG.1* files?
@@ -169,13 +171,15 @@ The following set of questions is designed to help you identify the category of 
 - Does the issue occur only at certain times of the day or on certain days of the week?
 - Does the issue occur only when a backup is being taken or the database is being re-indexed?
 - Does the issue affect more than one server?
-- Does the issue affect only one node in an n-node cluster? If yes, perhaps rebuilding would be more efficient.
+- Does the issue affect only one node in a n-node cluster? If yes, it might be more efficient to consider rebuilding that particular node.
 - Does the issue affect only one or two clients out of several? If yes, perhaps rebuilding would be more efficient.
 - Does the issue affect only Named Pipes and not TCP (or vice versa)?
 - Does the issue occur when you use a SQL Server login and TCP/IP?
 - Does a working case exist that can be compared against the failing case? How do the systems differ?
 
-## New or existing issue
+## New or existing issues
+
+Refers to determining whether the problem is a recent development or if it has persisted for a while:
 
 - Has the issue always existed (new installation) or did the application function correctly for some time before it recently broke?
 - If the application used to function correctly, what changes were made to the environment? For example, installed updates, upgraded domain controllers, changes in the firewall settings, decommissioned domain controllers, or a move to a different OU in the domain.
