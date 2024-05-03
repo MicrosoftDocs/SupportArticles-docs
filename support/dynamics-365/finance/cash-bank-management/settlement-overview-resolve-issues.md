@@ -4,7 +4,7 @@
 title: Troubleshoot issues with transactions that can't be settled
 description: Describes how to resolve issues with transactions that can't be settled in Microsoft Dynamics 365 Finance.
 author: twheeloc 
-ms.date: 12/07/2023
+ms.date: 04/30/2024
 
 # optional metadata
 
@@ -21,6 +21,7 @@ ms.search.region: Global
 ms.author: twheeloc
 ms.search.validFrom: 2018-10-31
 ms.dyn365.ops.version: 8.1
+ms.custom: sap:Cash and bank management - banking\Issues with bank transactions
 ---
 # Troubleshoot issues with transactions that can't be settled
 
