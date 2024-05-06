@@ -1,8 +1,8 @@
 items:
 - name: Common Connection Issues
   href: resolve-connectivity-errors-overview.md
-- name: Advanced Secure Sockets Layer data capture
-  href: advanced-ssl-data-capture.md
+- name: Troubleshoot SSL errors during the login process
+  href: troubleshoot-ssl-errors-login-process.md
 - name: Cannot generate SSPI context
   href: cannot-generate-sspi-context-error.md
 - name: Can't use Kerberos unconstrained delegation in Windows
