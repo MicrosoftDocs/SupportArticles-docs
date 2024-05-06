@@ -1,12 +1,12 @@
 ---
-title: Advanced Secure Sockets Layer data capture
-description: Describes the steps for advanced Secure Sockets Layer data capture.
-ms.date: 04/26/2024
+title: Troubleshoot SSL errors during the login process
+description: Troubleshoots SSL errors that occur during the login process.
+ms.date: 05/06/2024
 ms.reviewer: prmadhes, jopilov, v-sidong
 ms.custom: sap:Connection issues
 ---
 
-# Advanced Secure Sockets Layer data capture
+# Troubleshoot Secure Sockets Layer (SSL) errors that occur during the login process
 
 > [!NOTE]
 > - This article is for Windows only.
