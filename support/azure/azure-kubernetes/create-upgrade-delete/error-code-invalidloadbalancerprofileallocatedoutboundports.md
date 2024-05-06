@@ -47,11 +47,11 @@ To resolve the "InvalidLoadBalancerProfileAllocatedOutboundPorts" error, follow 
     ```
 
     > [!NOTE]
-    > When performing this check, make sure you consider node surges that happen during cluster upgrades and other operations. AKS defaults to one buffer node for upgrade operations but this number can be modified using the [maxSurge](/azure/aks/upgrade-aks-cluster#customize-node-surge-upgrade) parameter.
+    > When performing this check, make sure you consider node surges that happen during cluster upgrades and other operations. AKS defaults to one buffer node for upgrade operations, but this number can be modified using the [maxSurge](/azure/aks/upgrade-aks-cluster#customize-node-surge-upgrade) parameter.
 
 2. Change the cluster's node count, the number of outbound frontend IP addresses, or the number of SNAT ports per node.
 
-    For more information about how to configure the allocated outbound ports, as well as examples and calculations of the number of ports you might need, see [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
+    For more information about how to configure the allocated outbound ports and examples and calculations of the number of ports you might need, see [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
 
 ## Reference
 
