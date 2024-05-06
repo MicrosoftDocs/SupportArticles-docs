@@ -177,7 +177,7 @@ To troubleshoot this issue, follow these steps:
 
     {6AC1786C-016F-11D2-945F-00C04FB984F9} is the GUID of the GPO.
 
-6. To find the friendly name of the GPO, use the Powershell cmdlet [Get-GPO -Guid](/powershell/module/grouppolicy/get-gpo) on a DC or a server with AD RSAT tools installed.
+6. To find the friendly name of the GPO, use the PowerShell cmdlet [Get-GPO -Guid](/powershell/module/grouppolicy/get-gpo) on a DC or a server with AD RSAT tools installed.
 
     The friendly name of the GPO shows next to the `DisplayName` field:
 
