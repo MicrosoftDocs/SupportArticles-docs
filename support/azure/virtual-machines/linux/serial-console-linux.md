@@ -104,6 +104,9 @@ Serial Console uses the storage account configured for boot diagnostics in its c
 1. Add Serial Console service IPs as firewall exclusions based on the VM's geography.
 
    The following table lists the IPs that need to be permitted as firewall exclusions based on the region or geography where the VM is located. This is a subset of the complete list of Serial Console IP addresses used in the **SerialConsole** service tag. You can limit access to boot diagnostics storage accounts via the **SerialConsole** service tag. The service tag is not regionally separated. Traffic on the Service Tag is inbound only, and Serial Console does not generate traffic to Customer Controllable Destinations. While Azure storage account firewalls do not currently support service tags, the **SerialConsole** service tag can be programmatically consumed to determine the IP list. Learn more about service tags [here](https://https://learn.microsoft.com/en-us/azure/virtual-network/service-tags-overview).
+
+    > [!NOTE]
+    > In geographies with only a single region, such as Italy North in Italy, VMs do not support storage account firewalls with Serial Console.
    
    |IP Address      | Regions | Geography|
 |-----------|--------------------|-----------------|
