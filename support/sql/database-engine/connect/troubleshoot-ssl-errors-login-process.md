@@ -5,7 +5,6 @@ ms.date: 05/06/2024
 ms.reviewer: prmadhes, jopilov, v-sidong
 ms.custom: sap:Connection issues
 ---
-
 # Troubleshoot Secure Sockets Layer (SSL) errors that occur during the login process
 
 > [!NOTE]
@@ -23,7 +22,9 @@ You might encounter some of the following errors when using TLS/SSL:
 **TCP**
 > A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The connection was forcibly closed by remote host 10054) Microsoft SQL Server, Error: 233.
 
-Troubleshooting these SSL errors might involve some of the following steps:
+## Resolution
+
+To troubleshoot these SSL errors, follow these steps:
 
 1. Update an expired or incorrect certificate.
 1. Enable TLS protocols.
@@ -31,16 +32,18 @@ Troubleshooting these SSL errors might involve some of the following steps:
 
 For details of these steps, see [SSL errors are reported after upgrading to TLS 1.2](ssl-errors-after-tls-1-2.md).
 
-If these steps don't work, use the following steps to collect more detailed logs to get insight into the root cause of these errors.
+If this resolution doesn't work, use the steps in the following section to collect more detailed logs to get insight into the root cause of these errors.
 
-## Capture Windows settings using SQLCHECK
+## Advanced Secure Sockets Layer data capture
+
+### Capture Windows settings using SQLCHECK
 
 Run SQLCHECK on client machines, server machines, and any other related systems, such as a web server or SQL Server linked server intermediate machine.
 
 1.	Download the latest version of [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) and unzip it into a folder, such as *C:\MSDATA*.
 1.	Double-click the executable file in Windows File Explorer. A report will be written to the folder where *SQLCheck.exe* is located.
 
-## Configure the driver Built-In Diagnostic (BID) trace
+### Configure the driver Built-In Diagnostic (BID) trace
 
 1. Download the latest version of [SQLTRACE](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE) and extract it into a folder, such as *C:\MSDATA*.
 
@@ -54,7 +57,7 @@ Run SQLCHECK on client machines, server machines, and any other related systems,
 
 1. Save the file.
 
-## Configure the network trace
+### Configure the network trace
 
 The **networking** section is automatically configured with `Network=yes` and `NETSH=yes`. These settings shouldn't be changed without good reason.
 
@@ -66,7 +69,7 @@ The **Auth** section is automatically configured with `Auth=yes` and many other 
 
 You might also need to set `FlushTickets=yes` in the **MISC** section. It will flush Kerberos tickets for all users and services on the machine.
 
-## Enable BID traces
+### Enable BID traces
 
 Once all the changes to the *SQLTrace.ini* file have been saved, BID Traces must be enabled before tracing can begin.
 
@@ -85,7 +88,7 @@ Once all the changes to the *SQLTrace.ini* file have been saved, BID Traces must
 
 1. Restart the service or application you wish to trace. Otherwise, the application won't be traced.
 
-## Collect the trace data
+### Collect the trace data
 
 > [!NOTE]
 > Make sure the previous steps have been completed on all machines before continuing.
