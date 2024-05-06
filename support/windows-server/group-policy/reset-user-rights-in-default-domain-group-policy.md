@@ -29,19 +29,19 @@ To restore user rights to use the default settings for the default domain GPO, f
 
 #### Edit the Gpttmpl.inf File
 
-To edit the Gpttmpl.inf file, follow these steps.
+To edit the *Gpttmpl.inf* file, follow these steps.
 
 > [!IMPORTANT]
-> Back up the Gpttmpl.inf file before you perform this procedure.
+> Back up the *Gpttmpl.inf* file before you perform this procedure.
 
-1. Start Windows Explorer and open the following folder, where **Sysvol_path** is the path of the Sysvol folder:
+1. Start Windows Explorer and open the following folder, where \<Sysvol_path\> is the path of the *Sysvol* folder:
   
-    **Sysvol_path**\\Sysvol\\**DomainName**\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\Machine\Microsoft\\Windows NT\\SecEdit
+    *\<Sysvol_path\>\\Sysvol\\\<DomainName\>\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\Machine\Microsoft\\Windows NT\\SecEdit*
 
     > [!NOTE]
-    > The default path of the Sysvol folder is %SystemRoot%\\Sysvol.
-2. Right-click **Gpttmpl.inf**, and then select **Open**.
-3. To completely reset the user rights to the default settings, replace the existing information in the Gpttmpl.inf file with the following default user-rights information. To do so, paste the following text in the appropriate section of your current Gpttmpl.inf file:
+    > The default path of the *Sysvol* folder is *%SystemRoot%\\Sysvol*.
+2. Right-click *Gpttmpl.inf*, and then select **Open**.
+3. To completely reset the user rights to the default settings, replace the existing information in the *Gpttmpl.inf* file with the following default user-rights information. To do so, paste the following text in the appropriate section of your current *Gpttmpl.inf* file:
 
     ```inf
     [Unicode]
@@ -74,15 +74,15 @@ To edit the Gpttmpl.inf file, follow these steps.
 
 #### Edit the Gpt.ini File
 
-The Gpt.ini file controls the GPO template version numbers. You must edit the Gpt.ini file to increase the GPO template version number. To do so:
+The *Gpt.ini* file controls the GPO template version numbers. You must edit the Gpt.ini file to increase the GPO template version number. To do so:
 
-1. Start Windows Explorer and open the following folder, where **Sysvol_path** is the path of the Sysvol folder:
-    **Sysvol_path**\\Sysvol\\Domain\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}
+1. Start Windows Explorer and open the following folder, where \<Sysvol_path\> is the path of the *Sysvol* folder:
+    \<Sysvol_path\>\\Sysvol\\Domain\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}
 
     > [!NOTE]
-    > The default path of the Sysvol folder is %SystemRoot%\\Sysvol.
+    > The default path of the *Sysvol* folder is *%SystemRoot%\\Sysvol*.
 
-2. Right-click **Gpt.ini**, and then select **Open**.
+2. Right-click *Gpt.ini*, and then select **Open**.
 3. Increase the version number to a number that is sufficient to guarantee that typical replication does not outdate the new version number before the policy is reset. Increment the number either by adding the number "0" to the end of the version number or the number "1" to the beginning of the version number.
 4. On the **File** menu, select **Save**, and then select **Exit**.
 
@@ -91,7 +91,7 @@ The Gpt.ini file controls the GPO template version numbers. You must edit the Gp
 Apply the new GPO by using the GPUpdate tool to manually reapply all policy settings. To do so:
 
 1. Select **Start**, and then select **Run**.
-2. In the **Open** box, type cmd, and then select **OK**.
+2. In the **Open** box, type *cmd*, and then select **OK**.
 3. At the command prompt, type the following line, and then press ENTER: GPUpdate /Force
 
 4. Type exit and then press ENTER to quit the command prompt.
