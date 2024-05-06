@@ -19,6 +19,27 @@ search.appverid:
 ms.date: 03/19/2024
 ---
 
+---
+title: Resolve issues with Teams Meeting add-in for Outlook
+description: Provides steps to troubleshoot and fix issues that affect the Teams Meeting add-in for Outlook.
+author: helenclu
+ms.author: meerak
+manager: dcscontentpm
+audience: ITPro
+ms.topic: troubleshooting
+localization_priority: Normal
+ms.custom: 
+  - sap:Teams Meetings\Meeting Scheduling
+  - CSSTroubleshoot
+  - CI 162959
+  - CI 171788
+appliesto: 
+  - Microsoft Teams
+search.appverid: 
+  - MET150
+ms.date: 03/19/2024
+---
+
 # Resolve issues that affect Teams Meeting add-in for Outlook
 
 If you're a Microsoft Teams administrator, and your users can't install the Teams Meeting add-in for Outlook, schedule Outlook meetings from Teams, or schedule Teams meetings from Outlook, try the following steps to troubleshoot and resolve the issue.
@@ -118,20 +139,30 @@ If the add-in still doesn't appear, follow these steps to check the registry set
    1. Navigate to `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\Outlook\Addins\TeamsAddin.FastConnect`.
    1. Check the value of the `LoadBehavior` entry. It should be set to **3**.
    1. If `LoadBehavior` has a value other than **3**, change it to **3**, and then restart Outlook.
-  
+      
    If the add-in still doesn't appear, go to step 2.
-2. Check whether the *Configure Outlook object model prompt when reading address information* policy setting is configured:
+1. Check whether the *Configure Outlook object model prompt when reading address information* policy setting is configured:
 
    1. Open RegEdit.exe.
    1. Navigate to `HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Office\16.0\Outlook\Security`. If you applied the policy settings by using [Cloud Policy service](/deployoffice/admincenter/overview-cloud-policy), navigate to `HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Cloud\Office\16.0\Outlook\Security`.
-
+   
       **Note:** Policy settings that are implemented by using Cloud Policy take precedence over policy settings that are implemented by using Group Policy on Windows.
    1. Check for the `promptoomaddressinformationaccess` registry entry and whether a value is set for it. If the value is **0**, this indicates that the policy setting is set to the *Automatically deny* option. If it is, Outlook will automatically deny programmatic access requests from any program. In this situation, go to step 2d.
    1. Check the *Configure trusted add-ins* policy setting.
-
+   
       If this policy setting is configured, Teams administrators can use one of the following options:
-
+      
       - Disable or unconfigure the policy setting.
       - If the policy is required, make sure that *Microsoft.Teams.AddinLoader.dll* is in the list of trusted add-ins and that the corresponding hash value is correct. You can use the [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash) cmdlet to compute the hash value of the .dll file.
-
+      
         **Note:** The *Microsoft.Teams.AddinLoader.dll* file that's used is automatically updated with the Teams client. Therefore, the hash value must be constantly updated to pair with the .dll file.
+## Unable to add Teams Meeting details into the Meeting Request body
+
+When scheduling a Meeting Request in a delegated calendar the Teams Meeting add-in needs to get the Organizer information through Outlook.
+
+This action requires the mailboxes to be fully visible in the Global Address List. If you are having issues on getting the Teams Meeting details added to the body of the meeting request please confirm that the mailbox is NOT hidden from the Global Address List. 
+
+Steps to manage this configuration can be found in the following article: [Manage address lists in Exchange Online | Microsoft Learn](/exchange/address-books/address-lists/manage-address-lists"https://learn.microsoft.com/en-us/exchange/address-books/address-lists/manage-address-lists#hide-recipients-from-address-lists")
+
+> [!IMPORTANT]
+> The parameter _-HiddenFromAddressListsEnabled_ should be set to _$false_.
