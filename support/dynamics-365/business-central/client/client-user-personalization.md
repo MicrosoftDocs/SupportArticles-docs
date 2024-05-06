@@ -1,33 +1,34 @@
 ---
-title: User personalization can't be started
-description: Learn how to troubleshoot issues with user personalization.
+title: User personalization can't be started in Business Central
+description:  Provides troubleshooting steps to solve the personalization could not be started error during user personalization in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.author: solsen
 ms.reviewer: solsen
-ms.topic: troubleshooting
-ms.date: 04/24/2024
+ms.date: 05/06/2024
 ---
+# User personalization can't be started in Business Central
 
-# User personalization can't be started
-
-When there are issues preventing the user personalization in Business Central, the user will get an error message, and not be able to start user personalization.
+This article provides a resolution for the "personalization could not be started" error that occurs during user personalization in Dynamics 365 Business Central.
 
 ## Symptoms
 
-The user sees the following error message "Sorry, something went wrong and personalization could not be started. Please try again later, or contact your system administrator."
+When there are issues preventing the user personalization in Business Central, the user will get the following error message, and not be able to start user personalization.
+
+> Sorry, something went wrong and personalization could not be started. Please try again later, or contact your system administrator.
 
 ## Resolution
 
 > [!NOTE]
-> You need tenant administrator permissions in Business Central.
+>
+> - You need tenant administrator permissions in Business Central.
+> - The following steps will delete records with compilation errors and the specific user personalizations will be deleted. It's recommended to take a screenshot of any personalizations done, before deleting them.
 
-Do the following to mitigate the issue. 
-
-> [!NOTE]  
-> The following steps will delete records with compilation errors and the specific user personalizations will be deleted. It's recommended to take a screenshot of any personalizations done, before deleting them.
+Follow these steps to mitigate the issue:
 
 1. In Business Central, in the **Tell Me** box, enter **Personalized Pages**, and then choose the related link.
 2. On the **Personalized Pages** page, use the filter pane to show records that belong to the impacted user.
-3. Select the **Troubleshoot** button.  
-  You'll now get a list of all records that contain errors. These records must be removed to unblock the user from starting user personalization.  
+3. Select the **Troubleshoot** button.
+
+   You'll now get a list of all records that contain errors. These records must be removed to unblock the user from starting user personalization.  
+
 4. Select the **Manage** action to delete the user personalizations with errors.

@@ -1,16 +1,15 @@
 ---
-title: Client returns wrong `ClientType`
-description: Learn how to ensure that the correct client type is returned for each client.
-ms.date: 04/24/2024
-ms.reviewer: na
-ms.topic: troubleshooting
+title: Client returns wrong a client type
+description: Provides a resolution to ensure that the correct client type is returned for each client in Dynamics 365 Business Central.
+ms.date: 05/06/2024
+ms.reviewer: solsen
 author: SusanneWindfeldPedersen
 ms.author: solsen
+ms.custom:
 ---
+# Client returns wrong "ClientType"
 
-# Client returns wrong `ClientType`
-
-When you run the Business Central tablet client and the Business Central phone client simultaneously in the same browser session, you might get the same [ClientType](/dynamics365/business-central/dev-itpro/developer/methods-auto/clienttype/clienttype-option) returned for both clients.
+This article provides a resolution for the issue that you might get the same [ClientType](/dynamics365/business-central/dev-itpro/developer/methods-auto/clienttype/clienttype-option) when you run the Business Central tablet client and the Business Central phone client simultaneously in the same browser session.
 
 ## Prerequisites
 
@@ -23,9 +22,9 @@ Running, for example, the Business Client tablet client and the Business Client 
 ## Resolution
 
 If you have implemented code that checks for the [CurrentClientType](/dynamics365/business-central/dev-itpro/developer/methods-auto/session/session-currentclienttype-method), you must run each of the different clients in separate browser windows to make sure that the correct client type is returned for each of the clients.  
-  
+
 ## More information
 
-[Designing for different screen sizes on tablet and phone](/dynamics365/business-central/dev-itpro/developer/devenv-designing-different-screen-sizes-tablet-and-phone)   
-[CurrentClientType method](/dynamics365/business-central/dev-itpro/developer/methods-auto/session/session-currentclienttype-method)   
-[DefaultClientType method](/dynamics365/business-central/dev-itpro/developer/methods-auto/session/session-defaultclienttype-method)
+- [Designing for different screen sizes on tablet and phone](/dynamics365/business-central/dev-itpro/developer/devenv-designing-different-screen-sizes-tablet-and-phone)
+- [CurrentClientType method](/dynamics365/business-central/dev-itpro/developer/methods-auto/session/session-currentclienttype-method)
+- [DefaultClientType method](/dynamics365/business-central/dev-itpro/developer/methods-auto/session/session-defaultclienttype-method)
