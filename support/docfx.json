@@ -65,6 +65,7 @@
         "devices/**.*": "MSDocsHeader-Surface",
         "dynamics-365/**.*": "MSDocsHeader-Dynamics365",
         "dynamics-365/commerce/**.*": "MSDocsHeader-Dynamics365-Commerce",
+        "dynamics-365/business-central/**.*": "MSDocsHeader-Dynamics365-BusinessCentral",
         "dynamics-365/customer-insights/**.*": "MSDocsHeader-Dynamics365-Customer-Insights",
         "dynamics-365/customer-service/**.*": "MSDocsHeader-Dynamics365-CustomerService",
         "dynamics-365/field-service/**.*": "MSDocsHeader-Dynamics365-Field-Service",
@@ -86,6 +87,7 @@
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
         "dynamics-365/customer-insights/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights",
+        "dynamics-365/business-central/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=e288ef32-82ed-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Business%20Central",        
         "dynamics-365/finance/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=16691718-61e2-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Finance",
         "dynamics-365/commerce/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=fd509429-7e87-e711-8105-c4346bb5988c&forumName=Dynamics%20365%20Commerce",
         "dynamics-365/customer-service/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad&forumName=Dynamics%20365%20Customer%20Service",
@@ -202,6 +204,7 @@
         "power-platform/power-pages/**/**.*": "power-pages",
         "power-platform/power-automate/**/*.md": "power-automate",
         "power-platform/dataverse/**/*.md": "power-platform",
+        "dynamics-365/business-central/**/**.*": "business-central",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
         "dynamics-365/customer-service/**/**.*": "dynamics-365-customerservice",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
@@ -386,6 +389,7 @@
         "azure/devops/*.md": "Azure DevOps",
         "azure/synapse-analytics/**/*.md": "Azure Synapse Analytics",
         "azure/cosmos-db/**/*.md": "Azure Cosmos DB",
+        "dynamics-365/business-central/**/*.md": "Dynamics 365 Business Central",
         "dynamics-365/customer-insights/**/*.md": "Dynamics 365 Customer Insights",
         "dynamics-365/customer-service/**/*.md": "Dynamics 365 Customer Service",
         "dynamics-365/field-service/**/*.md": "Dynamics 365 Field Service",
@@ -487,6 +491,11 @@
           "Troubleshoot",
           "Dynamics 365",
           "Sales"
+        ],
+        "dynamics-365/business-central/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Business Central"
         ],
         "dynamics-365/customer-insights/**/*.md": [
           "Troubleshoot",

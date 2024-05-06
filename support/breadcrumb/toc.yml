@@ -200,6 +200,9 @@ items:
       tocHref: /troubleshoot/dynamics-365/
       topicHref: /troubleshoot/dynamics-365/
       items:
+      - name: Dynamics 365 Business Central
+        tocHref: /troubleshoot/dynamics-365/business-central/
+        topicHref: /troubleshoot/dynamics-365/customer-insights/welcome-business-central
       - name: Dynamics 365 Customer Insights
         tocHref: /troubleshoot/dynamics-365/customer-insights/
         topicHref: /troubleshoot/dynamics-365/customer-insights/welcome-customer-insights

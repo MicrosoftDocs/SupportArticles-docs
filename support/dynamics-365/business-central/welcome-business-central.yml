@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-business-central
   author: SusanneWindfeldPedersen
   ms.author: solsen
-  ms.date: 04/24/2024
+  ms.date: 05/06/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -20,22 +20,22 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: "Activity timed out"
-            url: cloud-migration/migration-activity-timeout.md      
-          - text: "Can't connect to SQL database"
-            url: cloud-migration/migration-cannot-connect.md      
+          - text: '"Activity timed out" error'
+            url: migration/migration-activity-timeout.md      
+          - text: '"Cannot connect to SQL database" error'
+            url: migration/migration-cannot-connect.md      
           - text: Data replication issues in cloud migration
-            url: cloud-migration/migration-data-replication.md
+            url: migration/migration-data-replication.md
           - text: Data replication issues for large tables in cloud migration
-            url: cloud-migration/migration-data-replication-large-tables.md
-          - text: "The EXECUTE (or SELECT) permission was denied on the object"
-            url: cloud-migration/migration-execute-permission.md
-          - text: "Failed to enable your replication"
-            url: cloud-migration/migration-general-error.md
-          - text: "Invalid database connection string provided"
-            url: cloud-migration/migration-invalid-connection-string.md
+            url: migration/migration-data-replication-large-tables.md
+          - text: '"The EXECUTE (or SELECT) permission was denied on the object" error'
+            url: migration/migration-execute-permission.md
+          - text: '"Failed to enable your replication" error'
+            url: migration/migration-general-error.md
+          - text: '"Invalid database connection string provided" error'
+            url: migration/migration-invalid-connection-string.md
           - text: Permission issues in Business Central cloud migration
-            url: cloud-migration/migration-permission-issues.md
+            url: migration/migration-permission-issues.md
   # Card
   - title: Client
     linkLists:
@@ -54,12 +54,12 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: "You shared a link in Teams, but users get a message that they can only view data"
-            url: m365-access/m365-only-view-data.md
-          - text: "Microsoft 365 access has been enabled, but users get a permission error"
-            url: m365-access/m365-permission-error.md
-          - text: "Card from shared link is minimal and doesn't include Details button"
-            url: m365-access/m365-shared-card-no-details.md
+          - text: '"You shared a link in Teams, but users get a message that they can only view data" error'
+            url: integration/m365-only-view-data.md
+          - text: '"Microsoft 365 access has been enabled, but users get a permission error" error'
+            url: integration/m365-permission-error.md
+          - text: '"Card from shared link is minimal and does not include Details button" error'
+            url: integration/m365-shared-card-no-details.md
   # Card
   - title: Documentation and training
     linkLists:

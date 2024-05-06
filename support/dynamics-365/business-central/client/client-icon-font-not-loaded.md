@@ -1,27 +1,28 @@
 ---
-title: Icon font not loaded
-description: Learn how to fix icon font issues on client types.
-ms.date: 04/24/2024
-ms.reviewer: na
-ms.topic: troubleshooting
+title: Icon font isn't loaded in the Business Central clients
+description: Provides a resolution for an icon font issue that occurs in the Business Central web client, Business Central tablet client, or Business Central phone client.
+ms.date: 05/06/2024
+ms.reviewer: 
+ms.custom: 
 author: SusanneWindfeldPedersen
 ---
+# Icon font isn't loaded in the Business Central clients
 
-# Icon font not loaded
-
-When the icon font is missing on the Business Central web client, Business Central tablet client, or Business Central phone client, it causes issues with the user interface.
+This article provides a resolution for the user interface issues that might occur when the icon font isn't loaded in the Business Central web client, Business Central tablet client, or Business Central phone client.
 
 ## Symptoms
 
-The icon font is missing on the Business Central web client, Business Central tablet client, or Business Central phone client preventing you from seeing, for example, the plus sign in front of the **New** action.  
+The icon font is missing from the Business Central web client, Business Central tablet client, or Business Central phone client. As a result, some user interface issues occur. For example, you can't see the plus sign in front of the **New** action.
+
+## Cause
+
+This issue occurs because the **Font download** option is disabled in your browser.
   
 ## Resolution
 
-Login to Business Central. The reason is that the **Font download** option is disabled in your browser and the resolution is to add the Business Central web site to your trusted sites in Windows 10.  
-  
-1. Launch **Control Plane** on your device.  
-2. Go to **Network and Internet**, and choose **Internet Options**. A pop up window will appear.
-3. Select the  **Security** tab, and then choose **Trusted sites** .  
-4. Choose the **Sites** button and add the Business Central web site.  
-5. Choose the **Close** button and then the **OK** button.  
-  
+To sovle this issue, add the Business Central web site to your trusted sites.
+
+1. In Windows 10, launch **Control Panel** on your device.
+2. Go to **Network and Internet** > **Internet Options** > **Security** > **Trusted sites**.
+3. Select the **Sites** button and add the Business Central web site.
+4. Select **Close** > **OK**.

@@ -14,28 +14,28 @@
     - name: Integration
       items:
         - name: '"You shared a link in Teams, but users get a message that they can only view data"'
-          href: m365-access/m365-only-view-data.md
+          href: integration/m365-only-view-data.md
         - name: '"Microsoft 365 access has been enabled, but users get a permission error"'
-          href: m365-access/m365-permission-error.md
+          href: integration/m365-permission-error.md
         - name: '"Card from shared link is minimal and doesn''t include Details button"'
-          href: m365-access/m365-shared-card-no-details.md
+          href: integration/m365-shared-card-no-details.md
     - name: Migration
       items:
         - name: '"Activity timed out"'
-          href: cloud-migration/migration-activity-timeout.md
+          href: migration/migration-activity-timeout.md
         - name: '"Can''t connect to SQL database"'
-          href: cloud-migration/migration-cannot-connect.md
+          href: migration/migration-cannot-connect.md
         - name: '"The EXECUTE (or SELECT) permission was denied on the object"'
-          href: cloud-migration/migration-execute-permission.md
+          href: migration/migration-execute-permission.md
         - name: '"Failed to enable your replication"'
-          href: cloud-migration/migration-general-error.md
+          href: migration/migration-general-error.md
         - name: '"Invalid database connection string provided"'
-          href: cloud-migration/migration-invalid-connection-string.md
+          href: migration/migration-invalid-connection-string.md
         - name: Permission issues in Business Central cloud migration
-          href: cloud-migration/migration-permission-issues.md
+          href: migration/migration-permission-issues.md
         - name: Data replication issues in cloud migration
-          href: cloud-migration/migration-data-replication.md
+          href: migration/migration-data-replication.md
         - name: Data replication issues for large tables in cloud migration
-          href: cloud-migration/migration-data-replication-large-tables.md
+          href: migration/migration-data-replication-large-tables.md
     
     
