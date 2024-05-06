@@ -63,15 +63,48 @@ Before you start to troubleshoot errors, it's important to understand what each 
 - [Loopback protection fails when you connect to the Always-on listener](#loopback-protection-fails-when-you-connect-to-the-always-on-listener)
 - [Issue that affects LANMAN compatibility level](#issue-that-affects-lanman-compatibility-level)
 
-
 ## [Active Directory and Domain Controller](#tab/addc)
 
+This section lists various causes and scenarios that are related to directory services and servers.
 
-- [Causes and scenarios specific to Active Directory and Domain Controller](#causes-and-scenarios-related-to-active-directory-and-domain-controller)
+- [An account is disabled](#an-account-is-disabled)
+- [An account isn't in the group](#an-account-isnt-in-the-group)
+- [Account migration failed](#account-migration-is-incorrect)
+- [Domain Controller is offline](#domain-controller-is-offline)
+- [Firewall blocks the Domain Controller](#firewall-blocks-the-domain-controller)
+- [Login is from an untrusted domain](#login-is-from-an-untrusted-domain)
+- [No permissions for cross-domain groups](#no-permissions-for-cross-domain-groups)
+- [Selective authentication is disabled](#selective-authentication-is-disabled)
 
-- [Causes and scenarios related to Kerberos authentication](#causes-and-scenarios-related-to-kerberos-authentication)
+## [Kerberos authentication](#tab/kerberos)
 
-- [Causes and scenarios specific to other aspects](#causes-related-to-other-aspects)
+- [An incorrect DNS suffix is appended to the NetBIOS name](#an-incorrect-dns-suffix-is-appended-to-the-netbios-name)
+- [Clock skew is too high](#clock-skew-is-too-high)
+- [Duplicate SPN](#duplicate-spn)
+- [Delegating sensitive accounts to other services](#delegating-sensitive-accounts-to-other-services)
+- [Disjoint DNS namespace](#disjoint-dns-namespace)
+- [Delegating to a file share](#assign-permissions-to-a-file-share-without-proper-constraints)
+- [Expired tickets](#expired-tickets)
+- [Enable HTTP ports on SPNs](#enable-http-ports-on-spns)
+- [HOSTS file is incorrect](#hosts-file-is-incorrect)
+- [Issue with per-service security identifier (SID) permissions](#issue-with-per-service-security-identifier-sid-permissions)
+- [Kernel-mode authentication](#kernel-mode-authentication)
+- [Limit delegation rights to Access or Excel](#limit-delegation-rights-to-access-or-excel)
+- [Missing SPN](#missing-spn)
+- [Not a constrained target](#not-a-constrained-target)
+- [NTLM and constrained delegation](#choose-constrained-delegation-instead-of-ntlm)
+- [Service account can't be trusted for delegation](#service-account-isnt-trusted-for-delegation)
+- [SPN is associated with a wrong account](#spn-is-associated-with-a-wrong-account)
+- [Some legacy providers don't support Kerberos over Named Pipes](#some-legacy-providers-dont-support-kerberos-over-named-pipes)
+- [SQL Alias might not function correctly](#sql-alias-might-not-function-correctly)
+- [User belongs to many groups](#user-belongs-to-many-groups)
+- [Use website host header](#use-website-host-header)
+
+## [Other aspects](#tab/otheraspects)
+
+- [Integrated authentication isn't enabled](#integrated-authentication-isnt-enabled)
+- [Wrong Internet zone](#wrong-internet-zone)
+- [IIS Authentication isn't allowed](#iis-authentication-isnt-allowed)
 
 ## Prerequisites
 
@@ -113,75 +146,6 @@ This section describes error types and related information.
   |"Cannot generate SSPI context" | The explicit SPN account might be [wrong](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended), missing, or misplaced. |
   |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
   |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
-
-## Causes and scenarios specific to SQL login
-
-This section lists various possible causes of a failed of SQL Server login.
-
-
-
-## Causes and scenarios specific to various aspects of SQL Server
-
-This section lists various causes that are related to aspects such as database, logon account permissions, and linked servers.
-
-- [Database is offline](#database-is-offline)
-- [Database permissions](#database-permissions)
-- [User has not logged in](#user-has-not-logged-in)
-- [Linked server connectivity errors in SQL Server](#linked-server-connectivity-errors-in-sql-server)
-- [Proxy account doesn't have permissions](#proxy-account-doesnt-have-permissions)
-- [Unable to log in to SQL Server database](#unable-to-log-in-to-sql-server-database)
-- [Metadata of the linked server is inconsistent](#metadata-of-the-linked-server-is-inconsistent)
-
-
-
-## Causes and scenarios related to Active Directory and Domain Controller
-
-This section lists various causes and scenarios that are related to directory services and servers.
-
-- [An account is disabled](#an-account-is-disabled)
-- [An account isn't in the group](#an-account-isnt-in-the-group)
-- [Account migration failed](#account-migration-is-incorrect)
-- [Domain Controller is offline](#domain-controller-is-offline)
-- [Firewall blocks the Domain Controller](#firewall-blocks-the-domain-controller)
-- [Login is from an untrusted domain](#login-is-from-an-untrusted-domain)
-- [No permissions for cross-domain groups](#no-permissions-for-cross-domain-groups)
-- [Selective authentication is disabled](#selective-authentication-is-disabled)
-
-
-
-## Causes and scenarios related to Kerberos authentication
-
-This section lists various causes and scenarios that are related to Kerberos authentication.
-
-- [Missing SPN](#missing-spn)
-- [Duplicate SPN](#duplicate-spn)
-- [Delegating sensitive accounts to other services](#delegating-sensitive-accounts-to-other-services)
-- [Service account can't be trusted for delegation](#service-account-isnt-trusted-for-delegation)
-- [SPN is associated with a wrong account](#spn-is-associated-with-a-wrong-account)
-- [An incorrect DNS suffix is appended to the NetBIOS name](#an-incorrect-dns-suffix-is-appended-to-the-netbios-name)
-- [Expired tickets](#expired-tickets)
-- [User belongs to many groups](#user-belongs-to-many-groups)
-- [Clock skew is too high](#clock-skew-is-too-high)
-- [Not a constrained target](#not-a-constrained-target)
-- [Disjoint DNS namespace](#disjoint-dns-namespace)
-- [NTLM and constrained delegation](#choose-constrained-delegation-instead-of-ntlm)
-- [Issue with per-service security identifier (SID) permissions](#issue-with-per-service-security-identifier-sid-permissions)
-- [Some legacy providers don't support Kerberos over Named Pipes](#some-legacy-providers-dont-support-kerberos-over-named-pipes)
-- [Kernel-mode authentication](#kernel-mode-authentication)
-- [Limit delegation rights to Access or Excel](#limit-delegation-rights-to-access-or-excel)
-- [Use website host header](#use-website-host-header)
-- [HOSTS file is incorrect](#hosts-file-is-incorrect)
-- [Delegating to a file share](#assign-permissions-to-a-file-share-without-proper-constraints)
-- [Enable HTTP ports on SPNs](#enable-http-ports-on-spns)
-- [SQL Alias might not function correctly](#sql-alias-might-not-function-correctly)
-
-## Causes related to other aspects
-
-This section lists various miscellaneous authentication issues.
-
-- [Integrated authentication isn't enabled](#integrated-authentication-isnt-enabled)
-- [Wrong Internet zone](#wrong-internet-zone)
-- [IIS Authentication isn't allowed](#iis-authentication-isnt-allowed)
 
 ### Bad password
 
