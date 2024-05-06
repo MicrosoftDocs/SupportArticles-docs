@@ -1,7 +1,7 @@
 ---
 title: Reset user rights in the default domain GPO
 description: Describes how to reset user rights in the default domain Group Policy object (GPO) in Windows Server.
-ms.date: 04/30/2024
+ms.date: 05/06/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -40,7 +40,7 @@ To edit the Gpttmpl.inf file, follow these steps.
 
     > [!NOTE]
     > The default path of the Sysvol folder is %SystemRoot%\\Sysvol.
-2. Right-click **Gpttmpl.inf**, and then click **Open**.
+2. Right-click **Gpttmpl.inf**, and then select **Open**.
 3. To completely reset the user rights to the default settings, replace the existing information in the Gpttmpl.inf file with the following default user-rights information. To do so, paste the following text in the appropriate section of your current Gpttmpl.inf file:
 
     ```inf
@@ -70,7 +70,7 @@ To edit the Gpttmpl.inf file, follow these steps.
     Revision=1
     ```
 
-4. On the **File** menu, click **Save**, and then click **Exit**.
+4. On the **File** menu, select **Save**, and then select **Exit**.
 
 #### Edit the Gpt.ini File
 
@@ -82,16 +82,16 @@ The Gpt.ini file controls the GPO template version numbers. You must edit the Gp
     > [!NOTE]
     > The default path of the Sysvol folder is %SystemRoot%\\Sysvol.
 
-2. Right-click **Gpt.ini**, and then click **Open**.
+2. Right-click **Gpt.ini**, and then select **Open**.
 3. Increase the version number to a number that is sufficient to guarantee that typical replication does not outdate the new version number before the policy is reset. Increment the number either by adding the number "0" to the end of the version number or the number "1" to the beginning of the version number.
-4. On the **File** menu, click **Save**, and then click **Exit**.
+4. On the **File** menu, select **Save**, and then select **Exit**.
 
 #### Use GPUpdate to Refresh the Group Policy
 
 Apply the new GPO by using the GPUpdate tool to manually reapply all policy settings. To do so:
 
-1. Click **Start**, and then click **Run**.
-2. In the **Open** box, type cmd, and then click **OK**.
+1. Select **Start**, and then select **Run**.
+2. In the **Open** box, type cmd, and then select **OK**.
 3. At the command prompt, type the following line, and then press ENTER: GPUpdate /Force
 
 4. Type exit and then press ENTER to quit the command prompt.
@@ -101,7 +101,7 @@ Apply the new GPO by using the GPUpdate tool to manually reapply all policy sett
 
 Use Event Viewer to verify that the GPO was successfully applied. To do so:
 
-1. Click **Start**, point to **Administrative Tools**, and then click **Event Viewer**.
-2. Click **Application**.
+1. Select **Start**, point to **Administrative Tools**, and then select **Event Viewer**.
+2. Select **Application**.
 
 Look for Event ID 1704 to verify that the GPO was successfully applied.
