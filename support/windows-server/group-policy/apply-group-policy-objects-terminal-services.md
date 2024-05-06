@@ -9,11 +9,22 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Group Policy\Applocker or software restriction policies , csstroubleshoot
 ---
+---
+title: Group Policy objects to Terminal Services
+description: Explains how to apply Group Policy objects to Terminal Services servers without adversely affecting other servers on the network.
+ms.date: 12/26/2023
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+localization_priority: medium
+ms.reviewer: kaushika
+ms.custom: sap:Group Policy\Applocker or software restriction policies , csstroubleshoot
+---
 # How to apply Group Policy objects to Terminal Services servers
 
 This article describes how to apply Group Policy objects to Terminal Services servers.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server, all supported versions   
 _Original KB number:_ &nbsp; 260370
 
 ## Summary
