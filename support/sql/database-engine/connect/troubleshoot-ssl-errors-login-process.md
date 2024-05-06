@@ -26,7 +26,7 @@ You might encounter some of the following errors when using TLS/SSL:
 
 To troubleshoot these SSL errors, follow these steps:
 
-1. Update expired or incorrect certificates.
+1. Update your expired or incorrect certificate.
 1. Enable TLS protocols.
 1. Ensure that there are matching cipher suites on the client and server.
 
@@ -34,7 +34,7 @@ For more information about these steps, see [SSL errors are reported after upgra
 
 If this resolution doesn't work, use the steps in the following section to collect more detailed logs to get insight into the root cause of these errors.
 
-## Advanced Secure Sockets Layer data capture
+## Advanced SSL data capture
 
 ### Capture Windows settings using SQLCHECK
 
