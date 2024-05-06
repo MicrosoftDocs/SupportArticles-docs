@@ -100,7 +100,7 @@ In the ServerHello packet, if the cipher suite used is a Diffie-Hellman suite, a
 
 If the connection is closed after the ClientHello, check if there's a TLS 1.0 or TLS 1.2 mismatch between the client and server. If they're the same, check the enabled cipher suites and enabled hashes on both machines.
 
-For more information, see [Advanced Secure Sockets Layer data capture](advanced-ssl-data-capture.md).
+For more information, see [Advanced Secure Sockets Layer data capture](troubleshoot-ssl-errors-login-process.md).
 
 #### Dropped packets
 
