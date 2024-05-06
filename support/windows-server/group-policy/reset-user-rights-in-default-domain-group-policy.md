@@ -92,9 +92,8 @@ Apply the new GPO by using the GPUpdate tool to manually reapply all policy sett
 
 1. Select **Start**, and then select **Run**.
 2. In the **Open** box, type *cmd*, and then select **OK**.
-3. At the command prompt, type the following line, and then press ENTER: GPUpdate /Force
-
-4. Type exit and then press ENTER to quit the command prompt.
+3. At the command prompt, type *GPUpdate /Force*, and then press <kbd>Enter</kbd>.
+4. Type *exit* and then press <kbd>Enter</kbd> to quit the command prompt.
 
 > [!NOTE]
 > To look for errors in policy processing, review the event log.
