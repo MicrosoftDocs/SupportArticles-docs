@@ -1,14 +1,14 @@
 ---
 title: InvalidLoadBalancerProfileAllocatedOutboundPorts error code
-description: Learn how to fix the InvalidLoadBalancerProfileAllocatedOutboundPorts error that occurs when you try to create or update an Azure Kubernetes Service (AKS) cluster.
-ms.date: 04/26/2024
+description: Learn how to fix the InvalidLoadBalancerProfileAllocatedOutboundPorts error when you try to create or update an Azure Kubernetes Service (AKS) cluster.
+ms.date: 05/06/2024
 ms.reviewer: jotavar, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to fix the InvalidLoadBalancerProfileAllocatedOutboundPorts error so that I can create or update an AKS cluster successfully.
 ---
 
-# Troubleshoot the "InvalidLoadBalancerProfileAllocatedOutboundPorts" error code
+# "InvalidLoadBalancerProfileAllocatedOutboundPorts" error when creating or updating an AKS cluster
 
 This article discusses how to identify and resolve the "InvalidLoadBalancerProfileAllocatedOutboundPorts" error code that occurs when you try to create or update a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -25,31 +25,31 @@ An AKS cluster create or update operation fails and returns the following error 
 
 ## Cause
 
-In clusters with outbound type Load-Balancer, the traffic originating from cluster nodes (including traffic from applications running in pods) will egress via the AKS managed Load-Balancer, which relies on Source Network Address Translation (SNAT) ports for establishing these outbound connections.
+In clusters with outbound type `LoadBalancer`, the traffic originating from cluster nodes (including traffic from applications running in pods) egresses via the AKS-managed load balancer, which relies on Source Network Address Translation (SNAT) ports to establish these outbound connections.
 
-By default each cluster is assigned one outbound frontend IP address that allows for a total of 64,000 SNAT ports, and each worker node in the cluster will be allocated a share of these ports. By default, if a cluster has 50 or fewer nodes, 1024 ports are allocated to each worker node. In some scenarios where the applications running in the cluster require establishing large numbers of outbound connections, the default number of available SNAT ports may not be enough, which leads to SNAT port exhaustion.
+By default, each cluster is assigned one outbound frontend IP address that allows for a total of 64,000 SNAT ports, and each worker node in the cluster is allocated a share of these ports. For example, if a cluster has 50 nodes or fewer, each worker node is allocated 1,024 ports. In some scenarios where applications running in a cluster require establishing large numbers of outbound connections, the default number of available SNAT ports may be insufficient, which leads to SNAT port exhaustion.
 
-To solve the SNAT port exhaustion issue, use one or two methods below:
+To solve the SNAT port exhaustion issue, use one or both of the following methods:
 
 - Change the number of outbound frontend IP addresses. Each IP address provides an additional 64,000 SNAT ports.
 - Change the number of SNAT ports assigned to each worker node.
 
-The "InvalidLoadBalancerProfileAllocatedOutboundPorts" error occurs when the specified node count, the number of outbound frontend IP addresses and the number of allocated ports per node don't add up to a viable configuration.
+The "InvalidLoadBalancerProfileAllocatedOutboundPorts" error occurs when the specified node count, the number of outbound frontend IP addresses, and the number of allocated ports per node don't constitute a feasible configuration.
 
 ## Solution
 
 To resolve the "InvalidLoadBalancerProfileAllocatedOutboundPorts" error, follow these steps:
 
-1. Use the following formula to check if the desired configuration is viable:
+1. Use the following formula to check if the desired configuration is feasible:
 
     ```code
     64,000 ports per IP / <outbound ports per node> * <number of outbound IPs> = <maximum number of nodes in the cluster>
     ```
 
     > [!NOTE]
-    > When performing this check, make sure you consider node surges which happen during cluster upgrades and other operations. AKS defaults to one buffer node for upgrade operations but this number may be modified using the [maxSurge](/azure/aks/upgrade-aks-cluster#customize-node-surge-upgrade) parameter.
+    > When performing this check, make sure you consider node surges that happen during cluster upgrades and other operations. AKS defaults to one buffer node for upgrade operations but this number can be modified using the [maxSurge](/azure/aks/upgrade-aks-cluster#customize-node-surge-upgrade) parameter.
 
-2. Change the cluster's node count, the number of outbound frontend IP addresses or the number of SNAT ports per node.
+2. Change the cluster's node count, the number of outbound frontend IP addresses, or the number of SNAT ports per node.
 
     For more information about how to configure the allocated outbound ports, as well as examples and calculations of the number of ports you might need, see [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
 
