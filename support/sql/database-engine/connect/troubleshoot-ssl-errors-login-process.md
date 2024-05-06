@@ -26,11 +26,11 @@ You might encounter some of the following errors when using TLS/SSL:
 
 To troubleshoot these SSL errors, follow these steps:
 
-1. Update an expired or incorrect certificate.
+1. Update expired or incorrect certificates.
 1. Enable TLS protocols.
-1. Ensure that there're matching cipher suites on the client and server.
+1. Ensure that there are matching cipher suites on the client and server.
 
-For details of these steps, see [SSL errors are reported after upgrading to TLS 1.2](ssl-errors-after-tls-1-2.md).
+For more information about these steps, see [SSL errors are reported after upgrading to TLS 1.2](ssl-errors-after-tls-1-2.md).
 
 If this resolution doesn't work, use the steps in the following section to collect more detailed logs to get insight into the root cause of these errors.
 
@@ -116,6 +116,6 @@ An output folder is generated in the current directory and you can use it for fu
 
 The trace might take a minute or two to completely stop since downloading the event logs might take a while.
 
-You can start and stop the trace several times without redoing the configuration steps. Each time it's taken, a new folder is created with a timestamp as part of the folder name. The time corresponds to the time when the trace starts.
+You can start and stop the trace several times without redoing the configuration steps. Each time it's taken, a new folder is created with a timestamp as part of the folder name. This time corresponds to the time when the trace starts.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
