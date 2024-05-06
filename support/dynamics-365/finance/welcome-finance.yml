@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 02/05/2024
+  ms.date: 04/25/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -98,10 +98,6 @@ landingContent:
             url: general-ledger/cant-reverse-transactions.md
           - text: Change the accounting or reporting currency 
             url: general-ledger/add-change-accounting-reporting-currency.md
-          - text: Default financial dimensions on financial journals
-            url: /dynamics365/finance/general-ledger/dimension-default-values
-          - text: How to set up balancing financial dimensions
-            url: /dynamics365/finance/general-ledger/set-up-balance-dimensions
           - text: Journal posting failure due to imbalance
             url: general-ledger/posting-fail-imbalance.md
           - text: Troubleshoot issues with the General ledger adjustments page
