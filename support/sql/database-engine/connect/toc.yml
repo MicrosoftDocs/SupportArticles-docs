@@ -7,8 +7,6 @@ items:
   href: consistent-authentication-connectivity-issues.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
-- name: Incorrect server name in SQL Server connection string
-  href: bad-server-name-connection-string-error.md
 - name: How to determine if the authentication type is Kerberos
   href: determine-the-authentication-type.md
 - name: Existing connection forcibly closed
