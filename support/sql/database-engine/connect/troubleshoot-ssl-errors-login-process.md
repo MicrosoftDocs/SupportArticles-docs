@@ -63,7 +63,7 @@ The **networking** section is automatically configured with `Network=yes` and `N
 
 If you're tracing a local connection, make sure the application uses TCP/IP rather than Shared Memory or Named Pipes. Install and use [WireShark](https://www.wireshark.org/download.html) for the network capture, as it supports LoopBack captures. WireShark also captures VPN traffic quite well.
 
-## Configure the authentication trace
+### Configure the authentication trace
 
 The **Auth** section is automatically configured with `Auth=yes` and many other settings.
 
