@@ -140,7 +140,7 @@ Alternatively, you can use Ntdsutil:
     > If you are removing domain metadata as well as server metadata, skip the following procedure and use the procedure that begins at step 1.
 
     - If you are performing server metadata cleanup only and you are using the version of Ntdsutil.exe that is included with a supported version of Windows Server, at the `metadata cleanup:` command prompt, type the following command, and then press <kbd>Enter</kbd>:
-   
+
         ```console
         remove selected server <ServerName>
         ```
@@ -157,7 +157,7 @@ Alternatively, you can use Ntdsutil:
         |\<ServerName2>|The DNS name of the domain controller to which you want to connect and from which you want to remove server metadata.|
 
     - If you are performing metadata cleanup by using the version of Ntdsutil.exe, or if you are performing both domain metadata cleanup and server metadata cleanup, perform metadata cleanup as follows:
-   
+
         1. At the `metadata cleanup:` prompt, type the `connection` command, and then press <kbd>Enter</kbd>.
         2. At the `server connections:` prompt, type the `connect to server <Server>` command, and then press <kbd>Enter</kbd>.
         3. At the `connection:` prompt, type the `quit` command, and then press <kbd>Enter</kbd>.
