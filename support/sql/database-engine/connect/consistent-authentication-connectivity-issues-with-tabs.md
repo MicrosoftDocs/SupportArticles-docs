@@ -1,7 +1,7 @@
 ---
 title: Overview of consistent authentication issues 
 description: This article discusses consistent authentication issues in SQL Server, related error messages, and solutions to troubleshoot various issues.
-ms.date: 05/01/2024
+ms.date: 05/07/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
@@ -60,9 +60,23 @@ This section describes error types and related information.
   |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
   |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
 
-If you continue to experience issues, check the following tabs for possible causes and solutions:
+If you still continue to experience authentication issues, check the following tabs for possible causes and solutions:
 
-## [Active Directory and Domain Controller](#tab/addc)
+## [Connection string](#tab/connectionstring)
+
+- **Explicit SPN is missing** - This issue occurs if the SPN isn't configured or registered correctly. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+
+- **Explicit misplaced SPN** - Refers to an SPN that has been incorrectly associated with a particular service or account. For more information, [Explicit misplaced SPN](explicit-spn-is-misplaced.md).
+
+- **Explicit SPN is duplicated** - This issue occurs if an SPN is duplicated because it's registered more than one time. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+
+- **Incorrect server name in connection string** - This issue occurs when the specified server name is incorrect or can't be found. To resolve this issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+
+- **Wrong database name in connection string** - This issue occurs if the database name that's provided for authentication is incorrect. Check whether the name is spelled correctly. For more information, see [MSSQLSERVER_4064](/sql/relational-databases/errors-events/mssqlserver-4064-database-engine-error#fix-the-issue).
+
+- **Wrong explicit SPN account** - This issue might occur if the SPN is associated with the wrong account in AD. To resolve this issue, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
+
+## [Directory services](#tab/dirservices)
 
 This section lists various issues related to directory services and servers.
 
@@ -101,20 +115,6 @@ This section lists various issues related to directory services and servers.
   - **Unable to log in to SQL Server database** - The inability to log in can cause failures in authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
 
   - **User has not logged in** - Refers to the Anonymous Logon Account error. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
-
-## [Connection string](#tab/connectionstring)
-
-- **Explicit SPN is missing** - This issue occurs if the SPN isn't configured or registered correctly. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
-
-- **Explicit misplaced SPN** - Refers to an SPN that has been incorrectly associated with a particular service or account. For more information, [Explicit misplaced SPN](explicit-spn-is-misplaced.md).
-
-- **Explicit SPN is duplicated** - This issue occurs if an SPN is duplicated because it's registered more than one time. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
-
-- **Incorrect server name in connection string** - This issue occurs when the specified server name is incorrect or can't be found. To resolve this issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
-
-- **Wrong database name in connection string** - This issue occurs if the database name that's provided for authentication is incorrect. Check whether the name is spelled correctly. For more information, see [MSSQLSERVER_4064](/sql/relational-databases/errors-events/mssqlserver-4064-database-engine-error#fix-the-issue).
-
-- **Wrong explicit SPN account** - This issue might occur if the SPN is associated with the wrong account in AD. To resolve this issue, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
 
 ## [Kerberos authentication](#tab/kerberos)
 
@@ -182,9 +182,9 @@ This section lists various issues related to directory services and servers.
 
 - **Integrated authentication isn't enabled** - Refers to a configuration issue where Integrated Windows Authentication (IWA) is not configured correctly. To resolve this issue, make sure that the **Integrated Windows Authentication** option is enabled in **Internet Options** settings.
 
-- **Wrong Internet zone** - This might occur if you try to access a website that isn't in the correct Internet zone in Internet Explorer. The credentials won't work if the website is in the local Intranet zone.
-
 - **IIS Authentication isn't allowed** - This issue occurs due to misconfigurations in the IIS. The authentication settings defined in the web.config file of the web application may conflict with the settings configured in IIS, leading to authentication issues. To resolve this issue, configure the website to enable Windows Authentication and set the `<identity impersonate="true"/>` value in the *Web.config* file.
+
+- **Wrong Internet zone** - This might occur if you try to access a website that isn't in the correct Internet zone in Internet Explorer. The credentials won't work if the website is in the local Intranet zone.
 
 ## [SQL Login](#tab/sqllogin)
 
@@ -194,7 +194,7 @@ This section lists various issues related to directory services and servers.
   
 - **SQL Server logins are not enabled** - Refers to a scenario in which you try to connect to a Microsoft SQL Server instance by using SQL Server authentication, but the login that's associated with the account is disabled. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
   
-- **Named Pipes connections fail because the user doesn't have permission to log in to Windows** - Refers to a permissions issue in Windows. For more information, see [Troubleshooting the Named Pipes connections issue in SQL Server](named-pipes-connection-fail-no-windows-permission.md).
+- **Named Pipes connections fail because the user doesn't have permission to log in to Windows** - Refers to a permissions issue in Windows. For more information, see [Named Pipes connections issue in SQL Server](named-pipes-connection-fail-no-windows-permission.md).
 
 ## [Windows permissions](#tab/windowspermissions)
 
@@ -206,17 +206,17 @@ This section lists various issues related to directory services and servers.
 
 - **Network login disallowed** - This scenario occurs when you try to log in to a network but your login request is denied for certain reasons. For more information, see [Troubleshooting the network login](network-login-disallowed.md) issue.
 
-- Only administrators can log in - This issue occurs if the security log on a computer is full and doesn't have sufficient space to fill events. The security feature **[CrashOnAuditFail](/previous-versions/windows/it-pro/windows-2000-server/cc963220(v=technet.10))** is used by system administrators to check all security events. The valid values for `CrashOnAuditFail` are *0*, *1*, and *2*. If the key for `CrashOnAuditFail` is set to *2*, this means that the security log is full and the "Only Admins can login" error message is shown.
+- **Only administrators can log in** - This issue occurs if the security log on a computer is full and doesn't have sufficient space to fill events. The security feature **[CrashOnAuditFail](/previous-versions/windows/it-pro/windows-2000-server/cc963220(v=technet.10))** is used by system administrators to check all security events. The valid values for `CrashOnAuditFail` are *0*, *1*, and *2*. If the key for `CrashOnAuditFail` is set to *2*, this means that the security log is full and the "Only Admins can login" error message is shown.
 
-To resolve this issue, follow these steps:
+   To resolve this issue, follow these steps:
 
- 1. Start Registry editor.
- 1. Locate and check the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa!crashonauditfail` subkey to see whether the value is set to *2*. This value indicates that the security log requires manual clearing.
- 1. Set the value to *0*, and then restart the server. You might also want to change the security log to enable events to roll over. For more information about how the setting affects all services such as SQL, IIS, file share, and login, see [Users cannot access Web sites when the security event log is full](../../../developer/webapps/iis/general/users-cannot-access-web-sites-when-log-full.md).
+   1. Start Registry editor.
+   1. Locate and check the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa!crashonauditfail` subkey to see whether the value is set to *2*. This value indicates that the security log requires manual clearing.
+   1. Set the value to *0*, and then restart the server. You might also want to change the security log to enable events to roll over. For more information about how the setting affects all services such as SQL, IIS, file share, and login, see [Users cannot access Web sites when the security event log is full](../../../developer/webapps/iis/general/users-cannot-access-web-sites-when-log-full.md).
 
-> [!NOTE]
-> This issue affects only integrated logins. A Named Pipes connection will also be affected with a SQL Server Login because Named Pipes first logs in to Windows Admin Pipe before it connects to SQL Server.
+    > [!NOTE]
+    > This issue affects only integrated logins. A Named Pipes connection will also be affected with a SQL Server Login because Named Pipes first logs in to Windows Admin Pipe before it connects to SQL Server.
 
 - **Service account is not trusted for delegation** - This kind of issue usually occurs if a service account isn't allowed to assign credentials to other servers. This issue can affect services that require delegation. If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to determine whether the SQL Server service account is listed under the **Local Policies > User Rights Assignment > Impersonate a client after authentication** security policy settings. For more information, see [Enable computer and user accounts to be trusted for delegation](/windows/security/threat-protection/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation).
 
-- **Windows user profile can't be loaded in SQL Server**- Refers to the Windows user profile issue. For more information about how to troubleshoot corrupted user profiles, see the [Windows user profile can't be loaded in SQL Server](corrupt-user-profile.md).
+- **Windows user profile can't be loaded in SQL Server** - Refers to the Windows user profile issue. For more information about how to troubleshoot corrupted user profiles, see the [Windows user profile can't be loaded in SQL Server](corrupt-user-profile.md).

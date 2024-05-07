@@ -189,7 +189,7 @@ Refers to a scenario in which you try to connect to a Microsoft SQL Server insta
 
 ### Named Pipes connections fail because the user doesn't have permission to log in to Windows
 
-Refers to a permissions issue in Windows. For more information, see [Troubleshooting the Named Pipes connections issue in SQL Server](named-pipes-connection-fail-no-windows-permission.md).
+Refers to a permissions issue in Windows. For more information, see [Named Pipes connections issue in SQL Server](named-pipes-connection-fail-no-windows-permission.md).
 
 ### Database is offline
 
