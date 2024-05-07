@@ -1,14 +1,14 @@
 ---
 title: Introduction to consistent authentication issues
 description: This article discusses consistent authentication issues in SQL Server, related error messages, and workarounds to troubleshoot various issues.
-ms.date: 05/01/2024
+ms.date: 05/07/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# An overview of consistent authentication issues
+# Overview of consistent authentication issues
 
 _Applies to:_ &nbsp; SQL Server
 

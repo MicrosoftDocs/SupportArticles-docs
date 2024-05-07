@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Overview of consistent authentication issues
+# Consistent SQL Server authentication issues
 
 _Applies to:_ &nbsp; SQL Server
 
@@ -17,7 +17,50 @@ _Applies to:_ &nbsp; SQL Server
 
 A consistent authentication issue that occurs in Microsoft SQL Server typically refers to issues that are related to authentication and authorization of users or applications that try to access the SQL Server database. These issues can cause authentication failures, access denied errors, or other security-related problems.
 
-Before you start to troubleshoot errors, it's important to understand what each error message means and also the error type. Some errors might appear in more than one category. You can use the troubleshooting information that's mentioned in the ["Errors"](#errors) section to resolve the error. If you continue to experience issues, check the following tabs for possible causes and solutions:
+Before you start to troubleshoot errors, it's important to understand what each error message means and also the error type. Some errors might appear in more than one category. You can use the troubleshooting information that's mentioned in the [Types of errors](#types-of-errors) section to resolve the error.
+
+## Prerequisites
+
+Before you start troubleshooting, work through the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) checklist.
+
+- Make sure that you install the WIRESHARK and Problem Steps Recorder (PSR.exe) tools. For more information, see *Methods of collecting data for troubleshooting various types of errors*.
+
+- Collect the Service Provider Name (SPN) information that's based on the service accounts. To do this, use the `SETSPN -L` command.
+
+## Types of errors
+
+This section describes error types and related information.
+
+- Directory services errors
+
+  If the SQL Server error log file contains either or both of the following messages, then this error is related to Active Directory (AD). This error might also occur if the Domain Controller (DC) can't be contacted by Windows on the SQL Server-based computer, or the local security service (LSASS) is experiencing an issue.
+
+  ```output
+   Error -2146893039 (0x80090311): No authority could be contacted for authentication.
+   Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
+  ```
+
+- Failed login errors
+
+  When you troubleshoot the "Login Failed" error message, the SQL Server error log can provide more information that's related to error code 18456, including the specific state value. The state value provides more context about the error. For more information, see the SQL Server error log file in [SQL state value](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information). You can try to fix the issue according to the description of the state value.
+
+  This section lists some specific "Login Failed" error messages and their possible causes and solutions.
+
+  |Error message  |More information  |
+  |---------|---------|
+  |"Login failed for user '\<username\>'. Reason: Password did not match that for the login provided."|This error might occur if an incorrect password is used. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).|
+  |"SQL Server does not exist or access denied."  | [Named Pipes connections](named-pipes-connection-fail-no-windows-permission.md) fail because the user doesn't have permission to log into Windows.     |
+  |"Cannot open database \<test\> requested by the login. The login failed."|The database might be offline, or the permissions might not be sufficient. For more information, see [Database offline in MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).<br/> Also, check if the database name in the connection string is correct.|
+  |"A transport-level error has occurred when sending the request to the server."|Check if the [linked server account mapping](linked-server-account-mapping-error.md) is correct. For more information, see [sp_addlinkedsrvlogin](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql).|
+  |SSPI (Security Support Provider Interface) Context.|Check if the [SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).|
+  |"Login failed for user \<username\>." | This error can occur if the [proxy account](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md) isn't properly authenticated.    |
+  |"Login Failed for user: 'NT AUTHORITY\ANONYMOUS LOGON'"|This error might occur if the [SPN is missing, SPN is duplicated, or the SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).|
+  |"Login failed for user \<username\>." </br> "Login failed for user '\<database\username\>"</br>    | Check if there's a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the user doesn't belong to a local group used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).    |
+  |"Cannot generate SSPI context" | The explicit SPN account might be [wrong](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended), missing, or misplaced. |
+  |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
+  |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
+
+If you continue to experience issues, check the following tabs for possible causes and solutions:
 
 ## [SQL Login](#tab/sqllogin)
 
@@ -28,13 +71,18 @@ Before you start to troubleshoot errors, it's important to understand what each 
 
 ## [SQL Server-specific](#tab/sqlserverspecific)
 
-- [Database is offline](#database-is-offline)
-- [Database permissions](#database-permissions)
-- [Linked server connectivity errors in SQL Server](#linked-server-connectivity-errors-in-sql-server)
-- [Metadata of the linked server is inconsistent](#metadata-of-the-linked-server-is-inconsistent)
-- [Proxy account doesn't have permissions](#proxy-account-doesnt-have-permissions)
-- [Unable to log in to SQL Server database](#unable-to-log-in-to-sql-server-database)
-- [User has not logged in](#user-has-not-logged-in)
+  - Database is offline - Refers to a scenario in which a SQL Server database tries to reconnect to a SQL Server instance that's configured for Windows Authentication mode. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+  - Database permissions - Refers to enabling or restricting access to SQL Server database. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+  - User has not logged in - Refers to the Anonymous Logon Account error. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
+  - Linked server connectivity errors in SQL Server - You experience an authentication process issue that affects linked servers in the context of SQL Server. For more information, see [Linked server connectivity errors in SQL Server](linked-server-account-mapping-error.md).
+  - Proxy account doesn't have permissions - An SQL Server Integration Service (SSIS) job that's run by SQL Agent might need permissions other than those that the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
+  - Metadata of the linked server is inconsistent - Refers to an issue in which metadata of the linked server is inconsistent or doesn't match the expected metadata.
+    
+  A view or stored procedure queries the tables or views in the linked server but receives login failures although a distributed `SELECT` statement that's copied from the procedure doesn't. This issue might occur if the view was created and then the linked server was re-created, or a remote table was modified without rebuilding the View. To resolve this issue, refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
+
+  - Unable to log in to SQL Server database - The inability to log in can cause failures in authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+
+  - User has not logged in - Refers to the Anonymous Logon Account error. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
 ## [Connection string](#tab/connectionstring)
 
@@ -106,76 +154,18 @@ This section lists various causes and scenarios that are related to directory se
 - [Wrong Internet zone](#wrong-internet-zone)
 - [IIS Authentication isn't allowed](#iis-authentication-isnt-allowed)
 
-## Prerequisites
-
-Before you start troubleshooting, work through the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) checklist.
-
-- Make sure that you install the WIRESHARK and Problem Steps Recorder (PSR.exe) tools. For more information, see *Methods of collecting data for troubleshooting various types of errors*.
-
-- Collect the Service Provider Name (SPN) information that's based on the service accounts. To do this, use the `SETSPN -L` command.
-
-## Types of errors
-
-This section describes error types and related information.
-
-- Directory services errors
-
-  If the SQL Server error log file contains either or both of the following messages, then this error is related to Active Directory (AD). This error might also occur if the Domain Controller (DC) can't be contacted by Windows on the SQL Server-based computer, or the local security service (LSASS) is experiencing an issue.
-
-  ```output
-   Error -2146893039 (0x80090311): No authority could be contacted for authentication.
-   Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
-  ```
-
-- Failed login errors
-
-  When you troubleshoot the "Login Failed" error message, the SQL Server error log can provide more information that's related to error code 18456, including the specific state value. The state value provides more context about the error. For more information, see the SQL Server error log file in [SQL state value](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information). You can try to fix the issue according to the description of the state value.
-
-  This section lists some specific "Login Failed" error messages and their possible causes and solutions.
-
-  |Error message  |More information  |
-  |---------|---------|
-  |"Login failed for user '\<username\>'. Reason: Password did not match that for the login provided."|This error might occur if an incorrect password is used. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).|
-  |"SQL Server does not exist or access denied."  | [Named Pipes connections](named-pipes-connection-fail-no-windows-permission.md) fail because the user doesn't have permission to log into Windows.     |
-  |"Cannot open database \<test\> requested by the login. The login failed."|The database might be offline, or the permissions might not be sufficient. For more information, see [Database offline in MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).<br/> Also, check if the database name in the connection string is correct.|
-  |"A transport-level error has occurred when sending the request to the server."|Check if the [linked server account mapping](linked-server-account-mapping-error.md) is correct. For more information, see [sp_addlinkedsrvlogin](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql).|
-  |SSPI (Security Support Provider Interface) Context.|Check if the [SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).|
-  |"Login failed for user \<username\>." | This error can occur if the [proxy account](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md) isn't properly authenticated.    |
-  |"Login Failed for user: 'NT AUTHORITY\ANONYMOUS LOGON'"|This error might occur if the [SPN is missing, SPN is duplicated, or the SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).|
-  |"Login failed for user \<username\>." </br> "Login failed for user '\<database\username\>"</br>    | Check if there's a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the user doesn't belong to a local group used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).    |
-  |"Cannot generate SSPI context" | The explicit SPN account might be [wrong](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended), missing, or misplaced. |
-  |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
-  |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
-
-### Database is offline
-
-Refers to a scenario in which a SQL Server database tries to reconnect to a SQL Server instance that's configured for Windows Authentication mode. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
-
-### Database permissions
-
-Refers to enabling or restricting access to SQL Server database. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
-
-### User has not logged in
-
-Refers to the Anonymous Logon Account error. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
-
-### Linked server connectivity errors in SQL Server
-
-You experience an authentication process issue that affects linked servers in the context of SQL Server. For more information, see [Linked server connectivity errors in SQL Server](linked-server-account-mapping-error.md).
 
 ### Proxy account doesn't have permissions
 
-An SQL Server Integration Service (SSIS) job that's run by SQL Agent might need permissions other than those that the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
+
 
 ### Unable to log in to SQL Server database
 
-The inability to log in can cause failures in authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+
 
 ### Metadata of the linked server is inconsistent
 
-Refers to an issue in which metadata of the linked server is inconsistent or doesn't match the expected metadata.
 
-A view or stored procedure queries the tables or views in the linked server but receives login failures although a distributed `SELECT` statement that's copied from the procedure doesn't. This issue might occur if the view was created and then the linked server was re-created, or a remote table was modified without rebuilding the View. To resolve this issue, refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
 
 ### Incorrect server name in a connection string
 
