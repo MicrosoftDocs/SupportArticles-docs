@@ -21,10 +21,12 @@ Before you start to troubleshoot errors, it's important to understand what each 
 
 ## [SQL Login](#tab/sqllogin)
 
-- [Bad password](#bad-password)
-- [Invalid username](#invalid-username)
-- [SQL Server logins are not enabled](#sql-server-logins-are-not-enabled)
-- [Named Pipes connections fail because the user doesn't have permission to log in to Windows](#named-pipes-connections-fail-because-the-user-doesnt-have-permission-to-log-in-to-windows)
+    |Potential cause  |Solution  |
+    |---------|---------|
+    |Bad password     | Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername)  |
+    |Invalid username     | Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername)|
+    |SQL Server logins are not enabled|Refers to a scenario in which you try to connect to a Microsoft SQL Server instance by using SQL Server authentication, but the login that's associated with the account is disabled. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon)|
+    |Named Pipes connections fail because the user doesn't have permission to log in to Windows|Refers to a permissions issue in Windows. For more information, see [Troubleshooting the Named Pipes connections issue in SQL Server](named-pipes-connection-fail-no-windows-permission.md)|
 
 ## [SQL Server-specific](#tab/sqlserverspecific)
 
@@ -146,22 +148,6 @@ This section describes error types and related information.
   |"Cannot generate SSPI context" | The explicit SPN account might be [wrong](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended), missing, or misplaced. |
   |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
   |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
-
-### Bad password
-
-Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
-
-### Invalid username
-
-Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
-
-### SQL Server logins are not enabled
-
-Refers to a scenario in which you try to connect to a Microsoft SQL Server instance by using SQL Server authentication, but the login that's associated with the account is disabled. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
-
-### Named Pipes connections fail because the user doesn't have permission to log in to Windows
-
-Refers to a permissions issue in Windows. For more information, see [Troubleshooting the Named Pipes connections issue in SQL Server](named-pipes-connection-fail-no-windows-permission.md).
 
 ### Database is offline
 
