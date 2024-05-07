@@ -6,7 +6,7 @@ ms.reviewer: PramodBalusu
 ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 12/17/2023
+ms.date: 05/07/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -48,16 +48,16 @@ This article lists common error messages that you might encounter when you chang
 |780|Cannot perform a rename as you exceed the maximum number of allowed Sites and OneDrives.|Too many sites in the tenant.|Tenant has more sites than are currently allowed.|
 |781|Canceled by the system due to system maintenance.|Tenant renaming is cancelled because there's a maintenance event.|Retry the renaming action after some time.|
 |783|Your organization has already reached the allowed number of SPO tenant renames.|Tenant can be renamed only once and your organization has been renamed.|If you need more renaming, submit a support request by selecting [Rename a SharePoint Tenant more than once](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20more%20than%20once)|
-|-1076|No applicable licenses found for this feature. Please check the documentation for more information.|SharePoint Advanced Management licenses are needed. |Activate the [Syntex SharePoint Advanced Management ](https://learn.microsoft.com/sharepoint/advanced-management#licensing) offering in your tenant.|
-|-1077|There is no applicable tenant rename scheduled in your organization. |Tenant rename haven't been scheduled. |Run the Start-SPOTenantRename cmdlet and try again. |
-|-1078|Prioritizing sites cannot be performed since the tenant rename is in progress. |Prioritization is not allowed when rename is in progress.|None. |
-|-1086| The limit on the number of prioritized sites has been reached. No further sites can be added unless some are removed first. |4,000 site limit for prioritization has been reached. | Remove a site that has already been prioritized and try prioritizing the desired site again. [Prioritizing sites](https://learn.microsoft.com/sharepoint/change-your-sharepoint-domain-name?branch=main#prioritizing-sites) has the relavant information.|
+|-1076|No applicable licenses found for this feature. Please check the documentation for more information.|SharePoint Advanced Management licenses are needed. |Activate the [Syntex SharePoint Advanced Management ](/sharepoint/advanced-management#licensing) offering in your tenant.|
+|-1077|There is no applicable tenant rename scheduled in your organization. |Tenant rename hasn't been scheduled. |Run the `Start-SPOTenantRename` cmdlet and try again.|
+|-1078|Prioritizing sites cannot be performed since the tenant rename is in progress. |Prioritization isn't allowed when rename is in progress.|None. |
+|-1086| The limit on the number of prioritized sites has been reached. No further sites can be added unless some are removed first. |The 4,000 site limit for prioritization has been reached.|Remove a site that has already been prioritized and try prioritizing the desired site again. For more information, see [prioritizing sites](/sharepoint/change-your-sharepoint-domain-name#prioritizing-sites).|
 |-1081|Prioritization for root sites is not supported. |Root sites cannot be prioritized.|None.| 
 |-1082|The site is locked. Please unlock the site and try again.|Rename cannot be performed on a locked site. |[ Unlock the site](https://learn.microsoft.com/sharepoint/manage-lock-status).|
-|-1080|The specified site does not exist. Please check the URL and try again.| The specified site does not exist. |Check to see if the site exists or if there are any typos in the URL. |
-|-15|This site URL is invalid. Please double check your site URL.|URL specified has a invalid format. |Check the format of the URL specified. |
+|-1080|The specified site does not exist. Please check the URL and try again.| The specified site doesn't exist. |Check whether the site exists, or if there are any typos in the URL. |
+|-15|This site URL is invalid. Please double-check your site URL.|The specified URL has an invalid format.|Check the format of the specified URL. |
 
-**Note** You might encounter different errors about individual site renamings if they fail as part of the domain renaming. For more information, see [Errors when you rename a SharePoint site address](https://support.microsoft.com/office/errors-when-you-rename-a-sharepoint-site-address-165b7c11-1325-4813-b160-ecbe87bc1a86).
+**Note:** You might encounter different errors about individual site renamings if they fail as part of the domain renaming. For more information, see [Errors when you rename a SharePoint site address](https://support.microsoft.com/office/errors-when-you-rename-a-sharepoint-site-address-165b7c11-1325-4813-b160-ecbe87bc1a86).
 
 ## References
 
