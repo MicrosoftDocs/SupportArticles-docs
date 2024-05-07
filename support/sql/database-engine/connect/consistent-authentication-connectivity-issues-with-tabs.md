@@ -1,5 +1,5 @@
 ---
-title: Overview of consistent authentication issues 
+title: Overview of consistent authentication issues in SQL Server
 description: This article discusses consistent authentication issues in SQL Server, related error messages, and solutions to troubleshoot various issues.
 ms.date: 05/07/2024
 author: Malcolm-Stewart
@@ -40,7 +40,7 @@ This section describes error types and related information.
    Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
   ```
 
-- Failed login errors
+- Login failed errors
 
   When you troubleshoot the "Login Failed" error message, the SQL Server error log can provide more information that's related to error code 18456, including the specific state value. The state value provides more context about the error. For more information, see the SQL Server error log file in [SQL state value](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information). You can try to fix the issue according to the description of the state value.
 
@@ -60,7 +60,7 @@ This section describes error types and related information.
   |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
   |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
 
-If you still continue to experience authentication issues, check the following tabs for possible causes and solutions:
+Understanding the underlying reasons behind consistent authentication issues is essential to effectively resolve them. Below are several typical causes of such problems along with their respective solutions. Refer to each tab for detailed information:
 
 ## [Connection string](#tab/connectionstring)
 
@@ -75,6 +75,24 @@ If you still continue to experience authentication issues, check the following t
 - **Wrong database name in connection string** - This issue occurs if the database name that's provided for authentication is incorrect. Check whether the name is spelled correctly. For more information, see [MSSQLSERVER_4064](/sql/relational-databases/errors-events/mssqlserver-4064-database-engine-error#fix-the-issue).
 
 - **Wrong explicit SPN account** - This issue might occur if the SPN is associated with the wrong account in AD. To resolve this issue, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
+
+## [Database](#tab/database)
+
+  - **Database is offline** - Refers to a scenario in which a SQL Server database tries to reconnect to a SQL Server instance that's configured for Windows Authentication mode. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+  
+  - **Database permissions** - Refers to enabling or restricting access to SQL Server database. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+  
+  - **Linked server connectivity errors in SQL Server** - You experience an authentication process issue that affects linked servers in the context of SQL Server. For more information, see [Linked server connectivity errors in SQL Server](linked-server-account-mapping-error.md).
+
+  - **Metadata of the linked server is inconsistent** - Refers to an issue in which metadata of the linked server is inconsistent or doesn't match the expected metadata.
+
+    A view or stored procedure queries the tables or views in the linked server but receives login failures although a distributed `SELECT` statement that's copied from the procedure doesn't. This issue might occur if the view was created and then the linked server was re-created, or a remote table was modified without rebuilding the View. To resolve this issue, refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
+
+  - **Proxy account doesn't have permissions** - An SQL Server Integration Service (SSIS) job that's run by SQL Agent might need permissions other than those that the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
+
+  - **Unable to log in to SQL Server database** - The inability to log in can cause failures in authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+
+  - **User has not logged in** - Refers to the Anonymous Logon Account error. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
 ## [Directory services](#tab/dirservices)
 
@@ -97,24 +115,6 @@ This section lists various issues related to directory services and servers.
 - **No permissions for cross-domain groups** - Users from the [remote domain should belong to a group](../../../windows-server/windows-security/trust-between-windows-ad-domain-not-work-correctly.md) in the SQL Server domain. There might be a problem if you try to use a domain local group to connect to a SQL Server instance from another domain. If the domains lack proper trust, adding the users in a group in the remote domain might prevent the server from enumerating the group's membership.
 
 - **Selective authentication is disabled** - Refers to a feature of domain trusts that allows the domain administrator to limit which users have access to resources in the remote domain. If selective authentication isn't enabled, all users in the trusted domain can get access to the remote domain. To resolve this issue, make sure that the users aren't allowed to authenticate in the remote domain by enabling selective authentication.
-
-## [Database](#tab/database)
-
-  - **Database is offline** - Refers to a scenario in which a SQL Server database tries to reconnect to a SQL Server instance that's configured for Windows Authentication mode. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
-  
-  - **Database permissions** - Refers to enabling or restricting access to SQL Server database. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
-  
-  - **Linked server connectivity errors in SQL Server** - You experience an authentication process issue that affects linked servers in the context of SQL Server. For more information, see [Linked server connectivity errors in SQL Server](linked-server-account-mapping-error.md).
-
-  - **Metadata of the linked server is inconsistent** - Refers to an issue in which metadata of the linked server is inconsistent or doesn't match the expected metadata.
-
-    A view or stored procedure queries the tables or views in the linked server but receives login failures although a distributed `SELECT` statement that's copied from the procedure doesn't. This issue might occur if the view was created and then the linked server was re-created, or a remote table was modified without rebuilding the View. To resolve this issue, refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
-
-  - **Proxy account doesn't have permissions** - An SQL Server Integration Service (SSIS) job that's run by SQL Agent might need permissions other than those that the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
-
-  - **Unable to log in to SQL Server database** - The inability to log in can cause failures in authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
-
-  - **User has not logged in** - Refers to the Anonymous Logon Account error. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
 ## [Kerberos authentication](#tab/kerberos)
 
@@ -178,14 +178,6 @@ This section lists various issues related to directory services and servers.
 
 - **Issue that affects LANMAN compatibility level** - The LAN Manager (LANMAN) authentication issue usually occurs if there is a mismatch in the authentication protocols that are used by older (pre Windows 2008) and newer computers. When you set the compatibility level to 5, NTLMv2 isn't allowed. Switching to Kerberos avoids this issue because Kerberos is more secure. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
-## [Other aspects](#tab/otheraspects)
-
-- **Integrated authentication isn't enabled** - Refers to a configuration issue where Integrated Windows Authentication (IWA) is not configured correctly. To resolve this issue, make sure that the **Integrated Windows Authentication** option is enabled in **Internet Options** settings.
-
-- **IIS Authentication isn't allowed** - This issue occurs due to misconfigurations in the IIS. The authentication settings defined in the web.config file of the web application may conflict with the settings configured in IIS, leading to authentication issues. To resolve this issue, configure the website to enable Windows Authentication and set the `<identity impersonate="true"/>` value in the *Web.config* file.
-
-- **Wrong Internet zone** - This might occur if you try to access a website that isn't in the correct Internet zone in Internet Explorer. The credentials won't work if the website is in the local Intranet zone.
-
 ## [SQL Login](#tab/sqllogin)
 
 - **Bad password** - Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
@@ -220,3 +212,11 @@ This section lists various issues related to directory services and servers.
 - **Service account is not trusted for delegation** - This kind of issue usually occurs if a service account isn't allowed to assign credentials to other servers. This issue can affect services that require delegation. If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to determine whether the SQL Server service account is listed under the **Local Policies > User Rights Assignment > Impersonate a client after authentication** security policy settings. For more information, see [Enable computer and user accounts to be trusted for delegation](/windows/security/threat-protection/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation).
 
 - **Windows user profile can't be loaded in SQL Server** - Refers to the Windows user profile issue. For more information about how to troubleshoot corrupted user profiles, see the [Windows user profile can't be loaded in SQL Server](corrupt-user-profile.md).
+
+## [Other aspects](#tab/otheraspects)
+
+- **Integrated authentication isn't enabled** - Refers to a configuration issue where Integrated Windows Authentication (IWA) is not configured correctly. To resolve this issue, make sure that the **Integrated Windows Authentication** option is enabled in **Internet Options** settings.
+
+- **IIS Authentication isn't allowed** - This issue occurs due to misconfigurations in the IIS. The authentication settings defined in the web.config file of the web application may conflict with the settings configured in IIS, leading to authentication issues. To resolve this issue, configure the website to enable Windows Authentication and set the `<identity impersonate="true"/>` value in the *Web.config* file.
+
+- **Wrong Internet zone** - This might occur if you try to access a website that isn't in the correct Internet zone in Internet Explorer. The credentials won't work if the website is in the local Intranet zone.
