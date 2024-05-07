@@ -77,8 +77,8 @@ If you continue to experience issues, check the following tabs for possible caus
   - Linked server connectivity errors in SQL Server - You experience an authentication process issue that affects linked servers in the context of SQL Server. For more information, see [Linked server connectivity errors in SQL Server](linked-server-account-mapping-error.md).
   - Proxy account doesn't have permissions - An SQL Server Integration Service (SSIS) job that's run by SQL Agent might need permissions other than those that the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
   - Metadata of the linked server is inconsistent - Refers to an issue in which metadata of the linked server is inconsistent or doesn't match the expected metadata.
-    
-  A view or stored procedure queries the tables or views in the linked server but receives login failures although a distributed `SELECT` statement that's copied from the procedure doesn't. This issue might occur if the view was created and then the linked server was re-created, or a remote table was modified without rebuilding the View. To resolve this issue, refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
+
+    A view or stored procedure queries the tables or views in the linked server but receives login failures although a distributed `SELECT` statement that's copied from the procedure doesn't. This issue might occur if the view was created and then the linked server was re-created, or a remote table was modified without rebuilding the View. To resolve this issue, refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
 
   - Unable to log in to SQL Server database - The inability to log in can cause failures in authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
 
@@ -86,12 +86,12 @@ If you continue to experience issues, check the following tabs for possible caus
 
 ## [Connection string](#tab/connectionstring)
 
-- [Explicit SPN is missing](#explicit-spn-is-missing)
-- [Explicit misplaced SPN](#explicit-misplaced-spn)
-- [Explicit SPN is duplicated](#explicit-spn-is-duplicated)
-- [Incorrect server name in connection string](#incorrect-server-name-in-a-connection-string)
-- [Wrong database name in connection string](#wrong-database-name-in-connection-string)
-- [Wrong explicit SPN account](#wrong-explicit-spn-account)
+- Explicit SPN is missing - This issue occurs if the SPN isn't configured or registered correctly. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+- Explicit misplaced SPN - Refers to an SPN that has been incorrectly associated with a particular service or account. For more information, [Explicit misplaced SPN](explicit-spn-is-misplaced.md).
+- Explicit SPN is duplicated - This issue occurs if an SPN is duplicated because it's registered more than one time. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+- Incorrect server name in connection string - This issue occurs when the specified server name is incorrect or can't be found. To resolve this issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+- Wrong database name in connection string - This issue occurs if the database name that's provided for authentication is incorrect. Check whether the name is spelled correctly. For more information, see [MSSQLSERVER_4064](/sql/relational-databases/errors-events/mssqlserver-4064-database-engine-error#fix-the-issue).
+- Wrong explicit SPN account - This issue might occur if the SPN is associated with the wrong account in AD. To resolve this issue, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
 
 ## [Windows permissions](#tab/windowspermissions)
 
@@ -153,43 +153,6 @@ This section lists various causes and scenarios that are related to directory se
 - [Integrated authentication isn't enabled](#integrated-authentication-isnt-enabled)
 - [Wrong Internet zone](#wrong-internet-zone)
 - [IIS Authentication isn't allowed](#iis-authentication-isnt-allowed)
-
-
-### Proxy account doesn't have permissions
-
-
-
-### Unable to log in to SQL Server database
-
-
-
-### Metadata of the linked server is inconsistent
-
-
-
-### Incorrect server name in a connection string
-
-This issue might occur if the specified server name is incorrect or can't be found. For more information, see [incorrect server name in connection string](bad-server-name-connection-string-error.md).
-
-### Wrong database name in connection string
-
-This issue occurs if the database name that's provided for authentication is incorrect. Check whether the name is spelled correctly. For more information, see [MSSQLSERVER_4064](/sql/relational-databases/errors-events/mssqlserver-4064-database-engine-error#fix-the-issue).
-
-### Wrong explicit SPN account
-
-This issue might occur if the SPN is associated with the wrong account in AD. For more information, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
-
-### Explicit SPN is missing
-
-This issue occurs if the SPN isn't configured or registered correctly. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
-
-### Explicit misplaced SPN
-
-Refers to an SPN that has been incorrectly associated with a particular service or account. For more information, [Explicit misplaced SPN](explicit-spn-is-misplaced.md).
-
-### Explicit SPN is duplicated
-
-This issue occurs if an SPN is duplicated because it's registered more than one time. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
 ### Access is granted through local groups
 
