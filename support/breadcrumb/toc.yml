@@ -244,6 +244,9 @@ items:
       - name: Power Automate
         tocHref: /troubleshoot/power-platform/power-automate/
         topicHref: /troubleshoot/power-platform/power-automate/welcome-power-automate
+      - name: Power Pages
+        tocHref: /troubleshoot/power-platform/power-pages/
+        topicHref: /troubleshoot/power-platform/power-pages/welcome-power-pages
 
     - name: Microsoft Dynamics
       tocHref: /troubleshoot/dynamics/
@@ -252,10 +255,6 @@ items:
       - name: Microsoft Dynamics GP
         tocHref: /troubleshoot/dynamics/gp/
         topicHref: /troubleshoot/dynamics/gp/welcome-gp
-
-    - name: Microsoft Copilot for Sales
-      tocHref: /troubleshoot/sales-copilot/
-      topicHref: /troubleshoot/sales-copilot/
 
     - name: Surface
       tocHref: /troubleshoot/devices/
