@@ -4924,6 +4924,21 @@
       "source_path": "support/sql/general/setup-data-collection-diagnostic-tool.md",
       "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/vbs-type-mismatch-error.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/visual-basic/language-compilers/vbs-type-mismatch-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/release-management-not-have-https-protocol.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/release-management-not-have-https-protocol",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/warning-add-service-reference-silverlight.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/warning-add-service-reference-silverlight",
+      "redirect_document_id": true
     }
   ]
 }
