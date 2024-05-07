@@ -4944,6 +4944,61 @@
       "source_path": "support/developer/visualstudio/general/subscription-administrator-migration.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/welcome-host-integration-server.yml",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/network-integration/unable-stop-start-connections-service.md",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/data-integration/access-violations-cancel-query.md",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/data-integration/maximum-number-statements-reach.md",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/network-integration/sna-manager-version-combination.md",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/app-integration/invokable-transaction-program-registry-locations.md",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/app-integration/no-template-visual-studio-2013.md",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/network-integration/sna-lu6-2-resync-tp-fails-start.md",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/network-integration/troubleshoot-event-230-warning.md",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/network-integration/use-session-request-types-control-access.md",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/network-integration/troubleshoot-event-23-warning.md",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
     }
   ]
 }

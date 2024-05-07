@@ -1,25 +1,12 @@
-- name: Welcome
-  href: welcome-host-integration-server.yml
-
-- name: Application integration (Transaction Integrator)
-  items:
-  - name: HIS 2013 doesn't work with Visual Studio 2013
-    href: app-integration/no-template-visual-studio-2013.md
-  - name: Invokable Transaction Program registry locations
-    href: app-integration/invokable-transaction-program-registry-locations.md
 
 - name: Data integration (DB2, host files)
   items:
-  - name: Access violations when you cancel a DB2 query
-    href: data-integration/access-violations-cancel-query.md
   - name: Configure data sources
     href: data-integration/configure-data-sources.md
   - name: Creating a linked server to DB2
     href: data-integration/creating-linked-server-db2.md
   - name: Error when you insert data into IBM DB2 database
     href: data-integration/error-insert-data-ibm-db2-database.md
-  - name: Maximum number of statements has reached
-    href: data-integration/maximum-number-statements-reach.md
   - name: Storing DB2 connection strings
     href: data-integration/storing-db2-connection-strings.md
 
@@ -30,20 +17,7 @@
 
 - name: Network integration (SNA gateway)
   items:
-  - name: Other
-    items:
-    - name: Troubleshoot Event 23 warnings
-      href: network-integration/troubleshoot-event-23-warning.md
-    - name: Troubleshoot Event 230 warnings
-      href: network-integration/troubleshoot-event-230-warning.md
   - name: SNA LU6.2 Resync TP fails to start
     href: network-integration/sna-lu6-2-resync-tp-fails-start.md
-  - name: SNA Manager
-    items:
-    - name: SNA Manager version combinations
-      href: network-integration/sna-manager-version-combination.md
-    - name: Unable to stop or start connections or service
-      href: network-integration/unable-stop-start-connections-service.md
-  - name: Use session request types to control access
-    href: network-integration/use-session-request-types-control-access.md
+
 
