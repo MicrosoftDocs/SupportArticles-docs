@@ -3,6 +3,7 @@ title: Performance issues when you call web services
 description: This article provides help to solve the performance issues that occur when you make calls to web services from an ASP.NET application.
 ms.date: 07/28/2020
 ms.reviewer: tferrand, aaronba
+ms.custom: sap:Performance
 ---
 # Performance issues when you make calls to web services from an ASP.NET application
 

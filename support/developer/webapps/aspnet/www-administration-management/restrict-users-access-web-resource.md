@@ -2,7 +2,7 @@
 title: Restrict users from accessing to web resources
 description: This article describes some methods about restricting specific users from gaining access to specified web resources.
 ms.date: 03/26/2020
-ms.custom: sap:WWW administration and management
+ms.custom: sap:Configuration
 ms.topic: how-to
 ---
 # Restrict specific users from gaining access to specified web resources
