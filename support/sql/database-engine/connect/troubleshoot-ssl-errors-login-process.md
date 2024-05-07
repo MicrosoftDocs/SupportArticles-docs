@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot SSL errors during the login process
 description: Troubleshoots SSL errors that occur during the login process.
-ms.date: 05/06/2024
+ms.date: 05/07/2024
 ms.reviewer: prmadhes, jopilov, v-sidong
 ms.custom: sap:Connection issues
 ---
