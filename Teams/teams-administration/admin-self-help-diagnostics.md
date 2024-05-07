@@ -54,9 +54,9 @@ For more information, see [Diagnostics for Social Good](https://aka.ms/Diagnosti
 > [!NOTE]
 > You must be an M365 Administrator to run diagnostics.
 
-The following tables list the diagnostics that are currently available in each category. Each diagnostic has a brief scenario description and a shortcut command.
+The following tables list the diagnostics organized by category. Each diagnostic has a brief scenario description and a shortcut command.
 
-### Authentication diagnostics
+### Authentication
 
 | Diagnostic | Description | Shortcut Link | Support Article |
 |---|---|---|---|
@@ -64,7 +64,7 @@ The following tables list the diagnostics that are currently available in each c
 | Teams Federation | Validates that the Teams user can communicate with a federated Teams user. | [Run Tests: Teams Federation](https://aka.ms/TeamsFederationDiag) | [Manage external access (federation)]( /microsoftteams/manage-external-access#federation-diagnostic-tool) |
 | Unable to Invite Guest Users to Teams | Validates that a specific guest can sign into Teams.| [Run Tests: Teams Guest Access](https://aka.ms/TeamsGuestAccessDiag) | [Guest access in Microsoft Teams](/microsoftteams/guest-access) |
 
-### File diagnostics
+### Files
 
 | Diagnostic | Description | Shortcut Link | Support Article |
 |---|---|---|---|
@@ -73,7 +73,7 @@ The following tables list the diagnostics that are currently available in each c
 | Unable to access files shared in Teams chat | Validated that a specified user being unable to access files shared by another user in chats. | [Run Tests: Unable to access files shared in Teams chat](https://aka.ms/TeamsSharedFilesInChat) | [Error (You don't have access to this file) when opening a file in Teams](/microsoftteams/troubleshoot/known-issues/do-not-have-access-to-this-file-teams) |
 | Unable to access files in a team | Validates that a specified user has access to files in the Team. | [Run Tests: Unable to access files in a team](https://aka.ms/TeamsAccessFilesInChat) | [Can't access the Files tab on a Teams channel]( /microsoftteams/troubleshoot/files/access-files-tab-errors) |
 
-### Meeting diagnostics
+### Meetings
 
 | Diagnostic | Description | Shortcut Link | Support Article |
 |---|---|---|---|
@@ -84,13 +84,13 @@ The following tables list the diagnostics that are currently available in each c
 | Teams Live Events | Validates that a user is able to schedule Teams live events. | [Run Tests: Teams Live Events](https://aka.ms/TeamsLiveEventsDiag) |[Troubleshooting live events in Microsoft Teams](/microsoftteams/teams-stream-troubleshooting) |
 | Teams Meeting Recordings | Validates that the user is properly configured to record a meeting in Teams. | [Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag) | [Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools) |
 
-### Presence diagnostics
+### Presence
 
 | Diagnostic | Description | Shortcut Link | Support Article |
 |---|---|---|---|
 | Teams presence | Validates that a user's Teams presence can be correctly displayed. | [Run Tests: Teams presence](https://aka.ms/TeamsPresenceDiag) | [Your actual presence status isn't displayed in Teams](/microsoftteams/troubleshoot/teams-im-presence/presence-not-show-actual-status) |
 
-### Voice diagnostics
+### Voice
 
 | Diagnostic | Description | Shortcut Link | Support Article |
 |---|---|---|---|
