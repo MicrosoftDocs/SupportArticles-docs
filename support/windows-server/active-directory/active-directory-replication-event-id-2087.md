@@ -309,7 +309,7 @@ If DNS resource records do not appear in DNS for the source domain controller, y
 
 Requirements:
 
-- Membership in the **Domain Admins** group in the forest root domain or the **Enterprise Admins** group, or equivalent, is the minimum required to complete this procedure.
+- Membership in the Domain Admins group in the forest root domain or the Enterprise Admins group, or equivalent, is the minimum required to complete this procedure.
 - Tools: `net stop`/`net start`, ipconfig
 
 #### Register DNS resource records manually
@@ -338,7 +338,7 @@ After you complete DNS testing, use the following procedure to synchronize repli
 
 Requirements:
 
-- Membership in the **Domain Admins** group in the domain of the destination domain controller, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
+- Membership in the Domain Admins group in the domain of the destination domain controller, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 - Tool: Active Directory Sites and Services
 
 #### Steps to synchronize replication from a source domain controller
@@ -357,7 +357,7 @@ If you have performed all DNS tests and other tests and replication does not suc
 
 Requirements:
 
-- Membership in the **Domain Admins** group in the domain of the destination domain controller, or equivalent, is the minimum required to complete this procedure.
+- Membership in the Domain Admins group in the domain of the destination domain controller, or equivalent, is the minimum required to complete this procedure.
 - Tool: Ldp.exe (Windows Support Tools)
 
 #### Steps to verify consistency of the NTDS Settings GUID
