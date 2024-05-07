@@ -89,8 +89,8 @@ The resolution of this issue depends on the actual cause or causes of the issue.
     For more information about Lingering Object Liquidator v2 (LoLv2), see:
 
     - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)
-    - [Introducing Lingering Object Liquidator v2](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/blob/92f84ad4f33b4ad5343edc9987d098b3ff1b22ea/archive/blogs/askds/introducing-lingering-object-liquidator-v2)
-    - [Description of the Lingering Object Liquidator tool](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/blob/92f84ad4f33b4ad5343edc9987d098b3ff1b22ea/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)  
+    - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
+    - [Description of the Lingering Object Liquidator tool](lingering-object-liquidator-tool.md)  
   
     You can do this by running the command `repadmin /removelingeringobjects` in advisory mode, as described in the following procedure.
 
