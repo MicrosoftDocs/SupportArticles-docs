@@ -23,9 +23,11 @@ This article provides a resolution for the “Required fields are missing” err
 
 ## Symptoms
 
-When a user tries to [create a contact or record from the Copilot for Sales pane in Outlook](/microsoft-sales-copilot/create-contact-crm-sales-copilot), the following error message is displayed with the error code "SFRequiredFieldMissing":
+When a user tries to [create a contact or record from the Copilot for Sales pane in Outlook](/microsoft-sales-copilot/create-contact-crm-sales-copilot), the following error message is displayed: 
 
 > Required fields are missing
+
+When you copy error details, you see the error code "SFRequiredFieldMissing".
 
 :::image type="content" source="media/required-field-missing/required-field-missing.png" alt-text="Screenshot that shows the error that occurs when the required fields are missing.":::
 

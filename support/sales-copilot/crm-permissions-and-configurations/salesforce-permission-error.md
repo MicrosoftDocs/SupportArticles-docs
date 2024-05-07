@@ -23,9 +23,11 @@ This article helps you resolve an issue where users can't view, edit, or save da
 
 ## Symptoms
 
-When a user opens Copilot for Sales in Outlook, the following error message is displayed with the error code "SFTypeNotSupported" or "SFInvalidField":
+When a user opens Copilot for Sales in Outlook, the following error message is displayed:
 
 > Something went wrong.
+
+When you select **Show details**, you see "SFTypeNotSupported" or "SFInvalidField" error code.
 
 :::image type="content" source="media/salesforce-permission-error/sf-perm-error.png" alt-text="Screenshot that shows the error that occurs when users don't have permission in CRM to view, create, or edit objects.":::
 
