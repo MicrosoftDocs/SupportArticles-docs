@@ -4994,6 +4994,11 @@
       "source_path": "support/developer/host-integration-server/network-integration/use-session-request-types-control-access.md",
       "redirect_url": "/troubleshoot",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/network-integration/troubleshoot-event-23-warning.md",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
     }
   ]
 }
