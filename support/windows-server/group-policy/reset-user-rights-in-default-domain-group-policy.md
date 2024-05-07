@@ -1,7 +1,7 @@
 ---
 title: Reset user rights in the default domain GPO
 description: Describes how to reset user rights in the default domain Group Policy object (GPO) in Windows Server.
-ms.date: 05/06/2024
+ms.date: 05/07/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -74,7 +74,7 @@ To edit the *Gpttmpl.inf* file, follow these steps.
 
 #### Edit the Gpt.ini File
 
-The *Gpt.ini* file controls the GPO template version numbers. You must edit the Gpt.ini file to increase the GPO template version number. To do so:
+The *Gpt.ini* file controls the GPO template version numbers. You must edit the *Gpt.ini* file to increase the GPO template version number. To do so:
 
 1. Start Windows Explorer and open the following folder, where \<Sysvol_path\> is the path of the *Sysvol* folder:
     \<Sysvol_path\>\\Sysvol\\Domain\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}
