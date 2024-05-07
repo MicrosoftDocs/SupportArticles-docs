@@ -76,6 +76,8 @@
       href: payments/adyen-support.md
 - name: Point of sale (POS)
   items:
+    - name: POS reports an error that the redirect URI wasn't found
+      name: point-of-sale//troubleshoot-pos-aad-issues.md
     - name: Store Commerce app (POS) is suddenly deactivated
       href: point-of-sale/store-commerce-app-pos-deactivated.md    
     - name: Troubleshoot Store Commerce extension issues
