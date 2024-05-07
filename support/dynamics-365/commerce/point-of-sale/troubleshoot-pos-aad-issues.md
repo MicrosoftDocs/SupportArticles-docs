@@ -12,7 +12,7 @@ This article helps you to troubleshoot Azure Active Directory (AAD) (now known a
 
 ## POS reports an error that the redirect URI wasn't found
 
-Customers who use non-PROD development virtual machines (VMs), such as those that originate from Life Cycle Services (LCS), can't interact with Microsoft Entra ID from within Cloud Point of Sale (CPOS) predeployed on those boxes. The error message shows that there's an issue with the Reply URL mismatch. This issue includes Device Activation and Employee Login if CPOS was set up to use Microsoft Entra ID for the Employee Login.
+Customers who use non-PROD development virtual machines (VMs), such as those that originate from Life Cycle Services (LCS), can't interact with Microsoft Entra ID from within Cloud Point of Sale (CPOS) that are predeployed on those boxes. The error message shows that there's an issue that affects the Reply URL mismatch. This issue includes Device Activation and Employee Login if CPOS was set up to use Microsoft Entra ID for the Employee Login.
 
 The error message would resemble the error message that's displayed here, except that the redirect URI would end with any of these domains:
 
