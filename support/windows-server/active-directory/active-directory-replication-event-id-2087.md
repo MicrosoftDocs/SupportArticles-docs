@@ -95,11 +95,11 @@ To determine whether the source domain controller is functioning, use the follow
 
 Requirements:
 
-- Membership in the **Domain Users** group in the domain of the domain controller, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
+- Membership in the **Domain Users** group in the domain of the domain controller, or equivalent, is the minimum requirement to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 - Tool: Net view
 
-To confirm that the domain controller is running AD DS and is accessible on the network, at a command prompt type the following command, and then press <kbd>Enter</kbd>:
+To confirm that the domain controller is running AD DS and is accessible on the network, at a command prompt, type the following command, and then press <kbd>Enter</kbd>:
 
 ```console
 net view \\<SourceDomainControllerName>
@@ -119,12 +119,12 @@ The process for cleaning up metadata is improved in the version of Ntdsutil that
 
 Requirements:
 
-- Membership in Enterprise Admins, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
+- Membership in Enterprise Admins, or equivalent, is the minimum requirement to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 - Tool: Ntdsutil (System32 command-line tool)
 
 #### Steps to clean up server metadata
 
-The convenient method to clean up domain controller's metadata is using the Active Directory Users and Computers snap-in. For more information, see
+A convenient method to clean up the domain controller's metadata is using the Active Directory Users and Computers snap-in. For more information, see:
 
 - [Step-By-Step: Manually Removing A Domain Controller Server](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-manually-removing-a-domain-controller-server/ba-p/280564)
 - [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)  
@@ -201,7 +201,7 @@ When you use Dcdiag for DNS testing, there are specific requirements that do not
 
 Requirements:
 
-- Membership in Enterprise Admins, or equivalent, is the minimum required to complete the DNS tests. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
+- Membership in Enterprise Admins, or equivalent, is the minimum requirement to complete the DNS tests. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 - Tool: Dcdiag.exe
 - Operating system: any supported versions of Windows Server or client with Remote Server Administration Tools (RSAT)
   
@@ -309,7 +309,7 @@ If DNS resource records do not appear in DNS for the source domain controller, y
 
 Requirements:
 
-- Membership in the Domain Admins group in the forest root domain or the Enterprise Admins group, or equivalent, is the minimum required to complete this procedure.
+- Membership in the Domain Admins group in the forest root domain or the Enterprise Admins group, or equivalent, is the minimum requirement to complete this procedure.
 - Tools: `net stop`/`net start`, ipconfig
 
 #### Register DNS resource records manually
@@ -321,7 +321,7 @@ net stop net logon
 net start net logon
 ```
 
-To initiate registration of the host A resource record manually, at a command prompt type the following command, and then press <kbd>Enter</kbd>:
+To initiate registration of the host A resource record manually, at a command prompt, type the following command, and then press <kbd>Enter</kbd>:
 
 ```console
 ipconfig /flushdns
@@ -338,7 +338,7 @@ After you complete DNS testing, use the following procedure to synchronize repli
 
 Requirements:
 
-- Membership in the Domain Admins group in the domain of the destination domain controller, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
+- Membership in the Domain Admins group in the domain of the destination domain controller, or equivalent, is the minimum requirement to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 - Tool: Active Directory Sites and Services
 
 #### Steps to synchronize replication from a source domain controller
@@ -357,7 +357,7 @@ If you have performed all DNS tests and other tests and replication does not suc
 
 Requirements:
 
-- Membership in the Domain Admins group in the domain of the destination domain controller, or equivalent, is the minimum required to complete this procedure.
+- Membership in the Domain Admins group in the domain of the destination domain controller, or equivalent, is the minimum requirement to complete this procedure.
 - Tool: Ldp.exe (Windows Support Tools)
 
 #### Steps to verify consistency of the NTDS Settings GUID
