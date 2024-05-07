@@ -99,7 +99,7 @@ Requirements:
 
 - Tool: Net view
 
-To confirm that the domain controller is running AD DS and is accessible on the network, at a command prompt type the following command, and then press ENTER:
+To confirm that the domain controller is running AD DS and is accessible on the network, at a command prompt type the following command, and then press <kbd>Enter</kbd>:
 
 ```console
 net view \\<SourceDomainControllerName>
@@ -129,7 +129,7 @@ The convenient method to clean up domain controller's metadata is using the Acti
 - [Step-By-Step: Manually Removing A Domain Controller Server](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-manually-removing-a-domain-controller-server/ba-p/280564)
 - [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)  
   
-Alternatively, you can use ntdsutil:
+Alternatively, you can use Ntdsutil:
 
 1. Open an elevated command prompt.
 2. At the command prompt, type the `ntdsutil` command, and then press <kbd>Enter</kbd>.
@@ -139,7 +139,7 @@ Alternatively, you can use ntdsutil:
     > [!NOTE]
     > If you are removing domain metadata as well as server metadata, skip the following procedure and use the procedure that begins at step 1.
 
-    - If you are performing server metadata cleanup only and you are using the version of Ntdsutil.exe that is included with a supported version of Windows Server, at the `metadata cleanup:` command prompt, type the following command, and then press ENTER:
+    - If you are performing server metadata cleanup only and you are using the version of Ntdsutil.exe that is included with a supported version of Windows Server, at the `metadata cleanup:` command prompt, type the following command, and then press <kbd>Enter</kbd>:
    
         ```console
         remove selected server <ServerName>
@@ -151,27 +151,27 @@ Alternatively, you can use ntdsutil:
         remove selected server <ServerName1> on <ServerName2>
         ```
 
-       |Parameter|Description|
-       |---|---|
-       |\<ServerName>, \<ServerName1>|The distinguished name of the domain controller whose metadata you want to remove, in the form cn=\<ServerName>,cn=Servers,cn=\<SiteName>, cn=Sites,cn=Configuration,dc=\<ForestRootDomain>|
-       |\<ServerName2>|The DNS name of the domain controller to which you want to connect and from which you want to remove server metadata.|
+        |Parameter|Description|
+        |---|---|
+        |\<ServerName>, \<ServerName1>|The distinguished name of the domain controller whose metadata you want to remove, in the form cn=\<ServerName>,cn=Servers,cn=\<SiteName>, cn=Sites,cn=Configuration,dc=\<ForestRootDomain>|
+        |\<ServerName2>|The DNS name of the domain controller to which you want to connect and from which you want to remove server metadata.|
 
-   - If you are performing metadata cleanup by using the version of Ntdsutil.exe, or if you are performing both domain metadata cleanup and server metadata cleanup, perform metadata cleanup as follows:
+    - If you are performing metadata cleanup by using the version of Ntdsutil.exe, or if you are performing both domain metadata cleanup and server metadata cleanup, perform metadata cleanup as follows:
    
-        1. At the `metadata cleanup:` prompt, type the `connection` command, and then press ENTER.
-        2. At the `server connections:` prompt, type the `connect to server <Server>` command, and then press ENTER.
-        3. At the `connection:` prompt, type the `quit` command, and then press ENTER.
-        4. At the `metadata cleanup:` prompt, type the `select operation target` command, and then press ENTER.
-        5. At the `select operation target:` prompt, type the `list sites` command, and then press ENTER.
-        6. A numbered list of sites appears. Type the `select site <SiteNumber>` command, and then press ENTER.
-        7. At the `select operation target:` prompt, type the `list domains in site` command, and then press ENTER.
-        8. A numbered list of domains in the selected site appears. Type the `select domain <DomainNumber>` command, and then press ENTER.
-        9. At the `select operation target:` prompt, type the `list servers in site` command, and then press ENTER.
-        10. A numbered list of servers in a domain and site is displayed. Type the `select server <ServerNumber>` command, and then press ENTER.
-        11. At the `select operation target:` prompt, type the `quit` command, and then press ENTER.
-        12. At the `metadata cleanup:` prompt, type the `remove selected server` command, and then press ENTER.
-        13. If the server whose metadata you have removed is the last domain controller in the domain and you want to remove the domain metadata, at the `metadata cleanup:` prompt, type the `remove selected domain` command, and then press ENTER. Metadata for the domain that you selected in step h is removed.
-        14. At the `metadata cleanup:` and `ntdsutil:` prompts, type `quit`, and then press ENTER.
+        1. At the `metadata cleanup:` prompt, type the `connection` command, and then press <kbd>Enter</kbd>.
+        2. At the `server connections:` prompt, type the `connect to server <Server>` command, and then press <kbd>Enter</kbd>.
+        3. At the `connection:` prompt, type the `quit` command, and then press <kbd>Enter</kbd>.
+        4. At the `metadata cleanup:` prompt, type the `select operation target` command, and then press <kbd>Enter</kbd>.
+        5. At the `select operation target:` prompt, type the `list sites` command, and then press <kbd>Enter</kbd>.
+        6. A numbered list of sites appears. Type the `select site <SiteNumber>` command, and then press <kbd>Enter</kbd>.
+        7. At the `select operation target:` prompt, type the `list domains in site` command, and then press <kbd>Enter</kbd>.
+        8. A numbered list of domains in the selected site appears. Type the `select domain <DomainNumber>` command, and then press <kbd>Enter</kbd>.
+        9. At the `select operation target:` prompt, type the `list servers in site` command, and then press <kbd>Enter</kbd>.
+        10. A numbered list of servers in a domain and site is displayed. Type the `select server <ServerNumber>` command, and then press <kbd>Enter</kbd>.
+        11. At the `select operation target:` prompt, type the `quit` command, and then press <kbd>Enter</kbd>.
+        12. At the `metadata cleanup:` prompt, type the `remove selected server` command, and then press <kbd>Enter</kbd>.
+        13. If the server whose metadata you have removed is the last domain controller in the domain and you want to remove the domain metadata, at the `metadata cleanup:` prompt, type the `remove selected domain` command, and then press <kbd>Enter</kbd>. Metadata for the domain that you selected in step h is removed.
+        14. At the `metadata cleanup:` and `ntdsutil:` prompts, type `quit`, and then press <kbd>Enter</kbd>.
 
         |Parameter|Description|
         |--|--|
@@ -232,7 +232,7 @@ The basic DNS test checks the following:
 
 ##### Steps to verify basic DNS functionality
 
-1. At a command prompt, type the following command, and then press ENTER:
+1. At a command prompt, type the following command, and then press <kbd>Enter</kbd>:
 
     ```console
     dcdiag /test:dns /s:<SourceDomainControllerName> /DnsBasic
@@ -284,7 +284,7 @@ If the alias (CNAME) resource record is not registered, verify that dynamic upda
 
 If the basic DNS test shows that resource records do not exist in DNS, use the dynamic update test to diagnose why the Net Logon service did not register the resource records automatically. To verify that the Active Directory domain zone is configured to accept secure dynamic updates and to perform registration of a test record (_dcdiag_test_record), use the following procedure. The test record is deleted automatically after the test.
 
-To verify dynamic updates, at a command prompt, type the following command, and then press ENTER:
+To verify dynamic updates, at a command prompt, type the following command, and then press <kbd>Enter</kbd>:
 
 ```console
 dcdiag /test:dns /s:<SourceDomainControllerName> /DnsDynamicUpdate
@@ -314,14 +314,14 @@ Requirements:
 
 #### Register DNS resource records manually
 
-To initiate registration of domain controller Locator resource records manually on the source domain controller, at a command prompt type the following commands, and then press ENTER after each command:
+To initiate registration of domain controller Locator resource records manually on the source domain controller, at a command prompt type the following commands, and then press <kbd>Enter</kbd> after each command:
 
 ```console
 net stop net logon
 net start net logon
 ```
 
-To initiate registration of the host A resource record manually, at a command prompt type the following command, and then press ENTER:
+To initiate registration of the host A resource record manually, at a command prompt type the following command, and then press <kbd>Enter</kbd>:
 
 ```console
 ipconfig /flushdns
