@@ -11044,6 +11044,11 @@
       "source_path": "support/power-platform/power-apps/solutions/upgrade-fails-pending-upgrade.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/upgrade-fails-pending-upgrade",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/connect/bad-server-name-connection-string-error.md",
+      "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
+      "redirect_document_id": false
     }
   ]
 }
