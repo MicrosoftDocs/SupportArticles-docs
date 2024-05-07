@@ -1,6 +1,6 @@
 ---
-title: Introduction to consistent authentication issues
-description: This article discusses consistent authentication issues in SQL Server, related error messages, and workarounds to troubleshoot various issues.
+title: Overview of consistent authentication issues 
+description: This article discusses consistent authentication issues in SQL Server, related error messages, and solutions to troubleshoot various issues.
 ms.date: 05/01/2024
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -21,12 +21,10 @@ Before you start to troubleshoot errors, it's important to understand what each 
 
 ## [SQL Login](#tab/sqllogin)
 
-    |Potential cause  |Solution  |
-    |---------|---------|
-    |Bad password     | Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername)  |
-    |Invalid username     | Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername)|
-    |SQL Server logins are not enabled|Refers to a scenario in which you try to connect to a Microsoft SQL Server instance by using SQL Server authentication, but the login that's associated with the account is disabled. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon)|
-    |Named Pipes connections fail because the user doesn't have permission to log in to Windows|Refers to a permissions issue in Windows. For more information, see [Troubleshooting the Named Pipes connections issue in SQL Server](named-pipes-connection-fail-no-windows-permission.md)|
+  - Bad password - Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+  - Invalid username - Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+  - SQL Server logins are not enabled - Refers to a scenario in which you try to connect to a Microsoft SQL Server instance by using SQL Server authentication, but the login that's associated with the account is disabled. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
+  - Named Pipes connections fail because the user doesn't have permission to log in to Windows -Refers to a permissions issue in Windows. For more information, see [Troubleshooting the Named Pipes connections issue in SQL Server](named-pipes-connection-fail-no-windows-permission.md).
 
 ## [SQL Server-specific](#tab/sqlserverspecific)
 
