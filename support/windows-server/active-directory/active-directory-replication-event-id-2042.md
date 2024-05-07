@@ -84,9 +84,9 @@ The resolution of this issue depends on the actual cause or causes of the issue.
 
 2. Determine whether there are lingering objects.   
 
-    The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/en-us/download/details.aspx?id=56051). In some cases, wherein LoLv2 can't be used, you can use *Repadmin.exe*.
+    The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/en-us/download/details.aspx?id=56051). In some cases where LoLv2 can't be used, you can use *Repadmin.exe*.
 
-    For more information about Lingering Object Liquidator v2 (LoLv2), see:
+    For more information about LoLv2, see:
 
     - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)
     - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
