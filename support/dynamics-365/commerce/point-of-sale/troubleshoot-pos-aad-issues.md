@@ -16,17 +16,17 @@ Customers who use non-PROD development virtual machines (VMs), such as those tha
 
 The error message would resemble the error message that's displayed here, except that the redirect URI would end with any of these domains:
 
-`.axcloud.dynamics.com `  
+`.axcloud.dynamics.com`  
 `.cloud.onebox.dynamics.com`
 
-![Example of an error message encountered.](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/104783217/73659af1-b3aa-4ab7-8582-69517b21ac28)
+:::image type="content" source="media/troubleshoot-pos-aad-issues/redirect-uri-does-not-match-for-application-error.png" alt-text="Example of an error message encountered.":::
 
 ## Description
 
 That predeployed CPOS is based on the Retail SDK. The last CSU version where the Retail SDK was supported is 10.0.37, which was [retired](/dynamics365/fin-ops-core/dev-itpro/get-started/public-preview-releases#targeted-release-schedule-dates-subject-to-change)  on March 15, 2024.
 
 Although Microsoft continues to improve on internal infrastructure, a recent change prevents the CPOS (Store Commerce for Web) application from being able to communicate with Microsoft Entra ID.
- 
+
 ### Resolution
 
 Customers shouldn't use predeployed CPOS or other parts of CSU, such as Retail Server, because they're based on the Retail SDK, which is no longer supported.
