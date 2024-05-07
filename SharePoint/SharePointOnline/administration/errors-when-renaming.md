@@ -52,12 +52,12 @@ This article lists common error messages that you might encounter when you chang
 |-1077|There is no applicable tenant rename scheduled in your organization. |Tenant rename hasn't been scheduled. |Run the `Start-SPOTenantRename` cmdlet and try again.|
 |-1078|Prioritizing sites cannot be performed since the tenant rename is in progress. |Prioritization isn't allowed when rename is in progress.|None. |
 |-1086| The limit on the number of prioritized sites has been reached. No further sites can be added unless some are removed first. |The 4,000 site limit for prioritization has been reached.|Remove a site that has already been prioritized and try prioritizing the desired site again. For more information, see [prioritizing sites](/sharepoint/change-your-sharepoint-domain-name#prioritizing-sites).|
-|-1081|Prioritization for root sites is not supported. |Root sites cannot be prioritized.|None.| 
-|-1082|The site is locked. Please unlock the site and try again.|Rename cannot be performed on a locked site. |[ Unlock the site](/sharepoint/manage-lock-status).|
+|-1081|Prioritization for root sites is not supported. |Root sites can't be prioritized.|None.| 
+|-1082|The site is locked. Please unlock the site and try again.|Rename can't be performed on a locked site. |[Unlock the site](/sharepoint/manage-lock-status).|
 |-1080|The specified site does not exist. Please check the URL and try again.| The specified site doesn't exist. |Check whether the site exists, or if there are any typos in the URL. |
 |-15|This site URL is invalid. Please double-check your site URL.|The specified URL has an invalid format.|Check the format of the specified URL. |
 
-**Note:** You might encounter different errors about individual site renamings if they fail as part of the domain renaming. For more information, see [Errors when you rename a SharePoint site address](https://support.microsoft.com/office/errors-when-you-rename-a-sharepoint-site-address-165b7c11-1325-4813-b160-ecbe87bc1a86).
+**Note:** You might encounter different errors about individual site renaming if they fail as part of the domain renaming. For more information, see [Errors when you rename a SharePoint site address](https://support.microsoft.com/office/errors-when-you-rename-a-sharepoint-site-address-165b7c11-1325-4813-b160-ecbe87bc1a86).
 
 ## References
 
