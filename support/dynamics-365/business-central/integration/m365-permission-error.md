@@ -1,24 +1,29 @@
 ---
-title: "Microsoft 365 access has been enabled, but users get a permission error"
-description: Troubleshooting article for Microsoft 365 permission error in Business Central.
+title: Permission error when Microsoft 365 access is enabled
+description: Provides a resolution for the Microsoft 365 permission error that occurs in Dynamics 365 Business Central.
 ms.author: mikebc
 ms.reviewer: jswymer
-ms.topic: troubleshooting 
-ms.date: 04/24/2024
+ms.date: 05/08/2024
 ---
+# A permission error occurs even though Microsoft 365 access has been enabled
 
-# "Microsoft 365 access has been enabled, but users get a permission error"
-
-This article helps you troubleshoot the error message "Microsoft 365 access has been enabled, but users get a permission error" in Business Central.
+This article provides a resolution for an issue where users receive a permission error even though Microsoft 365 access has been enabled in Dynamics 365 Business Central.
 
 ## Symptoms
 
-Access with Microsoft 365 has been enabled in Business Central admin center, but users get a permission error when accessing any record.
+Access with Microsoft 365 has been enabled in Business Central admin center, but users get a permission error when accessing records.
 
 ## Cause
 
-If you enable access in the Business Central admin center, but don't assign permissions in the **License Configuration** page, anyone that attempts to access Business Central records in Teams will have their user record provisioned without permission to any objects. Business Central is secure by design: administrators must first configure what data can be accessed in Teams. 
+This is a by design behavior. Administrators must first configure what data can be accessed in Teams. If the administrator enables access in the Business Central admin center, but doesn't assign permissions on the **License Configuration** page, a user who tries to access Business Central records in Teams will have their user record provisioned without permission to any objects.
 
 ## Resolution
 
-Customizing permissions in the License Configuration page will only affect newly created users. You must also assign the missing permissions to users that have already been created through the Users list page. 
+> [!NOTE]
+> You need tenant administrator permissions in Business Central.
+
+Customizing permissions on the **License Configuration** page will only affect newly created users. You must also assign the missing permissions to users that have already been created through the **Users list** page.
+
+## More information
+
+[Create users according to licenses.](/dynamics365/business-central/ui-how-users-permissions)

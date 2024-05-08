@@ -1,23 +1,21 @@
 ---
-title: Data replication issues in cloud migration
-description: Troubleshooting article for data replication process in Business Central cloud migration
+title: Data replication issue or errors in cloud migration
+description: Resolves an issue or errors that might occur during the data replication process in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
-ms.topic: troubleshooting 
-ms.date: 04/18/2024
+ms.date: 05/08/2024
 ---
+# Data replication issue or errors in cloud migration
 
-# Data replication issues in cloud migration
-
-This article explains how to fix errors that you might encounter when you run data replication during cloud migration.
+This article resolves an issue or errors that might occur when you run data replication during [Business Central cloud migration](/dynamics365/business-central/dev-itpro/administration/migration-manage).
 
 ## Symptoms
 
-The symptom can be one of the following:
+One of the following issue or error might occur when you run data replication during Business Central cloud migration.
 
-- The Self-hosted Integration Runtime is offline
-- A database operation failed with the following error: 'Invalid object name … '
-- A database operation failed with the following error: 'Couldn't find stored procedure ' … '
+- The [self-hosted Integration Runtime](/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory) is offline.
+- A database operation fails with the "Invalid object name" error message.
+- A database operation fails with the "Couldn't find stored procedure" error message.
 
 ## Resolution
 
@@ -25,10 +23,9 @@ The symptom can be one of the following:
 > You need administrator permissions in Business Central.
 
 - Make sure that the machine hosting Integration Runtime stays online all the time.
-- Shutting down the Integration Runtime host temporarily can be used to cancel an ongoing migration run, but if the host stays offline for too long, all cloud migration infrastructure might be automatically cleaned up, making resuming migrations impossible.
+- You can shut down the Integration Runtime host temporarily to cancel an ongoing migration run. But if the host stays offline for too long, all cloud migration infrastructure might be automatically cleaned up, making resuming migrations impossible.
 - Make sure to wait before replacing the source database, or restoring it from a backup, until the migration run has completed.
 
+## More information
 
-## Next steps
-
-[Run data replication](/dynamics365/business-central/dev-itpro/administration/migrate-data-replication-run)  
+[Run data replication](/dynamics365/business-central/dev-itpro/administration/migrate-data-replication-run)
