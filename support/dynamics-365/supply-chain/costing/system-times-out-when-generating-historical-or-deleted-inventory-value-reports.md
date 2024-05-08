@@ -2,7 +2,7 @@
 title: System times out when generating historical or deleted inventory value reports
 description: Provides a resolution for an issue where the system times out when generating or regenerating a historical inventory value report based on older transactions.
 author: JennySong-SH
-ms.date: 11/25/2022
+ms.date: 05/08/2024
 ms.search.form: 
 audience: Application User
 ms.reviewer: yanansong

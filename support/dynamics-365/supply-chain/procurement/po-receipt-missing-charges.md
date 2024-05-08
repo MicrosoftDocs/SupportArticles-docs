@@ -2,7 +2,7 @@
 title: A purchase order receipt doesn't include all charges
 description: Provides a resolution for the issue that a purchase order receipt doesn't include all charges.
 author: Henrikan
-ms.date: 05/31/2021
+ms.date: 05/08/2024
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac

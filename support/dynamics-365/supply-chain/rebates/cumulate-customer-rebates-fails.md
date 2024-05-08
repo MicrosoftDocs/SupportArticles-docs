@@ -2,7 +2,7 @@
 title: Cumulation of customer rebates fails when item rebate groups are used
 description: Rebates are calculated but cumulation fails when you use customer rebate agreements in combination with item rebate groups.
 author: sherry-zheng
-ms.date: 04/11/2021
+ms.date: 05/08/2024
 ms.topic: troubleshooting
 ms.search.form: PdsRebateTableListPage
 audience: Application User

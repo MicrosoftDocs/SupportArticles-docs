@@ -2,7 +2,7 @@
 title: Unit prices on purchase orders aren't calculated based on the unit conversion
 description: Provides a workaround for the issue that unit prices on purchase orders aren't calculated based on the unit conversion.
 author: Henrikan
-ms.date: 05/31/2021
+ms.date: 05/08/2024
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac

@@ -2,7 +2,7 @@
 title: Trade agreement conditions aren't applied to imported order lines
 description: Provides a workaround for the issue that trade agreement prices and discounts aren't applied on sales or purchase order lines that are imported through data management.
 author: Henrikan
-ms.date: 05/31/2021
+ms.date: 05/08/2024
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac

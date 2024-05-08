@@ -2,7 +2,7 @@
 title: Canceled purchase orders appear in the draft list in the workspace
 description: Provides a resolution for the issue that the canceled purchase orders still show in the draft list in the Purchase order preparation workspace.
 author: Henrikan
-ms.date: 05/31/2021
+ms.date: 05/08/2024
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac

@@ -2,7 +2,7 @@
 title: Reservations cannot be removed when canceling an order 
 description: Provides a resolution for the issue that you can't cancel a sales order until the work associated with that order is canceled and reversed.
 author: Henrikan 
-ms.date: 06/24/2021 
+ms.date: 05/08/2024
 ms.topic: troubleshooting 
 ms.search.form: SalesTable, SalesTableListPage, SalesTableListPage_SalesCancelOrder
 audience: Application User 
