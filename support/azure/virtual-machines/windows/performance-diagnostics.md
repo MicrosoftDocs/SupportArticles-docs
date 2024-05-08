@@ -20,11 +20,14 @@ ms.author: anandh
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
-Performance diagnostics offers two ways to identify and troubleshoot performance issues on your virtual machine (VM). Continuous diagnostics is a lightweight process that collects data at five-second intervals and reports insights about resource usage every five minutes. The on-demand diagnostics option helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. Performance diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
+Use the Performance Diagnostics identify and troubleshoot performance issues on your virtual machine (VM). You can run the tool in two modes: 
 
-You can run performance diagnostics directly from the Azure portal, where you can also review insights and a report on various logs, rich configuration, and diagnostics data. We recommend that you run performance diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
+- **Continuous performance diagnostics** is a lightweight process that collects data at five-second intervals and reports insights about resource usage every five minutes. 
+- **On-demand performance diagnostics** option helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. Performance diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
 
-This article explains how to use the performance diagnostics tool and what the continuous and on-demand performance diagnostics options offer. 
+Run Performance Diagnostics directly from the Azure portal, where you can also review insights and a report on various logs, rich configuration, and diagnostics data. We recommend that you run performance diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
+
+This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer. 
 
 > [!NOTE]
 > Continuous diagnostics is currently supported only on Windows.
