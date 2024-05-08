@@ -83,11 +83,11 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 1. From the list of VM names, select the VM that you want to run diagnostics on.
 1. In the **Help** section, select **Performance diagnostics**.
 
-    :::image type="content" source="media/performance-diagnostics/open-performance-diagnostics.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted.":::
+    :::image type="content" source="media/performance-diagnostics/open-performance-diagnostics.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted." lightbox="media/performance-diagnostics/open-performance-diagnostics.png":::
 
 1. Select the options to install and run for the tool.
 
-    :::image type="content" source="media/performance-diagnostics/install-and-run-context-pane.png" alt-text="Screenshot of the Install and run Performance Diagnostics context pane. The Enable continuous diagostics and Run on-demand diagnostics options are checked.":::
+    :::image type="content" source="media/performance-diagnostics/install-and-run-context-pane.png" alt-text="Screenshot of the Install and run Performance Diagnostics context pane. The Enable continuous diagostics and Run on-demand diagnostics options are checked." lightbox="media/performance-diagnostics/install-and-run-context-pane.png":::
 
     The following options are available:
 
@@ -130,7 +130,7 @@ After the on-demand performance analysis is complete, the following items are up
 
 After the upload, a new diagnostics report is listed in the Azure portal.
 
-:::image type="content" source="media/performance-diagnostics/diagnostics-report-list.png" alt-text="Screenshot of a list of diagnostics reports in the Performance diagnostics blade.":::
+:::image type="content" source="media/performance-diagnostics/diagnostics-report-list.png" alt-text="Screenshot of a list of diagnostics reports in the Performance diagnostics blade." lightbox="media/performance-diagnostics/diagnostics-report-list.png":::
 
 ## How to change performance diagnostics settings
 
@@ -148,7 +148,7 @@ Use the **Settings** toolbar button to change the storage account where the diag
 
 Continuous diagnostics provides a list of regularly updated continuous insights into affected resources. On-demand diagnostics provides a report each time a diagnostic run is completed. Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information that is collected, plus a report for offline viewing.
 
-:::image type="content" source="media/performance-diagnostics/insights-list-enabled-no-grouping.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list.":::
+:::image type="content" source="media/performance-diagnostics/insights-list-enabled-no-grouping.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list." lightbox="media/performance-diagnostics/insights-list-enabled-no-grouping.png":::
 
 You can disable continuous diagnostics, run on-demand diagnostics, uninstall performance diagnostics, and manage settings from the toolbar.
 
@@ -158,11 +158,11 @@ For a complete list of all the collected diagnostics data, see **What kind of in
 
 You can use the **Insights** list to find all the insights found by continuous and on-demand performance diagnostics. Each insight indicates an impact level of High, Medium, or Low. Each insight also contains recommendations to help lessen the concern. Insights are grouped for easy filtering. Select a row to view more details.
 
-:::image type="content" source="media/performance-diagnostics/performance-diagnostics-insight-details.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list.":::
+:::image type="content" source="media/performance-diagnostics/performance-diagnostics-insight-details.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list." lightbox="media/performance-diagnostics/performance-diagnostics-insight-details.png" :::
 
 Use the grouping dropdown to group or ungroup insights. You can group on-demand and continuous insights by impact level, category, insight, or recommendation.
 
-:::image type="content" source="media/performance-diagnostics/insights-list-enabled-grouping-insight.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list and highlighting the grouping dropdown.":::
+:::image type="content" source="media/performance-diagnostics/insights-list-enabled-grouping-insight.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list and highlighting the grouping dropdown." lightbox="media/performance-diagnostics/insights-list-enabled-grouping-insight.png":::
 
 Select the link in **Insights** for an insight in the list to display details about the insight, including impact level, recommendations, reference links, and the impacted resources for the virtual machine. For more information, see [Reviewing performance diagnostics insights and recommendations](#reviewing-performance-diagnostics-insights-and-recommendations).
 
@@ -172,7 +172,7 @@ For insights found by on-demand diagnostics, you can view or download the corres
 
 You can use the **Reports** list to find all the on-demand diagnostics reports that were run. The list includes details about the analysis that was used, insights that were found, and their impact levels. Select a row to view more details.
 
-:::image type="content" source="media/performance-diagnostics/select-report.png" alt-text="Screenshot of selecting a diagnostics report from Performance diagnostics blade.":::
+:::image type="content" source="media/performance-diagnostics/select-report.png" alt-text="Screenshot of selecting a diagnostics report from Performance diagnostics blade." lightbox="media/performance-diagnostics/select-report.png":::
 
 ### Review a performance diagnostics report
 
@@ -180,13 +180,13 @@ Each performance diagnostics report may contain several insights and indicate an
 
 Impact levels represent the potential for performance issues, based on factors such as misconfiguration, known problems, or issues that are reported by other users. You might not yet be experiencing one or more of the listed issues. For example, you might have SQL log files and database files on the same data disk. This condition has a high potential for bottlenecks and other performance issues if the database usage is high, whereas you might not notice an issue if the usage is low.
 
-:::image type="content" source="media/performance-diagnostics/performance-diagnostics-report-overview.png" alt-text="Screenshot of Performance diagnostics report overview blade.":::
+:::image type="content" source="media/performance-diagnostics/performance-diagnostics-report-overview.png" alt-text="Screenshot of Performance diagnostics report overview blade." lightbox="media/performance-diagnostics/performance-diagnostics-report-overview.png":::
 
 ### Reviewing performance diagnostics insights and recommendations
 
 You can select an insight to view more details about the affected resources, suggested mitigations, and reference links.
 
-:::image type="content" source="media/performance-diagnostics/insight-detail.png" alt-text="Screenshot of a Performance diagnostics insight detail.":::
+:::image type="content" source="media/performance-diagnostics/insight-detail.png" alt-text="Screenshot of a Performance diagnostics insight detail." lightbox="media/performance-diagnostics/insight-detail.png":::
 
 ### Download and review the full performance diagnostics report
 
@@ -203,7 +203,7 @@ You can delete one or more performance diagnostics reports by using the **Delete
 
 You can uninstall performance diagnostics from a VM. This action removes the VM extension but doesn't affect any diagnostics data that is in the storage account.
 
-:::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with Uninstall button highlighted.":::
+:::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with Uninstall button highlighted." lightbox="media/performance-diagnostics/uninstall-button.png":::
 
 ## Move Azure resources across regions
 
@@ -215,7 +215,9 @@ Azure VMs, and related network and storage resources, can be moved across region
 
 All performance diagnostics insights and reports are stored in your own storage account. Insights are stored inside Azure tables. The reports compressed file is stored in a binary large object (BLOB) container that is named azdiagextnresults.
 
-You can view the storage account information by using the Settings button on the toolbar.
+To view the storage account information, select the **Settings** button on the toolbar.
+
+:::image type="content" source="media/performance-diagnostics/performance-diagnostics-setting.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with Uninstall button highlighted." lightbox="media/performance-diagnostics/performance-diagnostics-setting.png":::
 
 ### How do I share this data with Microsoft Customer Support
 
