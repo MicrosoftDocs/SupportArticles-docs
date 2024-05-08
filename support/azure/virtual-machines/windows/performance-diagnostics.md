@@ -134,7 +134,15 @@ After the upload, a new diagnostics report is listed in the Azure portal.
 
 ## How to change performance diagnostics settings
 
-Use the **Settings** toolbar button to change the storage account where the diagnostics insights and output can be stored. You can use the same storage account for multiple VMs that use performance diagnostics. When you change the storage account, the old reports and insights aren't deleted. However, they'll no longer be displayed in the list of diagnostics reports.
+Select the **Settings** toolbar button to change the storage account where the diagnostics insights and output are stored. 
+
+:::image type="content" source="media/performance-diagnostics/performance-diagnostics-settings.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with the Settings button highlighted." lightbox="media/performance-diagnostics/performance-diagnostics-settings.png":::
+
+This opens the **Performance diagnostic settings** screen. Select **Change storage account** to select a different storage account.
+
+:::image type="content" source="media/performance-diagnostics/change-storage-settings.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with the Settings button highlighted." lightbox="media/performance-diagnostics/change-storage-settings.png":::
+
+You can use the same storage account for multiple VMs that use performance diagnostics. When you change the storage account, the old reports and insights aren't deleted. However, they'll no longer be displayed in the list of diagnostics reports.
 
 > [!NOTE]
 > Performance diagnostics insights and reports are stored in your own storage account. Insights are stored in Azure Tables, and reports are stored as compressed files in a binary large object (BLOB) container that is named *azdiagextnresults*.
@@ -217,7 +225,6 @@ All performance diagnostics insights and reports are stored in your own storage 
 
 To view the storage account information, select the **Settings** button on the toolbar.
 
-:::image type="content" source="media/performance-diagnostics/performance-diagnostics-settings.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with the Settings button highlighted." lightbox="media/performance-diagnostics/performance-diagnostics-settings.png":::
 
 ### How do I share this data with Microsoft Customer Support
 
