@@ -198,14 +198,14 @@ Impact levels represent the potential for performance issues, based on factors s
 
 ### Download and review the full performance diagnostics report
 
-You can use the **Download report** button to download an HTML report that contains richer diagnostics information, such as storage and network configuration, performance counters, traces, list of processes, and logs. The content depends on the selected analysis. For advanced troubleshooting, the report might contain additional information and interactive charts that are related to high CPU usage, high disk usage, and processes that consume excessive memory. For more information about the performance diagnostics report, see [Windows](how-to-use-perfinsights.md#review-the-diagnostics-report) or [Linux](../linux/how-to-use-perfinsights-linux.md#review-the-diagnostics-report).
+Select the **Download report** button to download an HTML report that contains richer diagnostics information, such as storage and network configuration, performance counters, traces, list of processes, and logs. The content depends on the selected analysis. For advanced troubleshooting, the report might contain additional information and interactive charts that are related to high CPU usage, high disk usage, and processes that consume excessive memory. For more information about the performance diagnostics report, see [Windows](how-to-use-perfinsights.md#review-the-diagnostics-report) or [Linux](../linux/how-to-use-perfinsights-linux.md#review-the-diagnostics-report).
 
 > [!NOTE]
 > Performance diagnostics reports can be downloaded from the **Performance Diagnostics** blade within 30 days after they are created. After 30 days, you may get an error when you download a report from the **Performance Diagnostics** blade. To get a report after 30 days, go to the storage account and download it from a binary large object (BLOB) container that's named *azdiagextnresults*. You can view the storage account information by using the **Settings** button on the toolbar.
 
 ## Manage performance diagnostics reports
 
-You can delete one or more performance diagnostics reports by using the **Delete report** button.
+Delete one or more performance diagnostics reports by selecting the **Delete report** button.
 
 ## How to uninstall performance diagnostics
 
@@ -238,7 +238,7 @@ There are multiple ways to share the diagnostics report with Microsoft.
 When you open a support ticket with Microsoft, it's important to share the performance diagnostics report. If you opt to share this information with Microsoft while you run the diagnostics (by selecting the "**I agree to share diagnostics information with Microsoft**" check box), Microsoft can access the report from your storage account using a SAS link to the output zip file for up to 30 days from the run date. Only the latest report is available to the support engineer.
 
 **Option 2:** Generate a Shared Access Signature for the diagnostics report compressed file  
-You can share a link to the reports compressed file by using Shared Access Signatures. To do this:
+To share a link to the reports compressed file by using Shared Access Signatures:
 
 1. In the Azure portal, browse to the storage account in which the diagnostics data is stored.
 1. Select **Containers** under the **Data Storage** section.".
