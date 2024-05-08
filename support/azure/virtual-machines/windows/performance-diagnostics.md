@@ -42,7 +42,7 @@ This article explains how to use Performance Diagnostics and what the continuous
 
 ## Permissions required
 
-To view insights and reports, you need to be assigned the `Storage Account Contributor` role. 
+To view performance diagnostics insights and reports, you need to be assigned the `Storage Account Contributor` role to the storage account in which these files are stored. 
 
 ## Supported operating systems
 
