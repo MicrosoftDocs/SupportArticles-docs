@@ -22,7 +22,7 @@ appliesto:
 
 # Errors when you rename a SharePoint domain  
 
-This article lists common error messages that you might receive when you change a Microsoft SharePoint (SPO) domain. By using the information in each message, you can determine why the SharePoint domain can't be renamed and how to fix the error.
+This article lists common error messages that you might receive when you change a Microsoft SharePoint Online (SPO) domain. By using the information in each message, you can determine why the SharePoint domain can't be renamed and how to fix the error.
 
 ## Errors
 
