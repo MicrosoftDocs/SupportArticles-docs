@@ -26,4 +26,12 @@ Or
 1. Navigate to the **Dynamics 365 Finance and Operations Data Management Workspace**
 2. Find the corresponding **Demand Planning Data Management project** looking like **DP-XML-NameOfEntity-NameOfProfile**
 3. Select on the execution details and find the reason why the project failed.
-4. The error should contain more information on the reason this happened. Depending on the message make sure you read the **Import failing because of special characters** or **Import failing because of insufficient permissions** troubleshooting guides.
+4. The error should contain more information on the reason this happened. Depending on the message make sure you review our troubleshooting guides:
+
+   [Import failing with a forbidden error.](/forbidden.md)
+
+   [Import failing because of time-out.](/project-time-out.md)
+
+   [Import failing because of special characters.](/special-characters.md)
+
+   [Import failing because of insufficient permissions.](/user-insufficient-permissions.md)
