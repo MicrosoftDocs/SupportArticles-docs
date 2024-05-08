@@ -2,6 +2,7 @@
 title: Write binary files to the browser
 description: This article creates a sample page that demonstrates how to use Visual C# .NET to retrieve binary data from a file and then write the data out to the browser. 
 ms.date: 07/28/2020
+ms.custom: sap:General Development
 ms.topic: how-to
 ---
 # Use ASP.NET and Visual C# .NET to write binary files to the browser

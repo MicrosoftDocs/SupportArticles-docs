@@ -3,6 +3,7 @@ title: Things to check when high memory occurs
 description: This article describes quick things to check when you experience high memory in ASP.NET.
 ms.date: 07/28/2020
 ms.reviewer: mgraham
+ms.custom: sap:Performance
 ---
 # Quick things to check when you experience high memory levels in ASP.NET
 
