@@ -10,19 +10,19 @@ ms.custom: sap:Tools and Connectors
 
 Data API builder is distributed as a NuGet package and can be installed using a .NET tool. This article provides solutions to common issues that might occur when you install Data API builder.
 
-## .NET 6 isn't installed
+## .NET 8 isn't installed
 
-Data API builder requires .NET 6 to be installed on your machine. If you don't have .NET 6 installed, you can install it by following the instructions in [Install .NET on Windows, Linux, and macOS](/dotnet/core/install/) or [Download .NET 6.0](https://dotnet.microsoft.com/download/dotnet/6.0).
+Data API builder requires .NET 8 to be installed on your machine. If you don't have .NET 8 installed, you can install it by following the instructions in [Install .NET on Windows, Linux, and macOS](/dotnet/core/install/) or [Download .NET 8.0](https://dotnet.microsoft.com/download/dotnet/6.0).
 
-## Issue when installing .NET 6 on Ubuntu 22
+## Issue when installing .NET 8 on Ubuntu 22
 
-Installing .NET 6 on Ubuntu 22 can be tricky as the .NET package is available in both the Ubuntu repository and Microsoft repository, which can lead to conflicts or errors.
+Installing .NET 8 on Ubuntu 22 can be tricky as the .NET package is available in both the Ubuntu repository and Microsoft repository, which can lead to conflicts or errors.
 
 For example, when you execute the `dotnet` command on Linux, you might receive an error like the following example:
 
 > A fatal error occurred. The folder [/usr/share/dotnet/host/fxr] does not exist.
 
-To ensure you can install .NET 6 on Ubuntu successfully, review the installation instructions in the [Overview of .NET on Ubuntu](/dotnet/core/install/linux-ubuntu#im-using-ubuntu-2204-or-later-and-i-only-need-net).
+To ensure you can install .NET 8 on Ubuntu successfully, review the installation instructions in the [Overview of .NET on Ubuntu](/dotnet/core/install/linux-ubuntu#im-using-ubuntu-2204-or-later-and-i-only-need-net).
 
 ## Issue when installing Data API builder using a .NET tool
 
