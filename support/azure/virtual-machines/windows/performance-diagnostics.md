@@ -217,7 +217,7 @@ All performance diagnostics insights and reports are stored in your own storage 
 
 To view the storage account information, select the **Settings** button on the toolbar.
 
-:::image type="content" source="media/performance-diagnostics/performance-diagnostics-setting.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with Uninstall button highlighted." lightbox="media/performance-diagnostics/performance-diagnostics-setting.png":::
+:::image type="content" source="media/performance-diagnostics/performance-diagnostics-settings.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with the Settings button highlighted." lightbox="media/performance-diagnostics/performance-diagnostics-settings.png":::
 
 ### How do I share this data with Microsoft Customer Support
 
