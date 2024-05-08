@@ -25,7 +25,7 @@ Use the Performance Diagnostics tool to identify and troubleshoot performance is
 - **Continuous diagnostics (preview)** is a lightweight process that collects data at five-second intervals and reports insights about resource usage every five minutes. 
 - **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. Performance diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
 
-Run Performance Diagnostics directly from the Azure portal, where you can also review insights and a report on various logs, rich configuration, and diagnostics data. We recommend that you run performance diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
+You run Performance Diagnostics directly from the Azure portal, where you can also review insights and a report on various logs, rich configuration, and diagnostics data. We recommend that you run performance diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
 
 This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer. 
 
