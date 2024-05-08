@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: yanansong
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.15
+ms.custom: sap:Cost management\Issues with inventory value and aging report
 ---
 
 # Inventory aging report discrepancies

@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: chuzheng
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Inventory management
 ---
 
 # Multiple inventory transactions for batch numbers when On physical update is disabled

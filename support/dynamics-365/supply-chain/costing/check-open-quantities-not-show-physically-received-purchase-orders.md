@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: yanansong
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Cost management\Issues with inventory closing and recalculation
 ---
 
 # Physically received purchase orders don't appear on the inventory closing report

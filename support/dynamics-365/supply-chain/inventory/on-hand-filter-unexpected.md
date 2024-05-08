@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: chuzheng
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.16
+ms.custom: sap:Inventory management
 ---
 
 # The filter pane on the On-hand list page doesn't work as expected

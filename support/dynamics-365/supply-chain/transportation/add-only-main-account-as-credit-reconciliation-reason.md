@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: weijiesa
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Transportation management\Issues with load operations
 ---
 
 # You can add only the main account as the credit account for reconciliation reasons

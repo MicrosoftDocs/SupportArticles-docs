@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: chuzheng
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.16
+ms.custom: sap:Inventory management\Issues with the inventory journal
 ---
 
 # Inventory journal workflow conditions apply at the journal level, not line level
