@@ -89,7 +89,6 @@ This section lists various causes that are related to aspects such as database, 
 
 - [Database is offline](#database-is-offline)
 - [Database permissions](#database-permissions)
-- [User has not logged in](#user-has-not-logged-in)
 - [Linked server connectivity errors in SQL Server](#linked-server-connectivity-errors-in-sql-server)
 - [Proxy account doesn't have permissions](#proxy-account-doesnt-have-permissions)
 - [Unable to log in to SQL Server database](#unable-to-log-in-to-sql-server-database)
@@ -198,10 +197,6 @@ Refers to a scenario in which a SQL Server database tries to reconnect to a SQL 
 ### Database permissions
 
 Refers to enabling or restricting access to SQL Server database. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
-
-### User has not logged in
-
-Refers to the Anonymous Logon Account error. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
 ### Linked server connectivity errors in SQL Server
 
