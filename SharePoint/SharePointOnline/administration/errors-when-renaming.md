@@ -1,6 +1,6 @@
 ---
 title: Errors when you rename a SharePoint domain
-description: Explains error codes and messages that can happen when you rename a SharePoint (SPO) domain.
+description: Explains error codes and messages that can occur when you rename a SharePoint (SPO) domain.
 author: helenclu
 ms.reviewer: PramodBalusu
 ms.author: luche
@@ -22,21 +22,21 @@ appliesto:
 
 # Errors when you rename a SharePoint domain  
 
-This article lists common error messages that you might encounter when you change a SharePoint domain. Based on the information in each message, you can determine why the SharePoint domain can't be renamed and how to fix the error.
+This article lists common error messages that you might receive when you change a Microsoft SharePoint (SPO) domain. By using the information in each message, you can determine why the SharePoint domain can't be renamed and how to fix the error.
 
 ## Errors
 
 |Error code|Error message|Details|Solution|
 |---|---|---|---|
 |755|SPO Tenant Rename is already in progress.|Tenant renaming is in progress. Can't trigger a tenant renaming until the first one completes.|Wait for the current tenant renaming to be completed.|
-|756|An unexpected error occurred while trying to update the tenant URLs.|An unexpected run time error occurred when starting the tenant renaming job.|Retry the renaming action after some time.|
-|757|The domain name isn't valid.|The domain name isn't in the list of verified domains for the tenant.|Add a verified domain and start a renaming using the domain.|
-|758|The domain name isn't valid.|The domain name could either be null, empty; is longer than 48 characters; or contains a dash or special characters.|The domain name you're trying to use isn't in a valid format. The `-DomainName` parameter should only be the name portion of the domain. For example, if the domain is `fabrikam.onmicrosoft.com`, the parameter would be just `fabrikam`.|
-|759|SharePoint Online Tenant Rename isn't supported for your tenant.|The tenant has a Microsoft Business Productivity Online Suite (BPOS) site and renaming isn't supported.<br/>These sites were created several years ago when SharePoint Online was still called Business Productivity Office Suite (BPOS).|BPOS sites and its configuration need to be removed before scheduling of tenant renaming can be attempted.<br/>Submit a support request by selecting [Rename a SharePoint Tenant with BPOS sites](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20with%20BPOS%20sites)|
-|760|A site at [site URL] already exists.|Both source and target sites are sites created with redirect templates that aren't supported for renaming. The template of the target site isn't in the allowed templates (redirect site).|Remove target sites that have a redirect template and try to rename them again.|
+|756|An unexpected error occurred while trying to update the tenant URLs.|An unexpected run-time error occurred when you started the tenant renaming job.|Retry the renaming action after some time passes.|
+|757|The domain name isn't valid.|The domain name isn't in the list of verified domains for the tenant.|Add a verified domain, and start a renaming by using the domain.|
+|758|The domain name isn't valid.|The domain name could be null (empty), is longer than 48 characters. or contains a hyphen or special characters.|The domain name that you're trying to use isn't in a valid format. The `-DomainName` parameter should be only the name portion of the domain. For example, if the domain is `fabrikam.onmicrosoft.com`, the parameter would be only `fabrikam`.|
+|759|SharePoint Online Tenant Rename isn't supported for your tenant.|The tenant has a Microsoft Business Productivity Online Suite (BPOS) site for which renaming isn't supported.<br/>These sites were created several years ago when SharePoint Online was named Business Productivity Office Suite (BPOS).|BPOS sites and its configuration must be removed before you can schedule tenant renaming.<br/>Submit a support request by selecting [Rename a SharePoint Tenant with BPOS sites](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20with%20BPOS%20sites)|
+|760|A site at [site URL] already exists.|Both the source and target sites have redirect templates that aren't supported for renaming. The template of the target site isn't in the allowed templates (redirect site).|Remove target sites that have a redirect template, and then try again to rename them.|
 |763|There are no sites to rename.|There are no sites to be renamed.|The tenant has no sites to be renamed.|
-|768|SPO Tenant Rename can't be restarted because the current state is {0}.|The tenant renaming job is either suspended, queued, or in progress.|Wait for the tenant renaming job to complete.|
-|769|The domain name can't be the same as the current name.|Original and target domain are the same.|Use a target domain name different from the original domain name.|
+|768|SPO Tenant Rename can't be restarted because the current state is {0}.|The tenant renaming job is either suspended, queued, or in progress.|Wait for the tenant renaming job to finish.|
+|769|The domain name can't be the same as the current name.|Original and target domain are the same.|Use a target domain name that's different from the original domain name.|
 |770|SPO Tenant Rename is currently blocked.|Tenant renaming is blocked because the server is busy.|Retry the renaming action after some time.|
 |771|SPO Tenant Rename is currently blocked.|Tenant renaming is blocked as the tenant is undergoing a move.|Retry the renaming action after some time.|
 |772|Scheduled date/time must be 24 hours in the future.|Scheduled time is less than 24 hours from the current time.|Provide schedule time greater than 24 hours and start the renaming.|
