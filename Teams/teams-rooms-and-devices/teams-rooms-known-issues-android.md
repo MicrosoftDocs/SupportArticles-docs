@@ -24,7 +24,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/22/2024
+ms.date: 05/06/2024
 ---
 # Known issues with Teams Rooms on Android
 
