@@ -23,7 +23,7 @@ ms.author: anandh
 Use the Performance Diagnostics tool to identify and troubleshoot performance issues on your virtual machine (VM). You can run the tool in two modes: 
 
 - **Continuous performance diagnostics** is a lightweight process that collects data at five-second intervals and reports insights about resource usage every five minutes. 
-- **On-demand performance diagnostics** option helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. Performance diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
+- **On-demand performance diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. Performance diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
 
 Run Performance Diagnostics directly from the Azure portal, where you can also review insights and a report on various logs, rich configuration, and diagnostics data. We recommend that you run performance diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
 
@@ -83,15 +83,7 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 1. From the list of VM names, select the VM that you want to run diagnostics on.
 1. In the **Help** section, select **Performance diagnostics**.
 
-    :::image type="content" source="media/performance-diagnostics/open-performance-diag.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted.":::
-
-1. Select the **Install diagnostics** button to start the installation process for the tool.
-
-    :::image type="content" source="media/performance-diagnostics/install-diagnostics-button.png" alt-text="Screenshot of Install diagnostics button.":::
-
-1. Select the **Choose and install** button to choose options for and install the tool.
-
-    :::image type="content" source="media/performance-diagnostics/choose-and-install-button.png" alt-text="Screenshot of Choose and install button.":::
+    :::image type="content" source="media/performance-diagnostics/open-performance-diagnostics.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted.":::
 
 1. Select the options to install and run for the tool.
 
