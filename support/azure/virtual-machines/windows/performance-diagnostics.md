@@ -219,14 +219,18 @@ Azure VMs, and related network and storage resources, can be moved across region
 
 ## Frequently asked questions
 
-### Where is the diagnostics data from my VM stored
+### Where is the diagnostics data from my VM stored?
 
-All performance diagnostics insights and reports are stored in your own storage account. Insights are stored inside Azure tables. The reports compressed file is stored in a binary large object (BLOB) container that is named azdiagextnresults.
+All performance diagnostics insights and reports are stored in your own storage account. 
 
-To view the storage account information, select the **Settings** button on the toolbar.
+To view the storage account information, select the **Settings** button on the toolbar. For more information, see [How to change performance diagnostics settings](#how-to-change-performance-diagnostics-settings).
+
+Insights are stored inside Azure tables. The reports compressed file is stored in a binary large object (BLOB) container that is named `azdiagextnresults`. To view these files, navigate to your storage account, select **Storage browser**.
+
+:::image type="content" source="media/performance-diagnostics/performance-diagnostics-storage-browser.png" alt-text="Screenshot of the storage account blade that shows the performance diagnostics insights and report files." lightbox="media/performance-diagnostics/performance-diagnostics-storage-browser.png":::
 
 
-### How do I share this data with Microsoft Customer Support
+### How do I share this data with Microsoft Customer Support?
 
 There are multiple ways to share the diagnostics report with Microsoft.
 
@@ -248,7 +252,7 @@ You can share a link to the reports compressed file by using Shared Access Signa
 
 You can also locate the performance diagnostics report compressed file by using steps 1–4 in Option 2. Select to download the file, and then share it through email or ask the support engineer for instructions to upload the file.  
 
-### How do I capture the diagnostics data at the correct time
+### How do I capture the diagnostics data at the correct time?
 
 Each performance diagnostics run has two stages:
 
