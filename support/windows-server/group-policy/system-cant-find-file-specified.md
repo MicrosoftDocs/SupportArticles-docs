@@ -108,4 +108,4 @@ Notes
 - Gpprep was introduced in Windows Server 2003.
 - Disjoint namespaces aren't a Microsoft best practice.
 
-For more information about Disjoint Namespace support and limitations in AD DS, see [Disjoint Namespace](/previous-versions/windows/it-pro/windows-server-2003/cc731125%28v=ws.10%29.aspx).
+For more information about Disjoint Namespace support and limitations in AD DS, see [Disjoint Namespace](/windows-server/identity/ad-ds/plan/disjoint-namespace).
