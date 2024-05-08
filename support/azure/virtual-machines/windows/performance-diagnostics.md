@@ -158,7 +158,7 @@ For a complete list of all the collected diagnostics data, see **What kind of in
 
 You can use the **Insights** list to find all the insights found by continuous and on-demand performance diagnostics. Each insight indicates an impact level of High, Medium, or Low. Each insight also contains recommendations to help lessen the concern. Insights are grouped for easy filtering. Select a row to view more details.
 
-:::image type="content" source="media/performance-diagnostics/insights-list-enabled-no-grouping.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list.":::
+:::image type="content" source="media/performance-diagnostics/performance-diagnostics-insight-details.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list.":::
 
 Use the grouping dropdown to group or ungroup insights. You can group on-demand and continuous insights by impact level, category, insight, or recommendation.
 
