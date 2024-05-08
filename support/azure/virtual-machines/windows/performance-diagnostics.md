@@ -20,7 +20,7 @@ ms.author: anandh
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
-Use the Performance Diagnostics identify and troubleshoot performance issues on your virtual machine (VM). You can run the tool in two modes: 
+Use the Performance Diagnostics tool to identify and troubleshoot performance issues on your virtual machine (VM). You can run the tool in two modes: 
 
 - **Continuous performance diagnostics** is a lightweight process that collects data at five-second intervals and reports insights about resource usage every five minutes. 
 - **On-demand performance diagnostics** option helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. Performance diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
