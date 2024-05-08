@@ -40,6 +40,9 @@ This article explains how to use Performance Diagnostics and what the continuous
 > [!NOTE]
 > To run performance diagnostics on classic VMs, see [Azure Performance Diagnostics VM extension](performance-diagnostics-vm-extension.md).
 
+## Permissions required
+
+To view insights and reports, you need to be assigned the `Storage Account Contributor` role. 
 
 ## Supported operating systems
 
