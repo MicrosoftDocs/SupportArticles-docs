@@ -22,8 +22,8 @@ ms.author: anandh
 
 Use the Performance Diagnostics tool to identify and troubleshoot performance issues on your virtual machine (VM). You can run the tool in two modes: 
 
-- **Continuous performance diagnostics** is a lightweight process that collects data at five-second intervals and reports insights about resource usage every five minutes. 
-- **On-demand performance diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. Performance diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
+- **Continuous diagnostics (preview)** is a lightweight process that collects data at five-second intervals and reports insights about resource usage every five minutes. 
+- **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. Performance diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
 
 Run Performance Diagnostics directly from the Azure portal, where you can also review insights and a report on various logs, rich configuration, and diagnostics data. We recommend that you run performance diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
 
@@ -34,7 +34,8 @@ This article explains how to use Performance Diagnostics and what the continuous
 
 ## Prerequisites
 
-To run continuous and on-demand diagnostics on Windows, [install .NET SDK](/dotnet/core/install/windows) version 4.5 or a later. 
+* To run continuous and on-demand diagnostics on Windows, [install .NET SDK](/dotnet/core/install/windows) version 4.5 or a later. 
+* Continuous on-demand diagnostics is dependent on preview feature availability in your region. For more information, see [Determine availability](#determine-availability-of-continuous-diagnostics).
 
 > [!NOTE]
 > To run performance diagnostics on classic VMs, see [Azure Performance Diagnostics VM extension](performance-diagnostics-vm-extension.md).
@@ -75,6 +76,10 @@ The following distributions are currently supported for on-demand diagnostics:
 > [!NOTE]
 > [`*`] See [Known issues](../linux/how-to-use-perfinsights-linux.md#known-issues)
 
+## Determine availability of continuous diagnostics 
+
+To determine availability of continuous diagnostics, follow the [installation instructions](#install-and-run-performance-diagnostics-on-your-vm)
+
 ## Install and run performance diagnostics on your VM
 
 Performance diagnostics installs a VM extension that runs a diagnostics tool that is named PerfInsights. PerfInsights is available for both [Windows](how-to-use-perfinsights.md) and [Linux](../linux/how-to-use-perfinsights-linux.md). To install and run performance diagnostics, follow these steps:
@@ -85,6 +90,7 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 
     :::image type="content" source="media/performance-diagnostics/open-performance-diagnostics.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted." lightbox="media/performance-diagnostics/open-performance-diagnostics.png":::
 
+1. Select **Install performance diagnostics**
 1. Select the options to install and run for the tool.
 
     :::image type="content" source="media/performance-diagnostics/install-and-run-context-pane.png" alt-text="Screenshot of the Install and run Performance Diagnostics context pane. The Enable continuous diagostics and Run on-demand diagnostics options are checked." lightbox="media/performance-diagnostics/install-and-run-context-pane.png":::
