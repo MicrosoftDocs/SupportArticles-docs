@@ -23,7 +23,7 @@ Before you start to troubleshoot errors, it's important to understand what each 
 
 Before you start troubleshooting, work through the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) checklist and make sure you have the following information ready:
 
-- Make sure that you install the WIRESHARK and Problem Steps Recorder (PSR.exe) tools. For more information, see *Methods of collecting data for troubleshooting various types of errors*.
+- Make sure that you install the [WireShark](https://www.wireshark.org/download.html) and [Problem Steps Recorder (PSR.exe)](/office/troubleshoot/settings/how-to-use-problem-steps-recorder) tools. For more information, see *Methods of collecting data for troubleshooting various types of errors*.
 
 - Collect the Service Provider Name (SPN) information that's based on the service accounts. To do this, use the `SETSPN -L` command.
 
@@ -233,3 +233,5 @@ This section lists issues related to the authentication and access control withi
 - **IIS Authentication isn't allowed** - This issue occurs due to misconfigurations in the IIS. The authentication settings defined in the web.config file of the web application may conflict with the settings configured in IIS, leading to authentication issues. To resolve this issue, configure the website to enable Windows Authentication and set the `<identity impersonate="true"/>` value in the *Web.config* file.
 
 - **Wrong Internet zone** - This might occur if you try to access a website that isn't in the correct Internet zone in Internet Explorer. The credentials won't work if the website is in the local Intranet zone.
+
+[!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
