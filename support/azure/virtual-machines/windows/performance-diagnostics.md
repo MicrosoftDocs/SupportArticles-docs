@@ -35,7 +35,7 @@ This article explains how to use Performance Diagnostics and what the continuous
 ## Prerequisites
 
 * To run continuous and on-demand diagnostics on Windows, [install .NET SDK](/dotnet/core/install/windows) version 4.5 or a later. 
-* Continuous on-demand diagnostics is dependent on preview feature availability in your region. For more information, see [Determine availability](#determine-availability-of-continuous-diagnostics).
+* Continuous diagnostics is being rolled out gradually. If the preview feature is available for your machines, you'll see the option to enable both the on demand and contiuous diagnostics options, as described in [Install and run performance diagnostics on your VM](#install-and-run-performance-diagnostics-on-your-vm).
 
 > [!NOTE]
 > To run performance diagnostics on classic VMs, see [Azure Performance Diagnostics VM extension](performance-diagnostics-vm-extension.md).
@@ -76,10 +76,6 @@ The following distributions are currently supported for on-demand diagnostics:
 > [!NOTE]
 > [`*`] See [Known issues](../linux/how-to-use-perfinsights-linux.md#known-issues)
 
-## Determine availability of continuous diagnostics 
-
-To determine availability of continuous diagnostics, follow the [installation instructions](#install-and-run-performance-diagnostics-on-your-vm)
-
 ## Install and run performance diagnostics on your VM
 
 Performance diagnostics installs a VM extension that runs a diagnostics tool that is named PerfInsights. PerfInsights is available for both [Windows](how-to-use-perfinsights.md) and [Linux](../linux/how-to-use-perfinsights-linux.md). To install and run performance diagnostics, follow these steps:
@@ -90,7 +86,7 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 
     :::image type="content" source="media/performance-diagnostics/open-performance-diagnostics.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted." lightbox="media/performance-diagnostics/open-performance-diagnostics.png":::
 
-1. Select **Install performance diagnostics**
+1. Select **Enable performance diagnostics**
 1. Select the options to install and run for the tool.
 
     :::image type="content" source="media/performance-diagnostics/install-and-run-context-pane.png" alt-text="Screenshot of the Install and run Performance Diagnostics context pane. The Enable continuous diagostics and Run on-demand diagnostics options are checked." lightbox="media/performance-diagnostics/install-and-run-context-pane.png":::
@@ -162,7 +158,11 @@ You can use the same storage account for multiple VMs that use performance diagn
 
 Continuous diagnostics provides a list of regularly updated continuous insights into affected resources. On-demand diagnostics provides a report each time a diagnostic run is completed. Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information that is collected, plus a report for offline viewing.
 
+To view insights, select the **Performance Diagnostics insights** tab on the **Performance diagnostics** screen.  
+
 :::image type="content" source="media/performance-diagnostics/insights-list-enabled-no-grouping.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list." lightbox="media/performance-diagnostics/insights-list-enabled-no-grouping.png":::
+
+Select **Refresh** to view newly generated continuous diagnostics insights.
 
 You can disable continuous diagnostics, run on-demand diagnostics, uninstall performance diagnostics, and manage settings from the toolbar.
 
@@ -170,15 +170,15 @@ For a complete list of all the collected diagnostics data, see **What kind of in
 
 ### Select an insight
 
-You can use the **Insights** list to find all the insights found by continuous and on-demand performance diagnostics. Each insight indicates an impact level of High, Medium, or Low. Each insight also contains recommendations to help lessen the concern. Insights are grouped for easy filtering. Select a row to view more details.
+Each row insight on the  **Performance Diagnostics insights** tab indicates an impact level and related recommendations. Select a row to view more details.
 
 :::image type="content" source="media/performance-diagnostics/performance-diagnostics-insight-details.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list." lightbox="media/performance-diagnostics/performance-diagnostics-insight-details.png" :::
 
-Use the grouping dropdown to group or ungroup insights. You can group on-demand and continuous insights by impact level, category, insight, or recommendation.
+Use filters to retrieve insights by timestamp, impact, category, or diagnostic type.
+
+Use the grouping dropdown to group or ungroup insights. You can group on-demand and continuous insights by category, insight, or recommendation.
 
 :::image type="content" source="media/performance-diagnostics/insights-list-enabled-grouping-insight.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list and highlighting the grouping dropdown." lightbox="media/performance-diagnostics/insights-list-enabled-grouping-insight.png":::
-
-Select the link in **Insights** for an insight in the list to display details about the insight, including impact level, recommendations, reference links, and the impacted resources for the virtual machine. For more information, see [Reviewing performance diagnostics insights and recommendations](#reviewing-performance-diagnostics-insights-and-recommendations).
 
 For insights found by on-demand diagnostics, you can view or download the corresponding performance diagnostics report for an insight in the list by selecting **View** or **Download**, respectively. For more information, see [Download and review the full performance diagnostics report](#download-and-review-the-full-performance-diagnostics-report).
 
@@ -195,12 +195,6 @@ Each performance diagnostics report may contain several insights and indicate an
 Impact levels represent the potential for performance issues, based on factors such as misconfiguration, known problems, or issues that are reported by other users. You might not yet be experiencing one or more of the listed issues. For example, you might have SQL log files and database files on the same data disk. This condition has a high potential for bottlenecks and other performance issues if the database usage is high, whereas you might not notice an issue if the usage is low.
 
 :::image type="content" source="media/performance-diagnostics/performance-diagnostics-report-overview.png" alt-text="Screenshot of Performance diagnostics report overview blade." lightbox="media/performance-diagnostics/performance-diagnostics-report-overview.png":::
-
-### Reviewing performance diagnostics insights and recommendations
-
-You can select an insight to view more details about the affected resources, suggested mitigations, and reference links.
-
-:::image type="content" source="media/performance-diagnostics/insight-detail.png" alt-text="Screenshot of a Performance diagnostics insight detail." lightbox="media/performance-diagnostics/insight-detail.png":::
 
 ### Download and review the full performance diagnostics report
 
