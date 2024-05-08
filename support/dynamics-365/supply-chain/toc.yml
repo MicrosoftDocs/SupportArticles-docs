@@ -168,12 +168,6 @@
       href: products/cannot-import-item-with-released-products-v-2-entity.md
 - name: Manufacturing and Production
   items:
-    - name: Backflush costing calculation error during inventory closing
-      href: production/backflush-costing-calculation-error.md
-    - name: Batch number is cleared on selecting a new lot ID
-      href: production/batch-number-cleared-new-lot-id-selected.md
-    - name: Can't end a production order because of a BOM consumptionCost value error
-      href: production/bom-consumption-cost-error.md
     - name: Can't insert bill of material and route when creating a new production order
       href: production/cant-insert-bom-route-number.md
     - name: Can't trace serial numbers of finished goods against those of consumed goods
@@ -190,8 +184,6 @@
       href: production/item-rm-not-reserved.md
     - name: Late selection not respected when resetting production orders via batch job
       href: production/late-selection-not-respected-reset-status-recurring-batch-job.md
-    - name: Previous in-progress jobs are ended when reporting partial quantity on last job
-      href: production/in-progress-jobs-ended.md
     - name: Production orders aren't shown on the Marking page
       href: production/production-orders-marking-page.md
     - name: Report as finished update fails with a missing quantity error
@@ -210,18 +202,10 @@
       href: rebates/cumulate-customer-rebates-fails.md
 - name: Sales order processing
   items:
-    - name: A bundle item isn't supported in an intercompany process
-      href: sales/bundle-item-intercompany-process.md
-    - name: Can't cancel an intercompany purchase order that's linked to a sales order
-      href: sales/cancel-intercompany-purchase-order.md
-    - name: Can't change the sales quantity of a service item on a sales quotation line
-      href: sales/service-item-sales-quantity.md
     - name: If two trade agreements exist for overlapping dates, the same one is always selected
       href: sales/same-trade-agreement-selected.md
     - name: Reservations cannot be removed when canceling an order
       href: sales/cancel-order-reservations-not-removed.md
-    - name: Sales update history cleanup job fails or has performance issues
-      href: sales/sales-update-history-cleanup-job-performance-issues.md
     - name: System administrators can't clear order holds because they aren't authorized
       href: sales/system-administrator-cant-clear-order-holds.md
     - name: Tax information isn't updated if location on a sales order header is changed

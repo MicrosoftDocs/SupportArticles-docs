@@ -11049,6 +11049,46 @@
       "source_path": "support/sql/database-engine/connect/bad-server-name-connection-string-error.md",
       "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/backflush-costing-calculation-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/batch-number-cleared-new-lot-id-selected.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/bom-consumption-cost-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/in-progress-jobs-ended.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/bundle-item-intercompany-process.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/cancel-intercompany-purchase-order.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/sales-update-history-cleanup-job-performance-issues.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/service-item-sales-quantity.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    }    
   ]
 }
