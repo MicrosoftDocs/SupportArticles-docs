@@ -4,8 +4,8 @@ description: Describes why users need to upgrade Azure Linux virtual machines ru
 ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS)
 ms.topic: article
-ms.date: 05/08/2024
-ms.reviewer: clausw, divargas, rondom, azurevmlnxcic, v-weizhu
+ms.date: 05/09/2024
+ms.reviewer: patcatun, clausw, divargas, rondom, azurevmlnxcic, v-weizhu
 ---
 # Canonical Ubuntu 18.04 LTS is out of standard support on May 31, 2023
 
