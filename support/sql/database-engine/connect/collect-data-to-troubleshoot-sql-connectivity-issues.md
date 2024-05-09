@@ -1,7 +1,7 @@
 ---
-title: Collect data to troubleshoot connectivity issues in SQL Server
+title: Troubleshoot SQL connectivity issues through data collection
 description: This article provides questions based on several components that you can use to effectively troubleshoot SQL Server connectivity issues.
-ms.date: 05/03/2024
+ms.date: 05/09/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, prmadhes, v-jayaramanp, haiyingyu
@@ -10,25 +10,15 @@ ms.custom: sap:Connection issues
 
 # Collect data to troubleshoot SQL Server connectivity issues
 
-This section provides a comprehensive list of questions that are classified based on specific categories. Although the ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md) article includes the most important items to be collected, the questions in this article can help you troubleshoot SQL Server more effectively by ruling out many scenarios and narrowing your focus.
+This article provides a comprehensive list of questions that are classified based on specific categories. It also describes the method of collecting data. Although the ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md) article includes the most important items to be collected, the questions in this article can help you troubleshoot SQL Server more effectively by ruling out many scenarios and narrowing your focus.
 
-> [!NOTE]
-> Not all questions are applicable to all issues. However, these questions can guide you as you consider how to troubleshoot connectivity issues.
+## Method to collect data
 
-- [Client computer](#client-computer)
-- [Server computer](#server-computer)
-- [User information](#user-information)
-- [Log information](#log-information)
-- [Big picture questions](#big-picture-questions)
-- [New or existing issues](#new-or-existing-issues)
-
-## Method of collecting data
-
-To collect data, you can use tools such as Problem Steps Recorder (PSR), Network trace, and NETLOGON trace. This section provides detailed steps to install and configure a combination of all these tools.
+To collect data, you can use tools such as [Problem Steps Recorder (PSR)](/office/troubleshoot/settings/how-to-use-problem-steps-recorder), [Network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace), and [NETLOGON](../../../windows-client/windows-security/enable-debug-logging-netlogon-service.md) trace. This section provides detailed steps to install and configure a combination of all these tools.
 
 Follow these steps simultaneously on both the client and server computers. If the application is a 3-tier or n-tier architecture, run the installation on intermediate servers, also.
 
-1. Install **WIRESHARK** on all affected computers or use the built-in `NETSH` command (Windows 2008 or later versions). No restart is required.
+1. Install **[WireShark](https://www.wireshark.org/download.html)** on all affected computers or use the built-in `NETSH` command (Windows 2008 or later versions). No restart is required.
 
 1. Enable NETLOGON debug logging on the client and all servers by running the following command:
 
@@ -71,118 +61,122 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 1. Disable logging by running the `NLTEST /DBFLAG:0x0` command.
 
-## Client computer
+## Collect data based on various factors
 
-You can collect the following information about the components of the client computer.
+Not all questions are applicable to all issues. However, the following set of questions is designed to help you identify the category of the issue, guiding you towards troubleshooting in the right direction. Select each tab for related questions:
 
-- What is the operating system name, edition, and version (WinVer)?
-- What is the name and version of the SQL Server driver or provider?
-- What are the computer name and IP address?
-- What is the computer's domain status? If it's joined to a domain, what's the domain name?
-- What application run-time environment is used? For example, Internet Information Services (IIS), Windows Forms, Web Sphere, or SQL Server Integration Services (SSIS) Job.
-- Which application language is used?
-- What is the connection string used?
-- What type of authentication is used to connect to the server? For example, New Technology LAN Manager (NTLM), Kerberos, SQL, or Azure Active Directory (AAD).
-- If the application is a server or service, does it delegate user credentials to the back-end database?
-- Is constrained delegation used?
-- What are the application service account and domain?
-- Which type of service is used? Is it physical, virtual, or cloud? For example, IaaS, Web App, Web Role, or Power BI.
-- What is the client driver? Is it Java Database Connectivity (JDBC), or does it run on Linux or Mac?
+### [Client computer](#tab/client-computer)
 
-> [!NOTE]
-> The workflows are currently more Windows-oriented.
+You can collect the following information about different components of the client computer.
 
-- Does the issue affect only legacy providers, such as `Provider=SQLOLEBD` or `Driver={SQL Server}`, and not SQL Native Client and later drivers (or vice versa)?
-- Does the issue occur in only one application or in multiple applications?
-- Does a Universal Data Link (UDL) file fail when it tries to connect to other SQL Server-based servers, or does it fail to only the server that has the issue?
-- Does the user log in to the SQL Server-based server and try connecting by using SQL Server Management Studio (SSMS)?
-- Does the issue occur only when you use the NETBIOS name of the server and not when you use the Fully Qualified Domain Name (FQDN) (or vice versa)? Does it work by using the IP address?
-- Does the client running Windows 10 Enterprise Edition have the Credential Guard feature turned on? If yes, this might affect full delegation scenarios.
+    - What is the operating system name, edition, and version (WinVer)?
+    - What is the name and version of the SQL Server driver or provider?
+    - What are the computer name and IP address?
+    - What is the computer's domain status? If it's joined to a domain, what's the domain name?
+    - What application run-time environment is used? For example, Internet Information Services (IIS), Windows Forms, Web Sphere, or SQL Server Integration Services (SSIS) Job.
+    - Which application language is used?
+    - What is the connection string used?
+    - What type of authentication is used to connect to the server? For example, New Technology LAN Manager (NTLM), Kerberos, SQL, or Azure Active Directory (AAD).
+    - If the application is a server or service, does it delegate user credentials to the back-end database?
+    - Is constrained delegation used?
+    - What are the application service account and domain?
+    - Which type of service is used? Is it physical, virtual, or cloud? For example, IaaS, Web App, Web Role, or Power BI.
+    - What is the client driver? Is it Java Database Connectivity (JDBC), or does it run on Linux or Mac?
+    
+    > [!NOTE]
+    > The workflows are currently more Windows-oriented.
 
-## Server computer
+    - Does the issue affect only legacy providers, such as `Provider=SQLOLEBD` or `Driver={SQL Server}`, and not SQL Native Client and later drivers (or vice versa)?
+    - Does the issue occur in only one application or in multiple applications?
+    - Does a Universal Data Link (UDL) file fail when it tries to connect to other SQL Server-based servers, or does it fail to only the server that has the issue?
+    - Does the user log in to the SQL Server-based server and try connecting by using SQL Server Management Studio (SSMS)?
+    - Does the issue occur only when you use the NETBIOS name of the server and not when you use the Fully Qualified Domain Name (FQDN) (or vice versa)? Does it work by using the IP address?
+    - Does the client running Windows 10 Enterprise Edition have the Credential Guard feature turned on? If yes, this might affect full delegation scenarios.
+
+### [Server computer](#tab/server-computer)
 
 For a Linked Server, collect server information for both the mid-tier server and the back-end server. For an IIS-to-SQL delegation issue, collect information on the web server, including the *web.config* and authentication settings.
 
-- What is the name of the operating system name, edition, and version (Winver)?
-- What is the name and version of the database?  
-- What is the name of the computer?
-- What is the IP address?
-- What is the domain name if the computer is domain-joined?
-- What is the SQL Server service account and domain?
-- What is the name of the SQL Server instance?
-- Which protocols are enabled?
-- Which is the port that the server listens on?
-- What is the name of the server pipe? You can find this information in the error log.
-- Which type of environment is used? Is it physical, virtual, or cloud? For example, IaaS (SQL in an Azure Virtual Machine (VM)) or PaaS (Azure SQL Database, SQL Managed Instance (MI)).
-- Is the database deployed as standalone, clustered, mirrored, or using Always On?
-- What is the Failover partner name and IP address?
-- What is the Virtual cluster name or Listener name and port?
-- Which is the Virtual IP or Listener IP?
-- Which operating system is the database installed on? Is it Windows, Linux, or Mac? This might affect data collection.
-- What is the location of the database? Is it in Azure?
-- What is the current status of the server in terms of the latest Service Pack and Cumulative Update?
-  There's no point in debugging an issue that's already fixed.
-- Has SQL Server been upgraded recently to support Transport Layer Security (TLS) 1.2? Were the clients also updated? Has TLS 1.0 been turned off?
-- What is the current status of the SQL Server service? Is it running?
-- What is the status of the SQL Browser service? Is it running?
-- What is the specificity of the issue to a service account? Does running the server using a different service account resolve the issue?
+    - What is the name of the operating system name, edition, and version (Winver)?
+    - What is the name and version of the database?  
+    - What is the name of the computer?
+    - What is the IP address?
+    - What is the domain name if the computer is domain-joined?
+    - What is the SQL Server service account and domain?
+    - What is the name of the SQL Server instance?
+    - Which protocols are enabled?
+    - Which is the port that the server listens on?
+    - What is the name of the server pipe? You can find this information in the error log.
+    - Which type of environment is used? Is it physical, virtual, or cloud? For example, IaaS (SQL in an Azure Virtual Machine (VM)) or PaaS (Azure SQL Database, SQL Managed Instance (MI)).
+    - Is the database deployed as standalone, clustered, mirrored, or using Always On?
+    - What is the Failover partner name and IP address?
+    - What is the Virtual cluster name or Listener name and port?
+    - Which is the Virtual IP or Listener IP?
+    - Which operating system is the database installed on? Is it Windows, Linux, or Mac? This might affect data collection.
+    - What is the location of the database? Is it in Azure?
+    - What is the current status of the server in terms of the latest Service Pack and Cumulative Update?
+      There's no point in debugging an issue that's already fixed.
+    - Has SQL Server been upgraded recently to support Transport Layer Security (TLS) 1.2? Were the clients also updated? Has TLS 1.0 been turned off?
+    - What is the current status of the SQL Server service? Is it running?
+    - What is the status of the SQL Browser service? Is it running?
+    - What is the specificity of the issue to a service account? Does running the server using a different service account resolve the issue?
 
-## User information
+### [User information](#tab/userinformation)
 
-- Does the user log in to the client computer directly or access it remotely? For example, does the user use a browser?
-- Is the user a service, such as SQL Agent? Is the process identity being used or a stored credential is being used?
-- What is the type of authentication used to connect to the client application? Is it Windows, Forms authentication, or AAD?
-- Does the user connect to the server using integrated security?
-- What are the username and domain name?
+Collect the following user details:
 
-If the user is remote to the client application, collect the following details:
+    - Does the user log in to the client computer directly or access it remotely? For example, does the user use a browser?
+    - Is the user a service, such as SQL Agent? Is the process identity being used or a stored credential is being used?
+    - What is the type of authentication used to connect to the client application? Is it Windows, Forms authentication, or AAD?
+    - Does the user connect to the server using integrated security?
+    - What are the username and domain name?
+    
+    If the user is remote to the client application, collect the following details:
+    
+    - What are the computer name and IP address?
+    - Is the computer domain-joined? If yes, what is the domain name?
+    - Is the user connecting over a VPN or a proxy server? Does the issue occur if either method is directly connected?
+    - If the user is connecting to a web server, is the server load balanced?
+    - Are sticky sessions or session affinity being used?
+    - Is the user logging in to a terminal server or jump box and accessing the application?
+    - Does the issue affect only users in particular organizational units (OUs)?
+    - Has the user, client, or server moved to a different organizational unit (OU) in Active Directory?
+    - Does the issue affect only non-administrative users?
+    - Does the issue affect all or only some of the users in a particular domain?
 
-- What are the computer name and IP address?
-- Is the computer domain-joined? If yes, what is the domain name?
-- Is the user connecting over a VPN or a proxy server? Does the issue occur if either method is directly connected?
-- If the user is connecting to a web server, is the server load balanced?
-- Are sticky sessions or session affinity being used?
-- Is the user logging in to a terminal server or jump box and accessing the application?
-- Does the issue affect only users in particular organizational units (OUs)?
-- Has the user, client, or server moved to a different organizational unit (OU) in Active Directory?
-- Does the issue affect only non-administrative users?
-- Does the issue affect all or only some of the users in a particular domain?
-
-## Log information
+### [Log information](#tab/log-information)
 
 Collect the following information from the log files:
+    
+    - What is the exact error message in the call stack?
+    - Was the log collected from the SQL Server *ERRORLOG* and *ERRORLOG.1* files?
+    - Were the application event logs collected from the client and server?
+    - Were the client application log files and configuration files collected? For example, *web.config, rsreportserver.config*, **.config*, or **.ini*.
+    - Is there an available visual representation of the network that shows the computers, routers, and so on?
 
-- What is the exact error message in the call stack?
-- Was the log collected from the SQL Server *ERRORLOG* and *ERRORLOG.1* files?
-- Were the application event logs collected from the client and server?
-- Were the client application log files and configuration files collected? For example, *web.config, rsreportserver.config*, **.config*, or **.ini*.
-- Is there an available visual representation of the network that shows the computers, routers, and so on?
+### [Broader perspective questions](#tab/broader-perspective-questions)
 
-## Big picture questions
+    - Does the issue affect only database connections, or does it also affect web and file share connections?
+      Many cases are reported to the SQL Server team because they occur on the database server. However, it might be possible that the issue isn't related to the database at all and might require more general Windows or Active Directory support.
+    - Does a trust relationship exist between the user domain, client domain, or server domain if they are different? Is it external, forest, one-way, two-way, or none?
+    - Does the connection work correctly if all the resources are in the same domain?
+    - Is the issue intermittent or periodic or is it consistent?
+    - Does the issue occur only if more than one user is using the application? Does it occur more often if more users are using it?  
+    - Does the issue occur only at certain times of the day or on certain days of the week?
+    - Does the issue occur only when a backup is being taken or the database is being re-indexed?
+    - Does the issue affect more than one server?
+    - Does the issue affect only one node in a n-node cluster? If yes, it might be more efficient to consider rebuilding that particular node.
+    - Does the issue affect only one or two clients out of several? If yes, perhaps rebuilding would be more efficient.
+    - Does the issue affect only Named Pipes and not TCP (or vice versa)?
+    - Does the issue occur when you use a SQL Server login and TCP/IP?
+    - Does a working case exist that can be compared against the failing case? How do the systems differ?
 
-The following set of questions is designed to help you identify the category of the issue, guiding you towards troubleshooting in the right direction:
-
-- Does the issue affect only database connections, or does it also affect web and file share connections?
-  Many cases are reported to the SQL Server team because they occur on the database server. However, it might be possible that the issue isn't related to the database at all and might require more general Windows or Active Directory support.
-- Does a trust relationship exist between the user domain, client domain, or server domain if they are different? Is it external, forest, one-way, two-way, or none?
-- Does the connection work correctly if all the resources are in the same domain?
-- Is the issue intermittent or periodic or is it consistent?
-- Does the issue occur only if more than one user is using the application? Does it occur more often if more users are using it?  
-- Does the issue occur only at certain times of the day or on certain days of the week?
-- Does the issue occur only when a backup is being taken or the database is being re-indexed?
-- Does the issue affect more than one server?
-- Does the issue affect only one node in a n-node cluster? If yes, it might be more efficient to consider rebuilding that particular node.
-- Does the issue affect only one or two clients out of several? If yes, perhaps rebuilding would be more efficient.
-- Does the issue affect only Named Pipes and not TCP (or vice versa)?
-- Does the issue occur when you use a SQL Server login and TCP/IP?
-- Does a working case exist that can be compared against the failing case? How do the systems differ?
-
-## New or existing issues
+### [New or existing issues](#tab/newexisting users)
 
 Refers to determining whether the problem is a recent development or if it has persisted for a while:
 
-- Has the issue always existed (new installation) or did the application function correctly for some time before it recently broke?
-- If the application used to function correctly, what changes were made to the environment? For example, installed updates, upgraded domain controllers, changes in the firewall settings, decommissioned domain controllers, or a move to a different OU in the domain.
+    - Has the issue always existed (new installation) or did the application function correctly for some time before it recently broke?
+    - If the application used to function correctly, what changes were made to the environment? For example, installed updates, upgraded domain controllers, changes in the firewall settings, decommissioned domain controllers, or a move to a different OU in the domain.
 
 ## See also
 
