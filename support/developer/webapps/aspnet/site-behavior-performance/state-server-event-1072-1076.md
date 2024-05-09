@@ -2,7 +2,7 @@
 title: Event ID 1072 or 1076 on state servers
 description: This article provides resolutions for the state server log Event ID 1072 or 1076.
 ms.date: 03/25/2020
-ms.custom: sap:Site behavior and performance
+ms.custom: sap:Performance
 ms.reviewer: V-KIMWA, VENKATC
 ---
 # State server logs Event ID 1072 or Event ID 1076

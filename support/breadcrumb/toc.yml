@@ -30,10 +30,6 @@ items:
       tocHref: /troubleshoot/developer/browsers/
       topicHref: /troubleshoot/developer/browsers/welcome-browsers
 
-    - name: BizTalk Server
-      tocHref: /troubleshoot/developer/biztalk/
-      topicHref: /troubleshoot/developer/biztalk/welcome-biztalk-server
-
     - name: .NET
       tocHref: /troubleshoot/developer/dotnet/
       topicHref: /troubleshoot/developer/dotnet/welcome-dotnet-landing
@@ -248,6 +244,9 @@ items:
       - name: Power Automate
         tocHref: /troubleshoot/power-platform/power-automate/
         topicHref: /troubleshoot/power-platform/power-automate/welcome-power-automate
+      - name: Power Pages
+        tocHref: /troubleshoot/power-platform/power-pages/
+        topicHref: /troubleshoot/power-platform/power-pages/welcome-power-pages
 
     - name: Microsoft Dynamics
       tocHref: /troubleshoot/dynamics/
@@ -257,6 +256,6 @@ items:
         tocHref: /troubleshoot/dynamics/gp/
         topicHref: /troubleshoot/dynamics/gp/welcome-gp
 
-    - name: Microsoft Copilot for Sales
-      tocHref: /troubleshoot/sales-copilot/
-      topicHref: /troubleshoot/sales-copilot/
+    - name: Surface
+      tocHref: /troubleshoot/devices/
+      topicHref: /troubleshoot/devices/

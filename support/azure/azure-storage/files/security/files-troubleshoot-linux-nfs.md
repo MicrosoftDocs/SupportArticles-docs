@@ -3,7 +3,7 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 04/15/2024
+ms.date: 04/24/2024
 ms.reviewer: kendownie
 ---
 
@@ -178,11 +178,11 @@ sudo nc -zv <storageaccountnamehere>.file.core.windows.net 2049
 
 ### Cause 5: Storage account deleted
 
-If you're unable to mount the file share due to **error: connection timed out**, it's possible that the storage account containing the file share was deleted accidentally.
+If you're unable to mount the file share due to **error: connection timed out**, the storage account containing the file share might be deleted accidentally.
 
 #### Solution
 
-[Recover the storage account](/azure/storage/common/storage-account-recover), and then delete and re-create the private endpoint so it's associated with the new storage account resource ID.
+[Recover the storage account](/azure/storage/common/storage-account-recover). Then, delete and re-create the private endpoint so it's associated with the new storage account resource ID.
 
 ## ls hangs for large directory enumeration on some kernels
 

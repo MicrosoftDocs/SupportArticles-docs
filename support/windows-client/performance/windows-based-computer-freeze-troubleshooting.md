@@ -237,7 +237,10 @@ Debug-VM -Name "VM Name" -InjectNonMaskableInterrupt -ComputerName Hostname
 
 #### VMware
 
-You can use VMware snapshots or suspend state and extract a memory dump file equivalent to a complete memory dump file. Use VMware's [Checkpoint To Core Tool (vmss2core)](https://flings.vmware.com/vmss2core) to convert both suspend (`.vmss`) and snapshot (`.vmsn`) state files to a dump file. Then analyze the file by using the standard Windows debugging tools.
+You can use VMware snapshots or suspend state and extract a memory dump file equivalent to a complete memory dump file. Use VMware's [Checkpoint To Core Tool (vmss2core)](https://kb.vmware.com/s/article/2003941) to convert both suspend (`.vmss`) and snapshot (`.vmsn`) state files to a dump file. Then analyze the file by using the standard Windows debugging tools.
+
+> [!NOTE]
+> When working with Microsoft Support, VMware snapshots should be converted to a dump file prior to uploading to Microsoft, by using VMware's [Checkpoint To Core Tool (vmss2core)](https://kb.vmware.com/s/article/2003941). If you experience any issues with the snapshot conversion, please contact VMware for support.
 
 #### Citrix XenServer
 

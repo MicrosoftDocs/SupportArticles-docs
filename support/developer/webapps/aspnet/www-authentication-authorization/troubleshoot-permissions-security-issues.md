@@ -2,7 +2,7 @@
 title: Troubleshoot permission and security issues
 description: This article describes how to troubleshoot common permissions and security-related issues in ASP.NET.
 ms.date: 12/29/2020
-ms.custom: sap:WWW Authentication and Authorization
+ms.custom: sap:Security
 ms.topic: how-to
 ---
 # Troubleshooting common permissions and security-related issues in ASP.NET
