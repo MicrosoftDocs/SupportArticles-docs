@@ -159,6 +159,8 @@ items:
     items:
     - name: Active Directory changes don't replicate
       href: ./active-directory/active-directory-changes-not-replicate.md
+    - name: Active Directory replication
+      href: ./active-directory/troubleshoot-adreplication-guidance.md
     - name: Active Directory replication error 1256
       href: ./active-directory/active-directory-replication-error-1256.md
     - name: Active Directory replication error 8304
@@ -941,8 +943,6 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail.md
   - name: Smart card logon
     items:
-    - name: 'Troubleshooting guidance: Active Directory replication'
-      href: ./certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance.md
     - name: A Certification Authority can't use a certificate template
       href: ./certificates-and-public-key-infrastructure-pki/ca-cant-use-certificate-template.md
     - name: Back up recovery agent EFS private key
