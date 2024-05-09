@@ -1,22 +1,22 @@
 ---
 title: Error code 8005E272 when you test and enable a mailbox
 description: Provides a resolution for error code 8005E272 that occurs when you test and enable a mailbox for server-side synchronization.
-ms.date: 05/07/2024
+ms.date: 05/09/2024
 ms.custom: sap:E-mail and Microsoft 365 Integration\Set up and configuration of server-side synchronization
 author: rahulmital
 ms.author: rahulmital
 ---
-# Error code 8005E272 when you test and enable mailbox
+# Error code 8005E272 when you test and enable a mailbox
 
 This article provides a resolution for error code 8005E272 that occurs when you test and enable a mailbox for server-side synchronization in Microsoft Dataverse.
 
 ## Symptoms
 
-When a user tries to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Microsoft Dataverse, the user account specified in the Email Server Profile receives a "401 Unauthorized" error when contacting the Exchange Server.
+When a user tries to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Microsoft Dataverse, the user account specified in the email server profile receives a "401 Unauthorized" error when contacting the Microsoft Exchange Server.
 
 ## Resolution
 
-1. Verify that the account specified in the Email Server Profile is authorized to contact Exchange.
+1. Verify that the account specified in the email server profile is authorized to contact Exchange.
 
    1. Select an environment in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
@@ -28,13 +28,13 @@ When a user tries to [test and enable a mailbox](/power-platform/admin/connect-e
 
         :::image type="content" source="media/error-code-8005e272/apply-default-email-settings.png" alt-text="Screenshot that shows the Apply Default Email Settings page.":::
 
-        By default, the mailbox configuration will be tested, and the mailboxes will be enabled when you select **OK**.
+        By default, the mailbox configuration will be tested and the mailboxes will be enabled when you select **OK**.
 
 2. Edit mailboxes to set the profile and delivery methods.
 
    1. Select an environment in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
-        Or, in the legacy web client, select the select the gear (:::image type="icon" source="media/error-code-8005e272/gear-icon.svg":::) icon in the upper-right corner, and then select **Advanced settings**.
+        Or, in the legacy web client, select the gear (:::image type="icon" source="media/error-code-8005e272/gear-icon.svg":::) icon in the upper-right corner, and then select **Advanced settings**.
 
    2. Select **Settings** > **Email** > **Mailboxes**.
    3. Select **Active Mailboxes**.
