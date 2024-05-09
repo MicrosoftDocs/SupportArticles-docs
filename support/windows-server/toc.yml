@@ -157,10 +157,10 @@ items:
       href: ./active-directory/windows-app-cant-start.md
   - name: Active Directory replication
     items:
+    - name: 'Troubleshooting guidance: Active Directory replication'
+      href: ./active-directory/troubleshoot-adreplication-guidance.md
     - name: Active Directory changes don't replicate
       href: ./active-directory/active-directory-changes-not-replicate.md
-    - name: Active Directory replication
-      href: ./active-directory/troubleshoot-adreplication-guidance.md
     - name: Active Directory replication error 1256
       href: ./active-directory/active-directory-replication-error-1256.md
     - name: Active Directory replication error 8304
