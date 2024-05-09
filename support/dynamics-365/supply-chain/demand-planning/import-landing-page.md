@@ -28,10 +28,7 @@ Or
 3. Select on the execution details and find the reason why the project failed.
 4. The error should contain more information on the reason this happened. Depending on the message make sure you review our troubleshooting guides:
 
-   [Import failing with a forbidden error.](/forbidden.md)
-
-   [Import failing because of time-out.](/project-time-out.md)
-
-   [Import failing because of special characters.](/special-characters.md)
-
-   [Import failing because of insufficient permissions.](/user-insufficient-permissions.md)
+- [An import profile job fails with a "Forbidden" error](import-profile-fails-with-forbidden-error.md)
+- [Import profile job fails because of time-out.](project-time-out.md)
+- [Import profile job fails because of special characters.](special-characters.md)
+- [Import profile job fails because of insufficient permissions.](user-insufficient-permissions.md)
