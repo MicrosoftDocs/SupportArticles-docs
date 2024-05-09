@@ -9447,7 +9447,7 @@
     },
     {
       "source_path": "support/windows-server/identity/troubleshoot-adreplication-guidance.md",
-      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-adreplication-guidance",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance",
       "redirect_document_id": true
     },
     {
@@ -9776,8 +9776,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/windows-server/active-directory/troubleshoot-adreplication-guidance.md",
-      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance",
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-adreplication-guidance",
       "redirect_document_id": true
     },
     {
@@ -11044,6 +11044,11 @@
       "source_path": "support/power-platform/power-apps/solutions/upgrade-fails-pending-upgrade.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/upgrade-fails-pending-upgrade",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/get-use-active-directory-replication-status-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/get-use-active-directory-replication-status-tool",
+      "redirect_document_id": false
     },
     {
       "source_path": "support/sql/database-engine/connect/bad-server-name-connection-string-error.md",

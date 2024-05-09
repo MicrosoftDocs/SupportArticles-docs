@@ -1,15 +1,22 @@
 ---
 title: Event IDs 4016 and 4004 when DNS updates time out
 description: Helps resolve an issue in which Event IDs 4016 and 4004 are logged when DNS can't enumerate AD-integrated zones or create/write records in zones.
-ms.date: 12/26/2023
+ms.date: 05/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, ANRATH, tfairman, v-lianna
+ms.reviewer: kaushika, ANRATH, tfairman, v-lianna, jories
 ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot, ikb2lmc
 ---
 # Event IDs 4016 and 4004 when DNS updates time out
+
+> [!NOTE]
+> This article describes an issue that's fixed in the following hotfixes for Windows Server 2019 and later versions:
+>
+> - [April 9, 2024—KB5036909 (OS Build 20348.2402)](https://support.microsoft.com/topic/april-9-2024-kb5036909-os-build-20348-2402-36062ce9-f426-40c6-9fb9-ee5ab428da8c)
+> - [April 9, 2024—KB5036910 (OS Build 25398.830)](https://support.microsoft.com/topic/april-9-2024-kb5036910-os-build-25398-830-3be78748-f9a7-4ecc-abf0-822589f61d54)
+> - [April 9, 2024—KB5036896 (OS Build 17763.5696)](https://support.microsoft.com/topic/april-9-2024-kb5036896-os-build-17763-5696-efb580f1-2ce4-4695-b76c-d2068a00fb92)
 
 This article helps resolve an issue in which Event IDs 4016 and 4004 are logged in the Domain Name System (DNS) when DNS updates from the Lightweight Directory Access Protocol (LDAP) to Active Directory (AD) time out.
 
