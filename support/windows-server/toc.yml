@@ -207,8 +207,6 @@ items:
       href: ./active-directory/disable-knowledge-consistency-checker-automatic-generation.md
     - name: Duplicate AD replication connections are created
       href: ./active-directory/duplicate-active-directory-replication-connections.md
-    - name: Get and use AD Replication Status Tool
-      href: ./active-directory/get-use-active-directory-replication-status-tool.md
     - name: Hotfixes for DFS technologies
       href: ./active-directory/distributed-file-system-hotfixes.md
     - name: How to restrict RPC traffic to a specific port

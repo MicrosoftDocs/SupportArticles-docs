@@ -11046,6 +11046,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/windows-server/active-directory/get-use-active-directory-replication-status-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/get-use-active-directory-replication-status-tool",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/sql/database-engine/connect/bad-server-name-connection-string-error.md",
       "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
       "redirect_document_id": false
