@@ -1,6 +1,6 @@
 ---
 title: Missing or denied EXECUTE or SELECT permission error
-description: Provides a resolution for the missing permission issue or the EXECUTE (or SELECT) permission was denined error in Business Central cloud migration.
+description: Provides a resolution for the missing permission issue or the EXECUTE (or SELECT) permission was denied error in Business Central cloud migration.
 ms.author: jswymer
 ms.reviewer: jswymer
 ms.date: 05/09/2024

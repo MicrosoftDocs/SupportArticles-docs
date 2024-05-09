@@ -15,7 +15,7 @@ When a Microsoft 365 license holder without a Business Central license [shares a
 
 ## Cause
 
-Users who have a Microsoft 365 license but no Business Central license aren't allowed to share links as cards. If the user has the Business Central app for Teams installed and pastes a link into the compose area, then only a minimal card is displayed.
+Users who have a Microsoft 365 license but no Business Central licenses aren't allowed to share links as cards. If the user has the Business Central app for Teams installed and pastes a link into the compose area, then only a minimal card is displayed.
 
 ## Resolution
 

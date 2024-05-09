@@ -1,17 +1,17 @@
 ---
-title: Data replication issue or errors in cloud migration
+title: Data replication issue or errors in Business Central cloud migration
 description: Resolves an issue or errors that might occur during the data replication process in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.date: 05/08/2024
 ---
-# Data replication issue or errors in cloud migration
+# Self-hosted Integration Runtime is offline or a database operation fails in Business Central cloud migration
 
 This article resolves an issue or errors that might occur when you run data replication during [Business Central cloud migration](/dynamics365/business-central/dev-itpro/administration/migration-manage).
 
 ## Symptoms
 
-One of the following issue or error might occur when you run data replication during Business Central cloud migration.
+When you run data replication during Business Central cloud migration, the following issue or error might occur:
 
 - The [self-hosted Integration Runtime](/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory) is offline.
 - A database operation fails with the "Invalid object name" error message.

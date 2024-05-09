@@ -1,11 +1,11 @@
 ---
-title: Data replication issues for large tables in cloud migration
+title: Data replication error DelimitedTextIncorrectRowDelimiter for large tables in Business Central cloud migration
 description: Provides a resolution for an error that occurs during the data replication process for large tables in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.date: 05/08/2024
 ---
-# Data replication issues for large tables in cloud migration
+# Data replication error DelimitedTextIncorrectRowDelimiter for large tables in Business Central cloud migration
 
 This article provides a resolution for an error that might occur when you run [data replication during cloud migration for large tables](/dynamics365/business-central/dev-itpro/administration/migration-data-replication?tabs=largetable).
 

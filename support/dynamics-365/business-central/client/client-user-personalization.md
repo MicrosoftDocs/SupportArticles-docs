@@ -1,6 +1,6 @@
 ---
 title: User personalization can't be started in Business Central
-description:  Provides troubleshooting steps to solve the personalization could not be started error during user personalization in Dynamics 365 Business Central.
+description: Provides troubleshooting steps to solve the personalization could not be started error during user personalization in Dynamics 365 Business Central.
 author: SusanneWindfeldPedersen
 ms.author: solsen
 ms.reviewer: solsen
@@ -12,7 +12,7 @@ This article provides a resolution for the "personalization could not be started
 
 ## Symptoms
 
-When there are issues preventing the user personalization in Business Central, the user will get the following error message, and not be able to start user personalization.
+When there are issues preventing the user personalization in Business Central, the user will get the following error message, and can't start user personalization.
 
 > Sorry, something went wrong and personalization could not be started. Please try again later, or contact your system administrator.
 
@@ -25,7 +25,7 @@ When there are issues preventing the user personalization in Business Central, t
 
 Follow these steps to mitigate the issue:
 
-1. In Business Central, in the **Tell Me** box, enter **Personalized Pages**, and then choose the related link.
+1. In Business Central, in the **Tell Me** box, enter **Personalized Pages**, and then select the related link.
 2. On the **Personalized Pages** page, use the filter pane to show records that belong to the impacted user.
 3. Select the **Troubleshoot** button.
 

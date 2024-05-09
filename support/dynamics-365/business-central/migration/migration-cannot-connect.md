@@ -1,11 +1,11 @@
 ---
-title: Can't connect to SQL database with SqlFailedToConnect
+title: Cannot connect to SQL database with SqlFailedToConnect
 description: Provides a resolution for an SQL database connection issue in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
 ms.date: 05/08/2024
 ---
-# "Can't connect to SQL Database, ErrorCode=SqlFailedToConnect" error in Business Central cloud migration
+# "Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect" error in Business Central cloud migration
 
 This article solves the "Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect" error message that occurs when you try to connect to an SQL database in the [Business Central cloud migration](/dynamics365/business-central/dev-itpro/administration/migration-manage).
 

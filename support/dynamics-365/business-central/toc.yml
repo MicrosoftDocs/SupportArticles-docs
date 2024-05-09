@@ -3,39 +3,38 @@
   items:
     - name: Client
       items:
-        - name: User personalization can't be started
-          href: client/client-user-personalization.md
+        - name: Client returns wrong client type
+          href: client/client-returns-wrong-clienttype.md
+        - name: Icon font isn't loaded
+          href: client/client-icon-font-not-loaded.md
         - name: Profile configuration can't be started
           href: client/client-profile-configuration.md
-        - name: Client returns wrong clienttype
-          href: client/client-returns-wrong-clienttype.md
-        - name: Icon font not loaded
-          href: client/client-icon-font-not-loaded.md
+        - name: User personalization can't be started
+          href: client/client-user-personalization.md
     - name: Integration
       items:
-        - name: '"You shared a link in Teams, but users get a message that they can only view data"'
-          href: integration/m365-only-view-data.md
-        - name: '"Microsoft 365 access has been enabled, but users get a permission error"'
+        - name: A permission error occurs even though Microsoft 365 access is enabled
           href: integration/m365-permission-error.md
-        - name: '"Card from shared link is minimal and doesn''t include Details button"'
+        - name: Card from shared link is minimal and doesn't have Details button
           href: integration/m365-shared-card-no-details.md
+        - name: '"You can only view data in Microsoft Teams" error'
+          href: integration/m365-only-view-data.md
     - name: Migration
       items:
-        - name: '"Activity timed out"'
+        - name: '"Activity timed out" error'
           href: migration/migration-activity-timeout.md
-        - name: '"Can''t connect to SQL database"'
+        - name: '"Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect" error'
           href: migration/migration-cannot-connect.md
-        - name: '"The EXECUTE (or SELECT) permission was denied on the object"'
-          href: migration/migration-execute-permission.md
-        - name: '"Failed to enable your replication"'
+        - name: Data replication error DelimitedTextIncorrectRowDelimiter for large tables
+          href: migration/migration-data-replication-large-tables.md
+        - name: '"Failed to enable your replication" error'
           href: migration/migration-general-error.md
-        - name: '"Invalid database connection string provided"'
+        - name: '"Invalid database connection string provided" error'
           href: migration/migration-invalid-connection-string.md
         - name: Permission issues in Business Central cloud migration
           href: migration/migration-permission-issues.md
-        - name: Data replication issues in cloud migration
+        - name: Self-hosted Integration Runtime is offline or a database operation fails
           href: migration/migration-data-replication.md
-        - name: Data replication issues for large tables in cloud migration
-          href: migration/migration-data-replication-large-tables.md
-    
+        - name: '"The EXECUTE (or SELECT) permission was denied on the object" error'
+          href: migration/migration-execute-permission.md
     

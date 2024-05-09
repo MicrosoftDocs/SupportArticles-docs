@@ -15,14 +15,14 @@ Access with Microsoft 365 has been enabled in Business Central admin center, but
 
 ## Cause
 
-This is a by design behavior. Administrators must first configure what data can be accessed in Teams. If the administrator enables access in the Business Central admin center, but doesn't assign permissions on the **License Configuration** page, a user who tries to access Business Central records in Teams will have their user record provisioned without permission to any objects.
+This is a by design behavior. Administrators must first configure what data can be accessed in Microsoft Teams. If the administrator enables access in the Business Central admin center, but doesn't assign permissions on the **License Configuration** page, a user who tries to access Business Central records in Microsoft Teams will have their user record provisioned without permission to any objects.
 
 ## Resolution
 
 > [!NOTE]
 > You need tenant administrator permissions in Business Central.
 
-Customizing permissions on the **License Configuration** page will only affect newly created users. You must also assign the missing permissions to users that have already been created through the **Users list** page.
+To solve this issue, you should also assign permissions on the **License Configuration** page. However, customizing permissions on the **License Configuration** page will only affect newly created users. You must also assign the missing permissions to users that have already been created through the **Users list** page.
 
 ## More information
 

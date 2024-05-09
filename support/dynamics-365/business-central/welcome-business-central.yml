@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-business-central
   author: SusanneWindfeldPedersen
   ms.author: solsen
-  ms.date: 05/06/2024
+  ms.date: 05/09/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -20,46 +20,46 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: '"Activity timed out" error'
-            url: migration/migration-activity-timeout.md      
-          - text: '"Cannot connect to SQL database" error'
-            url: migration/migration-cannot-connect.md      
-          - text: Data replication issues in cloud migration
-            url: migration/migration-data-replication.md
-          - text: Data replication issues for large tables in cloud migration
-            url: migration/migration-data-replication-large-tables.md
-          - text: '"The EXECUTE (or SELECT) permission was denied on the object" error'
-            url: migration/migration-execute-permission.md
-          - text: '"Failed to enable your replication" error'
-            url: migration/migration-general-error.md
-          - text: '"Invalid database connection string provided" error'
-            url: migration/migration-invalid-connection-string.md
-          - text: Permission issues in Business Central cloud migration
-            url: migration/migration-permission-issues.md
+           - text: '"Activity timed out" error'
+             url: migration/migration-activity-timeout.md
+           - text: '"Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect" error'
+             url: migration/migration-cannot-connect.md
+           - text: Data replication error DelimitedTextIncorrectRowDelimiter for large tables
+             url: migration/migration-data-replication-large-tables.md
+           - text: '"Failed to enable your replication" error'
+             url: migration/migration-general-error.md
+           - text: '"Invalid database connection string provided" error'
+             url: migration/migration-invalid-connection-string.md
+           - text: Permission issues in Business Central cloud migration
+             url: migration/migration-permission-issues.md
+           - text: Self-hosted Integration Runtime is offline or a database operation fails
+             url: migration/migration-data-replication.md
+           - text: '"The EXECUTE (or SELECT) permission was denied on the object" error'
+             url: migration/migration-execute-permission.md
   # Card
   - title: Client
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: User personalization can't be started
-            url: client/client-user-personalization.md
+          - text: Client returns wrong client type
+            url: client/client-returns-wrong-clienttype.md
+          - text: Icon font isn't loaded
+            url: client/client-icon-font-not-loaded.md
           - text: Profile configuration can't be started
             url: client/client-profile-configuration.md
-          - text: Client returns wrong `ClientType`
-            url: client/client-returns-wrong-clienttype.md
-          - text: Icon font not loaded
-            url: client/client-icon-font-not-loaded.md
+          - text: User personalization can't be started
+            url: client/client-user-personalization.md
   # Card
   - title: Integration
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: '"You shared a link in Teams, but users get a message that they can only view data" error'
-            url: integration/m365-only-view-data.md
-          - text: '"Microsoft 365 access has been enabled, but users get a permission error" error'
+          - text: A permission error occurs even though Microsoft 365 access is enabled
             url: integration/m365-permission-error.md
-          - text: '"Card from shared link is minimal and does not include Details button" error'
+          - text: Card from shared link is minimal and doesn't have Details button
             url: integration/m365-shared-card-no-details.md
+          - text: '"You can only view data in Microsoft Teams" error'
+            url: integration/m365-only-view-data.md
   # Card
   - title: Documentation and training
     linkLists:

@@ -21,7 +21,7 @@ This issue occurs because the **Font download** option is disabled in your brows
   
 ## Resolution
 
-To sovle this issue, add the Business Central web site to your trusted sites.
+To solve this issue, add the Business Central web site to your trusted sites.
 
 1. In Windows 10, launch **Control Panel** on your device.
 2. Go to **Network and Internet** > **Internet Options** > **Security** > **Trusted sites**.
