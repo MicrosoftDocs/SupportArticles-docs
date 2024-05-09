@@ -1,7 +1,7 @@
 ---
 title: Overview of consistent authentication issues in SQL Server
 description: This article discusses consistent authentication issues in SQL Server, related error messages, and solutions to troubleshoot various issues.
-ms.date: 05/08/2024
+ms.date: 05/10/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
@@ -49,7 +49,7 @@ This section describes error types and related information.
   |"Cannot open database \<test\> requested by the login. The login failed."|The database might be offline, or the permissions might not be sufficient. For more information, see [Database offline in MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).<br/> Also, check if the database name in the connection string is correct.|
   |"Login failed for user \<username\>." | This error can occur if the [proxy account](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md) isn't properly authenticated.    |
   |"Login Failed for user: 'NT AUTHORITY\ANONYMOUS LOGON'"|This error might occur if the [SPN is missing, SPN is duplicated, or the SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).|
-  |"Login failed for user \<username\>." </br> "Login failed for user '\<database\username\>"</br>    | Check if there's a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the user doesn't belong to a local group used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).    |
+  |"Login failed for user \<username\>." </br> "Login failed for user '\<database\username\>"</br>    | Check if there's a [incorrect server name in connection string](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername). Also, check if the user doesn't belong to a local group used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).    |
   |"Login failed for user '\<username\>'. Reason: Password did not match that for the login provided."|This error might occur if an incorrect password is used. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).|
   |"SQL Server does not exist or access denied."  | [Named Pipes connections](named-pipes-connection-fail-no-windows-permission.md) fail because the user doesn't have permission to log into Windows.     |
   |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
@@ -57,9 +57,10 @@ This section describes error types and related information.
 
 ## Types of consistent authentication issues
 
-Understanding the underlying reasons behind consistent authentication issues is essential to effectively resolve them. Below are several typical causes of such problems along with their respective solutions. Select each of the tabs to see the relevant issues, causes, and solution:
+Understanding the underlying reasons behind consistent authentication issues is essential to effectively resolve them. Below are several typical causes of such problems along with their respective solutions. Select each of the dropdowns to see the relevant issues, causes, and solution:
 
-### [Connection string](#tab/connectionstring)
+<details>
+<summary><b>Connection string</b></summary>
 
 This section lists the issues related to configuration settings used by applications to connect to a database.
 
@@ -75,29 +76,34 @@ This section lists the issues related to configuration settings used by applicat
 
 - **Wrong explicit SPN account** - This issue might occur if the SPN is associated with the wrong account in AD. To resolve this issue, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
 
-### [Database](#tab/database)
+</details>
+
+<details>
+<summary><b>Database</b></summary>
 
 This section lists the issues specific to various aspects of SQL Server:
 
-  - **Database is offline** - Refers to a scenario in which a SQL Server database tries to reconnect to a SQL Server instance that's configured for Windows Authentication mode. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+- **Database is offline** - Refers to a scenario in which a SQL Server database tries to reconnect to a SQL Server instance that's configured for Windows Authentication mode. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
   
-  - **Database permissions** - Refers to enabling or restricting access to SQL Server database. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+- **Database permissions** - Refers to enabling or restricting access to SQL Server database. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
   
-  - **Linked server connectivity errors in SQL Server** - You experience an authentication process issue that affects linked servers in the context of SQL Server. For more information, see [Linked server connectivity errors in SQL Server](linked-server-account-mapping-error.md).
+- **Linked server connectivity errors in SQL Server** - You experience an authentication process issue that affects linked servers in the context of SQL Server. For more information, see [Linked server connectivity errors in SQL Server](linked-server-account-mapping-error.md).
 
-  - **Metadata of the linked server is inconsistent** - Refers to an issue in which metadata of the linked server is inconsistent or doesn't match the expected metadata.
+- **Metadata of the linked server is inconsistent** - Refers to an issue in which metadata of the linked server is inconsistent or doesn't match the expected metadata.
 
-    A view or stored procedure queries the tables or views in the linked server but receives login failures although a distributed `SELECT` statement that's copied from the procedure doesn't.
-    
-    This issue might occur if the view was created and then the linked server was re-created, or a remote table was modified without rebuilding the View.
+  A view or stored procedure queries the tables or views in the linked server but receives login failures although a distributed `SELECT` statement that's copied from the procedure doesn't.
 
-    To resolve this issue, refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
+  This issue might occur if the view was created and then the linked server was re-created, or a remote table was modified without rebuilding the View.
 
-  - **Proxy account doesn't have permissions** - An SQL Server Integration Service (SSIS) job that's run by SQL Agent might need permissions other than those that the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
+  To resolve this issue, refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
 
-  - **Unable to log in to SQL Server database** - The inability to log in can cause failures in authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+- **Proxy account doesn't have permissions** - An SQL Server Integration Service (SSIS) job that's run by SQL Agent might need permissions other than those that the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
 
-### [Directory services](#tab/dirservices)
+- **Unable to log in to SQL Server database** - The inability to log in can cause failures in authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
+  
+</details>
+
+<details><summary><b>Directory services</b></summary>
 
 This section lists various issues related to directory services and servers.
 
@@ -119,7 +125,9 @@ This section lists various issues related to directory services and servers.
 
 - **Selective authentication is disabled** - Refers to a feature of domain trusts that allows the domain administrator to limit which users have access to resources in the remote domain. If selective authentication isn't enabled, all users in the trusted domain can get access to the remote domain. To resolve this issue, make sure that the users aren't allowed to authenticate in the remote domain by enabling selective authentication.
 
-### [Kerberos authentication](#tab/kerberos)
+</details>
+
+<details><summary><b>Kerberos authentication</b></summary>
 
 This section lists the issues related to the Kerberos authentication:
 
@@ -171,7 +179,9 @@ This section lists the issues related to the Kerberos authentication:
 
 - **Use website host header** - If the website has a host header name, the HOSTS SPN can't be used. An explicit HTTP SPN must be used. If the website doesn't have a host header name, NTLM is used and it can't be delegated to a back-end SQL Server instance or other service.
 
-### [NT LAN Manager (NTLM)](#tab/ntlm)
+</details>
+
+<details><summary><b>NT LAN Manager (NTLM)</b></summary>
 
 This section lists issues specific to NTLM (NT LAN Manager):
 
@@ -185,7 +195,9 @@ This section lists issues specific to NTLM (NT LAN Manager):
 
 - **Issue that affects LANMAN compatibility level** - The LAN Manager (LANMAN) authentication issue usually occurs if there is a mismatch in the authentication protocols that are used by older (pre Windows 2008) and newer computers. When you set the compatibility level to 5, NTLMv2 isn't allowed. Switching to Kerberos avoids this issue because Kerberos is more secure. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
-### [SQL Login](#tab/sqllogin)
+</details>
+
+<details><summary><b>SQL Login</b></summary>
 
 This section lists issues related to authentication credentials:
 
@@ -197,7 +209,9 @@ This section lists issues related to authentication credentials:
   
 - **Named Pipes connections fail because the user doesn't have permission to log in to Windows** - Refers to a permissions issue in Windows. For more information, see [Named Pipes connections issue in SQL Server](named-pipes-connection-fail-no-windows-permission.md).
 
-### [Windows permissions](#tab/windowspermissions)
+</details>
+
+<details><summary><b>Windows permissions</b></summary>
 
 This section lists issues specific to Windows permissions or Policy settings:
 
@@ -224,7 +238,9 @@ This section lists issues specific to Windows permissions or Policy settings:
 
 - **Windows user profile can't be loaded in SQL Server** - Refers to the Windows user profile issue. For more information about how to troubleshoot corrupted user profiles, see the [Windows user profile can't be loaded in SQL Server](corrupt-user-profile.md).
 
-### [Other aspects](#tab/otheraspects)
+</details>
+
+<details><summary><b>Other aspects</b></summary>
 
 This section lists issues related to the authentication and access control within a web environment:
 
@@ -233,5 +249,7 @@ This section lists issues related to the authentication and access control withi
 - **IIS Authentication isn't allowed** - This issue occurs due to misconfigurations in the IIS. The authentication settings defined in the web.config file of the web application may conflict with the settings configured in IIS, leading to authentication issues. To resolve this issue, configure the website to enable Windows Authentication and set the `<identity impersonate="true"/>` value in the *Web.config* file.
 
 - **Wrong Internet zone** - This might occur if you try to access a website that isn't in the correct Internet zone in Internet Explorer. The credentials won't work if the website is in the local Intranet zone.
+
+</details>
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]

@@ -45,16 +45,16 @@ Before you start troubleshooting, work through the [prerequisites](../connect/re
 
 This section describes error types and related information.
 
-- Directory services errors
+- **Directory services errors**
 
-  If the SQL Server error log file contains either or both of the following messages, then this error is related to Active Directory (AD). This error might also occur if the Domain Controller (DC) can't be contacted by Windows on the SQL Server-based computer, or the local security service (LSASS) is experiencing an issue.
+  If the SQL Server error log file contains either or both of the following messages, then this error is related to Active Directory (AD). This error might also occur if the Domain Controller (DC) can't be contacted by Windows on the SQL Server-based computer, or the Local Security Authority Subsystem Service (LSASS) is experiencing an issue.
 
   ```output
    Error -2146893039 (0x80090311): No authority could be contacted for authentication.
    Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
   ```
 
-- Failed login errors
+- **Failed login errors**
 
   When you troubleshoot the "Login Failed" error message, the SQL Server error log can provide more information that's related to error code 18456, including the specific state value. The state value provides more context about the error. For more information, see the SQL Server error log file in [SQL state value](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information). You can try to fix the issue according to the description of the state value.
 
@@ -69,7 +69,7 @@ This section describes error types and related information.
   |SSPI (Security Support Provider Interface) Context.|Check if the [SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).|
   |"Login failed for user \<username\>." | This error can occur if the [proxy account](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md) isn't properly authenticated.    |
   |"Login Failed for user: 'NT AUTHORITY\ANONYMOUS LOGON'"|This error might occur if the [SPN is missing, SPN is duplicated, or the SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).|
-  |"Login failed for user \<username\>." </br> "Login failed for user '\<database\username\>"</br>    | Check if there's a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the user doesn't belong to a local group used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).    |
+  |"Login failed for user \<username\>." </br> "Login failed for user '\<database\username\>"</br>    | Check if there's a [incorrect server name in connection string](bad-server-name-connection-string-error.md). Also, check if the user doesn't belong to a local group used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).    |
   |"Cannot generate SSPI context" | The explicit SPN account might be [wrong](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended), missing, or misplaced. |
   |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
   |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
@@ -162,7 +162,7 @@ This section lists various causes and scenarios that are related to Kerberos aut
 - [Limit delegation rights to Access or Excel](#limit-delegation-rights-to-access-or-excel)
 - [Use website host header](#use-website-host-header)
 - [HOSTS file is incorrect](#hosts-file-is-incorrect)
-- [Delegating to a file share](#assign-permissions-to-a-file-share-without-proper-constraints)
+- [Delegating to a file share](#delegating-to-a-file-share)
 - [Enable HTTP ports on SPNs](#enable-http-ports-on-spns)
 - [SQL Alias might not function correctly](#sql-alias-might-not-function-correctly)
 
@@ -218,7 +218,7 @@ A view or stored procedure queries the tables or views in the linked server but 
 
 ### Incorrect server name in a connection string
 
-This issue might occur if the specified server name is incorrect or can't be found. For more information, see [incorrect server name in connection string](bad-server-name-connection-string-error.md).
+This issue might occur if the specified server name is incorrect or can't be found. For more information, see [incorrect server name in connection string](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
 
 ### Wrong database name in connection string
 
@@ -413,7 +413,7 @@ If the website has a host header name, the HOSTS SPN can't be used. An explicit 
 
 The HOSTS file can disrupt DNS lookups and might generate an unexpected SPN name. This situation causes NTLM credentials to be used. If an unexpected IP address is in the HOSTS file, the SPN that's generated might not match the back-end server that's pointed to.
 
-### Assign permissions to a file share without proper constraints
+### Delegating to a file share
 
 Refers to a situation in which a user or application delegates its credentials to access a file share. Without proper constraints, delegating credentials to a file share might create security risks. To resolve this kind of issue, make sure that you use constrained delegation.
 
