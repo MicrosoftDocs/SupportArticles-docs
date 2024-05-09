@@ -12,16 +12,6 @@ ms.custom: sap:Connection issues
 
 This article provides a comprehensive list of questions that are classified based on specific categories. It also describes the method of collecting data. Although the ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md) article includes the most important items to be collected, the questions in this article can help you troubleshoot SQL Server more effectively by ruling out many scenarios and narrowing your focus.
 
-> [!NOTE]
-> Not all questions are applicable to all issues. However, these questions can guide you as you consider how to troubleshoot connectivity issues.
-
-- [Big picture questions](#big-picture-questions)
-- [Client computer](#client-computer)
-- [Log information](#log-information)
-- [New or existing issues](#new-or-existing-issues)
-- [Server computer](#server-computer)
-- [User information](#user-information)
-
 ## Method of collecting data
 
 To collect data, you can use tools such as [Problem Steps Recorder (PSR)](/office/troubleshoot/settings/how-to-use-problem-steps-recorder), [Network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace), and [NETLOGON](../../../windows-client/windows-security/enable-debug-logging-netlogon-service.md) trace. This section provides detailed steps to install and configure a combination of all these tools.
@@ -75,7 +65,7 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 Not all questions are applicable to all issues. However, the following set of questions is designed to help you identify the category of the issue, guiding you towards troubleshooting in the right direction. Select each tab for related questions:
 
-### Big picture questions
+### [Broader perspective questions](#tab/broader-perspective-questions)
 
 - Does the issue affect only database connections, or does it also affect web and file share connections?
   Many cases are reported to the SQL Server team because they occur on the database server. However, it might be possible that the issue isn't related to the database at all and might require more general Windows or Active Directory support.
@@ -92,7 +82,7 @@ Not all questions are applicable to all issues. However, the following set of qu
 - Does the issue occur when you use a SQL Server login and TCP/IP?
 - Does a working case exist that can be compared against the failing case? How do the systems differ?
 
-### Client computer
+### [Client computer](#tab/client-computer)
 
 You can collect the following information about different components of the client computer.
 
@@ -120,7 +110,7 @@ You can collect the following information about different components of the clie
 - Does the issue occur only when you use the NETBIOS name of the server and not when you use the Fully Qualified Domain Name (FQDN) (or vice versa)? Does it work by using the IP address?
 - Does the client running Windows 10 Enterprise Edition have the Credential Guard feature turned on? If yes, this might affect full delegation scenarios.
 
-### Log information
+### [Log information](#tab/log-information)
 
 Collect the following information from the log files:
 
@@ -130,14 +120,14 @@ Collect the following information from the log files:
 - Were the client application log files and configuration files collected? For example, *web.config, rsreportserver.config*, **.config*, or **.ini*.
 - Is there an available visual representation of the network that shows the computers, routers, and so on?
 
-### New or existing issues
+### [New or existing issues](#tab/new-existing-users)
 
 Refers to determining whether the problem is a recent development or if it has persisted for a while:
 
 - Has the issue always existed (new installation) or did the application function correctly for some time before it recently broke?
 - If the application used to function correctly, what changes were made to the environment? For example, installed updates, upgraded domain controllers, changes in the firewall settings, decommissioned domain controllers, or a move to a different OU in the domain.
 
-### Server computer
+### [Server computer](#tab/server-computer)
 
 For a Linked Server, collect server information for both the mid-tier server and the back-end server. For an IIS-to-SQL delegation issue, collect information on the web server, including the *web.config* and authentication settings.
 
@@ -165,7 +155,7 @@ For a Linked Server, collect server information for both the mid-tier server and
 - What is the status of the SQL Browser service? Is it running?
 - What is the specificity of the issue to a service account? Does running the server using a different service account resolve the issue?
 
-### User information
+### [User information](#tab/userinformation)
 
 Collect the following user details:
 
