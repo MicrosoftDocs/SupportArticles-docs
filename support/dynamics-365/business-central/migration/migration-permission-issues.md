@@ -1,22 +1,21 @@
 ---
 title: Permission issues in Business Central cloud migration
-description: Troubleshooting article for permission issues in Business Central cloud migration
+description: Provides a resolution for the Operation on target NotifyBusinessCentral failed error or you don't have permission to create or run scheduled tasks in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
-ms.topic: troubleshooting 
-ms.date: 04/24/2024
+ms.date: 05/09/2024
 ---
-
 # Permission issues in Business Central cloud migration
 
-This article explains how to diagnose and fix problems that you might encounter when you try to set up cloud migration.
+This article solves permission errors that you might encounter when you try to [set up cloud migration](/dynamics365/business-central/dev-itpro/administration/migration-setup) in Business Central.
 
 ## Symptoms
 
-The symptom can be one of the following:
+When you run the [Cloud Migration Setup assisted setup guide](/dynamics365/business-central/dev-itpro/administration/migration-setup), you receive one of the following error messages:
 
-- **Operation on target NotifyBusinessCentral failed: Invoking Web Activity failed with HttpStatusCode - '500': A user setting up Cloud Migration does not have enough permissions: either not a Delegated Admin, or a Delegated Admin without a customer consent.**
-- **You do not have permission to create or run scheduled tasks**
+> Operation on target NotifyBusinessCentral failed: Invoking Web Activity failed with HttpStatusCode - '500': A user setting up Cloud Migration does not have enough permissions: either not a Delegated Admin, or a Delegated Admin without a customer consent.
+
+> You do not have permission to create or run scheduled tasks.
 
 ## Cause
 
@@ -24,7 +23,10 @@ The user who runs the cloud migration setup has insufficient permissions.
 
 ## Resolution
 
-- Make sure the user running the setup is assigned the SUPER permission set in Business Central online. 
-- If the user running the setup is a delegated admin, make sure that the customer has consented.
+> [!NOTE]
+> You need administrator permissions in Business Central.
 
-For more information, see [Run cloud migration setup](/dynamics365/business-central/dev-itpro/administration/migration-setup).
+To solve this issue,
+
+- Make sure the user running the setup is assigned the SUPER permission set in Business Central online.
+- If the user running the setup is a [delegated administrator](/dynamics365/business-central/dev-itpro/administration/migration-setup#about-delegated-administrators), make sure that the customer has consented.

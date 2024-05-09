@@ -1,27 +1,25 @@
 ---
-title: "Invalid database connection string provided"
-description: Troubleshooting article for invalid database connection string issues in Business Central cloud migration.
+title: Invalid database connection string provided error
+description: Provides a resolution for Invalid database connection string error in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
-ms.topic: troubleshooting 
-ms.date: 04/24/2024
+ms.date: 05/09/2024
 ---
+# "Invalid database connection string provided" error in Business Central cloud migration
 
-# "Invalid database connection string provided"
+This article solves the **Invalid database connection string provided** error that occurs in [Business Central cloud migration](/dynamics365/business-central/dev-itpro/administration/migration-manage).
 
-This article explains how to troubleshoot the **Invalid database connection string provided** error in Business Central cloud migration.
+## Symptoms
 
-## Symptom
-
-The symptom is the following error message:
+You receive the following error message during the Business Central cloud migration.
 
 - **Invalid database connection string provided**
 
-This issue often appears together with the **Keyword not supported:**  or  **Value cannot be null** error.
+This issue often appears together with the "Keyword not supported" or "Value cannot be null" error.
 
 ## Cause
 
-The wrong SQL connection string was configured in the **Cloud Migration Setup** guide.
+The wrong SQL connection string was configured in the [Cloud Migration Setup assisted setup guide](/dynamics365/business-central/dev-itpro/administration/migration-setup).
 
 ## Resolution
 
