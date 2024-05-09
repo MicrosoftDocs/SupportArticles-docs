@@ -170,7 +170,7 @@ sudo unlink python
 sudo ln -s python2.7 python  # Modify if necessary.
 ```
 
-### Solution 3b: Reinstall Python by using rpm
+### Solution 3b: Reinstall Python by using RPM
 
 Reinstall the Python package by running the following `rpm` command:
 
@@ -457,6 +457,58 @@ Rebuild the RPM database by following these steps:
 
    ```bash
    sudo rpm -vv --rebuilddb
+   ```
+
+## Scenario 7: Yum command fails and returns '[Errno 14] HTTPS Error 403 --Forbidden'
+
+The following errors appear if you run the `yum` command on a Red Hat 7._x_ VM that's connected to RHUI.
+
+```output
+https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel/rhui/server/7/7Server/x86_64/rh-common/os/repodata/repomd.xml: [Errno 14] HTTPS Error 403 - Forbidden
+```
+
+### Solution 7
+
+1. Check whether a third-party curl package is installed on your VM: 
+
+```bash
+sudo rpm -qa | grep -i curl
+```
+
+```bash
+rpm -q --queryformat '%{VENDOR}\n' curl libcurl
+```
+
+```output
+curl-7.73.0-2.0.cf.rhel7.x86_64 
+libcurl-7.73.0-2.0.cf.rhel7.x86_64
+libcurl-devel-7.73.0-2.0.cf.rhel7.x86_64 
+```
+
+```output
+city-fan.org repo http://www.city-fan.org/ftp/contrib/
+```
+
+If any third-party package is installed, go to step 2.
+
+>[!IMPORTANT]
+>The curl packages from third-party sources are provided with their own binaries and certificates that are not recognized by Red Hat. This incompatibility causes yum to encounter issues.
+
+2. Use either of the following methods to dowload the latest version of the `curl`, `libcurl`, and `libcurl-devel` packages that are provided for RHEL 7.9:
+
+   - Download the packages manually by logging on to [Red Hat Download](https://access.redhat.com/downloads/), and then upload the rpms files to the affected VM.
+
+   - Log on to a working RHEL 7.9 VM `(PAYGO)`, download the required packages by using the `yumdownloader` command, and then copy the rpms files to the affected VM:
+
+      ```bash
+      sudo yumdownloader curl.x86_64 libcurl.x86_64 libcurl-devel.x86_64
+      ```
+ 
+3. Downgrade the curl packages by using the rpms files from step 2:
+
+   ```bash
+   sudo cd /path/location/of/rpms/downloaded
+   sudo yum downgrade curl-X.XX.0-XX.el7_9.X.x86_64.rpm libcurl-X.XX.X-XX.el7_9.X.x86_64.rpm libcurl-devel-X.XX.X-XX.el7_9.X.x86_64.rpm --disablerepo=*
    ```
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
