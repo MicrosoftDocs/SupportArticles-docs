@@ -12,20 +12,6 @@ ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium
 ---
----
-title: Windows-based computer freeze troubleshooting
-description: Learn how to troubleshoot computer freeze issues on Windows-based computers and servers. Also, you can learn how to diagnose, identify, and fix these issues.
-ms.date: 12/26/2023
-ms.topic: troubleshooting
-author: aczechowski
-ms.author: aaroncz
-manager: dcscontentpm
-ms.collection: highpri
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
-ms.reviewer: dougeby
-audience: itpro
-localization_priority: medium
----
 # Advanced troubleshooting for Windows freezes
 
 This article describes how to troubleshoot freeze issues on Windows-based computers and servers. It also provides methods for collecting data that will help administrators or software developers diagnose, identify, and fix these issues.
@@ -254,7 +240,8 @@ Debug-VM -Name "VM Name" -InjectNonMaskableInterrupt -ComputerName Hostname
 You can use VMware snapshots or suspend state and extract a memory dump file equivalent to a complete memory dump file. Use VMware's [Checkpoint To Core Tool (vmss2core)](https://kb.vmware.com/s/article/2003941) to convert both suspend (`.vmss`) and snapshot (`.vmsn`) state files to a dump file. Then analyze the file by using the standard Windows debugging tools.
 
 > [!NOTE]
-> When working with Microsoft Support, VMware snapshots should be converted to a dump file prior to uploading to Microsoft, by using VMware's [Checkpoint To Core Tool (vmss2core)](https://kb.vmware.com/s/article/2003941). If you experience any issues with the snapshot conversion, please contact  VMware for support.
+> When working with Microsoft Support, VMware snapshots should be converted to a dump file prior to uploading to Microsoft, by using VMware's [Checkpoint To Core Tool (vmss2core)](https://kb.vmware.com/s/article/2003941). If you experience any issues with the snapshot conversion, please contact VMware for support.
+
 #### Citrix XenServer
 
 The memory dump process occurs by pressing the Right Ctrl+Scroll Lock+Scroll Lock keyboard combination. For more information, see Method 1 of [How to Trigger a Memory Dump from a Windows Virtual Machine Running on XenServer](https://support.citrix.com/article/ctx123177) from Citrix.
