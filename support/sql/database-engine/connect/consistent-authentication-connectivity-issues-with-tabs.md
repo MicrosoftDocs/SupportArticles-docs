@@ -31,14 +31,14 @@ Before you start troubleshooting, work through the [prerequisites](../connect/re
 
 This section describes error types and related information.
 
-- Directory services errors: If the SQL Server error log file contains either or both of the following messages, then this error is related to Active Directory (AD). This error might also occur if Windows on the SQL Server-based computer fails to contact the Domain Controller (DC) or if the Local Security Authority Subsystem Service (LSASS) experiences an issue.
+- **Directory services errors**: If the SQL Server error log file contains either or both of the following messages, then this error is related to Active Directory (AD). This error might also occur if Windows on the SQL Server-based computer fails to contact the Domain Controller (DC) or if the Local Security Authority Subsystem Service (LSASS) experiences an issue.
 
   ```output
    Error -2146893039 (0x80090311): No authority could be contacted for authentication.
    Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
   ```
 
-- Login failed errors: When you troubleshoot the "Login Failed" error message, the SQL Server error log provides additional insights on the error code 18456 with a specific state value that offers more context about the error. For more information, see the SQL Server error log file in [SQL state value](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information). You can try to fix the issue according to the description of the state value.
+- **Login failed errors**: When you troubleshoot the "Login Failed" error message, the SQL Server error log provides additional insights on the error code 18456 with a specific state value that offers more context about the error. For more information, see the SQL Server error log file in [SQL state value](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information). You can try to fix the issue according to the description of the state value.
 
   The following table lists some specific "Login Failed" error messages and their possible causes and solutions.
 
