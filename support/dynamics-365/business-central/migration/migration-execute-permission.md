@@ -25,5 +25,5 @@ The SQL login account used by [self-hosted Integration Runtime](/azure/data-fact
 
 Make sure that the SQL user that's specified in the self-hosted Integration Runtime connection string has the following roles on the on-premises database:
 
-- [sysadmin server-level role](/sql/relational-databases/security/authentication-access/server-level-roles?view=sql-server-ver16#fixed-server-level-roles)
-- [db_owner database role](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-ver16#fixed-database-roles)
+- [sysadmin server-level role](/sql/relational-databases/security/authentication-access/server-level-roles#fixed-server-level-roles)
+- [db_owner database role](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles)

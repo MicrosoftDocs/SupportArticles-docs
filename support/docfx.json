@@ -204,7 +204,7 @@
         "power-platform/power-pages/**/**.*": "power-pages",
         "power-platform/power-automate/**/*.md": "power-automate",
         "power-platform/dataverse/**/*.md": "power-platform",
-        "dynamics-365/business-central/**/**.*": "business-central",
+        "dynamics-365/business-central/**/**.*": "d365-business-central",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
         "dynamics-365/customer-service/**/**.*": "dynamics-365-customerservice",
         "dynamics-365/sales/*.md": "dynamics-365-sales",

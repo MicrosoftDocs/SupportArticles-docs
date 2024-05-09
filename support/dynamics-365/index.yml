@@ -13,7 +13,7 @@ additionalContent:
     - items:
         - title: Dynamics 365 Business Central
           summary: Troubleshooting articles for Dynamics 365 Business Central
-          url: customer-insights/welcome-business-central.yml
+          url: business-central/welcome-business-central.yml
         - title: Dynamics 365 Customer Insights - Data
           summary: Troubleshooting articles for Dynamics 365 Customer Insights - Data
           url: customer-insights/welcome-customer-insights.yml
