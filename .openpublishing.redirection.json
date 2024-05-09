@@ -9776,8 +9776,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/windows-server/active-directory/troubleshoot-adreplication-guidance.md",
-      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance",
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-adreplication-guidance",
       "redirect_document_id": true
     },
     {
@@ -11049,11 +11049,6 @@
       "source_path": "support/sql/database-engine/connect/bad-server-name-connection-string-error.md",
       "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance.md",
-      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-adreplication-guidance",
-      "redirect_document_id": true
     }
   ]
 }
