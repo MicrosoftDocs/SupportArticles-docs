@@ -1,13 +1,11 @@
 ---
 title: Wireless network connectivity issues troubleshooting
 description: Learn how to troubleshoot Wi-Fi connections. Troubleshooting Wi-Fi connections requires understanding the basic flow of the Wi-Fi autoconnect state machine.
-ms.date: 12/26/2023
+ms.date: 05/10/2024
 manager: dcscontentpm
-author: aczechowski
-ms.author: aaroncz
 ms.topic: troubleshooting
-ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
-ms.reviewer: dougeby
+ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.reviewer: dougeby,aaroncz
 audience: itpro
 localization_priority: medium
 ---
