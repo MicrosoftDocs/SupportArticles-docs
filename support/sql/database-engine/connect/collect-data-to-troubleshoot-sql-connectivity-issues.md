@@ -66,7 +66,7 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 ## Collect data based on various categories
 
-Not all questions are applicable to all issues. However, the following set of questions is designed to help you identify the category of the issue, guiding you towards troubleshooting in the right direction. Select each tab for related questions:
+Not all questions are applicable to all issues. However, the following set of questions is designed to help you identify the category of the issue, guiding you towards troubleshooting in the right direction. Select each dropdown for related questions:
 
 <details><summary><b>Broader perspective questions</b></summary>
 
