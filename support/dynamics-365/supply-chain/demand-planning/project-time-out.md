@@ -26,8 +26,16 @@ For the available quality updates, see [Export of Historical Sales Demand and De
 
 Filter out the dataset to make sure less data is exported by a profile job.
 
-1. Select the corresponding Demand planning data management project with the **DP-XML-NameOfEntity-NameOfProfile** name.
-2. Make sure you are in enhanced view and then select the filter button.
+1. Select the corresponding Demand planning data management project with a name that looks like **DP-XML-NameOfEntity-NameOfProfile**.
+2. Make sure you're in enhanced view and then select the filter button.
 3. Filter out the data that contains special characters.
 
 In this case, when you run the import profiles job from the Demand Planning app, the filters are respected and therefore the data will be filtered out.
+
+## More information
+
+- [Demand planning import profile troubleshooting guide](import-landing-page.md)
+- [Import profile job fails because of time-out.](project-time-out.md)
+- [Import profile job fails because of special characters.](special-characters.md)
+- [Import profile job fails because of insufficient permissions.](user-insufficient-permissions.md)
+- [Import data into Demand planning](/dynamics365/supply-chain/demand-planning/import-data)

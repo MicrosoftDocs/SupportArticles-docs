@@ -14,19 +14,19 @@ This article introduces the scenario in which an import profile job fails with a
 
 ## Symptoms
 
-When you create a import profile job from **Finance and Operations** and run it, the import profile job fails with one of the following message:
+When you [create a import profile job](/dynamics365/supply-chain/demand-planning/import-data#create-an-import-profile-for-importing-directly-from-supply-chain-management) from **Finance and Operations** and run it, the import profile job fails with one of the following message:
 
 > We were unable to successfully import data from your provided D365 Finance and Operations instance. The Data Management Framework project was successfully created but there was an error encountered in its execution. Please check the execution log of the project in Data management workspace.
 
-> We were unable to successfully import data from the linked Finance & Operations app. Although the Data Management Framework project was created, it didn’t finish within the expected timeframe. Please review the project’s execution log in the Data Management workspace and consider applying filters before re-running the import profile**
+> We were unable to successfully import data from the linked Finance & Operations app. Although the Data Management Framework project was created, it didn’t finish within the expected timeframe. Please review the project's execution log in the Data Management workspace and consider applying filters before re-running the import profile.
 
 ## Resolution
 
-1. Navigate to the **Dynamics 365 Finance and Operations Data Management Workspace**.
-2. Find the corresponding **Demand Planning Data Management project** with a name that looks like **DP-XML-NameOfEntity-NameOfProfile**.
+1. Navigate to the Dynamics 365 Finance and Operations **Data management** workspace.
+2. Find the corresponding Demand Planning Data Management project with a name that looks like **DP-XML-NameOfEntity-NameOfProfile**.
 3. Select the execution details to find the error that explains the reason why the project fails.
 
- For more information about the error and the related resolutions, see:
+For more information about the error and the related resolutions, see:
 
 - [An import profile job fails with a "Forbidden" error](import-profile-fails-with-forbidden-error.md)
 - [An import profile job fails with a "Timeout" error](project-time-out.md)

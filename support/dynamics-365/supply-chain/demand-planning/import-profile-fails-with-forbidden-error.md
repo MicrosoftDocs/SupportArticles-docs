@@ -2,13 +2,15 @@
 title: Import profile job fails with a forbidden error
 description: Provides a resolution for the Forbidden error that occurs when an import profile job fails in Microsoft Dynamics 365 Supply Chain Management.
 author: fistamos
-ms.date: 05/09/2024
+ms.date: 05/10/2024
 audience: Application User
 ms.search.region: Global
 ms.author: fistamos
 ms.search.validFrom: 2024-03-01
 ---
 # An import profile job fails with a "Forbidden" error
+
+This article provides a resolution for the "Forbidden" error that occurs when an import profile job fails in Microsoft Dynamics 365 Supply Chain Management.
 
 ## Symptoms
 
