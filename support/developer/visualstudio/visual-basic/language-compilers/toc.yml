@@ -26,5 +26,7 @@
   href: ./start-process-as-another-user.md
 - name: Validate an XML document by using DTD, XDR, or XSD
   href: ./validate-xml-document-by-dtd-xdr-xsd.md
+- name: VBScript runtime error when you do a numeric comparison
+  href: ./vbs-type-mismatch-error.md
 - name: Write CGI applications
   href: ./write-cgi-applications.md
