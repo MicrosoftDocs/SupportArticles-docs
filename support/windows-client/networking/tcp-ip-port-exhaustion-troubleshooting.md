@@ -6,7 +6,7 @@ ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
-ms.reviewer: dansimp,dansimp
+ms.reviewer: dansimp
 audience: itpro
 localization_priority: medium
 ---

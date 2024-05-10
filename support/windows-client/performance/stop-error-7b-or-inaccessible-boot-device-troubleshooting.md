@@ -5,7 +5,7 @@ ms.date: 05/10/2024
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
-ms.reviewer: dansimp,dansimp
+ms.reviewer: dansimp
 audience: itpro
 localization_priority: medium
 ---
