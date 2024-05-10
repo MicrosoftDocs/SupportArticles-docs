@@ -13,7 +13,7 @@ This article provides a resolution for the issue where personal view queue filte
 
 ## Symptoms
 
-When using personal view filters, you might encounter an issue with an outdated format of the applied queue filters (for example, **“Queues I’m a member of**). 
+When using personal view filters, you might encounter an issue with an outdated format of the applied queue filters (for example, **Queues I’m a member of**). 
 
 ## Cause
 
@@ -29,7 +29,7 @@ To resolve this issue and make the personal view work in the advanced filter, yo
 
 If your personal view filter is relatively simple, it might be faster and more reliable for you to recreate the view. Before deleting or deprecating the old view, be sure to test your new view first.
 
-## Remediate the view
+### Remediate the view
 Use the following steps to remove the old format of the queue filters and replace them with the updated version: 
 
 1. Open the personal view in the queue item grid.
