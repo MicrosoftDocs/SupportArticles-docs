@@ -1,13 +1,11 @@
 ---
 title: Windows 10 upgrade issues troubleshooting
 description: Understanding the Windows 10 upgrade process can help you troubleshoot errors when something goes wrong. Find out more with this guide.
-ms.date: 12/26/2023
+ms.date: 05/10/2024
 manager: dcscontentpm
-ms.author: aaroncz
-author: aczechowski
 ms.topic: troubleshooting
 ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
-ms.reviewer: dougeby
+ms.reviewer: dougeby,aaroncz
 audience: itpro
 localization_priority: medium
 ---
