@@ -1,7 +1,7 @@
 ---
 title: Stop error, bug check, or blue screen error troubleshooting
 description: Learn advanced options for troubleshooting stop errors, also known as blue screen errors or bug check errors.
-ms.date: 45422
+ms.date: 05/10/2024
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri

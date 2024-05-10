@@ -1,7 +1,7 @@
 ---
 title: First connection to non-persistent VDI session fails when using per-user Remote Desktop licensing
 description: Troubleshooting the Remote Desktop License Servers unavailable error when trying to connect to a remote session using non-persistent VDI and per-user Remote Desktop licensing.
-ms.date: 45422
+ms.date: 05/10/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

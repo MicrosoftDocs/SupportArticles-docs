@@ -1,7 +1,7 @@
 ---
 title: Stop error occurs when you update the in-box Broadcom network adapter driver
 description: Describes an issue that causes a stop error when you update an in-box Broadcom driver on Windows Server 2019, version 1809.
-ms.date: 45422
+ms.date: 05/10/2024
 ms.topic: troubleshooting
 audience: itpro
 localization_priority: medium
