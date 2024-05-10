@@ -1,9 +1,8 @@
 ---
 title: Collect data using Network Monitor
 description: Learn how to run Network Monitor to collect data for troubleshooting TCP/IP connectivity.
-ms.date: 12/26/2023
+ms.date: 45422
 ms.topic: troubleshooting
-author: dansimp
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot

@@ -1,9 +1,8 @@
 ---
 title: Windows 10 upgrade error codes
 description: Understand the error codes that may come up if something goes wrong during the Windows 10 upgrade process.
-ms.date: 12/26/2023
+ms.date: 45422
 manager: dcscontentpm
-author: aczechowski
 ms.topic: troubleshooting
 ms.collection: highpri
 ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot

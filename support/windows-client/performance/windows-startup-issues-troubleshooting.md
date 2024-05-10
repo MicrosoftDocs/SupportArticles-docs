@@ -1,9 +1,8 @@
 ---
 title: Advanced troubleshooting for Windows start-up issues
 description: Learn advanced options for how to troubleshoot common Windows start-up issues, like system crashes and freezes.
-ms.date: 12/26/2023
+ms.date: 45422
 ms.topic: troubleshooting
-author: dansimp
 audience: itpro
 localization_priority: medium
 manager: dcscontentpm

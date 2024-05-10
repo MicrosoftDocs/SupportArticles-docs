@@ -1,9 +1,8 @@
 ---
 title: Windows-based computer freeze troubleshooting
 description: Learn how to troubleshoot computer freeze issues on Windows-based computers and servers. Also, you can learn how to diagnose, identify, and fix these issues.
-ms.date: 05/10/2024
+ms.date: 45422
 ms.topic: troubleshooting
-author: aczechowski
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot

@@ -1,8 +1,7 @@
 ---
 title: Windows Update issues troubleshooting
 description: Learn about troubleshooting Windows Update, issues related to HTTP/Proxy, and why some features are offered and others aren't.
-ms.date: 12/26/2023
-author: aczechowski
+ms.date: 45422
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
