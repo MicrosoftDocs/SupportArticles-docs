@@ -56,7 +56,7 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 1. Stop the *psr.exe* recording.
 
-1. Stop the network captures. Save the recorded file by running the command `NETSH: NETSH TRACE STOP` by using a meaningful name. For example, *SQLProd01.netmon.cap*.
+1. Stop the network captures. Save the recorded file by running the command NETSH: `NETSH TRACE STOP` by using a meaningful name. For example the name of the file can be *SQLProd01.netmon.cap*.
 
 1. Wait for the command prompt to reappear, and then close the window. Don't close the Command Prompt window before the prompt appears.
 
