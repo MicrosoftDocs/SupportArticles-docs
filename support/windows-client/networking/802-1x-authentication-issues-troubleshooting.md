@@ -5,7 +5,7 @@ ms.date: 05/10/2024
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.custom: sap:Network Connectivity and File Sharing\Wireless�(802.1x,�Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
 ms.reviewer: dougeby,aaroncz
 audience: itpro
 localization_priority: medium

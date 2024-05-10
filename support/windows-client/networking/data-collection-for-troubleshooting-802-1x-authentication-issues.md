@@ -4,7 +4,7 @@ description: Use the steps in this article to collect data that can be used to t
 ms.date: 05/10/2024
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.custom: sap:Network Connectivity and File Sharing\Wireless�(802.1x,�Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
 ms.reviewer: dansimp,dansimp
 audience: itpro
 localization_priority: medium
