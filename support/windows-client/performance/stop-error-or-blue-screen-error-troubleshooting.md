@@ -4,11 +4,10 @@ description: Learn advanced options for troubleshooting stop errors, also known 
 ms.date: 12/26/2023
 ms.topic: troubleshooting
 author: aczechowski
-ms.author: aaroncz
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
-ms.reviewer: kaushika
+ms.reviewer: kaushika,aaroncz
 audience: itpro
 localization_priority: medium
 ---

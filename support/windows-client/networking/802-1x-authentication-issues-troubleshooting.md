@@ -3,12 +3,11 @@ title: 802.1X authentication issues troubleshooting
 description: Troubleshoot authentication flow by learning how 802.1X Authentication works for wired and wireless clients.
 ms.date: 12/26/2023
 author: aczechowski
-ms.author: aaroncz
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
-ms.reviewer: dougeby
+ms.custom: sap:Network Connectivity and File Sharing\Wirelessï¿½(802.1x,ï¿½Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.reviewer: dougeby,aaroncz
 audience: itpro
 localization_priority: medium
 ---

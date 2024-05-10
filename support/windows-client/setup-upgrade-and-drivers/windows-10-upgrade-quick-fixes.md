@@ -3,11 +3,10 @@ title: Windows 10 upgrade quick fixes
 description: Learn how to quickly resolve many problems, which may come up during a Windows 10 upgrade.
 ms.date: 12/26/2023
 manager: dcscontentpm
-ms.author: aaroncz
 ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 author: aczechowski
 ms.topic: troubleshooting
-ms.reviewer: dougeby
+ms.reviewer: dougeby,aaroncz
 audience: itpro
 localization_priority: medium
 ---

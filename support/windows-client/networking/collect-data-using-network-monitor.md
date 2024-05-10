@@ -4,11 +4,10 @@ description: Learn how to run Network Monitor to collect data for troubleshootin
 ms.date: 12/26/2023
 ms.topic: troubleshooting
 author: dansimp
-ms.author: dansimp
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
-ms.reviewer: dansimp
+ms.reviewer: dansimp,dansimp
 audience: itpro
 localization_priority: medium
 ---

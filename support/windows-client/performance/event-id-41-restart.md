@@ -4,10 +4,9 @@ description: Describes the circumstances that cause a computer to generate Event
 ms.date: 12/26/2023
 ms.topic: troubleshooting
 author: Teresa-Motiv
-ms.author: dougeby
 manager: dcscontentpm
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), errors, bug check or Blue Screen, unexpected reboot), csstroubleshooting, CI 111437
-ms.reviewer: kaushika
+ms.reviewer: kaushika,dougeby
 audience: itpro
 localization_priority: medium
 ms.collection: highpri

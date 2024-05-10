@@ -4,10 +4,9 @@ description: Learn how to troubleshoot Wi-Fi connections. Troubleshooting Wi-Fi 
 ms.date: 12/26/2023
 manager: dcscontentpm
 author: aczechowski
-ms.author: aaroncz
 ms.topic: troubleshooting
-ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
-ms.reviewer: dougeby
+ms.custom: sap:Network Connectivity and File Sharing\Wirelessï¿½(802.1x,ï¿½Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.reviewer: dougeby,aaroncz
 audience: itpro
 localization_priority: medium
 ---

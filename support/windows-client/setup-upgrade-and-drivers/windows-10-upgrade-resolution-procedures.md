@@ -3,12 +3,11 @@ title: Windows 10 upgrade resolution procedures
 description: Discover general troubleshooting procedures for dealing with 0xC1900101, the generic rollback code thrown when something goes wrong during a Windows 10 upgrade.
 ms.date: 12/26/2023
 manager: dcscontentpm
-ms.author: aaroncz
 author: aczechowski
 ms.topic: troubleshooting
 ms.collection: highpri
 ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
-ms.reviewer: dougeby
+ms.reviewer: dougeby,aaroncz
 audience: itpro
 localization_priority: medium
 ---

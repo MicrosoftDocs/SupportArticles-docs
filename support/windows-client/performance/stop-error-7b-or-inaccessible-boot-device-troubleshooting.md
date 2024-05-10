@@ -4,10 +4,9 @@ description: Learn how to troubleshoot Stop error 7B or Inaccessible_Boot_Device
 ms.date: 12/26/2023
 ms.topic: troubleshooting
 author: dansimp
-ms.author: dansimp
 manager: dcscontentpm
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
-ms.reviewer: dansimp
+ms.reviewer: dansimp,dansimp
 audience: itpro
 localization_priority: medium
 ---

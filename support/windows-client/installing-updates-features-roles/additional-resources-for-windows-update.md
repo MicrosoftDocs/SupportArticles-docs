@@ -4,11 +4,10 @@ description: Describes details about to troubleshooting WSUS and resetting Windo
 ms.date: 12/26/2023
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.author: aaroncz
 author: aczechowski
 ms.collection: highpri
 ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
-ms.reviewer: dougeby
+ms.reviewer: dougeby,aaroncz
 audience: itpro
 localization_priority: medium
 ---
