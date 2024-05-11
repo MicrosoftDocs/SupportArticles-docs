@@ -21,7 +21,7 @@ _Applies to:_ &nbsp;  All supported versions of Windows Server and Windows Clien
 
 ## Summary
 
-Included in the [Windows Assessment and Deployment Kit](/windows-hardware/get-started/adk-install), the Windows Performance Toolkit consists of performance monitoring tools that produce in-depth performance profiles of Windows operating systems and applications. This article highlights WPR and WPA.
+Included in the [Windows Assessment and Deployment Kit (WADK)](/windows-hardware/get-started/adk-install), the Windows Performance Toolkit consists of performance monitoring tools that produce in-depth performance profiles of Windows operating systems and applications. This article highlights WPR and WPA.
 
 > [!NOTE]  
 > The previous command-line tool, Xperf, is still supported for collecting data. However, Xperfview is no longer supported. Use WPA to view Xperf recordings.
@@ -38,7 +38,7 @@ To run the WPT tools, your system must meet the following requirements:
 
 ### Using WPR to record data
 
-WPR is a powerful recording tool that creates Event Tracing for Windows (ETW) recordings of system and application behavior and resource usage.WPR provides built-in profiles that you can use to select the events that are to be recorded. Alternatively, you can author custom profiles in XML. For more information, refer to the following documentation:
+WPR is a powerful recording tool that creates Event Tracing for Windows (ETW) recordings of system and application behavior and resource usage. WPR provides built-in profiles that you can use to select the events that are to be recorded. Alternatively, you can author custom profiles in XML. For more information, see the following documentation:
 
 | Topic | Link |
 | --- | --- |
@@ -50,7 +50,7 @@ WPR is a powerful recording tool that creates Event Tracing for Windows (ETW) re
 | Descriptions of the logging modes (Memory mode or File mode) | [Logging Mode](/windows-hardware/test/wpt/logging-mode.md)<br/>[Change the Logging Mode](/windows-hardware/test/wpt/wpr-how-to-topics.md#change-the-logging-mode) |
 | Complete reference material, including a recording profile XML reference and a legacy Xperf reference | [WPR Technical Reference](/windows-hardware/test/wpt/wpr-reference.md) |
 
-You can run WPR from the user interface User Interface (WPRUI.exe) or from the command line (WPR.exe). The WPR user interface (UI) makes it simple to generate a recording by using built-in recording profiles to analyze CPU usage, power issues, poor system or application performance, or other performance issues. WPRUI.exe is available in the WADK. WPR.exe ships with the Windows operating system (Windows 8.1 or later) and you do not need additional installation.
+You can run WPR from the user interface User Interface (WPRUI.exe) or from the command line (WPR.exe). The WPR user interface (UI) makes it simple to generate a recording by using built-in recording profiles to analyze CPU usage, power issues, poor system or application performance, or other performance issues. WPRUI.exe is available in the WADK. WPR.exe ships with the Windows operating system (Windows 8.1 or later) and you don't need additional installation.
 
 To start a recording, follow these steps:
 
@@ -71,7 +71,7 @@ To stop a recording, follow these steps:
 
 ### Using WPA to analyze data
 
-WPA is a powerful analysis tool that combines a very flexible UI with extensive graphing capabilities and data tables that can be pivoted and that have full text search capabilities. WPA provides an **Issues** window to explore the root cause of any identified issue. For more information, refer to the following documentation:
+WPA is a powerful analysis tool that combines a flexible UI with extensive graphing capabilities and data tables that can be pivoted and that have full text search capabilities. WPA provides an **Issues** window to explore the root cause of any identified issue. For more information, see the following documentation:
 
 | Topic | Link |
 | --- | --- |
@@ -101,7 +101,7 @@ The Windows Performance Analyzer (WPA) user interface (UI) consists of a collect
 
 ### Examples
 
-The following table describes several problem scenarios, the WPR profiles that you might use for recording data, and tsuggests graphs and pivot table fields to use to analyze the data.
+The following table describes several problem scenarios, the WPR profiles that you might use for recording data, and suggests graphs and pivot table fields to use to analyze the data.
 
 | Scenario | WPR profile | Graph and parameters to analyze |
 | --- | --- | --- |
