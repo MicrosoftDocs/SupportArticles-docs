@@ -3293,3 +3293,5 @@ items:
       href: ./support-tools/troubleshoot-issues-process-explorer.md
     - name: Using Task Manager
       href: ./support-tools/support-tools-task-manager.md
+    - name: Using WPR, WPA, or Xperf
+      href: ./support-tools/support-tools-xperf-wpa-wpr.md
