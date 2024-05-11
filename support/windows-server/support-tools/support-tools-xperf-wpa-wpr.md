@@ -42,13 +42,13 @@ WPR is a powerful recording tool that creates Event Tracing for Windows (ETW) re
 
 | Topic | Link |
 | --- | --- |
-| Quick start of basic procedures | [WPR How-to Topics](windows-hardware/test/wpt/wpr-how-to-topics.md) |
-| Descriptions of the built-in recording profiles | [Built-in Recording Profiles](windows-hardware/test/wpt/built-in-recording-profiles.md) |
-| Complete documentation of the WPR user interface | [WPR Features](windows-hardware/test/wpt/wpr-features.md) |
-| Reference of command-line options | [WPR Command-Line Options](windows-hardware/test/wpt/wpr-command-line-options.md) |
-| Discussion of key scenarios | [WPR Scenarios](windows-hardware/test/wpt/windows-performance-recorder-common-scenarios.md)<br/>[Performance&nbsp;Scenarios](windows-hardware/test/wpt/performance-scenarios.md) |
-| Descriptions of the logging modes (Memory mode or File mode) | [Logging Mode](windows-hardware/test/wpt/logging-mode.md)<br/>[Change the Logging Mode](windows-hardware/test/wpt/wpr-how-to-topics.md#change-the-logging-mode) |
-| Complete reference material, including a recording profile XML reference and a legacy Xperf reference | [WPR Technical Reference](windows-hardware/test/wpt/wpr-reference.md) |
+| Quick start of basic procedures | [WPR How-to Topics](/windows-hardware/test/wpt/wpr-how-to-topics.md) |
+| Descriptions of the built-in recording profiles | [Built-in Recording Profiles](/windows-hardware/test/wpt/built-in-recording-profiles.md) |
+| Complete documentation of the WPR user interface | [WPR Features](/windows-hardware/test/wpt/wpr-features.md) |
+| Reference of command-line options | [WPR Command-Line Options](/windows-hardware/test/wpt/wpr-command-line-options.md) |
+| Discussion of key scenarios | [WPR Scenarios](/windows-hardware/test/wpt/windows-performance-recorder-common-scenarios.md)<br/>[Performance&nbsp;Scenarios](/windows-hardware/test/wpt/performance-scenarios.md) |
+| Descriptions of the logging modes (Memory mode or File mode) | [Logging Mode](/windows-hardware/test/wpt/logging-mode.md)<br/>[Change the Logging Mode](/windows-hardware/test/wpt/wpr-how-to-topics.md#change-the-logging-mode) |
+| Complete reference material, including a recording profile XML reference and a legacy Xperf reference | [WPR Technical Reference](/windows-hardware/test/wpt/wpr-reference.md) |
 
 You can run WPR from the user interface User Interface (WPRUI.exe) or from the command line (WPR.exe). The WPR user interface (UI) makes it simple to generate a recording by using built-in recording profiles to analyze CPU usage, power issues, poor system or application performance, or other performance issues. WPRUI.exe is available in the WADK. WPR.exe ships with the Windows operating system (Windows 8.1 or later) and you do not need additional installation.
 
@@ -75,9 +75,9 @@ WPA is a powerful analysis tool that combines a very flexible UI with extensive 
 
 | Topic | Link |
 | --- | --- |
-| Basic procedures and a detailed walkthrough | [WPA Quick Start Guide](windows-hardware/test/wpt/wpa-quick-start-guide.md) |
-| Complete documentation of the WPA UI | [WPA Features](windows-hardware/test/wpt/wpa-features.md) |
-| extended discussion of key scenarios | [WPA Scenarios](windows-hardware/test/wpt/windows-performance-analyzer-common-scenarios.md) |
+| Basic procedures and a detailed walkthrough | [WPA Quick Start Guide](/windows-hardware/test/wpt/wpa-quick-start-guide.md) |
+| Complete documentation of the WPA UI | [WPA Features](/windows-hardware/test/wpt/wpa-features.md) |
+| extended discussion of key scenarios | [WPA Scenarios](/windows-hardware/test/wpt/windows-performance-analyzer-common-scenarios.md) |
 
 To open WPA, select the Windows Search box and enter *Windows Performance Analyzer*. In the search results, select **Windows Performance Analyzer**.  
 
@@ -86,18 +86,18 @@ If you didn't open WPA directly from WPR after you saved a recording, you can us
 :::image type="content" source="media/support-tools-xperf-wpa-wpr/wpa-analysis-CPU.png" alt-text="Screenshot that shows W.P.A., showing tables and graphs in the Analysis tab.":::  
 
 > [!NOTE]  
-> To load symbols for analysis, select **Trace**, and then select **Load Symbols**. For more information, see [Load Symbols or Configure Symbol Paths](windows-hardware/test/wpt/load-symbols-or-configure-symbol-paths.md).
+> To load symbols for analysis, select **Trace**, and then select **Load Symbols**. For more information, see [Load Symbols or Configure Symbol Paths](/windows-hardware/test/wpt/load-symbols-or-configure-symbol-paths.md).
 
 The Windows Performance Analyzer (WPA) user interface (UI) consists of a collection of docked windows that surround a central workspace. This central workspace contains **Analysis** tabs. All windows can be undocked or moved and docked in a different location. To open a closed window, select the window on the **Window** menu. WPA uses the following windows and tabs:
 
 | Window or tab | Description |
 | --- | --- |
-| Graph Explorer | Contains thumbnails of all the graphs that apply to the current recording. The graphs are grouped into categories. To expand a category, select the triangle in the upper left corner of the thumbnail. For more information, see [Graph Explorer](windows-hardware/test/wpt/graph-explorer.md). |
-| Analysis | Displays detailed information and legends for trace recordings. You can drag graphs from the Graph Explorer to the **Analysis** tab. The tab displays the information in graph and pivot table format. In the tables, the vertical gold bar separates keys from data. The vertical blue bar separates pivot table data from graphing elements. For more information, see [Analysis Tab](windows-hardware/test/wpt/analysis-tab.md). |
-| Analysis Assistant | Displays information about the currently selected graph and table. For more information, see [Analysis Assistant](windows-hardware/test/wpt/analysis-assistant.md). |
-| Issues | Available for Assessment Platform recordings, and lists issues  that the assessment identifies. For more information, see [Issues Window](windows-hardware/test/wpt/issues-window.md). |
-| Details | Available for Assessment Platform recordings, and lists details and recommended solutions for the selected issue. For more information, see [Details Window](windows-hardware/test/wpt/details-window.md). |
-| Diagnostic Console | Provides a list of exceptions in the recording and details related to symbol loading and decoding. For more information, see [Diagnostic Console Window](windows-hardware/test/wpt/diagnostic-console.md). |
+| Graph Explorer | Contains thumbnails of all the graphs that apply to the current recording. The graphs are grouped into categories. To expand a category, select the triangle in the upper left corner of the thumbnail. For more information, see [Graph Explorer](/windows-hardware/test/wpt/graph-explorer.md). |
+| Analysis | Displays detailed information and legends for trace recordings. You can drag graphs from the Graph Explorer to the **Analysis** tab. The tab displays the information in graph and pivot table format. In the tables, the vertical gold bar separates keys from data. The vertical blue bar separates pivot table data from graphing elements. For more information, see [Analysis Tab](/windows-hardware/test/wpt/analysis-tab.md). |
+| Analysis Assistant | Displays information about the currently selected graph and table. For more information, see [Analysis Assistant](/windows-hardware/test/wpt/analysis-assistant.md). |
+| Issues | Available for Assessment Platform recordings, and lists issues  that the assessment identifies. For more information, see [Issues Window](/windows-hardware/test/wpt/issues-window.md). |
+| Details | Available for Assessment Platform recordings, and lists details and recommended solutions for the selected issue. For more information, see [Details Window](/windows-hardware/test/wpt/details-window.md). |
+| Diagnostic Console | Provides a list of exceptions in the recording and details related to symbol loading and decoding. For more information, see [Diagnostic Console Window](/windows-hardware/test/wpt/diagnostic-console.md). |
 
 ### Examples
 
