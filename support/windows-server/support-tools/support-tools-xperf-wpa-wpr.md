@@ -26,8 +26,7 @@ Included in the [Windows Assessment and Deployment Kit (WADK)](/windows-hardware
 > [!NOTE]  
 > The previous command-line tool, Xperf, is still supported for collecting data. However, Xperfview is no longer supported. Use WPA to view Xperf recordings.
 >
-> For information about using Xperf, see [Xperf Command-Line Reference]
-(/windows-hardware/test/wpt/xperf-command-line-reference)
+> For information about using Xperf, see [Xperf Command-Line Reference](/windows-hardware/test/wpt/xperf-command-line-reference).
 
 ## More information
 
