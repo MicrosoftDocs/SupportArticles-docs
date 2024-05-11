@@ -57,11 +57,10 @@ To start a recording, follow these steps:
 1. Do one of the following:  
 
    - To record while using the default (**First-level triage**) profile, select **Start**.  
-   - 
+
      :::image type="content" source="media/support-tools-xperf-wpa-wpr/wpr-record-simplified.png" alt-text="Screenshot that shows the condensed view of W.P.R.":::  
 
-   - To select a different profile or set other options, select **More options**. Select the settings that you want, and then select **Start**.  
-   - 
+   - To select a different profile or set other options, select **More options**. Select 
      :::image type="content" source="media/support-tools-xperf-wpa-wpr/wpr-record.png" alt-text="Screenshot that shows the expanded view of W.P.R.":::  
 
 To stop a recording, follow these steps:
