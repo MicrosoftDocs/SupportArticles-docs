@@ -22,6 +22,8 @@ You might also receive one of these common sub-error codes:
 
 - `SessionExistsForTheUserWhenUnattended`
 - `NoUnlockedActiveSessionForAttended`
+- `AttendedUserSessionNotActive
+- `AttendedUserNotLoggedIn
 - `UIFlowAlreadyRunning`
 
 ## Cause
@@ -56,6 +58,22 @@ To resolve the issue,
 - Check the credentials used in your connection and make sure they're the ones used in the unlocked session. You can verify your identity by typing `whoami` in any command prompt.
 - Verify that you're targeting the right machine. To do so, open the machine runtime application and select **View machine in portal** to verify that it brings you to the machine you're targeting in your run.
 - Verify that the account that runs the Power Automate service (UIFlowService) has Remote Desktop permissions on the machine. By default, the Power Automate service runs as `NT SERVICE\UIFlowService`. If you didn't change this, verify that `NT SERVICE\UIFlowService` is in the **Remote Desktop Users** group. To do so, go to **Start** > **Run**, type *usrmgr.msc*, select **Groups**, double-click the **Remote Desktop Users** group and verify the account is included. If it's not included, include it (this requires administrator permissions) and restart the machine.
+
+#### AttendedUserSessionNotActive
+
+This error occurs when the user specified in the connection is logged into the target machine but its session is either in a locked or disconnected state. This error will only appear in Power Automate for desktop versions 2.43 or later.
+
+##### Resolution
+
+Try connecting to the target session and running the attended flow again.
+
+#### AttendedUserNotLoggedIn
+
+This error occurs when the user specified in the connection is not logged into the target machine. This error will only appear in Power Automate for desktop versions 2.43 or later.
+
+##### Resolution
+
+Log on to the target machine as the user specified in the connection, leave the session active, and try running your desktop flow again.
 
 #### UIFlowAlreadyRunning
 
