@@ -60,7 +60,7 @@ To start a recording, follow these steps:
 
      :::image type="content" source="media/support-tools-xperf-wpa-wpr/wpr-record-simplified.png" alt-text="Screenshot that shows the condensed view of W.P.R.":::  
 
-   - To select a different profile or set other options, select **More options**. Select the option that you want, and then select **Start**.
+   - To select a different profile or set other options, select **More options**. Select the options that you want, and then select **Start**.
 
      :::image type="content" source="media/support-tools-xperf-wpa-wpr/wpr-record.png" alt-text="Screenshot that shows the expanded view of W.P.R.":::  
 
