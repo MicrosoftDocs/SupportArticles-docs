@@ -228,7 +228,7 @@ To uninstall Performance Diagnostics, select the **Uninstall** button on the too
 
 All Performance Diagnostics insights and reports are stored in your own storage account. 
 
-To view the storage account information, select the **Settings** button on the toolbar. For more information, see [How to change Performance Diagnostics settings](#how-to-change-performance-diagnostics-settings).
+To view the storage account information, select the **Settings** button on the toolbar. For more information, see [Change storage accounts](#change-storage-accounts).
 
 Insights are stored inside Azure tables. The reports compressed file is stored in a binary large object (BLOB) container that is named `azdiagextnresults`. To view these files, navigate to your storage account, select **Storage browser**.
 
