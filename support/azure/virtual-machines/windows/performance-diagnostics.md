@@ -13,6 +13,8 @@ ms.topic: troubleshooting
 ms.date: 05/11/2024
 ms.reviewer: guywild
 ms.author: anandh
+
+# Customer intent: As a developer, I want to analyze and troubleshoot performance issues on my Azure virtual machine so that I can resolve these issues myself or share performance diagnostics information with Microsoft Support to get their help.
 ---
 
 # Troubleshoot performance issues on Azure virtual machines using Performance Diagnostics
@@ -29,7 +31,7 @@ Run Performance Diagnostics directly from the Azure portal, where you can also r
 This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer. 
 
 > [!NOTE]
-> Continuous diagnostics is currently supported only on Windows.
+> Continuous diagnostics (preview) is currently supported only on Windows.
 
 ## Prerequisites
 
@@ -141,33 +143,37 @@ After the upload, a new diagnostics report is listed in the Azure portal.
 
 :::image type="content" source="media/performance-diagnostics/diagnostics-report-list.png" alt-text="Screenshot of a list of diagnostics reports in the Performance Diagnostics screen." lightbox="media/performance-diagnostics/diagnostics-report-list.png":::
 
-## How to change Performance Diagnostics settings
-
-Select the **Settings** toolbar button to change the storage account where the diagnostics insights and output are stored. 
-
-:::image type="content" source="media/performance-diagnostics/performance-diagnostics-settings.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with the Settings button highlighted." lightbox="media/performance-diagnostics/performance-diagnostics-settings.png":::
-
-This opens the **Performance diagnostic settings** screen. Select **Change storage account** to select a different storage account.
-
-:::image type="content" source="media/performance-diagnostics/change-storage-settings.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with the Settings button highlighted." lightbox="media/performance-diagnostics/change-storage-settings.png":::
+## Change storage accounts
 
 You can use the same storage account for multiple VMs that use Performance Diagnostics. When you change the storage account, the old reports and insights aren't deleted. However, they'll no longer be displayed in the list of diagnostics reports.
 
+To change storage accounts: 
+
+1. Select the **Settings** toolbar button to change the storage account where the diagnostics insights and output are stored. 
+
+    :::image type="content" source="media/performance-diagnostics/performance-diagnostics-settings.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with the Settings button highlighted." lightbox="media/performance-diagnostics/performance-diagnostics-settings.png":::
+
+    This opens the **Performance diagnostic settings** screen. 
+
+    :::image type="content" source="media/performance-diagnostics/change-storage-settings.png" alt-text="Screenshot of the Performance Diagnostics settings screen on which you can change storage accounts." lightbox="media/performance-diagnostics/change-storage-settings.png":::
+
+1. Select **Change storage account** to select a different storage account.
+
 > [!NOTE]
-> Performance Diagnostics insights and reports are stored in your own storage account. Insights are stored in Azure Tables, and reports are stored as compressed files in a binary large object (BLOB) container that is named *azdiagextnresults*.
+> Performance Diagnostics stores insights in Azure tables and stores reports in a binary large object (BLOB) container, named *azdiagextnresults*.
 >
-> If your storage account uses [private endpoints](/azure/storage/common/storage-private-endpoints), to make sure that Performance Diagnostics can store insights and reports in the storage account, do the following two actions:
+> If your storage account uses [private endpoints](/azure/storage/common/storage-private-endpoints), to make sure that Performance Diagnostics can store insights and reports in the storage account:
 >
 > 1. Create separate private endpoints for Table and BLOB.
 > 1. Add DNS configuration to each separate private endpoint.
 
-## Review insights and reports
+## View insights and reports
 
 Continuous diagnostics provides a list of regularly updated continuous insights into affected resources. On-demand diagnostics provides a report each time a diagnostic run is completed. Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information that is collected, plus a report for offline viewing.
 
 To view insights, select the **Performance Diagnostics insights** tab on the **Performance Diagnostics** screen.  
 
-:::image type="content" source="media/performance-diagnostics/insights-list-enabled-no-grouping.png" alt-text="Screenshot of Performance Diagnostics, featuring the Insights list." lightbox="media/performance-diagnostics/insights-list-enabled-no-grouping.png":::
+:::image type="content" source="media/performance-diagnostics/insights-list-enabled-no-grouping.png" alt-text="Screenshot of the Insights tab on the Performance Diagnostics screen." lightbox="media/performance-diagnostics/insights-list-enabled-no-grouping.png":::
 
 Select **Refresh** to view newly generated continuous diagnostics insights.
 
@@ -175,17 +181,17 @@ You can disable continuous diagnostics, run on-demand diagnostics, uninstall Per
 
 For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
 
-### Select an insight
+### View insight details
 
 Each row insight on the  **Performance Diagnostics insights** tab indicates an impact level and related recommendations. Select a row to view more details.
 
-:::image type="content" source="media/performance-diagnostics/performance-diagnostics-insight-details.png" alt-text="Screenshot of Performance Diagnostics, featuring the Insights list." lightbox="media/performance-diagnostics/performance-diagnostics-insight-details.png" :::
+:::image type="content" source="media/performance-diagnostics/performance-diagnostics-insight-details.png" alt-text="Screenshot of Performance Diagnostics insight details screen." lightbox="media/performance-diagnostics/performance-diagnostics-insight-details.png" :::
 
 Use filters to retrieve insights by timestamp, impact, category, or diagnostic type.
 
 Use the grouping dropdown to group or ungroup insights. You can group on-demand and continuous insights by category, insight, or recommendation.
 
-:::image type="content" source="media/performance-diagnostics/insights-list-enabled-grouping-insight.png" alt-text="Screenshot of Performance Diagnostics, featuring the Insights list and highlighting the grouping dropdown." lightbox="media/performance-diagnostics/insights-list-enabled-grouping-insight.png":::
+:::image type="content" source="media/performance-diagnostics/insights-list-enabled-grouping-insight.png" alt-text="Screenshot of the Insights tab on the Performance Diagnostics screen with results grouped by insight." lightbox="media/performance-diagnostics/insights-list-enabled-grouping-insight.png":::
 
 For insights found by on-demand diagnostics, you can view or download the corresponding Performance Diagnostics report for an insight in the list by selecting **View** or **Download**, respectively. For more information, see [Download and review the full Performance Diagnostics report](#download-and-review-the-full-performance-diagnostics-report).
 
@@ -214,11 +220,13 @@ Select the **Download report** button to download an HTML report that contains r
 
 Delete one or more Performance Diagnostics reports by selecting the **Delete report** button.
 
-## How to uninstall Performance Diagnostics
+## Uninstall Performance Diagnostics
 
-You can uninstall Performance Diagnostics from a VM. This action removes the VM extension but doesn't affect any diagnostics data that is in the storage account.
+Uninstalling Performance Diagnostics from a VM removes the VM extension but doesn't affect any diagnostics data in the storage account.
 
-:::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with Uninstall button highlighted." lightbox="media/performance-diagnostics/uninstall-button.png":::
+To uninstalling Performance Diagnostics, select the **Uninstall** button on the toolbar.
+
+:::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with the Uninstall button highlighted." lightbox="media/performance-diagnostics/uninstall-button.png":::
 
 ## Move Azure resources across regions
 
