@@ -48,8 +48,6 @@ This article explains how to use Performance Diagnostics and what the continuous
 |:-------|:---------------------|
 | View Performance Diagnostics insights and reports | `Microsoft.Storage/storageAccounts/listKeys/action` permissions to the storage account, as provided by the built-in **Storage Account Contributor** role, for example. |
 
-To view Performance Diagnostics insights and reports, you need to be assigned the `Storage Account Contributor` role to the storage account in which these files are stored. 
-
 ## Supported operating systems
 
 ### Windows
@@ -87,7 +85,9 @@ The following distributions are currently supported for on-demand diagnostics:
 
 ## Install and run Performance Diagnostics on your VM
 
-Performance Diagnostics installs a VM extension that runs a diagnostics tool that is named PerfInsights. PerfInsights is available for both [Windows](how-to-use-perfinsights.md) and [Linux](../linux/how-to-use-perfinsights-linux.md). To install and run Performance Diagnostics, follow these steps:
+Performance Diagnostics installs a VM extension that runs a diagnostics tool, called PerfInsights. PerfInsights is available for both [Windows](how-to-use-perfinsights.md) and [Linux](../linux/how-to-use-perfinsights-linux.md). 
+
+To install and run Performance Diagnostics:
 
 1. In the [Azure portal](https://portal.azure.com), select **Virtual machines**.
 1. From the list of VM names, select the VM that you want to run diagnostics on.
@@ -100,7 +100,7 @@ Performance Diagnostics installs a VM extension that runs a diagnostics tool tha
 
     :::image type="content" source="media/performance-diagnostics/install-and-run-context-pane.png" alt-text="Screenshot of the Install and run Performance Diagnostics context pane. The Enable continuous diagnostics and Run on-demand diagnostics options are checked." lightbox="media/performance-diagnostics/install-and-run-context-pane.png":::
 
-    The following options are available:
+    This table describes the available options:
 
     | Option | Description |
     | ------ | ----------- |
@@ -125,13 +125,13 @@ Performance Diagnostics installs a VM extension that runs a diagnostics tool tha
 
     To install and run Performance Diagnostics, you must agree to the legal terms and accept the privacy policy.
 
-1. If you want to share diagnostics information with Microsoft, select **I agree to share diagnostics information with Microsoft.**
+1. To share diagnostics information with Microsoft, select **I agree to share diagnostics information with Microsoft.**
 
-    If selected, diagnostics information is shared with Microsoft. This option must be selected if you want to share the diagnostics with the customer support engineer automatically. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
+    When you select this option, you share the diagnostics with customer support engineers automatically. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
 
 1. Select **Apply** to apply the selected options and install the tool.
 
-A notification is displayed as Performance Diagnostics starts to install. After the installation is completed, you see a notification that indicates that the installation is successful. If the **Run on-demand diagnostics** option is selected, the selected performance analysis scenario is then run for the specified duration. This would be a good time to reproduce the performance issue so that the diagnostics data can be captured at the correct time.
+A notification is displayed as Performance Diagnostics starts to install. After the installation is completed, you see a notification that indicates that the installation is successful. If the **Run on-demand diagnostics** option is selected, the selected performance analysis scenario is then run for the specified duration. This is a good time to reproduce the performance issue so that the diagnostics data can be captured at the correct time.
 
 After the on-demand performance analysis is complete, the following items are uploaded to Azure tables and a binary large object (BLOB) container in the specified storage account:
 
@@ -169,21 +169,19 @@ To change storage accounts:
 
 ## View insights and reports
 
-Continuous diagnostics provides a list of regularly updated continuous insights into affected resources. On-demand diagnostics provides a report each time a diagnostic run is completed. Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information that is collected, plus a report for offline viewing.
+Continuous diagnostics provides a list of regularly updated continuous insights into affected resources. On-demand diagnostics provides a report each time a diagnostic run is completed. Select **Refresh** to view newly generated continuous diagnostics insights. 
 
-To view insights, select the **Performance Diagnostics insights** tab on the **Performance Diagnostics** screen.  
-
-:::image type="content" source="media/performance-diagnostics/insights-list-enabled-no-grouping.png" alt-text="Screenshot of the Insights tab on the Performance Diagnostics screen." lightbox="media/performance-diagnostics/insights-list-enabled-no-grouping.png":::
-
-Select **Refresh** to view newly generated continuous diagnostics insights.
-
-You can disable continuous diagnostics, run on-demand diagnostics, uninstall Performance Diagnostics, and manage settings from the toolbar.
+Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information, plus a report for offline viewing.
 
 For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
 
-### View insight details
+### View Performance Diagnostics insights
 
-Each row insight on the  **Performance Diagnostics insights** tab indicates an impact level and related recommendations. Select a row to view more details.
+The **Performance Diagnostics insights** tab lists insights for the selected time period. Each row presents an insight, its impact level, category, and related recommendations. Select **Refresh** to view newly generated continuous diagnostics insights. 
+
+:::image type="content" source="media/performance-diagnostics/insights-list-enabled-no-grouping.png" alt-text="Screenshot of the Insights tab on the Performance Diagnostics screen." lightbox="media/performance-diagnostics/insights-list-enabled-no-grouping.png":::
+
+Select a row to view more details.
 
 :::image type="content" source="media/performance-diagnostics/performance-diagnostics-insight-details.png" alt-text="Screenshot of Performance Diagnostics insight details screen." lightbox="media/performance-diagnostics/performance-diagnostics-insight-details.png" :::
 
@@ -193,21 +191,21 @@ Use the grouping dropdown to group or ungroup insights. You can group on-demand 
 
 :::image type="content" source="media/performance-diagnostics/insights-list-enabled-grouping-insight.png" alt-text="Screenshot of the Insights tab on the Performance Diagnostics screen with results grouped by insight." lightbox="media/performance-diagnostics/insights-list-enabled-grouping-insight.png":::
 
-For insights found by on-demand diagnostics, you can view or download the corresponding Performance Diagnostics report for an insight in the list by selecting **View** or **Download**, respectively. For more information, see [Download and review the full Performance Diagnostics report](#download-and-review-the-full-performance-diagnostics-report).
+View or download the Performance Diagnostics report for an on-demand insight in the list by selecting **View** or **Download**, respectively. For more information, see [Download and review the full Performance Diagnostics report](#download-and-review-the-full-performance-diagnostics-report).
 
-### Select a Performance Diagnostics report
+### View Performance Diagnostics reports
 
-You can use the **Reports** list to find all the on-demand diagnostics reports that were run. The list includes details about the analysis that was used, insights that were found, and their impact levels. Select a row to view more details.
+The **Performance Diagnostics reports** tab list all of the on-demand diagnostics reports that were run. The list indicates the type of analysis that was run, insights that were found, and their impact levels. 
 
 :::image type="content" source="media/performance-diagnostics/select-report.png" alt-text="Screenshot of selecting a diagnostics report from Performance Diagnostics screen." lightbox="media/performance-diagnostics/select-report.png":::
 
-### Review a Performance Diagnostics report
-
-Each Performance Diagnostics report may contain several insights and indicate an impact level of High, Medium, or Low. Each insight also contains recommendations to help lessen the concern. Insights are grouped for easy filtering.
-
-Impact levels represent the potential for performance issues, based on factors such as misconfiguration, known problems, or issues that are reported by other users. You might not yet be experiencing one or more of the listed issues. For example, you might have SQL log files and database files on the same data disk. This condition has a high potential for bottlenecks and other performance issues if the database usage is high, whereas you might not notice an issue if the usage is low.
+Select a row to view more details.
 
 :::image type="content" source="media/performance-diagnostics/performance-diagnostics-report-overview.png" alt-text="Screenshot of Performance Diagnostics report overview screen." lightbox="media/performance-diagnostics/performance-diagnostics-report-overview.png":::
+
+Each Performance Diagnostics report might contain several insights and indicate an impact level of High, Medium, or Low. Each insight also contains recommendations. Insights are grouped for easy filtering.
+
+Impact levels represent the potential for performance issues, based on factors such as misconfiguration, known problems, or issues that are reported by other users. You might not yet be experiencing one or more of the listed issues. For example, you might have SQL log files and database files on the same data disk. This condition has a high potential for bottlenecks and other performance issues if the database usage is high, whereas you might not notice an issue if the usage is low.
 
 ### Download and review the full Performance Diagnostics report
 
@@ -216,15 +214,11 @@ Select the **Download report** button to download an HTML report that contains r
 > [!NOTE]
 > You can download Performance Diagnostics reports from the **Performance Diagnostics** screen within 30 days after you generate them. After 30 days, you might get an error when you download a report from the **Performance Diagnostics** screen. To get a report after 30 days, go to the storage account and download it from a binary large object (BLOB) container that's named *azdiagextnresults*. You can view the storage account information by using the **Settings** button on the toolbar.
 
-## Manage Performance Diagnostics reports
-
-Delete one or more Performance Diagnostics reports by selecting the **Delete report** button.
-
 ## Uninstall Performance Diagnostics
 
 Uninstalling Performance Diagnostics from a VM removes the VM extension but doesn't affect any diagnostics data in the storage account.
 
-To uninstalling Performance Diagnostics, select the **Uninstall** button on the toolbar.
+To uninstall Performance Diagnostics, select the **Uninstall** button on the toolbar.
 
 :::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with the Uninstall button highlighted." lightbox="media/performance-diagnostics/uninstall-button.png":::
 
