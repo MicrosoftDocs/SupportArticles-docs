@@ -7,12 +7,11 @@ author: anandhms
 manager: dcscontentpm
 editor: przlplx
 tags: ''
-ms.service: virtual-machines
-ms.collection: windows
+ms.service: azure-monitor
 ms.workload: infrastructure-services
-ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 04/15/2024
+ms.date: 05/11/2024
+ms.reviewer: guywild
 ms.author: anandh
 ---
 
