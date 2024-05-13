@@ -2,7 +2,7 @@
 title: Disable documentation protocol for ASP.NET
 description: This article describes how to disable the documentation protocol for ASP.NET web services.
 ms.date: 04/08/2020
-ms.custom: sap:IISAdmin service and Inetinfo process operation
+ms.custom: sap:Configuration
 ms.topic: how-to
 ---
 # Disable the documentation protocol for ASP.NET web services

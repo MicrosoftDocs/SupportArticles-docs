@@ -120,7 +120,7 @@ If you need assistance from Microsoft support, we recommend you collect the info
     .\TSS.ps1 -Scenario ADS_GPOEx -SDP Dom 
     ```
 
-4.Reproduce the issue and type *Y* once done.
+4. Reproduce the issue and type *Y* once done.
 
 > [!NOTE]
 > The traces are stored in a compressed file in the *C:\\MS_DATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
