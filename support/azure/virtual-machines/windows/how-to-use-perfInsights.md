@@ -1,5 +1,5 @@
 ---
-title: How to use PerfInsights in Microsoft Azure
+title: Troubleshoot Windows virtual machine performance issues with Performance Insights
 description: Learns how to use PerfInsights to troubleshoot Windows VM performance problems.
 services: virtual-machines
 documentationcenter: ''
