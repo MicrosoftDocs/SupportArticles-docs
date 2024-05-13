@@ -38,7 +38,7 @@ In the new Outlook for Mac, you can add email accounts for Microsoft Exchange Se
 
   Note: The Outlook and Office versions that are downloaded from the Apple App Store don't support the new functionality.
 
-After these requirements are met, [opt in to the beta channel](https://insider.microsoft365.com/join/Mac), and then install the latest beta channel release for the Outlook for Mac client.
+After these requirements are met, [opt in to the beta channel](https://insider.microsoft365.com/join/Mac), and then install the latest beta channel release or current channel (preview) for the Outlook for Mac client.
 
 To add an Exchange Server mailbox in the new Outlook for Mac, see [Add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-6e27792a-9267-4aa4-8bb6-c84ef146101b?ui=en-us&rs=en-us&ad=us#PickTab=macOS).
 
