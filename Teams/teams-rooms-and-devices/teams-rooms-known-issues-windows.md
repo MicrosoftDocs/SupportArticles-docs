@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 05/08/2024
+ms.date: 05/13/2024
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -57,12 +57,6 @@ ms.date: 05/08/2024
 | --- | --- | --- |
 |During a Coordinated meeting, when the meeting volume is changed by using a room remote, the speaker on a Surface Hub or Teams Rooms device turns on.|For a trusted device such as a Surface Hub or Teams Rooms device that is set up to automatically join a Coordinated meeting when the primary device joins, the speaker turns on when a room remote is used to change the meeting volume. This issue occurs even though the audio settings on the device are turned off, and whether they're enabled or disabled.|Turn off proximity join and room remote capabilities on the trusted devices that automatically join a Coordinated meeting.|
 |When setting up a new Teams Rooms device, the display becomes unresponsive after you initiate the setup process.|The Out of Box Experience (OOBE) for a new Teams Rooms for Windows device freezes in the following scenarios:<ul><li>On a device that uses an OTP, when you select the **Get Started** button, the UI becomes unresponsive and the button becomes disabled.</li><li>On a device that's enrolled in Windows Autopilot, the setup process doesn't proceed beyond the opening screen.</li></ul><br/>This issue occurs on devices that have version 4.19.82.0 of the Teams Rooms app. The cause of the issue might be one of the following reasons:<ul><li>The device is not [certified](/microsoftteams/rooms/certified-hardware?tabs=Windows) for use with Teams Rooms on Windows.</li><li>The HDMI ingest module on the certified device is not recognized.</li></ul>|Devices that are not certified for use with Teams Rooms on Windows are not supported.</br></br>If your device is certified for use with Teams Rooms on Windows, unplug the device and plug it in again to retry the recognition process for the HDMI ingest module.</br></br>If the issue still persists, contact the OEM.<br/><br/>**Note**: This issue is fixed in Teams Rooms devices that have version 5.0.111.0 of the Teams Rooms app.|
-
-## Issues with Direct Guest Join
-
-| Issue  |  Description | Workaround |
-| --- | --- | --- |
-|Black screen during a Zoom meeting on a Crestron device|You use a Crestron device that's running Teams Rooms on Windows to join a Zoom meeting. When another user in the meeting shares their screen, the screen on your device turns black. The issue is intermittent. If you leave and rejoin the meeting, the issue might occur again.<br/><br/>**Only Crestron devices are experiencing this issue.**|When you join a third-party online meeting by using a Teams Rooms device, the meeting experience is controlled by the third-party online meeting provider. In the meetings where this issue occurs, Zoom controls the meeting display. <br/><br/>The black screen during the Zoom meeting isn't caused by Teams Rooms on Windows. The issue is being investigated by Zoom.|
 
 ## Limitations
 
