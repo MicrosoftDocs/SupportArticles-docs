@@ -11059,6 +11059,11 @@
       "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-800046.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e276",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/system-center/vmm/deploying-vm-error-2912.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
     }
   ]
 }
