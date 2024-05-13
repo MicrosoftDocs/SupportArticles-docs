@@ -13,6 +13,39 @@ This article gives troubleshooting guidance for when app installations fail for 
 > [!NOTE]
 > For specific app installation error code information, see [Intune app installation error reference](app-install-error-codes.md).
 
+## Run self-help app troubleshooting diagnostics
+
+To help administrators be successful with Microsoft Intune, Microsoft has developed diagnostic scenarios that cover top support topics and the common tasks for which administrators request help with configuration. It is important to note that while these diagnostics can't make changes to your tenant, they do provide insight into known issues and provide instructions to fix the issues quickly.
+
+> [!NOTE]
+> These diagnostics aren't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
+
+**Run diagnostics**
+
+While logged in as an administrator, navigate to the Microsoft 365 admin center. In the navigation pane, select **Show all** > **Support** > **New service request**. After you briefly describe your issue (for example, “I need help enrolling Windows devices”), the system determines whether a diagnostic scenario matches your issue.
+
+For the user having an issue with app deployment on their device, enter their email address and then select **Run tests**. After the diagnostic checks finish, if a configuration issue is found the system provides the steps to resolve the issue.
+
+> [!NOTE]
+> If a diagnostic detects an issue and you implement a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved.
+
+**Scenarios covered by diagnostics**
+
+> [!NOTE]
+> You must be an M365 Administrator to run diagnostics.
+
+The following diagnostic is currently available for app deployment issues: 
+
+|Diagnostic|Description|Link|Support Article|
+|--|--|--|--|
+|Intune App Deployment|This diagnostic helps identify when application deployment for a user does not complete for a number of different failures.|[Run Tests: Intune App Deployment](https://aka.ms/IntuneAppDeployment)|[Troubleshooting app installation issues with Intune](https://learn.microsoft.com/en-us/troubleshoot/mem/intune/app-management/troubleshoot-app-install)|
+
+
+
+
+
+
+
 ## Get app troubleshooting details
 
 Intune provides app troubleshooting details based on the apps installed on a specific user's device.
