@@ -1,7 +1,7 @@
 ---
-title: Client returns a wrong client type
+title: Client returns a wrong client type in Business Central
 description: Provides a resolution to ensure that the correct client type is returned for each client in Dynamics 365 Business Central.
-ms.date: 05/06/2024
+ms.date: 05/13/2024
 ms.reviewer: solsen
 author: SusanneWindfeldPedersen
 ms.author: solsen
@@ -17,7 +17,7 @@ First you must check that the environment meets the prerequisites for the mobile
 
 ## Symptoms
 
-Running, for example, the Business Client tablet client and the Business Client phone client simultaneously in the same browser session will return the same [ClientType](/dynamics365/business-central/dev-itpro/developer/methods-auto/clienttype/clienttype-option).
+Running the Business Client tablet client and the Business Client phone client simultaneously in the same browser session will return the same [ClientType](/dynamics365/business-central/dev-itpro/developer/methods-auto/clienttype/clienttype-option).
 
 ## Resolution
 

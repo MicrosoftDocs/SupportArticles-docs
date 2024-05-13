@@ -3,7 +3,7 @@ title: You can only view data error when sharing a link in Teams
 description: Provides a resolution for an issue where users get an error message that states that they can only view data when you share a link in Microsoft Teams as a Business Central user. 
 ms.author: mikebc
 ms.reviewer: jswymer
-ms.date: 05/08/2024
+ms.date: 05/13/2024
 ---
 # "You can only view data in Microsoft Teams" error in Business Central
 
@@ -17,7 +17,7 @@ When you [share a link](/dynamics365/business-central/across-working-with-teams#
 
 ## Cause
 
-When a user shares a Business Central link to a Microsoft Teams chat or channel, navigating the link will always navigate out of Microsoft Teams where the data no longer becomes accessible to a user who has a Microsoft 365 license.
+When a user shares a Business Central link to a Microsoft Teams chat or channel, navigating the link will always navigate out of Microsoft Teams where a user with a Microsoft 365 license can no longer access the data .
 
 ## Resolution
 

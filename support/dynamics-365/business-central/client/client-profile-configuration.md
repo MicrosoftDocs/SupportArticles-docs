@@ -2,7 +2,7 @@
 title: Profile configuration can't be started
 description: Provides troubleshooting steps to solve the personalization could not be started error during profile configuration in Dynamics 365 Business Central.
 ms.custom: 
-ms.date: 05/06/2024
+ms.date: 05/13/2024
 ms.reviewer: solsen
 author: SusanneWindfeldPedersen
 ms.author: solsen
@@ -13,7 +13,7 @@ This article provides a resolution for the "personalization could not be started
 
 ## Symptoms
 
-When there are issues preventing the profile configuration in Business Central, the user gets the following error message, and can't start the profile configuration. When the configuration is started, all customization records are loaded and compiled together. If one of these records causes a compilation error, then the profile configuration can't be started.
+When there are issues preventing the profile configuration in Business Central, the user receives the following error message, and can't start the profile configuration. When the configuration is started, all customization records are loaded and compiled together. If one of these records causes a compilation error, then the profile configuration can't be started.
 
 > Sorry, something went wrong and personalization could not be started. Please try again later, or contact your system administrator.
 
@@ -25,11 +25,11 @@ When there are issues preventing the profile configuration in Business Central, 
 As a tenant administrator, you can perform the following steps to remove the profile configurations with errors or alternatively, export the profile and fix the code issues.
 
 > [!IMPORTANT]  
-> The step described in the [Remove profile configuration records](#remove-profile-configuration-records) section will delete records with compilation errors and the specific profile configuration will be deleted. It's recommended to take a screenshot of any configuration done, before deleting them.
+> The step described in the [Remove profile configuration records](#remove-profile-configuration-records) section will delete records with compilation errors and the specific profile configuration will be deleted. It's recommended to take a screenshot of any configurations done, before deleting them.
 
 ### Identify profile configuration
 
-1. In Business Central, in the **Tell Me** box, enter **Profiles**, and then choose the related link.
+1. In Business Central, in the **Tell Me** box, enter *Profiles*, and then choose the related link.
 2. Select the profile card of the profile that can't be customized, and then choose **Manage customized pages**.
 3. Select the **Troubleshoot** button.
 
@@ -41,13 +41,13 @@ To remove the identified records, select the **Manage** action to delete the pro
 
 ### Export (force) of profile configuration (from version 16.2)
 
-From Business Central version 16.2, it's possible to try to mitigate the issue by doing an export of the profile, fixing the issue, and then reimporting the profile.
+From Business Central version 16.2, it's possible to try to mitigate the issue by exporting of the profile, fixing the issue, and then reimporting the profile.
 
-1. In Business Central, in the **Tell Me** box, enter **Profiles**, and then select the related link.
+1. In Business Central, in the **Tell Me** box, enter *Profiles*, and then select the related link.
 
 2. Select the **Export Profiles** button.
 
-    A message will display to let you know that there are errors. Select **Yes** when you're prompted to export the profiles with errors. This will download the AL code related to all profiles on the tenant.
+    A message will display to tell you that there are errors. Select **Yes** when you're prompted to export the profiles with errors. This will download the AL code related to all profiles on the tenant.
 
 3. Unzip the profile package that you downloaded, and open the AL file for the page customization that contains the issue.
 
