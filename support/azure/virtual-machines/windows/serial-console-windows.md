@@ -157,13 +157,13 @@ Serial Console uses the storage account configured for boot diagnostics in its c
 
 2. Add Serial Console service IPs as firewall exclusions based on the VM's geography.
 
-   The following table lists the IPs that need to be permitted as firewall exclusions based on the region or geography where the VM is located. This is a subset of the complete list of Serial Console IP addresses used in the **SerialConsole** service tag. You can limit access to boot diagnostics storage accounts via the **SerialConsole** service tag. The service tag is not regionally separated. Traffics on the service tag are inbound only, and Serial Console doesn't generate traffics to Customer Controllable Destinations. While Azure storage account firewalls don't currently support service tags, the **SerialConsole** service tag can be programmatically consumed to determine the IP list. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
+   The following table lists the IPs that need to be permitted as firewall exclusions based on the region or geography where the VM is located. This is a subset of the complete list of Serial Console IP addresses used in the **SerialConsole** service tag. You can limit access to boot diagnostics storage accounts via the **SerialConsole** service tag. The service tag isn't regionally separated. Traffic on the service tag is inbound only, and the serial console doesn't generate traffic to Customer Controllable Destinations. Although Azure storage account firewalls don't currently support service tags, the **SerialConsole** service tag can be programmatically consumed to determine the IP list. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
    > [!NOTE]
-   > Storage account firewalls for Serial Console aren't supported for VMs in geographies with only one region, such as Italy North in Italy.   
+   > Storage account firewalls for the serial console aren't supported for VMs in geographies with only one region, such as Italy North in Italy.   
     
    
-   |IP Address      | Regions | Geography|
+   |IP address      | Regions | Geography|
    |-----------|--------------------|-----------------|
    |20.205.69.28 | East Asia, Southeast Asia | AsiaPacific |
    |20.195.85.180 | East Asia, Southeast Asia | AsiaPacific |
