@@ -3,7 +3,6 @@ title: VM is unresponsive while applying default domain controllers policy
 titlesuffix: Azure Virtual Machines
 description: This article provides steps to resolve issues where the Default Domain Controllers Policy prevents the booting of an Azure VM.
 services: virtual-machines, azure-resource-manager
-documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
@@ -11,8 +10,8 @@ ms.service: virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-ms.topic: troubleshooting
-ms.date: 09/08/2020
+ms.topic: troubleshooting-problem-resolution
+ms.date: 05/10/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
@@ -40,20 +39,11 @@ If you have recently made changes to the Default Domain Controllers Policy, you 
 
 ### Collect the memory dump file
 
-To resolve this issue, you should first gather the memory dump file for the crash and then contact support with the memory dump file. To collect the dump file, follow these steps:
+To resolve this issue, you should first gather the memory dump file for the crash and then contact support with the memory dump file. To collect the dump file, follow the instructions in the following sections.
 
-### Attach the OS disk to a new Repair VM
+[!INCLUDE [Collect OS Memory Dump File](../../../includes/azure/collect-os-memory-dump-file.md)]
 
-1. Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
-
-1. Using Remote Desktop Connection connect to the Repair VM.
-
-### Locate the dump file and submit a support ticket
-
-1. On the repair VM, go to the Windows folder in the attached OS disk. If the driver letter that is assigned to the attached OS disk is `F`, you need to go to `F:\Windows`.
-
-1. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the memory dump file.
-
-1. If you are having trouble locating the memory.dmp file, you may wish to use [non-maskable interrupt (NMI) calls in serial console](./serial-console-windows.md#use-the-serial-console-for-nmi-calls) instead. Follow the guide to [generate a crash dump file using NMI calls](/windows/client-management/generate-kernel-or-complete-crash-dump).
+> [!NOTE]
+> If you're having trouble locating the *Memory.dmp* file, you can try to use [non-maskable interrupt (NMI) calls in the serial console](./serial-console-windows.md#use-the-serial-console-for-nmi-calls) instead. You can follow the guide to [generate a crash dump file using NMI calls](/troubleshoot/windows-client/performance/generate-a-kernel-or-complete-crash-dump).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
