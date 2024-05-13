@@ -1,17 +1,17 @@
 ---
 title: Cannot connect to SQL database with SqlFailedToConnect
-description: Provides a resolution for an SQL database connection issue in Business Central cloud migration.
+description: Provides a resolution for a SQL database connection issue in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
-ms.date: 05/08/2024
+ms.date: 05/13/2024
 ---
 # "Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect" error in Business Central cloud migration
 
-This article solves the "Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect" error message that occurs when you try to connect to an SQL database in the [Business Central cloud migration](/dynamics365/business-central/dev-itpro/administration/migration-manage).
+This article solves the "Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect" error message that occurs when you try to connect to a SQL database in [Business Central cloud migration](/dynamics365/business-central/dev-itpro/administration/migration-manage).
 
 ## Symptoms
 
-When you try to connect to an SQL database in Business Central cloud migration, you receive the following error message:
+When you try to connect to a SQL database in Business Central cloud migration, you receive the following error message:
 
 > Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect.
 
@@ -43,13 +43,13 @@ To solve this issue, run the following Windows PowerShell command on the Integra
 sqlcmd –S "{SQL Server Name}" -d "{Database Name}" -U "{SQL Server Authenticated User Name}" -P "{PlaceholderSQLServerAuthenticatedPassword}" -Q 'select * from [dbo].[Intelligent Cloud]'
 ```
 
-To allow the Integration Runtime client IP address to access the SQL server, run the following command on the on-premises master database:
+To allow the Integration Runtime client IP address to access the SQL Server, run the following command on the on-premises master database:
 
 ```powershell
 sp_set_firewall_rule
 ```
 
-To allow remote access to the SQL Server:
+To allow remote access to the SQL Server, run the following command:
 
 ```powershell
 run sp_configure 'remote access', 1; 

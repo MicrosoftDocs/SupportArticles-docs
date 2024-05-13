@@ -3,7 +3,7 @@ title: Activity timed out error in Business Central cloud migration
 description: Provides troubleshooting steps for the Activity timed out error in Business Central cloud migration.
 ms.author: jswymer
 ms.reviewer: jswymer 
-ms.date: 05/08/2024
+ms.date: 05/13/2024
 ---
 # "Activity timed out" error in Business Central cloud migration
 
@@ -11,7 +11,7 @@ This article provides troubleshooting steps for the "Activity timed out" error m
 
 ## Symptoms
 
-You get the "Activity timed out" error message in Business Central cloud migration.
+You receive the "Activity timed out" error message in Business Central cloud migration.
 
 ## Cause
 
@@ -19,9 +19,9 @@ If an activity times out during the [cloud migration setup](/dynamics365/busines
 
 ## Resolution
 
-- If SQL connection is permanently broken, check if .NET 4.72, or higher is running on the host of the [Integration Runtime](/dynamics365/business-central/dev-itpro/administration/migrate-business-central-on-premises#components-involved).
+- If the SQL connection is permanently broken, check if .NET 4.72, or higher is running on the host of the [integration runtime](/dynamics365/business-central/dev-itpro/administration/migrate-business-central-on-premises#components-involved).
 - Check other Integration Runtime requirements on the **Azure Data Factory** page.
-- For the database performance problems, we recommend updating statistics and reorganize indexes in the on-premises database before setting up cloud migration.
+- For the database performance problems, we recommend updating statistics and reorganizing indexes in the on-premises database before setting up cloud migration.
 
   - To update statistics, run the following query (for example, in Microsoft SQL Management Studio connected to the on-premises database):
 

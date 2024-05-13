@@ -25,7 +25,7 @@
           href: migration/migration-activity-timeout.md
         - name: '"Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect" error'
           href: migration/migration-cannot-connect.md
-        - name: Data replication error DelimitedTextIncorrectRowDelimiter for large tables
+        - name: DelimitedTextIncorrectRowDelimiter error in data replication
           href: migration/migration-data-replication-large-tables.md
         - name: '"Failed to enable your replication" error'
           href: migration/migration-general-error.md
