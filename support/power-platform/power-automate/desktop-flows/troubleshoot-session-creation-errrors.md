@@ -43,5 +43,6 @@ This errors occurs when session creation failed for an unknown reason.
 
 To troubleshoot the issue:
 
-* Attempt to remote desktop the machine in question and verify that it works
-* If you have a legal notice, 
+* Ensure that you can remote desktop to the machine from another machine on your network. If you're using a Windows server, you can try to remote desktop to "localhost" from the local machine itself when logged in as another account. If these fail, use general remote desktop [troubleshooting](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/rdp-error-general-troubleshooting).
+- If you have a legal notice enabled for login, work with your system administrator to try disabling it.If it doesn't, please follow standard 
+- Ensure that no third-party software is installed that may affect login or interfere with creating a remote desktop connection. To check if you have a legal notice
