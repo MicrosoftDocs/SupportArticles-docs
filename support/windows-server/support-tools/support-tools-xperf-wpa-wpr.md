@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot processes and threads by using WPR and WPA
-description: Describes the features of Windows Performance Recorder (WPR) and Windows Performance Analyzer (WPA) and provides examples of how to apply those features when you troubleshoot.
+description: Discusses Windows Performance Recorder (WPR) and Windows Performance Analyzer (WPA) and how to apply them when you troubleshoot.
 ms.date: 05/10/2024
 author: Deland-Han
 ms.author: delhan
@@ -15,18 +15,18 @@ keywords: WPR, WPAm XPerf, XPerfview
 
 # Troubleshoot processes and threads by using WPR and WPA
 
-This article describes the features of Windows Performance Recorder (WPR) and Windows Performance Analyzer (WPA) and provides examples of how to apply those features when you troubleshoot.
+This article discusses the features of Windows Performance Recorder (WPR) and Windows Performance Analyzer (WPA) and provides examples of how to apply those features when you troubleshoot.
 
 _Applies to:_ &nbsp;  All supported versions of Windows Server and Windows Client
 
 ## Summary
 
-Included in the [Windows Assessment and Deployment Kit (WADK)](/windows-hardware/get-started/adk-install), the Windows Performance Toolkit consists of performance monitoring tools that produce in-depth performance profiles of Windows operating systems and applications. This article highlights WPR and WPA.
+The Windows Performance Toolkit  is included in the [Windows Assessment and Deployment Kit (WADK)](/windows-hardware/get-started/adk-install). The toolkit consists of performance monitoring tools that produce in-depth performance profiles of Windows operating systems and applications. This article highlights WPR and WPA.
 
 > [!NOTE]  
 > The previous command-line tool, Xperf, is still supported for collecting data. However, Xperfview is no longer supported. Use WPA to view Xperf recordings.
 >
-> For information about using Xperf, see [Xperf Command-Line Reference](/windows-hardware/test/wpt/xperf-command-line-reference).
+> For information about how to use Xperf, see [Xperf Command-Line Reference](/windows-hardware/test/wpt/xperf-command-line-reference).
 
 ## More information
 
@@ -37,7 +37,7 @@ To run the WPT tools, your system must meet the following requirements:
 
 ### Using WPR to record data
 
-WPR is a powerful recording tool that creates Event Tracing for Windows (ETW) recordings of system and application behavior and resource usage. WPR provides built-in profiles that you can use to select the events that are to be recorded. Alternatively, you can author custom profiles in XML. For more information, see the following documentation:
+WPR is a powerful recording tool that creates Event Tracing for Windows (ETW) recordings of system and application behavior and resource usage. WPR provides built-in profiles that you can use to select the events that are to be recorded. Alternatively, you can author custom profiles in XML. For more information, see the following documentation.
 
 | Topic | Link |
 | --- | --- |
@@ -49,7 +49,7 @@ WPR is a powerful recording tool that creates Event Tracing for Windows (ETW) re
 | Descriptions of the logging modes (Memory mode or File mode) | [Logging Mode](/windows-hardware/test/wpt/logging-mode)<br/>[Change the Logging Mode](/windows-hardware/test/wpt/wpr-how-to-topics#change-the-logging-mode) |
 | Complete reference material, including a recording profile XML reference and a legacy Xperf reference | [WPR Technical Reference](/windows-hardware/test/wpt/wpr-reference) |
 
-You can run WPR from the user interface User Interface (WPRUI.exe) or from the command line (WPR.exe). The WPR user interface (UI) makes it simple to generate a recording by using built-in recording profiles to analyze CPU usage, power issues, poor system or application performance, or other performance issues. WPRUI.exe is available in the WADK. WPR.exe ships with the Windows operating system (Windows 8.1 or later) and you don't need additional installation.
+You can run WPR from the user interface (WPRUI.exe) or the command line (WPR.exe). The WPR UI makes it simple to generate a recording by using built-in recording profiles to analyze CPU usage, power issues, poor system or application performance, and other performance issues. WPRUI.exe is available in the WADK. WPR.exe ships together with the Windows operating system (Windows 8.1 or a later version) and doesn't require additional installation.
 
 To start a recording, follow these steps:
 
@@ -73,15 +73,15 @@ To stop a recording, follow these steps:
 
 ### Using WPA to analyze data
 
-WPA is a powerful analysis tool that combines a flexible UI with extensive graphing capabilities and data tables that can be pivoted and that have full text search capabilities. WPA provides an **Issues** window to explore the root cause of any identified issue. For more information, see the following documentation:
+WPA is a powerful analysis tool that combines a flexible UI with extensive graphing capabilities and data tables that can be pivoted and that have full text search capabilities. WPA provides an **Issues** window to explore the root cause of any identified issue. For more information, see the following documentation.
 
 | Topic | Link |
 | --- | --- |
 | Basic procedures and a detailed walkthrough | [WPA Quick Start Guide](/windows-hardware/test/wpt/wpa-quick-start-guide) |
 | Complete documentation of the WPA UI | [WPA Features](/windows-hardware/test/wpt/wpa-features) |
-| extended discussion of key scenarios | [WPA Scenarios](/windows-hardware/test/wpt/windows-performance-analyzer-common-scenarios) |
+| Extended discussion of key scenarios | [WPA Scenarios](/windows-hardware/test/wpt/windows-performance-analyzer-common-scenarios) |
 
-To open WPA, select the Windows Search box and enter *Windows Performance Analyzer*. In the search results, select **Windows Performance Analyzer**.  
+To start WPA, select Search, enter *Windows Performance Analyzer*, and then select **Windows Performance Analyzer** in the search results. 
 
 If you didn't open WPA directly from WPR after you saved a recording, you can use the WPA **File** menu to open a trace file.  
 
@@ -90,7 +90,7 @@ If you didn't open WPA directly from WPR after you saved a recording, you can us
 > [!NOTE]  
 > To load symbols for analysis, select **Trace**, and then select **Load Symbols**. For more information, see [Load Symbols or Configure Symbol Paths](/windows-hardware/test/wpt/load-symbols-or-configure-symbol-paths).
 
-The Windows Performance Analyzer (WPA) user interface (UI) consists of a collection of docked windows that surround a central workspace. This central workspace contains **Analysis** tabs. All windows can be undocked or moved and docked in a different location. To open a closed window, select the window on the **Window** menu. WPA uses the following windows and tabs:
+The WPA user interface (UI) includes docked windows that surround a central workspace. This workspace contains **Analysis** tabs. All windows can be docked in a different locations. To open a closed window, select the window on the **Window** menu. WPA uses the following windows and tabs.
 
 | Window or tab | Description |
 | --- | --- |
@@ -103,7 +103,7 @@ The Windows Performance Analyzer (WPA) user interface (UI) consists of a collect
 
 ### Examples
 
-The following table describes several problem scenarios, the WPR profiles that you might use for recording data, and suggests graphs and pivot table fields to use to analyze the data.
+The following table describes several problem scenarios, the WPR profiles that you can use for recording data, and suggested graphs and pivot table fields to analyze the data.
 
 | Scenario | WPR profile | Graph and parameters to analyze |
 | --- | --- | --- |
@@ -122,6 +122,6 @@ reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution 
 ```
 
 > [!NOTE]  
-> In these commands, /<*Process_Name*> represents the name of the service or process that you want to analyze.
+> In the forst command, /<*Process_Name*> represents the name of the service or process that you want to analyze.
 
-After the commands finish, restart the service or process.
+After the commands run, restart the service or process.
