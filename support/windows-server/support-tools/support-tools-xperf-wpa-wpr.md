@@ -21,10 +21,10 @@ _Applies to:_ &nbsp;  All supported versions of Windows Server and Windows Clien
 
 ## Summary
 
-The Windows Performance Toolkit  is included in the [Windows Assessment and Deployment Kit (WADK)](/windows-hardware/get-started/adk-install). The toolkit consists of performance monitoring tools that produce in-depth performance profiles of Windows operating systems and applications. This article highlights WPR and WPA.
+WPR and WPA are performance monitoring tools that produce in-depth performance profiles of Windows operating systems and applications. Windows includes a command-line version of WPR. To get WPA and a GUI version of WPR (used in the examples in this article), download and install the [Windows Assessment and Deployment Kit (WADK)](/windows-hardware/get-started/adk-install).
 
 > [!NOTE]  
-> The previous command-line tool, Xperf, is still supported for collecting data. However, Xperfview is no longer supported. Use WPA to view Xperf recordings.
+> The previous command-line tool, Xperf, is still supported for collecting data and is included in the WADK. However, Xperfview is no longer supported. Use WPA to view Xperf recordings.
 >
 > For information about how to use Xperf, see [Xperf Command-Line Reference](/windows-hardware/test/wpt/xperf-command-line-reference).
 
