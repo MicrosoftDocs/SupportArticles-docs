@@ -60,8 +60,6 @@ items:
   href: named-pipes-connection-fail-no-windows-permission.md
 - name: Network-related or instance-specific error
   href: network-related-or-instance-specific-error-occurred-while-establishing-connection.md
-- name: Collect data to troubleshoot SQL Server connectivity issues
-  href: collect-data-to-troubleshoot-sql-connectivity-issues.md
 - name: Pre-reqs for connectivity troubleshooting
   href: resolve-connectivity-errors-checklist.md
 - name: SSL errors are seen after upgrading to TLS 1.2

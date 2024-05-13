@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot SQL connectivity issues through data collection
-description: This article provides questions based on several components that you can use to effectively troubleshoot SQL Server connectivity issues.
-ms.date: 05/09/2024
+title: Data collection methods for SQL connectivity issues
+description: This article provides possible list of questions based on several components that you can use to effectively identify the type of SQL Server connectivity issues and find right resolution.
+ms.date: 05/13/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, prmadhes, v-jayaramanp, haiyingyu
@@ -10,16 +10,18 @@ ms.custom: sap:Connection issues
 
 # Collect data to troubleshoot SQL Server connectivity issues
 
-This article helps you to troubleshoot connectivity issues based a comprehensive list of questions that are classified based on specific categories. It also describes the procedure of collecting data. Although the ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md) article includes the most important items to be collected, the questions in this article can help you troubleshoot SQL Server more effectively by ruling out many scenarios and narrowing your focus.
+This article helps you to identify the root cause of SQL Server connectivity issues by asking relevant questions based on specific categories. Although the ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md) article includes the most important items to be collected, the questions in this article can help you narrow down the cause of the connectivity issues and troubleshoot them effectively.
 
 > [!NOTE]
 > Not all questions are applicable to all issues. However, these questions can guide you as you consider how to troubleshoot connectivity issues.
+
+Using the information provided in this article, once you are able to zero-in on the exact nature of the issue, see *Overview of consistent authentication issues in SQL Server for the type of errors*.
 
 ## Method of collecting data
 
 To collect data, you can use tools such as [Problem Steps Recorder (PSR)](/office/troubleshoot/settings/how-to-use-problem-steps-recorder), [Network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace), and [NETLOGON](../../../windows-client/windows-security/enable-debug-logging-netlogon-service.md) trace. This section provides detailed steps to install and configure a combination of all these tools.
 
-Follow these steps simultaneously on both the client and server computers. If the application is a 3-tier or n-tier architecture, run the installation on intermediate servers, also.
+Follow these steps simultaneously on both the client and server computers. If the application is a 3-tier or n-tier architecture, then run the installation on intermediate servers as well.
 
 1. Install **[WireShark](https://www.wireshark.org/download.html)** on all affected computers or use the built-in `NETSH` command (Windows 2008 or later versions). No restart is required.
 
@@ -35,7 +37,7 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 1. On the client computer, start **Problem Steps Recorder** (psr.exe), and then select **Start Record**.
 
-   This tool will accurately capture all user actions that preceded the issue, and save the results to a .zip file.
+   This tool accurately captures all user actions that precede the issue and saves the results to a .zip file.
 
 1. Start the network capture on all computers.
 
@@ -56,7 +58,7 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 1. Stop the *psr.exe* recording.
 
-1. Stop the network captures. Save the recorded file by running the command NETSH: `NETSH TRACE STOP` by using a meaningful name. For example the name of the file can be *SQLProd01.netmon.cap*.
+1. Stop the network captures. Save the recorded file by running the command NETSH: `NETSH TRACE STOP` by using a meaningful name. For example, the name of the file can be *SQLProd01.netmon.cap*.
 
 1. Wait for the command prompt to reappear, and then close the window. Don't close the Command Prompt window before the prompt appears.
 
@@ -64,15 +66,17 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 1. Disable logging by running the `NLTEST /DBFLAG:0x0` command.
 
-## Collect data based on various categories
+## Collect data to categorize the issues
 
-Not all questions are applicable to all issues. However, the following set of questions is designed to help you identify the category of the issue, guiding you towards troubleshooting in the right direction. Select each dropdown for related questions:
+The following set of questions are designed to help you find the category into which an issue falls, thus guiding you towards the right direction of troubleshooting. Select each dropdown for related questions.
+
+Before you jump into the asking the specific questions, ensure that all the prerequisites required for the SQL Server connections have been met. For more information on the prerequisites, see ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md).
 
 <details><summary><b>Broader perspective questions</b></summary>
 
 - Does the issue affect only database connections, or does it also affect web and file share connections?
   Many cases are reported to the SQL Server team because they occur on the database server. However, it might be possible that the issue isn't related to the database at all and might require more general Windows or Active Directory support.
-- Does a trust relationship exist between the user domain, client domain, or server domain if they are different? Is it external, forest, one-way, two-way, or none?
+- Does a trust relationship exist between the user domain, client domain, or server domain if they're different? Is it external, forest, one-way, two-way, or none?
 - Does the connection work correctly if all the resources are in the same domain?
 - Is the issue intermittent or periodic or is it consistent?
 - Does the issue occur only if more than one user is using the application? Does it occur more often if more users are using it?  
@@ -89,7 +93,7 @@ Not all questions are applicable to all issues. However, the following set of qu
 
 <details><summary><b>Client computer</b></summary>
 
-You can collect the following information about different components of the client computer.
+Use the following questions to collect data about the different components of the client computer. This data might be useful in identifying the issues.
 
 - What is the operating system name, edition, and version (WinVer)?
 - What is the name and version of the SQL Server driver or provider?
@@ -119,7 +123,7 @@ You can collect the following information about different components of the clie
 
 <details><summary><b>Log information</b></summary>
 
-Collect the following information from the log files:
+Use the following questions to collect data about the log files:
 
 - What is the exact error message in the call stack?
 - Was the log collected from the SQL Server *ERRORLOG* and *ERRORLOG.1* files?
@@ -200,5 +204,6 @@ If the user is remote to the client application, collect the following details:
 - [Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues](resolve-connectivity-errors-checklist.md)
 
 - [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
+
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
