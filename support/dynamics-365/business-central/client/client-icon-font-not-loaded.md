@@ -17,7 +17,7 @@ The icon font is missing from the Business Central web client, Business Central 
 
 ## Cause
 
-This issue occurs because the **Font download** option is disabled in your browser.
+This issue occurs because the font download option isn't enabled in your browser.
   
 ## Resolution
 
