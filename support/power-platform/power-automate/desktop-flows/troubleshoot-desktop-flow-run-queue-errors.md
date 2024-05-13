@@ -61,7 +61,7 @@ To resolve the issue,
 
 #### AttendedUserSessionNotActive
 
-This error occurs when the user specified in the connection is logged into the target machine but its session is either in a locked or disconnected state. This error will only appear in Power Automate for desktop versions 2.43 or later.
+This error occurs when the user specified in the connection is logged into the target machine but its session is either in a locked or disconnected state. This specific error is only available in Power Automate for desktop versions 2.43 or later.
 
 ##### Resolution
 
@@ -69,11 +69,11 @@ Try connecting to the target session and running the attended flow again.
 
 #### AttendedUserNotLoggedIn
 
-This error occurs when the user specified in the connection is not logged into the target machine. This error will only appear in Power Automate for desktop versions 2.43 or later.
+This error occurs when the user specified in the connection is not logged into the target machine. This specific error is only available in Power Automate for desktop versions 2.43 or later.
 
 ##### Resolution
 
-Log on to the target machine as the user specified in the connection, leave the session active, and try running your desktop flow again.
+Log on to the target machine as the user specified in the connection, leave the session active, and try running your attended flow again.
 
 #### UIFlowAlreadyRunning
 
