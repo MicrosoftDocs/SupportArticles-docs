@@ -3,7 +3,7 @@ title: Self-help diagnostics for Teams administrators
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 10/30/2023
+ms.date: 05/14/2024
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -81,7 +81,6 @@ The following tables list the diagnostics organized by category. Each diagnostic
 | Meeting Recording Missing | Attempts to locate a missing Teams Meeting Recording | [Run Tests: Missing Recording](https://aka.ms/MissingRecordingDiag) | [Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools) |
 | 1:1 Call Recording | Checks a user's policy for 1:1 Call Recording capability | [Run Tests: Teams 1:1 Call Recording](https://aka.ms/Teams11CallRecDiag) | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues#workaround) |
 | Teams Add-in is Missing in Outlook | Validates that a user has the correct policies to enable the Teams Outlook add-in. | [Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-inDiag) |[Resolve issues with Teams Meeting add-in for Outlook](/microsoftteams/troubleshoot/meetings/resolve-teams-meeting-add-in-issues) |
-| Teams Live Events | Validates that a user is able to schedule Teams live events. | [Run Tests: Teams Live Events](https://aka.ms/TeamsLiveEventsDiag) |[Troubleshooting live events in Microsoft Teams](/microsoftteams/teams-stream-troubleshooting) |
 | Teams Meeting Recordings | Validates that the user is properly configured to record a meeting in Teams. | [Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag) | [Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools) |
 
 ### Presence
@@ -98,7 +97,6 @@ The following tables list the diagnostics organized by category. Each diagnostic
 | Teams Call Queue | Validates that a call queue is able to receive calls. | [Run Tests: Teams Call Queue](https://aka.ms/TeamsCallQueueDiag) | [Create a call queue in Microsoft Teams](/microsoftteams/create-a-phone-system-call-queue#call-queue-diagnostic-tool) |
 | Teams Dial Pad is Missing | Validates that the dial pad is visible within Teams. | [Run Tests: Teams Dial Pad Missing](https://aka.ms/TeamsDialPadMissingDiag) | [Dial pad in missing in Teams](/microsoftteams/troubleshoot/teams-conferencing/no-dial-pad) |
 | Unable to Make Domestic or International PSTN calls in Teams | Validates that a user has the ability to make or receive domestic or international PSTN calls. | [Run Tests: Teams PSTN](https://aka.ms/TeamsPSTNDiag) |[Set up Microsoft Calling Plans](/microsoftteams/set-up-calling-plans) |
-| Unable to Join or Create a Teams Conference Call | Validates that a user has the ability to create or join a PSTN conference call. | [Run Tests: Teams Conference](https://aka.ms/TeasConfDiag) |[See a list of users that are enabled for Audio Conferencing in Microsoft Teams](/microsoftteams/see-a-list-of-users-that-are-enabled-for-audio-conferencing-in-teams) |
 | Teams Auto-Attendant | Validates that an auto attendant is able to receive calls. | [Run Tests: Teams Auto Attendant](https://aka.ms/TeamsAADiag) | [Set up an auto attendant for Microsoft Teams](/microsoftteams/create-a-phone-system-auto-attendant#auto-attendant-diagnostic-tool) |
 | Teams Voicemail | Validates that a user is properly configured to use Voicemail in Teams. | [Run Tests: Voicemail](https://aka.ms/TeamsVoicemailDiag) | [Set up Cloud Voicemail](/microsoftteams/set-up-phone-system-voicemail) |
 | Teams Call Forwarding | Validates that a user is properly configured to forward calls to a specified number. | [Run Tests: Teams Call Forwarding](https://aka.ms/TeamsCallForwardingDiag) |[Configure call settings for your users](/microsoftteams/user-call-settings) |
