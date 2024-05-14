@@ -30,9 +30,7 @@ The explicit misplaced SPNs can cause issues in Kerberos authentication and prev
 
 ## Resolution
 
-If you are experiencing explicit misplaced SPNs, you might have to create or re-create the SPN for the service.
-
-To create or re-create the SPN by using the `SETSPN` command, follow these steps:
+If you are experiencing explicit misplaced SPNs, you might have to create or re-create the SPN for the service. To create or re-create the SPN by using the `SETSPN` command, follow these steps:
 
 1. Run the `SETSPN -L domain\svcacct` command to list SPNs on the SQL Server service account.
 1. Run the `SETSPN -Q spnName` command to learn which service account the SPN is registered on.
