@@ -1,14 +1,14 @@
 ---
-title: Error code 800046 when you test and enable a mailbox
-description: Provides a resolution for error code 800046 that occurs when you test and enable a mailbox for server-side synchronization.
-ms.date: 04/29/2024
+title: Error code 8005E276 when you test and enable a mailbox
+description: Provides a resolution for error code 8005E276 that occurs when you test and enable a mailbox for server-side synchronization.
+ms.date: 05/13/2024
 ms.custom: sap:E-mail and Microsoft 365 Integration\Set up and configuration of server-side synchronization
 author: rahulmital
 ms.author: rahulmital
 ---
-# Error code 800046 when you test and enable mailbox
+# Error code 8005E276 when you test and enable mailbox
 
-This article provides a resolution for error code 800046 that occurs when you test and enable a mailbox for server-side synchronization in Microsoft Dataverse.
+This article provides a resolution for error code 8005E276 that occurs when you test and enable a mailbox for server-side synchronization in Microsoft Dataverse.
 
 ## Symptoms
 
