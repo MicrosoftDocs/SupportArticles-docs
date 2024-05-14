@@ -17,7 +17,7 @@ When using personal view filters, you might encounter an issue with an outdated 
 
 ## Cause
 
-When you create a personal view, it saves down to the runtime-applied filters. A recent system change to the filter structure caused an incompatibility with personal views that were previously created with **Queues I'm a member of** or **All Queues** filters selected. The system change was applied to fix an issue where the **Edit filters** experience wasn't available for queue item views. This fix was implemented by restructuring the **Queues I'm a member of** so that the queues could properly display and be used in the **Edit filters** panel. As a result of this change, any personal view filters you previously created may not work properly.
+When you create a personal view, it saves down to the runtime-applied filters. A recent system change to the filter structure caused an incompatibility with personal views that were previously created with **Queues I'm a member of** or **All Queues** filters selected. The system change was applied to fix an issue where the **Edit filters** experience wasn't available for queue item views. This fix was implemented by restructuring the **Queues I'm a member of** so that the queues could properly display and be used in the **Edit filters** panel. As a result of this change, any personal view filters you previously created might not work properly.
 
 ## Resolution
 
@@ -30,7 +30,7 @@ To resolve this issue and make the personal view work in the advanced filter, yo
 If your personal view filter is relatively simple, it might be faster and more reliable for you to recreate the view. Before deleting or deprecating the old view, be sure to test your new view first.
 
 ### Remediate the view
-Use the following steps to remove the old format of the queue filters and replace them with the updated version: 
+Use the following steps to remove the old format of the queue filters and replace it with the updated version: 
 
 1. Open the personal view in the queue item grid.
 1. If the queue dropdown is set to **Queues I’m a member of** or **All queues**, then change the dropdown to a specific queue. You can use your default user queue or any singular queue that you're a member of (for example: “&lt;firstname lastname&gt;”). 
