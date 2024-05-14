@@ -3,7 +3,7 @@ title: Troubleshooting Data API builder installation
 description: Troubleshoot common problems that might occur when you install the Data API builder for Azure databases.
 ms.reviewer: jerrynixon, sidandrews
 ms.service: data-api-builder
-ms.date: 04/16/2024
+ms.date: 05/14/2024
 ms.custom: sap:Tools and Connectors
 ---
 # Troubleshoot the installation of Data API builder for Azure databases
@@ -12,7 +12,7 @@ Data API builder is distributed as a NuGet package and can be installed using a 
 
 ## .NET 8 isn't installed
 
-Data API builder requires .NET 8 to be installed on your machine. If you don't have .NET 8 installed, you can install it by following the instructions in [Install .NET on Windows, Linux, and macOS](/dotnet/core/install/) or [Download .NET 8.0](https://dotnet.microsoft.com/download/dotnet/6.0).
+Data API builder requires .NET 8 to be installed on your machine. If you don't have .NET 8 installed, you can install it by following the instructions in [Install .NET on Windows, Linux, and macOS](/dotnet/core/install/) or [Download .NET 8.0](https://dotnet.microsoft.com/download/dotnet/8.0).
 
 ## Issue when installing .NET 8 on Ubuntu 22
 
