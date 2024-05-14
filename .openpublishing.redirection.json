@@ -11112,12 +11112,12 @@
     },
     {
       "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreement-not-applied.md",
-      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/procurement/trade-agreement-not-applied",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreement-not-applied",
       "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreements-from-rejected-rfq.md",
-      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/procurement/trade-agreements-from-rejected-rfq",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreements-from-rejected-rfq",
       "redirect_document_id": false
     }    
   ]
