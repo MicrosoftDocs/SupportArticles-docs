@@ -11104,6 +11104,21 @@
       "source_path": "support/system-center/vmm/deploying-vm-error-2912.md",
       "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreement-currencies.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreement-currencies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreement-not-applied.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/procurement/trade-agreement-not-applied",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreements-from-rejected-rfq.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/procurement/trade-agreements-from-rejected-rfq",
+      "redirect_document_id": false
+    }    
   ]
 }

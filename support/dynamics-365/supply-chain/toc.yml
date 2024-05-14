@@ -136,12 +136,6 @@
       href: procurement/max-limit-on-requisition.md
     - name: The Post to charge account in ledger setting isn't turned on
       href: procurement/post-setting-turned-off.md
-    - name: Trade agreement currency conversion issues
-      href: procurement/trade-agreement-currencies.md
-    - name: Trade agreement conditions aren't applied to imported order lines
-      href: procurement/trade-agreement-not-applied.md
-    - name: Trade agreements can be created from rejected RFQs
-      href: procurement/trade-agreements-from-rejected-rfq.md
     - name: Unit prices on purchase orders aren't calculated based on the unit conversion
       href: procurement/po-unit-prices-not-calculated.md
     - name: You can only complete a purchase order action for fully distributed line numbers
@@ -208,6 +202,12 @@
       href: sales/cancel-order-reservations-not-removed.md
     - name: System administrators can't clear order holds because they aren't authorized
       href: sales/system-administrator-cant-clear-order-holds.md
+    - name: Trade agreement currency conversion issues
+      href: sales/trade-agreement-currencies.md
+    - name: Trade agreement conditions aren't applied to imported order lines
+      href: sales/trade-agreement-not-applied.md
+    - name: Trade agreements can be created from rejected RFQs
+      href: sales/trade-agreements-from-rejected-rfq.md
     - name: Tax information isn't updated if location on a sales order header is changed
       href: sales/tax-information-not-updated.md
     - name: The quantity can't be reduced when canceling sales order
