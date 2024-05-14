@@ -108,7 +108,7 @@ Serial Console uses the storage account configured for boot diagnostics in its c
     > [!NOTE]
     > Storage account firewalls for the Serial Console aren't supported for VMs in geographies with only one region, such as Italy North in Italy.
    
-    |IP Address      | Regions | Geography|
+    |IP address      | Regions | Geography|
     |-----------|--------------------|-----------------|
     |20.205.69.28 | East Asia, Southeast Asia | AsiaPacific|
     |20.195.85.180 | East Asia, Southeast Asia | AsiaPacific|
