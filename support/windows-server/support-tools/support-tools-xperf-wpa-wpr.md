@@ -21,7 +21,7 @@ _Applies to:_ &nbsp;  All supported versions of Windows Server and Windows Clien
 
 ## Summary
 
-WPR and WPA are performance monitoring tools that produce in-depth performance profiles of Windows operating systems and applications. Windows includes a command-line version of WPR. To get WPA and a GUI version of WPR (used in the examples in this article), download and install the [Windows Assessment and Deployment Kit (WADK)](/windows-hardware/get-started/adk-install).
+WPR and WPA are performance monitoring tools that produce in-depth performance profiles of Windows operating systems and applications. Windows includes a command-line version of WPR. To get WPA and a GUI version of WPR (that's shown in the examples in this article), download and install the [Windows Assessment and Deployment Kit (WADK)](/windows-hardware/get-started/adk-install).
 
 > [!NOTE]  
 > The previous command-line tool, Xperf, is still supported for collecting data and is included in the WADK. However, Xperfview is no longer supported. Use WPA to view Xperf recordings.
@@ -81,7 +81,7 @@ WPA is a powerful analysis tool that combines a flexible UI with extensive graph
 | Complete documentation of the WPA UI | [WPA Features](/windows-hardware/test/wpt/wpa-features) |
 | Extended discussion of key scenarios | [WPA Scenarios](/windows-hardware/test/wpt/windows-performance-analyzer-common-scenarios) |
 
-To start WPA, select Search, enter *Windows Performance Analyzer*, and then select **Windows Performance Analyzer** in the search results. 
+To open WPA, select Search, enter *Windows Performance Analyzer*, and then select **Windows Performance Analyzer** in the search results. 
 
 If you didn't open WPA directly from WPR after you saved a recording, you can use the WPA **File** menu to open a trace file.  
 
