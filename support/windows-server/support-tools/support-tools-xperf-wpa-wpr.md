@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot processes and threads by using WPR and WPA
 description: Discusses Windows Performance Recorder (WPR) and Windows Performance Analyzer (WPA) and how to apply them when you troubleshoot.
-ms.date: 05/10/2024
+ms.date: 05/14/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -90,7 +90,7 @@ If you didn't open WPA directly from WPR after you saved a recording, you can us
 > [!NOTE]  
 > To load symbols for analysis, select **Trace**, and then select **Load Symbols**. For more information, see [Load Symbols or Configure Symbol Paths](/windows-hardware/test/wpt/load-symbols-or-configure-symbol-paths).
 
-The WPA user interface (UI) includes docked windows that surround a central workspace. This workspace contains **Analysis** tabs. All windows can be docked in a different locations. To open a closed window, select the window on the **Window** menu. WPA uses the following windows and tabs.
+The WPA user interface (UI) includes docked windows that surround a central workspace. This workspace contains **Analysis** tabs. All windows can be docked in different locations. To open a closed window, select the window on the **Window** menu. WPA uses the following windows and tabs.
 
 | Window or tab | Description |
 | --- | --- |
@@ -122,6 +122,6 @@ reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution 
 ```
 
 > [!NOTE]  
-> In the forst command, /<*Process_Name*> represents the name of the service or process that you want to analyze.
+> In the first command, /<*Process_Name*> represents the name of the service or process that you want to analyze.
 
 After the commands run, restart the service or process.
