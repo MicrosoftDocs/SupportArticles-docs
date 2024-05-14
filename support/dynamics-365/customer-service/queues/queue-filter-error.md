@@ -35,6 +35,9 @@ Use the following steps to remove the old format of the queue filters and replac
 1. Open the personal view in the queue item grid.
 1. If the queue dropdown is set to **Queues I’m a member of** or **All queues**, then change the dropdown to a specific queue. You can use your default user queue or any singular queue that you're a member of (for example: “&lt;firstname lastname&gt;”). 
 1. Open the advanced filter panel and remove the **Queue** related entity and missing relationship groups.
+
+   :::image type="content" source="media/edit-filters-queue-items.png" alt-text="Screenshot that shows the related entity and missing relationship groups that need to be removed.":::
+   
    > [!Note]
    > You might see duplicate entries for the **Type Equals Private** filter. Make sure to remove the entire group that contains them.
 1. Select **Apply**, and then save the changes in the current view.
