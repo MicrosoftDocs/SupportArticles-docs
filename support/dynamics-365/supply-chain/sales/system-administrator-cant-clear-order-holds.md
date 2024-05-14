@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: henrikan
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Sales order processing\Issues with sales order processing
 ---
 
 # System administrators can't clear order holds because they aren't authorized

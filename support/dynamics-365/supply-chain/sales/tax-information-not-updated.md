@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: henrikan 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
+ms.custom: sap:Sales order processing\Issues with sales order processing
 --- 
 
 # Tax information isn't updated if location on a sales order header is changed

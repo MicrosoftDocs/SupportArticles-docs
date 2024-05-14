@@ -10,6 +10,7 @@ ms.search.region: Global
 ms.author: henrikan 
 ms.search.validFrom: 2021-12-07
 ms.dyn365.ops.version: 10.0.24 
+ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 --- 
 # Purchase order line data discrepancies
 

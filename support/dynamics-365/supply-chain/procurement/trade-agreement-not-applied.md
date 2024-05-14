@@ -10,6 +10,7 @@ ms.search.region: Global
 ms.author: henrikan
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
+ms.custom: sap:Sales order processing\Issues with trade agreements
 ---
 # Trade agreement conditions aren't applied to imported order lines
 

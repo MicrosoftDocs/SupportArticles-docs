@@ -10,6 +10,7 @@ ms.search.region: Global
 ms.author: henrikan
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
+ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
 # Cancelling delivery remainder moves purchase order to a Confirmed state
 

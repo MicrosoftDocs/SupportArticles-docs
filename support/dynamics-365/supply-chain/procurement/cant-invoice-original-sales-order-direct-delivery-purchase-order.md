@@ -10,6 +10,7 @@ ms.search.region: Global
 ms.author: henrikan
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Purchase order procurement and sourcing\Issues with intercompany
 ---
 # You can't invoice a customer-facing sales order
 
