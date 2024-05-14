@@ -92,7 +92,7 @@ To see the wait chain of a running process, follow these steps:
    > \<*Process*> is running normally.
 
       > [!NOTE]  
-      > In this message, /<*Process*> is the name of the process that you selected.
+      > In this message, \<*Process*> is the name of the process that you selected.
 
    If the process is waiting on another process, Task Manager displays the wait chain tree.
 
