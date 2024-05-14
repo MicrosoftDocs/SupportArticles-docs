@@ -28,7 +28,7 @@ Filter out the dataset to make sure less data is exported by a profile job.
 
 1. Select the corresponding Demand planning data management project with a name that looks like **DP-XML-NameOfEntity-NameOfProfile**.
 2. Make sure you're in enhanced view and then select the filter button.
-3. Filter out the data that contains special characters.
+3. Add filters to reduce the size of the export. Good candidates for filtering are company related fields or date ranges (For references on dynamics data filter check this [learn site](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/get-started/advanced-filtering-query-options#advanced-date-queries-that-use-sysqueryrangeutil-methods) .
 
 In this case, when you run the import profiles job from the Demand Planning app, the filters are respected and therefore the data will be filtered out.
 
