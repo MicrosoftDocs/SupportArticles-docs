@@ -11064,6 +11064,11 @@
       "source_path": "support/system-center/vmm/deploying-vm-error-2912.md",
       "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/syntax-build-answer-files-unattended-installation-ad-ds.md",
+      "redirect_url": "/windows-server/identity/ad-ds/deploy/dcpromo",
+      "redirect_document_id": false
     }
   ]
 }

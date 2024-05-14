@@ -1,5 +1,5 @@
 ---
-title: How to use PerfInsights Linux in Microsoft Azure
+title: Troubleshoot Linux virtual machine performance issues with PerfInsights
 description: Learns how to use PerfInsights to troubleshoot Linux VM performance problems.
 services: virtual-machines
 documentationcenter: ''
@@ -12,7 +12,7 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 04/15/2024
+ms.date: 05/14/2024
 ms.author: genli
 ---
 # How to use PerfInsights
