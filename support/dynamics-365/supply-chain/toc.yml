@@ -1,17 +1,5 @@
 - name: Dynamics 365 Supply Chain Management
   href: welcome-supply-chain.yml
-- name: Demand planning
-  items:
-    - name: Demand planning import profile troubleshooting guide
-      href: demand-planning/import-landing-page.md
-    - name: An import profile job fails with a "Forbidden" error
-      href: demand-planning/import-profile-fails-with-forbidden-error.md
-    - name: An import profile job fails with a "Timeout" error
-      href: demand-planning/project-time-out.md
-    - name: An import profile job fails due to special characters
-      href: demand-planning/special-characters.md
-    - name: An import profile job fails due to insufficient permissions
-      href: demand-planning/user-insufficient-permissions.md
 - name: Inventory costing and closing
   items:
     - name: An update conflict occurs when the inventory valuation method is either standard cost or moving average
@@ -64,6 +52,18 @@
       href: inventory/inventory-journal-locked-workflow.md
 - name: Master planning
   items:
+    - name: Demand planning
+      items:
+        - name: Demand planning import profile troubleshooting guide
+          href: demand-planning/import-landing-page.md
+        - name: An import profile job fails with a "Forbidden" error
+          href: demand-planning/import-profile-fails-with-forbidden-error.md
+        - name: An import profile job fails with a "Timeout" error
+          href: demand-planning/project-time-out.md
+        - name: An import profile job fails due to special characters
+          href: demand-planning/special-characters.md
+        - name: An import profile job fails due to insufficient permissions
+          href: demand-planning/user-insufficient-permissions.md
     - name: BOM explosion behaves differently for firmed and estimated production orders
       href: planning/bom-explosion-works-differently.md
     - name: Can't update the forecasted unit cost when you import demand forecast records
