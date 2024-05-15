@@ -11,13 +11,13 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 186303
-ms.reviewer: sathyana, jovind, meerak, v-trisshores
+ms.reviewer: sathyana, shrshet, jovind, meerak
 appliesto: 
   - Exchange Online
   - Exchange Online Protection
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 01/25/2024
+ms.date: 05/15/2024
 ---
 
 # Collect Microsoft Purview compliance diagnostics
