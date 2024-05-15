@@ -265,15 +265,20 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 **Cryptographic Operations**: Unwrap key
 **Secret Permissions**: Get, List, Set
 4. Return to the repair VM and the elevated PowerShell window.
-5. Enter the following command to begin the process of signing into your Azure subscription, replacing "[SubscriptionID]" with your Azure subscription ID:
+5. Set the HTTP APIs security protocol to TLS 1.2 for current session by entering the following command.
+
+    ```powershell
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    ```
+6. Enter the following command to begin the process of signing into your Azure subscription, replacing "[SubscriptionID]" with your Azure subscription ID:
 
     ```powershell
     Add-AzAccount -SubscriptionID <SubscriptionID>
     ```
 
-6. Follow the prompts to complete the process of signing in to your Azure subscription.
-7. In the repair VM, open an elevated Windows PowerShell ISE window and expand the script (top) pane.
-8. In the elevated PowerShell ISE window, paste the following script into the empty script pane. Replace "myVM" with your source (failed) VM and "myKeyVault" with the name of your key vault.
+7. Follow the prompts to complete the process of signing in to your Azure subscription.
+8. In the repair VM, open an elevated Windows PowerShell ISE window and expand the script (top) pane.
+9. In the elevated PowerShell ISE window, paste the following script into the empty script pane. Replace "myVM" with your source (failed) VM and "myKeyVault" with the name of your key vault.
 
     ```powershell
         if ((Get-AzContext) -ne $Null)
@@ -297,14 +302,14 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
     }
     ```
 
-9. Select **Run Script** to run the script.  
-10. In the output, look for the value beneath **DiskEncryptionKeyFileName** for the name of the BEK file.
+10. Select **Run Script** to run the script.  
+11. In the output, look for the value beneath **DiskEncryptionKeyFileName** for the name of the BEK file.
 
     In the following example output, the BEK file name (secret name + the ".BEK" file extension) is *AB4FE364-4E51-4034-8E09-0087C3D51C18.BEK*. Record this value because it will be used in the next step. (If you see two duplicated volumes, the volume that has the newer timestamp is the current BEK file that is used by the repair VM.)
 
     :::image type="content" source="media/unlock-encrypted-disk-offline/show-wrapped-bek.png" alt-text="Screenshot of PowerShell output in a table showing the disk encryption key file name for a wrapped bek." border="false":::
 
-11. If the **Content Type** value in the output is **Wrapped BEK**, as in the example above, go to [Download and unwrap the BEK](#download-and-unwrap-the-bek). If the **Content Type** value in the output is simply **BEK**, as in the following example, go to the next section to [download the BEK to the repair VM](#download-the-bek-to-the-repair-vm).
+12. If the **Content Type** value in the output is **Wrapped BEK**, as in the example above, go to [Download and unwrap the BEK](#download-and-unwrap-the-bek). If the **Content Type** value in the output is simply **BEK**, as in the following example, go to the next section to [download the BEK to the repair VM](#download-the-bek-to-the-repair-vm).
 
     :::image type="content" source="media/unlock-encrypted-disk-offline/show-unwrapped-bek.png" alt-text="Screenshot of PowerShell output in a table showing the disk encryption key file name for a content type of bek." border="false":::
 
