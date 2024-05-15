@@ -76,8 +76,6 @@ compute
 
 ```
 
-
-
 **IMDSCheckUtil powershell version:**
 
 Run the following powershell script to check for missing certificates. If any certificates are missing please proceed to proceed direct to [Resolution 2](#resolution-1)
@@ -240,7 +238,7 @@ https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details?t
 1. Check if [KB5036909](https://support.microsoft.com/topic/april-9-2024-kb5036909-os-build-20348-2402-36062ce9-f426-40c6-9fb9-ee5ab428da8c) if not proceed to install it, you can get it from the [Update Catalog](https://www.catalog.update.microsoft.com/home.aspx)
 1. If you have installed the update but are still encountering the issue, please verify that your system's firewalls and proxies are configured to allow the download of certificates.
         [Certificate downloads and revocation lists](https://learn.microsoft.com/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#certificate-downloads-and-revocation-lists)
-1. Also, you can download the certificates directly from the website https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains#root-and-subordinate-certificate-authority-chains, for a better result just download and install all the certificates it won't take much to download and install
+1. Also, you can download the certificates directly from the website <https://learn.microsoft.com/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains#root-and-subordinate-certificate-authority-chains>, for a better result just download and install all the certificates it won't take much to download and install
   
     > [!NOTE]
     >
