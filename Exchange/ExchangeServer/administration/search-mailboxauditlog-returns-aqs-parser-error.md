@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:High Availability, Health, Performance, Content Indexing\Need help with Content Indexing (Search issues)
   - CI 175995
   - Exchange Server
   - CSSTroubleshoot

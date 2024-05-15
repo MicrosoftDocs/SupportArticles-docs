@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams Hybrid and Deployment (Migration)\Hybrid SfB and O365
   - CI 113425
   - CSSTroubleshoot
 ms.reviewer: scapero

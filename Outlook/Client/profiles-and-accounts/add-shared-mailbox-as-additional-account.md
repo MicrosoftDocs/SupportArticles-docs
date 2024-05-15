@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Profile, Accounts, and Authentication
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: hugopanao, gbratton, meerak, v-trisshores
