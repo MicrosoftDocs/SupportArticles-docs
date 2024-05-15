@@ -24,7 +24,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 05/06/2024
+ms.date: 05/15/2024
 ---
 # Known issues with Teams Rooms on Android
 
@@ -41,11 +41,8 @@ ms.date: 05/06/2024
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
-|Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who are using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | Join the meeting on your personal device to see the laser pointer and drawing tools in PowerPoint Live. |
-|Teams Admin Settings unavailable on Teams Rooms on Android devices with Teams Rooms Basic license. | The **Teams Admin Settings** option under **Device Settings** is unavailable on devices that have the Teams Rooms Basic license for Teams Rooms on Android CY22 U3 app (version 1449/1.0.96.2022120503). | Admins can either assign a Teams Rooms Pro license to the same device or downgrade the device to use Teams Rooms on Android CCY22 U2B app (version: 1449/1.0.96.2022090606) instead. |
+|Teams Admin Settings unavailable on Teams Rooms on Android devices with Teams Rooms Basic license. | The **Teams Admin Settings** option under **Device Settings** is unavailable on devices that have the Teams Rooms Basic license for Teams Rooms on Android CY22 U3 app (version 1449/1.0.96.2022120503). | Admins can either assign a Teams Rooms Pro license to the same device or downgrade the device to use Teams Rooms on Android CCY22 U2B app (version: 1449/1.0.96.2022090606) instead.|
 |Rotate 180 option doesn't work for all meeting participants|You select the **Rotate 180** option for a Content camera in your Teams Rooms on Android device. However, the rotation is applied only to the video feed for in-room participants. Remote participants still see an inverted video display.|If possible, mount the Content camera right side up instead of upside down.|
-|Whiteboard doesn't launch and displays an error message instead|You might see the following error message when you try to launch the Whiteboard during a Teams meeting:<br/><br/><i> Something went wrong </i><br/><br/>The issue might occur if you're using one of the following devices:<ul><li>Cisco Board Pro 55 & 75</li><li>Cisco Room Kit EQX</li><li>Neat Board</li><li>DTEN D7X</li><li>Yealink MeetingBoard 65</li><li>Poly X50</li></ul> | Make sure the following policy is enabled on the device:<br/><br/><i> AllowAnonymousMeetingParticipantsToAccessWhiteboards </i><br/><br/>You're required to enable this policy if you want to use the Whiteboard feature. See [Manage sharing for Microsoft Whiteboard](/microsoft-365/whiteboard/manage-sharing-organizations) for more information.|
-|Camera display is upside down|If you're using a Logitech Tap USB Touch Console, the preview of the camera displays an inverted image when the device is mounted on the wall. Also, the video stream during a meeting might display inverted.|No workaround is available at this time.|
 
 ## Issues with Teams phones
 
