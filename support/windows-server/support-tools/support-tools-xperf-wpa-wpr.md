@@ -53,7 +53,7 @@ You can run WPR from the user interface (WPRUI.exe) or the command line (WPR.exe
 
 To start a recording, follow these steps:
 
-1. Select the Search box and enter *Windows Performance Recorder*. In the search results, select **Windows Performance Recorder**.
+1. Select Start, enter *Windows Performance Recorder*, and then select **Windows Performance Recorder** in the search results.
 1. Do one of the following:  
 
    - To record while using the default (**First-level triage**) profile, select **Start**.  
