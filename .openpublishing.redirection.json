@@ -11119,8 +11119,8 @@
       "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreements-from-rejected-rfq.md",
       "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreements-from-rejected-rfq",
       "redirect_document_id": false
-    },    
-
+    },
+    {
       "source_path": "support/windows-server/active-directory/syntax-build-answer-files-unattended-installation-ad-ds.md",
       "redirect_url": "/windows-server/identity/ad-ds/deploy/dcpromo",
       "redirect_document_id": false
