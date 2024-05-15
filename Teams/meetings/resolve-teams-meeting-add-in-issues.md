@@ -1,6 +1,6 @@
 ---
-title: Resolve issues with Teams Meeting add-in for Outlook
-description: Provides steps to troubleshoot and fix issues that affect the Teams Meeting add-in for Outlook.
+title: Resolve issues with Teams Meeting add-in for classic Outlook
+description: Provides steps to troubleshoot and fix issues that affect the Teams Meeting add-in for classic Outlook.
 author: helenclu
 ms.author: meerak
 manager: dcscontentpm
@@ -19,67 +19,48 @@ search.appverid:
 ms.date: 03/19/2024
 ---
 
----
-title: Resolve issues with Teams Meeting add-in for Outlook
-description: Provides steps to troubleshoot and fix issues that affect the Teams Meeting add-in for Outlook.
-author: helenclu
-ms.author: meerak
-manager: dcscontentpm
-audience: ITPro
-ms.topic: troubleshooting
-localization_priority: Normal
-ms.custom: 
-  - sap:Teams Meetings\Meeting Scheduling
-  - CSSTroubleshoot
-  - CI 162959
-  - CI 171788
-appliesto: 
-  - Microsoft Teams
-search.appverid: 
-  - MET150
-ms.date: 03/19/2024
----
+# Resolve issues that affect the Teams Meeting add-in for classic Outlook
 
-# Resolve issues that affect Teams Meeting add-in for Outlook
+If you're a Microsoft Teams administrator, and your users can't install the Teams Meeting add-in for classic Microsoft Outlook, schedule Outlook meetings from Teams, or schedule Teams meetings from Outlook, the issue might be caused by a problem with the installation of the Teams Meeting add-in or with the user's mailbox being hidden from the Global Address List (GAL).
 
-If you're a Microsoft Teams administrator, and your users can't install the Teams Meeting add-in for Outlook, schedule Outlook meetings from Teams, or schedule Teams meetings from Outlook, try the following steps to troubleshoot and resolve the issue.
+## Teams Meeting add-in is missing or its installation fails
 
-## Check policies
+If you've configured the add-in for all users but it's missing for some of them, try the following steps to troubleshoot and resolve the issue.
 
-Verify that the following policies are assigned to the affected users:
+### Run a self-help diagnostic
 
-- A Teams Upgrade policy that enables scheduling meetings in Teams. For more information, see [Set your coexistence and upgrade settings](/microsoftteams/setting-your-coexistence-and-upgrade-settings).
+As an administrator, you can run the [Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-InDiag) diagnostic in the Microsoft 365 admin center to validate that the affected users have the correct policies to enable the Teams Outlook add-in.
 
-- A Teams Meeting policy that enables the Outlook add-in to be installed. For more information, see [Meeting policy settings](/microsoftteams/meeting-policies-in-teams-general#outlook-add-in).
+> [!NOTE]
+> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-## Use the Teams Add-in Missing in Outlook diagnostic
+Use the following steps:
 
-If you're an administrator, you can use the following diagnostic tool to validate that a user has the correct policies to enable the Teams Outlook add-in.
-
-1. Select the following **Run Tests** button to populate the diagnostic in the Microsoft 365 admin center:
+1. Select the **Run Tests** button to populate the diagnostic in the Microsoft 365 admin center:
 
    > [!div class="nextstepaction"]
    > [Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-InDiag)
 
 2. In the **Username or Email** field under **Run diagnostic**, enter the email address of the user who is experiencing issues when they try to enable the Teams Outlook add-in. Then, select **Run Tests**.
-3. The tests will suggest next steps to resolve any tenant or policy configuration issues and validate that the user is correctly configured to enable the Teams Outlook add-in.
 
-## Use Microsoft Support and Recovery Assistant
+After the diagnostic is complete, select the links provided to resolve the issues that were found.
+
+### Use Microsoft Support and Recovery Assistant
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
 
-If the policies are assigned correctly, but you still can't install the add-in, or if you're not an administrator, download and run Microsoft Support and Recovery Assistant by selecting the following button. The Assistant is the recommended solution to perform automated troubleshooting steps and make the required fixes.
+If the policies are assigned correctly, but you still can't install the add-in, or if you're not an administrator, download and run Microsoft Support and Recovery Assistant. We recommend the Assistant to perform automated troubleshooting steps and make the required fixes.
 
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA-TeamsAddInScenario)
 
-## The Enterprise version of the Assistant
+### Use the Enterprise version of the Assistant
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
 
-If you're an administrator who has multiple users who are affected by the issues that affect the Teams Meeting add-in, you can use the Enterprise version of the Assistant. The Enterprise version of the Assistant is a command-line version that can be scripted to detect and fix most issues automatically without requiring user interaction. For details about how to use the Enterprise version of the Assistant, see [Enterprise version of Microsoft Support and Recovery Assistant](/microsoft-365/troubleshoot/administration/sara-command-line-version#supported-switches).  
+If you have multiple users affected by the issues, you can use the Enterprise version of the Assistant. This is a command-line version of the Assistant that can be scripted to detect and fix most issues automatically without requiring user interaction. For details about how to use the Enterprise version of the Assistant, see [Enterprise version of Microsoft Support and Recovery Assistant](/microsoft-365/troubleshoot/administration/sara-command-line-version#supported-switches).  
 
-## Fix the issue manually
+### Fix the issue manually
 
 If you want to perform the checks and make the fixes manually, follow these steps:
 
@@ -110,23 +91,18 @@ If you want to perform the checks and make the fixes manually, follow these step
 1. Sign out and then sign in to the Teams desktop client.
 1. Restart the Outlook desktop client. Make sure that Outlook isn't running in admin mode.
 
-## Check the status of the add-in in Outlook
+### Check the status of the add-in in Outlook
 
 If you still don't see the Teams Meeting add-in, make sure that it's enabled in Outlook.
 
-- In Outlook, select **File** > **Options**.
+1. In Outlook, select **File** > **Options**.
+1. In the **Outlook Options** dialog box, select the **Add-ins** tab.
+1. Check whether **Microsoft Teams Meeting Add-in for Microsoft Office** is in the **Active Application Add-ins** list.
+1. If the add-in isn't in the list of active applications, and you see the Teams Meeting Add-in in the **Disabled Application Add-ins** list, select **Manage** > **COM Add-ins**, and then select **Go.**
+1. Select the checkbox that's next to **Microsoft Teams Meeting Add-in for Microsoft Office**.
+1. Select **OK** on all the dialog boxes that are open, and then restart Outlook.
 
-- In the **Outlook Options** dialog box, select the **Add-ins** tab.
-
-- Check whether **Microsoft Teams Meeting Add-in for Microsoft Office** is in the **Active Application Add-ins** list.
-
-- If the add-in isn't in the list of active applications, and you see the Teams Meeting Add-in in the **Disabled Application Add-ins** list, select **Manage** > **COM Add-ins**, and then select **Go.**
-
-- Select the checkbox that's next to **Microsoft Teams Meeting Add-in for Microsoft Office**.
-
-- Select **OK** on all the dialog boxes that are open, and then restart Outlook.
-
-## Verify registry settings
+### Verify registry settings
 
 If the add-in still doesn't appear, follow these steps to check the registry settings.
 
@@ -156,13 +132,21 @@ If the add-in still doesn't appear, follow these steps to check the registry set
       - If the policy is required, make sure that *Microsoft.Teams.AddinLoader.dll* is in the list of trusted add-ins and that the corresponding hash value is correct. You can use the [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash) cmdlet to compute the hash value of the .dll file.
       
         **Note:** The *Microsoft.Teams.AddinLoader.dll* file that's used is automatically updated with the Teams client. Therefore, the hash value must be constantly updated to pair with the .dll file.
-## Unable to add Teams Meeting details into the Meeting Request body
 
-When scheduling a Meeting Request in a delegated calendar the Teams Meeting add-in needs to get the Organizer information through Outlook.
+## Details to join a meeting are missing
 
-This action requires the mailboxes to be fully visible in the Global Address List. If you are having issues on getting the Teams Meeting details added to the body of the meeting request please confirm that the mailbox is NOT hidden from the Global Address List. 
+When a delegate schedules a Teams meeting in a delegated calendar on behalf of the delegator, the following meeting join details aren't added to the body of the meeting request:
 
-Steps to manage this configuration can be found in the following article: [Manage address lists in Exchange Online | Microsoft Learn](/exchange/address-books/address-lists/manage-address-lists"https://learn.microsoft.com/en-us/exchange/address-books/address-lists/manage-address-lists#hide-recipients-from-address-lists")
+-	Meeting URL
+-	Meeting ID and passcode
+-	Dial-in numbers
 
-> [!IMPORTANT]
-> The parameter _-HiddenFromAddressListsEnabled_ should be set to _$false_.
+This issue occurs if the delegator's mailbox is hidden from the global address list (GAL). In this case, the Teams Meeting add-in can't get the required information and populate the meeting details.
+
+To fix the issue, you can use the following Exchange Online PowerShell cmdlet to unhide the delegator's mailbox:
+
+```powershell
+Set-Mailbox -Identity <delegator’s email address> -HiddenFromAddressListsEnabled $false
+```
+
+Verify that the mailbox is visible in the GAL. Then, ask the delegate to restart Outlook and create a new meeting request.
