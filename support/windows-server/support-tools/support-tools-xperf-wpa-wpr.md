@@ -122,6 +122,6 @@ reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution 
 ```
 
 > [!NOTE]  
-> In the first command, /<*Process_Name*> represents the name of the service or process that you want to analyze.
+> In the first command, \<*Process_Name*> represents the name of the service or process that you want to analyze.
 
 After the commands run, restart the service or process.
