@@ -242,7 +242,7 @@ This section lists issues specific to Windows permissions or Policy settings:
 
 <details><summary><b>Other aspects</b></summary>
 
-This section lists issues related to the authentication and access control within a web environment:
+This section lists issues that are related to the authentication and access control within a web environment:
 
 - **Integrated authentication isn't enabled** - Refers to a configuration issue where Integrated Windows Authentication (IWA) is not configured correctly. To resolve this issue, make sure that the **Integrated Windows Authentication** option is enabled in **Internet Options** settings.
 
