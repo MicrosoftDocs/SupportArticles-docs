@@ -47,7 +47,7 @@ The KCC runs at regular intervals to adjust the replication topology for changes
 
 1. In the Values box, type the appropriate value:
 
-  - To disable automatic intra-site topology generation, use value 1 (decimal).
+- To disable automatic intra-site topology generation, use value 1 (decimal).
   - To disable automatic inter-site topology generation, use value 16 (decimal).
   - To disable both intra-site and inter-site topology generation, use value 17 (decimal).
     
