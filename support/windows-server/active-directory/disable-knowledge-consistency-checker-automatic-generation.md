@@ -20,6 +20,8 @@ _Original KB number:_ &nbsp; 242780
 
 The Knowledge Consistency Checker (KCC) is a component that automatically generates and maintains the intra-site and inter-site replication topology. You can disable the KCC's automatic generation of intra-site or inter-site topology management, or both.
 
+For additional information see: [KCC](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/replication/active-directory-replication-concepts#BKMK_2)
+
 ## More information
 
 In some situations you may want to manually create replication connections to tailor the replication topology, but this increases the workload for monitoring for changes in the network topology described in Active Directory or replication failures occurring on domain controllers.
@@ -30,7 +32,6 @@ The KCC runs at regular intervals to adjust the replication topology for changes
 > When automatic replication topology management is disabled, the failover detection mentioned above is also disabled.
 > ### How to Modify Active Directory to Disable KCC for a Site
 
-1. Run Setup.exe (if it is not already installed) from the Support\\Tools folder of the Windows 2000 or Windows Server 2003 CD-ROM. This installs the Support Tools Kit.
 2. Run Ldp.exe
 3. On the Connection menu, click Connect.
 4. Type the server name of a domain controller in the enterprise, verify that the port setting is 389, click to clear the **connectionless** check box, and then click OK. After the connection is complete, server-specific data is displayed in the right pane.
