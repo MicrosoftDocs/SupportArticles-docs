@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 242780
 
 The Knowledge Consistency Checker (KCC) is a component that automatically generates and maintains the intra-site and inter-site replication topology. You can disable the KCC's automatic generation of intra-site or inter-site topology management, or both.
 
-For additional information see: [KCC](https://learn.microsoft.com/windows-server/identity/ad-ds/get-started/replication/active-directory-replication-concepts#BKMK_2)
+For additional information see: [KCC](/windows-server/identity/ad-ds/get-started/replication/active-directory-replication-concepts#BKMK_2)
 
 ## More information
 
