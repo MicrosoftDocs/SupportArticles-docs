@@ -11,13 +11,13 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 186303
-ms.reviewer: sathyana, jovind, meerak, v-trisshores
+ms.reviewer: sathyana, shrshet, jovind, meerak
 appliesto: 
   - Exchange Online
   - Exchange Online Protection
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 01/25/2024
+ms.date: 05/15/2024
 ---
 
 # Collect Microsoft Purview compliance diagnostics
@@ -143,7 +143,7 @@ Follow these steps:
 
 4. In the folder dialog box that opens, select a parent folder for the diagnostic data.
 
-   Wait for the tool to finish processing the diagnostic data and write the processed data to an .xmla file. The tool generates a .zip file that packages the .xmla file together with any diagnostic files from the template. The tool then saves the .zip file to the parent folder that you selected, and then opens a completion dialog box.
+   Wait for the tool to finish processing the diagnostic data and write the processed data to an .json file. The tool generates a .zip file that packages the .json file together with any diagnostic files from the template. The tool then saves the .zip file to the parent folder that you selected, and then opens a completion dialog box.
 
    As an example of data processing, if you select the **Data Classification** \> **Classification** template, the tool fetches the applicable rule packs and keyword dictionaries, and then tests data classification on the sample file that you specify in the template.
 
@@ -155,11 +155,15 @@ Follow these steps:
 
 1. Extract the contents of the .zip file.
 
-2. Parse the .xmla file, and view the parsed data objects by running the following PowerShell commands:
+2. Parse the .json file, and view the parsed data objects by running the following PowerShell commands:
 
    ```PowerShell
-   $debugInfo = Import-Clixml -Path <xmla file path>
-   $debugInfo
+    # Get the content of the JSON file
+    $jsonContent = Get-Content -Path "<JSON file path>" -Raw
+    # Convert JSON content to PowerShell object
+    $debugInfo = $jsonContent | ConvertFrom-Json
+    # Show output
+    $debugInfo
    ```
 
    For example, you might see the following data objects in the command output.
