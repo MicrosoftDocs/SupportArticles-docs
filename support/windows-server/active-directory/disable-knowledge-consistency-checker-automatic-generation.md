@@ -41,6 +41,8 @@ The KCC runs at regular intervals to adjust the replication topology for changes
 
 1. At the top select *Attribute Editor* tab, scroll and look and select the "options" attribute.
 
+   > [!NOTE]
+   > If the "options" attribute is present and the value is not 0, you need to determine the current flags that are set and use the values below to construct the new value before continuing to the next step.
 1. Double click on the attribute or press the *Edit* button on the bottom left.
 
 1. In the Values box, type the appropriate value:
@@ -51,46 +53,8 @@ The KCC runs at regular intervals to adjust the replication topology for changes
     
 1. Click *Ok*, and then *Apply.*
 
-1. Run Ldp.exe
-3. On the Connection menu, click Connect.
-4. Type the server name of a domain controller in the enterprise, verify that the port setting is 389, click to clear the **connectionless** check box, and then click OK. After the connection is complete, server-specific data is displayed in the right pane.
-5. On the Connection menu, click Bind. Type the user name, password, and domain name (in DNS format) in the appropriate boxes (you may need to click to select the Domain check box), and then click OK. If the binding is successful, you should receive a message in the right pane that is similar to the following example:  
-    Authenticated as dn: **YourUserID**  
-6. On the View menu, click Tree.
-7. In the BaseDN box, type the distinguished name of the site object in the configuration container of the forest. For example, for the Default-First-Site-Name site in the `Mydomain.com` forest, the domain name would look like the following example:  
-CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM
-
-    If this object is located, LDP should display the object in the left pane.
-8. Expand the view. One of the child objects should begin with CN=NTDS Site Settings. Double-click this object. In the right pane, LDP should output the current settings for the attributes for this object. Each attribute is preceded by a number and then an angle bracket (>). The number represents the number of values the attribute contains.
-9. Look for the "options" attribute. If it is not present, this is normal and makes modifying the value easier.
-
-    > [!NOTE]
-    > If the "options" attribute is present and the value is not 0, you need to determine the current flags that are set and use the values below to construct the new value before continuing to the next step.
-10. In the right-hand pane, locate the beginning of the output for the NTDS Site Settings object. It looks similar to the following example:
-
-    > Expanding base 'CN=NTDS Site Settings,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM'...  
-    Result <0>: (null)  
-    Matched DNs:  
-    Getting 1 entry:  
-    \>> Dn: CN=NTDS Site Settings,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM
-
-11. Copy the string of data from the ">> Dn" portion of the LDP output.
-12. On the Browse menu, click Modify. In the Dn box, paste the string you copied in the previous step.
-13. In the Attribute box, type options.
-14. In the Values box, type the appropriate value:
-
-    - To disable automatic intra-site topology generation, use value 1 (decimal).
-    - To disable automatic inter-site topology generation, use value 16 (decimal).
-    - To disable both intra-site and inter-site topology generation, use value 17 (decimal).
-
-15. In the Operation box, click Replace, click Enter, and then click Run.
-16. In the right pane, the output should look similar to the following example if the operation is successful:
-    > ***Call Modify...
-    ldap_modify_s(ld,'CN=NTDS Site Settings,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM',[1] attrs);  
-    Modified "CN=NTDS Site Settings,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM".
-
 > [!NOTE]
-> To re-enable KCC generation, in step 7 in the section above, click on *Clear*.
+> To re-enable KCC generation, in the section above, in step 7 click on *Clear*.
 To determine if these values are set correctly, you can use the same steps in the section above until reach step 5 (including).
 
 Inspec the value to ensure the correct values were set previously.
