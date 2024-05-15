@@ -28,9 +28,9 @@ Filter out the dataset to make sure an import profile job exports less data.
 
 1. Select the corresponding Demand planning data management project with a name that looks like **DP-XML-NameOfEntity-NameOfProfile**.
 2. Make sure you're in enhanced view and select the filter button.
-3. Add filters to reduce the size of the export. Good candidates for filtering are company related fields or date ranges.
+3. Add filters to reduce the size of the export. Good candidates for filtering are company-related fields or date ranges.
 
-    For more information about Dynamics data filter, see [Advanced date queries that use SysQueryRangeUtil methods](/dynamics365/fin-ops-core/fin-ops/get-started/advanced-filtering-query-options#advanced-date-queries-that-use-sysqueryrangeutil-methods).
+    For more information about Dynamics 365 data filters, see [Advanced date queries that use SysQueryRangeUtil methods](/dynamics365/fin-ops-core/fin-ops/get-started/advanced-filtering-query-options#advanced-date-queries-that-use-sysqueryrangeutil-methods).
 
 In this case, when you run the import profile job from the Demand Planning app, the filters are respected, and therefore, the data is filtered out.
 
