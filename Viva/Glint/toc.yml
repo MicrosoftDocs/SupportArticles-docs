@@ -17,3 +17,7 @@
           href: ./historical-import/import-error-missing-required-field.md
         - name: Error "User is not in client"
           href: ./historical-import/import-error-user-is-not-in-client.md
+    - name: Provisioning and licensing
+      items:
+        - name: Tenant provisioning and licensing errors
+          href: ./provisioning-and-licensing/tenant-provisioning-licensing-errors.md         

@@ -9,7 +9,6 @@ search.appverid:
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
-  - azure-ad-ref-level-one-done
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
