@@ -10,7 +10,6 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
-  - azure-ad-ref-level-one-done
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 

@@ -17,7 +17,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
-# Messages with attachments are not delivered when ATP Dynamic Delivery and Exclaimer are used
+# Messages with attachments are not delivered when MDO Dynamic Delivery and Exclaimer are used
 
 _Original KB number:_ &nbsp; 4014438
 
@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 4014438
 Consider the following scenario:
 
 - A Microsoft 365 tenant is set up to route messages to Exclaimer for signature or disclaimer services.
-- The Advanced Threat Protection (ATP) Safe Attachment feature is enabled.
+- The Microsoft Defender for Office 365 (MDO) Safe Attachment feature is enabled.
 - Under the **Safe attachments unknown malware response** option, the Dynamic Delivery feature is selected.
 
 In this scenario, messages may be delayed by several hours or may never be displayed in the recipient's mailbox.
