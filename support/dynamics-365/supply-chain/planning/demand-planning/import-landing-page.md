@@ -7,6 +7,7 @@ audience: Application User
 ms.search.region: Global
 ms.author: fistamos
 ms.search.validFrom: 2024-03-01
+ms.custom: sap:Master planning\Issues with demand planning
 ---
 # Demand planning import profile troubleshooting guide
 
