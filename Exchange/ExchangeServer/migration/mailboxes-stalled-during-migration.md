@@ -53,10 +53,10 @@ To initially set a WLM limit that is different from the default value, run the f
 ```powershell
 $limit = 25
 New-SettingOverride -Name "MdbReplication" -Component WorkloadManagement -Section MdbReplication -Parameters @("MaxConcurrency=$limit") -Reason "Allow more simultaneous mailbox moves"
-New-SettingOverride -Name "CiAgeOfLastNotification" -Component WorkloadManagement -Section MdbReplication -Parameters @("MaxConcurrency=$limit") -Reason "Allow more simultaneous mailbox moves"
-New-SettingOverride -Name "MdbAvailability" -Component WorkloadManagement -Section MdbReplication -Parameters @("MaxConcurrency=$limit") -Reason "Allow more simultaneous mailbox moves"
-New-SettingOverride -Name "DiskLatency" -Component WorkloadManagement -Section MdbReplication -Parameters @("MaxConcurrency=$limit") -Reason "Allow more simultaneous mailbox moves"
-New-SettingOverride -Name "MdbDiskLatency" -Component WorkloadManagement -Section MdbReplication -Parameters @("MaxConcurrency=$limit") -Reason "Allow more simultaneous mailbox moves"
+New-SettingOverride -Name "CiAgeOfLastNotification" -Component WorkloadManagement -Section CiAgeOfLastNotification -Parameters @("MaxConcurrency=$limit") -Reason "Allow more simultaneous mailbox moves"
+New-SettingOverride -Name "MdbAvailability" -Component WorkloadManagement -Section MdbAvailability -Parameters @("MaxConcurrency=$limit") -Reason "Allow more simultaneous mailbox moves"
+New-SettingOverride -Name "DiskLatency" -Component WorkloadManagement -Section DiskLatency -Parameters @("MaxConcurrency=$limit") -Reason "Allow more simultaneous mailbox moves"
+New-SettingOverride -Name "MdbDiskLatency" -Component WorkloadManagement -Section MdbDiskLatency -Parameters @("MaxConcurrency=$limit") -Reason "Allow more simultaneous mailbox moves"
 ```
 
 To further update the WLM limit, run the following commands (this example sets the WLM limit to 35):

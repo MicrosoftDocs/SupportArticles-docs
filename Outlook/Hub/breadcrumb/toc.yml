@@ -3,5 +3,9 @@
   topicHref: /
   items:
   - name: Microsoft Outlook
-    tocHref: /outlook/troubleshoot/
-    topicHref: /outlook/troubleshoot/index
+    tocHref: /outlook/
+    topicHref: /outlook/index
+    items:
+    - name: Troubleshooting
+      tocHref: /outlook/troubleshoot/
+      topicHref: /outlook/troubleshoot/index

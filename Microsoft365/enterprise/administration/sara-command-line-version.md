@@ -148,6 +148,7 @@ The following table provides the versions of the Enterprise version of the Assis
 
 |Release date|Version|
 |----------|-----------|
+|March 12, 2024|17.01.1602.000|
 |February 20, 2024|17.01.1440.000|
 |November 15, 2023|17.01.0987.011|
 |September 5, 2023|17.01.0495.021|

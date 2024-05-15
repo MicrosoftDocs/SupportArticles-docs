@@ -49,11 +49,13 @@
       ]
     },
     "fileMetadata": {
-      "ms.subservice": {
-        "Connections/**/*.md": "viva-connections",
-        "Learning/**/*.md": "viva-learning",
+      "ms.service": {
         "Glint/**/*.md": "viva-glint",
+        "Learning/**/*.md": "viva-learning",
         "Pulse/**/*.md": "viva-pulse",
+        "Connections/**/*.md": "viva-connections"
+      },
+      "ms.subservice": {
         "Viva-suite-administration/**/*.md": "viva-suite-admin"
       },
       "author": {

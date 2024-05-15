@@ -12,7 +12,6 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
-  - azure-ad-ref-level-one-done
 ms.reviewer: kellybos, Nino Bilic, v-six
 appliesto: 
   - Exchange Online
