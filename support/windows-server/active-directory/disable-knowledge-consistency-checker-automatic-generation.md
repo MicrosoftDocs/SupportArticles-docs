@@ -31,8 +31,27 @@ The KCC runs at regular intervals to adjust the replication topology for changes
 > [!NOTE]
 > When automatic replication topology management is disabled, the failover detection mentioned above is also disabled.
 > ### How to Modify Active Directory to Disable KCC for a Site
+> 1. Open Active Directory Sites and Services (*dssite.msc*)
 
-2. Run Ldp.exe
+1. Expand *sites*
+
+1. Expand the site you wish to modify
+
+1. In the right-hand pane, right click > *properties* on *NTDS Site Settings*
+
+1. At the top select *Attribute Editor* tab, scroll and look and select the "options" attribute.
+
+1. Double click on the attribute or press the *Edit* button on the bottom left.
+
+1. In the Values box, type the appropriate value:
+
+  - To disable automatic intra-site topology generation, use value 1 (decimal).
+  - To disable automatic inter-site topology generation, use value 16 (decimal).
+  - To disable both intra-site and inter-site topology generation, use value 17 (decimal).
+    
+1. Click *Ok*, and then *Apply.*
+
+1. Run Ldp.exe
 3. On the Connection menu, click Connect.
 4. Type the server name of a domain controller in the enterprise, verify that the port setting is 389, click to clear the **connectionless** check box, and then click OK. After the connection is complete, server-specific data is displayed in the right pane.
 5. On the Connection menu, click Bind. Type the user name, password, and domain name (in DNS format) in the appropriate boxes (you may need to click to select the Domain check box), and then click OK. If the binding is successful, you should receive a message in the right pane that is similar to the following example:  
@@ -71,16 +90,10 @@ CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM
     Modified "CN=NTDS Site Settings,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM".
 
 > [!NOTE]
-> To re-enable KCC generation, delete the value that you entered in step 14 in this section.
+> To re-enable KCC generation, in step 7 in the section above, click on *Clear*.
+To determine if these values are set correctly, you can use the same steps in the section above until reach step 5 (including).
 
-To determine if these values are set correctly, you can use Active Directory Replication Monitor (also included with the Support Tools installation) to generate a report on the site configuration. Included in this information is output similar to the following example:
-
-> Site Name: Default-First-Site-Name  
-\---------------------------------------  
-Site Options: NTDSSETTINGS_OPT_IS_AUTO_TOPOLOGY_DISABLED   NTDSSETTINGS_OPT_IS_INTER_SITE_AUTO_TOPOLOGY_DISABLED  
-Site Topology Generator: CN=NTDS Settings,CN=ESTAD-CESSNA,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=ifr,DC=com  
-Site Topology Renewal:  
-Site Topology Failover:  
+Inspec the value to ensure the correct values were set previously.
 
 > [!NOTE]
 > NTDSSETTINGS_OPT_IS_AUTO_TOPOLOGY_DISABLED means that intra-site topology management is disabled, and NTDSSETTINGS_OPT_IS_INTER_SITE_AUTO_TOPOLOGY_DISABLED means that inter-site topology management is disabled.
