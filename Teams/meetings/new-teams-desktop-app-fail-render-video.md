@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Meetings\Meeting Join
   - CI 186626
   - CSSTroubleshoot
 ms.reviewer: revaldiv,corbinm,scapero

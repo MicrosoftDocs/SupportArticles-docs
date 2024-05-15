@@ -13,7 +13,6 @@ ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
-  - azure-ad-ref-level-one-done
 ms.reviewer: haembab, ninob, meerak, v-trisshores
 appliesto:
   - Exchange Online

@@ -13,7 +13,6 @@ ms.custom:
   - CSSTroubleshoot
   - CI 109573
   - has-azure-ad-ps-ref
-  - azure-ad-ref-level-one-done
 ms.author: luche
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
