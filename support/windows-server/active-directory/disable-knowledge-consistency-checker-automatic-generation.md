@@ -13,12 +13,12 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes how to disable the Knowledge Consistency Checker from automatically creating replication topology.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 242780
 
 ## Summary
 
-The Knowledge Consistency Checker (KCC) is a Microsoft Windows 2000 and Microsoft Windows Server 2003 component that automatically generates and maintains the intra-site and inter-site replication topology. You can disable the KCC's automatic generation of intra-site or inter-site topology management, or both.
+The Knowledge Consistency Checker (KCC) is a component that automatically generates and maintains the intra-site and inter-site replication topology. You can disable the KCC's automatic generation of intra-site or inter-site topology management, or both.
 
 ## More information
 
@@ -28,10 +28,7 @@ The KCC runs at regular intervals to adjust the replication topology for changes
 
 > [!NOTE]
 > When automatic replication topology management is disabled, the failover detection mentioned above is also disabled.
-
-You can use the Ldp.exe tool that is included in the Windows 2000 or Windows Server 2003 Resource Kit to perform Lightweight Directory Access Protocol (LDAP) searches against Active Directory for specific information given search criteria. This also lets you query data that is otherwise not visible using the administrative tools included in Windows 2000. However, all information that is returned in LDP queries is subject to security permissions.
-
-### How to Modify Active Directory to Disable KCC for a Site
+> ### How to Modify Active Directory to Disable KCC for a Site
 
 1. Run Setup.exe (if it is not already installed) from the Support\\Tools folder of the Windows 2000 or Windows Server 2003 CD-ROM. This installs the Support Tools Kit.
 2. Run Ldp.exe
