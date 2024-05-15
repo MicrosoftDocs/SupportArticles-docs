@@ -5,3 +5,7 @@
   - name: Microsoft Teams
     tocHref: /microsoftteams/
     topicHref: /microsoftteams/index
+    items:
+    - name: Troubleshooting
+      tocHref: /microsoftteams/troubleshoot/
+      topicHref: /microsoftteams/troubleshoot/index
