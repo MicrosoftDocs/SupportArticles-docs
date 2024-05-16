@@ -20,7 +20,7 @@ When there are issues preventing the profile configuration in Business Central, 
 ## Resolution
 
 > [!NOTE]
-> You need tenant administrator permissions in Business Central.
+> To solve this issue, you need tenant administrator permissions in Business Central.
 
 As a tenant administrator, you can perform the following steps to remove the profile configurations with errors or alternatively, export the profile and fix the code issues.
 
