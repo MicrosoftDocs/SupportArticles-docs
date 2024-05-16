@@ -135,7 +135,6 @@ goto retry
 
 removeappxpackages.ps1 content:
     ```powershell
-# Find failing appx packages in sysprep log
 $sysprepLogPath = "$env:SystemRoot\System32\Sysprep\Panther\setupact.log"
 $failedPackages = Get-Content $sysprepLogPath | Select-String -Pattern "Error.*was installed for a user" | ForEach-Object {
     if ($_ -match 'Microsoft.*8wekyb3d8bbwe') {
@@ -143,7 +142,6 @@ $failedPackages = Get-Content $sysprepLogPath | Select-String -Pattern "Error.*w
     }
 }
 
-# Remove failing appx packages
 foreach ($package in $failedPackages) {
     Write-Host "Removing appx package: $package"
     Remove-AppxPackage $package -Erroraction 'silentlycontinue'
