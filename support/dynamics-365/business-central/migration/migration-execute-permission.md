@@ -3,7 +3,7 @@ title: Missing or denied EXECUTE or SELECT permission error
 description: Provides a resolution for the missing permission issue or the EXECUTE (or SELECT) permission was denied error in Business Central cloud migration.
 ms.author: jswymer
 ms.reviewer: jswymer
-ms.date: 05/13/2024
+ms.date: 05/16/2024
 ---
 # "EXECUTE (or SELECT) permission was denied on the object" error in Business Central cloud migration
 
@@ -11,7 +11,7 @@ This article solves permission-related errors that might occur when running the 
 
 ## Symptoms
 
-WWhen you run the **Cloud Migration Setup** assisted setup guide in Business Central, you receive one of the following error messages:
+When you run the **Cloud Migration Setup** assisted setup guide in Business Central, you receive one of the following error messages:
 
 > - The EXECUTE (or SELECT) permission was denied on the object.
 

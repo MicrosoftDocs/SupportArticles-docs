@@ -2,7 +2,7 @@
 title: Profile configuration can't be started
 description: Provides troubleshooting steps to solve the personalization could not be started error during profile configuration in Dynamics 365 Business Central.
 ms.custom: 
-ms.date: 05/13/2024
+ms.date: 05/16/2024
 ms.reviewer: solsen
 author: SusanneWindfeldPedersen
 ms.author: solsen
@@ -41,7 +41,7 @@ To remove the identified records, select the **Manage** action to delete the pro
 
 ### Export (force) of profile configuration (from version 16.2)
 
-From Business Central version 16.2, it's possible to try to mitigate the issue by exporting of the profile, fixing the issue, and then reimporting the profile.
+Starting with Business Central version 16.2, you can try to mitigate the issue by [exporting the profile](/dynamics365/business-central/dev-itpro/developer/devenv-design-profiles-using-client#exporting-profiles), fixing the issue, and then [reimporting the profile](/dynamics365/business-central/dev-itpro/developer/devenv-design-profiles-using-client#importing-profiles).
 
 1. In Business Central, in the **Tell Me** box, enter *Profiles*, and then select the related link.
 
@@ -51,12 +51,18 @@ From Business Central version 16.2, it's possible to try to mitigate the issue b
 
 3. Unzip the profile package that you downloaded, and open the AL file for the page customization that contains the issue.
 
-   The page customization name follows this pattern: `PageCustomization.<target-page-name>.Configuration<id>.al`. Based on the diagnostics from the troubleshooting page, or by moving the page customization AL code into an AL app to benefit from the compiler diagnostics, locate the code block that causes the issue and remove it.
+   The page customization name follows this pattern: `PageCustomization.<target-page-name>.Configuration<id>.al`.
 
-4. Create a new _.zip_ file with the fixed page customization.
+4. Based on the diagnostics from the troubleshooting page, or by moving the page customization AL code into an AL app to benefit from the compiler diagnostics, locate the code block that causes the issue and remove it.
 
-5. Return to the **Profile List** page and select the **Import Profiles** button.
+5. Create a new _.zip_ file with the fixed page customization.
 
-6. Follow the wizard's instruction and, when prompted, select the profile that was fixed in the list of profiles to import.
+6. Return to the **Profile List** page and select the **Import Profiles** button.
 
-7. Return to the list of customized pages for this profile and verify that no errors are reported.
+7. Follow the wizard's instruction and, when prompted, select the profile that was fixed in the list of profiles to import.
+
+8. Return to the list of customized pages for this profile and verify that no errors are reported.
+
+## More information
+
+[Using the Client to Create Profiles and Page Customizations](/dynamics365/business-central/dev-itpro/developer/devenv-design-profiles-using-client)

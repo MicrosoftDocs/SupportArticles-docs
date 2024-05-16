@@ -3,7 +3,7 @@ title: Activity timed out error in Business Central cloud migration
 description: Provides troubleshooting steps for the Activity timed out error in Business Central cloud migration.
 ms.author: jswymer
 ms.reviewer: jswymer 
-ms.date: 05/13/2024
+ms.date: 05/16/2024
 ---
 # "Activity timed out" error in Business Central cloud migration
 
@@ -34,3 +34,8 @@ If an activity times out during the [cloud migration setup](/dynamics365/busines
     ```sql
     EXEC sys.sp_MSforeachtable 'ALTER INDEX ALL ON ? REORGANIZE'
     ```
+
+## More information
+
+- [Managing cloud migration](/dynamics365/business-central/dev-itpro/administration/migration-manage)
+- [Run cloud migration setup](/dynamics365/business-central/dev-itpro/administration/migration-setup)

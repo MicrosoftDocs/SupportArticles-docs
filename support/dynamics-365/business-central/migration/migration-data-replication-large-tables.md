@@ -3,7 +3,7 @@ title: Data replication error DelimitedTextIncorrectRowDelimiter for large table
 description: Provides a resolution for an error that occurs during the data replication process for large tables in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
-ms.date: 05/13/2024
+ms.date: 05/16/2024
 ---
 # Data replication error "DelimitedTextIncorrectRowDelimiter" for large tables in Business Central cloud migration
 
@@ -11,7 +11,7 @@ This article provides a resolution for an error that might occur when you run [d
 
 ## Symptoms
 
-The following error message is displayed in the cloud migration log for the table that failed to be copied. The cloud migration log is a part of page 40063, "Cloud Migration Management," and can be viewed by the administrator signed in to the Business Central SaaS environment.
+The following error message is displayed in the cloud migration log for the table that failed to be copied. The cloud migration log is a part of page 40063, [Cloud Migration Management](/dynamics365/business-central/dev-itpro/administration/migration-manage#cloud-migration-management-page), and can be viewed by the administrator signed in to the Business Central SaaS environment.
 
 > ErrorCode=DelimitedTextIncorrectRowDelimiter,'Type=Microsoft.DataTransfer.Common.Shared.HybridDeliveryException,Message=The specified row delimiter is incorrect. Cannot detect a row after parse 100 MB data.,Source=Microsoft.DataTransfer.Common,'
 

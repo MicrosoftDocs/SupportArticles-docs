@@ -3,7 +3,7 @@ title: Permission issues in Business Central cloud migration
 description: Fixes the Operation on target NotifyBusinessCentral failed or you don't have permission to create or run scheduled tasks error in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
-ms.date: 05/13/2024
+ms.date: 05/16/2024
 ---
 # Permission issues in Business Central cloud migration
 
@@ -28,5 +28,5 @@ The user running the cloud migration setup has insufficient permissions.
 
 To solve this issue,
 
-- Make sure the user running the setup is assigned the SUPER permission set in Business Central online.
+- Make sure the user running the setup is assigned the [SUPER permission](/dynamics365/business-central/dev-itpro/administration/administration-special-permission-sets) set in Business Central online.
 - If the user running the setup is a [delegated administrator](/dynamics365/business-central/dev-itpro/administration/migration-setup#about-delegated-administrators), make sure the customer has consented.
