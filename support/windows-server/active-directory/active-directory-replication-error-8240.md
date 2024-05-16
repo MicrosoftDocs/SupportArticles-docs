@@ -16,7 +16,7 @@ This article describes the symptoms, cause, and resolution for AD operations tha
 > [!NOTE]
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/).
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2680976
 
 ## Symptoms
@@ -92,51 +92,61 @@ The domain controller tries to locate global catalogs for its functionalities, s
 To troubleshoot this issue, follow these steps:
 
 1. Determine the problematic domain controller that has the inconsistent object. This error means that the local domain controller finds that an inconsistent object exists in its incoming partner (for the specific replication connection) but not local AD database.
-2. Determine whether you want to remove the objects or leave those objects as they are, as follows:
+1. Determine whether you want to remove the objects or leave those objects as they are, as follows:
 
-   - If you want to remove the objects, you can use the Repadmin.exe command together with the RemoveLingeringObjects switch to remove those inconsistent objects from the source domain controller. For more information, go to the following Microsoft TechNet website:
-
-        [Use Repadmin to remove lingering objects](https://technet.microsoft.com/library/cc785298%28v=ws.10%29.aspx)
-
-        > [!NOTE]
-        > For a read-only partition, you have to use the `Repadmin /Rehost` command.
+   - The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/en-us/download/details.aspx?id=56051). In some cases where LoLv2 can't be used, you can use *Repadmin.exe* command together with the RemoveLingeringObjects switch to remove those inconsistent objects from the source domain controller. For more information, go to the following websites:  
+   [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)  
+   [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
+   
+     [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+     
+     [Use Repadmin to remove lingering objects](https://technet.microsoft.com/library/cc785298%28v=ws.10%29.aspx)
+     
+     > [!NOTE]
+     > For a read-only partition, you have to use the `Repadmin /Rehost` command.
    - If you want to keep those objects, you can create the following objects on the destination domain controller:
-
+   
         Sub-Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
-        Value Name: Strict Replication Consistency  
-        Value Type: REG_DWORD  
-        Value Data: 0  
-
+     Value Name: Strict Replication Consistency  
+     Value Type: REG_DWORD  
+     Value Data: 0  
+     
         Sub-Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
-        Value Name: Allow Replication With Divergent and Corrupt Partner  
-        Value Type: REG_DWORD  
-        Value Data: 1  
-
+     Value Name: Allow Replication With Divergent and Corrupt Partner  
+     Value Type: REG_DWORD  
+     Value Data: 1  
+     
         Sub-Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
-        Value Name: Correct Missing Object  
-        Value Type: REG_DWORD  
-        Value Data: 1  
-
-        > [!NOTE]
-        > You must be careful in a large environment that contains many domain controllers, because the propagation of those inconsistent objects could cause more and more domain controllers to report 8240 errors until the propagation is complete.
+     Value Name: Correct Missing Object  
+     Value Type: REG_DWORD  
+     Value Data: 1  
+     
+     > [!NOTE]
+     > You must be careful in a large environment that contains many domain controllers, because the propagation of those inconsistent objects could cause more and more domain controllers to report 8240 errors until the propagation is complete.
    - Another option is to forcedly remove Active Directory from the domain controller that contains the inconsistent objects. To do this, follow these steps:
-        1. Forcedly remove Active Directory: Active Directory Installation Wizard (Dcpromo.exe) /forceremoval.
-        2. Clean up metadata for the domain controller by following the steps in the following article in the Microsoft Knowledge Base: [216498](https://support.microsoft.com/help/216498) How to remove data in Active Directory after an unsuccessful domain controller demotion
-        3. Repromote the domain controller by using Dcpromo.exe.
-
+      1. Forcedly remove Active Directory: Active Directory Installation Wizard (Dcpromo.exe) /forceremoval.
+      1. Clean up metadata for the domain controller  
+            A convenient method to clean up the domain controller's metadata is using the Active Directory Users and Computers snap-in. For more information, see:
+            
+            - [Step-By-Step: Manually Removing A Domain Controller Server](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-manually-removing-a-domain-controller-server/ba-p/280564)
+            
+      - [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)
+      
+      1. Repromote the domain controller by using Dcpromo.exe.
+            
 ### Situation 2: Reported 8240 in 1126 Event (NTDS)
 
 For the error that indicates that GC isn't available, we may generally follow the GC location process to check. To do this, follow these steps:
 
 1. Check whether there's any specified global catalog in the forest. If there's not, configure a GC.
 
-    > [!NOTE]
-    >  After you mark a domain controller as GC, it may take time for KCC to calculate a new replication topology, build the global catalog, and GC ready announcement. How long depends on the replication schedule, the time that is used to replicate the required read-only NCs, and the interval of KCC actvity.
-2. Check whether you can obtain a domain controller from DNS through the command lTest.exe /DnsGetDC:\<DomainName> /GC /Force. If you can't GC record in DNS, take the following two actions:
-   - GC announcement on existing GCs: use ldp.exe connect to GC to check whether the value of **isGlobalCatalogReady** is set to **true**.
-   - Check DNS registration: netdiag /fix.
+   > [!NOTE]
+   >  After you mark a domain controller as GC, it may take time for KCC to calculate a new replication topology, build the global catalog, and GC ready announcement. How long depends on the replication schedule, the time that is used to replicate the required read-only NCs, and the interval of KCC actvity.
+1. Check whether you can obtain a domain controller from DNS through the command *NLTest.exe /DnsGetDC:<DomainName> /GC /Force*.   
+If you can't query GC record in DNS, take the following action:
 
-3. Check whether you can connect to the GC over TCP 3268 through ldp.exe.
+   - GC announcement on existing GCs: use the PoSh command *Get-ADRootDSE -Server <DCName> | fl serverName , isGlobalCatalogReady*  or ldp.exe to connect the DC and check to check whether the value of **isGlobalCatalogReady** is set to **true**.
+1. Check whether you can connect to the GC over TCP 3268 through ldp.exe: *ldp.exe<DCName>:3268*
 
 ## Data collection
 
