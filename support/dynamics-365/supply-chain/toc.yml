@@ -52,6 +52,18 @@
       href: inventory/inventory-journal-locked-workflow.md
 - name: Master planning
   items:
+    - name: Demand planning
+      items:
+        - name: Demand planning import profile troubleshooting guide
+          href: planning/demand-planning/import-landing-page.md
+        - name: An import profile job fails with a "Forbidden" error
+          href: planning/demand-planning/import-profile-fails-with-forbidden-error.md
+        - name: An import profile job fails with a "Timeout" error
+          href: planning/demand-planning/project-time-out.md
+        - name: An import profile job fails due to special characters
+          href: planning/demand-planning/special-characters.md
+        - name: An import profile job fails due to insufficient permissions
+          href: planning/demand-planning/user-insufficient-permissions.md
     - name: BOM explosion behaves differently for firmed and estimated production orders
       href: planning/bom-explosion-works-differently.md
     - name: Can't update the forecasted unit cost when you import demand forecast records
