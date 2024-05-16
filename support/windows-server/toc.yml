@@ -1088,7 +1088,7 @@ items:
     - name: AuthZ fails with an Access Denied error
       href: ./group-policy/authz-fails-access-denied-error-application-access-check.md
     - name: Can't apply user Group Policy settings when computer objects don't have GPO Read permissions
-      href: ./group-policy/cannot-apply-user gpo-when-computer-objects-dont-have-read-permissions.md
+      href: ./group-policy/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions.md
     - name: Error 0x80004005 when you create DSN with GPP
       href: ./group-policy/creating-dsn-with-gpp-fails.md
     - name: Event ID 1053 by using "Gpupdate /force" command
