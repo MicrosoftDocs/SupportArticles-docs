@@ -131,6 +131,8 @@ This section lists the issues that are related to directory services and servers
 
 - **An account is disabled** - You might experience this scenario if the user account was disabled by an administrator or by a user. In this case, you can't log in by using this account or you can't use this account to start a service. This might cause consistent authentication issues because it can prevent you from accessing resources or performing actions that require authentication.
 
+  **Solution:** A domain administrator can fix this by re-enabling the account. When an account is disabled, it's usually because either a user tried to log in with the wrong password too many times or because an application or service is trying to use an old password.
+
 - **An account isn't in the group** - This issue might occur if a user is trying to access a resource that's restricted to a specific group.
 
   **Solution:** Check the SQL logins to enumerate allowed groups and make sure that the user belongs to one of the groups.
@@ -139,7 +141,9 @@ This section lists the issues that are related to directory services and servers
 
   **Solution:** For more information, see [Transfer logins and passwords between instances of SQL Server](../security/transfer-logins-passwords-between-instances.md).
 
-- **Domain Controller is offline** - Use the `nltest` command to force the computer to switch to another domain controller. For more information, see [Active Directory replication Event ID 2087: DNS lookup failure caused replication to fail](../../../windows-server/identity/active-directory-replication-event-id-2087.md).
+- **Domain Controller is offline** - Refers to an issue where the domain controller isn't accessible.
+
+  **Solution:** Use the `nltest` command to force the computer to switch to another domain controller. For more information, see [Active Directory replication Event ID 2087: DNS lookup failure caused replication to fail](../../../windows-server/identity/active-directory-replication-event-id-2087.md).
 
 - **Firewall blocks the Domain Controller** - You might experience issues when you manage the user's access to resources.
 
@@ -149,7 +153,11 @@ This section lists the issues that are related to directory services and servers
 
   [Error 18452](/sql/relational-databases/errors-events/mssqlserver-18452-database-engine-error) indicates that the login uses Windows Authentication but the login is an unrecognized Windows principal. An unrecognized Windows principal indicates that the login can't be verified by Windows. This might occur because the Windows login is from an untrusted domain. The trust level between domains might cause failures in account authentication or the visibility of Service Provider Name (SPN)s.
 
-- **No permissions for cross-domain groups** - Users from the [remote domain should belong to a group](../../../windows-server/windows-security/trust-between-windows-ad-domain-not-work-correctly.md) in the SQL Server domain. There might be a problem if you try to use a domain local group to connect to a SQL Server instance from another domain. If the domains lack proper trust, adding the users in a group in the remote domain might prevent the server from enumerating the group's membership.
+  **Solution:** To resolve this issue, see [MSSQLSERVER_18452](/sql/relational-databases/errors-events/mssqlserver-18452-database-engine-error#user-action).
+
+- **No permissions for cross-domain groups** - Users from the [remote domain should belong to a group](../../../windows-server/windows-security/trust-between-windows-ad-domain-not-work-correctly.md) in the SQL Server domain. There might be a problem if you try to use a domain local group to connect to a SQL Server instance from another domain.
+
+  **Solution:** If the domains lack proper trust, adding the users in a group in the remote domain might prevent the server from enumerating the group's membership.
 
 - **Selective authentication is disabled** - Refers to a feature of domain trusts that allows the domain administrator to limit which users have access to resources in the remote domain. If selective authentication isn't enabled, all users in the trusted domain can get access to the remote domain.
 
@@ -167,29 +175,45 @@ This section lists the issues that are related to the Kerberos authentication:
 
 - **Clock skew is too high** - This issue might occur if multiple devices on a network aren't synchronized. For the Kerberos authentication to work, the clocks between devices can't be turned off for more than five minutes or consistent authentication failures might occur.
 
-- **Delegating sensitive accounts to other services** - Some accounts might be marked as `Sensitive` in AD DS. These accounts can't be delegated to another service in a double-hop scenario. Sensitive accounts are critical to providing security, but they can affect authentication. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
+  **Solution:** Set up the computers to regularly synchronize their clocks with a central time service.
+
+- **Delegating sensitive accounts to other services** - Some accounts might be marked as `Sensitive` in AD DS. These accounts can't be delegated to another service in a double-hop scenario. Sensitive accounts are critical to providing security, but they can affect authentication.
+
+  **Solution:** To resolve this issue, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
 - **Delegating to a file share** - Refers to a situation in which a user or application delegates its credentials to access a file share. Without appropriate constraints, delegating credentials to a file share might create security risks.
 
-  **Solution:** To resolve this kind of issue, make sure that you use constrained delegation.
+  **Solution:** To resolve this kind of issue, make sure that you use [constrained delegation](https://techcommunity.microsoft.com/t5/sql-server-support-blog/bulk-insert-and-kerberos/ba-p/317304).
 
 - **Disjoint DNS namespace** - Refers to a consistent authentication issue that might occur if the DNS suffix doesn't match between the domain member and DNS. You might experience authentication issues if you use a disjoint namespace. If the organizational hierarchy in AD DS and in DNS don't match, the wrong SPN might be generated if you use the NETBIOS name in the database application connection string. In this situation, the SPN isn't found, and New Technology LAN Manager (NTLM) credentials are used instead of Kerberos credentials.
 
   **Solution:** To mitigate the issue, use the FQDN of the server or specify the SPN name in the connection string. For information about FQDN, see [Computer Naming](/windows-server/identity/ad-ds/plan/computer-naming).
 
-- **Duplicate SPN** - Refers to a situation in which two or more SPNs are identical within a domain. SPNs are used to uniquely identify services that are running on servers in a Windows domain. Duplicate SPNs can cause authentication issues. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+- **Duplicate SPN** - Refers to a situation in which two or more SPNs are identical within a domain. SPNs are used to uniquely identify services that are running on servers in a Windows domain. Duplicate SPNs can cause authentication issues.
 
-- **Enable HTTP ports on SPNs** - Typically, HTTP SPNs don't use port numbers (for example, `http/web01.contoso.com`). However, you can enable this usage through the policy on the clients. The SPN would then have to be in the `http/web01.contoso.com:88` format in order to enable Kerberos to function correctly. Otherwise, NTLM credentials are used. NTLM credentials aren't recommended because they might make it difficult to diagnose the issue. Also, this situation might generate excessive administrative overhead.
+  **Solution:** To resolve this issue, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
-- **Expired tickets** - Refers to Kerberos tickets. Using expired Kerberos tickets can cause authentication issues. 
+- **Enable HTTP ports on SPNs** - Typically, HTTP SPNs don't use port numbers (for example, `http/web01.contoso.com`).
 
-  **Solution:** To resolve this, see [Expired tickets](expired-tickets-issue.md).
+  **Solution:** To resolve this issue, you can enable this by using the policy on the clients. The SPN would then have to be in the `http/web01.contoso.com:88` format in order to enable Kerberos to function correctly. Otherwise, NTLM credentials are used.
+
+  NTLM credentials aren't recommended because they might make it difficult to diagnose the issue. Also, this situation might generate excessive administrative overhead.
+
+- **Expired tickets** - Refers to Kerberos tickets. Using expired Kerberos tickets can cause authentication issues.
+
+  **Solution:** To resolve this issue, see [Expired tickets](expired-tickets-issue.md).
 
 - **HOSTS file is incorrect** - The HOSTS file can disrupt DNS lookups and might generate an unexpected SPN name. This situation causes NTLM credentials to be used. If an unexpected IP address is in the HOSTS file, the SPN that's generated might not match the back-end server that's pointed to.
 
+  **Solution:** Review the HOSTS file and remove the entries for your server. Hosts file entries are shown in SQLCHECK report.
+
 - **Issue with per-service security identifier (SID) permissions** - Per-service-SID is a security feature of SQL Server that limits local connections to use NTLM and not Kerberos as the authentication method. The service can make a single hop to another server by using NTLM credentials, but it can't be delegated further without using the constrained delegation. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
+  **Solution:** To resolve this issue, the domain administrator needs to set up constrained delegation.
+
 - **Kernel-mode authentication** - The SPN on the App Pool account is typically required for web servers. However, when Kernel-mode authentication is used, the computer's HOST SPN is used for authentication. This action takes place in the kernel. This setting might be used if the server hosts many different websites that use the same host header URL, different App Pool accounts, and [Windows Authentication](/iis/configuration/system.webserver/security/authentication/).
+
+  **Solution:** Remove the HTTP SPNs if Kernel-mode authentication is enabled.
 
 - **Limit delegation rights to Access or Excel** - The Joint Engine Technology (JET) and Access Connectivity Engine (ACE) providers are similar to any of the file systems.
 
@@ -200,6 +224,8 @@ This section lists the issues that are related to the Kerberos authentication:
   **Solution:** For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
 - **Not a constrained target** - If constrained delegation is enabled for a particular service account, Kerberos will fail if the target server's SPN isn't on the list of targets of constrained delegation.
+  
+  **Solution:** To resolve this issue, a domain administrator must add the target server's SPN to the target SPNs of the mid-tier service account.
 
 - **NTLM and constrained delegation** - If the target is a file share, the delegation type of the mid-tier service account must be **Constrained-Any** and not **Constrained-Kerberos**. If the delegation type is set to **Constrained-Kerberos**, the mid-tier account can allocate only to specific services, but **Constrained-Any** allows the service account to delegate to any service.
 
@@ -211,7 +237,7 @@ This section lists the issues that are related to the Kerberos authentication:
 
 - **Some legacy providers don't support Kerberos over Named Pipes** - The legacy OLE DB provider (SQLOLEDB) and ODBC provider (SQL Server) that are bundled with Windows don't offer support for Kerberos authentication over Named Pipes. Instead, they support only NTLM authentication.
 
-  **Solution:** Use a TCP connection to allow Kerberos authentication.
+  **Solution:** Use a TCP connection to allow Kerberos authentication. You can also use a newer driver, example,  MSOLEDBSQL or ODBC Driver 17. But TCP is still preferred over Named Pipes, regardless of version of the driver.
 
 - **SPN is associated with a wrong account** - This issue might occur if an SPN is associated with the wrong account in AD DS. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
@@ -224,6 +250,8 @@ This section lists the issues that are related to the Kerberos authentication:
     1. Use the `SETSPN -S` to migrate the SPN to the correct account.
 
 - **SQL Alias might not function correctly** - A SQL Server alias might cause an unexpected SPN to be generated. This causes NTLM credentials to fail if the SPN isn't found, or an SSPI failure if it inadvertently matches the SPN of another server.
+
+  **Solution:** SQL Aliases are shown in the SQLCHECK report. To resolve the issue, identify and correct any incorrect or misconfigured SQL aliases so that they point to the correct SQL Server.
 
 - **User belongs to many groups** - If a user belongs to multiple groups, authentication issues might occur in Kerberos. If you use Kerberos over UDP, the entire security token must fit within a single packet. Users who belong to many groups have a larger security token than users who belong to fewer groups.
 
@@ -293,7 +321,9 @@ This section lists issues that are specific to Windows permissions or policy set
 
   **Solution:** The database administrator can check this situation by examining the **Security** > **Logins** folder in SQL Server Management Studio (SSMS). If the database is a contained database, check under `databasename`. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain\>\\<username\>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
-- **Credential guard is enabled** - This scenario indicates that the Credential Guard feature is enabled on a Windows system and is used to create a secure environment to store sensitive information. However, in certain situations, this feature might cause authentication issues. For more information, see [Considerations and known issues when using Credential Guard](/windows/security/identity-protection/credential-guard/considerations-known-issues).
+- **Credential guard is enabled** - This scenario indicates that the Credential Guard feature is enabled on a Windows system and is used to create a secure environment to store sensitive information. However, in certain situations, this feature might cause authentication issues.
+
+  **Solution:** To resove this issue, ask a domain administrator to set up constrained delegation. For more information, see [Considerations and known issues when using Credential Guard](/windows/security/identity-protection/credential-guard/considerations-known-issues).
 
 - **Local security subsystem errors** - When you experience local security subsystem errors, particularly those that are linked to LSASS becoming unresponsive, it might indicate underlying issues that affect authentication.
 
@@ -328,7 +358,7 @@ This section lists issues that are specific to Windows permissions or policy set
 
 This section lists issues that are related to the authentication and access control within a web environment:
 
-- **Integrated authentication isn't enabled** - Refers to a configuration issue in which Integrated Windows Authentication (IWA) is not configured correctly. 
+- **Integrated authentication isn't enabled** - Refers to a configuration issue in which Integrated Windows Authentication (IWA) is not configured correctly.
 
   **Solution:** To resolve this issue, make sure that the **Integrated Windows Authentication** option is enabled in **Internet Options** settings.
 
@@ -338,6 +368,7 @@ This section lists issues that are related to the authentication and access cont
 
 - **Wrong Internet zone** - This issue might occur if you try to access a website that isn't in the correct Internet zone in Internet Explorer. The credentials won't work if the website is in the local Intranet zone.
 
+  **Solution:** Add the web server to IE's local intranet zone.
 </details>
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
