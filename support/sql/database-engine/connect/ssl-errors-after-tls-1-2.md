@@ -1,7 +1,7 @@
 ---
 title: SSL errors after upgrading to TLS 1.2 in SQL Server
 description: This article provides information about the SSL errors that you might encounter after you upgrade to TLS 1.2 in SQL Server.
-ms.date: 04/10/2024
+ms.date: 04/18/2024
 ms.custom: sap:Connection issues
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -44,24 +44,22 @@ If you have a network capture, it might resemble the following screenshot that s
   
 To resolve these errors, follow these steps:
 
-1. Open SQL Server Configuration Manager, right-click **Protocols for InstanceName**, and then select **Properties**.
+1. Open SQL Server Configuration Manager, right-click **Protocols for \<InstanceName\>**, and then select **Properties**.
 
 1. Select the **Certificate** tab, and check which certificate is being used.
 
    :::image type="content" source="media/ssl-errors-after-tls-1-2/protocols-for-server-cert-tab.png" alt-text="Screenshot of the Certificate tab that shows which certificate is used.":::
 
-1. If a certificate exists, select **View** to examine it, and then select **Clear**. Then, go to step 6.
+   - If a certificate exists, select **View** to examine it, and then select **Clear**. Then, go to step 4.
 
-1. If no certificate exists, examine the SQL Server error log file to get the hash code. You might see one of the following entries:
+   - If no certificate exists, examine the SQL Server error log file to get the hash code. You might see one of the following entries:
 
      `2023-05-30 14:59:30.89 spid15s The certificate [Cert Hash(sha1) "B3029394BB92AA8EDA0B8E37BAD09345B4992E3D"] was successfully loaded for encryption.`
       or
      `2023-05-19 04:58:56.42 spid11s A self-generated certificate was successfully loaded for encryption.`
-    If the certificate is self-generated, skip to step 2.
+      If the certificate is self-generated, skip to step 2.
 
 1. Open the **Computer Certificate Store** in the Microsoft Management Console (MMC).
-
-   :::image type="content" source="media/ssl-errors-after-tls-1-2/mmc-cert-properties.png" alt-text="Select Properties from SQL Server Configuration Manager.":::
 
    1. Navigate to **Personal Certificates**.
    1. Expand the **Intended Purposes** column, and double-click certificates that are enabled for server authentication.
@@ -72,7 +70,7 @@ To resolve these errors, follow these steps:
    1. In MMC, right-click the certificate, and then select **Properties**.
    1. On the **General** tab, either disable the certificate completely or selectively disable **Server Authentication**.
 
-      :::image type="content" source="media/ssl-errors-after-tls-1-2/add-security-snapins.png" alt-text="Disable the certificate or the server authentication.":::
+        :::image type="content" source="media/ssl-errors-after-tls-1-2/mmc-cert-properties.png" alt-text="Select Properties from SQL Server Configuration Manager.":::
 
 1. Save the changes.
 1. Restart SQL Server.
@@ -122,4 +120,4 @@ If a network trace isn't available, you can check the function value under the f
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002`
 
-If you see no matching algorithms, contact Microsoft Support. To assist the support engineer, capture network traces or BID traces, as specified at [Advanced SSL Data Capture](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0720-Advanced-SSL-Data-Capture).
+If you see no matching algorithms, contact Microsoft Support. To assist the support engineer, capture network traces or BID traces, as specified at [Advanced SSL Data Capture](troubleshoot-ssl-errors-login-process.md).

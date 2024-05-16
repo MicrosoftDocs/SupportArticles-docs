@@ -4,7 +4,7 @@
 title: Year-end close missing opening balances 
 description: Explains why opening balances might be missing when you close a year, and how to rebuild those balances if they're missing in Microsoft Dynamics 365 Finance.
 author: kweekley
-ms.date: 12/07/2023
+ms.date: 04/30/2024
 
 # optional metadata
 
@@ -13,7 +13,7 @@ audience: Application User
 # ms.devlang: 
 ms.reviewer: twheeloc
 # ms.tgt_pltfrm: 
-# ms.custom: 
+# ms.custom: sap:General ledger - Period end and year-end tasks\Issues with year-end close
 ms.search.region: Global 
 # ms.search.industry: 
 ms.author: kweekley
@@ -24,32 +24,28 @@ ms.dyn365.ops.version: 10.0.14
 
 This article explains why opening balances might be missing when you close a year, and how to rebuild those balances if they're missing in Microsoft Dynamics 365 Finance.
 
-## Issue 1 - No beginning balances after running the General ledger year-end close
+## Symptoms
 
-### Resolution
+You have run a year-end close, but  the opening balance doesn't show an amount for the next fiscal year.
 
-Here are things to check if you've closed a year in General ledger, and then generated a trial balance that doesn't display opening balances for the next fiscal year.
+## Resolution
 
-If the **Undo previous close** field is set to **Yes**, the previous year-end close for the same fiscal year is being reversed. When running a process to reverse the year-end close, all entries for both closing and opening balances will be deleted, as if the year had never been closed. The vouchers are also deleted. The year-end close process won't run again automatically. You must start the process again, this time updating the **Undo previous close** option to **No**.
+First, check the status of the batch job. Closing a year includes many separate tasks, but the most critical step is the batch task with the task description **Step 5.0.0**. Posting the opening transactions (and optionally the closing transactions) to General ledger takes place during this step. 
 
-This scenario is covered in the year-end close FAQ article. For more information, see [Year-end activities FAQ](/dynamics365/finance/general-ledger/faq-year-end-activities).
+:::image type="content" source="media/year-end-close-miss-opening-balances/batch-task-step-5-0-0.png" alt-text="Screenshot that shows a batch task with the task description Step 5.0.0.":::
 
-## Issue 2 - Still missing opening balances for your fiscal year after running year-end close with "Undo previous close" set to "No"
+Alternatively, if the **Optimize year-end close** feature is enabled and you're viewing the **Year-end close** page, check the **Posting opening account balance transactions** and **Processing opening account balance transactions**.
 
-### Resolution
+If this step completes successfully but you don't see opening balances on the **Trial balance inquiry** page (**General ledger** > **Inquires and reports** > **Trial balance**), review the results of the year-end close batch job to see if the Rebuild balances step completed successfully.
 
-First, check the status of the batch job. Closing a year includes many separate tasks, but the most critical step is the batch task with the task description **Step 5.0.0**. Posting the opening transactions, and optionally the closing transactions, to General ledger takes place during this step.
+:::image type="content" source="media/year-end-close-miss-opening-balances/rebuild-balances-step.png" alt-text="Screenshot that shows the status of the Rebuild balances step.":::
 
-If this step ends successfully but you don't see opening balances on the **Trial balance inquiry** page (**General ledger** > **Inquires and reports** > **Trial balance**), review the results of the year-end close batch job to see if the Rebuild balances step completed successfully.
+If the Rebuild balances step fails, the opening (and optionally closing) transactions were likely posted successfully. You can verify if the General ledger transactions were posted successfully using the **Voucher transactions inquiry** page by specifying the voucher number and date provided in the year-end close dialog for the year that you closed (**General Ledger** > **Inquiries and reports** > **Voucher transactions**).
 
-If this step fails, the opening (and optionally closing) transactions are likely posted successfully. You can verify that the General ledger transactions are posted successfully using the **Voucher transactions inquiry** page by specifying the voucher number and date provided on the year-end close dialog for the year that you closed, (**General Ledger** > **Inquiries and reports** > **Voucher transactions**).
+:::image type="content" source="media/year-end-close-miss-opening-balances/voucher-transactions-inquiry.png" alt-text="Screenshot that shows the Voucher transactions inquiry page.":::
 
-If the opening (and optionally closing) vouchers are present, you don't need to run the year-end close again. Instead, refer to the next section for information about how to move forward.
+If the opening (and optionally closing) vouchers are present, you don't need to run the year-end close again. You can run the process to rebuild the balances manually using the **Financial dimension sets** page (**General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimension sets**).
 
-## Issue 3 - The "Rebuild balances" step in the year-end close fails
-
-### Resolution
-
-The Rebuild balances step updates the General ledger balances that are used when the Trial balance inquiry is generated. It's the final step in the year-end close process. If this step is the only step that fails, the General ledger transactions have posted successfully. You don't need to run the year-end close again. You can run the process to rebuild the balances manually using the **Financial dimension sets** page (**General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimension sets**).
+:::image type="content" source="media/year-end-close-miss-opening-balances/financial-dimension-sets.png" alt-text="Screenshot that shows the Financial dimension sets page.":::
 
 If this step takes a long time to process, see [Best practices for updating Financial dimension sets](https://community.dynamics.com/blogs/post/?postid=0864032e-99ee-461d-885b-f3d9de6b6bae).

@@ -36,6 +36,8 @@ items:
     href: management/container-group-restart-killing-event-interruption.md
   - name: Container group still runs after a stop or delete command 
     href: management/aci-still-running-after-stop-delete-command.md
+  - name: Spot containers remain in the Waiting state
+    href: management/spot-containers-remain-waiting-state.md
 
 - name: Troubleshoot container group in virtual network
   items:

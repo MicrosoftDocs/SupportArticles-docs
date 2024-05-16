@@ -1,14 +1,14 @@
 ---
-title: Intermittent connection errors occur in SQL Server
+title: Connection error when adding node to Always On environment
 description: This article helps you resolve the problem of intermittent connection errors in SQL Server when a new node is added to the Always On environment.
-ms.date: 03/22/2024
+ms.date: 04/30/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Intermittent connection errors occur when a node is added to the Always On environment in SQL Server
+# Intermittent connection errors occur when adding a node to the Always On environment in SQL Server
 
 You experience intermittent connection errors when you add a new node to the existing Always On environment.
 
@@ -28,7 +28,7 @@ To fix this error, resolve the mismatch between the security protocols. Node1 en
 
 1. Download [IIS Crypto](https://www.nartac.com/Products/IISCrypto/Download).
 1. Install the GUI version of the IIS Crypto tool on the server.
-1. Configure **Cipher Suites**.  
+1. Configure **Cipher Suites**.
 1. Open the **IIS Crypto** tool on the server.
 1. In the IIS Crypto interface, select **Cipher Suites** in the left panel.  
 1. In the list, clear all checkboxes for ciphers that start with "TLS_DHE*".
@@ -38,7 +38,7 @@ To fix this error, resolve the mismatch between the security protocols. Node1 en
 
 1. After you clear the relevant cipher selections, select **Apply** to save the changes.
 
-    :::image type="content" source="media/intermittent-connection-errors-when-a-new-node-is-added/intermittent-connection-add-new-nodes.png" alt-text="Screenshot that shows clearing all ciphers that aren't required.":::
+    :::image type="content" source="media/intermittent-connection-errors-when-a-new-node-is-added/intermittent-connection-add-new-nodes.png" alt-text="Screenshot that shows clearing all ciphers that aren't required." lightbox="media/intermittent-connection-errors-when-a-new-node-is-added/intermittent-errors-when-adding-a-node-big.png":::
 
 1. Restart the server.
 

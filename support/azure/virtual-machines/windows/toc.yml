@@ -277,7 +277,7 @@
       href: unresponsive-vm-apply-windows-update.md
     - name: VM is unresponsive while applying audit configuration policy
       href: vm-unresponsive-applying-audit-configuration-policy.md
-    - name: VM is unresponsive while applying default domain controllers policy
+    - name: VM is unresponsive when Default Domain Controllers Policy is applied
       href: vm-unresponsive-domain-controllers-policy.md
     - name: VM is unresponsive when applying group policy
       href: unresponsive-vm-apply-group-policy.md
@@ -293,9 +293,9 @@
       href: windows-stop-error-hardware-malfunction.md
     - name: Windows stop error - Status No Memory
       href: troubleshoot-windows-stop-error.md
-    - name: Windows stop error - System Process Terminated
+    - name: Windows stop error - 0xC000021A Status System Process Terminated
       href: windows-stop-error-system-process-terminated.md
-    - name: Windows stop error - System thread exception not handled
+    - name: Windows stop error - 0x0000007E system thread exception not handled
       href: windows-stop-error-system-thread-exception-not-handled.md
     - name: Can't boot with 0xc000000f
       href: boot-error-0xc000000f.md

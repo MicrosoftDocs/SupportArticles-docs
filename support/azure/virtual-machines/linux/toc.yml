@@ -6,7 +6,9 @@
 
 - name: Support for Linux and open-source technology in Azure
   href: support-linux-open-source-technology.md
-
+- name: Upgrade VMs running Canonical Ubuntu 18.04 LTS
+  href: upgrade-canonical-ubuntu-18dot04-lts.md
+  
 - name: VM restarts or stops unexpectedly
   items:
   - name: Understand a system reboot
@@ -114,6 +116,11 @@
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
 
+- name: Issue resizing a disk
+  items:
+  - name: Can't resize MBR partition for a data disk larger than 2 TB
+    href: convert-mbr-partition-to-gpt.md
+    
 - name: Linux repositories
   items:
   - name: SUSE

@@ -3,6 +3,7 @@ title: Create custom error reporting pages
 description: This article describes how to use Visual Basic .NET code to trap and respond to errors when they occur in ASP.NET.
 ms.date: 07/28/2020
 ms.topic: how-to
+ms.custom: sap:General Development
 ---
 # Create custom error reporting pages in ASP.NET by using Visual Basic .NET
 
