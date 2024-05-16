@@ -126,17 +126,14 @@ If you try to recover from an update issue, you can reprovision the app after yo
 
 sysprep.cmd content example:
 
-    ```
     mkdir %Systemdrive%\temp
     %Systemdrive%\Windows\System32\sysprep\sysprep.exe /oobe /generalize /shutdown /quiet /unattend:%Systemdrive%\temp\unattend.xml
     :retry
     powershell.exe -ExecutionPolicy Unrestricted -File %Systemdrive%\temp\removeappxpackages.ps1
     %Systemdrive%\Windows\System32\sysprep\sysprep.exe /oobe /generalize /shutdown /quiet /unattend:%Systemdrive%\temp\unattend.xml
     goto retry
-    ```
 
 removeappxpackages.ps1 content example:
-    
     
     $sysprepLogPath = "$env:SystemRoot\System32\Sysprep\Panther\setupact.log"
     $failedPackages = Get-Content $sysprepLogPath | Select-String -Pattern "Error.*was installed for a user" | ForEach-Object {
