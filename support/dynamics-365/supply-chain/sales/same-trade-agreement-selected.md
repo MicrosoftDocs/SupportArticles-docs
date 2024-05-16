@@ -2,7 +2,7 @@
 title: Same trade agreement selected when creating sales order lines 
 description: If there is more than one trade agreement defined for a given date, the one with the lowest price is always selected when creating sales order lines. 
 author: Henrikan
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.topic: troubleshooting 
 ms.search.form: SalesTable, SalesTableListPage, SalesTableListPage_SalesCancelOrder
 audience: Application User 

@@ -2,7 +2,7 @@
 title: The purchase agreement maximum limit isn't effective on a purchase requisition
 description: Introduces a by-design behavior where the purchase agreement maximum limit isn't effective on a purchase requisition.
 author: Henrikan
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac

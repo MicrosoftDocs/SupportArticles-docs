@@ -2,7 +2,7 @@
 title: Default tax group and cash discount aren't filled in from the invoice account
 description: Introduces a by-design behavior where a default tax group and a default cash discount aren't filled in from the invoice account.
 author: Henrikan
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac

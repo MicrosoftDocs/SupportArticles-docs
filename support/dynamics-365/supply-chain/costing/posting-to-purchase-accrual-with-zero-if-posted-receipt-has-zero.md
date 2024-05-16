@@ -2,7 +2,7 @@
 title: Purchase accrual that has a zero amount is posted for a zero-value product receipt
 description: Provides a resolution for the issue that the system creates a posting to purchase accrual where the amount is 0 (zero) when a product receipt that has zero value is posted.
 author: JennySong-SH
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: LedgerTransVoucher
 audience: Application User

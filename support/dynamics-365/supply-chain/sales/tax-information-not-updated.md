@@ -2,7 +2,7 @@
 title: Tax information not updated if sales order location is changed 
 description: Introduces a by-design behavior where you should manually update tax information if the site, warehouse, or delivery address is changed on a sales order header.
 author: Henrikan 
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 

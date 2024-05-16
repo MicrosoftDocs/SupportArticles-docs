@@ -2,7 +2,7 @@
 title: Trade agreement currency conversion issues
 description: Provides a resolution for currency conversion issues when the currency differs on a purchase order.
 author: Henrikan
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac

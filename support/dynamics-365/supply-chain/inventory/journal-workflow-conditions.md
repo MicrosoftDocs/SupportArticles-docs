@@ -2,7 +2,7 @@
 title: Inventory journal workflow conditions apply at the journal level, not line level
 description: Introduces a by-design behavior where inventory journal workflow conditions apply only at the journal level, not at the line level.
 author: sherry-zheng
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: 
 audience: Application User

@@ -2,7 +2,7 @@
 title: Can't insert active version of BOM and route numbers  
 description: If the default site and warehouse are already defined for a selected product, you won't be prompted to insert the active version of BOM and route numbers. 
 author: johanhoffmann 
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 

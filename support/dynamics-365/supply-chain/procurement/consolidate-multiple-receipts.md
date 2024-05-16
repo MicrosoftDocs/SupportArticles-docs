@@ -2,7 +2,7 @@
 title: Can't consolidate multiple purchase orders into a single receipt
 description: Provides more information about the issue that the consolidation of multiple product orders into a single receipt is no longer allowed.
 author: Henrikan
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac

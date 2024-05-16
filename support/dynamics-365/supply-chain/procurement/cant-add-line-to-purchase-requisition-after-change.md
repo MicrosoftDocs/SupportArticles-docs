@@ -2,7 +2,7 @@
 title: You can't add a line to a purchase requisition after you request a change
 description: Provides a resolution for the issue that the system doesn't allow you to add a line to a purchase requisition after you request a change.
 author: Henrikan
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.search.form: PurchReqTable
 audience: Application User
 ms.reviewer: kamaybac

@@ -2,7 +2,7 @@
 title: Error when the Report as finished journal is posted
 description: Provides a resolution for the error that states that the ordered quantity ordered can't be reduced when you post the Report as finished journal.
 author: johanhoffmann
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: ProdTableListPage, ProdParameters
 audience: Application User

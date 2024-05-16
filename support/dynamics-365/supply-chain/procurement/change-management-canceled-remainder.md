@@ -2,7 +2,7 @@
 title: Cancelling delivery remainder moves purchase order to a Confirmed state
 description: If a delivery remainder is canceled on a purchase order where change management is turned on, the purchase order goes to a Confirmed state.
 author: Henrikan
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac

@@ -2,7 +2,7 @@
 title: Reversal of reporting as finished creates an unexpected open transaction
 description: Reversal of reporting as finished that has marking creates an open transaction where the reversed quantity has the same inventory dimensions as the reversed transaction.
 author: sherry-zheng
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: ProdTable
 audience: Application User

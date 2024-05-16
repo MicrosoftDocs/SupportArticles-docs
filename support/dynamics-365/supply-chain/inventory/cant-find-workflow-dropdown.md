@@ -2,7 +2,7 @@
 title: You can't find the "Workflow" drop-down dialog box for inventory journals
 description: Provides resolutions for the issue that you can't find the Workflow drop-down dialog box on the journal page, or related workflow operations aren't available.
 author: sherry-zheng
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: 
 audience: Application User

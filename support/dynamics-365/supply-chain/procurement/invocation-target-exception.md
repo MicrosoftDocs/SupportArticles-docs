@@ -2,7 +2,7 @@
 title: An exception occurs during vendor invoice posting
 description: Provides a resolution for the "Exception has been thrown by the target of an invocation" exception that occurs during vendor invoice posting.
 author: Henrikan
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac

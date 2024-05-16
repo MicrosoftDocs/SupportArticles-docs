@@ -2,7 +2,7 @@
 title: Report as finished update fails with missing quantity error 
 description: If you try to end a production order while reporting the error quantity but not the time or material quantity, the report as finished update will fail.
 author: johanhoffmann 
-ms.date: 05/08/2024
+ms.date: 05/16/2024
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 
