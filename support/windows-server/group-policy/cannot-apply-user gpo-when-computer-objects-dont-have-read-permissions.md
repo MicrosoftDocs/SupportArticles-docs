@@ -1,6 +1,6 @@
 ---
 title: Can't apply user Group Policy settings when computer objects don't have GPO Read permissions
-description: Provides a solution to a problem in which you cannot apply Group Policy settings to users because of a permissions problem.
+description: Provides a solution to a problem in which you can't apply Group Policy settings to users because of a permissions problem.
 ms.date: 05/16/2024
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ keywords: GPMC, Group Policy, permissions, user policies
 
 # Can't apply user Group Policy settings when computer objects don't have GPO Read permissions
 
-This article provides a solution to a problem in which you cannot apply Group Policy settings to users because of a permissions problem.
+This article provides a solution to a problem in which you can't apply Group Policy settings to users because of a permissions problem.
 
 _Applies to:_ &nbsp; Windows Server (all supported versions), Windows Client (all supported versions)
 
@@ -44,7 +44,7 @@ Some administrators remove **Authenticated Users** from **Security Filtering**, 
 
 ## Resolution
 
-If you have removed the **Read (from Security Filtering)** permission from **Authenticated Users**, you have to use an alternate method to assign **Read** permission to the computer objects:
+If you remove the **Read (from Security Filtering)** permission from **Authenticated Users**, you have to use an alternate method to assign **Read** permission to the computer objects:
 
 - Assign **Read** permission to the **Authenticated Users** group.
 
@@ -67,7 +67,7 @@ To resolve the issue, follow these steps:
 
 1. Select **OK**.
 
-After you finish these steps, the **Delegation** tab lists the allowed permission for the selected object or group as **Read**. instead of **Read (from Security Filtering)**. This difference indicates that the object or group does not have the **Apply group policy** permission.
+After you finish these steps, the **Delegation** tab lists the allowed permission for the selected object or group as **Read**, instead of **Read (from Security Filtering)**. This difference indicates that the object or group doesn't have the **Apply group policy** permission.
 
 :::image type="content" source="media/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions/gpmc-policy-delegation-reduced-perms.png" alt-text="Screenshot that shows the reduced permissions of the Authenticated Users group, accessed from the G.P.M.C. Delegation tab.":::  
 
@@ -77,6 +77,6 @@ Consider a GPO that defines only user settings. You want to apply the GPO to spe
 
 To test this configuration, you run `gpresult /h gpresult.html` on a user's computer. Then open the *gpresult.html* file to view the policy results. In this scenario, the report indicates an error (listed at the bottom of the following screenshot).  
 
-:::image type="content" source="media/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions/gpo-client-report-access-denied.png" alt-text="Screenshot that shows the resultant Group Policy report from a client computer that does not have the correct permissions.":::  
+:::image type="content" source="media/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions/gpo-client-report-access-denied.png" alt-text="Screenshot that shows the resultant Group Policy report from a client computer that doesn't have the correct permissions.":::  
 
-To resolve this error, you have to grant **Read** permission to the computer objects that represent the computers that the members of **contoso_user_group** use to sign in. In this scenario, that means creating a group named **contoso_computer_group**, and adding the affected computers to that group. Then, using the procedure described earlier in this article, using the **Delegation** tab to assign **Read** permission to that group.
+To resolve this error, you have to grant **Read** permission to the computer objects that represent the computers that the members of **contoso_user_group** use to sign in. In this scenario, you could create a group named **contoso_computer_group**, and add the affected computers to that group. Then, using the procedure described earlier in this article, you could use the GPMC **Delegation** tab to assign **Read** permission to that group.
