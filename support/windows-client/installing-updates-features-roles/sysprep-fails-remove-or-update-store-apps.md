@@ -137,7 +137,7 @@ sysprep.cmd content example:
 
 removeappxpackages.ps1 content example:
     
-    ```
+    
     $sysprepLogPath = "$env:SystemRoot\System32\Sysprep\Panther\setupact.log"
     $failedPackages = Get-Content $sysprepLogPath | Select-String -Pattern "Error.*was installed for a user" | ForEach-Object {
         if ($_ -match 'Microsoft.*8wekyb3d8bbwe') {
@@ -149,7 +149,7 @@ removeappxpackages.ps1 content example:
         Write-Host "Removing appx package: $package"
         Remove-AppxPackage $package -Erroraction 'silentlycontinue'
     }
-    ```
+    
 
 
 ## More information
