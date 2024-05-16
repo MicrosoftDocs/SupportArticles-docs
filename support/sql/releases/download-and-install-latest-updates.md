@@ -85,7 +85,7 @@ Each of the following links provides information for all of the applicable produ
 |-------------------------|--------------|------------|-------------------------------------------------------|--------------------|
 | 15.0.4365.2             | None         | CU26       | [KB5035123](sqlserver-2019/cumulativeupdate26.md)       | April 11, 2024  |
 | 15.0.4360.2             | None         | CU25 + GDR | [KB5036335](https://support.microsoft.com/help/5036335)       | April 9, 2024  |
-| 15.0.2110.4             | None         | GDR        | [KB5035434](https://support.microsoft.com/help/5035434)       | April 9, 2023  |
+| 15.0.2110.4             | None         | GDR        | [KB5035434](https://support.microsoft.com/help/5035434)       | April 9, 2024  |
 | 15.0.4355.3             | None         | CU25       | [KB5033688](sqlserver-2019/cumulativeupdate25.md)       | February 15, 2024  |
 | 15.0.4345.5             | None         | CU24       | [KB5031908](sqlserver-2019/cumulativeupdate24.md)       | December 14, 2023  |
 | 15.0.4335.1             | None         | CU23       | [KB5030333](sqlserver-2019/cumulativeupdate23.md)       | October 12, 2023   |
