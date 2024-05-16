@@ -124,28 +124,29 @@ If you try to recover from an update issue, you can reprovision the app after yo
 
 ## Automated resolution to avoid manual steps
 
-    ```batch
-mkdir %Systemdrive%\temp
-%Systemdrive%\Windows\System32\sysprep\sysprep.exe /oobe /generalize /shutdown /quiet /unattend:%Systemdrive%\temp\unattend.xml
-:retry
-powershell.exe -ExecutionPolicy Unrestricted -File %Systemdrive%\temp\removeappxpackages.ps1
-%Systemdrive%\Windows\System32\sysprep\sysprep.exe /oobe /generalize /shutdown /quiet /unattend:%Systemdrive%\temp\unattend.xml
-goto retry
+sysprep.cmd content:
+    ```cmd
+    mkdir %Systemdrive%\temp
+    %Systemdrive%\Windows\System32\sysprep\sysprep.exe /oobe /generalize /shutdown /quiet /unattend:%Systemdrive%\temp\unattend.xml
+    :retry
+    powershell.exe -ExecutionPolicy Unrestricted -File %Systemdrive%\temp\removeappxpackages.ps1
+    %Systemdrive%\Windows\System32\sysprep\sysprep.exe /oobe /generalize /shutdown /quiet /unattend:%Systemdrive%\temp\unattend.xml
+    goto retry
     ```
 
 removeappxpackages.ps1 content:
     ```powershell
-$sysprepLogPath = "$env:SystemRoot\System32\Sysprep\Panther\setupact.log"
-$failedPackages = Get-Content $sysprepLogPath | Select-String -Pattern "Error.*was installed for a user" | ForEach-Object {
-    if ($_ -match 'Microsoft.*8wekyb3d8bbwe') {
-        $matches[0]
+    $sysprepLogPath = "$env:SystemRoot\System32\Sysprep\Panther\setupact.log"
+    $failedPackages = Get-Content $sysprepLogPath | Select-String -Pattern "Error.*was installed for a user" | ForEach-Object {
+        if ($_ -match 'Microsoft.*8wekyb3d8bbwe') {
+            $matches[0]
+        }
     }
-}
 
-foreach ($package in $failedPackages) {
-    Write-Host "Removing appx package: $package"
-    Remove-AppxPackage $package -Erroraction 'silentlycontinue'
-}
+    foreach ($package in $failedPackages) {
+        Write-Host "Removing appx package: $package"
+        Remove-AppxPackage $package -Erroraction 'silentlycontinue'
+    }
     ```
 
 
