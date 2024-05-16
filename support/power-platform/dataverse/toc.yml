@@ -10,6 +10,20 @@
       href: dataverse-web-api-and-sdk/dataverse-records-missing-required-fields.md
     - name: Web API client errors
       href: dataverse-web-api-and-sdk/web-api-client-errors.md
+- name: Email and Microsoft 365 Integration
+  items:
+    - name: Server side synchronization
+      items:
+        - name: Error code 8005E259
+          href: email-m365-integration/server-side-synchronization/error-code-8005e259.md
+        - name: Error code 8005E272
+          href: email-m365-integration/server-side-synchronization/error-code-8005e272.md
+        - name: Error code 8005E273
+          href: email-m365-integration/server-side-synchronization/error-code-8005e273.md
+        - name: Error code 8005E274
+          href: email-m365-integration/server-side-synchronization/error-code-8005e274.md        
+        - name: Error code 8005E276
+          href: email-m365-integration/server-side-synchronization/error-code-8005e276.md   
 - name: Plug-in execution
   items:
     - name: Dataverse plug-ins

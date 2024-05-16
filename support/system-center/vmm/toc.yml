@@ -100,8 +100,6 @@
     href: guest-services-installation-error-13206.md
   - name: Error 22528 deploying a DAC pack
     href: deploying-dac-pack-error-22528.md
-  - name: Error 2912 deploying a VM
-    href: deploying-vm-error-2912.md
   - name: Error 2931 deploying VMs
     href: deploying-vm-error-2931.md
   - name: Error 22042 deploying a service template

@@ -4,6 +4,7 @@ description: This article describes techniques for debugging and resolving probl
 ms.date: 06/20/2023
 ms.reviewer: johnhart, weyao, v-jayaramanp
 ms.topic: troubleshooting
+ms.custom: sap:Performance
 ---
 
 # Troubleshoot invalid viewstate issues

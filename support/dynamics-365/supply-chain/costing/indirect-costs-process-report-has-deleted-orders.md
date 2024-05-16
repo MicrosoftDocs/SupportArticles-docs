@@ -2,7 +2,7 @@
 title: The Indirect costs in process report includes deleted production orders
 description: The Indirect costs in process report presents information about production orders that were partially processed and later deleted.
 author: JennySong-SH
-ms.date: 04/11/2021
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: ProdIndirectCostInProgress
 audience: Application User
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: yanansong
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Cost management\Issues with cost calculation and posting
 ---
 
 # The Indirect costs in process report includes deleted production orders

@@ -9447,7 +9447,7 @@
     },
     {
       "source_path": "support/windows-server/identity/troubleshoot-adreplication-guidance.md",
-      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-adreplication-guidance",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance",
       "redirect_document_id": true
     },
     {
@@ -9776,8 +9776,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/windows-server/active-directory/troubleshoot-adreplication-guidance.md",
-      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance",
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-adreplication-guidance",
       "redirect_document_id": true
     },
     {
@@ -11044,6 +11044,86 @@
       "source_path": "support/power-platform/power-apps/solutions/upgrade-fails-pending-upgrade.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/upgrade-fails-pending-upgrade",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/get-use-active-directory-replication-status-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/get-use-active-directory-replication-status-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/connect/bad-server-name-connection-string-error.md",
+      "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/backflush-costing-calculation-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/batch-number-cleared-new-lot-id-selected.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/bom-consumption-cost-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/in-progress-jobs-ended.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/bundle-item-intercompany-process.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/cancel-intercompany-purchase-order.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/sales-update-history-cleanup-job-performance-issues.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/service-item-sales-quantity.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-800046.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e276",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/system-center/vmm/deploying-vm-error-2912.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreement-currencies.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreement-currencies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreement-not-applied.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreement-not-applied",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreements-from-rejected-rfq.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreements-from-rejected-rfq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/syntax-build-answer-files-unattended-installation-ad-ds.md",
+      "redirect_url": "/windows-server/identity/ad-ds/deploy/dcpromo",
+      "redirect_document_id": false
     }
   ]
 }

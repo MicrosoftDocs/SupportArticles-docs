@@ -2,7 +2,7 @@
 title: Same trade agreement selected when creating sales order lines 
 description: If there is more than one trade agreement defined for a given date, the one with the lowest price is always selected when creating sales order lines. 
 author: Henrikan
-ms.date: 06/24/2021 
+ms.date: 05/16/2024
 ms.topic: troubleshooting 
 ms.search.form: SalesTable, SalesTableListPage, SalesTableListPage_SalesCancelOrder
 audience: Application User 
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: henrikan 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
+ms.custom: sap:Sales order processing\Issues with trade agreements
 ---
 
 # If two trade agreements exist for overlapping dates, the same one is always selected
