@@ -1,6 +1,6 @@
 ---
 title: Can't apply user Group Policy settings when computer objects don't have GPO Read permissions
-description: 
+description: Provides a solution to a problem in which you cannot apply Group Policy settings to users because of a permissions problem.
 ms.date: 05/16/2024
 author: Deland-Han
 ms.author: delhan
@@ -9,13 +9,13 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: <sap/see CI>, csstroubleshoot
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 keywords: GPMC, Group Policy, permissions, user policies
 ---
 
 # Can't apply user Group Policy settings when computer objects don't have GPO Read permissions
 
-This article describes how to grant **Read** permissions to computer objects, which are needed to apply user Group Policy settings.
+This article provides a solution to a problem in which you cannot apply Group Policy settings to users because of a permissions problem.
 
 _Applies to:_ &nbsp; Windows Server (all supported versions), Windows Client (all supported versions)
 
