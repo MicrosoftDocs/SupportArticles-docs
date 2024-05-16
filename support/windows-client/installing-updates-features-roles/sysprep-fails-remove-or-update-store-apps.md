@@ -126,7 +126,7 @@ If you try to recover from an update issue, you can reprovision the app after yo
 
 sysprep.cmd content:
 
-    ```cmd
+    ```
     mkdir %Systemdrive%\temp
     %Systemdrive%\Windows\System32\sysprep\sysprep.exe /oobe /generalize /shutdown /quiet /unattend:%Systemdrive%\temp\unattend.xml
     :retry
