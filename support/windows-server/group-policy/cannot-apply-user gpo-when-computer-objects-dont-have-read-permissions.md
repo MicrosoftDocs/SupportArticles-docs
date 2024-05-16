@@ -29,13 +29,13 @@ When a user signs in to Windows, Windows retrieves the user Group Policy setting
 
 Because of this change, the computer account has to have **Read** permissions on GPOs that apply to the signed-in user. By default, the **Authenticated Users** group has **Read** and **Apply group policy** permissions on all the GPOs in the domain. The computer accounts in the domain all belong to the **Authenticated Users** group and inherit these permissions.
 
-When the default permissions are in place, the **Scope** tab of the Group Policy Management Console (GPMC) lists **Authenticated Users** in the **Security Filtering** section, as shown in this screenshot.
+When the default permissions are in place, the **Scope** tab of the Group Policy Management Console (GPMC) lists **Authenticated Users** in the **Security Filtering** section, as shown in the following screenshot.  
 
-![graphic](media/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions/gpmc-policy-scope-security-filtering.png)
+:::image type="content" source="media/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions/gpmc-policy-scope-security-filtering.png" alt-text="Screenshot that shows the Security Filtering section of the G.P.M.C. Scope tab.":::  
 
-Additionally, the **Delegation** tab lists the allowed permission for **Authenticated Users** as **Read (from Security Filtering)**. This permission corresponds to the Windows permissions **Read** and **Apply Group Policy**.
+Additionally, the **Delegation** tab lists the allowed permission for **Authenticated Users** as **Read (from Security Filtering)**. This permission corresponds to the Windows permissions **Read** and **Apply Group Policy**.  
 
-![delegation post](media/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions/gpmc-policy-delegation-acls.png)
+:::image type="content" source="media/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions/gpmc-policy-delegation-acls.png" alt-text="Screenshot that shows the default permissions of the Authenticated Users group, accessed from the G.P.M.C. Delegation tab.":::  
 
 Some administrators remove **Authenticated Users** from **Security Filtering**, to improve security or to use more granular security groups for filtering. This action removes both the **Read** and the **Apply group policy** permissions from the group and all its members. For user GPOs to function correctly, you must restore the **Read** permission to the computer objects.
 
@@ -69,14 +69,14 @@ To resolve the issue, follow these steps:
 
 After you finish these steps, the **Delegation** tab lists the allowed permission for the selected object or group as **Read**. instead of **Read (from Security Filtering)**. This difference indicates that the object or group does not have the **Apply group policy** permission.
 
-![delegation post](media/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions/gpmc-policy-delegation-reduced-perms.png)
+:::image type="content" source="media/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions/gpmc-policy-delegation-reduced-perms.png" alt-text="Screenshot that shows the reduced permissions of the Authenticated Users group, accessed from the G.P.M.C. Delegation tab.":::  
 
 ### Example scenario
 
 Consider a GPO that defines only user settings. You want to apply the GPO to specific users, who all belong to a group that's named **contoso_user_group**. In GPMC, on the **Scope** tab for the GPO, you add **contoso_user_group** to the **Security Filtering** list. To limit the GPO to only the users in that group, you remove **Authenticated Users** from the list.
 
-To test this configuration, you run `gpresult /h gpresult.html` on a user's computer. Then open the *gpresult.html* file to view the policy results. In this scenario, the report indicates an error (listed at the bottom of the following screenshot).
+To test this configuration, you run `gpresult /h gpresult.html` on a user's computer. Then open the *gpresult.html* file to view the policy results. In this scenario, the report indicates an error (listed at the bottom of the following screenshot).  
 
-![gpresult](media/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions/gpo-client-report-access-denied.png)
+:::image type="content" source="media/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions/gpo-client-report-access-denied.png" alt-text="Screenshot that shows the resultant Group Policy report from a client computer that does not have the correct permissions.":::  
 
 To resolve this error, you have to grant **Read** permission to the computer objects that represent the computers that the members of **contoso_user_group** use to sign in. In this scenario, that means creating a group named **contoso_computer_group**, and adding the affected computers to that group. Then, using the procedure described earlier in this article, using the **Delegation** tab to assign **Read** permission to that group.
