@@ -2,7 +2,7 @@
 title: Trade agreement conditions aren't applied to imported order lines
 description: Provides a workaround for the issue that trade agreement prices and discounts aren't applied on sales or purchase order lines that are imported through data management.
 author: Henrikan
-ms.date: 05/31/2021
+ms.date: 05/16/2024
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac
@@ -10,6 +10,7 @@ ms.search.region: Global
 ms.author: henrikan
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
+ms.custom: sap:Sales order processing\Issues with trade agreements
 ---
 # Trade agreement conditions aren't applied to imported order lines
 
