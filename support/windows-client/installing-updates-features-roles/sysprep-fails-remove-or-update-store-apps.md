@@ -122,7 +122,7 @@ If you try to recover from an update issue, you can reprovision the app after yo
 > [!NOTE]
 > The issue does not occur if you are servicing an offline image. In that scenario, the provisioning is automatically cleared for all users. This includes the user who runs the command.
 
-## Automated resolution to avoid manual steps
+## Automated resolution example to avoid manual steps
 
 sysprep.cmd content example:
 
