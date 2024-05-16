@@ -19,7 +19,8 @@ This behavior is by design. Administrators must first configure what data can be
 
 ## Resolution
 
-> You need tenant administrator permissions in Business Central.
+> [!NOTE]
+> To solve this issue, you need tenant administrator permissions in Business Central.
 
 In addition to enabling Microsoft 365 access in Dynamics 365 Business Central admin center, also assign permissions on the **License Configuration** page. However, permissions assigned on the **License Configuration** page will only apply to newly created users. For users that have already been created, you must also assign the missing permissions through the **Users list** page.
 
