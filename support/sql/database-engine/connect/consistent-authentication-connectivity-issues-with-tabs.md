@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; SQL Server
 > [!NOTE]
 > The commands that are provided in this article apply to Windows systems only.
 
-Consistent authentication issues that occur in Microsoft SQL Server are typically those that are related to authentication and authorization of users or applications that try to access the SQL Server database. These issues can be authentication failures, access denied errors, or other security-related issues.
+Consistent authentication issues that occur in Microsoft SQL Server are typically related to authentication and authorization of users or applications that try to access the SQL Server database. These issues can be authentication failures, access denied errors, or other security-related issues.
 
 The key to effectively resolving consistent authentication issues is to understand the different error types and what each error message means. Some errors might appear in more than one authentication issue. You can use the troubleshooting information that's mentioned in the [Types of errors](#types-of-errors) section to resolve the error.
 
@@ -57,7 +57,7 @@ This section describes error types and related information.
 
 ## Types of consistent authentication issues
 
-This section describes typical causes of consistent authentication issues together with their respective solutions. Select the dropdown lists to see the relevant issues, causes, and solution.
+This section describes typical causes of consistent authentication issues together with their respective solutions. Select the issue type to see the relevant issues, causes, and solutions.
 
 <details>
 <summary><b>Connection string</b></summary>
@@ -115,7 +115,7 @@ This section lists the issues that are specific to various aspects of SQL Server
 
   **Solution**: Refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
 
-- **Proxy account doesn't have permissions** - An SQL Server Integration Service (SSIS) job that's run by SQL Agent might require permissions other than those that the SQL Agent service account can provide.
+- **Proxy account doesn't have permissions** - A SQL Server Integration Service (SSIS) job that's run by SQL Agent might require permissions other than those that the SQL Agent service account can provide.
 
   **Solution:** To resolve this issue, see [SSIS package does not run when called from a SQL Server Agent job step](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
 
@@ -161,33 +161,33 @@ This section lists the issues that are related to directory services and servers
 
 This section lists the issues that are related to the Kerberos authentication:
 
-- **An incorrect DNS suffix is appended to the NetBIOS name** - This can occur when you use only the NetBIOS name (for example, SQLPROD01) instead of the fully qualified domain name (FQDN) (for example, SQLPROD01.CONTOSO.COM). When this occurs, the wrong DNS suffix might be appended.
+- **An incorrect DNS suffix is appended to the NetBIOS name** - This issue might occur if you use only the NetBIOS name (for example, SQLPROD01) instead of the fully qualified domain name (FQDN) (for example, SQLPROD01.CONTOSO.COM). When this occurs, the wrong DNS suffix might be appended.
 
   **Solution:** Check the network settings for the default suffixes to make sure that they're correct, or use the FQDN to avoid issues.
 
-- **Clock skew is too high** - This is a issue in which clocks on more than one device on a network aren't synchronized. For the Kerberos authentication to work, the clocks between devices can't be turned off for more than five minutes. If they aren't turned off, it might lead to consistent authentication failures.
+- **Clock skew is too high** - This issue might occur if multiple devices on a network aren't synchronized. For the Kerberos authentication to work, the clocks between devices can't be turned off for more than five minutes or consistent authentication failures might occur.
 
-- **Delegating sensitive accounts to other services** - Some accounts may be marked as Sensitive in AD DS. These accounts can't be delegated to another service in a double-hop scenario. Sensitive accounts are critical to providing security but can affect authentication. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
+- **Delegating sensitive accounts to other services** - Some accounts might be marked as `Sensitive` in AD DS. These accounts can't be delegated to another service in a double-hop scenario. Sensitive accounts are critical to providing security, but they can affect authentication. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
-- **Delegating to a file share** - Refers to a situation in which a user or application delegates its credentials to access a file share. Without proper constraints, delegating credentials to a file share might create security risks.
+- **Delegating to a file share** - Refers to a situation in which a user or application delegates its credentials to access a file share. Without appropriate constraints, delegating credentials to a file share might create security risks.
 
   **Solution:** To resolve this kind of issue, make sure that you use constrained delegation.
 
-- **Disjoint DNS namespace** - Refers to a consistent authentication issue that might occur if the DNS suffix doesn't match between the domain member and DNS. You might experience authentication issues if you use a disjoint namespace. If the organizational hierarchy in AD DS and in DNS don't match, the wrong SPN might be generated if you use the NETBIOS name in the database application connection string. In this situation, the SPN isn't found, and NTLM credentials are used instead of Kerberos credentials.
+- **Disjoint DNS namespace** - Refers to a consistent authentication issue that might occur if the DNS suffix doesn't match between the domain member and DNS. You might experience authentication issues if you use a disjoint namespace. If the organizational hierarchy in AD DS and in DNS don't match, the wrong SPN might be generated if you use the NETBIOS name in the database application connection string. In this situation, the SPN isn't found, and New Technology LAN Manager (NTLM) credentials are used instead of Kerberos credentials.
 
   **Solution:** To mitigate the issue, use the FQDN of the server or specify the SPN name in the connection string. For information about FQDN, see [Computer Naming](/windows-server/identity/ad-ds/plan/computer-naming).
 
-- **Duplicate SPN** - Refers to a situation in which two or more SPNs are identical within a domain. SPNs are used to uniquely identify services running on servers in a Windows domain. There can be authentication issues when duplicates occur. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+- **Duplicate SPN** - Refers to a situation in which two or more SPNs are identical within a domain. SPNs are used to uniquely identify services that are running on servers in a Windows domain. Duplicate SPNs can cause authentication issues. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
-- **Enable HTTP ports on SPNs** - Typically, HTTP SPNs don't use port numbers (for example, `http/web01.contoso.com`). However, you can enable this usage through the policy on the clients. The SPN would then have to be in the `http/web01.contoso.com:88` format in order to enable Kerberos to function correctly. Otherwise, NTLM credentials are used. These aren't recommended because it would be difficult to diagnose the issue and this situation might generate excessive administrative overhead.
+- **Enable HTTP ports on SPNs** - Typically, HTTP SPNs don't use port numbers (for example, `http/web01.contoso.com`). However, you can enable this usage through the policy on the clients. The SPN would then have to be in the `http/web01.contoso.com:88` format in order to enable Kerberos to function correctly. Otherwise, NTLM credentials are used. NTLM credentials aren't recommended because they might make it difficult to diagnose the issue. Also, this situation might generate excessive administrative overhead.
 
-- **Expired tickets** - Refers to Kerberos tickets. Using expired Kerberos tickets can cause issues in authentication. 
+- **Expired tickets** - Refers to Kerberos tickets. Using expired Kerberos tickets can cause authentication issues. 
 
   **Solution:** To resolve this, see [Expired tickets](expired-tickets-issue.md).
 
 - **HOSTS file is incorrect** - The HOSTS file can disrupt DNS lookups and might generate an unexpected SPN name. This situation causes NTLM credentials to be used. If an unexpected IP address is in the HOSTS file, the SPN that's generated might not match the back-end server that's pointed to.
 
-- **Issue with per-service security identifier (SID) permissions** - Per-service-SID is a security feature of SQL Server that limits local connections to use New Technology LAN Manager (NTLM) and not Kerberos as the authentication method. The service can make a single hop to another server by using NTLM credentials, but it can't be delegated further without using the constrained delegation. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
+- **Issue with per-service security identifier (SID) permissions** - Per-service-SID is a security feature of SQL Server that limits local connections to use NTLM and not Kerberos as the authentication method. The service can make a single hop to another server by using NTLM credentials, but it can't be delegated further without using the constrained delegation. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
 - **Kernel-mode authentication** - The SPN on the App Pool account is typically required for web servers. However, when Kernel-mode authentication is used, the computer's HOST SPN is used for authentication. This action takes place in the kernel. This setting might be used if the server hosts many different websites that use the same host header URL, different App Pool accounts, and [Windows Authentication](/iis/configuration/system.webserver/security/authentication/).
 
@@ -195,7 +195,7 @@ This section lists the issues that are related to the Kerberos authentication:
 
   **Solution:** You must use constrained delegation to enable SQL Server to read files that are located on another computer. In general, the ACE provider shouldn't be used in a linked server because this is explicitly not supported. The JET provider is deprecated and is available on 32-bit computers only.
 
-- **Missing SPN** - This scenario might occur when an SPN that's related to a SQL Sever instance is absent. 
+- **Missing SPN** - This scenario might occur if an SPN that's related to a SQL Sever instance is absent. 
 
   **Solution:** For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
@@ -209,9 +209,9 @@ This section lists the issues that are related to the Kerberos authentication:
 
   **Solution:** If you're an administrator, enable the **Trusted for delegation** option.
 
-- **Some legacy providers don't support Kerberos over Named Pipes** - The legacy OLE DB Provider (SQLOLEDB) and ODBC Driver (SQL Server) bundled with Windows don't offer support for Kerberos authentication over Named Pipes. Instead, they only support NTLM authentication.
+- **Some legacy providers don't support Kerberos over Named Pipes** - The legacy OLE DB provider (SQLOLEDB) and ODBC provider (SQL Server) that are bundled with Windows don't offer support for Kerberos authentication over Named Pipes. Instead, they support only NTLM authentication.
 
-  **Solution:** Use a TCP connection to allow Kerberos.
+  **Solution:** Use a TCP connection to allow Kerberos authentication.
 
 - **SPN is associated with a wrong account** - This issue might occur if an SPN is associated with the wrong account in AD DS. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
@@ -221,43 +221,43 @@ This section lists the issues that are related to the Kerberos authentication:
 
     1. Use `SETSPN -Q spnName` to locate the SPN and its current account.
     1. Use `SETSPN -D` to delete the existing SPNs.
-    1. Use the `SETSPN -S` to migrate it to the correct account.
+    1. Use the `SETSPN -S` to migrate the SPN to the correct account.
 
-- **SQL Alias might not function correctly** - A SQL Server alias might cause an unexpected SPN to be generated. This results in NTLM credentials failure if the SPN isn't found, or an SSPI failure, if it inadvertently matches the SPN of another server.
+- **SQL Alias might not function correctly** - A SQL Server alias might cause an unexpected SPN to be generated. This causes NTLM credentials to fail if the SPN isn't found, or an SSPI failure if it inadvertently matches the SPN of another server.
 
-- **User belongs to many groups** - If a user belongs to multiple groups, this situation can cause authentication issues in Kerberos. If you use Kerberos over UDP, the entire security token must fit within a single packet. Users who belong to many groups have a larger security token than users who belong to fewer groups.
+- **User belongs to many groups** - If a user belongs to multiple groups, authentication issues might occur in Kerberos. If you use Kerberos over UDP, the entire security token must fit within a single packet. Users who belong to many groups have a larger security token than users who belong to fewer groups.
 
   **Solution:** If you use Kerberos over TCP, you can increase the [`MaxTokenSize`] setting. For more information, see [MaxTokenSize and Kerberos Token Bloat](/archive/blogs/shanecothran/maxtokensize-and-kerberos-token-bloat).
 
-- **Use website host header** - The HTTP Host header plays a crucial role in the HTTP protocol for accessing web pages.
+- **Use website host header** - The HTTP Host header plays a very important role in the HTTP protocol for accessing web pages.
 
-  **Solution:** If the website has a host header name, the HOSTS SPN can't be used. An explicit HTTP SPN must be used. If the website doesn't have a host header name, NTLM is used and it can't be delegated to a back-end SQL Server instance or other service.
+  **Solution:** If the website has a host header name, the HOSTS SPN can't be used. An explicit HTTP SPN must be used. If the website doesn't have a host header name, NTLM is used. NTLM can't be delegated to a back-end SQL Server instance or other service.
 
 </details>
 
 <details><summary><b>NT LAN Manager (NTLM)</b></summary>
 
-This section lists issues specific to NTLM (NT LAN Manager):
+This section lists issues that are specific to NTLM (NT LAN Manager):
 
-- **Access is denied for NTLM peer logins** - Refers to an issue related to NTLM peer logins.
+- **Access is denied for NTLM peer logins** - Refers to an issue that are related to NTLM peer logins.
 
-  **Solution:** When communicating between computers that are either in workstations or in domains that don't trust one another, you can set up identical accounts on both computers and use NTLM peer authentication.
+  **Solution:** When communicating between computers that are in either workstations or domains that don't trust each other, you can set up identical accounts on both computers and use NTLM peer authentication.
   
-  Logins work only if both the user account and the password match on both computers. NTLM authentication might be disabled or not supported on either the client or server side, leading to authentication failures. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
+  Logins work only if both the user account and the password match on both computers. NTLM authentication might be disabled or not supported on either the client or server side. This situation might cause authentication failures. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
 - **Double hop scenarios on multiple computers** - A double-hop process will fail if NTLM credentials are used. Kerberos credentials are required.
 
   **Solution:** To resolve this issue, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
-- **Loopback protection isn't set correctly** - Loopback protect is designed to prohibit applications from calling other services on the same computer. If loopback protect isn't configured correctly or if there's any malfunction, this situation can indirectly cause authentication issues.
+- **Loopback protection isn't set correctly** - Loopback protect is designed to prohibit applications from calling other services on the same computer. If loopback protect isn't configured correctly, or if there's any malfunction, this situation can indirectly cause authentication issues.
 
   **Solution:** To resolve this issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
-- **Loopback protection fails when you connect to the Always-on listener** - This issue is related to loopback protection. When connecting to the Always-On Listener from the primary node, the connection uses NTLM authentication.
+- **Loopback protection fails when you connect to the Always-on listener** - This issue is related to loopback protection. When you connect to the Always-On Listener from the primary node, the connection uses NTLM authentication.
 
   **Solution:** For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
-- **Issue that affects LANMAN compatibility level** - The LAN Manager (LANMAN) authentication issue usually occurs if there is a mismatch in the authentication protocols that are used by older (pre Windows 2008) and newer computers. When you set the compatibility level to 5, NTLMv2 isn't allowed.
+- **Issue that affects LANMAN compatibility level** - The LAN Manager (LANMAN) authentication issue usually occurs if a mismatch exists in the authentication protocols that are used by older (pre-Windows Server 2008) and newer computers. When you set the compatibility level to 5, NTLMv2 isn't allowed.
 
   **Solution:** Switching to Kerberos avoids this issue because Kerberos is more secure. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
@@ -265,7 +265,7 @@ This section lists issues specific to NTLM (NT LAN Manager):
 
 <details><summary><b>SQL Login</b></summary>
 
-This section lists issues related to authentication credentials:
+This section lists issues that are related to authentication credentials:
 
 - **Bad password** - Refers to a login-related issue.
 
@@ -287,7 +287,7 @@ This section lists issues related to authentication credentials:
 
 <details><summary><b>Windows permissions</b></summary>
 
-This section lists issues specific to Windows permissions or Policy settings:
+This section lists issues that are specific to Windows permissions or policy settings:
 
 - **Access is granted through local groups** - If the user doesn't belong to a local group that's used to grant access to the server, the provider displays the "Login failed for user 'contoso/user1'" error message.
 
@@ -295,7 +295,7 @@ This section lists issues specific to Windows permissions or Policy settings:
 
 - **Credential guard is enabled** - This scenario indicates that the Credential Guard feature is enabled on a Windows system and is used to create a secure environment to store sensitive information. However, in certain situations, this feature might cause authentication issues. For more information, see [Considerations and known issues when using Credential Guard](/windows/security/identity-protection/credential-guard/considerations-known-issues).
 
-- **Local security subsystem errors** - When you experience local security subsystem errors, particularly those linked to LSASS becoming unresponsive, it might indicate underlying issues with authentication.
+- **Local security subsystem errors** - When you experience local security subsystem errors, particularly those that are linked to LSASS becoming unresponsive, it might indicate underlying issues that affect authentication.
 
   **Solution:** To resolve these errors, see [Local security subsystem errors in SQL Server](local-security-subsystem-errors.md).
 
@@ -303,7 +303,7 @@ This section lists issues specific to Windows permissions or Policy settings:
 
   **Solution:** To resolve this issue, see [User doesn't have permissions to log in to the network](network-login-disallowed.md).
 
-- **Only administrators can log in** - This issue occurs if the security log on a computer is full and doesn't have sufficient space to fill events. The security feature **[CrashOnAuditFail](/previous-versions/windows/it-pro/windows-2000-server/cc963220(v=technet.10))** is used by system administrators to check all security events. The valid values for `CrashOnAuditFail` are *0*, *1*, and *2*. If the key for `CrashOnAuditFail` is set to *2*, this means that the security log is full and the "Only Admins can login" error message is shown.
+- **Only administrators can log in** - This issue occurs if the security log on a computer is full and doesn't have sufficient space to fill events. The security feature, **[CrashOnAuditFail](/previous-versions/windows/it-pro/windows-2000-server/cc963220(v=technet.10))**, is used by system administrators to check all security events. The valid values for `CrashOnAuditFail` are *0*, *1*, and *2*. If the key for `CrashOnAuditFail` is set to *2*, this means that the security log is full and the "Only Admins can login" error message is shown.
 
    **Solution:** To resolve this issue, follow these steps:
 
@@ -312,7 +312,7 @@ This section lists issues specific to Windows permissions or Policy settings:
    1. Set the value to *0*, and then restart the server. You might also want to change the security log to enable events to roll over. For more information about how the setting affects all services such as SQL, IIS, file share, and login, see [Users cannot access Web sites when the security event log is full](../../../developer/webapps/iis/general/users-cannot-access-web-sites-when-log-full.md).
 
     > [!NOTE]
-    > This issue affects only integrated logins. A Named Pipes connection will also be affected with a SQL Server Login because Named Pipes first logs in to Windows Admin Pipe before it connects to SQL Server.
+    > This issue affects only integrated logins. A Named Pipes connection will also be affected in a SQL Server login because Named Pipes first logs in to Windows Admin Pipe before it connects to SQL Server.
 
 - **Service account is not trusted for delegation** - This kind of issue usually occurs if a service account isn't allowed to assign credentials to other servers. This issue can affect services that require delegation.
 
@@ -320,7 +320,7 @@ This section lists issues specific to Windows permissions or Policy settings:
 
 - **Windows user profile can't be loaded in SQL Server** - Refers to the Windows user profile issue.
 
-  **Solution:** For more information about how to troubleshoot corrupted user profiles, see the [Windows user profile can't be loaded in SQL Server](corrupt-user-profile.md).
+  **Solution:** For more information about how to troubleshoot corrupted user profiles, see [Windows user profile can't be loaded in SQL Server](corrupt-user-profile.md).
 
 </details>
 
@@ -328,15 +328,15 @@ This section lists issues specific to Windows permissions or Policy settings:
 
 This section lists issues that are related to the authentication and access control within a web environment:
 
-- **Integrated authentication isn't enabled** - Refers to a configuration issue where Integrated Windows Authentication (IWA) is not configured correctly. 
+- **Integrated authentication isn't enabled** - Refers to a configuration issue in which Integrated Windows Authentication (IWA) is not configured correctly. 
 
   **Solution:** To resolve this issue, make sure that the **Integrated Windows Authentication** option is enabled in **Internet Options** settings.
 
-- **IIS Authentication isn't allowed** - This issue occurs due to misconfigurations in the IIS. The authentication settings defined in the web.config file of the web application may conflict with the settings configured in IIS, leading to authentication issues.
+- **IIS Authentication isn't allowed** - This issue occurs because of misconfigurations in IIS. The authentication settings that are defined in the Web.config file of the web application might conflict with the settings that are configured in IIS. This situation can cause authentication issues.
 
   **Solution:** To resolve this issue, configure the website to enable Windows Authentication and set the `<identity impersonate="true"/>` value in the *Web.config* file.
 
-- **Wrong Internet zone** - This might occur if you try to access a website that isn't in the correct Internet zone in Internet Explorer. The credentials won't work if the website is in the local Intranet zone.
+- **Wrong Internet zone** - This issue might occur if you try to access a website that isn't in the correct Internet zone in Internet Explorer. The credentials won't work if the website is in the local Intranet zone.
 
 </details>
 
