@@ -21,7 +21,7 @@ _Applies to:_ &nbsp; Windows Server (all supported versions), Windows Client (al
 
 ## Symptoms
 
-You remove the default permissions for the **Authenticated Users** group from one or more Group Policy Objects (GPOs). Afterwards, you can't successfully apply user Group Policy settings.
+You remove the default permissions for the **Authenticated Users** group from one or more Group Policy Objects (GPOs). Afterwards, you can't successfully apply Group Policy settings to users.
 
 ## Cause
 
