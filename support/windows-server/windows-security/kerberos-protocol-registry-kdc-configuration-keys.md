@@ -186,6 +186,11 @@ The registry entries that are listed in this section must be added to the follow
   - Possible values: 0 (false) or any non-zero value (true)
 
     This value indicates whether a client IP address will be added in AS_REQ to force the **`Caddr`** field to contain IP addresses in all tickets.
+    For third-party realms that require the client addresses, you can selectively enable the addresses:
+    1.	Open an elevated command prompt window.
+    2.	Run the following command:
+        ksetup /setrealmflags your <kerberos realm name> sendaddress
+    3.	You can use the /server switch to cause Ksetup to make the changes on a remote computer.    
 
 - Entry: TgtRenewalTime
 
