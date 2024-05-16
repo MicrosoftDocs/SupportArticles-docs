@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides a resolution to solve the Active Directory replication error (8452). This article is only intended for technical support agents and IT professionals. If you're a home user and looking for help with a problem, visit [ask the Microsoft Community](https://answers.microsoft.com).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2023704
 
 ## Symptoms
@@ -106,8 +106,6 @@ The error can be persistent when replication failures prevent the end-to-end rep
 
 The error is most commonly seen in replication scenarios triggered by REPADMIN.EXE remotely (especially `/SYNCALL`) or the replicate now command in DSSITE.MSC where the copy of Active Directory on the DC triggering replication has a different list of source DCs that a destination DC replicates from partitions than what the destination DC has defined in its copy of Active Directory.
 
-Windows 2000 domain controllers are particularly prone to this error during GC demotion as they're slow to remove objects from read-only partitions. Object removal during GC demotion improved dramatically on Windows Server 2003 and later OS versions.
-
 The NTDS Replication event 1586 occurs in the following situation:
 
 &nbsp;&nbsp;&nbsp;The primary domain controller (PDC) Flexible Single Master Operation (FSMO) role for the domain has been seized or transferred to a domain controller that wasn't a direct replication partner of the previous role holder.
@@ -187,10 +185,6 @@ Case 2: the NC is being removed on src DC when we call `repadmin /replicate <des
 ### DCDIAG
 
 The `showrepl` (or `showreps`) command of `repadmin` reports the replication status for each source DC from which the destination DC has an inbound connection object. The replications test of dcdiag checks for timely replication between DCs. If error 8452 is in `repadmin /showrepl` or `dcdiag /test:replications` report, the reason is that the replicated NC is being removed on the source DC when the last replication happened.
-
-### NTDS replication event 1586
-
-NTDS replication event 1586 is generated in a mixed domain environment that contains both Windows NT 4.0 and Active Directory DCs. In this mixed domain environment, Active Directory domain controllers replicate among themselves using the DS replication protocol, while the Active Directory PDC replicates to NT4 BDCs using the legacy `netlogon` replication protocol. In this case, the Active Directory PDC FSMO role holder is the single point for replication to NT4 BDCs in a common domain. The PDC maintains a checkpoint for each BDC representing the most recent replicated change. If the PDC FSMO role is transferred to another Active Directory DC in the domain, the information about each individual BDC's checkpoint must be replicated to the new PDC FSMO role. So, the new PDC FSMO role holder must have a direct replication relationship with the old PDC FSMO role holder. If the new PDC doesn't replicate directly with the old PDC (that is, on the new PDC there's no replica link from old PDC), then we'll see error 8452 in event 1586.
 
 ### Demotion
 
