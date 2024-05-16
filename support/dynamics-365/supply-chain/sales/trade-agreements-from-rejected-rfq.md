@@ -2,7 +2,7 @@
 title: Trade agreements can be created from rejected RFQs
 description: Introduces a by-design behavior where you can create trade agreements from rejected RFQs.
 author: Henrikan
-ms.date: 05/31/2021
+ms.date: 05/16/2024
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac
@@ -10,6 +10,7 @@ ms.search.region: Global
 ms.author: henrikan
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
+ms.custom: sap:Sales order processing\Issues with trade agreements
 ---
 # Trade agreements can be created from rejected RFQs
 
