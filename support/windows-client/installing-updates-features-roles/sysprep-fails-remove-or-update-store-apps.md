@@ -124,7 +124,7 @@ If you try to recover from an update issue, you can reprovision the app after yo
 
 ## Automated resolution to avoid manual steps
 
-sysprep.cmd content:
+sysprep.cmd content example:
 
     ```
     mkdir %Systemdrive%\temp
@@ -135,9 +135,9 @@ sysprep.cmd content:
     goto retry
     ```
 
-removeappxpackages.ps1 content:
-
-    ```powershell
+removeappxpackages.ps1 content example:
+    
+    ```
     $sysprepLogPath = "$env:SystemRoot\System32\Sysprep\Panther\setupact.log"
     $failedPackages = Get-Content $sysprepLogPath | Select-String -Pattern "Error.*was installed for a user" | ForEach-Object {
         if ($_ -match 'Microsoft.*8wekyb3d8bbwe') {
@@ -150,7 +150,6 @@ removeappxpackages.ps1 content:
         Remove-AppxPackage $package -Erroraction 'silentlycontinue'
     }
     ```
-
 
 
 ## More information
