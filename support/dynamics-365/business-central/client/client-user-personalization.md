@@ -20,7 +20,7 @@ When there are issues preventing the [user personalization](/dynamics365/busines
 
 > [!NOTE]
 >
-> - You need tenant administrator permissions in Business Central.
+> - To solve this issue, you need tenant administrator permissions in Business Central.
 > - The following steps will delete records with compilation errors and the specific user personalizations will be deleted. It's recommended to take a screenshot of any personalizations done, before deleting them.
 
 Follow these steps to mitigate the issue:
