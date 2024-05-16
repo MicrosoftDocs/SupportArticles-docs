@@ -13,12 +13,12 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides solutions to an issue where you can't promote a Windows Server domain controller to be a global catalog server.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 889711
 
 ## Symptoms
 
-You cannot promote a Microsoft Windows Server domain controller to be a global catalog server. After you try to assign the role of global catalog server to the Windows Server domain controller by clicking the **Global Catalog** check box, the domain controller is not promoted to be a global catalog server. Information events that are similar to the following may be logged repeatedly in the Directory Services log.
+You cannot promote a Microsoft Windows Server domain controller to be a global catalog server. After you try to assign the role of global catalog server to the Windows Server domain controller by clicking the **Global Catalog** check box, the domain controller is not promoted to be a global catalog server. If you enable diagnostic logging for the Knowledge Consistency Checker (KCC) to level 1, Information events that are similar to the following may be logged repeatedly in the Directory Services log.
 
 - Event 1559
 
@@ -26,9 +26,7 @@ You cannot promote a Microsoft Windows Server domain controller to be a global c
 
 - Event 1801
 
-If you enable diagnostic logging for the Knowledge Consistency Checker (KCC) to level 1, the following event is logged.
-
-### Additional symptoms
+- ### Additional symptoms
 
 When you type `repadmin /showrepl` at the command line of the Windows Server domain controller, one or more of the domains may not appear.
 
@@ -60,14 +58,13 @@ To resolve this problem, use one of the following methods.
 
 ### Method 1
 
-If one or two domain controllers experience the problem, and other domain controllers in the same domain do not experience the problem, you must demote and then promote the domain controllers that are experiencing the problem. To do this, follow these steps:  
+If one or two domain controllers experience the problem, and other domain controllers in the same domain do not experience the problem, you must demote and then promote the domain controllers that are experiencing the problem. To do this, follow the steps in these articles:  
 
-1. Log on to the Windows Server domain controller by using an account that has domain administrator permissions.
-2. Click **Start**, click **Run**, type *dcpromo*, and then click **OK**.
-3. Follow the instructions in the wizard to demote the domain controller.
-4. After you demote the domain controller, restart the Windows Server computer.
-5. Click **Start**, click **Run**, type *dcpromo*, and then click **OK**.
-6. Follow the instructions in the wizard to promote the Windows Server domain controller.
+1. Log on to the Windows Server domain controller by using an account that has domain administrator permissions and demote the domain controller using the steps from the article: [Demoting Domain Controllers](/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-)
+
+1. After you demote the domain controller, restart the Windows Server computer and follow the instruction of the below articles to install the Active Directory Domain Services Role and Promote the new Domain controller in the existing domain:  
+[Install Active Directory Domain Services Role](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-)  
+[Install a Replica Windows Server 2012 Domain Controller in an Existing Domain]()
 
 ### Method 2
 
@@ -83,7 +80,7 @@ Event 1119 may be logged in the Directory Services log on the domain controller.
 The event description states that the computer is identified as a global catalog server. To confirm that the domain-naming master is a global catalog server, follow these steps:  
 
 1. Click **Start**, click **Run**, type cmd, and then click **OK**.
-2. Type `nltest /dsgetdc`: **domain_name** /server: **server_name**, and then press **ENTER**.
+1. Type `nltest /dsgetdc`: **domain_name** /server: **server_name**, and then press **ENTER**.
 
 3. Verify that the **GC** flag is present on the server.  
 
