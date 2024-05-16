@@ -24,7 +24,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 05/15/2024
+ms.date: 05/16/2024
 ---
 # Known issues with Teams Rooms on Android
 
@@ -34,15 +34,7 @@ ms.date: 05/15/2024
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
-|The **Report an issue** option in Teams Rooms on Android devices doesn't work|In Teams Rooms on Android devices, Teams phones, Teams panels, and Teams displays, the **Report an issue** option under **Settings** is unavailable.|The option to report issues from Teams Rooms on Android devices is being enhanced. The **Report an issue** option is unavailable until the updated experience is released. </br></br>If you were using the **Report an issue** option to collect device logs to troubleshoot issues, use the Microsoft Teams admin center instead. See [Collect Android Teams device logs](/microsoftteams/troubleshoot/teams-rooms-and-devices/collect-device-logs) for detailed instructions.|
 |Teams on Android devices experience a delay with signing in after a user signs out.|You sign out of a Teams on Android device either manually or from the Microsoft Teams admin center. When you try to sign in again immediately, there's a delay. This delay is because the authentication code takes 15 minutes or longer to refresh after a device signs out.<br/><br/>This issue occurs on all Teams on Android devices, including those devices that are running version 5.0.6061.0 of the Company portal app.|Restart the affected device to force the code to refresh.|
-
-## Issues with meeting room devices
-
-| Issue  |  Description | Workaround |
-| --- | --- | --- |
-|Teams Admin Settings unavailable on Teams Rooms on Android devices with Teams Rooms Basic license. | The **Teams Admin Settings** option under **Device Settings** is unavailable on devices that have the Teams Rooms Basic license for Teams Rooms on Android CY22 U3 app (version 1449/1.0.96.2022120503). | Admins can either assign a Teams Rooms Pro license to the same device or downgrade the device to use Teams Rooms on Android CCY22 U2B app (version: 1449/1.0.96.2022090606) instead.|
-|Rotate 180 option doesn't work for all meeting participants|You select the **Rotate 180** option for a Content camera in your Teams Rooms on Android device. However, the rotation is applied only to the video feed for in-room participants. Remote participants still see an inverted video display.|If possible, mount the Content camera right side up instead of upside down.|
 
 ## Issues with Teams phones
 
