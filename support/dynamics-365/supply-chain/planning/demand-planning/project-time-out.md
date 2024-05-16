@@ -2,7 +2,7 @@
 title: Import profile job fails with a Timeout error
 description: Provides a resolution for the Timeout error that occurs when an import profile job fails in Microsoft Dynamics 365 Supply Chain Management.
 author: fistamos
-ms.date: 05/15/2024
+ms.date: 05/16/2024
 audience: Application User
 ms.search.region: Global
 ms.author: fistamos
@@ -17,13 +17,17 @@ This article provides a resolution for the "Timeout" error that occurs when an [
 
 The Dynamics 365 Finance and Operations import profile job fails, and the job execution details contain an error mentioning "Timeout."
 
-## Resolution 1
+## Resolution
+
+To resolve this issue, use one or both of the following options:
+
+### Resolution 1
 
 Make sure all quality updates related to the Demand planning entities are installed.
 
 For the available quality updates, see [Export of Historical Sales Demand and Demand planning Picking List Journal Entries never complete](https://fix.lcs.dynamics.com/Issue/Details?kb=0&bugId=900476&dbType=3&qc=88596efab831d21cd42a8cb8c261bd5bbc1e4b0bb4599458dbfce8a775d5c8da).
 
-## Resolution 2
+### Resolution 2
 
 Filter out the dataset to make sure an import profile job exports less data.
 
