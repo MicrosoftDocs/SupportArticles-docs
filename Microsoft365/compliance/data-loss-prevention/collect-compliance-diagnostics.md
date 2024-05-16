@@ -132,6 +132,9 @@ Follow these steps:
    - **Auto Labeling** \> **SPO/ODB Auto Labeling**
    - **Encryption** \> **Encryption**
    - **Information Barriers** \> **Information Barriers**
+   - **eDiscovery** \> **Hold**
+   - **eDiscovery** \> **Search**
+   - **eDiscovery** \> **Export**
 
    For example, to collect support data for an issue in which a sensitive information type (SIT) is incorrectly detected in a document, select the **Data Classification** \> **Classification** template.
 
