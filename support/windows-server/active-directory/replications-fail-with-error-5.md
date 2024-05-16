@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes the symptoms, cause, and resolution of situations in which Active Directory replication fails with error 5: Access is denied.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 3073945
 
 ## Symptoms
@@ -99,36 +99,75 @@ The following screenshot represents a sample of the error:
 
 ## Workaround
 
-Use the generic [DCDIAG](https://technet.microsoft.com/library/cc731968.aspx) command-line tool to run multiple tests. Use the DCDIAG /TEST:CheckSecurityErrors  command-line tool to perform specific tests. (These tests include an SPN registration check.) Run the tests to troubleshoot Active Directory operations replication failing with error 5 and error 8453. However, be aware that this tool does not run as part of the default execution of DCDIAG.
+Use the generic [DCDIAG](https://technet.microsoft.com/library/cc731968.aspx) command-line tool to run multiple tests. Use the DCDIAG /TEST:CheckSecurityError command-line tool to perform specific tests. (These tests include an SPN registration check.)
 
 To work around this issue, follow these steps:
 
 1. At command prompt, run DCDIAG on the destination domain controller.
-2. Run `DCDIAG /TEST:CheckSecurityError`.
-3. Run NETDIAG.
-4. Resolve any faults that were identified by DCDIAG and NETDIAG.
-5. Retry the previously failing replication operation.If replications continue to fail, see the "[Causes and solutions](#causes-and-solutions)" section.
+1. Run `DCDIAG /TEST:CheckSecurityError`.
+1. Resolve any faults that were identified by DCDIAG.
+
+1. Retry the previously failing replication operation. If replications continue to fail, see the "[Causes and solutions](#causes-and-solutions)" section.
 
 ## Causes and solutions
 
 The following causes may result in error 5. Some of them have solutions.  
 
-### Cause 1: The RestrictRemoteClients setting in the registry has a value of 2
+### Cause 1: There's an invalid security channel or password mismatch on the source or destination domain controller
 
- If the Restrictions for Unauthenticated RPC clients policy setting are enabled and is set to Authenticated without exceptions, the RestrictRemoteClients registry value is set to a value of 0x2 in the `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\RPC` registry subkey.
+ Validate the security channel by running one of the following commands:
 
-This policy setting enables only authenticated remote procedure call (RPC) clients to connect to RPC servers that are running on the computer on which the policy setting is applied. It doesn't allow for exceptions. If you select this option, a system can't receive remote anonymous calls by using RPC. This setting should never be applied to a domain controller.
+- `nltest /sc_query:<Domain Name>`
+
+- `netdom verify <DC Name>`
+
+On condition, reset the destination domain controller's password by using NETDOM /RESETPWD.
 
 Solution
 
-1. Disable the Restrictions for Unauthenticated RPC clients  policy setting that restricts the RestrictRemoteClients registry value to 2.
+1. Disable the Kerberos Key Distribution Center (KDC) service on the destination domain controller.
 
-    > [!NOTE]
-    > The policy setting is located in the following path: **Computer Configuration\Administrative Templates\System\Remote Procedure Call\Restrictions for Unauthenticated RPC clients**  
+1. From an elevated command prompt of the destination domain controller, urge the system's Kerberos ticket by running: `Klist -li 0x3e7 purge`
 
-2. Delete the RestrictRemoteClients  registry setting, and then restart.
+1. Run `NETDOM RESETPWD` to reset the password against remote DC:
 
-See [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/restrictions-for-unauthenticated-rpc-clients-the-group-policy/ba-p/399128).  
+
+```console
+c:\>netdom resetpwd /server:<remote_dc_name> /userd: domain_name\administrator /passwordd: administrator_password
+```
+
+1. Make sure that likely KDCs and the source domain controller (if these are in the same domain) inbound replicate knowledge of the destination domain controller's new password.
+1. Start the Kerberos Key Distribution Center (KDC) service on the destination domain controller and retry the replication operation.  
+
+See [How to use Netdom.exe to reset machine account passwords of a domain controller](https://support.microsoft.com/help/325850).  
+
+Cause 5: There's an invalid security channel or password mismatch on the source or destination domain controller
+
+ Validate the security channel by running one of the following commands:
+
+- `nltest /sc_query:<Domain Name>`
+
+- `netdom verify <DC Name>`
+
+On condition, reset the destination domain controller's password by using NETDOM /RESETPWD.
+
+Solution
+
+1. Disable the Kerberos Key Distribution Center (KDC) service on the destination domain controller.
+
+1. From an elevated command prompt of the destination domain controller, urge the system's Kerberos ticket by running: `Klist -li 0x3e7 purge`
+
+1. Run `NETDOM RESETPWD` to reset the password against remote DC:
+
+
+```console
+c:\>netdom resetpwd /server:<remote_dc_name> /userd: domain_name\administrator /passwordd: administrator_password
+```
+
+1. Make sure that likely KDCs and the source domain controller (if these are in the same domain) inbound replicate knowledge of the destination domain controller's new password.
+1. Start the Kerberos Key Distribution Center (KDC) service on the destination domain controller and retry the replication operation.  
+
+See [How to use Netdom.exe to reset machine account passwords of a domain controller](https://support.microsoft.com/help/325850).  
 
 ### Cause 2: The CrashOnAuditFail setting in the registry of the destination domain controller has a value of 2
 
@@ -144,11 +183,12 @@ Solution
 > 1. Clear the security event log, and save it to an alternative location as required.
 > 2. Reevaluate any size constraints on the security event log. This includes policy-based settings.
 > 3. Delete and then re-create a CrashOnAuditFail registry entry as follows:Registry subkey:
-    HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA  
-    Value Name: CrashOnAuditFail  
-    Value Type: REG_DWORD  
-    Value Data: 1  
-> 4. Restart the destination domain controller.  
+```
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA  
+Value Name: CrashOnAuditFail  
+Value Type: REG_DWORD  
+Value Data: 1  
+```> 4. Restart the destination domain controller.  
 
 ### Cause 3: Invalid trust
 
@@ -187,7 +227,7 @@ netdom trust <Child Domain> /Domain:<Root Domain> /UserD:Root /PasswordD:* /User
 
 ### Cause 4: Excessive time skew
 
- Kerberos policy settings in the default domain policy allow for a five-minute difference in system time (this is the default value) between KDC domain controllers and Kerberos target servers to prevent replay attacks. Some documentation states that the system time of the client and that of the Kerberos target must be within five minutes of one another. Other documentation states that, in the context of Kerberos authentication, the time that is important is the delta between the KDC that is used by the caller and the time on the Kerberos target. Also, Kerberos doesn't care whether the system time on the relevant domain controllers matches current time. It cares only that the relative time difference between the KDC and target domain controller is within the maximum time skew that Kerberos policy allows. (The default time is five minutes or less.)
+Kerberos policy settings in the default domain policy allow for a five-minute difference in system time (this is the default value) between KDC domain controllers and Kerberos target servers to prevent replay attacks. Some documentation states that the system time of the client and that of the Kerberos target must be within five minutes of one another. Other documentation states that, in the context of Kerberos authentication, the time that is important is the delta between the KDC that is used by the caller and the time on the Kerberos target. Also, Kerberos doesn't care whether the system time on the relevant domain controllers matches current time. It cares only that the relative time difference between the KDC and target domain controller is within the maximum time skew that Kerberos policy allows. (The default time is five minutes or less.)
 
 In the context of Active Directory operations, the target server is the source domain controller that is contacted by the destination domain controller. Every domain controller in an Active Directory forest that is currently running the KDC service is a potential KDC. Therefore, you have to consider time accuracy on all other domain controllers against the source domain controller. This includes time on the destination domain controller itself.
 
@@ -196,7 +236,7 @@ You can use the following two commands to check time accuracy:
 - `DCDIAG /TEST:CheckSecurityError`
 - `W32TM /MONITOR`
 
-You can find sample output from DCDIAG /TEST:CheckSecurityError  in the "[More information](#more-information)" section. This sample shows excessive time skew on Windows Server 2003-based and Windows Server 2008 R2-based domain controllers.
+You can find sample output from DCDIAG /TEST:CheckSecurityError  in the "[More information](#more-information)" section. This sample shows excessive time skew on domain controllers.
 
 Look for LSASRV 40960 events on the destination domain controller at the time of the failing replication request. Look for events that cite a GUID in the CNAME record of the source domain controller with extended error 0xc000133. Look for events that resemble the following:
 > The time at the Primary Domain Controller is different than the time at the Backup Domain Controller or member server by too large an amount
@@ -209,34 +249,27 @@ Network traces that capture the destination computer that connects to a shared f
 The TKE_NYV  response indicates that the date range on the TGS ticket is newer than the time on the target. This indicates excessive time skew.
 
 > [!NOTE]
->
-> - W32TM /MONITOR  checks time only on domain controllers in the test computers domain, so you have to run this in each domain and compare time between the domains.
-> - When the time difference is too great on Windows Server 2008 R2-based destination domain controllers, the Replicate now command in DSSITE.MSC fails with the "There is a time and / or date difference between the client and the server" on-screen error. This error string maps to error 1398 decimal or 0x576 hexadecimal with the ERROR_TIME_SKEW symbolic error name.  
-
+> - W32TM /MONITOR checks time only on domain controllers in the test computers domain, so you have to run this in each domain and compare time between the domains.
+> - When the time difference is too great on destination domain controllers, the 'Replicate now" command in DSSITE.MSC fails with the "There is a time and / or date difference between the client and the server" on-screen error. This error string maps to error 1398 decimal or 0x576 hexadecimal with the ERROR_TIME_SKEW symbolic error name.  
 For more information, see [Setting Clock Synchronization Tolerance to Prevent Replay Attacks](https://technet.microsoft.com/library/cc784130%28ws.10%29.aspx).  
 
-### Cause 5: There's an invalid security channel or password mismatch on the source or destination domain controller
+### Cause 5: The RestrictRemoteClients setting in the registry has a value of 2
 
- Validate the security channel by running one of the following commands:
+If the Restrictions for Unauthenticated RPC clients policy setting are enabled and is set to Authenticated without exceptions, the RestrictRemoteClients registry value is set to a value of 0x2 in the `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\RPC` registry subkey.
 
-- `nltest /sc:query`
-- `netdom verify`
-
-On condition, reset the destination domain controller's password by using NETDOM /RESETPWD.
+This policy setting enables only authenticated remote procedure call (RPC) clients to connect to RPC servers that are running on the computer on which the policy setting is applied. It doesn't allow for exceptions. If you select this option, a system can't receive remote anonymous calls by using RPC. This setting should never be applied to a domain controller.
 
 Solution
 
-1. Disable the Kerberos Key Distribution Center (KDC) service on the domain controller that is restarted.
-2. From the console of the destination domain controller, run `NETDOM RESETPWD` to reset the password for the destination domain controller as follows:
+1. Disable the Restrictions for Unauthenticated RPC clients policy setting that restricts the RestrictRemoteClients registry value to 2.
 
-    ```console
-    c:\>netdom resetpwd /server: server_name /userd: domain_name\administrator /passwordd: administrator_password
-    ```
+**Note**
 
-3. Make sure that likely KDCs and the source domain controller (if these are in the same domain) inbound replicate knowledge of the destination domain controller's new password.
-4. Restart the destination domain controller to update Kerberos tickets and retry the replication operation.  
+The policy setting is located in the following path: **Computer Configuration\Administrative Templates\System\Remote Procedure Call\Restrictions for Unauthenticated RPC clients**
 
-See [How to use Netdom.exe to reset machine account passwords of a domain controller](https://support.microsoft.com/help/325850).  
+1. Delete the RestrictRemoteClients registry setting, and then restart.
+
+See [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/restrictions-for-unauthenticated-rpc-clients-the-group-policy/ba-p/399128).
 
 ### Cause 6: The "Access this computer from network" user right isn't granted to a user who triggers replication
 
@@ -254,16 +287,15 @@ If Active Directory operations fail with error 5, you should verify the followin
 
 - Security groups in the table are granted the Access this computer from network user right in the default domain controller's policy.
 - Domain controller computer accounts are located in the domain controller's OU.
-- The default domain controller's policy is linked to the domain controller's OU or to alternative OUs that are hosting computer accounts.
+- The default domain controller's policy is linked to the domain controller's OU or to alternative OUs that are hosting the domain controller computer accounts.
+
 - Group Policy is applied on the destination domain controller that currently logs error 5.
 - The Deny access this computer from network user right is enabled or doesn't reference direct or transitive groups that the security context being used by the domain controller or user account that triggering replication.
 - Policy precedence, blocked inheritance, Microsoft Windows Management Instrumentation (WMI) filtering, or the like, isn't preventing the policy setting from applying to domain controller role computers.
 
 > [!Note]
->
-> - Policy settings can be validated with the RSOP.MSC tool. However, GPRESULT /Z is the preferred tool because it's more accurate.
-> - Local policy takes precedence over policy that is defined in sites, domains, and the OU.
-> - At one time, it was common for administrators to remove the "Enterprise domain controllers" and "Everyone" groups from the "Access this computer from network" policy setting in the default domain controller's policy. However, removing both groups is fatal. There's no reason to remove "Enterprise domain controllers" from this policy setting, because only domain controllers are a member of this group.
+> - Policy settings can be validated with the GPRESULT, for example *GPRESULT /H c:\temp\GPOResult.html* or *GPRESULT /Z*.
+- At one time, it was common for administrators to remove the "Enterprise domain controllers" and "Everyone" groups from the "Access this computer from network" policy setting in the default domain controller's policy. However, removing both groups is fatal. There's no reason to remove "Enterprise domain controllers" from this policy setting, because only domain controllers are a member of this group.
 
 ### Cause 7: There's an SMB signing mismatch between the source and destination domain controllers
 
@@ -370,23 +402,7 @@ The following situations can cause Active Directory operations to fail with erro
 
 ### Sample output from DCDIAG /TEST:CheckSecurityError  
 
- Sample DCDIAG /test:CHECKSECURITYERROR  output from a Windows Server 2008 R2 domain controller follows. This output is caused by excessive time skew.
-
-> Doing primary tests
- Testing server: \<Site_Name>\\<Destination_DC_Name> Starting test: CheckSecurityError  
- Source DC \<Source DC> has possible security error (1398).  
- Diagnosing...  
- Time skew error between client and 1 DCs! ERROR_ACCESS_DENIED  
- or down machine received by:  
- \<Source DC>
- [\<Source DC>] DsBindWithSpnEx() failed with error 1398,  
- There is a time and/or date difference between the client and server..  
- Ignoring DC \<Source DC> in the convergence test of object  
- CN=\<Destination_DC>,OU=Domain Controllers,DC=\<DomainName>,DC=com, because we  
- cannot connect!  
- ......................... \<Destination_DC> failed test CheckSecurityError  
-
-Sample DCDIAG /CHECKSECURITYERROR output from a Windows Server 2003-based domain controller follows. This is caused by excessive time skew.
+ Sample DCDIAG /CHECKSECURITYERROR output from a domain controller follows. This is caused by excessive time skew.
 
 > Doing primary tests  
  Testing server: \<Site_Name>\\<Destination_DC_Name>  
