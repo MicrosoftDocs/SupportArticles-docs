@@ -2,7 +2,7 @@
 title: Demand planning import profile troubleshooting guide
 description: A troubleshooting summary of different import profile errors that might occur in Microsoft Dynamics 365 Supply Chain Management.
 author: fistamos
-ms.date: 05/15/2024
+ms.date: 05/16/2024
 audience: Application User
 ms.search.region: Global
 ms.author: fistamos
