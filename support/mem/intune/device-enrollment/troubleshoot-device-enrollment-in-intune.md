@@ -22,16 +22,16 @@ Before you start troubleshooting, check to make sure that you've configured Intu
 
 ## Run self-help diagnostics
 
-To help administrators be successful with Microsoft Intune, Microsoft has developed diagnostic scenarios that cover top support topics and the common tasks for which administrators request help with configuration. It is important to note that these diagnostics can't make changes to your tenant, they do provide insight into known issues and provide instructions to fix the issues quickly.
+To help administrators successfully use Microsoft Intune, Microsoft has developed diagnostic scenarios that cover top support topics and the common tasks for which administrators request help with configuration. It's important to note that these diagnostics can't make changes to your tenant, but they do provide insight into known issues and instructions to fix them quickly.
 
 > [!NOTE]
-> These diagnostics aren't available for the GCC High and DoD environments, or for Microsoft 365 operated by 21Vianet.
+> These diagnostics aren't available for GCC High and DoD environments or Microsoft 365 operated by 21Vianet.
 
 ### Run diagnostics
 
 As a Microsoft 365 administrator, navigate to the Microsoft 365 admin center. In the navigation pane, select **Show all** > **Support** > **New service request**. After you briefly describe your issue (for example, "I need help enrolling Windows devices"), the system determines whether a diagnostic scenario matches your issue.
 
-For the user having a device that fails to enroll to Intune, type their email address and then select **Run tests**. After the diagnostic checks finish and a configuration issue is found, the system provides the steps to resolve the issue.
+For the user having a device that fails to enroll in Intune, type their email address and then select **Run tests**. After the diagnostic checks finish and a configuration issue is found, the system provides steps to resolve the issue.
 
 > [!NOTE]
 > If a diagnostic detects an issue and you implement a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved.
@@ -45,7 +45,7 @@ The following diagnostic is currently available for Intune enrollment issues:
 
 |Diagnostic|Description|Link|
 |--|--|--|
-|Intune Windows enrollment|This diagnostic helps identify when a user-based device fails to enroll to Intune for a number of different failures.|[Run Tests: Intune Windows enrollment](https://aka.ms/IntuneWindowsEnrollment)|
+|Intune Windows enrollment|This diagnostic helps identify the cause of the issue that a user-based device fails to enroll in Intune due to various failures.|[Run Tests: Intune Windows enrollment](https://aka.ms/IntuneWindowsEnrollment)|
 
 ### Collect basic information
 
