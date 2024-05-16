@@ -125,6 +125,7 @@ If you try to recover from an update issue, you can reprovision the app after yo
 ## Automated resolution to avoid manual steps
 
 sysprep.cmd content:
+
     ```cmd
     mkdir %Systemdrive%\temp
     %Systemdrive%\Windows\System32\sysprep\sysprep.exe /oobe /generalize /shutdown /quiet /unattend:%Systemdrive%\temp\unattend.xml
@@ -135,6 +136,7 @@ sysprep.cmd content:
     ```
 
 removeappxpackages.ps1 content:
+
     ```powershell
     $sysprepLogPath = "$env:SystemRoot\System32\Sysprep\Panther\setupact.log"
     $failedPackages = Get-Content $sysprepLogPath | Select-String -Pattern "Error.*was installed for a user" | ForEach-Object {
