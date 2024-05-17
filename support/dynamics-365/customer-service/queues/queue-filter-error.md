@@ -3,7 +3,7 @@ title: Personal view queue filter not working properly
 description: Provides a resolution for an issue where personal view queue filters aren't working properly in Customer Service.
 ms.reviewer: laalexan
 ms.author: nickstinnett
-ms.date: 05/15/2024
+ms.date: 05/17/2024
 ms.custom: sap:Queues\Unable to view queue item
 ---
 # Personal view queue filters aren't working properly in Customer Service
@@ -12,7 +12,9 @@ This article provides a resolution for the issue where personal view queue filte
 
 ## Symptoms
 
-When you use personal view filters, you might encounter an issue with an outdated format of the applied queue filters (for example, the **Queues I'm a member of** filter).
+When you use personal view filters, you might encounter an outdated format of filters and linked entities from the "Queue's I'm a member of" filter, and an error message like the following:
+
+> 2147750152 Link entity with name or alias S_Internal_436e2293da8f4ef9a1e6fff25a5beb22 is not found
 
 ## Cause
 
@@ -51,3 +53,7 @@ Follow these steps to remove the old format of the queue filters and replace it 
 1. Remove the specific queue filter that was applied to the view temporarily as part of steps 2 and 3.
 
 1. Select **Apply**, and then save the changes in the current view. The view is now updated with the correct filter, and will work properly with the advanced filter experience.
+
+## More information
+
+[Create and edit public or system views (legacy)](/power-apps/maker/model-driven-apps/create-edit-views-app-designer)
