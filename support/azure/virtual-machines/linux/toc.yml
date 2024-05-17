@@ -25,6 +25,8 @@
       href: how-to-use-perfinsights-linux.md
   - name: Isolate bottlenecks in Linux
     href: troubleshoot-performance-bottlenecks-linux.md
+  - name: Out of memory error in Linux VM
+    href: oom-swap-file-linux-vm.md
   - name: Troubleshoot performance issues through monitoring
     href: troubleshoot-performance-virtual-machine-linux-windows.md
 
