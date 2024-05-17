@@ -20,7 +20,7 @@ items:
   - name: ServiceUnavailable (409) - requested resource is not available in the location
     href: configuration-setup/service-unavailable-requested-resource-is-not-available.md
   - name: "Service unavailable" error when deploying GPU-enabled containers
-    href: configuration-setup/container-group-deployment-waiting-state.md
+    href: service-unavailable-gpu-enabled-aci-deployment-failures.md
     
 - name: Troubleshoot a running container group
   items:
