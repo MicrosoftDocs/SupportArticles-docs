@@ -28,6 +28,9 @@
       href: inventory/cant-post-inventory-journal.md
     - name: Inventory journal workflow conditions apply at the journal level, not line level
       href: inventory/journal-workflow-conditions.md
+    - name: "Correct inventory transfer order lines manually "
+      href: ./inventory/correctinventorytransferorderlinesmanually.md
+      displayName: Correct transfer order
     - name: Maximum number of decimals for the stock keeping unit is 0
       href: inventory/maximum-number-of-decimals-for-stock-keeping-unit-is-0.md
     - name: Multiple inventory transactions for batch numbers without "On physical update"
