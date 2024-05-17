@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-business-central
   author: SusanneWindfeldPedersen
   ms.author: solsen
-  ms.date: 05/09/2024
+  ms.date: 05/17/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -20,7 +20,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-           - text: '"Activity timed out" error'
+           - text: An activity times out in Business Central cloud migration
              url: migration/migration-activity-timeout.md
            - text: '"Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect" error'
              url: migration/migration-cannot-connect.md

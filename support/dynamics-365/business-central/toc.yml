@@ -21,7 +21,7 @@
           href: integration/m365-only-view-data.md
     - name: Migration
       items:
-        - name: '"Activity timed out" error'
+        - name: An activity times out in Business Central cloud migration
           href: migration/migration-activity-timeout.md
         - name: '"Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect" error'
           href: migration/migration-cannot-connect.md
