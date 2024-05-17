@@ -7,11 +7,11 @@ ms.date: 05/16/2024
 ---
 # A permission error occurs even though Microsoft 365 access has been enabled
 
-This article provides a resolution for an issue where users receive a permission error even though Microsoft 365 access has been enabled in Dynamics 365 Business Central.
+This article explains how to resolve the permission-related problem users might encounter when trying to access Business Central records from Microsoft Teams, even though access with Microsoft 365 licenses is properly enabled in the Business Central admin.
 
 ## Symptoms
 
-Access with Microsoft 365 has been enabled in Business Central admin center, but users get a permission error when accessing records.
+When a user selects a link or card for a Business Central record in a Teams conversation, they get an error message similar to: "Sorry, the current permissions prevented the action."
 
 ## Cause
 
