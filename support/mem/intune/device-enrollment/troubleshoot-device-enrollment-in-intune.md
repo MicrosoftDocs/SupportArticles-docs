@@ -29,7 +29,7 @@ To help administrators successfully use Microsoft Intune, Microsoft has develope
 
 ### Run diagnostics
 
-As a Microsoft 365 administrator, navigate to the Microsoft 365 admin center. In the navigation pane, select **Show all** > **Support** > **New service request**. After you briefly describe your issue (for example, "I need help enrolling Windows devices"), the system determines whether a diagnostic scenario matches your issue.
+As a Microsoft 365 administrator, navigate to the Microsoft 365 admin center. In the navigation pane, select **Show all** > **Support** > **Help & support**. Alternatively, select **Help & support** on the bottom right side of the page. After you briefly describe your issue (for example, "I need help enrolling Windows devices"), the system determines whether a diagnostic scenario matches your issue.
 
 For the user having a device that fails to enroll in Intune, type their email address and then select **Run tests**. After the diagnostic checks finish and a configuration issue is found, the system provides steps to resolve the issue.
 
