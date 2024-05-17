@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides some information about lingering objects in a Windows Server Active Directory forest.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 910205
 
 ## Summary
@@ -128,19 +128,22 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 
 If an attempt is made to update a lingering object that resides in a writable directory partition, events are logged on the destination domain controller. However, if the only version of a lingering object is in a read-only directory partition on a global catalog server, the object cannot be updated. Therefore, this kind of event is not triggered.
 
-### Removing lingering objects from the forest
+### Removing lingering objects from the forest using LOLv2
 
-#### Windows 2000-based forests
+The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/en-us/download/details.aspx?id=56051). 
 
-For more information about how to remove lingering objects in a Windows 2000-based domain, click the following article number to view the article in the Microsoft Knowledge Base:
+For more information about LoLv2, see:
 
-[314282](https://support.microsoft.com/help/314282) Lingering objects may remain after you bring an out-of-date global catalog server back online  
+- [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)
 
-#### Windows Server 2003-based forests
+- [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
 
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
+- [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
 
-[892777](https://support.microsoft.com/help/892777) Windows Server 2003 Service Pack 1 Support Tools  
+### Removing lingering objects from the forest using repadmin
+
+In some cases where LoLv2 can't be used, you can use *Repadmin.exe*:  
+[Steps to use Repadmin to remove lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988)
 
 ### Preventing lingering objects
 
@@ -155,23 +158,20 @@ The data type for this entry is REG_DWORD. If you set the value to 1, the entry 
 
 The default value for the Strict Replication Consistency registry entry is determined by the conditions under which the domain controller was installed in the forest.
 
+The preferred method to enable the Strict Replication Consistency registry entry is using Repadmin:  
+[Steps to use Repadmin to enable strict replication consistency](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988)
+
+For more information about how to use Repadmin.exe to set Strict Replication Consistency, visit the following Microsoft Web site:
+
+[https://technet.microsoft.com/library/cc780362(WS.10).aspx  ](https://technet.microsoft.com/library/cc780362(WS.10).aspx  )
+
 >[!NOTE]
 >Raising the functional level of the domain or the forest does not change the replication consistency setting on any domain controller.
 
-By default, the value of the Strict Replication Consistency registry entry on domain controllers that are installed in a forest is 1 (enabled) if the following conditions are true:
+By default, the value of the Strict Replication Consistency registry entry on newly domain controllers that are installed in a forest is 1 (enabled) if the first Domain controller of the Forest was installed on a server that is running Windows Server 2003 (This computer creates the forest root domain of a new forest)
 
-- The Windows Server 2003 version of Winnt32.exe is used to upgrade a Windows NT 4.0 primary domain controller (PDC) to Windows Server 2003. This computer creates the forest root domain of a new forest.
-- Active Directory is installed on a server that is running Windows Server 2003. This computer creates the forest root domain of a new forest.  
-
-By default, the value of the Strict Replication Consistency registry entry on domain controllers is 0 (disabled) if the following conditions are true:
-
-- A Windows 2000-based domain controller is upgraded to Windows Server 2003.
-- Active Directory is installed on a Windows Server 2003-based member server in a Windows 2000-based forest.
-
-If you have a domain controller that is running Windows Server 2003 with SP1, you do not have to modify the registry to set the value of the Strict Replication Consistency registry entry. Instead, you can use the Repadmin.exe tool to set this value for one domain controller in the forest or for all the domain controllers in the forest.
-
-For more information about how to use Repadmin.exe to set Strict Replication Consistency, visit the following Microsoft Web site:  
-[https://technet.microsoft.com/library/cc780362(WS.10).aspx](https://technet.microsoft.com/library/cc780362%28ws.10%29.aspx)  
+By default, the value of the Strict Replication Consistency registry entry on newly domain controllers is 0 (disabled) if the first Domain controller of the Forest was installed on a server that is running Windows Server 2000 (This computer creates the forest root domain of a new forest). in such scenario you can ensure Strict Replication Consistency is enabled on future Promoted Domain Controllers by following the steps in:  
+[Ensure Strict Replication Consistency Is Enabled On Newly Promoted Domain Controllers](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)?redirectedfrom=MSDN)
 
 #### Method 2: Monitor replication by using a command-line command
 
@@ -208,22 +208,18 @@ You can remove failing domain controllers from the forest before the TSL expires
 
 #### Method 4: Increase the TSL
 
-Windows 2000 Server  
-
 Increase the TSL to 180 days by using the Adsiedit tool. To do it, follow these steps:  
 
 1. In the Adsiedit tool, expand **Configuration** **DomainControllerName**, expand **CN=Configuration**, **DC=ForestRootDomain**, expand **CN=Services**, expand **CN=Windows NT**, right-click **CN=Directory Service**, and then click **Properties**.
-2. Click the **Attribute** tab.
-3. In the **Select which properties to view** list, click **Optional**.
-4. In the **Select a property to view** list, click **TombstoneLifetime**.
-5. In the **Edit Attribute** box, type 180, click **Set**, and then click **OK**. Windows Server 2003  
+1. Click the **Attribute** tab.
+1. In the **Select which properties to view** list, click **Optional**.
+1. In the **Select a property to view** list, click **TombstoneLifetime**.
+1. In the **Edit Attribute** box, type 180, click **Set**, and then click **OK**.
 
-Increase the TSL to 180 days by using the Adsiedit tool. To do it, follow these steps:  
+Increase the TSL to 180 days by using using PowerShell:  
+`$ADForestconfigurationNamingContext = (Get-ADRootDSE).configurationNamingContext`
 
-1. In the Adsiedit tool, expand **Configuration** **DomainControllerName**, expand **CN=Configuration**, **DC=ForestRootDomain**, expand **CN=Services**, expand **CN=Windows NT**, right-click **CN=Directory Service**, and then click **Properties**.
-2. Click the **Attribute Editor** tab.
-3. In the **Attribute** list, click **TombstoneLifetime**, and then click **Edit**.
-4. In the **Value** box, type 180, and then click **OK**.
+`Set-ADObject -Identity “CN=Directory Service,CN=Windows NT,CN=Services,$ADForestconfigurationNamingContext” -Partition $ADForestconfigurationNamingContext -Replace @{tombstonelifetime=’180′}`
 
 ## Data collection
 
