@@ -8,7 +8,7 @@ ms.custom: sap:Queues\Unable to view queue item
 ---
 # Personal view queue filters aren't working properly in Customer Service
 
-This article provides a resolution for the issue where personal view queue filters you previously created aren't working properly in Microsoft Dyanmics Customer Service.
+This article provides a resolution for the issue where personal view queue filters you previously created aren't working properly in Dynamics 365 Customer Service.
 
 ## Symptoms
 
@@ -56,4 +56,4 @@ Follow these steps to remove the old format of the queue filters and replace it 
 
 ## More information
 
-[Create and edit public or system views (legacy)](/power-apps/maker/model-driven-apps/create-edit-views-app-designer)
+[Create and edit views in model-driven apps](/power-apps/maker/model-driven-apps/create-edit-views-app-designer)
