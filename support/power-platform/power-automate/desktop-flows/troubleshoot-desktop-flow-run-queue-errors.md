@@ -37,11 +37,11 @@ As mentioned in the error message, this error means that the orchestrator can't 
 
 ## SessionExistsForTheUserWhenUnattended
 
-This occurs when you try to run an unattended desktop flow on a target machine where the user used in the desktop flow connection is signed in.
+This error occurs when you try to run an unattended desktop flow on a target machine where the user used in the desktop flow connection is signed in.
 
 #### Resolution
 
-To resolve the issue, sign out of the session (a locked session will lead to this error), and check that you aren't signed in with the same user on the machine.
+To resolve the issue, sign out of the session (a locked session will lead to this error), and confirm that you aren't signed in with the same user on the machine.
 
 ## NoUnlockedActiveSessionForAttended
 
@@ -49,7 +49,7 @@ This error usually occurs when you try to run an attended desktop flow on a targ
 
 #### Resolution
 
-To resolve the issue,
+To resolve the issue:
 
 - Check the credentials used in your connection and make sure they're the ones used in the unlocked session. You can verify your identity by typing `whoami` in any command prompt.
 - Verify that you're targeting the right machine. To do so, open the machine runtime application and select **View machine in portal** to verify that it brings you to the machine you're targeting in your run.
