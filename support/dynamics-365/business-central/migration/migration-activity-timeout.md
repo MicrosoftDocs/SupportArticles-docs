@@ -1,17 +1,17 @@
 ---
-title: Activity timed out error in Business Central cloud migration
-description: Provides troubleshooting steps for the Activity timed out error in Business Central cloud migration.
+title: Activity times out in Business Central cloud migration
+description: Provides troubleshooting steps for an issue where an activity times out in Business Central cloud migration.
 ms.author: jswymer
 ms.reviewer: jswymer 
-ms.date: 05/16/2024
+ms.date: 05/17/2024
 ---
-# Activity timed out error in Business Central cloud migration
+# An activity times out in Business Central cloud migration
 
-This article provides troubleshooting steps for the "Activity timed out" error message that occurs during [Business Central cloud migration](/dynamics365/business-central/dev-itpro/administration/migration-manage).
+This article provides troubleshooting steps for an issue where an activity times out during [Business Central cloud migration](/dynamics365/business-central/dev-itpro/administration/migration-manage).
 
 ## Symptoms
 
-You receive an error message that activity timed out during Business Central cloud migration.
+An activity times out during Business Central cloud migration.
 
 ## Cause
 
