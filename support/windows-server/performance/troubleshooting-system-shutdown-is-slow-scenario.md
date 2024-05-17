@@ -29,7 +29,7 @@ Multiple factors can cause Windows to shut down more slowly than usual. You can 
 
 The command-line version of WPR is part of Windows, but you have to install WPA and the graphical user interface of WPR (WPRUI) separately. Both tools are part of the Windows Assessment and Deployment Toolkit (Windows ADK). The procedures in this article use WPRUI, and you have to install WPRUI on the computer that you're troubleshooting. You don't have to install WPA on the same computer. For information about downloading and installing the tools, see [Download and install the Windows ADK](/windows-hardware/get-started/adk-install).
 
-For an overview of the tools and how to use them, see [Troubleshoot processes and threads by using WPR and WPA](./support-tools/support-tools-xperf-wpa-wpr.md).
+For an overview of the tools and how to use them, see [Troubleshoot processes and threads by using WPR and WPA](../support-tools/support-tools-xperf-wpa-wpr.md).
 
 ### Gather data
 
@@ -79,6 +79,6 @@ If you didn't open WPA directly from WPR after you saved a recording, follow the
 > [!NOTE]  
 > To load symbols for analysis, select **Trace**, and then select **Load Symbols**. For more information, see [Load Symbols or Configure Symbol Paths](/windows-hardware/test/wpt/load-symbols-or-configure-symbol-paths).
 
-WPA loads thumbnails of the various categories of recorded data in the Graph Explorer. To analyze the data, select a category to expand it and then drag a thumnail to the **Analysis** tab. For more information about how to use WPA, see [Troubleshoot processes and threads by using WPR and WPA: Using WPA to analyze data](./support-tools/support-tools-xperf-wpa-wpr.md#using-wpa-to-analyze-data).
+WPA loads thumbnails of the various categories of recorded data in the Graph Explorer. To analyze the data, select a category to expand it and then drag a thumnail to the **Analysis** tab. For more information about how to use WPA, see [Troubleshoot processes and threads by using WPR and WPA: Using WPA to analyze data](../support-tools/support-tools-xperf-wpa-wpr.md#using-wpa-to-analyze-data).
 
 For more information about system shutdown processes and options, see [System Shutdown](/windows/win32/shutdown/system-shutdown).
