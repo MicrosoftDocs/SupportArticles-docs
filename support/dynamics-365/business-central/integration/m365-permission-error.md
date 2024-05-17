@@ -7,7 +7,7 @@ ms.date: 05/16/2024
 ---
 # A permission error occurs even though Microsoft 365 access has been enabled
 
-This article explains how to resolve the permission-related problem users might encounter when trying to access Business Central records from Microsoft Teams, even though access with Microsoft 365 licenses is properly enabled in the Business Central admin.
+This article explains how to resolve the permission-related problem users might encounter when trying to access Business Central records from Microsoft Teams, even though access with Microsoft 365 licenses is properly enabled in the Business Central admin center.
 
 ## Symptoms
 
