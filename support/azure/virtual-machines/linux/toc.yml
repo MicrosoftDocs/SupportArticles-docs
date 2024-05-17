@@ -1,9 +1,6 @@
 - name: Welcome
   href: welcome-virtual-machines-linux.yml
 
-- name: Azure Windows Virtual Machines troubleshooting documentation
-  href: ../windows/welcome-virtual-machines-windows.yml
-
 - name: Support for Linux and open-source technology in Azure
   href: support-linux-open-source-technology.md
 - name: Upgrade VMs running Canonical Ubuntu 18.04 LTS
