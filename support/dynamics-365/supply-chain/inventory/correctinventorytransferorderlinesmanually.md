@@ -11,14 +11,9 @@ ms.service: dynamics-365-supply-chain
 ms.topic: troubleshooting-problem-resolution
 ms.date:     05/17/2024
 ---
+# How to manually correct inventory transfer order line data corruption
 
-**In this article**
-
-1. Symptoms
-2. Causes
-3. Resolutions
-
-**Symptoms**
+## Symptoms
 
 When you inspect the lines of a transfer order, you notice one or more of the following issues:
 
@@ -30,11 +25,11 @@ When you inspect the lines of a transfer order, you notice one or more of the fo
 - Transfer order header status inconsistency.
 - Transfer order lines and inventory transactions still exist, but the header is missing.
 
-**Cause**
+## Cause
 
 These issues are usually caused by data corruption or a discrepancy due to customizations and integration.
 
-**Resolution**
+## Resolution
 
 The correct inventory transfer order lines manually form allows the administrator users to fix inconsistent data and correct the unexpected quantities that are related to the transfer orders.
 
@@ -62,5 +57,3 @@ You can correct inventory transfer order lines as described in the following pro
 | When a picking list is generated for a transfer order, an output order is generated. Inventory transactions hold a child reference of completed output order. | **Recalculate inventory transactions** |
 | Transfer order header status inconsistency | **Recalculate header status** |
 | Transfer order lines and inventory transactions still exist, but header is missing. | **Recover header** |
-```
-
