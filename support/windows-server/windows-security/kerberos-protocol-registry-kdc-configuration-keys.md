@@ -196,7 +196,7 @@ The registry entries that are listed in this section must be added to the follow
          ksetup /setrealmflags <your Kerberos realm name> sendaddress
          ```
 
-    3.	Use the `/server` switch to tell [ksetup](/windows-server/administration/windows-commands/ksetup) to make the changes on a remote computer.
+    3.	You can use the `/server` switch to let [ksetup](/windows-server/administration/windows-commands/ksetup) make the changes on a remote computer.
 
 - Entry: TgtRenewalTime
 
