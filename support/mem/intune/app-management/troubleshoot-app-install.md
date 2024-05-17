@@ -22,7 +22,7 @@ To help administrators successfully use Microsoft Intune, Microsoft has develope
 
 ### Run diagnostics
 
-As an administrator, navigate to the Microsoft 365 admin center. In the navigation pane, select **Show all** > **Support** > **Help & support**. Alternatively, select **Help & support** on the bottom right side of the page. After you briefly describe your issue (for example, "I need help deploying apps"), the system determines whether a diagnostic scenario matches your issue.
+As an administrator, navigate to the [Microsoft 365 admin center](https://aka.ms/admincenter). In the navigation pane, select **Show all** > **Support** > **Help & support**. Alternatively, select **Help & support** on the bottom right side of the page. After you briefly describe your issue (for example, "I need help deploying apps"), the system determines whether a diagnostic scenario matches your issue.
 
 For the user having an issue with app deployment on their device, type their email address and then select **Run tests**. After the diagnostic checks finish and a configuration issue is found, the system provides steps to resolve the issue.
 
