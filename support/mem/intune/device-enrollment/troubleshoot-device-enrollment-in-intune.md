@@ -39,13 +39,16 @@ For the user having a device that fails to enroll in Intune, type their email ad
 ### Scenarios covered by diagnostics
 
 > [!NOTE]
-> You have to run the diagnostic as an administrator.
+> You have to run the diagnostics as an administrator.
 
-The following diagnostic is currently available for Intune enrollment issues:
+The following diagnostics are currently available for Intune enrollment issues. The diagnostics help identify the cause of the issue that a user-based device fails to enroll in Intune due to various failures.
 
-|Diagnostic|Description|Link|
-|--|--|--|
-|Intune Windows enrollment|This diagnostic helps identify the cause of the issue that a user-based device fails to enroll in Intune due to various failures.|[Run Tests: Intune Windows enrollment](https://aka.ms/IntuneWindowsEnrollment)|
+|Diagnostics|Links|
+|--|--|
+|Intune Windows enrollment|[Run Tests: Intune Windows enrollment](https://aka.ms/IntuneWindowsEnrollment)|
+|Intune iOS/iPadOS enrollment|[Run Tests: Intune iOS/iPadOS enrollment](https://admin.microsoft.com/AdminPortal/?searchSolutions=Diag%3A+Intune+iOS+Enrollment)|
+|Intune Android enrollment|[Run Tests: Intune Android enrollment](https://admin.microsoft.com/AdminPortal/?searchSolutions=Diag%3A+Intune+Android+Enrollment)|
+|Intune macOS enrollment|[Run Tests: Intune macOS enrollment](https://admin.microsoft.com/AdminPortal/?searchSolutions=Diag%3A+Intune+macOS+Enrollment)|
 
 ### Collect basic information
 
