@@ -79,6 +79,6 @@ If you didn't open WPA directly from WPR after you saved a recording, follow the
 > [!NOTE]  
 > To load symbols for analysis, select **Trace**, and then select **Load Symbols**. For more information, see [Load Symbols or Configure Symbol Paths](/windows-hardware/test/wpt/load-symbols-or-configure-symbol-paths).
 
-WPA loads thumbnails of the various categories of recorded data in the Graph Explorer. To analyze the data, select a category to expand it and then drag a thumnail to the **Analysis** tab. For more information about how to use WPA, see [Troubleshoot processes and threads by using WPR and WPA: Using WPA to analyze data](../support-tools/support-tools-xperf-wpa-wpr.md#using-wpa-to-analyze-data).
+WPA loads thumbnails of the various categories of recorded data in the Graph Explorer. To analyze the data, expand a category and then drag a thumbnail to the **Analysis** tab. For more information about how to use WPA, see [Troubleshoot processes and threads by using WPR and WPA: Using WPA to analyze data](../support-tools/support-tools-xperf-wpa-wpr.md#using-wpa-to-analyze-data).
 
 For more information about system shutdown processes and options, see [System Shutdown](/windows/win32/shutdown/system-shutdown).
