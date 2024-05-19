@@ -14,7 +14,7 @@ ms.date: 05/11/2024
 ms.reviewer: guywild
 ms.author: anandh
 
-# Customer intent: As a developer, I want to analyze and troubleshoot performance issues on my Azure virtual machine so that I can resolve these issues myself or share performance diagnostics information with Microsoft Support to get their help.
+# Customer intent: As a VM administrator or as a DevOps engineer, I want to analyze and troubleshoot performance issues on my Azure virtual machine so that I can resolve these issues myself or share performance diagnostics information with Microsoft Support to get their help.
 ---
 
 # Troubleshoot performance issues on Azure virtual machines using Performance Diagnostics
@@ -24,19 +24,20 @@ ms.author: anandh
 Use the Performance Diagnostics tool to identify and troubleshoot performance issues on your Azure virtual machine (VM) in one of two modes: 
 
 - **Continuous diagnostics (preview)** is a lightweight process that collects data at five-second intervals and reports insights about resource usage every five minutes. 
-- **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. Performance Diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
+- **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. 
+
+Performance Diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
 
 Run Performance Diagnostics directly from the Azure portal, where you can also review insights and a report on various logs, rich configuration, and diagnostics data. We recommend that you run Performance Diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
 
 This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer. 
 
 > [!NOTE]
-> Continuous diagnostics (preview) is currently supported only on Windows.
+> Continuous diagnostics (preview) is being rolled out gradually and is currently supported only on Windows. If the preview feature is available for your machines, you'll see the option to enable both on-demand and continuous diagnostics, as described in [Install and run Performance Diagnostics on your VM](#install-and-run-performance-diagnostics-on-your-vm).
 
 ## Prerequisites
 
 * To run continuous and on-demand diagnostics on Windows, you need [.NET SDK](/dotnet/core/install/windows) version 4.5 or a later. 
-* Continuous diagnostics is being rolled out gradually. If the preview feature is available for your machines, you'll see the option to enable both on-demand and continuous diagnostics, as described in [Install and run Performance Diagnostics on your VM](#install-and-run-performance-diagnostics-on-your-vm).
 
 > [!NOTE]
 > To run Performance Diagnostics on classic VMs, see [Azure Performance Diagnostics VM extension](performance-diagnostics-vm-extension.md).
@@ -106,20 +107,10 @@ To install and run Performance Diagnostics:
     | ------ | ----------- |
     | Enable continuous diagnostics | Get continuous, actionable insights into high resource usage with data collected every 5 seconds and updates uploaded every 5 minutes to address performance issues promptly. Store insights in your preferred storage account, [customizing retention policies](/azure/storage/blobs/lifecycle-management-policy-configure) based on your needs. Disable this feature at any time. |
     | Run on-demand diagnostics | Get on-demand, actionable insights into high resource usage and various system configurations. Receive a downloadable report with comprehensive diagnostics data to address performance issues. Store insights and reports in your preferred storage account, [customizing retention policies](/azure/storage/blobs/lifecycle-management-policy-configure) based on your needs. Initiate this feature at any time for the specific analysis type you need:<br/><ul><li>**Performance analysis**<br/>Includes all checks in the **Quick analysis** scenario, and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes, depending on the selected duration. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Quick analysis**<br/>Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Advanced performance analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and collects one or more of the traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require more traces. Running this scenario for longer periods increases the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li><li>**Azure file analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and captures a network trace and SMB counters. Use this scenario to troubleshoot the performance of Azure files. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li></ul> |
-    | Storage account | Optionally, if you want to use a single storage account to store the Performance Diagnostics results for multiple VMs, you can select a storage account from the dropdown. If you don't specify a storage account, a new storage account is created by default. |
+    | Storage account | Optionally, if you want to use a single storage account to store the Performance Diagnostics results for multiple VMs, you can select a storage account from the dropdown. If you don't specify a storage account, Performance Diagnostics uses the default diagnostics storage account or creates a new storage account. |
 
     > [!NOTE]
     > [`*`] These analysis scenarios are only supported on Windows.
-
-    <!-- DWK - Commented pending question re: analysis scenarios & options
-    ### Provide symptoms (optional)
-    
-    Select any preselected symptoms from the list, or add new symptoms. This helps us improve the analysis in the future.
-    
-    ### Provide support request number, if available (optional)
-    
-    If you are working with a Microsoft support engineer on an existing support ticket, provide the support ticket number.
-    -->
 
 1. Review the legal terms and privacy policy, and select the corresponding checkbox to acknowledge (required).
 
@@ -131,17 +122,7 @@ To install and run Performance Diagnostics:
 
 1. Select **Apply** to apply the selected options and install the tool.
 
-A notification is displayed as Performance Diagnostics starts to install. After the installation is completed, you see a notification that indicates that the installation is successful. If the **Run on-demand diagnostics** option is selected, the selected performance analysis scenario is then run for the specified duration. This is a good time to reproduce the performance issue so that the diagnostics data can be captured at the correct time.
-
-After the on-demand performance analysis is complete, the following items are uploaded to Azure tables and a binary large object (BLOB) container in the specified storage account:
-
-* All the insights and related information about the run
-* An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip** ) on Windows and a tar file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz** ) on Linux that contains log files
-* An HTML report
-
-After the upload, a new diagnostics report is listed in the Azure portal.
-
-:::image type="content" source="media/performance-diagnostics/diagnostics-report-list.png" alt-text="Screenshot of a list of diagnostics reports in the Performance Diagnostics screen." lightbox="media/performance-diagnostics/diagnostics-report-list.png":::
+    A notification is displayed as Performance Diagnostics starts to install. After the installation is completed, you see a notification that indicates that the installation is successful. If the **Run on-demand diagnostics** option is selected, the selected performance analysis scenario is then run for the specified duration. 
 
 ## Change storage accounts
 
@@ -230,10 +211,15 @@ All Performance Diagnostics insights and reports are stored in your own storage 
 
 To view the storage account information, select the **Settings** button on the toolbar. For more information, see [Change storage accounts](#change-storage-accounts).
 
-Insights are stored inside Azure tables. The reports compressed file is stored in a binary large object (BLOB) container that is named `azdiagextnresults`. To view these files, navigate to your storage account, select **Storage browser**.
+Insights are stored in Azure tables, including:
+
+* All the insights and related information about the run
+* An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip**) on Windows and a tar file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz** ) on Linux that contains log files
+* An HTML report
+
+The reports compressed file is stored in a binary large object (BLOB) container that is named `azdiagextnresults`. To view these files, navigate to your storage account, select **Storage browser**.
 
 :::image type="content" source="media/performance-diagnostics/performance-diagnostics-storage-browser.png" alt-text="Screenshot of the storage account screen that shows the Performance Diagnostics insights and report files." lightbox="media/performance-diagnostics/performance-diagnostics-storage-browser.png":::
-
 
 ### How do I share this data with Microsoft Customer Support?
 
