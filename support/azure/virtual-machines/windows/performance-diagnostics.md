@@ -26,7 +26,7 @@ Use the Performance Diagnostics tool to identify and troubleshoot performance is
 - **Continuous diagnostics (preview)** collects data at five-second intervals and reports actionable insights about resource usage every five minutes. 
 - **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. 
 
-Performance Diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
+Performance Diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minimize costs. 
 
 Run Performance Diagnostics directly from the Azure portal, where you can also review insights and a report on various logs, rich configuration, and diagnostics data. We recommend that you run Performance Diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
 
@@ -124,9 +124,38 @@ To install and run Performance Diagnostics:
 
     A notification is displayed as Performance Diagnostics starts to install. After the installation is completed, you see a notification that indicates that the installation is successful. If the **Run on-demand diagnostics** option is selected, the selected performance analysis scenario is then run for the specified duration. 
 
-## Change storage accounts
+## View and manage storage account and stored data
+
+Performance Diagnostics stores all insights and reports in a storage account, which you can [configure for short data retention](/azure/storage/blobs/lifecycle-management-policy-configure) to minimize costs. 
 
 You can use the same storage account for multiple VMs that use Performance Diagnostics. When you change the storage account, the old reports and insights aren't deleted. However, they'll no longer be displayed in the list of diagnostics reports.
+
+> [!NOTE]
+> Performance Diagnostics stores insights in Azure tables and stores reports in a binary large object (BLOB) container.
+>
+> If your storage account uses [private endpoints](/azure/storage/common/storage-private-endpoints), to make sure that Performance Diagnostics can store insights and reports in the storage account:
+>
+> 1. Create separate private endpoints for Table and BLOB.
+> 1. Add DNS configuration to each separate private endpoint.
+
+### View diagnostics data stored in your account
+
+To view these files:
+
+1. Navigate to your storage account.
+1. Select **Storage browser**.
+
+    ![Screenshot of the storage account screen that shows the Performance Diagnostics insights and report files.](media/performance-diagnostics/performance-diagnostics-storage-browser.png)
+
+    Performance Diagnostics stores reports in a binary large object (BLOB) container, named **azdiagextnresults**, and insights in tables.
+
+    Insights include:
+
+    - All the insights and related information about the run.
+    - An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip**) on Windows and a tar file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz**) on Linux that contains log files.
+    - An HTML report.
+ 
+### Change storage accounts
 
 To change storage accounts: 
 
@@ -140,13 +169,7 @@ To change storage accounts:
 
 1. Select **Change storage account** to select a different storage account.
 
-> [!NOTE]
-> Performance Diagnostics stores insights in Azure tables and stores reports in a binary large object (BLOB) container, named *azdiagextnresults*.
->
-> If your storage account uses [private endpoints](/azure/storage/common/storage-private-endpoints), to make sure that Performance Diagnostics can store insights and reports in the storage account:
->
-> 1. Create separate private endpoints for Table and BLOB.
-> 1. Add DNS configuration to each separate private endpoint.
+
 
 ## View insights and reports
 
@@ -207,22 +230,6 @@ To uninstall Performance Diagnostics, select the **Uninstall** button on the too
 :::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with the Uninstall button highlighted." lightbox="media/performance-diagnostics/uninstall-button.png":::
 
 ## Frequently asked questions
-
-### Where is the diagnostics data from my VM stored?
-
-All Performance Diagnostics insights and reports are stored in your own storage account. 
-
-To view the storage account information, select the **Settings** button on the toolbar. For more information, see [Change storage accounts](#change-storage-accounts).
-
-Insights are stored in Azure tables, including:
-
-* All the insights and related information about the run
-* An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip**) on Windows and a tar file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz** ) on Linux that contains log files
-* An HTML report
-
-The reports compressed file is stored in a binary large object (BLOB) container that is named `azdiagextnresults`. To view these files, navigate to your storage account, select **Storage browser**.
-
-:::image type="content" source="media/performance-diagnostics/performance-diagnostics-storage-browser.png" alt-text="Screenshot of the storage account screen that shows the Performance Diagnostics insights and report files." lightbox="media/performance-diagnostics/performance-diagnostics-storage-browser.png":::
 
 ### How do I share this data with Microsoft Customer Support?
 
