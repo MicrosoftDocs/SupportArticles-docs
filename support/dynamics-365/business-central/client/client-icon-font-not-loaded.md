@@ -1,9 +1,9 @@
 ---
 title: Icon font isn't loaded in the Business Central clients
 description: Provides a resolution for an icon font issue that occurs in the Business Central web client, Business Central tablet client, or Business Central phone client.
-ms.date: 05/06/2024
+ms.date: 05/20/2024
 ms.reviewer: solsen
-ms.custom: 
+ms.custom: sap:Migration\NAV and BC On-premise, sap:Client\Web Client or Browser
 author: SusanneWindfeldPedersen
 ms.author: solsen
 ---

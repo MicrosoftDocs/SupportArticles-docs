@@ -3,7 +3,8 @@ title: Failed to enable your replication error in Business Central
 description: Provides a resolution for the Failed to enable your replication error that might occur during Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
-ms.date: 05/13/2024
+ms.date: 05/20/2024
+ms.custom: sap:Migration\NAV and BC On-premise
 ---
 # "Failed to enable your replication" error occurs in Cloud Migration Setup
 

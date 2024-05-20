@@ -3,7 +3,8 @@ title: Card from a shared link is minimal and doesn't include Details button
 description: Provides a resolution for an issue that occurs when sharing a Business Central link in Teams.
 ms.author: mikebc
 ms.reviewer: jswymer
-ms.date: 05/13/2024
+ms.date: 05/20/2024
+ms.custom: sap:Migration\NAV and BC On-premise, sap:Integration\Teams
 ---
 # Card from a shared link is minimal and doesn't include the "Details" button
 

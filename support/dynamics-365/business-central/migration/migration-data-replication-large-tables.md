@@ -3,7 +3,8 @@ title: Data replication error DelimitedTextIncorrectRowDelimiter for large table
 description: Provides a resolution for an error that occurs during the data replication process for large tables in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
-ms.date: 05/16/2024
+ms.date: 05/20/2024
+ms.custom: sap:Migration\NAV and BC On-premise
 ---
 # Data replication error "DelimitedTextIncorrectRowDelimiter" for large tables in Business Central cloud migration
 

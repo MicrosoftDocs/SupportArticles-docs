@@ -1,11 +1,11 @@
 ---
 title: Client returns a wrong client type in Business Central
 description: Provides a resolution to ensure that the correct client type is returned for each client in Dynamics 365 Business Central.
-ms.date: 05/16/2024
+ms.date: 05/20/2024
 ms.reviewer: solsen
 author: SusanneWindfeldPedersen
 ms.author: solsen
-ms.custom:
+ms.custom: sap:Migration\NAV and BC On-premise, sap:Client\Mobile Apps
 ---
 # A Business Central client returns a wrong client type
 

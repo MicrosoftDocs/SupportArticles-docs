@@ -3,7 +3,8 @@ title: Permission issues in Business Central cloud migration
 description: Fixes the Operation on target NotifyBusinessCentral failed or you don't have permission to create or run scheduled tasks error in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
-ms.date: 05/16/2024
+ms.date: 05/20/2024
+ms.custom: sap:Migration\NAV and BC On-premise
 ---
 # Permission issues in Business Central cloud migration
 

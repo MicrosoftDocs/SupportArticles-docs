@@ -3,7 +3,8 @@ title: Invalid database connection string provided error
 description: Provides a resolution for the Invalid database connection string error in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
-ms.date: 05/13/2024
+ms.date: 05/20/2024
+ms.custom: sap:Migration\NAV and BC On-premise
 ---
 # "Invalid database connection string provided" error in Business Central cloud migration
 

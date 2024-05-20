@@ -3,7 +3,8 @@ title: Data replication issues or errors in Business Central cloud migration
 description: Resolves issues that might occur during the data replication process in Business Central cloud migration.
 ms.author: jswymer 
 ms.reviewer: jswymer 
-ms.date: 05/13/2024
+ms.date: 05/20/2024
+ms.custom: sap:Migration\NAV and BC On-premise
 ---
 # Self-hosted Integration Runtime is offline or a database operation fails in Business Central cloud migration
 

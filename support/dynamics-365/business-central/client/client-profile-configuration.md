@@ -1,8 +1,8 @@
 ---
 title: Profile configuration can't be started
 description: Provides troubleshooting steps to solve the personalization could not be started error during profile configuration in Dynamics 365 Business Central.
-ms.custom: 
-ms.date: 05/16/2024
+ms.custom: sap:Migration\NAV and BC On-premise, sap:Client\Web Client or Browser
+ms.date: 05/20/2024
 ms.reviewer: solsen
 author: SusanneWindfeldPedersen
 ms.author: solsen

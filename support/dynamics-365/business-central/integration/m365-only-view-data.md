@@ -3,7 +3,8 @@ title: You can only view data error when sharing a link in Teams
 description: Provides a resolution for an issue where users get an error message that states that they can only view data when you share a link in Microsoft Teams as a Business Central user. 
 ms.author: mikebc
 ms.reviewer: jswymer
-ms.date: 05/16/2024
+ms.date: 05/20/2024
+ms.custom: sap:Migration\NAV and BC On-premise, sap:Integration\Teams
 ---
 # "You can only view data in Microsoft Teams" error in Business Central
 

@@ -3,7 +3,8 @@ title: Activity times out in Business Central cloud migration
 description: Provides troubleshooting steps for an issue where an activity times out in Business Central cloud migration.
 ms.author: jswymer
 ms.reviewer: jswymer 
-ms.date: 05/17/2024
+ms.date: 05/20/2024
+ms.custom: sap:Migration\NAV and BC On-premise
 ---
 # An activity times out in Business Central cloud migration
 
