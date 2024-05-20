@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where users get an error message
 ms.author: mikebc
 ms.reviewer: jswymer
 ms.date: 05/20/2024
-ms.custom: sap:Migration\NAV and BC On-premise, sap:Integration\Teams
+ms.custom: sap:Integration\Teams
 ---
 # "You can only view data in Microsoft Teams" error in Business Central
 
