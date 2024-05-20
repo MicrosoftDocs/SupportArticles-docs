@@ -77,7 +77,7 @@ To learn more about how throttling at the share level or storage account level c
 To confirm whether your share or storage account is being throttled, you can access and use Azure metrics in the portal. You can also create alerts that will notify you if a share is being throttled or is about to be throttled. See [Troubleshoot Azure Files by creating alerts](/azure/storage/files/files-troubleshoot-create-alerts).
 
 > [!IMPORTANT]
-> For standard storage accounts with large file shares (LFS) enabled, throttling occurs at the account level. For premium file shares and standard file shares without LFS enabled, throttling occurs at the share level.
+> For standard storage accounts, throttling occurs at the storage account level. For premium file shares, throttling occurs at the share level.
 
 1. In the Azure portal, go to your storage account.
 
