@@ -47,8 +47,6 @@
       href: ./teams-conferencing/cvi-info-does-not-populate-in-meet-now.md
     - name: Dialing out requires five or more digits 
       href: ./teams-conferencing/teams-call-requires-five-or-more-digits.md
-    - name: Dial pad is missing
-      href: ./teams-conferencing/no-dial-pad.md
     - name: Give Control doesn't work
       href: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
     - name: Organizer can't start Outlook meeting and stuck in virtual lobby
