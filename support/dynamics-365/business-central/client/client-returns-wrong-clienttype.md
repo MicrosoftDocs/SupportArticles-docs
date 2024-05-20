@@ -5,7 +5,7 @@ ms.date: 05/20/2024
 ms.reviewer: solsen
 author: SusanneWindfeldPedersen
 ms.author: solsen
-ms.custom: sap:Migration\NAV and BC On-premise, sap:Client\Mobile Apps
+ms.custom: sap:Client\Mobile Apps
 ---
 # A Business Central client returns a wrong client type
 
