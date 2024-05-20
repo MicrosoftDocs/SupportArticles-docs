@@ -6,10 +6,8 @@ metadata:
   author: genlin
   ms.topic: article
   ms.service: app-service
-  ms.date: 10/30/2018
+  ms.date: 04/16/2024
   ms.author: genli
-  ms.custom: seodec18
-    
 title: Azure App Service on Linux FAQ
 summary: |
 
@@ -25,7 +23,7 @@ sections:
       - question: |
           I want to fork the built-in Docker containers that the platform provides. Where can I find those files?
         answer: |
-          You can find all Docker files on [GitHub](https://github.com/Azure-App-Service/ImageBuilder).
+          You can find all Docker files on [GitHub](https://github.com/Azure/app-service-quickstart-docker-images).
                     
       - question: |
           What are the expected values for the Startup File section when I configure the runtime stack?

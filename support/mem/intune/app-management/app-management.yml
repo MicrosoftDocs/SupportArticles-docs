@@ -8,7 +8,7 @@ metadata:
   description: Documentation for troubleshooting common issues with app management in Intune
   ms.service: microsoft-intune 
   ms.topic: landing-page
-  ms.date: 12/27/2021
+  ms.date: 12/05/2023
 
 landingContent:
   - title: Troubleshoot app installation

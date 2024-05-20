@@ -2,10 +2,10 @@
 title: Configure intermediate certificates in Internet Information Services (IIS)
 description: Describes how to configure intermediate certificates on a computer that's running IIS for server authentication.
 ms.date: 03/27/2020
-ms.custom: sap:WWW authentication and authorization
+ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
 ms.reviewer: Mlaing, lprete
 ms.topic: how-to
-ms.technology: iis-www-authentication-authorization
+ms.subservice: www-authentication-authorization
 ---
 # Configure intermediate certificates on a computer that's running IIS for server authentication
 

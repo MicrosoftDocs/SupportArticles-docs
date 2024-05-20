@@ -1,23 +1,19 @@
 ---
 title: Clients fail to apply group policy at startup
 description: Helps fix an issue where Windows 7 Clients intermittently fail to apply group policy at startup.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-client-group-policy
+ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 ---
 # Windows 7 Clients intermittently fail to apply group policy at startup
 
 This article provides a solution to an issue where Windows 7 Clients intermittently fail to apply group policy at startup.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 2421599
 
 ## Symptoms

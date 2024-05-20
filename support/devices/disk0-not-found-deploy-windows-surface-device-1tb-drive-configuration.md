@@ -5,7 +5,6 @@ ms.date: 05/12/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: surface
 localization_priority: medium
 ms.reviewer: delhan, v-lianna
 ms.custom: csstroubleshoot

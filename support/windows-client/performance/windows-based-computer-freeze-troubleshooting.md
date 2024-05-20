@@ -1,16 +1,12 @@
 ---
 title: Windows-based computer freeze troubleshooting
 description: Learn how to troubleshoot computer freeze issues on Windows-based computers and servers. Also, you can learn how to diagnose, identify, and fix these issues.
-ms.date: 03/10/2023
-ms.prod: windows-client
-ms.technology: windows-client-performance
+ms.date: 05/10/2024
 ms.topic: troubleshooting
-author: aczechowski
-ms.author: aaroncz
 manager: dcscontentpm
 ms.collection: highpri
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.reviewer: dougeby
+ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.reviewer: dougeby, ntuttle,aaroncz
 audience: itpro
 localization_priority: medium
 ---
@@ -182,7 +178,7 @@ If the physical computer is still running in a frozen state, follow these steps 
 
         - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl\NMICrashDump`
 
-            On some physical servers, if the NMICrashDump registry entry exists and its value is **1**, you may take advantage of the NMI from the remote management provider such as DRAC, iLo, and RSA.
+            On some physical servers, if the `NMICrashDump` registry entry exists and its value is **1**, you may take advantage of the NMI from the remote management provider such as DRAC, iLo, and RSA.
 
         - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PagingFiles and ExistingPageFiles`
 
@@ -239,7 +235,10 @@ Debug-VM -Name "VM Name" -InjectNonMaskableInterrupt -ComputerName Hostname
 
 #### VMware
 
-You can use VMware snapshots or suspend state and extract a memory dump file equivalent to a complete memory dump file. Use VMware's [Checkpoint To Core Tool (vmss2core)](https://flings.vmware.com/vmss2core) to convert both suspend (`.vmss`) and snapshot (`.vmsn`) state files to a dump file. Then analyze the file by using the standard Windows debugging tools.
+You can use VMware snapshots or suspend state and extract a memory dump file equivalent to a complete memory dump file. Use VMware's [Checkpoint To Core Tool (vmss2core)](https://kb.vmware.com/s/article/2003941) to convert both suspend (`.vmss`) and snapshot (`.vmsn`) state files to a dump file. Then analyze the file by using the standard Windows debugging tools.
+
+> [!NOTE]
+> When working with Microsoft Support, you should use VMware's [Checkpoint To Core Tool (vmss2core)](https://kb.vmware.com/s/article/2003941) to convert VMware snapshots to a dump file before uploading them to Microsoft. If you experience any issues with the snapshot conversion, contact VMware for support.
 
 #### Citrix XenServer
 
@@ -249,6 +248,10 @@ The memory dump process occurs by pressing the Right Ctrl+Scroll Lock+Scroll Loc
 
 On a Windows Server, you may not have enough free disk space to generate a complete memory dump file on the system volume.
 
-There's a second option if the system drive doesn't have sufficient space. You can use the DedicatedDumpFile registry entry. For more information, see [Configure the destination path for a memory dump](/windows-server/administration/server-core/server-core-memory-dump#step-2-configure-the-destination-path-for-a-memory-dump).
+There's a second option if the system drive doesn't have sufficient space. You can use the `DedicatedDumpFile` registry entry. For more information, see [Configure the destination path for a memory dump](/windows-server/administration/server-core/server-core-memory-dump#step-2-configure-the-destination-path-for-a-memory-dump).
 
 For more information, see [How to use the DedicatedDumpFile registry value to overcome space limitations on the system drive](/archive/blogs/ntdebugging/how-to-use-the-dedicateddumpfile-registry-value-to-overcome-space-limitations-on-the-system-drive-when-capturing-a-system-memory-dump).
+
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

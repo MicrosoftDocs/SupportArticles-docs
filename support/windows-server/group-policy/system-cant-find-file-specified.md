@@ -1,29 +1,24 @@
 ---
 title: Fail to use Adprep with /gpprep argument
 description: Discusses errors that occur when you use the Adprep tool together with the /gpprep argument.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 04/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # Adprep /gpprep error (The system cannot find the file specified), or tool crashes
 
 This article provides a solution to errors that occur when you use the Adprep tool together with the `/gpprep` argument.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2743345
 
 ## Symptoms
 
-You use the Adprep tool together with the `/gpprep` argument in Windows Server 2012 R2. For example, you run the following arguments:
-  
+You use the Adprep tool together with the `/gpprep` argument in Windows Server. For example, you run the following arguments:  
 `adprep.exe /domainprep /gpprep`
 
 When you do this, you receive the following error:
@@ -52,7 +47,7 @@ Check the log file ADPrep.log in the C:\Windows\debug\adprep\logs\20120809082547
 > Adprep encountered a Win32 error.  
 Error code: 0x2 Error message: The system cannot find the file specified.
 
-If you use the Adprep.exe that is included with Windows Server 2012 R2, Adprep.exe crashes, and you receive an error that resembles the following:
+If you use the Adprep.exe that is included with Windows Server, Adprep.exe crashes, and you receive an error that resembles the following:
 
 > Nt5DS has stopped working
 >
@@ -113,5 +108,4 @@ Notes
 - Gpprep was introduced in Windows Server 2003.
 - Disjoint namespaces aren't a Microsoft best practice.
 
-For more information about Disjoint Namespace support and limitations in AD DS, go to the following Microsoft TechNet website:  
-[https://technet.microsoft.com/library/cc731125(v=WS.10).aspx](https://technet.microsoft.com/library/cc731125%28v=ws.10%29.aspx)
+For more information about Disjoint Namespace support and limitations in AD DS, see [Disjoint Namespace](/windows-server/identity/ad-ds/plan/disjoint-namespace).

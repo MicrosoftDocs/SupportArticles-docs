@@ -1,23 +1,19 @@
 ---
 title: Wrong error message for missing .adml files
 description: Provides a solution to an issue where wrong error messages are returned when .adml files are missing.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 04/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # Wrong error message for missing .adml files
 
 This article provides a solution to an issue where wrong error messages are returned when .adml files are missing.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2688272
 
 ## Symptoms

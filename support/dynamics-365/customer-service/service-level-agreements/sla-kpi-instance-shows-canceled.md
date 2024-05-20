@@ -4,6 +4,7 @@ description: Provides a resolution for the issue that occurs when you define the
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 06/28/2023
+ms.custom: sap:Service Level Agreements
 ---
 # The SLA KPI instance status shows as Canceled
 

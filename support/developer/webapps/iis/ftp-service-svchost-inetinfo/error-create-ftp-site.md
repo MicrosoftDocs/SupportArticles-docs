@@ -2,9 +2,9 @@
 title: Error when you create FTP site
 description: This article provides help to solve an issue where an error occurs when you create an FTP site in Internet Information Services.
 ms.date: 07/17/2020
-ms.custom: sap:FTP Service and Svchost or Inetinfo Process Operation
+ms.custom: sap:FTP Administration and Management\FTP logging and messages
 ms.reviewer: kaorif, mlaing
-ms.technology: iis-ftp-service-svchost-inetinfo
+ms.subservice: ftp-service-svchost-inetinfo
 ---
 # Error occurs when you create an FTP site in Internet Information Services
 

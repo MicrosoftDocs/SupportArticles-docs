@@ -4,8 +4,8 @@ description: Provides resolutions for issues related to the wrap feature in Powe
 ms.reviewer: sitaramp
 ms.author: arijitba
 author: arijitba
-ms.date: 12/11/2023
-ms.custom: has-azure-ad-ps-ref
+ms.date: 03/04/2024
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
 
@@ -43,7 +43,7 @@ For more information, see [Create Azure key vault for wrap in Power Apps](/power
 
 #### Step 4: Try again if you have all the proper configurations
 
-If your wrap build still fails after you've verified that your wrap project has all the proper configurations, reach out to <pamobsup@microsoft.com>. For details, see the [Other issues in wrap](#other-issues-in-wrap-for-power-apps) section of this article.
+If your wrap build still fails after you've verified that your wrap project has all the proper configurations, see the [Other issues in wrap](#other-issues-in-wrap-for-power-apps) section of this article.
 
 ## Issue 2 - Wrap button is disabled for my app
 
@@ -73,7 +73,7 @@ If you can't sign in to your wrapped mobile app, verify that:
 - Your Microsoft Entra app is properly configured.
 - All API permissions for the app have been added correctly. For more information about how to see and configure API permissions for the app, see the following screenshot and [Configure API Permissions](/power-apps/maker/common/wrap/wrap-how-to#step-4-register-app).
 
-  :::image type="content" source="media/wrap-issues/api-permissions.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/wrap-issues/api-permissions.png":::
+  :::image type="content" source="media/wrap-issues/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/wrap-issues/api-permissions-2.png":::
 
 - The `Add-AdminAllowedThirdPartyApps` script has run successfully. For more information, see [Allow registered apps in your environment](/power-apps/maker/common/wrap/how-to).
 - Your Microsoft Entra app type is **Multitenant**. Under your Microsoft Entra app's **Authentication** tab, the supported account type should be **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)**.
@@ -88,6 +88,8 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | Error code      | Description          |
 | ------------- |-------------|
 |1000118    | Default subscription not found, or missing access permissions|
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. Make sure that your Azure key vault is in your tenant's **Default subscription**.
 2. Run these commands in PowerShell as an admin:
@@ -238,7 +240,11 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 ## Other issues in wrap for Power Apps
 
-For all other issues, or if your issue persists after following these steps, reach out to <pamobsup@microsoft.com>. You need to provide a repro video, screenshots, or both, and a session ID that can be get in the following ways:
+For all other issues, or if your issue persists after following these steps, see [Next steps](#next-steps) later in this article to report the issue through a support request. You need to provide a repro video, screenshots, or both, and a session ID that can be get in the following ways:
 
 - On the sign-in screen, go to the lower right corner to select the gear icon, and then select **Session Details**.
 - After you open the app, tap and hold on the screen, and then select **Session Details**.
+
+## Next steps
+
+If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). For more information, see [Get Help + Support](/power-platform/admin/get-help-support).

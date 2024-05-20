@@ -32,7 +32,7 @@ ORDER BY r.cpu_time DESC
 If queries aren't driving the CPU at this moment, you can run the following statement to look for historical CPU-bound queries:
 
 ```sql
-SELECT TOP 10 st.text AS batch_text,
+SELECT TOP 10  qs.last_execution_time, st.text AS batch_text,
     SUBSTRING(st.TEXT, (qs.statement_start_offset / 2) + 1, ((CASE qs.statement_end_offset WHEN - 1 THEN DATALENGTH(st.TEXT) ELSE qs.statement_end_offset END - qs.statement_start_offset) / 2) + 1) AS statement_text,
     (qs.total_worker_time / 1000) / qs.execution_count AS avg_cpu_time_ms,
     (qs.total_elapsed_time / 1000) / qs.execution_count AS avg_elapsed_time_ms,

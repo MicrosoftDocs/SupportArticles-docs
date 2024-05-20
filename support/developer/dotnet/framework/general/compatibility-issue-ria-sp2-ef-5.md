@@ -3,7 +3,6 @@ title: Compatibility when you use RIA V1.0 and EF 5
 description: Works around a problem in which your application may meet unpredictable behavior.
 ms.date: 05/11/2020
 ms.reviewer: enamulkh
-ms.technology: dotnet-general
 ---
 # Compatibility issue when you use RIA Services V1.0 SP2 together with Entity Framework 5
 

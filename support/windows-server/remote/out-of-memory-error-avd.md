@@ -1,17 +1,13 @@
 ---
 title: Out of memory error when connecting to Azure Virtual Desktop
 description: Troubleshoot connection error when trying to connect to Azure Virtual Desktop with the web client.
-ms.date: 11/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, elluthra, helohr, femila, v-lianna
-ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
 ---
 # "Out of memory" error when connecting to Azure Virtual Desktop
 
@@ -27,4 +23,4 @@ This issue may also be happening because you're using an N SKU without a media f
 
 ## Authentication issues when TLS 1.2 not enabled
 
-Authentication issues can also happen when your client hasn't enabled TLS 1.2. To learn how to enable TLS 1.2 on a compatible client, see [Enable TLS 1.2 on client or server operating systems](../../azure/active-directory/enable-support-tls-environment.md#enable-tls-12-on-client-or-server-operating-systems-).
+Authentication issues can also happen when your client hasn't enabled TLS 1.2. To learn how to enable TLS 1.2 on a compatible client, see [Enable TLS 1.2 on client or server operating systems](../../azure/entra-id/ad-dmn-services/enable-support-tls-environment.md#enable-tls-12-on-client-or-server-operating-systems-).

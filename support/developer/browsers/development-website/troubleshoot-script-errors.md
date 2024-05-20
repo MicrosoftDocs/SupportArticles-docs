@@ -3,6 +3,7 @@ title: Script errors in Internet Explorer
 description: A script error occurs in Internet Explorer, the webpage cannot be displayed correctly and you receive an error message.
 ms.date: 06/09/2020
 ms.reviewer: 
+ms.custom: sap:Development and Website Issues
 ---
 # How to troubleshoot script errors in Internet Explorer
 
@@ -179,4 +180,3 @@ To resolve this issue, follow the steps in [Fix printer problems in Windows 7 an
 If you can't print or preview a webpage in Internet Explorer, see the following article:
 
 [Unable to print or view the print preview of a webpage in Internet Explorer](https://support.microsoft.com/help/973479).
-

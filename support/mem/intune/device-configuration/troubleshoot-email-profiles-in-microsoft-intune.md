@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot common issues with email profiles in Microsoft Intune
 description: See common issues and solutions to issues with email profiles in Microsoft Intune, including duplicate email profiles and errors on Samsung KNOX Standard Android devices.
-ms.date: 10/07/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, tscott
 search.appverid: MET150
+ms.custom: sap:Configure Devices - iOS\Device features
 ---
 # Troubleshooting common issues with email profiles in Microsoft Intune
 

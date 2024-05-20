@@ -1,13 +1,11 @@
 ---
 title: Kerberos authentication troubleshooting guidance
 description: Provides guidance to troubleshoot Kerberos authentication issues.
-ms.date: 05/10/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-ms.technology: windows-server-security
-ms.custom:sap: kerberos-authentication, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika, raviks, v-lianna
 ---

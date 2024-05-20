@@ -2,8 +2,8 @@
 title: Errors occur when you use Web Deploy
 description: This article provides resolutions for the unexpected error that occurs when you perform Web Deploy operations remotely through IIS Manager and use WMSVC.
 ms.date: 04/01/2020
-ms.custom: sap:Deployment and migration
-ms.technology: iis-deployment-migration
+ms.custom: sap:Deployment and Migration\Windows Management Service (WMSVC)
+ms.subservice: deployment-migration
 ---
 # Errors when you use the Web Deployment tool as a delegated user over a remote IIS manager connection
 
@@ -53,4 +53,4 @@ Below are some of the common issues that may be met in this scenario:
 
 - [Web Deployment Tool](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd568996(v=ws.10))
 - [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler)
-- [Taking an Application Offline before Publishing](/iis/publish/deploying-application-packages/taking-an-application-offline-before-publishing)
+- [Taking Web Applications Offline with Web Deploy](/aspnet/web-forms/overview/deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy)

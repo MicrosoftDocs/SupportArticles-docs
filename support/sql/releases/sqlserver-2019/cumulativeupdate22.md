@@ -23,6 +23,8 @@ This article describes Cumulative Update package 22 (CU22) for Microsoft SQL Ser
 
 ## Known issues in this update
 
+### Access violation when session is reset
+
 SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 
 - 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
@@ -60,7 +62,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2330261>[2330261](#2330261) </a> | Fixes an assertion dump issue (Location: sebind.h:1206; Expression: bufferLen >= colLen) that you encounter when running an `INSERT` statement against the table that has the **nvarchar(n)** column as an index column.| SQL Server Engine| SQL Server Engine |All |
 | <a id=2497934>[2497934](#2497934) </a> | Fixes a latch time-out issue that you might encounter in the ghost cleanup process or version cleaner when there's a long chain of Index Allocation Map (IAM) pages for a table. | SQL Server Engine| SQL Server Engine |All |
 | <a id=2332831>[2332831](#2332831) </a> | Fixes an issue in which running `DBCC CHECKTABLE` may create snapshot files, even if a user fails the table-level permission check. | SQL Server Engine| Storage Management| All|
-| <a id=2126481>[2126481](#2126481) </a> | Fixes a dump issue that you may encounter when resuming an index rebuild that includes partitions. | SQL Server Engine| Table Index Partition | All|
+| <a id=2126481>[2126481](#2126481) </a> | Fixes an access violation dump issue that you might encounter when resuming an index rebuild that includes partitions (for example, `ALTER INDEX [index_name] ON [schema].[TableName] RESUME WITH ( MAX_DURATION = 1, MAXDOP = 1 )`). | SQL Server Engine| Table Index Partition | All|
 | <a id=2491768>[2491768](#2491768) </a> | Fixes an issue in which the number of the Log Writer threads is inconsistent when the SQL Server instance is affinitized to a subset of NUMA nodes. | SQL Server Engine|Transaction Services |All |
 
 ## How to obtain or download this or the latest cumulative update package

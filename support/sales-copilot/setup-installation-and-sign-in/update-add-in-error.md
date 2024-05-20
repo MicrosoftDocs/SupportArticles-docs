@@ -2,10 +2,10 @@
 title: Add-in update error in Copilot for Sales for Outlook
 description: Resolves an error message that repeatedly prompts users to update Microsoft Copilot for Sales add-in for Microsoft Outlook.
 ms.date: 01/10/2024
-ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
+ms.custom: sap:Setup, Installation and Sign-in\Sales Copilot Outlook Add-In Installation
 ---
 # Add-in update error in Copilot for Sales add-in for Microsoft Outlook
 

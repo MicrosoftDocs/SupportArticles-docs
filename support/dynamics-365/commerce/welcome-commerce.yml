@@ -9,21 +9,11 @@ metadata:
   ms.service: dynamics-365-commerce
   author: bstorie
   ms.author: brstor
-  ms.date: 10/07/2023
+  ms.date: 02/01/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-  # Card
-  - title: Commerce headquarters operations
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Customer records don't appear in Commerce headquarters
-            url: commerce-headquarters-operations/customer-record-not-appearing.md
-          - text: Order summary subtotal doesn't include taxes on charges when using customized order summary modules
-            url: commerce-headquarters-operations/summary-taxes-custom-modules-10-0-27.md
-
   # Card
   - title: Customer accounts and loyalty
     linkLists:
@@ -75,6 +65,14 @@ landingContent:
             url: financial-statements/z-report-issues.md
           - text: Statement posting errors due to unavailable inventory or update conflicts
             url: financial-statements/inventory-errors-posting.md
+
+  # Card
+  - title: Globalization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot issues with digital certificates for fiscal integration
+            url: globalization/fiscal-integration-certificate.md
 
   # Card
   - title: Order management
@@ -133,23 +131,3 @@ landingContent:
         links:
           - text: Price change tracking issues
             url: pricing-discounts-taxes/price-track-issues.md
-
- # Card
-  - title: Ratings and reviews
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Ratings refiner appears when the ratings and reviews solution isn't enabled
-            url: ratings-reviews/hide-ratings-refiner.md
-
-# Card
-  - title: Site builder content management
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Can't configure a security group for Commerce site builder during initial deployment
-            url: site-builder-content-management/security-group-site-builder.md
-          - text: Products and categories are missing after environment copy
-            url: site-builder-content-management/missing-products-categories.md
-          - text: Products and categories don't appear in Commerce site builder after a new site is mapped
-            url: site-builder-content-management/products-categories-unavailable.md

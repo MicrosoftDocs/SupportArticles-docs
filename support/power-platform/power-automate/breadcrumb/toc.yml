@@ -16,3 +16,17 @@
       - name: Power Automate
         tocHref: /troubleshoot/power-platform/power-apps/
         topicHref: /troubleshoot/power-platform/power-automate/welcome-power-automate
+
+  - name: Troubleshoot
+    tocHref: /power-automate/
+    topicHref: /troubleshoot/index
+    items:
+
+    - name: Microsoft Power Platform
+      tocHref: /power-automate/
+      topicHref: /troubleshoot/power-platform/index
+      items:
+
+      - name: Power Automate
+        tocHref: /power-automate/desktop-flows
+        topicHref: /troubleshoot/power-platform/power-automate/welcome-power-automate

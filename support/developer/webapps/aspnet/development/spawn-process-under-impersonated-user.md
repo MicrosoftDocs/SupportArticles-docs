@@ -2,7 +2,7 @@
 title: Spawn process under impersonated user
 description: This article describes how to spawn a process that runs under the context of the impersonated user.
 ms.date: 08/07/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ms.reviewer: earlb
 ms.topic: how-to
 ---
@@ -198,6 +198,6 @@ Microsoft provides programming examples for illustration only, without warranty 
 
 ## References
 
-- [Implement impersonation in an ASP.NET application](/troubleshoot/aspnet/implement-impersonation)
+- [Implement impersonation in an ASP.NET application](implement-impersonation.md)
 
 - [HOW TO: Create a Local Web Server ASP.NET Application](https://support.microsoft.com/help/321748)

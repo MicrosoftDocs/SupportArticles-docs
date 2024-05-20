@@ -3,6 +3,7 @@ title: A button on the command bar is hidden
 description: Fixes an issue in which a button on the command bar is hidden when it should be visible in Microsoft Power Apps.
 ms.reviewer: krgoldie, srihas, tahoon
 ms.date: 09/25/2023
+ms.custom: sap:Configuring model-driven app commands\Command is not shown or hidden as expected
 ---
 # A button on the command bar is hidden when it should be visible in Power Apps
 

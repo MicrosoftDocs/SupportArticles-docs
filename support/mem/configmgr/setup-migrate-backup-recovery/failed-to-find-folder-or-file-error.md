@@ -1,8 +1,9 @@
 ---
 title: Errors when you move a site database
 description: Describes an issue that you receive a Failed to find folder or Failed to find file error when you move a Configuration Manager site database.
-ms.date: 06/01/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Updates and Servicing
 ---
 # Failed to find folder or Failed to find file error when you move a site database
 

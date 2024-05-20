@@ -5,8 +5,6 @@ title: Troubleshoot issues connecting to Financial reporting
 description: Provides a resolution for an issue where you can't connect to Financial reporting in Microsoft Dynamics 365 Finance.
 author: aprilolson
 ms.date: 12/07/2023
-ms.prod: 
-ms.technology: 
 
 # optional metadata
 

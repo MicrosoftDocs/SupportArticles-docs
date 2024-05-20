@@ -2,16 +2,12 @@
 title: DNS Server Cache snooping attacks
 description: Provides a solution to an issue where DNS Server vulnerability to DNS Server Cache snooping attacks.
 ms.date: 01/12/2024
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, jwesth
-ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # DNS Server vulnerability to DNS Server Cache snooping attacks
 

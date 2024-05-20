@@ -2,9 +2,9 @@
 title: Internet Printing fails
 description: This article provides resolutions for the problem where Internet Printing fails if the document to be printed is larger than 29 MB.
 ms.date: 03/19/2020
-ms.custom: sap:Site behavior and performance
+ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing
-ms.technology: iis-site-behavior-performance
+ms.subservice: site-behavior-performance
 ---
 # Internet Printing fails if the document to be printed is larger than 29 MB
 

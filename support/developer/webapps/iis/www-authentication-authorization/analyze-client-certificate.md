@@ -2,10 +2,10 @@
 title: Read and analyze a client certificate
 description: This article introduces how to read some of the interesting features of a certificate.
 ms.date: 03/24/2020
-ms.custom: sap:WWW authentication and authorization
+ms.custom: sap:WWW Authentication and Authorization\SSL client certificates and certificate mapping
 ms.reviewer: cirvin
 ms.topic: how-to
-ms.technology: iis-www-authentication-authorization
+ms.subservice: www-authentication-authorization
 ---
 # Read and analyze a client certificate
 

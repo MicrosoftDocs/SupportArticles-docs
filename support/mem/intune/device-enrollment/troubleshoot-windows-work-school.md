@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot "Set up for work or school" enrollment in Intune
 description: Troubleshoot blocked Microsoft Intune enrollment for Windows devices when the user chooses "Set up for work or school" and signs in with Microsoft Entra ID. The device is recognized as a personal device and the tenant doesn't allow for this device type.
-ms.date: 01/31/2022
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Enroll Device - Windows\Advisory
 ---
 
 # Unblock Windows "Set up for work or school" enrollment
@@ -26,14 +27,10 @@ To fix this issue, you can allow personal enrollment of Windows devices either f
 
 To allow personal device enrollment, sign-in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.
 
-:::image type="content" source="media/troubleshoot-windows-work-school/enrollment-restrictions.png" alt-text="Enrollment device platform restrictions option in Intune.":::
-
 Select **Windows restrictions** > **Create restriction** and give the restriction an informative name. On the **Platform settings** page, make sure to set **Personally owned devices** to **Allow**.
 
 :::image type="content" source="media/troubleshoot-windows-work-school/allow-personal.png" alt-text="Allow personally owned devices in Intune.":::
 
 Assign the restriction to the group(s) you want to let enroll personal devices.
-
-:::image type="content" source="media/troubleshoot-windows-work-school/select-groups.png" alt-text="Assign the restriction to Microsoft Entra groups.":::
 
 Review and create the restriction.

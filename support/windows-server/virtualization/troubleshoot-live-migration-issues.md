@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot live migration issues
 description: Provides information on solving the problem of live migration in windows server 2016.
-ms.date: 08/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 04/05/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: adjudele, cpuckett, kaushika
-ms.custom: sap:live-migration, csstroubleshoot
-ms.technology: hyper-v
+ms.reviewer: adjudele, cpuckett, kaushika, shsadash
+ms.custom: sap:Virtualization and Hyper-V\Migration, csstroubleshoot
 ---
 # Troubleshoot live migration issues
 
@@ -340,6 +336,22 @@ Check the available memory on the destination host.
 
 **Description**
 
+Live migration of "Virtual Machine vm1" failed.
+
+Windows Server 2019 might correctly display `SSBDHardwarePresent` as **True** when you run the following Windows PowerShell cmdlet:
+
+```powershell
+PS C:\> Get-SpeculationControlSettings
+```
+
+On certain processors that have CPU Extension Features set up, after you install the Hyper-V role, the same cmdlet might report `SSBDHardwarePresent` as **False**. Because the features differ between servers, Windows might block live migration.
+
+**Action**
+
+This behavior is a known issue and is resolved in Windows Server 2022. The workaround is to upgrade to Windows Server 2022.
+
+**Description**
+
 Virtual machine migration operation failed at migration Source. Failed to establish a connection with host computer name: No credentials are available in the security package 0x8009030E.
 
 **Action**
@@ -505,6 +517,33 @@ Under RS5, live migration through SMB of all the VMs to a specific node fails on
 **Resolution**
 
 Make sure there's a REG_SZ value ComputerName with the name of the computer in UPPERCASE.
+
+#### Failed to live migrate "Virtual Machine VM1" at migration source "Node1" with error code 0x800705B4
+
+**Description**
+
+After an unexpected shutdown of the Hyper-V node "Node2", live migration of "VM1" from the owner node "Node1" to the destination node "Node2" fails in a Windows Server 2019 (build 17763) Hyper-V cluster. The configuration version of "VM1" is 5.0.
+
+> "Live migration of 'Virtual Machine VM' failed. The virtual machine migration operation for 'VM1' failed at migration source 'Node1'. Failed to receive data for a Virtual Machine migration: This operation returned because the timeout period expired. (0x800705B4).  
+
+**Action**
+
+Check if any symbolic links are left on the destination node "Node2" where the unexpected shutdown occurred.
+
+If there are symbolic links of VMs left on the destination node, delete them.
+
+**Workaround**
+
+To work around this issue, use one of the following methods before a live migration:
+
+- Delete symbolic links on the destination node "Node2" by using quick migrations.
+
+  1. Run a quick migration from the owner node "Node1" to the destination node "Node2".
+  2. Run a quick migration from "Node2" to "Node1".
+
+- Upgrade the configuration version.   
+
+To use `.vmcx` files instead of `.xml` files for management, upgrade the virtual machine version. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server).
 
 ## Event ID 20413
 

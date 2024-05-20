@@ -2,6 +2,7 @@
 title: How to prevent caching in Internet Explorer
 description: This article describes how to use HTTP headers to control the caching of Web pages in Internet Explorer.
 ms.date: 02/27/2020
+ms.custom: sap:Connectivity and Navigation
 ---
 # How to prevent caching in Internet Explorer
 

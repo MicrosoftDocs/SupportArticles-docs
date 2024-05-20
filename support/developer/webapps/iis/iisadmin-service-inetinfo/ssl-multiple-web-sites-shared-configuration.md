@@ -2,9 +2,9 @@
 title: Set up SSL on multiple web sites
 description: This article talks about setting multiple site bindings and SSL in shared configuration in IIS 7.0 and IIS 7.5.
 ms.date: 04/16/2020
-ms.custom: sap:IISAdmin service and Inetinfo process operation
+ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
 ms.topic: how-to
-ms.technology: iis-iisadmin-service-inetinfo
+ms.subservice: iisadmin-service-inetinfo
 ---
 # Set up SSL on multiple web sites in IIS with shared configuration
 

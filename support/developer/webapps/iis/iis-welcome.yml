@@ -5,7 +5,7 @@ summary: Welcome to Internet Information Services troubleshooting. These article
 metadata:
   title: Internet Information Services troubleshooting
   description: Landing page for Internet Information Services troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: iis  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: iis  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: padmajayaraman  
   ms.author:  v-jayaramanp

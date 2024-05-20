@@ -1,14 +1,10 @@
 ---
 title: Stop error 7B or Inaccessible_Boot_Device troubleshooting
 description: Learn how to troubleshoot Stop error 7B or Inaccessible_Boot_Device. This error might occur after some changes are made to the computer.
-ms.date: 03/10/2023
-ms.prod: windows-client
+ms.date: 05/10/2024
 ms.topic: troubleshooting
-author: dansimp
-ms.author: dansimp
 manager: dcscontentpm
-ms.technology: windows-client-performance
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ms.reviewer: dansimp
 audience: itpro
 localization_priority: medium

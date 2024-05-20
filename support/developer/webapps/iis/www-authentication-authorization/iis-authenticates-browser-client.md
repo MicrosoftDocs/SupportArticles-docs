@@ -2,9 +2,9 @@
 title: IIS authenticates browser clients
 description: This article describes how IIS authenticates browser clients.
 ms.date: 12/11/2020
-ms.custom: sap:WWW Authentication and Authorization
+ms.custom: sap:WWW Authentication and Authorization\Windows Authentication
 ms.topic: how-to
-ms.technology: iis-www-authentication-authorization
+ms.subservice: www-authentication-authorization
 ---
 # IIS authenticates browser clients
 

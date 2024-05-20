@@ -148,8 +148,6 @@
     href: ./framework/general/timeout-when-application-calls-poll-method.md
   - name: Use AssemblyVersion and AssemblyFileVersion
     href: ./framework/general/assembly-version-assembly-file-version.md
-  - name: Warning when service references are added
-    href: ./framework/general/warning-add-service-reference-silverlight.md
   - name: Windows Forms applications don't release memory
     href: ./framework/general/winform-app-use-settooltip-not-release-memory.md
   - name: WCF net.tcp services stop responding
@@ -183,8 +181,6 @@
     href: ./framework/installation/clickonce-app-install-launch-fail.md
   - name: Setup diagnostics
     href: ./framework/installation/setup-diagnostics.md
-  - name: Setup fails when rollback is disabled
-    href: ./framework/installation/enable-rollback-continue-setup.md
 
 - name: WCF
   items:

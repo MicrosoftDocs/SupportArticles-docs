@@ -2,7 +2,7 @@
 title: WEDU reoffers downloaded updates
 description: This article provides a resolution for the issue where Windows Embedded Developer Update for Windows Embedded Standard 7 (WES7) Service Pack 1 (SP1) reoffers updates that were already downloaded and seemingly imported to a distribution share (DS).
 ms.date: 08/27/2020
-ms.technology: windows-hardware-general
+ms.subservice: general
 ---
 # Windows Embedded Developer Update reoffers updates that were already downloaded in Windows Embedded 7
 

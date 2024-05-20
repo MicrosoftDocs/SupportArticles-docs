@@ -1,17 +1,13 @@
 ---
 title: Create and manage Central Store
 description: Describes how to create a Central Store on a domain controller to store and replicate registry-based policies for Windows.
-ms.date: 07/27/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 04/11/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-client-group-policy
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # How to create and manage the Central Store for Group Policy Administrative Templates in Windows
 
@@ -44,8 +40,10 @@ _Original KB number:_ &nbsp; 3087759
 
 To view ADMX spreadsheets of the new settings that are available in later operating system versions, see the following spreadsheets:
 
-- [Group Policy Settings Reference Spreadsheet for Windows 10 November 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103668)
+- [Group Policy Settings Reference Spreadsheet for Windows 11 2023 Update (23H2)](https://www.microsoft.com/download/details.aspx?id=105668)
 - [Group Policy Settings Reference Spreadsheet for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103506)
+- [Group Policy Settings Reference Spreadsheet for Windows 10 November 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103668)
+- [Group Policy Settings Reference Spreadsheet for Windows 10 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104678)
 
 ## Overview
 
@@ -113,16 +111,15 @@ You can also use this setting to:
 - Issue 1
 
   After you copy the Windows 10 .admx templates to the sysvol folder Central Store and overwrite all existing .admx and .adml files, select the **Policies** node under **Computer Configuration** or **User Configuration**. In this situation, you may receive the following error message:
-
+  
   > Namespace 'Microsoft.Policies.Sensors.WindowsLocationProvider' is already defined as the target namespace for another file in the store.  
   > File  
-  > \\\\<forest.root>\SysVol\<forest.root>\Policies\PolicyDefinitions\Microsoft-Windows-Geolocation-WLPAdm.admx, line 5, column 110
-
+  > \\\\<forest.root>\SysVol<forest.root>\Policies\PolicyDefinitions\Microsoft-Windows-Geolocation-WLPAdm.admx, line 5, column 110
+  
   > [!NOTE]
   > In the path in this message, **<forest.root>** represents the domain name.
-
   To resolve this problem, see ["'Microsoft.Policies.Sensors.WindowsLocationProvider' is already defined" error when you edit a policy in Windows](https://support.microsoft.com/help/3077013).
-
+  
 - Issue 2
 
   Updated ADMX/L files for Windows 10 version 1803 contain only SearchOCR.ADML. It is not compatible with an older release of SearchOCR.ADMX that you still have in the Central Store. For more information about the problem, see ["Resource '$(string ID=Win7Only)' referenced in attribute displayName could not be found" error when you open gpedit.msc in Windows](https://support.microsoft.com/help/4292332).

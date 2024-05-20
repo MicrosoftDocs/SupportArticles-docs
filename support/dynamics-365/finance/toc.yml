@@ -1,118 +1,127 @@
 - name: Dynamics 365 Finance
   href: welcome-finance.yml
+- name: Budgeting
   items:
-    - name: Budgeting
+    - name: Frequently asked questions about position budgeting
+      href: budgeting/position-budgeting-set-up-issues.md
+- name: Business intelligence, reporting, analytics
+  items:
+    - name: Business performance analytics self-help
+      href: business-performance-analytics/business-performance-analytics-self-help-overview.md
+    - name: Decimal auto rounding ERR00012
+      href: business-performance-analytics/decimal-auto-rounding-err00012.md
+    - name: Decimal limit exceeded ERR00011 
+      href: business-performance-analytics/decimal-limit-exceed-err00011.md
+    - name: Entity dataframe counts differ between prejoin and postjoin ERR00009
+      href: business-performance-analytics/entity-dataframe-counts-err00009.md
+    - name: Missing fiscal calendar for GL ERR00001
+      href: business-performance-analytics/missing-fiscal-calendar-for-general-ledger-err00001.md
+    - name: Missing fiscal calendar for budget ERR00002
+      href: business-performance-analytics/missing-fiscal-calendar-for-budget-err00002.md
+    - name: Missing main account in budget ERR00003 
+      href: business-performance-analytics/missing-main-account-in-budget-err00003.md
+    - name: Missing main account in general ledger ERR00010
+      href: business-performance-analytics/missing-main-account-in-gl-err00010.md
+    - name: Missing journal entries ERR00004 
+      href: business-performance-analytics/missing-journal-entries-err00004.md
+    - name: Mismatch between debits and credits ERR00005 
+      href: business-performance-analytics/mismatch-between-debits-and-credits-err00005.md
+    - name: Missing budget data ERR00006 
+      href: business-performance-analytics/missing-budget-data-err00006.md
+    - name: Missing budget transaction header ERR00007
+      href: business-performance-analytics/missing-budget-transaction-header-err00007.md
+    - name: Missing foreign key reference ERR00008
+      href: business-performance-analytics/missing-foreign-key-err0008.md
+- name: Cash and bank management
+  items:
+    - name: Troubleshoot issues with transactions that can't be settled
+      href: cash-bank-management/settlement-overview-resolve-issues.md
+- name: Finance insights
+  items:
+    - name: Troubleshoot Finance insights setup issues
+      href: finance-insights/finance-insights-troubleshooting-faq.md
+- name: Financial reporting and management reporter
+  items:
+    - name: Troubleshoot issues opening Report Designer
+      href: financial-reporting/issues-open-report-designer.md
+    - name: Troubleshoot report designer issues with Event Viewer
+      href: financial-reporting/troubleshoot-report-designer-with-event-viewer.md
+    - name: '"Unable to Connect to the Financial reporting server" error'
+      href: financial-reporting/unable-to-connect-financial-reporting-server.md
+- name: General ledger
+  items:
+    - name: A custom Excel template for financial journals isn't available on the menu
+      href: general-ledger/custom-excel-template-financial-journals-not-available.md
+    - name: Can't reverse a transaction
+      href: general-ledger/cant-reverse-transactions.md
+    - name: Can't post a journal due to imbalance
+      href: general-ledger/posting-fail-imbalance.md
+    - name: How to change the accounting or reporting currency
+      href: general-ledger/add-change-accounting-reporting-currency.md
+    - name: Troubleshoot issues with the General ledger adjustments page
+      href: general-ledger/ledger-adjustments-troubleshoot.md
+    - name: Vouchers aren't reversed when posting a journal with reversing entry and date
+      href: general-ledger/vouchers-not-reversed-posting-journal.md
+    - name: Year-end close missing opening balances
+      href: general-ledger/year-end-close-miss-opening-balances.md
+- name: Tax
+  items:
+    - name: Tax Calculation service
       items:
-        - name: Frequently asked questions about position budgeting
-          href: budgeting/position-budgeting-set-up-issues.md
-    - name: Business intelligence, reporting, analytics
+        - name: Error 400 or 401 when setting Dataverse virtual table visibility
+          href: tax/cannot-set-dataverse-virtual-table-visibility.md
+        - name: '"Failed to access tax service" error'
+          href: tax/tcs-troubleshooting-failed-access-tax-service.md
+        - name: How to enable debug mode in Tax Calculation
+          href: tax/tcs-troubleshooting-enable-debug-mode.md
+        - name: '"No matching result could be found" error'
+          href: tax/tcs-troubleshooting-no-matching-result.md
+        - name: Tax features list is empty in Tax calculation parameters
+          href: tax/tcs-troubleshooting-tax-feature-list-empty-tax-calculation-parameter.md
+        - name: '"Tax code cannot be determined" error'
+          href: tax/tcs-troubleshooting-tax-code-cannot-be-determined.md
+    - name: Sales tax
       items:
-        - name: Business performance analytics self-help
-          href: business-performance-analytics/business-performance-analytics-self-help-overview.md
-        - name: Missing fiscal calendar for GL ERR00001
-          href: business-performance-analytics/missing-fiscal-calendar-for-general-ledger-err00001.md
-        - name: Missing fiscal calendar for budget ERR00002
-          href: business-performance-analytics/missing-fiscal-calendar-for-budget-err00002.md
-        - name: Missing main account in budget ERR00003 
-          href: business-performance-analytics/missing-main-account-in-budget-err00003.md
-        - name: Missing journal entries ERR00004 
-          href: business-performance-analytics/missing-journal-entries-err00004.md
-        - name: Mismatch between debits and credits ERR00005 
-          href: business-performance-analytics/mismatch-between-debits-and-credits-err00005.md
-        - name: Missing budget data ERR00006 
-          href: business-performance-analytics/missing-budget-data-err00006.md
-        - name: Missing budget transaction header ERR00007
-          href: business-performance-analytics/missing-budget-transaction-header-err00007.md
-    - name: Cash and bank management
+        - name: Incorrect field value in TaxTrans
+          href: tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect.md
+        - name: Tax isn't calculated or the tax amount is zero
+          href: tax/sales-tax-troubleshooting-tax-not-calculated-amount-zero.md
+        - name: Tax calculation performance affects transactions
+          href: tax/sales-tax-troubleshooting-tax-calculation-bad-performance.md
+        - name: TaxTrans record isn't created
+          href: tax/sales-tax-troubleshooting-taxtrans-record-not-generated.md
+        - name: Tax is posted to the wrong ledger account in the voucher
+          href: tax/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account.md
+        - name: Voucher isn't created on Voucher transactions
+          href: tax/sales-tax-troubleshooting-voucher-not-generated.md
+    - name: India
       items:
-        - name: Troubleshoot issues with transactions that can't be settled
-          href: cash-bank-management/settlement-overview-resolve-issues.md
-    - name: Finance insights
-      items:
-        - name: Troubleshoot Finance insights setup issues
-          href: finance-insights/finance-insights-troubleshooting-faq.md
-    - name: Financial reporting and management reporter
-      items:
-        - name: Troubleshoot issues opening Report Designer
-          href: financial-reporting/issues-open-report-designer.md
-        - name: Troubleshoot report designer issues with Event Viewer
-          href: financial-reporting/troubleshoot-report-designer-with-event-viewer.md
-        - name: '"Unable to Connect to the Financial reporting server" error'
-          href: financial-reporting/unable-to-connect-financial-reporting-server.md
-    - name: General ledger
-      items:
-        - name: A custom Excel template for financial journals isn't available on the menu
-          href: general-ledger/custom-excel-template-financial-journals-not-available.md
-        - name: Can't reverse a transaction
-          href: general-ledger/cant-reverse-transactions.md
-        - name: Can't post a journal due to imbalance
-          href: general-ledger/posting-fail-imbalance.md
-        - name: How to change the accounting or reporting currency
-          href: general-ledger/add-change-accounting-reporting-currency.md
-        - name: Troubleshoot issues with the General ledger adjustments page
-          href: general-ledger/ledger-adjustments-troubleshoot.md
-        - name: Vouchers aren't reversed when posting a journal with reversing entry and date
-          href: general-ledger/vouchers-not-reversed-posting-journal.md
-        - name: Year-end close missing opening balances
-          href: general-ledger/year-end-close-miss-opening-balances.md
-    - name: Tax
-      items:
-        - name: Tax Calculation service
-          items:
-            - name: Error 400 or 401 when setting Dataverse virtual table visibility
-              href: tax/cannot-set-dataverse-virtual-table-visibility.md
-            - name: '"Failed to access tax service" error'
-              href: tax/tcs-troubleshooting-failed-access-tax-service.md
-            - name: How to enable debug mode in Tax Calculation
-              href: tax/tcs-troubleshooting-enable-debug-mode.md
-            - name: '"No matching result could be found" error'
-              href: tax/tcs-troubleshooting-no-matching-result.md
-            - name: Tax features list is empty in Tax calculation parameters
-              href: tax/tcs-troubleshooting-tax-feature-list-empty-tax-calculation-parameter.md
-            - name: '"Tax code cannot be determined" error'
-              href: tax/tcs-troubleshooting-tax-code-cannot-be-determined.md
-        - name: Sales tax
-          items:
-            - name: Incorrect field value in TaxTrans
-              href: tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect.md
-            - name: Tax isn't calculated or the tax amount is zero
-              href: tax/sales-tax-troubleshooting-tax-not-calculated-amount-zero.md
-            - name: Tax calculation performance affects transactions
-              href: tax/sales-tax-troubleshooting-tax-calculation-bad-performance.md
-            - name: TaxTrans record isn't created
-              href: tax/sales-tax-troubleshooting-taxtrans-record-not-generated.md
-            - name: Tax is posted to the wrong ledger account in the voucher
-              href: tax/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account.md
-            - name: Voucher isn't created on Voucher transactions
-              href: tax/sales-tax-troubleshooting-voucher-not-generated.md
-        - name: India
-          items:
-            - name: Activating the setoff rule takes a long time
-              href: tax/apac-ind-gst-troubleshooting-setoff-rule-activate-take-long-time.md
-            - name: Default value in tax information fields isn't as expected
-              href: tax/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected.md
-            - name: Field values are incorrect on the GSTR report
-              href: tax/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result.md
-            - name: Field value is incorrect in an invoice journal or voucher
-              href: tax/apac-ind-gst-troubleshooting-invoice-journal-wrong.md
-            - name: How to open the designer for the current tax configuration
-              href: tax/apac-ind-gst-troubleshooting-open-designer-current-used-tax-configuration.md
-            - name: Ledger account in the voucher is incorrect
-              href: tax/apac-ind-gst-troubleshooting-ledger-account-voucher-wrong.md
-            - name: Records and fields don't show on the GSTR report
-              href: tax/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report.md
-            - name: Setoff rule error when running a tax settlement
-              href: tax/apac-ind-gst-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance.md
-            - name: Troubleshoot issues with tax engine (GTE)
-              href: tax/troubleshoot-tax-engine-gte-issues.md
-            - name: The calculated tax amount is incorrect
-              href: tax/apac-ind-gst-troubleshooting-tax-amount-wrong-after-calculation.md
-            - name: Tax configuration errors
-              href: tax/apac-ind-gst-troubleshooting-tax-configuration-errors.md
-            - name: Tax isn't calculated on tax documents
-              href: tax/apac-ind-gst-troubleshooting-tax-not-calculated.md
-            - name: TaxTrans or voucher isn't generated
-              href: tax/apac-ind-gst-troubleshooting-taxtrans-or-voucher-not-generated.md
-            - name: Tax transaction ID is incorrect
-              href: tax/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect.md
+        - name: Activating the setoff rule takes a long time
+          href: tax/apac-ind-gst-troubleshooting-setoff-rule-activate-take-long-time.md
+        - name: Default value in tax information fields isn't as expected
+          href: tax/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected.md
+        - name: Field values are incorrect on the GSTR report
+          href: tax/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result.md
+        - name: Field value is incorrect in an invoice journal or voucher
+          href: tax/apac-ind-gst-troubleshooting-invoice-journal-wrong.md
+        - name: How to open the designer for the current tax configuration
+          href: tax/apac-ind-gst-troubleshooting-open-designer-current-used-tax-configuration.md
+        - name: Ledger account in the voucher is incorrect
+          href: tax/apac-ind-gst-troubleshooting-ledger-account-voucher-wrong.md
+        - name: Records and fields don't show on the GSTR report
+          href: tax/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report.md
+        - name: Setoff rule error when running a tax settlement
+          href: tax/apac-ind-gst-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance.md
+        - name: Troubleshoot issues with tax engine (GTE)
+          href: tax/troubleshoot-tax-engine-gte-issues.md
+        - name: The calculated tax amount is incorrect
+          href: tax/apac-ind-gst-troubleshooting-tax-amount-wrong-after-calculation.md
+        - name: Tax configuration errors
+          href: tax/apac-ind-gst-troubleshooting-tax-configuration-errors.md
+        - name: Tax isn't calculated on tax documents
+          href: tax/apac-ind-gst-troubleshooting-tax-not-calculated.md
+        - name: TaxTrans or voucher isn't generated
+          href: tax/apac-ind-gst-troubleshooting-taxtrans-or-voucher-not-generated.md
+        - name: Tax transaction ID is incorrect
+          href: tax/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect.md
 

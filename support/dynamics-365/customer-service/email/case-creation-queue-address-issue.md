@@ -4,6 +4,7 @@ description: Provides a workaround for the issue where case creation fails when 
 ms.reviewer: sdas
 ms.author: shchaur
 ms.date: 05/23/2023
+ms.custom: sap:E-Mail\Case isn't getting created with record creation rule
 ---
 # Case creation fails with "Case is missing" error
 

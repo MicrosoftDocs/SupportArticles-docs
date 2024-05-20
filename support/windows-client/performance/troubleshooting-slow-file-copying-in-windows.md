@@ -1,17 +1,13 @@
 ---
 title: Troubleshooting slow file copying in Windows
 description: Troubleshoots the issue that file copy is slow.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-client-performance
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
 ---
 # Troubleshooting slow file copying in Windows
 

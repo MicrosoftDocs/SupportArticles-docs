@@ -1,23 +1,19 @@
 ---
 title: Troubleshoot SCECLI 1202 events
 description: Describes ways to troubleshoot and to resolve SCECLI 1202 events.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 05/07/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.reviewer: kaushika, esolomou
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # Troubleshoot SCECLI 1202 events
 
 This article describes ways to troubleshoot and to resolve SCECLI 1202 events.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client  
 _Original KB number:_ &nbsp; 324383
 
 ## Summary
@@ -41,7 +37,7 @@ To troubleshoot this issue, follow these steps:
     1. Start Registry Editor.
     2. Locate and then select the following registry subkey:
 
-        `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{827D319E-6EAC-11D2-A4EA-00C04F7 9F83A}`  
+        `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{827D319E-6EAC-11D2-A4EA-00C04F79F83A}`  
 
     3. On the **Edit** menu, select **Add Value**, and then add the following registry value:
 
@@ -54,7 +50,7 @@ To troubleshoot this issue, follow these steps:
 2. Refresh the policy settings to reproduce the failure. To refresh the policy settings, type the following command at the command prompt, and then press ENTER:
 
     ```console
-    secedit /refreshpolicy machine_policy /enforce
+    gpupdate /target:computer /force
     ```
 
     This command creates a file that is named *Winlogon.log* in the `%SYSTEMROOT%\Security\Logs` folder.
@@ -91,7 +87,7 @@ To troubleshoot this issue, follow these steps:
 
     It identifies GPT00002.inf as the cached security template from the problem Group Policy object (GPO) that contains the problem setting. It also identifies the problem setting as SeInteractiveLogonRight. The display name for SeInteractiveLogonRight is *Logon locally*.
 
-    For a map of the constants (for example, SeInteractiveLogonRight) to their display names (for example, Logon locally), see the Microsoft Windows 2000 Server Resource Kit, Distributed Systems Guide. The map is in the **User Rights** section of the Appendix.
+    For a map of the constants (for example, SeInteractiveLogonRight) to their display names (for example, Logon locally), see [User Rights Assignment](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment).
 
 5. Determine which GPO contains the problem setting. Search the cached security template that you identified in step 4 for the text `GPOPath=`. In this example, you would see:
 
@@ -99,21 +95,15 @@ To troubleshoot this issue, follow these steps:
 
     {6AC1786C-016F-11D2-945F-00C04FB984F9} is the GUID of the GPO.
 
-6. To find the friendly name of the GPO, use the Resource Kit utility Gpotool.exe. Type the following command at the command prompt, and then press ENTER:
+6. To find the friendly name of the GPO, use the PowerShell cmdlet [Get-GPO -Guid](/powershell/module/grouppolicy/get-gpo) on a domain controller (DC) or a server with Active Directory (AD) Remote Server Administrator Tools (RSAT) tools installed.
 
-    ```console
-    gpotool /verbose
-    ```
-
-    Search the output for the GUID that you identified in step 5. The four lines that follow the GUID contain the friendly name of the policy. For example:
-
-    ```output
-    Policy {6AC1786C-016F-11D2-945F-00C04FB984F9}
-    Policy OK
-    Details:
-    ------------------------------------------------------------
-    DC: domcntlr1.wingtiptoys.com
-    Friendly name: Default Domain Controllers Policy
+    The friendly name of the GPO shows next to the `DisplayName` field:
+   
+    ```powershell
+    Get-GPO -Guid 6AC1786C-016F-11D2-945F-00C04FB984F9
+    DisplayName : Default Domain Controllers Policy
+    DomainName : contoso.com
+    Owner : CONTOSO\Domain Admins
     ```
 
 Now you've identified the problem account, the problem setting, and the problem GPO. To resolve the problem, remove or replace the problem entry.
@@ -129,7 +119,7 @@ To troubleshoot this issue, follow these steps:
     1. Start Registry Editor.
     2. Locate and then select the following registry subkey:
 
-        `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{827D319E-6EAC-11D2-A4EA-00C04F7 9F83A}`
+        `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{827D319E-6EAC-11D2-A4EA-00C04F79F83A}`
   
     3. On the **Edit** menu, select **Add Value**, and then add the following registry value:
 
@@ -142,7 +132,7 @@ To troubleshoot this issue, follow these steps:
 2. Refresh the policy settings to reproduce the failure. To refresh the policy settings, type the following command at the command prompt, and then press ENTER:
 
     ```console
-    secedit /refreshpolicy machine_policy /enforce
+    gpupdate /target:computer /force
     ```
 
     This command creates a file that's named *Winlogon.log* in the `%SYSTEMROOT%\Security\Logs` folder.
@@ -179,7 +169,7 @@ To troubleshoot this issue, follow these steps:
 
     It identifies GPT00002.inf as the cached security template from the problem GPO that contains the problem setting. It also identifies the problem setting as SeInteractiveLogonRight. The display name for SeInteractiveLogonRight is *Logon locally*.
 
-    For a map of the constants (for example, SeInteractiveLogonRight) to their display names (for example, Logon locally), see the Windows 2000 Server Resource Kit, Distributed Systems Guide. The map is in the **User Rights** section of the Appendix.
+    For a map of the constants (for example, SeInteractiveLogonRight) to their display names (for example, Logon locally), see [User Rights Assignment](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment).
 
 5. Determine which GPO contains the problem setting. Search the cached security template that you identified in step 4 for the text `GPOPath=`. In this example, you would see:
 
@@ -187,21 +177,15 @@ To troubleshoot this issue, follow these steps:
 
     {6AC1786C-016F-11D2-945F-00C04FB984F9} is the GUID of the GPO.
 
-6. To find the friendly name of the GPO, use the Resource Kit utility Gpotool.exe. Type the following command at the command prompt, and then press ENTER:
+6. To find the friendly name of the GPO, use the PowerShell cmdlet [Get-GPO -Guid](/powershell/module/grouppolicy/get-gpo) on a DC or a server with AD RSAT tools installed.
+
+    The friendly name of the GPO shows next to the `DisplayName` field:
 
     ```console
-    gpotool /verbose
-    ```
-
-    Search the output for the GUID you identified in step 5. The four lines that follow the GUID contain the friendly name of the policy. For example:
-
-    ```output
-    Policy {6AC1786C-016F-11D2-945F-00C04FB984F9}
-    Policy OK
-    Details:
-    ------------------------------------------------------------
-    DC: domcntlr1.wingtiptoys.com
-    Friendly name: Default Domain Controllers Policy
+    Get-GPO -Guid 6AC1786C-016F-11D2-945F-00C04FB984F9
+    DisplayName : Default Domain Controllers Policy
+    DomainName : contoso.com
+    Owner : CONTOSO\Domain Admins
     ```
 
 You have now identified the problem account, the problem setting, and the problem GPO. To resolve the problem, search the Restricted Groups section of the security policy for instances of the problem account (in this example, MichaelPeltier), and then remove or replace the problem entry.
@@ -217,7 +201,7 @@ To troubleshoot this issue, follow these steps:
     1. Start Registry Editor.
     2. Locate and then select the following registry subkey:
 
-        `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{827D319E-6EAC-11D2-A4EA-00C04F7 9F83A}` 
+        `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{827D319E-6EAC-11D2-A4EA-00C04F79F83A}` 
     3. On the **Edit** menu, select **Add Value**, and then add the following registry value:
         - Value name: ExtensionDebugLevel
         - Data type: DWORD
@@ -227,7 +211,7 @@ To troubleshoot this issue, follow these steps:
 2. Refresh the policy settings to reproduce the failure. To refresh the policy settings, type the following command at the command prompt, and then press ENTER:
 
     ```console
-    secedit /refreshpolicy machine_policy /enforce
+    gpupdate /target:computer /force
     ```
 
     This command creates a file that is named *Winlogon.log* in the `%SYSTEMROOT%\Security\Logs` folder.
@@ -243,7 +227,7 @@ To troubleshoot this issue, follow these steps:
 4. Find out which policy or which policies are trying to modify the service permissions. To do so, type the following command at the command prompt, and then press ENTER:
 
     ```console
-    find /i "service" %SYSTEMROOT%\security\templates\policies\gpt*.*".
+    find /i "service" %SYSTEMROOT%\security\templates\policies\gpt*.*
     ```
 
     Below is a sample command and its output:
@@ -266,21 +250,15 @@ To troubleshoot this issue, follow these steps:
     `GPOPath={6AC1786C-016F-11D2-945F-00C04FB984F9}\MACHINE`
 
     {6AC1786C-016F-11D2-945F-00C04FB984F9} is the GUID of the GPO.
-6. To find the friendly name of the GPO, use the Resource Kit utility Gpotool.exe. Type the following command at the command prompt, and then press ENTER:
+6. To find the friendly name of the GPO, use the PowerShell cmdlet [Get-GPO -Guid](/powershell/module/grouppolicy/get-gpo) on a DC or a server with AD RSAT tools installed.
 
-    ```console
-    gpotool /verbose
-    ```
+   The friendly name of the GPO shows next to the `DisplayName` field:
 
-    Search the output for the GUID that you identified in step 5. The four lines that follow the GUID contain the friendly name of the policy. For example:
-
-    ```output
-    Policy {6AC1786C-016F-11D2-945F-00C04FB984F9}
-    Policy OK
-    Details:
-    ------------------------------------------------------------
-    DC: domcntlr1.wingtiptoys.com
-    Friendly name: Default Domain Controllers Policy
+   ```console
+    Get-GPO -Guid 6AC1786C-016F-11D2-945F-00C04FB984F9
+    DisplayName : Default Domain Controllers Policy
+    DomainName : contoso.com
+    Owner : CONTOSO\Domain Admins
     ```
 
 Now you have identified the service with the misconfigured permissions and the problem GPO. To resolve the problem, search the System Services section of the security policy for instances of the service with the misconfigured permissions. And then take corrective action to grant the System account Full Control permissions to the service.
@@ -294,7 +272,7 @@ The 0x4b8 error is generic and can be caused by many different problems. To trou
     1. Start Registry Editor.
     2. Locate and then select the following registry subkey:
 
-        `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{827D319E-6EAC-11D2-A4EA-00C04F7 9F83A}`
+        `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{827D319E-6EAC-11D2-A4EA-00C04F79F83A}`
   
     3. On the **Edit** menu, select **Add Value**, and then add the following registry value:
         - Value name: ExtensionDebugLevel
@@ -305,7 +283,7 @@ The 0x4b8 error is generic and can be caused by many different problems. To trou
 2. Refresh the policy settings to reproduce the failure. To refresh the policy settings, type the following command at the command prompt, and then press ENTER:
 
     ```console
-    secedit /refreshpolicy machine_policy /enforce
+    gpupdate /target:computer /force
     ```
 
     This command creates a file that is named Winlogon.log in the `%SYSTEMROOT%\Security\Logs` folder.

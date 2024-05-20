@@ -2,7 +2,7 @@
 title: Custom pages and components failed to load with SDK script error
 description: Describes an issue in which custom pages, the Microsoft 365 app launcher, or Power Apps components don't load.
 ms.reviewer: rashb
-ms.topic: troubleshooting
+ms.custom: sap:App Creation (Canvas App)
 ms.date: 10/21/2021
 ms.author: rashb
 ---

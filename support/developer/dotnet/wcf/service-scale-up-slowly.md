@@ -3,7 +3,7 @@ title: WCF service may scale up slowly under load
 description: This article provides resolutions for the error that occurs where WCF service may scale up slowly under load.
 ms.date: 08/24/2020
 ms.reviewer: davidlam, smason
-ms.technology: dotnet-wcf
+ms.custom: sap:WCF
 ---
 # WCF service may scale up slowly under load
 

@@ -2,8 +2,8 @@
 title: FtpPutFile always returns success
 description: This article provides resolutions for the problem where the WinInet FtpPutFile returns TRUE even when the operation fails with 451 status.
 ms.date: 03/23/2020
-ms.custom: sap:Site behavior and performance
-ms.technology: iis-site-behavior-performance
+ms.custom: sap:Site Behavior and Performance
+ms.subservice: site-behavior-performance
 ---
 # WinINet FtpPutFile returns success when 451 status is returned
 

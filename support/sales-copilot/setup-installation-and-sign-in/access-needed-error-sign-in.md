@@ -2,9 +2,9 @@
 title: Access needed error when signing in to Dynamics 365 
 description: Resolves the Access needed error in Microsoft Copilot for Sales when a user is either disabled or not a member of any business unit in Microsoft Dynamics 365.
 ms.date: 01/10/2024
-ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
+ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
 ---
 # "Access needed" error when signing in to Dynamics 365 
 

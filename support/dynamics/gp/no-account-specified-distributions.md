@@ -1,9 +1,10 @@
 ---
 title: No account specified for distributions
 description: Provides a solution to an error that occurs when posting transactions in Payables Management or Receivables Management.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # "No account has been specified for one or more distributions." Error message when posting transactions in Payables Management or Receivables Management
 

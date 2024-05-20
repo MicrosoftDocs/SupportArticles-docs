@@ -1,20 +1,18 @@
 ---
 title: Missing journal entries error
-description: Provides information about the Missing journal entries error (error code ERR00004) in business performance analytics in Microsoft Dynamics 365 Finance.
+description: Provides information about the Missing journal entries error (error code ERR00004) in Business performance analytics in Microsoft Dynamics 365 Finance.
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 12/07/2023
-ms.prod: 
-ms.technology:
-ms.custom:
+ms.date: 04/30/2024
+ms.custom: sap:Business intelligence, reporting, analytics
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
 # Missing journal entries: Error code: ERR00004 - [Type: Warning]
 
 > [!NOTE]
-> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
+> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [Business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
 
 ## Symptoms
 
@@ -22,7 +20,7 @@ Error code *ERR00004* is logged in the **Bpa self help logs** table in Microsoft
 
 ## Resolution
 
-No immediate action is required, because this issue might be caused by a delay in data synchronization. We recommend that you observe the next few business performance analytics runs to see whether the issue is fixed.
+No immediate action is required, because this issue might be caused by a delay in data synchronization. We recommend that you observe the next few Business performance analytics runs to see whether the issue is fixed.
 
 If the issue persists, confirm that the entries are in the General journal entry table in Dynamics 365 Finance. If the records are in the table, contact Microsoft Support for further assistance.
 

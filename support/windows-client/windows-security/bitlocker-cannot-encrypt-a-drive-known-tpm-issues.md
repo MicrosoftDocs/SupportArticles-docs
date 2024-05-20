@@ -1,14 +1,12 @@
 ---
 title: 'BitLocker cannot encrypt a drive: known TPM issues'
 description: Provides guidance for troubleshooting known issues that may prevent BitLocker Drive Encryption from encrypting a drive, and that you can attribute to the TPM.
-ms.date: 11/21/2022
+ms.date: 12/26/2023
 ms.reviewer: kaushika, v-tappelgate
-ms.technology: windows-client-security
-ms.prod: windows-client
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---

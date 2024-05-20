@@ -1,0 +1,10 @@
+- name: Azure Synapse Analytics Serverless SQL Pool
+  href: welcome-synapse-analytics-serverless-sql.yml
+- name: Performance tuning guidance for serverless SQL pool
+  href: query-perf/ssql-perf-optimize-querying.md
+- name: Troubleshoot issues with CREATE EXTERNAL TABLE AS SELECT serverless SQL pools
+  href: query-perf/ssql-perf-cetas.md
+- name: Manage your costs on serverless SQL pool
+  href: query-perf/ssql-perf-optimize-cost.md
+- name: Troubleshooting Synapse Link for serverless SQL pool
+  href: query-perf/ssql-perf-optimize-synapse-link.md

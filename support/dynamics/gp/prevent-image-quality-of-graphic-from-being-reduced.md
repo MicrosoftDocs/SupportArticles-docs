@@ -1,9 +1,10 @@
 ---
 title: Prevent image quality of a graphic from being reduced
 description: How to prevent the image quality of a graphic from being reduced when you print a graphic from Report Writer in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to prevent the image quality of a graphic from being reduced when you print a graphic from Report Writer in Microsoft Dynamics GP
 

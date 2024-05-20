@@ -2,8 +2,8 @@
 title: Request Restrictions can't be set for ISAPI
 description: This article provides resolutions for the problem where the Request Restrictions functionality not working for Wildcard ISAPI extension.
 ms.date: 04/17/2020
-ms.custom: sap:WWW modules and features
-ms.technology: iis-www-modules-features
+ms.custom: sap:WWW Modules and Features\Handler mappings and ISAPI extensions
+ms.subservice: www-modules-features
 ms.reviewer: pphadke, wadeh, bariscag
 ---
 # Request Restrictions can't be set for a wildcard ISAPI in IIS 7.0 and later versions

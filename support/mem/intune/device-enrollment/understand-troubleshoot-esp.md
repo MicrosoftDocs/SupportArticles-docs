@@ -4,9 +4,9 @@ description: General troubleshooting guide for the Enrollment Status Page (ESP) 
 author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, ybao
-ms.date: 12/23/2021
+ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Windows enrollment
+ms.custom: sap:Autopilot\ESP - AccountSetup - Apps
 ---
 
 # Troubleshooting the Enrollment Status Page
