@@ -14,7 +14,7 @@ This article provides a resolution for an issue where the personal view queue fi
 
 When you use personal view filters, you might encounter an outdated format of filters and linked entities from the "Queues I'm a member of" filter, and an error message like the following one:
 
-> <Entity ID> Link entity with name or alias S_Internal_<> is not found
+> \<Entity ID> Link entity with name or alias S_Internal_\<account ID> is not found
 
 ## Cause
 
