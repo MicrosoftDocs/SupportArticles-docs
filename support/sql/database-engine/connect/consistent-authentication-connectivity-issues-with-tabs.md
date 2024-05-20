@@ -1,7 +1,7 @@
 ---
 title: Overview of consistent authentication issues in SQL Server
 description: This article discusses consistent authentication issues in SQL Server, related error messages, and solutions to troubleshoot various issues.
-ms.date: 05/15/2024
+ms.date: 05/20/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
@@ -215,11 +215,12 @@ This section lists the issues that are related to the Kerberos authentication:
 
   **Solution:** Remove the HTTP SPNs if Kernel-mode authentication is enabled.
 
-- **Limit delegation rights to Access or Excel** - The Joint Engine Technology (JET) and Access Connectivity Engine (ACE) providers are similar to any of the file systems.
+- **Limit delegation rights to Access or Excel** - The Joint Engine Technology (JET) and Access Connectivity Engine (ACE) providers are similar to any of the file systems. You must use constrained delegation to enable SQL Server to read files that are located on another computer. In general, the ACE provider shouldn't be used in a linked server because this is explicitly not supported. The JET provider is deprecated and is available on 32-bit computers only.
 
-  **Solution:** You must use constrained delegation to enable SQL Server to read files that are located on another computer. In general, the ACE provider shouldn't be used in a linked server because this is explicitly not supported. The JET provider is deprecated and is available on 32-bit computers only.
+  > [!NOTE]
+  > This scenario is no longer supported in Office.
 
-- **Missing SPN** - This scenario might occur if an SPN that's related to a SQL Sever instance is absent. 
+- **Missing SPN** - This scenario might occur if an SPN that's related to a SQL Sever instance is absent.
 
   **Solution:** For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
@@ -369,6 +370,7 @@ This section lists issues that are related to the authentication and access cont
 - **Wrong Internet zone** - This issue might occur if you try to access a website that isn't in the correct Internet zone in Internet Explorer. The credentials won't work if the website is in the local Intranet zone.
 
   **Solution:** Add the web server to IE's local intranet zone.
+
 </details>
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
