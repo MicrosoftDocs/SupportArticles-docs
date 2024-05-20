@@ -124,53 +124,6 @@ To install and run Performance Diagnostics:
 
     A notification is displayed as Performance Diagnostics starts to install. After the installation is completed, you see a notification that indicates that the installation is successful. If the **Run on-demand diagnostics** option is selected, the selected performance analysis scenario is then run for the specified duration. 
 
-## View and manage storage account and stored data
-
-Performance Diagnostics stores all insights and reports in a storage account, which you can [configure for short data retention](/azure/storage/blobs/lifecycle-management-policy-configure) to minimize costs. 
-
-You can use the same storage account for multiple VMs that use Performance Diagnostics. When you change the storage account, the old reports and insights aren't deleted. However, they'll no longer be displayed in the list of diagnostics reports.
-
-> [!NOTE]
-> Performance Diagnostics stores insights in Azure tables and stores reports in a binary large object (BLOB) container.
->
-> If your storage account uses [private endpoints](/azure/storage/common/storage-private-endpoints), to make sure that Performance Diagnostics can store insights and reports in the storage account:
->
-> 1. Create separate private endpoints for Table and BLOB.
-> 1. Add DNS configuration to each separate private endpoint.
-
-### View diagnostics data stored in your account
-
-To view these files:
-
-1. Navigate to your storage account.
-1. Select **Storage browser**.
-
-    ![Screenshot of the storage account screen that shows the Performance Diagnostics insights and report files.](media/performance-diagnostics/performance-diagnostics-storage-browser.png)
-
-    Performance Diagnostics stores reports in a binary large object (BLOB) container, named **azdiagextnresults**, and insights in tables.
-
-    Insights include:
-
-    - All the insights and related information about the run.
-    - An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip**) on Windows and a tar file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz**) on Linux that contains log files.
-    - An HTML report.
- 
-### Change storage accounts
-
-To change storage accounts: 
-
-1. Select the **Settings** toolbar button to change the storage account where the diagnostics insights and output are stored. 
-
-    :::image type="content" source="media/performance-diagnostics/performance-diagnostics-settings.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with the Settings button highlighted." lightbox="media/performance-diagnostics/performance-diagnostics-settings.png":::
-
-    This opens the **Performance diagnostic settings** screen. 
-
-    :::image type="content" source="media/performance-diagnostics/change-storage-settings.png" alt-text="Screenshot of the Performance Diagnostics settings screen on which you can change storage accounts." lightbox="media/performance-diagnostics/change-storage-settings.png":::
-
-1. Select **Change storage account** to select a different storage account.
-
-
-
 ## View insights and reports
 
 This table compares the data provided by Continuous and On-demand Performance Diagnostics. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
@@ -228,6 +181,52 @@ Uninstalling Performance Diagnostics from a VM removes the VM extension but does
 To uninstall Performance Diagnostics, select the **Uninstall** button on the toolbar.
 
 :::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with the Uninstall button highlighted." lightbox="media/performance-diagnostics/uninstall-button.png":::
+
+## View and manage storage account and stored data
+
+Performance Diagnostics stores all insights and reports in a storage account, which you can [configure for short data retention](/azure/storage/blobs/lifecycle-management-policy-configure) to minimize costs. 
+
+You can use the same storage account for multiple VMs that use Performance Diagnostics. When you change the storage account, the old reports and insights aren't deleted. However, they'll no longer be displayed in the list of diagnostics reports.
+
+> [!NOTE]
+> Performance Diagnostics stores insights in Azure tables and stores reports in a binary large object (BLOB) container.
+>
+> If your storage account uses [private endpoints](/azure/storage/common/storage-private-endpoints), to make sure that Performance Diagnostics can store insights and reports in the storage account:
+>
+> 1. Create separate private endpoints for Table and BLOB.
+> 1. Add DNS configuration to each separate private endpoint.
+
+### View diagnostics data stored in your account
+
+To view these files:
+
+1. Navigate to your storage account.
+1. Select **Storage browser**.
+
+    ![Screenshot of the storage account screen that shows the Performance Diagnostics insights and report files.](media/performance-diagnostics/performance-diagnostics-storage-browser.png)
+
+    Performance Diagnostics stores reports in a binary large object (BLOB) container, named **azdiagextnresults**, and insights in tables.
+
+    Insights include:
+
+    - All the insights and related information about the run.
+    - An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip**) on Windows and a tar file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz**) on Linux that contains log files.
+    - An HTML report.
+ 
+### Change storage accounts
+
+To change storage accounts: 
+
+1. Select the **Settings** toolbar button to change the storage account where the diagnostics insights and output are stored. 
+
+    :::image type="content" source="media/performance-diagnostics/performance-diagnostics-settings.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with the Settings button highlighted." lightbox="media/performance-diagnostics/performance-diagnostics-settings.png":::
+
+    This opens the **Performance diagnostic settings** screen. 
+
+    :::image type="content" source="media/performance-diagnostics/change-storage-settings.png" alt-text="Screenshot of the Performance Diagnostics settings screen on which you can change storage accounts." lightbox="media/performance-diagnostics/change-storage-settings.png":::
+
+1. Select **Change storage account** to select a different storage account.
+
 
 ## Frequently asked questions
 
