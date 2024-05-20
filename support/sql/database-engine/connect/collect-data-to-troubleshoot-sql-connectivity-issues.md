@@ -1,7 +1,7 @@
 ---
 title: Data collection methods for SQL connectivity issues
 description: This article provides possible list of questions based on several components that you can use to effectively identify the type of SQL Server connectivity issues and find right resolution.
-ms.date: 05/13/2024
+ms.date: 05/20/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, prmadhes, v-jayaramanp, haiyingyu
@@ -70,7 +70,7 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 The following set of questions are designed to help you find the category into which an issue falls, thus guiding you towards the right direction of troubleshooting. Select each dropdown for related questions.
 
-Before you jump into the asking the specific questions, ensure that all the prerequisites required for the SQL Server connections have been met. For more information on the prerequisites, see ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md).
+Before you jump into the asking the specific questions, make sure that all the prerequisites required for the SQL Server connections have been met. For more information on the prerequisites, see ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md).
 
 <details><summary><b>Broader perspective questions</b></summary>
 
