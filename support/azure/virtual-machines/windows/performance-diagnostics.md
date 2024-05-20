@@ -174,14 +174,6 @@ Select the **Download report** button to download an HTML report that contains r
 > [!NOTE]
 > You can download Performance Diagnostics reports from the **Performance Diagnostics** screen within 30 days after you generate them. After 30 days, you might get an error when you download a report from the **Performance Diagnostics** screen. To get a report after 30 days, go to the storage account and download it from a binary large object (BLOB) container that's named *azdiagextnresults*. You can view the storage account information by using the **Settings** button on the toolbar.
 
-## Uninstall Performance Diagnostics
-
-Uninstalling Performance Diagnostics from a VM removes the VM extension but doesn't affect any diagnostics data in the storage account.
-
-To uninstall Performance Diagnostics, select the **Uninstall** button on the toolbar.
-
-:::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with the Uninstall button highlighted." lightbox="media/performance-diagnostics/uninstall-button.png":::
-
 ## View and manage storage account and stored data
 
 Performance Diagnostics stores all insights and reports in a storage account, which you can [configure for short data retention](/azure/storage/blobs/lifecycle-management-policy-configure) to minimize costs. 
@@ -226,6 +218,14 @@ To change storage accounts:
     :::image type="content" source="media/performance-diagnostics/change-storage-settings.png" alt-text="Screenshot of the Performance Diagnostics settings screen on which you can change storage accounts." lightbox="media/performance-diagnostics/change-storage-settings.png":::
 
 1. Select **Change storage account** to select a different storage account.
+
+## Uninstall Performance Diagnostics
+
+Uninstalling Performance Diagnostics from a VM removes the VM extension but doesn't affect any diagnostics data in the storage account.
+
+To uninstall Performance Diagnostics, select the **Uninstall** button on the toolbar.
+
+:::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance Diagnostics screen toolbar with the Uninstall button highlighted." lightbox="media/performance-diagnostics/uninstall-button.png":::
 
 
 ## Frequently asked questions
