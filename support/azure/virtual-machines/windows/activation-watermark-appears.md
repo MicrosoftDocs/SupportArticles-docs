@@ -82,7 +82,7 @@ If not, it means that somewhere the connection to the IMDS wire server is blocke
 ## Identify if any certificates are missing
 
 > [!NOTE]
-> This step applies to the IMDSCheckUtil powershell version.
+> This step only applies to the IMDSCheckUtil powershell version.
 
 Run the following PowerShell script to check for missing certificates:
 
