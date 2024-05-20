@@ -77,7 +77,7 @@ If you get a successfull response, you will see the metadata information from th
  @{azEnvironment=AzurePublicCloud; customData=; evictionPolicy=; isHostCompatibilityLayerVm=true; licenseType=; location=eastus; name=testWs2022; offer=WindowsServer; ...
  ```
 
-If not, it means that somewhere the connection to the IMDS wire server is blocked and your cx needs to allow the access to it. The IP of the IMDS server is `169.254.169.254`. To fix the connection issue, go to [Solution 1](#solution-1).
+If not, it means that somewhere the connection to the IMDS wire server is blocked and your cx needs to allow the access to it. The IP of the IMDS server is `169.254.169.254`. To fix the connection issue, go to [Solution 1](#solution-1-bypass-web-proxies-within-the-vm).
 
 ## Identify if any certificates are missing
 
@@ -141,7 +141,7 @@ Please refer to the following link to download missing certificates:
 https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains
 ```
 
-To fix the certificate issue, go to [Solution 2](#solution-2).
+To fix the certificate issue, go to [Solution 2](#solution-2-install-kb-5036909-or-certificates).
 
 ## Solution 1: Bypass web proxies within the VM
 
@@ -239,7 +239,7 @@ To fix the certificate issue, go to [Solution 2](#solution-2).
 
 1. If the MAC addresses or the primary private IP addresses aren't identical between Azure and the VM guest OS, use various [route][route-command] commands to update the routing table so that the primary network interface and IP address are targeted.
 
-## Solution 2: Install KB 5036909 or download certificates
+## Solution 2: Install KB 5036909 or certificates
 
 To fix the certificate issue, use one of the following methods:
 
