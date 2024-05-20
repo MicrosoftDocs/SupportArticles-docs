@@ -150,11 +150,14 @@ To change storage accounts:
 
 ## View insights and reports
 
-Continuous diagnostics provides a list of regularly updated continuous insights into affected resources. On-demand diagnostics provides a report each time a diagnostic run is completed. Select **Refresh** to view newly generated continuous diagnostics insights. 
+This table compares the data provided by Continuous and On-demand Performance Diagnostics. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
 
-Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information, plus a report for offline viewing.
-
-For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
+| Feature | Continuous Performance Diagnostics | On-demand Performance Diagnostics |
+|---------|------------------------------------|-----------------------------------|
+| **Availability** | Currently supported only for Windows VMs | Supported for both Windows and Linux VMs |
+| **Insights generated** | Continuous actionable insights into high resource usage, such as high CPU, high memory, and high disk usage | On-demand actionable insights into high resource usage and various system configurations |
+| **Data collection frequency** | Collects data every 5 seconds, updates uploaded every 5 minutes | Collect data on demand for the selected duration of the on-demand run |
+| **Reports generated** | Does not generate a report | Generates a report with comprehensive diagnostics data |
 
 ### View Performance Diagnostics insights
 
@@ -243,14 +246,16 @@ To share a link to the reports compressed file by using Shared Access Signatures
 
 You can also locate the Performance Diagnostics report compressed file by using steps 1–4 in Option 2. Select to download the file, and then share it through email or ask the support engineer for instructions to upload the file.  
 
-### How do I capture the diagnostics data at the correct time?
+### How do I capture diagnostics data at the correct time?
 
-Each Performance Diagnostics run has two stages:
+We recommend you run Continuous Performance Diagnostics, which captures VM diagnostics data on an ongoing basis.
+
+The On-demand Performance Diagnostics run has two stages:
 
 1. Install or update the Performance Diagnostics VM extension.
 1. Run the diagnostics for the specified duration.
 
-Currently there's no easy way to know exactly when the VM extension installation is complete. Generally it takes about 45 seconds to 1 minute to install the VM extension. After the VM extension is installed, you can run your repro steps to have the Performance Diagnostics capture the correct set of data for troubleshooting.
+Currently there's no easy way to know exactly when the VM extension installation is complete. Generally it takes about 45 seconds to 1 minute to install the VM extension. After the VM extension is installed, you can run your repro steps to have the On-deman Performance Diagnostics capture the correct set of data for troubleshooting.
 
 ### Will Peformance Diagnostics continue to work when I move my Azure VM across regions?
 
