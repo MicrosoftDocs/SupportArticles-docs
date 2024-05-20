@@ -175,12 +175,12 @@ To change storage accounts:
 
 This table compares the data provided by Continuous and On-demand Performance Diagnostics. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
 
-| Feature | Continuous Performance Diagnostics | On-demand Performance Diagnostics |
+|  | Continuous Performance Diagnostics | On-demand Performance Diagnostics |
 |---------|------------------------------------|-----------------------------------|
 | **Availability** | Currently supported only for Windows VMs | Supported for both Windows and Linux VMs |
 | **Insights generated** | Continuous actionable insights into high resource usage, such as high CPU, high memory, and high disk usage | On-demand actionable insights into high resource usage and various system configurations |
 | **Data collection frequency** | Collects data every 5 seconds, updates uploaded every 5 minutes | Collect data on demand for the selected duration of the on-demand run |
-| **Reports generated** | Does not generate a report | Generates a report with comprehensive diagnostics data |
+| **Reports generated** | Doesn't generate a report | Generates a report with comprehensive diagnostics data |
 
 ### View Performance Diagnostics insights
 
@@ -264,7 +264,7 @@ The On-demand Performance Diagnostics run has two stages:
 
 Currently there's no easy way to know exactly when the VM extension installation is complete. Generally it takes about 45 seconds to 1 minute to install the VM extension. After the VM extension is installed, you can run your repro steps to have the On-deman Performance Diagnostics capture the correct set of data for troubleshooting.
 
-### Will Peformance Diagnostics continue to work when I move my Azure VM across regions?
+### Will Performance Diagnostics continue to work when I move my Azure VM across regions?
 
 Azure VMs, and related network and storage resources, can be moved across regions by using Azure Resource Mover. However, moving VM extensions across regions isn't supported. For example, moving the Azure Performance Diagnostics VM extension across regions isn't supported. You have to install it manually on the VM in the target region after the VM is moved. For more information, see [Support matrix for moving Azure VMs between Azure regions](/azure/resource-mover/support-matrix-move-region-azure-vm).
 
