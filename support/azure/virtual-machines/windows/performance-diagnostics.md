@@ -23,7 +23,7 @@ ms.author: anandh
 
 Use the Performance Diagnostics tool to identify and troubleshoot performance issues on your Azure virtual machine (VM) in one of two modes: 
 
-- **Continuous diagnostics (preview)** is a lightweight process that collects data at five-second intervals and reports insights about resource usage every five minutes. 
+- **Continuous diagnostics (preview)** collects data at five-second intervals and reports actionable insights about resource usage every five minutes. 
 - **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. 
 
 Performance Diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minize costs. 
