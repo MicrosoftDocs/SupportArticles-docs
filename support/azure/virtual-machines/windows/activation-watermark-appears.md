@@ -248,7 +248,7 @@ To fix the certificate issue, use one of the following methods:
 - Download all the certificates directly from [Root and subordinate certificate authority chains](/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains#root-and-subordinate-certificate-authority-chains) and install them.
   
   > [!NOTE]
-  > - Make sure to select the store location as **Local Machine** in the installation wizard.
+  > Make sure to select the store location as **Local Machine** in the installation wizard.
 
 After that, open the Command Prompt as administrator, navigate to *c:\windows\system32*, and run *fclip.exe*. Restart the VM or sign out the VM and then sign in it, you will see that the watermark on the home page is no longer displayed, and the **Application state** field in the **Settings** > **Activation** screen reports success.
 
