@@ -323,8 +323,6 @@ items:
       href: ./active-directory/group-policy-preparation-isnt-performed.md
     - name: How to upgrade domain controllers
       href: ./active-directory/add-domain-controllers-to-windows-2000-domain.md
-    - name: How to use unattended mode to install and remove AD DS
-      href: ./active-directory/syntax-build-answer-files-unattended-installation-ad-ds.md
     - name: Installing AD DS fails
       href: ./active-directory/installing-ad-ds-fails.md
     - name: Internal error during replication phase of dcpromo
@@ -3293,3 +3291,5 @@ items:
       href: ./support-tools/troubleshoot-issues-process-explorer.md
     - name: Using Task Manager
       href: ./support-tools/support-tools-task-manager.md
+    - name: Using WPR, WPA, or Xperf
+      href: ./support-tools/support-tools-xperf-wpa-wpr.md

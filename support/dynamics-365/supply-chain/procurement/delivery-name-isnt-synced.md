@@ -2,7 +2,7 @@
 title: The delivery name isn't synced after changing a purchase order delivery address
 description: Introduces a by-design behavior where the delivery name isn't synced after you change the delivery address on a purchase order header.
 author: Henrikan
-ms.date: 05/31/2021
+ms.date: 05/16/2024
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac
@@ -10,6 +10,7 @@ ms.search.region: Global
 ms.author: henrikan
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
+ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
 # The delivery name isn't synced after changing a purchase order delivery address
 
