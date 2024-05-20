@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides a workaround for an issue that occurs when you delete Active Directory objects that contain many forward links.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 3149779
 
 ## Summary
@@ -26,7 +26,7 @@ This article discusses an issue that occurs when you delete Active Directory obj
 
 The number of links where you start seeing problems may be as low as 50,000. On a single object, there may be several millions of links.
 
-The registry key that is discussed in this article should be applied only to domain controllers (DCs) and Lightweight Directory Services (LDS) servers that are experiencing the issue that is described in the "Symptoms" section. This issue is likely to occur on Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016 DCs. By following the recommendations that are given here, you may decrease Active Directory replication performance but increase the reliability of correctly processing the deletion of such large objects.
+The registry key that is discussed in this article should be applied only to domain controllers (DCs) and Lightweight Directory Services (LDS) servers that are experiencing the issue that is described in the "Symptoms" section. By following the recommendations that are given here, you may decrease Active Directory replication performance but increase the reliability of correctly processing the deletion of such large objects.
 
 ## Symptoms
 
@@ -101,15 +101,13 @@ By default, when you delete an Active Directory object that has an exceptionally
 While this update is pending, admins may see write conflicts and transaction failure events. Also, as additional objects are processed by replication, more and more version store is allocated because the pending large transaction doesn't release its allocated versions store until the deletion transaction is finished. This can cause version store errors and replication warnings events.
 
 > [!Note]
->
-> - Garbage collection isn't related to the processing of group membership link deletions.
-> - Decreasing TSL isn't a valid method of accelerating link deletions.
-> - The legacy value for **Links process batch size**  is 1,000 in versions before Windows Server 2008 R2. In later versions, the batch size is increased to 10,000 to improve the performance of undeleting in forests that have the Recycle Bin enabled.
-> - Check values of the **Links process batch size** parameter. If it's nondefault, set the value back to its default or an even smaller value such as 1,000 or 100.
->
-> Smaller values decrease version store usage by deleting a smaller number of objects per deleting thereby reducing the total time to perform a single delete transaction. This has the positive side effect of reducing version store and time window for write conflicts while you increase the time that's required to accurately reflect the group membership in the directory.
+- Garbage collection isn't related to the processing of group membership link deletions.
+- Decreasing TSL isn't a valid method of accelerating link deletions.
+> - The legacy value for **Links process batch size** is 1,000 in versions before Windows Server 2008 R2. In later versions, the batch size is increased to 10,000 to improve the performance of undeleting in forests that have the Recycle Bin enabled.
+- Check values of the **Links process batch size** parameter. If it's nondefault, set the value back to its default or an even smaller value such as 1,000 or 100.
 
-Active Directory services check for the following registry key.
+> Smaller values decrease version store usage by deleting a smaller number of objects per deleting thereby reducing the total time to perform a single delete transaction. This has the positive side effect of reducing version store and time window for write conflicts while you increase the time that's required to accurately reflect the group membership in the directory.
+> Active Directory services check for the following registry key.
 
 For AD DS:
 
@@ -144,4 +142,5 @@ If you need assistance from Microsoft support, we recommend you collect the info
 For more information, see the following articles:
 
 - [Introduction to credential roaming](/archive/technet-wiki/11483.windows-credential-roaming)
+
 - [Introduction to Read-Only DCs](https://technet.microsoft.com/library/dd734758%28v=ws.10%29.aspx)
