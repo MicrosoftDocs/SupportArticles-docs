@@ -1,8 +1,8 @@
 ---
 title: Azure Container Instances fails to run GPU-enabled containers
 description: Provides solutions to GPU-enabled Azure container instance deployment failures.
-ms.date: 05/16/2024
-ms.reviewer: v-rekhanain, v-weizhu
+ms.date: 05/20/2024
+ms.reviewer: v-rekhanain, momajed, v-weizhu
 ms.service: container-instances
 ms.custom: sap:Configuration and Setup
 ---
@@ -12,11 +12,14 @@ This article discusses the causes of GPU-enabled Azure container instance deploy
 
 ## Symptoms
 
-When you try to deploy a GPU-enabled container to Azure Container Instances, you receive the following error message:
+When you try to deploy a GPU-enabled container to Azure Container Instances, you encounter the following symptoms:
 
-> Service unavailable. Please try again later or contact support if this problem persists.
+- You receive the following error message:
 
-When the GPU-enabled container deployment fails, if you check the status of your container group, you see that the GPU ACI provisioning state is "Failed" and the error code is "ServiceUnavailable". If you view the logs of your container group, you see that the GPU driver installation failed or timed out.
+  > Service unavailable. Please try again later or contact support if this problem persists.
+
+- When you check the status of your container group, you see that the GPU ACI provisioning state is "Failed" and the error code is "ServiceUnavailable".
+- When you view the logs of your container group, you see that the GPU driver installation failed or timed out.
 
 ## Cause 1: Not enough GPU quota
 
