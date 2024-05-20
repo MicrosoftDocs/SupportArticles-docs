@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes an issue where Active Directory Replications fail with error 8477: "The replication request has been posted; waiting for reply".
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2758780
 
 > [!NOTE]
@@ -28,17 +28,17 @@ The symptoms discussed in this article are commonly related to the occurrence of
 ### Output from repadmin.exe /showreps /verbose may report the replication attempt has failed with error 8477 - "The replication request has been posted; waiting for reply"  
 
 > DC=Contoso,DC=com  
-    Default-First-Site-Name\DomainController via RPC  
-        DSA object GUID: \<source DCs ntds settings object object guid>  
-        Address: \<source DCs ntds settings object object guid>._msdcs.Contoso.Com  
-        DSA invocationID: \<source DCs NTDS DB invocation id>  
-        DO_SCHEDULED_SYNCS WRITEABLE COMPRESS_CHANGES NO_CHANGE_NOTIFICATIONS PREEMPTED  
-        USNs: 1158544/OU, 111052/PU  
-        Last attempt @ \<Date Time> was delayed for a normal reason, result 8477 (0x211d):  
-    The replication request has been posted; waiting for reply.  
-        Last success @ \<Date Time>  
-
-### Output from repadmin.exe /queue may report a large number of queued inbound replication requests and an unprecedentedly long execution time  
+```
+Default-First-Site-Name\DomainController via RPC  
+    DSA object GUID: \<source DCs ntds settings object object guid>  
+    Address: \<source DCs ntds settings object object guid>._msdcs.Contoso.Com  
+    DSA invocationID: \<source DCs NTDS DB invocation id>  
+    DO_SCHEDULED_SYNCS WRITEABLE COMPRESS_CHANGES NO_CHANGE_NOTIFICATIONS PREEMPTED  
+    USNs: 1158544/OU, 111052/PU  
+    Last attempt @ \<Date Time> was delayed for a normal reason, result 8477 (0x211d):  
+The replication request has been posted; waiting for reply.  
+    Last success @ \<Date Time>  
+```### Output from repadmin.exe /queue may report a large number of queued inbound replication requests and an unprecedentedly long execution time  
 
 > Repadmin /queue  
 repadmin running command /queue against server localhost  
@@ -48,12 +48,13 @@ Current task began executing at \<Date Time>.
 Task has been executing for 86 minutes, 12 seconds.  
 >
 > [6485] Enqueued \<Date Time> at priority 590  
-    SYNC FROM SOURCE  
-    NC DC=Contoso,DC=com  
-    DC Default-First-Site-Name\DomainController  
-    DC object GUID \<source DCs ntds settings object object guid>  
-    DC transport addr \<source DCs ntds settings object object guid>._msdcs.Contoso.com  
-  ASYNCHRONOUS_OPERATION WRITEABLE PERIODIC NEVER_NOTIFY PREEMPTED  
+```
+SYNC FROM SOURCE  
+NC DC=Contoso,DC=com  
+DC Default-First-Site-Name\DomainController  
+DC object GUID \<source DCs ntds settings object object guid>  
+DC transport addr \<source DCs ntds settings object object guid>._msdcs.Contoso.com  
+```  ASYNCHRONOUS_OPERATION WRITEABLE PERIODIC NEVER_NOTIFY PREEMPTED  
 
 > [!Note]
 > The occurrence of event 8477 when inbound replication requests are queuing is generally observed following a preempted replication task. This event is indicated by event 8461 - The replication operation was preempted.
@@ -141,11 +142,8 @@ Regarding disk usage, on Active Directory Domain Controllers the Ntds.dit and ed
 
 Low Bandwidth, High Latency, or Busy Network Connectivity may also cause error 8477 to occur on Active Directory Domain Controllers. Network Performance data metrics should be collected from a Domain Controller utilizing Performance Monitor, Network Monitor, or other such tools. Guidance around monitoring and measuring replication traffic is detailed in [Active Directory Replication Traffic](https://technet.microsoft.com/library/bb742457.aspx).
 
-**For Windows Server 2003 based Domain Controllers:**  
-An IT Professional may choose to use Performance Monitor with Processor, Physical Disk, Network Interface, and Directory Services counters added to determine and investigate performance issues on the system. Instead, Server Performance Advisor may reduce the complexity in analyzing performance metrics obtained from Performance Monitor. The tool is a free download and will look at CPU, Network, Memory, and Disk I/O giving detail around overall utilization and a determination as to whether the performance data is seen as idle, normal, or potentially problematic.
-
-**For Windows Server 2008 and above based Domain Controllers:**  
-Performance Monitor in Windows Server 2008 and later includes the key functionality of Server Performance Advisor straight out of the box. Within the System Data Collector Sets, the Active Directory Diagnostics set will, similarly to Server Performance Advisor, produce a report with key metrics for Active Directory Performance investigation and provide warnings for uncharacteristic behavior on Active Directory Domain Controllers. Any warnings are included at the top of the report an example of which is below:  
+  
+Performance Monitor includes the key functionality of Server Performance Advisor straight out of the box. Within the System Data Collector Sets, the Active Directory Diagnostics set will, similarly to Server Performance Advisor, produce a report with key metrics for Active Directory Performance investigation and provide warnings for uncharacteristic behavior on Active Directory Domain Controllers. Any warnings are included at the top of the report an example of which is below:  
 
 |WARNING|</br>|
 |---|---|
@@ -158,26 +156,26 @@ Performance Monitor in Windows Server 2008 and later includes the key functional
 
 ### High rate of change for objects in Active Directory Domain Services (AD DS)  
 
-In a busy Active Directory Environment, a large number of changes may occur to objects between each scheduled replication. If this is expected within the environment, all aspects of the organizations infrastructure should be sized appropriately to ease effective replication.
+In a busy Active Directory Environment, a large number of changes may occur to objects between each scheduled replication. If this is expected within the environment, all aspects of the organization's infrastructure should be sized appropriately to ease effective replication.
 
 In the event that an IT Administrator isn't aware or not expecting a large number of changes and is receiving error 8477, investigation should be conducted to determine what changes are occurring in the environment and whether these are expected or the result of an issue with an application or service. An effective means for performing this task is to determine what objects are changing through the use of the uSNChanged attribute, the highest uSNChanged value on a specific Domain Controller represents the High-Watermark USN.
 
 Running repadmin /showreps /verbose against a domain controller with event 8477 being displayed will show the current High-Watermark and is followed by /OU:
 
 > DC=Contoso,DC=com  
-    Default-First-Site-Name\DomainController via RPC  
-        DSA object GUID: \<source DCs ntds settings object object guid>  
-        Address: \<source DCs ntds settings object object guid>._msdcs.Contoso.Com  
-        DSA invocationID: \<source DCs NTDS DB invocation id>  
-        DO_SCHEDULED_SYNCS WRITEABLE COMPRESS_CHANGES NO_CHANGE_NOTIFICATIONS PREEMPTED  
-        USNs: 1158544/OU, 111052/PU  
-        Last attempt @ \<Date Time> was delayed for a normal reason, result 8477 (0x211d):  
-    The replication request has been posted; waiting for reply.  
-        Last success @ \<Date Time>  
+```
+Default-First-Site-Name\DomainController via RPC  
+    DSA object GUID: \<source DCs ntds settings object object guid>  
+    Address: \<source DCs ntds settings object object guid>._msdcs.Contoso.Com  
+    DSA invocationID: \<source DCs NTDS DB invocation id>  
+    DO_SCHEDULED_SYNCS WRITEABLE COMPRESS_CHANGES NO_CHANGE_NOTIFICATIONS PREEMPTED  
+    USNs: 1158544/OU, 111052/PU  
+    Last attempt @ \<Date Time> was delayed for a normal reason, result 8477 (0x211d):  
+The replication request has been posted; waiting for reply.  
+    Last success @ \<Date Time>  
+```Depending on the number of changes occurring, the highest USN present on a Domain Controller may increment quickly, to determine the objects that are being updated, it's suggested that on the Source Replication Partner, the below command is run for the relevant Naming Context:
 
-Depending on the number of changes occurring, the highest USN present on a Domain Controller may increment quickly, to determine the objects that are being updated, it's suggested that on the Source Replication Partner, the below command is run for the relevant Naming Context:
-
-`Repadmin /showattrDomainControllerNameDC=Contoso,DC=com /subtree /filter:"(uSNChanged>=highestcommitedusn)" /atts:objectclass`
+`Repadmin /showattr DomainControllerName DC=Contoso,DC=com /subtree /filter:"(uSNChanged>=highestcommitedusn)" /atts:objectclass`
 
 Specific Applications or Services, such as the Exchange Recipient Update Service may make regular changes to Active Directory Attributes and may need to be tuned if resulting replication traffic is unmanageable.  
 
@@ -198,8 +196,6 @@ d. Backup Software and Agents
 Linked-value replication isn't available in Windows 2000 Server forests. Because an originating update must be written in a single database transaction, and because the practical limit for a single transaction is 5,000 values, membership of more than 5,000 values isn't supported in Windows 2000 Server Active Directory. A group of this size represents a limitation both for the database write operation that is required to record a change to an attribute of that size and the transfer of that much data over the network. This is different in forests at Windows 2003 or higher functional level where linked-valued replication (LVR) for group memberships is enabled.
 
 When a Domain is upgraded from a 2000 functional level, the memberships of any groups carried are considered legacy and can still cause replication issues:
-
-1. Forests before the 2003 functional level should divide the groups into smaller groups that don't exceed 5,000 members. Group nesting can also be used, providing the applications and services using the groups can support it.
 
 2. Forests at the 2003 functional level can remove and reinstate group members to make them LVR-enabled. Over time, as security principals are added and removed from groups, the members are slowly enabled for LVR
 Note: Events 1479 and 1519 are also commonly logged in the Directory Service Event Log when large groups are causing replication issues and delays.
