@@ -92,27 +92,6 @@ Use the following steps to install the VM Agent in offline mode.
 
 If you created the VM by using the Resource Manager deployment model, you're done.
 
-### Use the ProvisionGuestAgent property for classic VMs
-
-[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
-
-If you created the VM by using the classic model, use the Azure PowerShell module to update the **ProvisionGuestAgent** property. The property informs Azure that the VM has the VM Agent installed.
-
-To set the **ProvisionGuestAgent** property, run the following commands in Azure PowerShell:
-
-   ```powershell
-   $vm = Get-AzureVM –ServiceName <cloud service name> –Name <VM name>
-   $vm.VM.ProvisionGuestAgent = $true
-   Update-AzureVM –Name <VM name> –VM $vm.VM –ServiceName <cloud service name>
-   ```
-
-Then run the `Get-AzureVM` command. Notice that the **GuestAgentStatus** property is now populated with data:
-
-   ```powershell
-   Get-AzureVM –ServiceName <cloud service name> –Name <VM name>
-   GuestAgentStatus:Microsoft.WindowsAzure.Commands.ServiceManagement.Model.PersistentVMModel.GuestAgentStatus
-   ```
-
 ## Next steps
 
 - [Azure Virtual Machine Agent overview](/azure/virtual-machines/extensions/agent-windows)
