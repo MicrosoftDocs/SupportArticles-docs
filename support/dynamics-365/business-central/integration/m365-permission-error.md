@@ -4,7 +4,7 @@ description: Provides a resolution for the Microsoft 365 permission error that o
 ms.author: mikebc
 ms.reviewer: jswymer
 ms.date: 05/20/2024
-ms.custom: sap:Migration\NAV and BC On-premise, sap:Integration\Teams
+ms.custom: sap:Integration\Teams
 ---
 # A permission error occurs even though Microsoft 365 access has been enabled
 
