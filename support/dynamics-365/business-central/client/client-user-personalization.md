@@ -5,7 +5,7 @@ author: SusanneWindfeldPedersen
 ms.author: solsen
 ms.reviewer: solsen
 ms.date: 05/20/2024
-ms.custom: sap:Migration\NAV and BC On-premise, sap:Client\Web Client or Browser
+ms.custom: sap:Client\Web Client or Browser
 ---
 # User personalization can't be started in Business Central
 
