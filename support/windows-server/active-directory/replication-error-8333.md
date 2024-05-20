@@ -13,12 +13,10 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes an issue where Active Directory Replications fail with error 8333: Directory object not found (ERROR_DS_OBJ_NOT_FOUND).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2703708
 
 > [!NOTE]
-**Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/en-us).
-
 ## Symptoms
 
 This article describes the symptoms, cause, and resolution steps when Active Directory replication fails with error 8333: Directory object not found (ERROR_DS_OBJ_NOT_FOUND).
@@ -136,8 +134,8 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
 
     4. If database corruption has been detected, ensure that recent backups exist of each domain in the forest.
 
-    5. Restart the domain controller reporting the database corruption in directory services restore mode. (Press F8 while the server is restarting or if this isn't possible open msconfig.exe and choose "Active Directory Repair" in the "boot" options.).
-
+   1. Restart the domain controller reporting the database corruption in directory services restore mode. (open msconfig.exe and choose "Active Directory Repair" in the "boot" options or type the command `bcdedit /set safeboot dsrepair` from elevated command prompt before restarting the domain controller).
+      
     6. To perform an inspection of the database in Directory Services Restore Mode:
 
         1. Open a command prompt  
@@ -161,7 +159,7 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
         > 4. Out-dated Firmware: BIOS, Hard Disk controller, Hard Disk  
         > 5. Sudden power Loss  
 
-2. Check for the existence of and remove Lingering Objects on all domain controllers in the forest.  
+1. Check for the existence of and remove Lingering Objects on all domain controllers in the forest.  
 There are multiple approaches to check for Lingering Objects including:
 
     1. Check for the existence of the following Directory Services events on domain controllers in the forest:
@@ -177,27 +175,18 @@ There are multiple approaches to check for Lingering Objects including:
         |---|---|---|
         | 8451|Repadmin, DcPromo, as subcode in Database Corruption Events|Refer to the troubleshooting guide for 8451 in the first instance if this error is identified.<br/><br/> [2645996](https://support.microsoft.com/help/2645996) |
 
-    2. Use repldiag.exe to examine the forest for lingering objects.
-
-        Repldiag may be downloaded from codeplex.com. To perform the lingering object check-in advisory mode, use the syntax:
-
-        `repldiag /RemoveLingeringObjects/AdvisoryMode`
-
-        Directory Service event 1942 will be logged on each domain controller and will indicate the number of lingering objects that were detected in each directory partition.
-
-        The work being performed by repldiag may also be performed with the built-in directory services replication tool: Repadmin.exe.
-
-        For support professionals preferring to use repadmin.exe, the partial command will be `Repadmin /removelingeringobjects`. Repldiag.exe provides an advantage over Repadmin.exe in that it can be used to search all directory partitions, on all servers in the forest with a single command.
-
-        If Lingering objects are detected:
-
-        1. Perform a system state backup of two domain controllers in each domain in the forest.  
-        2. Use repldiag.exe to perform clean-up of lingering objects:  
-        repldiag /RemoveLingeringObjects  
-        3. Each domain controller will log a directory services event 1942 for each directory services partition to indicate if lingering objects have been removed.  
-
-    For an alternate approach to the removal of lingering objects, you can use the built-in tool Repadmin.exe with the `/removelingeringobjects` switch. This approach requires multiple commands, repldiag provides an aggregate of the commands Repadmin.exe would use.
-
+   1. Examine the forest for lingering objects.
+   
+      The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/en-us/download/details.aspx?id=56051). 
+      
+      For more information about LoLv2, see:
+      
+            [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)
+                  [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
+                        [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+      In some cases where LoLv2 can't be used, you can use *Repadmin.exe*. You can do this by running the command `repadmin /removelingeringobjects` in advisory mode, as described in the following procedure:  
+      [Identify lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-2042)
+      
 3. Check for the existence of and remove conflict objects:  
     a. Search the relevant directory partitions for CNF-managed objects and the object that the conflict-mangled object conflicted with the following syntax:
 
