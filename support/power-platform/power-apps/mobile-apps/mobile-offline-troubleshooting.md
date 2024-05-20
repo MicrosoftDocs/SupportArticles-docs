@@ -2,7 +2,7 @@
 title: Offline sync errors in the Power Apps mobile app
 description: Describes errors while syncing offline data in the Power Apps mobile app and the recommended actions to take.
 ms.reviewer: mkaur, bwalters, clarading
-ms.date: 05/17/2024
+ms.date: 05/20/2024
 author: trdehove
 ms.author: trdehove
 ms.custom: sap:Mobile Apps\Can't connect
