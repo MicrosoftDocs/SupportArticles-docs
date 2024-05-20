@@ -19,8 +19,6 @@ ms.author: anandh
 
 # Troubleshoot performance issues on Azure virtual machines using Performance Diagnostics
 
-[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
-
 Use the Performance Diagnostics tool to identify and troubleshoot performance issues on your Azure virtual machine (VM) in one of two modes: 
 
 - **Continuous diagnostics (preview)** collects data at five-second intervals and reports actionable insights about resource usage every five minutes. 
@@ -64,6 +62,8 @@ The following operating systems are currently supported for both on-demand and c
 * Windows 10
 
 ### Linux
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 The following distributions are currently supported for on-demand diagnostics:
 
