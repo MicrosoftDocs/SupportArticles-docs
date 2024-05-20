@@ -1,7 +1,7 @@
 ---
 title: Modifying the NETMON parser port for SQL Server
 description: This article explains how to change the port of the NETMON parser for SQL Server.
-ms.date: 01/17/2024
+ms.date: 05/20/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -38,4 +38,4 @@ You must configure the NETMON parser to recognize these ports. To configure the 
 
 ## See also
 
-Collect data using Network Monitor
+[Collect data using Network Monitor](../../../windows-client/networking/collect-data-using-network-monitor.md)
