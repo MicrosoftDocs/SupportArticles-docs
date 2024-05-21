@@ -63,7 +63,7 @@ To check the issue, follow these steps:
    Get-ItemPropertyValue  -Path HKLM:\System\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002\ -Name Functions
    ```
 
-1. Use the **Ciphers Suites** tab in the [**IIS Crypto**](https://www.nartac.com/Products/IISCrypto/) toolp to check whether there are any matching algorithms. If no matching algorithms are found, contact Microsoft Support.
+1. Use the **Ciphers Suites** tab in the [**IIS Crypto**](https://www.nartac.com/Products/IISCrypto/) tool to check whether there are any matching algorithms. If no matching algorithms are found, contact Microsoft Support.
 
 For more information, see [TLS 1.2 Upgrade Workflow](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0700-TLS-1.2-Upgrade-Workflow) and [Transport Layer Security (TLS) connections might fail or timeout when connecting or attempting a resumption](https://support.microsoft.com/topic/transport-layer-security-tls-connections-might-fail-or-timeout-when-connecting-or-attempting-a-resumption-326bd5b1-52a1-b367-8179-b154e5c01e90).
 
