@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: mirzaab
 ms.search.validFrom: 2021-06-30
 ms.dyn365.ops.version: 10.0.21
+ms.custom: sap:Warehouse management
 ---
 
 # Can't update a load line because the released quantity would be negative

@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: mirzaab
 ms.search.validFrom: 2021-06-11
 ms.dyn365.ops.version: 10.0.20
+ms.custom: sap:Warehouse management
 ---
 
 # Canceled product receipts don't update transaction status to Registered
