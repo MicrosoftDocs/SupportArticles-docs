@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, roblane
+ms.reviewer: kaushika, roblane, sagiv
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # You cannot change the replication scope of an Active Directory integrated DNS zone in Windows Server 2003
@@ -34,21 +34,17 @@ To resolve this issue, you must add the built-in administrators group account to
 To add the built-in administrators group account to the manage auditing and security log user permission, follow these steps:
 
 1. Start the Group Policy Managment Console snap-in.
-
-1. Navigate to the **Domain Controllers** OU.
-
-1. Right-Click on the **Default Domain Controllers Policy**, and then click **Edit**.
-1. In the left pane, expand **Computer Configuration**, expand **Windows Settings**, and then expand **Security Settings**.
-5. Expand **Local Policies**, and then click **User Rights Assignment**.
-6. In the right pane, double-click **Manage auditing and security log**, and then click **Add User or Group**.
-7. Click **Browse**, and then click **Advanced**.
-8. Click **Find Now**, and then click **Administrators** in the **Search Results** box.
-1. Click **OK**, click **OK**, click **OK**, and then click **OK** to quit Group Policy Object Editor.
-1. Wait for 5 Minutes (The default interval time of Domain Controller Group Policy processing ) or invoke Group Policy Processing by running **GPUPDATE /Force** from elevated Command Prompt.
-
-1. Quit the Group Policy Managment Console snap-in.
-
-13. Change the replication scope of the Active Directory integrated DNS zone.
+2. Navigate to the **Domain Controllers** organizational unit (OU).
+3. Right-click **Default Domain Controllers Policy**, and then select **Edit**.
+4. In the left pane, expand **Computer Configuration** > **Windows Settings** > **Security Settings**.
+5. Expand **Local Policies**, and then select **User Rights Assignment**.
+6. In the right pane, double-click **Manage auditing and security log**, and then select **Add User or Group**.
+7. Select **Browse**, and then select **Advanced**.
+8. Select **Find Now**, and then select **Administrators** in the **Search Results** box.
+9. Select **OK** four times to exit Group Policy Object Editor.
+10. Wait for 5 minutes (the default interval time of Domain Controller Group Policy processing) or invoke Group Policy Processing by running the `GPUPDATE /Force` command from an elevated command prompt.
+11. Quit the Group Policy Managment Console snap-in.
+12. Change the replication scope of the Active Directory integrated DNS zone.
 
 ## Data collection
 
