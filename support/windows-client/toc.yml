@@ -1111,36 +1111,6 @@ items:
       href: ./system-management-components/sms-agent-host-service-not-start.md
     - name: WMI-Activity Event ID 5858 logged with ResultCode = 0x80041032
       href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
-- name: TroubleShootingScript toolset (TSS)
-  items:
-  - name: Introduction to TroubleShootingScript toolset (TSS)
-    href: ./windows-tss/introduction-to-troubleshootingscript-toolset-tss.md
-  - name: Deployment (DnD)
-    items:
-    - name: Gather information for deployment-related issues
-      href: ./windows-tss/gather-information-using-tss-deployment.md
-    - name: Gather information for Windows Update for Business reports-related issues
-      href: ./windows-tss/gather-information-using-tss-wufb-reports.md
-  - name: Identity
-    items:
-    - name: Gather information for Active Directory replication issues
-      href: ./windows-tss/gather-information-using-tss-ad-replication.md
-    - name: Gather information for Group Policy issues
-      href: ./windows-tss/gather-information-using-tss-group-policy.md
-  - name: Storage and High Availability (SHA)
-    items:
-    - name: Gather information for Hyper-V related issues
-      href: ./windows-tss/gather-information-using-tss-hyper-v-issues.md
-    - name: Gather information for SQL cluster (AG/FCI) related issues
-      href: ./windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md
-    - name: Gather information for Windows failover cluster related issues
-      href: ./windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md
-  - name: User Experience (UEX)
-    items:
-    - name: Gather information for user experience-related issues
-      href: ./windows-tss/gather-information-using-tss-user-experience.md
-  - name: Use the xray feature of TSS
-    href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md
 - name: UE-V
   items:
   - name: UE-V
@@ -1341,3 +1311,37 @@ items:
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
+- name: Support Tools
+  items:
+  - name: TroubleShootingScript toolset (TSS)
+    items:
+    - name: Introduction to TroubleShootingScript toolset (TSS)
+      href: ./windows-tss/introduction-to-troubleshootingscript-toolset-tss.md
+    - name: Gather information for Active Directory replication issues
+      href: ./windows-tss/gather-information-using-tss-ad-replication.md
+    - name: Gather information for deployment-related issues
+      href: ./windows-tss/gather-information-using-tss-deployment.md
+    - name: Gather information for Group Policy issues
+      href: ./windows-tss/gather-information-using-tss-group-policy.md
+    - name: Gather information for Hyper-V related issues
+      href: ./windows-tss/gather-information-using-tss-hyper-v-issues.md
+    - name: Gather information for SQL cluster (AG/FCI) related issues
+      href: ./windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md
+    - name: Gather information for user experience-related issues
+      href: ./windows-tss/gather-information-using-tss-user-experience.md
+    - name: Gather information for Windows failover cluster related issues
+      href: ./windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md
+    - name: Gather information for Windows Update for Business reports-related issues
+      href: ./windows-tss/gather-information-using-tss-wufb-reports.md
+    - name: Use the xray feature of TSS
+      href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md
+  - name: Performance Monitoring Tools
+    items:
+    - name: Using Performance Monitor
+      href: ./support-tools/troubleshoot-issues-performance-monitor.md?context=/troubleshoot/windows-client/context/context
+    - name: Using Process Explorer
+      href: ./support-tools/troubleshoot-issues-process-explorer.md?context=/troubleshoot/windows-client/context/context
+    - name: Using Task Manager
+      href: ./support-tools/support-tools-task-manager.md?context=/troubleshoot/windows-client/context/context
+    - name: Using WPR, WPA, or Xperf
+      href: ./support-tools/support-tools-xperf-wpa-wpr.md?context=/troubleshoot/windows-client/context/context
