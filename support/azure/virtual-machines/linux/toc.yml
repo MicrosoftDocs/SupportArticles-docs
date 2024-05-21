@@ -85,7 +85,7 @@
   - name: Performance diagnostics VMSS extension
     items:
     - name: PerfInsights and scale set VM instances
-      href: perfinsights-and-scale-set-vm-instances.md
+      href: ../windows/perfinsights-and-scale-set-vm-instances.md
   - name: Troubleshoot VM performance issues - Linux
     items:
     - name: Isolate bottlenecks in Linux
@@ -162,7 +162,7 @@
 - name: Received an Allocation Failure
   items:
   - name: Allocation failures
-    href: allocation-failure.md
+    href: ../windows/allocation-failure.md
 
 - name: VM planned maintenance
   items:
