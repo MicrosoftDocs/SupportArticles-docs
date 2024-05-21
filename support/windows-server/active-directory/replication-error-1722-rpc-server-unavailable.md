@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot replication error 1722
 description: Fixes error 1722 of Active Directory replication in Windows Server 2008 R2 and earlier versions.
-ms.date: 04/10/2024
+ms.date: 05/21/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -158,67 +158,67 @@ There are a few tools to use to help identify DNS errors:
 
 - `DCDIAG /TEST:DNS /V /E /F:<filename.log>`  
 
-    The `DCDIAG /TEST:DNS` command can validate DNS health of all supported versions of Windows Server family domain controllers. This test was first introduced with Windows Server 2003 Service Pack 1.
-  
-      There are seven test groups for this command.
+  The `DCDIAG /TEST:DNS` command can validate DNS health of all supported versions of Windows Server family domain controllers. This test was first introduced with Windows Server 2003 Service Pack 1.
+
+  There are seven test groups for this command.
 
   - Authentication (Auth)
-- Basic (`Basc`)
-- Records registration (RReg)
-- Dynamic update (`Dyn`)
-- Delegations (Del)
-- Forwarders/Root hints (Forw)
+  - Basic (`Basc`)
+  - Records registration (RReg)
+  - Dynamic update (`Dyn`)
+  - Delegations (Del)
+  - Forwarders/Root hints (Forw)
 
-  Sample output:
+    Sample output:
 
-  ```output
-  TEST: Authentication (Auth)  
-  Authentication test: Successfully completed
+    ```output
+    TEST: Authentication (Auth)  
+    Authentication test: Successfully completed
 
-  TEST: Basic (Basc)  
-  Microsoft(R) Windows(R) Server 2003, Enterprise Edition (Service Pack level: 2.0) is supported  
-  NETLOGON service is running  
-  kdc service is running  
-  DNSCACHE service is running  
-  DNS service is running  
-  DC is a DNS server  
-  Network adapters information:  
-  Adapter [00000009] Microsoft Virtual Machine Bus Network Adapter:  
-  MAC address is 00:15:5D:40:CF:92  
-  IP address is static  
-  IP address: <IP Address>  
-  DNS servers:  
-  <DNS IP Address> (DC.domain.com.) [Valid]  
-  The A record for this DC was found  
-  The SOA record for the Active Directory zone was found  
-  The Active Directory zone on this DC/DNS server was found (primary)  
-  Root zone on this DC/DNS server was not found  
-  <omitted other tests for readability>
-  ```
+    TEST: Basic (Basc)  
+    Microsoft(R) Windows(R) Server 2003, Enterprise Edition (Service Pack level: 2.0) is supported  
+    NETLOGON service is running  
+    kdc service is running  
+    DNSCACHE service is running  
+    DNS service is running  
+    DC is a DNS server  
+    Network adapters information:  
+    Adapter [00000009] Microsoft Virtual Machine Bus Network Adapter:  
+    MAC address is 00:15:5D:40:CF:92  
+    IP address is static  
+    IP address: <IP Address>  
+    DNS servers:  
+    <DNS IP Address> (DC.domain.com.) [Valid]  
+    The A record for this DC was found  
+    The SOA record for the Active Directory zone was found  
+    The Active Directory zone on this DC/DNS server was found (primary)  
+    Root zone on this DC/DNS server was not found  
+    <omitted other tests for readability>
+    ```
 
-  Summary of DNS test results:
+    Summary of DNS test results:
 
-  ```output
-  Auth Basc Forw Del  Dyn  RReg Ext
+    ```output
+    Auth Basc Forw Del  Dyn  RReg Ext
 
-  Domain: fragale.contoso.com
-  DC1 PASS PASS FAIL PASS PASS PASS n/a  
-  Domain: child.fragale.contoso.com  
-  DC2 PASS PASS n/a  n/a  n/a  PASS n/a  
+    Domain: fragale.contoso.com
+    DC1 PASS PASS FAIL PASS PASS PASS n/a  
+    Domain: child.fragale.contoso.com  
+    DC2 PASS PASS n/a  n/a  n/a  PASS n/a  
   
-  Enterprise DNS infrastructure test results:  
-  For parent domain domain.com and subordinate domain child:  
-  Forwarders or root hints are not misconfigured from parent domain to subordinate domain  
-  Error: Forwarders are configured from subordinate to parent domain but some of them failed DNS server tests  
+    Enterprise DNS infrastructure test results:  
+    For parent domain domain.com and subordinate domain child:  
+    Forwarders or root hints are not misconfigured from parent domain to subordinate domain  
+    Error: Forwarders are configured from subordinate to parent domain but some of them failed DNS server tests  
   
-  (See DNS servers section for error details)  
-  Delegation is configured properly from parent to subordinate domain  
-  ......................... domain.com failed test DNS
-  ```
+    (See DNS servers section for error details)  
+    Delegation is configured properly from parent to subordinate domain  
+    ......................... domain.com failed test DNS
+    ```
 
-  The summary provides remediation steps for the more common failures from this test.
+    The summary provides remediation steps for the more common failures from this test.
 
-  Explanation and additional options for this test can be found at [Domain Controller Diagnostics Tool (dcdiag.exe)](/previous-versions/windows/it-pro/windows-server-2003/cc776854(v=ws.10)).
+    Explanation and additional options for this test can be found at [Domain Controller Diagnostics Tool (dcdiag.exe)](/previous-versions/windows/it-pro/windows-server-2003/cc776854(v=ws.10)).
 
 - `NLTEST /DSGETDC:<netbios or DNS domain name>`
 
@@ -308,7 +308,7 @@ There are a few tools to use to help identify DNS errors:
 
 The endpoint mapper (listening on port 135) tells the client which randomly assigned port a service (FRS, AD replication, MAPI, and so on) is listening on.
 
-Please refer to the list of required ports in: [How to configure a firewall for Active Directory domains and trusts](/troubleshoot/windows-server/active-directory/config-firewall-for-ad-domains-and-trusts)
+Refer to the list of required ports in: [How to configure a firewall for Active Directory domains and trusts](/troubleshoot/windows-server/active-directory/config-firewall-for-ad-domains-and-trusts).
 
 Portqry can be used to identify if a port is blocked from a Dc when targeting another DC. It can be downloaded at [PortQry Command Line Port Scanner Version 2.0](https://www.microsoft.com/download/details.aspx?id=17148).
 
