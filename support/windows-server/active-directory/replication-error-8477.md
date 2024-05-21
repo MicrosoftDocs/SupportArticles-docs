@@ -206,7 +206,9 @@ Linked-value replication isn't available in Windows 2000 Server forests. Because
 When a Domain is upgraded from a 2000 functional level, the memberships of any groups carried are considered legacy and can still cause replication issues:
 
 Forests at the 2003 functional level can remove and reinstate group members to make them LVR-enabled. Over time, as security principals are added and removed from groups, the members are slowly enabled for LVR
-Note: Events 1479 and 1519 are also commonly logged in the Directory Service Event Log when large groups are causing replication issues and delays.
+
+> [!Note]
+> Events 1479 and 1519 are also commonly logged in the Directory Service Event Log when large groups are causing replication issues and delays.
 
 Using repadmin /showobjmeta legacy members in a group can be determined and converted to LVR enabled members if necessary to resolve the issue, these users are denoted with 'Type' of value LEGACY:  
 
