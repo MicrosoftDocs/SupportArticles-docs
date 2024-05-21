@@ -136,7 +136,7 @@ Active Directory is unable to write to the Active Directory database or log file
 
 4. **If the Jet error in the NTDS replication event is NOT in table above, validate the vertical Jet database stack**  
 
-    If the 2108 event logs a jet error NOT cited in the table, use the [Microsoft Error Lookup Tool (ERR.exe)](https://www.microsoft.com/en-us/download/details.aspx?id=100432) utility to resolve the jet error to its symbolic and friendly error string using the syntax "err <jet error>". 
+    If the 2108 event logs a jet error NOT cited in the table, use the [Microsoft Error Lookup Tool (ERR.exe)](https://www.microsoft.com/en-us/download/details.aspx?id=100432) utility to resolve the jet error to its symbolic and friendly error string using the syntax "err \<jet error\>". 
 
     It is critical that you add the leading "-" prefix character when resolving jet errors using ERR.EXE. (for example, "c:\\>err -1018").
 
