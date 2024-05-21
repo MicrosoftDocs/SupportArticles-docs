@@ -1,7 +1,7 @@
 ---
 title: KFSO doesn't work in external trust
 description: Describes a situation in which Kerberos Forest Search Order may not work in an external trust. In this situation, Kerberos authentication is not offered.
-ms.date: 12/26/2023
+ms.date: 05/21/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -30,7 +30,7 @@ In this situation, InitializeSecurityContext may return "SEC_E_TARGET_UNKNOWN." 
 
 ## Cause
 
-The KFSO feature offers the convenience of allowing for short name (host name) service principal name (SPN) resolution in a forest trust environment instead of offering the support of Kerberos authentication over external trusts. 
+The KFSO feature offers the convenience of allowing for short name (host name) service principal name (SPN) resolution in a forest trust environment instead of offering the support of Kerberos authentication over external trusts.
 
 If Kerberos authentication is required, then a forest trust is necessary. On an external trust, you have to change the application to use FQDN server names and three-part SPNs. For more information, see [Technologies for Federating Multiple Forests](https://technet.microsoft.com/library/dd560679%28ws.10%29.aspx).
 
