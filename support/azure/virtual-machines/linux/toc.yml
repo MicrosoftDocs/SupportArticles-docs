@@ -19,10 +19,10 @@
 
 - name: Support statements
   items:
-	- name: Support for Linux and open-source technology in Azure
-	  href: support-linux-open-source-technology.md
-	- name: Upgrade VMs running Canonical Ubuntu 18.04 LTS
-	  href: upgrade-canonical-ubuntu-18dot04-lts.md
+  - name: Support for Linux and open-source technology in Azure
+    href: support-linux-open-source-technology.md
+  - name: Upgrade VMs running Canonical Ubuntu 18.04 LTS
+    href: upgrade-canonical-ubuntu-18dot04-lts.md
 
 - name: VM health
   items:
@@ -43,8 +43,8 @@
         href: /azure/azure-portal/supportability/low-priority-quota?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Networking quota increases
     items:
-      - name: Increase networking limits
-        href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Increase networking limits
+      href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
 - name: Cannot connect to my VM
   items:
@@ -141,6 +141,8 @@
     href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Troubleshoot Start/Stop VMs during off-hours (Azure Automation)
     href: /azure/automation/troubleshoot/start-stop-vm?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Swap file is not re-created
+    href: swap-file-not-recreated-linux-vm-restart.md
   - name: Can't restart after applying kernel changes
     href: kernel-related-boot-issues.md
   - name: Fail to access Generation 2 Linux VM
