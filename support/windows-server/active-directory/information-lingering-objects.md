@@ -1,12 +1,12 @@
 ---
-title: lingering objects in AD forest
+title: Lingering objects in an AD DS forest
 description: Contains information about lingering objects in a forest. Specifically, it provides information about events that indicate the presence of lingering objects, the causes of lingering objects, and methods to remove lingering objects.
-ms.date: 12/26/2023
+ms.date: 05/21/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Information about lingering objects in a Windows Server Active Directory forest
@@ -18,44 +18,34 @@ _Original KB number:_ &nbsp; 910205
 
 ## Summary
 
-This article contains information about lingering objects in an Active Directory forest. Specifically, the article describes the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.  
-
-## INTRODUCTION
+This article contains information about lingering objects in an Active Directory Domain Services (AD DS) forest. Specifically, the article describes the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.  
 
 Lingering objects can occur if a domain controller does not replicate for an interval of time that is longer than the tombstone lifetime (TSL). The domain controller then reconnects to the replication topology. Objects that are deleted from the Active Directory directory service when the domain controller is offline can remain on the domain controller as lingering objects. This article contains detailed information about the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.
 
 ## More information
 
-### Tombstone lifetime and replication of deletions
+### Replicating object deletions
 
-When an object is deleted, Active Directory replicates the deletion as a tombstone object. A tombstone object consists of a small subset of the attributes of the deleted object. By inbound-replicating this object, other domain controllers in the domain and in the forest receive information about the deletion. The tombstone is retained in Active Directory for a specified period. This specified period is called the TSL. At the end of the TSL, the tombstone object is permanently deleted.
+When you delete an object in AD DS, AD DS generates a tombstone object to represent the deleted object. The tombstone object contains a small subset of the attributes of the deleted object. Other domain controllers in the domain and the forest use inbound replication to receive the tombstone object, and update their AD DS information to account for the deletion. The tombstone object remains in the forest for a specified period, called the tombstone lifetime (TSL). At the end of the TSL, AD DS permanently deletes the tombstone object. All direct and transitive replication partners of the originating domain controller must receive a copy of the tombstone object within the TSL.
 
-The default value of the TSL depends on the version of the operating system that is running on the first domain controller that is installed in a forest. The following table indicates the default TSL values for different Windows operating systems.
+The default value of the TSL depends on the version of the operating system that is running on the first domain controller that's installed in a forest. For all currently supported versions of Windows Server, the default TSL is 180 days.
 
-|First domain controller in forest root|Default tombstone lifetime|
-|---|---|
-|Windows 2000|60 days|
-|Windows Server 2003|60 days|
-|Windows Server 2003 with Service Pack 1|180 days|
-
-> [!NOTE]
-> The existing TSL value does not change when a domain controller is upgraded to Windows Server 2003 with Service Pack 1 (SP1). The existing TSL value is maintained until you manually change it.
-
-After the tombstone is permanently deleted, the object deletion can no longer be replicated. The TSL defines how long domain controllers in the forest retain information about a deleted object. The TSL also defines the time during which all direct and transitive replication partners of the originating domain controller must receive a unique deletion.
+> [!NOTE]  
+> The existing TSL value does not change when you upgrade a domain controller to a newer version of Windows Server. The existing TSL value remains until you manually change it.
 
 ### How lingering objects occur
 
-When a domain controller is disconnected for a period that is longer than the TSL, one or more objects that are deleted from Active Directory on all other domain controllers may remain on the disconnected domain controller. Such objects are called lingering objects. Because the domain controller is offline during the time that the tombstone is alive, the domain controller never receives replication of the tombstone.
+When a domain controller is disconnected for a period that is longer than the TSL, the domain controller might not receive one or more tombstone objects. As a result, one or more objects that are deleted from the forest on all other domain controllers might remain on the disconnected domain controller. Such objects are called lingering objects.
 
-When this domain controller is reconnected to the replication topology, it acts as a source replication partner that has an object that its destination partner does not have.
+When this domain controller reconnects to the replication topology, it acts as a source replication partner that has an object that its destination partner does not have. The destination domain controller responds in one of two ways:
 
-Replication problems occur when the object on the source domain controller is updated. In this case, when the destination partner tries to inbound-replicate the update, the destination domain controller responds in one of two ways:
+- If the destination domain controller has Strict Replication Consistency enabled, the domain controller recognizes that it cannot update the object. The destination domain controller locally stops inbound replication of the directory partition from the source domain controller.
 
-- If the destination domain controller has Strict Replication Consistency enabled, the controller recognizes that it cannot update the object. The controller locally stops inbound replication of the directory partition from the source domain controller.
-
-- If the destination domain controller has Strict Replication Consistency disabled, the controller requests the full replica of the updated object. In this case, the object is reintroduced into the directory.
+- If the destination domain controller has Strict Replication Consistency disabled, the destination domain controller requests the full replica of the object. In this case, the object is reintroduced into the forest. From an administrative point of view, an object that you deleted reappears in the forest.
 
 ### Causes of long disconnections
+
+The simplest way to avoid lingering objects is to prevent domain controllers from disconnecting from the replication topology for periods greater than the TSL. If a domain controller has to be disconnected for an extended period, be aware of the potential for lingering objects.
 
 The following conditions can cause long disconnections:
 
@@ -84,7 +74,7 @@ An outdated domain controller can store lingering objects without any noticeable
 
 Even when there is no noticeable effect, the presence of lingering objects can cause problems. These problems are most likely to occur if a lingering object is a security principal.
 
-#### Events that indicate that lingering objects may be present in the forest
+#### Events that indicate that lingering objects might be present in the forest
 
 |Event ID|General description|
 |---|---|
@@ -103,7 +93,7 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 |1311|Another domain controller replicated an object not present on this domain controller.|
 
 > [!NOTE]
-> Lingering objects are not present on domain controllers that log Event ID 1988. The source domain controller contains the lingering object.
+> Lingering objects aren't present on domain controllers that log Event ID 1988. The source domain controller contains the lingering object.
 
 #### Repadmin errors that indicate that lingering objects are present in the forest
 
@@ -128,79 +118,79 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 
 If an attempt is made to update a lingering object that resides in a writable directory partition, events are logged on the destination domain controller. However, if the only version of a lingering object is in a read-only directory partition on a global catalog server, the object cannot be updated. Therefore, this kind of event is not triggered.
 
-### Removing lingering objects from the forest using LOLv2
+### Removing lingering objects from the forest by using LOLv2
 
-The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/en-us/download/details.aspx?id=56051). 
+The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/download/details.aspx?id=56051). For more information about using LoLv2, see the following articles:
 
-For more information about LoLv2, see:
-
-- [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)
+- [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)
 
 - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
 
 - [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
 
-### Removing lingering objects from the forest using repadmin
+### Removing lingering objects from the forest by using repadmin
 
-In some cases where LoLv2 can't be used, you can use *Repadmin.exe*:  
-[Steps to use Repadmin to remove lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988)
+In some cases where you can't use LoLv2, you can use *Repadmin.exe*. For more information, see [Steps to use Repadmin to remove lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988).
 
 ### Preventing lingering objects
 
-The following are methods that you can use to prevent lingering objects.
+Select one of the following four methods to prevent lingering objects.
 
 #### Method 1: Enable the Strict Replication Consistency registry entry
 
 You can enable the Strict Replication Consistency registry entry so that suspect objects are quarantined. Then, administrations can remove these objects before they spread throughout the forest.
 
-If a writable lingering object is located in your environment, and an attempt is made to update the object, the value in the Strict Replication Consistency registry entry determines whether replication proceeds or is stopped. The Strict Replication Consistency registry entry is located in the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`  
-The data type for this entry is REG_DWORD. If you set the value to 1, the entry is enabled. Inbound replication of the specified directory partition from the source is stopped on the destination. If you set the value to 0, the entry is disabled. The destination requests the full object from the source domain controller. The lingering object is revived in the directory as a new object.
+If a writable lingering object is located in your environment, and an attempt is made to update the object, the value in the Strict Replication Consistency registry entry determines whether replication proceeds or is stopped. The Strict Replication Consistency registry entry is located in the following registry subkey:  
+
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`  
+
+The data type for this entry is REG_DWORD. If you set the value to **1**, the entry is enabled. Inbound replication of the specified directory partition from the source is stopped on the destination. If you set the value to **0**, the entry is disabled. The destination requests the full object from the source domain controller. The lingering object is revived in the directory as a new object.
 
 The default value for the Strict Replication Consistency registry entry is determined by the conditions under which the domain controller was installed in the forest.
 
 The preferred method to enable the Strict Replication Consistency registry entry is using Repadmin:  
 [Steps to use Repadmin to enable strict replication consistency](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988)
 
-For more information about how to use Repadmin.exe to set Strict Replication Consistency, visit the following Microsoft Web site:
+For more information about how to use Repadmin.exe to set Strict Replication Consistency, see [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)).
 
-[https://technet.microsoft.com/library/cc780362(WS.10).aspx  ](https://technet.microsoft.com/library/cc780362(WS.10).aspx  )
+> [!NOTE]  
+> Raising the functional level of the domain or the forest does not change the replication consistency setting on any domain controller.
 
->[!NOTE]
->Raising the functional level of the domain or the forest does not change the replication consistency setting on any domain controller.
+By default, the value of the Strict Replication Consistency registry entry on newly domain controllers that are installed in a forest is 1 (enabled) if the first Domain controller of the Forest was installed on a server that is running Windows Server 2003 (This computer creates the forest root domain of a new forest).
 
-By default, the value of the Strict Replication Consistency registry entry on newly domain controllers that are installed in a forest is 1 (enabled) if the first Domain controller of the Forest was installed on a server that is running Windows Server 2003 (This computer creates the forest root domain of a new forest)
-
-By default, the value of the Strict Replication Consistency registry entry on newly domain controllers is 0 (disabled) if the first Domain controller of the Forest was installed on a server that is running Windows Server 2000 (This computer creates the forest root domain of a new forest). in such scenario you can ensure Strict Replication Consistency is enabled on future Promoted Domain Controllers by following the steps in:  
-[Ensure Strict Replication Consistency Is Enabled On Newly Promoted Domain Controllers](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)?redirectedfrom=MSDN)
+By default, the value of the Strict Replication Consistency registry entry on newly domain controllers is **0** (disabled) if the first Domain controller of the Forest was installed on a server that is running Windows Server 2000 (This computer creates the forest root domain of a new forest). in such scenario you can ensure Strict Replication Consistency is enabled on future Promoted Domain Controllers by following the steps in:  
+[Ensure Strict Replication Consistency Is Enabled On Newly Promoted Domain Controllers](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)).
 
 #### Method 2: Monitor replication by using a command-line command
 
 To monitor replication by using the `repadmin /showrepl` command, follow these steps:  
 
-1. Click **Start**, click **Run**, type cmd, and then click **OK**.
+1. Open a Command Prompt window (to do this, select **Start** > **Run**, type *cmd*, and then select **OK**).
 
-2. Type `repadmin /showrepl * /csv >showrepl.csv`, and then press ENTER.
-3. In Microsoft Excel, open the Showrepl.csv file.
+1. At the command prompt, run the following command:
 
-4. Select the **A + RPC** column and the **SMTP** column.
-5. On the **Edit** menu, click **Delete**.
-6. Select the row that is immediately under the column headers.
-7. On the **Windows** menu, click **Freeze Pane**.
+   ```console
+   repadmin /showrepl * /csv >showrepl.csv
+   ```
 
-8. Select the complete spreadsheet.
-9. On the **Data** menu, point to **Filter**, and then click **Auto-Filter**.
-10. On the heading of the **Last Success** column, click the down arrow, and then click **Sort Ascending**.
-11. On the heading of the **src DC** column, click the down arrow, and then click **Custom**.
-12. In the **Custom AutoFilter** dialog box, click **does not contain**.
-13. In the box to the right of **does not contain**, type del.
+1. In Microsoft Excel, open the *Showrepl.csv* file.
 
-    >[!NOTE]
-    >This step prevents deleted domain controllers from appearing in the results.  
+1. Select the **A + RPC** column and the **SMTP** column, and then select **Edit** > **Delete**.
+1. Select the row that is immediately under the column headers, and then select **Windows** > **Freeze Pane**.
+1. Select the entire spreadsheet, and then select **Data** > **Filter** > **Auto-Filter**.
 
-14. On the heading of the **Last Failure** column, click the down arrow, and then click **Custom**.
-15. In the **Custom AutoFilter** dialog box, click **does not equal**.
-16. In the box to the right of **does not equal**, type 0.
-17. Resolve the replication failures that are displayed.
+1. On the heading of the **Last Success** column, select the down arrow, and then select **Sort Ascending**.
+1. On the heading of the **src DC** column, select the down arrow, and then select **Custom**.
+1. In the **Custom AutoFilter** dialog box, select **does not contain**.
+1. In the box to the right of **does not contain**, type *del*.
+
+      > [!NOTE]  
+      > This step prevents deleted domain controllers from appearing in the results.  
+
+1. On the heading of the **Last Failure** column, select the down arrow, and then select **Custom**.
+1. In the **Custom AutoFilter** dialog box, select **does not equal**.
+1. In the box to the right of **does not equal**, type *0*.
+1. Check the filtered spreadsheet for replication failures. These are the issues that you need to resolve.
 
 #### Method 3: Remove domain controllers
 
@@ -208,19 +198,24 @@ You can remove failing domain controllers from the forest before the TSL expires
 
 #### Method 4: Increase the TSL
 
-Increase the TSL to 180 days by using the Adsiedit tool. To do it, follow these steps:  
+You can use either ADSIEdit or Windows Powershell to increase the TSL to 180 days. 
 
-1. In the Adsiedit tool, expand **Configuration** **DomainControllerName**, expand **CN=Configuration**, **DC=ForestRootDomain**, expand **CN=Services**, expand **CN=Windows NT**, right-click **CN=Directory Service**, and then click **Properties**.
-1. Click the **Attribute** tab.
-1. In the **Select which properties to view** list, click **Optional**.
-1. In the **Select a property to view** list, click **TombstoneLifetime**.
-1. In the **Edit Attribute** box, type 180, click **Set**, and then click **OK**.
+ADSIEdit is available on the **Tools** menu in Server Manager. To change the TSL, follow these steps:  
 
-Increase the TSL to 180 days by using using PowerShell:  
-`$ADForestconfigurationNamingContext = (Get-ADRootDSE).configurationNamingContext`
+1. In the Adsiedit tool, expand **Configuration** > **DomainControllerName** > **CN=Configuration** > **DC=ForestRootDomain** > **CN=Services** > **CN=Windows NT**. Right-click **CN=Directory Service**, and then select **Properties**.
+1. Select the **Attribute** tab.
+1. In the **Select which properties to view** list, select **Optional**.
+1. In the **Select a property to view** list, select **TombstoneLifetime**.
+1. In the **Edit Attribute** box, type *180*, select **Set**, and then select **OK**.
 
-`Set-ADObject -Identity “CN=Directory Service,CN=Windows NT,CN=Services,$ADForestconfigurationNamingContext” -Partition $ADForestconfigurationNamingContext -Replace @{tombstonelifetime=’180′}`
+To use PowerShell to increase the TSL, open an administrative PowerShell window and then run the following commands, in sequence:  
 
-## Data collection
+```powershell
+$ADForestconfigurationNamingContext = (Get-ADRootDSE).configurationNamingContext
+
+Set-ADObject -Identity “CN=Directory Service,CN=Windows NT,CN=Services,$ADForestconfigurationNamingContext” -Partition $ADForestconfigurationNamingContext -Replace @{tombstonelifetime=’180′}
+```
+
+## Collecting data for Microsoft Support
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
