@@ -45,15 +45,15 @@ You can manually correct inventory transfer order lines as described in the foll
 4. In the **Line number** field, select a line where you find a discrepancy.
 5. Under the **Parameters** section, select a resolution for different issues.
 
-| Issue | Option |
-| --- | --- |
-| There is a data discrepancy or corruption in the **Shipped quantity** field.| Recalculate transfer-related quantities. |
-| There is a data discrepancy or corruption in the **Ship remain** field.| Recalculate transfer-related quantities. |
-| There is a data discrepancy or corruption in the **Receive remain** field.| Recalculate transfer-related quantities. |
-| After a transfer order line is received, there are still orphan inventory transactions which aren’t financially updated. For now, it only covers the receipt side. | Recalculate inventory transactions. |
-| When a picking list is generated for a transfer order, an output order is generated. Inventory transactions hold a child reference of a completed output order. | Recalculate inventory transactions. |
-| Transfer order header status is inconsistent. | Recalculate header status. |
-| Transfer order lines and inventory transactions still exist, but the header is missing. | Recover header. |
+  | Issue | Option |
+  | --- | --- |
+  | There is a data discrepancy or corruption in the **Shipped quantity** field.| **Recalculate transfer-related quantities** |
+  | There is a data discrepancy or corruption in the **Ship remain** field.| **Recalculate transfer-related quantities**|
+  | There is a data discrepancy or corruption in the **Receive remain** field.| **Recalculate transfer-related quantities** |
+  | After a transfer order line is received, there are still orphan inventory transactions which aren’t financially updated. For now, it only covers the receipt side. | **Recalculate inventory transactions** |
+  | When a picking list is generated for a transfer order, an output order is generated. Inventory transactions hold a child reference of a completed output order. | **Recalculate inventory transactions** |
+  | Transfer order header status is inconsistent. | **Recalculate header status** |
+  | Transfer order lines and inventory transactions still exist, but the header is missing. | **Recover header** |
 
 ## More information
 
