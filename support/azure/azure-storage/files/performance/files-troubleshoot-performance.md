@@ -3,7 +3,7 @@ title: Azure Files performance troubleshooting guide
 description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
 ms.service: azure-file-storage
 ms.custom: sap:Performance, linux-related-content
-ms.date: 04/24/2024
+ms.date: 05/21/2024
 ms.reviewer: kendownie, v-weizhu
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
 ---
@@ -89,13 +89,7 @@ To confirm whether your share or storage account is being throttled, you can acc
 
 1. Add a filter for **Response type**, and then check to see whether any requests have been throttled.
 
-    For standard file shares that don't have large file shares enabled, the following response types are logged if a request is throttled at the share level:
-
-    - SuccessWithThrottling
-    - SuccessWithShareIopsThrottling
-    - ClientShareIopsThrottlingError
-
-    For standard file shares that have large file shares enabled, the following response types are logged if a request is throttled at the client account level:
+    For standard file shares, the following response types are logged if a request is throttled at the client account level:
 
     - ClientAccountRequestThrottlingError
     - ClientAccountBandwidthThrottlingError
@@ -120,8 +114,7 @@ To confirm whether your share or storage account is being throttled, you can acc
 
 #### Solution
 
-- If you're using a standard file share, [enable large file shares](/azure/storage/files/storage-how-to-create-file-share#enable-large-file-shares-on-an-existing-account) on your storage account and [increase the size of file share quota to take advantage of the large file share support](/azure/storage/files/storage-how-to-create-file-share#expand-existing-file-shares). Large file shares support great IOPS and bandwidth limits. See [Azure Files scalability and performance targets](/azure/storage/files/storage-files-scale-targets) for details.
-- If you're using a premium file share, increase the provisioned file share size to increase the IOPS limit. To learn more, see the [Understanding provisioning for premium file shares](/azure/storage/files/understanding-billing#provisioned-model).
+If you're using a premium file share, increase the provisioned file share size to increase the IOPS limit. To learn more, see the [Understanding provisioning for premium file shares](/azure/storage/files/understanding-billing#provisioned-model).
 
 ### Cause 2: Metadata or namespace heavy workload
 
