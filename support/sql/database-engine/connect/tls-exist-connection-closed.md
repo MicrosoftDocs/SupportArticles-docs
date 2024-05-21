@@ -1,7 +1,7 @@
 ---
 title: An existing connection was forcibly closed (OS error 10054)
 description: Describes scenarios in which an existing connection was forcibly closed by the remote host and provides resolutions.
-ms.date: 05/01/2024
+ms.date: 05/21/2024
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
@@ -120,15 +120,15 @@ A shortage of IOCP workers and SOS Worker resources allocated to handling authen
 If the error message you encounter doesn't correspond to any of the previous scenarios, refer to the following additional scenarios:
 
 - [Local SQL Server can't connect to a linked server when RSA encryption is used](client-machine-cannot-connect-to-sqlserver.md)
-- [Connection error 10054 occurs in SQL Server post upgrade](error-messages-areshown-after-upgrade-sql-version.md)
+- [A connection error 10054 might occur post SQL Server upgrade](error-messages-areshown-after-upgrade-sql-version.md)
 - [Intermittent connection errors occur when adding a node to the Always On environment in SQL Server](intermittent-connection-errors-when-a-new-node-is-added.md)
 - [Intermittent connection errors occur when using SQLCMD utility](intermittent-connection-errors-sqlcmd.md)
-- [The SSL_PE_NO_CIPHER error occurs on endpoint 5022 in SQL Server](ssl-pe-no-cipher-error-endpoint-5022.md).
+- [The SSL_PE_NO_CIPHER error occurs on endpoint 5022 in SQL Server](ssl-pe-no-cipher-error-endpoint-5022.md)
 - [Connectivity error 0x80004005 occurs from SQL Sever Agent SSIS failures](sql-server-faces-connectivity-issue-ssispack-fail.md)
-- ["Client unable to establish connection" error occurs after implementing the cipher suite policies on a SQL Server machine](issues-connection-after-implementing-cipher-suite-policies.md).
-- ["Connection to the linked server has failed" error after you update Windows Server](connection-to-linked-server-failed.md).
+- ["Client unable to establish connection" error after implementing the cipher suite policies on a SQL Server machine](issues-connection-after-implementing-cipher-suite-policies.md)
+- ["Connection to the linked server has failed" error after you update Windows Server](connection-to-linked-server-failed.md)
 - [SQL Server Agent fails to start while connecting to SQL Server](unable-to-start-sql-agent.md).
-- [Error connecting higher to lower version of SQL Server using SQL Server Linked Server functionality](linked-server-cannot-be-created.md).
+- [Error connecting higher to lower version of SQL Server using SQL Server Linked Server functionality](linked-server-cannot-be-created.md)
 
 ## See also
 
