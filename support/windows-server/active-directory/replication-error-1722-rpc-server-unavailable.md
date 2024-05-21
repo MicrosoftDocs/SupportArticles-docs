@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot replication error 1722
 description: Fixes error 1722 of Active Directory replication in Windows Server 2008 R2 and earlier versions.
-ms.date: 05/21/2024
+ms.date: 04/10/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -125,20 +125,6 @@ RPC error 1722 / 0x6ba / RPC_S_SERVER_UNAVAILABLE is logged when a lower layer p
 
 Basic troubleshooting steps to identify the problem.
 
-### Verify the startup value and service status are correct for RPC, RPC Locator, and Kerberos Key Distribution Center
-
-Verify the startup value and service status are correct for the Remote Procedure Call (RPC), Remote Procedure Call (RPC) Locator and Kerberos Key Distribution Center.
-
-The OS version will determine the correct values for the source and destination system that is logging the replication error.  Use the following table to help validate the settings.
-
-|Service Name|Windows 2000|Windows 2003 /R2|Windows 2008|Windows 2008 R2|
-|---|---|---|---|---|
-|Remote Procedure Call (RPC)|Started / Automatic|Started / Automatic|Started / Automatic|Started / Automatic|
-|Remote Procedure Call (RPC) Locator|Started / Automatic (Domain Controllers)<br/> <br/>Not  started / Manual(Member Servers)|Not  started / Manual|Not  started / Manual|Not  started / Manual|
-|Kerberos Key Distribution Center (KDC)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers) |
-
-If you make any changes to match the settings above, restart the machine. Verify both the startup value and service status match the values documented in the table above.
-
 ### Verify the ClientProtocols key exists under HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc, and that it contains the correct default protocols
 
 |Protocol Name|Type|Data Value|
@@ -158,9 +144,9 @@ There are a few tools to use to help identify DNS errors:
 
 - `DCDIAG /TEST:DNS /V /E /F:<filename.log>`  
 
-  The `DCDIAG /TEST:DNS` command can validate DNS health of all supported versions of Windows Server family domain controllers. This test was first introduced with Windows Server 2003 Service Pack 1.
+    The `DCDIAG /TEST:DNS` command can validate DNS health of Windows 2000 Server (SP3 or later), Windows Server 2003, and Windows Server 2008 family domain controllers. This test was first introduced with Windows Server 2003 Service Pack 1.
 
-  There are seven test groups for this command.
+    There are seven test groups for this command.
 
   - Authentication (Auth)
   - Basic (`Basc`)
@@ -205,12 +191,12 @@ There are a few tools to use to help identify DNS errors:
     DC1 PASS PASS FAIL PASS PASS PASS n/a  
     Domain: child.fragale.contoso.com  
     DC2 PASS PASS n/a  n/a  n/a  PASS n/a  
-  
+    
     Enterprise DNS infrastructure test results:  
     For parent domain domain.com and subordinate domain child:  
     Forwarders or root hints are not misconfigured from parent domain to subordinate domain  
     Error: Forwarders are configured from subordinate to parent domain but some of them failed DNS server tests  
-  
+    
     (See DNS servers section for error details)  
     Delegation is configured properly from parent to subordinate domain  
     ......................... domain.com failed test DNS
@@ -308,7 +294,7 @@ There are a few tools to use to help identify DNS errors:
 
 The endpoint mapper (listening on port 135) tells the client which randomly assigned port a service (FRS, AD replication, MAPI, and so on) is listening on.
 
-Refer to the list of required ports in: [How to configure a firewall for Active Directory domains and trusts](/troubleshoot/windows-server/active-directory/config-firewall-for-ad-domains-and-trusts).
+Refer to the list of required ports in: [How to configure a firewall for Active Directory domains and trusts](https://github.com/ItaySar/SupportArticles-docs-pr/blob/docs-editor/replication-error-1722-rpc-ser-1715847855/troubleshoot/windows-server/active-directory/config-firewall-for-ad-domains-and-trusts).
 
 Portqry can be used to identify if a port is blocked from a Dc when targeting another DC. It can be downloaded at [PortQry Command Line Port Scanner Version 2.0](https://www.microsoft.com/download/details.aspx?id=17148).
 
