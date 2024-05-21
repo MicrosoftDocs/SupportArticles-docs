@@ -1,7 +1,7 @@
 ---
 title: An existing connection was forcibly closed (OS error 10054)
 description: Describes scenarios in which an existing connection was forcibly closed by the remote host and provides resolutions.
-ms.date: 08/31/2023
+ms.date: 05/21/2024
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
@@ -63,11 +63,19 @@ To check the issue, follow these steps:
    Get-ItemPropertyValue  -Path HKLM:\System\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002\ -Name Functions
    ```
 
-1. Use the **Ciphers Suites** tab in the [**IIS Crypto**](https://www.nartac.com/Products/IISCrypto/) toolp to check whether there are any matching algorithms. If no matching algorithms are found, contact Microsoft Support.
+1. Use the **Ciphers Suites** tab in the [**IIS Crypto**](https://www.nartac.com/Products/IISCrypto/) tool to check whether there are any matching algorithms. If no matching algorithms are found, contact Microsoft Support.
 
 For more information, see [TLS 1.2 Upgrade Workflow](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0700-TLS-1.2-Upgrade-Workflow) and [Transport Layer Security (TLS) connections might fail or timeout when connecting or attempting a resumption](https://support.microsoft.com/topic/transport-layer-security-tls-connections-might-fail-or-timeout-when-connecting-or-attempting-a-resumption-326bd5b1-52a1-b367-8179-b154e5c01e90).
 
-## Scenario 3: SQL Server uses a certificate signed by a weak-hash algorithm, such as MD5, SHA224, or SHA512
+## Scenario 3: The TLS_DHE Ciphers might be enabled
+
+This issue occurs when the client or server is hosted on Windows 2012, 2016, and higher versions. Despite both OS versions possessing the same cipher (TLS_DHE*), Windows 2012 and 2016+ handle cryptography keys within the TLS differently. This can result in communication errors.
+
+### Resolution
+
+To resolve this issue, remove all ciphers starting with "TLS_DHE*" from the local policy. For more information about errors that occur when applications try to connect to SQL Server in Windows, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](../../../windows-server/certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors.md).
+
+## Scenario 4: SQL Server uses a certificate signed by a weak-hash algorithm, such as MD5, SHA224, or SHA512
 
 SQL Server always encrypts network packets that are related to sign in. For this purpose, it uses a manually provisioned certificate or a [self-signed certificate](/dotnet/core/additional-tools/self-signed-certificates-guide). If SQL Server finds a certificate that supports the server authentication function in the certificate store, it uses the certificate. SQL Server uses this certificate even if it hasn't been manually provisioned. If these certificates use a weak-hash algorithm (thumbprint algorithm) such as [MD5](/dotnet/api/system.security.cryptography.md5), SHA224, or SHA512, they will not work with TLS 1.2 and cause the previously mentioned error.
 
@@ -92,20 +100,35 @@ To resolve the issue, follow these steps:
     1. On the **General** tab, select **Enable only the following purposes** and deselect **Server Authentication**.
 1. Restart the SQL Server service.
 
-## Scenario 4: The client and the server are using TLS_DHE cipher suite for TLS handshake, but one of the systems doesn't have leading zero fixes for the TLS_DHE installed
+## Scenario 5: The client and the server are using TLS_DHE cipher suite for TLS handshake, but one of the systems doesn't have leading zero fixes for the TLS_DHE installed
 
 For more information about this scenario, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](../../../windows-server/identity/apps-forcibly-closed-tls-connection-errors.md).
 
 > [!NOTE]
 > If this article hasn't resolved your issue, you can check if the [common connectivity issues articles](../connect/resolve-connectivity-errors-overview.md#common-connectivity-issues) can help.
 
-## Scenario 5: TCP Three-Way Handshake Timeout (SYN Fail, TCP Rejection) due to shortage of IOCP workers
+## Scenario 6: TCP Three-Way Handshake Timeout (SYN Fail, TCP Rejection) due to shortage of IOCP workers
 
-In systems with high workloads on SQL Server 2017 and earlier, you might observe intermittent 10054 error caused by TCP three-way handshake failures, leading to TCP rejections. The root cause of this issue might be in the delay in processing TCPAcceptEx requests. This delay can be due to a shortage of [IOCP (Input/Output Completion Port) listener](https://techcommunity.microsoft.com/t5/sql-server-support-blog/is-the-iocp-listener-actually-listening/ba-p/333989) workers responsible for managing the acceptance of incoming connections. The insufficient number of IOCP workers and busy servicing other requests leads to delayed processing of connection requests, ultimately resulting in handshake failures and TCP rejections. You may also observe login timeouts during the start SSL handshake (if any) or the processing of login requests, which involve in authentication checks.
+In systems with high workloads on SQL Server 2017 and earlier, you might observe intermittent 10054 error caused by TCP three-way handshake failures, leading to TCP rejections. The root cause of this issue might be in the delay in processing `TCPAcceptEx` requests. This delay can be due to a shortage of [IOCP (Input/Output Completion Port) listener](https://techcommunity.microsoft.com/t5/sql-server-support-blog/is-the-iocp-listener-actually-listening/ba-p/333989) workers responsible for managing the acceptance of incoming connections. The insufficient number of IOCP workers and busy servicing other requests leads to delayed processing of connection requests, ultimately resulting in handshake failures and TCP rejections. You may also observe login timeouts during the start SSL handshake (if any) or the processing of login requests, which involve in authentication checks.
 
 ### Resolution
 
 A shortage of IOCP workers and SOS Worker resources allocated to handling authentication and encryption operations is the main cause of the TCP three-way handshake timeouts and additional login timeouts. SQL Server 2019 includes several performance improvements in this area. One notable enhancement is the implementation of a dedicated login dispatcher pool. This optimizes the allocation of resources for login-related tasks, which reduces the occurrence of timeouts and improves overall system performance.
+
+## Other scenarios where TLS connections fail
+
+If the error message you encounter doesn't correspond to any of the previous scenarios, refer to the following additional scenarios:
+
+- [Local SQL Server can't connect to a linked server when RSA encryption is used](client-machine-cannot-connect-to-sqlserver.md)
+- [A connection error 10054 might occur post SQL Server upgrade](error-messages-areshown-after-upgrade-sql-version.md)
+- [Intermittent connection errors occur when adding a node to the Always On environment in SQL Server](intermittent-connection-errors-when-a-new-node-is-added.md)
+- [Intermittent connection errors occur when using SQLCMD utility](intermittent-connection-errors-sqlcmd.md)
+- [The SSL_PE_NO_CIPHER error occurs on endpoint 5022 in SQL Server](ssl-pe-no-cipher-error-endpoint-5022.md)
+- [Connectivity error 0x80004005 occurs from SQL Sever Agent SSIS failures](sql-server-faces-connectivity-issue-ssispack-fail.md)
+- ["Client unable to establish connection" error after implementing the cipher suite policies on a SQL Server machine](issues-connection-after-implementing-cipher-suite-policies.md)
+- ["Connection to the linked server has failed" error after you update Windows Server](connection-to-linked-server-failed.md)
+- [SQL Server Agent fails to start while connecting to SQL Server](unable-to-start-sql-agent.md)
+- [Error connecting higher to lower version of SQL Server using SQL Server Linked Server functionality](linked-server-cannot-be-created.md)
 
 ## See also
 
