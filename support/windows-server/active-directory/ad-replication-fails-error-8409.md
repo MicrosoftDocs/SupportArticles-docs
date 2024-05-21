@@ -48,10 +48,10 @@ Additionally, the following events are logged in the Windows NT Directory Servic
 > Object GUID: GUID  
 > Source directory service:  
 > GUID._msdcs.contoso.com  
-> Synchronization of the directory service with the source directory service is blocked until this update problem is corrected.
-> > This operation will be tried again at the next scheduled replication.
-> > User Action  
-> Restart the local computer if this condition appears to be related to low system resources (for example, low physical or virtual memory).
+> Synchronization of the directory service with the source directory service is blocked until this update problem is corrected.  
+> This operation will be tried again at the next scheduled replication.  
+> User Action  
+> Restart the local computer if this condition appears to be related to low system resources (for example, low physical or virtual memory).  
 > Additional Data  
 > Error value:  
 > 8409 A database error has occurred.
