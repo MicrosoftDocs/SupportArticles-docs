@@ -68,7 +68,7 @@ This section lists the issues that are related to configuration settings that ar
 
   **Solution:** To resolve this issue, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
-- **Explicit misplaced SPN** - Refers to an SPN that was incorrectly associated with a particular service or account. 
+- **Explicit misplaced SPN** - Refers to an SPN that was incorrectly associated with a particular service or account.
 
   **Solution:** To resolve this issue, see [Explicit misplaced SPN](explicit-spn-is-misplaced.md).
 
@@ -205,7 +205,7 @@ This section lists the issues that are related to the Kerberos authentication:
 
 - **HOSTS file is incorrect** - The HOSTS file can disrupt DNS lookups and might generate an unexpected SPN name. This situation causes NTLM credentials to be used. If an unexpected IP address is in the HOSTS file, the SPN that's generated might not match the back-end server that's pointed to.
 
-  **Solution:** Review the HOSTS file and remove the entries for your server. Hosts file entries are shown in SQLCHECK report.
+  **Solution:** Review the HOSTS file and remove the entries for your server. HOSTS file entries are shown in the SQLCHECK report.
 
 - **Issue with per-service security identifier (SID) permissions** - Per-service-SID is a security feature of SQL Server that limits local connections to use NTLM and not Kerberos as the authentication method. The service can make a single hop to another server by using NTLM credentials, but it can't be delegated further without using the constrained delegation. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
 
@@ -218,9 +218,9 @@ This section lists the issues that are related to the Kerberos authentication:
 - **Limit delegation rights to Access or Excel** - The Joint Engine Technology (JET) and Access Connectivity Engine (ACE) providers are similar to any of the file systems. You must use constrained delegation to enable SQL Server to read files that are located on another computer. In general, the ACE provider shouldn't be used in a linked server because this is explicitly not supported. The JET provider is deprecated and is available on 32-bit computers only.
 
   > [!NOTE]
-  > This scenario is no longer supported in Office.
+  > When SQL Server 2014, the last version to support 32-bit installations, goes out of support, the JET scenario will no longer be supported.
 
-- **Missing SPN** - This scenario might occur if an SPN that's related to a SQL Sever instance is absent.
+- **Missing SPN** - This issue might occur if an SPN that's related to a SQL Sever instance is absent.
 
   **Solution:** For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
