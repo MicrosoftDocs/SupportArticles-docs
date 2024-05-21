@@ -138,7 +138,7 @@ Please refer to the following link to download missing certificates:
 https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains
 ```
 
-To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies are configured to allow the download of certificates](#solution-2-ensure-firewalls-and proxies-are-configured-to-allow-the-download-of-certificates).
+To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies are configured to allow the download of certificates](#solution-2-ensure-firewalls-and-proxies-are-configured-to-allow-the-download-of-certificates).
 
 ## Solution 1: Bypass web proxies within the VM
 
@@ -241,10 +241,10 @@ To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies ar
 1. Check if [KB 5036909](https://support.microsoft.com/topic/april-9-2024-kb5036909-os-build-20348-2402-36062ce9-f426-40c6-9fb9-ee5ab428da8c) is installed. if not, install it. You can get it from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5036909).
 2. If you have installed the update but still encounter the issue, verify and ensure that your system's firewalls and proxies are configured to allow the download of certificates. For more information, see [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#certificate-downloads-and-revocation-lists).
 
-  Alternatively, you can download all the certificates directly from [Root and subordinate certificate authority chains](/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains#root-and-subordinate-certificate-authority-chains) and install them.
+   Alternatively, you can download all the certificates directly from [Root and subordinate certificate authority chains](/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains#root-and-subordinate-certificate-authority-chains) and install them.
   
-  > [!NOTE]
-  > Make sure to select the store location as **Local Machine** in the installation wizard.
+   > [!NOTE]
+   > Make sure to select the store location as **Local Machine** in the installation wizard.
 
 3. Open the Command Prompt as administrator, navigate to *c:\windows\system32*, and run *fclip.exe*.
 4. Restart the VM or sign out the VM and then sign in it. You will see that the watermark on the home page is no longer displayed, and the **Application state** field in the **Settings** > **Activation** screen reports success.
