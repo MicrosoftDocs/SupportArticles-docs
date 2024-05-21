@@ -67,7 +67,7 @@ To check the issue, follow these steps:
 
 For more information, see [TLS 1.2 Upgrade Workflow](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0700-TLS-1.2-Upgrade-Workflow) and [Transport Layer Security (TLS) connections might fail or timeout when connecting or attempting a resumption](https://support.microsoft.com/topic/transport-layer-security-tls-connections-might-fail-or-timeout-when-connecting-or-attempting-a-resumption-326bd5b1-52a1-b367-8179-b154e5c01e90).
 
-## Scenario 3: The TLS_DHE Ciphers might be enabled.
+## Scenario 3: The TLS_DHE Ciphers might be enabled
 
 This issue occurs when the client or server is hosted on Windows 2012, 2016, and higher versions. Despite both OS versions possessing the same cipher (TLS_DHE*), Windows 2012 and 2016+ handle cryptography keys within the TLS differently. This can result in communication errors.
 
@@ -127,7 +127,7 @@ If the error message you encounter doesn't correspond to any of the previous sce
 - [Connectivity error 0x80004005 occurs from SQL Sever Agent SSIS failures](sql-server-faces-connectivity-issue-ssispack-fail.md)
 - ["Client unable to establish connection" error after implementing the cipher suite policies on a SQL Server machine](issues-connection-after-implementing-cipher-suite-policies.md)
 - ["Connection to the linked server has failed" error after you update Windows Server](connection-to-linked-server-failed.md)
-- [SQL Server Agent fails to start while connecting to SQL Server](unable-to-start-sql-agent.md).
+- [SQL Server Agent fails to start while connecting to SQL Server](unable-to-start-sql-agent.md)
 - [Error connecting higher to lower version of SQL Server using SQL Server Linked Server functionality](linked-server-cannot-be-created.md)
 
 ## See also
