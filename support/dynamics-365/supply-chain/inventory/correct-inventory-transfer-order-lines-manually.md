@@ -57,4 +57,6 @@ You can manually correct inventory transfer order lines as described in the foll
 
 ## More information
 
-[Correct inventory transfer order lines manually D365 SCM [Data fix self-service tool]](https://www.youtube.com/watch?v=vu_x9M1Ygps)
+> [!VIDEO https://www.youtube.com/embed/vu_x9M1Ygps]
+
+
