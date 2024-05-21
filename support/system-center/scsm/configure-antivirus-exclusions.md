@@ -1,7 +1,7 @@
 ---
 title: Configure antivirus exclusions in Service Manager
 description: Describes how to configure antivirus exclusions in System Center Service Manager.
-ms.date: 04/08/2024
+ms.date: 05/21/2024
 ms.reviewer: brunoga, khusmeno
 ---
 # Configure antivirus exclusions in a System Center Service Manager environment
@@ -13,15 +13,35 @@ _Original KB number:_ &nbsp; 2787044
 
 To configure the exclusions for your Service Manager environment, you will need to configure the exclusions documented below.
 
+## For Service Manager management servers
+
+Exclude the following processes:
+
+- All instances of `MonitoringHost.exe`
+- `HealthService.exe`
+- `Microsoft.Mom.ConfigServiceHost.exe`
+- `Microsoft.Mom.Sdk.ServiceHost.exe`
+- `Microsoft.EnterpriseManagement.ServiceManager.UI.Console.exe`
+
+Exclude the following folder and its subfolders:
+
+- *C:\Program Files\Microsoft System Center\Service Manager*
+
+Exclude the files with the following extensions:
+
+- `.EDB`
+- `.CHK`
+- `.LOG`
+
 ## For Service Manager database servers
 
 For SQL Servers hosting the Service Manager related databases, configure the exclusion for the files with the following extensions:
 
-- MDF
-- NDF
-- LDF
+- `.MDF`
+- `.NDF`
+- `.LDF`
 
 The files are often located in a folder like:
 
-- E:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data
-- E:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Log
+- *E:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data*
+- *E:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Log*
