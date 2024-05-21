@@ -73,7 +73,7 @@ This issue occurs when the client or server is hosted on Windows 2012, 2016, and
 
 ### Resolution
 
-To resolve this issue, remove all ciphers starting with "TLS_DHE*" from the local policy. For more information about errors that occur when applications try to connect to SQL Server in Windows, see Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows.
+To resolve this issue, remove all ciphers starting with "TLS_DHE*" from the local policy. For more information about errors that occur when applications try to connect to SQL Server in Windows, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](../../../windows-server/certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors.md).
 
 ## Scenario 4: SQL Server uses a certificate signed by a weak-hash algorithm, such as MD5, SHA224, or SHA512
 
