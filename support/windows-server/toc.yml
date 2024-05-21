@@ -157,6 +157,8 @@ items:
       href: ./active-directory/windows-app-cant-start.md
   - name: Active Directory replication
     items:
+    - name: 'Troubleshooting guidance: Active Directory replication'
+      href: ./active-directory/troubleshoot-adreplication-guidance.md
     - name: Active Directory changes don't replicate
       href: ./active-directory/active-directory-changes-not-replicate.md
     - name: Active Directory replication error 1256
@@ -205,8 +207,6 @@ items:
       href: ./active-directory/disable-knowledge-consistency-checker-automatic-generation.md
     - name: Duplicate AD replication connections are created
       href: ./active-directory/duplicate-active-directory-replication-connections.md
-    - name: Get and use AD Replication Status Tool
-      href: ./active-directory/get-use-active-directory-replication-status-tool.md
     - name: Hotfixes for DFS technologies
       href: ./active-directory/distributed-file-system-hotfixes.md
     - name: How to restrict RPC traffic to a specific port
@@ -323,8 +323,6 @@ items:
       href: ./active-directory/group-policy-preparation-isnt-performed.md
     - name: How to upgrade domain controllers
       href: ./active-directory/add-domain-controllers-to-windows-2000-domain.md
-    - name: How to use unattended mode to install and remove AD DS
-      href: ./active-directory/syntax-build-answer-files-unattended-installation-ad-ds.md
     - name: Installing AD DS fails
       href: ./active-directory/installing-ad-ds-fails.md
     - name: Internal error during replication phase of dcpromo
@@ -941,8 +939,6 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail.md
   - name: Smart card logon
     items:
-    - name: 'Troubleshooting guidance: Active Directory replication'
-      href: ./certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance.md
     - name: A Certification Authority can't use a certificate template
       href: ./certificates-and-public-key-infrastructure-pki/ca-cant-use-certificate-template.md
     - name: Back up recovery agent EFS private key
@@ -3295,3 +3291,5 @@ items:
       href: ./support-tools/troubleshoot-issues-process-explorer.md
     - name: Using Task Manager
       href: ./support-tools/support-tools-task-manager.md
+    - name: Using WPR, WPA, or Xperf
+      href: ./support-tools/support-tools-xperf-wpa-wpr.md

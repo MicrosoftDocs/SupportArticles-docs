@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
+ms.custom: sap:Warehouse management
 --- 
 
 # Auto-reservation prompt for batch number is shown even with available inventory

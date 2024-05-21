@@ -2,7 +2,7 @@
 title: Error logging in HTTP APIs
 description: This article describes the error-logging capabilities of HTTP APIs.
 ms.date: 05/28/2020
-ms.custom: sap:Site behavior and performance
+ms.custom: sap:Performance
 ---
 # Error logging in HTTP APIs
 

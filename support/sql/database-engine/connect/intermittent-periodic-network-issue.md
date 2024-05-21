@@ -100,6 +100,8 @@ In the ServerHello packet, if the cipher suite used is a Diffie-Hellman suite, a
 
 If the connection is closed after the ClientHello, check if there's a TLS 1.0 or TLS 1.2 mismatch between the client and server. If they're the same, check the enabled cipher suites and enabled hashes on both machines.
 
+For more information, see [Advanced Secure Sockets Layer data capture](troubleshoot-ssl-errors-login-process.md).
+
 #### Dropped packets
 
 View the end of the matched conversations. If one has many retransmitted packets (or 10 Keep-Alive packets, 1-second apart) followed by an ACK+RESET and the other doesn't, or one reports a timely response and the other sees it delayed and closes or resets the conversation, this indicates a problem with the network device and packets are dropped or delayed.

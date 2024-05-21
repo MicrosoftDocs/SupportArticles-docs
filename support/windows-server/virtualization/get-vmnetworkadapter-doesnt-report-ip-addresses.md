@@ -79,7 +79,7 @@ ROOT\Standardcimv2 NetPeerDist
 ROOT\Standardcimv2 NetNcCim 
 ```
 
-Additionally, use `Get-WmiObject` to view the attributes of the [:::no-loc text="MSFT_NetIPInterfaceAdapter":::](/previous-versions/windows/desktop/nettcpipprov/msft-netipinterfaceadapter) class, as follows:
+Additionally, use `Get-WmiObject` to view the attributes of the [:::no-loc text="MSFT_NetIPInterfaceAdapter":::](/windows/win32/fwp/wmi/nettcpipprov/msft-netipinterfaceadapter) class, as follows:
 
 ```powershell
 PS C:\> Get-WmiObject -Namespace "root\standardcimv2" -Class "MSFT_NetIPInterfaceAdapter"

@@ -1,14 +1,15 @@
 ---
-title: Ask your admin to create an environment for you when opening Copilot for Sales
-description: Resolves the Ask your admin to create an environment for you error that occurs in Microsoft Copilot for Sales when a user tries to open the app.
-ms.date: 04/19/2024
+title: You don't have permission for this when opening Copilot for Sales
+description: Resolves the You don't have permission for this error that occurs in Microsoft Copilot for Sales when a user tries to open the app.
+ms.date: 05/10/2024
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# "Ask your admin to create an environment for you" error when opening Microsoft Copilot for Sales
 
-This article helps you resolve the "Ask your admin to create an environment for you" error in Microsoft Copilot for Sales when a user tries to open the app.
+# "You don't have permission for this" error when opening Microsoft Copilot for Sales
+
+This article helps you resolve the "You don't have permission for this" error in Microsoft Copilot for Sales when a user tries to open the app.
 
 ## Who is affected?
 
@@ -25,7 +26,9 @@ This article helps you resolve the "Ask your admin to create an environment for 
 
 When a user tries to open Microsoft Copilot for Sales, the following error is displayed:
 
-> Ask your admin to create an environment for you.
+> You don't have permission for this
+
+:::image type="content" source="media/ask-admin-help/ask-admin-help.png" alt-text="Screenshot that shows the You don't have permission for this error.":::
 
 ## Cause
 

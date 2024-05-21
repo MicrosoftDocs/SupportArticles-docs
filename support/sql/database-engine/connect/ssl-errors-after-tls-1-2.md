@@ -120,4 +120,4 @@ If a network trace isn't available, you can check the function value under the f
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002`
 
-If you see no matching algorithms, contact Microsoft Support. To assist the support engineer, capture network traces or BID traces, as specified at [Advanced SSL Data Capture](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0720-Advanced-SSL-Data-Capture).
+If you see no matching algorithms, contact Microsoft Support. To assist the support engineer, capture network traces or BID traces, as specified at [Advanced SSL Data Capture](troubleshoot-ssl-errors-login-process.md).

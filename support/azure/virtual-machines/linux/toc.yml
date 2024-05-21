@@ -3,7 +3,9 @@
 
 - name: Support for Linux and open-source technology in Azure
   href: support-linux-open-source-technology.md
-
+- name: Upgrade VMs running Canonical Ubuntu 18.04 LTS
+  href: upgrade-canonical-ubuntu-18dot04-lts.md
+  
 - name: VM restarts or stops unexpectedly
   items:
   - name: Understand a system reboot
@@ -23,6 +25,8 @@
       href: how-to-use-perfinsights-linux.md
   - name: Isolate bottlenecks in Linux
     href: troubleshoot-performance-bottlenecks-linux.md
+  - name: Out of memory error in Linux VM
+    href: oom-swap-file-linux-vm.md
   - name: Troubleshoot performance issues through monitoring
     href: troubleshoot-performance-virtual-machine-linux-windows.md
 

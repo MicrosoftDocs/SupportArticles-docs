@@ -1,6 +1,8 @@
 items:
 - name: Common Connection Issues
   href: resolve-connectivity-errors-overview.md
+- name: Troubleshoot SSL errors during the login process
+  href: troubleshoot-ssl-errors-login-process.md
 - name: Cannot generate SSPI context
   href: cannot-generate-sspi-context-error.md
 - name: Can't use Kerberos unconstrained delegation in Windows
@@ -9,8 +11,6 @@ items:
   href: certificate-validation-failure.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
-- name: Incorrect server name in SQL Server connection string
-  href: bad-server-name-connection-string-error.md
 - name: How to determine if the authentication type is Kerberos
   href: determine-the-authentication-type.md
 - name: Existing connection forcibly closed
@@ -18,6 +18,8 @@ items:
   items:
   - name: Client can't connect to SQL Server with SQL authentication
     href: client-machine-cannot-connect-to-sqlserver.md
+  - name: Connection error 10054 occurs in SQL Server post upgrade
+    href: error-messages-areshown-after-upgrade-sql-version.md
   - name: Connection to the linked server failed
     href: connection-to-linked-server-failed.md
   - name: Error 0x80004005 occurs from SQL Sever Agent SSIS failures

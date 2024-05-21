@@ -1,7 +1,7 @@
 ---
 title: Use Ntdsutil to find and clean up
 description: Discusses how to use Ntdsutil to find and clean up duplicate security identifiers.
-ms.date: 12/26/2023
+ms.date: 05/21/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article discusses how to use Ntdsutil to find and clean up duplicate security identifiers.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 816099
 
 ## Summary
