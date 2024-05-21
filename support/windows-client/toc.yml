@@ -1338,10 +1338,10 @@ items:
   - name: Performance Monitoring Tools
     items:
     - name: Using Performance Monitor
-      href: ./support-tools/troubleshoot-issues-performance-monitor.md?context=/troubleshoot/windows-client/context/context
+      href: ../windows-server/support-tools/troubleshoot-issues-performance-monitor.md?context=/troubleshoot/windows-client/context/context
     - name: Using Process Explorer
-      href: ./support-tools/troubleshoot-issues-process-explorer.md?context=/troubleshoot/windows-client/context/context
+      href: ../windows-server/support-tools/troubleshoot-issues-process-explorer.md?context=/troubleshoot/windows-client/context/context
     - name: Using Task Manager
-      href: ./support-tools/support-tools-task-manager.md?context=/troubleshoot/windows-client/context/context
+      href: ../windows-server/support-tools/support-tools-task-manager.md?context=/troubleshoot/windows-client/context/context
     - name: Using WPR, WPA, or Xperf
-      href: ./support-tools/support-tools-xperf-wpa-wpr.md?context=/troubleshoot/windows-client/context/context
+      href: ../windows-server/support-tools/support-tools-xperf-wpa-wpr.md?context=/troubleshoot/windows-client/context/context
