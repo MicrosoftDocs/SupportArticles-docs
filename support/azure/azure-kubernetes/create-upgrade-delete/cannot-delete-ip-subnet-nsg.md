@@ -32,7 +32,7 @@ When you try to delete an AKS cluster, you receive one of the following error me
   >
   > or
   > 
-  > message: "Subnet <subnetname> is in use by /subscriptions/<subid>/resourceGroups/<RGName>/providers/Microsoft.Network/virtualNetworks/<VNETName>/subnets/<subnetname>/serviceAssociationLinks/AppServiceLink and cannot be deleted. In order to delete the subnet, delete all the resources within the subnet. See aka.ms/deletesubnet."
+  > message: "Subnet aks-subnet is in use by ..../resourceGroups/.../providers/Microsoft.Network/virtualNetworks/.../subnets/.../serviceAssociationLinks/AppServiceLink and cannot be deleted. In order to delete the subnet, delete all the resources within the subnet. See aka.ms/deletesubnet."
   >
   > }
 
