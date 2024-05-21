@@ -17,7 +17,7 @@ To configure the exclusions for your Service Manager environment, you will need 
 
 Exclude the following processes:
 
-- `All instances of MonitoringHost.exe`
+- All instances of `MonitoringHost.exe`
 - `HealthService.exe`
 - `Microsoft.Mom.ConfigServiceHost.exe`
 - `Microsoft.Mom.Sdk.ServiceHost.exe`
