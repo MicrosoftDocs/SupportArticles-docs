@@ -46,9 +46,9 @@ The following diagnostics are currently available for Intune enrollment issues. 
 |Diagnostics|Links|
 |--|--|
 |Intune Windows enrollment|[Run Tests: Intune Windows enrollment](https://aka.ms/IntuneWindowsEnrollment)|
-|Intune iOS/iPadOS enrollment|[Run Tests: Intune iOS/iPadOS enrollment](https://admin.microsoft.com/AdminPortal/?searchSolutions=Diag%3A+Intune+iOS+Enrollment)|
-|Intune Android enrollment|[Run Tests: Intune Android enrollment](https://admin.microsoft.com/AdminPortal/?searchSolutions=Diag%3A+Intune+Android+Enrollment)|
-|Intune macOS enrollment|[Run Tests: Intune macOS enrollment](https://admin.microsoft.com/AdminPortal/?searchSolutions=Diag%3A+Intune+mac+Enrollment)|
+|Intune iOS/iPadOS enrollment|[Run Tests: Intune iOS/iPadOS enrollment](https://aka.ms/IntuneiOSEnrolmentAlchemyDiag)|
+|Intune Android enrollment|[Run Tests: Intune Android enrollment](https://aka.ms/IntuneAndroidEnrolmentAlchemyDiag)|
+|Intune macOS enrollment|[Run Tests: Intune macOS enrollment](https://aka.ms/IntuneMacOSEnrolmentAlchemyDiag)|
 
 ### Collect basic information
 
