@@ -1,7 +1,7 @@
 ---
 title: Deleting Active Directory objects that have many links causes replication failures
 description: Discusses an issue in which deleting Active Directory objects that have many links causes replication failures. Provides a workaround.
-ms.date: 12/26/2023
+ms.date: 05/21/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -101,13 +101,15 @@ By default, when you delete an Active Directory object that has an exceptionally
 While this update is pending, admins may see write conflicts and transaction failure events. Also, as additional objects are processed by replication, more and more version store is allocated because the pending large transaction doesn't release its allocated versions store until the deletion transaction is finished. This can cause version store errors and replication warnings events.
 
 > [!Note]
-- Garbage collection isn't related to the processing of group membership link deletions.
-- Decreasing TSL isn't a valid method of accelerating link deletions.
+>
+> - Garbage collection isn't related to the processing of group membership link deletions.
+> - Decreasing TSL isn't a valid method of accelerating link deletions.
 > - The legacy value for **Links process batch size** is 1,000 in versions before Windows Server 2008 R2. In later versions, the batch size is increased to 10,000 to improve the performance of undeleting in forests that have the Recycle Bin enabled.
-- Check values of the **Links process batch size** parameter. If it's nondefault, set the value back to its default or an even smaller value such as 1,000 or 100.
-
+> - Check values of the **Links process batch size** parameter. If it's nondefault, set the value back to its default or an even smaller value such as 1,000 or 100.
+>
 > Smaller values decrease version store usage by deleting a smaller number of objects per deleting thereby reducing the total time to perform a single delete transaction. This has the positive side effect of reducing version store and time window for write conflicts while you increase the time that's required to accurately reflect the group membership in the directory.
-> Active Directory services check for the following registry key.
+
+Active Directory services check for the following registry key.
 
 For AD DS:
 
