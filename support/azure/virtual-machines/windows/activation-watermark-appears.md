@@ -247,7 +247,7 @@ To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies ar
    > Make sure to select the store location as **Local Machine** in the installation wizard.
 
 3. Open the Command Prompt as administrator, navigate to *c:\windows\system32*, and run *fclip.exe*.
-4. Restart the VM or sign out the VM and then sign in it. You will see that the watermark on the home page is no longer displayed, and the **Application state** field in the **Settings** > **Activation** screen reports success.
+4. Restart the VM or sign out and then sign in again. You will see that the watermark on the home page is no longer displayed, and the **Application state** field in the **Settings** > **Activation** screen reports success.
 
 ## More information
 
