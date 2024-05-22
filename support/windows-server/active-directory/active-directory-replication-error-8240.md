@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot AD Replication error 8240 There is no such object on the server
 description: Describes symptoms, cause, and resolution for AD operations that fail with Win32 error 8240 (There is no such object on the server).
-ms.date: 12/26/2023
+ms.date: 5/242/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: jaml, tonnyp, kaushika
+ms.reviewer: jaml, tonnyp, kaushika, v-tappelgate
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Troubleshooting AD Replication error 8240: There is no such object on the server
