@@ -4,7 +4,6 @@ description: This article describes naming schema and fix area for SQL Server so
 ms.date: 09/03/2020
 ms.custom: evergreen, sap:Installation, Patching and Upgrade
 ms.reviewer: Arvindk
-ms.topic: article
 ---
 # Naming schema and Fix area descriptions for SQL Server software update packages
 

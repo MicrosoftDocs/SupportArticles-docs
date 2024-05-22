@@ -3,7 +3,6 @@ title: Frequently asked questions, used terms and acronyms
 description: This article describes the frequently asked questions, used terms and acronyms of SQL Server.
 ms.date: 10/15/2022
 ms.custom: evergreen, sap:Installation, Patching and Upgrade
-ms.topic: how-to
 ms.reviewer: v-six
 ---
 
