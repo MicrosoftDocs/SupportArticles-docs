@@ -25,7 +25,7 @@ There was a server failure.
 
 ## Cause
 
-This issue may occur if the system account does not have the SeSecurityPrivelige permission that is provided by the built-in administrator account.
+This issue may occur if the system account does not have the SeSecurityPrivilege permission that is provided by the built-in administrator account.
 
 ## Resolution
 
