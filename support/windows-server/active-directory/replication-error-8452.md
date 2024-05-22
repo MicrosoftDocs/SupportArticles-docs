@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication error 8452
 description: Active Directory Replications test has failed with error status code (8452). Provides a resolution.
-ms.date: 05/21/2024
+ms.date: 05/22/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
