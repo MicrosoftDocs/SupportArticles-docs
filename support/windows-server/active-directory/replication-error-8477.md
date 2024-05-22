@@ -148,7 +148,7 @@ Regarding disk usage, on Active Directory Domain Controllers the Ntds.dit and ed
 
 Low Bandwidth, High Latency, or Busy Network Connectivity may also cause error 8477 to occur on Active Directory Domain Controllers. Network Performance data metrics should be collected from a Domain Controller utilizing Performance Monitor, Network Monitor, or other such tools. Guidance around monitoring and measuring replication traffic is detailed in [Active Directory Replication Traffic](https://technet.microsoft.com/library/bb742457.aspx).
   
-Performance Monitor includes the key functionality of Server Performance Advisor straight out of the box. Within the System Data Collector Sets, the Active Directory Diagnostics set will, similarly to Server Performance Advisor, produce a report with key metrics for Active Directory Performance investigation and provide warnings for uncharacteristic behavior on Active Directory Domain Controllers. Any warnings are included at the top of the report an example of which is below:  
+Performance Monitor includes the key functionality of Server Performance Advisor straight out of the box. Within the System Data Collector Sets, the Active Directory Diagnostics set will, similarly to Server Performance Advisor, produce a report with key metrics for Active Directory Performance investigation and provide warnings for uncharacteristic behavior on Active Directory Domain Controllers. Any warnings are included at the top of the report. Here's an example:  
 
 |WARNING|</br>|
 |---|---|
@@ -205,12 +205,12 @@ Linked-value replication isn't available in Windows 2000 Server forests. Because
 
 When a Domain is upgraded from a 2000 functional level, the memberships of any groups carried are considered legacy and can still cause replication issues:
 
-Forests at the 2003 functional level can remove and reinstate group members to make them LVR-enabled. Over time, as security principals are added and removed from groups, the members are slowly enabled for LVR
+Forests at the 2003 functional level can remove and reinstate group members to make them LVR-enabled. Over time, as security principals are added and removed from groups, the members are slowly enabled for LVR.
 
 > [!Note]
 > Events 1479 and 1519 are also commonly logged in the Directory Service Event Log when large groups are causing replication issues and delays.
 
-Using repadmin /showobjmeta legacy members in a group can be determined and converted to LVR enabled members if necessary to resolve the issue, these users are denoted with 'Type' of value LEGACY:  
+Using `repadmin /showobjmeta`, legacy members in a group can be determined and converted to LVR-enabled members if necessary to resolve the issue. These users are denoted with 'Type' of value `LEGACY`:  
 
 > repadmin /showobjmeta DomainControllerName "CN=Administrators,CN=Builtin,DC=Contoso,DC=Com"
 >
