@@ -171,29 +171,29 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
 
     Run `repadmin /showrepl * /csv` parsed by using Excel as specified in the [Verify successful replication to a domain controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794749(v=ws.10)) section. Sort the replsum output in Excel on the last replication success column in the order from least current to the most current date and time.
    
-4. Check for time jumps.
+1. Check for time jumps.
 
     To determine whether a time _jump_ occurred, check event and diagnostic logs (`repadmin /showreps`, dcdiag logs) on destination DCs that are logging 8614 errors for the following timestamps:
 
-    - Date stamps that predate the release of an operating system. For example, date stamps from Windows Server 2003 for an OS released in Windows Server 2008.
-    - Date stamps that predate the installation of the operating system in your forest.
-    - Date stamps in the future.
-    - No events being logged in a given date range.
+- Date stamps that predate the release of an operating system. For example, date stamps from Windows Server 2003 for an OS released in Windows Server 2008.
+ - Date stamps that predate the installation of the operating system in your forest.
+ - Date stamps in the future.
+ - No events being logged in a given date range.
 
     Microsoft Support teams have seen system time on production domain controllers incorrectly jump hours, days, weeks, years, and even tens of years in the past and future.
 
     If system time was found to be inaccurate, correct it. Then try to determine why time jumped, and what can be done to prevent inaccurate time going forward vs. just correcting the bad time. Possible areas to investigate include:
 
-    - Was the forest root PDC configured by using an external time source?
-    - Are reference time sources online, available on the network, and resolvable in DNS?
-    - Was the Microsoft or third-party time service running and in an error-free state?
-    - Are DC-role computers configured to use NT5DS hierarchy to source time?
-    - Was the time rollback protection described in [How to configure the Windows Time service against a large time offset](https://support.microsoft.com/help/884776) in place?
-    - Do system clocks have good batteries and accurate time in the BIOS?
-    - Are virtual host and guest computers configured to source time according to the hosting manufacturers recommendations?
+- Was the forest root PDC configured by using an external time source?
+ - Are reference time sources online, available on the network, and resolvable in DNS?
+ - Was the Microsoft or third-party time service running and in an error-free state?
+ - Are DC-role computers configured to use NT5DS hierarchy to source time?
+ - Was the time rollback protection described in [How to configure the Windows Time service against a large time offset](https://support.microsoft.com/help/884776) in place?
+ - Do system clocks have good batteries and accurate time in the BIOS?
+ - Are virtual host and guest computers configured to source time according to the hosting manufacturers recommendations?
 
-    This article [How to configure the Windows Time service against a large time offset](https://support.microsoft.com/help/884776) documents steps to help protect domain controllers from listening to invalid time samples. More information on **MaxPosPhaseCorrection** and **MaxNegPhaseCorrection** is available in [Windows Time Service](/archive/blogs/w32time/).
-
+    This article [How to configure the Windows Time service against a large time offset](https://support.microsoft.com/help/884776) documents steps to help protect domain controllers from listening to invalid time samples. More information on **MaxPosPhaseCorrection** and **MaxNegPhaseCorrection** is available in [Windows Time Service](/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings).
+   
 1. Check for and remove lingering objects if they're present.
 
     The point of the 8614 error replication quarantine is to check for lingering objects and remove them, if present, in each locally held partition before setting **Allow Replication with divergent and corrupt partner** to 1 in the registry of the destination DC, even if you think that all destination DCs in the forest are running in strict replication consistency.
