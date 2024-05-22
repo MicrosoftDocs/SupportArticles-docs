@@ -9,7 +9,7 @@ localization_priority: medium
 ms.reviewer: kaushika, roblane, sagiv
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
-# You cannot change the replication scope of an Active Directory integrated DNS zone in Windows Server 2003
+# You cannot change the replication scope of an Active Directory integrated DNS zone in Windows Server
 
 This article provides a solution to an error that occurs when you change the replication scope of an Active Directory integrated domain name system (DNS) zone.
 
