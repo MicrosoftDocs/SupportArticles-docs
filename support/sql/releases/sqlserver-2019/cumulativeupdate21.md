@@ -2,7 +2,7 @@
 title: Cumulative update 21 for SQL Server 2019 (KB5025808)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 21 (KB5025808).
 ms.date: 09/19/2023
-ms.custom: KB5025808
+ms.custom: evergreen, KB5025808
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows

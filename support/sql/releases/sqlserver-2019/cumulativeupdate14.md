@@ -2,7 +2,7 @@
 title: Cumulative update 14 for SQL Server 2019 (KB5007182)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 14 (KB5007182).
 ms.date: 06/30/2023
-ms.custom: KB5007182
+ms.custom: evergreen, KB5007182
 ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
