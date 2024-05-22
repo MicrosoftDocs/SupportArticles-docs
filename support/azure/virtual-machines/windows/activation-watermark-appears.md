@@ -138,7 +138,7 @@ Please refer to the following link to download missing certificates:
 https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains
 ```
 
-To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies are configured to allow the download of certificates](#solution-2-ensure-firewalls-and-proxies-are-configured-to-allow-the-download-of-certificates).
+To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies are configured to allow certificate downloads](#solution-2-ensure-firewalls-and-proxies-are-configured-to-allow-certificate-downloads).
 
 ## Solution 1: Bypass web proxies within the VM
 
