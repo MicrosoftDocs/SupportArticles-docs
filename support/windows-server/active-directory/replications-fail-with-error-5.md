@@ -1,12 +1,12 @@
 ---
-title: troubleshoot AD replication error 5 Access is denied
+title: Troubleshoot AD replication error 5 Access is denied
 description: Discusses the Access is denied error 5 when Active Directory replications fail. This issue can occur in Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, Windows Server 2003, or Microsoft Windows 2000 Server.
-ms.date: 12/26/2023
+ms.date: 05/22/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # How to troubleshoot Active Directory replication error 5 in Windows Server: Access is denied
@@ -18,11 +18,11 @@ _Original KB number:_ &nbsp; 3073945
 
 ## Symptoms
 
-You may encounter one or more of the following symptoms when Active Directory replications fail with error 5.
+You might encounter one or more of the following symptoms when Active Directory replications fail with error 5.
 
 ### Symptom 1
 
-The Dcdiag.exe command-line tool reports that the Active Directory replication test fails with error status code (5). The report resembles the following:
+The *Dcdiag.exe* command-line tool reports that the Active Directory replication test fails with error status code (5). The report resembles the following:
 
 > Testing server: **Site_Name**\\**Destination_DC_Name**  
 Starting test: Replications  
@@ -38,11 +38,11 @@ The last success occurred at **Date** **Time**.
 
 ### Symptom 2
 
-The Dcdiag.exe command-line tool reports that the DsBindWithSpnEx  function fails with error 5 by running the `DCDIAG /test:CHECKSECURITYERROR` command.
+The *Dcdiag.exe* command-line tool reports that the `DsBindWithSpnEx` function fails with error 5 by running the `DCDIAG /test:CHECKSECURITYERROR` command.
 
 ### Symptom 3
 
-The REPADMIN.exe command-line tool reports that the last replication attempt failed with status 5.
+The *REPADMIN.exe* command-line tool reports that the last replication attempt failed with status 5.
 
 The REPADMIN commands that frequently cite the five status include but aren't limited to the following:
 
@@ -53,7 +53,7 @@ The REPADMIN commands that frequently cite the five status include but aren't li
 - REPADMIN /SHOWREPS
 - REPADMIN /SYNCALL
 
-Sample output from the `REPADMIN /SHOWREPL`  command follows. This output shows incoming replication from **DC_2_Name** to **DC_1_Name**  failing with the "Access is denied" error.
+Sample output from the `REPADMIN /SHOWREPL` command follows. This output shows incoming replication from **DC_2_Name** to **DC_1_Name**  failing with the "Access is denied" error.
 
 > **Site_Name**\\**DC_1_Name**  
 DSA Options: IS_GC  
@@ -131,10 +131,9 @@ Solution
 
 1. Run `NETDOM RESETPWD` to reset the password against remote DC:
 
-
-```console
-c:\>netdom resetpwd /server:<remote_dc_name> /userd: domain_name\administrator /passwordd: administrator_password
-```
+   ```console
+   c:\>netdom resetpwd /server:<remote_dc_name> /userd: domain_name\administrator /passwordd: administrator_password
+   ```
 
 1. Make sure that likely KDCs and the source domain controller (if these are in the same domain) inbound replicate knowledge of the destination domain controller's new password.
 1. Start the Kerberos Key Distribution Center (KDC) service on the destination domain controller and retry the replication operation.  
@@ -159,10 +158,9 @@ Solution
 
 1. Run `NETDOM RESETPWD` to reset the password against remote DC:
 
-
-```console
-c:\>netdom resetpwd /server:<remote_dc_name> /userd: domain_name\administrator /passwordd: administrator_password
-```
+   ```console
+   c:\>netdom resetpwd /server:<remote_dc_name> /userd: domain_name\administrator /passwordd: administrator_password
+   ```
 
 1. Make sure that likely KDCs and the source domain controller (if these are in the same domain) inbound replicate knowledge of the destination domain controller's new password.
 1. Start the Kerberos Key Distribution Center (KDC) service on the destination domain controller and retry the replication operation.  
@@ -171,7 +169,7 @@ See [How to use Netdom.exe to reset machine account passwords of a domain contro
 
 ### Cause 2: The CrashOnAuditFail setting in the registry of the destination domain controller has a value of 2
 
- A CrashOnAduitFail value of 2 is triggered if the Audit: Shut down system immediately if unable to log security audits  policy setting in Group Policy is enabled and the local security event log becomes full.
+A CrashOnAuditFail value of 2 is triggered if the Audit: Shut down system immediately if unable to log security audits  policy setting in Group Policy is enabled and the local security event log becomes full.
 
 Active Directory domain controllers are especially prone to maximum-capacity security logs when auditing is enabled and the size of the security event log is constrained by the **Do not overwrite events (clear log manually)**  and **Overwrite as needed**  options in Event Viewer or their Group Policy equivalents.
 
