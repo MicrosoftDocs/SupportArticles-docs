@@ -1,0 +1,81 @@
+### YamlMime:Landing
+
+title: Microsoft Dynamics 365 Business Central
+summary: Welcome to Microsoft Dynamics 365 Business Central. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Business Central. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Dynamics 365 Business Central
+  description: Landing page for Microsoft Dynamics 365 Business Central troubleshooting articles.
+  ms.topic: landing-page
+  ms.service: dynamics-365-business-central
+  author: SusanneWindfeldPedersen
+  ms.author: solsen
+  ms.date: 05/20/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card
+  - title: Cloud migration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+           - text: An activity times out in Business Central cloud migration
+             url: migration/migration-activity-timeout.md
+           - text: '"Cannot connect to SQL Database, ErrorCode=SqlFailedToConnect" error'
+             url: migration/migration-cannot-connect.md
+           - text: Data replication error DelimitedTextIncorrectRowDelimiter for large tables
+             url: migration/migration-data-replication-large-tables.md
+           - text: '"Failed to enable your replication" error'
+             url: migration/migration-general-error.md
+           - text: '"Invalid database connection string provided" error'
+             url: migration/migration-invalid-connection-string.md
+           - text: Permission issues in Business Central cloud migration
+             url: migration/migration-permission-issues.md
+           - text: Self-hosted Integration Runtime is offline or a database operation fails
+             url: migration/migration-data-replication.md
+           - text: '"The EXECUTE (or SELECT) permission was denied on the object" error'
+             url: migration/migration-execute-permission.md
+  # Card
+  - title: Client
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Client returns wrong client type
+            url: client/client-returns-wrong-clienttype.md
+          - text: Icon font isn't loaded
+            url: client/client-icon-font-not-loaded.md
+          - text: Profile configuration can't be started
+            url: client/client-profile-configuration.md
+          - text: User personalization can't be started
+            url: client/client-user-personalization.md
+  # Card
+  - title: Integration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: A permission error occurs even though Microsoft 365 access is enabled
+            url: integration/m365-permission-error.md
+          - text: Card from shared link is minimal and doesn't have Details button
+            url: integration/m365-shared-card-no-details.md
+          - text: '"You can only view data in Microsoft Teams" error'
+            url: integration/m365-only-view-data.md
+  # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Business Central documentation
+            url: /dynamics365/business-central/
+          - text: Business Central training
+            url: /training/dynamics365/
+
+  # Card
+  - title: Support resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Business Central forum
+            url: https://community.dynamics.com/forums/thread/?partialUrl=business
+          - text: Share your ideas
+            url: https://experience.dynamics.com/ideas/categories/?forum=e288ef32-82ed-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Business%20Central # get fwdlink

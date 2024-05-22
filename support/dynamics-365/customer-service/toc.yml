@@ -23,7 +23,11 @@
 - name: Knowledge Management
   items:  
     - name: Data isn't updated on Insights for integrated search providers
-      href: knowledge-management/data-not-updated-integrated-search-providers.md                
+      href: knowledge-management/data-not-updated-integrated-search-providers.md
+- name: Queues
+  items:  
+    - name: Personal view queue filters aren't working properly
+      href: queues/queue-filter-error.md                  
 - name: Service Level Agreements (SLAs)
   items:
     - name: Import, export, or upgrade SLA

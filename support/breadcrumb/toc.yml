@@ -186,10 +186,10 @@ items:
       - name: Site Recovery
         tocHref: /troubleshoot/azure/site-recovery/
         topicHref: /troubleshoot/azure/site-recovery/welcome-site-recovery
-      - name: Virtual Machine running Linux
+      - name: Linux Virtual Machines
         tocHref: /troubleshoot/azure/virtual-machines/linux/
         topicHref: /troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux
-      - name: Virtual Machine running Windows
+      - name: Windows Virtual Machines 
         tocHref: /troubleshoot/azure/virtual-machines/windows/
         topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
       - name: Virtual Machine Scale Sets
@@ -200,6 +200,9 @@ items:
       tocHref: /troubleshoot/dynamics-365/
       topicHref: /troubleshoot/dynamics-365/
       items:
+      - name: Dynamics 365 Business Central
+        tocHref: /troubleshoot/dynamics-365/business-central/
+        topicHref: /troubleshoot/dynamics-365/business-central/welcome-business-central
       - name: Dynamics 365 Customer Insights
         tocHref: /troubleshoot/dynamics-365/customer-insights/
         topicHref: /troubleshoot/dynamics-365/customer-insights/welcome-customer-insights
