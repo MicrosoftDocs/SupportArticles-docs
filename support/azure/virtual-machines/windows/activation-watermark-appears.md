@@ -32,7 +32,7 @@ When you use an Azure virtual machine (VM) that runs Windows Server 2022, you en
 
 - When you open the **Settings** app and select **System** > **Activation**, the **Application state** field indicates an activation failure.
 
-- When you open an elevated Command Prompt window and run the following [slmgr.vbs volume activation script](/windows-server/get-started/activation-slmgr-vbs-options), the output shows that Key Management Services (KMS) activation is successful but the previous two symptoms remain:
+- When you open an elevated Command Prompt window and run the following [slmgr.vbs volume activation script](/windows-server/get-started/activation-slmgr-vbs-options), the output shows that Key Management Services (KMS) activation is successful, but the first two symptoms remain:
 
   ```console
   cscript c:\windows\system32\slmgr.vbs /dlv
@@ -40,17 +40,17 @@ When you use an Azure virtual machine (VM) that runs Windows Server 2022, you en
 
 ## Cause 1: Azure Instance Metadata Service connection issue
 
-The Azure VM is unable to establish a connection with the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service) endpoint, which is essential for obtaining the activation token.
+The Azure VM can't establish a connection with the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service) endpoint, which is essential for obtaining the activation token.
 
 ## Cause 2: Certificate related issue
 
-Intermediate certificates that are crucial for the activation process are expired.
+Intermediate certificates that are crucial for the activation process have expired.
 
-For more information, see [Azure Instance Metadata Service-Attested data TLS: Critical changes are here!](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953).
+For more information, see [Azure Instance Metadata Service-Attested data TLS: Critical changes are here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953).
 
 ## Identify if the VM guest OS can successfully communicate with IMDS
 
-Run the following PowerShell script depending on your version of PowerShell to check to see if the metadata is received from Azure Instance Metadata Service.
+Run the following PowerShell script depending on your version of PowerShell to check if the metadata is received from IMDS.
 
 - **PowerShell 6 and later versions**
 
@@ -69,7 +69,7 @@ Run the following PowerShell script depending on your version of PowerShell to c
   Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -Uri "http://169.254.169.254/metadata/instance?api-version=2021-02-01" -WebSession $WebSession
   ```
 
-If you get a successfull response, you will see the metadata information from the VM, such as the following output:
+If you get a successful response, you'll see the metadata information from the VM, such as the following output:
 
  ```output
  compute                                                                                                                                                                  
@@ -77,7 +77,7 @@ If you get a successfull response, you will see the metadata information from th
  @{azEnvironment=AzurePublicCloud; customData=; evictionPolicy=; isHostCompatibilityLayerVm=true; licenseType=; location=eastus; name=testWs2022; offer=WindowsServer; ...
  ```
 
-If not, it means that somewhere the connection to the IMDS wire server is blocked and the access to it needs to be allowed. The IP of the IMDS server is `169.254.169.254`. To fix the connection issue, go to [Solution 1: Bypass web proxies within the VM](#solution-1-bypass-web-proxies-within-the-vm).
+If not, it means that the connection to the IMDS wire server is blocked somewhere, and access to it needs to be allowed. The IP of the IMDS server is `169.254.169.254`. To fix the connection issue, go to [Solution 1: Bypass web proxies within the VM](#solution-1-bypass-web-proxies-within-the-vm).
 
 ## Identify if any certificates are missing
 
@@ -97,7 +97,7 @@ $cert = [System.Security.Cryptography.X509Certificates.X509Certificate2]($signat
 $chain = New-Object -TypeName System.Security.Cryptography.X509Certificates.X509Chain
  
 if (-not $chain.Build($cert)) {
-   # Print the Subject of issuer
+   # Print the Subject of the issuer
    Write-Host $cert.Subject
    Write-Host $cert.Thumbprint
    Write-Host "------------------------"
@@ -125,7 +125,7 @@ if (-not $chain.Build($cert)) {
 
 ```
 
-If any certificates are missing, you will see the output similar to the following:
+If any certificates are missing, you'll see an output similar to the following one:
 
 ```output
 CN=metadata.azure.com, O=Microsoft Corporation, L=Redmond, S=WA, C=US
@@ -236,18 +236,18 @@ To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies ar
 
 1. If the MAC addresses or the primary private IP addresses aren't identical between Azure and the VM guest OS, use various [route][route-command] commands to update the routing table so that the primary network interface and IP address are targeted.
 
-## Solution 2: Ensure firewalls and proxies are configured to allow the download of certificates
+## Solution 2: Ensure firewalls and proxies are configured to allow certificate downloads
 
-1. Check if [KB 5036909](https://support.microsoft.com/topic/april-9-2024-kb5036909-os-build-20348-2402-36062ce9-f426-40c6-9fb9-ee5ab428da8c) is installed. if not, install it. You can get it from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5036909).
-2. If you have installed the update but still encounter the issue, verify and ensure that your system's firewalls and proxies are configured to allow the download of certificates. For more information, see [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#certificate-downloads-and-revocation-lists).
+1. Check if [KB 5036909](https://support.microsoft.com/topic/april-9-2024-kb5036909-os-build-20348-2402-36062ce9-f426-40c6-9fb9-ee5ab428da8c) is installed. If not, install it. You can get it from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5036909).
+2. If you have installed the update but still encounter the issue, verify that your system's firewalls and proxies are configured to allow the download of certificates. For more information, see [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#certificate-downloads-and-revocation-lists).
 
-   Alternatively, you can download all the certificates directly from [Root and subordinate certificate authority chains](/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains#root-and-subordinate-certificate-authority-chains) and install them.
+   Alternatively, you can download and install all the certificates directly from the [Root and subordinate certificate authority chains](/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains#root-and-subordinate-certificate-authority-chains).
   
    > [!NOTE]
    > Make sure to select the store location as **Local Machine** in the installation wizard.
 
-3. Open the Command Prompt as administrator, navigate to *c:\windows\system32*, and run *fclip.exe*.
-4. Restart the VM or sign out and then sign in again. You will see that the watermark on the home page is no longer displayed, and the **Application state** field in the **Settings** > **Activation** screen reports success.
+3. Open Command Prompt as an administrator, navigate to *c:\windows\system32*, and run *fclip.exe*.
+4. Restart the VM or sign out and then sign in again. You'll see that the watermark on the home page is no longer displayed, and the **Application state** field in the **Settings** > **Activation** screen reports success.
 
 ## More information
 
