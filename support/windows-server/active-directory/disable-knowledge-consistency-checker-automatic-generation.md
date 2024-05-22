@@ -1,12 +1,12 @@
 ---
 title: Disable KCC from creating replication topology
 description: Describes how to disable the Knowledge Consistency Checker from automatically creating replication topology.
-ms.date: 12/26/2023
+ms.date: 5/22/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # How to disable the Knowledge Consistency Checker from automatically creating replication topology
