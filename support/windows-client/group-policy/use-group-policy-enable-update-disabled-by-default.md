@@ -22,7 +22,7 @@ Certain updates are shipped in a disabled state with the intent to enable them i
 > [!Important]
 > This preview only applies to non-security updates. Security updates aren't available for preview.
 
-Microsoft manages the deployment process for non-enterprise devices. For enterprise devices, Microsoft provides policy definition MSI files. Enterprises can then use Group Policy to deploy in hybrid Microsoft Entra ID or Active Directory Domain Services (AD DS) domains.
+Microsoft manages the deployment process for non-enterprise devices. For enterprise devices, Microsoft provides policy definition files (the Windows Installer files (*.msi)). Enterprises can then use Group Policy to deploy in hybrid Microsoft Entra ID or Active Directory Domain Services (AD DS) domains.
 
 > [!Note]
 > You must restart the affected computers for the Group Policy change to take effect.
@@ -31,7 +31,7 @@ Microsoft manages the deployment process for non-enterprise devices. For enterpr
 
 To use Group Policy to apply a preview to a single device, follow these steps:
 
-1. Download the policy definition MSI file to the device as instructed by Microsoft Support.
+1. Download the policy definition `.msi` file to the device as instructed by Microsoft Support.
 
     > [!Important]
     > Make sure that the operating system (OS) that is listed in the `.msi` file name matches the OS of the device that you want to update.
@@ -52,12 +52,12 @@ For more information about how to use the Local Group Policy Editor, see [Workin
 
 To apply a velocity policy definition to devices that belong to a hybrid Microsoft Entra ID or AD DS domain, follow these steps:
 
-1. [Download and install the MSI files](#1-download-and-install-the-msi-files).
+1. [Download and install the .msi files](#1-download-and-install-the-msi-files).
 2. [Create a Group Policy Object (GPO)](#2-create-a-gpo).
 3. [Configure the GPO](#3-configure-the-gpo).
 4. [Monitor the GPO results](#4-monitor-the-gpo-results).
 
-### 1. Download and install the MSI files
+### 1. Download and install the .msi files
 
 1. Obtain the `.msi` file from your Microsoft Customer Service and Support (CSS) counterpart as instructed by Microsoft Support when applicable.
 2. Download the velocity policy definition `.msi` files that you require to update to the computer that you use to manage Group Policy for your domain.
@@ -102,11 +102,11 @@ Group policies and GPOs aren't compatible with mobile device management (MDM) ba
 
 To enable a preview on Intune-managed devices, follow these steps:
 
-1. [Download and install the MSI file to get ADMX files](#1-download-and-install-the-msi-files).
+1. [Download and install the .msi file to get ADMX files](#1-download-and-install-the-preview-msi-file-to-get-admx-files).
 2. [Create a custom configuration profile in Microsoft Intune](#2-create-a-custom-configuration-profile-in-microsoft-intune).
 3. [Monitor preview enablement](#3-monitoring-the-preview).
 
-### 1. Download and install the preview MSI file to get ADMX files
+### 1. Download and install the preview .msi file to get ADMX files
 
 1. Download the required velocity policy definition `.msi` files on the machine you use to sign in to Microsoft Intune.
 
@@ -133,11 +133,11 @@ To configure devices to perform activation, you need to create a custom configur
 #### A. Select properties and add basic information about the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://intune.microsoft.com/#home).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create** > **New Policy**.
 3. Select the following properties:
 
-    - **Platform: Windows 10 and later**
-    - **Profile: Templates > Custom**
+    - **Platform**: **Windows 10 and later**
+    - **Profile type**: **Templates** > **Custom**
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -229,10 +229,10 @@ Follow these steps to monitor the configuration profile progress:
 1. Go to **Devices** > **Configuration profiles**, and select an existing profile. For example, select a macOS profile.
 2. Select the **Overview** tab. In this view, the **Profile assignment status** includes the following statuses:
 
-- **Succeeded**: Policy is applied successfully.
-- **Error**: The policy failed to apply. The message typically displays an error code that links to an explanation.
-- **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review the conflict.
-- **Pending**: The device hasn't checked in with Intune to receive the policy yet.
-- **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to Windows Server 2022, but the device is using Windows 11, version 23H2.
+    - **Succeeded**: Policy is applied successfully.
+    - **Error**: The policy failed to apply. The message typically displays an error code that links to an explanation.
+    - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review the conflict.
+    - **Pending**: The device hasn't checked in with Intune to receive the policy yet.
+    - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to Windows Server 2022, but the device is using Windows 11, version 23H2.
 
 For more information, see [Monitor device configuration profiles in Microsoft Intune](/mem/intune/configuration/device-profile-monitor).
