@@ -1,7 +1,7 @@
 ---
 title: Active Directory Replication Error 1127
 description: Describes an issue where AD operations fail with Win32 error 1127 (While accessing the hard disk, a disk operation failed even after retries).
-ms.date: 12/26/2023
+ms.date: 05/21/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes an issue where Active Directory Replications fail with Win32 error 1127: "While accessing the hard disk, a disk operation failed even after retries."
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2025726
 
 ## Symptoms
@@ -136,7 +136,9 @@ Active Directory is unable to write to the Active Directory database or log file
 
 4. **If the Jet error in the NTDS replication event is NOT in table above, validate the vertical Jet database stack**  
 
-    If the 2108 event logs a jet error NOT cited in the table, use the [Microsoft Exchange Server Error Code Look-up](https://www.microsoft.com/download/details.aspx?id=100432) utility to resolve the jet error to its symbolic and friendly error string using the syntax "err \<jet error>". It is critical that you add the leading "-" prefix character when resolving jet errors using ERR.EXE. (for example, "c:\\>err -1018").
+    If the 2108 event logs a jet error NOT cited in the table, use the [Microsoft Error Lookup Tool (ERR.exe)](https://www.microsoft.com/en-us/download/details.aspx?id=100432) utility to resolve the jet error to its symbolic and friendly error string using the syntax "err \<jet error\>". 
+
+    It is critical that you add the leading "-" prefix character when resolving jet errors using ERR.EXE. (for example, "c:\\>err -1018").
 
     The event message text in NTDS Replication event 2108 contains a partial user action for the NTDS Replication 1084 event.
 
