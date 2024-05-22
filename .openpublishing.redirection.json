@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/group-policy/give-users-access-group-policy-objects.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/periodic-smbclient-event-id-30818.md",
       "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance#windows-server-2012-r2-periodically-logs-SMBClient-event-id-30818",
       "redirect_document_id": false
@@ -1627,7 +1632,7 @@
     },
     {
       "source_path": "support/azure/virtual-machines/index.md",
-      "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/welcome-virtual-machines",
       "redirect_document_id": false
     },
     {
@@ -11056,6 +11061,46 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics-365/supply-chain/production/backflush-costing-calculation-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/batch-number-cleared-new-lot-id-selected.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/bom-consumption-cost-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/in-progress-jobs-ended.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/bundle-item-intercompany-process.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/cancel-intercompany-purchase-order.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/sales-update-history-cleanup-job-performance-issues.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/service-item-sales-quantity.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-800046.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e276",
       "redirect_document_id": true
@@ -11063,6 +11108,21 @@
     {
       "source_path": "support/system-center/vmm/deploying-vm-error-2912.md",
       "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreement-currencies.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreement-currencies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreement-not-applied.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreement-not-applied",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreements-from-rejected-rfq.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreements-from-rejected-rfq",
       "redirect_document_id": false
     },
     {
