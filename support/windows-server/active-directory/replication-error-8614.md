@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides the steps to troubleshoot Active Directory replication error 8614.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2020053
 
 > [!NOTE]
@@ -162,19 +162,15 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
     Use `repadmin /showattr` to see whether a nondefault value for the **TombstoneLifetime** attribute has been configured.
 
     ```console
-    repadmin /showattr "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=<forest root domain>,DC=<top level domain>"
+   repadmin /showattr <DC name> "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=<forest root domain>,DC=<top level domain>"
     ```
+    
+       If the attribute isn't present in the `showattr` output, an internal default value is being used.
 
-    If the attribute isn't present in the `showattr` output, an internal default value is being used.
-
-2. Check for DCs that failed inbound replication for TSL number of days.
+1. Check for DCs that failed inbound replication for TSL number of days.
 
     Run `repadmin /showrepl * /csv` parsed by using Excel as specified in the [Verify successful replication to a domain controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794749(v=ws.10)) section. Sort the replsum output in Excel on the last replication success column in the order from least current to the most current date and time.
-
-3. Check for Windows Server 2003 RTM domain controllers.
-
-    If the 8614 error occurred on a Windows Server 2003 RTM domain controller, install the latest Windows Server 2003 service pack.
-
+   
 4. Check for time jumps.
 
     To determine whether a time _jump_ occurred, check event and diagnostic logs (`repadmin /showreps`, dcdiag logs) on destination DCs that are logging 8614 errors for the following timestamps:
@@ -198,21 +194,27 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
 
     This article [How to configure the Windows Time service against a large time offset](https://support.microsoft.com/help/884776) documents steps to help protect domain controllers from listening to invalid time samples. More information on **MaxPosPhaseCorrection** and **MaxNegPhaseCorrection** is available in [Windows Time Service](/archive/blogs/w32time/).
 
-5. Check for and remove lingering objects if they're present.
+1. Check for and remove lingering objects if they're present.
 
     The point of the 8614 error replication quarantine is to check for lingering objects and remove them, if present, in each locally held partition before setting **Allow Replication with divergent and corrupt partner** to 1 in the registry of the destination DC, even if you think that all destination DCs in the forest are running in strict replication consistency.
 
     Removing lingering objects is beyond the scope of this article. For more information, see the following articles:
 
-    - [Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205).
-
-    - [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10))
-
-    `Repadmin` syntax is shown here:
+   - [Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205).
+      
+   - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)
+      
+   - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
+      
+   - [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+      
+   - [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10))
+      
+       `Repadmin` syntax is shown here:
 
     |Syntax|Online help (Windows Server 2008 and later)|
-    |---|---|
-    |`c:\>repadmin /removelingeringobjects <Dest_DSA_LIST> <Source DSA GUID> <NC> [/advisory_mode]`| `c:\>repadmin /help:removelingeringobject` |
+ |---|---|
+ |`c:\>repadmin /removelingeringobjects <Dest_DSA_LIST> <Source DSA GUID> <NC> [/advisory_mode]`| `c:\>repadmin /help:removelingeringobject` |
 
 6. Evaluate setting strict replication on destination DCs.
 
@@ -262,7 +264,7 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
 
 9. Delete **Allow replication with divergent and corrupt partner** or set **Allow replication with divergent and corrupt partner** to 0 in the registry.
 
-10. Monitor Active Directory replication daily going forward.
+1. Monitor Active Directory replication daily going forward.
 
     Monitor end-to-end replication in your Active Directory forest daily by using an Active Directory monitoring application. One inexpensive but effective option is to run `repadmin /showrepl * /csv` and then parse the results in Excel. For more information, see [Method 2: Monitor replication by using a command line](information-lingering-objects.md#method-2-monitor-replication-by-using-a-command-line-command).
 
