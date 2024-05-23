@@ -82,7 +82,7 @@ The directory service has not signalled the event which lets other services
 know that it is ready to accept requests. Services such as the Key  
 Distribution Center, Intersite Messaging Service, and NetLogon will not  
 consider this system as an eligible domain controller.  
-   \* Identified AD Forest.  
+   * Identified AD Forest.  
    Done gathering initial info.  
 The directory service on BOULDERDC01 has not finished initializing.  
 In order for the directory service to consider itself synchronized, it must  
@@ -109,12 +109,12 @@ Starting test: Replications
       Replication of new changes along this path will be delayed.  
       This is normal for a new connection, or for a system
       that has been down a long time.  
-      Enqueued \<Date Time> at priority 90  
+      Enqueued <Date Time> at priority 90  
       Op:             SYNC FROM SOURCE  
       NC DC=Contoso,DC=com  
-      DSADN \<source DCs ntds settings object object guid>  
+      DSADN <source DCs ntds settings object object guid>  
 
-DSA transport addr \<source DCs ntds settings object object guid>._msdcs.Contoso.com  
+DSA transport addr <source DCs ntds settings object object guid>._msdcs.Contoso.com  
    ......................... DomainController passed test Replications
 ```
 
@@ -222,17 +222,17 @@ repadmin /showobjmeta DomainControllerName "CN=Administrators,CN=Builtin,DC=Cont
 
 ```output
 3 entries.  
- **Type    Attribute     Last Mod Time                            Originating DSA  Loc.USN Org.USN Ver**  
+ Type    Attribute     Last Mod Time                            Originating DSA  Loc.USN Org.USN Ver  
 ======= ============  =============                           ================= ======= ======= ===  
- **Distinguished Name**  
+ Distinguished Name  
         =============================  
-PRESENT       member \<Date Time>                    Default-First-Site-Name\DomainController    8203    8203   1  
+PRESENT       member <Date Time>                    Default-First-Site-Name\DomainController    8203    8203   1  
         CN=Administrator,CN=Users,DC=Contoso,DC=Com  
-PRESENT       member \<Date Time>                    Default-First-Site-Name\DomainController   12398   12398   1  
+PRESENT       member <Date Time>                    Default-First-Site-Name\DomainController   12398   12398   1  
         CN=Enterprise Admins,CN=Users,DC=Contoso,DC=Com  
-PRESENT       member \<Date Time>                    Default-First-Site-Name\DomainController   12378   12378   1  
+PRESENT       member <Date Time>                    Default-First-Site-Name\DomainController   12378   12378   1  
         CN=Domain Admins,CN=Users,DC=Contoso,DC=Com  
- **LEGACY**       member \<Date Time>                    Default-First-Site-Name\DomainController   198458   198458   1
+LEGACY       member <Date Time>                    Default-First-Site-Name\DomainController   198458   198458   1
         CN=mjordan,CN=Users,DC=Contoso,DC=Com
 ```
 
