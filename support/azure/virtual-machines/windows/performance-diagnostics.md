@@ -105,8 +105,8 @@ To install and run Performance Diagnostics:
 
     | Option | Description |
     | ------ | ----------- |
-    | Enable continuous diagnostics | Get continuous, actionable insights into high resource usage with data collected every 5 seconds and updates uploaded every 5 minutes to address performance issues promptly. Store insights in your preferred storage account, [customizing retention policies](/azure/storage/blobs/lifecycle-management-policy-configure) based on your needs. Disable this feature at any time. |
-    | Run on-demand diagnostics | Get on-demand, actionable insights into high resource usage and various system configurations. Receive a downloadable report with comprehensive diagnostics data to address performance issues. Store insights and reports in your preferred storage account, [customizing retention policies](/azure/storage/blobs/lifecycle-management-policy-configure) based on your needs. Initiate this feature at any time for the specific analysis type you need:<br/><ul><li>**Performance analysis**<br/>Includes all checks in the **Quick analysis** scenario, and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes, depending on the selected duration. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Quick analysis**<br/>Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Advanced performance analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and collects one or more of the traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require more traces. Running this scenario for longer periods increases the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li><li>**Azure file analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and captures a network trace and SMB counters. Use this scenario to troubleshoot the performance of Azure files. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li></ul> |
+    | Enable continuous diagnostics | Get continuous, actionable insights into high resource usage with data collected every 5 seconds and updates uploaded every 5 minutes to address performance issues promptly. Store insights in your preferred storage account. The storage account retains insights based on the account retention policies, which you can configure to [manage the data lifecycle effectively](/azure/storage/blobs/lifecycle-management-policy-configure). You can disable continuous diagnostics at any time. |
+    | Run on-demand diagnostics | Get on-demand, actionable insights into high resource usage and various system configurations. Receive a downloadable report with comprehensive diagnostics data to address performance issues. Store insights and reports in your preferred storage account. The storage account retains insights based on the account retention policies, which you can configure to [manage the data lifecycle effectively](/azure/storage/blobs/lifecycle-management-policy-configure). You can initiate on-demand diagnostics at any time using the specific analysis type you need:<br/><ul><li>**Performance analysis**<br/>Includes all checks in the **Quick analysis** scenario, and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes, depending on the selected duration. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Quick analysis**<br/>Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Advanced performance analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and collects one or more of the traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require more traces. Running this scenario for longer periods increases the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li><li>**Azure file analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and captures a network trace and SMB counters. Use this scenario to troubleshoot the performance of Azure files. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li></ul> |
     | Storage account | Optionally, if you want to use a single storage account to store the Performance Diagnostics results for multiple VMs, you can select a storage account from the dropdown. If you don't specify a storage account, Performance Diagnostics uses the default diagnostics storage account or creates a new storage account. |
 
     > [!NOTE]
@@ -139,19 +139,20 @@ This table compares the data provided by Continuous and On-demand Performance Di
 
 The **Performance Diagnostics insights** tab lists insights for the selected time period. Each row presents an insight, its impact level, category, and related recommendations. Select **Refresh** to view newly generated continuous diagnostics insights. 
 
+Use filters to retrieve insights by timestamp, impact, category, or diagnostic type.
+
 :::image type="content" source="media/performance-diagnostics/insights-list-enabled-no-grouping.png" alt-text="Screenshot of the Insights tab on the Performance Diagnostics screen." lightbox="media/performance-diagnostics/insights-list-enabled-no-grouping.png":::
 
 Select a row to view more details.
 
 :::image type="content" source="media/performance-diagnostics/performance-diagnostics-insight-details.png" alt-text="Screenshot of Performance Diagnostics insight details screen." lightbox="media/performance-diagnostics/performance-diagnostics-insight-details.png" :::
 
-Use filters to retrieve insights by timestamp, impact, category, or diagnostic type.
+View or download the Performance Diagnostics report for an on-demand insight in the list by selecting **View** or **Download**, respectively. For more information, see [Download and review the full Performance Diagnostics report](#download-and-review-the-full-performance-diagnostics-report).
 
 Use the grouping dropdown to group or ungroup insights. You can group on-demand and continuous insights by category, insight, or recommendation.
 
 :::image type="content" source="media/performance-diagnostics/insights-list-enabled-grouping-insight.png" alt-text="Screenshot of the Insights tab on the Performance Diagnostics screen with results grouped by insight." lightbox="media/performance-diagnostics/insights-list-enabled-grouping-insight.png":::
 
-View or download the Performance Diagnostics report for an on-demand insight in the list by selecting **View** or **Download**, respectively. For more information, see [Download and review the full Performance Diagnostics report](#download-and-review-the-full-performance-diagnostics-report).
 
 ### View Performance Diagnostics reports
 
@@ -163,13 +164,11 @@ Select a row to view more details.
 
 :::image type="content" source="media/performance-diagnostics/performance-diagnostics-report-overview.png" alt-text="Screenshot of Performance Diagnostics report overview screen." lightbox="media/performance-diagnostics/performance-diagnostics-report-overview.png":::
 
-Each Performance Diagnostics report might contain several insights and indicate an impact level of High, Medium, or Low. Each insight also contains recommendations. Insights are grouped for easy filtering.
+Each Performance Diagnostics report might contain several insights, and each insight includes recommendations.
 
-Impact levels represent the potential for performance issues, based on factors such as misconfiguration, known problems, or issues that are reported by other users. You might not yet be experiencing one or more of the listed issues. For example, you might have SQL log files and database files on the same data disk. This condition has a high potential for bottlenecks and other performance issues if the database usage is high, whereas you might not notice an issue if the usage is low.
+The **Impact** column indicates an impact level of High, Medium, or Low, which shows the potential for performance issues, based on factors such as misconfiguration, known problems, or issues that are reported by other users. You might not yet be experiencing one or more of the listed issues. For example, you might have SQL log files and database files on the same data disk. This condition has a high potential for bottlenecks and other performance issues if the database usage is high, whereas you might not notice an issue if the usage is low.
 
-### Download and review the full Performance Diagnostics report
-
-Select the **Download report** button to download an HTML report that contains richer diagnostics information, such as storage and network configuration, performance counters, traces, list of processes, and logs. The content depends on the selected analysis. For advanced troubleshooting, the report might contain additional information and interactive charts that are related to high CPU usage, high disk usage, and processes that consume excessive memory. For more information about the Performance Diagnostics report, see [Windows](how-to-use-perfinsights.md#review-the-diagnostics-report) or [Linux](../linux/how-to-use-perfinsights-linux.md#review-the-diagnostics-report).
+Select the **Download report** button to download an HTML report that contains richer diagnostics information, such as storage and network configuration, performance counters, traces, list of processes, and logs. The content depends on the selected analysis. For advanced troubleshooting, the report might contain additional information and interactive charts related to high CPU usage, high disk usage, and processes that consume excessive memory. For more information about the Performance Diagnostics report, see [Windows](how-to-use-perfinsights.md#review-the-diagnostics-report) or [Linux](../linux/how-to-use-perfinsights-linux.md#review-the-diagnostics-report).
 
 > [!NOTE]
 > You can download Performance Diagnostics reports from the **Performance Diagnostics** screen within 30 days after you generate them. After 30 days, you might get an error when you download a report from the **Performance Diagnostics** screen. To get a report after 30 days, go to the storage account and download it from a binary large object (BLOB) container that's named *azdiagextnresults*. You can view the storage account information by using the **Settings** button on the toolbar.
@@ -232,21 +231,16 @@ To uninstall Performance Diagnostics, select the **Uninstall** button on the too
 
 ### How do I share this data with Microsoft Customer Support?
 
-There are multiple ways to share the diagnostics report with Microsoft.
+When you open a support ticket with Microsoft, it is important to share the Performance Diagnostics report from an on-demand Performance Diagnostics run. The Microsoft CSS contact will provide you with the option to upload the on-demand Performance Diagnostics report to a workspace. There are two ways to download the on-demand Performance Diagnostics report to share with Microsoft CSS:
 
-**Option 1:** Automatically share the latest report  
-When you open a support ticket with Microsoft, it's important to share the Performance Diagnostics report. If you opt to share this information with Microsoft while you run the diagnostics (by selecting the "**I agree to share diagnostics information with Microsoft**" check box), Microsoft can access the report from your storage account using a SAS link to the output zip file for up to 30 days from the run date. Only the latest report is available to the support engineer.
+**Option 1:** Download the report from Performance Diagnostics blade, as described in [View Performance Diagnostics reports](#view-performance-diagnostics-reports).
 
-**Option 2:** Generate a Shared Access Signature for the diagnostics report compressed file  
-To share a link to the reports compressed file by using Shared Access Signatures:
+**Option 2:** Download the report from the storage account.
 
 1. In the Azure portal, browse to the storage account in which the diagnostics data is stored.
-1. Select **Containers** under the **Data Storage** section.".
-1. Select the **azdiagextnresults** container.
-1. Select the Performance Diagnostics output compressed file that you want to share.
-1. On the **Generate SAS** tab, select the criteria for sharing.
-1. Select **Generate blob SAS token and URL**.
-1. Copy the **Blob SAS URL**, and share it with the support engineer.
+1. Select Containers under the Data Storage section.
+1. Select the azdiagextnresults container.
+1. Select the required Performance Diagnostics output compressed file and download it.
 
 **Option 3:** Download the report from the storage account
 
