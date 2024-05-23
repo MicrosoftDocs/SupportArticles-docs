@@ -100,7 +100,7 @@ The error status 8333 "Directory Object Not Found" has multiple root causes incl
 
 Investigation of the 8333 "Directory Object Not Found" error message should begin on the source domain controller in the replication partnership. Referring to each of the possible causes of the issue from the "cause" section of this document, a support professional should begin their investigation on the source of the source/destination replication partnership.
 
-1. **Check for indications of Active Directory (JET) Database corruption:**  
+1. Check for indications of Active Directory (JET) Database corruption:  
 
     1. Review the Directory Services event log on the source and destination replication partners for JET database corruption events. Possible events include:
 
@@ -134,7 +134,7 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
     4. If database corruption has been detected, ensure that recent backups exist of each domain in the forest.
 
     5. Restart the domain controller reporting the database corruption in directory services restore mode. (open *msconfig.exe* and select **Active Directory repair** in the **Boot options** or type the `bcdedit /set safeboot dsrepair` command from an elevated command prompt before restarting the domain controller).
-      
+
     6. To perform an inspection of the database in Directory Services Restore Mode:
 
         1. Open a command prompt  
@@ -187,7 +187,7 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
 
       In some cases where LoLv2 can't be used, you can use *Repadmin.exe*. You can do this by running the `repadmin /removelingeringobjects` command in advisory mode, as described in [Identify lingering objects](active-directory-replication-event-id-2042.md).  
  
-4. Check for the existence of and remove conflict objects:  
+3. Check for the existence of and remove conflict objects:  
     a. Search the relevant directory partitions for CNF-managed objects and the object that the conflict-mangled object conflicted with the following syntax:
 
     `repadmin /showattr localhost "dc=parent,dc=com" /subtree /filter:"((&(objectClass=*)(cn=*\0acnf:*)))" /atts:objectclass,whencreated,whenchanged`
@@ -204,7 +204,7 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
 
     d. Delete the conflict mangled object/container or the object it conflicted with using LDP.EXE, ADSIEDIT or one of the Active Directory management tools.
 
-5. Perform testing of the replication partners with third-party components removed.  
+4. Perform testing of the replication partners with third-party components removed.  
 Multiple third-party products have been found to cause this issue including:
     1. Anti-Virus software  
     2. Directory Synchronization
