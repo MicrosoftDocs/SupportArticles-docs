@@ -1,7 +1,7 @@
 ---
 title: Overview of consistent authentication issues in SQL Server
 description: This article discusses consistent authentication issues in SQL Server, related error messages, and solutions to troubleshoot various issues.
-ms.date: 05/20/2024
+ms.date: 05/23/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
@@ -53,7 +53,7 @@ This section describes error types and related information.
   |"Login failed for user '\<username\>'. Reason: Password did not match that for the login provided."|This error might occur if an incorrect password is used. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).|
   |"SQL Server does not exist or access denied."  | [Named Pipes connections](named-pipes-connection-fail-no-windows-permission.md) fail because the user doesn't have permission to log in to Windows.     |
   |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
-  |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
+  |"The user account is not allowed the Network Login type."|You might not be able to [log in to the network](network-login-disallowed.md).|
 
 ## Types of consistent authentication issues
 
@@ -84,7 +84,7 @@ This section lists the issues that are related to configuration settings that ar
 
   **Solution:** Check whether the name is spelled correctly. For more information, see [MSSQLSERVER_4064](/sql/relational-databases/errors-events/mssqlserver-4064-database-engine-error#fix-the-issue).
 
-- **Wrong explicit SPN account** - This issue might occur if the SPN is associated with the wrong account in AD DS. 
+- **Wrong explicit SPN account** - This issue might occur if the SPN is associated with the wrong account in AD DS.
 
   **Solution:** To resolve this issue, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
 
@@ -238,7 +238,7 @@ This section lists the issues that are related to the Kerberos authentication:
 
 - **Some legacy providers don't support Kerberos over Named Pipes** - The legacy OLE DB provider (SQLOLEDB) and ODBC provider (SQL Server) that are bundled with Windows don't offer support for Kerberos authentication over Named Pipes. Instead, they support only NTLM authentication.
 
-  **Solution:** Use a TCP connection to allow Kerberos authentication. You can also use a newer driver, example,  MSOLEDBSQL or ODBC Driver 17. But TCP is still preferred over Named Pipes, regardless of version of the driver.
+  **Solution:** Use a TCP connection to allow Kerberos authentication. You can also use a newer driver, example, MSOLEDBSQL or ODBC Driver 17. But TCP is still preferred over Named Pipes, regardless of version of the driver.
 
 - **SPN is associated with a wrong account** - This issue might occur if an SPN is associated with the wrong account in AD DS. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
@@ -324,7 +324,7 @@ This section lists issues that are specific to Windows permissions or policy set
 
 - **Credential guard is enabled** - This scenario indicates that the Credential Guard feature is enabled on a Windows system and is used to create a secure environment to store sensitive information. However, in certain situations, this feature might cause authentication issues.
 
-  **Solution:** To resove this issue, ask a domain administrator to set up constrained delegation. For more information, see [Considerations and known issues when using Credential Guard](/windows/security/identity-protection/credential-guard/considerations-known-issues).
+  **Solution:** To resolve this issue, ask a domain administrator to set up constrained delegation. For more information, see [Considerations and known issues when using Credential Guard](/windows/security/identity-protection/credential-guard/considerations-known-issues).
 
 - **Local security subsystem errors** - When you experience local security subsystem errors, particularly those that are linked to LSASS becoming unresponsive, it might indicate underlying issues that affect authentication.
 
