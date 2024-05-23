@@ -66,8 +66,8 @@ To resolve this problem, follow these steps. Retry the replication operation aft
 
 3. Make sure that the physical drives that host the Ntds.dit file and the transaction log files are specifically excluded from remote and local antivirus programs. For more information, see:
 
-- [Microsoft Defender Antivirus exclusions on Windows Server](/defender-endpoint/configure-server-exclusions-microsoft-defender-antivirus)  
-- [Virus scanning recommendations for Enterprise computers that are running Windows or Windows Server (KB822158)](https://support.microsoft.com/topic/virus-scanning-recommendations-for-enterprise-computers-that-are-running-windows-or-windows-server-kb822158-c067a732-f24a-9079-d240-3733e39b40bc)
+    - [Microsoft Defender Antivirus exclusions on Windows Server](/defender-endpoint/configure-server-exclusions-microsoft-defender-antivirus)  
+    - [Virus scanning recommendations for Enterprise computers that are running Windows or Windows Server (KB822158)](https://support.microsoft.com/topic/virus-scanning-recommendations-for-enterprise-computers-that-are-running-windows-or-windows-server-kb822158-c067a732-f24a-9079-d240-3733e39b40bc)
 
 4. If the destination domain controller contains the global catalog, and the error occurs in one of the read-only partitions, use one of the following methods to help resolve the problem:
 
@@ -99,11 +99,11 @@ To resolve this problem, follow these steps. Retry the replication operation aft
     2. If replication is completed after you move the object, move the object back to its original container.
 
     3. Force the security descriptor propagator to rebuild the object container ancestry in the database that exists on both the source and destination domain controllers. To do this, follow these steps:
-   
+
         1. Open an elevated command prompt on the DC or Windows client with RSAT installed.
-            
+
         2. Type *ldp.exe <DC Name>* and press <kbd>Enter</kbd>.
-            
+
         3. Select **Connection** > **Connect**, and then type the name of the server that you want to connect to.
 
             > [!NOTE]
@@ -178,15 +178,15 @@ To resolve this problem, follow these steps. Retry the replication operation aft
 
       Use the NTDSutil.exe tool confirm the integrity of the database again. If the database passes the integrity check, perform an offline defragmentation of the disk partition. For more information, see [How to perform offline defragmentation of the Active Directory database](https://support.microsoft.com/help/232122).
 
-      To perform an integrity check of the database, type the following at a command prompt, and then press Enter, where **database_name** is the name of the Active Directory database:
+        To perform an integrity check of the database, type the following at a command prompt, and then press Enter, where **database_name** is the name of the Active Directory database:
 
         ```console
         esentutl.exe /g database_name
         ```
 
-       Finally, use the Start Windows Normally option to restart the computer, and then retry replication from the source domain controller to the affected destination domain controller. If the database fails the integrity check, the domain controller must be discontinued. You use the Active Directory Migration Tool (ADMT) to migrate objects. You can also use the Ldifde.exe and Csvde.exe tools to export objects that you will import to a new destination domain controller.
+        Finally, use the Start Windows Normally option to restart the computer, and then retry replication from the source domain controller to the affected destination domain controller. If the database fails the integrity check, the domain controller must be discontinued. You use the Active Directory Migration Tool (ADMT) to migrate objects. You can also use the Ldifde.exe and Csvde.exe tools to export objects that you will import to a new destination domain controller.
      
-      For more information about how to use the Ldifde.exe and Csvde.exe tools, see [Step-by-Step Guide to Bulk Import and Export to Active Directory](/previous-versions/windows/it-pro/windows-2000-server/bb727091(v=technet.10)).
+        For more information about how to use the Ldifde.exe and Csvde.exe tools, see [Step-by-Step Guide to Bulk Import and Export to Active Directory](/previous-versions/windows/it-pro/windows-2000-server/bb727091(v=technet.10)).
 
 10. If these steps do not succeed, and the replication error continues, demote the domain controller, confirm the integrity of the physical drives and the volumes that host the Ntds.dit file and the disk subsystem, and then promote the domain controller again. Use the same computer name.
 
