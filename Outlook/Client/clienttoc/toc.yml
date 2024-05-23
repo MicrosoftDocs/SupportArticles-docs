@@ -163,8 +163,6 @@
           href: ../contacts/contact-card-cannot-be-changed-by-group-policy-or-oct.md
         - name: Contact card doesn't show user details or presence
           href: ../contacts/contact-card-not-showing-user-details-or-presence.md
-        - name: Contact is listed twice when selecting email recipient
-          href: ../contacts/contacts-with-both-email-address-and-fax-number-listed-twice.md
         - name: Contacts folder empty and contacts are in another folder
           href: ../contacts/contacts-folder-empty-and-contacts-are-in-different-folder.md
         - name: How to hide columns in Address Book
