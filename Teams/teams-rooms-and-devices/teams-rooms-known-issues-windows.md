@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 05/13/2024
+ms.date: 05/23/2024
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -49,7 +49,7 @@ ms.date: 05/13/2024
 |Text in QR code displays outside the box.|In the home screen on Teams Rooms on Windows devices that use Germany as the locale, the text in the QR code box to join a meeting overflows the boundary of the box.<br/><br/>This issue is purely visual and doesn't impact the functionality of the QR code.|No workaround required.|
 |Home screen display is blank.|On a Teams Rooms for Windows device, when you upgrade the Teams Rooms app from version 4.19.xxx.0 to 5.0.111.0, you might see a blank home screen on the display and a small, black app window on the console.<br/><br/>However, both the Microsoft Teams admin center and the Pro Management Portal identify the device as healthy.<br/><br/>This issue occurs in Teams Rooms devices that are assigned a legacy Teams Rooms Premium license. Those devices have a **Custom** theme setting defined by default.|<ol><li>Change the theme from the **Custom** setting to any other choice that's available. See [Make changes to Teams Rooms devices](/microsoftteams/rooms/rooms-manage#make-changes-to-teams-rooms-devices-or-surface-hubs) for more information.</li><li>Restart the Teams Rooms device.</li></ol>|
 |The display from an external video source is blurry.|You have a Teams Rooms on Windows device that is connected to an external video source by an HDMI. When the device is not in a meeting, the video display from the external source is blurry on the home screen of the device.<br/><br/>This issue occurs after you upgrade the Teams Rooms on Windows app on the device to version 5.0.111.0.|Restart the Teams Rooms device. The restart will download a configuration update when you sign in to the device which will resolve the issue.|
-|Teams Rooms app doesn't sign in.|In Teams Rooms for Windows devices that are running version 5.0 111.0 of the Teams Rooms app, the assigned Autopilot profile is detected but Autologin fails.|To work around the issue, use one of the following options:<ul><li>Sign in to version 5.0.111.0 of the Teams Rooms app manually.</li><li>Switch to version 4.19. xxx.0 of the Teams Rooms app.</li></ul>|
+|Teams Rooms app doesn't sign in.|In Teams Rooms for Windows devices that are running version 5.0 111.0 of the Teams Rooms app, the assigned Autopilot profile is detected but Autologin fails.|To work around the issue, use one of the following options:<ul><li>Sign in to version 5.0.111.0 of the Teams Rooms app manually.</li><li>Switch to version 4.19. xxx.0 of the Teams Rooms app.</li></ul> |
 
 ## Hardware issues
 
@@ -60,7 +60,6 @@ ms.date: 05/13/2024
 
 ## Limitations
 
-- Front row requires 1920 × 1080 resolution for a 16:9 display or 2560 × 1080 resolution for a 21:9 display. These displays are set to 100 percent scaling. If the chat panel on your front-of-room display shows unreadable UI, see [Change scale and resolution for front-of-room](/microsoftteams/rooms/rooms-operations#scale-and-resolution) to adjust your display settings.
 - Teams Rooms doesn't support High-Bandwidth Digital Content Protection (HDCP) input. Using HDCP input might cause issues that affect High-Definition Multimedia Interface (HDMI) ingest functionality, such as video and audio. To avoid these issues, make sure that the HDCP options are turned off for switches that are connected to Teams Rooms.
 - When you use the Call app on a Teams Rooms device to dial the toll number or conference ID for a Teams meeting, the conference bridge triggers multiple call flows. Because the Teams Rooms app is designed to support only one active call at a time, the call fails.
 
