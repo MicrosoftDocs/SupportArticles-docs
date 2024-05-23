@@ -177,15 +177,15 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
 
     2. Examine the forest for lingering objects.
    
-      The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/download/details.aspx?id=56051). 
+       The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/download/details.aspx?id=56051). 
       
-      For more information about LoLv2, see:
+       For more information about LoLv2, see:
 
-    - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)
-    - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
-    - [Description of the Lingering Object Liquidator tool](lingering-object-liquidator-tool.md)
+        - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)
+        - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
+        - [Description of the Lingering Object Liquidator tool](lingering-object-liquidator-tool.md)
 
-      In some cases where LoLv2 can't be used, you can use *Repadmin.exe*. You can do this by running the `repadmin /removelingeringobjects` command in advisory mode, as described in [Identify lingering objects](active-directory-replication-event-id-2042.md).  
+       In some cases where LoLv2 can't be used, you can use *Repadmin.exe*. You can do this by running the `repadmin /removelingeringobjects` command in advisory mode, as described in [Identify lingering objects](active-directory-replication-event-id-2042.md).  
  
 3. Check for the existence of and remove conflict objects:  
     a. Search the relevant directory partitions for CNF-managed objects and the object that the conflict-mangled object conflicted with the following syntax:
