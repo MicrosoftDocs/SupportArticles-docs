@@ -53,7 +53,7 @@ You can run WPR from the user interface (WPRUI.exe) or the command line (WPR.exe
 
 To start a recording, follow these steps:
 
-1. Select Start, enter *Windows Performance Recorder*, and then select **Windows Performance Recorder** in the search results.
+1. Select **Start**, enter *Windows Performance Recorder*, and then select **Windows Performance Recorder** in the search results.
 1. Do one of the following:  
 
    - To record while using the default (**First-level triage**) profile, select **Start**.  
@@ -81,7 +81,7 @@ WPA is a powerful analysis tool that combines a flexible UI with extensive graph
 | Complete documentation of the WPA UI | [WPA Features](/windows-hardware/test/wpt/wpa-features) |
 | Extended discussion of key scenarios | [WPA Scenarios](/windows-hardware/test/wpt/windows-performance-analyzer-common-scenarios) |
 
-To open WPA, select Search, enter *Windows Performance Analyzer*, and then select **Windows Performance Analyzer** in the search results. 
+To open WPA, select **Start**, enter *Windows Performance Analyzer*, and then select **Windows Performance Analyzer** in the search results.
 
 If you didn't open WPA directly from WPR after you saved a recording, you can use the WPA **File** menu to open a trace file.  
 
