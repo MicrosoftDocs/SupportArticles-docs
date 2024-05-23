@@ -34,7 +34,7 @@ The following screenshot shows the same Actionable message if it's rendered inco
 
 ## Cause
 
-To render Actionable messages correctly, Outlook uses the following GET request to get the Actions protocol endpoint URL from the Autodiscover V2 service: `https://outlook.office365.com/autodiscover/autodiscover.json/v1.0/oadmin@sxc5v.onmicrosoft.com?protocol=actions`.
+To render Actionable messages correctly, Outlook uses the following GET request to get the Actions protocol endpoint URL from the Autodiscover V2 service: `https://outlook.office365.com/autodiscover/autodiscover.json/v1.0/<user email address>?protocol=actions`.
 
 If the request is successful, the Autodiscover V2 service returns HTTP status code 200 and provides the requested URL in the response body. For example, the response body might be `{ "Protocol": "Actions", "Url": https://outlook.office365.com/actionsb2netcore }`.
 
