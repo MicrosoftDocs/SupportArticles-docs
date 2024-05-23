@@ -5452,7 +5452,7 @@
       },
       {
         "source_path": "virtual-machines/windows/swap-file-not-recreated-linux-vm-restart.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/swap-file-not-recreated-linux-vm-restart ",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/swap-file-not-recreated-linux-vm-restart",
         "redirect_document_id": true
       }
   ]
