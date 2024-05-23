@@ -28,14 +28,14 @@ WPR and WPA are performance monitoring tools that produce in-depth performance p
 >
 > For information about how to use Xperf, see [Xperf Command-Line Reference](/windows-hardware/test/wpt/xperf-command-line-reference).
 
-## More information
+## Prerequisites
 
 To run the WPT tools, your system must meet the following requirements:
 
 - WPR: Windows 8 or later.
 - WPA: Windows 8 or later with the Microsoft .NET Framework 4.5 or later.
 
-### Using WPR to record data
+## Using WPR to record data
 
 WPR is a powerful recording tool that creates Event Tracing for Windows (ETW) recordings of system and application behavior and resource usage. WPR provides built-in profiles that you can use to select the events that are to be recorded. Alternatively, you can author custom profiles in XML. For more information, see the following documentation.
 
@@ -71,7 +71,7 @@ To stop a recording, follow these steps:
 1. Enter a description of the problem for which you created the recording.
 1. Select **Save**, and then select **Open in WPA** or **OK**.
 
-### Using WPA to analyze data
+## Using WPA to analyze data
 
 WPA is a powerful analysis tool that combines a flexible UI with extensive graphing capabilities and data tables that can be pivoted and that have full text search capabilities. WPA provides an **Issues** window to explore the root cause of any identified issue. For more information, see the following documentation.
 
@@ -101,7 +101,7 @@ The WPA user interface (UI) includes docked windows that surround a central work
 | Details | Available for Assessment Platform recordings, and lists details and recommended solutions for the selected issue. For more information, see [Details Window](/windows-hardware/test/wpt/details-window). |
 | Diagnostic Console | Provides a list of exceptions in the recording and details related to symbol loading and decoding. For more information, see [Diagnostic Console Window](/windows-hardware/test/wpt/diagnostic-console). |
 
-### Examples
+## Examples
 
 The following table describes several problem scenarios, the WPR profiles that you can use for recording data, and suggested graphs and pivot table fields to analyze the data.
 
