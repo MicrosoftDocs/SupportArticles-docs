@@ -19,11 +19,11 @@ ms.custom:
   - CI168070
   - CI188847
 ---
-# Fix Conditional Access-related issues for Teams Android devices
+# Fix issues related to Conditional Access in Teams Android devices
 
 ## Symptoms
 
-Conditional Access is a Microsoft Entra feature that helps make sure that devices that access corporate resources are correctly managed and secured. If Conditional Access policies are applied to the Teams service, Android devices (including Teams phones, Teams displays, Teams panels, and Microsoft Teams Rooms on Android) that access Teams must comply with the policies. Otherwise, Conditional Access will prevent users from signing in to or using the Teams app on the devices.
+Conditional Access is a Microsoft Entra feature that helps make sure that devices that access corporate resources are correctly managed and secured. If Conditional Access policies are applied to the Microsoft Teams service, Android devices that access Teams must comply with the policies. Such devices include Teams phones, Teams displays, Teams panels, and Teams Rooms on Android. Otherwise, Conditional Access will prevent users from signing in to or using the Teams app on the devices.
 
 If these policies are applied, you might experience one or more of the following issues on non-compliant devices:
 
@@ -47,7 +47,35 @@ These issues can occur for the following reasons:
 
   For more information, see [Known issues with Teams phones](rooms-known-issues.md#issues-with-teams-phones).
 
-To check whether the issues are caused by Conditional Access policies, follow these steps:
+## Resolution
+
+Identify the specific cause of the issue by checking multiple details about the affected user's access to the Teams app. To perform the checks that are required, you can either use an automated option or run the checks manually by using the steps provided.
+
+### Automated checks
+
+The automated option is to run the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
+
+This test verifies that the user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Teams devices:
+
+> [!NOTE]
+>
+> - A Global Administrator account is required to run the Microsoft Teams Rooms sign in connectivity test.
+> - The Microsoft Remote Connectivity Analyzer tool isn’t available for the GCC and GCC High Microsoft 365 Government environments.
+
+Run the connectivity test by using the following steps:
+
+1. Open a web browser and navigate to the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test.
+1. Sign in by using the credentials of a Global Administrator account.
+1. Specify the username for the account that is unable to access the Teams Rooms app.
+1. In the **Device Selection** field, select a type for the affected user's device.
+1. Enter the verification code that's displayed and **select Verify**.
+1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**.
+
+After the test finishes, the screen will display details about all the checks that were performed and whether the test succeeded, failed, or was successful with a few warnings. Select the provided link for more information about the warnings and failures, and how to resolve them.
+
+### Manual checks
+
+Use the following steps:
 
 1. Go to the [sign-in logs in the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins).
 1. Select the **User sign-ins (non-interactive)** tab.
@@ -76,37 +104,17 @@ To check whether the issues are caused by Conditional Access policies, follow th
 
    :::image type="content" source="media/teams-android-devices-conditional-access-issues/conditional-access-policy-details.png" alt-text="Screenshot of the Conditional Access policy details.":::
 
-## Resolution
-
-To fix the issues that are caused by certain Conditional Access policies, use [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices) to exclude the devices from these policies. Commonly used device properties are *manufacturer* and *model*. Commonly used operators are *Contains*, *StartsWith*, and *In*.
+After you identify the specific Conditional Access policy that's causing the issue, you can use [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices) to exclude the affected device from the policy. Commonly used device properties in device filters are *manufacturer* and *model*, and they're used with the operators *Contains*, *StartsWith*, and *In*.
 
 > [!NOTE]
 >
 > - Device filters apply to only device objects, not user accounts.
 > - Some attributes, such as *model* and *manufacturer*, can be set only if devices are enrolled in Intune. If your devices aren't enrolled in Intune, use extension attributes.
-> - If you don't have the required access to configure Conditional Access and Intune compliance policies, work with someone who has access. Check each policy setting for unsupported settings for Teams devices.
+> - Check each policy setting for unsupported settings for Teams devices.
 
-The following screenshot shows an example device filter.
+The following screenshot shows a sample device filter.
 
 :::image type="content" source="media/teams-android-devices-conditional-access-issues/device-filter.png" alt-text="Screenshot of an example device filter.":::
-
-### Run the Microsoft Remote Connectivity Analyzer test
-
-This test verifies that the user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Teams devices:
-
-- Microsoft Teams Room Android
-- Microsoft Teams Room Windows
-- Microsoft Teams Panel
-
-> [!NOTE]
-> Currently the Microsoft Remote Connectivity Analyzer tool doesn't support Microsoft 365 Government environments (GCC or GCC High).
-
-1. Open a web browser, and then go to the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) test.
-1. Sign in by using the credentials of a Global Administrator account.
-1. Specify the affected user name.
-1. In the **Device Selection** field, select the affected device type.
-1. Enter the provided verification code.
-1. Select **Verify**.
 
 ## References
 
