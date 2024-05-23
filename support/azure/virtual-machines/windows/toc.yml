@@ -290,8 +290,6 @@
       href: /azure/automation/troubleshoot/start-stop-vm?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Start VM with last known good configuration
       href: start-vm-last-known-good.md
-    - name: Swap file is not re-created
-      href: swap-file-not-recreated-linux-vm-restart.md
     - name: Restarting or resizing a VM
       href: restart-resize-error-troubleshooting.md
     - name: Restarting, shutting down, or stopping services
