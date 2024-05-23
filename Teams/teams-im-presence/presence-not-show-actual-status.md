@@ -31,9 +31,25 @@ In Microsoft Teams, your presence status is shown incorrectly. For example, your
 
 To identify the cause of the issue, use one of the following options.
 
-## Option 1: Run a self-help diagnostic
+## Option 1: Run a connectivity test
 
-If you're an admin, you can run the [Teams Presence](https://aka.ms/TeamsPresenceDiag) diagnostic in the Microsoft 365 admin center to validate the requirements to display a user's presence status in Teams.
+Both administrators and non-administrators can run the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test verifies the requirements to update a user’s presence status in Teams based on their calendar events in Microsoft Outlook.
+
+> [!NOTE]
+> The Microsoft Remote Connectivity Analyzer tool isn't available for the GCC and GCC High Microsoft 365 Government environments.
+
+Use the following steps:
+
+1. Open a web browser and navigate to the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) test.
+1. Sign in by using the credentials of the affected user account.
+1. Enter the verification code that's displayed and select **Verify**.
+1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**.
+
+After the test is complete, the screen will display details about the checks that were performed and whether the test succeeded, failed, or was successful with a few warnings. Select the links provided for more information about the warnings and failures, and how to resolve them.
+
+## Option 2: Run a self-help diagnostic
+
+If you're an administrator, you can run the [Teams Presence](https://aka.ms/TeamsPresenceDiag) diagnostic in the Microsoft 365 admin center to validate the requirements to display a user's presence status in Teams.
 
 > [!NOTE]
 > This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
@@ -47,21 +63,5 @@ Use the following steps:
 1. In the **Username or Email** field, enter the email address of the affected user, and then select **Run Tests**.
 
 After the diagnostic is complete, select the links provided to resolve the issues that were found.
-
-## Option 2: Run a connectivity test
-
-Both admins and non-admins can run the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test verifies the requirements to update a user’s presence status in Teams based on their calendar events in Microsoft Outlook.
-
-> [!NOTE]
-> The Microsoft Remote Connectivity Analyzer tool isn't available for the GCC and GCC High Microsoft 365 Government environments.
-
-Use the following steps:
-
-1. Open a web browser and navigate to the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) test.
-1. Sign in by using the credentials of the affected user account.
-1. Enter the verification code that's displayed and select **Verify**.
-1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**.
-
-After the test is complete, the screen will display details about the checks that were performed and whether the test succeeded, failed, or was successful with a few warnings. Select the links provided for more information about the warnings and failures, and how to resolve them.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
