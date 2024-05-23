@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 13 for SQL Server 2022 (KB5036432)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 13 (KB5036432).
-ms.date: 05/16/2024
+ms.date: 05/23/2024
 ms.custom: KB5036432
 ms.reviewer: v-qianli2
 appliesto:
@@ -50,7 +50,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3144736>[3144736](#3144736) </a> | Fixes an error that you encounter when using conversation timers in Service Broker while the SQL Server instance is under memory pressure. This causes queries to fail and the instance to stop responding.| SQL Server Engine | Replication | Windows|
 | <a id=3071580>[3071580](#3071580) </a> | Fixes an issue in which the full-text auto crawl function might stop working when you use full-text search. | SQL Server Engine | Search| All|
 | <a id=2979492>[2979492](#2979492) </a> | Fixes the following error that you encounter when updating a view with a linked server connection to another instance if dynamic data masking (DDM) is enabled: </br></br>Msg 15905, Level 16, State 6, Procedure \<ProcedureName>, Line \<LineNumber> [Batch Start Line 34] </br>Query not supported: Cannot determine result column sources.Invalid metadata. | SQL Server Engine | Security Infrastructure | All|
-| <a id=3033535>[3033535](#3033535) </a> | Adds a log message when high I/O latencies are detected in Bufferpool Lazy Writer (`ntdll!ZwWriteFile` system call) due to a performance issue in the underlying storage. | SQL Server Engine | SQL OS| All|
+| <a id=3033535>[3033535](#3033535) </a> | Adds the following log message when high I/O latencies are detected in Bufferpool Lazy Writer (`ntdll!ZwWriteFile` system call) due to a performance issue in the underlying storage: </br></br>WARNING Long asynchronous API Call: The scheduling fairness of scheduler can be impacted by an asynchronous API invocation unexpectedly exceeding xxx ms. | SQL Server Engine | SQL OS| All|
 
 ## How to obtain or download this or the latest cumulative update package
 
