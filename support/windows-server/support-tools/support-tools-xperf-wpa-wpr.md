@@ -85,7 +85,7 @@ To open WPA, select Search, enter *Windows Performance Analyzer*, and then selec
 
 If you didn't open WPA directly from WPR after you saved a recording, you can use the WPA **File** menu to open a trace file.  
 
-:::image type="content" source="media/support-tools-xperf-wpa-wpr/wpa-analysis-CPU.png" alt-text="Screenshot that shows W.P.A., showing tables and graphs in the Analysis tab.":::  
+:::image type="content" source="media/support-tools-xperf-wpa-wpr/wpa-analysis-cpu.png" alt-text="Screenshot that shows W.P.A., showing tables and graphs in the Analysis tab." lightbox="media/support-tools-xperf-wpa-wpr/wpa-analysis-cpu.png":::  
 
 > [!NOTE]  
 > To load symbols for analysis, select **Trace**, and then select **Load Symbols**. For more information, see [Load Symbols or Configure Symbol Paths](/windows-hardware/test/wpt/load-symbols-or-configure-symbol-paths).
