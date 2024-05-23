@@ -45,7 +45,7 @@ However, if the Autodiscover V2 service is disabled on the user's computer that 
 
 ## Resolution
 
-To fix the issue, follow these steps to enable the Autodiscover V2 service.
+To fix the issue, follow these steps to enable the Autodiscover V2 service on the user's computer that has Outlook installed.
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For protection, back up the registry before you modify it so that you can restore it if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
