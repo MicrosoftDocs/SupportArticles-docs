@@ -11,20 +11,16 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 ---
 # Information about lingering objects in a Windows Server Active Directory forest
 
-This article provides some information about lingering objects in a Windows Server Active Directory forest.
+This article provides some information about lingering objects in an Active Directory Domain Services (AD DS) forest. Specifically, the article describes the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.  
 
 _Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 910205
 
 ## Summary
 
-This article contains information about lingering objects in an Active Directory Domain Services (AD DS) forest. Specifically, the article describes the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.  
+Lingering objects are objects that reappear in the AD DS forest after they have been deleted. Lingering objects can occur if a domain controller does not replicate for an interval of time that is longer than the tombstone lifetime (TSL). The domain controller then reconnects to the replication topology. Objects that are deleted from the Active Directory directory service when the domain controller is offline can remain on the domain controller as lingering objects. This article contains detailed information about the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.
 
-Lingering objects can occur if a domain controller does not replicate for an interval of time that is longer than the tombstone lifetime (TSL). The domain controller then reconnects to the replication topology. Objects that are deleted from the Active Directory directory service when the domain controller is offline can remain on the domain controller as lingering objects. This article contains detailed information about the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.
-
-## More information
-
-### Replicating object deletions
+## How object deletions replicate through a forest
 
 When you delete an object in AD DS, AD DS generates a tombstone object to represent the deleted object. The tombstone object contains a small subset of the attributes of the deleted object. Other domain controllers in the domain and the forest use inbound replication to receive the tombstone object, and update their AD DS information to account for the deletion. The tombstone object remains in the forest for a specified period, called the tombstone lifetime (TSL). At the end of the TSL, AD DS permanently deletes the tombstone object. All direct and transitive replication partners of the originating domain controller must receive a copy of the tombstone object within the TSL.
 
@@ -33,7 +29,7 @@ The default value of the TSL depends on the version of the operating system that
 > [!NOTE]  
 > The existing TSL value does not change when you upgrade a domain controller to a newer version of Windows Server. The existing TSL value remains until you manually change it.
 
-### How lingering objects occur
+## How lingering objects occur
 
 When a domain controller is disconnected for a period that is longer than the TSL, the domain controller might not receive one or more tombstone objects. As a result, one or more objects that are deleted from the forest on all other domain controllers might remain on the disconnected domain controller. Such objects are called lingering objects.
 
@@ -42,6 +38,12 @@ When this domain controller reconnects to the replication topology, it acts as a
 - If the destination domain controller has Strict Replication Consistency enabled, the domain controller recognizes that it cannot update the object. The destination domain controller locally stops inbound replication of the directory partition from the source domain controller.
 
 - If the destination domain controller has Strict Replication Consistency disabled, the destination domain controller requests the full replica of the object. In this case, the object is reintroduced into the forest. From an administrative point of view, an object that you deleted reappears in the forest.
+
+An outdated domain controller can store lingering objects without any noticeable effect when the following conditions are true:  
+
+- An administrator, an application, or a service does not update the lingering object.
+- An administrator, an application, or a service does not try to create an object that has the same name in the domain.
+- An administrator, an application, or a service does not try to create an object by using the same user principal name (UPN) in the forest.
 
 ### Causes of long disconnections
 
@@ -64,43 +66,37 @@ The following conditions can cause long disconnections:
 
   - An administrator advances or rolls back the system clock to extend the useful life of a system state backup or to accelerate the garbage collection of deleted objects. Make sure that the system clock reflects the actual time. Also, make sure that event logs do not contain invalid events from the future or from the past.
 
-### Indications that a domain controller has lingering objects
-
-An outdated domain controller can store lingering objects without any noticeable effect when the following conditions are true:  
-
-- An administrator, an application, or a service does not update the lingering object.
-- An administrator, an application, or a service does not try to create an object that has the same name in the domain.
-- An administrator, an application, or a service does not try to create an object by using the same user principal name (UPN) in the forest.
+## Indications that a forest has lingering objects
 
 Even when there is no noticeable effect, the presence of lingering objects can cause problems. These problems are most likely to occur if a lingering object is a security principal.
 
-#### Events that indicate that lingering objects might be present in the forest
+### Events that indicate that lingering objects might be present in the forest
 
 |Event ID|General description|
 |---|---|
-|1862|The local domain controller has not recently received replication information from several domain controllers (intersite).|
-|1863|The local domain controller has not recently received replication information from several domain controllers (intersite).|
+|1862|The local domain controller has not recently received replication information from several domain controllers (inter-site).|
+|1863|The local domain controller has not recently received replication information from several domain controllers (inter-site).|
 |1864|The local domain controller has not recently received replication information from several domain controllers (summary).|
 |1311|The Knowledge Consistency Checker (KCC) was not able to build a spanning tree topology.|
 |2042|It has been too long since this server last replicated with the named source server.|
 
-#### Events that indicate that lingering objects are present in the forest
+### Events that indicate that lingering objects are present in the forest
 
-|Event ID|General description|
-|---|---|
-|1084|There is no such object on the server.|
-|1388|This destination system received an update for an object that should have been present locally but was not.|
-|1311|Another domain controller replicated an object not present on this domain controller.|
+| Event ID | General description |
+| --- | --- |
+| 1084 | There is no such object on the server. |
+| 1388 | This destination system received an update for an object that should have been present locally but was not. |
+| 1311 |Another domain controller replicated an object not present on this domain controller. |
 
 > [!NOTE]
 > Lingering objects aren't present on domain controllers that log Event ID 1988. The source domain controller contains the lingering object.
 
-#### Repadmin errors that indicate that lingering objects are present in the forest
+### Repadmin errors that indicate that lingering objects are present in the forest
 
-|Event ID|General description|
-|---|---|
-|8240|There is no such object on the server.|
-|8606|Insufficient attributes were given to create an object.|
+| Event ID | General description |
+| --- | --- |
+| 8240 | There is no such object on the server. |
+| 8606 | Insufficient attributes were given to create an object. |
 
 ### Other indications that lingering objects are present in the forest
 
@@ -118,25 +114,28 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 
 If an attempt is made to update a lingering object that resides in a writable directory partition, events are logged on the destination domain controller. However, if the only version of a lingering object is in a read-only directory partition on a global catalog server, the object cannot be updated. Therefore, this kind of event is not triggered.
 
-### Removing lingering objects from the forest by using LOLv2
+## Removing lingering objects from the forest
 
-The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/download/details.aspx?id=56051). For more information about using LoLv2, see the following articles:
+Select one of the following two methods to remove lingering objects.
 
-- [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)
+### Method 1: Removing lingering objects by using LOLv2
+
+The preferred method to detect and remove lingering objects is by using Lingering Object Liquidator v2 (LoLv2). To download the tool, see [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)
+
+For more information about using LoLv2, see the following articles:
 
 - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
-
 - [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
 
-### Removing lingering objects from the forest by using repadmin
+### Method 2: Removing lingering objects by using repadmin
 
 In some cases where you can't use LoLv2, you can use *Repadmin.exe*. For more information, see [Steps to use Repadmin to remove lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988).
 
-### Preventing lingering objects
+## Preventing lingering objects
 
 Select one of the following four methods to prevent lingering objects.
 
-#### Method 1: Enable the Strict Replication Consistency registry entry
+### Method 1: Enable the Strict Replication Consistency registry entry
 
 You can enable the Strict Replication Consistency registry entry so that suspect objects are quarantined. Then, administrations can remove these objects before they spread throughout the forest.
 
@@ -161,7 +160,7 @@ By default, the value of the Strict Replication Consistency registry entry on ne
 By default, the value of the Strict Replication Consistency registry entry on newly domain controllers is **0** (disabled) if the first Domain controller of the Forest was installed on a server that is running Windows Server 2000 (This computer creates the forest root domain of a new forest). in such scenario you can ensure Strict Replication Consistency is enabled on future Promoted Domain Controllers by following the steps in:  
 [Ensure Strict Replication Consistency Is Enabled On Newly Promoted Domain Controllers](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)).
 
-#### Method 2: Monitor replication by using a command-line command
+### Method 2: Monitor replication by using a command-line command
 
 To monitor replication by using the `repadmin /showrepl` command, follow these steps:  
 
@@ -192,11 +191,11 @@ To monitor replication by using the `repadmin /showrepl` command, follow these s
 1. In the box to the right of **does not equal**, type *0*.
 1. Check the filtered spreadsheet for replication failures. These are the issues that you need to resolve.
 
-#### Method 3: Remove domain controllers
+### Method 3: Remove domain controllers
 
 You can remove failing domain controllers from the forest before the TSL expires.
 
-#### Method 4: Increase the TSL
+### Method 4: Increase the TSL
 
 You can use either ADSIEdit or Windows Powershell to increase the TSL to 180 days. 
 
