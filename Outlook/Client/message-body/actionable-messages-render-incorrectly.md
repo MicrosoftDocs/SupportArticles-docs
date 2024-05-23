@@ -60,10 +60,10 @@ To fix the issue, follow these steps to enable the Autodiscover V2 service.
 
 5. Delete the following Autodiscover cache files:
 
-   1. *%LocalAppData%\Microsoft\Outlook\any partial file name\> - Autodiscover.xml*
+   1. *%LocalAppData%\Microsoft\Outlook\\<any partial file name\> - Autodiscover.xml*
 
-   2. *%LocalAppData%\Microsoft\Outlook\16\any file name\>.xml*
+   2. *%LocalAppData%\Microsoft\Outlook\16\\<any file name\>.xml*
 
-   3. *%LocalAppData%\Microsoft\Outlook\16\any file name\>.json*
+   3. *%LocalAppData%\Microsoft\Outlook\16\\<any file name\>.json*
 
 6. Restart Outlook.
