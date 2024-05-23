@@ -67,9 +67,10 @@ ASYNCHRONOUS_OPERATION WRITEABLE PERIODIC NEVER_NOTIFY PREEMPTED
 
 ### When using dcdiag.exe, initialization of a recently promoted Domain Controller may be delayed, awaiting the completion of an initial synchronization  
 
-> Directory Server Diagnosis  
->
-> Performing initial setup:  
+```output
+Directory Server Diagnosis  
+
+Performing initial setup:  
    Trying to find home server...  
    Home Server = DomainController  
 The directory service on DomainController has not finished initializing.  
@@ -93,13 +94,15 @@ know that it is ready to accept requests. Services such as the Key
 Distribution Center, Intersite Messaging Service, and NetLogon will not  
 consider this system as an eligible domain controller.  
 Done gathering initial info.  
+```
 
 > [!Note]
 > The output from dcdiag.exe described above is normal behavior during the promotion of a new, replica domain controller into an environment. The occurrence of 8477 in this case should be given time to clear through normal replication cycles before remedial activities being considered or conducted.  
 
 ### When using dcdiag.exe, the 'Replications' test case may issue a 'REPLICATION LATENCY WARNING'  
 
-> Starting test: Replications  
+```output
+Starting test: Replications  
    REPLICATION LATENCY WARNING  
    DomainController: A long-running replication operation is in progress  
       The job has been executing for 84 minutes and 22 seconds.  
@@ -110,9 +113,10 @@ Done gathering initial info.
       Op:             SYNC FROM SOURCE  
       NC DC=Contoso,DC=com  
       DSADN \<source DCs ntds settings object object guid>  
->
->DSA transport addr \<source DCs ntds settings object object guid>._msdcs.Contoso.com  
-   ......................... DomainController passed test Replications  
+
+DSA transport addr \<source DCs ntds settings object object guid>._msdcs.Contoso.com  
+   ......................... DomainController passed test Replications
+```
 
 ### 'NTDS Replication' event 1580 may be logged in the directory service event log
 
@@ -212,9 +216,12 @@ Forests at the 2003 functional level can remove and reinstate group members to m
 
 Using `repadmin /showobjmeta`, legacy members in a group can be determined and converted to LVR-enabled members if necessary to resolve the issue. These users are denoted with 'Type' of value `LEGACY`:  
 
-> repadmin /showobjmeta DomainControllerName "CN=Administrators,CN=Builtin,DC=Contoso,DC=Com"
->
-> 3 entries.  
+```console
+repadmin /showobjmeta DomainControllerName "CN=Administrators,CN=Builtin,DC=Contoso,DC=Com"
+```
+
+```output
+3 entries.  
  **Type    Attribute     Last Mod Time                            Originating DSA  Loc.USN Org.USN Ver**  
 ======= ============  =============                           ================= ======= ======= ===  
  **Distinguished Name**  
@@ -227,6 +234,7 @@ PRESENT       member \<Date Time>                    Default-First-Site-Name\Dom
         CN=Domain Admins,CN=Users,DC=Contoso,DC=Com  
  **LEGACY**       member \<Date Time>                    Default-First-Site-Name\DomainController   198458   198458   1
         CN=mjordan,CN=Users,DC=Contoso,DC=Com
+```
 
 ### A recent modification to the Active Directory Schema where a sizeable number of schema attributes have been modified or indexed  
 
