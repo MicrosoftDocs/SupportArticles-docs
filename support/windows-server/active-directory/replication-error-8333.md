@@ -1,12 +1,12 @@
 ---
 title: AD Replication error 8333 Directory Object Not Found
 description: Describes an issue where AD operations fail with error 8333 (Directory object not found (ERROR_DS_OBJ_NOT_FOUND)).
-ms.date: 12/26/2023
+ms.date: 05/23/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, sagiv
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Troubleshooting AD Replication error 8333: Directory Object Not Found
@@ -16,7 +16,6 @@ This article describes an issue where Active Directory Replications fail with er
 _Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2703708
 
-> [!NOTE]
 ## Symptoms
 
 This article describes the symptoms, cause, and resolution steps when Active Directory replication fails with error 8333: Directory object not found (ERROR_DS_OBJ_NOT_FOUND).
@@ -134,7 +133,7 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
 
     4. If database corruption has been detected, ensure that recent backups exist of each domain in the forest.
 
-   1. Restart the domain controller reporting the database corruption in directory services restore mode. (open msconfig.exe and choose "Active Directory Repair" in the "boot" options or type the command `bcdedit /set safeboot dsrepair` from elevated command prompt before restarting the domain controller).
+    5. Restart the domain controller reporting the database corruption in directory services restore mode. (open *msconfig.exe* and select **Active Directory repair** in the **Boot options** or type the `bcdedit /set safeboot dsrepair` command from an elevated command prompt before restarting the domain controller).
       
     6. To perform an inspection of the database in Directory Services Restore Mode:
 
@@ -159,8 +158,9 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
         > 4. Out-dated Firmware: BIOS, Hard Disk controller, Hard Disk  
         > 5. Sudden power Loss  
 
-1. Check for the existence of and remove Lingering Objects on all domain controllers in the forest.  
-There are multiple approaches to check for Lingering Objects including:
+2. Check for the existence of and remove Lingering Objects on all domain controllers in the forest.  
+
+   There are multiple approaches to check for Lingering Objects including:
 
     1. Check for the existence of the following Directory Services events on domain controllers in the forest:
 
@@ -175,19 +175,19 @@ There are multiple approaches to check for Lingering Objects including:
         |---|---|---|
         | 8451|Repadmin, DcPromo, as subcode in Database Corruption Events|Refer to the troubleshooting guide for 8451 in the first instance if this error is identified.<br/><br/> [2645996](https://support.microsoft.com/help/2645996) |
 
-   1. Examine the forest for lingering objects.
+    2. Examine the forest for lingering objects.
    
-      The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/en-us/download/details.aspx?id=56051). 
+      The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/download/details.aspx?id=56051). 
       
       For more information about LoLv2, see:
-      
-            [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)
-                  [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
-                        [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
-      In some cases where LoLv2 can't be used, you can use *Repadmin.exe*. You can do this by running the command `repadmin /removelingeringobjects` in advisory mode, as described in the following procedure:  
-      [Identify lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-2042)
-      
-3. Check for the existence of and remove conflict objects:  
+
+    - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)
+    - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
+    - [Description of the Lingering Object Liquidator tool](lingering-object-liquidator-tool.md)
+
+      In some cases where LoLv2 can't be used, you can use *Repadmin.exe*. You can do this by running the `repadmin /removelingeringobjects` command in advisory mode, as described in [Identify lingering objects](active-directory-replication-event-id-2042.md).  
+ 
+4. Check for the existence of and remove conflict objects:  
     a. Search the relevant directory partitions for CNF-managed objects and the object that the conflict-mangled object conflicted with the following syntax:
 
     `repadmin /showattr localhost "dc=parent,dc=com" /subtree /filter:"((&(objectClass=*)(cn=*\0acnf:*)))" /atts:objectclass,whencreated,whenchanged`
@@ -204,7 +204,7 @@ There are multiple approaches to check for Lingering Objects including:
 
     d. Delete the conflict mangled object/container or the object it conflicted with using LDP.EXE, ADSIEDIT or one of the Active Directory management tools.
 
-4. Perform testing of the replication partners with third-party components removed.  
+5. Perform testing of the replication partners with third-party components removed.  
 Multiple third-party products have been found to cause this issue including:
     1. Anti-Virus software  
     2. Directory Synchronization
