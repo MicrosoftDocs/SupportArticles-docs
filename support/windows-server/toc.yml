@@ -2119,6 +2119,8 @@ items:
       href: ./performance/server-service-configuration-tuning.md
     - name: Task Manager displays incorrect memory information
       href: ./performance/task-manager-display-incorrect-memory-info.md
+    - name: Task Manager displays incorrect processor affinity
+      href: ./performance/task-manager-displays-incorrect-processor-affinity.md      
     - name: Unable to allocate memory from the system paged pool
       href: ./performance/unable-allocate-memory-system-paged-pool.md
     - name: User-defined data collector set doesn't run as scheduled
