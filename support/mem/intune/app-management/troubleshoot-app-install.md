@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting app installation issues with Intune
 description: How to use the Microsoft Intune troubleshooting pane to help you troubleshoot app installation issues.
-ms.date: 12/05/2023
-ms.reviewer: kaushika, mghadial
+ms.date: 05/21/2024
+ms.reviewer: kaushika, mghadial, jchornbe, roblane
 search.appverid: MET150
 ms.custom: sap:AppDeployment - Windows\Store
 ---
@@ -12,6 +12,33 @@ This article gives troubleshooting guidance for when app installations fail for 
 
 > [!NOTE]
 > For specific app installation error code information, see [Intune app installation error reference](app-install-error-codes.md).
+
+## Run self-help diagnostics
+
+To help administrators successfully use Microsoft Intune, Microsoft has developed diagnostic scenarios that cover top support topics and the common tasks for which administrators request help with configuration. It's important to note that these diagnostics can't make changes to your tenant, but they do provide insight into known issues and instructions to fix them quickly.
+
+> [!NOTE]
+> These diagnostics aren't available for GCC High and DoD environments or Microsoft 365 operated by 21Vianet.
+
+### Run diagnostics
+
+As an administrator, navigate to the [Microsoft 365 admin center](https://aka.ms/admincenter). In the navigation pane, select **Show all** > **Support** > **Help & support**. Alternatively, select **Help & support** on the bottom right side of the page. After you briefly describe your issue (for example, "I need help deploying apps"), the system determines whether a diagnostic scenario matches your issue.
+
+For the user having an issue with app deployment on their device, type their email address and then select **Run tests**. After the diagnostic checks finish and a configuration issue is found, the system provides steps to resolve the issue.
+
+> [!NOTE]
+> If a diagnostic detects an issue and you implement a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved.
+
+### Scenarios covered by diagnostics
+
+> [!NOTE]
+> You have to run the diagnostic as an administrator.
+
+The following diagnostic is currently available for app deployment issues:
+
+|Diagnostic|Description|Link|
+|--|--|--|
+|Intune app deployment|This diagnostic helps identify the cause of the issue that a user's application deployment doesn't complete due to various failures.|[Run Tests: Intune app deployment](https://aka.ms/IntuneAppDeployment)|
 
 ## Get app troubleshooting details
 
