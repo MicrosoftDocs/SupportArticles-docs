@@ -133,7 +133,7 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
 
     4. If database corruption has been detected, ensure that recent backups exist of each domain in the forest.
 
-    5. Restart the domain controller reporting the database corruption in directory services restore mode. (open *msconfig.exe* and select **Active Directory repair** in the **Boot options** or type the `bcdedit /set safeboot dsrepair` command from an elevated command prompt before restarting the domain controller).
+    5. Restart the domain controller reporting the database corruption in directory services restore mode. (Open *msconfig.exe* and select **Active Directory repair** in the **Boot options**, or type the `bcdedit /set safeboot dsrepair` command from an elevated command prompt before restarting the domain controller.)
 
     6. To perform an inspection of the database in Directory Services Restore Mode:
 
@@ -160,7 +160,7 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
 
 2. Check for the existence of and remove Lingering Objects on all domain controllers in the forest.  
 
-   There are multiple approaches to check for Lingering Objects including:
+   There are multiple approaches to check for Lingering Objects, including:
 
     1. Check for the existence of the following Directory Services events on domain controllers in the forest:
 
