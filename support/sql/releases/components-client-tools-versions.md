@@ -2,7 +2,8 @@
 title: Determine version information of SQL Server components and client tools
 description: This article describe the procedures to determine the version information of SQL Server components and client tools.
 ms.date: 10/15/2022
-ms.custom: evergreen, sap:Installation, Patching and Upgrade
+ms.topic: how-to
+ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: v-six
 ---
 
