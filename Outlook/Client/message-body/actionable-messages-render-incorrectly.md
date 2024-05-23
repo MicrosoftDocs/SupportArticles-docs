@@ -26,19 +26,19 @@ ms.date: 05/22/2024
 
 The following screenshot shows an Actionable message that's rendered correctly.
 
-:::image type="content" source="media/actionable-messages-render-incorrectly/actionable-message-good.png" alt-text="Screenshot of an actionable message that is rendered correctly." border="true" lightbox="media/actionable-messages-render-incorrectly/actionable-message-good.png":::
+:::image type="content" source="media/actionable-messages-render-incorrectly/actionable-message-good.png" alt-text="Screenshot of an actionable message that is rendered correctly." border="true" lightbox="media/actionable-messages-render-incorrectly/actionable-message-good-lrg.png":::
 
 The following screenshot shows the same Actionable message if it's rendered incorrectly.
 
-:::image type="content" source="media/actionable-messages-render-incorrectly/actionable-message-bad.png" alt-text="Screenshot of an actionable message that is rendered incorrectly." border="true" lightbox="media/actionable-messages-render-incorrectly/actionable-message-bad.png":::
+:::image type="content" source="media/actionable-messages-render-incorrectly/actionable-message-bad.png" alt-text="Screenshot of an actionable message that is rendered incorrectly." border="true" lightbox="media/actionable-messages-render-incorrectly/actionable-message-bad-lrg.png":::
 
 ## Cause
 
-To render Actionable messages correctly, Outlook uses the following `GET` request to get the Actions protocol endpoint URL from the Autodiscover V2 service: `https://outlook.office365.com/autodiscover/autodiscover.json/v1.0/oadmin@sxc5v.onmicrosoft.com?protocol=actions`.
+To render Actionable messages correctly, Outlook uses the following GET request to get the Actions protocol endpoint URL from the Autodiscover V2 service: `https://outlook.office365.com/autodiscover/autodiscover.json/v1.0/oadmin@sxc5v.onmicrosoft.com?protocol=actions`.
 
 If the request is successful, the Autodiscover V2 service returns HTTP status code 200 and provides the requested URL in the response body. For example, the response body might be `{ "Protocol": "Actions", "Url": https://outlook.office365.com/actionsb2netcore }`.
 
-However, if the Autodiscover V2 service is disabled on the user's computer that has Outlook installed, the `GET` request fails, and Outlook can't connect to the actions protocol endpoint.
+However, if the Autodiscover V2 service is disabled on the user's computer that has Outlook installed, the GET request fails, and Outlook can't connect to the actions protocol endpoint.
 
 > [!NOTE]
 > The Autodiscover V2 service is disabled if the `DisableAutodiscoverV2Service` registry entry exists under the `Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Outlook\AutoDiscover` subkey, and the DWORD value of the `DisableAutodiscoverV2Service` entry is `1`.
@@ -60,10 +60,10 @@ To fix the issue, follow these steps to enable the Autodiscover V2 service.
 
 5. Delete the following Autodiscover cache files:
 
-   1. %LocalAppData%\Microsoft\Outlook\any partial file name\> - Autodiscover.xml
+   1. *%LocalAppData%\Microsoft\Outlook\any partial file name\> - Autodiscover.xml*
 
-   2. %LocalAppData%\Microsoft\Outlook\16\any file name\>.xml
+   2. *%LocalAppData%\Microsoft\Outlook\16\any file name\>.xml*
 
-   3. %LocalAppData%\Microsoft\Outlook\16\any file name\>.json
+   3. *%LocalAppData%\Microsoft\Outlook\16\any file name\>.json*
 
 6. Restart Outlook.
