@@ -2129,6 +2129,8 @@ items:
     items:
     - name: incorrect shutdown reason code written to SEL
       href: ./performance/incorrect-shutdown-reason-code-sel.md
+    - name: 'Troubleshooting scenario: System shutdown is slow'
+      href: ./performance/troubleshooting-system-shutdown-is-slow-scenario.md
     - name: Use Userdump.exe to create a dump file
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
