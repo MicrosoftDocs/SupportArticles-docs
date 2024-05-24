@@ -2,7 +2,7 @@
 title: Cumulative update 6 for SQL Server 2016 SP1 (KB4037354)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 1 (SP1) cumulative update 6 (KB4037354).
 ms.date: 10/26/2023
-ms.custom: KB4037354
+ms.custom: evergreen, KB4037354
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise
