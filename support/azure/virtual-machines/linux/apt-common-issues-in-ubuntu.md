@@ -137,10 +137,16 @@ If a proxy server is configured in Microsoft Azure between the Ubuntu VM and Ubu
 Acquire::http::Proxy "http://[username]:[password]@ [proxy-web-or-IP-address]:[port-number]";
 Acquire::https::Proxy "http://[username]:[password]@ [proxy-web-or-IP-address]:[port-number]";
 ```
+
+Additionally, for Ubuntu and other Unix-like operating systems, you can set a proxy for HTTP and HTTPS traffic using environment variables. The relevant environment variables are http_proxy and https_proxy. To verify if a proxy is configured, run the following command
+
  
 > [!IMPORTANT]
 > If no proxy server exists between the Ubuntu VM and the Ubuntu repository addresses, search for and remove any proxy configuration settings that are in the */etc/apt/apt.conf* file.
 
+```bash
+env | grep -i proxy
+```
 
 ## Scenario 2: APT command fails and returns Failed to fetch http:// 470 status code 470
 
