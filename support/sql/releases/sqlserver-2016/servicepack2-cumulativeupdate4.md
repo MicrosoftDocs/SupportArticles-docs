@@ -2,7 +2,7 @@
 title: Cumulative update 4 for SQL Server 2016 SP2 (KB4464106)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 2 (SP2) cumulative update 4 (KB4464106).
 ms.date: 10/26/2023
-ms.custom: KB4464106
+ms.custom: evergreen, KB4464106
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise
