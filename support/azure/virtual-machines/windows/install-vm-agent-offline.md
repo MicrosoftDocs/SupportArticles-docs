@@ -11,7 +11,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: article
-ms.date: 01/30/2024
+ms.date: 05/24/2024
 ms.author: genli
 
 ms.custom: sap:VM Extensions not operating correctly
