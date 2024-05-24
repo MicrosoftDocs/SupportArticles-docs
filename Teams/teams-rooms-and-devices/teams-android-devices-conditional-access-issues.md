@@ -19,7 +19,7 @@ ms.custom:
   - CI168070
   - CI188847
 ---
-# Fix issues related to Conditional Access in Teams Android devices
+# Fix Conditional Access issues for Teams Android devices
 
 ## Symptoms
 
@@ -29,7 +29,7 @@ If these policies are applied, you might experience one or more of the following
 
 - The devices can't sign in to Teams, or they get stuck in sign-in loops.
 - The devices automatically sign out of Teams randomly.
-- Microsoft Teams freezes or crashes.
+- Microsoft Teams stops responding (freezes).
 
 ## Cause
 
@@ -37,12 +37,14 @@ These issues can occur for the following reasons:
 
 - Unsupported Conditional Access policy or Intune device compliance policy settings
 
-  If a device is marked as non-compliant, the Microsoft Entra token issuing service stops renewing the tokens for the device object, or even revokes the token. In this case, the device can't get an updated authentication token, and it's forced to sign out.
+  If a device is marked as non-compliant, the Microsoft Entra token-issuing service stops renewing the tokens for the device object or even revokes the token. In this case, the device can't get an updated authentication token, and it's forced to sign out.
 
   To check the compliance status of your devices, use the [Intune Device compliance dashboard](/mem/intune/protect/compliance-policy-monitor).
+  
 - The [Sign-in frequency](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#user-sign-in-frequency) setting
 
-  This setting forces periodic reauthentication. This might cause the devices to sign out randomly, depending on how many of your Conditional Access policies have different sign-in frequencies set. Whenever reauthentication occurs, the token is revoked and a new device object is created under the user account. If the number of device objects exceeds the Microsoft Entra device limit or Intune device limit, the user can't sign in to the device.
+  This setting forces periodic reauthentication. This action might cause the devices to sign out randomly, depending on how many of your Conditional Access policies have different sign-in frequencies set. Whenever reauthentication occurs, the token is revoked and a new device object is created under the user account. If the number of device objects exceeds the Microsoft Entra device limit or Intune device limit, the user can't sign in to the device.
+  
 - The Terms of Use (ToU) and MFA Conditional Access policies, if both are used
 
   For more information, see [Known issues with Teams phones](rooms-known-issues.md#issues-with-teams-phones).
@@ -59,23 +61,23 @@ This test verifies that the user account meets the requirements for a Microsoft 
 
 > [!NOTE]
 >
-> - A Global Administrator account is required to run the Microsoft Teams Rooms sign in connectivity test.
+> - A Global Administrator account is required to run the Microsoft Teams Rooms sign-in connectivity test.
 > - The Microsoft Remote Connectivity Analyzer tool isn’t available for the GCC and GCC High Microsoft 365 Government environments.
 
-Run the connectivity test by using the following steps:
+To run the connectivity test, follow these steps:
 
 1. Open a web browser and navigate to the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test.
 1. Sign in by using the credentials of a Global Administrator account.
-1. Specify the username for the account that is unable to access the Teams Rooms app.
+1. Specify the username for the account that can't access the Teams Rooms app.
 1. In the **Device Selection** field, select a type for the affected user's device.
-1. Enter the verification code that's displayed and **select Verify**.
+1. Enter the verification code that's displayed, and then **select Verify**.
 1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**.
 
-After the test finishes, the screen will display details about all the checks that were performed and whether the test succeeded, failed, or was successful with a few warnings. Select the provided link for more information about the warnings and failures, and how to resolve them.
+After the test finishes, the screen displays details about all the checks that were performed and whether the test succeeded, failed, or was successful but displayed a few warnings. Select the provided link for more information about the warnings and failures, and about how to resolve them.
 
 ### Manual checks
 
-Use the following steps:
+To manually check user access to the Teams app, follow these steps:
 
 1. Go to the [sign-in logs in the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins).
 1. Select the **User sign-ins (non-interactive)** tab.
@@ -85,7 +87,7 @@ Use the following steps:
    - **Application**: Enter **Teams**, and then select **Apply**.
 
    :::image type="content" source="media/teams-android-devices-conditional-access-issues/add-filters.png" alt-text="Screenshot of the Status and Application filters.":::
-1. Look for items of the affected usernames that have the following **Application** values:
+1. For the affected usernames, look for items that have the following **Application** values:
 
    - Microsoft Teams
    - Microsoft Teams Service
@@ -104,7 +106,7 @@ Use the following steps:
 
    :::image type="content" source="media/teams-android-devices-conditional-access-issues/conditional-access-policy-details.png" alt-text="Screenshot of the Conditional Access policy details.":::
 
-After you identify the specific Conditional Access policy that's causing the issue, you can use [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices) to exclude the affected device from the policy. Commonly used device properties in device filters are *manufacturer* and *model*, and they're used with the operators *Contains*, *StartsWith*, and *In*.
+After you identify the specific Conditional Access policy that's causing the issue, you can use [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices) to exclude the affected device from the policy. Commonly used device properties in device filters are *manufacturer* and *model*. These are used together with the *Contains*, *StartsWith*, and *In* operators.
 
 > [!NOTE]
 >
