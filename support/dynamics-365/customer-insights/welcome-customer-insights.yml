@@ -36,6 +36,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Troubleshoot unification results
+            url: data/profile-unification/troubleshoot-unification-results.md
           - text: Match failed error
             url: data/profile-unification/match-failed.md
           - text: Merge failed error
