@@ -223,6 +223,8 @@ Many traffic-capturing tools are available to assist this process, including the
 
 - [Dumpy](https://github.com/larryTheSlap/dumpy) - an open source traffic capture plug-in for Kubernetes
 
+Also, in case you want to perform these checks in real-time, you can use [Inspektor Gadget](https://inspektor-gadget.io) to [troubleshoot DNS failures in real-time](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md).
+
 In this article, we use Dumpy as an example of how to collect DNS traffic captures from each CoreDNS pod and a client DNS pod (in this case, the `aks-test` pod).
 
 ##### Network traffic capture commands
