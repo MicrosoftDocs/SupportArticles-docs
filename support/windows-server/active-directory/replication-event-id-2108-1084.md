@@ -34,7 +34,7 @@ Error value: <error code> <error string>
 ```
 
 > [!NOTE]
-> In the `Error value` text, <error code> and <error string> represent the actual values that are shown in the log entry.
+> In the `Error value` text, \<error code> and \<error string> represent the actual values that are shown in the log entry.
 
 ```output
 Event ID 2108: This event contains REPAIR PROCEDURES for the 1084 event which has previously been logged. This message indicates a specific issue with the consistency of the Active Directory Domain Services database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made.  
@@ -103,7 +103,7 @@ To resolve this problem, follow these steps. Retry the replication operation aft
 
         1. Open an elevated command prompt on the domain controller or Windows client with RSAT installed.
 
-        2. Type *ldp.exe <DC Name>* and press <kbd>Enter</kbd>.
+        2. Type *ldp.exe \<DC Name>* and press <kbd>Enter</kbd>.
 
         3. Select **Connection** > **Connect**, and then type the name of the server that you want to connect to.
 
