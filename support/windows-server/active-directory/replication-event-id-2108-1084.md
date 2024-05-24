@@ -82,10 +82,9 @@ To resolve this problem, follow these steps. Retry the replication operation aft
     - Method 2: Configure the domain controller so that it is no longer a global catalog server. Follow these steps:
 
         1. Select **Start**, point to **Administrative Tools**, and then select **Active Directory Sites and Services**.
-           
-        3. Locate the **Default-First-Site-Name**\ **Servers**\ **domain_controller_name**\ **NTDS Settings** subtree.
-        4. Right-click **NTDS Settings**, and then select **Properties**.
-        5. Select to clear the **Global Catalog** check box, and then select **OK**.
+        2. Locate the **Default-First-Site-Name**\ **Servers**\ **domain_controller_name**\ **NTDS Settings** subtree.
+        3. Right-click **NTDS Settings**, and then select **Properties**.
+        4. Select to clear the **Global Catalog** check box, and then select **OK**.
 
     - Method 3
 
