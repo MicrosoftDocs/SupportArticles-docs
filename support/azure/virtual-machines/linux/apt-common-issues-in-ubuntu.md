@@ -60,7 +60,7 @@ W: Tried to start delayed item http://azure.archive.ubuntu.com/ubuntu jammy-upda
 ```
 
 
-The above errors may arise due to various scenarios. The following sections outline potential causes for these failures and provide solutions to resolve the connection issues
+The above errors may arise due to various scenarios. The following sections outline potential causes for these failures and provide solutions to resolve the connection issues.
 
 ## Cause 1: VMs are configured to use an internal load balancer
 
@@ -115,11 +115,11 @@ Make sure `azure.archive.ubuntu.com` and any other repository URLs are fully acc
 
 ## Cause 4: Virtual Machine is under a Private Subnet
 
-Private subnets enhance security by not providing default outbound access. To enable outbound connectivity for virtual machines to access the Internet, it is necessary to explicitly grant outbound access. For more information see: [Private Subnet](/azure/virtual-network/ip-services/default-outbound-access#add-the-private-subnet-feature)
+Private subnets enhance security by not providing default outbound access. To enable outbound connectivity for virtual machines to access the Internet, it's necessary to explicitly grant outbound access. For more information, see: [Private Subnet](/azure/virtual-network/ip-services/default-outbound-access#add-the-private-subnet-feature)
 
 ### Solution 4: Provide outbound connectivity on the Subnet
 
-A NAT gateway is the recommended way to provide outbound connectivity for virtual machines in the subnet; for more information, see [Nat Gateway](/azure/nat-gateway/nat-overview)
+A NAT gateway is the recommended way to provide outbound connectivity for virtual machines in the subnet; for more information, see [Nat Gateway.](/azure/nat-gateway/nat-overview)
 
 
 ## Cause 5: A proxy is used for communication
@@ -131,14 +131,14 @@ Internet communication goes through a customer proxy that affects communication 
 If a proxy server is configured in Microsoft Azure between the Ubuntu VM and Ubuntu repositories, use the correct proxy configuration settings in the `/etc/apt/apt.conf` files, as shown in the following snippet:
 
 > [!IMPORTANT]
->If the configured proxy server has a private IP address, make sure that it has connectivity within the Azure public address space.
+>If the configured proxy server hafs a private IP address, make sure that it has connectivity within the Azure public address space.
 
 ```bash
 Acquire::http::Proxy "http://[username]:[password]@ [proxy-web-or-IP-address]:[port-number]";
 Acquire::https::Proxy "http://[username]:[password]@ [proxy-web-or-IP-address]:[port-number]";
 ```
 
-Additionally, for Ubuntu and other Unix-like operating systems, you can set a proxy for HTTP and HTTPS traffic using environment variables. The relevant environment variables are http_proxy and https_proxy. To verify if a proxy is configured, run the following command
+Additionally, for Ubuntu and other Unix-like operating systems, you can set a proxy for HTTP and HTTPS traffic using environment variables. The relevant environment variables are http_proxy and https_proxy. To verify if a proxy is configured, run the following command.
 
  
 > [!IMPORTANT]
@@ -216,7 +216,7 @@ The reason for this failure is the new third party repo that was added in `/etc/
 
 When you add a new repository to your Ubuntu system, you often need to import the GPG key associated with that repository to ensure that your system trusts the packages from that source.
 
-If you're adding this repository to your system, you'll want to ensure that the key is indeed from a trusted source, such as the official website or a trusted community member. Once you've verified its authenticity, you can add it to your system using the `apt-key` command or by placing it in the `/etc/apt/trusted.gpg.d/ directory`.
+If you're adding this repository to your system, you want to ensure that the key is indeed from a trusted source, such as the official website or a trusted community member. Once you've verified its authenticity, you can add it to your system using the `apt-key` command or by placing it in the `/etc/apt/trusted.gpg.d/ directory`.
 
 
 > [!IMPORTANT]
@@ -228,7 +228,7 @@ Example:
 sudo curl -fsSL https://download.opensuse.org/repositories/devel:kubic:libcontainers:unstable/xUbuntu_22.04/Release.key | sudo tee /etc/apt/trusted.gpg.d/devel_kubic_libcontainers_unstable.gpg > /dev/null
 ```
 
-We can also fetch the GPG key using curl, convert it into a format suitable for APT using gpg --dearmor, and then save it directly to the /etc/apt/trusted.gpg.d/ directory. This ensures that the GPG key is securely managed and trusted by your system without relying on apt-key.
+We can also fetch the GPG key using curl, convert it into a format suitable for APT using `gpg --dearmor`, and then save it directly to the /etc/apt/trusted.gpg.d/ directory. This ensures that the GPG key is securely managed and trusted by your system without relying on apt-key.
 
 
 Example:
@@ -243,7 +243,7 @@ curl -fsSL https://download.opensuse.org/repositories/devel:kubic:libcontainers:
 
 ## Scenario 5: Temporary failure resolving 'azure.archive.ubuntu'
 
-When running apt update, the system attempts to fetch package information from multiple sources, including `azure.archive.ubuntu.com`, during the update or installation of a package we are getting a `Temporary failure resolving` error.
+When running apt update, the system attempts to fetch package information from multiple sources, including `azure.archive.ubuntu.com`, during the update or installation of a package we're getting a `Temporary failure resolving` error.
 
 ```output
 Ign:4 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease
@@ -266,9 +266,9 @@ W: Failed to fetch http://azure.archive.ubuntu.com/ubuntu/dists/jammy-security/I
 W: Some index files failed to download. They have been ignored, or old ones used instead.
 ```
 
-## Cause: Custom DNS cannot resolve Ubuntu repositories
+## Cause: Custom DNS can't resolve Ubuntu repositories
 
-When attempting to fetch updates from the Ubuntu package repository, the error message indicates a temporary failure resolving the domain `azure.archive.ubuntu.com`. One potential reason for this could be that we are using a custom DNS resolver which is not working properly. Another reason could be that the affected VM is on a different subnet than the DNS server
+When attempting to fetch updates from the Ubuntu package repository, the error message indicates a temporary failure resolving the domain `azure.archive.ubuntu.com`. One potential reason for this could be that we're using a custom DNS resolver, which isn't working properly. Another reason could be that the affected VM is on a different subnet than the DNS server
 
 ### Solution: Verify and Update your DNS resolver
 
@@ -281,7 +281,7 @@ When attempting to fetch updates from the Ubuntu package repository, the error m
 
 ## Scenario 6: dpkg: error processing package on Kernel installation
 
-When attempting to reinstall or install a new kernel using the `apt` command, the following error is appearing
+When attempting to reinstall or install a new kernel using the `apt` command, the following error is appearing.
 
 ```output
 Processing triggers for linux-image-5.4.0-1051-azure (5.4.0-1051.53) ...
@@ -306,7 +306,7 @@ A syntax error in the `/etc/default/grub` configuration file. The post-installat
 
 Look for any syntax errors in the file, particularly around the line that the post-installation script is likely encountering. Fix any syntax errors that you find. The syntax for this file is crucial for the proper functioning of the GRUB boot loader.
 
-In the below example,the missing closing quote in the `GRUB_CMDLINE_LINUX` line would indeed cause a syntax error in the GRUB configuration file
+In the below example, the missing closing quote in the `GRUB_CMDLINE_LINUX` line would indeed cause a syntax error in the GRUB configuration file.
 
 
 ```output
@@ -332,9 +332,9 @@ GRUB_CMDLINE_LINUX=" "
 Once you've corrected the syntax error in the Grub configuration file, try reinstalling the kernel package.
 
 
-## Scenario 7: The repository `http://archive.ubuntu.com/ubuntu/dists/focal/main/binary-armhf/Packages focal Release` does not have a Release file
+## Scenario 7: The repository `http://archive.ubuntu.com/ubuntu/dists/focal/main/binary-armhf/Packages focal Release` doesn't have a Release file
 
-When running apt update, the system attempts to fetch package information from multiple sources, we are getting the following error:
+When running apt update, the system attempts to fetch package information from multiple sources, we're getting the following error:
 
 
 ```bash
@@ -356,7 +356,7 @@ N: See apt-secure(8) manpage for repository creation and user configuration deta
 
 The main issue is that apt searches all architectures defined by APT::Architectures when downloading repository data.
 
-In this scenario we are running a x86_64 Virtual machine but there were 2 lines on `/etc/apt/sources.list` referring to the ARM architecture.
+In this scenario we are running a x86_64 Virtual machine but there were two lines on `/etc/apt/sources.list` referring to the ARM architecture.
 
 ```bash
 sudo cat  /etc/apt/sources.list | grep -i armhf
@@ -368,7 +368,7 @@ deb-src  http://archive.ubuntu.com/ubuntu/dists/focal/main/binary-armhf/Packages
 
 ### Solution: Remove or comment armhf information from sources.list
 
-Just remember that if any application automatically edits the `sources.list` file or adds a repository under the `/etc/apt/sources.list.d/` directory, and includes the `armhf` repositories, the same error will occur.
+Just remember that if any application automatically edits the `sources.list` file or adds a repository under the `/etc/apt/sources.list.d/` directory, and includes the `armhf` repositories, the same error occurs.
 
 To fix this issue, remove or comment out the lines that reference the ARM architecture in `/etc/apt/sources.list` or `/etc/apt/sources.list.d/*.list`.
 
