@@ -3,7 +3,7 @@ title: Troubleshoot unification results
 description: Provides troubleshooting steps for unexpected deduplication, match, or merge results for Microsoft Dynamics 365 Customer Insights - Data.
 author: Allison-Wu
 ms.author: wu-allison
-ms.date: 5/22/2024
+ms.date: 5/24/2024
 ms.reviewer: v-wendysmith, mhart
 ms.custom: sap:Data Unification\Troubleshoot unification results
 ---
@@ -12,10 +12,9 @@ ms.custom: sap:Data Unification\Troubleshoot unification results
 [!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
 ## Overview
-This article provides the steps to validate the results of deduplication, match, and merge in  Microsoft Dynamics 365 Customer Insights - Data.
+This article provides the steps to validate the results of deduplication, match, and merge in Microsoft Dynamics 365 Customer Insights - Data.
 
 ## Verify source data
-
 Double-check the accuracy and completeness of the data provided for the unification process, ensuring that all relevant records and information are present. It's essential to clean and normalize the data to ensure reliable outcomes.
 
 ### Viewing tables
@@ -32,25 +31,24 @@ Read more at [Data Profiling](https://learn.microsoft.com/en-us/dynamics365/cust
 **If there are issues with source data, please resolve them, rerun unification, and re-validate the results. If there are no problems with the source data, continue following the troubleshooting steps below.**
 
 ## Step 1: Introduction to output tables
-
 Each step of unification produces system generated output tables that are available for troubleshooting purposes.
-- Deduplication produces a Deduplication table for every source table involved in matching conditions.
-- Match produces a ConflationMatchPairs table.
-- Merge produces a Customer table.
+|Step|Table|Description|
+|----|-----|-----------|
+|Deduplication|Deduplication_DataSource_Table|Deduplicated records for each source table|
+|Match|ConflationMatchPairs|Represents cross-source table matches|
+|Merge|Customer|The final unified customer profile|
 
 To debug an unexpected unification result, you can trace through these output tables.
 
 For detailed descriptions of each output table, see [Understanding output tables](#understanding-output-tables).
 
-
-## Step 2: Downloading output tables
-
-|Method|Full/Partial|Deduplication|ConflationMatchPairs|Customer|
-|------|------------|-------------|--------------------|--------|
-|[Export to blob storage](#method-1-export-output-tables-to-blob-storage)|Full|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|[Download 100k records](#method-2-download-100k-records)|Partial|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|[View the Customer table in Dataverse](#method-3-view-the-customer-table-in-dataverse)|Full|||:white_check_mark:|
-|[Configure a side process](#method-4-configure-a-side-unification-process)|Full|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+## Step 2: Viewing output tables
+|Method|Full/Partial|View type|Deduplication|ConflationMatchPairs|Customer|
+|------|------------|---------|-------------|--------------------|--------|
+|[Export to blob storage](#method-1-export-to-blob-storage)|Full|Download csv/parquet|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|[Download 100k records](#method-2-download-100k-records)|Partial|Download csv|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|[View Dataverse tables](#method-3-view-dataverse-tables)|Full|Dataverse table|||:white_check_mark:|
+|[Configure a side process](#method-4-configure-a-side-process)|Full|Download csv|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 
 ### Method 1: Export to blob storage
 This is the recommended method to view all output tables. 
@@ -64,7 +62,7 @@ Navigate to the "Tables" page in Customer Insights - Data. For each of the outpu
 
 :::image type="content" source="media/data-manager-tables-download.png" alt-text="Download table.":::
 
-### Method 3: View the Customer table in Dataverse
+### Method 3: View Dataverse tables
 If only the Customer table needs to be analyzed, then the most convenient viewing method is through Dataverse.
 
 After each successful Merge run, the Customer gets written to Dataverse as the "CustomerProfile" table. 
@@ -78,9 +76,7 @@ By recreating the unification configuration on new tables that contain a small s
       > This method involves removing the original tables from unification, so it can be disruptive and will produce completely different customer profiles. **Therefore, we recommend only using this method for non-production instances.**
 
 #### Datasources
-Create new tables that only contain a small subset of problem records.
-
-Refresh the tables to ingest them into Customer Insights - Data.
+Create new tables that only contain a small subset of problem records. Refresh the tables to ingest them into Customer Insights - Data.
 
 #### Remove the original tables from unify
 See how to [Remove a unified table](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/data-unification-update#remove-a-unified-table). If there are downstream dependencies on the Customer table, then those must also be removed.
@@ -90,9 +86,9 @@ See how to [Remove a unified table](https://learn.microsoft.com/en-us/dynamics36
 
 #### Unify the problem tables
 1. **Map**: Map the problem tables
-2. **Deduplication**: Copy the original deduplication conditions to the problem tables
+2. **Deduplication**: Copy the original deduplication rules to the problem tables
 3. **Match**: For each of the problem tables
-    - Copy the original matching conditions
+    - Copy the original matching rules
     - Enable "Include all records" for better debugging
 4. **Unified data view**: The default options work well.
 5. **Run unification to generate the problem customer profiles**
@@ -102,22 +98,52 @@ After all troubleshooting is complete, remember to recreate the original unifica
 
 If you need help restoring the previous state, please reach out to support.
 
-## Step 3: Viewing downloaded results
-## ***---- TODO ----***
+## Step 3: Resolving unification results
+Depending on where your unexpected result is, you may need to verify different output tables. 
 
-## Step 4: Resolving unification results
-## ***---- TODO ----***
+### Deduplication
+To verify if deduplication is behaving as expected, cross check the following:
+- Source data of problematic result
+- Deduplication configuration
+
+Make sure to consider all configurations such as normalization, precision, exceptions, and merge preferences.
+
+See an overview of deduplication concepts at [Define deduplication rules](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/data-unification-duplicates), and examples at [Deduplication concepts and scenarios](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/data-unification-concepts-deduplication).
+
+### Match
+To verify if match is behaving as expected, cross check the following:
+- Source data of problematic result
+- Related Deduplication records
+- Match configuration
+
+Make sure to consider all configurations such as match order, enrichments, normalization, precision, exceptions, custom match conditions, and merge preferences.
+
+See an overview of match concepts at [Define matching rules for data unification](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/data-unification-match-tables).
+
+### Merge
+To verify if merge is behaving as expected, cross check the following:
+- Source data of problematic result
+- Related Deduplication records
+- Related ConflationMatchPairs records
+- Merge configuration
+
+Make sure to consider all configurations such as excluded fields, clusters, merge preferences, grouped fields, and custom ID generation.
+
+See an overview of merge behavior at [Unify customer columns for data unification](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/data-unification-merge-tables), and examples at [Example](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/data-unification-merge-tables).
 
 ## Understanding output tables
-
 ### Deduplication tables
-The Deduplication tables are the source records deduplicated by the configured deduplication rules, otherwise by the columns involved in matching conditions.
+The Deduplication tables are the source records deduplicated by the configured deduplication rules, otherwise by the columns involved in matching rules.
 
 |Column    |Type  |Description  |
 |----------|------|-------------|
-|||  |
-
-## ***---- TODO ----***
+|PrimaryKey|String|The configured primary key for the table.|
+|PrimaryKey_Alternate|String|Concatenated list of alternate primary keys identified.|
+|DeduplicationGroup ... DeduplicationGroup_N|String|The identifier for the group of similar records based on  a deduplication rule. It's used for system processing purposes. If there are no manual deduplication rules specified and system defined deduplication rules apply, you may not find this field in the deduplication output table.|
+|Rule ... Rule_N|String|Which deduplication rules got applied by the matching algorithm.|
+|Score ... Score_N|Double|The score returned by the matching algorithm for a rule.|
+|Deduplication_WinnerId|String|The winning primary key for the deduplication group.|
+|Other mapped fields|Various||
 
 ### ConflationMatchPairs table
 The ConflationMatchPairs table is the set of matched source records.
@@ -125,7 +151,10 @@ The ConflationMatchPairs table is the set of matched source records.
 |Column    |Type  |Description  |
 |----------|------|-------------|
 |TrueObjectId|String| The temporary identifier for matched records |
-## ***---- TODO ----***
+|PrimaryKey ... PrimaryKey_N|String||
+|PrimaryKey_Alternate ... PrimaryKey_Alternate_N|String||
+|ConflationMatchPairs_ModifiedOn|Date & time||
+|Other mapped fields|Various||
 
 ### Customer table
 The Customer table is the final set of customer profiles.
@@ -133,34 +162,6 @@ The Customer table is the final set of customer profiles.
 |Column    |Type  |Description  |
 |----------|------|-------------|
 |CustomerId|String| The unique guid identifier of the profile |
-## ***---- TODO ----***
-
-
-# RANDOM STUFF 
-Go to **Data** > **Tables** to verify the output tables.
-
-The unified customer profile table, called *Customer*, displays in the **Profiles** section. The first successful unification run creates the unified *Customer* table. All subsequent runs expand that table.
-
-Deduplication and conflation tables are created and display in the **System** section. A deduplicated table for each of the source tables is created with the name **Deduplication_DataSource_Table**. The **ConflationMatchPairs** table contains information about cross-table matches.
-
-A deduplication output table contains the following information:
-- IDs / Keys
-  - Primary key and Alternate ID fields. Alternate ID field consists of all the alternate IDs identified for a record.
-  - Deduplication_GroupId field shows the group or cluster identified within a table that groups all the similar records based on the specified deduplication fields. It's used for system processing purposes. If there are no manual deduplication rules specified and system defined deduplication rules apply, you may not find this field in the deduplication output table.
-  - Deduplication_WinnerId: This field contains the winner ID from the identified groups or clusters. If the Deduplication_WinnerId is same as the Primary key value for a record, it means that the record is the winner record.
-- Fields used to define the deduplication rules.
-- Rule and Score fields to denote which of the deduplication rules got applied and the score returned by the matching algorithm.
-
-
-## Common problems
-### Customer profile is missing
-### Customer profile is missing data
-
-## Concepts
-### Normalization
-### Fuzzy matching
-### High frequency values
-### Handling 1:N matches
-
-
-### Handling N:1 matches
+|PrimaryKey ... PrimaryKey_N|String||
+|PrimaryKey_Alternate ... PrimaryKey_Alternate_N|String||
+|Unified fields|Various||
