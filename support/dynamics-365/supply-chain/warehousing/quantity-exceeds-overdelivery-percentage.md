@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: mirzaab
 ms.search.validFrom: 2021-04-21
 ms.dyn365.ops.version: 10.0.18
+ms.custom: sap:Warehouse management
 ---
 
 # You can't confirm a shipment because the quantity exceeds the overdelivery percentage
