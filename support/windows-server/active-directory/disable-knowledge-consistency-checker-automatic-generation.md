@@ -18,13 +18,13 @@ _Original KB number:_ &nbsp; 242780
 
 ## Summary
 
-The Knowledge Consistency Checker (KCC) is a component that automatically generates and maintains the intra-site and inter-site replication topology. For more information about the role and function of KCC, see [Active Directory Replication Concepts: KCC](/windows-server/identity/ad-ds/get-started/replication/active-directory-replication-concepts#BKMK_2).
+Knowledge Consistency Checker (KCC) is a component that automatically generates and maintains the intra-site and inter-site replication topology. For more information about the role and function of KCC, see [Active Directory Replication Concepts: KCC](/windows-server/identity/ad-ds/get-started/replication/active-directory-replication-concepts#BKMK_2).
 
 You can disable the KCC's ability to generate either the intra-site topology management or the inter-site topology management, or both. 
 
 ## More information
 
-The KCC runs at regular intervals to adjust the replication topology information. In some situations, you might want to tailor the replication topology by manually creating replication connections. In that case you have to turn off the corresponding KCC functions to prevent KCC from overwriting your manual changes. The control settings for KCC are part of the AD DS site configuration, in the **options** attribute of the site's **NTDS Settings** object. The following table lists the relevant values for **options**:
+KCC runs at regular intervals to adjust the replication topology information. In some situations, you might want to tailor the replication topology by manually creating replication connections. In that case, you have to turn off the corresponding KCC functions to prevent KCC from overwriting your manual changes. The control settings for KCC are part of the Active Directory Domain Services (AD DS) site configuration. The settings are in the **options** attribute of the site's **NTDS Settings** object. The following table lists the relevant values for **options**.
 
 | Setting | Binary value | Decimal value | Description |
 | --- | --- | --- | --- |
@@ -40,14 +40,14 @@ For a full list of the flags and their bit values, see [6.1.1.2.2.1.1 NTDS Site 
 > [!IMPORTANT]  
 > If you disable one or more of the KCC functions, you have to find alternative methods to perform the following tasks:
 >
-> - Monitor the network topology for changes that affect the topology information that's recorded in Active Directory Domain Services (AD DS). Such changes include adding or removing sites or domain controllers. If such changes occur, update the AD DS topology information.
-> - Monitor the replication status of existing connections between domain controllers to detect replication failures. If a connection is not working, after a threshold is reached, build temporary connections to other replication partners (if available) to ensure that replication isn't blocked.
+> - Monitor the network topology for changes that affect the topology information that's recorded in AD DS. Such changes include adding or removing sites or domain controllers. If such changes occur, update the AD DS topology information.
+> - Monitor the replication status of existing connections between domain controllers to detect replication failures. If a connection is not working, and a threshold is reached, build temporary connections to other replication partners (if available) to make sure that replication isn't blocked.
 
 To disable or re-enable one or more of the KCC functions, follow these steps:
 
 1. Open Active Directory Sites and Services (*dssite.msc*, also available on the **Tools** menu in Server Manager).
 
-1. Expand **Sites**, and then expand the site you want to modify.
+1. Expand **Sites**, and then expand the site that you want to modify.
 
 1. In the right-hand pane, right-click **NTDS Site Settings**, and then select **Properties**.
 
@@ -62,17 +62,17 @@ To disable or re-enable one or more of the KCC functions, follow these steps:
 
    The **Attributes** list displays the new value of **options** in both text and binary format.
 
-To quickly check the KCC configuration from the command line, open a Command Prompt window and then run the following command:
+To quickly check the KCC configuration from the command line, open a Command Prompt window, and then run the following command:
 
 ```console
 repadmin /showrepl <DomainControllerName> | find /i "site options"
 ```
 
 > [!NOTE]  
-> In this command, \<*DomainControllerName*> represents name of the domain controller to query.
+> In this command, \<*DomainControllerName*> represents name of the domain controller that you want to query.
 
-For more information about using `repadmin /showrepl`, see [Repadmin /showrepl](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc742066(v=ws.11)).
+For more information about how to use `repadmin /showrepl`, see [Repadmin /showrepl](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc742066(v=ws.11)).
 
 ## Collecting data for Microsoft Support
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
+If you need assistance from Microsoft support, we recommend that you collect the information by following the steps that are mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
