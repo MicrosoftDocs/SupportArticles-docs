@@ -2,7 +2,7 @@
 title: Cumulative update 10 for SQL Server 2016 SP2 (KB4524334)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 SP2 cumulative update 10 (KB4524334).
 ms.date: 10/26/2023
-ms.custom: KB4524334
+ms.custom: evergreen, KB4524334
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise

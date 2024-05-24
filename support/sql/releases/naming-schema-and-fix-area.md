@@ -2,9 +2,9 @@
 title: Naming schema and Fix area
 description: This article describes naming schema and fix area for SQL Server software update packages.
 ms.date: 09/03/2020
+ms.topic: conceptual
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: Arvindk
-ms.topic: article
 ---
 # Naming schema and Fix area descriptions for SQL Server software update packages
 

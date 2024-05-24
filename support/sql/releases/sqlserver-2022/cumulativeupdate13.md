@@ -2,7 +2,7 @@
 title: Cumulative update 13 for SQL Server 2022 (KB5036432)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 13 (KB5036432).
 ms.date: 05/23/2024
-ms.custom: KB5036432
+ms.custom: evergreen, KB5036432
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
