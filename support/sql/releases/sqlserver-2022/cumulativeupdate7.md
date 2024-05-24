@@ -2,7 +2,7 @@
 title: Cumulative update 7 for SQL Server 2022 (KB5028743)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 7 (KB5028743).
 ms.date: 08/10/2023
-ms.custom: KB5028743
+ms.custom: evergreen, KB5028743
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
