@@ -214,9 +214,12 @@
       href: troubleshoot-linux-rhui-certificate-issues.md
     - name: Red Hat RHUI connectivity issues
       href: linux-rhui-connectivity-issues.md
-    - name: Yum and dnf common Issues
+    - name: Yum and dnf common issues
       href: yum-dnf-common-issues.md 
-
+  - name: Ubuntu
+    items:
+    - name: APT common issues
+      href: apt-common-issues-in-ubuntu.md
 - name: Serial Console
   items:
   - name: Overview
