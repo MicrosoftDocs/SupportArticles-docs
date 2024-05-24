@@ -9,7 +9,7 @@ localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
-# How to prevent the Knowledge Consistency Checker from automatically creating replication topology
+# Prevent the Knowledge Consistency Checker from creating replication topology
 
 This article describes how to disable the Knowledge Consistency Checker to prevent it from automatically creating replication topology.
 
