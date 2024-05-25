@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD Replication error 8240 There is no such object on the server
 description: Describes symptoms, cause, and resolution for AD operations that fail with Win32 error 8240 (There is no such object on the server).
-ms.date: 5/242/2024
+ms.date: 5/24/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -11,42 +11,45 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 ---
 # Troubleshooting AD Replication error 8240: There is no such object on the server
 
-This article describes the symptoms, cause, and resolution for AD operations that fail with Win32 error 8240: "There is no such object on the server."
+This article describes the symptoms, cause, and resolution for Active Directory Domain Services (AD DS) operations that fail and generate Win32 error 8240: "There is no such object on the server."
 
-> [!NOTE]
+> [!NOTE]  
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/).
 
-_Applies to:_ &nbsp; Supported versions of Windows Server  
+_Applies to:_ &nbsp; All supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2680976
 
 ## Symptoms
 
+This issue can generate different symptoms under different conditions. This section describes the primary symptoms, and how you might encounter them.
+
 ### Symptom 1
 
-Output of the `Repadmin /ShowReps` command:
+When you run the `Repadmin /ShowReps` command at a Windows command prompt, you see output that resembles the following:
 
-> SiteName\\DCName via RPC  
-objectGuid: \<GUID>  
-Last attempt @ \<Time> failed, result 8240:  
+```output
+<SiteName>\<DCName>
+objectGuid: <GUID>  
+Last attempt @ <Time> failed, result 8240:  
 There is no such object on the server.  
 Last success @ (never).  
+```
 
 ### Symptom 2
 
-When you try to force replication in the Active Directory Sites and Services console (dssite.msc) by using the **Replicate now** option, you receive the following error message:
+You use the **Replicate now** command in Active Directory Sites and Services (*dssite.msc*) to force a domain controller to replicate across a selected connection. You see a message that resembles the following:
 
-> The following error occurred during the attempt to synchronize naming context \<Naming Context> from Domain Controller \<Source-DC-Name> to Domain Controller \<Destination-DC-Name>:  
-There is no such object on the server. This operation will not continue.  
+> The following error occurred during the attempt to synchronize naming context \<*Naming-Context*> from Domain Controller \<*Source-Domain-Controller*> to Domain Controller \<*Destination-Domain-Controller*>:  <br/>There is no such object on the server. This operation will not continue.  
 
 ### Symptom 3
 
 When you try to remove Active Directory from a domain controller, you receive the following error message in the Active Directory installation wizard:
 
-> Active Directory could not transfer the remaining data in directory partition \<Naming-Contentxt> to domain controller \<Domain-Controller>."There is no such object on the server."  
+> Active Directory could not transfer the remaining data in directory partition \<Naming-Context> to domain controller \<Domain-Controller>. "There is no such object on the server."  
 
 ### Symptom 4
 
-You receive NTDS General event 1126 in Directory Service on Domain Controller with error 8240:
+You receive NTDS General event ID 1126 in the Directory Service event log on the Domain Controller. The event data lists error 8240:
 
 > Event Type: Error  
 Event Source: NTDS General  
@@ -67,7 +70,7 @@ Internal ID:
 
 ## Cause
 
-Error 8240 (0x2030) means ERROR_DS_NO_SUCH_OBJECT. This indicates that the specific object couldn't be found in directory. This error may be encountered in the following two situations.
+Error 8240 (0x2030 or ERROR_DS_NO_SUCH_OBJECT) indicates that the specific object couldn't be found in AD DS. Two situations can generate this error.
 
 ### Situation 1: During AD replication
 
@@ -124,29 +127,25 @@ To troubleshoot this issue, follow these steps:
      > [!NOTE]
      > You must be careful in a large environment that contains many domain controllers, because the propagation of those inconsistent objects could cause more and more domain controllers to report 8240 errors until the propagation is complete.
    - Another option is to forcedly remove Active Directory from the domain controller that contains the inconsistent objects. To do this, follow these steps:
-      1. Forcedly remove Active Directory: Active Directory Installation Wizard (Dcpromo.exe) /forceremoval.
+      1. Forcedly remove Active Directory: Active Directory Installation Wizard (`Dcpromo.exe /forceremoval`).
       1. Clean up metadata for the domain controller  
-            A convenient method to clean up the domain controller's metadata is using the Active Directory Users and Computers snap-in. For more information, see:
-            
-            - [Step-By-Step: Manually Removing A Domain Controller Server](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-manually-removing-a-domain-controller-server/ba-p/280564)
-            
-      - [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)
-      
-      1. Repromote the domain controller by using Dcpromo.exe.
-            
+            A convenient method to clean up the domain controller's metadata is using the Active Directory Users and Computers snap-in. For more information, see [Step-By-Step: Manually Removing A Domain Controller Server](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-manually-removing-a-domain-controller-server/ba-p/280564) and [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)
+
+      1. Re-promote the domain controller by using *Dcpromo.exe*.
+
 ### Situation 2: Reported 8240 in 1126 Event (NTDS)
 
 For the error that indicates that GC isn't available, we may generally follow the GC location process to check. To do this, follow these steps:
 
 1. Check whether there's any specified global catalog in the forest. If there's not, configure a GC.
 
-   > [!NOTE]
-   >  After you mark a domain controller as GC, it may take time for KCC to calculate a new replication topology, build the global catalog, and GC ready announcement. How long depends on the replication schedule, the time that is used to replicate the required read-only NCs, and the interval of KCC actvity.
-1. Check whether you can obtain a domain controller from DNS through the command *NLTest.exe /DnsGetDC:<DomainName> /GC /Force*.   
+   > [!NOTE]  
+   > After you mark a domain controller as a GC in Active Directory Sites and Services, it might take time for it to become fully available. KCC has to calculate a new replication topology, build the global catalog, and transmit a GC-ready announcement. How long depends on the replication schedule, the time that is used to replicate the required read-only NCs, and the interval of KCC activity.
+1. Check whether you can obtain a domain controller from DNS through the command `NLTest.exe /DnsGetDC:<DomainName> /GC /Force`.  
 If you can't query GC record in DNS, take the following action:
 
-   - GC announcement on existing GCs: use the PoSh command *Get-ADRootDSE -Server <DCName> | fl serverName , isGlobalCatalogReady*  or ldp.exe to connect the DC and check to check whether the value of **isGlobalCatalogReady** is set to **true**.
-1. Check whether you can connect to the GC over TCP 3268 through ldp.exe: *ldp.exe<DCName>:3268*
+   - GC announcement on existing GCs: use the PoSh command `Get-ADRootDSE -Server <DCName> | fl serverName , isGlobalCatalogReady` or *ldp.exe* to connect the DC and check to check whether the value of **isGlobalCatalogReady** is set to **true**.
+1. Check whether you can connect to the GC over TCP 3268 through *ldp.exe*: `ldp.exe<DCName>:3268`.
 
 ## Data collection
 
@@ -154,6 +153,4 @@ If you need assistance from Microsoft support, we recommend you collect the info
 
 ## More information
 
-For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[910204](https://support.microsoft.com/help/910204) Troubleshooting problems with promoting a domain controller to a global catalog server
+For more information, see [Troubleshoot problems with promoting a domain controller to a global catalog server](promoting-dc-to-global-catalog-server-issues.md).
