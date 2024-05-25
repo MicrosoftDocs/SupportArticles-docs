@@ -13,15 +13,12 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides a solution to an error that occurs when you manually replicate data between domain controllers.
 
-_Applies to:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 288167
-
-> [!NOTE]
-> This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
 
 ## Symptoms
 
-When you use the Active Directory Sites and Services snap-in to manually replicate data between Windows 2000 domain controllers, you may receive one of the following error messages:
+When you use Repadmin.exe or the Active Directory Sites and Services snap-in to manually replicate data between domain controllers, you may receive one of the following error messages:
 
 > The Target Principal Name is incorrect
 
@@ -51,36 +48,32 @@ The session setup from the computer 1 failed to authenticate. The name of the ac
 
 ## Resolution
 
-To resolve this issue, first determine which domain controller is the current primary domain controller (PDC) Emulator operations master role holder. To do this, use either of the following methods:
+To resolve this issue, first determine which domain controller is the current primary domain controller (PDC) Emulator operations master role holder. To do this, run the following command from Elevated command prompt:
 
-- Install the Netdom.exe utility from Windows 2000 Support Tools, and then run the following command:
+  ```console
+  netdom query fsmo
+  ```
+  
+On domain controllers that are experiencing this issue, stop the Kerberos Key Distribution Center service (KDC):
 
-    ```console
-    netdom query fsmo
-    ```
+1. From Elevated command prompt, run **net stop KDC** 
 
-- Start the Active Directory Users and Computers snap-in, right-click the domain, and then click **Operations Masters**. Click the **PDC** tab; the current role holder is displayed in the **Operations Master** window. On this tab, you can change the operations master role to the current computer in the second window (if this computer is not the current holder).
+Or from the Services Snap-in:
 
-- Use the Ntdsutil.exe utility (that is included in Windows 2000), and the Resource Kit command-line utility. However, these interfaces are recommended for more advanced users. For additional information, see [How to find servers that hold flexible single master operations roles](find-servers-holding-fsmo-role.md).
+1. By running **Services.msc** and on the Serices Snap-in, Right-click on the **Kerberos Key Distribution Center** (**KDC) service and** click on **Stop**.
+Purge the System Account Kerberos tickets by running **klist -li 0x3e7 purge** from the elevated command prompt.
 
-On domain controllers that are experiencing this issue, disable the Kerberos Key Distribution Center service (KDC):
-
-1. Click **Start**, point to **Programs**, click **Administrative Tools**, and then click **Services**.
-2. Double-click **KDC**, set the startup type to **Disabled**, and then restart the computer.
-
-After the computer restarts, use the Netdom utility to reset the secure channels between these domain controllers and the PDC Emulator operations master role holder. To do so, run the following command from the domain controllers other than the PDC Emulator operations master role holder:
+Use the Netdom utility to reset the secure channels between these domain controllers and the PDC Emulator operations master role holder. To do so, run the following command from the effected domain controllers:
 
 ```console
-netdom resetpwd /server: server_name /userd: domain_name \administrator /passwordd: administrator_password
+netdom resetpwd /server:server_name /userd:domain_name\administrator /passwordd:administrator_password
 ```
 
 Where **server_name** is the name of the server that is the PDC Emulator operations master role holder.
 
-After you reset the secure channel, restart the domain controllers. Even if you attempt to reset the secure channel using the Netdom utility, and the command does not complete successfully, proceed with the restart process.
+After you reset the secure channel, start the KDC service from the Services Snap-in or using the command **net start KDC**. 
 
-If only the PDC Emulator operations master role holder is running, the KDC forces the other domain controllers to resynchronize with this computer, instead of issuing themselves a new Kerberos ticket.
-
-After the computers have finished restarting, start the Services program, restart the KDC service, and then attempt replication again.
+Attempt replication again.
 
 ## More information
 
