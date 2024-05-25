@@ -75,4 +75,4 @@ For more information about how to use `repadmin /showrepl`, see [Repadmin /showr
 
 ## Collecting data for Microsoft Support
 
-If you need assistance from Microsoft support, we recommend that you collect the information by following the steps that are mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
+If you need assistance from Microsoft Support, we recommend that you collect the information by following the steps that are mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
