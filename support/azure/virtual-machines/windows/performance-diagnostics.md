@@ -203,6 +203,8 @@ To view these files:
     - All the insights and related information about the run.
     - An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip**) on Windows and a tar file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz**) on Linux that contains log files.
     - An HTML report.
+
+1. To download a report, select **Blob containers** > **azdiagextnresults** > <report name> > **Download**.
  
 ### Change storage accounts
 
@@ -231,20 +233,11 @@ To uninstall Performance Diagnostics, select the **Uninstall** button on the too
 
 ### How do I share this data with Microsoft Customer Support?
 
-When you open a support ticket with Microsoft, it is important to share the Performance Diagnostics report from an on-demand Performance Diagnostics run. The Microsoft CSS contact will provide you with the option to upload the on-demand Performance Diagnostics report to a workspace. There are two ways to download the on-demand Performance Diagnostics report to share with Microsoft CSS:
+When you open a support ticket with Microsoft, it's important to share the Performance Diagnostics report from an on-demand Performance Diagnostics run. The Microsoft CSS contact will provide you with the option to upload the on-demand Performance Diagnostics report to a workspace. There are two ways to download the on-demand Performance Diagnostics report to share with Microsoft CSS:
 
 **Option 1:** Download the report from Performance Diagnostics blade, as described in [View Performance Diagnostics reports](#view-performance-diagnostics-reports).
 
-**Option 2:** Download the report from the storage account.
-
-1. In the Azure portal, browse to the storage account in which the diagnostics data is stored.
-1. Select Containers under the Data Storage section.
-1. Select the azdiagextnresults container.
-1. Select the required Performance Diagnostics output compressed file and download it.
-
-**Option 3:** Download the report from the storage account
-
-You can also locate the Performance Diagnostics report compressed file by using steps 1–4 in Option 2. Select to download the file, and then share it through email or ask the support engineer for instructions to upload the file.  
+**Option 2:** Download the report from the storage account, as described in [View and manage storage account and stored data](#view-and-manage-storage-account-and-stored-data).
 
 ### How do I capture diagnostics data at the correct time?
 
