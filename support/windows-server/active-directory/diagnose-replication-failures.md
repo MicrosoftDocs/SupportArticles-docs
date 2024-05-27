@@ -1,7 +1,7 @@
 ---
 title: Diagnose AD replication failures
 description: Describes how to diagnose Active Directory replication failures.
-ms.date: 12/26/2023
+ms.date: 05/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes how to diagnose Active Directory replication failures.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; All supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2498185
 
 ## Symptoms
@@ -48,7 +48,16 @@ Use either of the following methods to view replications errors:
 
 ### Use repadmin to identify forest-wide Active Directory replication errors
 
-You can create a Microsoft Excel spreadsheet for domain controllers by using the `repadmin/showrepl` command to view replication errors. To do it, follow these steps:
+You can create a Microsoft Excel spreadsheet for domain controllers by using the `repadmin/showrepl` command to view replication errors.
+
+> [!NOTE]
+> A more efficient and convenient way to produce and analyze the report, especially if you want to avoid using Excel, is to send the output to an interactive table in a separate window using the PowerShell command:
+>
+> ```PowerShell
+> repadmin /showrepl * /csv | convertfrom-csv | out-gridview
+> ```
+
+To analyze the output using Excel, follow these steps:
 
 1. Open a Command Prompt as an administrator:
 
