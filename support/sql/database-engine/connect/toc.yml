@@ -1,6 +1,8 @@
 items:
 - name: Common Connection Issues
   href: resolve-connectivity-errors-overview.md
+- name: Collect data to troubleshoot SQL Server connectivity issues
+  href: collect-data-to-troubleshoot-sql-connectivity-issues.md
 - name: Troubleshoot SSL errors during the login process
   href: troubleshoot-ssl-errors-login-process.md
 - name: Cannot generate SSPI context
