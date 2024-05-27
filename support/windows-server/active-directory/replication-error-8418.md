@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting replication error 8418
 description: Helps troubleshoot Active Directory replication error 8418.
-ms.date: 12/26/2023
+ms.date: 05/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -35,9 +35,9 @@ Replication of any Active Directory data between domain controllers in a forest 
 
     Possible formats for that error include:  
 
- |Decimal|Hex|Symbolic|Error String|
- |---|---|---|---|
- |8418|0x20e2|ERROR_DS_DRA_SCHEMA_MISMATCH|The replication operation failed because of a schema mismatch between the servers involved.|
+    |Decimal|Hex|Symbolic|Error String|
+    |---|---|---|---|
+    |8418|0x20e2|ERROR_DS_DRA_SCHEMA_MISMATCH|The replication operation failed because of a schema mismatch between the servers involved.|
 
 2. DCPromo Promotion
 
