@@ -64,6 +64,6 @@ Your container image doesn't have NVIDIA drivers or libraries installed. GPU-ena
  
 ### Solution 4: Use the NVIDIA GPU Cloud (NGC) repository
 
-Check your container image and make sure that it has the NVIDIA drivers and libraries installed. You can use the NVIDIA GPU Cloud (NGC) repository to find and pull pre-built GPU-accelerated images for various frameworks and applications.
+Check your container image and make sure that it has the NVIDIA drivers and libraries installed. You can use the NVIDIA GPU Cloud (NGC) repository to find and pull prebuilt GPU-accelerated images for various frameworks and applications.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
