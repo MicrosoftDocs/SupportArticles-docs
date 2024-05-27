@@ -6,7 +6,7 @@ ms.date: 05/27/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
-## Azure Windows VM deployment top issues
+# Azure Windows VM deployment top issues
 
 [!INCLUDE [support-disclaimer](../../../includes/azure/virtual-machines-windows-troubleshoot-deploy-vm-top.md)]
 

@@ -6,7 +6,7 @@ ms.date: 05/27/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
-## Allocation failures when deploying custom/gallery/marketplace images
+# Allocation failures when deploying custom/gallery/marketplace images
 
 An allocation error arises in situations when the new VM request is pinned to a cluster that either cannot support the VM size being requested, or does not have available free space to accommodate the request.
 
