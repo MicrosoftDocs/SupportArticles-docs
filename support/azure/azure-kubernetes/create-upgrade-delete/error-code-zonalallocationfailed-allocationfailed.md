@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
 description: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error when you create, deploy, or update a Kubernetes cluster.
-ms.date: 05/24/2024
+ms.date: 05/27/2024
 author: axelgMS
 ms.author: axelg
 editor: v-jsitser
