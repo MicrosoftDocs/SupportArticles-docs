@@ -407,8 +407,18 @@
 
 - name: Cannot create a VM
   items:
-  - name: Troubleshoot deploying Windows virtual machine
-    href: troubleshoot-deployment-new-vm-windows.md
+  - name: Troubleshoot deployment issues when creating a new Windows VM in Azure
+    item:
+    - name: Troubleshoot Windows VM deployment issues
+      href: windows-vm-deployment-issues.md
+    - name: Custom/gallery/marketplace image allocation failure
+      href: custom-gallery-marketplace-image-allocation-failure.md
+    - name: Custom image provisioning errors
+      href: custom-image-provisioning-errors.md
+    - name: VM deployment top issues
+      href: windows-vm-deployment-top-issues.md
+    - name: VM deployment FAQs
+      href: windows-vm-deployment-faqs.md
   - name: Support for Availability sets
     href: virtual-machines-availability-set-supportability.md
   - name: Troubleshoot virtual machine deployment due to detached disks
