@@ -3,7 +3,7 @@ title: Fix Conditional Access-related issues for Teams Android devices
 description: Discusses how to exclude devices from Conditional Access policies or Intune device compliance policies that can prevent users from signing in to or using the Teams app on Android devices.
 ms.reviewer: taherr
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 05/26/2024
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -56,8 +56,6 @@ Identify the specific cause of the issue by checking multiple details about the 
 ### Automated checks
 
 The automated option is to run the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
-
-This test verifies that the user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Teams devices:
 
 > [!NOTE]
 >
