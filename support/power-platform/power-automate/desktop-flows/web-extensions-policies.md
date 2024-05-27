@@ -2,7 +2,7 @@
 title: Troubleshoot issues with Power Automate browser extensions
 description: Provides a resolution for the Failed to assume control of browser (Internal error or communication failure) error or Get Extension message.
 ms.reviewer: nimoutzo, gtrantzas
-ms.date: 11/30/2023
+ms.date: 05/27/2024
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # Troubleshoot issues with Power Automate browser extensions
@@ -174,7 +174,7 @@ This article provides a resolution to the issues related to Power Automate brows
 
         1. Check for **NativeMessagingUserLevelHosts** policies.
 
-           If **NativeMessagingUserLevelHosts** is enabled, disable it or ensure that `com.robin.messagehost` for legacy and `com.microsoft.pad.messagehost` for default browser extension are added to your **NativeMessagingAllowlist** policy in HKLM (Local Machine level).
+           If **NativeMessagingUserLevelHosts** is disabled, enable it or ensure that 'com.robin.messagehost' for legacy and 'com.microsoft.pad.messagehost' for default browser extension are added to your **NativeMessagingAllowlist** policy in HKLM (Local Machine level).
 
 1. Check if the message host points to the right location:
 
