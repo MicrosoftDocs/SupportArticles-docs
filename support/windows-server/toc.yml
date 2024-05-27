@@ -199,8 +199,6 @@ items:
       href: ./active-directory/replication-failures-delete-active-directory-objects.md
     - name: Changes aren't replicated to destination domain controllers
       href: ./active-directory/changes-arent-replicated-controllers.md
-    - name: DCDiag VerifyReferences test fails
-      href: ./active-directory/dcdiag-verifyreferences-test-fails.md
     - name: Diagnose replication failures
       href: ./active-directory/diagnose-replication-failures.md
     - name: Disable KCC from automatically creating replication topology
@@ -213,8 +211,6 @@ items:
       href: ./active-directory/restrict-ad-rpc-traffic-to-specific-port.md
     - name: lingering objects in a Windows Server Active Directory forest
       href: ./active-directory/information-lingering-objects.md
-    - name: Lingering objects still remain
-      href: ./active-directory/lingering-objects-remain.md
     - name: Manually replicating data between domain controllers fails
       href: ./active-directory/target-principal-name-is-incorrect-when-replicating-data.md
     - name: Modify the default intra-site DC replication interval
