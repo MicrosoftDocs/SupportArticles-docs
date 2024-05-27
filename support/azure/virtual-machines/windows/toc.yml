@@ -408,7 +408,7 @@
 - name: Cannot create a VM
   items:
   - name: Troubleshoot deployment issues when creating a new Windows VM in Azure
-    item:
+    items:
     - name: Troubleshoot Windows VM deployment issues
       href: windows-vm-deployment-issues.md
     - name: Custom/gallery/marketplace image allocation failure
