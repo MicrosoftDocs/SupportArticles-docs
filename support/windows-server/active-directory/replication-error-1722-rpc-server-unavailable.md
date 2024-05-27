@@ -294,7 +294,7 @@ There are a few tools to use to help identify DNS errors:
 
 The endpoint mapper (listening on port 135) tells the client which randomly assigned port a service (FRS, AD replication, MAPI, and so on) is listening on.
 
-Refer to the list of required ports in: [How to configure a firewall for Active Directory domains and trusts](https://github.com/ItaySar/SupportArticles-docs-pr/blob/docs-editor/replication-error-1722-rpc-ser-1715847855/troubleshoot/windows-server/active-directory/config-firewall-for-ad-domains-and-trusts).
+Refer to the list of required ports in [How to configure a firewall for Active Directory domains and trusts](config-firewall-for-ad-domains-and-trusts.md).
 
 Portqry can be used to identify if a port is blocked from a Dc when targeting another DC. It can be downloaded at [PortQry Command Line Port Scanner Version 2.0](https://www.microsoft.com/download/details.aspx?id=17148).
 
