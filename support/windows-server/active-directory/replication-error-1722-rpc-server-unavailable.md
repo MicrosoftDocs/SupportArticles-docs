@@ -1,19 +1,19 @@
 ---
 title: Troubleshoot replication error 1722
 description: Fixes error 1722 of Active Directory replication in Windows Server 2008 R2 and earlier versions.
-ms.date: 04/10/2024
+ms.date: 05/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, itaysarig
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Active Directory replication error 1722: The RPC server is unavailable
 
 This article helps fix the error 1722 of Active Directory replication.
 
-_Applies to:_ &nbsp; Windows Server (All supported versions)  
+_Applies to:_ &nbsp; All supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2102154
 
 ## Symptoms
