@@ -112,7 +112,7 @@ This error might be associated with one of the following issues:
     * **RHEL/CentOS/Oracle 7.x/8.x Linux VMs with UEFI (Gen2)**
 
         ```bash
-        grub2-install /dev/sdX
+        yum reinstall grub2-efi-x64 shim-x64
         grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg
         sed -i 's/hd2/hd0/g' /boot/efi/EFI/redhat/grub.cfg
         ```
