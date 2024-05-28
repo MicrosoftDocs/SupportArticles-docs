@@ -22,7 +22,7 @@ When a domain controller writes a change to its local copy of the Active Directo
 
 To change the delay between the change to the Active Directory and first replication partner notification, open the **Configuration** partition in the ADSIEdit tool and go to **CN=Partitions,CN=Configuration,DC=\<domain\>**. In the container, right-click the crossRef object of the directory partition you want to modify the replication settings.
 
-**msDS-Replication-Notify-First-DSA-Delay** - The attribute controls the delay in time between changes to the Directory Service (DS), and notification of the first replica partner for a naming context (NC). 15 seconds is the interval if the attribute is not set.
+**msDS-Replication-Notify-First-DSA-Delay** - The attribute controls the delay in time between changes to the Directory Services (DS), and notification of the first replica partner for a naming context (NC). 15 seconds is the interval if the attribute is not set.
 
 **msDS-Replication-Notify-Subsequent-DSA-Delay** - The attribute specifies the delay between notification of each subsequent replica partner for an NC. 3 seconds is the interval if the attribute is not set.  
   
