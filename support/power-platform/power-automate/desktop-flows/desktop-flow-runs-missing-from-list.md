@@ -32,7 +32,3 @@ Follow these steps to verify and resolve the issue:
 3. If the desktop flow is still present, check if some filters are active in the **Monitor** > **Desktop flow runs** page, indicated by the presence of funnel icons in the column headers.
 
     :::image type="content" source="media/desktop-flow-runs-missing-from-list/check-filters-on-desktop-flows.png" alt-text="Check if some filters are configured." lightbox="media/desktop-flow-runs-missing-from-list/check-filters-on-desktop-flows.png":::
-
-## Resolution
-
-To solve the issue, you can clear the filters to show the hidden desktop flow runs again. To do that, select the column headers, and then select **Filter by** > **Clear filter** > **Apply**.
