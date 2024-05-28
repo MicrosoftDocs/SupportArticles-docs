@@ -2,22 +2,25 @@
 title: Desktop flow runs are not shown in the list
 description: Provides a resolution for the issue that you can't see some desktop flow runs when viewing the list of all desktop flow runs in Power Automate.
 ms.reviewer: pefelesk
-ms.date: 09/21/2022
+ms.date: 05/30/2024
 ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Some desktop flow runs are missing from the list
 
-This article provides a resolution to an issue where some desktop flows aren't displayed in the list of all desktop flow runs in Microsoft Power Automate.
+This article helps you troubleshoot instances when some desktop flows aren't displayed in the list of all desktop flow runs in Microsoft Power Automate.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4598418
 
 ## Symptoms
 
-After you select **Monitor** > **Desktop flow runs** in the left navigation pane in Microsoft Power Automate, you can't find your desktop flow runs in the list.
+When you select **Monitor** > **Desktop flow runs** in the left navigation pane in Microsoft Power Automate, you can't find your desktop flow runs in the list or the list is empty.
 
-## Verifying issue
+## Cause
+This scenario might occur if you have selected the wrong environment, or if you have set up filters that result in the desktop flow getting filtered out.
 
+## Resolution
+Follow these steps to verify and resolve the issue:
 1. Check that you are in the same environment as the flows and desktop flows you want to monitor.
 
     :::image type="content" source="media/desktop-flow-runs-missing-from-list/check-environment-for-flows.png" alt-text="Check that you're in the same environment as the flows and desktop flows you want to monitor." lightbox="media/desktop-flow-runs-missing-from-list/check-environment-for-flows.png":::
