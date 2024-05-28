@@ -4,7 +4,7 @@ description: Learn how to resolve a scenario in which a Windows activation water
 author: cwhitley-MSFT
 ms.author: cwhitley
 ms.reviewer: scotro, scottmca, kimberj, jdickson, shache, v-naqviadil, v-leedennis, v-weizhu
-ms.date: 05/22/2024
+ms.date: 05/28/2024
 ms.service: virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ms.topic: troubleshooting-problem-resolution
