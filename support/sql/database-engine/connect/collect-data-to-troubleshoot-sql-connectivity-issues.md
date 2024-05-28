@@ -1,6 +1,6 @@
 ---
 title: Data collection methods for SQL connectivity issues
-description: This article provides possible list of questions based on several components that you can use to effectively identify the type of SQL Server connectivity issues and find right resolution.
+description: This article provides possible list of questions based on several components that you can use to effectively identify the type of SQL Server connectivity issues and find the right resolution.
 ms.date: 05/27/2024
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -15,7 +15,7 @@ This article helps you to identify the root cause of SQL Server connectivity iss
 > [!NOTE]
 > Not all questions are applicable to all issues. However, these questions can guide you as you consider how to troubleshoot connectivity issues.
 
-Using the information provided in this article, once you are able to zero-in on the exact nature of the issue, see *Overview of consistent authentication issues in SQL Server for the type of errors*.
+Using the information provided in this article, once you are able to zero-in on the exact nature of the issue, see [Overview of consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md) for the type of errors.
 
 ## Method of collecting data
 
@@ -204,6 +204,5 @@ If the user is remote to the client application, collect the following details:
 - [Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues](resolve-connectivity-errors-checklist.md)
 
 - [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
-
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
