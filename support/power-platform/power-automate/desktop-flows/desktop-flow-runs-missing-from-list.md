@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4598418
 
 ## Symptoms
 
-When you select **Monitor** > **Desktop flow runs** in the left navigation pane in Microsoft Power Automate, you can't find your desktop flow runs in the list or the list is empty.
+When you select **Monitor** > **Desktop flow runs** in the left navigation pane in [Microsoft Power Automate](/make.powerautomate.com), you can't find your desktop flow runs in the list or the list is empty.
 
 ## Cause
 This scenario might occur if you have selected the wrong environment or if you have set up filters that result in the desktop flow getting filtered out.
