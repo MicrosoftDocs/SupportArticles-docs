@@ -239,8 +239,8 @@ There are a few tools to use to help identify DNS errors:
     Hostname: DC.fabrikam.com.  
     Authoritative zone: fabrikam.com.  
     Primary DNS server: DC.fabrikam.com <IP Address>  
-    Authoritative NS:<Ip Address>  
-    Check the DNS registration for DCs entries on DNS server <DNS Server Ip address>  
+    Authoritative NS:<IP Address>  
+    Check the DNS registration for DCs entries on DNS server <DNS Server IP address>  
     The Record is correct on DNS server '<DNS Server IP address>'.  
     (You will see this line repeated several times for every entry for this DC.  Including srv records.)  
     The Record is correct on DNS server '<DNS Server IP address>'.  
@@ -309,11 +309,11 @@ If the Dynamic Port range has ports being blocked, use the following links to co
 
 Additional important links for configuration and working with firewalls and domain controllers:
 
-- [HOWTO: Configure RPC Dynamic Port Allocation to Work with Firewall](https://support.microsoft.com/help/154596)
-- [Restricting Active Directory Replication Traffic to a Specific Port](https://support.microsoft.com/help/224196)
-- [How to Configure a Firewall for Domains and Trusts](https://support.microsoft.com/help/179442)
-- [A List of the Windows Server Domain Controller Default Ports](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10))
-- [Port Requirements for the Microsoft Windows Server System](https://support.microsoft.com/help/832017)
+- [How to configure RPC dynamic port allocation to Work with firewalls](https://support.microsoft.com/help/154596)
+- [Restricting Active Directory RPC traffic to a specific port](https://support.microsoft.com/help/224196)
+- [How to configure a firewall for Active Directory domains and trusts](https://support.microsoft.com/help/179442)
+- [A list of the Windows Server domain controller default ports](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10))
+- [Port requirements for the Microsoft Windows Server system](https://support.microsoft.com/help/832017)
 
 ### Bad NIC drivers
 
@@ -363,5 +363,5 @@ If you need assistance from Microsoft support, we recommend you collect the info
 - [RPC Return Values](/windows/win32/rpc/rpc-return-values)
 - [Understanding Extended Error Information](/windows/win32/rpc/understanding-extended-error-information)
 - [Extended error information detection locations](/windows/win32/rpc/extended-error-information-detection-locations)
-- [Enabling Extended error information](/windows/win32/rpc/enabling-extended-error-information)
+- [Enabling extended error information](/windows/win32/rpc/enabling-extended-error-information)
 - [Network Connectivity](/previous-versions/windows/it-pro/windows-2000-server/cc961803(v=technet.10))
