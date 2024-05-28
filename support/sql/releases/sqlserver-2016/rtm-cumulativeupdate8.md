@@ -2,7 +2,7 @@
 title: Cumulative update 8 for SQL Server 2016 (KB4040713)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 cumulative update 8 (KB4040713).
 ms.date: 10/26/2023
-ms.custom: KB4040713
+ms.custom: evergreen, KB4040713
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise

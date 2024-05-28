@@ -2,7 +2,7 @@
 title: Cumulative update 13 for SQL Server 2016 SP2 (KB4549825)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 SP2 cumulative update 13 (KB4549825).
 ms.date: 10/26/2023
-ms.custom: KB4549825
+ms.custom: evergreen, KB4549825
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise

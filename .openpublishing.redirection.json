@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/group-policy/give-users-access-group-policy-objects.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/periodic-smbclient-event-id-30818.md",
       "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance#windows-server-2012-r2-periodically-logs-SMBClient-event-id-30818",
       "redirect_document_id": false
@@ -11123,6 +11128,16 @@
     {
       "source_path": "support/windows-server/active-directory/syntax-build-answer-files-unattended-installation-ad-ds.md",
       "redirect_url": "/windows-server/identity/ad-ds/deploy/dcpromo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/dcdiag-verifyreferences-test-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dcdiag-verifyreferences-test-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/lingering-objects-remain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/lingering-objects-remain",
       "redirect_document_id": false
     }
   ]

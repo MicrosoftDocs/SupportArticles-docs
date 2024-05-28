@@ -2,7 +2,7 @@
 title: Azure Files performance troubleshooting - creating alerts
 description: Troubleshoot performance issues with SMB Azure file shares by receiving alerts if a share is being throttled or is about to be throttled.
 ms.service: azure-file-storage
-ms.date: 06/26/2023
+ms.date: 05/21/2024
 ms.reviewer: kendownie
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
 ms.custom: sap:Alerts, Metrics and Logging
@@ -12,7 +12,7 @@ ms.custom: sap:Alerts, Metrics and Logging
 This article explains how to create and receive alerts if an Azure file share is being throttled or is about to be throttled. Requests are throttled when the I/O operations per second (IOPS), ingress, or egress limits for a file share are reached.
 
 > [!IMPORTANT]
-> For standard storage accounts with large file shares (LFS) enabled, throttling occurs at the account level. For premium files shares and standard file shares without LFS enabled, throttling occurs at the share level.
+> For standard storage accounts, throttling occurs at the storage account level. For premium file shares, throttling occurs at the share level.
 
 ## Applies to
 
@@ -32,13 +32,7 @@ This article explains how to create and receive alerts if an Azure file share is
 6. On the **Configure signal logic** blade, click the **Dimension name** drop-down and select **Response type**.
 7. Click the **Dimension values** drop-down and select the appropriate response types for your file share.
 
-    For standard file shares that don't have large file shares enabled, select the following response types (requests are throttled at the share level):
-
-    - SuccessWithThrottling
-    - SuccessWithShareIopsThrottling
-    - ClientShareIopsThrottlingError
-
-    For standard file shares that have large file shares enabled, select the following response types (requests are throttled at the storage account level):
+    For standard file shares, select the following response types (requests are throttled at the storage account level):
 
     - ClientAccountRequestThrottlingError
     - ClientAccountBandwidthThrottlingError

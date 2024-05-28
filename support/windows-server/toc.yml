@@ -199,8 +199,6 @@ items:
       href: ./active-directory/replication-failures-delete-active-directory-objects.md
     - name: Changes aren't replicated to destination domain controllers
       href: ./active-directory/changes-arent-replicated-controllers.md
-    - name: DCDiag VerifyReferences test fails
-      href: ./active-directory/dcdiag-verifyreferences-test-fails.md
     - name: Diagnose replication failures
       href: ./active-directory/diagnose-replication-failures.md
     - name: Disable KCC from automatically creating replication topology
@@ -213,8 +211,6 @@ items:
       href: ./active-directory/restrict-ad-rpc-traffic-to-specific-port.md
     - name: lingering objects in a Windows Server Active Directory forest
       href: ./active-directory/information-lingering-objects.md
-    - name: Lingering objects still remain
-      href: ./active-directory/lingering-objects-remain.md
     - name: Manually replicating data between domain controllers fails
       href: ./active-directory/target-principal-name-is-incorrect-when-replicating-data.md
     - name: Modify the default intra-site DC replication interval
@@ -1087,6 +1083,8 @@ items:
       href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
       href: ./group-policy/authz-fails-access-denied-error-application-access-check.md
+    - name: Can't apply user Group Policy settings when computer objects don't have GPO Read permissions
+      href: ./group-policy/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions.md
     - name: Error 0x80004005 when you create DSN with GPP
       href: ./group-policy/creating-dsn-with-gpp-fails.md
     - name: Event ID 1053 by using "Gpupdate /force" command
@@ -2127,6 +2125,8 @@ items:
     items:
     - name: incorrect shutdown reason code written to SEL
       href: ./performance/incorrect-shutdown-reason-code-sel.md
+    - name: 'Troubleshooting scenario: System shutdown is slow'
+      href: ./performance/troubleshooting-system-shutdown-is-slow-scenario.md
     - name: Use Userdump.exe to create a dump file
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
@@ -3261,28 +3261,24 @@ items:
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
       href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
-    - name: Deployment (DnD)
-      items:
-      - name: Gather information for deployment-related issues
-        href: ../windows-client/windows-tss/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
-    - name: Identity
-      items:
-      - name: Gather information for Active Directory replication issues
-        href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
-      - name: Gather information for Group Policy issues
-        href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
-    - name: Storage and High Availability (SHA)
-      items:
-      - name: Gather information for Hyper-V related issues
-        href: ../windows-client/windows-tss/gather-information-using-tss-hyper-v-issues.md?context=/troubleshoot/windows-server/context/context
-      - name: Gather information for SQL cluster (AG/FCI) related issues
-        href: ../windows-client/windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md?context=/troubleshoot/windows-server/context/context
-      - name: Gather information for Windows failover cluster related issues
-        href: ../windows-client/windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md?context=/troubleshoot/windows-server/context/context
-    - name: User Experience (UEX)
-      items:
-      - name: Gather information for user experience-related issues
-        href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for Active Directory replication issues
+      href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for deployment-related issues
+      href: ../windows-client/windows-tss/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for Group Policy issues
+      href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for Hyper-V related issues
+      href: ../windows-client/windows-tss/gather-information-using-tss-hyper-v-issues.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for SQL cluster (AG/FCI) related issues
+      href: ../windows-client/windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for user experience-related issues
+      href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for Windows failover cluster related issues
+      href: ../windows-client/windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for Windows Update for Business reports-related issues
+      href: ../windows-client/windows-tss/gather-information-using-tss-wufb-reports.md?context=/troubleshoot/windows-server/context/context
+    - name: Use the xray feature of TSS
+      href: ../windows-client/windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md?context=/troubleshoot/windows-server/context/context
   - name: Performance Monitoring Tools
     items:
     - name: Using Performance Monitor

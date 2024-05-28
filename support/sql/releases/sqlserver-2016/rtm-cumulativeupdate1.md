@@ -2,7 +2,7 @@
 title: Cumulative update 1 for SQL Server 2016 (KB3164674)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 cumulative update 1 (KB3164674).
 ms.date: 10/26/2023
-ms.custom: KB3164674
+ms.custom: evergreen, KB3164674
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise
