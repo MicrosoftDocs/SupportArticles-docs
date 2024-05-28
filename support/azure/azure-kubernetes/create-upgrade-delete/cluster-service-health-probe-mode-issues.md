@@ -14,7 +14,7 @@ This article describes some common issues about the using health probe mode feat
 
 ## Symptoms 
 
-When creating or updating the AKS cluster by using the Azure CLI, if you enable the health probe mode feature using the `--cluster-service-load-balancer-health-probe-mode Shared` flag, you may see the following symptoms:
+When creating or updating the AKS cluster by using the Azure CLI, if you enable the health probe mode feature using the `--cluster-service-load-balancer-health-probe-mode Shared` flag, the following issues occur:
 
 - The load balancer doesn't distribute the traffic to the nodes as expected. 
 
@@ -23,6 +23,14 @@ When creating or updating the AKS cluster by using the Azure CLI, if you enable 
 - The health-probe-proxy sidecar container crashes or doesn't start. 
 
 - The cloud-node-manager pod crashes or doesn't start.  
+
+The following operations also happen:
+
+1. RP frontend checks if the request is valid and updates the corresponding property in the LoadBalancerProfile.
+
+2. RP async calls the cloud provider config secret reconciler to update the cloud provider config secret based on the LoadBalancerProfile. 
+
+3. Overlaymgr reconciles the cloud-node-manager chart to enable the health-probe-proxy sidecar.
 
 ## Troubleshooting
 
@@ -50,13 +58,13 @@ The health probe mode feature is controlled by a toggle that can be enabled or d
 
 Contact the AKS team to check if the toggle for the health probe mode feature is on or off. If it's off, ask them to turn it on for your subscription. 
 
-## Cause 3: The Load Balancer SKU is Basic
+## Cause 3: The load balancer SKU is Basic
 
-The health probe mode feature only works with the Standard Load Balancer SKU. If you use the Basic Load Balancer SKU, the feature won't work. 
+The health probe mode feature only works with the Standard load balancer SKU. If you use the basic load balancer SKU, the feature won't work. 
 
-### Solution 3: Use the Standard Load Balancer SKU
+### Solution 3: Use the standard load balancer SKU
 
-Make sure you use the Standard Load Balancer SKU when creating or updating your cluster. You can use the `--load-balancer-sku` flag to specify the SKU. 
+Make sure you use the standard load balancer SKU when creating or updating your cluster. You can use the `--load-balancer-sku` flag to specify the SKU. 
 
 ## Cause 4: The feature isn't registered
 
@@ -76,7 +84,7 @@ Make sure you use Kubernetes v1.28.0 or a later version when creating or updatin
 
 ## Known issues 
 
-For Windows, the kube-proxy component won't start until you create the first non-HPC pod in the node. This issue will affect the health probe mode feature and cause the Load Balancer to report unhealthy nodes. This issue will be fixed in a future update.
+For Windows, the kube-proxy component won't start until you create the first non-HPC pod in the node. This issue will affect the health probe mode feature and cause the load balancer to report unhealthy nodes. It will be fixed in a future update.
 
 ## How to enable the health probe mode feature using the Azure CLI
 
@@ -89,15 +97,5 @@ To enable the health probe mode feature, run one of the following commands:
 ## Differences when using the feature in upstream Kubernetes and AKS
 
 When you use the health probe mode feature in a Kubernetes cluster, the health-probe-proxy sidecar container monitors port 10356 and forwards to port 10256 (kube-proxy healthz server port).
-
-## More information 
-
-When creating or updating the AKS cluster, if you specify the `--cluster-service-load-balancer-health-probe-mode Shared` flag, the following operations happen:
-
-1. RP frontend checks if the request is valid and updates the corresponding property in the LoadBalancerProfile.
-
-2. RP async calls the cloud provider config secret reconciler to update the cloud provider config secret based on the LoadBalancerProfile. 
-
-3. Overlaymgr reconciles the cloud-node-manager chart to enable the health-probe-proxy sidecar.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)] 
