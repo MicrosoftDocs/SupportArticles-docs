@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot ingestion errors or corrupt data
 description: Introduces common reasons of data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Dynamics 365 Customer Insights - Data.
-ms.date: 01/03/2024
+ms.date: 02/23/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
@@ -113,19 +113,23 @@ In a *manifest.json* file, the `datetime` format can be specified at the table l
 
 ## Ingestion errors or corrupt data with Power Query
 
-### Data type doesn't match the data
+### Data Time Values parsing error or parsed incorrectly
 
-The most common data type mismatch occurs when a date field isn't set to the correct date format.
+The most common data type mismatch occurs when a date field isn't set to the correct date format. This mismatch can be caused by either: the source data isn't formatted correctly OR the locale is incorrect. To fix an incorrect format, update the data at the source and reingest. To fix an incorrect locale, adjust the locale in the Power Query transformations. For example:
 
-To solve the issue, fix the data at the source and re-ingest. Or fix the transformation within Customer Insights - Data. To fix the transformation:
+The source data is formatted as "MM/DD/YYY" while the default locale used to parse the data during ingestion uses "DD/MM/YYY" causing Dec 8, 2023 to be ingested as "Aug 12, 2023".  
 
-1. Go to **Data** > **Data sources**.
-1. Next to the data source with the corrupted data, select **Edit**.
-1. Select **Next**.
-1. Select each of the queries and look for the incorrect transformations applied inside the **Applied steps**, or the `date` columns that haven't been transformed with a date format.
-1. Change the data type to correctly match the data.
-1. Select **Save**. That data source is refreshed.
+:::image type="content" source="media/PQO_Locale_Issue.jpg" alt-text="Change data type with locale in PQO":::
 
+To fix this issue, change the type of all date time fields to use the correct locale using **Change type** > **Using locale**.
+
+:::image type="content" source="media/ChangeType_In_PQO.jpg" alt-text="Date time value default parsing":::
+
+Symptoms of incorrect locale include:
+ - When the source data can't be parsed by the locale used causing an ingestion failure. For example: 29/08/2023 is parsed with MM/DD/YYYY, it fails as it can't parse month 29.
+ - When the source data is parsed successfully using an incorrect locale, but the date time values become incorrect. For example: Dec 8, 2023 is ingested as Aug 12, 2023.
+
+Learn more: [Document or project locale](/power-query/data-types#document-or-project-locale).
 ## More information
 
 - [Connect to data in Azure Data Lake Storage](/dynamics365/customer-insights/data/connect-common-data-model)
