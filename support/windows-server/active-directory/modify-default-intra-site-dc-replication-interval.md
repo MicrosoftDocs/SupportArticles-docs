@@ -16,8 +16,6 @@ This article describes how to modify the default intra-site domain controller re
 _Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 214678
 
-## More information
-
 When a domain controller writes a change to its local copy of the Active Directory, a timer is started that determines when the domain controller's replication partners should be notified of the change. By default, this interval is 15 seconds. When this interval elapses, the domain controller initiates a notification to each intra-site replication partner that it has changes that need to be propagated. Another configurable parameter determines the number of seconds to pause between notification. This parameter prevents simultaneous replies by the replication partners. By default, this interval is 3 seconds. Both of these intervals can be modified.
 
 To change the delay between the change to the Active Directory and first replication partner notification, open the **Configuration** partition in the ADSIEdit tool and go to **CN=Partitions,CN=Configuration,DC=\<domain\>**. In the container, right-click the crossRef object of the directory partition you want to modify the replication settings.
