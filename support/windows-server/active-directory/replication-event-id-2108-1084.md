@@ -184,9 +184,7 @@ To resolve this problem, follow these steps. Retry the replication operation aft
         esentutl.exe /g database_name
         ```
 
-        Finally, use the Start Windows Normally option to restart the computer, and then retry replication from the source domain controller to the affected destination domain controller. If the database fails the integrity check, the domain controller must be discontinued. You use the Active Directory Migration Tool (ADMT) to migrate objects. You can also use the Ldifde.exe and Csvde.exe tools to export objects that you will import to a new destination domain controller.
-
-        For more information about how to use the *Ldifde.exe* and *Csvde.exe* tools, see [Step-by-Step Guide to Bulk Import and Export to Active Directory](/previous-versions/windows/it-pro/windows-2000-server/bb727091(v=technet.10)).
+        Finally, use the Start Windows Normally option to restart the computer, and then retry replication from the source domain controller to the affected destination domain controller.
 
 10. If these steps do not succeed, and the replication error continues, demote the domain controller, confirm the integrity of the physical drives and the volumes that host the Ntds.dit file and the disk subsystem, and then promote the domain controller again. Use the same computer name.
 
@@ -202,11 +200,7 @@ To resolve this problem, follow these steps. Retry the replication operation aft
        > The quotation marks in this example are required to run the semantic database analysis command by using a single command line argument.
        
        If errors are reported, type `ntdsutil go fixup`, and then press <kbd>Enter</kbd>.
-       
-       > [!NOTE]
-       > The semantic database commands, such as the pre-Windows Server 2003 Service Pack 1 Ntdsutil File Repair or `Esentutl /p` commands, do not perform lossy repairs on Active Directory databases.
-       
-   
+
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
