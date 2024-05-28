@@ -43,7 +43,7 @@ This article describes the symptoms, cause, and resolution steps for issues when
             Last success @ <Date & Time>.  
     
     Source: Default-First-Site-Name\DomainController  
-    ******* 1359 CONSECUTIVE FAILURES since \<Date Time>  
+    ******* 1359 CONSECUTIVE FAILURES since <Date Time>  
     
     Last error: 8446 (0x20fe):  
       The replication operation failed to allocate memory.  
