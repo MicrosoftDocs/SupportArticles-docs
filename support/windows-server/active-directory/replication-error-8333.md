@@ -138,10 +138,10 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
     6. To perform an inspection of the database in Directory Services Restore Mode:
 
         1. Open a command prompt  
-        2. Type "ntdsutil"  
-        3. Type "activate instance ntds"  
-        4. Type "Semantic database analysis"  
-        5. Type "go"  
+        2. Type `ntdsutil`  
+        3. Type `activate instance ntds`  
+        4. Type `Semantic database analysis`  
+        5. Type `go` 
 
         If errors are detected they'll be displayed to the console and written to a log file in the current working directory.  
 
