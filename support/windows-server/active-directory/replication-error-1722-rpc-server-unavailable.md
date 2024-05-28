@@ -309,7 +309,7 @@ If the Dynamic Port range has ports being blocked, use the following links to co
 
 Additional important links for configuration and working with firewalls and domain controllers:
 
-- [How to configure RPC dynamic port allocation to Work with firewalls](https://support.microsoft.com/help/154596)
+- [How to configure RPC dynamic port allocation to work with firewalls](https://support.microsoft.com/help/154596)
 - [Restricting Active Directory RPC traffic to a specific port](https://support.microsoft.com/help/224196)
 - [How to configure a firewall for Active Directory domains and trusts](https://support.microsoft.com/help/179442)
 - [A list of the Windows Server domain controller default ports](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10))
