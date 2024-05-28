@@ -34,6 +34,8 @@ SMB2 and SMB3 have the following behavior in these versions of Windows:
 
 If you try to connect to devices that request credentials of a guest instead of appropriate authenticated principals, you may receive one of the following error messages:
 
+- > Error code: 0x800704f8  
+
 - > You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
 
 - > Error code: 0x80070035  
@@ -103,6 +105,7 @@ If you can't configure your third-party device to be secure, you can enable inse
 2. In the console tree, select **Computer Configuration** > **Administrative Templates** > **Network** > **Lanman Workstation**.
 3. For the setting, right-click **Enable insecure guest logons** and select **Edit**.
 4. Select **Enabled** > **OK**.
+5. Windows 11 Insider Preview Build 25267 and later also require SMB signing by default. You cannot use guest access with signing. To disable signing, review [Control SMB signing behavior (preview)](https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-signing?tabs=windows)
 
 > [!NOTE]
 > If you need to modify the Active Directory domain-based group policy, use **Group Policy Management** (*gpmc.msc*).
