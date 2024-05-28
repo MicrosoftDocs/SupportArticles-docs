@@ -1,12 +1,12 @@
 ---
 title: Error (Target Principal Name is incorrect) when manually replicating data between domain controllers
 description: Provides a solution to an error that occurs when you manually replicate data between domain controllers.
-ms.date: 12/26/2023
+ms.date: 05/28/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, sagiv
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Error (Target Principal Name is incorrect) when manually replicating data between domain controllers
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 288167
 
 ## Symptoms
 
-When you use Repadmin.exe or the Active Directory Sites and Services snap-in to manually replicate data between domain controllers, you may receive one of the following error messages:
+When you use *Repadmin.exe* or the Active Directory Sites and Services snap-in to manually replicate data between domain controllers, you may receive one of the following error messages:
 
 > The Target Principal Name is incorrect
 
@@ -48,20 +48,18 @@ The session setup from the computer 1 failed to authenticate. The name of the ac
 
 ## Resolution
 
-To resolve this issue, first determine which domain controller is the current primary domain controller (PDC) Emulator operations master role holder. To do this, run the following command from Elevated command prompt:
+To resolve this issue, first determine which domain controller is the current primary domain controller (PDC) Emulator operations master role holder. To do this, run the following command from an elevated command prompt:
 
   ```console
   netdom query fsmo
   ```
   
-On domain controllers that are experiencing this issue, stop the Kerberos Key Distribution Center service (KDC):
+On domain controllers that are experiencing this issue, stop the Kerberos Key Distribution Center (KDC) service by using one of the following methods:
 
-1. From Elevated command prompt, run **net stop KDC** 
+- From an elevated command prompt, run `net stop KDC`. 
+- Run *Services.msc*. In the Services snap-in, right-click the **Kerberos Key Distribution Center** service and select **Stop**.
 
-Or from the Services Snap-in:
-
-1. By running **Services.msc** and on the Serices Snap-in, Right-click on the **Kerberos Key Distribution Center** (**KDC) service and** click on **Stop**.
-Purge the System Account Kerberos tickets by running **klist -li 0x3e7 purge** from the elevated command prompt.
+Purge the system account Kerberos tickets by running `klist -li 0x3e7 purge` from the elevated command prompt.
 
 Use the Netdom utility to reset the secure channels between these domain controllers and the PDC Emulator operations master role holder. To do so, run the following command from the effected domain controllers:
 
@@ -71,7 +69,7 @@ netdom resetpwd /server:server_name /userd:domain_name\administrator /passwordd:
 
 Where **server_name** is the name of the server that is the PDC Emulator operations master role holder.
 
-After you reset the secure channel, start the KDC service from the Services Snap-in or using the command **net start KDC**. 
+After you reset the secure channel, start the KDC service from the Services snap-in or using the `net start KDC` command. 
 
 Attempt replication again.
 
