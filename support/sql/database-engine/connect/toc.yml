@@ -7,10 +7,10 @@ items:
   href: troubleshoot-ssl-errors-login-process.md
 - name: Cannot generate SSPI context
   href: cannot-generate-sspi-context-error.md
-- name: Can't use Kerberos unconstrained delegation in Windows
-  href: windows-prevents-unconstrained-delegation.md
-- name: Certificate validation failure
-  href: certificate-validation-failure.md
+- name: Change NETMON parser port for SQL Server
+  href: change-netmon-parser-port-for-sql-server.md
+- name: Consistent authentication connectivity issues
+  href: consistent-authentication-connectivity-issues.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
 - name: How to determine if the authentication type is Kerberos
@@ -54,7 +54,7 @@ items:
   href: network-login-disallowed.md
 - name: Local security subsystem errors in SQL Server
   href: local-security-subsystem-errors.md
-- name: Connectivity issues with linked servers in SQL Server authentication
+- name: Connectivity issues with linked servers in SQL Server
   href: linked-server-account-mapping-error.md
 - name: Named Pipes connections cause failure to SQL Server
   href: named-pipes-connection-fail-no-windows-permission.md
