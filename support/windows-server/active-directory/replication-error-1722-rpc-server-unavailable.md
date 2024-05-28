@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot replication error 1722
-description: Fixes error 1722 of Active Directory replication in Windows Server 2008 R2 and earlier versions.
+description: Fixes error 1722 of Active Directory replication in Windows Server.
 ms.date: 05/27/2024
 manager: dcscontentpm
 audience: itpro
@@ -18,19 +18,19 @@ _Original KB number:_ &nbsp; 2102154
 
 ## Symptoms
 
-This article describes the symptoms, cause, and resolution for resolving Active Directory replication failing with Win32 error 1722: The RPC server is unavailable.
+This article describes the symptoms, cause, and resolution for resolving Active Directory replication failing with Win32 error 1722: "The RPC server is unavailable."
 
-1. DCPROMO Promotion of a replica DC fails to create an NTDS Settings object on the helper DC with error 1722。
+1. DCPROMO Promotion of a replica domain controller (DC) fails to create an NTDS Settings object on the helper DC with error 1722.
 
-    Dialog Title text: Active Directory Domain Services Installation Wizard
+    Dialog title text: Active Directory Domain Services Installation Wizard
 
-    Dialog Message text:
+    Dialog message text:
 
     ```output
     The operation failed because: Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=<Name of DC being promoted),CN=Servers,CN=<site name>,CN=Sites,CN=Configuration,DC=<forest root domain> on the remote AD DC <helper DC>.<domain name>.<top level domain>. Ensure the provided network credentials have sufficient permissions. "The RPC server is unavailable."
     ```
 
-1. DCDIAG reports that the Active Directory Replications test has failed with error 1722: The RPC Server is unavailable.
+1. DCDIAG reports that the Active Directory Replications test has failed with error 1722: "The RPC Server is unavailable."
 
     ```output
     [Replications Check,<DC Name>] A recent replication attempt failed:
@@ -41,13 +41,13 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     The failure occurred at <date> <time>.  
     The last success occurred at <date> <time>.  
     <X> failures have occurred since the last success.  
-    [<dc name>] DsBindWithSpnEx() failed with error 1722,  
+    [<DC name>] DsBindWithSpnEx() failed with error 1722,  
     The RPC server is unavailable..  
     Printing RPC Extended Error Info:  
     <snip>
     ```
 
-1. REPADMIN.EXE reports that replication attempt has failed with status 1722 (0x6ba).
+1. REPADMIN.EXE reports that the replication attempt has failed with status 1722 (0x6ba).
 
     REPADMIN commands that commonly cite the -1722 (0x6ba) status include but are not limited to:  
 
@@ -56,7 +56,7 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     - `REPADMIN /SHOWREPS`
     - `REPADMIN /SYNCALL`
 
-    Sample output from `REPADMIN /SHOWREPS` and `REPADMIN /SYNCALL` depicting **The RPC server is unavailable** error is shown below:
+    Sample output from `REPADMIN /SHOWREPS` and `REPADMIN /SYNCALL` depicting the error "The RPC server is unavailable" is shown as follows:
 
     ```console
     c:\> repadmin /showreps  
@@ -75,7 +75,7 @@ This article describes the symptoms, cause, and resolution for resolving Active 
             Last success @ <date> <time>
    ```
 
-    Sample output of `REPADMIN /SYNCALL` depicting **The RPC server is unavailable** error is shown below:
+    Sample output of `REPADMIN /SYNCALL` depicting the error "The RPC server is unavailable" is shown as follows:
 
    ```console
     C:\>repadmin /syncall  
@@ -83,21 +83,21 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     The RPC server is unavailable.
    ```
 
-1. The **replicate now** command in Active Directory Sites and Services returns **The RPC server is unavailable**.
+1. The **replicate now** command in Active Directory Sites and Services returns "The RPC server is unavailable."
 
-    Right-clicking on the connection object from a source DC and choosing **replicate now** fails with **The RPC server is unavailable**. The on-screen error message is shown below:
+    Right-clicking the connection object from a source DC and choosing **replicate now** fails with "The RPC server is unavailable." The on-screen error message is shown as follows:
 
     Dialog title text: Replicate Now
 
     Dialog message text:
 
-    > The following error occurred during the attempt to synchronize naming context \<DNS name of directory partition> from domain controller \<source Dc host name> to domain controller \<destination DC hostname>:The RPC server is unavailable. This operation will not continue. This condition may be caused by a DNS lookup problem. For information about troubleshooting common DNS lookup problems, see the following Microsoft Web site: [DNS Lookup Problem](https://go.microsoft.com/fwlink/?LinkId=5171)
+    > The following error occurred during the attempt to synchronize naming context \<DNS name of directory partition> from domain controller \<source DC host name> to domain controller \<destination DC hostname>:The RPC server is unavailable. This operation will not continue. This condition may be caused by a DNS lookup problem. For information about troubleshooting common DNS lookup problems, see the following Microsoft Web site: [DNS Lookup Problem](https://go.microsoft.com/fwlink/?LinkId=5171)
 
 1. NTDS Knowledge Consistency Checker (KCC), NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the 1722 status are logged in the directory service event log.
 
     Active Directory events that commonly cite the 1722 status include but are not limited to:
 
-    |Event Source|Event ID|Event String|
+    |Event source|Event ID|Event string|
     |---|---|---|
     |Microsoft-Windows-ActiveDirectory_DomainService|1125|The Active Directory Domain Services Installation Wizard (Dcpromo) was unable to establish connection with the following domain controller.|
     |NTDS KCC|1311|The Knowledge Consistency Checker (KCC) has detected problems with the following directory partition.|
@@ -107,27 +107,27 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 
 ## Cause
 
-RPC is an intermediate layer between the network transport and the application protocol. RPC itself has no special insight into failures but attempts to map lower layer protocol failures into an error at the RPC layer.
+RPC is an intermediate layer between the network transport and the application protocol. RPC itself has no special insight into failures but attempts to map lower-layer protocol failures into an error at the RPC layer.
 
-RPC error 1722 / 0x6ba / RPC_S_SERVER_UNAVAILABLE is logged when a lower layer protocol reports a connectivity failure. The common case is that the abstract TCP CONNECT operation failed. In the context of AD replication, the RPC client on the destination DC was not able to successfully connect to the RPC server on the source DC. Common causes for this are:
+RPC error 1722/0x6ba/RPC_S_SERVER_UNAVAILABLE is logged when a lower-layer protocol reports a connectivity failure. The common case is that the abstract TCP CONNECT operation failed. In the context of AD replication, the RPC client on the destination DC was not able to successfully connect to the RPC server on the source DC. Common causes of this are:
 
-1. Link local failure
-2. DHCP failure
-3. DNS failure
-4. WINS failure
-5. Routing failure (including blocked ports on firewalls)
-6. IPSec / Network authentication failures
-7. Resource limitations
-8. Higher layer protocol not running
-9. Higher layer protocol is returning this error
+- Link local failure
+- DHCP failure
+- DNS failure
+- WINS failure
+- Routing failure (including blocked ports on firewalls)
+- IPSec/Network authentication failures
+- Resource limitations
+- Higher-layer protocol not running
+- Higher-layer protocol returning this error
 
 ## Resolution
 
 Basic troubleshooting steps to identify the problem.
 
-### Verify the ClientProtocols key exists under HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc, and that it contains the correct default protocols
+### Verify the ClientProtocols key exists under HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc and that it contains the correct default protocols
 
-|Protocol Name|Type|Data Value|
+|Protocol name|Type|Data value|
 |---|---|---|
 | ncacn_http| REG_SZ| rpcrt4.dll|
 | ncacn_ip_tcp| REG_SZ| rpcrt4.dll|
@@ -138,7 +138,7 @@ If the **ClientProtocols** key or any of the four default values are missing, im
 
 ### Verify DNS is working
 
-DNS lookup failures are the cause of a large number of 1722 RPC errors when it comes to replication.
+Domain Name System (DNS) lookup failures are the cause of a large number of 1722 RPC errors when it comes to replication.
 
 There are a few tools to use to help identify DNS errors:
 
@@ -208,7 +208,7 @@ There are a few tools to use to help identify DNS errors:
 
 - `NLTEST /DSGETDC:<netbios or DNS domain name>`
 
-    `Nltest /dsgetdc` is used to exercise the dc locator process. Thus `/dsgetdc:<domain name>` tries to find the domain controller for the domain. Using the force flag forces domain controller location rather than using the cache. You can also specify options such as **/gc** or **/pdc** to locate a Global Catalog or a primary domain controller emulator. For finding the Global Catalog, you must specify a _tree name_, which is the DNS domain name of the root domain.
+    `Nltest /dsgetdc` is used to exercise the DC locator process. Thus `/dsgetdc:<domain name>` tries to find the domain controller for the domain. Using the force flag forces domain controller location rather than using the cache. You can also specify options such as **/gc** or **/pdc** to locate a Global Catalog or a primary domain controller emulator. To find the Global Catalog, you must specify a _tree name_, which is the DNS domain name of the root domain.
 
     Sample output:
 
@@ -226,7 +226,7 @@ There are a few tools to use to help identify DNS errors:
 
 - `Netdiag -v`
 
-    Can be used with Windows 2003 and earlier versions to gather specific information for networking configuration and error. This tool takes some time to run when executing the `-v` switch.
+    It can be used with Windows 2003 and earlier versions to gather specific information for networking configuration and error. This tool takes some time to run when executing the `-v` switch.
 
     Sample output for the DNS test:
 
@@ -234,26 +234,26 @@ There are a few tools to use to help identify DNS errors:
     DNS test . . . . . . . . . . . . . : Passed  
     Interface {34FDC272-55DC-4103-B4B7-89234BC30C4A}  
     DNS Domain:  
-    DNS Servers: <DNS Server Ip address>  
+    DNS Servers: <DNS Server IP address>  
     IP Address:         Expected registration with PDN (primary DNS domain name):  
     Hostname: DC.fabrikam.com.  
     Authoritative zone: fabrikam.com.  
-    Primary DNS server: DC.fabrikam.com <Ip Address>  
+    Primary DNS server: DC.fabrikam.com <IP Address>  
     Authoritative NS:<Ip Address>  
     Check the DNS registration for DCs entries on DNS server <DNS Server Ip address>  
-    The Record is correct on DNS server '<DNS Server Ip address>'.  
+    The Record is correct on DNS server '<DNS Server IP address>'.  
     (You will see this line repeated several times for every entry for this DC.  Including srv records.)  
-    The Record is correct on DNS server '<DNS Server Ip address>'.  
-    PASS - All the DNS entries for DC are registered on DNS server '<DNS Server Ip address>'.
+    The Record is correct on DNS server '<DNS Server IP address>'.  
+    PASS - All the DNS entries for DC are registered on DNS server '<DNS Server IP address>'.
     ```
 
 - `ping -a <IP_of_problem_server>`
 
-    It's a simple quick test to validate the host record for a domain controller is resolving to the correct machine.  
+    It's a simple, quick test to validate the host record for a domain controller is resolving to the correct machine.  
 
 - `dnslint /s IP /ad IP`
 
-    DNSLint is a Windows utility that helps you to diagnose common DNS name resolution issues. The output is an htm file with much information including:
+    DNSLint is a Windows utility that helps you to diagnose common DNS name resolution issues. The output is an HTM file with much information, including:
 
     **DNS server: localhost**
 
@@ -264,7 +264,7 @@ There are a few tools to use to help identify DNS errors:
     Answering authoritatively for domain: NO
     ```
 
-    **SOA record data from server:**
+    **SOA record data from the server:**
 
     ```output
     Authoritative name server: DC.domain.com  
@@ -276,19 +276,19 @@ There are a few tools to use to help identify DNS errors:
     Default (minimum) TTL: 3600 seconds
     ```
 
-- Additional authoritative (NS) records from server: `DC2.fabrikam.com <IP Address>`
+- Additional authoritative (NS) records from the server: `DC2.fabrikam.com <IP Address>`
 
-    **Alias (CNAME) and glue (A) records for forest GUIDs from server:**
+    **Alias (CNAME) and glue (A) records for forest GUIDs from the server:**
 
   - CNAME: 98d4aa0c-d8e2-499a-8f90-9730b0440d9b._msdcs.fabrikam.com
     - Alias: `DC.fabrikam.com`
-    - Glue: \<IP Adress>
+    - Glue: \<IP Address>
 
   - CNAME: a2c5007f-7082-4adb-ba7d-a9c47db1efc3._msdcs.fabrikam.com
     - Alias: `dc2.child.fabrikam.com`
     - Glue: \<IP Address>
 
-    For more information, see [Description of the DNSLint utility](https://support.microsoft.com/kb/321045).
+    For more information, see the [Description of the DNSLint utility](https://support.microsoft.com/kb/321045).
 
 ### Verify network ports are not blocked by a firewall or third-party application listening on the required ports
 
@@ -296,18 +296,18 @@ The endpoint mapper (listening on port 135) tells the client which randomly assi
 
 Refer to the list of required ports in [How to configure a firewall for Active Directory domains and trusts](config-firewall-for-ad-domains-and-trusts.md).
 
-Portqry can be used to identify if a port is blocked from a Dc when targeting another DC. It can be downloaded at [PortQry Command Line Port Scanner Version 2.0](https://www.microsoft.com/download/details.aspx?id=17148).
+Portqry can be used to identify if a port is blocked from a DC when targeting another DC. It can be downloaded at [PortQry Command Line Port Scanner Version 2.0](https://www.microsoft.com/download/details.aspx?id=17148).
 
 Example syntax:
 
 - `portqry -n <problem_server> -e 135`
 - `portqry -n <problem_server> -r 1024-5000`
 
-A graphical version of portqry, called Portqryui can be found at [PortQryUI - User Interface for the PortQry Command Line Port Scanner](https://www.microsoft.com/download/details.aspx?id=24009).
+A graphical version of portqry, called Portqryui, can be found at [PortQryUI - User Interface for the PortQry Command Line Port Scanner](https://www.microsoft.com/download/details.aspx?id=24009).
 
-If the Dynamic Port range has ports being blocked, use the below links to configure a port range that is manageable for the customer.
+If the Dynamic Port range has ports being blocked, use the following links to configure a port range that is manageable for the customer.
 
-Additional important links for configuration and working with Firewalls and Domain Controllers:
+Additional important links for configuration and working with firewalls and domain controllers:
 
 - [HOWTO: Configure RPC Dynamic Port Allocation to Work with Firewall](https://support.microsoft.com/help/154596)
 - [Restricting Active Directory Replication Traffic to a Specific Port](https://support.microsoft.com/help/224196)
@@ -321,31 +321,31 @@ See network card vendors or OEMs for the latest drivers.
 
 ### UDP fragmentation can cause replication errors that appear to have a source of RPC server is unavailable
 
-Event ID 40960 & 40961 errors with a source of LSASRV are common for this particular cause.
+Event ID 40960 and 40961 errors with a source of LSASRV are common for this particular cause.
 
 For more information, see [How to force Kerberos to use TCP instead of UDP in Windows](https://support.microsoft.com/help/244474).
 
 ### SMB signing mismatches between DCs
 
-Using Default Domain Controllers Policy to configure consistent settings for SMB Signing under the following section will help address this cause:
+Using the **Default Domain Controllers Policy** to configure consistent settings for SMB Signing under the following section will help address this cause:
 
 `Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options`
 
-- Microsoft network client: Digitally sign communications (always) Disabled.
-- Microsoft network client: Digitally sign communications (if server agrees) Enabled.
-- Microsoft network server: Digitally sign communications (always) Disabled.
-- Microsoft network server: Digitally sign communications (if client agrees) Enabled.
+- `Microsoft network client: Digitally sign communications (always) Disabled`.
+- `Microsoft network client: Digitally sign communications (if server agrees) Enabled`.
+- `Microsoft network server: Digitally sign communications (always) Disabled`.
+- `Microsoft network server: Digitally sign communications (if client agrees) Enabled`.
 
 The settings can be found under the following registry keys:
 
 - `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\Parameters` and `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters`
 
-  - RequireSecuritySignature = always (0,disable, 1 enable).
-  - EnableSecuritySignature = is server agrees (0,disable, 1 enable).
+  - RequireSecuritySignature = always (0 = disable, 1 = enable).
+  - EnableSecuritySignature = if server agrees (0 = disable, 1 = enable).
 
-Additional Troubleshooting:
+Additional troubleshooting:
 
-If the above don't provide a solution to the 1722, use the following Diagnostic logging to gather more information:
+If the preceding methods don't provide a solution to the 1722 error, use the following diagnostic logging to gather more information:
 
 ```output
 Windows Server 2003 SP2 computers logs extended RPC Server info in NTDS Replication events 1960, 1961, 1962 and 1963.  
