@@ -27,7 +27,7 @@ This article describes the symptoms, cause, and resolution steps for issues when
 
    ```output
    DC=Contoso,DC=com  
-        Default-First-Site-Name\\DomainController via RPC  
+        Default-First-Site-Name\DomainController via RPC  
             DC object GUID: <source DCs ntds settings object object guid>  
             Last attempt @ <Date Time> failed, result 8446 (0x20fe):  
                 The replication operation failed to allocate memory.  
@@ -35,14 +35,14 @@ This article describes the symptoms, cause, and resolution steps for issues when
             Last success @ <Date & Time>.  
     
     CN=Configuration,DC=Contoso,DC=com  
-        Default-First-Site-Name\\DomainController via RPC  
+        Default-First-Site-Name\DomainController via RPC  
             DC object GUID: <source DCs ntds settings object object guid>  
             Last attempt @ <Date Time> failed, result 8446 (0x20fe):  
                 The replication operation failed to allocate memory.  
             1358 consecutive failure(s).  
             Last success @ <Date & Time>.  
     
-    Source: Default-First-Site-Name\\DomainController  
+    Source: Default-First-Site-Name\DomainController  
     ******* 1359 CONSECUTIVE FAILURES since \<Date Time>  
     
     Last error: 8446 (0x20fe):  
