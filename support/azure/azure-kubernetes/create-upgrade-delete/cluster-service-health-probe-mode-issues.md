@@ -100,4 +100,4 @@ When creating or updating the AKS cluster, if you specify the `--cluster-service
 
 3. Overlaymgr reconciles the cloud-node-manager chart to enable the health-probe-proxy sidecar.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)] 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)] 
