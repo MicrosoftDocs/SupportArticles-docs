@@ -133,7 +133,7 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
 
     4. If database corruption has been detected, ensure that recent backups exist of each domain in the forest.
 
-    5. Restart the domain controller reporting the database corruption in directory services restore mode. (Press <kbd>F8</kbd> while the server is restarting or if this isn't possible open *msconfig.exe* and select **Active Directory repair** in the **Boot options**.)
+    5. Restart the domain controller reporting the database corruption in directory services restore mode. (Press <kbd>F8</kbd> while the server is restarting, or if this isn't possible, open *msconfig.exe* and select **Active Directory repair** in the **Boot options**.)
 
     6. To perform an inspection of the database in Directory Services Restore Mode:
 
