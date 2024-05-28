@@ -27,7 +27,7 @@ During data ingestion, some of the most common reasons a record might be conside
 
 If the data doesn't conform to the schema, the ingestion process completes with errors.
 
-To solve this issue, correct either the source data or the schema and re-ingest the data.
+To solve this issue, correct either the source data or the schema and reingest the data.
 
 ### Partition files are missing
 
@@ -113,7 +113,7 @@ In a *manifest.json* file, the `datetime` format can be specified at the table l
 
 ## Ingestion errors or corrupt data with Power Query
 
-### Data Time Values parsing error or parsed incorrectly
+### Date/Time values parsing error or parsed incorrectly
 
 The most common data type mismatch occurs when a date field isn't set to the correct date format. This mismatch can be caused by either: the source data isn't formatted correctly OR the locale is incorrect. To fix an incorrect format, update the data at the source and reingest. To fix an incorrect locale, adjust the locale in the Power Query transformations. For example:
 
