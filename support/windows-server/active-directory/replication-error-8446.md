@@ -50,7 +50,7 @@ This article describes the symptoms, cause, and resolution steps for issues when
     ```
 2. DCPROMO fails with error 1130.
 
-  ```output
+    ```output
     06/05 09:55:33 [INFO] Error - Active Directory could not replicate the directory partition CN=Configuration,DC=contoso,DC=com from the remote domain controller 5thWardDC1.contoso.com. (1130)  
     06/05 09:55:33 [INFO] NtdsInstall for domain.net returned 1130  
     06/05 09:55:33 [INFO] DsRolepInstallDs returned 1130  
@@ -58,7 +58,7 @@ This article describes the symptoms, cause, and resolution steps for issues when
     Non critical replication returned 1130  
     err.exe 1130  
     ERROR_NOT_ENOUGH_SERVER_MEMORY / Not enough server storage is available to process this command.
- ```
+    ```
 
 3. NTDS Replication and NTDS General events with the 8466 status are logged in the directory service event log.  
 
@@ -76,7 +76,7 @@ This article describes the symptoms, cause, and resolution steps for issues when
 
 ## Cause
 
-The 8446 (operation failed to allocate memory. This operation will not continue) status can occur when the Active Directory replication engine cannot allocate memory to perform Active Directory replication.
+The 8446 (operation failed to allocate memory. This operation will not continue) status can occur when the Active Directory replication engine can't allocate memory to perform Active Directory replication.
 
 ### These events can occur due to the following conditions
 
@@ -105,7 +105,7 @@ Determine if there's a depletion of the following resources and fix the underlyi
 
 If there's no apparent memory leak or resource depletion:
 
-For 32-bit operating systems, depending on the size of the NTDS.DIT, the `/USERVA boot.ini` switch that increases the virtual mode address space on domain controllers may provide relief, but this might cause kernel mode depletion as this reduces the size of the kernel mode address space. Prior to implementing the `/UserVA` switch, it's best to consult a Windows memory performance tuning expert to analyze kernel mode and user mode memory usage.
+For 32-bit operating systems, depending on the size of the NTDS.DIT, the `/USERVA boot.ini` switch that increases the virtual mode address space on domain controllers may provide relief, but this might cause kernel mode depletion as this reduces the size of the kernel mode address space. Before implementing the `/UserVA` switch, it's best to consult a Windows memory performance tuning expert to analyze kernel mode and user mode memory usage.
 Database cache consumes all available virtual memory for the LSASS process.  
 
 Run Performance Monitor with database counters, and review the following counters:
