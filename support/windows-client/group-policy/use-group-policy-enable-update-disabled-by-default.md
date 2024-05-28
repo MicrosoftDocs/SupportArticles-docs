@@ -6,10 +6,10 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, v-lianna, v-tanjoh
+ms.reviewer: kaushika, v-lianna, v-tanjoh, ptomas
 ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 ---
-# How to use Group Policy to enable an update that's disabled by default
+# How to use Group Policy to enable an update that is disabled by default
 
 This article describes how to configure Group Policy to use a feature preview policy definition that activates a preview update on managed devices.
 

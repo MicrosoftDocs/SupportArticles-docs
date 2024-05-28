@@ -235,7 +235,7 @@ items:
       href: ./group-policy/scenario-guide-wallpaper-gpo-does-not-apply-on-some-client-computers.md
     - name: Use Group Policy to deploy a Known Issue Rollback
       href: ./group-policy/use-group-policy-to-deploy-known-issue-rollback.md
-    - name: Use Group Policy to enable an update that's disabled by default
+    - name: Use Group Policy to enable an update disabled by default
       href: ./group-policy/use-group-policy-enable-update-disabled-by-default.md
 - name: High Availability
   items:
