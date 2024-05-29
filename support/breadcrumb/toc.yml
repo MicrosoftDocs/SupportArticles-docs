@@ -119,6 +119,9 @@ items:
       - name: Azure Container Instances
         tocHref: /troubleshoot/azure/azure-container-instances/
         topicHref: /troubleshoot/azure/azure-container-instances/welcome-container-instances
+      - name: Azure Container Registry
+        tocHref: /troubleshoot/azure/azure-container-registry/
+        topicHref: /troubleshoot/azure/azure-container-registry/welcome-container-registry
       - name: Azure CycleCloud
         tocHref: /troubleshoot/azure/hpc/cyclecloud/
         topicHref: /troubleshoot/azure/hpc/cyclecloud/welcome-hpc-cyclecloud

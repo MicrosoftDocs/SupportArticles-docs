@@ -31,3 +31,7 @@ The Named Pipes connections fail because user doesn't have permission to log in 
 ## Resolution
 
 Add the user to the **Users** group on the server that's running SQL Server. If SQL Server is mirrored or clustered, repeat on all computers within the group.
+
+## More information
+
+[Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)

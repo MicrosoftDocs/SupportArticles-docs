@@ -23,7 +23,7 @@ The key to effectively resolving consistent authentication issues is to understa
 
 Before you start troubleshooting, work through the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) checklist to have the following information ready:
 
-- Install the [WireShark](https://www.wireshark.org/download.html) and [Problem Steps Recorder (PSR.exe)](/office/troubleshoot/settings/how-to-use-problem-steps-recorder) tools. For more information, see *Methods of collecting data for troubleshooting various types of errors*.
+- Install the [WireShark](https://www.wireshark.org/download.html) and [Problem Steps Recorder (PSR.exe)](/office/troubleshoot/settings/how-to-use-problem-steps-recorder) tools. For more information, see [Methods of collecting data for troubleshooting various types of errors](collect-data-to-troubleshoot-sql-connectivity-issues.md).
 
 - Collect the Service Provider Name (SPN) information that's based on the service accounts. To do this, use the `SETSPN -L` command.
 
@@ -374,3 +374,7 @@ This section lists issues that are related to the authentication and access cont
 </details>
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
+
+## More information
+
+[Collect data to troubleshoot SQL Server connectivity issues](collect-data-to-troubleshoot-sql-connectivity-issues.md)
