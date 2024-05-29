@@ -6,7 +6,7 @@ ms.author: johndund # Microsoft alias
 ms.reviewer: 
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
-# Troubleshoot SessionCreationError during Unattended runs
+# Troubleshoot session creation errors for unattended runs
 
 This article provides background and potential solutions to SessionCreationError and SessionCreationErrorWithThirdPartyCredentialProvider which may be encountered during an unattended desktop flow runs.
 
@@ -27,11 +27,11 @@ When an unattended session is run, Power Automate attempts to create a remote de
 
 The resolution and troubleshooting depends on which error you receive.
 
-#### SessionCreationErrorWithThirdPartyCredentialProvider
+### SessionCreationErrorWithThirdPartyCredentialProvider
 
 This occurs when we detected a third party piece of software which may be interfering with the ability of Power Automate to create a session on the machine. Power Automate does not currently support some third party credential providers.
 
-##### Resolution
+#### Resolution
 
 To resolve the issue, please contact your admin to uninstall the credential provider that is not supported by Power Automate. To see the full list of credential providers on your machine (many of which are built in), you can go to the following registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers`. Each subkey represents an installed credential provider. The following is a list of credential providers that Power Automate currently does not support. If you have the following registry key present, try working with your system administrator to uninstall the corresponding software.
 
@@ -39,11 +39,11 @@ To resolve the issue, please contact your admin to uninstall the credential prov
 | :------------------------ | ---------------- |
 | SailPoint Technologies Desktop Password Reset | 0094A34B-0BF0-4789-8B2D-8339E469D756 |
 
-#### SessionCreationErrror
+### SessionCreationErrror
 
 This error occurs when session creation failed for an unknown reason.
 
-##### Resolution
+#### Resolution
 
 To troubleshoot the issue:
 
