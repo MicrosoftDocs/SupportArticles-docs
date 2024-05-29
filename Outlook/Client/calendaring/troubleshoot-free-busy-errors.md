@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot free/busy errors
+title: Resolve free/busy errors
 description: Provides troubleshooting steps for errors that a user might encounter when they try to access free/busy information.
 manager: dcscontentpm
 audience: ITPro
@@ -23,10 +23,10 @@ appliesto:
   - Outlook for iOS
   - Outlook for Mac
 search.appverid: MET150
-ms.date: 05/27/2024
+ms.date: 05/29/2024
 ---
 
-# Troubleshoot free/busy errors
+# Resolve free/busy errors
 
 To troubleshoot an error that's related to free/busy information, select the applicable error message from the following sections.
 
@@ -44,7 +44,7 @@ This error can occur if WSSecurity authentication isn't enabled or has to be res
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. To refresh metadata in the Microsoft Federation Gateway, run the following command two times in the on-premises Exchange Management Shell (EMS):
 
@@ -99,7 +99,7 @@ This error can occur if network connectivity issues prevent inbound or outbound 
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Verify that the firewall on each on-premises Exchange server allows inbound or outbound connections between Exchange Server endpoints and Exchange Online IP addresses. To identify firewall issues, make a free/busy request from Exchange Online and then check the on-premises firewall, reverse proxy, and network logs. For more information about how to configure a firewall, see [Firewall considerations for federated delegation](/previous-versions/office/exchange-server-2010/dd638083(v=exchg.141)) and [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
@@ -141,7 +141,7 @@ This error can occur if Autodiscover endpoints are nonfunctional or misconfigure
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Check whether the Autodiscover endpoint is valid:
 
@@ -215,7 +215,7 @@ This error can occur if an on-premises firewall blocks an inbound connection fro
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Check whether free/busy requests from Exchange Online reach IIS on an Exchange server. Make a free/busy request from Exchange Online and search for the following IIS log entries that were made at the time of the free/busy request:
 
@@ -262,7 +262,7 @@ This error can occur if organization settings are misconfigured.
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Verify that the domain of a user whose free/busy information is requested exists in the organization settings of the user that's trying to view the free/busy information. Select one of the following procedures depending on the free/busy direction.
 
@@ -333,7 +333,7 @@ Error message 2 indicates that an Autodiscover request failed.
 
 ### Troubleshooting steps
 
-To troubleshoot the free/busy issue regardless which error message you received, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+To troubleshoot the free/busy issue regardless of which error message you received, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
 
 1. Check whether preauthentication is enabled. Follow these steps:
 
@@ -395,8 +395,6 @@ This error can occur if the cloud mailbox or Autodiscover endpoint is misconfigu
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps:
-
 1. Verify that the cloud user has a secondary SMTP address that includes the `onmicrosoft.com` domain by running the following command:
 
    ```PowerShell
@@ -430,7 +428,7 @@ This error can occur if the mailbox of the user whose free/busy information is r
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Check the calendar permissions of the user whose free/busy information is requested by running the following command:
 
@@ -468,8 +466,6 @@ You have a cloud user who can't view the free/busy information for an on-premise
 This error can occur if the certificates or metadata in the Microsoft Federation Gateway are invalid.
 
 ### Troubleshooting steps
-
-To troubleshoot the issue, follow these steps:
 
 1. Check the expiration date and thumbprints of the on-premises federation trust certificates by running the following PowerShell cmdlets:
 
@@ -896,7 +892,7 @@ This error can occur if there are network or transient issues. The error message
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. To rule out transient issues, verify that the cloud user consistently gets the same error message during repeated attempts to get the free/busy information of the on-premises user.
 
@@ -977,7 +973,7 @@ The error might occur for either of the following reasons:
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Update the user principal name (UPN) of the cloud user to use the `onmicrosoft.com` domain, and then revert the UPN to its former value. For example, if the UPN of the cloud user is `user@contoso.com`, change it to the temporary UPN, `user@contoso.mail.onmicrosoft.com`; and then revert the UPN to `user@contoso.com`. To do this, use either of the following methods ([Azure AD PowerShell](/powershell/module/azuread) or [MSOL service](/powershell/azure/active-directory/install-msonlinev1)):
 
@@ -1184,7 +1180,7 @@ This error might occur if the Microsoft authorization server settings are invali
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Refresh the authorization metadata on the specified Microsoft authorization server that's trusted by Exchange. Run the following PowerShell cmdlet in the EMS (on-premises):
 
@@ -1320,7 +1316,7 @@ These errors can occur for any of the following reasons:
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Check whether a free/busy request from Exchange Online can reach IIS on an Exchange server. Perform a free/busy query and then search the IIS logs for entries that have HTTP status code `200 OK` or `401 Unauthorized` at the time of the query. Those entries indicate that the free/busy request reached IIS. **Note**: Timestamps in IIS logs use UTC time.
 
@@ -1340,7 +1336,7 @@ This error might occur if one or more Exchange servers can't connect to a Micros
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Run the following PowerShell cmdlets in the Exchange Management Shell (EMS) to check whether you can retrieve a delegation token:
 
@@ -1406,7 +1402,7 @@ This error might occur if the on-premises Autodiscover endpoint URL or the publi
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Run the following PowerShell cmdlets in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to get the value of the `TargetAutodiscoverEpr` parameter:
 
@@ -1452,7 +1448,7 @@ This is a general error that's related to the Autodiscover service.
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Make sure that Autodiscover for the affected user returns the Exchange Web Services (EWS) URL for the user.
 
@@ -1605,7 +1601,7 @@ This error might occur if there's a stopped Microsoft Windows service, server co
 
 ### Troubleshooting steps
 
-To troubleshoot the issue, use the following steps. After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed.
 
 1. Make sure that the Windows services that Exchange Server requires are running. To check the status of services, run the following PowerShell cmdlet on each Exchange server in your organization:
 
