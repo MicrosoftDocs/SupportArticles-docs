@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Collect data to troubleshoot SQL Server connectivity issues
 
-This article helps you to identify the root cause of SQL Server connectivity issues by asking relevant questions based on specific categories. Although the ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md) article includes the most important items to be collected, the questions in this article can help you narrow down the cause of the connectivity issues and troubleshoot them effectively.
+This article helps you to identify the root cause of SQL Server connectivity issues by asking relevant questions based on specific categories. Although the [Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues](resolve-connectivity-errors-checklist.md) article includes the most important items to be collected, the questions in this article can help you narrow down the cause of the connectivity issues and troubleshoot them effectively.
 
 > [!NOTE]
 > Not all questions are applicable to all issues. However, these questions can guide you as you consider how to troubleshoot connectivity issues.
@@ -70,7 +70,7 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 The following set of questions are designed to help you find the category into which an issue falls, thus guiding you towards the right direction of troubleshooting. Select each dropdown for related questions.
 
-Before you jump into the asking the specific questions, make sure that all the prerequisites required for the SQL Server connections have been met. For more information on the prerequisites, see ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md).
+Before you jump into the asking the specific questions, make sure that all the prerequisites required for the SQL Server connections have been met. For more information on the prerequisites, see [Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues](resolve-connectivity-errors-checklist.md).
 
 <details><summary><b>Broader perspective questions</b></summary>
 
