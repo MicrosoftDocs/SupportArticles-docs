@@ -36,4 +36,4 @@ Follow these steps to verify and resolve the issue:
     :::image type="content" source="media/desktop-flow-runs-missing-from-list/nothing-found-using-this-filter.png" alt-text="Overly filtered so nothing found using this filter." lightbox="media/desktop-flow-runs-missing-from-list/nothing-found-using-this-filter.png":::
 
 4. If filters are present, clear the filters to show the hidden desktop flows again. To do that, select the column headers, and then select **Filter by** > **Clear filter** > **Apply**.
-5. If the prior steps don't resolve the issue, check with your administrator to check that you have all the prerequisites to use desktop flows.
+5. If the prior steps don't resolve the issue, check with your administrator to ensure that you have all the prerequisites to use desktop flows.
