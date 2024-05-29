@@ -1,5 +1,5 @@
 ---
-title: Identifying and remediating MaxConcurrentApi issues that affect user authentication
+title: Identify and remediate MaxConcurrentApi issues that affect user authentication
 description: Summarizes a set of articles that describe how to work around (and in some cases, resolve) authentication failures and slowdowns that happen when Windows servers are overloaded with authentication requests.
 ms.date: 05/28/2024
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 keywords: 
 ---
 
-# Overview: Identifying and remediating MaxConcurrentApi issues that affect user authentication
+# Overview: Identify and remediate MaxConcurrentApi issues that affect user authentication
 
 This article summarizes a set of articles that describe how to work around (and in some cases, resolve) authentication failures and slowdowns that happen when Windows servers are overloaded with authentication requests. Identifying and remediating these issues is a complex process. Review this summary article and parts 1, 2, and 3 before you attempt to change `MaxConcurrentApi`.
 
