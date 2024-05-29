@@ -36,6 +36,8 @@ You must configure the NETMON parser to recognize these ports. To configure the 
 
 1. In Windows Explorer, turn on **File name extensions** to make sure that the file isn't accidentally saved as *tcp.npl.txt*.
 
-## See also
+## More information
 
-[Collect data using Network Monitor](../../../windows-client/networking/collect-data-using-network-monitor.md)
+- [Collect data using Network Monitor](../../../windows-client/networking/collect-data-using-network-monitor.md)
+
+- [Collect data to troubleshoot SQL Server connectivity issues](collect-data-to-troubleshoot-sql-connectivity-issues.md)

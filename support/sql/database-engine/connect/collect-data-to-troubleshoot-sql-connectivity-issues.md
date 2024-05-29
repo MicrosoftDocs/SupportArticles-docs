@@ -1,7 +1,7 @@
 ---
 title: Data collection methods for SQL connectivity issues
 description: This article provides possible list of questions based on several components that you can use to effectively identify the type of SQL Server connectivity issues and find the right resolution.
-ms.date: 05/27/2024
+ms.date: 05/29/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, prmadhes, v-jayaramanp, haiyingyu
@@ -204,5 +204,7 @@ If the user is remote to the client application, collect the following details:
 - [Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues](resolve-connectivity-errors-checklist.md)
 
 - [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
+
+- [Change NETMON parser port for SQL Server](change-netmon-parser-port-for-sql-server.md)
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
