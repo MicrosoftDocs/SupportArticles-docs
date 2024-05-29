@@ -25,9 +25,9 @@ Now that you have a list of servers that might benefit from a change in `MaxConc
 
 1. Collect general performance statistics to establish baselines for the affected server.
 1. Collect tuning-related performance statistics while the server is processing the most client requests. For example, in an email server scenario, the best time to collect the performance data is when users arrive at work and check their email messages.
-1. Use the performance data to calculated a `MaxConcurrentApi` value that's tuned for that server.
-1. If the calculated value is not equal to the default value and is less than the maximum value, set the calculated value in the registry.
-1. Collect fresh performance statistics to check that the change has helped. Check performance against the baseline.
+1. Use the performance data to calculate a `MaxConcurrentApi` value that's tuned for that server.
+1. If the calculated value isn't equal to the default value and is less than the maximum value, set the calculated value in the registry.
+1. Collect fresh performance statistics to check that the change helped. Check performance against the baseline.
 
 > [!IMPORTANT]  
 >
@@ -36,18 +36,18 @@ Now that you have a list of servers that might benefit from a change in `MaxConc
 
 ## Set the performance baseline
 
-Before you make any changes, monitor the servers that you suspect have MCA issues long enough to establish performance baselines (especially during peak load periods). Continue monitoring after make any `MaxConcurrentApi` changes. The performance baselines provide the data that you need to determine the impact of the new `MaxConcurrentApi` values. The same data can also help you identify the root cause of your environment's performance issues (see [Part 3](maxconcurrentapi-3-troubleshoot-causes-of-mca-issues.md) of this series).
+Before you make any changes, monitor the servers that you suspect have MCA issues long enough to establish performance baselines (especially during peak load periods). Continue monitoring after you make any `MaxConcurrentApi` changes. The performance baselines provide the data that you need to determine the effects of the new `MaxConcurrentApi` values. The same data can also help you identify the root cause of your environment's performance issues (see [Part 3](maxconcurrentapi-3-troubleshoot-causes-of-mca-issues.md) of this series).
 
 At a minimum, you should monitor the following counters to establish a performance baseline and to verify the effectiveness of any `MaxConcurrentApi` changes.
 
 | Performance Counter Set | Why? |
 | --- | --- |
 | **Memory** | Track the overall system memory to to make sure that the system's not being overtaxed. |
-| **Physical Disk** or **Logical Disk** | Track the disk I/O to make sure that the disks aren't overtaxed. This is important when Netlogon logging is enabled (if you are tracking this problem, it should be).! |
+| **Physical Disk** or **Logical Disk** | Track the disk I/O to make sure that the disks aren't overtaxed. This is important when Netlogon logging is enabled (if you're tracking this problem, it should be).! |
 | **Process** (*lsass.exe*, at a minimum) | For the purposes of this baseline, *lsass.exe* is of the most interest because this is where Netlogon operates. However, it never hurts to have a view of the processes in case a problem does arise after you change `MaxConcurrentApi`. |
 | **Processor** | Monitor the processor load. |
 | **Network Interface** | Optional, but recommended. |
-| **Netlogon** | Track Netlogon performance counters to get a holistic view of Netlogon functions. You can use the counters to detect delays in authentication, as well as the timeouts themselves.<br/><br/>Monitoring these counters provides a quick way (outside of the Netlogon logs) to see if you have authentication timeouts occurring.<br/><br/>You'll still have to use the Netlogon logs for proper trending and analysis (such as determine how many users were impacted, how often they were impacted, the exact error codes, the source of the "bad" authentication, and so forth). |
+| **Netlogon** | Track Netlogon performance counters to get a holistic view of Netlogon functions. You can use the counters to detect delays in authentication, as well as the timeouts themselves.<br/><br/>Monitoring these counters provides a quick way (outside of the Netlogon logs) to see if you have authentication timeouts occurring.<br/><br/>You still have to use the Netlogon logs for proper trending and analysis (such as determine how many users were impacted, how often they were impacted, the exact error codes, the source of the "bad" authentication, and so forth). |
 
 ## Collect the tuning-related statistics
 
@@ -72,9 +72,9 @@ Configure Performance Monitor as follows:
 Collect the following values from Performance Monitor:
 
 - \<*Duration*> = Constant that defines the data collection interval. 
-- \<*Semaphore_Acquires*> = The change in value of the Netlogon **Semaphore Aquires** counter during the specified duration. The counter is cumulative, so the **Minimum** value is the starting value, and the **Maximum** value is the ending value.  
+- \<*Semaphore_Acquires*> = The change in value of the Netlogon **Semaphore Acquires** counter during the specified duration. The counter is cumulative, so the **Minimum** value is the starting value, and the **Maximum** value is the ending value.  
 - \<*Semaphore_Timeouts*> = The change in value of the Netlogon **Semaphore Timeouts** counter during the specified duration. The counter is cumulative, so the **Minimum** value is the starting value, and the **Maximum** value is the ending value.  
-- \<*Avg_Semaphore_Hold_Time*> = The value of the Netlogon **Average Semaphore Hold Time** counter. To see the value as calculated across the specified duration, set the Perfomance Monitor view to **Report** instead of **Line**.
+- \<*Avg_Semaphore_Hold_Time*> = The value of the Netlogon **Average Semaphore Hold Time** counter. To see the value as calculated across the specified duration, set the Performance Monitor view to **Report** instead of **Line**.
 
 > [!NOTE]  
 > If the value of any of these counters is zero, then the server doesn't need a new `MaxConcurrentApi` value.
@@ -91,7 +91,7 @@ Compare the calculated value to the default and maximum value for the server's r
 | --- | --- | --- |
 | Domain controllers<br/> Windows Server 2012 and later versions | 10 | 150 |
 | Member servers<br/> Windows 2012 and later versions | 10 | 150 |
-| Workstations<br/> Windows 8 and later versions | 1 | 150 <br/>**Note:** It is unlikely that you'll need a value greater than 1 on a workstation. |
+| Workstations<br/> Windows 8 and later versions | 1 | 150 <br/>**Note:** It's unlikely that you'll need a value greater than **1** on a workstation. |
 
 > [!NOTE]  
 >

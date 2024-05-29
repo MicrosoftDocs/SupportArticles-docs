@@ -21,15 +21,15 @@ _Applies to:_ &nbsp; Windows Server 2012 and newer versions, Windows 8 and newer
 
 ## Summary
 
-When a user opens an application, the application typically can authenticate the user in less than a second. Slow authentication performance indicates that there are underlying issues in your infrastructure. [Remediating MCA issues, part 2: Calculate and change the MCA value](maxconcurrentapi-2-calculate-and-change-mca.md) provides a way to increase the capacity for managing simultaneous authentication requests. This approach may alleviate the symptoms, but it's just a band-aid. The underlying problems are still there.
+When a user opens an application, the application typically can authenticate the user in less than a second. Slow authentication performance indicates that there are underlying issues in your infrastructure. [Remediating MCA issues, part 2: Calculate and change the MCA value](maxconcurrentapi-2-calculate-and-change-mca.md) provides a way to increase the capacity for managing simultaneous authentication requests. This approach might alleviate the symptoms, but it's just a band-aid. The underlying problems are still there.
 
-Tuned `MaxConcurrentApi` values can improve your environment's authentication performance. However, using non-default values might exacerbate other issues. Additionally, if your topology or load changes, you might have to recalculate the `MaxConcurrentApi` values. Generally, the best approach is to use the tuned values until you can identify and fix the underlying problems. 
+Tuned `MaxConcurrentApi` values can improve your environment's authentication performance. However, using nondefault values might exacerbate other issues. Additionally, if your topology or load changes, you might have to recalculate the `MaxConcurrentApi` values. Generally, the best approach is to use the tuned values until you can identify and fix the underlying problems. 
 
-This article provides guidance about where to look for those problems. There are a variety of factors that can cause authentication timeout issues.
+This article provides guidance about where to look for those problems. There are various factors that can cause authentication timeout issues.
 
 ## Continue monitoring performance
 
-[Remediating MCA issues, part 2: Calculate and change the MCA value](maxconcurrentapi-2-calculate-and-change-mca.md) describes the minimum performance parameters that you should be monitoring. The resulting data can help you troubleshoot your environment and track the impact of any changes you make.
+[Remediating MCA issues, part 2: Calculate and change the MCA value](maxconcurrentapi-2-calculate-and-change-mca.md) describes the minimum performance parameters that you should be monitoring. The resulting data can help you troubleshoot your environment and track the effects of any changes you make.
 
 ## Reduce the overall demand for the Netlogon service
 
@@ -48,7 +48,7 @@ Review the Netlogon logs for unauthorized or unknown clients or services that co
 
 ### Make sure that cross-forest authentication requests include the user domain name
 
-If your topology includes multiple forest trusts, check the Netlogon logs of the domain controllers that receive authentication requests directly from application servers. Look for log entries that authentication requests contain `<null>\<username>` instead of `<domainname>\<username>`. Wherever possible, make sure that applications use the `<domainname>\<username>` format. If this approach isn't feasible, see [The Lsass.exe process may stop responding if you have many external trusts on an Active Directory domain controller](https://support.microsoft.com/topic/the-lsass-exe-process-may-stop-responding-if-you-have-many-external-trusts-on-an-active-directory-domain-controller-7ccefcf9-e65a-c9bc-ff96-ecf9a78c195e) for additional information.
+If your topology includes multiple forest trusts, check the Netlogon logs of the domain controllers that receive authentication requests directly from application servers. Look for log entries that authentication requests contain `<null>\<username>` instead of `<domainname>\<username>`. Wherever possible, make sure that applications use the `<domainname>\<username>` format. If this approach isn't feasible, see [The Lsass.exe process might stop responding if you have many external trusts on an Active Directory domain controller](https://support.microsoft.com/topic/the-lsass-exe-process-may-stop-responding-if-you-have-many-external-trusts-on-an-active-directory-domain-controller-7ccefcf9-e65a-c9bc-ff96-ecf9a78c195e) for additional information.
 
 ## Check server health
 
@@ -80,7 +80,7 @@ Factors to consider include the following:
 - Can you use sites to group application servers and domain controllers? Have the servers been assigned to the correct sites?
 - Are your sites configured correctly? Are sites and subnets paired correctly?
 - If authentication requests have to pass from one forest to another forest over a trust, have you configured sites that have the same name in each forest?
-- If authentication requests have to travel from one child domain to another child domain in the same forest, can you use a shortcut trust to reduce the authentication path and sdirectly connect the domains?
+- If authentication requests have to travel from one child domain to another child domain in the same forest, can you use a shortcut trust to reduce the authentication path and directly connect the domains?
 
 For more information about how domain controllers communicate and how to implement sites, see the following articles:
 

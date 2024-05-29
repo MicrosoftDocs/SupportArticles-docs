@@ -1,6 +1,6 @@
 ---
 title: Identifying and remediating MaxConcurrentApi issues that affect user authentication
-description: summarizes a set of articles that describe how to work around (and in some cases, resolve) authentication failures and slowdowns that happen when Windows servers are overloaded with authentication requests.
+description: Summarizes a set of articles that describe how to work around (and in some cases, resolve) authentication failures and slowdowns that happen when Windows servers are overloaded with authentication requests.
 ms.date: 05/28/2024
 author: Deland-Han
 ms.author: delhan
@@ -24,17 +24,17 @@ _Applies to:_ &nbsp; Windows Server 2012 and newer versions, Windows 8 and newer
 
 ## Symptoms
 
-Users have trouble authenticating, and might experience a number of other issues that don't immediately appear to be related to authentication.
+Users have trouble authenticating, and might experience many other issues that don't immediately appear to be related to authentication.
 
 - When users try to sign in to applications or services, they might see behaviors that include the following:
   - Users are repeatedly prompted for credentials even if they use the correct credentials.
-  - The authentication process is much slower than normal, or might fail altogether.
+  - The authentication process is slower than normal, or might fail altogether.
 - Users have trouble saving files because mapped drives are incorrectly marked as unavailable.
 - Users have trouble printing or scanning because mapped printers or other devices are incorrectly marked as unavailable.
 
 The scope and severity of these issues might remain consistent or might fluctuate over time. For example,
 
-- Authentication may slow down or fail completely for all users, or for some users but not others.
+- Authentication might slow down or fail completely for all users, or for some users but not others.
 - Problems might persist, or might appear and then disappear.
 - Problems might appear only during certain times of day, such as between 8 AM and 9 AM.
 
@@ -47,7 +47,7 @@ These patterns of symptoms can result if a significant number of authentication 
 Under normal conditions, a request for authentication should complete in less than a second. However, the following characteristics of the Netlogon service can cause delays or failures in the authentication process.
 
 - A Windows server or workstation can only handle a certain number of simultaneous authentication requests. This number is known as the `MaxConcurrentApi` value for the computer.
-- If an authentication request has not received a response in 45 seconds, it times out.
+- If an authentication request hasn't received a response in 45 seconds, it times out.
 
 Consider a simplified example: A typical authentication request passes from an application server to a domain controller. Depending on the domain topology, that domain controller might not be able to respond to the request. Instead, it passes the request to a different domain controller. This process repeats until the request reaches a domain controller that can respond. The response follows the same path in reverse until it reaches the application server.
 

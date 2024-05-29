@@ -21,12 +21,12 @@ _Applies to:_ &nbsp; Windows Server 2012 and newer versions, Windows 8 and newer
 
 ## Summary
 
-Technically, `MaxConcurrentApi` defines the number of *lsass.exe* threads per secure channel that are available to the Netlogon service. This value is set in the registry of each server. You should not change it unless you have first done the following:
+Technically, `MaxConcurrentApi` defines the number of *lsass.exe* threads per secure channel that are available to the Netlogon service. This value is set in the registry of each server. You shouldn't change it unless you have done the following:
 
 - Identified specific servers that show evidence of an MCA issue.
 - Calculated a specific `MaxConcurrentApi` value for each affected server.
 
-If you change the value without following these rules, you might not fix the issue. In fact you could cause other problems.
+If you change the value without following these rules, you might not fix the issue. In fact, you could cause other problems.
 
 This article describes how to identify the servers that you should modify, using the following process:
 
@@ -44,7 +44,7 @@ The following table lists the types of data that you need for the methods that t
 | Error messages<br/> [More information about Netlogon logs and error messages](#more-information-about-netlogon-logs-and-error-messages) | Netlogon logs | Identifying an MCA issue |
 | Server connection messages | Netlogon logs | Identifying which domain controllers participate in authentication transactions |
 | Events<br/> [More information about events](#more-information-about-events) | System Event log<br/>Netlogon logs | Identifying an MCA issue<br/> Identifying possible causes of authentication delays |
-| Performance counters<br/> [More information aobut Netlogon performance counters](#more-information-about-netlogon-performance-counters) | Performance monitor<br/> Netlogon logs<br/> System event log | Identifying an MCA issue<br/> Tune MCA values |
+| Performance counters<br/> [More information about Netlogon performance counters](#more-information-about-netlogon-performance-counters) | Performance monitor<br/> Netlogon logs<br/> System event log | Identifying an MCA issue<br/> Tune MCA values |
 | Server-to-server transaction details, including domain controller interactions<br/> [How to start and stop network traces](#how-to-start-and-stop-network-traces) | netsh<br/> Network Monitor | Identifying which domain controllers participate in authentication transactions<br/> Identifying possible causes of authentication delays |
 | User reports | Users | Indicating that an MCA issue might be occurring |
 
@@ -85,7 +85,7 @@ The following table describes the most relevant counters (in Performance Monitor
 | --- | --- | --- |
 | **Semaphore Holders** | The number of threads that are holding the semaphore. This number can be any value up to the currently configured value of MaxConcurrentApi. | The number of people currently checking out at the cash registers in the grocery store. |
 | **Semaphore Waiters** | The number of threads that are waiting to obtain the semaphore. | The number of people waiting in line to check out. |
-| **Semaphore Timeouts** | The total number of times that a thread has timed out while waiting for the semaphore, over the lifetime of the secure channel (or since system startup). | The total number of people abandoned the line because they ran out of time to wait to check out (if the line was quicker, or there were more lines, this may not have happened). |
+| **Semaphore Timeouts** | The total number of times that a thread has timed out while waiting for the semaphore, over the lifetime of the secure channel (or since system startup). | The total number of people abandoned the line because they ran out of time to wait to check out (if the line was quicker, or there were more lines, this might not have happened). |
 | **Average Semaphore Hold Time** | The average time (measured in seconds) that the semaphore is held over the last sample | The average time it took a person to get through the line and check out |
 | **Semaphore Acquires** | The total number of times the semaphore has been obtained over the lifetime of the secure channel (or since system startup) | The total number of people that successfully checked out. |
 
@@ -95,10 +95,10 @@ The following table lists the events that are associated with MCA issues. You ca
 
 | Event source and ID | Event description | Related performance counters |
 | --- | --- | --- |
-| Netlogon 5816 | Netlogon has failed an authentication request of account \<*username*> in domain \<*user domain FQDN*>. The request timed out before it could be sent to domain controller \<*directly trusted domain controller FQDN*> in domain \<*directly trusted domain name*>. This is the first failure. If the problem continues, consolidated events will be logged about every \<*event log frequency in minutes*> minutes. | **Semaphore Timeouts** has a non-zero value.<br/>Authentication requests are failing. |
-| Netlogon 5817 | Netlogon has failed an additional \<*count*> authentication requests in the last \<*event log frequency in minutes*> minutes. The requests timed out before they could be sent to domain controller \<*directly trusted domain controller FQDN*> in domain \<*directly trusted domain name*>. | **Semaphore Timeouts** has a non-zero value.<br/>Authentication requests are failing. |
-| Netlogon 5818 | Netlogon took more than \<*warning event threshold*> seconds for an authentication request of account \<*username*> in domain \<*user domain FQDN*>, through domain controller \<*directly trusted domain controller FQDN*> in domain \<*directly trusted domain name*>. This is the first warning. If the problem persists, a recurring event will be logged every \<*event log frequency in minutes*> minutes. | **Semaphore Waiters** has a non-zero value.<br/>Authentication requests are slowing down. |
-| Netlogon 5819 | Netlogon took more than \<*warning event threshold*> seconds for \<*count*> authentication requests through domain controller \<*directly trusted domain controller FQDN*> in domain \<*directly trusted domain name*> in the last \<*event log frequency in minutes*> minutes. | **Semaphore Waiters** has a non-zero value.<br/>Authentication requests are slowing down. |
+| Netlogon 5816 | Netlogon has failed an authentication request of account \<*username*> in domain \<*user domain FQDN*>. The request timed out before it could be sent to domain controller \<*directly trusted domain controller FQDN*> in domain \<*directly trusted domain name*>. This is the first failure. If the problem continues, consolidated events will be logged about every \<*event log frequency in minutes*> minutes. | **Semaphore Timeouts** has a nonzero value.<br/>Authentication requests are failing. |
+| Netlogon 5817 | Netlogon has failed an additional \<*count*> authentication requests in the last \<*event log frequency in minutes*> minutes. The requests timed out before they could be sent to domain controller \<*directly trusted domain controller FQDN*> in domain \<*directly trusted domain name*>. | **Semaphore Timeouts** has a nonzero value.<br/>Authentication requests are failing. |
+| Netlogon 5818 | Netlogon took more than \<*warning event threshold*> seconds for an authentication request of account \<*username*> in domain \<*user domain FQDN*>, through domain controller \<*directly trusted domain controller FQDN*> in domain \<*directly trusted domain name*>. This is the first warning. If the problem persists, a recurring event will be logged every \<*event log frequency in minutes*> minutes. | **Semaphore Waiters** has a nonzero value.<br/>Authentication requests are slowing down. |
+| Netlogon 5819 | Netlogon took more than \<*warning event threshold*> seconds for \<*count*> authentication requests through domain controller \<*directly trusted domain controller FQDN*> in domain \<*directly trusted domain name*> in the last \<*event log frequency in minutes*> minutes. | **Semaphore Waiters** has a nonzero value.<br/>Authentication requests are slowing down. |
 
 > [!NOTE]  
 > Kerberos Event ID 7 might indicate an MCA issue. The event has the following description:  
@@ -111,9 +111,9 @@ For information about how to modify the logging frequency and warning threshold 
 
 ### More information about Netlogon logs and error messages
 
-When Netlogon logging is enabled on a server, The Netlogon service generates Netlogon.log and Netlogon.bak files. For more information, see [Enabling debug logging for the Net Logon service](/troubleshoot/windows-client/windows-security/enable-debug-logging-netlogon-service). You can use the error messages and events to identify MCA issues when they occur, to identify which domain controllers are responding to authentication requests, and to help identify trends in when issues occur.
+When Netlogon logging is enabled on a server, The Netlogon service generates Netlogon.log and Netlogon.bak files. For more information, see [Enabling debug logging for the Netlogon service](/troubleshoot/windows-client/windows-security/enable-debug-logging-netlogon-service). You can use the error messages and events to identify MCA issues when they occur, to identify which domain controllers are responding to authentication requests, and to help identify trends in when issues occur.
 
-You can use a text editor to review the log files. If Netlogon.bak files are available, review those as well as the Netlogon.log files. When an authentication request times out because of an MCA issue, you see a pattern of log entries that resembles the following excerpt:
+You can use a text editor to review the log files. If Netlogon.bak files are available, review those files as well as the Netlogon.log files. When an authentication request times out because of an MCA issue, you see a pattern of log entries that resembles the following excerpt:
 
 ```output  
 06/03 14:16:58 [LOGON] SamLogon: Network logon of <Domain>\User1 from WORKSTATION1 Entered  
@@ -122,7 +122,7 @@ You can use a text editor to review the log files. If Netlogon.bak files are ava
 06/03 14:17:43 [LOGON] SamLogon: Network logon of <Domain>\User1 from WORKSTATION1 Returns 0xC000005E  
 ```
 
-The first line documents the authentication request. The second line, 45 seconds later, documents the timeout.
+The first line of the excerpt records the authentication request. The second line, 45 seconds later, documents the timeout.
 
 > [!NOTE]  
 > In a typical log file, there may be hundreds of unrelated log entries between these two lines.  
@@ -154,11 +154,11 @@ An *authentication path* is the path from one server to the next that a Netlogon
 > [!IMPORTANT]  
 > Any of the servers along the authentication path might be a choke point where an MCA issue slows authentication requests. Additionally, more than one server might have an MCA issue at the same time.
 
-When the application server has to authenticate a user, the application server first tries to contact a "nearby" domain controller (within the same Active Directory logical site). If there isn't a domain controller within the same site, the application server sends the authentication request to any domain controller that's available in the local domain. If the use is not a member of the domain, the domain controller has to pass the request on. The system uses several criteria for determining where the request goes next:
+When the application server has to authenticate a user, the application server first tries to contact a "nearby" domain controller (within the same Active Directory logical site). If there isn't a domain controller within the same site, the application server sends the authentication request to any domain controller that's available in the local domain. If the user isn't a member of the domain, the domain controller has to pass the request on. The system uses several criteria for determining where the request goes next:
 
 - If the domain has a shortcut trust or external trust that connects to another domain, the next domain controller in the path belongs to the domain that the trust dictates.  
-- If the domain is not the forest root domain, the next domain controller belongs to the forest root domain.
-- If the user is a not a member of the forest root domain, that domain controller determines whether the user belongs to another domain in the same forest.
+- If the domain isn't the forest root domain, the next domain controller belongs to the forest root domain.
+- If the user isn't a member of the forest root domain, that domain controller determines whether the user belongs to another domain in the same forest.
 - If the user belongs to another domain in the forest, the next domain controller belongs to the user's domain.
 - If the user doesn't belong to the forest, the request goes next to the root domain of any trusted forest.
 - If the user's domain is in a trusted forest, a domain controller in that forest's root domain sends the request to a domain controller in the user's domain.
@@ -239,7 +239,7 @@ Each time a user accesses a web server resource, an authentication request follo
 
    Again, the domain B domain controller first tries to send the request to a domain controller in the same site, and if that doesn't work, it sends the request to any available domain controller in domain A.
 
-3. The domain A domain controller determines that the user doesn't belong to domain A, and that the user's domain is not in forest A. It forwards the authentication request across the forest trust to domain D (either a same-site domain controller, or any domain controller in the domain).
+3. The domain A domain controller determines that the user doesn't belong to domain A, and that the user's domain isn't in forest A. It forwards the authentication request across the forest trust to domain D (either a same-site domain controller, or any domain controller in the domain).
 
 4. The domain D domain controller determines that the user doesn't belong to domain D, but does belong to domain E in the same forest. It sends the request to domain E (either a same-site domain controller, or any domain controller in the domain).
 
@@ -292,36 +292,36 @@ This table covers possible choke points in a more generalized scope, just to pro
 
 #### Single forest scenarios
 
-| Example bottleneck scenarios | Possible choke points (aka where do I collect data?) |
+| Example bottleneck scenarios | Possible choke points (where do I collect data?) |
 | --- | --- |
 | Application server sending credentials for users in the same domain<br/><br/>Scenario details:<br/><ul><li>Users in Domain B</li><li>Application server in Domain B</li><li>Domain controllers in Domain B</li></ul> | <ul><li>Application server</li><li>Domain controller from Domain B (same logical and physical site)</li><li>Domain controller from Domain B (same logical site name; possibly remote physical site)</li><li>Domain controller from Domain B (different logical site name)</li></ul> |
-| Application server sending credentials for users in a different directly trusted domain (non-transitive external trust OR transitive trust with forest root)<sup>*</sup><br/><br/>Scenario details<br/><ul><li>Users in Domain A</li><li>Application server in Domain B</li><li>Domain controllers in Domain B</li><li>Domain Controllers in Domain A</li></ul> | <ul><li>Application server</li><li>Domain controller from Domain B (same logical and physical site)</li><li>Domain controller from Domain B (same logical site; possibly remote physical site)</li><li>Domain controller from Domain B (different logical site)</li><li>Domain controller from Domain A (same logical site name)</li><li>Domain controller from Domain A (different logical site name)</li></ul> |
+| Application server sending credentials for users in a different directly trusted domain (nontransitive external trust OR transitive trust with forest root)<sup>*</sup><br/><br/>Scenario details<br/><ul><li>Users in Domain A</li><li>Application server in Domain B</li><li>Domain controllers in Domain B</li><li>Domain Controllers in Domain A</li></ul> | <ul><li>Application server</li><li>Domain controller from Domain B (same logical and physical site)</li><li>Domain controller from Domain B (same logical site; possibly remote physical site)</li><li>Domain controller from Domain B (different logical site)</li><li>Domain controller from Domain A (same logical site name)</li><li>Domain controller from Domain A (different logical site name)</li></ul> |
 | Application server sending credentials for users in different a child domain (within the same forest)<br/><br/>Scenario details<br/><ul><li>Users in Domain C</li><li>Application server in Domain B</li><li>Domain controllers in Domain B</li><li>Domain Controllers in Domain C</li><li>Domain Controllers in Domain A (forest root)</li></ul> | <ul><li>Application server</li><li>Domain controller from Domain B (same physical site)</li><li>Domain controller from Domain B (same logical site; possibly remote physical site)</li><li>Domain controller from Domain B (different logical site)</li><li>Domain controller from Domain A (same logical site name)</li><li>Domain controller from Domain A (different logical site name)</li><li>Domain controller from Domain C (same logical site name)</li><li>Domain controller from Domain C (different logical site name)</li></ul> |
 
 \* This is the scenario that's described in [Example 2: Simple two-forest topology](#example-2-simple-two-forest-topology).
 
 #### Multi-forest scenarios
 
-| Example bottleneck scenarios | Possible choke points (aka where do I collect data?) |
+| Example bottleneck scenarios | Possible choke points (where do I collect data?) |
 | --- | --- |
 | Application server in child domain sending credentials for users in the forest root in a different forest (over a forest trust)<br/><br/>Scenario details<br/><ul><li>Users in Domain D</li><li>Application server in Domain B</li><li>Domain controllers in Domain B</li><li>Domain controllers in Domain A (forest root)</li><li>Domain controllers in Domain D (trusted forest root)</li></ul> | <ul><li>Application server</li><li>Domain controller from Domain B (same physical site)</li><li>Domain controller from Domain B (same logical site; possibly remote physical site)</li><li>Domain controller from Domain B (different logical site)</li><li>Domain controller from Domain A (same logical site name)</li><li>Domain controller from Domain A (different logical site name)</li><li>Domain controller from Domain D (same logical site name)</li><li>Domain controller from Domain D (different logical site name)</li></ul> |
 | Application server in child domain sending credentials for users in the child domain of a different forest (over a forest trust)<sup>*</sup><br/><br/>Scenario details:<br/><ul><li>Users in Domain E</li><li>Application server in Domain B</li><li>Domain controllers in Domain B</li><li>Domain controllers in Domain A (forest root)</li><li>Domain controllers in Domain D (trusted forest root)</li><li>Domain controllers in Domain E (child domain of trusted forest)</li></ul> | <ul><li>Application server</li><li>Domain controller from Domain B (same physical site)</li><li>Domain controller from Domain B (same logical site; possibly remote physical site)</li><li>Domain controller from Domain B (different logical site)</li><li>Domain controller from Domain A (same logical site name)</li><li>Domain controller from Domain A (different logical site name)</li><li>Domain controller from Domain D (same logical site name)</li><li>Domain controller from Domain D (different logical site name)</li><li>Domain controller from Domain E (same logical site name)</li><li>Domain controller from Domain E (different logical site name)</li></ul> |
-| And for a *slightly* more complex scenario, as I mentioned above this table...<br/><br/>A front-end/back-end application server configuration (such as Microsoft Exchange) in child domain sending credentials for users in the child domain of a different forest (over a forest trust)<br/><br/>Scenario details:<br/><ul><li>Users in Domain E</li><li>Application server in Domain B</li><li>Domain controllers in Domain B</li><li>Domain controllers in Domain A (forest root)</li><li>Domain controllers in Domain D (trusted forest root)</li><li>Domain controllers in Domain E (child domain of trusted forest)</li></ul> | <ul><li>Front-end application server</li><li>Back-end application server</li><li>Domain controller from Domain B (same physical site)</li><li>Domain controller from Domain B (same logical site; possibly remote physical site)</li><li>Domain controller from Domain B (different logical site)</li><li>Domain controller from Domain A (same logical site name)</li><li>Domain controller from Domain A (different logical site name)</li><li>Domain controller from Domain D (same logical site name)</li><li>Domain controller from Domain D (different logical site name)</li><li>Domain controller from Domain E (same logical site name)</li><li>Domain controller from Domain E (different logical site name)</li></ul> |
+| And for a *slightly* more complex scenario, as I mentioned above this table...<br/><br/>A front-end/back-end application server configuration (such as Microsoft Exchange) in a child domain that sends credentials for users in the child domain of a different forest (over a forest trust)<br/><br/>Scenario details:<br/><ul><li>Users in Domain E</li><li>Application server in Domain B</li><li>Domain controllers in Domain B</li><li>Domain controllers in Domain A (forest root)</li><li>Domain controllers in Domain D (trusted forest root)</li><li>Domain controllers in Domain E (child domain of trusted forest)</li></ul> | <ul><li>Front-end application server</li><li>Back-end application server</li><li>Domain controller from Domain B (same physical site)</li><li>Domain controller from Domain B (same logical site; possibly remote physical site)</li><li>Domain controller from Domain B (different logical site)</li><li>Domain controller from Domain A (same logical site name)</li><li>Domain controller from Domain A (different logical site name)</li><li>Domain controller from Domain D (same logical site name)</li><li>Domain controller from Domain D (different logical site name)</li><li>Domain controller from Domain E (same logical site name)</li><li>Domain controller from Domain E (different logical site name)</li></ul> |
 
 ## Preliminary investigation: Is there an MCA issue?
 
-After you've identified the potential choke points in your infrastructure, you can start collecting and analyzing data. The first priority is to identify whether there's actually an MCA issue. Later, you'll narrow down exactly which server (or servers) has a problem. 
+After you've identified the potential choke points in your infrastructure, you can start collecting and analyzing data. The first priority is to identify whether there's actually an MCA issue. Later, you narrow down exactly which server (or servers) has a problem. 
 
 > [!IMPORTANT]  
 > To collect data, enable Netlogon logging on *all* of the chokepoints that you identified in the previous section. If you have a large number of potential chokepoints, review both this section and the next section, [Narrowing your scope and identifying trends](#narrowing-your-scope-and-identifying-trends).
 
-To identify an MCA issue, you have to collect performance data while the servers are under heavy load. Heavy load occurs when the servers see the most client requests. For example, in an email server scenario, the best time to collect the performance data is when users arrive at work and check their email messages. Therefore, you must make sure that all servers in a given scenario have their performance data reviewed while they are busy servicing heavy loads.
+To identify an MCA issue, you have to collect performance data while the servers are under heavy load. Heavy load occurs when the servers see the most client requests. For example, in an email server scenario, the best time to collect the performance data is when users arrive at work and check their email messages. Therefore, you must make sure that all servers in a given scenario have their performance data reviewed while they're busy servicing heavy loads.
 
 ### Quick scan: Performance counters and event logs
 
-The Netlogon performance counters and event logs provide at-a-glance view of whether or not there is an issue. You might also be able to identify whether the problem is on the server that provided the data or another server within the same site or domain.
+The Netlogon performance counters and event logs provide at-a-glance view of whether or not there's an issue. You might also be able to identify whether the problem is on the server that provided the data or another server within the same site or domain.
 
-To help interpret the counter values, check whether the server that provided the data already has a non-default `MaxConcurrentApi` value. To do this, follow these steps:
+To help interpret the counter values, check whether the server that provided the data already has a nondefault `MaxConcurrentApi` value. To do this, follow these steps:
 
 1. Select **Start**, and then enter *regedit* in the **Search** bar. In the search results, select **Registry Editor**.
 1. Go to the following registry subkey:  
@@ -340,13 +340,13 @@ The following table lists events and counter values that you might see together 
 | --- | --- | --- |
 | N/A | **Semaphore Holders** is equal to the currently configured MCA setting on the local server. | The local server (or another server at the same level of the authentication chain) might have an MCA issue. |
 |5816<br/>5817 | **Semaphore Timeouts** has a non-zero value | Authentication timeouts are occurring. The local server might have an MCA issue. |
-| 5818<br/>5819 | **Semaphore Waiters** has a non-zero value that continues for any length of time<br/>&ndash;and&ndash;<br/> **Semaphore Holders** has a value that's less than the MCA setting on the local server | There might be an MCA issue on a different server in the authentication chain. |
+| 5818<br/>5819 | **Semaphore Waiters** has a nonzero value that continues for any length of time<br/>&ndash;and&ndash;<br/> **Semaphore Holders** has a value that's less than the MCA setting on the local server | There might be an MCA issue on a different server in the authentication chain. |
 
 ### Quick scan: Netlogon log files
 
-To use the Netlogon log files to identify an MCA issue, search the files for `Can't allocate client API slot`. You can do this by using a text editor such as Notepad, a script, or command-line commands. Use a non-case sensitive search. If this string appears in the log file, you have an MCA issue.
+To use the Netlogon log files to identify an MCA issue, search the files for `Can't allocate client API slot`. You can do this by using a text editor such as Notepad, a script, or command-line commands. Use a non case-sensitive search. If this string appears in the log file, you have an MCA issue.
 
-For example, if you have stored *netlogon.log* and *netlogon.bak* in the *c:\temp* folder, you can open a Command Prompt window and run the following commands:
+For example, if you stored *netlogon.log* and *netlogon.bak* in the *c:\temp* folder, you can open a Command Prompt window and run the following commands:
 
 ```console
 Find /I "Can't allocate client API slot" c:\temp\netlogon.log > c:\temp\MCA-detect-sample.txt
@@ -369,7 +369,7 @@ If the log files do contain the string, the results file, *MCA-detect-sample.txt
 > [!NOTE]  
 > In this excerpt, \<*Domain*> represents the domain that responded to the authentication request.  
 
-If you don't find any matches on a particular server, search the files for *0xC000005E*. This error code indicates that an authentication request has timed out, and it might indicate that one of the other computers that handled the authentication request has an MCA error. Use this information to identify the computers to examine next. If you're dealing with a large number of servers, see the next section for help in narrowing the scope of your analysis.
+If you don't find any matches on a particular server, search the files for *0xC000005E*. This error code indicates that an authentication request timed out, and it might indicate that one of the other computers that handled the authentication request has an MCA error. Use this information to identify the computers to examine next. If you're dealing with a large number of servers, see the next section for help with narrowing the scope of your analysis.
 
 ## Narrowing your scope and identifying trends
 
@@ -420,11 +420,11 @@ First, use the data for the **Semaphore Timeouts** counter to calculate the numb
 
 ### What's the volume of delayed requests?
 
-Look at the data for the **Semaphore Waiters** counter during the same interval. This counter tracks the requests that are waiting, but have not timed out yet. This information can indicate the magnitude of the issue.  
+Look at the data for the **Semaphore Waiters** counter during the same interval. This counter tracks the requests that are waiting, but haven't timed out yet. This information can indicate the magnitude of the issue.  
 
 :::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/perfmon-avg-max-semaphore-waiters.png" alt-text="Screenshot that shows a two-minute interval of semaphore timeout data in Performance Monitor.":::  
 
-In this case, during this interval there are up to 2,157 "waiters".
+In this case, during this interval there are up to 2,157 "waiters."
 
 ### Conclusion
 
