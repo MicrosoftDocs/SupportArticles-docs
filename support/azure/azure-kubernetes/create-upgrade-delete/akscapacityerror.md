@@ -20,9 +20,9 @@ When you try to create or start an AKS cluster, you receive one of the following
 
 > **Code:** AKSCapacityError
 >
-> **Message 1:** Creating a new free tier cluster is unavailable at this time in region \<Region\>. In order to create a new cluster, we recommend using an alternate region, or creating a paid tier cluster. For a list of all the Azure regions, visit <https://aka.ms/aks/regions>.
+> **Message 1:** Creating or starting a free tier cluster is unavailable at this time in region \<Region\>. To create a new cluster, we recommend using an alternate region, or create a paid tier cluster. For a list of all the Azure regions, visit <https://aka.ms/aks/regions>. For more details on this error, visit <https://aka.ms/akscapacityerror>.
 >
-> **Message 2:** Creating a new cluster or start cluster is unavailable at this time in region westeurope. To create a new cluster, we recommend using an alternate region. For a list of all the Azure regions, visit <https://aka.ms/aks/regions>.
+> **Message 2:** Creating a new cluster or starting cluster is unavailable at this time in region \<Region>. To create a new cluster, we recommend using an alternate region. For a list of all the Azure regions, visit <https://aka.ms/aks/regions>. For more details on this error, visit <https://aka.ms/akscapacityerror>.
 
 If you then try to do an operation on that cluster after it doesn't start, you receive the following error message:
 
@@ -50,7 +50,7 @@ This approach might not be feasible if you already have existing resources in th
 
 ### Solution 2: Try deploying a cluster that has different settings
 
-The underlays that host the AKS control planes have different allocation reservations. Therefore, the underlays for public AKS clusters might have more capacity than the overlays for private clusters. If you encounter the `AKSCapacityError` error when you try to create a private cluster, try to create a public cluster instead.
+The underlays that host the AKS control planes have different allocation reservations. Therefore, AKS might have more capacity for public clusters than for private clusters. If you encounter the `AKSCapacityError` error when you try to create a private cluster, try to create a public cluster instead.
 
 ### Solution 3: Use an Azure Enterprise subscription
 
@@ -61,10 +61,6 @@ When capacity is running low, we limit free tier AKS clusters for customers who 
 Capacity is often reclaimed when other users stop or delete their AKS clusters. Therefore, the operation might succeed if you retry it later.
 
 ## More information
-
-- Ensuring capacity for users is a top priority for Microsoft, and we're working around the clock to reach this goal. The increasing popularity of Azure services emphasizes the need for us to scale up our infrastructure even more rapidly. With that in mind, we're expediting expansions and improving our resource deployment process to respond to strong customer demand. We're also adding a large amount of compute infrastructure monthly.
-
-   We have identified several methods to improve how we load-balance under a high-resource-usage situation, and how to trigger the timely deployment of needed resources. Additionally, we're significantly increasing our capacity, and will continue to plan for strong demand across all regions. [This September 2021 Azure Blog article](https://azure.microsoft.com/blog/advancing-reliability-through-a-resilient-cloud-supply-chain/) discusses improvements that we're making toward delivering a resilient cloud supply chain.
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
 
