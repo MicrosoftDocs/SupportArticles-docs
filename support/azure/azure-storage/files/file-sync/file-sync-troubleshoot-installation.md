@@ -14,7 +14,7 @@ After deploying the Storage Sync Service, the next steps in deploying Azure File
 
 ## Agent installation
 
-<a id="agent-upgrade-hang"></a>**Agent update hangs**  
+<a id="agent-update-hangs"></a>**Agent update hangs**  
 When upgrading the Azure File Sync agent, you may experience one of the following symptoms if the agent update is hung: 
 - AfsUpdater.exe is hung at "installing updates" 
 - Agent installation is hung at "Stopping monitoring agent"  
