@@ -87,4 +87,4 @@ For more information about how domain controllers communicate and how to impleme
 - [Understanding Active Directory Site Topology](/windows-server/identity/ad-ds/plan/understanding-active-directory-site-topology)
 - [Domain Locator Across a Forest Trust](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/domain-locator-across-a-forest-trust/ba-p/395689)
 - [Domain Controller Location](/windows-server/identity/ad-ds/plan/domain-controller-location)
-- [How to optimize the location of a domain controller or global catalog that resides outside of a client's site](./windows-server/active-directory/optimize-dc-location-global-catalog.md)
+- [How to optimize the location of a domain controller or global catalog that resides outside of a client's site](../active-directory/optimize-dc-location-global-catalog.md)
