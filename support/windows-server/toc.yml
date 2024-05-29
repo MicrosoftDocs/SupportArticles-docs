@@ -1982,7 +1982,7 @@ items:
     - name: 'Overview: Identify and remediate MaxConcurrentApi issues that affect user authentication'
       href: ./networking/maxconcurrentapi-overview-identify-and-remediate-mca-issues.md
     - name: 'Part 1: Identify computers that have MCA issues'
-      href: ./networking/maxconcurrentapi-2-calculate-and-change-mca.md
+      href: ./networking/maxconcurrentapi-1-identify-computers-that-have-mca-issues.md
     - name: 'Part 2: Calculate and change MCA on your affected computers'
       href: ./networking/maxconcurrentapi-2-calculate-and-change-mca.md
     - name: 'Part 3: Troubleshoot the underlying causes of an MCA issue'
