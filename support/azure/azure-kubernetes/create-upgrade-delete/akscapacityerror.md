@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the AKSCapacityError error code
 description: Discusses how to troubleshoot the AKSCapacityError error when you create or start a Kubernetes cluster.
-ms.date: 03/27/2024
+ms.date: 05/29/2024
 author: axelgMS
 ms.author: axelg
 editor: v-jsitser
@@ -24,11 +24,21 @@ When you try to create or start an AKS cluster, you receive one of the following
 >
 > **Message 2:** Creating a new cluster or start cluster is unavailable at this time in region westeurope. To create a new cluster, we recommend using an alternate region. For a list of all the Azure regions, visit <https://aka.ms/aks/regions>.
 
+If you then try to do an operation on that cluster after it doesn't start, you receive the following error message:
+
+> **"statusCode":** "InternalServerError",
+>
+> **"serviceRequestId":** null,
+>
+> **"statusMessage":** "{**\"code\":** \"KubernetesAPICallFailed\", **\"message\":** \"API call to Kubernetes API Server failed.\"}.
+
 ## Cause
 
-You're trying to deploy a cluster in a region that has limited capacity. 
+You're trying to deploy a cluster in a region that has limited capacity.
 
 When you create or start an AKS cluster, Microsoft Azure allocates compute resources to your subscription. You might occasionally experience the `AKSCapacityError` error because of significant growth in demand for Azure Kubernetes Service in specific regions.
+
+The `KubernetesAPICallFailed` error message indicates that the AKS cluster didn't start and doesn't have an associated control plane. Therefore, calls to the API server are failing. In this case, you have to retry the Start operation.
 
 ## Resolution
 
