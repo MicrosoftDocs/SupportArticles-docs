@@ -1,5 +1,5 @@
 ---
-title: Your actual presence status isn't displayed in Teams
+title: The correct presence status isn't reflected in Teams
 description: Fixes an issue in which your actual presence status isn't displayed in Teams.
 author: helenclu
 ms.author: luche
@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 05/28/2024
 ---
 # The correct presence status isn't reflected in Teams
 
