@@ -4,7 +4,7 @@ description: Diagnoses and fixes common issues with the health probe mode featur
 ms.date: 05/29/2024
 ms.reviewer: niqi, cssakscic, v-weizhu
 ms.service: azure-kubernetes-service
-ms.custom:
+ms.custom: Node/node pool availability and performance
 ---
 # Troubleshoot issues when enabling the AKS cluster service health probe mode
 
@@ -93,9 +93,5 @@ To enable the health probe mode feature, run one of the following commands:
 - `az aks create/update --cluster-service-load-balancer-health-probe-mode Shared`
 
 - `az aks create/update --cluster-service-load-balancer-health-probe-mode ServiceNodePort (default)`
-
-## Differences when using the feature in upstream Kubernetes and AKS
-
-When you use the health probe mode feature in a Kubernetes cluster, the health-probe-proxy sidecar container monitors port 10356 and forwards to port 10256 (kube-proxy healthz server port).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)] 
