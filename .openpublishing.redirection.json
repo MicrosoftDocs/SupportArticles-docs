@@ -11144,6 +11144,11 @@
       "source_path": "support/windows-server/active-directory/distributed-file-system-hotfixes.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/distributed-file-system-hotfixes",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/guest-access-in-smb2-is-disabled-by-default.md",
+      "redirect_url": "/windows-server/storage/file-server/enable-insecure-guest-logons-smb2-and-smb3",
+      "redirect_document_id": false
     }
   ]
 }
