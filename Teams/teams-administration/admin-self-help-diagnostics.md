@@ -3,7 +3,7 @@ title: Self-help diagnostics for Teams administrators
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 05/14/2024
+ms.date: 05/28/2024
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -15,9 +15,10 @@ appliesto:
 ms.custom: 
   - sap:Teams Admin\TAC (Teams Admin Center)
   - CI 124054
+  - CI 188816
   - CSSTroubleshoot
 ms.reviewer: salarson
-description: Describes how to run self-help diagnostics for Teams administrators
+description: Describes how to run self-help diagnostics for Teams administrators.
 ---
 
 # Self-help diagnostics for Microsoft Teams administrators
