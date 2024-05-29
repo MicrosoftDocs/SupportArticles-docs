@@ -642,7 +642,7 @@ To troubleshoot the issues that are mentioned in the error message, use the foll
 
    For example, the command output might list the following role assignments:
 
-   :::image type="content" source="media/troubleshoot-free-busy-errors/role-assignments.png" alt-text="Screenshot of the role-assignments command output." lightbox="media/troubleshoot-free-busy-errors/role-assignments-lrg.png":::
+   :::image type="content" source="media/resolve-free-busy-errors/role-assignments.png" alt-text="Screenshot of the role-assignments command output." lightbox="media/resolve-free-busy-errors/role-assignments-lrg.png":::
 
 3. Search the following logs for the issues that are stated in the error message:
 

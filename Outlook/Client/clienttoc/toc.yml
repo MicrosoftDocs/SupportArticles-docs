@@ -113,8 +113,8 @@
           href: ../calendaring/from-field-in-meeting-request-not-list-all-accounts.md
         - name: Time zones that do not observe daylight saving time
           href: ../calendaring/time-zones-that-do-not-observe-daylight-saving-time.md
-        - name: Troubleshoot free/busy errors
-          href: ../calendaring/troubleshoot-free-busy-errors.md
+        - name: Resolve free/busy errors
+          href: ../calendaring/resolve-free-busy-errors.md
         - name: Unable to view free/busy information
           href: ../calendaring/cannot-view-free-busy-information.md
         - name: Wrong holidays in .hol files
