@@ -53,7 +53,7 @@ The following table lists the types of data that you need for the methods that t
 
 ### How to start and stop network traces
 
-You can use the Windows native [netsh](https://docs.microsoft.com/windows-server/networking/technologies/netsh/netsh) utility to collect network traces. To start tracing, open a  Command Prompt window on the affected server, and then enter the following command:
+You can use the Windows native [Network shell (netsh)](/windows-server/networking/technologies/netsh/netsh) utility to collect network traces. To start tracing, open a Command Prompt window on the affected server, and then enter the following command:
 
 ```console
 netsh trace start capture=yes tracefile=c:\temp\<Filename>.etl
@@ -260,7 +260,7 @@ Depending on the site topology, the following servers are the potential chokepoi
 
 Consider the following topology:  
 
-:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/two-domain-external-trust-auth-path.svg" alt-text="Diagram that shows how authentication requests travel from child domains to the root domain in a two-forest topology.":::  
+:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/two-domain-external-trust-auth-path.svg" alt-text="Diagram that shows how authentication requests travel between two domains that have an external trust relationship.":::  
 
 Domain A and domain D have an external trust. The web server in domain A services users from domain D and uses NTLM authentication.
 
@@ -422,7 +422,7 @@ First, use the data for the **Semaphore Timeouts** counter to calculate the numb
 
 Look at the data for the **Semaphore Waiters** counter during the same interval. This counter tracks the requests that are waiting, but haven't timed out yet. This information can indicate the magnitude of the issue.  
 
-:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/perfmon-avg-max-semaphore-waiters.png" alt-text="Screenshot that shows a two-minute interval of semaphore timeout data in Performance Monitor.":::  
+:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/perfmon-avg-max-semaphore-waiters.png" alt-text="Screenshot that shows a two-minute interval of semaphore waiters data in Performance Monitor.":::  
 
 In this case, during this interval there are up to 2,157 "waiters."
 
