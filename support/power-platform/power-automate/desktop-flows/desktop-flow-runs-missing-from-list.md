@@ -2,7 +2,7 @@
 title: Desktop flow runs are not shown in the list
 description: Provides a resolution for the issue that you can't see some desktop flow runs when viewing the list of all desktop flow runs in Power Automate.
 ms.reviewer: pefelesk
-ms.date: 05/30/2024
+ms.date: 05/31/2024
 ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Some desktop flow runs are missing from the list
