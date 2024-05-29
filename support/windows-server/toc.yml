@@ -205,8 +205,6 @@ items:
       href: ./active-directory/disable-knowledge-consistency-checker-automatic-generation.md
     - name: Duplicate AD replication connections are created
       href: ./active-directory/duplicate-active-directory-replication-connections.md
-    - name: Hotfixes for DFS technologies
-      href: ./active-directory/distributed-file-system-hotfixes.md
     - name: How to restrict RPC traffic to a specific port
       href: ./active-directory/restrict-ad-rpc-traffic-to-specific-port.md
     - name: lingering objects in a Windows Server Active Directory forest
