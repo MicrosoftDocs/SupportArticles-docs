@@ -4,7 +4,7 @@ description: Diagnoses and fixes common issues with the health probe mode featur
 ms.date: 05/29/2024
 ms.reviewer: niqi, cssakscic, v-weizhu
 ms.service: azure-kubernetes-service
-ms.custom:
+ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot issues when enabling the AKS cluster service health probe mode
 
