@@ -41,3 +41,7 @@ To resolve this error, follow these steps:
 1. Look for the **Deny access to this computer from the network** policy setting.
 
    Check the *secpol.msc* file to determine whether the user account (or any group that the user might belong to) exists in the security policy settings.
+
+## More information
+
+[Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)
