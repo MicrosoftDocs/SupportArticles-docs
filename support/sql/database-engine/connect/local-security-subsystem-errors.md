@@ -37,3 +37,7 @@ To resolve the LSASS errors, follow these steps:
 1. Check whether your Service Principal Name (SPN) is registered correctly on the domain controller (DC).
 
 1. Use the `setspn -Q` or `setspn -L` command to query your SPN and SPNs, respectively, in your account.
+
+## More information
+
+[Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)
