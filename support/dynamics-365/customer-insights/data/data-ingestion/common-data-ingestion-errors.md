@@ -129,11 +129,11 @@ Symptoms of the incorrect locale issue:
 
   The source data is formatted as "MM/DD/YYY" while the default locale used to parse the data during ingestion uses "DD/MM/YYY". As a result, "Dec 8, 2023" is ingested as "Aug 12, 2023".  
 
-  :::image type="content" source="media/common-data-ingestion-errors/power-query-date-locale-issue.png" alt-text="The date time format is incorrect after ingestion.":::
+  :::image type="content" source="media/common-data-ingestion-errors/power-query-date-locale-issue.png" alt-text="The date time format is incorrect after ingestion." lightbox="media/common-data-ingestion-errors/power-query-date-locale-issue.png":::
 
   To fix this issue, change the type of all date time fields to use the correct locale using **Change type** > **Using locale**.
 
-  :::image type="content" source="media/common-data-ingestion-errors/change-type-using-locale.png" alt-text="Screenshot that shows how to change data type with locale in Power Query.":::
+  :::image type="content" source="media/common-data-ingestion-errors/change-type-using-locale.png" alt-text="Screenshot that shows how to change data type with locale in Power Query." lightbox="media/common-data-ingestion-errors/change-type-using-locale.png":::
 
   For more information, see [Document or project locale](/power-query/data-types#document-or-project-locale).
   
