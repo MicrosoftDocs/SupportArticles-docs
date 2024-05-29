@@ -119,11 +119,11 @@ The most common data type mismatch occurs when a date field isn't set to the cor
 
 The source data is formatted as "MM/DD/YYY" while the default locale used to parse the data during ingestion uses "DD/MM/YYY" causing Dec 8, 2023 to be ingested as "Aug 12, 2023".  
 
-:::image type="content" source="media/PQO_Locale_Issue.jpg" alt-text="Change data type with locale in PQO":::
+:::image type="content" source="media/common-data-ingestion-errors/power-query-date-locale-issue.png" alt-text="Change data type with locale in PQO":::
 
 To fix this issue, change the type of all date time fields to use the correct locale using **Change type** > **Using locale**.
 
-:::image type="content" source="media/ChangeType_In_PQO.jpg" alt-text="Date time value default parsing":::
+:::image type="content" source="media/common-data-ingestion-errors/change-type-using-locale.png" alt-text="Date time value default parsing":::
 
 Symptoms of incorrect locale include:
  - When the source data can't be parsed by the locale used causing an ingestion failure. For example: 29/08/2023 is parsed with MM/DD/YYYY, it fails as it can't parse month 29.
