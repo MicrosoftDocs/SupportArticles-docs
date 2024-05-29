@@ -7,6 +7,8 @@ items:
   href: troubleshoot-ssl-errors-login-process.md
 - name: Cannot generate SSPI context
   href: cannot-generate-sspi-context-error.md
+- name: Change NETMON parser port for SQL Server
+  href: change-netmon-parser-port-for-sql-server.md
 - name: Consistent authentication connectivity issues
   href: consistent-authentication-connectivity-issues.md
 - name: Consistent SQL network connectivity issue
