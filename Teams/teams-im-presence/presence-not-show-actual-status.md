@@ -1,5 +1,5 @@
 ---
-title: Your actual presence status isn't displayed in Teams
+title: The correct presence status isn't reflected in Teams
 description: Fixes an issue in which your actual presence status isn't displayed in Teams.
 author: helenclu
 ms.author: luche
@@ -10,67 +10,58 @@ localization_priority: Normal
 ms.custom: 
   - sap:Teams People & Presence\Presence from Teams
   - CI 126266
+  - CI 188840
   - CSSTroubleshoot
 ms.reviewer: sylviebo, premgan
 appliesto: 
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 05/28/2024
 ---
-# Your actual presence status isn't reflected in Teams
+# The correct presence status isn't reflected in Teams
 
-## Symptoms
+In Microsoft Teams, your presence status is shown incorrectly. For example, your presence status changes to **Away** if your desktop is inactive for more than five minutes. However, when you resume activity on your desktop, your presence status doesn't change to **Available**.
 
-In Microsoft Teams, your presence status is shown incorrectly. For example, your presence status changes to **Away** if your desktop is inactive for more than 5 minutes. However, when you resume activity on your desktop, your presence status doesn't immediately change to **Available**.
-
-**Note:** Your desktop is inactive in these scenarios:
+**Note:** Your desktop is inactive in the following scenarios:
 
 - You lock your computer.
 - The computer enters idle or sleep mode.
-- The Teams mobile app is running in the background.
+- You're actively using the Teams mobile app instead of Teams on the desktop.
 
-## Cause
+To identify the cause of the issue, use one of the following methods.
 
-This issue occurs if the latest Teams updates aren't installed.
+## Method 1: Run a connectivity test
 
-## Workaround
-
-Try the first workaround, and check whether the issue is resolved. If it isn't, go to the second workaround.
-
-### Workaround 1
-
-Update Teams: Select your profile picture at the top of the app, and then select **Check for updates**.
-
-### Workaround 2
-
-After your desktop resumes from an inactive to an active state, wait three minutes, and then check whether your presence status is updated.
+Both administrators and non-administrators can run the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test verifies the requirements to update a user’s presence status in Teams based on their calendar events in Microsoft Outlook.
 
 > [!NOTE]
-> For users whose mailbox is hosted on-premises, it's expected to have presence delays with a maximum of an hour.
+> The Microsoft Remote Connectivity Analyzer tool isn't available for the GCC and GCC High Microsoft 365 Government environments.
 
-For more information, see [User presence in Teams](/microsoftteams/presence-admins).
+Follow these steps:
 
-If neither workaround fixes the issue, open a support ticket that contains the following information:
+1. Open a web browser and navigate to the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) test.
+1. Sign in by using the credentials of the affected user account.
+1. Enter the verification code that's displayed, and then select **Verify**.
+1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**.
 
-**Note:** This step must be performed by administrators.
+After the test is finished, the screen displays details about the checks that were performed and whether the test succeeded, failed, or was successful but displayed a few warnings. Select the provided links for more information about the warnings and failures and how to resolve them.
 
-- Sign-in address of the user.
-- The desktop and debug logs. For more information about the logs, see [Use log files in troubleshooting Microsoft Teams](/microsoftteams/log-files).
-- The UTC time at which you might expect that the presence indicator shows the user's actual status. For the example that's described in the "Symptoms" section, this would be when you expect that the presence status would show **Available** instead of **Away**. Verify that the UTC time is captured in the collected logs.
+## Method 2: Run a self-help diagnostic
 
-### Run a self-diagnostics tool
-
-Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues that affect user presence.
+If you're an administrator, you can run the [Teams Presence](https://aka.ms/TeamsPresenceDiag) diagnostic in the Microsoft 365 admin center to verify the requirements to display a user's presence status in Teams.
 
 > [!NOTE]
 > This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-Select the **Run Tests** link. This will populate the diagnostic in the Microsoft 365 admin center.
+Follow these steps:
 
-> [!div class="nextstepaction"]
-> [Run Tests: Teams presence](https://aka.ms/TeamsPresenceDiag)
+1. Select the **Run Tests** button to populate the diagnostic in the Microsoft 365 admin center:
 
-## More information
+   > [!div class="nextstepaction"]
+   > [Run Tests: Teams Presence](https://aka.ms/TeamsPresenceDiag)
+1. In the **Username or Email** field, enter the email address of the affected user, and then select **Run Tests**.
+
+After the diagnostic is finished, select the provided links to resolve the issues that were found.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
