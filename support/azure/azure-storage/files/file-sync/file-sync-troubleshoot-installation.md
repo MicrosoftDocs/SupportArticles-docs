@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 03/05/2024
+ms.date: 05/29/2024
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
