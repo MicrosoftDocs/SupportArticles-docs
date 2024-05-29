@@ -1,7 +1,7 @@
 ---
 title: Use Group Policy to enable a disabled by default update
 description: Describes how to configure Group Policy to enable an update that's disabled by default.
-ms.date: 05/27/2024
+ms.date: 05/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
