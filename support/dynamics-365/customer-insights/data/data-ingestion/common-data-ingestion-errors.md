@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot ingestion errors or corrupt data
 description: Introduces common reasons of data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Dynamics 365 Customer Insights - Data.
-ms.date: 02/23/2024
+ms.date: 05/29/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
@@ -113,23 +113,30 @@ In a *manifest.json* file, the `datetime` format can be specified at the table l
 
 ## Ingestion errors or corrupt data with Power Query
 
-### Date/Time values parsing error or parsed incorrectly
+### Date/Time values are parsed incorrectly or a parsing failure occurs 
 
-The most common data type mismatch occurs when a date field isn't set to the correct date format. This mismatch can be caused by either: the source data isn't formatted correctly OR the locale is incorrect. To fix an incorrect format, update the data at the source and reingest. To fix an incorrect locale, adjust the locale in the Power Query transformations. For example:
+The most common data type mismatch occurs when a date field isn't set to the correct date format. This mismatch can be caused by the incorrectly formatted source data or an incorrect [locale](/power-query/data-types#document-or-project-locale).
 
-The source data is formatted as "MM/DD/YYY" while the default locale used to parse the data during ingestion uses "DD/MM/YYY" causing Dec 8, 2023 to be ingested as "Aug 12, 2023".  
+Symptoms of the incorrect locale issue:
 
-:::image type="content" source="media/common-data-ingestion-errors/power-query-date-locale-issue.png" alt-text="Change data type with locale in PQO":::
+- When the source data can't be parsed by the locale used, an ingestion failure occurs. For example: "29/08/2023" is parsed with "MM/DD/YYYY", it fails because it can't parse month 29.
+- When the source data is parsed successfully using an incorrect locale, but the date time values are incorrect. For example: "Dec 8, 2023" is ingested as "Aug 12, 2023".
 
-To fix this issue, change the type of all date time fields to use the correct locale using **Change type** > **Using locale**.
+#### Resolution
 
-:::image type="content" source="media/common-data-ingestion-errors/change-type-using-locale.png" alt-text="Date time value default parsing":::
+- To fix an incorrect format, update the source data and reingest.
+- To fix an incorrect locale, adjust the locale in the Power Query transformations. For example:
 
-Symptoms of incorrect locale include:
- - When the source data can't be parsed by the locale used causing an ingestion failure. For example: 29/08/2023 is parsed with MM/DD/YYYY, it fails as it can't parse month 29.
- - When the source data is parsed successfully using an incorrect locale, but the date time values become incorrect. For example: Dec 8, 2023 is ingested as Aug 12, 2023.
+  The source data is formatted as "MM/DD/YYY" while the default locale used to parse the data during ingestion uses "DD/MM/YYY". As a result, "Dec 8, 2023" is ingested as "Aug 12, 2023".  
 
-Learn more: [Document or project locale](/power-query/data-types#document-or-project-locale).
+  :::image type="content" source="media/common-data-ingestion-errors/power-query-date-locale-issue.png" alt-text="The date time format is incorrect after ingestion.":::
+
+  To fix this issue, change the type of all date time fields to use the correct locale using **Change type** > **Using locale**.
+
+  :::image type="content" source="media/common-data-ingestion-errors/change-type-using-locale.png" alt-text="Screenshot that shows how to change data type with locale in Power Query.":::
+
+  For more information, see [Document or project locale](/power-query/data-types#document-or-project-locale).
+  
 ## More information
 
 - [Connect to data in Azure Data Lake Storage](/dynamics365/customer-insights/data/connect-common-data-model)
