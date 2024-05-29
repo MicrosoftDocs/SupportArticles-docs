@@ -28,7 +28,7 @@ ms.date: 05/29/2024
 
 # Resolve free/busy errors
 
-To troubleshoot an error that's related to free/busy information, select the applicable error message from the following sections.
+To troubleshoot an error that's related to free/busy information, select the applicable error message from the table of contents (TOC) at the top of this article.
 
 If the troubleshooting steps don't help you resolve the issue, contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=2189021).
 
@@ -87,6 +87,8 @@ After you complete each step, check whether the free/busy issue is fixed.
 
 5. Make sure that the `TargetApplicationUri` parameter value in the organization relationship matches the `AccountNamespace` parameter value in the [federated organization identifier](/powershell/module/exchange/set-federatedorganizationidentifier). To find the `TargetApplicationUri` parameter value, run the [Test-OrganizationRelationship](/powershell/module/exchange/test-organizationrelationship) PowerShell cmdlet. To find the `AccountNamespace` parameter value, see [Demystifying hybrid free/busy](https://techcommunity.microsoft.com/t5/exchange-team-blog/demystifying-hybrid-free-busy-what-are-the-moving-parts/ba-p/607704).
 
+[Back to top](#resolve-freebusy-errors)
+
 ## Proxy web request failed: Unable to connect to the remote server
 
 ### Issue
@@ -128,6 +130,8 @@ After you complete each step, check whether the free/busy issue is fixed.
    - If only a few cloud users are affected by this issue, and their mailboxes are hosted on the same mail server in Exchange Online, check whether that mail server can connect to on-premises endpoints. It's possible that an on-premises endpoint blocks connections from the outbound external IP address of that mail server.
 
    - When you're prompted for credentials, enter your domain administrator credentials in "domain\administrator" format.
+
+[Back to top](#resolve-freebusy-errors)
 
 ## Autodiscover failed for email address: HTTP status 404
 
@@ -175,6 +179,8 @@ After you complete each step, check whether the free/busy issue is fixed.
 
    **Note**: The `AutodiscoverDiscoveryHander` mapping (*.svc) isn't used for federation free/busy lookup.
 
+[Back to top](#resolve-freebusy-errors)
+
 ## Exception proxy web request failed
 
 **LID: 43532**
@@ -202,6 +208,8 @@ To fix the issue, follow these steps:
    For more information about how to use LDP.exe or Active Directory Users and Computers to find Active Directory objects, see [LDP examples](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771022(v=ws.11)).
 
 2. Change the duplicate address or delete the duplicate user object.
+
+[Back to top](#resolve-freebusy-errors)
 
 ## An existing connection was forcibly closed by the remote host
 
@@ -247,6 +255,8 @@ After you complete each step, check whether the free/busy issue is fixed.
    3. Run the `iisreset /noforce` command in a PowerShell or Command Prompt window on each on-premises Exchange server to restart IIS.
 
 5. If only a few cloud users are affected by this issue, and their mailboxes are hosted on the same mail server in Exchange Online, check whether that mail server can connect to on-premises endpoints. It's possible that an on-premises endpoint blocks connections from the outbound IP address of that mail server.
+
+[Back to top](#resolve-freebusy-errors)
 
 ## Configuration information for forest/domain could not be found in Active Directory
 
@@ -308,6 +318,8 @@ After you complete each step, check whether the free/busy issue is fixed.
         ```
 
 2. Make sure that your hybrid Exchange deployment has a full hybrid configuration. If it's necessary, rerun the Hybrid Configuration Wizard (HCW) and select **Full Hybrid Configuration** instead of **Minimal Hybrid Configuration.** A [minimal hybrid configuration](https://techcommunity.microsoft.com/t5/exchange-team-blog/hcw-improvement-the-minimal-hybrid-configuration-option/ba-p/605072) doesn't create an organization relationship (federation trust) or intra-organization connectors.
+
+[Back to top](#resolve-freebusy-errors)
 
 ## Proxy web request failed: HTTP status 401
 
@@ -379,6 +391,8 @@ To troubleshoot the free/busy issue regardless of which error message you receiv
 
    For an up-to-date federation trust, make sure that the `ApplicationIdentifier` is `260563` and not `292841`, and that the `ApplicationUri` is `outlook.com` and not `outlook.live.com`. If you have an outdated federation trust, contact [Microsoft Support](https://support.microsoft.com/contactus).
 
+[Back to top](#resolve-freebusy-errors)
+
 ## Autodiscover failed for email address: InvalidUser
 
 **LID: 33676**
@@ -413,6 +427,8 @@ This error can occur if the cloud mailbox or Autodiscover endpoint is misconfigu
    ```
 
    After you set the `TargetSharingEpr` parameter value, the cloud mailbox bypasses Autodiscover and connects directly to the EWS endpoint of the on-premises mailbox.
+
+[Back to top](#resolve-freebusy-errors)
 
 ## The caller does not have access to free/busy data
 
@@ -452,6 +468,8 @@ After you complete each step, check whether the free/busy issue is fixed.
 
      Verify that the cloud organization relationship specifies the on-premises domain that can access the cloud free/busy information. An example on-premises domain is `contoso.com`. For information about how to modify the organization relationship in Exchange Online, see [Use Exchange Online PowerShell to modify the organization relationship](/exchange/sharing/organization-relationships/modify-an-organization-relationship). Also verify that the **From** email address of the on-premises user has the same on-premises domain, for example `lucine.homsi@contoso.com`.
 
+[Back to top](#resolve-freebusy-errors)
+
 ## An error occurred when processing the security tokens in the message
 
 **LID: 59916**
@@ -482,6 +500,8 @@ This error can occur if the certificates or metadata in the Microsoft Federation
    ```
 
    For more information, see [Free/busy lookups stop working](/exchange/troubleshoot/calendars/freebusy-lookups-stop-working).
+
+[Back to top](#resolve-freebusy-errors)
 
 ## The cross-organization request is not allowed because the requester is from a different organization
 
@@ -518,6 +538,8 @@ A user might encounter a similar issue in the following scenario:
 - Autodiscover for the hybrid tenant points to Exchange Online.
 
 For example, a user in a nonhybrid Exchange Server tenant can't view the free/busy information for on-premises user `chanok@contoso.com` in a hybrid tenant because Autodiscover for `contoso.com` points to Exchange Online (`autodiscover-s.outlook.com`).
+
+[Back to top](#resolve-freebusy-errors)
 
 ## The request failed with HTTP status 401: Unauthorized (missing signing certificate)
 
@@ -591,6 +613,8 @@ To fix the issue, follow these steps:
    Set-AuthConfig -ClearPreviousCertificate
    ```
 
+[Back to top](#resolve-freebusy-errors)
+
 ## The application is missing a linked account for RBAC roles, or the linked account has no RBAC role assignments, or the calling users account is logon disabled
 
 ### Issue
@@ -655,6 +679,8 @@ To troubleshoot the issues that are mentioned in the error message, use the foll
    - [Some applications and APIs require access to authorization information on account objects](/troubleshoot/windows-server/identity/apps-apis-require-access)
 
    - [Access checks fail because of AuthZ](/troubleshoot/windows-server/group-policy/authz-fails-access-denied-error-application-access-check)
+
+[Back to top](#resolve-freebusy-errors)
 
 ## The entered and stored passwords do not match
 
@@ -767,6 +793,8 @@ To fix the issue, follow these steps:
      Get-Mailbox -Identity <cloud mailbox> | FL UserPrincipalName,ImmutableId
      ```
 
+[Back to top](#resolve-freebusy-errors)
+
 ## The password has to be changed or the password for the account has expired
 
 ### Issue
@@ -826,6 +854,8 @@ Set-MsolUserPassword -UserPrincipalName <UPN> -ForceChangePassword $false
 
 For more information, see [Can't see free/busy information after migrated from Exchange on-premises](https://support.microsoft.com/topic/can-t-see-free-busy-information-after-migrated-from-exchange-on-premises-to-online-4dc6f43d-da4f-78ce-65cb-7c2b752c15e3).
 
+[Back to top](#resolve-freebusy-errors)
+
 ## Provision is needed before federated account can be logged in
 
 ### Issue
@@ -868,6 +898,8 @@ To fix the issue, update the user principal name (UPN) of the cloud user to use 
   Set-MsolUserPrincipalName -UserPrincipalName <original UPN> -NewUserPrincipalName <temporary UPN>
   Set-MsolUserPrincipalName -UserPrincipalName <temporary UPN> -NewUserPrincipalName <original UPN>
   ```
+
+[Back to top](#resolve-freebusy-errors)
 
 ## The request timed out
 
@@ -957,6 +989,8 @@ After you complete each step, check whether the free/busy issue is fixed.
    2. Find the entry in the EWS logs, and check the value in the `time-taken` column. The EWS logs are located in the _%ExchangeInstallPath%\Logging\Ews_ folder.
 
    3. Check the IIS logs in the _W3SVC1_ folder of the default website to verify that the free/busy request is logged. The _W3SVC1_ folder path is `%SystemDrive%\inetpub\logs\LogFiles\W3SVC1`.
+
+[Back to top](#resolve-freebusy-errors)
 
 ## The specified member name is either invalid or empty
 
@@ -1101,6 +1135,8 @@ After you complete each step, check whether the free/busy issue is fixed.
 
    2. Re-create the federation trust. For more information, see [Remove a federation trust](/exchange/remove-a-federation-trust-exchange-2013-help) and [Configure a federation trust](/exchange/configure-a-federation-trust-exchange-2013-help).
 
+[Back to top](#resolve-freebusy-errors)
+
 ## The result set contains too many calendar entries
 
 **LID: 54796**
@@ -1118,6 +1154,8 @@ This error occurs if the number of calendar entries in a single timeslot exceeds
 Remove some of the calendar items from the timeslot so as not to exceed the limit of 1,000 items that can be retrieved in a single free/busy request.
 
 For more information, see [You can't view free/busy information on another user's Calendar in Exchange Online](/exchange/troubleshoot/calendars/cannot-view-another-user-calendar-free-busy-information).
+
+[Back to top](#resolve-freebusy-errors)
 
 ## Work hours start time must be less than or equal to end time
 
@@ -1153,6 +1191,8 @@ To fix the issue, follow these steps:
    ```
 
    For more information, see [Set-MailboxCalendarConfiguration](/powershell/module/exchange/set-mailboxcalendarconfiguration).
+
+[Back to top](#resolve-freebusy-errors)
 
 ## The request failed with HTTP status 401: Unauthorized (token has an invalid signature)
 
@@ -1207,6 +1247,8 @@ After you complete each step, check whether the free/busy issue is fixed.
    ```
 
    If the Microsoft authorization server settings aren't valid, try rerunning the Hybrid Configuration Wizard to reset the Microsoft authorization server settings to valid values.
+
+[Back to top](#resolve-freebusy-errors)
 
 ## The request failed with HTTP status 401: Unauthorized (key was not found)
 
@@ -1297,6 +1339,8 @@ To fix the issue, use the following steps:
    Set-AuthConfig -ServiceName "00000002-0000-0ff1-ce00-000000000000"
    ```
 
+[Back to top](#resolve-freebusy-errors)
+
 ## Proxy web request failed: Response is not well-formed XML
 
 ### Issue
@@ -1323,6 +1367,8 @@ After you complete each step, check whether the free/busy issue is fixed.
    If you don't find those entries, check the reverse proxy and firewall logs to determine where the free/busy request got stuck.
 
 2. Perform a free/busy query, and then search the Exchange Server application log in the Windows Event Viewer for entries that were made at the time of the query to help narrow down the cause of the issue.
+
+[Back to top](#resolve-freebusy-errors)
 
 ## Unable to connect to the remote server
 
@@ -1390,6 +1436,8 @@ After you complete each step, check whether the free/busy issue is fixed.
 
         The browser should display the HTTP status code `400 Bad Request` or the sign-in error message, "Sorry, but we're having trouble signing you in."
 
+[Back to top](#resolve-freebusy-errors)
+
 ## Autodiscover failed for email address: The remote name could not be resolved
 
 ### Issue
@@ -1436,6 +1484,8 @@ After you complete each step, check whether the free/busy issue is fixed.
    > [!NOTE]
    > If you set the `TargetSharingEpr` parameter value, the cloud mailbox bypasses Autodiscover and connects directly to the EWS endpoint.
 
+[Back to top](#resolve-freebusy-errors)
+
 ## Failed to get ASURL. Error 8004010F
 
 ### Issue
@@ -1468,6 +1518,8 @@ After you complete each step, check whether the free/busy issue is fixed.
 
    If the command fails to retrieve a delegation token, check whether the server can connect to Office 365 at the proxy or firewall level.
 
+[Back to top](#resolve-freebusy-errors)
+
 ## Proxy web request failed: Object moved
 
 ### Issue
@@ -1495,6 +1547,8 @@ To fix the issue, run either of the following commands to manually update the `T
 
 - `Set-IntraOrganizationConnector <cloud connector ID> -TargetSharingEpr <external EWS URL>`
 - `Set-OrganizationRelationship <O365 to On-premises*> -TargetSharingEpr <external EWS URL>`
+
+[Back to top](#resolve-freebusy-errors)
 
 ## The request was aborted: Could not create SSL/TLS secure channel
 
@@ -1529,6 +1583,8 @@ For information about how to check for certificates in the trusted root CA store
 
 For information about supported TLS cipher suites, see [TLS cipher suites supported by Microsoft 365](/purview/technical-reference-details-about-encryption).
 
+[Back to top](#resolve-freebusy-errors)
+
 ## The user specified by the user-context in the token does not exist
 
 ### Issue
@@ -1544,6 +1600,8 @@ The error might occur if the on-premises user mailbox and the corresponding mail
 ### Resolution
 
 To fix the issue, use [Microsoft Entra Connect](/entra/identity/hybrid/connect/whatis-azure-ad-connect) to sync the on-premises user and the corresponding mail-user object in Microsoft Entra ID.
+
+[Back to top](#resolve-freebusy-errors)
 
 ## The hostname component of the audience claim value is invalid
 
@@ -1588,6 +1646,8 @@ Select either of the following workarounds:
 **Resolution for Cause 2**
 
 Configure the network device in front of Exchange not to block free/busy requests.
+
+[Back to top](#resolve-freebusy-errors)
 
 ## Proxy web request failed with HTTP status 503: Service unavailable
 
@@ -1666,6 +1726,8 @@ After you complete each step, check whether the free/busy issue is fixed.
 
    For example, if you see "Microsoft-HTTPAPI/2.0" in the command output instead of "Microsoft -IIS/10.0", it's likely that a Web Application Proxy (WAP) service (not IIS) responded to the request. Check whether the WAP service is down.
 
+[Back to top](#resolve-freebusy-errors)
+
 ## Proxy web request failed with HTTP status 504: Gateway timeout
 
 **LID: 43532**
@@ -1710,3 +1772,5 @@ To fix the issue, use the following steps. After you complete each step, check w
 5. [Configure the Hybrid Agent to direct requests to a load balancer](/exchange/hybrid-deployment/hybrid-agent) instead of a server that's running Microsoft Exchange Server to rule out issues that might exist on that server.
 
 6. [Verify that the Hybrid Agent supports free/busy requests and mailbox migration](/exchange/hybrid-deployment/hybrid-agent).
+
+[Back to top](#resolve-freebusy-errors)
