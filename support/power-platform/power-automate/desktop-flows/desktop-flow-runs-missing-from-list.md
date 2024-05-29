@@ -27,8 +27,6 @@ Follow these steps to verify and resolve the issue:
 
 2. Go to **My flows** > **Desktop flows** to check that the desktop flow hasn't been deleted.
 
-     :::image type="content" source="media/desktop-flow-runs-missing-from-list/check-my-flows.png" alt-text="Check that your desktop flows are shown in the list.":::
-
 3. If the desktop flow is present, go to the **Monitor** > **Desktop flow runs** page and check if column filters are active, indicated by the presence of funnel icons in the column headers.
 
     :::image type="content" source="media/desktop-flow-runs-missing-from-list/check-filters-on-desktop-flows.png" alt-text="Check if some filters are configured." lightbox="media/desktop-flow-runs-missing-from-list/check-filters-on-desktop-flows.png":::
