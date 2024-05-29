@@ -57,7 +57,7 @@ Configure Performance Monitor as follows:
 
 - **Duration.** To configure this value, set the **Duration** value in the Performance Monitor properties. We recommend that you use a value in the range of 90 to 120 seconds.  
   :::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-duration-property.png" alt-text="Screenshot that shows the location of the Duration property in Performance Monitor.":::
-  ![Duration property](./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-duration-property.png)
+
 - **Counters.** Add the following counters from the **Netlogon** object:
   | Counter | Instance |
   | --- | --- |
@@ -67,8 +67,7 @@ Configure Performance Monitor as follows:
 
   > [!NOTE]  
   > You can obtain most of the values that you need from the Performance Monitor Line view. However, for the **Average Semaphore Hold Time** value, use the Report view.  
-  > :::image type="content" source="/media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-view-property.png" alt-text="Screenshot that shows the location of the View property in Performance Monitor.":::
-  > ![View setting](./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-view-property.png)
+  > :::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-view-property.png" alt-text="Screenshot that shows the location of the View property in Performance Monitor.":::
 
 Collect the following values from Performance Monitor:
 
@@ -156,8 +155,7 @@ The first value to add to the equation is the known value, /<*Duration*>.
 
 The best way to find **Average Semaphore Hold Time** is to switch to the **Report** view in Performance Monitor. To do this, on the Performance Monitor toolbar, select **Change graph type** > **Report**. The **Report** view resembles the following:
 
-:::image type="content" source="/media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-report-avg-semaphore-hold-time.png" alt-text="Screenshot that shows the Report view in Performance Monitor.":::  
-![perfmon](./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-report-avg-semaphore-hold-time.png)  
+:::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-report-avg-semaphore-hold-time.png" alt-text="Screenshot that shows the Report view in Performance Monitor.":::  
 
 Now add the **Average Semaphore Hold Time** to the equation.
 
@@ -169,8 +167,7 @@ This value is the only value that you have to obtain from the **Report** view. F
 
 The example in [Part 1](maxconcurrentapi-1-identify-computers-that-have-mca-issues.md) used **Semaphore Timeouts** to determine whether the server had an MCA issue. In this step, you have to recalculate this value by using the 90-second duration.  
 
-:::image type="content" source="/media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-acquires.png" alt-text="Screenshot that shows Semaphore Acquires data in Performance Monitor.":::  
-![perfmon](./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-acquires.png)  
+:::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-acquires.png" alt-text="Screenshot that shows Semaphore Acquires data in Performance Monitor.":::  
 
 Subtracting the minimum value from the maximum value produces a value of 1,983.
 
@@ -180,8 +177,7 @@ Subtracting the minimum value from the maximum value produces a value of 1,983.
 
 Similar to the **Semaphore Timeouts** value, the **Semaphore Acquires** data is cumulative over the duration that Performance Monitor displays.  
 
-:::image type="content" source="/media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-timeouts-90-sec-sample.png" alt-text="Screenshot that shows Timeouts data over a 90-second duration in Performance Monitor.":::  
-![perfmon](./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-timeouts-90-sec-sample.png)  
+:::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-timeouts-90-sec-sample.png" alt-text="Screenshot that shows Timeouts data over a 90-second duration in Performance Monitor.":::  
 
 Subtracting the minimum value from the maximum value produces a value of 1,833.
 

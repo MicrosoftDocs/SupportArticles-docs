@@ -180,7 +180,6 @@ When the final domain controller in the path authenticates the user, it sends th
 The following diagram provides a very high-level overview of the criteria that determine an authentication path.
 
 :::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/dc-target-decision-tree.svg" alt-text="Diagram that shows the criteria that Windows uses to determine the path of an authentication request.":::
-![Diagram that shows the criteria that Windows uses to determine the path of an authentication request.](./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/dc-target-decision-tree.svg)
 
 ### Examples of how to identify authentication paths and potential chokepoints
 
@@ -191,7 +190,6 @@ The following examples illustrate how to identify the servers that you should ch
 Consider the following topology:
 
 :::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/single-forest-three-domain-auth-path.svg" alt-text="Diagram that shows how authentication requests travel from child domains to the root domain in a single-forest topology.":::
-![Diagram that shows how authentication requests travel from child domains to the root domain in a single-forest topology.](./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/single-forest-three-domain-auth-path.svg)
 
 The web server in domain B services users from domain C and uses NTLM authentication. Both Domain B and Domain C are in the same forest. Domain A is the forest root domain.
 
@@ -224,7 +222,6 @@ Depending on the site topology, the following servers are the potential chokepoi
 Consider the following topology:
 
 :::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/two-forest-six-domain-auth-path.svg" alt-text="Diagram that shows how authentication requests travel from child domains to the root domain in a two-forest topology.":::
-![Diagram that shows how authentication requests travel from child domains to the root domain in a two-forest topology.](./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/two-forest-six-domain-auth-path.svg)
 
 Domain A is the root domain of forest A, and domain D is the root domain of forest B. Domains A and B have a forest trust.
 
@@ -261,10 +258,9 @@ Depending on the site topology, the following servers are the potential chokepoi
 
 ### Example 3: Internal/external forest topology
 
-Consider the following topology:
+Consider the following topology:  
 
-:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/two-domain-external-trust-auth-path.svg" alt-text="Diagram that shows how authentication requests travel from child domains to the root domain in a two-forest topology.":::
-![Diagram that shows how authentication requests travel from child domains to the root domain in a two-forest topology.](./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/two-domain-external-trust-auth-path.svg)
+:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/two-domain-external-trust-auth-path.svg" alt-text="Diagram that shows how authentication requests travel from child domains to the root domain in a two-forest topology.":::  
 
 Domain A and domain D have an external trust. The web server in domain A services users from domain D and uses NTLM authentication.
 
@@ -416,8 +412,7 @@ As a real-world example, consider a Performance Monitor data (BLG) file from an 
 
 The following view in Performance Manager shows a 110-second segment of the data:  
 
-:::image type="content" source="/media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-timeouts.png" alt-text="Screenshot that shows a two-minute interval of semaphore timeout data in Performance Monitor.":::  
-![perfmon](./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/perfmon-min-max-semaphore-timeouts.png)  
+:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/perfmon-min-max-semaphore-timeouts.png" alt-text="Screenshot that shows a two-minute interval of semaphore timeout data in Performance Monitor.":::  
 
 ### Are authentication requests timing out?
 
@@ -425,10 +420,9 @@ First, use the data for the **Semaphore Timeouts** counter to calculate the numb
 
 ### What's the volume of delayed requests?
 
-Look at the data for the **Semaphore Waiters** counter during the same interval. This counter tracks the requests that are waiting, but have not timed out yet. This information can indicate the maginitude of the issue.  
+Look at the data for the **Semaphore Waiters** counter during the same interval. This counter tracks the requests that are waiting, but have not timed out yet. This information can indicate the magnitude of the issue.  
 
-:::image type="content" source="/media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-avg-max-semaphore-waiters.png" alt-text="Screenshot that shows a two-minute interval of semaphore timeout data in Performance Monitor.":::  
-![perfmon](./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/perfmon-avg-max-semaphore-waiters.png)  
+:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/perfmon-avg-max-semaphore-waiters.png" alt-text="Screenshot that shows a two-minute interval of semaphore timeout data in Performance Monitor.":::  
 
 In this case, during this interval there are up to 2,157 "waiters".
 
