@@ -1,7 +1,7 @@
 ---
 title: Data collection methods for SQL connectivity issues
-description: This article provides possible list of questions based on several components that you can use to effectively identify the type of SQL Server connectivity issues and find right resolution.
-ms.date: 05/27/2024
+description: This article provides possible list of questions based on several components that you can use to effectively identify the type of SQL Server connectivity issues and find the right resolution.
+ms.date: 05/29/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, prmadhes, v-jayaramanp, haiyingyu
@@ -10,12 +10,12 @@ ms.custom: sap:Connection issues
 
 # Collect data to troubleshoot SQL Server connectivity issues
 
-This article helps you to identify the root cause of SQL Server connectivity issues by asking relevant questions based on specific categories. Although the ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md) article includes the most important items to be collected, the questions in this article can help you narrow down the cause of the connectivity issues and troubleshoot them effectively.
+This article helps you to identify the root cause of SQL Server connectivity issues by asking relevant questions based on specific categories. Although the [Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues](resolve-connectivity-errors-checklist.md) article includes the most important items to be collected, the questions in this article can help you narrow down the cause of the connectivity issues and troubleshoot them effectively.
 
 > [!NOTE]
 > Not all questions are applicable to all issues. However, these questions can guide you as you consider how to troubleshoot connectivity issues.
 
-Using the information provided in this article, once you are able to zero-in on the exact nature of the issue, see *Overview of consistent authentication issues in SQL Server for the type of errors*.
+Using the information provided in this article, once you are able to zero-in on the exact nature of the issue, see [Overview of consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md) for the type of errors.
 
 ## Method of collecting data
 
@@ -70,7 +70,7 @@ Follow these steps simultaneously on both the client and server computers. If th
 
 The following set of questions are designed to help you find the category into which an issue falls, thus guiding you towards the right direction of troubleshooting. Select each dropdown for related questions.
 
-Before you jump into the asking the specific questions, make sure that all the prerequisites required for the SQL Server connections have been met. For more information on the prerequisites, see ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md).
+Before you jump into the asking the specific questions, make sure that all the prerequisites required for the SQL Server connections have been met. For more information on the prerequisites, see [Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues](resolve-connectivity-errors-checklist.md).
 
 <details><summary><b>Broader perspective questions</b></summary>
 
@@ -205,5 +205,6 @@ If the user is remote to the client application, collect the following details:
 
 - [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
 
+- [Change NETMON parser port for SQL Server](change-netmon-parser-port-for-sql-server.md)
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
