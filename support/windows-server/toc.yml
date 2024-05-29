@@ -1837,8 +1837,6 @@ items:
       href: ./networking/smb-server-unresponsive.md
     - name: Blank default gateway after configuring Static IP address
       href: ./networking/blank-default-gateway-configure-static-ip-address.md
-    - name: Configure ISA Server computer for authentication requests
-      href: ./networking/configure-isa-server-computer.md
     - name: Configure proxy server settings
       href: ./networking/configure-proxy-server-settings.md
     - name: Configure SNMP Service
