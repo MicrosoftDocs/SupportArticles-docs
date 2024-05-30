@@ -2,7 +2,7 @@
 title: Cumulative update 12 for SQL Server 2019 (KB5004524)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 12 (KB5004524).
 ms.date: 06/30/2023
-ms.custom: KB5004524
+ms.custom: evergreen, KB5004524
 ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows

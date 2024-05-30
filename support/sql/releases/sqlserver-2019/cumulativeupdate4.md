@@ -2,7 +2,7 @@
 title: Cumulative update 4 for SQL Server 2019 (KB4548597)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 4 (KB4548597).
 ms.date: 06/30/2023
-ms.custom: KB4548597
+ms.custom: evergreen, KB4548597
 ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows

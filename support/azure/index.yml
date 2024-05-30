@@ -7,7 +7,7 @@ metadata:
    services: service
    ms.service: azure-common-issues-support
    ms.author: genlin
-   ms.date: 04/10/2024
+   ms.date: 05/24/2024
 
 productDirectory:
   items:
@@ -43,6 +43,11 @@ productDirectory:
     links:
     - url: azure-container-instances/welcome-container-instances.yml
       text: Troubleshooting articles for Azure Container Instances
+  - title: Azure Container Registry
+    imageSrc: "https://static.docs.com/ui/media/product/azure/container-registry.svg"
+    links:
+    - url: azure-container-registry/welcome-container-registry.yml
+      text: Troubleshooting articles for Azure Container Registry
   - title: Azure DevOps
     imageSrc: "/azure/devops/media/index/devopsiconboards96.svg"
     links:
