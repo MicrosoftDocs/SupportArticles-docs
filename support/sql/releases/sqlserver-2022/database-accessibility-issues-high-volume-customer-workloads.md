@@ -2,7 +2,7 @@
 title: Database accessibility issues with high-volume customer workloads
 description: Fixes an issue where high-volume customer workloads using Extensible Key Management (EKM) for encryption and key generation experience database accessibility issues.
 ms.date: 02/16/2023
-ms.custom: KB5023236
+ms.custom: evergreen, KB5023236
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2019 on Windows
