@@ -73,7 +73,7 @@ Under the following conditions, lingering objects can appear even if the domain 
 
 Even when there is no noticeable effect, the presence of lingering objects can cause problems. These problems are most likely to occur if a lingering object is a security principal.
 
-### Events that indicate that lingering objects might be present in the forest
+### Events that indicate that the forest might have lingering objects
 
 |Event ID|General description|
 |---|---|
@@ -83,7 +83,7 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 |1311|The Knowledge Consistency Checker (KCC) was not able to build a spanning tree topology.|
 |2042|It has been too long since this server last replicated with the named source server.|
 
-### Events that indicate that lingering objects are present in the forest
+### Events that indicate that the forest has lingering objects
 
 | Event ID | General description |
 | --- | --- |
@@ -92,22 +92,24 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 | 1311 |Another domain controller replicated an object not present on this domain controller. |
 
 > [!NOTE]
-> Lingering objects aren't present on domain controllers that log event ID 1988. The source domain controller contains the lingering object.
+>
+> - Lingering objects aren't present on domain controllers that log event ID 1988. The source domain controller contains the lingering object.
+> - When updates to a lingering object replicate from one domain controller to another, the event-logging behavior of the domain controller depends on whether the directory partition that contains the lingering object is writeable or not. If the lingering object on the destination domain controller resides in a writeable partition, the domain controller logs an event. However, if the lingering object resides in a read-only partition, the object can't be updated. The domain controller doesn't log an event.
 
-### Repadmin errors that indicate that lingering objects are present in the forest
+### Repadmin errors that indicate that the forest has lingering objects
 
 | Event ID | General description |
 | --- | --- |
 | 8240 | There is no such object on the server. |
 | 8606 | Insufficient attributes were given to create an object. |
 
-### Other indications that lingering objects are present in the forest
+### Other indications that the forest has lingering objects
 
-- A user or group account that was deleted remains in the global address list (GAL) on servers that are running Microsoft Exchange Server. In such a case, the account name appears in the GAL, but errors occur when users try to send e-mail messages.
+- The Microsoft Exchange Server global address list (GAL) contains a user or group account that was deleted. In such a case, the account name appears in the GAL, but errors occur when users try to send e-mail messages.
 
-- Multiple copies of an object appear in the object picker or in the GAL for an object that should be unique in the forest. You sometimes see duplicate objects that have changed names. These duplicate objects confuse directory searches. For example, if the a search can't resolve the relative distinguished names of two objects, the conflict resolution function appends `*CNF:<GUID>` to one of the names. In this example, `*` represents a reserved character, `CNF` is a constant that indicates a conflict resolution, and `<GUID>` represents the **objectGUID** attribute value.
+- An object should be unique in the forest, but you see multiple copies of the object in the object picker or in the GAL. Such cases might include duplicate objects that have changed names. These duplicate objects confuse directory searches. For example, if a search can't resolve the relative distinguished names of two objects, the conflict resolution function appends `*CNF:<GUID>` to one of the names. In this example, `*` represents a reserved character, `CNF` is a constant that indicates a conflict resolution, and `<GUID>` represents the **objectGUID** attribute value.
 
-- E-mail messages aren't delivered to a user whose Active Directory account appears to be current. After an outdated domain controller or global catalog server reconnects to the forest, both instances of the user object (the current one and an older version) appear in the global catalog. Because both objects have the same e-mail address, e-mail messages can't be delivered.
+- A user has a current account, but the account was renamed. The user doesn't receive email messages. Both instances of the user object (the current one and an older version) appear in the GAL. Because both objects have the same email address, email messages can't be delivered.
 
 - A universal group that no longer exists continues to appear in a user's access token. Although the group no longer exists, if a user account still has the group in its security token, the user may have access to a resource that you intended to be unavailable to that user.
 
@@ -115,13 +117,11 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 
 - Searches that use attributes of an existing object might incorrectly find multiple copies of an object that use the same name. One object has been deleted from the domain. But that object remains in a global catalog server that has been isolated.  
 
-When updates to a lingering object replicate from one domain controller to another, the event-logging behavior of the domain controller depends on whether the directory partition that contains the lingering object is writeable or not. If the lingering object on the destination domain controller resides in a writeable partition, the domain controller logs an event. However, if the lingering object resides in a read-only partition, the object can't be updated. The domain controller doesn't log an event. 
-
-## Removing lingering objects from the forest
+## Remove lingering objects from the forest
 
 Select one of the following two methods to remove lingering objects.
 
-### Method 1: Removing lingering objects by using LOLv2
+### Method 1: Remove lingering objects by using LOLv2
 
 The preferred method to detect and remove lingering objects is by using Lingering Object Liquidator v2 (LoLv2). To download the tool, see [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)
 
@@ -130,30 +130,35 @@ For more information about using LoLv2, see the following articles:
 - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
 - [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
 
-### Method 2: Removing lingering objects by using the Repadmin tool
+### Method 2: Remove lingering objects by using the Repadmin tool
 
 If you can't use LoLv2, you can use *Repadmin.exe*. For more information, see [Steps to use Repadmin to remove lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988).
 
-## Preventing lingering objects
+## Prevent lingering objects
 
 To prevent lingering objects in your forest, use one of the following four methods.
 
 ### Method 1: Enable the Strict Replication Consistency registry entry
 
-You can enable the `Strict Replication Consistency` registry entry so that suspect objects are quarantined. Then, administrations can remove these objects before they spread throughout the forest.
+[!INCLUDE [Registry caution](../../includes/registry-important-alert.md)]
 
-If a writable lingering object is located in your environment, and an attempt is made to update the object, the value in the Strict Replication Consistency registry entry determines whether replication proceeds or is stopped. The Strict Replication Consistency registry entry is located in the following registry subkey:  
+You can enable the `Strict Replication Consistency` registry entry so that suspect objects are quarantined on the source domain controller. Then, administrators can remove these objects before they spread throughout the forest.
+
+If a writable lingering object is located in your environment, and an attempt is made to update the object, the value in the `Strict Replication Consistency` registry entry determines whether replication proceeds or stops. The `Strict Replication Consistency` registry entry is located in the following registry subkey:  
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`  
 
-The data type for this entry is REG_DWORD. If you set the value to **1**, the entry is enabled. Inbound replication of the specified directory partition from the source is stopped on the destination. If you set the value to **0**, the entry is disabled. The destination requests the full object from the source domain controller. The lingering object is revived in the directory as a new object.
+- Data type: REG_DWORD
+- Values:
+  - **0** (disabled). The destination domain controller requests the full object from the source domain controller. The lingering object reappears in the forest as a new object.
+  - **1** (enabled). The destination domain controller stops inbound replication of the relevant directory partition from the source domain controller.
 
-The default value for the Strict Replication Consistency registry entry is determined by the conditions under which the domain controller was installed in the forest.
+The default value for `Strict Replication Consistency` depends on the conditions under which the domain controller was installed in the forest.
 
-The preferred method to enable the Strict Replication Consistency registry entry is using Repadmin:  
+The preferred method to enable `Strict Replication Consistency` is by using Repadmin:  
 [Steps to use Repadmin to enable strict replication consistency](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988)
 
-For more information about how to use Repadmin.exe to set Strict Replication Consistency, see [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)).
+For more information about how to use *Repadmin.exe* to set `Strict Replication Consistency`, see [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)).
 
 > [!NOTE]  
 > Raising the functional level of the domain or the forest does not change the replication consistency setting on any domain controller.
