@@ -187,7 +187,7 @@ namespace ReadXMLfromURL
     <book genre="novel" publicationdate="1967" ISBN="0-201-63361-2">>
         <title>
         The Confidence Man
-        </title
+        </title>
         <author>
             <first-name>
             Herman
