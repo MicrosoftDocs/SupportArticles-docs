@@ -76,7 +76,7 @@
 
 - name: VM Performance
   items:
-  - name: Performance diagnostics (PerfInsights)
+  - name: Azure Performance diagnostics (PerfInsights)
     items:
     - name: Overview
       href: ../windows/performance-diagnostics.md?context=/troubleshoot/azure/virtual-machines/linux/context/context

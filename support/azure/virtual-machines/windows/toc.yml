@@ -152,7 +152,7 @@
       href: performance-diagnostics.md
     - name: How to use
       href: how-to-use-perfinsights.md
-    - name: More info about the extension
+    - name: More info about the Extension
       href: performance-diagnostics-vm-extension.md
     - name: Azure Scale Set VM instances
       href: perfinsights-and-scale-set-vm-instances.md
