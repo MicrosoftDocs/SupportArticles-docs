@@ -1,7 +1,7 @@
 --- 
 title: Troubleshoot problems with Azure Application Insights Profiler
 description: This article presents troubleshooting steps and information to help developers enable and use Application Insights Profiler.
-ms.date: 07/25/2023
+ms.date: 05/30/2024
 ms.reviewer: v-leedennis, aaronmax, cweining, v-jsitser, hannahhunter, ryankahng, v-weizhu
 ms.service: azure-monitor
 #Customer intent: As an Azure Application Insights user, I want to know how to troubleshoot various problems enabling or viewing Application Insights Profiler so I can use it effectively.  
@@ -24,7 +24,7 @@ Currently, the only regions that require endpoint modifications are [Azure Gover
 
 Profiler is supported on the [.NET Framework later than version 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework).
 
-If your web app is an ASP.NET Core application, it must be run on the [latest supported ASP.NET Core runtime](https://dotnet.microsoft.com/download/dotnet/6.0).
+If your web app is an ASP.NET Core application, it must be running on the [latest supported ASP.NET Core runtime](https://dotnet.microsoft.com/download/dotnet/8.0).
 
 ## Make sure you use right Azure service plan
 
@@ -63,7 +63,7 @@ To search for trace messages and custom events that Profiler sends to your Appli
 
    - Profiler starts and sends custom events when it detects requests that happens while Profiler is running. If the `ServiceProfilerSample` custom event is displayed, it means that a profile is captured and is available in the **Application Insights Performance** pane.
 
-   If no records are displayed, Profiler isn't running or has timed out. Make sure you've [enabled Profiler on your Azure service](/azure/azure-monitor/profiler/profiler).  
+   If no records are displayed, Profiler isn't running or took too long to respond. Make sure [Profiler is enabled on your Azure service](./profiler.md).  
 
 ## Double counting in parallel threads
 
@@ -101,7 +101,7 @@ If Profiler still isn't working for you, you can download the log and [submit an
 
 #### Check the Diagnostic Services site extension's status page
 
-If Profiler is enabled through the [Application Insights pane](/azure/azure-monitor/profiler/profiler) in the Azure portal, it is enabled by the Diagnostic Services site extension. You can check the status page of this extension by going to the URL `https://<site-name>.scm.azurewebsites.net/DiagnosticServices`.
+If you enabled Profiler through the [Application Insights pane](profiler.md) in the portal, it's managed by the Diagnostic Services site extension. You can check the status page of this extension by going to `https://<site-name>.scm.azurewebsites.net/DiagnosticServices`.
 
 > [!NOTE]
 > The domain of the status page link will vary depending on the cloud. This domain will be the same as the Kudu management site for App Service.
@@ -127,11 +127,20 @@ When you configure Profiler, updates are applied to the web app's settings. If n
 
 #### Too many active profiling sessions
 
-You can enable Profiler on a maximum of four Web Apps that are running in the same service plan. If you have more than four Web Apps, Profiler might throw the following error:
+In Azure App Service, there's a limit of only **one profiling session at a time**. This limit is enforced at the VM level across all applications and deployment slots running in an App Service Plan. 
 
-> Microsoft.ServiceProfiler.Exceptions.TooManyETWSessionException
+This limit applies equally to profiling sessions started via *Diagnose and solve problems*, Kudu, and Application Insights Profiler.
 
-To solve it, move some web apps to a different service plan.
+If Profiler tries to start a session when another is already running, an error is logged in the Application Log and also the continuous WebJob log for ApplicationInsightsProfiler3.
+
+You may see one of the following messages in the logs:
+
+- `Microsoft.ServiceProfiler.Exceptions.TooManyETWSessionException`
+- `Error: StartProfiler failed. Details: System.Runtime.InteropServices.COMException (0xE111005E): Exception from HRESULT: 0xE111005E`
+
+The error code `0xE111005E` indicates that a profiling session couldn't start because another session is already running.
+
+To avoid the error, move some web apps to a different App Service Plan or disable Profiler on some of the applications. If you use deployment slots, be sure to stop any unused slots.
 
 #### Deployment error: Directory Not Empty 'D:\\home\\site\\wwwroot\\App_Data\\jobs'
 
@@ -182,7 +191,7 @@ To check the settings that is used to configure Azure Diagnostics, follow these 
 
 1. Check whether the `iKey` used by the Profiler is correct.
 
-1. Check the command line that's used to start Profiler. The arguments that are used to launch Profiler are in the following file (the drive could be `C` or `D` and the directory may be hidden):
+1. Check the command line that starts Profiler. The command line arguments are in the following file (the drive could be `c:` or `d:` and the directory might be hidden):
 
     - For VMs:
 
