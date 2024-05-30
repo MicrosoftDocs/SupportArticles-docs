@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot ingestion errors or corrupt data
-description: Introduces common reasons of data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Dynamics 365 Customer Insights - Data.
-ms.date: 05/29/2024
+description: Introduces common reasons for data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Dynamics 365 Customer Insights - Data.
+ms.date: 05/30/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
@@ -11,7 +11,7 @@ ms.custom: sap:Data Ingestion\Connect to data in Azure Data Lake Storage
 
 [!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
-This article introduces common reasons of data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Microsoft Dynamics 365 Customer Insights - Data.
+This article introduces common reasons for data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Microsoft Dynamics 365 Customer Insights - Data.
 
 ## Ingestion errors or corrupt data with Azure Data Lake Storage
 
@@ -27,7 +27,7 @@ During data ingestion, some of the most common reasons a record might be conside
 
 If the data doesn't conform to the schema, the ingestion process completes with errors.
 
-To solve this issue, correct either the source data or the schema and reingest the data.
+To solve this issue, correct either the source data or the schema and re-ingest the data.
 
 ### Partition files are missing
 
@@ -113,25 +113,25 @@ In a *manifest.json* file, the `datetime` format can be specified at the table l
 
 ## Ingestion errors or corrupt data with Power Query
 
-### Date/Time values are parsed incorrectly or a parsing failure occurs 
+### Datetime values are parsed incorrectly or a parsing failure occurs 
 
 The most common data type mismatch occurs when a date field isn't set to the correct date format. This mismatch can be caused by the incorrectly formatted source data or an incorrect [locale](/power-query/data-types#document-or-project-locale).
 
 Symptoms of the incorrect locale issue:
 
-- When the source data can't be parsed by the locale used, an ingestion failure occurs. For example: "29/08/2023" is parsed with "MM/DD/YYYY", it fails because it can't parse month 29.
-- When the source data is parsed successfully using an incorrect locale, but the date time values are incorrect. For example: "Dec 8, 2023" is ingested as "Aug 12, 2023".
+- When the source data can't be parsed by the locale used, an ingestion failure occurs. For example, if "29/08/2023" is parsed with "MM/DD/YYYY," the ingestion fails because it can't parse month 29.
+- When the source data is parsed successfully using an incorrect locale, the datetime values are incorrect. For example, "December 8, 2023" is ingested as "August 12, 2023." 
+
+  Here's an example:
+
+  The source data is formatted as "MM/DD/YYY," while the default locale used to parse the data during ingestion uses "DD/MM/YYY." As a result, "December 8, 2023" is ingested as "August 12, 2023."  
+
+  :::image type="content" source="media/common-data-ingestion-errors/power-query-date-locale-issue.png" alt-text="Screenshot shows that the datetime format is incorrect after ingestion." lightbox="media/common-data-ingestion-errors/power-query-date-locale-issue.png":::
 
 #### Resolution
 
-- To fix an incorrect format, update the source data and reingest.
-- To fix an incorrect locale, adjust the locale in the Power Query transformations. For example:
-
-  The source data is formatted as "MM/DD/YYY" while the default locale used to parse the data during ingestion uses "DD/MM/YYY". As a result, "Dec 8, 2023" is ingested as "Aug 12, 2023".  
-
-  :::image type="content" source="media/common-data-ingestion-errors/power-query-date-locale-issue.png" alt-text="The date time format is incorrect after ingestion." lightbox="media/common-data-ingestion-errors/power-query-date-locale-issue.png":::
-
-  To fix this issue, change the type of all date time fields to use the correct locale using **Change type** > **Using locale**.
+- To fix an incorrect format, update the source data and re-ingest.
+- To fix an incorrect locale, change the type of all datetime fields to use the correct locale using **Change type** > **Using locale** in the Power Query transformations. For example:
 
   :::image type="content" source="media/common-data-ingestion-errors/change-type-using-locale.png" alt-text="Screenshot that shows how to change data type with locale in Power Query." lightbox="media/common-data-ingestion-errors/change-type-using-locale.png":::
 
