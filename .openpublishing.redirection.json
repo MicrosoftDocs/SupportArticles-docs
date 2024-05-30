@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/group-policy/troubleshooting-system-shutdown-is-slow-scenario.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/system-shutdown-is-slow",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/group-policy/give-users-access-group-policy-objects.md",
       "redirect_url": "/troubleshoot/windows-server/group-policy/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions",
       "redirect_document_id": false
