@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 05/29/2024
+ms.date: 05/30/2024
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -14,14 +14,17 @@ After deploying the Storage Sync Service, the next steps in deploying Azure File
 
 ## Agent installation
 
-<a id="agent-update-hangs"></a>**Agent update does not complete**  
-When upgrading the Azure File Sync agent, you may experience one of the following symptoms if the agent update is hung: 
-- AfsUpdater.exe is hung at "installing updates" 
-- Agent installation is hung at "Stopping monitoring agent"  
+<a id="agent-update-hangs"></a>**Agent update does not complete**
 
-This issue occurs if the Azure File Sync agent version currently installed is older than v16.2 and the Logman.exe process is failing to shutdown. 
+When upgrading the Azure File Sync agent, you may experience one of the following symptoms:
+
+- *AfsUpdater.exe* is hung at "installing updates".
+- Agent installation is hung at "Stopping monitoring agent".
+
+This issue occur if the Azure File Sync agent version currently installed is older than v16.2 and the *Logman.exe* process fails to shut down.
 
 To resolve this issue, perform the following steps:
+
 1. Open **Task Manager**.
 2. Right-click on the **LogMan** process and select **End task**. Repeat this step until all LogMan processes are stopped and the agent update completes successfully.
 
@@ -99,7 +102,7 @@ To resolve this issue, install [KB2919355](https://support.microsoft.com/help/29
 
 <a id="server-registration-failed"></a>**Server Registration displays this error: "Failed to register the server"**
 
-If server registration fails, open the *AfsSrvRegistration\*.log* file located under *%LocalAppData%\Temp* and search for "ErrorMessage" to get the error details.
+If the server registration fails, open the *AfsSrvRegistration\*.log* file located under *%LocalAppData%\Temp* and search for "ErrorMessage" to get the error details.
 
 <a id="server-registration-missing-subscriptions"></a>**Server Registration does not list all Azure Subscriptions**
 
