@@ -1,7 +1,7 @@
 ---
 title: Target Principal Name is incorrect when manually replicating data between domain controllers
 description: Provides a solution to an error that occurs when you manually replicate data between domain controllers.
-ms.date: 05/28/2024
+ms.date: 05/30/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
