@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error code
 description: Troubleshoot the PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error when you delete an AKS cluster.
-ms.date: 04/01/2022
+ms.date: 05/27/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto, v-leedennis
 ms.service: azure-kubernetes-service
@@ -31,6 +31,13 @@ When you try to delete an AKS cluster, you receive one of the following error me
   > message: "Subnet aks-subnet is in use by …../Microsoft.Network/networkInterfaces/|providers|Microsoft.Compute|virtualMachineScaleSets|vmss|virtualMachines|1|networkInterfaces|aks-worker-vmss/ipConfigurations/ipconfig1 and cannot be deleted. In order to delete the subnet, delete all the resources within the subnet."
   >
   > }
+  
+  or
+  > {
+  > 
+  > message: "Subnet aks-subnet is in use by ..../resourceGroups/.../providers/Microsoft.Network/virtualNetworks/.../subnets/.../serviceAssociationLinks/AppServiceLink and cannot be deleted. In order to delete the subnet, delete all the resources within the subnet. See aka.ms/deletesubnet."
+  >
+  > }
 
 - For the `InUseNetworkSecurityGroupCannotBeDeleted` error code:
 
@@ -51,5 +58,7 @@ The AKS cluster is associated with a subnet, network security group (NSG), or sp
 - In the load balancer, remove the rules for **Load Balance rules**, **Health probes**, and **Backend pools**.
 
 - For the NSG and subnet, remove all associated rules. For more information, see [Associate or dissociate a network security group to or from a subnet or network interface](/azure/virtual-network/manage-network-security-group#associate-or-dissociate-a-network-security-group-to-or-from-a-subnet-or-network-interface).
+
+- If you're using an App Service plan with a subnet connected to the AKS cluster's VNET, you have to remove the associated App Service plan and its internal resources (such as Function App and SQL Azure database) and then retry deleting the AKS cluster.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

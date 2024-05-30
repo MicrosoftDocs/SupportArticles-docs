@@ -1,6 +1,6 @@
 ---
 title: Determine the authentication type
-description: This article explains about how to determine the type of authentication that's used when you connect to SQL Server. 
+description: This article explains about how to determine the type of authentication that's used when you connect to SQL Server.
 ms.date: 02/20/2024
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -142,3 +142,7 @@ You should see the following output:
    Elapsed time was 0 ms.
    Auth scheme for sqlprod01: NTLM
    ```
+
+## More information
+
+[Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)

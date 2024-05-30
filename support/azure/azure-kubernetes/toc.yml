@@ -245,6 +245,8 @@
         href: connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
       - name: TCP times out when kubectl or other third-party tools connect
         href: connectivity/tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
+  - name: Basic troubleshooting of DNS resolution problems in AKS
+    href: connectivity/basic-troubleshooting-dns-resolution-problems.md
 
 - name: Data collection guide
   items:
@@ -329,6 +331,8 @@
     href: extensions/aks-cost-analysis-add-on-issues.md
   - name: Can't pull images from container registry to cluster
     href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
+  - name: Troubleshoot installation errors in the Azure App Configuration extension
+    href: extensions/troubleshoot-app-configuration-extension-installation-errors.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: extensions/troubleshoot-key-vault-csi-secrets-store-csi-driver.md
   - name: Troubleshoot cluster extension deployment errors

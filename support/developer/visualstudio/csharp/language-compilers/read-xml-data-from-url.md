@@ -84,7 +84,7 @@ This example uses a file named *Books.xml*. You can create your own *Books.xml* 
                 Console.WriteLine (reader.Value);
                 break;
 
-            case XmlNodeType. EndElement: //Display the end of the element.
+            case XmlNodeType.EndElement: //Display the end of the element.
                 Console.Write("</" + reader.Name);
                 Console.WriteLine(">");
                 break;
@@ -187,7 +187,7 @@ namespace ReadXMLfromURL
     <book genre="novel" publicationdate="1967" ISBN="0-201-63361-2">>
         <title>
         The Confidence Man
-        </title
+        </title>
         <author>
             <first-name>
             Herman

@@ -2,7 +2,7 @@
 title: Cumulative update 7 for SQL Server 2016 SP1 (KB4057119)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 SP1 cumulative update 7 (KB4057119).
 ms.date: 10/26/2023
-ms.custom: KB4057119
+ms.custom: evergreen, KB4057119
 appliesto:
 - SQL Server 2016 Service pack 1
 - SQL Server 2016 Developer
