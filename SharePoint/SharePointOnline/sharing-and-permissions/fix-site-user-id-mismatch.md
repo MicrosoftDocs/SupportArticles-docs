@@ -58,6 +58,8 @@ When prompted, provide the following information:
 > [!div class="nextstepaction"]
 > [Run Tests: Site User ID Mismatch](https://aka.ms/PillarSiteUserIDMismatch)
 
+Administrators can view the original OneDrive site URL via the methods described in [View OneDrive URLs for users in your organization](/sharepoint/list-onedrive-urls).
+
 ### Common scenarios
 
 The Site User Mismatch diagnostic can fix the following common issues that can occur when a new account is created by using the UPN that was used by a deleted account. 
