@@ -18,11 +18,11 @@ _Original KB number:_ &nbsp; 910205
 
 ## Summary
 
-Lingering objects are objects that reappear in the AD DS forest after they have been deleted. Lingering objects can occur if a domain controller does not replicate for an interval of time that is longer than the tombstone lifetime (TSL). The domain controller then reconnects to the replication topology. Objects that are deleted from the Active Directory directory service when the domain controller is offline can remain on the domain controller as lingering objects. This article contains detailed information about the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.
+Lingering objects are objects that reappear in the AD DS forest after they have been deleted. This behavior can occur when a domain controller stops replicating changes to or from other domain controllers in the forest for a time, and then starts replicating again. This behavior occurs because of the way the forest replicates object deletions among multiple domain controllers. The following sections provide information about the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.
 
 ## How object deletions replicate through a forest
 
-When you delete an object in AD DS, AD DS generates a tombstone object to represent the deleted object. The tombstone object contains a small subset of the attributes of the deleted object. Other domain controllers in the domain and the forest use inbound replication to receive the tombstone object, and update their AD DS information to account for the deletion. The tombstone object remains in the forest for a specified period, called the tombstone lifetime (TSL). At the end of the TSL, AD DS permanently deletes the tombstone object. All direct and transitive replication partners of the originating domain controller must receive a copy of the tombstone object within the TSL.
+When you delete an object in an AD DS forest, AD DS generates a tombstone object to represent the deleted object. The tombstone object contains a small subset of the attributes of the deleted object. Other domain controllers in the domain and the forest use inbound replication to receive the tombstone object, and update their forest information to account for the deletion. The tombstone object remains in the forest for a specified period, called the tombstone lifetime (TSL). At the end of the TSL, AD DS permanently deletes the tombstone object. All direct and transitive replication partners of the originating domain controller must receive a copy of the tombstone object within the TSL.
 
 The default value of the TSL depends on the version of the operating system that is running on the first domain controller that's installed in a forest. For all currently supported versions of Windows Server, the default TSL is 180 days.
 
@@ -31,15 +31,15 @@ The default value of the TSL depends on the version of the operating system that
 
 ## How lingering objects occur
 
-When a domain controller is disconnected for a period that is longer than the TSL, the domain controller might not receive one or more tombstone objects. As a result, one or more objects that are deleted from the forest on all other domain controllers might remain on the disconnected domain controller. Such objects are called lingering objects.
+Lingering objects can occur if a domain controller stops replicating changes to or from the rest of the replication topology for a time, and then starts replicating again (for example, if the server has to be physically disconnected and moved, and then reconnected). When a domain controller doesn't replicate for a period that is longer than the TSL, the domain controller might not receive one or more tombstone objects. As a result, one or more objects that are deleted from the forest on all other domain controllers might remain on the disconnected domain controller. Such objects are called lingering objects.
 
-When this domain controller reconnects to the replication topology, it acts as a source replication partner that has an object that its destination partner does not have. The destination domain controller responds in one of two ways:
+When this domain controller starts replicating again, it acts as a source replication partner that has an object that its destination partner does not have. The destination domain controller responds in one of two ways:
 
-- If the destination domain controller has Strict Replication Consistency enabled, the domain controller recognizes that it cannot update the object. The destination domain controller locally stops inbound replication of the directory partition from the source domain controller.
+- If the `Strict Replication Consistency` registry key is enabled on the destination domain controller, that domain controller recognizes that it cannot update the object. The destination domain controller locally stops inbound replication of the directory partition from the source domain controller.
 
-- If the destination domain controller has Strict Replication Consistency disabled, the destination domain controller requests the full replica of the object. In this case, the object is reintroduced into the forest. From an administrative point of view, an object that you deleted reappears in the forest.
+- If the `Strict Replication Consistency` registry key is disabled on the destination domain controller, that domain controller requests the full replica of the object. This operation reintroduces the object into the forest. From an administrative point of view, an object that you deleted reappears.
 
-An outdated domain controller can store lingering objects without any noticeable effect when the following conditions are true:  
+Lingering objects don't always cause noticeable symptoms. Under the following conditions, lingering objects might remain undetected:  
 
 - An administrator, an application, or a service does not update the lingering object.
 - An administrator, an application, or a service does not try to create an object that has the same name in the domain.
@@ -51,20 +51,23 @@ The simplest way to avoid lingering objects is to prevent domain controllers fro
 
 The following conditions can cause long disconnections:
 
-- A domain controller is disconnected from the network and is put in storage.
-- The shipment of a pre-staged domain controller to its remote location takes longer than a TSL.
+- An administrator removes a domain controller from the network puts it in storage.
 
-- Wide area network (WAN) connections are unavailable for long periods. For example, a domain controller on board a cruise ship may be unable to replicate because the ship is at sea for longer than the TSL.
+- An administrator pre-stages a domain controller and then sends it to a remote location. However, the TSL expires before the domain controller reaches the remote location.
 
-- The reported event is a false positive because an administrator shortened the TSL to force the garbage collection of deleted objects.
+- The domain controller cannot connect to a wide-area network (WAN) for long periods. For example, a domain controller on board a cruise ship might be unable to replicate for longer than the TSL because the ship is at sea.
 
-- The reported event is a false positive because the system clock on the source or on the destination domain controller is incorrectly advanced or rolled back. Clock skews are most common following a system restart. Clock skews can occur for the following reasons:  
+Under the following conditions, lingering objects can appear even if the domain controller was offline for less than the default TSL:
 
-  - There is a problem with the system clock battery or with the motherboard.
+- An administrator shortened the TSL to force the garbage collection of deleted objects.
 
-  - The time source for a computer is configured incorrectly. Such a source could include a time source server that is configured by using Windows Time service (W32Time), by using a third-party time server, or by using network routers.
+- The system clock on the source or destination domain controller is incorrectly advanced or rolled back. Clock skews are most common after a domain controller restarts, and can occur for the following reasons:  
 
-  - An administrator advances or rolls back the system clock to extend the useful life of a system state backup or to accelerate the garbage collection of deleted objects. Make sure that the system clock reflects the actual time. Also, make sure that event logs don't contain invalid events from the future or from the past.
+  - The system clock battery or the motherboard has a problem.
+
+  - The time source for a computer is configured incorrectly. Such a source could include a time source server that's configured by using Windows Time service (W32Time), by using a third-party time server, or by using network routers.
+
+  - An administrator advances or rolls back the system clock to extend the useful life of a system state backup, or to accelerate the garbage collection of deleted objects. Make sure that the system clock reflects the actual time. Also, make sure that event logs don't contain invalid events from the future or from the past.
 
 ## Indications that a forest has lingering objects
 
