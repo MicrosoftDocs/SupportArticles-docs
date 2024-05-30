@@ -18,15 +18,15 @@ After deploying the Storage Sync Service, the next steps in deploying Azure File
 
 When upgrading the Azure File Sync agent, you may experience one of the following symptoms:
 
-- *AfsUpdater.exe* is hung at "installing updates".
-- Agent installation is hung at "Stopping monitoring agent".
+- *AfsUpdater.exe* hangs at "installing updates."
+- Agent installation hanges at "Stopping monitoring agent."
 
-This issue occur if the Azure File Sync agent version currently installed is older than v16.2 and the *Logman.exe* process fails to shut down.
+This issue occurs if the currently installed Azure File Sync agent version is earlier than v16.2 and the *Logman.exe* process fails to shut down.
 
 To resolve this issue, perform the following steps:
 
 1. Open **Task Manager**.
-2. Right-click on the **LogMan** process and select **End task**. Repeat this step until all LogMan processes are stopped and the agent update completes successfully.
+2. Right-click the **LogMan** process and select **End task**. Repeat this step until all LogMan processes are stopped and the agent update completes successfully.
 
 <a id="agent-installation-failures"></a>**Troubleshoot agent installation failures**
 
@@ -102,7 +102,7 @@ To resolve this issue, install [KB2919355](https://support.microsoft.com/help/29
 
 <a id="server-registration-failed"></a>**Server Registration displays this error: "Failed to register the server"**
 
-If the server registration fails, open the *AfsSrvRegistration\*.log* file located under *%LocalAppData%\Temp* and search for "ErrorMessage" to get the error details.
+If server registration fails, open the *AfsSrvRegistration\*.log* file located under *%LocalAppData%\Temp* and search for "ErrorMessage" to get the error details.
 
 <a id="server-registration-missing-subscriptions"></a>**Server Registration does not list all Azure Subscriptions**
 
