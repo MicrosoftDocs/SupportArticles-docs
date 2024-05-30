@@ -63,7 +63,7 @@ To search for trace messages and custom events that Profiler sends to your Appli
 
    - Profiler starts and sends custom events when it detects requests that happens while Profiler is running. If the `ServiceProfilerSample` custom event is displayed, it means that a profile is captured and is available in the **Application Insights Performance** pane.
 
-   If no records are displayed, Profiler isn't running or took too long to respond. Make sure [Profiler is enabled on your Azure service](./profiler.md).  
+   If no records are displayed, Profiler isn't running or took too long to respond. Make sure [Profiler is enabled on your Azure service](/azure/azure-monitor/profiler/profiler).  
 
 ## Double counting in parallel threads
 
@@ -101,7 +101,7 @@ If Profiler still isn't working for you, you can download the log and [submit an
 
 #### Check the Diagnostic Services site extension's status page
 
-If you enabled Profiler through the [Application Insights pane](profiler.md) in the portal, it's managed by the Diagnostic Services site extension. You can check the status page of this extension by going to `https://<site-name>.scm.azurewebsites.net/DiagnosticServices`.
+If you enabled Profiler through the [Application Insights pane](/azure/azure-monitor/profiler/profiler) in the portal, it's managed by the Diagnostic Services site extension. You can check the status page of this extension by going to `https://<site-name>.scm.azurewebsites.net/DiagnosticServices`.
 
 > [!NOTE]
 > The domain of the status page link will vary depending on the cloud. This domain will be the same as the Kudu management site for App Service.
