@@ -1,7 +1,7 @@
 ---
 title: Lingering objects in an AD DS forest
 description: Contains information about lingering objects in a forest. Specifically, it provides information about events that indicate the presence of lingering objects, the causes of lingering objects, and methods to remove lingering objects.
-ms.date: 05/21/2024
+ms.date: 05/30/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides some information about lingering objects in an Active Directory Domain Services (AD DS) forest. Specifically, the article describes the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.  
 
-_Applies to:_ &nbsp; Supported versions of Windows Server  
+_Applies to:_ &nbsp; Windows Server (All supported versions)
 _Original KB number:_ &nbsp; 910205
 
 ## Summary
@@ -58,13 +58,13 @@ The following conditions can cause long disconnections:
 
 - The reported event is a false positive because an administrator shortened the TSL to force the garbage collection of deleted objects.
 
-- The reported event is a false positive because the system clock on the source or on the destination domain controller is incorrectly advanced or rolled back. Clock skews are most common following a system restart. Clock skews may occur for the following reasons:  
+- The reported event is a false positive because the system clock on the source or on the destination domain controller is incorrectly advanced or rolled back. Clock skews are most common following a system restart. Clock skews can occur for the following reasons:  
 
   - There is a problem with the system clock battery or with the motherboard.
 
-  - The time source for a computer is configured incorrectly. It includes a time source server that is configured by using Windows Time service (W32Time), by using a third-party time server, or by using network routers.
+  - The time source for a computer is configured incorrectly. Such a source could include a time source server that is configured by using Windows Time service (W32Time), by using a third-party time server, or by using network routers.
 
-  - An administrator advances or rolls back the system clock to extend the useful life of a system state backup or to accelerate the garbage collection of deleted objects. Make sure that the system clock reflects the actual time. Also, make sure that event logs do not contain invalid events from the future or from the past.
+  - An administrator advances or rolls back the system clock to extend the useful life of a system state backup or to accelerate the garbage collection of deleted objects. Make sure that the system clock reflects the actual time. Also, make sure that event logs don't contain invalid events from the future or from the past.
 
 ## Indications that a forest has lingering objects
 
@@ -89,7 +89,7 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 | 1311 |Another domain controller replicated an object not present on this domain controller. |
 
 > [!NOTE]
-> Lingering objects aren't present on domain controllers that log Event ID 1988. The source domain controller contains the lingering object.
+> Lingering objects aren't present on domain controllers that log event ID 1988. The source domain controller contains the lingering object.
 
 ### Repadmin errors that indicate that lingering objects are present in the forest
 
@@ -100,19 +100,19 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 
 ### Other indications that lingering objects are present in the forest
 
-- A user or group account that was deleted remains in the global address list (GAL) on servers that are running Microsoft Exchange Server. Therefore, although the account name appears in the GAL, errors occur when users try to send e-mail messages.
+- A user or group account that was deleted remains in the global address list (GAL) on servers that are running Microsoft Exchange Server. In such a case, the account name appears in the GAL, but errors occur when users try to send e-mail messages.
 
-- Multiple copies of an object appear in the object picker or in the GAL for an object that should be unique in the forest. You sometimes see duplicate objects that have changed names. These duplicate objects cause confusion on directory searches. For example, if the relative distinguished name of two objects cannot be resolved, conflict resolution appends **CNF:GUID** to the name. In this example, `*` represents a reserved character, **CNF** is a constant that indicates a conflict resolution, and **GUID** represents the objectGUID attribute value.
+- Multiple copies of an object appear in the object picker or in the GAL for an object that should be unique in the forest. You sometimes see duplicate objects that have changed names. These duplicate objects confuse directory searches. For example, if the a search can't resolve the relative distinguished names of two objects, the conflict resolution function appends `*CNF:<GUID>` to one of the names. In this example, `*` represents a reserved character, `CNF` is a constant that indicates a conflict resolution, and `<GUID>` represents the **objectGUID** attribute value.
 
-- E-mail messages are not delivered to a user whose Active Directory account appears to be current. After an outdated domain controller or global catalog server is reconnected, both instances of the user object appear in the global catalog. Because both objects have the same e-mail address, e-mail messages cannot be delivered.
+- E-mail messages aren't delivered to a user whose Active Directory account appears to be current. After an outdated domain controller or global catalog server reconnects to the forest, both instances of the user object (the current one and an older version) appear in the global catalog. Because both objects have the same e-mail address, e-mail messages can't be delivered.
 
 - A universal group that no longer exists continues to appear in a user's access token. Although the group no longer exists, if a user account still has the group in its security token, the user may have access to a resource that you intended to be unavailable to that user.
 
-- A new object or Exchange mailbox cannot be created. But you do not see the object in Active Directory. An error message reports that the object already exists.
+- You can't create a new object or Exchange mailbox. However, you don't see the object in the forest. An error message reports that the object already exists.
 
-- Searches that use attributes of an existing object may incorrectly find multiple copies of an object of the same name. One object has been deleted from the domain. But that object remains in an isolated global catalog server.  
+- Searches that use attributes of an existing object might incorrectly find multiple copies of an object that use the same name. One object has been deleted from the domain. But that object remains in a global catalog server that has been isolated.  
 
-If an attempt is made to update a lingering object that resides in a writable directory partition, events are logged on the destination domain controller. However, if the only version of a lingering object is in a read-only directory partition on a global catalog server, the object cannot be updated. Therefore, this kind of event is not triggered.
+When updates to a lingering object replicate from one domain controller to another, the event-logging behavior of the domain controller depends on whether the directory partition that contains the lingering object is writeable or not. If the lingering object on the destination domain controller resides in a writeable partition, the domain controller logs an event. However, if the lingering object resides in a read-only partition, the object can't be updated. The domain controller doesn't log an event. 
 
 ## Removing lingering objects from the forest
 
@@ -127,17 +127,17 @@ For more information about using LoLv2, see the following articles:
 - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
 - [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
 
-### Method 2: Removing lingering objects by using repadmin
+### Method 2: Removing lingering objects by using the Repadmin tool
 
-In some cases where you can't use LoLv2, you can use *Repadmin.exe*. For more information, see [Steps to use Repadmin to remove lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988).
+If you can't use LoLv2, you can use *Repadmin.exe*. For more information, see [Steps to use Repadmin to remove lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988).
 
 ## Preventing lingering objects
 
-Select one of the following four methods to prevent lingering objects.
+To prevent lingering objects in your forest, use one of the following four methods.
 
 ### Method 1: Enable the Strict Replication Consistency registry entry
 
-You can enable the Strict Replication Consistency registry entry so that suspect objects are quarantined. Then, administrations can remove these objects before they spread throughout the forest.
+You can enable the `Strict Replication Consistency` registry entry so that suspect objects are quarantined. Then, administrations can remove these objects before they spread throughout the forest.
 
 If a writable lingering object is located in your environment, and an attempt is made to update the object, the value in the Strict Replication Consistency registry entry determines whether replication proceeds or is stopped. The Strict Replication Consistency registry entry is located in the following registry subkey:  
 
