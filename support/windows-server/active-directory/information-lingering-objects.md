@@ -169,7 +169,7 @@ The preferred method to enable `Strict Replication Consistency` is by using Repa
 
 - [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)).
 
-### Method 2: Check replication by using a command-line command
+### <a name="method-2-monitor-replication-by-using-a-command-line-command" ></a>Method 2: Check replication by using a command-line command
 
 To check replication by using the `repadmin /showrepl` command, follow these steps:  
 
