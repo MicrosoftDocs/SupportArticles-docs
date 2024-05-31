@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 05/29/2024
+ms.date: 05/31/2024
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -14,16 +14,19 @@ After deploying the Storage Sync Service, the next steps in deploying Azure File
 
 ## Agent installation
 
-<a id="agent-update-hangs"></a>**Agent update does not complete**  
-When upgrading the Azure File Sync agent, you may experience one of the following symptoms if the agent update is hung: 
-- AfsUpdater.exe is hung at "installing updates" 
-- Agent installation is hung at "Stopping monitoring agent"  
+<a id="agent-update-hangs"></a>**Agent update does not complete**
 
-This issue occurs if the Azure File Sync agent version currently installed is older than v16.2 and the Logman.exe process is failing to shutdown. 
+When upgrading the Azure File Sync agent, you may experience one of the following symptoms:
+
+- *AfsUpdater.exe* hangs at "installing updates."
+- Agent installation hangs at "Stopping monitoring agent."
+
+This issue occurs if the currently installed Azure File Sync agent version is earlier than v16.2 and the *Logman.exe* process fails to shut down.
 
 To resolve this issue, perform the following steps:
+
 1. Open **Task Manager**.
-2. Right-click on the **LogMan** process and select **End task**. Repeat this step until all LogMan processes are stopped and the agent update completes successfully.
+2. Right-click the **LogMan** process and select **End task**. Repeat this step until all LogMan processes are stopped and the agent update completes successfully.
 
 <a id="agent-installation-failures"></a>**Troubleshoot agent installation failures**
 
