@@ -56,11 +56,11 @@ Several other areas of BitLocker were improved in versions of Windows released a
 
 - **Support for classes of HDD/SSD hybrid disks** - BitLocker can encrypt a disk that uses a small SSD as a non-volatile cache in front of the HDD, such as Intel Rapid Storage Technology.
 
-## Hyper-V Gen 2 VM: Can't access the volume after BitLocker encryption
+## Hyper-V Generation 2 VM: Can't access the volume after BitLocker encryption
 
 Consider the following scenario:
 
-1. BitLocker is turned on a generation 2 virtual machine (VM) that runs on Hyper-V.
+1. BitLocker is turned on a Generation 2 virtual machine (VM) that runs on Hyper-V.
 
 2. Data is added to the data disk as it encrypts.
 
@@ -74,11 +74,11 @@ Consider the following scenario:
 
       > **You need to format the disk in \<*drive_letter:*> drive before you can use it**
 
-### Cause of not being able to access the volume after BitLocker encryption on a Hyper-V Gen 2 VM
+### Cause of not being able to access the volume after BitLocker encryption on a Hyper-V Generation 2 VM
 
 This issue occurs because the third-party filter driver *Stcvsm.sys* (from StorageCraft) is installed on the VM.
 
-### Resolution for not being able to access the volume after BitLocker encryption on a Hyper-V Gen 2 VM
+### Resolution for not being able to access the volume after BitLocker encryption on a Hyper-V Generation 2 VM
 
 To resolve this issue, remove the third-party software.
 
@@ -91,7 +91,7 @@ A Windows Server 2019 or 2016 Hyper-V Server is hosting VMs (guests) that are co
 This issue occurs regardless of any of the following variations in the environment:
 
 - How the domain controller volumes are unlocked.
-- Whether the VMs are generation 1 or generation 2.
+- Whether the VMs are Generation 1 or Generation 2.
 - Whether the guest operating system is Windows Server 2019, 2016 or 2012 R2.
 
 In the guest VM domain controller **Windows Logs** > **Application** Event Viewer log, the VSS event source records event **ID 8229**:
