@@ -102,6 +102,8 @@
       href: desktop-flows/ui-flows-run-failed-with-aadlogonfailure-error.md
     - name: Desktop flow fails with the SessionCreationTimeout error code
       href: desktop-flows/sessioncreationtimeout-error-code.md
+    - name: Duplicate binary objects in dekstop flow schema v2 solution
+      href: desktop-flows/duplicate-binary-objects-in-schema-v2.md
     - name: Errors when running desktop flows including Excel actions
       href: desktop-flows/troubleshoot-excel-errors.md
     - name: Errors when running attended or unattended desktop flows
