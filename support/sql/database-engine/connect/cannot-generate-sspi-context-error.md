@@ -224,7 +224,7 @@ If you use **Impersonate** as the authentication option on the **Security** page
 ## See also
 
 - [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
-- [Troubleshoot consistent authentication issues](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0400-Consistent-Authentication-Issue)
+- [Troubleshoot consistent authentication issues](consistent-authentication-connectivity-issues.md)
 - [SSPI client tool](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SSPICLIENT)
 - [Enable Kerberos event logging](../../../windows-server/identity/enable-kerberos-event-logging.md)
 - [How to force Kerberos to use TCP instead of UDP in Windows](../../../windows-server/windows-security/force-kerberos-use-tcp-instead-udp.md)

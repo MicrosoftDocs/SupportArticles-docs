@@ -1,0 +1,9 @@
+
+items:
+- name: Welcome
+  href: welcome-container-registry.yml
+
+- name: Troubleshoot container registry issues
+  items:
+  - name: Can't get private IP address of an Azure Container Registry FQDN
+    href: cant-resolve-container-registry-fqdn-private-ip-address.md

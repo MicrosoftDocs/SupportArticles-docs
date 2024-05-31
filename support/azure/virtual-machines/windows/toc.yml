@@ -146,26 +146,25 @@
 
 - name: VM performance
   items:
-  - name: Performance diagnostics (PerfInsights)
+  - name: Azure Performance diagnostics (PerfInsights)
     items:
-    - name: Performance diagnostics in the Azure Portal
+    - name: Overview
       href: performance-diagnostics.md
-    - name: PerfInsights in Windows
+    - name: How to use
       href: how-to-use-perfinsights.md
-    - name: Performance diagnostics VM extension
-      items:
-      - name: Performance diagnostics extension in Windows
-        href: performance-diagnostics-vm-extension.md
-  - name: Performance diagnostics VMSS extension
-    items:
-    - name: PerfInsights and scale set VM instances
+    - name: More info about the Extension
+      href: performance-diagnostics-vm-extension.md
+    - name: Azure Scale Set VM instances
       href: perfinsights-and-scale-set-vm-instances.md
-  - name: Troubleshoot VM performance issues - Windows
+  - name: Troubleshoot VM Performance Bottlenecks
+    href: ../linux/troubleshoot-performance-bottlenecks-linux.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     items:
-    - name: Troubleshoot high CPU issues in Azure Windows virtual machines
+    - name: Isolate bottlenecks - CPU
       href: troubleshoot-high-cpu-issues-azure-windows-vm.md
-    - name: Troubleshoot high memory issues for Azure Windows virtual machines
+    - name: Isolate bottlenecks - Memory
       href: azure-windows-vm-memory-issue.md
+    - name: Additional troubleshooting using monitoring
+      href: ../linux/troubleshoot-performance-virtual-machine-linux-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Poor performance on Windows Server 2012 R2
       href: poor-performance-emulated-storage-stack.md
 
@@ -290,8 +289,6 @@
       href: /azure/automation/troubleshoot/start-stop-vm?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Start VM with last known good configuration
       href: start-vm-last-known-good.md
-    - name: Swap file is not re-created
-      href: swap-file-not-recreated-linux-vm-restart.md
     - name: Restarting or resizing a VM
       href: restart-resize-error-troubleshooting.md
     - name: Restarting, shutting down, or stopping services

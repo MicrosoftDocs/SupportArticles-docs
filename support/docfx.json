@@ -191,7 +191,8 @@
         "**/*.md": "medium"
       },
       "ms.topic": {
-        "**/*.md": "troubleshooting"
+        "**/*.md": "troubleshooting",
+        "sql/releases/**/*.md": "release-notes"
       },
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",

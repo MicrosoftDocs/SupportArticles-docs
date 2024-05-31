@@ -2,7 +2,7 @@
 title: Cumulative update 5 for SQL Server 2019 (KB4552255)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 5 (KB4552255).
 ms.date: 06/30/2023
-ms.custom: KB4552255
+ms.custom: evergreen, KB4552255
 ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows

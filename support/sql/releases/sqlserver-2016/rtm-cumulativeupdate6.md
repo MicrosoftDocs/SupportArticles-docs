@@ -2,7 +2,7 @@
 title: Cumulative update 6 for SQL Server 2016 (KB4019914)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 cumulative update 6 (KB4019914).
 ms.date: 10/26/2023
-ms.custom: KB4019914
+ms.custom: evergreen, KB4019914
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise

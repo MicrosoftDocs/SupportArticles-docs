@@ -11129,6 +11129,21 @@
       "source_path": "support/windows-server/active-directory/syntax-build-answer-files-unattended-installation-ad-ds.md",
       "redirect_url": "/windows-server/identity/ad-ds/deploy/dcpromo",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/dcdiag-verifyreferences-test-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dcdiag-verifyreferences-test-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/lingering-objects-remain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/lingering-objects-remain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/distributed-file-system-hotfixes.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/distributed-file-system-hotfixes",
+      "redirect_document_id": false
     }
   ]
 }
