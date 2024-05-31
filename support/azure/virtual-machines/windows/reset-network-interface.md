@@ -81,50 +81,6 @@ This article shows how to reset the network interface for Azure Windows VM to re
 2. The virtual machine will restart to initialize the new NIC to the system.
 3. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
-### For Classic VMs
-
-[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
-
-To reset network interface, follow these steps:
-
-#### Use Azure portal
-
-1. Go to the [Azure portal]( https://ms.portal.azure.com).
-2. Select **Virtual Machines (Classic)**.
-3. Select the affected Virtual Machine.
-4. Select **IP addresses**.
-5. If the **Private IP assignment**  is not  **Static**, change it to **Static**.
-6. Change the **IP address** to another IP address that is available in the Subnet.
-7. Select **Save**.
-8. The virtual machine will restart to initialize the new NIC to the system.
-9. Try to RDP to your machine.  If successful, you can choose to revert the Private IP address back to the original.  
-
-#### Use Azure PowerShell
-
-1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed.
-2. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands:
-
-    ```powershell
-    #Set the variables 
-    $SubscriptionID = "<Subscription ID>"​
-    $VM = "<VM Name>"
-    $CloudService = "<Cloud Service>"
-    $VNET = "<Virtual Network>"
-    $IP = "NEWIP"
-    
-    #Log in to the subscription​ 
-    Add-AzureAccount
-    Select-AzureSubscription -SubscriptionId $SubscriptionId 
-    
-    #Check whether the new IP address is available in the virtual network.
-    Test-AzureStaticVNetIP –VNetName $VNET –IPAddress  $IP
-        
-    #Add/Change static IP. This process will not change MAC address
-    Get-AzureVM -ResourceGroupName $CloudService -Name $VM | Set-AzureStaticVNetIP -IPAddress $IP |Update-AzureVM
-    ```
-
-3. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
-
 ## Delete the unavailable NICs
 
 After you can remote desktop to the machine, you must delete the old NICs to avoid the potential problem:
