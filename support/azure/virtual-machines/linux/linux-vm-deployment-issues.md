@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot Linux VM deployment issues
+title: Troubleshoot Linux virtual machine deployment issues
 description: Troubleshoot deployment issues when you create a new Linux virtual machine in Azure.
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: virtual-machines
 ms.date: 06/03/2024
 ms.reviewer: srijangupta, scotro, jarrettr
 ---
-# Troubleshoot Resource Manager deployment issues when creating a new Linux virtual machine in Azure
+# Troubleshoot provisioning failures when deploying Linux virtual machines
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
@@ -14,7 +14,7 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
-## Provisioning symptoms
+## Symptoms
 
 A typical provisioning failure scenario occurs after you create a custom image, then deploy a VM from it, you then experience unto 40mins where the VM status is showing `creating`, and you see this error message:
 
@@ -55,11 +55,11 @@ Commonly, provisioning failures can happen for multiple reasons, such as:
 
 - Missing provisioning /incorrectly configured agent
 
-  - You will need to ensure an agent is present and is working correctly, you should be using [cloud-init](/azure/virtual-machines/linux/using-cloud-init) or if your image will not support this, you can review these [steps](/azure/virtual-machines/linux/no-agent).
+  You will need to ensure an agent is present and is working correctly, you should be using [cloud-init](/azure/virtual-machines/linux/using-cloud-init) or if your image will not support this, you can review these [steps](/azure/virtual-machines/linux/no-agent).
 
 - Incorrect image configuration
 
-  - We have guidance on how images should be set up with cloud-init and other [Azure image requirements](/azure/virtual-machines/linux/create-upload-generic), please check this.
+   We have guidance on how images should be set up with cloud-init and other [Azure image requirements](/azure/virtual-machines/linux/create-upload-generic), please check this.
 
 ## Troubleshoot provisioning failures
 
@@ -97,7 +97,7 @@ az vm create \
     --boot-diagnostics-storage $storageacct
 ```
 
-To view the serial log, you can go to the Portal, or run the command below to download the 'serialConsoleLogBlobUri' log:
+To view the serial log, you can go to the Portal, or run the command below to download the *serialConsoleLogBlobUri* log:
 
 ```azurecli
 az vm boot-diagnostics get-boot-log-uris --name $vmName --resource-group $resourceGroup
@@ -135,7 +135,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 
 ### UDF driver Blocklisted
 
-**Error**: In the serial log:
+**Error** In the serial log:
 
 ```output
 [   10.855501] cloud-init[732]: Cloud-init v. 20.4.1-0ubuntu1~18.04.1 running 'init-local' at Thu, 28 Jan 2021 23:43:02 +0000. Up 10.68 seconds.
@@ -145,7 +145,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 [   14.634117] cloud-init[732]: 2021-01-28 23:43:06,876 - azure.py[WARNING]: Reported failure to Azure fabric.
 ```
 
-In *waagent.log*:
+**Error** in *waagent.log*:
 
 ```output
 "UDF driver Blocklisted 2020/09/11 19:16:40.240016 ERROR Daemon Provisioning failed: [ProtocolError] [CopyOvfEnv] Error mounting dvd: [OSUtilError] Failed to mount dvd deviceInner error: [mount -o ro -t udf,iso9660 /dev/sr0 /mnt/cdrom/secure] returned 32: mount: /mnt/cdrom/secure: wrong fs type, bad option, bad superblock on /dev/sr0, missing codepage or helper program, or other error."
@@ -163,9 +163,9 @@ A common way for UDF drivers to be blocked is through configs within `/etc/modpr
 
 ### Unicode characters in VM tags issue
 
-**Error**: In *cloud-init.log*:
+**Error** in *cloud-init.log*:
 
-```text
+```output
   File "/usr/lib/python2.7/site-packages/cloudinit/sources/DataSourceAzure.py", line 1316, in _get_metadata_from_imds
     except json.decoder.JSONDecodeError:
 AttributeError: 'module' object has no attribute 'JSONDecodeError'
@@ -177,9 +177,9 @@ AttributeError: 'module' object has no attribute 'JSONDecodeError'
 
 ### Password with unicode characters
 
-**Error**: In *cloud-init.log*:
+**Error** in *cloud-init.log*:
 
-```text
+```output
 File "/usr/lib/python2.7/site-packages/cloudinit/sources/DataSourceAzure.py", line 1153, in encrypt_pass
     return crypt.crypt(password, salt_id + util.rand_str(strlen=16))
   File "/usr/lib64/python2.7/crypt.py", line 55, in crypt
@@ -193,9 +193,9 @@ UnicodeEncodeError: 'ascii' codec can't encode characters in position 10-11: ord
 
 ### Dhclient permission
 
-**Error**: In cloud-init.log:
+**Error** in cloud-init.log:
 
-```text
+```output
 Command: ['/var/tmp/cloud-init/cloud-init-dhcp-yd8mvxud/dhclient', '-1', '-v', '-lf', '/var/tmp/cloud-init/cloud-init-dhcp-yd8mvxud/dhcp.leases', '-pf', '/var/tmp/cloud-init/cloud-init-dhcp-yd8mvxud/dhclient.pid', 'eth0', '-sf', '/bin/true']
 Exit code: -
 Reason: [Errno 13] Permission denied: b'/var/tmp/cloud-init/cloud-init-dhcp-yd8mvxud/dhclient'
@@ -221,7 +221,7 @@ az vm repair create  \
     --verbose
 ```
 
-### Understanding the cloud-init.log
+## Understanding the cloud-init.log
 
 When you have access to the cloud-init logs, review the [cloud-init troubleshooting documentation](/azure/virtual-machines/linux/cloud-init-troubleshooting).
 
