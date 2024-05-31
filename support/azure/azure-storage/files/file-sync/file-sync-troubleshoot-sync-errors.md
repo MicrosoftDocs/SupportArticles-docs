@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 04/07/2024
+ms.date: 05/31/2024
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -245,7 +245,14 @@ Sync sessions might fail for various reasons including the server being restarte
 | **Error string** | ECS_E_SYNC_CANCELLED_BY_VSS |
 | **Remediation required** | No |
 
-No action required. This error should automatically resolve. If the error persists for more than a day, create a support request.
+No action required. Azure File Sync has a scheduled task (VssSyncScheduledTask) that runs once a day on the server to sync files that are in use. When this scheduled task starts, it will cancel the current upload sync session (results in 0x80c8029c error code) . If you’re migrating a file share and don’t want the upload session to be interrupted, you can temporarily disable the VssSyncScheduledTask scheduled task until the initial upload completes.
+
+Steps to disable the VssSyncScheduledTask scheduled task on the server:
+1. Open Task Scheduler.
+2. Navigate to Microsoft\StorageSync.
+3. Right-click the VssSyncScheduledTask task and select Disable.
+
+Once the file share migration completes, re-enable the VssSyncScheduledTask scheduled task.
 
 <a id="-2147012889"></a>**A connection with the service could not be established.**
 
