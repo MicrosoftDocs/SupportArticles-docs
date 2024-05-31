@@ -128,7 +128,60 @@ Debug-AzStorageAccountAuth `
     -FilePath $FilePath `
     -Verbose
 ```
+## Unable to mount Azure file shares with Microsoft Domain Entra Credentials
 
+### Self diagnostics steps
+
+First, make sure that you've followed the steps to [enable Azure Files AD DS Authentication](/azure/storage/files/storage-files-identity-auth-active-directory-enable) or to enable Microsoft Entra Kerberos authentication.
+
+Second, try [mounting Azure file share with storage account key](/azure/storage/files/storage-how-to-use-files-windows). If the share fails to mount, download [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) to help you validate the client running environment. AzFileDiagnostics can detect incompatible client configurations that might cause access failure for Azure Files, give prescriptive guidance on self-fix, and collect the diagnostics traces.
+
+Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of basic checks on your AD configuration with the logged-on AD user. This cmdlet is supported on [AzFilesHybrid v0.1.2+ version](https://github.com/Azure-Samples/azure-files-samples/releases). You need to run this cmdlet with an AD user that has owner permission on the target storage account.
+
+```PowerShell
+$ResourceGroupName = "<resource-group-name-here>"
+$StorageAccountName = "<storage-account-name-here>"
+
+Debug-AzStorageAccountAuth -StorageAccountName $StorageAccountName -ResourceGroupName $ResourceGroupName -Verbose
+```
+
+The cmdlet performs these checks in sequence and provides guidance for failures:
+
+1. `CheckPort445Connectivity`: Check that port 445 is opened for SMB connection. If port 445 isn't open, refer to the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
+2. `CheckAADConnectivity`: Checks for AAD connectivity for Aad Kerberos authentication. SMB mounts with Kerberos auth can fail if the client cannot reach out to AAD. If this check fails, it indicates that there is a networking error: perhaps a firewall or VPN issue.
+3. `CheckEntraObject`: Confirm that there is an object in the Azure Active Directory that represents the storage account and has the correct SPN (service principal name). If the SPN isn't correctly set up, run the Set-AD cmdlet returned in the debug cmdlet to configure the SPN.
+4. `CheckRegKey`: Check for the reg key if it is enabled or not. CloudKerberosTicketRetrieval key should be equal to 1 to get the Kerberos tickets for smb.
+5. `CheckRealmMap`: Checks if the user has configured any realm mappings (through ksetup /addhosttorealmmap) that would join the account to another Kerberos realm than KERBEROS.MICROSOFTONLINE.COM .(https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds)
+6. `CheckAdminConsent`: Checks if the Entra service principal has been granted admin consent for the Microsoft Graph permissions that are required to get a Kerberos ticket. 
+(https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal#grant-admin-consent-to-the-new-service-principal)
+
+If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run. For example, to run all checks related to share-level permissions (RBAC), use the following PowerShell cmdlets:
+
+```PowerShell
+$ResourceGroupName = "<resource-group-name-here>"
+$StorageAccountName = "<storage-account-name-here>"
+
+Debug-AzStorageAccountAuth `
+    -Filter CheckSidHasAadUser,CheckUserRbacAssignment `
+    -StorageAccountName $StorageAccountName `
+    -ResourceGroupName $ResourceGroupName `
+    -Verbose
+```
+
+If you have the file share mounted on `X:`, and if you only want to run the check related to file-level permissions (Windows ACLs), you can run the following PowerShell cmdlets:
+
+```PowerShell
+$ResourceGroupName = "<resource-group-name-here>"
+$StorageAccountName = "<storage-account-name-here>"
+$FilePath = "X:\example.txt"
+
+Debug-AzStorageAccountAuth `
+    -Filter CheckUserFileAccess `
+    -StorageAccountName $StorageAccountName `
+    -ResourceGroupName $ResourceGroupName `
+    -FilePath $FilePath `
+    -Verbose
+```
 ## Unable to configure directory/file level permissions (Windows ACLs) with Windows File Explorer
 
 ### Symptom
