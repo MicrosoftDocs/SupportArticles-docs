@@ -3,7 +3,7 @@ title: Basic troubleshooting of DNS resolution problems in AKS
 description: Learn how to create a troubleshooting workflow to fix DNS resolution problems in Azure Kubernetes Service (AKS).
 author: sturrent
 ms.author: seturren
-ms.date: 05/24/2024
+ms.date: 05/30/2024
 ms.reviewer: v-rekhanain, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -270,31 +270,115 @@ After you generate and merge your traffic capture files, you can do a DNS packet
 1. Select **Start**, enter **Wireshark**, and then select **Wireshark** in the search results.
 1. In the **Wireshark** window, select the **File** menu, and then select **Open**.
 1. Navigate to the folder that contains your capture files, select *dns-cap1-db-check-\<db-check-pod-name>.pcap* (the client-side capture file for an individual CoreDNS pod), and then select the **Open** button.
-1. Select the **Statistics** menu, and then select **DNS**. The **Wireshark - DNS** dialog box appears and displays an analysis of the DNS traffic.
+1. Select the **Statistics** menu, and then select **DNS**. The **Wireshark - DNS** dialog box appears and displays an analysis of the DNS traffic. The contents of the dialog box are shown in the following table.
 
-   :::image type="content" source="./media/basic-troubleshooting-dns-resolution-problems/wireshark-dns-analysis-single-capture.png" alt-text="Screenshot of Wireshark DNS analysis dialog box for a network capture file of an individual CoreDNS pod." border="false" lightbox="./media/basic-troubleshooting-dns-resolution-problems/wireshark-dns-analysis-single-capture.png":::
+   | Topic / Item                                 | Count   | Average | Min Val  | Max Val         | Rate (ms) | Percent    | Burst Rate | Burst Start |
+   |----------------------------------------------|---------|---------|----------|-----------------|-----------|------------|------------|-------------|
+   | &blacktriangledown; Total Packets            | 1066    |         |          |                 | 0.0017    | 100%       | 0.1200     | 0.000       |
+   | &emsp;&blacktriangledown; rcode              | 1066    |         |          |                 | 0.0017    | 100.00%    | 0.1200     | 0.000       |
+   | &emsp;&emsp;&emsp;**Server failure**         | **17**  |         |          |                 | 0.0000    | **1.59%**  | 0.0100     | 99.332      |
+   | &emsp;&emsp;&emsp;No such name               | 353     |         |          |                 | 0.0006    | 33.11%     | 0.0400     | 0.000       |
+   | &emsp;&emsp;&emsp;No error                   | 696     |         |          |                 | 0.0011    | 65.29%     | 0.0800     | 0.000       |
+   | &emsp;&blacktriangledown; opcodes            | 1066    |         |          |                 | 0.0017    | 100.00%    | 0.1200     | 0.000       |
+   | &emsp;&emsp;&emsp;Standard query             | 1066    |         |          |                 | 0.0017    | 100.00%    | 0.1200     | 0.000       |
+   | &emsp;&blacktriangledown; Query/Response     | 1066    |         |          |                 | 0.0017    | 100.00%    | 0.1200     | 0.000       |
+   | &emsp;&emsp;&emsp;**Response**               | **531** |         |          |                 | 0.0009    | **49.81%** | 0.0600     | 0.000       |
+   | &emsp;&emsp;&emsp;**Query**                  | **535** |         |          |                 | 0.0009    | **50.19%** | 0.0600     | 0.000       |
+   | &emsp;&blacktriangledown; Query Type         | 1066    |         |          |                 | 0.0017    | 100.00%    | 0.1200     | 0.000       |
+   | &emsp;&emsp;&emsp;AAAA                       | 167     |         |          |                 | 0.0003    | 15.67%     | 0.0200     | 0.000       |
+   | &emsp;&emsp;&emsp;A                          | 899     |         |          |                 | 0.0015    | 84.33%     | 0.1000     | 0.000       |
+   | &emsp;&blacktriangledown; Class              | 1066    |         |          |                 | 0.0017    | 100.00%    | 0.1200     | 0.000       |
+   | &emsp;&emsp;&emsp;IN                         | 1066    |         |          |                 | 0.0017    | 100.00%    | 0.1200     | 0.000       |
+   | &blacktriangledown; Service Stats            | 0       |         |          |                 | 0.0000    | 100%       | -          | -           |
+   | &emsp;&emsp;**request-response time (msec)** | 531     | 184.42  | 0.067000 | **6308.503906** | 0.0009    |            | 0.0600     | 0.000       |
+   | &emsp;&emsp;no. of unsolicited responses     | 0       |         |          |                 | 0.0000    |            | -          | -           |
+   | &emsp;&emsp;no. of retransmissions           | 0       |         |          |                 | 0.0000    |            | -          | -           |
+   | &blacktriangledown; Response Stats           | 0       |         |          |                 | 0.0000    | 100%       | -          | -           |
+   | &emsp;&emsp;no. of questions                 | 1062    | 1.00    | 1        | 1               | 0.0017    |            | 0.1200     | 0.000       |
+   | &emsp;&emsp;no. of authorities               | 1062    | 0.82    | 0        | 1               | 0.0017    |            | 0.1200     | 0.000       |
+   | &emsp;&emsp;no. of answers                   | 1062    | 0.15    | 0        | 1               | 0.0017    |            | 0.1200     | 0.000       |
+   | &emsp;&emsp;no. of additionals               | 1062    | 0.00    | 0        | 0               | 0.0017    |            | 0.1200     | 0.000       |
+   | &blacktriangledown; Query Stats              | 0       |         |          |                 | 0.0000    | 100%       | -          | -           |
+   | &emsp;&emsp;Qname Len                        | 535     | 32.99   | 14       | 66              | 0.0009    |            | 0.0600     | 0.000       |
+   | &emsp;&blacktriangledown; Label Stats        | 0       |         |          |                 | 0.0000    |            | -          | -           |
+   | &emsp;&emsp;&emsp;4th Level or more          | 365     |         |          |                 | 0.0006    |            | 0.0400     | 0.000       |
+   | &emsp;&emsp;&emsp;3rd Level                  | 170     |         |          |                 | 0.0003    |            | 0.0200     | 0.000       |
+   | &emsp;&emsp;&emsp;2nd Level                  | 0       |         |          |                 | 0.0000    |            | -          | -           |
+   | &emsp;&emsp;&emsp;1st Level                  | 0       |         |          |                 | 0.0000    |            | -          | -           |
+   | &emsp;Payload size                           | 1066    | 92.87   | 32       | 194             | 0.0017    | 100%       | 0.1200     | 0.000       |
 
 The DNS analysis dialog box in Wireshark shows a total of 1,066 packets. Of these packets, 17 (1.59 percent) caused a server failure. Additionally, the maximum response time was 6,308 milliseconds (6.3 seconds), and no response was received for 0.38 percent of the queries. (This total was calculated by subtracting the 49.81 percent of packets that contained responses from the 50.19 percent of packets that contained queries.)
 
-If you enter `(dns.flags.response == 0) && ! dns.response_in` as a display filter in Wireshark, this filter displays DNS queries that didn't receive a response, as shown in the following screenshot.
+If you enter `(dns.flags.response == 0) && ! dns.response_in` as a display filter in Wireshark, this filter displays DNS queries that didn't receive a response, as shown in the following table.
 
-:::image type="content" source="./media/basic-troubleshooting-dns-resolution-problems/wireshark-display-filter-no-response.png" alt-text="Screenshot of Wireshark display filter of DNS queries that didn't receive a response." border="false" lightbox="./media/basic-troubleshooting-dns-resolution-problems/wireshark-display-filter-no-response.png":::
+| No. | Time                       | Source    | Destination | Protocol | Length | Info                                                                                       |
+|----:|----------------------------|-----------|-------------|----------|-------:|--------------------------------------------------------------------------------------------|
+| 225 | 2024-04-01 16:50:40.000520 | 10.0.0.21 | 172.16.0.10 | DNS      | 80     | Standard query 0x2c67 AAAA db.contoso.com                                                  |
+| 426 | 2024-04-01 16:52:47.419907 | 10.0.0.21 | 172.16.0.10 | DNS      | 132    | Standard query 0x8038 A db.contoso.com.iosffyoulcwehgo1g3egb3m4oc.jx.internal.cloudapp.net |
+| 693 | 2024-04-01 16:55:23.105558 | 10.0.0.21 | 172.16.0.10 | DNS      | 132    | Standard query 0xbcb0 A db.contoso.com.iosffyoulcwehgo1g3egb3m4oc.jx.internal.cloudapp.net |
+| 768 | 2024-04-01 16:56:06.512464 | 10.0.0.21 | 172.16.0.10 | DNS      | 80     | Standard query 0xe330 A db.contoso.com                                                     |
 
-The Wireshark status bar shows that four of the 1,066 packets, or 0.4 percent, were DNS queries that never received a response. This value essentially matches the 0.38 percent total that you calculated earlier.
+Additionally, the Wireshark status bar displays the text **Packets: 1066 - Displayed: 4 (0.4%)**. This information means that four of the 1,066 packets, or 0.4 percent, were DNS queries that never received a response. This percentage essentially matches the 0.38 percent total that you calculated earlier.
 
-If you change the display filter to `dns.time >= 5`, the filter shows query response packets that took five seconds or more to be received, as shown in the updated screenshot.
+If you change the display filter to `dns.time >= 5`, the filter shows query response packets that took five seconds or more to be received, as shown in the updated table.
 
-:::image type="content" source="./media/basic-troubleshooting-dns-resolution-problems/wireshark-display-filter-response-took-five-seconds.png" alt-text="Screenshot of Wireshark display filter of DNS queries that took five seconds or more to be received." lightbox="./media/basic-troubleshooting-dns-resolution-problems/wireshark-display-filter-response-took-five-seconds.png":::
+| No. | Time                       | Source      | Destination | Protocol | Length | Info                                                                                                      | SourcePort | Additional RRs | dns resp time |
+|----:|----------------------------|-------------|-------------|----------|-------:|-----------------------------------------------------------------------------------------------------------|-----------:|---------------:|--------------:|
+| 213 | 2024-04-01 16:50:32.644592 | 172.16.0.10 | 10.0.0.21   | DNS      | 132    | Standard query 0x9312 Server failure A db.contoso.com.iosffyoulcwehgo1g3egb3m4oc.jx.internal.cloudapp.net | 53         | 0              | 6.229941      |
+| 320 | 2024-04-01 16:51:55.053896 | 172.16.0.10 | 10.0.0.21   | DNS      | 80     | Standard query 0xe5ce Server failure A db.contoso.com                                                     | 53         | 0              | 6.065555      |
+| 328 | 2024-04-01 16:51:55.113619 | 172.16.0.10 | 10.0.0.21   | DNS      | 132    | Standard query 0x6681 Server failure A db.contoso.com.iosffyoulcwehgo1g3egb3m4oc.jx.internal.cloudapp.net | 53         | 0              | 6.029641      |
+| 335 | 2024-04-01 16:52:02.553811 | 172.16.0.10 | 10.0.0.21   | DNS      | 80     | Standard query 0x6cf6 Server failure A db.contoso.com                                                     | 53         | 0              | 6.500504      |
+| 541 | 2024-04-01 16:53:53.423838 | 172.16.0.10 | 10.0.0.21   | DNS      | 80     | Standard query 0x07b3 Server failure AAAA db.contoso.com                                                  | 53         | 0              | 6.022195      |
+| 553 | 2024-04-01 16:54:05.165234 | 172.16.0.10 | 10.0.0.21   | DNS      | 132    | Standard query 0x1ea0 Server failure A db.contoso.com.iosffyoulcwehgo1g3egb3m4oc.jx.internal.cloudapp.net | 53         | 0              | 6.007022      |
+| 774 | 2024-04-01 16:56:17.553531 | 172.16.0.10 | 10.0.0.21   | DNS      | 80     | Standard query 0xa20f Server failure AAAA db.contoso.com                                                  | 53         | 0              | 6.014926      |
+| 891 | 2024-04-01 16:56:44.442334 | 172.16.0.10 | 10.0.0.21   | DNS      | 132    | Standard query 0xa279 Server failure A db.contoso.com.iosffyoulcwehgo1g3egb3m4oc.jx.internal.cloudapp.net | 53         | 0              | 6.044552      |
 
-The status bar indicates that eight of the 1,066 packets, or 0.8 percent, were DNS responses that took five seconds or more to be received. However, on most clients, the default DNS time-out value is expected to be five seconds. This expectation means that, although the CoreDNS pods processed and delivered the eight responses, the client already ended the session by issuing a "timed out" error message. The **Info** column in the filtered results shows that all eight packets caused a server failure.
+After you change the display filter, the status bar is updated to show the text **Packets: 1066 - Displayed: 8 (0.8%)**. Therefore, eight of the 1,066 packets, or 0.8 percent, were DNS responses that took five seconds or more to be received. However, on most clients, the default DNS time-out value is expected to be five seconds. This expectation means that, although the CoreDNS pods processed and delivered the eight responses, the client already ended the session by issuing a "timed out" error message. The **Info** column in the filtered results shows that all eight packets caused a server failure.
 
 ##### DNS packet analysis for all CoreDNS pods
 
-In Wireshark, open the capture file of the CoreDNS pods that you merged earlier (*coredns-cap1.pcap*), and then open the DNS analysis, as described in the previous section. The following Wireshark dialog box appears.
+In Wireshark, open the capture file of the CoreDNS pods that you merged earlier (*coredns-cap1.pcap*), and then open the DNS analysis, as described in the previous section. A Wireshark dialog box appears that displays the following table.
 
-:::image type="content" source="./media/basic-troubleshooting-dns-resolution-problems/wireshark-dns-analysis-merged-capture.png" alt-text="Screenshot of Wireshark DNS analysis dialog box for a merged network capture file of all CoreDNS pods." border="false" lightbox="./media/basic-troubleshooting-dns-resolution-problems/wireshark-dns-analysis-merged-capture.png":::
+| Topic / Item                                 | Count       | Average | Min Val  | Max Val          | Rate (ms) | Percent    | Burst Rate | Burst Start |
+|----------------------------------------------|-------------|---------|----------|------------------|-----------|------------|------------|-------------|
+| &blacktriangledown; **Total Packets**        | **4540233** |         |          |                  | 7.3387    | 100%       | 84.7800    | 592.950     |
+| &emsp;&blacktriangledown; rcode              | 4540233     |         |          |                  | 7.3387    | 100.00%    | 84.7800    | 592.950     |
+| &emsp;&emsp;&emsp;**Server failure**         | **121781**  |         |          |                  | 0.1968    | **2.68%**  | 8.4600     | 599.143     |
+| &emsp;&emsp;&emsp;No such name               | 574658      |         |          |                  | 0.9289    | 12.66%     | 10.9800    | 592.950     |
+| &emsp;&emsp;&emsp;No error                   | 3843794     |         |          |                  | 6.2130    | 84.66%     | 73.2500    | 592.950     |
+| &emsp;&blacktriangledown; opcodes            | 4540233     |         |          |                  | 7.3387    | 100.00%    | 84.7800    | 592.950     |
+| &emsp;&emsp;&emsp;Standard query             | 4540233     |         |          |                  | 7.3387    | 100.00%    | 84.7800    | 592.950     |
+| &emsp;&blacktriangledown; Query/Response     | 4540233     |         |          |                  | 7.3387    | 100.00%    | 84.7800    | 592.950     |
+| &emsp;&emsp;&emsp;**Response**               | **2135116** |         |          |                  | 3.4512    | **47.03%** | 39.0400    | 581.680     |
+| &emsp;&emsp;&emsp;**Query**                  | **2405117** |         |          |                  | 3.8876    | **52.97%** | 49.1400    | 592.950     |
+| &emsp;&blacktriangledown; Query Type         | 4540233     |         |          |                  | 7.3387    | 100.00%    | 84.7800    | 592.950     |
+| &emsp;&emsp;&emsp;SRV                        | 3647        |         |          |                  | 0.0059    | 0.08%      | 0.1800     | 586.638     |
+| &emsp;&emsp;&emsp;PTR                        | 554630      |         |          |                  | 0.8965    | 12.22%     | 11.5400    | 592.950     |
+| &emsp;&emsp;&emsp;NS                         | 15918       |         |          |                  | 0.0257    | 0.35%      | 0.7200     | 308.225     |
+| &emsp;&emsp;&emsp;MX                         | 393016      |         |          |                  | 0.6353    | 8.66%      | 7.9700     | 426.930     |
+| &emsp;&emsp;&emsp;AAAA                       | 384032      |         |          |                  | 0.6207    | 8.46%      | 8.4700     | 438.155     |
+| &emsp;&emsp;&emsp;A                          | 3188990     |         |          |                  | 5.1546    | 70.24%     | 57.9600    | 592.950     |
+| &emsp;&blacktriangledown; Class              | 4540233     |         |          |                  | 7.3387    | 100.00%    | 84.7800    | 592.950     |
+| &emsp;&emsp;&emsp;IN                         | 4540233     |         |          |                  | 7.3387    | 100.00%    | 84.7800    | 592.950     |
+| &blacktriangledown; Service Stats            | 0           |         |          |                  | 0.0000    | 100%       | -          | -           |
+| &emsp;&emsp;**request-response time (msec)** | 2109677     | 277.18  | 0.020000 | **12000.532227** | 3.4100    |            | 38.0100    | 581.680     |
+| &emsp;&emsp;no. of unsolicited responses     | 25402       |         |          |                  | 0.0411    |            | 5.1400     | 587.832     |
+| &emsp;&emsp;no. of retransmissions           | 37          |         |          |                  | 0.0001    |            | 0.0300     | 275.702     |
+| &blacktriangledown; Response Stats           | 0           |         |          |                  | 0.0000    | 100%       | -          | -           |
+| &emsp;&emsp;no. of questions                 | 4244830     | 1.00    | 1        | 1                | 6.8612    |            | 77.0500    | 581.680     |
+| &emsp;&emsp;no. of authorities               | 4244830     | 0.39    | 0        | 11               | 6.8612    |            | 77.0500    | 581.680     |
+| &emsp;&emsp;no. of answers                   | 4244830     | 1.60    | 0        | 22               | 6.8612    |            | 77.0500    | 581.680     |
+| &emsp;&emsp;no. of additionals               | 4244830     | 0.29    | 0        | 26               | 6.8612    |            | 77.0500    | 581.680     |
+| &blacktriangledown; Query Stats              | 0           |         |          |                  | 0.0000    | 100%       | -          | -           |
+| &emsp;&emsp;Qname Len                        | 2405117     | 20.42   | 2        | 113              | 3.8876    |            | 49.1400    | 592.950     |
+| &emsp;&blacktriangledown; Label Stats        | 0           |         |          |                  | 0.0000    |            | -          | -           |
+| &emsp;&emsp;&emsp;4th Level or more          | 836034      |         |          |                  | 1.3513    |            | 16.1900    | 592.950     |
+| &emsp;&emsp;&emsp;3rd Level                  | 1159513     |         |          |                  | 1.8742    |            | 23.8900    | 592.950     |
+| &emsp;&emsp;&emsp;2nd Level                  | 374182      |         |          |                  | 0.6048    |            | 8.7800     | 592.955     |
+| &emsp;&emsp;&emsp;1st Level                  | 35388       |         |          |                  | 0.0572    |            | 0.9200     | 294.492     |
+| &emsp;Payload size                           | 4540233     | 89.87   | 17       | 1128             | 7.3387    | 100%       | 84.7800    | 592.950     |
 
-The dialog box indicates that there were a combined total of 4.5 million packets, of which 2.68 percent caused server failure. The difference in query and response packet percentages shows that 5.94 percent of the queries (52.97 percent minus 47.03 percent) didn't receive a response. The maximum response time was 12 seconds (12,000.532227 milliseconds).
+The dialog box indicates that there were a combined total of about 4.5 million (4,540,233) packets, of which 2.68 percent caused server failure. The difference in query and response packet percentages shows that 5.94 percent of the queries (52.97 percent minus 47.03 percent) didn't receive a response. The maximum response time was 12 seconds (12,000.532227 milliseconds).
 
 If you apply the display filter for query responses that took five seconds or more (`dns.time >= 5`), most of the packets in the filter results will indicate that a server failure occurred. This is probably because of a client "timed out" error.
 
