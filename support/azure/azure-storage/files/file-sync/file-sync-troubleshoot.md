@@ -22,6 +22,7 @@ Based on the issue you're experiencing, review the appropriate troubleshooting d
 |Cloud endpoint or server endpoint creation issues, or the registered server is offline|[Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)|
 |Server endpoint has an error status, or files fail to sync|[Troubleshoot Azure File Sync sync health and errors](file-sync-troubleshoot-sync-errors.md)|
 |Files fail to tier or recall|[Troubleshoot Azure File Sync cloud tiering](file-sync-troubleshoot-cloud-tiering.md)|
+|High memory usage on the server|[Troubleshoot Azure File Sync](#high-memory-usage-on-the-server)|
 
 If you're unsure where to start, see [General troubleshooting first steps](#general-troubleshooting-first-steps).
 
@@ -84,6 +85,18 @@ To run AFSDiag, perform the steps below:
 
 2. Reproduce the issue. When you finish, enter *D*.
 3. A .zip file that contains logs and trace files is saved to the output directory that you specified.
+
+## High memory usage on the server
+
+Azure File Sync uses ESE databases for sync and cloud tiering. The ESE databases can consume up to 80% of system memory to improve performance. If you want to limit the amount of memory used by the ESE databases, you can configure the MaxESEDbCachePercent registry setting on the server. 
+
+To reduce the ESE memory usage limit to 60%, which is a good balance between memory utilization and enough cache to maintain decent performance for the databases, run the following command from an evaluated command prompt:
+
+```
+REG ADD HKLM\Software\Microsoft\Azure\StorageSync /v MaxESEDbCachePercent /t REG_DWORD /d 60
+```
+Once the MaxESEDbCachePercent registry setting is created, restart the Storage Sync Agent (FileSyncSvc) service. 
+
 
 ## See also
 
