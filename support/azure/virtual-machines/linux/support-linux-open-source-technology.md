@@ -4,7 +4,7 @@ description: Describes support for Linux distributions and open-source technolog
 ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS)
 ms.topic: article
-ms.date: 05/10/2024
+ms.date: 05/31/2024
 ms.reviewer: patcatun, clausw, divargas, rondom, azurevmlnxcic, v-weizhu
 ---
 
@@ -14,7 +14,7 @@ Microsoft Azure supports the [Linux operating system](https://azure.microsoft.co
 
 ## Linux support matrix
 
-|Azure Endorsed Linux Distribution| Customer resources|
+|Azure endorsed Linux distribution| Customer resources|
 |:------------------- |:------------------- |
 |Red Hat Enterprise Linux (RHEL)|<ul><li>Red Hat has two offerings for RHEL in Azure: [On-Demand (Pay-As-You-Go (PAYG)](/azure/virtual-machines/linux/azure-hybrid-benefit-linux#defining-pay-as-you-go-payg-and-bring-your-own-subscription-byos) and [Cloud Access (Gold Images)](https://www.redhat.com/en/technologies/cloud-computing/cloud-access).</li><li>Microsoft and Red Hat partner to offer an integrated support experience. Support cost is integrated into the consumption cost of on-demand images.</li><li>Cloud Access (Bring-Your-Own-Subscription (BYOS)) support customers must have support agreements with both companies. Customers may be requested to engage with Red Hat through Red Hat's support agreement and bring Microsoft and Red Hat together on a service request.</li><li>Converting either On-Demand to Cloud Access or Cloud Access to On-Demand can be done through Azure Hybrid Benefit. For more information, see [Azure Hybrid Benefit for Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) virtual machines](/azure/virtual-machines/linux/azure-hybrid-benefit-linux).</li></ul>|
 |CentOS by Perforce|<ul><li>[The CentOS Project](https://wiki.centos.org/About.html)</li><li>CentOS will reach end-of-life (EOL) on June 30, 2024. For more information, see [Migration options](/azure/virtual-machines/workloads/centos/centos-end-of-life#migration-options) in the "CentOS End-Of-Life guidance." </li></ul>|
@@ -25,7 +25,7 @@ Microsoft Azure supports the [Linux operating system](https://azure.microsoft.co
 |SUSE Linux Enterprise Server (SLES)|<ul><li>[SUSE on Azure](https://azure.microsoft.com/solutions/linux-on-azure/suse/)</li><li>SUSE has three offerings in Azure:<br/></p> <ul><li><p>**Bring Your Own Subscription (BYOS)**</p> <p>Customers must register with SUSE to use these images. Microsoft may provide guidance for Linux issues, but may defer customer issues to SUSE directly.<br/><br/></p></li><li><p>**SUSE Images with Patching Support**</p> <p>These images include updates for your VM from SUSE. Microsoft may assist with Linux issues, but these images don't include extra support from SUSE. SUSE-related inquiries may require customers to engage with SUSE directly and require an active SUSE support agreement.<br/><br/></p></li><li><p>**24x7 Support Images**</p> <p>These images include updates and support from Microsoft through the web, email, chat, and telephone. SUSE supports these images daily, as defined in their support policies for public cloud images in the [SUSE Public Cloud Guide](https://documentation.suse.com/sle-public-cloud/all/html/public-cloud/cha-intro.html). These images are considered [SUSE Level 3 subscriptions](https://www.suse.com/support/handbook/#level-3-subscriptions). VMs that are created from these images incur per-hour support fees and Azure platform fees.</p></li> <p>Conversion between PAYG offerings to BYOS can be done through Azure Hybrid Benefit. For more information, see [Azure Hybrid Benefit for Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES) virtual machines](/azure/virtual-machines/linux/azure-hybrid-benefit-linux).</p></ul></li></ul> |
 
 > [!NOTE] 
-> Find out more about [endorsed distributions and major releases](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/endorsed-distros) 
+> For more information about endorsed distributions and major releases, see [Endorsed Linux distributions on Azure](/azure/virtual-machines/linux/endorsed-distros).
 
 ## Linux support scope
 
