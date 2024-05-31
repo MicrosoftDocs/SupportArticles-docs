@@ -52,6 +52,11 @@ To monitor recall activity on a server, use Event ID 9005, 9006, 9009, and 9059 
 - Event ID 9009 provides recall session information for a server endpoint. For example, DurationSeconds, CountFilesRecallSucceeded, and CountFilesRecallFailed.
 - Event ID 9059 provides application recall distribution for a server endpoint. For example, ShareId, Application Name, and TotalEgressNetworkBytes.
 
+## How to identify files that are recalled on a server
+
+1. In Event Viewer, go to the *Microsoft-FileSync-Agent/RecallResults* event log.
+2. There is an event logged for each file that is recalled. If the `DataTransferHresult` field is 0, the file recall is successful. If the `DataTransferHresult` field has an error code, check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
+
 ## How to troubleshoot files that fail to tier
 
 To troubleshoot files that fail to tier, follow the steps:
