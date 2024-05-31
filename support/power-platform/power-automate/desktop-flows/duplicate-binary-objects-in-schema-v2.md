@@ -53,9 +53,7 @@ The below table tries to resume the different possible cases when dealing with v
 |---|---|---|---|---|---|---|---|
 |v2|Managed|v2 enabled|Managed|v2|Good|||
 |v2|Managed|v2 enabled|Managed|v1|Good|Import a v2 into an environment with v1 will work without any issue.||
-|v2|Managed|v2 enabled|Managed|v1 updated into v2 inside the environment (by re-saving the desktop flow)|Erroneous|Updating a managed desktop flow v1 into v2 will create an unmanaged layer, when importing the solution, so there will be duplicate binaries which prevents the desktop flow from running.|Delete the managed solution on the target environment and re-import the solution.|
-
-Useful recommendation is to not update or change a managed desktop flow.
+|v2|Managed|v2 enabled|Managed|v1 updated into v2 inside the environment (by re-saving the desktop flow)|Erroneous|Updating a managed desktop flow v1 into v2 will create an unmanaged layer, when importing the solution, so there will be duplicate binaries which prevents the desktop flow from running. Useful recommendation is to not update or change a managed desktop flow.|Delete the managed solution on the target environment and re-import the solution.|
 |v2|Unmanaged|v2 enabled|Unmanaged|v2|Good|||
 |v2|Unmanaged|v2 enabled|Unmanaged|v1|Good|Import a v2 into an environment with v1 will work without any issue.||
 |v2|Unmanaged|v2 enabled|Unmanaged|v1 updated into v2 inside the environment (by re-saving the desktop flow)|Erroneous|Updating the unmanaged flows will create new binaries, when importing the desktop flow from another environment, so the binaries won't have the same IDs and will be duplicated|Delete the desktop flow from the target environment (deleting an unmanaged solution is not sufficient as it doesn't delete the desktop flow), then re-import the unmanaged solution.|
