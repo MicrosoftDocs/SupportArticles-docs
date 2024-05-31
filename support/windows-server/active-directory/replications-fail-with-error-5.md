@@ -140,33 +140,6 @@ Solution
 
 See [How to use Netdom.exe to reset machine account passwords of a domain controller](https://support.microsoft.com/help/325850).  
 
-Cause 5: There's an invalid security channel or password mismatch on the source or destination domain controller
-
- Validate the security channel by running one of the following commands:
-
-- `nltest /sc_query:<Domain Name>`
-
-- `netdom verify <DC Name>`
-
-On condition, reset the destination domain controller's password by using NETDOM /RESETPWD.
-
-Solution
-
-1. Disable the Kerberos Key Distribution Center (KDC) service on the destination domain controller.
-
-1. From an elevated command prompt of the destination domain controller, urge the system's Kerberos ticket by running: `Klist -li 0x3e7 purge`
-
-1. Run `NETDOM RESETPWD` to reset the password against remote DC:
-
-   ```console
-   c:\>netdom resetpwd /server:<remote_dc_name> /userd: domain_name\administrator /passwordd: administrator_password
-   ```
-
-1. Make sure that likely KDCs and the source domain controller (if these are in the same domain) inbound replicate knowledge of the destination domain controller's new password.
-1. Start the Kerberos Key Distribution Center (KDC) service on the destination domain controller and retry the replication operation.  
-
-See [How to use Netdom.exe to reset machine account passwords of a domain controller](https://support.microsoft.com/help/325850).  
-
 ### Cause 2: The CrashOnAuditFail setting in the registry of the destination domain controller has a value of 2
 
 A CrashOnAuditFail value of 2 is triggered if the Audit: Shut down system immediately if unable to log security audits  policy setting in Group Policy is enabled and the local security event log becomes full.
@@ -181,12 +154,11 @@ Solution
 > 1. Clear the security event log, and save it to an alternative location as required.
 > 2. Reevaluate any size constraints on the security event log. This includes policy-based settings.
 > 3. Delete and then re-create a CrashOnAuditFail registry entry as follows:Registry subkey:
-```
-HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA  
-Value Name: CrashOnAuditFail  
-Value Type: REG_DWORD  
-Value Data: 1  
-```> 4. Restart the destination domain controller.  
+    HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA  
+    Value Name: CrashOnAuditFail  
+    Value Type: REG_DWORD  
+    Value Data: 1  
+> 4. Restart the destination domain controller.  
 
 ### Cause 3: Invalid trust
 
