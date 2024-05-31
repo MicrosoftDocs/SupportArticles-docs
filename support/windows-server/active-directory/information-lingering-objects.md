@@ -132,7 +132,7 @@ For more information about using LoLv2, see the following articles:
 
 ### Method 2: Remove lingering objects by using the Repadmin tool
 
-If you can't use LoLv2, you can use *Repadmin.exe*. For more information, see [Steps to use Repadmin to remove lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988).
+If you can't use LoLv2, you can use the Repadmin tool (*Repadmin.exe*). For more information, see [Steps to use Repadmin to remove lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988).
 
 ## Prevent lingering objects
 
@@ -142,35 +142,36 @@ To prevent lingering objects in your forest, use one of the following four metho
 
 [!INCLUDE [Registry caution](../../includes/registry-important-alert.md)]
 
-You can enable the `Strict Replication Consistency` registry entry so that suspect objects are quarantined on the source domain controller. Then, administrators can remove these objects before they spread throughout the forest.
+You can enable the `Strict Replication Consistency` registry entry on each domain controller so that suspect objects are quarantined on the source domain controller. Then, administrators can remove these objects before they spread throughout the forest.
 
 If a writable lingering object is located in your environment, and an attempt is made to update the object, the value in the `Strict Replication Consistency` registry entry determines whether replication proceeds or stops. The `Strict Replication Consistency` registry entry is located in the following registry subkey:  
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`  
 
+- Name: `Strict Replication Consistency`
 - Data type: REG_DWORD
 - Values:
   - **0** (disabled). The destination domain controller requests the full object from the source domain controller. The lingering object reappears in the forest as a new object.
   - **1** (enabled). The destination domain controller stops inbound replication of the relevant directory partition from the source domain controller.
 
-The default value for `Strict Replication Consistency` depends on the conditions under which the domain controller was installed in the forest.
+The default value for `Strict Replication Consistency` depends on the Windows version of the first domain controller in the forest. This computer creates the forest root domain of a new forest.  
 
-The preferred method to enable `Strict Replication Consistency` is by using Repadmin:  
-[Steps to use Repadmin to enable strict replication consistency](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988)
+- If the forest was created by promoting a server running Windows Server 2003 (or a later version), the default value of `Strict Replication Consistency` is **1** (enabled) on any domain controller that you add to the forest.
 
-For more information about how to use *Repadmin.exe* to set `Strict Replication Consistency`, see [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)).
+- If the forest was created by promoting a server running Windows 2000 Server, the default value of `Strict Replication Consistency` is **0** (disabled) on any domain controller that you add to the forest. In this case, follow the steps in [Ensure Strict Replication Consistency Is Enabled On Newly Promoted Domain Controllers](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)).
 
 > [!NOTE]  
-> Raising the functional level of the domain or the forest does not change the replication consistency setting on any domain controller.
+> The `Strict Replication Consistency` value on a domain controller does not change if you raise the functional level of the domain or the forest.
 
-By default, the value of the Strict Replication Consistency registry entry on newly domain controllers that are installed in a forest is 1 (enabled) if the first Domain controller of the Forest was installed on a server that is running Windows Server 2003 (This computer creates the forest root domain of a new forest).
+The preferred method to enable `Strict Replication Consistency` is by using Repadmin. For more information about using Repadmin for this purpose, see the following articles:
 
-By default, the value of the Strict Replication Consistency registry entry on newly domain controllers is **0** (disabled) if the first Domain controller of the Forest was installed on a server that is running Windows Server 2000 (This computer creates the forest root domain of a new forest). in such scenario you can ensure Strict Replication Consistency is enabled on future Promoted Domain Controllers by following the steps in:  
-[Ensure Strict Replication Consistency Is Enabled On Newly Promoted Domain Controllers](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)).
+- [Steps to use Repadmin to enable strict replication consistency](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988)
 
-### Method 2: Monitor replication by using a command-line command
+- [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)).
 
-To monitor replication by using the `repadmin /showrepl` command, follow these steps:  
+### Method 2: Check replication by using a command-line command
+
+To check replication by using the `repadmin /showrepl` command, follow these steps:  
 
 1. Open a Command Prompt window (to do this, select **Start** > **Run**, type *cmd*, and then select **OK**).
 
@@ -185,35 +186,26 @@ To monitor replication by using the `repadmin /showrepl` command, follow these s
 1. Select the **A + RPC** column and the **SMTP** column, and then select **Edit** > **Delete**.
 1. Select the row that is immediately under the column headers, and then select **Windows** > **Freeze Pane**.
 1. Select the entire spreadsheet, and then select **Data** > **Filter** > **Auto-Filter**.
-
-1. On the heading of the **Last Success** column, select the down arrow, and then select **Sort Ascending**.
-1. On the heading of the **src DC** column, select the down arrow, and then select **Custom**.
+1. In the heading of the **Last Success** column, select the down arrow, and then select **Sort Ascending**.
+1. In the heading of the **src DC** column, select the down arrow, and then select **Custom**.
 1. In the **Custom AutoFilter** dialog box, select **does not contain**.
 1. In the box to the right of **does not contain**, type *del*.
 
-      > [!NOTE]  
-      > This step prevents deleted domain controllers from appearing in the results.  
+   > [!NOTE]  
+   > This step prevents deleted domain controllers from appearing in the results.  
 
-1. On the heading of the **Last Failure** column, select the down arrow, and then select **Custom**.
+1. In the heading of the **Last Failure** column, select the down arrow, and then select **Custom**.
 1. In the **Custom AutoFilter** dialog box, select **does not equal**.
 1. In the box to the right of **does not equal**, type *0*.
 1. Check the filtered spreadsheet for replication failures. These are the issues that you need to resolve.
 
 ### Method 3: Remove domain controllers
 
-You can remove failing domain controllers from the forest before the TSL expires.
+If you have to remove and replace a domain controller, or if you suspect that a domain controller is failing, make sure that the time that the domain controller is offline is less than the TSL.
 
 ### Method 4: Increase the TSL
 
-You can use either ADSIEdit or Windows Powershell to increase the TSL to 180 days. 
-
-ADSIEdit is available on the **Tools** menu in Server Manager. To change the TSL, follow these steps:  
-
-1. In the Adsiedit tool, expand **Configuration** > **DomainControllerName** > **CN=Configuration** > **DC=ForestRootDomain** > **CN=Services** > **CN=Windows NT**. Right-click **CN=Directory Service**, and then select **Properties**.
-1. Select the **Attribute** tab.
-1. In the **Select which properties to view** list, select **Optional**.
-1. In the **Select a property to view** list, select **TombstoneLifetime**.
-1. In the **Edit Attribute** box, type *180*, select **Set**, and then select **OK**.
+You can use either Windows Powershell or ADSI Edit to increase the TSL to 180 days.
 
 To use PowerShell to increase the TSL, open an administrative PowerShell window and then run the following commands, in sequence:  
 
@@ -222,6 +214,19 @@ $ADForestconfigurationNamingContext = (Get-ADRootDSE).configurationNamingContext
 
 Set-ADObject -Identity “CN=Directory Service,CN=Windows NT,CN=Services,$ADForestconfigurationNamingContext” -Partition $ADForestconfigurationNamingContext -Replace @{tombstonelifetime=’180′}
 ```
+
+ADSI Edit is available on the **Tools** menu in Server Manager. To change the TSL, follow these steps:  
+
+1. In ADSI Edit, connect to the Configuration partition of the forest. To do this, follow these steps:
+   1. In the left pane, right-click **ADSI Edit**, and then select **Connect**.
+   1. In **Connection Settings**, select **Select a well-known Naming Context**, and then select **Configuration**.
+   1. Select **OK**.
+1. In the navigation tree, go to **CN=Configuration** > **CN=Services** > **CN=Windows NT** > **CN=Directory Service**.
+1. Right-click **CN=Directory Service**, and then select **Properties**.
+1. Select the **Attribute** tab.
+1. In the **Select which properties to view** list, select **Optional**.
+1. In the **Select a property to view** list, select **TombstoneLifetime**.
+1. In the **Edit Attribute** box, type *180*, select **Set**, and then select **OK**.
 
 ## Collecting data for Microsoft Support
 
