@@ -33,17 +33,17 @@ The default value of the TSL depends on the version of the operating system that
 
 Lingering objects can occur if a domain controller stops replicating changes to or from the rest of the replication topology for a time, and then starts replicating again (for example, if the server has to be physically disconnected and moved, and then reconnected). When a domain controller doesn't replicate for a period that is longer than the TSL, the domain controller might not receive one or more tombstone objects. As a result, one or more objects that are deleted from the forest on all other domain controllers might remain on the disconnected domain controller. Such objects are called lingering objects.
 
-When this domain controller starts replicating again, it acts as a source replication partner that has an object that its destination partner does not have. The destination domain controller responds in one of two ways:
+When this domain controller starts replicating again, it acts as a source replication partner that has an object that its destination partner doesn't have. The destination domain controller responds in one of two ways:
 
-- If the `Strict Replication Consistency` registry key is enabled on the destination domain controller, that domain controller recognizes that it cannot update the object. The destination domain controller locally stops inbound replication of the directory partition from the source domain controller.
+- If the `Strict Replication Consistency` registry key is enabled on the destination domain controller, that domain controller recognizes that it can't update the object. The destination domain controller locally stops inbound replication of the directory partition from the source domain controller.
 
 - If the `Strict Replication Consistency` registry key is disabled on the destination domain controller, that domain controller requests the full replica of the object. This operation reintroduces the object into the forest. From an administrative point of view, an object that you deleted reappears.
 
 Lingering objects don't always cause noticeable symptoms. Under the following conditions, lingering objects might remain undetected:  
 
-- An administrator, an application, or a service does not update the lingering object.
-- An administrator, an application, or a service does not try to create an object that has the same name in the domain.
-- An administrator, an application, or a service does not try to create an object by using the same user principal name (UPN) in the forest.
+- An administrator, an application, or a service doesn't update the lingering object.
+- An administrator, an application, or a service doesn't try to create an object that has the same name in the domain.
+- An administrator, an application, or a service doesn't try to create an object by using the same user principal name (UPN) in the forest.
 
 ### Causes of long disconnections
 
@@ -55,7 +55,7 @@ The following conditions can cause long disconnections:
 
 - An administrator pre-stages a domain controller and then sends it to a remote location. However, the TSL expires before the domain controller reaches the remote location.
 
-- The domain controller cannot connect to a wide-area network (WAN) for long periods. For example, a domain controller on board a cruise ship might be unable to replicate for longer than the TSL because the ship is at sea.
+- The domain controller can't connect to a wide-area network (WAN) for long periods. For example, a domain controller on board a cruise ship might be unable to replicate for longer than the TSL because the ship is at sea.
 
 Under the following conditions, lingering objects can appear even if the domain controller was offline for less than the default TSL:
 
@@ -71,7 +71,7 @@ Under the following conditions, lingering objects can appear even if the domain 
 
 ## Indications that a forest has lingering objects
 
-Even when there is no noticeable effect, the presence of lingering objects can cause problems. These problems are most likely to occur if a lingering object is a security principal.
+Even when there's no noticeable effect, the presence of lingering objects can cause problems. These problems are most likely to occur if a lingering object is a security principal.
 
 ### Events that indicate that the forest might have lingering objects
 
@@ -111,7 +111,7 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 
 - A user has a current account, but the account was renamed. The user doesn't receive email messages. Both instances of the user object (the current one and an older version) appear in the GAL. Because both objects have the same email address, email messages can't be delivered.
 
-- A universal group that no longer exists continues to appear in a user's access token. Although the group no longer exists, if a user account still has the group in its security token, the user may have access to a resource that you intended to be unavailable to that user.
+- A universal group that no longer exists continues to appear in a user's access token. Although the group no longer exists, if a user account still has the group in its security token, the user might have access to a resource that you intended to be unavailable to that user.
 
 - You can't create a new object or Exchange mailbox. However, you don't see the object in the forest. An error message reports that the object already exists.
 
@@ -205,7 +205,7 @@ If you have to remove and replace a domain controller, or if you suspect that a 
 
 ### Method 4: Increase the TSL
 
-You can use either Windows Powershell or ADSI Edit to increase the TSL to 180 days.
+You can use either Windows PowerShell or ADSI Edit to increase the TSL to 180 days.
 
 To use PowerShell to increase the TSL, open an administrative PowerShell window and then run the following commands, in sequence:  
 
