@@ -14,14 +14,14 @@ _Original KB number:_ &nbsp; 4598418
 
 ## Symptoms
 
-After you've run a desktop flow, when you select **Monitor** > **Desktop flow runs** in the left navigation pane in [Microsoft Power Automate portal](https://make.powerautomate.com/), you can't find your desktop flow runs in the list or the list is empty.
+After you run a desktop flow, when you select **Monitor** > **Desktop flow runs** in the left navigation pane in [Microsoft Power Automate portal](https://make.powerautomate.com/), you can't find your desktop flow runs in the list or the list is empty.
 
 ## Cause
 This scenario might occur if you selected the wrong environment or if you set up filters that result in the desktop flow getting filtered out.
 
 ## Resolution
 Follow these steps to verify and resolve the issue:
-1. In the [Power Automate portal](https://make.powerautomate.com/), check the environment name in the upper-right corner and ensure that you're using the same environment as desktop flows you want to monitor.
+1. In the [Power Automate portal](https://make.powerautomate.com/), check the environment name in the upper-right corner, and ensure that you're using the same environment as desktop flows you want to monitor.
 
     :::image type="content" source="media/desktop-flow-runs-missing-from-list/check-environment-for-flows.png" alt-text="Check that you're in the same environment as the flows and desktop flows you want to monitor." lightbox="media/desktop-flow-runs-missing-from-list/check-environment-for-flows.png":::
 
