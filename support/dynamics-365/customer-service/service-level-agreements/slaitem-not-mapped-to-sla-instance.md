@@ -19,8 +19,8 @@ You can't update cases and entities associated with an old SLA in a Unified Inte
 
 Or
 
-> "message": "Exception occured in SLAInstance management custom action : 
-> Microsoft.Xrm.Sdk.InvalidPluginExecutionException: The SLA KPI instance associated with this entity record does not have the SLA item linked to it. For more information
+> Exception occured in SLAInstance management custom action: 
+> Microsoft.Xrm.Sdk.InvalidPluginExecutionException: The SLA KPI instance associated with this entity record does not have the SLA item linked to it.
 
 ## Cause
 
@@ -28,9 +28,9 @@ This issue occurs because the legacy SLA instances are still attached to the cas
 
 ## Resolution 1:
 
-Related Legacy SLAs can be set to active and deactivate them once all the related slakpiinstances reach a terminal state that is succeeded/Expired. 
+Related Legacy SLAs can be set to the Active state and then deactivated after all the related slakpiinstances reach a terminal state that is either succeeded or expired. 
 
-It should be made sure that all the new  entity records are using the new UCI SLAs. That if custom logic is used like workflows/plugins they should refer to UCI SLAs. Or else if default SLAs are used, UCI SLAs should set UCI SLAs as default so that Legacy SLAs do not get applied to new entity records.
+Make sure that new entity records use the new Unified Interface SLAs. In case of custom logic, for example, workflows or plugins, refer to Unified Interface SLAs. If default SLAs are used, Unified Interface SLAs should set Unified Interface SLAs as default, so that Legacy SLAs don't get applied to new entity records.
 
 
 ## Resolution 2:
