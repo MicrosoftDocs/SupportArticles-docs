@@ -4,7 +4,7 @@ description: Troubleshoot common issues that you might encounter with Azure File
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/13/2023
+ms.date: 05/31/2024
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
