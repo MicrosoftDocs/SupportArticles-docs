@@ -65,7 +65,7 @@ To diagnose and fix this issue, follow these steps. After you complete each step
 
 5. Check whether the Inbox rule tries to forward or redirect messages back to the original sender. Inbox rules won't forward or redirect messages to the original sender. If your Inbox rule forwards or redirects to multiple mailboxes, including the original sender, all recipients except the original sender will receive the forwarded or redirected messages.
 
-6. Check whether the incoming message has already been forwarded or redirected by an Inbox rule. Inbox rules can't forward or redirect a message that has already been forwarded or redirected by another Inbox rule. This behavior is by design.
+6. Check whether the incoming message has already been forwarded or redirected by another Inbox rule. Inbox rules can't forward or redirect a message that has already been forwarded or redirected by another Inbox rule. This behavior is by design.
 
    **Note**: Messages that are forwarded or redirected by using Inbox rules have an [X-MS-Exchange-Inbox-Rules-Loop](https://techcommunity.microsoft.com/t5/exchange-team-blog/loop-prevention-in-exchange-online-demystified/ba-p/2312258#toc-hId-209339157) header. [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#journal-transport-and-inbox-rule-limits) to one the number of times that a message can be automatically redirected or forwarded if it has that header.
 
