@@ -63,7 +63,7 @@ To diagnose and fix this issue, follow these steps. After you complete each step
 
 4. Check whether the outbound spam filter disables automatic forwarding to external recipients. If so, rules that forward email messages to external recipients won't work and will trigger nondelivery reports. This behavior is by design. For more information, see [Control automatic external email forwarding in Microsoft 365](/microsoft-365/security/office-365-security/outbound-spam-policies-external-email-forwarding).
 
-5. Check whether the Inbox rule tries to forward or redirect messages back to the original sender. Inbox rules won't forward or redirect messages to the original sender. If your Inbox rule forwards or redirects to multiple mailboxes, including the original sender, all recipients except the original sender will receive the forwarded or redirected messages.
+5. Check whether the Inbox rule is configured to forward or redirect messages back to the original sender. Inbox rules won't forward or redirect messages to the original sender. If your Inbox rule forwards or redirects to multiple mailboxes, including the original sender, all recipients except the original sender will receive the forwarded or redirected messages.
 
 6. Check whether the incoming message has already been forwarded or redirected by another Inbox rule. Inbox rules can't forward or redirect a message that has already been forwarded or redirected by another Inbox rule. This behavior is by design.
 
