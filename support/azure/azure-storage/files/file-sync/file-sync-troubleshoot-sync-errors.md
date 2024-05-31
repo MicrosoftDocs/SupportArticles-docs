@@ -156,15 +156,6 @@ Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.Se
 Debug-StorageSyncServer -FileSyncErrorsReport
 ```
 
-> [!Note]  
-> If the *FileSyncErrorsReport.ps1* script returns "There were no file errors found" or doesn't list per-item errors for the sync group, the cause is either:
->
-> - Cause 1: The last completed sync session didn't have per-item errors. The portal should be updated soon to show "0 Files Not Syncing." By default, the *FileSyncErrorsReport.ps1* script will only show per-item errors for the last completed sync session. To view per-item errors for all sync sessions, use the `-ReportAllErrors` parameter.
->   Check the most recent [Event ID 9102](?tabs=server%252cazure-portal#broken-sync) in the Telemetry event log to confirm the `PerItemErrorCount` is 0.
->
-> - Cause 2: The `ItemResults` event log on the server wrapped due to too many per-item errors, and the event log no longer contains errors for this sync group.
->    To prevent this issue, increase the `ItemResults` event log size. The `ItemResults` event log can be found under *Applications and Services Logs\Microsoft\FileSync\Agent* in Event Viewer.
-
 ## Sync errors
 
 ### Troubleshooting per file/directory sync errors
