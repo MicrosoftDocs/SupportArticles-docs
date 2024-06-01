@@ -7,7 +7,7 @@ metadata:
    services: service
    ms.service: azure-common-issues-support
    ms.author: genlin
-   ms.date: 05/24/2024
+   ms.date: 06/03/2024
 
 productDirectory:
   items:
@@ -38,16 +38,6 @@ productDirectory:
     links:
     - url: cosmos-db/index.yml
       text: Troubleshooting articles for Azure Cosmos DB
-  - title: Azure Container Instances
-    imageSrc: "https://static.docs.com/ui/media/product/azure/container-instances.svg"
-    links:
-    - url: azure-container-instances/welcome-container-instances.yml
-      text: Troubleshooting articles for Azure Container Instances
-  - title: Azure Container Registry
-    imageSrc: "https://static.docs.com/ui/media/product/azure/container-registry.svg"
-    links:
-    - url: azure-container-registry/welcome-container-registry.yml
-      text: Troubleshooting articles for Azure Container Registry
   - title: Azure DevOps
     imageSrc: "/azure/devops/media/index/devopsiconboards96.svg"
     links:
@@ -96,6 +86,15 @@ productDirectory:
       text: Troubleshooting articles for Cloud Services (classic)
     - url: cloud-services/extended/welcome-cloud-services-extended.yml
       text: Troubleshooting articles for Cloud Services (extended support)
+  - title: Containers
+    imageSrc: "https://static.docs.com/ui/media/product/azure/container-instances.svg"
+    links:
+    - url: azure-container-instances/welcome-container-instances.yml
+      text: Troubleshooting articles for Azure Container Instances
+    - url: azure-container-registry/welcome-container-registry.yml
+      text: Troubleshooting articles for Azure Container Registry
+    - url: azure-kubernetes/welcome-azure-kubernetes.yml
+      text: Troubleshooting articles for Azure Kubernetes
   - title: High Performance Computing
     imageSrc: "https://static.docs.com/ui/media/product/azure/container-registry.svg"
     links:
