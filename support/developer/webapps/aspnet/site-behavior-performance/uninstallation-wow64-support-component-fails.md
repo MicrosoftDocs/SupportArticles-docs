@@ -2,7 +2,7 @@
 title: Uninstallation of WoW64 Support component fails
 description: This article provides resolutions for the problem that On Windows 8 64 bit, if a customer installs ASP.NET on a 64-bit machine, and then attempts to uninstall the WOW64 subsystem, the WOW64 subsystem will fail to uninstall.
 ms.date: 12/11/2020
-ms.custom: sap:Site Behavior and Performance
+ms.custom: sap:Performance
 ms.reviewer: pranavra
 ---
 # Uninstallation of WoW64 Support component fails when ASP.NET is installed on Windows 8 or Windows Server 2012

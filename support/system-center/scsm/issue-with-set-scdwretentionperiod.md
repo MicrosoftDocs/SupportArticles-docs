@@ -4,11 +4,14 @@ description: Discusses that the Set-SCDWRetentionPeriod cmdlet doesn't set the d
 author: helenclu
 ms.author: luche
 ms.reviewer: aakashb, khusmeno
-ms.date: 04/08/2024
+ms.date: 05/21/2024
 ---
 # Set-SCDWRetentionPeriod doesn't set the data retention period correctly
 
-*Applies to*: System Center Service Manager
+*Applies to*: System Center 2019 Service Manager (Update Rollup 2 and earlier versions)
+
+> [!NOTE]
+> This issue has been fixed in Update Rollup 4 for System Center 2019 Service Manager.
 
 When you run the [Set-SCDWRetentionPeriod](/powershell/module/microsoft.enterprisemanagement.warehouse.cmdlets/set-scdwretentionperiod) cmdlet, the cmdlet doesn't set the data retention period correctly.
 

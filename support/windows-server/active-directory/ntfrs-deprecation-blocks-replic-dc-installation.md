@@ -1,7 +1,7 @@
 ---
 title: NTFRS deprecation blocks promotion of replica DCs
 description: NTFRS deprecation intentionally blocks the promotion of Windows Server 2016 RS3 replica DCs.
-ms.date: 12/26/2023
+ms.date: 05/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 ---
 # NTFRS deprecation intentionally blocks the installation of Windows Server version 1709 replica DCs
 
-_Applies to:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 4023141
 
 ## Symptom
@@ -34,7 +34,7 @@ This behavior is intended and by design and consistent with previous announcemen
 
 ## Resolution
 
-Use the steps in the following article to migrate sysvol replication from FRS to DFSR:
+Use the steps in the following article to migrate sysvol replication from FRS to DFSR before intreducing the new domain controller:
 
 [Sysvol replication Migration Guide: FRS to DFS replication](https://technet.microsoft.com/library/dd640019%28WS.10%29.aspx)
 

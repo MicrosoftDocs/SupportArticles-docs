@@ -1,19 +1,19 @@
 ---
 title: Active Directory replication Event ID 2042 (It has been too long since this machine replicated)
 description: Helps you troubleshoot Active Directory replication Event ID 2042.
-ms.date: 12/26/2023
+ms.date: 05/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, sagiv
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Active Directory replication Event ID 2042: It has been too long since this machine replicated
 
 This article helps you troubleshoot Active Directory replication Event ID 2042.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 4469622
 
 ## Symptoms
@@ -70,7 +70,7 @@ The Active Directory Domain Services cannot replicate with this server because t
 
 There are a few potential causes for the logging of Event ID 2042, which include the following:
 
-- Windows Server 2003 pre-Service Pack 1 (SP1) domain controllers having a software issue that causes replication failures.
+- Domain controllers having a software issue that causes replication failures.
 - Replication failures that have existed longer than the configured tombstone lifetime value.
 - System time advance or rollback that causes objects to be deleted on some-but not all-domain controllers.
 
@@ -78,13 +78,21 @@ There are a few potential causes for the logging of Event ID 2042, which include
 
 The resolution of this issue depends on the actual cause or causes of the issue. To resolve this issue, check for each of the following conditions:
 
-1. Determine whether there are any Windows Server 2003 domain controllers that do not have at least SP1 applied. If you find any such domain controllers, ensure that you update them to at least SP1 to resolve this issue.
-
-2. Determine whether there are any replication failures that have been allowed to exceed the tombstone lifetime of the forest. Typically, the tombstone lifetime of the forest is 60 to 180 days by default. The event message indicates the tombstone lifetime of the forest as it is currently configured.
+1. Determine whether there are any replication failures that have been allowed to exceed the tombstone lifetime of the forest. Typically, the tombstone lifetime of the forest is 60 to 180 days by default. The event message indicates the tombstone lifetime of the forest as it is currently configured.
 
     Run the command `repadmin /showrepl` to determine whether a replication issue exists. If you suspect that there is a replication issue, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)) for information about how to resolve the issue.
 
-3. Determine whether there are lingering objects. You can do this by running the command `repadmin /removelingeringobjects` in advisory mode, as described in the following procedure.
+2. Determine whether there are lingering objects.   
+
+    The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/en-us/download/details.aspx?id=56051). In some cases where LoLv2 can't be used, you can use *Repadmin.exe*.
+
+    For more information about LoLv2, see:
+
+    - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)
+    - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
+    - [Description of the Lingering Object Liquidator tool](lingering-object-liquidator-tool.md)  
+  
+    You can do this by running the command `repadmin /removelingeringobjects` in advisory mode, as described in the following procedure.
 
 You must first identify an authoritative domain controller. If you know that a specific domain controller has the latest changes, you can use that domain controller as the authoritative domain controller. Otherwise, you may have to complete the following procedure on multiple domain controllers until you identify a domain controller that you believe has the latest changes. Then, you can use that domain controller as your authoritative domain controller.
 

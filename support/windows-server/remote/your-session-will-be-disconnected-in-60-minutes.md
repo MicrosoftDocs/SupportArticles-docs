@@ -1,7 +1,7 @@
 ---
-title: '"Your session will be disconnected in 60 minutes" message when you connect to RDS'
+title: Your session will be disconnected in 60 minutes message when you connect to RDS
 description: Helps you troubleshoot Remote Desktop Service (RDS) licensing errors that occur when you use soft enforcement of RDS licensing.
-ms.date: 4/16/2024
+ms.date: 05/07/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

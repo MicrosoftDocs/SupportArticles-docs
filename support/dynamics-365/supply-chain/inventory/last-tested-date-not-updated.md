@@ -2,7 +2,7 @@
 title: The Last tested date field isn't updated when multiple quality orders are created
 description: Introduces a by-design behavior where the Last tested date field isn't updated when multiple quality orders are created.
 author: sherry-zheng
-ms.date: 04/11/2021
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: InventBatch
 audience: Application User
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: chuzheng
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Inventory management
 ---
 
 # The Last tested date field isn't updated when multiple quality orders are created

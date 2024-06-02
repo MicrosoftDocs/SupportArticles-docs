@@ -2,7 +2,7 @@
 title: Late selection isn't respected when production orders are reset via a batch job
 description: Introduces a by-design behavior where late selections aren't respected when you use a recurring batch job to reset the status of a production order.
 author: johanhoffmann
-ms.date: 04/11/2021
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: ProdTableListPage
 audience: Application User
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: johanho
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Manufacturing and production\Issues with production and batch orders
 ---
 
 # Late selection isn't respected when production orders are reset via a batch job

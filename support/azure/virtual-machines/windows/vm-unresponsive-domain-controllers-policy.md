@@ -1,9 +1,8 @@
 ---
-title: VM is unresponsive while applying default domain controllers policy
+title: VM unresponsive when Default Domain Controllers Policy is applied
 titlesuffix: Azure Virtual Machines
-description: This article provides steps to resolve issues where the Default Domain Controllers Policy prevents the booting of an Azure VM.
+description: This article provides steps to resolve issues in which the Default Domain Controllers Policy prevents an Azure VM from restarting.
 services: virtual-machines, azure-resource-manager
-documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
@@ -11,49 +10,40 @@ ms.service: virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-ms.topic: troubleshooting
-ms.date: 09/08/2020
+ms.topic: troubleshooting-problem-resolution
+ms.date: 05/15/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
 
-# VM is unresponsive while applying default domain controllers policy
+# VM is unresponsive when Default Domain Controllers Policy is applied
 
-This article provides steps to resolve issues where the Default Domain Controllers Policy prevents the booting of an Azure Virtual Machine (VM).
+This article provides steps to resolve an issue in which the Default Domain Controllers Policy prevents an Azure Virtual Machine (VM) from restarting.
 
 ## Symptom
 
-When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you will see that the screenshot displays the OS becoming unresponsive while booting with the message **Default Domain Controllers Policy**.
+When you use [Boot diagnostics](./boot-diagnostics.md) to view a screenshot of the VM, you notice that the VM is becoming unresponsive when you try to restart it, and you see a "Default Domain Controllers Policy" message.
 
-  :::image type="content" source="media/vm-unresponsive-domain-controllers-policy/default-domain-controllers-policy.png" alt-text="Screenshot shows that the O S is stuck, with the message: Default Domain Controllers Policy." border="false":::
+  :::image type="content" source="media/vm-unresponsive-domain-controllers-policy/default-domain-controllers-policy.png" alt-text="Screenshot shows that the O S is stuck and displays the text: Default Domain Controllers Policy." border="false":::
 
 ## Cause
 
-This issue may be due to recent changes made to the Default Domain Controllers Policy. Otherwise, a memory dump file analysis will need to be performed to determine the root cause.
+This issue might occur because of recent changes in the Default Domain Controllers Policy. However, a memory dump file analysis must be performed to determine the root cause of the issue.
 
 ## Solution
 
 > [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you have a recent backup of the VM, you can try to [restore the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the restart problem.
 
-If you have recently made changes to the Default Domain Controllers Policy, you may wish to undo those changes to fix the issue. If you are not sure what is causing the issue, collect a memory dump and then submit a support ticket.
+If you recently made changes to the Default Domain Controllers Policy, you might want to undo those changes to fix the issue. If you don't know what's causing the issue, collect a memory dump file and create a support ticket.
 
 ### Collect the memory dump file
 
-To resolve this issue, you should first gather the memory dump file for the crash and then contact support with the memory dump file. To collect the dump file, follow these steps:
+To resolve this issue, gather a memory dump file for the incident, and send the memory dump file to Microsoft Support. To collect the dump file, follow the instructions in the following sections.
 
-### Attach the OS disk to a new Repair VM
+[!INCLUDE [Collect OS Memory Dump File](../../../includes/azure/collect-os-memory-dump-file.md)]
 
-1. Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
-
-1. Using Remote Desktop Connection connect to the Repair VM.
-
-### Locate the dump file and submit a support ticket
-
-1. On the repair VM, go to the Windows folder in the attached OS disk. If the driver letter that is assigned to the attached OS disk is `F`, you need to go to `F:\Windows`.
-
-1. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the memory dump file.
-
-1. If you are having trouble locating the memory.dmp file, you may wish to use [non-maskable interrupt (NMI) calls in serial console](./serial-console-windows.md#use-the-serial-console-for-nmi-calls) instead. Follow the guide to [generate a crash dump file using NMI calls](/windows/client-management/generate-kernel-or-complete-crash-dump).
+> [!NOTE]
+> If you're having trouble locating the *Memory.dmp* file, you can try to use [non-maskable interrupt (NMI) calls in the serial console](./serial-console-windows.md#use-the-serial-console-for-nmi-calls) instead. You can use [this guidance to generate a crash dump file by using NMI calls](/troubleshoot/windows-client/performance/generate-a-kernel-or-complete-crash-dump#use-nmi).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

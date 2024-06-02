@@ -2,7 +2,7 @@
 title: Cumulative update 5 for SQL Server 2016 SP1 (KB4040714)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 1 (SP1) cumulative update 5 (KB4040714).
 ms.date: 10/26/2023
-ms.custom: KB4040714
+ms.custom: evergreen, KB4040714
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise
@@ -57,7 +57,7 @@ This article describes cumulative update package 5 (build number: **13.0.4451.0*
 | <a id=10682268>[10682268](#10682268)</a> | [FIX: Timeout when you back up a large database to URL in SQL Server 2014 or 2016 (KB4023679)](https://support.microsoft.com/help/4023679) | SQL Engine |
 | <a id=10682301>[10682301](#10682301)</a> | [FIX: "Non-yielding Scheduler" condition occurs on spinlock contention in Microsoft SQL Server 2014 or 2016 (KB4024311)](https://support.microsoft.com/help/4024311) | SQL Engine |
 | <a id=10682303>[10682303](#10682303)</a> | [FIX: Unable to drop stored procedure execution article from P2P publication in SQL Server 2014 or 2016 (KB4023926)](https://support.microsoft.com/help/4023926) | SQL Engine |
-| <a id=10682322>[10682322](#10682322)</a> | [FIX: Couldn't disable "change data capture" if any column is encrypted by "Always Encrypted" feature of SQL Server 2016 (KB4034376)](https://support.microsoft.com/help/4034376) | SQL Engine |
+| <a id=10682322>[10682322](#10682322)</a> | [FIX: Can't disable "change data capture" if any column is encrypted by "Always Encrypted" feature in SQL Server (KB4034376)](https://support.microsoft.com/help/4034376) | SQL Engine |
 | <a id=10716344>[10716344](#10716344)</a> | [FIX: Access violation occurs when a DDL trigger is raised by the CREATE EXTERNAL TABLE command in SQL Server 2016 (KB4039966)](https://support.microsoft.com/help/4039966) | SQL Engine |
 | <a id=10739035>[10739035](#10739035)</a> | [FIX: SSIS package doesn't start when it's run by a CLR stored procedure whose user doesn't have SYSADMIN permissions (KB4039736)](https://support.microsoft.com/help/4039736) | SQL Engine |
 | <a id=10765165>[10765165](#10765165)</a> | [FIX: SQL Server Managed Backups don't run a scheduled log backup in SQL Server 2016 (KB4040535)](https://support.microsoft.com/help/4040535) | SQL Engine |

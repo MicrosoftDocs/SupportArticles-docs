@@ -53,4 +53,4 @@ Below are some of the common issues that may be met in this scenario:
 
 - [Web Deployment Tool](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd568996(v=ws.10))
 - [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler)
-- [Taking an Application Offline before Publishing](/iis/publish/deploying-application-packages/taking-an-application-offline-before-publishing)
+- [Taking Web Applications Offline with Web Deploy](/aspnet/web-forms/overview/deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy)

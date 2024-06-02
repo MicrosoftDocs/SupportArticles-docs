@@ -1,0 +1,31 @@
+### YamlMime:Landing
+
+title: Azure Container Registry troubleshooting documentation # < 60 chars
+summary: Welcome to Azure Container Registry troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Container Registry. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Troubleshoot Azure Container Registry issues
+  description: Documentation for troubleshooting common issues with Azure Container Registry. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: container-registry  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 05/24/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+ # Card
+  - title: Learn how to use Azure Container Registry by reading these quickstarts, tutorials, and samples
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Azure Container Registry documentation
+            url: /azure/container-registry/
+
+  # Card
+  - title: Troubleshoot container registry issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't get private IP address of an Azure Container Registry FQDN
+            url: cant-resolve-container-registry-fqdn-private-ip-address.md
