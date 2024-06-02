@@ -248,10 +248,10 @@ The On-demand Performance Diagnostics run has two stages:
 1. Install or update the Performance Diagnostics VM extension.
 1. Run the diagnostics for the specified duration.
 
-Currently there's no easy way to know exactly when the VM extension installation is complete. Generally it takes about 45 seconds to 1 minute to install the VM extension. After the VM extension is installed, you can run your repro steps to have the On-deman Performance Diagnostics capture the correct set of data for troubleshooting.
+Currently, there's no easy way to know exactly when the VM extension installation is complete. It takes about 45 seconds to 1 minute to install the VM extension. After the VM extension is installed, you can run your repro steps to have the On-deman Performance Diagnostics capture the correct set of data for troubleshooting.
 
 ### Will Performance Diagnostics continue to work when I move my Azure VM across regions?
 
-Azure VMs, and related network and storage resources, can be moved across regions by using Azure Resource Mover. However, moving VM extensions across regions isn't supported. For example, moving the Azure Performance Diagnostics VM extension across regions isn't supported. You have to install it manually on the VM in the target region after the VM is moved. For more information, see [Support matrix for moving Azure VMs between Azure regions](/azure/resource-mover/support-matrix-move-region-azure-vm).
+Azure VMs, and related network and storage resources, can be moved across regions by using Azure Resource Mover. However, moving VM extensions across regions, including the Azure Performance Diagnostics VM extension, isn't supported. You have to install the extension manually on the VM in the target region after you move the VM. For more information, see [Support matrix for moving Azure VMs between Azure regions](/azure/resource-mover/support-matrix-move-region-azure-vm).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
