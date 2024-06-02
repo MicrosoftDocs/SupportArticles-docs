@@ -118,7 +118,7 @@ To install and run Performance Diagnostics:
 
 1. To share diagnostics information with Microsoft, select **I agree to share diagnostics information with Microsoft.**
 
-    When you select this option, you share the diagnostics with customer support engineers automatically. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
+    When you select this option, you share the diagnostics with customer support engineers automatically. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-information-does-performance-diagnostics-collect-in-windows) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
 
 1. Select **Apply** to apply the selected options and install the tool.
 
@@ -126,7 +126,7 @@ To install and run Performance Diagnostics:
 
 ## View insights and reports
 
-This table compares the data provided by Continuous and On-demand Performance Diagnostics. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
+This table compares the data provided by Continuous and On-demand Performance Diagnostics. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-information-does-performance-diagnostics-collect-in-windows) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
 
 |  | Continuous Performance Diagnostics | On-demand Performance Diagnostics |
 |---------|------------------------------------|-----------------------------------|
@@ -147,7 +147,7 @@ Select a row to view more details.
 
 :::image type="content" source="media/performance-diagnostics/performance-diagnostics-insight-details.png" alt-text="Screenshot of Performance Diagnostics insight details screen." lightbox="media/performance-diagnostics/performance-diagnostics-insight-details.png" :::
 
-View or download the Performance Diagnostics report for an on-demand insight in the list by selecting **View** or **Download**, respectively. For more information, see [Download and review the full Performance Diagnostics report](#download-and-review-the-full-performance-diagnostics-report).
+View or download the Performance Diagnostics report for an on-demand insight in the list by selecting **View** or **Download**, respectively. For more information, see [Download and review the full Performance Diagnostics report](#view-performance-diagnostics-reports).
 
 Use the grouping dropdown to group or ungroup insights. You can group on-demand and continuous insights by category, insight, or recommendation.
 

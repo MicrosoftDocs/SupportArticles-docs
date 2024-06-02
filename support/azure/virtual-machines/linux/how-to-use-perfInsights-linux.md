@@ -1,3 +1,4 @@
+---
 title: Troubleshoot Linux virtual machine performance issues with Performance Diagnostics (PerfInsights)
 description: Learns how to use PerfInsights to troubleshoot Linux VM performance problems.
 services: virtual-machines
@@ -23,7 +24,7 @@ ms.author: genli
 If you are experiencing performance problems with virtual machines, before contacting support, run this tool.
 
 > [!NOTE]
-> [Continuous diagnostics (preview)](performance-diagnostics.md) is currently supported only on Windows. 
+> [Continuous diagnostics (preview)](../windows/performance-diagnostics.md) is currently supported only on Windows. 
 
 ## Supported troubleshooting scenarios
 

@@ -125,7 +125,7 @@ Follow these instructions to install the extension on Windows virtual machines:
 ## Remove the extension
 
 > [!NOTE]
-> We recommend uninstalling the extension through the performance diagnostics blade, as describe in [Uninstall performance diagnostics](performance-diagnostics.md#how-to-uninstall-performance-diagnostics).
+> We recommend uninstalling the extension through the performance diagnostics blade, as describe in [Uninstall performance diagnostics](performance-diagnostics.md#uninstall-performance-diagnostics).
 
 To remove the extension from a virtual machine, follow these steps:
 
