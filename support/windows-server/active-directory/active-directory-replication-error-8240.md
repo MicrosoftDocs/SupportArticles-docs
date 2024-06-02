@@ -21,33 +21,11 @@ _Original KB number:_ &nbsp; 2680976
 
 ## Symptoms
 
+Error 8240 (0x2030 or ERROR_DS_NO_SUCH_OBJECT) indicates that the specific object couldn't be found in AD DS. Two situations can generate this error.
+
 This issue can generate different symptoms under different conditions. This section describes the primary symptoms, and how you might encounter them.
 
-### Symptom 1
-
-When you run the `Repadmin /ShowReps` command at a Windows command prompt, you see output that resembles the following:
-
-```output
-<SiteName>\<DCName>
-objectGuid: <GUID>  
-Last attempt @ <Time> failed, result 8240:  
-There is no such object on the server.  
-Last success @ (never).  
-```
-
-### Symptom 2
-
-You use the **Replicate now** command in Active Directory Sites and Services (*dssite.msc*) to force a domain controller to replicate across a selected connection. You see a message that resembles the following:
-
-> The following error occurred during the attempt to synchronize naming context \<*Naming-Context*> from Domain Controller \<*Source-Domain-Controller*> to Domain Controller \<*Destination-Domain-Controller*>:  <br/>There is no such object on the server. This operation will not continue.  
-
-### Symptom 3
-
-When you try to remove Active Directory from a domain controller, you receive the following error message in the Active Directory installation wizard:
-
-> Active Directory could not transfer the remaining data in directory partition \<Naming-Context> to domain controller \<Domain-Controller>. "There is no such object on the server."  
-
-### Symptom 4
+### Situation 1: Domain controller generates NTDS Event ID 1126 when looking for a global catalog
 
 You receive NTDS General event ID 1126 in the Directory Service event log on the Domain Controller. The event data lists error 8240:
 
@@ -68,9 +46,62 @@ Error value:
 Internal ID:  
 3200ba0  
 
-## Cause
+### Situation 2: A domain controller generates Error 8240 during AD DS operations
 
-Error 8240 (0x2030 or ERROR_DS_NO_SUCH_OBJECT) indicates that the specific object couldn't be found in AD DS. Two situations can generate this error.
+The following table lists the conditions under which you might see Error 8240.
+
+| Action | Symptom |
+| --- | --- |
+| You run the `Repadmin /ShowReps` command at a Windows command prompt. | You see output that resembles the following: <br /><br />\<*SiteName*>\\\<*DCName*><br /> objectGuid: <*GUID*><br />  Last attempt @ <*Time*> failed, result 8240:<br /> There is no such object on the server.<br />Last success @ (never). |
+| You use the **Replicate now** command in Active Directory Sites and Services (*dssite.msc*) to force a domain controller to replicate across a selected connection. | You see a message that resembles the following: <br /><br />The following error occurred during the attempt to synchronize naming context \<*Naming-Context*> from Domain Controller \<*Source-DCName*> to Domain Controller \<*Destination-DCName*>:  <br/>There is no such object on the server. This operation will not continue. |
+| You try to remove Active Directory from a domain controller. | You receive the following error message in the Active Directory installation wizard:<br /><br />Active Directory could not transfer the remaining data in directory partition \<*Naming-Context*> to domain controller \<*DCName*>. "There is no such object on the server." |
+
+> [!NOTE]  
+> The preceding table uses the following variables:
+>
+> - \<*SiteName*>: The site that the domain controller belongs to.
+> - \<*DCName*>: The name of the domain controller.
+> - \<*GUID*>: GUID of the object that generated the error.
+> - \<*Naming-Context*>: The naming context of the object that generated the error.
+> - \<*Source-DCName*>: The name of the domain controller that replicated the object to another domain controller.
+> - \<*Destination-DCName*>: The name of the domain controller that received the replicated object.
+
+## ## Solution for Situation 1: Domain controller generates NTDS Event ID 1126 when looking for a global catalog
+
+### Cause of Event ID 1126
+
+When performing tasks such as looking up universal group memberships, Windows relies on domain controllers that have the global catalog role (known as global catalog servers, or GCs). If the system can't locate an available GC, it records Event ID 1126 in the NTDS event log. The event includes error code 8240.
+
+For more information about GCs, see [Planning Global Catalog Server Placement](/windows-server/identity/ad-ds/plan/planning-global-catalog-server-placement).
+
+### Solution for Event ID 1126
+
+Follow these steps:
+
+1. Check whether the forest has a GC. For example, at a Windows PowerShell command prompt on a computer in the forest, run the following command:
+
+   ```powershell
+   Get-ADDomainController -Discover -Service "GlobalCatalog"
+   ```
+
+1. Do one of the following:
+
+   - If the command identified at least one GC, check for a communication problem between the GC and the domain controller that generated the event.
+   - If the command didn't find a GC, continue to the next procedure to add a GC to the forest.
+
+You can add a GC by creating a new domain controller and specifying that is a GC. To add the global catalog server role to an existing domain controller, follow these steps:
+
+1. Open Active Directory Sites and Services (available on the **Tools** menu in Server Manager).
+
+
+   > [!NOTE]  
+   > After you mark a domain controller as a GC in Active Directory Sites and Services, it might take time for it to become fully available. KCC has to calculate a new replication topology, build the global catalog, and transmit a GC-ready announcement. The delay depends on the replication schedule, the time that is used to replicate the required read-only NCs, and the interval of KCC activity.
+1. Check whether you can obtain a domain controller from DNS through the command `NLTest.exe /DnsGetDC:<DomainName> /GC /Force`.  
+If you can't query GC record in DNS, take the following action:
+
+   - GC announcement on existing GCs: use the PoSh command `Get-ADRootDSE -Server <DCName> | fl serverName , isGlobalCatalogReady` or *ldp.exe* to connect the DC and check to check whether the value of **isGlobalCatalogReady** is set to **true**.
+1. Check whether you can connect to the GC over TCP 3268 through *ldp.exe*: `ldp.exe<DCName>:3268`.
+
 
 ### Situation 1: During AD replication
 
@@ -84,9 +115,7 @@ This error may be observed in the following situations:
 - When AD replication recovers after it fails for a time that exceeds the tombstone lifetime (TSL), deletion may not be propagated before the tombstone is cleaned
 - When the change-originating domain controller has Active Directory removed before the domain controller has an opportunity to propagate the deletion to other domain controllers that host a writable partition for that domain and the change is replicated to global catalog
 
-### Situation 2: Reported 8240 in 1126 Event (NTDS)
 
-The domain controller tries to locate global catalogs for its functionalities, such as universal group membership lookup. If the system can't locate an available domain controller, event 1126 is reported together with error 8240 in the NTDS event log.
 
 ## Resolution
 
@@ -135,21 +164,10 @@ To troubleshoot this issue, follow these steps:
 
 ### Situation 2: Reported 8240 in 1126 Event (NTDS)
 
-For the error that indicates that GC isn't available, we may generally follow the GC location process to check. To do this, follow these steps:
 
-1. Check whether there's any specified global catalog in the forest. If there's not, configure a GC.
+## Collecting data for Microsoft Support
 
-   > [!NOTE]  
-   > After you mark a domain controller as a GC in Active Directory Sites and Services, it might take time for it to become fully available. KCC has to calculate a new replication topology, build the global catalog, and transmit a GC-ready announcement. How long depends on the replication schedule, the time that is used to replicate the required read-only NCs, and the interval of KCC activity.
-1. Check whether you can obtain a domain controller from DNS through the command `NLTest.exe /DnsGetDC:<DomainName> /GC /Force`.  
-If you can't query GC record in DNS, take the following action:
-
-   - GC announcement on existing GCs: use the PoSh command `Get-ADRootDSE -Server <DCName> | fl serverName , isGlobalCatalogReady` or *ldp.exe* to connect the DC and check to check whether the value of **isGlobalCatalogReady** is set to **true**.
-1. Check whether you can connect to the GC over TCP 3268 through *ldp.exe*: `ldp.exe<DCName>:3268`.
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
+If you need assistance from Microsoft Support, we recommend that you collect the information by following the steps that are mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
 
 ## More information
 
