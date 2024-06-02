@@ -1,5 +1,5 @@
 ---
-title: How to use PerfInsights Linux in Microsoft Azure
+title: Troubleshoot Linux virtual machine performance issues with Performance Diagnostics (PerfInsights)
 description: Learns how to use PerfInsights to troubleshoot Linux VM performance problems.
 services: virtual-machines
 documentationcenter: ''
@@ -12,16 +12,19 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 04/15/2024
+ms.date: 05/14/2024
 ms.author: genli
 ---
-# How to use PerfInsights
+# Troubleshoot Linux virtual machine performance issues with Performance Diagnostics (PerfInsights)
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 [PerfInsights Linux](https://aka.ms/perfinsightslinuxdownload) is a self-help diagnostics tool that collects and analyzes the diagnostic data, and provides a report to help troubleshoot Linux virtual machine performance problems in Azure. PerfInsights can be run on supported virtual machines as a standalone tool, or directly from the portal by using [Performance Diagnostics for Azure virtual machines](../windows/performance-diagnostics.md).
 
 If you are experiencing performance problems with virtual machines, before contacting support, run this tool.
+
+> [!NOTE]
+> [Continuous diagnostics (preview)](performance-diagnostics.md) is currently supported only on Windows. 
 
 ## Supported troubleshooting scenarios
 
