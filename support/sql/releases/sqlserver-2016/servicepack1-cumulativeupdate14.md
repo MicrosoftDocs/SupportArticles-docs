@@ -2,7 +2,7 @@
 title: Cumulative update 14 for SQL Server 2016 SP1 (KB4488535)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 SP1 cumulative update 14 (KB4488535).
 ms.date: 10/26/2023
-ms.custom: KB4488535
+ms.custom: evergreen, KB4488535
 appliesto:
 - SQL Server 2016 Service pack 1
 - SQL Server 2016 Developer

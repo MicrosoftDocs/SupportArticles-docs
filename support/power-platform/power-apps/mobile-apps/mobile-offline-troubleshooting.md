@@ -2,7 +2,7 @@
 title: Offline sync errors in the Power Apps mobile app
 description: Describes errors while syncing offline data in the Power Apps mobile app and the recommended actions to take.
 ms.reviewer: mkaur, bwalters, clarading
-ms.date: 03/18/2024
+ms.date: 05/20/2024
 author: trdehove
 ms.author: trdehove
 ms.custom: sap:Mobile Apps\Can't connect
@@ -27,7 +27,7 @@ If you encounter an error while syncing offline data in the Power Apps mobile ap
 
 Make sure you have installed the latest version of the mobile app from the Google Play Store, Apple App Store, or Microsoft Store.
 
-| Error messages | Recommended actions|
+| Error message | Recommended action|
 |---------|---------|
 | Failed to download because we cannot connect to the server. | Verify that you have a strong internet connection and try again. |
 | It's taking a while to calculate data to download (entity with timeout: \<tablename>) | The sync for the table \<tablename> times out. Consider simplifying the filters specified for this table and its related tables. For best practices, see [Offline profile guidelines](/power-apps/mobile/mobile-offline-guidelines).|
@@ -38,3 +38,4 @@ Make sure you have installed the latest version of the mobile app from the Googl
 |We are unable to sync offline data for you. No profile assigned to the user. | Make sure the user is added to a mobile offline profile. For more information, see [Set up mobile offline (classic)](/power-apps/mobile/setup-mobile-offline-classic#step-21-add-users-or-team-to-a-mobile-offline-profile).|
 |We are unable to sync offline data for you. App module has no mobile offline profile assigned. | Make sure the app has a mobile offline profile assigned. For more information, see [Set up mobile offline (classic)](/power-apps/mobile/setup-mobile-offline-classic#step-21-add-users-or-team-to-a-mobile-offline-profile).|
 |We are unable to sync offline data for you. Role based profile access is enabled and app module has more than one mobile offline profile assigned.   |Make sure that only one profile is selected in the model-driven app designer. For more information, see [Set up mobile offline (classic)](/power-apps/mobile/setup-mobile-offline-classic#step-21-add-users-or-team-to-a-mobile-offline-profile).|
+|The number of records being downloaded exceeds the supported limit. Contact your admin to reduce the record count.|Modify the filter in the offline profile to download fewer records on the device. For best practices, see [Offline profile guidelines](/power-apps/mobile/mobile-offline-guidelines).|

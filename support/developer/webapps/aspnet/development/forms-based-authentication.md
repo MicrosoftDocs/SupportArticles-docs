@@ -2,7 +2,7 @@
 title: Use ASP.NET forms-based authentication
 description: This article demonstrates how to implement forms-based authentication in ASP.NET applications by using a database to store the users.
 ms.date: 03/27/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ms.reviewer: ARTHURYA
 ms.topic: how-to
 ---

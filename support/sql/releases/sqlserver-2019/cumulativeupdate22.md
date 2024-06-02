@@ -2,7 +2,7 @@
 title: Cumulative update 22 for SQL Server 2019 (KB5027702)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 22 (KB5027702).
 ms.date: 12/22/2023
-ms.custom: KB5027702
+ms.custom: evergreen, KB5027702
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows

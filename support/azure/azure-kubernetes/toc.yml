@@ -57,8 +57,6 @@
     items:
     - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
       href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
-    - name: CustomPrivateDNSZoneMissingPermissionError error
-      href: create-upgrade-delete/error-code-customprivatednszonemissingpermissionerror.md
     - name: Kubernetes 1.16 upgrades fail
       href: create-upgrade-delete/upgrades-to-kubernetes-fail-using-node-labels.md
     - name: NodePoolMcVersionIncompatible error
@@ -157,6 +155,10 @@
       href: create-upgrade-delete/tls-client-offered-unsupported-versions.md
     - name: Troubleshoot common Azure Linux container host for AKS issues
       href: create-upgrade-delete/troubleshoot-common-azure-linux-aks.md
+    - name: CustomPrivateDNSZoneMissingPermissionError error
+      href: create-upgrade-delete/error-code-customprivatednszonemissingpermissionerror.md
+    - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
+      href: create-upgrade-delete/error-code-invalidloadbalancerprofileallocatedoutboundports.md
 
 - name: Troubleshoot Kubernetes control plane
   items:
@@ -243,6 +245,8 @@
         href: connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
       - name: TCP times out when kubectl or other third-party tools connect
         href: connectivity/tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
+  - name: Basic troubleshooting of DNS resolution problems in AKS
+    href: connectivity/basic-troubleshooting-dns-resolution-problems.md
 
 - name: Data collection guide
   items:
@@ -280,6 +284,8 @@
     href: storage/slow-attach-detach-operations-azure-disk.md
   - name: Troubleshoot common Bring Your Own Key (BYOK) issues
     href: storage/troubleshoot-common-bring-your-own-key-issues.md
+  - name: Troubleshoot pods and namespaces stuck in the Terminating state
+    href: storage/pods-namespaces-terminating-state.md
 
 - name: Extensions, Policies and Add-Ons
   items:
@@ -297,10 +303,16 @@
       href: extensions/enforce-container-cpu-memory-limits.md
     - name: Custom Azure Policy for validating controllers doesn't work
       href: extensions/custom-policy-for-validating-controller-not-working.md
+    - name: Pods are created in user namespaces
+      href: extensions/pods-created-user-namespaces.md
+    - name: Pods fail and restart after you enable Defender Profile for AKS
+      href: extensions/failure-restart-azure-defender-publisher-daemonset-pods.md
     - name: Policy definition not found error during policy-assignments at Terraform
       href: extensions/error-in-policy-assign-main-file-terraform.md
     - name: Retain privileged mode while adding capabilities
       href: extensions/retain-privileged-mode-add-capabilities.md
+    - name: Third-party scanner detects run-time host incident
+      href: extensions/runtime-host-incidents-third-party-scanner.md
   - name: Troubleshoot the Istio-based service mesh add-on
     items:
     - name: General Istio add-on troubleshooting
@@ -319,6 +331,8 @@
     href: extensions/aks-cost-analysis-add-on-issues.md
   - name: Can't pull images from container registry to cluster
     href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
+  - name: Troubleshoot installation errors in the Azure App Configuration extension
+    href: extensions/troubleshoot-app-configuration-extension-installation-errors.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: extensions/troubleshoot-key-vault-csi-secrets-store-csi-driver.md
   - name: Troubleshoot cluster extension deployment errors

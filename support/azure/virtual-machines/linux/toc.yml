@@ -1,71 +1,114 @@
 - name: Welcome
   href: welcome-virtual-machines-linux.yml
 
-- name: Support for Linux and open-source technology in Azure
-  href: support-linux-open-source-technology.md
+- name: Azure Windows Virtual Machines troubleshooting documentation
+  href: ../windows/welcome-virtual-machines-windows.yml
 
-- name: VM restarts or stops unexpectedly
-  items:
-  - name: Understand a system reboot
-    href: ../windows/understand-vm-reboot.md
-  - name: Unexpected reboots of VMs with attached VHDs
-    href: ../windows/unexpected-reboots-attached-vhds.md
-  - name: Root Cause Analysis of unexpected VM reboot
-    href: ../windows/unexpected-vm-reboot-root-cause-analysis.md
+- name: Get additional support for VM-specific issues
+  href: /azure/virtual-machines/vm-support-help?context=/troubleshoot/azure/virtual-machines/linux/context/context
   
+- name: How to create an Azure support request
+  href: /azure/azure-portal/supportability/how-to-create-azure-support-request?context=/troubleshoot/azure/virtual-machines/linux/context/context
+
+- name: What log files are collected during troubleshooting
+  items:
+  - name: Microsoft Azure IaaS VM logs
+    href: ../windows/iaas-logs.md
+  - name: Microsoft Azure PaaS VM logs
+    href: ../windows/sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
+
+- name: Support statements
+  items:
+  - name: Support for Linux and open-source technology in Azure
+    href: support-linux-open-source-technology.md
+  - name: Upgrade VMs running Canonical Ubuntu 18.04 LTS
+    href: upgrade-canonical-ubuntu-18dot04-lts.md
+
+- name: VM health
+  items:
+  - name: HealthResources table in Resource Graph has missing entries
+    href: ../windows/healthresources-table-resource-graph-missing-entries.md
+  - name: VM availability might be inaccurate during restart
+    href: ../windows/inaccurate-vm-availability-during-vm-restart.md
+
+- name: Increase Quota Limits
+  items:
+  - name: Increase compute vCPU limits (Quota)
+    items:
+      - name: Increase VM series vCPU limit
+        href: /azure/azure-portal/supportability/per-vm-quota-requests?context=/troubleshoot/azure/virtual-machines/linux/context/context
+      - name: Increase total regional vCPU limit
+        href: /azure/azure-portal/supportability/regional-quota-requests?context=/troubleshoot/azure/virtual-machines/linux/context/context
+      - name: Increase spot quota limit
+        href: /azure/azure-portal/supportability/low-priority-quota?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Networking quota increases
+    items:
+    - name: Increase networking limits
+      href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/linux/context/context
+
+- name: Cannot connect to my VM
+  items:
+  - name: SSH troubleshooting
+    href: troubleshoot-ssh-connection.md
+  - name: Detailed SSH troubleshooting
+    href: detailed-troubleshoot-ssh-connection.md
+  - name: Network issues
+    href: cannot-connect-linux-network.md
+  - name: How to reset a local Linux password on Azure VMs
+    href: reset-password.md
+  - name: Reset network interface for Azure Linux VM
+    href: reset-network-interface-azure-linux-vm.md
+  - name: SSH connection fails due to permission and ownership issues
+    href: linux-vm-sshconnectionissue-perms.md
+  - name: Fail to connect to VM through SSH due to SELinux misconfiguration
+    href: linux-selinux-troubleshooting.md
+  - name: Debian Linux VM
+    href: cannot-connect-debian-linux.md
+  - name: Troubleshoot "permissions are too open" error
+    href: troubleshoot-ssh-permissions-too-open.md
+
+- name: VM password reset
+  items:
+  - name: Reset a local Linux password on Azure VMs
+    href: reset-password.md
+  - name: Redeploy Linux virtual machine to new Azure node
+    href: redeploy-to-new-node-linux.md
+
 - name: VM Performance
   items:
-  - name: Performance diagnostics (PerfInsights)
+  - name: Azure Performance diagnostics (PerfInsights)
     items:
-    - name: Performance diagnostics in the Azure Portal
-      href: ../windows/performance-diagnostics.md
-    - name: PerfInsights in Linux
+    - name: Overview
+      href: ../windows/performance-diagnostics.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: How to use
       href: how-to-use-perfinsights-linux.md
-  - name: Isolate bottlenecks in Linux
+    - name: More info about the Extension
+      href: ../windows/performance-diagnostics-vm-extension.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Azure Scale Set VM instances
+      href: ../windows/perfinsights-and-scale-set-vm-instances.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Troubleshoot VM Performance Bottlenecks
     href: troubleshoot-performance-bottlenecks-linux.md
-  - name: Troubleshoot performance issues through monitoring
-    href: troubleshoot-performance-virtual-machine-linux-windows.md
+    items:
+    - name: Isolate bottlenecks - CPU
+      href: troubleshoot-performance-bottlenecks-linux.md#cpu-resource
+    - name: Isolate bottlenecks - Memory
+      href: troubleshoot-performance-bottlenecks-linux.md#memory-resource
+    - name: Isolate bottlenecks - Disk IO
+      href: troubleshoot-performance-bottlenecks-linux.md#iops
+    - name: Isolate bottlenecks - Network
+      href: troubleshoot-performance-bottlenecks-linux.md#network-resource
+    - name: Additional troubleshooting using monitoring
+      href: troubleshoot-performance-virtual-machine-linux-windows.md
+    - name: Out of memory error in Linux VM
+      href: oom-swap-file-linux-vm.md
+    
 
-- name: Cannot start or stop my VM
-  items:
-  - name: Can't restart after applying kernel changes
-    href: kernel-related-boot-issues.md
-  - name: Fail to access Generation 2 Linux VM
-    href: unable-access-g2-linux-vm-reboot.md
-  - name: Fail to restart or be provisioned
-    href: linux-kernel-fails-restart-provision.md
-
-- name: Cannot create a VM
-  items:
-  - name: Troubleshoot deploying Linux virtual machine
-    href: troubleshoot-deployment-new-vm-linux.md
-  - name: Fail to create a VM with Ed25519 SSH keys
-    href: ed25519-ssh-keys.md
 - name: Kernel upgrades
   items:
   - name: Upgrade to SLES 15 SP1
     href: linux-upgrade-suse-15sp1.md
-    
-- name: Cannot connect to my VM
-  items:
-  - name: Debian Linux VM
-    href: cannot-connect-debian-linux.md
-  - name: Detailed SSH troubleshooting
-    href: detailed-troubleshoot-ssh-connection.md
-  - name: Fail to connect to VM through SSH due to SELinux misconfiguration
-    href: linux-selinux-troubleshooting.md
-  - name: Network issues
-    href: cannot-connect-linux-network.md
-  - name: SSH connection fails due to permission and ownership issues
-    href: linux-vm-sshconnectionissue-perms.md
-  - name: SSH troubleshooting
-    href: troubleshoot-ssh-connection.md
-  - name: Reset network interface for Azure Linux VM
-    href: reset-network-interface-azure-linux-vm.md
-  - name: Troubleshoot "permissions are too open" error
-    href: troubleshoot-ssh-permissions-too-open.md
-  - name: How to reset a local Linux password on Azure VMs
-    href: reset-password.md
+  - name: Can't restart after applying kernel changes
+    href: kernel-related-boot-issues.md
 
 - name: My VM is not booting
   items:
@@ -100,6 +143,64 @@
   - name: VM fails to boot and lands in dracut emergency shell
     href: linux-no-boot-dracut.md
 
+- name: Cannot start or stop my VM
+  items:
+  - name: Understanding VM lifecycle and states
+    href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Troubleshoot Start/Stop VMs during off-hours (Azure Automation)
+    href: /azure/automation/troubleshoot/start-stop-vm?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Swap file is not re-created
+    href: swap-file-not-recreated-linux-vm-restart.md
+  - name: Can't restart after applying kernel changes
+    href: kernel-related-boot-issues.md
+  - name: Fail to access Generation 2 Linux VM
+    href: unable-access-g2-linux-vm-reboot.md
+  - name: Fail to restart or be provisioned
+    href: linux-kernel-fails-restart-provision.md
+    
+- name: VM restarts or stops unexpectedly
+  items:
+  - name: Understand a system reboot
+    href: ../windows/understand-vm-reboot.md
+  - name: Unexpected reboots of VMs with attached VHDs
+    href: ../windows/unexpected-reboots-attached-vhds.md
+  - name: Root Cause Analysis of unexpected VM reboot
+    href: ../windows/unexpected-vm-reboot-root-cause-analysis.md
+
+- name: Received an Allocation Failure
+  items:
+  - name: Allocation failures
+    href: ../windows/allocation-failure.md
+
+- name: VM planned maintenance
+  items:
+  - name: Overview
+    href: /azure/virtual-machines/maintenance-notifications?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    
+- name: Cannot create a VM
+  items:
+  - name: Troubleshoot deploying Linux virtual machine
+    href: troubleshoot-deployment-new-vm-linux.md
+  - name: Fail to create a VM with Ed25519 SSH keys
+    href: ed25519-ssh-keys.md
+  - name: Cloud-init-enabled VM takes a long time to start up
+    href: ../windows/cloud-init-deployment-delay.md
+
+- name: Disk Management
+  items:
+  - name: Overview
+    href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: FAQ
+    href: /azure/virtual-machines/faq-for-disks?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: FAQ - Azure IaaS VM disks, and managed and unmanaged premium disks
+    href: ../windows/azure-iaas-vm-disks-managed-unmanaged.md
+  - name: Downsize a data disk without losing data
+    href: ../windows/downsize-data-disk-without-losing-data.md
+  - name: Errors when deleting storage resources
+    href: ../windows/storage-resource-deletion-errors.md
+  - name: Can't resize MBR partition for a data disk larger than 2 TB
+    href: convert-mbr-partition-to-gpt.md  
+
 - name: Linux administration
   items:
   - name: Configure multiple NICs
@@ -108,11 +209,6 @@
     href: create-swap-file-linux-vm.md
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
-
-- name: Issue resizing a disk
-  items:
-  - name: Can't resize MBR partition for a data disk larger than 2 TB
-    href: convert-mbr-partition-to-gpt.md
     
 - name: Linux repositories
   items:
@@ -129,15 +225,46 @@
     - name: Yum and dnf common Issues
       href: yum-dnf-common-issues.md 
 
-- name: Serial Console for Linux
-  href: serial-console-linux.md
+- name: Serial Console
   items:
-      - name: Serial Console GRUB/Single user mode
-        href: serial-console-grub-single-user-mode.md
-      - name: Serial Console NMI/SysRq
-        href: serial-console-nmi-sysrq.md
-      - name: Serial console grub proactive configuration
-        href: serial-console-grub-proactive-configuration.md   
+  - name: Overview
+    href: ../windows/serial-console-overview.md
+  - name: Serial Console for Linux
+    href: serial-console-linux.md
+  - name: Enabling and disabling Serial Console
+    href: ../windows/serial-console-enable-disable.md
+  - name: Power options within Serial Console
+    href: ../windows/serial-console-power-options.md
+  - name: Common Serial Console errors
+    href: ../windows/serial-console-errors.md
+  - name: Serial Console GRUB/Single user mode
+    href: serial-console-grub-single-user-mode.md
+  - name: Serial Console NMI/SysRq
+    href: serial-console-nmi-sysrq.md
+  - name: Serial console grub proactive configuration
+    href: serial-console-grub-proactive-configuration.md   
+
+- name: On-demand Capacity Reservation issues
+  items:
+  - name: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
+    href: ../windows/capacity-reservation-cant-deploy-vm-vmss.md
+  - name: Can't create Capacity Reservation
+    href: ../windows/capacity-reservation-cant-create-vm-vmss.md
+  - name: Can't delete a Capacity Reservation or Group
+    href: ../windows/capacity-reservation-cant-delete-group.md
+  - name: Capacity Reservation billing scenarios
+    href: ../windows/capacity-reservation-billing-scenerios.md
+  - name: A Capacity Reservation is in a "Failed" provisioning state
+    href: ../windows/capacity-reservation-failed-provisioning-state.md
+
+- name: Azure Disk Encryption (ADE) not operating correctly
+  items:
+  - name: Overview
+    href: /azure/virtual-machines/linux/disk-encryption-overview?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Troubleshoot
+    href: /azure/virtual-machines/linux/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: FAQ
+    href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
 - name: Repair a VM with Nested Hyper-V
   items:
@@ -183,18 +310,48 @@
     - name: Issues with Python 3-enabled Linux systems
       href: /azure/virtual-machines/extensions/issues-using-vm-extensions-python-3?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
-- name: Azure Disk Encryption (ADE) not operating correctly
-  items:
-  - name: Overview
-    href: /azure/virtual-machines/linux/disk-encryption-overview?context=/troubleshoot/azure/virtual-machines/linux/context/context
-  - name: Troubleshoot
-    href: /azure/virtual-machines/linux/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/linux/context/context
-  - name: FAQ
-    href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/linux/context/context
-
 - name: Custom script extenions (CSE) for Linux
   items:
   - name: Previous command is re-run
     href: customscript-reruns-previous-command.md
   - name: Linux - version 2
     href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/linux/context/context
+
+- name: Azure Compute Gallery
+  items:
+  - name: Windows/Linux troubleshooting
+    href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/windows/context/context
+
+- name: Azure Backup
+  href: /azure/backup/backup-azure-vms-troubleshoot?context=/troubleshoot/azure/virtual-machines/windows/context/context
+
+- name: Azure Run Command
+  items:
+  - name: Debug scripts run by Azure Run Command
+    href: ../windows/debug-customscriptextension-runcommand-scripts.md
+
+- name: VM Inspector
+  items:
+  - name: VM Inspector for Azure Virtual Machines
+    href: ../windows/vm-inspector-azure-virtual-machines.md
+  - name: VM Inspector error messages
+    href: ../windows/vm-inspector-error-messages.md
+
+- name: Common Azure VM errors and issues
+  items:
+  - name: Common error messages
+    href: ../windows/error-messages.md
+  - name: Throttling errors
+    href: ../windows/troubleshooting-throttling-errors.md
+  - name: Computer names are missing
+    href: ../windows/computer-names-missing-blank.md
+  - name: Fail to ping a Clustered Name
+    href: ../windows/ping-clustered-name-fail.md
+  - name: Failed to get log in Boot Diagnostics
+    href: ../windows/failed-get-contents-log-error.md
+  - name: GPU is disabled
+    href: ../windows/gpu-disabled-upgrade-ubuntu.md
+  - name: VM stuck in failed state
+    href: ../windows/vm-stuck-in-failed-state.md
+  - name: VM is unavailable for 15 minutes
+    href: ../windows/azure-vm-unavailable.md

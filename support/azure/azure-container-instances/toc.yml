@@ -15,6 +15,8 @@ items:
     href: configuration-setup/error-codes-spot-container-creation.md
   - name: Image pull takes a long time to run
     href: configuration-setup/long-image-pulls.md
+  - name: Error "service unavailable" when deploying GPU-enabled containers
+    href: configuration-setup/service-unavailable-gpu-enabled-aci-deployment-failures.md
   - name: ServiceUnavailable - container group quota exceeded in region
     href: configuration-setup/service-unavailable-container-group-quota-exceeded.md
   - name: ServiceUnavailable (409) - requested resource is not available in the location
@@ -36,6 +38,8 @@ items:
     href: management/container-group-restart-killing-event-interruption.md
   - name: Container group still runs after a stop or delete command 
     href: management/aci-still-running-after-stop-delete-command.md
+  - name: Spot containers remain in the Waiting state
+    href: management/spot-containers-remain-waiting-state.md
 
 - name: Troubleshoot container group in virtual network
   items:
