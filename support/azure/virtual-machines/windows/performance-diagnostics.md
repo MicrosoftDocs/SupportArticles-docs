@@ -204,7 +204,7 @@ To view these files:
     - An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip**) on Windows and a tar file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz**) on Linux that contains log files.
     - An HTML report.
 
-1. To download a report, select **Blob containers** > **azdiagextnresults** > <report name> > **Download**.
+1. To download a report, select **Blob containers** > **azdiagextnresults** > **<report name>** > **Download**.
  
 ### Change storage accounts
 
