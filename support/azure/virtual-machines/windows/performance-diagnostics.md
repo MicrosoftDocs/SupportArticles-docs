@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot performance issues on Azure virtual machines using Performance Diagnostics
+title: Troubleshoot performance issues on Azure virtual machines using Performance Diagnostics (PerfInsights)
 description: Use the Performance Diagnostics tool to identify and troubleshoot performance issues on your Azure virtual machine (VM).
 services: virtual-machines
 documentationcenter: ''
