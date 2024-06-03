@@ -4,12 +4,11 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 05/31/2024
+ms.date: 06/03/2024
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu
 ---
-
 # Troubleshoot Azure File Sync sync health and errors
 
 This article is designed to help you troubleshoot and resolve common sync issues that you might encounter with your Azure File Sync deployment.
