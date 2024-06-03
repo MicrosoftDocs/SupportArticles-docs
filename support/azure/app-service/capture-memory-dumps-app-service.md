@@ -1,7 +1,7 @@
 ---
 title: Capture memory dumps on the Azure App Service platform
 description: There are many features for capturing memory dumps on Azure App Service Web Apps. This article makes recommendations about which feature to use based on the scenario.
-ms.date: 06/21/2023
+ms.date: 06/03/2024
 author: benperk
 ms.author: benperk
 editor: v-jsitser
