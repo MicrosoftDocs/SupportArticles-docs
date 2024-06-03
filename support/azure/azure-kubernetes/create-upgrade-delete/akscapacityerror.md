@@ -44,7 +44,7 @@ The `KubernetesAPICallFailed` error message indicates that the AKS cluster didn'
 
 ### Solution 1: Select a different region
 
-The easiest and quickest solution is to try to deploy to a different region (for example, NorthEurope instead of WestEurope or UAENorth instead of QatarCentral). To find nearby regions, visit the [Azure Geographies page](https://azure.microsoft.com/en-us/explore/global-infrastructure/geographies/#overview).
+The easiest and quickest solution is to try to deploy to a different region (for example, NorthEurope instead of WestEurope or UAENorth instead of QatarCentral). To find nearby regions, visit the [Azure Geographies page](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview).
 
 This approach might not be feasible if you already have existing resources in the requested region, but it's the preferred solution in a dev/test scenario.
 
