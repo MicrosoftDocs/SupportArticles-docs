@@ -22,7 +22,7 @@ This document discusses how to resolve the continued presence of a Windows activ
 
 ## Symptoms
 
-When you use an Azure virtual machine (VM) that runs Windows Server 2022, you encounter the following symptoms:
+When you use an Azure virtual machine (VM) that runs Windows Server 2022 Datacenter Azure Edition, you encounter the following symptoms:
 
 - You see a watermark on the desktop that contains the following message:
 
