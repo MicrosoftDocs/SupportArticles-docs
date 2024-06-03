@@ -28,9 +28,9 @@ This issue occurs because the legacy SLA instances are still attached to the cas
 
 ## Resolution 1:
 
-Related Legacy SLAs can be set to the Active state and then deactivated after all the related slakpiinstances reach a terminal state that is either succeeded or expired. 
+Related legacy SLAs can be set to the Active state and then deactivated after all the related slakpiinstances reach a terminal state that is either succeeded or expired. 
 
-Make sure that new entity records use the new Unified Interface SLAs. In case of custom logic, for example, workflows or plugins, refer to Unified Interface SLAs. If default SLAs are used, Unified Interface SLAs should set Unified Interface SLAs as default, so that Legacy SLAs don't get applied to new entity records.
+Make sure that new entity records use the new Unified Interface SLAs. In case of custom logic, for example, workflows or plugins, refer to Unified Interface SLAs. For default SLAs, use Unified Interface SLAs, so that legacy SLAs don't get applied to new entity records.
 
 
 ## Resolution 2:
