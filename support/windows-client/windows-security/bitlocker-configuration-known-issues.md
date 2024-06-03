@@ -1,7 +1,7 @@
 ---
 title: 'BitLocker configuration: known issues'
 description: Describes common issues that involve your BitLocker configuration and BitLocker's general functionality, and provides guidance for addressing those issues.
-ms.date: 06/03/2023
+ms.date: 06/03/2024
 ms.reviewer: kaushika, v-tappelgate, artemp
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
