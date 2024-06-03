@@ -55,12 +55,12 @@ For detailed descriptions of each output table, see [Understanding output tables
 ### Method 1: Export to blob storage
 This method is recommended.
 
-For each of the output tables, configure an export to Azure Blob Storage. Refresh all exports, then the full tables will be written to blob storage.
+For each of the output tables, configure an export to Azure Blob Storage. Refresh all exports, then the full tables are written to blob storage.
 
 See how to configure [Export to blob storage](/dynamics365/customer-insights/data/export-azure-blob-storage).
 
 ### Method 2: Download 100k records
-Navigate to the "Tables" page in Customer Insights - Data. For each of the output tables, click the "Download" button, which downloads the top 100,000 records of the table. These many not contain the records involving your unexpected unification result.
+Navigate to the "Tables" page in Customer Insights - Data. For each of the output tables, select the "Download" button, which downloads the top 100,000 records of the table. These records might not contain your unexpected unification result.
 
 :::image type="content" source="media/data-manager-tables-download.png" alt-text="Download table.":::
 
@@ -84,12 +84,12 @@ Create new tables that only contain a small subset of problem records. Refresh t
 See how to [Remove a unified table](/dynamics365/customer-insights/data/data-unification-update#remove-a-unified-table). Downstream dependencies of the Customer table must first be removed.
 
 > [!IMPORTANT]
-> Take note of the original unification configuration so you may re-create it after troubleshooting.
+> Take note of the original unification configuration so you can re-create it after troubleshooting.
 
 #### Unify the problem tables
 1. **Map**: Map the problem tables
 2. **Deduplication**: Copy the original deduplication rules to the problem tables
-3. **Match**: For each problem table
+3. **Match**: For each problem table,
     - Copy the original matching rules
     - Enable "Include all records" for better visibility into the data
 4. **Unified data view**: Keep the default configuration
@@ -98,14 +98,14 @@ See how to [Remove a unified table](/dynamics365/customer-insights/data/data-uni
 #### Clean up
 After all troubleshooting is complete, remember to recreate the original unification configuration.
 
-If you need help restoring the previous state reach out to support.
+If you need help with restoring the previous configuration, reach out to support.
 
 ## Step 3: Resolving unification results
-Depending on where your unexpected result is, you may need to verify different output tables. 
+Depending on where your unexpected result is, you can need to verify different output tables. 
 See an [example of explaining a unification result](#example).
 
 ### Deduplication
-To verify if deduplication is behaving as expected, cross check the following:
+To verify if deduplication is behaving as expected, cross check:
 - Source data of problematic result
 - Deduplication configuration
 
@@ -118,7 +118,7 @@ Make sure to consider all configurations such as:
 See an overview of deduplication concepts at [Define deduplication rules](/dynamics365/customer-insights/data/data-unification-duplicates), and examples at [Deduplication concepts and scenarios](/dynamics365/customer-insights/data/data-unification-concepts-deduplication).
 
 ### Match
-To verify if match is behaving as expected, cross check the following:
+To verify if match is behaving as expected, cross check:
 - Source data of problematic result
 - Related Deduplication records
 - Match configuration
@@ -135,7 +135,7 @@ Make sure to consider all configurations such as:
 See an overview of match concepts at [Define matching rules for data unification](/dynamics365/customer-insights/data/data-unification-match-tables).
 
 ### Merge
-To verify if merge is behaving as expected, cross check the following:
+To verify if merge is behaving as expected, cross check:
 - Source data of problematic result
 - Related Deduplication records
 - Related ConflationMatchPairs records
@@ -152,7 +152,7 @@ See an overview of merge behavior at [Unify customer columns for data unificatio
 
 ## Understanding output tables
 ### Deduplication tables
-The Deduplication tables are the source tables deduplicated by the configured rules. If there are no configured rules, they're instead deduplicated by the columns referenced in match rules.
+The Deduplication tables are the source tables deduplicated by the configured rules. If there are no configured rules, the source tables are deduplicated on the columns referenced in match rules.
 
 |Column    |Source|Type  |Description  |
 |----------|------|------|-------------|
@@ -170,7 +170,7 @@ The ConflationMatchPairs table is the set of matched deduplicated records based 
 |Column    |Source|Type  |Description  |
 |----------|------|------|-------------|
 |TrueObjectId|System|String| The temporary identifier for records matched across source tables|
-|PrimaryKey ... PrimaryKey_N|Source|String|The source primary keys that were matched by a match rule|
+|PrimaryKey ... PrimaryKey_N|Source|String|The source primary keys that were matched|
 |PrimaryKey_Alternate ... PrimaryKey_Alternate_N|System|String|The alternate keys for the matched source primary keys|
 |ConflationMatchPairs_ModifiedOn|System|Date & time|The timestamp for the most recent change to this matched record|
 |Other matched fields|Source|Various|The remaining fields from the source tables that are mapped|
@@ -181,7 +181,7 @@ The Customer table is the final set of customer profiles produced by merging the
 |Column    |Source|Type  |Description  |
 |----------|------|------|-------------|
 |CustomerId|System|String|The unique guid identifier of the profile|
-|PrimaryKey ... PrimaryKey_N|Source|String|The source primary keys that were matched by a match rule|
+|PrimaryKey ... PrimaryKey_N|Source|String|The source primary keys that were matched|
 |PrimaryKey_Alternate ... PrimaryKey_Alternate_N|System|String|The alternate keys for the matched source primary keys|
 |Unified fields|Source|Various|The final fields that are determined by applying the unified field configuration to the source fields|
 
