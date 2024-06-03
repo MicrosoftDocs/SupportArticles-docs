@@ -24,13 +24,13 @@ Or
 
 ## Cause
 
-This issue occurs because the legacy SLA instances are still attached to the case but not in the **Cancelled** status.
+This issue occurs because the legacy SLA instances still get applied to the case but aren't in the **Cancelled** status.
 
 ## Resolution 1:
 
 Related legacy SLAs can be set to the Active state and then deactivated after all the related slakpiinstances reach a terminal state that is either succeeded or expired. 
 
-Make sure that new entity records use the new Unified Interface SLAs. In case of custom logic, for example, workflows or plugins, refer to Unified Interface SLAs. For default SLAs, use Unified Interface SLAs, so that legacy SLAs don't get applied to new entity records.
+Make sure that new entity records use the new Unified Interface SLAs. In case of custom logic, for example, workflows or plugins, refer to Unified Interface SLAs. Set the default SLAs option to Unified Interface SLAs, so that legacy SLAs don't get applied to the new entity records.
 
 
 ## Resolution 2:
