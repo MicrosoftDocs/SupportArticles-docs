@@ -6,7 +6,7 @@ ms.date: 05/31/2024
 ms.custom: sap:Desktop flows\Schema v2 issues
 ---
 
-# Duplicate binary objects in dekstop flow schema v2 solution
+# Duplicate binary objects in desktop flow schema v2 solution
 
 This article provides workarounds for issues related to desktop flows in schema v2, when dealing with solutions and having duplicate binaries.
 
