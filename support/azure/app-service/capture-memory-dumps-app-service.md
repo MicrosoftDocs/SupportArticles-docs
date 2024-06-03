@@ -1,7 +1,7 @@
 ---
 title: Capture memory dumps on the Azure App Service platform
 description: There are many features for capturing memory dumps on Azure App Service Web Apps. This article makes recommendations about which feature to use based on the scenario.
-ms.date: 06/21/2023
+ms.date: 06/03/2024
 author: benperk
 ms.author: benperk
 editor: v-jsitser
@@ -116,7 +116,7 @@ To understand the configuration of the Collect a Memory dump feature, see [Colle
 
 :::image type="content" source="./media/capture-memory-dumps-app-service/collect-memory-dump.png" alt-text="Azure portal screenshot of the 'Collect a Memory dump' page in Diagnostic Tools." lightbox="./media/capture-memory-dumps-app-service/collect-memory-dump.png":::
 
-To use the feature, select a storage account in which to store the memory dump. Then, select which server instance you want to collect the memory dump from. If you have more than a single instance, make sure that the issue that you're debugging is occurring on that instance. Also, this configuration restarts your application. Notice that a restart might not be optimal on a production application that's in operation.
+To use the feature, select a storage account in which to store the memory dump. Then, select which server instance you want to collect the memory dump from. If you have more than a single instance, make sure that the issue that you're debugging is occurring on that instance. Notice that a restart might not be optimal on a production application that's in operation.
 
 #### Crash Monitoring feature
 
