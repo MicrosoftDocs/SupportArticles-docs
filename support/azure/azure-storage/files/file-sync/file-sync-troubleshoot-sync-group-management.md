@@ -4,7 +4,7 @@ description: Troubleshoot common issues in managing Azure File Sync sync groups,
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 05/31/2024
+ms.date: 06/03/2024
 ms.author: kendownie
 ms.reviewer: v-weizhu
 ms.custom: sap:File Sync
@@ -49,7 +49,7 @@ To determine whether your user account role has the required permissions:
 1. In the Azure portal, select **Resource groups**.
 2. Select the resource group where the storage account is located, and then select **Access control (IAM)**.
 3. On the **Check access** tab, select **View my access**.
-4. On the **Current role assignments** tab, select the **Role** (for example, Owner or Contributor) for your user account.
+4. On the **Current role assignments** tab, select the role (for example, Owner or Contributor) for your user account.
 5. On the **Permissions** tab, verify the role for your user account has the following permissions:
     - Read: Get role definition
     - Write: Create or update custom role definition
