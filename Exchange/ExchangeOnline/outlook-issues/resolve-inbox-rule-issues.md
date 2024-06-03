@@ -1,5 +1,5 @@
 ---
-title: Diagnose Outlook Inbox rules that are not working
+title: Diagnose Outlook Inbox rules that aren't working
 description: Provides steps to diagnose various Inbox rule issues in Microsoft Outlook or Outlook on the web.
 author: cloud-writer
 ms.author: meerak
@@ -25,7 +25,7 @@ search.appverid: MET150
 ms.date: 05/31/2024
 ---
 
-# Diagnose Outlook Inbox rules that are not working
+# Diagnose Outlook Inbox rules that aren't working
 
 If you encounter an issue that's related to [Inbox rules](https://support.microsoft.com/office/manage-email-messages-by-using-rules-c24f5dea-9465-4df4-ad17-a50704d66c59) in Microsoft Outlook or Outlook on the web, select the applicable issue from the table of contents (TOC) at the top of this article.
 
@@ -67,25 +67,25 @@ To diagnose and fix this issue, follow these steps. After you complete each step
 
 6. Check whether the incoming message has already been forwarded or redirected by another Inbox rule. To prevent endless looping, messages that are forwarded or redirected by an Inbox rule include an [X-MS-Exchange-Inbox-Rules-Loop](https://techcommunity.microsoft.com/t5/exchange-team-blog/loop-prevention-in-exchange-online-demystified/ba-p/2312258#toc-hId-209339157) header that limits the number of times that a message can be automatically redirected, forwarded, or replied to. The [Exchange Online limit](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#journal-transport-and-inbox-rule-limits) is one time. This behavior is by design.
 
-[Back to top](#diagnose-issues-that-affect-inbox-rules-in-outlook)
+[Back to top](#diagnose-outlook-inbox-rules-that-arent-working)
 
 ## Rule to forward new or updated meeting requests doesn't work
 
 If an incoming message is a new or updated meeting request, and its sensitivity level is set to **Private**, Inbox rules that forward the message won't work. This behavior is by design.
 
-[Back to top](#diagnose-issues-that-affect-inbox-rules-in-outlook)
+[Back to top](#diagnose-outlook-inbox-rules-that-arent-working)
 
 ## Rule to forward message disposition notifications or delivery receipts doesn't work
 
 If an incoming message is a [delivery report](/exchange/mail-flow/mail-routing/recipient-resolution#delivery-report-redirection-for-groups), such as a message disposition notification (MDN) or delivery receipt (DR), Inbox rules that forward the message won't work. This behavior is by design.
 
-[Back to top](#diagnose-issues-that-affect-inbox-rules-in-outlook)
+[Back to top](#diagnose-outlook-inbox-rules-that-arent-working)
 
 ## Rule to forward or redirect automatic replies doesn't work
 
 If an incoming message is an automatic reply, Inbox rules that forward or redirect the message won't work. To prevent endless looping, messages that are forwarded or redirected by using Inbox rules include an X-MS-Exchange-Inbox-Rules-Loop header that limits the number of times that a message can be automatically redirected, forwarded, or replied to. The [Exchange Online limit](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#journal-transport-and-inbox-rule-limits) is one time.
 
-[Back to top](#diagnose-issues-that-affect-inbox-rules-in-outlook)
+[Back to top](#diagnose-outlook-inbox-rules-that-arent-working)
 
 ## No mailbox rules work
 
@@ -97,4 +97,4 @@ To diagnose the mailbox issue,  follow these steps:
 
 2. Check whether the mailbox has a Microsoft 365 F1 license. Inbox rules won't work for a mailbox that has an [F1 license](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description#available-plans-for-exchange-online). This behavior is by design.
 
-[Back to top](#diagnose-issues-that-affect-inbox-rules-in-outlook)
+[Back to top](#diagnose-outlook-inbox-rules-that-arent-working)
