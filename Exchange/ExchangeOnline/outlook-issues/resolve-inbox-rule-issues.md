@@ -65,7 +65,7 @@ To diagnose and fix this issue, follow these steps. After you complete each step
 
 5. Check whether the Inbox rule is configured to forward or redirect messages back to the original sender. Inbox rules won't forward or redirect messages to the original sender. If your Inbox rule forwards or redirects to multiple mailboxes, including the original sender, all recipients except the original sender will receive the forwarded or redirected messages. This behavior is by design.
 
-6. Check whether the incoming message has already been forwarded or redirected by another Inbox rule. To prevent endless looping, messages that are forwarded or redirected by an Inbox rule include an [X-MS-Exchange-Inbox-Rules-Loop](https://techcommunity.microsoft.com/t5/exchange-team-blog/loop-prevention-in-exchange-online-demystified/ba-p/2312258#toc-hId-209339157) header that restricts the number of times that a message can be automatically redirected, forwarded, or replied to. The [Exchange Online limit](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#journal-transport-and-inbox-rule-limits) is one time. This behavior is by design.
+6. Check whether the incoming message has already been forwarded or redirected by another Inbox rule. To prevent endless looping, messages that are forwarded or redirected by an Inbox rule include an [X-MS-Exchange-Inbox-Rules-Loop](https://techcommunity.microsoft.com/t5/exchange-team-blog/loop-prevention-in-exchange-online-demystified/ba-p/2312258#toc-hId-209339157) header that limits the number of times that a message can be automatically redirected, forwarded, or replied to. The [Exchange Online limit](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#journal-transport-and-inbox-rule-limits) is one time. This behavior is by design.
 
 [Back to top](#diagnose-issues-that-affect-inbox-rules-in-outlook)
 
@@ -83,7 +83,7 @@ If an incoming message is a [delivery report](/exchange/mail-flow/mail-routing/r
 
 ## Rule to forward or redirect automatic replies doesn't work
 
-If an incoming message is an automatic reply, Inbox rules that forward or redirect the message won't work. To prevent endless looping, messages that are forwarded or redirected by using Inbox rules include an X-MS-Exchange-Inbox-Rules-Loop header that restricts the number of times that a message can be automatically redirected, forwarded, or replied to. The [Exchange Online limit](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#journal-transport-and-inbox-rule-limits) is one time.
+If an incoming message is an automatic reply, Inbox rules that forward or redirect the message won't work. To prevent endless looping, messages that are forwarded or redirected by using Inbox rules include an X-MS-Exchange-Inbox-Rules-Loop header that limits the number of times that a message can be automatically redirected, forwarded, or replied to. The [Exchange Online limit](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#journal-transport-and-inbox-rule-limits) is one time.
 
 [Back to top](#diagnose-issues-that-affect-inbox-rules-in-outlook)
 
