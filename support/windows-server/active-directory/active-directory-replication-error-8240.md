@@ -85,7 +85,7 @@ Follow these steps:
 1. Do one of the following:
 
    - If the command identified at least one GC, check for a communication problem between the GC and the domain controller that generated the event.
-   - If the command didn't find a GC, continue to the next procedure to add a GC to the forest. Otherwise, go to []().
+   - If the command didn't find a GC, continue to the next procedure to add a GC to the forest. Otherwise, go to [Check GC connectivity and availability](#check-gc-connectivity-and-availability).
 
 ### Add a GC to the forest
 
