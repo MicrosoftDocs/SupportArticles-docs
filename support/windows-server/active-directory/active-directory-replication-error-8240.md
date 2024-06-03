@@ -27,7 +27,7 @@ This issue can generate different symptoms under different conditions. This sect
 
 ### Situation 1: Domain controller generates NTDS Event ID 1126 when looking for a global catalog
 
-You receive NTDS General event ID 1126 in the Directory Service event log on the Domain Controller. The event data lists error 8240:
+The domain controller records NTDS General event ID 1126 in its Directory Service event log. The event data lists error 8240:
 
 > Event Type: Error  
 Event Source: NTDS General  
@@ -52,8 +52,8 @@ The following table lists the conditions under which you might see Error 8240.
 
 | Action | Symptom |
 | --- | --- |
-| You run the `Repadmin /ShowReps` command at a Windows command prompt. | You see output that resembles the following: <br /><br />\<*SiteName*>\\\<*DCName*><br /> objectGuid: <*GUID*><br />  Last attempt @ <*Time*> failed, result 8240:<br /> There is no such object on the server.<br />Last success @ (never). |
-| You use the **Replicate now** command in Active Directory Sites and Services (*dssite.msc*) to force a domain controller to replicate across a selected connection. | You see a message that resembles the following: <br /><br />The following error occurred during the attempt to synchronize naming context \<*Naming-Context*> from Domain Controller \<*Source-DCName*> to Domain Controller \<*Destination-DCName*>:  <br/>There is no such object on the server. This operation will not continue. |
+| You run the `Repadmin /ShowReps` command at a Windows command prompt. | You see output that resembles the following message: <br /><br />\<*SiteName*>\\\<*DCName*><br /> objectGuid: <*GUID*><br />  Last attempt @ <*Time*> failed, result 8240:<br /> There is no such object on the server.<br />Last success @ (never). |
+| You use the **Replicate now** command in Active Directory Sites and Services (*dssite.msc*) to force a domain controller to replicate across a selected connection. | You see a message that resembles the following message: <br /><br />The following error occurred during the attempt to synchronize naming context \<*Naming-Context*> from Domain Controller \<*Source-DCName*> to Domain Controller \<*Destination-DCName*>:  <br/>There is no such object on the server. This operation will not continue. |
 | You try to remove Active Directory from a domain controller. | You receive the following error message in the Active Directory installation wizard:<br /><br />Active Directory could not transfer the remaining data in directory partition \<*Naming-Context*> to domain controller \<*DCName*>. "There is no such object on the server." |
 
 > [!NOTE]  
@@ -82,7 +82,7 @@ Follow these steps:
    Get-ADDomainController -Discover -Service "GlobalCatalog"
    ```
 
-1. Do one of the following:
+1. Perform one of the following actions:
 
    - If the command identified at least one GC, check for a communication problem between the GC and the domain controller that generated the event.
    - If the command didn't find a GC, continue to the next procedure to add a GC to the forest. Otherwise, go to [Check GC connectivity and availability](#check-gc-connectivity-and-availability).
@@ -101,7 +101,7 @@ You can add a GC by creating a new domain controller and specifying that is a GC
 
 ### Check GC connectivity and availability
 
-1. Check whether you can obtain a domain controller from DNS on a computer in the domain, open a Command Prompt window and then run the following command:
+1. Check whether you can obtain a domain controller from DNS. On a computer in the domain, open a Command Prompt window, and then run the following command:
 
    ```console
    NLTest.exe /DnsGetDC:<DomainName> /GC /Force
@@ -127,7 +127,7 @@ You can add a GC by creating a new domain controller and specifying that is a GC
         ldp.exe <GC_Name>:389
         ```
 
-      In either case, the value of **isGlobalCatalogReady** should be **TRUE**. If the value is **FALSE**, either the replication cycle hasn't finished yet or there's another problem in the server.
+      In either case, the value of **isGlobalCatalogReady** should be **TRUE**. If the value is **FALSE**, either the replication cycle isn't finished yet or there's another problem in the server.
 
 1. Check whether you can connect to the GC by using port 3268. At the command prompt, run the following command:
 
@@ -176,17 +176,17 @@ To remove the inconsistent objects, you can treat them as lingering objects. [In
 
 If you want to keep the inconsistent objects and replicate them to the rest of the forest, configure the following registry keys on the destination domain controller:
 
-- Sub-key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
+- Subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
   Name: `Strict Replication Consistency`  
   Type: REG_DWORD  
   Data: **0**  
 
-- Sub-key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
+- Subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
   Name: `Allow Replication With Divergent and Corrupt Partner`  
   Type: REG_DWORD  
   Data: **1**  
 
-  Sub-key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
+  Subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
   Name: `Correct Missing Object`  
   Type: REG_DWORD  
   Data: **1**  
