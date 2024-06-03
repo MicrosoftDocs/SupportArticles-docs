@@ -1081,7 +1081,7 @@ items:
       href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
       href: ./group-policy/authz-fails-access-denied-error-application-access-check.md
-    - name: Can't apply user Group Policy settings when computer objects don't have GPO Read permissions
+    - name: Can't apply user Group Policy settings
       href: ./group-policy/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions.md
     - name: Error 0x80004005 when you create DSN with GPP
       href: ./group-policy/creating-dsn-with-gpp-fails.md
@@ -2133,8 +2133,8 @@ items:
     items:
     - name: incorrect shutdown reason code written to SEL
       href: ./performance/incorrect-shutdown-reason-code-sel.md
-    - name: 'Troubleshooting scenario: System shutdown is slow'
-      href: ./performance/troubleshooting-system-shutdown-is-slow-scenario.md
+    - name: 'System shutdown is slow'
+      href: ./performance/system-shutdown-is-slow.md
     - name: Use Userdump.exe to create a dump file
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
