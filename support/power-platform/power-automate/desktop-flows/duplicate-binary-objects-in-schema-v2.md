@@ -1,5 +1,5 @@
 ---
-title: Duplicate binary objects in dekstop flow schema v2 solution
+title: Duplicate binary objects in desktop flow schema v2 solution
 description: Provides workarounds for issues related to desktop flow schema v2, when dealing with solutions and having duplicate binaries.
 ms.reviewer: iomavrid
 ms.date: 05/31/2024
