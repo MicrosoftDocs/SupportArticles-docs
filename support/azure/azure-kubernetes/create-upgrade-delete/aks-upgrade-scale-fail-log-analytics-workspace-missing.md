@@ -12,10 +12,16 @@ This article provides solutions to the "Unable to get log analytics workspace in
 
 ## Symptoms
 
-When you start, upgrade, or scale an AKS cluster, you may see the following error:
+When you start, upgrade, or scale an AKS cluster, you may see the following errors:
 
 > Failed to save container service '\<container service name>'.  
 > Error: Unable to get log analytics workspace info.  
+> Resource ID: /subscriptions/\<WorkspaceSubscription>/resourcegroups/defaultresourcegroup-weu/providers/microsoft.operationalinsights/workspaces/defaultworkspace-\<WorkspaceID>-weu.  
+> Detail: operationalinsights.WorkspacesClient#GetSharedKeys: Failure responding to request: StatusCode=404 -- Original Error: autorest/azure: Service returned an error. Status=404 Code='ResourceGroupNotFound' Message='Resource group 'defaultresourcegroup-weu' could not be found.'
+
+or
+
+> Error: Unable to retrieve log analytics workspace. If resource is intentionally deleted to stop monitoring, please also disable monitoring addon by following doc: https://aka.ms/aks-disable-monitoring-addon. If resource is deleted by mistake, please re-create it by following doc: https://aka.ms/new-log-analytics, and enable new workspace resource id by following doc: https://aka.ms/aks-enable-addons.
 > Resource ID: /subscriptions/\<WorkspaceSubscription>/resourcegroups/defaultresourcegroup-weu/providers/microsoft.operationalinsights/workspaces/defaultworkspace-\<WorkspaceID>-weu.  
 > Detail: operationalinsights.WorkspacesClient#GetSharedKeys: Failure responding to request: StatusCode=404 -- Original Error: autorest/azure: Service returned an error. Status=404 Code='ResourceGroupNotFound' Message='Resource group 'defaultresourcegroup-weu' could not be found.'
 
