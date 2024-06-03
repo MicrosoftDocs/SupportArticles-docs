@@ -66,7 +66,7 @@ The following table lists the conditions under which you might see Error 8240.
 > - \<*Source-DCName*>: The name of the domain controller that replicated the object to another domain controller.
 > - \<*Destination-DCName*>: The name of the domain controller that received the replicated object.
 
-## ## Cause and solution for situation 1: Domain controller generates NTDS Event ID 1126 when looking for a global catalog
+## Cause and solution for situation 1: Domain controller generates NTDS Event ID 1126 when looking for a global catalog
 
 When Windows performs tasks such as looking up universal group memberships, Windows relies on domain controllers that have the global catalog role (known as global catalog servers, or GCs). If the system can't locate an available GC, it records Event ID 1126 in the NTDS event log. The event includes error code 8240.
 
@@ -190,6 +190,8 @@ If you want to keep the inconsistent objects and replicate them to the rest of t
   Name: `Correct Missing Object`  
   Type: REG_DWORD  
   Data: **1**  
+
+After you update these registry entries, allow time for the changes to replicate to the source domain controller. Alternatively, you can use the **Replicate now** command in Active Directory Sites and Services to force the source domain controller to use a specific connection to replicate changes to the destination domain controller.
 
 > [!IMPORTANT]  
 > Be careful in a large environment that contains many domain controllers. As the inconsistent objects replicate through the forest, they could cause more domain controllers to report 8240 errors until the replication finishes.
