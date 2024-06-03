@@ -144,6 +144,8 @@
       href: desktop-flows/set-drop-down-list-value-fails.md
     - name: Tips on working with SQL queries
       href: desktop-flows/troubleshooting-tips-sql-queries.md
+    - name: Troubleshoot session creation errors for unattended desktop flow runs
+      href: desktop-flows/troubleshoot-session-creation-errrors.md
     - name: Troubleshoot direct connectivity issues
       href: desktop-flows/troubleshoot-direct-connectivity-issues.md
     - name: Troubleshoot desktop flow run queue-based errors
