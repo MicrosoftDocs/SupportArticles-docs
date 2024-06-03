@@ -66,15 +66,13 @@ The following table lists the conditions under which you might see Error 8240.
 > - \<*Source-DCName*>: The name of the domain controller that replicated the object to another domain controller.
 > - \<*Destination-DCName*>: The name of the domain controller that received the replicated object.
 
-## ## Solution for Situation 1: Domain controller generates NTDS Event ID 1126 when looking for a global catalog
+## ## Cause and solution for situation 1: Domain controller generates NTDS Event ID 1126 when looking for a global catalog
 
-### Cause of Event ID 1126
-
-When performing tasks such as looking up universal group memberships, Windows relies on domain controllers that have the global catalog role (known as global catalog servers, or GCs). If the system can't locate an available GC, it records Event ID 1126 in the NTDS event log. The event includes error code 8240.
+When Windows performs tasks such as looking up universal group memberships, Windows relies on domain controllers that have the global catalog role (known as global catalog servers, or GCs). If the system can't locate an available GC, it records Event ID 1126 in the NTDS event log. The event includes error code 8240.
 
 For more information about GCs, see [Planning Global Catalog Server Placement](/windows-server/identity/ad-ds/plan/planning-global-catalog-server-placement).
 
-### Solution for Event ID 1126
+### Check for an existing GC
 
 Follow these steps:
 
@@ -89,45 +87,79 @@ Follow these steps:
    - If the command identified at least one GC, check for a communication problem between the GC and the domain controller that generated the event.
    - If the command didn't find a GC, continue to the next procedure to add a GC to the forest.
 
+### Add a GC to the forest
+
 You can add a GC by creating a new domain controller and specifying that is a GC. To add the global catalog server role to an existing domain controller, follow these steps:
 
-1. Open Active Directory Sites and Services (available on the **Tools** menu in Server Manager).
-
+1. Open Active Directory Sites and Services (*dssite.msc*, also available on the **Tools** menu in Server Manager).
+1. Expand **Sites**, expand the site, and then select the domain controller that you want to modify.
+1. In the right-hand pane, right-click **NTDS Site Settings**, and then select **Properties**.
+1. On the **General** tab, select **Global Catalog**, and then select **OK**.
 
    > [!NOTE]  
-   > After you mark a domain controller as a GC in Active Directory Sites and Services, it might take time for it to become fully available. KCC has to calculate a new replication topology, build the global catalog, and transmit a GC-ready announcement. The delay depends on the replication schedule, the time that is used to replicate the required read-only NCs, and the interval of KCC activity.
-1. Check whether you can obtain a domain controller from DNS through the command `NLTest.exe /DnsGetDC:<DomainName> /GC /Force`.  
-If you can't query GC record in DNS, take the following action:
+   > After you mark a domain controller as a GC in Active Directory Sites and Services, it might take time for the new GC to become fully available. The Knowledge Consistency Checker (KCC) has to calculate a new replication topology, build the global catalog, and transmit a `GC-ready` announcement. The delay depends on the replication schedule, the time that is used to replicate the required read-only naming contexts, and the interval of KCC activity.
 
-   - GC announcement on existing GCs: use the PoSh command `Get-ADRootDSE -Server <DCName> | fl serverName , isGlobalCatalogReady` or *ldp.exe* to connect the DC and check to check whether the value of **isGlobalCatalogReady** is set to **true**.
-1. Check whether you can connect to the GC over TCP 3268 through *ldp.exe*: `ldp.exe<DCName>:3268`.
+### Make sure that the new GC is available
 
+To make sure that the new GC is available, do one of the following:
 
-### Situation 1: During AD replication
+- On a computer in the domain, open a Command Prompt window and then run the following command:
 
-When a change occurs to an object in Active Directory on the source domain controller, the source domain controller propagates this change to other domain controllers by notifying its replication partners to retrieve this change. Destination domain controllers pull the change from the source domain controller when they receive the change the notification. After the change is retrieved, destination domain controllers try to transact the change into the local database.
+  ```console
+  NLTest.exe /DnsGetDC:<DomainName> /GC /Force
+  ```
 
-The destination domain controller has to look up the changed object in the local database so that the change can be applied to that object. If the target object can't be located for some reason, Active Directory reports error 8240.
+  > [!NOTE]  
+  > In this command, \<*DomainName*> is the name of the domain of the new GC.
 
-This error may be observed in the following situations:
+- On the new GC, at the PowerShell command prompt, run the following command:
 
-- When a change occurred to an object on the source domain controller but this object was cleaned by the garbage-collection process
-- When AD replication recovers after it fails for a time that exceeds the tombstone lifetime (TSL), deletion may not be propagated before the tombstone is cleaned
-- When the change-originating domain controller has Active Directory removed before the domain controller has an opportunity to propagate the deletion to other domain controllers that host a writable partition for that domain and the change is replicated to global catalog
+  ```powershell
+  Get-ADRootDSE -Server <DCName> | fl serverName , isGlobalCatalogReady
+  ```
 
+- Follow these steps:
+  1. Check whether you can connect to the GC by using the LDAP tool *ldp.exe* and TCP port 3268 by running the following command at the command prompt:
 
+     ```console
+     ldp.exe<GC_Name>:3268
+     ```
 
-## Resolution
+     > [!NOTE]  
+     > In this command, \<*GC_Name*> represents the name of the GC.
 
-### Situation 1: During AD replication
+  1. After you connect to the GC by using *ldp.exe*, check whether the value of **isGlobalCatalogReady** is set to **true**.
 
-To troubleshoot this issue, follow these steps:
+## Cause and solution for situation 2: A domain controller generates Error 8240 during AD DS operations
 
-1. Determine the problematic domain controller that has the inconsistent object. This error means that the local domain controller finds that an inconsistent object exists in its incoming partner (for the specific replication connection) but not local AD database.
-1. Determine whether you want to remove the objects or leave those objects as they are, as follows:
+In an AD DS forest, each domain controller maintains information about the forest objects. Any change to an object starts on a single (source) domain controller. From there, the change replicates to the source domain controller's replication partners (destination domain controllers). Those domain controllers replicate the changes further, and eventually all of the domain controllers "know" about the updated object. The following details of the replication process between two domain controllers pertain to error 8240:
 
-   - The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/en-us/download/details.aspx?id=56051). In some cases where LoLv2 can't be used, you can use *Repadmin.exe* command together with the RemoveLingeringObjects switch to remove those inconsistent objects from the source domain controller. For more information, go to the following websites:  
-   [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)  
+1. The source domain controller notifies the destination domain controllers of the change.
+1. After they receive the notification, destination domain controllers pull the change from the source domain controller.
+1. Each destination domain controller looks up its local copy of the object to apply the change.
+1. If the destination domain controller can't find its local copy of the object, it generates error 8240.
+
+The object could be missing for reasons such as the following:
+
+- The object on the source domain controller is a [lingering object](information-lingering-objects.md). This means that the object was deleted from the forest, but for some reason the source domain controller never received this change. In addition, object's tombstone lifetime (TSL) expired before the source domain controller resumed replicating.
+- The source domain controller was demoted before all of the destination domain controllers could pull the change. However, the change is replicated to the GC.
+
+### Identify the affected domain controllers and select solution
+
+The first step to resolving this problem is to understand what data is inconsistent and which domain controllers are affected:
+
+In the replication transaction, the domain controller that generated error 8240 is the destination domain controller. The inconsistent object doesn't exist on this domain controller, but does exist on the source domain controller. In some contexts, the text of error 8240 identifies the source domain controller, but in others it doesn't. In a complex replication topology, you might have to use Active Directory Sites and Services and the destination controller's event log to confirm the identity of the source domain controller. Additionally, use those tools to identify other replication partners of the source domain controller that might report the same problem.
+
+Next, determine whether you want to remove the objects, leave those objects as they are, or reset the affected domain controller. The following sections provide more information for each of these options:  
+
+- [Remove inconsistent objects from the source domain controller](#remove).
+- [Keep inconsistent objects and integrate them into the forest](#keep).
+- [Remove and recreate the inconsistent domain controller](#reset).
+
+### <a name="remove"></a>Option 1: Remove inconsistent objects from the source domain controller
+
+   - The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/download/details.aspx?id=56051). In some cases where LoLv2 can't be used, you can use *Repadmin.exe* command together with the `RemoveLingeringObjects` switch to remove those inconsistent objects from the source domain controller. For more information, go to the following websites:  
+   [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)  
    [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
    
      [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
@@ -135,7 +167,10 @@ To troubleshoot this issue, follow these steps:
      [Use Repadmin to remove lingering objects](https://technet.microsoft.com/library/cc785298%28v=ws.10%29.aspx)
      
      > [!NOTE]
-     > For a read-only partition, you have to use the `Repadmin /Rehost` command.
+     > For a read-only partition, you have to use the `Repadmin /Rehost` command.  
+
+### <a name="keep"></a>Option 2: Keep inconsistent objects and integrate them into the forest
+
    - If you want to keep those objects, you can create the following objects on the destination domain controller:
    
         Sub-Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
@@ -155,15 +190,15 @@ To troubleshoot this issue, follow these steps:
      
      > [!NOTE]
      > You must be careful in a large environment that contains many domain controllers, because the propagation of those inconsistent objects could cause more and more domain controllers to report 8240 errors until the propagation is complete.
-   - Another option is to forcedly remove Active Directory from the domain controller that contains the inconsistent objects. To do this, follow these steps:
-      1. Forcedly remove Active Directory: Active Directory Installation Wizard (`Dcpromo.exe /forceremoval`).
+
+### <a name="reset"></a>Option 3: Remove and recreate the inconsistent domain controller
+
+   - Another option is to forcibly remove Active Directory from the domain controller that contains the inconsistent objects. To do this, follow these steps:
+      1. Forcibly remove Active Directory: Active Directory Installation Wizard (`Dcpromo.exe /forceremoval`).
       1. Clean up metadata for the domain controller  
             A convenient method to clean up the domain controller's metadata is using the Active Directory Users and Computers snap-in. For more information, see [Step-By-Step: Manually Removing A Domain Controller Server](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-manually-removing-a-domain-controller-server/ba-p/280564) and [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)
 
       1. Re-promote the domain controller by using *Dcpromo.exe*.
-
-### Situation 2: Reported 8240 in 1126 Event (NTDS)
-
 
 ## Collecting data for Microsoft Support
 
