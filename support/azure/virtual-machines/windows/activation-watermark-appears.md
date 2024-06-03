@@ -4,7 +4,7 @@ description: Learn how to resolve a scenario in which a Windows activation water
 author: cwhitley-MSFT
 ms.author: cwhitley
 ms.reviewer: scotro, scottmca, kimberj, jdickson, shache, v-naqviadil, v-leedennis, v-weizhu
-ms.date: 05/28/2024
+ms.date: 06/03/2024
 ms.service: virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ms.topic: troubleshooting-problem-resolution
@@ -37,18 +37,15 @@ When you use an Azure virtual machine (VM) that runs Windows Server 2022, you en
   ```console
   cscript c:\windows\system32\slmgr.vbs /dlv
   ```
+- When you restart or sign in the VM, a pop-up window with the following message is displayed:
+
+  > Your Windows Server 2022 Datacenter Azure Edition VM has been deactivated because you are not running on Azure or a supported Azure Stack hypervisor, or that you have not enabled Azure benefits on the supported Azure Stack. To enable Azure benefits, go to your cluster settings in Windows Admin Center > Enable Azure benefits.
 
 ## Cause 1: Azure Instance Metadata Service connection issue
 
 The Azure VM can't establish a connection with the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service) endpoint, which is essential for obtaining the activation token.
 
-## Cause 2: Certificate related issue
-
-Intermediate certificates that are crucial for the activation process have expired.
-
-For more information, see [Azure Instance Metadata Service-Attested data TLS: Critical changes are here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953).
-
-## Identify if the VM guest OS can successfully communicate with IMDS
+### Identify if the VM guest OS can successfully communicate with IMDS
 
 Run the following PowerShell script depending on your version of PowerShell to check if the metadata is received from IMDS.
 
@@ -79,7 +76,13 @@ If you get a successful response, you'll see the metadata information from the V
 
 If not, it means that the connection to the IMDS wire server is blocked somewhere, and access to it needs to be allowed. The IP of the IMDS server is `169.254.169.254`. To fix the connection issue, go to [Solution 1: Bypass web proxies within the VM](#solution-1-bypass-web-proxies-within-the-vm).
 
-## Identify if any certificates are missing
+## Cause 2: Certificate related issue
+
+Intermediate certificates that are crucial for the activation process have expired.
+
+For more information, see [Azure Instance Metadata Service-Attested data TLS: Critical changes are here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953).
+
+### Identify if any certificates are missing
 
 Run the following PowerShell script to check for missing certificates:
 
