@@ -38,7 +38,7 @@ To troubleshoot these issues, follow these steps:
 
 1. Check the RP frontend log to see if the health probe mode in the LoadBalancerProfile is properly configured. You can use the `az aks show` command to view the LoadBalancerProfile property of your cluster. 
 
-2. Check the *overlaymgr* log to see if the cloud provider secret is updated. The keyword to look for is `cloudConfigSecretResolver`. Or check the contents of the cloud-provider-config secret in the Compute Cluster Pack (CCP) namespace. You can use the `kubectl get secret` command to view the secret. 
+2. Check the *overlaymgr* log to see if the cloud provider secret is updated. The keyword to look for is `cloudConfigSecretResolver`. Or check the contents of the cloud-provider-config secret in the `ccp` namespace. You can use the `kubectl get secret` command to view the secret. 
 
 3. Check the chart or overlay daemonset cloud-node-manager to see if the health-probe-proxy sidecar container is enabled. You can use the `kubectl get ds` command to view the daemonset.
 
