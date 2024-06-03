@@ -16,7 +16,7 @@
         href: data/data-ingestion/common-data-ingestion-errors.md
   - name: Data unification
     items:
-    - name: Troubleshoot unification results
+      - name: Troubleshoot unification results
         href: data/profile-unification/troubleshoot-unification-results.md
       - name: Match failed error occurs on the Deduplication or Matching rules
         href: data/profile-unification/match-failed.md
