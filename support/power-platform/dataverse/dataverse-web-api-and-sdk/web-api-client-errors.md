@@ -45,7 +45,7 @@ HTTP/1.1 404 Not Found
 
 ### Cause
 
-This error occurs when you use the incorrect name for a resource. That resource might be the name of an entity set, a function or an action. These resource names are case sensitive. In the example above, there is an entity set called `accounts`, but not one named `Account`.
+This error occurs when you use the incorrect name for a resource. That resource might be the name of an entity set, a function or an action. These resource names are case sensitive. In the preceding example, there is an entity set called `accounts`, but not one named `Account`.
 
 If the resource is an action, this error can also happen if the action is inactive.
 
@@ -53,7 +53,7 @@ If the resource is an action, this error can also happen if the action is inacti
 
 - If the resource is an entity type, query the Web API [Service document](/power-apps/developer/data-platform/webapi/web-api-service-documents#service-document) which will provide a list of all the known entity set names.
 - If the resource is a function or action, verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document).
-- Addtionally, if the resource is an action, verify that it's active.
+- Additionally, if the resource is an action, verify that it's active.
 
 ## Could not find a property named '{property name}' on type 'Microsoft.Dynamics.CRM.{entity name}'
 
@@ -82,7 +82,7 @@ HTTP/1.1 400 Bad Request
 
 This error occurs when you use the incorrect name for a property. Property names are case sensitive.
 
-In the example above, there is a property called `name`, but not one named `Name`.
+In the preceding example, there is a property called `name`, but not one named `Name`.
 
 ### How to avoid
 
