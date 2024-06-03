@@ -85,7 +85,7 @@ Follow these steps:
 1. Do one of the following:
 
    - If the command identified at least one GC, check for a communication problem between the GC and the domain controller that generated the event.
-   - If the command didn't find a GC, continue to the next procedure to add a GC to the forest.
+   - If the command didn't find a GC, continue to the next procedure to add a GC to the forest. Otherwise, go to []().
 
 ### Add a GC to the forest
 
@@ -99,36 +99,46 @@ You can add a GC by creating a new domain controller and specifying that is a GC
    > [!NOTE]  
    > After you mark a domain controller as a GC in Active Directory Sites and Services, it might take time for the new GC to become fully available. The Knowledge Consistency Checker (KCC) has to calculate a new replication topology, build the global catalog, and transmit a `GC-ready` announcement. The delay depends on the replication schedule, the time that is used to replicate the required read-only naming contexts, and the interval of KCC activity.
 
-### Make sure that the new GC is available
+### Check GC connectivity and availability
 
-To make sure that the new GC is available, do one of the following:
+1. Check whether you can obtain a domain controller from DNS on a computer in the domain, open a Command Prompt window and then run the following command:
 
-- On a computer in the domain, open a Command Prompt window and then run the following command:
+   ```console
+   NLTest.exe /DnsGetDC:<DomainName> /GC /Force
+   ```
 
-  ```console
-  NLTest.exe /DnsGetDC:<DomainName> /GC /Force
-  ```
+   > [!NOTE]  
+   > In this command, \<*DomainName*> is the name of the domain of the new GC.
 
-  > [!NOTE]  
-  > In this command, \<*DomainName*> is the name of the domain of the new GC.
+   If you can't query GC record in DNS, check the value of the **isGlobalCatalogReady** attribute. To do this, do one of the following:
 
-- On the new GC, at the PowerShell command prompt, run the following command:
+      - Open a PowerShell Command Prompt window, and then run the following command:
 
-  ```powershell
-  Get-ADRootDSE -Server <DCName> | fl serverName , isGlobalCatalogReady
-  ```
+        ```powershell
+        Get-ADRootDSE -Server <GC_Name> | fl serverName , isGlobalCatalogReady
+        ```
 
-- Follow these steps:
-  1. Check whether you can connect to the GC by using the LDAP tool *ldp.exe* and TCP port 3268 by running the following command at the command prompt:
+        > [!NOTE]  
+        > In this command, \<*GC_Name*> represents the name of the GC.
 
-     ```console
-     ldp.exe<GC_Name>:3268
-     ```
+      - Open a Command Prompt window, and then run the following command:
 
-     > [!NOTE]  
-     > In this command, \<*GC_Name*> represents the name of the GC.
+        ```console
+        ldp.exe <GC_Name>:389
+        ```
 
-  1. After you connect to the GC by using *ldp.exe*, check whether the value of **isGlobalCatalogReady** is set to **true**.
+      In either case, the value of **isGlobalCatalogReady** should be **TRUE**. If the value is **FALSE**, either the replication cycle hasn't finished yet or there's another problem in the server.
+
+1. Check whether you can connect to the GC by using port 3268. At the command prompt, run the following command:
+
+   ```console
+   ldp.exe <GC_Name>:3268
+   ```
+
+   > [!NOTE]  
+   >
+   >- In this command, \<*GC_Name*> represents the name of the GC.
+   >- If you used ldp.exe in step 1, close it and then start it again by using the new port.
 
 ## Cause and solution for situation 2: A domain controller generates Error 8240 during AD DS operations
 
@@ -158,47 +168,55 @@ Next, determine whether you want to remove the objects, leave those objects as t
 
 ### <a name="remove"></a>Option 1: Remove inconsistent objects from the source domain controller
 
-   - The preferred method to detect and remove lingering objects is using [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/download/details.aspx?id=56051). In some cases where LoLv2 can't be used, you can use *Repadmin.exe* command together with the `RemoveLingeringObjects` switch to remove those inconsistent objects from the source domain controller. For more information, go to the following websites:  
-   [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)  
-   [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
-   
-     [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
-     
-     [Use Repadmin to remove lingering objects](https://technet.microsoft.com/library/cc785298%28v=ws.10%29.aspx)
-     
-     > [!NOTE]
-     > For a read-only partition, you have to use the `Repadmin /Rehost` command.  
+To remove the inconsistent objects, you can treat them as lingering objects. [Information about lingering objects in a Windows Server Active Directory forest](information-lingering-objects.md) explains how lingering objects occur and how to remove them.
 
 ### <a name="keep"></a>Option 2: Keep inconsistent objects and integrate them into the forest
 
-   - If you want to keep those objects, you can create the following objects on the destination domain controller:
-   
-        Sub-Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
-     Value Name: Strict Replication Consistency  
-     Value Type: REG_DWORD  
-     Value Data: 0  
-     
-        Sub-Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
-     Value Name: Allow Replication With Divergent and Corrupt Partner  
-     Value Type: REG_DWORD  
-     Value Data: 1  
-     
-        Sub-Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
-     Value Name: Correct Missing Object  
-     Value Type: REG_DWORD  
-     Value Data: 1  
-     
-     > [!NOTE]
-     > You must be careful in a large environment that contains many domain controllers, because the propagation of those inconsistent objects could cause more and more domain controllers to report 8240 errors until the propagation is complete.
+[!INCLUDE [Registry alert](../../includes/registry-important-alert.md)]
+
+If you want to keep the inconsistent objects and replicate them to the rest of the forest, configure the following registry keys on the destination domain controller:
+
+- Sub-key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
+  Name: `Strict Replication Consistency`  
+  Type: REG_DWORD  
+  Data: **0**  
+
+- Sub-key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
+  Name: `Allow Replication With Divergent and Corrupt Partner`  
+  Type: REG_DWORD  
+  Data: **1**  
+
+  Sub-key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
+  Name: `Correct Missing Object`  
+  Type: REG_DWORD  
+  Data: **1**  
+
+> [!IMPORTANT]  
+> Be careful in a large environment that contains many domain controllers. As the inconsistent objects replicate through the forest, they could cause more domain controllers to report 8240 errors until the replication finishes.
 
 ### <a name="reset"></a>Option 3: Remove and recreate the inconsistent domain controller
 
-   - Another option is to forcibly remove Active Directory from the domain controller that contains the inconsistent objects. To do this, follow these steps:
-      1. Forcibly remove Active Directory: Active Directory Installation Wizard (`Dcpromo.exe /forceremoval`).
-      1. Clean up metadata for the domain controller  
-            A convenient method to clean up the domain controller's metadata is using the Active Directory Users and Computers snap-in. For more information, see [Step-By-Step: Manually Removing A Domain Controller Server](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-manually-removing-a-domain-controller-server/ba-p/280564) and [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)
+Another option is to forcibly remove the forest from the source domain controller by demoting it to a member server. Afterwards, clean up the server's metadata in the forest and then re-promote the server. This action re-installs AD DS, and then a fresh copy of the forest data replicates to the new domain controller.
 
-      1. Re-promote the domain controller by using *Dcpromo.exe*.
+To do this, follow these steps
+
+1. On the source domain controller, open an administrative Command Prompt window and then run the following command:
+
+   ```console
+   Dcpromo.exe /forceremoval
+   ```
+
+1. In the forest, clean up the metadata that's related to the demoted domain controller.
+
+   > [!NOTE]  
+   > There are several approaches to metadata cleanup. For more information about how to do this, see the following articles:
+   >
+   >- [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup).
+   >- [Step-By-Step: Manually Removing A Domain Controller Server](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-manually-removing-a-domain-controller-server/ba-p/280564).
+
+1. At the administrative command prompt on the server, run `Dcpromo.exe`. Follow the prompts to configure the domain controller.
+
+1. Wait for the installation to finish and for the forest data to replicate in. You can use Event Viewer to follow this process.
 
 ## Collecting data for Microsoft Support
 
