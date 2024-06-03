@@ -90,7 +90,7 @@ To run AFSDiag, perform the steps below:
 
 Azure File Sync uses Extensible Storage Engine (ESE) databases for sync and cloud tiering. The ESE databases can consume up to 80% of system memory to improve performance. To limit the amount of memory used by the ESE databases, you can configure the `MaxESEDbCachePercent` registry setting on the server.
 
-To reduce the ESE memory usage limit to 60%, which is a good balance between memory utilization and enough cache to maintain decent performance for the databases, run the following command from an evaluated command prompt:
+To reduce the ESE memory usage limit to 60%, which is a good balance between memory utilization and enough cache to maintain decent performance of the databases, run the following command from an elevated command prompt:
 
 ```console
 REG ADD HKLM\Software\Microsoft\Azure\StorageSync /v MaxESEDbCachePercent /t REG_DWORD /d 60
