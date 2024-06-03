@@ -50,7 +50,7 @@ This approach might not be feasible if you already have existing resources in th
 
 ### Solution 2: Try deploying a cluster that has different settings
 
-The infrastructure that hosts AKS control planes have different allocation reservations. Therefore, AKS might have more capacity for public clusters than for private clusters. If you encounter the `AKSCapacityError` error when you try to create a private cluster, try to create a public cluster instead or vice versa.
+The infrastructure that hosts AKS managed clusters have different allocation reservations. Therefore, AKS might have more capacity for public clusters than for private clusters. If you encounter the `AKSCapacityError` error when you try to create a private cluster, try to create a public cluster instead or vice versa.
 
 ### Solution 3: Use an Azure Enterprise subscription
 
