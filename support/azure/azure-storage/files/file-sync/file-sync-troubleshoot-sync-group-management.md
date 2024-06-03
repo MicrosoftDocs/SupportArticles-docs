@@ -51,10 +51,10 @@ To determine whether your user account role has the required permissions:
 3. On the **Check access** tab, select **View my access**.
 4. On the **Current role assignments** tab, select the role (for example, Owner or Contributor) for your user account.
 5. On the **Permissions** tab, verify the role for your user account has the following permissions:
-    - Read: Get role definition
-    - Write: Create or update custom role definition
-    - Read: Get role assignment
-    - Write: Create role assignment
+    - **Read**: **Get role definition**
+    - **Write**: **Create or update custom role definition**
+    - **Read**: **Get role assignment**
+    - **Write**: **Create role assignment**
 
 <a id="cloud-endpoint-using-share"></a>**Cloud endpoint creation fails, with this error: "The specified Azure FileShare is already in use by a different CloudEndpoint"**
   
