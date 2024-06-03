@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot ingestion errors or corrupt data
 description: Introduces common reasons for data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Dynamics 365 Customer Insights - Data.
-ms.date: 05/30/2024
+ms.date: 06/03/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
@@ -120,11 +120,7 @@ The most common data type mismatch occurs when a date field isn't set to the cor
 Symptoms of the incorrect locale issue:
 
 - When the source data can't be parsed by the locale used, an ingestion failure occurs. For example, if "29/08/2023" is parsed with "MM/DD/YYYY," the ingestion fails because it can't parse month 29.
-- When the source data is parsed successfully using an incorrect locale, the datetime values are incorrect. For example, "December 8, 2023" is ingested as "August 12, 2023." 
-
-  Here's an example:
-
-  The source data is formatted as "MM/DD/YYY," while the default locale used to parse the data during ingestion uses "DD/MM/YYY." As a result, "December 8, 2023" is ingested as "August 12, 2023."  
+- When the source data is parsed successfully using an incorrect locale, the datetime values are incorrect. For example, the source data is formatted as "MM/DD/YYYY," while the default locale used to parse the data during ingestion uses "DD/MM/YYYY." As a result, "December 8, 2023" is ingested as "August 12, 2023".
 
   :::image type="content" source="media/common-data-ingestion-errors/power-query-date-locale-issue.png" alt-text="Screenshot shows that the datetime format is incorrect after ingestion." lightbox="media/common-data-ingestion-errors/power-query-date-locale-issue.png":::
 
