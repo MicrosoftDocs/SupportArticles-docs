@@ -26,6 +26,10 @@
       href: crm-permissions-and-configurations/salesforce-permission-error.md
     - name: '"This contact already exists" error when creating a CRM record'
       href: crm-permissions-and-configurations/duplicate-record-error.md
+    - name: Unable to create a channel
+      href: crm-permissions-and-configurations/channel-name-already-exists-error.md  
+    - name: Unable to create a team
+      href: crm-permissions-and-configurations/create-team-error.md  
     - name: You don't have permission for this error
       href: crm-permissions-and-configurations/no-admin-exists-error.md
 - name: Outlook side panel
