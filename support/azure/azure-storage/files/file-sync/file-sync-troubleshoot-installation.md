@@ -104,7 +104,7 @@ To resolve this issue, install [KB2919355](https://support.microsoft.com/help/29
 
 If server registration fails, open the *AfsSrvRegistration\*.log* file located under *%LocalAppData%\Temp* and search for "ErrorMessage" to get the error details.
 
-If you're unable to identify the cause based on the error message, use the `Debug-StorageSyncServer` cmdlet to help diagnose if server registration is failing due to a network issue or server certificate.
+If you can't identify the cause based on the error message, use the `Debug-StorageSyncServer` cmdlet to help diagnose if server registration fails due to a network issue or server certificate.
 
 To run diagnostics on the server, run the following PowerShell commands:
 
