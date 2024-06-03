@@ -1,52 +1,54 @@
 ---
-title: Troubleshoot session creation errors in unattended runs
-description: Provides solutions to desktop flow unattended errors related to session creation.
+title: Troubleshoot session creation error codes in unattended desktop flow runs
+description: Solves the error codes related to session creation during unattended desktop flow runs in Power Automate.
 author: johndund # GitHub alias
 ms.author: johndund # Microsoft alias
 ms.reviewer: 
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
-# Troubleshoot session creation errors for unattended runs
+# Troubleshoot session creation error codes for an unattended desktop flow run
 
-This article provides background and potential solutions to SessionCreationError and SessionCreationErrorWithThirdPartyCredentialProvider which may be encountered during an unattended desktop flow runs.
+This article provides background and potential solutions to the `SessionCreationError` and `SessionCreationErrorWithThirdPartyCredentialProvider` error codes that might be encountered during an unattended desktop flow run in Microsoft Power Automate.
 
 _Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 
-Your desktop flow might fail to run with the error code `SessionCreationError` or `SessionCreationErrorWithThirdPartyCredentialProvider`.
+Your [unattended desktop flow run](/power-automate/desktop-flows/run-unattended-desktop-flows) might fail with the `SessionCreationError` or `SessionCreationErrorWithThirdPartyCredentialProvider` error code.
 
 ## Cause
 
-When an unattended session is run, Power Automate attempts to create a remote desktop session on the target machine. If creating this session fails, you may receive one of many errors:
+When an unattended session is run, Power Automate attempts to create a remote desktop (RDP) session on the target machine. If creating this session fails, you might receive one of the following error codes:
 
-- `SessionCreationErrorWithThirdPartyCredentialProvider`
-- `SessionCreationErrror`
+- [SessionCreationErrorWithThirdPartyCredentialProvider](#sessioncreationerrorwiththirdpartycredentialprovider)
+- [SessionCreationError](#sessioncreationerror)
 
-## Resolution
+## SessionCreationErrorWithThirdPartyCredentialProvider
 
-The resolution and troubleshooting depends on which error you receive.
+This error code occurs because a third-party software interferes with the ability of Power Automate to create a session on the machine. Power Automate doesn't support some third-party credential providers.
 
-### SessionCreationErrorWithThirdPartyCredentialProvider
+### Resolution
 
-This occurs when we detected a third party piece of software which may be interfering with the ability of Power Automate to create a session on the machine. Power Automate does not currently support some third party credential providers.
+To resolve the issue, contact your administrator to uninstall the credential provider that's not supported by Power Automate.
 
-#### Resolution
+You can find the full list of credential providers (many of which are built in) on your machine in the following registry key:
 
-To resolve the issue, please contact your admin to uninstall the credential provider that is not supported by Power Automate. To see the full list of credential providers on your machine (many of which are built in), you can go to the following registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers`. Each subkey represents an installed credential provider. The following is a list of credential providers that Power Automate currently does not support. If you have the following registry key present, try working with your system administrator to uninstall the corresponding software.
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers`
 
-| Name | Sub key name |
+Each subkey represents an installed credential provider. The following table lists the credential providers that Power Automate currently doesn't support. If you have the following registry key present, try working with your system administrator to uninstall the corresponding software.
+
+| Name | Subkey name |
 | :------------------------ | ---------------- |
 | SailPoint Technologies Desktop Password Reset | 0094A34B-0BF0-4789-8B2D-8339E469D756 |
 
-### SessionCreationErrror
+## SessionCreationError
 
-This error occurs when session creation failed for an unknown reason.
+This error code occurs when creating a session fails for an unknown reason.
 
-#### Resolution
+### Resolution
 
-To troubleshoot the issue:
+To solve the issue:
 
-* Ensure that you can remote desktop to the machine from another machine on your network. If you're using a Windows server, you can try to remote desktop to "localhost" from the local machine itself when logged in as another account. If these fail, use general remote desktop [troubleshooting](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/rdp-error-general-troubleshooting).
-- If you have a legal notice enabled for login, work with your system administrator to try disabling it. To see if the legal notice is activated, you can open the Registry Editor to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`. If either "legalnoticecaption" or "legalnoticetext" is not empty, try working with your system admin to disable the legal notice.
-- Ensure that no third-party software is installed that may affect login or interfere with creating a remote desktop connection.
+- Ensure that you can remote desktop to the machine from another machine on your network. If you're using a Windows server, you can try to remote desktop to "localhost" from the local machine itself when logged in as another account. If these fail, see [general remote desktop troubleshooting](../../../windows-server/remote/rdp-error-general-troubleshooting.md).
+- If you have a legal notice enabled for login, work with your system administrator to try disabling it. To see if the legal notice is activated, open Registry Editor and go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`. If  "legalnoticecaption" or "legalnoticetext" isn't empty, try working with your system administrator to disable the legal notice.
+- Ensure that no third-party software is installed that might affect login or interfere with creating a remote desktop connection.
