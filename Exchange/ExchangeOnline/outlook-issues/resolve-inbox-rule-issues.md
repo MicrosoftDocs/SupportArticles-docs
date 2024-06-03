@@ -1,5 +1,5 @@
 ---
-title: Diagnose issues that affect Inbox rules in Outlook
+title: Diagnose Outlook Inbox rules that are not working
 description: Provides steps to diagnose various Inbox rule issues in Microsoft Outlook or Outlook on the web.
 author: cloud-writer
 ms.author: meerak
@@ -25,7 +25,7 @@ search.appverid: MET150
 ms.date: 05/31/2024
 ---
 
-# Diagnose issues that affect Inbox rules in Outlook
+# Diagnose Outlook Inbox rules that are not working
 
 If you encounter an issue that's related to [Inbox rules](https://support.microsoft.com/office/manage-email-messages-by-using-rules-c24f5dea-9465-4df4-ad17-a50704d66c59) in Microsoft Outlook or Outlook on the web, select the applicable issue from the table of contents (TOC) at the top of this article.
 
