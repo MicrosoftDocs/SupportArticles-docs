@@ -112,11 +112,14 @@ To run diagnostics on the server, run the following PowerShell commands:
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Debug-StorageSyncServer -Diagnose
 ```
+
 To test the network connectivity on the server, run the following PowerShell commands:
+
 ```powershell
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Debug-StorageSyncServer -TestNetworkConnectivity
 ```
+
 <a id="server-registration-missing-subscriptions"></a>**Server Registration does not list all Azure Subscriptions**
 
 When registering a server using *ServerRegistration.exe*, subscriptions are missing when you select the **Azure Subscription** drop-down.
