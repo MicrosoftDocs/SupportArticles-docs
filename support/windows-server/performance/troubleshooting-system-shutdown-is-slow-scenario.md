@@ -1,7 +1,7 @@
 ---
-title: System shutdown is slow
+title: Guidance for troubleshooting slow system shutdown
 description: Provides guidance to troubleshoot performance problems that occur when Windows shuts down.
-ms.date: 05/30/2024
+ms.date: 05/17/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -23,13 +23,15 @@ _Applies to:_ &nbsp; All supported versions of Windows Server and Windows Client
 
 Multiple factors can cause Windows to shut down more slowly than usual. You can use Windows Performance Recorder (WPR) and Windows Performance Analyzer (WPA) to collect and analyze diagnostic data.
 
-## Before you begin
+## More information
+
+### Before you begin
 
 The command-line version of WPR is part of Windows, but you have to install WPA and the graphical user interface of WPR (WPRUI) separately. Both tools are part of the Windows Assessment and Deployment Toolkit (Windows ADK). The procedures in this article use WPRUI. You have to install WPRUI on the computer that you're troubleshooting. You don't have to install WPA on the same computer. For information about how to download and install the tools, see [Download and install the Windows ADK](/windows-hardware/get-started/adk-install).
 
 For an overview of the tools and how to use them, see [Troubleshoot processes and threads by using WPR and WPA](../support-tools/support-tools-xperf-wpa-wpr.md).
 
-## Gather data
+### Gather data
 
 To record data during a system shutdown, follow these steps:
 
@@ -60,15 +62,15 @@ To record data during a system shutdown, follow these steps:
 
 1. When you're prompted to start the shutdown, select **OK**, and then select **Close**.
 
-   > [!NOTE]  
-   > Windows shuts down, and then restarts. After you sign in again, WPR starts compiling and saving the recorded data.
+> [!NOTE]  
+> Windows shuts down, and then restarts. After you sign in again, WPR starts compiling and saving the recorded data.
 
 1. Do one of the following:
 
    - If you installed WPA on the same computer, select **Open in WPA**. This action starts WPA and loads the recorded file.
    - If you installed WPA on a different computer, transfer the saved trace file to the computer on which you installed WPA.
 
-## Analyze data
+### Analyze data
 
 If you didn't open WPA directly from WPR after you saved a recording, follow these steps:
 

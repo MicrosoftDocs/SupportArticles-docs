@@ -3,7 +3,7 @@ title: Basic troubleshooting of DNS resolution problems in AKS
 description: Learn how to create a troubleshooting workflow to fix DNS resolution problems in Azure Kubernetes Service (AKS).
 author: sturrent
 ms.author: seturren
-ms.date: 05/31/2024
+ms.date: 05/30/2024
 ms.reviewer: v-rekhanain, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -384,10 +384,10 @@ If you apply the display filter for query responses that took five seconds or mo
 
 The following table is a summary of the capture findings.
 
-| Capture review criteria                                          | Yes      | No       |
-|------------------------------------------------------------------|:--------:|:--------:|
-| Difference between DNS queries and responses exceeds two percent | &#x2611; | &#x2610; |
-| DNS latency is more than one second                              | &#x2611; | &#x2610; |
+| Capture review criteria                                        | Yes      | No       |
+|----------------------------------------------------------------|:--------:|:--------:|
+| Difference between DNS queries and responses exceeds 2 percent | &#x2610; | &#x2611; |
+| DNS latency is more than one second                            | &#x2610; | &#x2611; |
 
 ### Troubleshooting Step 2: Develop a hypothesis
 
@@ -452,10 +452,10 @@ You can collect the results by using the following tables.
 
 ##### Results of traffic captures and DNS resolution performance
 
-| Capture review criteria                                          | Yes      | No       |
-|------------------------------------------------------------------|:--------:|:--------:|
-| Difference between DNS queries and responses exceeds two percent | &#x2610; | &#x2610; |
-| DNS latency is more than one second                              | &#x2610; | &#x2610; |
+| Capture review criteria                                        | Yes      | No       |
+|----------------------------------------------------------------|:--------:|:--------:|
+| Difference between DNS queries and responses exceeds 2 percent | &#x2610; | &#x2610; |
+| DNS latency is more than one second                            | &#x2610; | &#x2610; |
 
 #### Map required inputs to problem types
 

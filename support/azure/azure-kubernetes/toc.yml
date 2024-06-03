@@ -173,8 +173,6 @@
     href: availability-performance/identify-high-cpu-consuming-containers-aks.md
   - name: Identify memory saturation in AKS clusters
     href: availability-performance/identify-memory-saturation-aks.md
-  - name: Troubleshoot cluster service health probe mode issues
-    href: availability-performance/cluster-service-health-probe-mode-issues.md
   - name: Troubleshoot node not ready
     items:
     - name: Basic troubleshooting
