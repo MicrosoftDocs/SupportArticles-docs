@@ -58,7 +58,17 @@ When prompted, provide the following information:
 > [!div class="nextstepaction"]
 > [Run Tests: Site User ID Mismatch](https://aka.ms/PillarSiteUserIDMismatch)
 
-Administrators can view the original OneDrive site URL via the methods described in [View OneDrive URLs for users in your organization](/sharepoint/list-onedrive-urls).
+Administrators can view the original OneDrive site URL by following the steps:
+
+Using the **Diagnostic Information** section in OneDrive settings
+
+1. As an admin of the OneDrive site, navigate to the site.
+2. In the upper right-hand corner, click the settings or gear icon.
+3. Select "OneDrive Settings."
+4. Choose "More Settings."
+5. Under the "Diagnostic Information" section, copy the OneDrive Web URL.
+
+If administrators need to retrieve multiple OneDrive URLs, consider using one of the methods described in [View OneDrive URLs for users in your organization](/sharepoint/list-onedrive-urls).
 
 ### Common scenarios
 
