@@ -2,7 +2,7 @@
 title: Custom/gallery/marketplace image allocation failures
 description: Provides solutions to an allocation error when you deploy a custom/gallery/marketplace image.
 ms.service: virtual-machines
-ms.date: 05/27/2024
+ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
