@@ -180,7 +180,7 @@
 - name: Cannot create a VM
   items:
   - name: Troubleshoot Linux VM deployment issues
-    href: linux-vm-deployment-issues.md
+    href: troubleshoot-deployment-new-vm-linux.md
   - name: Custom/gallery/marketplace image allocation failure
     href: linux-custom-gallery-marketplace-image-allocation-failure.md
   - name: Custom image provisioning errors
