@@ -2,7 +2,7 @@
 title: Custom image provisioning errors
 description: Provides solutions to provisioning errors when you upload or capture a generalized VM image as a specialized VM image or vice versa.
 ms.service: virtual-machines
-ms.date: 05/27/2024
+ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
