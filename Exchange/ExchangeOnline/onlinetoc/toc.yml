@@ -259,10 +259,6 @@
           href: ../email-delivery/imceaex-ndr.md
         - name: Important notice for Microsoft 365
           href: ../email-delivery/office-365-notice.md
-        - name: Inbox rule to forward emails doesn't work
-          href: ../email-delivery/inbox-rule-to-forward-messages-not-work.md
-        - name: Inbox redirection rule not working
-          href: ../email-delivery/inbox-redirect-rule-not-working.md
         - name: Issues with printers, scanners, and LOB apps that send email
           href: ../email-delivery/fix-issues-with-printers-scanners-and-lob-applications-that-send-email-using-off.md
         - name: Length of the property is too long
