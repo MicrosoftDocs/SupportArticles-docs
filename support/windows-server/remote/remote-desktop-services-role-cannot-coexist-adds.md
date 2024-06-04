@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Connection Broker a
 
 This article provides a resolution for the issue that Remote Desktop Services role cannot coexist with AD DS role.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2799605
 
 ## Symptoms

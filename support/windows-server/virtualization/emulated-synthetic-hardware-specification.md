@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hype
 
 This article summarizes the specifications for supported emulated and synthetic hardware in a Windows Server 2012 environment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2844106
 
 ## Summary

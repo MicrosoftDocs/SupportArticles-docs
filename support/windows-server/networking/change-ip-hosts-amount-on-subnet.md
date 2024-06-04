@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration 
 
 This article describes methods to change the number of IP hosts on a subnet in a Dynamic Host Configuration Protocol (DHCP) server.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 255999
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article provides a workaround for an issue where the Microsoft .NET Framework 3.5 installation fails without a public Internet environment on an OEM Windows installation.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2956772
 
 ## Symptoms

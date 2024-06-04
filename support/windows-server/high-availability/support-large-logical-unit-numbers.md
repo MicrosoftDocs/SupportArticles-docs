@@ -16,7 +16,6 @@ This article describes the support for a large number of logical unit numbers (L
 > [!IMPORTANT]
 > This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](../performance/windows-registry-advanced-users.md).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 310072
 
 ## Summary

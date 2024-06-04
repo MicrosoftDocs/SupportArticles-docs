@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 
 This article provides help to an error (The service cannot be started) that occurs when Active Directory Domain Services (AD DS) configuration fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2737880
 
 ## Symptoms

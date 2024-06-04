@@ -13,7 +13,6 @@ ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 
 This article provides a solution to an issue where the Welcome screen may be displayed for 30 seconds when you log on.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 940452
 
 ## Problem description

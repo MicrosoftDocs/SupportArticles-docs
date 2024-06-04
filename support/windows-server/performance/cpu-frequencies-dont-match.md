@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM
 
 This article provides a solution to an issue where the CPU name is shown and two identical frequencies don't match on the System property page.
 
-_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1903, Windows 10, version 1909, Windows 7 Service Pack 1, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2878342
 
 ## Symptoms

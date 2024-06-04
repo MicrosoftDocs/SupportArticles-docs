@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\WinRM, including event forwarding an
 
 This article describes a method to rename or move these files for troubleshooting purposes.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 172156
 
 ## Symptoms

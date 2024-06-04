@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\System Restore, csstroublesho
 
 This article describes how to create a system state backup on one computer and how to restore it to the same computer or to a different physical computer of the same make and model.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 249694
 
 ## Summary

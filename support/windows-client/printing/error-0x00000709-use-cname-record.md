@@ -13,7 +13,6 @@ ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubl
 
 This article helps fix the error 0x00000709 (Operation could not be completed). The error occurs when you use a CNAME record for a print server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2546625
 
 ## Symptoms

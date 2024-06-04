@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 
 This article describes a tool that you can use to locate and view BitLocker recovery passwords.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 928202
 
 Support for Windows Vista without any service packs installed ended on April 13, 2010. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).

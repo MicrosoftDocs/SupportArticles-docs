@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, an
 
 This article provides a resolution for event 142: The time service has stopped advertising as a time source.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2468336
 
 ## Symptoms

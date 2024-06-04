@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows
 
 This article helps fix the error 0x80042306 that occurs when you configure Previous Versions in Windows Server for the clustered disks that are mounted as folders on a different volume.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2828270
 
 ## Symptoms

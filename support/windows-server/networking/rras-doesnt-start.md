@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, C
 
 This article provides a solution to an issue where the Routing and Remote Access service (RRAS) doesn't start when there's no network connectivity.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows 10, Windows 8.1, Windows 7, Windows Server 2008 R2  
 _Original KB number:_ &nbsp; 973990
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Windows Desktop and Shell Experience\Windows Search, csstroublesh
 
 This article discusses the availability of Windows Search 4.0 and the Multilingual User Interface Pack (MUI) for Windows Search 4.0.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 940157
 
 > [!NOTE]

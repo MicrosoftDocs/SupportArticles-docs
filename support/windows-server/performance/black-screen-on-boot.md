@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, error
 
 This article provides a solution to an issue where restarting a Windows x86-based computer fails with black screen.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 155053
 
 ## Symptoms

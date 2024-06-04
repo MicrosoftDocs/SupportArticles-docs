@@ -16,7 +16,6 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 > [!NOTE]
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/en-us).
 
-_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2734946
 
 ## Symptoms

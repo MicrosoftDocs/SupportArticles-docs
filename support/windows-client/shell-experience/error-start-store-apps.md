@@ -13,7 +13,6 @@ ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft 
 
 This article helps fix an error (This app has been blocked by your system administrator) that occurs when you to start Microsoft Store apps.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2750770
 
 ## Symptoms

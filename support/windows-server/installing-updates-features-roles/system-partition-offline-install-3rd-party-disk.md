@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article provides a resolution to an issue where System Partition goes offline after installing some third-party disk or Storage Management Software.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2419286
 
 ## Symptoms

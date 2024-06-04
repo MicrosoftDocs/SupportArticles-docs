@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivit
 
 This article provides a solution to an issue where Remote Desktop Services (RDS) client can't connect to Remote Desktop (RD) Session Host server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2844958
 
 > [!IMPORTANT]

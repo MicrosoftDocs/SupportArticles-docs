@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, error
 
 This article provides a solution to an issue where Hyper-V virtual machines that are restored to a new Hyper-V Host machine won't start.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2502233
 
 ## Symptoms

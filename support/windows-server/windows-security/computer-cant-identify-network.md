@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel a
 
 This article provides a solution to an issue that a computer can't identify the network when this computer is a member of a child domain.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 980873
 
 ## Symptoms

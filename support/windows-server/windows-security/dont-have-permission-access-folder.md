@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\AD Object Permissions, access contr
 
 This article provides a solution to an issue when you select **Continue** to gain access to a file system folder for which you don't have Read permissions.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 950934
 
 ## Introduction

@@ -16,7 +16,6 @@ Under some conditions, an administrator may want to force a logoff of all users 
 > [!WARNING]
 > Performing the following procedure logs off all users currently logged onto the Remote Desktop server. This may result in a loss of unsaved data. Because of this, extreme caution is advised.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 259436
 
 ## Using PowerShell

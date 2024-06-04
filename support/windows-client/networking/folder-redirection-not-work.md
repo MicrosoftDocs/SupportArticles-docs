@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Offline Files and Folders (
 
 This article provides workarounds for an issue where folder redirection doesn't work correctly after you restart computers.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951049
 
 ## Problem description

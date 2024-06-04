@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\Server Manager, csstroubleshoot
 
 This article provides a resolution to the Windows Server problem in which selecting Roles in Server Manager generates an error message and event 1601.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 971509
 
 ## Symptoms

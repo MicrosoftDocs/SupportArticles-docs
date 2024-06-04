@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstrou
 
 This article describes how to turn on debug logging of the LDAP client (Wldap32.dll).
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 - all editions  
 _Original KB number:_ &nbsp; 325616
 
 ## Summary

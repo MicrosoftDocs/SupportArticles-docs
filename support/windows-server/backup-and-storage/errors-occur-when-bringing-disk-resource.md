@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk erro
 
 This article helps fix an issue where various errors messages may be logged when you bring a physical disk resource online.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 977516
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replicat
 
 This article provides a solution to solve Distributed File System Namespace (DFSN) access failures.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 975440
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (include
 
 This article provides a solution to the issue in which the remote desktop connection stays in the connecting to status.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2915774
 
 ## Symptoms

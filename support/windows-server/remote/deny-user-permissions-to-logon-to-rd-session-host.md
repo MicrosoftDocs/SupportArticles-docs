@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configu
 
 This article provides help to solve an issue where the **Deny this user permissions to logon to a Remote Desktop Session Host Server** feature behaves differently in different versions of Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2258492
 
 ## Symptoms

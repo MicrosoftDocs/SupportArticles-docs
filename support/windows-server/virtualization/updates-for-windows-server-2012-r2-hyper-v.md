@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hype
 
 This article documents recommended hotfixes, product updates, and known solutions that are currently available for Windows Server 2012 R2 Hyper-V environments.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3135020
 
 ## More information

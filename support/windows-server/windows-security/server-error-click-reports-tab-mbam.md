@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 
 This article fixes an error when you click the Reports tab in MBAM.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 2620287
 
 ## Symptoms

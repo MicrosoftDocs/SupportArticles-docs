@@ -13,7 +13,6 @@ ms.custom: sap:Windows Desktop and Shell Experience\File Explorer (app only, fol
 
 This article provides a solution to an issue that causes CPU usage to increase when you access a SQL Server FileTable share from Windows Explorer.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3092936
 
 ## Symptoms
