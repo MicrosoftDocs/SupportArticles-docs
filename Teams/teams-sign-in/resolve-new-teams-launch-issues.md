@@ -20,7 +20,7 @@ ms.date: 06/04/2024
 
 ## Symptoms
 
-When you turn on the **Try the new Teams** toggle in classic Microsoft Teams, the new Teams app doesn't start. Instead, a banner appears with the following error message:
+When you turn on the **Try the new Teams** toggle in classic Microsoft Teams, the new Teams app doesn't start. Instead, a banner appears and displays the following error message:
 
 > Something went wrong.
 
@@ -32,7 +32,7 @@ message: Launch api returns false, code: 11, apiCode: undefined, extendedErrorCo
 
 ## Cause
 
-This issue can be caused by one of the following reasons:
+This issue might occur for any of the following reasons:
 
 - The **Cookies** and **Cache** shell folders point to a reparse point.
 - The **TEMP** or **TMP** environment variables point to a reparse point.
@@ -42,11 +42,11 @@ This issue can be caused by one of the following reasons:
 
 ## Resolution
 
-Before you can fix the issue, you need to perform multiple checks to determine the cause of the issue so that you can apply the appropriate resolution. There are two options to run all the checks that are needed to diagnose the issue. Use the option that you prefer.
+In order to apply the appropriate resolution for this issue, you have to perform multiple checks to determine the cause of the issue. There are two options to run all the necessary diagnostic checks. Use the option that you prefer.
 
 ### Option 1: Run a script
 
-The *TeamsLaunchCheck.ps1* PowerShell script automates all the checks that you need to perform.  
+The *TeamsLaunchCheck.ps1* PowerShell script automates all the checks that you have to run.  
 <br/>
 <details>
 <summary>The TeamsLaunchCheck.ps1 script</summary>
@@ -334,7 +334,7 @@ Pause
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, [back up the registry](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) before you modify it. Then, you can restore the registry if a problem occurs.
 
-1. Check whether the **Cookies** and **Cache** shell folders point to a location that is a reparse point.
+1. Check whether the *Cookies* and *Cache* shell folders point to a location that is a reparse point:
 
    1. Run the following PowerShell commands:
 
@@ -346,13 +346,13 @@ Pause
    1. If both commands return **False**, go to step 2. Otherwise, open the Registry Editor and locate the following subkey:
 
       `Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders`
-   1. For the shell folder that's returned **True** in the PowerShell command, update the value of its associated registry entry to a location that isn't a reparse point. For example, you can set the value to the default path:
+   1. For the shell folder that's returned as **True** in the PowerShell command, update the value of its associated registry entry to a location that isn't a reparse point. For example, you can set the value to the default path:
 
      | Registry entry | Value |
      | --- | --- |
      |Cookies|`%USERPROFILE%\AppData\Local\Microsoft\Windows\INetCookies`|
      |Cache|`%USERPROFILE%\AppData\Local\Microsoft\Windows\INetCache`|
-1. Check whether the values of the **TEMP** or **TMP** environment variables are set to a reparse point.
+1. Check whether the values of the **TEMP** or **TMP** environment variables are set to a reparse point:
 
    1. Run the following PowerShell command:
 
@@ -411,30 +411,31 @@ Pause
    - %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Libraries
    - %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Recent
 
-   If any of the directories are reparse points, contact [Microsoft Support](https://support.microsoft.com/contactus).
+   If any of the folders are reparse points, contact [Microsoft Support](https://support.microsoft.com/contactus).
 
-   Also check for files with the same name as a required system folder in the **AppData** folder. For example, a file named *Libraries* in the path *%AppData%\Microsoft\Windows\Libraries*, has the same name as a directory with the same path. For each directory that's listed earlier in this step, run the following PowerShell command:
+   Also check for files that have the same name as a required system folder in the **AppData** folder. For example, a file that's named *Libraries* in the path, *%AppData%\Microsoft\Windows\Libraries*, has the same name as a folder that has the same path. For each folder that's listed earlier in this step, run the following PowerShell command:
 
    ```powershell
    Test-Path -Path <directory name, such as $env:USERPROFILE\AppData\Local\Temp>  -PathType Leaf
    ```
 
-   If the command returns **True**, remove the file and create a folder by using the same name with the complete path for the system folder.
-1. Check the **AllowAllTrustedApps** policy setting.
+   If the command returns **True**, remove the file, and then create a folder by using the same name as the complete path for the system folder.
+1. Check the **AllowAllTrustedApps** policy setting:
 
-   1. Open a Command Prompt window and run the `winver` command.
-   1. Compare your Windows version and build number in the result to the following versions of Windows 10 and Windows 11:
+   1. Open a Command Prompt window, and then run the `winver` command.
+   1. Compare your Windows version and build number in the results to the following versions of Windows 11 and Windows 10:
 
-      - Windows 10 version 21H2 OS build 19044.4046
-      - Windows 10 version 22H2 OS build 19045.3636
       - Windows 11 version 21H2 OS build 22000.2777
       - Windows 11 version 22H2 OS build 22621.2506
       - Windows 11 version 23H2 OS build 22631.2428
-   1. If your Windows version and build number are earlier than the ones in the list, open the Registry Editor and locate the **AllowAllTrustedApps** registry entry under one of the following subkeys:
+      - Windows 10 version 21H2 OS build 19044.4046
+      - Windows 10 version 22H2 OS build 19045.3636
+
+   1. If your Windows version and build number are earlier than those in the list, open Registry Editor, and then locate the **AllowAllTrustedApps** registry entry under one of the following subkeys:
 
       - `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock`
       - `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Appx`
-   1. Check the value of **AllowAllTrustedApps**. If the value is **0**, the policy is disabled. Change it to **1** to enable the policy and then start new Teams again.
+   1. Check the value of **AllowAllTrustedApps**. If the value is **0**, the policy is disabled. Change it to **1** to enable the policy, and then start new Teams again.
 
-      **Note:** To start new Teams without enabling the **AllowAllTrustedApps** policy, you must run one of the versions of Windows listed in step 4b.
-1. If the issue still persists, update to Windows 11 version 22H2 OS build 22621.2506 or later.
+      **Note:** To start new Teams without enabling the **AllowAllTrustedApps** policy, you must be running one of the versions of Windows that are listed in step 4b.
+1. If the issue persists, update the system to Windows 11, version 22H2, OS build 22621.2506 or a later version.
