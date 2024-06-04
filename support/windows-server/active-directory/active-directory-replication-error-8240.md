@@ -168,7 +168,15 @@ Next, determine whether you want to remove the objects, leave those objects as t
 
 ### <a name="remove"></a>Option 1: Remove inconsistent objects from the source domain controller
 
-To remove the inconsistent objects, you can treat them as lingering objects. [Information about lingering objects in a Windows Server Active Directory forest](information-lingering-objects.md) explains how lingering objects occur and how to remove them.
+To remove the inconsistent objects, you can treat them as lingering objects. We recommend that you use [Lingering Object Liquidator v2 (LoLv2)](https://www.microsoft.com/download/details.aspx?id=56051) to remove lingering objects. For more information about LoLv2, see:
+
+- [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)
+- [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
+- [Description of the Lingering Object Liquidator tool](lingering-object-liquidator-tool.md)
+
+In some cases, you can't use LoLv2. Instead, you can use *Repadmin.exe*. You can do this by running the `repadmin /removelingeringobjects` command in advisory mode, as described in [Active Directory replication Event ID 2042: It has been too long since this machine replicated: Identify lingering objects](active-directory-replication-event-id-2042.md#identify-lingering-objects).  
+
+For more information about lingering objects, see [How to detect and remove lingering objects in a Windows Server Active Directory forest](information-lingering-objects.md).
 
 ### <a name="keep"></a>Option 2: Keep inconsistent objects and integrate them into the forest
 
@@ -200,12 +208,15 @@ After you update these registry entries, allow time for the changes to replicate
 
 Another option is to forcibly remove the forest from the source domain controller by demoting it to a member server. Afterwards, clean up the server's metadata in the forest and then re-promote the server. This action re-installs AD DS, and then a fresh copy of the forest data replicates to the new domain controller.
 
-To do this, follow these steps
+> [!NOTE]  
+> The following procedure uses Windows PowerShell commands to demote the domain controller. You can also use Server Manager to demote a domain controller. For more information about the Server Manager method, see [Demoting Domain Controllers and Domains](/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-).
 
-1. On the source domain controller, open an administrative Command Prompt window and then run the following command:
+To remove and recreate the source domain controller, follow these steps:
 
-   ```console
-   Dcpromo.exe /forceremoval
+1. On the source domain controller, open an administrative PowerShell window and then run the following command:
+
+   ```powershell
+   Uninstall-ADDSDomainController -Force
    ```
 
 1. In the forest, clean up the metadata that's related to the demoted domain controller.
@@ -216,9 +227,9 @@ To do this, follow these steps
    >- [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup).
    >- [Step-By-Step: Manually Removing A Domain Controller Server](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-manually-removing-a-domain-controller-server/ba-p/280564).
 
-1. At the administrative command prompt on the server, run `Dcpromo.exe`. Follow the prompts to configure the domain controller.
+1. Promote the server to be a domain controller again. You can use Server Manager or Powershell to promote the server. We recommend that you use the method and options that you used to create the original domain controller.
 
-1. Wait for the installation to finish and for the forest data to replicate in. You can use Event Viewer to follow this process.
+1. Wait for the installation and promotion process to finish and for the forest data to replicate in. You can use Event Viewer to follow this process.
 
 ## Collecting data for Microsoft Support
 
