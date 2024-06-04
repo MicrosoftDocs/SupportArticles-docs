@@ -34,7 +34,7 @@ SMB2 and SMB3 have the following behavior in these versions of Windows:
 
 If you try to connect to devices that request credentials of a guest instead of appropriate authenticated principals, you may receive one of the following error messages:
 
-- > Error code: 0x800704f8
+- > Error code: 0x800704f8  
   > You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
 - > Error code: 0x80070035  
   > The network path was not found.
