@@ -78,7 +78,7 @@ The following list helps you to identify the filter drivers and modules that can
 
 - *SOPHOS_DETOURED.DLL*, *SWI_IFSLSP_64.DLL*, and *SOPHOS_DETOURED_x64.DLL*
 
-    These DLL files are loaded into the SQL Server process if you install Sophos Antivirus program on a server that is running SQL Server. If you notice that this module is loaded into the SQL Server process, you can [configure the AppInit_Dlls](https://support.sophos.com/support/s/article/KB-000033536) registry subkey to avoid loading this module into SQL Server process.
+    These DLL files are loaded into the SQL Server process if you install Sophos Antivirus program on a server that is running SQL Server. If you notice that this module is loaded into the SQL Server process, you can configure the AppInit_Dlls registry subkey to avoid loading this module into SQL Server process. For more information, see [AppInit_DLLs in Windows 7 and Windows Server 2008 R2](/windows/win32/win7appqual/appinit-dlls-in-windows-7-and-windows-server-2008-r2) and [AppInit DLLs and Secure Boot](/windows/win32/dlls/secure-boot-and-appinit-dlls).
 
 - *PIOLEDB.DLL* and *PISDK.DLL*
 

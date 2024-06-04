@@ -76,24 +76,32 @@
 
 - name: VM Performance
   items:
-  - name: Performance diagnostics (PerfInsights)
+  - name: Azure Performance diagnostics (PerfInsights)
     items:
-    - name: Performance diagnostics in the Azure Portal
-      href: ../windows/performance-diagnostics.md
-    - name: PerfInsights in Linux
+    - name: Overview
+      href: ../windows/performance-diagnostics.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: How to use
       href: how-to-use-perfinsights-linux.md
-  - name: Performance diagnostics VMSS extension
+    - name: More info about the Extension
+      href: ../windows/performance-diagnostics-vm-extension.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Azure Scale Set VM instances
+      href: ../windows/perfinsights-and-scale-set-vm-instances.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Troubleshoot VM Performance Bottlenecks
+    href: troubleshoot-performance-bottlenecks-linux.md
     items:
-    - name: PerfInsights and scale set VM instances
-      href: ../windows/perfinsights-and-scale-set-vm-instances.md
-  - name: Troubleshoot VM performance issues - Linux
-    items:
-    - name: Isolate bottlenecks in Linux
-      href: troubleshoot-performance-bottlenecks-linux.md
+    - name: Isolate bottlenecks - CPU
+      href: troubleshoot-performance-bottlenecks-linux.md#cpu-resource
+    - name: Isolate bottlenecks - Memory
+      href: troubleshoot-performance-bottlenecks-linux.md#memory-resource
+    - name: Isolate bottlenecks - Disk IO
+      href: troubleshoot-performance-bottlenecks-linux.md#iops
+    - name: Isolate bottlenecks - Network
+      href: troubleshoot-performance-bottlenecks-linux.md#network-resource
+    - name: Additional troubleshooting using monitoring
+      href: troubleshoot-performance-virtual-machine-linux-windows.md
     - name: Out of memory error in Linux VM
       href: oom-swap-file-linux-vm.md
-    - name: Troubleshoot performance issues through monitoring
-      href: troubleshoot-performance-virtual-machine-linux-windows.md
+    
 
 - name: Kernel upgrades
   items:
