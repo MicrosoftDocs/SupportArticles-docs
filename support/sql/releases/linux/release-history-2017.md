@@ -7,7 +7,7 @@ ms.reviewer: amitkh, vanto
 ms.date: 03/14/2024
 appliesto:
   - SQL Server 2017
-ms.custom: linux-related-content
+ms.custom: evergreen, linux-related-content
 ---
 # <a id="release-history"></a> Release history for SQL Server 2017 on Linux
 

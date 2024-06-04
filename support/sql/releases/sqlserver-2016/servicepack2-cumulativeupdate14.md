@@ -2,7 +2,7 @@
 title: Cumulative update 14 for SQL Server 2016 SP2 (KB4564903)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 SP2 cumulative update 14 (KB4564903).
 ms.date: 10/26/2023
-ms.custom: KB4564903
+ms.custom: evergreen, KB4564903
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise

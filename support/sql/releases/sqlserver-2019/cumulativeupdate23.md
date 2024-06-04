@@ -2,7 +2,7 @@
 title: Cumulative update 23 for SQL Server 2019 (KB5030333)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 23 (KB5030333).
 ms.date: 10/12/2023
-ms.custom: KB5030333
+ms.custom: evergreen, KB5030333
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows
