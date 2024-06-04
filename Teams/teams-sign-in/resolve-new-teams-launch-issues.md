@@ -1,6 +1,6 @@
 ---
 title: Fix issues when starting the new Teams app
-description: Provides troubleshooting steps for resolve issues when you try to start the new Teams app on Windows.
+description: Provides troubleshooting steps to resolve issues when you try to start the new Teams app on Windows.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
