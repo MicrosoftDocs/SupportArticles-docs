@@ -407,7 +407,7 @@
 - name: Cannot create a VM
   items:
   - name: Troubleshoot Windows VM deployment issues
-    href: windows-vm-deployment-issues.md
+    href: troubleshoot-deployment-new-vm-windows.md
   - name: Custom/gallery/marketplace image allocation failure
     href: custom-gallery-marketplace-image-allocation-failure.md
   - name: Custom image provisioning errors
