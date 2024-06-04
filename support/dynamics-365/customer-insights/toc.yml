@@ -18,11 +18,11 @@
     items:
       - name: Troubleshoot deduplication, match, or merge results
         href: data/profile-unification/troubleshoot-unification-results.md
-      - name: Match failed error occurs on the Deduplication or Matching rules
+      - name: Match failed error
         href: data/profile-unification/match-failed.md
-      - name: Merge failed error occurs on the Unified data view
+      - name: Merge failed error
         href: data/profile-unification/merge-failed.md
-      - name: Missing business unit values in unification
+      - name: Missing business unit values
         href: data/profile-unification/missing-business-unit.md
   - name: Environment management
     items: 
