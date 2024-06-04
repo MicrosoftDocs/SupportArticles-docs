@@ -1,5 +1,5 @@
 ---
-title: Fix issues when starting the new Teams app
+title: Resolve issues when starting the new Teams app
 description: Provides troubleshooting steps to resolve issues when you try to start the new Teams app on Windows.
 manager: dcscontentpm
 audience: ITPro
@@ -413,7 +413,7 @@ Pause
 
    If any of the folders are reparse points, contact [Microsoft Support](https://support.microsoft.com/contactus).
 
-   Also check for files that have the same name as a required system folder in the **AppData** folder. For example, a file that's named *Libraries* in the path, *%AppData%\Microsoft\Windows\Libraries*, has the same name as a folder that has the same path. For each folder that's listed earlier in this step, run the following PowerShell command:
+1. Check for files that have the same name as a required system folder in the **AppData** folder. For example, a file that's named *Libraries* in the path, *%AppData%\Microsoft\Windows\Libraries*, has the same name as a folder that has the same path. For each folder that's listed earlier in this step, run the following PowerShell command:
 
    ```powershell
    Test-Path -Path <directory name, such as $env:USERPROFILE\AppData\Local\Temp>  -PathType Leaf
@@ -437,5 +437,5 @@ Pause
       - `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Appx`
    1. Check the value of **AllowAllTrustedApps**. If the value is **0**, the policy is disabled. Change it to **1** to enable the policy, and then start new Teams again.
 
-      **Note:** To start new Teams without enabling the **AllowAllTrustedApps** policy, you must be running one of the versions of Windows that are listed in step 4b.
+      **Note:** To start new Teams without enabling the **AllowAllTrustedApps** policy, you must be running one of the versions of Windows that are listed in step 5b.
 1. If the issue persists, update the system to Windows 11, version 22H2, OS build 22621.2506 or a later version.
