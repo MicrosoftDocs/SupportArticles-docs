@@ -1,12 +1,12 @@
 ---
-title: Custom/gallery/marketplace image allocation failures
-description: Provides solutions to an allocation error when you deploy a custom/gallery/marketplace image.
+title: Linux custom/gallery/marketplace image allocation failures
+description: Provides solutions to an allocation error when you deploy a Linux custom/gallery/marketplace image.
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: virtual-machines
 ms.date: 06/03/2024
 ms.reviewer: srijangupta, scotro, jarrettr
 ---
-# Allocation failures when deploying custom/gallery/marketplace images
+# Allocation failures when deploying Linux custom/gallery/marketplace images
 
 An allocation error arises in situations when the new VM request is pinned to a cluster that either cannot support the VM size being requested, or does not have available free space to accommodate the request.
 
