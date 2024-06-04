@@ -36,7 +36,7 @@ This section includes token sync errors related to Apple Automated Device Enroll
 
 |Error message| Cause | Solution|
 |-------------|-----|----------|
-| Expired or invalid token | The token may be expired, revoked, or malformed. | Expired tokens can be renewed, Invalid token will need to have a new token created in Intune.<br/> The new token can be used on an existing MDM Server in Apple Business Manager or Apple School Manager: Edit option > MDM Server settings > Upload public key |
+| Expired or invalid token | The token may be expired, revoked, or malformed. | Regardless of the reason the token needs to be renewed.<br/> If you have any issues renwing the token Contact the [Intune support team](/mem/get-support) as you might need to use a new public key on the existing MDM Server in Apple Business Manager or Apple School Manager: Edit option > MDM Server settings > Upload public key. in order to renew the token |
 | Access denied | Intune can't talk to Apple anymore. For example, Intune has been removed from the MDM server list in Apple Business Manager or Apple School Manager. The token has possibly expired. | 1. Verify whether your token has expired, and if a new token was created.<br/>2. Check to see if Intune is in the MDM server list |
 | Terms and conditions not accepted | New terms and conditions (T&C) need to be accepted in Apple Business Manager or Apple School Manager. | Accept the new T&C in Apple Apple Business Manager or Apple School Manager Portal.<br/>**Note:** This must be done by a user with the Administrator role in Apple Business Manager or Apple School Manager. |
 | Internal server error | Needs further investigation | Contact the [Intune support team](/mem/get-support), as additional logs are needed |
