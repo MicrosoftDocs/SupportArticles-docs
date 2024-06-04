@@ -108,7 +108,7 @@ You can add a GC by creating a new domain controller and specifying that is a GC
    ```
 
    > [!NOTE]  
-   > In this command, \<*DomainName*> is the name of the domain of the new GC.
+   > In this command, \<*DomainName*> represents the name of the domain of the new GC.
 
    If you can't query GC record in DNS, check the value of the **isGlobalCatalogReady** attribute. To do this, do one of the following:
 
