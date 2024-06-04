@@ -46,10 +46,10 @@ Before you can fix the issue, you need to perform multiple checks to determine t
 
 ### Option 1: Run a script
 
-The *TeamsLaunchCheck.ps1* PowerShell script automates all the checks that you need to perform.
-
+The *TeamsLaunchCheck.ps1* PowerShell script automates all the checks that you need to perform.  
+<br/>
 <details>
-<summary>TeamsLaunchCheck.ps1</summary>
+<summary>The TeamsLaunchCheck.ps1 script</summary>
 
 ```powershell
 # $erroractionpreference="stop"
@@ -348,10 +348,10 @@ Pause
       `Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders`
    1. For the shell folder that's returned **True** in the PowerShell command, update the value of its associated registry entry to a location that isn't a reparse point. For example, you can set the value to the default path:
 
-   | Registry entry | Value |
-   | --- | --- |
-   |Cookies|`%USERPROFILE%\AppData\Local\Microsoft\Windows\INetCookies`|
-   |Cache|`%USERPROFILE%\AppData\Local\Microsoft\Windows\INetCache`|
+     | Registry entry | Value |
+     | --- | --- |
+     |Cookies|`%USERPROFILE%\AppData\Local\Microsoft\Windows\INetCookies`|
+     |Cache|`%USERPROFILE%\AppData\Local\Microsoft\Windows\INetCache`|
 1. Check whether the values of the **TEMP** or **TMP** environment variables are set to a reparse point.
 
    1. Run the following PowerShell command:
@@ -413,7 +413,7 @@ Pause
 
    If any of the directories are reparse points, contact [Microsoft Support](https://support.microsoft.com/contactus).
 
-   Check for files with the same name as a required system folder in the **AppData** folder. For example, a file named *Libraries* in the path *%AppData%\Microsoft\Windows\Libraries*, has the same name as a directory with the same path. For each directory that's listed in this step, run the following PowerShell command:
+   Also check for files with the same name as a required system folder in the **AppData** folder. For example, a file named *Libraries* in the path *%AppData%\Microsoft\Windows\Libraries*, has the same name as a directory with the same path. For each directory that's listed earlier in this step, run the following PowerShell command:
 
    ```powershell
    Test-Path -Path <directory name, such as $env:USERPROFILE\AppData\Local\Temp>  -PathType Leaf
@@ -436,5 +436,5 @@ Pause
       - `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Appx`
    1. Check the value of **AllowAllTrustedApps**. If the value is **0**, the policy is disabled. Change it to **1** to enable the policy and then start new Teams again.
 
-      **Note:** To start new Teams without enabling the **AllowAllTrustedApps** policy, you must run one of the versions of Windows listed in step 4c.
+      **Note:** To start new Teams without enabling the **AllowAllTrustedApps** policy, you must run one of the versions of Windows listed in step 4b.
 1. If the issue still persists, update to Windows 11 version 22H2 OS build 22621.2506 or later.
