@@ -1,7 +1,7 @@
 ---
 title: Lingering objects in an AD DS forest
 description: Provides information about lingering objects in a forest, including events that indicate lingering objects, causes of lingering objects, and methods to remove lingering objects.
-ms.date: 05/30/2024
+ms.date: 06/03/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -75,13 +75,12 @@ Even when there's no noticeable effect, the presence of lingering objects can ca
 
 ### Events that indicate that the forest might have lingering objects
 
-|Event ID|General description|
-|---|---|
-|1862|The local domain controller has not recently received replication information from several domain controllers (inter-site).|
-|1863|The local domain controller has not recently received replication information from several domain controllers (inter-site).|
-|1864|The local domain controller has not recently received replication information from several domain controllers (summary).|
-|1311|The Knowledge Consistency Checker (KCC) was not able to build a spanning tree topology.|
-|2042|It has been too long since this server last replicated with the named source server.|
+| Event ID | General description |
+| --- | --- |
+| 1862 or 1863 | The local domain controller has not recently received replication information from several domain controllers (inter-site). |
+| 1864 | The local domain controller has not recently received replication information from several domain controllers (summary). |
+| 1311 | The Knowledge Consistency Checker (KCC) was not able to build a spanning tree topology. |
+| 2042 | It has been too long since this server last replicated with the named source server. |
 
 ### Events that indicate that the forest has lingering objects
 
@@ -111,7 +110,7 @@ Even when there's no noticeable effect, the presence of lingering objects can ca
 
 - A user has a current account, but the account was renamed. The user doesn't receive email messages. Both instances of the user object (the current one and an older version) appear in the GAL. Because both objects have the same email address, email messages can't be delivered.
 
-- A universal group that no longer exists continues to appear in a user's access token. Although the group no longer exists, if a user account still has the group in its security token, the user might have access to a resource that you intended to be unavailable to that user.
+- A universal group that no longer exists continues to appear in a user's access token. Therefore, the user might have access to a resource that you intended to be unavailable to that user.
 
 - You can't create a new object or Exchange mailbox. However, you don't see the object in the forest. An error message reports that the object already exists.
 
