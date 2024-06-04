@@ -187,9 +187,9 @@ Alternatively, an NSG might be blocking outbound connectivity on port 80 or 443.
 
 #### Solution: Allow required URLs on your firewall configuration
 
-- Make sure that all necessary URLs and domains are allowed through the firewall when you use package management systems such as `apt` in Ubuntu.
+Make sure that all necessary URLs and domains are allowed through the firewall when you use package management systems, such as `apt` in Ubuntu.
 
-- If an NSG is used, make sure that Ubuntu IP addresses and ports 80 and 443 are added to the allow list of the outbound rule of the network interface NSG or subnet NSG. These exceptions should take priority over the `Block_Internet_Access_outbound` rule.
+If an NSG is used, make sure that Ubuntu IP addresses and ports 80 and 443 are added to the allow list of the outbound rule of the network interface NSG or subnet NSG. These exceptions should take priority over the `Block_Internet_Access_outbound` rule.
 
 </details>
 
@@ -290,7 +290,7 @@ If your DNS server is on Azure but resides in a different subnet, make sure that
 
 </details>
 
-## Scenario 5: "dpkg: error processing package" error message appears during a kernel installation
+## Scenario 5: A "dpkg: error processing package" error message appears during a kernel installation
 
 <details>
 <summary>Scenario 5 details</summary>
@@ -391,5 +391,7 @@ If any application automatically edits the *sources.list* file or adds a reposit
 Remove or comment out the lines that reference the ARM processor architecture in the */etc/apt/sources.list* file or the */etc/apt/sources.list.d/\*.list* directory.
 
 </details>
+
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
