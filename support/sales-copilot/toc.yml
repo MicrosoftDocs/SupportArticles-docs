@@ -67,6 +67,6 @@
     - name: Opportunity summary not displayed in deal rooms
       href: teams-collaboration-spaces/opportunity-summary-not-displayed.md
     - name: Unable to create a channel
-      href: crm-permissions-and-configurations/channel-name-already-exists-error.md  
+      href: teams-collaboration-spaces/channel-name-already-exists-error.md  
     - name: Unable to create a team
-      href: crm-permissions-and-configurations/create-team-error.md        
+      href: teams-collaboration-spaces/create-team-error.md        
