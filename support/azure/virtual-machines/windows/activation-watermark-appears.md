@@ -37,7 +37,7 @@ When you use an Azure virtual machine (VM) that runs Windows Server 2022 Datacen
   ```console
   cscript c:\windows\system32\slmgr.vbs /dlv
   ```
-- When you restart or sign in the VM, a pop-up window with the following message is displayed:
+- When you restart or sign in to the VM, a pop-up window with the following message is displayed:
 
   > Your Windows Server 2022 Datacenter Azure Edition VM has been deactivated because you are not running on Azure or a supported Azure Stack hypervisor, or that you have not enabled Azure benefits on the supported Azure Stack. To enable Azure benefits, go to your cluster settings in Windows Admin Center > Enable Azure benefits.
 
