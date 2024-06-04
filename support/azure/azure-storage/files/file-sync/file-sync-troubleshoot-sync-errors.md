@@ -4,12 +4,11 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 04/07/2024
+ms.date: 06/03/2024
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu
 ---
-
 # Troubleshoot Azure File Sync sync health and errors
 
 This article is designed to help you troubleshoot and resolve common sync issues that you might encounter with your Azure File Sync deployment.
@@ -156,15 +155,6 @@ Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.Se
 Debug-StorageSyncServer -FileSyncErrorsReport
 ```
 
-> [!Note]  
-> If the *FileSyncErrorsReport.ps1* script returns "There were no file errors found" or doesn't list per-item errors for the sync group, the cause is either:
->
-> - Cause 1: The last completed sync session didn't have per-item errors. The portal should be updated soon to show "0 Files Not Syncing." By default, the *FileSyncErrorsReport.ps1* script will only show per-item errors for the last completed sync session. To view per-item errors for all sync sessions, use the `-ReportAllErrors` parameter.
->   Check the most recent [Event ID 9102](?tabs=server%252cazure-portal#broken-sync) in the Telemetry event log to confirm the `PerItemErrorCount` is 0.
->
-> - Cause 2: The `ItemResults` event log on the server wrapped due to too many per-item errors, and the event log no longer contains errors for this sync group.
->    To prevent this issue, increase the `ItemResults` event log size. The `ItemResults` event log can be found under *Applications and Services Logs\Microsoft\FileSync\Agent* in Event Viewer.
-
 ## Sync errors
 
 ### Troubleshooting per file/directory sync errors
@@ -245,7 +235,15 @@ Sync sessions might fail for various reasons including the server being restarte
 | **Error string** | ECS_E_SYNC_CANCELLED_BY_VSS |
 | **Remediation required** | No |
 
-No action required. This error should automatically resolve. If the error persists for more than a day, create a support request.
+No action required. Azure File Sync has a scheduled task (VssSyncScheduledTask) that runs once a day on the server to sync files that are in use. When this scheduled task starts, it will cancel the current upload sync session (resulting in the 0x80c8029c error code). If you're migrating a file share and don't want the upload session to be interrupted, you can temporarily disable the VssSyncScheduledTask scheduled task until the initial upload completes.
+
+Here are the steps to disable the VssSyncScheduledTask scheduled task on the server:
+
+1. Open Task Scheduler.
+2. Navigate to *Microsoft\StorageSync*.
+3. Right-click the VssSyncScheduledTask task and select **Disable**.
+
+Once the file share migration completes, re-enable the VssSyncScheduledTask scheduled task.
 
 <a id="-2147012889"></a>**A connection with the service could not be established.**
 
