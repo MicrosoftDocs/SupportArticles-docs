@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot unification results
 description: Provides troubleshooting steps for unexpected deduplication, match, or merge results for Microsoft Dynamics 365 Customer Insights - Data.
-author: Allison-Wu
+author: wu-allison
 ms.author: allisonwu
 ms.date: 5/24/2024
 ms.reviewer: v-wendysmith, mhart
 ms.custom: sap:Data Unification\Troubleshoot unification results
 ---
-# Troubleshooting deduplication, match, or merge results in Dynamics 365 Customer Insights - Data
+# Troubleshoot deduplication, match, or merge results in Dynamics 365 Customer Insights - Data
 
 [!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
