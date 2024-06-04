@@ -103,7 +103,7 @@ If you can't configure your third-party device to be secure, you can enable inse
 2. In the console tree, select **Computer Configuration** > **Administrative Templates** > **Network** > **Lanman Workstation**.
 3. For the setting, right-click **Enable insecure guest logons** and select **Edit**.
 4. Select **Enabled** > **OK**.
-5. Windows 11 Insider Preview Build 25267 and later also require SMB signing by default. You can't use guest access with SMB signing. To disable SMB signing, review [Control SMB signing behavior (preview)](/windows-server/storage/file-server/smb-signing).
+5. Windows 11 Insider Preview Build 25267 and later also require SMB signing by default. You can't use guest access with SMB signing. To disable SMB signing, see [Control SMB signing behavior (preview)](/windows-server/storage/file-server/smb-signing).
 
 > [!NOTE]
 > If you need to modify the Active Directory domain-based group policy, use **Group Policy Management** (*gpmc.msc*).
