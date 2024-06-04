@@ -4,7 +4,7 @@ description: Troubleshoot common issues in managing Azure File Sync sync groups,
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/12/2023
+ms.date: 06/03/2024
 ms.author: kendownie
 ms.reviewer: v-weizhu
 ms.custom: sap:File Sync
@@ -48,11 +48,13 @@ To determine whether your user account role has the required permissions:
 
 1. In the Azure portal, select **Resource groups**.
 2. Select the resource group where the storage account is located, and then select **Access control (IAM)**.
-3. Select the **Role assignments** tab.
-4. Select the **Role** (for example, Owner or Contributor) for your user account.
-5. In the **Resource Provider** list, select **Microsoft Authorization**.
-    - **Role assignment** should have **Read** and **Write** permissions.
-    - **Role definition** should have **Read** and **Write** permissions.
+3. On the **Check access** tab, select **View my access**.
+4. On the **Current role assignments** tab, select the role (for example, Owner or Contributor) for your user account.
+5. On the **Permissions** tab, verify the role for your user account has the following permissions:
+    - **Read**: **Get role definition**
+    - **Write**: **Create or update custom role definition**
+    - **Read**: **Get role assignment**
+    - **Write**: **Create role assignment**
 
 <a id="cloud-endpoint-using-share"></a>**Cloud endpoint creation fails, with this error: "The specified Azure FileShare is already in use by a different CloudEndpoint"**
   

@@ -11154,6 +11154,11 @@
       "source_path": "support/windows-server/active-directory/distributed-file-system-hotfixes.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/distributed-file-system-hotfixes",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/find-current-schema-version.md",
+      "redirect_url": "/windows-server/identity/ad-ds/deploy/find-active-directory-schema",
+      "redirect_document_id": false
     }
   ]
 }
