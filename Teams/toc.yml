@@ -193,6 +193,8 @@
       href: ./provisioning/deleting-team-also-deletes-group.md
   - name: Sign-in
     items:
+    - name: Resolve issues when starting the new Teams app
+      href: ./teams-sign-in/resolve-new-teams-launch-issues.md
     - name: Resolve sign-in errors
       href: ./teams-sign-in/resolve-sign-in-errors.md
     - name: Someone has already setup Teams for your organization
