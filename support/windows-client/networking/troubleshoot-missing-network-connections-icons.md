@@ -275,4 +275,4 @@ To view Microsoft support options, visit the following Microsoft Web site: [Cont
 
 ## Prevention tips
 
-To prevent these problems in the future, try to keep your computer up-to-date. Always make sure that you have the most recent drivers installed on the computer. To do this, you can use Windows Update to install the latest drivers. For more information, visit the following Microsoft Web site: [https://update.microsoft.com](https://update.microsoft.com)
+To prevent these problems in the future, try to keep your computer up-to-date. Always make sure that you have the most recent drivers installed on the computer.
