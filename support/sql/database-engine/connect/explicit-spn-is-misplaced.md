@@ -37,3 +37,7 @@ If you are experiencing explicit misplaced SPNs, you might have to create or re-
 1. Run the `SETSPN -D` command to remove the SPN from the service.
 1. Run the `SETSPN -A` command to add the SPN to the service.
 1. Move the SPN by using `SETSPN -D`, or select an SPN that already exists in the correct account.
+
+## More information
+
+[Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)
