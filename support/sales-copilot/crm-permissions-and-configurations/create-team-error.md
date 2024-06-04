@@ -28,7 +28,7 @@ This article helps you to resolve an error that occurs when you try to create a 
 
 When you try to create a Team for an account or opportunity in Microsoft Copilot for Sales, the following error message is displayed—*Something went wrong. Copy the error details here, then share them with your admin or Microsoft support and ask if they can help you resolve this issue.*
 
-The error might be due to blocked words in the team name as per the naming policy restrictions. To view complete error details, select **Copy error details**. If the error contains **ContainsBlockedWord**, proceed with the resolution steps provided below.  
+The error could be due to blocked words in the team name as per the naming policy restrictions. Select **Copy error details** to view the error details. If the error includes **ContainsBlockedWord**, follow the resolution steps provided below.
 
 ## Cause and resolution
 
