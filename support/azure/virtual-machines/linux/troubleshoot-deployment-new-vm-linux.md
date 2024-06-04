@@ -217,6 +217,9 @@ Cloud-init versions >= 20.3 contain a fix which falls back and executes `dhclien
 
 **Solution**: For VMs running cloud-init older than version 20.3, configure the VM so that `/var/tmp` is not mounted as `noexec`. Alternatively, upgrade the VM's cloud-init package to a version >= 20.3.
 
+> [!NOTE]
+> Dhclient permission is no longer an issue in cloud-init >= 22.4. Refer to [cloud-init issues 3956](https://github.com/canonical/cloud-init/issues/3956)
+
 ### Getting more logs
 
 If you find that you need more logs from the VM to understand the issues, you maybe can SSH into the VM using the [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux) using a user that is baked into the image. If you do not have a user baked in, then you can either recreate the image with a user, or use the [AZ VM Repair tool](/cli/azure/vm/repair#az-vm-repair-create) which will mount the OS disk of the VM that failed to provision, to another VM.
