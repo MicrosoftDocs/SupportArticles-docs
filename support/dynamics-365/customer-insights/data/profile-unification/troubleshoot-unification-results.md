@@ -47,10 +47,10 @@ For detailed descriptions of each output table, see [Understanding output tables
 
 |Method|Full/Partial|View type|Deduplication|ConflationMatchPairs|Customer|
 |------|------------|---------|-------------|--------------------|--------|
-|[Export to blob storage](#method-1-export-to-blob-storage)|Full|Download csv/parquet|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|[Download 100k records](#method-2-download-100k-records)|Partial|Download csv|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|[View Dataverse tables](#method-3-view-dataverse-tables)|Full|Dataverse table|||:white_check_mark:|
-|[Configure a side process](#method-4-configure-a-side-process)|Full|Download csv|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|[Export to blob storage](#method-1-export-to-blob-storage)|Full|Download csv/parquet|✔|✔|✔|
+|[Download 100k records](#method-2-download-100k-records)|Partial|Download csv|✔|✔|✔|
+|[View Dataverse tables](#method-3-view-dataverse-tables)|Full|Dataverse table|✖|✖|✔|
+|[Configure a side process](#method-4-configure-a-side-process)|Full|Download csv|✔|✔|✔|
 
 ### Method 1: Export to blob storage
 This method is recommended.
