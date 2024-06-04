@@ -4,7 +4,7 @@ description: Learn how to resolve a scenario in which a Windows activation water
 author: cwhitley-MSFT
 ms.author: cwhitley
 ms.reviewer: scotro, scottmca, kimberj, jdickson, shache, v-naqviadil, v-leedennis, v-weizhu
-ms.date: 06/03/2024
+ms.date: 06/04/2024
 ms.service: virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ms.topic: troubleshooting-problem-resolution
@@ -45,7 +45,7 @@ When you use an Azure virtual machine (VM) that runs Windows Server 2022 Datacen
 
 The Azure VM can't establish a connection with the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service) endpoint, which is essential for obtaining the activation token.
 
-### Identify if the VM guest OS can successfully communicate with IMDS
+### How to determine if the VM guest OS can successfully communicate with IMDS
 
 Run the following PowerShell script depending on your version of PowerShell to check if the metadata is received from IMDS.
 
@@ -82,7 +82,7 @@ Intermediate certificates that are crucial for the activation process have expir
 
 For more information, see [Azure Instance Metadata Service-Attested data TLS: Critical changes are here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953).
 
-### Identify if any certificates are missing
+### How to determine if any certificates are missing
 
 Run the following PowerShell script to check for missing certificates:
 
