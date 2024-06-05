@@ -174,6 +174,6 @@ NAME                  ENDPOINTS                           AGE
 my-headless-service   10.244.2.18:8080,10.244.2.19:8080   10d 
 ```
 
-[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
