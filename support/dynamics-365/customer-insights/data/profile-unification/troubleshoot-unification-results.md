@@ -9,10 +9,10 @@ ms.custom: sap:Data Unification\Troubleshoot unification results
 ---
 # Troubleshoot deduplication, match, or merge results in Dynamics 365 Customer Insights - Data
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 ## Overview
-This article provides the steps to validate the results of deduplication, match, and merge in Microsoft Dynamics 365 Customer Insights - Data.
+When unification runs, you may have questions as to why specific records were unified, or why specific records were not unified. 
+ 
+This article provides several methods you can use to understand the unification process and troubleshoot unexpected results.
 
 ## Verify source data
 Double-check the accuracy and completeness of the data provided for the unification process, ensuring that all relevant records and information are present. It's essential to clean and normalize the data to ensure reliable outcomes.
@@ -45,46 +45,40 @@ For detailed descriptions of each output table, see [Understanding output tables
 
 ## Step 2: Viewing output tables
 
-|Method|Full/Partial|View type|Deduplication|ConflationMatchPairs|Customer|
-|------|------------|---------|-------------|--------------------|--------|
-|[Export to blob storage](#method-1-export-to-blob-storage)|Full|Download csv/parquet|✔|✔|✔|
-|[Download 100k records](#method-2-download-100k-records)|Partial|Download csv|✔|✔|✔|
-|[View Dataverse tables](#method-3-view-dataverse-tables)|Full|Dataverse table|✖|✖|✔|
-|[Configure a side process](#method-4-configure-a-side-process)|Full|Download csv|✔|✔|✔|
+|Method|Size|Deduplication|ConflationMatchPairs|Customer|
+|------|------------|-------------|--------------------|--------|
+|[Download 100k records](#method-1-download-100k-records)|Top 100k|✔|✔|✔|
+|[Setup Exports](#method-2-setup-exports)|Full|✔|✔|✔|
+|[Create a sandbox instance](#method-3-create-a-sandbox-instance)|Full|✔|✔|✔|
 
-### Method 1: Export to blob storage
-This method is recommended.
+### Method 1: Download 100k records
+If there are less than 100k records, this method is recommended.
 
-For each of the output tables, configure an export to Azure Blob Storage. Refresh all exports, then the full tables are written to blob storage.
-
-See how to configure [Export to blob storage](/dynamics365/customer-insights/data/export-azure-blob-storage).
-
-### Method 2: Download 100k records
-Navigate to the "Tables" page in Customer Insights - Data. For each of the output tables, select the "Download" button, which downloads the top 100,000 records of the table. These records might not contain your unexpected unification result.
+Navigate to the "Tables" page in Customer Insights - Data. For each of the output tables, select the "Download" button, which downloads the top 100,000 records of the table.
 
 :::image type="content" source="media/data-manager-tables-download.png" alt-text="Download table.":::
 
-### Method 3: View Dataverse tables
-If only the Customer table needs to be analyzed, then the most convenient viewing method is through Dataverse.
 
-After each successful Merge run, the Customer gets written to Dataverse as the "CustomerProfile" table. 
-Filtering can be applied to easily find relevant information to the unexpected unification result.
+### Method 2: Setup Exports
+If there are more than 100k records, this method is recommended.
 
-### Method 4: Configure a side process
-By recreating the unification configuration on new tables that contain a small subset of problem records of the original tables, we can ensure that the [Download 100k records method](#method-2-download-100k-records) contains **all** output information.
+For each of the output tables, [set up an export](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/export-manage#set-up-a-new-export).
 
-> [!IMPORTANT]
-> - This is the most advanced method, and requires knowing the exact source records that aren't being unified properly.
-> - This method involves removing the original tables from unification, so it can be disruptive and will produce completely different customer profiles. **Therefore, we recommend only using this method for non-production instances.**
+[Export to blob storage](/dynamics365/customer-insights/data/export-azure-blob-storage) is recommended.
+
+Refresh all exports, then the full tables are written to the configured location.
+
+### Method 3: Create a sandbox instance
+Create a new sandbox instance, recreating the unification configuration on tables that contain a subset of problem records of the original tables.
+
+This ensures that the [Download 100k records](#method-1-download-100k-records) method contains **all** output information.
+
+See how to [create a new environment](/dynamics365/customer-insights/data/create-environment).
 
 #### Datasources
-Create new tables that only contain a small subset of problem records. Refresh the tables to ingest them into Customer Insights - Data.
+Create new tables that only contain a small subset of problem records, we recommend less than or equal to 100k records.
 
-#### Remove the original tables from unify
-See how to [Remove a unified table](/dynamics365/customer-insights/data/data-unification-update#remove-a-unified-table). Downstream dependencies of the Customer table must first be removed.
-
-> [!IMPORTANT]
-> Take note of the original unification configuration so you can re-create it after troubleshooting.
+Refresh the tables to ingest them into Customer Insights - Data.
 
 #### Unify the problem tables
 1. **Map**: Map the problem tables
@@ -93,12 +87,7 @@ See how to [Remove a unified table](/dynamics365/customer-insights/data/data-uni
     - Copy the original matching rules
     - Enable "Include all records" for better visibility into the data
 4. **Unified data view**: Keep the default configuration
-5. **Run unification to generate the problem customer profiles**
-
-#### Clean up
-After all troubleshooting is complete, remember to recreate the original unification configuration.
-
-If you need help with restoring the previous configuration, reach out to support.
+5. **Run unification to generate the customer profiles**
 
 ## Step 3: Resolving unification results
 Depending on where your unexpected result is, you can need to verify different output tables. 
@@ -226,10 +215,10 @@ If we match on **Contact.Email == Referral.Email**:
 
 #### Customer
 If we set up the unified fields such that:
-- FirstName: We prioritize Contact.FirstName over Referral.FirstName
-- LastName: We prioritize Contact.LastName over Referral.LastName
-- Email: We prioritize Contact.Email over Referral.EmailAddress
-- ReferralDate: We take Referral.ReferralDate
+- *FirstName*: We prioritize Contact.FirstName over Referral.FirstName
+- *LastName*: We prioritize Contact.LastName over Referral.LastName
+- *Email*: We prioritize Contact.Email over Referral.EmailAddress
+- *ReferralDate*: We take Referral.ReferralDate
 
 |CustomerId|Contact_ContactId|Contact_ContactId_Alternate|Referral_Id|Referral_Id_Alternate|FirstName|LastName|Email|ReferralDate|
 |-|-|-|-|-|-|-|-|-|
