@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Virtual machine creation, csstroublesh
 
 This article provides a solution to an error that occurs when you create a virtual machine in Hyper-V Manager.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2013544
 
 ## Symptoms

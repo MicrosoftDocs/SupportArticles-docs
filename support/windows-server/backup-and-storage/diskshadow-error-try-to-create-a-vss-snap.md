@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows
 
 This article describes an issue that triggers an error message when you try to create a Volume Shadow Services (VSS) diskshadow snapshot.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3025158
 
 ## Symptoms  

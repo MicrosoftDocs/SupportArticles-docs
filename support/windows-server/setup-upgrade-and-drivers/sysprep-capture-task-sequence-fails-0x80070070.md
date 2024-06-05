@@ -13,7 +13,6 @@ ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Win
 
 This article helps fix a 0x80070070 error that occurs when Deployment Toolkit fails to complete sysprep and capture task sequence.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2670374
 
 ## Symptoms

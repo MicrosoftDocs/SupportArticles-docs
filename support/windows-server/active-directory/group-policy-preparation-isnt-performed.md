@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 
 This article describes an issue that Group Policy preparation isn't performed when you automatically prepare an existing domain.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2737129
 
 ## Symptoms

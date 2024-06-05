@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (include
 
 This article provides help to solve an issue that occurs when you log on to a computer running Terminal Server Edition.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 240992
 
 > [!IMPORTANT]

@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\AD Object Permissions, access contr
 
 This article introduces how to disable User Account Control (UAC) on Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2526083
 
 ## Summary

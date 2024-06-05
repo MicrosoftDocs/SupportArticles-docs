@@ -13,7 +13,6 @@ ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Win
 
 This article describes how to create an ISO image for UEFI platforms for a Windows PE CD-ROM.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947024
 
 ## Introduction

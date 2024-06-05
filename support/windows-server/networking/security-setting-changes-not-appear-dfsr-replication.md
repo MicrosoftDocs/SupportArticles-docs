@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologi
 
 This article provides a workaround for the delays on DFSR replication partners after security setting changes on folders.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3212430
 
 ## Symptoms

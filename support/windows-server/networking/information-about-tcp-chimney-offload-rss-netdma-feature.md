@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 
 This article describes the TCP Chimney Offload, Receive Side Scaling (RSS), and Network Direct Memory Access (NetDMA) features that are available for the TCP/IP protocol in Windows Server 2008.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951037
 
 ## TCP Chimney Offload overview

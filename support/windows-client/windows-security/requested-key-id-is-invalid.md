@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 
 This article provides a solution to an error that occurs when you try to retrieve BitLocker Recovery Key using MBAM 2.0 Self Service Portal (SSP).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2870853
 
 ## Summary

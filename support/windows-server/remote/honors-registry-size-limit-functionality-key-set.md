@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (include
 
 This article provides a resolution for the issue that Registry Size Limit (RSL) functionality is still be honored if the RegistrySizeLimit registry key is set.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2567018
 
 ## Symptoms

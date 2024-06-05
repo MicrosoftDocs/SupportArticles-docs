@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM
 
 This article provides a solution to an error that occurs when you use Windows Performance Monitor to monitor system activity.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2916994
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
 
 This article provides a solution to issues where Distributed File System Replication (DFSR) `SYSVOL` fails to migrate or replicate, or `SYSVOL` isn't shared.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2567421
 
 ## Symptoms

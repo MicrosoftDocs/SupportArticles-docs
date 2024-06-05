@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\User, computer, group, and object management, cs
 
 This article describes some applications and application programming interfaces (APIs) must have access to the token-groups-global-and-universal (TGGAU) attribute on user account objects, or on computer account objects in the Active Directory directory service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 331951
 
 ## Summary

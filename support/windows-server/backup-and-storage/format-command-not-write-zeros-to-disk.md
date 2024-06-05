@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk erro
 
 This article discusses a change in the behavior of the format command in Windows Vista and later Windows versions.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Window 10 – all editions  
 _Original KB number:_ &nbsp; 941961
 
 ## Introduction

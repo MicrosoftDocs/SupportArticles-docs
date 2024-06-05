@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster re
 
 This article describes how to detect and recover if a Windows Server domain controller is incorrectly rolled back by using an image-based installation of the operating system.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 875495
 
 > [!NOTE]

@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 
 This article describes how to verify Service Location (SRV) locator resource records for a domain controller after you install the Active Directory directory service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 816587
 
 ## Summary

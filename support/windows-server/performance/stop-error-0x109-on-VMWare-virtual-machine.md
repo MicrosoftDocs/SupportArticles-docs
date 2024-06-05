@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Reliability (crash, errors, bug check o
 
 This article provides the resolution of fixing the Stop error 0x109: CRITICAL_STRUCTURE_CORRUPTION on a VMware virtual machine.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2902739
 
 ## Symptoms

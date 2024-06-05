@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes the problems that you may experience when you rename sites in the Active Directory forest.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 920718
 
 ## More information

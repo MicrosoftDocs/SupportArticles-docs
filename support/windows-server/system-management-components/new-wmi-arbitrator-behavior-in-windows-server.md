@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\WMI management and troubleshooting, 
 
 This article introduces new WMI arbitrator behavior in Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4096063
 
 ## Summary

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster re
 
 This article addresses an issue in which RODC replicates passwords when it's granted incorrect permissions in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4050867
 
 ## Symptom

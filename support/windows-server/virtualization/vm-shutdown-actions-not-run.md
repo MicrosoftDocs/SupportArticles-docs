@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Virtual machine state, csstroubleshoot
 
 This article helps solve a problem that prevents virtual machine shutdown actions from running.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3058418
 
 ## Symptoms

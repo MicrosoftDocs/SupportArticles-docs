@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\User, computer, group, and object management, cs
 
 This article describes how to set a user's password by using the Ldifde tool.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 263991
 
 ## More information
@@ -48,12 +47,9 @@ To import the chPwd.ldif file, use the following command:
 If the password does not fulfill the criteria of the enforced Password Policies, then it will throw an error:  
 > Add error on entry starting on line 1: Unwilling To Perform The server-side error is "A device attached to the system is not functioning
 
-For more information, see the following documents:  
-The "LDAP Data Interchange Format (LDIF) - Technical Specification" document on the following IETF Web site:
+For more information, see the following documents:
 
-[IETF 109 Online](https://search.ietf.org/internet-drafts/draft-good-ldap-ldif-06.txt)  
-RFC 1521 on the following IETF Web site:
-
+RFC 1521 on the following IETF Web site:  
 [RFC 1521](https://www.ietf.org/rfc/rfc1521.txt)  
 
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.

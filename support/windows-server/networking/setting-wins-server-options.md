@@ -16,7 +16,6 @@ This article provides a solution to problems that occur when you configure the W
 > [!IMPORTANT]  
 > WINS is deprecated. Therefore, you should no longer use it as a name resolution system.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 150737
 
 ## Symptoms

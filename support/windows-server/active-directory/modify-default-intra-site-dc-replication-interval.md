@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes how to modify the default intra-site domain controller replication interval.
 
-_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 214678
 
 When a domain controller writes a change to its local copy of Active Directory, a timer is started that determines when the domain controller's replication partners should be notified of the change. By default, this interval is 15 seconds. When this interval elapses, the domain controller initiates a notification to each intra-site replication partner that it has changes that need to be propagated. Another configurable parameter determines the number of seconds to pause between notifications. This parameter prevents simultaneous replies by the replication partners. By default, this interval is three seconds. Both of these intervals can be modified.

@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Hyper-V Replica (HVR), csstroubleshoot
 
 This article describes an issue that triggers events in the Application log when you have a Hyper-V host and the Hyper-V Replica feature is configured.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3050765
 
 ## Symptoms

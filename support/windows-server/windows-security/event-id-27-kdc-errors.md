@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstrouble
 
 This article provides help to fix the Event ID 27 KDC error that occurs on Windows Server 2003 domain controllers.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2002141
 
 ## Symptoms

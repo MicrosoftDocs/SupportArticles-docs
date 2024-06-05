@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Domain or forest functional level updates, failu
 
 This article solves a problem that the `Adprep /rodcprep` command isn't completed successfully because the infrastructure master for one or more active directory NDNCs isn't reachable.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 949257
 
 ## Symptoms

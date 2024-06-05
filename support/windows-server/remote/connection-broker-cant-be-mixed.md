@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivit
 
 This article provides a solution to an issue that Remote Desktop Service can't be used in a mixed environment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3007168
 
 ## Symptoms
