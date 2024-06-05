@@ -128,7 +128,7 @@ Debug-AzStorageAccountAuth `
     -FilePath $FilePath `
     -Verbose
 ```
-## Unable to mount Azure file shares with Microsoft Domain Entra Credentials
+## Unable to mount Azure file shares with Microsoft Entra Kerberos
 
 ### Self diagnostics steps
 
@@ -151,37 +151,13 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 2. `CheckAADConnectivity`: Checks for AAD connectivity for Aad Kerberos authentication. SMB mounts with Kerberos auth can fail if the client cannot reach out to AAD. If this check fails, it indicates that there is a networking error: perhaps a firewall or VPN issue.
 3. `CheckEntraObject`: Confirm that there is an object in the Azure Active Directory that represents the storage account and has the correct SPN (service principal name). If the SPN isn't correctly set up, run the Set-AD cmdlet returned in the debug cmdlet to configure the SPN.
 4. `CheckRegKey`: Check for the reg key if it is enabled or not. CloudKerberosTicketRetrieval key should be equal to 1 to get the Kerberos tickets for smb.
-5. `CheckRealmMap`: Checks if the user has configured any realm mappings (through ksetup /addhosttorealmmap) that would join the account to another Kerberos realm than KERBEROS.MICROSOFTONLINE.COM .(https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds)
-6. `CheckAdminConsent`: Checks if the Entra service principal has been granted admin consent for the Microsoft Graph permissions that are required to get a Kerberos ticket. 
-(https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal#grant-admin-consent-to-the-new-service-principal)
+5. `CheckRealmMap`: Checks if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
+6. `CheckAdminConsent`: Checks if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
 
 If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run. For example, to run all checks related to share-level permissions (RBAC), use the following PowerShell cmdlets:
 
-```PowerShell
-$ResourceGroupName = "<resource-group-name-here>"
-$StorageAccountName = "<storage-account-name-here>"
+If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run.
 
-Debug-AzStorageAccountAuth `
-    -Filter CheckSidHasAadUser,CheckUserRbacAssignment `
-    -StorageAccountName $StorageAccountName `
-    -ResourceGroupName $ResourceGroupName `
-    -Verbose
-```
-
-If you have the file share mounted on `X:`, and if you only want to run the check related to file-level permissions (Windows ACLs), you can run the following PowerShell cmdlets:
-
-```PowerShell
-$ResourceGroupName = "<resource-group-name-here>"
-$StorageAccountName = "<storage-account-name-here>"
-$FilePath = "X:\example.txt"
-
-Debug-AzStorageAccountAuth `
-    -Filter CheckUserFileAccess `
-    -StorageAccountName $StorageAccountName `
-    -ResourceGroupName $ResourceGroupName `
-    -FilePath $FilePath `
-    -Verbose
-```
 ## Unable to configure directory/file level permissions (Windows ACLs) with Windows File Explorer
 
 ### Symptom
