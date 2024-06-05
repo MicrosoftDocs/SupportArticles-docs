@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Cannot failover a group, csstrou
 
 This article describes new features of the Server Message Block (SMB) 3.0 protocol.
 
-_Applies to:_ &nbsp; Windows 8.1 - all editions, Windows Server 2012 R2 and later versions of Windows  
 _Original KB number:_ &nbsp; 2709568
 
 ## Summary

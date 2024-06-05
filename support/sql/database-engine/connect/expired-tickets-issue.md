@@ -31,3 +31,7 @@ To resolve this error, follow these steps:
 1. Use the `KLIST` command together with the SSPIClient tool to view and manage Kerberos tickets and service principal names (SPNs), as shown in the following command:
   
    `KLIST GET MSSQLSvc\SQLProd01.contoso.com:1433`
+
+## More information
+
+[Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)

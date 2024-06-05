@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article discusses how to use Ntdsutil to find and clean up duplicate security identifiers.
 
-_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 816099
 
 ## Summary

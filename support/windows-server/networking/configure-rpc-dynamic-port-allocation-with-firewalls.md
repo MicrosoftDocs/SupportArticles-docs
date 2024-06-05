@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 
 This article helps you modify the Remote Procedure Call (RPC) parameters in the registry to make sure RPC dynamic port allocation can work with firewalls.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 154596
 
 ## Summary

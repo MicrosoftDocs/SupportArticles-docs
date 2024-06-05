@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\ISCSI, csstroubleshoot
 
 This article provides a solution to an issue where the Microsoft iSCSI Initiator fails to log in to Favorite Targets after the initiator name is changed.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2500271
 
 ## Symptoms

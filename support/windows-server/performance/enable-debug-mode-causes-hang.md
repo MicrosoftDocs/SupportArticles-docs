@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Performance (slow, unresponsive, high C
 
 This article provides a solution to an issue where the Operating System with debug mode enabled may hang if no Debugger is connected.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2816225
 
 ## Symptoms

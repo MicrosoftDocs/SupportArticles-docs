@@ -173,6 +173,8 @@
     href: availability-performance/identify-high-cpu-consuming-containers-aks.md
   - name: Identify memory saturation in AKS clusters
     href: availability-performance/identify-memory-saturation-aks.md
+  - name: Troubleshoot cluster service health probe mode issues
+    href: availability-performance/cluster-service-health-probe-mode-issues.md
   - name: Troubleshoot node not ready
     items:
     - name: Basic troubleshooting
@@ -333,6 +335,8 @@
     href: extensions/aks-cost-analysis-add-on-issues.md
   - name: Can't pull images from container registry to cluster
     href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
+  - name: Troubleshoot installation errors in the Azure App Configuration extension
+    href: extensions/troubleshoot-app-configuration-extension-installation-errors.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: extensions/troubleshoot-key-vault-csi-secrets-store-csi-driver.md
   - name: Troubleshoot cluster extension deployment errors

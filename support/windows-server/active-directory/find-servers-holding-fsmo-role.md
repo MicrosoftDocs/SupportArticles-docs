@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
 
 This article describes how to find the servers that hold the Flexible Single Master Operation (FSMO) roles in a forest.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 234790
 
 ## Summary

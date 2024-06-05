@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Addi
 
 This article discusses the implications of starting the Cluster service by using the /forcequorum switch
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947713
 
 ## Beta Information

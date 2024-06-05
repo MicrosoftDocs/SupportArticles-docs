@@ -13,7 +13,6 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 
 This article describes how to uninstall and then reinstall the Certificate Authority (CA) role in Windows Server 2012 Essentials.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2795825
 
 ## Uninstall the CA server role

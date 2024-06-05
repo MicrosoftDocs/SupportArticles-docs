@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivit
 
 This article provides a solution to solve an issue where Remote Desktop that specifies a program to start on logon doesn't terminate when the specified program is exited.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2513330
 
 ## Symptoms

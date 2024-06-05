@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article discusses how to download updates from the Windows Update Catalog.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 323166
 
 ## Introduction

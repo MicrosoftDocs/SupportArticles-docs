@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 
 This article provides a solution to an issue where you can't access a Server Message Block (SMB) shared resource even when the shared resource is enabled in the target Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 4471134
 
 ## Symptoms

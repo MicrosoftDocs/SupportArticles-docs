@@ -13,8 +13,6 @@ keywords: Windows Server 2012 R2 ESU, Windows Server 2012 ESU, ESU, ESU product 
 
 # Error when installing ESU product key for Windows Server 2012 R2 or Windows Server 2012
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2012
-
 ## Symptoms
 
 To configure your system for End of Service Updates (ESU), you have to install ESU product keys. In the following circumstances, you might receive error messages when you install the product keys:

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory Domain Controller specific boot
 
 This article provides a workaround for an issue where the IsmServ service doesn't start correctly when a domain controller starts.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4530043
 
 ## Symptoms

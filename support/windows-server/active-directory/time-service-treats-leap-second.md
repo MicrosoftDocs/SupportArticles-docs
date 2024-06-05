@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, an
 
 This article describes how the Windows Time service treats a leap second.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 909614
 
 ## When the Windows Time service is working as a Network Time Protocol (NTP) client

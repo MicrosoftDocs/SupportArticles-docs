@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\User, computer, group, and object management, cs
 
 This article provides a solution to solve errors that occurs when you add objects to Active Directory or restore a domain controller from a system state backup.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 839879
 
 ## Symptoms

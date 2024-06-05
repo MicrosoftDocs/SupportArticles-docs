@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (include
 
 This article provides a workaround for an issue where the Connected icon doesn't appear in the notification area when you connect to a remote application by using Remote Desktop Web Access.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 977507
 
 ## Symptoms

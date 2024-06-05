@@ -15,7 +15,6 @@ ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroub
 
 This article discusses information about the current level of support for Active Directory Migration Tool (ADMT) on current Windows Client and Windows Server operating systems. This article also lists known issues that administrators might experience when they try to migrate user profiles, security principals, passwords, or security identifier history (sIDHistory) data between Active Directory domains and forests.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4089459
 
 ## Microsoft support by operating system

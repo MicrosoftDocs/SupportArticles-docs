@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB)
 
 This article helps to fix the error message "Delayed Write Failed" which states that your data has been lost.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2021074
 
 ## Symptoms

@@ -52,3 +52,7 @@ In addition to the main mapping settings in the **Linked Server security** dialo
 
 > [!NOTE]
 > Using a SQL Server ODBC driver in a linked server isn't a supported scenario. Other ODBC drivers might have primary support from the vendor and only limited support from Microsoft. For more information, see [SQL Server Linked Server Delegation Issues](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0650-SQL-Server-Linked-Server-Delegation-Issues).
+
+## More information
+
+[Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)

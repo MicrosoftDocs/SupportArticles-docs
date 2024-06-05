@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\AD Object Permissions, access contr
 
 This article helps to fix the error where we are unable to access the security log.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2751670
 
 ## Symptoms

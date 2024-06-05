@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 
 This article provides some information about how to add a domain controller as a node in a failover cluster environment.  
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2795523
 
 ## Symptoms

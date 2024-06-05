@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB
 
 This article describes how the different Network Load Balancing (NLB) operation modes affect network infrastructure, and the best ways in which the network can support each mode.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4494444
 
 ## Summary

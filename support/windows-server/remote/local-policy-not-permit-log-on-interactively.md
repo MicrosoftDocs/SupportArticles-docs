@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivit
 
 This article provides a resolution to an issue where Local Policy doesn't permit you to log on interactively.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186529
 
 ## Symptoms

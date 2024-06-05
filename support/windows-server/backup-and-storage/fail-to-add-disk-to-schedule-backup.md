@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows
 
 This article helps fix an error (The filename, directory name, or volume label syntax is incorrect) that occurs when you add an additional disk to a scheduled backup.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2009365
 
 ## Symptoms

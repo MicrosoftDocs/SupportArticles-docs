@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubl
 
 This article provides a solution to an error that occurs while you try to  start the selected virtual machine.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000800
 
 ## Symptoms

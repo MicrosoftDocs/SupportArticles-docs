@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume manageme
 
 This article introduces the new logging mechanism for Virtual Disk Service (VDS) in Windows Server 2012.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2759114
 
 ## Introduction

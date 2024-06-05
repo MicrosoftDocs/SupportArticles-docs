@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, error
 
 This article provides a solution to an issue where Event ID 46 is logged when you start a computer.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2756313
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, 
 
 This article describes how to resolve the error messages when you try to bring a cluster group online after a cluster stops.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 313882
 
 ## Symptoms

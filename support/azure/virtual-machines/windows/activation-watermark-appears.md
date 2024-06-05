@@ -3,8 +3,8 @@ title: Windows activation watermark continues to be displayed
 description: Learn how to resolve a scenario in which a Windows activation watermark continues to be displayed on Azure virtual machines.
 author: cwhitley-MSFT
 ms.author: cwhitley
-ms.reviewer: scotro, scottmca, kimberj, jdickson, shache, v-naqviadil, v-leedennis
-ms.date: 03/18/2024
+ms.reviewer: scotro, scottmca, kimberj, jdickson, shache, v-naqviadil, v-leedennis, v-weizhu
+ms.date: 06/04/2024
 ms.service: virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ms.topic: troubleshooting-problem-resolution
@@ -14,7 +14,7 @@ ms.topic: troubleshooting-problem-resolution
 
 This document discusses how to resolve the continued presence of a Windows activation watermark on Microsoft Azure virtual machines.
 
-*Applies to:*&nbsp; Windows Server 2022 and later versions
+*Applies to:*&nbsp; Windows Server 2022 Datacenter: Azure Edition
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ This document discusses how to resolve the continued presence of a Windows activ
 
 ## Symptoms
 
-When you use an Azure virtual machine (VM) that runs Windows, you encounter the following symptoms:
+When you use an Azure virtual machine (VM) that runs Windows Server 2022 Datacenter Azure Edition, you encounter the following symptoms:
 
 - You see a watermark on the desktop that contains the following message:
 
@@ -32,35 +32,123 @@ When you use an Azure virtual machine (VM) that runs Windows, you encounter the 
 
 - When you open the **Settings** app and select **System** > **Activation**, the **Application state** field indicates an activation failure.
 
-- When you open an elevated Command Prompt window and run the following [slmgr.vbs volume activation script](/windows-server/get-started/activation-slmgr-vbs-options), the output shows that Key Management Services (KMS) activation is successful:
+- When you open an elevated Command Prompt window and run the following [slmgr.vbs volume activation script](/windows-server/get-started/activation-slmgr-vbs-options), the output shows that Key Management Services (KMS) activation is successful, but the first two symptoms remain:
 
-  ```cmd
+  ```console
   cscript c:\windows\system32\slmgr.vbs /dlv
   ```
+- When you restart or sign in to the VM, a pop-up window with the following message is displayed:
 
-## Cause
+  > Your Windows Server 2022 Datacenter Azure Edition VM has been deactivated because you are not running on Azure or a supported Azure Stack hypervisor, or that you have not enabled Azure benefits on the supported Azure Stack. To enable Azure benefits, go to your cluster settings in Windows Admin Center > Enable Azure benefits.
 
-This issue might occur if the Azure VM can't connect to the Azure Instance Metadata Service (IMDS) endpoint that's used to obtain the activation token for Windows.
+## Cause 1: Azure Instance Metadata Service connection issue
 
-## Solution
+The Azure VM can't establish a connection with the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service) endpoint, which is essential for obtaining the activation token.
 
-[IMDS](/azure/virtual-machines/instance-metadata-service) is a REST API that's available at a well-known, non-routable IP address (`169.254.169.254`). The IMDS endpoint is accessible from within the virtual machine only at the following URI: `http://169.254.169.254/metadata/instance`. Communication between the VM and IMDS never leaves the host. Have your HTTP clients bypass web proxies within the VM while they query IMDS. Also, make sure that the clients treat the `169.254.169.254` IP address in the same manner as they treat the [168.63.129.16 IP address](/azure/virtual-network/what-is-ip-address-168-63-129-16). To verify that this direct network connection exists, follow these steps.
+### How to determine if the VM guest OS can successfully communicate with IMDS
+
+Run the following PowerShell script depending on your version of PowerShell to check if the metadata is received from IMDS.
+
+- **PowerShell 6 and later versions**
+
+  ```powershell
+  Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -NoProxy -Uri 
+  http://169.254.169.254/metadata/attested/document?api-version=2020-09-01
+   | Format-List * | Out-File "IMDSResponse1.txt"
+  ```
+
+- **PowerShell 5 and earlier versions**
+
+  ```powershell
+  $Proxy=New-object System.Net.WebProxy
+  $WebSession=new-object Microsoft.PowerShell.Commands.WebRequestSession
+  $WebSession.Proxy=$Proxy
+  Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -Uri "http://169.254.169.254/metadata/instance?api-version=2021-02-01" -WebSession $WebSession
+  ```
+
+If you get a successful response, you'll see the metadata information from the VM, such as the following output:
+
+ ```output
+ compute                                                                                                                                                                  
+ -------                                                                                                                                                                  
+ @{azEnvironment=AzurePublicCloud; customData=; evictionPolicy=; isHostCompatibilityLayerVm=true; licenseType=; location=eastus; name=testWs2022; offer=WindowsServer; ...
+ ```
+
+If not, it means that the connection to the IMDS wire server is blocked somewhere, and access to it needs to be allowed. The IP of the IMDS server is `169.254.169.254`. To fix the connection issue, go to [Solution 1: Bypass web proxies within the VM](#solution-1-bypass-web-proxies-within-the-vm).
+
+## Cause 2: Certificate related issue
+
+Intermediate certificates that are crucial for the activation process have expired.
+
+For more information, see [Azure Instance Metadata Service-Attested data TLS: Critical changes are here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953).
+
+### How to determine if any certificates are missing
+
+Run the following PowerShell script to check for missing certificates:
+
+```powershell
+# Get the signature
+# Powershell 5.1 does not include -NoProxy
+$attestedDoc = Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -Uri http://169.254.169.254/metadata/attested/document?api-version=2018-10-01
+#$attestedDoc = Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -NoProxy -Uri http://169.254.169.254/metadata/attested/document?api-version=2018-10-01
+ 
+# Decode the signature
+$signature = [System.Convert]::FromBase64String($attestedDoc.signature)
+ 
+# Get certificate chain
+$cert = [System.Security.Cryptography.X509Certificates.X509Certificate2]($signature)
+$chain = New-Object -TypeName System.Security.Cryptography.X509Certificates.X509Chain
+ 
+if (-not $chain.Build($cert)) {
+   # Print the Subject of the issuer
+   Write-Host $cert.Subject
+   Write-Host $cert.Thumbprint
+   Write-Host "------------------------"
+   Write-Host $cert.Issuer
+   Write-Host "------------------------"
+   Write-Host "Certificate not found: '$($cert.Issuer)'" -ForegroundColor Red
+   Write-Host "Please refer to the following link to download missing certificates:" -ForegroundColor Yellow
+   Write-Host "https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains" -ForegroundColor Yellow
+} else {
+   # Print the Subject of each certificate in the chain
+   foreach($element in $chain.ChainElements) {
+       Write-Host $element.Certificate.Subject
+       Write-Host $element.Certificate.Thumbprint
+       Write-Host "------------------------"
+   }
+ 
+   # Get the content of the signed document
+   Add-Type -AssemblyName System.Security
+   $signedCms = New-Object -TypeName System.Security.Cryptography.Pkcs.SignedCms
+   $signedCms.Decode($signature);
+   $content = [System.Text.Encoding]::UTF8.GetString($signedCms.ContentInfo.Content)
+   Write-Host "Attested data: " $content
+   $json = $content | ConvertFrom-Json
+}
+
+```
+
+If any certificates are missing, you'll see an output similar to the following one:
+
+```output
+CN=metadata.azure.com, O=Microsoft Corporation, L=Redmond, S=WA, C=US
+3ACCC393D3220E40F09A69AC3251F6F391172C32
+------------------------
+CN=Microsoft Azure RSA TLS Issuing CA 04, O=Microsoft Corporation, C=US
+------------------------
+Certificate not found: 'CN=Microsoft Azure RSA TLS Issuing CA 04, O=Microsoft Corporation, C=US'
+Please refer to the following link to download missing certificates:
+https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains
+```
+
+To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies are configured to allow certificate downloads](#solution-2-ensure-firewalls-and-proxies-are-configured-to-allow-certificate-downloads).
+
+## Solution 1: Bypass web proxies within the VM
+
+[IMDS](/azure/virtual-machines/instance-metadata-service) is a REST API that's available at a well-known, non-routable IP address (`169.254.169.254`). The IMDS endpoint is accessible from within the VM only at the following URI: `http://169.254.169.254/metadata/instance`. Communication between the VM and IMDS never leaves the host. Have your HTTP clients bypass web proxies within the VM while they query IMDS. Also, make sure that the clients treat the `169.254.169.254` IP address in the same manner as they treat the [168.63.129.16 IP address](/azure/virtual-network/what-is-ip-address-168-63-129-16). To verify that this direct network connection exists, follow these steps:
 
 > [!NOTE]
 > `168.63.129.16` is a Microsoft-owned virtual public IP address that's used for communicating with Azure resources.
-
-1. To verify that the Azure VM can reach the IMDS endpoint, open a PowerShell console from within the VM, and then run the following [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod) cmdlet to request metadata from the IMDS endpoint URI:
-
-   ```powershell-interactive
-   $params = @{
-       Uri = "http://169.254.169.254/metadata/instance?api-version=2020-09-01"
-       Headers = @{"Metadata" = "true"}
-       Method = "Get"
-   }
-   Invoke-RestMethod @params | ConvertTo-Json
-   ```
-
-   If the cmdlet is successful, you should see a JSON response that shows the metadata of the VM. (The cmdlet output should resemble the JSON response that's shown in [Access Azure Instance Metadata Service](/azure/virtual-machines/instance-metadata-service#access-azure-instance-metadata-service).) Otherwise, the cmdlet output displays an "Unable to connect to the remote server" error message.
 
 1. To view the local routing table on your VM, run the [route print][route-command] command:
 
@@ -82,7 +170,7 @@ This issue might occur if the Azure VM can't connect to the Azure Instance Metad
 
    In the sample route table output, the IMDS target entry is in the last row, and the corresponding network interface is the value in the `Interface` column within that row. (In this example, the network interface is `172.16.69.7`.)
 
-1. To view the IP configuration of your VM, run the following [ipconfig](/windows-server/administration/windows-commands/ipconfig) command:
+1. To view the IP configuration of your VM, run the [ipconfig](/windows-server/administration/windows-commands/ipconfig) command:
 
      ```powershell-interactive
      ipconfig /all
@@ -109,7 +197,7 @@ This issue might occur if the Azure VM can't connect to the Azure Instance Metad
 
 1. In the IP configuration that you located, copy the Media Access Control (MAC) address and the primary private IP address that the VM uses. The MAC address is shown in the `Physical Address` field, and the primary private IP address is shown in the `IPv4 Address` field. In this example, the MAC address and the primary private IP address are `00-0D-3A-E5-1C-C0` and `172.16.69.7`, respectively.
 
-1. Check whether the MAC and primary private IP addresses that Azure uses for the VM match the MAC address and the primary private IP address that the guest operating system (OS) of the VM actually uses (the addresses that you found in the earlier step). To determine what Azure uses as the MAC address, you use Azure CLI. To determine what Azure uses as the primary private IP address, you examine the network configuration in the Azure portal.
+1. Check whether the MAC and primary private IP addresses that Azure uses for the VM match the MAC address and the primary private IP address that the guest OS of the VM actually uses (the addresses that you found in the earlier step). To determine what Azure uses as the MAC address, you use Azure CLI. To determine what Azure uses as the primary private IP address, you examine the network configuration in the Azure portal.
 
    - Find the MAC address (by using Azure CLI in a PowerShell script)
 
@@ -150,6 +238,19 @@ This issue might occur if the Azure VM can't connect to the Azure Instance Metad
      1. In the **Private IP address** field, copy the displayed IPv4 address.
 
 1. If the MAC addresses or the primary private IP addresses aren't identical between Azure and the VM guest OS, use various [route][route-command] commands to update the routing table so that the primary network interface and IP address are targeted.
+
+## Solution 2: Ensure firewalls and proxies are configured to allow certificate downloads
+
+1. Check if [KB 5036909](https://support.microsoft.com/topic/april-9-2024-kb5036909-os-build-20348-2402-36062ce9-f426-40c6-9fb9-ee5ab428da8c) is installed. If not, install it. You can get it from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5036909).
+2. If you have installed the update but still encounter the issue, verify that your system's firewalls and proxies are configured to allow the download of certificates. For more information, see [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#certificate-downloads-and-revocation-lists).
+
+   Alternatively, you can download and install all the certificates directly from the [root and subordinate certificate authority chains](/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains#root-and-subordinate-certificate-authority-chains).
+  
+   > [!NOTE]
+   > Make sure to select the store location as **Local Machine** in the installation wizard.
+
+3. Open Command Prompt as an administrator, navigate to *c:\windows\system32*, and run *fclip.exe*.
+4. Restart the VM or sign out and then sign in again. You'll see that the watermark on the home page is no longer displayed, and the **Application state** field in the **Settings** > **Activation** screen reports success.
 
 ## More information
 

@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replicat
 
 This article provides some information about the DFS Namespaces service and its configuration data.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 977511
 
 ## Summary

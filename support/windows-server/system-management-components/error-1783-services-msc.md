@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\Microsoft Management Console (MMC), 
 
 This article helps fix the error 1783 that occurs when you open Services.msc.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2028588
 
 ## Symptoms

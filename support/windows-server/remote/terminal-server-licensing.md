@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remot
 
 This article describes Terminal Server licensing. Terminal Server's licensing requirements are different from those of Microsoft Windows NT Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 187629
 
 ## Licenses to connect to Terminal Server
