@@ -10,7 +10,7 @@ ms.custom: sap:Data Unification\Troubleshoot unification results
 # Troubleshoot deduplication, match, or merge results in Dynamics 365 Customer Insights - Data
 
 ## Overview
-When unification runs, you may have questions as to why specific records were unified, or why specific records were not unified. 
+When unification runs, you may have questions as to why specific records were unified, or why specific records weren't unified. 
  
 This article provides several methods you can use to understand the unification process and troubleshoot unexpected results.
 
@@ -25,7 +25,7 @@ The data profiling tool analyzes tables, providing insights into data skews, and
 Read more at [Data Profiling](/dynamics365/customer-insights/data/data-sources#data-profiling).
 
 > [!IMPORTANT]
-> - Validate that there are no corrupt records, which are written to the table called "Corrupt_[SourceEntityName]". If corrupt records are present, they do not get processed by unification. See how to resolve them at [Troubleshooting corrupt data](/troubleshoot/dynamics-365/customer-insights/data/data-ingestion/common-data-ingestion-errors).
+> - Validate that there are no corrupt records, which are written to the table called "Corrupt_{Datasource}_{Table}". If corrupt records are present, they do not get processed by unification. See how to resolve them at [Troubleshooting corrupt data](/troubleshoot/dynamics-365/customer-insights/data/data-ingestion/common-data-ingestion-errors).
 > - If columns being deduplicated or matched on have a low unique count, it is possible they're being skipped by unification for performance reasons. If this is the case, we recommend trying to clean the data prior to ingesting into Customer Insights - Data.
 
 **If there are issues with source data, please resolve them, rerun unification, and re-validate the results. If there are no problems with the source data, continue following the troubleshooting steps.**
@@ -35,9 +35,9 @@ Each step of unification produces system generated output tables that are availa
 
 |Step|Table|Description|
 |----|-----|-----------|
-|Deduplication|Deduplication_DataSource_Table|Deduplicated records for each source table|
-|Match|ConflationMatchPairs|Represents cross-source table matches|
-|Merge|Customer|The final unified customer profile|
+|Deduplication|Deduplication_{Datasource}_{Table}|Deduplicated records for each source table|
+|Match|ConflationMatchPairs|Matched records across source tables|
+|Merge|Customer|The unified customer profiles|
 
 To debug an unexpected unification result, you can trace through these output tables.
 
@@ -62,16 +62,14 @@ Navigate to the "Tables" page in Customer Insights - Data. For each of the outpu
 ### Method 2: Setup Exports
 If there are more than 100k records, this method is recommended.
 
-For each of the output tables, [set up an export](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data/export-manage#set-up-a-new-export).
-
-[Export to blob storage](/dynamics365/customer-insights/data/export-azure-blob-storage) is recommended.
+For each of the output tables, [set up an export](/dynamics365/customer-insights/data/export-manage#set-up-a-new-export). [Export to blob storage](/dynamics365/customer-insights/data/export-azure-blob-storage) is recommended.
 
 Refresh all exports, then the full tables are written to the configured location.
 
 ### Method 3: Create a sandbox instance
 Create a new sandbox instance, recreating the unification configuration on tables that contain a subset of problem records of the original tables.
 
-This ensures that the [Download 100k records](#method-1-download-100k-records) method contains **all** output information.
+This step ensures that the [Download 100k records](#method-1-download-100k-records) method contains **all** output information.
 
 See how to [create a new environment](/dynamics365/customer-insights/data/create-environment).
 
@@ -145,7 +143,7 @@ The Deduplication tables are the source tables deduplicated by the configured ru
 
 |Column    |Source|Type  |Description  |
 |----------|------|------|-------------|
-|PrimaryKey|Customer|String|The source primary key configured [here](/dynamics365/customer-insights/data/data-unification-map-tables#select-primary-key)|
+|PrimaryKey|Source|String|The source primary key configured [here](/dynamics365/customer-insights/data/data-unification-map-tables#select-primary-key)|
 |PrimaryKey_Alternate|System|String|Concatenated list of primary keys identified for a deduplication group|
 |DeduplicationGroup ... DeduplicationGroup_N|System|String|The identifier for the group of similar records based on deduplication rules|
 |Rule ... Rule_N|System|String|Which deduplication rule the deduplication group got matched on|
