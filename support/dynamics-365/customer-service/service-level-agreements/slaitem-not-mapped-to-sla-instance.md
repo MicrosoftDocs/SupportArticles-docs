@@ -15,10 +15,10 @@ This article provides a resolution for an issue where the service-level agreemen
 You can't update cases and entities associated with a legacy SLA in a Unified Interface SLA, and you receive one of the following error messages:
 
 - > System.NullReferenceException: Object reference not set to an instance of an object.  
-- > at Microsoft.Dynamics.SLAManagement.Plugins.SLAInstanceService.GetSLAInstance(String regardingId, Guid slaItemId).
+  > at Microsoft.Dynamics.SLAManagement.Plugins.SLAInstanceService.GetSLAInstance(String regardingId, Guid slaItemId).
 
 - > Exception occured in SLAInstance management custom action:  
-- > Microsoft.Xrm.Sdk.InvalidPluginExecutionException: The SLA KPI instance associated with this entity record does not have the SLA item linked to it.
+  > Microsoft.Xrm.Sdk.InvalidPluginExecutionException: The SLA KPI instance associated with this entity record does not have the SLA item linked to it.
 
 ## Cause
 
