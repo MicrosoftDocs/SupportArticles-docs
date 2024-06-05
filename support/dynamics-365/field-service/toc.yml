@@ -14,6 +14,8 @@
       href: administration/entity-names-duplicated-numbers.md
     - name: '"The user has not been assigned any roles" error'
       href: administration/user-has-no-roles.md
+    - name: Temporarily disable automatic geo coding
+      href: administration/disable-auto-geo-code.md
 - name: Customization
   items:
     - name: Can't delete record due to a restrict-delete association
