@@ -10,7 +10,7 @@ ms.service: virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 05/26/2022
+ms.date: 06/05/2024
 ms.author: genli
 ---
 # How to reset network interface for Azure Windows VM
