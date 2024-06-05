@@ -208,9 +208,6 @@ After you update these registry entries, allow time for the changes to replicate
 
 Another option is to forcibly remove the forest from the source domain controller by demoting it to a member server. Afterwards, clean up the server's metadata in the forest and then re-promote the server. This action re-installs AD DS, and then a fresh copy of the forest data replicates to the new domain controller.
 
-> [!NOTE]  
-> The following procedure uses Windows PowerShell commands to demote the domain controller. You can also use Server Manager to demote a domain controller. For more information about the Server Manager method, see [Demoting Domain Controllers and Domains](/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-).
-
 To remove and recreate the source domain controller, follow these steps:
 
 1. On the source domain controller, open an administrative PowerShell window and then run the following command:
@@ -220,7 +217,7 @@ To remove and recreate the source domain controller, follow these steps:
    ```
 
    > [!NOTE]  
-   > You can also use the Server Manager Remove Roles and Features wizard to perform this task. In the wizard, make sure that you select **Force the removal of this domain controller**. For more information, see [Demoting Domain Controllers and Domains: Credentials](/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-#credentials).
+   > You can also use the Remove Roles and Features wizard in Server Manager to perform this task. In the wizard, make sure that you select **Force the removal of this domain controller**. For more information, see [Demoting Domain Controllers and Domains: Credentials](/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-#credentials).
 
 1. In the forest, clean up the metadata that's related to the demoted domain controller.
 
