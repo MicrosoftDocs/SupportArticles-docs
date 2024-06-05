@@ -175,7 +175,7 @@ Subtracting the minimum value from the maximum value produces a value of 1,983.
 
 ### Determine the Semaphore Acquires value
 
-Similar to the **Semaphore Timeouts** value, the **Semaphore Acquires** data is cumulative over the duration that Performance Monitor displays.  
+Similar to the **Semaphore Timeouts** value, the **Semaphore Acquires** data is cumulative over the duration period that appears in Performance Monitor.  
 
 :::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-timeouts-90-sec-sample.png" alt-text="Screenshot that shows time-outs data over a 90-second duration in Performance Monitor.":::  
 
