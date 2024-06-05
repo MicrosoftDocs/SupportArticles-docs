@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, error
 
 This article describes how to troubleshoot registry corruption issues.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 822705
 
 ## Summary

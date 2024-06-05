@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\App, Process, Service Performance (slow, unres
 
 This article provides a workaround for an issue that occurs when you try to set page files on a partition that is larger than 2 terabytes.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 973423
 
 ## Symptoms

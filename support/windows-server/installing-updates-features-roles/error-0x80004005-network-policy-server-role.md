@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article provides a solution to fix the error 0x80004005 that occurs when you install or start the Network Policy Server role service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 981478
 
 ## Symptoms

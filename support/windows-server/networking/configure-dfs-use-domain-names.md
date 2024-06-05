@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replicat
 
 This article describes how to configure a DFSN server to operate in that environment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 244380
 
 ## Summary

@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivit
 
 This article provides a solution to an issue where the user is still prompted for permissions to allow the Remote Control even though you uncheck **Require User's permission** under the **Remote Control** tab.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2690875
 
 ## Symptoms

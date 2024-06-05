@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (V
 
 This article describes an issue that occurs when you restore a virtual machine while another backup that uses the Hyper-V writer is in progress.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 978773
 
 ## Symptoms

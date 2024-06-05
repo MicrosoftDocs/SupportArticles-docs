@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Active Directory Federation Service
 
 This article discusses workflow troubleshooting for authentication issues for federated users in Microsoft Entra ID or Office 365.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3079872
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstrouble
 
 This article helps you solve the problems of Kerberos authentication failure when a user belongs to many groups.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 327825
 
 ## Symptoms

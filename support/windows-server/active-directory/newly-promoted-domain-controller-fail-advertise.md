@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 
 This article describes an issue where a newly promoted domain controller fails to advertise after completion of DCpromo.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 967336
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Addi
 
 This article provides a solution to fix the error 0xc000005e that occurs when you create a failover cluster with Windows Server 2012.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2830510
 
 ## Symptoms

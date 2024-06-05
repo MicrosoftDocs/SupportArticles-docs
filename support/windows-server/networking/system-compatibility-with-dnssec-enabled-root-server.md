@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 
 This article describes the impact and compatibility story with DNSSEC enabled root servers for Windows client and server operating systems as well computers hosting the DNS Server role.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2028240
 
 ## Summary

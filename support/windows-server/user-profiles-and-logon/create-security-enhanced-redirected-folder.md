@@ -13,7 +13,6 @@ ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 
 This article describes how to dynamically create security-enhanced redirected folders or home folders.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 274443
 
 ## Summary

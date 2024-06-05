@@ -13,7 +13,6 @@ ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 
 This article provides a solution to an error that occurs when you try to validate a copy of Windows.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2715304
 
 ## Symptoms

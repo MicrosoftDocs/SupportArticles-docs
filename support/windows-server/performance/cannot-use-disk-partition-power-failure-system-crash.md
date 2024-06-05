@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, error
 
 This article describes a problem in which you can't properly format or use a disk partition that was created immediately before a system crash or power failure.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2539626
 
 ## Symptoms

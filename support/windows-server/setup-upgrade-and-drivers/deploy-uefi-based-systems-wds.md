@@ -13,7 +13,6 @@ ms.custom: sap:Windows Device and Driver Management\Peripherals driver installat
 
 This article discusses the support for deploying to UEFI-based systems from Windows Deployment Services (WDS).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2938884
 
 ## More information

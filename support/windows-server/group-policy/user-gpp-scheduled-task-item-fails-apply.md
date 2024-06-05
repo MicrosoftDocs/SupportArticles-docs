@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 
 This article provides a solution to an issue where User Group Policy Preference (GPP) Scheduled Task item fails to apply.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2447414
 
 ## Symptoms

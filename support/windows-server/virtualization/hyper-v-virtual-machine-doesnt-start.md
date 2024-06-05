@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine setti
 
 This article provides a solution to a 0x80070057 error that occurs when you try to start a virtual machine.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3084322
 
 ## Symptoms  

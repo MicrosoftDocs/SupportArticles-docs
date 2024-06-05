@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configu
 
 This article describes the initialization process of a Terminal Server and describes what occurs when a user connects to the server and runs an application.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186572
 
 ## Windows Terminal Server Initialization

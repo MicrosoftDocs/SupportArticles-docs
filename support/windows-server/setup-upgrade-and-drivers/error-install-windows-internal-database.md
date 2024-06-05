@@ -13,7 +13,6 @@ ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Win
 
 This article works around an issue where you can't install Windows Internal Database (WID) on a computer running Windows Server 2012.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2832204
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hype
 
 This article provides a solution to issues where Hyper-V VMM service fails and event ID 14050 is logged when the dynamicportrange setting is changed.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2761899
 
 ## Symptoms

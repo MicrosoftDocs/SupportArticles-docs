@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroub
 
 This article provides a solution to an issue that occurs when you reboot an AD LDS server that holds FSMO roles or restart an AD LDS instance on that server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2547569
 
 ## Symptoms

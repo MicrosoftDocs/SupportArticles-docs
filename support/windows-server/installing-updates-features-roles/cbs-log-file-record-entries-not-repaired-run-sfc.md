@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article describes an issue where the CBS.log file records entries when a static file changes. Because the static file isn't protected by the Windows Resource Protection feature, the feature reports the change in the CBS.log file.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954402
 
 ## Symptoms

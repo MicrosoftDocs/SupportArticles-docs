@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel a
 
 This article provides a solution to detected secure channel problems.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2753702
 
 ## Symptoms

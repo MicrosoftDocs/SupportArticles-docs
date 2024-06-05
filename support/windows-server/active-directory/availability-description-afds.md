@@ -14,7 +14,6 @@ ms.custom: sap:Windows Security Technologies\Active Directory Federation Service
 
 This article provides availability and description of Active Directory Federation Services 2.0.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 974408
 
 ## Introduction

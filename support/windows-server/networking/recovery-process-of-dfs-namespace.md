@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replicat
 
 This article describes the methods by which to recover a Distributed File System Namespace (DFSN) in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 969382
 
 ## Rapid publishing

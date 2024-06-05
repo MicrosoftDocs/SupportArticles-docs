@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article provides a workaround for an issue that triggers an error when you restart a Windows Server 2012 R2-based computer after you install updates.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3074603
 
 ## Symptoms

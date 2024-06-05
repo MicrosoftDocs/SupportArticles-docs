@@ -12,8 +12,6 @@ ms.custom: sap:Windows Security Technologies\AD Object Permissions, access contr
 
 # How to evaluate effective permissions for resources on remote computers
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
-
 ## Symptoms and causes
 
 When you check a user's effective permissions on a remote resource, you sometimes see incorrect results or errors.

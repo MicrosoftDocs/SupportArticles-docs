@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, error
 
 This article helps fix an issue that you're unable to start virtual machines because of incorrect DEP setting in BIOS.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2490458
 
 ## Symptoms
