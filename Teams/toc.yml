@@ -15,7 +15,9 @@
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Issues receiving messages and calls
       href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
-    - name: Resolve the new Teams installation issues
+    - name: Resolve issues when starting the new Teams app
+      href: ./teams-sign-in/resolve-new-teams-launch-issues.md
+    - name: Resolve new Teams installation issues
       href: ./teams-administration/fix-new-teams-installation-issues.md
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
@@ -193,8 +195,6 @@
       href: ./provisioning/deleting-team-also-deletes-group.md
   - name: Sign-in
     items:
-    - name: Resolve issues when starting the new Teams app
-      href: ./teams-sign-in/resolve-new-teams-launch-issues.md
     - name: Resolve sign-in errors
       href: ./teams-sign-in/resolve-sign-in-errors.md
     - name: Someone has already setup Teams for your organization
