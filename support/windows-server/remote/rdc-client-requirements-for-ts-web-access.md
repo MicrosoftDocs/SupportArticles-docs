@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Application compati
 
 This article describes the Remote Desktop Connection (RDC) client requirements to use Terminal Services Web Access in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 943887
 
 ## Introduction

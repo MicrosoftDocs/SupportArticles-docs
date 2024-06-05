@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article helps to fix the error 0x800f0922 that occurs when the Microsoft Multipath I/O (MPIO) feature installation fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 3008079
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configu
 
 This article provides a solution to an issue where Remote Desktop Services fails to install and you get the error code 0x800706D9.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2027551
 
 ## Symptoms

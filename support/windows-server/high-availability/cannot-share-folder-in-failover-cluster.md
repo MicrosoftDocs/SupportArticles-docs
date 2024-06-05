@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, 
 
 This article provides a solution to an error that occurs when you provision a shared folder on a cluster physical disk resource.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947051
 
 ## Beta Information

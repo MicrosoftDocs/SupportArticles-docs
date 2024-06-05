@@ -13,7 +13,6 @@ ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Win
 
 This article provides a solution to an issue that occurs when you start the Windows Deployment Services (WDS) server, the WDS server may not start.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954410
 
 ## Symptoms

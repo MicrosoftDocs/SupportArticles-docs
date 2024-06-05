@@ -13,7 +13,6 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Credential Roami
 
 This article provides a solution to an issue that certificate used by Wired or Wireless Network policies is missing in GPO settings report.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4047738
 
 ## Symptoms

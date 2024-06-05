@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\IP Address Management (IPAM
 
 This article provides a resolution for the issue that an incorrect IP address is returned, when you ping a server by using its NetBIOS name.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 981953
 
 ## Symptoms

@@ -13,8 +13,6 @@ ms.custom: sap:Group Policy\Applocker or software restriction policies , csstrou
 
 This article describes common problems and solutions when troubleshooting Software Restriction Policies (SRP) beginning with Windows Server 2008 and Windows Vista.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 ## Introduction
 
 Software Restriction Policies (SRP) is Group Policy-based feature that identifies software programs running on computers in a domain and controls the ability of those programs to run. You use software restriction policies to create a highly restricted configuration for computers, in which you allow only identified applications to run. These applications are integrated with Microsoft Active Directory Domain Services and Group Policy but can also be configured on stand-alone computers. For more information about SRP, see [Software Restriction Policies](/windows-server/identity/software-restriction-policies/software-restriction-policies).

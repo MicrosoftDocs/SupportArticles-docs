@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory Lightweight Directory Services 
 
 This article provides a resolution for the issue that numerous "Event ID 1216" Events occur in Directory Services Event Log.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 246717
 
 > [!NOTE]

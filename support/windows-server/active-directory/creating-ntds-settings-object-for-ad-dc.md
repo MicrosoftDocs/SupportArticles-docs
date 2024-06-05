@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstro
 
 This article provides a solution to an issue where Active Directory installation fails with an error: Creating the NTDS Settings object for this Active Directory Domain Controller on the remote AD DC.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 2737935
 
 ## Symptoms

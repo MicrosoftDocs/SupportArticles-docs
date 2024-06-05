@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 
 Certain operations are best done on a single domain controller. This article describes the placement of Active Directory Flexible Single-Master Operation (FSMO) roles in the domain and forest for these operations.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 223346
 
 ## More information

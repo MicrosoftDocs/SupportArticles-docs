@@ -13,7 +13,6 @@ ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not r
 
 This article helps fixes the printer redirection failures and hard drive redirection failures because of incorrect registry settings.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2492632
 
 ## Symptoms

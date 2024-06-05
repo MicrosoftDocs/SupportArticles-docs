@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM
 
 This article provides a workaround for an issue in which Task Manager shows the memory speed to be higher or lower than the speed that is reported in the BIOS.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2019, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 3070928
 
 ## Symptoms

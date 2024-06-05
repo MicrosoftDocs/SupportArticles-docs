@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Security filtering and item-level targeting, csstrou
 
 This article provides some information about Group Policy Preferences Events.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2002507
 
 ## Summary

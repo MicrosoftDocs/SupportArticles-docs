@@ -15,8 +15,6 @@ keywords: ProfSvc
 
 This article describes how to optimize slow link detection to effectively balance the quality of the bandwidth estimate against the amount of time spent calculating the estimate.
 
-_Applies to:_ &nbsp; Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
-
 ## Summary
 
 Windows User Profile Service can use slow link detection to determine whether to download a roaming user profile to the client computer when the user signs in. If the service determines that the connection to the client computer is slow, the client skips the download. Instead, it loads the local copy of the roaming user profile. The service also records an event that resembles the following:

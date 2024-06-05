@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 
 This article helps fix an issue that triggers an error when the central store contains the .admx files from Windows 10.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 3077013
 
 ## Symptoms

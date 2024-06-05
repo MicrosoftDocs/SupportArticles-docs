@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, an
 
 This article describes how attributes that contain a date/time value can be converted to standard meaningful date/time formats.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 555936
 
 ## Summary

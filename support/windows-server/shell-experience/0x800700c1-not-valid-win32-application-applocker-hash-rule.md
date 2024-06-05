@@ -13,7 +13,6 @@ ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft 
 
 This article describes an issue in which you can't create an AppLocker hash rule for a file in Windows.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2749690
 
 ## Symptoms

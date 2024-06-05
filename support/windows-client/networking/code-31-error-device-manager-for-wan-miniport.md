@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth
 
 This article provides a workaround for an issue where Device Manager displays a yellow exclamation mark next to the WAN Miniport (Network monitor) device.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2871372
 
 ## Symptoms

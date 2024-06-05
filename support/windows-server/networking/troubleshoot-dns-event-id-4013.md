@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 
 This article resolves the event ID 4013 logged in the DNS event log of domain controllers that are hosting the DNS server role after Windows starts.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2001093
 
 ## Symptoms

@@ -1,7 +1,7 @@
 ---
 title: Event ID 10 is logged
 description: Discusses a problem in which an event ID 10 message is logged in the Application log after you install Windows Vista SP1. Provides a workaround.
-ms.date: 12/26/2023
+ms.date: 06/04/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\WMI management and troubleshooting, 
 
 This article provides a resolution for the issue that Event ID 10 is logged in the Application log.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 950375
 
 ## Symptoms
@@ -53,13 +52,11 @@ This problem occurs if the WMI filter is accessed without sufficient permission.
 
 ## Resolution
 
-To resolve this problem, run the script that is provided at the following Script Center website:
-
+To resolve this problem, run the script that is provided at the following Script Center website:  
 [Event ID 10 is logged in the Application log on Windows Vista](https://gallery.technet.microsoft.com/scriptcenter/event-id-10-is-logged-in-c5984711)  
 
-This problem also occurs in Windows 7 and Windows Server 2008 R2. To resolve the problem in those systems, use the Fix it solution that is available in the following Microsoft Knowledge Base article:
-
-[2545227 Event ID 10 is logged in the Application log after you install Service Pack 1 for Windows 7 or Windows Server 2008 R2](https://support.microsoft.com/help/2545227)  
+This problem also occurs in Windows 7 and Windows Server 2008 R2. To resolve the problem in those systems, use the Fix it solution that is available in the following Microsoft Knowledge Base article:  
+[Event ID 10 is logged in the Application log after you install Service Pack 1 for Windows 7 or Windows Server 2008 R2](../setup-upgrade-and-drivers/event-10-is-logged-in-application-log.md)  
 
 ## More information
 

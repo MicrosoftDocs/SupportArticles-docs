@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\WMI management and troubleshooting, 
 
 This article provides a solution to fix the Microsoft-Windows-RPC-Events event 11 that occurs when you run the Server Manager Snap-in (servermanager.msc) for extended periods of time or start the Resource Host Monitor (rhs.exe) hosting FileServer Resource.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 974814
 
 ## Symptom

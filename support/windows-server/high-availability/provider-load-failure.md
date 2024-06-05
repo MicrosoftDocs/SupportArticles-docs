@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Addi
 
 This article provides a solution to an error that occurs when you try to add a node to a Windows Server 2008-based Failover Cluster.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2854337
 
 ## Symptoms

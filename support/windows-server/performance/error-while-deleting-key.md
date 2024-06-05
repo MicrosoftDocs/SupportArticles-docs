@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Performance (slow, unresponsive, high C
 
 This article provides a resolution to solve the **Error while deleting key** error that occurs when trying to remove certain registry keys.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2021860
 
 ## Symptoms

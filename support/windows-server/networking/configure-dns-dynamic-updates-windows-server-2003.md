@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 
 This article describes how to configure the DNS update functionality in Windows.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows 10  
 _Original KB number:_ &nbsp; 816592
 
 ## Summary

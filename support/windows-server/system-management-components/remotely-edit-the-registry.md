@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\Microsoft Management Console (MMC), 
 
 This article describes how to remotely edit the registry of a client computer from a host computer after you use Remote Recover to connect the host computer to the client computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 934958
 
 ## Introduction

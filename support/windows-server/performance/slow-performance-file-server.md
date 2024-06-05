@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Performance (slow, unresponsive, high C
 
 This article provides a solution to performance issues that occur when you work with files that are located on a file server.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 822219
 
 ## Symptoms

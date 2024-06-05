@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\File Server Resource Manager 
 
 This article helps fix an error that occurs when starting the File Server Resource Manager in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2831687
 
 ## Symptoms

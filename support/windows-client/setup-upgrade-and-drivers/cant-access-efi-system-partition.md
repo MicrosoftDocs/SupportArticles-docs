@@ -13,7 +13,6 @@ ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Win
 
 This article provides a solution to an issue that you can't gain access to the Extensible Firmware Interface (EFI) system partition by using the `mountvol /s` command when you  use the Mountvol utility (Mountvol.exe) in a WinPE Environment.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315943
 
 ## Symptoms

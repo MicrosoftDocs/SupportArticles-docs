@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (include
 
 This article provides workarounds for an issue where you can't connect to a remote computer or start a remote application when you use TS Web Access or Remote Web Workspace.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951607
 
 ## Symptoms

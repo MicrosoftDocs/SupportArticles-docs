@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remot
 
 This article describes the methods to configure listener certificates on a Windows Server 2012-based or Windows Server 2012-based server that is not part of a Remote Desktop Services (RDS) deployment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3042780
 
 ## About Remote Desktop server listener availability

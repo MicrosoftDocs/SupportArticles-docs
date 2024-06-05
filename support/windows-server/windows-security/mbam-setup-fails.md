@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 
 This article provides help to fix an error that occurs when you install Microsoft BitLocker Administration and Monitoring (MBAM) Compliance and Audit Reports feature.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2668533
 
 ## Symptoms

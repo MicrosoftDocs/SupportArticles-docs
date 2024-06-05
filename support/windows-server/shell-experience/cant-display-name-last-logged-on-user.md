@@ -13,7 +13,6 @@ ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe
 
 This article describes how to prevent the name of the last logged-on user from being displayed in the **Log On to Windows** dialog box.
 
-_Applies to:_ &nbsp; Windows 10 - all editions,  Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324740
 
 ## Summary

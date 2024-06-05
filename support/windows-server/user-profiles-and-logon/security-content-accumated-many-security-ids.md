@@ -13,7 +13,6 @@ ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logo
 
 This article discusses an issue where you get a 1384 error when you log on to a domain or connect to a network share on a server.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 275266
 
 ## Symptoms

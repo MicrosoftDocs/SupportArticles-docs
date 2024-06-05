@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Windows Firewall with Advan
 
 This article describes how to use the `netsh advfirewall` firewall context instead of the `netsh firewall` context to control Windows Firewall behavior.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947709
 
 ## Summary

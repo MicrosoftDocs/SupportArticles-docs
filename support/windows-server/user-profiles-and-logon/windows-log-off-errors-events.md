@@ -13,7 +13,6 @@ ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logo
 
 This article contains a step-by-step method to help you resolve the log-off problems in Windows XP, in Windows Server 2003, in Windows 2000, and in Windows NT 4.0.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10  
 _Original KB number:_ &nbsp; 837115
 
 ## Introduction
