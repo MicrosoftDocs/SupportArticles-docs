@@ -164,14 +164,14 @@ Here are the explanations for the command parameters:
 - `-l app=test-pod`: Only show data to/from pods with the label `app=test-pod`.
 - `-o columns=k8s,id,qtype,qr,name,rcode,numAnswers,addresses`: Only show Kubernetes information, DNS query ID, query
   type, query/response, DNS name, DNS response result, the number of answers, and IP addresses in the response.
-- `-F name:~myheadless`: Only include DNS packets that pass the `~headless` regex check.
+- `-F name:~myheadless`: Only include DNS packets that pass the `~myheadless` regex check.
 
 You can use `NUMANSWERS` and `ADDRESSES` values to match against the values you get from `kubectl get ep myheadless`.
 
 ```bash
 $ kubectl get ep myheadless 
 NAME                  ENDPOINTS                           AGE 
-my-headless-service   10.244.2.18:8080,10.244.2.19:8080   10d 
+myheadless            10.244.2.18:8080,10.244.2.19:8080   10d 
 ```
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
