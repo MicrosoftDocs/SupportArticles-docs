@@ -8,7 +8,7 @@ ms.date: 06/05/2024
 ---
 # Troubleshoot DNS failures across an AKS cluster in real-time
 
-This article discusses methods for troubleshooting Domain Name System (DNS) failures across an Azure Kubernetes Service (AKS) cluster in real-time. DNS problems within Kubernetes can disrupt communication between pods, services, and external resources, which results in application failures and degraded performance.
+Domain Name System (DNS) problems within Kubernetes can disrupt communication between pods, services, and external resources, which results in application failures and degraded performance. This article discusses how to troubleshoot DNS failures across an Azure Kubernetes Service (AKS) cluster in real-time.
 
 > [!NOTE]
 > This article is complementary to the [Troubleshoot DNS resolution failures from inside the pod](troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md) guide.
@@ -38,7 +38,9 @@ The following table outlines the common symptoms that you might observe in an AK
 - Familiarity with [Gadgets](../logs/capture-system-insights-from-aks.md#gadgets).
 - [Inspektor Gadget DNS gadget](https://www.inspektor-gadget.io/docs/v0.28.0/builtin-gadgets/trace/dns/). It's used in all troubleshooting steps below.
 
-## Troubleshooting step 1: Identify unsuccessful DNS responses across the cluster
+To troubleshoot DNS failures across an AKS cluster, use the instructions in the following sections.
+
+## Step 1: Identify unsuccessful DNS responses across the cluster
 
 You can identify all the unsuccessful DNS responses across the cluster using the DNS gadget. To perform this check, trace DNS packets on all the nodes and filter for unsuccessful responses using the following command:
 
@@ -66,7 +68,7 @@ Here are some causes of unsuccessful DNS responses:
 - Upstream DNS nameservers are facing issues.
 - DNS name becomes invalid after expansion. To understand how DNS queries might be expanded using Pod's `/etc/resolv.conf`, see the [Namespaces of Services](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#namespaces-of-services) .
 
-## Troubleshooting step 2: Identify slow DNS queries across the cluster
+## Step 2: Identify slow DNS queries across the cluster
 
 You can identify all the slow DNS queries across the cluster using the DNS gadget. To perform this check, trace DNS packets on all the nodes and filter slow responses. 
 
@@ -92,7 +94,7 @@ Here are some causes of slow DNS queries:
 - Networking issues in the cluster.
 - Unavailability of CoreDNS pods. To verify the pods are running fine, follow the troubleshooting steps in [Troubleshoot DNS resolution failures from inside the pod](troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md).
 
-## Troubleshooting step 3: Verify the health of upstream DNS servers
+## Step 3: Verify the health of upstream DNS servers
 
 You can verify the health of upstream DNS servers used by CoreDNS using the DNS gadget. If applications try
 to reach external domains, the queries are forwarded to upstream DNS servers via CoreDNS. To understand the health
@@ -122,7 +124,7 @@ You can use `ID`, `RCODE` and `LATENCY` values to establish the health of the up
 - DNS response (`QR=R`) has `RCODE` other than `No Error`, for example, Server Failure and Query Refused. For more
   information, see gopacket for [possible values of rcode](https://github.com/google/gopacket/blob/32ee38206866f44a74a6033ec26aeeb474506804/layers/dns.go#L151-L194).
 
-## Troubleshooting step 4: Verify DNS queries get responses in a timely manner
+## Step 4: Verify DNS queries get responses in a timely manner
 
 You can verify that a particular DNS query gets a response in a timely manner by using DNS gadget. To perform this check, filter events with a DNS name and match the query/response IDs:
 
@@ -145,7 +147,7 @@ Here are the explanations for the command parameters:
 
 The `ID` value (for example, `97b3`) can be used to correlate the queries with responses. You also can use the `LATENCY` value to validate that you get the responses in a timely manner.
 
-## Troubleshooting step 5: Verify DNS responses contain expected IP addresses
+## Step 5: Verify DNS responses contain expected IP addresses
 
 You can verify that a particular DNS query gets an expected response by using DNS gadget. For example, for a [headless service](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services) (named *myheadless*), you would expect the response to contain IP addresses for all the pods.
 
