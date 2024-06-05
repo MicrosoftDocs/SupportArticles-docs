@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstrouble
 
 This article provides a solution to an issue that Single Sign On (SSO) profile with pre-logon fails during user logon after a restart.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3063910
 
 ## Symptoms

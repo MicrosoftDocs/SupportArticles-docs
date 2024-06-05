@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine setti
 
 This article describes that Windows OS running in the management partition only use up to a maximum of 64 root Virtual Processors (root VPs).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2812283
 
 ## Summary

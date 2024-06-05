@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 
 This article discusses how to upgrade Microsoft Windows 2000 domain controllers to Windows Server 2003 and how to add new Windows Server 2003 domain controllers to Windows 2000 domains.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 325379
 
 ## Summary

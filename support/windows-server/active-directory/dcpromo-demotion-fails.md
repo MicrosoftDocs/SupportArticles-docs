@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 
 This article solves an issue where the demotion of a Windows Server computer that hosts the Active Directory Domain Services (AD DS) or domain controller server role fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2694933
 
 ## Symptoms

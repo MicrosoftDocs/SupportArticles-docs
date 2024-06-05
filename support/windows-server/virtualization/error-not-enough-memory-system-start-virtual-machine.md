@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubl
 
 This article provides a workaround for an issue that prevents a Windows Server 2012 R2-based virtual machine from running. This issue occurs even though Task Manager indicates that there's sufficient available memory.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2962295
 
 ## Symptoms

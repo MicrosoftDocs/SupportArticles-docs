@@ -13,7 +13,6 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 
 This article helps fix an issue where the CNG or 2008 templates don't appear in the Advanced Certificate Request template pulldown menu.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2015796
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB)
 
 This article lists the hotfixes that are currently available for users who have installed the File Services technologies on a Windows Server 2012-based computer or a Windows Server 2012 R2-based computer.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2899011
 
 ## Summary

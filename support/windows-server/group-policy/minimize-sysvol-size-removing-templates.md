@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
 
 This article describes how to minimize SYSVOL size by removing administrative templates (.adm files).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 813338
 
 ## Summary

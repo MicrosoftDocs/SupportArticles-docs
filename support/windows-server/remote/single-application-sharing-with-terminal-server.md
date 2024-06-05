@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivit
 
 This article describes how to set up a Terminal Server and Terminal Server Client for single-application sharing.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186608
 
 ## Summary

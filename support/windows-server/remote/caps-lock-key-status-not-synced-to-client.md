@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Redirection (not pr
 
 This article provides a solution to an issue where the Caps Lock key status change triggered by an application in a remote computer isn't synchronized back to the client computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3120433
 
 ## Symptoms

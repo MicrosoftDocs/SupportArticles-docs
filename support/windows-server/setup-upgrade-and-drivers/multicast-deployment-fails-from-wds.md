@@ -13,7 +13,6 @@ ms.custom: sap:Windows Setup, Upgrade and Deployment\Sysprep and imaging (Window
 
 This article provides a solution to an issue where deploying an image from a Windows Deployment Services (WDS) server by using multicast fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2582106
 
 ## Symptoms

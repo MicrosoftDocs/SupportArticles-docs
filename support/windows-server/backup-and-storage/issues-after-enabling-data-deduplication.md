@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication , csstroublesho
 
 This article describes some known issues that may occur after you enable data deduplication on CSV.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2906888
 
 ## Summary

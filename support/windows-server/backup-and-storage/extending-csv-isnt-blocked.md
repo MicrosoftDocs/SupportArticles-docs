@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk erro
 
 This article provides a solution to an issue where extending a Cluster Shared Volume by using Diskpart or PowerShell isn't blocked from a non-coordinator node.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3189825
 
 ## Symptoms

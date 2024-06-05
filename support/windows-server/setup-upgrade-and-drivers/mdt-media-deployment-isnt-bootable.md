@@ -13,7 +13,6 @@ ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Win
 
 This article provides a solution to an error that occurs when you try to boot a Microsoft Deployment Toolkit 2012 Update 1 media deployment USB drive on a x86 UEFI-based system.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2845990
 
 ## Symptoms

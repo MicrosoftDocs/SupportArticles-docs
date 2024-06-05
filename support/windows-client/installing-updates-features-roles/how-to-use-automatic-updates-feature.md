@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article explains how to use the Automatic Updates feature in Windows Server 2003, in Windows XP, and in Windows 2000.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 327838
 
 ## Summary

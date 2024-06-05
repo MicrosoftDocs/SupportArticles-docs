@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 
 This article provides a solution to an issue where you receive a warning message "computer record is rejected" when using Microsoft BitLocker Administration and Monitoring (MBAM).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 2612822
 
 ## Symptoms

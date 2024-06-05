@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes how to troubleshoot a problem where Active Directory replication fails and generates error 8453: Replication access was denied.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2022387
 
 > [!NOTE]

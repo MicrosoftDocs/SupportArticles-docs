@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configu
 
 This article summarizes the available hotfixes and updates for issues that can occur in Remote Desktop Services for Microsoft Windows Server 2012 R2 environments.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2933664
 
 ## Summary

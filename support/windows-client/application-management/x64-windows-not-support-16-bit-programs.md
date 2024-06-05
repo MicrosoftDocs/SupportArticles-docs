@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\App, Process, Service Reliability (crash, erro
 
 This article discusses the lack of support for 16-bit components, 16-bit processes, or 16-bit applications in x64-based versions Windows.
 
-_Applies to:_ &nbsp; Window 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 896458
 
 ## Summary

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstrou
 
 This article describes how to make domain controllers to reply to LDAP Ping.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3088277
 
 ## Symptoms

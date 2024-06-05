@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstr
 
 This article explains how Windows account validation is observed to function during network access using the NTLM protocol.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 103390
 
 ## Summary

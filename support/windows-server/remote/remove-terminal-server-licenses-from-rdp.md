@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remot
 
 This article describes how to remove Terminal Server licenses from a Remote Desktop Protocol (RDP) client.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 187614
 
 ## Summary

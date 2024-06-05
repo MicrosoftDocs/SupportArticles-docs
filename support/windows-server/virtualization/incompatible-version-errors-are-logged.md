@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hype
 
 This article provides a solution to an issue that occurs when you start Windows Server 2008 R2 as a Windows Server 2008 Hyper-V guest.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 972108
 
 ## Symptoms

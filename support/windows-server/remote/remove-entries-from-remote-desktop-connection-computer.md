@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (include
 
 This article describes how to remove entries from the **Remote Desktop Connection Computer** box.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 312169
 
 > [!IMPORTANT]

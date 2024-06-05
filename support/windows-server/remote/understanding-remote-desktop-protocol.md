@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configu
 
 This article describes the Remote Desktop Protocol (RDP) that's used for communication between the Terminal Server and the Terminal Server Client. RDP is encapsulated and encrypted within TCP.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186607
 
 ## Summary

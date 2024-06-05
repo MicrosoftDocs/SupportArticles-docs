@@ -11,7 +11,6 @@ ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM
 ---
 # RAM, virtual memory, pagefile, and memory management in Windows
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2160852
 
 ## Summary

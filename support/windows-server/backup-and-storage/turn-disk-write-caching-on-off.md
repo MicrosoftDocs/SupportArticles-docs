@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware , csstrouble
 
 This article describes steps to manually turn disk write caching on or off.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324805
 
 ## Summary

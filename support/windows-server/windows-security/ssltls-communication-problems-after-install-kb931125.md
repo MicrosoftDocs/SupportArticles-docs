@@ -13,8 +13,6 @@ ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel a
 
 This article provides a solution to SSL/TLS communication problems that occur after you install KB 931125.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1,  Windows Server 2012 R2
-
 _Original KB number:_ &nbsp; 2801679
 
 ## Symptoms

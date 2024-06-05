@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Configuration (page file, startup or ru
 
 This article describes the parameters for the Process Control service components.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 296930
 
 ## Summary

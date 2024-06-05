@@ -15,7 +15,6 @@ This article provides a solution to an issue where Transmission Control Protocol
 
 You may also notice requests on User Datagram Protocol (UDP) ports 88 and 464 don't get a response.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 2000061
 
 You're running the Windows Server roles Active Directory Domain Services (AD DS) or Active Directory Lightweight Directory Services (AD LDS). Sporadically, you experience a situation where TCP sessions created to the server ports 88, 464, 389 and 3268 are reset. Sessions using Secure Sockets Layer (SSL) or Transport Layer Security (TLS) on ports 636 and 3269 are also affected.

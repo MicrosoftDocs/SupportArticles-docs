@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Windows Firewall with Advan
 
 Turning on a firewall may prevent you from searching or sharing files with other computers on a home network.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 298804
 
 ## Symptoms

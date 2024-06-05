@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 
 This article provides methods to troubleshoot Domain Name System (DNS) name resolution on the Internet in Microsoft Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 816567
 
 ## Summary

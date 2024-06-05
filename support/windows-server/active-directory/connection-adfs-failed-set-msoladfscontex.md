@@ -11,7 +11,6 @@ ms.custom: sap:Windows Security Technologies\Active Directory Federation Service
 ---
 # Error when you use the Set-MsolADFSContext command: The connection to \<ServerName> Active Directory Federation Services 2.0 server failed
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 2587730
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Connection Broker a
 
 This article helps fix an issue that makes a Remote Desktop Server (RDS) farm unavailable in a Windows Server 2008 environment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3123137
 
 ## Symptoms

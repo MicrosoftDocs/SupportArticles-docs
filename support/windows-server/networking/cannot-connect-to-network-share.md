@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB)
 
 This article provides workarounds to solve the error messages that occur when you try to use different user credentials to connect to the other network share.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 938120
 
 ## Symptoms

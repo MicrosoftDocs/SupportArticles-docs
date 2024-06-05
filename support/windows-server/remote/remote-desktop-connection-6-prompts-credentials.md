@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivit
 
 This article provides a workaround for the issue that Remote Desktop Connection 6.0 prompts you for credentials, before you establish a remote desktop connection.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 941641
 
 ## Symptoms
