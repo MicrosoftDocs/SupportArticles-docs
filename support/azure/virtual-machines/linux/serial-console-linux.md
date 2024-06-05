@@ -12,7 +12,7 @@ ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 05/14/2024
+ms.date: 06/05/2024
 ms.author: mbifeld
 ---
 
@@ -101,55 +101,57 @@ Serial Console uses the storage account configured for boot diagnostics in its c
     > [!NOTE]
     > To determine which storage account is enabled for your VM, from the **Support + troubleshooting** section, select **Boot diagnostics** > **Settings**.
 
-2. Add Serial Console service IPs as firewall exclusions based on the VM's geography.
+1. Add Serial Console service IPs as firewall exclusions based on the VM's geography.
 
    The following table lists the IPs that need to be permitted as firewall exclusions based on the region or geography where the VM is located. This is a subset of the complete list of Serial Console IP addresses used in the **SerialConsole** service tag. You can limit access to boot diagnostics storage accounts via the **SerialConsole** service tag. The service tag isn't regionally separated. Traffic on the service tag is inbound only, and the Serial Console doesn't generate traffic to Customer Controllable Destinations. Although Azure storage account firewalls don't currently support service tags, the **SerialConsole** service tag can be programmatically consumed to determine the IP list. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
     > [!NOTE]
     > Storage account firewalls for the Serial Console aren't supported for VMs in geographies with only one region, such as Italy North in Italy.
    
-    |IP address      | Regions | Geography|
-    |-----------|--------------------|-----------------|
-    |20.205.69.28 | East Asia, Southeast Asia | AsiaPacific|
-    |20.195.85.180 | East Asia, Southeast Asia | AsiaPacific|
-    |20.53.53.224 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia|
-    |20.70.222.112 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia|
-    |191.234.136.63 | Brazil South, Brazil Southeast | Brazil|
-    |20.206.0.194 | Brazil South, Brazil Southeast | Brazil|
-    |52.228.86.177 | Canada Central, Canada East | Canada|
-    |52.242.40.90 | Canada Central, Canada East | Canada|
-    |20.45.242.18 |  | Canary (EUAP)|
-    |20.51.21.252 |  | Canary (EUAP)|
-    |52.146.139.220 | North Europe, West Europe | Europe|
-    |20.105.209.72 | North Europe, West Europe | Europe|
-    |20.111.0.244 | France Central, France South | France|
-    |52.136.191.10 | France Central, France South | France|
-    |51.116.75.88 | Germany North, Germany West Central | Germany|
-    |20.52.95.48 | Germany North, Germany West Central | Germany|
-    |20.192.168.150 | Central India, South India, West India | India|
-    |20.192.153.104 | Central India, South India, West India | India|
-    |20.43.70.205 | Japan East, Japan West | Japan|
-    |20.189.228.222 | Japan East, Japan West | Japan|
-    |20.200.196.96 | Korea Central, Korea South | Korea|
-    |52.147.119.29 | Korea Central, Korea South | Korea|
-    |20.100.1.184 | Norway West, Norway East | Norway|
-    |51.13.138.76 | Norway West, Norway East | Norway|
-    |20.208.4.98 | Switzerland North, Switzerland West | Switzerland|
-    |51.107.251.190 | Switzerland North, Switzerland West | Switzerland|
-    |20.45.95.66 | UAE Central, UAE North | UAE|
-    |20.38.141.5 | UAE Central, UAE North | UAE|
-    |20.90.132.144 | UK South, UK West | UnitedKingdom|
-    |20.58.68.62 | UK South, UK West | UnitedKingdom|
-    |51.12.72.223 | Sweden Central, Sweden South | Sweden|
-    |51.12.22.174 | Sweden Central, Sweden South | Sweden|
-    |20.98.146.84 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
-    |20.98.194.64 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
-    |20.69.5.162 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
-    |20.83.222.102 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States|
-    |20.83.222.100 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States|
-    |20.141.10.130 | All US Government cloud regions | UsGov|
-    |52.127.55.131 | All US Government cloud regions | UsGov|
-
+   |IP address      | Regions | Geography|
+   |-----------|--------------------|-----------------|
+   |20.205.69.28 | East Asia, Southeast Asia | AsiaPacific|
+   |20.195.85.180 | East Asia, Southeast Asia | AsiaPacific|
+   |20.53.53.224 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia|
+   |20.70.222.112 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia|
+   |191.234.136.63 | Brazil South, Brazil Southeast | Brazil|
+   |20.206.0.194 | Brazil South, Brazil Southeast | Brazil|
+   |52.228.86.177 | Canada Central, Canada East | Canada|
+   |52.242.40.90 | Canada Central, Canada East | Canada|
+   |20.45.242.18 |  | Canary (EUAP)|
+   |20.51.21.252 |  | Canary (EUAP)|
+   |52.146.139.220 | North Europe, West Europe | Europe|
+   |20.105.209.72 | North Europe, West Europe | Europe|
+   |20.111.0.244 | France Central, France South | France|
+   |52.136.191.10 | France Central, France South | France|
+   |51.116.75.88 | Germany North, Germany West Central | Germany|
+   |20.52.95.48 | Germany North, Germany West Central | Germany|
+   |20.192.168.150 | Central India, South India, West India | India|
+   |20.192.153.104 | Central India, South India, West India | India|
+   |20.43.70.205 | Japan East, Japan West | Japan|
+   |20.189.228.222 | Japan East, Japan West | Japan|
+   |20.200.196.96 | Korea Central, Korea South | Korea|
+   |52.147.119.29 | Korea Central, Korea South | Korea|
+   |20.100.1.184 | Norway West, Norway East | Norway|
+   |51.13.138.76 | Norway West, Norway East | Norway|
+   |20.208.4.98 | Switzerland North, Switzerland West | Switzerland|
+   |51.107.251.190 | Switzerland North, Switzerland West | Switzerland|
+   |20.45.95.66 | UAE Central, UAE North | UAE|
+   |20.38.141.5 | UAE Central, UAE North | UAE|
+   |20.90.132.144 | UK South, UK West | UnitedKingdom|
+   |20.58.68.62 | UK South, UK West | UnitedKingdom|
+   |51.12.72.223 | Sweden Central, Sweden South | Sweden|
+   |51.12.22.174 | Sweden Central, Sweden South | Sweden|
+   |20.98.146.84 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
+   |20.98.194.64 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
+   |20.69.5.162 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
+   |20.83.222.102 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States|
+   |20.83.222.100 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States|
+   |20.141.10.130 | All US Government cloud regions | UsGov|
+   |52.127.55.131 | All US Government cloud regions | UsGov|
+   |143.64.47.39|China North 3|China|
+   |163.228.70.115|China East 3|China|
+   
    > [!IMPORTANT]
    > - The IPs that need to be permitted are specific to the region where the VM is located. For example, a virtual machine deployed in the North Europe region needs to add the following IP exclusions to the storage account firewall for the Europe geography: 52.146.139.220 and 20.105.209.72. View the table above to find the correct IPs for your region and geography.
    > - In the current serial console operation, the web socket is opened to an endpoint like `<region>.gateway.serialconsole.azure.com`. Ensure the endpoint `serialconsole.azure.com` is allowed for browser clients in your organization. In the US Government (Fairfax) cloud, the endpoint suffix is `serialconsole.azure.us`.
