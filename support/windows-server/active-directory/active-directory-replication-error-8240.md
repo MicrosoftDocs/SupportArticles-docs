@@ -219,6 +219,9 @@ To remove and recreate the source domain controller, follow these steps:
    Uninstall-ADDSDomainController -Force
    ```
 
+   > [!NOTE]  
+   > You can also use the Server Manager Remove Roles and Features wizard to perform this task. In the wizard, make sure that you select **Force the removal of this domain controller**. For more information, see [Demoting Domain Controllers and Domains: Credentials](/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-#credentials).
+
 1. In the forest, clean up the metadata that's related to the demoted domain controller.
 
    > [!NOTE]  
