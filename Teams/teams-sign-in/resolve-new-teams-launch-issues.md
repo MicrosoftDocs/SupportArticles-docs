@@ -413,7 +413,7 @@ Pause
 
    If any of the folders are reparse points, contact [Microsoft Support](https://support.microsoft.com/contactus).
 
-1. Check for files that have the same name as a required system folder in the **AppData** folder. For example, a file that's named *Libraries* in the path, *%AppData%\Microsoft\Windows\Libraries*, has the same name as a folder that has the same path. For each folder that's listed earlier in this step, run the following PowerShell command:
+1. Check for files that have the same name as a required system folder in the **AppData** folder. For example, a file that's named *Libraries* in the path, *%AppData%\Microsoft\Windows\Libraries*, has the same name as a folder that has the same path. For each folder that's listed in step 3, run the following PowerShell command:
 
    ```powershell
    Test-Path -Path <directory name, such as $env:USERPROFILE\AppData\Local\Temp>  -PathType Leaf
