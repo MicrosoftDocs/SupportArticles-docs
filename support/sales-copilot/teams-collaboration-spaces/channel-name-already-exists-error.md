@@ -1,7 +1,7 @@
 ---
 title: Resolve Microsoft Copilot for Sales channel creation error
 description: Resolve errors when creating a channel for an account or opportunity in Microsoft Copilot for Sales due to duplicate names.
-ms.date: 06/03/2024
+ms.date: 06/05/2024
 author: sbmjais
 ms.author: shjais
 ms.custom:
@@ -28,6 +28,8 @@ This article helps you to resolve an error that occurs when you try to create a 
 
 When you try to create a channel for an account or opportunity in Microsoft Copilot for Sales, the following error message is displayed&mdash;*A channel with that name already exists or was recently deleted, use a different channel name.*
 
+:::image type="content" source="media/channel-creation-error.png" alt-text="Screenshot that shows the error when creating a channel.":::
+
 ## Cause and resolution
 
 ### Issue 1: Channel with the same name was recently deleted
@@ -51,7 +53,7 @@ A channel with the same name already exists under the same team.
 To resolve this issue, use either of the following methods:  
 
 1. Use a different name to create the channel.
-1. Delete the existing channel, wait for sometime, and create the channel again.
+1. Delete the existing channel, wait for sometime, and then create the channel again.
 
 ## More information
 
