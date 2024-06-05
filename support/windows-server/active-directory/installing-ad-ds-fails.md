@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 
 This article provides a solution to an issue where installing Active Directory Domain Services fails with the error: The specified user already exists.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000622
 
 ## Symptoms

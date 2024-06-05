@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM
 
 This article provides the steps to create performance counter alert and send email when the alert is triggered.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2424491
 
 ## Summary

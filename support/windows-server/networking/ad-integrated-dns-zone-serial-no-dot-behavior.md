@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 
 This article describes Active Directory-integrated Domain Name System (DNS) zone serial number behaviors.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 282826
 
 ## Summary

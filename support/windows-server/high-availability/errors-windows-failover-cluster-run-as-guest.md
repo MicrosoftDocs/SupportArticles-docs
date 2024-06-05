@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Setup and configuration of clust
 
 This article describes an issue where unexpected warning and error messages occur in a Windows Server failover cluster that has been configured to run as a guest (virtual machine) in a Hyper-V environment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2014304
 
 ## Symptoms

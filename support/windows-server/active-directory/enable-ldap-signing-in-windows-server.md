@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstrou
 
 This article describes how to enable LDAP signing in Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, and Windows 11.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 11 - all editions, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 935834
 
 ## Summary

@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Addi
 
 This article helps to fix a problem that occurs when you try to create a cluster on a set of computers that have the Failover Clustering feature installed.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 973838
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Performance (slow, unresponsive, high C
 
 This article describes how to compress large registry hives to avoid performance issues.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2498915
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides information about lingering objects in an Active Directory Domain Services (AD DS) forest. Specifically, the article discusses the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.  
 
-_Applies to:_ &nbsp; Windows Server (All supported versions)
 _Original KB number:_ &nbsp; 910205
 
 ## Summary

@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configu
 
 This article provides a solution to an issue where Remote Desktop Services (RDS) tools aren't functional after you remove a server from Server Manager.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2910155
 
 ## Symptoms

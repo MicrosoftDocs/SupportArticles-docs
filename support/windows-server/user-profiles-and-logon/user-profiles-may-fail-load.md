@@ -13,7 +13,6 @@ ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logo
 
 This article provides a solution to an issue where user profiles may fail to load after you install the Windows RT 8.1, Windows 8.1, or Windows Server 2012 R2 update that is dated April 2014.
 
-_Applies to:_ &nbsp; Windows 8.1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2985344
 
 ## Symptoms

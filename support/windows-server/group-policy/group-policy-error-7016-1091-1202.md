@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 
 This article helps avoid Group Policy error events that are logged when unknown environment variable is used.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2003730
 
 ## Symptoms

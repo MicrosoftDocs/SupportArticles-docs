@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM
 
 This article provides a solution to an issue that Reliability Monitor displays no information when you open Reliability Monitor on a computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 983386
 
 ## Symptoms

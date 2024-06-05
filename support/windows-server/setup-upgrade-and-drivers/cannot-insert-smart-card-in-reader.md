@@ -13,7 +13,6 @@ ms.custom: sap:Windows Device and Driver Management\Peripherals driver installat
 
 This article provides a solution to an error that occurs when you insert a smart card in a reader.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 976832
 
 ## Symptoms

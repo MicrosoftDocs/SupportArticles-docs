@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB)
 
 This article provides some information about saving and restoring existing Windows shares.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 125996
 
 ## Summary

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstro
 
 This article describes how to the change the AD to allow more or fewer machine accounts in the domain.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 243327
 
 ## Summary

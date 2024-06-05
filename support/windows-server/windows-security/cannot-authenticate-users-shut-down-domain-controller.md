@@ -13,8 +13,6 @@ ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstr
 
 This article fixes an issue where the application can't authenticate users when you shut down a Domain Controller (DC).
 
-_Applies to:_ &nbsp; Window 10 – all editions, Windows Server 2012 R2
-
 _Original KB number:_ &nbsp; 2683606
 
 ## Symptoms

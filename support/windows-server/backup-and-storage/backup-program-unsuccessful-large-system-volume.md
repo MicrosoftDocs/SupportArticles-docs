@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows
 
 This article provides a resolution for the issue that backup program is unsuccessful when you back up a large system volume.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 304101
 
 ## Symptoms

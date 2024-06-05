@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Reliability (crash, errors, bug check o
 
 This article describes memory dump file options for Windows.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 254649
 
 ## Summary

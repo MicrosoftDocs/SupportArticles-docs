@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory Domain Controller specific boot
 
 This article helps to fix the error "access is denied" on a domain controller when you try to replicate the Active Directory directory service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 895085
 
 > [!IMPORTANT]

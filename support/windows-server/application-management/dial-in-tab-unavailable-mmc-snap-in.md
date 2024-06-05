@@ -13,7 +13,6 @@ ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft 
 
 This article provides workarounds for an issue where the **Dial-in** tab is not available in the Active Directory Users and Computers MMC snap-in.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 975448
 
 ## Symptoms

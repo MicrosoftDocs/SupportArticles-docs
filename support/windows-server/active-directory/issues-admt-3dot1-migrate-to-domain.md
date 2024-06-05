@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroub
 
 This article describes known issues that you may experience when you use Active Directory Migration Tool 3.1 to migrate Active Directory data to a domain, and provides help to resolve these issues.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 976659
 
 ## Summary

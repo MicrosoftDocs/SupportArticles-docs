@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresp
 
 This article discusses how to add more processors to a computer.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 888729
 
 ## Supported processors
