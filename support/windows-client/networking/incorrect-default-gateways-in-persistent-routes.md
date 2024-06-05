@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 
 This article provides a solution to an issue where additional default gateways appear in persistent routes when you use Load Balancing and Failover (LBFO).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2966111
 
 ## Symptoms

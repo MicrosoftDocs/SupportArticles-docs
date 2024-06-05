@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 
 This article contains information about the deployment and operation of Active Directory (AD) domains that are configured by using single-label DNS names.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 300684
 
 ## Summary

@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article provides the steps to re-register a Windows client/server in Windows Server Update Services (WSUS).
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 555974
 
 ## Summary

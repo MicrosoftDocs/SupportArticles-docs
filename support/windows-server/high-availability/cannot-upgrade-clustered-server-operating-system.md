@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Replacing hardware and updating 
 
 This article provides workarounds for an issue where you can't upgrade the operating system of a clustered server from Windows Server 2003 or later versions.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 935197
 
 ## Symptoms

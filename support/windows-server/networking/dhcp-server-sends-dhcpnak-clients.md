@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration 
 
 This article provides a solution to an issue when you start a Dynamic Host Configuration Protocol (DHCP) client.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 228597
 
 ## Symptoms

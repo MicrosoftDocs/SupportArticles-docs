@@ -14,8 +14,6 @@ keywords: RD Licensing server, RD CAL
 
 This article help you troubleshoot the "No licenses available" error in a deployment that includes an Remote Desktop Session Host (RDSH) server and a Remote Desktop Licensing server.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 ## Symptoms
 
 Clients cannot connect to Remote Desktop Services, and they display messages that resemble the following:

@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume manageme
 
 This article describes how to successfully set up dynamic boot partition mirroring on GUID Partition Table (GPT) disks.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 814070
 
 ## Summary

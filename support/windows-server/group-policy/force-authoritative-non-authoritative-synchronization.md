@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
 
 This article introduces how to force an authoritative and non-authoritative synchronization for DFSR-replicated sysvol replication.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2218556
 
 ## Summary

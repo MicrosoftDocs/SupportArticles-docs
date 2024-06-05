@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstrouble
 
 This article describes registry entries about Kerberos version 5 authentication protocol and Key Distribution Center (KDC) configuration.
 
-_Applies to:_ &nbsp; Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 837361
 
 ## Summary

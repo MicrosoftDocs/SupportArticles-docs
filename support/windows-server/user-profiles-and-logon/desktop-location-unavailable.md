@@ -13,7 +13,6 @@ ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 
 This article provides help to solve an issue where profile loading fails when the ntuser.dat or usrclass.dat file is defined as read-only, or the profile user lacks the appropriate permissions for these two .dat files.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3048895
 
 ## Symptoms  

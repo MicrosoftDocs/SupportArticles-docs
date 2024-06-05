@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine setti
 
 This article describes a situation in which you receive an error message when you try to move a virtual machine from a Windows Server 2012 R2 Hyper-V host into a Windows Server 2012 Hyper-V host.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2868279
 
 ## Introduction

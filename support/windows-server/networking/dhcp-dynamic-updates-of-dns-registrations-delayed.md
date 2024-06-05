@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration 
 
 This article discusses that a change in the DHCP Domain Name System (DNS) update behavior may delay DNS registrations and provides help to solve this issue.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3069564
 
 ## Symptoms

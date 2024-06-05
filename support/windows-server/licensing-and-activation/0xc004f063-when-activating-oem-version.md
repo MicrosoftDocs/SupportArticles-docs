@@ -13,7 +13,6 @@ ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 
 This article provides a solution to an 0xc004f063 error that occurs when you try to activate or validate an OEM version of Windows.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2817024
 
 ## Symptoms

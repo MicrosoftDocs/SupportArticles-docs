@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication , csstroublesho
 
 This article helps fix the errors that occur in SMB Read Andx requests for files managed by Data Deduplication.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2817216
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstrou
 
 This article provides help to solve performance issues (such as logon delays and Outlook hangs) that occur after you upgrade your Domain Controllers (DCs).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2668820
 
 ## Symptoms

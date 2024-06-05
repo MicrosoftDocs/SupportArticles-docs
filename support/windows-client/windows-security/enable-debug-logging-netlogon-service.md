@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstr
 
 This article describes the steps to enable logging of the `Netlogon` service in Windows to monitor or troubleshoot authentication, DC locator, account lockout, or other domain communication-related issues.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 109626
 
 ## More information

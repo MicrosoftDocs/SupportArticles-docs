@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows
 
 This article provides helps to solve error 3266 or 3013 that occurs when you perform a database backup to disk or tape or a database restore from disk or tape.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 290787
 
 ## Symptoms

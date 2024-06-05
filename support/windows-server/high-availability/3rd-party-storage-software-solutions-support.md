@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Setup and configuration of clust
 
 This article outlines the Microsoft third-party storage software solutions support policy that works in conjunction with Microsoft server products.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 841696
 
 ## Introduction

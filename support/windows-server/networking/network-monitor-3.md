@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 
 This article contains download and support information, installation notes, and general usage information about Network Monitor 3.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 933741
 
 ## Summary

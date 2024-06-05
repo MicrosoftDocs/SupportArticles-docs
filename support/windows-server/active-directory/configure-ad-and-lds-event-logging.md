@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory Lightweight Directory Services 
 
 This step-by-step article describes how to configure Active Directory diagnostic event logging in Microsoft Windows Server operating systems.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 314980
 
 ## Summary

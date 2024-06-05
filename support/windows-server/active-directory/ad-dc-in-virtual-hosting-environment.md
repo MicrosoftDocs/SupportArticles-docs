@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Virtualized domain controller (errors and questi
 
 This article describes the issues that affect a Windows Server-based domain controller (DC) running as a guest OS in virtual hosting environments. It also discusses things to consider when a DC runs in a virtual hosting environment.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 888794
 
 ## Summary

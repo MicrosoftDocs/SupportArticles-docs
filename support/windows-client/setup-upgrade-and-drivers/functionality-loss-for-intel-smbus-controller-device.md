@@ -13,7 +13,6 @@ ms.custom: sap:Windows Device and Driver Management\Peripherals driver installat
 
 This article provides a solution to an issue that triggers a loss of functionality for some Intel SMBus Controller devices after you update your system from Windows Update.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 4011290
 
 ## Symptoms

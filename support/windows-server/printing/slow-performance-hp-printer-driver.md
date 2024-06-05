@@ -13,7 +13,6 @@ ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not r
 
 This article provides a solution to an issue where you experience slow performance when you try to print, or open printer properties/preferences.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 979394
 
 ## Symptoms

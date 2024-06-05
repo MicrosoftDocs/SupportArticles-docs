@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes an issue where Active Directory Replications fail with error 8477: "The replication request has been posted; waiting for reply".
 
-_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2758780
 
 > [!NOTE]

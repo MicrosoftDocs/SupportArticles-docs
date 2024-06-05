@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration 
 
 This article helps fix an issue where Pre-Boot Execution Environment (PXE) clients computers don't start when you configure the Dynamic Host Configuration Protocol server to use options 60, 66, 67.
 
-_Applies to:_ &nbsp; All supported versions of Windows Server
 _Original KB number:_ &nbsp; 259670
 
 ## Symptoms

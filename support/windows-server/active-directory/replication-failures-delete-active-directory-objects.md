@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides a workaround for an issue that occurs when you delete Active Directory objects that contain many forward links.
 
-_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 3149779
 
 ## Summary

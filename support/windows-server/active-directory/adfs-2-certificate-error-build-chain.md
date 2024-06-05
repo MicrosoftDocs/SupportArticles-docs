@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Active Directory Federation Service
 
 This article helps to fix ADFS 2.0 certificate error during an attempt to build the certificate chain.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044974
 
 ## Summary

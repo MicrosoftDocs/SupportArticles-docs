@@ -16,7 +16,6 @@ This article describes the changes to the default dynamic port range for TCP/IP 
 > [!Note]
 > Support for Windows Vista without any service packs installed ended on April 13, 2010. To continue receiving security updates for Windows, make sure that you are running Windows Vista with Service Pack 2 (SP2). For more information, go to the following Microsoft website: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs)
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 929851
 
 ## Introduction

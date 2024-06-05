@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 
 This article provides a workaround for an issue where IP address and default gateway settings are assigned incorrectly.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2473489
 
 ## Symptoms

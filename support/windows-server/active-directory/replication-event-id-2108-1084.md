@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides a solution to an issue where you get event IDs 2108 and 1084 when inbound replication of the Active Directory Domain Services (AD DS) occurs.
 
-_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 837932
 
 ## Symptoms

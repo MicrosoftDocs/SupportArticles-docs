@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 
 This step-by-step article describes how to improve authentication throughput on a computer that is running Microsoft Internet Security and Acceleration (ISA) Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 326040
 
 > [!IMPORTANT]

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\AD Rights Management Service (Azure Information 
 
 This article provides help to fix an issue in which event ID 84 is logged in Active Directory Rights Management Services (AD RMS) in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4038927
 
 ## Symptoms

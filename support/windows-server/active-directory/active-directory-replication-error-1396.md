@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes the symptoms, cause, and resolution for resolving Active Directory replication failing with Win32 error 1396.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2183411
 
 ## Symptoms

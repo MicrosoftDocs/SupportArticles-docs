@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 
 This article discusses the Transmission Control Protocol (TCP) three-way handshake process between a client and server when starting or ending a TCP connection.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 172983
 
 ## Summary

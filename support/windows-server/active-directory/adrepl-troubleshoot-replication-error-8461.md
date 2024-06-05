@@ -14,7 +14,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 This article describes symptoms, cause, and resolution steps for cases in which AD Replication is delayed and generates Win32 error 8461:  
 > The replication operation was preempted.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2981628
 
 ## Symptoms

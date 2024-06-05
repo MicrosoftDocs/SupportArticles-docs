@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologi
 
 This article describes a Distributed File System Replication (DFS-R) and Distributed File System Namespace (DFS-N) deployment scenario that Microsoft does not support.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2533009
 
 ## Unsupported scenario

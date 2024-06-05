@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstro
 
 This article describes an issue that slows down the progress of offline folder file sync operations by Microsoft Sync Center.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3046857
 
 ## Summary

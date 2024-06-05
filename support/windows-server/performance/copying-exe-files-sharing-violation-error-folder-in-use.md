@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Configuration (page file, startup or ru
 
 This article provides a resolution to a sharing violation error that occurs when copying .exe files.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2503886
 
 ## Symptoms

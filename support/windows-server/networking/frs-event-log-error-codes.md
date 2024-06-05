@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologi
 
 This article introduces the event log entries that the File Replication Service (FRS) generates.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 308406
 
 ## Event ID 13500, 13501, 13502, 13503, 13504, 13505, and 13506

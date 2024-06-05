@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, error
 
 This article describes the supportability of having a Windows server boot from a Storage Area Network (SAN).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1,  Windows 10 - all editions  
 _Original KB number:_ &nbsp; 305547
 
 ## More information

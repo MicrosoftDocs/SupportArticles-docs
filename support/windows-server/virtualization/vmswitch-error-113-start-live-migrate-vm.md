@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Virtual switch manager (Vmswitch), css
 
 This article provides a solution to VmSwitch Error 113 event that occurs when you start or live migrate virtual machines.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3001783
 
 ## Symptoms

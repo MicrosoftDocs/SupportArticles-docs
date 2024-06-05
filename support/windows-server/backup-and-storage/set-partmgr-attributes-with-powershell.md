@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume manageme
 
 This article describes how to set the Partmgr Attributes registry value by using PowerShell.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2849097
 
 ## Summary

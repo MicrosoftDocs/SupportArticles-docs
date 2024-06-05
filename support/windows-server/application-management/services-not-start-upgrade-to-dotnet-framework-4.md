@@ -13,7 +13,6 @@ ms.custom: sap:Application Technologies and Compatibility\.Net Framework Install
 
 This article provides a workaround for an issue where services that depend on the `ASP.NET` State Service don't start after you upgrade to the Microsoft .NET Framework 4.0.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2963657
 
 ## Symptoms

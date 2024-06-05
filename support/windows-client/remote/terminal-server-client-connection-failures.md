@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivit
 
 This article describes various symptoms for Remote Desktop Client connection failures.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186645
 
 ## Summary

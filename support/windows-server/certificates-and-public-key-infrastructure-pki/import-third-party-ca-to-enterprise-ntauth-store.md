@@ -13,7 +13,6 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 
 There are two methods you can use to import the certificates of third-party CAs into the Enterprise NTAuth store. This process is required if you're using a third-party CA to issue smart card logon or domain controller certificates. By publishing the CA certificate to the Enterprise NTAuth store, the Administrator indicates that the CA is trusted to issue certificates of these types. Windows CAs automatically publish their CA certificates to this store.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 295663
 
 ## More information

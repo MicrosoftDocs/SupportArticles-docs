@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, 
 
 This article describes the clustering information on IP address failover.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 168567
 
 ## Summary

@@ -16,7 +16,6 @@ This article describes the symptoms, cause, and resolution steps for issues when
 > [!NOTE]
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2693500
 
 ## Symptoms

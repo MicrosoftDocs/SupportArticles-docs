@@ -13,7 +13,6 @@ ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logo
 
 This article describes how cached domain logon information works and how to control cached logon information.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 172931
 
 ## Summary

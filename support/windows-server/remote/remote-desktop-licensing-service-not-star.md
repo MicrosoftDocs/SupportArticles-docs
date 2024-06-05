@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remot
 
 This article provides a solution to an issue where Remote Desktop Licensing Service fails to start with event ID 623.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3167312
 
 ## Symptoms

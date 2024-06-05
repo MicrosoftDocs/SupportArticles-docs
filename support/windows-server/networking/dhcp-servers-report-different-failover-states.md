@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration 
 
 This article provides help to solve some known issues with Dynamic Host Configuration Protocol (DHCP) failover.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2751456
 
 ## Symptoms

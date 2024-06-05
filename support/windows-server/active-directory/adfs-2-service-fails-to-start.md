@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Active Directory Federation Service
 
 This article provides troubleshooting steps for ADFS service configuration and startup problems.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044973
 
 ## Summary
