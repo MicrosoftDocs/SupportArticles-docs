@@ -20,9 +20,9 @@ When you try to create or start an AKS cluster, you receive one of the following
 
 > **Code:** AKSCapacityError
 >
-> **Message 1:** Creating a new free tier cluster is unavailable at this time in region \<Region\>. In order to create a new cluster, we recommend using an alternate region, or creating a paid tier cluster. For a list of all the Azure regions, visit <https://aka.ms/aks/regions>.
+> **Message 1:** Creating or starting a free tier cluster is unavailable at this time in region \<Region\>. To create a new cluster, we recommend using an alternate region, or create a paid tier cluster. For a list of all the Azure regions, visit <https://aka.ms/aks/regions>. For more details on this error, visit <https://aka.ms/akscapacityerror>.
 >
-> **Message 2:** Creating a new cluster or start cluster is unavailable at this time in region westeurope. To create a new cluster, we recommend using an alternate region. For a list of all the Azure regions, visit <https://aka.ms/aks/regions>.
+> **Message 2:** Creating a new cluster or starting cluster is unavailable at this time in region \<Region>. To create a new cluster, we recommend using an alternate region. For a list of all the Azure regions, visit <https://aka.ms/aks/regions>. For more details on this error, visit <https://aka.ms/akscapacityerror>.
 
 If you then try to do an operation on that cluster after it doesn't start, you receive the following error message:
 
@@ -44,13 +44,13 @@ The `KubernetesAPICallFailed` error message indicates that the AKS cluster didn'
 
 ### Solution 1: Select a different region
 
-The easiest and quickest solution is to try to deploy to a different region that has enough capacity at the given time (for example, NorthEurope instead of WestEurope).
+The easiest and quickest solution is to try to deploy to a different region (for example, NorthEurope instead of WestEurope or UAENorth instead of QatarCentral). To find nearby regions, visit the [Azure Geographies page](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview).
 
 This approach might not be feasible if you already have existing resources in the requested region, but it's the preferred solution in a dev/test scenario.
 
 ### Solution 2: Try deploying a cluster that has different settings
 
-The underlays that host the AKS control planes have different allocation reservations. Therefore, the underlays for public AKS clusters might have more capacity than the overlays for private clusters. If you encounter the `AKSCapacityError` error when you try to create a private cluster, try to create a public cluster instead.
+The infrastructure that hosts AKS managed clusters have different allocation reservations. Therefore, AKS might have more capacity for public clusters than for private clusters. If you encounter the `AKSCapacityError` error when you try to create a private cluster, try to create a public cluster instead or vice versa.
 
 ### Solution 3: Use an Azure Enterprise subscription
 
