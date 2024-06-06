@@ -3,6 +3,7 @@ title: Computer stops responding
 description: Provides information about resolving a problem where computer stops responding when the Mscorsvw.exe process starts executing.
 ms.date: 05/11/2020
 ms.reviewer: gaurap
+ms.custom: sap:Class Library Namespaces
 ---
 # Computer stops responding when the mscorsvw.exe process starts executing
 
