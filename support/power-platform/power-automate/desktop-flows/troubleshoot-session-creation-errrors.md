@@ -36,7 +36,7 @@ You can find the full list of credential providers (many of which are built-in) 
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers`
 
-Each subkey represents an installed credential provider. The following table lists the credential providers that Power Automate currently doesn't support. If you have the following registry key, try working with your system administrator to uninstall the corresponding software.
+Each subkey represents an installed credential provider. The following table lists the credential providers that Power Automate currently doesn't support. If you have the following registry key, work with your system administrator to uninstall the corresponding software.
 
 | Name | Subkey name |
 | :------------------------ | ---------------- |
@@ -51,7 +51,7 @@ This error code occurs when a session creation fails for an unknown reason.
 To solve the issue:
 
 - Ensure that you can remote desktop to the machine from another machine on your network. If you're using Windows Server, you can try to remote desktop to "localhost" from the local machine itself when logged in as another account. If these actions fail, see [General Remote Desktop connection troubleshooting](../../../windows-server/remote/rdp-error-general-troubleshooting.md).
-- If you have a legal notice enabled for login, work with your system administrator to try disabling it. To see if the legal notice is activated, open Registry Editor and go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`. If `legalnoticecaption` or `legalnoticetext` isn't empty, try working with your system administrator to disable the legal notice.
+- If you have a legal notice enabled for login, work with your system administrator to try disabling it. To see if the legal notice is activated, open Registry Editor and go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`. If `legalnoticecaption` or `legalnoticetext` isn't empty, work with your system administrator to disable the legal notice.
 - Ensure that no third-party software is installed that might affect login or interfere with creating a remote desktop connection.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
