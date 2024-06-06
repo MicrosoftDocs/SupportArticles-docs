@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD replication error 8446
 description: Describes the symptoms, cause, and resolution steps for issues when Active Directory replication fails with error 8446.
-ms.date: 05/27/2024
+ms.date: 06/06/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -103,9 +103,8 @@ Determine if there's a depletion of the following resources and fix the underlyi
 
 ### Domain controller scalability
 
-If there's no apparent memory leak or resource depletion:
+The database cache consumes all available virtual memory for the LSASS process, so a memory leak is not obvious to identify. Find out what type of situation happens here.
 
-For 32-bit operating systems, depending on the size of the NTDS.DIT, the `/USERVA boot.ini` switch that increases the virtual mode address space on domain controllers may provide relief, but this might cause kernel mode depletion as this reduces the size of the kernel mode address space. Before implementing the `/UserVA` switch, it's best to consult a Windows memory performance tuning expert to analyze kernel mode and user mode memory usage.
 Database cache consumes all available virtual memory for the LSASS process.  
 
 Run Performance Monitor with database counters, and review the following counters:
@@ -114,24 +113,11 @@ Run Performance Monitor with database counters, and review the following counter
 - LSASS - Virtual Bytes
 - Database - "Database Cache Size"
 
-### LSASS ESE database cache isn't limited by default
-
-If you determine it's the database cache that is consuming memory using a performance monitor, you can add the following registry value to limit the database cache.
-
-You can use the **EDB max buffers** registry value to limit ESE cache allocation (the number of pages is 8,912 bytes) and prevent the conditions.
-
-**Value Name:** EDB max buffers  
-**Type:** reg_dword  
-**Setting:** \<refer to the following values>  
-**Registry key:** `HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`  
-
-> [!CAUTION]
-> Ensure that you set an optimal value to the registry value (**EDB max buffers**). If the cache limit is too low, then it might cause performance degradation.
-You may apply the following values as a start for an optimization, depending on whether the `/3GB boot.ini` switch is used or not:
->
-> Without the `/3GB` switch: "EDB max buffers", Reg_DWord: 157286 (1.2 GB); expected LSASS consumption ~1.5 GB
->
-> With the `/3GB` switch: "EDB max buffers", Reg_DWord: 235929 (1.8 GB); expected LSASS consumption ~2.1 GB
+If there are hints the virtual memory is high and the main use is not for the database cache, you can investigate the behavior with Windows Performance Recorder heap snapshots.
+ 
+We recommend starting the heap snapshots after the database cache has grown to the normal and expected size. Then use Windows Performance Recorder creates heap snapshots by using the steps in [Record a Heap Snapshot](/windows-hardware/test/wpt/record-heap-snapshot).
+ 
+You can use [public symbols](/windows-hardware/drivers/debugger/microsoft-public-symbols) to investigate the stacks for the outstanding allocations. To diagnose the results in depth, we recommend you open a service request with Microsoft support.
 
 ## Data collection
 
