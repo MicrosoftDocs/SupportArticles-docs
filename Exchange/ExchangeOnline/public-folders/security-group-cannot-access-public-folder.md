@@ -28,7 +28,7 @@ Security group members can't access a public folder in Exchange Online even thou
 
 As an example, the [Get-PublicFolderClientPermission](/powershell/module/exchange/get-publicfolderclientpermission) PowerShell cmdlet generates the following output.
 
-:::image type="content" source="media/security-group-cannot-access-public-folder/public-folder-permissions-command-output.png" border="false" alt-text="Screenshot of the output from the Get-PublicFolderClientPermission cmdlet." lightbox="media/security-group-cannot-access-public-folder/public-folder-permissions-command-output-lrg.png":::
+:::image type="content" source="media/security-group-cannot-access-public-folder/public-folder-permissions-command-output.png" border="false" alt-text="Screenshot of the output from the Get-PublicFolderClientPermission cmdlet.":::
 
 The output shows that `Security group1` has [PublishingEditor](/powershell/module/exchange/set-mailboxfolderpermission#-accessrights) access rights to a public folder. However, if the security group members try to create, move, or delete a subfolder in the public folder, they receive an error message that indicates a lack of permissions.
 
@@ -40,7 +40,7 @@ The issue occurs if the security identifier of the security group object in Micr
 > To check the security identifier value for a security group, run the following cmdlets in Exchange Online PowerShell:
 >
 > ```PowerShell
-> $permissions = Get-PublicFolderClientPermission -Identity \<public folder\> -User "\<security group name\>"
+> $permissions = Get-PublicFolderClientPermission -Identity "<public folder>" -User "<security group name>"
 > $permissions.User.RecipientPrincipal | FL DisplayName, Sid
 > ```
 
@@ -88,4 +88,4 @@ To fix the issue, follow these steps to update the security group in the access 
 
 As an example, the [Remove-PublicFolderClientPermission](/powershell/module/exchange/remove-publicfolderclientpermission) and [Add-PublicFolderClientPermission](/powershell/module/exchange/add-publicfolderclientpermission) PowerShell cmdlets generate the following output.
 
-:::image type="content" source="media/security-group-cannot-access-public-folder/resolution-command-output.png" border="false" alt-text="Screenshot of the output from the Remove-PublicFolderClientPermission and Add-PublicFolderClientPermission cmdlets." lightbox="media/security-group-cannot-access-public-folder/resolution-command-output-lrg.png":::
+:::image type="content" source="media/security-group-cannot-access-public-folder/resolution-command-output.png" border="false" alt-text="Screenshot of the output from the Remove-PublicFolderClientPermission and Add-PublicFolderClientPermission cmdlets.":::
