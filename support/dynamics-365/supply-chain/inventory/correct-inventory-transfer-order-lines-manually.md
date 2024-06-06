@@ -4,7 +4,7 @@ description: Introduces the Correct inventory transfer order lines manually feat
 author: sherry-zheng 
 ms.author: chuzheng 
 ms.custom: sap:Inventory management\Issues with inventory orders
-ms.date: 05/21/2024
+ms.date: 06/06/2024
 ---
 # Transfer order line data discrepancy or corruption
 
