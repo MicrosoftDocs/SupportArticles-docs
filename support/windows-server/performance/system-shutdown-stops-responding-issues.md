@@ -31,7 +31,7 @@ Use a local folder (for example, *c:\\Symbols*) to cache with the [Microsoft sym
 
 :::image type="content" source="media/system-shutdown-stops-responding-issues/symbol-server-path.png" alt-text="Screenshot that shows the symbol path in the debugging settings.":::
 
-Unzip the *mex.dll* file and copy it to the *winext* folder under the path of the installed debugger tools (for example, *C:\\Prgram Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\winext\\mex.dll*).
+Unzip the *mex.zip* file and copy the 64-bit version of *mex.dll* to the *winext* folder under the path of the installed debugger tools (for example, *C:\\Prgram Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\winext\\mex.dll*).
 
 Start the debugger, load the *memory.dmp* file, and load the mex extension. For example:
 
