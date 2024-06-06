@@ -1,19 +1,19 @@
 ---
-title: Resolve Microsoft Copilot for Sales team creation error
-description: Resolve errors when creating a Team for an account or opportunity in Microsoft Copilot for Sales due to naming policy restrictions with this guide.
-ms.date: 06/05/2024
+title: Microsoft Copilot for Sales team creation error ContainsBlockedWord
+description: Resolves an error that occurs when creating a team for an account or opportunity in Microsoft Copilot for Sales due to naming policy restrictions.
+ms.date: 06/06/2024
 author: sbmjais
 ms.author: shjais
 ms.custom:
-  - sap:CRM Permissions and Configurations\CRM Settings
+  - sap:Teams Collaboration Spaces\Collaboration Space Creation and access from Outlook Side-Panel
   - ai-gen-docs-bap
   - ai-gen-title
   - ai-seo-date:06/03/2024
   - ai-gen-desc
 ---
-# Unable to create a team
+# Can't create a team for account or opportunity in Copilot for Sales
 
-This article helps you to resolve an error that occurs when you try to create a Team for an account or opportunity in Microsoft Copilot for Sales. The error message states that something went wrong and contact your admin or Microsoft support with the error details to resolve the issue.  
+This article helps you to resolve an error that occurs when you try to create a team for an account or opportunity in Microsoft Copilot for Sales. The error message states that something went wrong and contact your admin or Microsoft support with the error details to resolve the issue.  
 
 | Requirement type |Description |
 |------------------|------------|
@@ -26,25 +26,24 @@ This article helps you to resolve an error that occurs when you try to create a 
 
 ## Symptoms
 
-When you try to create a Team for an account or opportunity in Microsoft Copilot for Sales, the following error message is displayed—*Something went wrong. Copy the error details here, then share them with your admin or Microsoft support and ask if they can help you resolve this issue.*
+When you try to [create a team for an account or opportunity](/microsoft-sales-copilot/collaborate-teams-newly-created-existing-team) in Microsoft Copilot for Sales, the following error message is displayed:
 
-The error could be due to blocked words in the team name as per the naming policy restrictions. Select **Copy error details** to view the error details. If the error includes **ContainsBlockedWord**, follow the resolution steps provided below.
+> Something went wrong. Copy the error details here, then share them with your admin or Microsoft support and ask if they can help you resolve this issue.
 
-:::image type="content" source="media/team-creation-error.png" alt-text="Screenshot that shows the error when creating a team.":::
+:::image type="content" source="media/create-team-error/team-creation-error.png" alt-text="Screenshot that shows the error that occurs when creating a team for an account or opportunity.":::
 
-## Cause and resolution
+Select **Copy error details** to view the error details. If the error includes **ContainsBlockedWord**, see the resolution section of this article.
 
-**Cause**  
+## Cause
 
-The [naming policy](/microsoft-365/solutions/groups-naming-policy?view=o365-worldwide) enforces a consistent naming strategy for Microsoft 365 groups and teams created by users in your organization. If a word in the team or channel name is prevented by the naming policy, then the creation of such a team or channel fails.
+The [Microsoft 365 Groups and Microsoft Teams naming policy](/microsoft-365/solutions/groups-naming-policy) enforces a consistent naming strategy for Microsoft 365 groups and teams created by users in your organization. If a word in the team or channel name is prevented by the naming policy, then the creation of such a team or channel fails.
 
-**Resolution**
+## Resolution
+
 To resolve this issue, use either of the following methods:  
 
-1. Contact your administrator to update the naming policy according to the public document [naming policy](/microsoft-365/solutions/groups-naming-policy?view=o365-worldwide).
-1. Use a team or channel name without blocked words and create the team again.
-
-
+- Contact your administrator to update the naming policy according to [Microsoft 365 Groups and Microsoft Teams naming policy](/microsoft-365/solutions/groups-naming-policy).
+- Use a team or channel name without blocked words and create the team again.
 
 ## More information
 
