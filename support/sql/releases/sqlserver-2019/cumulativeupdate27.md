@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4375.1
 
 ## Summary
 
-This article describes Cumulative Update package 27 (CU27) for Microsoft SQL Server 2019. This update contains 13 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:
+This article describes Cumulative Update package 27 (CU27) for Microsoft SQL Server 2019. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4375.1**, file version: **2019.150.4375.1**
 - Analysis Services - Product version: **15.0.35.45**, file version: **2018.150.35.45**
@@ -55,7 +55,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2962248>[2962248](#2962248) </a> | Fixes an issue in which change tracking auto cleanup consumes CPU in cycles every 30 minutes even if change tracking isn't enabled on any databases. </br></br>**Note**: After applying the fix, if you see some rows in `sys.syscommittab` or `dbo.MSchange_tracking_history` tables in databases where change tracking is disabled, you need to re-enable and then disable change tracking on these databases. This will clean all tracking data. For more information, see [Enable and Disable Change Tracking](/sql/relational-databases/track-changes/enable-and-disable-change-tracking-sql-server).| SQL Server Engine | Replication | All|
 | <a id=3015695>[3015695](#3015695) </a> | Fixes the following error that you encounter when running `sys.sp_flush_CT_internal_table_on_demand` in a SQL Server instance that has the Case-sensitive (_CS) collation option: </br></br>Msg 137, Level 15, State 2, Procedure sp_ManualCTCleanup, Line \<LineNumber> [Batch Start Line 3] </br>Must declare the scalar variable "@TableName". </br>Msg 137, Level 15, State 2, Procedure sp_ManualCTCleanup, Line \<LineNumber> [Batch Start Line 3] </br>Must declare the scalar variable "@TableName". </br>Total rows deleted: (null). </br>Total rows deleted: (null). | SQL Server Engine | Replication | All|
 | <a id=2901635>[2901635](#2901635) </a> | Adds the following log message when high I/O latencies are detected in Bufferpool Lazy Writer (`ntdll!ZwWriteFile` system call) due to a performance issue in the underlying storage: </br></br>WARNING Long asynchronous API Call: The scheduling fairness of scheduler can be impacted by an asynchronous API invocation unexpectedly exceeding xxx ms.| SQL Server Engine | SQL OS| All|
-| <a id=3174690>[3174690](#3174690) </a> | Fixes an issue in which table and column names that are read from database metadata aren't correctly quoted in some cases when building internal SQL Server batches in stored procedures that manage temporal tables. After applying the fix, quoting is completed correctly.| SQL Server Engine | Temporal| All|
 | <a id=3065392>[3065392](#3065392) </a> | Fixes a dump issue that you might encounter in `sqlmin.dll!ParallelRedoManager::ReleaseDelayedTran`. | SQL Server Engine | Transaction Services| All|
 
 ## How to obtain or download this or the latest cumulative update package
