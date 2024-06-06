@@ -3,6 +3,7 @@ title: Break on Memory Leaks check fails in WPF
 description: Works around the problem where the Break on Memory Leaks runtime check fails in WPF applications.
 ms.date: 05/09/2020
 ms.reviewer: vamsp
+ms.custom: sap:Class Library Namespaces
 ---
 # Break on Memory Leaks runtime check fails in WPF applications
 
