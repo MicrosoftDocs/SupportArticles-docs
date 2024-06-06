@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (V
 
 This article describes a workaround for an issue in which disk volumes take more time to go online after you enable the Volume Shadow Copy Service on the volumes.  
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 945058
 
 > [!IMPORTANT]

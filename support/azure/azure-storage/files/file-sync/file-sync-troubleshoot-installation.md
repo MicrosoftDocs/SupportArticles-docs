@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 05/29/2024
+ms.date: 06/03/2024
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -14,16 +14,19 @@ After deploying the Storage Sync Service, the next steps in deploying Azure File
 
 ## Agent installation
 
-<a id="agent-update-hangs"></a>**Agent update does not complete**  
-When upgrading the Azure File Sync agent, you may experience one of the following symptoms if the agent update is hung: 
-- AfsUpdater.exe is hung at "installing updates" 
-- Agent installation is hung at "Stopping monitoring agent"  
+<a id="agent-update-hangs"></a>**Agent update does not complete**
 
-This issue occurs if the Azure File Sync agent version currently installed is older than v16.2 and the Logman.exe process is failing to shutdown. 
+When upgrading the Azure File Sync agent, you may experience one of the following symptoms:
+
+- *AfsUpdater.exe* hangs at "installing updates."
+- Agent installation hangs at "Stopping monitoring agent."
+
+This issue occurs if the currently installed Azure File Sync agent version is earlier than v16.2 and the *Logman.exe* process fails to shut down.
 
 To resolve this issue, perform the following steps:
+
 1. Open **Task Manager**.
-2. Right-click on the **LogMan** process and select **End task**. Repeat this step until all LogMan processes are stopped and the agent update completes successfully.
+2. Right-click the **LogMan** process and select **End task**. Repeat this step until all LogMan processes are stopped and the agent update completes successfully.
 
 <a id="agent-installation-failures"></a>**Troubleshoot agent installation failures**
 
@@ -97,9 +100,25 @@ To resolve this issue, install [KB2919355](https://support.microsoft.com/help/29
 
 ## Server registration
 
-<a id="server-registration-failed"></a>**Server Registration displays this error: "Failed to register the server"**
+<a id="server-registration-failed"></a>**Troubleshoot server registration failures**
 
 If server registration fails, open the *AfsSrvRegistration\*.log* file located under *%LocalAppData%\Temp* and search for "ErrorMessage" to get the error details.
+
+If you can't identify the cause based on the error message, use the `Debug-StorageSyncServer` cmdlet to help diagnose if server registration fails due to a network issue or server certificate.
+
+To run diagnostics on the server, run the following PowerShell commands:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Debug-StorageSyncServer -Diagnose
+```
+
+To test the network connectivity on the server, run the following PowerShell commands:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Debug-StorageSyncServer -TestNetworkConnectivity
+```
 
 <a id="server-registration-missing-subscriptions"></a>**Server Registration does not list all Azure Subscriptions**
 

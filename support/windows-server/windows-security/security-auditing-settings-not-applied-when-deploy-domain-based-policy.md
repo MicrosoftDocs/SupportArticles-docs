@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\AD Object Permissions, access contr
 
 This article provides help to solve an issue where security auditing settings are not applied to client computers in an Active Directory domain when you deploy a domain-based policy.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 921468
 
 ## Symptoms

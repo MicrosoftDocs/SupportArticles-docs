@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\User, computer, group, and object management, cs
 
 This article discusses an issue where applications that use down-level APIs of the NetUser or NetGroup class like `NetUserGetInfo` or `NetGroupGetInfo` fails with the ACCESS DENIED error.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2281774
 
 ## Summary

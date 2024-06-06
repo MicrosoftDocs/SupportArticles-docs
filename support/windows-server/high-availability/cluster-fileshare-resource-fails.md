@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, 
 
 This article provides a solution to an issue where cluster fileshare resource fails on a failover cluster node.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2867302
 
 ## Symptoms

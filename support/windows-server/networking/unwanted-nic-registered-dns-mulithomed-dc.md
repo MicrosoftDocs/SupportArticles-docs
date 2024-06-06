@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 
 This article provides a solution to an issue where unwanted network interface controllers (NICs) are registered in Domain Name System (DNS) on a multihomed domain controller (DC).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2023004
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Errors when running the Validati
 
 This article provides a solution to an issue where validation fails when you run the Disk Failover test on a Windows Server 2012 failover cluster.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3020013
 
 ## Symptoms

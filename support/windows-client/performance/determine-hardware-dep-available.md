@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM
 
 This article describes how to determine that hardware DEP is available and configured on your computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 912923
 
 ## Introduction

@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Reliability (crash, errors, bug check o
 
 This article discusses a by-design behavior where the NMI_HARDWARE_FAILURE error occurs when a Non-Maskable Interrupt (NMI) is triggered.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2750146
 
 ## Symptoms

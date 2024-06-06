@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, an
 
 This article describes an issue in which Windows Time service settings are disabled in the registry after you upgrade to Windows Server 2016 or Windows 10 Version 1607.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3201265
 
 ## Symptoms

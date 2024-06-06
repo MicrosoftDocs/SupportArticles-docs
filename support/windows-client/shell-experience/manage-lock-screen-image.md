@@ -13,7 +13,6 @@ ms.custom: sap:Windows Desktop and Shell Experience\Lock Screen or Screensaver, 
 
 This article describes how an administrator can manage the lock screen image.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2787100
 
 ## Symptoms

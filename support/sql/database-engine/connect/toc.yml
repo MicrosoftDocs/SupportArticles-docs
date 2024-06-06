@@ -11,10 +11,25 @@ items:
   href: change-netmon-parser-port-for-sql-server.md
 - name: Consistent authentication connectivity issues
   href: consistent-authentication-connectivity-issues.md
+  items:
+  - name: Connectivity issues with linked servers in SQL Server
+    href: linked-server-account-mapping-error.md
+  - name: Explicit misplaced SPN problem in SQL Server
+    href: explicit-spn-is-misplaced.md
+  - name: How to determine if the authentication type is Kerberos
+    href: determine-the-authentication-type.md
+  - name: KRB_AP_ERR_TKT_EXPIRED error in Kerberos tickets
+    href: expired-tickets-issue.md
+  - name: Local security subsystem errors in SQL Server
+    href: local-security-subsystem-errors.md
+  - name: Named Pipes connections cause failure to SQL Server
+    href: named-pipes-connection-fail-no-windows-permission.md
+  - name: User account is restricted from using the network login type
+    href: network-login-disallowed.md
+  - name: Windows user profile can't be loaded in SQL Server
+    href: corrupt-user-profile.md 
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
-- name: How to determine if the authentication type is Kerberos
-  href: determine-the-authentication-type.md
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
@@ -38,8 +53,6 @@ items:
     href: ssl-pe-no-cipher-error-endpoint-5022.md
   - name: Intermittent connection errors when using SQLCMD utility
     href: intermittent-connection-errors-sqlcmd.md
-- name: Explicit misplaced SPN problem in SQL Server
-  href: explicit-spn-is-misplaced.md
 - name: Intermittent or periodic network issues
   href: intermittent-periodic-network-issue.md
 - name: Intermittent or periodic authentication issues
@@ -48,16 +61,6 @@ items:
   href: jdbc-config-troubleshoot.md
 - name: Login failed for user
   href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
-- name: KRB_AP_ERR_TKT_EXPIRED error in Kerberos tickets
-  href: expired-tickets-issue.md
-- name: User account is restricted from using the network login type
-  href: network-login-disallowed.md
-- name: Local security subsystem errors in SQL Server
-  href: local-security-subsystem-errors.md
-- name: Connectivity issues with linked servers in SQL Server
-  href: linked-server-account-mapping-error.md
-- name: Named Pipes connections cause failure to SQL Server
-  href: named-pipes-connection-fail-no-windows-permission.md
 - name: Network-related or instance-specific error
   href: network-related-or-instance-specific-error-occurred-while-establishing-connection.md
 - name: Pre-reqs for connectivity troubleshooting
@@ -76,8 +79,6 @@ items:
   href: cannot-connect-remotely.md
 - name: Untrusted certificate authority error
   href: error-message-when-you-connect.md
-- name: Windows user profile can't be loaded in SQL Server
-  href: corrupt-user-profile.md
 - name: Winsock LSP results in network or stability issues
   href: winsock-lsp-network-problem.md
 - name: Connectivity How Tos

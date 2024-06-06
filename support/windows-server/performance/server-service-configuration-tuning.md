@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM
 
 This article describes how to configure and tuning Windows Server service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 128167
 
 ## Summary

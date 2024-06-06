@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB
 
 This article provides a workaround for an issue that occurs if you have a Windows Server 2012 Hyper-V host that uses a Broadcom network adapter.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2902166
 
 ## Symptoms  

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes how to disable the Knowledge Consistency Checker to prevent it from automatically creating replication topology.
 
-_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 242780
 
 ## Summary

@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\WMI management and troubleshooting, 
 
 This article helps fix the error 0x8004106C that occurs when you run WMI queries.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2404366
 
 ## Symptoms

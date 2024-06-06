@@ -38,6 +38,8 @@
       href: inventory/quantity-started-quarantine-order-not-updated.md
     - name: Reversing a report as finished creates an unexpected open transaction
       href: inventory/reverse-report-as-finished-creates-open-transaction.md
+    - name: Transfer order line data discrepancy or corruption
+      href: inventory/correct-inventory-transfer-order-lines-manually.md
     - name: The unit and unit quantity aren't working correctly in the inventory journal
       href: inventory/journal-unit-quantity-incorrect.md
     - name: The filter pane on the On-hand list page doesn't work as expected

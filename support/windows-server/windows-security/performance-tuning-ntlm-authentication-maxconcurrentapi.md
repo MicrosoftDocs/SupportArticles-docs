@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstr
 
 This article describes how to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2688798
 
 ## Introduction

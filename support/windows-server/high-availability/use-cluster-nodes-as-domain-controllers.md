@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Setup and configuration of clust
 
 This article describes how to use Windows Server cluster nodes as domain controllers.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 281662
 
 ## Summary

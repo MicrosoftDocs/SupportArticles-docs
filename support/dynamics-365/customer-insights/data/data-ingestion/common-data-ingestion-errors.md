@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot ingestion errors or corrupt data
-description: Introduces common reasons of data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Dynamics 365 Customer Insights - Data.
-ms.date: 01/03/2024
+description: Introduces common reasons for data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Dynamics 365 Customer Insights - Data.
+ms.date: 06/03/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
@@ -11,7 +11,7 @@ ms.custom: sap:Data Ingestion\Connect to data in Azure Data Lake Storage
 
 [!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
-This article introduces common reasons of data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Microsoft Dynamics 365 Customer Insights - Data.
+This article introduces common reasons for data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Microsoft Dynamics 365 Customer Insights - Data.
 
 ## Ingestion errors or corrupt data with Azure Data Lake Storage
 
@@ -113,19 +113,26 @@ In a *manifest.json* file, the `datetime` format can be specified at the table l
 
 ## Ingestion errors or corrupt data with Power Query
 
-### Data type doesn't match the data
+### Datetime values are parsed incorrectly or a parsing failure occurs 
 
-The most common data type mismatch occurs when a date field isn't set to the correct date format.
+The most common data type mismatch occurs when a date field isn't set to the correct date format. This mismatch can be caused by the incorrectly formatted source data or an incorrect [locale](/power-query/data-types#document-or-project-locale).
 
-To solve the issue, fix the data at the source and re-ingest. Or fix the transformation within Customer Insights - Data. To fix the transformation:
+Symptoms of the incorrect locale issue:
 
-1. Go to **Data** > **Data sources**.
-1. Next to the data source with the corrupted data, select **Edit**.
-1. Select **Next**.
-1. Select each of the queries and look for the incorrect transformations applied inside the **Applied steps**, or the `date` columns that haven't been transformed with a date format.
-1. Change the data type to correctly match the data.
-1. Select **Save**. That data source is refreshed.
+- When the source data can't be parsed by the locale used, an ingestion failure occurs. For example, if "29/08/2023" is parsed with "MM/DD/YYYY," the ingestion fails because it can't parse month 29.
+- When the source data is parsed successfully using an incorrect locale, the datetime values are incorrect. For example, the source data is formatted as "MM/DD/YYYY," while the default locale used to parse the data during ingestion uses "DD/MM/YYYY." As a result, "December 8, 2023" is ingested as "August 12, 2023".
 
+  :::image type="content" source="media/common-data-ingestion-errors/power-query-date-locale-issue.png" alt-text="Screenshot shows that the datetime format is incorrect after ingestion." lightbox="media/common-data-ingestion-errors/power-query-date-locale-issue.png":::
+
+#### Resolution
+
+- To fix an incorrect format, update the source data and re-ingest.
+- To fix an incorrect locale, change the type of all datetime fields to use the correct locale using **Change type** > **Using locale** in the Power Query transformations. For example:
+
+  :::image type="content" source="media/common-data-ingestion-errors/change-type-using-locale.png" alt-text="Screenshot that shows how to change data type with locale in Power Query." lightbox="media/common-data-ingestion-errors/change-type-using-locale.png":::
+
+  For more information, see [Document or project locale](/power-query/data-types#document-or-project-locale).
+  
 ## More information
 
 - [Connect to data in Azure Data Lake Storage](/dynamics365/customer-insights/data/connect-common-data-model)

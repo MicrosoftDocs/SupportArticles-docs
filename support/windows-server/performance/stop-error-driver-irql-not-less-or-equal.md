@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Reliability (crash, errors, bug check o
 
 This article helps to fix the error "DRIVER_IRQL_NOT_LESS_OR_EQUAL" or "USER_MODE_HEALTH_MONITOR".
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2863960
 
 ## Symptoms

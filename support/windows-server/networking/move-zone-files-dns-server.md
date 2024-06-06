@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 
 This article describes how to move the zone files from one DNS server that is running Windows 2000 to another DNS server that is running Windows 2000.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 280061
 
 ## Move zone files

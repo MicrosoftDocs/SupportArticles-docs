@@ -13,7 +13,6 @@ ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Win
 
 This article helps fix an error (Subsystem needed to support the image type is not present) that occurs when you run or install applications on a Windows Server computer running as a Server Core.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 974727
 
 ## Rapid publishing

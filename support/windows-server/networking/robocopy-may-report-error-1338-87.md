@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB)
 
 This article provides a solution to fix error 1338 or error 87 that occurs when you copy files and their associated file security from a CIFS file server.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2459083
 
 ## Symptoms

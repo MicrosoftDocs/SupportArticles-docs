@@ -13,7 +13,6 @@ ms.custom: sap:Application Technologies and Compatibility\MSI and MSIX, csstroub
 
 This article provides a solution to an issue that repairs or uninstalls for certain products may fail after you install software updates.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 971187
 
 ## Symptoms

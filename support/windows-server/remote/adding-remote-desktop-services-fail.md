@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configu
 
 This article provides help to solve an issue where adding Remote Desktop Services role fails when Firewall Service is stopped.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2802436
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\RemoteApp applicati
 
 This article provides workarounds for an issue where you can't run an application that relies on the Explorer.exe file in a Terminal Services RemoteApp session.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951048
 
 ## Symptoms

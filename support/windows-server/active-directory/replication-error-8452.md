@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides a resolution to solve the Active Directory replication error (8452). This article is only intended for technical support agents and IT professionals. If you're a home user and looking for help with a problem, visit [ask the Microsoft Community](https://answers.microsoft.com).
 
-_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2023704
 
 ## Symptoms

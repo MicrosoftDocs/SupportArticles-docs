@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (V
 
 This article provides a solution to an issue where Microsoft Windows Server backup fails with an error: A Volume Shadow Copy Service Operation failed.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 2615182
 
 ## Symptoms

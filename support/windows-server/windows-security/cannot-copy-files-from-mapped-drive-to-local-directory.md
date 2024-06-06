@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\AD Object Permissions, access contr
 
 This article solves the **Location is not available** error when you try to copy files from a mapped drive.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2019185
 
 ## Symptoms

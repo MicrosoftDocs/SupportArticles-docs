@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\WebClient and WebDAV, csstr
 
 This article provides help to solve an issue where you can't access a Web Distributed Authoring and Versioning (WebDAV) Web folder from a Windows-based client computer.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 912152
 
 ## Symptoms

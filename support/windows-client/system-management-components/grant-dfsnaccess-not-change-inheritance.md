@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\PowerShell, csstroubleshoot
 
 This article provides workarounds for an issue where Windows PowerShell cmdlet `Grant-DfsnAccess` doesn't change inheritance on Distributed File System (DFS) links.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2 Standard, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2938148
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
 
 This article provides help to fix errors that occur when you run Group Policy Management Console (GPMC).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 828760
 
 ## Symptoms

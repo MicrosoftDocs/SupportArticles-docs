@@ -13,7 +13,6 @@ ms.custom: sap:User Logon and Profiles\Enterprise State Roaming (ESR) and Folder
 
 This article provides a solution to an issue where folders aren't redirected after you configure Folder redirection.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2811384
 
 ## Symptoms

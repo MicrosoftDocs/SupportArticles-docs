@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\PowerShell, csstroubleshoot
 
 This article provides a resolution to an issue that `Enter-PSSession` unexpectedly terminates when a network path is specified in PSModulePath.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4076842
 
 ## Symptom

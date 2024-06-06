@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstro
 
 This article describes several common error messages that can occur when you join client computers that are running Windows to a domain. This article also provides troubleshooting suggestions for these errors.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4341920
 
 ## Where to find the Netsetup.log file

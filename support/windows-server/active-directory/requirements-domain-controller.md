@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 
 This article describes the requirements that you need to fulfill to issue a domain controller certificate from a third-party certification authority (CA).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 291010
 
 ## Summary

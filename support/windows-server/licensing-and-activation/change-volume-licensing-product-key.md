@@ -13,7 +13,6 @@ ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 
 This article describes how to change the Volume Licensing product key.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 328874
 
 ## Introduction

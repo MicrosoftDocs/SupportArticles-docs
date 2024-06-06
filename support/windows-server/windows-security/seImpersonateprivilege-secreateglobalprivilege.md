@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\AD Object Permissions, access contr
 
 This article discusses the **Impersonate a client after authentication** and **Create global objects** user rights.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 821546
 
 ## Summary
