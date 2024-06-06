@@ -92,7 +92,7 @@ When you right-click the connection object from a source domain controller in Ac
 Dialog title text: Replicate Now
 
 Dialog message text:
-> The following error occurred during the attempt to synchronize naming context %<directory partition name>% from Domain Controller <Source DC> to Domain Controller <Destination DC>:
+> The following error occurred during the attempt to synchronize naming context %\<directory partition name\>% from Domain Controller \<Source DC\> to Domain Controller \<Destination DC\>:
 Access is denied.
 >
 > The operation will not continue.
