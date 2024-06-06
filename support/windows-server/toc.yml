@@ -2123,6 +2123,8 @@ items:
       href: ./performance/incorrect-shutdown-reason-code-sel.md
     - name: 'System shutdown is slow'
       href: ./performance/system-shutdown-is-slow.md
+    - name: System shutdown stops responding
+      href: ./performance/system-shutdown-stops-responding-issues.md      
     - name: Use Userdump.exe to create a dump file
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
