@@ -13,7 +13,7 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 keywords: 
 ---
 
-# Remediating MCA issues, part 1: Identify affected computers
+# Remediating MCA issues, part 1: Identify computers that have MCA issues
 
 This article discusses how to collect and analyze data to determine whether you have an issue that you can remediate by using the `MaxConcurrentApi` registry entry. This kind of issue is also known as an MCA issue. This process helps you determine which computers in your infrastructure are affected by this issue.
 
@@ -430,4 +430,4 @@ Our example server has a significant authentication time-out problem. We'll cont
 
 ## Next steps
 
-- [Remediating MCA issues, part 2: Calculate and change the MCA value](maxconcurrentapi-2-calculate-and-change-mca.md)
+- [Remediating MCA issues, part 2: Calculate and change MCA on your affected computers](maxconcurrentapi-2-calculate-and-change-mca.md)
