@@ -1,6 +1,6 @@
 ---
 title: Send Update to Attendees prompt not displayed when updating meetings
-description: Discusses the scenarios in which Outlook don't display the Send Update to Attendees prompt when a meeting is updated.
+description: Discusses the scenarios in which Outlook doesn't display the Send Update to Attendees prompt when a meeting is updated.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
