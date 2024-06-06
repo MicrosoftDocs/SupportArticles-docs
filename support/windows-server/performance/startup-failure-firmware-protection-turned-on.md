@@ -1,6 +1,6 @@
 ---
 title: Startup fails when Firmware protection is turned on
-description: Provides a solution to an issue where startup fails when Firmware protection is turned off.
+description: Provides a solution to an issue where startup fails when Firmware protection is turned on.
 ms.date: 06/06/2024
 manager: dcscontentpm
 audience: itpro
@@ -11,7 +11,7 @@ ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, error
 ---
 # Startup failure when Firmware protection is turned on
 
-Assume Windows Server 2019 (or an earlier version) is running with a [Secured-core Server](/windows-server/security/secured-core-server) capable hardware.
+Assume Windows Server 2019 (or an earlier version) is running with hardware that supports [Secured-core servers](/windows-server/security/secured-core-server).
 
 The [System Guard Secure Launch](/windows/security/threat-protection/windows-defender-system-guard/system-guard-secure-launch-and-smm-protection#windows-security-center) functionality isn't supported in Windows Server 2019 and earlier versions. If this feature is enabled either through the **Firmware protection** switch in the Windows Security app UI or through a manual edit of the corresponding registry key, the startup can fail.
 
