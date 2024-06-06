@@ -66,7 +66,7 @@ Network latency can play a major part in causing MCA issues. If network latency 
 
 Common techniques to reduce latency include the following:
 
-- Group servers of the same type or configuration&mdash;for example, application servers and the domain controllers that hold user accounts&mdash;in the same physical location.
+- Wherever feasible, group application servers and domain controllers that hold user accounts in the same physical location.
 - If possible, eliminate slow WAN connections.
 - Adjust your topology so that authentication paths are as short as possible.
 - Make sure that all routers have sufficient bandwidth.
