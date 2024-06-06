@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD replication error 8545
 description: Describes an issue that causes Active Directory replication to fail for one or more partitions and trigger error 8545. This issue occurs in Windows Server 2012 and earlier. A resolution is provided.
-ms.date: 12/26/2023
+ms.date: 05/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides a solution to an issue where Active Directory replication fails for one or more partitions with the error 8545.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3110029
 
 > [!NOTE]
@@ -21,7 +20,7 @@ _Original KB number:_ &nbsp; 3110029
 
 ## Symptoms
 
-In Windows Server 2012 and Windows Server 2008, Active Directory replication fails for one or more partitions and returns error 8545: "The replication update could not be applied because either the source or the destination has not yet received information regarding a recent cross-domain move operation."
+Active Directory replication fails for one or more partitions and returns error 8545: "The replication update could not be applied because either the source or the destination has not yet received information regarding a recent cross-domain move operation."
 
 Additionally, the following error is logged in the Directory Service log on the destination domain controller:
 
@@ -59,7 +58,7 @@ Active Directory replication error 8545 is logged when the source domain control
 
 ## Resolution
 
-As a preventive measure, consider installing Microsoft Knowledge Base article [2682997](https://support.microsoft.com/help/2682997) on all domain controllers that are still running Windows Server 2008 or Windows Server 2008 R2. To do this, follow these steps:
+As a preventive measure, consider applying the latest available Windows Updates on all domain controllers. To do this, follow these steps:
 
 1. Determine the distinguished name (DN) of the naming context (NC) / partition where the object was migrated from. For more information about this, see the "More Information" section.
 2. On the destination domain controller, follow these steps to unhost this partition:
@@ -103,7 +102,7 @@ To identify the current location of the object in the database:
 
 1. [Dump](https://support.microsoft.com/help/315098) the database of one of the destination DCs.
 2. Open the database dump file, and then search for the objectGUID that's reported in event 1084.
-3. Grab the DNT and PDNT, and [build the object hierarchy](https://blogs.technet.com/b/askpfeplat/archive/2012/07/23/mcm-core-active-directory-internals.aspx) by copying the pertinent values into a table, as follows:
+1. Grab the DNT and PDNT, and [build the object hierarchy](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/mcm-core-active-directory-internals/ba-p/1785782) by copying the pertinent values into a table, as follows:
 
 | DNT| PDNT| RDN| ObjectGUID |
 |---|---|---|---|

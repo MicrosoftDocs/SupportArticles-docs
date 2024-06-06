@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article provides a solution to an error that occurs when the Network Service account doesn't have permissions to the `SoftwareProtectionPlatform` folder.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3033200
 
 ## Symptoms

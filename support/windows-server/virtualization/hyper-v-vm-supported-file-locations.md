@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine setti
 
 This article describes supported locations for Hyper-V virtual machine files.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2928127
 
 ## Summary

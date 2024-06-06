@@ -1,7 +1,7 @@
 ---
 title: NTDS replication warning IDs 1083 and 1061
 description: Describes an issue that occurs if a change that is made on the local domain controller is also made on the domain controller that holds the PDC operations master role. In this scenario, the domain controllers may replicate the changes at the same time.
-ms.date: 12/26/2023
+ms.date: 05/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides help to fix an issue that occurs if a change that is made on the local domain controller is also made on the domain controller that holds the PDC operations master role.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 306091
 
 ## Summary

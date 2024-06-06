@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine setti
 
 This article provides an overview of caching in the virtual storage stack and gives guidance to software developers and administrators to make sure that desired data consistency requirements are met.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2801713
 
 ## More information

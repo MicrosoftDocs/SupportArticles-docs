@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Root cause of an unexpected fail
 
 This article documents the logic by which groups fail from one node to another when there are three or more cluster node members.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 299631
 
 ## Summary

@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Internet Protocol security (IPSec),
 
 This article describes the support for Suite B cryptographic algorithms that was added to IPsec.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 949856
 
 Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).

@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 
 This article provides a solution to an event logged on domain controllers after modifying security policy.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000705
 
 ## Symptoms

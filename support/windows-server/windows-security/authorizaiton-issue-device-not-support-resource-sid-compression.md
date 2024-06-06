@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstrouble
 
 This article helps fix an issue that occurs when accessing file shares hosted on devices that don't support Resource SID compression.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2774190
 
 ## Symptoms

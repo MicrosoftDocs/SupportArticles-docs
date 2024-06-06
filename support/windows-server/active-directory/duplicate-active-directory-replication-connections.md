@@ -1,7 +1,7 @@
 ---
 title: Duplicate Active Directory replication connections are created
 description: Provides a solution to an issue where duplicate Active Directory replication connections are created for one or more domain controllers across one or more sites.
-ms.date: 12/26/2023
+ms.date: 05/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides a solution to an issue where duplicate Active Directory replication connections are created for one or more domain controllers across one or more sites.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3207569
 
 ## Symptoms
@@ -38,15 +37,16 @@ To collect the relevant data for this issue, follow these steps.
 
 1. Run `repadmin /showconn <DCNAME> >showconn.txt`.
 2. Run `repadmin /failcache <DCNAME> >failcache.txt`.
-3. Run PortQRYUI on \<DCNAME>, and target a remote domain controller that you have duplicate connections with, as follows:  
-   "Domains and Trusts test" File / Save Result
+3. Run [PortQRYUI ](https://download.microsoft.com/download/3/f/4/3f4c6a54-65f0-4164-bdec-a3411ba24d3a/PortQryUI.exe)on \<DCNAME\>, and target a remote domain controller that you have duplicate connections with, as follows:  
+"Domains and Trusts test" File / Save Result
 4. On \<DCNAME>, run `repadmin /bind RemoteDC` (from step 3). For example: `repadmin /bind RemoteDC1`
 5. If `repadmin /bind` fails to connect, take a network trace by using netsh on both domain controllers, as follows:
       1. Run `netsh trace start capture=yes tracefile=c:\%computername%.etl`.
         1. Run `repadmin /bind <DCNAME>`.
         2. Connect by using the FQDN instead of the host name, if possible.
       2. Run `netsh trace stop`.
-6. Run `repadmin /showrepl * /csv >showrepl.csv`.
+6. Run `repadmin /showrepl * /csv >showrepl.csv` or `repadmin /showrepl * /csv | convertfrom-csv | out-gridview` from elevated PowerShell windows to send the output to an interactive table in a separate window.
+
 7. Run `repadmin /viewlist * >DCs.txt`.
 8. Run `repadmin /istg >istg.txt`.
 

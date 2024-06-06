@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM
 
 This article describes how to use Performance Monitor and the Datalog.exe file that is included with Microsoft Windows NT 4.0 Resource Kit to log data and generate alerts on a remote computer without having to log on to it.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 246758
 
 ## More information

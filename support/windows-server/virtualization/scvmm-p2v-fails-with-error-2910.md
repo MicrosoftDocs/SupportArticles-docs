@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hype
 
 This article provides a solution to an error 2910 (0x80070005) that occurs when a Physical-to-Virtual conversion (P2V) conversion in Microsoft System Center Virtual Machine Manager 2008 fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 969965
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstr
 
 This article discusses an issue where the authentication was actually using NTLMv2 but reporting NTLMv1 in the event log.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2701704
 
 ## Summary

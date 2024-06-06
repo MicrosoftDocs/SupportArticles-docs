@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hype
 
 This article helps fix a 0x80070057 error that occurs when you try to import a virtual machine that has been exported by using Hyper-V Manager or System Center Virtual Machine Manager (SCVMM) on a Hyper-V server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 968968
 
 ## Symptoms

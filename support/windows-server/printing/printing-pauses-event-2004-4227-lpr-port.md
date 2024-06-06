@@ -13,7 +13,6 @@ ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not r
 
 This article helps fix an issue where printing pauses after every 11 print jobs when printing through a line printer remote (LPR) port and event IDs 2004 and 4227 are logged.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2003449
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Windows Device and Driver Management\Peripherals driver installat
 
 This article describes the changes of the default behavior for Core Parking.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2814791
 
 ## Summary

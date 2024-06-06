@@ -13,7 +13,6 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 
 This article describes how to move a certification authority (CA) to a different server.
 
-_Applies to:_ &nbsp; Windows Server 2000, Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 298138
 
 > [!NOTE]

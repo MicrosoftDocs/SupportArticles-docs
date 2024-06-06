@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/performance/troubleshooting-system-shutdown-is-slow-scenario.md",
+      "redirect_url": "/troubleshoot/windows-server/performance/system-shutdown-is-slow",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/group-policy/give-users-access-group-policy-objects.md",
       "redirect_url": "/troubleshoot/windows-server/group-policy/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions",
       "redirect_document_id": false
@@ -11128,6 +11133,26 @@
     {
       "source_path": "support/windows-server/active-directory/syntax-build-answer-files-unattended-installation-ad-ds.md",
       "redirect_url": "/windows-server/identity/ad-ds/deploy/dcpromo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/dcdiag-verifyreferences-test-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dcdiag-verifyreferences-test-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/lingering-objects-remain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/lingering-objects-remain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/distributed-file-system-hotfixes.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/distributed-file-system-hotfixes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/find-current-schema-version.md",
+      "redirect_url": "/windows-server/identity/ad-ds/deploy/find-active-directory-schema",
       "redirect_document_id": false
     }
   ]

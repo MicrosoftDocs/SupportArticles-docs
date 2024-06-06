@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Setup and configuration of clust
 
 This article describes how to change the IP addresses of the network adapters in the nodes of a cluster.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 230356
 
 ## More information

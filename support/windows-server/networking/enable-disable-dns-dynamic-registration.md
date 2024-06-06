@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 
 The article discusses how to disable DNS updates in Windows. By default, client computers have DNS updates enabled.
 
-_Applies to:_ &nbsp; Windows 10, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 246804
 
 ## Summary

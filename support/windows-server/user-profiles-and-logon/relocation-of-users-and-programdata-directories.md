@@ -17,7 +17,6 @@ By changing the default location of the *User* directories or *ProgramData* fold
 
 Beginning with Windows 10, upgrades are supported even if user profiles are redirected to another drive. For example, if you are using Windows 8.1 with ProfilesDirectory set to D:\\, you can still upgrade to Windows 10.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows 7  
 _Original KB number:_ &nbsp; 949977
 
 ## More information

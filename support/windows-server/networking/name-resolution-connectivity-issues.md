@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 
 This article provides a solution to name resolution and connectivity issues on a Routing and Remote Access Server that also runs DNS or WINS.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 292822
 
 ## Symptoms

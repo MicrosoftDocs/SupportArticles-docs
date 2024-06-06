@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Addi
 
 This article provides a solution to the error 80070005 that occurs when failover cluster validate fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2012835
 
 ## Summary

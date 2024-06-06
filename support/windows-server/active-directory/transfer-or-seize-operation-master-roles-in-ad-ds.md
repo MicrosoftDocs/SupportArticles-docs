@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
 
 This article describes when and how to transfer or seize Operation Master roles, formerly known as Flexible Single Master Operations (FSMO) roles.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 255504
 
 ## More information

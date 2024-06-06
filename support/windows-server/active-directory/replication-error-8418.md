@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting replication error 8418
 description: Helps troubleshoot Active Directory replication error 8418.
-ms.date: 12/26/2023
+ms.date: 05/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -16,7 +16,6 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 > [!NOTE]
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/en-us).
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2734946
 
 ## Symptoms
@@ -31,7 +30,7 @@ Troubleshooting AD replication error 5: Access is denied site:support.microsoft.
 
 Replication of any Active Directory data between domain controllers in a forest relies on all DC's having a consistent view of the definitions of objects and attributes. These definitions are stored in the Schema partition of the Active Directory database. The directory replication engine prioritizes replication of data this in this partition above all others - when any change to a schema definition is detected between partners it must be replicated before data in other partitions can be synchronized.
 
-1. One or more on-screen errors, logged events or diagnostic output identifies the existence of a schema mismatch.
+1. One or more on-screen errors logged events or diagnostic output identifies the existence of a schema mismatch.
 
     Possible formats for that error include:  
 
@@ -95,13 +94,13 @@ Replication of any Active Directory data between domain controllers in a forest 
 
 ## Cause
 
-Attempts to replicate AD when schema information is not consistent between the DC partners involved will result in a "Schema Mismatch" error status. This symptom can be manifested in a number of different ways as outlined above. However the underlying cause of the error being raised can vary.
+Attempts to replicate AD when schema information is not consistent between the DC partners involved will result in a "Schema Mismatch" error status. This symptom can be manifested in a number of different ways as outlined above. However, the underlying cause of the error being raised can vary.
 
 There are also scenarios where this error will be raised but there is not a mismatch in the schema information in the strictest sense. In these cases, it may be that the Active Directory data being replicated does not conform to the current schema definition for the relevant object or attribute whose value is being synchronized and applied at the destination DC.
 
-The duration of schema mismatch errors typically fall into one of two categories, transient or persistent. Within the persistent category, there are some failures that can be investigated AND resolved safely.
+The duration of schema mismatch errors typically falls into one of two categories, transient or persistent. Within the persistent category, there are some failures that can be investigated AND resolved safely.
 
-For issues where schema replication fails due to improper attribute schema definitions please engage Microsoft Customer Service and Support to work through the issue.  
+For issues where schema replication fails due to improper attribute schema definitions, please engage Microsoft Customer Service and Support to work through the issue.  
 
 Note: Lab testing of schema modification is critical prior to implementing any proposed action plan into your production schema.
 
@@ -131,11 +130,8 @@ Known Issues
 
 |KB Article No.|Title|Key Data|
 |---|---|---|
-|982438|You cannot install AD DS in Windows Server 2008 in a Windows Server 2003-based domain if another computer that is in the same domain has MSCS installed|Event ID 1791|
-|947020|Event IDs 1481, 1173, and 1203 are logged in the Directory Services log on a Windows Server 2003-based domain controller|Event ID 1481 Error 2083; DSID 31510B7<br/><br/>Event ID 1173 Param 2083 DSID 31010B7<br/><br/>Event ID 1203 "Schema Mismatch"|
-|824873|Event 1791 is logged when information is replicated from Windows 2000 to Windows Server 2003|Event ID 1791 Error 8418<br/><br/>Event ID 1481 DSID 3151030|
 |2001769|Error While Propagating Permissions: "Unable to save permission ...|Event ID 1450 DSID 3150dbe|
-  
+
 Other Blocking Issues  
 
 |Topic|KB|Key Data|
@@ -175,7 +171,7 @@ In the case where DCpromo fails with a schema mismatch the following data should
 
 Verify the Schema Versions  
 
-The current schema version can be read from two places on any given DC - the registry and in the Active Directory itself. In normal operation the two values should be in sync and should correctly reflect the Schema Version of the forest as defined by the schema  FSMO.
+The current schema version can be read from two places on any given DC - the registry and in the Active Directory itself. In normal operation the two values should be in sync and should correctly reflect the Schema Version of the forest as defined by the schema FSMO.
 
 Note: Only Microsoft provided updates of the Active Directory Schema will update the SchemaVersion number.
 
@@ -191,7 +187,9 @@ Reference Schema Version Values
 |Windows Server 2012|56|
 |Windows Server 2012R2|69|
 |Windows Server 2016|87|
-  
+|Windows Server 2019|88|
+|Windows Server 2022|88|
+
 In the Registry:
 
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\SystemSchemaVersion`
@@ -210,13 +208,13 @@ Possible Resolution 1
 
 In the scenario where the following conditions apply:
 
-The AD schema has been recently updated
+- The AD schema has been recently updated
 
-One or more partners of a DC is reporting a schema mismatch for an extended period
+- One or more partners of a DC is reporting a schema mismatch for an extended period
 
-The registry and AD schema versions on the source DC are in sync and match the expected forest-wide version
+- The registry and AD schema versions on the source DC are in sync and match the expected forest-wide version
 
-It's possible that a reboot of the source DC will resolve the replication failures. The underlying cause is thought to be failure to correctly reload the in memory version of schema after the schema update has been received.
+It's possible that a reboot of the source DC will resolve the replication failures. The underlying cause is thought to be failure to correctly reload the in-memory version of schema after the schema update has been received.
 
 Data Collection Phase 2  
 
@@ -235,17 +233,18 @@ This will log additional information to the Directory Services event log that wi
 
 Trigger the scenario that raises the Schema Mismatch err and review the event log data collected to try to identify:
 
-- The object on which replication is failing either by its Distinguished Name  or ObjectGUID
+- The object on which replication is failing either by its Distinguished Name or ObjectGUID
+
 - The attribute being applied either by its ldapdisplayname or its internal ID
 - Any internal or extended error data.
 
 Event ID's of interest from the Directory Service Event log include:
 
-Replication event 1173
+- Replication Event 1173
 
-Replication  Event 1791
+- Replication Event 1791
 
-Replication  Event 1203
+- Replication Event 1203
 
 The following example events show both an internal ID and extended error data
 
@@ -293,26 +292,35 @@ Active Directory Domain Services will attempt to synchronize the schema before a
 
 Review the data collected  
 
-Look for correlating events  including the ones noted above which point to known trigger scenarios.
+Look for correlating events including the ones noted above which point to known trigger scenarios.
 
 Look for events that might indicate other underlying issues on the source or destination that might be blocking replication and so causing what might be a transient mismatch failure to persist.  
 
 Examples of other causes include but are not limited to:
 
-Database CorruptionMemory Constraints
-Replication Quarantine
-Strict Replication Consistency
-Disabled Replication
-Objects with Security Descriptors in excess of 64 Kb
-DNS (Name Resolution) etc.
-RPC Communication Failures
-Local firewalls
+- Database Corruption
+
+- Memory Constraints
+
+- Replication Quarantine
+
+- Strict Replication Consistency
+
+- Disabled Replication
+
+- Objects with Security Descriptors in excess of 64 Kb
+
+- DNS (Name Resolution) etc.
+
+- RPC Communication Failures
+
+- Local firewalls
 
 See Causes Section for details of events and related status codes for some of these issues.
 
 Supplementary Actions  
 
-If the object triggering failure can be identified, then first use `repadmin /showobjmeta` to dump the object replication metadata and on both source and destination DC. This method  can be used to identify "candidate" attributes that could be the cause of failure
+If the object triggering failure can be identified, then first use `repadmin /showobjmeta` to dump the object replication metadata and on both source and destination DC. This method can be used to identify "candidate" attributes that could be the cause of failure
 
 `Repadmin /showobjmeta Target_DC "DN_of Trigger_Object"`
 
@@ -320,7 +328,7 @@ If only the GUID of the object is known use the syntax:
 
 `Repadmin /showobjmeta Target_DC "\<GUID=ObjectGuid_of Trigger_Object>"`
 
-Review the replication metadata for correctness by ensuring that all the replicated attributes display a correctly formed attribute  name
+Review the replication metadata for correctness by ensuring that all the replicated attributes display a correctly formed attribute name
 
 Example  
 
@@ -348,7 +356,7 @@ Version comparison - attributes to be replicated will have higher version number
 If ONLY the object can be identified from the event data, dump the attribute values of the trigger object.
 
 ```console
-Ldifde -f results.txt> -d "DN_of Trigger_Object" -s Target_DC Ldifde -f  \<results.txt> -d "<GUID=ObjectGuid_of Trigger_Object>" -s Target_DC Repadmin /showattr Target_DC "DN_of Trigger_Object" Repadmin /showattr Target_DC "DN_of Trigger_Object"
+Ldifde -f results.txt> -d "DN_of Trigger_Object" -s Target_DC Ldifde -f \<results.txt> -d "<GUID=ObjectGuid_of Trigger_Object>" -s Target_DC Repadmin /showattr Target_DC "DN_of Trigger_Object" Repadmin /showattr Target_DC "DN_of Trigger_Object"
 ```
 
 If the replication events citing 8418 yielded any Extended or Internal errors use those values to try to match against known issues.
@@ -357,7 +365,7 @@ If the attribute triggering failure cannot be identified by the event log data o
 
 Schema Review  
 
-Once a potential trigger attribute has been identified and other known causes eliminated then the next action is to review the schema definition for the attribute. This analysis  is best performed with the assistance  Microsoft Product Support.
+Once a potential trigger attribute has been identified and other known causes eliminated then the next action is to review the schema definition for the attribute. This analysis is best performed with the assistance Microsoft Product Support.
 
 Export of entire schema partition from both source and destination domain controllers:
 
@@ -380,10 +388,10 @@ Be prepared to provide the following information to Microsoft Support staff to a
 
 Possible schema definition issues that can trigger mismatch include:  
 
-OID Clash
-Invalid OM Syntax values
-Invalid MayContain values
-Objects with attributes that contain data but the schema definition for the attribute type(s) has been marked as defunct
+- OID Clash
+- Invalid OM Syntax values
+- Invalid MayContain values
+- Objects with attributes that contain data but the schema definition for the attribute type(s) has been marked as defunct
 
 ## Data collection
 

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\User, computer, group, and object management, cs
 
 This article helps fix an error that occurs when processing the password change for a user where the password is expired or set to change at next logon.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2879424
 
 ## Symptoms

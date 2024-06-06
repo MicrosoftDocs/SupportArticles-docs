@@ -13,7 +13,6 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 
 This article provides a workaround for an issue where valid root CA certificates that are distributed by using GPO appear as untrusted.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4560600
 
 ## Symptoms

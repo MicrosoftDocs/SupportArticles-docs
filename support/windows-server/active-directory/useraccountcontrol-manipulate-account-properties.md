@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\User, computer, group, and object management, cs
 
 This article describes information about using the **UserAccountControl** attribute to manipulate user account properties.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2 , Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 305144
 
 ## Summary

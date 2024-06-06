@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration 
 
 This article provides a workaround for an issue where DHCP clients are blocked when a DAI-enabled network device is used together with a DHCP failover on a Windows Server 2012 server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2978225
 
 ## Symptoms

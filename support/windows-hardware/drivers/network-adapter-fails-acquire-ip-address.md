@@ -2,8 +2,7 @@
 title: Network adapter fails to acquire an IP address
 description: This article provides resolutions for the problem that prevents network cards from acquiring an IP address via DHCP at startup in a Windows Embedded 2009 environment. This problem occurs intermittently.
 ms.date: 09/01/2020
-ms.custom: sap:Windows Embedded POSReady 2009
-ms.subservice: general
+ms.custom: sap:Other Driver
 ---
 # Network adapter fails to acquire an IP address through DHCP at startup
 

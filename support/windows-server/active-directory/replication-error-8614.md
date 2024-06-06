@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot replication error 8614
 description: Fixes Active Directory replication error 8614.
-ms.date: 12/26/2023
+ms.date: 05/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides the steps to troubleshoot Active Directory replication error 8614.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2020053
 
 > [!NOTE]
@@ -162,7 +161,7 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
     Use `repadmin /showattr` to see whether a nondefault value for the **TombstoneLifetime** attribute has been configured.
 
     ```console
-    repadmin /showattr "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=<forest root domain>,DC=<top level domain>"
+    repadmin /showattr <DC_name> "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=<forest root domain>,DC=<top level domain>"
     ```
 
     If the attribute isn't present in the `showattr` output, an internal default value is being used.
@@ -171,41 +170,39 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
 
     Run `repadmin /showrepl * /csv` parsed by using Excel as specified in the [Verify successful replication to a domain controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794749(v=ws.10)) section. Sort the replsum output in Excel on the last replication success column in the order from least current to the most current date and time.
 
-3. Check for Windows Server 2003 RTM domain controllers.
-
-    If the 8614 error occurred on a Windows Server 2003 RTM domain controller, install the latest Windows Server 2003 service pack.
-
-4. Check for time jumps.
+3. Check for time jumps.
 
     To determine whether a time _jump_ occurred, check event and diagnostic logs (`repadmin /showreps`, dcdiag logs) on destination DCs that are logging 8614 errors for the following timestamps:
 
     - Date stamps that predate the release of an operating system. For example, date stamps from Windows Server 2003 for an OS released in Windows Server 2008.
-    - Date stamps that predate the installation of the operating system in your forest.
-    - Date stamps in the future.
-    - No events being logged in a given date range.
+      - Date stamps that predate the installation of the operating system in your forest.
+      - Date stamps in the future.
+      - No events being logged in a given date range.
 
     Microsoft Support teams have seen system time on production domain controllers incorrectly jump hours, days, weeks, years, and even tens of years in the past and future.
 
     If system time was found to be inaccurate, correct it. Then try to determine why time jumped, and what can be done to prevent inaccurate time going forward vs. just correcting the bad time. Possible areas to investigate include:
 
     - Was the forest root PDC configured by using an external time source?
-    - Are reference time sources online, available on the network, and resolvable in DNS?
-    - Was the Microsoft or third-party time service running and in an error-free state?
-    - Are DC-role computers configured to use NT5DS hierarchy to source time?
-    - Was the time rollback protection described in [How to configure the Windows Time service against a large time offset](https://support.microsoft.com/help/884776) in place?
-    - Do system clocks have good batteries and accurate time in the BIOS?
-    - Are virtual host and guest computers configured to source time according to the hosting manufacturers recommendations?
+      - Are reference time sources online, available on the network, and resolvable in DNS?
+      - Was the Microsoft or third-party time service running and in an error-free state?
+      - Are DC-role computers configured to use NT5DS hierarchy to source time?
+      - Was the time rollback protection described in [How to configure the Windows Time service against a large time offset](https://support.microsoft.com/help/884776) in place?
+      - Do system clocks have good batteries and accurate time in the BIOS?
+      - Are virtual host and guest computers configured to source time according to the hosting manufacturers recommendations?
 
-    This article [How to configure the Windows Time service against a large time offset](https://support.microsoft.com/help/884776) documents steps to help protect domain controllers from listening to invalid time samples. More information on **MaxPosPhaseCorrection** and **MaxNegPhaseCorrection** is available in [Windows Time Service](/archive/blogs/w32time/).
+    This article [How to configure the Windows Time service against a large time offset](https://support.microsoft.com/help/884776) documents steps to help protect domain controllers from listening to invalid time samples. More information on **MaxPosPhaseCorrection** and **MaxNegPhaseCorrection** is available in [Windows Time Service](/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings).
 
-5. Check for and remove lingering objects if they're present.
+4. Check for and remove lingering objects if they're present.
 
     The point of the 8614 error replication quarantine is to check for lingering objects and remove them, if present, in each locally held partition before setting **Allow Replication with divergent and corrupt partner** to 1 in the registry of the destination DC, even if you think that all destination DCs in the forest are running in strict replication consistency.
 
     Removing lingering objects is beyond the scope of this article. For more information, see the following articles:
 
     - [Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205).
-
+    - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)
+    - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
+    - [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
     - [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10))
 
     `Repadmin` syntax is shown here:
@@ -214,7 +211,7 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
     |---|---|
     |`c:\>repadmin /removelingeringobjects <Dest_DSA_LIST> <Source DSA GUID> <NC> [/advisory_mode]`| `c:\>repadmin /help:removelingeringobject` |
 
-6. Evaluate setting strict replication on destination DCs.
+5. Evaluate setting strict replication on destination DCs.
 
     Strict mode replication prevents lingering objects from being reanimated on destination DCs that have used garbage collection to create, delete, and reclaim intentionally deleted objects.
 
@@ -231,7 +228,7 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
     |---|---|---|---|---|
     | `repadmin /regkey <DSA_LIST> <{+|-}key> [value [/reg_sz]`]| `Repadmin /help:regkey` | `repadmin /regkey <fully qualified computer name> +strict` | `repadmin /regkey * +strict` | `repadmin /regkey gc: +strict` |
 
-7. Set **Allow replication with divergent and corrupt partner** to 1 on the 8614 DC.
+6. Set **Allow replication with divergent and corrupt partner** to 1 on the 8614 DC.
 
     After any lingering objects are removed, disable the time-based replication quarantine:
 
@@ -247,7 +244,7 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
     |---|---|---|---|---|
     |`repadmin /regkey <DSA_LIST> <{+|-}key> [value [/reg_sz]`] | `Repadmin /help:regkey` |`repadmin /regkey dc01.contoso.com +allowDivergent` |`repadmin /regkey * +allowDivergent` |`repadmin /regkey GC: +allowDivergent` |
 
-8. Resolve AD replication failures if they're present.
+7. Resolve AD replication failures if they're present.
 
     When the 8614 error status is logged on a destination DC, prior replication errors that were logged in the previous TSL number of days are masked.
 
@@ -260,9 +257,9 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
 
     Review past Directory Service events and diagnostic output (dcdiag, `repadmin` logs) that was generated by the source DC, by the destination DC, and by alternative replication partners in the past to identify the scope and failure status that is preventing replication between the destination DC and the source DC.
 
-9. Delete **Allow replication with divergent and corrupt partner** or set **Allow replication with divergent and corrupt partner** to 0 in the registry.
+8. Delete **Allow replication with divergent and corrupt partner** or set **Allow replication with divergent and corrupt partner** to 0 in the registry.
 
-10. Monitor Active Directory replication daily going forward.
+9. Monitor Active Directory replication daily going forward.
 
     Monitor end-to-end replication in your Active Directory forest daily by using an Active Directory monitoring application. One inexpensive but effective option is to run `repadmin /showrepl * /csv` and then parse the results in Excel. For more information, see [Method 2: Monitor replication by using a command line](information-lingering-objects.md#method-2-monitor-replication-by-using-a-command-line-command).
 

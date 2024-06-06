@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\File Server Resource Manager 
 
 This article provides a workaround for an issue where the File Server Resource Manager (FSRM) quota usage is incorrect.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3034439
 
 ## Symptoms

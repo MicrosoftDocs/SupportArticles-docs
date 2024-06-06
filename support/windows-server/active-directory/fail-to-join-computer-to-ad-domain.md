@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstro
 
 This article provides a solution to an error that occurs when you use the domain join User Interface (UI) to join a Windows 7 or Windows Server 2008 R2 workgroup computer to an Active Directory domain by specifying the target DNS domain name.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2018583
 
 ## Symptoms

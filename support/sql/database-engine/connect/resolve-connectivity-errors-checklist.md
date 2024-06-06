@@ -133,7 +133,7 @@ If you aren't able to run SQLCHECK on your SQL Server computer, you can check th
     sqlcmd -E -S $server_name -d $database_name -Q ("exec sp_helplogins '" + $server_principal + "'")
     ```
 
-1. If you're troubleshooting Kerberos related issues, you can use the scripts at [Determine If I Am Connected to SQL Server using Kerberos Authentication](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Determine-If-I-Am-Connected-to-SQL-Server-using-Kerberos-Authentication) to determine if Kerberos is properly configured on your SQL Servers.
+1. If you're troubleshooting Kerberos related issues, you can use the scripts at [How to determine if the authentication type is Kerberos](determine-the-authentication-type.md).
 
 ## Common connectivity issues
 

@@ -13,7 +13,6 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enro
 
 This article describes how to add a subject alternative name (SAN) to a secure Lightweight Directory Access Protocol (LDAP) certificate.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 931351
 
 ## Summary

@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\ISCSI, csstroubleshoot
 
 This article provides a resolution to an issue that may prevent file shares from being re-created when you restart the computer.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 870964
 
 ## Symptoms

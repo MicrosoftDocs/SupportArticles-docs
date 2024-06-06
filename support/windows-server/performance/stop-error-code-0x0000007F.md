@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Reliability (crash, errors, bug check o
 
 This article helps to fix the error "Stop error code 0x0000007F (UNEXPECTED_KERNEL_MODE_TRAP)".  
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 822789
 
 ## Symptoms

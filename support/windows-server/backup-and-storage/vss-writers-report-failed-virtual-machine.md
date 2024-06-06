@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (V
 
 This article provides some information about VSS writers report as failed on a virtual machine.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2952783
 
 ## Symptoms

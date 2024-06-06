@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Active Directory Federation Service
 
 This article describes how to restore Internet Information Services (IIS) and clean up Active Directory when you uninstall Active Directory Federation Services 2.0.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 982813
 
 ## Introduction

@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows
 
 This article describes an issue in which System State Backup fails when an invalid ImagePath is specified for services.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 968247
 
 ## Symptom

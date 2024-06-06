@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstrou
 
 This article provides common resolutions to the issue where domain controller is not functioning correctly.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837513
 
 ## Symptoms

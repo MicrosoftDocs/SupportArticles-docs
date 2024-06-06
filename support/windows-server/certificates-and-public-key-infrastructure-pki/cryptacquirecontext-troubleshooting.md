@@ -13,7 +13,6 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Credential Roami
 
 This article provides information about when to use specific flags when you call CryptAcquireContext and the reasons for using these flags.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 238187
 
 ## Summary

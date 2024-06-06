@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Windows NIC Teaming (Load B
 
 This article provides a resolution for the issue that it shows "Faulted Not Found" status for NIC team after you restart Windows from an iSCSI boot disk.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2969300
 
 ## Symptoms
