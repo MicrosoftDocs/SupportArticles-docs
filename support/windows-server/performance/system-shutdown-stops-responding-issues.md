@@ -15,7 +15,7 @@ This scenario guide explains how to troubleshoot issues where a system shutdown 
 
 ## The memory dump file
 
-To troubleshoot this scenario, you need a [Complete Memory Dump](/windows-hardware/drivers/debugger/complete-memory-dump). If the machine has a lot of memory, you should configure an [Active Memory Dump](/windows-hardware/drivers/debugger/active-memory-dump) to reduce the size of the dump file. To get a memory dump, initiate a shutdown and wait 10 minutes for the dump analysis. Use the same method as for [troubleshooting a computer that's in a frozen state](../../windows-client/performance/windows-based-computer-freeze-troubleshooting#use-memory-dump-to-collect-data-for-the-physical-computer-thats-running-in-a-frozen-state) to configure and create the *memory.dmp* file. The file is for analysis from a [physical computer](../../windows-client/performance/windows-based-computer-freeze-troubleshooting#use-memory-dump-to-collect-data-for-the-physical-computer-thats-running-in-a-frozen-state) or a [virtual machine](../../windows-client/performance/windows-based-computer-freeze-troubleshooting#use-memory-dump-to-collect-data-for-the-virtual-machine-thats-running-in-a-frozen-state).
+To troubleshoot this scenario, you need a [Complete Memory Dump](/windows-hardware/drivers/debugger/complete-memory-dump). If the machine has a lot of memory, you should configure an [Active Memory Dump](/windows-hardware/drivers/debugger/active-memory-dump) to reduce the size of the dump file. To get a memory dump, initiate a shutdown and wait 10 minutes for the dump analysis. Use the same method as for [troubleshooting a computer that's in a frozen state](/troubleshoot/windows-client/performance/windows-based-computer-freeze-troubleshooting#use-memory-dump-to-collect-data-for-the-physical-computer-thats-running-in-a-frozen-state) to configure and create the *memory.dmp* file. The file is for analysis from a [physical computer](/troubleshoot/windows-client/performance/windows-based-computer-freeze-troubleshooting#use-memory-dump-to-collect-data-for-the-physical-computer-thats-running-in-a-frozen-state) or a [virtual machine](/troubleshoot/windows-client/performance/windows-based-computer-freeze-troubleshooting#use-memory-dump-to-collect-data-for-the-virtual-machine-thats-running-in-a-frozen-state).
 
 ## Debugging tools
 
@@ -29,7 +29,7 @@ Configure the Windows debugger with the [symbol path](/windows-hardware/drivers/
 
 Use a local folder (for example, *c:\\Symbols*) to cache with the [Microsoft symbol server](https://msdl.microsoft.com/download/symbols). Set the **Symbol path** as follows:
 
-    :::image type="content" source="media/system-shutdown-stops-responding-issues/symbol-server-path.png" alt-text="Screenshot that shows the symbol path in the debugging settings.":::
+:::image type="content" source="media/system-shutdown-stops-responding-issues/symbol-server-path.png" alt-text="Screenshot that shows the symbol path in the debugging settings.":::
 
 Unzip the *mex.dll* file and copy it to the *winext* folder under the path of the installed debugger tools (for example, *C:\\Prgram Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\winext\\mex.dll*).
 
@@ -47,18 +47,18 @@ You can [analyze crash dump files](/windows-hardware/drivers/debugger/crash-dump
 The possible causes that block the shutdown for hours are:
 
 - Blocked kernel situations
-- [Services that don't end](../../azure/virtual-machines/windows/boot-error-troubleshoot-windows)
+- [Services that don't end](/troubleshoot/azure/virtual-machines/windows/boot-error-troubleshoot-windows)
 - The policy to [clear the paging file at shutdown](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/shutdown-clear-virtual-memory-pagefile) is activated
 
 ### Blocked kernel situations
 
 Check for blocked threads by using the command `!mex.tl -t`. For example:
 
-    :::image type="content" source="media/system-shutdown-stops-responding-issues/blocked-kernel-situations.png" alt-text="Screenshot that shows the blocked threads in the output of the command.":::
+:::image type="content" source="media/system-shutdown-stops-responding-issues/blocked-kernel-situations.png" alt-text="Screenshot that shows the blocked threads in the output of the command.":::
 
 ### Services that don't end
 
-To isolate a problem with third-party services, start the machine in [safe mode](/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234) with the third-party services disabled, and then shut it down with the third-party services disabled. If the problem is related to a third-party service, continue to use the [System Configuration utility](../../windows-client/performance/system-configuration-utility-troubleshoot-configuration-errors) and [selective startup](../../windows-client/performance/system-configuration-utility-troubleshoot-configuration-errors#selective-startup) to isolate the service blocking the shutdown.
+To isolate a problem with third-party services, start the machine in [safe mode](/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234) with the third-party services disabled, and then shut it down with the third-party services disabled. If the problem is related to a third-party service, continue to use the [System Configuration utility](/troubleshoot/windows-client/performance/system-configuration-utility-troubleshoot-configuration-errors) and [selective startup](/troubleshoot/windows-client/performance/system-configuration-utility-troubleshoot-configuration-errors#selective-startup) to isolate the service blocking the shutdown.
 
 ### Check the "ClearPageFileAtShutdown" value
 
@@ -70,4 +70,4 @@ Check the value data of the `ClearPageFileAtShutdown` value (`Computer\HKEY_LOCA
 - [System Shutdown](/windows/win32/shutdown/system-shutdown)
 - [Complete Memory Dump](/windows-hardware/drivers/debugger/complete-memory-dump)
 - [Symbol path for Windows debuggers](/windows-hardware/drivers/debugger/symbol-path)
-- [Windows-based computer freeze troubleshooting](../../windows-client/performance/windows-based-computer-freeze-troubleshooting#use-memory-dump-to-collect-data-for-the-physical-computer-thats-running-in-a-frozen-state)
+- [Windows-based computer freeze troubleshooting](/troubleshoot/windows-client/performance/windows-based-computer-freeze-troubleshooting#use-memory-dump-to-collect-data-for-the-physical-computer-thats-running-in-a-frozen-state)
