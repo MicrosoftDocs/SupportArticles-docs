@@ -37,7 +37,7 @@ The output shows that `Security group1` has [PublishingEditor](/powershell/modul
 The issue occurs if the security identifier of the security group object in Microsoft Entra ID changes after the group is granted access to the public folder. If the security identifier changes, the security group no longer matches the entry in the access rights list for the public folder. Therefore, even though the security group entry is still in the access rights list, the security group members can no longer access the public folder.
 
 > [!NOTE]
-> To check the security identifier value for a security group, run the following cmdlets in Exchange Online PowerShell:
+> To check the security identifier value for a security group, run the following commands in Exchange Online PowerShell:
 >
 > ```PowerShell
 > $permissions = Get-PublicFolderClientPermission -Identity "<public folder>" -User "<security group name>"
