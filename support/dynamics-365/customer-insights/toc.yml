@@ -18,6 +18,8 @@
     items:
       - name: Troubleshoot deduplication, match, or merge results
         href: data/profile-unification/troubleshoot-unification-results.md
+      - name: Troubleshoot unification output tables
+        href: data/profile-unification/troubleshoot-unification-output-tables.md
       - name: Match failed error
         href: data/profile-unification/match-failed.md
       - name: Merge failed error

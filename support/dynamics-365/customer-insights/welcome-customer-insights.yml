@@ -38,6 +38,8 @@ landingContent:
         links:
           - text: Troubleshoot deduplication, match, or merge results
             url: data/profile-unification/troubleshoot-unification-results.md
+          - text: Troubleshoot unification output tables
+            url: data/profile-unification/troubleshoot-unification-output-tables.md
           - text: Match failed error
             url: data/profile-unification/match-failed.md
           - text: Merge failed error

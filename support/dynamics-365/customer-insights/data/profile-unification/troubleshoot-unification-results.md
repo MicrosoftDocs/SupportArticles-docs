@@ -15,22 +15,22 @@ When unification runs, you may have questions as to why specific records were un
 This article provides several methods you can use to understand the unification process and troubleshoot unexpected results.
 
 ## Summary
-Below is a list of approaches for investigating unexpected results. 
+There are multiple approaches for investigating unexpected results. 
 1.	Use Customer cards for validation
 
-    Click a customer card to view the full customer profile and verify what source records were matched in the deduplication step, and what source records from different tables were then matched.
+    Click a customer card to view the full customer profile and verify what source records were deduplicated and matched.
 
-    In this example, the Customer is a result of matching the first 3 source entities, but not the last one "posPurchases".
+    In this example, the Customer is a result of matching the three source tables, but not "posPurchases." Additionally, there were 4 records deduplicated in "eCommercePurchases."
 
     :::image type="content" source="media/customer-card.png" alt-text="Example Customer card.":::
 
 1.	Ensure the correct Primary Key is selected for tables
 
-    Selecting the wrong field as the table’s primary key in the Source fields step will cause all records with the same value for that field to be deduplicated and removed. Ensure the primary key column is the actual unique identifier for that table, and not a demographic field such as email.
+    Selecting the wrong field as the table’s primary key in the Source fields step causes records with the same value for that field to be deduplicated and removed. Ensure the primary key column is the actual unique identifier for that table, and not a demographic field such as email.
 
 1.	Check your source data
 
-    Confirm fields you think should have matched do indeed contain the same characters. Look for hidden characters and characters that look similar but are actually different. These issues may be resolved with normalization patterns selected on each rule.
+    Confirm fields you think matched do indeed contain the same characters. Look for hidden characters and characters that look similar but are different. These issues may be resolved with normalization patterns selected on each rule.
 
     See [verify source data](#verify-source-data) for guidance.
 
@@ -38,9 +38,9 @@ Below is a list of approaches for investigating unexpected results.
 
     Confirm deduplication and match rules are set up correctly. Are the correct fields being compared? Are normalization patterns selected?
 
-1.	Verify your use of “Include all records”
+1.	Verify your use of "Include all records"
 
-    A deselected ‘Include all records’ checkbox in the Matching rules step will cause all records from that table that were not matched to any other table to be dropped from the final customer profile output. 
+    A deselected "Include all records" checkbox in the Matching rules step causes records from that table that weren't matched to any other table to be dropped from the final customer profile output. 
 
 1.	Examine the output tables
 
