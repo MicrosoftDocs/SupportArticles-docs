@@ -58,7 +58,7 @@ Check for blocked threads by using the command `!mex.tl -t`. For example:
 
 ### Services that don't end
 
-To isolate a problem with third-party services, start the machine in [safe mode](/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234) with the third-party services disabled, and then shut it down with the third-party services disabled. If the problem is related to a third-party service, continue to use the [System Configuration utility](/troubleshoot/windows-client/performance/system-configuration-utility-troubleshoot-configuration-errors) and [selective startup](/troubleshoot/windows-client/performance/system-configuration-utility-troubleshoot-configuration-errors#selective-startup) to isolate the service blocking the shutdown.
+To isolate a problem with third-party services, start the machine in [safe mode](https://support.microsoft.com/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234) with the third-party services disabled, and then shut it down with the third-party services disabled. If the problem is related to a third-party service, continue to use the [System Configuration utility](/troubleshoot/windows-client/performance/system-configuration-utility-troubleshoot-configuration-errors) and [selective startup](/troubleshoot/windows-client/performance/system-configuration-utility-troubleshoot-configuration-errors#selective-startup) to isolate the service blocking the shutdown.
 
 ### Check the "ClearPageFileAtShutdown" value
 
