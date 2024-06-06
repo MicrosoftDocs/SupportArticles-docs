@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the underlying causes of an MCA issue
-description: Describes how to determine the cause of your MCA issue.
+description: Discusses how to determine the cause of an MCA issue.
 ms.date: 05/29/2024
 author: Deland-Han
 ms.author: delhan
@@ -15,21 +15,21 @@ keywords:
 
 # Remediating MCA issues, part 3: Troubleshoot the underlying causes of an MCA issue
 
-This article describes how to determine the cause of your MCA issue.
+This article discusses how to determine the cause of an MCA issue.
 
 _Applies to:_ &nbsp; Windows Server 2012 and newer versions, Windows 8 and newer versions
 
 ## Summary
 
-When a user opens an application, the application typically can authenticate the user in less than a second. Slow authentication performance indicates that there are underlying issues in your infrastructure. [Remediating MCA issues, part 2: Calculate and change the MCA value](maxconcurrentapi-2-calculate-and-change-mca.md) provides a way to increase the capacity for managing simultaneous authentication requests. This approach might alleviate the symptoms, but it's just a band-aid. The underlying problems are still there.
+When a user opens an application, the application typically authenticates the user in less than one second. Slow authentication performance indicates that underlying issues exist in your infrastructure. [Part 2 of this series ("Calculate and change the MCA value")](maxconcurrentapi-2-calculate-and-change-mca.md) provides a process to increase the capacity for managing simultaneous authentication requests. This approach might relieve the symptoms, but only temporarily. The underlying issues remain.
 
-Tuned `MaxConcurrentApi` values can improve your environment's authentication performance. However, using nondefault values might exacerbate other issues. Additionally, if your topology or load changes, you might have to recalculate the `MaxConcurrentApi` values. Generally, the best approach is to use the tuned values until you can identify and fix the underlying problems. 
+Tuned `MaxConcurrentApi` values can improve your environment's authentication performance. However, using nondefault values might exacerbate other issues. Additionally, if your topology or load changes, you might have to recalculate the `MaxConcurrentApi` values. Generally, the best approach is to use the tuned values until you can identify and fix the underlying issues. 
 
-This article provides guidance about where to look for those problems. There are various factors that can cause authentication timeout issues.
+This article provides guidance about where to look for those issues. There are various factors that can cause authentication time-out issues to occur.
 
-## Continue monitoring performance
+## Continue to monitor performance
 
-[Remediating MCA issues, part 2: Calculate and change the MCA value](maxconcurrentapi-2-calculate-and-change-mca.md) describes the minimum performance parameters that you should be monitoring. The resulting data can help you troubleshoot your environment and track the effects of any changes you make.
+[Calculate and change the MCA value](maxconcurrentapi-2-calculate-and-change-mca.md) discusses the minimum performance parameters that you should monitor. The resulting data can help you troubleshoot your environment and track the effects of any changes that you make.
 
 ## Reduce the overall demand for the Netlogon service
 
@@ -37,22 +37,22 @@ The most direct way to reduce the need for `MaxConcurrentApi` adjustments is to 
 
 ### Update legacy applications
 
-Kerberos authentication places significantly less load on the Netlogon service than older methods such as NTLM authentication. If you have applications that rely on older authentication methods, consider replacing them with applications that can use Kerberos.
+Kerberos authentication puts significantly less load on the Netlogon service than do older methods, such as NTLM authentication. If you have applications that rely on older authentication methods, consider replacing them with applications that can use Kerberos.
 
 > [!NOTE]  
-> If you have a heavily used line-of-business application that can't use Kerberos authentication, you might have to use `MaxConcurrentApi` to alleviate performance issues until a replacement is available.
+> If you have a heavily used line-of-business application that can't use Kerberos authentication, you might have to use `MaxConcurrentApi` to relieve performance issues until a replacement is available.
 
 ### Check for unauthorized or unknown clients or services
 
-Review the Netlogon logs for unauthorized or unknown clients or services that continually and repeatedly send authentication requests. Identifying and, if appropriate, blocking or reconfiguring such clients or services can reduce the load on the Netlogon service.
+Review the Netlogon logs for unauthorized or unknown clients or services that continually and repeatedly send authentication requests. By identifying and, if appropriate, blocking or reconfiguring such clients or services, you can reduce the load on the Netlogon service.
 
 ### Make sure that cross-forest authentication requests include the user domain name
 
-If your topology includes multiple forest trusts, check the Netlogon logs of the domain controllers that receive authentication requests directly from application servers. Look for log entries that authentication requests contain `<null>\<username>` instead of `<domainname>\<username>`. Wherever possible, make sure that applications use the `<domainname>\<username>` format. If this approach isn't feasible, see [The Lsass.exe process might stop responding if you have many external trusts on an Active Directory domain controller](https://support.microsoft.com/topic/the-lsass-exe-process-may-stop-responding-if-you-have-many-external-trusts-on-an-active-directory-domain-controller-7ccefcf9-e65a-c9bc-ff96-ecf9a78c195e) for additional information.
+If your topology includes multiple forest trusts, check the Netlogon logs of the domain controllers that receive authentication requests directly from application servers. Look for log entries in which authentication requests contain `<null>\<username>` instead of `<domainname>\<username>`. Wherever possible, make sure that applications use the `<domainname>\<username>` format. If this approach isn't feasible, see [The Lsass.exe process might stop responding if you have many external trusts on an Active Directory domain controller](https://support.microsoft.com/topic/the-lsass-exe-process-may-stop-responding-if-you-have-many-external-trusts-on-an-active-directory-domain-controller-7ccefcf9-e65a-c9bc-ff96-ecf9a78c195e) for additional information.
 
 ## Check server health
 
-Make sure that the application servers and domain controllers are healthy and have plenty of available resources (RAM, CPU, winsock ports, and so forth.)
+Make sure that the application servers and domain controllers are healthy and have plenty of available resources (RAM, CPU, winsock ports, and so on.)
 
 ## Check the network
 
@@ -62,22 +62,22 @@ Check for issues that might block network traffic, such as incorrect firewall se
 
 ### Check for network latency
 
-Network latency can play a major part in causing MCA issues. If network latency is too high, authentication requests can time out before they reach their destination.
+Network latency can play a major part in causing MCA issues. If network latency is set too high, authentication requests can time out before they reach their destination.
 
-Common techniques to use to reduce latency include the following:
+Common techniques to reduce latency include the following:
 
-- Put servers&mdash;for example, application servers and the domain controllers that hold user accounts&mdash;in the same physical location.
+- Group servers of the same type or configuration&mdash;for example, application servers and the domain controllers that hold user accounts&mdash;in the same physical location.
 - If possible, eliminate slow WAN connections.
 - Adjust your topology so that authentication paths are as short as possible.
 - Make sure that all routers have sufficient bandwidth.
 
-## Review the Active Directory Domain Service (AD DS) and DNS topology
+## Review the Active Directory Domain Services and DNS topology
 
-Your AD DS and DNS topology controls how traffic passes from server to server in your environment. You analyzed your current flow when you looked for servers that had MCA issues (described in [Part 1](maxconcurrentapi-1-identify-computers-that-have-mca-issues.md) of this series). Now you can use this information to redistribute the authentication load, or route requests more efficiently. For example, if you found that an application server sent authentication requests to a domain controller over a slow WAN link when another domain controller that has a faster connection was available, you can configure an Active Directory site to direct the requests over the faster connection.
+Your Active Directory Domain Services (AD DS) and DNS topology control how traffic passes from server to server in your environment. You analyzed your current flow when you looked for servers that had MCA issues (discussed in [Part 1](maxconcurrentapi-1-identify-computers-that-have-mca-issues.md) of this series). Now, you can use this information to redistribute the authentication load, or route requests more efficiently. For example, you find that an application server sends authentication requests to a domain controller over a slow WAN link, whikl, while another domain controller that has a faster connection is available. In this situation, you can configure an Active Directory site to direct the requests over the faster connection.
 
-Factors to consider include the following:
+Factors to consider:
 
-- Can you use sites to group application servers and domain controllers? Have the servers been assigned to the correct sites?
+- Can you use sites to group application servers and domain controllers? Are the servers assigned to the correct sites?
 - Are your sites configured correctly? Are sites and subnets paired correctly?
 - If authentication requests have to pass from one forest to another forest over a trust, have you configured sites that have the same name in each forest?
 - If authentication requests have to travel from one child domain to another child domain in the same forest, can you use a shortcut trust to reduce the authentication path and directly connect the domains?
