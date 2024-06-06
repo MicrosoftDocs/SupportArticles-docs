@@ -3,7 +3,7 @@ title: Cannot access the exception service
 description: Provides a solution to an error that occurs when you start the Exception Management console in Web Services for Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 06/5/2024
+ms.date: 06/05/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Cannot access the exception service" Error message when you start the Exception Management console in Web Services for Microsoft Dynamics GP
@@ -16,6 +16,7 @@ _Original KB number:_ &nbsp; 924548
 ## Symptoms
 
 When you start the Exception Management console in Web Services for Microsoft Dynamics GP, you receive the following error message:
+
 > Cannot access the exception service. Verify the configuration file exists and contains the correct path to the exception service.
 
 ## Cause
@@ -24,12 +25,12 @@ This problem occurs if either of the following conditions is true:
 
 - The URL of the Web Services for Microsoft Dynamics GP in the Microsoft.Dynamics.GP.Administration.Exceptions.dll.config file isn't entered correctly.
 
-    > [!NOTE]
-    > See [resolution 1](#resolution-1).
+  > [!NOTE]
+  > See [resolution 1](#resolution-1).
 - The **Enable anonymous access** check box is selected for the DynamicsGPWebServices virtual directory.
 
-     > [!NOTE]
-    > See [resolution 2](#resolution-2).
+  > [!NOTE]
+  > See [resolution 2](#resolution-2).
 
 ## Resolution 1
 
@@ -54,12 +55,11 @@ To enter the correct URL of the Web Services for Microsoft Dynamics GP, follow t
 > - An IP address is assigned to the Web site.
 > - Other Web sites are running on the same port number. However, these Web sites use different IP addresses.
 
-
 ## Resolution 2
 
 To check for and remove invalid characters from the WSExceptionLog table, follow these steps:
 
-1. Select **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then select **SQL Server Management Studio**.
+1. Select **Start**, point to **All Programs** > **Microsoft SQL Server**, and then select **SQL Server Management Studio**.
 2. In the Connect to Server window, follow these steps:
     1. In the **Server name** box, type the name of the server that is running SQL Server.
     2. In the **Authentication** box, select **SQL Authentication**.
