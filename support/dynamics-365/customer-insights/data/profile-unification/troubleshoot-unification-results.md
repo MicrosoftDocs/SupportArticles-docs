@@ -20,7 +20,7 @@ There are multiple approaches for investigating unexpected results.
 
     Click a customer card to view the full customer profile and verify what source records were deduplicated and matched.
 
-    In this example, the Customer is a result of matching records from all the source tables, except "posPurchases." Additionally, there were four records deduplicated in "eCommercePurchases," and "webReviews" each.
+    In this example, the Customer is a result of matching records from all the source tables, except "posPurchases." Additionally, there were records deduplicated in "eCommercePurchases," and "webReviews."
 
     :::image type="content" source="media/customer-card.png" alt-text="Example Customer card.":::
 
@@ -48,7 +48,7 @@ There are multiple approaches for investigating unexpected results.
 
     To debug an unexpected unification result, you can trace through these output tables.
 
-    See [troubleshoot unification output tables](/troubleshoot/dynamics-365/customer-insights/data/profile-unification/troubleshoot-unification-output-tables)
+    See [troubleshoot unification output tables](/troubleshoot/dynamics-365/customer-insights/data/profile-unification/troubleshoot-unification-output-tables).
 
 
 ## Verify source data
