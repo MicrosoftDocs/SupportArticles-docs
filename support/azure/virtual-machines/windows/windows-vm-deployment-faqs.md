@@ -78,6 +78,12 @@ Choose a size that is supported on the availability set's cluster. It is recomme
 
 Yes. You can add an existing classic VM to a new or existing Availability Set. For more information see [Add an existing virtual machine to an availability set](/previous-versions/azure/virtual-machines/windows/classic/configure-availability-classic#addmachine).
 
+## Can I deploy resources in South West Africa region?
+
+Direct deployment of resources in South Africa West is not possible; it serves solely as a replication point from South Africa North.
+You may refer to the public article:
+https://techcommunity.microsoft.com/t5/azure/not-able-to-create-resources-in-south-africa-west/m-p/1375043 
+
 ## Additional Information
 
 If you encounter issues when you start a stopped Windows VM or resize an existing Windows VM in Azure, see [Troubleshoot Resource Manager deployment issues with restarting or resizing an existing Windows Virtual Machine in Azure](restart-resize-error-troubleshooting.md).
