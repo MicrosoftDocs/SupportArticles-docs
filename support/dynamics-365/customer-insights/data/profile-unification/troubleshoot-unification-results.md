@@ -16,39 +16,39 @@ This article provides several methods you can use to understand the unification 
 
 ## Summary
 There are multiple approaches for investigating unexpected results. 
-1.	Use Customer cards for validation
+1.	**Use Customer cards for validation**
 
     Click a customer card to view the full customer profile and verify what source records were deduplicated and matched.
 
-    In this example, the Customer is a result of matching the three source tables, but not "posPurchases." Additionally, there were 4 records deduplicated in "eCommercePurchases."
+    In this example, the Customer is a result of matching records from all the source tables, except "posPurchases." Additionally, there were four records deduplicated in "eCommercePurchases," and "webReviews" each.
 
     :::image type="content" source="media/customer-card.png" alt-text="Example Customer card.":::
 
-1.	Ensure the correct Primary Key is selected for tables
+1.	**Ensure the correct Primary Key is selected for tables**
 
     Selecting the wrong field as the table’s primary key in the Source fields step causes records with the same value for that field to be deduplicated and removed. Ensure the primary key column is the actual unique identifier for that table, and not a demographic field such as email.
 
-1.	Check your source data
+1.	**Check your source data**
 
     Confirm fields you think matched do indeed contain the same characters. Look for hidden characters and characters that look similar but are different. These issues may be resolved with normalization patterns selected on each rule.
 
     See [verify source data](#verify-source-data) for guidance.
 
-1.	Confirm match rules
+1.	**Confirm match rules**
 
     Confirm deduplication and match rules are set up correctly. Are the correct fields being compared? Are normalization patterns selected?
 
-1.	Verify your use of "Include all records"
+1.	**Verify your use of "Include all records"**
 
     A deselected "Include all records" checkbox in the Matching rules step causes records from that table that weren't matched to any other table to be dropped from the final customer profile output. 
 
-1.	Examine the output tables
+1.	**Examine the output tables**
 
     Each step of unification produces system generated output tables that are available for troubleshooting purposes.
 
     To debug an unexpected unification result, you can trace through these output tables.
 
-    See [troubleshoot unification output tables](/troubleshoot/dynamics-365/customer-insights/data/profile-unification/troubleshoot-unification-output-tables.md)
+    See [troubleshoot unification output tables](/troubleshoot/dynamics-365/customer-insights/data/profile-unification/troubleshoot-unification-output-tables)
 
 
 ## Verify source data
