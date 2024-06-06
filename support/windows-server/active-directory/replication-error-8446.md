@@ -102,9 +102,7 @@ Determine if there's a depletion of the following resources and fix the underlyi
 
 ### Domain controller scalability
 
-The database cache consumes all available virtual memory for the LSASS process, so a memory leak is not obvious to identify. Find out what type of situation happens here.
-
-Database cache consumes all available virtual memory for the LSASS process.  
+The database cache consumes all available virtual memory for the LSASS process, so a memory leak isn't easy to identify. Find out what type of situation happens here.
 
 Run Performance Monitor with database counters, and review the following counters:
 
@@ -112,9 +110,9 @@ Run Performance Monitor with database counters, and review the following counter
 - LSASS - Virtual Bytes
 - Database - "Database Cache Size"
 
-If there are hints the virtual memory is high and the main use is not for the database cache, you can investigate the behavior with Windows Performance Recorder heap snapshots.
+If there are hints that the virtual memory is high and that the main use isn't for the database cache, you can investigate the behavior with Windows Performance Recorder heap snapshots.
  
-We recommend starting the heap snapshots after the database cache has grown to the normal and expected size. Then use Windows Performance Recorder creates heap snapshots by using the steps in [Record a Heap Snapshot](/windows-hardware/test/wpt/record-heap-snapshot).
+We recommend starting the heap snapshot after the database cache has grown to the normal and expected size. Then, use Windows Performance Recorder to create heap snapshots by using the steps in [Record a Heap Snapshot](/windows-hardware/test/wpt/record-heap-snapshot).
  
 You can use [public symbols](/windows-hardware/drivers/debugger/microsoft-public-symbols) to investigate the stacks for the outstanding allocations. To diagnose the results in depth, we recommend you open a service request with Microsoft support.
 
