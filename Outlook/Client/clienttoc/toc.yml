@@ -29,7 +29,7 @@
           href: ../authentication/blocked-smart-card-pin-using-outlook.md
     - name: Calendaring
       items:
-        - name: '"Send updates" prompt not displayed'
+        - name: '"Send update" prompt not displayed'
           href: ../calendaring/send-updates-prompt-not-displayed.md
         - name: Attached Outlook items not retained
           href: ../calendaring/attached-outlook-items-not-retained.md
