@@ -311,7 +311,7 @@ This table covers possible chokepoints in a more generalized scope as search gui
 After you've identified the potential chokepoints in your infrastructure, you can start collecting and analyzing data. The first priority is to identify whether an MCA issue actually exists. Later, you narrow down exactly which server (or servers) has an issue. 
 
 > [!IMPORTANT]  
-> To collect data, enable Netlogon to log on to all the chokepoints that you identified in the previous section. If you have many potential chokepoints, review both this section and the next section, [Narrowing your scope and identifying trends](#narrowing-your-scope-and-identifying-trends).
+> To collect data, enable Netlogon to log on to all the chokepoints that you identified in the previous section. If you have many potential chokepoints, review both this section and the next section, [Narrow your scope and identify trends](#narrow-your-scope-and-identify-trends).
 
 To identify an MCA issue, you have to collect performance data while the servers are under a heavy load. A heavy load occurs when the servers see the most client requests. For example, in an email server scenario, the best time to collect the performance data is when users arrive at work and check their email messages. Therefore, you must make sure that all servers in a given scenario have their performance data reviewed while they're busy servicing heavy loads.
 
