@@ -87,7 +87,7 @@ Use the following equation to determine the MCA value for a server:
 
 Compare the calculated value to the default and maximum value for the server's role, as listed in the following table.
 
-| Operating system and role | Default threads (per secure channel) | Maximum threads |
+| Operating system type or role | Default threads (per secure channel) | Maximum threads |
 | --- | --- | --- |
 | Domain controllers<br/> Windows Server 2012 and later versions | 10 | 150 |
 | Member servers<br/> Windows 2012 and later versions | 10 | 150 |
