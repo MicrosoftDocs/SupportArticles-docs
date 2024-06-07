@@ -142,6 +142,8 @@
       href: desktop-flows/actions-not-available.md
     - name: Set drop-down list value in window/on web page action fails
       href: desktop-flows/set-drop-down-list-value-fails.md
+    - name: Session creation errors for unattended desktop flow runs
+      href: desktop-flows/troubleshoot-session-creation-errrors.md
     - name: Tips on working with SQL queries
       href: desktop-flows/troubleshooting-tips-sql-queries.md
     - name: Troubleshoot direct connectivity issues

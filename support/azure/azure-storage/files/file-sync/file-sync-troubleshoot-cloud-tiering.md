@@ -4,7 +4,7 @@ description: Troubleshoot common issues with cloud tiering in an Azure File Sync
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/03/2024
+ms.date: 06/06/2024
 ms.author: kendownie
 ms.reviewer: v-weizhu
 ms.custom: sap:File Sync
@@ -247,14 +247,14 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 
 ## Tiered files are not accessible on the server after deleting a server endpoint
 
-Tiered files on a server will become inaccessible if the files aren't recalled prior to deleting a server endpoint.
+Tiered files on a server will become inaccessible if the files aren't recalled prior to deleting a server endpoint or if tiered files were restored from on-premises (third party) backup to the server endpoint location.
 
-Errors are logged if tiered files aren't accessible:
+The following errors are logged if tiered files aren't accessible:
 
-- When syncing a file, error code -2147942467 (0x80070043 - ERROR_BAD_NET_NAME) is logged in the ItemResults event log.
-- When recalling a file, error code -2134376393 (0x80c80037 - ECS_E_SYNC_SHARE_NOT_FOUND) is logged in the RecallResults event log.
+- When syncing a file, error code -2147023890 (0x800703ee - ERROR_FILE_INVALID) or error code -2147942467 (0x80070043 - ERROR_BAD_NET_NAME) is logged in the ItemResults event log.
+- When recalling a file, error code -2147023890 (0x800703ee - ERROR_FILE_INVALID) or error code -2134376393 (0x80c80037 - ECS_E_SYNC_SHARE_NOT_FOUND) is logged in the RecallResults event log.
 
-Restoring access to your tiered files is possible if the following conditions are met:
+If the tiered files are not accessible due to deleting the server endpoint, restoring access to your tiered files is possible if the following conditions are met:
 
 - Server endpoint was deleted within the past 30 days.
 - Cloud endpoint wasn't deleted.
@@ -263,12 +263,12 @@ Restoring access to your tiered files is possible if the following conditions ar
 
 If the conditions above are met, you can restore access to the files on the server by recreating the server endpoint at the same path on the server within the same sync group within 30 days.
 
-If the conditions above aren't met, restoring access isn't possible as these tiered files on the server are now orphaned. Follow these instructions to remove the orphaned tiered files.
+If the conditions above aren't met or the tiered files were restored from an on-premises (third party) backup, restoring access isn't possible as these tiered files on the server are now orphaned. Follow these instructions to remove the orphaned tiered files.
 
 > [!NOTE]
 >
 > - When tiered files aren't accessible on the server, the full file should still be accessible if you access the Azure file share directly.
-> - To prevent orphaned tiered files in the future, follow the steps documented in [Remove a server endpoint](/azure/storage/file-sync/file-sync-server-endpoint-delete) when deleting a server endpoint.
+> - To prevent orphaned tiered files in the future, follow the steps documented in [Remove a server endpoint](/azure/storage/file-sync/file-sync-server-endpoint-delete) when deleting a server endpoint and do not restore tiered files from on-premises backup, see [Disaster recovery best practices with Azure File Sync](/azure/storage/file-sync/file-sync-disaster-recovery-best-practices). 
 
 <a id="get-orphaned"></a>**How to get the list of orphaned tiered files**
 
