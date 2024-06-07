@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.service: viva-connections
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Admin Setup and Configuration
   - CI 169239
   - CSSTroubleshoot
 ms.reviewer: bpeterse
