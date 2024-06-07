@@ -607,6 +607,8 @@
           href: ../public-folders/public-folder-not-send-read-receipt.md
         - name: Restored folders cause a migration batch failure
           href: ../public-folders/public-folder-migration-batch-error.md
+        - name: Security group can't access a public folder
+          href: ../public-folders/security-group-cannot-access-public-folder.md
         - name: Show up in address list after removing
           href: ../public-folders/public-folders-display-gal-clean-up.md
         - name: SizeExceeds error in migration of public folders
