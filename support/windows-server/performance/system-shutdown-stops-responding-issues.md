@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot issues where system shutdown stops responding
 description: Explains how to troubleshoot issues where a system shutdown doesn't complete and stops responding.
-ms.date: 06/05/2024
+ms.date: 06/07/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
