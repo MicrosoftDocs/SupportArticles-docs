@@ -218,7 +218,7 @@ Cloud-init versions >= 20.3 contain a fix which falls back and executes `dhclien
 **Solution**: For VMs running cloud-init older than version 20.3, configure the VM so that `/var/tmp` is not mounted as `noexec`. Alternatively, upgrade the VM's cloud-init package to a version >= 20.3.
 
 > [!NOTE]
-> The `dhclient` permission issue has been resolved in cloud-init version 22.4 and later versions. For more information, see [cloud-init issues 3956](https://github.com/canonical/cloud-init/issues/3956).
+> The `dhclient` permission issue has been resolved in cloud-init 22.4 and later versions. For more information, see [cloud-init issues 3956](https://github.com/canonical/cloud-init/issues/3956).
 
 ### Getting more logs
 
