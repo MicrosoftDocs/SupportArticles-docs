@@ -140,12 +140,15 @@ You can add a GC by creating a new domain controller and specifying it as a GC. 
 
 ## Cause and solution for situation 2: A domain controller generates Error 8240 during AD DS operations
 
-In an AD DS forest, each domain controller maintains information about the forest objects. Any change to an object starts on a single (source) domain controller. From there, the change replicates to the source domain controller's replication partners (destination domain controllers). Those domain controllers replicate the changes further, and eventually all of the domain controllers "know" about the updated object. The following details of the replication process between two domain controllers pertain to error 8240:
+In an AD DS forest, each domain controller maintains information about the forest objects. Any change to an object starts on a single (source) domain controller. From there, the change replicates to the source domain controller's replication partners (destination domain controllers). Those domain controllers replicate the changes further, and eventually all of the domain controllers "know" about the updated object. The replication process between two domain controllers that pertains to error 8240 follows these steps:
 
-- The source domain controller notifies the destination domain controllers of the change.
-- After they receive the notification, destination domain controllers pull the change from the source domain controller.
-- Each destination domain controller looks up its local copy of the object to apply the change.
-- If the destination domain controller can't find its local copy of the object, it generates error 8240.
+>  **Step 1:** The source domain controller notifies the destination domain controllers of the change.
+
+>  **Step 2:** After they receive the notification, destination domain controllers pull the change from the source domain controller.
+
+>  **Step 3:** Each destination domain controller looks up its local copy of the object to apply the change.
+
+>  **Step 4:** If the destination domain controller can't find its local copy of the object, it generates error 8240.
 
 The object could be missing for reasons such as the following:
 
