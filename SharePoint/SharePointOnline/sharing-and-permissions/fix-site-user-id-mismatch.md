@@ -63,7 +63,7 @@ To get the original OneDrive site URL, follow these steps:
 1. Sign in to the OneDrive site by using an administrator account.
 1. Select the **Settings** (gear) icon in the upper-right corner.
 1. Select **OneDrive Settings**, then select **More Settings**.
-1. Copy the OneDrive Web URL under the **Diagnostic Information** section.
+1. Copy the OneDrive Web URL in the **Diagnostic Information** section.
 
 To retrieve multiple OneDrive URLs, use one of the methods in [View OneDrive URLs for users in your organization](/sharepoint/list-onedrive-urls).
 
