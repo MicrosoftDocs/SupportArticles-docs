@@ -10,7 +10,7 @@ ms.collection: linux
 ms.topic: troubleshooting-problem-resolution
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.date: 06/04/2024
+ms.date: 06/07/2024
 #customer intent: As an Azure Linux virtual machine (VM) administrator, I want troubleshoot issues in the APT tools so that I can successfully install or update applications on my VMs.
 ---
 # Troubleshoot common issues with APT on Ubuntu
@@ -237,14 +237,14 @@ If you're adding this repository to your system, make sure that the key is actua
 sudo curl -fsSL https://download.opensuse.org/repositories/devel:kubic:libcontainers:unstable/xUbuntu_22.04/Release.key | sudo tee /etc/apt/trusted.gpg.d/devel_kubic_libcontainers_unstable.gpg > /dev/null
 ```
 
-After you fetch the GPG key by running curl, you can alternatively convert the GPG key into a format suitable for APT by running the `gpg --dearmor` command, and then save it directly to the */etc/apt/trusted.gpg.d/* . This alternative ensures that your system securely manages and trusts the GPG key without relying on the `apt-key` command:
+After you fetch the GPG key by running curl, you can alternatively convert the GPG key into a format suitable for APT by running the `gpg --dearmor` command, and then save it directly to the */etc/apt/trusted.gpg.d/* folder. This alternative ensures that your system securely manages and trusts the GPG key without relying on the `apt-key` command:
 
 ```bash
 curl -fsSL https://download.opensuse.org/repositories/devel:kubic:libcontainers:unstable/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/devel_kubic_libcontainers_unstable.gpg > /dev/null
 ```
 
 > [!NOTE]
-> If you can't locate the correct GPG key for this third-party repository, we recommend that you remove the repository entry from either the */etc/apt/sources.list* file or the */etc/apt/sources.list.d/* . This action ensures that the `apt update` commands function correctly and reduce the risk of encountering errors related to GPG keys. Prioritize security, and only add repositories from trusted sources that have valid GPG keys.
+> If you can't locate the correct GPG key for this third-party repository, we recommend that you remove the repository entry from either the */etc/apt/sources.list* file or the */etc/apt/sources.list.d/* folder. This action ensures that the `apt update` commands function correctly and reduce the risk of encountering errors related to GPG keys. Prioritize security, and only add repositories from trusted sources that have valid GPG keys.
 
 </details>
 
@@ -384,11 +384,11 @@ deb http://archive.ubuntu.com/ubuntu/dists/focal/main/binary-armhf/Packages foca
 deb-src  http://archive.ubuntu.com/ubuntu/dists/focal/main/binary-armhf/Packages focal main
 ```
 
-If any application automatically edits the *sources.list* file or adds a repository under the */etc/apt/sources.list.d/* , and then includes the *armhf* repositories, the same error occurs.
+If any application automatically edits the *sources.list* file or adds a repository under the */etc/apt/sources.list.d/* folder, and then includes the *armhf* repositories, the same error occurs.
 
 #### Solution: Remove or comment out armhf information from sources.list
 
-Remove or comment out the lines that reference the ARM processor architecture in the */etc/apt/sources.list* file or the */etc/apt/sources.list.d/\*.list*.
+Remove or comment out the lines that reference the ARM processor architecture in the */etc/apt/sources.list* file or */etc/apt/sources.list.d/\*.list*.
 
 </details>
 
