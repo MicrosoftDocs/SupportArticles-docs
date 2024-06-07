@@ -61,7 +61,7 @@ Before you invest time and energy in tracking down and resolving MCA bottlenecks
 - Check your domain name services (DNS) infrastructure and your network connections for errors or inefficient configurations.  
 - Use Kerberos authentication wherever possible. As the following diagram shows, the Netlogon service provides functionality to all the authentication methods that Windows supports.  
 
-  :::image type="content" source="./media/maxconcurrentapi-overview-identify-and-remediate-mca-issues/netlogon-service-usage-in-authentication.png" alt-text="Diagram that shows the components that provide the primary Windows authentication functions, and how Netlogon provides underlying functionality for different authentication methods.":::
+  :::image type="content" source="./media/maxconcurrentapi-overview-identify-and-remediate-mca-issues/netlogon-service-usage-in-authentication.png" alt-text="Diagram that shows the components that provide the primary Windows authentication functions, and how Netlogon provides underlying functionality for different authentication methods." border="false":::
 
   However, Kerberos uses Netlogon much more efficiently than other authentication methods do (one time for each ticket that's constructed instead of one time per authentication attempt). You're less likely to encounter MCA bottlenecks when you use Kerberos.
   > [!NOTE]  

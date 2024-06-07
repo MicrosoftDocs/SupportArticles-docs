@@ -179,7 +179,7 @@ When the final domain controller in the path authenticates the user, it returns 
 
 The following diagram provides a very high-level overview of the criteria that determine an authentication path.
 
-:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/dc-target-decision-tree.svg" alt-text="Diagram that shows the criteria that Windows uses to determine the path of an authentication request.":::
+:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/dc-target-decision-tree.svg" alt-text="Diagram that shows the criteria that Windows uses to determine the path of an authentication request." border="false":::
 
 ### Examples of how to identify authentication paths and potential chokepoints
 
@@ -189,7 +189,7 @@ The following examples illustrate how to identify the servers that you should ch
 
 Consider the following topology.
 
-:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/single-forest-three-domain-auth-path.svg" alt-text="Diagram that shows how authentication requests travel from child domains to the root domain in a single-forest topology.":::
+:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/single-forest-three-domain-auth-path.svg" alt-text="Diagram that shows how authentication requests travel from child domains to the root domain in a single-forest topology." border="false":::
 
 The web server in Domain B services users from Domain C and uses NTLM authentication. Both Domain B and Domain C are in the same forest. Domain A is the forest root domain.
 
@@ -221,7 +221,7 @@ Depending on the site topology, the following servers are the potential chokepoi
 
 Consider the following topology:
 
-:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/two-forest-six-domain-auth-path.svg" alt-text="Diagram that shows how authentication requests travel from child domains to the root domain in a two-forest topology.":::
+:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/two-forest-six-domain-auth-path.svg" alt-text="Diagram that shows how authentication requests travel from child domains to the root domain in a two-forest topology." border="false":::
 
 Domain A is the root domain of forest A, and Domain D is the root domain of forest B. Domains A and B have a forest trust.
 
@@ -260,7 +260,7 @@ Depending on the site topology, the following servers are the potential chokepoi
 
 Consider the following topology.  
 
-:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/two-domain-external-trust-auth-path.svg" alt-text="Diagram that shows how authentication requests travel between two domains that have an external trust relationship.":::  
+:::image type="content" source="./media/maxconcurrentapi-1-identify-computers-that-have-mca-issues/two-domain-external-trust-auth-path.svg" alt-text="Diagram that shows how authentication requests travel between two domains that have an external trust relationship." border="false":::  
 
 Domain A and Domain D have an external trust. The web server in Domain A services users from Domain D and uses NTLM authentication.
 
