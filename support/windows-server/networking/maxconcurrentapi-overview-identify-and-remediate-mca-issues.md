@@ -1,7 +1,7 @@
 ---
 title: Identify and remediate MaxConcurrentApi issues that affect user authentication
 description: Summarizes a set of articles that discuss how to work around or resolve authentication failures and slowdowns when Windows servers are overloaded by authentication requests.
-ms.date: 05/28/2024
+ms.date: 06/07/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
-keywords: 
+keywords: MaxConcurrentApi, MCA, authentication slowdown, authentication performance
 ---
 
 # Overview: Identify and remediate MaxConcurrentApi issues that affect user authentication
