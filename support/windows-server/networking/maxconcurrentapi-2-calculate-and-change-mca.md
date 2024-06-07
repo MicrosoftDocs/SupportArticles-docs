@@ -62,8 +62,8 @@ Configure Performance Monitor as follows:
 
   | Counter | Instance |
   | --- | --- |
-  | Semaphore Aquires | _Total |
-  | Semaphore Timouts | _Total |
+  | Semaphore Acquires | _Total |
+  | Semaphore Timeouts | _Total |
   | Average Semaphore Hold Time | _Total |
 
   > [!NOTE]  
