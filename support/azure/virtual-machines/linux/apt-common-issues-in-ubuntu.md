@@ -15,14 +15,14 @@ ms.date: 06/04/2024
 ---
 # Troubleshoot common issues with APT on Ubuntu
 
-This article discusses and provides solutions to common issues that you might encounter when you use the `apt` command-line tool to install or update applications on Azure virtual machines (VMs).
+This article discusses and provides solutions to common issues that you might encounter when you use the `apt` command-line tool to install or update applications on Microsoft Azure virtual machines (VMs).
 
 > [!CAUTION]
 > Standard support for Canonical Ubuntu 18.04 LTS is no longer available. If you're affected, see [Canonical Ubuntu 18.04 LTS is out of standard support on May 31, 2023](upgrade-canonical-ubuntu-18dot04-lts.md) to review your options.
 
 ## Overview
 
-The `apt` command on Ubuntu is a powerful tool used for package management. It allows you to install, remove, update, and manage software packages on their Ubuntu system. You can use `apt` to search for available packages, install specific versions of packages, and handle dependencies efficiently. It simplifies the process of software management by providing a command-line interface to interact with the Advanced Package Tool (APT) libraries.
+The `apt` (Advanced Package Tool) command on Ubuntu is a powerful tool that's used for package management. It enables you to install, remove, update, and manage software packages on the Ubuntu system. You can use `apt` to search for available packages, install specific versions of packages, and handle dependencies efficiently. It simplifies the process of software management by providing a command-line interface to interact with the APT libraries.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ The `apt` command on Ubuntu is a powerful tool used for package management. It a
 <details>
 <summary>Scenario 1 details</summary>
 
-During an `apt` update, upgrade, or install operation, the connection eventually times out. Additionally, you see an error message that resembles one of the following output strings:
+During an `apt` update, upgrade, or installation operation, the connection eventually times out. Additionally, you receive an error message that resembles one of the following output strings:
 
 - **Output 1**
 
@@ -68,7 +68,7 @@ The following sections outline potential causes for these failures and provide s
 
 ### Cause 1: VMs are configured to use an internal load balancer
 
-An internal load balancer doesn't provide outbound connectivity when it's configured for network interfaces.
+An internal load balancer doesn't provide outbound connectivity if it's configured for network interfaces.
 
 #### Solution 1a: Add a public IP address
 
@@ -76,7 +76,7 @@ Add a public IP address for the network interface of the VMs. For more informati
 
 #### Solution 1b: Use an external load balancer
 
-Use an external Azure Load Balancer instead of an internal Azure Load Balancer. For more information, see [Quickstart: Create a public load balancer to load balance VMs using the Azure portal](/azure/load-balancer/quickstart-load-balancer-standard-public-portal).
+Use an external Azure load balancer instead of an internal Azure load balancer. For more information, see [Quickstart: Create a public load balancer to load balance VMs using the Azure portal](/azure/load-balancer/quickstart-load-balancer-standard-public-portal).
 
 #### Solution 1c: Use a NAT gateway on the subnet
 
@@ -95,11 +95,11 @@ Use source network address translation (SNAT) rules. For more information, see [
 
 ### Cause 2: External load balancer doesn't have outbound rules and disables outbound SNAT
 
-An external load balancer needs to have outbound connectivity so that it can reach Ubuntu repositories.
+An external load balancer must have outbound connectivity so that it can reach Ubuntu repositories.
 
 #### Solution 2: Configure outbound rule or verify that outbound SNAT is enabled
 
-Take one or more of the actions listed in the following table.
+Take one or more of the actions that are listed in the following table.
 
 | Action                   | Guidance                                                                                     |
 |--------------------------|----------------------------------------------------------------------------------------------|
@@ -108,17 +108,17 @@ Take one or more of the actions listed in the following table.
 
 ### Cause 3: An Azure firewall or virtual appliance is between your virtual network and the internet
 
- An Azure firewall or virtual appliance might exist that acts as a protective barrier between your Azure virtual network and the internet. This barrier enforces security policies and provides features to control and monitor traffic effectively, by sending all traffic to the firewall. In this case, the firewall is blocking the communication to Ubuntu repositories.
+An Azure firewall or virtual appliance might be acting as a protective barrier between your Azure virtual network and the internet. This barrier enforces security policies and provides features to control and monitor traffic effectively by sending all traffic to the firewall. In this case, the firewall is blocking communication to Ubuntu repositories.
 
 #### Solution 3: Make sure that the Ubuntu address is allowed
 
-Make sure that `azure.archive.ubuntu.com` and any other repository URLs are fully accessible by taking the following actions:
+Make sure that `azure.archive.ubuntu.com` and any other repository URLs are fully accessible. To do this, take the following actions:
 
 1. Verify that the destination URLs are allowed in firewall policies.
 
-1. Verify that IP addresses are allowed if Secure Sockets Layer (SSL) inspection is active.
+1. If Secure Sockets Layer (SSL) inspection is active, verify that IP addresses are allowed.
 
-1. If a network security group (NSG) is used, make sure that Ubuntu IP addresses and ports 80 and 443 are added to the allow list of the outbound rule of the network interface NSG or subnet NSG. These exceptions should take priority over the `Block_Internet_Access_outbound` rule. In addition, see [Check security rules applied to a virtual machine traffic](/azure/network-watcher/diagnose-network-security-rules#check-security-rules-applied-to-a-virtual-machine-traffic).
+1. If a network security group (NSG) is used, make sure that Ubuntu IP addresses and ports 80 and 443 are added to the allow list of the outbound rule of the network interface NSG or subnet NSG. These exceptions should take priority over the `Block_Internet_Access_outbound` rule. Additionally, see [Check security rules applied to a virtual machine traffic](/azure/network-watcher/diagnose-network-security-rules#check-security-rules-applied-to-a-virtual-machine-traffic).
 
 ### Cause 4: VM is connected to a private subnet
 
@@ -126,7 +126,7 @@ Private subnets enhance security by not providing default outbound access. To en
 
 #### Solution 4: Provide outbound connectivity for the subnet
 
-A NAT gateway is the recommended way to provide outbound connectivity for VMs in the subnet. For more information, see [What is Azure NAT Gateway?](/azure/nat-gateway/nat-overview)
+We recommend that you use a NAT gateway to provide outbound connectivity for VMs in the subnet. For more information, see [What is Azure NAT Gateway?](/azure/nat-gateway/nat-overview)
 
 ### Cause 5: A proxy is used for communication
 
@@ -134,7 +134,7 @@ Internet communication goes through a customer proxy that affects communication 
 
 #### Solution 5: Fix the proxy configuration settings
 
-If a proxy server is configured in Microsoft Azure between the Ubuntu VM and Ubuntu repositories, use the correct proxy configuration settings in the */etc/apt/apt.conf* file, as shown in the following snippet:
+If a proxy server is configured in Microsoft Azure between the Ubuntu VM and Ubuntu repositories, use the correct proxy configuration settings in the */etc/apt/apt.conf* file, as shown in the following snippet.
 
 > [!IMPORTANT]
 > If the configured proxy server has a private IP address, make sure that it has connectivity within the Azure public address space.
@@ -144,7 +144,7 @@ Acquire::http::Proxy "http://[username]:[password]@ [proxy-web-or-IP-address]:[p
 Acquire::https::Proxy "http://[username]:[password]@ [proxy-web-or-IP-address]:[port-number]";
 ```
 
-Additionally, for Ubuntu and other Unix-like operating systems, you can set up a proxy for HTTP and HTTPS traffic by using environment variables. The relevant environment variables are `http_proxy` and `https_proxy`. To verify whether a proxy is configured, run the following command:
+Additionally, for Ubuntu and other Unix-like operating systems, you can set up a proxy for HTTP and HTTPS traffic by using environment variables. The relevant environment variables are `http_proxy` and `https_proxy`. To verify whether a proxy is configured, run the following command.
 
 > [!IMPORTANT]
 > If no proxy server exists between the Ubuntu VM and the Ubuntu repository addresses, search for and remove any proxy configuration settings that are in the */etc/apt/apt.conf* file.
@@ -155,7 +155,7 @@ env | grep -i proxy
 
 </details>
 
-## Scenario 2: APT command fails and returns "Failed to fetch \<url> 470 status code 470"
+## Scenario 2: "apt update" command fails and returns "Failed to fetch \<url> 470 status code 470"
 
 <details>
 <summary>Scenario 2 details</summary>
@@ -198,7 +198,7 @@ If an NSG is used, make sure that Ubuntu IP addresses and ports 80 and 443 are a
 <details>
 <summary>Scenario 3 details</summary>
 
-When you run the `apt update` command, the system attempts to fetch package information from multiple sources, including `azure.archive.ubuntu.com` and third-party repositories, such as `download.opensuse.org`. However, the command fails, as shown in the following console output:
+When you run the `apt update` command, the system tries to fetch package information from multiple sources, including `azure.archive.ubuntu.com` and third-party repositories, such as `download.opensuse.org`. However, the command fails, as shown in the following console output:
 
 ```console
 sudo apt update
@@ -222,29 +222,29 @@ root@ubu24vmlbe:/etc/apt#
 
 ### Cause: GPG key is missing for third-party repositories
 
-A new third-party repository was added in the */etc/apt/sources.list* file or the */etc/apt/sources.list.d/* directory, but it's missing the public key file used for verifying the authenticity of packages in the repository. In Ubuntu, repositories often use GPG keys to ensure that the packages you download are from trusted sources and weren't tampered with.
+A new third-party repository was added in the */etc/apt/sources.list* file or the */etc/apt/sources.list.d/* folder, but it's missing the public key file that's used to verify the authenticity of packages in the repository. In Ubuntu, repositories often use GPG keys to make sure that the packages that you download are from trusted sources and weren't tampered with.
 
 #### Solution: Add the GPG key for the third-party repositories
 
-When you add a new repository to your Ubuntu system, you often need to import the GPG key associated with that repository to ensure that your system trusts the packages from that source.
+When you add a new repository to your Ubuntu system, you often have to import the GPG key that's associated with that repository to make sure that your system trusts the packages from that source.
 
-If you're adding this repository to your system, you want to ensure that the key is actually from a trusted source, such as the official web site or a trusted community member. After you verify the authenticity of the GPG key, you can add it to your system by running the `apt-key` command or by placing it in the */etc/apt/trusted.gpg.d/* directory, as shown in the following command:
+If you're adding this repository to your system, make sure that the key is actually from a trusted source, such as the official website or a trusted community member. After you verify the authenticity of the GPG key, you can add it to your system by running the `apt-key` command or by placing it in the */etc/apt/trusted.gpg.d/* folder, as shown in the following command:
 
 > [!IMPORTANT]
-> Because this repository is a third-party repository, you should verify the authenticity of the GPG key provided. To obtain the correct GPG key for your repository, refer to the documentation or consult with official sources who are associated with the third-party repository. Using incorrect or unauthorized GPG keys can pose security risks to your system.
+> Because this repository is a third-party repository, you should verify the authenticity of the GPG key that was provided. To obtain the correct GPG key for your repository, refer to the documentation or consult with official sources who are associated with the third-party repository. Using incorrect or unauthorized GPG keys can pose security risks to your system.
 
 ```bash
 sudo curl -fsSL https://download.opensuse.org/repositories/devel:kubic:libcontainers:unstable/xUbuntu_22.04/Release.key | sudo tee /etc/apt/trusted.gpg.d/devel_kubic_libcontainers_unstable.gpg > /dev/null
 ```
 
-After you fetch the GPG key by running curl, you can alternatively convert the GPG key into a format suitable for APT by running the `gpg --dearmor` command, and then save it directly to the */etc/apt/trusted.gpg.d/* directory. This alternative ensures that your system securely manages and trusts the GPG key without relying on the `apt-key` command:
+After you fetch the GPG key by running curl, you can alternatively convert the GPG key into a format suitable for APT by running the `gpg --dearmor` command, and then save it directly to the */etc/apt/trusted.gpg.d/* . This alternative ensures that your system securely manages and trusts the GPG key without relying on the `apt-key` command:
 
 ```bash
 curl -fsSL https://download.opensuse.org/repositories/devel:kubic:libcontainers:unstable/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/devel_kubic_libcontainers_unstable.gpg > /dev/null
 ```
 
 > [!NOTE]
-> If you can't locate the correct GPG key for this third-party repository, we recommend that you remove the repository entry from either the */etc/apt/sources.list* file or the */etc/apt/sources.list.d/* directory. This action ensures that the `apt update` commands function correctly and reduce the risk of encountering errors related to GPG keys. Prioritize security, and only add repositories from trusted sources that have valid GPG keys.
+> If you can't locate the correct GPG key for this third-party repository, we recommend that you remove the repository entry from either the */etc/apt/sources.list* file or the */etc/apt/sources.list.d/* . This action ensures that the `apt update` commands function correctly and reduce the risk of encountering errors related to GPG keys. Prioritize security, and only add repositories from trusted sources that have valid GPG keys.
 
 </details>
 
@@ -278,13 +278,13 @@ W: Some index files failed to download. They have been ignored, or old ones used
 
 ### Cause: Custom DNS can't resolve Ubuntu repositories
 
-You're using a custom Domain Name System (DNS) resolver that isn't operating correctly. Or, the affected VM is on a different subnet than the DNS server.
+You're using a custom Domain Name System (DNS) resolver that isn't operating correctly. Or, the affected VM is on a different subnet than the DNS server is on.
 
 #### Solution: Verify and update your DNS resolver
 
-Verify whether the custom DNS resolver is actually the cause of the problem. You can try switching back to the default DNS servers provided by Azure at the network interface (NIC) level. For more information, see [Change DNS servers](/azure/virtual-network/manage-virtual-network#change-dns-servers).
+Verify whether the custom DNS resolver is actually the cause of the problem. You can try switching back to the default DNS servers provided by Azure at the network interface level. For more information, see [Change DNS servers](/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
-If Azure DNS is working as expected, verify your internal domain name and make sure that you can reach it on port 53.
+If Azure DNS is working as expected, verify your internal domain name, and make sure that you can reach it on port 53.
 
 If your DNS server is on Azure but resides in a different subnet, make sure that it has the correct user-defined route (UDR) to reach the subnet of the affected VM.
 
@@ -295,7 +295,7 @@ If your DNS server is on Azure but resides in a different subnet, make sure that
 <details>
 <summary>Scenario 5 details</summary>
 
-When you try to reinstall or install a new kernel by running the `apt` command, an error message that resembles the following text appears:
+When you try to install or reinstall a kernel by running the `apt` command, an error message that resembles the following text appears:
 
 ```output
 Processing triggers for linux-image-5.4.0-1051-azure (5.4.0-1051.53) ...
@@ -314,13 +314,13 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
 
 ### Cause: A syntax error exists in /etc/default/grub
 
-A syntax error in the */etc/default/grub* configuration file exists. The post-installation script for the *linux-image-5.4.0-1051-azure* package is probably encountering this error while trying to parse the configuration.
+A syntax error in the */etc/default/grub* configuration file exists. The post-installation script for the *linux-image-5.4.0-1051-azure* package is probably encountering this error while it tries to parse the configuration.
 
 #### Solution: Fix the syntax error in /etc/default/grub
 
 Look for any syntax errors in the */etc/default/grub* file, particularly around the line that the post-installation script is probably encountering. Fix any syntax errors that you find. The syntax for this file is crucial for the correct functioning of the GRand Unified Bootloader (GRUB).
 
-In the following example, the missing closing quote in the `GRUB_CMDLINE_LINUX` line causes a syntax error in the GRUB configuration file:
+In the following example, the missing closing quotation mark in the `GRUB_CMDLINE_LINUX` line causes a syntax error in the GRUB configuration file:
 
 ```console
 # cat /etc/default/grub
@@ -337,22 +337,22 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 GRUB_CMDLINE_LINUX="    # <---
 ```
 
-To correct this particular error, you can just add the closing quote at the end of the line. The corrected line should look like the following code:
+To correct this particular error, add the closing quotation mark at the end of the line. The corrected line should resemble the following code:
 
 ```console
 GRUB_CMDLINE_LINUX=" "
 ```
 
-After you correct the syntax error in the GRUB configuration file, try to reinstall the kernel package.
+After you correct the syntax error in the GRUB configuration file, try again to reinstall the kernel package.
 
 </details>
 
-## Scenario 6: You receive an "The repository 'http:\//archive.ubuntu.com/ubuntu/dists/focal/main/binary-armhf/Packages focal Release' does not have a Release file" error message
+## Scenario 6: "The repository 'http:\//archive.ubuntu.com/ubuntu/dists/focal/main/binary-armhf/Packages focal Release' does not have a Release file"
 
 <details>
 <summary>Scenario 6 details</summary>
 
-When you run the `apt update` command, the system tries to fetch package information from multiple sources, but you receive an error message about a missing `Release` file, as shown in the following output:
+When you run the `apt update` command, the system tries to fetch package information from multiple sources. However, you receive an error message about a missing `Release` file, as shown in the following output:
 
 ```bash
 Ign:1 http://archive.ubuntu.com/ubuntu/dists/focal/main/binary-armhf/Packages focal InRelease
@@ -384,11 +384,11 @@ deb http://archive.ubuntu.com/ubuntu/dists/focal/main/binary-armhf/Packages foca
 deb-src  http://archive.ubuntu.com/ubuntu/dists/focal/main/binary-armhf/Packages focal main
 ```
 
-If any application automatically edits the *sources.list* file or adds a repository under the */etc/apt/sources.list.d/* directory, and then includes the *armhf* repositories, the same error occurs.
+If any application automatically edits the *sources.list* file or adds a repository under the */etc/apt/sources.list.d/* , and then includes the *armhf* repositories, the same error occurs.
 
 #### Solution: Remove or comment out armhf information from sources.list
 
-Remove or comment out the lines that reference the ARM processor architecture in the */etc/apt/sources.list* file or the */etc/apt/sources.list.d/\*.list* directory.
+Remove or comment out the lines that reference the ARM processor architecture in the */etc/apt/sources.list* file or the */etc/apt/sources.list.d/\*.list*.
 
 </details>
 
