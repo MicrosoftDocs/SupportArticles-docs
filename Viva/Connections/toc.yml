@@ -3,13 +3,5 @@
   items:
     - name: Administration
       items:
-        - name: Can't find app in Teams mobile
-          href: cant-find-app-in-teams-mobile.md
         - name: Can't find the app in the Teams admin center
           href: cant-find-app-in-teams-admin-center.md  
-        - name: Can't update app details
-          href: cant-update-app-details.md
-        - name: Can't upload package
-          href: cant-upload-package.md
-        - name: Error accessing app from Teams desktop
-          href: error-accessing-app-from-teams-desktop.md
