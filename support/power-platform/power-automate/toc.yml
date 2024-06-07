@@ -92,8 +92,6 @@
       href: desktop-flows/communication-error-console.md
     - name: Desktop flows don't show in console if license expired or unassigned
       href: desktop-flows/desktop-flows-not-show-console-license-expired-unassigned.md
-    - name: Desktop flow runs don't show in Desktop flow runs page
-      href: desktop-flows/desktop-flow-runs-not-show-monitor-runs.md
     - name: Desktop flow runs are missing from the list
       href: desktop-flows/desktop-flow-runs-missing-from-list.md
     - name: Desktop flow runs list isn't updated
