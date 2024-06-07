@@ -91,7 +91,7 @@ You can add a GC by creating a new domain controller and specifying it as a GC. 
 
 1. Open Active Directory Sites and Services (*dssite.msc*, also available on the **Tools** menu in Server Manager).
 1. Expand **Sites**, expand the site, and then select the domain controller that you want to modify.
-1. In the right-hand pane, right-click **NTDS Site Settings**, and then select **Properties**.
+1. In the right pane, right-click **NTDS Site Settings**, and then select **Properties**.
 1. On the **General** tab, select **Global Catalog**, and then select **OK**.
 
    > [!NOTE]  
