@@ -59,6 +59,7 @@ Configure Performance Monitor as follows:
   :::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-duration-property.png" alt-text="Screenshot that shows the location of the Duration property in Performance Monitor.":::
 
 - **Counters.** Add the following counters from the **Netlogon** object.
+
   | Counter | Instance |
   | --- | --- |
   | Semaphore Aquires | _Total |
