@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD Replication error 8240 There is no such object on the server
 description: Describes symptoms, cause, and resolution for AD operations that fail with Win32 error 8240 (There is no such object on the server).
-ms.date: 06/05/2024
+ms.date: 06/07/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -74,7 +74,7 @@ For more information about GCs, see [Planning Global Catalog Server Placement](/
 
 Follow these steps:
 
-1. Check whether the forest has a GC. For example, at a Windows PowerShell command prompt on a computer in the forest, run the following command:
+1. Check whether the forest has a GC. For example, in a Windows PowerShell window on a computer in the forest, run the following command:
 
    ```powershell
    Get-ADDomainController -Discover -Service "GlobalCatalog"
@@ -110,7 +110,7 @@ You can add a GC by creating a new domain controller and specifying it as a GC. 
 
    If you can't query a GC record in DNS, check the value of the **isGlobalCatalogReady** attribute. To do this, perform one of the following actions:
 
-      - Open a PowerShell Command Prompt window, and then run the following command:
+      - Open a PowerShell window, and then run the following command:
 
         ```powershell
         Get-ADRootDSE -Server <GC_Name> | fl serverName , isGlobalCatalogReady
