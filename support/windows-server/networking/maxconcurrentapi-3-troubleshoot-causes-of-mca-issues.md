@@ -73,7 +73,7 @@ Common techniques to reduce latency include the following:
 
 ## Review the Active Directory Domain Services and DNS topology
 
-Your Active Directory Domain Services (AD DS) and DNS topology control how traffic passes from server to server in your environment. You analyzed your current flow when you looked for servers that had MCA issues (discussed in [Part 1](maxconcurrentapi-1-identify-computers-that-have-mca-issues.md) of this series). Now, you can use this information to redistribute the authentication load, or route requests more efficiently. For example, you find that an application server sends authentication requests to a domain controller over a slow WAN link, whikl, while another domain controller that has a faster connection is available. In this situation, you can configure an Active Directory site to direct the requests over the faster connection.
+Your Active Directory Domain Services (AD DS) and DNS topology control how traffic passes from server to server in your environment. You analyzed your current flow when you looked for servers that had MCA issues (discussed in [Part 1](maxconcurrentapi-1-identify-computers-that-have-mca-issues.md) of this series). Now, you can use this information to redistribute the authentication load, or route requests more efficiently. For example, you find that an application server sends authentication requests to a domain controller over a slow WAN link, while another domain controller that has a faster connection is available. In this situation, you can configure an Active Directory site to direct the requests over the faster connection.
 
 Factors to consider:
 
