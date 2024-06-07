@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Configuration (page file, startup or ru
 
 This article describes some of the registry changes that have been made in x64-based versions of Microsoft Windows Server 2003 and Microsoft Windows XP Professional x64 Edition. It describes how the Windows x64 Edition operating system stores registry information for 32-bit programs and 64-bit programs. 
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 896459
 
 ## Summary

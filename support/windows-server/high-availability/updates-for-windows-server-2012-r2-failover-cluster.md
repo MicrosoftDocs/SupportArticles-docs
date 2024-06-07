@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Root cause of an unexpected fail
 
 This article describes the hotfixes that are currently available for Windows Server 2012 R2-based failover clusters and are highly recommended to be installed on each server of a failover cluster.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2920151
 
 ## Summary

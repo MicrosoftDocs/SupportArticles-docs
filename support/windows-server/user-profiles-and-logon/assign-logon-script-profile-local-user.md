@@ -13,7 +13,6 @@ ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 
 This article describes how to assign a logon script to a profile for a local user.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324803
 
 ## Summary

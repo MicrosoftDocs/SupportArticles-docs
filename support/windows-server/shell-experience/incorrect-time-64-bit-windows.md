@@ -13,7 +13,6 @@ ms.custom: sap:Windows Desktop and Shell Experience\DST and Timezones, csstroubl
 
 This article helps fixes an issue where the displayed time on affected computers doesn't match the current local time after you do an in-place upgrade to a 64-bit version of Windows 7 or Windows Server 2008 R2.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2001086
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroub
 
 This article provides help to an error (Cannot open database "ADMT" requested by the login. The logon failed) that occurs when you run Active Directory Migration Tool (ADMT) console.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2266373
 
 ## Symptoms

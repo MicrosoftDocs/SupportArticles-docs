@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstr
 
 This article introduces the steps to test any application that's using NT LAN Manager (NTLM) version 1 on a Microsoft Windows Server-based domain controller.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4090105
 
 ## Summary

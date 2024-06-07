@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, C
 
 This article resolves the issue that VPN connections to a Windows RRAS Server fail when using the MS-CHAPv2 authentication.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2811487
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Performance (audio 
 
 This article provides a solution to an issue where which new and existing RemoteFX-enabled virtual machines cannot run on a domain server.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2506417
 
 ## Symptoms

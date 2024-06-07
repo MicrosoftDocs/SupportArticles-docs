@@ -18,8 +18,6 @@ keywords:
 
 This article provides a workaround for an issue in which you can't import a certificate that uses AES256-SHA256 encryption into certain versions of Windows or Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, and earlier versions; Windows 10 and earlier versions
-
 ## Symptoms
 
 On a computer that runs one of the operating systems that's listed in the "Applies to" section, you use the Certificate Import Wizard to import a PFX file that uses AES256-SHA256 encryption. The operation fails and generates a message that resembles the following text:

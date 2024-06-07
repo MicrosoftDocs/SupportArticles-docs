@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Active Directory Federation Service
 
 This article discusses an issue where you're prompted for credentials and event 111 is logged when you authenticate an account in Active Directory Federation Services (AD FS) 2.0.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044976
 
 ## Summary

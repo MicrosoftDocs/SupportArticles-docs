@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\WebClient and WebDAV, csstr
 
 This article provides a solution to an issue where you are prompted to enter your credentials when you access Web Distributed Authoring and Versioning (WebDav)-based fully qualified domain names (FQDN) sites in Windows.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 943280
 
 ## Symptoms

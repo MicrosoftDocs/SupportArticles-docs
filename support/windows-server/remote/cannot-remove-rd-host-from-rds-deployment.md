@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivit
 
 This article helps to fix the error that occurs when you remove an RD Host that no longer exists in Active Directory from an RDS deployment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2925854
 
 ## Symptoms

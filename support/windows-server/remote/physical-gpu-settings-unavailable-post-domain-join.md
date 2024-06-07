@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Performance (audio 
 
 This article provides a resolution for the issue that Physical GPU settings are unavailable post domain join.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2878821
 
 ## Symptoms

@@ -413,10 +413,6 @@ items:
       href: ./active-directory/delays-domain-members-dc-remote-domains.md
     - name: Error when you run AD Installation Wizard
       href: ./active-directory/error-when-you-run-ad-installation-wizard.md
-  - name: Schema update - known issues, best practices, workflow review
-    items:
-    - name: How to find the current Schema Version
-      href: ./active-directory/find-current-schema-version.md
   - name: User, computer, group, and object management
     items:
     - name: A batch of Event ID 4780 are logged in the PDC
@@ -2127,6 +2123,8 @@ items:
       href: ./performance/incorrect-shutdown-reason-code-sel.md
     - name: 'System shutdown is slow'
       href: ./performance/system-shutdown-is-slow.md
+    - name: System shutdown stops responding
+      href: ./performance/system-shutdown-stops-responding-issues.md      
     - name: Use Userdump.exe to create a dump file
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance

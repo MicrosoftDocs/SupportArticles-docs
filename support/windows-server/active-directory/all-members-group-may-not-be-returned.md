@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\User, computer, group, and object management, cs
 
 This article provides a solution to an issue that all members of a group may not be returned when you enumerate members of a group by using the Active Directory Service Interfaces WinNT provider.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 321538
 
 ## Symptoms

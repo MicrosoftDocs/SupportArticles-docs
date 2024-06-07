@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresp
 
 This article provides help to solve slow logon process that occurs when users log on to the Remote Desktop servers.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2020286
 
 ## Symptoms

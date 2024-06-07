@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article discusses an issue where converting Windows Server Core to GUI by using a DISM or PowerShell command fails with error 0x800f0906.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3023427
 
 ## Symptoms

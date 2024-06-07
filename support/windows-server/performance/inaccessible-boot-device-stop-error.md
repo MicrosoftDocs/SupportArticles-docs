@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Reliability (crash, errors, bug check o
 
 This article helps fix the Stop error code 0x00000007B that occurs after you reconfigure critical hardware devices.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3024175
 
 ## Symptoms

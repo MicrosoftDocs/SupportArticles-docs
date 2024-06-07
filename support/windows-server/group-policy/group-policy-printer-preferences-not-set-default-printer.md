@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Managing printers through Group Policy, csstroublesh
 
 This article provides a workaround for an issue where Group Policy Printer Preferences fails to set the default printer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2787598
 
 ## Symptoms

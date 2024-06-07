@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Migration, csstroubleshoot
 
 This article describes the errors that occur when you migrate a Virtual Machine (VM) from one Host to another from the SCVMM 2008 Console.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 969726
 
 ## Symptoms

@@ -14,7 +14,6 @@ keywords: KCD, Kerberos constrained delegation, s4u2proxy, s4u2self, service acc
 
 The article provides step-by-step instructions to implement Service for User to Proxy (S4U2Proxy) or Kerberos Only Constrained Delegation on a custom service account for Web Enrollment proxy pages.
 
-_Applies to:_ &nbsp; Window Server 2016, Window Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4494313
 
 ## Summary

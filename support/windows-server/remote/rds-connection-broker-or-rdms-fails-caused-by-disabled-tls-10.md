@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Certificate managem
 
 This article provides methods to make sure Remote Desktop service (RDS) Connection Broker and Remote Desktop Management service (RDMS) can work as expected.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4036954
 
 ## Symptoms

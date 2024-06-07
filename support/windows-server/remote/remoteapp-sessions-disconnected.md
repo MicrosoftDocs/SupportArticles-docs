@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (include
 
 This article provides help to solve an issue where RemoteApp sessions are disconnected when all RemoteApp windows and user-launched notification area icons are closed.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2345390
 
 ## Summary

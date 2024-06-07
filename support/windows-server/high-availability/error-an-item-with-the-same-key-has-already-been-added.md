@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Errors when running the Validati
 
 This article helps to fix the error "An item with the same key has already been added".
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2002405
 
 ## Symptoms

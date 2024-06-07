@@ -13,7 +13,6 @@ ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 
 This article helps fix the 0x80070005 error that occurs when you log on to a computer.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2704233
 
 ## Symptoms

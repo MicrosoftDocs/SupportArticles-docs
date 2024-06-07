@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 
 This article provides a solution to issues where computers on your network can't connect to the Group Policy objects (GPO) in the Sysvol folders on your network domain controllers.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 887303
 
 ## Summary

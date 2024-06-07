@@ -11,7 +11,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # Root hints reappear after they are removed
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 818020
 
 ## Symptoms
