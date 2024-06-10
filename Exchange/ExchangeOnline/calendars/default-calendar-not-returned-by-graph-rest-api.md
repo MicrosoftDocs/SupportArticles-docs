@@ -79,7 +79,7 @@ To fix the issue, remove and re-create the calendar object cache in the mailbox.
 
     After you complete this step, verify that there are no table entries that have the value `Calendar` in the **Subject** column.
 
-13. Open [Outlook on the web](https://outlook.office365.com/mail), sign in to the applicable mailbox, and then view the default calendar. This step re-creates the calendar object cache in the mailbox.
+13. Open Outlook on the web, sign in to the applicable mailbox, and then view the default calendar. This step re-creates the calendar object cache in the mailbox.
 
 14. In MFCMAPI, verify that one or more table entries have the value `Calendar` in the **Subject** column.
 
