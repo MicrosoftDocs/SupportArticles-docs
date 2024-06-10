@@ -36,19 +36,39 @@ You can troubleshoot slow file transfers by checking your current storage use. I
 
 ## Slow transfer of small files
 
-A slow transfer of small files occurs most commonly when there are many files. This occurrence is an expected behavior.
-
-During file transfer, file creation causes both high protocol overhead and high file system overhead. For large file transfers, these costs occur only one time. When a large number of small files are transferred, the cost is repetitive and causes slow transfers.
+Slow copy speeds, and low network throughput (performance), is expected behavior when transfering a large number of small files over the network using the File (Windows) Explorer and other single-threaded copy tools. 
 
 ### Issue details
 
-Network latency, `create` commands, and antivirus programs contribute to a slower transfer of small files. The following are technical details about this problem:
+File creation is an "expensive operation" in terms of performance. Both from a network protocol (SMB) and file system perspective. SMB must perform multiple protocol operations to create a file before any data can be transmitted. The file system itself has an additional performance penalty when creating files.
 
-- SMB calls a `create` command to request that the file is created. Code checks whether the file exists and then creates the file. Otherwise, some variation of the `create` command creates the actual file.
+Small file copies hit this penalty repeatedly. The data size, per file, is not enough for the network to put enough data in-flight to sustain high network speeds when using a single-threaded copy because more time is spent on creating the files than transferring the file data.
+
+This happens because data transmision must be halted to perform file creation after only a handful of data payloads have been transmitted. While a single large file has a single file creation penalty and then transmits enough data to reach peak network speeds.
+
+### Technical details
+
+Network latency, `create` commands, and antivirus programs contribute to a slower transfer of small files. The following are additional details about this problem:
+
+- SMB calls a `create` command to request that the file is created.
+  - A series of `create` commands are transmitted across the network to verify and/or create the file on the remote file system.
   - Each `create` command generates activity on the file system.
   - After the data is written, the file is closed.
-- The process can suffer from network latency and SMB server latency. This latency occurs because the SMB request is first translated to a file system command and then to the actual file system to complete the operation.
-- The transfer continues to slow while an antivirus program is running. This change happens because the data is typically scanned once by the packet sniffer and a second time when the data is written to disk. In some scenarios, these actions are repeated thousands of times. You can potentially observe speeds of less than 1 MB/s.
+- The process suffers from network, protocol (SMB), and file system latency. This latency occurs because the SMB request is first translated to a file system command and then to the actual file system to complete the operation.
+- Additionally, endpoint protection (antivirus) will often scan the network packets and file system write operations. This adds an additional, usually small, amount of latency to the process. In small file scenarios, the antivirus actions are repeated for each file transfered.
+- The result, when using a single-threaded file copy program, is that you may observe network throughput speeds of less than 1 MB/s.
+
+### Speeding up small file copies
+
+- Use `robocopy` with the /MT parameter. Robocopy is built into Windows and the /MT parameter will enable multithreaded file copy. Please read [robocopy documentation](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) for usage details.
+- Use `AzCopy` when moving data to/from Azure. [AzCopy](https://aka.ms/azcopy) has concurrency (multi-threading) capabilities and several [performance optimzations](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-optimize).
+- Use file compression.
+   - Compress the small files into a single large file.
+   - Copy the large file.
+   - Extract the files on the destination system (do not extract the files remotely).
+   - This may or may not be faster depending on the speed of compression and decompression on the two systems.
+   - Use fast compression or no compression archiving to reduce compression and decompression time.
+- Use a trusted third-party (non-Microsoft) file copy tool that supported multi-threaded file copying.
 
 ## Slow open of Office documents
 
