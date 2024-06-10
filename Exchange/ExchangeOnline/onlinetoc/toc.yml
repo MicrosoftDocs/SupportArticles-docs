@@ -175,6 +175,8 @@
           href: ../calendars/cannot-view-another-user-calendar-free-busy-information.md
         - name: Can't view user's free/busy information in Scheduling Assistant
           href: ../calendars/no-free-busy-information-retrieved.md
+        - name: Default calendar isn't returned by Graph REST API
+          href: ../calendars/default-calendar-not-returned-by-graph-rest-api.md
         - name: Delegate can't accept meeting request in OWA
           href: ../calendars/delegate-cannot-accept-meeting-request-using-owa.md
         - name: Delegate only sees free/busy if manager in another forest
