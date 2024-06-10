@@ -15,11 +15,17 @@ Server Message Block (SMB) file transfer speeds can slow down depending on the s
 
 ## Slow transfer
 
+> [!NOTE]
+> SMB Signing and SMB Encryption is known to reduce SMB transfer speeds. The amount of performance loss depends greatly on the capabilities of the hardware involved.
+> 
+> [SMB Signing will be required](https://aka.ms/SmbSigningRequired) in a future version of Windows.
+
 You can troubleshoot slow file transfers by checking your current storage use. If you observe slow transfers of files, consider the following steps:
 
 - Try the file copy command for unbuffered IO:
   - `xcopy /J`
   - `robocopy /J`
+- Enable and use SMB Compression. Non-compressible data, like archive files (zip, 7z, rar, etc.), video and audio, may not see any performance improvements with SMB Compression.
 - Test the storage speed. Copy speeds are limited by storage speed.
 - File copies sometimes start fast and then slow down. A change in copy speed occurs when the initial copy is cached or buffered, in memory or in the RAID controller's memory cache, and the cache runs out. This change forces data to be written directly to disk (write-through).
 
