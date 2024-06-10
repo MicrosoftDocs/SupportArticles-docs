@@ -19,7 +19,7 @@ Error code *ERR00012* is logged in the **Bpa self help logs** table in Microsoft
 
 ## Resolution
 
-No immediate action is needed because this issue might be caused by a mismatch in the decimal entries.
+No immediate action is needed. This warning is displayed because a mismatch in decimal entries has been detected. The rounding process ensures that values conform to the required format without significant impact on data accuracy. This warning is for informational purposes only to make you aware of the automatic rounding adjustment.
 
 Here's an example of a record:
 
