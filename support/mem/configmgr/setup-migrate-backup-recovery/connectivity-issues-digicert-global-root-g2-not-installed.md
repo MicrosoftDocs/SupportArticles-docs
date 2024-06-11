@@ -49,7 +49,7 @@ You can consider your environment to be disconnected if either of the following 
 - Direct access to Windows Update is blocked.
 - The auto update mechanism for both trusted and untrusted CTLs is disabled.
 
-For information about how to facilitate the distribution of trusted or untrusted certificates for disconnected environments, see [Configure trusted roots and disallowed certificates in Windows](https://learn.microsoft.com/en-us/windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates).
+For information about how to facilitate the distribution of trusted or untrusted certificates for disconnected environments, see [Configure trusted roots and disallowed certificates in Windows](/windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates).
 
 ### Internet endpoints
 
