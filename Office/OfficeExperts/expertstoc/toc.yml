@@ -11,7 +11,7 @@
       href: ../activation/reset-office-365-proplus-activation-state.md
   - name: Administration
     items:
-    - name: 0xC004F038 computer could not be activated in KMS
+    - name: 0xC004F038 computer couldn't be activated in KMS
       href: ../administration/0xc004f038-computer-not-activate.md
     - name: Can't check in files when LAN doesn't have Internet
       href: ../administration/cannot-check-in-files-when-lan-does-not-have-internet.md
@@ -47,7 +47,7 @@
       href: ../administration/use-custom-fonts-with-office-online-server.md
   - name: Authentication
     items:
-    - name: Office not render DUO API multi-factor authentication login page
+    - name: Office not render DUO API multifactor authentication login page
       href: ../authentication/not-render-a-custom-duo-api-multi-factor-authentication-login-page.md
     - name: HTML login page not render correctly in Office
       href: ../authentication/custom-html-login-page-not-render-correctly.md
@@ -67,7 +67,7 @@
       href: ../excel/workbook-currently-open-by-256-users-error.md
     - name: Can't refresh data connections in Excel Online
       href: ../excel/excel-online-external-users-cannot-refresh-data-connections.md
-    - name: Create An Excel Add-In to Calculate Body Mass Index
+    - name: Create An Excel add-in to Calculate Body Mass Index
       href: ../excel/create-add-in-to-calculate-bmi.md
     - name: Issue when refresh Project Online data in Excel Online
       href: ../excel/excel-online-refresh-fails-project-online-using-timebyday.md
@@ -113,5 +113,5 @@
       href: ../sway/sway-file-size-limit-error.md
   - name: Word
     items:
-    - name: Force Word document open in edit mode from email link
+    - name: Force Word documents open in edit mode from email link
       href: ../word/force-word-document-to-open-in-edit-mode.md

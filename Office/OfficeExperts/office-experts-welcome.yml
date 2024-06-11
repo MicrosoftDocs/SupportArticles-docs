@@ -31,7 +31,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: 0xC004F038 computer could not be activated in KMS
+          - text: 0xC004F038 computer couldn't be activated in KMS
             url: ./administration/0xc004f038-computer-not-activate.md
           - text: Can't check in files when LAN doesn't have Internet
             url: ./administration/cannot-check-in-files-when-lan-does-not-have-internet.md
@@ -42,9 +42,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Office not render DUO API multi-factor authentication login page
+          - text: Office not render DUO API multifactor authentication login page
             url: ./authentication/not-render-a-custom-duo-api-multi-factor-authentication-login-page.md
-          - text: HTML login page not render correctly in Office
+          - text: HTML login page not renders correctly in Office
             url: ./authentication/custom-html-login-page-not-render-correctly.md
 
   - title: Diagnostic Logs
