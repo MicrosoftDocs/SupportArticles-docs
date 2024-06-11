@@ -192,9 +192,9 @@ Other causes include:
 
 1. During dcpromo, the SPN on the helper DC (the replication source DC) is not valid.
 
-1. The DC is a virtual machine that was set to sync time with the VMware host, caused events 1925, 1645.
+2. The DC is a virtual machine that was set to sync time with the VMware host, caused events 1925, 1645.
 
-1. For the RODC specific scenario where the KRBTGT account is deleted: authoritatively restore the KRBTGT_##### account using NTDSUTIL and then import the LDIFDE file to correct backlinks.  At minimum, the msDS-KrbTgtLink attribute on the RODC's computer object will need to be updated to point to the DN of the restored account.
+3. For the RODC specific scenario where the KRBTGT account is deleted: authoritatively restore the KRBTGT_##### account using NTDSUTIL and then import the LDIFDE file to correct backlinks.  At minimum, the msDS-KrbTgtLink attribute on the RODC's computer object will need to be updated to point to the DN of the restored account.
 
 ## Data collection
 
