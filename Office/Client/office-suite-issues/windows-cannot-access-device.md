@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - DownloadInstall\InstallErrors\AppLaunchErrors
   - CSSTroubleshoot
 appliesto: 
   - Office apps for the web

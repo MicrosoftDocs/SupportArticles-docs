@@ -10,6 +10,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - DownloadInstall\SxS\SxSOrPerpetual
   - sap:office-experts
   - CSSTroubleshoot
 ms.reviewer: ericspli

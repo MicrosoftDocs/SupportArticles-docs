@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\We're having trouble activating Office
   - CSSTroubleshoot
   - CI 157765
   - CI 162387

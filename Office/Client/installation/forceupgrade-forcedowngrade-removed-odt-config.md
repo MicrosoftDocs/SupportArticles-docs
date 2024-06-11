@@ -14,6 +14,7 @@ appliesto:
   - Microsoft Office 365 ProPlus 2016
   - Microsoft Office 365 ProPlus 2013
 ms.custom: 
+  - DownloadInstall\AdvancedConfiguration\OfficeDeploymentTool
   - CI 121610
   - CSSTroubleshoot
 ms.reviewer: balram, jalalb, vikkarti, bcorob

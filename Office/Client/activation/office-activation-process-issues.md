@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Activation\Perpetual
   - CSSTroubleshoot
 ms.reviewer: sfrancis, sloanc, andyfel, djess, arykhus, mosesma, ryanwei, tomol, joanned
 search.appverid: 

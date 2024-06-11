@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Activation\Servers\RDS OR VDI Scenarios
   - CSSTroubleshoot
 appliesto: 
   - Office Professional Plus 2013

@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: mmaxey
 ms.custom: 
+  - DownloadInstall\InstallErrors\ErrorCodes
   - CSSTroubleshoot
 search.appverid: 
   - MET150

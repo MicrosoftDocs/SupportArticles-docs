@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\Subscription Expired
   - CSSTroubleshoot
   - CI 157754
   - CI 159067

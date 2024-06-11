@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Activation\Deploying Office using Shared Computer Activation
   - CSSTroubleshoot
 ms.author: luche
 ms.reviewer: offspms, andyfel

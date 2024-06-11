@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: tasitae
 ms.custom: 
+  - DownloadInstall\InstallErrors\AppLaunchErrors
   - CSSTroubleshoot
 search.appverid: 
   - MET150

@@ -11,6 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Activation\SignIn\Password Prompts
   - sap:office-experts
   - CSSTroubleshoot
 appliesto: 

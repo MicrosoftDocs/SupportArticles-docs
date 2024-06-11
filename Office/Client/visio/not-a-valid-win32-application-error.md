@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - DownloadInstall\SxS\Visio
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

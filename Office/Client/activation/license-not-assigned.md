@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\You currently have not been assigned an office license that includes the Office desktop apps
   - CSSTroubleshoot
   - CI 157759
   - CI 159113

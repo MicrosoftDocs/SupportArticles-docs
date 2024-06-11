@@ -10,6 +10,7 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - DownloadInstall\AdvancedConfiguration\OfficeDeploymentTool
   - sap:office-experts
   - CSSTroubleshoot
 ms.reviewer: jalalb

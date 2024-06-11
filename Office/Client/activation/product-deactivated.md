@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\Product Deactivated
   - CSSTroubleshoot
   - CI 157753
   - CI 159131
