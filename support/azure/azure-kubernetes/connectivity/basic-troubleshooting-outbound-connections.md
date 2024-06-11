@@ -1,7 +1,7 @@
 ---
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 06/05/2024
+ms.date: 06/11/2024
 ms.reviewer: chiragpa, rissing, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -277,7 +277,7 @@ You should also check whether the endpoint is reachable from the node. Then, ver
    cat /run/systemd/resolve/resolv.conf
    ```
 
-In one unusual scenario that involves DNS resolution, the DNS queries get a correct response from the node but fail from the pod. For this scenario, you might consider [checking DNS resolution failures from inside the pod but not from the worker node](troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md). If you want to inspect DNS resolution for an endpoint across the cluster, you can consider [checking DNS resolution status across the cluster](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md#step-3-verify-the-health-of-upstream-dns-servers).
+In one unusual scenario that involves DNS resolution, the DNS queries get a correct response from the node but fail from the pod. For this scenario, you might consider [checking DNS resolution failures from inside the pod but not from the worker node](troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md). If you want to inspect DNS resolution for an endpoint across the cluster, you can consider [checking DNS resolution status across the cluster](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md#step-3-verify-the-health-of-the-upstream-dns-servers).
 
 If the DNS resolution is successful, continue to the network tests. Otherwise, verify the DNS configuration for the cluster.
 
