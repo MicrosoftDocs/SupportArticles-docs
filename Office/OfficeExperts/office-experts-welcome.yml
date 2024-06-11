@@ -42,9 +42,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Office not render DUO API multifactor authentication login page
+          - text: Office not render DUO API multifactor authentication sign-in page
             url: ./authentication/not-render-a-custom-duo-api-multi-factor-authentication-login-page.md
-          - text: HTML login page not renders correctly in Office
+          - text: HTML sign-in page not renders correctly in Office
             url: ./authentication/custom-html-login-page-not-render-correctly.md
 
   - title: Diagnostic Logs
