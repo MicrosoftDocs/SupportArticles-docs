@@ -24,7 +24,7 @@ ms.date: 06/06/2024
 
 ## Summary
 
-32-bit versions of Microsoft Excel 2013 and Excel 2016 can take advantage of Large Address Aware (LAA) functionality after installation of the latest updates. (see the "Resolution" section) This change lets 32-bit installations of Excel 2016 consume double the memory when users work on a 64-bit Windows OS. The system provides this capability by increasing the user mode virtual memory from 2 gigabytes (GB) to 4 GB. This change provides 50 percent more memory (for example, from 2 GB to 3 GB) when users work on a 32-bit system. 
+32-bit versions of Microsoft Excel 2013 and Excel 2016 can take advantage of Large Address Aware (LAA) functionality after installation of the latest updates. (See the "Resolution" section) This change lets 32-bit installations of Excel 2016 consume double the memory when users work on a 64-bit Windows OS. The system provides this capability by increasing the user mode virtual memory from 2 gigabytes (GB) to 4 GB. This change provides 50 percent more memory (for example, from 2 GB to 3 GB) when users work on a 32-bit system. 
 
 This change may minimize the frequency of the errors that are described in the following error messages when memory is constrained for 32-bit Excel installations:
 
@@ -48,7 +48,7 @@ To enable this change, you must be running the latest version of Microsoft Offic
 
 In the Windows 32-bit architecture, the address space for any program is shared between the application (user mode memory) and the operating system (system or kernel memory). For a 32-bit process, the total amount of addressable memory is 4 GB. By default, this memory is evenly divided between the process and the system. To support programs that may require more memory, Windows supports the LAA memory layout. This functionality is used only if the program can support it and identify itself as providing this support. LAA lets the system allocate more process memory at the expense of keeping less memory for itself. 
 
-The current design change to 32-bit Excel makes it LAA-supportable and identifies it to Windows as an LAA program. The maximum amount of memory that Windows can provide to the program depends on the system bitness. 32-bit Windows systems can allocate no more than 3 GB for user mode memory. This shrinks available system memory to 1 GB. (A 32-bit system cannot exceed 4 GB total RAM). On 64-bit Windows systems, the addressable memory space for the system is much larger, and the system memory can be located outside the 4-GB limit. Therefore, the maximum available user memory for a 32-bit process that's running on a 64-bit system is the full 4-GB addressable range. 
+The current design change to 32-bit Excel makes it LAA-supportable and identifies it to Windows as an LAA program. The maximum amount of memory that Windows can provide to the program depends on the system bitness. 32-bit Windows systems can allocate no more than 3 GB for user mode memory. This shrinks available system memory to 1 GB. (A 32-bit system can't exceed 4-GB total RAM). On 64-bit Windows systems, the addressable memory space for the system is much larger, and the system memory can be located outside the 4-GB limit. Therefore, the maximum available user memory for a 32-bit process that's running on a 64-bit system is the full 4-GB addressable range. 
 
 This change applies only to 32-bit programs. Therefore, it affects only 32-bit versions of Excel. If you're running a 64-bit version of Excel, this change has no effect.
 
@@ -58,7 +58,7 @@ If you're running 64-bit Windows, this change is applied automatically. No actio
 
 ### 32-bit operating system and 32-bit Office
 
-If you're running 32-bit Windows, this change cannot be applied automatically because it requires you to change the mode in which the operating system runs. More specifically, to take advantage of LAA on 32-bit Windows, you must enable the /3GB boot switch and then restart the system. For more information about this switch, see [Available switch options for the Windows XP and the Windows Server 2003 Boot.ini files](https://msdn.microsoft.com/library/windows/hardware/ff556232%28v=vs.85%29.aspx).
+If you're running 32-bit Windows, this change can't be applied automatically because it requires you to change the mode in which the operating system runs. More specifically, to take advantage of LAA on 32-bit Windows, you must enable the /3GB boot switch and then restart the system. For more information about this switch, see [Available switch options for the Windows XP and the Windows Server 2003 Boot.ini files](https://msdn.microsoft.com/library/windows/hardware/ff556232%28v=vs.85%29.aspx).
 
 > [!NOTE]
 > - This manual change can be reversed by removing the /3GB boot switch.   
@@ -77,15 +77,15 @@ Yes, Excel 2016 MSI can be applied after you install the [June 7, 2016, update f
 
 Can I add more RAM to my computer to force LAA to exceed the standard limit (2 GB for 32-bit OS, 4 GB for 64-bit OS)?
 
-Adding more RAM does not affect the maximum addressable memory for LAA programs. If your programs require more memory than the LAA maximums, you may want to move to a 64-bit system and a 64-bit version of Excel.
+Adding more RAM doesn't affect the maximum addressable memory for LAA programs. If your programs require more memory than the LAA maximums, you may want to move to a 64-bit system and a 64-bit version of Excel.
 
 Will add-ins be affected by LAA?
 
-Any code program can be affected by this change in subtle ways. Therefore, you will want to test add-ins to make sure that they work correctly. There should be no hard break of compatibility for any functionality. Therefore, correctly written add-ins should gain as much benefit from the change as does the host application itself. However, if the add-in was never tested in LAA, any existing code bugs may now be exposed to the user for the first time.
+Any code program can be affected by this change in subtle ways. Therefore, you'll want to test add-ins to make sure that they work correctly. There should be no hard break of compatibility for any functionality. Therefore, correctly written add-ins should gain as much benefit from the change as does the host application itself. However, if the add-in was never tested in LAA, any existing code bugs may now be exposed to the user for the first time.
 
 Will this change fix out-of-memory-resource errors in workbooks?
 
-Many factors can cause out-of-memory errors in workbooks. LAA can help reduce memory pressure but does not solve every memory problem. Sometimes, one of the following actions may be required:
+Many factors can cause out-of-memory errors in workbooks. LAA can help reduce memory pressure but doesn't solve every memory problem. Sometimes, one of the following actions may be required:
 
 - Review the workbook to determine whether the file requires changes. For information about how to do this, see [How to clean up an Excel workbook so that it uses less memory.](https://support.microsoft.com/help/3070372)   
 - Users may have to move to a 64-bit version of the system and a 64-bit version of Excel. For more information, see [64-bit editions of Office 2013](https://technet.microsoft.com/library/ee681792.aspx).   
