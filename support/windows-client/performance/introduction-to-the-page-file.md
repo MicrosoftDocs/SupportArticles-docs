@@ -1,7 +1,7 @@
 ---
 title: Introduction to the page file
 description: Learn about the page files in Windows. A page file is an optional, hidden system file on a hard disk.
-ms.date: 12/26/2023
+ms.date: 06/11/2024
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
@@ -60,7 +60,7 @@ The system commit memory limit is the sum of physical memory and all page files 
 :::image type="content" source="media/introduction-to-the-page-file/task-manager-system-commit-memory.png" alt-text="Screenshot of Task Manager showing the committed bytes and the commit limit.":::
 
 > [!NOTE]
-> In the screenshot, the committed bytes (RAM+Pagefile in use currently) is 6.8 GB and the commit limit (RAM+Pagefile total) is 37.7 GB.
+> In the screenshot, the committed bytes (Pagefile in use currently) is 6.8 GB and the commit limit (Pagefile max size) is 37.7 GB.
 
 The system commit charge is the total committed or "promised" memory of all committed virtual memory in the system. If the system commit charge reaches the system commit limit, the system and processes might not get committed memory. This condition can cause freezing, crashing, and other malfunctions. Therefore, make sure that you set the system commit limit high enough to support the system commit charge during peak usage.
 
