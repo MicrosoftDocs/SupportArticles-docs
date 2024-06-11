@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Add-Ins\Centralized Deployment of Add-Ins
   - DownloadInstall\AdvancedConfiguration\AddInsOrIntegratedApps
   - CSSTroubleshoot
 ms.author: luche

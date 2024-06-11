@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Open
   - CSSTroubleshoot
 ms.author: luche
@@ -100,7 +101,7 @@ You might be able to rescue a damaged file by resaving it in a different file fo
 
      :::image type="content" source="media/error-open-document/save-a-copy.png" alt-text="Screenshot of the Save a Copy option.":::
 
-You have to do this only one time to make sure that the document will now function correctly on your device. However, keep in mind that by saving the file as a new document, you are creating a different file. To avoid confusion, name the new file something distinctive, and archive or delete the damaged version. By doing this, you won't accidentally re-open the original file that hasn't been reformatted.
+You have to do this only one time to make sure that the document will now function correctly on your device. However, keep in mind that by saving the file as a new document, you're creating a different file. To avoid confusion, name the new file something distinctive, and archive or delete the damaged version. By doing this, you won't accidentally reopen the original file that hasn't been reformatted.
 
 ### Workaround 4: Open unrecognized file format
 
@@ -111,7 +112,7 @@ For example, in Word, you want to view a PDF file that's attached to an email me
 1. Save the attachment to your computer. To do this, select the down arrow next to the attachment in the message, select **Save as**, navigate to the desired location, and then select **Save**.
 2. On the **File** menu, select **Open** > **Browse** to locate the file.
 3. Right-click the file, point to **Open with**, and then select a different program to open the file.
-4. If the desired program is not on the list, select "Choose another app" to locate a different program.
+4. If the desired program isn't on the list, select "Choose another app" to locate a different program.
 
     > [!NOTE]
     > If this works, and you would like the selected program to always open this type of file, select the **Always use this app to open .docx files** (for example) check box.

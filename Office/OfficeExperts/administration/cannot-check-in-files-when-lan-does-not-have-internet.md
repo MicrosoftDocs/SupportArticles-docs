@@ -6,6 +6,7 @@ ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Sharing\Collab
   - sap:office-experts
   - CSSTroubleshoot
