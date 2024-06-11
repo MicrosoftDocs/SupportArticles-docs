@@ -32,7 +32,7 @@ appliesto:
   - Office Professional Plus 2010 Home Use Program
   - Office Standard 2010
   - Office Starter 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Error 1935 when you try to install Microsoft Office

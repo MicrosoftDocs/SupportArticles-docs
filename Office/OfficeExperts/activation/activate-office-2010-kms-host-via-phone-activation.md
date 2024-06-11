@@ -15,7 +15,7 @@ ms.custom:
 ms.reviewer: ericspli
 appliesto: 
   - Office 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Activate Office 2010 KMS host through phone activation

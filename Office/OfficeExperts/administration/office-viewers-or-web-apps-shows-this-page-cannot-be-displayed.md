@@ -14,7 +14,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Office Online Server
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Office viewers or Microsoft Offices Online shows the "This page can't be displayed" error

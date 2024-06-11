@@ -15,7 +15,7 @@ appliesto:
   - Office 2010
   - Office 2007
   - Office 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Error 1401, 1402 or 1406 when you install an Office program or open an Office program or document
@@ -128,4 +128,4 @@ This issue may occur if one of the following scenarios is true:
     - Office 2003 C:\Users\All Users\Microsoft\Office\Data\Opa11.dat   
     - Office XP C:\Users\All Users\Microsoft\Office\Data\Data.dat      
 
-If the non-administrative user accounts cannot modify this file, users cannot start any Office 2007 programs, 2003 programs, or Office XP programs on the computer. The Opa12.dat, the Opa11.dat file and the Data.dat file are hardware-specific. Additionally, these files are compiled during installation of Office.    
+If the non-administrative user accounts cannot modify this file, users cannot start any Office 2007 programs, 2003 programs, or Office XP programs on the computer. The Opa12.dat, the Opa11.dat file and the Data.dat file are hardware-specific. Additionally, these files are compiled during installation of Office.

@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Office Web Apps
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "We can't open this add-in from localhost" when loading an Office Add-in or using Fiddler

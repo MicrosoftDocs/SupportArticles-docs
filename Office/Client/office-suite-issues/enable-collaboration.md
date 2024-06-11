@@ -18,7 +18,7 @@ appliesto:
   - Office 2010
   - Office 2007
   - Office 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Description of Office features that are intended to enable collaboration and that are not intended to increase security
@@ -96,5 +96,4 @@ Use a strong password that you can remember so that you do not have to write it 
 ## References
 
 For more information about features that enable specific collaboration scenarios and features that are designed to help make your documents and files more secure in PowerPoint, see
-[How password protection works with PowerPoint Show (*.pps) files](https://support.microsoft.com/help/278578). 
-
+[How password protection works with PowerPoint Show (*.pps) files](https://support.microsoft.com/help/278578).

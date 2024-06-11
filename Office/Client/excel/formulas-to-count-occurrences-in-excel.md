@@ -14,7 +14,7 @@ ms.author: luche
 appliesto: 
   - Excel 2016
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Description of formulas to count the occurrences of text, characters, and words in Excel

@@ -14,7 +14,7 @@ ms.custom:
 ms.reviewer: jalalb
 appliesto: 
   - Microsoft 365 for Mac
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Office 365 Enterprise E3 setup is incomplete" error in Microsoft 365 for Mac

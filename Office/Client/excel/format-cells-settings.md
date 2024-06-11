@@ -18,7 +18,7 @@ appliesto:
   - Excel 2010
   - Office Excel 2007
   - Office Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to control and understand settings in the Format Cells dialog box in Excel

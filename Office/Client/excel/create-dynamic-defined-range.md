@@ -17,7 +17,7 @@ appliesto:
   - Excel 2010
   - Excel 2007
   - Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to create a dynamic defined range in an Excel worksheet
@@ -98,4 +98,4 @@ Date.
    > [!NOTE]
    > In this formula, **COUNT** is used for a column of numbers. **COUNTA** is used for a column of text values.
 
-   This formula uses the volatile RAND function. This formula automatically updates the OFFSET formula that is used in the defined name "Sales" when you enter new data in column B. The value 10 is used in this formula because 10 is the original value of cell B2.    
+   This formula uses the volatile RAND function. This formula automatically updates the OFFSET formula that is used in the defined name "Sales" when you enter new data in column B. The value 10 is used in this formula because 10 is the original value of cell B2.

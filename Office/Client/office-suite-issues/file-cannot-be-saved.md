@@ -16,7 +16,7 @@ ms.author: luche
 appliesto: 
   - Microsoft Excel
   - Microsoft PowerPoint
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Excel or PowerPoint error: “This file cannot be saved because some properties are missing or invalid”
