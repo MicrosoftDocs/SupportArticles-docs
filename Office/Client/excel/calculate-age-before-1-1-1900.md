@@ -1,6 +1,6 @@
 ---
-title: How to calculate ages before 1/1/1900 in Excel
-description: Describes how to use Macro to calculate age before 1/1/1900 in Excel.
+title: How to calculate ages before January 1, 1900 in Excel
+description: Describes how to use Macro to calculate age before January 1, 1900 in Excel.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -16,17 +16,17 @@ appliesto:
 ms.date: 06/06/2024
 ---
 
-# How to calculate ages before 1/1/1900 in Excel
+# How to calculate ages before January 1, 1900 in Excel
 
 ## Summary
 
-Although Microsoft Excel date formulas can only use dates entered between 1/1/1900 and 12/31/9999, you can use a custom Microsoft Visual Basic for Applications function to calculate the age (in years) of someone or something that was first created before January 1, 1900.
+Although Microsoft Excel date formulas can only use dates entered between January 1, 1900 and December 31, 9999, you can use a custom Microsoft Visual Basic for Applications function to calculate the age (in years) of someone or something that was first created before January 1, 1900.
 
 ### Use Macro to Calculate Age
 
 Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
 
-Excel enters dates prior to 1/1/1900 as text. This function works for dates entered as text beginning with 1/1/0001, normal dates, and can handle dates when the starting date is before 1900 and ending date is after 1900. To use the macro, follow these steps:
+Excel enters dates prior to January 1, 1900 as text. This function works for dates entered as text beginning with 1/1/0001, normal dates, and can handle dates when the starting date is before 1900 and ending date is after 1900. To use the macro, follow these steps:
 
 1. Start Excel. View the worksheet on which you want to use the function.
 2. Press ALT+F11 to switch to the Visual Basic Editor.

@@ -36,19 +36,19 @@ When you work with a Microsoft Excel file, you receive one of the following mess
 
 ## Cause
 
-The above memory error messages can be generic and don't always identify the real cause of the issue. However, if your file is large or contains a large number of features, it is possible you are running low on available memory resources.
+The above memory error messages can be generic and don't always identify the real cause of the issue. However, if your file is large or contains a large number of features, it's possible you're running low on available memory resources.
 
-Before we explore the more common reasons for the memory errors, it good to understand Excel's limitations. See the following resources for more information:
+Before we explore the more common reasons for the memory errors, it good to understand Excel's limitations. For more information, see the following resources:
 
 - [Excel specifications and limits](https://support.office.com/article/excel-specifications-and-limits-ca36e2dc-1f09-4620-b726-67c00b05040f)
 - [Excel 2010 Performance: Performance and Limit Improvements](https://msdn.microsoft.com/library/office/ff700514.aspx)
 - [Memory usage in the 32-bit edition of Excel 2013 and 2016](https://support.microsoft.com/help/3066990)
 
-If you are not hitting a resource limitation, these are the most common resolutions.
+If you aren't hitting a resource limitation, these are the most common resolutions.
 
 ## Resolution
 
-Follow the provided methods in this article to resolve the available resource error message in Excel. If you have previously tried one of these methods and it did not help, go to another method from this list:
+Follow the provided methods in this article to resolve the available resource error message in Excel. If you have previously tried one of these methods and it didn't help, go to another method from this list:
 
 ### Method 1: Contents of the spreadsheet
 
@@ -61,7 +61,7 @@ The first thing to determine is if the error is specific to one workbook (or oth
 - Opening or closing the workbook
 - Running VBA
 
-If you're seeing the error when performing any of the above actions, it's time to look to determine what's going on in your file. These will be addressed in the sections below.
+If you're seeing the error when performing any of the above actions, it's time to look to determine what's going on in your file. These are addressed in the sections below.
 
 **Calculations**
 
@@ -69,7 +69,7 @@ If you're inserting rows and columns, performing calculations, or copying and pa
 
 Consider this scenario:
 
-You have a spreadsheet with 1 million formulas on a sheet and you insert a new column. This will force Excel to recalculate all the formulas in the spreadsheet adjusting for the new column that you inserted. It is possible, depending on the complexity of your spreadsheet, bitness of Excel, and how the spreadsheet is built, and what formulas are used, that you receive the out of resources error.
+You have a spreadsheet with 1 million formulas on a sheet and you insert a new column. This forces Excel to recalculate all the formulas in the spreadsheet adjusting for the new column that you inserted. It's possible, depending on the complexity of your spreadsheet, bitness of Excel, and how the spreadsheet is built, and what formulas are used, that you receive the out of resources error.
 
 The following articles address how to optimize performance with calculations:
 
@@ -84,14 +84,14 @@ Other areas that can cause the memory issues are excess shapes, complex PivotTab
 
 #### Custom Views in a Shared Workbook
 
-If you are using the feature Shared Workbook (Review Ribbon > Share Workbook), cleaning out the Custom Views may help with available memory. To do this:
+If you're using the feature Shared Workbook (Review Ribbon > Share Workbook), cleaning out the Custom Views might help with available memory. To do this:
 
 1. On the **View Ribbon**
 2. **Custom Views** on the dialog choose **Delete**
 
 Deleting Custom Views doesn't delete anything in the spreadsheet, it does delete the print areas, and filters. These can easily be reapplied.
 
-If your issue is not resolved after you clean up the file, go to method 2.
+If your issue isn't resolved after you clean up the file, go to method 2.
 
 ### Method 2: Verify/install the latest updates
 
@@ -105,7 +105,7 @@ You might have to set Windows Update to automatically download and install recom
 
 For more information about Office updates, see [Office downloads & updates](/officeupdates/).
 
-If your issue is not resolved after you install the updates, go to method 3.  
+If your issue isn't resolved after you install the updates, go to method 3.  
 
 ### Method 3: Add-ins interfering
 
@@ -113,13 +113,13 @@ Check the Add-ins that are running, and try disabling them to see if Excel is wo
 
 [View, manage, and install add-ins in Office programs](https://support.office.com/article/view-manage-and-install-add-ins-in-office-programs-16278816-1948-4028-91e5-76dca5380f8d)
 
-If you find that Excel is no longer giving you the error after you remove the add-ins, then it is recommended to contact the manufacturer of the add-in for support.
+If you find that Excel is no longer giving you the error after you remove the add-ins, then it's recommended to contact the manufacturer of the add-in for support.
 
-If your issue is not resolved after you remove the add-ins, go to method 4.
+If your issue isn't resolved after you remove the add-ins, go to method 4.
   
 ### Method 4: Test disabling Preview/Details Pane in Windows 7
 
-If you are running Windows 7, try disabling the preview and details panes in Windows. You will have to disable them in three locations.  
+If you're running Windows 7, try disabling the preview and details panes in Windows. You'll have to disable them in three locations.  
 
 Windows Explorer:
 
@@ -159,11 +159,11 @@ If your issue is not resolved after you turn off antivirus, go to method 7.
 
 ### Method 7: Test with 64-bit version of Excel
 
-Working with large Excel files can use the memory available to the 32-bit Excel application. In any 32-bit application there is a 2-GB limitation.
+Working with large Excel files can use the memory available to the 32-bit Excel application. In any 32-bit application, there's a 2-GB limitation.
 
-If your processes need to use more than 2 GB's, then you need to carefully consider moving to Microsoft Excel 64-bit version. The 64-bit version will allow all available physical RAM on the machine to be used. If you are interested in researching 64-bit versions, see [64-bit editions of Office 2013](https://technet.microsoft.com/library/ee681792.aspx).
+If your processes need to use more than 2 GB's, then you need to carefully consider moving to Microsoft Excel 64-bit version. The 64-bit version allows all available physical RAM on the machine to be used. If you're interested in researching 64-bit versions, see [64-bit editions of Office 2013](https://technet.microsoft.com/library/ee681792.aspx).
 
-If your issue is not resolved after testing on 64 bit, go to method 8.
+If your issue isn't resolved after testing on 64 bit, go to method 8.
 
 ### Method 8: Other applications are consuming the computer's memory and not enough is being allocated to Excel
 
@@ -177,7 +177,7 @@ Additional article
 
 [Excel cannot complete this task with available resources error, Excel 2010](https://support.microsoft.com/help/2655178)
 
-If the information in this article did not help resolve the error in Excel, select one of the following options:  
+If the information in this article didn't help resolve the error in Excel, select one of the following options:  
 
 - More Microsoft online articles:
  [Perform a search to find more online articles about this specific error](https://support.microsoft.com/)

@@ -18,11 +18,11 @@ appliesto:
 ms.date: 06/06/2024
 ---
 
-# Office for Mac activation error: “An unknown error has occurred”
+# Office for Mac activation error: "An unknown error has occurred"
 
-When you are trying to activate Microsoft 365 on a Mac, you might encounter the message “An unknown error has occurred” followed by an error code.
+When you're trying to activate Microsoft 365 on a Mac, you might encounter the message "An unknown error has occurred" followed by an error code.
 
-Before trying the following troubleshooting steps, make sure the internet is working on the Mac you're trying to activate on. You can do this by opening your internet browser and going to https://microsoft.com.  If the page loads, your internet connection is working.
+Before trying the following troubleshooting steps, make sure the internet is working on the Mac you're trying to activate on. You can do this by opening your internet browser and going to `https://microsoft.com`. If the page loads, your internet connection is working.
 
 ## For error code 0xD0001043
 
@@ -30,7 +30,7 @@ This is a server issue that occurs when trying to activate Microsoft 365 for Mac
 
 1. Run the [Office for Mac License Removal Tool](https://support.microsoft.com/en-us/office/how-to-remove-office-license-files-on-a-mac-b032c0f6-a431-4dad-83a9-6b727c03b193).
 
-1. [Uninstall Office for Mac](https://support.microsoft.com/office/uninstall-office-for-mac-eefa1199-5b58-43af-8a3d-b73dc1a8cae3) and then re-install Office from https://office.com/signin.
+1. [Uninstall Office for Mac](https://support.microsoft.com/office/uninstall-office-for-mac-eefa1199-5b58-43af-8a3d-b73dc1a8cae3) and then reinstall Office from https://office.com/signin.
 
 1. Restart your Mac and then activate Office.
 
@@ -48,7 +48,7 @@ If you're trying to activate Office for Mac and have received error code 0xD0000
 
 See [Error 0x8A010101 when activating Office for Mac](https://support.microsoft.com/office/error-0x8a010101-when-activating-office-for-mac-804de2bd-12d8-40a9-95fd-03dc3e4d262f).
 
-**For other error codes**, or if the steps above didn’t solve the problem, try the following troubleshooting methods.
+**For other error codes**, or if the steps above didn't solve the problem, try the following troubleshooting methods.
 
 ## Make sure Office for Mac is updated
 
@@ -60,9 +60,9 @@ See [How to remove Office license files on a Mac](https://support.microsoft.com/
 
 ## Sign in with your local user account
 
-If you've signed in to your Mac using a Network account such as Open directory accounts, this error may occur because Office for Mac can't write your credentials into the keychain as it is "read-only."  
+If you've signed in to your Mac using a Network account such as Open directory accounts, this error might occur because Office for Mac can't write your credentials into the keychain as it is "read-only."  
 
-1. If you are signed in with a network account, sign out and sign back in with your local user account. Try activation again.  
+1. If you're signed in with a network account, sign out and sign back in with your local user account. Try activation again.  
 
 1. If you don't have a local user account, you must create one:  
 
@@ -72,7 +72,7 @@ If you've signed in to your Mac using a Network account such as Open directory a
 
     - Select **+**, and then fill in the new account information, and then select **Create User**.  
 
-    - Log into your local user account and activate again.  
+    - Log in to your local user account and activate again.  
 
 
 ## References
