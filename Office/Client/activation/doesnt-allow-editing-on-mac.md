@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\Your account doesn't allow editing on a mac
   - CSSTroubleshoot
   - CI 157760
   - CI 159114

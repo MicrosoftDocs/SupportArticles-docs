@@ -14,6 +14,7 @@ ms.assetid:
 appliesto: 
   - PowerPoint
 ms.custom: 
+  - Open\Errors
   - CI 106705
   - CSSTroubleshoot
 ms.reviewer: randring

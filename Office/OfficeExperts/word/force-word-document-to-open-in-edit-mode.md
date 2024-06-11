@@ -11,6 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Open
   - sap:office-experts
   - CSSTroubleshoot
 appliesto: 

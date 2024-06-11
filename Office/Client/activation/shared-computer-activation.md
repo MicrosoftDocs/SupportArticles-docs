@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Deploying Office using Shared Computer Activation
   - CSSTroubleshoot
   - CI 157761
 search.appverid: 

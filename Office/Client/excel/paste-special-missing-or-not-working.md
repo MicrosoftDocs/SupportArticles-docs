@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Editing\CopyOrPaste
   - CSSTroubleshoot
   - CI 162524
   - CI 171649

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Sharing\Collab
   - CI 149605
   - CSSTroubleshoot
 ms.reviewer: remcgurk

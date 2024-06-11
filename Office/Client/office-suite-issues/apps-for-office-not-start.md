@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - DownloadInstall\AdvancedConfiguration\AddInsOrIntegratedApps
   - CSSTroubleshoot
 ms.author: luche
 ms.reviewer: pconlan, misaun

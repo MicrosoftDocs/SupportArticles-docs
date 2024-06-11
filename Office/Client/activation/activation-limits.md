@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - SubscriptionAndLicensing\Office apps install/activate issues due to subscription/licensing
   - CSSTroubleshoot
   - CI 157762
 search.appverid: 

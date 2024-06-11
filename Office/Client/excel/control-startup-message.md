@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: v-raddis, akeeler
 ms.custom: 
+  - Open\Links
   - CI 116037
   - CSSTroubleshoot
 search.appverid: MET150

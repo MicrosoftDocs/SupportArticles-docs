@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Reliability
   - CSSTroubleshoot
 appliesto: 
   - Excel 2016

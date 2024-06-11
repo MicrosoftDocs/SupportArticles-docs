@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Sharing\Collab
   - CSSTroubleshoot
 search.appverid: 
   - MET150

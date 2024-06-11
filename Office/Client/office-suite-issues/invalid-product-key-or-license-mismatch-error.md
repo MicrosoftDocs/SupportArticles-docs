@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - SubscriptionAndLicensing\Product Keys related issues
   - CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 

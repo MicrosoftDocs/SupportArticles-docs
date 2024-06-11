@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\SignIn\AADSTS Errors
   - CSSTroubleshoot
   - CI 157587
 search.appverid: 

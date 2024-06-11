@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\Your organization has disabled this device
   - CSSTroubleshoot
   - CI 157589
 search.appverid: 

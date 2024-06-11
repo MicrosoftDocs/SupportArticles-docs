@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: bradthor
 ms.custom: 
+  - Reliability
   - CSSTroubleshoot
 search.appverid: 
   - MET150

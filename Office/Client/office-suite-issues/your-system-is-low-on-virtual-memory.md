@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - DownloadInstall\InstallErrors\AppLaunchErrors
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

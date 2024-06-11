@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Sync
   - CI 114993
   - CSSTroubleshoot
 ms.reviewer: subhbasu

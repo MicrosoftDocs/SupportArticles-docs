@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Open\Recovery
   - CSSTroubleshoot
 appliesto: 
   - Word for Microsoft 365

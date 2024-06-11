@@ -7,6 +7,7 @@ ms.reviewer: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
+  - Open
   - sap:office-experts
   - CSSTroubleshoot
 search.appverid: 

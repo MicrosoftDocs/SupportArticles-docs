@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - DownloadInstall\AdvancedConfiguration\AddInsOrIntegratedApps
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche

@@ -9,6 +9,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - DownloadInstall\Updates\ProblemsInstallingUpdates
   - sap:office-experts
   - CSSTroubleshoot
 ms.topic: troubleshooting

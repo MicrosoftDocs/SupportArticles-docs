@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Editing\Transitions
   - CSSTroubleshoot
 ms.author: luche
 search.appverid: 

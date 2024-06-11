@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\Trusted Platform Module malfunctioned
   - CSSTroubleshoot
   - CI 157590
 search.appverid: 

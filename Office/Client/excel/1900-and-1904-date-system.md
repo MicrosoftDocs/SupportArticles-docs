@@ -6,6 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.custom: 
+  - Editing\Cells
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche

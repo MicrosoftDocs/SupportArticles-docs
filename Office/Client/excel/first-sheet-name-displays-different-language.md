@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Languages
   - CI 106750
   - CSSTroubleshoot
 ms.reviewer: iuliam

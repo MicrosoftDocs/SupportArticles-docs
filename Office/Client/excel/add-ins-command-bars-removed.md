@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\AddIns
   - CSSTroubleshoot
 appliesto: 
   - Excel for Microsoft 365

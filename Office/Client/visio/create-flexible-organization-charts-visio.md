@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Editing\Charts
   - CSSTroubleshoot
 appliesto: 
 - Visio 2013

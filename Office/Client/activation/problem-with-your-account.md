@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\SignIn\Account Error
   - CSSTroubleshoot
   - CI 157757
 search.appverid: 

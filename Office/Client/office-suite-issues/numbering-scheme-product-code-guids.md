@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: doakm
 ms.custom: 
+  - DownloadInstall\AdvancedConfiguration\OfficeDeploymentTool
   - CSSTroubleshoot
 search.appverid: 
   - MET150

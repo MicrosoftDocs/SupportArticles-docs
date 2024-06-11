@@ -11,6 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Editing\Pictures
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Word

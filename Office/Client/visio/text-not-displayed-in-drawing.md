@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Open\Errors
   - CSSTroubleshoot
 ms.reviewer: poyant, Arykhus, Kemille, barbway
 appliesto: 

@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: sthorn, HeidiMu, Arykhus, kevinmil, barbway
 ms.custom: 
+  - Extensibility\Scripts
   - CSSTroubleshoot
 search.appverid: 
   - MET150

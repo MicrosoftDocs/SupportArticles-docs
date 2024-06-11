@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Editing\Fonts
   - CI 114991
   - CSSTroubleshoot
 ms.reviewer: vikartha, bhamv, subhbasu

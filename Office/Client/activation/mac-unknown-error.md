@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\An unknown error has occurred. error code is: 0x
   - CSSTroubleshoot
   - CI 157588
 search.appverid: 

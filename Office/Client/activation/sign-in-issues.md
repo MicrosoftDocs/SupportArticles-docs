@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\SignIn\Password Prompts
   - CSSTroubleshoot
   - CI 157601
   - CI 159070

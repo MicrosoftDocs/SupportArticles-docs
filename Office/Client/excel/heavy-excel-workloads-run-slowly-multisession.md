@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: rtaylor, jefferc
 ms.custom: 
+  - Reliability
   - CSSTroubleshoot
   - CI 172461
 search.appverid: 

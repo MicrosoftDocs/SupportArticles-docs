@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - DownloadInstall\InstallErrors\ErrorCodes
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche

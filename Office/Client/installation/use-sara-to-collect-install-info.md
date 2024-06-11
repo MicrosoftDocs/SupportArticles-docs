@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - DownloadInstall\InstallErrors\ErrorCodes
   - CSSTroubleshoot
   - CI 144048
   - CI 147050

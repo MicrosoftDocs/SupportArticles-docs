@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Activation\Errors\Unable to connect
   - CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise

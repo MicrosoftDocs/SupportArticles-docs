@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Printing
   - CSSTroubleshoot
 ms.reviewer: Laura Holzwarth (STRUCK), Fish Ge
 search.appverid: 

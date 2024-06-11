@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\Error Codes
   - CSSTroubleshoot
   - CI 157595
 search.appverid: 

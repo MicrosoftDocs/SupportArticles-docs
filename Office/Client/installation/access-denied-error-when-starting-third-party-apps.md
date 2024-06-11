@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Office
 ms.custom: 
+  - DownloadInstall\AdvancedConfiguration\AddInsOrIntegratedApps
   - CI 115993
   - CSSTroubleshoot
 ms.reviewer: rycarter

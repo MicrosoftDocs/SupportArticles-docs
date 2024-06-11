@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - Open\Recovery
   - CSSTroubleshoot
   - CI 118866
   - CI 150212

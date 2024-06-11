@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Editing\Functions
   - CSSTroubleshoot
 appliesto: 
   - Excel 2000

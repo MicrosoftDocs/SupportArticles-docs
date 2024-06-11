@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\We are having some temporary server issues
   - CSSTroubleshoot
   - CI 157597
   - CI 159115
