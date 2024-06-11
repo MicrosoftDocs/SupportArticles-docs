@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Editing\Insert
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Editing\Diagrams
   - CSSTroubleshoot
 ms.author: luche
 ms.reviewer: parida, Arykhus, kevinmil, barbway, emilcico

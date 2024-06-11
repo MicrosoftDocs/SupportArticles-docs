@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Editing\Fonts
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Word for Mac

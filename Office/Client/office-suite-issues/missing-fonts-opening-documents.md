@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Editing\Fonts
   - CI 115150
   - CSSTroubleshoot
 ms.reviewer: gausin

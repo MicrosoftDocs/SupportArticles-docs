@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Editing\Spellcheck
   - CSSTroubleshoot
 appliesto: 
   - Word 2010

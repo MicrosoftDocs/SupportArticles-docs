@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Languages
   - CSSTroubleshoot
 appliesto: 
 - Word 2013

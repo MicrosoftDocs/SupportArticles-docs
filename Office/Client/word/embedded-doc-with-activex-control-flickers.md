@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Office
 ms.custom: 
+  - Editing\Embedding
   - CI 123056
   - CSSTroubleshoot
 ms.reviewer: sakris

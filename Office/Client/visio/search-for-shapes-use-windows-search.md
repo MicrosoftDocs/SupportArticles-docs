@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Editing\Diagrams
   - CSSTroubleshoot
 ms.reviewer: nathanad, jennc
 search.appverid: 
