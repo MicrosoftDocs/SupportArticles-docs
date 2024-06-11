@@ -16,7 +16,7 @@ appliesto:
   - Word 2019
   - Word 2016
   - Word 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Word Track Changes functionality disabled when Rights Management Services (RMS) is applied
@@ -47,4 +47,4 @@ The following reviewing features are only available with "Full control" permissi
 Within the Track Changes dropdown, the Track Changes Options will be enabled, but within that dialog, the following two options will be disabled unless the user has Full Control permissions: 
  
 - Track moves    
-- Track formatting    
+- Track formatting

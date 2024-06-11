@@ -13,7 +13,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft Word
-ms.date: 04/05/2023
+ms.date: 06/06/2024
 ---
 
 # How to merge Word documents

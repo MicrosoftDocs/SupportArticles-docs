@@ -17,7 +17,7 @@ appliesto:
   - Visio 2019
   - Visio 2016
   - Visio 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # You can't open Visio files in Visio Web Access even if Visio Viewer is installed

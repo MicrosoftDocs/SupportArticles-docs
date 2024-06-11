@@ -14,7 +14,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Word
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "The image part with relationship rID8 was not found" error in Microsoft Word

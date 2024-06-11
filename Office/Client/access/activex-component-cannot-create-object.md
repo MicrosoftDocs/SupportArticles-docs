@@ -20,7 +20,7 @@ appliesto:
   - Access 2007
   - Access 2003
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # You receive a "ActiveX component can't create object" error message when using Access

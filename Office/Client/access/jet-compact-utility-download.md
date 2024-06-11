@@ -15,7 +15,7 @@ ms.author: luche
 ms.reviewer: chriswy
 appliesto: 
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Jet compact utility is available in download center

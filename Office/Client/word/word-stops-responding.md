@@ -18,7 +18,7 @@ appliesto:
   - Word 2013
   - Word 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Word slows or stops responding if there are excessive tracked changes or comments

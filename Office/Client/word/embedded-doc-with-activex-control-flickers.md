@@ -3,7 +3,7 @@ title: An in-place edit of an embedded Word document that contains an ActiveX co
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 09/09/2020
+ms.date: 06/06/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

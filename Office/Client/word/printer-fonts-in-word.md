@@ -3,7 +3,7 @@ title: Using printer fonts in Word
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 09/01/2020
+ms.date: 06/06/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

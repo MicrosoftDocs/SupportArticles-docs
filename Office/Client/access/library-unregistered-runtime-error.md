@@ -13,7 +13,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft Access
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Runtime error 2147319779 (8002801d) library not registered" when setting a company as default

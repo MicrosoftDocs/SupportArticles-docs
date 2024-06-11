@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Something went wrong 30016-4" error when you try to uninstall Microsoft 365 Apps for enterprise
