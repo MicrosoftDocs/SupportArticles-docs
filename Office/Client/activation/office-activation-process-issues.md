@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
   - Activation\Perpetual
   - CSSTroubleshoot
 ms.reviewer: sfrancis, sloanc, andyfel, djess, arykhus, mosesma, ryanwei, tomol, joanned

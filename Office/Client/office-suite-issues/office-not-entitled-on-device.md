@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
   - SubscriptionAndLicensing\Product Keys related issues
   - CSSTroubleshoot
 audience: ITPro

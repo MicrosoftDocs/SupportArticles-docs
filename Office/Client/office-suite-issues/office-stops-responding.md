@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Errors & Crashing
   - Reliability
   - CSSTroubleshoot
 ms.topic: troubleshooting
