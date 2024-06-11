@@ -38,7 +38,7 @@ To fix this issue, follow these steps:
 
 ## More information
 
-This issue occurs because the user account isn't assigned a SharePoint Online license.
+This issue occurs because the user account isn't assigned a SharePoint license.
 
 The non-Microsoft products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
