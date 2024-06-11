@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - SubscriptionAndLicensing\Product Keys related issues
   - CSSTroubleshoot
   - CI 157766
 search.appverid: 

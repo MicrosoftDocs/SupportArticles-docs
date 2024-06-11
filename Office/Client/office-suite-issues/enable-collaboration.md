@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Sharing\Collab
   - CSSTroubleshoot
   - CI 162681
 ms.author: luche

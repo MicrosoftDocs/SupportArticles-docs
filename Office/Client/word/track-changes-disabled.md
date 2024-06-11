@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Sharing\Collab
   - CSSTroubleshoot
 appliesto: 
   - Word for Microsoft 365

@@ -6,6 +6,7 @@ ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
+  - Sharing\Collab
   - sap:office-experts
   - CSSTroubleshoot
 search.appverid: 

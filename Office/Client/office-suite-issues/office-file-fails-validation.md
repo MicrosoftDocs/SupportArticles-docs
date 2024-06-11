@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: mdandige
 ms.custom: 
+  - Security\Trust
   - CSSTroubleshoot
 search.appverid: 
   - MET150
