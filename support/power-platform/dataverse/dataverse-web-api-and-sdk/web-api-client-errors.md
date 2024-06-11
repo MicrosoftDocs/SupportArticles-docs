@@ -53,7 +53,7 @@ If the resource is an action defined as a [custom process action](/power-apps/de
 
 - If the resource is an entity type, query the Web API [Service document](/power-apps/developer/data-platform/webapi/web-api-service-documents#service-document) which will provide a list of all the known entity set names.
 - If the resource is a function or action, verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document).
-  - If the action doesn't exist in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document), it might be an inactive [custom process action](/power-apps/developer/data-platform/workflow-custom-actions). You should verify that it's active.
+- If the action doesn't exist in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document), it might be an inactive [custom process action](/power-apps/developer/data-platform/workflow-custom-actions). You should verify that it's active.
 
 ## Could not find a property named '{property name}' on type 'Microsoft.Dynamics.CRM.{entity name}'
 
