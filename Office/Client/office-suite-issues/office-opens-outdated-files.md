@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Server
   - Microsoft 365
 ms.custom: 
+  - Open
   - CI 144436
   - CSSTroubleshoot
 ms.reviewer: sharepoint_triage

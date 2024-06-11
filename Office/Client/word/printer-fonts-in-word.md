@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Word
 ms.custom: 
+  - Printing
   - CI 122387
   - CSSTroubleshoot
 ms.reviewer: sergeym

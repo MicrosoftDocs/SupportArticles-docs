@@ -10,6 +10,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Reliability
   - CI 117479
   - CSSTroubleshoot
 ms.author: luche

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Reliability
   - CI 112326
   - CSSTroubleshoot
 ms.reviewer: warrenr

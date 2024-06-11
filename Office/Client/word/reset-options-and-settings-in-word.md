@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Reliability
   - CSSTroubleshoot
   - CI 147051
 ms.author: luche

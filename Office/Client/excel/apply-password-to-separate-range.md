@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Security\Permissions
   - CSSTroubleshoot
 appliesto: 
   - Excel 2007

@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Outlook\SendToOneNote
   - CSSTroubleshoot
 appliesto: 
 - Microsoft OneNote 2010

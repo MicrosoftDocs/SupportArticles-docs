@@ -17,6 +17,7 @@ appliesto:
   - OneNote for Mac
   - OneNote on Devices
 ms.custom: 
+  - Open\ContentNotYetAvailable
   - CI 117004
   - CSSTroubleshoot
 description: Describes resolutions to the OneNote error message Content Not Yet Available.

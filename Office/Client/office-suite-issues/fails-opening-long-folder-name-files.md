@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Open
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Office Excel 2007

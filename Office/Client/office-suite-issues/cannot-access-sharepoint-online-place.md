@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Open
   - CSSTroubleshoot
 appliesto: 
 - Office Mobile for iPhone 

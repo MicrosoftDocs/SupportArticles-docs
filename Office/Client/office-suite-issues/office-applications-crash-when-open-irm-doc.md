@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Reliability
   - CSSTroubleshoot
 ms.reviewer: genli, christys
 search.appverid: 

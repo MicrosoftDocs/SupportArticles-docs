@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - OneNote 2016
 ms.custom: 
+  - Open\Errors
   - CI 117067
   - CSSTroubleshoot
 ms.reviewer: subhbasu

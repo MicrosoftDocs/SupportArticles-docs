@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Word for Microsoft 365
 ms.custom: 
+  - Privacy\AIP
   - CI 122599
   - CSSTroubleshoot
 ms.reviewer: amdey
