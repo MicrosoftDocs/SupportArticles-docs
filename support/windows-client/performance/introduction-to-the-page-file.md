@@ -1,7 +1,7 @@
 ---
 title: Introduction to the page file
 description: Learn about the page files in Windows. A page file is an optional, hidden system file on a hard disk.
-ms.date: 12/26/2023
+ms.date: 06/11/2024
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
