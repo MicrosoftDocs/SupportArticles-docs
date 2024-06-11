@@ -22,7 +22,7 @@ ms.date: 06/06/2024
 
 ## Summary
 
-In Microsoft Excel, you can hide sheets in a workbook so that a user cannot see them. You can hide any type of sheet in a workbook, but you must always leave at least one sheet visible.
+In Microsoft Excel, you can hide sheets in a workbook so that a user can't see them. You can hide any type of sheet in a workbook, but you must always leave at least one sheet visible.
 
 ## More information
 
