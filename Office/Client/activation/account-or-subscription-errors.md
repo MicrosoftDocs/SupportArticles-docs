@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\Couldn't verify account or subscription or license
   - CSSTroubleshoot
   - CI 157752
   - CI 159119

@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: ericspli
 ms.custom: 
+  - DownloadInstall\SxS\SxSOrPerpetual
   - sap:office-experts
   - CSSTroubleshoot
 appliesto: 

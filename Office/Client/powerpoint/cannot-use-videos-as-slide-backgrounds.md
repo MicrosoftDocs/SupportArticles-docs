@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Editing
   - CSSTroubleshoot
 appliesto: 
 - PowerPoint 2013

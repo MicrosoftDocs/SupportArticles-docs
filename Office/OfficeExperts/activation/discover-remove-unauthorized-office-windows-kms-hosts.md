@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: ericspli
 ms.custom: 
+  - Activation\Perpetual
   - sap:office-experts
   - CSSTroubleshoot
 appliesto: 

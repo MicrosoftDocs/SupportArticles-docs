@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - DownloadInstall\SxS\SxSOrPerpetual
   - CSSTroubleshoot
   - CI 105976
 appliesto: 

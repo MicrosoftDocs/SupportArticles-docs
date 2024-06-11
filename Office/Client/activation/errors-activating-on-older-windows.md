@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: vikkarti, viwoods, libbyu
 ms.custom: 
+  - Activation\Errors\We're having trouble activating Office
   - CSSTroubleshoot
   - CI 155558
 search.appverid: 

@@ -9,6 +9,7 @@ search.appverid: MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Activation\Errors\Error Codes
   - sap:office-experts
   - CSSTroubleshoot
   - CI 114181

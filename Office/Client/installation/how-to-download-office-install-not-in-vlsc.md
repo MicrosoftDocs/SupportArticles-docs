@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Office
 ms.custom: 
+  - DownloadInstall\SxS\SxSOrPerpetual
   - CI 157620
   - CI 113921
   - CSSTroubleshoot

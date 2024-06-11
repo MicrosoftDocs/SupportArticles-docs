@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Activation\Errors\Couldn't verify account or subscription or license
   - CSSTroubleshoot
   - CI 159180
 appliesto: 

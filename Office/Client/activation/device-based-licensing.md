@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Licensing Office using Device Based Subscriptions (and DBA)
   - CSSTroubleshoot
   - CI 157764
 search.appverid: 

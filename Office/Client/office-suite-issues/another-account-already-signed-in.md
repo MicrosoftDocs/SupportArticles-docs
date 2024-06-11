@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - Activation\Errors\Sorry another account from your organization is already signed in on this computer
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche

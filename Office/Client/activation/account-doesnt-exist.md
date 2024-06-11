@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\Account doesn't exist
   - CSSTroubleshoot
   - CI 157598
   - CI 159117

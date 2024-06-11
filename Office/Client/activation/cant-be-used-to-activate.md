@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Activation\Errors\The products we found in your account can't be used to activate
   - CSSTroubleshoot
   - CI 157756
   - CI 159132

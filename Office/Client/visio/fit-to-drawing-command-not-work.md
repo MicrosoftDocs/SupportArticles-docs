@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Editing
   - CSSTroubleshoot
 ms.reviewer: timda, arykhus, kevinmil, barbway
 search.appverid: 

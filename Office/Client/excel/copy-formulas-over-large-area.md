@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: PETEREE
 ms.custom: 
+  - Editing\CopyOrPaste
   - CSSTroubleshoot
 search.appverid: 
   - MET150
