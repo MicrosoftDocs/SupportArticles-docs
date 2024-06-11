@@ -68,7 +68,7 @@ When this problem occurs, you experience one or more of the following symptoms:
 
 - The DCDIAG Replication test (`DCDIAG /TEST:Replications`) reports that the tested domain controller **failed test replications** and has a status of 8453: Replication access was denied:
 
-    ```output
+  ```output
   Starting test: Replications  
   [Replications Check,<destination domain controller] A recent replication attempt failed:  
   From <source DC> to <Destination DC  
