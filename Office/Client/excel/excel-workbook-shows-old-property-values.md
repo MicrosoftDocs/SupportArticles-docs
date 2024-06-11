@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: warrenr, jhaak
 ms.custom: 
+  - Reliability\LoadingIssues
   - CSSTroubleshoot
   - CI 167550
 search.appverid: 

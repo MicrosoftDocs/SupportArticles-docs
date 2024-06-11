@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Open
   - CI 115052
   - CSSTroubleshoot
 ms.reviewer: bhamv

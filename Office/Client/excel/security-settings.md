@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Security\Trust
   - CSSTroubleshoot
 appliesto: 
   - Excel for Microsoft 365

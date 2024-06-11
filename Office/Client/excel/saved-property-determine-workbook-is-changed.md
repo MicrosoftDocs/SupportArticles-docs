@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Save\VersionHistory
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Excel

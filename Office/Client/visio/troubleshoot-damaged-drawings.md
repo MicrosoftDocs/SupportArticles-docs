@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Reliability
   - CSSTroubleshoot
 ms.author: luche
 ms.reviewer: v-dahedm

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Open
   - CSSTroubleshoot
 search.appverid: 
   - MET150

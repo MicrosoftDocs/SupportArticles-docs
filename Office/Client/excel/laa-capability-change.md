@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Reliability
   - CSSTroubleshoot
 ms.reviewer: lauraho, ammert
 search.appverid: 

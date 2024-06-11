@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - Open\DataRefresh
   - sap:office-experts
   - CSSTroubleshoot
 ms.topic: troubleshooting

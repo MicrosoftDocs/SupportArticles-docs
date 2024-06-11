@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
+  - Open\MenuOrTabs
   - CSSTroubleshoot
 audience: ITPro
 ms.topic: troubleshooting

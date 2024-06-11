@@ -9,6 +9,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - Open\Links
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche

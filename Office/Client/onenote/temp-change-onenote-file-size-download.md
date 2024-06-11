@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - OneNote
 ms.custom: 
+  - Open\Attachments
   - CI 115970
   - CSSTroubleshoot
 ms.reviewer: morales
