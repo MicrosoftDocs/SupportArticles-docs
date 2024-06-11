@@ -15,7 +15,7 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 
 | Cumulative update name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|--------------|-------------------|------------|----------------|------------------------------------|--------------------|
-| CU27 (Latest) | 15.0.4375.3  | 2019.150.4375.1   | 15.0.35.45 | 2018.150.35.45 | [KB5037331](cumulativeupdate27.md) | June 13, 2024      |
+| CU27 (Latest) | 15.0.4375.3  | 2019.150.4375.3   | 15.0.35.45 | 2018.150.35.45 | [KB5037331](cumulativeupdate27.md) | June 13, 2024      |
 | CU26          | 15.0.4365.2  | 2019.150.4365.2   | 15.0.35.45 | 2018.150.35.45 | [KB5035123](cumulativeupdate26.md) | April 11, 2024     |
 | CU25          | 15.0.4355.3  | 2019.150.4355.3   | 15.0.35.45 | 2018.150.35.45 | [KB5033688](cumulativeupdate25.md) | February 15, 2024  |
 | CU24          | 15.0.4345.5  | 2019.150.4345.5   | 15.0.35.41 | 2018.150.35.41 | [KB5031908](cumulativeupdate24.md) | December 14, 2023  |
