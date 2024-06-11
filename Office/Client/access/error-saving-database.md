@@ -1,6 +1,6 @@
 ---
 title: Unable to save a database as an accde or mde file
-description: There is an error in the VBA code that prevents you from compiling a database or project or there is a reference.
+description: There's an error in the VBA code that prevents you from compiling a database or project or there's a reference.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -24,7 +24,7 @@ ms.date: 06/06/2024
 ---
 # "Unable to create an MDE, ACCDE, or ADE database" error with a database that you can't compile
 
-This article fixes an issue in the VBA code that prevents you from compiling a database or project or there is a reference.
+This article fixes an issue in the VBA code that prevents you from compiling a database or project or there's a reference.
 
 _Original KB number:_ &nbsp; 283788
 
@@ -37,7 +37,7 @@ When you try to save a Microsoft Access database as an ACCDE or MDE file, you ma
 
 > Microsoft Access was unable to create the .accde, .mde, or .ade file.
 
-When you try to save a Microsoft Access database as a MDE file, you may receive the following error message and the MDE file isn't created.
+When you try to save a Microsoft Access database as an MDE file, you may receive the following error message and the MDE file isn't created.
 
 > Microsoft Access was unable to create an MDE database.
 

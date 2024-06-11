@@ -24,13 +24,13 @@ _Original KB number:_ &nbsp; 125056
 
 There are many situations in which precision, rounding, and accuracy in floating-point calculations can work to generate results that are surprising to the programmer. They should follow the four general rules:
 
-1. In a calculation involving both single and double precision, the result will not usually be any more accurate than single precision. If double precision is required, be certain all terms in the calculation, including constants, are specified in double precision.
+1. In a calculation involving both single and double precision, the result won't usually be any more accurate than single precision. If double precision is required, be certain all terms in the calculation, including constants, are specified in double precision.
 
 2. Never assume that a simple numeric value is accurately represented in the computer. Most floating-point values can't be precisely represented as a finite binary value. For example, `.1` is `.0001100110011...` in binary (it repeats forever), so it can't be represented with complete accuracy on a computer using binary arithmetic, which includes all PCs.
 
 3. Never assume that the result is accurate to the last decimal place. There are always small differences between the "true" answer and what can be calculated with the finite precision of any floating point processing unit.
 
-4. Never compare two floating-point values to see if they are equal or not- equal. This is a corollary to rule 3. There are almost always going to be small differences between numbers that "should" be equal. Instead, always check to see if the numbers are nearly equal. In other words, check to see if the difference between them is small or insignificant.
+4. Never compare two floating-point values to see if they're equal or not- equal. This is a corollary to rule 3. There are almost always going to be small differences between numbers that "should" be equal. Instead, always check to see if the numbers are nearly equal. In other words, check to see if the difference between them is small or insignificant.
 
 ## More Information
 
@@ -41,7 +41,7 @@ In general, the rules described above apply to all languages, including C, C++, 
 The first sample demonstrates two things:
 
 - That FORTRAN constants are single precision by default (C constants are double precision by default).
-- Calculations that contain any single precision terms are not much more accurate than calculations in which all terms are single precision.
+- Calculations that contain any single precision terms aren't much more accurate than calculations in which all terms are single precision.
 
 After being initialized with 1.1 (a single precision constant), y is as inaccurate as a single precision variable.
 
@@ -74,7 +74,7 @@ C Compile options: none
 
 ### Sample 2
 
-Sample 2 uses the quadratic equation. It demonstrates that even double precision calculations are not perfect, and that the result of a calculation should be tested before it is depended on if small errors can have drastic results. The input to the square root function in sample 2 is only slightly negative, but it is still invalid. If the double precision calculations did not have slight errors, the result would be:
+Sample 2 uses the quadratic equation. It demonstrates that even double precision calculations aren't perfect, and that the result of a calculation should be tested before it's depended on if small errors can have drastic results. The input to the square root function in sample 2 is only slightly negative, but it's still invalid. If the double precision calculations didn't have slight errors, the result would be:
 
 ```console
 Root =   -1.1500000000
@@ -103,9 +103,9 @@ C Compile options: none
 
 ### Sample 3
 
-Sample 3 demonstrates that due to optimizations that occur even if optimization is not turned on, values may temporarily retain a higher precision than expected, and that it is unwise to test two floating- point values for equality.
+Sample 3 demonstrates that due to optimizations that occur even if optimization is not turned on, values may temporarily retain a higher precision than expected, and that it's unwise to test two floating- point values for equality.
 
-In this example, two values are both equal and not equal. At the first IF, the value of Z is still on the coprocessor's stack and has the same precision as Y. Therefore X does not equal Y and the first message is printed out. At the time of the second IF, Z had to be loaded from memory and therefore had the same precision and value as X, and the second message also is printed.
+In this example, two values are both equal and not equal. At the first IF, the value of Z is still on the coprocessor's stack and has the same precision as Y. Therefore X doesn't equal Y and the first message is printed out. At the time of the second IF, Z had to be loaded from memory and therefore had the same precision and value as X, and the second message also is printed.
 
 #### Sample code
 
@@ -135,7 +135,7 @@ y   = 1.00000000000000000  (exactly 1.0)
 x-y =  .00000000000000022  (smallest possible difference)
 ```
 
-Some versions of FORTRAN round the numbers when displaying them so that the inherent numerical imprecision is not so obvious. This is why x and y look the same when displayed.
+Some versions of FORTRAN round the numbers when displaying them so that the inherent numerical imprecision isn't so obvious. This is why x and y look the same when displayed.
 
 The second part of sample code 4 calculates the smallest possible difference between two numbers close to 10.0. Again, it does this by adding a single bit to the binary representation of 10.0. Notice that the difference between numbers near 10 is larger than the difference near 1. This demonstrates the general principle that the larger the absolute value of a number, the less precisely it can be stored in a given number of bits.
 

@@ -1,6 +1,6 @@
 ---
 title: Cannot update. Database or object is read-only.
-description: Discusses that you receive a Cannot update. Database or object is read-only error message if the underlying list includes lookup fields that are not linked to Access. Provides a workaround.
+description: Discusses that you receive a Cannot update. Database or object is read-only error message if the underlying list includes lookup fields that aren't linked to Access. Provides a workaround.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -26,9 +26,9 @@ ms.date: 06/06/2024
 
 Consider the following scenario:
 
-- You are working in Microsoft Access.
+- You're working in Microsoft Access.
 - You execute update queries against a linked Microsoft SharePoint view.
-- The underlying list that you are updating includes lookup fields that are not linked to Access because they are not included in the current view.
+- The underlying list that you're updating includes lookup fields that aren't linked to Access because they aren't included in the current view.
 
 In this scenario, you receive the following error message:
 
@@ -36,7 +36,7 @@ In this scenario, you receive the following error message:
 
 ## Cause
 
-This problem occurs when you use the ImportSharePointList macro action (as of Access 2016, previously known as TransferSharePointList) to link to a view of a SharePoint list in Access. This macro creates linked tables in Access for each lookup column in the SharePoint view. However, when the update query runs, it first checks that all lookup columns have linked tables in the database for the underlying list. The update query does not check exclusively for the lookups that are part of the current query.
+This problem occurs when you use the ImportSharePointList macro action (as of Access 2016, previously known as TransferSharePointList) to link to a view of a SharePoint list in Access. This macro creates linked tables in Access for each lookup column in the SharePoint view. However, when the update query runs, it first checks that all lookup columns have linked tables in the database for the underlying list. The update query doesn't check exclusively for the lookups that are part of the current query.
 
 ## Workaround
 

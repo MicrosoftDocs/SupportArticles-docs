@@ -28,4 +28,4 @@ FRx is trying to access the specification set and system databases using an unre
 
 ## Resolution
 
-Register the file msadox.dll located in the C:\Program Files\Common Files\System\ado folder. For information on registering dlls, please see [How to register a .dll file](https://support.microsoft.com/help/844592/how-to-register-a-dll-file).
+Register the file msadox.dll located in the C:\Program Files\Common Files\System\ado folder. For information on registering dlls, see [How to register a .dll file](https://support.microsoft.com/help/844592/how-to-register-a-dll-file).

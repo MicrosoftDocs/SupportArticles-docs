@@ -39,11 +39,11 @@ This article describes some common causes for this error message and offers meth
 
 This behavior can occur if any of the following conditions are true:
 
-- Data Access Objects (DAO) is not properly registered.
+- Data Access Objects (DAO) isn't properly registered.
 - One or more references are missing.
-- There is a utility database reference that is not valid.
-- You do not have the required permissions for required libraries.
-- There is a damaged wizard file.
+- There's a utility database reference that isn't valid.
+- You don't have the required permissions for required libraries.
+- There's a damaged wizard file.
 
 ## Resolution  
 
@@ -65,16 +65,16 @@ Check for missing references. To this, follow these steps:
 
 Alternatively, you can click the Browse button in the References dialog box to browse to the location of the library file associated with the missing reference.  
 
-### Cause 3: There is a utility database reference that is not valid
+### Cause 3: There's a utility database reference that isn't valid
 
-As of the release of Microsoft Access 2000, a reference to Utility is not required. If you converted a database from a previous version, you may still see a reference to Utility in your list of references. Uncheck any references to Utility or Utility.mda. To do this, follow these steps:
+As of the release of Microsoft Access 2000, a reference to Utility isn't required. If you converted a database from a previous version, you may still see a reference to Utility in your list of references. Uncheck any references to Utility or Utility.mda. To do this, follow these steps:
 
 1. Open the database for which you receive the error message.
 2. Press ALT+F11 to open the Visual Basic Editor.
 3. In the Visual Basic Editor, click References on the Tools menu.
 4. Click to clear the check box next to any reference to Utility Database or Utility.mda.  
 
-### Cause 4: You do not have the required permissions for required libraries 
+### Cause 4: You don't have the required permissions for required libraries 
 
 All Microsoft Access users must have permissions to Windows System folders.
 
@@ -85,9 +85,9 @@ All Microsoft Access users must have permissions to Windows System folders.
    |32 bit or (x86)|\Windows\System32|
    |64 bit or (x64)|\Windows\SysWOW64|
 
-- If you cannot grant read permissions, you can use a utility such as Process Monitor to determine which file or files the users do not have the required permissions to use. To obtain Process Monitor, visit the following Sysinternals Web site: [Sysinternals](https://technet.microsoft.com/sysinternals/default.aspx).
+- If you can't grant read permissions, you can use a utility such as Process Monitor to determine which file or files the users don't have the required permissions to use. To obtain Process Monitor, visit the following Sysinternals Web site: [Sysinternals](https://technet.microsoft.com/sysinternals/default.aspx).
   
-### Cause 5: There is a damaged wizard file
+### Cause 5: There's a damaged wizard file
 
 To repair damaged wizard files, follow these steps:
 

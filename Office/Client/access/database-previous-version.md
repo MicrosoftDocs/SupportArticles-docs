@@ -29,11 +29,11 @@ This issue occurs when you try to use Access 2013 or later version of Microsoft 
 4. Exit Access 2003.    
 5. Open the database in Access 2013 or later version of Access.    
 6. On the File tab, click Save As, select Access Database (*.accdb), and then click Save As.   
-7. In the Save Asdialog box, click Save.   
+7. In the Save As dialog box, click Save.   
 
 ## Cause
 
-This issue occurs because recent versions of Access cannot convert Access 97 files. 
+This issue occurs because recent versions of Access can't convert Access 97 files. 
 
 ## More Information
 

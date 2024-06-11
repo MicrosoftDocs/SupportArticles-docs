@@ -29,7 +29,7 @@ When you use either the Format or DatePart function to determine the week number
 - `Format(AnyDate, "ww", vbMonday, vbFirstFourDays)`
 - `DatePart("ww", AnyDate, vbMonday, vbFirstFourDays)`
 
-the last Monday in some calendar years is returned as week 53 when it should be week 1.
+The last Monday in some calendar years is returned as week 53 when it should be week 1.
 
 ## Cause
 
@@ -52,9 +52,9 @@ ISO 8601 : 1988 (E) paragraph 3.17:
 This can be implemented by applying these rules for Calendar weeks:
 
 - A year is divided into either 52 or 53 calendar weeks.
-- A calendar week has 7 days. Monday is day 1, Sunday is day 7.
-- The first calendar week of a year is the one containing at least 4 days.
-- If a year is not concluded on a Sunday, either its 1-3 last days belong to next year's first calendar week or the first 1-3 days of next year belong to the present year's last calendar week.
+- A calendar week has seven days. Monday is day 1 and Sunday is day 7.
+- The first calendar week of a year is the one containing at least four days.
+- If a year isn't concluded on a Sunday, either its 1-3 last days belong to next year's first calendar week or the first 1-3 days of next year belong to the present year's last calendar week.
 - Only a year starting or concluding on a Thursday has 53 calendar weeks.
 
 In Visual Basic and Visual Basic for Applications, all date functionality, except for the DateSerial function, comes from calls to the Oleaut32.dll file. Because both the Format() and DatePart() functions can return the calendar week number for a given date, both are affected by this bug. To avoid this problem, you must use the alternative code that this article provides.
@@ -125,7 +125,7 @@ In Visual Basic and Visual Basic for Applications, all date functionality, excep
    Date: 12/31/03   Day: Wed   Week: 1
    ```
 
-   With this format, all weeks start with Monday, so that 12/29/2003 should be considered the start of Week 1 and not part of Week 53.
+   With this format, all weeks start with Monday, so that December 29, 2003 should be considered the start of Week 1 and not part of Week 53.
 
 6. Type **?Test2** in the Immediate window and hit Enter to see a list of dates in the specified range that experience this problem. The list includes the date, Week day (always Monday), the Week # returned by Format (53), and the Week number it should return (1.) For example:
 
@@ -141,7 +141,7 @@ In Visual Basic and Visual Basic for Applications, all date functionality, excep
 
 ### Workarounds
 
-If you use the Format or DatePart functions, you need to check the return value. When it is 53, run another check and force a return of 1, if necessary. This code sample demonstrates one way to do this:
+If you use the Format or DatePart functions, you need to check the return value. When it's 53, run another check and force a return of 1, if necessary. This code sample demonstrates one way to do this:
 
 ```vb
 Function WOY (MyDate As Date) As Integer   ' Week Of Year
@@ -228,4 +228,4 @@ You can avoid using these functions to determine Week number by writing code tha
    Date: 12/31/03   Day: Wed   Week: 1
    ```
 
-   Note that Monday is considered to be Week 1 as it should be.
+   Monday is considered to be Week 1 as it should be.
