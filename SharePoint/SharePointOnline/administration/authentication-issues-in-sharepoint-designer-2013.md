@@ -8,12 +8,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-  - sap:Teams Identity and Auth\Client Sign-in (window, mac, linux, web)
+  - sap:Sites\Other
   - CSSTroubleshoot
   - CI 191383
 ms.reviewer: salarson, prbalusu, meerak
 appliesto: 
-  - New Microsoft Teams
+  - SharePoint Online
 search.appverid: 
   - MET150
 ms.date: 06/11/2024
