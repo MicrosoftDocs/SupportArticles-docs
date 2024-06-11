@@ -1,7 +1,7 @@
 ---
 title: Orphaned child domain controller isn't replicated
 description: Describes an issue in which an orphaned child domain controller can't replicate information to other domain controllers in a domain, and provides a resolution.
-ms.date: 12/26/2023
+ms.date: 06/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -21,9 +21,9 @@ _Original KB number:_ &nbsp; 887430
 A Microsoft Windows Server-based child domain is orphaned from the rest of the forest. This child domain can receive changes that are replicated by domain controllers in the parent (root) domain, but no domain controllers in the root domain or any other child domains have knowledge of the domain controllers in the affected child domain.
 
 When an administrator tries to view the domain controllers in the orphaned child domain from another domain, no domain controllers are displayed. For example, no domain controllers are displayed in the following configuration naming context:  
-CN=Servers,CN=<**Site_Name>**,CN=Sites,CN=Configuration,DC=<**Domain_Name>**,DC=com
+CN=Servers,CN=**\<Site_Name\>**,CN=Sites,CN=Configuration,DC=**\<Domain_Name\>**,DC=com
 
-In this case, **Site_Name** is the site where the orphaned domain controller reside, and **Domain_Name** is the name of the forest root domain.
+In this case, **\<Site_Name\>** is the site where the orphaned domain controller reside, and **\<Domain_Name\>** is the name of the forest root domain.
 
 ## Cause
 
