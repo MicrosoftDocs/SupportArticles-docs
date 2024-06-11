@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Excel 2010
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Blank pages are unexpectedly printed in Excel
@@ -30,7 +30,7 @@ In Microsoft Excel, when you print a worksheet, pages that are completely blank 
 
 This behavior can occur under any of the following conditions:
 
-- The only data on a page is in cells that are formatted in such a way that they are blank.
+- The only data on a page is in cells that are formatted in such a way that they're blank.
 
   Cells that are formatted to appear blank include those with white fonts, zeroes-as-blanks settings, three semicolons (see Example 1 in the "More Information" section), and so forth.   
 - A cell on the page contains an error, and errors have been selected to print as blank.   
@@ -67,7 +67,7 @@ The following steps must be completed for both of the following examples:
 
    **Note** In Excel 2007, click **Format** in the **Cells** group on the **Home** tab, and then click **Format Cells**.   
 4. On the Number tab, under Category, click Custom.   
-5. In the Type box, delete the selection (press the BACKSPACE key to erase the selection), and then type ;;; (three semicolons).   
+5. In the Type box, delete the selection (press the BACKSPACE key to erase the selection), and then type `;;;` (three semicolons).   
 6. Click OK.
 
    Cell M85 is hidden.   
@@ -90,4 +90,4 @@ The following steps must be completed for both of the following examples:
 3. On the Sheet tab, under Print, in the **Cell error as** drop-down box, click **\<blank>**.   
 4. Click Print Preview.
 
-   Notice that not only does page 1 contain data, but it is followed by three blank pages.   
+   Notice that not only does page 1 contain data, but it's followed by three blank pages.

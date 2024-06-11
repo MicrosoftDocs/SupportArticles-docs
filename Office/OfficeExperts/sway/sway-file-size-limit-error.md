@@ -15,7 +15,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Sway
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # File size limit error when you upload files to Sway
