@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Word
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Printing
   - CI 122387
   - CSSTroubleshoot
