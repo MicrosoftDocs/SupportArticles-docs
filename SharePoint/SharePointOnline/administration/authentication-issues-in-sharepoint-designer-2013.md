@@ -35,7 +35,7 @@ When you try to sign in to SharePoint Designer 2013, one of the following issues
 
 ## Cause
 
-These issues occur if you disabled the authentication method which uses the Identity Client Runtime Library (IDCRL) to use modern authentication instead.  Modern authentication uses the Azure Active Directory Authentication Library (ADAL) while SharePoint Designer 2013 natively uses the IDCRL for authentication. SharePoint Designer 2013 can't use modern authentication without meeting additional requirements.
+These issues occur if you disabled the authentication method which uses the Identity Client Runtime Library (IDCRL) to use modern authentication instead. Modern authentication uses the Azure Active Directory Authentication Library (ADAL) while SharePoint Designer 2013 natively uses the IDCRL for authentication. SharePoint Designer 2013 can't use modern authentication without meeting additional requirements.
 
 ## Resolution
 
