@@ -19,19 +19,19 @@ appliesto:
 ms.date: 06/06/2024
 ---
 
-# You are redirected to a logon page or an error page, or you are prompted for authentication information when you click a hyperlink to a SSO Web site in an Office document
+# You're redirected to a logon page or an error page, or you're prompted for authentication information when you click a hyperlink to an SSO Web site in an Office document
 
 ## Symptoms
 
 When you click a hyperlink in a Microsoft Office document, you may experience the following behavior before you can open the page that you requested:
 
-- You are redirected to a logon page or an error page
-- You are prompted for authentication information.
+- You're redirected to a logon page or an error page
+- You're prompted for authentication information.
 
 Typically, this behavior occurs when the following conditions are true:
 
 - You open the Office document in edit mode outside the Web browser.
-- The Web site in the hyperlink uses a Single Sign-On (SSO) authentication system that relies on HTTP session cookies for client identification. Even if you have already provided user credentials, you are prompted to provide the user credentials again.
+- The Web site in the hyperlink uses a single sign-on (SSO) authentication system that relies on HTTP session cookies for client identification. Even if you have already provided user credentials, you are prompted to provide the user credentials again.
 
 ## Cause
 
@@ -39,7 +39,7 @@ Office lets you edit and author documents on a Web site if the server supports W
 
 When Office sends the Web page request, you may be redirected to the Web site logon page for the SSO system. This behavior occurs because the Office session is independent of the Web browser session in which you may have already provided user credentials.
 
-Because the sessions are independent, session cookies are not shared. If the SSO system exclusively relies on session cookie information, the SSO system may not appear to work because the same user moves from more than one session. This behavior is a fundamental design limitation of an SSO system when the SSO system is not designed to support SSO authentication across more than one browser or Web-aware application on the client desktop. Because Office is a fully Web-aware application, the issue may appear unique to Office applications if they are the only Web-aware clients that are installed by the client. However, the root cause of this issue is not limited to Microsoft Office, and this problem may occur when you use third-party software.
+Because the sessions are independent, session cookies aren't shared. If the SSO system exclusively relies on session cookie information, the SSO system may not appear to work because the same user moves from more than one session. This behavior is a fundamental design limitation of an SSO system when the SSO system isn't designed to support SSO authentication across more than one browser or Web-aware application on the client desktop. Because Office is a fully Web-aware application, the issue may appear unique to Office applications if they're the only Web-aware clients that are installed by the client. However, the root cause of this issue isn't limited to Microsoft Office, and this problem may occur when you use third-party software.
 
 ## Workaround
 
@@ -49,7 +49,7 @@ The problem is a limitation of the SSO system that is used by the Web server. Ho
 
 If this issue occurs when hyperlinks on a Web page open an Office file and the Web page is hosted in Internet Explorer, you can avoid this issue by explicitly marking the content as a read-only download instead of as an inline navigation.
 
-To do this, add a custom HTTP header to the GET response for the Office file contents. Add the "Content-Disposition: Attachment" header. When a GET response contains this header, Internet Explorer prompts the user to open or save the download. If the user chooses to open the download, the file opens from the Internet Explorer Temporary File cache read-only. The user may choose to modify and save the file locally. However, the user will not be able to save the file to the server or collaborate with Web services for the Web site. Therefore, this solution only works if you intend to make the file read-only.
+To do this, add a custom HTTP header to the GET response for the Office file contents. Add the "Content-Disposition: Attachment" header. When a GET response contains this header, Internet Explorer prompts the user to open or save the download. If the user chooses to open the download, the file opens from the Internet Explorer Temporary File cache read-only. The user may choose to modify and save the file locally. However, the user won't be able to save the file to the server or collaborate with Web services for the Web site. Therefore, this solution only works if you intend to make the file read-only.
 
 You can set the "Content-Disposition" header by using code in Microsoft Active Server Pages (ASP), in Microsoft ASP.NET, or in ISAPI when you work with dynamically generated content. If the content is static, you can configure the header for a given file or folder by using IIS Manager and the IIS metabase. For more information about the Content-Disposition HTTP header, see [How to raise a File Download dialog box for a known MIME type](/troubleshoot/browsers/raise-file-download-for-mime-types).
 

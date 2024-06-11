@@ -31,7 +31,7 @@ This issue occurs because PowerPoint, Excel, and Word perform a basic compressio
 
 ## Resolution
 
-It is not possible to recover pictures that have already been compressed.
+It isn't possible to recover pictures that have already been compressed.
 For future saves, compression can be disabled on a per-file basis using the following steps:
 
 1. Click the **Office** Button, and then click **Save As**. 
@@ -41,7 +41,7 @@ For future saves, compression can be disabled on a per-file basis using the foll
 5. Click **OK**. 
 6. In the **Compress Pictures** dialog box, click **Cancel**.
 
-   **Note**:  Clicking OK on this dialog will not prevent the issue from occurring.
+   **Note**:  Clicking OK on this dialog won't prevent the issue from occurring.
 
 You can also modify the following registry setting to prevent basic compression from occurring by default.
 

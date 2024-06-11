@@ -36,7 +36,7 @@ For more information about the security issue, see [CVE-2017-11882 | Microsoft O
 
 ## Resolution
 
-While the new equation editor will not edit existing equations that were created by Equation Editor 3.0, it allows you to insert new equations, common equations, or ink equations written by hand. The equation function can be found in Word, Excel, or PowerPoint under the **Insert** tab.
+While the new equation editor won't edit existing equations that were created by Equation Editor 3.0, it allows you to insert new equations, common equations, or ink equations written by hand. The equation function can be found in Word, Excel, or PowerPoint under the **Insert** tab.
 
 For more information about inserting and editing equations, including a short video tutorial, see [Write an equation or formula](https://support.office.com/article/Write-insert-or-change-an-equation-1D01CABC-CEB1-458D-BC70-7F9737722702#ID0EACAAA=Insert_built-in_equation).
 
@@ -46,4 +46,4 @@ Alternatively, the third-party app MathType enables you to edit Equation Editor 
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.
 
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information
+Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information

@@ -46,7 +46,7 @@ ActiveX component can't create object
 
 If multiple instances of Microsoft Excel are running, GetObject attaches to the instance that is launched first. If you then close the first instance, another call to GetObject attaches to the second instance that was launched, and so forth.
 
-You can attach to a specific instance if you know the name of an open document in that instance. For example, if an instance of Excel is running with an open workbook named Book2, the following code attaches successfully to that instance even if it is not the earliest instance that was launched: 
+You can attach to a specific instance if you know the name of an open document in that instance. For example, if an instance of Excel is running with an open workbook named Book2, the following code attaches successfully to that instance even if it isn't the earliest instance that was launched: 
 
 ```vb
 Set xlApp = GetObject("Book2").Application
@@ -60,9 +60,9 @@ CreateObject is used to start a new instance of an Automation server. For exampl
 set xlApp = CreateObject("Excel.Application")
 ```
  
-Depending on whether the server is designed as SingleUse or MultiUse, another server process may or may not be launched. This might be an important distinction for deciding whether you should forcibly shut down an Automation instance. For example, with a MultiUse server, if an instance is already running before you attach to it, then you might want to avoid shutting down the server programmatically when you are done automating it.
+Depending on whether the server is designed as SingleUse or MultiUse, another server process may or may not be launched. This might be an important distinction for deciding whether you should forcibly shut down an Automation instance. For example, with a MultiUse server, if an instance is already running before you attach to it, then you might want to avoid shutting down the server programmatically when you're done automating it.
 
-The following table serves as a helpful reference when implementing a solution with Microsoft Office. It lists behaviors and attributes of the various versions and applications of Microsoft Office, such as whether the server defaults to being visible when launched, if it is SingleUse or MultiUse, if it has a UserControl property, if it has a Quit method, and the class name for its main window.
+The following table serves as a helpful reference when implementing a solution with Microsoft Office. It lists behaviors and attributes of the various versions and applications of Microsoft Office, such as whether the server defaults to being visible when launched, if it's SingleUse or MultiUse, if it has a UserControl property, if it has a Quit method, and the class name for its main window.
 
 |Application(s)|Visible|Instancing|Has UserControl|Has QuitClassName|Class name|
 |---|---|---|---|---|----|
@@ -77,10 +77,10 @@ The following table serves as a helpful reference when implementing a solution w
 |Access 2000, 2002, 2003, 2007|No|SingleUse|Yes|Yes|OMain|
 |Project 98, 2000|No|MultiUse|Yes|Yes|JWinproj-WhimperMainClass|
 
-The main window class name is helpful for calling the FindWindow API when you want to find out conveniently if any instance is already running. The UserControl property is a boolean property that indicates whether the server application automatically shuts down when its last reference is released (set to nothing). The Quit method allows you to override the UserControl property in cases where it is necessary (such as when an instance does not shut down after the last reference is released).
+The main window class name is helpful for calling the FindWindow API when you want to find out conveniently if any instance is already running. The UserControl property is a boolean property that indicates whether the server application automatically shuts down when its last reference is released (set to nothing). The Quit method allows you to override the UserControl property in cases where it's necessary (such as when an instance doesn't shut down after the last reference is released).
 
-In general, Microsoft recommends that you use a new instance of an Office application instead of attaching to an instance that the user may be using. It is best create an instance by using the Application ProgID, and then open or create new objects from there. Other ProgIDs, such as Excel.Sheet and Word.Document, and so forth, are intended for use in OLE (Object linking and Embedding) and may give inconsistent results when used with CreateObject. By using the Application ProgID, you avoid potential issues by explicitly starting the server for Automation (not Embedding).
+In general, Microsoft recommends that you use a new instance of an Office application instead of attaching to an instance that the user may be using. It's best create an instance by using the Application ProgID, and then open or create new objects from there. Other ProgIDs, such as Excel.Sheet and Word.Document, and so forth, are intended for use in OLE (Object linking and Embedding) and may give inconsistent results when used with CreateObject. By using the Application ProgID, you avoid potential issues by explicitly starting the server for Automation (not Embedding).
 
-When you are finished with the Automation server, release all your references to it and call its Quit method (if available) so that the server shuts down as expected. If you want to configure an instance through Automation and then leave it open for the user to use, you need to set the UserControl property to TRUE and then release all your references. The server then stays running (because the UserControl property is TRUE) and shuts down appropriately when the user closes the application (because there are no outstanding references). 
+When you're finished with the Automation server, release all your references to it and call its Quit method (if available) so that the server shuts down as expected. If you want to configure an instance through Automation and then leave it open for the user to use, you need to set the UserControl property to TRUE and then release all your references. The server then stays running (because the UserControl property is TRUE) and shuts down appropriately when the user closes the application (because there are no outstanding references). 
 
-**Note** For Word, the UserControl property is read-only. It cannot be set to True or False. Word always remains running when the last reference is released.
+**Note** For Word, the UserControl property is read-only. It can't be set to True or False. Word always remains running when the last reference is released.

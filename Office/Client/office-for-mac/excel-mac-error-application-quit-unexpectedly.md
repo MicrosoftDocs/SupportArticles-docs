@@ -114,7 +114,7 @@ You can use the Repair Disk Permissions feature to troubleshoot permissions prob
 4. Open the *Preferences* folder.
 5. Select **View**, and then select **Arrange by Name**.
 6. Look for a file that is named *Com.microsoft.Excel.plist*.
-7. Locate the file, move it to the desktop. If you cannot locate the file, the program is using the default preferences.
+7. Locate the file, move it to the desktop. If you can't locate the file, the program is using the default preferences.
 8. If you located the file and moved it to the desktop, start Microsoft Excel, and then check whether the problem still occurs. If the problem still occurs, quit Excel, and then restore the file to its original location. Then, go to the next step. If the problem seems to be resolved, you can move the *Com.microsoft.Excel.plist* file to the trash.
 9. Quit all Microsoft Office for Mac programs.
 10. On the **Go** menu, select **Home**.
@@ -125,7 +125,7 @@ You can use the Repair Disk Permissions feature to troubleshoot permissions prob
 12. Open the *Preferences* folder.
 13. Open the *Microsoft* folder.
 14. Look for a file that is named *Com.microsoft.Excel.prefs.plist*.
-15. If you located the file, move it to the desktop. If you do not locate the file, the program is using the default preferences.
+15. If you located the file, move it to the desktop. If you don't locate the file, the program is using the default preferences.
 16. If you located the file and moved it to the desktop, start Excel, and check whether the problem still occurs. If the problem still occurs, quit Excel, and restore the file to its original location. Then, go to the next step. If the problem seems to be resolved, you can move the *Com.microsoft.Excel.prefs.plist* file to the trash.
 17. Close all Microsoft Office applications.
 18. On the **Go** menu, select **Home**.
@@ -137,7 +137,7 @@ You can use the Repair Disk Permissions feature to troubleshoot permissions prob
 21. Open the *Microsoft* Folder.
 22. Open the *Office 2011* folder.
 23. Look for a file that is named *Excel Toolbars (12)* or *Microsoft Excel Toolbars*.
-24. If you located the file, move it to the desktop. If you do not locate the file, the program is using the default preferences.
+24. If you located the file, move it to the desktop. If you don't locate the file, the program is using the default preferences.
 25. If you located the file and moved it to the desktop, start Excel, and then check whether the problem still occurs. If the problem still occurs, quit Excel, and restore the file to its original location. Then, go to the next step. If the problem seems to be resolved, you can move the toolbars file to the trash. If the problem continues to occur, go to the next step.
 
 #### Step 3: Perform a clean restart
