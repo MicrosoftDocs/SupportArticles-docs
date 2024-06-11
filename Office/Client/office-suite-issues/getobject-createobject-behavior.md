@@ -14,7 +14,7 @@ ms.author: luche
 ms.reviewer: rtaylor
 appliesto: 
   - Microsoft Office
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # GetObject and CreateObject behavior of Office automation servers
@@ -82,4 +82,3 @@ In general, Microsoft recommends that you use a new instance of an Office applic
 When you are finished with the Automation server, release all your references to it and call its Quit method (if available) so that the server shuts down as expected. If you want to configure an instance through Automation and then leave it open for the user to use, you need to set the UserControl property to TRUE and then release all your references. The server then stays running (because the UserControl property is TRUE) and shuts down appropriately when the user closes the application (because there are no outstanding references). 
 
 **Note** For Word, the UserControl property is read-only. It cannot be set to True or False. Word always remains running when the last reference is released.
-

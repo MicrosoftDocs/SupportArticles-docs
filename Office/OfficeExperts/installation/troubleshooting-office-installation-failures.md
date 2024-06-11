@@ -15,7 +15,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Office
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Troubleshooting Office installation failures

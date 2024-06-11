@@ -14,7 +14,7 @@ ms.author: luche
 ms.reviewer: lauraho
 appliesto: 
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Cannot modify the oData connections in an Excel 2013 PowerPivot workbook
@@ -39,4 +39,4 @@ To work around this issue, follow these steps:
 2. You click **Home**, click **Get External Data**, and then click **Existing Connections**.   
 3. You select the connection, and then select **Edit**.   
 4. You change the Data Feed Url or click **Advanced**, and then edit it.   
-5. You save the changes and then refresh the workbook.   
+5. You save the changes and then refresh the workbook.

@@ -14,7 +14,7 @@ ms.author: luche
 appliesto: 
   - Access for Microsoft 365
   - Access 2019
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Access ADODB code errors when you use the adBigInt data type

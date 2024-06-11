@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Office Online Server
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Mobile viewing PDF files with Office Web Apps

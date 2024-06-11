@@ -13,7 +13,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: denniwil
-ms.date: 07/05/2023
+ms.date: 06/06/2024
 ---
 
 # The digital signature in Access is tampered with or invalidated

@@ -13,7 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Description of the numbering scheme for product code GUIDs in Office 2016
