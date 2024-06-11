@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Save
   - CSSTroubleshoot
 ms.author: luche

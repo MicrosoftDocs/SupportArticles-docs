@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
   - Open
   - CSSTroubleshoot
 ms.topic: troubleshooting
@@ -54,6 +55,6 @@ To work around this issue, click **OK** to dismiss the error message, and then a
 
 ## Status 
 
-This is a known issue. We're working to address this issue and will post more information in this article when it becomes available.
+It's a known issue. We're working to address this issue and will post more information in this article when it becomes available.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

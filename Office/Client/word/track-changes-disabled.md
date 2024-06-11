@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Sharing\Collab
   - CSSTroubleshoot
 appliesto: 

@@ -1,11 +1,12 @@
 ---
 title: Can't access a SharePoint Online place in Office Mobile on iPhone or Office Mobile on Android
-description: Describes an issue in which you can't access a SharePoint Online place in Office Mobile because SharePoint Online license is not assigned.
+description: Describes an issue in which you can't access a SharePoint Online place in Office Mobile because SharePoint Online license isn't assigned.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
   - Open
   - CSSTroubleshoot
 appliesto: 
@@ -37,8 +38,8 @@ To fix this issue, follow these steps:
 
 ## More information
 
-This issue occurs because the user account isn't assigned a SharePoint Online license.
+This issue occurs because the user account isn't assigned a SharePoint license.
 
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+The non-Microsoft products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

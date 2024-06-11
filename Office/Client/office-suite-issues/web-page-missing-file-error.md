@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
   - Save
   - CSSTroubleshoot
 ms.author: luche
