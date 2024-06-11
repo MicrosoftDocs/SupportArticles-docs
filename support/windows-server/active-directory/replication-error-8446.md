@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot AD replication error 8446
 description: Describes the symptoms, cause, and resolution steps for issues when Active Directory replication fails with error 8446.
-ms.date: 06/06/2024
+ms.date: 06/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, raviks, justintu, itaysarig
+ms.reviewer: kaushika, raviks, justintu, itaysarig, herbertm
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Troubleshooting AD Replication error 8446: The replication operation failed to allocate memory
