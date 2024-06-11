@@ -41,7 +41,7 @@ All of the worksheets that you selected have the same page setup attributes.
 
 ### Method 2: Use a macro
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.You can programmatically change the page setup attributes in the active workbook and in any other open workbook.
+Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but isn't limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you're familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.You can programmatically change the page setup attributes in the active workbook and in any other open workbook.
 > [!NOTE]
 > These macros use the Orientation property of the PageSetup object. You can modify other page setup attributes, by using other PageSetup properties, such as LeftMargin, RightMargin, and so on.
 

@@ -1,6 +1,6 @@
 ---
 title: Unable to start Excel for Mac
-description: Cannot start Excel for Mac with the error Excel has encountered a problem and needs to close.
+description: Can't start Excel for Mac with the error Excel has encountered a problem and needs to close.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -41,18 +41,18 @@ To resolve this issue, try the following methods, in order, until the issue is r
 
 **Step 1: Quit all programs**
 
-You must quit all programs before you continue. To quit an application, select the application on the toolbar (top), and then select **Quit**. If you cannot quit an application or do not know how, hold down the Command and Option keys, and then press Esc on your keyboard. Select the application in the "Force Quit Application" window, and then select **Force Quit**. Click **Force Quit** to quit the application.
+You must quit all programs before you continue. To quit an application, select the application on the toolbar (top), and then select **Quit**. If you can't quit an application or don't know how, hold down the Command and Option keys, and then press Esc on your keyboard. Select the application in the "Force Quit Application" window, and then select **Force Quit**. Click **Force Quit** to quit the application.
 
 > [!NOTE]
 > You cannot quit Finder.
 
-When you are finished, click the red button in the upper-left corner and go to step 2.
+When you're finished, click the red button in the upper-left corner and go to step 2.
 
 **Step 2: Remove your Excel preferences**
 
 1. Quit all Microsoft Office for Mac applications.
 2. On the **Go** menu, click **Home**.
-3. Open **Library**. **Note** The **Library** folder is hidden in Mac OS X Lion. To display this folder, hold down the OPTION key while you click the **Go** menu.
+3. Open **Library**. **Note** The **Library** folder is hidden in mac OS X Lion. To display this folder, hold down the OPTION key while you click the **Go** menu.
 4. Open **Preferences**.
 5. Drag *com.microsoft.Excel.plist* to the desktop. If you cannot locate the file, Excel is using the default preferences. Go to step 7.
 6. Open Excel, and check whether the problem still occurs. If the problem still occurs, quit Excel, restore the file to its original location, and go to the next step. If the problem is resolved, drag *com.microsoft.Excel.plist* to the **Trash**.
@@ -70,7 +70,7 @@ When you are finished, click the red button in the upper-left corner and go to s
 
 Use the "Repair Disk Permissions" option
 
-You can use the Repair Disk Permissions option to troubleshoot permissions problems in Mac OS X 10.2 or later versions. To use the **Repair Disk Permissions** option, follow these steps:
+You can use the Repair Disk Permissions option to troubleshoot permissions problems in mac OS X 10.2 or later versions. To use the **Repair Disk Permissions** option, follow these steps:
 
 1. On the **Go** menu, click **Utilities**.
 2. Start the Disk Utility program.

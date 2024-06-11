@@ -50,7 +50,7 @@ End Function
 
 ```
 2. Save and close the module.   
-3. Type MyID: NewCDec([CategoryID]) in the Field row of a query. Note that when you run this function, it returns a valid value for the MyID field.   
+3. Type MyID: NewCDec([CategoryID]) in the Field row of a query. When you run this function, it returns a valid value for the MyID field.   
 
 ## Status
 

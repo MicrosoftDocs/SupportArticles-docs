@@ -28,7 +28,7 @@ This article applies to a Microsoft Access database (.mdb) file or to a Microsof
 
 ## Symptoms
 
-In a Microsoft Access database, when you create a Memo field that includes an index or you create a field name that includes the automatically indexed text, you cannot enter the text that includes more than approximately 3450 characters into the field. When you try to enter more text into the field or try to edit the existing data, you receive the following error message:
+In a Microsoft Access database, when you create a Memo field that includes an index or you create a field name that includes the automatically indexed text, you can't enter the text that includes more than approximately 3,450 characters into the field. When you try to enter more text into the field or try to edit the existing data, you receive the following error message:
 
 ```adoc
 Run-time error '3709':
@@ -52,7 +52,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ## More information
 
-This behavior does not occur in versions of Microsoft Access before Microsoft Access 2000 because Memo fields could not be indexed in Jet 3.5 and earlier.
+This behavior doesn't occur in versions of Microsoft Access before Microsoft Access 2000 because Memo fields couldn't be indexed in Jet 3.5 and earlier.
 
 ### Steps to reproduce the behavior in Access 2003
 
