@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - OneNote
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Open\Attachments
   - CI 115970
   - CSSTroubleshoot
