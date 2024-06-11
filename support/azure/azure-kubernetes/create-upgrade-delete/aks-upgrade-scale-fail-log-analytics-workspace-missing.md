@@ -1,18 +1,18 @@
 ---
 title: Unable to get log analytics workspace info
 description: Provides solutions to an error that occurs when you upgrade or scale a Microsoft Azure Kubernetes Service cluster.
-ms.date: 02/20/2023
+ms.date: 06/11/2024
 ms.reviewer: chiragpa, cssakscic, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Failed to upgrade or scale Azure Kubernetes Service cluster due to missing Log Analytics workspace
 
-This article provides solutions to the "Unable to get log analytics workspace info" error that occurs when you upgrade or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article provides solutions to an "Unable to get log analytics workspace info" error that occurs when you upgrade or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
-When you start, upgrade, or scale an AKS cluster, you may see the following errors:
+When you start, upgrade, or scale an AKS cluster, you may see one of the following errors:
 
 > Failed to save container service '\<container service name>'.  
 > Error: Unable to get log analytics workspace info.  
