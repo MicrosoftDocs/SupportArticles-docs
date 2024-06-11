@@ -17,7 +17,7 @@ _Applies to:_&nbsp;Visual Studio
 When debugging, a [breakpoint](/visualstudio/debugger/using-breakpoints) has two possible visual states:
 
 - A solid red circle, if the debugger successfully set a breakpoint in the target process.
-- A hollow (white filled) circle, either the breakpoint is disabled or warning occurred when trying to set the breakpoint.
+- A hollow (dark grey or white filled, depending on your theme) circle, either the breakpoint is disabled or warning occurred when trying to set the breakpoint.
 
 To determine the difference, hover over the breakpoint and see if there's a warning. The following two sections describe prominent warnings and how to fix them.
 
