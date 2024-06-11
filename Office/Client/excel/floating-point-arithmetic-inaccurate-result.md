@@ -64,7 +64,7 @@ All computers have a maximum and a minimum number that can be handled. Because t
   Denormalized numbers are basically a workaround to allow numbers smaller than the normal lower limit to be stored. Microsoft doesn't implement this optional portion of the specification because denormalized numbers by their very nature have a variable number of significant digits. This can allow significant error to enter into calculations.
 
 - Positive/Negative Infinities: Infinities occur when you divide by 0. Excel doesn't support infinities, rather, it gives a #DIV/0! error in these cases.  
-- Not-a-Number (NaN): NaN is used to represent invalid operations (such as infinity/infinity, infinity-infinity, or the square root of -1). NaNs allow a program to continue past an invalid operation. Excel instead immediately generates an error such as #NUM! or #DIV/0!.
+- Not-a-Number (NaN): NaN is used to represent invalid operations (such as infinity/infinity, infinity-infinity, or the square root of -1). NaNs allow a program to continue past an invalid operation. Excel instead immediately generates an error such as `#NUM!` or `#DIV/0!`.
 
 ### Precision
 
@@ -184,7 +184,7 @@ Instead of displaying 0, Excel 95 displays -2.22044604925031E-16.
 
 Excel 97, however, introduced an optimization that attempts to correct for this problem. Should an addition or subtraction operation result in a value at or very close to zero, Excel 97 and later will compensate for any error introduced as a result of converting an operand to and from binary. The example above when performed in Excel 97 and later correctly displays 0 or 0.000000000000000E+00 in scientific notation.
 
-For more information about floating-point numbers and the IEEE 754 specification, please see the following World Wide Web sites:
+For more information about floating-point numbers and the IEEE 754 specification, see the following World Wide Web sites:
 
 - [https://www.ieee.org](https://www.ieee.org)
 - [https://steve.hollasch.net/cgindex/coding/ieeefloat.html](https://steve.hollasch.net/cgindex/coding/ieeefloat.html)
