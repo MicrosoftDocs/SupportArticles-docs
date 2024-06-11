@@ -15,7 +15,7 @@ search.appverid:
 appliesto: 
   - Excel 2013
   - Excel 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # The DSUM and DCOUNT functions in Excel do not work with PivotTables

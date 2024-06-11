@@ -18,7 +18,7 @@ appliesto:
   - Excel 2013
   - Excel 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # The first worksheet name in a new Excel workbook displays in a language other than the Office display language

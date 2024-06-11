@@ -14,7 +14,7 @@ search.appverid: MET150
 ms.reviewer: willfid
 author: simonxjx
 ms.author: v-six
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "We encountered a problem and couldn't complete the task" error message in Office Mobile on iPhone or Office Mobile on Android

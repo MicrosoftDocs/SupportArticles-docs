@@ -17,7 +17,7 @@ appliesto:
   - Excel 2010
   - Excel 2013
   - Excel 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Method to calculate interpolation step value in Excel

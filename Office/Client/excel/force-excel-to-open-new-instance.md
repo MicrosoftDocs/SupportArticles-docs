@@ -15,7 +15,7 @@ appliesto:
   - Excel for Microsoft 365
   - Excel 2016
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to force Excel to open in a new instance by default

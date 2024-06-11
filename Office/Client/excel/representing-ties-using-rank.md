@@ -13,7 +13,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Excel statistical functions: Representing ties by using RANK

@@ -14,7 +14,7 @@ ms.author: luche
 appliesto: 
   - Microsoft 365
   - Office 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Sorry, another account from your organization is already signed in on this computer" in Office 2013
