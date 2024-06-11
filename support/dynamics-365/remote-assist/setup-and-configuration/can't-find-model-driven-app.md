@@ -5,7 +5,7 @@ ms.author: davepinch
 author: davepinch
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
-ms.custom: bap-template
+ms.custom: sap:Dynamics 365 Remote Assist\Setup and configuration, bap-template
 ---
 # Can't find the Dynamics 365 Remote Assist model-driven app
 
