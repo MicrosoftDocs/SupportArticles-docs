@@ -16,7 +16,7 @@ ms.custom:
 appliesto: 
   - Office Online Server
   - Office Web Apps
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Office Online limitations and features with Information Rights Management (IRM)

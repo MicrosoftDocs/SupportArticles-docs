@@ -19,7 +19,7 @@ appliesto:
   - Access 2013
   - Access 2010
   - Access 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Too Many Fields Defined" error when you save a table in Access

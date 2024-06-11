@@ -13,7 +13,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft PowerPoint for Mac
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # PowerPoint stops responding (spinning wheel)

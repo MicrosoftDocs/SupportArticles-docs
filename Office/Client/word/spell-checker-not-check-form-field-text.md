@@ -17,7 +17,7 @@ appliesto:
   - Word 2016
   - Word 2013
   - Word 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Spell checker doesn't check text in the form fields in Word
