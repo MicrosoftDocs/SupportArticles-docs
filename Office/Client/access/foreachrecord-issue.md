@@ -34,16 +34,16 @@ When you run the ForEachRecord data macro in Microsoft Access, you receive the f
 
 After you click **OK**, you see that the **Macro Single Step** window displays the name of the problematic macro together with **Error Number: 2950**.
 
-Additionally, you cannot use an EditRecord macro or a CreateRecord macro in an inner loop of the ForEachRecord data macro.
+Additionally, you can't use an EditRecord macro or a CreateRecord macro in an inner loop of the ForEachRecord data macro.
 
 ## Cause
 
-This issue occurs because the EditRecord data macro action and the DeleteRecord data macro action are supported only when they are run on the following recordsets:
+This issue occurs because the EditRecord data macro action and the DeleteRecord data macro action are supported only when they're run on the following recordsets:
 
 - A parent recordset.
 - The outermost recordset that is of a parent/child relationship.
 
-This limitation is by design. This is because data macros are not nested as transactions, if a system failure occurs during a ForEachRecord loop, the ForEachRecord loop may restart at the incorrect spot when the database restarts. This issue may cause duplicate values to be entered in the Access database or may cause another macro to be fired unintentionally.
+This limitation is by design. This is because data macros aren't nested as transactions, if a system failure occurs during a ForEachRecord loop, the ForEachRecord loop may restart at the incorrect spot when the database restarts. This issue may cause duplicate values to be entered in the Access database or may cause another macro to be fired unintentionally.
 
 ## Workaround
 

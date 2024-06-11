@@ -30,7 +30,7 @@ In this scenario, you might receive one or more of the following messages that i
 - Modifications to the database or project have invalidated the associated digital signature. This may require you to make a trust decision the next time you open the database or project.
 - The active content in this file is blocked. Review your Trust Center settings or contact your IT administrator.
 - Some active content has been disabled
-- Warning: The digital signature has been tampered with after the content was signed. This content cannot be trusted.
+- Warning: The digital signature has been tampered with after the content was signed. This content can't be trusted.
 
 ## Cause
 
@@ -52,7 +52,7 @@ To work around this issue, select the option for the appropriate scenario.
 
 You can use VBA code to create, modify, or delete action queries and passthrough queries in Access without invalidating the digital signature. This is true as long as any changes to objects are reverted in the same database session. 
 
-For example, the digital signature isn’t invalidated in the following scenarios:
+For example, the digital signature isn't invalidated in the following scenarios:
 
 - You use the [CreateQueryDef](/office/client-developer/access/desktop-database-reference/database-createquerydef-method-dao) method to create a new named passthrough query. Before you close the database, you delete the passthrough query by using the `QueryDefs.Delete` method.
 - You use a [QueryDefs collection](/office/client-developer/access/desktop-database-reference/querydefs-collection-dao) to locate a named passthrough query, and you edit the `QueryDef.SQL` property. Before you close the database, you revert the `QueryDef.SQL` property to its original value.
