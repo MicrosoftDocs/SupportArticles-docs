@@ -545,6 +545,27 @@ To work around this issue, use one of the following methods before a live migrat
 
 To use `.vmcx` files instead of `.xml` files for management, upgrade the virtual machine version. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server).
 
+
+#### Failed to Live Migrate a VM Across Nodes in a Cluster When Connected to an Internal or Private Virtual Switch
+
+**Description**  
+
+Cannot live migrate a VM across nodes in a cluster if that VM is connected to an internal or private virtual switch.
+> Live migration of \<VM Name\> failed. \<VM Name\> failed to live migrate to the destination \<Server Name\> because the destination has disconnected VM switch(s).
+
+**Action**  
+
+Check the option of the "Protected Network" for network adapter.
+
+**Workaround**  
+
+To work around this issue, uncheck "Protected Network" option of VM for the Internal or Private Network Adapter before a live migration:
+> Set-VMNetworkAdapter -NotMonitoredInCluster $true  
+
+This will ignore the connectivity checks for that VM interface during a live migration.  
+
+[Windows Server 2012 R2 Virtual Machine Recovery from Network Disconnects)](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2012-r2-virtual-machine-recovery-from-network/ba-p/371861)
+
 ## Event ID 20413
 
 **Description**
