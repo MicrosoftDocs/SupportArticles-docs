@@ -37,11 +37,11 @@ Within various ADODB methods, you must specify the data type that you use. In ea
 
 **Example 1:**
 
-Assume that you have two ADODB **Recordset** objects where RS!MyID is defined as adInteger and RS2!MyID is defined as adBigInt. If you try to set RS!MyID = RS2!MyID, you encounter an error message because of the **Large Number** data type support.
+Assume that you have two ADODB **Recordset** objects where `RS!MyID` is defined as adInteger and `RS2!MyID` is defined as adBigInt. If you try to set `RS!MyID` = `RS2!MyID`, you encounter an error message because of the **Large Number** data type support.
 
 **Example 2:**
 
-Assume that you try to run an ADODB command object. If you create a parameter that uses adBigInt but then use that parameter against a field of a smaller data type, you'll encounter an error message.
+Assume that you try to run an ADODB command object. If you create a parameter that uses adBigInt but then use that parameter against a field of a smaller data type, you encounter an error message.
 
 ## Resolution
 
