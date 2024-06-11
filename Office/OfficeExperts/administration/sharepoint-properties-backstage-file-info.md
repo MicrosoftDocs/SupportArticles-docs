@@ -18,7 +18,7 @@ appliesto:
   - Office LTSC 2021
   - Office 2019
   - Office 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # SharePoint properties of type (lookup – multi select) don't work on Office Backstage

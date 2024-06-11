@@ -13,7 +13,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Office for Mac
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Cannot pass the Welcome Screen in Office for Mac

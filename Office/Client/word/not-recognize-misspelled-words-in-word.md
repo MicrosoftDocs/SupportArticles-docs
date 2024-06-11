@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Word 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Spell Check does not work in Word 2010

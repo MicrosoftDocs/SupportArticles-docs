@@ -3,7 +3,7 @@ title: Information about the deprecated ODT attributes ForceUpgrade and ForceDow
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 09/21/2020
+ms.date: 06/06/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

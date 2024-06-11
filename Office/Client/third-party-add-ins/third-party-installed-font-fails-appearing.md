@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Word for Mac
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Third-party installed font does not appear in the font list in Word for Mac

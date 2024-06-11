@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Date format is not correct when you convert a CSV text file in Excel by using a VBA macro

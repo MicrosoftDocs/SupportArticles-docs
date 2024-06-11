@@ -34,7 +34,7 @@ appliesto:
   - Publisher 2010
   - Microsoft Office Publisher 2007
   - Microsoft Office Publisher 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # An Office program is slow or may stop responding (hang) when you open a file from a network location

@@ -17,7 +17,7 @@ appliesto:
   - Excel 2010
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Not enough memory" when you copy formulas over large area in Excel

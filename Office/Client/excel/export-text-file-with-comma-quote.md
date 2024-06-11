@@ -15,14 +15,14 @@ appliesto:
   - Office Excel 2007
   - Office Excel 2003
   - Excel 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Procedure to export a text file with both comma and quote delimiters in Excel
 
 ## Summary
 
-Microsoft Excel does not have a menu command to automatically export data to a text file so that the text file is exported with both quotation marks and commas as delimiters. For example, there is no command to automatically create a text file that contains the following data:
+Microsoft Excel doesn't have a menu command to automatically export data to a text file so that the text file is exported with both quotation marks and commas as delimiters. For example, there's no command to automatically create a text file that contains the following data:
 
 "Text1","Text2","Text3"
 
@@ -30,7 +30,7 @@ However, you can create this functionality in Excel by using a Microsoft Visual 
 
 ## More information
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements. 
+Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but isn't limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you're familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they won't modify these examples to provide added functionality or construct procedures to meet your specific requirements. 
 
 You can use the Print # statement in a Visual Basic procedure that is similar to the following to export a text file with both quotation marks and commas as the delimiters. For the procedure to function correctly, select the cells that contain your data before you run it.
 
@@ -105,4 +105,4 @@ Before you work with the following sample code, follow these steps:
     End Sub
     ```
 
-5. Before you run the macro, select the data that you want to export, and then run the QuoteCommaExport subroutine.   
+5. Before you run the macro, select the data that you want to export, and then run the QuoteCommaExport subroutine.

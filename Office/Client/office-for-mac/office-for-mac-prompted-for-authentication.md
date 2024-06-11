@@ -14,7 +14,7 @@ ms.custom:
 appliesto: 
   - Office Home & Business 2016 for Mac
   - Office Home & Student 2016 for Mac
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Office 2016 for Mac 16.x prompts you for authentication when you open a URL

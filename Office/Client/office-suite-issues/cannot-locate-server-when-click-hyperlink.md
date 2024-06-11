@@ -2,7 +2,7 @@
 title: Cannot locate the Internet or proxy server when selecting hyperlink in Office
 description: Describes issues when you select hyperlinks in Office. Provides solutions.
 author: helenclu
-ms.date: 07/17/2020
+ms.date: 06/06/2024
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

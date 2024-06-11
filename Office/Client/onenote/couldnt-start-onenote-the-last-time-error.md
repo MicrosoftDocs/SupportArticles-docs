@@ -3,7 +3,7 @@ title: Error We couldn't start OneNote the last time we tried
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 04/19/2023
+ms.date: 06/06/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

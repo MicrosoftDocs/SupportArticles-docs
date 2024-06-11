@@ -15,7 +15,7 @@ appliesto:
   - PowerPoint 2010
   - PowerPoint Home and Student 2010
   - PowerPoint 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Sounds missing after a PowerPoint presentation is saved as video

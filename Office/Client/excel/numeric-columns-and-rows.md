@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Excel 2000
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Columns and rows are labeled numerically in Excel

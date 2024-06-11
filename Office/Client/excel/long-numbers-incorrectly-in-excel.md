@@ -15,14 +15,14 @@ appliesto:
   - Excel 2010
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Long numbers are displayed incorrectly in Excel
 
 ## Symptoms
 
-After you enter a long number (such as a credit card number) in an Excel cell, the number is not displayed correctly in Excel. For example,
+After you enter a long number (such as a credit card number) in an Excel cell, the number isn't displayed correctly in Excel. For example,
 
 :::image type="content" source="media/long-numbers-incorrectly-in-excel/example-for-long-number-not-showing-correctly-in-excel.png" alt-text="An example for a long number that's not shown correctly in Excel.":::
 
@@ -48,7 +48,7 @@ To do this, follow these steps:
 3. Then type a long number. (Be sure to set the cell format before you type the number)
 
     :::image type="content" source="media/long-numbers-incorrectly-in-excel/a-long-number.png" alt-text="Type a long number.":::
-4. If you do not want to see the warning arrows, click the small arrow, and then click **Ignore Error**.
+4. If you don't want to see the warning arrows, click the small arrow, and then click **Ignore Error**.
 
    :::image type="content" source="media/long-numbers-incorrectly-in-excel/ignore-error.png" alt-text="Select Ignore Error if you don't want to see the warning arrows.":::
 
@@ -58,7 +58,7 @@ To do this, follow these steps:
 
 When you enter a long number, type a single quotation mark (**'**) first in the cell, and then type the long number.
 
-For example, type **'1234567890123456789** and the quotation mark will not be displayed after you press ENTER.
+For example, type **'1234567890123456789** and the quotation mark won't be displayed after you press ENTER.
 
 :::image type="content" source="media/long-numbers-incorrectly-in-excel/type-quotation-mark.png" alt-text="Add a single-quotation mark before typing a long number.":::
 
@@ -66,4 +66,4 @@ For example, type **'1234567890123456789** and the quotation mark will not be di
 
 [Format numbers as text in Excel for Mac](https://support.microsoft.com/office/format-numbers-as-text-in-excel-for-mac-dfbe20dc-e7b1-44b2-80fe-2072d074e2a3)
 
-Your opinion is important to us!Do not hesitate to tell us what you think of this article using the comment field located at the bottom of the document. This will allow us to improve the content. Thank you in advance!
+Your opinion is important to us! Don't hesitate to tell us what you think of this article using the comment field located at the bottom of the document. This will allow us to improve the content. Thank you in advance!

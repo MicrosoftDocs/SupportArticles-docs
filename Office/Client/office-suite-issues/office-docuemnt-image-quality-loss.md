@@ -14,7 +14,7 @@ ms.author: luche
 ms.reviewer: wbrandt, abraeg
 appliesto: 
   - Office 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Loss of image quality after you save in Word, Excel, or PowerPoint 2007

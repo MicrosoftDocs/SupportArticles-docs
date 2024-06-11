@@ -15,7 +15,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Office Online Server
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Configuration for Office Online Server authentication with external users

@@ -22,7 +22,7 @@ appliesto:
   - Word 2016
   - PowerPoint 2016
   - Excel 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Office applications crash when you open an IRM document if HTTPS proxy is enabled
@@ -93,4 +93,4 @@ This issue occurs in installations of Office 2013 (Word 2013, Excel 2013, PowerP
  
 - If you have the [February 7, 2017, update for Office 2013 (KB3115489)](https://support.microsoft.com/help/3115489) installed. 
 - If you have the [February 7, 2017, update for Office 2016 (KB3114389)](https://support.microsoft.com/help/3114389) installed.  
-- If you have Office subscription build **16.0.7571.2072** or a later version.    
+- If you have Office subscription build **16.0.7571.2072** or a later version.

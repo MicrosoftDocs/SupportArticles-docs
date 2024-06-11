@@ -19,7 +19,7 @@ appliesto:
   - Office Excel 2007 (Home and Student version)
   - Office Access 2003
   - Office Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Unable to create DSN for Microsoft Office System Driver on 64-bit versions of Windows

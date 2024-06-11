@@ -14,7 +14,7 @@ search.appverid:
 appliesto: 
   - Word 2010
   - Word 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "The file contains custom XML elements which are no longer supported by Word" when you try to open a document in Word

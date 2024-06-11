@@ -15,7 +15,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Office Web Apps
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Rebuild a Microsoft Office Web Apps server farm easily

@@ -17,7 +17,7 @@ appliesto:
   - Visio Standard 2010
   - Microsoft Office Visio Professional 2007
 ms.reviewer: johnlan
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Data graphics applied to images or objects are not displayed in Visio 2010 and Visio 2007
 

@@ -16,14 +16,14 @@ appliesto:
   - Excel 2013
   - Excel 2010
   - Microsoft Office Excel 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "An error occurred when sending commands to the program" in Excel
 
 ## Symptoms
 
-You receive the following error message in Microsoft Excel. This error indicates that some process that is running inside Excel will not let Excel close.
+You receive the following error message in Microsoft Excel. This error indicates that some process that is running inside Excel won't let Excel close.
 An error occurred when sending commands to the program
 
 ## Resolution
@@ -42,22 +42,22 @@ This problem may occur if the **Ignore other applications that use Dynamic Data 
  
 When you double-click an Excel workbook in Windows Explorer, a dynamic data exchange (DDE) message is sent to Excel. This message instructs Excel to open the workbook that you double-clicked.
 
-If you select the "Ignore" option, Excel ignores DDE messages that are sent to it by other programs. Therefore, the DDE message that is sent to Excel by Windows Explorer is ignored, and Excel does not open the workbook that you double-clicked.
+If you select the "Ignore" option, Excel ignores DDE messages that are sent to it by other programs. Therefore, the DDE message that is sent to Excel by Windows Explorer is ignored, and Excel doesn't open the workbook that you double-clicked.
 
 > [!NOTE]
 > For more information about how to turn off DDE, see the following Microsoft Knowledge Base article:
 
 [211494 "There was a problem sending the command to the program" error in Excel ](https://support.microsoft.com/help/211494) 
 
-If these steps do not resolve the problem, go to Method 2.
+If these steps don't resolve the problem, go to Method 2.
 
 ### Method 2: Repair User Experience Virtualization (UE-V)
  
-If you are running Update User Experience Virtualization (UE-V), install [Hotfix Package 1 for Microsoft User Experience Virtualization 2.0 (KB2927019)](https://support.microsoft.com/help/2927019).
+If you're running Update User Experience Virtualization (UE-V), install [Hotfix Package 1 for Microsoft User Experience Virtualization 2.0 (KB2927019)](https://support.microsoft.com/help/2927019).
 
-If you are not sure whether you are running UE-V, examine the program list in the **Programs and Features** item in Control Panel. An entry for "Company Settings Center" indicates that you are running UE-V.
+If you aren't sure whether you're running UE-V, examine the program list in the **Programs and Features** item in Control Panel. An entry for "Company Settings Center" indicates that you're running UE-V.
 
-If these steps do not resolve the problem, go to Method 3.
+If these steps don't resolve the problem, go to Method 3.
 
 ### Method 3: Reset file associations
 

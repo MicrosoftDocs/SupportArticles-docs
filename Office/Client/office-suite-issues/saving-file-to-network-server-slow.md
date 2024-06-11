@@ -15,7 +15,7 @@ appliesto:
   - office 2016
   - Office 2013
   - Office 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Saving Office documents to a network server is slow when using EFS

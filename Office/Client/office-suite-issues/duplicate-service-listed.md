@@ -14,7 +14,7 @@ ms.author: luche
 ms.reviewer: amaniah
 appliesto: 
   - Office 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # In the Research pane in an Office application, a service is listed two times, or a service returns no result
@@ -111,5 +111,4 @@ If the Research pane is not showing any available services and research sites, m
 
 Check whether the problem is fixed by viewing the list of available services or by querying the service in the **Research** pane. If the problem is fixed, you are finished with this article. If the problem is not fixed, you can contact us by clicking the following link:
 
-[Contact support](https://support.microsoft.com/contactus)   
-
+[Contact support](https://support.microsoft.com/contactus)

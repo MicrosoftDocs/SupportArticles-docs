@@ -3,7 +3,7 @@ title: PowerPoint files not rendering in Office Online Server after Security Upd
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 08/29/2019
+ms.date: 06/06/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

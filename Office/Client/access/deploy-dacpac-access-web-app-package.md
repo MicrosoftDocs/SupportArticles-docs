@@ -13,7 +13,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Access
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Could not deploy package" or "Script execution error" when you deploy DACPAC files from Access web app package

@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - office 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Error messages when you try to uninstall Microsoft Office 2013

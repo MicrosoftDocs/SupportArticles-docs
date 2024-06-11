@@ -24,7 +24,7 @@ appliesto:
   - Microsoft Office PowerPoint 2007
   - Microsoft Office PowerPoint 2003
   - Internet Explorer 9
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Hyperlink to MHT File in Office Documents Fails to Load in Internet Explorer
@@ -33,9 +33,9 @@ ms.date: 03/31/2022
 
 Consider this scenario:
 
-You are using an Office application (Microsoft Excel, Microsoft Word, Microsoft PowerPoint) and you insert a hyperlink to a MHT file on a file share. When you click the link to follow it, Internet Explorer starts, but the MHT file is not loaded. Instead you see an error:
+You're using an Office application (Microsoft Excel, Microsoft Word, Microsoft PowerPoint) and you insert a hyperlink to an MHT file on a file share. When you click the link to follow it, Internet Explorer starts, but the MHT file isn't loaded. Instead you see an error:
 
-The address is not valid.
+The address isn't valid.
 
 Most likely causes:
 
@@ -59,15 +59,15 @@ To work around this issue, follow these steps:
 3. Locate and then click to select the following registry key: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\MAIN\FeatureControl\   
 4. After you select the key that is specified in step 3, point to **New** on the **Edit** menu, and then click Key.   
 5. Type FEATURE_CREATE_URL_MONIKER_DISABLE_LEGACY_COMPAT, and then press ENTER.   
-6. Select Newon the Editmenu again, and select DWord (32-bit) Value   
+6. Select New on the Edit menu again, and select DWord (32-bit) Value   
 7. Type iexplore.exe and press Enter   
 8. On the **File** menu, click **Exit** to quit Registry Editor.   
 
 #### Did this fix the problem?
 
-- Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus).   
-- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please send us an [email](mailto:fixit4me@microsoft.com?subject=kb).   
+- Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus).   
+- We would appreciate your feedback. To provide feedback or to report any issues with this solution, send us an [email](mailto:fixit4me@microsoft.com?subject=kb).   
 
 ## More Information
 
-Web files (.HTM, .HTML, .ASP, .MHT, .MHTML, etc.) are most frequently stored on web servers, which are designed to use URL encoding to deal with spaces. If you access your .MHT files from a web server, they will load properly with or without spaces in the path.
+Web files (`.HTM`, `.HTML`, `.ASP`, `.MHT`, `.MHTML`, etc.) are most frequently stored on web servers, which are designed to use URL encoding to deal with spaces. If you access your `.MHT` files from a web server, they will load properly with or without spaces in the path.

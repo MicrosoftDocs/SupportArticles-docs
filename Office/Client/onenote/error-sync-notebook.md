@@ -17,7 +17,7 @@ appliesto:
   - OneNote 2013
   - OneNote 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # "0xE40200B4" and "0x800700DF" errors when you sync a notebook in OneNote
 
