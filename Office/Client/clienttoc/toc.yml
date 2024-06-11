@@ -5,12 +5,8 @@
       items:
         - name: .LDB files
           href: ../access/ldb-file-description.md
-        - name: 0x80004005 Microsoft Jet Database Engine cannot open the file
-          href: ../access/error-80004005-connecting-access-database.md
         - name: Access cache formats for SharePoint
           href: ../access/access-cache-formats.md
-        - name: Access crashes after you install Office 2010 SP1
-          href: ../access/access-2010-crashes.md
         - name: Access database engine cannot find input table
           href: ../access/database-engine-not-find-input-table.md
         - name: Access error String data, right truncation (#0)
@@ -35,8 +31,6 @@
           href: ../access/error-changing-data.md
         - name: Can't enter a large amount of text in Memo field with an index
           href: ../access/run-time-error-3709.md
-        - name: Can't export fields with data type Single or Double
-          href: ../access/export-fields-data-type.md
         - name: Can't group on fields
           href: ../access/fails-group-fields.md
         - name: Can't import attribute-centric XML
@@ -171,8 +165,6 @@
           href: ../access/how-to-parse-city-state-zip-to-separate-values.md
         - name: ID is increment when adding a new field
           href: ../access/id-field-increment-by-one.md
-        - name: Incorrect FirstDay property value
-          href: ../access/incorrect-firstday-property-value.md
         - name: Incorrect registry key for current version of Access
           href: ../access/incorrect-current-version-registry-key.md
         - name: Introduction to lock files (.laccdb & .ldb)
@@ -225,12 +217,8 @@
           href: ../access/prompted-username-password.md
         - name: Query doesn't return any data
           href: ../access/query-returns-blank.md
-        - name: Query fails because of double-byte arabic number
-          href: ../access/error-run-query-in-access.md
         - name: Query must have at least one destination field
           href: ../access/query-must-have-at-least-one-destination-field.md
-        - name: Register or unregister ActiveX controls
-          href: ../access/register-activex-controls.md
         - name: Reset an AutoNumber field value
           href: ../access/reset-autonumber-value.md
         - name: Reset page number on group level in a report
@@ -305,8 +293,6 @@
           href: ../activation/account-doesnt-exist.md
         - name: Activation error Trusted Platform Module malfunctioned
           href: ../activation/tpm-malfunctioned.md
-        - name: Can't activate Office on a new computer
-          href: ../activation/cant-activate-on-new-computer.md
         - name: Can't verify the license for this product
           href: ../activation/license-issue-when-start-office-application.md
         - name: Errors activating Microsoft 365 on older Windows versions
@@ -317,8 +303,6 @@
           href: ../activation/issue-when-activate-office-365-proplus.md
         - name: Issue when activating Office from Microsoft 365
           href: ../activation/issue-when-activate-office-from-office-365.md
-        - name: Issue with changing Office 2010 product key
-          href: ../activation/office-2010-product-key-change-error.md
         - name: Issues with shared computer activation for Microsoft 365 Apps
           href: ../activation/shared-computer-activation.md
         - name: Microsoft 365 Apps activation error 0xCAA50021
@@ -357,8 +341,6 @@
           href: ../activation/cant-be-used-to-activate.md
         - name: Troubleshooting device-based licensing for Microsoft 365 Apps
           href: ../activation/device-based-licensing.md
-        - name: We can't sign you into your company portal
-          href: ../activation/something-configured-fails-activating-office.md
         - name: We've run into a problem with your Microsoft 365 subscription
           href: ../activation/run-into-a-problem.md
         - name: You currently have not been assigned an office license that includes the Office desktop apps
@@ -385,8 +367,6 @@
           href: ../excel/apply-password-to-separate-range.md
         - name: AutoComplete may not work
           href: ../excel/autocomplete-not-work.md
-        - name: AutoRecover functions in Excel
-          href: ../excel/autorecover-functions-in-excel.md
         - name: Blank pages are unexpectedly printed
           href: ../excel/blank-pages-unexpectedly-printed.md
         - name: Border missing when pasting table in email for Mac
@@ -397,8 +377,6 @@
           href: ../excel/calculate-interpolation-step-value.md
         - name: Can't add refedit control to VBA userform
           href: ../excel/cant-add-refedit-control-to-vba-userform..md
-        - name: Can't create a PivotTable in Excel 2013
-          href: ../excel/cannot-create-pivottable.md
         - name: Can't export to Excel from SharePoint Online
           href: ../excel/cannot-export-to-excel.md
         - name: Can't modify oData connection in PowerPivot
@@ -417,22 +395,16 @@
           href: ../excel/inaccurate-chart-trendline-formula.md
         - name: CHIINV statistical functions
           href: ../excel/statistical-functions-chiinv.md
-        - name: '"Class not registered" error when updating PowerPivot data'
-          href: ../excel/class-not-registered-error-pivotpoint.md
         - name: Clean up workbooks with less memory
           href: ../excel/clean-workbook-less-memory.md
         - name: Columns and rows are labeled numerically
           href: ../excel/numeric-columns-and-rows.md
-        - name: COM add-ins are not displayed
-          href: ../excel/com-add-ins-not-displayed.md
         - name: Command bars of add-ins aren't displayed or removed
           href: ../excel/add-ins-command-bars-removed.md
         - name: Command can't be used on multiple selections
           href: ../excel/command-cannot-be-used-on-selections.md
         - name: Conditional formatting is set incorrectly with VBA
           href: ../excel/conditional-formatting-set-incorrectly.md
-        - name: Connection to ODBC driver fails in PowerPivot
-          href: ../excel/connection-to-odbc-driver-fails.md
         - name: Convert degrees/minutes/seconds angles
           href: ../excel/convert-degrees-minutes-seconds-angles.md
         - name: Convert Excel column numbers
@@ -447,8 +419,6 @@
           href: ../excel/create-application-level-event-handler.md
         - name: Custom function may not calculate expected value
           href: ../excel/custom-function-calculate-wrong-value.md
-        - name: Data collected by Excel Baseline Diagnostic
-          href: ../excel/data-collected-by-excel-support-diagnostic.md
         - name: Excel data doesn't retain formatting in mail merge
           href: ../excel/excel-data-not-retain-formatting-mail-merge.md  
         - name: Excel workbook shows old property values
@@ -483,32 +453,20 @@
           href: ../excel/copy-formulas-over-large-area.md
         - name: Error when you import data to a workbook
           href: ../excel/index-outside-bounds-of-array-error.md
-        - name: Excel 2016 for Mac crashes
-          href: ../excel/excel-2016-for-mac-crashes.md
         - name: Excel cannot complete this task
           href: ../excel/excel-cannot-complete-task-with-available.md
-        - name: Excel doesn't recognize data as Date type data
-          href: ../excel/not-recognize-data-as-date-type-data.md
         - name: Excel doesn't shut down after calling Quit method
           href: ../excel/jscript-not-shut-down-excel.md
         - name: Excel incorrectly assumes 1900 is a leap year
           href: ../excel/wrongly-assumes-1900-is-leap-year.md
         - name: Excel opening blank
           href: ../excel/excel-opens-blank.md
-        - name: Excel stops working after KB3118373 is installed
-          href: ../excel/excel-has-stopped-working-error.md
-        - name: Excel takes long time to insert or delete rows
-          href: ../excel/excel-takes-long-time-to-insert-delete-rows.md
         - name: Export a text file with both comma and quote delimiters
           href: ../excel/export-text-file-with-comma-quote.md
         - name: External links may be calculated when you open a workbook
           href: ../excel/external-links-calculated-open-workbook-earlier-version-excel.md
-        - name: F4 keyboard shortcut doesn't work in Excel
-          href: ../excel/f4-keyboard-shortcut-not-work.md
         - name: FALSE result with the ISBLANK() function
           href: ../excel/isblank-function-return-false.md
-        - name: File updated without user interaction
-          href: ../excel/file-updated-without-user-interaction.md
         - name: First sheet name displays different language
           href: ../excel/first-sheet-name-displays-different-language.md
         - name: Floating-point arithmetic gives inaccurate results
@@ -537,10 +495,6 @@
           href: ../excel/get-latest-excel-viewer.md
         - name: Hyperlink to mht file fails to load
           href: ../excel/hyperlink-to-mht-file-fails-to-load.md
-        - name: Inquire COM add-in options don't respond
-          href: ../excel/inquire-com-add-in-not-respond.md
-        - name: INTERCEPT statistical functions
-          href: ../excel/statistical-functions-intercept.md
         - name: Invalid signature error in Excel workbooks
           href: ../excel/document-contains-invalid-signatures-error.md
         - name: Issue when saving Excel workbooks
@@ -551,22 +505,14 @@
           href: ../excel/fails-starting-excel-mac.md
         - name: Issue when updating external links
           href: ../excel/update-external-links.md
-        - name: Issue with updating a data connection or change PivotTable fields
-          href: ../excel/connection-failed-to-refresh.md
         - name: Issue with using different print quality for sheets
           href: ../excel/different-print-quality.md
         - name: Large Address Aware capability change
           href: ../excel/laa-capability-change.md
         - name: Last digits are changed to zeros
           href: ../excel/last-digits-changed-to-zeros.md
-        - name: Legacy UML features are missing
-          href: ../excel/legacy-uml-features-missing.md
-        - name: Limitations for working with arrays
-          href: ../excel/arrays-limitations.md
         - name: Link a Visio drawing to a specific region
           href: ../excel/link-visio-drawing-to-a-specific-region.md
-        - name: LOGEST statistical functions
-          href: ../excel/statistical-functions-logest.md
         - name: Long numbers are displayed incorrectly
           href: ../excel/long-numbers-incorrectly-in-excel.md
         - name: Loop through a list of data by using macros
@@ -581,8 +527,6 @@
           href: ../excel/fails-printing-a-workbook.md
         - name: Memory usage in the 32-bit edition of Excel
           href: ../excel/memory-usage-32-bit-edition-of-excel.md
-        - name: Misleading labels in the output of Analysis ToolPak t-Test tools
-          href: ../excel/output-misleading-labels.md
         - name: Network Mapped Drive hyperlinks resolve as UNC
           href: ../excel/network-mapped-drive-hyperlinks-unc.md
         - name: Object Model calls fails from WorkbookOpen event
@@ -607,8 +551,6 @@
           href: ../excel/print-embedded-charts.md
         - name: Programmatically save a file to a network drive
           href: ../excel/save-file-to-network-drive.md
-        - name: Query and update data with ADO from ASP
-          href: ../excel/query-update-data.md
         - name: Recalculation with a SUMIF formula takes a longer time
           href: ../excel/worksheet-recalculation-sumif-formula.md
         - name: Registry keys that control the File Repair feature
@@ -625,8 +567,6 @@
           href: ../excel/run-time-error-2147467259-80004005.md
         - name: Sample macro to insert/delete rows or columns
           href: ../excel/macro-insert-delete-rows-columns.md
-        - name: Sample user-defined function to hide formula errors
-          href: ../excel/hide-formula-error.md
         - name: SAP add-ins don't display controls after update to version 1806
           href: ../excel/sap-add-ins-not-display-control.md
         - name: Security settings for Dynamic Data Exchange
@@ -647,8 +587,6 @@
           href: ../excel/available-resources-errors.md
         - name: Turn off Function Argument ToolTips
           href: ../excel/turn-off-function-argument-tooltips.md
-        - name: Unable to cast COM object
-          href: ../excel/team-explorer-export-fails.md
         - name: Use a worksheet function in a VB macro
           href: ../excel/worksheet-function-in-vb-macro.md
         - name: Use defined names to update a chart range
@@ -665,16 +603,10 @@
           href: ../excel/saved-property-determine-workbook-is-changed.md
         - name: Use shared workbooks with different versions
           href: ../excel/use-shared-workbook.md
-        - name: Use startup folders
-          href: ../excel/use-startup-folders.md
         - name: User info in @mentions doesn't resolve
           href: ../excel/mentions-not-resolve-user-information.md
         - name: VBA writes to cells slowly when ActiveX controls are invisible
           href: ../excel/vba-writes-to-cells-slowly.md
-        - name: Workbook isn't activated when you run a macro
-          href: ../excel/workbook-not-activated.md
-        - name: Workbooks not open
-          href: ../excel/workbooks-not-open.md
         - name: Wrap text doesn't adjust row height
           href: ../excel/wrap-text-not-adjust-row-height.md
     - name: InfoPath
@@ -701,8 +633,6 @@
           href: ../installation/forceupgrade-forcedowngrade-removed-odt-config.md
         - name: Install Office Pro 2013 on a Terminal Server
           href: ../installation/install-and-activate-office-2013.md
-        - name: Office 2010 Installation failure
-          href: ../installation/office-installation-failure.md
         - name: Office 2010 installation requires MSXML
           href: ../installation/office-installtion-need-msxml.md
         - name: Office setup issues
@@ -711,8 +641,6 @@
           href: ../installation/use-sara-to-collect-install-info.md
         - name: The ability to uninstall Office updates
           href: ../installation/ability-to-uninstall-office.md
-        - name: Windows Installer service could not be accessed
-          href: ../installation/windows-installer-service-not-be-accessed.md
     - name: Mobile
       items:
         - name: Block use of Office add-ins from work or school accounts
@@ -753,8 +681,6 @@
           href: ../office-suite-issues/background-task-activation-spurious.md
         - name: Can't access a SharePoint Online place in Office Mobile
           href: ../office-suite-issues/cannot-access-sharepoint-online-place.md
-        - name: Can't change the number of places in Recent Places
-          href: ../office-suite-issues/change-number-of-recent-places.md
         - name: Can't create user name that contains special characters
           href: ../office-suite-issues/username-contains-special-character.md
         - name: Can't embed Adobe OpenType fonts
@@ -763,8 +689,6 @@
           href: ../office-suite-issues/cannot-install-64-bit-office-with-32-bit.md
         - name: Can't install 64-bit version of Office with Click-to-Run
           href: ../office-suite-issues/64-bit-cant-install-with-click-to-run.md
-        - name: Can't install Office Starter 2010 on Windows 8
-          href: ../office-suite-issues/cant-install-office-on-windows-8.md
         - name: Can't locate proxy server when clicking hyperlink
           href: ../office-suite-issues/cannot-locate-server-when-click-hyperlink.md
         - name: Can't open a file from UNC share
@@ -773,56 +697,32 @@
           href: ../office-suite-issues/click-to-run-office-on-terminal-server.md
         - name: Can't open this add-in from localhost when loading an add-in
           href: ../office-suite-issues/cannot-open-add-in-from-localhost.md
-        - name: Can't start an Office Starter program
-          href: ../office-suite-issues/cannot-be-opened-error-when-start.md
         - name: Can't start in Windows safe mode
           href: ../office-suite-issues/office-not-start-safe-mode-windows.md
         - name: Can't uninstall Office
           href: ../office-suite-issues/error-when-uninstall-office.md
-        - name: Can't use Convert bibliography to static text
-          href: ../office-suite-issues/convert-bibliography-to-static-text.md
         - name: "Compile Error: Procedure too large"
           href: ../office-suite-issues/compile-error-procedure-too-large.md
         - name: Complete repair of corrupted files isn't guaranteed
           href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
-        - name: Connection to a network document is lost
-          href: ../office-suite-issues/connect-to-network-document-lost.md
         - name: Document files in Office Document Cache not deleted
           href: ../office-suite-issues/office-temporary-files-not-delete.md
         - name: Document Information Panel is deprecated
           href: ../office-suite-issues/document-information-panel-deprecate.md
         - name: Enable Office 2010 to run on a terminal server
           href: ../office-suite-issues/office-pro-plus-2010-terminal-server.md
-        - name: Error 25090 with an Office application
-          href: ../office-suite-issues/error-25090-starting-office-program.md
         - name: Error when editing an equation in Office
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
-        - name: Error when installing Office 2013
-          href: ../office-suite-issues/office-2013-installation-error.md
-        - name: Error when installing VS2010 Tools for Office Runtime
-          href: ../office-suite-issues/generic-trust-failure-(0x800b010b)-error.md
         - name: Error when opening a document
           href: ../office-suite-issues/error-open-document.md
         - name: Error when you open files from SharePoint in Office client
           href: ../office-suite-issues/files-fail-to-open.md
         - name: "This file cannot be saved"
           href: ../office-suite-issues/file-cannot-be-saved.md
-        - name: FAQ about Office Activation Wizard
-          href: ../office-suite-issues/faq-about-office-activation-wizard.md
         - name: Features to enable collaboration
           href: ../office-suite-issues/enable-collaboration.md
-        - name: Files necessary to run the Office Customization Tool were not found
-          href: ../office-suite-issues/fails-running-office-customization-tool.md
-        - name: How to determine retail or volume license
-          href: ../office-suite-issues/determine-retail-volume-license.md
-        - name: Incorrect function with saving to a CD-RW or DVD/CD-RW drive
-          href: ../office-suite-issues/incorrect-function-saving-office-file.md
-        - name: Information about Office Click-to-Run installation
-          href: ../office-suite-issues/office-click-to-run-installation.md
         - name: Installing Office 2010 from Microsoft 365 Subscription fails
           href: ../office-suite-issues/install-office-from-office-365-subscription.md
-        - name: Introduce Click-to-Run for Office 2010
-          href: ../office-suite-issues/office-click-to-run-faq.md
         - name: Invalid product key or license mismatch
           href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
         - name: Issue when launching Office in Microsoft Store app
@@ -861,24 +761,18 @@
           href: ../office-suite-issues/office-end-user-license-agreement.md
         - name: Office error "could not create the work file"
           href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
-        - name: Office files with RMS protection crash
-          href: ../office-suite-issues/rms-protected-files-crash.md
         - name: Office has detected a problem with this file
           href: ../office-suite-issues/office-file-fails-validation.md
         - name: Office installation Error 1401, 1402 or 1406
           href: ../office-suite-issues/office-install-error-1401-1402-1406.md
         - name: Office stops responding when you open a file
           href: ../office-suite-issues/office-stops-responding.md
-        - name: Prevent Office 2010 from disabling printers
-          href: ../office-suite-issues/prevent-office-from-disabling-printers.md
         - name: Repair process of click-to-run app
           href: ../office-suite-issues/click-to-run-app-repair-process.md
         - name: "Run-time Error 13: Type Mismatch"
           href: ../office-suite-issues/run-time-error-13-type-mismatch.md
         - name: Saving documents to network server is slow
           href: ../office-suite-issues/saving-file-to-network-server-slow.md
-        - name: Selected a single-byte font to replace a double-byte font with Japanese
-          href: ../office-suite-issues/single-byte-font-replace-error.md
         - name: Services display incorrectly in Research pane
           href: ../office-suite-issues/duplicate-service-listed.md
         - name: Set default font for Office apps
@@ -899,8 +793,6 @@
           href: ../office-suite-issues/getobject-createobject-behavior.md
         - name: View error signatures for Office
           href: ../office-suite-issues/view-error-signatures.md
-        - name: Win32API_PtrSafe with 64-bit Support
-          href: ../office-suite-issues/win32api_ptrsafe-with-64-bit-support.md
         - name: Your system is low on virtual memory
           href: ../office-suite-issues/your-system-is-low-on-virtual-memory.md
     - name: OneNote
@@ -1075,8 +967,6 @@
           href: ../visio/search-for-shapes-use-windows-search.md
         - name: Fit to Drawing not working
           href: ../visio/fit-to-drawing-command-not-work.md
-        - name: Search for Shapes feature is discontinued
-          href: ../visio/cannot-search-shapes-feature.md
         - name: Text not displayed when the drawing opens in a browser
           href: ../visio/text-not-displayed-in-drawing.md
         - name: This is not a valid win32 application when installing Microsoft 365

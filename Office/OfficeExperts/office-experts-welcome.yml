@@ -64,8 +64,6 @@ landingContent:
             url: ./excel/cannot-access-directory-error-in-excel-2016.md
           - text: '"Request Was Taking Too Long" in Excel Online'
             url: ./excel/request-too-long-opening-excel-workbook.md
-          - text: '"PivotTable Operation Failed" in Excel Online'
-            url: ./excel/excel-online-pivottable-operation-failed.md
 
   - title: Installation
     linkLists:

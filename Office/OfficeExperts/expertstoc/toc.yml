@@ -63,8 +63,6 @@
       href: ../excel/cannot-access-directory-error-in-excel-2016.md
     - name: '"Request Was Taking Too Long" in Excel Online'
       href: ../excel/request-too-long-opening-excel-workbook.md
-    - name: '"PivotTable Operation Failed" in Excel Online'
-      href: ../excel/excel-online-pivottable-operation-failed.md
     - name: '"The workbook is currently open by 256 users" error when opening an Excel workbook from SharePoint or OneDrive'
       href: ../excel/workbook-currently-open-by-256-users-error.md
     - name: Can't refresh data connections in Excel Online
