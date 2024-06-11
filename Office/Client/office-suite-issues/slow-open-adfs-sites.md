@@ -19,7 +19,7 @@ appliesto:
   - PowerPoint for Microsoft 365
   - PowerPoint 2016
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Links in Office take at least 60 seconds to open AD FS sites
 

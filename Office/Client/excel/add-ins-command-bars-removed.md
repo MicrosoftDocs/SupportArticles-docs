@@ -16,7 +16,7 @@ appliesto:
   - Excel 2019
   - Excel 2016
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Command bars of add-ins are not displayed or removed in Excel 2013 or later when you load or unload the add-ins

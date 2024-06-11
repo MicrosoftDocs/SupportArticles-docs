@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - office
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Paste Special option is missing or not working in Microsoft Office

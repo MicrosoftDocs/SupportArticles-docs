@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Parts of Excel turn white or gray when you run VBA code in Excel 2013

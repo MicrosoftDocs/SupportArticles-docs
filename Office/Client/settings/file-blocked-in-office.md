@@ -22,7 +22,7 @@ appliesto:
   - PowerPoint LTSC 2021
   - Excel LTSC 2021
   - Word LTSC 2021
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Error message in Office when a file is blocked by registry policy settings

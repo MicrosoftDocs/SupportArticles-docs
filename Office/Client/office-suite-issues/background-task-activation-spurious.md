@@ -31,7 +31,7 @@ appliesto:
   - Visio Professional 2016
   - Visio Standard 2016
   - Word 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Background task activation is spurious" when you use an Office 2016 application to access Microsoft 365 resources

@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Unable to export to Excel from SharePoint Online
