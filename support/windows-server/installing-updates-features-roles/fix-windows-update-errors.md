@@ -50,7 +50,7 @@ Windows updates may fail to install if there are corruption errors. The followin
 |0x800f0986|PSFX_E_APPLY_FORWARD_DELTA_FAILED|Applying forward delta failed|
 |0x800f0982|PSFX_E_MATCHING_COMPONENT_NOT_FOUND|Can't identify matching component for hydration|
 
-For example, an update might not install if a system file is damaged. The DISM or [System Update Readiness tool](#what-does-the-system-update-readiness-tool-do) may help you fix some Windows corruption errors.
+For example, an update might not install if a system file is damaged. The DISM may help you fix some Windows corruption errors.
 
 Check this page for [Windows Update troubleshooting scenarios](../../windows-client/deployment/troubleshoot-windows-update-issues.md).
 
