@@ -13,7 +13,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Excel for Mac
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Microsoft Excel has encountered a problem and needs to close" when starting Excel for Mac

@@ -15,7 +15,7 @@ appliesto:
   - Office for Mac 2004
   - Office for Mac 2008
   - Office for Mac 2011
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Known issues with Office for Mac on MacOS 10.7 (Lion) and Higher
@@ -77,4 +77,4 @@ Web Applications
   3. Select Safari or Firefox.   
   4. On the **File** menu, click **Get Info**.   
   5. Select the check box for **Open in 32-bit mode**.   
-  6. Quit and open Safari or Firefox.   
+  6. Quit and open Safari or Firefox.

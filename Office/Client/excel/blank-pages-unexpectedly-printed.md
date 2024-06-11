@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Excel 2010
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Blank pages are unexpectedly printed in Excel
@@ -90,4 +90,4 @@ The following steps must be completed for both of the following examples:
 3. On the Sheet tab, under Print, in the **Cell error as** drop-down box, click **\<blank>**.   
 4. Click Print Preview.
 
-   Notice that not only does page 1 contain data, but it is followed by three blank pages.   
+   Notice that not only does page 1 contain data, but it is followed by three blank pages.

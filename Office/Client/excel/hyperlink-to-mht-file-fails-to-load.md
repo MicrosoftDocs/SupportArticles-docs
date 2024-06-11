@@ -24,7 +24,7 @@ appliesto:
   - Microsoft Office PowerPoint 2007
   - Microsoft Office PowerPoint 2003
   - Internet Explorer 9
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Hyperlink to MHT File in Office Documents Fails to Load in Internet Explorer

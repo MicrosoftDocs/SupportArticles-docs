@@ -17,7 +17,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Run-time error '3709'" when you enter a large amount of text in a Memo field that contains an index in Access
@@ -92,4 +92,4 @@ This behavior does not occur in versions of Microsoft Access before Microsoft Ac
     
     ```
 
-5. Place your pointer so that it is in the procedure. Press F5 to run the code.   
+5. Place your pointer so that it is in the procedure. Press F5 to run the code.

@@ -14,7 +14,7 @@ ms.custom:
 appliesto: 
   - Excel 2016
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to clean up an Excel workbook so that it uses less memory

@@ -16,7 +16,7 @@ ms.reviewer: robdil
 appliesto: 
   - Access 2007
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to use SQLConfigDataSource to create an Access system DSN
@@ -79,4 +79,4 @@ End Function
 6. Click Start, point to Settings, and then click Control Panel.    
 7. In Control Panel, click ODBC Data Sources, **ODBC Data Sources (32-bit)**, or **32bit ODBC**.    
 8. Click the System DSNtab. Note that **My SampleDSN** has been added to the
-System Data Sources list.   
+System Data Sources list.

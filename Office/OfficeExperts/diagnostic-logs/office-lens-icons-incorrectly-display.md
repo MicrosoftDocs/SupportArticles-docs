@@ -14,7 +14,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Office Lens
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Office Lens icons on Windows 10 do not display correctly after registering private characters

@@ -25,7 +25,7 @@ appliesto:
   - Excel 2016
   - Outlook 2016
   - Word 2016
-ms.date: 06/23/2022
+ms.date: 06/06/2024
 ---
 
 # Network Mapped Drive Hyperlinks resolve as UNC in Office Products

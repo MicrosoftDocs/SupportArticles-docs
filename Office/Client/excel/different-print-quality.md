@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Excel 97
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Unexpected behavior when you use different print quality for sheets in Excel

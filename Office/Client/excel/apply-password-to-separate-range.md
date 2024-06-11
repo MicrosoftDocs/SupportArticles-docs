@@ -15,7 +15,7 @@ appliesto:
   - Excel 2007
   - Excel 2003
   - Excel 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Apply different passwords or permissions to separate ranges in workbooks in Excel
