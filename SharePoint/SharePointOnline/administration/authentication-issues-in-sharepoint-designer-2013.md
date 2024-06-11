@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-  - sap:Sites\Other
+  - sap:Identity and Authentication\App Authentication
   - CSSTroubleshoot
   - CI 191383
 ms.reviewer: salarson, prbalusu, meerak
