@@ -14,7 +14,7 @@ ms.author: luche
 appliesto: 
   - Excel 2007
   - Excel 2000
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Description of how column widths are determined in Excel

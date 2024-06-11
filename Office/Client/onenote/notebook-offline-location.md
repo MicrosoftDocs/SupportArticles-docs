@@ -13,7 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - OneNote 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Warning in OneNote 2013 when a notebook is in an offline location

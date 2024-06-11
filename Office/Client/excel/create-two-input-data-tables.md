@@ -16,7 +16,7 @@ appliesto:
   - Excel 2003
   - Excel 2001
   - Excel 98
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to create and use two-input data tables in Microsoft Excel

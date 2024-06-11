@@ -13,7 +13,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Word 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # A picture or an object may not appear in a Word 2010 or Word 2007 document

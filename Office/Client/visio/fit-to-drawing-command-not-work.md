@@ -15,7 +15,7 @@ search.appverid:
 appliesto: 
   - Visio 2013
   - Visio 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # In Visio, the "Fit to Drawing" command does not resize the page to fit the drawing's dimensions
@@ -40,4 +40,4 @@ To resolve this issue, follow these steps:
    - **PageRightMargin**   
    - **PageTopMargin**   
    - **PageBottomMargin**     
-5. Use the **Fit to Drawing** command again. The page now resizes to fit the same dimensions of the drawing, and there is no margin.   
+5. Use the **Fit to Drawing** command again. The page now resizes to fit the same dimensions of the drawing, and there is no margin.

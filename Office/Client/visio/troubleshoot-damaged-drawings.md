@@ -17,7 +17,7 @@ appliesto:
   - Visio 2010
   - Visio 2007
   - Visio 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to troubleshoot damaged drawings in Visio
@@ -314,5 +314,4 @@ If you work in a network environment and you experience corruption frequently, y
 - Dropped network connections   
 - Spikes in network traffic   
  
-You may also want to consider working from the hard disk and not working from removable media such as a floppy disk or a ZIP drive. The more media and the more device drivers that are involved in a save operation, the more the increased chance of file damage. 
-
+You may also want to consider working from the hard disk and not working from removable media such as a floppy disk or a ZIP drive. The more media and the more device drivers that are involved in a save operation, the more the increased chance of file damage.

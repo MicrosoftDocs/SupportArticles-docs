@@ -18,7 +18,7 @@ appliesto:
   - Visio Premium 2010
   - Visio Professional 2010
   - Visio Standard 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # You cannot add the Microsoft Visio 2010 or 2013 drawing control to a Windows Form application in Visual Studio if you have the 64-bit version of Visio installed
@@ -61,4 +61,4 @@ To work around this problem, follow these steps:
     - **solution_name** is a placeholder for the name of the solution.   
     - You can safely ignore warnings that are related to setup projects. The MSBuild.exe tool does not support setup projects. Therefore, setup projects cannot be built.   
    
-6. Build setup projects in the Visual Studio integrated development environment.   
+6. Build setup projects in the Visual Studio integrated development environment.

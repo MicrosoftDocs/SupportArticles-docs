@@ -16,7 +16,7 @@ appliesto:
   - Office Professional Plus 2013
   - Windows Server 2012 Datacenter
   - Windows Server 2012 Datacenter
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Invalid product key or license mismatch" error message when you try to activate Office 2013

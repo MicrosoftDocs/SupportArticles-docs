@@ -15,7 +15,7 @@ search.appverid:
 appliesto: 
   - Word 2010
   - Word 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # You are prompted to save the changes to the global template every time that you exit Word 2007 or Word 2010

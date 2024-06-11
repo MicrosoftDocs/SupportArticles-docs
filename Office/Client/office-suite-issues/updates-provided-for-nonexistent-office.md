@@ -17,7 +17,7 @@ appliesto:
   - Office 2010
   - Office 2007
   - Office 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Microsoft Update and Windows Update offer updates for Office programs that you do not have installed

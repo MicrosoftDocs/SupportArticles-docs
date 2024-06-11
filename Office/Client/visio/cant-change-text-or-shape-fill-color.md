@@ -16,7 +16,7 @@ appliesto:
   - Visio Standard 2013
   - Visio Professional 2010
   - Visio Standard 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # You cannot change the text or shape fill color in Visio when using a High Contrast Windows theme

@@ -15,7 +15,7 @@ appliesto:
   - Office Excel 2007
   - Office Excel 2003
   - Excel 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Procedure to export a text file with both comma and quote delimiters in Excel
@@ -105,4 +105,4 @@ Before you work with the following sample code, follow these steps:
     End Sub
     ```
 
-5. Before you run the macro, select the data that you want to export, and then run the QuoteCommaExport subroutine.   
+5. Before you run the macro, select the data that you want to export, and then run the QuoteCommaExport subroutine.

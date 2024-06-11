@@ -15,7 +15,7 @@ appliesto:
   - Excel 2007
   - Excel 2003
   - Excel 2000
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Hide sheets and use the xlVeryHidden constant in a macro

@@ -17,7 +17,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to populate text boxes with multicolumn Combo Box selections
@@ -99,4 +99,3 @@ End Sub
 10. Quit the Visual Basic Editor, and then open the Form1 form in Form view.   
 11. Click an item in the combo box, and then click Next Record. Repeat this step for each record that you want to save.   
 12. Open Table1 in Table view to confirm that new records have been saved. Note that after you click an item in the combo box, the AfterUpdate property runs the event procedure that populates the three text boxes on the form, and a new record is added to Table1.
-
