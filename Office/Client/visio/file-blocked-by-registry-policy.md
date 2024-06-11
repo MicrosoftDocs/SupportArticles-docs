@@ -15,7 +15,7 @@ search.appverid:
 appliesto: 
   - Visio Professional 2013
   - Visio Standard 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Error message when you open a file type that is blocked by registry policy settings in Visio 2013

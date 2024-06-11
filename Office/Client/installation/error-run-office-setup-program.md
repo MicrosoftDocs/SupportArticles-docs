@@ -14,7 +14,7 @@ ms.author: luche
 ms.reviewer: jenl
 appliesto: 
   - Office 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Error 1919. Error configuring ODBC data source" when you run the Setup program for Office

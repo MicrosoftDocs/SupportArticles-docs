@@ -17,7 +17,7 @@ appliesto:
   - Visio Professional 2010
   - Visio Standard 2013
   - Visio Professional 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Enable the Windows Search service if you want to use the Search for Shapes feature in Visio 2010 or in Visio 2013
@@ -57,4 +57,3 @@ To enable the Windows Search service in Windows Server 2008 R2, follow these ste
 5. On the Role Services page, select the **Windows Search Service** role service, and then click **Next**.
 
 6. On the Confirmation page, verify that **Windows Search Service** is listed, and then click **Install**.
-

@@ -16,7 +16,7 @@ appliesto:
   - Excel 2003
   - Excel 2002
   - Excel 2000
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # The conditional formatting may be set incorrectly when you use VBA in Excel

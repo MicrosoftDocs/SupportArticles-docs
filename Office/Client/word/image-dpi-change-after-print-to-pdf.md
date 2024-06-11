@@ -15,7 +15,7 @@ search.appverid:
 appliesto: 
   - Microsoft Word 2010
   - Word 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Image DPI is changed after you print to PDF from Word 2013 or Word 2010

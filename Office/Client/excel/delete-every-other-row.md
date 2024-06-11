@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Excel 2010
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to delete every other row on an Excel worksheet

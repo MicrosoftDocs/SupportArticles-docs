@@ -20,7 +20,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "There isn't enough disk space or memory" error when you perform an operation on an Access table
@@ -104,7 +104,7 @@ For Microsoft Office Access 2016 that is running on a 64-bit Windows operating s
 > [!NOTE]
 > The sample code in this article uses Microsoft Data Access Objects. For this code to run properly, you must reference the Microsoft DAO 3.6 Object Library. To do so, click References on the Tools menu in the Visual Basic Editor, and make sure that the Microsoft DAO 3.6 Object Library check box is selected.
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements. The SetOptionmethod temporarily overrides values for the Microsoft Jet database engine keys in the registry. The new value remains in effect until you change it again, or until the DBEngine object is closed.
+Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you're familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements. The SetOptionmethod temporarily overrides values for the Microsoft Jet database engine keys in the registry. The new value remains in effect until you change it again, or until the DBEngine object is closed.
 
 > [!NOTE]
 > Changes made to the MaxLocksPerFilesetting by using the SetOption method will only be available through the current session of Data Access Objects (DAO). Queries that are run through the Microsoft Access user interface will still use the settings in the registry.
