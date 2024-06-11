@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
+  - Extensibility\Scripts
   - CSSTroubleshoot
 audience: ITPro
 ms.topic: troubleshooting

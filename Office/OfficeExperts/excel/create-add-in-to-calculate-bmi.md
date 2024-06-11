@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - sap:office-experts
   - CSSTroubleshoot
 appliesto: 

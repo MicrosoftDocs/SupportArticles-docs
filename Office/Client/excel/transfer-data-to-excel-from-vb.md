@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 ms.reviewer: grege
 search.appverid: 

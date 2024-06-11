@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: wdkbprem, ctrword
 ms.custom: 
+  - Editing\Insert
   - CSSTroubleshoot
 search.appverid: 
   - MET150

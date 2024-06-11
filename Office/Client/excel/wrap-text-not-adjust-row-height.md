@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: clayj
 ms.custom: 
+  - Editing\RowsOrColumns
   - CSSTroubleshoot
 search.appverid: 
   - MET150
