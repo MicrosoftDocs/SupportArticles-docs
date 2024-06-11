@@ -7,8 +7,6 @@
           href: ../access/ldb-file-description.md
         - name: Access cache formats for SharePoint
           href: ../access/access-cache-formats.md
-        - name: Access database engine cannot find input table
-          href: ../access/database-engine-not-find-input-table.md
         - name: Access error String data, right truncation (#0)
           href: ../access/string-data-right-truncation.md
         - name: Access freezes when opening a linked table
@@ -135,8 +133,6 @@
           href: ../access/saving-changes-require-exclusive-lock.md
         - name: Extra Access report page prints
           href: ../access/extra-access-report-page-prints.md
-        - name: Features incompatible with current Access version
-          href: ../access/fail-editing-database.md
         - name: File already in use
           href: ../access/error-opening-database.md
         - name: File association errors when opening databases
@@ -215,8 +211,6 @@
           href: ../access/save-changes-prompt.md
         - name: Prompted for username and password
           href: ../access/prompted-username-password.md
-        - name: Query doesn't return any data
-          href: ../access/query-returns-blank.md
         - name: Query must have at least one destination field
           href: ../access/query-must-have-at-least-one-destination-field.md
         - name: Reset an AutoNumber field value
@@ -357,8 +351,6 @@
           href: ../excel/specialcells(xlcelltypeblanks)-vba-function.md
         - name: 'A formula returns "#VALUE!" Error'
           href: ../excel/formula-returns-value-error.md
-        - name: Access data connections are slow to refresh
-          href: ../excel/access-data-connections-refresh-slowly.md
         - name: Algorithm is used by the XIRR() function
           href: ../excel/algorithm-of-xirr-funcation.md
         - name: An active process continues to run
@@ -369,14 +361,10 @@
           href: ../excel/autocomplete-not-work.md
         - name: Blank pages are unexpectedly printed
           href: ../excel/blank-pages-unexpectedly-printed.md
-        - name: Border missing when pasting table in email for Mac
-          href: ../excel/table-border-missing.md
         - name: Calculate ages before 1/1/1900
           href: ../excel/calculate-age-before-1-1-1900.md
         - name: Calculate interpolation step value
           href: ../excel/calculate-interpolation-step-value.md
-        - name: Can't add refedit control to VBA userform
-          href: ../excel/cant-add-refedit-control-to-vba-userform..md
         - name: Can't export to Excel from SharePoint Online
           href: ../excel/cannot-export-to-excel.md
         - name: Can't modify oData connection in PowerPivot
@@ -531,8 +519,6 @@
           href: ../excel/network-mapped-drive-hyperlinks-unc.md
         - name: Object Model calls fails from WorkbookOpen event
           href: ../excel/object-model-calls-fails-workbookopen-event.md
-        - name: Microsoft 365 users can't open or synchronize files
-          href: ../excel/cannot-operate-files.md
         - name: Operation Must Use an Updatable Query
           href: ../excel/fails-accessing-excel-through-odbc.md
         - name: Parts of Excel turn white or gray
@@ -541,8 +527,6 @@
           href: ../excel/paste-special-missing-or-not-working.md
         - name: Percentage format changes to Numeric
           href: ../excel/percentage-format-changes-numeric.md
-        - name: PowerPivot controls disabled with non-default Excel file format
-          href: ../excel/powerpivot-controls-disabled-with-non-default.md
         - name: Prevent files from opening automatically
           href: ../excel/files-open-automatically.md
         - name: Programmatically copy all range names
@@ -577,8 +561,6 @@
           href: ../excel/set-up-realtimedata-function.md
         - name: Startup message about updating linked workbooks
           href: ../excel/control-startup-message.md
-        - name: STEYX statistical functions
-          href: ../excel/statistical-functions-steyx.md
         - name: Too many different cell formats in Excel
           href: ../excel/too-many-different-cell-formats-in-excel.md
         - name: Transfer data to Excel from Visual Basic
@@ -633,14 +615,10 @@
           href: ../installation/forceupgrade-forcedowngrade-removed-odt-config.md
         - name: Install Office Pro 2013 on a Terminal Server
           href: ../installation/install-and-activate-office-2013.md
-        - name: Office 2010 installation requires MSXML
-          href: ../installation/office-installtion-need-msxml.md
         - name: Office setup issues
           href: ../installation/office-setup-issues.md
         - name: Use SaRA to collect data about Microsoft 365 Apps installations
           href: ../installation/use-sara-to-collect-install-info.md
-        - name: The ability to uninstall Office updates
-          href: ../installation/ability-to-uninstall-office.md
     - name: Mobile
       items:
         - name: Block use of Office add-ins from work or school accounts
@@ -667,8 +645,6 @@
       items:
         - name: "0x80004005: General Error Unable to Open Registry Key"
           href: ../office-suite-issues/fails-accessing-page-connected-access-database.md
-        - name: 0x80041015 when starting an Office application
-          href: ../office-suite-issues/0x80041015-start-office-program.md
         - name: AD FS sites are slow to open
           href: ../office-suite-issues/slow-open-adfs-sites.md
         - name: Another account is already signed in
@@ -705,12 +681,8 @@
           href: ../office-suite-issues/compile-error-procedure-too-large.md
         - name: Complete repair of corrupted files isn't guaranteed
           href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
-        - name: Document files in Office Document Cache not deleted
-          href: ../office-suite-issues/office-temporary-files-not-delete.md
         - name: Document Information Panel is deprecated
           href: ../office-suite-issues/document-information-panel-deprecate.md
-        - name: Enable Office 2010 to run on a terminal server
-          href: ../office-suite-issues/office-pro-plus-2010-terminal-server.md
         - name: Error when editing an equation in Office
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
         - name: Error when opening a document
@@ -721,8 +693,6 @@
           href: ../office-suite-issues/file-cannot-be-saved.md
         - name: Features to enable collaboration
           href: ../office-suite-issues/enable-collaboration.md
-        - name: Installing Office 2010 from Microsoft 365 Subscription fails
-          href: ../office-suite-issues/install-office-from-office-365-subscription.md
         - name: Invalid product key or license mismatch
           href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
         - name: Issue when launching Office in Microsoft Store app
@@ -755,8 +725,6 @@
           href: ../office-suite-issues/numbering-scheme-product-code-guids.md
         - name: Numbering Schema for Office 2016
           href: ../office-suite-issues/numbering-scheme-for-product-guid.md
-        - name: Office 2010 Setup program not restart
-          href: ../office-suite-issues/office-suite-setup-not-restart.md
         - name: Office End User License Agreement always appears
           href: ../office-suite-issues/office-end-user-license-agreement.md
         - name: Office error "could not create the work file"
@@ -777,8 +745,6 @@
           href: ../office-suite-issues/duplicate-service-listed.md
         - name: Set default font for Office apps
           href: ../office-suite-issues/set-default-font.md
-        - name: Some VB Editor settings disabled in Office 2010
-          href: ../office-suite-issues/vb-editor-settings-disabled.md
         - name: The document caused a serious error the last time it was opened
           href: ../office-suite-issues/error-open-word-excel.md
         - name: This file can't be previewed
@@ -933,8 +899,6 @@
           href: ../settings/how-to-use-problem-steps-recorder.md
         - name: Securely opening Office documents with DDE fields
           href: ../settings/how-to-securely-open-office-documents-that-have-dde-fields.md
-        - name: Task panes in Office
-          href: ../settings/office-program-task-panes.md
         - name: Use registry to clear the most recently used files list
           href: ../settings/clear-most-recently-used-file.md
     - name: Third party add-ins
@@ -973,8 +937,6 @@
           href: ../visio/not-a-valid-win32-application-error.md
         - name: Troubleshoot damaged drawings in Visio
           href: ../visio/troubleshoot-damaged-drawings.md
-        - name: Visio doesn't have shapes and stencils
-          href: ../visio/visio-not-have-certain-shapes-and-stencils.md
         - name: Visio Services does not render diagrams
           href: ../visio/visio-services-not-render-diagrams.md
         - name: Visio Services was unable to load Web Drawing
