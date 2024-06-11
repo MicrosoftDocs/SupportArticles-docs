@@ -12,13 +12,13 @@ appliesto:
 # KB5037331 - Cumulative Update 27 for SQL Server 2019
 
 _Release Date:_ &nbsp; June 13, 2024  
-_Version:_ &nbsp; 15.0.4375.1
+_Version:_ &nbsp; 15.0.4375.3
 
 ## Summary
 
 This article describes Cumulative Update package 27 (CU27) for Microsoft SQL Server 2019. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:
 
-- SQL Server - Product version: **15.0.4375.1**, file version: **2019.150.4375.1**
+- SQL Server - Product version: **15.0.4375.3**, file version: **2019.150.4375.3**
 - Analysis Services - Product version: **15.0.35.45**, file version: **2018.150.35.45**
 
 ## Known issues in this update
