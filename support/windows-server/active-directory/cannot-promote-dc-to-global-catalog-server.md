@@ -26,8 +26,8 @@ You can't promote a Windows Server domain controller to a global catalog server.
 > [!Note]
 > To run a domain controller diagnostic check, follow the steps:
 > 
-> 1.	Select **Start** > **Run**, type *cmd*, and then select **OK**.
-> 2.	At the command prompt, type `dcdiag /v /f: logfile.txt`, and then press <kbd>Enter</kbd>.
+> 1. Select **Start** > **Run**, type *cmd*, and then select **OK**.
+> 2. At the command prompt, type `dcdiag /v /f: logfile.txt`, and then press <kbd>Enter</kbd>.
 
 Additionally, the output may show that the domain controller doesn't pass the advertising test and isn't advertising the global catalog. This output occurs when a domain controller logs event ID 1578 and you run a domain controller diagnostic check (*Dcdiag.exe*) on that domain controller.
 
@@ -51,20 +51,20 @@ When a domain controller is selected to host the global catalog, the KCC on the 
 Global catalog promotion may fail if one of the following conditions is true:
 
 - The configuration partition on one or more domain controllers contains a cross-reference object to a stale or orphaned domain, but no domain controllers for that domain are located in the forest.
--	The metadata for a source domain controller that's designated by the KCC is located in the configuration partition of one or more domain controllers but doesn't represent a domain controller currently present in the forest.
--	The source domain controller selected by the KCC on the global catalog that's being promoted is offline.
--	The source domain controller selected by the KCC on the global catalog that's being promoted is inaccessible over the network. This domain controller is inaccessible because there's no network connectivity or partial network connectivity. Here are examples of network connectivity issues:
+- The metadata for a source domain controller that's designated by the KCC is located in the configuration partition of one or more domain controllers but doesn't represent a domain controller currently present in the forest.
+- The source domain controller selected by the KCC on the global catalog that's being promoted is offline.
+- The source domain controller selected by the KCC on the global catalog that's being promoted is inaccessible over the network. This domain controller is inaccessible because there's no network connectivity or partial network connectivity. Here are examples of network connectivity issues:
    -	Ports are blocked.
    - IP addresses are filtered.
    - Networks aren't fully routed, but the **Bridge all site links** option is enabled.
--	Source domain global catalogs are constrained from acting as bridgeheads because administrators have incorrectly selected non-global catalog domain controllers as preferred bridgeheads.
--	The global catalog that's being promoted can't build a connection link from the selected source domain controller because of the error status that's logged in one of the [preceding events](#event-messages-logged-in-the-directory-services-log-of-windows-server).
+- Source domain global catalogs are constrained from acting as bridgeheads because administrators have incorrectly selected non-global catalog domain controllers as preferred bridgeheads.
+- The global catalog that's being promoted can't build a connection link from the selected source domain controller because of the error status that's logged in one of the [preceding events](#event-messages-logged-in-the-directory-services-log-of-windows-server).
 
 An orphaned domain prevents the domain controller from finishing the replication. The domain controller can't advertise itself as a global catalog server until the replication is completed. Several issues can lead to an orphaned domain:
 
--	Active Directory is removed from all the domain controllers of a domain, but the domain partition cross-reference object still remains.
--	Active Directory is removed from a domain controller, and the directory partition of the domain controller is removed. The domain controller is then re-created before the replication is completed. These events cause lingering phantoms that a cross-reference object incorrectly references.
--	The domain-naming update for the domain hasn't reached the problematic domain controller. Or, the domain-naming update for a newly promoted domain may not have reached any domain controllers outside that domain. This issue would be a temporary problem.
+- Active Directory is removed from all the domain controllers of a domain, but the domain partition cross-reference object still remains.
+- Active Directory is removed from a domain controller, and the directory partition of the domain controller is removed. The domain controller is then re-created before the replication is completed. These events cause lingering phantoms that a cross-reference object incorrectly references.
+- The domain-naming update for the domain hasn't reached the problematic domain controller. Or, the domain-naming update for a newly promoted domain may not have reached any domain controllers outside that domain. This issue would be a temporary problem.
 
 You can verify whether the domain-naming update has reached all the domain controllers by modifying the **dumpDatabase** attribute on the domain controller that is experiencing the problem. For more information, see [How to use the online dbdump feature in Ldp.exe](use-online-dbdump-feature-ldp-dot-exe.md).
 
