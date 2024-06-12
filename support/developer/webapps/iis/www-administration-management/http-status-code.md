@@ -3,7 +3,7 @@ title: HTTP status code overview
 description: This article provides a list of the HTTP status codes in IIS 7.0 and later versions.
 ms.date: 02/16/2023
 ms.custom: sap:Health, Diagnostic, and Performance Features\HTTP error logging
-ms.reviewer: v-jayc
+ms.reviewer: robmcm
 ms.subservice: www-administration-management
 ---
 
@@ -93,7 +93,7 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
 | [403](#403---forbidden) | Forbidden | The server understood the request but refuses to fulfill it. |
 | [404](#404---not-found) | Not found | The origin server didn't find a current representation for the target resource or isn't willing to disclose that one exists. |
 | [405](#405-406-412-413) | Method not allowed. | The method received in the request-line is known by the origin server but not supported by the target resource. |
-| [406](#405-406-412-413) | Client browser doesn't accept the MIME type of the requested page. |
+| [406](#405-406-412-413) | Not acceptable | The client browser doesn't accept the MIME type of the requested resource. |
 | [408](#405-406-412-413) | Request timed out | The server didn't receive a complete request message within the time that it was prepared to wait. |
 | [412](#405-406-412-413) | Precondition failed. | One or more conditions given in the request header fields evaluated to false when tested on the server. |
 | [413](#405-406-412-413) | Request entity too large. | The HTTP request payload is too big. |
@@ -145,10 +145,11 @@ IIS 7.0 and later versions define several HTTP status codes that indicate a more
 | 401.3 | Unauthorized due to ACL on resource | This HTTP status code indicates a problem in the NTFS file system permissions. This problem may occur even if the permissions are correct for the file that you try to access. For example, this problem occurs if the IUSR account doesn't have access to the _C:\Winnt\System32\Inetsrv_ directory. |
 | 401.4 | Authorization failed by filter | An Internet Server Application Programming Interface (ISAPI) filter doesn't let the request be processed because of an authorization problem. |
 | 401.5 | Authorization failed by ISAPI/CGI application | An ISAPI application or a Common Gateway Interface (CGI) application doesn't let the request be processed because of an authorization problem. |
-| 401.501 | Access Denied: Too many requests from the same client IP; Dynamic IP Restriction Concurrent request rate limit reached. |  |
-| 401.502 | Forbidden: Too many requests from the same client IP; Dynamic IP Restriction Maximum request rate limit reached. |  |
-| 401.503 | Access Denied: the IP address is included in the Deny list of IP Restriction |  |
-| 401.504 | Access Denied: the host name is included in the Deny list of IP Restriction |  |
+| 404.501 | Access denied: concurrent request rate limit reached | Dynamic IP Restriction: too many concurrent requests were made from the same client IP. |
+| 404.502 | Access denied: maximum request rate limit reached | Dynamic IP Restriction: the maximum number requests from the same client IP within a specified time limit was reached. |
+| 404.503 | Access denied: IP address denied | IP Restriction: the client IP address is included in the deny list. |
+| 404.504 | Access denied: host name denied | IP Restriction: the client host name is included in the deny list. |
+
 
 #### 403 - Forbidden
 
@@ -164,24 +165,25 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 403.6 | IP address rejected | The server is configured to deny access to the current IP address. |
 | 403.7 | Client certificate required | The server is configured to require a certificate for client authentication. But the client browser doesn't have an appropriate client certificate installed. For more information, see [HTTP error 403.7](../health-diagnostic-performance/http-error-403-7-forbidden-web-app.md). |
 | 403.8 | Site access denied | The server is configured to deny requests based on the Domain Name System (DNS) name of the client computer. For more information, see [Dynamic IP Address restrictions](/iis/get-started/whats-new-in-iis-8/iis-80-dynamic-ip-address-restrictions). |
-| 403.9 | Forbidden: too many clients are trying to connect to the web server |
-| 403.10 | Forbidden: web server is configured to deny Execute access |
-| 403.11 | Forbidden: Password has been changed |
+| 403.9 | Concurrent connections exceeded | Too many clients are trying to connect to the web server. |
+| 403.10 | Forbidden: Execute access denied | The web server is configured to deny Execute access. |
+| 403.11 | Forbidden: Password changed | A password has been changed. |
 | 403.12 | Mapper denied access | The page that you want to access requires a client certificate. But, the user ID that is mapped to the client certificate is denied access to the file. |
 | 403.13 | Client certificate revoked | The client browser tries to use a client certificate that was revoked by the issuing certification authority. |
 | 403.14 | Directory listing denied | The server isn't configured to display a content directory listing, and a default document isn't set. For more information, see [HTTP Error 403.14](../health-diagnostic-performance/http-403-14-forbidden-webpage.md). |
-| 403.15 | Forbidden: Client access licenses have exceeded limits on the web server |
-| 403.16 | Client certificate is untrusted or invalid. | The client browser tries to use an invalid client certificate. Or the server that is running IIS 7.0 and later versions doesn't trust the client certificate. For more information, see [HTTP Error 403.16](../health-diagnostic-performance/http-403-forbidden-access-website.md). |
-| 403.17 | Client certificate has expired or is not yet valid. | The client browser tries to use a client certificate that is expired or that isn't yet valid. |
-| 403.18 | Cannot execute requested URL in the current application pool. | A custom error page is configured. And the application pool of the customer error page is different with the application pool of the requested URL. |
-| 403.19 | Cannot execute CGI applications for the client browser in this application pool. | The identity of the application pool doesn't have the Replace a process level token user right. |
-| 403.20 | Forbidden: Passport logon failed |
-| 403.21 | Forbidden: Source access denied |
-| 403.22 | Forbidden: Infinite depth is denied |
-| 403.501 | Forbidden: Too many requests from the same client IP; Dynamic IP Restriction Concurrent request rate limit reached |
-| 403.502 | Forbidden: Too many requests from the same client IP; Dynamic IP Restriction Maximum request rate limit reached |
-| 403.503 | Forbidden: the IP address is included in the Deny list of IP Restriction |
-| 403.504 | Forbidden: the host name is included in the Deny list of IP Restriction |
+| 403.15 | Client access licenses exceeded | The number of client access licenses have exceeded limits on the web server. |
+| 403.16 | Client certificate is untrusted or invalid | The client browser tries to use an invalid client certificate. Or the server that is running IIS 7.0 and later versions doesn't trust the client certificate. For more information, see [HTTP Error 403.16](../health-diagnostic-performance/http-403-forbidden-access-website.md). |
+| 403.17 | Client certificate has expired or is not yet valid | The client browser tries to use a client certificate that is expired or that isn't yet valid. |
+| 403.18 | Cannot execute requested URL in the current application pool | A custom error page is configured. And the application pool of the customer error page is different with the application pool of the requested URL. |
+| 403.19 | Cannot execute CGI applications for the client browser in this application pool | The identity of the application pool doesn't have the Replace a process level token user right. |
+| 403.20 | Forbidden: Passport logon failed | Client requests using passport logon is not allowed. |
+| 403.21 | Forbidden: Source access denied | WebDAV requests for the source code of a resource are not allowed. |
+| 403.22 | Forbidden: Infinite depth is denied | WebDAV requests with an infinite depth are not allowed. |
+| 404.501 | Forbidden: concurrent request rate limit reached | Dynamic IP Restriction: too many concurrent requests were made from the same client IP. |
+| 404.502 | Forbidden: maximum request rate limit reached | Dynamic IP Restriction: the maximum number requests from the same client IP within a specified time limit was reached. |
+| 404.503 | Forbidden: IP address denied | IP Restriction: the client IP address is included in the deny list. |
+| 404.504 | Forbidden: host name denied | IP Restriction: the client host name is included in the deny list. |
+
 
 #### 404 - Not found
 
@@ -190,7 +192,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | Code | Description | Notes |
 |---|---|---|
 | 404.0 | Not found | The file that you try to access is moved or doesn't exist. |
-| 404.1 | Site Not Found |
+| 404.1 | Site Not Found | The website that was requested doesn't exist. |
 | 404.2 | ISAPI or CGI restriction. | The requested ISAPI resource or the requested CGI resource is restricted on the computer. For more information, see [HTTP Error 404.2](../site-behavior-performance/http-error-402-webpage.md). |
 | 404.3 | MIME type restriction. | The current MIME mapping for the requested extension type is invalid or isn't configured. |
 | 404.4 | No handler configured. | The file name extension of the requested URL doesn't have a handler that is configured to process the request on the Web server. |
@@ -205,24 +207,24 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 404.13 | Content length too large. | The request contains a `Content-Length` header. The value of the `Content-Length` header is larger than the limit that is allowed for the server. For more information, see [HTTP Error 404.13 - CONTENT_LENGTH_TOO_LARGE](../health-diagnostic-performance/http-404-13-website.md). |
 | 404.14 | Request URL too long. | The requested URL exceeds the limit that is allowed for the server. |
 | 404.15 | Query string too long. | The request contains a query string that is longer than the limit that is allowed for the server. |
-| 404.16 | DAV request sent to the static file handler |
-| 404.17 | Dynamic content mapped to the static file handler. | For more information, see [HTTP Error 404.17 - Not Found](../health-diagnostic-performance/error-message-you-visit-web-site.md). |
-| 404.18 | Querystring sequence denied |
-| 404.19 | Denied by filtering rule |
-| 404.20 | Too Many URL Segments |
-| 404.501 | Not Found: Too many requests from the same client IP; Dynamic IP Restriction Concurrent request rate limit reached |
-| 404.502 | Not Found: Too many requests from the same client IP; Dynamic IP Restriction Maximum request rate limit reached |
-| 404.503 | Not Found: the IP address is included in the Deny list of IP Restriction |
-| 404.504 | Not Found: the host name is included in the Deny list of IP Restriction |
+| 404.16 | WebDAV request sent to the static file handler | A WebDAV request was not processed by a WebDAV featured and was sent to the static file handler. |
+| 404.17 | Dynamic content mapped to the static file handler | For more information, see [HTTP Error 404.17 - Not Found](../health-diagnostic-performance/error-message-you-visit-web-site.md). |
+| 404.18 | Query string sequence denied | The request contains a query string sequence that is not allowed. |
+| 404.19 | Denied by filtering rule | The request was denied due to a Request Filtering rule. |
+| 404.20 | Too Many URL Segments | The request contains too many URL segments. |
+| 404.501 | Not found: concurrent request rate limit reached | Dynamic IP Restriction: too many concurrent requests were made from the same client IP. |
+| 404.502 | Not found: maximum request rate limit reached | Dynamic IP Restriction: the maximum number requests from the same client IP within a specified time limit was reached. |
+| 404.503 | Not found: IP address denied | IP Restriction: the client IP address is included in the deny list. |
+| 404.504 | Not found: host name denied | IP Restriction: the client host name is included in the deny list. |
 
 #### 405, 406, 412, 413
 
 | Code | Description | Notes |
 |---|---|---|
 | 405.0 | Method not allowed. | The request is made by using an HTTP method that isn't valid. For more information, see [HTTP Error 405.0](../health-diagnostic-performance/http-error-405-website.md). |
-| 406.0 | Invalid MIME type. | The request is made by using an `Accept` header that contains a MIME value that isn't valid. |
+| 406.0 | Not acceptable. | The is made by using an `Accept` header that contains a MIME value that isn't valid. |
 | 412.0 | Precondition failed. | The request is made by using an `If-Match` request header that contains a value that isn't valid. |
-| 413.0 | Request entity too large. | The HTTP request payload is too big. |
+| 413.0 | Request entity too large. | The request is made by using a payload that is too big. |
 
 ### 5**xx** - Server error
 
@@ -296,5 +298,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 
 - [HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html#name-status-codes)
 - [How to Use HTTP Detailed Errors in IIS 7.0](/iis/troubleshoot/diagnosing-http-errors/how-to-use-http-detailed-errors-in-iis)
+- [RFC 2616: Hypertext Transfer Protocol -- HTTP/1.1](https://www.rfc-editor.org/rfc/rfc2616.html)
+- [RFC 6585: Additional HTTP Status Codes](https://www.rfc-editor.org/rfc/rfc6585.html)
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
