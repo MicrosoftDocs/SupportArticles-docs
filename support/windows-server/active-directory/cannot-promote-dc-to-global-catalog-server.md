@@ -73,10 +73,10 @@ In the dump file that you created, look for the cross-reference record for the d
 In the following example, object 5070 references object 5072. However, object 5072 isn't assigned a GUID:
 
 ```ldp
-5070 4111 1 1459 true 3 DOMAIN DOMAIN 5072 196619 - 6f73dba6-33e1-41e5-9330-c09a60a37942 4  
+5070 4111 1 1459 true 3 <DOMAIN> <DOMAIN> 5072 196619 - 6f73dba6-33e1-41e5-9330-c09a60a37942 4  
  objectclass: 196619, 65536  
-5071 2 2 - false *\<DateTime>* - 1376281 com com - - - - -  
-5072 5071 5 - false *\<DateTime>* - 1376281 domain domain  
+5071 2 2 - false <DateTime> - 1376281 com com - - - - -  
+5072 5071 5 - false <DateTime> - 1376281 <domain> <domain>  
 ```
 
 ## Determine the cause of the global catalog promotion failure
