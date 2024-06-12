@@ -6,10 +6,10 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, v-tappelgate, v-lianna
+ms.reviewer: kaushika, v-tappelgate, v-lianna, sagiv
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
-# You cannot promote a Windows Server domain controller to be a global catalog server
+# Can't promote a Windows Server domain controller to a global catalog server
 
 This article provides solutions to an issue where you can't promote a Windows Server domain controller to a global catalog server.
 
