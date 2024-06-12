@@ -2,7 +2,7 @@
 title: Error message in SQL Server 2008 Replication Monitor  
 description: This article provides a workaround for a problem that occurs when you try to view a publication in Replication Monitor.
 ms.date: 07/22/2020
-ms.custom: sap:Replication, change tracking, change data capture
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ms.reviewer: cmathews
 ---
 # Error message in SQL Server 2008 Replication Monitor: An error occurred while retrieving the publication data

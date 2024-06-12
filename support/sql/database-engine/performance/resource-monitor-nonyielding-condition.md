@@ -2,7 +2,7 @@
 title: Resource Monitor non-yielding condition
 description: Provides more information regarding non yielding Resource Monitor..
 ms.date: 02/12/2020
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: ramakoni
 ---
 # Resource Monitor enters a non-yielding condition on a server running SQL Server

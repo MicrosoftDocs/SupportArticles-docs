@@ -2,7 +2,7 @@
 title: Use server name parameter in a connection string
 description: This article describes how to programmatically specify the client network library in the connection string when you connect to a SQL Server database.
 ms.date: 09/25/2020
-ms.custom: sap:MDAC and ADO
+ms.custom: sap:Database Connectivity and Authentication
 ms.reviewer: VIKRAMV
 ms.topic: how-to
 ---

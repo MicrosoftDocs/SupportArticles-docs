@@ -2,7 +2,7 @@
 title: Evaluation period has expired when you use SSMS
 description: This article provides a resolution for the problem that occurs when you use Microsoft SQL Server tools such as SQL Server Management Studio (SSMS) or SQL Profiler.
 ms.date: 10/22/2020
-ms.custom: sap:Database Engine
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ---
 # Evaluation period has expired error message when working with SQL server
 

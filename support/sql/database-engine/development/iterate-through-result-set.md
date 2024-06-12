@@ -2,7 +2,7 @@
 title: Iterate through a result set by using Transact-SQL
 description: This article describes various methods that you can use to iterate through a result set by using Transact-SQL in SQL Server.
 ms.date: 10/29/2020
-ms.custom: sap:Administration and Management
+ms.custom: sap:Database or Client application Development
 ms.topic: how-to
 ---
 

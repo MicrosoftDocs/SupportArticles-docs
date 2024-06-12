@@ -2,7 +2,7 @@
 title: Full-text index doesn't index attribute values
 description: This article provides resolutions for the problem where SQL Server full-text index on XML column does not index attribute values for the inner nodes.
 ms.date: 09/19/2022
-ms.custom: sap:Administration and Management
+ms.custom: sap:Full-Text Search, Semantic Search
 ms.reviewer: joaol
 ---
 # SQL Server full-text index on XML column doesn't index attribute values for the inner nodes

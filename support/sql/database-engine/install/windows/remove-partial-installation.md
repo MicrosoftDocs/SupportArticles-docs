@@ -2,7 +2,7 @@
 title: Remove a partial installation of SQL Server
 description: This article describes the procedure to remove a partial installation of SQL Server.
 ms.date: 09/25/2020
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: amylewis
 ms.topic: how-to
 ---

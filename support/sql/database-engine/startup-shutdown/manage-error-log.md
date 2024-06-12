@@ -2,7 +2,7 @@
 title: Manage the error log
 description: This article describes how to manage the SQL Server error log.
 ms.date: 11/05/2022
-ms.custom: sap:Database Engine
+ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ms.reviewer: SureshKa
 ms.topic: how-to
 ---
