@@ -1,9 +1,9 @@
 ---
 title: C++ Runtime packages for Desktop Bridge
 description: Describes how Windows desktop applications that have a dependency on the C++ Runtime libraries can't redistribute the version of the libraries that's included with Visual Studio or via the Visual C++ redistributable (VCRedist) packages. Explains how to create a Desktop Bridge container that includes the correct C++ Runtime libraries.
-ms.date: 04/13/2020
+ms.date: 06/12/2024
 ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
-ms.reviewer: ericmitt, sherifm
+ms.reviewer: ericmitt, sherifm, msaleh
 ms.topic: how-to
 ---
 # C++ Runtime framework packages for Desktop Bridge
@@ -21,14 +21,16 @@ Windows desktop applications that have a dependency on the C++ Runtime libraries
 
 Microsoft provides C++ Runtime framework packages to allow applications to reference the C++ runtime from desktop applications distributed through the Windows Store. These packages are distributed and updated through the Windows Store and are handled similarly to C++ UWP framework packages.
 
-For development purposes, the current version (v14.0) of both debug and retail appx packages are included with Visual Studio 2019 when you choose the **Universal Windows Platform Development** workload with the optional **C++ (v142) Universal Windows Tools** component. The packages can be found under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0`.
+For development purposes, the current version (v14.0) of both debug and retail appx packages are included with Visual Studio 2022 when you choose the **Universal Windows Platform Development** workload with the optional **C++ (v143) Universal Windows Tools** component. The packages can be found under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0`.
 
-In some scenarios such as [Windows Sandbox](/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview) or where applications run on offline machines, developers may find it easier to download the packages corresponding to their deployment architectures from one of the links below and manually install them using the `Add-AppxPackage` PowerShell cmdlet:
-
-- [Microsoft.VCLibs.arm.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm.14.00.Desktop.appx)
-- [Microsoft.VCLibs.arm64.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm64.14.00.Desktop.appx)
-- [Microsoft.VCLibs.x64.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx)
-- [Microsoft.VCLibs.x86.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.x86.14.00.Desktop.appx)
+> [!NOTE]
+> 
+> The following package download links are now deprecated, and may no longer work in the future. Make sure to use the method described above to obtain the framework packages.
+>
+> - [Microsoft.VCLibs.arm.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm.14.00.Desktop.appx)
+> - [Microsoft.VCLibs.arm64.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm64.14.00.Desktop.appx)
+> - [Microsoft.VCLibs.x64.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx)
+> - [Microsoft.VCLibs.x86.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.x86.14.00.Desktop.appx)
 
 ## Legacy Desktop framework packages
 
