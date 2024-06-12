@@ -3,7 +3,7 @@ title: C++ Runtime packages for Desktop Bridge
 description: Describes how Windows desktop applications that have a dependency on the C++ Runtime libraries can't redistribute the version of the libraries that's included with Visual Studio or via the Visual C++ redistributable (VCRedist) packages. Explains how to create a Desktop Bridge container that includes the correct C++ Runtime libraries.
 ms.date: 06/12/2024
 ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
-ms.reviewer: ericmitt, sherifm
+ms.reviewer: ericmitt, sherifm, msaleh
 ms.topic: how-to
 ---
 # C++ Runtime framework packages for Desktop Bridge
