@@ -4,7 +4,7 @@ description: Provides information about the Decimal auto rounding error (error c
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 02/05/2024
+ms.date: 06/12/2024
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
@@ -19,7 +19,7 @@ Error code *ERR00012* is logged in the **Bpa self help logs** table in Microsoft
 
 ## Resolution
 
-No immediate action is needed. This warning is displayed because a mismatch in decimal entries has been detected. The rounding process ensures that values conform to the required format without significant impact on data accuracy. This warning is for informational purposes only to make you aware of the automatic rounding adjustment.
+No immediate action is needed. This warning is displayed because a mismatch in decimal entries has been detected. The rounding process ensures that values conform to the required format without significantly impacting on data accuracy. This warning is for informational purposes only to make you aware of the automatic rounding adjustment.
 
 Here's an example of a record:
 
