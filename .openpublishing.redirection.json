@@ -11179,6 +11179,11 @@
       "source_path": "support/dynamics-365/supply-chain/production/resource-name-not-updated.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/production/resource-name-not-updated",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "support/dynamics/index.yml",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    } 
   ]
 }
