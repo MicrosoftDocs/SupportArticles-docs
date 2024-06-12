@@ -1,7 +1,7 @@
 ---
 title: Identify computers that have MCA issues
-description: Discusses how to determine whether you have an "MCA issue" that can be remediated by using `MaxConcurrentApi` in the registry, and how to identify the affected computers in your infrastructure.
-ms.date: 06/07/2024
+description: Discusses how to determine whether you have an MCA issue that you can fix by configuring MaxConcurrentApi in the registry, and how to identify the affected computers in your infrastructure.
+ms.date: 06/12/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
