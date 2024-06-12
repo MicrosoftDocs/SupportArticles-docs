@@ -1,6 +1,6 @@
 ---
-title: Fix Windows Update errors via DISM or System Update Readiness tool
-description: Use the System Update Readiness Tool or the DISM tool to fix problems that prevent Windows Update from installing successfully.
+title: Fix Windows Update corruptions and installation failures
+description: Use the DISM tool to fix problems that prevent Windows Update from installing successfully.
 ms.date: 06/11/2024
 manager: dcscontentpm
 audience: ITPro
@@ -14,7 +14,7 @@ adobe-target: true
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
 --->
 
-# Fix Windows Update errors by using the DISM or System Update Readiness tool
+# Fix Windows Update corruptions and installation failures
 
 This article offers you advanced manual methods to fix problems that prevent Windows Update from installing successfully by using Deployment Image Servicing and Management (DISM) tool.
 
@@ -54,12 +54,12 @@ For example, an update might not install if a system file is damaged. The DISM m
 
 Check this page for [Windows Update troubleshooting scenarios](../../windows-client/deployment/troubleshoot-windows-update-issues.md).
 
-## Using DISM to repair Windows update corruptions
+## Using DISM to repair Windows Update corruptions
 
 > [!NOTE]
 > The solution mentioned in this section applies to Modern Windows versions like Windows 11, Windows 10, Windows Server 2016, or later.
 
-To resolve Windows update corruptions and address update installation failures, use the DISM tool. Then, install the Windows update.
+To resolve Windows Update corruptions and address update installation failures, use the DISM tool. Then, install the Windows Update.
 
 1. Open an elevated command prompt. To do this, open the **Start** menu or **Start** screen, type _Command Prompt_, right-click **Command Prompt**, and then select **Run as administrator**. If you're prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
 
@@ -70,26 +70,26 @@ To resolve Windows update corruptions and address update installation failures, 
     ```
 
     > [!IMPORTANT]
-    > DISM Repair works best when you have connectivity to Microsoft Update servers to fetch missing/corrupted files. When you use the above command, DISM will try to get the files needed to fix any corruptions from Windows Update. But if your computer can't connect to Windows Update. You can alternatively use a working Windows installation as the source for repairs, or you can use files from a Windows folder on a network or from a USB or DVD. Instead, use this command:
+    > DISM repair works best when you have connectivity to Microsoft Update servers to fetch missing or corrupted files. When you use the above command, DISM will get the files needed to fix any corruptions from Windows Update. But if your computer can't connect to Windows Update. You can alternatively use a working Windows installation as the source for repairs, or you can use files from a Windows folder on a network or from a USB or DVD. Instead, use this command:
 
     ```console
     DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:\\networkshare\c$\winsxs /LimitAccess
     ```
 
     > [!NOTE]
-    > Replace the _C:\RepairSource\Windows_ placeholder with the location of your repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the result of scan is “The restore operation completed successfully”. then we can go to next step. if not, try to Fix errors found in the CBS log file.
+    > Replace `\\networkshare\c$\winsxs` with the location of your repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the result of scan is "The restore operation completed successfully", then we can go to the next step. if not, try to fix errors found in the CBS log file.
 
 3. Type the `sfc /scannow` command and press Enter. It may take several minutes for the command operation to be completed.
 
 4. Close the command prompt, and then run **Windows Update** again.
 
-DISM creates a log file (_%windir%/Logs/CBS/CBS.log_) that captures any issues that the tool found or fixed. _%windir%_ is the folder in which Windows is installed. For example, the _%windir%_ folder is _C:\Windows_.
+DISM creates a log file (_%windir%/Logs/CBS/CBS.log_) that captures any issues that the tool found or fixed. _%windir%_ is the folder in which Windows is installed. For example, the _%windir%_ folder is _C:\\Windows_.
 
 ## How does DISM Repair work?
 
 DISM is a command-line tool that is used to service and repair Windows images, including the Windows Recovery Environment, Windows Setup, and Windows PE (WinPE). It can also be used to repair the local Windows image on your computer.
 
-To give you a better understanding, here’s a summary of the resources that the DISM tool checks for integrity:
+To give you a better understanding, here's a summary of the resources that the DISM tool checks for integrity:
 
 - Files that are located in the following directories:
   - _%SYSTEMROOT%\Servicing\Packages_
@@ -151,7 +151,7 @@ To manually fix corruption errors that the DISM tool detects but can't fix, foll
    - CBS MUM Missing: The `Microsoft-Windows-Client-Features-Package` is missing a required MUM file.
    - CSI Manifest Corruption: There were two instances of manifest corruption. One was fixed `(wow64_microsoft-windows-audio-mmecore-acm)`, and the other `(wow64_microsoft-windows-audio-volumecontrol)` remains corrupt.
 
-3. To Get the repair files, see NewArticleWillLink for another option on fixing errors in the Cbs.logs
+3. To get the repair files, see NewArticleWillLink for another option on fixing errors in the _Cbs.log_.
 
 ## Data collection
 
