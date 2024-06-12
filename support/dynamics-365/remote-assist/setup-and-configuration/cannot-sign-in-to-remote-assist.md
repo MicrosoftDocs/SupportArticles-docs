@@ -5,7 +5,7 @@ author: davepinch
 ms.author: davepinch
 ms.reviewer: v-wendysmith, mhart
 ms.date: 10/27/2023
-ms.custom: bap-template
+ms.custom: sap:Dynamics 365 Remote Assist\Setup and configuration, bap-template
 ---
 # Can't sign in to Dynamics 365 Remote Assist
 

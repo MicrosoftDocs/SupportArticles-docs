@@ -4,6 +4,7 @@ description: Provides a resolution for Microsoft Entra ID (formerly Azure Active
 author: raybennett-msft
 ms.author: bennettray
 ms.date: 05/07/2024
+ms.custom: sap:Point of sale (POS)\Issues with Store Commerce app reliability
 #customer intent: As a developer, I want to resolve login issues with POS so that I can utilize POS on my CHE.
 ---
 # Known issues: Commerce POS

@@ -233,6 +233,8 @@
         href: connectivity/troubleshoot-connections-endpoints-outside-virtual-network.md
       - name: DNS resolution failure from within pod but not from worker node
         href: connectivity/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md
+      - name: Troubleshoot DNS failures across an AKS cluster in real-time
+        href: connectivity/troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md
       - name: Traffic between node pools is blocked by custom NSG
         href: connectivity/traffic-between-node-pools-is-blocked.md
       - name: Can't view resources in Kubernetes resource viewer on Azure portal

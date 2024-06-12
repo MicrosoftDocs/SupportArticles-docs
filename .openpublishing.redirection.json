@@ -11164,6 +11164,26 @@
       "source_path": "support/windows-server/active-directory/find-current-schema-version.md",
       "redirect_url": "/windows-server/identity/ad-ds/deploy/find-active-directory-schema",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/item-rm-not-reserved.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/production/item-rm-not-reserved",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/picking-list-warehouse-not-updated-bom-line.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/production/picking-list-warehouse-not-updated-bom-line",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/resource-name-not-updated.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/production/resource-name-not-updated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/index.yml",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    } 
   ]
 }
