@@ -7,6 +7,7 @@ ms.reviewer: twheeloc
 ms.date: 02/05/2024
 ms.search.form: business-performance-analytics
 audience: Application User
+ms.custom: sap:Business intelligence, reporting, analytics
 ---
 # Decimal limit exceeded: Error code: ERR00011 [Type: Warning]
 

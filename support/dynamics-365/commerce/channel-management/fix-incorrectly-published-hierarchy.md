@@ -4,6 +4,7 @@ description: Provides a resolution for an issue where a hierarchy is incorrectly
 author: bstorie
 ms.author: brstor
 ms.date: 02/20/2024
+ms.custom: sap:Channel management\Issues with channel setup and configuration
 ---
 # A hierarchy is incorrectly published to a future date
 
