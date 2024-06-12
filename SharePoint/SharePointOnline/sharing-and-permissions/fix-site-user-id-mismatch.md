@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 12/17/2023
+ms.date: 06/12/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -69,7 +69,7 @@ To retrieve multiple OneDrive URLs, use one of the methods in [View OneDrive URL
 
 ### Common scenarios
 
-The Site User Mismatch diagnostic can use the UPN that was used by a deleted account to fix the following common issues that might occur when a new account is created. 
+The Site User Mismatch diagnostic can fix the following common issues that can occur when a new account is created by using the UPN that was used by a deleted account. 
 
 #### A user is directed to a new OneDrive site that has a suffix appended to the expected URL
 
@@ -88,7 +88,7 @@ If a user is denied access to their old OneDrive site after a new account is cre
 
 #### User ID mismatch on SharePoint sites or OneDrive sites that don't belong to the user
 
-When the diagnostic detects a user ID mismatch in the UserInfo list, it will offer to remove the old ID. After you accept the offer and the old ID is removed, assign the appropriate permissions to the new user account on the SharePoint site. 
+When the diagnostic detects a user ID mismatch in the UserInfo list, it will offer to remove the old ID. After you accept the offer and the old ID is removed, assign the new user account the appropriate permissions to the SharePoint site. 
 
 **Note**: If you want to fix this issue manually, you must [remove the old user account from the UserInfo list](/sharepoint/remove-users#site-by-site-in-sharepoint), and then grant permissions to the new user account.
 
