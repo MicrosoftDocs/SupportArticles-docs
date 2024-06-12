@@ -1,7 +1,7 @@
 ---
 title: Calculate and change MCA on your affected computers
-description: Describes how to calculate and implement new values for the `MaxConcurrentApi` parameter.
-ms.date: 06/07/2024
+description: Describes how to calculate and implement new values for the MaxConcurrentApi parameter.
+ms.date: 06/12/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
