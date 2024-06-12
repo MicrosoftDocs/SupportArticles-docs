@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
+  - Extensibility\Scripts
   - CSSTroubleshoot
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,7 +15,7 @@ ms.author: luche
 ms.reviewer: chrisjen
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Excel doesn't shut down after calling the Quit method when automating from JScript

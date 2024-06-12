@@ -9,6 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Fonts
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
@@ -18,7 +20,7 @@ appliesto:
   - PowerPoint 2013
   - PowerPoint 2010
 ms.reviewer: johnlan
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Some fonts are not embedded when you save a PowerPoint 2010 or later presentation in an earlier format
 

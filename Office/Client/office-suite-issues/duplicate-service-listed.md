@@ -7,6 +7,8 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\MenuOrTabs
   - CSSTroubleshoot
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,7 +16,7 @@ ms.author: luche
 ms.reviewer: amaniah
 appliesto: 
   - Office 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # In the Research pane in an Office application, a service is listed two times, or a service returns no result
@@ -34,7 +36,7 @@ When you try to query a service in the
 
 ## Resolution
 
-### fix Issue 1 
+### Fix Issue 1 
 
 If you want to remove the duplicate services from the list of available services, use one of the following methods: 
 
@@ -94,11 +96,11 @@ If you want to remove the duplicate services from the list of available services
 -  For Office 2013, remove all of the subkeys under the following registry entry:
    
    HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\Research\Sources\\{88686849-2DD9-474D-9300-778E3336FA5D}\ 
-- If you do not want to update the registry or you cannot update the registry, disable the service so that it does not appear in the list in the **Research**pane. To do this, click the **Research options** link at the bottom of the **Research** pane, and then click to clear the check box that is next to the service name.    
+- If you don't want to update the registry or you can't update the registry, disable the service so that it doesn't appear in the list in the **Research**pane. To do this, click the **Research options** link at the bottom of the **Research** pane, and then click to clear the check box that is next to the service name.    
 
-### fix Issue 2
+### Fix Issue 2
 
-If the Research pane is not showing any available services and research sites, make sure you are connected to the internet, and then follow these steps:
+If the Research pane isn't showing any available services and research sites, make sure you're connected to the internet, and then follow these steps:
 
 - lick the Research options link at the bottom of the Research pane.   
 - Select Update/Remove.   
@@ -109,7 +111,6 @@ If the Research pane is not showing any available services and research sites, m
 
 ## Did this fix the problem? 
 
-Check whether the problem is fixed by viewing the list of available services or by querying the service in the **Research** pane. If the problem is fixed, you are finished with this article. If the problem is not fixed, you can contact us by clicking the following link:
+Check whether the problem is fixed by viewing the list of available services or by querying the service in the **Research** pane. If the problem is fixed, you're finished with this article. If the problem isn't fixed, you can contact us by clicking the following link:
 
-[Contact support](https://support.microsoft.com/contactus)   
-
+[Contact support](https://support.microsoft.com/contactus)

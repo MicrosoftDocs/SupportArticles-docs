@@ -10,6 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Errors\Couldn't verify account or subscription or license
   - CSSTroubleshoot
   - CI 159180
 appliesto: 
@@ -35,7 +37,7 @@ appliesto:
   - PowerPoint 2013
   - Publisher 2013
   - Word 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Microsoft Office cannot verify the license for this product" error when you start an Office app

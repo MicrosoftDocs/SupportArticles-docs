@@ -3,7 +3,7 @@ title: PowerPoint files not rendering in Office Online Server after Security Upd
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 08/29/2019
+ms.date: 06/06/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -14,6 +14,8 @@ ms.assetid:
 appliesto: 
   - PowerPoint
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
+  - Open\Errors
   - CI 106705
   - CSSTroubleshoot
 ms.reviewer: randring

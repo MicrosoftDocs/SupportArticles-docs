@@ -13,7 +13,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft Access
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Runtime error 2147319779 (8002801d) library not registered" when setting a company as default
@@ -28,4 +28,4 @@ FRx is trying to access the specification set and system databases using an unre
 
 ## Resolution
 
-Register the file msadox.dll located in the C:\Program Files\Common Files\System\ado folder. For information on registering dlls, please see [How to register a .dll file](https://support.microsoft.com/help/844592/how-to-register-a-dll-file).
+Register the file msadox.dll located in the C:\Program Files\Common Files\System\ado folder. For information on registering dlls, see [How to register a .dll file](https://support.microsoft.com/help/844592/how-to-register-a-dll-file).

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Editing\CopyOrPaste
   - CSSTroubleshoot
   - CI 162524
   - CI 171649
@@ -15,7 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - office
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Paste Special option is missing or not working in Microsoft Office

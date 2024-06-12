@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: doakm
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\AdvancedConfiguration\OfficeDeploymentTool
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -32,7 +34,7 @@ appliesto:
   - Project 2013 Standard
   - Project Server 2013
   - SharePoint Server 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Description of the numbering scheme for product code GUIDs in Office 2013

@@ -8,6 +8,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Reliability
   - CI 112326
   - CSSTroubleshoot
 ms.reviewer: warrenr
@@ -18,7 +20,7 @@ appliesto:
   - Word 2013
   - Word 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Word slows or stops responding if there are excessive tracked changes or comments

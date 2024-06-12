@@ -9,13 +9,15 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Errors\Trusted Platform Module malfunctioned
   - CSSTroubleshoot
   - CI 157590
 search.appverid: 
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 10/19/2023
+ms.date: 06/06/2024
 ---
 
 # Microsoft 365 Apps activation error: “Trusted Platform Module malfunctioned”

@@ -8,6 +8,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\Recovery
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
@@ -27,7 +29,7 @@ appliesto:
   - Microsoft Office Home and Student 2010
   - Microsoft Office Standard 2010
 ms.reviewer: 
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Support Engineers can't guarantee complete repair of all corrupted Office files

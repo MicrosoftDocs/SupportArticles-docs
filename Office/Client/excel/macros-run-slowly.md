@@ -8,12 +8,13 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Security\Encryption
   - CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Excel macros that protect and unprotect worksheets may run slowly

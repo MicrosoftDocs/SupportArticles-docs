@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: wdkbprem, ctrword
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Insert
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -16,7 +18,7 @@ appliesto:
   - Word 2016
   - Word 2013
   - Microsoft Word 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # You cannot use the mouse to draw a selection rectangle around multiple AutoShape objects in Microsoft Word
@@ -68,4 +70,4 @@ The Selection Pane appears. The Selection Pane lets you select multiple AutoShap
 
 
 1. On the Home tab, click Select and then click Select Objects.   
-2. Use the mouse to draw a selection rectangle around the shapes.    
+2. Use the mouse to draw a selection rectangle around the shapes.

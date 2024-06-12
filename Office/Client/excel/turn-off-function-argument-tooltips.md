@@ -10,12 +10,13 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Editing\Functions
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
   - Microsoft Office Excel 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to turn off Function Argument ToolTips in Excel

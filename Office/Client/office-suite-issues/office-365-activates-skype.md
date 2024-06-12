@@ -10,10 +10,12 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Errors\Unable to connect
   - CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "This feature has been disabled by your Administrator" when Microsoft 365 activates Skype for Business

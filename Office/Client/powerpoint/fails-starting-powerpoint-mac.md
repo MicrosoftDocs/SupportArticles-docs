@@ -9,11 +9,13 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\Errors
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - PowerPoint for Mac
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Microsoft PowerPoint has encountered a problem and needs to close" in PowerPoint for Mac startup

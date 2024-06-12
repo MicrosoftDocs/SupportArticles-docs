@@ -9,6 +9,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Errors\Account doesn't exist
   - CSSTroubleshoot
   - CI 157598
   - CI 159117
@@ -16,7 +18,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Microsoft 365 Apps activation error: “That Microsoft account doesn’t exist. Enter a different account or get a new one.”

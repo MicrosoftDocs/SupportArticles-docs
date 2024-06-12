@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: v-raddis, akeeler
 ms.custom: 
+  - Open\Links
   - CI 116037
   - CSSTroubleshoot
 search.appverid: MET150
@@ -18,7 +19,7 @@ appliesto:
   - Excel 2016
   - Excel 2019
   - Excel for Microsoft 365
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # How to control the startup message about updating linked workbooks in Excel
 

@@ -8,6 +8,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\SxS\SxSOrPerpetual
   - CSSTroubleshoot
 ms.reviewer: doakm
 appliesto: 
@@ -15,7 +17,7 @@ appliesto:
   - Office 2013
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "This 64-bit product may not be installed with Microsoft Office Click-to-Run" when you install a 64-bit version of Office
@@ -42,4 +44,4 @@ To uninstall Microsoft Office Click-to-Run from your computer, follow these step
 1. Click **Start**, and then click **Control Panel**.   
 2. Click the **Add or Remove Programs** item or click the **Programs and Features** item.   
 3. In the list of installed programs, click **Microsoft Office Click-to-Run (2010 or 2013)** and then click **Uninstall**.   
-4. Click **Yes** when you are prompted to remove all applications that were installed by Office Click-to-Run.    
+4. Click **Yes** when you are prompted to remove all applications that were installed by Office Click-to-Run.

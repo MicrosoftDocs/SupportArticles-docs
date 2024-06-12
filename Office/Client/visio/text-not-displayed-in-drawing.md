@@ -10,6 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\Errors
   - CSSTroubleshoot
 ms.reviewer: poyant, Arykhus, Kemille, barbway
 appliesto: 
@@ -17,7 +19,7 @@ appliesto:
   - Visio Standard 2010
   - Visio Professional 2013
   - Visio Standard 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Text is not displayed in a Visio 2010 / 2013 drawing when you open the drawing in a browser

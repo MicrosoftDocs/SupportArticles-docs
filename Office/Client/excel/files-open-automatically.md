@@ -10,12 +10,13 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Open
   - CSSTroubleshoot
 appliesto: 
   - Excel 2019
   - Excel 2016
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to prevent files from opening automatically in Excel
@@ -50,10 +51,10 @@ To remove files from the XLStart folder and the alternative startup folders, fol
 1. Select **Start**, and then select **Run**.
 2. In the Open box, type one of the following and press Enter:
 
-    - For Office365 or 2019 32 bit:
+    - For Office 365 or 2019 32 bit:
 
       C:\Program Files (x86)\Microsoft Office\root\xx\XLSTART
-    - For Office365 or 2019 64 bit:
+    - For Office 365 or 2019 64 bit:
 
       C:\Program Files\Microsoft Office\root\xx\XLSTART
   
@@ -83,7 +84,7 @@ You can then delete files from the alternative startup location as described ear
   
 ##### Use Command-line switches
 
-In all versions of Excel, you can use a command-line switch to start Excel in safe mode.Both the /safe switch and the /automation switch can be used for this purpose.
+In all versions of Excel, you can use a command-line switch to start Excel in safe mode. Both the /safe switch and the /automation switch can be used for this purpose.
 
 > [!NOTE]
 > The /safe switch starts Excel in safe mode. The /automation switch disables all automatically opened files and auto-run macros.

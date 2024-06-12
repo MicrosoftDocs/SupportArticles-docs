@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: akeeler
 ms.custom: 
+  - Editing\Formulae
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -16,7 +17,7 @@ appliesto:
   - Excel 2013
   - Excel 2010
   - Excel 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How Excel determines the current mode of calculation
@@ -83,4 +84,4 @@ To recalculate all open documents, use one of the following methods:
 To change the mode of calculation in Excel, follow these steps:
 
 1. Click the **Microsoft Office Button**, and then click **Excel Options**.   
-2. On the **Formulas** tab, select the calculation mode that you want to use.   
+2. On the **Formulas** tab, select the calculation mode that you want to use.

@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Open\Links
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
@@ -16,7 +17,7 @@ appliesto:
   - Excel 2019
   - Excel 2016
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Error message when you update external links that contain a three-dimensional reference

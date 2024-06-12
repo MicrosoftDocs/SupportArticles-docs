@@ -10,12 +10,13 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Open\Recovery
   - CSSTroubleshoot
 appliesto: 
   - Excel 2007
   - Excel 2003
   - Excel 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Registry keys that control the File Repair feature in Excel

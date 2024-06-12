@@ -15,7 +15,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Excel 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Cannot access directory" error when you change the default save location in Excel 2016

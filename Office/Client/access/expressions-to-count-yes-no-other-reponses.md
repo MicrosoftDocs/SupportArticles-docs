@@ -18,7 +18,7 @@ appliesto:
   - Access 2003
   - Access 2002
   - Access 2000
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Description of the expressions to count yes, no, and other responses in Access
@@ -65,4 +65,4 @@ You can also create a related expression to count a specific value in a field. F
 
    In Access 2007, click **Microsoft Office Button**, point to **Print**, and then click **Print Preview**.
 
-   Notice that the first expression will count the number of products within each category that have the Discontinued field set to Yes. The second expression will count the number of products within each category that have the Discontinued field set to No.   
+   Notice that the first expression will count the number of products within each category that have the Discontinued field set to Yes. The second expression will count the number of products within each category that have the Discontinued field set to No.

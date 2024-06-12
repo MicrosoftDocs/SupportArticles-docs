@@ -8,12 +8,13 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Open\OLEError
   - CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
   - Microsoft Excel 2016 for Mac
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Cannot use object linking and embedding" error in Excel 2016 for Mac
@@ -40,4 +41,4 @@ To work around this issue, follow these steps:
    **ComRPC32**
 
 4. On the **File** menu, click **Move to Trash**.   
-5. Close the Finder window.   
+5. Close the Finder window.

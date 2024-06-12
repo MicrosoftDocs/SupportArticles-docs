@@ -9,6 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Insert
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
@@ -17,7 +19,7 @@ appliesto:
   - Word 2016
   - Word 2013
   - Word 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # A connector does not move when you move a shape in Microsoft Word
