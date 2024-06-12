@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\AD Object Permissions, access contr
 
 This article describes how to grant the "Replicating Directory Changes" permission for the Microsoft Metadirectory Services ADMA service account.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 303972
 
 ## Summary  

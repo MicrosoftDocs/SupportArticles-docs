@@ -13,8 +13,6 @@ ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 
 This article discusses how to troubleshoot problems loading and unloading user profiles by using events and trace logs.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012.
-
 The following sections describe how to use the three event logs that record user profile information.
 
 ## Step 1: Checking events in the Application log

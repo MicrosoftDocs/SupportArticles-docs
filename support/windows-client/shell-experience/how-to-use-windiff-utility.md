@@ -13,7 +13,6 @@ ms.custom: sap:Windows Desktop and Shell Experience\File Explorer (app only, fol
 
 This article describes how to use the Windiff.exe utility, a tool that graphically compares the contents of two ASCII files, or the contents of two folders that contain ASCII files, to verify whether they are the same. The file byte count and the creation date are not reliable indications.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 159214
 
 ## Summary

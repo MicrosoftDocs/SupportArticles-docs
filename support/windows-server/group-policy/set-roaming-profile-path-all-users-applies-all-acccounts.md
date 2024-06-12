@@ -13,7 +13,6 @@ ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 
 This article describes the behavior where the **Set roaming profile path for all users logging onto this computer** Group Policy setting applies to all user accounts including local user accounts because Group Policy will override the local computer policy.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 958736
 
 ## Symptoms

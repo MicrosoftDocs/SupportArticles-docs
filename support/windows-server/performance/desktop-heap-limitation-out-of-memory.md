@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\System Performance (slow, unresponsive, high C
 
 This article helps fix an "Out of Memory" error that occurs when you open many application windows in Windows.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947246
 
 ## Symptoms

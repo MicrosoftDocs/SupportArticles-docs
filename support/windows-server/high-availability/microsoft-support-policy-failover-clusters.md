@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Setup and configuration of clust
 
 This article describes Microsoft support policy for Windows Server 2012 or Windows Server 2012 R2 failover clusters implementation.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2775067
 
 ## Introduction

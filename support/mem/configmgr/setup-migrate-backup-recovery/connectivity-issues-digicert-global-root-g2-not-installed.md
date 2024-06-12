@@ -49,7 +49,7 @@ You can consider your environment to be disconnected if either of the following 
 - Direct access to Windows Update is blocked.
 - The auto update mechanism for both trusted and untrusted CTLs is disabled.
 
-For information about how to facilitate the distribution of trusted or untrusted certificates for disconnected environments, see [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29).
+For information about how to facilitate the distribution of trusted or untrusted certificates for disconnected environments, see [Configure trusted roots and disallowed certificates in Windows](/windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates).
 
 ### Internet endpoints
 
@@ -74,7 +74,7 @@ For more information about the **Windows Root Certificate Program** and the list
 
 Root certificate update mechanisms are available in different versions of Windows. This includes the automatic root update mechanisms.
 
- For more information about how to update the root certificate list in different versions of Windows, see [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29?redirectedfrom=MSDN).
+ For more information about how to update the root certificate list in different versions of Windows, see [Configure trusted roots and disallowed certificates in Windows](/windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates).
 
 By default, the automatic root update mechanism is enabled in different versions of Windows. However, if this mechanism is disabled, and  the service connection point server doesn't have the **DigiCert Global Root G2** root certificate installed, connectivity issues with **Configuration Manager** cloud services may occur. The **Configuration Manager** on premises hierarchy may no longer be able to access the **Microsoft Configuration Manager** cloud services and other such resources.
 

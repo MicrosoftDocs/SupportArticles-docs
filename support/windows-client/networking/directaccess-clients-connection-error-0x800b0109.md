@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess
 
 This article provides a solution to an issue where DirectAccess clients fail to connect to a server by using IP-HTTPS.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2980667
 
 ## Symptoms

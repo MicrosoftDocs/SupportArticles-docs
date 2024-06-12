@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine setti
 
 This article provides a solution to mouse and screen resolution issues when managing a virtual machine by using the Hyper-V Manager Console.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2413735
 
 ## Symptoms

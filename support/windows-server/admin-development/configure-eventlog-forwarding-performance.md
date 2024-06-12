@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\WMI management and troubleshooting, 
 
 This article introduces the best practice for configuring EventLog forwarding in a large environment  in Windows Server 2012 R2.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4494356
 
 ## Summary

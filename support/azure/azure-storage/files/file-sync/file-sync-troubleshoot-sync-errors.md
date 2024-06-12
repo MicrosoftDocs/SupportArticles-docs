@@ -4,12 +4,11 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 04/07/2024
+ms.date: 06/11/2024
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu
 ---
-
 # Troubleshoot Azure File Sync sync health and errors
 
 This article is designed to help you troubleshoot and resolve common sync issues that you might encounter with your Azure File Sync deployment.
@@ -156,15 +155,6 @@ Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.Se
 Debug-StorageSyncServer -FileSyncErrorsReport
 ```
 
-> [!Note]  
-> If the *FileSyncErrorsReport.ps1* script returns "There were no file errors found" or doesn't list per-item errors for the sync group, the cause is either:
->
-> - Cause 1: The last completed sync session didn't have per-item errors. The portal should be updated soon to show "0 Files Not Syncing." By default, the *FileSyncErrorsReport.ps1* script will only show per-item errors for the last completed sync session. To view per-item errors for all sync sessions, use the `-ReportAllErrors` parameter.
->   Check the most recent [Event ID 9102](?tabs=server%252cazure-portal#broken-sync) in the Telemetry event log to confirm the `PerItemErrorCount` is 0.
->
-> - Cause 2: The `ItemResults` event log on the server wrapped due to too many per-item errors, and the event log no longer contains errors for this sync group.
->    To prevent this issue, increase the `ItemResults` event log size. The `ItemResults` event log can be found under *Applications and Services Logs\Microsoft\FileSync\Agent* in Event Viewer.
-
 ## Sync errors
 
 ### Troubleshooting per file/directory sync errors
@@ -201,6 +191,8 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80070020 | -2147024864 | ERROR_SHARING_VIOLATION | The file can't be synced because it's in use. The file will be synced when it's no longer in use. | No action required. |
 | 0x80c80017 | -2134376425 | ECS_E_SYNC_OPLOCK_BROKEN | The file was changed during sync, so it needs to be synced again. | No action required. |
 | 0x80070017 | -2147024873 | ERROR_CRC | The file can't be synced due to CRC error. This error can occur if a tiered file was not recalled prior to deleting a server endpoint or if the file is corrupt. | To resolve this issue, see [Tiered files are not accessible on the server after deleting a server endpoint](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint) to remove tiered files that are orphaned. If the error continues to occur after removing orphaned tiered files, run [chkdsk](/windows-server/administration/windows-commands/chkdsk) on the volume. |
+| 0x800703ee | -2147023890 | ERROR_FILE_INVALID |  The file can't be synced because it's no longer valid. This error typically occurs if the file is tiered and orphaned. | If the file is tiered, see [Tiered files are not accessible on the server after deleting a server endpoint](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint) to remove tiered files that are orphaned. |
+| 0x80070570 | -2147023504 | ERROR_FILE_CORRUPT |  The file or directory is corrupted and unreadable. | Run [chkdsk](/windows-server/administration/windows-commands/chkdsk) on the volume. |
 | 0x80c80200 | -2134375936 | ECS_E_SYNC_CONFLICT_NAME_EXISTS | The file can't be synced because the maximum number of conflict files has been reached. Azure File Sync supports 100 conflict files per file. To learn more about file conflicts, see Azure File Sync [FAQ](/azure/storage/files/storage-files-faq?toc=/azure/storage/filesync/toc.json#afs-conflict-resolution). | To resolve this issue, reduce the number of conflict files. The file will sync once the number of conflict files is less than 100. |
 | 0x80c8027d | -2134375811 | ECS_E_DIRECTORY_RENAME_FAILED | Rename of a directory can't be synced because files or folders within the directory have open handles. | No action required. The rename of the directory will be synced once all open file handles within the directory are closed. |
 | 0x800700de | -2147024674 | ERROR_BAD_FILE_TYPE | The tiered file on the server isn't accessible because it's referencing a version of the file which no longer exists in the Azure file share. | This issue can occur if the tiered file was restored from a backup of the Windows Server. To resolve this issue, restore the file from a snapshot in the Azure file share. |
@@ -245,7 +237,15 @@ Sync sessions might fail for various reasons including the server being restarte
 | **Error string** | ECS_E_SYNC_CANCELLED_BY_VSS |
 | **Remediation required** | No |
 
-No action required. This error should automatically resolve. If the error persists for more than a day, create a support request.
+No action required. Azure File Sync has a scheduled task (VssSyncScheduledTask) that runs once a day on the server to sync files that are in use. When this scheduled task starts, it will cancel the current upload sync session (resulting in the 0x80c8029c error code). If you're migrating a file share and don't want the upload session to be interrupted, you can temporarily disable the VssSyncScheduledTask scheduled task until the initial upload completes.
+
+Here are the steps to disable the VssSyncScheduledTask scheduled task on the server:
+
+1. Open Task Scheduler.
+2. Navigate to *Microsoft\StorageSync*.
+3. Right-click the VssSyncScheduledTask task and select **Disable**.
+
+Once the file share migration completes, re-enable the VssSyncScheduledTask scheduled task.
 
 <a id="-2147012889"></a>**A connection with the service could not be established.**
 

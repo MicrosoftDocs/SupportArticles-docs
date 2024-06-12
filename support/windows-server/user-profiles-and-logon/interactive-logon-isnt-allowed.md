@@ -13,7 +13,6 @@ ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logo
 
 This article provides a solution to an error that occurs when Domain Controller does not allow interactive logon.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2015518
 
 ## Symptoms

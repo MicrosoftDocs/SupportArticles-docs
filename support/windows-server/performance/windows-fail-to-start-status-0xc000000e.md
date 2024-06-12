@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, error
 
 This article provides help to solve an error that occurs when you restart Microsoft Windows Server 2008 R2 after you perform a full OS recovery.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2261423
 
 ## Symptoms

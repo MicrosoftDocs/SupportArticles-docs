@@ -413,10 +413,6 @@ items:
       href: ./active-directory/delays-domain-members-dc-remote-domains.md
     - name: Error when you run AD Installation Wizard
       href: ./active-directory/error-when-you-run-ad-installation-wizard.md
-  - name: Schema update - known issues, best practices, workflow review
-    items:
-    - name: How to find the current Schema Version
-      href: ./active-directory/find-current-schema-version.md
   - name: User, computer, group, and object management
     items:
     - name: A batch of Event ID 4780 are logged in the PDC
@@ -1081,7 +1077,7 @@ items:
       href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
       href: ./group-policy/authz-fails-access-denied-error-application-access-check.md
-    - name: Can't apply user Group Policy settings when computer objects don't have GPO Read permissions
+    - name: Can't apply user Group Policy settings
       href: ./group-policy/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions.md
     - name: Error 0x80004005 when you create DSN with GPP
       href: ./group-policy/creating-dsn-with-gpp-fails.md
@@ -1837,8 +1833,6 @@ items:
       href: ./networking/smb-server-unresponsive.md
     - name: Blank default gateway after configuring Static IP address
       href: ./networking/blank-default-gateway-configure-static-ip-address.md
-    - name: Configure ISA Server computer for authentication requests
-      href: ./networking/configure-isa-server-computer.md
     - name: Configure proxy server settings
       href: ./networking/configure-proxy-server-settings.md
     - name: Configure SNMP Service
@@ -1979,6 +1973,16 @@ items:
       href: ./networking/configure-l2tp-ipsec-server-behind-nat-t-device.md
     - name: Set up Internet Connection Sharing
       href: ./networking/set-up-internet-connection-sharing.md
+  - name: Identify and remediate MaxConcurrentApi issues that affect user authentication
+    items:
+    - name: 'Overview: Identify and remediate MaxConcurrentApi issues that affect user authentication'
+      href: ./networking/maxconcurrentapi-overview-identify-and-remediate-mca-issues.md
+    - name: 'Part 1: Identify computers that have MCA issues'
+      href: ./networking/maxconcurrentapi-1-identify-computers-that-have-mca-issues.md
+    - name: 'Part 2: Calculate and change MCA on your affected computers'
+      href: ./networking/maxconcurrentapi-2-calculate-and-change-mca.md
+    - name: 'Part 3: Troubleshoot the underlying causes of an MCA issue'
+      href: ./networking/maxconcurrentapi-3-troubleshoot-causes-of-mca-issues.md
 - name: Performance
   items:
   - name: Performance
@@ -2125,8 +2129,10 @@ items:
     items:
     - name: incorrect shutdown reason code written to SEL
       href: ./performance/incorrect-shutdown-reason-code-sel.md
-    - name: 'Troubleshooting scenario: System shutdown is slow'
-      href: ./performance/troubleshooting-system-shutdown-is-slow-scenario.md
+    - name: 'System shutdown is slow'
+      href: ./performance/system-shutdown-is-slow.md
+    - name: System shutdown stops responding
+      href: ./performance/system-shutdown-stops-responding-issues.md      
     - name: Use Userdump.exe to create a dump file
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance

@@ -18,7 +18,6 @@ adobe-target: true
 
 This article helps fix Microsoft .NET Framework 3.5 installation errors.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2734782
 
 > [!NOTE]

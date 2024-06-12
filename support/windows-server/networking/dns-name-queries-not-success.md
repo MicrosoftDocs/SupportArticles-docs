@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 
 This article describes an issue where DNS queries to some domains may not be resolved successfully after you deploy a Windows-based DNS server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 832223
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory Lightweight Directory Services 
 
 This article describes how to troubleshoot an OBJ_CLASS_VIOLATION error that occurs when you use the Adamsync tool in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 923835
 
 ## Summary

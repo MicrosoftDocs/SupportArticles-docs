@@ -13,7 +13,6 @@ ms.custom: sap:Application Technologies and Compatibility\DCOM service startup a
 
 This article provides a workaround for an issue where you receive error code 80080005 when you start many Microsoft COM+ applications manually from a Component Services Microsoft Management Console (MMC) snap-in.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 870655
 
 ## Symptoms

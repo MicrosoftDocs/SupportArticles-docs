@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes an issue where Active Directory Replications fail with Win32 error 1127: "While accessing the hard disk, a disk operation failed even after retries."
 
-_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2025726
 
 ## Symptoms

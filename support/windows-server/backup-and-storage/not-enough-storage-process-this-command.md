@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\File Server Resource Manager 
 
 This article provides a solution to an issue that occurs when you access file shares on a SMB server that has the Scale-Out File Server role configured.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3101545
 
 ## Symptoms

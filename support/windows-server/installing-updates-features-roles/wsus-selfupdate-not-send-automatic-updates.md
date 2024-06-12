@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article provides a solution to an issue where the client computers don't receive updates when you use a Microsoft Windows Server Update Services (WSUS) SelfUpdate service to send automatic updates.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 920659
 
 ## Symptoms

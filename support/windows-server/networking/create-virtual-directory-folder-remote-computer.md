@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB)
 
 This article describes how to create, test, and remove a virtual directory on an existing Web site to a folder that resides on a remote computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 308150
 
 A remote virtual directory is a directory that's not contained within the Web site's home directory but appears to client browsers as though it's within the home directory. A remote virtual directory has an alias that is mapped to a Universal Naming Convention (UNC) share location. A client appends the alias to the URL of the Web site to browse the Web content in that virtual directory. The following table illustrates these mappings:

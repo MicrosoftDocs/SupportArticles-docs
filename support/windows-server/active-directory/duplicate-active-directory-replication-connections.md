@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides a solution to an issue where duplicate Active Directory replication connections are created for one or more domain controllers across one or more sites.
 
-_Applies to:_ &nbsp; All supported versions of Windows Server  
 _Original KB number:_ &nbsp; 3207569
 
 ## Symptoms

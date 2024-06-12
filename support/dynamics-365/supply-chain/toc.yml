@@ -38,6 +38,8 @@
       href: inventory/quantity-started-quarantine-order-not-updated.md
     - name: Reversing a report as finished creates an unexpected open transaction
       href: inventory/reverse-report-as-finished-creates-open-transaction.md
+    - name: Transfer order line data discrepancy or corruption
+      href: inventory/correct-inventory-transfer-order-lines-manually.md
     - name: The unit and unit quantity aren't working correctly in the inventory journal
       href: inventory/journal-unit-quantity-incorrect.md
     - name: The filter pane on the On-hand list page doesn't work as expected
@@ -186,20 +188,14 @@
       href: production/quantity-ordered-cant-reduced-post-report-as-finished-journal.md
     - name: Flushing principle settings on BOM lines aren't respected
       href: production/flushing-principle-not-respected-bom-lines.md
-    - name: Item RM can't be fully reserved when a production order is released
-      href: production/item-rm-not-reserved.md
     - name: Late selection not respected when resetting production orders via batch job
       href: production/late-selection-not-respected-reset-status-recurring-batch-job.md
     - name: Production orders aren't shown on the Marking page
       href: production/production-orders-marking-page.md
     - name: Report as finished update fails with a missing quantity error
       href: production/missing-report-finished-quantity.md
-    - name: Resource name isn't updated after changing a worker name in the address book
-      href: production/resource-name-not-updated.md
     - name: Total good quantity error when trying to end a production order
       href: production/total-good-quantity-order-error.md
-    - name: The warehouse in the picking list journal is not updated on a BOM line
-      href: production/picking-list-warehouse-not-updated-bom-line.md
     - name: Users can unpick material lines for products that have been reported as finished
       href: production/unpick-raw-material-lines-for-reported-as-finished-products.md
 - name: Rebate management

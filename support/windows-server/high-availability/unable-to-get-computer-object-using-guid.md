@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Errors when running the Validati
 
 This article provides a solution to fix an issue where a Client Access Point (CAP) in a failover cluster does not come online as expected.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2008654
 
 ## Symptoms

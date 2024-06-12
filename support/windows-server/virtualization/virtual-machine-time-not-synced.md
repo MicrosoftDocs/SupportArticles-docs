@@ -11,7 +11,6 @@ ms.custom: sap:Virtualization and Hyper-V\Integration components, csstroubleshoo
 ---
 # Hyper-V Time Synchronization doesn't correct the system clock in the virtual machine if it's more than five seconds ahead of the host clock
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2618634
 
 ## Symptoms

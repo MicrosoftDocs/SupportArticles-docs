@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 
 This article describes a problem in which the TCP/IP properties revert to the default settings after you manually configure a static IP address.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 937056
 
 > [!IMPORTANT]

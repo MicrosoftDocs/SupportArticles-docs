@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\WMI management and troubleshooting, 
 
 This article helps fix slow system startup or slow login issues that occur when a group policy with a WMIFilter or installed application queries the `Win32_Product` class.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 974524
 
 ## Symptom

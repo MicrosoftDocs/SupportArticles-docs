@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes an issue where Active Directory Replications fail with error 8333: Directory object not found (ERROR_DS_OBJ_NOT_FOUND).
 
-_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2703708
 
 ## Symptoms
