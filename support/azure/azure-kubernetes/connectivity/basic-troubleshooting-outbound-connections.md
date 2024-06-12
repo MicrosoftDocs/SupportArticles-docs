@@ -1,7 +1,7 @@
 ---
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 06/11/2024
+ms.date: 06/12/2024
 ms.reviewer: chiragpa, rissing, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
