@@ -254,13 +254,9 @@ items:
         tocHref: /troubleshoot/power-platform/power-pages/
         topicHref: /troubleshoot/power-platform/power-pages/welcome-power-pages
 
-    - name: Microsoft Dynamics
-      tocHref: /troubleshoot/dynamics/
-      topicHref: /troubleshoot/dynamics/
-      items:
-      - name: Microsoft Dynamics GP
-        tocHref: /troubleshoot/dynamics/gp/
-        topicHref: /troubleshoot/dynamics/gp/welcome-gp
+    - name: Microsoft Dynamics GP
+      tocHref: /troubleshoot/dynamics/gp/
+      topicHref: /troubleshoot/dynamics/gp/welcome-gp
 
     - name: Surface
       tocHref: /troubleshoot/devices/
