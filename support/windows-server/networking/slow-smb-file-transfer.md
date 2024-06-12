@@ -16,21 +16,22 @@ Server Message Block (SMB) is the default Windows network file system feature an
 ## Slow transfer
 
 > [!NOTE]
-> [SMB signing](https://techcommunity.microsoft.com/t5/storage-at-microsoft/configure-smb-signing-with-confidence/ba-p/2418102) and [SMB encryption](https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-security) are known to reduce SMB transfer speeds. The amount of performance loss depends greatly on the capabilities of the hardware involved. The primary factors being CPU age, core count and speed, and how much CPU time is being dedicated to other workloads.
+> [SMB signing](https://techcommunity.microsoft.com/t5/storage-at-microsoft/configure-smb-signing-with-confidence/ba-p/2418102) and [SMB encryption](https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-security) are known to reduce SMB transfer speeds. The amount of performance loss depends greatly on the capabilities of the hardware involved. The primary factors being CPU core count and speed, and how much CPU time is being dedicated to other workloads. 
 > 
-> [SMB signing will be required](https://aka.ms/SmbSigningRequired) in future versions of Windows.
+> [SMB signing will be required by default](https://aka.ms/SmbSigningRequired) in Windows 11 24H2 and Windows Server 2025. We do not recommend turning off the SMB client and server signing requirement, they provide significant protections against spoofing, tampering, and relay attacks.
 
 The following steps can be used to analyze, troubleshoot, and resolve common issue with slow SMB transfers.
 
-- Use [`robocopy`](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) from the command line (Command Prompt or PowerShell).
+- Use [`robocopy`](https://learn.microsoft.com/windows-server/administration/windows-commands/robocopy) from the command line (Command Prompt or PowerShell).
   - File Explorer (the Windows file manager) performs single-threaded copies and uses buffered IO transfers.
   - Robocopy is optimized for IT administrators to create high performance local and remote file copy tasks.
   - File Explorer is great for convenience and basic use, but lacks the performance optimizations of robocopy that certain tasks require.
   
-- Try an unbuffered IO copy for files larger than 1GB by using [`xcopy`](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy) or `robocopy`, from the command line, with the `/J` parameter.
+- Try an unbuffered IO copy for files larger than 1GB by using `robocopy /J` from the command line.
 
-- Enable and use [SMB Compression](https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-compression). 
-  - Non-compressible data, like archive files (zip, 7z, rar, etc.), video, and audio, may not see any performance improvements with SMB Compression.
+- Enable and use [SMB Compression](https://learn.microsoft.com/windows-server/storage/file-server/smb-compression).
+  - This will greatly reduce transfer times and bandidth utilization for large files containing significant whitespace, such as virtual machine disks, ISO, DMP, etc.
+  - Non-compressible data, like archive files (zip, 7z, rar, etc.), mp4 video, and mp3 will not see significant performance improvements with SMB Compression.
   - SMB compression is available starting with Windows 11 and Windows Server 2022.
 
 - SMB speeds can be limited by storage performance.
@@ -42,7 +43,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
     - These numbers assume that there are no other bottlenecks on the system, such as CPU or memory exhaustion, and there are no networking errors.
     - Please note that peak storage performance is often much less than sustained storage performance, and that most advertised storage measurements are peak performance.
 
-- [SMB Direct](https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-direct?tabs=disable) (SMB over RDMA) may be needed to reach certain network transfer speeds, or reach high speeds without causing high CPU utilitization.
+- [SMB Direct](https://learn.microsoft.com/windows-server/storage/file-server/smb-direct?tabs=disable) (SMB over RDMA) may be needed to reach certain network transfer speeds, or reach high speeds without causing high CPU utilitization.
 
 - File copies start fast and then slow down. 
   - A change in copy speed can occur when the initial copy is cached by storage and/or buffered in system memory, and then the cache reaches capacity.
@@ -51,7 +52,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
     - This indicates that the memory buffer has been exhausted.
     - RAMMap does not automatically refresh. Use F5 on your keyboard or File > Refresh to update memory usage.
   - Use storage performance monitor counters to determine whether storage performance degrades porportionally to network throughput. For more information, see [Performance tuning for SMB file servers](/windows-server/administration/performance-tuning/role/file-server/smb-file-server).
-  - Adjust the [remote file dirty page threshold](https://learn.microsoft.com/en-us/windows-server/administration/performance-tuning/subsystem/cache-memory-management/troubleshoot#remote-file-dirty-page-threshold-is-consistently-exceeded) if performance degrades every 5GB, approximately, on newer versions of Windows.
+  - Adjust the [remote file dirty page threshold](https://learn.microsoft.com/windows-server/administration/performance-tuning/subsystem/cache-memory-management/troubleshoot#remote-file-dirty-page-threshold-is-consistently-exceeded) if performance degrades every 5GB, approximately, on newer versions of Windows.
 
 - Transfers are slow only when using certain technologies or a scale-out file server ([SOFS](https://learn.microsoft.com/en-us/windows-server/failover-clustering/sofs-overview)).
   - Some technologies, typically backup or database based, require the use of disk write-through to maintain data integrity.
@@ -61,6 +62,8 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
 
 - Look for signs of network errors. Common networking issues, like packet loss, will cause network level throttling by the TCP congestion algorithm.
 
+- Determine the performance overhead of anti-malware software by temporarily testing SMB transfer performance with file scanning disabled and their file system and network filter drivers unloaded.
+
 - For SMB3, verify that [SMB Multichannel](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn610980(v=ws.11)) is enabled and working.
 
 - Ensure that the network offloading technologies are enabled.
@@ -68,17 +71,17 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
   - Network offloading technologies, like RSS, LSO, RSC, TCP/UDP checksums, etc. are designed to improve network throughput while lowering CPU usage by the network stack.
   - Please do not disable network offloads.
 
-- On the SMB client, enable large MTU and disable bandwidth throttling in SMB by running the following command in PowerShell:
+- On the SMB client, ensure large MTU has not been disabled and bandwidth throttling has not been enabled in SMB by running the following command in PowerShell:
 
   ```powershell
   Set-SmbClientConfiguration -EnableBandwidthThrottling 0 -EnableLargeMtu 1
   ```
 
-- Follow the Windows Server "[Performance tuning for SMB file servers](https://learn.microsoft.com/en-us/windows-server/administration/performance-tuning/role/file-server/smb-file-server)" guide to tune the SMB server subsystem.
+- Follow the Windows Server "[Performance tuning for SMB file servers](https://learn.microsoft.com/windows-server/administration/performance-tuning/role/file-server/smb-file-server)" guide to tune the SMB server subsystem.
 
 ## Slow transfer when using small files
 
-Slow copy speeds, and low network throughput (performance), is expected behavior when transfering a large number of small files over the network using the File Explorer and other single-threaded copy tools. Where a large number of small files is defined as hundreds, thousands, and even millions of files that are less than about 256KB to 1MB in size.
+Slow copy speeds, and low network throughput is expected behavior when transfering a large number of small files over the network using the File Explorer and other single-threaded copy tools. Where a large number of small files is defined as hundreds, thousands, and even millions of files that are less than 1MB in size.
 
 ### Issue details
 
@@ -107,10 +110,11 @@ Network latency, SMB `create` commands, and antivirus programs contribute to a s
 
 - Use `robocopy` with the `/MT` parameter and redirect output using `/log`. 
   - Robocopy is built into Windows and the /MT parameter will enable multithreaded file copies.
-  - Please read [robocopy documentation](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy) for usage details.
+  - By default, /MT copies 8 files at a time. It supports up to 128 copies at a time.
+  - Please read [robocopy documentation](https://learn.microsoft.com/windows-server/administration/windows-commands/robocopy) for usage details.
 
 - Use `AzCopy` when moving data to/from Azure. 
-  - [AzCopy](https://aka.ms/azcopy) has concurrency (multi-threading) capabilities and several [performance optimzations](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-optimize).
+  - [AzCopy](https://aka.ms/azcopy) has concurrency (multi-threading) capabilities and several [performance optimzations](https://learn.microsoft.com/azure/storage/common/storage-use-azcopy-optimize).
 
 - Use file compression.
    - Compress the small files into a single large archive file.
@@ -133,20 +137,6 @@ You should verify that the Office and SMB binaries are up-to-date, and then test
    Set-SmbServerConfiguration -EnableLeasing $false
    ```
 
-   You can also run the following command in an elevated Command Prompt window:
-
-   ```console
-   REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\parameters /v DisableLeasing /t REG\_DWORD /d 1 /f
-   ```
-
-   > [!NOTE]
-   > After you set this registry key, SMB2 leases are no longer granted, but oplocks are still available. This setting is used primarily for troubleshooting.
-
-2. Restart the file server or restart the **Server** service. To restart the service, run the following commands:
-
-   ```console
-   NET STOP SERVER
-   NET START SERVER
-   ```
+2. This works immediately on a new SMB client connection, there is no need to restart the SMB server or client machines. 
 
 To avoid this issue, you can also replicate the file to a local file server. For more information, see [saving Office documents to a network server is slow when using EFS](/office/troubleshoot/office/saving-file-to-network-server-slow).
