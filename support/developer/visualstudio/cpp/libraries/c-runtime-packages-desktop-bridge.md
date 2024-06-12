@@ -24,7 +24,6 @@ Microsoft provides C++ Runtime framework packages to allow applications to refer
 For development purposes, the current version (v14.0) of both debug and retail appx packages are included with Visual Studio 2022 when you choose the **Universal Windows Platform Development** workload with the optional **C++ (v143) Universal Windows Tools** component. The packages can be found under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0`.
 
 > [!NOTE]
-> 
 > The following package download links are now deprecated, and may no longer work in the future. Make sure to use the method described above to obtain the framework packages.
 >
 > - [Microsoft.VCLibs.arm.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm.14.00.Desktop.appx)
