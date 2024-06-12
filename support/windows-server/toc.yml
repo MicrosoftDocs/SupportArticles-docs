@@ -1975,7 +1975,7 @@ items:
       href: ./networking/set-up-internet-connection-sharing.md
   - name: Identify and remediate MaxConcurrentApi issues that affect user authentication
     items:
-    - name: 'Overview: Identify and remediate MaxConcurrentApi issues that affect user authentication'
+    - name: 'Overview: Identify and remediate MaxConcurrentApi issues'
       href: ./networking/maxconcurrentapi-overview-identify-and-remediate-mca-issues.md
     - name: 'Part 1: Identify computers that have MCA issues'
       href: ./networking/maxconcurrentapi-1-identify-computers-that-have-mca-issues.md
