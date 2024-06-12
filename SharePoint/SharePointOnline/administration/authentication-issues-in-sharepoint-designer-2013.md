@@ -74,3 +74,13 @@ To resolve the authentication errors, use the following steps to enable SharePoi
    - [July 5, 2016, update for Office 2013 (KB3085565)](https://support.microsoft.com/topic/july-5-2016-update-for-office-2013-kb3085565-1d1a6d24-fbd4-1bae-242f-a35e0e2aba40)
 
 Modern authentication should now be enabled for SharePoint Designer 2013 and you shouldn't see any authentication issues.
+
+## Clear SharePoint Designer Cache (Optional)
+
+1. Close SharePoint Designer 2013.
+
+2. On the local computer, navigate to the following folders and remove all files found in each of them:
+
+   - `%APPDATA%\Microsoft\Web Server Extensions\Cache`
+   - `%APPDATA%\Microsoft\SharePoint Designer\ProxyAssemblyCache`
+   - `%USERPROFILE%\AppData\Local\Microsoft\WebsiteCache`
