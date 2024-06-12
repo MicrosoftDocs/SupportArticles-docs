@@ -19,6 +19,8 @@
       href: ../administration/authentication-errors-tls12-support.md
     - name: Authentication errors occur when connecting to SharePoint or OneDrive from Windows 7 or 8
       href: ../administration/authentication-errors-windows7.md
+    - name: Authentication issues in SharePoint Designer 2013
+      href: ../administration/authentication-issues-in-sharepoint-designer-2013.md
     - name: Automatic EXIF property import unsupported
       href: ../administration/automatic-exif-property-import-unsupported.md
     - name: Create a default Site collection Term Set if none is present

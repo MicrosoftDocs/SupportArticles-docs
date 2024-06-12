@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: tasitae
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\InstallErrors\AppLaunchErrors
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -25,7 +27,7 @@ appliesto:
   - OneNote 2013
   - PowerPoint 2013
   - Access 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Office applications don't start when Windows is running in safe mode
 

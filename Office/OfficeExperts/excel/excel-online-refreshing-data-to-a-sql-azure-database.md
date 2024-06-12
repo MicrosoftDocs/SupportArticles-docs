@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - Editing\Data\ImportExport
   - sap:office-experts
   - CSSTroubleshoot
 ms.topic: troubleshooting
@@ -15,7 +16,7 @@ ms.author: luche
 ms.reviewer: thempel
 appliesto: 
   - Excel Online
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to refresh data to a SQL Azure Database in Excel Online

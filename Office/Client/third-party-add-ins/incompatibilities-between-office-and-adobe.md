@@ -8,6 +8,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Add-Ins\Centralized Deployment of Add-Ins
+  - DownloadInstall\AdvancedConfiguration\AddInsOrIntegratedApps
   - CSSTroubleshoot
 ms.reviewer: gregmans
 search.appverid: 
@@ -32,7 +34,7 @@ appliesto:
   - Publisher 2010
   - Visio Professional 2010
   - Visio Standard 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Incompatibilities between Office programs and Adobe Acrobat PDFMaker Office COM Add-in

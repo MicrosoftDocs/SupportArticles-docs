@@ -8,13 +8,15 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Reliability
   - CI 112347
   - CSSTroubleshoot
 ms.reviewer: davmcdon
 appliesto: 
   - Office
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Some Office applications are not responding

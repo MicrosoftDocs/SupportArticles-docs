@@ -9,13 +9,15 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Deploying Office using Shared Computer Activation
   - CSSTroubleshoot
   - CI 157761
 search.appverid: 
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Troubleshoot issues with shared computer activation for Microsoft 365 Apps

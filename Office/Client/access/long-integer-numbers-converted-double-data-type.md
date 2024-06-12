@@ -20,7 +20,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 ms.reviewer: amyv
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Access exports long integer numbers as double data type with decimal places in dBase IV (.dbf) format
 
@@ -60,7 +60,7 @@ By default, the setting for number fields is Long Integer. The Long Integer valu
 
 ## Cause
 
-This problem occurs because there is no Integer data type in dBase. dBase uses either Numeric or Float data types. Access maps Long Integers to the Numeric data type in dBase.
+This problem occurs because there's no Integer data type in dBase. dBase uses either Numeric or Float data types. Access maps Long Integers to the Numeric data type in dBase.
 
 ## Workaround
 
@@ -75,7 +75,7 @@ Modify the design of the database file after it has been added to the dBase cata
 Use Excel to format the data in the table that you exported. To do this, follow these steps:
 
 1. In Excel, open the table that you exported as type dBase IV (*.dbf) from Access.
-2. Format the cells that are not correctly formatted. To do this, select the cells, and then click **Cells** on the
+2. Format the cells that aren't correctly formatted. To do this, select the cells, and then click **Cells** on the
  **Format** menu.
 3. After you have formatted the cells, export the spreadsheet as a dBase IV file. To do this, follow these steps:
    1. On the **File** menu, click **Save As**.
@@ -83,7 +83,7 @@ Use Excel to format the data in the table that you exported. To do this, follow 
 
 ### Method 3: Use sample code to format the data
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure. However, they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
+Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you're familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure. However, they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
 
 You can use the following code sample to automate the process of formatting the data. The sample will save a table as a text file. Then, it will automate Excel to open the text file and then save it in dBase IV format.
 

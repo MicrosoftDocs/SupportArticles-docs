@@ -10,10 +10,11 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Use a macro to apply cell shading format to every other row in a selected range in Excel
@@ -67,4 +68,4 @@ You can also format a list by using the **Auto-Format** menu command. In Excel 2
 1. Click **Microsoft Office Button**, and then click **Excel Options**.    
 2. Click **Design customization**.   
 3. Click to select the **All Commands** under the **Choose commands from**.   
-4. Click **Auto-Format**, click **Add**, and then click **OK**.   
+4. Click **Auto-Format**, click **Add**, and then click **OK**.

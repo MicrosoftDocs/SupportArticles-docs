@@ -7,6 +7,8 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Add-Ins\Centralized Deployment of Add-Ins
+  - DownloadInstall\AdvancedConfiguration\AddInsOrIntegratedApps
   - CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
@@ -44,7 +46,7 @@ appliesto:
   - Microsoft Office Publisher 2003
   - Microsoft Office Publisher 2007
   - Publisher 2010Publisher 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Office programs may crash with the SendToBluetooth add-in installed

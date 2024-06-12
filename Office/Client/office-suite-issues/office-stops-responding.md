@@ -8,13 +8,15 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Errors & Crashing
+  - Reliability
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: V-DARMAC
 appliesto: 
   - Office 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Microsoft Office stops responding when you try to open or save a file

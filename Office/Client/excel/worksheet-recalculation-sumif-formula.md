@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Editing\Formulae
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
@@ -17,7 +18,7 @@ appliesto:
   - Excel 2010
   - Excel 2007
   - Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Recalculation of a worksheet that contains a SUMIF formula takes longer than expected to finish

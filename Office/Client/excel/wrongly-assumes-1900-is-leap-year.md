@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: bradthor
 ms.custom: 
+  - Reliability
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -20,7 +21,7 @@ appliesto:
   - Excel 2010
   - Excel 2013
   - Excel 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Excel incorrectly assumes that the year 1900 is a leap year

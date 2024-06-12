@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
@@ -16,7 +17,7 @@ appliesto:
   - Excel 2003
   - Excel 2002
   - Excel 2000
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Print all embedded charts programmatically on a worksheet in Excel
@@ -53,4 +54,4 @@ Microsoft provides programming examples for illustration only, without warranty 
 5. On the File menu, click **Close and Return to Microsoft Excel**.   
 6. Select the worksheet that contains the embedded charts.   
 7. on the Tools menu, point to Macro, and then click Macros.    
-8. In the **Macro name** list, click PrintEmbeddedCharts, and then click Run.   
+8. In the **Macro name** list, click PrintEmbeddedCharts, and then click Run.

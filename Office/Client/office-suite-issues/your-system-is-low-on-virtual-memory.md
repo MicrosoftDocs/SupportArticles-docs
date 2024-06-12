@@ -9,13 +9,15 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - DownloadInstall\InstallErrors\AppLaunchErrors
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Office 2010
   - Office 2007
   - Office 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Your system is low on virtual memory" error message when you try to start an Office program
@@ -76,4 +78,3 @@ With virtual memory, the computer can use hard disk space as random access memor
 ### Did this fix the problem?
 
 Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus).
-

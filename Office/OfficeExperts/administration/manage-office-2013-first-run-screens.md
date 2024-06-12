@@ -10,12 +10,14 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\AdvancedConfiguration\OfficeDeploymentTool
   - sap:office-experts
   - CSSTroubleshoot
 ms.reviewer: jalalb
 appliesto: 
   - Office 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to manage the First Run screens that appear when Office 2013 applications are first started

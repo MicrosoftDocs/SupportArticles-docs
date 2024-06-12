@@ -8,6 +8,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Fonts
   - CI 114991
   - CSSTroubleshoot
 ms.reviewer: vikartha, bhamv, subhbasu
@@ -19,7 +21,7 @@ appliesto:
   - PowerPoint for Microsoft 365
   - PowerPoint 2016
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # How to set the default font for Word, Excel, and PowerPoint
 

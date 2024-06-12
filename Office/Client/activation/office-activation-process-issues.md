@@ -8,6 +8,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Perpetual
   - CSSTroubleshoot
 ms.reviewer: sfrancis, sloanc, andyfel, djess, arykhus, mosesma, ryanwei, tomol, joanned
 search.appverid: 
@@ -16,7 +18,7 @@ appliesto:
   - Office 2016
   - Office 2013
   - Office 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Information about the error codes and corresponding descriptions of Microsoft Office activation process issues that can be repaired by using the Office Repair tool

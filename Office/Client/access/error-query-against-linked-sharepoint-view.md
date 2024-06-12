@@ -1,6 +1,6 @@
 ---
 title: (Cannot update. Database or object is read-only) error in a query against a linked SharePoint view if there are unlinked lookup fields in Access
-description: Describes why you receive a (Cannot update. Database or object is read-only) error message if the underlying list includes lookup fields that are not linked to Access. Provides a workaround.
+description: Describes why you receive a (Cannot update. Database or object is read-only) error message if the underlying list includes lookup fields that aren't linked to Access. Provides a workaround.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -18,14 +18,14 @@ appliesto:
   - Access 2016
   - Access 2013
   - Access 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Error (Cannot update. Database or object is read-only) in a query against a linked SharePoint view if there are unlinked lookup fields in Access
 
 ## Symptoms
 
-While you work in Microsoft Access, you run update queries against a linked Microsoft SharePoint view. The underlying list that you are updating includes lookup fields that are **not linked** to Access because they are not included in the current view.
+While you work in Microsoft Access, you run update queries against a linked Microsoft SharePoint view. The underlying list that you're updating includes lookup fields that are **not linked** to Access because they aren't included in the current view.
 
 In this scenario, you receive the following error message:
 
@@ -38,7 +38,7 @@ This problem occurs when you use the **`ImportSharePointList`** macro action. (F
 
 This macro creates linked tables in Access for each lookup column in the SharePoint view. 
 
-Although the update query first checks that all lookup columns have linked tables in the database for the underlying list, it does not check exclusively for the lookups that are part of the current query.
+Although the update query first checks that all lookup columns have linked tables in the database for the underlying list, it doesn't check exclusively for the lookups that are part of the current query.
 Because of this condition, the database connection is severed. Therefore, the query returns a read-only object or database in a write operation.
 
 ## Workaround

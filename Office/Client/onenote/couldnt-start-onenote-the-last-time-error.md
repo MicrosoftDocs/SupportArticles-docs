@@ -3,7 +3,7 @@ title: Error We couldn't start OneNote the last time we tried
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 04/19/2023
+ms.date: 06/06/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -13,6 +13,8 @@ search.appverid:
 appliesto: 
   - OneNote 2016
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\Errors
   - CI 117067
   - CSSTroubleshoot
 ms.reviewer: subhbasu
