@@ -11181,7 +11181,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "/troubleshoot/dynamics/",
+      "source_path": "support/dynamics/index.yml",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
     } 
