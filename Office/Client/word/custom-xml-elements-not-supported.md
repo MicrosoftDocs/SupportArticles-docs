@@ -7,6 +7,8 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\Errors
   - CSSTroubleshoot
 ms.author: luche
 search.appverid: 

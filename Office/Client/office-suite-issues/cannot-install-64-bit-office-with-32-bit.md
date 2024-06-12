@@ -8,6 +8,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\SxS\SxSOrPerpetual
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche

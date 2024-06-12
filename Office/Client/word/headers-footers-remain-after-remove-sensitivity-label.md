@@ -13,6 +13,8 @@ search.appverid:
 appliesto: 
   - Word for Microsoft 365
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Privacy\AIP
   - CI 122599
   - CSSTroubleshoot
 ms.reviewer: amdey

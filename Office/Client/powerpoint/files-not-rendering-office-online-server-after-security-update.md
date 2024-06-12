@@ -14,6 +14,8 @@ ms.assetid:
 appliesto: 
   - PowerPoint
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
+  - Open\Errors
   - CI 106705
   - CSSTroubleshoot
 ms.reviewer: randring

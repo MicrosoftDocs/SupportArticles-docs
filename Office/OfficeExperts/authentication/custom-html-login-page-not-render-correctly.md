@@ -11,6 +11,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Activation\SignIn\Password Prompts
   - sap:office-experts
   - CSSTroubleshoot
 appliesto: 

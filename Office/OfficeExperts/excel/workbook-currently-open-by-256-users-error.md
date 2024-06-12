@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Open\Sharing
   - sap:office-experts
   - CSSTroubleshoot
   - CI 106765

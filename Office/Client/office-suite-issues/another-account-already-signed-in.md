@@ -8,6 +8,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Errors\Sorry another account from your organization is already signed in on this computer
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche

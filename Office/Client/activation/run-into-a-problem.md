@@ -9,6 +9,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Errors\We've run into a problem with your Microsoft 365 subscription
   - CSSTroubleshoot
   - CI 157758
   - CI 159110

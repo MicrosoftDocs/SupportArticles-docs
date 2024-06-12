@@ -1,5 +1,5 @@
 ---
-title: Date format that's convert a CSV text file by using VBA is not correct
+title: Date format that's convert a CSV text file by using VBA isn't correct
 description: Fixes an issue in which the format of dates that are converted from a csv text file into your Excel workbook may not be correct.
 author: helenclu
 manager: dcscontentpm
@@ -10,13 +10,14 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
 ms.date: 06/06/2024
 ---
 
-# Date format is not correct when you convert a CSV text file in Excel by using a VBA macro
+# Date format isn't correct when you convert a CSV text file in Excel by using a VBA macro
 
 ## Symptoms
 
@@ -43,7 +44,7 @@ mm/dd/yyyy
 
 ## Resolution
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements. To resolve this problem, add the *local:=true* parameter to your VBA macro as in the following example:
+Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but isn't limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you're familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they won't modify these examples to provide added functionality or construct procedures to meet your specific requirements. To resolve this problem, add the *local:=true* parameter to your VBA macro as in the following example:
 
 ```vb
 Sub test()

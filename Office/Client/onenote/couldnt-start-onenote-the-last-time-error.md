@@ -13,6 +13,8 @@ search.appverid:
 appliesto: 
   - OneNote 2016
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\Errors
   - CI 117067
   - CSSTroubleshoot
 ms.reviewer: subhbasu

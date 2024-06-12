@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - Editing\Data\ImportExport
   - sap:office-experts
   - CSSTroubleshoot
 ms.topic: troubleshooting

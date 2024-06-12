@@ -9,6 +9,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\Updates\ProblemsInstallingUpdates
   - sap:office-experts
   - CSSTroubleshoot
 ms.topic: troubleshooting

@@ -9,6 +9,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Activation related M365 usage reports
   - CSSTroubleshoot
   - CI 157763
   - CI 159459

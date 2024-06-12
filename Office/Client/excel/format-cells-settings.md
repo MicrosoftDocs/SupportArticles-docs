@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: emmersp
 ms.custom: 
+  - Editing\Cells
   - CSSTroubleshoot
 search.appverid: 
   - MET150

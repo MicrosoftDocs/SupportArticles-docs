@@ -9,6 +9,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - Open
   - CSSTroubleshoot
   - CI 147067
 ms.topic: troubleshooting

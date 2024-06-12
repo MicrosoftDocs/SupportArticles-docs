@@ -14,6 +14,8 @@ search.appverid:
 appliesto: 
   - Office
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Save
   - CI 113658
   - CI 146008
   - CI 150116

@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: mdandige
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Security\Trust
   - CSSTroubleshoot
 search.appverid: 
   - MET150

@@ -17,6 +17,8 @@ appliesto:
   - OneNote for Mac
   - OneNote on Devices
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\ContentNotYetAvailable
   - CI 117004
   - CSSTroubleshoot
 description: Describes resolutions to the OneNote error message Content Not Yet Available.

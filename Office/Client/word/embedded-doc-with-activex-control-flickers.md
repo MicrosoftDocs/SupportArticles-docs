@@ -13,6 +13,8 @@ search.appverid:
 appliesto: 
   - Microsoft Office
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Embedding
   - CI 123056
   - CSSTroubleshoot
 ms.reviewer: sakris

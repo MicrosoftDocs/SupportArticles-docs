@@ -14,6 +14,8 @@ appliesto:
   - SharePoint Server
   - Microsoft 365
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
+  - Open
   - CI 144436
   - CSSTroubleshoot
 ms.reviewer: sharepoint_triage

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Printing
   - CSSTroubleshoot
 ms.reviewer: V-RHOWAR
 search.appverid: 

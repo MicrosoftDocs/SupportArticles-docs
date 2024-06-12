@@ -7,6 +7,8 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Deploying Office using Shared Computer Activation
   - CSSTroubleshoot
 ms.author: luche
 ms.reviewer: offspms, andyfel

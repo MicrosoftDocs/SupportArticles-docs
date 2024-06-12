@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Open\Recovery
   - CSSTroubleshoot
 appliesto: 
   - Excel 2007

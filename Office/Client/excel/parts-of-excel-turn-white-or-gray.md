@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: xl15beta, anitao, jenl, anatolyg
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 search.appverid: 
   - MET150

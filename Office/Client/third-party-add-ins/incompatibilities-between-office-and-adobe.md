@@ -8,6 +8,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Add-Ins\Centralized Deployment of Add-Ins
+  - DownloadInstall\AdvancedConfiguration\AddInsOrIntegratedApps
   - CSSTroubleshoot
 ms.reviewer: gregmans
 search.appverid: 

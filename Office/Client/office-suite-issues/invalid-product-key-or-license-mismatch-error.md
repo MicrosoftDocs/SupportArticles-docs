@@ -7,6 +7,8 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - SubscriptionAndLicensing\Product Keys related issues
   - CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 

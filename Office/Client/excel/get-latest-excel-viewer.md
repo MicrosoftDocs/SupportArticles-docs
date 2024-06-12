@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: lauraho
 ms.custom: 
+  - DIA
   - CSSTroubleshoot
 search.appverid: 
   - MET150

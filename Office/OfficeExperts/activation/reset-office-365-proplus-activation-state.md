@@ -9,6 +9,8 @@ search.appverid: MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Errors\Error Codes
   - sap:office-experts
   - CSSTroubleshoot
   - CI 114181

@@ -9,6 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Diagrams
   - CSSTroubleshoot
 ms.author: luche
 ms.reviewer: parida, Arykhus, kevinmil, barbway, emilcico

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Open\Links
   - CSSTroubleshoot
   - CI 164509
 search.appverid: 

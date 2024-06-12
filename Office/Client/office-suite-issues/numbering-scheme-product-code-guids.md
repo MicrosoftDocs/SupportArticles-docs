@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: doakm
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\AdvancedConfiguration\OfficeDeploymentTool
   - CSSTroubleshoot
 search.appverid: 
   - MET150

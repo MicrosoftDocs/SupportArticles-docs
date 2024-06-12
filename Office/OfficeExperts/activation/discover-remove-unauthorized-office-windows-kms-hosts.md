@@ -11,6 +11,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: ericspli
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Perpetual
   - sap:office-experts
   - CSSTroubleshoot
 appliesto: 

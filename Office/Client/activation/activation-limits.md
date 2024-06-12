@@ -9,6 +9,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - SubscriptionAndLicensing\Office apps install/activate issues due to subscription/licensing
   - CSSTroubleshoot
   - CI 157762
 search.appverid: 
