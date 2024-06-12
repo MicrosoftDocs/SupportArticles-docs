@@ -92,11 +92,11 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
 | [401](#401---access-denied) | Access denied | The request has not been applied because it lacks valid authentication credentials for the target resource. |
 | [403](#403---forbidden) | Forbidden | The server understood the request but refuses to fulfill it. |
 | [404](#404---not-found) | Not found | The origin server didn't find a current representation for the target resource or isn't willing to disclose that one exists. |
-| [405](#405-406-412) | Method not allowed. | The method received in the request-line is known by the origin server but not supported by the target resource. |
-| [406](#405-406-412) | Client browser doesn't accept the MIME type of the requested page. |
-| [408](#405-406-412) | Request timed out | The server didn't receive a complete request message within the time that it was prepared to wait. |
-| 412 | Precondition failed. | One or more conditions given in the request header fields evaluated to false when tested on the server. |
-| 413.0 | Request entity too large. | The request payload is too big. |
+| [405](#405-406-412-413) | Method not allowed. | The method received in the request-line is known by the origin server but not supported by the target resource. |
+| [406](#405-406-412-413) | Client browser doesn't accept the MIME type of the requested page. |
+| [408](#405-406-412-413) | Request timed out | The server didn't receive a complete request message within the time that it was prepared to wait. |
+| [412](#405-406-412-413) | Precondition failed. | One or more conditions given in the request header fields evaluated to false when tested on the server. |
+| [413](#405-406-412-413) | Request entity too large. | The HTTP request payload is too big. |
 
 #### 400 - Bad request
 
@@ -222,7 +222,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 405.0 | Method not allowed. | The request is made by using an HTTP method that isn't valid. For more information, see [HTTP Error 405.0](../health-diagnostic-performance/http-error-405-website.md). |
 | 406.0 | Invalid MIME type. | The request is made by using an `Accept` header that contains a MIME value that isn't valid. |
 | 412.0 | Precondition failed. | The request is made by using an `If-Match` request header that contains a value that isn't valid. |
-| 413.0 | Request entity too large. | The request payload is too big. |
+| 413.0 | Request entity too large. | The HTTP request payload is too big. |
 
 ### 5**xx** - Server error
 
