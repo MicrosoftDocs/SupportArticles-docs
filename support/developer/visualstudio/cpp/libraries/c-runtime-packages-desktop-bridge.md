@@ -1,7 +1,7 @@
 ---
 title: C++ Runtime packages for Desktop Bridge
 description: Describes how Windows desktop applications that have a dependency on the C++ Runtime libraries can't redistribute the version of the libraries that's included with Visual Studio or via the Visual C++ redistributable (VCRedist) packages. Explains how to create a Desktop Bridge container that includes the correct C++ Runtime libraries.
-ms.date: 04/13/2020
+ms.date: 06/12/2024
 ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
 ms.reviewer: ericmitt, sherifm
 ms.topic: how-to
@@ -23,8 +23,9 @@ Microsoft provides C++ Runtime framework packages to allow applications to refer
 
 For development purposes, the current version (v14.0) of both debug and retail appx packages are included with Visual Studio 2022 when you choose the **Universal Windows Platform Development** workload with the optional **C++ (v143) Universal Windows Tools** component. The packages can be found under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0`.
 
-[!NOTE]
-> The package links below were provided to make it more convenient to download the packages. However, these download links are now deprecated, and may no longer work in the future. Please make sure to use the method described above to obtain the framework packages.
+> [!NOTE]
+> 
+> The following package download links are now deprecated, and may no longer work in the future. Make sure to use the method described above to obtain the framework packages.
 >
 > - [Microsoft.VCLibs.arm.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm.14.00.Desktop.appx)
 > - [Microsoft.VCLibs.arm64.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm64.14.00.Desktop.appx)
