@@ -2,7 +2,7 @@
 title: Cumulative update 1 for SQL Server 2016 SP1 (KB3208177)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 1 (SP1) cumulative update 1 (KB3208177).
 ms.date: 10/26/2023
-ms.custom: evergreen, KB3208177
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB3208177
 appliesto:
 - Microsoft SQL Server
 ---

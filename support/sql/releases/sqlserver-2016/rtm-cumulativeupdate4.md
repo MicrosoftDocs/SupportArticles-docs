@@ -2,7 +2,7 @@
 title: Cumulative update 4 for SQL Server 2016 (KB3205052)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 cumulative update 4 (KB3205052).
 ms.date: 10/26/2023
-ms.custom: evergreen, KB3205052
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB3205052
 appliesto:
 - Microsoft SQL Server
 ---

@@ -2,7 +2,7 @@
 title: Cumulative update 12 for SQL Server 2016 SP2 (KB4536648)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 SP2 cumulative update 12 (KB4536648).
 ms.date: 10/26/2023
-ms.custom: evergreen, KB4536648
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4536648
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise

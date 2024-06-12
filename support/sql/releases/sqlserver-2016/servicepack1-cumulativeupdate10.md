@@ -2,7 +2,7 @@
 title: Cumulative update 10 for SQL Server 2016 SP1 (KB4341569)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 SP1 cumulative update 10 (KB4341569).
 ms.date: 10/26/2023
-ms.custom: evergreen, KB4341569
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4341569
 appliesto:
 - SQL Server 2016 Service pack 1
 - SQL Server 2016 Developer
