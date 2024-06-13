@@ -187,25 +187,19 @@ Defines specific parameters within the TSS options to control, enhance, or simpl
 
 If scripts are blocked by `MachinePolicy`, run the following cmdlets in an elevated PowerShell window:
 
-1. ```PowerShell
-   Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name ExecutionPolicy -Value RemoteSigned
-   ```
-
-2. ```PowerShell
-   Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name EnableScripts  -Value 1 -Type DWord
-   ```
+```powershell
+Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name ExecutionPolicy -Value RemoteSigned
+Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name EnableScripts  -Value 1 -Type DWord
+```
 
 ### Method 3 (alternative)
 
 If scripts are blocked by `UserPolicy`, run the following cmdlets in an elevated PowerShell window:
 
-1. ```PowerShell
-   Set-ItemProperty -Path HKLM:\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell -Name ExecutionPolicy -Value RemoteSigned
-   ```
-
-2. ```PowerShell
-   Set-ItemProperty -Path HKLM:\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell -Name EnableScripts  -Value 1 -Type DWord
-   ```
+```powershell
+Set-ItemProperty -Path HKLM:\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell -Name ExecutionPolicy -Value RemoteSigned
+Set-ItemProperty -Path HKLM:\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell -Name EnableScripts  -Value 1 -Type DWord
+```
 
 > [!NOTE]
 > Method 2 is only a workaround for the Policy `MachinePolicy - RemoteSigned`. If you also see `UserPolicy - RemoteSigned`, ask the domain admin for a temporary Group Policy Object (GPO) exemption.
