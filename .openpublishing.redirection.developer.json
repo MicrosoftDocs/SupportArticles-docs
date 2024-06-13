@@ -5024,6 +5024,22 @@
       "source_path": "support/sql/general/use-sql-server-in-windows.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/use-sql-server-in-windows",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/general/policy-untested-net-framework-assemblies.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/policy-untested-net-framework-assemblies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/general/transaction-log-file-grows-databases-in-memory-oltp.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/transaction-log-file-grows-databases-in-memory-oltp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/end-support-sql-server-2008.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/end-support-sql-server-2008",
+      "redirect_document_id": false
     }
   ]
 }
+/workspaces/SupportArticles-docs-pr/support/sql/database-engine/database-file-operations/transaction-log-file-grows-databases-in-memory-oltp.md
