@@ -216,8 +216,8 @@ $_.CounterSamples | ForEach-Object       {
 If the I/O subsystem is overwhelmed beyond capacity, find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then work with the Application Development teams or application vendor to:
 
 - Tune queries, for example: better indexes, update statistics, rewrite queries, and redesign the database.
-- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will cache more data or index pages without frequently re-reading from disk, which will reduce I/O activity.
-
+- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will cache more data or index pages without frequently re-reading from disk, which will reduce I/O activity. This may also reduce Lazy Writes/sec driven by frequent Lazy Writer flushes when there's a frequent need for memory to store more database pages.
+- If you find that page writes are the source of heavy I/O activity, examine Buffer Manager: Checkpoint pages/sec to see if it's due to massive page flushes to meet recovery interval configuration demands. You can either use [Indirect checkpoints](/sql/relational-databases/logs/database-checkpoints-sql-server#IndirectChkpt) to even out I/O over time, or increase hardware I/O throughput.  
 ## Causes
 
 In general, the following issues are the high-level reasons why SQL Server queries suffer from I/O latency:
