@@ -98,7 +98,7 @@
         "dynamics-365/supply-chain/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=515617a5-dedb-e911-a814-000d3a4f1244&forumName=Dynamics%20365%20Supply%20Chain%20Management",
         "power-platform/power-apps/**/*.md": "https://ideas.powerapps.com/d365community/forum/f1458c72-ae29-ed11-9db2-000d3a8c451e",
         "power-platform/power-automate/**/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
-        "power-platform/ai-builder/*.md": "https://powerusers.microsoft.com/t5/AI-Builder/bd-p/AIBuilder1",
+        "power-platform/ai-builder/**/*.md": "https://powerusers.microsoft.com/t5/AI-Builder/bd-p/AIBuilder1",
         "power-platform/power-pages/*.md": "https://ideas.powerpages.microsoft.com/d365community/forum/1edba0ec-30cf-ec11-a7b5-000d3a545c96",
         "power-platform/dataverse/*.md": "https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps",
         "windows-server/**/*.md": "https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/bd-p/WindowsServer",
@@ -218,7 +218,7 @@
         "devices/**.*": "surface",
         "mem/intune/**/*.md": "microsoft-intune",
         "sales-copilot/**/*.md": "microsoft-sales-copilot",
-        "power-platform/ai-builder/*.md": "aibuilder",
+        "power-platform/ai-builder/**/**.*": "aibuilder",
         "sql/**/*.md": "sql",
         "sql/analysis-services/**/*.md": "analysis-services",
         "sql/azure-sql/**/*.md": "virtual-machines-sql",
@@ -403,7 +403,7 @@
         "power-platform/power-apps/**/*.md": "Power Apps",
         "power-platform/power-automate/**/*.md": "Power Automate",
         "power-platform/dataverse/**/*.md": "Microsoft Dataverse",
-        "power-platform/ai-builder/*.md": "AI Builder",
+        "power-platform/ai-builder/**/*.md": "AI Builder",
         "power-platform/power-pages/*.md": "Power Pages",
         "sales-copilot/**/*.md": "Copilot for Sales",
         "dynamics/gp/*.md": "Dynamics GP"
@@ -555,7 +555,7 @@
           "Power Platform",
           "Power Pages"
         ],
-        "power-platform/ai-builder/*.md": [
+        "power-platform/ai-builder/**/*.md": [
           "Troubleshoot",
           "Power Platform",
           "AI Builder"
@@ -575,7 +575,7 @@
           "Flow",
           "powerautomate-docs"
         ],
-        "power-platform/ai-builder/*.md": [
+        "power-platform/ai-builder/**/*.md": [
           "PowerApps",
           "Flow",
           "powerapps-docs",
