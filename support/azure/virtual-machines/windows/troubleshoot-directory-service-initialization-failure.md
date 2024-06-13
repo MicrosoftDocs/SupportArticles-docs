@@ -11,7 +11,7 @@ ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 05/05/2020
+ms.date: 06/13/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
@@ -133,48 +133,11 @@ Set up the VM to boot on **Directory Services Restore Mode (DSRM)** mode to bypa
 
    :::image type="content" source="media/troubleshoot-directory-service-initialization-failure/safeboot-dsrepair-output.png" alt-text="Screenshot shows the output of the query command after enabling the safeboot DsRepair flag.":::
 
-### Recommended: before you rebuild the VM, enable serial console and memory dump collection
+### Recommended: Before you rebuild the VM, enable Serial Console and memory dump collection
 
-To enable memory dump collection and Serial Console, run the following script by opening an elevated command prompt session (Run as administrator), and run the following commands.
+To enable Serial Console and memory dump collection, follow these steps:
 
-1. Enable the Serial Console:
-
-  ```console
-  bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON
-  bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
-  ```
-
-1. Verify that the free space on the OS disk is at least equal to the memory size (RAM) on the VM.
-
-1. If there's not enough space on the OS disk, change the location where the memory dump file will be created, and refer that to any data disk attached to the VM that has enough free space.
-
-     To change the location, replace `%SystemRoot%` with the drive letter (such as, `F:`) of the data disk in the following commands.
-
-#### The following configuration is suggested to enable OS dump
-
-  **Load Broken OS Disk**:
-
-  `REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM`
-
-  **Enable on ControlSet001**:
-
-  ```reg
-  REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f
-  REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
-  REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-  ```
-
-  **Enable on ControlSet002**:
-
-  ```reg
-  REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f
-  REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
-  REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-  ```
-
-  **Unload Broken OS Disk**:
-
-  `REG UNLOAD HKLM\BROKENSYSTEM`
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
 ### Rebuild the VM
 
