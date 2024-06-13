@@ -221,7 +221,7 @@ The following sections list registry entries for different versions of the Outlo
   |Description|Microsoft Teams Meeting Add-in for Microsoft Office.|
   |FriendlyName|Microsoft Teams Meeting Add-in for Microsoft Office.|
 
-## Outlook 32-bit
+### Outlook 32-bit
 
 - Registry subkey: `HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\office\Outlook\Addins\TeamsAddin.FastConnect`
 
