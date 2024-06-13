@@ -254,8 +254,6 @@ Currently, there's no easy way to know exactly when the VM extension installatio
 
 Azure VMs, and related network and storage resources, can be moved across regions by using Azure Resource Mover. However, moving VM extensions across regions, including the Azure Performance Diagnostics VM extension, isn't supported. You have to install the extension manually on the VM in the target region after you move the VM. For more information, see [Support matrix for moving Azure VMs between Azure regions](/azure/resource-mover/support-matrix-move-region-azure-vm).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-
 ### What is the performance impact of enabling Continuous Performance Diagnostics?
 
 We ran 12-hour tests of Continuous Performance Diagnostics on a range of Windows OS versions, Azure VMs of sizes, and CPU loads.
@@ -286,3 +284,5 @@ Now, let’s calculate the storage cost:
 
 Therefore, assuming steady stress on the VM, the storage cost is estimated to be less than one cent per month, assuming you use locally redundant storage.
 
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
