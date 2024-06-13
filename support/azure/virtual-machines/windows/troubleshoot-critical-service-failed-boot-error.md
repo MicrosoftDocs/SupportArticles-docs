@@ -10,7 +10,7 @@ ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 10/08/2018
+ms.date: 06/13/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
@@ -52,34 +52,9 @@ To resolve this problem, [contact support and submit a dump file](./troubleshoot
 
 The dump log and [Serial Console](./serial-console-windows.md) will help us to do further troubleshooting.
 
-To enable dump logs and Serial Console, run the following script.
+To enable dump logs and Serial Console, follow these steps:
 
-1. Open an elevated command prompt session (run as administrator).
-2. Run the following script:
-
-    In this script, we assume that the drive letter that's assigned to the attached OS disk is F. You should replace it with the appropriate value for your VM.
-
-    ```powershell
-    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
-
-    REM Enable Serial Console
-    bcdedit /store F:\boot\bcd /set {bootmgr} displaybootmenu yes
-    bcdedit /store F:\boot\bcd /set {bootmgr} timeout 10
-    bcdedit /store F:\boot\bcd /set {bootmgr} bootems yes
-    bcdedit /store F:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON
-    bcdedit /store F:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
-
-    REM Suggested configuration to enable OS Dump
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 2 /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 2 /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-
-    reg unload HKLM\BROKENSYSTEM
-    ```
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
 ### Replace the unsigned drivers
 
