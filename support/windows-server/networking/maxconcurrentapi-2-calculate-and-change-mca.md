@@ -56,6 +56,7 @@ This section describes how to use Performance Monitor (*Perfmon.msc*, also avail
 Configure Performance Monitor as follows:
 
 - **Duration.** Set the **Duration** value in the Performance Monitor properties. We recommend that you use a value in the range of 90 to 120 seconds.  
+
   :::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-duration-property.png" alt-text="Screenshot that shows the location of the Duration property in Performance Monitor.":::
 
 - **Counters.** Add the following counters from the **Netlogon** object.
