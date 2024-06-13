@@ -63,7 +63,7 @@ To check whether WinRM is configured correctly, follow these steps:
 
 2. Increase the default value for the WinRM time-out. To do this, open an elevated command prompt on the Hyper-V host, and then execute the following commands:
 
-   1. Set the maximum timeout in milliseconds to 1,800,000.
+   1. Set the maximum timeout in milliseconds to 1,800,000:
 
       ```console
       winrm set winrm/config @{MaxTimeoutms = "1800000"}
