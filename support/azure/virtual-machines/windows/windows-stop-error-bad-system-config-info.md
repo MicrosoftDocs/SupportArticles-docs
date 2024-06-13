@@ -11,7 +11,7 @@ ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 06/13/202
+ms.date: 06/13/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
