@@ -5,7 +5,7 @@ author: PiJoCoder
 ms.author: jopilov
 ms.date: 12/12/2022
 ms.reviewer: v-jayaramanp
-ms.custom: sap:Administration and Management
+ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ---
 
 # OS errors 665 and 1450 are reported for SQL Server files

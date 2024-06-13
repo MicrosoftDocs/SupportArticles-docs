@@ -2,7 +2,7 @@
 title: Improve the performance of full-text queries
 description: This article describes a method to improve the performance of queries that use full-text predicates in SQL Server.
 ms.date: 09/19/2022
-ms.custom: sap:Administration and Management
+ms.custom: sap:Full-Text Search, Semantic Search
 ms.topic: how-to
 ---
 # Improve the performance of full-text queries in SQL Server

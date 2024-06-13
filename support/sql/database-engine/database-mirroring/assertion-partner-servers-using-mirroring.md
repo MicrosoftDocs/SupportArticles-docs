@@ -2,7 +2,7 @@
 title: An assertion failure occurs on a SQL Server mirror server  
 description: This article provides a workaround for the assertion failure that can occur on a partner server when using SQL Server mirroring architecture.
 ms.date: 11/14/2022
-ms.custom: sap:Administration and Management
+ms.custom: sap:Database Mirroring (DBM)
 ms.reviewer: ramakoni1, v-jayaramanp
 ---
 

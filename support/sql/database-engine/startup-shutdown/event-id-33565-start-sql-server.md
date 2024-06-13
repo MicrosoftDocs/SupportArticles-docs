@@ -5,6 +5,7 @@ ms.date: 12/17/2021
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: ramakoni
+ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---
 # Event ID 33565 and SQL Server doesn't start after you enable encryption
 

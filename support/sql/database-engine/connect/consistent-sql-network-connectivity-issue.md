@@ -3,7 +3,7 @@ title: Consistent SQL Server network connectivity issues
 description: Troubleshoots consistent SQL Server network connectivity issues.
 ms.date: 12/05/2023
 ms.reviewer: prmadhes, jopilov, v-sidong
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 # Consistent SQL Server network connectivity issues
 

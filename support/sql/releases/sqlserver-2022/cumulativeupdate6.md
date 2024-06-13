@@ -2,7 +2,7 @@
 title: Cumulative update 6 for SQL Server 2022 (KB5027505)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 6 (KB5027505).
 ms.date: 09/19/2023
-ms.custom: evergreen, KB5027505
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5027505
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows

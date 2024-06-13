@@ -2,7 +2,7 @@
 title: Resolve blocking problem caused by lock escalation
 description: This article describes how to determine if lock escalation is causing blocking and how to resolve the problem.
 ms.date: 04/07/2021
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: BARTD
 ---
 # Resolve blocking problems caused by lock escalation in SQL Server

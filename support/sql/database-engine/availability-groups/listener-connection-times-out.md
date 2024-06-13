@@ -2,7 +2,7 @@
 title: Listener connection times out
 description: This article provides resolutions for the timeout error that occurs when you connect to a SQL Server Always On availability group listener in a multi-subnet environment.
 ms.date: 08/04/2020
-ms.custom: sap:High Availability and Disaster Recovery features
+ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: ramakoni
 ---
 

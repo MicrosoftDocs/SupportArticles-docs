@@ -2,7 +2,7 @@
 title: Error 556 insert exec failed
 description: This article helps you work around the periodic failure of a stored procedure in a database that is using the Query Data Store feature.
 ms.date: 09/02/2020
-ms.custom: sap:Database Design and Development
+ms.custom: sap:Queries, stored procedures, views, functions, triggers (T-SQL)\Errors or unexpected results while executing
 ms.reviewer: nathansc, dajiro
 ---
 # "INSERT EXEC fails because the stored procedure altered the schema of the target table" error in SQL Server 2016

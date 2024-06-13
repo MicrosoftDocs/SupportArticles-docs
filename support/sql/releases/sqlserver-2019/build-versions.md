@@ -2,7 +2,7 @@
 title: SQL Server 2019 build versions (KB4518398)
 description: This article lists cumulative update and GDR builds for SQL Server 2019.
 ms.date: 04/11/2024
-ms.custom: evergreen, KB4518398
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4518398
 appliesto:
 - SQL Server 2019
 ms.reviewer: v-six

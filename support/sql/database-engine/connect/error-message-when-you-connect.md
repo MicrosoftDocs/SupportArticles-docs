@@ -2,7 +2,7 @@
 title: Error message when you connect to SQL Server 
 description: This article provides resolutions for the problem that occurs when you connect to SQL Server using SSL.
 ms.date: 06/20/2022
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ms.reviewer: kayokon, masank
 ---
 # "The certificate received from the remote server was issued by an untrusted certificate authority" error when you connect to SQL Server

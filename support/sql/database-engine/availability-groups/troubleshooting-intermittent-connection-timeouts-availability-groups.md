@@ -2,7 +2,7 @@
 title: Troubleshooting intermittent connection time-outs between availability group replicas
 description: This article helps you diagnose intermittent connection time-outs that are reported between availability group replicas. 
 ms.date: 04/04/2023
-ms.custom: sap:Availability Groups
+ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: ramakoni, cmathews, v-jayaramanp
 ---
 

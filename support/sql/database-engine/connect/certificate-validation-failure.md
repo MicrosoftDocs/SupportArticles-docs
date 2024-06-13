@@ -3,7 +3,7 @@ title: Certificate validation failure
 description: Troubleshoots certificate validation failures and provides mitigations.
 ms.date: 01/17/2024
 ms.reviewer: mastewa, prmadhes, jopilov, v-sidong
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 # Certificate validation failure
 
