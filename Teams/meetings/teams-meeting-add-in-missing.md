@@ -325,4 +325,3 @@ The following sections list registry entries for different versions of the Outlo
   |(Default)|The default value should be **TeamsAddin.FastConnect.1**.|
   |Description|Microsoft Teams Meeting Add-in for Microsoft Office|
   |FriendlyName|Microsoft Teams Meeting Add-in for Microsoft Office|
-  
