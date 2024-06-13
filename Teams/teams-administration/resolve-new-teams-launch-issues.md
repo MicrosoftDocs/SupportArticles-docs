@@ -36,8 +36,11 @@ This issue might occur for any of the following reasons:
 
 - The **Cookies** and **Cache** shell folders point to a reparse point.
 - The **TEMP** or **TMP** environment variables point to a reparse point.
+- You don't have permissions to access certain directories in the **AppData** folder.
 - Some directories in the **AppData** folder are changed to function as reparse points.
 - The **AppData** folder contains invalid files that have the same name as the required system folders.
+- The SYSTEM account and Administrators group don't have the **Full control** permission to certain directories in the **AppData** folder.
+- You don't have the SYSAPPID permission to the Teams installation location.
 - The **AllowAllTrustedApps** policy setting prevents new Teams from starting.
 
 ## Resolution
@@ -361,7 +364,7 @@ Pause
       ```
 
    1. If the command returns **False**, go to step 3. Otherwise, [set](/windows-server/administration/windows-commands/set_1) the value of the environment variables to a location that isn't a reparse point.
-1. Check whether any of the following directories in the **AppData** folder are changed to function as reparse points:
+1. Check whether you have permission to access all of the following directories in the **AppData** folder:
 
    - %USERPROFILE%\AppData\Local
    - %USERPROFILE%\AppData\Local\Microsoft
@@ -411,15 +414,33 @@ Pause
    - %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Libraries
    - %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Recent
 
-   If any of the folders are reparse points, contact [Microsoft Support](https://support.microsoft.com/contactus).
-
-1. Check for files that have the same name as a required system folder in the **AppData** folder. For example, a file that's named *Libraries* in the path, *%AppData%\Microsoft\Windows\Libraries*, has the same name as a folder that has the same path. For each folder that's listed in step 3, run the following PowerShell command:
+   If any permissions are missing, assign the required permissions.
+1. Check whether any of the directories that are listed in step 3 are changed to function as reparse points. If any of the folders are reparse points, contact [Microsoft Support](https://support.microsoft.com/contactus).
+1. Check for files that have the same name as a required system folder in the **AppData** folder. For example, a file that's named *Libraries* in the path, *%AppData%\Microsoft\Windows\Libraries*, has the same name as a folder that has the same path. For each directory that's listed in step 3, run the following PowerShell command:
 
    ```powershell
    Test-Path -Path <directory name, such as $env:USERPROFILE\AppData\Local\Temp>  -PathType Leaf
    ```
 
    If the command returns **True**, remove the file, and then create a folder by using the same name as the complete path for the system folder.
+1. Check whether the SYSTEM account and Administrators group have the **Full control** permission to all directories that are listed in step 3.
+
+    1. For each directory that's listed in step 3, run the following PowerShell commands:
+
+      ```powershell
+      ((Get-Acl (Join-Path $env:USERPROFILE "<directory name that starts with AppData, such as AppData\Local>")).Access | ?{$_.IdentityReference -eq "NT AUTHORITY\SYSTEM" -and $_.FileSystemRights -eq "FullControl"} | measure).Count -eq 1
+      ((Get-Acl (Join-Path $env:USERPROFILE "<directory name that starts with AppData, such as AppData\Local>")).Access | ?{$_.IdentityReference -eq "BUILTIN\Administrators" -and $_.FileSystemRights -eq "FullControl"} | measure).Count -eq 1
+      ```
+
+     1. If either command returns **False**, grant the **Full control** permission to the corresponding account.
+
+1. Check whether you have the SYSAPPID permission to the Teams installation location. Run the following PowerShell command:
+
+   ```powershell
+   Get-AppxPackage MSTeams | %{$_.InstallLocation+" - "+(((Get-Acl $_.InstallLocation).sddl -split "\(" | ?{$_ -match "WIN:/\/\SYSAPPID"} | Measure).count -eq 1)}
+   ```
+
+   If the command returns **False**, [reset your PC](https://support.microsoft.com/windows/give-your-pc-a-fresh-start-0ef73740-b927-549b-b7c9-e6f2b48d275e).
 1. Check the **AllowAllTrustedApps** policy setting:
 
    1. Open a Command Prompt window, and then run the `winver` command.
