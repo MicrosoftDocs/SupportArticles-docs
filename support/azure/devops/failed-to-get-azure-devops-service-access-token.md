@@ -40,10 +40,11 @@ When you run a service connection update call from the UI, the body of the `PUT`
 1. If you are prompted for authorization, enter the required credentials.
    In network trace, you can now see the PUT call to update the service connection that failed.
 1. Open the PUT call details, and copy the **Request Payload** by selecting **Payload > view source > Select the content and copy the content**.
+1. From the PUT call details, also copy the Authorization header value.
 1. In the request body, remove the **accesstoken: null** (or **accesstoken:''**) property under the authorization header.
-1. Copy the updated **Request payload**, and make a service connection update PATCH API call by using Postman (or any other REST tool) by running the following API.
+1. Copy the updated **Request payload**, and make a service connection update PUT API call by using Postman (or any other REST tool) by running the following API. Make sure to provide the Authorization header you copied earlier when making this call.
 
-   `PATCH - https://dev.azure.com/{organization}/_apis/serviceendpoint/endpoints/{endpointId}?api-version=6.0-preview.4`
+   `PUT - https://dev.azure.com/{organization}/_apis/serviceendpoint/endpoints/{endpointId}?api-version=6.0-preview.4`
 
 For more information, see [Endpoints - Update Service Endpoint](/rest/api/azure/devops/serviceendpoint/endpoints/update-service-endpoint?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true).
 
