@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot live migration issues
 description: Provides information on solving the problem of live migration in windows server 2016.
-ms.date: 04/05/2024
+ms.date: 06/13/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: adjudele, cpuckett, kaushika, shsadash
-ms.custom: sap:Virtualization and Hyper-V\Migration, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Hyper-V Clusters and VM Mobility (Migration), csstroubleshoot
 ---
 # Troubleshoot live migration issues
 
@@ -545,26 +545,27 @@ To work around this issue, use one of the following methods before a live migrat
 
 To use `.vmcx` files instead of `.xml` files for management, upgrade the virtual machine version. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server).
 
-
-#### Failed to Live Migrate a VM Across Nodes in a Cluster When Connected to an Internal or Private Virtual Switch
+#### Failed to live migrate a VM across nodes in a cluster when connected to an internal or private virtual switch
 
 **Description**  
 
-Cannot live migrate a VM across nodes in a cluster if that VM is connected to an internal or private virtual switch.
+Can't live migrate a VM across nodes in a cluster if that VM is connected to an internal or private virtual switch.
+
 > Live migration of \<VM Name\> failed. \<VM Name\> failed to live migrate to the destination \<Server Name\> because the destination has disconnected VM switch(s).
 
 **Action**  
 
-Check the option of the "Protected Network" for network adapter.
+Check the **Protected network** option for the network adapter.
 
 **Workaround**  
 
-To work around this issue, uncheck "Protected Network" option of VM for the Internal or Private Network Adapter before a live migration:
-> Set-VMNetworkAdapter -NotMonitoredInCluster $true  
+To work around this issue, clear the **Protected network** option of the VM for the internal or private network adapter before a live migration. You can use the following cmdlet:
+
+```powershell
+Set-VMNetworkAdapter -NotMonitoredInCluster $true
+```
 
 This will ignore the connectivity checks for that VM interface during a live migration.  
-
-[Windows Server 2012 R2 Virtual Machine Recovery from Network Disconnects)](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2012-r2-virtual-machine-recovery-from-network/ba-p/371861)
 
 ## Event ID 20413
 
