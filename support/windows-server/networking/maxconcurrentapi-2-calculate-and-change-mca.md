@@ -168,7 +168,7 @@ This value is the only value that you have to obtain from the **Report** view. F
 
 The example in [Part 1](maxconcurrentapi-1-identify-computers-that-have-mca-issues.md) used **Semaphore Timeouts** to determine whether the server had an MCA issue. In this step, you have to recalculate this value by using the 90-second duration.  
 
-:::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-acquires.png" alt-text="Screenshot that shows Semaphore Acquires data in Performance Monitor.":::  
+:::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-timeouts-90-sec-sample.png" alt-text="Screenshot that shows time-outs data over a 90-second duration in Performance Monitor.":::  
 
 Subtracting the minimum value from the maximum value produces a value of 1,983.
 
@@ -178,7 +178,7 @@ Subtracting the minimum value from the maximum value produces a value of 1,983.
 
 Similar to the **Semaphore Timeouts** value, the **Semaphore Acquires** data is cumulative over the duration period that appears in Performance Monitor.  
 
-:::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-timeouts-90-sec-sample.png" alt-text="Screenshot that shows time-outs data over a 90-second duration in Performance Monitor.":::  
+:::image type="content" source="./media/maxconcurrentapi-2-calculate-and-change-mca/perfmon-min-max-semaphore-acquires.png" alt-text="Screenshot that shows Semaphore Acquires data in Performance Monitor.":::  
 
 Subtracting the minimum value from the maximum value produces a value of 1,833.
 
