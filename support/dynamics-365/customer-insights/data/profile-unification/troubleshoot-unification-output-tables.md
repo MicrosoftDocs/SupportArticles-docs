@@ -5,7 +5,7 @@ author: wu-allison
 ms.author: allisonwu
 ms.date: 06/13/2024
 ms.reviewer: mhart
-ms.custom: sap:Data Unification\Troubleshoot unification results
+ms.custom: sap:Data Unification
 ---
 # Troubleshoot unification output tables in Dynamics 365 Customer Insights - Data
 
@@ -13,7 +13,7 @@ ms.custom: sap:Data Unification\Troubleshoot unification results
 
 Each step of the [data unification process](/dynamics365/customer-insights/data/data-unification#data-unification-process) produces system-generated output tables.
 
-To solve an unexpected unification result, you can trace through these output tables:
+To troubleshoot an unexpected unification result, you can trace through these output tables:
 
 |Step|Table|Description|
 |----|-----|-----------|
@@ -29,11 +29,11 @@ For detailed descriptions of each output table, see [Understanding output tables
 |------|------------|-------------|--------------------|--------|
 |[Download 100k records](#method-1-download-100k-records)|Top 100k|✔|✔|✔|
 |[Set up exports](#method-2-set-up-exports)|Full|✔|✔|✔|
-|[Create a sandbox instance](#method-3-create-a-sandbox-environment)|Full|✔|✔|✔|
+|[Create a sandbox environment](#method-3-create-a-sandbox-environment)|Full|✔|✔|✔|
 
 ### Method 1: Download 100k records
 
-If there are less than 100k records, we recommended this method.
+If there are less than 100k records, you're recommended to use this method.
 
 In Customer Insights - Data, open the **Tables** page. For each of the output tables, select **Download** to get the most recent 100,000 records of the table.
 
@@ -53,7 +53,7 @@ Refresh all exports, then the full tables are written to the configured location
 
 [Create a new sandbox environment](/dynamics365/customer-insights/data/create-environment) to recreate the unification configuration on tables that contain a subset of problem records of the original tables.
 
-This step ensures that the [Download 100k records](#method-1-download-100k-records) method contains all output information.
+This step ensures that the [Method 1: Download 100k records](#method-1-download-100k-records) contains all output information.
 
 #### Data sources
 
@@ -75,7 +75,7 @@ Refresh the tables to ingest them into Customer Insights - Data.
 
 Depending on where your unexpected result is, you might need to verify different output tables.
 
-See an [example of explaining a unification result](#example).
+See an [example of explaining a unification result](#an-example-of-a-unification-result).
 
 ### Deduplication
 
@@ -91,7 +91,7 @@ Make sure to consider all configurations such as:
 - Exceptions
 - Merge preferences
 
-See an overview of deduplication concepts at [Define deduplication rules](/dynamics365/customer-insights/data/data-unification-duplicates), and examples at [Deduplication concepts and scenarios](/dynamics365/customer-insights/data/data-unification-concepts-deduplication).
+See an overview of deduplication concepts at [Define deduplication rules](/dynamics365/customer-insights/data/data-unification-duplicates), and an example at [Deduplication concepts and scenarios](/dynamics365/customer-insights/data/data-unification-concepts-deduplication).
 
 ### Match
 
@@ -130,7 +130,7 @@ Make sure to consider all configurations such as:
 - Grouped fields
 - Custom ID generation.
 
-See an overview of merge behavior at [Unify customer columns for data unification](/dynamics365/customer-insights/data/data-unification-merge-tables), and [Examples](/dynamics365/customer-insights/data/data-unification-merge-tables#example).
+See an overview of merge behavior at [Unify customer columns for data unification](/dynamics365/customer-insights/data/data-unification-merge-tables), and [an example](/dynamics365/customer-insights/data/data-unification-merge-tables#example).
 
 ## Understanding output tables
 
@@ -171,58 +171,58 @@ The *Customer* table is the final set of customer profiles produced by merging t
 |PrimaryKey_Alternate ... PrimaryKey_Alternate_N|System|String|The alternate keys for the matched source primary keys.|
 |Unified fields|Source|Various|The final fields that are determined by applying the unified field configuration to the source fields.|
 
-## Example
+## An example of a unification result
 
 ### Source tables
 
-#### MyData_Contact
+**MyData_Contact**
 
 |ContactId|FirstName|LastName|Email|
 |-|-|-|-|
 |1||Thomson|`monica.thomson@contoso.com`|
 |2|Monica|Smith|`monica.thomson@contoso.com`|
 
-#### MyData_Referral
+**MyData_Referral**
 
 |Id|FirstName|LastName|EmailAddress|ReferralDate|
 |-|-|-|-|-|
 |100|Moni|Thomson|`monica.thomson@contoso.com`|January 1, 2024 12:00 AM|
 |200|Monica|Smith|`monica.thomson@contoso.com`|December 24, 2020 12:00 AM|
 
-### Deduplication table
+### Deduplication tables
 
-#### Deduplication_MyData_Contact
+**Deduplication_MyData_Contact**
 
-If you deduplicate on **Email**:
+If you deduplicate on `Email`:
 
 |ContactId|ContactId_Alternate|Deduplication_GroupId|Rule|Score|Deduplication_WinnerId|FirstName|LastName|Email|
 |-|-|-|-|-|-|-|-|-|
 |1|1;2|guid()|DedupOnEmail|1.0|1||Thomson|`monica.thomson@contoso.com`|
 
-#### Deduplication_MyData_Referral
+**Deduplication_MyData_Referral**
 
-If you deduplicate on **EmailAddress**:
+If you deduplicate on `EmailAddress`:
 
 |Id|Id_Alternate|Deduplication_GroupId|Rule|Score|Deduplication_WinnerId|FirstName|LastName|EmailAddress|ReferralDate|
 |-|-|-|-|-|-|-|-|-|-|
 |100|100;200|guid()|DedupOnEmailAddress|1.0|100|Moni|Thomson|`monica.thomson@contoso.com`|January 1, 2024 12:00 AM|
 
-#### ConflationMatchPairs
+### ConflationMatchPairs table
 
-If you match on **Contact.Email == Referral.Email**:
+If you match on `Contact.Email == Referral.Email`:
 
 |TrueObjectId|Contact_ContactId|Contact_ContactId_Alternate|Referral_Id|Referral_Id_Alternate|ConflationMatchPairs_ModifiedOn|Contact_FirstName|Contact_LastName|Contact_Email|Referral_FirstName|Referral_LastName|Referral_EmailAddress|Referral_ReferralDate|
 |-|-|-|-|-|-|-|-|-|-|-|-|-|
 |1__00|1|1;2|100|100;200|now()||Thomson|`monica.thomson@contoso.com`|Moni|Thomson|`monica.thomson@contoso.com`|January 1, 2024 12:00 AM|
 
-#### Customer
+### Customer table
 
 If you set up the unified fields such that:
 
-- *FirstName*: Contact.FirstName will be prioritized over Referral.FirstName
-- *LastName*: Contact.LastName will be prioritized over Referral.LastName
-- *Email*: Contact.Email will be prioritized over Referral.EmailAddress
-- *ReferralDate*: Referral.ReferralDate will be taken
+- *FirstName*: `Contact.FirstName` is prioritized over `Referral.FirstName`.
+- *LastName*: `Contact.LastName` is prioritized over `Referral.LastName`.
+- *Email*: `Contact.Email` is prioritized over `Referral.EmailAddress`.
+- *ReferralDate*: `Referral.ReferralDate` is taken.
 
 |CustomerId|Contact_ContactId|Contact_ContactId_Alternate|Referral_Id|Referral_Id_Alternate|FirstName|LastName|Email|ReferralDate|
 |-|-|-|-|-|-|-|-|-|
