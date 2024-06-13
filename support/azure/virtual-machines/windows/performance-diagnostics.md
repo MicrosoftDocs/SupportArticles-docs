@@ -116,10 +116,6 @@ To install and run Performance Diagnostics:
 
     To install and run Performance Diagnostics, you must agree to the legal terms and accept the privacy policy.
 
-1. To share diagnostics information with Microsoft, select **I agree to share diagnostics information with Microsoft.**
-
-    When you select this option, you share the diagnostics with customer support engineers automatically. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-information-does-performance-diagnostics-collect-in-windows) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
-
 1. Select **Apply** to apply the selected options and install the tool.
 
     A notification is displayed as Performance Diagnostics starts to install. After the installation is completed, you see a notification that indicates that the installation is successful. If the **Run on-demand diagnostics** option is selected, the selected performance analysis scenario is then run for the specified duration. 
