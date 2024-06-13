@@ -276,11 +276,9 @@ Now, let’s calculate the storage cost:
 - Rows per month: 17,280
 - Size per row: 0.00001 GB
 
-**Total data size:**
-\[ 17,280 \times 0.00001 = 0.1728 \text{ GB} \]
+**Total data size:** 17,280 x 0.000001 = 0.1728 GB
 
-**Data storage cost:**
-\[ 0.1728 \text{ GB} \times \$0.045 = \$0.007776 \]
+**Data storage cost:** $0.1728 x  $0.045 = $0.007776 
 
 Therefore, assuming steady stress on the VM, the storage cost is estimated to be less than one cent per month, assuming you use locally redundant storage.
 
