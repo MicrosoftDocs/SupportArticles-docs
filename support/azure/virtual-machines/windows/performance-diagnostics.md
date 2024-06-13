@@ -260,7 +260,7 @@ We ran 12-hour tests of Continuous Performance Diagnostics on a range of Windows
 
 The test results, presented in this table, show that Continuous Performance Diagnostics provides valuable insights with minimal impact on system resources:
 
-| OS Version             | VM Size        | CPU Load     | Avg. CPU Usage | P90 CPU Usage | P99 CPU Usage | Memory Usage |
+| OS version             | VM size        | CPU load     | Avgerage CPU usage | 90 percentile CPU usage | 99 percentile CPU usage | Memory usage |
 |------------------------|----------------|--------------|----------------|---------------|---------------|--------------|
 | Windows Server 2019    | B2s, A4V2, D5v2| 20%, 50%, 80%| <0.5%          | 2%            | 3%            | 42-43 MB     |
 | Windows Server 2016 SQL| B2s, A4V2, D5v2| 20%, 50%, 80%| <0.5%          | 2%            | 3%            | 42-43 MB     |
