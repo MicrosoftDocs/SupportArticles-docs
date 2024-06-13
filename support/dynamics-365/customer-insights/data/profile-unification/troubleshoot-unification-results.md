@@ -33,13 +33,7 @@ Confirm deduplication and match rules are set up correctly. Make sure the correc
 
 A unchecked **Include all records** checkbox in the Matching rules step causes records from that table that weren't matched to any other table to be dropped from the final customer profile output.
 
-## Method 5: Examine the output tables
-
-Each step of unification produces system-generated output tables that are available for troubleshooting purposes.
-
-To troubleshoot an unexpected unification result, you can trace through these output tables. For more information, see [troubleshoot unification output tables](troubleshoot-unification-output-tables.md).
-
-## Method 6: Check your source data
+## Method 5: Check your source data
 
 Confirm fields you think matched do indeed contain the same characters. Look for hidden characters and characters that look similar but are different. These issues may be resolved with normalization patterns selected on each rule.
 
@@ -56,3 +50,9 @@ It's essential to clean and normalize the data to ensure reliable outcomes.
 > - If columns being deduplicated or matched on have a low unique count, it's possible they're being skipped by unification for performance reasons. If this is the case, we recommend trying to clean the data prior to ingesting into Customer Insights - Data.
 
 If there are issues with source data, resolve them, rerun unification, and re-validate the results. If there are no problems with the source data, continue following the troubleshooting steps.
+
+## Method 6: Examine the output tables
+
+Each step of unification produces system-generated output tables that are available for troubleshooting purposes.
+
+To troubleshoot an unexpected unification result, you can trace through these output tables. For more information, see [troubleshoot unification output tables](troubleshoot-unification-output-tables.md).
