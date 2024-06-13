@@ -18,7 +18,7 @@ Server Message Block (SMB) is the default Windows network file system feature an
 > [!NOTE]
 > [SMB signing](https://techcommunity.microsoft.com/t5/storage-at-microsoft/configure-smb-signing-with-confidence/ba-p/2418102) and [SMB encryption](https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-security) are known to reduce SMB transfer speeds. The amount of performance loss depends greatly on the capabilities of the hardware involved. The primary factors being CPU core count and speed, and how much CPU time is being dedicated to other workloads. 
 > 
-> [SMB signing will be required by default](https://aka.ms/SmbSigningRequired) in Windows 11 24H2 and Windows Server 2025. We do not recommend turning off the SMB client and server signing requirement, they provide significant protections against spoofing, tampering, and relay attacks.
+> [SMB signing will be required by default](https://aka.ms/SmbSigningRequired) in Windows 11 24H2 and Windows Server 2025. We do not recommend turning off the SMB client and server signing requirement, as they provide significant protections against spoofing, tampering, and relay attacks.
 
 The following steps can be used to analyze, troubleshoot, and resolve common issue with slow SMB transfers.
 
@@ -30,7 +30,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
 - Try an unbuffered IO copy for files larger than 1GB by using `robocopy /J` from the command line.
 
 - Enable and use [SMB Compression](https://learn.microsoft.com/windows-server/storage/file-server/smb-compression).
-  - This will greatly reduce transfer times and bandidth utilization for large files containing significant whitespace, such as virtual machine disks, ISO, DMP, etc.
+  - This will greatly reduce transfer times and bandwidth utilization for large files containing significant whitespace, such as virtual machine disks, ISO, DMP, etc.
   - Non-compressible data, like archive files (zip, 7z, rar, etc.), mp4 video, and mp3 will not see significant performance improvements with SMB Compression.
   - SMB compression is available starting with Windows 11 and Windows Server 2022.
 
@@ -100,26 +100,31 @@ Network latency, SMB `create` commands, and antivirus programs contribute to a s
   - After the data is written, the file is closed.
 - The process suffers from network, protocol (SMB), and file system latency. 
   - This latency occurs because the file system request is first translated to SMB commands, transmitted over the network, turned back into a file system command, and only then is the actual file system work performed.
-  - The process is reversed after the storage operation completes and only then does SMB client recieve a response and can proceed with the next operation.
+  - The process is reversed after the storage operation completes and only then does the SMB client recieve a response and can proceed with the next operation.
 - Additionally, endpoint protection (antivirus) will often scan network packets and file system operations. 
   - This adds an additional, usually small, amount of latency to the process. 
   - In small file scenarios, the antivirus actions are repeated for each file transfered.
-- The result is network throughput speeds of less than 1 MB/s when using a single-threaded file copy tool.
+- The result is network throughput speeds that can be lesss than 1 MB/s when using a single-threaded file copy tool.
 
 ### Speeding up small file copies
 
 - Use `robocopy` with the `/MT` parameter and redirect output using `/log`. 
-  - Robocopy is built into Windows and the /MT parameter will enable multithreaded file copies.
-  - By default, /MT copies 8 files at a time. It supports up to 128 copies at a time.
+  - Robocopy is built into Windows and the `/MT` parameter will enable multithreaded file copies.
+  - Multithreaded copies help by running many data transfers in parallel.
+    - While one or two files are being created there can be multiple files transferring.
+    - This increases the amount of in-flight network data and minimizes pauses in the network data stream.
+  - Writing to console is another time expensive operation, which is why redirecting the output to a log file will speed up the transfer job.
+  - By default, `/MT` copies 8 files at a time. It supports up to 128 copies at a time.
+  - Too many threads may harm performance. Two threads per CPU core is generally a safe number, but testing is highly advised to find the optimal performance number.
   - Please read [robocopy documentation](https://learn.microsoft.com/windows-server/administration/windows-commands/robocopy) for usage details.
 
 - Use `AzCopy` when moving data to/from Azure. 
   - [AzCopy](https://aka.ms/azcopy) has concurrency (multi-threading) capabilities and several [performance optimzations](https://learn.microsoft.com/azure/storage/common/storage-use-azcopy-optimize).
 
 - Use file compression.
-   - Compress the small files into a single large archive file.
-   - Copy the large file.
-   - Extract the files on the destination system (do not extract the files remotely).
+   - Compress the small files into a single large archive file (Zip, 7z, rar, tar, gz, etc.).
+   - Copy the archive file.
+   - Extract the files on the destination system. Do not extract the files remotely!
    - This may or may not be faster depending on the speed of compression and decompression on the two systems.
    - Use fast compression or no compression archiving to reduce the compression and decompression times.
 
