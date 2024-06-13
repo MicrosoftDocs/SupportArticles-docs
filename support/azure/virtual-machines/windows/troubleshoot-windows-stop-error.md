@@ -150,7 +150,7 @@ Before taking any steps, you should create a copy of the **\windows\system32\con
 
 ### Enable the Serial Console and memory dump collection
 
-**Recommended**: Before you rebuild the VM, enable the Serial Console and memory dump collection by follwoing these steps:
+**Recommended**: Before you rebuild the VM, enable the Serial Console and memory dump collection by following these steps:
 
 [!INCLUDE [Enable Serial Console and Memory Dump Collection](../../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
