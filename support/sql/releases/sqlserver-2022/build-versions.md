@@ -2,7 +2,7 @@
 title: SQL Server 2022 build versions (KB5023451)
 description: This article lists cumulative update and GDR builds for SQL Server 2022.
 ms.date: 05/16/2024
-ms.custom: evergreen, KB5023451
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5023451
 appliesto:
 - SQL Server 2022
 ms.reviewer: v-six

@@ -2,7 +2,7 @@
 title: Decreased performance when you run a clause
 description: Provides workarounds for the problem in which you encounter decreased performance for SQL Server. This issue occurs when you run TOP, MAX, or MIN aggregating clause on columns.
 ms.date: 09/25/2020
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: ramakoni
 ---
 # Decreased performance for SQL Server when you run a TOP, MAX, or MIN aggregating clause on columns other than the partitioning column

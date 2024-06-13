@@ -5,7 +5,7 @@ ms.date: 03/28/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 
 # Explicit misplaced SPN problem in SQL Server

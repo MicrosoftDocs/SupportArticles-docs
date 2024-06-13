@@ -2,7 +2,7 @@
 title: Performance issue when querying views across linked servers
 description: This article provides explanation and resolution on decreased performance for running linked servers against views compared to running them against tables.
 ms.date: 09/21/2021
-ms.custom: sap:Performance
+ms.custom: sap:Linked Server and distributed queries
 ms.reviewer: ramakoni, jopilov
 author: pijocoder
 ms.author: jopilov

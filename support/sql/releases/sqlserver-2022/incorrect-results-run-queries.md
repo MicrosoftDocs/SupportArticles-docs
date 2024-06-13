@@ -2,7 +2,7 @@
 title: Incorrect results when you run queries against tables that contain indexes
 description: Fixes incorrect results that may occur when you run queries against tables that contain indexes that use a descending sort order.
 ms.date: 06/15/2023
-ms.custom: evergreen, KB5027811
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5027811
 ms.reviewer: hay, fahou, abhujabala, v-cuichen
 appliesto:
 - SQL Server 2022 on Windows

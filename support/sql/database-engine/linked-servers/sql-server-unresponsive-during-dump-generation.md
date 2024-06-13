@@ -5,7 +5,7 @@ author: JamesFerebee
 ms.author: jaferebe
 ms.reviewer: jopilov, v-jayaramanp
 ms.date: 02/16/2024
-ms.custom: sap:Database Engine
+ms.custom: sap:Linked Server and distributed queries
 ---
 
 # SQL Server generates an assert dump file when a linked server query using an LOB data type encounters an exception

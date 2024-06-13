@@ -5,7 +5,7 @@ ms.date: 04/30/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 
 # Intermittent connection errors occur when adding a node to the Always On environment in SQL Server

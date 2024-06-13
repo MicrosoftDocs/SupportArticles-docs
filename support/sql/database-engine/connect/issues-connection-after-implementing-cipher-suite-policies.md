@@ -5,7 +5,7 @@ ms.date: 04/30/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 
 # "Client unable to establish connection" error after implementing the cipher suite policies on a SQL Server machine

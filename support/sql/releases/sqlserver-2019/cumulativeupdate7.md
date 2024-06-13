@@ -2,7 +2,7 @@
 title: Cumulative update 7 for SQL Server 2019 (KB4570012)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 7 (KB4570012).
 ms.date: 06/30/2023
-ms.custom: evergreen, KB4570012
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4570012
 ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows

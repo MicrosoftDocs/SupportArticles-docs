@@ -2,7 +2,7 @@
 title: Error 3456 when backing up a SQL Server database using a VDI application with multi-striping
 description: This article provides a resolution for an issue that occurs when you back up a SQL Server database using VDI applications with multi-striping.
 ms.date: 09/18/2023
-ms.custom: sap:Database Engine
+ms.custom: sap:Database Backup and Restore
 ms.author: jopilov
 author: PiJoCoder
 ms.reviewer: hesha, amamun, v-sidong

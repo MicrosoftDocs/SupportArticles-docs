@@ -2,7 +2,7 @@
 title: Error 701 there is insufficient memory to run this query
 description: Provides resolutions for the error 701 that occurs when executing a large batch of operations in SQL Server.
 ms.date: 08/07/2023
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: ramakoni, v-sidong
 ---
 # SQL Server reports 701 "There is insufficient memory to run this query" when executing large batches

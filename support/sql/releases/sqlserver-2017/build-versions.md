@@ -2,7 +2,7 @@
 title: SQL Server 2017 build versions (KB4047329)
 description: This article lists cumulative update and GDR builds for SQL Server 2017.
 ms.date: 08/04/2023
-ms.custom: evergreen, KB4047329
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4047329
 appliesto:
 - SQL Server 2017
 ms.reviewer: v-six

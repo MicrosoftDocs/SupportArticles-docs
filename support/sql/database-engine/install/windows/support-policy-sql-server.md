@@ -2,12 +2,12 @@
 title: Support policy for SQL Server
 description: This article describes the support policy for Microsoft SQL Server.
 ms.date: 06/30/2023
-ms.custom: sap:General, linux-related-content
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, linux-related-content
 ms.reviewer: sureshka
 ---
 # Technical support policy for Microsoft SQL Server
 
-[!INCLUDE [CentOS End Of Life](../../includes/centos-end-of-life-note.md)]
+[!INCLUDE [CentOS End Of Life](../../../../includes/centos-end-of-life-note.md)]
 
 This article describes the support policy for Microsoft SQL Server.
 
@@ -217,4 +217,4 @@ If the technical problem that you experience exists in a third-party cloud Platf
 
 ## Third-party information disclaimer
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

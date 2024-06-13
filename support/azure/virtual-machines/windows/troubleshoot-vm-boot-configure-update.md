@@ -10,7 +10,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.reviewer: jarrettr, v-leedennis
-ms.date: 12/18/2023
+ms.date: 06/13/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
@@ -47,11 +47,11 @@ If restoring the VM from backup isn't possible or doesn't resolve the problem, y
 
 If you can't find the dump file, go to the next steps to enable the dump log and the serial console, and then trigger the memory dump process.
 
-### Step 2: Enable the dump log and the serial console
+### Step 2: Enable the dump log and the Serial Console
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
-To enable the dump log and the serial console, run the following script:
+To enable the dump log and the serial console, follow these steps:
 
 [!INCLUDE [Enable Serial Console and Memory Dump Collection](../../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
