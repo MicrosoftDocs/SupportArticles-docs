@@ -35,7 +35,7 @@ This event indicates that a destination domain controller that does not have str
 > - [Lingering objects may remain after you bring an out-of-date global catalog server back online](lingering-objects-remain.md).  
 > - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)  
 > - [Introducing Lingering Object Liquidator v2](/archive/blogs/askds/introducing-lingering-object-liquidator-v2)  
-> - [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+> - [Description of the Lingering Object Liquidator tool](lingering-object-liquidator-tool.md)
 >
 > The procedures and information in this article apply to the removal of lingering objects from global catalog servers as well as from domain controllers that are not global catalog servers.
 
@@ -147,7 +147,7 @@ More information about LOLv2:
 
 - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/download/details.aspx?id=56051)
 - [Introducing Lingering Object Liquidator v2](/archive/blogs/askds/introducing-lingering-object-liquidator-v2)
-- [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+- [Description of the Lingering Object Liquidator tool](lingering-object-liquidator-tool.md)
 
 #### Steps to use Repadmin to remove lingering objects:
 

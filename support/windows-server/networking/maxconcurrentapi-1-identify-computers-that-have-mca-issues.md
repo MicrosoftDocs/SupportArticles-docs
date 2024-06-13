@@ -111,7 +111,7 @@ For information about how to modify the logging frequency and warning threshold 
 
 ### More information about Netlogon logs and error messages
 
-When Netlogon logging is enabled on a server, The Netlogon service generates Netlogon.log and Netlogon.bak files. For more information, see [Enabling debug logging for the Netlogon service](/troubleshoot/windows-client/windows-security/enable-debug-logging-netlogon-service). You can use the error messages and events to identify MCA issues when they occur, to identify which domain controllers are responding to authentication requests, and to help identify trends in issue timing.
+When Netlogon logging is enabled on a server, The Netlogon service generates Netlogon.log and Netlogon.bak files. For more information, see [Enabling debug logging for the Netlogon service](../../windows-client/windows-security/enable-debug-logging-netlogon-service.md). You can use the error messages and events to identify MCA issues when they occur, to identify which domain controllers are responding to authentication requests, and to help identify trends in issue timing.
 
 You can use a text editor to review the log files. If Netlogon.bak files are available, review those files in addition to the Netlogon.log files. When an authentication request times out because of an MCA issue, you see a pattern of log entries that resembles the following excerpt:
 
