@@ -21,7 +21,7 @@ You might encounter one or more of the following symptoms when Active Directory 
 
 ### Symptom 1
 
-The *Dcdiag.exe* command-line tool reports that the Active Directory replication test fails with error status code (5). The report resembles the following:
+The *Dcdiag.exe* command-line tool reports that the Active Directory replication test fails with error status code (5). The report resembles the following example:
 
 ```output
 Testing server: <Site_Name>\<Destination_DC_Name>  
@@ -45,7 +45,7 @@ The *Dcdiag.exe* command-line tool reports that the `DsBindWithSpnEx` function f
 
 The *REPADMIN.exe* command-line tool reports that the last replication attempt failed with status 5.
 
-The `REPADMIN` commands that frequently cite the 5 status include but aren't limited to the following:
+The `REPADMIN` commands that frequently cite the 5 status include but aren't limited to the following ones:
 
 - `REPADMIN /KCC`
 - `REPADMIN /REPLICATE`
@@ -100,7 +100,7 @@ Access is denied.
 
 The following screenshot represents a sample of the error:
 
-:::image type="content" source="media/replications-fail-with-error-5/replicate-now-window.png" alt-text="Screenshot of the Replicate Now window which shows a sample of the error.":::
+:::image type="content" source="media/replications-fail-with-error-5/replicate-now-window.png" alt-text="Screenshot of the Replicate Now window that shows a sample of the error.":::
 
 ## Workaround
 
@@ -217,11 +217,11 @@ You can use the following two commands to check time accuracy:
 
 You can find sample output from `DCDIAG /TEST:CheckSecurityError` in the "[More information](#more-information)" section. This sample shows excessive time skew on domain controllers.
 
-Look for LSASRV 40960 events on the destination domain controller when the replication request fails. Look for events that cite a GUID in the CNAME record of the source domain controller with the extended error 0xc000133. Look for events that resemble the following:
+Look for LSASRV 40960 events on the destination domain controller when the replication request fails. Look for events that cite a GUID in the CNAME record of the source domain controller with the extended error 0xc000133. Look for events that resemble the following one:
 
 > 0xc000133: The time at the Primary Domain Controller is different than the time at the Backup Domain Controller or member server by too large an amount
 
-Network traces that capture the destination computer that connects to a shared folder on the source domain controller (and also other operations) may show the "An extended error has occurred" on-screen error, but a network trace displays the following:
+Network traces that capture the destination computer that connects to a shared folder on the source domain controller (and also other operations) may show the "An extended error has occurred" on-screen error, but a network trace displays the following information:
 
 > -> KerberosV5 KerberosV5:TGS Request Realm: <- TGS request from source DC  
 <- Kerberosvs Kerberosvs:KRB_ERROR - KRB_AP_ERR_TKE_NVV (33) <- TGS response where   "KRB_AP_ERR_TKE_NYV  
@@ -376,7 +376,7 @@ The Kerberos realm is invalid if one or more of the following conditions are tru
 
 ## More information
 
-Active Directory errors and events such as those described in the "Symptoms" section can also fail with error 8453 together with the following, similar error string:
+Active Directory errors and events such as those described in the "Symptoms" section can also fail with error 8453 together with the error string similar to the following one:
 
 > Replication Access was denied.
 
