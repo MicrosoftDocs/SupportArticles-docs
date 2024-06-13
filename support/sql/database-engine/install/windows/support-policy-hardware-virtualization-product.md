@@ -2,7 +2,7 @@
 title: Support policy for hardware virtualization product
 description: This article describes the support policy for SQL Server products that are running in a hardware virtualization environment.
 ms.date: 07/24/2023
-ms.custom: sap:General
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: sureshka, jopilov
 ---
 # Support policy for Microsoft SQL Server products that are running in a hardware virtualization environment
@@ -41,7 +41,7 @@ Microsoft may provide limited or no technical support for the following environm
 
 This policy of limited support is based on the following Microsoft Knowledge Base article:
 
-[Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](../../windows-server/virtualization/software-runs-on-non-microsoft-virtualization-software.md)
+[Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](../../../../windows-server/virtualization/software-runs-on-non-microsoft-virtualization-software.md)
 
 ## Restrictions and limitations
 
@@ -54,7 +54,7 @@ The following restrictions and limitations may affect the support policy of the 
   
     - [The Microsoft Support Policy for Windows Server 2008 or Windows Server 2008 R2 Failover Clusters](https://support.microsoft.com/help/943984)
 
-    - [Microsoft support policy for Windows server failover clusters](../../windows-server/high-availability/microsoft-support-policy-failover-clusters.md)
+    - [Microsoft support policy for Windows server failover clusters](../../../../windows-server/high-availability/microsoft-support-policy-failover-clusters.md)
 
 - The SQL Server product must be a supported version under its current Microsoft Support Lifecycle policy. For more information about Microsoft Support Lifecycle policies, see [Search Product and Services Lifecycle Information](/lifecycle/products/).
 
@@ -95,7 +95,7 @@ The following restrictions and limitations may affect the support policy of the 
 
   A2: Microsoft CSS will follow the support policies that are documented in Knowledge Base article 897615. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 
-  [Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](../../windows-server/virtualization/software-runs-on-non-microsoft-virtualization-software.md)
+  [Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](../../../../windows-server/virtualization/software-runs-on-non-microsoft-virtualization-software.md)
 
   If Microsoft CSS determines that the problem may be related to the vendor virtualization software, Microsoft CSS may require the customer to reproduce the problem outside the virtualization environment.
 

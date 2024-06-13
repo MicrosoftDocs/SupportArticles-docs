@@ -4,7 +4,7 @@ description: This article introduces the Sqldumper.exe tool included with SQL Se
 ms.reviewer: sureshka, jopilov
 ms.date: 08/29/2023
 ms.topic: how-to
-ms.custom: sap:Other tools
+ms.custom: sap:SQL Server Management, Query and Data Tools
 ---
 
 # Use the Sqldumper.exe tool to generate a dump file in SQL Server

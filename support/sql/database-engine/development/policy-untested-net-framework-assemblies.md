@@ -2,7 +2,7 @@
 title: Policy for untested .NET Framework assemblies
 description: This article describes the support policy for untested Microsoft .NET Framework assemblies in the .NET Framework common language runtime (CLR)-hosted environment in SQL Server.
 ms.date: 09/25/2020
-ms.custom: sap:Database Design and Development
+ms.custom: sap:Database or Client application Development\SQL CLR, extended stored procedures (xproc)
 ms.reviewer: SureshKa
 ---
 

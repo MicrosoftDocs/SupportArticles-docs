@@ -2,7 +2,7 @@
 title: Error 1205 when you configure replication
 description: This article provides resolutions for the problem that occurs when you configure transactional replication in SQL Server.
 ms.date: 07/22/2020
-ms.custom: sap:Replication, change tracking, change data capture
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ms.reviewer: holgerl
 ---
 

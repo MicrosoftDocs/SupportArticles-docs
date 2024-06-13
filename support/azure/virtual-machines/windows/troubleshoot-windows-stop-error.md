@@ -11,7 +11,7 @@ ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 06/26/2020
+ms.date: 06/13/2024
 ms.custom: sap:My VM is not booting
 ---
 
@@ -150,76 +150,9 @@ Before taking any steps, you should create a copy of the **\windows\system32\con
 
 ### Enable the Serial Console and memory dump collection
 
-**Recommended**: Before you rebuild the VM, enable the Serial Console and memory dump collection by running the following script:
+**Recommended**: Before you rebuild the VM, enable the Serial Console and memory dump collection by following these steps:
 
-To enable memory dump collection and Serial Console, run the following script:
-
-1. Open an elevated command prompt session as an Administrator.
-1. List the BCD store data and determine the boot loader identifier, which you'll use in the next step.
-
-   1. For a Generation 1 VM, enter the following command and note the identifier listed:
-
-      ``
-      bcdedit /store <BOOT PARTITON>:\boot\bcd /enum
-      ``
-
-   - In the command, replace `<BOOT PARTITON>` with the letter of the partition in the attached disk that contains the boot folder.
-
-      :::image type="content" source="media/troubleshoot-windows-stop-error/command-output.svg" alt-text="Screenshot shows the output of the command, which lists the identifier number under the Windows Boot Loader section.":::
-
-   1. For a Generation 2 VM, enter the following command and note the identifier listed:
-
-      ``
-      bcdedit /store <LETTER OF THE EFI SYSTEM PARTITION>:EFI\Microsoft\boot\bcd /enum
-      ``
-
-   - In the command, replace `<LETTER OF THE EFI SYSTEM PARTITION>` with the letter of the EFI System Partition.
-   - It may be helpful to launch the Disk Management console to identify the appropriate system partition labeled as **EFI System Partition**.
-   - The identifier may be a unique GUID or it could be the default **bootmgr**.
-
-1. Run the following commands to enable Serial Console:
-
-   ```
-   bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON 
-   bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
-   ```
-
-   - In the command, replace `<VOLUME LETTER WHERE THE BCD FOLDER IS>` with the letter of the BCD folder.
-   - In the command, replace `<BOOT LOADER IDENTIFIER>` with the identifier you found in the previous step.
-
-1. Verify that the free space on the OS disk is larger than the memory size (RAM) on the VM.
-
-   If there's not enough space on the OS disk, change the location where the memory dump file will be created, and refer that location to any data disk attached to the VM that has enough free space. To change the location, replace **%SystemRoot%** with the drive letter of the data disk, such as drive **F:**, in the following commands.
-
-   Suggested configuration to enable OS Dump:
-
-   **Load Registry Hive from the broken OS Disk:**
-
-   ```
-   REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM
-   ```
-
-   **Enable on ControlSet001:**
-
-   ```
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
-   ```
-
-   **Enable on ControlSet002:**
-
-   ```
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
-   ```
-
-   **Unload Broken OS Disk:**
-
-   ```
-   REG UNLOAD HKLM\BROKENSYSTEM
-   ```
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
 ### Rebuild the VM
 

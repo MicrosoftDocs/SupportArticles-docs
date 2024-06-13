@@ -2,7 +2,7 @@
 title: SQL Server in Windows operating system
 description: This article describes how to use SQL Server in Windows 8, Windows 8.1, Windows Server 2012, and Windows Server 2012 R2 environments.
 ms.date: 05/30/2022
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: ramakoni, randolphwest
 ---
 
@@ -184,7 +184,7 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
   You must apply SQL Server 2012 Service Pack 1 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/help/2755533).
 
   > [!NOTE]
-  > Please check [known setup issues](../database-engine/install/windows/sql-server-2012-setup-issues.md) when you install SQL Server 2012 on Windows 8 or Windows Server 2012.
+  > Please check [known setup issues](../../../database-engine/install/windows/sql-server-2012-setup-issues.md) when you install SQL Server 2012 on Windows 8 or Windows Server 2012.
 
 - **For SQL Server 2008 R2**
 
@@ -197,7 +197,7 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
   > [!NOTE]
   > The RTM installation of the product is supported. However, you have to install the respective service packs after the initial setup is complete. Your SQL Server 2008 installation is not supported unless you apply Service Pack 4 after you install the RTM edition. For more information, see [How to obtain the latest service pack for SQL Server 2008](https://support.microsoft.com/help/968382).
 
-Also check [known setup issues](../database-engine/install/windows/sql-server-2008-setup-issues.md) when you install SQL Server 2008 R2 and SQL Server 2008 on a computer that is running Windows Server 2012 R2, Windows Server 2012, Windows 8.1, or Windows 8.
+Also check [known setup issues](../../../database-engine/install/windows/sql-server-2008-setup-issues.md) when you install SQL Server 2008 R2 and SQL Server 2008 on a computer that is running Windows Server 2012 R2, Windows Server 2012, Windows 8.1, or Windows 8.
 
 ## Minimum SQL Server version requirements for Windows Server 2012 or Windows 8
 
@@ -230,7 +230,7 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
     You must apply SQL Server 2012 Service Pack 4 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/help/2755533).
 
   > [!NOTE]
-  > Please check [known setup issues](../database-engine/install/windows/sql-server-2012-setup-issues.md) when you install SQL Server 2012 on Windows 8 or Windows Server 2012.
+  > Please check [known setup issues](../../../database-engine/install/windows/sql-server-2012-setup-issues.md) when you install SQL Server 2012 on Windows 8 or Windows Server 2012.
 
 - **For SQL Server 2008 R2**
 
@@ -266,7 +266,7 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
   - For SQL Server 2008 R2, you have to install Service Pack 3 (SP3) or a later version.
 
     > [!NOTE]
-    > Please also check [known setup issues](../database-engine/install/windows/sql-server-2008-setup-issues.md) when you install SQL Server 2008 R2 and SQL Server 2008 on a computer that is running Windows Server 2012 R2, Windows Server 2012, Windows 8.1, or Windows 8.
+    > Please also check [known setup issues](../../../database-engine/install/windows/sql-server-2008-setup-issues.md) when you install SQL Server 2008 R2 and SQL Server 2008 on a computer that is running Windows Server 2012 R2, Windows Server 2012, Windows 8.1, or Windows 8.
 
 - **For SQL Server Compact editions**
 

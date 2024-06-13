@@ -4999,6 +4999,46 @@
       "source_path": "support/developer/host-integration-server/network-integration/troubleshoot-event-23-warning.md",
       "redirect_url": "/troubleshoot",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/issue-detours-similar-techniques.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/general/issue-detours-similar-techniques",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/issues-upgrading-sql-server-2022.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/issues-upgrading-sql-server-2022",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/support-policy-hardware-virtualization-product.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/support-policy-hardware-virtualization-product",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/support-policy-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/support-policy-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/use-sql-server-in-windows.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/use-sql-server-in-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/general/policy-untested-net-framework-assemblies.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/policy-untested-net-framework-assemblies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/general/transaction-log-file-grows-databases-in-memory-oltp.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/transaction-log-file-grows-databases-in-memory-oltp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/end-support-sql-server-2008.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/end-support-sql-server-2008",
+      "redirect_document_id": false
     }
   ]
 }

@@ -2,7 +2,7 @@
 title: Error 41131 when creating availability group
 description: Provides resolutions for an issue where error 41131 occurs when you create an availability group in Microsoft SQL Server.
 ms.date: 05/31/2022
-ms.custom: sap:High Availability and Disaster Recovery features
+ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: ramakoni, v-sidong
 ---
 

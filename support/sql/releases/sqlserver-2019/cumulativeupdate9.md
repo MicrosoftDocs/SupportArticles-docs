@@ -2,7 +2,7 @@
 title: Cumulative update 9 for SQL Server 2019 (KB5000642)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 9 (KB5000642).
 ms.date: 06/30/2023
-ms.custom: evergreen, KB5000642
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5000642
 ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows

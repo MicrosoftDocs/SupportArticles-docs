@@ -2,7 +2,7 @@
 title: Cumulative update 13 for SQL Server 2019 (KB5005679)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 13 (KB5005679).
 ms.date: 06/30/2023
-ms.custom: evergreen, KB5005679
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5005679
 ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows

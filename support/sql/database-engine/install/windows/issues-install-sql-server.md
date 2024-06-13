@@ -2,7 +2,7 @@
 title: Known issues when you install SQL Server
 description: This article describes some known issues and prerequisites when you plan to install SQL Server on Windows 7 or on Windows Server 2008 R2.
 ms.date: 10/22/2020
-ms.custom: sap:Database Engine
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: ramakoni
 ---
 # Known issues installing SQL Server on Windows 7 or Windows Server 2008 R2

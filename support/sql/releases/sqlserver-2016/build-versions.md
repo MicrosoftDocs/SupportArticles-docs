@@ -2,7 +2,7 @@
 title: SQL Server 2016 build versions (KB3177312)
 description: This article lists cumulative update builds for SQL Server 2016.
 ms.date: 10/12/2022
-ms.custom: evergreen, KB3177312
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB3177312
 appliesto:
 - SQL Server 2016
 ms.reviewer: v-six

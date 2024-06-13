@@ -2,7 +2,7 @@
 title: Cumulative update 5 for SQL Server 2016 (KB4013105)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 cumulative update 5 (KB4013105).
 ms.date: 10/26/2023
-ms.custom: evergreen, KB4013105
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4013105
 appliesto:
 - SQL Server 2016
 ---

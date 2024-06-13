@@ -2,7 +2,7 @@
 title: Understand merge Replication article processing order
 description: This article describes how to understand merge Replication article processing order.
 ms.date: 01/25/2021
-ms.custom: sap:Replication, change tracking, change data capture
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ms.reviewer: dansha
 ms.topic: how-to
 ---

@@ -7,7 +7,7 @@ ms.reviewer: amitkh, vanto
 ms.date: 05/16/2024
 appliesto:
   - SQL Server 2022
-ms.custom: evergreen, linux-related-content
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-related-content
 ---
 # <a id="release-history"></a> Release history for SQL Server 2022 on Linux
 

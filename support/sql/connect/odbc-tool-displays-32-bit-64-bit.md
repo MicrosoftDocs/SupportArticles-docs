@@ -2,7 +2,7 @@
 title: ODBC tool displays both 32-bit and 64-bit
 description: This article provides workaround for the problem that occurs in the ODBC Data Source Administrator tool.
 ms.date: 12/07/2020
-ms.custom: sap:MDAC and ADO 
+ms.custom: sap:Database Connectivity and Authentication
 ---
 # ODBC Administrator tool displays both the 32-bit and the 64-bit user DSNs in a 64-bit version of Windows
 

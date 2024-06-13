@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files issues in Linux (SMB)
 description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients and possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 02/26/2024
+ms.date: 06/13/2024
 ms.reviewer: kendownie, v-weizhu
 ---
 
@@ -131,7 +131,9 @@ For capacity load balancing purposes, storage accounts are sometimes live-migrat
 
 ### Workaround
 
-You can mitigate this issue by rebooting the client OS, but you might run into the issue again if you don't upgrade your client OS to a Linux distro version with account migration support. Note that umount and remount of the share might appear to fix the issue temporarily.
+You can mitigate this issue by rebooting the client OS, but you might run into the issue again if you don't upgrade your client OS to a Linux distro version with account migration support.
+
+While unmounting and remounting the share might seem to resolve the issue temporarily, it's not a permanent solution. When the client reconnects to the server, the issue might occur again. The temporary mitigation occurs because a new mount action bypasses the SMB kernel cache and resolves the DNS address in the user space. However, the kernel DNS cache is utilized during any network disconnection recovery, which can cause the issue to reoccur. This behavior persists even outside of storage account migrations.
 
 To better work around this issue, clear the kernel DNS resolver cache:
 
@@ -164,6 +166,11 @@ To better work around this issue, clear the kernel DNS resolver cache:
     ```output
     132b6bbf I------     1 perm 1f030000     0     0 keyring   .dns_resolver: empty
     ```
+
+4. Unmount and remount the share to mitigate the issue.
+
+> [!NOTE]
+> On some older Linux distros, the preceding mitigation steps might not work. In such cases, rebooting the client OS is the only known mitigation.
 
 ### Solution
 

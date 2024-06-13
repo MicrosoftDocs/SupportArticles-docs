@@ -4,6 +4,7 @@ description: This article describes the information regarding servicing channels
 ms.date: 02/15/2023
 ms.reviewer: ramakoni, v-sidong
 ms.topic: conceptual
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ---
 
 # Servicing models for SQL Server

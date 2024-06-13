@@ -5,7 +5,7 @@ author: pijocoder
 ms.author: jopilov
 ms.reviewer: jopilov
 ms.date: 04/03/2024
-ms.custom: sap:Security Issues
+ms.custom: sap:Security, Encryption, Auditing, Authorization
 ---
 
 # Configure antivirus software to work with SQL Server
