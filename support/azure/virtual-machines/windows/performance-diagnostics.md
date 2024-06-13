@@ -255,3 +255,34 @@ Currently, there's no easy way to know exactly when the VM extension installatio
 Azure VMs, and related network and storage resources, can be moved across regions by using Azure Resource Mover. However, moving VM extensions across regions, including the Azure Performance Diagnostics VM extension, isn't supported. You have to install the extension manually on the VM in the target region after you move the VM. For more information, see [Support matrix for moving Azure VMs between Azure regions](/azure/resource-mover/support-matrix-move-region-azure-vm).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+### What is the performance impact of enabling Continuous Performance Diagnostics?
+
+We ran 12-hour tests of Continuous Performance Diagnostics on a range of Windows OS versions, Azure VMs of sizes, and CPU loads.
+
+The test results, presented in this table, show that Continuous Performance Diagnostics provides valuable insights with minimal impact on system resources:
+
+| OS Version             | VM Size        | CPU Load     | Avg. CPU Usage | P90 CPU Usage | P99 CPU Usage | Memory Usage |
+|------------------------|----------------|--------------|----------------|---------------|---------------|--------------|
+| Windows Server 2019    | B2s, A4V2, D5v2| 20%, 50%, 80%| <0.5%          | 2%            | 3%            | 42-43 MB     |
+| Windows Server 2016 SQL| B2s, A4V2, D5v2| 20%, 50%, 80%| <0.5%          | 2%            | 3%            | 42-43 MB     |
+| Windows Server 2019    | B2s, A4V2, D5v2| 20%, 50%, 80%| <0.5%          | 2%            | 3%            | 42-43 MB     |
+| Windows Server 2022    | B2s, A4V2, D5v2| 20%, 50%, 80%| <0.5%          | <0.5%         | 3%            | 42-43 MB     |
+
+
+#### Back of the napkin calculations of storage costs
+
+Continuous Performance Diagnostics stores insights in a table and a JSON file in a blob container. Given that each row is approximately 0.5 KB (kilobyte) and the report is approximately 9 KB before compression, two rows every five minutes plus the corresponding report upload comes out to 10 KB, or 0.00001 GB.
+
+Now, let’s calculate the storage cost:
+- Rows per month: 17,280
+- Size per row: 0.00001 GB
+
+**Total data size:**
+\[ 17,280 \times 0.00001 = 0.1728 \text{ GB} \]
+
+**Data storage cost (LRS):**
+\[ 0.1728 \text{ GB} \times \$0.045 = \$0.007776 \]
+
+Therefore, assuming steady stress on the VM, the storage cost is estimated to be less than 1 cent per month, assuming you use locally redundant storage.
+
