@@ -31,7 +31,7 @@ For Windows Update scan URLs (connect to [SimpleAuth Web Service](/openspecs/win
 
 - The system proxy is attempted (WinHTTP).
 - If the Windows Update Agent (WUA) fails to reach the service due to certain proxy, service, or authentication error codes, then the user proxy is attempted. (Generally, it's the signed-in user IE settings or WinINet.)
-- For intranet WSUS update service URLs, you can use the [Specify intranet Microsoft update service location](/windows/deployment/update/waas-wu-settings#specify-intranet-microsoft-update-service-location) setting to choose the proxy behavior.
+    For intranet WSUS update service URLs, you can use the [Specify intranet Microsoft update service location](/windows/deployment/update/waas-wu-settings#specify-intranet-microsoft-update-service-location) setting to choose the proxy behavior.
 
    :::image type="content" source="media/windows-update-client-determines-proxy-server-connect/specify-intranet-microsoft-update-service-location.png" alt-text="Screenshot of the Specify intranet Microsoft update service location window with Only use system proxy for detecting updates (default) selected.":::
   
@@ -46,7 +46,7 @@ The WPAD feature enables services to locate an available proxy server by queryin
 
 ## The Netsh.exe tool
 
-The *Netsh.exe* tool is used to configure a system-wide static proxy. You can use commands in the `netsh winhttp` context to configure proxy and tracing settings for Windows HTTP. The `Netsh` commands for winhttp can be run manually at the `netsh` prompt or in scripts and batch files. The *Netsh.exe* tool is useful if you can't implement WPAD.
+The *Netsh.exe* tool is used to configure a system-wide static proxy. You can use commands in the `netsh winhttp` context to configure proxy and tracing settings for Windows HTTP. The `Netsh` commands for `winhttp` can be run manually at the `netsh` prompt or in scripts and batch files. The *Netsh.exe* tool is useful if you can't implement WPAD.
 
 ### To configure a proxy server by using the Netsh.exe tool
 
@@ -55,9 +55,9 @@ To use the *Netsh.exe* tool to configure a proxy server, follow these steps:
 1. Select **Start** > **Run**, type *cmd*, and then select **OK**.
 2. At the command prompt, run the following command and then press <kbd>Enter</kbd>.
 
-```consle
-netsh winhttp set proxy <proxyservername>:<portnumber>
-```
+    ```consle
+    netsh winhttp set proxy <proxyservername>:<portnumber>
+    ```
 
 In this command, replace \<proxyservername\> with the fully qualified domain name of the proxy server. Replace \<portnumber\> with the port number for which you want to configure the proxy server. For example, replace \<proxyservername\>:\<portnumber\> with `proxy.domain.example.com:80`.
 
@@ -68,20 +68,20 @@ To use the *Netsh.exe* tool to remove a proxy server and to configure "direct ac
 1. Select **Start** > **Run**, type *cmd*, and then select **OK**.
 2. At the command prompt, run the following command and then press <kbd>Enter</kbd>.
 
-```consle
-netsh winhttp reset proxy 
-```
+    ```consle
+    netsh winhttp reset proxy 
+    ```
 
 ### To verify the current proxy configuration by using the Netsh.exe tool
 
-To use the Netsh.exe tool to verify the current proxy configuration, follow these steps:
+To use the *Netsh.exe* tool to verify the current proxy configuration, follow these steps:
 
 1. Select **Start** > **Run**, type *cmd*, and then select **OK**.
 2. At the command prompt, run the following command and then press <kbd>Enter</kbd>.
 
-```consle
-netsh winhttp show proxy
-```
+    ```consle
+    netsh winhttp show proxy
+    ```
 
 ## Supported .pac files
 
