@@ -60,7 +60,7 @@ To use the *Netsh.exe* tool to configure a proxy server, follow these steps:
     netsh winhttp set proxy <proxyservername>:<portnumber>
     ```
 
-In this command, replace \<proxyservername\> with the fully qualified domain name of the proxy server. Replace \<portnumber\> with the port number for which you want to configure the proxy server. For example, replace \<proxyservername\>:\<portnumber\> with `proxy.domain.example.com:80`.
+    In this command, replace \<proxyservername\> with the fully qualified domain name of the proxy server. Replace \<portnumber\> with the port number for which you want to configure the proxy server. For example, replace \<proxyservername\>:\<portnumber\> with `proxy.domain.example.com:80`.
 
 ### To remove a proxy server by using the Netsh.exe tool
 
