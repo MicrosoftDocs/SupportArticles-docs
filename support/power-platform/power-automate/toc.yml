@@ -204,6 +204,8 @@
   items:
     - name: Can't import solutions or publish changes
       href: ../power-apps/cannot-import-solutions-publish-changes.md?context=/troubleshoot/power-platform/power-automate/context/context
+    - name: Duplicate binary objects in v2 schema desktop flow solutions
+      href: solutions/duplicate-binary-objects-in-schema-v2.md
 - name: Support resources
   items:
     - name: Power Automate support
