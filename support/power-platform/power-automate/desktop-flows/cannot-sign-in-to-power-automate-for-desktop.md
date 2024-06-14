@@ -3,7 +3,7 @@ title: Can't sign in to Power Automate for desktop
 description: Helps troubleshoot sign-in related issues with Power Automate for desktop.
 ms.reviewer: pefelesk, matp
 ms.date: 03/01/2024
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Cannot access Power Automate for desktop application
 ---
 # Can't sign in to Power Automate for desktop
 
