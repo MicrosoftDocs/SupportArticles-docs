@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot slow SQL Server performance caused by I/O issues
 description: Provides a methodology to isolate and troubleshoot SQL performance problems caused by slow disk I/O.
-ms.date: 09/28/2022
+ms.date: 06/14/2024
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 author: PijoCoder 
@@ -216,8 +216,9 @@ $_.CounterSamples | ForEach-Object       {
 If the I/O subsystem is overwhelmed beyond capacity, find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then work with the Application Development teams or application vendor to:
 
 - Tune queries, for example: better indexes, update statistics, rewrite queries, and redesign the database.
-- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will cache more data or index pages without frequently re-reading from disk, which will reduce I/O activity. This can also reduce Lazy Writes/sec driven by frequent Lazy Writer flushes when there's a frequent need for memory to store more database pages.
-- If you find that page writes are the source of heavy I/O activity, examine Buffer Manager: Checkpoint pages/sec to see if it's due to massive page flushes to meet recovery interval configuration demands. You can either use [Indirect checkpoints](/sql/relational-databases/logs/database-checkpoints-sql-server#IndirectChkpt) to even out I/O over time, or increase hardware I/O throughput.  
+- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will cache more data or index pages without frequently re-reading from disk, which will reduce I/O activity. This can also reduce `Lazy Writes/sec` driven by frequent Lazy Writer flushes when there's a frequent need for memory to store more database pages.
+- If you find that page writes are the source of heavy I/O activity, examine `Buffer Manager: Checkpoint pages/sec` to see if it's due to massive page flushes required to meet recovery interval configuration demands. You can either use [Indirect checkpoints](/sql/relational-databases/logs/database-checkpoints-sql-server#IndirectChkpt) to even out I/O over time, or increase hardware I/O throughput.
+
 ## Causes
 
 In general, the following issues are the high-level reasons why SQL Server queries suffer from I/O latency:
@@ -236,7 +237,7 @@ In general, the following issues are the high-level reasons why SQL Server queri
 
 - **Filter drivers:** The SQL Server I/O response can be severely impacted if file-system filter drivers process heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendors are recommended to prevent impact on I/O performance.
 
-- **Other application(s):** Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This situation may push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application and tune it or move it elsewhere to eliminate its impact on the I/O stack.
+- **Other application(s):** Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This situation might push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application and tune it or move it elsewhere to eliminate its impact on the I/O stack.
 
 ## Graphical representation of the methodology
 
@@ -248,7 +249,7 @@ The following are descriptions of the common wait types observed in SQL Server w
 
 ### PAGEIOLATCH_EX
 
-Occurs when a task is waiting on a latch for a data or index page (buffer) in an I/O request. The latch request is in the Exclusive mode. An Exclusive mode is used when the buffer is being written to disk. Long waits may indicate problems with the disk subsystem.
+Occurs when a task is waiting on a latch for a data or index page (buffer) in an I/O request. The latch request is in the Exclusive mode. An Exclusive mode is used when the buffer is being written to disk. Long waits might indicate problems with the disk subsystem.
 
 ### PAGEIOLATCH_SH
 
