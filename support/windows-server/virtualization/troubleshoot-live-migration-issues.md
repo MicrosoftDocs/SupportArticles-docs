@@ -549,7 +549,7 @@ To use `.vmcx` files instead of `.xml` files for management, upgrade the virtual
 
 **Description**  
 
-Can't live migrate a VM across nodes in a cluster if that VM is connected to an internal or private virtual switch.
+You can't live migrate a VM across nodes in a cluster if that VM is connected to an internal or private virtual switch.
 
 > Live migration of \<VM Name\> failed. \<VM Name\> failed to live migrate to the destination \<Server Name\> because the destination has disconnected VM switch(s).
 
