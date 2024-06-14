@@ -7,7 +7,7 @@ ms.custom: sap:Solutions\Adding flows into solutions
 ---
 # Duplicate binary objects in the v2 schema desktop flow solution
 
-This article provides workarounds for issues related to desktop flows in the v2 schema when dealing with solutions and having duplicate binaries.
+This article provides workarounds for issues related to desktop flows in the v2 schema when dealing with solutions and duplicate binaries.
 
 ## Symptoms
 
@@ -17,13 +17,13 @@ When you use [Power Automate v2 schema](/power-automate/desktop-flows/schema) wi
 
 ## Cause
 
-Briefly, this issue occurs due to the way Dataverse layering works. Assume you have desktop flows in two environments (which is achieved with solution export or import). If you update the same desktop flow in both environments, and then try to import one solution into the other environment, the process will run into errors.
+This issue occurs due to the way Dataverse layering works. Assume you have desktop flows in two environments (achieved with solution export or import). If you update the same desktop flow in both environments, and then try to import one solution into the other environment, the process will run into errors.
 
 This issue happens because new desktop flow binaries are created when you update the v1 schema to the v2 schema. Those binaries created in each environment have different IDs, and when importing the solution, Dataverse will see them as two separate binaries. Because only one binary of each type is expected, this will lead to duplicate binaries from the perspective of Power Automate for desktop.
 
 ## Workaround
 
-No specific version of Power Automate for desktop will change this behavior because it's related to how the platform works. However, the issue isn't expected to persist once you apply one of the following workarounds.
+Since this behavior is related to how the platform works, there isn't a specific version of Power Automate for desktop that will change the behavior. However, the issue isn't expected to persist after you apply one of the following workarounds.
 
 ### Workaround for a managed solution
 
@@ -34,6 +34,8 @@ No specific version of Power Automate for desktop will change this behavior beca
 
 1. Delete the desktop flow in the target environment.
 2. Reimport the solution into the environment as an unmanaged solution.
+
+For more information, see [Application lifecycle management (ALM) for Power Automate v2 schema](/power-automate/desktop-flows/alm-schema).
 
 ## More information
 
