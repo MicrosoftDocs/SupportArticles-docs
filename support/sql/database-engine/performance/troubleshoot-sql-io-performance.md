@@ -237,7 +237,7 @@ In general, the following issues are the high-level reasons why SQL Server queri
 
 - **Filter drivers:** The SQL Server I/O response can be severely impacted if file-system filter drivers process heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendors are recommended to prevent impact on I/O performance.
 
-- **Other application(s):** Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This situation might push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application and tune it or move it elsewhere to eliminate its impact on the I/O stack.
+- **Other application(s):** Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This situation may push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application and tune it or move it elsewhere to eliminate its impact on the I/O stack.
 
 ## Graphical representation of the methodology
 
@@ -249,7 +249,7 @@ The following are descriptions of the common wait types observed in SQL Server w
 
 ### PAGEIOLATCH_EX
 
-Occurs when a task is waiting on a latch for a data or index page (buffer) in an I/O request. The latch request is in the Exclusive mode. An Exclusive mode is used when the buffer is being written to disk. Long waits might indicate problems with the disk subsystem.
+Occurs when a task is waiting on a latch for a data or index page (buffer) in an I/O request. The latch request is in the Exclusive mode. An Exclusive mode is used when the buffer is being written to disk. Long waits may indicate problems with the disk subsystem.
 
 ### PAGEIOLATCH_SH
 
