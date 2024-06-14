@@ -1,8 +1,8 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 05/16/2024
-ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, sap:Installation, Patching and Upgrade
+ms.date: 06/13/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen
 ms.reviewer: v-six
 ---
 
