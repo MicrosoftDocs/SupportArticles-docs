@@ -31,9 +31,10 @@ For Windows Update scan URLs (connect to [SimpleAuth Web Service](/openspecs/win
 
 - The system proxy is attempted (WinHTTP).
 - If the Windows Update Agent (WUA) fails to reach the service due to certain proxy, service, or authentication error codes, then the user proxy is attempted. (Generally, it's the signed-in user IE settings or WinINet.)
+
     For intranet WSUS update service URLs, you can use the [Specify intranet Microsoft update service location](/windows/deployment/update/waas-wu-settings#specify-intranet-microsoft-update-service-location) setting to choose the proxy behavior.
 
-   :::image type="content" source="media/windows-update-client-determines-proxy-server-connect/specify-intranet-microsoft-update-service-location.png" alt-text="Screenshot of the Specify intranet Microsoft update service location window with Only use system proxy for detecting updates (default) selected.":::
+    :::image type="content" source="media/windows-update-client-determines-proxy-server-connect/specify-intranet-microsoft-update-service-location.png" alt-text="Screenshot of the Specify intranet Microsoft update service location window with Only use system proxy for detecting updates (default) selected.":::
   
 For Windows Update URLs, which aren't used for update detection (for example, URLs used for reporting):
 
