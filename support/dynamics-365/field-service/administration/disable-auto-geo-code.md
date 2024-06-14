@@ -21,8 +21,11 @@ The issue originates from a service degradation in the location APIs that the [U
 
 ## Workaround
 
-- Try saving the record again to ensure it's not a temporary hiccup.
-- To unblock operations like creating or updating records in case of consistent failure, an administrator can temporarily disable the [Auto Geo Code Addresses](/dynamics365/field-service/turn-on-auto-geocoding) setting in the **Field Service Settings**. After reenabling the setting, users need to manually geocode records that were updated during the outage.
+As a user, try saving the record again to ensure it's not a temporary hiccup.
+
+As an adminstrator:
+
+- To unblock operations like creating or updating records in case of consistent failure, you can temporarily disable the [Auto Geo Code Addresses](/dynamics365/field-service/turn-on-auto-geocoding) setting in the **Field Service Settings**. After reenabling the setting, users need to manually geocode records that were updated during the outage.
 
   > [!CAUTION]
   >
