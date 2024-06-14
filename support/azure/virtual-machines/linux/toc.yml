@@ -353,7 +353,7 @@
   - name: Failed to get log in Boot Diagnostics
     href: ../windows/failed-get-contents-log-error.md
   - name: GPU is disabled
-    href: ../windows/gpu-disabled-upgrade-ubuntu.md
+    href: gpu-disabled-upgrade-ubuntu.md
   - name: VM stuck in failed state
     href: ../windows/vm-stuck-in-failed-state.md
   - name: VM is unavailable for 15 minutes

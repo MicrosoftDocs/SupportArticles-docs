@@ -168,7 +168,7 @@ items:
         tocHref: /troubleshoot/azure/cloud-services/classic/
         topicHref: /troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic
       - name: Cloud Services (extended support)
-        tocHref: /troubleshoot/azure/cloud-service/extended/
+        tocHref: /troubleshoot/azure/cloud-services/extended/
         topicHref: /troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended
       - name: DevOps Services
         tocHref: /troubleshoot/azure/devops/

@@ -229,9 +229,9 @@ Error 8453 (Replication Access was denied) has multiple root causes, including:
 
     > CN=NtDs Settings,CN=Server1$ADAMINST1,CN=Server,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,CN={A560B9B8-6B05-4000-9A1F-9A853DB6615A}
 
-Active Directory errors and events, such as those mentioned in the [Symptoms](#symptoms) section, may also occur and generate an [error 5](/troubleshoot/windows-server/active-directory/replications-fail-with-error-5) message (Access is denied).
+Active Directory errors and events, such as those mentioned in the [Symptoms](#symptoms) section, may also occur and generate an [error 5](replications-fail-with-error-5.md) message (Access is denied).
 
-The steps for [error 5](/troubleshoot/windows-server/active-directory/replications-fail-with-error-5) or error 8453 mentioned in the [Resolution](#resolution) section won't resolve replication failures on computers that are currently failing replication and generating the other error message.
+The steps for [error 5](replications-fail-with-error-5.md) or error 8453 mentioned in the [Resolution](#resolution) section won't resolve replication failures on computers that are currently failing replication and generating the other error message.
 
 Common root causes for Active Directory operations failing that are generating error 5 messages include:
 

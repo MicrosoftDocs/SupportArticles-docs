@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where you can't join a machine g
 ms.reviewer: matp, kenseongtan, johndund
 ms.author: fanedjad
 ms.date: 01/29/2024
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Can't silently join a machine group using Power Automate for desktop
 

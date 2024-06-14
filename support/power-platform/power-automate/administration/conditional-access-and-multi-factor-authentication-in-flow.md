@@ -3,7 +3,6 @@ title: Conditional access and multifactor authentication in Power Automate (Flow
 description: Using conditional access has an unexpected effect on users who use Flow to connect to Microsoft services that are relevant to conditional access policies.
 ms.reviewer: sranjan, hamenon, cgarty
 ms.date: 02/27/2024
-ms.subservice: power-automate-admin
 ms.custom: has-azure-ad-ps-ref, sap:Administration\Power Automate management for admins
 ---
 # Recommendations for conditional access and multifactor authentication in Microsoft Power Automate (Flow)
