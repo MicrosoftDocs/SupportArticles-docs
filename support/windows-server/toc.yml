@@ -1391,6 +1391,8 @@ items:
       href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
     - name: Fix Windows Update errors
       href: ./installing-updates-features-roles/fix-windows-update-errors.md
+    - name: How the Windows Update client determines which proxy server to use
+      href: ./installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md     
     - name: How to block user access to Windows Update
       href: ./installing-updates-features-roles/block-user-access-windows-update.md
     - name: How to use the Recovery Console
