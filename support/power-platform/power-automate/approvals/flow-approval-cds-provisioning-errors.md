@@ -3,7 +3,6 @@ title: Power Automate Approval Dataverse provisioning errors
 description: Resolves errors that occur when Power Automate Approvals can't create and assign approval requests.
 ms.reviewer: hamenon, mansong
 ms.date: 03/07/2023
-ms.subservice: power-automate-approvals
 ms.custom: has-azure-ad-ps-ref, sap:Approvals\Approval action failing
 ---
 # Power Automate Approval Dataverse provisioning errors and recommendations
