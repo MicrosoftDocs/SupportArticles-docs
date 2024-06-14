@@ -37,7 +37,7 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 
 SQL Server 2019 CU26 introduced the fix of [Bug 2830668](cumulativeupdate26.md#2830668) that might disable lock escalation, which causes error 1204 "The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time."
 
-To work around this issue, you can uninstall the CU26 or install the next CU27. Microsoft is working on the original latch time-out issue and the fix will be available in a future CU.
+To work around this issue, you can uninstall the CU26 or install the next [CU27](cumulativeupdate27.md). Microsoft is working on the original latch time-out issue and the fix will be available in a future CU.
 
 ## Improvements and fixes included in this update
 
