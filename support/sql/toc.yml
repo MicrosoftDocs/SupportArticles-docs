@@ -27,9 +27,6 @@ items:
 - name: Database Client Programming
   href: connect/toc.yml
 
-- name: General Troubleshooting Information
-  href: general/toc.yml
-
 - name: Integration Services (SSIS)
   href: integration-services/toc.yml
 
