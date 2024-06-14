@@ -1389,7 +1389,7 @@ items:
       href: ./installing-updates-features-roles/failed-schedule-software-protection.md
     - name: Fail to install Network Policy Server role
       href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
-    - name: Fix Windows Update errors
+    - name: Fix Windows Update corruptions and installation failures
       href: ./installing-updates-features-roles/fix-windows-update-errors.md
     - name: How to block user access to Windows Update
       href: ./installing-updates-features-roles/block-user-access-windows-update.md

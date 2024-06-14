@@ -5454,6 +5454,11 @@
         "source_path": "virtual-machines/windows/swap-file-not-recreated-linux-vm-restart.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/swap-file-not-recreated-linux-vm-restart",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows/gpu-disabled-upgrade-ubuntu.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/gpu-disabled-upgrade-ubuntu",
+        "redirect_document_id": true
       }
   ]
 }
