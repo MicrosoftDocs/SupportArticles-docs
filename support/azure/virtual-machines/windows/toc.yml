@@ -524,8 +524,6 @@
     href: ping-clustered-name-fail.md
   - name: Failed to get log in Boot Diagnostics
     href: failed-get-contents-log-error.md
-  - name: GPU is disabled
-    href: gpu-disabled-upgrade-ubuntu.md
   - name: VM stuck in failed state
     href: vm-stuck-in-failed-state.md
   - name: VM is unavailable for 15 minutes
