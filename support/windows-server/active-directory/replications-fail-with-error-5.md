@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot AD replication error 5 Access is denied
 description: Discusses the Access is denied error 5 when Active Directory replications fail. This issue can occur in Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, Windows Server 2003, or Microsoft Windows 2000 Server.
-ms.date: 06/13/2024
+ms.date: 06/14/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, v-tappelgate, sagiv
+ms.reviewer: kaushika, v-tappelgate, sagiv, v-lianna
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # How to troubleshoot Active Directory replication error 5 in Windows Server: Access is denied
@@ -302,7 +302,7 @@ You should focus on SMB signing mismatches between the destination and source do
 
 ## Cause 8: UDP-formatted Kerberos packet fragmentation
 
-Network routers and switches may fragment or completely drop large User Datagram Protocol (UDP)-formatted network packets that are used by Kerberos and Extension Mechanisms for DNS (EDNS0). Computers that are running Windows 2000 Server or Windows Server 2003 operating system families are especially vulnerable to UDP fragmentation on computers that are running Windows Server 2008 or Windows Server 2008 R2.
+Network routers and switches may fragment or completely drop large User Datagram Protocol (UDP)-formatted network packets that are used by Kerberos and Extension Mechanisms for DNS (EDNS0).
 
 **Solution**
 
@@ -346,9 +346,6 @@ The Kerberos realm is invalid if one or more of the following conditions are tru
 3. For each \<Fully_Qualified_Domain\> under the subkey, verify that the value of the `KdcNames` registry entry refers to a valid external Kerberos realm and not the local domain or another domain in the same Active Directory forest.
 
 ### Solution to the mismatched "PolAcDmN" and "PolPrDmN" registry keys
-
-> [!NOTE]
-> This method is valid only for domain controllers that are running Windows 2000 Server.
 
 1. Start Registry Editor.
 2. In the navigation pane, expand **Security**.
