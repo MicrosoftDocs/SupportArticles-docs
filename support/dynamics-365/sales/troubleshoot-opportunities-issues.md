@@ -142,6 +142,48 @@ The out-of-the-box **Stakeholders** subgrid only shows connections that have a c
 #### Resolution
 
 1. In the opportunity record, select the **Related** tab, and then select **Connections**.
-2. In the **Connections** subgrid, select the connection record you added.
-3. Open the connection role selected in the **As this role** field.
-4. Make sure that **Connection Role Category** is set to **Stakeholder**. If it isn't, select **Stakeholder** in the **Connection Role Category** drop-down list.
+1. In the **Connections** subgrid, select the connection record you added.
+1. Open the connection role selected in the **As this role** field.
+1. Make sure that **Connection Role Category** is set to **Stakeholder**. If it isn't, select **Stakeholder** in the **Connection Role Category** drop-down list.
+## Opportunity Pipeline view issues
+
+### Issue 1: Pipeline view isn't displaying bubbles in the deal tracker
+
+#### Cause:  
+
+There are a couple of reasons why the bubbles might not be visible
+
+1. The bubble chart shows only the first 50 valid opportunity entries, meaning those with defined x-axis, y-axis, radius data, and segment by fields. This could result in some or all of the bubbles not showing up on the graph despite being present in the grid view.
+
+1. If the fields msdyn_score (Opportunity Score) and msdyn_grade (Opportunity Grade) are selected as tooltip fields for the deal tracker, the not null filters of these fields will be applied to opportunities for the bubble chart, potentially filtering out all opportunities from the chart despite being visible in the grid view.
+
+#### Resolution:
+
+To address this issue, take the following steps:
+
+1. Ensure that the fields selected for the deal tracker settings in the app settings have values for x-axis, y-axis, radius data, and segment by fields.
+
+1. Avoid using the fields msdyn_score (Opportunity Score) and msdyn_grade (Opportunity Grade) as tooltip fields, x-axis, y-axis, radius, and segment by fields to ensure the bubbles appear in the deal tracker. Alternatively, enable predictive opportunity scoring in the organization to populate data for the msdyn_score and msdyn_grade fields.
+
+### Issue 2**:** Pipeline view isn't showing all the bubbles in the deal tracker.
+
+#### Cause: 
+
+The bubble chart is designed to display a maximum of 50 opportunities.
+
+#### Resolution: 
+
+This limitation is intentional to maintain clarity in the bubble chart.
+
+### Issue 3: Deal manager access privileges are auto assigned to newly created roles.
+
+#### Cause:
+
+When the admin publishes any deal manager settings from the "opportunity pipeline settings" page in the app settings, the privileges prvReadmsdyn_dealmanageraccess and prvReadmsdyn_dealmanagersettings are granted to all created roles in the environment.
+
+#### Resolution: 
+
+This is intentional, allowing any user to have the ability to read the deal manager settings configuration to display the bubble chart in the pipeline view.
+
+ 
+
