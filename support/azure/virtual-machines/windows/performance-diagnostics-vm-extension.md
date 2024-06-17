@@ -1,5 +1,5 @@
 ---
-title: Azure Performance Diagnostics VM Extension for Windows
+title: Azure Performance Diagnostics (PerfInsights) VM Extension for Windows
 description: Introduces Azure Performance Diagnostics VM Extension for Windows.
 services: virtual-machines
 documentationcenter: ''
@@ -11,12 +11,12 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 03/21/2022
+ms.date: 05/23/2024
 ms.author: genli
 
 ms.custom: sap:VM Performance
 ---
-# Azure Performance Diagnostics VM Extension for Windows
+# Azure Performance Diagnostics (PerfInsights) VM Extension for Windows
 
 Azure Performance Diagnostics VM Extension helps collect performance diagnostic data from Windows VMs. The extension performs analysis, and provides a report of findings and recommendations to identify and resolve performance issues on the virtual machine. This extension installs a troubleshooting tool called [PerfInsights](./how-to-use-perfinsights.md).
 
@@ -41,33 +41,33 @@ This extension can be installed on:
 The following JSON shows the schema for Azure Performance Diagnostics VM Extension. This extension requires the name and key for a storage account to store the diagnostics output and report. These values are sensitive. Storage account key should be stored inside a protected setting configuration. Azure VM extension protected setting data is encrypted, and it is only decrypted on the target virtual machine. Note that **storageAccountName** and **storageAccountKey** are case-sensitive. Other required parameters are listed in the following section.
 
 ```JSON
-    {
-      "name": "[concat(parameters('vmName'),'/AzurePerformanceDiagnostics')]",
-      "type": "Microsoft.Compute/virtualMachines/extensions",
-      "location": "[parameters('location')]",
-      "apiVersion": "2015-06-15",
-      "properties": {
-        "publisher": "Microsoft.Azure.Performance.Diagnostics",
-        "type": "AzurePerformanceDiagnostics",
-        "typeHandlerVersion": "1.0",
-        "autoUpgradeMinorVersion": true,
-        "settings": {
-          "storageAccountName": "[parameters('storageAccountName')]",
-          "performanceScenario": "[parameters('performanceScenario')]",
-          "traceDurationInSeconds": "[parameter('traceDurationInSeconds')]",
-          "perfCounterTrace": "[parameters('perfCounterTrace')]",
-          "networkTrace": "[parameters('networkTrace')]",
-          "xperfTrace": "[parameters('xperfTrace')]",
-          "storPortTrace": "[parameters('storPortTrace')]",
-          "srNumber": "[parameters('srNumber')]",
-          "requestTimeUtc":  "[parameters('requestTimeUtc')]",
-          "resourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
-        },
-        "protectedSettings": {
-            "storageAccountKey": "[parameters('storageAccountKey')]"        
-        }
-      }
-    }
+{
+     "name": "[concat(parameters('vmName'),'/AzurePerformanceDiagnostics')]",
+     "type": "Microsoft.Compute/virtualMachines/extensions",
+     "location": "[parameters('location')]",
+     "apiVersion": "2015-06-15",
+     "properties": {
+       "publisher": "Microsoft.Azure.Performance.Diagnostics",
+       "type": "AzurePerformanceDiagnostics",
+       "typeHandlerVersion": "1.0",
+       "autoUpgradeMinorVersion": true,
+       "settings": {
+         "storageAccountName": "[parameters('storageAccountName')]",
+         "performanceScenario": "[parameters('performanceScenario')]",
+         "enableContinuousDiagnostics": "[parameters('enableContinuousDiagnostics')]",
+         "traceDurationInSeconds": "[parameter('traceDurationInSeconds')]",
+         "perfCounterTrace": "[parameters('perfCounterTrace')]",
+         "networkTrace": "[parameters('networkTrace')]",
+         "xperfTrace": "[parameters('xperfTrace')]",
+         "storPortTrace": "[parameters('storPortTrace')]",         
+         "requestTimeUtc":  "[parameters('requestTimeUtc')]",
+         "resourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
+       },
+       "protectedSettings": {
+           "storageAccountKey": "[parameters('storageAccountKey')]"       
+       }
+     }
+   }
 ```
 
 ### Property values
@@ -79,6 +79,7 @@ The following JSON shows the schema for Azure Performance Diagnostics VM Extensi
 | type | AzurePerformanceDiagnostics | The type of the VM extension. |
 | typeHandlerVersion | 1.0 | The version of the extension handler. |
 | performanceScenario | basic | The performance scenario for which to capture data. Valid values are: **basic**, **vmslow**, **azurefiles**, and **custom**. |
+| enableContinuousDiagnostics | True | Enable continuous diagnostics. Valid values are **true** or **false**. To enable Continuous Performance Diagnostics, you need to provide this property. |
 | traceDurationInSeconds | 300 | The duration of the traces, if any of the trace options are selected. |
 | perfCounterTrace | p | Option to enable Performance Counter Trace. Valid values are **p** or empty value. If you do not want to capture this trace, leave the value as empty. |
 | networkTrace | n | Option to enable Network Trace. Valid values are **n** or empty value. If you do not want to capture this trace, leave the value as empty. |
@@ -91,6 +92,9 @@ The following JSON shows the schema for Azure Performance Diagnostics VM Extensi
 | storageAccountKey | lDuVvxuZB28NNP…hAiRF3voADxLBTcc== | The key for the storage account. |
 
 ## Install the extension
+
+> [!NOTE]
+> We recommend installing the extension through the performance diagnostics blade, as describe in [Install and run performance diagnostics on your VM](performance-diagnostics.md#install-and-run-performance-diagnostics-on-your-vm).
 
 Follow these instructions to install the extension on Windows virtual machines:
 
@@ -120,6 +124,9 @@ Follow these instructions to install the extension on Windows virtual machines:
 
 ## Remove the extension
 
+> [!NOTE]
+> We recommend uninstalling the extension through the performance diagnostics blade, as describe in [Uninstall performance diagnostics](performance-diagnostics.md#uninstall-performance-diagnostics).
+
 To remove the extension from a virtual machine, follow these steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com), select the virtual machine from which you want to remove this extension, and then select the **Extensions + applications** blade.
@@ -133,107 +140,100 @@ Azure virtual machine extensions can be deployed with Azure Resource Manager tem
 
 ```json
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "vmName": {
-      "type": "string",
-      "defaultValue": "yourVMName"
-    },
-    "location": {
-      "type": "string",
-      "defaultValue": "southcentralus"
-    },
-    "storageAccountName": {
-      "type": "securestring",
-      "defaultValue": "yourStorageAccount"
-    },
-    "storageAccountKey": {
-      "type": "securestring",
-      "defaultValue": "yourStorageAccountKey"
-    },
-    "performanceScenario": {
-      "type": "string",
-      "defaultValue": "basic"
-    },
-    "srNumber": {
-      "type": "string",
-      "defaultValue": ""
-    },
+ "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+ "contentVersion": "1.0.0.0",
+ "parameters": {
+   "vmName": {
+     "type": "string",
+     "defaultValue": "yourVMName"
+   },
+   "location": {
+     "type": "string",
+     "defaultValue": "southcentralus"
+   },
+   "storageAccountName": {
+     "type": "securestring",
+     "defaultValue": "yourStorageAccount"
+   },
+   "storageAccountKey": {
+     "type": "securestring",
+     "defaultValue": "yourStorageAccountKey"
+   },
+   "performanceScenario": {
+     "type": "string",
+     "defaultValue": "basic"
+   },
+ 
+"enableContinuousDiagnostics": {
+     "type": "boolean",
+     "defaultValue": "false"
+  },
   "traceDurationInSeconds": {
-    "type": "int",
-    "defaultValue": 300
-  },
-    "perfCounterTrace": {
-      "type": "string",
-      "defaultValue": "p"
-    },
-    "networkTrace": {
-      "type": "string",
-      "defaultValue": ""
-    },
-    "xperfTrace": {
-      "type": "string",
-      "defaultValue": ""
-    },
-    "storPortTrace": {
-      "type": "string",
-      "defaultValue": ""
-    },
-    "requestTimeUtc": {
-      "type": "string",
-      "defaultValue": "10/2/2017 11:06:00 PM"
-    }        
-  },
-  "resources": [
-    {
-      "name": "[concat(parameters('vmName'),'/AzurePerformanceDiagnostics')]",
-      "type": "Microsoft.Compute/virtualMachines/extensions",
-      "location": "[parameters('location')]",
-      "apiVersion": "2015-06-15",
-      "properties": {
-        "publisher": "Microsoft.Azure.Performance.Diagnostics",
-        "type": "AzurePerformanceDiagnostics",
-        "typeHandlerVersion": "1.0",
-        "autoUpgradeMinorVersion": true,
-        "settings": {
-          "storageAccountName": "[parameters('storageAccountName')]",
-          "performanceScenario": "[parameters('performanceScenario')]",
-          "traceDurationInSeconds": "[parameters('traceDurationInSeconds')]",
-          "perfCounterTrace": "[parameters('perfCounterTrace')]",
-          "networkTrace": "[parameters('networkTrace')]",
-          "xperfTrace": "[parameters('xperfTrace')]",
-          "storPortTrace": "[parameters('storPortTrace')]",
-          "srNumber": "[parameters('srNumber')]",
-          "requestTimeUtc":  "[parameters('requestTimeUtc')]",
-          "resourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
-        },
-        "protectedSettings": {
-            "storageAccountKey": "[parameters('storageAccountKey')]"
-        }
-      }
-    }
-  ]
+   "type": "int",
+   "defaultValue": 300
+ },
+   "perfCounterTrace": {
+     "type": "string",
+     "defaultValue": "p"
+   },
+   "networkTrace": {
+     "type": "string",
+     "defaultValue": ""
+   },
+   "xperfTrace": {
+     "type": "string",
+     "defaultValue": ""
+   },
+   "storPortTrace": {
+     "type": "string",
+     "defaultValue": ""
+   },
+   "requestTimeUtc": {
+     "type": "string",
+     "defaultValue": "10/2/2017 11:06:00 PM"
+   }       
+ },
+ "resources": [
+   {
+     "name": "[concat(parameters('vmName'),'/AzurePerformanceDiagnostics')]",
+     "type": "Microsoft.Compute/virtualMachines/extensions",
+     "location": "[parameters('location')]",
+     "apiVersion": "2015-06-15",
+     "properties": {
+       "publisher": "Microsoft.Azure.Performance.Diagnostics",
+       "type": "AzurePerformanceDiagnostics",
+       "typeHandlerVersion": "1.0",
+       "autoUpgradeMinorVersion": true,
+       "settings": {
+         "storageAccountName": "[parameters('storageAccountName')]",
+         "performanceScenario": "[parameters('performanceScenario')]",
+"enableContinuousDiagnostics" : "[parameters('enableContinuousDiagnostics')]",
+         "traceDurationInSeconds": "[parameters('traceDurationInSeconds')]",
+         "perfCounterTrace": "[parameters('perfCounterTrace')]",
+         "networkTrace": "[parameters('networkTrace')]",
+         "xperfTrace": "[parameters('xperfTrace')]",
+         "storPortTrace": "[parameters('storPortTrace')]",         
+         "requestTimeUtc":  "[parameters('requestTimeUtc')]",
+         "resourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
+       },
+       "protectedSettings": {
+           "storageAccountKey": "[parameters('storageAccountKey')]"
+       }
+     }
+   }
+ ]
 }
 ```
 
 ## PowerShell deployment
 
-The `Set-AzVMExtension` command can be used to deploy Azure Performance Diagnostics VM Extension to an existing virtual machine.
+Use the `Set-AzVMExtension` command to deploy Azure Performance Diagnostics VM Extension to an existing virtual machine:
 
 ```powershell
-$PublicSettings = @{ "storageAccountName"="mystorageaccount";"performanceScenario"="basic";"traceDurationInSeconds"=300;"perfCounterTrace"="p";"networkTrace"="";"xperfTrace"="";"storPortTrace"="";"srNumber"="";"requestTimeUtc"="2017-09-28T22:08:53.736Z";"resourceId"="VMResourceId" }
+$PublicSettings = @{ "storageAccountName"="mystorageaccount";"performanceScenario"="basic"; "enableContinuousDiagnostics" : $False;"traceDurationInSeconds"=300;"perfCounterTrace"="p";"networkTrace"="";"xperfTrace"="";"storPortTrace"="";"srNumber"="";"requestTimeUtc"="2017-09-28T22:08:53.736Z";"resourceId"="VMResourceId" }
 $ProtectedSettings = @{"storageAccountKey"="mystoragekey" }
-
-Set-AzVMExtension -ExtensionName "AzurePerformanceDiagnostics" `
-    -ResourceGroupName "myResourceGroup" `
-    -VMName "myVM" `
-    -Publisher "Microsoft.Azure.Performance.Diagnostics" `
-    -ExtensionType "AzurePerformanceDiagnostics" `
-    -TypeHandlerVersion 1.0 `
-    -Settings $PublicSettings `
-    -ProtectedSettings $ProtectedSettings `
-    -Location WestUS
+ 
+Set-AzVMExtension -ExtensionName "AzurePerformanceDiagnostics" -ResourceGroupName "myResourceGroup" -VMName "myVM" -Publisher "Microsoft.Azure.Performance.Diagnostics" -ExtensionType "AzurePerformanceDiagnostics" -TypeHandlerVersion 1.0 -Settings $PublicSettings -ProtectedSettings $ProtectedSettings -Location WestUS
 ```
 
 ## Information on the data captured
