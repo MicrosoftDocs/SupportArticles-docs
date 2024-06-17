@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot live migration issues
 description: Provides information on solving the problem of live migration in windows server 2016.
-ms.date: 04/05/2024
+ms.date: 06/17/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: adjudele, cpuckett, kaushika, shsadash
-ms.custom: sap:Virtualization and Hyper-V\Migration, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Hyper-V Clusters and VM Mobility (Migration), csstroubleshoot
 ---
 # Troubleshoot live migration issues
 
@@ -544,6 +544,28 @@ To work around this issue, use one of the following methods before a live migrat
 - Upgrade the configuration version.   
 
 To use `.vmcx` files instead of `.xml` files for management, upgrade the virtual machine version. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server).
+
+#### Failed to live migrate a VM across nodes in a cluster when connected to an internal or private virtual switch
+
+**Description**  
+
+You can't live migrate a VM across nodes in a cluster if that VM is connected to an internal or private virtual switch.
+
+> Live migration of \<VM Name\> failed. \<VM Name\> failed to live migrate to the destination \<Server Name\> because the destination has disconnected VM switch(s).
+
+**Action**  
+
+Check the **Protected network** option for the network adapter.
+
+**Workaround**  
+
+To work around this issue, clear the **Protected network** option of the VM for the internal or private network adapter before a live migration. You can use the following cmdlet:
+
+```powershell
+Set-VMNetworkAdapter -NotMonitoredInCluster $true
+```
+
+This will ignore the connectivity checks for that VM interface during a live migration.  
 
 ## Event ID 20413
 
