@@ -2,9 +2,9 @@
 title: FAQs about Windows virtual machine deployment
 description: Answers frequently asked questions about Windows virtual machine deployment.
 ms.service: virtual-machines
-ms.date: 06/04/2024
+ms.date: 06/18/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
-ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
+ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic, v-weizhu
 ---
 # Windows virtual machine deployment FAQs
 
@@ -78,11 +78,9 @@ Choose a size that is supported on the availability set's cluster. It is recomme
 
 Yes. You can add an existing classic VM to a new or existing Availability Set. For more information see [Add an existing virtual machine to an availability set](/previous-versions/azure/virtual-machines/windows/classic/configure-availability-classic#addmachine).
 
-## Can I deploy resources in South West Africa region?
+## Where can I deploy Azure VMs?
 
-Direct deployment of resources in South Africa West is not possible; it serves solely as a replication point from South Africa North.
-You may refer to the public article:
-https://techcommunity.microsoft.com/t5/azure/not-able-to-create-resources-in-south-africa-west/m-p/1375043 
+You can deploy Azure virtual machines in any of the supported regions listed in [Choose the Right Azure Region for You](https://azure.microsoft.com/explore/global-infrastructure/geographies/#geographies). If a region isn't listed, it may be present for redundancy requirements. For example, South West Africa is available as redundancy for South Africa North as a replication point.
 
 ## Additional Information
 
