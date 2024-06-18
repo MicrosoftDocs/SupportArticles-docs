@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot OpenTelemetry issues in Python
 description: Learn how to troubleshoot OpenTelemetry issues in Python. View known issues that involve Azure Monitor OpenTelemetry Exporters.
-ms.date: 05/22/2023
+ms.date: 06/17/2024
 editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: python
-ms.reviewer: mmcc, lechen, aaronmax, v-leedennis
+ms.reviewer: azuremacic, jeremyvoss, mmcc, lechen, aaronmax, v-leedennis
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
 ---
 
@@ -68,6 +68,42 @@ get_logger_provider().shutdown()
 
 #### Azure Workbooks and Jupyter Notebooks
 
-Azure Workbooks and Jupyter Notebooks may keep exporter processes running in the background. To prevent duplicate telemetry, clear the cache before you make more calls to `configure_azure_monitor`.
+Azure Workbooks and Jupyter Notebooks might keep exporter processes running in the background. To prevent duplicate telemetry, clear the cache before you make more calls to `configure_azure_monitor`.
+
+### Step 4: Make sure that Flask request data is collected
+
+If you implement a Flask application, you might find that you can't collect Requests table data from Application Insights while you use the [Azure Monitor OpenTelemetry Distro client library for Python](/python/api/overview/azure/monitor-opentelemetry-readme). This issue could occur if you don't structure your `import` declarations correctly. You might be importing the `flask.Flask` web application framework before you call the `configure_azure_monitor` function to instrument the Flask library. For example, the following code doesn't successfully instrument the Flask app:
+
+```python
+from azure.monitor.opentelemetry import configure_azure_monitor
+from flask import Flask
+
+configure_azure_monitor()
+
+app = Flask(__name__)
+```
+
+Instead, we recommend that you import the `flask` module as a whole, and then call `configure_azure_monitor` to configure OpenTelemetry to use Azure Monitor before you access `flask.Flask`:
+
+```python
+from azure.monitor.opentelemetry import configure_azure_monitor
+import flask
+
+configure_azure_monitor()
+
+app = flask.Flask(__name__)
+```
+
+Alternatively, you can call `configure_azure_monitor` before you import `flask.Flask`:
+
+```python
+from azure.monitor.opentelemetry import configure_azure_monitor
+
+configure_azure_monitor()
+
+from flask import Flask
+
+app = Flask(__name__)
+```
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
