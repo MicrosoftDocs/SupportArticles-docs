@@ -90,23 +90,23 @@ For more information, see [Free and Standard pricing tiers for AKS cluster manag
 
 ## Cause 5: The cost-analysis-agent pod got `OOMKilled`
 
-The current memory limit of the cost-analysis-agent pod is set to 4GB. 
+The current memory limit of the cost-analysis-agent pod is set to 4 GB. 
 
-The pod's usage is dependent on the number of containers deployed, which can be roughly approximated by 200MB + 0.5MB per container. The current memory limit support approximately 7000 containers per cluster.
+The pod's usage is dependent on the number of containers deployed, which can be roughly approximated by 200 MB + 0.5 MB per container. The current memory limit support approximately 7000 containers per cluster.
 
-Large clusters may experience `OOMKill` when the pod's usage surpasses the allocated 4GB limit.
+Large clusters may experience `OOMKill` when the pod's usage surpasses the allocated 4 GB limit.
 
 ### Solution 5: Disable the add-on
 
-Currently, we recommend disabling the add-on. At this time we do not support customizing or manually increasing memory limits for the add-on. The AKS team is working on memory optimizations to support larger clusters and reduce memory consumption.
+Currently, we recommend disabling the add-on. At this time, we don't support customizing or manually increasing memory limits for the add-on. The AKS team is working on memory optimizations to support larger clusters and reduce memory consumption.
 
 ## Cause 6: The cost-analysis-agent pod is stuck in `Pending` state
 
 If the pod is stuck in `Pending` with `FailedScheduling` error, then the nodes in the cluster have exhausted memory capacity.
 
-### Solution 6: Ensure there is sufficient allocatable memory.
+### Solution 6: Ensure there's sufficient allocatable memory
 
-The current memory request of the cost-analysis-agent pod is set to 500GB. Ensure there is sufficient allocatable memory for the pod to be scheduled.
+The current memory request of the cost-analysis-agent pod is set to 500 GB. Ensure there's sufficient allocatable memory for the pod to be scheduled.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
