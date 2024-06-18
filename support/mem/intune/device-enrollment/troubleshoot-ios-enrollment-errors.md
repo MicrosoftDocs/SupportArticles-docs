@@ -93,7 +93,7 @@ In this case, try the following steps to create a new token:
 
 1. Sign in to Apple Business Manager or Apple School Manager and find the token server that needs to be updated. Then, select **Edit**.
 
-1. In the **** section, upload the *.pem* file, and then select **Save**.
+1. In the **MDM Server Settings** section, upload the *.pem* file, and then select **Save**.
 
     > [!NOTE]
     > If you receive an error message indicating the file format is incorrect, make sure that the file is created according to step 5. After the file format is fixed, close the page and select **Edit** again.
