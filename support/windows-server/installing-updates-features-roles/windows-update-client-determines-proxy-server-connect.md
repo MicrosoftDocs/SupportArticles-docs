@@ -1,13 +1,13 @@
 ---
 title: How the Windows Update client determines which proxy server to use
 description: Describes proxy server detection methods that the Windows Update client uses to connect to the Windows Update website, and the situations where Windows Update uses a particular method.
-ms.date: 06/14/2024
+ms.date: 06/18/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, v-lianna
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Windows Update configuration, settings and management, csstroubleshoot
+ms.reviewer: kaushika, v-lianna, shigsato
+ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
 ---
 # How the Windows Update client determines which proxy server to use to connect to the Windows Update website
 
