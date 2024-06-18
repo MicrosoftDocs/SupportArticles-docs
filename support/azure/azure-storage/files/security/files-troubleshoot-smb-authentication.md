@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 01/30/2024
+ms.date: 06/18/2024
 ms.reviewer: kendownie, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -92,9 +92,9 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 1. `CheckADObjectPasswordIsCorrect`: Ensure that the password configured on the AD identity that represents the storage account is matching that of the storage account kerb1 or kerb2 key. If the password is incorrect, you can run [Update-AzStorageAccountADObjectPassword](/azure/storage/files/storage-files-identity-ad-ds-update-password) to reset the password.
 2. `CheckADObject`: Confirm that there is an object in the Active Directory that represents the storage account and has the correct SPN (service principal name). If the SPN isn't correctly set up, run the `Set-AD` cmdlet returned in the debug cmdlet to configure the SPN.
 3. `CheckDomainJoined`: Validate that the client machine is domain joined to AD. If your machine isn't domain joined to AD, refer to [Join a Computer to a Domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain) for domain join instructions.
-4. `CheckPort445Connectivity`: Check that port 445 is opened for SMB connection. If port 445 isn't open, refer to the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
-5. `CheckSidHasAadUser`: Check that the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given SID, it checks if there is a Microsoft Entra user associated.
-6. `CheckAadUserHasSid`: Check that the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given Microsoft Entra user, it checks its SID. To run this check, you must provide the `-ObjectId` parameter, along with the object ID of the Microsoft Entra user.
+4. `CheckPort445Connectivity`: Check if port 445 is opened for SMB connection. If port 445 isn't open, refer to the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
+5. `CheckSidHasAadUser`: Check if the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given SID, it checks if there is a Microsoft Entra user associated.
+6. `CheckAadUserHasSid`: Check if the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given Microsoft Entra user, it checks its SID. To run this check, you must provide the `-ObjectId` parameter, along with the object ID of the Microsoft Entra user.
 7. `CheckGetKerberosTicket`: Attempt to get a Kerberos ticket to connect to the storage account. If there isn't a valid Kerberos token, run the `klist get cifs/storage-account-name.file.core.windows.net` cmdlet and examine the error code to determine the cause of the ticket retrieval failure.
 8. `CheckStorageAccountDomainJoined`: Check if the AD authentication has been enabled and the account's AD properties are populated. If not, [enable AD DS authentication on Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
 9. `CheckUserRbacAssignment`: Check if the AD identity has the proper RBAC role assignment to provide share-level permissions to access Azure Files. If not, [configure the share-level permission](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions). (Supported on AzFilesHybrid v0.2.3+ version)
@@ -128,6 +128,32 @@ Debug-AzStorageAccountAuth `
     -FilePath $FilePath `
     -Verbose
 ```
+## Unable to mount Azure file shares with Microsoft Entra Kerberos
+
+### Self diagnostics steps
+
+First, make sure that you've followed the steps to [enable Microsoft Entra Kerberos authentication](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable).
+
+Second, you can run the `Debug-AzStorageAccountAuth` cmdlet to perform a set of basic checks. This cmdlet is supported for storage accounts configured for Microsoft Entra Kerberos authentication, on [AzFilesHybrid v0.3.0+ version](https://github.com/Azure-Samples/azure-files-samples/releases).
+
+```PowerShell
+$ResourceGroupName = "<resource-group-name-here>"
+$StorageAccountName = "<storage-account-name-here>"
+
+Debug-AzStorageAccountAuth -StorageAccountName $StorageAccountName -ResourceGroupName $ResourceGroupName -Verbose
+```
+
+The cmdlet performs these checks in sequence and provides guidance for failures:
+
+1. `CheckPort445Connectivity`: Check if port 445 is opened for SMB connection. If port 445 isn't open, use the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
+2. `CheckAADConnectivity`: Check for Entra connectivity. SMB mounts with Kerberos authentication can fail if the client can't reach out to Entra. If this check fails, it indicates that there is a networking error (perhaps a firewall or VPN issue).
+3. `CheckEntraObject`: Confirm that there is an object in the Entra that represents the storage account and has the correct service principal name (SPN). If the SPN isn't correctly set up, disable and re-enable Entra Kerberos authentication on the storage account.
+4. `CheckRegKey`: Check if the `CloudKerberosTicketRetrieval` registry key is enabled. This registry key is required for Entra Kerberos authentication.
+5. `CheckRealmMap`: Check if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
+6. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
+
+
+If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run.
 
 ## Unable to configure directory/file level permissions (Windows ACLs) with Windows File Explorer
 

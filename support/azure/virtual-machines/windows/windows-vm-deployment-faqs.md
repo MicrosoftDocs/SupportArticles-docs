@@ -2,9 +2,9 @@
 title: FAQs about Windows virtual machine deployment
 description: Answers frequently asked questions about Windows virtual machine deployment.
 ms.service: virtual-machines
-ms.date: 06/04/2024
+ms.date: 06/18/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
-ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
+ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic, v-weizhu
 ---
 # Windows virtual machine deployment FAQs
 
@@ -78,7 +78,11 @@ Choose a size that is supported on the availability set's cluster. It is recomme
 
 Yes. You can add an existing classic VM to a new or existing Availability Set. For more information see [Add an existing virtual machine to an availability set](/previous-versions/azure/virtual-machines/windows/classic/configure-availability-classic#addmachine).
 
-## Additional Information
+## Where can I deploy Azure VMs?
+
+You can deploy Azure VMs in any of the supported regions listed in [Choose the Right Azure Region for You](https://azure.microsoft.com/explore/global-infrastructure/geographies/#geographies). If a region isn't listed, it may be present for redundancy requirements. For example, South West Africa is available as redundancy for South Africa North as a replication point.
+
+## Additional information
 
 If you encounter issues when you start a stopped Windows VM or resize an existing Windows VM in Azure, see [Troubleshoot Resource Manager deployment issues with restarting or resizing an existing Windows Virtual Machine in Azure](restart-resize-error-troubleshooting.md).
 
