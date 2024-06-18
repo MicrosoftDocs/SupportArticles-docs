@@ -2,7 +2,7 @@
   href: welcome-field-service.yml
 - name: Administration and settings
   items:
-    - name: Can't create or save records due to service degradation of address geocoding mapping service
+    - name: Can't create or save records due to address geocoding mapping service degradation
       href: administration/disable-auto-geo-code.md
     - name: Can't find a user when setting up frontline workers
       href: administration/cannot-find-user-set-up-frontline-workers.md
