@@ -31,7 +31,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
 - Try an unbuffered I/O copy for files larger than 1 GB by using the `robocopy /J` command from the command line.
 - Enable and use [SMB compression](/windows-server/storage/file-server/smb-compression).
 
-  - This will greatly reduce transfer time and bandwidth utilization for large files containing significant whitespace, such as virtual machine disks, ISO, and DMP.
+  - This greatly reduces transfer time and bandwidth utilization for large files containing significant whitespace, such as virtual machine disks, ISO, and DMP.
   - Non-compressible data, like archive files (zip, 7z, and ar), mp4 video, and mp3 won't see significant performance improvements with SMB compression.
   - SMB compression is available starting with Windows 11 and Windows Server 2022.
 
@@ -46,14 +46,14 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
     - These numbers assume that there are no other bottlenecks on the system, such as CPU or memory exhaustion, and there are no networking errors.
     - Note that peak storage performance is often much less than sustained storage performance, and that most advertised storage measurements are peak performance.
 
-- [SMB Direct](/windows-server/storage/file-server/smb-direct) (SMB over Remote Direct Memory Access (RDMA)) may be needed to reach certain network transfer speeds, or reach high speeds without causing high CPU utilitization.
+- [SMB Direct](/windows-server/storage/file-server/smb-direct) (SMB over Remote Direct Memory Access (RDMA)) may be needed to reach certain network transfer speeds, or reach high speeds without causing high CPU utilization.
 - File copies start fast and then slow down.
  
   - A change in copy speed can occur when the initial copy is cached by storage and/or buffered in system memory, and then the cache reaches capacity.
-  - Data is then committed directly to disk (write-through) once memory buffers and storage caches have been depleted, limiting performance to the storage mediums sustained write-through limits.
+  - Data is then committed directly to disk (write-through) once memory buffers and storage caches are depleted, limiting performance to the storage mediums sustained write-through limits.
   - Use [RAMMap](/sysinternals/downloads/rammap) from SysInternals to determine whether **Mapped File** usage in memory stops growing.
   
-    - This indicates that the memory buffer has been exhausted.
+    - This indicates that the memory buffer is exhausted.
     - RAMMap doesn't automatically refresh. Use <kbd>F5</kbd> on your keyboard or **File** > **Refresh** to update memory usage.
   - Use storage performance monitor counters to determine whether storage performance degrades proportionally to network throughput. For more information, see [Performance tuning for SMB file servers](/windows-server/administration/performance-tuning/role/file-server/smb-file-server).
   - Adjust the [remote file dirty page threshold](/windows-server/administration/performance-tuning/subsystem/cache-memory-management/troubleshoot#remote-file-dirty-page-threshold-is-consistently-exceeded) if performance degrades every 5 GB, approximately, on newer versions of Windows.
@@ -63,7 +63,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
   - Some technologies, typically backup or database based, require the use of disk write-through to maintain data integrity.
   - Windows SOFS requires write-through, as does SQL backup.
   - Disk write-through requires that the storage operation bypass all storage caches and buffers, and must be committed directly to the storage medium before the operation can be completed.
-  - A storage system which lacks high write-through performance can't provide performant SMB transfers in these cases.
+  - A storage system that lacks high write-through performance can't provide performant SMB transfers in these cases.
 
 - Look for signs of network errors. Common networking issues, like packet loss, will cause network level throttling by the Transmission Control Protocol (TCP) congestion algorithm.
 - Determine the performance overhead of anti-malware software by temporarily testing SMB transfer performance with file scanning disabled and their file system and network filter drivers unloaded.
@@ -74,7 +74,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
   - Network offloading technologies, like RSS, LSO, RSC, and TCP/UDP checksums are designed to improve network throughput while lowering CPU usage by the network stack.
   - Don't disable network offloads.
 
-- On the SMB client, ensure large maximum transmission unit (MTU) hasn't been disabled and bandwidth throttling hasn't been enabled in SMB by running the following PowerShell cmdlet:
+- On the SMB client, ensure that large maximum transmission unit (MTU) isn't disabled and bandwidth throttling isn't enabled in SMB by running the following PowerShell cmdlet:
 
   ```powershell
   Set-SmbClientConfiguration -EnableBandwidthThrottling 0 -EnableLargeMtu 1
@@ -84,7 +84,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
 
 ## Slow transfer when using small files
 
-Slow copy speeds, and low network throughput is expected behavior when transfering a large number of small files over the network using the File Explorer and other single-threaded copy tools. "A large number of small files" is defined as hundreds, thousands, and even millions of files that are less than 1 MB in size.
+Slow copy speeds, and low network throughput is expected behavior when transferring a large number of small files over the network using the File Explorer and other single-threaded copy tools. "A large number of small files" is defined as hundreds, thousands, and even millions of files that are less than 1 MB in size.
 
 ### Issue details
 
@@ -92,7 +92,7 @@ File creation is an "expensive operation" in terms of performance. Both from a n
 
 Small file copies hit this penalty repeatedly. The data size, per file, isn't sufficient for the network to put enough data in-flight to sustain high network speeds when using a single-threaded copy because more time is spent creating the files than transferring the file data.
 
-This issue occurs because data transmission must be halted to perform file creation after only a handful of data payloads have been transmitted. While a single large file has a single file creation penalty and then transmits enough data to reach peak network speeds.
+This issue occurs because data transmission must be halted to perform file creation after only a handful of data payloads are transmitted. While a single large file has a single file creation penalty and then transmits enough data to reach peak network speeds.
 
 ### Technical details
 
@@ -106,12 +106,12 @@ Network latency, SMB `create` commands, and antivirus programs contribute to a s
 - The process suffers from network, protocol (SMB), and file system latency.
  
   - This latency occurs because the file system request is first translated to SMB commands, transmitted over the network, turned back into a file system command, and only then is the actual file system work performed.
-  - The process is reversed after the storage operation completes and only then does the SMB client recieve a response and can proceed with the next operation.
+  - The process is reversed after the storage operation completes and only then does the SMB client receive a response and can proceed with the next operation.
 
-- Additionally, endpoint protection (antivirus) will often scan network packets and file system operations.
+- Additionally, endpoint protection (antivirus)  often scans network packets and file system operations.
 
-  - This adds an additional, usually small, amount of latency to the process. 
-  - In small file scenarios, the antivirus actions are repeated for each file transfered.
+  - This adds an additional, usually a small amount of latency to the process. 
+  - In small file scenarios, the antivirus actions are repeated for each file transferred.
 
 - The result is that network throughput speeds can be less than 1 MB/s when using a single-threaded file copy tool.
 
@@ -119,17 +119,17 @@ Network latency, SMB `create` commands, and antivirus programs contribute to a s
 
 - Use `robocopy` with the `/MT` parameter and redirect output using `/log`.
  
-  - Robocopy is built into Windows and the `/MT` parameter will enable multithreaded file copies.
+  - Robocopy is built into Windows and the `/MT` parameter enables multithreaded file copies.
   - Multithreaded copies help by running many data transfers in parallel.
     - While one or two files are being created, there can be multiple files transferring.
     - This increases the amount of in-flight network data and minimizes pauses in the network data stream.
-  - Writing to console is another time expensive operation, which is why redirecting the output to a log file will speed up the transfer job.
-  - By default, `/MT` copies 8 files at a time. It supports up to 128 copies at a time.
+  - Writing to console is another time expensive operation, which is why redirecting the output to a log file speeds up the transfer job.
+  - By default, `/MT` copies eight files at a time. It supports up to 128 copies at a time.
   - Too many threads may harm performance. Two threads per CPU core is generally a safe number, but testing is highly advised to find the optimal performance number.
   - For more information about usage details, see [robocopy](/windows-server/administration/windows-commands/robocopy).
 
 - Use `AzCopy` when moving data to/from Azure. 
-  - [AzCopy](https://aka.ms/azcopy) has concurrency (multi-threading) capabilities and several [performance optimzations](/azure/storage/common/storage-use-azcopy-optimize).
+  - [AzCopy](https://aka.ms/azcopy) has concurrency (multi-threading) capabilities and several [performance optimizations](/azure/storage/common/storage-use-azcopy-optimize).
 
 - Use file compression.
    - Compress the small files into a single large archive file (Zip, 7z, rar, tar, and gz).
