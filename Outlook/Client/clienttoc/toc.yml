@@ -477,6 +477,8 @@
           href: ../security/outlook-trust-center-shows-antivirus-status-as-unavailable.md
         - name: Personal tags don't apply correctly for Inbox rule
           href: ../security/personal-policy-tag-not-work-correctly.md
+        - name: Prevent delegates from reading protected messages
+          href: ../security/prevent-delegate-access-to-irm-protected-messages.md
         - name: Your Digital ID name cannot be found error
           href: ../security/error-when-decrypting-message-via-3des-certificate.md
     - name: Synchronization
