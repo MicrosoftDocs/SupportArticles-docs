@@ -40,6 +40,13 @@ By default for a shared mailbox, if either of the following conditions are true,
 
 In some scenarios, a delegate who has the Full Access permission on a mailbox can be prevented from reading IRM-protected email messages that are received in the mailbox. Use the following table to determine the appropriate prevention method for each scenario. For more information, see the method descriptions that follow the table.
 
+||Delegate uses the classic Outlook|Delegate uses the new Outlook|Delegate uses Outlook on the web, Outlook for Android, or Outlook for iOS|
+|---|---|---|---|
+|User mailbox in Exchange Online|Methods A or B|Method C|Method C|
+|Shared mailbox in Exchange Online|No prevention possible|Method C|Method C|
+|User mailbox in Exchange Server|Methods A or B|Invalid scenario|No prevention possible|
+|Shared mailbox in Exchange Server|No prevention possible|Invalid scenario|No prevention possible|
+
 ### Method A
 
 To restrict delegate access in the applicable scenarios, senders can apply either the [Encrypt-Only](/azure/information-protection/configure-usage-rights#encrypt-only-option-for-emails) or [Do Not Forward](/azure/information-protection/configure-usage-rights#do-not-forward-option-for-emails) built-in protection option to new messages. This approach restricts the delegates who can read a protected message to those who are specified in the **To**, **Cc**, or **Bcc** fields of the message.
