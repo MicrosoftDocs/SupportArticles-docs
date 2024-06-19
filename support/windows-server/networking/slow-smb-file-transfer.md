@@ -49,7 +49,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
 - [SMB Direct](/windows-server/storage/file-server/smb-direct) (SMB over Remote Direct Memory Access (RDMA)) may be needed to reach certain network transfer speeds, or reach high speeds without causing high CPU utilization.
 - File copies start fast and then slow down.
  
-  - A change in copy speed can occur when the initial copy is cached by storage and/or buffered in system memory, and then the cache reaches capacity.
+  - A change in copy speed can occur when the initial copy is cached by storage or buffered in system memory, and then the cache reaches capacity.
   - Data is then committed directly to disk (write-through) once memory buffers and storage caches are depleted, limiting performance to the storage mediums sustained write-through limits.
   - Use [RAMMap](/sysinternals/downloads/rammap) from SysInternals to determine whether **Mapped File** usage in memory stops growing.
   
@@ -71,7 +71,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
 - Ensure that the network offloading technologies are enabled.
 
   - SMB performance is closely tied to network performance.
-  - Network offloading technologies, like eceive Side Scaling (RSS), Large Sum Offload (LSO), Receive Segment Coalescing (RSC), and TCP/UDP checksums are designed to improve network throughput while lowering CPU usage by the network stack.
+  - Network offloading technologies, like Receive Side Scaling (RSS), Large Sum Offload (LSO), Receive Segment Coalescing (RSC), and TCP/UDP checksums are designed to improve network throughput while lowering CPU usage by the network stack.
   - Don't disable network offloads.
 
 - On the SMB client, ensure that large maximum transmission unit (MTU) isn't disabled and bandwidth throttling isn't enabled in SMB by running the following PowerShell cmdlet:
