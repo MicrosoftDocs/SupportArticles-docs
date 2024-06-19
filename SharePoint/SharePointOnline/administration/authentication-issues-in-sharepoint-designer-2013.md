@@ -16,7 +16,7 @@ appliesto:
   - SharePoint Online
 search.appverid: 
   - MET150
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ---
 
 # Authentication issues in SharePoint Designer 2013
@@ -41,7 +41,8 @@ These issues occur if you disabled the authentication method which uses the Iden
 
 To resolve the authentication errors, use the following steps to enable SharePoint Designer 2013 to use modern authentication:
 
-1. Download and install the [32-bit version of SharePoint Designer 2013](https://www.microsoft.com/download/details.aspx?id=35491).
+1. Verify that you're using the 32-bit version of SharePoint Designer 2013. If you're using the 64-bit version, the steps in this resolution might not work correctly. 
+You can uninstall the 64-bit version of SharePoint Designer 2013 and install the [32-bit version of SharePoint Designer 2013](https://www.microsoft.com/download/details.aspx?id=35491) to continue.
 
 2. Open the Registry Editor and then locate the following subkey:
 
@@ -72,15 +73,16 @@ To resolve the authentication errors, use the following steps to enable SharePoi
    - [July 11, 2017, update for Office 2013 (KB3172545)](https://support.microsoft.com/topic/july-11-2017-update-for-office-2013-kb3172545-d6b47054-04d5-5154-40ba-3436d1e0efdb)
 
    - [July 5, 2016, update for Office 2013 (KB3085565)](https://support.microsoft.com/topic/july-5-2016-update-for-office-2013-kb3085565-1d1a6d24-fbd4-1bae-242f-a35e0e2aba40)
+  
+10. If you still see authentication issues, clear the SharePoint Designer 2013 cache:
 
-Modern authentication should now be enabled for SharePoint Designer 2013 and you shouldn't see any authentication issues.
-
-## Clear SharePoint Designer Cache (Optional)
-
-1. Close SharePoint Designer 2013.
-
-2. On the local computer, navigate to the following folders and remove all files found in each of them:
+  - Close SharePoint Designer 2013.
+  - On the local computer, navigate to the following folders and remove all the files in each folder:
 
    - `%APPDATA%\Microsoft\Web Server Extensions\Cache`
    - `%APPDATA%\Microsoft\SharePoint Designer\ProxyAssemblyCache`
    - `%USERPROFILE%\AppData\Local\Microsoft\WebsiteCache`
+
+
+Modern authentication should now be enabled for SharePoint Designer 2013 and you shouldn't see any authentication issues.
+
