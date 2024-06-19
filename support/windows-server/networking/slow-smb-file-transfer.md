@@ -26,23 +26,23 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
 
   - File Explorer (the Windows file manager) performs single-threaded copies and uses buffered input/output (I/O) transfers.
   - Robocopy is optimized for IT administrators to create high performance local and remote file copy tasks.
-  - File Explorer is great for convenience and basic use, but lacks the performance optimizations of robocopy that certain tasks require.
+  - File Explorer is convenient for basic use, but lacks the performance optimizations of robocopy that certain tasks require.
 
 - Try an unbuffered I/O copy for files larger than 1 GB by using the `robocopy /J` command from the command line.
 - Enable and use [SMB compression](/windows-server/storage/file-server/smb-compression).
 
-  - This greatly reduces transfer time and bandwidth utilization for large files containing significant whitespace, such as virtual machine disks, ISO, and DMP.
-  - Non-compressible data, like archive files (zip, 7z, and ar), mp4 video, and mp3 won't see significant performance improvements with SMB compression.
+  - This greatly reduces transfer times and bandwidth utilization for large files containing significant whitespace, such as virtual machine disks, `.iso`, and `.dmp`.
+  - Non-compressible data, like archive files (`.zip`, `.7z`, and `.rar`), `.mp4` video, and `.mp3` files won't see significant performance improvements with SMB compression.
   - SMB compression is available starting with Windows 11 and Windows Server 2022.
 
 - SMB speeds can be limited by storage performance.
 
   - Ensure that the backing storage has the required and available performance characteristics needed to meet the desired network throughput.
-  - The approximate real-world storage to network performance speeds, over SMB, are:
+  - The approximate real-world storage to network performance speeds, over SMB, is:
   
-    - 110 MB/s of sustained storage throughput per 1Gbps of network bandwidth.
-    - 1.1 GB/s of sustained storage throughput per 10Gbps of network bandwidth.
-    - 11 GB/s of sustained storage throughput per 100Gbps of network bandwidth.
+    - 110 MB/s of sustained storage throughput per 1 Gbps of network bandwidth.
+    - 1.1 GB/s of sustained storage throughput per 10 Gbps of network bandwidth.
+    - 11 GB/s of sustained storage throughput per 100 Gbps of network bandwidth.
     - These numbers assume that there are no other bottlenecks on the system, such as CPU or memory exhaustion, and there are no networking errors.
     - Note that peak storage performance is often much less than sustained storage performance, and that most advertised storage measurements are peak performance.
 
@@ -71,7 +71,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
 - Ensure that the network offloading technologies are enabled.
 
   - SMB performance is closely tied to network performance.
-  - Network offloading technologies, like RSS, LSO, RSC, and TCP/UDP checksums are designed to improve network throughput while lowering CPU usage by the network stack.
+  - Network offloading technologies, like eceive Side Scaling (RSS), Large Sum Offload (LSO), Receive Segment Coalescing (RSC), and TCP/UDP checksums are designed to improve network throughput while lowering CPU usage by the network stack.
   - Don't disable network offloads.
 
 - On the SMB client, ensure that large maximum transmission unit (MTU) isn't disabled and bandwidth throttling isn't enabled in SMB by running the following PowerShell cmdlet:
@@ -88,11 +88,11 @@ Slow copy speeds, and low network throughput is expected behavior when transferr
 
 ### Issue details
 
-File creation is an "expensive operation" in terms of performance. Both from a network protocol (SMB) and file system perspective. SMB must perform multiple protocol operations to create a file before any data can be transmitted. The file system itself has an additional performance penalty when creating files.
+File creation is an "expensive operation" in terms of performance, both from a network protocol (SMB) and file system perspective. SMB must perform multiple protocol operations to create a file before any data can be transmitted. The file system itself has an additional performance penalty when creating files.
 
 Small file copies hit this penalty repeatedly. The data size, per file, isn't sufficient for the network to put enough data in-flight to sustain high network speeds when using a single-threaded copy because more time is spent creating the files than transferring the file data.
 
-This issue occurs because data transmission must be halted to perform file creation after only a handful of data payloads are transmitted. While a single large file has a single file creation penalty and then transmits enough data to reach peak network speeds.
+This issue occurs because data transmission must be halted to perform file creation after only a handful of data payloads are transmitted. However, a single large file has a single file creation penalty and then transmits enough data to reach peak network speeds.
 
 ### Technical details
 
@@ -108,7 +108,7 @@ Network latency, SMB `create` commands, and antivirus programs contribute to a s
   - This latency occurs because the file system request is first translated to SMB commands, transmitted over the network, turned back into a file system command, and only then is the actual file system work performed.
   - The process is reversed after the storage operation completes and only then does the SMB client receive a response and can proceed with the next operation.
 
-- Additionally, endpoint protection (antivirus)  often scans network packets and file system operations.
+- Additionally, endpoint protection (antivirus) often scans network packets and file system operations.
 
   - This adds an additional, usually a small amount of latency to the process. 
   - In small file scenarios, the antivirus actions are repeated for each file transferred.
@@ -132,11 +132,11 @@ Network latency, SMB `create` commands, and antivirus programs contribute to a s
   - [AzCopy](https://aka.ms/azcopy) has concurrency (multi-threading) capabilities and several [performance optimizations](/azure/storage/common/storage-use-azcopy-optimize).
 
 - Use file compression.
-   - Compress the small files into a single large archive file (Zip, 7z, rar, tar, and gz).
+   - Compress the small files into a single large archive file (`.zip`, `.7z`, `.rar`, `.tar`, and `.gz`).
    - Copy the archive file.
    - Extract the files on the destination system. Don't extract the files remotely.
    - This may or may not be faster depending on the speed of compression and decompression on the two systems.
-   - Use fast compression or no compression archiving to reduce the compression and decompression time.
+   - Use fast compression or no compression archiving to reduce the compression and decompression times.
 
 - Use a trusted third-party (non-Microsoft) file copy tool that supports multi-threaded file copying.
 
