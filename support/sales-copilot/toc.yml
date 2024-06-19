@@ -64,5 +64,8 @@
   items:
     - name: Can't create private channels in Microsoft Teams
       href: teams-collaboration-spaces/cant-create-private-channel.md
+    - name: Can't create a team for an account or opportunity
+      href: teams-collaboration-spaces/create-team-error.md       
     - name: Opportunity summary not displayed in deal rooms
       href: teams-collaboration-spaces/opportunity-summary-not-displayed.md
+ 
