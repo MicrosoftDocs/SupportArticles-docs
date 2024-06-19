@@ -42,10 +42,10 @@ In some scenarios, a delegate who has the Full Access permission on a mailbox ca
 
 ||Delegate uses the classic Outlook|Delegate uses the new Outlook|Delegate uses Outlook on the web, Outlook for Android, or Outlook for iOS|
 |---|---|---|---|
-|User mailbox in Exchange Online|Methods A or B|Method C|Method C|
-|Shared mailbox in Exchange Online|No prevention possible|Method C|Method C|
-|User mailbox in Exchange Server|Methods A or B|Invalid scenario|No prevention possible|
-|Shared mailbox in Exchange Server|No prevention possible|Invalid scenario|No prevention possible|
+|**User mailbox in Exchange Online**|Methods A or B|Method C|Method C|
+|**Shared mailbox in Exchange Online**|No prevention possible|Method C|Method C|
+|**User mailbox in Exchange Server**|Methods A or B|Invalid scenario|No prevention possible|
+|**Shared mailbox in Exchange Server**|No prevention possible|Invalid scenario|No prevention possible|
 
 ### Method A
 
