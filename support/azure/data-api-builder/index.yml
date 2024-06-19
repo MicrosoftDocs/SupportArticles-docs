@@ -5,9 +5,9 @@ summary: Welcome to Data API builder for Azure databases troubleshooting. These 
 metadata:
   title: Troubleshoot Data API builder for Azure databases issues
   description: Documentation for troubleshooting common issues with Azure Cosmos DB.
-  author: seesharprun
-  ms.author: sidandrews
-  ms.reviewer: genli
+  author: genlin
+  ms.author: genli
+  ms.reviewer: sidandrews
   ms.service: data-api-builder
   ms.topic: landing-page
   ms.date: 06/19/2024

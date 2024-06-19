@@ -1,9 +1,9 @@
 ---
 title: Troubleshooting Data API builder usage
 description: Troubleshoot common and well-known issues that might occur when you use Data API builder for Azure databases.
-author: seesharprun
-ms.author: sidandrews
-ms.reviewer: genli
+author: genlin
+ms.author: genli
+ms.reviewer: sidandrews
 ms.service: data-api-builder
 ms.date: 06/19/2024
 ms.topic: troubleshooting-known-issue
