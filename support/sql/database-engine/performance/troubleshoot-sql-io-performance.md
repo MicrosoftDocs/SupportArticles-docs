@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot slow SQL Server performance caused by I/O issues
 description: Provides a methodology to isolate and troubleshoot SQL performance problems caused by slow disk I/O.
-ms.date: 06/17/2024
+ms.date: 06/19/2024
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 author: PijoCoder 
