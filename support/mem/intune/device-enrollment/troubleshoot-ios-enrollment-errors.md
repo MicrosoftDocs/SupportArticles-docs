@@ -2,7 +2,7 @@
 title: Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common enrollment and sync token errors when enrolling iOS/iPadOS devices in Intune.
 ms.reviewer: kaushika, mghadial, annovich, caher
-ms.date: 03/08/2024
+ms.date: 06/19/2024
 search.appverid: MET150
 ms.custom: sap:Enroll Devices - iOS\ADE/ ABM
 ---
@@ -36,7 +36,7 @@ This section includes token sync errors related to Apple Automated Device Enroll
 
 |Error message| Cause | Solution|
 |-------------|-----|----------|
-| Expired or invalid token | The token may be expired, revoked, or malformed. | Renew the token. If you have any issue when renewing the token, contact the [Intune support team](/mem/get-support) as you may need to use a new public key on the existing MDM server in Apple Business Manager or Apple School Manager: **Preferences** > **MDM Server Settings** > **Upload Public Key**. |
+| Expired or invalid token | The token may be expired, revoked, or malformed. | Renew the token. If you have any issues renewing the token, contact the [Intune support team](/mem/get-support), as you may need to use a new public key on the existing MDM server in Apple Business Manager or Apple School Manager: **Preferences** > **MDM Server Settings** > **Upload Public Key**. |
 | Access denied | Intune can't talk to Apple anymore. For example, Intune has been removed from the MDM server list in Apple Business Manager or Apple School Manager. The token has possibly expired. | 1. Verify whether your token has expired, and if a new token was created.<br/>2. Check to see if Intune is in the MDM server list |
 | Terms and conditions not accepted | New terms and conditions (T&C) need to be accepted in Apple Business Manager or Apple School Manager. | Accept the new T&C in Apple Apple Business Manager or Apple School Manager Portal.<br/>**Note:** This must be done by a user with the Administrator role in Apple Business Manager or Apple School Manager. |
 | Internal server error | Needs further investigation | Contact the [Intune support team](/mem/get-support), as additional logs are needed |
