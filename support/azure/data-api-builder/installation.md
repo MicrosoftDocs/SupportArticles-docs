@@ -1,11 +1,15 @@
 ---
 title: Troubleshooting Data API builder installation
 description: Troubleshoot common problems that might occur when you install the Data API builder for Azure databases.
-ms.reviewer: jerrynixon, sidandrews
+author: seesharprun
+ms.author: sidandrews
+ms.reviewer: genli
 ms.service: data-api-builder
-ms.date: 05/14/2024
+ms.date: 06/19/2024
+ms.topic: troubleshooting-known-issue
 ms.custom: sap:Tools and Connectors
 ---
+
 # Troubleshoot the installation of Data API builder for Azure databases
 
 Data API builder is distributed as a NuGet package and can be installed using a .NET tool. This article provides solutions to common issues that might occur when you install Data API builder.

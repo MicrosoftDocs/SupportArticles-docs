@@ -1,11 +1,15 @@
 ---
 title: Troubleshooting Data API builder usage
-description: Troubleshoot common issues that might occur when you use Data API builder for Azure databases.
-ms.reviewer: jerrynixon, sidandrews, v-weizhu
+description: Troubleshoot common and well-known issues that might occur when you use Data API builder for Azure databases.
+author: seesharprun
+ms.author: sidandrews
+ms.reviewer: genli
 ms.service: data-api-builder
-ms.date: 04/16/2024
+ms.date: 06/19/2024
+ms.topic: troubleshooting-known-issue
 ms.custom: sap:Tools and Connectors
 ---
+
 # Troubleshoot the usage of Data API builder for Azure databases
 
 This article provides solutions to common errors that might occur when you use Data API builder for Azure databases.
@@ -240,4 +244,3 @@ For example, in the following runtime configuration file, the role `role1` is de
 If your issue isn't resolved, provide feedback or report it in the [data-api-builder Discussions](https://github.com/azure/data-api-builder/discussions).
 
 [!INCLUDE[Azure Help Support](../../includes/azure-help-support.md)]
-
