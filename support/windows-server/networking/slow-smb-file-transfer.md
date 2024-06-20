@@ -1,7 +1,7 @@
 ---
 title: Slow SMB files transfer speed
 description: Learn how to resolve transfer performance issues with SMB files by using the provided troubleshooting steps.
-ms.date: 06/17/2024
+ms.date: 06/20/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -18,7 +18,10 @@ Server Message Block (SMB) is the default Windows network file system feature an
 > [!NOTE]
 > [SMB signing](https://techcommunity.microsoft.com/t5/storage-at-microsoft/configure-smb-signing-with-confidence/ba-p/2418102) and [SMB encryption](/windows-server/storage/file-server/smb-security) are known to reduce SMB transfer speeds. The amount of performance loss depends greatly on the capabilities of the hardware involved. The primary factors are CPU core count and speed, and how much CPU time is being dedicated to other workloads. 
 > 
-> [SMB signing will be required by default](https://aka.ms/SmbSigningRequired) in Windows 11, version 24H2 and Windows Server 2025. We don't recommend turning off the SMB client and server signing requirement, as they provide significant protections against spoofing, tampering, and relay attacks.
+> [SMB signing will be required by default](https://aka.ms/SmbSigningRequired) in Windows 11, version 24H2 (preview) and Windows Server 2025 (preview). We don't recommend turning off the SMB client and server signing requirement, as they provide significant protections against spoofing, tampering, and relay attacks.
+
+> [!Important]
+> Windows 11, version 24H2 and Windows Server 2025 are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 The following steps can be used to analyze, troubleshoot, and resolve common issues with slow SMB transfers.
 
@@ -56,7 +59,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
     - This indicates that the memory buffer is exhausted.
     - RAMMap doesn't automatically refresh. Use <kbd>F5</kbd> on your keyboard or **File** > **Refresh** to update memory usage.
   - Use storage performance monitor counters to determine whether storage performance degrades proportionally to network throughput. For more information, see [Performance tuning for SMB file servers](/windows-server/administration/performance-tuning/role/file-server/smb-file-server).
-  - Adjust the [remote file dirty page threshold](/windows-server/administration/performance-tuning/subsystem/cache-memory-management/troubleshoot#remote-file-dirty-page-threshold-is-consistently-exceeded) if performance degrades every 5 GB, approximately, on newer versions of Windows.
+  - Adjust the [remote file dirty page threshold](/windows-server/administration/performance-tuning/subsystem/cache-memory-management/troubleshoot#remote-file-dirty-page-threshold-is-consistently-exceeded) if performance degrades every 5 GB, approximately, in Windows Server 2016 and later versions.
 
 - Transfers are slow only when using certain technologies or a [Scale-Out File Server (SOFS)](/windows-server/failover-clustering/sofs-overview)).
 
