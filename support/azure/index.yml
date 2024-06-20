@@ -48,11 +48,11 @@ productDirectory:
     links:
     - url: azure-functions/welcome-azure-functions.yml
       text: Troubleshooting articles for Azure Functions
-  - title: Azure Kubernetes
+  - title: Azure Kubernetes Service (AKS)
     imageSrc: "/training/achievements/develop-and-deploy-applications-on-kubernetes.svg"
     links:
     - url: azure-kubernetes/welcome-azure-kubernetes.yml
-      text: Troubleshooting articles for Azure Kubernetes
+      text: Troubleshooting articles for Azure Kubernetes Service (AKS)
   - title: Azure Monitor
     imageSrc: "https://static.docs.com/ui/media/product/azure/monitor.svg"
     links:
@@ -94,7 +94,7 @@ productDirectory:
     - url: azure-container-registry/welcome-container-registry.yml
       text: Troubleshooting articles for Azure Container Registry
     - url: azure-kubernetes/welcome-azure-kubernetes.yml
-      text: Troubleshooting articles for Azure Kubernetes
+      text: Troubleshooting articles for Azure Kubernetes Service (AKS)
   - title: High Performance Computing
     imageSrc: "https://static.docs.com/ui/media/product/azure/container-registry.svg"
     links:
