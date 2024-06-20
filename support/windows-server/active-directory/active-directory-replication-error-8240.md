@@ -238,4 +238,4 @@ If you need assistance from Microsoft Support, we recommend that you collect the
 
 ## More information
 
-For more information, see [Troubleshoot problems with promoting a domain controller to a global catalog server](promoting-dc-to-global-catalog-server-issues.md).
+For more information, see [Can't promote a Windows Server domain controller to a global catalog server](cannot-promote-dc-to-global-catalog-server.md).

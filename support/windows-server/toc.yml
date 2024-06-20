@@ -235,8 +235,6 @@ items:
       href: ./active-directory/replication-error-8453.md
     - name: Replication error 8614
       href: ./active-directory/replication-error-8614.md
-    - name: Replication error 5 - Access is denied
-      href: ./active-directory/replication-error-5.md
     - name: Troubleshoot Active Directory replication error 1396
       href: ./active-directory/active-directory-replication-error-1396.md
     - name: Troubleshoot AD replication error 8446
@@ -279,8 +277,6 @@ items:
       href: ./active-directory/kfso-not-work-in-external-trust-event-is-17.md
     - name: Optimize domain controller location
       href: ./active-directory/optimize-dc-location-global-catalog.md
-    - name: Problems with promoting DC to global catalog server
-      href: ./active-directory/promoting-dc-to-global-catalog-server-issues.md
   - name: DCPromo and the installation of domain controllers
     items:
     - name: Access is denied error occurs with DCPROMO
