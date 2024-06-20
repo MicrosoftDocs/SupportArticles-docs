@@ -161,14 +161,17 @@ Follow these steps:
 2. Parse the .json file, and view the parsed data objects by running the following PowerShell commands:
 
    ```PowerShell
-    # Get the content of the JSON file
+   # Get the content of the JSON file
     $jsonContent = Get-Content -Path "<JSON file path>" -Raw
-    # Convert JSON content to PowerShell object
-    $debugInfo = $jsonContent | ConvertFrom-Json
-    # Show output
+   # Load the System.Web.Extensions assembly which is needed for the JavaScriptSerializer class
+    [void][System.Reflection.Assembly]::LoadWithPartialName("System.Web.Extensions")
+   # Create a new instance of JavaScriptSerializer with a specified maximum JSON length for deserialization
+    $serializer = New-Object -TypeName System.Web.Script.Serialization.JavaScriptSerializer -Property @{MaxJsonLength=67108864}
+   # Convert JSON content to PowerShell object
+    $debugInfo = $serializer.DeserializeObject($jsonContent)
+   # Show output
     $debugInfo
    ```
-
    For example, you might see the following data objects in the command output.
 
    :::image type="content" source="media/collect-compliance-diagnostics/data-objects-example.png" border="false" alt-text="Screenshot of an example data objects list." lightbox="./media/collect-compliance-diagnostics/data-objects-example.png":::
