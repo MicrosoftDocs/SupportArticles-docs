@@ -9178,7 +9178,7 @@
     {
       "source_path": "support/windows-server/identity/promoting-dc-to-global-catalog-server-issues.md",
       "redirect_url": "/troubleshoot/windows-server/active-directory/promoting-dc-to-global-catalog-server-issues",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-server/identity/raise-active-directory-domain-forest-functional-levels.md",
@@ -11188,7 +11188,7 @@
     {
       "source_path": "support/windows-server/active-directory/promoting-dc-to-global-catalog-server-issues.md",
       "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-promote-dc-to-global-catalog-server",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/active-directory/replication-error-5.md",
