@@ -98,7 +98,7 @@ Registry values:
 - LicenseServers
 - LicensingMode
 
-> [!Notes]
+> [!Note]
 >
 > - This configuration will apply before the one that's mentioned in "Using GUI." This means that the "Using GUI" configuration will have no effect when a local policy is configured because the registry values will not be taken into account. In this situation, you can't use RDSM to configure the license servers and licensing mode.
 > - The gpedit.msc console that's started on the session host server does not appear in this configuration.

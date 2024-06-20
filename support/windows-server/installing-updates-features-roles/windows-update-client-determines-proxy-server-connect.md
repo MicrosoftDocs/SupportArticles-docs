@@ -13,7 +13,7 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article describes proxy server detection methods that the Windows Update client uses to connect to the Windows Update website, and the situations where Windows Update uses a particular method.
 
-The Windows Update client requires the Windows HTTP Services (WinHTTP) to scan for available updates, and uses the Background Intelligent Transfer Service (BITS) or Delivery Optimization (DO) to download these updates. WinHTTP, BITS, and DO run independently in Microsoft Internet Explorer. These services must be able to detect the proxy server(s) that are available in your particular environment.
+The Windows Update client requires the Windows HTTP Services (WinHTTP) to scan for available updates, and uses the Background Intelligent Transfer Service (BITS) or Delivery Optimization (DO) to download these updates. WinHTTP, BITS, and DO run independently in Microsoft Internet Explorer. These services must be able to detect the proxy servers that are available in your particular environment.
 
 ## The Automatic Updates service is configured to download and install updates from the Windows Update website
 
@@ -56,11 +56,11 @@ To use the *Netsh.exe* tool to configure a proxy server, follow these steps:
 1. Select **Start** > **Run**, type *cmd*, and then select **OK**.
 2. At the command prompt, run the following command and then press <kbd>Enter</kbd>.
 
-    ```consle
+    ```console
     netsh winhttp set proxy <proxyservername>:<portnumber>
     ```
 
-    In this command, replace \<proxyservername\> with the fully qualified domain name of the proxy server. Replace \<portnumber\> with the port number for which you want to configure the proxy server. For example, replace \<proxyservername\>:\<portnumber\> with `proxy.domain.example.com:80`.
+    In this command, replace `<proxyservername>` with the fully qualified domain name of the proxy server. Replace `<portnumber>` with the port number for which you want to configure the proxy server. For example, replace `<proxyservername>:<portnumber>` with `proxy.domain.example.com:80`.
 
 ### To remove a proxy server by using the Netsh.exe tool
 
@@ -69,7 +69,7 @@ To use the *Netsh.exe* tool to remove a proxy server and to configure "direct ac
 1. Select **Start** > **Run**, type *cmd*, and then select **OK**.
 2. At the command prompt, run the following command and then press <kbd>Enter</kbd>.
 
-    ```consle
+    ```console
     netsh winhttp reset proxy 
     ```
 
@@ -80,7 +80,7 @@ To use the *Netsh.exe* tool to verify the current proxy configuration, follow th
 1. Select **Start** > **Run**, type *cmd*, and then select **OK**.
 2. At the command prompt, run the following command and then press <kbd>Enter</kbd>.
 
-    ```consle
+    ```console
     netsh winhttp show proxy
     ```
 
