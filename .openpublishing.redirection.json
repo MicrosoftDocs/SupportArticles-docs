@@ -11184,6 +11184,16 @@
       "source_path": "support/dynamics/index.yml",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
-    } 
+    },
+    {
+      "source_path": "support/windows-server/active-directory/promoting-dc-to-global-catalog-server-issues.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-promote-dc-to-global-catalog-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/replication-error-5.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replications-fail-with-error-5",
+      "redirect_document_id": true
+    }
   ]
 }

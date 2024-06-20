@@ -140,7 +140,7 @@ The following articles contain the troubleshooting procedures for errors typical
 |Win32 error|Article|
 |---|---|
 | -2146893022| [Active Directory replication error -2146893022: The target principal name is incorrect](replication-error-2146893022.md)|
-| 5| [Active Directory replication error 5 - Access is denied](replication-error-5.md)|
+| 5| [How to troubleshoot Active Directory replication error 5 in Windows Server: Access is denied](replications-fail-with-error-5.md)|
 | 1722| [Active Directory replication error 1722: The RPC server is unavailable](replication-error-1722-rpc-server-unavailable.md)|
 | 1727| [Troubleshoot domain controller replication error 1727-The remote procedure call failed and did not execute](remote-procedure-call-failed-and-did-not-execute-error.md) |
 | 1753| [Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper](replication-error-1753.md)|
