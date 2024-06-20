@@ -20,6 +20,12 @@ landingContent:
             url: installation.md
           - text: Troubleshoot usage
             url: usage.md
+  - title: Problem resolution
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Restore HTTPS functionality with .NET 8
+            url: dotnet-https.md
   - title: Known issues
     linkLists:
       - linkListType: reference
