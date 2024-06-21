@@ -3,7 +3,7 @@ title: Resolve file upload errors related to duplicate data
 description: Fix errors that occur when you upload employee attribute data to Microsoft Viva Glint. These errors are caused by duplicate data.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 06/20/2024
+ms.date: 06/21/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -67,15 +67,6 @@ Error message:
 
 > DUPLICATED_EXTERNAL_USER_ID: The Employee ID \<ID\> in the user file is already assigned to another employee with Email Address \<Email address, such as user@contoso.com\> in the Viva Glint database.
 
-This issue occurs because one or more users in the uploaded file are assigned an Employee ID that's already associated with a different user in Viva Glint. Employee IDs must be unique in the employee attribute data.
-
 ### Resolution
 
-To fix the issue, follow these steps:
-
-1. In the admin dashboard, select the **Configure** icon, then select **People** in the **Employees** section.
-1. Find the user that's associated with the Employee ID that's mentioned in the error message, then select the user to view their profile.
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
-1. Identify all users that are assigned the Employee ID that's mentioned in the error message in the data file.
-1. For each user that's identified in step 4, compare their email address with the email address of the user that's found in step 2. If the email address is different, fill in a unique Employee ID for the user in the data file.
-1. Save the employee attribute data file, and then upload it again to Viva Glint.
+To fix the issue, identify the correct Employee ID for the associated employee records. Compare the employees in your user file against the **People** section in Viva Glint, and then reupload your user file after it's corrected.

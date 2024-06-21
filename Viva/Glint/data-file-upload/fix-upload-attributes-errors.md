@@ -25,11 +25,7 @@ Error message:
 
 ### Resolution
 
-To fix the issue, follow these steps:
-
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
-1. For the column that's listed in the error message, delete the extra column.
-1. Save the file, and then upload it again to Viva Glint.
+To fix the issue, delete the extra column, and then upload the file again to Viva Glint.
 
 **Note**: If Viva Glint creates a column based on the source data (for example, **Tenure** from **Hire Date**), don't include the derived field as a column in the employee attribute data file.
 
