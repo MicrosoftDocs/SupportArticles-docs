@@ -4,5 +4,7 @@
   href: installation.md
 - name: Troubleshoot Data API builder usage
   href: usage.md
+- name: Restore HTTPS functionality with .NET 8
+  href: dotnet-https.md
 - name: Known issues in the Azure/data-api-builder GitHub repository
   href: https://github.com/azure/data-api-builder/labels/known-issue
