@@ -109,7 +109,7 @@ Then, upload the file again to Viva Glint.
 Error messages:
 
 - > DERIVATION_ERROR: File is in an unexpected format. Expecting csv file format. Check to see if the file passed is a csv file with UTF-8 encoding and comma delimited values.
-- > DERIVATION_ERROR: File is in an unexpected format. Expecting xlsx file format. Check to see whether the file that's passed is an .xlsx file that contains no formulas or additional sheets.
+- > DERIVATION_ERROR: File is in an unexpected format. Expecting xlsx file format. Check to see if the file passed is a xlsx file with no formulas and no additional sheets.
 
 This issue occurs because the file that you upload isn't in the format that's specified when you set up attributes in Viva Glint.
 
@@ -152,7 +152,7 @@ To fix the issue, follow these steps:
 
 Error message:
 
-> Row \<line number, such as 100\> length doesn't match header's length. Can't create file.
+> ENRICHMENT_FAILURE: Row \<line number, such as 100\> length doesn't match header's length. Can't create file.
 
 ### Resolution
 
@@ -167,7 +167,7 @@ To fix the issue, follow these steps:
 
 Error message:
 
-> MANAGER_HIERARCHY_UPDATE_ERROR: There should be at least one employee record that has no manager. Otherwise, the reporting hierarchy may be invalid. Leave the **Manager ID** field empty for the CEO/top level leader.
+> MANAGER_HIERARCHY_UPDATE_ERROR: There should be at least one employee record with no manager, otherwise the reporting hierarchy may be invalid. Leave the Manager ID empty for the CEO/top level leader.
 
 This issue occurs if the CEO or top-level person has a **Manager ID** value assigned.
 
