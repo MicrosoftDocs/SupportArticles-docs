@@ -68,7 +68,7 @@ This scenario occurs primarily if policy tips don't work as expected in SharePoi
 > [!NOTE]
 > Currently, content is not indexed as shared externally until an external party that's located outside the organization accesses the content for the first time.
 
-## MailTips are not enabled (Outlook 2013 and later version clients only)
+## MailTips aren't enabled (Outlook 2013 and later version clients only)
 
 For Outlook 2013 and later version clients, make sure that MailTips are enabled. To enable MailTips in Outlook, first make sure that policy tips are enabled. To do this, follow these steps:
 
@@ -85,7 +85,7 @@ For Outlook 2013 and later version clients, make sure that MailTips are enabled.
 
 See [Policy tips in the Exchange admin center vs. the Security & Compliance Center](/microsoft-365/compliance/use-notifications-and-policy-tips#policy-tips-in-the-exchange-admin-center-vs-the-security--compliance-center).
 
-## `GetDLPPolicyTip` call not found in Fiddler trace
+## GetDLPPolicyTip call not found in Fiddler trace
 
 If DLP policy tips don't work as expected, Fiddler is a useful tool to help you diagnose the issue. Here's how to use a Fiddler trace to troubleshoot DLP policy tips.
 
@@ -119,7 +119,7 @@ There are several Outlook client licenses that don't support policy tips. [Outlo
 
 No policy tip is displayed if the following conditions are true:
 
-- You are running Outlook 2013 or later version clients on Windows 7.
+- You're running Outlook 2013 or later version clients on Windows 7.
 - You try to attach a file that's formatted as Adobe PDF version 10 or later versions to an email message that should trigger a DLP policy tip.
 
 ### Resolution
@@ -128,6 +128,6 @@ To resolve this issue, carefully follow the steps in the "Resolution" section of
 
 ## Invalid test data
 
-When you evaluate the **Instance count** and confidence level of the DLP policy rule, the test data that's being used is not valid based on [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions). Make sure that the test data that you use is valid.
+When you evaluate the **Instance count** and confidence level of the DLP policy rule, the test data that's being used isn't valid based on [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions). Make sure that the test data that you use is valid.
 
 :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/invalid-test-data.png" alt-text="Screenshot of an invalid instance count value.":::
