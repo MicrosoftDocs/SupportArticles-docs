@@ -1,6 +1,6 @@
 ---
-title: Fix video display lag issue in Teams
-description: Resolves an issue in which the video display for attendees is of poor quality when sharing video during a Teams call.
+title: Fix Screensharing Video Display Lag Issue In Teams
+description: Resolves an issue in which the video display for attendees is of poor quality when screen sharing video during a Teams call.
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -18,7 +18,7 @@ search.appverid:
   - MET150
 ms.date: 10/30/2023
 ---
-# Fix video display lag issue in Teams
+# Fix Screensharing Video Display Lag Issue In Teams
 
 ## Symptoms
 
@@ -26,11 +26,9 @@ During a call in Microsoft Teams, when you share a video or other content that n
 
 ## Cause
 
-Teams isn't detecting motion quickly enough.
+By default, the frame rate for screen sharing in Teams is set to a low frame rate. This is because commonly shared content, such as an Excel worksheet or Word document, is static. The low frame rate ensures that attendees see the highest possible resolution of the shared content.
 
-By default, the frame rate for screen sharing in Teams is set to the low motion option. This is because commonly shared content, such as an Excel worksheet or Word document, is static. The low motion setting ensures that attendees see the highest possible resolution of the shared content.
-
-Typically, Teams detects when higher motion content, such as a full-screen video, is shared, and it automatically increases the frame rate. However, there are situations in which this doesn't occur.
+This can be problematic when a user shares video, as it can appear to lag because the framerate is low.
 
 ## Resolution
 
@@ -40,7 +38,7 @@ In Teams 1.6.00.12455 and later versions, you can use a keyboard shortcut to ena
 
 1. Select the Teams app, and then select **Ctrl+Alt+Shift+T**.
 
-**Note**: The resolution of the shared content might drop to accommodate the higher frame rate depending on several factors, such as device capability and available bandwidth.
+**Note**: The resolution of the shared content might drop to accommodate the higher frame rate depending on several factors, such as device capability and available bandwidth. 
 
 ## More information
 
@@ -53,3 +51,6 @@ To check the frame rate for the content that's shared, follow these steps:
 1. On the **More** menu, select **Settings**, and then select **Call health**.
 
 1. To see the frame rate, resolution, and other details about the screen sharing session, scroll to the **Screen Sharing** section.
+
+**Note**: The keyboard shortcut will soon be deprecated. There is a new presenter control toolbar that allows a user to optimize for video when screen sharing. Please see the following article for more information:
+https://support.microsoft.com/en-us/office/share-content-in-microsoft-teams-meetings-fcc2bf59-aecd-4481-8f99-ce55dd836ce8
