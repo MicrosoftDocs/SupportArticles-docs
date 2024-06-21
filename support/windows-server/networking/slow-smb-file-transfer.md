@@ -1,7 +1,7 @@
 ---
 title: Slow SMB files transfer speed
 description: Learn how to resolve transfer performance issues with SMB files by using the provided troubleshooting steps.
-ms.date: 06/20/2024
+ms.date: 06/21/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -54,7 +54,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
  
   - A change in copy speed can occur when the initial copy is cached by storage or buffered in system memory, and then the cache reaches capacity.
   - Data is then committed directly to disk (write-through) once memory buffers and storage caches are depleted, limiting performance to the storage mediums sustained write-through limits.
-  - Use [RAMMap](/sysinternals/downloads/rammap) from SysInternals to determine whether **Mapped File** usage in memory stops growing.
+  - Use [RAMMap](/sysinternals/downloads/rammap) from Microsoft SysInternals to determine whether **Mapped File** usage in memory stops growing.
   
     - This indicates that the memory buffer is exhausted.
     - RAMMap doesn't automatically refresh. Use <kbd>F5</kbd> on your keyboard or **File** > **Refresh** to update memory usage.
@@ -74,7 +74,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
 - Ensure that the network offloading technologies are enabled.
 
   - SMB performance is closely tied to network performance.
-  - Network offloading technologies, like Receive Side Scaling (RSS), Large Sum Offload (LSO), Receive Segment Coalescing (RSC), and TCP/UDP checksums, are designed to improve network throughput while lowering CPU usage of the network stack.
+  - Network offloading technologies, like Receive Side Scaling (RSS), Large Send Offload (LSO), Receive Segment Coalescing (RSC), and TCP/UDP checksums, are designed to improve network throughput while lowering CPU usage of the network stack.
   - Don't disable network offloads.
 
 - On the SMB client, ensure that the large maximum transmission unit (MTU) isn't disabled and bandwidth throttling isn't enabled in SMB by running the following PowerShell cmdlet:
