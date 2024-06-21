@@ -152,7 +152,7 @@ To fix the issue, follow these steps:
 
 Error message:
 
-> Row \<line number, such as 100\> length doesn't match header's length. Can't create file.
+> ENRICHMENT_FAILURE: Row \<line number, such as 100\> length doesn't match header's length. Can't create file.
 
 ### Resolution
 
