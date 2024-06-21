@@ -17,7 +17,7 @@ localization_priority: Normal
 
 When you upload employee attribute data to Microsoft Viva Glint, you may receive one of the following error messages that are caused by duplicate data. Select the error that you experience from the list at the top of the article, and follow the appropriate resolution to fix the error.
 
-## INVALID_EMPLOYEE_DATA
+## INVALID_EMPLOYEE_DATA: Email is assigned to multiple users
 
 Error message:
 
