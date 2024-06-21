@@ -1,39 +1,49 @@
 ---
-title: Issues that affect DLP policy tips
-description: Fixes some issues that occur if DLP policy tips don't work as expected.
-author: helenclu
+title: Resolve issues that affect DLP policy tips
+description: Provides diagnostic information and resolutions for issues that cause DLP policy tips to not work.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
-ms.reviewer: chgary, lindabr, sathyana
+ms.reviewer: chgary, lindabr, sathyana, meerak, v-trisshores
 ms.custom: 
   - CSSTroubleshoot
   - CI 100086
   - CI 160472
+  - CI 191994
 appliesto: 
   - Microsoft Purview Data Loss Prevention
-ms.date: 03/31/2022
+ms.date: 06/21/2024
 ---
 
 # Resolve issues that affect DLP policy tips
 
-Data Loss Prevention (DLP) policy tip settings are configured in DLP policies. If you created DLP policies in Exchange Online, we recommend that you [migrate them to the Microsoft Purview compliance portal](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp). This is because [legacy Exchange Online data loss prevention in the Exchange admin center will be deprecated](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention). For policies that are not migrated, you might see unexpected results, such as no display of policy tips.
+If you encounter an issue that's related to Microsoft Purview Data Loss Prevention (DLP) policy tips, select the applicable issue from the table of contents (TOC) at the top of this article.
 
-This article describes the following common scenarios in which DLP policy tips might not work as expected, and provides resolutions that you can try:
+If your issue isn't listed in the TOC or you need further support, run an automated diagnostic in the Microsoft 365 admin center. The diagnostic analyzes the DLP policy and rule configuration for policy tips, identifies any issues, and suggests resolutions.
 
-- Policy configuration errors occur
-- Policy configurations are not supported (client only)
-- Not all policy conditions are met
-- MailTips aren't enabled (client only)
-- Policy tips are configured both in multiple locations
-- `GetDLPPolicyTip` call is not found in Fiddler trace
-- Client doesn't support MailTips (Mac only)
-- File-system configuration is not supported (PDFs on Windows 7 only)
-- Invalid test data
+> [!NOTE]
+> To run the diagnostic, you must have a Microsoft 365 administrator account.
+
+To run the diagnostic, follow these steps:
+
+1. Select the following button to open the diagnostic in the Microsoft 365 admin center.
+
+   > [!div class="nextstepaction"]
+   > [Run Tests: DLP policy and rule configuration for policy tips](https://aka.ms/Pillar...Diag)
+
+2. Enter the following information:
+
+   - User principal name (UPN) or email address of the user
+   - DLP rule name or GUID
+   - Outlook client: **Outlook** or **OWA** (Outlook on the web)
+
+3. Select **Run Tests**.
+
 ## DLP policies in Exchange Online
 
 DLP policy tip settings are configured in DLP policies. If you created DLP policies in Exchange Online, we recommend that you [migrate them to the Microsoft Purview compliance portal](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp) because legacy Exchange Online data loss prevention in the Exchange admin center is being deprecated. For policies that aren't migrated, you might see unexpected results, such as no display of policy tips.
