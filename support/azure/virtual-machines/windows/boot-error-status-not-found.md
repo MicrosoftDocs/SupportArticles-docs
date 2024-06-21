@@ -9,7 +9,7 @@ ms.service: virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-ms.date: 11/08/2023
+ms.date: 06/21/2024
 editor: v-jsitser
 ms.reviewer: azurevmcptcic, v-leedennis
 ms.topic: troubleshooting-general
@@ -147,63 +147,11 @@ If you have a recent backup of the VM, you can try to [restore the VM from the b
 
 The file that's associated with the error code is a system binary (*.sys*) file that's missing or corrupted.
 
-### Solution 1: Repair the system binary file
+### Solution 1: Replace the system binary file
 
-Repair the system binary file by following these steps:
+Replace the system binary (*.sys*) file by following these steps:
 
-1. On the attached disk, browse to the location of the binary file that's displayed in the error message.
-2. Rename the file to *\<BINARY.SYS>.OLD*.
-3. On the attached disk, browse to the *\\Windows\\winsxs* folder. Then, search for the binary file that's displayed in the error message. To do this, run the following command at a command prompt:
-
-   ```cmd
-   dir <binary-name> /s
-   ```
-
-   The command lists all the different versions of the binary file together with the created date. Copy the latest version of the binary file to the *windows\\system32* folder by running the following command:
-
-   ```cmd
-   copy <drive>:\Windows\WinSxS\<directory-where-file-is>\<binary-with-extension> <drive>:\Windows\System32\Drivers\
-   ```
-
-   For example, see the following console output:
-
-   ```console
-   E:\Windows\WinSxS>dir ACPI.sys /s
-    Volume in drive E has no label.
-    Volume Serial Number is A0B1-C2D3
-   
-    Directory of E:\Windows\WinSxS\amd64_acpi.inf_0123456789abcdef_6.3.9600.16384_none_cdef0123456789ab
-   
-   11/21/2014  07:48 PM            94,989 acpi.sys
-                  1 File(s)         94,989 bytes
-   
-    Directory of E:\Windows\WinSxS\amd64_acpi.inf_0123456789abcdef_6.3.9600.16384_none_89abcdef01234567
-   
-   11/21/2014  07:48 PM           119,547 acpi.sys
-                  1 File(s)        119,547 bytes
-   
-    Directory of E:\Windows\WinSxS\amd64_acpi.inf_0123456789abcdef_6.3.9600.16384_none_456789abcdef0123
-   
-   11/21/2014  04:06 PM           533,824 acpi.sys
-                  1 File(s)        533,824 bytes
-   
-        Total Files Listed:
-                  3 File(s)        748,360 bytes
-                  0 Dir(s)  123,967,512,576 bytes free
-
-   E:\Windows\WinSxS>copy E:\Windows\WinSxS\amd64_acpi.inf_0123456789abcdef_6.3.9600.16384_none_cdef0123456789ab\acpi.sys E:\Windows\System32\Drivers\
-           1 file(s) copied.
-
-   E:\Windows\WinSxS>
-   ```
-
-   > [!NOTE]  
-   > - The screenshot shows volume E as an example. The actual letter should reflect the faulty drive (the OS disk attached as a data disk on the troubleshooting VM).
-   >
-   > - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
-   >
-   > - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
-4. Detach the repaired disk from the troubleshooting VM. Then, create a VM from the OS disk.
+[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-replace-system-binary-file.md)]
 
 ## Cause 2: Corrupted boot configuration data or incorrectly prepared virtual hard drive
 
@@ -240,7 +188,7 @@ Repair the boot configuration data by running [BCDEdit](/windows-server/administ
    ```
 
    > [!NOTE]  
-   > If there isn't a *bcd* store file in the *boot* folder of the Boot partition, restore the file by following the steps in [Solution 1: Repair the system binary file](#solution-1-repair-the-system-binary-file), but for *\\boot\\bcd* file.
+   > If there's no *bcd* store file in the *boot* folder of the Boot partition, restore this file by following the steps in [Solution 1: Replace the system binary file](#solution-1-replace-the-system-binary-file), except that you're replacing the *\\boot\\bcd* file instead of a *.sys* file.
 
 7. Repair the Boot Configuration data by running the following [BCDEdit /set](/windows-hardware/drivers/devtest/bcdedit--set) commands. Change the placeholders to the actual values, as described in the following table.
 
@@ -287,7 +235,7 @@ Fix the corrupted hive by following these steps:
 5. On the OS disk that you attached, navigate to the *\\windows\\system32\\config* directory. Copy all the files to a backup folder in case a rollback is required.
 6. Select **Start**, and then search for and select **Registry Editor** (*regedit.exe*).
 7. In the Registry Editor app, select the `HKEY_USERS` subtree, select **File** > **Load Hive** on the menu, and then load the *\\windows\\system32\\config\SYSTEM* file.
-8. If the hive loads without issues, this means that the hive was not closed correctly. In this situation, unload the hive to unlock the file and fix the issue.
+8. If the hive loads without issues, this means that the hive wasn't closed correctly. In this situation, unload the hive to unlock the file and fix the issue.
 
    > [!NOTE]  
    > If you receive the following error message, [contact Azure Support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade):
