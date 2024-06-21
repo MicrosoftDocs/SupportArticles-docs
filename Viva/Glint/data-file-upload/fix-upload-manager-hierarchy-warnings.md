@@ -15,7 +15,7 @@ localization_priority: Normal
 
 # Resolve file upload warnings related to manager hierarchy
 
-When you upload employee attribute data to Microsoft Viva Glint, you may receive one of the following error messages. Select the error that you experience from the list at the top of the article, and follow the appropriate resolution to fix the error.
+When you upload employee attribute data to Microsoft Viva Glint, you may receive one of the following warning messages. Select the warning that you experience from the list at the top of the article, and follow the appropriate resolution to fix the warning.
 
 ## MANAGER_HIERARCHY_UPDATE_WARNING
 

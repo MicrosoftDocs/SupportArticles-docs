@@ -15,7 +15,7 @@ localization_priority: Normal
 
 # Resolve file upload warnings related to invalid or unexpected values
 
-When you upload employee attribute data to Microsoft Viva Glint, you may receive one of the following derivation warning messages. Select the warning that you experience from the list at the top of the article, and follow the appropriate resolution to fix the warning.
+When you upload employee attribute data to Microsoft Viva Glint, you may receive one of the following warning messages. Select the warning that you experience from the list at the top of the article, and follow the appropriate resolution to fix the warning.
 
 ## INVALID_EMPLOYEE_DATA: unsupported characters
 
