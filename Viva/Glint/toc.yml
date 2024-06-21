@@ -3,6 +3,8 @@
   items:
     - name: Data File Uploads
       items:
+        - name: Resolve file upload errors related to attributes
+          href: ./data-file-upload/fix-upload-attributes-errors.md
         - name: Resolve file upload errors related to derived attributes
           href: ./data-file-upload/fix-upload-derivation-errors.md
         - name: Understand file upload errors and warnings
