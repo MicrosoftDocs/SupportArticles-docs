@@ -11,7 +11,7 @@ ms.custom: sap:Connectivity
 This article help you find Azure Kubernetes Service (AKS) nodes that experience Source Network Address Translation (SNAT) port exhaustion and troubleshoot this issue.
 
 > [!NOTE]
-> - To troubleshoot SNAT port exhaustion on AKS nodes in an AKS cluster running [Kubernetes-jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/), follow the following procedure only when the jobs are actively running on the AKS nodes.
+> - To troubleshoot SNAT port exhaustion on AKS nodes in an AKS cluster running [Kubernetes-jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/), follow the following steps only when the jobs are actively running on the AKS nodes.
 > - To learn more about SNAT ports and their allocation per virtual machine (VM), see [What are SNAT ports?](/azure/load-balancer/load-balancer-outbound-connections#what-are-snat-ports).
 
 ## Step 1: Locate a node that experiences SNAT port exhaustion
@@ -29,7 +29,7 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
 ## Step 2: Locate Linux pods that have high outbound connections
 
 > [!NOTE]
-> [Tcptracer](https://github.com/iovisor/bcc/blob/master/tools/tcptracer.py) is one of the [bcc tools](https://github.com/iovisor/bcc#contents) that are pre-installed on Linux nodes. It allows you to trace TCP established connections (`connect()`, `accept()`, `close()`). You can use it to find heavy outbound connections from the source IP address and network namespaces (netns) of a pod.
+> [Tcptracer](https://github.com/iovisor/bcc/blob/master/tools/tcptracer.py) is one of the [bcc tools](https://github.com/iovisor/bcc#contents) that are pre-installed on Linux nodes. It allows you to trace TCP established connections (`connect()`, `accept()`, `close()`). You can use it to find high outbound connections from the source IP address and network namespaces (netns) of a pod.
 > All the following commands in this section are run as root user on the Linux node.
 
 1. On the Linux node that experiences SNAT port exhaustion, install [kubectl node-shell](https://github.com/kvaps/kubectl-node-shell) that's the only tool to access bcc tools.
@@ -130,7 +130,7 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
     kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=<nodename>
     ```
 
-## Step 3: Find all outbound network connections made by the application
+## Step 3: Find all outbound network connections made by the application running in the pod
 
 ### For a Linux pod
 
@@ -146,7 +146,7 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
     kubectl exec -it <pod name> -n <namespace> /bin/sh
     ```
 
-2. Install the netstat command line in the pod by running the following command. Netstat is a network troubleshooting tool used by only admins.
+2. Install the netstat command line tool in the pod by running the following command. Netstat is a network troubleshooting tool used by only admins.
 
     - On Debian, Ubuntu or Linux Mint
     
@@ -186,7 +186,7 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
         zypper install net-tools
         ```
 
-2. Once netstat is installed in the pod, run the following command:
+3. Once netstat is installed in the pod, run the following command:
 
     ```bash
     netstat -ptn | grep -i established
