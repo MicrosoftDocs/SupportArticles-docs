@@ -20,6 +20,10 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
 
     To do this, navigate to your AKS cluster in the Azure portal, select **Diagnose and Solve problems** > **Connectivity Issues** > **SNAT connection and Port Allocation**. The **SNAT connection and Port Allocation** tab displays the private IP address of the AKS node that experiences SNAT port exhaustion.
 
+     :::image type="content" source="media/snat-port-exhaustion/diagnose-and-solve-problems.png" alt-text="Screenshot of the 'Diagnose and Solve problems' pane." border="false":::
+
+     :::image type="content" source="media/snat-port-exhaustion/connectivity-issues.png" alt-text="Screenshot of the 'Connectivity Issues' pane." border="false":::
+
 2. Connect to your AKS cluster and use the node IP address to get the name of the node by running the following kubectl commands:
 
     ```console
