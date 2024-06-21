@@ -21,7 +21,7 @@ When you upload employee attribute data to Microsoft Viva Glint, you might recei
 
 Error message:
 
-> DERIVATION_ERROR: The date format is incorrectly configured for the following columns: (Hire Date). We're expecting \<date format, such as mm/dd/yyyy\>. For Microsoft Excel files, ensure that cells are in **Text** format.
+> DERIVATION_ERROR: The date format is incorrectly configured for the following columns: (Hire Date). We're expecting \<date format, such as mm/dd/yyyy\>. For Microsoft Excel files, ensure that cells are in Text format.
 
 This issue occurs because the date format in the file that you upload doesn't match the format that's specified when you set up attributes in Viva Glint.
 
