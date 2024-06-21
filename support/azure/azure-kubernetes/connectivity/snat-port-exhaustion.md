@@ -18,7 +18,7 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
 
 1. Get the IP addresses of AKS nodes that experience active SNAT port exhaustion from the Azure portal.
 
-    To do this, navigate to your AKS cluster in the Azure portal, select **Diagnose and Solve problems** > **Connectivity Issues** > **SNAT connection and Port Allocation**. The **SNAT connection and Port Allocation** tab will display the private IP address of the AKS node that experiences SNAT port exhaustion.
+    To do this, navigate to your AKS cluster in the Azure portal, select **Diagnose and Solve problems** > **Connectivity Issues** > **SNAT connection and Port Allocation**. The **SNAT connection and Port Allocation** tab displays the private IP address of the AKS node that experiences SNAT port exhaustion.
 
 2. Connect to your AKS cluster and use the node IP address to get the name of the node by running the following kubectl commands:
 
@@ -30,7 +30,7 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
 
 > [!NOTE]
 > [Tcptracer](https://github.com/iovisor/bcc/blob/master/tools/tcptracer.py) is one of the [bcc tools](https://github.com/iovisor/bcc#contents) that are pre-installed on Linux nodes. It allows you to trace TCP established connections (`connect()`, `accept()`, `close()`). You can use it to find heavy outbound connections from the source IP address and network namespaces (netns) of a pod.
-> All commands below in this section are run as root user on the Linux node.
+> All the following commands in this section are run as root user on the Linux node.
 
 1. On the Linux node that experiences SNAT port exhaustion, install [kubectl node-shell](https://github.com/kvaps/kubectl-node-shell) that's the only tool to access bcc tools.
     
@@ -107,9 +107,9 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
       `-containerd-shim,20946 -namespace k8s.io -id 2xxxf...
     ```
 
-    Note the first 5 characters of the containerd- id in the command output. It will be used in step 7.
+    Note the first five characters of the containerd- ID in the command output. It will be used in step 7.
 
-7. Map the previous containerd- id value to a POD ID by using [crictl](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md). Crictl provides a CLI for CRI-compatible container runtimes.
+7. Map the previous containerd- ID value to a POD ID by using [crictl](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md). Crictl provides a CLI for CRI-compatible container runtimes.
 
     ```bash
     crictl ps -a
@@ -122,7 +122,7 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
     6b5xxxxb    fbxxxxx1  6 hours ago  Running   ubuntu  0          2xxxxxxxxf    nginx
     ```
 
-    Use the first 5 characters of the previous containerd- id to match a POD ID.
+    Use the first five characters of the previous containerd- ID to match a POD ID.
 
 8. Get all pods running on the node and use the previous POD ID to match the pod that has high outbound connections from the command output:
     
@@ -134,7 +134,7 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
 
 ### For a Linux pod
 
-1. Execute into the pod that has high outbound connections by using one of the following command:
+1. Execute into the pod that has high outbound connections by using one of the following commands:
 
     ```bash
     kubectl exec -it <pod name> -n <namespace> /bin/bash
@@ -155,7 +155,7 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
         apt install net-tools  
         ```
     
-    - On RHEL, CentOS, Fedora, AlmaLinux or Rocky Linux
+    - On RHEL, CentOS, Fedora, AlmaLinux, or Rocky Linux
     
         ```bash
         yum update
@@ -192,7 +192,7 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
     netstat -ptn | grep -i established
     ```
 
-    Here is a command output example:
+    Here's a command output example:
     
     ```output
     tcp        0      0 10.x.x.x:xxxx        20.x.x.x:443       ESTABLISHED xxxxx3/telnet
@@ -212,7 +212,7 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
     netstat -aon | find /i "established"
     ```
 
-    Here is a command output example:
+    Here's a command output example:
     
     ```output
     C:\inetpub\wwwroot>netstat -aon | find /i "established"
@@ -222,8 +222,8 @@ This article help you find Azure Kubernetes Service (AKS) nodes that experience 
       TCP    10.x.x.x:49167         13.x.x.x:80         ESTABLISHED     9188 
     ```
 
-In the command output, the local address is the IP address of the pod, and foreign address is the IP that the application connects. The public IP connections in ESTABLISHED state are the connections that will utilize SNAT. Ensure that you only count the connections that are in ESTABLISHED state to public IP addresses, and ignore any connections that are in ESTABLISHED state to a private IP address.
+In the command output, the local address is the IP address of the pod, and foreign address is the IP that the application connects. The public IP connections in ESTABLISHED state are the connections that utilize SNAT. Ensure that you only count the connections that are in ESTABLISHED state to public IP addresses, and ignore any connections that are in ESTABLISHED state to a private IP address.
 
-Repeat the steps in this section for all other pods running on the node. The pod that has the most connections in ESTABLISHED state to public IP addresses hosts the application that causes SNAT port exhaustions on the node. Work with your application developers to tune the application for improved network performance using recommendations mentioned in [Design connection-efficient applications](/azure/load-balancer/troubleshoot-outbound-connection#design-connection-efficient-applications). After implementing the recommendations, verify that you see less SNAT port exhaustion.
+Repeat the steps in this section for all other pods running on the node. The pod that has the most connections in ESTABLISHED state to public IP addresses hosts the application that causes SNAT port exhaustion on the node. Work with your application developers to tune the application for improved network performance using recommendations mentioned in [Design connection-efficient applications](/azure/load-balancer/troubleshoot-outbound-connection#design-connection-efficient-applications). After implementing the recommendations, verify that you see less SNAT port exhaustion.
  
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
