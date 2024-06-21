@@ -3,7 +3,7 @@ title: Resolve file upload errors related to derived attributes
 description: Fix errors that occur when you upload employee attribute data to Microsoft Viva Glint. These errors are related to derived attributes.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 06/20/2024
+ms.date: 06/21/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -15,13 +15,13 @@ localization_priority: Normal
 
 # Resolve file upload errors related to derived attributes
 
-When you upload employee attribute data to Microsoft Viva Glint, you may receive one of the following derivation error messages. Select the error that you experience from the list at the top of the article, and follow the appropriate resolution to fix the error.
+When you upload employee attribute data to Microsoft Viva Glint, you might receive one of the following derivation error messages. Select the error that you experience from the list at the top of the article, and follow the appropriate resolution to fix the error.
 
 ## The date format is incorrectly configured
 
 Error message:
 
-> DERIVATION_ERROR: The date format is incorrectly configured for the following columns: (Hire Date). We're expecting \<date format, such as mm/dd/yyyy\>. For Microsoft Excel files, ensure that cells are in Text format.
+> DERIVATION_ERROR: The date format is incorrectly configured for the following columns: (Hire Date). We're expecting \<date format, such as mm/dd/yyyy\>. For Microsoft Excel files, ensure that cells are in **Text** format.
 
 This issue occurs because the date format in the file that you upload doesn't match the format that's specified when you set up attributes in Viva Glint.
 
@@ -32,7 +32,7 @@ To fix the issue, follow these steps:
 1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
 1. For each date format column that's listed in the error message, follow these steps:
    1. To the right of the column (for example column A), insert a new column (column B) that's formatted as **General**.
-   1. Select the first cell of the new column (cell B1), enter the following formula, and then press Enter:
+   1. Select the first cell of the new column (cell B1), enter the following formula, and then select Enter:
 
       =TEXT(\<The first cell of the original date column, such as A1\>,"\<Expected date format in the error message, such as mm/dd/yyyy"\>)
 
@@ -69,7 +69,7 @@ To fix the issue, follow these steps:
        - Optional System Attributes
        - Hierarchy Attributes
 1. For each attribute that's identified in step 2c, compare its name in Viva Glint with the value in the header row of the data file, and then fix any mismatches. Make sure that:
-    - There is no case inconsistency. For example, **EMPLOYEE ID** and **Employee ID** don't match.
+    - There's no case inconsistency. For example, **EMPLOYEE ID** and **Employee ID** don't match.
     - There are no extra spaces. For example, **" Status"** and **"Status"** don't match.
     - There are no spelling errors.
     - There are no extra characters. For example, **Email_Address** and **EmailAddress** don't match.
@@ -94,7 +94,7 @@ To fix the issue, follow these steps in Microsoft Excel or a text editor to resa
 
     1. [Import the .csv file in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
     1. Select **File** > **Save As**.
-    1. In the **Save As** dialog box, select **CSV UTF-8 (Comma delimited)** from the **Save as type** dropdown box, and then select **Save**.
+    1. In the **Save As** dialog box, select **CSV UTF-8 (Comma delimited)** from the **Save as type** list, and then select **Save**.
 - In a text editor, such as Notepad or Notepad++:
     1. Open the .csv file.
     1. Select **File** > **Save as**.
@@ -109,16 +109,16 @@ Then, upload the file again to Viva Glint.
 Error messages:
 
 - > DERIVATION_ERROR: File is in an unexpected format. Expecting csv file format. Check to see if the file passed is a csv file with UTF-8 encoding and comma delimited values.
-- > DERIVATION_ERROR: File is in an unexpected format. Expecting xlsx file format. Check to see if the file passed is a xlsx file with no formulas and no additional sheets.
+- > DERIVATION_ERROR: File is in an unexpected format. Expecting xlsx file format. Check to see whether the file that's passed is an .xlsx file that contains no formulas or additional sheets.
 
 This issue occurs because the file that you upload isn't in the format that's specified when you set up attributes in Viva Glint.
 
 ### Resolution
 
-To fix the issue, resave the file in the expected format and upload it again to Viva Glint.
+To fix the issue, resave the file in the expected format, and upload it again to Viva Glint.
 
 - If the expected format is CSV:
-  - Resave the file as a CSV file by using UTF-8 encoding, not **UTF-8 with BOM**.
+  - Resave the file as a CSV file by using UTF-8 encoding, not **UTF-8 and BOM**.
   - Separate values by using commas. If any values contain commas, enclose them in double quotation marks (for example, "Manager, Customer Success").
 - If the expected format is XLSX:
   - Resave the file as an XLSX file.
@@ -134,17 +134,17 @@ Error message:
 
 This issue occurs because the file you that upload contains invalid data, such as:
 
-- 00/00/0000
-- 01/01/1900
-- #N/A
-- #REF
+- `00/00/0000`
+- `01/01/1900`
+- `#N/A`
+- `#REF`
 
 ### Resolution
 
 To fix the issue, follow these steps:
 
 1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
-1. For the attribute that's listed in the error message, check the values and identify any invalid data.
+1. For the attribute that's listed in the error message, check the values, and identify any invalid data.
 1. Correct or remove invalid data.
 1. Save the file, and then upload it again to Viva Glint.
 
@@ -152,7 +152,7 @@ To fix the issue, follow these steps:
 
 Error message:
 
-> ENRICHMENT_FAILURE: Row \<line number, such as 100\> length doesn't match header's length. Can't create file.
+> Row \<line number, such as 100\> length doesn't match header's length. Can't create file.
 
 ### Resolution
 
@@ -167,7 +167,7 @@ To fix the issue, follow these steps:
 
 Error message:
 
-> MANAGER_HIERARCHY_UPDATE_ERROR: There should be at least one employee record with no manager, otherwise the reporting hierarchy may be invalid. Leave the Manager ID empty for the CEO/top level leader.
+> MANAGER_HIERARCHY_UPDATE_ERROR: There should be at least one employee record that has no manager. Otherwise, the reporting hierarchy may be invalid. Leave the **Manager ID** field empty for the CEO/top level leader.
 
 This issue occurs if the CEO or top-level person has a **Manager ID** value assigned.
 
