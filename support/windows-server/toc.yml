@@ -3261,6 +3261,10 @@ items:
     href: ./windows-server-eos-faq/error-installing-esu-product-key-windows-server-2012-or-2012-r2.md
 - name: Support Tools
   items:
+  - name: Scripts
+    items:
+    - name: Scripts to compile all registered MOF files
+      href: ./support-tools/scripts-compile-registered-mof-files.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
