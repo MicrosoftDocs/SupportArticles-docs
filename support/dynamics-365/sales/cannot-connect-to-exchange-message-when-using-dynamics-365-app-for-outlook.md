@@ -37,8 +37,8 @@ This typically occurs when using a Microsoft Exchange on-premises mailbox and ma
     Get-WebServicesVirtualDirectory | FL server,*auth
     ```
 
-3. Verify the results returned show that **OAuthAthentication** is set to **True**.
-4. If `OAuthAthentication` is set to **False**, a command such as the following needs to be run:
+3. Verify the results returned show that **OAuthAuthentication** is set to **True**.
+4. If `OAuthAuthentication` is set to **False**, a command such as the following needs to be run:
 
     ```powershell
     Set-WebServicesVirtualDirectory -Identity "EWS (Default Web Site)" -OAuthAuthentication $true
