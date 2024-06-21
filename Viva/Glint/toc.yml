@@ -7,6 +7,8 @@
           href: ./data-file-upload/fix-upload-attributes-errors.md
         - name: Resolve file upload errors related to derived attributes
           href: ./data-file-upload/fix-upload-derivation-errors.md
+        - name: Resolve file upload errors related to duplicate data
+          href: ./data-file-upload/fix-upload-duplicate-data-errors.md
         - name: Understand file upload errors and warnings
           href: ./data-file-upload/file-upload-errors-warnings.md
     - name: Historical Imports
