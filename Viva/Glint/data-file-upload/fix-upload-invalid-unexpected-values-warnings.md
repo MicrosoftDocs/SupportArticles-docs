@@ -15,7 +15,7 @@ localization_priority: Normal
 
 # Resolve file upload warnings related to invalid or unexpected values
 
-When you upload employee attribute data to Microsoft Viva Glint, you may receive one of the following warning messages. Select the warning that you experience from the list at the top of the article, and follow the appropriate resolution to fix the warning.
+When you upload employee attribute data to Microsoft Viva Glint, you may receive one of the following warning messages. Select the warning that you experience from the list at the top of the article, and follow the appropriate resolution to fix the issue.
 
 ## INVALID_EMPLOYEE_DATA: unsupported characters
 
@@ -32,7 +32,7 @@ To fix the issue, follow these steps:
 1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
 1. Locate the row that's listed in the warning message.
 
-    **Note**: The header row isn't included in the row count. For example, if the warning says line 20, go to row 21.
+    **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
 1. Review the value in the column that's listed in the warning message.
 1. Replace all old Kanji characters with modern Kanji characters. Or, delete old Kanji characters.
 1. Save the file, and then upload it again to Viva Glint.
@@ -55,8 +55,8 @@ This issue occurs if an employee record in your file is missing values for one o
 
 To fix the issue, follow these steps:
 
-1. Review the employee attribute data file to identify rows where values are missing for the required fields.
-1. Fill in the missing fields with valid values.
+1. Review the employee attribute data file to identify rows in which values are missing for the required fields.
+1. Enter the missing fields with valid values.
 
     **Note**: For employees with only first names provided, populate the last name field with a hyphen (-) or a period (.).
 1. Save the file, and then upload it again to Viva Glint.
@@ -103,8 +103,8 @@ Warning message:
 
 To fix the issue, check the file for the following characters and remove them if necessary:
 
-- Uncommon characters, such as ? or _.
-- Special language characters that might be corrupted.
+- Uncommon characters, such as ? or _
+- Special language characters that might be corrupted
 
 Then, upload the file again to Viva Glint.
 
@@ -139,6 +139,6 @@ To fix the issue, use one of the following methods, depending on the cause:
 - If the **Status** attribute is listed in the warning message, follow these steps in Viva Glint:
 
     1. Rename the attribute to a temporary value and save the change.
-    1. Rename it back to the correct value.
+    1. Revert the name to the correct value.
 
 After you update the attributes, upload the file again to Viva Glint.
