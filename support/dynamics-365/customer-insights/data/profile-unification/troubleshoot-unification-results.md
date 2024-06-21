@@ -9,7 +9,7 @@ ms.custom: sap:Data Unification
 ---
 # Troubleshoot deduplication, match, or merge results in Dynamics 365 Customer Insights - Data
 
-When the [unification process](/dynamics365/customer-insights/data/data-unification) runs, you might have questions about why specific records were or weren't unified.
+When the [data unification process](/dynamics365/customer-insights/data/data-unification) runs, you might have questions about why specific records were or weren't unified.
 
 This article provides several methods you can use to understand the unification process and troubleshoot unexpected results.
 
@@ -27,11 +27,11 @@ Selecting the wrong field as the table's [primary key]( /dynamics365/customer-in
 
 ## Method 3: Confirm match rules
 
-Confirm that deduplication and match rules are set up correctly. Ensure the correct fields are compared and review the selected normalization patterns.
+Confirm that [deduplication rules](/dynamics365/customer-insights/data/data-unification-duplicates) and [match rules](/dynamics365/customer-insights/data/data-unification-match-tables) are set up correctly. Ensure the correct fields are compared and review the selected normalization patterns.
 
 ## Method 4: Verify "Include all records"
 
-Not selecting the **Include all records** checkbox in the **Matching rules** step causes records from that table that didn't match any other table to be dropped from the final customer profile output.
+Make sure to select the **Include all records** checkbox in the **Matching rules** step. Not selecting the checkbox may cause records from that table that didn't match any other table to be dropped from the final customer profile output.
 
 ## Method 5: Check your source data
 
