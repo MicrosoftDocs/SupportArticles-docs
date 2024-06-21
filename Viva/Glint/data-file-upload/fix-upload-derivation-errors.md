@@ -156,8 +156,6 @@ Error message:
 
 ### Resolution
 
-  align with the number of columns in the file's header row.
-
 To fix the issue, follow these steps:
 
 1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
