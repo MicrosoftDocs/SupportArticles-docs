@@ -34,6 +34,11 @@ This article describes the following common scenarios in which DLP policy tips m
 - Client doesn't support MailTips (Mac only)
 - File-system configuration is not supported (PDFs on Windows 7 only)
 - Invalid test data
+## DLP policies in Exchange Online
+
+DLP policy tip settings are configured in DLP policies. If you created DLP policies in Exchange Online, we recommend that you [migrate them to the Microsoft Purview compliance portal](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp) because legacy Exchange Online data loss prevention in the Exchange admin center is being deprecated. For policies that aren't migrated, you might see unexpected results, such as no display of policy tips.
+
+For more information, see [Policy tips in the Exchange admin center vs. the Microsoft Purview compliance portal](/purview/dlp-use-notifications-and-policy-tips#policy-tips-in-the-exchange-admin-center-vs-the-microsoft-purview-compliance-portal).
 
 ## Policy configuration errors
 
@@ -80,10 +85,6 @@ For Outlook 2013 and later version clients, make sure that MailTips are enabled.
 1. Restart Outlook.
 
     :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/mail-tips-options.png" alt-text="Screenshot of steps that enable MailTips in Outlook.":::
-
-## Policy tips configured in multiple locations
-
-See [Policy tips in the Exchange admin center vs. the Security & Compliance Center](/microsoft-365/compliance/use-notifications-and-policy-tips#policy-tips-in-the-exchange-admin-center-vs-the-security--compliance-center).
 
 ## GetDLPPolicyTip call not found in Fiddler trace
 
