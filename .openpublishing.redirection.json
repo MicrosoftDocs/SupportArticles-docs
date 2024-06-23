@@ -11194,6 +11194,11 @@
       "source_path": "support/windows-server/active-directory/replication-error-5.md",
       "redirect_url": "/troubleshoot/windows-server/active-directory/replications-fail-with-error-5",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/create-upgrade-delete/avoid-running-as-root-in-containers.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/avoid-running-as-root-in-containers",
+      "redirect_document_id": true
     }
   ]
 }
