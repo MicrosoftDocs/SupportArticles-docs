@@ -23,3 +23,6 @@ A static flow (`SLAInstanceMonitoringWarningAndExpiryFlow`) is triggered only wh
 ## Resolution
 
 To resolve this issue, you can use a custom workflow and plugin to cancel the existing KPI and trigger a new KPI instead of updating the failure and warning times.
+
+> [!NOTE]
+> After creation of SLA KPI Instance failure time is extended/updated by a workflow then it will be consider as expired as the process is set to wait only the earlier date.
