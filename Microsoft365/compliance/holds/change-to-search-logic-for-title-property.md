@@ -16,7 +16,7 @@ ms.custom:
   - CI 115091
   - CSSTroubleshoot
 ms.reviewer: markjjo
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # Change to search logic for the "Title" property in the Security and Compliance Center

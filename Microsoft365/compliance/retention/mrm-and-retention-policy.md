@@ -14,7 +14,7 @@ appliesto:
   - Exchange Online
   - Microsoft Exchange Online Dedicated
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # Messaging Records Management (MRM) and Retention Policies in Microsoft 365
