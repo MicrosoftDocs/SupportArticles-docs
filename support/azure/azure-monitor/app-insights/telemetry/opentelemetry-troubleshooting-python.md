@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot OpenTelemetry issues in Python
 description: Learn how to troubleshoot OpenTelemetry issues in Python. View known issues that involve Azure Monitor OpenTelemetry Exporters.
-ms.date: 06/17/2024
+ms.date: 06/24/2024
 editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: python

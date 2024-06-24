@@ -1,7 +1,7 @@
 ---
 title: Application Insights portal connectivity issues
 description: Learn how to resolve portal connectivity issues in Azure Application Insights, such as data retrieval problems, network failures, and back-end failures.
-ms.date: 02/22/2024
+ms.date: 06/24/2024
 author: toddfoust
 ms.author: toddfous
 editor: v-jsitser

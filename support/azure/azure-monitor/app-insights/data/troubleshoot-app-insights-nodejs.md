@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot App Insights monitoring of Node.js apps and services
 description: Learn techniques for troubleshooting issues that are related to the Application Insights monitoring of Node.js applications and services.
-ms.date: 11/03/2023
+ms.date: 06/24/2024
 author: nzamoralopez
 ms.author: nzamoralopez
 ms.reviewer: ashisunnam, aaronmax, v-leedennis
