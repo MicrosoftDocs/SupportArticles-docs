@@ -1,7 +1,7 @@
 --- 
 title: Use availability tests on an internal server behind a firewall
 description: This article explains how to use Application Insights availability tests on an internal server that runs behind a firewall.
-ms.date: 08/15/2022
+ms.date: 06/24/2024
 editor: v-jsitser
 ms.reviewer: aaronmax, v-leedennis
 ms.service: azure-monitor

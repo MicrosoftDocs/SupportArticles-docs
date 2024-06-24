@@ -7,7 +7,7 @@ editor: v-jsitser
 ms.reviewer: hannahhunter, v-leedennis
 ms.service: azure-monitor
 ms.topic: troubleshooting
-ms.date: 02/09/2024
+ms.date: 06/24/2024
 ms.custom: sap:Availability Tests
 ---
 

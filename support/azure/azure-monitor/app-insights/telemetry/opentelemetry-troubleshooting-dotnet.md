@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot OpenTelemetry issues in .NET
 description: Learn how to troubleshoot OpenTelemetry issues in .NET. View known issues that involve Azure Monitor OpenTelemetry Exporters.
-ms.date: 04/10/2024
+ms.date: 06/24/2024
 editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: csharp
