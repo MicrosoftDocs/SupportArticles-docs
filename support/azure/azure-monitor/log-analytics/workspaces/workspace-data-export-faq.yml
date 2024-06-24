@@ -3,10 +3,10 @@ metadata:
   title: Azure Log Analytics workspace data export FAQ
   description: Review a list of frequently asked questions (FAQ) about exporting data from an Azure Log Analytics workspace.
   ms.topic: faq
-  ms.date: 05/09/2022
+  ms.date: 06/24/2024
   ms.reviewer: josecons, neghuman, v-leedennis
   ms.service: azure-monitor
-  ms.custom: sap:azure-monitor
+  ms.custom: sap:Log Analytics data export to Storage Account or Event Hub
 
 title: Azure Log Analytics workspace data export FAQ
 summary: This article answers frequently asked questions (FAQ) about how to export data from a Microsoft Azure Log Analytics workspace.
