@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Office 365 Security & Compliance Center
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # BOXServiceAccount is added to a role in Microsoft 365 alerts

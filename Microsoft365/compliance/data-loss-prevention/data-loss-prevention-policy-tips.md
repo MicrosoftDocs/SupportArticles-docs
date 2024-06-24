@@ -16,7 +16,7 @@ ms.custom:
   - CI 160472
 appliesto: 
   - Microsoft Purview Data Loss Prevention
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # Resolve issues that affect DLP policy tips

@@ -12,7 +12,7 @@ ms.custom:
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 02/14/2023
+ms.date: 06/24/2024
 ---
 
 # Resolve errors in Microsoft 365 retention and retention label policies

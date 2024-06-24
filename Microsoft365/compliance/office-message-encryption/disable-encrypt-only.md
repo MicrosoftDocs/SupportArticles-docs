@@ -13,7 +13,7 @@ ms.reviewer: gbratton, nagarajp, mamcfadd
 appliesto: 
   - Outlook 2016
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # How to disable the Encrypt-Only feature in Outlook
