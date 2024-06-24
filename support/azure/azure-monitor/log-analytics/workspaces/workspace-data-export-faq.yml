@@ -79,8 +79,9 @@ sections:
       - question: |
           What occurs if the export destination isn't available?
         answer: |
-          If the export destination is unavailable, the data export process continues to try sending data for up to 30 minutes. If the destination is still unavailable after 30 minutes, the data is lost in the export process. You have to check the destination to determine whether it's available. After the destination becomes available, incoming data gets exported, but the data that was previously lost doesn't get re-exported.
+          Data export is optimized to move large data volume to your destinations. The export operation might fail if the destination doesn't have sufficient capacity or is unavailable. In the event of failure, the retry process continues for up to 12 hours. For more information about destination limits and recommended alerts, see [Create or update a data export rule](/azure/azure-monitor/logs/logs-data-export#create-or-update-a-data-export-rule). If the destinations are still unavailable after the retry period, the data is discarded. In certain cases, retry can cause duplication of a fraction of the exported records.
 
+          For more information about data export, see [Log Analytics workspace data export in Azure Monitor](/azure/azure-monitor/logs/logs-data-export#data-completeness).
       - question: |
           When should I use other export options?
         answer: |
