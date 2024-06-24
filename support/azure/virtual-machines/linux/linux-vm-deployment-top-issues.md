@@ -2,7 +2,7 @@
 title: Azure Linux virtual machine deployment top issues
 description: Provides solutions to Azure Linux virtual machine deployment top issues.
 ms.service: virtual-machines
-ms.date: 06/03/2024
+ms.date: 06/24/2024
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.reviewer: srijangupta, scotro, jarrettr
 ---
