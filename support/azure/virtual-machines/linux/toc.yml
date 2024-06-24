@@ -179,8 +179,16 @@
     
 - name: Cannot create a VM
   items:
-  - name: Troubleshoot deploying Linux virtual machine
+  - name: Troubleshoot Linux VM deployment issues
     href: troubleshoot-deployment-new-vm-linux.md
+  - name: Custom/gallery/marketplace image allocation failure
+    href: linux-custom-gallery-marketplace-image-allocation-failure.md
+  - name: Custom image provisioning errors
+    href: linux-custom-image-provisioning-errors.md
+  - name: VM deployment top issues
+    href: linux-vm-deployment-top-issues.md
+  - name: VM deployment FAQs
+    href: linux-vm-deployment-faqs.md
   - name: Fail to create a VM with Ed25519 SSH keys
     href: ed25519-ssh-keys.md
   - name: Cloud-init-enabled VM takes a long time to start up
