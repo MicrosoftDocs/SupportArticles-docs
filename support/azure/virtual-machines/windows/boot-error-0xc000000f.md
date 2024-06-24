@@ -1,7 +1,7 @@
 ---
 title: Boot error code 0xC000000F in an Azure VM
 description: Fixes a Boot error code 0xc000000f that occurs on an Azure virtual machine (VM).
-ms.date: 10/09/2023
+ms.date: 06/21/2024
 ms.reviewer: jarrettr, v-leedennis
 ms.service: virtual-machines
 ms.collection: windows
@@ -103,30 +103,8 @@ This issue occurs when one of following conditions is true:
 
 ### Resolution for error 3
 
-1. Attach the OS disk of the VM to another VM (troubleshooting VM) as a data disk.
-2. On the attached disk, browse to the location of the binary file that's displayed in the error message.
-3. Rename the file to `<BINARY.SYS>.OLD`.
-4. On the attached disk, browse to the `\Windows\winsxs` folder. Then, search for the binary file that's displayed in the error message. To do this, run the following command at a command prompt:
+First, follow the instructions in the [Attach the OS disk of the VM to another VM (troubleshooting VM) as a data disk](#step-1-attach-the-os-disk-of-the-vm-to-another-vm-troubleshooting-vm-as-a-data-disk) section. (This section is from the first part of the [Resolution for errors 1 and 2](#resolution-for-error-1-and-error-2).) Then, repair the system binary (*.sys*) file by following these steps:
 
-    ```console
-    dir <binaryname> /s
-    ```
-
-    The command lists all the different versions of the binary file together with the created date. Copy the latest version of the binary file to the windows\system32 folder by running the following command:
-
-    ```console
-    copy <drive>:\Windows\WinSxS\<directory_where_file_is>\<binary_with_extension> <drive>:\Windows\System32\Drivers\
-    ```
-
-    For example, see the following screenshot.
-
-    :::image type="content" source="media/boot-error-code-0xc000000f/dir-command-output.png" alt-text="Screenshot of the sample of the DIR command." border="false":::
-
-    **Notes**:
-
-    - The screenshot shows volume E. However, the actual letter will appropriately reflect the one of the faulty drives (the OS disk attached as a data disk on the troubleshooting VM).
-    - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
-    - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
-5. Detach the repaired disk from the troubleshooting VM. Then, [create a VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized-portal).
+[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-replace-system-binary-file.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

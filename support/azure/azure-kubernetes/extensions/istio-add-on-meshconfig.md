@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on MeshConfig troubleshooting
 description: Learn how to do MeshConfig troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 04/26/2024
+ms.date: 06/19/2024
 author: nshankar13
 ms.author: nshankar
 editor: v-jsitser
@@ -13,13 +13,13 @@ ms.topic: troubleshooting-general
 ---
 # Istio service mesh add-on MeshConfig troubleshooting
 
-This article discusses how to troubleshoot issues that occur when you use MeshConfig to configure the Istio service mesh add-on for Microsoft Azure Kubernetes Service (AKS).
+This article discusses how to troubleshoot issues that occur when you [use MeshConfig to configure the Istio service mesh add-on](/azure/aks/istio-meshconfig) for Microsoft Azure Kubernetes Service (AKS).
 
 ## Shared ConfigMap configuration
 
-The Istio add-on [MeshConfig](https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig) enables you to configure certain mesh-wide settings. To do this, you create a local ConfigMap in the `aks-istio-system` namespace, and then the Istio control plane merges this ConfigMap with the default ConfigMap. (If there's a conflict, the default settings take precedence.) This approach is called a shared ConfigMap configuration.
+The Istio add-on [MeshConfig](https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig) enables you to configure certain mesh-wide settings. To do this, you create a local ConfigMap in the `aks-istio-system` namespace. Then, the Istio control plane merges this ConfigMap with the default ConfigMap. (If a conflict exists between settings, the default settings take precedence.) This approach is called a shared ConfigMap configuration.
 
-Create a ConfigMap that's named `istio-shared-configmap-<asm-revision>` in the `aks-istio-system` namespace. For instance, if you use revision `asm-1-18`, you should name the ConfigMap `istio-shared-configmap-asm-1-18`. Then, you provide the mesh configuration within the `mesh` field of the `data` section, as shown in the following ConfigMap YAML file:
+Create a ConfigMap that's named `istio-shared-configmap-<asm-revision>` in the `aks-istio-system` namespace. For instance, if you use revision `asm-1-18`, you should name the ConfigMap, `istio-shared-configmap-asm-1-18`. Then, you provide the mesh configuration within the `mesh` field of the `data` section, as shown in the following ConfigMap YAML file:
 
 ```yaml
 apiVersion: v1
@@ -38,29 +38,30 @@ The values within the `defaultConfig` field are the mesh-wide settings for the E
 
 ### Canary upgrades
 
-For canary upgrades, you have to create a second, separate ConfigMap for the new control plane revision in the `aks-istio-system` namespace before you begin the upgrade. For instance, if you upgrade from `asm-1-18` to `asm-1-19`, you have to create a new ConfigMap that's named `istio-shared-configmap-asm-19` in the `aks-istio-system` namespace. You also have to copy changes over from the `asm-1-18` shared ConfigMap to the `asm-1-19` shared ConfigMap.
+Before you start a canary upgrade, follow the [mesh configuration and upgrade guidance](/azure/aks/istio-meshconfig#mesh-configuration-and-upgrades) to create a second shared ConfigMap for the new control plane revision in the `aks-istio-system` namespace.
 
-After the upgrade is completed, you will delete the older ConfigMap after the older control plane is uninstalled. If you're doing a rollback, you will delete the newer ConfigMap after the newer control plane is uninstalled.
+If a new ConfigMap wasn't created before you start the upgrade, any features that are configured by the shared ConfigMap won't be accessible. To fix this problem, create the missing ConfigMap for the corresponding revision, and copy over relevant fields from the previous shared ConfigMap.
 
 For more information, see [Upgrade Istio-based service mesh add-on for Azure Kubernetes Service](/azure/aks/istio-upgrade) and [Istio service mesh add-on minor revision upgrade troubleshooting](./istio-add-on-minor-revision-upgrade.md).
 
 ## Allowed, supported, and disallowed values
 
-The Istio add-on designates MeshConfig fields as allowed and `supported`, allowed but `unsupported`, and `disallowed`. See [Configure Istio-based service mesh add-on for Azure Kubernetes Service](/azure/aks/istio-meshconfig) for all allowed and supported MeshConfig fields for the add-on, and an overview of the different support tiers. If fields that are mentioned in the [upstream Istio documentation](https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/) don't appear in the allowlist for the add-on, these fields are disallowed.
+The Istio add-on designates MeshConfig fields as allowed and `supported`, allowed but `unsupported`, and `disallowed`. To learn about allowed and supported MeshConfig fields for the add-on, and see an overview of the different support tiers, see [Configure Istio-based service mesh add-on for Azure Kubernetes Service](/azure/aks/istio-meshconfig). If fields that are mentioned in the [upstream Istio documentation](https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/) don't appear in the allowlist for the add-on, these fields are disallowed.
 
 ## Troubleshooting checklist
 
-### Step 1: Avoid editing the default ConfigMap
+### Step 1: Make sure that you're editing the correct ConfigMap
 
-Make sure that you're configuring the shared ConfigMap and not editing the default ConfigMap (such as `istio-asm-1-17`).
+- Make sure that you're configuring the shared ConfigMap (for example, `istio-shared-configmap-asm-1-17`) and not editing the default ConfigMap (for example, `istio-asm-1-17`).
+- Make sure that the shared ConfigMap points to the correct revision in its title.
 
-### Step 2: Remove tabs from the MeshConfig definition within the shared ConfigMap
+### Step 2: Remove tab indents from the MeshConfig definition within the shared ConfigMap
 
-In the MeshConfig definition within the shared ConfigMap (under `data.mesh`), make sure that you use actual spaces instead of tabs. Remove any tab characters that you find.
+In the MeshConfig definition within the shared ConfigMap (under `data.mesh`), make sure that you use spaces instead of tabs. Remove any tab characters that you find.
 
-### Step 3: Fix misspelled MeshConfig fields
+### Step 3: Make sure that MeshConfig fields are valid
 
-Check the spelling of all MeshConfig fields, and make any necessary corrections. If fields are unrecognized or aren't part of the allowlist, updates to the MeshConfig are rejected.
+If fields are unrecognized or aren't included in the [MeshConfig allowlist](/azure/aks/istio-meshconfig#allowed-supported-and-blocked-values), updates to the MeshConfig are rejected. Check whether the desired MeshConfig fields are allowed, and make sure that the fields are spelled correctly.
 
 ### Step 4: Avoid CoreDNS overload
 
@@ -78,7 +79,7 @@ If all CPU cores are in use, the `concurrency` field in the MeshConfig definitio
 
 ### Step 7: Fix pod and sidecar race conditions
 
-If your application pod starts before the Envoy sidecar starts, the application might become unresponsive, or it might restart. For instructions about how to avoid this problem, see [Pod or containers start with network issues if istio-proxy is not ready](https://istio.io/latest/docs/ops/common-problems/injection/#pod-or-containers-start-with-network-issues-if-istio-proxy-is-not-ready). Specifically, you can set the `holdApplicationUntilProxyStarts` MeshConfig field under `defaultConfig` to `true` to help prevent these race conditions.
+If your application pod starts before the Envoy sidecar starts, the application might become unresponsive or it might restart. For instructions about how to avoid this problem, see [Pod or containers start with network issues if istio-proxy is not ready](https://istio.io/latest/docs/ops/common-problems/injection/#pod-or-containers-start-with-network-issues-if-istio-proxy-is-not-ready). Specifically, you can set the `holdApplicationUntilProxyStarts` MeshConfig field under `defaultConfig` to `true` to help prevent these race conditions.
 
 ## References
 
@@ -93,5 +94,7 @@ If your application pod starts before the Envoy sidecar starts, the application 
 - [Istio service mesh add-on plug-in CA certificate troubleshooting](istio-add-on-plug-in-ca-certificate.md)
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
+
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

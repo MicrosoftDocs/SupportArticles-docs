@@ -2,7 +2,7 @@
 title: Cumulative update 3 for SQL Server 2016 SP2 (KB4458871)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 2 (SP2) cumulative update 3 (KB4458871).
 ms.date: 10/26/2023
-ms.custom: evergreen, KB4458871
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4458871
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise

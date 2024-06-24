@@ -13,7 +13,6 @@ ms.custom: sap:Windows Desktop and Shell Experience\DST and Timezones, csstroubl
 
 This article provides a resolution to an issue where changes to calendar date in BIOS are not reflected in Windows.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2792897
 
 ## Symptoms

@@ -2,7 +2,7 @@
 title: Always On DB in recovery pending or suspect state 
 description: This article describes the errors and limitations of an availability database in Microsoft SQL Server that is in a Recovery Pending or Suspect state and how to restore the database to full functionality in an availability group.
 ms.date: 08/03/2020
-ms.custom: sap:High Availability and Disaster Recovery features
+ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: ramakoni, cmathews
 ---
 

@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
 
 This article mainly helps you to learn about the Flexible Single Master Operation (FSMO) roles in Active Directory.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 197132
 
 ## Summary

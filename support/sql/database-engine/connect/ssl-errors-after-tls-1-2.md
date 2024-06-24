@@ -2,7 +2,7 @@
 title: SSL errors after upgrading to TLS 1.2 in SQL Server
 description: This article provides information about the SSL errors that you might encounter after you upgrade to TLS 1.2 in SQL Server.
 ms.date: 04/18/2024
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp

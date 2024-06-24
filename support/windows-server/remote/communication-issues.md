@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Connection Broker a
 
 This article provides a solution to an issue in which Remote Desktop Connection Broker does not work correctly in Windows Server 2012 R2.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3020474
 
 ## Symptoms

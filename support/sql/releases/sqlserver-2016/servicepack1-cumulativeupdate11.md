@@ -2,7 +2,7 @@
 title: Cumulative update 11 for SQL Server 2016 SP1 (KB4459676)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 SP1 cumulative update 11 (KB4459676).
 ms.date: 10/26/2023
-ms.custom: evergreen, KB4459676
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4459676
 appliesto:
 - SQL Server 2016 Service pack 1
 - SQL Server 2016 Developer

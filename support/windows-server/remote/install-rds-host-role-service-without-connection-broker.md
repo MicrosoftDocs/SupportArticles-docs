@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configu
 
 This article provides guidelines to install and configure the Remote Desktop Session Host role service on a computer that is running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 without the Remote Desktop Connection Broker role service installed.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2833839
 
 ## Summary

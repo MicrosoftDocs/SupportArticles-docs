@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides information about lingering objects in an Active Directory Domain Services (AD DS) forest. Specifically, the article discusses the events that indicate the presence of lingering objects, the causes of lingering objects, and the methods that you can use to remove lingering objects.  
 
-_Applies to:_ &nbsp; Windows Server (All supported versions)
 _Original KB number:_ &nbsp; 910205
 
 ## Summary
@@ -127,11 +126,11 @@ The preferred method to detect and remove lingering objects is by using Lingerin
 For more information about how to use LoLv2, see the following articles:
 
 - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
-- [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+- [Description of the Lingering Object Liquidator tool](lingering-object-liquidator-tool.md)
 
 ### Method 2: Use the Repadmin tool
 
-If you can't use LoLv2, you can use the Repadmin tool (*Repadmin.exe*). For more information, see [Steps to use Repadmin to remove lingering objects](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988).
+If you can't use LoLv2, you can use the Repadmin tool (*Repadmin.exe*). For more information, see [Steps to use Repadmin to remove lingering objects](active-directory-replication-event-id-1388-1988.md).
 
 ## Prevent lingering objects
 
@@ -164,7 +163,7 @@ The default value for `Strict Replication Consistency` depends on the Windows ve
 
 The preferred method to enable `Strict Replication Consistency` is by using Repadmin. For more information about how to do this, see the following articles:
 
-- [Steps to use Repadmin to enable strict replication consistency](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988)
+- [Steps to use Repadmin to enable strict replication consistency](active-directory-replication-event-id-1388-1988.md)
 
 - [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10)).
 

@@ -2,7 +2,7 @@
 title: Error when you create a snapshot 
 description: This article provides workarounds for the problem that when you create a snapshot backup of many databases at the same time in SQL Server.
 ms.date: 01/20/2021
-ms.custom: sap:Administration and Management
+ms.custom: sap:Database Backup and Restore
 ms.reviewer: kfarlee
 ---
 # Error when you create a snapshot backup of many databases at the same time in SQL Server

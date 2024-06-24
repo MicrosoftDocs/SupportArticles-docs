@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologi
 
 This article provides a workaround for an issue where DFSR Diagnostics Report shows sharing violations events even though the files have already been replicated.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 973836
 
 ## Symptoms

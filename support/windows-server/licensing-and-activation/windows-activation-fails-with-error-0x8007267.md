@@ -13,7 +13,6 @@ ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 
 This article provides solutions to an issue where Windows Activation fails with the error code 0x8007267C.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2009462
 
 ## Symptoms

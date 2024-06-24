@@ -317,6 +317,8 @@
     href: cannot-extend-encrypted-os-volume.md
   - name: Cannot extend volume on a SQL standalone server virtual machine
     href: cannot-extend-volume-sql-server.md
+  - name: Disk <number> has been surprise removed (event ID 157)
+    href: disk-has-been-surprise-removed-event-id-157.md
   - name: Errors when deleting storage resources
     href: storage-resource-deletion-errors.md
   - name: Errors when deleting classic storage resources
@@ -524,8 +526,6 @@
     href: ping-clustered-name-fail.md
   - name: Failed to get log in Boot Diagnostics
     href: failed-get-contents-log-error.md
-  - name: GPU is disabled
-    href: gpu-disabled-upgrade-ubuntu.md
   - name: VM stuck in failed state
     href: vm-stuck-in-failed-state.md
   - name: VM is unavailable for 15 minutes

@@ -7,9 +7,11 @@ metadata:
   description: Documentation for troubleshooting common issues with Azure Cosmos DB.
   author: genlin
   ms.author: genli
+  ms.reviewer: sidandrews
   ms.service: data-api-builder
   ms.topic: landing-page
-  ms.date: 04/16/2024
+  ms.date: 06/19/2024
+  ms.custom: sap:Tools and Connectors
 
 landingContent:
   - title: General troubleshooting
@@ -20,6 +22,12 @@ landingContent:
             url: installation.md
           - text: Troubleshoot usage
             url: usage.md
+  - title: Problem resolution
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Restore HTTPS functionality with .NET 8
+            url: dotnet-https.md
   - title: Known issues
     linkLists:
       - linkListType: reference

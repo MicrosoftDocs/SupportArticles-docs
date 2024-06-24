@@ -13,7 +13,6 @@ ms.custom: sap:Windows Device and Driver Management\Peripherals driver installat
 
 This article provides help to fix Event ID 56 that's logged in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2685788
 
 ## Symptoms

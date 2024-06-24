@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\User, computer, group, and object management, cs
 
 This article provides help to solve an error that occurs when you access Active Directory information from Team Foundation Server Source Control Explorer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 957969
 
 ## Rapid publishing

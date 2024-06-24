@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster re
 
 This article provides information on how to restore deleted user accounts and group memberships in Active Directory.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 840001
 
 ## Introduction

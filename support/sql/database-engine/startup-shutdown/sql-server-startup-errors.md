@@ -5,6 +5,7 @@ ms.date: 02/03/2020
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: ramakoni
+ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---
 # SQL Server startup errors on a standalone server
 

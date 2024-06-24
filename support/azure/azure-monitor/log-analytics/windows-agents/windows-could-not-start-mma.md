@@ -1,15 +1,17 @@
 ---
 title: Resolve Microsoft Monitoring Agent startup failure
 description: Troubleshoot the error message "The Microsoft Monitoring Agent service terminated with service-specific error Access is denied."
-ms.date: 01/31/2022
-ms.reviewer: irfanr, v-leedennis
+ms.date: 06/24/2024
+ms.reviewer: irfanr, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-monitor
 keywords:
 #Customer intent: As an Azure Log Analytics user, I want to make sure that the Microsoft Monitoring Agent can start on my Windows-based computer so that I can monitor computers, services, or applications at scale.
-ms.custom: sap:azure-monitor
+ms.custom: sap:Windows Agents
 ---
 # Windows can't start Microsoft Monitoring Agent
+
+[!INCLUDE [Azure Help Support](../../../../includes/azure/log-analytics-agent-end-of-life-note.md)]
 
 This article helps you troubleshoot a scenario in which Windows doesn't start Microsoft Monitoring Agent (the Log Analytics agent for Windows) on your local computer. When this problem occurs, you receive a "The Microsoft Monitoring Agent service terminated with service-specific error Access is denied" error message.
 

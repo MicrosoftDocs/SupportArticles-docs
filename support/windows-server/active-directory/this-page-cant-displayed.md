@@ -13,7 +13,6 @@ ms.custom: sap:Windows Security Technologies\Active Directory Federation Service
 
 This article provides a solution to an error when you try to access an application on a website that uses AD FS 2.0.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044971
 
 ## Summary

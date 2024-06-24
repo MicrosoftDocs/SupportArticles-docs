@@ -13,7 +13,6 @@ ms.custom: sap:Clustering and High Availability\Setup and configuration of clust
 
 This article describes how to add additional storage capacity to a cluster if the underlying hardware RAID supports capacity extension technology.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 304736
 
 ## Summary

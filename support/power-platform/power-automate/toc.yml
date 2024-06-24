@@ -92,8 +92,6 @@
       href: desktop-flows/communication-error-console.md
     - name: Desktop flows don't show in console if license expired or unassigned
       href: desktop-flows/desktop-flows-not-show-console-license-expired-unassigned.md
-    - name: Desktop flow runs don't show in Desktop flow runs page
-      href: desktop-flows/desktop-flow-runs-not-show-monitor-runs.md
     - name: Desktop flow runs are missing from the list
       href: desktop-flows/desktop-flow-runs-missing-from-list.md
     - name: Desktop flow runs list isn't updated
@@ -142,6 +140,8 @@
       href: desktop-flows/actions-not-available.md
     - name: Set drop-down list value in window/on web page action fails
       href: desktop-flows/set-drop-down-list-value-fails.md
+    - name: Session creation errors for unattended desktop flow runs
+      href: desktop-flows/troubleshoot-session-creation-errrors.md
     - name: Tips on working with SQL queries
       href: desktop-flows/troubleshooting-tips-sql-queries.md
     - name: Troubleshoot direct connectivity issues
@@ -204,6 +204,8 @@
   items:
     - name: Can't import solutions or publish changes
       href: ../power-apps/cannot-import-solutions-publish-changes.md?context=/troubleshoot/power-platform/power-automate/context/context
+    - name: Duplicate binary objects in v2 schema desktop flow solutions
+      href: solutions/duplicate-binary-objects-in-schema-v2.md
 - name: Support resources
   items:
     - name: Power Automate support

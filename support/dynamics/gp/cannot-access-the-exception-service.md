@@ -3,7 +3,7 @@ title: Cannot access the exception service
 description: Provides a solution to an error that occurs when you start the Exception Management console in Web Services for Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 06/05/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Cannot access the exception service" Error message when you start the Exception Management console in Web Services for Microsoft Dynamics GP
@@ -16,6 +16,7 @@ _Original KB number:_ &nbsp; 924548
 ## Symptoms
 
 When you start the Exception Management console in Web Services for Microsoft Dynamics GP, you receive the following error message:
+
 > Cannot access the exception service. Verify the configuration file exists and contains the correct path to the exception service.
 
 ## Cause
@@ -24,16 +25,12 @@ This problem occurs if either of the following conditions is true:
 
 - The URL of the Web Services for Microsoft Dynamics GP in the Microsoft.Dynamics.GP.Administration.Exceptions.dll.config file isn't entered correctly.
 
-    > [!NOTE]
-    > See [resolution 1](#resolution-1).
+  > [!NOTE]
+  > See [resolution 1](#resolution-1).
 - The **Enable anonymous access** check box is selected for the DynamicsGPWebServices virtual directory.
 
-    > [!NOTE]
-    > See [resolution 2](#resolution-2).
-- There's an invalid character in the WSExceptionLog table.
-
-    > [!NOTE]
-    > See [resolution 3](#resolution-3).
+  > [!NOTE]
+  > See [resolution 2](#resolution-2).
 
 ## Resolution 1
 
@@ -60,20 +57,9 @@ To enter the correct URL of the Web Services for Microsoft Dynamics GP, follow t
 
 ## Resolution 2
 
-To remove anonymous authentication from the DynamicsGPWebServices virtual directory, follow these steps:
-
-1. In Control Panel, select **Administrative Tools**, and then select **Internet Information Services (IIS) Manager**.
-2. Expand the computer name, and then expand the **Web Sites** folder.
-3. Expand the Web site in which the Web Services for Microsoft Dynamics GP are installed.
-4. Right-click the **DynamicsGPWebServices** virtual directory, and then select **Properties**.
-5. Select the **Directory Security** tab, and then click to clear the **Enable anonymous access** check box.
-6. Make sure that the **Integrated Windows Authentication** check box is selected.
-
-## Resolution 3
-
 To check for and remove invalid characters from the WSExceptionLog table, follow these steps:
 
-1. Select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2005** or to **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
+1. Select **Start**, point to **All Programs** > **Microsoft SQL Server**, and then select **SQL Server Management Studio**.
 2. In the Connect to Server window, follow these steps:
     1. In the **Server name** box, type the name of the server that is running SQL Server.
     2. In the **Authentication** box, select **SQL Authentication**.

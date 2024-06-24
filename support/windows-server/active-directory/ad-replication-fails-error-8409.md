@@ -83,7 +83,7 @@ Until this task is completed, the status of the Recycle Bin optional feature is 
 
 This task is completed in a few seconds if the objects already have the attribute value of **TRUE**. The task is deferred during a startup to improve the DS startup time, and it's rescheduled to begin six hours later. Therefore, you can't replicate any AD object restore process for the first six hours of the DS uptime.
 
-[NTDS diagnostics logging for "6. Garbage Collection"](/troubleshoot/windows-server/active-directory/configure-ad-and-lds-event-logging) at level 2 would enable you to see the event ID 2406 that indicates the start of the task and the event ID 2405 that indicates the end of the task.
+[NTDS diagnostics logging for "6. Garbage Collection"](configure-ad-and-lds-event-logging.md) at level 2 would enable you to see the event ID 2406 that indicates the start of the task and the event ID 2405 that indicates the end of the task.
 
 If the AD replication has the top priority, you can delete the objects again and then restore them again later. Or, you can wait for six hours until the task is completed. If you restart the domain controller, you start another six-hour interval with this issue.
 

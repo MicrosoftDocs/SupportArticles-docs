@@ -1,12 +1,12 @@
 ---
 title: Guest access in SMB2 and SMB3 is disabled
 description: Guest access in SMB2 is disabled by default in Windows 10 and Windows Server 2019.
-ms.date: 12/26/2023
+ms.date: 06/06/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, nedpyle
 ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # Guest access in SMB2 and SMB3 disabled by default in Windows
@@ -34,10 +34,10 @@ SMB2 and SMB3 have the following behavior in these versions of Windows:
 
 If you try to connect to devices that request credentials of a guest instead of appropriate authenticated principals, you may receive one of the following error messages:
 
-- > You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
-
+- > Error code: 0x800704f8  
+  > You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
 - > Error code: 0x80070035  
-    The network path was not found.
+  > The network path was not found.
 
 Also, if a remote server tries to force you to use guest access, or if an administrator enables guest access, the following entries are logged in the SMB Client event log:
 
@@ -103,6 +103,7 @@ If you can't configure your third-party device to be secure, you can enable inse
 2. In the console tree, select **Computer Configuration** > **Administrative Templates** > **Network** > **Lanman Workstation**.
 3. For the setting, right-click **Enable insecure guest logons** and select **Edit**.
 4. Select **Enabled** > **OK**.
+5. Windows 11 Insider Preview Build 25267 and later also require SMB signing by default. You can't use guest access with SMB signing. To disable SMB signing, see [Control SMB signing behavior (preview)](/windows-server/storage/file-server/smb-signing).
 
 > [!NOTE]
 > If you need to modify the Active Directory domain-based group policy, use **Group Policy Management** (*gpmc.msc*).

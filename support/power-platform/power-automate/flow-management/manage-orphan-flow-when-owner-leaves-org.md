@@ -4,7 +4,6 @@ description: Describes how to manage orphan flows when the owner leaves the orga
 ms.reviewer: tomche
 ms.topic: how-to
 ms.date: 09/25/2023
-ms.subservice: flow-management
 ms.custom: has-azure-ad-ps-ref, sap:Flow management\Flow owner leaves organization
 ---
 # How to manage orphan flows when the owner leaves the organization

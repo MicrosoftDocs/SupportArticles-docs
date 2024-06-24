@@ -13,7 +13,6 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configu
 
 This article provides the steps to set up a logon script only for Terminal Server users.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 195461
 
 > [!IMPORTANT]

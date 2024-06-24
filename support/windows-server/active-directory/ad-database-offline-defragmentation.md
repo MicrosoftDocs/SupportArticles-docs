@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster re
 
 This article describes how to perform offline defragmentation of the Active Directory database.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 232122
 
 ## Summary

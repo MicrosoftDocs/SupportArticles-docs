@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides the steps to troubleshoot Active Directory replication error 8614.
 
-_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2020053
 
 > [!NOTE]
@@ -203,7 +202,7 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
     - [Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205).
     - [Lingering Object Liquidator (LoL)](https://www.microsoft.com/en-us/download/details.aspx?id=56051)
     - [Introducing Lingering Object Liquidator v2](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475)
-    - [Description of the Lingering Object Liquidator tool](/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool)
+    - [Description of the Lingering Object Liquidator tool](lingering-object-liquidator-tool.md)
     - [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10))
 
     `Repadmin` syntax is shown here:

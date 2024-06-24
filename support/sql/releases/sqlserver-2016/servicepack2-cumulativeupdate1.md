@@ -2,7 +2,7 @@
 title: Cumulative update 1 for SQL Server 2016 SP2 (KB4135048)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 2 (SP2) cumulative update 1 (KB4135048).
 ms.date: 10/26/2023
-ms.custom: evergreen, KB4135048
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4135048
 appliesto:
 - SQL Server 2016
 - SQL Server 2016 Business Intelligence

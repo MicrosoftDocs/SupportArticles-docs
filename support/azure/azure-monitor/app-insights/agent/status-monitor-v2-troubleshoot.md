@@ -1,30 +1,29 @@
 ---
 title: Azure Application Insights Agent troubleshooting and known issues
 description: Review Application Insights Agent known issues and troubleshooting examples. Works with ASP.NET web apps hosted on-premises, in virtual machines, or on Azure.
-ms.topic: troubleshooting
-ms.date: 03/08/2024
+ms.date: 06/24/2024
 editor: v-jsitser
-ms.reviewer: aaronmax, v-leedennis
+ms.reviewer: aaronmax, nzamoralopez, toddfous, v-leedennis
 ms.service: azure-monitor
-#Customer intent: As an Application Insights user I want to understand known issues for the Application Insights Agent and how to troubleshoot common issues so I can use Application Insights and the Agent effectively.
+#Customer intent: As an Application Insights user, I want to understand the known issues for the Application Insights Agent and how to troubleshoot common issues so that I can use Application Insights and the Agent effectively.
 ms.custom: sap:Manual Instrumentation using SDK, Open Telemetry or by installing Agent
 ---
 
 # Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
 
-This article provides troubleshooting information to help resolve data collection issues you might experience when Application Insights monitoring is enabled.
+This article provides troubleshooting information to help you resolve data collection issues that you might experience when Microsoft Azure Application Insights monitoring is enabled.
 
 ## Known issues
 
-#### Conflicting DLLs in an app's bin directory
+#### Conflicting DLLs in the bin folder
 
-If any of these dynamic-link libraries (DLLs) are present in the *bin* directory, monitoring might fail:
+If any of these dynamic-link libraries (DLLs) are present in the *bin* folder of the app, monitoring might fail:
 
 - *Microsoft.ApplicationInsights.dll*
 - *Microsoft.AspNet.TelemetryCorrelation.dll*
 - *System.Diagnostics.DiagnosticSource.dll*
 
-Some of these DLLs are included in the Visual Studio default app templates, even if your app doesn't use them. You can use troubleshooting tools, such as the following tools, to see symptomatic behavior:
+Some of these DLLs are included in the Visual Studio default app templates, even if the app doesn't use them. You can use troubleshooting tools, such as the following tools, to see symptomatic behavior:
 
 - PerfView:
 
@@ -38,7 +37,7 @@ Some of these DLLs are included in the Visual Studio default app templates, even
   FormattedMessage="Found 'System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' assembly, skipping attaching redfield binaries" 
     ```
 
-- IISReset and app load (without telemetry). Investigate with Sysinternals (*Handle.exe* and *ListDLLs.exe*):
+- IISReset and app load (without telemetry). Investigate by using Sysinternals (*Handle.exe* and *ListDLLs.exe*):
 
   ```output
   .\handle64.exe -p w3wp | findstr /I "InstrumentationEngine AI. ApplicationInsights"
@@ -52,21 +51,21 @@ Some of these DLLs are included in the Visual Studio default app templates, even
 
 #### PowerShell versions
 
-This product was written and tested using PowerShell version 5.1.
+This product was written and tested by using PowerShell version 5.1.
 This module isn't compatible with PowerShell versions 6 or 7.
-We recommend using PowerShell 5.1 alongside newer versions. 
+We recommend that you use PowerShell 5.1 alongside newer versions.
 For more information, see [Using PowerShell 7 side-by-side with PowerShell 5.1](/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 
-#### Conflict with IIS shared configuration
+#### Conflict in IIS shared configuration
 
 If you have a cluster of web servers, you might be using a [shared configuration](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/shared-configuration_211).
-The HttpModule can't be injected into this shared configuration.
+The HTTP module can't be injected into this shared configuration.
 Run the Enable command on each web server to install the DLL into each server's global assembly cache (GAC).
 
-After you run the Enable command, complete these steps:
+After you run the Enable command, follow these steps:
 
-1. Go to the shared configuration directory and find the *applicationHost.config* file.
-2. Add this XML code to the **\<modules>** section of your configuration:
+1. Go to the shared configuration directory and locate the *ApplicationHost.config* file.
+2. Add the following XML code to the **\<modules>** section of your configuration:
 
     ```xml
     <modules>
@@ -80,7 +79,11 @@ After you run the Enable command, complete these steps:
 
 #### IIS nested applications
 
-We don't instrument nested applications in Internet Information Services (IIS) in version 1.0.
+In version 1.0 of the Application Insights Agent, we don't instrument nested applications in Internet Information Services (IIS).
+
+#### IIS classic pipeline mode
+
+We don't instrument applications that are hosted on application pools if they're configured to use the classic pipeline mode.
 
 #### Advanced SDK configuration isn't available
 
@@ -90,17 +93,17 @@ The SDK configuration isn't exposed to the end user in version 1.0.
 
 #### Determine which modules are available
 
-You can use the `Get-Module -ListAvailable` command to determine which modules are installed.
+To determine which modules are installed, run the `Get-Module -ListAvailable` cmdlet.
 
 #### Import a module into the current session
 
-If a module hasn't been loaded into a PowerShell session, you can manually load it by running the `Import-Module <path to psd1>` command.
+If a module isn't loaded into a PowerShell session, you can manually load it by running the `Import-Module <path-to-psd1>` cmdlet.
 
 ## Troubleshoot the Application Insights Agent module
 
-#### List the commands available in the Application Insights Agent module
+#### List the cmdlets available in the Application Insights Agent module
 
-Run the `Get-Command -Module Az.ApplicationMonitor` command to get the available commands:
+To see the cmdlets that are available in the Application Insights Agent module, run the `Get-Command -Module Az.ApplicationMonitor` cmdlet:
 
 ```output
 CommandType     Name                                               Version    Source
@@ -117,7 +120,7 @@ Cmdlet          Start-ApplicationInsightsMonitoringTrace           0.4.0      Az
 
 #### Determine the current version of the Application Insights Agent module
 
-Run the `Get-ApplicationInsightsMonitoringStatus -PowerShellModule` command to display the following information about the module:
+Run the `Get-ApplicationInsightsMonitoringStatus -PowerShellModule` cmdlet to display the following information about the module:
 
 - PowerShell module version
 - Application Insights SDK version
@@ -127,11 +130,10 @@ Review the [Get-ApplicationInsightsMonitoringStatus reference](/azure/azure-moni
 
 ## Troubleshoot running processes
 
-You can inspect the processes on the instrumented computer to determine if all DLLs are loaded and environment variables are set.
-If monitoring is working, at least 12 DLLs should be loaded.
+You can inspect the processes on the instrumented computer to determine whether all DLLs are loaded and environment variables are set. If monitoring is working, at least 12 DLLs should be loaded.
 
-- Use the `Get-ApplicationInsightsMonitoringStatus -InspectProcess` command to check the DLLs.
-- Use the `(Get-Process -id <process-identifier>).StartInfo.EnvironmentVariables` command to check the environment variables. The following environment variables are set in the worker process or the .NET Core process:
+- Run the `Get-ApplicationInsightsMonitoringStatus -InspectProcess` cmdlet to check the DLLs.
+- Run the `(Get-Process -id <process-identifier>).StartInfo.EnvironmentVariables` cmdlet to check the environment variables. The following environment variables are set in the worker process or the .NET Core process:
 
 ```output
 COR_ENABLE_PROFILING=1
@@ -159,25 +161,25 @@ Review the [Get-ApplicationInsightsMonitoringStatus reference](/azure/azure-moni
 1. Run *PerfView.exe*.
 1. On the menu bar, select **Collect** > **Collect**.
 1. Expand **Advanced Options**.
-1. Clear these check boxes:
+1. Clear the following checkboxes:
     - **Zip**
     - **Merge**
     - **.NET Symbol Collection**
-1. Set these **Additional Providers**:
+1. Set the following **Additional Providers**:
 
    `*Microsoft-ApplicationInsights-AspNetCore,*Microsoft-ApplicationInsights-AspNetCore-AiHostingStartup,*Microsoft-ApplicationInsights-AspNetCore-StartupBootstrapper,*Microsoft-ApplicationInsights-AspNetCore-StartupHook,*Microsoft-ApplicationInsights-Core,*Microsoft-ApplicationInsights-Data,*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,*Microsoft-ApplicationInsights-Extensibility-DependencyCollector,*Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,*Microsoft-ApplicationInsights-Extensibility-EventSourceListener,*Microsoft-ApplicationInsights-Extensibility-HostingStartup,*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,*Microsoft-ApplicationInsights-Extensibility-Web,*Microsoft-ApplicationInsights-Extensibility-WindowsServer,*Microsoft-ApplicationInsights-FrameworkLightup,*Microsoft-ApplicationInsights-IIS-ManagedHttpModuleHelper,*Microsoft-ApplicationInsights-Java-IPA,*Microsoft-ApplicationInsights-LoggerProvider,*Microsoft-ApplicationInsights-Nodejs-IPA,*Microsoft-ApplicationInsights-RedfieldIISModule,*Microsoft-ApplicationInsights-SnapshotCollectorLightup,*Microsoft-ApplicationInsights-WindowsServer-Core,*Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,*Redfield-Microsoft-ApplicationInsights-AspNetCore,*Redfield-Microsoft-ApplicationInsights-Core,*Redfield-Microsoft-ApplicationInsights-Data,*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,*Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,*Redfield-Microsoft-ApplicationInsights-Extensibility-Web,*Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,*Redfield-Microsoft-ApplicationInsights-LoggerProvider,*Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel`
 
 #### Collect logs
 
-1. In a command console with admin privileges, run the `iisreset /stop` command to turn off IIS and all web apps.
+1. In an administrative command prompt, run the `iisreset /stop` command to turn off IIS and all web apps.
 2. In PerfView, select **Start Collection**.
-3. In a command console with admin privileges, run the `iisreset /start` command to start IIS.
+3. In an administrative command prompt, run the `iisreset /start` command to start IIS.
 4. Try to browse to your app.
 
-5. After your app is loaded, return to PerfView and select **Stop Collection**.
+5. After your app is loaded, return to PerfView, and select **Stop Collection**.
 
 ## Next steps
 
-- Review the [API reference](/azure/azure-monitor/app/status-monitor-v2-overview#powershell-api-reference) to learn about parameters you might have missed.
+- Review the [API reference](/azure/azure-monitor/app/status-monitor-v2-overview#powershell-api-reference) to learn about parameters that you might have missed.
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

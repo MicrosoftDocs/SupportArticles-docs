@@ -13,7 +13,6 @@ ms.custom: sap:Virtualization and Hyper-V\Integration components, csstroubleshoo
 
 This article discusses that Microsoft-Windows-Hyper-V-Integration-KvpExchange is logged on a Windows Server 2012 R2 Hyper-V host.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2989430
 
 ## Symptoms

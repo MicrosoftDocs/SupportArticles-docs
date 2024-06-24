@@ -2,7 +2,7 @@
 title: Cumulative update 8 for SQL Server 2022 (KB5029666)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 8 (KB5029666).
 ms.date: 09/14/2023
-ms.custom: evergreen, KB5029666
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5029666
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows

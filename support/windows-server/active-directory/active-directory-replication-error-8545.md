@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article provides a solution to an issue where Active Directory replication fails for one or more partitions with the error 8545.
 
-_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 3110029
 
 > [!NOTE]

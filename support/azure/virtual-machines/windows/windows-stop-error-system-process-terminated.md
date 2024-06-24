@@ -49,7 +49,7 @@ If restoring the backup doesn't solve the problem, collect a memory dump file so
 [!INCLUDE [Collect OS Memory Dump File](../../../includes/azure/collect-os-memory-dump-file.md)]
 
 > [!NOTE]
-> If you're having trouble locating the *Memory.dmp* file, you can try to use [non-maskable interrupt (NMI) calls in the serial console](./serial-console-windows.md#use-the-serial-console-for-nmi-calls) instead. You can use [this guidance to generate a crash dump file by using NMI calls](/troubleshoot/windows-client/performance/generate-a-kernel-or-complete-crash-dump#use-nmi).
+> If you're having trouble locating the *Memory.dmp* file, you can try to use [non-maskable interrupt (NMI) calls in the serial console](./serial-console-windows.md#use-the-serial-console-for-nmi-calls) instead. You can use [this guidance to generate a crash dump file by using NMI calls](../../../windows-client/performance/generate-a-kernel-or-complete-crash-dump.md#use-nmi).
 
 ## Next steps
 

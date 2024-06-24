@@ -34,17 +34,6 @@ items:
 - name: File, Filegroup, Database Operations, or Corruption
   href: database-file-operations/toc.yml
 
-- name: General Troubleshooting Information
-  items:
-    - name: Error 556 insert exec failed
-      href: general/error-556-insert-exec-failed.md
-    - name: Improvements in handling some data types and uncommon operations
-      href: general/sql-server-azure-sql-database-improvements.md
-    - name: Policy for untested .NET Framework assemblies
-      href: general/policy-untested-net-framework-assemblies.md
-    - name: Transaction log file grows for databases with In-Memory OLTP
-      href: general/transaction-log-file-grows-databases-in-memory-oltp.md
-
 - name: Installation, Patching, Upgrade, Uninstall
   href: install/windows/toc.yml
 
@@ -62,6 +51,15 @@ items:
   items:
   - name: Inconsistent results in MKL computations
     href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
+
+- name: Queries, stored procedures, views, functions, triggers (T-SQL)
+  items:
+  - name: Detours or similar techniques cause issues
+    href: general/issue-detours-similar-techniques.md
+  - name: Error 556 insert exec failed
+    href: general/error-556-insert-exec-failed.md
+  - name: Improvements in handling some data types and uncommon operations
+    href: general/sql-server-azure-sql-database-improvements.md
 
 - name: Replication, Change Tracking, Change Data Capture
   href: replication/toc.yml

@@ -13,7 +13,6 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 
 This article provides a solution to an issue where a certificate template is unable to load and certificate requests are unsuccessful using the same template.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 283218
 
 ## Summary

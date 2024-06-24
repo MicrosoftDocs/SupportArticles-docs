@@ -235,8 +235,6 @@ items:
       href: ./active-directory/replication-error-8453.md
     - name: Replication error 8614
       href: ./active-directory/replication-error-8614.md
-    - name: Replication error 5 - Access is denied
-      href: ./active-directory/replication-error-5.md
     - name: Troubleshoot Active Directory replication error 1396
       href: ./active-directory/active-directory-replication-error-1396.md
     - name: Troubleshoot AD replication error 8446
@@ -279,8 +277,6 @@ items:
       href: ./active-directory/kfso-not-work-in-external-trust-event-is-17.md
     - name: Optimize domain controller location
       href: ./active-directory/optimize-dc-location-global-catalog.md
-    - name: Problems with promoting DC to global catalog server
-      href: ./active-directory/promoting-dc-to-global-catalog-server-issues.md
   - name: DCPromo and the installation of domain controllers
     items:
     - name: Access is denied error occurs with DCPROMO
@@ -1389,8 +1385,10 @@ items:
       href: ./installing-updates-features-roles/failed-schedule-software-protection.md
     - name: Fail to install Network Policy Server role
       href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
-    - name: Fix Windows Update errors
+    - name: Fix Windows Update corruptions and installation failures
       href: ./installing-updates-features-roles/fix-windows-update-errors.md
+    - name: How the Windows Update client determines which proxy server to use
+      href: ./installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md     
     - name: How to block user access to Windows Update
       href: ./installing-updates-features-roles/block-user-access-windows-update.md
     - name: How to use the Recovery Console
@@ -1833,8 +1831,6 @@ items:
       href: ./networking/smb-server-unresponsive.md
     - name: Blank default gateway after configuring Static IP address
       href: ./networking/blank-default-gateway-configure-static-ip-address.md
-    - name: Configure ISA Server computer for authentication requests
-      href: ./networking/configure-isa-server-computer.md
     - name: Configure proxy server settings
       href: ./networking/configure-proxy-server-settings.md
     - name: Configure SNMP Service
@@ -1975,6 +1971,16 @@ items:
       href: ./networking/configure-l2tp-ipsec-server-behind-nat-t-device.md
     - name: Set up Internet Connection Sharing
       href: ./networking/set-up-internet-connection-sharing.md
+  - name: Identify and remediate MaxConcurrentApi issues that affect user authentication
+    items:
+    - name: 'Overview: Identify and remediate MaxConcurrentApi issues'
+      href: ./networking/maxconcurrentapi-overview-identify-and-remediate-mca-issues.md
+    - name: 'Part 1: Identify computers that have MCA issues'
+      href: ./networking/maxconcurrentapi-1-identify-computers-that-have-mca-issues.md
+    - name: 'Part 2: Calculate and change MCA on your affected computers'
+      href: ./networking/maxconcurrentapi-2-calculate-and-change-mca.md
+    - name: 'Part 3: Troubleshoot the underlying causes of an MCA issue'
+      href: ./networking/maxconcurrentapi-3-troubleshoot-causes-of-mca-issues.md
 - name: Performance
   items:
   - name: Performance
@@ -2123,6 +2129,8 @@ items:
       href: ./performance/incorrect-shutdown-reason-code-sel.md
     - name: 'System shutdown is slow'
       href: ./performance/system-shutdown-is-slow.md
+    - name: System shutdown stops responding
+      href: ./performance/system-shutdown-stops-responding-issues.md      
     - name: Use Userdump.exe to create a dump file
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
@@ -3253,6 +3261,20 @@ items:
     href: ./windows-server-eos-faq/error-installing-esu-product-key-windows-server-2012-or-2012-r2.md
 - name: Support Tools
   items:
+  - name: Performance Monitoring Tools
+    items:
+    - name: Using Performance Monitor
+      href: ./support-tools/troubleshoot-issues-performance-monitor.md
+    - name: Using Process Explorer
+      href: ./support-tools/troubleshoot-issues-process-explorer.md
+    - name: Using Task Manager
+      href: ./support-tools/support-tools-task-manager.md
+    - name: Using WPR, WPA, or Xperf
+      href: ./support-tools/support-tools-xperf-wpa-wpr.md
+  - name: Scripts
+    items:
+    - name: Scripts to compile all registered MOF files
+      href: ./support-tools/scripts-compile-registered-mof-files.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
@@ -3275,13 +3297,3 @@ items:
       href: ../windows-client/windows-tss/gather-information-using-tss-wufb-reports.md?context=/troubleshoot/windows-server/context/context
     - name: Use the xray feature of TSS
       href: ../windows-client/windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md?context=/troubleshoot/windows-server/context/context
-  - name: Performance Monitoring Tools
-    items:
-    - name: Using Performance Monitor
-      href: ./support-tools/troubleshoot-issues-performance-monitor.md
-    - name: Using Process Explorer
-      href: ./support-tools/troubleshoot-issues-process-explorer.md
-    - name: Using Task Manager
-      href: ./support-tools/support-tools-task-manager.md
-    - name: Using WPR, WPA, or Xperf
-      href: ./support-tools/support-tools-xperf-wpa-wpr.md

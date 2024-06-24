@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD replication error 1396
 description: Provides help to troubleshoot Active Directory replication error 1396.
-ms.date: 12/26/2023
+ms.date: 06/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes the symptoms, cause, and resolution for resolving Active Directory replication failing with Win32 error 1396.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2183411
 
 ## Symptoms
@@ -184,8 +183,6 @@ This table lists other symptoms, causes, and resolutions:
 
 |Symptom|Cause|Resolution|
 |---|---|---|
-|The DC is not functioning and logs Event ID 1925 and 1411 on Windows Server 2008 domain controllers and Windows Server 2003 domain controllers in the same domain that have been authoritatively restored.|These problems occur because the version number of the KRBTGT account increases when you perform an authoritative restoration. The KRBTGT account is a service account that is used by the Kerberos Key Distribution Center (KDC) service.|In this case, you might need to apply the hotfix in KB939820.|
-|Map a drive using net use<br/>C:\Documents and Settings\wschong>net use z: \\<server_name>\c$ System error 1396 has occurred.<br/>Logon Failure: The target account name is incorrect.<br/>In this case, the server was logging Event ID 333 and using high memory, with SQL Server using highest.|If the error appears while mapping a drive using net use, the cause could be that the Non Paged Memory or the Paged Pool Memory is temporarily insufficient. The system keeps recording such events until the computer is restarted, or the related hive is unloaded, even though the temporary memory insufficiency stops. For more information about SQL Server performance problems, see [Troubleshooting Performance Problems in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc966540(v=technet.10)).|To prevent the system logging the event 333 continually in future, please apply the hotfix 970054 on the server and set the following registry value to 1:<ul><li>Location: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager`</li><li>Name: RegistryFlushErrorSubside</li><li>Type: REG_DWORD</li><li>Value: 1 or 2</li></ul>|
 |The DC time is incorrect.|The DC is a virtual machine that was set to sync time with the VMware host, caused events 1925, 1645.|unchecked the option to sync time for virtual DC from VMWare host, so that it can sync time with the PDC.|
 |Dcpromo fails with an onscreen error: Active Directory Installation Failed. The operation failed because:<br/>The Directory Service failed to create the server object for CN=NTDS Settings,CN=ServerBeingPromoted, CN=Servers,CN=Site, CN=Sites,CN=Configuration,DC=contoso, DC=com on server ReplicationSourceDC.contoso.com. Ensure the network credentials provided have sufficient access to add a replica.<br/>Logon Failure: The target account name is incorrect.<br/><br/>In this case, Event ID 1645, 1168, and 1125 are logged on the server that is being promoted.|During dcpromo, the SPN on the helper DC (the replication source DC) is not valid.|For dcpromo error where helper DC SPN is not valid, use SetSPN to create new SPN on helper DC, in format GC/serverName.contoso.com|
   
@@ -193,15 +190,11 @@ This table lists other symptoms, causes, and resolutions:
 
 Other causes include:
 
-1. Event ID 1925 can occur on Windows Server 2008 domain controllers and Windows Server 2003 domain controllers in the same domain that have been authoritatively restored. In this case, you might need to apply the hotfix 939820.
+1. During dcpromo, the SPN on the helper DC (the replication source DC) is not valid.
 
-2. During dcpromo, the SPN on the helper DC (the replication source DC) is not valid.
+2. The DC is a virtual machine that was set to sync time with the VMware host, caused events 1925, 1645.
 
-3. If the error appears while mapping a drive using net use, the cause could be that the Non Paged Memory or the Paged Pool Memory is temporarily insufficient. The system keeps recording such events until the computer is restarted, or the related hive is unloaded, even though the temporary memory insufficiency stops. For more information about SQL Server performance problems, see [Troubleshooting Performance Problems in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc966540(v=technet.10)).
-
-4. The DC is a virtual machine that was set to sync time with the VMware host, caused events 1925, 1645.
-
-5. For the RODC specific scenario where the KRBTGT account is deleted: authoritatively restore the KRBTGT_##### account using NTDSUTIL and then import the LDIFDE file to correct backlinks.  At minimum, the msDS-KrbTgtLink attribute on the RODC's computer object will need to be updated to point to the DN of the restored account.
+3. For the RODC specific scenario where the KRBTGT account is deleted: authoritatively restore the KRBTGT_##### account using NTDSUTIL and then import the LDIFDE file to correct backlinks.  At minimum, the msDS-KrbTgtLink attribute on the RODC's computer object will need to be updated to point to the DN of the restored account.
 
 ## Data collection
 

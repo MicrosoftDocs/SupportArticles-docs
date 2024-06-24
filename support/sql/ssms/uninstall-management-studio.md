@@ -2,7 +2,7 @@
 title: Uninstall SQL Server Management Studio
 description: This article describes how to uninstall the Microsoft SQL Server Management Studio that is included with SQL Server 2014 and earlier versions of the product.
 ms.date: 11/19/2020
-ms.custom: sap:Management Studio
+ms.custom: sap:SQL Server Management, Query and Data Tools
 ms.topic: how-to
 ---
 # Uninstall SQL Server Management Studio

@@ -2,7 +2,7 @@
 title: Always Encrypted-enabled databases fail
 description: This article provides resolutions for the problem that causes the .NET Framework 4.6.2 client application to fail when accessing data from an Always Encrypted-enabled database.
 ms.date: 02/17/2020
-ms.custom: sap:Security Issues
+ms.custom: sap:Security, Encryption, Auditing, Authorization
 ---
 # The .NET Framework 4.6.2 client driver for Always Encrypted intermittently fails during row decryption
 

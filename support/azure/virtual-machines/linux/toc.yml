@@ -230,9 +230,12 @@
       href: troubleshoot-linux-rhui-certificate-issues.md
     - name: Red Hat RHUI connectivity issues
       href: linux-rhui-connectivity-issues.md
-    - name: Yum and dnf common Issues
+    - name: Yum and dnf common issues
       href: yum-dnf-common-issues.md 
-
+  - name: Ubuntu
+    items:
+    - name: APT common issues
+      href: apt-common-issues-in-ubuntu.md
 - name: Serial Console
   items:
   - name: Overview
@@ -358,7 +361,7 @@
   - name: Failed to get log in Boot Diagnostics
     href: ../windows/failed-get-contents-log-error.md
   - name: GPU is disabled
-    href: ../windows/gpu-disabled-upgrade-ubuntu.md
+    href: gpu-disabled-upgrade-ubuntu.md
   - name: VM stuck in failed state
     href: ../windows/vm-stuck-in-failed-state.md
   - name: VM is unavailable for 15 minutes

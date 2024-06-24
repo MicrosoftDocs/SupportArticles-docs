@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot breakpoints in the debugger
 description: If a breakpoint is disabled or couldn't be set, it's displayed as a hollow circle. Look here information on problems that can occur when setting breakpoints.
-ms.date: 12/09/2022
+ms.date: 06/12/2024
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: mikejo
@@ -17,7 +17,7 @@ _Applies to:_&nbsp;Visual Studio
 When debugging, a [breakpoint](/visualstudio/debugger/using-breakpoints) has two possible visual states:
 
 - A solid red circle, if the debugger successfully set a breakpoint in the target process.
-- A hollow (white filled) circle, either the breakpoint is disabled or warning occurred when trying to set the breakpoint.
+- A hollow circle (dark grey or white filled, depending on your theme), if the breakpoint is disabled or a warning occurrs when trying to set the breakpoint.
 
 To determine the difference, hover over the breakpoint and see if there's a warning. The following two sections describe prominent warnings and how to fix them.
 

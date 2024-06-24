@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article describes why you may be prompted to restart your Microsoft Windows-based computer after you install a security update.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 887012
 
 ## Why you may be prompted to restart your computer

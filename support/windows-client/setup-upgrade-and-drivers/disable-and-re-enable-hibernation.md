@@ -14,7 +14,6 @@ adobe-target: true
 
 This article describes how to disable and then re-enable hibernation on a computer that is running Windows.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows 10 - all editions, Windows Server 2016, Windows 7 Service Pack 1, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 920730
 
 > [!WARNING]

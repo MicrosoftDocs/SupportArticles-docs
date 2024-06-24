@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article discusses how to restore missing Windows Installer cache files.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2667628
 
 ## Summary

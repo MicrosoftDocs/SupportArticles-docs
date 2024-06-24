@@ -2,7 +2,7 @@
 title: Make several enhancements to the SQLIOSim utility
 description: Describes the improvement that makes several enhancements to the SQLIOSim utility.
 ms.date: 08/10/2023
-ms.custom: evergreen, KB5028786
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5028786
 ms.reviewer: v-cuichen, rdorr
 appliesto:
 - SQL Server 2022 on Windows

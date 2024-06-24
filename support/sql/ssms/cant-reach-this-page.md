@@ -3,8 +3,7 @@ title: Can't reach this page and unsupported browser error messages in SMSS 19
 description: Discusses how to resolve problems that occur in SSMS 19 when you try to sign in by using Microsoft Entra authentication in Internet Explorer.
 ms.reviewer: maghan, randolphwest, v-jayaramanp
 ms.date: 01/24/2024
-ms.custom:
-  - "sap:Management Studio"
+ms.custom: sap:SQL Server Management, Query and Data Tools
 ---
 
 # Browser authentication issues in SQL Server Management Studio 19.1 and later versions

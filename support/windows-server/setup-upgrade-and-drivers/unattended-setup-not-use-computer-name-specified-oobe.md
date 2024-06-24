@@ -13,7 +13,6 @@ ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Win
 
 This article provides a resolution for the issue that unattended setup doesn't use Computer Name Specified by User during OOBE to Join the Domain.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 944353
 
 ## Rapid publishing

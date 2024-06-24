@@ -16,7 +16,6 @@ This article describes the following topics:
 - How to use the Diskpart.exe command prompt utility to extend a data volume into unallocated space in Windows Server 2003, Windows XP, and Windows 2000.
 - How to extend the boot partition in Windows Server 2008.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 325590
 
 ## Use Diskpart.exe to extend a data volume in Windows Server 2003, in Windows XP, and in Windows 2000

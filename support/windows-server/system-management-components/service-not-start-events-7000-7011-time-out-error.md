@@ -13,7 +13,6 @@ ms.custom: sap:System Management Components\Microsoft Management Console (MMC), 
 
 This article provides a workaround to an issue where a slow service does not start due to time-out error in Windows.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 922918
 
 To work around this problem, modify the registry to increase the default time-out value for the service control manager. To increase this value to 60 seconds, follow these steps:

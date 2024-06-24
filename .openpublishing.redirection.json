@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "support/power-platform/power-automate/desktop-flows/desktop-flow-runs-not-show-monitor-runs.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/desktop-flow-runs-missing-from-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/configure-isa-server-computer.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/maxconcurrentapi-overview-identify-and-remediate-mca-issues",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/performance/troubleshooting-system-shutdown-is-slow-scenario.md",
       "redirect_url": "/troubleshoot/windows-server/performance/system-shutdown-is-slow",
       "redirect_document_id": false
@@ -9303,7 +9313,7 @@
     {
       "source_path": "support/windows-server/identity/replications-fail-with-error-5.md",
       "redirect_url": "/troubleshoot/windows-server/active-directory/replications-fail-with-error-5",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/identity/reset-directory-services-restore-mode-admin-pwd.md",
@@ -11154,6 +11164,41 @@
       "source_path": "support/windows-server/active-directory/find-current-schema-version.md",
       "redirect_url": "/windows-server/identity/ad-ds/deploy/find-active-directory-schema",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/item-rm-not-reserved.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/production/item-rm-not-reserved",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/picking-list-warehouse-not-updated-bom-line.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/production/picking-list-warehouse-not-updated-bom-line",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/resource-name-not-updated.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/production/resource-name-not-updated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/index.yml",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/promoting-dc-to-global-catalog-server-issues.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-promote-dc-to-global-catalog-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/replication-error-5.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replications-fail-with-error-5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/create-upgrade-delete/avoid-running-as-root-in-containers.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/avoid-running-as-root-in-containers",
+      "redirect_document_id": true
     }
   ]
 }

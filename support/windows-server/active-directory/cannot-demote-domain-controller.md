@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 
 This article provides a solution to an issue where demoting a domain controller by using the Active Directory Installation wizard (Dcpromo.exe) fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 282272
 
 ## Symptoms

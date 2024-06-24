@@ -13,7 +13,6 @@ ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologi
 
 This article describes an issue in which you receive the DFS Replication event 2212, and DFSR stops after you restart Windows Server 2008. A short time later, event 2214 is logged in the DFS Replication log.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 977518
 
 ## Symptoms

@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article provides a solution to an issue that prevents you from adding features to a Windows Server 2012 R2-based computer that's running the Server Core installation option.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2913316
 
 ## Symptoms

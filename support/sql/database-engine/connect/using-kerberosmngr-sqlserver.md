@@ -3,7 +3,7 @@ title: Using Kerberos Configuration Manager for SQL Server
 description: Microsoft Kerberos Configuration Manager for SQL Server is a diagnostic tool that's used with SQL Server to troubleshoot Kerberos-related connectivity issues. 
 ms.reviewer: v-jayaramanp
 ms.date: 04/22/2024
-ms.custom: sap:Connection Issues 
+ms.custom: sap:Database Connectivity and Authentication
 ---
 
 # Overview of the Kerberos Configuration Manager for SQL Server

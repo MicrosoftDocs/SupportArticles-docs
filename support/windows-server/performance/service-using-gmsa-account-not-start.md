@@ -13,7 +13,6 @@ ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresp
 
 This article provides workaround for an issue where service can't start when the service is configured to use gMSA account on a Windows Server 2012 R2-based domain controller (DC).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4294429
 
 ## Symptom

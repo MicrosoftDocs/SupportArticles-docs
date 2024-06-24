@@ -5,7 +5,7 @@ ms.date: 04/18/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 
 # "Connection to the linked server has failed" error after you update Windows Server

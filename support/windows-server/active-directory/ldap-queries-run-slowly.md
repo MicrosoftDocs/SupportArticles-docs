@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstrou
 
 This article provides a workaround for an issue where LDAP queries perform slowly on a Windows Server computer that uses an AD LDS or an ADAM directory service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951581
 
 ## Symptoms

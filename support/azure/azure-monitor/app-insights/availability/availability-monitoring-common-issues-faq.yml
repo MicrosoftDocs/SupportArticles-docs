@@ -3,7 +3,7 @@ metadata:
   title: Azure Application Insights availability monitoring common issues FAQ
   description: Review a list of frequently asked questions (FAQ) about common issues that occur when you use Application Insights availability monitoring.
   ms.topic: faq
-  ms.date: 04/16/2024
+  ms.date: 06/24/2024
   ms.reviewer: v-leedennis, toddfous, v-weizhu
   ms.service: azure-monitor
   ms.custom: sap:Availability Tests

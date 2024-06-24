@@ -5,7 +5,7 @@ ms.date: 04/18/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 
 # Local SQL Server can't connect to a linked server when RSA encryption is used

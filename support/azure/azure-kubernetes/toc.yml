@@ -7,8 +7,6 @@
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
-    - name: Avoid running as root in AKS Container
-      href: create-upgrade-delete/avoid-running-as-root-in-containers.md
     - name: CniDownloadTimeoutVMExtensionError error (41)
       href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
     - name: ERR_VHD_FILE_NOT_FOUND error (124)
@@ -233,6 +231,8 @@
         href: connectivity/troubleshoot-connections-endpoints-outside-virtual-network.md
       - name: DNS resolution failure from within pod but not from worker node
         href: connectivity/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md
+      - name: Troubleshoot DNS failures across an AKS cluster in real-time
+        href: connectivity/troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md
       - name: Traffic between node pools is blocked by custom NSG
         href: connectivity/traffic-between-node-pools-is-blocked.md
       - name: Can't view resources in Kubernetes resource viewer on Azure portal
@@ -292,9 +292,12 @@
 - name: Extensions, Policies and Add-Ons
   items:
   - name: Troubleshoot Azure Policy Add-on for AKS
+    href: extensions/troubleshoot-azure-policy-add-on-aks.md
     items:
     - name: AKS upgrade fails when using an Azure custom policy
       href: extensions/custom-policy-prevents-aks-upgrade.md
+    - name: Avoid running as root in containers
+      href: extensions/avoid-running-as-root-in-containers.md
     - name: Azure policy failure alert shows an empty list of affected resources
       href: extensions/policy-failure-alert-show-empty-list-of-affected-resources.md
     - name: Azure Policy fails to exclude privileged containers from AKS

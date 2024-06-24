@@ -2,7 +2,7 @@
 title: A Data Collector collection set might not be uploaded
 description: This article introduces that a Data Collector collection set might not be uploaded if a cache file is corrupted.
 ms.date: 07/22/2020
-ms.custom: sap:Other tools
+ms.custom: sap:SQL Server Management, Query and Data Tools
 ms.reviewer: bartd
 ---
 # A Data Collector collection set may not be uploaded if a cache file is corrupted

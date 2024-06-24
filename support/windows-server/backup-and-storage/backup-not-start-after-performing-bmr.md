@@ -13,7 +13,6 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk erro
 
 This article provides a solution to a problem that prevents Windows Server Backup from starting after you perform a bare metal recovery (BMR).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2961238
 
 ## Symptoms

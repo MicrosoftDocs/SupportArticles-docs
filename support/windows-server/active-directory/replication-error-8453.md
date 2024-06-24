@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication error 8453
 description: This article describes how to troubleshoot Active Directory replication error 8453.
-ms.date: 12/26/2023
+ms.date: 06/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,6 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article describes how to troubleshoot a problem where Active Directory replication fails and generates error 8453: Replication access was denied.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2022387
 
 > [!NOTE]
@@ -67,7 +66,7 @@ If these steps don't resolve the problem, see the rest of this article.
 
 When this problem occurs, you experience one or more of the following symptoms:
 
-- The DCDIAG Replication test (`DCDIAG /TEST:NCSecDesc`) reports that the tested domain controller **failed test replications** and has a status of 8453: Replication access was denied:
+- The DCDIAG Replication test (`DCDIAG /TEST:Replications`) reports that the tested domain controller **failed test replications** and has a status of 8453: Replication access was denied:
 
   ```output
   Starting test: Replications  
@@ -226,15 +225,13 @@ Error 8453 (Replication Access was denied) has multiple root causes, including:
 
 - If the destination domain controller is an RODC, RODCPREP hasn't been run in domains that are currently hosting read-only domain controllers, or the Enterprise Read-Only Domain Controllers group doesn't have **Replicate Directory Changes** permissions for the partition that is not replicating.
 
-- DCs that are running new operating system versions were added to an existing forest where Office Communication Server has been installed.
-
 - You have Lightweight Directory Services (LDS) instances. And the **NTDS Settings** object for the affected instances is missing from the LDS configuration container. For example, you see the following entry:
 
     > CN=NtDs Settings,CN=Server1$ADAMINST1,CN=Server,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,CN={A560B9B8-6B05-4000-9A1F-9A853DB6615A}
 
-Active Directory errors and events, such as those mentioned in the [Symptoms](#symptoms) section, may also occur and generate an error 5 message (Access is denied).
+Active Directory errors and events, such as those mentioned in the [Symptoms](#symptoms) section, may also occur and generate an [error 5](replications-fail-with-error-5.md) message (Access is denied).
 
-The steps for error 5 or error 8453 mentioned in the [Resolution](#resolution) section won't resolve replication failures on computers that are currently failing replication and generating the other error message.
+The steps for [error 5](replications-fail-with-error-5.md) or error 8453 mentioned in the [Resolution](#resolution) section won't resolve replication failures on computers that are currently failing replication and generating the other error message.
 
 Common root causes for Active Directory operations failing that are generating error 5 messages include:
 

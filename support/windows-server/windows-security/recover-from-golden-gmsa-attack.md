@@ -15,8 +15,6 @@ keywords: gMSA, golden gMSA, kds root key object
 
 This article describes an approach to repairing the credentials of a group Managed Service Account (gMSA) that are affected by a domain controller database exposure incident.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 ## Symptoms
 
 For a description of a Golden gMSA attack, see the following Semperis article:

@@ -2,7 +2,7 @@
 title: Performance issues can be caused by excessive entries in the TokenAndPermUserStore cache
 description: This article helps you resolve performance issues that occur in the TokenAndPermUserStore cache. It also explains the causes and provides workarounds. 
 ms.date: 09/21/2022
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 ms.reviewer: ramakoni, v-jayaramanp
 ---

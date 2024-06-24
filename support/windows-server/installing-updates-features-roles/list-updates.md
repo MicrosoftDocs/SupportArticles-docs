@@ -13,7 +13,6 @@ ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install
 
 This article lists problems that are fixed in Microsoft Windows Server 2003 Service Pack 2 (SP2).
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 914962
 
 ## Summary
