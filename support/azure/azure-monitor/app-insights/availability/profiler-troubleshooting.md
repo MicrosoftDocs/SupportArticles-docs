@@ -1,7 +1,7 @@
 --- 
 title: Troubleshoot problems with Azure Application Insights Profiler
 description: This article presents troubleshooting steps and information to help developers enable and use Application Insights Profiler.
-ms.date: 05/30/2024
+ms.date: 06/24/2024
 ms.reviewer: v-leedennis, aaronmax, cweining, v-jsitser, hannahhunter, ryankahng, v-weizhu
 ms.service: azure-monitor
 #Customer intent: As an Azure Application Insights user, I want to know how to troubleshoot various problems enabling or viewing Application Insights Profiler so I can use it effectively.  

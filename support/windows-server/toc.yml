@@ -3273,6 +3273,8 @@ items:
       href: ./support-tools/support-tools-xperf-wpa-wpr.md
   - name: Scripts
     items:
+    - name: Scripts to compile all registered MOF files
+      href: ./support-tools/scripts-compile-registered-mof-files.md
     - name: Scripts to retrieve profile age and optionally delete aged copies
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
   - name: TroubleShootingScript toolset (TSS)
