@@ -12,6 +12,8 @@ ms.custom: sap:Windows Agents
 
 # Azure Log Analytics Monitoring Agent troubleshooting basics
 
+[!INCLUDE [Azure Help Support](../../../../includes/azure/log-analytics-agent-end-of-life-note.md)]
+
 This article is a basic guide for troubleshooting Microsoft Monitoring Agent (MMA) problems.
 
 ## Basic requirements for MMA

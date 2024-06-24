@@ -3273,6 +3273,8 @@ items:
       href: ./support-tools/support-tools-xperf-wpa-wpr.md
   - name: Scripts
     items:
+    - name: Scripts to compile all registered MOF files
+      href: ./support-tools/scripts-compile-registered-mof-files.md
     - name: Scripts to list all running WMI providers
       href: ./support-tools/scripts-list-running-wmi-providers.md
   - name: TroubleShootingScript toolset (TSS)

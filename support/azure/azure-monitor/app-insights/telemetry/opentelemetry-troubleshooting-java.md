@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot OpenTelemetry issues in Java
 description: Learn how to troubleshoot OpenTelemetry issues in Java. Test connectivity between your application host and the ingestion service.
-ms.date: 04/22/2023
+ms.date: 06/24/2024
 editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: java
