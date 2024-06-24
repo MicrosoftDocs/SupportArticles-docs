@@ -87,7 +87,7 @@ az aks update --resource-group <my-resource-group> --name <my-aks-cluster> --tie
 
 For more information, see [Free and Standard pricing tiers for AKS cluster management](/azure/aks/free-standard-pricing-tiers).
 
-## Cause 5: The cost-analysis-agent pod got the OOMKilled error
+## Cause 5: The cost-analysis-agent pod gets the OOMKilled error
 
 The current memory limit of the cost-analysis-agent pod is set to 4 GB.
 
