@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service Cost Analysis add-on issues
 description: Learn how to resolve issues that occur when you try to enable the Azure Kubernetes Service (AKS) Cost Analysis add-on.
-ms.date: 06/17/2024
+ms.date: 06/24/2024
 author: kaysieyu
 ms.author: kaysieyu
 ms.reviewer: pram, chiragpa, joharder, cssakscic, dafell, v-leedennis, v-weizhu
@@ -28,7 +28,7 @@ After you create or update an AKS cluster, you receive an error message in the f
 | `InvalidManagedIdentitySettingForCostAnalysis` | [Cause 2: Managed identity is disabled](#cause-2-managed-identity-is-disabled) |
 | `CostAnalysisNotEnabledInRegion` | [Cause 3: The add-on is unavailable in your region](#cause-3-the-add-on-is-unavailable-in-your-region) |
 | `InvalidManagedClusterSKUForFeature` | [Cause 4: The add-on is unavailable on the free pricing tier](#cause-4-the-add-on-is-unavailable-on-the-free-pricing-tier) |
-| Pod `OOMKilled` | [Cause 5: The cost-analysis-agent pod got OOMKilled](#cause-5-the-cost-analysis-agent-pod-got-oomkilled) |
+| Pod `OOMKilled` | [Cause 5: The cost-analysis-agent pod gets the OOMKilled error](#cause-5-the-cost-analysis-agent-pod-gets-the-oomkilled-error) |
 | Pod `Pending` | [Cause 6:The cost-analysis-agent pod is stuck in Pending state](#cause-6-the-cost-analysis-agent-pod-is-stuck-in-pending-state) |
 
 ## Cause 1: Azure Disk CSI driver is disabled
@@ -87,26 +87,25 @@ az aks update --resource-group <my-resource-group> --name <my-aks-cluster> --tie
 
 For more information, see [Free and Standard pricing tiers for AKS cluster management](/azure/aks/free-standard-pricing-tiers).
 
+## Cause 5: The cost-analysis-agent pod got the OOMKilled error
 
-## Cause 5: The cost-analysis-agent pod got `OOMKilled`
+The current memory limit of the cost-analysis-agent pod is set to 4 GB.
 
-The current memory limit of the cost-analysis-agent pod is set to 4 GB. 
+The pod's usage is dependent on the number of deployed containers, which can be roughly approximated by 200 MB + 0.5 MB per container. The current memory limit supports approximately 7000 containers per cluster.
 
-The pod's usage is dependent on the number of containers deployed, which can be roughly approximated by 200 MB + 0.5 MB per container. The current memory limit support approximately 7000 containers per cluster.
-
-Large clusters may experience `OOMKill` when the pod's usage surpasses the allocated 4 GB limit.
+When the pod's usage surpasses the allocated 4 GB limit, large clusters may experience the `OOMKill` error.
 
 ### Solution 5: Disable the add-on
 
-Currently, we recommend disabling the add-on. At this time, we don't support customizing or manually increasing memory limits for the add-on. The AKS team is working on memory optimizations to support larger clusters and reduce memory consumption.
+Currently, customizing or manually increasing memory limits for the add-on isn't supported. To resolve this issue, disable the add-on.
 
-## Cause 6: The cost-analysis-agent pod is stuck in `Pending` state
+## Cause 6: The cost-analysis-agent pod is stuck in Pending state
 
-If the pod is stuck in `Pending` with `FailedScheduling` error, then the nodes in the cluster have exhausted memory capacity.
+If the pod is stuck in Pending state with the FailedScheduling error, the nodes in the cluster have exhausted memory capacity.
 
 ### Solution 6: Ensure there's sufficient allocatable memory
 
-The current memory request of the cost-analysis-agent pod is set to 500 GB. Ensure there's sufficient allocatable memory for the pod to be scheduled.
+The current memory request of the cost-analysis-agent pod is set to 500 GB. Ensure that there's sufficient allocatable memory for the pod to be scheduled.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
