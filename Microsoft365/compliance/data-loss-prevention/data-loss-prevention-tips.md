@@ -16,7 +16,7 @@ appliesto:
   - Office Professional Plus 2013
   - Microsoft 365 Apps for enterprise
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 03/31/2022
 ---
 # How to troubleshoot data loss prevention policy tips in Exchange Online Protection in Microsoft 365
 
