@@ -24,7 +24,7 @@ When you use the Import service in the Security & Compliance Center to [import P
 
 The ingestion rate of the Microsoft 365 Import service to import a PST file into a mailbox is approximately 24 GB per day. This rate is typical. However, it can't be guaranteed because the Import service runs in an environment that is shared by multiple tenants.
 
-**Note:** You should use the Import Service UI in Microsoft 365 to create new Import jobs. Using PowerShell for this task is not supported.
+**Note:** You should use the Import Service UI in Microsoft 365 to create new Import jobs. Using PowerShell for this task isn't supported.
 
 If your import job is processing slowly or appears to be stuck, the PST file might be larger than the maximum recommended size of 20 GB. For the current job, expect a delay if it exceeds 20 GB.  For future imports, check the size of the PST file. If it exceeds 20 GB, check for and delete items from it that don't match your company guidelines for age, size, and other requirements. Alternatively, split the PST into multiple files.  
 
@@ -32,7 +32,7 @@ If you're importing multiple PSTs into the same mailbox, the ingestion rate of e
 
 ## Import job shows skipped items because of errors
 
-If there are corrupted items within the PST files, they are skipped during the import job. The number of skipped items is indicated in the **Items skipped (corrupted)** column of the Status message in the Import Service UI.
+If there are corrupted items within the PST files, they're skipped during the import job. The number of skipped items is indicated in the **Items skipped (corrupted)** column of the Status message in the Import Service UI.
 
 :::image type="content" source="media/issues-with-pst-import-job/status-message.png" alt-text="Screenshot of Status page with items skipped.":::
 
@@ -52,7 +52,7 @@ To fix the skipped items, do the following:
 2. Upload the PST files again to the Azure storage location.
 3. Create a new import job to import the PST files.
 
-**Note:** If you re-import the PST into the same target root folder, items that have already been imported will be skipped, and no duplicates will be created.
+**Note:** If you reimport the PST into the same target root folder, items that have already been imported will be skipped, and no duplicates will be created.
 
 ## Import job fails with "MapiExceptionShutoffQuotaExceeded" error
 
