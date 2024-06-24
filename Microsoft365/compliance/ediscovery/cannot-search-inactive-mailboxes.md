@@ -13,7 +13,7 @@ ms.reviewer: umeshk
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 # You can't search inactive mailboxes in Exchange Online
 

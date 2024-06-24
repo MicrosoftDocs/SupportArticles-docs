@@ -1,6 +1,6 @@
 ---
-title: Search logic change to Title property in the Security and Compliance Center
-description: Describes a change to the Title property when conducting eDiscovery searches in the Security and Compliance Center.
+title: Change to search logic for the Title property
+description: Describes a change to the Title property when conducting eDiscovery searches in the Microsoft Purview compliance portal.
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
@@ -16,12 +16,12 @@ ms.custom:
   - CI 115091
   - CSSTroubleshoot
 ms.reviewer: markjjo
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
-# Change to search logic for the "Title" property in the Security and Compliance Center
+# Change to search logic for the "Title" property
 
-If you use the Security & Compliance Center to create content searches and eDiscovery holds (especially if you use the [Query Based Hold](/microsoft-365/compliance/ediscovery-cases?preserve-view=true&view=o365-worldwide#step-4-place-content-locations-on-hold) feature), you should be aware of a change coming to the way that the Title property is handled.
+If you use the Microsoft Purview compliance portal to create content searches and eDiscovery holds (especially if you use the [Query Based Hold](/microsoft-365/compliance/ediscovery-cases?preserve-view=true&view=o365-worldwide#step-4-place-content-locations-on-hold) feature), you should be aware of a change coming to the way that the Title property is handled.
 
 When the SharePoint managed property Title is used in a search query or a query-based hold, the results can come from several different places, including the text of a Word or PowerPoint document. Since the primary objective of the Title property is to create a descriptive title, this method doesn't always work and returns incorrect information.
 
@@ -50,7 +50,7 @@ Update your query in one of the following ways to ensure that your search result
     '(Title:foo OR foo) bar'
 ```
 
-By using this method, the term "foo" must also exist in the body of a Word or PowerPoint document to match the query. This may result in the search returning a larger set of documents, but the results will be consistent after the rollout.
+By using this method, the term "foo" must also exist in the body of a Word or PowerPoint document to match the query. This might result in the search returning a larger set of documents, but the results will be consistent after the rollout.
 
 ## Verify existing queries
 
@@ -82,7 +82,7 @@ Some of your existing search queries or query-based holds might be affected by t
 
 ### Step 2: Run PowerShell commands to report on content searches, eDiscovery searches, eDiscovery holds, and retention policies
 
-Copy each of the following commands and run them in Security & Compliance Center PowerShell. They will return any content searches, eDiscovery searches, eDiscovery holds, or retention policies that utilize the "Title" field.
+Copy each of the following commands and run them in Security & Compliance Center PowerShell. They return any content searches, eDiscovery searches, eDiscovery holds, or retention policies that utilize the "Title" field.
 
 - To find any Content Searches (not associated with an eDiscovery case) that utilize the Title field:
 
@@ -110,13 +110,13 @@ Copy each of the following commands and run them in Security & Compliance Center
 
 ### Step 3: Revise queries that use the "Title" field
 
-If you discover any query that uses the Title field, update the query as shown in the Create or modify queries section above so that it uses a full-text expression equal to "Title:expression".
+If you discover any query that uses the Title field, update the query as shown in the preceding Create or modify queries section so that it uses a full-text expression equal to "Title:expression".
 
 ## More information
 
 For more information on managing eDiscovery and creating holds, see the following articles:
 
-- [Manage eDiscovery cases in the Security & Compliance Center](/microsoft-365/compliance/ediscovery-cases?preserve-view=true&view=o365-worldwide)
+- [Get started with eDiscovery (Standard)](/microsoft-365/compliance/ediscovery-cases?preserve-view=true&view=o365-worldwide)
 - [Overview of retention policies](/microsoft-365/compliance/retention-policies?preserve-view=true&view=o365-worldwide)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
