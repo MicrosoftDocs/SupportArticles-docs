@@ -14,7 +14,7 @@ ms.reviewer: subansal, mhaque
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 03/31/2022
 ---
 # Can't view items in Exchange Online archive mailbox by using Microsoft Outlook Web App
 
