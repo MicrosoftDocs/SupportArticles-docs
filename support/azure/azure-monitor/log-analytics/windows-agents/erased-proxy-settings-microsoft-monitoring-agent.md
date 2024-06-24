@@ -1,13 +1,13 @@
 ---
 title: Fix erased proxy settings in the Microsoft Monitoring Agent
 description: Learn how to troubleshoot proxy settings that were erased for the Microsoft Monitoring Agent because of System Center Operations Manager integration.
-ms.date: 01/31/2022
+ms.date: 06/24/2024
 ms.reviewer: irfanr, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor
 keywords:
 #Customer intent: As an Azure Monitor user, I want to troubleshoot why the proxy settings for my Microsoft Monitoring Agent have disappeared so that I can connect to my Azure Log Analytics workspace to interact with System Center Operations Manager data.
-ms.custom: sap:azure-monitor
+ms.custom: sap:Windows Agents
 ---
 # Troubleshoot erased proxy settings in the Microsoft Monitoring Agent
 
