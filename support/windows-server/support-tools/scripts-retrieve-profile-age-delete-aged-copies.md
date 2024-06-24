@@ -87,7 +87,7 @@ $title = "Delete Profile"
 $message = "Delete user profile?"
 $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes", "Deletes the profile."
 $no = New-Object System.Management.Automation.Host.ChoiceDescription "&No", "Does not delete the profile."
-$all = New-Object System.Management.Automation.Host.ChoiceDescription "&All", "Switchs to 'quiet mode' and deletes remaining matching profiles."
+$all = New-Object System.Management.Automation.Host.ChoiceDescription "&All", "Switches to 'quiet mode' and deletes remaining matching profiles."
 $cancel = New-Object System.Management.Automation.Host.ChoiceDescription "&Cancel", "Exits the script."
 $options = [System.Management.Automation.Host.ChoiceDescription[]]($no, $yes, $all, $cancel)
 
