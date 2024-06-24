@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot your Viva Engage network for problems with Native Mode
-description: Troubleshoot issues with your Viva Engage network in Native Mode for Microsoft 365.
+title: Resolve issues with your Viva Engage network in Native Mode
+description: Provides a resolution for issues with your Viva Engage network in Native Mode.
 ms.reviewer: ethli
 ms.author: luche
 author: helenclu
