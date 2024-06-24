@@ -46,9 +46,9 @@ For developers running .NET 8 or later, the HTTPS endpoint requires the `ASPNETC
 
 To correctly configure your local environment, use one of the following methods to set the `ASPNETCORE_URLS` environment variable:
 
-### Solution 1: Setting environment variables with a .env file
+### Solution 1: Setting environment variables with an .env file
 
-An `.env` file is a simple text file used to store environment variables in key-value pairs. To set the `ASPNETCORE_URLS` environment variable, introduce a `.env` file next to your `dab-config.json` file with similar contents:
+An `.env` file is a simple text file used to store environment variables in key-value pairs. To set the `ASPNETCORE_URLS` environment variable, introduce an `.env` file next to your `dab-config.json` file with similar contents:
 
 ```env
 SQL_CONNECTION_STRING={your-connection-string}
