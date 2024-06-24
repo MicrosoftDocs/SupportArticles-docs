@@ -1,7 +1,7 @@
 ---
 title: Add-in update error in Copilot for Sales for Outlook
 description: Resolves an error message that repeatedly prompts users to update Microsoft Copilot for Sales add-in for Microsoft Outlook.
-ms.date: 01/10/2024
+ms.date: 06/24/2024
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -45,7 +45,7 @@ When you select **UPDATE**, the behavior depends on whether you're using Outlook
 
 Permission changes HAVE occurred in the new Copilot for Sales add-in for Outlook.
 
-Certain permission changes require explicit administrator consent or reinstallation of the Copilot for Sales Outlook add-in. These permission changes are always tied to a recent update to the Copilot for Sales Outlook add-in. You can check when the latest update has been applied to the add-in on the corresponding [App Source Details page](https://appsource.microsoft.com/en-US/product/office/WA200003979?tab=DetailsAndSupport). If you see a recent update to the Copilot for Sales Outlook add-in, the error is likely tied to corresponding permission changes due to the update.
+Certain permission changes require explicit administrator consent or reinstallation of the Copilot for Sales Outlook add-in. These permission changes are always tied to a recent update to the Copilot for Sales Outlook add-in. You can check when the latest update has been applied to the add-in on the corresponding [App Source Details page](https://appsource.microsoft.com/). If you see a recent update to the Copilot for Sales Outlook add-in, the error is likely tied to corresponding permission changes due to the update.
 
 ## Resolution
 
