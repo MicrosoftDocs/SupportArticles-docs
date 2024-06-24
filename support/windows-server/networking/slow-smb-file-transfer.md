@@ -47,7 +47,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
     - 1.1 GB/s of sustained storage throughput per 10 Gbps of network bandwidth.
     - 11 GB/s of sustained storage throughput per 100 Gbps of network bandwidth.
     - These numbers assume that there are no other bottlenecks on the system, such as CPU or memory exhaustion, and that there are no networking errors.
-    - Note that peak storage performance is often much less than sustained storage performance, and that most advertised storage measurements are peak performance.
+    - Note that peak storage performance is often much more than sustained storage performance, and that most advertised storage measurements are peak performance.
 
 - [SMB Direct](/windows-server/storage/file-server/smb-direct) (SMB over Remote Direct Memory Access (RDMA)) may be needed to reach certain network transfer speeds, or reach high speeds without causing high CPU utilization.
 - File copies start fast and then slow down.
@@ -61,7 +61,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
   - Use storage performance monitor counters to determine whether storage performance degrades proportionally to network throughput. For more information, see [Performance tuning for SMB file servers](/windows-server/administration/performance-tuning/role/file-server/smb-file-server).
   - Adjust the [remote file dirty page threshold](/windows-server/administration/performance-tuning/subsystem/cache-memory-management/troubleshoot#remote-file-dirty-page-threshold-is-consistently-exceeded) if performance degrades approximately every 5 GB in Windows Server 2016 and later versions.
 
-- Transfers are slow only when using certain technologies or a [Scale-Out File Server (SOFS)](/windows-server/failover-clustering/sofs-overview)).
+- Transfers are slow only when using certain technologies or a [Scale-Out File Server (SOFS)](/windows-server/failover-clustering/sofs-overview).
 
   - Some technologies, typically backup or database-based, require disk write-through to maintain data integrity.
   - Windows SOFS requires write-through, as does SQL backups.
