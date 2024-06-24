@@ -176,7 +176,7 @@ Administrators can create new retention tags and policies by using the correct p
 
 - **Default policy tag (DPT)** is a retention tag that applies to all items in a mailbox that doesn't already have a retention tag applied. You can have only one DPT in a retention policy.
 - **Retention policy tag (RPT)** is a retention tag that applies to default folders, such as Inbox and Deleted Items.
-- **Personal tag** is used to make retention settings to custom folders and individual items, such as email messages. It is available to Outlook Web App, Outlook 2010, and later versions.
+- **Personal tag** is used to make retention settings to custom folders and individual items, such as email messages. It's available to Outlook Web App, Outlook 2010, and later versions.
 
 For more information, see the following articles:  
 
