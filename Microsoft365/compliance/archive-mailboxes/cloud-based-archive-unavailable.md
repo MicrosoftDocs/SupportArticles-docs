@@ -19,7 +19,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # "Your archive appears to be unavailable" error when you try to access a cloud-based archive mailbox in a hybrid deployment

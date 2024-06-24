@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
   - Microsoft Exchange Online Dedicated
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # How to use mailbox audit logs in Microsoft 365
@@ -26,7 +26,7 @@ _Original KB number:_&nbsp;4021960
 
 In Microsoft 365, you can run mailbox audit logs to determine when a mailbox was updated unexpectedly or whether items are missing from a mailbox. You may have to do this, for example, if items are moved or if they're deleted unexpectedly or incorrectly.
 
-For the vNext environment, please note that mailbox audit logs are not enabled by default and need to be turned on for a user before beginning a search.
+**Note**: For the vNext environment, mailbox audit logs aren't enabled by default and need to be turned on for a user before beginning a search.
 
 ## How to run and check mailbox audit logs
 
