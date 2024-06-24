@@ -4,7 +4,7 @@ description: Introduces how to collect self-diagnostic logs for some Application
 ms.reviewer: v-weizhu
 ms.topic: how-to
 ms.service: azure-monitor
-ms.date: 05/29/2023
+ms.date: 06/24/2024
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
 ---
 # How to collect self-diagnostic logs for Application Insights SDKs
