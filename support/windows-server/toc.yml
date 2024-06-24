@@ -3261,6 +3261,20 @@ items:
     href: ./windows-server-eos-faq/error-installing-esu-product-key-windows-server-2012-or-2012-r2.md
 - name: Support Tools
   items:
+  - name: Performance Monitoring Tools
+    items:
+    - name: Using Performance Monitor
+      href: ./support-tools/troubleshoot-issues-performance-monitor.md
+    - name: Using Process Explorer
+      href: ./support-tools/troubleshoot-issues-process-explorer.md
+    - name: Using Task Manager
+      href: ./support-tools/support-tools-task-manager.md
+    - name: Using WPR, WPA, or Xperf
+      href: ./support-tools/support-tools-xperf-wpa-wpr.md
+  - name: Scripts
+    items:
+    - name: Scripts to retrieve profile age and optionally delete aged copies
+      href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
@@ -3283,13 +3297,3 @@ items:
       href: ../windows-client/windows-tss/gather-information-using-tss-wufb-reports.md?context=/troubleshoot/windows-server/context/context
     - name: Use the xray feature of TSS
       href: ../windows-client/windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md?context=/troubleshoot/windows-server/context/context
-  - name: Performance Monitoring Tools
-    items:
-    - name: Using Performance Monitor
-      href: ./support-tools/troubleshoot-issues-performance-monitor.md
-    - name: Using Process Explorer
-      href: ./support-tools/troubleshoot-issues-process-explorer.md
-    - name: Using Task Manager
-      href: ./support-tools/support-tools-task-manager.md
-    - name: Using WPR, WPA, or Xperf
-      href: ./support-tools/support-tools-xperf-wpa-wpr.md
