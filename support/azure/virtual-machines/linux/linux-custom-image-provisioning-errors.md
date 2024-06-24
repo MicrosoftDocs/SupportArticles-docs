@@ -20,9 +20,9 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 **N<sup>2</sup>:** If the OS is Linux specialized, and it is uploaded as generalized, you will get a provisioning failure error because the new VM is running with the original computer name, username and password.
 
-### Resolution - Upload error
+### Resolution for upload errors
 
-To resolve both these errors, upload the original VHD, available on premises, with the same setting as that for the OS (generalized/specialized). To upload as generalized, remember to run -deprovision first.
+To resolve these errors, upload the original VHD, available on premises, with the same setting as that for the OS (generalized/specialized). To upload as generalized, remember to run -deprovision first.
 
 ## Capture errors
 
@@ -30,8 +30,8 @@ To resolve both these errors, upload the original VHD, available on premises, wi
 
 **N<sup>4</sup>:** If the OS is Linux specialized, and it is captured as generalized, you will get a provisioning failure error because the new VM is running with the original computer name, username and password. Also, the original VM is not usable because it is marked as specialized.
 
-### Resolution - Capture error
+### Resolution for capture errors
 
-To resolve both these errors, delete the current image from the portal, and [recapture it from the current VHDs](/azure/virtual-machines/linux/capture-image) with the same setting as that for the OS (generalized/specialized).
+To resolve these errors, delete the current image from the portal, and [recapture it from the current VHDs](/azure/virtual-machines/linux/capture-image) with the same setting as that for the OS (generalized/specialized).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
