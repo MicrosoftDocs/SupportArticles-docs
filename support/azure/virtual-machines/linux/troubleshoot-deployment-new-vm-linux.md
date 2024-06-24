@@ -6,7 +6,7 @@ ms.service: virtual-machines
 ms.date: 06/24/2024
 ms.reviewer: srijangupta, scotro, jarrettr
 ---
-# Troubleshoot provisioning failures when deploying Linux virtual machines
+# Troubleshoot deployment issues when deploying Linux virtual machines
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
