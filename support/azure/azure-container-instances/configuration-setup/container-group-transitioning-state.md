@@ -1,7 +1,7 @@
 ---
 title: Container group remains in transitioning state
 description: Learn how to resolve a problem that causes a container group to get stuck in the transitioning state (status code 409, ContainerGroupTransitioning).
-ms.date: 02/27/2024
+ms.date: 06/25/2024
 author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
@@ -41,7 +41,7 @@ During a continuous start operation of the container group, sidecar containers i
 
 ## Solution 2: Stop the container group for a non-running container (deployed by Logic Apps)
 
-If the [container is deployed by using an Azure Logic App](/azure/connectors/connectors-create-api-container-instances?toc=%2Fazure%2Fcontainer-instances%2Ftoc.json&bc=%2Fazure%2Fcontainer-instances%2Fbreadcrumb%2Ftoc.json), check the state of the container. If the container isn't in the **Running** state, stop the container group. For more information, see [Run sentiment analysis based on triggers with Azure Container Instances and the Container Instances Logic Apps connector](/samples/azure-samples/aci-logicapps-integration/aci-logicapps-integration/).
+If the [container is deployed by using an Azure Logic App](/azure/connectors/connectors-create-api-container-instances?toc=%2Fazure%2Fcontainer-instances%2Ftoc.json&bc=%2Fazure%2Fcontainer-instances%2Fbreadcrumb%2Ftoc.json), check the state of the container. If the container isn't in the **Running** state, stop the container group. For more information, see [Run sentiment analysis based on triggers with Azure Container Instances (ACI) and the ACI Logic Apps connector](https://github.com/Azure-Samples/aci-logicapps-integration).
 
 > [!NOTE]
 > As a best practice, we recommend that you check the state of the container before you stop or start a container group. If you start a container group that already has a running container, you might cause the transitioning state problem.
