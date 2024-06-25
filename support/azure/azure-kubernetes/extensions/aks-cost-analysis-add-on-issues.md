@@ -29,7 +29,7 @@ After you create or update an AKS cluster, you receive an error message in the f
 | `CostAnalysisNotEnabledInRegion` | [Cause 3: The add-on is unavailable in your region](#cause-3-the-add-on-is-unavailable-in-your-region) |
 | `InvalidManagedClusterSKUForFeature` | [Cause 4: The add-on is unavailable on the free pricing tier](#cause-4-the-add-on-is-unavailable-on-the-free-pricing-tier) |
 | Pod `OOMKilled` | [Cause 5: The cost-analysis-agent pod gets the OOMKilled error](#cause-5-the-cost-analysis-agent-pod-gets-the-oomkilled-error) |
-| Pod `Pending` | [Cause 6:The cost-analysis-agent pod is stuck in Pending state](#cause-6-the-cost-analysis-agent-pod-is-stuck-in-pending-state) |
+| Pod `Pending` | [Cause 6:The cost-analysis-agent pod is stuck in the Pending state](#cause-6-the-cost-analysis-agent-pod-is-stuck-in-the-pending-state) |
 
 ## Cause 1: Azure Disk CSI driver is disabled
 
@@ -89,19 +89,19 @@ For more information, see [Free and Standard pricing tiers for AKS cluster manag
 
 ## Cause 5: The cost-analysis-agent pod gets the OOMKilled error
 
-The current memory limit of the cost-analysis-agent pod is set to 4 GB.
+The current memory limit for the cost-analysis-agent pod is set to 4 GB.
 
-The pod's usage is dependent on the number of deployed containers, which can be roughly approximated by 200 MB + 0.5 MB per container. The current memory limit supports approximately 7000 containers per cluster.
+The pod's usage depends on the number of deployed containers, which can be roughly 200 MB + 0.5 MB per container. The current memory limit supports approximately 7000 containers per cluster.
 
-When the pod's usage surpasses the allocated 4 GB limit, large clusters may experience the `OOMKill` error.
+When the pod's usage exceeds the allocated 4 GB limit, large clusters may experience the `OOMKill` error.
 
 ### Solution: Disable the add-on
 
 Currently, customizing or manually increasing memory limits for the add-on isn't supported. To resolve this issue, disable the add-on.
 
-## Cause 6: The cost-analysis-agent pod is stuck in Pending state
+## Cause 6: The cost-analysis-agent pod is stuck in the Pending state
 
-If the pod is stuck in Pending state with the FailedScheduling error, the nodes in the cluster have exhausted memory capacity.
+If the pod is stuck in the Pending state with the FailedScheduling error, the nodes in the cluster have exhausted memory capacity.
 
 ### Solution: Ensure there's sufficient allocatable memory
 
