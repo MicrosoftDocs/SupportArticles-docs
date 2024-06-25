@@ -17,7 +17,7 @@ When you use the [System Preparation (Sysprep)](/windows-hardware/manufacture/de
 
 > A fatal error occurred while trying to sysprep the machine.
 
-Additionally, an error message that resembles the following is logged in the Setuperr.log file:
+Additionally, an error message that resembles the following is logged in the *Setuperr.log* file:
 
 > \<Date\> \<Time\>, Error [0x0f0073] SYSPRP RunExternalDlls:Not running DLLs; either the machine is in an invalid state or we couldn't update the recorded state, dwRet = 31
 
