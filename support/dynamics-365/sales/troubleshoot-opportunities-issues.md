@@ -3,7 +3,7 @@ title: Troubleshoot issues with an opportunity
 description: Provides resolutions for the issues that may occur when working with opportunities in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
-ms.date: 06/20/2024
+ms.date: 06/25/2024
 ms.custom: sap:Opportunity
 ---
 # Troubleshoot issues with opportunities
