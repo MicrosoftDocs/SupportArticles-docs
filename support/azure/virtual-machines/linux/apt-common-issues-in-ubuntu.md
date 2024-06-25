@@ -10,6 +10,8 @@ ms.collection: linux
 ms.topic: troubleshooting-problem-resolution
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
+ms.custom:
+  - linux-related-content
 ms.date: 06/07/2024
 #customer intent: As an Azure Linux virtual machine (VM) administrator, I want troubleshoot issues in the APT tools so that I can successfully install or update applications on my VMs.
 ---
