@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 # IgnoreLegalHold isn't available or functional for Exchange Online user objects
 
