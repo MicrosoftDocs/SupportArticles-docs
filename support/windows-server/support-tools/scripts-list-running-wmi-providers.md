@@ -1,7 +1,7 @@
 ---
 title: Scripts to list all running WMI providers
 description: Provides a script to list all running WMI providers.
-ms.date: 06/24/2024
+ms.date: 06/25/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
