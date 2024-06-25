@@ -6,15 +6,16 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-  - sap:Teams Identity and Auth\Client Sign-in (window, mac, linux, web)
+  - sap:Teams Clients\Windows Desktop
   - CI 191453
+  - CI 191759
   - CSSTroubleshoot
 ms.reviewer: guptaashish; meerak
 appliesto: 
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 06/04/2024
+ms.date: 06/25/2024
 ---
 # Resolve issues when starting the new Teams app
 
@@ -36,10 +37,10 @@ This issue might occur for any of the following reasons:
 
 - The **Cookies** and **Cache** shell folders point to a reparse point.
 - The **TEMP** or **TMP** environment variables point to a reparse point.
-- You don't have permissions to access certain directories in the **AppData** folder.
+- You don't have the **Read** permission to access certain directories in the **AppData** folder.
 - Some directories in the **AppData** folder are changed to function as reparse points.
 - The **AppData** folder contains invalid files that have the same name as the required system folders.
-- The SYSTEM account and Administrators group don't have the **Full control** permission to certain directories in the **AppData** folder.
+- The SYSTEM account and the Administrators group don't have the **Full control** permission to certain directories in the **AppData** folder.
 - You don't have the SYSAPPID permission to the Teams installation location.
 - The **AllowAllTrustedApps** policy setting prevents new Teams from starting.
 
@@ -154,9 +155,9 @@ function ValidateEnvironmentVars
     $temps = (gci env:* | ?{@("TEMP", "TMP").Contains($_.Name)})
     foreach($temp in $temps)
     {
-        if(IsReparsePoint($temp.Value))
+        if(PathContainsReparsePoint($temp.Value))
         {
-            Write-Warning "$($temp.Name): $($temp.Value) is a reparse point"
+            Write-Warning "$($temp.Name): $($temp.Value) contains a reparse point."
         }
         else
         {
@@ -165,9 +166,53 @@ function ValidateEnvironmentVars
     }
 }
 
+function ValidateUserAccess($list)
+{
+    $checked = @()
+    foreach ($path in $list)
+    {
+        $left = $path
+        for($i=0;$i -lt 10; $i++)
+        {
+            if ([string]::IsNullOrEmpty($left))
+            {
+                break;
+            }
+            if(-Not $checked.Contains($left))
+            {
+                try
+                {
+                    if (Test-Path -Path $left)
+                    {
+                        $items = Get-ChildItem $left -ErrorAction SilentlyContinue -ErrorVariable GCIErrors
+                        if($GCIErrors.Count -eq 0)
+                        {
+                            Write-Host "User is able to access $left" -ForegroundColor Green
+                        }
+                        else
+                        {
+                            Write-Warning "$left is missing permissions for the current user."
+                        }
+                        $checked += $left
+                    }
+                    else
+                    {
+                        Write-Host "MISSING: $path" -ForegroundColor Green
+                    }
+                }
+                catch
+                {
+                    Write-Warning "Error trying to access $left."
+                }
+            }
+            $left=Split-Path $left
+        }
+    }
+}
+
 function ValidatePaths($list)
 {
-    Foreach ($path in $list)
+    foreach ($path in $list)
     {
         if (Test-Path -Path $path)
         {
@@ -183,6 +228,59 @@ function ValidatePaths($list)
         else
         {
             Write-Host "MISSING: $path" -ForegroundColor Green
+        }
+    }
+}
+
+function ValidateSystemPerms($list)
+{
+    foreach ($path in $list)
+    {
+        if (Test-Path -Path $path)
+        {
+            $systemPerms = (Get-Acl $path).Access | where {$_.IdentityReference -eq "NT AUTHORITY\SYSTEM"}
+            $systemFullControl = $systemPerms | where {$_.FileSystemRights -eq "FullControl" -and $_.AccessControlType -eq "Allow"}
+            if($systemFullControl.Count -ge 1)
+            {
+                Write-Host "$path has the correct permissions assigned for SYSTEM account" -ForegroundColor Green
+            }
+            else
+            {
+                Write-Warning "$path is missing permissions for the SYSTEM account. The current permissions:"
+                $systemPerms
+            }
+            $adminPerms = (Get-Acl $path).Access | where {$_.IdentityReference -eq "BUILTIN\Administrators"}
+            $adminFullControl = $adminPerms | where {$_.FileSystemRights -eq "FullControl" -and $_.AccessControlType -eq "Allow"}
+            if($adminFullControl.Count -ge 1)
+            {
+                Write-Host "$path has the correct permissions assigned for Administrators group" -ForegroundColor Green
+            }
+            else
+            {
+                Write-Warning "$path is missing permissions for the Administrators group. The current permissions:"
+                $adminPerms
+            }
+        }
+        else
+        {
+            Write-Host "MISSING: $path" -ForegroundColor Green
+        }
+    }
+}
+
+function ValidateSysAppIdPerms
+{
+    $apps = Get-AppxPackage MSTeams 
+    foreach($app in $apps)
+    {
+        $perms = (Get-Acl $app.InstallLocation).sddl -split "\(" | ?{$_ -match "WIN:/\/\SYSAPPID"}
+        if($perms.Length -gt 0)
+        {
+            Write-Host "$($app.InstallLocation) has the correct SYSAPPID permissions assigned" -ForegroundColor Green
+        }
+        else
+        {
+            Write-Warning "$($app.InstallLocation) is missing SYSAPPID permissions."
         }
     }
 }
@@ -314,6 +412,9 @@ echo ""
 echo "# Checking for reparse points in temp/tmp environment variables"
 ValidateEnvironmentVars
 echo ""
+echo "# Checking for user permissions in appdata"
+ValidateUserAccess($list)
+echo ""
 echo "# Checking for reparse points in appdata"
 foreach ($path in $list)
 {
@@ -322,6 +423,12 @@ foreach ($path in $list)
 echo ""
 echo "# Checking for unexpected files in appdata"
 ValidatePaths($list)
+echo ""
+echo "# Checking SYSTEM and Administrators permissions in appdata"
+ValidateSystemPerms($list)
+echo ""
+echo "# Checking SYSAPPID permissions"
+ValidateSysAppIdPerms
 echo ""
 echo "# Checking if AllowAllTrustedApps is valid"
 ValidateAppXPolicies
@@ -364,7 +471,7 @@ Pause
       ```
 
    1. If the command returns **False**, go to step 3. Otherwise, [set](/windows-server/administration/windows-commands/set_1) the value of the environment variables to a location that isn't a reparse point.
-1. Check whether you have permission to access all of the following directories in the **AppData** folder:
+1. Check whether you have the **Read** permission to access all the following directories in the **AppData** folder:
 
    - %USERPROFILE%\AppData\Local
    - %USERPROFILE%\AppData\Local\Microsoft
@@ -414,7 +521,7 @@ Pause
    - %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Libraries
    - %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Recent
 
-   If any permissions are missing, assign the required permissions.
+   You can use the [Test-Path](/powershell/module/microsoft.powershell.management/test-path) PowerShell command to perform this check. If you don't have the **Read** permission for a directory, ask someone who has the **Full control** permission for the directory to grant you the **Read** permission.
 1. Check whether any of the directories that are listed in step 3 are changed to function as reparse points. If any of the folders are reparse points, contact [Microsoft Support](https://support.microsoft.com/contactus).
 1. Check for files that have the same name as a required system folder in the **AppData** folder. For example, a file that's named *Libraries* in the path, *%AppData%\Microsoft\Windows\Libraries*, has the same name as a folder that has the same path. For each directory that's listed in step 3, run the following PowerShell command:
 
@@ -423,16 +530,16 @@ Pause
    ```
 
    If the command returns **True**, remove the file, and then create a folder by using the same name as the complete path for the system folder.
-1. Check whether the SYSTEM account and Administrators group have the **Full control** permission to all directories that are listed in step 3.
+1. Check whether the SYSTEM account and the Administrators group have the **Full control** permission to all directories that are listed in step 3.
 
-    1. For each directory that's listed in step 3, run the following PowerShell commands:
+    1. Run the following PowerShell commands for each directory:
 
       ```powershell
       ((Get-Acl (Join-Path $env:USERPROFILE "<directory name that starts with AppData, such as AppData\Local>")).Access | ?{$_.IdentityReference -eq "NT AUTHORITY\SYSTEM" -and $_.FileSystemRights -eq "FullControl"} | measure).Count -eq 1
       ((Get-Acl (Join-Path $env:USERPROFILE "<directory name that starts with AppData, such as AppData\Local>")).Access | ?{$_.IdentityReference -eq "BUILTIN\Administrators" -and $_.FileSystemRights -eq "FullControl"} | measure).Count -eq 1
       ```
 
-     1. If either command returns **False**, grant the **Full control** permission to the corresponding account.
+     1. If either command returns **False**, ask someone who has the **Full control** permission for the directory to grant the **Full control** permission to the corresponding account.
 
 1. Check whether you have the SYSAPPID permission to the Teams installation location. Run the following PowerShell command:
 
@@ -440,10 +547,10 @@ Pause
    Get-AppxPackage MSTeams | %{$_.InstallLocation+" - "+(((Get-Acl $_.InstallLocation).sddl -split "\(" | ?{$_ -match "WIN:/\/\SYSAPPID"} | Measure).count -eq 1)}
    ```
 
-   If the command returns **False**, [reset your PC](https://support.microsoft.com/windows/give-your-pc-a-fresh-start-0ef73740-b927-549b-b7c9-e6f2b48d275e).
+   If the command returns **False**, ask a memeber of the local Administrators group to [delete your user profile](/troubleshoot/windows-server/user-profiles-and-logon/delete-user-profile) on the computer. Then, sign in by using your user account to recreate the user profile.
 1. Check the **AllowAllTrustedApps** policy setting:
 
-   1. Open a Command Prompt window, and then run the `winver` command.
+   1. In a Command Prompt window, run the `winver` command.
    1. Compare your Windows version and build number in the results to the following versions of Windows 11 and Windows 10:
 
       - Windows 11 version 21H2 OS build 22000.2777
