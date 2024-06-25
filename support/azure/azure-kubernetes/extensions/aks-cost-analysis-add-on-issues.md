@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service Cost Analysis add-on issues
 description: Learn how to resolve issues that occur when you try to enable the Azure Kubernetes Service (AKS) Cost Analysis add-on.
-ms.date: 06/24/2024
+ms.date: 06/25/2024
 author: kaysieyu
 ms.author: kaysieyu
 ms.reviewer: pram, chiragpa, joharder, cssakscic, dafell, v-leedennis, v-weizhu
@@ -35,7 +35,7 @@ After you create or update an AKS cluster, you receive an error message in the f
 
 You can't enable the Cost Analysis add-on on a cluster in which the [Azure Disk Container Storage Interface (CSI) driver](/azure/aks/azure-disk-csi) is disabled.
 
-### Solution 1: Update the cluster to enable the Azure Disk CSI driver
+### Solution: Update the cluster to enable the Azure Disk CSI driver
 
 Run the [az aks update][aks-update] command, and specify the `--enable-disk-driver` parameter. This parameter enables the Azure Disk CSI driver in AKS.
 
@@ -49,7 +49,7 @@ For more information, see [CSI drivers on AKS](/azure/aks/csi-storage-drivers).
 
 You can enable the Cost Analysis add-on only on a cluster that has a system-assigned or user-assigned managed identity.
 
-### Solution 2: Update the cluster to enable managed identity
+### Solution: Update the cluster to enable managed identity
 
 Run the [az aks update][aks-update] command, and specify the `--enable-managed-identity` parameter:
 
@@ -76,7 +76,7 @@ The Cost Analysis add-on isn't currently enabled in your region.
 
 You can't enable the Cost Analysis add-on on AKS clusters that are on the free pricing tier.
 
-### Solution 4: Update the cluster to use the Standard or Premium pricing tier
+### Solution: Update the cluster to use the Standard or Premium pricing tier
 
 Upgrade the AKS cluster to the Standard or Premium pricing tier. To do this, run one of the following [az aks update][aks-update] commands that specify the `--tier` parameter:
 
@@ -95,7 +95,7 @@ The pod's usage is dependent on the number of deployed containers, which can be 
 
 When the pod's usage surpasses the allocated 4 GB limit, large clusters may experience the `OOMKill` error.
 
-### Solution 5: Disable the add-on
+### Solution: Disable the add-on
 
 Currently, customizing or manually increasing memory limits for the add-on isn't supported. To resolve this issue, disable the add-on.
 
@@ -103,9 +103,9 @@ Currently, customizing or manually increasing memory limits for the add-on isn't
 
 If the pod is stuck in Pending state with the FailedScheduling error, the nodes in the cluster have exhausted memory capacity.
 
-### Solution 6: Ensure there's sufficient allocatable memory
+### Solution: Ensure there's sufficient allocatable memory
 
-The current memory request of the cost-analysis-agent pod is set to 500 GB. Ensure that there's sufficient allocatable memory for the pod to be scheduled.
+The current memory request of the cost-analysis-agent pod is set to 500 MB. Ensure that there's sufficient allocatable memory for the pod to be scheduled.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
