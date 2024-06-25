@@ -46,7 +46,7 @@ For developers running .NET 8 or later, the HTTPS endpoint requires the `ASPNETC
 
 ## Resolution
 
-To correctly configure your local environment, use one of the following methods to set the `ASPNETCORE_URLS` environment variable:
+To correctly configure your local environment, use one of the following methods to set the `ASPNETCORE_URLS` environment variable.
 
 ### Solution 1: Set the environment variable with a .env file
 
