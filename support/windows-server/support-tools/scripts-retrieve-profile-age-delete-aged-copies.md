@@ -23,6 +23,9 @@ This script allows you to test-drive what the policy will do or run it with diff
 
 [!INCLUDE [Script disclaimer](../../includes/script-disclaimer.md)]
 
+> [!Important]
+> Remote execution using registry information requires Windows Remote Management (WinRM) to be allowed on the target computer.
+
 ```PowerShell
 ###############################################################################
 #
