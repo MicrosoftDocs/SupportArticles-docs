@@ -122,6 +122,33 @@ If you try to recover from an update issue, you can reprovision the app after yo
 > [!NOTE]
 > The issue does not occur if you are servicing an offline image. In that scenario, the provisioning is automatically cleared for all users. This includes the user who runs the command.
 
+## Automated resolution example to avoid manual steps
+
+sysprep.cmd content example:
+
+    mkdir %Systemdrive%\temp
+    %Systemdrive%\Windows\System32\sysprep\sysprep.exe /oobe /generalize /shutdown /quiet /unattend:%Systemdrive%\temp\unattend.xml
+    :retry
+    powershell.exe -ExecutionPolicy Unrestricted -File %Systemdrive%\temp\removeappxpackages.ps1
+    %Systemdrive%\Windows\System32\sysprep\sysprep.exe /oobe /generalize /shutdown /quiet /unattend:%Systemdrive%\temp\unattend.xml
+    goto retry
+
+removeappxpackages.ps1 content example:
+    
+    $sysprepLogPath = "$env:SystemRoot\System32\Sysprep\Panther\setupact.log"
+    $failedPackages = Get-Content $sysprepLogPath | Select-String -Pattern "Error.*was installed for a user" | ForEach-Object {
+        if ($_ -match 'Microsoft.*8wekyb3d8bbwe') {
+            $matches[0]
+        }
+    }
+
+    foreach ($package in $failedPackages) {
+        Write-Host "Removing appx package: $package"
+        Remove-AppxPackage $package -Erroraction 'silentlycontinue'
+    }
+    
+
+
 ## More information
 
 For more information about how to add and remove apps, see:
