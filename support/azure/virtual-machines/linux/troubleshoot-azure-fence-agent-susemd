@@ -73,7 +73,7 @@ Failed Resource Actions:
 
 1. Connectivity to the Azure management API public endpoints
 
-As documented in Public endpoint connectivity for Virtual Machines using [Azure Standard Load Balancer in SAP high-availability scenarios](h/azure/sap/workloads/high-availability-guide-standard-load-balancer-outbound-connections#option-3-using-proxy-for-pacemaker-calls-to-azure-management-api), it's essential to check outbound connectivity to the Azure management API available using the following URLs:
+As documented in Public endpoint connectivity for Virtual Machines using [Azure Standard Load Balancer in SAP high-availability scenarios](/azure/sap/workloads/high-availability-guide-standard-load-balancer-outbound-connections#option-3-using-proxy-for-pacemaker-calls-to-azure-management-api), it's essential to check outbound connectivity to the Azure management API available using the following URLs:
 * `https://management.azure.com`
 * `https://login.microsoftonline.com`
 
