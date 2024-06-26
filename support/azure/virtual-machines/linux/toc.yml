@@ -103,12 +103,17 @@
       href: oom-swap-file-linux-vm.md
     
 
-- name: Kernel upgrades
+- name: Kernel issues
+  items:
+  - name: Can't restart after applying kernel changes
+    href: kernel-related-boot-issues.md
+- name: OS upgrades
   items:
   - name: Upgrade to SLES 15 SP1
     href: linux-upgrade-suse-15sp1.md
-  - name: Can't restart after applying kernel changes
-    href: kernel-related-boot-issues.md
+  - name: Troubleshoot Red Hat leapp upgrade issues
+    href: troubleshoot-red-hat-os-upgrade-issues.md
+  
 
 - name: My VM is not booting
   items:
