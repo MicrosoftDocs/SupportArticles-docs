@@ -198,6 +198,10 @@
     href: ed25519-ssh-keys.md
   - name: Cloud-init-enabled VM takes a long time to start up
     href: ../windows/cloud-init-deployment-delay.md
+  - name: Image deployment and management
+    items:
+    - name: Troubleshoot Azure VM Image Builder
+      href: /azure/virtual-machines/linux/image-builder-troubleshoot?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
 - name: Disk Management
   items:
