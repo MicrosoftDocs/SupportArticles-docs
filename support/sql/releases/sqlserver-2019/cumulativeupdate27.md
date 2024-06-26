@@ -1070,7 +1070,7 @@ When you deploy an update to a hybrid environment (such as Always On, replicatio
 - [How to apply a hotfix for SQL Server in a transactional replication and database mirroring topology](../../database-engine/replication/install-service-packs-hotfixes.md)
 - [How to apply a hotfix for SQL Server in a replication topology](../../database-engine/replication/apply-hotfix-sql-replication-topology.md)
 - [Upgrading Mirrored Instances](/sql/database-engine/database-mirroring/upgrading-mirrored-instances)
-- [Overview of SQL Server Servicing Installation](https://technet.microsoft.com/library/dd638062.aspx)
+- [Overview of SQL Server Servicing Installation](/sql/database-engine/install-windows/install-sql-server-servicing-updates)
 
 </details>
 
