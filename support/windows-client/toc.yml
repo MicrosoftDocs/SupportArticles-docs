@@ -823,6 +823,8 @@ items:
       href: ./setup-upgrade-and-drivers/customize-default-local-user-profile.md
     - name: Download and burn an ISO file from VLSC
       href: ./setup-upgrade-and-drivers/iso-file-on-vlsc.md
+    - name: Error "A fatal error occurred while trying to sysprep the machine"
+      href: ./setup-upgrade-and-drivers/fatal-error-occurred-sysprep-machine.md
     - name: Error 0x80042468 when creating a single partition
       href: ./setup-upgrade-and-drivers/error-when-creating-single-partition.md
     - name: Event ID 10 is logged in Application log
