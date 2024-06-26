@@ -17,24 +17,24 @@ ms.custom:
   - CI 191994
 appliesto: 
   - Microsoft Purview Data Loss Prevention
-ms.date: 06/21/2024
+ms.date: 06/26/2024
 ---
 
 # Resolve issues that affect DLP policy tips
 
-If you encounter an issue that's related to Microsoft Purview Data Loss Prevention (DLP) policy tips, select the applicable issue from the table of contents (TOC) at the top of this article.
+If you encounter an issue that's related to Microsoft Purview Data Loss Prevention (DLP) policy tips, [run an automated diagnostic for DLP policy tips](#run-the-diagnostic-for-dlp-policy-tips) in the Microsoft 365 admin center. The diagnostic analyzes the DLP policy and rule configuration for policy tips, identifies any issues, and suggests resolutions.
 
-If your issue isn't listed in the TOC or you need further support, run an automated diagnostic in the Microsoft 365 admin center. The diagnostic analyzes the DLP policy and rule configuration for policy tips, identifies any issues, and suggests resolutions.
+## Run the diagnostic for DLP policy tips
 
 > [!NOTE]
-> To run the diagnostic, you must have a Microsoft 365 administrator account.
+> To run the diagnostic, you must have a Microsoft 365 Global Administrator role.
 
 To run the diagnostic, follow these steps:
 
 1. Select the following button to open the diagnostic in the Microsoft 365 admin center.
 
    > [!div class="nextstepaction"]
-   > [Run Tests: DLP policy and rule configuration for policy tips](https://aka.ms/Pillar...Diag)
+   > [Run Tests: DLP policy tips](https://aka.ms/PillarDLPPolicyTipsDiag)
 
 2. Enter the following information:
 
@@ -43,6 +43,8 @@ To run the diagnostic, follow these steps:
    - Outlook client: **Outlook** or **OWA** (Outlook on the web)
 
 3. Select **Run Tests**.
+
+If you ran the diagnostic but your issue isn't resolved, check the following sections of this article.
 
 ## DLP policies in Exchange Online
 
