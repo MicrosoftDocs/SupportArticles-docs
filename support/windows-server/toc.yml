@@ -1349,8 +1349,6 @@ items:
       href: ./installing-updates-features-roles/cannot-connect-to-wsus-administration-website.md
     - name: Can't install .NET Framework 3.5 on OEM Windows installation
       href: ./installing-updates-features-roles/cannot-install-dotnet-framework-3dot5-oem.md
-    - name: Can't install updates or programs
-      href: ./installing-updates-features-roles/cannot-install-updates-programs.md
     - name: Can't install Windows Server 2019 on servers with a high processor count
       href: ./installing-updates-features-roles/cannot-install-windows-server-2019-high-processor-count.md
     - name: CBS.log file contains entries that some files aren't repaired
@@ -1393,18 +1391,12 @@ items:
       href: ./installing-updates-features-roles/block-user-access-windows-update.md
     - name: How to use the Recovery Console
       href: ./installing-updates-features-roles/use-recovery-console-not-start.md
-    - name: Install Microsoft Product Support Reporting Tool
-      href: ./installing-updates-features-roles/microsoft-product-support-reporting-tool-v5220030.md
     - name: List of updates
       href: ./installing-updates-features-roles/list-updates.md
     - name: Re-register Windows client/server in WSUS
       href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
-    - name: SystemInfo.exe doesn't display all installed updates
-      href: ./installing-updates-features-roles/systeminfo-not-display-all-updates.md
     - name: System Partition goes offline after installing some 3rd Party Disk
       href: ./installing-updates-features-roles/system-partition-offline-install-3rd-party-disk.md
-    - name: Temporarily deactivate the kernel mode filter driver
-      href: ./installing-updates-features-roles/deactivate-kernel-mode-filter-driver.md
     - name: Why you may be prompted to restart your computer
       href: ./installing-updates-features-roles/why-prompted-restart-computer.md
     - name: Windows Server 2008 Service Pack 2
