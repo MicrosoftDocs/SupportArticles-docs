@@ -291,16 +291,12 @@ items:
       href: ./installing-updates-features-roles/get-updates-through-windows-update.md
     - name: How to keep Windows up to date
       href: ./installing-updates-features-roles/keep-windows-up-to-date.md
-    - name: How to schedule automatic updates
-      href: ./installing-updates-features-roles/how-to-use-automatic-updates-feature.md
     - name: How to solve disk space issues caused by WinSxS directory
       href: ./installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md
     - name: In-place upgrade to Windows 10 problem
       href: ./installing-updates-features-roles/in-place-upgrade-to-windows-10-problems.md
     - name: Install Service Packs and Hotfixes
       href: ./installing-updates-features-roles/install-service-packs-hotfixes.md
-    - name: .NET Framework 1.1 isn't supported
-      href: ./installing-updates-features-roles/dotnet-framework-1dot1-not-supported.md
     - name: Package Manager can install only the first package
       href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
     - name: Previously released updates are reoffered
