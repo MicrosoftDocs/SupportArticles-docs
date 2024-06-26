@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage/Configuring and using Windows Backup or other recovery, csstroubleshoot
 ---
 # You can't use the ImageX.exe tool as a backup tool
 

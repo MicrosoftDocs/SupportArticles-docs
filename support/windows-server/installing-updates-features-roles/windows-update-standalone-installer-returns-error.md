@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand/Windows Update fails - installation stops with error, csstroubleshoot
 ---
 # Windows Update Standalone Installer (WUSA) returns 0x5 ERROR_ACCESS_DENIED when deploying .msu files through WinRM and Windows Remote Shell
 

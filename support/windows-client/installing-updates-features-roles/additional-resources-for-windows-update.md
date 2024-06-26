@@ -5,7 +5,7 @@ ms.date: 05/10/2024
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
 ms.reviewer: dougeby,aaroncz
 audience: itpro
 localization_priority: medium

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, kelho, sureshka
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility/MSI and MSIX, csstroubleshoot
 ---
 # Missing Windows Installer cache requires a computer rebuild
 

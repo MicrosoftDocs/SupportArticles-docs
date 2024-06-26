@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, adityah
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom: sap:System Performance/System Configuration (page file, startup or running apps, error handling), csstroubleshoot
 ---
 # System Partition goes offline after installing some third-party disk or Storage Management Software
 

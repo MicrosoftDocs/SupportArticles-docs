@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment/Installing or upgrading Windows, csstroubleshoot
 ---
 # DISM command fails with error code 87 when you try to apply a Windows 10 image
 
