@@ -33,16 +33,16 @@ To resolve this issue, follow these steps:
     C:\Windows\system32\wbem>wmiadap.exe /f
     ```
 
-3.    Run the following [lodctr](/windows-server/administration/windows-commands/lodctr) cmdlet to rebuild the performance counter setting:
+3. Run the following [lodctr](/windows-server/administration/windows-commands/lodctr) cmdlet to rebuild the performance counter setting:
 
     ```powershell
     C:\Windows\system32\wbem>lodctr /r 
     ```
 
     Then, you receive the following message if the cmdlet runs successfully:
-    
+
     ```output 
     Successfully rebuilt performance counter setting from system backup store 
     ```
 
-4.    Install the update again.
+4. Install the update again.

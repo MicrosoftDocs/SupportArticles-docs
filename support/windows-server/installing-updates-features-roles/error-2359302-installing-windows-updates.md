@@ -88,7 +88,7 @@ To resolve this issue, follow these steps:
 
     `HKEY_LOCAL_MACHINE\COMPONENTS`
 
-10.    Run the following command to revert pending actions:
+10. Run the following command to revert pending actions:
 
     ```console
     DISM /image:D :\ /cleanup-image /revertpendingactions
@@ -100,7 +100,7 @@ To resolve this issue, follow these steps:
     Reverting pending actions from the image.... The operation completed.
     ```
 
-11.    Restart the system, and you'll receive the following message:
+11. Restart the system, and you'll receive the following message:
 
     > Reverting pending actions
 
