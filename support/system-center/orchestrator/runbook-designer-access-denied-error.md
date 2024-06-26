@@ -1,18 +1,18 @@
 ---
 title: Access Denied error in Runbook Designer
-description: Fixes an Access Denied error that occurs when you try to connect to System Center 2012 Orchestrator management server using the Runbook Designer application.
-ms.date: 08/03/2020
+description: Fixes an Access Denied error that occurs when you try to connect to System Center Orchestrator management server using the Runbook Designer application.
+ms.date: 06/26/2024
 ---
 # Error Access Denied in Runbook Designer when connecting to the management server
 
-This article helps fix an **Access Denied** error that occurs when you try to connect to System Center 2012 Orchestrator management server using the Runbook Designer application.
+This article helps fix an **Access Denied** error that occurs when you try to connect to System Center Orchestrator management server using the Runbook Designer application.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2779526
 
 ## Symptoms
 
-When attempting to connect to your System Center 2012 Orchestrator management server using the Runbook Designer application, the following error is returned:
+When attempting to connect to your System Center Orchestrator management server using the Runbook Designer application, the following error is returned:
 
 > Connection Error  
 > Access Denied. If you are using the local administrators group to manage permissions, you might need to start the Runbook Designer with Run as Administrator.
