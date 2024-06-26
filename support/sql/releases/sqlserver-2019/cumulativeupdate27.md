@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 27 for SQL Server 2019 (KB5037331)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 27 (KB5037331).
-ms.date: 06/13/2024
+ms.date: 06/26/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5037331
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,10 +23,10 @@ This article describes Cumulative Update package 27 (CU27) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Excessive logging of asynchronous API call warning in the error log
-The newly-created warning message in issue [2901635](#2901635) might fill up SQL Server error log with thousands of occurrences. The message is `WARNING Long asynchronous API Call: The scheduling fairness of scheduler can be impacted by an asynchronous API invocation unexpectedly exceeding xxx ms.`  This is due to an incorrect code changes during build process. Microsoft is working on a fix for this issue and it will be available in a future update.  
+### Issue one: Excessive logging of asynchronous API call warning in the error log
+The newly-created warning message in issue [2901635](#2901635) might fill up the SQL Server error log with thousands of occurrences. The message is "WARNING Long asynchronous API Call: The scheduling fairness of scheduler can be impacted by an asynchronous API invocation unexpectedly exceeding xxx ms." This is due to an incorrect code change during the build process. Microsoft is working on a fix for this issue and it will be available in a future update.  
 
-### Access violation when session is reset
+### Issue two: Access violation when session is reset
 
 SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 
