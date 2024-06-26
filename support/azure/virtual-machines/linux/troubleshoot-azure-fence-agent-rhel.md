@@ -77,14 +77,12 @@ Daemon Status:
 
 As covered in the document: Public endpoint connectivity for Virtual Machines using [Azure Standard Load Balancer in SAP high-availability scenarios](/azure/sap/workloads/high-availability-guide-standard-load-balancer-outbound-connections#option-3-using-proxy-for-pacemaker-calls-to-azure-management-api), it's essential to check outbound connectivity to the Azure management API available using the following URLs:
 
-* https://management.azure.com
-* https://login.microsoftonline.com
+* `https://management.azure.com`
+* `https://login.microsoftonline.com`
 
 These tests can be done by using either `telnet`, `curl` or `nc` (`telnet` or `curl` aren't normally available on customer VMs) to test connectivity. The tests to both URLs must be done using the following commands:
 
 #### [Connectivity to https://management.azure.com](#tab/mngtconnectivity)
-
-* Connectivity to https://management.azure.com 
 
 ```bash
 telnet management.azure.com 443
@@ -153,9 +151,6 @@ sudo /usr/sbin/fence_azure_arm --action=list --msi --resourceGroup=<resource gro
 > [!NOTE]
 > Replace `<resource group>` value accordingly.
 
-### Next Steps
-
-If you require further help, see [Support and troubleshooting for Azure VMs](../../../includes/azure-help-support.md). That article can also help you file an Azure support incident, if necessary. As you follow the instructions, keep a copy of the `debug-fence.out` because it's required for troubleshooting purposes.
 
 ## Scenario 2 - Authentication failures
 
@@ -270,3 +265,14 @@ ApiManagement , AppServiceManagement, AzureCloud
 Network Rules:
 AppServiceEnvironment
 ```
+
+## Next Steps
+
+If you require further help, open a support request using the  follow instructions you have next. As you follow the instructions, keep a copy of the `debug-fence.out` because it's required for troubleshooting purposes.
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+
