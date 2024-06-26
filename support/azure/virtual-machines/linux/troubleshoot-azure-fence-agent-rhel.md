@@ -3,9 +3,9 @@ title: Troubleshoot Azure Fence Agent Issues in RHEL
 description: Provides troubleshooting guidance for Azure Fence Agent failing to start
 author: rnirek
 ms.author: rnirek
-ms.author: divargas
+ms.reviewer: divargas
 ms.topic: troubleshooting
-ms.date: 06/26/20204
+ms.date: 06/26/2024
 ms.service: virtual-machines
 ms.collection: linux
 ---
@@ -15,7 +15,7 @@ ms.collection: linux
 
 The Azure fence agent makes use of the python program located at `/usr/sbin/fence_azure_arm`. The cluster RA used to implement `STONITH` calls this program with the appropriate parameters, and uses it to communicate with the Azure platform using API calls.
 
-As documented in [RHEL - Create STONITH device](https://learn.microsoft.com/en-us/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#create-a-fencing-device), the roles provide permissions to the fence agent to perform the following actions.
+As documented in [RHEL - Create STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#create-a-fencing-device), the roles provide permissions to the fence agent to perform the following actions.
 
 * `powerOff`
 * `start`
@@ -75,7 +75,7 @@ Daemon Status:
 
 1. Connectivity to the Azure management API public endpoints
 
-As covered in the document: Public endpoint connectivity for Virtual Machines using [Azure Standard Load Balancer in SAP high-availability scenarios](https://learn.microsoft.com/en-us/azure/sap/workloads/high-availability-guide-standard-load-balancer-outbound-connections#option-3-using-proxy-for-pacemaker-calls-to-azure-management-api), it's essential to check outbound connectivity to the Azure management API available using the following URLs:
+As covered in the document: Public endpoint connectivity for Virtual Machines using [Azure Standard Load Balancer in SAP high-availability scenarios](/azure/sap/workloads/high-availability-guide-standard-load-balancer-outbound-connections#option-3-using-proxy-for-pacemaker-calls-to-azure-management-api), it's essential to check outbound connectivity to the Azure management API available using the following URLs:
 
 * https://management.azure.com
 * https://login.microsoftonline.com
@@ -124,7 +124,7 @@ nc -z -v login.microsoftonline.com 443
 
 2. Valid information set up in username or password for the `STONITH` resource. 
 
-One of the major causes of the `STONITH` resource failing is the use of invalid values for the username or password if using Service Principal. This can be tested using the `fence_azure_arm` as shown in the following command. The values for username and password are created per the document [RHEL - Create STONITH device](https://learn.microsoft.com/en-us/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#create-a-fencing-device), as appropriate for the customer distribution.
+One of the major causes of the `STONITH` resource failing is the use of invalid values for the username or password if using Service Principal. This can be tested using the `fence_azure_arm` as shown in the following command. The values for username and password are created per the document [RHEL - Create STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#create-a-fencing-device), as appropriate for the customer distribution.
 
 ```bash
 sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> 
@@ -155,7 +155,7 @@ sudo /usr/sbin/fence_azure_arm --action=list --msi --resourceGroup=<resource gro
 
 ### Next Steps
 
-If you require further help, see [Support and troubleshooting for Azure VMs](https://learn.microsoft.com/en-us/azure/virtual-machines/vm-support-help). That article can also help you file an Azure support incident, if necessary. As you follow the instructions, keep a copy of the `debug-fence.out` because it's required for troubleshooting purposes.
+If you require further help, see [Support and troubleshooting for Azure VMs](../../../includes/azure-help-support.md). That article can also help you file an Azure support incident, if necessary. As you follow the instructions, keep a copy of the `debug-fence.out` because it's required for troubleshooting purposes.
 
 ## Scenario 2 - Authentication failures
 
@@ -205,7 +205,7 @@ Apr 2 00:49:57 heeudpgscs01 stonith-ng[105424]: warning: fence_azure_arm[109393]
 
 ### Resolution
 
-1. Based on [https://learn.microsoft.com/en-us/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent](https://learn.microsoft.com/en-us/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent), check the custom role definition for `Linux Fence Agent Role`. The role name may be different for different customers.
+1. Based on [create a custom role for the fence agent](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent), check the custom role definition for `Linux Fence Agent Role`. The role name may be different for different customers.
 2. Check if the app `fencing-agent` has this custom role assigned to the impacted VM or not.
 3. If it doesn't, assign the app to the VM via Access Control.
 4. Start the pacemaker cluster, it should start along with the fencing agent (Azure Fencing Agent).
