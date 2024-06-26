@@ -13,7 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # Messages aren't moved to archive mailboxes after you create a retention policy in Exchange Online

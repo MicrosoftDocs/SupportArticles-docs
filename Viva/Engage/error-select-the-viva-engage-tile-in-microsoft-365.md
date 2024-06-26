@@ -1,5 +1,5 @@
 ---
-title: Sign-in error when selecting the Viva Engage tile in Microsoft 365
+title: Sign-in error when you select the Viva Engage tile in Microsoft 365
 description: Fix the Sorry, but we're having trouble signing you in error when you select the Viva Engage tile in Microsoft 365.
 ms.author: luche
 author: helenclu
