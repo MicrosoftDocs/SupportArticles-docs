@@ -27,7 +27,7 @@ If you encounter an issue that's related to Microsoft Purview Data Loss Preventi
 ## Run the diagnostic for DLP policy tips
 
 > [!NOTE]
-> To run the diagnostic, you must have a Microsoft 365 Global Administrator role.
+> To run the diagnostic, you must be a Microsoft 365 global administrator.
 
 To run the diagnostic, follow these steps:
 
