@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-rezhou
-ms.custom: sap:Windows Servicing, Updates and Features on Demand/Clients missing updates, not offered, fail to download, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Clients missing updates, not offered, fail to download, csstroubleshoot
 ---
 # Windows Update automatically downloads and installs updates when you connect to the Internet for the first time
 

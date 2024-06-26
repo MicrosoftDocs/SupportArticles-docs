@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand/Issues installing Features on Demand(FoD), csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD), csstroubleshoot
 ---
 # Error 0x800f0922 when trying to uninstall Windows Server roles or features
 

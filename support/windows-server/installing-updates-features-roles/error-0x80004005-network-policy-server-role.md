@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand/Windows Update fails - installation stops with error, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
 ---
 # Error 0x80004005 when you try to install or start the Network Policy Server role service
 

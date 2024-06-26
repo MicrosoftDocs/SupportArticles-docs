@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-naqviadil, v-lianna, cwhitley
-ms.custom: sap:Windows Activation/Windows activation issues, csstroubleshoot
+ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 ---
 # Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED) when you activate Windows
 

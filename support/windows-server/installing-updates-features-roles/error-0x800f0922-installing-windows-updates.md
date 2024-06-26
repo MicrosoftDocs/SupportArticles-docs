@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ismael, v-lianna
-ms.custom: sap:Windows Servicing, Updates and Features on Demand/Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
 ---
 # Error 0x800f0922 caused by corrupted scheduled task when installing Windows updates
 

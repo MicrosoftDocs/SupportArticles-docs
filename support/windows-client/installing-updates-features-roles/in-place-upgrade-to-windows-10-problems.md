@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, frankroj
-ms.custom: sap:Windows Setup, Upgrade and Deployment/Installing or upgrading Windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # Updates fix in-place upgrade to Windows 10 problem
 

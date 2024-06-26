@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, adityah
-ms.custom: sap:System Performance/System Configuration (page file, startup or running apps, error handling), csstroubleshoot
+ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
 ---
 # System Partition goes offline after installing some third-party disk or Storage Management Software
 

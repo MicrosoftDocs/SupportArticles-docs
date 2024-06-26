@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, rblume, v-lianna
-ms.custom: sap:Windows Setup, Upgrade and Deployment/Installing or upgrading Windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # Can't install Windows Server 2019 on servers with a high processor count
 

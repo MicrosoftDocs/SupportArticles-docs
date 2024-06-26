@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, brentdav
-ms.custom: sap:Windows Servicing, Updates and Features on Demand/Windows Update configuration, settings and management, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
 adobe-target: true
 ---
 # Update the Windows Update Agent to the latest version

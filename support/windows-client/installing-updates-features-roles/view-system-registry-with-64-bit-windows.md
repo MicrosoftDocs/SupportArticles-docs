@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, MBIAS
-ms.custom: sap:System Performance/System Configuration (page file, startup or running apps, error handling), csstroubleshoot
+ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
 ---
 # View the system registry by using 64-bit versions of Windows
 

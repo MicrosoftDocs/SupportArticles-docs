@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:System Management Components/Task Scheduler, csstroubleshoot
+ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
 ---
 # Failed to schedule Software Protection service for restart error in Windows Server 2012
 

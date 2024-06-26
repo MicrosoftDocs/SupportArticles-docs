@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, shahke, v-lianna
-ms.custom: sap:Windows Servicing, Updates and Features on Demand/Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
 ---
 # Error code 2359302 when installing updates in Windows Server 2019
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment/Installing or upgrading Windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # DISM fails with 0x800f0906 or runs continuously when you convert Windows Server 2012 R2 Core to Server with a GUI
 

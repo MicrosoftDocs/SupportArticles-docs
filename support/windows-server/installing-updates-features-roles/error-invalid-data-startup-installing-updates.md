@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, hamansoor, v-lianna
-ms.custom: sap:Windows Servicing, Updates and Features on Demand/Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
 ---
 # ERROR_INVALID_DATA error at startup after installing updates
 
