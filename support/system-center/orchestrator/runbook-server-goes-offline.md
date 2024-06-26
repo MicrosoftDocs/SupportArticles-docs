@@ -1,18 +1,18 @@
 ---
 title: Runbook server goes offline due to deadlocks
-description: Fixes an issue where the System Center 2012 Orchestrator runbook server goes offline due to deadlocks.
-ms.date: 08/04/2020
+description: Fixes an issue where the System Center Orchestrator runbook server goes offline due to deadlocks.
+ms.date: 06/26/2024
 ---
 # The runbook server goes offline due to deadlocks
 
-This article helps you fix an issue where the System Center 2012 Orchestrator runbook server goes offline due to deadlocks.
+This article helps you fix an issue where the System Center Orchestrator runbook server goes offline due to deadlocks.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2860832
 
 ## Symptoms
 
-The System Center 2012 Orchestrator runbook server takes itself offline due to database errors resulting from being the victim of one or more deadlocks. Orchestrator platform events as viewed in the Runbook Designer or the Orchestration console reports the following events:
+The System Center Orchestrator runbook server takes itself offline due to database errors resulting from being the victim of one or more deadlocks. Orchestrator platform events as viewed in the Runbook Designer or the Orchestration console reports the following events:
 
 > Summary: Runbook Server \<computer> is experiencing frequent errors while accessing the database  
 > Details: The Runbook Server is experiencing frequent errors while accessing the database. Verify the status of the database server. If the problem persists, contact Technical Support.  
