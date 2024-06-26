@@ -1,14 +1,14 @@
 ---
 title: Enable debug logging in SPF
 description: Describes how to enable debug logging in System Provider Foundation (SPF) either through the Windows Event Viewer or through the command line.
-ms.date: 08/04/2020
+ms.date: 06/26/2024
 ms.reviewer: markstan
 ---
 # Debug logging in System Center Service Provider Foundation (SPF)
 
 This article describes how to enable debug logging in System Provider Foundation (SPF) either through the Windows Event Viewer or through the command line.
 
-_Original product version:_ &nbsp; System Center 2012 Orchestrator, System Center 2012 R2 Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2850280
 
 ## Symptoms
