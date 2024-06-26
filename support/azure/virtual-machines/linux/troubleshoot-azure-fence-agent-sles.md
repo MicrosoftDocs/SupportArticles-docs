@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Azure Fence Agent Issues in SLES
+title: Troubleshoot Azure Fence Agent Issues in SUSE
 description: Provides troubleshooting guidance for Azure Fence Agent failing to start
 author: rnirek
 ms.author: rnirek
@@ -23,7 +23,7 @@ When the Virtual Machine(VM) is detected as being unhealthy, the fence agent use
 
 ## Prerequisites
 
-Pacemaker clusters running on SLES and using Azure fence agent  for `STONITH` purposes.
+Pacemaker clusters running on SUSE and using Azure fence agent  for `STONITH` purposes.
 
 ## Description
 
@@ -161,9 +161,9 @@ You may have sent your authentication request to the wrong tenant.\r\nTrace ID: 
 
 ### Resolution:
 
-Please check with customer and re-verify the Azure Active Directory(AAD) app tenant ID, application ID, login and password details from the Azure portal.
+Check reverify the Azure Active Directory(AAD) app tenant ID, application ID, login, and password details from the Azure portal.
 
-1. Once the IDs are verified and replaced, reconfigure the fencing agent in the cluster.
+1. Once the IDs are verified and replaced, reconfigure the fence-agent in the cluster.
 
 ```bash
 sudo crm configure property maintenance-mode=true
@@ -210,7 +210,7 @@ warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed:
 openssl s_client -connect management.azure.com:443
 ```
 
-Noticed that the output was not showing the full certificate handshake:
+Noticed that the output wasn't showing the full certificate handshake:
 ``` output
 CONNECTED(00000003)
 write:errno=0
@@ -254,7 +254,7 @@ AppServiceEnvironment
 
 ## Next Steps
 
-If you require further help, open a support request using the  follow instructions you have next. As you follow the instructions, keep a copy of the `debug-fence.out` because it's required for troubleshooting purposes.
+If you require further help, open a support request using the  following instructions you have next. As you follow the instructions, keep a copy of the `debug-fence.out` because it's required for troubleshooting purposes.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
