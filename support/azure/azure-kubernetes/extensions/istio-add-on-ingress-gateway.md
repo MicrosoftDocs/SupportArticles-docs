@@ -13,7 +13,7 @@ ms.topic: troubleshooting-general
 ---
 # Istio service mesh add-on ingress gateway troubleshooting
 
-This article discusses how to troubleshoot [ingress gateway](/azure/aks/istio-deploy-ingress) issues on the Istio service mesh add-on in the Microsoft Azure Kubernetes Service (AKS). The Istio ingress gateway is an [Envoy](https://www.envoyproxy.io)-based reverse proxy that you can use to route incoming traffic to workloads in the mesh.
+This article discusses how to troubleshoot [ingress gateway](/azure/aks/istio-deploy-ingress) issues on the Istio service mesh add-on for Azure Kubernetes Service (AKS). The Istio ingress gateway is an [Envoy](https://www.envoyproxy.io)-based reverse proxy that you can use to route incoming traffic to workloads in the mesh.
 
 For the Istio-based service mesh add-on, we offer the following ingress gateway options:
 
