@@ -59,7 +59,7 @@ To resolve the issue, follow these steps:
    ```sql
    USE [SSISDB]
    GO
-   DROP USER [##MS_SSISServerCleanupJobLogin##]
+   DROP USER [##MS_SSISServerCleanupJobUser##]
    GO
 
    CREATE USER [##MS_SSISServerCleanupJobUser##] FOR LOGIN [##MS_SSISServerCleanupJobLogin##]
