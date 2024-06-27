@@ -257,70 +257,82 @@ items:
     items:
     - name: 'Troubleshooting guidance: Windows Update'
       href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
-    - name: Additional resources for Windows Update
-      href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
-    - name: Analyze log file entries that SFC.exe generates
-      href: ./installing-updates-features-roles/analyze-sfc-program-log-file-entries.md
-    - name: Automatic Updates can't download updates
-      href: ./installing-updates-features-roles/automatic-updates-cannot-download-updates-event-16.md
-    - name: Command-line switches for software update packages
-      href: ./installing-updates-features-roles/command-line-switches-deploy-update-packages.md
-    - name: Command-line switches supported by Self-Extractor packages
-      href: ./installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md
-    - name: Download updates from Windows Update Catalog
-      href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
-    - name: 80072EE6 error when downloading an update from WSUS
-      href: ./installing-updates-features-roles/error-80072ee6-downlaod-wsus-update.md
-    - name: Error messages when you scan for updates
-      href: ./installing-updates-features-roles/error-messages-when-you-scan-updates.md
-    - name: Error message when installing RSAT
-      href: ./installing-updates-features-roles/error-message-when-installing-rsat.md
-    - name: Error 403 when you access Windows Update
-      href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
-    - name: Fix errors found in CheckSUR.log
-      href: ./installing-updates-features-roles/errors-in-checksur-log.md
     - name: Get the latest Skype version by Microsoft Update
       href: ./installing-updates-features-roles/skype-for-microsoft-update.md
     - name: How to downgrade from Windows 8
       href: ./installing-updates-features-roles/downgrade-from-windows-8.md
     - name: How to get updates via Windows Update
       href: ./installing-updates-features-roles/get-updates-through-windows-update.md
-    - name: How to keep Windows up to date
-      href: ./installing-updates-features-roles/keep-windows-up-to-date.md
     - name: How to solve disk space issues caused by WinSxS directory
       href: ./installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md
     - name: Install Service Packs and Hotfixes
       href: ./installing-updates-features-roles/install-service-packs-hotfixes.md
     - name: Package Manager can install only the first package
       href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
-    - name: Previously released updates are reoffered
-      href: ./installing-updates-features-roles/previously-released-updates-reoffered.md
-    - name: SFC detects Opencl.dll as corrupted
-      href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
-    - name: SFC flags Windows Defender files as corrupted
-      href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
-    - name: Standard terminology that defines software updates
-      href: ./installing-updates-features-roles/standard-terminology-software-updates.md
     - name: Switches with Xcopy and Xcopy32 commands
       href: ./installing-updates-features-roles/switches-with-xcopy-and-xcopy32-command.md
-    - name: System Error 126 when you start TrustedInstaller
-      href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
-    - name: System registry is no longer backed up to the RegBack folder
-      href: ./installing-updates-features-roles/system-registry-no-backed-up-regback-folder.md
-    - name: The processor not supported with Windows version
-      href: ./installing-updates-features-roles/processor-not-supported-together-with-windows-version.md
-    - name: The same update is offered repeately
-      href: ./installing-updates-features-roles/repeatedly-offer-the-same-update.md
-    - name: Update Windows Update Agent to latest version
-      href: ./installing-updates-features-roles/update-windows-update-agent.md
-    - name: Windows Update automatically downloads and installs updates
-      href: ./installing-updates-features-roles/updates-automatically-downloaded.md
-    - name: Windows Update common errors and mitigation
-      href: ./installing-updates-features-roles/common-windows-update-errors.md
-    - name: Windows Update hangs
-      href: ./installing-updates-features-roles/windows-update-hangs-updates-uninstalled.md
-    - name: Windows Update issues troubleshooting
-      href: ./installing-updates-features-roles/windows-update-issues-troubleshooting.md
+  - name: Windows Servicing, Updates and Features on Demand
+    items:
+    - name: Clients missing updates, not offered, fail to download
+      items:
+      - name: 80072EE6 error when downloading an update from WSUS
+        href: ./installing-updates-features-roles/error-80072ee6-downlaod-wsus-update.md
+      - name: Automatic Updates can't download updates
+        href: ./installing-updates-features-roles/automatic-updates-cannot-download-updates-event-16.md
+      - name: Error 403 when you access Windows Update
+        href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
+      - name: Error messages when you scan for updates
+        href: ./installing-updates-features-roles/error-messages-when-you-scan-updates.md
+      - name: Previously released updates are reoffered
+        href: ./installing-updates-features-roles/previously-released-updates-reoffered.md
+      - name: Windows Update automatically downloads and installs updates
+        href: ./installing-updates-features-roles/updates-automatically-downloaded.md
+    - name: Issues installing Features on Demand (FoD)
+      items:
+      - name: Error message when installing RSAT
+        href: ./installing-updates-features-roles/error-message-when-installing-rsat.md
+    - name: Windows Update configuration, settings and management
+      items:
+      - name: Additional resources for Windows Update
+        href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
+      - name: Command-line switches for software update packages
+        href: ./installing-updates-features-roles/command-line-switches-deploy-update-packages.md
+      - name: Download updates from Windows Update Catalog
+        href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
+      - name: How to keep Windows up to date
+        href: ./installing-updates-features-roles/keep-windows-up-to-date.md
+      - name: SFC flags Windows Defender files as corrupted
+        href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
+      - name: Standard terminology that defines software updates
+        href: ./installing-updates-features-roles/standard-terminology-software-updates.md
+      - name: System registry is no longer backed up to the RegBack folder
+        href: ./installing-updates-features-roles/system-registry-no-backed-up-regback-folder.md
+      - name: The processor not supported with Windows version
+        href: ./installing-updates-features-roles/processor-not-supported-together-with-windows-version.md
+      - name: Update Windows Update Agent to latest version
+        href: ./installing-updates-features-roles/update-windows-update-agent.md
+    - name: Windows Update fails - installation rolls back
+      items:
+      - name: Command-line switches supported by Self-Extractor packages
+        href: ./installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md
+      - name: The same update is offered repeately
+        href: ./installing-updates-features-roles/repeatedly-offer-the-same-update.md
+      - name: Windows Update hangs
+        href: ./installing-updates-features-roles/windows-update-hangs-updates-uninstalled.md
+      - name: Windows Update issues troubleshooting
+        href: ./installing-updates-features-roles/windows-update-issues-troubleshooting.md
+    - name: Windows Update fails - installation stops with error
+      items:
+      - name: Analyze log file entries that SFC.exe generates
+        href: ./installing-updates-features-roles/analyze-sfc-program-log-file-entries.md
+      - name: Fix errors found in CheckSUR.log
+        href: ./installing-updates-features-roles/errors-in-checksur-log.md
+      - name: SFC detects Opencl.dll as corrupted
+        href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
+      - name: System Error 126 when you start TrustedInstaller
+        href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
+      - name: Windows Update common errors and mitigation
+        href: ./installing-updates-features-roles/common-windows-update-errors.md
 - name: Licensing and activation
   items:
   - name: Licensing and activation
