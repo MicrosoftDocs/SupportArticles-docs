@@ -7753,7 +7753,7 @@
     {
       "source_path": "support/windows-server/deployment/cannot-install-windows-server-2019-high-processor-count.md",
       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/cannot-install-windows-server-2019-high-processor-count",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/deployment/cannot-install-dotnet-framework-3dot5-oem.md",
