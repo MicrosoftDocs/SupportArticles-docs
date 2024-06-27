@@ -1351,6 +1351,8 @@ items:
       href: ./installing-updates-features-roles/cannot-install-dotnet-framework-3dot5-oem.md
     - name: Can't install updates or programs
       href: ./installing-updates-features-roles/cannot-install-updates-programs.md
+    - name: Can't install Windows Server 2019 on servers with a high processor count
+      href: ./installing-updates-features-roles/cannot-install-windows-server-2019-high-processor-count.md
     - name: CBS.log file contains entries that some files aren't repaired
       href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
     - name: Description of System File Checker (Sfc.exe)
@@ -1381,12 +1383,16 @@ items:
       href: ./installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md     
     - name: How to block user access to Windows Update
       href: ./installing-updates-features-roles/block-user-access-windows-update.md
+    - name: How to use the Recovery Console
+      href: ./installing-updates-features-roles/use-recovery-console-not-start.md
     - name: Install Microsoft Product Support Reporting Tool
       href: ./installing-updates-features-roles/microsoft-product-support-reporting-tool-v5220030.md
     - name: List of updates
       href: ./installing-updates-features-roles/list-updates.md
     - name: Re-register Windows client/server in WSUS
       href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
+    - name: System Partition goes offline after installing some 3rd Party Disk
+      href: ./installing-updates-features-roles/system-partition-offline-install-3rd-party-disk.md
     - name: SystemInfo.exe doesn't display all installed updates
       href: ./installing-updates-features-roles/systeminfo-not-display-all-updates.md
     - name: Temporarily deactivate the kernel mode filter driver

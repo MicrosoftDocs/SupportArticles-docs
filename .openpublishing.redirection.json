@@ -11201,6 +11201,70 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/system-center/orchestrator/invoke-rest-service-activity-fails.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/determine-orchestrator-components-version.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/opalis-integration-server-connectivity-requirements.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/runbooks-folders-statistics-not-displayed.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/set-user-permissions.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/setup-has-detected-opalis-installed-error.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/invalid-objectserver-data-type-error.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/systeminfo-not-display-all-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/systeminfo-not-display-all-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/microsoft-product-support-reporting-tool-v5220030.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/microsoft-product-support-reporting-tool-v5220030",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/cannot-install-updates-programs.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-install-updates-programs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/deactivate-kernel-mode-filter-driver.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/deactivate-kernel-mode-filter-driver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/dotnet-framework-1dot1-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/dotnet-framework-1dot1-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/how-to-use-automatic-updates-feature.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/how-to-use-automatic-updates-feature",
+      "redirect_document_id": false
+    }
       "source_path": "support/windows-client/installing-updates-features-roles/missing-windows-installer-cache.md",
       "redirect_url": "/troubleshoot/windows-client/application-management/missing-windows-installer-cache",
       "redirect_document_id": true
@@ -11279,6 +11343,6 @@
       "source_path": "support/windows-client/installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps.md",
       "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/sysprep-fails-remove-or-update-store-apps",
       "redirect_document_id": true
-    }
+     } 
   ]
 }
