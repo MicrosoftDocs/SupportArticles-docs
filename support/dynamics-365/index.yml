@@ -17,8 +17,8 @@ additionalContent:
         - title: Dynamics 365 Customer Insights - Data
           summary: Troubleshooting articles for Dynamics 365 Customer Insights - Data
           url: customer-insights/welcome-customer-insights.yml
-        - title: Dynamics 365 Customer Service and Contact Center
-          summary: Troubleshooting articles for Dynamics 365 Customer Service and Contact Center
+        - title: Dynamics 365 Customer Service and Dynamics 365 Contact Center
+          summary: Troubleshooting articles for Dynamics 365 Customer Service and Dynamics 365 Contact Center
           url: customer-service/welcome-customer-service.yml
         - title: Dynamics 365 Commerce
           summary: Troubleshooting articles for Dynamics 365 Commerce

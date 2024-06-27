@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Microsoft Dynamics 365 Customer Service and Contact Center troubleshooting
-summary: Welcome to Microsoft Dynamics 365 Customer Service and Contact Center (formerly Omnichannel for Customer Service) troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use these products. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Microsoft Dynamics 365 Customer Service and Dynamics 365 Contact Center troubleshooting
+summary: Welcome to Microsoft Dynamics 365 Customer Service and Dynamics 365 Contact Center (formerly Omnichannel for Customer Service) troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use these products. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
-  title: Microsoft Dynamics 365 Customer Service and Contact Center troubleshooting
-  description: Landing page for Microsoft Dynamics 365 Customer Service and Contact Center troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  title: Microsoft Dynamics 365 Customer Service and Dynamics 365 Contact Center troubleshooting
+  description: Landing page for Microsoft Dynamics 365 Customer Service and Dynamics 365 Contact Center troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: dynamics-365-customerservice #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
@@ -16,7 +16,7 @@ metadata:
 landingContent:
 
   # Card
-  - title: Contact Center (formerly Omnichannel for Customer Service)
+  - title: Dynamics 365 Contact Center (formerly Omnichannel for Customer Service)
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -24,14 +24,14 @@ landingContent:
             url: omnichannel-for-customer-service/agent-dashboard-error-omnichannel-provision.md
           - text: Agent dashboard loading or authorization issues
             url: omnichannel-for-customer-service/agent-dashboard-auth-error.md
+          - text: Copilot Studio conversations active after a chat ends
+            url: omnichannel-for-customer-service/pva-conversations-active-dashboard.md
           - text: Conversation stuck in wrap-up state
             url: omnichannel-for-customer-service/conversation-stuck-wrap-up-state.md
           - text: Communication panel loading issues
             url: omnichannel-for-customer-service/communication-panel-load-issue.md
           - text: Error creating a chat widget or social channel
             url: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md
-          - text: PVA conversations active after chat ends
-            url: omnichannel-for-customer-service/pva-conversations-active-dashboard.md
 
   # Card
   - title: Email

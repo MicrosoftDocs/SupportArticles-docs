@@ -4,7 +4,7 @@ description: Provides a resolution for the issue where Power Virtual Agents bot 
 ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 05/23/2023
-ms.custom: sap:Power Virtual Agents (PVA)
+ms.custom: sap:Copilot Studio\End conversation
 ---
 # Power Virtual Agents bot conversations appear as active on the dashboard after a user ends a chat
 
