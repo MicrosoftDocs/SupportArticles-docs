@@ -12,6 +12,8 @@
   href: ./change-mouse-pointer-window-mfc.md
 - name: Click a Check box in a TreeView
   href: ./click-check-box-treeview.md
+- name: OnInitDialog isn't called when using V4 printer drivers
+  href: ./oninitdialog-not-called-v4-printer-drivers.md
 - name: Error at thread exit if FLS callback isn't freed
   href: ./fatal-error-thread-exit-fls-callback.md
 - name: FAQs about Standard C++ library
