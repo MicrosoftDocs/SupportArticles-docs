@@ -3,7 +3,7 @@ title: SLA Timer keeps running or expires before the Timer failure time
 description: Provides a resolution for an issue where the SLA Timer keeps running or expires prior to the failure time on the Timer.
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
-ms.date: 06/26/2024
+ms.date: 06/27/2024
 ms.custom: sap:Service Level Agreements\SLA timer is running even if the case is resolved
 ---
 # SLA Timer keeps running or expires before the Timer failure time 
