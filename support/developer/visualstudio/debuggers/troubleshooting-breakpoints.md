@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot breakpoints in the debugger
 description: If a breakpoint is disabled or couldn't be set, it's displayed as a hollow circle. Look here information on problems that can occur when setting breakpoints.
-ms.date: 06/12/2024
+ms.date: 06/27/2024
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: mikejo
@@ -23,10 +23,17 @@ To determine the difference, hover over the breakpoint and see if there's a warn
 
 ### "No Symbols have been loaded for this document"
 
-Go to the **Modules** window (**Debug** > **Windows** > **Modules**) when debugging and check whether your module is loaded.
+Navigate to **Debug** > **Windows** > **Modules** when debugging and check whether your module is loaded.
 
 - If your module is loaded, check the **Symbol Status** column to see whether symbols have been loaded.
-  - If symbols aren't loaded, check the symbol status to diagnose the issue. From the context menu on a module in the **Modules** window, select **Symbol Load Information...** to see where the debugger looked to try and load symbols. For more information about loading symbols, see [Specify Symbol (.pdb) and Source Files](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger).
+  - If symbols aren't loaded, check the symbol status to diagnose the issue:
+
+    In the **Modules** window, right-click the module for which symbols haven't loaded and select **Symbol Load Information...**.
+
+    :::image type="content" source="media/troubleshooting-breakpoints/symbol-load-information.png" alt-text="Screenshot of Symbol Load Information in the Modules window.":::
+
+    For more information about loading symbols, see [Specify Symbol (.pdb) and Source Files](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger).
+
   - If symbols are loaded, the PDB doesn't contain information about your source files. A few possible causes are:
     - If your source files were recently added, confirm that an up-to-date version of the module is being loaded.
     - It's possible to create stripped PDBs using the **/PDBSTRIPPED** linker option. Stripped PDBs don't contain source file information. Confirm you're working with a full PDB and not a stripped PDB.
