@@ -19,7 +19,7 @@ ms.date: 06/27/2024
 
 # Loop workspaces are unexpectedly stored in SharePoint Online sites
 
-When you create Microsoft Loop workspaces, they are stored in SharePoint Online sites instead of SharePoint Embedded containers.
+When you create Microsoft Loop workspaces, they're stored in SharePoint Online sites instead of SharePoint Embedded containers.
 
 To fix this issue, follow these steps.
 
@@ -41,7 +41,7 @@ Follow these steps:
    When the script finishes, it returns a CSV file that contains metadata for each SharePoint site, including the site URL.
 1. Identify the SharePoint sites that are used to store Loop workspaces. For each SharePoint site:
 
-   - Check whether the site's default **Documents** library contains a *LoopAppData* folder and a *.pod* file.
+   - Check whether the site's default **Documents** library contains a *LoopAppData* folder and a *`.pod`* file.
    - Check whether the site URL ends with a GUID, for example, `https://contoso.sharepoint.com/sites/c2e21339-b2f4-41fe-921c-bbb7bbc0f14a`.
 1. Determine the site owners:
 
@@ -56,7 +56,7 @@ Depending on your business needs, Loop users can keep the workspaces on SharePoi
 
 To access the SharePoint site where the workspace is stored, follow these steps:
 
-1. From a page in the Loop workspace, select **Share** > **Page link**. This creates a sharing link that's similar to the following example:
+1. From a page in the Loop workspace, select **Share** > **Page link** to create a sharing link that's similar to the following example:
 
    `https://microsoft.sharepoint.com/:fl:/s/6405bb1e-d41b-4df2-a433-e7e3d60d7a2a`
 
@@ -94,7 +94,7 @@ To migrate a workspace, follow these steps:
    1. In the existing workspace, expand all pages to make sure that they're visible.
    1. In the new workspace, create the same pages.
    1. Copy the content of each corresponding page in the existing workspace to the newly created page in the new workspace.
-1. For each page in the new workspace, make sure that its sharing permissions match those of the corresponding page in the existing workspaces. To check or change the sharing permissions for a page, select **Share** > **Page link**, and then select **Settings**.
+1. For each page in the new workspace, make sure that its sharing permissions match the permissions of the corresponding page in the existing workspaces. To check or change the sharing permissions for a page, select **Share** > **Page link**, and then select **Settings**.
 1. (Optional) If any links to pages in the existing workspace were shared, replace the content with a link to the corresponding page in the new workspace. For example, after you verify that all content of Page A in *ProjectOLD* has been copied to Page A in *Project*, follow these steps:
    1. In Page A in *Project*, select **Share** > **Page link**.
    1. In Page A in *ProjectOLD*, remove all content and paste the link you copied in step a.
