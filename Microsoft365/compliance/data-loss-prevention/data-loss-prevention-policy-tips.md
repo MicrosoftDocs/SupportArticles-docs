@@ -40,7 +40,7 @@ To run the diagnostic, follow these steps:
 
    - User principal name (UPN) or email address of the user
    - DLP rule name or GUID
-   - Outlook client: **Outlook** or **OWA** (Outlook on the web)
+   - **Outlook** or **OWA** (Outlook on the web)
 
 3. Select **Run Tests**.
 
