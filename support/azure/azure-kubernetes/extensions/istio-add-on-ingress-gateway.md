@@ -69,7 +69,7 @@ Additionally, you can find more information about gateway and sidecar debugging 
 
 In an event of high resource utilization where the default min/max replica configurations for istiod and the gateways are not sufficient, [Horizontal pod autoscaling](/azure/aks/istio-scale) configurations can be modified. 
 
-### Step 5: Troubleshoot secure gateway
+### Step 5: Troubleshoot [Secure ingress gateway](/azure/aks/istio-secure-gateway)
 
 When external ingress gateway is configured to expose a secure HTTPS service using either simple or mutual TLS, follow these troubleshooting steps:
 
@@ -90,7 +90,7 @@ kubectl logs -n aks-istio-ingress <gateway-service-pod>
 ```bash
 kubectl -n aks-istio-ingress get secrets
 ```
-For the example in the [Secure ingress gateway](/azure/istio-secure-gateway) article, `productpage-credential` secret should be listed.
+For the example in the secure ingress gateway article, `productpage-credential` secret should be listed.
 After you enable the Azure Key Vault secrets provider add-on, you have to grant access for the user-assigned managed identity of the add-on to the Azure Key Vault. Setting up access to Azure Key Vault incorrectly will cause the `productpage-credential` secret to not get created.
 
 After you create `SecretProviderClass` resource, ensure the sample pod, `secrets-store-sync-productpage` that references this resourse is successfully deployed to ensure secrets sync from Azure Key Vault to the cluster.
