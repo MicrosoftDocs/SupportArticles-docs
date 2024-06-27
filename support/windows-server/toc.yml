@@ -1339,8 +1339,6 @@ items:
     href: ./installing-updates-features-roles/installing-updates-features-roles-overview.md
   - name: Failure to install Windows Updates
     items:
-    - name: 'Troubleshooting guidance: Windows Update for Business reports'
-      href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
     - name: Can't install updates or programs
       href: ./installing-updates-features-roles/cannot-install-updates-programs.md
     - name: How the Windows Update client determines which proxy server to use
@@ -1357,10 +1355,6 @@ items:
       href: ./installing-updates-features-roles/windows-server-2008-service-pack-2.md
     - name: WSUS 3.0 installation package is available
       href: ./installing-updates-features-roles/wsus-3-installation-package.md
-    - name: 'WUBr: Troubleshoot diagnostic data transmission'
-      href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
-    - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-      href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
   - name: Windows Servicing, Updates and Features on Demand
     items:
     - name: Clients missing updates, not offered, fail to download
@@ -1369,7 +1363,7 @@ items:
         href: ./installing-updates-features-roles/list-updates.md
       - name: WSUS SelfUpdate doesn't send automatic updates
         href: ./installing-updates-features-roles/wsus-selfupdate-not-send-automatic-updates.md
-    - name: Issues installing Features on Demand(FoD)
+    - name: Issues installing Features on Demand (FoD)
       items:
       - name: Can't install .NET Framework 3.5 on OEM Windows installation
         href: ./installing-updates-features-roles/cannot-install-dotnet-framework-3dot5-oem.md
@@ -1425,6 +1419,18 @@ items:
         href: ./installing-updates-features-roles/fix-windows-update-errors.md
       - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
         href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
+  - name: Windows Update for Business Reports
+    items:
+    - name: Initial service configuration and Onboarding
+      items:
+      - name: 'Troubleshooting guidance: Windows Update for Business reports'
+        href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
+    - name: Missing data or incomplete report data
+      items:
+      - name: 'WUBr: Troubleshoot diagnostic data transmission'
+        href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
+      - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+        href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
 - name: Licensing and activation
   items:
   - name: Licensing and activation
