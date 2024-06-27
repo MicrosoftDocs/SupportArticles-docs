@@ -78,7 +78,7 @@ See [Outlook 2013 and later supports showing policy tips for only some condition
 
 ## Not all policy conditions are met
 
-This scenario occurs primarily if policy tips don't work as expected in SharePoint and OneDrive because there's an external sharing condition that's configured in a policy.
+This scenario occurs primarily if policy tips don't work as expected in SharePoint in Microsoft 365 and Microsoft OneDrive for work or school because there's an external sharing condition that's configured in a policy.
 
 :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/external-sharing-condition.png" alt-text="Screenshot shows that an external sharing condition is configured in a policy.":::
 
@@ -100,7 +100,7 @@ For Outlook 2013 and later version clients, make sure that MailTips are enabled.
 
 ## GetDLPPolicyTip call not found in Fiddler trace
 
-If DLP policy tips don't work as expected, Fiddler is a useful tool to help you diagnose the issue. Here's how to use a Fiddler trace to troubleshoot DLP policy tips.
+If DLP policy tips don't work as expected, use a Fiddler trace to troubleshoot DLP policy tips.
 
 1. Collect the Fiddler trace file when you reproduce the issue. Here's an example in which the DLP policy tip is triggered as expected.
 
