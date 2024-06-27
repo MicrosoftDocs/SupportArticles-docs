@@ -24,7 +24,7 @@ Before you begin the leapp pre-upgrade and upgrade process, make sure that you t
 
 - Make a backup of the virtual machine or a snapshot of the OS disk.
 
-- Clear enough space in `/var/lib/leapp`. Having at least 2-5 GB of free space is a safe practice.
+- Clear enough space in */var/lib/leapp*. Having at least 2-5 GB of free space is a safe practice.
 
 - Set up access to the serial console.
 
@@ -110,7 +110,7 @@ The following list contains common occurrences of output that describes an inhib
   Summary: Support for the following RHEL 7 device drivers has been removed in RHEL 8: 
    pata_acpi
    floppy
-  Remediation: blacklist modules that are unsupported in RHEL 8 (floppy and pata_acpi) or unload the modules by running [command] sudo rmmod floppy pata_acpi
+  Remediation: blocklist modules that are unsupported in RHEL 8 (floppy and pata_acpi) or unload the modules by running [command] sudo rmmod floppy pata_acpi
   ```
 
 - Inhibitor output 6
@@ -380,7 +380,7 @@ Summary:
 
 Extend the file system on which */var/lib/leapp* is mounted. Typically, the mounting is on */dev/mapper/rootvg-varlv*.
 
-Normally the output is in green or yellow, indicating that it's safe to proceed with the leapp upgrade.
+Normally the output is shown in green or yellow, indicating that it's safe to proceed with the leapp upgrade.
 
 ### Upgrade symptom 2: The openssl-libs-1:1.1.1k-12.el8_9.x86_64 conflicts with file from package openssl11-libs-1:1.1.1k-7.el7.x86_64
 
@@ -450,7 +450,7 @@ sudo yum remove ansible ansible-test
 
 ### Upgrade symptom 4: ImportError: /lib64/libk5crypto.so.3: undefined symbol
 
-There's a mismatch or missing symbol in the OpenSSL library that *libk5crypto* requires, as shown in the following output.
+There's a mismatch or missing symbol in the OpenSSL library that *libk5crypto* requires, as shown in the following output:
 
 ```output
 [ 1895.402427] upgrade[557]: ImportError: /lib64/libk5crypto.so.3: undefined symbol: EVP_KDF_ctrl, version OPENSSL_1_1_1b
@@ -517,7 +517,7 @@ If you run the leapp upgrade, you might encounter the following error "Failed to
 [ 4.812413]  kernel: cgroup2: Unknown parameter 'mode'
 ```
 
-The mounting failure is because the Cgroup v2 is unsupported on RHEL 7. For more information, see [\[IPU 7>8\] Leapp fails with cgroup v2 that is unsupported](https://issues.redhat.com/browse/RHEL-24854).
+The mounting failure is because version 2 of the control group (cgroup v2) is unsupported on RHEL 7. For more information, see [\[IPU 7>8\] Leapp fails with cgroup v2 that is unsupported](https://issues.redhat.com/browse/RHEL-24854).
 
 #### Upgrade solution 6: Remove the systemd.unified_cgroup_hierarchy parameter
 
