@@ -234,7 +234,7 @@ OBJECT_ID=$(az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER --query
 To set the access policy, run the following [az keyvault set-policy](/cli/azure/keyvault#az-keyvault-set-policy) command by specifying the object ID that you obtained:
 
 ```azurecli-interactive
-az keyvault set-policy --name $$AKV_NAME --object-id $OBJECT_ID --secret-permissions get list
+az keyvault set-policy --name $AKV_NAME --object-id $OBJECT_ID --secret-permissions get list
 ```
 
 > [!NOTE]
