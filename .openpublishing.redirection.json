@@ -11264,7 +11264,8 @@
       "source_path": "support/windows-client/installing-updates-features-roles/how-to-use-automatic-updates-feature.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/how-to-use-automatic-updates-feature",
       "redirect_document_id": false
-    }
+    },
+    {
       "source_path": "support/windows-client/installing-updates-features-roles/missing-windows-installer-cache.md",
       "redirect_url": "/troubleshoot/windows-client/application-management/missing-windows-installer-cache",
       "redirect_document_id": true
