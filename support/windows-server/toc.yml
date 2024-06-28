@@ -855,6 +855,8 @@ items:
       href: ./backup-and-storage/vss-writers-report-failed-virtual-machine.md
 - name: Certificates and Public Key Infrastructure (PKI)
   items:
+  - name: Certificates and Public Key Infrastructure (PKI)
+    href: ./certificates-and-public-key-infrastructure-pki/certificates-and-public-key-infrastructure-pki-overview.md
   - name: Active Directory Certificate Services (ADCS)
     items:
     - name: CA doesn't publish certificates in trusted domain
