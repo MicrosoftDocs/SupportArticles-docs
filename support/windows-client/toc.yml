@@ -253,20 +253,6 @@ items:
   items:
   - name: Windows Servicing, Updates and Features on Demand
     href: ./windows-servicing-updates-and-features-on-demand/windows-servicing-updates-and-features-on-demand-overview.md
-  - name: Failure to install Windows Updates
-    items:
-    - name: 'Troubleshooting guidance: Windows Update'
-      href: ./windows-servicing-updates-and-features-on-demand/troubleshoot-windows-update-issues.md
-    - name: How to downgrade from Windows 8
-      href: ./windows-servicing-updates-and-features-on-demand/downgrade-from-windows-8.md
-    - name: How to get updates via Windows Update
-      href: ./windows-servicing-updates-and-features-on-demand/get-updates-through-windows-update.md
-    - name: How to solve disk space issues caused by WinSxS directory
-      href: ./windows-servicing-updates-and-features-on-demand/address-disk-space-issues-caused-by-winsxs.md
-    - name: Install Service Packs and Hotfixes
-      href: ./windows-servicing-updates-and-features-on-demand/install-service-packs-hotfixes.md
-    - name: Package Manager can install only the first package
-      href: ./windows-servicing-updates-and-features-on-demand/package-manager-cannot-manage-two-more-packages.md
   - name: Clients missing updates, not offered, fail to download
     items:
     - name: 80072EE6 error when downloading an update from WSUS
@@ -281,6 +267,20 @@ items:
       href: ./windows-servicing-updates-and-features-on-demand/previously-released-updates-reoffered.md
     - name: Windows Update automatically downloads and installs updates
       href: ./windows-servicing-updates-and-features-on-demand/updates-automatically-downloaded.md
+  - name: Failure to install Windows Updates
+    items:
+    - name: 'Troubleshooting guidance: Windows Update'
+      href: ./windows-servicing-updates-and-features-on-demand/troubleshoot-windows-update-issues.md
+    - name: How to downgrade from Windows 8
+      href: ./windows-servicing-updates-and-features-on-demand/downgrade-from-windows-8.md
+    - name: How to get updates via Windows Update
+      href: ./windows-servicing-updates-and-features-on-demand/get-updates-through-windows-update.md
+    - name: How to solve disk space issues caused by WinSxS directory
+      href: ./windows-servicing-updates-and-features-on-demand/address-disk-space-issues-caused-by-winsxs.md
+    - name: Install Service Packs and Hotfixes
+      href: ./windows-servicing-updates-and-features-on-demand/install-service-packs-hotfixes.md
+    - name: Package Manager can install only the first package
+      href: ./windows-servicing-updates-and-features-on-demand/package-manager-cannot-manage-two-more-packages.md
   - name: Issues installing Features on Demand (FoD)
     items:
     - name: Error message when installing RSAT
