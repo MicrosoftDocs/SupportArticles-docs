@@ -34,7 +34,7 @@ The **Azure Virtual Machines** tab shows the full list of Azure VMs, displaying 
 | MMA/OMS and Azure Monitor Agent | **In Progress**                  |
 | Azure Monitor Agent only        | **Completed**                    |
 
-You can export the table of information in this tab to Microsoft Excel.
+You can export the table of information in this tab to Microsoft Excel. To do this, select the **More** button (...), and then select **Export to Excel** from the menu.
 
 > [!NOTE]
 > The list of column values that are shown in the **Azure Virtual Machines** tab is the same if you select the **Azure Virtual Machine Scale Sets** tab or the **Arc-Enabled Servers** tab.
@@ -73,7 +73,7 @@ To deploy Azure Monitor Agent, you must have the following permissions:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Step 2: Understand your data collection](understand-your-data-collection.md)
+> [Step 2: Understand your data collection](step-2-understand-your-data-collection.md)
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
 
