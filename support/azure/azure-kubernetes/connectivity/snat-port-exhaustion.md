@@ -24,19 +24,20 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
 
      :::image type="content" source="media/snat-port-exhaustion/connectivity-issues.png" alt-text="Screenshot of the 'Connectivity Issues' pane." lightbox="media/snat-port-exhaustion/connectivity-issues.png":::
 
-2. Connect to your AKS cluster and use the node IP address to get the pod name by running the following `kubectl` command:
+2. Connect to your AKS cluster and use the node IP address to get the node name by running the following `kubectl` command:
 
     ```console
     kubectl get nodes -o wide | grep <node IP>
     ```
 
-## Step 2: Locate the Linux pod that has high outbound connections
+## Step 2: Locate the pod that has high outbound connections
 
 > [!NOTE]
-> [Tcptracer](https://github.com/iovisor/bcc/blob/master/tools/tcptracer.py) is one of the [BPF Compiler Collection (BCC) tools](https://github.com/iovisor/bcc#contents) that are pre-installed on Linux nodes. It allows you to trace TCP established connections (`connect()`, `accept()`, and `close()`). You can use it to find high outbound connections from the source IP address and network namespace (netns) of a pod.
-> All the following commands in this section are run as the root user on the Linux node.
+> - [Tcptracer](https://github.com/iovisor/bcc/blob/master/tools/tcptracer.py) is one of the [BPF Compiler Collection (BCC) tools](https://github.com/iovisor/bcc#contents) that are pre-installed on Linux nodes. It allows you to trace TCP established connections (`connect()`, `accept()`, and `close()`). You can use it to find high outbound connections from the source IP address and network namespace (netns) of a pod.
+> - To access the BCC tools, use [kubectl node-shell](https://github.com/kvaps/kubectl-node-shell) *ONLY*.
+> - All the following commands in this section are run as the root user on a Linux node that has the BCC tools installed.
 
-1. On the Linux node that experiences SNAT port exhaustion, install [kubectl node-shell](https://github.com/kvaps/kubectl-node-shell), which is the only tool to access the BCC tools.
+1. On the node that experiences SNAT port exhaustion, install [kubectl node-shell](https://github.com/kvaps/kubectl-node-shell):
     
     ```bash
     curl -LO https://github.com/kvaps/kubectl-node-shell/raw/master/kubectl-node_shell
@@ -113,7 +114,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
 
     Note the first five characters of the `containerd` ID in the command output. It will be used in step 7.
 
-7. Map the previous `containerd` ID value to a POD ID by using [crictl](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md). Crictl provides a CLI for CRI-compatible container runtimes.
+7. Map the previous containerd `-id` value to a POD ID by using [crictl](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md). Crictl provides a CLI for CRI-compatible container runtimes.
 
     ```bash
     crictl ps -a
@@ -126,7 +127,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
     6b5xxxxb    fbxxxxx1  6 hours ago  Running   ubuntu  0          2xxxxxxxxf    nginx
     ```
 
-    Use the first five characters of the previous `containerd` ID to match a POD ID.
+    Use the first five characters of the previous containerd `-id` value to match a POD ID.
 
 8. Get all pods running on the node and use the previous POD ID to match the pod that has high outbound connections from the command output:
     
