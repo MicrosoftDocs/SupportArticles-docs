@@ -473,7 +473,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -812,7 +812,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -1141,7 +1141,7 @@ We expect the device to send one or more requests to obtain the latest updates f
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -1226,7 +1226,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -1617,7 +1617,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -1909,7 +1909,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -1973,7 +1973,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
