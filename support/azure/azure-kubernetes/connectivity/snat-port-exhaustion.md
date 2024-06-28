@@ -135,11 +135,19 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
     kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=<nodename>
     ```
 
-## Step 3: Find all outbound network connections made by the application running in the pod
+## Step 3: Locate all pods running on the node
+
+To get all pods running on the node that experiences SNAT port exhuastion, run the following command:
+
+```console
+kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=<nodename>
+```
+
+## Step 4: Find all outbound network connections made by the application
 
 ### [For a Linux pod](#tab/for-a-linux-pod)
 
-1. Execute into the pod that has high outbound connections by using one of the following commands:
+1. Execute into the pod that's identified having high outbound connections in [Step 2: Locate the Linux pod that has high outbound connections](#step-2-locate-the-linux-pod-that-has-high-outbound-connections) by using one of the following commands:
 
     - ```bash
       kubectl exec -it <pod name> -n <namespace> /bin/bash
