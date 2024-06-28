@@ -86,7 +86,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
 
 4. Map the IP address with the most connections from the previous output to a pod. If it doesn't work, you can continue.
 
-5. Note the `SADDR` and `NETNS` values with the most connections from the previous output, and then run the following command to map them to a PID by using [lsns](https://man7.org/linux/man-pages/man8/lsns.8.html). Lsns is a Linux tool that lists namespaces and maps namespaces to PIDs in the Linux process tree.
+5. Note the `SADDR` or `NETNS` values with the most connections from the previous output, and then run the following command to map it to a PID by using [lsns](https://man7.org/linux/man-pages/man8/lsns.8.html). Lsns is a Linux tool that lists namespaces and maps namespaces to PIDs in the Linux process tree.
 
     ```bash
     lsns -t net
@@ -135,15 +135,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
     kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=<nodename>
     ```
 
-## Step 3: Locate all pods running on the node
-
-To get all pods running on the node that experiences SNAT port exhuastion, run the following command:
-
-```console
-kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=<nodename>
-```
-
-## Step 4: Find all outbound network connections made by the application
+## Step 3: Find all outbound network connections made by the application
 
 ### [For a Linux pod](#tab/for-a-linux-pod)
 
@@ -212,13 +204,19 @@ kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=<nodena
 
 ### [For a Windows pod](#tab/for-a-windows-pod)
 
-1. Execute into a Windows pod by running the following command:
+1. Locate all of the pods running on the node that's identified having high outbound connections by running the following command:
+
+    ```console
+    kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=<nodename>
+    ```
+
+2. Execute into a Windows pod by running the following command:
 
     ```console
     kubectl exec -it <Windows pod name> -- cmd.exe
     ```
 
-2. Run the following netstat command to find established connections from the Windows application running in the pod:
+3. Run the following netstat command to find established connections from the Windows application running in the pod:
 
     ```console
     netstat -aon | find /i "established"
