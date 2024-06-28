@@ -126,7 +126,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
     6b5xxxxb    fbxxxxx1  6 hours ago  Running   ubuntu  0          2xxxxxxxxf    nginx
     ```
 
-    Use the first five characters of the previous containerd- ID to match a POD ID.
+    Use the first five characters of the previous `containerd` ID to match a POD ID.
 
 8. Get all pods running on the node and use the previous POD ID to match the pod that has high outbound connections from the command output:
     
@@ -225,7 +225,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
       TCP    10.x.x.x:49167         13.x.x.x:80         ESTABLISHED     9188 
     ```
 
-    In the command output, the local address is the pod's IP address, and the foreign address is the IP to which the application connects. The the public IP connections in the `ESTABLISHED` state are the connections that utilize SNAT. Ensure that you count only the connections in the `ESTABLISHED` state to public IP addresses and ignore any connections in the `ESTABLISHED` state to private IP addresses.
+    In the command output, the local address is the pod's IP address, and the foreign address is the IP to which the application connects. The public IP connections in the `ESTABLISHED` state are the connections that utilize SNAT. Ensure that you count only the connections in the `ESTABLISHED` state to public IP addresses and ignore any connections in the `ESTABLISHED` state to private IP addresses.
 
 Repeat the steps in this section for all other pods running on the node. The pod that has the most connections in the `ESTABLISHED` state to public IP addresses hosts the application that causes SNAT port exhaustion on the node. Work with your application developers to tune the application for improved network performance using the recommendations mentioned in [Design connection-efficient applications](/azure/load-balancer/troubleshoot-outbound-connection#design-connection-efficient-applications). After implementing the recommendations, verify that you see less SNAT port exhaustion.
  
