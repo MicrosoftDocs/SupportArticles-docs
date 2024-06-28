@@ -1,16 +1,18 @@
 ---
 title: Error code 0x80090016 Keyset does not exist in event viewer or agent logs
 description: Resolve error code 0x80090016 "Keyset does not exist" when you try to connect to your event viewer or agent logs.
-ms.date: 01/12/2022
-ms.reviewer: irfanr, v-leedennis
+ms.date: 06/24/2024
+ms.reviewer: irfanr, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-monitor
 keywords: 
 #Customer intent: As a Log Analytics user, I want to resolve error code 0x80090016 "Keyset does not exist" so I can connect to my event viewer and agent logs. 
-ms.custom: sap:azure-monitor
+ms.custom: sap:Create and manage Log Analytics workspaces
 ---
 
 # Error code 0x80090016 - Keyset does not exist in event viewer or agent logs
+
+[!INCLUDE [Azure Help Support](../../../../includes/azure/log-analytics-agent-end-of-life-note.md)]
 
 This article explains how to resolve error code 0x80090016 - "Keyset does not exist" when you try to connect to your event viewer or agent logs.
 

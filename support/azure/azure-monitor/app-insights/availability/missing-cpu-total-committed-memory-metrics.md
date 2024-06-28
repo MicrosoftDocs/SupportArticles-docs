@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot missing CPU Total and Committed Memory metrics
 description: Troubleshoot missing CPU Total and Committed Memory metrics when you look at live metrics in Application Insights.
-ms.date: 02/20/2024
+ms.date: 06/24/2024
 ms.reviewer: vitalyg, toddfous, v-leedennis
 ms.service: azure-monitor
 #Customer intent: As an Application Insights user, I want to troubleshoot missing "CPU Total" and "Committed Memory" metrics so that I can view their respective live metric charts.

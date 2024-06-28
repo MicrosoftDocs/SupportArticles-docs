@@ -430,6 +430,8 @@
       href: cloud-init-deployment-delay.md
     - name: Upload Hyper-V DC to Azure
       href: upload-existing-hyperv-dc-azure-ps.md
+    - name: Troubleshoot Azure VM Image Builder
+      href: /azure/virtual-machines/linux/image-builder-troubleshoot?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
 - name: On-demand Capacity Reservation issues
   items:

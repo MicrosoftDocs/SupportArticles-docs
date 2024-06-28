@@ -2,13 +2,9 @@
 author: DennisLee-DennisLee
 ms.service: virtual-machines-windows
 ms.topic: include
-ms.date: 06/17/2024
+ms.date: 06/21/2024
 ms.author: v-leedennis
 ---
-##### Repair the system binary file
-
-Repair the system binary (*.sys*) file by following these steps:
-
 1. On the attached disk, browse to the location of the binary file that's displayed in the error message.
 
 1. Rename the file from *\<binary-name>.sys* to *\<binary-name>.sys.old*.
@@ -59,10 +55,12 @@ Repair the system binary (*.sys*) file by following these steps:
 
    > [!NOTE]
    >
-   > - The screenshot shows volume *E* as an example. The actual letter should reflect the faulty drive (the OS disk attached as a data disk on the troubleshooting VM).
+   > - If the system binary file can't be renamed, [take ownership of the file](/windows-server/administration/windows-commands/takeown). This action gives you full access to this file.
+   >
+   > - The example console output shows volume *E* as an example. The actual letter should reflect the faulty drive (the OS disk attached as a data disk on the troubleshooting VM).
    >
    > - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
    >
    > - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
 
-1. Detach the repaired disk from the troubleshooting VM. Then, create a VM from the OS disk.
+1. Detach the repaired disk from the troubleshooting VM. Then, [create a VM from the OS disk](/azure/virtual-machines/attach-os-disk).

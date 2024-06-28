@@ -9,7 +9,7 @@ metadata:
   ms.service: customer-insights
   author: m-hartmann
   ms.author: mhart
-  ms.date: 01/02/2024
+  ms.date: 06/13/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -42,6 +42,10 @@ landingContent:
             url: data/profile-unification/merge-failed.md
           - text: Missing business unit values
             url: data/profile-unification/missing-business-unit.md
+          - text: Troubleshoot deduplication, match, or merge results
+            url: data/profile-unification/troubleshoot-unification-results.md
+          - text: Troubleshoot unification output tables
+            url: data/profile-unification/troubleshoot-unification-output-tables.md
             
   # Card
   - title: Environment management

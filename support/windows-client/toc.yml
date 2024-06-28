@@ -283,24 +283,18 @@ items:
       href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
     - name: Fix errors found in CheckSUR.log
       href: ./installing-updates-features-roles/errors-in-checksur-log.md
-    - name: Get the latest Skype version by Microsoft Update
-      href: ./installing-updates-features-roles/skype-for-microsoft-update.md
     - name: How to downgrade from Windows 8
       href: ./installing-updates-features-roles/downgrade-from-windows-8.md
     - name: How to get updates via Windows Update
       href: ./installing-updates-features-roles/get-updates-through-windows-update.md
     - name: How to keep Windows up to date
       href: ./installing-updates-features-roles/keep-windows-up-to-date.md
-    - name: How to schedule automatic updates
-      href: ./installing-updates-features-roles/how-to-use-automatic-updates-feature.md
     - name: How to solve disk space issues caused by WinSxS directory
       href: ./installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md
     - name: In-place upgrade to Windows 10 problem
       href: ./installing-updates-features-roles/in-place-upgrade-to-windows-10-problems.md
     - name: Install Service Packs and Hotfixes
       href: ./installing-updates-features-roles/install-service-packs-hotfixes.md
-    - name: .NET Framework 1.1 isn't supported
-      href: ./installing-updates-features-roles/dotnet-framework-1dot1-not-supported.md
     - name: Package Manager can install only the first package
       href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
     - name: Previously released updates are reoffered
@@ -313,8 +307,6 @@ items:
       href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
     - name: Standard terminology that defines software updates
       href: ./installing-updates-features-roles/standard-terminology-software-updates.md
-    - name: Switches with Xcopy and Xcopy32 commands
-      href: ./installing-updates-features-roles/switches-with-xcopy-and-xcopy32-command.md
     - name: Sysprep fails after you remove or update Microsoft Store apps
       href: ./installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps.md
     - name: System Error 126 when you start TrustedInstaller
@@ -823,6 +815,8 @@ items:
       href: ./setup-upgrade-and-drivers/customize-default-local-user-profile.md
     - name: Download and burn an ISO file from VLSC
       href: ./setup-upgrade-and-drivers/iso-file-on-vlsc.md
+    - name: Error "A fatal error occurred while trying to sysprep the machine"
+      href: ./setup-upgrade-and-drivers/fatal-error-occurred-sysprep-machine.md
     - name: Error 0x80042468 when creating a single partition
       href: ./setup-upgrade-and-drivers/error-when-creating-single-partition.md
     - name: Event ID 10 is logged in Application log

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Application Insights JavaScript SDK for webpages
 description: Provides strategies to fix issues that involve Azure Application Insights JavaScript SDK for webpages.
-ms.date: 06/07/2023
+ms.date: 06/24/2024
 ms.service: azure-monitor
 ms.devlang: javascript
 ms.custom: sap:"Missing or Incorrect data after enabling Application Insights in Azure Portal", devx-track-js

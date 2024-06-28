@@ -1,7 +1,7 @@
 ---
 title: Windows stop error 0xC0000102 Status File Corrupt
 description: Understand how to fix error 0xC0000102 (Status File Corrupt) that occurs on an Azure virtual machine (VM).
-ms.date: 06/13/2024
+ms.date: 06/21/2024
 ms.reviewer: jarrettr, v-leedennis
 ms.service: virtual-machines
 ms.collection: windows
@@ -48,42 +48,19 @@ If you have a recent backup of the VM, you may try [restoring the VM from the ba
 
 ### Step 2: Repair or replace the corrupt file
 
-- **Repair the corrupt file**
+#### Option 1: Repair the corrupt file
 
-   Open an elevated CMD prompt and run **chkdsk** on the disk:
+Open an elevated CMD prompt and run **chkdsk** on the disk:
 
-   ```cmd
-   chkdsk <<DRIVE LETTER>: /F
-   ```
+```cmd
+chkdsk <drive-letter>: /F
+```
 
-- **Replace the corrupt file**
+#### Option 2: Replace the corrupt file
 
-1. Use boot diagnostics to view the screenshot of the VM. Note the file that is displayed in the error.
-2. To replace the corrupt binary, take the following steps:
+Replace the corrupted system binary (*.sys*) file by following these steps:
 
-    1. Browse to the location of the binary that was displayed in the screenshot.
-    1. Note the version of the file. (Right-click **Properties** and select the **Details** tab.)
-
-        :::image type="content" source="media/error-code-0xC0000102-status-file-corrupt/file-version.png" alt-text="Screenshot shows the information under the Details tab. File version is highlighted.":::
-
-    1. Rename the file as <FILENAME.EXT>.OLD. For example, the file shown in the image above would be renamed from ***\windows\system32\drivers\cng.sys*** to ***\windows\system32\drivers\cng.sys.old***.
-
-3. Restore this file from the internal repository.
-
-    1. Launch a CMD session and locate the volume holding your Windows directory.
-    1. Browse to **\windows\winsxs** and search for the binary displayed on your screenshot:
-
-        ```cmd
-        dir <<binary from the screenshot with extension>> /s
-        ````
-
-    1. The following command will list all the different versions of the specified file that the VM contains and will give you the path history of that component. You should choose the most recent of the same version from the list and proceed to copy that file to the folder path described in the screenshot.
-
-        ```cmd
-        copy
-                
-        <<drive>>:\Windows\WinSxS\<<directory_where_file_is>>\<<binary_with_extension>> <<drive>>:\Windows\System32\Drivers\ 
-        ```
+[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-replace-system-binary-file.md)]
 
 ### Step 3: Enable the Serial Console and memory dump collection
 

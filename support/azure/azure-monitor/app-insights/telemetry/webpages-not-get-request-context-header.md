@@ -1,7 +1,7 @@
 ---
 title: Failed to get Request-Context correlation header error
 description: Provides strategies to help fix an issue that involves Azure Monitor Application Insights for webpages.
-ms.date: 05/30/2023
+ms.date: 06/24/2024
 ms.service: azure-monitor
 ms.reviewer: toddfous, v-kainawroth, v-weizhu
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal

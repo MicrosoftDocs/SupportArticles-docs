@@ -1,13 +1,13 @@
 ---
 title: Increase the maximum number of concurrent policy instances
 description: Describes how to increase the maximum number of concurrent policy instances that are running on a single Opalis Integration Server Action Server.
-ms.date: 08/03/2020
+ms.date: 06/26/2024
 ---
 # Increase the maximum number of concurrent policy instances running on a single Opalis Integration Server Action Server
 
 This article describes how to increase the maximum number of concurrent policy instances that are running on a single Opalis Integration Server Action Server.
 
-_Original product version:_ &nbsp; System Center Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2102398
 
 ## Summary

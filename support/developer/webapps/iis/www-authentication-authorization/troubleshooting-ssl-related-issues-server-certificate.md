@@ -2,7 +2,7 @@
 title: Troubleshooting SSL related issues (Server Certificate)
 description: This article provides various troubleshooting scenarios and resolutions related to SSL server certificates.
 ms.topic: troubleshooting 
-ms.date: 04/09/2012
+ms.date: 06/24/2024
 ms.reviewer: kaushalp, johnhart, v-jayaramanp
 ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
 ---
@@ -176,11 +176,11 @@ The Certificate hash registered with *HTTP.sys* may be NULL or it may contain in
 
    **Working scenario**
 
-      |Configuration |Setting |
+      |Configuration|Setting |
       | --- | --- |
       | IP | 0.0.0.0:443 |
-      | Hash |  |
-      | Guid | **{00000000-0000-0000-0000-000000000000}** |
+      | Hash | c09b416d6b 8d615db22 64079d15638e96823d |
+      | Guid | {4dc3e181-e14b-4a21-b022-59fc669b0914} |
       | CertStoreName | MY |
       | CertCheckMode | 0 |
       | RevocationFreshnessTime | 0 |
@@ -191,11 +191,11 @@ The Certificate hash registered with *HTTP.sys* may be NULL or it may contain in
 
    **Non-working scenario**
 
-      |Configuration|Setting |
+      |Configuration |Setting |
       | --- | --- |
       | IP | 0.0.0.0:443 |
-      | Hash | c09b416d6b 8d615db22 64079d15638e96823d |
-      | Guid | {4dc3e181-e14b-4a21-b022-59fc669b0914} |
+      | Hash |  |
+      | Guid | **{00000000-0000-0000-0000-000000000000}** |
       | CertStoreName | MY |
       | CertCheckMode | 0 |
       | RevocationFreshnessTime | 0 |
