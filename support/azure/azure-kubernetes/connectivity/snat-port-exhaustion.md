@@ -34,7 +34,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
 
 > [!NOTE]
 > - [Tcptracer](https://github.com/iovisor/bcc/blob/master/tools/tcptracer.py) is one of the [BPF Compiler Collection (BCC) tools](https://github.com/iovisor/bcc#contents) that are pre-installed on Linux nodes. It allows you to trace TCP established connections (`connect()`, `accept()`, and `close()`). You can use it to find high outbound connections from the source IP address and network namespace (netns) of a pod.
-> - To access the BCC tools, use [kubectl node-shell](https://github.com/kvaps/kubectl-node-shell) *ONLY*.
+> - To access the BCC tools, use [kubectl node-shell](https://github.com/kvaps/kubectl-node-shell) *only*.
 > - All the following commands in this section are run as the root user on a Linux node that has the BCC tools installed.
 
 1. On the Linux node that experiences SNAT port exhaustion, install [kubectl node-shell](https://github.com/kvaps/kubectl-node-shell):
@@ -139,7 +139,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
 
 ### [For a Linux pod](#tab/for-a-linux-pod)
 
-1. Execute into the pod that's identified having high outbound connections in [Step 2: Locate the Linux pod that has high outbound connections](#step-2-locate-the-linux-pod-that-has-high-outbound-connections) by using one of the following commands:
+1. Execute into the pod that's identified as having high outbound connections in [Step 2](#step-2-locate-the-linux-pod-that-has-high-outbound-connections) by using one of the following commands:
 
     - ```bash
       kubectl exec -it <pod name> -n <namespace> /bin/bash
