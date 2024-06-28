@@ -86,7 +86,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
 
 4. Map the IP address with the most connections from the previous output to a pod. If it doesn't work, you can continue.
 
-5. Note the `SADDR` or `NETNS` values with the most connections from the previous output, and then run the following command to map it to a PID by using [lsns](https://man7.org/linux/man-pages/man8/lsns.8.html). Lsns is a Linux tool that lists namespaces and maps namespaces to PIDs in the Linux process tree.
+5. Note the `SADDR` or `NETNS` value with the most connections from the previous output, and then run the following [lsns](https://man7.org/linux/man-pages/man8/lsns.8.html) command to map it to a PID. Lsns is a Linux tool that lists namespaces and maps namespaces to PIDs in the Linux process tree.
 
     ```bash
     lsns -t net
@@ -99,7 +99,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
     4026532785 net  3      19832 root  bash
     ```
 
-6. Map the previous PID to a `containerd` process by using [pstree](https://man7.org/linux/man-pages/man1/pstree.1.html). Pstree is a Linux tool that lists processes in a tree format for readability. 
+6. Map the previous PID to a containerd process by using [pstree](https://man7.org/linux/man-pages/man1/pstree.1.html). Pstree is a Linux tool that lists processes in a tree format for readability. 
 
     ```bash
     pstree -aps 19832
@@ -112,7 +112,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
       `-containerd-shim,20946 -namespace k8s.io -id 2xxxf...
     ```
 
-    Note the first five characters of the `containerd` ID in the command output. It will be used in step 7.
+    Note the first five characters of the containerd `-id` in the command output. It will be used in step 7.
 
 7. Map the previous containerd `-id` value to a POD ID by using [crictl](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md). Crictl provides a CLI for CRI-compatible container runtimes.
 
@@ -204,19 +204,13 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
 
 ### [For a Windows pod](#tab/for-a-windows-pod)
 
-1. Locate all of the pods running on the node that's identified having high outbound connections by running the following command:
-
-    ```console
-    kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=<nodename>
-    ```
-
-2. Execute into a Windows pod by running the following command:
+1. Execute into a Windows pod by running the following command:
 
     ```console
     kubectl exec -it <Windows pod name> -- cmd.exe
     ```
 
-3. Run the following netstat command to find established connections from the Windows application running in the pod:
+2. Run the following netstat command to find established connections from the Windows application running in the pod:
 
     ```console
     netstat -aon | find /i "established"
