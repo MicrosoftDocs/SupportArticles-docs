@@ -11344,6 +11344,331 @@
       "source_path": "support/windows-client/installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps.md",
       "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/sysprep-fails-remove-or-update-store-apps",
       "redirect_document_id": true
-     } 
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/you-cant-install-features.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/you-cant-install-features",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/wubr-troubleshooting-guidance.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/wubr-troubleshooting-guidance",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/wubr-troubleshooting-device-config-using-script",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/wubr-troubleshooting-data-transmission.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/wubr-troubleshooting-data-transmission",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/wsus-clients-cant-install-updates.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/wsus-clients-cant-install-updates",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/wsus-selfupdate-not-send-automatic-updates.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/wsus-selfupdate-not-send-automatic-updates",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/windows-update-standalone-installer-returns-error.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/windows-update-standalone-installer-returns-error",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/windows-server-update-services-3-sp2.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/windows-server-update-services-3-sp2",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/why-prompted-restart-computer.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/why-prompted-restart-computer",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/troubleshoot-windows-server-update-guidance",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/troubleshoot-install-features-roles-guidance.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/troubleshoot-install-features-roles-guidance",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/system-file-checker.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/system-file-checker",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/re-register-windows-clientserver-in-wsus",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/list-updates.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/list-updates",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/fix-windows-update-errors.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/fix-windows-update-errors",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/failed-changed-absent-state-status-0x800f0922-error.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/failed-changed-absent-state-status-0x800f0922-error",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/error-invalid-data-startup-installing-updates",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/error-2359302-installing-windows-updates.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/error-2359302-installing-windows-updates",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/error-c0190003-install-updates-restart-computer",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/error-0x800f0922-uninstall-role-feature.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/error-0x800f0922-uninstall-role-feature",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/error-0x800f0922-mpio-feature-installation-fails.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/error-0x800f0922-mpio-feature-installation-fails",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/error-0x800f0922-installing-windows-updates",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/error-0x800705aa-windows-update-fails.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/error-0x800705aa-windows-update-fails",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/error-0x80004005-network-policy-server-role.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/error-0x80004005-network-policy-server-role",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/description-of-windows-server-update-services-3.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/description-of-windows-server-update-services-3",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/cannot-install-dotnet-framework-3dot5-oem.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/cannot-install-dotnet-framework-3dot5-oem",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/cbs-log-file-record-entries-not-repaired-run-sfc",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/cannot-connect-to-wsus-administration-website.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/cannot-connect-to-wsus-administration-website",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/block-user-access-windows-update.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/block-user-access-windows-update",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/windows-update-client-determines-proxy-server-connect",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/wsus-3-installation-package.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/wsus-3-installation-package",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/windows-server-2008-service-pack-2.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/windows-server-2008-service-pack-2",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/installing-updates-features-roles-overview.md",
+       "redirect_url": "/troubleshoot/windows-server/windows-servicing-updates-and-features-on-demand/windows-servicing-updates-and-features-on-demand-overview",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/system-error-126-start-windows-modules-installer.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/system-error-126-start-windows-modules-installer",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/system-registry-no-backed-up-regback-folder.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/system-registry-no-backed-up-regback-folder",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/standard-terminology-software-updates.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/standard-terminology-software-updates",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/sfc-detects-opencl-dot-dll-corrupted",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/sfc-flags-windows-defender-powershell-module-files-corrupted",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/repeatedly-offer-the-same-update.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/repeatedly-offer-the-same-update",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/processor-not-supported-together-with-windows-version.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/processor-not-supported-together-with-windows-version",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/keep-windows-up-to-date.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/keep-windows-up-to-date",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/previously-released-updates-reoffered.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/previously-released-updates-reoffered",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/error-messages-when-you-scan-updates.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/error-messages-when-you-scan-updates",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/errors-in-checksur-log.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/errors-in-checksur-log",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/error-message-when-installing-rsat.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/error-message-when-installing-rsat",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/error-80072ee6-downlaod-wsus-update.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/error-80072ee6-downlaod-wsus-update",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/download-updates-drivers-hotfixes-windows-update-catalog",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/error-403-connect-to-windows-update.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/error-403-connect-to-windows-update",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/common-windows-update-errors.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/common-windows-update-errors",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/command-switches-supported-by-self-extractor-package",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/command-line-switches-deploy-update-packages.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/command-line-switches-deploy-update-packages",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/analyze-sfc-program-log-file-entries.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/analyze-sfc-program-log-file-entries",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/automatic-updates-cannot-download-updates-event-16.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/automatic-updates-cannot-download-updates-event-16",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/additional-resources-for-windows-update.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/additional-resources-for-windows-update",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/package-manager-cannot-manage-two-more-packages",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/troubleshoot-windows-update-issues.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/troubleshoot-windows-update-issues",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/get-updates-through-windows-update.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/get-updates-through-windows-update",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/install-service-packs-hotfixes.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/install-service-packs-hotfixes",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/downgrade-from-windows-8.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/downgrade-from-windows-8",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/address-disk-space-issues-caused-by-winsxs",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/installing-updates-features-roles-overview.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/windows-servicing-updates-and-features-on-demand-overview",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/windows-update-issues-troubleshooting.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/windows-update-issues-troubleshooting",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/updates-automatically-downloaded.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/updates-automatically-downloaded",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/windows-update-hangs-updates-uninstalled.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/windows-update-hangs-updates-uninstalled",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/update-windows-update-agent.md",
+       "redirect_url": "/troubleshoot/windows-client/windows-servicing-updates-and-features-on-demand/update-windows-update-agent",
+       "redirect_document_id": true
+     }
   ]
 }
