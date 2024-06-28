@@ -4,66 +4,6 @@
   items:
     - name: Troubleshoot issues using Solution Health Hub
       href: customer-service-insights/troubleshoot-cs-oc-solution-health.md 
-- name: Dynamics 365 Contact Center (formerly Omnichannel for Customer Service)
-  items:
-    - name: Agent Scripts and Macros
-      items:
-        - name: Can't deploy a custom Agent script solution
-          href: omnichannel-for-customer-service/custom-agentscript-solution.md
-    - name: Conversation control
-      items:
-        - name: Conversation is stuck in a wrap-up state
-          href: omnichannel-for-customer-service/conversation-stuck-wrap-up-state.md
-        - name: Conversation widget blank when changing browser tabs
-          href: omnichannel-for-customer-service/conversation-widget-blank.md  
-    - name: Live chat channel
-      items:
-        - name: Agent doesn't receive chat
-          href: omnichannel-for-customer-service/agent-does-not-receive-chat.md
-        - name: Chat isn't initiated when starting a new chat from portal
-          href: omnichannel-for-customer-service/new-chat-not-initiated-portal.md
-        - name: Error when creating a chat widget or social channel
-          href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md  
-    - name: Live Chat Widget (LCW)
-      items:
-        - name: Chat widget icon doesn't load on portal
-          href: omnichannel-for-customer-service/chat-widget-icon-does-not-load-portal.md
-        - name: Chat widget doesn't load on the portal
-          href: omnichannel-for-customer-service/chat-widget-not-loading-portal.md                    
-    - name: Licensing, provisioning, and installation
-      items:
-        - name: Instance unavailable to select on the provisioning app
-          href: omnichannel-for-customer-service/instance-unavailable-provision-omnichannel.md
-        - name: Omnichannel provisioning fails with an error
-          href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
-    - name: Microsoft Copilot Studio
-      items:
-        - name: Copilot Studio bot conversations are active after a chat ends
-          href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md  
-        - name: Missing variables and actions when agent transfers from Copilot Studio bots
-          href: omnichannel-for-customer-service/agent-transfer-pva-bot-issue.md          
-    - name: Omnichannel dashboards
-      items:
-        - name: Agent dashboard shows authentication error after provisioning
-          href: omnichannel-for-customer-service/agent-dashboard-error-omnichannel-provision.md
-        - name: Agent dashboard doesn't load or displays error
-          href: omnichannel-for-customer-service/agent-dashboard-auth-error.md
-        - name: Communication panel doesn't load
-          href: omnichannel-for-customer-service/communication-panel-load-issue.md
-        - name: Dashboards don't appear
-          href: omnichannel-for-customer-service/dashboard-not-appearing-omnichannel.md
-        - name: Error in communication panel
-          href: omnichannel-for-customer-service/error-communication-panel.md
-    - name: Social channels
-      items:
-        - name: Troubleshoot sync issue with social data
-          href: omnichannel-for-customer-service/social-data-sync.md
-    - name: Voice channel
-      items:
-        - name: Incoming voice calls with long greeting messages cause connection delays
-          href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md 
-        - name: Use diagnostic messages to troubleshoot call issues
-          href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md 
 - name: Email
   items: 
     - name: '"Case is missing customer" error'
@@ -182,3 +122,63 @@
   items:
     - name: Flow connection isn't valid in customer support swarming
       href: teams-collaboration/flow-connection-invalid-customer-support-swarming.md
+- name: Dynamics 365 Contact Center (formerly Omnichannel for Customer Service)
+  items:
+    - name: Agent Scripts and Macros
+      items:
+        - name: Can't deploy a custom Agent script solution
+          href: omnichannel-for-customer-service/custom-agentscript-solution.md
+    - name: Conversation control
+      items:
+        - name: Conversation is stuck in a wrap-up state
+          href: omnichannel-for-customer-service/conversation-stuck-wrap-up-state.md
+        - name: Conversation widget blank when changing browser tabs
+          href: omnichannel-for-customer-service/conversation-widget-blank.md  
+    - name: Live chat channel
+      items:
+        - name: Agent doesn't receive chat
+          href: omnichannel-for-customer-service/agent-does-not-receive-chat.md
+        - name: Chat isn't initiated when starting a new chat from portal
+          href: omnichannel-for-customer-service/new-chat-not-initiated-portal.md
+        - name: Error when creating a chat widget or social channel
+          href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md  
+    - name: Live Chat Widget (LCW)
+      items:
+        - name: Chat widget icon doesn't load on portal
+          href: omnichannel-for-customer-service/chat-widget-icon-does-not-load-portal.md
+        - name: Chat widget doesn't load on the portal
+          href: omnichannel-for-customer-service/chat-widget-not-loading-portal.md                    
+    - name: Licensing, provisioning, and installation
+      items:
+        - name: Instance unavailable to select on the provisioning app
+          href: omnichannel-for-customer-service/instance-unavailable-provision-omnichannel.md
+        - name: Omnichannel provisioning fails with an error
+          href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
+    - name: Copilot Studio
+      items:
+        - name: Copilot Studio bot conversations are active after a chat ends
+          href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md  
+        - name: Missing variables and actions when agent transfers from Copilot Studio bots
+          href: omnichannel-for-customer-service/agent-transfer-pva-bot-issue.md          
+    - name: Omnichannel dashboards
+      items:
+        - name: Agent dashboard shows authentication error after provisioning
+          href: omnichannel-for-customer-service/agent-dashboard-error-omnichannel-provision.md
+        - name: Agent dashboard doesn't load or displays error
+          href: omnichannel-for-customer-service/agent-dashboard-auth-error.md
+        - name: Communication panel doesn't load
+          href: omnichannel-for-customer-service/communication-panel-load-issue.md
+        - name: Dashboards don't appear
+          href: omnichannel-for-customer-service/dashboard-not-appearing-omnichannel.md
+        - name: Error in communication panel
+          href: omnichannel-for-customer-service/error-communication-panel.md
+    - name: Social channels
+      items:
+        - name: Troubleshoot sync issue with social data
+          href: omnichannel-for-customer-service/social-data-sync.md
+    - name: Voice channel
+      items:
+        - name: Incoming voice calls with long greeting messages cause connection delays
+          href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md 
+        - name: Use diagnostic messages to troubleshoot call issues
+          href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md 
