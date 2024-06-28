@@ -14,7 +14,8 @@ Azure Monitor Agent replaces the Log Analytics agent (previously known as Micros
 
 Azure Monitor Agent introduces a simplified, flexible method of configuring data collection by using data collection rules (DCRs).
 
-
+> [!IMPORTANT]
+> The Log Analytics agent is on a **deprecation path** and won't be supported after **August 31, 2024**. Any new data centers brought online after January 1, 2024 won't support the Log Analytics agent. If you use the Log Analytics agent to ingest data to Azure Monitor, [migrate to the new Azure Monitor agent](/azure/azure-monitor/agents/azure-monitor-agent-migration) before that date.
 
 ### More benefits for migration
 
