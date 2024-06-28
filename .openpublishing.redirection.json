@@ -11201,6 +11201,41 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/system-center/orchestrator/invoke-rest-service-activity-fails.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/determine-orchestrator-components-version.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/opalis-integration-server-connectivity-requirements.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/runbooks-folders-statistics-not-displayed.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/set-user-permissions.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/setup-has-detected-opalis-installed-error.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/invalid-objectserver-data-type-error.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/installing-updates-features-roles/systeminfo-not-display-all-updates.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/systeminfo-not-display-all-updates",
       "redirect_document_id": false
@@ -11228,6 +11263,16 @@
     {
       "source_path": "support/windows-client/installing-updates-features-roles/how-to-use-automatic-updates-feature.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/how-to-use-automatic-updates-feature",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/skype-for-microsoft-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/skype-for-microsoft-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/switches-with-xcopy-and-xcopy32-command.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/switches-with-xcopy-and-xcopy32-command",
       "redirect_document_id": false
     }
   ]

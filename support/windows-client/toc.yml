@@ -283,8 +283,6 @@ items:
       href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
     - name: Fix errors found in CheckSUR.log
       href: ./installing-updates-features-roles/errors-in-checksur-log.md
-    - name: Get the latest Skype version by Microsoft Update
-      href: ./installing-updates-features-roles/skype-for-microsoft-update.md
     - name: How to downgrade from Windows 8
       href: ./installing-updates-features-roles/downgrade-from-windows-8.md
     - name: How to get updates via Windows Update
@@ -309,8 +307,6 @@ items:
       href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
     - name: Standard terminology that defines software updates
       href: ./installing-updates-features-roles/standard-terminology-software-updates.md
-    - name: Switches with Xcopy and Xcopy32 commands
-      href: ./installing-updates-features-roles/switches-with-xcopy-and-xcopy32-command.md
     - name: Sysprep fails after you remove or update Microsoft Store apps
       href: ./installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps.md
     - name: System Error 126 when you start TrustedInstaller
