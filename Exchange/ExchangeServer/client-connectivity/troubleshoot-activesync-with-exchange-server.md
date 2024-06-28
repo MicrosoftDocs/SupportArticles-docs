@@ -2475,7 +2475,7 @@ To determine device traffic, analyze the device activity using the associated Lo
 
 To determine if the Exchange server(s) are experiencing performance issue, capture performance data from each of the Exchange servers. To do this, follow these steps:
 
-1. Download [ExPerfwiz](https://archive.codeplex.com/?p=experfwiz) and extract the contents to the *%ExchangeInstallPath%\Scripts* folder.
+1. Download [ExPerfwiz](https://github.com/microsoft/ExPerfWiz) and extract the contents to the *%ExchangeInstallPath%\Scripts* folder.
 2. Open the [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell).
 3. Run the following to change the folder path:
 
