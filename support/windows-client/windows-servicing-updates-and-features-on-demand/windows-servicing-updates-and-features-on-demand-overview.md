@@ -10,9 +10,9 @@ ms.reviewer: kaushika
 ---
 # Windows Servicing, Updates and Features on Demand troubleshooting documentation for Windows clients
 
-The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve issues with Windows Servicing, Updates and Features on Demand. The topics are divided into one subcategory. Browse the content or use the search feature to find relevant content.
+The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve issues with Windows Servicing, Updates and Features on Demand. The topics are divided into sub categories. Browse the content or use the search feature to find relevant content.
 
-## Windows Servicing, Updates and Features on Demand sub category
+## Windows Servicing, Updates and Features on Demand sub categories
 
 - Clients missing updates, not offered, fail to download
 - Failure to install Windows Updates

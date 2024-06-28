@@ -1333,92 +1333,6 @@ items:
       href: ./high-availability/errors-windows-failover-cluster-run-as-guest.md
     - name: Use Windows Server cluster nodes as DCs
       href: ./high-availability/use-cluster-nodes-as-domain-controllers.md
-- name: Windows Servicing, Updates and Features on Demand
-  items:
-  - name: Windows Servicing, Updates and Features on Demand
-    href: ./windows-servicing-updates-and-features-on-demand/windows-servicing-updates-and-features-on-demand-overview.md
-  - name: Clients missing updates, not offered, fail to download
-    items:
-    - name: List of updates
-      href: ./windows-servicing-updates-and-features-on-demand/list-updates.md
-    - name: WSUS SelfUpdate doesn't send automatic updates
-      href: ./windows-servicing-updates-and-features-on-demand/wsus-selfupdate-not-send-automatic-updates.md
-  - name: Failure to install Windows Updates
-    items:
-    - name: How the Windows Update client determines which proxy server to use
-      href: ./windows-servicing-updates-and-features-on-demand/windows-update-client-determines-proxy-server-connect.md
-    - name: Windows Server 2008 Service Pack 2
-      href: ./windows-servicing-updates-and-features-on-demand/windows-server-2008-service-pack-2.md
-    - name: WSUS 3.0 installation package is available
-      href: ./windows-servicing-updates-and-features-on-demand/wsus-3-installation-package.md
-  - name: Issues installing Features on Demand (FoD)
-    items:
-    - name: Can't install .NET Framework 3.5 on OEM Windows installation
-      href: ./windows-servicing-updates-and-features-on-demand/cannot-install-dotnet-framework-3dot5-oem.md
-    - name: Error 0x800f0922 when MPIO feature installation fails
-      href: ./windows-servicing-updates-and-features-on-demand/error-0x800f0922-mpio-feature-installation-fails.md
-    - name: Error 0x800f0922 when you uninstall roles/features
-      href: ./windows-servicing-updates-and-features-on-demand/error-0x800f0922-uninstall-role-feature.md
-    - name: You can't install features in Windows Server 2012 R2
-      href: ./windows-servicing-updates-and-features-on-demand/you-cant-install-features.md
-  - name: Issues installing Server Roles
-    items:
-    - name: 'Troubleshooting guidance: Installing Windows features or roles'
-      href: ./windows-servicing-updates-and-features-on-demand/troubleshoot-install-features-roles-guidance.md
-  - name: Windows Update configuration, settings and management
-    items:
-    - name: Can't connect to WSUS Administration Website
-      href: ./windows-servicing-updates-and-features-on-demand/cannot-connect-to-wsus-administration-website.md
-    - name: Description of Windows Server Update Services 3.0
-      href: ./windows-servicing-updates-and-features-on-demand/description-of-windows-server-update-services-3.md
-    - name: How to block user access to Windows Update
-      href: ./windows-servicing-updates-and-features-on-demand/block-user-access-windows-update.md
-    - name: Re-register Windows client/server in WSUS
-      href: ./windows-servicing-updates-and-features-on-demand/re-register-windows-clientserver-in-wsus.md
-    - name: Why you may be prompted to restart your computer
-      href: ./windows-servicing-updates-and-features-on-demand/why-prompted-restart-computer.md
-    - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
-      href: ./windows-servicing-updates-and-features-on-demand/windows-server-update-services-3-sp2.md
-    - name: WSUS clients can't install updates
-      href: ./windows-servicing-updates-and-features-on-demand/wsus-clients-cant-install-updates.md
-  - name: Windows Update fails - installation stops with error
-    items:
-    - name: 'Troubleshooting guidance: Windows Server update'
-      href: ./windows-servicing-updates-and-features-on-demand/troubleshoot-windows-server-update-guidance.md
-    - name: CBS.log file contains entries that some files aren't repaired
-      href: ./windows-servicing-updates-and-features-on-demand/cbs-log-file-record-entries-not-repaired-run-sfc.md
-    - name: Description of System File Checker (Sfc.exe)
-      href: ./windows-servicing-updates-and-features-on-demand/system-file-checker.md
-    - name: Error 0x800705aa when Windows Update fails
-      href: ./windows-servicing-updates-and-features-on-demand/error-0x800705aa-windows-update-fails.md
-    - name: Error 0x800f0922 when installing Windows updates
-      href: ./windows-servicing-updates-and-features-on-demand/error-0x800f0922-installing-windows-updates.md
-    - name: Error C0190003 after installing updates
-      href: ./windows-servicing-updates-and-features-on-demand/error-c0190003-install-updates-restart-computer.md
-    - name: Error code 2359302 when installing updates in Windows Server 2019
-      href: ./windows-servicing-updates-and-features-on-demand/error-2359302-installing-windows-updates.md
-    - name: ERROR_INVALID_DATA error after installing Windows updates
-      href: ./windows-servicing-updates-and-features-on-demand/error-invalid-data-startup-installing-updates.md
-    - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
-      href: ./windows-servicing-updates-and-features-on-demand/failed-changed-absent-state-status-0x800f0922-error.md
-    - name: Fail to install Network Policy Server role
-      href: ./windows-servicing-updates-and-features-on-demand/error-0x80004005-network-policy-server-role.md
-    - name: Fix Windows Update corruptions and installation failures
-      href: ./windows-servicing-updates-and-features-on-demand/fix-windows-update-errors.md
-    - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
-      href: ./windows-servicing-updates-and-features-on-demand/windows-update-standalone-installer-returns-error.md
-  - name: Windows Update for Business Reports
-    items:
-    - name: Initial service configuration and Onboarding
-      items:
-      - name: 'Troubleshooting guidance: Windows Update for Business reports'
-        href: ./windows-servicing-updates-and-features-on-demand/wubr-troubleshooting-guidance.md
-    - name: Missing data or incomplete report data
-      items:
-      - name: 'WUBr: Troubleshoot diagnostic data transmission'
-        href: ./windows-servicing-updates-and-features-on-demand/wubr-troubleshooting-data-transmission.md
-      - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-        href: ./windows-servicing-updates-and-features-on-demand/wubr-troubleshooting-device-config-using-script.md
 - name: Licensing and activation
   items:
   - name: Licensing and activation
@@ -3261,6 +3175,92 @@ items:
     items:
     - name: 'Troubleshooting guidance: Windows LAPS'
       href: ./windows-security/windows-laps-troubleshooting-guidance.md
+- name: Windows Servicing, Updates and Features on Demand
+  items:
+  - name: Windows Servicing, Updates and Features on Demand
+    href: ./windows-servicing-updates-and-features-on-demand/windows-servicing-updates-and-features-on-demand-overview.md
+  - name: Clients missing updates, not offered, fail to download
+    items:
+    - name: List of updates
+      href: ./windows-servicing-updates-and-features-on-demand/list-updates.md
+    - name: WSUS SelfUpdate doesn't send automatic updates
+      href: ./windows-servicing-updates-and-features-on-demand/wsus-selfupdate-not-send-automatic-updates.md
+  - name: Failure to install Windows Updates
+    items:
+    - name: How the Windows Update client determines which proxy server to use
+      href: ./windows-servicing-updates-and-features-on-demand/windows-update-client-determines-proxy-server-connect.md
+    - name: Windows Server 2008 Service Pack 2
+      href: ./windows-servicing-updates-and-features-on-demand/windows-server-2008-service-pack-2.md
+    - name: WSUS 3.0 installation package is available
+      href: ./windows-servicing-updates-and-features-on-demand/wsus-3-installation-package.md
+  - name: Issues installing Features on Demand (FoD)
+    items:
+    - name: Can't install .NET Framework 3.5 on OEM Windows installation
+      href: ./windows-servicing-updates-and-features-on-demand/cannot-install-dotnet-framework-3dot5-oem.md
+    - name: Error 0x800f0922 when MPIO feature installation fails
+      href: ./windows-servicing-updates-and-features-on-demand/error-0x800f0922-mpio-feature-installation-fails.md
+    - name: Error 0x800f0922 when you uninstall roles/features
+      href: ./windows-servicing-updates-and-features-on-demand/error-0x800f0922-uninstall-role-feature.md
+    - name: You can't install features in Windows Server 2012 R2
+      href: ./windows-servicing-updates-and-features-on-demand/you-cant-install-features.md
+  - name: Issues installing Server Roles
+    items:
+    - name: 'Troubleshooting guidance: Installing Windows features or roles'
+      href: ./windows-servicing-updates-and-features-on-demand/troubleshoot-install-features-roles-guidance.md
+  - name: Windows Update configuration, settings and management
+    items:
+    - name: Can't connect to WSUS Administration Website
+      href: ./windows-servicing-updates-and-features-on-demand/cannot-connect-to-wsus-administration-website.md
+    - name: Description of Windows Server Update Services 3.0
+      href: ./windows-servicing-updates-and-features-on-demand/description-of-windows-server-update-services-3.md
+    - name: How to block user access to Windows Update
+      href: ./windows-servicing-updates-and-features-on-demand/block-user-access-windows-update.md
+    - name: Re-register Windows client/server in WSUS
+      href: ./windows-servicing-updates-and-features-on-demand/re-register-windows-clientserver-in-wsus.md
+    - name: Why you may be prompted to restart your computer
+      href: ./windows-servicing-updates-and-features-on-demand/why-prompted-restart-computer.md
+    - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
+      href: ./windows-servicing-updates-and-features-on-demand/windows-server-update-services-3-sp2.md
+    - name: WSUS clients can't install updates
+      href: ./windows-servicing-updates-and-features-on-demand/wsus-clients-cant-install-updates.md
+  - name: Windows Update fails - installation stops with error
+    items:
+    - name: 'Troubleshooting guidance: Windows Server update'
+      href: ./windows-servicing-updates-and-features-on-demand/troubleshoot-windows-server-update-guidance.md
+    - name: CBS.log file contains entries that some files aren't repaired
+      href: ./windows-servicing-updates-and-features-on-demand/cbs-log-file-record-entries-not-repaired-run-sfc.md
+    - name: Description of System File Checker (Sfc.exe)
+      href: ./windows-servicing-updates-and-features-on-demand/system-file-checker.md
+    - name: Error 0x800705aa when Windows Update fails
+      href: ./windows-servicing-updates-and-features-on-demand/error-0x800705aa-windows-update-fails.md
+    - name: Error 0x800f0922 when installing Windows updates
+      href: ./windows-servicing-updates-and-features-on-demand/error-0x800f0922-installing-windows-updates.md
+    - name: Error C0190003 after installing updates
+      href: ./windows-servicing-updates-and-features-on-demand/error-c0190003-install-updates-restart-computer.md
+    - name: Error code 2359302 when installing updates in Windows Server 2019
+      href: ./windows-servicing-updates-and-features-on-demand/error-2359302-installing-windows-updates.md
+    - name: ERROR_INVALID_DATA error after installing Windows updates
+      href: ./windows-servicing-updates-and-features-on-demand/error-invalid-data-startup-installing-updates.md
+    - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
+      href: ./windows-servicing-updates-and-features-on-demand/failed-changed-absent-state-status-0x800f0922-error.md
+    - name: Fail to install Network Policy Server role
+      href: ./windows-servicing-updates-and-features-on-demand/error-0x80004005-network-policy-server-role.md
+    - name: Fix Windows Update corruptions and installation failures
+      href: ./windows-servicing-updates-and-features-on-demand/fix-windows-update-errors.md
+    - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
+      href: ./windows-servicing-updates-and-features-on-demand/windows-update-standalone-installer-returns-error.md
+  - name: Windows Update for Business Reports
+    items:
+    - name: Initial service configuration and Onboarding
+      items:
+      - name: 'Troubleshooting guidance: Windows Update for Business reports'
+        href: ./windows-servicing-updates-and-features-on-demand/wubr-troubleshooting-guidance.md
+    - name: Missing data or incomplete report data
+      items:
+      - name: 'WUBr: Troubleshoot diagnostic data transmission'
+        href: ./windows-servicing-updates-and-features-on-demand/wubr-troubleshooting-data-transmission.md
+      - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+        href: ./windows-servicing-updates-and-features-on-demand/wubr-troubleshooting-device-config-using-script.md
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
