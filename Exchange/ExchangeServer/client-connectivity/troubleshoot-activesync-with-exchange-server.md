@@ -248,7 +248,7 @@ You need to enable ActiveSync mailbox logging on the Client Access Server and th
 ActiveSync device requests do not always reach the destination as desired. To ensure the device request and response is being sent and received as expected, route the device through an HTTP proxy and review the data. To do this, follow these steps:
 
 1. Download and install [Fiddler](https://www.telerik.com/download/fiddler) onto a workstation.
-2. Download [EAS Inspector for Fiddler](https://archive.codeplex.com/?p=easinspectorforfiddler).
+2. Download [EAS Inspector for Fiddler](https://github.com/dseph/EAS-Inspector-For-Fiddler).
 3. Extract **EASInspectorFiddler.dll** into the **c:\Program Files\Fiddler2\Inspectors** folder.
 4. Launch the Fiddler application.
 5. Select the **Tools** menu and select **Fiddler Options**.
@@ -965,7 +965,7 @@ The first troubleshooting step is enabling mailbox logging on the Client Access 
 ActiveSync device requests do not always reach the destination as desired. To ensure the device request and response is being sent and received as expected, route the device through an HTTP proxy and review the data. To do this, follow these steps:
 
 1. Download and install [Fiddler](https://www.telerik.com/download/fiddler) onto a workstation.
-2. Download [EAS Inspector for Fiddler](https://archive.codeplex.com/?p=easinspectorforfiddler).
+2. Download [EAS Inspector for Fiddler](https://github.com/dseph/EAS-Inspector-For-Fiddler).
 3. Extract **EASInspectorFiddler.dll** into the **c:\Program Files\Fiddler2\Inspectors** folder.
 4. Launch the Fiddler application.
 5. Select the **Tools** menu and select **Fiddler Options**.
@@ -1540,7 +1540,7 @@ The first step is to enable mailbox logging on the Client Access Server(s) and t
 ActiveSync device requests do not always reach the destination as desired. To ensure the device request and response is being sent and received as expected, route the device through an HTTP proxy and review the data. To do this, follow these steps:
 
 1. Download and install [Fiddler](https://www.telerik.com/download/fiddler) onto a workstation.
-2. Download [EAS Inspector for Fiddler](https://archive.codeplex.com/?p=easinspectorforfiddler).
+2. Download [EAS Inspector for Fiddler](https://github.com/dseph/EAS-Inspector-For-Fiddler).
 3. Extract **EASInspectorFiddler.dll** into the **c:\Program Files\Fiddler2\Inspectors** folder.
 4. Launch the Fiddler application.
 5. Select the **Tools** menu and select **Fiddler Options**.
@@ -1722,7 +1722,7 @@ The first step is to enable mailbox logging on the Client Access Server(s) and t
 ActiveSync device requests do not always reach the destination as desired. To ensure the device request and response is being sent and received as expected, route the device through an HTTP proxy and review the data. To do this, follow these steps:
 
 1. Download and install [Fiddler](https://www.telerik.com/download/fiddler) onto a workstation.
-2. Download [EAS Inspector for Fiddler](https://archive.codeplex.com/?p=easinspectorforfiddler).
+2. Download [EAS Inspector for Fiddler](https://github.com/dseph/EAS-Inspector-For-Fiddler).
 3. Extract **EASInspectorFiddler.dll** into the **c:\Program Files\Fiddler2\Inspectors** folder.
 4. Launch the Fiddler application.
 5. Select the **Tools** menu and select **Fiddler Options**.
@@ -2127,7 +2127,7 @@ The results also show a Sync command that received a response with a status code
 ActiveSync device requests do not always reach the destination as desired. To ensure the device request and response is being sent and received as expected, route the device through an HTTP proxy and review the data. To do this, follow these steps:
 
 1. Download and install [Fiddler](https://www.telerik.com/download/fiddler) onto a workstation.
-2. Download [EAS Inspector for Fiddler](https://archive.codeplex.com/?p=easinspectorforfiddler).
+2. Download [EAS Inspector for Fiddler](https://github.com/dseph/EAS-Inspector-For-Fiddler).
 3. Extract **EASInspectorFiddler.dll** into the **c:\Program Files\Fiddler2\Inspectors** folder.
 4. Launch the Fiddler application.
 5. Select the **Tools** menu and select **Fiddler Options**.
