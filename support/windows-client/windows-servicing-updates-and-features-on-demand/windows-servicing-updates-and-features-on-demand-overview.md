@@ -10,7 +10,7 @@ ms.reviewer: kaushika
 ---
 # Windows Servicing, Updates and Features on Demand troubleshooting documentation for Windows clients
 
-The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve issues with Windows Servicing, Updates and Features on Demand. The topics are divided into sub categories. Browse the content or use the search feature to find relevant content.
+The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve issues with Windows Servicing, Updates and Features on Demand. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
 
 ## Windows Servicing, Updates and Features on Demand sub categories
 
