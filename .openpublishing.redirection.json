@@ -11264,6 +11264,16 @@
       "source_path": "support/windows-client/installing-updates-features-roles/how-to-use-automatic-updates-feature.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/how-to-use-automatic-updates-feature",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/skype-for-microsoft-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/skype-for-microsoft-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/switches-with-xcopy-and-xcopy32-command.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/switches-with-xcopy-and-xcopy32-command",
+      "redirect_document_id": false
     }
   ]
 }
