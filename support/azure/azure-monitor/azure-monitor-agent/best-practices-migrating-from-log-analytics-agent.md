@@ -1,4 +1,4 @@
-# Best practices for migrating to Azure Monitor Agent from the Log Analytics agent
+# Best practices for migrating to Azure Monitor Agent from the legacy Log Analytics agent
 
 This article provides guidance on how to implement a successful migration to Microsoft Azure Monitor Agent from the Log Analytics agent.
 
@@ -19,7 +19,7 @@ Azure Monitor Agent introduces a simplified, flexible method of configuring data
 
 ### More benefits for migration
 
-In addition to consolidating and improving on the previous Log Analytics agent, Azure Monitor Agent provides some immediate benefits. These benefits include the following items:
+In addition to consolidating and improving on the legacy Log Analytics agent, Azure Monitor Agent provides some immediate benefits. These benefits include the following items:
 
 - Cost savings
 - Simplified management experience

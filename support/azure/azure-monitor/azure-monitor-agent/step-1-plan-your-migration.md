@@ -41,7 +41,7 @@ You can export the table of information in this tab to Microsoft Excel. To do th
 
 ## Understand your agent deployment methodologies
 
-If you're using automated deployment methodologies to deploy the Log Analytics agent, now is a good time to disable these methodologies. For example, if you're using Defender for Cloud to deploy the agent, you can disable this configuration by following these steps:
+If you're using automated deployment methodologies to deploy the legacy Log Analytics agent, now is a good time to disable these methodologies. For example, if you're using Defender for Cloud to deploy the agent, you can disable this configuration by following these steps:
 
 1. In the [Azure portal][ap], search for and select **Microsoft Defender for Cloud**.
 
