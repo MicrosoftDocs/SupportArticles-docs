@@ -9,14 +9,14 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/08/2024
+  ms.date: 07/08/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
  # Card
-  - title: Troubleshooting Azure Application Insights issues
+  - title: Troubleshoot Azure Application Insights issues
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -27,7 +27,7 @@ landingContent:
           - text: Troubleshooting auto-instrumentation issues
             url: ./app-insights/telemetry/auto-instrumentation-troubleshoot.md
 
-  - title: Troubleshooting Azure Log Analytics issues
+  - title: Troubleshoot Azure Log Analytics issues
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -37,3 +37,24 @@ landingContent:
             url:  ./log-analytics/workspaces/error-code-0x80090016-keyset-does-not-exist.md
           - text: Microsoft Monitoring Agent couldn't start
             url:  ./log-analytics/windows-agents/windows-could-not-start-mma.md
+
+  - title: Troubleshoot Azure Monitor Agent migration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Best practices for migrating to Azure Monitor Agent from the legacy Log Analytics agent
+            url: azure-monitor-agent/migration/best-practices-migrating-from-log-analytics-agent.md
+          - text: Step 1 - Plan your migration
+            url: azure-monitor-agent/migration/step-1-plan-your-migration.md
+          - text: Step 2 - Understand the data that you're collecting
+            url: azure-monitor-agent/migration/step-2-understand-your-data-collection.md
+          - text: Step 3 - Configure data collections
+            url: azure-monitor-agent/migration/step-3-configure-data-collections.md
+          - text: Step 4 - Test data collections in Azure Monitor Agent
+            url: azure-monitor-agent/migration/step-4-test-data-collections-azure-monitor-agent.md
+          - text: Step 5 - Deploy at scale
+            url: azure-monitor-agent/migration/step-5-deploy-at-scale.md
+          - text: Step 6 - Configure other services
+            url: azure-monitor-agent/migration/step-6-configure-other-services.md
+          - text: Step 7 - Remove Microsoft Monitoring Agent and clean up configurations
+            url: azure-monitor-agent/migration/step-7-microsoft-monitoring-agent-clean-up-configurations.md
