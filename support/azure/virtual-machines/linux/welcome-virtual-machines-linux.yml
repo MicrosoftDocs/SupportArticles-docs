@@ -8,11 +8,12 @@ metadata:
   description: Documentation for troubleshooting common issues with Azure Linux Virtual Machines. # Required; article description that is displayed in search results. < 160 chars.
   services: virtual-machines
   ms.service: virtual-machines #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.custom:
+    - linux-related-content
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
   ms.date: 03/27/2024
-
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
