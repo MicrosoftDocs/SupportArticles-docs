@@ -221,6 +221,8 @@
       href: connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md
     - name: Restricting egress traffic causes errors
       href: connectivity/errors-arfter-restricting-egress-traffic.md
+    - name: Troubleshoot SNAT port exhaustion on nodes
+      href: connectivity/snat-port-exhaustion.md
     - name: Connectivity common issues
       items:
       - name: Can't connect to pods and services in same cluster
