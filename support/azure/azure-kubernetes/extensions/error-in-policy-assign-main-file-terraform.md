@@ -4,7 +4,7 @@ description: This article provides a solution to an error that you encounter dur
 ms.date: 03/27/2024
 ms.reviewer: chiragpa, andbar, haitch, v-leedennis
 ms.service: azure-kubernetes-service
-ms.custom: sap:Extensions, Policies and Add-Ons
+ms.custom: sap:Extensions, Policies and Add-Ons, devx-track-terraform
 ---
 # "Policy definition not found" during policy assignments in Terraform
 
