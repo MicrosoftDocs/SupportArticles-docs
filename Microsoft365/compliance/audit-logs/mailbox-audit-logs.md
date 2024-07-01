@@ -146,34 +146,9 @@ Review the output of the .csv file. The most useful columns are exported, and so
 
 ### Owner mailbox audit logging
 
-By default. owner audit logging is not turned on. It should only be used if you have to investigate an action by the owner of the mailbox. It should be used for a limited time period, approximately two weeks. This is because the audit log entries are stored in the mailbox, and this may cause the mailbox dumpster to exceed the size limit.
+Mailbox audit logging is turned on by default in all organizations. One of the key benefits of having mailbox auditing on by default is: you don't need to manage the mailboxes actions that are audited. Microsoft manages the actions for you, and we automatically add new mailbox actions to be audited by default as they're released.
 
-To enable owner audit logging, follow these steps:
-
-1. Determine whether mailbox audit logging is enabled. To do this, run the following cmdlet:
-
-    ```powershell
-    Get-Mailbox <useridentity> | ft AuditEnabled
-    ```
-
-1. If the result is **True**, skip this step. If the result is **False**, run the following cmdlet in Windows PowerShell:
-
-    ```powershell
-    Set-Mailbox <useridentity> -AuditEnabled $true
-    ```
-
-1. Enable the owner audit logging. To do this, run the following cmdlet:
-
-    ```powershell
-    Set-Mailbox <useridentity> -AuditOwner "Create,HardDelete,Move,MoveToDeletedItems,SoftDelete,Update"
-    ```
-
-1. Rerun the **Run-MailboxAuditLogSearcher.ps1**, and review the data.
-1. After the troubleshooting is complete, disable owner audit logging. To do this, run the following cmdlet:
-
-    ```powershell
-    Set-Mailbox <useridentity> -AuditOwner $none
-    ```
+However, your organization might be required to audit a different set of mailbox actions for user mailboxes and shared mailboxes. The procedures in [this section](/purview/audit-mailboxes) show you how to change the mailbox actions that are audited for each sign-in type, and how to revert back to the Microsoft-managed default actions.
 
 ## More Information
 
