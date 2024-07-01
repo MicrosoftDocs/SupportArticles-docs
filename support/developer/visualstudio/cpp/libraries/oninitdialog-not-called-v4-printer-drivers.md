@@ -1,5 +1,5 @@
 ---
-title: OnInitDialog isn't called when using V4 printer drivers
+title: CPrintDialog::OnInitDialog isn't called when using V4 printer drivers
 description: Describes a problem where CPrintDialog::OnInitDialog isn't called when using a printer with a V4 printer driver. 
 ms.reviewer: ishimada, davean, v-sidong
 ms.custom: sap:C and C++ Libraries\Microsoft Foundation Classes (MFC)
@@ -24,11 +24,11 @@ The WH_CBT window hook procedure incorrectly attaches the `CPrintDialog` object 
 
 ## Workaround
 
-To work around the problem, use [printer driver isolation](/windows-hardware/drivers/print/printer-driver-isolation). It improves an application's reliability by running printer drivers in a separate process instead of the process calling the [print spooler functions](/windows/win32/printdocs/printing-and-print-spooler-functions#print-job-functions). This isolation prevents applications calling the print spooler functions from crashing if a printer driver has an error.
+To work around the problem, use [printer-driver isolation](/windows/win32/printdocs/use-application-isolation). It improves an application's reliability by running printer drivers in a separate process instead of the process calling the [print spooler functions](/windows/win32/printdocs/printing-and-print-spooler-functions#print-spooler-functions). This isolation prevents applications calling the print spooler functions from crashing if a printer driver has an error.
 
-In this scenario, the reason for using printer driver isolation is that the `URL Moniker Notification Window` window is created in a separate process.
+In this scenario, the reason for using printer-driver isolation is that the `URL Moniker Notification Window` window is created in a separate process.
 
-To enable printer driver isolation for an application, use one of the following methods:
+To enable printer-driver isolation for an application, use one of the following methods:
 
 - Update the app manifest of the application as described in [How To: Use Application Isolation](/windows/win32/printdocs/use-application-isolation).
 
