@@ -7753,7 +7753,7 @@
     {
       "source_path": "support/windows-server/deployment/cannot-install-windows-server-2019-high-processor-count.md",
       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/cannot-install-windows-server-2019-high-processor-count",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/deployment/cannot-install-dotnet-framework-3dot5-oem.md",
@@ -11266,6 +11266,96 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-client/installing-updates-features-roles/missing-windows-installer-cache.md",
+      "redirect_url": "/troubleshoot/windows-client/application-management/missing-windows-installer-cache",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/cannot-use-imagex-tool-backup.md",
+      "redirect_url": "/troubleshoot/windows-client/backup-and-storage/cannot-use-imagex-tool-backup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/failed-schedule-software-protection.md",
+      "redirect_url": "/troubleshoot/windows-server/system-management-components/failed-schedule-software-protection",
+      "redirect_document_id": true
+    },	
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/use-recovery-console-not-start.md",
+      "redirect_url": "/troubleshoot/windows-server/performance/use-recovery-console-not-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/view-system-registry-with-64-bit-windows.md",
+      "redirect_url": "/troubleshoot/windows-client/performance/view-system-registry-with-64-bit-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/system-partition-offline-install-3rd-party-disk.md",
+      "redirect_url": "/troubleshoot/windows-server/performance/system-partition-offline-install-3rd-party-disk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/error-0x80070005-access-denied.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-0x80070005-access-denied",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/cannot-install-may-2019-update-windows-10-amd-raid-drivers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/dism-apply-image-command-fails-error-code-5.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/dism-apply-image-command-fails-error-code-5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/dism-error-87-apply-windows-10-image.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/dism-error-87-apply-windows-10-image",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/drive-reassignment-block-update.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/drive-reassignment-block-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/in-place-upgrade-to-windows-10-problems.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/in-place-upgrade-to-windows-10-problems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/cannot-install-windows-server-2019-high-processor-count.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/cannot-install-windows-server-2019-high-processor-count",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/dism-fails-with-error-0x800f0906.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/dism-fails-with-error-0x800f0906",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/sysprep-fails-remove-or-update-store-apps",
+      "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-server/installing-updates-features-roles/installing-updates-features-roles-overview.md",
+       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview",
+       "redirect_document_id": true
+     },
+     {
+       "source_path": "support/windows-client/installing-updates-features-roles/installing-updates-features-roles-overview.md",
+       "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview",
+       "redirect_document_id": true
+     },
+      {
       "source_path": "support/windows-client/installing-updates-features-roles/skype-for-microsoft-update.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/skype-for-microsoft-update",
       "redirect_document_id": false
