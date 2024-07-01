@@ -1,3 +1,15 @@
+---
+title: Step 3 - Configure data collections for Azure Monitor Agent
+description: Learn how to configure data collections for Azure Monitor Agent so that you can migrate from the legacy Log Analytics agent.
+ms.date: 07/08/2024
+author: neilghuman
+ms.author: neghuman
+ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, v-leedennis
+editor: v-jsitser
+ms.service: azure-monitor
+ms.custom: 
+#Customer intent: As an Azure Monitor user, I want to configure data collections for Azure Monitor Agent so that I can migrate from the legacy Log Analytics agent.
+---
 # Step 3: Configure data collections
 
 A data collection rule (DCR) is a new way to configure data collection streams for Azure Monitor Agent. The Azure Monitor DCR Config Generator is a tool that you can use to help migrate from legacy agents to Azure Monitor Agent and deploy DCRs. The tool uses the information that you already collect in your Log Analytics workspaces to create and deploy DCRs automatically. You must still associate the rules to virtual machines (VMs) so that you can start the flow of data.

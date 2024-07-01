@@ -1,3 +1,15 @@
+---
+title: Step 7 - Remove Microsoft Monitoring Agent and clean up configurations
+description: Learn how to remove Microsoft Monitoring Agent and clean up configurations as part of the process of migrating to Azure Monitor Agent.
+ms.date: 07/08/2024
+author: neilghuman
+ms.author: neghuman
+ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, v-leedennis
+editor: v-jsitser
+ms.service: azure-monitor
+ms.custom: 
+#Customer intent: As an Azure Monitor user, I want to learn how to remove Microsoft Monitoring Agent and clean up configurations so that I can successfully migrate to Azure Monitor Agent.
+---
 # Step 7: Remove Microsoft Monitoring Agent and clean up configurations
 
 If you want to uninstall Microsoft Monitoring Agent from multiple devices in your environment, you can use the Microsoft Monitoring Agent discovery and removal utility. This utility is a PowerShell script that helps you find and remove Microsoft Monitoring Agent instances that are connected to a specific Azure Monitor workspace. You can also use this utility to check the health status of the agents and the connectivity to the workspace.

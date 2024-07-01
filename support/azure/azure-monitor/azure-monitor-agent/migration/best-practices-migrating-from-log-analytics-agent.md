@@ -1,3 +1,15 @@
+---
+title: Best practices for migrating to Azure Monitor Agent
+description: Read an overview about best practices for migrating to Azure Monitor Agent from the legacy Log Analytics agent.
+ms.date: 07/08/2024
+author: neilghuman
+ms.author: neghuman
+ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, v-leedennis
+editor: v-jsitser
+ms.service: azure-monitor
+ms.custom: 
+#Customer intent: As an Azure Monitor user, I want to learn about best practices for migrating to Azure Monitor Agent so that I can move on from using the legacy Log Analytics agent.
+---
 # Best practices for migrating to Azure Monitor Agent from the legacy Log Analytics agent
 
 This article provides guidance on how to implement a successful migration to Microsoft Azure Monitor Agent from the Log Analytics agent.

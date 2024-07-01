@@ -1,6 +1,18 @@
+---
+title: Step 6 - Configure other services to use Azure Monitor Agent
+description: Learn how to configure other services to use Azure Monitor Agent as part of the process of migrating from the legacy Log Analytics agent.
+ms.date: 07/08/2024
+author: neilghuman
+ms.author: neghuman
+ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, v-leedennis
+editor: v-jsitser
+ms.service: azure-monitor
+ms.custom: 
+#Customer intent: As an Azure Monitor user, I want to learn how to configure other services to use Azure Monitor Agent so that I can migrate from the legacy Log Analytics agent.
+---
 # Step 6: Configure other services
 
-After you deploy Azure Monitor Agent at scale, you can configure other services to use Azure Monitor Agent instead of the legacy agent. Configuration guidance links are shown for various services in the following table.
+After you deploy Azure Monitor Agent at scale, you can configure other services to use Azure Monitor Agent instead of the legacy Log Analytics agent. Configuration guidance links are shown for various services in the following table.
 
 | Service | Guidance link |
 |--|--|

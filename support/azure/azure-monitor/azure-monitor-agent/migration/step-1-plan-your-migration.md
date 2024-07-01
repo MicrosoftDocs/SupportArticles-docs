@@ -1,3 +1,15 @@
+---
+title: Step 1 - Plan your migration to Azure Monitor Agent
+description: Learn how to plan your migration to Azure Monitor Agent as the first step toward upgrading from the legacy Log Analytics Agent.
+ms.date: 07/08/2024
+author: neilghuman
+ms.author: neghuman
+ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, v-leedennis
+editor: v-jsitser
+ms.service: azure-monitor
+ms.custom: 
+#Customer intent: As an Azure Monitor user, I want to learn how to plan a migration to Azure Monitor so that I can move on from using the legacy Log Analytics Agent.
+---
 # Step 1: Plan your migration
 
 Before you start the migration, you should prepare a migration plan. To facilitate this step, it's important to first understand how many agents you must migrate, which legacy solutions you're using, and what prerequisites you need to get in place.

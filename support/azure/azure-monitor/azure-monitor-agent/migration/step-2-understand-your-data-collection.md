@@ -1,3 +1,15 @@
+---
+title: Step 2 - Understand the data that you're collecting
+description: Understand the data that you're collecting as the second step of the process of migrating to Azure Monitor Agent from the legacy Log Analytics Agent.
+ms.date: 07/08/2024
+author: neilghuman
+ms.author: neghuman
+ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, v-leedennis
+editor: v-jsitser
+ms.service: azure-monitor
+ms.custom: 
+#Customer intent: As an Azure Monitor user, I want to understand the data that I'm collecting so that I can successfully migrate to Azure Monitor Agent from the legacy Log Analytics agent.
+---
 # Step 2: Understand the data that you're collecting
 
 To understand the data that you're collecting for the migration to Microsoft Azure Monitor Agent, repeat the following guidance for each of the workspaces in your environment.

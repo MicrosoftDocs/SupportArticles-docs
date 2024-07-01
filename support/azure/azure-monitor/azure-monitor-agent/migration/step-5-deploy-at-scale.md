@@ -1,3 +1,15 @@
+---
+title: Step 5 - Deploy Azure Monitor Agent at scale
+description: Learn how to use Azure Policy to deploy Azure Monitor Agent at scale so that you can migrate from the legacy Log Analytics agent.
+ms.date: 07/08/2024
+author: neilghuman
+ms.author: neghuman
+ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, v-leedennis
+editor: v-jsitser
+ms.service: azure-monitor
+ms.custom: 
+#Customer intent: As an Azure Monitor user, I want to learn how to use Azure Policy to deploy Azure Monitor Agent at scale so that I can migrate from the legacy Log Analytics agent.
+---
 # Step 5: Deploy at scale
 
 Azure Policy is a service that allows you to define and enforce rules for your Azure resources. You can use Azure Policy to associate virtual machines (VMs) to a data collection rule (DCR)&mdash;a configuration that specifies what data to collect from Azure Monitor Agent. By using Azure Policy to associate VMs to DCRs, you can ensure consistent and compliant data collection across your VMs.

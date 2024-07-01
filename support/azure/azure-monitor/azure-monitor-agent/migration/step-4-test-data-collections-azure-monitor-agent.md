@@ -1,8 +1,22 @@
+---
+title: Step 4 - Test data collections in Azure Monitor Agent
+description: Learn how to test data collections in Azure Monitor Agent as part of the process of migrating from the legacy Log Analytics agent.
+ms.date: 07/08/2024
+author: neilghuman
+ms.author: neghuman
+ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, v-leedennis
+editor: v-jsitser
+ms.service: azure-monitor
+ms.custom: 
+#Customer intent: As an Azure Monitor user, I want to learn how to test data collections in Azure Monitor Agent so that I can migrate from the legacy Log Analytics agent.
+---
 # Step 4: Test data collections in Azure Monitor Agent
+
+This article discusses how to deploy new data collection rules (DCRs) and associate a pilot group of server agents so that you can test data collections in Azure Monitor Agent.
 
 ## Deploy new data collection rules (DCRs)
 
-To deploy a new data collection rule (DCR) from a Bicep template, follow these steps:
+To deploy a new data collection rule from a Bicep template, follow these steps:
 
 1. Install Azure CLI and Bicep CLI on your virtual machine (VM).
 
