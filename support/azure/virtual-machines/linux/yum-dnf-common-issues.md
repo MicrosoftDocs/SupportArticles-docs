@@ -19,7 +19,7 @@ ms.date: 04/15/2024
 This article discusses common issues that you might encounter when you use `yum` and `dnf` package management tools to install or update applications on Azure virtual machines (VMs), and provides solutions to these issues.
 
 > [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and planning accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+> This article references CentOS, a Linux distribution that is End Of Life (EOL) status. Please consider your use and planning accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 ## Overview
 
