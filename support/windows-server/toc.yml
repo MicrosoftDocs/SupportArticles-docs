@@ -3269,6 +3269,8 @@ items:
       href: ./support-tools/scripts-compile-registered-mof-files.md
     - name: Scripts to list all running WMI providers
       href: ./support-tools/scripts-list-running-wmi-providers.md
+    - name: Scripts to retrieve profile age and optionally delete aged copies
+      href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
