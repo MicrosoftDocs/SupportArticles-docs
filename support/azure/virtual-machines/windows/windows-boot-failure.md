@@ -9,6 +9,8 @@ ms.custom: sap:My VM is not booting
 ---
 # Windows boot error INACCESSIBLE_BOOT_DEVICE in an Azure VM
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article provides a solution to an issue where a Windows virtual machine (VM) doesn't start with the error "INACCESSIBLE_BOOT_DEVICE" or "Boot failure".
 
 _Original product version:_ &nbsp; Virtual Machine running Windows  

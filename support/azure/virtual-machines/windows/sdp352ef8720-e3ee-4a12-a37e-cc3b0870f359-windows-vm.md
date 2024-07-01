@@ -10,6 +10,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # [SDP3][52ef8720-e3ee-4a12-a37e-cc3b0870f359] Microsoft Azure PaaS VM logs
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles)  
 _Original KB number:_ &nbsp; 2772488
 

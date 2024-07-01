@@ -8,6 +8,8 @@ ms.reviewer: srijangupta, scotro, jarrettr
 ---
 # Linux virtual machine deployment FAQs
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 ## How do I activate my monthly credit for Visual studio Enterprise (BizSpark)
 
 To activate your monthly credit, see [Microsoft Azure Offer Details](https://azure.microsoft.com/offers/ms-azr-0064p/).

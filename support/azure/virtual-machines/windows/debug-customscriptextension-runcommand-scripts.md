@@ -10,6 +10,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell
 ---
 # Debug PowerShell scripts run by Custom Script Extension or Run Command
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article discusses how to test and correct for a failure in a PowerShell script that uses the Custom Script Extension or Run Command feature.
 
 ## Prerequisites

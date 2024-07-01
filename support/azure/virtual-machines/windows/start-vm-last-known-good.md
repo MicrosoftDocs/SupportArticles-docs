@@ -9,6 +9,8 @@ ms.custom: sap:Cannot start or stop my VM
 ---
 # How to start Azure Windows VM with Last Known Good Configuration
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 If you've recently installed new software or changed some Windows settings, and your Azure Windows virtual machine (VM) stops booting correctly, you might have to start the VM by using the Last Known Good Configuration for troubleshooting. This article describes how to do this.
 
 _Original product version:_ &nbsp; Virtual Machine running Windows  

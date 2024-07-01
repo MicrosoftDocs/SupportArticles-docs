@@ -8,6 +8,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Support policy for Citrix services on Azure
 
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
 This article describes the Microsoft support policy that applies when you run Citrix services on Microsoft Azure. It also describes related Citrix support policies.
 
 _Original product version:_ &nbsp; Virtual Machine running Citrix

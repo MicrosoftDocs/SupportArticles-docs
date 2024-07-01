@@ -8,6 +8,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Error in VM Boot Diagnostics in Azure portal: Failed to get contents of the log
 
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
 This article provides a solution to an issue in which "Failed to get contents of the log" error occurs when you view a virtual machine screen shot in the Boot Diagnostics blade in the Azure portal.
 
 _Original product version:_ &nbsp; Virtual Machine running Windows, Virtual Machine running Linux  

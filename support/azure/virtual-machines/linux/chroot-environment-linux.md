@@ -17,6 +17,8 @@ ms.author: genli
 
 # Chroot environment in a Linux rescue VM
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article describes how to troubleshoot the chroot environment in the rescue virtual machine (VM) in Linux.

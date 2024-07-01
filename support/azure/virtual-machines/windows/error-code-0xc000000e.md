@@ -9,6 +9,8 @@ ms.custom: sap:My VM is not booting
 ---
 # Winload.exe error code 0xc000000e on an Azure VM
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article provides a solution to an issue where Azure VM doesn't start with error code 0xc000000e.
 
 _Original product version:_ &nbsp; Virtual Machine running Windows  

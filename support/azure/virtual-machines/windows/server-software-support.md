@@ -9,6 +9,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Microsoft server software support for Azure virtual machines
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article discusses the support policy for running Microsoft server software in the Microsoft Azure Virtual Machine environment (infrastructure-as-a-service).
 
 _Original product version:_ &nbsp; Virtual Machine running Windows, Cloud Services (Web roles/Worker roles)  

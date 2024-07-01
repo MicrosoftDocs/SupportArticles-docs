@@ -10,6 +10,8 @@ ms.custom: sap:Cannot create a VM
 
 # A Capacity Reservation is in a "Failed" provisioning state
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 The following article discusses how to resolve the situation of a Capacity Reservation being in a "failed" provisioning state.
 
 ## Why Capacity Reservation in "failed" provisioning State

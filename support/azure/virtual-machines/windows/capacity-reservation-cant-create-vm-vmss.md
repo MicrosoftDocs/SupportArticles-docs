@@ -10,6 +10,8 @@ ms.custom: sap:Cannot create a VM
 
 # Can't create a Capacity Reservation
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 The following article discusses the reasons why you are not able to create Capacity Reservation.
 
 ## Reasons why Capacity Reservation can't be created

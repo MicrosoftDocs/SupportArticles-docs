@@ -9,6 +9,8 @@ ms.custom: sap:My VM is not booting
 ---
 # Windows boot error 0xc0000359 in an Azure VM
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article provides a solution to an issue where Windows VM doesn't start with 0xc0000359 error code.
 
 _Original product version:_ &nbsp; Virtual Machine running Windows  

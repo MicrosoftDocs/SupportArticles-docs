@@ -12,6 +12,8 @@ ms.collection: linux
 
 # Troubleshoot UEFI boot failures in Azure Linux virtual machines
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 Linux partner images in Azure Marketplace are tagged and configured for both BIOS generation 1 boot and Unified Extensible Firmware Interface (UEFI) generation 2 boot.

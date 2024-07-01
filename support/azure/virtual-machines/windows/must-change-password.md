@@ -19,6 +19,8 @@ ms.custom: sap:Cannot connect to my VM
 
 # Azure virtual machine error: “You must change your password before logging on the first time”
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 ## Symptom
 
 When you use a Remote Desktop Protocol (RDP) connection to connect to an Azure virtual machine (VM), you encounter the error:

@@ -16,8 +16,9 @@ ms.date: 09/09/2020
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
-
 # Troubleshoot Windows could not finish configuring the system
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where the Sysprep process prevents the booting of an Azure virtual machine (VM).
 

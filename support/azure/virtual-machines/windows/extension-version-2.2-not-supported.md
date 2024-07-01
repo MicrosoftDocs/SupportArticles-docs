@@ -8,6 +8,8 @@ ms.custom: sap:Azure Disk Encryption (ADE) not operating correctly
 ---
 # Error when you try to enable Azure Disk Encryption: Extension version '2.2' is not supported
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article provides two workarounds to an issue in which you can't enable Azure Disk Encryption with error "Azure Disk Encryption extension version '2.2' is not supported".
 
 _Original product version:_ &nbsp; Virtual Machine running Windows  

@@ -11,6 +11,8 @@ ms.author: pagienge
 ---
 # Out of memory error occurs in Linux Azure virtual machine
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article discusses a few scenarios in which a Microsoft Azure Virtual Machine (VM) that runs the Linux operating system (OS) runs out of memory (OOM). An OOM condition causes new memory allocation requests to fail, or it causes the [OOM Killer](https://linux-mm.org/OOM_Killer) process to be invoked. If it's configured to do this, the [kernel panics](../linux/linux-kernel-panic-troubleshooting.md), and a memory dump file is created.
 
 *Original product version:* &nbsp; Virtual Machine running Linux  

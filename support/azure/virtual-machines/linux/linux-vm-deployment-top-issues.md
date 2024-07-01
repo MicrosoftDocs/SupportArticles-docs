@@ -8,6 +8,8 @@ ms.reviewer: srijangupta, scotro, jarrettr
 ---
 # Azure Linux virtual machine deployment top issues
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [support-disclaimer](../../../includes/azure/virtual-machines-linux-troubleshoot-deploy-vm-top.md)]
 
 ## The cluster cannot support the requested VM size

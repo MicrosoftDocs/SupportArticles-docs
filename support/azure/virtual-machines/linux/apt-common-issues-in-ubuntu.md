@@ -15,6 +15,8 @@ ms.date: 06/07/2024
 ---
 # Troubleshoot common issues with APT on Ubuntu
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article discusses and provides solutions to common issues that you might encounter when you use the `apt` command-line tool to install or update applications on Microsoft Azure virtual machines (VMs).
 
 > [!CAUTION]

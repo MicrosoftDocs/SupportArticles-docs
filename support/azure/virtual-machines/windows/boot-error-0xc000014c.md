@@ -9,6 +9,8 @@ ms.custom: sap:My VM is not booting
 ---
 # Windows boot error 0xc000014c on an Azure VM
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 _Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4010141
 

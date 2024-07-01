@@ -13,6 +13,8 @@ ms.collection: linux
 
 # Troubleshoot Linux virtual machine boot and network issues due to Hyper-V driver-associated errors
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 Azure runs on the Hyper-V hypervisor, and Linux systems require certain Hyper-V kernel modules to run on Azure. These kernel modules are bundled into the Linux Integration Services (LIS) drivers for Hyper-V and Azure. Microsoft contributes them directly to the upstream Linux kernel.
 
 This article discusses multiple conditions where one or more disabled Hyper-V drivers could lead to Linux virtual machine (VM) boot and networking issues.

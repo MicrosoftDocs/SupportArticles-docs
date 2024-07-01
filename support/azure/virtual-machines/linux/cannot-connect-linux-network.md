@@ -11,6 +11,8 @@ ms.reviewer:
 ---
 # Can't connect to Azure Linux VM through network
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article fixes an issue in which network errors prevent you from connecting to Azure Linux virtual machines.

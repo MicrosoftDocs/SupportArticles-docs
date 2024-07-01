@@ -8,6 +8,8 @@ ms.custom: sap:Cannot create a VM
 ---
 # Uploaded VHD is not supported when you create a VM in Azure
 
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
 This article provides a solution to an issue in which you can't create a virtual machine using an uploaded VHD.
 
 _Original product version:_ &nbsp; Virtual Machine running Windows, Virtual Machine running Linux  

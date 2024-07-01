@@ -10,6 +10,8 @@ ms.custom: sap:Issue with Azure Virtual Desktop
 ---
 # How-to videos about Azure Virtual Desktop
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 _Original product version:_ &nbsp; Virtual Desktop  
 _Original KB number:_ &nbsp; 4563049
 

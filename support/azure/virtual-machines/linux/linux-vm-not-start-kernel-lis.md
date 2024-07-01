@@ -11,6 +11,8 @@ ms.collection: linux
 ---
 # A Linux VM does not start correctly with kernel 3.10.0-514.16 after an LIS upgrade
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article provides a workaround to an issue in which a Linux VM does not start correctly with kernel 3.10.0-514.16 after a Linux Integration Services (LIS) upgrade.
 
 _Original product version:_ &nbsp; Microsoft Linux Integration Services; Microsoft Azure Virtual Machine running Linux  

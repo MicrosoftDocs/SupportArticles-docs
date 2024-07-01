@@ -9,6 +9,8 @@ ms.collection: linux
 ---
 # Azure Linux VM extensions stop running
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 _Original product version:_ &nbsp; Virtual Machine running Linux  
 _Original KB number:_ &nbsp; 4099558
 

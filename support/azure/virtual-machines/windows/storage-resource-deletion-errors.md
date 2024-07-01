@@ -14,8 +14,9 @@ ms.topic: troubleshooting
 ms.date: 11/01/2018
 ms.author: genli
 ---
-
 # Troubleshoot storage resource deletion errors
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 In certain scenarios, you may encounter one of the following errors occur while you are trying to delete an Azure storage account, container, or blob in an Azure Resource Manager deployment:
 

@@ -9,6 +9,8 @@ ms.collection: windows
 ---
 # Microsoft Azure IaaS VM logs
 
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
 This article lists the Microsoft Azure IaaS VM logs and diagnostic information that's collected during troubleshooting by Microsoft Support.
 
 _Original product version:_ &nbsp; Azure  

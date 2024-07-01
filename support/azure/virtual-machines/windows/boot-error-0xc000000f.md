@@ -9,6 +9,8 @@ ms.custom: sap:My VM is not booting
 ---
 # Boot error code 0xC000000F in an Azure VM
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article provides solutions to an issue where Windows VM doesn't start and generates errors.
 
 _Original product version:_ &nbsp; Virtual Machine running Windows  
