@@ -67,19 +67,19 @@ Additionally, you can find more information about gateway and sidecar debugging 
 
 ### Step 4: Configure resource utilization
 
-When the default min/max replica settings for istiod and the gateways aren't sufficient, high resource utilization occurs. In this case, change [horizontal pod autoscaling](/azure/aks/istio-scale) configurations.
+High resource utilization occurs when the default min/max replica settings for `istiod` and the gateways aren't sufficient. In this case, change [horizontal pod autoscaling](/azure/aks/istio-scale) configurations.
 
-### Step 5: Troubleshoot secure ingress gateway
+### Step 5: Troubleshoot the secure ingress gateway
 
-When [external ingress gateway is configured to expose a secure HTTPS service using simple or mutual TLS](/azure/aks/istio-secure-gateway), follow these troubleshooting steps:
+When an [external ingress gateway is configured to expose a secure HTTPS service using simple or mutual TLS](/azure/aks/istio-secure-gateway), follow these troubleshooting steps:
 
-1. Check the values of the `INGRESS_HOST_EXTERNAL` and `SECURE_INGRESS_PORT_EXTERNAL` environment variables are valid, based on the output of the following commands:
+1. Verify that the values of the `INGRESS_HOST_EXTERNAL` and `SECURE_INGRESS_PORT_EXTERNAL` environment variables are valid based on the output of the following command:
 
    ```bash
    kubectl -n aks-istio-ingress get service aks-istio-ingressgateway-external
    ```
 
-1. Check error messages in the gateway controller's logs:
+1. Check for error messages in the gateway controller's logs:
 
    ```bash
    kubectl logs -n aks-istio-ingress <gateway-service-pod>
@@ -93,9 +93,9 @@ When [external ingress gateway is configured to expose a secure HTTPS service us
 
 For the example in [Secure ingress gateway for Istio service mesh add-on for Azure Kubernetes Service](/azure/aks/istio-secure-gateway), the `productpage-credential` secret should be listed.
 
-After you enable the Azure Key Vault secrets provider add-on, you have to grant access for the user-assigned managed identity of the add-on to the Azure Key Vault. Setting up access to Azure Key Vault incorrectly will cause the `productpage-credential` secret to not get created.
+After you enable the Azure Key Vault secrets provider add-on, you have to grant access for the user-assigned managed identity of the add-on to the Azure Key Vault. Incorrectly setting up access to Azure Key Vault will prevent the `productpage-credential` secret from being created.
 
-After you create the `SecretProviderClass` resource, to ensure that secrets sync from Azure Key Vault to the cluster, ensure the sample pod, `secrets-store-sync-productpage` that references this resourse is successfully deployed.
+After you create the `SecretProviderClass` resource, to ensure secrets sync from Azure Key Vault to the cluster, ensure the sample pod `secrets-store-sync-productpage` that references this resource is successfully deployed.
 
 ## References
 
