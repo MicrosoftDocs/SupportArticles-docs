@@ -22,18 +22,16 @@ This article helps you learn how to understand the costs associated with your Lo
 
 1. In the Azure portal, navigate to your Log Analytics resource. -->
 1. Select the [Log Analytics workspace blade](button-link:https://portal.azure.com/#browse/Microsoft.OperationalInsights%2Fworkspaces) to get started, then select your specific Log Analytics Workspace.  
-[![viewcost.png](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/log-analytics-workspaces.png)](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/log-analytics-workspaces.png)  
-
-:::image type="content" source="media/view-cost.png" alt-text="view-cost" lightbox="media/view-cost.png":::
+:::image type="content" source="media/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/log-analytics-workspaces.png":::
 
 1. Select **View Cost**  
-[![viewcost.png](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost.png)](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost.png)
+:::image type="content" source="media/view-cost.png" alt-text="view cost" lightbox="media/view-cost.png":::
 
 1. Under the view dropdown, select **Resources**.  
-[![viewcost2.png](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost-2.png)](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost-2.png)
+:::image type="content" source="media/view-cost-2.png" alt-text="view cost step 2" lightbox="media/view-cost-2.png":::
 
 1. Hover over the '**+**' symbol and select it to open a new tab within the Cost analysis pane.  
-[![viewcost3.png](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost-3.png)](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost-3.png)
+:::image type="content" source="media/view-cost-3.png" alt-text="view cost step 3" lightbox="media/view-cost-3.png":::
 
 1. Select the **Service** tab.  
 [![viewcost4.png](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost-4.png)](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost-4.png)
