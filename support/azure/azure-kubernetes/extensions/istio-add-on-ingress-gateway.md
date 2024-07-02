@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on ingress gateway troubleshooting
 description: Learn how to do ingress gateway troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 06/27/2024
+ms.date: 07/02/2024
 author: nshankar13
 ms.author: nshankar
 editor: v-jsitser
@@ -67,33 +67,35 @@ Additionally, you can find more information about gateway and sidecar debugging 
 
 ### Step 4: Configure resource utilization
 
-In an event of high resource utilization where the default min/max replica configurations for istiod and the gateways are not sufficient, [Horizontal pod autoscaling](/azure/aks/istio-scale) configurations can be modified. 
+When the default min/max replica settings for istiod and the gateways aren't sufficient, high resource utilization occurs. In this case, change [horizontal pod autoscaling](/azure/aks/istio-scale) configurations.
 
-### Step 5: Troubleshoot [Secure ingress gateway](/azure/aks/istio-secure-gateway)
+### Step 5: Troubleshoot secure ingress gateway
 
-When external ingress gateway is configured to expose a secure HTTPS service using either simple or mutual TLS, follow these troubleshooting steps:
+When [external ingress gateway is configured to expose a secure HTTPS service using simple or mutual TLS](/azure/aks/istio-secure-gateway), follow these troubleshooting steps:
 
-1. Inspect the values of the INGRESS_HOST_EXTERNAL and SECURE_INGRESS_PORT_EXTERNAL environment variables. Make sure they have valid values, according to the output of the following commands:
+1. Check the values of the `INGRESS_HOST_EXTERNAL` and `SECURE_INGRESS_PORT_EXTERNAL` environment variables are valid, based on the output of the following commands:
 
-```bash
-kubectl -n aks-istio-ingress get service aks-istio-ingressgateway-external
-```
+   ```bash
+   kubectl -n aks-istio-ingress get service aks-istio-ingressgateway-external
+   ```
 
-1. Checking logs for gateway controller for error messages
+1. Check error messages in the gateway controller's logs:
 
-```bash
-kubectl logs -n aks-istio-ingress <gateway-service-pod>
-```
+   ```bash
+   kubectl logs -n aks-istio-ingress <gateway-service-pod>
+   ```
 
-1. Verify that the secrets are successfully created in the `aks-istio-ingress` namespace:
+1. Verify that the secrets are created in the `aks-istio-ingress` namespace:
 
-```bash
-kubectl -n aks-istio-ingress get secrets
-```
-For the example in the secure ingress gateway article, `productpage-credential` secret should be listed.
+   ```bash
+   kubectl -n aks-istio-ingress get secrets
+   ```
+
+For the example in [Secure ingress gateway for Istio service mesh add-on for Azure Kubernetes Service](/azure/aks/istio-secure-gateway), the `productpage-credential` secret should be listed.
+
 After you enable the Azure Key Vault secrets provider add-on, you have to grant access for the user-assigned managed identity of the add-on to the Azure Key Vault. Setting up access to Azure Key Vault incorrectly will cause the `productpage-credential` secret to not get created.
 
-After you create `SecretProviderClass` resource, ensure the sample pod, `secrets-store-sync-productpage` that references this resourse is successfully deployed to ensure secrets sync from Azure Key Vault to the cluster.
+After you create the `SecretProviderClass` resource, to ensure that secrets sync from Azure Key Vault to the cluster, ensure the sample pod, `secrets-store-sync-productpage` that references this resourse is successfully deployed.
 
 ## References
 
