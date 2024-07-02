@@ -67,7 +67,7 @@ Additionally, you can find more information about gateway and sidecar debugging 
 
 ### Step 4: Configure resource utilization
 
-High resource utilization occurs when the default min/max replica settings for `istiod` and the gateways aren't sufficient. In this case, change [horizontal pod autoscaling](/azure/aks/istio-scale) configurations.
+High resource utilization occurs when the default min/max replica settings for Istiod and the gateways aren't sufficient. In this case, change [horizontal pod autoscaling](/azure/aks/istio-scale) configurations.
 
 ### Step 5: Troubleshoot the secure ingress gateway
 
