@@ -134,8 +134,6 @@
       href: desktop-flows/console-not-show-desktop-flows.md
     - name: Power Automate service doesn't start automatically after restarting
       href: desktop-flows/windows-services-not-start-after-restart.md
-    - name: Proxy server related errors in Power Automate for desktop
-      href: desktop-flows/proxy-error-console.md
     - name: Some actions appear to be missing or aren't visible
       href: desktop-flows/actions-not-available.md
     - name: Set drop-down list value in window/on web page action fails

@@ -48,4 +48,4 @@ Approve the [Desktop flows services required for runtime](/power-automate/ip-add
 
 ## Resolution and workaround for the proxy authentication issue
 
-To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](proxy-error-console.md).
+To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](/power-automate/desktop-flows/how-to/proxy-settings).

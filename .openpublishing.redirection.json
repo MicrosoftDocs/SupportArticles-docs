@@ -11364,6 +11364,11 @@
       "source_path": "support/windows-client/installing-updates-features-roles/switches-with-xcopy-and-xcopy32-command.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/switches-with-xcopy-and-xcopy32-command",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/proxy-error-console.md",
+      "redirect_url": "/power-automate/desktop-flows/how-to/proxy-settings",
+      "redirect_document_id": false
+    }    
   ]
 }
