@@ -13,6 +13,7 @@ metadata:
   ms.author: genli
   ms.reviewer: cwhitley, jusilver, scotro, v-naqviadil, v-leedennis, v-weizhu
   ms.custom: sap:Cannot activate my Windows VM
+  appliesto: :heavy_check_mark: Windows VMs
     
 title: Azure Windows virtual machine activation FAQ
 summary: This article answers frequently asked questions (FAQ) about activating a Microsoft Windows virtual machine (VM) in Azure.
