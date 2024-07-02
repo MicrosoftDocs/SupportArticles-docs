@@ -14,13 +14,13 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Certificates and PKI sub categories
 
-- Certificate Root Update Program
-- Certificate enrollment
 - Active Directory Certificate Services (ADCS)
-- Network Device Enrollment Services (NDES)
-- Kerberos authentication
 - Certificate-based authentication
+- Certificate enrollment
+- Certificate Root Update Program
 - Certificate web enrollment pages (CWE)
 - Encrypting File System (EFS)
+- Kerberos authentication
+- Network Device Enrollment Services (NDES)
 - Smart card logon
 - SSL or TLS
