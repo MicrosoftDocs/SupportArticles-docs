@@ -23,6 +23,9 @@ This article helps you learn how to understand the costs associated with your Lo
 1. Select the [Log Analytics workspace blade](button-link:https://portal.azure.com/#browse/Microsoft.OperationalInsights%2Fworkspaces) to get started, then select your specific Log Analytics Workspace.  
 [![viewcost.png](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/log-analytics-workspaces.png)](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/log-analytics-workspaces.png)  
 
+:::image type="content" source="media/billing/high-res/view-cost.png" alt-text="view-cost" lightbox="media/billing/high-res/view-cost.png":::
+:::image type="content" source="media/billing/high-res/view-cost.png" alt-text="view-cost" lightbox="media/billing/low-res/view-cost.png":::
+
 1. Select **View Cost**  
 [![viewcost.png](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost.png)](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost.png)
 
