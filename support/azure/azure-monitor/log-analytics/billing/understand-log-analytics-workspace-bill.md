@@ -21,7 +21,16 @@ This article helps you learn how to understand the costs associated with your Lo
 <!-- Sign into the Azure portal to get started.
 
 1. In the Azure portal, navigate to your Log Analytics resource. -->
-1. Select the [Log Analytics workspace blade](button-link:https://portal.azure.com/#browse/Microsoft.OperationalInsights%2Fworkspaces) to get started, then select your specific Log Analytics Workspace.  
+1. ## Sign in to Azure
+
+Sign in to the [Azure portal](https://portal.azure.com).
+
+## Select you Log Analytics Workspace
+
+1. Enter *log analytics* in the search.
+1. Under **Services**, select **Log Analytics**.
+
+1. Select your specific Log Analytics Workspace.  
 :::image type="content" source="media/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/log-analytics-workspaces.png":::
 
 1. Select **View Cost**  
