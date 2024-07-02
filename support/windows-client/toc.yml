@@ -79,6 +79,8 @@ items:
       href: ./application-management/enable-windows-installer-logging.md
     - name: Installed programs are incorrectly displayed
       href: ./application-management/add-remove-programs-displays-programs-incorrectly.md
+    - name: Restore missing Windows Installer cache files
+      href: ./application-management/missing-windows-installer-cache.md
     - name: VersionNT value for Windows 10, Windows Server 2016, and Windows Server 2019
       href: ./application-management/versionnt-value-for-windows-10-server.md
     - name: 0x80070BC9 error when installing MSI package
@@ -137,6 +139,8 @@ items:
     items:
     - name: Backup fails when you create system image
       href: ./backup-and-storage/backup-fails-when-create-system-image.md
+    - name: Cannot use the ImageX.exe tool for backup
+      href: ./backup-and-storage/cannot-use-imagex-tool-backup.md
     - name: Error 0x810000 when using the Backup and Restore Wizard
       href: ./backup-and-storage/error-0x81000031-back-up-files-backup-restore-wizard.md
     - name: System Image Recovery fails with 0x80070002 error
@@ -245,92 +249,6 @@ items:
     items:
     - name: Retrieve data from Windows XP Mode VM
       href: ./high-availability/retrieve-data-from-windows-xp-mode-vm.md
-- name: Installing Windows Updates, features, or roles
-  items:
-  - name: Installing Windows Updates, features, or roles
-    href: ./installing-updates-features-roles/installing-updates-features-roles-overview.md
-  - name: Failure to install Windows Updates
-    items:
-    - name: 'Troubleshooting guidance: Windows Update'
-      href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
-    - name: Additional resources for Windows Update
-      href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
-    - name: Analyze log file entries that SFC.exe generates
-      href: ./installing-updates-features-roles/analyze-sfc-program-log-file-entries.md
-    - name: Automatic Updates can't download updates
-      href: ./installing-updates-features-roles/automatic-updates-cannot-download-updates-event-16.md
-    - name: Cannot install May 2019 update of Windows 10 on computers running AMD RAID drivers
-      href: ./installing-updates-features-roles/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md
-    - name: Cannot use the ImageX.exe tool for backup
-      href: ./installing-updates-features-roles/cannot-use-imagex-tool-backup.md
-    - name: Command-line switches for software update packages
-      href: ./installing-updates-features-roles/command-line-switches-deploy-update-packages.md
-    - name: Command-line switches supported by Self-Extractor packages
-      href: ./installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md
-    - name: DISM /Apply-Image command fails with error code 5
-      href: ./installing-updates-features-roles/dism-apply-image-command-fails-error-code-5.md
-    - name: Download updates from Windows Update Catalog
-      href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
-    - name: 80072EE6 error when downloading an update from WSUS
-      href: ./installing-updates-features-roles/error-80072ee6-downlaod-wsus-update.md
-    - name: Error messages when you scan for updates
-      href: ./installing-updates-features-roles/error-messages-when-you-scan-updates.md
-    - name: Error message when installing RSAT
-      href: ./installing-updates-features-roles/error-message-when-installing-rsat.md
-    - name: Error 87 when a Windows 10 image is applied
-      href: ./installing-updates-features-roles/dism-error-87-apply-windows-10-image.md
-    - name: Error 403 when you access Windows Update
-      href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
-    - name: Fix errors found in CheckSUR.log
-      href: ./installing-updates-features-roles/errors-in-checksur-log.md
-    - name: How to downgrade from Windows 8
-      href: ./installing-updates-features-roles/downgrade-from-windows-8.md
-    - name: How to get updates via Windows Update
-      href: ./installing-updates-features-roles/get-updates-through-windows-update.md
-    - name: How to keep Windows up to date
-      href: ./installing-updates-features-roles/keep-windows-up-to-date.md
-    - name: How to solve disk space issues caused by WinSxS directory
-      href: ./installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md
-    - name: In-place upgrade to Windows 10 problem
-      href: ./installing-updates-features-roles/in-place-upgrade-to-windows-10-problems.md
-    - name: Install Service Packs and Hotfixes
-      href: ./installing-updates-features-roles/install-service-packs-hotfixes.md
-    - name: Package Manager can install only the first package
-      href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
-    - name: Previously released updates are reoffered
-      href: ./installing-updates-features-roles/previously-released-updates-reoffered.md
-    - name: Restore missing Windows Installer cache files
-      href: ./installing-updates-features-roles/missing-windows-installer-cache.md
-    - name: SFC detects Opencl.dll as corrupted
-      href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
-    - name: SFC flags Windows Defender files as corrupted
-      href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
-    - name: Standard terminology that defines software updates
-      href: ./installing-updates-features-roles/standard-terminology-software-updates.md
-    - name: Sysprep fails after you remove or update Microsoft Store apps
-      href: ./installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps.md
-    - name: System Error 126 when you start TrustedInstaller
-      href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
-    - name: System registry is no longer backed up to the RegBack folder
-      href: ./installing-updates-features-roles/system-registry-no-backed-up-regback-folder.md
-    - name: The processor not supported with Windows version
-      href: ./installing-updates-features-roles/processor-not-supported-together-with-windows-version.md
-    - name: The same update is offered repeately
-      href: ./installing-updates-features-roles/repeatedly-offer-the-same-update.md
-    - name: Update Windows Update Agent to latest version
-      href: ./installing-updates-features-roles/update-windows-update-agent.md
-    - name: view system registry with 64-bit versions of Windows
-      href: ./installing-updates-features-roles/view-system-registry-with-64-bit-windows.md
-    - name: Windows Update automatically downloads and installs updates
-      href: ./installing-updates-features-roles/updates-automatically-downloaded.md
-    - name: Windows Update blocked because of drive reassignment
-      href: ./installing-updates-features-roles/drive-reassignment-block-update.md
-    - name: Windows Update common errors and mitigation
-      href: ./installing-updates-features-roles/common-windows-update-errors.md
-    - name: Windows Update hangs
-      href: ./installing-updates-features-roles/windows-update-hangs-updates-uninstalled.md
-    - name: Windows Update issues troubleshooting
-      href: ./installing-updates-features-roles/windows-update-issues-troubleshooting.md
 - name: Licensing and activation
   items:
   - name: Licensing and activation
@@ -567,6 +485,8 @@ items:
       href: ./performance/disable-rpc-service-windows-process-not-work.md
     - name: SuperFetch(SysMain) service consumes CPU
       href: ./performance/superfetch-sysmain-service-spikes-cpu.md
+    - name: View system registry with 64-bit versions of Windows
+      href: ./performance/view-system-registry-with-64-bit-windows.md
     - name: Windows 10 causes issues when it calls CreateWindowEx
       href: ./performance/issues-when-calls-createwindowex-32-bit-applications.md
   - name: Blue Screen/Bugcheck
@@ -751,6 +671,8 @@ items:
       href: ./setup-upgrade-and-drivers/high-pitched-noise-is-heard.md
     - name: Bluetooth speakers don't work after KB 4505903 is applied
       href: ./setup-upgrade-and-drivers/bluetooth-speakers-not-work-after-kb4505903-installed.md
+    - name: Cannot install May 2019 update of Windows 10 on computers running AMD RAID drivers
+      href: ./setup-upgrade-and-drivers/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md
     - name: Create a user-defined service
       href: ./setup-upgrade-and-drivers/create-user-defined-service.md
     - name: Desktop icon isn't visible in Extended mode
@@ -813,12 +735,16 @@ items:
       href: ./setup-upgrade-and-drivers/computer-screen-black-during-installation.md
     - name: Customize default local user profile
       href: ./setup-upgrade-and-drivers/customize-default-local-user-profile.md
+    - name: DISM /Apply-Image command fails with error code 5
+      href: ./setup-upgrade-and-drivers/dism-apply-image-command-fails-error-code-5.md
     - name: Download and burn an ISO file from VLSC
       href: ./setup-upgrade-and-drivers/iso-file-on-vlsc.md
     - name: Error "A fatal error occurred while trying to sysprep the machine"
       href: ./setup-upgrade-and-drivers/fatal-error-occurred-sysprep-machine.md
     - name: Error 0x80042468 when creating a single partition
       href: ./setup-upgrade-and-drivers/error-when-creating-single-partition.md
+    - name: Error 87 when a Windows 10 image is applied
+      href: ./setup-upgrade-and-drivers/dism-error-87-apply-windows-10-image.md
     - name: Event ID 10 is logged in Application log
       href: ./setup-upgrade-and-drivers/event-10-is-logged-in-application-log.md
     - name: Fail to perform an in-place upgrade
@@ -835,6 +761,8 @@ items:
       href: ./setup-upgrade-and-drivers/customize-default-local-user-profile-prepare-image.md
     - name: How to edit the Boot.ini file in Windows 2000
       href: ./setup-upgrade-and-drivers/edit-boot-ini-file-windows-2000.md
+    - name: In-place upgrade to Windows 10 problem
+      href: ./setup-upgrade-and-drivers/in-place-upgrade-to-windows-10-problems.md
     - name: Installation File Location not behave on the Explain tab
       href: ./setup-upgrade-and-drivers/installation-file-location-service-pack-not-behave.md
     - name: Language features aren't displayed in Windows 10
@@ -855,6 +783,8 @@ items:
       href: ./setup-upgrade-and-drivers/error-occurs-when-running-sysprep-generalize.md
     - name: Sysprep and capture task sequence fails
       href: ./setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails.md
+    - name: Sysprep fails after you remove or update Microsoft Store apps
+      href: ./setup-upgrade-and-drivers/sysprep-fails-remove-or-update-store-apps.md
     - name: System restore points are disabled after upgrade
       href: ./setup-upgrade-and-drivers/system-restore-points-disabled.md
     - name: Windows optional component setup tool
@@ -873,6 +803,8 @@ items:
       href: ./setup-upgrade-and-drivers/windows-10-upgrade-quick-fixes.md
     - name: Windows 10 upgrade resolution procedures
       href: ./setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures.md
+    - name: Windows Update blocked because of drive reassignment
+      href: ./setup-upgrade-and-drivers/drive-reassignment-block-update.md
     - name: WinRE can't be built after deploying an image
       href: ./setup-upgrade-and-drivers/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
     - name: You can't access an EFI system partition
@@ -1301,6 +1233,84 @@ items:
     items:
     - name: Enable diagnostic logging for the Windows Security app
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
+- name: Windows Servicing, Updates and Features on Demand
+  items:
+  - name: Windows Servicing, Updates and Features on Demand
+    href: ./installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview.md
+  - name: Clients missing updates, not offered, fail to download
+    items:
+    - name: 80072EE6 error when downloading an update from WSUS
+      href: ./installing-updates-features-roles/error-80072ee6-downlaod-wsus-update.md
+    - name: Automatic Updates can't download updates
+      href: ./installing-updates-features-roles/automatic-updates-cannot-download-updates-event-16.md
+    - name: Error 403 when you access Windows Update
+      href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
+    - name: Error messages when you scan for updates
+      href: ./installing-updates-features-roles/error-messages-when-you-scan-updates.md
+    - name: Previously released updates are reoffered
+      href: ./installing-updates-features-roles/previously-released-updates-reoffered.md
+    - name: Windows Update automatically downloads and installs updates
+      href: ./installing-updates-features-roles/updates-automatically-downloaded.md
+  - name: Failure to install Windows Updates
+    items:
+    - name: 'Troubleshooting guidance: Windows Update'
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
+    - name: How to downgrade from Windows 8
+      href: ./installing-updates-features-roles/downgrade-from-windows-8.md
+    - name: How to get updates via Windows Update
+      href: ./installing-updates-features-roles/get-updates-through-windows-update.md
+    - name: How to solve disk space issues caused by WinSxS directory
+      href: ./installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md
+    - name: Install Service Packs and Hotfixes
+      href: ./installing-updates-features-roles/install-service-packs-hotfixes.md
+    - name: Package Manager can install only the first package
+      href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
+  - name: Issues installing Features on Demand (FoD)
+    items:
+    - name: Error message when installing RSAT
+      href: ./installing-updates-features-roles/error-message-when-installing-rsat.md
+  - name: Windows Update configuration, settings and management
+    items:
+    - name: Additional resources for Windows Update
+      href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
+    - name: Command-line switches for software update packages
+      href: ./installing-updates-features-roles/command-line-switches-deploy-update-packages.md
+    - name: Download updates from Windows Update Catalog
+      href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
+    - name: How to keep Windows up to date
+      href: ./installing-updates-features-roles/keep-windows-up-to-date.md
+    - name: SFC flags Windows Defender files as corrupted
+      href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
+    - name: Standard terminology that defines software updates
+      href: ./installing-updates-features-roles/standard-terminology-software-updates.md
+    - name: System registry is no longer backed up to the RegBack folder
+      href: ./installing-updates-features-roles/system-registry-no-backed-up-regback-folder.md
+    - name: The processor not supported with Windows version
+      href: ./installing-updates-features-roles/processor-not-supported-together-with-windows-version.md
+    - name: Update Windows Update Agent to latest version
+      href: ./installing-updates-features-roles/update-windows-update-agent.md
+  - name: Windows Update fails - installation rolls back
+    items:
+    - name: Command-line switches supported by Self-Extractor packages
+      href: ./installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md
+    - name: The same update is offered repeately
+      href: ./installing-updates-features-roles/repeatedly-offer-the-same-update.md
+    - name: Windows Update hangs
+      href: ./installing-updates-features-roles/windows-update-hangs-updates-uninstalled.md
+    - name: Windows Update issues troubleshooting
+      href: ./installing-updates-features-roles/windows-update-issues-troubleshooting.md
+  - name: Windows Update fails - installation stops with error
+    items:
+    - name: Analyze log file entries that SFC.exe generates
+      href: ./installing-updates-features-roles/analyze-sfc-program-log-file-entries.md
+    - name: Fix errors found in CheckSUR.log
+      href: ./installing-updates-features-roles/errors-in-checksur-log.md
+    - name: SFC detects Opencl.dll as corrupted
+      href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
+    - name: System Error 126 when you start TrustedInstaller
+      href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
+    - name: Windows Update common errors and mitigation
+      href: ./installing-updates-features-roles/common-windows-update-errors.md
 - name: Windows Troubleshooters
   items:
   - name: Windows Troubleshooters

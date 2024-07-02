@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, luioan, v-lianna
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot, ikb2lmc
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
 ---
 # "Failed to be changed to the Absent state. Status: 0x800f0922" when installing updates in Windows Server 2019 
 
@@ -43,6 +43,6 @@ In the log file, the error code 1058 indicates that the HTTP service can't be st
 To fix this issue, follow these steps:
 
 1. In Registry Editor, go to the following registry key:
-	`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP`
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP`
 2. Change the **Start** registry value to **3**.
 3. Close Registry Editor and install the update again.

@@ -4,7 +4,7 @@ description: Learn about troubleshooting Windows Update, issues related to HTTP/
 ms.date: 05/10/2024
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation rolls back, csstroubleshoot
 ms.collection: highpri
 ms.reviewer: dougeby,aaroncz
 audience: itpro
