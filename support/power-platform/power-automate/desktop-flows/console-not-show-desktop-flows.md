@@ -30,4 +30,4 @@ The Power Automate for desktop console doesn't show any desktop flows in the **M
 
 ## Resolution and workaround
 
-To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](proxy-error-console.md).
+To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](/power-automate/desktop-flows/how-to/proxy-settings).
