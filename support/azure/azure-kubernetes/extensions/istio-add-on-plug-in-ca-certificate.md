@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on plug-in CA certificate troubleshooting
 description: Learn how to do plug-in CA certificate troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 04/27/2024
+ms.date: 07/02/2024
 author: deveshdama
 ms.author: ddama
 editor: v-jsitser
@@ -196,9 +196,9 @@ For a BYO (plug-in) CA certificate, there are three detail entries. The other tw
 | CN=Root A,O=Istio"                            | "CN=Intermediate CA - A1,O=Istio,L=cluster-A1" | \<40-digit-hex-value> | "2023-11-04T01:40:22Z" | "2033-11-01T01:40:22Z" |
 | CN=Root A,O=Istio"                            | "CN=Root A,O=Istio"                            | \<40-digit-hex-value> | "2023-11-04T01:38:27Z" | "2033-11-01T01:38:27Z" |
 
-## Troubleshooting checklist
+## Troubleshoot common issues
 
-### Step 1: Access to Azure Key Vault is set up incorrectly
+### Issue 1: Access to Azure Key Vault is set up incorrectly
 
 After you enable the Azure Key Vault secrets provider add-on, you have to grant access for the user-assigned managed identity of the add-on to the Azure Key Vault. Setting up access to Azure Key Vault incorrectly causes the add-on installation to stall.
 
@@ -240,7 +240,7 @@ az keyvault set-policy --name $AKV_NAME --object-id $OBJECT_ID --secret-permissi
 > [!NOTE]
 > Did you create your Key Vault by using Azure RBAC Authorization for your permission model instead of Vault Access Policy? In this case, see [Provide access to Key Vault keys, certificates, and secrets with an Azure role-based access control](/azure/key-vault/general/rbac-guide) to create permissions for the managed identity. Add an Azure role assignment for [Key Vault Reader](/azure/role-based-access-control/built-in-roles/security#key-vault-reader) for the user-assigned managed identity of the add-on.
 
-### Step 2: Auto-detection of Key Vault secret changes isn't set up
+### Issue 2: Auto-detection of Key Vault secret changes isn't set up
 
 For a cluster to auto-detect changes in the Azure Key Vault secrets, you have to enable auto-rotation for the Azure Key Vault provider add-on. Auto-rotation can detect changes in intermediate and root certificates automatically. For a cluster that enables the Azure Key Vault provider add-on, run the following `az aks show` command to check whether auto-rotation is enabled:
 
@@ -255,7 +255,7 @@ az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER | jq -r '.addonProf
 ```
 Azure Key Vault secrets are synchronized with the cluster when the poll interval time elapses after the previous synchronization. The default interval value is two minutes.
 
-### Step 3: Certificate values are missing or are configured incorrectly
+### Issue 3: Certificate values are missing or are configured incorrectly
 
 If secret objects are missing from Azure Key Vault, or if these objects are configured incorrectly, the installation of the add-on can be delayed. The `istiod-asm-1-17` pods don't proceed beyond `Init:0/2` status. To find the underlying cause of this problem, view the deployment logs for that pod by running the following `kubectl describe` command:
 
