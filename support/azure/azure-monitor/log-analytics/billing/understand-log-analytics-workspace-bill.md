@@ -34,7 +34,7 @@ This article helps you learn how to understand the costs associated with your Lo
 :::image type="content" source="media/view-cost-3.png" alt-text="view cost step 3" lightbox="media/view-cost-3.png":::
 
 1. Select the **Service** tab.  
-[![viewcost4.png](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost-4.png)](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost-4.png)
+[![view cost step 4](/media/view-cost-4.png)](/media/view-cost-4.png#lightbox)
 
 1. Hover over the '**+**' symbol and select it to open a new tab within the Cost analysis pane.  
 [![viewcost5.png](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost-5.png)](https://learn.microsoft.com/azure/azure-monitor/media/self-help/log-analytics/billing/high-res/view-cost-5.png)
