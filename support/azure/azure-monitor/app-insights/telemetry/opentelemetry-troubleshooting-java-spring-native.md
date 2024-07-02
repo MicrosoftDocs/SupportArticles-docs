@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot OpenTelemetry issues in Java
-description: Learn how to troubleshoot OpenTelemetry issues in Spring Boot native image applications.
+title: Troubleshoot OpenTelemetry issues in Spring Boot Java native image applications
+description: Learn how to troubleshoot OpenTelemetry issues in Spring Boot Java native image applications.
 ms.date: 06/24/2024
 editor: v-jsitser
 ms.service: azure-monitor
