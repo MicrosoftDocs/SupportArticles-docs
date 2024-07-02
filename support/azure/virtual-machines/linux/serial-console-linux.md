@@ -12,7 +12,7 @@ ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 06/05/2024
+ms.date: 07/02/2024
 ms.author: mbifeld
 ---
 
@@ -105,8 +105,8 @@ Serial Console uses the storage account configured for boot diagnostics in its c
 
    The following table lists the IPs that need to be permitted as firewall exclusions based on the region or geography where the VM is located. This is a subset of the complete list of Serial Console IP addresses used in the **SerialConsole** service tag. You can limit access to boot diagnostics storage accounts via the **SerialConsole** service tag. The service tag isn't regionally separated. Traffic on the service tag is inbound only, and the Serial Console doesn't generate traffic to Customer Controllable Destinations. Although Azure storage account firewalls don't currently support service tags, the **SerialConsole** service tag can be programmatically consumed to determine the IP list. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
-       > [!NOTE]
-    > Storage account firewalls for the Serial Console aren't supported for VMs in geographies with only one region, such as Italy North in Italy.
+   > [!NOTE]
+   > Storage account firewalls for the Serial Console aren't supported for VMs in geographies with only one region, such as Italy North in Italy.
    
    |IP address      | Regions | Geography|
    |-----------|--------------------|-----------------|
@@ -152,7 +152,7 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    |143.64.47.39|China North 3|China|
    |163.228.70.115|China East 3|China|
    
-      > [!IMPORTANT]
+   > [!IMPORTANT]
    > - The IPs that need to be permitted are specific to the region where the VM is located. For example, a virtual machine deployed in the North Europe region needs to add the following IP exclusions to the storage account firewall for the Europe geography: 52.146.139.220 and 20.105.209.72. View the table above to find the correct IPs for your region and geography.
    > - In the current serial console operation, the web socket is opened to an endpoint like `<region>.gateway.serialconsole.azure.com`. Ensure the endpoint `serialconsole.azure.com` is allowed for browser clients in your organization. In the US Government (Fairfax) cloud, the endpoint suffix is `serialconsole.azure.us`.
 
