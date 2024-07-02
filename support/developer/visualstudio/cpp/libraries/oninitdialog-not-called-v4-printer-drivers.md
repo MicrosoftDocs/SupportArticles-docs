@@ -24,7 +24,7 @@ The WH_CBT window hook procedure incorrectly attaches the `CPrintDialog` object 
 
 ## Workaround
 
-To work around the problem, use [printer-driver isolation](/windows/win32/printdocs/use-application-isolation). It improves an application's reliability by running printer drivers in a separate process instead of the process calling the [print spooler functions](/windows/win32/printdocs/printing-and-print-spooler-function). This isolation prevents applications calling the print spooler functions from crashing if a printer driver has an error.
+To work around the problem, use [printer-driver isolation](/windows/win32/printdocs/use-application-isolation). It improves an application's reliability by running printer drivers in a separate process instead of the process calling the [print spooler functions](/windows/win32/printdocs/printing-and-print-spooler-functions). This isolation prevents applications calling the print spooler functions from crashing if a printer driver has an error.
 
 In this scenario, the reason for using printer-driver isolation is that the `URL Moniker Notification Window` window is created in a separate process.
 
