@@ -27,7 +27,7 @@ by [following the OpenTelemetry documentation](https://opentelemetry.io/docs/ins
 
 By default, diagnostic logging is enabled in Azure Monitor Application Insights. For more information, see [Troubleshoot guide: Azure Monitor Application Insights for Java](java-standalone-troubleshoot.md).
 
-### Step 2: Enable diagnostic logging
+### Step 2: Enable self-diagnostics logging
 
 If something does not work as expected, you can enable self-diagnostics features at DEBUG level to get some insights.
 
