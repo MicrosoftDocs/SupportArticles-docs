@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on ingress gateway troubleshooting
 description: Learn how to do ingress gateway troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 07/02/2024
+ms.date: 07/03/2024
 author: nshankar13
 ms.author: nshankar
 editor: v-jsitser
