@@ -1,38 +1,37 @@
 ---
-title: Troubleshoot Azure Fence Agent Issues in RHEL
-description: Provides troubleshooting guidance for Azure Fence Agent failing to start
-author: rnirek
-ms.author: rnirek
-ms.reviewer: divargas
-ms.topic: troubleshooting
-ms.date: 06/26/2024
+title: Troubleshoot Azure fence agent issues in a RHEL Pacemaker cluster
+description: Provides a troubleshooting guidance for Azure fence agent issues that occur in a Red Hat Enterprise Linux (RHEL) Pacemaker cluster.
+ms.reviewer: divargas, rnirek, v-weizhu
+ms.date: 07/03/2024
 ms.service: virtual-machines
 ms.collection: linux
 ---
+# Troubleshoot Azure fence agent issues in a RHEL Pacemaker cluster
 
+**Applies to:** :heavy_check_mark: Linux VMs
 
-# Overview
+This article helps you troubleshoot Azure fence agent issues in a Pacemaker cluster that runs on Red Hat Enterprise Linux (RHEL) and uses the Azure fence agent to implement a Shoot The Other Node in the Head (STONITH) device.
 
-The Azure fence agent makes use of the python program located at `/usr/sbin/fence_azure_arm`. The cluster RA used to implement `STONITH` calls this program with the appropriate parameters, and uses it to communicate with the Azure platform using API calls.
+## Overview
 
-As documented in [RHEL - Create STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#create-a-fencing-device), the roles provide permissions to the fence agent to perform the following actions.
+The Azure fence agent uses the python program located at */usr/sbin/fence_azure_arm*. The cluster RA that's used to implement a STONITH device calls this program with appropriate parameters, and uses it to communicate with the Azure platform through API calls.
+
+As introduced in [RHEL - Create a STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#create-a-fencing-device), custom roles provide permissions to the fence agent to perform the following actions:
 
 * `powerOff`
 * `start`
 
-When the Virtual Machine(VM) is detected as being unhealthy, the fence agent uses the above actions to power off the VM, and then start it up again thus providing a `STONITH` device.
+When a VM is detected as being unhealthy, the fence agent uses the previous actions to turn off the VM, and then restart it thus providing a STONITH device.
 
-## Prerequisites
+## Symptoms
 
-Pacemaker clusters running on RHEL using Azure fence agent  for `STONITH` purposes.
-
-## Description
-
-Azure Fencing Agent resource fails to start, and reports "unknown error", and shows in "stopped" state.
+When you verify the cluster resources status by running the following command, Azure fence agent resources fail to start, report "unknown error", and show in "Stopped" state:
 
 ```bash
 sudo pcs status
 ```
+
+Here's a command output example:
 
 ```output
 Cluster name: nw1-azr
@@ -43,189 +42,184 @@ Cluster Summary:
   * Last change:  Fri Jun  7 01:34:23 2023 by root via cibadmin on RHEL-SAP01
   * 2 nodes configured
   * 3 resource instances configured
-
 Node List:
   * Online: [ RHEL-SAP01 RHEL-SAP02 ]
-
 Full List of Resources:
   * rsc_st_azure        (stonith:fence_azure_arm):       Stopped
   * Clone Set: health-azure-events-clone [health-azure-events]:
     * Started: [ RHEL-SAP01 RHEL-SAP02 ]
-
 Failed Resource Actions:
   * rsc_st_azure_start_0 on RHEL-SAP01 'error' (1): call=20, status='complete', exitreason='', last-rc-change='2023-06-04 01:34:24Z', queued=0ms, exec=4041ms
   * rsc_st_azure_start_0 on RHEL-SAP02 'error' (1): call=14, status='complete', exitreason='', last-rc-change='2023-06-04 01:34:28Z', queued=0ms, exec=4243ms
-
 Daemon Status:
   corosync: active/disabled
   pacemaker: active/disabled
   pcsd: active/enabled
 ```
 
-## Scenario 1 - Endpoint connectivity issues
+## Cause 1: Endpoint connectivity issues
+
+If you check the */var/log/messages* log file, you'll see an output that resembles the following example:
 
 ```output
-/var/log/messages
 2021-03-15T20:23:15.441083+00:00 NodeName pacemaker-fenced[2550]:  warning: fence_azure_arm[21839] stderr: [ 2021-03-15 20:23:15,398 ERROR: Failed: Azure Error: AuthenticationFailed ]
 2021-03-15T20:23:15.441260+00:00 NodeName pacemaker-fenced[2550]:  warning: fence_azure_arm[21839] stderr: [ Message: Authentication failed. ]
 2021-03-15T20:23:15.441668+00:00 NodeName pacemaker-fenced[2550]:  warning: fence_azure_arm[21839] stderr: [  ]
 ```
 
-### Resolution
+To troubleshoot the endpoint connectivity issues, follow these steps:
 
-1. Connectivity to the Azure management API public endpoints
+1. Test connectivity to the Azure management API public endpoints.
 
-As covered in the document: Public endpoint connectivity for Virtual Machines using [Azure Standard Load Balancer in SAP high-availability scenarios](/azure/sap/workloads/high-availability-guide-standard-load-balancer-outbound-connections#option-3-using-proxy-for-pacemaker-calls-to-azure-management-api), it's essential to check outbound connectivity to the Azure management API available using the following URLs:
+    As introduced in [Public endpoint connectivity for Virtual Machines using Azure Standard Load Balancer in SAP high-availability scenarios](/azure/sap/workloads/high-availability-guide-standard-load-balancer-outbound-connections#option-3-using-proxy-for-pacemaker-calls-to-azure-management-api), it's important to check outbound connectivity to the Azure management API public endpoints using the following URLs:
+    
+    * `https://management.azure.com`
+    * `https://login.microsoftonline.com`
+    
+    Use the following `telnet`, `curl` or `nc` command to test connectivity to both URLs.
 
-* `https://management.azure.com`
-* `https://login.microsoftonline.com`
+    > [!NOTE]
+    > `telnet` or `curl` isn't normally available on customer VMs.
+    
+    #### [Connectivity to https://management.azure.com](#tab/mngtconnectivity)
+    
+    ```bash
+    telnet management.azure.com 443
+    ```
+    
+    ```bash
+    curl -v telnet://management.azure.com:443
+    ```
+    
+    ```bash
+    nc -z -v management.azure.com 443
+    ```
+    
+    #### [Connectivity to https://login.microsoftonline.com](#tab/loginconnectivity)
+    
+    ```bash
+    telnet login.microsoftonline.com 443
+    ```
+    
+    ```bash
+    curl -v telnet://login.microsoftonline.com:443
+    ```
+    
+    ```bash
+    nc -z -v login.microsoftonline.com 443
+    ```
+    
+    ---
 
-These tests can be done by using either `telnet`, `curl` or `nc` (`telnet` or `curl` aren't normally available on customer VMs) to test connectivity. The tests to both URLs must be done using the following commands:
+2. Verify a valid username or password is set up for the STONITH device.
 
-#### [Connectivity to https://management.azure.com](#tab/mngtconnectivity)
+    - When using Service Principal:
+    
+        A common reason why the STONITH device fails is the use of an invalid value for the username or password. To verify this, use the *fence_azure_arm* program as shown in the following command. The username and password values are created according to [RHEL - Create a STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#create-a-fencing-device), as suitable for the customer distribution.
+    
+        ```bash
+        sudo /usr/sbin/fence_azure_arm --action=list --username='<username>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> 
+        ```
+        
+        > [!NOTE]
+        > Replace `<username>`, `<password>`, `<tenant ID>`, `<resource group>` values accordingly.
+        
+        This command should return the node names of the VMs in the cluster. If the command fails to return, run it again with the `-v` flag to enable verbose output and `-D` flag to enable debug output as shown in the following command:
+        
+        ```bash
+        sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> -v -D /var/tmp/debug-fence.out 
+        ```
+        
+        > [!NOTE]
+        > Replace `<user name>`, `<password>`, `<tenant ID>`, `<resource group>` values accordingly.
+        
+    - When using Managed Identity:
 
-```bash
-telnet management.azure.com 443
-```
+      Verify the username or password value by running the following command:
+        
+        ```bash
+        sudo /usr/sbin/fence_azure_arm --action=list --msi --resourceGroup=<resource group> -v -D /var/tmp/debug-fence.out
+        ```
+        
+        > [!NOTE]
+        > Replace the `<resource group>` value accordingly.
 
-OR
+## Cause 2: Authentication failures
 
-```bash
-curl -v telnet://management.azure.com:443
-```
-
-OR
-
-```bash
-nc -z -v management.azure.com 443
-```
-#### [Connectivity to https://login.microsoftonline.com](#tab/loginconnectivity)
-
-
-```bash
-telnet login.microsoftonline.com 443
-```
-
-OR
-
-```bash
-curl -v telnet://login.microsoftonline.com:443
-```
-
-OR
-
-```bash
-nc -z -v login.microsoftonline.com 443
-```
-
----
-
-2. Valid information set up in username or password for the `STONITH` resource. 
-
-One of the major causes of the `STONITH` resource failing is the use of invalid values for the username or password if using Service Principal. This can be tested using the `fence_azure_arm` as shown in the following command. The values for username and password are created per the document [RHEL - Create STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#create-a-fencing-device), as appropriate for the customer distribution.
-
-```bash
-sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> 
-```
-
-> [!NOTE]
-> Replace `<user name>`, `<password>`, `<tenant ID>`, `<resource group>` values accordingly.
-
-This command should return the node names of the VMs in the cluster.
-
-If the command doesn't return successfully, it should be re executed with the `-v` flag to enable verbose output and `-D` flag to enable debug output as shown in the following command:
-
-```bash
-sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> -v -D /var/tmp/debug-fence.out 
-```
-
-> [!NOTE]
-> Replace `<user name>`, `<password>`, `<tenant ID>`, `<resource group>` values accordingly.
-
-If using Managed Identity:
-
-```bash
-sudo /usr/sbin/fence_azure_arm --action=list --msi --resourceGroup=<resource group> -v -D /var/tmp/debug-fence.out
-```
-
-> [!NOTE]
-> Replace `<resource group>` value accordingly.
-
-
-## Scenario 2 - Authentication failures
+If you check the */var/log/messages* log file, you'll see output that resembles the following example:
 
 ```output
-/var/log/messages
 2020-04-06T10:06:47.779470+00:00 VM1 pacemaker-controld[29309]: notice: Result of probe operation for rsc_st_azure on VM1: 7 (not running)
 2020-04-06T10:06:51.045519+00:00 VM1 pacemaker-execd[29306]: notice: executing - rsc:rsc_st_azure action:start call_id:52
-2020-04-06T10:06:52.826702+00:00 VM1 /fence_azure_arm: Failed: AdalError: Get Token request returned http error: 400 and server response: {"error":"unauthorized_client","error_description":"AADSTS700016: Application with identifier '5005c556-e620-4297-8398-abcc239fa706'
-was not found in the directory 'b37c8d34-016c-4e9e-9283-56234092be50'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant.
+2020-04-06T10:06:52.826702+00:00 VM1 /fence_azure_arm: Failed: AdalError: Get Token request returned http error: 400 and server response: {"error":"unauthorized_client","error_description":"AADSTS700016: Application with identifier 'id'
+was not found in the directory 'directory'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant.
 You may have sent your authentication request to the wrong tenant.\r\nTrace ID: 9d86f824-52c1-45a8-b24f-c81473122d00\r\nCorrelation ID: 7dd6de5d-1d6a-4950-be8b-9a2cb2df8553\r\nTimestamp:2020-04-06 10:06:52Z","error_codes":[700016],"timestamp":"2020-04-06 10:06:52Z","trace_id":"9d86f824-52c1-45a8-b24f-c81473122d00",
 "correlation_id":"7dd6de5d-1d6a-4950-be8b-9a2cb2df8553","error_uri":"https://login.microsoftonline.com/error?code=700016 "}
 ```
 
-### Resolution
+To troubleshoot the authentication failures, follow these steps:
 
-Check and verify again the Azure Active Directory (AAD) app tenant ID, application ID, login, and password details from the Azure portal.
+1. Verify the Microsoft Entra app tenant ID, application ID, sign-in username and password details from the Azure portal.
 
-1. Once the IDs are verified and replaced, reconfigure the fencing agent in the cluster.
+1. Replace the IDs with correct values.
 
-```bash
-sudo pcs property set maintenance-mode=true
+1. Reconfigure the fence agent in the cluster:
 
-sudo pcs cluster edit
-```
+    ```bash
+    sudo pcs property set maintenance-mode=true
+    
+    sudo pcs cluster edit
+    ```
 
-2. Change the parameters for Azure Fence Agent resources, and save the changes:
+2. Change the parameters for Azure fence agent resources, and then save the changes:
 
-```bash
-sudo pcs property set maintenance-mode=false
-```
+    ```bash
+    sudo pcs property set maintenance-mode=false
+    ```
 
-3. Now verify the cluster status to confirm if fencing agent issue is fixed
+3. Verify the cluster status to confirm if the fence agent issues are fixed:
 
-```bash
-sudo pcs status
-```
+    ```bash
+    sudo pcs status
+    ```
 
-## Scenario 3 - Insufficient permissions
+## Cause 3: Insufficient permissions
 
-After reviewing the logs and outputs, found the agent is failing with authorization issues.
+If you check the */var/log/messages* log file, you'll see output that resembles the following example:
 
 ```output
-/var/log/messages
 Apr 2 00:49:57 heeudpgscs01 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: [ 2020-04-02 00:49:56,978 ERROR: Failed: Azure Error: AuthorizationFailed ]
-Apr 2 00:49:57 heeudpgscs01 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: [ Message: The client 'd36bc109-bdfd-4b6d-bf28-d3990d3c22ea' with object id 'd36bc109-bdfd-4b6d-bf28-d3990d3c22ea' does not have authorization to perform action 'Microsoft.Compute/virtualMachines/read' over scope '/subscriptions/e2d1c3ed-77d2-47f5-a2af-27aa0f9d79a8/resourceGroups/DPG-RG-MAIN01-PROD/providers/Microsoft.Compute' or the scope is invalid. If access was recently granted, please refresh your credentials. ]
+Apr 2 00:49:57 heeudpgscs01 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: [ Message: The client 'client id' with object id 'object id' does not have authorization to perform action 'Microsoft.Compute/virtualMachines/read' over scope '/subscriptions/e2d1c3ed-77d2-47f5-a2af-27aa0f9d79a8/resourceGroups/DPG-RG-MAIN01-PROD/providers/Microsoft.Compute' or the scope is invalid. If access was recently granted, please refresh your credentials. ]
 ```
 
-### Resolution
+To troubleshoot the insufficient permissions, follow these steps:
 
-1. Based on [create a custom role for the fence agent](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent), check the custom role definition for `Linux Fence Agent Role`. The role name may be different for different customers.
-2. Check if the app `fencing-agent` has this custom role assigned to the impacted VM or not.
-3. If it doesn't, assign the app to the VM via Access Control.
-4. Start the pacemaker cluster, it should start along with the fencing agent (Azure Fencing Agent).
-5. Verify the cluster status to confirm fencing agent issue is fixed `pcs status`.
+1. Based on [Create a custom role for the fence agent](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent), check the custom role definition for `Linux Fence Agent Role`. The role name may be different for different customers.
+2. Check if the app *fence-agent* has this custom role assigned to the impacted VM or not. If it doesn't, assign the app to the VM via **Access Control**.
+4. Start the Pacemaker cluster. It should start along with the fence agent.
+5. Verify the cluster status to confirm if the fence agent issues are fixed:
 
-## Scenario 4 - SSL handshake failure
+    ```bash
+    sudo pcs status
+    ```
 
-/var/log/messages
+## Cause 4: SSL handshake failure
+
+If you check the */var/log/messages* log file, you'll see an output that resembles the following example:
 
 ```output
 warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed: Error occurred in request., SSLError: HTTPSConnectionPool(host='management.azure.com ', port=443): Max retries exceeded with url: /subscriptions/a8964342-5414-40a0-aade-5c3d23482016/resourceGroups/rgglbp01/providers/Microsoft.Compute/virtualMachines?api-version=2019-03-01 (Caused by SSLError(SSLError('bad handshake: SysCallError(-1, 'Unexpected EOF')',),)) ]
 ```
 
-### Resolution
-
-1.Tested connectivity from affected nodes using openssl:
+Test connectivity from affected nodes using `openssl` by running the following command:
 
 ```bash
 openssl s_client -connect management.azure.com:443
 ```
 
-Noticed that the output wasn't showing the full certificate handshake:
+You'll observe that the command output doesn't show the full certificate handshake:
 
 ```output
-
 CONNECTED(00000003)
 write:errno=0
 ---
@@ -256,23 +250,26 @@ SSL-Session:
     Extended master secret: no
 ```
 
-2. These errors are likely due to a network appliance / firewall doing packet inspection or modifying the Transparent Layer Socket (TLS) connections in a way that is causing certificate verification to fail (MTU sizes can also cause these problems).
-3. If you have Azure Firewall in front of the nodes, make sure these tags are added to the application/network rules:
+Here are possible causes of the certificate verification failure:
+
+- A network device/firewall performs packet inspection or changes the Transparent Layer Socket (TLS) connections.
+- Maximum Transmission Unit (MTU) sizes.
+
+If you use Azure Firewall to protect the nodes, to fix the fence agent issues, ensure that the following tags are added to the application/network rules:
 
 ```output
 Application Rules:
-ApiManagement , AppServiceManagement, AzureCloud
+ApiManagement, AppServiceManagement, AzureCloud
 Network Rules:
 AppServiceEnvironment
 ```
 
-## Next Steps
+## Next steps
 
-If you require further help, open a support request using the  follow instructions you have next. As you follow the instructions, keep a copy of the `debug-fence.out` because it's required for troubleshooting purposes.
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+If you require further help, open a support request with a copy of the `debug-fence.out` file because it's required for troubleshooting purposes.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
