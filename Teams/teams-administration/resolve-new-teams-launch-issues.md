@@ -532,14 +532,14 @@ Pause
    If the command returns **True**, remove the file, and then create a folder by using the same name as the complete path for the system folder.
 1. Check whether the SYSTEM account and the Administrators group have the **Full control** permission to all directories that are listed in step 3.
 
-    1. Run the following PowerShell commands for each directory:
+   1. Run the following PowerShell commands for each directory:
 
       ```powershell
       ((Get-Acl (Join-Path $env:USERPROFILE "<directory name that starts with AppData, such as AppData\Local>")).Access | ?{$_.IdentityReference -eq "NT AUTHORITY\SYSTEM" -and $_.FileSystemRights -eq "FullControl"} | measure).Count -eq 1
       ((Get-Acl (Join-Path $env:USERPROFILE "<directory name that starts with AppData, such as AppData\Local>")).Access | ?{$_.IdentityReference -eq "BUILTIN\Administrators" -and $_.FileSystemRights -eq "FullControl"} | measure).Count -eq 1
       ```
 
-     1. If either command returns **False**, ask someone who has the **Full control** permission for the directory to grant the **Full control** permission to the corresponding account.
+    1. If either command returns **False**, ask someone who has the **Full control** permission for the directory to grant the **Full control** permission to the corresponding account.
 
 1. Check whether you have the SYSAPPID permission to the Teams installation location. Run the following PowerShell command:
 
