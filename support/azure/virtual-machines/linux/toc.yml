@@ -223,11 +223,11 @@
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
 
-- name: Linux HA Pacemaker Cluster
+- name: Linux High Availability (HA) Pacemaker cluster
   items:
   - name: RHEL
     items:
-    - name: Troubleshoot Azure Fence Agent Issues
+    - name: Troubleshoot Azure fence agent issues
       href: troubleshoot-azure-fence-agent-rhel.md
       
 - name: Linux repositories
