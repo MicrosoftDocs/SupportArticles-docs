@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, vimalsh, shijithk, kaushika, wcheng, jodav
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Sysprep and imaging (PE, ADK, WDS), csstroubleshoot
 ---
 # Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images
 

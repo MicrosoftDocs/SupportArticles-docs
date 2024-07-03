@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on plug-in CA certificate troubleshooting
 description: Learn how to do plug-in CA certificate troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 04/26/2024
+ms.date: 07/03/2024
 author: deveshdama
 ms.author: ddama
 editor: v-jsitser
@@ -196,7 +196,7 @@ For a BYO (plug-in) CA certificate, there are three detail entries. The other tw
 | CN=Root A,O=Istio"                            | "CN=Intermediate CA - A1,O=Istio,L=cluster-A1" | \<40-digit-hex-value> | "2023-11-04T01:40:22Z" | "2033-11-01T01:40:22Z" |
 | CN=Root A,O=Istio"                            | "CN=Root A,O=Istio"                            | \<40-digit-hex-value> | "2023-11-04T01:38:27Z" | "2033-11-01T01:38:27Z" |
 
-## Common issues
+## Troubleshoot common issues
 
 ### Issue 1: Access to Azure Key Vault is set up incorrectly
 
@@ -227,14 +227,14 @@ The following sample output shows that a "403 Forbidden" error occurred, and you
 
 To fix this problem, set up access to the user-assigned managed identity for the Azure Key Vault add-on by obtaining Get and List permissions on Azure Key Vault secrets and reinstalling the Istio add-on. First, get the object ID of the user-assigned managed identity for the Azure Key Vault add-on by running the [az aks show](/cli/azure/aks#az-aks-show) command:
 
-```azurecli
-OBJECT_ID=$(az aks show --resource-group <my-resource-group> --name <my-managed-cluster> --query 'addonProfiles.azureKeyvaultSecretsProvider.identity.objectId')
+```azurecli-interactive
+OBJECT_ID=$(az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER --query 'addonProfiles.azureKeyvaultSecretsProvider.identity.objectId')
 ```
 
 To set the access policy, run the following [az keyvault set-policy](/cli/azure/keyvault#az-keyvault-set-policy) command by specifying the object ID that you obtained:
 
-```azurecli
-az keyvault set-policy --name MyAzureKeyVault --object-id $OBJECT_ID --secret-permissions get list
+```azurecli-interactive
+az keyvault set-policy --name $AKV_NAME --object-id $OBJECT_ID --secret-permissions get list
 ```
 
 > [!NOTE]
@@ -244,14 +244,14 @@ az keyvault set-policy --name MyAzureKeyVault --object-id $OBJECT_ID --secret-pe
 
 For a cluster to auto-detect changes in the Azure Key Vault secrets, you have to enable auto-rotation for the Azure Key Vault provider add-on. Auto-rotation can detect changes in intermediate and root certificates automatically. For a cluster that enables the Azure Key Vault provider add-on, run the following `az aks show` command to check whether auto-rotation is enabled:
 
-```azurecli
-az aks show --resource-group <my-resource-group> --name <my-managed-cluster> | jq -r '.addonProfiles.azureKeyvaultSecretsProvider.config.enableSecretRotation'
+```azurecli-interactive
+az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER | jq -r '.addonProfiles.azureKeyvaultSecretsProvider.config.enableSecretRotation'
 ```
 
 If the cluster enabled the Azure Key Vault provider add-on, run the following `az aks show` command to determine the rotation poll interval: 
 
-```azurecli
-az aks show --resource-group <my-resource-group> --name <my-managed-cluster> | jq -r '.addonProfiles.azureKeyvaultSecretsProvider.config.rotationPollInterval'
+```azurecli-interactive
+az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER | jq -r '.addonProfiles.azureKeyvaultSecretsProvider.config.rotationPollInterval'
 ```
 Azure Key Vault secrets are synchronized with the cluster when the poll interval time elapses after the previous synchronization. The default interval value is two minutes.
 

@@ -3,12 +3,17 @@ title: Power Virtual Agents bot conversations are active after a chat has ended
 description: Provides a resolution for the issue where Power Virtual Agents bot conversations remain active on the Omnichannel for Customer Service dashboard after a user ends a chat.
 ms.reviewer: nenellim
 ms.author: yangao
-ms.date: 05/23/2023
-ms.custom: sap:Power Virtual Agents (PVA)
+ms.date: 07/01/2024
+ms.custom: sap:Copilot Studio\End conversation
 ---
 # Power Virtual Agents bot conversations appear as active on the dashboard after a user ends a chat
 
 This article provides a resolution for the issue where Power Virtual Agents bot conversations are shown as active on the Omnichannel for Customer Service dashboard even though a user has ended a chat.
+
+> [!IMPORTANT]
+> Power Virtual Agents capabilities and features are [now part of Microsoft Copilot Studio](https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/microsoft-power-virtual-agents-now-part-of-microsoft-copilot-studio/) following significant investments in generative AI and enhanced integrations across Microsoft Copilot.
+>
+> Some articles and screenshots might refer to Power Virtual Agents while we update documentation and training content.
 
 ## Symptoms
 
