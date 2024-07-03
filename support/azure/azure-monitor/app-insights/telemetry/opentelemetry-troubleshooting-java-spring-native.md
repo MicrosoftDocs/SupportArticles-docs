@@ -25,8 +25,6 @@ WARN  c.a.m.a.s.OpenTelemetryVersionCheckRunner - The OpenTelemetry version is n
 In this case, you have to import the OpenTelemetry Bills of Materials
 by [following the OpenTelemetry documentation](https://opentelemetry.io/docs/instrumentation/java/automatic/spring-boot/#dependency-management).
 
-By default, diagnostic logging is enabled in Azure Monitor Application Insights. For more information, see [Troubleshoot guide: Azure Monitor Application Insights for Java](java-standalone-troubleshoot.md).
-
 ### Step 2: Enable self-diagnostics logging
 
 If something does not work as expected, you can enable self-diagnostics features at DEBUG level to get some insights.
