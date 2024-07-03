@@ -31,6 +31,20 @@ INSERT EXEC failed because the stored procedure altered the schema of the target
 
 The auto-cleanup process flushes the plan out of Query Data Store. The query encounters a recompile operation because the plan is missing from Query Data Store. However, the plan is still present in the procedure cache. By design, when the recompile operation occurs, SQL Server throws error 556 to prevent duplicate execution of the child procedure. Such a duplicate operation would cause incorrect results to be returned.
 
+## Resolution
+
+### Service Pack information for SQL Server 2016
+
+This issue is fixed in the following service pack for SQL Server:  
+
+[Service Pack 3 for SQL Server 2016](https://support.microsoft.com/help/5003279)
+
+**About service packs for SQL Server:**  
+
+Service packs are cumulative. Each new service pack contains all the fixes that are in previous service packs, together with any new fixes. We recommend that you apply the latest service pack and the latest cumulative update for that service pack. You don't have to install a previous service pack before you install the latest service pack. Refer to Table 1 in the following article for more information about the latest service pack and latest cumulative update:
+
+[How to determine the version, edition and update level of SQL Server and its components](../../releases/download-and-install-latest-updates.md)
+
 ## Workaround
 
 To work around this issue, follow these steps:
@@ -43,4 +57,4 @@ To work around this issue, follow these steps:
 
 ## Additional information
 
-Because of the changes that were made to Query Data Store in Microsoft SQL Server 2017, this problem doesn't occur in SQL Server 2017. This problem won't be fixed in SQL Server 2016.
+Because of the changes that were made to Query Data Store in Microsoft SQL Server 2017, this problem doesn't occur in SQL Server 2017.
