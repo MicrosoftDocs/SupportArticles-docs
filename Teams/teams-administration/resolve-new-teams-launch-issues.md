@@ -547,7 +547,7 @@ Pause
    Get-AppxPackage MSTeams | %{$_.InstallLocation+" - "+(((Get-Acl $_.InstallLocation).sddl -split "\(" | ?{$_ -match "WIN:/\/\SYSAPPID"} | Measure).count -eq 1)}
    ```
 
-   If the command returns **False**, ask a memeber of the local Administrators group to [delete your user profile](/troubleshoot/windows-server/user-profiles-and-logon/delete-user-profile) on the computer. Then, sign in by using your user account to recreate the user profile.
+   If the command returns **False**, ask a member of the local Administrators group to [delete your user profile](/troubleshoot/windows-server/user-profiles-and-logon/delete-user-profile) on the computer. Then, sign in by using your user account to recreate the user profile.
 1. Check the **AllowAllTrustedApps** policy setting:
 
    1. In a Command Prompt window, run the `winver` command.
