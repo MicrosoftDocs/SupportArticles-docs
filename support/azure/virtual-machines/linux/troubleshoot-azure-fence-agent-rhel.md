@@ -159,11 +159,9 @@ You may have sent your authentication request to the wrong tenant.\r\nTrace ID: 
 
 To troubleshoot the authentication failures, follow these steps:
 
-1. Verify the Microsoft Entra app tenant ID, application ID, sign-in username and password details from the Azure portal.
+1. Verify the Microsoft Entra app tenant ID, application ID, sign-in, and password details from the Azure portal.
 
-1. Replace the IDs with correct values.
-
-1. Reconfigure the fence agent in the cluster:
+2. Reconfigure the fence agent in the cluster:
 
     ```bash
     sudo pcs property set maintenance-mode=true
@@ -171,13 +169,13 @@ To troubleshoot the authentication failures, follow these steps:
     sudo pcs cluster edit
     ```
 
-2. Change the parameters for Azure fence agent resources, and then save the changes:
+3. Change the parameters for Azure fence agent resources, and then save the changes:
 
     ```bash
     sudo pcs property set maintenance-mode=false
     ```
 
-3. Verify the cluster status to confirm if the fence agent issues are fixed:
+4. Verify the cluster status to confirm if the fence agent issues are fixed:
 
     ```bash
     sudo pcs status
@@ -185,7 +183,7 @@ To troubleshoot the authentication failures, follow these steps:
 
 ## Cause 3: Insufficient permissions
 
-If you check the */var/log/messages* log file, you'll see output that resembles the following example:
+If you check the */var/log/messages* log file, you'll see an output that resembles the following example:
 
 ```output
 Apr 2 00:49:57 heeudpgscs01 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: [ 2020-04-02 00:49:56,978 ERROR: Failed: Azure Error: AuthorizationFailed ]
@@ -195,7 +193,7 @@ Apr 2 00:49:57 heeudpgscs01 stonith-ng[105424]: warning: fence_azure_arm[109393]
 To troubleshoot the insufficient permissions, follow these steps:
 
 1. Based on [Create a custom role for the fence agent](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent), check the custom role definition for `Linux Fence Agent Role`. The role name may be different for different customers.
-2. Check if the app *fence-agent* has this custom role assigned to the impacted VM or not. If it doesn't, assign the app to the VM via **Access Control**.
+2. Check if the app *fence-agent* has this custom role assigned to the impacted VM or not. If it doesn't, assign the custom role to the VM via **Access Control**.
 4. Start the Pacemaker cluster. It should start along with the fence agent.
 5. Verify the cluster status to confirm if the fence agent issues are fixed:
 
