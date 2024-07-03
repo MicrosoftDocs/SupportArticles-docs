@@ -5,7 +5,7 @@ summary: Technical content to troubleshoot issues in Microsoft Dynamics 365
 metadata:
   ms.topic: hub-page
   services: service
-  ms.date: 05/06/2024
+  ms.date: 06/27/2024
   ms.service: dynamics-365
 
 additionalContent:
@@ -17,8 +17,8 @@ additionalContent:
         - title: Dynamics 365 Customer Insights - Data
           summary: Troubleshooting articles for Dynamics 365 Customer Insights - Data
           url: customer-insights/welcome-customer-insights.yml
-        - title: Dynamics 365 Customer Service
-          summary: Troubleshooting articles for Dynamics 365 Customer Service
+        - title: Dynamics 365 Customer Service and Dynamics 365 Contact Center
+          summary: Troubleshooting articles for Dynamics 365 Customer Service and Dynamics 365 Contact Center
           url: customer-service/welcome-customer-service.yml
         - title: Dynamics 365 Commerce
           summary: Troubleshooting articles for Dynamics 365 Commerce

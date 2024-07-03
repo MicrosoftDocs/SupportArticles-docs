@@ -3,7 +3,7 @@
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
-      href: customer-service-insights/troubleshoot-cs-oc-solution-health.md  
+      href: customer-service-insights/troubleshoot-cs-oc-solution-health.md 
 - name: Email
   items: 
     - name: '"Case is missing customer" error'
@@ -23,7 +23,7 @@
 - name: Knowledge Management
   items:  
     - name: Data isn't updated on Insights for integrated search providers
-      href: knowledge-management/data-not-updated-integrated-search-providers.md
+      href: knowledge-management/data-not-updated-integrated-search-providers.md  
 - name: Queues
   items:  
     - name: Personal view queue filters aren't working properly
@@ -122,7 +122,7 @@
   items:
     - name: Flow connection isn't valid in customer support swarming
       href: teams-collaboration/flow-connection-invalid-customer-support-swarming.md
-- name: Omnichannel for Customer Service
+- name: Dynamics 365 Contact Center (formerly Omnichannel for Customer Service)
   items:
     - name: Agent Scripts and Macros
       items:
@@ -154,6 +154,12 @@
           href: omnichannel-for-customer-service/instance-unavailable-provision-omnichannel.md
         - name: Omnichannel provisioning fails with an error
           href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
+    - name: Copilot Studio
+      items:
+        - name: Copilot Studio bot conversations are active after a chat ends
+          href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md  
+        - name: Missing variables and actions when agent transfers from Copilot Studio bots
+          href: omnichannel-for-customer-service/agent-transfer-pva-bot-issue.md          
     - name: Omnichannel dashboards
       items:
         - name: Agent dashboard shows authentication error after provisioning
@@ -166,12 +172,6 @@
           href: omnichannel-for-customer-service/dashboard-not-appearing-omnichannel.md
         - name: Error in communication panel
           href: omnichannel-for-customer-service/error-communication-panel.md
-    - name: Power Virtual Agents (PVA)
-      items:
-        - name: Missing variables and actions when agent transfers from PVA bots
-          href: omnichannel-for-customer-service/agent-transfer-pva-bot-issue.md
-        - name: PVA bot conversations are active after chat ends
-          href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md            
     - name: Social channels
       items:
         - name: Troubleshoot sync issue with social data

@@ -3,12 +3,17 @@ title: Missing variables and actions during agent transfers from Power Virtual A
 description: Provides a resolution for the missing required variables and actions during agent transfers from Power Virtual Agents bots in Omnichannel for Customer Service.
 ms.reviewer: nenellim
 ms.author: yangao
-ms.date: 05/23/2023
-ms.custom: sap:Power Virtual Agents (PVA)\Unable to configure agent transfer in PVA
+ms.date: 07/01/2024
+ms.custom: sap:Copilot Studio\Agent transfer
 ---
 # Missing required variables and actions during agent transfers from Power Virtual Agents bots
 
 This article provides a resolution for the error that occurs when you're configuring the handoff between a Power Virtual Agents bot and the Omnichannel voice workstream.
+
+> [!IMPORTANT]
+> Power Virtual Agents capabilities and features are [now part of Microsoft Copilot Studio](https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/microsoft-power-virtual-agents-now-part-of-microsoft-copilot-studio/) following significant investments in generative AI and enhanced integrations across Microsoft Copilot.
+>
+> Some articles and screenshots might refer to Power Virtual Agents while we update documentation and training content.
 
 ## Symptoms
 
