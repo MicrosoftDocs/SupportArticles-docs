@@ -3,7 +3,7 @@ title: CPrintDialog::OnInitDialog isn't called when using V4 printer drivers
 description: Describes a problem where CPrintDialog::OnInitDialog isn't called when using a printer with a V4 printer driver. 
 ms.reviewer: ishimada, davean, v-sidong
 ms.custom: sap:C and C++ Libraries\Microsoft Foundation Classes (MFC)
-ms.date: 07/02/2024
+ms.date: 07/03/2024
 ---
 
 # CPrintDialog::OnInitDialog isn't called when using V4 printer drivers
