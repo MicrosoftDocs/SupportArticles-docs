@@ -1,14 +1,26 @@
+---
+title: Grid or sub-grid displays incorrect content
+description: Fixes an issue in which the grid or sub-grid displays incorrect content in a Power Apps model-driven app.
+ms.reviewer: tapanm, moroch, dinusc
+ms.custom: sap:Using grids and lists in model-driven apps
+ms.date: 07/03/2024
+author: fikaradz
+ms.author: fikaradz
+---
 # Grid or sub-grid displays incorrect content
 
-This is the case when the grid does not display the expected content immediately after navigating to the parent page or form. In this case, data is rendered but the content does not match the default view or the view selected from the view selector.
+This article provides a resolution for an issue where the grid or sub-grid displays incorrect content in a model-driven app in Microsoft Power Apps.
 
-See also: [Grid or sub-grid does not display all the records](#grid-or-sub-grid-does-not-display-all-the-records) and [The overall record count does not match the displayed content](#the-overall-record-count-does-not-match-the-displayed-content).
+## Symptoms
 
-**<u>How to troubleshoot:</u>**
+You might find the grid doesn't display the expected content immediately after navigating to the parent page or form. Data is rendered but the content doesn't match the default view or the view selected from the view selector.
 
-The first step in troubleshooting this issue is to check if the grid is receiving the expected data. Use [the monitoring tool](#useful-tools) to investigate the latest "GridChecker" event that is related to the grid or sub-grid.
+For similar issues, see [Grid or sub-grid does not display all the records](grid-or-subgrid-not-display-all-records.md) and [The overall record count does not match the displayed content](overall-record-count-not-match-displayed-content.md).
 
-![Image](images/image5.png)
-Image 5. Use monitoring tool to get page and records information.
+## Resolution
 
-If the "recordsCount" and "initialPageSize" matches the actual content displayed in the grid, then this is a strong indication that the view is not configured correctly. Please check the view configuration (columns and filters). If the issue happens in sub-grid, please also check if the grid is configured to only show related records.
+The first step is to check if the grid is receiving the expected data. Use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to investigate the latest "GridChecker" event that is related to the grid or sub-grid.
+
+:::image type="content" source="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png" alt-text="Screenshot that shows how to use the monitoring tool to get page and records information.":::
+
+If the "recordsCount" and "initialPageSize" matches the actual content displayed in the grid, then this is a strong indication that the view isn't configured correctly. Check the view configuration (columns and filters). If the issue occurs in sub-grid, also check if the grid is configured to only show related records.

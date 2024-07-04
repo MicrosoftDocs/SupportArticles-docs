@@ -1,25 +1,34 @@
-# Cannot edit data in the grid after enabling editing mode
+---
+title: Can't edit data in the grid after enabling editing mode
+description: Fixes an issue in which you can't edit data in the grid after enabling editing mode in a Power Apps model-driven app.
+ms.reviewer: tapanm, moroch, dinusc
+ms.custom: sap:Using grids and lists in model-driven apps
+ms.date: 07/03/2024
+author: fikaradz
+ms.author: fikaradz
+---
+# Can't edit data in the grid after enabling editing mode
 
-There could be 2 separate cases:
+This article provides a resolution for an issue where you can't edit data in the grid after enabling editing mode in a model-driven app in Microsoft Power Apps.
 
-1.  The entire grid control is not editable even though editing mode has been enabled.
+## Scenario 1: The entire grid control isn't editable even though editing mode is enabled
 
-2.  Only certain cells from certain columns are not editable.
+### Resolution
 
-**<u>How to troubleshoot 1:</u>**
+The first step is to check grid and column parameters using the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview).
 
-The first step is to check grid and column parameters using the monitoring tool:
-![Image](images/image9.png)
+:::image type="content" source="media/cannot-edit-data-in-the-grid-in-editing-mode/power-apps-monitoring-tool.png" alt-text="Screenshot that shows the Power Apps Monitoring tool.":::
 
-Make sure the grid editable mode is set to "yes". If this is not the case, then please check the grid configuration and make sure the last configuration is saved and published. Please also note that the form may also forcibly set sub-grids to read-only or disabled modes in certain cases (for example, when the currently edited record is de-activated). You can troubleshoot this by checking the "isControlDisabled" attribute.
-![Image](images/image10.png)
+Make sure the grid editable mode is set to "yes". If not, check the grid configuration and make sure the last configuration is saved and published. Also note that the form might also forcibly set sub-grids to read-only or disabled modes in certain cases (for example, when the currently edited record is de-activated). You can troubleshoot this issue by checking the `isControlDisabled` attribute.
 
-**<u>How to troubleshoot 2:</u>**
+:::image type="content" source="media/cannot-edit-data-in-the-grid-in-editing-mode/iscontroldisabled.png" alt-text="Screenshot that shows the isControlDisabled attribute in the Power Apps Monitoring tool.":::
 
-Using the monitoring tool, check the attributes of the column that is not editable (see the image above). If the "IsEditable" attribute is set to "false", then editing is not allowed here. Possible reasons include but are not limited to:
+## Scenario 2: Only certain cells from certain columns aren't editable
 
--   Dataverse does not support editing of the underlying column type (for example, calculated type columns are not editable).
+### Resolution
 
--   The user may not have permission to edit that column.
+Using the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview), check the attributes of the column that isn't editable (see the previous screenshots). If the `IsEditable` attribute is set to "false", then editing isn't allowed here. Possible reasons include but are not limited to:
 
--   A [custom script](#steps-to-perform-before-starting-troubleshooting) is altering the cell attribute making it permanently or conditionally read-only.
+- Dataverse doesn't support editing of the underlying column type. For example, calculated type columns aren't editable.
+- The user might not have permission to edit that column.
+- A [custom script](grid-issues.md#steps-to-perform-before-starting-troubleshooting) alters the cell attribute making it permanently or conditionally read-only.
