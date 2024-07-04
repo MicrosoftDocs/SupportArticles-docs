@@ -10,13 +10,13 @@ ms.service: virtual-machines
 ms.collection: linux
 ---
 
-#  Troubleshoot Azure Fence Agent startup issues in SUSE 
+# Troubleshoot Azure Fence Agent startup issues in SUSE
 
 This article lists common causes of Azure Fence Agent startup issues and offers guidance on identifying these causes by reviewing the logs. It also provides corresponding solutions to resolve the issues.
 
-## How Azure fence agent works
+## How Azure Fence Agent works
 
-The Azure fence agent uses a Python program located at `/usr/sbin/fence_azure_arm`. The cluster Resource Agent (RA) which implements fencing a failed node (STONITH) calls this program with the appropriate parameters. Then uses it to communicate with the Azure platform via API calls.
+The Azure fence agent uses a Python program located at `/usr/sbin/fence_azure_arm`. The cluster Resource Agent (RA), which implements fencing a failed node (STONITH) calls this program with the appropriate parameters. Then uses it to communicate with the Azure platform via API calls.
 As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=msi#1-create-a-custom-role-for-the-fence-agent), the custom role provides the fence agent with permissions to perform the following actions:
 
 - `powerOff`
@@ -95,8 +95,7 @@ If 'Azure Error: AuthenticationFailed' appears in the log as as shown below, the
     curl -v telnet://<endpoint>:443
     ```
 
-2. Ensure that a valid username and password are set for the STONITH resource.
-    One of the major causes of STONITH resource failures is the use of invalid values for the username or password when using a Service Principal. You can test this using the `fence_azure_arm` command, as shown in the following example. To set username and password for the STONITH resource, see [Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=spn#create-an-azure-fence-agent-device).
+2. Ensure that a valid username and password are set for the STONITH resource. One of the major causes of STONITH resource failures is the use of invalid values for the username or password when using a Service Principal. You can test this using the `fence_azure_arm` command, as shown in the following example. To set username and password for the STONITH resource, see [Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=spn#create-an-azure-fence-agent-device).
 
     ``` bash
     sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> 
@@ -119,7 +118,7 @@ If 'Azure Error: AuthenticationFailed' appears in the log as as shown below, the
 
 ## Cause 2: Authentication failure
 
-If 'unauthorized_client' appears in the log as as shown below, the problem could be related to authentication failure. 
+If 'unauthorized_client' appears in the log as shown below, the problem could be related to authentication failure. 
 
 ```output
 /var/log/messages
