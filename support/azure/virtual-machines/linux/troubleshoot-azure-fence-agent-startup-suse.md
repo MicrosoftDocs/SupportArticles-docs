@@ -18,7 +18,7 @@ As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/wor
 - `powerOff`
 - `start`
    
-When the virtual machine (VM) is detected as unhealthy, the fence agent uses the above actions to power off the VM and then start it up again.
+When the virtual machine (VM) is detected as unhealthy, the fence agent uses the above actions to power off the VM, and then start it up again.
 
 ## Symptoms
 
@@ -164,7 +164,7 @@ Apr 2 00:49:57 VM1 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: 
 ### Resolution
 
 1. Referencing [create a custom role for the fence agent](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&tabs=msi#1-create-a-custom-role-for-the-fence-agent), verify the custom role definition configured for the fence agent.
-2. Confirm whether the fencing agent has been assigned the necessary custom role on the affected VM. If not, assign the role to the VM using Access Control.
+2. Confirm whether the fencing agent is assigned the necessary custom role on the affected VM. If not, assign the role to the VM using Access Control.
 4. Verify the cluster status to ensure the fencing agent issue is resolved using `crm status`.
 
 ## Cause 4: SSL handshake failure 
@@ -215,7 +215,7 @@ warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed:
         Verify return code: 0 (ok)
         Extended master secret: no
     ```
-    If it does, these errors are likely due to a network appliance or firewall performing packet inspection or modifying Transparent Layer Socket (TLS) connections in a manner that causes certificate verification to fail (MTU sizes can also contribute to these issues).
+   If so, these errors are likely caused by a network appliance or firewall performing packet inspection or modifying Transparent Layer Socket (TLS) connections in a way that disrupts certificate verification. Additionally, issues with maximum transmission unit (MTU) sizes reaching their limit can also contribute to these issues.
 
 4. If Azure Firewall is in front of the nodes, ensure that these tags are added to the application or network rules:
 
