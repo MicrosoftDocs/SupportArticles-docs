@@ -8,6 +8,8 @@ ms.custom: sap:My VM is not booting
 ---
 # Collect an OS memory dump file for Azure support
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article shows how to collect a memory dump file of an operating system (OS) for Azure support.
 
 ## How to collect an OS memory dump file

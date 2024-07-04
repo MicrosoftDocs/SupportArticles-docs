@@ -8,7 +8,9 @@ ms.custom: sap:My VM is not booting
 ---
 # Enable the Serial Console and memory dump collection
 
-This article provides steps to enable the Serial Console and memory dump collection.
+**Applies to:** :heavy_check_mark: Windows VMs
+
+This article shows how to enable the Serial Console and memory dump collection.
 
 ## How to enable the Serial Console and memory dump collection
 

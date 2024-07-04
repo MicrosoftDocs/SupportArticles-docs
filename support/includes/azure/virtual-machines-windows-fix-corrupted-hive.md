@@ -1,7 +1,7 @@
 ---
 author: genlin
 ms.author: genli
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
 ms.topic: include
 ms.date: 06/17/2024
 ms.reviewer: jarrettr
