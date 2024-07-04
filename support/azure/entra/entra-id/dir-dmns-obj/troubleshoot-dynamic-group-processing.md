@@ -36,7 +36,7 @@ We provide four scripts to manage dynamic group processing using PowerShell:
 - **Pause Specific Groups:** This script pauses dynamic group processing for specific groups you specify in the script.
 - **Pause All Groups Except Some:** This script pauses dynamic group processing for all groups in your tenant except those you specify in the script.
 - **UnPauseSpecificCritical:** This script resumes dynamic group processing for specific groups you specify in the script.
-- **UnPauseNonCritical:** This script allows you to unpause non-critical groups with dynamic membership, 100 at a time.
+- **UnPauseNonCritical:** This script allows you to unpause noncritical groups with dynamic membership, 100 at a time.
 
 Follow the instructions in the scripts to modify them according to your needs, and run them with the Microsoft Entra ID PowerShell module.
 
@@ -53,9 +53,9 @@ Use the Pause All Groups script when you suspect an unintended change or encount
 
 Use these scripts when you need to pause dynamic group processing for specific groups or all groups except certain ones.
 
-### How to know when it is safe to resume dynamic group processing?
+### How to know when it's safe to resume dynamic group processing?
 
-Currently, Microsoft Entra doesn't offer observability for you to monitor the status of dynamic group processing. It is recommended to wait at least 12 hours before resuming to allow the service to recover from any issues.
+Currently, Microsoft Entra doesn't offer observability for you to monitor the status of dynamic group processing. It's recommended to wait at least 12 hours before resuming to allow the service to recover from any issues.
 
 >[!NOTE]
 > Microsoft Entra Support can assist with dynamic group processing only after resuming all dynamic groups and waiting 12 hours. 
