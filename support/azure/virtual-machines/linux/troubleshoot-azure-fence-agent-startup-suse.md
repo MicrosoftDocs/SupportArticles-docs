@@ -67,13 +67,12 @@ To resolve the issue, check the log in `/var/log/messages` and take appropriate 
 
 ## Cause 1: Endpoint connectivity or credential issues
 
-The following log points to endpoint connectivity or credential issues as the cause of the problem.
+If 'Azure Error: AuthenticationFailed' appears in the log as as shown below, the problem could be related to endpoint connectivity or credentials. 
 
 ```output
 /var/log/messages
 2021-03-15T20:23:15.441083+00:00 NodeName pacemaker-fenced[2550]:  warning: fence_azure_arm[21839] stderr: [ 2021-03-15 20:23:15,398 ERROR: Failed: Azure Error: AuthenticationFailed ]
 2021-03-15T20:23:15.441260+00:00 NodeName pacemaker-fenced[2550]:  warning: fence_azure_arm[21839] stderr: [ Message: Authentication failed. ]
-2021-03-15T20:23:15.441668+00:00 NodeName pacemaker-fenced[2550]:  warning: fence_azure_arm[21839] stderr: [  ]
 ```
 ### Resolution
 
@@ -82,7 +81,7 @@ The following log points to endpoint connectivity or credential issues as the ca
     * management.azure.com
     * login.microsoftonline.com
 
-    You test the connectivity by using `nc1, `telnet`, or `curl`:
+    You can test the connectivity by using `nc1, `telnet`, or `curl`. Replace `<endpoint>` value accordingly.
 
     ```bash
     nc -z -v <endpoint> 443
@@ -97,7 +96,7 @@ The following log points to endpoint connectivity or credential issues as the ca
     ```
 
 2. Ensure that a valid username and password are set for the STONITH resource.
-    One of the major causes of STONITH resource failures is the use of invalid values for the username or password when using a Service Principal. You can test this using the `fence_azure_arm` command, as shown in the following example. To set username and password for the STONITH resource, see [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#create-azure-fence-agent-stonith-device).
+    One of the major causes of STONITH resource failures is the use of invalid values for the username or password when using a Service Principal. You can test this using the `fence_azure_arm` command, as shown in the following example. To set username and password for the STONITH resource, see [Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=spn#create-an-azure-fence-agent-device).
 
     ``` bash
     sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> 
@@ -120,7 +119,7 @@ The following log points to endpoint connectivity or credential issues as the ca
 
 ## Cause 2: Authentication failure
 
-The following log indicates that the issue appears to be related to authentication failures:
+If 'unauthorized_client' appears in the log as as shown below, the problem could be related to authentication failure. 
 
 ```output
 /var/log/messages
@@ -143,13 +142,13 @@ Verify the Microsoft Entra ID app's tenant ID, application ID, login, and passwo
     sudo crm configure edit <fencing agent resource>
     ```
 
-2. Change the parameters accordingly and save the changes
+2. Change the parameters accordingly and save the changes.
 
    ```bash
     sudo crm configure property maintenance-mode=false
    ```
 
-3. Verify the cluster status to confirm if fencing agent issue is fixed
+3. Verify the cluster status to confirm if fencing agent issue is fixed.
 
     ```bash
     crm status
@@ -157,13 +156,13 @@ Verify the Microsoft Entra ID app's tenant ID, application ID, login, and passwo
 
 ## Cause 3: Insufficient permissions
 
-The following log indicates the issue appears to be related to Insufficient permissions:
+If 'The client does not have authorization to perform action' appears in the log as as shown below, the problem could be related to Insufficient permissions：
 
 ``` output
 /var/log/messages
 Apr 2 00:49:56 VM1 fence_azure_arm: Please use '-h' for usage
 Apr 2 00:49:57 VM1 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: [ 2020-04-02 00:49:56,978 ERROR: Failed: Azure Error: AuthorizationFailed ]
-Apr 2 00:49:57 VM1 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: [ Message: The client 'd36bc109-bdfd-4b6d-bf28-d3990d3c22ea' with object id 'd36bc109-bdfd-4b6d-bf28-d3990d3c22ea' does not have authorization to perform action 'Microsoft.Compute/virtualMachines/read' over scope '/subscriptions/e2d1c3ed-77d2-47f5-a2af-27aa0f9d79a8/resourceGroups/DPG-RG-MAIN01-PROD/providers/Microsoft.Compute' or the scope is invalid.If access was recently granted, please refresh your credentials. ]
+Apr 2 00:49:57 VM1 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: [ Message: The client 'client-id' with object id '<client-id>' does not have authorization to perform action 'Microsoft.Compute/virtualMachines/read' over scope '/subscriptions/<sub-id>/resourceGroups/<rg-name>/providers/Microsoft.Compute' or the scope is invalid.If access was recently granted, please refresh your credentials. ]
 ```
 ### Resolution
 
@@ -173,7 +172,7 @@ Apr 2 00:49:57 VM1 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: 
 
 ## Cause 4: SSL handshake failure 
 
-The following log indicates the issue appears to be related to Insufficient permissions:
+If 'Error occurred in request., SSLError' appears in the log as as shown below, the problem could be related to SSL handshake failure：
 
 ```output
 /var/log/messages
