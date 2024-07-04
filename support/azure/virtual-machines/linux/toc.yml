@@ -229,10 +229,6 @@
     items:
     - name: Troubleshoot Azure fence agent issues
       href: troubleshoot-azure-fence-agent-rhel.md
-  - name: SUSE
-    items:
-    - name: Troubleshoot Azure fence agent issues
-      href: troubleshoot-azure-fence-agent-sles.md
       
 - name: Linux repositories
   items:
