@@ -8,7 +8,7 @@ ms.service: entra-id
 ms.custom: sap:Users
 ---
 
-# Troubleshooting dynamic group processing in Microsoft Entra ID
+# Pause and resume dynamic group updates
 
 After making changes that require reevaluation of dynamic group membership, you might experience issues such as:
 
