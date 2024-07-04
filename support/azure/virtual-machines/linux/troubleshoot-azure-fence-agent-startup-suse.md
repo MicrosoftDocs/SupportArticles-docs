@@ -67,7 +67,7 @@ To resolve the issue, check the log in `/var/log/messages` and take appropriate 
 
 ## Cause 1: Endpoint connectivity or credential issues
 
-If 'Azure Error: AuthenticationFailed' appears in the log as as shown below, the problem could be related to endpoint connectivity or credentials. 
+If 'Azure Error: AuthenticationFailed' appears in the log as as shown below, the problem could be related to endpoint connectivity or credentials issues. 
 
 ```output
 /var/log/messages
