@@ -2,9 +2,10 @@
 title: Troubleshoot Azure fence agent issues in a RHEL Pacemaker cluster
 description: Provides a troubleshooting guidance for Azure fence agent issues that occur in a Red Hat Enterprise Linux (RHEL) Pacemaker cluster.
 ms.reviewer: divargas, rnirek, v-weizhu
-ms.date: 07/03/2024
+ms.date: 07/04/2024
 ms.service: virtual-machines
 ms.collection: linux
+ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---
 # Troubleshoot Azure fence agent issues in a RHEL Pacemaker cluster
 
@@ -14,7 +15,7 @@ This article helps you troubleshoot Azure fence agent issues in a Pacemaker clus
 
 ## Overview
 
-The Azure fence agent uses the python program located at */usr/sbin/fence_azure_arm*. The cluster RA that's used to implement a STONITH device calls this program with appropriate parameters, and uses it to communicate with the Azure platform through API calls.
+The Azure fence agent uses the python program located at */usr/sbin/fence_azure_arm*. The cluster Resource Agent (RA) that's used to implement a STONITH device calls this program with appropriate parameters, and uses it to communicate with the Azure platform through API calls.
 
 As introduced in [RHEL - Create a STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#create-a-fencing-device), custom roles provide permissions to the fence agent to perform the following actions:
 
