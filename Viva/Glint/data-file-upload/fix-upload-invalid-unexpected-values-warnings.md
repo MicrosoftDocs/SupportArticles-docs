@@ -23,7 +23,7 @@ When you upload employee attribute data to Microsoft Viva Glint, you may receive
 
 Warning message:
 
-RECORD_STAGING_FAILURE: Found \<x\> existing record that has been previously deleted corresponding to line number \<y\>.
+> RECORD_STAGING_FAILURE: Found \<x\> existing record that has been previously deleted corresponding to line number \<y\>.
 
 This issue occurs when users are deleted from Microsoft Entra ID and their corresponding records in Viva Glint are marked as **Deleted**.
 
