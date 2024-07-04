@@ -141,9 +141,9 @@ Verify the Microsoft Entra ID app's tenant ID, application ID, login, and passwo
 
 2.Change the parameters accordingly and save the changes
 
-    ```bash
+   ```bash
     sudo crm configure property maintenance-mode=false
-    ```
+   ```
 
 3. Verify the cluster status to confirm if fencing agent issue is fixed
 
