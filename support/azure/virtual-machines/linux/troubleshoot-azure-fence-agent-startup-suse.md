@@ -12,11 +12,11 @@ ms.collection: linux
 
 #  Troubleshoot Azure Fence Agent startup issues in SUSE 
 
-This article list typical causes of Azure Fence Agent startup issues and offers guidance on identifying these issues by reviewing the logs. It also provides corresponding solutions to resolve the issues.
+This article lists common causes of Azure Fence Agent startup issues and offers guidance on identifying these causes by reviewing the logs. It also provides corresponding solutions to resolve the issues.
 
 ## How Azure fence agent works
 
-The Azure fence agent uses a Python program located at `/usr/sbin/fence_azure_arm`. The cluster Resource Agent (RA) which implements STONITH, calls this program with the appropriate parameters and uses it to communicate with the Azure platform via API calls.
+The Azure fence agent uses a Python program located at `/usr/sbin/fence_azure_arm`. The cluster Resource Agent (RA) which implements fencing a failed node (STONITH) calls this program with the appropriate parameters. Then uses it to communicate with the Azure platform via API calls.
 As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=msi#1-create-a-custom-role-for-the-fence-agent), the custom role provides the fence agent with permissions to perform the following actions:
 
 - `powerOff`
@@ -31,7 +31,7 @@ Azure Fencing Agent resource fails to start, and reports "unknown error", and sh
 ```bash  
 sudo crm status
 ```
-The following is the sample ouput of the crm status:
+The following is the sample output of the crm status:
 
 ```output
 Stack: corosync
@@ -110,7 +110,7 @@ The following log points to endpoint connectivity or credential issues as the ca
     sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> -v -D /var/tmp/debug-fence.out 
     ```
 
-    If Managed Identity is used in the the STONITH resource, run the follwing command:
+    If Managed Identity is used in the STONITH resource, run the following command:
 
     ```bash
     sudo /usr/sbin/fence_azure_arm --action=list --msi --resourceGroup=<resource group> -v -D /var/tmp/debug-fence.out
@@ -219,7 +219,7 @@ warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed:
         Verify return code: 0 (ok)
         Extended master secret: no
     ```
-   If so, these errors are likely caused by a network appliance or firewall performing packet inspection or modifying Transparent Layer Socket (TLS) connections in a way that disrupts certificate verification. Additionally, issues with maximum transmission unit (MTU) sizes reaching their limit can also contribute to these issues.
+   If so, these errors are likely caused by a network appliance or firewall performs packet inspection or modifies Transparent Layer Socket (TLS) connections in a way that disrupts certificate verification. Additionally, issues with maximum transmission unit (MTU) sizes reaching their limit can also contribute to these issues.
 
 4. If Azure Firewall is in front of the nodes, ensure that these tags are added to the application or network rules:
 
@@ -229,10 +229,8 @@ warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed:
 
 ## Next Steps
 
-If you require further help, open a support request using the  following instructions you have next. As you follow the instructions, keep a copy of the `debug-fence.out` because it's required for troubleshooting purposes.
+If you require further help, open a support request using the following instructions. When submitting your request, attach a copy of `debug-fence.out` for troubleshooting purposes.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
-
-[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
