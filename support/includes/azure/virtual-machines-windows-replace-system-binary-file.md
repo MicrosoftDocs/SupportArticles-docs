@@ -1,9 +1,10 @@
 ---
-author: DennisLee-DennisLee
+author: genlin
+ms.author: genli
 ms.service: virtual-machines-windows
 ms.topic: include
 ms.date: 06/21/2024
-ms.author: v-leedennis
+ms.reviewer: jarrettr
 ---
 1. On the attached disk, browse to the location of the binary file that's displayed in the error message.
 

@@ -1,9 +1,10 @@
 ---
-author: DennisLee-DennisLee
+author: genlin
+ms.author: genli
 ms.service: virtual-machines-windows
 ms.topic: include
 ms.date: 06/17/2024
-ms.author: v-leedennis
+ms.reviewer: jarrettr
 ---
 Fix the corrupted hive by following these steps:
 
