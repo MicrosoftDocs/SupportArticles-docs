@@ -47,6 +47,31 @@
   - name: Windows Server images updated to .NET Framework 4.7
     href: updates-included-windows-server-images.md
 
+- name: Procedures to repair a Windows VM
+  items:
+  - name: Repair a VM with Nested Hyper-V
+    href: troubleshoot-vm-by-use-nested-virtualization.md
+  - name: Troubleshoot on the Azure portal
+    href: troubleshoot-recovery-disks-portal-windows.md
+  - name: Troubleshoot using PowerShell
+    href: troubleshoot-recovery-disks-windows.md
+  - name: Azure Virtual Machine repair
+    href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
+  - name: Unlocking disks for offline repair
+    href: unlock-encrypted-disk-offline.md
+  - name: Repair unmanaged disks offline
+    href: unmanaged-disk-offline-repair.md
+  - name: Collect an OS memory dump file for Azure support
+    href: collect-os-memory-dump-file.md
+  - name: Enable the Serial Console and memory dump collection
+    href: enable-serial-console-memory-dump-collection.md
+  - name: Fix registry hive corruption
+    href: virtual-machines-windows-fix-corrupted-hive.md
+  - name: Repair the boot configuration data
+    href: virtual-machines-windows-repair-boot-configuration-data.md
+  - name: Replace corrupted or missing binary files
+    href: virtual-machines-windows-replace-system-binary-file.md
+
 - name: VM health
   items:
   - name: HealthResources table in Resource Graph has missing entries
@@ -500,21 +525,6 @@
 
 - name: Issue with Azure Virtual Desktop
   href: how-to-videos-windows-virtual-desktop.md
-
-- name: Repair a Windows VM
-  items:
-  - name: Repair a VM with Nested Hyper-V
-    href: troubleshoot-vm-by-use-nested-virtualization.md
-  - name: Troubleshoot on the Azure portal
-    href: troubleshoot-recovery-disks-portal-windows.md
-  - name: Troubleshoot using PowerShell
-    href: troubleshoot-recovery-disks-windows.md
-  - name: Azure Virtual Machine repair
-    href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
-  - name: Unlocking disks for offline repair
-    href: unlock-encrypted-disk-offline.md
-  - name: Repair unmanaged disks offline
-    href: unmanaged-disk-offline-repair.md
 
 - name: Common Azure VM errors and issues
   items:

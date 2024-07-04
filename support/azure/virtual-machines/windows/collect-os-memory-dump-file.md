@@ -6,9 +6,11 @@ ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.custom: sap:My VM is not booting
 ---
-# How to collect an OS memory dump file for Azure support
+# Collect an OS memory dump file for Azure support
 
-This article provides steps to collect a memory dump file of an operating system (OS) for Azure support.
+This article shows how to collect a memory dump file of an operating system (OS) for Azure support.
+
+## How to collect an OS memory dump file
 
 [!INCLUDE [Collect an OS memory dump file for Azure support](../../../includes/azure/collect-os-memory-dump-file.md)]
 
