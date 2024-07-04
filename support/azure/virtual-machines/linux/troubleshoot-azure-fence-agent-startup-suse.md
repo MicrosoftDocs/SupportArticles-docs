@@ -26,7 +26,7 @@ When the virtual machine (VM) is detected as unhealthy, the fence agent uses the
 
 ## Symptoms
 
-Azure Fencing Agent resource fails to start, and reports "unknown error", and shows in "stopped" state.
+Azure Fencing Agent resource fails to start, reports "unknown error", and shows in "stopped" status.
 
 ```bash  
 sudo crm status
@@ -143,7 +143,7 @@ Verify the Microsoft Entra ID app's tenant ID, application ID, login, and passwo
     sudo crm configure edit <fencing agent resource>
     ```
 
-2.Change the parameters accordingly and save the changes
+2. Change the parameters accordingly and save the changes
 
    ```bash
     sudo crm configure property maintenance-mode=false
@@ -182,7 +182,7 @@ warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed:
 
 ### Resolution
 
-1.Tested connectivity from affected nodes using `openssl`:
+1. Tested connectivity from affected nodes using `openssl`:
     ```bash
     openssl s_client -connect management.azure.com:443
     ```
@@ -221,7 +221,7 @@ warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed:
     ```
    If so, these errors are likely caused by a network appliance or firewall performs packet inspection or modifies Transparent Layer Socket (TLS) connections in a way that disrupts certificate verification. Additionally, issues with maximum transmission unit (MTU) sizes reaching their limit can also contribute to these issues.
 
-4. If Azure Firewall is in front of the nodes, ensure that these tags are added to the application or network rules:
+3. If Azure Firewall is in front of the nodes, ensure that these tags are added to the application or network rules:
 
     - Application Rules: ApiManagement , AppServiceManagement, AzureCloud
     - Network Rules: AppServiceEnvironment
