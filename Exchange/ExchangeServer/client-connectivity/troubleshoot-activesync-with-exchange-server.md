@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot ActiveSync with Exchange Server
 description: Resolves ActiveSync issues with Exchange Server.
-ms.date: 01/24/2024
+ms.date: 07/04/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
