@@ -12,8 +12,12 @@ ms.collection: linux
 
 #  Troubleshoot Azure Fence Agent startup issues in SUSE 
 
+This article list typical causes of Azure Fence Agent startup issues and offers guidance on identifying these issues by reviewing the logs. It also provides corresponding solutions to resolve the issues.
+
+## How Azure fence agent works
+
 The Azure fence agent uses a Python program located at `/usr/sbin/fence_azure_arm`. The cluster Resource Agent (RA) which implements STONITH, calls this program with the appropriate parameters and uses it to communicate with the Azure platform via API calls.
-As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#create-azure-fence-agent-stonith-device), the custom role provides the fence agent with permissions to perform the following actions:
+As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=msi#1-create-a-custom-role-for-the-fence-agent), the custom role provides the fence agent with permissions to perform the following actions:
 
 - `powerOff`
 - `start`
