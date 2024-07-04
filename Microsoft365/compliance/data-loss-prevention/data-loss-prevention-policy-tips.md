@@ -1,39 +1,56 @@
 ---
-title: Issues that affect DLP policy tips
-description: Fixes some issues that occur if DLP policy tips don't work as expected.
-author: helenclu
+title: Resolve issues that affect DLP policy tips
+description: Provides diagnostic information and resolutions for issues that cause DLP policy tips to not work.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
-ms.reviewer: chgary, lindabr, sathyana
+ms.reviewer: chgary, lindabr, sathyana, meerak, v-trisshores
 ms.custom: 
   - CSSTroubleshoot
   - CI 100086
   - CI 160472
+  - CI 191994
 appliesto: 
   - Microsoft Purview Data Loss Prevention
-ms.date: 03/31/2022
+ms.date: 06/26/2024
 ---
 
 # Resolve issues that affect DLP policy tips
 
-Data Loss Prevention (DLP) policy tip settings are configured in DLP policies. If you created DLP policies in Exchange Online, we recommend that you [migrate them to the Microsoft Purview compliance portal](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp). This is because [legacy Exchange Online data loss prevention in the Exchange admin center will be deprecated](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention). For policies that are not migrated, you might see unexpected results, such as no display of policy tips.
+If you encounter an issue that's related to Microsoft Purview Data Loss Prevention (DLP) policy tips, [run an automated diagnostic for DLP policy tips](#run-the-diagnostic-for-dlp-policy-tips) in the Microsoft 365 admin center. The diagnostic analyzes the DLP policy and rule configuration for policy tips, identifies any issues, and suggests resolutions.
 
-This article describes the following common scenarios in which DLP policy tips might not work as expected, and provides resolutions that you can try:
+## Run the diagnostic for DLP policy tips
 
-- Policy configuration errors occur
-- Policy configurations are not supported (client only)
-- Not all policy conditions are met
-- MailTips aren't enabled (client only)
-- Policy tips are configured both in multiple locations
-- `GetDLPPolicyTip` call is not found in Fiddler trace
-- Client doesn't support MailTips (Mac only)
-- File-system configuration is not supported (PDFs on Windows 7 only)
-- Invalid test data
+> [!NOTE]
+> To run the diagnostic, you must be a Microsoft 365 global administrator.
+
+To run the diagnostic, follow these steps:
+
+1. Select the following button to open the diagnostic in the Microsoft 365 admin center.
+
+   > [!div class="nextstepaction"]
+   > [Run Tests: DLP policy tips](https://aka.ms/PillarDLPPolicyTipsDiag)
+
+2. Enter the following information:
+
+   - User principal name (UPN) or email address of the user
+   - DLP rule name or GUID
+   - **Outlook** or **OWA** (Outlook on the web)
+
+3. Select **Run Tests**.
+
+If you ran the diagnostic but your issue isn't resolved, check the following sections of this article.
+
+## DLP policies in Exchange Online
+
+DLP policy tip settings are configured in DLP policies. If you created DLP policies in Exchange Online, we recommend that you [migrate them to the Microsoft Purview compliance portal](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp) because legacy Exchange Online data loss prevention in the Exchange admin center is being deprecated. For policies that aren't migrated, you might see unexpected results, such as no display of policy tips.
+
+For more information, see [Policy tips in the Exchange admin center vs. the Microsoft Purview compliance portal](/purview/dlp-use-notifications-and-policy-tips#policy-tips-in-the-exchange-admin-center-vs-the-microsoft-purview-compliance-portal).
 
 ## Policy configuration errors
 
@@ -61,14 +78,14 @@ See [Outlook 2013 and later supports showing policy tips for only some condition
 
 ## Not all policy conditions are met
 
-This scenario occurs primarily if policy tips don't work as expected in SharePoint Online and OneDrive for Business because there's an external sharing condition that's configured in a policy.
+This scenario occurs primarily if policy tips don't work as expected in SharePoint in Microsoft 365 and Microsoft OneDrive for work or school because there's an external sharing condition that's configured in a policy.
 
 :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/external-sharing-condition.png" alt-text="Screenshot shows that an external sharing condition is configured in a policy.":::
 
 > [!NOTE]
 > Currently, content is not indexed as shared externally until an external party that's located outside the organization accesses the content for the first time.
 
-## MailTips are not enabled (Outlook 2013 and later version clients only)
+## MailTips aren't enabled (Outlook 2013 and later version clients only)
 
 For Outlook 2013 and later version clients, make sure that MailTips are enabled. To enable MailTips in Outlook, first make sure that policy tips are enabled. To do this, follow these steps:
 
@@ -81,13 +98,9 @@ For Outlook 2013 and later version clients, make sure that MailTips are enabled.
 
     :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/mail-tips-options.png" alt-text="Screenshot of steps that enable MailTips in Outlook.":::
 
-## Policy tips configured in multiple locations
+## GetDLPPolicyTip call not found in Fiddler trace
 
-See [Policy tips in the Exchange admin center vs. the Security & Compliance Center](/microsoft-365/compliance/use-notifications-and-policy-tips#policy-tips-in-the-exchange-admin-center-vs-the-security--compliance-center).
-
-## `GetDLPPolicyTip` call not found in Fiddler trace
-
-If DLP policy tips don't work as expected, Fiddler is a useful tool to help you diagnose the issue. Here's how to use a Fiddler trace to troubleshoot DLP policy tips.
+If DLP policy tips don't work as expected, use a Fiddler trace to troubleshoot DLP policy tips.
 
 1. Collect the Fiddler trace file when you reproduce the issue. Here's an example in which the DLP policy tip is triggered as expected.
 
@@ -119,7 +132,7 @@ There are several Outlook client licenses that don't support policy tips. [Outlo
 
 No policy tip is displayed if the following conditions are true:
 
-- You are running Outlook 2013 or later version clients on Windows 7.
+- You're running Outlook 2013 or later version clients on Windows 7.
 - You try to attach a file that's formatted as Adobe PDF version 10 or later versions to an email message that should trigger a DLP policy tip.
 
 ### Resolution
@@ -128,6 +141,6 @@ To resolve this issue, carefully follow the steps in the "Resolution" section of
 
 ## Invalid test data
 
-When you evaluate the **Instance count** and confidence level of the DLP policy rule, the test data that's being used is not valid based on [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions). Make sure that the test data that you use is valid.
+When you evaluate the **Instance count** and confidence level of the DLP policy rule, the test data that's being used isn't valid based on [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions). Make sure that the test data that you use is valid.
 
 :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/invalid-test-data.png" alt-text="Screenshot of an invalid instance count value.":::
