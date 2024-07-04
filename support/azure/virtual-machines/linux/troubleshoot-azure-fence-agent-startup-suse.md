@@ -45,8 +45,8 @@ Full list of resources:
 Clone Set: cln_SAPHanaTopology_SS2_HDB00 [rsc_SAPHanaTopology_SS2_HDB00]
 	 Started: [ VM1 VM2 ]
 Clone Set: msl_SAPHana_SS2_HDB00 [rsc_SAPHana_SS2_HDB00] (promotable)
-	 Masters: [ VM1 ]
-	 Slaves: [ VM2 ]
+	 Main: [ VM1 ]
+	 Sub: [ VM2 ]
 Resource Group: g_ip_SS2_HDB00
 	 rsc_ip_SS2_HDB00   (ocf::heartbeat:IPaddr2):       Started VM1
 	 rsc_nc_SS2_HDB00   (ocf::heartbeat:azure-lb):      Started VM1
