@@ -32,7 +32,7 @@ Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-t
     ```
 
     ```powershell
-    .\TSS.ps1 -Scenario -ADS_GPedit -ADS_GPmgmt -ADS_GPO -ADS_GPsvc -GPresult Both
+    .\TSS.ps1 -Scenario ADS_GPOEx -ADS_GPedit -ADS_GPmgmt -ADS_GPO -ADS_GPsvc -GPresult Both
     ```
 
 4. Enter *A* for "Yes to All" for the execution policy change.
