@@ -81,7 +81,7 @@ If 'Azure Error: AuthenticationFailed' appears in the log as as shown below, the
     * management.azure.com
     * login.microsoftonline.com
 
-    You can test the connectivity by using `nc1, `telnet`, or `curl`. Replace `<endpoint>` value accordingly.
+    You can test the connectivity by using `nc1, `telnet`, or `curl`. Replace the endpoint value accordingly.
 
     ```bash
     nc -z -v <endpoint> 443
