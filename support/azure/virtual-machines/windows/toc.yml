@@ -63,7 +63,7 @@
     href: unmanaged-disk-offline-repair.md
   - name: Collect an OS memory dump file for Azure support
     href: collect-os-memory-dump-file.md
-  - name: Enable the Serial Console and memory dump collection
+  - name: Enable the serial console and memory dump collection
     href: enable-serial-console-memory-dump-collection.md
   - name: Fix registry hive corruption
     href: virtual-machines-windows-fix-corrupted-hive.md

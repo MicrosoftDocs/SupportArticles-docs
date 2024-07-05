@@ -1,16 +1,17 @@
 ---
 title: Collect an OS memory dump file for Azure support
-description: Learns how to gather an OS memory dump file that Azure support can use.
-ms.date: 07/04/2024
+description: Learn how to gather an OS memory dump file that Azure support can use.
+ms.date: 07/05/2024
 ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.custom: sap:My VM is not booting
+ms.topic: how-to
 ---
 # Collect an OS memory dump file for Azure support
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article shows how to collect a memory dump file of an operating system (OS) for Azure support.
+This article shows how to collect an operating system (OS) memory dump file for Azure support.
 
 ## How to collect an OS memory dump file
 

@@ -1,10 +1,11 @@
 ---
-title:  Repair the boot configuration data in Windows VMs
-description: Learns how to  Repair the boot configuration data in Windows VMs.
-ms.date: 07/04/2024
+title: Repair the boot configuration data in Windows VMs
+description: Learn how to repair the boot configuration data in Windows VMs.
+ms.date: 07/05/2024
 ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.custom: sap:My VM is not booting
+ms.topic: how-to
 ---
 # Repair the boot configuration data in an Azure VM running Windows
 
