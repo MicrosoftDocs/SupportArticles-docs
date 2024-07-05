@@ -36,16 +36,16 @@ Sign in to the [Azure portal](https://portal.azure.com).
 1. Under **Services**, select **Log Analytics**.
 
 1. Select your specific Log Analytics Workspace.  
-:::image type="content" source="media/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/log-analytics-workspaces.png"::: 
+:::image type="content" source="media/configure-data-retention/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/log-analytics-workspaces.png"::: 
 
 1. From your workspace, select **Usage and estimated costs** from the left pane.  
-:::image type="content" source="media/daily-cap-1.png" alt-text="daily cap step 1" lightbox="media/daily-cap-1.png":::
+:::image type="content" source="media/configure-data-retention/daily-cap-1.png" alt-text="daily cap step 1" lightbox="media/configure-data-retention/daily-cap-1.png":::
 
 
 1. On the **Usage and estimated costs** page, select **Data Retention** from the top of the page.  
-:::image type="content" source="media/data-retention.png" alt-text="Data retention step 1" lightbox="media/data-retention.png":::
+:::image type="content" source="media/configure-data-retention/data-retention.png" alt-text="Data retention step 1" lightbox="media/configure-data-retention/data-retention.png":::
 
 1. On the pane, move the slider to increase or decrease the number of days, then select **OK**.  
-:::image type="content" source="media/data-retention-2.png" alt-text="data retention step 2" lightbox="media/data-retention-2.png":::
+:::image type="content" source="media/configure-data-retention/data-retention-2.png" alt-text="data retention step 2" lightbox="media/configure-data-retention/data-retention-2.png":::
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

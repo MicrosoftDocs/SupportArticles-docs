@@ -31,16 +31,16 @@ Sign in to the [Azure portal](https://portal.azure.com).
 1. Under **Services**, select **Log Analytics**.
 
 1. Select your specific Log Analytics Workspace.  
-:::image type="content" source="media/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/log-analytics-workspaces.png":::
+:::image type="content" source="media/workspace-recommended-alerts/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/workspace-recommended-alerts/log-analytics-workspaces.png":::
 
 1. Select **Alerts**.  
-:::image type="content" source="media/log-analytics-alert-1.png" alt-text="log analytics alert step 1" lightbox="media/log-analytics-alert-1.png":::
+:::image type="content" source="media/workspace-recommended-alerts/log-analytics-alert-1.png" alt-text="log analytics alert step 1" lightbox="media/workspace-recommended-alerts/log-analytics-alert-1.png":::
 
 1. With the Alerts (1) pane selected
     1. Select **Set up recommendations** (2)
     1. Toggle the radio buttons for which alerts rules you would like to configure. We recommend enabling all recommended alert rules(3).
     1. Fill out the **Notify me by** section.
     1. Select **Save**.  
-    :::image type="content" source="media/log-analytics-alert-2.png" alt-text="log analytics alert step 2" lightbox="media/log-analytics-alert-2.png":::
+    :::image type="content" source="media/workspace-recommended-alerts/log-analytics-alert-2.png" alt-text="log analytics alert step 2" lightbox="media/workspace-recommended-alerts/log-analytics-alert-2.png":::
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

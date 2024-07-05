@@ -41,17 +41,17 @@ Sign in to the [Azure portal](https://portal.azure.com).
 1. Under **Services**, select **Log Analytics**.
 
 1. Select your specific Log Analytics Workspace.  
-:::image type="content" source="media/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/log-analytics-workspaces.png":::
+:::image type="content" source="media/set-up-a-daily-cap/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/set-up-a-daily-cap/log-analytics-workspaces.png":::
 
 1. Select **Usage and estimated costs** from the left pane in your workspace.  
-    :::image type="content" source="media/daily-cap-1.png" alt-text="set daily cap step 1" lightbox="media/daily-cap-1.png":::
+    :::image type="content" source="media/set-up-a-daily-cap/daily-cap-1.png" alt-text="set daily cap step 1" lightbox="media/set-up-a-daily-cap/daily-cap-1.png":::
 
 1. On the **Usage and estimated costs** page (1) for the selected workspace, 
     1. select **Daily Cap** (2) from the top of the page. 
     1. Select **ON** (3) to enable the daily cap.
     1. Set the data volume limit in GB/day (4). 
     1. Security data types don't impact the daily cap.  
-    :::image type="content" source="media/daily-cap-2.png" alt-text="set daily cap step 2" lightbox="media/daily-cap-2.png":::
+    :::image type="content" source="media/set-up-a-daily-cap/daily-cap-2.png" alt-text="set daily cap step 2" lightbox="media/set-up-a-daily-cap/daily-cap-2.png":::
 
 When the daily cap is reached for a Log Analytics workspace, a banner is displayed in the Azure portal, and an event is written to the Operations table in the workspace. You should create an alert rule to proactively notify you when this occurs.
 
