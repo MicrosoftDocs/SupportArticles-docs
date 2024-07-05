@@ -1,8 +1,9 @@
 ---
 title: Troubleshooting dynamic group processing in Microsoft Entra ID
 description: Learn how to troubleshoot dynamic group processing using PowerShell
-author: barclan
-ms.author: barclayn
+author: genlin
+ms.author: genli
+ms.reviewer: yuhko
 ms.date: 07/01/2024
 ms.service: entra-id
 ms.custom: sap:Users
