@@ -8,6 +8,7 @@ ms.topic: troubleshooting
 ms.date: 07/04/2024
 ms.service: virtual-machines
 ms.collection: linux
+ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---
 
 # Troubleshoot Azure Fence Agent startup issues in SUSE
