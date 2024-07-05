@@ -27,11 +27,8 @@ When the virtual machine (VM) is detected as unhealthy, the fence agent uses the
 
 ## Symptoms
 
-Azure Fencing Agent resource fails to start, reports "unknown error", and shows in "stopped" status.
+Azure Fencing Agent resource fails to start. When you run `sudo crm status` to check the status of the cluster resource, it reports an "unknown error."
 
-```bash  
-sudo crm status
-```
 The following is the sample output of the crm status:
 
 ```output
