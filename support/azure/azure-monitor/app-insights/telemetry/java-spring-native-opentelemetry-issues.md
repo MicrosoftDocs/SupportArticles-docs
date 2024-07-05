@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot OpenTelemetry issues in Spring Boot Java native image applications
+title: Troubleshoot OpenTelemetry issues in Spring Boot Java native
 description: Learns how to troubleshoot OpenTelemetry issues in Spring Boot Java native image applications.
 ms.date: 07/05/2024
 editor: v-jsitser
@@ -25,7 +25,7 @@ by following the OpenTelemetry documentations in [Spring Boot starter](https://o
 
 ## Step 2: Enable self-diagnostics
 
-If something doesn't work as expected, you can enable self-diagnostics at `DEBUG` level to get some insights. To do do, set the self-diagnostics level to `ERROR`, `WARN`, `INFO`, `DEBUG`, or `TRACE` by using the `APPLICATIONINSIGHTS_SELF_DIAGNOSTICS_LEVEL` environment variable. The `APPLICATIONINSIGHTS_SELF_DIAGNOSTICS_LEVEL` environment variable only works for Logback today.
+If something doesn't work as expected, you can enable self-diagnostics at `DEBUG` level to get some insights. To do do, set the self-diagnostics level to `ERROR`, `WARN`, `INFO`, `DEBUG`, or `TRACE` by using the `APPLICATIONINSIGHTS_SELF_DIAGNOSTICS_LEVEL` environment variable.
 
 To enable self-diagnostics at the DEBUG level when running a docker container, run the following command:
 
