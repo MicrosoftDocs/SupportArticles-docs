@@ -1,7 +1,8 @@
 ---
 title: Loop workspaces are unexpectedly stored in SharePoint Online sites
-description: Resolves an issue in which Loop workspaces are stored in SharePoint Online sites instead of SharePoint Embedded containers.
+description: Describes an issue in which Loop workspaces are stored in SharePoint Online sites instead of SharePoint Embedded containers.
 author: helenclu
+ms.reviewer: derekliddell; meerak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.service: loop
 ms.custom: 
+  - sap: Loop App Client
   - CI191532
   - CSSTroubleshoot
 appliesto: 
@@ -19,68 +21,63 @@ ms.date: 06/27/2024
 
 # Loop workspaces are unexpectedly stored in SharePoint Online sites
 
-When you create Microsoft Loop workspaces, they're stored in SharePoint Online sites instead of SharePoint Embedded containers.
+This article is relevant to customers who were notified by Microsoft that some of their new Microsoft Loop workspaces were created with the storage locations as SharePoint Online sites instead of SharePoint Embedded containers. 
 
-To fix this issue, follow these steps.
+If you’re an administrator and the loop workspaces created by your users were impacted, you need to identify the affected workspaces and inform the associated users. Then depending on their requirements, users can choose either to continue using SharePoint Online sites as the storage option for their Loop workspaces or migrate their workspaces to use SharePoint Embedded containers.
 
-## Step 1: Identify affected Loop workspaces
+## Identify affected Loop workspaces
 
-**Note**: This step must be performed by a SharePoint administrator.
+Use the following steps. They must be performed by a SharePoint administrator.
 
-Follow these steps:
+1. Convert the affected SharePoint site IDs provided by Microsoft to site URLs.
 
-1. Convert affected SharePoint site IDs to site URLs.
-
-   1. Copy the affected SharePoint site IDs that are provided by Microsoft and paste them into a text editor, such as Notepad. Then, save the file.
+   1. Copy and paste the affected SharePoint site IDs into a text editor, such as Notepad. Then, save the file.
    1. Download the [SiteIDtoURL.ps1](https://github.com/pnp/powershell/blob/dev/samples/Site.Metadata.CSV/SiteIDtoURL.ps1) PowerShell script.
    1. Open a PowerShell window with administrator privileges.
    1. Navigate to the location where you saved *SiteIDtoURL.ps1* and run the script.
-   1. Follow the prompt to enter your SharePoint Online admin URL, such as `https://contoso-admin.sharepoint.com`.
-   1. When the open file dialog pops up, select the file you saved in step a.
+   1. As the script runs, follow the prompts to provide the requested inputs such as:
+      1. The SharePoint Online admin URL.
+      1. The file you saved in step 1a.
 
-   When the script finishes, it returns a CSV file that contains metadata for each SharePoint site, including the site URL.
-1. Identify the SharePoint sites that are used to store Loop workspaces. For each SharePoint site:
+   After the script finishes running, it returns a .CSV file that contains the metadata for each SharePoint site, including the site URL.
+1. Verify that the SharePoint site URLs in the .csv file are used to store Loop workspaces. Each SharePoint site must meet the following requirements:
 
-   - Check whether the site's default **Documents** library contains a *LoopAppData* folder and a *`.pod`* file.
-   - Check whether the site URL ends with a GUID, for example, `https://contoso.sharepoint.com/sites/c2e21339-b2f4-41fe-921c-bbb7bbc0f14a`.
-1. Determine the site owners:
+   - The site's default **Documents** library contains a folder named *LoopAppData*, a subfolder with in named *.appdata*, a file within the subfolder with the *`.pod`* file extension.
+   - The site URL ends with a GUID. For example, `https://contoso.sharepoint.com/sites/c2e21339-b2f4-41fe-921c-bbb7bbc0f14a`.
+1. Determine the owners of each SharePoint site:
 
    1. In the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), select **Sites** > **Active sites**.
-   1. For each affected site that's identified in step 2, select the site, select the **Membership** tab, and then select **Site owners**.
+   1. For each affected site, select the site, select the **Membership** tab, and then select the **Site owners** section. 
 
-## Step 2: Keep the workspaces on SharePoint sites or migrate the workspaces
+## Keep your Loop workspace on the SharePoint site 
 
-Depending on your business needs, Loop users can keep the workspaces on SharePoint Online sites or migrate them to SharePoint Embedded containers.
-
-### Option 1: Keep the workspace on SharePoint Online sites
-
-To access the SharePoint site where the workspace is stored, follow these steps:
+You can continue to use the SharePoint Online site as the storage location for your Loop workspace. To access the site, use the following steps:
 
 1. From a page in the Loop workspace, select **Share** > **Page link** to create a sharing link that's similar to the following example:
 
    `https://microsoft.sharepoint.com/:fl:/s/6405bb1e-d41b-4df2-a433-e7e3d60d7a2a`
 
-   The last part of this URL is the SharePoint site ID, such as `6405bb1e-d41b-4df2-a433-e7e3d60d7a2a` in the example.
-1. Access the SharePoint site by using the following URL:
+   The last part of this URL is the site ID of the SharePoint site, such as `6405bb1e-d41b-4df2-a433-e7e3d60d7a2a`.
+1. Navigate to the following URL to open the SharePoint site:
 
    `https://<yourtenantname>.sharepoint.com/sites/<siteID from step 1>`
 
    For example, `https://microsoft.sharepoint.com/sites/6405bb1e-d41b-4df2-a433-e7e3d60d7a2a`.
-1. To access items that are deleted from the Loop app, select **Recycle bin**.
+For workspaces that are stored on a SharePoint Online site, the Recycle bin is not available in the Loop app. To access items that were deleted from these Loop workspaces, select **Recycle bin** in the Sharepoint site where the workspaces are stored.
 
-### Option 2: Migrate the workspace to SharePoint Embedded containers
+## Migrate your Loop workspace to a SharePoint Embedded container
 
-To migrate a workspace, follow these steps:
+If you need to migrate an Ideas workspace in addition to other Loop workspaces, begin by preparing the Ideas workspace for migration and then proceed with the other workspaces. Follow these steps:
 
-1. If you need to migrate the **Ideas** workspace, use the following steps. Otherwise, go to step 2.
+1. Prepare an **Ideas** workspace for migration. If you don’t need to migrate an Ideas workspace, go to step 2.
 
-   1. Determine the link to the **Ideas** workspace. To do so, from any page in the **Ideas** workspace, select **Share** > **Page link**. Paste the link somewhere and keep the `https://<yourtenantname>.sharepoint.com/sites/<siteID>` part, which is the link to the workspace.
+   1. From any page in the **Ideas** workspace, select **Share** > **Page link**. Copy and paste the link in a temporary location. From this link, separate the part which is `https://<yourtenantname>.sharepoint.com/sites/<siteID>`. This URL is the link to the Ideas workspace. 
    1. Delete the existing **Ideas** workspace.
    1. Restart Loop to create a new **Ideas** workspace.
-   1. Ask the administrator to restore the deleted **Ideas** workspace by [restoring the deleted site](/sharepoint/restore-deleted-site-collection).
-   1. Access the SharePoint site by using the URL that's determined in step a.
-   1. Follow step 6 to 9 to migrate all content from the old **Ideas** workspace to the new **Ideas** workspace.
-1. Rename the existing workspace. For example, rename the *Project* workspace to *ProjectOLD*.
+   1. A SharePoint administrator needs to restore the deleted **Ideas** workspace by [restoring the SharePoint site](/sharepoint/restore-deleted-site-collection) that was deleted along with it in step 1b.
+   1. After the SharePoint site is restored, navigate to the old Ideas workspace by using the URL that was determined in step 1a: `https://<yourtenantname>.sharepoint.com/sites/<siteID>`.
+   1. Follow steps 6 to 9 to migrate all content from the old **Ideas** workspace to the new **Ideas** workspace.
+1. Rename the existing Loop workspace. For example, rename the *Project* workspace to *ProjectOLD*.
 1. Create a new Loop workspace by using the original name, such as *Project*.
 1. Open the new workspace in a separate browser tab next to the existing workspace.
 1. Add all members of the existing workspace to the new workspace. To add members to a workspace, follow these steps:
