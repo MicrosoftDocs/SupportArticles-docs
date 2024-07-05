@@ -21,7 +21,7 @@ WARN  c.a.m.a.s.OpenTelemetryVersionCheckRunner - The OpenTelemetry version is n
 ```
 
 In this case, you have to import the OpenTelemetry Bills of Materials
-by following the OpenTelemetry documentations in [Spring Boot starter](https://opentelemetry.io/docs/instrumentation/java/automatic/spring-boot/#dependency-management).
+by following the OpenTelemetry documentations in [Spring Boot starter](https://opentelemetry.io/docs/zero-code/java/spring-boot-starter/getting-started/).
 
 ## Step 2: Enable self-diagnostics
 
