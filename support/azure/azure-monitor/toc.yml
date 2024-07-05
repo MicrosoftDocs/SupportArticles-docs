@@ -28,11 +28,9 @@ items:
       - name: Java 2.x
         href: app-insights/telemetry/java-2x-troubleshoot.md
       - name: Java 3.x
-        items:
-        - name: Troubleshoot Application Insights for Java
-          href: app-insights/telemetry/java-standalone-troubleshoot.md
-        - name: Troubleshoot OpenTelemetry issues in Spring Boot native image applications
-          href: app-insights/telemetry/java-spring-native-opentelemetry-issues.md
+        href: app-insights/telemetry/java-standalone-troubleshoot.md
+      - name: Troubleshoot OpenTelemetry issues in Java native
+        href: app-insights/telemetry/java-spring-native-opentelemetry-issues.md
       - name: JavaScript
         items:
         - name: Troubleshoot Application Insights JavaScript SDK
