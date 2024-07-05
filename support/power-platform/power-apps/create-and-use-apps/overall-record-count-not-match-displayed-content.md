@@ -1,13 +1,36 @@
-# The overall record count does not match the displayed content
+---
+title: The overall record count doesn't match the displayed content in a model-driven app
+description: Helps solve an issue where the overall record count doesn't match the displayed content in a Power Apps model-driven app.
+ms.reviewer: tapanm, moroch, dinusc
+ms.custom: sap:Using grids and lists in model-driven apps
+ms.date: 07/05/2024
+author: fikaradz
+ms.author: fikaradz
+---
+# The overall record count doesn't match the displayed content in a model-driven app
 
-A typical example of this issue is when the displayed number of records is lower than the records count that is displayed at the bottom of the page (See Image 1 and 2 above).
+This article provides troubleshooting steps for an issue where the overall record count doesn't match the displayed content in a Power Apps model-driven app.
 
-**<u>How to troubleshoot:</u>**
+## Symptoms
 
-The most likely reason is that the data that is displayed in the grid contains duplicate records (by the value in primary field). The issue is usually caused by pulling related-record duplicates from the same table.
+A typical example of this issue is the displayed number of records is lower than the records count that is displayed at the bottom of the page.
 
-Use the monitoring tool to check the total number of records (see image 5 above). If the "recordsCount" matches the total number of records displayed at the bottom of the grid while the data in the grid has less records, this is a strong indication that the data contains duplicate records. Please use the monitoring tool get the current view fetchXML request.
-![Image](images/image7.png)
+## Cause
 
-Very often the issue can be solved by just adding distinct="true" to the fetchXML (see [this doc](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/use-fetchxml-construct-query) for more information). If adding distinct="true" does not help, then please consider changing the query to avoid pulling duplicate records. The primary column (field) can be also found by using the monitoring tool:
-![Image](images/image8.png)
+The most likely reason is that the data that's displayed in the grid contains duplicate records (by the value in the primary field). The issue is usually caused by pulling related-record duplicates from the same table.
+
+## Troubleshooting checklist
+
+- Use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to check the total number of records.
+
+  :::image type="content" source="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png" alt-text="Screenshot that shows how to use the monitoring tool to get page and records information." lightbox="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png":::
+
+  If the `recordsCount` matches the total number of records displayed at the bottom of the grid while the data in the grid has less records, this is a strong indication that the data contains duplicate records. Use the monitoring tool get the current `viewFetchXML` request.
+
+  :::image type="content" source="media/modern-advanced-find-not-work-correctly/entity-support-page-filters.png" alt-text="Screenshot that shows a fetchXML query." lightbox="media/modern-advanced-find-not-work-correctly/entity-support-page-filters.png":::
+
+- The issue can be solved by adding `distinct="true"` to the fetchXML query. For more information, see [Query data using FetchXml](/power-apps/developer/data-platform/use-fetchxml-construct-query).
+
+  If adding `distinct="true"` doesn't solve the problem, consider changing the query to avoid pulling duplicate records. The primary column (field) can be also found by using the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview).
+
+  :::image type="content" source="media/modern-advanced-find-not-work-correctly/all-filters-in-fetchxml-query.png" alt-text="Screenshot that shows the primary column in a fetchXML query.":::

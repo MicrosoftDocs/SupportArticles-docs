@@ -1,17 +1,33 @@
-# Nested grid does not display data
+---
+title: Nested grid doesn't display data
+description: Helps solve an issue where a nested grid doesn't display data in a Power Apps model-driven app.
+ms.reviewer: tapanm, moroch, dinusc
+ms.custom: sap:Using grids and lists in model-driven apps
+ms.date: 07/05/2024
+author: fikaradz
+ms.author: fikaradz
+---
+# A nested grid doesn't display data in a Power Apps model-driven apps
 
-This applies to cases when the nested grid does not display any data. The most common issue is in incorrect relationship used or incorrect view applied.
+This article provides troubleshooting steps for an issue where a nested grid doesn't display any data in a Power Apps model-driven app.
 
-**<u>How to troubleshoot:</u>**
+## Cause
 
-First, let's make sure the nested grid is configured with a correct relationship.
-![Image](images/image25.png)
-The "Child Items Parent Id" parameter in the screenshot above must be set to a Lookup type field from the entity that is assigned to the parent grid (Accounts in the screenshot above). The Lookup field should point to the nested grid entity. Please make sure this is a standard Lookup type with a standard N:1 (many-to-one) relationship.
+The most common issue is incorrect relationship used or incorrect view applied.
 
-The next thing to check is the view that is assigned to the nested grid (My Active Accounts in the example above) to make sure it does not contain any unintended filters.
+## Troubleshooting checklist
 
-Finally, use the monitoring tool to inspect the data for the nested grid (see image below).
+1. Make sure the nested grid is configured with a correct relationship.
 
-![Image](images/image26.png)
+   The **Child Items Parent Id** parameter must be set to a Lookup type field from the entity that's assigned to the parent grid (the **Accounts** in the following screenshot). The Lookup field should point to the nested grid entity. Make sure this is a standard Lookup type with a standard N:1 (many-to-one) relationship.
 
-Note the "childRecordsCount" attribute that should display the number of records in the nested dataset. If that attribute shows 0 records then this is a strong indication of an incorrect relationship specified, the presence of extra filters in the nested grid view, or no records in the nested dataset (ChildItems). If that number shows a greater than zero value and your nested grid still does not display any records, then the issue is most likely with the extra filtering present in the nested grid view or with no related records to the row that is expanded from the parent grid. Please check the "childViewFetchXML" and "ChildViewFields" and make sure all the filters are correct and all the column definitions match the ones specified in "childViewFetchXML".
+   :::image type="content" source="media/nested-grid-not-display-data/child-items-parent-id.png" alt-text="Screenshot that shows the Child Items Parent Id parameter in Power Apps grid control.":::
+
+2. Check if the view that's assigned to the nested grid (**My Active Accounts** in the example above) doesn't contain any unintended filters.
+
+3. Use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to inspect the data for the nested grid.
+
+   :::image type="content" source="media/nested-grid-not-display-data/nested-grid-data.png" alt-text="Screenshot that shows the inspected data for a nested grid.":::
+
+   > [!NOTE]
+   > The `childRecordsCount` attribute should display the number of records in the nested dataset. If that attribute shows **0**, this is a strong indication of an incorrect relationship specified, the presence of extra filters in the nested grid view, or no records in the nested dataset (`ChildItems`). If that number shows a greater than zero value and your nested grid still doesn't display any records, the issue is most likely with the extra filtering present in the nested grid view or with no related records to the row that's expanded from the parent grid. Check the `childViewFetchXML` and `ChildViewFields` and make sure all the filters are correct and all the column definitions match the ones specified in `childViewFetchXML`.

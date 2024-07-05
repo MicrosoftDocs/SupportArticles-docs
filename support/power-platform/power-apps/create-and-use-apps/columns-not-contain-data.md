@@ -1,15 +1,15 @@
 ---
-title: Some columns don't contain data
-description: Fixes an issue in which some columns don't contain data in a Power Apps model-driven app.
+title: Some columns don't contain data in a model-driven app
+description: Provides troubleshooting steps for an issue where some columns don't contain data in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
 ms.date: 07/03/2024
 author: fikaradz
 ms.author: fikaradz
 ---
-# Some columns don't contain data
+# Some columns don't contain data in a model-driven app
 
-This article provides a resolution for an issue where some columns don't contain data in a model-driven app in Microsoft Power Apps.
+This article provides troubleshooting steps for an issue where some columns don't contain data in a model-driven app in Microsoft Power Apps.
 
 ## Symptoms
 
@@ -19,9 +19,9 @@ You might find data isn't displayed in certain columns in a Power Apps model-dri
 
 This issue is often caused by the discrepancies between the fetchXML request (the query for data) and the layoutXML (the column definitions), which might be due to custom code that incorrectly modifies the query. Before troubleshooting the issue, follow the steps described in [Steps to perform before starting troubleshooting](grid-issues.md#steps-to-perform-before-starting-troubleshooting).
 
-## Resolution
+## Troubleshooting step
 
-First, you should ensure the issue isn't related to insufficient permissions. The easiest way to check this is to navigate to the page but as a user with full administrative privileges. The [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) can also be used to ensure the column data "is readable".
+First, you should ensure the issue isn't related to insufficient permissions. The easiest way to check this is to navigate to the page but as a user with full administrative privileges. The [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) can also be used to ensure the column data is readable.
 
 :::image type="content" source="media/columns-not-contain-data/isreadable.png" alt-text="Screenshot that shows the isreadable attribute in the Power Apps Monitoring tool.":::
 

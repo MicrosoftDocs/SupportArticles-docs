@@ -1,25 +1,27 @@
 ---
-title: Modern Advanced Find doesn't work correctly
-description: Fixes an issue in which the Modern Advanced Find feature doesn't work correctly in a Power Apps model-driven app.
+title: Modern Advanced Find doesn't work correctly in a model-driven app
+description: Provides troubleshooting steps for an issue where the Modern Advanced Find feature doesn't work correctly in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/04/2024
+ms.date: 07/05/2024
 author: fikaradz
 ms.author: fikaradz
 ---
-# Modern Advanced Find doesn't work correctly
+# Modern Advanced Find doesn't work correctly in a model-driven app
+
+This article helps solve an issue where the [Modern Advanced Find](/power-apps/user/advanced-find) feature doesn't work correctly in a model-driven app in Microsoft Power Apps.
 
 ## Scenario 1: Some filter conditions re-appear again after they're deleted
 
-### Resolution
+### Troubleshooting step
 
 Check if the filters that are re-applied automatically are related to the page filters. Some entities (activities and queues) support teh page filters (see the following screenshot). Those filters can't be removed from the **Modern Advanced Find** window.
 
-:::image type="content" source="media/modern-advanced-find-not-work-correctly/entity-support-page-filters.png" alt-text="Screenshot that shows an entity example that supports the page filters.":::
+:::image type="content" source="media/modern-advanced-find-not-work-correctly/entity-support-page-filters.png" alt-text="Screenshot that shows an entity example that supports the page filters." lightbox="media/modern-advanced-find-not-work-correctly/entity-support-page-filters.png":::
 
 ## Scenario 2: Some filter conditions aren't rendered correctly
 
-### Resolution
+### Troubleshooting step
 
 The following conditions are currently not supported by [Modern Advanced Find](/power-apps/user/advanced-find):
 
@@ -28,7 +30,7 @@ The following conditions are currently not supported by [Modern Advanced Find](/
 
 ## Scenario 3: Unexpected data after applying Modern Advanced Find filters
 
-### Resolution
+### Troubleshooting step
 
 1. Use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to obtain the fetchXML query and the `recordsCount` attribute.
 
@@ -38,6 +40,6 @@ The following conditions are currently not supported by [Modern Advanced Find](/
 
 1. Check all the filters from the fetchXML query and make sure they're all expected.
 
-   :::image type="content" source="media/modern-advanced-find-not-work-correctly/all-filters-in-fetchXML-query.png" alt-text="Screenshot that shows an example that shows all the filters from the fetchXML query.":::
+   :::image type="content" source="media/modern-advanced-find-not-work-correctly/all-filters-in-fetchxml-query.png" alt-text="Screenshot that shows an example that shows all the filters from the fetchXML query.":::
 
-   If the fetchXML query contains extra filters, check any extra filters that might be applied. For more information, see [Scenario 3: Column filtering is enabled but not applied correctly](cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly.md##scenario-3-column-filtering-is-enabled-but-not-applied-correctly).
+   If the fetchXML query contains extra filters, check any extra filters that might be applied. For more information, see [Scenario 3: Column filtering is enabled but not applied correctly](cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly.md#scenario-3-column-filtering-is-enabled-but-not-applied-correctly).
