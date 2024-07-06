@@ -4,7 +4,7 @@ description: Understand the data that you're collecting as the second step of th
 ms.date: 07/08/2024
 author: neilghuman
 ms.author: neghuman
-ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, v-leedennis
+ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor
 ms.custom: 

@@ -4,7 +4,7 @@ description: Learn how to configure other services to use Azure Monitor Agent as
 ms.date: 07/08/2024
 author: neilghuman
 ms.author: neghuman
-ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, v-leedennis
+ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor
 ms.custom: 
