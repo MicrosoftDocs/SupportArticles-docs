@@ -22,7 +22,7 @@ To see which legacy data collections are configured in the Log Analytics workspa
 
 1. In the list of Log Analytics workspaces, select the name of your workspace.
 
-1. In the menu pane of your Log Analytics workspace, select **Classic** > **Legacy agents management** to open the **Data settings** page. On this page, you can see the different types of data sources that the workspace can collect.
+1. In the menu pane of your Log Analytics workspace, select **Classic** > **Legacy agents management**. On the **Legacy agents management** page, you can see the different types of data sources that the workspace can collect.
 
 1. Select one of the following tabs based on the type of legacy data collection that you want to check:
 
