@@ -24,7 +24,13 @@ To see which legacy data collections are configured in the Log Analytics workspa
 
 1. In the menu pane of your Log Analytics workspace, select **Classic** > **Legacy agents management** to open the **Data settings** page. On this page, you can see the different types of data sources that the workspace can collect.
 
-1. In the **Data sources** section, select **Windows event logs**, **Windows performance counters**, **Linux performance counters**, **Linux syslogs**, or **Custom logs**, depending on the type of legacy data collection that you want to check.
+1. Select one of the following tabs based on the type of legacy data collection that you want to check:
+
+   - **Windows event logs**
+   - **Windows performance counters**
+   - **Linux performance counters**
+   - **Syslog**
+   - **IIS Logs**
 
 1. On the corresponding page, view the list of data sources that are currently enabled for the workspace. You can also add, remove, or edit the data sources as necessary.
 
