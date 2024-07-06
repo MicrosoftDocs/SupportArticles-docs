@@ -32,7 +32,7 @@ To see which legacy data collections are configured in the Log Analytics workspa
    - **Syslog**
    - **IIS Logs**
 
-1. On the corresponding page, view the list of data sources that are currently enabled for the workspace. You can also add, remove, or edit the data sources as necessary.
+1. On the corresponding tab, view the list of data sources that are currently enabled for the workspace. You can also add, remove, or edit the data sources as necessary.
 
 ## Solutions configured
 
