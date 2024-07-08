@@ -2,8 +2,7 @@
 title: Help me understand my Log Analytics workspace's bill, detailing the costs and how to read the detailed usage reports.
 description: Learn how to understand the costs associated with your Log Analytics Workspace and identify causes for increased expense.
 ms.date: 07/01/2024
-ms.reviewer: neghuman
-editor: neilghuman
+ms.author: neghuman
 ms.service: azure-monitor
 keywords:
 #Customer intent: As an Azure Monitor user, I want to understand my Log Analytics workspace's bill including what's included in the cost and how to read the detailed usage reports.
