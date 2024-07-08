@@ -45,7 +45,7 @@ Here are the screenshots of the terms:
 
 :::image type="content" source="media/grid-issues/form-page.png" alt-text="Screenshot that shows a form page that contains the terms 2, 3, 4, 5." lightbox="media/grid-issues/form-page.png":::
 
-:::image type="content" source="media/grid-issues/column-filters-sorting-header-status.png" alt-text="Screenshot that shows a page that contains the terms 9, 10, 11, 13. lightbox="media/grid-issues/column-filters-sorting-header-status.png":::
+:::image type="content" source="media/grid-issues/column-filters-sorting-header-status.png" alt-text="Screenshot that shows a page that contains the terms 9, 10, 11, 13." lightbox="media/grid-issues/column-filters-sorting-header-status.png":::
 
 :::image type="content" source="media/grid-issues/nested-grid.png" alt-text="Screenshot that shows a page that contains the term 12." lightbox="media/grid-issues/nested-grid.png":::
 
