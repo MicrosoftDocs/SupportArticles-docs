@@ -21,7 +21,7 @@ These issues might be caused by:
 - An unintended membership rule change.
 - A significant change rollout. For example, updates that are pushed to many devices at the same time might require some group membership rules to be re-evaluated.
 
-This article provides sample Windows PowerShell scripts to pause and resume dynamic group updates. Pausing dynamic group processing can stop rule processing and prevent unintended membership updates. Resuming dynamic group processing can restore normal group functionality.
+This article provides sample Entra ID PowerShell scripts to pause and resume dynamic group updates. Pausing dynamic group processing can stop rule processing and prevent unintended membership updates. Resuming dynamic group processing can restore normal group functionality.
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ We provide four scripts to manage dynamic group processing by using PowerShell:
 - **UnPauseSpecificCritical:** This script resumes dynamic group processing for specific groups that you specify in the script.
 - **UnPauseNonCritical:** This script enables you to resume noncritical group processing with dynamic membership, 100 at a time.
 
-Follow the instructions within the scripts to make any changes according to your needs. Run the scripts by using the Microsoft Entra ID PowerShell module.
+Follow the instructions within the scripts to make any changes according to your needs. Run the scripts by using the Entra ID PowerShell module.
 
 >[!IMPORTANT]
 > Verify all steps in a test environment before you make any changes in your production environment.
