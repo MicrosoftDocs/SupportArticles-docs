@@ -16,7 +16,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Loop
-ms.date: 06/27/2024
+ms.date: 07/08/2024
 ---
 
 # Loop workspaces are unexpectedly stored in SharePoint Online sites
