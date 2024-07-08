@@ -1,6 +1,6 @@
 ---
-title: Help me set up Log Analytics Workspace recommended alerts for proactive daily cap and ingestion related notifications.
-description: Learn how to get notified when you hit the daily cap limit.
+title: Help me set up Log Analytics Workspace recommended alerts for proactive daily cap and ingestion related notifications
+description: Learn how to get notified when you hit the daily cap limit
 ms.date: 07/01/2024
 ms.author: neghuman
 ms.service: azure-monitor
