@@ -3,7 +3,7 @@ title: Understanding why costs associated with my Log Analytics Workspace increa
 description: Help me identify and investigate billing anomalies using detailed usage reports to pinpoint the source of excessive charges.
 ms.date: 07/01/2024
 ms.reviewer: neghuman
-editor: neilghuman
+ms.author: neghuman
 ms.service: azure-monitor
 keywords:
 #Customer intent: As an Azure Monitor user, I want to understand my Log Analytics workspace's bill including what's included in the cost and how to read the detailed usage reports.
