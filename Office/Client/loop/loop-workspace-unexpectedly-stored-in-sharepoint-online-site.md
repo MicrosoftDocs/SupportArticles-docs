@@ -92,7 +92,7 @@ If you need to migrate an Ideas workspace in addition to other Loop workspaces, 
    1. In the new workspace, create the same pages.
    1. Copy the content of each page in the existing workspace to the corresponding newly created page in the new workspace.
 1. For each page in the new workspace, make sure that its sharing permissions match the permissions of the corresponding page in the existing workspace. To check or change the sharing permissions for a page, select **Share** > **Page link**, and then select **Settings**.
-1. (Optional) Identify all the pages in the existing workspace that were shared to other locations and replace the content of the pages with a link to the corresponding page in the new workspace. 
+1. (Optional) Identify all the pages in the existing workspace that were shared to other locations and replace the content of the pages with a link to the corresponding page in the new workspace.<br/>
 **Note**: The links to shared content in the existing workspace will stop working after the existing workspace is deleted. If you want to preserve the shared links to the content, perform this step.
    To determine whether a page has been shared, select the **Shared locations** button as shown in the following screenshot. 
 
@@ -108,7 +108,7 @@ If you need to migrate an Ideas workspace in addition to other Loop workspaces, 
        - If the page has a shortcut arrow in the lower right corner, select the **Settings** button (…), and then select **Copy Link**.
 
          :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/copy-link.png" alt-text="Screenshot of the context menu that shows the Copy Link option.":::
-       - If the page has a hyperlink symbol in the lower right corner, select the three button with the three dots, and then select **Share Page Link**.
+       - If the page has a hyperlink symbol in the lower right corner, select the **Settings** button (…), and then select **Share Page Link**.
 
          :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/share-page-link.png" alt-text="Screenshot of the context menu that shows the Share Page Link option.":::
    1. Navigate to the corresponding page in the new workspace, select the plus sign (+) next to the name of the workspace in the navigation menu on the left, and then select **New link**. In the **Address** field, paste the link that you copied in step 9b, and then select **Add**.
