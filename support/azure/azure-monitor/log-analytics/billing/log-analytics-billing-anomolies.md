@@ -30,7 +30,7 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 
 ### Step 2: Open daily cost reports
 
-1. In the **Cost analysis** page , select **View AccumulcatedCosts**, and then select **Services** under **Smart views**.
+1. In the **Cost analysis** page, select **View AccumulcatedCosts**, and then select **Services** under **Smart views**.
 
     :::image type="content" source="media/log-analytics-billing-anomolies/high-cost-1.png" alt-text="high cost step 1" lightbox="media/log-analytics-billing-anomolies/high-cost-1.png":::
 
@@ -52,16 +52,16 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 
 ### Step 3: Analyze the cost
 
-You are now prepared to analyze a cost spike, high usage, or anomaly assessment. The following image displays cost data from a log analytics service over the last three months, group by **Meter category**.
+You're now prepared to analyze a cost spike, high usage, or anomaly assessment. The following image displays cost data from a log analytics service over the last three months, group by **Meter category**.
 
 :::image type="content" source="media/log-analytics-billing-anomolies/high-cost-5.png" alt-text="high cost step 5" lightbox="media/log-analytics-billing-anomolies/high-cost-5.png":::
 
-1. In the stacked bar chart, three anomalous cost spikes are evident on March 31, April 30, and May 31. Focusing on the stacked bar for Apr 30, a significant cost spike is observed in the Azure Grafana Service.
+In the stacked bar chart, three anomalous cost spikes are evident on March 31, April 30, and May 31. Focusing on the stacked bar for April 30, a significant cost spike is observed in the Azure Grafana Service.
 
-1. Additionally, the example cost was higher during the late May period due to a spike in Azure Sentinel usage. This is indicated by the increased height of the respective segments within the stacked bar.
+Additionally, the example cost was higher during the late May period due to a spike in Azure Sentinel usage. This is indicated by the increased height of the respective segments within the stacked bar.
 
 :::image type="content" source="media/log-analytics-billing-anomolies/high-cost-6.png" alt-text="high cost step 6" lightbox="media/log-analytics-billing-anomolies/high-cost-6.png":::
 
-Given the cost analysis tutorial, you are able to identify the specific services causing the cost spike. Then, you may need to investigate those services to understand why the spike occurred. If you need further assistance investigating the service, open a support case with respective  service type.
+Given the cost analysis tutorial, you're able to identify the specific services causing the cost spike. Then, you may need to investigate those services to understand why the spike occurred. If you need further assistance investigating the service, open a support case with respective  service type.
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
