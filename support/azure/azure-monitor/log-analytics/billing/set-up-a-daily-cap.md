@@ -2,7 +2,7 @@
 title: Help me set up a daily cap limit for my Log Analytics Workspace
 description: Learn how to set up a daily cap limit for my Log Analytics Workspace, thereby safeguarding against unexpected surges in data ingestion and an unexpected bill spike.
 ms.date: 07/01/2024
-ms.reviewer: neghuman
+ms.author: neghuman
 editor: neilghuman
 ms.service: azure-monitor
 keywords:
