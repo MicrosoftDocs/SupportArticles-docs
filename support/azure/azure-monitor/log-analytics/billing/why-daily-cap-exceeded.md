@@ -2,8 +2,7 @@
 title: Help me identify why my daily cap was exceeded.
 description: Learn how to manage data volume of your Azure Log Analytics workspace.
 ms.date: 07/01/2024
-ms.reviewer: neghuman
-editor: neilghuman
+ms.author: neghuman
 ms.service: azure-monitor
 keywords:
 #Customer intent: Learn how to manage data volume of your Azure Log Analytics workspace.
