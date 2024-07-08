@@ -3,19 +3,45 @@ title: Resolve file upload warnings related to invalid or unexpected values
 description: Fix warnings that occur when you upload employee attribute data to Microsoft Viva Glint. These warnings are related to invalid or unexpected values.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 06/21/2024
+ms.date: 07/04/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
+  - sap:User Management\Import or Export users
   - CSSTroubleshoot
   - CI190695
+  - CI192293
 localization_priority: Normal
 ---
 
 # Resolve file upload warnings related to invalid or unexpected values
 
 When you upload employee attribute data to Microsoft Viva Glint, you may receive one of the following warning messages. Select the warning that you experience from the list at the top of the article, and follow the appropriate resolution to fix the issue.
+
+## RECORD_STAGING_FAILURE
+
+Warning message:
+
+> RECORD_STAGING_FAILURE: Found \<x\> existing record that has been previously deleted corresponding to line number \<y\>.
+
+This issue occurs when users are deleted from Microsoft Entra ID and their corresponding records in Viva Glint are marked as **Deleted**.
+
+### Resolution
+
+To fix the issue, use one of the following methods:
+
+- If you upload the data by using **Import** on the **People** page, confirm the upload. This way records that are marked as deleted in Microsoft Entra ID and Viva Glint will be skipped. All other data without other errors or warnings will be imported into Viva Glint.
+
+  **Note**: If you upload the data by using Viva Glint Secure File Transfer Protocol (SFTP), records that are marked as deleted will be automatically skipped.
+- Remove the deleted records and upload the file again. Use the following steps:
+
+  1. If necessary, work with your Microsoft 365 or Entra ID administrator to confirm the users that are deleted from Microsoft Entra ID.
+  1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+  1. Remove the rows that are listed in the warning message.
+
+     **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
+  1. Save the file, and upload it again to Viva Glint.
 
 ## INVALID_EMPLOYEE_DATA: unsupported characters
 
