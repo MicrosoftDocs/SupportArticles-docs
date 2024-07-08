@@ -36,7 +36,7 @@ The following conditions are currently not supported by [Modern Advanced Find](/
 
    :::image type="content" source="media/grid-or-subgrid-not-display-all-records/maximum-number-of-rows.png" alt-text="Screenshot that shows the Maximum number of rows setting that can be used to define the page size for a subgrid.":::
 
-   :::image type="content" source="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png" alt-text="Screenshot that shows the recordsCount attribute.":::
+   :::image type="content" source="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png" alt-text="Screenshot that shows the recordsCount attribute." lightbox="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png":::
 
 1. Check all the filters from the fetchXML query and make sure they're all expected.
 

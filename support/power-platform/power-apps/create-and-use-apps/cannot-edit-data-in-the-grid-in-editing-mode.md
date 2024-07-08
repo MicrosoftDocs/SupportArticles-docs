@@ -17,7 +17,7 @@ This article provides troubleshooting steps for different scenarios where you ca
 
 The first step is to check the grid and column parameters using the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview).
 
-:::image type="content" source="media/cannot-edit-data-in-the-grid-in-editing-mode/power-apps-monitoring-tool.png" alt-text="Screenshot that shows the grid and column parameters in the Power Apps Monitoring tool.":::
+:::image type="content" source="media/cannot-edit-data-in-the-grid-in-editing-mode/power-apps-monitoring-tool.png" alt-text="Screenshot that shows the grid and column parameters in the Power Apps Monitoring tool." lightbox="media/cannot-edit-data-in-the-grid-in-editing-mode/power-apps-monitoring-tool.png":::
 
 Make sure the grid editable mode is set to "yes". If not, check the grid configuration and make sure the last configuration is saved and published. Also note that the form might also forcibly set sub-grids to read-only or disabled modes in certain cases (for example, when the currently edited record is deactivated). You can troubleshoot this issue by checking the `isControlDisabled` attribute.
 

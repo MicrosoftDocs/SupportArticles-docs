@@ -27,7 +27,7 @@ The most common issue is incorrect relationship used or incorrect view applied.
 
 3. Use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to inspect the data for the nested grid.
 
-   :::image type="content" source="media/nested-grid-not-display-data/nested-grid-data.png" alt-text="Screenshot that shows the inspected data for a nested grid.":::
+   :::image type="content" source="media/nested-grid-not-display-data/nested-grid-data.png" alt-text="Screenshot that shows the inspected data for a nested grid." lightbox="media/nested-grid-not-display-data/nested-grid-data.png":::
 
    > [!NOTE]
    > The `childRecordsCount` attribute should display the number of records in the nested dataset. If that attribute shows **0**, this is a strong indication of an incorrect relationship specified, the presence of extra filters in the nested grid view, or no records in the nested dataset (`ChildItems`). If that number shows a greater than zero value and your nested grid still doesn't display any records, the issue is most likely with the extra filtering present in the nested grid view or with no related records to the row that's expanded from the parent grid. Check the `childViewFetchXML` and `ChildViewFields` and make sure all the filters are correct and all the column definitions match the ones specified in `childViewFetchXML`.

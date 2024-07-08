@@ -17,7 +17,7 @@ This article provides troubleshooting steps for different scenarios where you ca
 
 Make sure the `enableFiltering` grid property is set to "true". If it's set to "false", check the grid control configuration to make sure the respective **Enable Filtering** property is enabled.
 
-:::image type="content" source="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/enablesorting.png" alt-text="Screenshot that shows the enableFiltering grid property.":::
+:::image type="content" source="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/enablesorting.png" alt-text="Screenshot that shows the enableFiltering grid property." lightbox="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/enablesorting.png":::
 
 ## Scenario 2: Column filtering options are missing or disabled on certain columns
 
@@ -28,7 +28,7 @@ After checking to ensure there's no [custom code](grid-issues.md#steps-to-perfor
 > [!NOTE]
 > Dataverse doesn't support filtering on certain columns. For more information about searchable columns, see [Types of columns](/power-apps/maker/data-platform/types-of-fields). Here's an example of a property type that doesn't support filtering:
 > 
-> :::image type="content" source="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/property-type-not-support-filtering.png" alt-text="Screenshot that shows an example of a property type that doesn't support filtering.":::
+> :::image type="content" source="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/property-type-not-support-filtering.png" alt-text="Screenshot that shows an example of a property type that doesn't support filtering." lightbox="cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/property-type-not-support-filtering.png":::
 
 ## Scenario 3: Column filtering is enabled but not applied correctly
 
