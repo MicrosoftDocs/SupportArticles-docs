@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/01/2024
+  ms.date: 07/08/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -41,6 +41,8 @@ landingContent:
         links:
           - text: Troubleshoot ribbon issues
             url: create-and-use-apps/ribbon-issues.md
+          - text: Troubleshoot grid issues
+            url: create-and-use-apps/grid-issues.md
           - text: Regenerate ribbon metadata
             url: create-and-use-apps/regenerate-ribbon-metadata.md
 

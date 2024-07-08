@@ -51,7 +51,7 @@ The most common cause is extra filters are applied to the current view. Use the 
 
 - A grid-related filter.
 
-  You can use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to inspect grid-related filters (see the screenshots below) and compare them with the final fetchXML query (see Image 6 above). In the following screenshots, the "name like %Coffee%" or "name contains Coffee" grid column filter is used.
+  You can use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to inspect grid-related filters (see the following screenshots) and compare them with the final fetchXML query (see Image 6 above). In the following screenshots, the "name like %Coffee%" or "name contains Coffee" grid column filter is used.
 
   :::image type="content" source="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/grid-related-filter-1.png" alt-text="Screenshot that shows a grid-related filter that's inspected by the monitoring tool." lightbox="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/grid-related-filter-1.png":::
 

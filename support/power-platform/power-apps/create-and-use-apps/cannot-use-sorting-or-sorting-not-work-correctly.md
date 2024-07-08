@@ -54,7 +54,7 @@ If sorting is disabled (`"disableSorting": true`), this is a strong indication t
 
    :::image type="content" source="media/cannot-use-sorting-or-sorting-not-work-correctly/full-name-company-name-column.png" alt-text="Screenshot that shows the Full Name and Company Name columns.":::
 
-   The multi-column sorting can be removing by re-applying the sorting on a column (without holding the Shift key down) or by simply refreshing the app.
+   The multi-column sorting can be removing by reapplying the sorting on a column (without holding the Shift key down) or by refreshing the app.
 
 3. The data ordering might be affected by [data customizers](/power-apps/developer/component-framework/customize-editable-grid-control).
 

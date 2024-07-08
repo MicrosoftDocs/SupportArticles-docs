@@ -3,19 +3,19 @@ title: Modern Advanced Find doesn't work correctly in a model-driven app
 description: Provides troubleshooting steps for an issue where the Modern Advanced Find feature doesn't work correctly in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/05/2024
+ms.date: 07/08/2024
 author: fikaradz
 ms.author: fikaradz
 ---
 # Modern Advanced Find doesn't work correctly in a model-driven app
 
-This article helps solve an issue where the [Modern Advanced Find](/power-apps/user/advanced-find) feature doesn't work correctly in a model-driven app in Microsoft Power Apps.
+This article solves an issue where the [Modern Advanced Find](/power-apps/user/advanced-find) feature doesn't work correctly in a model-driven app in Microsoft Power Apps.
 
-## Scenario 1: Some filter conditions re-appear again after they're deleted
+## Scenario 1: Some filter conditions reappear again after they're deleted
 
 ### Troubleshooting step
 
-Check if the filters that are re-applied automatically are related to the page filters. Some entities (activities and queues) support teh page filters (see the following screenshot). Those filters can't be removed from the **Modern Advanced Find** window.
+Check if the filters that are reapplied automatically are related to the page filters. Some entities (activities and queues) support the page filters (see the following screenshot). Those filters can't be removed from the **Modern Advanced Find** window.
 
 :::image type="content" source="media/modern-advanced-find-not-work-correctly/entity-support-page-filters.png" alt-text="Screenshot that shows an entity example that supports the page filters." lightbox="media/modern-advanced-find-not-work-correctly/entity-support-page-filters.png":::
 
@@ -25,16 +25,16 @@ Check if the filters that are re-applied automatically are related to the page f
 
 The following conditions are currently not supported by [Modern Advanced Find](/power-apps/user/advanced-find):
 
-- The Date type fields used with standard operators. Note that the Date type fields must be used with field specific operators. For example, "on" should be "eq", and "on-or-before" should be "lt".
+- The Date type fields used with standard operators. The Date type fields must be used with field specific operators. For example, "on" should be "eq", and "on-or-before" should be "lt".
 - The "in" type conditions. To ensure compatibility with Modern Advanced Find, the "in" type condition should be replaced with several "eq". For example, the \[city in "Redmond", "Washington" \] should be replaced with \[city eq "Redmond" Or city eq "Washington"\].
 
 ## Scenario 3: Unexpected data after applying Modern Advanced Find filters
 
 ### Troubleshooting step
 
-1. Use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to obtain the fetchXML query and the `recordsCount` attribute.
+1. Use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to obtain the [fetchXML](/power-apps/developer/data-platform/use-fetchxml-construct-query) query and the `recordsCount` attribute.
 
-   :::image type="content" source="media/grid-or-subgrid-not-display-all-records/maximum-number-of-rows.png" alt-text="Screenshot that shows the Maximum number of rows setting that can be used to define the page size for a sub-grid.":::
+   :::image type="content" source="media/grid-or-subgrid-not-display-all-records/maximum-number-of-rows.png" alt-text="Screenshot that shows the Maximum number of rows setting that can be used to define the page size for a subgrid.":::
 
    :::image type="content" source="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png" alt-text="Screenshot that shows the recordsCount attribute.":::
 

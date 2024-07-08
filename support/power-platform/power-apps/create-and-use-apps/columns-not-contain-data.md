@@ -31,4 +31,4 @@ If the issue isn't related to insufficient permissions, use the [Power Apps Moni
 
 Make sure that all the columns listed in the "viewFields" section are present in the "viewFetchXML" query and that the respective columns aren't marked as "hidden".
 
-The issue can also be caused by a corrupt view. Re-saving and re-publishing such a view might help address the problem.
+The issue can also be caused by a corrupt view. Resaving and republishing such a view might help address the problem.

@@ -1,9 +1,9 @@
 ---
 title: The overall record count doesn't match the displayed content in a model-driven app
-description: Helps solve an issue where the overall record count doesn't match the displayed content in a Power Apps model-driven app.
+description: Solves an issue where the overall record count doesn't match the displayed content in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/05/2024
+ms.date: 07/08/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -17,7 +17,7 @@ A typical example of this issue is the displayed number of records is lower than
 
 ## Cause
 
-The most likely reason is that the data that's displayed in the grid contains duplicate records (by the value in the primary field). The issue is usually caused by pulling related-record duplicates from the same table.
+The most likely reason is that the data that's displayed in the grid contains duplicate records (by the value in the primary field). The issue is caused by pulling related-record duplicates from the same table.
 
 ## Troubleshooting checklist
 
