@@ -37,8 +37,8 @@ docker run -e APPLICATIONINSIGHTS_SELF_DIAGNOSTICS_LEVEL=DEBUG <image-name>
 > [!NOTE]
 > Replace *`<image-name>`* with the docker image name accordingly.
 > 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../../includes/third-party-contact-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
