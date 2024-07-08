@@ -10,7 +10,7 @@ ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 04/25/2019
+ms.date: 07/08/2024
 ms.author: genli
 
 ms.custom: sap:Cannot connect to my VM
