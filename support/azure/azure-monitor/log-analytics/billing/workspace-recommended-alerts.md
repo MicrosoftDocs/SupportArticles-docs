@@ -8,7 +8,7 @@ keywords:
 #Customer intent: As an Azure Monitor user, I want to understand my Log Analytics workspace's bill including what's included in the cost and how to read the detailed usage reports.
 ms.custom: sap:Log Analytics Billing
 ---
-# Help me set up Log Analytics Workspace recommended alerts for proactive daily cap and ingestion related notifications.
+# Help me set up Log Analytics Workspace recommended alerts for proactive daily cap and ingestion related notifications
 
 This article helps you learn how to set up Log Analytics recommended alerts to get notified when you hit the daily cap limit.
 
