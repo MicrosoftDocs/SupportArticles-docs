@@ -2,10 +2,9 @@
 title: Troubleshoot OpenTelemetry issues in Spring Boot Java native
 description: Learn how to troubleshoot OpenTelemetry issues in Spring Boot Java native image applications.
 ms.date: 07/08/2024
-editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: java
-ms.reviewer: mmcc, lechen, aaronmax, v-leedennis
+ms.reviewer: toddfous, jeanbisutti, v-weizhu
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
 ---
 # Troubleshoot OpenTelemetry issues in Spring Boot native image applications
