@@ -16,7 +16,7 @@ appliesto:
   - SharePoint Server 2019
   - SharePoint Server Subscription Edition
 search.appverid: MET150
-ms.date: 12/17/2023
+ms.date: 07/08/2024
 ---
 # Administrative timer jobs aren't running after an upgrade
 
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2616609
 
 ## Symptoms
 
-Every SharePoint server has one `SPTimerServiceInstance` object that represents the SPTimerV4 Windows Service. In certain circumstances (typically after an upgrade), you could end up in a situation where your timer service is running on the server but the `SPTimerSericeInstance` object is not online. In this case, any administrative operations that depend on one-time timer jobs to be completed (such as creating or deleting a Search Service Application or deploying farm solutions) will not be successful.
+Every SharePoint server has one `SPTimerServiceInstance` object that represents the SPTimerV4 Windows Service. In certain circumstances (typically after an upgrade), you could end up in a situation where your timer service is running on the server but the `SPTimerSericeInstance` object is not online. In this case, any administrative operations that depend on one-time timer jobs to be completed (such as creating or deleting a Search Service Application, or deploying farm solutions) won't be successful.
 
 ## Cause
 
@@ -32,7 +32,7 @@ An unexpected event during the upgrade prevented the timer service instance obje
 
 ## Resolution
 
-The following PowerShell script can be run on one of the SharePoint servers in the farm. The script detects timer service instances in the farm that are not online and attempts to bring them online. After running the script, manually restart the SPTimerV4 Windows service (SharePoint Timer Service on each server that is identified to have the problem.
+The following PowerShell script can be run on one of the SharePoint servers in the farm. The script detects timer service instances in the farm that aren't online and attempts to bring them online. After running the script, manually restart the SPTimerV4 Windows service (SharePoint Timer Service) on each server that's identified to have the problem.
 
 ```powershell
 $farm = Get-SPFarm
