@@ -80,33 +80,34 @@ If you need to migrate an Ideas workspace in addition to other Loop workspaces, 
 1. Rename the existing Loop workspace. For example, rename the *Project* workspace to *ProjectOLD*.
 1. Create a new Loop workspace by using the original name, such as *Project*.
 1. Open the new workspace in a separate browser tab next to the existing workspace.
-1. Add all members of the existing workspace to the new workspace. To add members to a workspace, follow these steps:
+1. Add all members of the existing workspace to the new workspace:
    1. Under the name of the workspace, select **Workspace member(s)**.
 
       :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/select-workspace-member.png" alt-text="Screenshot of the workspace member link under the name of the workspace.":::
-   1. In the dialog that pops up, enter the name or email of the members that you want to add, and then select **Invite**.
+   1. In the **Invite members with name or email** box, enter the name or email of the members that you want to add, and then select **Invite**.
 
       :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/add-members.png" alt-text="Screenshot of the dialog of inviting members to a workspace.":::
-1. Copy all content from the existing workspace to the new workspace:
-   1. In the existing workspace, expand all pages to make sure that they're visible.
+1. Copy all the content from the existing workspace to the new workspace:
+   1. In the existing workspace, expand all the pages so that they're visible.
    1. In the new workspace, create the same pages.
-   1. Copy the content of each corresponding page in the existing workspace to the newly created page in the new workspace.
-1. For each page in the new workspace, make sure that its sharing permissions match the permissions of the corresponding page in the existing workspaces. To check or change the sharing permissions for a page, select **Share** > **Page link**, and then select **Settings**.
-1. (Optional) If any links to pages in the existing workspace were shared, replace the content with a link to the corresponding page in the new workspace. For example, after you verify that all content of Page A in *ProjectOLD* has been copied to Page A in *Project*, follow these steps:
+   1. Copy the content of each page in the existing workspace to the corresponding newly created page in the new workspace.
+1. For each page in the new workspace, make sure that its sharing permissions match the permissions of the corresponding page in the existing workspace. To check or change the sharing permissions for a page, select **Share** > **Page link**, and then select **Settings**.
+1. (Optional) Identify all the pages in the existing workspace that were shared to other locations and replace the content of the pages with a link to the corresponding page in the new workspace. 
+**Note**: The links to shared content in the existing workspace will stop working after the existing workspace is deleted. If you want to preserve the shared links to the content, perform this step.
+   To determine whether a page has been shared, select the **Shared locations** button as shown in the following screenshot. If the page is shared, you'll see other locations in addition to the location of the source in the Loop workspace. 
+For each page that is shared, such as Page A, verify that all content in Page A in *ProjectOLD* has been copied to Page A in *Project*. Then use the following steps:
    1. In Page A in *Project*, select **Share** > **Page link**.
-   1. In Page A in *ProjectOLD*, remove all content and paste the link you copied in step a.
-1. Replicate the links in the existing workspace to the new workspace. Follow these steps for each page:
-   1. Navigate to the page in the existing workspace.
+   1. In Page A in *ProjectOLD*, remove all content and paste the link you copied in step 8a.
+1. Replicate the links in the existing workspace to content outside the Loop workspace, to the new workspace. Use the following steps for each link:
+   1. Navigate to the page with the link in the existing workspace.
    1. Copy the link:
-       - If the page has a shortcut arrow in the lower right corner, select the ellipsis (…) icon, and then select **Copy Link**.
+       - If the page has a shortcut arrow in the lower right corner, select the **Settings** button (…), and then select **Copy Link**.
 
          :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/copy-link.png" alt-text="Screenshot of the context menu that shows the Copy Link option.":::
-       - If the page has a hyperlink symbol in the lower right corner, select the ellipsis (…) icon, and then select **Share Page Link**.
+       - If the page has a hyperlink symbol in the lower right corner, select the three button with the three dots, and then select **Share Page Link**.
 
          :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/share-page-link.png" alt-text="Screenshot of the context menu that shows the Share Page Link option.":::
-   1. Navigate to the corresponding page in the new workspace, select the plus sign (+), and then select **New link**. In the **Address** field, paste the link that's copied in step b, and then select **Add**.
-   1. Arrange the links to match the same structure as in the page of the existing workspace.
+   1. Navigate to the corresponding page in the new workspace, select the plus sign (+) next to the name of the workspace in the navigation menu on the left, and then select **New link**. In the **Address** field, paste the link that you copied in step 9b, and then select **Add**.
+   1. Arrange the newly created link to match the structure of the page in the existing workspace.
 
-After you complete the migration, wait for 90 days or whatever time you consider appropriate, then delete the old workspace.
-
-**Note**: After you delete the old workspace, any shared links to content in the old workspace will no longer work.
+After you complete the migration, wait for 90 days and then delete the old workspace.
