@@ -15,14 +15,10 @@ appliesto:
   - Exchange Online
   - Microsoft Exchange Online Dedicated
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 07/08/2024
 ---
 
 # How to use mailbox audit logs in Microsoft 365
-
-_Original KB number:_&nbsp;4021960
-
-## Summary
 
 In Microsoft 365, you can run mailbox audit logs to determine when a mailbox was updated unexpectedly or whether items are missing from a mailbox. You may have to do this, for example, if items are moved or if they're deleted unexpectedly or incorrectly.
 
@@ -146,9 +142,9 @@ Review the output of the .csv file. The most useful columns are exported, and so
 
 ### Owner mailbox audit logging
 
-Mailbox audit logging is turned on by default in all organizations. One of the key benefits of having mailbox auditing on by default is: you don't need to manage the mailboxes actions that are audited. Microsoft manages the actions for you, and we automatically add new mailbox actions to be audited by default as they're released.
+Mailbox audit logging is turned on by default for all organizations. One of the main benefits of enabling mailbox auditing by default is that you don't have to manage audited mailbox actions. Microsoft manages these actions for you, and we automatically add new mailbox actions to be audited by default as we release them.
 
-However, your organization might be required to audit a different set of mailbox actions for user mailboxes and shared mailboxes. The procedures in [this section](/purview/audit-mailboxes) show you how to change the mailbox actions that are audited for each sign-in type, and how to revert back to the Microsoft-managed default actions.
+However, your organization might need to audit a different set of mailbox actions for user mailboxes and shared mailboxes. For more information about how to change the mailbox actions that are audited for each sign-in type, and how to revert to the Microsoft-managed default actions, see [Change or restore mailbox actions logged by default](/purview/audit-mailboxes#change-or-restore-mailbox-actions-logged-by-default).
 
 ## More Information
 
