@@ -2,7 +2,7 @@
 title: Help me configure data retention for my Log Analytics Workspace.
 description: Learn how to configured data retention for your Log Analytics Workspace.
 ms.date: 07/02/2024
-ms.author:neghuman
+ms.author: neghuman
 ms.reviewer: neghuman
 editor: neilghuman
 ms.service: azure-monitor
