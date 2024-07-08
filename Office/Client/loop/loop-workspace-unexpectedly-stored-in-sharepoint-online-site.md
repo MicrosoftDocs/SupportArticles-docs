@@ -94,8 +94,12 @@ If you need to migrate an Ideas workspace in addition to other Loop workspaces, 
 1. For each page in the new workspace, make sure that its sharing permissions match the permissions of the corresponding page in the existing workspace. To check or change the sharing permissions for a page, select **Share** > **Page link**, and then select **Settings**.
 1. (Optional) Identify all the pages in the existing workspace that were shared to other locations and replace the content of the pages with a link to the corresponding page in the new workspace. 
 **Note**: The links to shared content in the existing workspace will stop working after the existing workspace is deleted. If you want to preserve the shared links to the content, perform this step.
-   To determine whether a page has been shared, select the **Shared locations** button as shown in the following screenshot. If the page is shared, you'll see other locations in addition to the location of the source in the Loop workspace. 
-For each page that is shared, such as Page A, verify that all content in Page A in *ProjectOLD* has been copied to Page A in *Project*. Then use the following steps:
+   To determine whether a page has been shared, select the **Shared locations** button as shown in the following screenshot. 
+
+   :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/shared-locations.png" border="false" alt-text="Screenshot of the Shared Locations icon animation.":::
+
+   If the page is shared, you'll see other locations in addition to the location of the source in the Loop workspace. 
+   For each page that is shared, such as Page A, verify that all content in Page A in *ProjectOLD* has been copied to Page A in *Project*. Then use the following steps:
    1. In Page A in *Project*, select **Share** > **Page link**.
    1. In Page A in *ProjectOLD*, remove all content and paste the link you copied in step 8a.
 1. Replicate the links in the existing workspace to content outside the Loop workspace, to the new workspace. Use the following steps for each link:
