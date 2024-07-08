@@ -1,7 +1,7 @@
 ---
 title: Collect an OS memory dump file for Azure support
 description: Learn how to gather an OS memory dump file that Azure support can use.
-ms.date: 07/05/2024
+ms.date: 07/08/2024
 ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.custom: sap:My VM is not booting

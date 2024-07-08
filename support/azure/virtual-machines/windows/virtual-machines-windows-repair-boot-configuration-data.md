@@ -1,7 +1,7 @@
 ---
 title: Repair the boot configuration data in Windows VMs
 description: Learn how to repair the boot configuration data in Windows VMs.
-ms.date: 07/05/2024
+ms.date: 07/08/2024
 ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.custom: sap:My VM is not booting
