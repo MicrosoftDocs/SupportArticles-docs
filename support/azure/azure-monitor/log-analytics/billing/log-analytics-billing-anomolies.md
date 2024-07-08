@@ -13,10 +13,10 @@ ms.custom: sap:Log Analytics Billing
 
 This article provides a cost analysis tutorial to investigate daily billing anomalies and identify the source of excessive charges.
 
-## Read the detailed usage reports
+## Identify the service that caused unexpected costs
 
 > [!NOTE]
-> The prices shown in these images are for example purposes only. They do not reflect actual pricing.
+> The prices shown in the following images are for example purposes only. They do not reflect actual pricing.
 
 ### Step 1: Open View cost for the Log Analytics Workspace
 
@@ -24,13 +24,13 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 1. Enter **log analytics** in the search.
 1. Under **Services**, select **Log Analytics**.
 1. Select the Log Analytics Workspace that you want to investigate.  
-1. Select **View Cost** to open the **Cost analysis** page for the current log analytics service. If you don't see **View Cost**, switch to [Azure preview portal](https://preview.portal.azure.com/). 
+1. On the **Overview** page, select **View Cost** to open the **Cost analysis** page for the current log analytics service. If you don't see **View Cost**, switch to [Azure preview portal](https://preview.portal.azure.com/). 
 
     :::image type="content" source="media/log-analytics-billing-anomolies/view-cost.png" alt-text="view cost step 1" lightbox="media/log-analytics-billing-anomolies/view-cost.png":::
 
 ### Step 2: Open daily cost reports
 
-1. In the **Cost analysis** page, select **View AccumulcatedCosts**, and then select **Services** under **Smart views**.
+1. In the **Cost analysis** page, select **View AccumulcatedCosts**, and then select **Services**.
 
     :::image type="content" source="media/log-analytics-billing-anomolies/high-cost-1.png" alt-text="high cost step 1" lightbox="media/log-analytics-billing-anomolies/high-cost-1.png":::
 
@@ -52,11 +52,9 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 
 ### Step 3: Analyze the cost
 
-You're now prepared to analyze a cost spike, high usage, or anomaly assessment. The following image displays cost data from a log analytics service over the last three months, group by **Meter category**.
+You're now prepared to analyze a cost spike, high usage, or anomaly assessment. The following image displays cost data from a log analytics service over the last three months, group by **Meter category**. In the stacked bar chart, three anomalous cost spikes are evident on March 31, April 30, and May 31. Select the stacked bar for April 30, it indicates that the Azure Grafana Service that linked to this log analytics caused the cost spike.
 
 :::image type="content" source="media/log-analytics-billing-anomolies/high-cost-5.png" alt-text="high cost step 5" lightbox="media/log-analytics-billing-anomolies/high-cost-5.png":::
-
-In the stacked bar chart, three anomalous cost spikes are evident on March 31, April 30, and May 31. Focusing on the stacked bar for April 30, a significant cost spike is observed in the Azure Grafana Service.
 
 Additionally, the example cost was higher during the late May period due to a spike in Azure Sentinel usage. This is indicated by the increased height of the respective segments within the stacked bar.
 
