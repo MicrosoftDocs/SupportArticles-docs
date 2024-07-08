@@ -92,7 +92,7 @@ No, you can rename a tenant only once. If you need more renaming, submit a suppo
 <details>
 <summary><b>How long does the actual rename take?</b></summary>
 
-It depends on the number of sites and how busy the service is at that time. A domain with 1,000 sites usually takes one to two hours to rename.
+It depends on the number of sites and how busy the service is at that time. An organization with 1,000 sites usually takes one to two hours to rename. An organization with 100,000 sites can take a few days to rename.
 
 </details>
 <br/>
@@ -154,7 +154,7 @@ If sync isn't stopped prior to the rename, there might be issues with OneDrive s
 <details>
 <summary><b>I have more than 10,000 sites. When will my tenant be eligible for Tenant rename?</b></summary>
 
-We're working on increasing the limits. We appreciate your patience.  
+If you have over 10,000 sites, you must use Advanced Tenant Rename which is available with SharePoint Advanced Management. Currently, Advanced Tenant Rename supports organizations with up to 100,000 sites. We're working on increasing that limit further.
 
 </details>
 <br/>
@@ -175,7 +175,7 @@ No, only SharePoint and OneDrive URLs are renamed.
 <details>
 <summary><b>Can we prioritize some sites to be renamed first when the job starts?</b></summary>
 
-Currently, there is no way to prioritize specific sites to finish renaming first. The rename process will rename all sites and OneDrive's in a non-deterministic order.  
+If you want to prioritize some sites to be renamed first, you must use Advanced Tenant Rename which is available with SharePoint Advanced Management. Advanced Tenant Rename allows you to prioritize up to 4,000 sites within your organization, which will be picked up for rename first when the job starts.
 
 </details>
 
