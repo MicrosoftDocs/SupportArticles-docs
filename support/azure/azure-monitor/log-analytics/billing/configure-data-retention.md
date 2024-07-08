@@ -2,6 +2,7 @@
 title: Help me configure data retention for my Log Analytics Workspace.
 description: Learn how to configured data retention for your Log Analytics Workspace.
 ms.date: 07/02/2024
+ms.author:neghuman
 ms.reviewer: neghuman
 editor: neilghuman
 ms.service: azure-monitor
@@ -36,7 +37,7 @@ Sign in to the [Azure portal](https://portal.azure.com).
 1. Under **Services**, select **Log Analytics**.
 
 1. Select your specific Log Analytics Workspace.  
-:::image type="content" source="media/configure-data-retention/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/log-analytics-workspaces.png"::: 
+:::image type="content" source="media/configure-data-retention/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/configure-data-retention/log-analytics-workspaces.png"::: 
 
 1. From your workspace, select **Usage and estimated costs** from the left pane.  
 :::image type="content" source="media/configure-data-retention/daily-cap-1.png" alt-text="daily cap step 1" lightbox="media/configure-data-retention/daily-cap-1.png":::
