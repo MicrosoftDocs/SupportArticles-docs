@@ -25,7 +25,7 @@ When you turn on the **Try the new Teams** toggle in classic Microsoft Teams, th
 
 > Something went wrong.
 
-If you check the log file for classic Teams, the following error is logged:
+If you check the log file for classic Teams, the following error entry is logged:
 
 ```output
 message: Launch api returns false, code: 11, apiCode: undefined, extendedErrorCode: 0, launchStatus: failed, status: failure, scenario: <scenarioGUID>, scenarioName: launch_pear_app, name: launch_pear_app
@@ -37,16 +37,16 @@ This issue might occur for any of the following reasons:
 
 - The **Cookies** and **Cache** shell folders point to a reparse point.
 - The **TEMP** or **TMP** environment variables point to a reparse point.
-- You don't have the **Read** permission to access certain directories in the **AppData** folder.
-- Some directories in the **AppData** folder are changed to function as reparse points.
+- You don't have the **Read** permission to access certain folders in the **AppData** folder.
+- Some folders in the **AppData** folder are changed to function as reparse points.
 - The **AppData** folder contains invalid files that have the same name as the required system folders.
-- The SYSTEM account and the Administrators group don't have the **Full control** permission to certain directories in the **AppData** folder.
+- The SYSTEM account and the Administrators group don't have the **Full control** permission to certain folders in the **AppData** folder.
 - You don't have the SYSAPPID permission to the Teams installation location.
 - The **AllowAllTrustedApps** policy setting prevents new Teams from starting.
 
 ## Resolution
 
-In order to apply the appropriate resolution for this issue, you have to perform multiple checks to determine the cause of the issue. There are two options to run all the necessary diagnostic checks. Use the option that you prefer.
+To apply the appropriate resolution for this issue, you have to perform multiple checks to determine the cause of the issue. There are two options to run all the necessary diagnostic checks. Use the option that you prefer.
 
 ### Option 1: Run a script
 
@@ -456,7 +456,7 @@ Pause
    1. If both commands return **False**, go to step 2. Otherwise, open the Registry Editor and locate the following subkey:
 
       `Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders`
-   1. For the shell folder that's returned as **True** in the PowerShell command, update the value of its associated registry entry to a location that isn't a reparse point. For example, you can set the value to the default path:
+   1. For the shell folder in the PowerShell command that's returned as **True**, update the value of its associated registry entry to a location that isn't a reparse point. For example, you can set the value to the default path:
 
      | Registry entry | Value |
      | --- | --- |
@@ -467,9 +467,9 @@ Pause
    1. Run the following PowerShell command:
 
       ```powershell
-      gci env:* | ?{@("TEMP", "TMP").Contains($_.Name)} | %{$_.Value+" - "+((gp $_.Value).Attributes -match 'ReparsePoint')}
+      gci env:* | ?{@("TEMP", "TMP").Contains($_.Name)} %{$_.Value+" - "+((gp $_.Value).Attributes -match 'ReparsePoint')}
       ```
-
+| 
    1. If the command returns **False**, go to step 3. Otherwise, [set](/windows-server/administration/windows-commands/set_1) the value of the environment variables to a location that isn't a reparse point.
 1. Check whether you have the **Read** permission to access all the following directories in the **AppData** folder:
 
@@ -521,9 +521,9 @@ Pause
    - %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Libraries
    - %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Recent
 
-   You can use the [Test-Path](/powershell/module/microsoft.powershell.management/test-path) PowerShell command to perform this check. If you don't have the **Read** permission for a directory, ask someone who has the **Full control** permission for the directory to grant you the **Read** permission.
-1. Check whether any of the directories that are listed in step 3 are changed to function as reparse points. If any of the folders are reparse points, contact [Microsoft Support](https://support.microsoft.com/contactus).
-1. Check for files that have the same name as a required system folder in the **AppData** folder. For example, a file that's named *Libraries* in the path, *%AppData%\Microsoft\Windows\Libraries*, has the same name as a folder that has the same path. For each directory that's listed in step 3, run the following PowerShell command:
+   You can use the [Test-Path](/powershell/module/microsoft.powershell.management/test-path) PowerShell command to perform this check. If you don't have the **Read** permission for a particular folder, ask someone who has the **Full control** permission for the folder to grant you the **Read** permission.
+1. Check whether any of the folders that are listed in step 3 are changed to function as reparse points. If any of the folders are reparse points, contact [Microsoft Support](https://support.microsoft.com/contactus).
+1. Check for files that have the same name as a required system folder in the **AppData** folder. For example, a file that's named *Libraries* in the path, *%AppData%\Microsoft\Windows\Libraries*, has the same name as a folder that has the same path. For each folder that's listed in step 3, run the following PowerShell command:
 
    ```powershell
    Test-Path -Path <directory name, such as $env:USERPROFILE\AppData\Local\Temp>  -PathType Leaf
@@ -532,14 +532,14 @@ Pause
    If the command returns **True**, remove the file, and then create a folder by using the same name as the complete path for the system folder.
 1. Check whether the SYSTEM account and the Administrators group have the **Full control** permission to all directories that are listed in step 3.
 
-   1. Run the following PowerShell commands for each directory:
+   1. Run the following PowerShell commands for each folder:
 
       ```powershell
       ((Get-Acl (Join-Path $env:USERPROFILE "<directory name that starts with AppData, such as AppData\Local>")).Access | ?{$_.IdentityReference -eq "NT AUTHORITY\SYSTEM" -and $_.FileSystemRights -eq "FullControl"} | measure).Count -eq 1
       ((Get-Acl (Join-Path $env:USERPROFILE "<directory name that starts with AppData, such as AppData\Local>")).Access | ?{$_.IdentityReference -eq "BUILTIN\Administrators" -and $_.FileSystemRights -eq "FullControl"} | measure).Count -eq 1
       ```
 
-    1. If either command returns **False**, ask someone who has the **Full control** permission for the directory to grant the **Full control** permission to the corresponding account.
+    1. If either command returns **False**, ask someone who has the **Full control** permission for the folder to grant the **Full control** permission to the corresponding account.
 
 1. Check whether you have the SYSAPPID permission to the Teams installation location. Run the following PowerShell command:
 
@@ -547,7 +547,7 @@ Pause
    Get-AppxPackage MSTeams | %{$_.InstallLocation+" - "+(((Get-Acl $_.InstallLocation).sddl -split "\(" | ?{$_ -match "WIN:/\/\SYSAPPID"} | Measure).count -eq 1)}
    ```
 
-   If the command returns **False**, ask a member of the local Administrators group to [delete your user profile](/troubleshoot/windows-server/user-profiles-and-logon/delete-user-profile) on the computer. Then, sign in by using your user account to recreate the user profile.
+   If the command returns **False**, ask a member of the local Administrators group to [delete your user profile](/troubleshoot/windows-server/user-profiles-and-logon/delete-user-profile) on the computer. Then, sign in by using your user account to re-create the user profile.
 1. Check the **AllowAllTrustedApps** policy setting:
 
    1. In a Command Prompt window, run the `winver` command.
@@ -562,7 +562,7 @@ Pause
 
       - `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock`
       - `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Appx`
-   1. Check the value of **AllowAllTrustedApps**. If the value is **0**, the policy is disabled. Change it to **1** to enable the policy, and then start new Teams again.
+   1. Check the value of **AllowAllTrustedApps**. If the value is **0**, the policy is disabled. Change it to **1** to enable the policy, and then try again to start new Teams.
 
       **Note:** To start new Teams without enabling the **AllowAllTrustedApps** policy, you must be running one of the versions of Windows that are listed in step 5b.
 1. If the issue persists, update the system to Windows 11, version 22H2, OS build 22621.2506 or a later version.
