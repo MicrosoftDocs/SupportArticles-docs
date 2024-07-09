@@ -91,7 +91,7 @@ items:
   - name: Cost management 
     items:
     - name: Understand cost and usage report
-      href: log-analytics/billing/understand-log-analytics-workspace-bill.m
+      href: log-analytics/billing/understand-log-analytics-workspace-bill.md
     - name: Why costs increased unexpectedly
       href: log-analytics/billing/identify-service-cause-unexpected-costs.md
     - name: Set up a daily cap limit
