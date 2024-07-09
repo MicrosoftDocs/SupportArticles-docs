@@ -16,7 +16,7 @@ After you make changes in Microsoft Entra ID that require a re-evaluation of dyn
 - Slow membership update
 - Unexpected group membership updates
 
-These issues might be caused by: 
+These issues can be caused by: 
 
 - An unintended membership rule change.
 - A significant change rollout. For example, updates that are pushed to many devices at the same time might require some group membership rules to be re-evaluated.
