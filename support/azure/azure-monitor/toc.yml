@@ -90,15 +90,15 @@ items:
       href: log-analytics/workspaces/workspace-data-export-faq.yml
   - name: Cost management 
     items:
-    - name: Configure data retention
-      href: log-analytics/billing/configure-data-retention.md
-    - name: Understanding cost details
+    - name: Understand cost and usage report
+      href: log-analytics/billing/understand-log-analytics-workspace-bill.m
+    - name: Why costs increased unexpectedly
       href: log-analytics/billing/identify-service-cause-unexpected-costs.md
     - name: Set up a daily cap limit
       href: log-analytics/billing/set-up-a-daily-cap.md
-    - name: Understand Log Analytics workspace's bill
-      href: log-analytics/billing/understand-log-analytics-workspace-bill.md
-    - name: Identify why daily cap was exceeded
+    - name: Configure data retention
+      href: log-analytics/billing/configure-data-retention.md
+    - name: Why daily cap was exceeded
       href: log-analytics/billing/why-daily-cap-exceeded.md
     - name: Set up recommended alerts
       href: log-analytics/billing/workspace-recommended-alerts.md
