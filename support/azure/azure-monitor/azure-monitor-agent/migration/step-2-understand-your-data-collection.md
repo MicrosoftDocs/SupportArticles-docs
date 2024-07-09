@@ -1,7 +1,7 @@
 ---
 title: Step 2 - Understand the data that you're collecting
 description: Understand the data that you're collecting as the second step of the process of migrating to Azure Monitor Agent from the legacy Log Analytics Agent.
-ms.date: 07/08/2024
+ms.date: 07/09/2024
 author: neilghuman
 ms.author: neghuman
 ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-leedennis
@@ -68,15 +68,8 @@ You can also use the Azure Monitor Agent Migration Helper workbook to analyze th
 The workbook displays a table that contains the following columns:
 
 - Solution name
-- Solution type
-- Publisher
-- Solution status
 - Last data received
 - Recommendation
-
-The solution name column shows the name of the solution that's added to the workspace, while the solution type column indicates whether it is a legacy or a current solution. The publisher column shows the provider of the solution, such as Microsoft or a third-party vendor.
-
-You can use the filters at the top of the table to narrow down the results by solution type, publisher, or status.
 
 ## Next steps
 
