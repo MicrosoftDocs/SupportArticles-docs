@@ -129,5 +129,3 @@ items:
       href: azure-monitor-agent/migration/step-5-deploy-at-scale.md
     - name: Step 6 - Configure other services
       href: azure-monitor-agent/migration/step-6-configure-other-services.md
-    - name: Step 7 - Remove Microsoft Monitoring Agent and clean up configurations
-      href: azure-monitor-agent/migration/step-7-microsoft-monitoring-agent-clean-up-configurations.md
