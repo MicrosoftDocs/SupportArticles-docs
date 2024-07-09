@@ -1,5 +1,5 @@
 ---
-title: Why the log analytics workspace costs increased unexpectedly
+title: Why the Log Analytics workspace costs increased unexpectedly
 description: Describes how to investigate daily billing anomalies and identify the source of excessive charges by using detailed usage reports.
 ms.date: 07/01/2024
 ms.reviewer: neghuman
@@ -9,7 +9,7 @@ keywords:
 #Customer intent: As an Azure Monitor user, I want to understand my Log Analytics workspace's bill including what's included in the cost and how to read the detailed usage reports.
 ms.custom: sap:Log Analytics Billing
 ---
-# Why Log Analytics Workspace costs increased unexpectedly
+# Why Log Analytics workspace costs increased unexpectedly
 
 This article provides a cost analysis tutorial to investigate daily billing anomalies and identify the service that caused unexpected costs.
 
@@ -18,13 +18,13 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 > [!NOTE]
 > The prices shown in the following images are for example purposes only. They do not reflect actual pricing.
 
-### Step 1: Open View cost for the Log Analytics Workspace
+### Step 1: Open View cost for the Log Analytics workspace
 
-1. Sign in to the [Azure portal](https://portal.azure.com). 
-1. Enter **log analytics** in the search.
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Type **Log Analytics** in the search bar.
 1. Under **Services**, select **Log Analytics**.
-1. Select the Log Analytics Workspace that you want to investigate.  
-1. On the **Overview** page, select **View Cost** to open the **Cost analysis** page for the current log analytics service. If you don't see **View Cost**, switch to [Azure preview portal](https://preview.portal.azure.com/). 
+1. Select the Log Analytics workspace that you want to investigate.  
+1. On the **Overview** page, select **View Cost** to open the **Cost analysis** page for the current Log Analytics service. If you don't see **View Cost**, switch to the [Azure preview portal](https://preview.portal.azure.com/). 
 
     :::image type="content" source="media/identify-service-cause-unexpected-costs/view-cost.png" alt-text="view cost step 1" lightbox="media/identify-service-cause-unexpected-costs/view-cost.png":::
 
@@ -46,13 +46,13 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 
     :::image type="content" source="media/identify-service-cause-unexpected-costs/high-cost-4.png" alt-text="high cost step 4" lightbox="media/identify-service-cause-unexpected-costs/high-cost-4.png":::
 
-1. Select **Group by:** option and then select the **Meter category**.  
+1. Select **Group by** option and then select the **Meter category**.  
 
     :::image type="content" source="media/identify-service-cause-unexpected-costs/high-cost-4a.png" alt-text="high cost step 4a" lightbox="media/identify-service-cause-unexpected-costs/high-cost-4a.png":::
 
 ### Step 3: Analyze the cost
 
-You're now prepared to analyze a cost spike, high usage, or anomaly assessment. The following image displays cost data from a log analytics service over the last three months, group by **Meter category**. In the stacked bar chart, three anomalous cost spikes are evident on March 31, April 30, and May 31. Select the stacked bar for April 30, it indicates that the Azure Grafana Service that linked to this log analytics caused the cost spike.
+You're now prepared to analyze a cost spike, high usage, or anomaly assessment. The following image displays cost data from a Log Analytics service over the last three months, group by **Meter category**. In the stacked bar chart, three anomalous cost spikes are evident on March 31, April 30, and May 31. Select the stacked bar for April 30. It indicates that the Azure Grafana Service that linked to this Log Analytics caused the cost spike.
 
 :::image type="content" source="media/identify-service-cause-unexpected-costs/high-cost-5.png" alt-text="high cost step 5" lightbox="media/identify-service-cause-unexpected-costs/high-cost-5.png":::
 
