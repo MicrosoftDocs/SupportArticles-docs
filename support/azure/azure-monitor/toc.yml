@@ -93,7 +93,7 @@ items:
     - name: Configure data retention
       href: log-analytics/billing/configure-data-retention.md
     - name: Understanding cost details
-      href: log-analytics/billing/log-analytics-billing-anomolies.md
+      href: log-analytics/billing/identify-service-cause-unexpected-costs.md
     - name: Set up a daily cap limit
       href: log-analytics/billing/set-up-a-daily-cap.md
     - name: Understand Log Analytics workspace's bill

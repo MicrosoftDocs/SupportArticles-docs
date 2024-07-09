@@ -22,7 +22,7 @@ You can set a Log Analytics workspace's default retention in the Azure portal to
 1. Under **Services**, select **Log Analytics**.
 1. Select your specific Log Analytics Workspace.  
 
-:::image type="content" source="media/configure-data-retention/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/configure-data-retention/log-analytics-workspaces.png"::: 
+:::image type="content" source="media/configure-data-retention/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/configure-data-retention/log-analytics-workspaces.png":::
 
 1. In the Settings secton, select **Usage and estimated costs**.
     

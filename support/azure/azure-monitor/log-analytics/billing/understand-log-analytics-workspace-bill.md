@@ -25,7 +25,6 @@ This article helps you learn how to understand the costs associated with your Lo
 1. Select the Log Analytics Workspace that you want to investigate.  
 1. On the **Overview** page, select **View Cost** to open the **Cost analysis** page for the current log analytics service. If you don't see **View Cost**, switch to [Azure preview portal](https://preview.portal.azure.com/).
 
-    :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost.png" alt-text="view cost step 1" lightbox="media/understand-log-analytics-workspace-bill/view-cost.png":::
 1. In the **Cost analysis** page, select **View AccumulcatedCosts**, and then select **Resources**.
     :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-2.png" alt-text="view cost step 1" lightbox="media/understand-log-analytics-workspace-bill/view-cost-2.png":::
 
