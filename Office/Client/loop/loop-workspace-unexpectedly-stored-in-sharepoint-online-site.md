@@ -23,13 +23,13 @@ ms.date: 07/08/2024
 
 This article applies to customers who were notified by Microsoft that some of their new Microsoft Loop workspaces were created by using SharePoint Online sites instead of SharePoint Embedded containers as the storage locations.
 
-If you’re an administrator, and the loop workspaces that were created by your users are affected, you must identify the affected workspaces and inform the associated users. Then, depending on their requirements, users can choose either to continue using SharePoint Online sites as the storage option for their Loop workspaces or migrate their workspaces to use SharePoint Embedded containers.
+If you’re a SharePoint administrator, and the loop workspaces that were created by your users are affected, you must identify the affected workspaces and inform the associated users. Then, depending on their requirements, users can choose either to continue using SharePoint Online sites as the storage option for their Loop workspaces or migrate their workspaces to use SharePoint Embedded containers.
 
 ## Identify affected Loop workspaces
 
-This procedure must be performed by an administrator. Follow these steps:
+This procedure must be performed by a SharePoint administrator. Follow these steps:
 
-1. Convert the affected SharePoint site IDs that are provided by Microsoft to site URLs:
+1. Get the site URLs that correspond to the affected SharePoint site IDs that are provided by Microsoft:
 
    1. Copy and paste the affected SharePoint site IDs into a text editor, such as Notepad. Then, save the file.
    1. Download the [SiteIDtoURL.ps1](https://github.com/pnp/powershell/blob/dev/samples/Site.Metadata.CSV/SiteIDtoURL.ps1) PowerShell script.
@@ -69,12 +69,12 @@ For workspaces that are stored on a SharePoint Online site, the Recycle bin is n
 
 If you have to migrate an Ideas workspace together with other Loop workspaces, begin by preparing the Ideas workspace for migration, and then process the other workspaces. Follow these steps:
 
-1. Prepare an **Ideas** workspace for migration. If you don’ have to migrate an Ideas workspace, go to step 2.
+1. Prepare an Ideas workspace for migration. If you don’t have to migrate an Ideas workspace, go to step 2.
 
    1. From any page in the **Ideas** workspace, select **Share** > **Page link**. Copy and paste the link in a temporary location. From this link, separate the part that is `https://<yourtenantname>.sharepoint.com/sites/<siteID>`. This URL is the link to the Ideas workspace. 
    1. Delete the existing **Ideas** workspace.
    1. Restart Loop to create a new **Ideas** workspace.
-   1. A SharePoint administrator can restore the deleted **Ideas** workspace by [restoring the SharePoint site](/sharepoint/restore-deleted-site-collection) that was deleted together with it in step 1b.
+   1. A SharePoint administrator must restore the deleted **Ideas** workspace by [restoring the SharePoint site](/sharepoint/restore-deleted-site-collection) that was deleted together with it in step 1b.
    1. After the SharePoint site is restored, navigate to the old Ideas workspace by using the URL that was determined in step 1a: `https://<yourtenantname>.sharepoint.com/sites/<siteID>`.
    1. Follow steps 6 to 9 to migrate all content from the old **Ideas** workspace to the new **Ideas** workspace.
 1. Rename the existing Loop workspace. For example, rename the *Project* workspace to *ProjectOLD*.
@@ -83,17 +83,17 @@ If you have to migrate an Ideas workspace together with other Loop workspaces, b
 1. Add all members of the existing workspace to the new workspace:
    1. Under the name of the workspace, select **Workspace member(s)**.
 
-      :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/select-workspace-member.png" alt-text="Screenshot of the workspace member link under the name of the workspace.":::
+      :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/select-workspace-member.png" alt-text="Screenshot of the workspace member link below the name of the workspace.":::
    1. In the **Invite members with name or email** box, enter the name or email of the members that you want to add, and then select **Invite**.
 
-      :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/add-members.png" alt-text="Screenshot of the dialog that invites members to a workspace.":::
+      :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/add-members.png" alt-text="Screenshot of the dialog box to invite members to a workspace.":::
 1. Copy all the content from the existing workspace to the new workspace:
    1. In the existing workspace, expand all the pages so that they're visible.
    1. In the new workspace, create the same pages.
    1. Copy the content of each page in the existing workspace to the corresponding newly created page in the new workspace.
 1. For each page in the new workspace, make sure that its sharing permissions match the permissions of the corresponding page in the existing workspace. To check or change the sharing permissions for a page, select **Share** > **Page link** > **Settings**.
-1. (Optional) Identify all the pages that are in the existing workspace that were shared to other locations. Replace the content of the pages with a link to the corresponding page in the new workspace.<br/><br/>
-**Note**: The links to shared content in the existing workspace will stop working after the existing workspace is deleted. If you want to preserve the shared links to the content, perform this step:<br/><br/>
+1. (Optional) Identify all the pages that are in the existing workspace that were shared to other locations. Replace the content of each page with a link to the corresponding page in the new workspace.<br/><br/>
+**Note**: The links to shared content in the existing workspace will stop working after the existing workspace is deleted. If you want to preserve the shared links to the content, perform this step.<br/><br/>
    To determine whether a page has been shared, select the **Shared locations** button, as shown in the following screenshot. 
 
    :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/shared-locations.png" border="false" alt-text="Screenshot of the Shared locations button.":::
