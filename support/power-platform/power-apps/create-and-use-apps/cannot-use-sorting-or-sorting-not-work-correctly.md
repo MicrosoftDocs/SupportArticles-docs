@@ -17,7 +17,7 @@ This article helps solve an issue where you can't use sorting or sorting doesn't
 
 Sorting not available on all the columns is a strong indication that sorting is disabled on the grid control. Use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to make sure the `enableSorting` grid property is set to "true".
 
-:::image type="content" source="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/enablesorting.png" alt-text="Screenshot that shows the enableFiltering grid property." lightbox="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/enablesorting.png":::
+:::image type="content" source="media/cannot-use-sorting-or-sorting-not-work-correctly/enablesorting.png" alt-text="Screenshot that shows the enableFiltering grid property." lightbox="media/cannot-use-sorting-or-sorting-not-work-correctly/enablesorting.png":::
 
 If sorting isn't enabled, update the respective grid property value.
 
