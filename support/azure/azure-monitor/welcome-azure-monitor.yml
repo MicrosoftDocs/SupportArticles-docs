@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 07/08/2024
+  ms.date: 07/09/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -56,5 +56,3 @@ landingContent:
             url: azure-monitor-agent/migration/step-5-deploy-at-scale.md
           - text: Step 6 - Configure other services
             url: azure-monitor-agent/migration/step-6-configure-other-services.md
-          - text: Step 7 - Remove Microsoft Monitoring Agent and clean up configurations
-            url: azure-monitor-agent/migration/step-7-microsoft-monitoring-agent-clean-up-configurations.md
