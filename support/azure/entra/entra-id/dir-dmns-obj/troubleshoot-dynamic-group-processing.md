@@ -11,7 +11,7 @@ ms.custom: sap:Users
 
 # Troubleshooting dynamic group processing in Microsoft Entra ID
 
-After you make changes in Microsoft Entra ID that require a re-evaluation of dynamic group membership, you might experience either of the following issues::
+After you make changes in Microsoft Entra ID that require a re-evaluation of dynamic group membership, you might experience either of the following issues:
 
 - Slow membership update
 - Unexpected group membership updates
@@ -26,7 +26,7 @@ This article provides sample Entra ID PowerShell scripts to pause and resume dyn
 ## Prerequisites
 
 - An account on an Azure tenant that has the `microsoft.directory/groups/allProperties/update` permission
-- The `Group.ReadWrite.All` permission (necessary for applications)
+- For applications: the `Group.ReadWrite.All` permission
 - A copy of the sample [dynamic group management scripts](https://github.com/barclayn/samples-dynamic-group/tree/main)
 
 ## Dynamic group management script
@@ -68,3 +68,5 @@ Run the `unPauseSpecificCritical.ps1` script to resume rule processing for speci
 ## Related content
 
 - [Dynamic group processing sample scripts](https://github.com/barclayn/samples-dynamic-group/tree/main)
+  
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
