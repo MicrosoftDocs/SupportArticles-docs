@@ -37,7 +37,7 @@ We provide four scripts to manage dynamic group processing by using PowerShell:
 - **Pause Specific Groups:** This script pauses dynamic group processing for specific groups that you specify in the script.
 - **Pause All Groups Except Some:** This script pauses dynamic group processing for all groups in your tenant except those that you specify in the script.
 - **UnPauseSpecificCritical:** This script resumes dynamic group processing for specific groups that you specify in the script.
-- **UnPauseNonCritical:** TThis script enables you to resume processing for noncritical groups that have dynamic membership, 100 groups at a time.
+- **UnPauseNonCritical:** This script enables you to resume processing for noncritical groups that have dynamic membership, 100 groups at a time.
 
 Follow the instructions within the scripts to make any changes according to your needs. Run the scripts by using the Entra ID PowerShell module.
 
