@@ -55,7 +55,7 @@ It appears that the Log Analytics meter shows lower usage compared to other serv
 
 1. Hover over the '**+**' symbol and select it to open a new tab within the Cost analysis pane, and then select **Service**.  
 
-2.Update the month selected to match the specific month being examined for this billing cycle.
+2. Update the month selected to match the specific month being examined for this billing cycle.
 3. Ensure the total matches your invoice details.
 4. Expand each service to view the charge type per **Service**.  
 
@@ -65,17 +65,10 @@ It appears that the Log Analytics meter shows lower usage compared to other serv
 
 1. Hover over the '**+**' symbol and select it to open a new tab within the Cost analysis pane.  
 1. Select **Dailly cost**.  
+1. Update the month (2) selected to match the specific month being examined for this billing cycle.
+1. You notice the Total (3) matches your invoice details.
+1. The Service name (4) pie chart displays in an alternative view that data-injecting services that are primarily responsible for driving the overall cost.
+1. The bar chart displays a cost increase at the end of the month (5) which can be further investigated to determine the root cause.
 
-Update the month (2) selected to match the specific month being examined for this billing cycle.
-You notice the Total (3) matches your invoice details.
-The Service name (4) pie chart displays in an alternative view that data-injecting services that are primarily responsible for driving the overall cost.
-The bar chart displays a cost increase at the end of the month (5) which can be further investigated to determine the root cause.
-
-
-1. You can now start reviewing and analyzing your bill for detailed assessment.  
-    1. Ensure the appropriate resource group **(1)** is selected.
-    1. Record the specific month **(2)** being examined for this billing cycle.
-    1. Note the total actual cost for the month selected **(3)** which should match your invoice.
-    1. For the Log Analytics workspace selected, note the highlighted cost **(4)** breakdown per meter.
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
