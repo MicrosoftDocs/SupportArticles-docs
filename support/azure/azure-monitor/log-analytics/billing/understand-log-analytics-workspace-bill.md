@@ -1,5 +1,5 @@
 ---
-title: Help me understand my Log Analytics workspace's bill, detailing the costs and how to read the detailed usage reports.
+title: Understand cost and usage in Log Analytics workspace
 description: Learn how to understand the costs associated with your Log Analytics Workspace and identify causes for increased expense.
 ms.date: 07/01/2024
 ms.author: neghuman
