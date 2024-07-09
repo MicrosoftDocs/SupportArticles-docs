@@ -14,7 +14,7 @@ ms.reviewer: changov, viveksingla, vashan, rajraj, v-weizhu
 ---
 # Troubleshooting API throttling errors
 
-**Applies to:** :heavy_check_mark: Windows VMs
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 Azure Compute requests may be throttled at a subscription and on a per-region basis to help with the overall performance of the service. We ensure all the calls to the Azure Compute Resource Provider (CRP), which manages resources under Microsoft.Compute namespace don't exceed the maximum allowed API request rate. This document describes API throttling, details on how to troubleshoot throttling issues, and best practices to avoid being throttled.  
 

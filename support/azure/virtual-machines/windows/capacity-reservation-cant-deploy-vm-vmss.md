@@ -10,7 +10,7 @@ ms.custom: sap:Cannot create a VM
 
 # Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
 
-**Applies to:** :heavy_check_mark: Windows VMs
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 The following article discusses why you may not be able to deploy virtual machines (VMs) or Virtual Machine Scale Sets (VMSS) with Capacity Reservation.
 

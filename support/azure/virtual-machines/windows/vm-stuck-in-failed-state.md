@@ -13,7 +13,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Virtual machine stuck in a failed state
 
-**Applies to:** :heavy_check_mark: Windows VMs
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues in which a Microsoft Azure virtual machine (VM) is stuck in a failed state.
 

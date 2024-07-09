@@ -12,7 +12,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Troubleshoot classic storage resource deletion errors
 
-**Applies to:** :heavy_check_mark: Windows VMs
+**Applies to:** :heavy_check_mark: Classic VMs
 
 This article provides troubleshooting guidance when one of the following errors occurs trying to delete Azure classic storage account, container, or *.vhd page blob file.
 

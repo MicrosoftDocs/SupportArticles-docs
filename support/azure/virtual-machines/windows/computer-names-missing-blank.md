@@ -9,7 +9,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Computer names of specialized virtual machines are missing or blank in Azure
 
-**Applies to:** :heavy_check_mark: Windows VMs
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 This article provides information to an issue in which computer names of virtual machines that use specialized disks are missing or blank in Azure.
 

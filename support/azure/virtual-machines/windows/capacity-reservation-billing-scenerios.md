@@ -10,7 +10,7 @@ ms.custom: sap:Cannot create a VM
 
 # Capacity Reservation billing scenarios
 
-**Applies to:** :heavy_check_mark: Windows VMs
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 This article discusses billing scenarios as they apply to a Capacity Reservation.
 

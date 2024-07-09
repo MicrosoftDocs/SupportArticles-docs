@@ -11,7 +11,7 @@ ms.custom: sap:Cannot create a VM
 
 # Can't delete a Capacity Reservation or Group
 
-**Applies to:** :heavy_check_mark: Windows VMs
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 The following article discusses why you may not be able to delete a Capacity Reservation or Group
 

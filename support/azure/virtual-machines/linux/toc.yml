@@ -202,6 +202,8 @@
     items:
     - name: Troubleshoot Azure VM Image Builder
       href: /azure/virtual-machines/linux/image-builder-troubleshoot?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Cloud-init-enabled VM takes a long time to start up
+      href: cloud-init-deployment-delay.md
 
 - name: Disk Management
   items:

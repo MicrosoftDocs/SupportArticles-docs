@@ -11,7 +11,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Azure virtual machine (VM) is unavailable for 15 minutes
 
-**Applies to:** :heavy_check_mark: Windows VMs
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 This article explains why you might receive an alert that states "VM is unavailable for 15 minutes" in either Resource Health or the activity log.
 
