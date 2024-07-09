@@ -63,6 +63,7 @@ You can continue to use the SharePoint Online site as the storage location for y
    `https://<yourtenantname>.sharepoint.com/sites/<siteID from step 1>`
 
    For example, `https://microsoft.sharepoint.com/sites/6405bb1e-d41b-4df2-a433-e7e3d60d7a2a`.
+   
 For workspaces that are stored on a SharePoint Online site, the Recycle bin is not available in the Loop app. To access items that were deleted from these Loop workspaces, select **Recycle bin** in the Sharepoint site in which the workspaces are stored.
 
 ## Migrate your Loop workspace to a SharePoint Embedded container
@@ -71,11 +72,11 @@ If you have to migrate an Ideas workspace together with other Loop workspaces, b
 
 1. Prepare an Ideas workspace for migration. If you don’t have to migrate an Ideas workspace, go to step 2.
 
-   1. From any page in the **Ideas** workspace, select **Share** > **Page link**. Copy and paste the link in a temporary location. From this link, separate the part that is `https://<yourtenantname>.sharepoint.com/sites/<siteID>`. This URL is the link to the Ideas workspace. 
+   1. From any page in the **Ideas** workspace, select **Share** > **Page link**. Copy and paste the link in a temporary location. From this link, separate the part that is `https://<yourtenantname>.sharepoint.com/sites/<siteID>`. This URL is the link to the **Ideas** workspace. 
    1. Delete the existing **Ideas** workspace.
    1. Restart Loop to create a new **Ideas** workspace.
    1. A SharePoint administrator must restore the deleted **Ideas** workspace by [restoring the SharePoint site](/sharepoint/restore-deleted-site-collection) that was deleted together with it in step 1b.
-   1. After the SharePoint site is restored, navigate to the old Ideas workspace by using the URL that was determined in step 1a: `https://<yourtenantname>.sharepoint.com/sites/<siteID>`.
+   1. After the SharePoint site is restored, navigate to the old **Ideas** workspace by using the URL that was determined in step 1a: `https://<yourtenantname>.sharepoint.com/sites/<siteID>`.
    1. Follow steps 6 to 9 to migrate all content from the old **Ideas** workspace to the new **Ideas** workspace.
 1. Rename the existing Loop workspace. For example, rename the *Project* workspace to *ProjectOLD*.
 1. Create a new Loop workspace by using the original name, such as *Project*.
@@ -98,7 +99,7 @@ If you have to migrate an Ideas workspace together with other Loop workspaces, b
 
    :::image type="content" source="./media/loop-workspace-unexpectedly-stored-in-sharepoint-online-site/shared-locations.png" border="false" alt-text="Screenshot of the Shared locations button.":::
 
-   If the page is shared, you'll see other locations in addition to the location of the source in the Loop workspace. 
+   If the page is shared, you'll see other locations listed in addition to the location of the source in the Loop workspace. 
    For each page that's shared, such as Page A, verify that all content in Page A in *ProjectOLD* has been copied to Page A in *Project*. Then, follow these steps:
    1. In Page A in *Project*, select **Share** > **Page link**.
    1. In Page A in *ProjectOLD*, remove all content, and then paste the link that you copied in step 8a.
