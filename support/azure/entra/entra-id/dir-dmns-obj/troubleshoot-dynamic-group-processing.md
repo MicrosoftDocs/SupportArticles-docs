@@ -11,7 +11,7 @@ ms.custom: sap:Users
 
 # Troubleshooting dynamic group processing in Microsoft Entra ID
 
-After you make changes in Microsoft Entra ID that require a re-evaluation of dynamic group membership, you might experience various issues, such as:
+After you make changes in Microsoft Entra ID that require a re-evaluation of dynamic group membership, you might experience either of the following issues::
 
 - Slow membership update
 - Unexpected group membership updates
@@ -37,7 +37,7 @@ We provide four scripts to manage dynamic group processing by using PowerShell:
 - **Pause Specific Groups:** This script pauses dynamic group processing for specific groups that you specify in the script.
 - **Pause All Groups Except Some:** This script pauses dynamic group processing for all groups in your tenant except those that you specify in the script.
 - **UnPauseSpecificCritical:** This script resumes dynamic group processing for specific groups that you specify in the script.
-- **UnPauseNonCritical:** This script enables you to resume noncritical group processing with dynamic membership, 100 at a time.
+- **UnPauseNonCritical:** TThis script enables you to resume processing for noncritical groups that have dynamic membership, 100 groups at a time.
 
 Follow the instructions within the scripts to make any changes according to your needs. Run the scripts by using the Entra ID PowerShell module.
 
