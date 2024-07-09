@@ -10,10 +10,9 @@ ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-This article describes the minimum version support for Linux and Windows virtual machine agents in Azure.
-
-_Original product version:_ &nbsp; Virtual Machine running Linux, Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4049215
+
+This article describes the minimum version support for Linux and Windows virtual machine agents in Azure.
 
 ## Minimum supported version of Linux VM Agent
 

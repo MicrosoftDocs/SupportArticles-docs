@@ -11,10 +11,9 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article discusses the support policy for running Microsoft server software in the Microsoft Azure Virtual Machine environment (infrastructure-as-a-service).
-
-_Original product version:_ &nbsp; Virtual Machine running Windows, Cloud Services (Web roles/Worker roles)  
 _Original KB number:_ &nbsp; 2721672
+
+This article discusses the support policy for running Microsoft server software in the Microsoft Azure Virtual Machine environment (infrastructure-as-a-service).
 
 ## Summary
 

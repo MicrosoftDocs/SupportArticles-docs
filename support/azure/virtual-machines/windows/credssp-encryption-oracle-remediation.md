@@ -15,10 +15,9 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article provides a solution to an issue in which you are not able to connect to a virtual machine (VM) using RDP with error: CredSSP encryption oracle remediation.
-
-_Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4295591
+
+This article provides a solution to an issue in which you are not able to connect to a virtual machine (VM) using RDP with error: CredSSP encryption oracle remediation.
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 

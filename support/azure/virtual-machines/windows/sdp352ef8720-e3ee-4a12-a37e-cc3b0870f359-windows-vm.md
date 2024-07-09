@@ -12,7 +12,6 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles)  
 _Original KB number:_ &nbsp; 2772488
 
 ## Summary

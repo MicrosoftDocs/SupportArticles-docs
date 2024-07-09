@@ -11,10 +11,9 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article provides solutions to an issue where Windows VM doesn't start and generates errors.
-
-_Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4010130
+
+This article provides solutions to an issue where Windows VM doesn't start and generates errors.
 
 ## Symptom
 

@@ -11,7 +11,6 @@ ms.collection: linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Ubuntu  
 _Original KB number:_ &nbsp; 4023409
 
 ## Symptoms

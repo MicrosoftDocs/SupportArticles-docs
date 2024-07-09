@@ -14,7 +14,6 @@ ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 11/01/2018
 ms.author: delhan
-
 ms.custom: sap:Cannot connect to my VM
 ---
 # Troubleshoot Azure VM RDP connection issues by Event ID

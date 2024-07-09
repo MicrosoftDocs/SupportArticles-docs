@@ -11,10 +11,9 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article provides a solution to an issue where Windows VM doesn't start with 0xc0000359 error code.
-
-_Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4010135
+
+This article provides a solution to an issue where Windows VM doesn't start with 0xc0000359 error code.
 
 ## Symptoms
 

@@ -10,10 +10,9 @@ ms.custom: sap:Windows Update, Guest Patching and OS Upgrades
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
-
-_Original product version:_ &nbsp; Virtual Machine running Windows, Virtual Machine running Linux, Virtual Machine running RedHat, Virtual Machine running Ubuntu  
 _Original KB number:_ &nbsp; 4131519
+
+[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 ## Symptoms
 

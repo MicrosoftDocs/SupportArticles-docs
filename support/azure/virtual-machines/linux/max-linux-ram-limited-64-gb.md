@@ -11,12 +11,11 @@ ms.collection: linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+_Original KB number:_ &nbsp; 4038684
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article provides a solution to an issue in which the maximum memory of an Azure Linux virtual machine is limited to 64 GB in Linux with the kernel version prior to 3.10.
-
-_Original product version:_ &nbsp; Virtual Machine running Linux  
-_Original KB number:_ &nbsp; 4038684
 
 ## Symptoms
 

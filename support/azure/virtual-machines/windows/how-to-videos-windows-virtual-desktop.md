@@ -12,7 +12,6 @@ ms.custom: sap:Issue with Azure Virtual Desktop
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Virtual Desktop  
 _Original KB number:_ &nbsp; 4563049
 
 Watch these short videos to get up and running with Azure Virtual Desktop:

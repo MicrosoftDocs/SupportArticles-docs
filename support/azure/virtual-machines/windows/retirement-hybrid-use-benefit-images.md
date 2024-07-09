@@ -11,10 +11,9 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article describes that the Windows Server images that are pre-configured with Hybrid Use Benefit for EA subscriptions will be removed from the Azure Marketplace by August 31, 2017.
-
-_Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4036360
+
+This article describes that the Windows Server images that are pre-configured with Hybrid Use Benefit for EA subscriptions will be removed from the Azure Marketplace by August 31, 2017.
 
 ## Retirement of the Hybrid Use Benefit images
 

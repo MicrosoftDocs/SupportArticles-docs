@@ -11,7 +11,6 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4046813
 
 ## Frequently asked questions

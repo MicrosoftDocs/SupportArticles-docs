@@ -13,7 +13,6 @@ ms.reviewer:
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-_Original product version:_ &nbsp; Azure  
 _Original KB number:_ &nbsp; 4541599
 
 ## Summary

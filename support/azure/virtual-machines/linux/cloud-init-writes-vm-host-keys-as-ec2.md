@@ -13,7 +13,6 @@ ms.reviewer: Timothy.Basham, Scott.L.Roberts
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Linux  
 _Original KB number:_ &nbsp; 4561944
 
 ## Symptoms

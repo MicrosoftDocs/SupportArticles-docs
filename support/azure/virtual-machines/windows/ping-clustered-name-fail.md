@@ -9,8 +9,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 # Error when you try to ping a Clustered Name that runs on Azure IaaS VMs: Request timed out
 
 **Applies to:** :heavy_check_mark: Windows VMs
-
-_Original product version:_ &nbsp; Load Balancer  
+ 
 _Original KB number:_ &nbsp; 3190161
 
 ## Symptoms

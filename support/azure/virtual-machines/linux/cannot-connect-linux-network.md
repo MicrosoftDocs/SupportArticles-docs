@@ -13,12 +13,11 @@ ms.reviewer:
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+_Original KB number:_ &nbsp; 4010059
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article fixes an issue in which network errors prevent you from connecting to Azure Linux virtual machines.
-
-_Original product version:_ &nbsp; Virtual Machine running Linux  
-_Original KB number:_ &nbsp; 4010059
 
 ## Symptoms
 

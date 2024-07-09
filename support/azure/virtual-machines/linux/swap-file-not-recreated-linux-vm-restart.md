@@ -13,12 +13,11 @@ ms.reviewer: danis
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+_Original KB number:_ &nbsp; 4577868
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article provides a resolution to an issue in which the swap file can't be re-created after a restart of a Linux virtual machine.
-
-_Original product version:_ &nbsp; Azure, Virtual Machine running Linux  
-_Original KB number:_ &nbsp; 4577868
 
 ## Symptoms
 

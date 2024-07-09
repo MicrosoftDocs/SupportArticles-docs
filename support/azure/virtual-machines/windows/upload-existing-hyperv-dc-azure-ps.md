@@ -10,10 +10,9 @@ ms.custom: sap:Cannot create a VM, devx-track-azurepowershell
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article describes how to upload existing on-premises Hyper-V domain controllers to Microsoft Azure by using Azure PowerShell.
-
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles)  
 _Original KB number:_ &nbsp; 2904015
+
+This article describes how to upload existing on-premises Hyper-V domain controllers to Microsoft Azure by using Azure PowerShell.
 
 On-premises domain controllers that are moved to Azure must have the following components:
 
