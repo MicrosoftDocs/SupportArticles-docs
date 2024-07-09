@@ -197,7 +197,7 @@
   - name: Fail to create a VM with Ed25519 SSH keys
     href: ed25519-ssh-keys.md
   - name: Cloud-init-enabled VM takes a long time to start up
-    href: ../windows/cloud-init-deployment-delay.md
+    href: cloud-init-deployment-delay.md
   - name: Image deployment and management
     items:
     - name: Troubleshoot Azure VM Image Builder

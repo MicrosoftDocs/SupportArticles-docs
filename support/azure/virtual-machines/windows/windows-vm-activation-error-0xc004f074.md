@@ -5,10 +5,8 @@ ms.date: 02/15/2024
 ms.service: virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ms.collection: windows
-author: naqviadilmicrosoft
-ms.author: v-naqviadil
 editor: v-jsitser
-ms.reviewer: cwhitley, v-leedennis
+ms.reviewer: cwhitley, v-naqviadil, v-leedennis
 ---
 # Error 0xC004F074 "No Key Management Service (KMS) could be contacted"
 
