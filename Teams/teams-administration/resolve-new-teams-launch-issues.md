@@ -15,7 +15,7 @@ appliesto:
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 06/25/2024
+ms.date: 07/09/2024
 ---
 # Resolve issues when starting the new Teams app
 
@@ -554,8 +554,7 @@ Pause
    1. Compare your Windows version and build number in the results to the following versions of Windows 11 and Windows 10:
 
       - Windows 11 version 21H2 OS build 22000.2777
-      - Windows 11 version 22H2 OS build 22621.2506
-      - Windows 11 version 23H2 OS build 22631.2428
+      - Windows 11 version 22H2 OS build 22621.2506      
       - Windows 10 version 21H2 OS build 19044.4046
       - Windows 10 version 22H2 OS build 19045.3636
 
