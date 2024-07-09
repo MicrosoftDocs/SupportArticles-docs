@@ -17,7 +17,7 @@ This article provides troubleshooting steps for different scenarios where you ca
 
 Make sure the `enableFiltering` grid property is set to "true". If it's set to "false", check the grid control configuration to make sure the respective **Enable Filtering** property is enabled.
 
-:::image type="content" source="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/enablefiltering.png" alt-text="Screenshot that shows the enableFiltering grid property." lightbox="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/enablesorting.png":::
+:::image type="content" source="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/enablefiltering.png" alt-text="Screenshot that shows the enableFiltering grid property." lightbox="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/enablefiltering.png":::
 
 ## Scenario 2: Column filtering options are missing or disabled on certain columns
 
