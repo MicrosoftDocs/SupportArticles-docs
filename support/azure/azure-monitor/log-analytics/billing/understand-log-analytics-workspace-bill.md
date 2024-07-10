@@ -1,81 +1,73 @@
 
 ---
-title: Understand costs and usages in Microsoft Azure log analytics workspace
-description: Explain how to view the costs associated with your Log Analytics Workspace and identify causes for increased expense.
+title: Understand cost and usage in Log Analytics workspace in Microsoft Azure
+description: Learn how to understand the costs associated with your Log Analytics Workspace and identify causes for increased expense.
 ms.date: 07/01/2024
 ms.author: neghuman
 ms.service: azure-monitor
 ms.custom: sap:Log Analytics Billing
 ---
 
-# Understand costs and usages in Azure log analytics workspace
+# Understand cost and usage in Log Analytics workspace
 
-This article helps you learn how to view the costs associated with your log analytics workspace and to identify causes for increased expense.
+This article helps you learn how to understand the costs associated with your Log Analytics Workspace and to identify cost of each service that connects to the Log Analytics workspace.
 
-##  view the costs in log analytics workspace
+## How to read the cost and usage reports
 
 > [!NOTE]
 > The prices shown in the following images are for example purposes only. They do not reflect actual pricing.
 
-### Step 1: Open View cost in the Log Analytics workspace
+### Open View cost for the Log Analytics Workspace
 
 1. Sign in to the [Azure portal](https://portal.azure.com). 
-1. Enter **Log Analytics** in the search.
+1. Type **log analytics** in the search bar.
 1. Under **Services**, select **Log Analytics**.
-1. Select the Log Analytics workspace that you want to investigate.  
-1. On the **Overview** page, select the **View Cost** link to open the **Cost analysis** page for the current Log Analytics service. If you don't see the **View Cost** link, switch to [Azure preview portal](https://preview.portal.azure.com/). 
+1. Select the Log Analytics Workspace that you want to investigate.  
+1. On the **Overview** page, select **View Cost** to open the **Cost analysis** page for the current log analytics service. If you don't see **View Cost**, switch to the [Azure preview portal](https://preview.portal.azure.com/).
 
-    :::image type="content" source="media/identify-service-cause-unexpected-costs/view-cost.png" alt-text="view cost step 1" lightbox="media/identify-service-cause-unexpected-costs/view-cost.png":::
+1. In the **Cost analysis** page, select **View AccumulcatedCosts**, and then select **Resources**.
+    :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-2.png" alt-text="view cost step 1" lightbox="media/understand-log-analytics-workspace-bill/view-cost-2.png":::
 
+## Read cost report on Invoice details tab
 
-1. In the **Cost analysis** page, select **View AccumulcatedCosts**, and then **Resources**.  
-:::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-2.png" alt-text="view cost step 2" lightbox="media/understand-log-analytics-workspace-bill/view-cost-2.png":::
+1. Select **+** to open a new tab within the Cost analysis page.  
+1. In the new tab, select **Invoice details**. The Invoice details page shows the cost for each service that sends data to the current Log Analytics workspace.
+1. Update the date range to match the specific month being examined for this billing cycle.
 
-
-
-
-1. Hover over the '**+**' symbol and select it to open a new tab within the Cost analysis pane.  
-1. In the new tab, select **Invoice details**. The Invoice details page shows cost for each service that connects (sends data) to the current log ana Log Analytics workspace.
-The following is the example of invoce detail.
+The following is an example of the Invoice details:
 
 :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-9.png" alt-text="view cost step 9" lightbox="media/understand-log-analytics-workspace-bill/view-cost-9.png":::
 
-1.  Select the **+** icon to open a new tab.
-:::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-5.png" alt-text="view cost step 5" lightbox="media/understand-log-analytics-workspace-bill/view-cost-5.png":::
+It appears that the Log Analytics meter shows lower usage compared to other services that send data into the Log Analytics workspace. This discrepancy suggests an area for further investigation or optimization in how these services use resources within the current log analytics workspace.
 
-1. Select **Service** in the new tab.  
-:::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-6.png" alt-text="view cost step 6" lightbox="media/understand-log-analytics-workspace-bill/view-cost-6.png":::
+### Read cost report on Resource tab
 
-1. Select the **+** icon to open a new tab, and then select **Invoice details**.
-:::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-7.png" alt-text="view cost step 7" lightbox="media/understand-log-analytics-workspace-bill/view-cost-7.png":::
+1. Select **Resources** tab.  
 
+1. Update the date range to match the specific month being examined for this billing cycle, then the total should match your invoice details.
 
+1.  The default view of the **Resources** tab shows the total cost of the Log Analytics workspace, including the cost of data ingested from other services.
 
+1. Select the name of the Log Analytics workspace to expand the details. You will see the cost of each service that sends data to this Log Analytics workspace. This view can help you to identify which service is causing the unexpected expense.
 
-1. You can now start reviewing and analyzing your bill for detailed assessment.  
-    1. Ensure the appropriate resource group **(1)** is selected.
-    1. Record the specific month **(2)** being examined for this billing cycle.
-    1. Note the total actual cost for the month selected **(3)** which should match your invoice.
-    1. For the Log Analytics workspace selected, note the highlighted cost **(4)** breakdown per meter.
-    
-     Looking at our case study, it's apparent that the Log Analytics meter reflects a smaller usage compared to the other services sending data directly into the Log Analytics workspace. This discrepancy suggests an area for further investigation or optimization in how those services utilize resources within your analytics environment.  
+:::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-11.png" alt-text="view cost step 3" lightbox="media/understand-log-analytics-workspace-bill/view-cost-11.png":::
 
-     :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-9.png" alt-text="view cost step 9" lightbox="media/understand-log-analytics-workspace-bill/view-cost-9.png":::
+## Read cost report on Services tab
 
-1. Jump to the **Services** tab **(1)**.
-    1. Update the month **(2)** selected to match the specific month being examined for this billing cycle.  
-    1. You notice the Total **(3)** matches your invoice details.  
-    1. Expand each service, **(4,5,6)** to view the charge type per **Service**.  
-:::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-10.png" alt-text="view cost step 10" lsightbox="media/understand-log-analytics-workspace-bill/view-cost-10.png":::
+1. Select **+** to open a new tab within the Cost analysis page, and then select **Service**.  
+2. Update the month selected to match the specific month being examined for this billing cycle, then the total should match your invoice details.
+1. Expand each service to view the charge type per **Service**.  
 
-### Read cost data in Daily costs
+:::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-10.png" alt-text="view cost step 10" lightbox="media/understand-log-analytics-workspace-bill/view-cost-10.png":::
 
-1. Hover over the '**+**' symbol and select it to open a new tab within the Cost analysis pane.  
-1. Select **Dailly cost**.  
-1. Update the month (2) selected to match the specific month being examined for this billing cycle.
-1. You notice the Total (3) matches your invoice details.
-1. The Service name (4) pie chart displays in an alternative view that data-injecting services that are primarily responsible for driving the overall cost.
+### Read cost report on Daily costs tab
+
+1. Select **+** to open a new tab within the Cost analysis page.
+1. Select **Daily cost**.  
+1. Update the month selected to match the specific month being examined for this billing cycle, then the total should match your invoice details.
+1. The Service name pie chart displays in an alternative view that data injection services that are primarily responsible for driving the overall cost.
 1. The bar chart displays a cost increase at the end of the month (5) which can be further investigated to determine the root cause.
 
+:::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-12.png" alt-text="view cost step 12" lightbox="media/understand-log-analytics-workspace-bill/view-cost-12.png":::
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
