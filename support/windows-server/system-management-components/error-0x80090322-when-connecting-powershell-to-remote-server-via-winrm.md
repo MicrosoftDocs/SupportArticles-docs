@@ -52,7 +52,7 @@ Setspn -s HTTP/Mem1.contoso.com:5985 Mem1
 Use the following PowerShell command to specify a port for the `Enter-PSSession` command:
 
 ```PowerShell
-Enter-PSSession -ComputerName <servername or FQDN> -SessionOption (New-PASessionOption -IncludePortInSPN)
+Enter-PSSession -ComputerName <servername or FQDN> -SessionOption (New-PSSessionOption -IncludePortInSPN)
 ```
 
 For example:
