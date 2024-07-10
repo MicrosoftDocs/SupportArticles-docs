@@ -25,7 +25,7 @@ This article provides sample Entra ID PowerShell scripts to pause and resume dyn
 
 ## Download pause and resume dynamic group processing scripts
 
-To download the scripts, visit our [dynamic group management GitHub repository](https://github.com/barclayn/samples-dynamic-group/tree/main).
+To download the scripts, visit our [GitHub repository](https://github.com/barclayn/samples-dynamic-group/tree/main).
 To run the scripts, ensure you have the following prerequisites:
 
 - An account on an Azure tenant that has the `microsoft.directory/groups/allProperties/update` permission
