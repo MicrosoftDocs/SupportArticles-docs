@@ -9,7 +9,7 @@ ms.service: virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-ms.date: 11/14/2023
+ms.date: 07/10/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
@@ -54,33 +54,7 @@ This error message indicates that the disk structure is corrupted and unreadable
 
 ### Set partition status to active
 
-Generation 1 VMs should first verify that the OS partition that holds the BCD store is marked as **Active**. If you have a Generation 2 VM, skip ahead to [Fix the Disk Partition](#fix-the-disk-partition), as the Status flag was deprecated in the later generation.
-
-1. Open an elevated command prompt (cmd.exe).
-1. Enter **diskpart** to launch the **DISKPART** tool.
-1. Enter **list disk** to list the disks on the system and identify the attached OS virtual hard disk (VHD).
-1. Once the attached OS VHD is located, enter **sel disk #** to select the disk. See the following image for an example of where Disk 1 is the attached OS VHD.
-
-   :::image type="content" source="media/boot-error-disk-read-error-occurred/list-select-disk.png" alt-text="Screenshot of the diskpart window, which shows the result of listing and then selecting disk.":::
-
-1. Once the disk is selected, enter **list partition** to list the partitions of the selected disk.
-1. Once the boot partition is identified, enter **sel partition #** to select the partition. The boot partition is often approximately 350 MB in size.  See the following image in which Partition 1 is the boot partition.
-
-   :::image type="content" source="media/boot-error-disk-read-error-occurred/list-select-partition.png" alt-text="Screenshot of the diskpart window, which shows the result of listing and then selecting partition.":::
-
-1. Enter **detail partition** to check the status of the partition. See the following screenshots for examples of the partition being set to **Active: No** or **Active: Yes**.
-
-   **Active: No**
-
-   :::image type="content" source="media/boot-error-disk-read-error-occurred/detail-partition-active-no.png" alt-text="Screenshot of the diskpart window with the output of the detail partition command, where Partition 1 is set to Active: No.":::
-
-   **Active: Yes**
-
-   :::image type="content" source="media/boot-error-disk-read-error-occurred/detail-partition-active-yes.png" alt-text="Screenshot of the diskpart window with the output of the detail partition command, where partition 1 is set to Active: Yes.":::
-
-1. If the partition isn't set to **Active**, enter **active** to change the Active flag.
-1. Enter **detail partition** to check that the status change was completed properly, and verify that the output includes **Active: Yes**.
-1. Enter **exit** to close the DISKPART tool and save your configuration changes.
+[!INCLUDE [Verify that Windows partition is active](../../../includes/azure/windows-vm-verify-set-active-partition.md)]
 
 ### Fix the disk partition
 
