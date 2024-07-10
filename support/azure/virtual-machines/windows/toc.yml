@@ -71,6 +71,8 @@
     href: virtual-machines-windows-repair-boot-configuration-data.md
   - name: Replace corrupted or missing binary files
     href: virtual-machines-windows-replace-system-binary-file.md
+  - name: Verify that the Windows partition is active
+    href: verify-windows-partition-is-active.md
 
 - name: VM health
   items:
