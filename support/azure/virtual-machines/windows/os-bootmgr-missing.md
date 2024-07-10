@@ -10,6 +10,8 @@ ms.custom: sap:My VM is not booting
 
 # Troubleshoot Windows VM OS with missing boot manager
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article explains when the Windows VM boot manager is missing, and how to solve the problem.
 
 ## Symptom

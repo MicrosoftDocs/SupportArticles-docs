@@ -14,8 +14,9 @@ ms.date: 10/31/2018
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # Troubleshoot an RDP general error in Azure VM
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article describes a general error you may experience when you make a Remote Desktop Protocol (RDP) connection to a Windows Virtual Machine (VM) in Azure.
 

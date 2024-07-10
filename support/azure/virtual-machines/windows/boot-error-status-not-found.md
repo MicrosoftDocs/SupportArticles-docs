@@ -18,10 +18,11 @@ ms.custom: sap:My VM is not booting
 
 # Troubleshoot Windows Boot Manager error  - 0xC0000225 "Status not found"
 
-This article provides steps to resolve startup issues in which a `0xC0000225` error code occurs on Azure Virtual Machines. This error states that the status or object isn't found.
+**Applies to:** :heavy_check_mark: Windows VMs
 
-*Original product version:* &nbsp; Virtual Machine running Windows  
 *Original KB number:* &nbsp; 4010138
+
+This article provides steps to resolve startup issues in which a `0xC0000225` error code occurs on Azure Virtual Machines. This error states that the status or object isn't found.
 
 ## Symptoms
 

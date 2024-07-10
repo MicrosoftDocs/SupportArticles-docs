@@ -12,6 +12,8 @@ ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 
 # Troubleshoot RHUI certificate issues in Azure
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article discusses common issues in the Red Hat Update Infrastructure (RHUI) that are caused by expired or missing Transport Layer Security (TLS) or Secure Sockets Layer (SSL) certificates.
 
 ## Prerequisites

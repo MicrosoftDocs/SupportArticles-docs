@@ -132,7 +132,7 @@
     items:
     - name: Troubleshoot dynamic groups
       href: dir-dmns-obj/troubleshoot-dynamic-groups.md
-    - name: Pause and resume dynamic group updates
+    - name: Troubleshooting dynamic group processing
       href: dir-dmns-obj/troubleshoot-dynamic-group-processing.md
   - name: Users
     items:

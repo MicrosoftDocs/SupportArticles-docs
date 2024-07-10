@@ -14,8 +14,9 @@ ms.topic: troubleshooting
 ms.date: 06/13/2024
 ms.custom: sap:My VM is not booting
 ---
-
 # Boot Error – This is not a Bootable Disk
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where the disk isn't bootable in an Azure Virtual Machine (VM).
 

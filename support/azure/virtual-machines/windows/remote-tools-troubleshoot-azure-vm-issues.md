@@ -18,6 +18,8 @@ ms.service: virtual-machines
 
 # Use remote tools to troubleshoot Azure VM issues
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 When you troubleshoot issues on an Azure virtual machine (VM), you can connect to the VM by using the remote tools that are discussed in this article instead of using the Remote Desktop Protocol (RDP).
 
 ## Serial console

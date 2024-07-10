@@ -16,6 +16,8 @@ ms.custom: sap:My VM is not booting
 
 # Troubleshoot boot error - disk read error occurred
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article provides steps to resolve issues in which the disk can't be read in an Azure virtual machine (VM).
 
 ## Symptoms

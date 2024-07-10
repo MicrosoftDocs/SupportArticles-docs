@@ -15,8 +15,9 @@ ms.topic: troubleshooting
 ms.date: 06/13/2024
 ms.custom: sap:My VM is not booting
 ---
-
 # Windows Stop Error - #0x000000EF "Critical Process Died"
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where a critical process dies during boot in an Azure VM.
 

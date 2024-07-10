@@ -14,8 +14,9 @@ ms.date: 10/23/2018
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # Remote Desktop Services isn't starting on an Azure VM
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article describes how to troubleshoot issues when you connect to an Azure virtual machine (VM) and Remote Desktop Services, or TermService, isn't starting or fails to start.
 

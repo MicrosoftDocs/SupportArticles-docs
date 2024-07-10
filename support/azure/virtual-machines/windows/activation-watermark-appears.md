@@ -12,9 +12,9 @@ ms.topic: troubleshooting-problem-resolution
 ---
 # Windows activation watermark continues to be displayed
 
-This document discusses how to resolve the continued presence of a Windows activation watermark on Microsoft Azure virtual machines.
+**Applies to:** :heavy_check_mark: Windows VMs running Windows Server 2022 Datacenter Azure Edition
 
-*Applies to:*&nbsp; Windows Server 2022 Datacenter: Azure Edition
+This document discusses how to resolve the continued presence of a Windows activation watermark on Microsoft Azure virtual machines.
 
 ## Prerequisites
 

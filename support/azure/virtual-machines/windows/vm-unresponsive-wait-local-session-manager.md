@@ -13,8 +13,9 @@ ms.topic: troubleshooting
 ms.date: 10/22/2020
 ms.custom: sap:My VM is not booting
 ---
-
 # VM is unresponsive while waiting for the Local Session Manager service
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where the guest operating system (guest OS) is stuck waiting for Local Session Manager to finish processing while it boots an Azure virtual machine (VM).
 

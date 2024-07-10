@@ -17,6 +17,8 @@ ms.custom: sap:Cannot start or stop my VM
 
 # Azure Windows VM shutdown is stuck on "Restarting", "Shutting Down", or "Stopping services"
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article provides steps to resolve the issues of "Restarting", "Shutting down", or "Stopping services" messages that you may encounter when you reboot a Windows virtual machine (VM) in Microsoft Azure.
 
 ## Symptoms

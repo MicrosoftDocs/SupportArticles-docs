@@ -9,10 +9,11 @@ ms.custom: sap:My VM is not booting
 ---
 # Windows boot error in an Azure VM: An operating system wasn't found
 
-This article provides a solution to an issue where Windows VM doesn't start with error "An operating system wasn't found".
+**Applies to:** :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4010142
+
+This article provides a solution to an issue where Windows VM doesn't start with error "An operating system wasn't found".
 
 ## Symptoms
 

@@ -18,6 +18,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 # Windows Commands - CMD and PowerShell
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This section includes example commands for performing common tasks in scenarios where you may need to use SAC to access your Windows VM, such as when you need to troubleshoot RDP connection failures.
 
 SAC has been included in all versions of Windows since Windows Server 2003 but is disabled by default. SAC relies on the `sacdrv.sys` kernel driver, the `Special Administration Console Helper` service (`sacsvr`), and the `sacsess.exe` process. For more information, see [Emergency Management Services Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc787940(v%3dws.10)).

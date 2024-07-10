@@ -12,6 +12,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Troubleshoot classic storage resource deletion errors
 
+**Applies to:** :heavy_check_mark: Classic VMs
+
 This article provides troubleshooting guidance when one of the following errors occurs trying to delete Azure classic storage account, container, or *.vhd page blob file.
 
 This article only covers issues with classic storage resources. If a user deletes a classic virtual machine using the Azure portal, PowerShell or CLI then the Disks aren't automatically deleted. The user gets the option to delete the "Disk" resource. In case the option isn't selected, the "Disk" resource will prevent deletion of the storage account, container and the actual *.vhd page blob file.

@@ -14,8 +14,9 @@ ms.date: 11/13/2018
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # Cannot RDP to a VM because the VM boots into Safe Mode
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article shows how to resolve a problem in which you cannot connect to Azure Windows Virtual Machines (VMs) because the VM is configured to boot into Safe Mode.
 

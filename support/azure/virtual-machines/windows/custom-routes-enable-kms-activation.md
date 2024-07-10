@@ -17,6 +17,8 @@ ms.author: genli
 
 # Windows activation fails in forced tunneling scenario
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article describes how to resolve the KMS activation problem that you might experience when you enable forced tunneling in site-to-site VPN connection or ExpressRoute scenarios.
 
 ## Symptom

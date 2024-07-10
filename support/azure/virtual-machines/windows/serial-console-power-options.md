@@ -18,6 +18,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 # Power Options available from the Azure Serial Console
 
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
 The Azure Serial Console provides several powerful tools for power management on your VM or virtual machine scale set. These power management options may be confusing to some, so this is an overview of each tool and its intended use case.
 
 Serial Console Feature | Description | Use Case

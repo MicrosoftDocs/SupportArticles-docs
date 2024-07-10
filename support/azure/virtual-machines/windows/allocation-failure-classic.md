@@ -10,10 +10,11 @@ ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.date: 08/28/2023
 ms.author: genli
-
 ms.custom: sap:Received an Allocation Failure
 ---
 # Troubleshooting steps specific to allocation failure scenarios in the classic deployment model
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 [!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
