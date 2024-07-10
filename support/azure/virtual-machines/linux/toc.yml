@@ -228,7 +228,14 @@
     href: create-swap-file-linux-vm.md
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
-    
+
+- name: Linux High Availability (HA) Pacemaker cluster
+  items:
+  - name: RHEL
+    items:
+    - name: Troubleshoot Azure fence agent issues
+      href: troubleshoot-azure-fence-agent-rhel.md
+      
 - name: Linux repositories
   items:
   - name: SUSE
@@ -243,6 +250,7 @@
       href: linux-rhui-connectivity-issues.md
     - name: Yum and dnf common issues
       href: yum-dnf-common-issues.md 
+      
   - name: Ubuntu
     items:
     - name: APT common issues
