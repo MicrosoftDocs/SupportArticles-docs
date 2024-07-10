@@ -18,6 +18,8 @@ ms.reviewer: msaenzbo, divargas, v-six
 
 # How to reset a local Linux password on Azure VMs
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article provides three methods to reset local Linux Virtual Machine (VM) passwords. If the user account is expired or you want to create a new account, you can use the following methods to create a new local admin account and regain access to the VM.
 
 ## Reset the password by using Azure Linux Agent

@@ -14,8 +14,9 @@ ms.date: 02/23/2020
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # An internal error occurs when you try to connect to an Azure VM through Remote Desktop
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article describes an error that you may experience when you try to connect to a virtual machine (VM) in Microsoft Azure.
 

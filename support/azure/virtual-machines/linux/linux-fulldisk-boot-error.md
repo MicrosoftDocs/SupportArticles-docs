@@ -12,6 +12,8 @@ ms.collection: linux
 ---
 # Troubleshoot Azure Linux virtual machine boot issues due to full OS disk
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 Under certain circumstances and configurations, a full operating system (OS) disk might lead to Azure Linux virtual machine (VM) boot issues. This article provides some causes and solutions for the boot issues.
 
 ## Symptoms

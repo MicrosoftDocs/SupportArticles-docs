@@ -16,6 +16,8 @@ ms.date: 07/02/2024
 ---
 # Troubleshoot common issues in the yum and dnf package management tools for Linux
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article discusses common issues that you might encounter when you use `yum` and `dnf` package management tools to install or update applications on Azure virtual machines (VMs), and provides solutions to these issues.
 
 > [!CAUTION]

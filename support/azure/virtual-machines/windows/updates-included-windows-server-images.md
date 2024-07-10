@@ -9,7 +9,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Updates are included in Windows Server images from Azure Marketplace
 
-_Original product version:_ &nbsp; Windows Server 2019  
+**Applies to:** :heavy_check_mark: Windows VMs
+
 _Original KB number:_ &nbsp; 4046813
 
 ## Frequently asked questions

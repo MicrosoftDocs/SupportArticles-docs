@@ -451,8 +451,6 @@
     href: uploaded-vhd-not-support.md
   - name: Image deployment and management
     items:
-    - name: Cloud-init-enabled VM takes a long time to start up
-      href: cloud-init-deployment-delay.md
     - name: Upload Hyper-V DC to Azure
       href: upload-existing-hyperv-dc-azure-ps.md
     - name: Troubleshoot Azure VM Image Builder

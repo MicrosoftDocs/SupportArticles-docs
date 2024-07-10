@@ -13,10 +13,11 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: article
 ms.date: 05/24/2024
 ms.author: genli
-
 ms.custom: sap:VM Extensions not operating correctly
 ---
 # Install the Azure Virtual Machine Agent in offline mode
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 The Azure Virtual Machine Agent (VM Agent) provides useful features, such as local administrator password reset and script pushing. This article shows you how to install the VM Agent for an offline Windows virtual machine (VM).
 
