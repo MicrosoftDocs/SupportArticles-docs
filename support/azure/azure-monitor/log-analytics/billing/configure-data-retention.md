@@ -20,17 +20,15 @@ You can set a Log Analytics workspace's default retention in the Azure portal to
 1. Sign in to the [Azure portal](https://portal.azure.com). 
 1. Enter **log analytics** in the search.
 1. Under **Services**, select **Log Analytics**.
-1. Select your specific Log Analytics Workspace.  
-
-:::image type="content" source="media/configure-data-retention/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/configure-data-retention/log-analytics-workspaces.png":::
-
-1. In the Settings secton, select **Usage and estimated costs**.
+1. Select your Log Analytics Workspace.  
+1. In the **Settings** secton, select **Usage and estimated costs**.
     
-    :::image type="content" source="media/configure-data-retention/daily-cap-1.png" alt-text="daily cap step 1" lightbox="media/configure-data-retention/daily-cap-1.png":::
+    :::image type="content" source="media/configure-data-retention/data-retention.png" alt-text="The image about how to open Usage and estimated costs":::
 1. On the **Usage and estimated costs** page, select **Data Retention** from the top of the page.  
-:::image type="content" source="media/configure-data-retention/data-retention.png" alt-text="Data retention step 1" lightbox="media/configure-data-retention/data-retention.png":::
+    :::image type="content" source="media/configure-data-retention/open-data-retention.png" alt-text="The image about how to open Data Retention":::
+
 
 1. On the pane, move the slider to increase or decrease the number of days, then select **OK**.  
-:::image type="content" source="media/configure-data-retention/data-retention-2.png" alt-text="data retention step 2" lightbox="media/configure-data-retention/data-retention-2.png":::
+:::image type="content" source="media/configure-data-retention/data-retention-2.png" alt-text="The image about how to configure Data Retention settings":::
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
