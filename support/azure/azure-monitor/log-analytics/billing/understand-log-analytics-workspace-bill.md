@@ -1,4 +1,3 @@
-
 ---
 title: Understand cost and usage in Log Analytics workspace in Microsoft Azure
 description: Learn how to understand the costs associated with your Log Analytics Workspace and identify causes for increased expense.
@@ -7,7 +6,6 @@ ms.author: neghuman
 ms.service: azure-monitor
 ms.custom: sap:Log Analytics Billing
 ---
-
 # Understand cost and usage in Log Analytics workspace
 
 This article helps you learn how to understand the costs associated with your Log Analytics Workspace and to identify cost of each service that connects to the Log Analytics workspace.
