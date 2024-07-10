@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 06/18/2024
+ms.date: 07/10/2024
 ms.reviewer: kendownie, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -151,8 +151,8 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 4. `CheckRegKey`: Check if the `CloudKerberosTicketRetrieval` registry key is enabled. This registry key is required for Entra Kerberos authentication.
 5. `CheckRealmMap`: Check if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
 6. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
-7. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that is required for Microsoft Entra Kerberos authentication. Its state should be set to running.
-8. `CheckIpHlpScv`: Checks for IP Helper service (iphlpsvc) that is required for Microsoft Entra Kerberos authentication. Its state should be set to running.
+7. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
+8. `CheckIpHlpScv`: Checks for IP Helper Service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
 
 If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run.
 
