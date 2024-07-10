@@ -140,7 +140,7 @@ Setting the agent system clock time to match the management server system clock 
 
 4. The following query can be used to see what additional data has been submitted to the database with a timestamp in the future. The tables related to maintenance mode should have several rows, assuming there are agents currently in maintenance mode that's scheduled to end at some time. All other tables should have timestamps with the current time, or in the past.
 
-    This query doesn't work if we have any custom schema due to application requirement (If you run it against Data Warehouse or Database, you will have errors). The following query will help to get the table information including the custom schema.
+    This query doesn't work if we have any custom schema due to application requirement. If you run it against Data Warehouse or Database, you will have errors. Use the following query to get the table information including the custom schema.
 
    ```sql
     /* */
