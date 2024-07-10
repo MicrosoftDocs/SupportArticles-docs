@@ -11,13 +11,9 @@ ms.custom: sap:Log Analytics Billing
 ---
 # Why daily cap was exceeded in Log Analytics workspace
 
-This article helps you learn how to manage data volume of your Azure Log Analytics workspace.
+Learning to manage data volume is crucial for maintaining the health and performance of your Azure Log Analytics workspace. If you're experiencing daily cap issues, it could be due to a high volume of data ingestion or retention settings that need adjustment. This article provides guidance on how to use Insights to identify potential root causes for daily cap issues.
 
-## Check your current usage
-
-Learning to manage data volume is crucial for maintaining the health and performance of your Azure Log Analytics workspace. If you're experiencing daily cap issues, it could be due to a high volume of data ingestion or retention settings that need adjustment. This article provides guidance on how to control your data volume by identify potential root causes for daily cap issues.
-
-### Select your Log Analytics Workspace
+### View Insights in Log Analytics Workspace
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Enter **log analytics** in the search bar.
