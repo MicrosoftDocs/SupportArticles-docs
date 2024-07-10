@@ -15,8 +15,9 @@ ms.date: 06/09/2023
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
-
 # VM is unresponsive with "C01A001D" error after applying Windows Update
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where Windows Update (KB) generates an error and becomes unresponsive in an Azure VM running Windows Server 2016.
 

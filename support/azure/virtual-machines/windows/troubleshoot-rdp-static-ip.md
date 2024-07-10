@@ -14,8 +14,9 @@ ms.date: 11/08/2018
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # Cannot remote desktop to Azure Virtual Machines because of static IP
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article describes a problem in which you cannot remote desktop to Azure Windows Virtual Machines (VMs) after a static IP is configured in the VM.
 

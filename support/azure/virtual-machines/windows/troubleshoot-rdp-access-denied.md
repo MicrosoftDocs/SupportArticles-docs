@@ -14,8 +14,9 @@ ms.date: 09/14/2021
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # Access is denied when you try to connect to an Azure Windows VM
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article explains how to troubleshoot a problem that prevents you from connecting to an Azure Windows virtual machine (VM) because of an "access is denied" error.
 

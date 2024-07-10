@@ -8,6 +8,8 @@ ms.custom: sap:VM Performance, linux-related-content
 ---
 # Troubleshoot performance issues on Virtual Machine Scale Set instances using Performance Diagnostics (PerfInsights)
 
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
 [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/overview) are groups of load-balanced VMs. This article explains how to use [Performance Diagnostics (PerfInsights)](performance-diagnostics.md) to troubleshoot performance issues on Virtual Machine Scale Set instances.
 
 ## Monitor continuous performance and troubleshoot identified issues

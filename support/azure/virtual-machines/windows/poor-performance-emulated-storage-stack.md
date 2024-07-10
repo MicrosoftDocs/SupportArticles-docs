@@ -9,7 +9,8 @@ ms.custom: sap:VM Performance
 ---
 # Poor performance for VMs that run with an emulated mode storage stack on Windows Server 2012 R2
 
-_Original product version:_ &nbsp; Virtual Machine running Windows  
+**Applies to:** :heavy_check_mark: Windows VMs
+
 _Original KB number:_ &nbsp; 4056345
 
 ## Symptoms

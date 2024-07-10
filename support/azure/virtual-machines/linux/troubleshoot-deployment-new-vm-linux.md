@@ -8,6 +8,8 @@ ms.reviewer: srijangupta, scotro, jarrettr
 ---
 # Troubleshoot issues when deploying Linux virtual machines
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 [!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-opening](../../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-opening-include.md)]

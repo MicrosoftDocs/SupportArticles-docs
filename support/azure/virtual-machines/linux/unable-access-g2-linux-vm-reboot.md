@@ -11,7 +11,8 @@ ms.reviewer:
 ---
 # Can't access Generation 2 Linux VM after a reboot
 
-_Original product version:_ &nbsp; Azure  
+**Applies to:** :heavy_check_mark: Linux VMs
+
 _Original KB number:_ &nbsp; 4541599
 
 ## Summary

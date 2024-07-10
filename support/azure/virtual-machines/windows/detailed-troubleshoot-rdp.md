@@ -19,6 +19,8 @@ ms.custom: sap:Cannot connect to my VM
 ---
 # Detailed troubleshooting steps for remote desktop connection issues to Windows VMs in Azure
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article provides detailed troubleshooting steps to diagnose and fix complex Remote Desktop errors for Windows-based Azure virtual machines.
 
 > [!IMPORTANT]

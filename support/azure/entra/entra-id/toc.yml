@@ -132,6 +132,8 @@
     items:
     - name: Troubleshoot dynamic groups
       href: dir-dmns-obj/troubleshoot-dynamic-groups.md
+    - name: Troubleshooting dynamic group processing
+      href: dir-dmns-obj/troubleshoot-dynamic-group-processing.md
   - name: Users
     items:
     - name: Password changes aren't saved

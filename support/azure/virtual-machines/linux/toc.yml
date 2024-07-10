@@ -197,11 +197,13 @@
   - name: Fail to create a VM with Ed25519 SSH keys
     href: ed25519-ssh-keys.md
   - name: Cloud-init-enabled VM takes a long time to start up
-    href: ../windows/cloud-init-deployment-delay.md
+    href: cloud-init-deployment-delay.md
   - name: Image deployment and management
     items:
     - name: Troubleshoot Azure VM Image Builder
       href: /azure/virtual-machines/linux/image-builder-troubleshoot?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Cloud-init-enabled VM takes a long time to start up
+      href: cloud-init-deployment-delay.md
 
 - name: Disk Management
   items:
@@ -226,7 +228,14 @@
     href: create-swap-file-linux-vm.md
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
-    
+
+- name: Linux High Availability (HA) Pacemaker cluster
+  items:
+  - name: RHEL
+    items:
+    - name: Troubleshoot Azure fence agent issues
+      href: troubleshoot-azure-fence-agent-rhel.md
+      
 - name: Linux repositories
   items:
   - name: SUSE
@@ -241,6 +250,7 @@
       href: linux-rhui-connectivity-issues.md
     - name: Yum and dnf common issues
       href: yum-dnf-common-issues.md 
+      
   - name: Ubuntu
     items:
     - name: APT common issues

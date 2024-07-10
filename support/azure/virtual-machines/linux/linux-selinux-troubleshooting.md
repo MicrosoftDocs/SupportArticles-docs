@@ -12,6 +12,8 @@ ms.collection: linux
 ---
 # SSH connection to Azure Linux virtual machines fails due to SELinux misconfiguration
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article provides a solution to an issue where the Secure Shell (SSH) connection to an Azure virtual machine (VM) fails because of SELinux misconfiguration.
