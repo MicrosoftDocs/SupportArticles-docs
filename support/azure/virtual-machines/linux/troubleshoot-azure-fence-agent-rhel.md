@@ -194,7 +194,7 @@ Apr 2 00:49:57 heeudpgscs01 stonith-ng[105424]: warning: fence_azure_arm[109393]
 To troubleshoot the insufficient permissions, follow these steps:
 
 1. Check the custom role definition for the `Linux Fence Agent Role` as described in [Create a custom role for the fence agent](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent). The role name may vary for different customers.
-2. Check if the *fence-agent* app has assigned this custom role to the affected VM. If not, assign the custom role to the VM via **Access Control**.
+2. Check if the fence agent app has assigned this custom role to the affected VM. If not, assign the custom role to the VM via **Access Control**.
 4. Start the Pacemaker cluster. It should start along with the fence agent.
 5. Verify the cluster status to confirm that the fence agent issues are fixed:
 
@@ -207,7 +207,7 @@ To troubleshoot the insufficient permissions, follow these steps:
 If you check the */var/log/messages* log file, you'll see an output that resembles the following example:
 
 ```output
-warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed: Error occurred in request., SSLError: HTTPSConnectionPool(host='management.azure.com ', port=443): Max retries exceeded with url: /subscriptions/<subscription ID>/resourceGroups/<resource group name>/providers/Microsoft.Compute/virtualMachines?api-version=2019-03-01 (Caused by SSLError(SSLError('bad handshake: SysCallError(-1, 'Unexpected EOF')',),)) ]
+warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed: Error occurred in request., SSLError: HTTPSConnectionPool(host='management.azure.com ', port=443): Max retries exceeded with url: /subscriptions/<subscription ID>/resourceGroups/<resource group>/providers/Microsoft.Compute/virtualMachines?api-version=2019-03-01 (Caused by SSLError(SSLError('bad handshake: SysCallError(-1, 'Unexpected EOF')',),)) ]
 ```
 
 Test connectivity from the affected nodes by running the following `openssl` command:
