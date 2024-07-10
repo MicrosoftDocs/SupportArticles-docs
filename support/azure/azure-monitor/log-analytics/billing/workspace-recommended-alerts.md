@@ -1,6 +1,6 @@
 ---
-title: Help me set up Log Analytics Workspace recommended alerts for proactive daily cap and ingestion related notifications
-description: Learn how to get notified when you hit the daily cap limit.
+title: Set recommended alerts in Microsoft Azure Log Analytics workspace 
+description: Learn how to get notified when you reach the daily cap limit.
 ms.date: 07/01/2024
 ms.author: neghuman
 ms.service: azure-monitor
@@ -8,38 +8,25 @@ keywords:
 #Customer intent: As an Azure Monitor user, I want to understand my Log Analytics workspace's bill including what's included in the cost and how to read the detailed usage reports.
 ms.custom: sap:Log Analytics Billing
 ---
-# Help me set up Log Analytics Workspace recommended alerts for proactive daily cap and ingestion related notifications
+# Set recommended alerts in Microsoft Azure Log
 
-This article helps you learn how to set up Log Analytics recommended alerts to get notified when you hit the daily cap limit.
-
-> [!NOTE]
-> The prices shown in these images are for example purposes only. They aren't intended to reflect actual pricing.
-
-When the daily cap is reached for a Log Analytics workspace, a banner is displayed in the Azure portal, and an event is written to the Operations table in the workspace. You should create an alert rule to proactively notify you when this occurs.
-
-<!-- Sign into the Azure portal to get started.
-
-1. In the Azure portal, navigate to your Log Analytics resource. -->
-### Sign in to Azure
-
-Sign in to the [Azure portal](https://portal.azure.com).
+When the daily cap is reached in a Log Analytics workspace, a banner displays in the Azure portal, and an event is logged in the **Operations** table within the Log Analytics workspace. This article guides you through setting up Log Analytics recommended alerts to receive notifications when the daily cap is reached.
 
 ### Select your Log Analytics Workspace
 
-1. Enter *log analytics* in the search.
+1. Sign in to the [Azure portal](https://portal.azure.com). 
+1. Enter **log analytics** in the search bar.
 1. Under **Services**, select **Log Analytics**.
-
-1. Select your specific Log Analytics Workspace.  
-:::image type="content" source="media/workspace-recommended-alerts/log-analytics-workspaces.png" alt-text="select log analytics workspaces" lightbox="media/workspace-recommended-alerts/log-analytics-workspaces.png":::
-
-1. Select **Alerts**.  
+1. Select your Log Analytics Workspace.  
+1. In the **Monitoring** section, select **Alerts**.  
 :::image type="content" source="media/workspace-recommended-alerts/log-analytics-alert-1.png" alt-text="log analytics alert step 1" lightbox="media/workspace-recommended-alerts/log-analytics-alert-1.png":::
 
-1. With the Alerts (1) pane selected
-    1. Select **Set up recommendations** (2)
-    1. Toggle the radio buttons for which alerts rules you would like to configure. We recommend enabling all recommended alert rules(3).
-    1. Fill out the **Notify me by** section.
+1. In the **Alerts** page selected, **Set up recommendations**, and then configure the alert rules:
+   
+    1. Turn on the alert rules that you would like to receive notifications. It's recommended to enable all recommended alert rules.
+    1. In the **Notify me** by section, specify an email address to receive the notification.
     1. Select **Save**.  
+
     :::image type="content" source="media/workspace-recommended-alerts/log-analytics-alert-2.png" alt-text="log analytics alert step 2" lightbox="media/workspace-recommended-alerts/log-analytics-alert-2.png":::
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
