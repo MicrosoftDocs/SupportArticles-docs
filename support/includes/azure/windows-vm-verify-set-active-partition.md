@@ -40,7 +40,7 @@ ms.date: 07/10/2024
       sel disk 1
       ```
 
-      :::image type="content" source="media/os-bootmgr-missing/list-disk.png" alt-text="The diskpart window shows outputs of list disk and sel disk 1 commands. Disk 0 and Disk 1 are displayed in the table. Disk 1 is the selected disk.":::
+      :::image type="content" source="media/windows-vm-verify-set-active-partition/list-disk.png" alt-text="The diskpart window shows outputs of list disk and sel disk 1 commands. Disk 0 and Disk 1 are displayed in the table. Disk 1 is the selected disk.":::
 
    3. List all the partitions on that disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and around 350 MB in size. In the following image, this partition is Partition 1.
 
@@ -49,13 +49,13 @@ ms.date: 07/10/2024
       sel partition 1
       ```
 
-      :::image type="content" source="media/os-bootmgr-missing/list-partition.png" alt-text="The diskpart window shows outputs of list partition and sel partition 1 commands. Partition 1 is the selected disk.":::
+      :::image type="content" source="media/windows-vm-verify-set-active-partition/list-partition.png" alt-text="The diskpart window shows outputs of list partition and sel partition 1 commands. Partition 1 is the selected disk.":::
 
    4. Check the status of the partition. In our example, Partition 1 is not active.
 
       `detail partition`
 
-      :::image type="content" source="media/os-bootmgr-missing/detail-partition-not-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is not active.":::
+      :::image type="content" source="media/windows-vm-verify-set-active-partition/detail-partition-not-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is not active.":::
 
       If the partition isn't active, change the Active flag and then recheck the change was done properly.
 
@@ -64,7 +64,7 @@ ms.date: 07/10/2024
       detail partition
       ```
 
-      :::image type="content" source="media/os-bootmgr-missing/detail-partition-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is active.":::
+      :::image type="content" source="media/windows-vm-verify-set-active-partition/detail-partition-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is active.":::
 
    5. Exit the DISKPART tool.
 
