@@ -16,14 +16,13 @@ When the daily cap is reached in a Log Analytics workspace, a banner displays in
 
 1. Sign in to the [Azure portal](https://portal.azure.com). 
 1. Enter **Log Analytics** in the search bar.
-1. Under **Services**, select **Log Analytics**.
-1. Select your Log Analytics workspace.  
+1. Under **Services**, select **Log Analytics**, and then select your Log Analytics workspace.  
 1. In the **Monitoring** section, select **Alerts**.  
 :::image type="content" source="media/workspace-recommended-alerts/log-analytics-alert-1.png" alt-text="The image about how to open Alerts" lightbox="media/workspace-recommended-alerts/log-analytics-alert-1.png":::
 
 1. In the **Alerts** page selected, **Set up recommendations**, and then configure the alert rules:
    
-    1. Turn on the alert rules that you would like to receive notifications. It's recommended to enable all recommended alert rules.
+    1. Turn on the alert rules that you would like to receive notifications for. It's recommended to enable all alert rules.
     1. In the **Notify me** section, specify an email address to receive the notification.
     1. Select **Save**.  
 
