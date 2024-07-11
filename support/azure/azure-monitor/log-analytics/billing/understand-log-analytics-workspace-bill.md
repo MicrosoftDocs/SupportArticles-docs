@@ -32,12 +32,9 @@ This article helps you learn how to understand the costs that are associated wit
 1. Select the plus sign (+) to open a new tab within the **Cost analysis** page.  
 1. On the new tab, select **Invoice details**. The **Invoice details** page shows the cost for each service that sends data to the current Log Analytics workspace.
 1. Update the date range to match the specific month that you're examining for this billing cycle.
+1. The following is an example of the Invoice details. This example shows that the Log Analytics meter displays lower usage compared to other services that send data to the Log Analytics workspace. This discrepancy suggests an area for further investigation or optimization of how these services use resources within the current Log Analytics workspace.
 
-The following is an example of the Invoice details:
-
-:::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-9.png" alt-text="view cost step 9" lightbox="media/understand-log-analytics-workspace-bill/view-cost-9.png":::
-
-This example shows that the Log Analytics meter displays lower usage compared to other services that send data to the Log Analytics workspace. This discrepancy suggests an area for further investigation or optimization of how these services use resources within the current Log Analytics workspace.
+   :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-9.png" alt-text="view cost step 9" lightbox="media/understand-log-analytics-workspace-bill/view-cost-9.png":::
 
 ### Read cost report on Resource tab
 
@@ -65,7 +62,7 @@ This example shows that the Log Analytics meter displays lower usage compared to
 1. Select **Daily cost**.  
 1. Update the month that's selected to match the specific month that you're examining for this billing cycle. The total should now match the invoice details.
 1. The Service name pie chart displays an alternative view that shows that data injection services are primarily responsible for driving the overall cost.
-1. The bar chart displays a cost increase at the end of the month. This can be further investigated to determine the root cause.
+1. In the following example of the Daily costs, the bar chart displays a cost increase at the end of the month. This can be further investigated to determine the root cause.
 
    :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-12.png" alt-text="view cost step 12" lightbox="media/understand-log-analytics-workspace-bill/view-cost-12.png":::
 
