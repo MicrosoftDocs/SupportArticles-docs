@@ -152,7 +152,7 @@ The file that's associated with the error code is a system binary (*.sys*) file 
 
 Replace the system binary (*.sys*) file by following these steps:
 
-[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-replace-system-binary-file.md)]
+[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
 ## Cause 2: Corrupted boot configuration data or incorrectly prepared virtual hard drive
 

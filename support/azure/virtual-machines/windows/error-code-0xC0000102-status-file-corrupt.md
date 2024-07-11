@@ -50,19 +50,7 @@ If you have a recent backup of the VM, you may try [restoring the VM from the ba
 
 ### Step 2: Repair or replace the corrupt file
 
-#### Option 1: Repair the corrupt file
-
-Open an elevated CMD prompt and run **chkdsk** on the disk:
-
-```cmd
-chkdsk <drive-letter>: /F
-```
-
-#### Option 2: Replace the corrupt file
-
-Replace the corrupted system binary (*.sys*) file by following these steps:
-
-[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-replace-system-binary-file.md)]
+[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
 ### Step 3: Enable the Serial Console and memory dump collection
 

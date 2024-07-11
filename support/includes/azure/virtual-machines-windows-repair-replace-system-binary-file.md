@@ -3,9 +3,19 @@ author: genlin
 ms.author: genli
 ms.service: virtual-machines
 ms.topic: include
-ms.date: 06/21/2024
+ms.date: 07/11/2024
 ms.reviewer: jarrettr
 ---
+#### Option 1: Repair the corrupt file
+
+Open an elevated CMD prompt and run chkdsk on the disk:
+
+```cmd
+chkdsk <drive-letter>: /F
+```
+
+#### Option 2: Replace the corrupt file
+
 1. On the attached disk, browse to the location of the binary file that's displayed in the error message.
 
 1. Rename the file from *\<binary-name>.sys* to *\<binary-name>.sys.old*.
