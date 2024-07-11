@@ -6,7 +6,7 @@ ms.topic: include
 ms.date: 07/11/2024
 ms.reviewer: jarrettr
 ---
-#### Option 1: Repair the corrupt file
+#### Repair the corrupt file
 
 Open an elevated CMD prompt and run chkdsk on the disk:
 
@@ -14,7 +14,7 @@ Open an elevated CMD prompt and run chkdsk on the disk:
 chkdsk <drive-letter>: /F
 ```
 
-#### Option 2: Replace the corrupt file
+#### Replace the corrupt file
 
 1. On the attached disk, browse to the location of the binary file that's displayed in the error message.
 
