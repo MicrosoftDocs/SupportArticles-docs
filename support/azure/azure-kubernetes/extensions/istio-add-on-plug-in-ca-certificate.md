@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on plug-in CA certificate troubleshooting
 description: Learn how to do plug-in CA certificate troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 07/03/2024
+ms.date: 07/11/2024
 author: deveshdama
 ms.author: ddama
 editor: v-jsitser
@@ -98,7 +98,7 @@ As part of the add-on deployment for the plug-in certs feature, the following re
   istio-spc-asm-1-21   14h
   ```
 
-- The `istio-ca-root-cert` configmap is created in the `aks-istio-system` namespace as well as all user-managed namespaces. This configmap contains the root certificate that the certificate authority uses, and it's used by workloads in the namespaces to validate workload-to-workload communication, as follows:
+- The `istio-ca-root-cert` configmap is created in the `aks-istio-system` namespace and all user-managed namespaces. This configmap contains the root certificate that the certificate authority uses, and it's used by workloads in the namespaces to validate workload-to-workload communication, as follows:
 
   ```bash
   kubectl describe configmap istio-ca-root-cert --namespace aks-istio-system
@@ -257,7 +257,7 @@ Azure Key Vault secrets are synchronized with the cluster when the poll interval
 
 ### Issue 3: Certificate values are missing or are configured incorrectly
 
-If secret objects are missing from Azure Key Vault, or if these objects are configured incorrectly, it's possible that the `istiod-asm-1-21` pods could end up stuck in an `Init:0/2` status, delaying the installation of the add-on. To find the underlying cause of this problem, view output of running the following `kubectl describe` command against the `istiod` deployment:
+If secret objects are missing from Azure Key Vault, or if these objects are configured incorrectly, the `istiod-asm-1-21` pods might end up stuck in an `Init:0/2` status, delaying the installation of the add-on. To find the underlying cause of this problem, run the following `kubectl describe` command against the `istiod` deployment and view the output:
 
 ```bash
 kubectl describe deploy/istiod-asm-1-21 --namespace aks-istio-system
