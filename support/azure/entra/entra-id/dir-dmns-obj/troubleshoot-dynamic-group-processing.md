@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Groups with dynamic membership processing in Microsoft Entra ID
-description: Learn how to troubleshoot dynamic group processing using PowerShell
+description: Learn how to troubleshoot dynamic group processing by using pause and resume dynamic group processing scripts
 author: genlin
 ms.author: genli
 ms.reviewer: yuhko
