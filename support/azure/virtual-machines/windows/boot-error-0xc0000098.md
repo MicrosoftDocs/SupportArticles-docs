@@ -42,10 +42,10 @@ To fix the issue, follow these steps.
 2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 
-### Step 2: Replace the binary file
+### Step 2: Repair or replace the binary file
 
-Replace the system binary (*.sys*) file by following these steps:
+Repair or replace the system binary (*.sys*) file by following these steps:
 
-[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-replace-system-binary-file.md)]
+[!INCLUDE [Repair or replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

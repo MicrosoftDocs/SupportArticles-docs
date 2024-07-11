@@ -148,9 +148,9 @@ If you have a recent backup of the VM, you can try to [restore the VM from the b
 
 The file that's associated with the error code is a system binary (*.sys*) file that's missing or corrupted.
 
-### Solution 1: Replace the system binary file
+### Solution 1: Repair or replace the system binary file
 
-Replace the system binary (*.sys*) file by following these steps:
+Repair or replace the system binary (*.sys*) file by following these steps:
 
 [!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
