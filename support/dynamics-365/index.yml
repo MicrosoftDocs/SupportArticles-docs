@@ -7,6 +7,8 @@ metadata:
   services: service
   ms.date: 06/27/2024
   ms.service: dynamics-365
+  author: ChristySu
+  ms.author: christys
 
 additionalContent:
   sections:
