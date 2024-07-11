@@ -1,7 +1,7 @@
 ---
 title: Step 3 - Configure data collections for Azure Monitor Agent
 description: Learn how to configure data collections for Azure Monitor Agent so that you can migrate from the legacy Log Analytics agent.
-ms.date: 07/09/2024
+ms.date: 07/11/2024
 ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu
 ms.service: azure-monitor
 ms.custom: 
@@ -9,7 +9,7 @@ ms.custom:
 ---
 # Step 3: Configure data collections
 
-A data collection rule (DCR) is a new way to configure data collection streams for Azure Monitor Agent. The Azure Monitor DCR Config Generator is a tool that you can use to help migrate from legacy agents to Azure Monitor Agent and deploy DCRs. The tool is a PowerShell script that uses the information that you already collect in your Log Analytics workspaces to create and deploy DCRs automatically. You must still associate the rules to virtual machines (VMs) so that you can start the flow of data.
+A data collection rule (DCR) is a new way to configure data collection streams for Azure Monitor Agent. The Azure Monitor DCR Config Generator is a tool to help migrate from legacy agents to Azure Monitor Agent and deploy DCRs. The tool is a PowerShell script that uses the information you have collected in your Log Analytics workspaces to create and deploy DCRs automatically. You must still associate the rules with virtual machines (VMs) so that you can start the data flow.
 
 To use the DCR Config Generator, follow these steps:
 
@@ -35,13 +35,13 @@ To use the DCR Config Generator, follow these steps:
    - Modifying the filters
    - Changing the retention period
 
-1. Deploy the rules to your Azure Monitor workspace by using Azure CLI or the Azure portal.
+1. Deploy the rules to your Azure Monitor workspace by using the Azure CLI or Azure portal.
 
-1. Associate the rules to your VMs that are running Azure Monitor Agent by using the built-in association policies.
+1. Associate the rules with your VMs that are running Azure Monitor Agent by using the built-in association policies.
 
 ## Related content
 
-- [Switch VM Insights to Azure Monitor Agent]()
+[Switch VM Insights to Azure Monitor Agent]()
 
 ## Next steps
 

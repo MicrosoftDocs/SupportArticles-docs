@@ -1,7 +1,7 @@
 ---
 title: Step 2 - Understand the data that you're collecting
-description: Understand the data that you're collecting as the second step of the process of migrating to Azure Monitor Agent from the legacy Log Analytics Agent.
-ms.date: 07/09/2024
+description: Understand the data that you're collecting as the second step of migrating to Azure Monitor Agent from the legacy Log Analytics Agent.
+ms.date: 07/11/2024
 author: neilghuman
 ms.author: neghuman
 ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-leedennis
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Step 2: Understand the data that you're collecting
 
-To understand the data that you're collecting for the migration to Microsoft Azure Monitor Agent, repeat the following guidance for each of the workspaces in your environment.
+To understand the data that you're collecting for the migration to Microsoft Azure Monitor Agent, repeat the following guidance for each workspace in your environment.
 
 ## Data collections configured in the workspace
 
@@ -38,11 +38,11 @@ To see which legacy data collections are configured in the Log Analytics workspa
 
 To see which legacy solutions are added to your Log Analytics workspace, go to the [Azure portal][ap], view your Log Analytics workspaces, select your workspace, and then go to the **Solutions** section. You can search for solutions by name, category, or publisher. On the **Solutions** page, you can view the details of each solution, such as the following fields:
 
-- Description
-- Status
-- Configuration settings
+- **Description**
+- **Status**
+- **Configuration settings**
 
-You can also add, remove, or updated the solutions as necessary.
+You can also add, remove, or update the solutions as necessary.
 
 Some solutions might require extra steps to enable data collection. Examples of these steps include the following actions:
 
@@ -50,14 +50,14 @@ Some solutions might require extra steps to enable data collection. Examples of 
 - Configuring diagnostics
 - Enabling features
 
-The following table describes the features that you might have to enable.
+The following table describes the features that you might need to enable.
 
 | Service or feature | Migration path |
 |--|--|
 | System Center Operations Manager | If you use Operations Manager to monitor your Windows or Linux virtual machines (VMs), continue to use Microsoft Monitoring Agent for Operations Manager agent management. However, you have to install Azure Monitor Agent separately to send data to Azure Monitor. You can run both agents side-by-side on the same VM if they're configured to use different ports. |
 | Azure Automation Change Tracking and Inventory | If you use Change Tracking and Inventory to track configuration changes and software inventory on your VMs, you have to migrate to the current version of the solution, which uses Azure Monitor Agent instead of Microsoft Monitoring Agent. To do this, remove the legacy solution from your workspace, install Azure Monitor Agent on your VMs, and then add the current solution to your workspace. |
 | Azure Automation Update Management | If you use Update Management to manage updates and patches on your VMs, you have to migrate to the current version of the solution, which uses Azure Monitor Agent instead of Microsoft Monitoring Agent. To do this, remove the legacy solution from your workspace, install Azure Monitor Agent on your VMs, and then add the current solution to your workspace. |
-| Azure Security Center | If you use Azure Security Center to protect your VMs from threats and vulnerabilities, you have to migrate to the current version of the service, which uses Azure Monitor Agent instead of Microsoft Monitoring Agent. To do this, enable Azure Monitor Agent data collection option in Azure Security Center, install Azure Monitor Agent on your VMs, and then disable the Microsoft Monitoring Agent data collection option. |
+| Azure Security Center | If you use Azure Security Center to protect your VMs from threats and vulnerabilities, you have to migrate to the current version of the service, which uses Azure Monitor Agent instead of Microsoft Monitoring Agent. To do this, enable the Azure Monitor Agent data collection option in Azure Security Center, install Azure Monitor Agent on your VMs, and then disable the Microsoft Monitoring Agent data collection option. |
 | Azure Automation Hybrid Runbook Worker | If you use Azure Automation Hybrid Runbook Worker to run automation runbooks on your VMs, you can continue to use Microsoft Monitoring Agent for this feature. However, you have to install Azure Monitor Agent separately to send data to Azure Monitor. You can run both agents side-by-side on the same VM if they're configured to use different ports. |
 | Microsoft Sentinel | If you use Microsoft Sentinel to collect and analyze security data from your VMs, you have to migrate to the current version of the service, which uses Azure Monitor Agent instead of Microsoft Monitoring Agent. To do this, you have to install Azure Monitor Agent on your VMs, configure the data sources and connectors for Microsoft Sentinel, and then remove Microsoft Monitoring Agent from your VMs. |
 
@@ -67,9 +67,9 @@ You can also use the Azure Monitor Agent Migration Helper workbook to analyze th
 
 The workbook displays a table that contains the following columns:
 
-- Solution name
-- Last data received
-- Recommendation
+- **Solution**
+- **Last Data Received**
+- **Recommendation**
 
 ## Next steps
 

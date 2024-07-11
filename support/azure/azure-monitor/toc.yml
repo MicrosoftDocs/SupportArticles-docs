@@ -115,7 +115,7 @@ items:
   items:
   - name: Azure Monitor Agent migration
     items:
-    - name: Best practices for migrating to Azure Monitor Agent from the legacy Log Analytics agent
+    - name: Best practices for migrating to Azure Monitor Agent
       href: azure-monitor-agent/migration/best-practices-migrating-from-log-analytics-agent.md
     - name: Step 1 - Plan your migration
       href: azure-monitor-agent/migration/step-1-plan-your-migration.md

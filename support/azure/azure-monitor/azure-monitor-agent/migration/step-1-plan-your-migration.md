@@ -1,7 +1,7 @@
 ---
 title: Step 1 - Plan your migration to Azure Monitor Agent
 description: Learn how to plan your migration to Azure Monitor Agent as the first step toward upgrading from the legacy Log Analytics Agent.
-ms.date: 07/08/2024
+ms.date: 07/11/2024
 author: neilghuman
 ms.author: neghuman
 ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-leedennis
@@ -16,7 +16,7 @@ Before you start the migration, you should prepare a migration plan. To facilita
 
 ## Understand your estate
 
-You can use the [Azure Monitor Agent Migration Helper workbook](/azure/azure-monitor/agents/azure-monitor-agent-migration-helper-workbook) to gain an understanding of your environment and how many agents you must migrate. To access this workbook, follow these steps:
+You can use the [Azure Monitor Agent Migration Helper workbook](/azure/azure-monitor/agents/azure-monitor-agent-migration-helper-workbook) to understand your environment and how many agents you must migrate. To access this workbook, follow these steps:
 
 1. In the [Azure portal][ap], search for and select **Monitor**.
 1. In the **Monitor** menu pane, select **Workbooks**.
@@ -34,19 +34,19 @@ After the tabbed sections, the workbook displays the **Migration Status** sectio
 
 :::image type="content" source="media/step-1-plan-your-migration/azure-monitor-migration-helper-migration-status.png" alt-text="Azure portal screenshot of the Migration Status section of the Azure Monitor Agent Migration Helper workbook." lightbox="media/step-1-plan-your-migration/azure-monitor-migration-helper-migration-status.png":::
 
-At the beginning of each workbook, there are corresponding tabs for each of the resource types (such as Arc-enabled servers and virtual machine scale sets) that are represented in the **Resource Type** column of the **Migration Status** section. For example, to look at your Azure VMs, select the **Azure Virtual Machines** tab:
+At the beginning of each workbook, there are corresponding tabs for each resource type (such as Arc-enabled servers and virtual machine scale sets) that are represented in the **Resource Type** column of the **Migration Status** section. For example, to look at your Azure VMs, select the **Azure Virtual Machines** tab:
 
 :::image type="content" source="media/step-1-plan-your-migration/azure-monitor-migration-helper-azure-virtual-machines-tab.png" alt-text="Azure portal screenshot of the Azure Virtual Machines tab of the Azure Monitor Agent Migration Helper workbook." lightbox="media/step-1-plan-your-migration/azure-monitor-migration-helper-azure-virtual-machines-tab.png":::
 
-The **Azure Virtual Machines** tab shows the full list of Azure VMs, displaying the full details for each VM. This tab tells you which agents are installed as extensions and shows the corresponding migration status, based on the following relationship table.
+The **Azure Virtual Machines** tab shows the full list of Azure VMs, displaying the full details for each VM. This tab shows which agents are installed as extensions and the corresponding migration status based on the following relationship table.
 
-| Agent extension type            | Value of Migration Status column |
+| Agent extension type            | Value of the "Migration Status" column |
 |---------------------------------|----------------------------------|
 | MMA/OMS only                    | **Not Started**                  |
 | MMA/OMS and Azure Monitor Agent | **In Progress**                  |
 | Azure Monitor Agent only        | **Completed**                    |
 
-You can export the table of information in this tab to Microsoft Excel. To do this, select the **More** button (...), and then select **Export to Excel** from the menu.
+You can export the information table in this tab to Microsoft Excel. To do this, select the **More** button (...), and then select **Export to Excel** from the menu.
 
 > [!NOTE]
 > The list of column values that are shown in the **Azure Virtual Machines** tab is the same if you select the **Azure Virtual Machine Scale Sets** tab or the **Arc-Enabled Servers** tab.
@@ -59,7 +59,7 @@ If you're using automated deployment methodologies to deploy the legacy Log Anal
 
 1. In the **Microsoft Defender for Cloud** menu pane, search for the **Management** heading, and then select **Environment Settings**.
 
-1. In the **Microsoft Defender for Cloud | Environment settings** page, select the subscription that you want to change the configuration of.
+1. In the **Microsoft Defender for Cloud | Environment settings** page, select the subscription for which you want to change the configuration.
 
 1. In the **Settings | Defender plans** page, select **Settings & monitoring**.
 
@@ -71,16 +71,16 @@ If you're using automated deployment methodologies to deploy the legacy Log Anal
 
 For all servers that are hosted outside of Azure, you must install the [Azure Arc Connected Machine agent](/azure/azure-arc/servers/agent-overview) first.
 
-The Azure Arc Connected Machine agent is a software component that connects non-Azure VMs to Azure resources and services. To install the agent, you need to download the installation package from the Azure portal, run the installation script on each machine, and then register the VM in your Azure subscription. For more information, see [What is Azure Arc-enabled servers?](/azure/azure-arc/servers/overview) and [Quickstart: Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
+The Azure Arc Connected Machine agent is a software component that connects non-Azure VMs to Azure resources and services. To install the agent, you need to download the installation package from the Azure portal, run the installation script on each machine, and then register the VM in your Azure subscription. For more information, see [What Azure Arc-enabled servers are](/azure/azure-arc/servers/overview) and [Quickstart: Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
 ### Permissions
 
 To deploy Azure Monitor Agent, you must have the following permissions:
 
-| Built-in role | Scopes | Reason |
+| Built-in role | Scope | Reason |
 |--|--|--|
 | <ul> <li>Virtual Machine Contributor</li> <li>Azure Connected Machine Resource Administrator</li> </ul> | <ul> <li>Virtual machines or virtual machine scale sets</li> <li>Azure Arc-enabled servers</li> </ul> | To deploy the agent |
-| Any role that includes the action Microsoft.Resources/deployments/* (for example, [Log Analytics Contributor](/azure/role-based-access-control/built-in-roles#log-analytics-contributor)) | <ul> <li>Subscription</li> <li>Resource Group</li> </ul> | To deploy agent extension by using Azure Resource Manager templates (also used by Azure Policy) |
+| Any role that includes the action `Microsoft.Resources/deployments/*` (for example, [Log Analytics Contributor](/azure/role-based-access-control/built-in-roles#log-analytics-contributor)) | <ul> <li>Subscription</li> <li>Resource group</li> </ul> | To deploy the agent extension by using Azure Resource Manager templates (also used by Azure Policy) |
 
 ## Next steps
 
