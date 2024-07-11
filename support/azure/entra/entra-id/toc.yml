@@ -132,7 +132,7 @@
     items:
     - name: Troubleshoot dynamic groups
       href: dir-dmns-obj/troubleshoot-dynamic-groups.md
-    - name: Troubleshooting dynamic group processing
+    - name: Troubleshooting Groups with dynamic membership processing
       href: dir-dmns-obj/troubleshoot-dynamic-group-processing.md
   - name: Users
     items:
