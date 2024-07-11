@@ -152,7 +152,7 @@ The file that's associated with the error code is a system binary (*.sys*) file 
 
 Repair or replace the system binary (*.sys*) file by following these steps:
 
-[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
+[!INCLUDE [Repair or replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
 ## Cause 2: Corrupted boot configuration data or incorrectly prepared virtual hard drive
 
@@ -189,7 +189,7 @@ Repair the boot configuration data by running [BCDEdit](/windows-server/administ
    ```
 
    > [!NOTE]  
-   > If there's no *bcd* store file in the *boot* folder of the Boot partition, restore this file by following the steps in [Solution 1: Replace the system binary file](#solution-1-replace-the-system-binary-file), except that you're replacing the *\\boot\\bcd* file instead of a *.sys* file.
+   > If there's no *bcd* store file in the *boot* folder of the Boot partition, restore this file by following the steps in [Solution 1: Replace the system binary file](#solution-1-repair-or-replace-the-system-binary-file), except that you're replacing the *\\boot\\bcd* file instead of a *.sys* file.
 
 7. Repair the Boot Configuration data by running the following [BCDEdit /set](/windows-hardware/drivers/devtest/bcdedit--set) commands. Change the placeholders to the actual values, as described in the following table.
 

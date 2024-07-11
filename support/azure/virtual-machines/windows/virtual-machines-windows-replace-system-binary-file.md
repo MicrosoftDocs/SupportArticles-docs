@@ -15,6 +15,6 @@ This article shows how to repair or replace corrupted or missing binary files in
 
 ## How to repair or replace corrupted or missing binary files
 
-[!INCLUDE [Repair or replace corrupted or missing binary files](../../../includes/azure/virtual-machines-windows-replace-system-binary-file.md)]
+[!INCLUDE [Repair or replace corrupted or missing binary files](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
