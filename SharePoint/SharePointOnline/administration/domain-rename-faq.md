@@ -6,7 +6,7 @@ ms.reviewer: PramodBalusu
 ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 12/17/2023
+ms.date: 07/11/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -48,7 +48,7 @@ Microsoft doesn't disclose any information about the tenant that has your desire
 </details>
 <br/>
 <details>
-<summary><b>We already have 'fabikram.com' validated Why do we have to get 'fabikram.onmicrosoft.com' validated again to be able to rename our domain from 'contoso.sharepoint.com' to 'fabikram.sharepoint.com'? Can't you simply use fabikram.com to rename it?</b></summary>
+<summary><b>We already have 'fabikram.com' validated. Why do we have to get 'fabikram.onmicrosoft.com' validated to be able to rename our domain from 'contoso.sharepoint.com' to 'fabikram.sharepoint.com'? Can't you simply use fabikram.com to rename it?</b></summary>
 
 To have all the SharePoint URLs renamed from 'contoso.sharepoint.com' to 'fabrikam.sharepoint.com', you must have the 'fabikram.onmicrosoft.com' domain validated.
 
@@ -62,7 +62,7 @@ The old domain remains tied to the tenant as the initial domain.
 </details>
 <br/>
 <details>
-<summary><b>Can we change or remove the initial domain name (contoso.onmicrosoft.com) from the tenant?</b></summary>
+<summary><b>Can we change or remove the initial domain (contoso.onmicrosoft.com) from the tenant?</b></summary>
 
 Currently, we don't support changing or removing the initial domain. It remains tied to the tenant.
 
@@ -71,7 +71,7 @@ Currently, we don't support changing or removing the initial domain. It remains 
 <details>
 <summary><b>Can we roll back or revert to our old name in case something goes wrong?</b></summary>
 
-This is currently not supported. As part of the renaming process, we make sure that any existing issues are addressed so that the domain can be renamed successfully.
+This is currently not supported. As part of the renaming process, we make sure that any existing issues are addressed and the SharePoint domain 'contoso.sharepoint.com' is renamed to 'fabrikam.sharepoint.com' successfully.
 
 </details>
 <br/>
@@ -145,7 +145,7 @@ During the rename, the OneDrive sync might fail for a user if the rename process
 <details>
 <summary><b>Some users are complaining that the OneDrive sync client is not working. What can we do?</b></summary>
 
-If OneDrive sync isn't stopped prior to the rename, issues might occur after the rename. This particular issue is caused by caching within the sync client. To resolve any sync issues, users should sign out and then sign back in to OneDrive after the rename. If this doesn't solve the issue, users should go to OneDrive > **Settings** > **Account**, select **Unlink this PC**, and then re-link the PC. Unlinking and relinking doesn’t delete ay OneDrive data.
+If OneDrive sync isn't stopped prior to the rename, issues might occur after the rename. This particular issue is caused by caching within the sync client. To resolve any sync issues, users should sign out and then sign back in to OneDrive after the rename. If this doesn't solve the issue, users should go to OneDrive > **Settings** > **Account**, select **Unlink this PC**, and then re-link the PC. Unlinking and relinking don't delete ay OneDrive data.
 
 </details>
 <br/>
@@ -180,5 +180,4 @@ If you want to prioritize some sites for the rename, you must use Advanced Tenan
 ## References
 
 - [Errors when you rename a SharePoint domain](./errors-when-renaming.md)
-
 - [Change your SharePoint domain name](/sharepoint/tenant-rename)
