@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting dynamic group processing in Microsoft Entra ID
+title: Troubleshooting Groups with dynamic membership processing in Microsoft Entra ID
 description: Learn how to troubleshoot dynamic group processing using PowerShell
 author: genlin
 ms.author: genli
@@ -9,7 +9,7 @@ ms.service: entra-id
 ms.custom: sap:Users
 ---
 
-# Troubleshooting dynamic group processing in Microsoft Entra ID
+# Troubleshooting Groups with dynamic membership processing
 
 After you make changes in Microsoft Entra ID that require a re-evaluation of dynamic group membership, you might experience either of the following issues:
 
