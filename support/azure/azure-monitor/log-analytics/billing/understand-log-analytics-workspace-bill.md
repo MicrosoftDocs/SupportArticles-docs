@@ -25,8 +25,7 @@ This article helps you learn how to understand the costs that are associated wit
 
 1. On the **Cost analysis** page, select **View AccumulcatedCosts**, and then select **Resources**.
 
-   :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-2.png" alt-text="view cost step 1" lightbox="media/understand-log-analytics- 
-   workspace-bill/view-cost-2.png":::
+   :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-2.png" alt-text="view cost step 1" lightbox="media/understand-log-analytics-workspace-bill/view-cost-2.png":::
 
 ## Read cost report on Invoice details tab
 
@@ -50,8 +49,7 @@ This example shows that the Log Analytics meter displays lower usage compared to
 
 1. Select the name of the Log Analytics workspace to expand the details. You will see the cost of each service that sends data to this Log Analytics workspace. This view can help you to identify which service is causing the unexpected expense.
 
-   :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-11.png" alt-text="view cost step 3" lightbox="media/understand-log-analytics- 
-   workspace-bill/view-cost-11.png":::
+   :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-11.png" alt-text="view cost step 3" lightbox="media/understand-log-analytics-workspace-bill/view-cost-11.png":::
 
 ## Read cost report on Services tab
 
@@ -59,8 +57,7 @@ This example shows that the Log Analytics meter displays lower usage compared to
 2. Update the month that's selected to match the specific month that you're examining for this billing cycle. The total should now match the invoice details.
 1. Expand each service to view the charge type per **Service**.  
 
-   :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-10.png" alt-text="view cost step 10" lightbox="media/understand-log-analytics- 
-   workspace-bill/view-cost-10.png":::
+   :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-10.png" alt-text="view cost step 10" lightbox="media/understand-log-analytics-workspace-bill/view-cost-10.png":::
 
 ### Read cost report on Daily costs tab
 
@@ -70,7 +67,6 @@ This example shows that the Log Analytics meter displays lower usage compared to
 1. The Service name pie chart displays an alternative view that shows that data injection services are primarily responsible for driving the overall cost.
 1. The bar chart displays a cost increase at the end of the month. This can be further investigated to determine the root cause.
 
-   :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-12.png" alt-text="view cost step 12" lightbox="media/understand-log-analytics- 
-   workspace-bill/view-cost-12.png":::
+   :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-12.png" alt-text="view cost step 12" lightbox="media/understand-log-analytics-workspace-bill/view-cost-12.png":::
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
