@@ -36,7 +36,7 @@ This article helps you learn how to understand the costs that are associated wit
 
    :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-9.png" alt-text="The image about the example of the Invoice details." lightbox="media/understand-log-analytics-workspace-bill/view-cost-9.png":::
 
-### Read cost report on Resource tab
+## Read cost report on Resource tab
 
 1. Select **Resources** tab.  
 
@@ -56,7 +56,7 @@ This article helps you learn how to understand the costs that are associated wit
 
    :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-10.png" alt-text="The image about the example of view in Services tab." lightbox="media/understand-log-analytics-workspace-bill/view-cost-10.png":::
 
-### Read cost report on Daily costs tab
+## Read cost report on Daily costs tab
 
 1. Select the plus sign (+) to open a new tab within the Cost analysis page.
 1. Select **Daily cost**.  
