@@ -13,9 +13,9 @@ This article provides troubleshooting steps for an issue where you might find th
 
 ## Troubleshooting step
 
-- For a grid control, make sure the page size and the number of records provided to the grid control is expected.
+- For a grid control, make sure the page size and the number of records provided to the grid control are expected.
 
-  :::image type="content" source="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png" alt-text="Screenshot that shows how to use the monitoring tool to get page and records information." lightbox="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png":::
+  :::image type="content" source="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png" alt-text="Screenshot that shows how to use the monitor tool to get page and records information." lightbox="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png":::
 
 - For a subgrid, the page size can be also defined by the [Maximum number of rows](/power-apps/maker/model-driven-apps/form-designer-add-configure-subgrid) setting (a subgrid component) in the form designer.
 

@@ -51,7 +51,7 @@ Here are the screenshots of the terms:
 
 ## Useful tools
 
-- [Power Apps Monitoring tool](/power-apps/maker/monitor-overview)
+- [Power Apps Monitor tool](/power-apps/maker/monitor-overview)
 - [Web Developer tool](https://developer.chrome.com/docs/devtools/network)
 
 ## Steps to perform before starting troubleshooting

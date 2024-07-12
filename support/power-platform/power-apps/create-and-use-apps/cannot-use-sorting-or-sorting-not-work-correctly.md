@@ -15,7 +15,7 @@ This article helps solve an issue where you can't use sorting or sorting doesn't
 
 ### Resolution
 
-Sorting not available on all the columns is a strong indication that sorting is disabled on the grid control. Use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to make sure the `enableSorting` grid property is set to "true".
+Sorting not available on all the columns is a strong indication that sorting is disabled on the grid control. Use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to make sure the `enableSorting` grid property is set to "true".
 
 :::image type="content" source="media/cannot-use-sorting-or-sorting-not-work-correctly/enablesorting.png" alt-text="Screenshot that shows the enableFiltering grid property." lightbox="media/cannot-use-sorting-or-sorting-not-work-correctly/enablesorting.png":::
 
@@ -35,7 +35,7 @@ Make sure the view setting is set correctly and all the changes are saved and pu
 
 ### Resolution
 
-The most common reason a certain field isn't sortable is Dataverse doesn't support sorting on the underlying field type. Use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to ensure the sorting isn't disabled by Dataverse.
+The most common reason a certain field isn't sortable is Dataverse doesn't support sorting on the underlying field type. Use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to ensure the sorting isn't disabled by Dataverse.
 
 :::image type="content" source="media/cannot-use-sorting-or-sorting-not-work-correctly/disablesorting.png" alt-text="Screenshot that shows the disableSorting attribute." lightbox="media/cannot-use-sorting-or-sorting-not-work-correctly/disablesorting.png":::
 

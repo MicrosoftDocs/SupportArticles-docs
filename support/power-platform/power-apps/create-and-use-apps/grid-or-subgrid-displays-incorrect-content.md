@@ -17,9 +17,9 @@ You might find the grid doesn't display the expected content immediately after n
 
 ## Troubleshooting step
 
-The first step is to check if the grid is receiving the expected data. Use the [Power Apps Monitoring tool](/power-apps/maker/monitor-overview) to investigate the latest "GridChecker" event that's related to the grid or subgrid.
+The first step is to check if the grid is receiving the expected data. Use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to investigate the latest "GridChecker" event that's related to the grid or subgrid.
 
-:::image type="content" source="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png" alt-text="Screenshot that shows how to use the monitoring tool to get page and records information." lightbox="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png":::
+:::image type="content" source="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png" alt-text="Screenshot that shows how to use the monitor tool to get page and records information." lightbox="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png":::
 
 If the `recordsCount` and `initialPageSize` matches the actual content displayed in the grid, this is a strong indication that the view isn't configured correctly. Check the view configuration (columns and filters). If the issue occurs in a subgrid, also check if the grid is configured to only show related records.
 
