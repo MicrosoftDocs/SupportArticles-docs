@@ -3,10 +3,10 @@ author: genlin
 ms.author: genli
 ms.service: virtual-machines
 ms.topic: include
-ms.date: 07/11/2024
+ms.date: 07/12/2024
 ms.reviewer: jarrettr
 ---
-#### Repair the corrupt file
+#### Repair the corrupt binary file
 
 Open an elevated CMD prompt and run chkdsk on the disk:
 
@@ -14,7 +14,7 @@ Open an elevated CMD prompt and run chkdsk on the disk:
 chkdsk <drive-letter>: /F
 ```
 
-#### Replace the corrupt file
+#### Replace the corrupt binary file
 
 1. On the attached disk, browse to the location of the binary file that's displayed in the error message.
 
