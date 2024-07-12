@@ -1,7 +1,7 @@
 ---
 title: Advanced search tips for finding Microsoft troubleshooting content
 description: Find out how to search for Microsoft support and troubleshooting articles using search best practices.
-ms.date: 10/10/2020
+ms.date: 7/12/2024
 ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
