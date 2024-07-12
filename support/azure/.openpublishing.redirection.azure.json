@@ -5464,6 +5464,11 @@
         "source_path": "virtual-machines/windows/cloud-init-deployment-delay.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/cloud-init-deployment-delay",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows/virtual-machines-windows-replace-system-binary-file.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/virtual-machines-windows-repair-replace-system-binary-file",
+        "redirect_document_id": true
       }
   ]
 }

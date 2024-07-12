@@ -69,8 +69,8 @@
     href: virtual-machines-windows-fix-corrupted-hive.md
   - name: Repair the boot configuration data
     href: virtual-machines-windows-repair-boot-configuration-data.md
-  - name: Replace corrupted or missing binary files
-    href: virtual-machines-windows-replace-system-binary-file.md
+  - name: Repair or replace corrupted or missing binary files
+    href: virtual-machines-windows-repair-replace-system-binary-file.md
 
 - name: VM health
   items:
