@@ -8,8 +8,9 @@ ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
-
 # Troubleshoot a Windows VM by attaching the OS disk to a repair VM through the Azure portal
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 If your Windows virtual machine (VM) in Azure encounters a startup or disk error, you might need to perform troubleshooting steps on its OS disk offline. Attaching the OS disk to a second VM for offline repair might be required, for example, if a failed application update prevents a VM from starting successfully. This article describes how to connect a failed OS disk to a repair VM to fix any errors and then re-create your original VM.
 

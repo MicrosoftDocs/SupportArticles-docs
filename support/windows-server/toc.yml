@@ -855,6 +855,8 @@ items:
       href: ./backup-and-storage/vss-writers-report-failed-virtual-machine.md
 - name: Certificates and Public Key Infrastructure (PKI)
   items:
+  - name: Certificates and Public Key Infrastructure (PKI)
+    href: ./certificates-and-public-key-infrastructure-pki/certificates-and-public-key-infrastructure-pki-overview.md
   - name: Active Directory Certificate Services (ADCS)
     items:
     - name: CA doesn't publish certificates in trusted domain
@@ -1333,90 +1335,6 @@ items:
       href: ./high-availability/errors-windows-failover-cluster-run-as-guest.md
     - name: Use Windows Server cluster nodes as DCs
       href: ./high-availability/use-cluster-nodes-as-domain-controllers.md
-- name: Installing Windows Updates, features, or roles
-  items:
-  - name: Installing Windows Updates, features, or roles
-    href: ./installing-updates-features-roles/installing-updates-features-roles-overview.md
-  - name: Failure to install Windows Updates
-    items:
-    - name: 'Troubleshooting guidance: Installing Windows features or roles'
-      href: ./installing-updates-features-roles/troubleshoot-install-features-roles-guidance.md
-    - name: 'Troubleshooting guidance: Windows Server update'
-      href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
-    - name: 'Troubleshooting guidance: Windows Update for Business reports'
-      href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
-    - name: Can't connect to WSUS Administration Website
-      href: ./installing-updates-features-roles/cannot-connect-to-wsus-administration-website.md
-    - name: Can't install .NET Framework 3.5 on OEM Windows installation
-      href: ./installing-updates-features-roles/cannot-install-dotnet-framework-3dot5-oem.md
-    - name: Can't install Windows Server 2019 on servers with a high processor count
-      href: ./installing-updates-features-roles/cannot-install-windows-server-2019-high-processor-count.md
-    - name: CBS.log file contains entries that some files aren't repaired
-      href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
-    - name: Description of System File Checker (Sfc.exe)
-      href: ./installing-updates-features-roles/system-file-checker.md
-    - name: Description of Windows Server Update Services 3.0
-      href: ./installing-updates-features-roles/description-of-windows-server-update-services-3.md
-    - name: Error C0190003 after installing updates
-      href: ./installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md
-    - name: Error code 2359302 when installing updates in Windows Server 2019
-      href: ./installing-updates-features-roles/error-2359302-installing-windows-updates.md
-    - name: ERROR_INVALID_DATA error after installing Windows updates
-      href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
-    - name: Error 0x800705aa when Windows Update fails
-      href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
-    - name: Error 0x80070005 "Access denied" when you activate Windows
-      href: ./installing-updates-features-roles/error-0x80070005-access-denied.md
-    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
-      href: ./installing-updates-features-roles/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md
-    - name: Error 0x800f0922 when installing Windows updates
-      href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
-    - name: Error 0x800f0922 when MPIO feature installation fails
-      href: ./installing-updates-features-roles/error-0x800f0922-mpio-feature-installation-fails.md
-    - name: Error 0x800f0906 when you convert Server Core to GUI
-      href: ./installing-updates-features-roles/dism-fails-with-error-0x800f0906.md
-    - name: Error 0x800f0922 when you uninstall roles/features
-      href: ./installing-updates-features-roles/error-0x800f0922-uninstall-role-feature.md
-    - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
-      href: ./installing-updates-features-roles/failed-changed-absent-state-status-0x800f0922-error.md
-    - name: Failed to schedule Software Protection service for restart
-      href: ./installing-updates-features-roles/failed-schedule-software-protection.md
-    - name: Fail to install Network Policy Server role
-      href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
-    - name: Fix Windows Update corruptions and installation failures
-      href: ./installing-updates-features-roles/fix-windows-update-errors.md
-    - name: How the Windows Update client determines which proxy server to use
-      href: ./installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md     
-    - name: How to block user access to Windows Update
-      href: ./installing-updates-features-roles/block-user-access-windows-update.md
-    - name: How to use the Recovery Console
-      href: ./installing-updates-features-roles/use-recovery-console-not-start.md
-    - name: List of updates
-      href: ./installing-updates-features-roles/list-updates.md
-    - name: Re-register Windows client/server in WSUS
-      href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
-    - name: System Partition goes offline after installing some 3rd Party Disk
-      href: ./installing-updates-features-roles/system-partition-offline-install-3rd-party-disk.md
-    - name: Why you may be prompted to restart your computer
-      href: ./installing-updates-features-roles/why-prompted-restart-computer.md
-    - name: Windows Server 2008 Service Pack 2
-      href: ./installing-updates-features-roles/windows-server-2008-service-pack-2.md
-    - name: WSUS clients can't install updates
-      href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
-    - name: WSUS 3.0 installation package is available
-      href: ./installing-updates-features-roles/wsus-3-installation-package.md
-    - name: WSUS SelfUpdate doesn't send automatic updates
-      href: ./installing-updates-features-roles/wsus-selfupdate-not-send-automatic-updates.md
-    - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
-      href: ./installing-updates-features-roles/windows-server-update-services-3-sp2.md
-    - name: 'WUBr: Troubleshoot diagnostic data transmission'
-      href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
-    - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-      href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
-    - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
-      href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
-    - name: You can't install features in Windows Server 2012 R2
-      href: ./installing-updates-features-roles/you-cant-install-features.md
 - name: Licensing and activation
   items:
   - name: Licensing and activation
@@ -1429,6 +1347,8 @@ items:
       href: ./licensing-and-activation/error-when-you-validate-copy-windows.md
     - name: Error 0xC004E002 during activation
       href: ./licensing-and-activation/error-0xc004e002-during-activation.md
+    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+      href: ./licensing-and-activation/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md
     - name: Error 0xC004F06C when you activate Windows
       href: ./licensing-and-activation/error-0xc004f06c-activate-windows.md
     - name: Error 0xC004F074 when you activate Windows
@@ -1437,6 +1357,8 @@ items:
       href: ./licensing-and-activation/error-0xc004f015-activate-windows-10.md
     - name: Error 0x8007000D when you activate a machine
       href: ./licensing-and-activation/0x8007000d-activate-machine.md
+    - name: Error 0x80070005 "Access denied" when you activate Windows
+      href: ./licensing-and-activation/error-0x80070005-access-denied.md
     - name: Event ID 8208, 8200, or 900 is logged
       href: ./licensing-and-activation/event-id-8208-8200-900.md
     - name: Event ID 12321 Warning Token Based Activation failed
@@ -1991,6 +1913,8 @@ items:
       href: ./performance/registry-changes-in-x64-based-windows.md
     - name: Registry values for Process Control parameters
       href: ./performance/values-process-control-parameters.md
+    - name: System Partition goes offline after installing some 3rd Party Disk
+      href: ./performance/system-partition-offline-install-3rd-party-disk.md
   - name: Blue Screen/Bugcheck
     items:
     - name: 'Troubleshooting guidance: stop errors and unexpected restart'
@@ -2057,6 +1981,8 @@ items:
       href: ./performance/event-id-46-start-a-computer.md
     - name: Fail to restart Windows after full OS recovery
       href: ./performance/windows-fail-to-start-status-0xc000000e.md
+    - name: How to use the Recovery Console
+      href: ./performance/use-recovery-console-not-start.md
     - name: Not Boot In Normal Mode - Driver Issue
       href: ./performance/not-boot-in-normal-mode-driver-issue.md
     - name: Registry troubleshooting for advanced users
@@ -2585,6 +2511,8 @@ items:
       href: ./setup-upgrade-and-drivers/add-oem-plug-play-drivers.md
     - name: Avoid duplicate GUIDs when you image SMS clients
       href: ./setup-upgrade-and-drivers/avoid-duplicate-guids-deploy-sms.md
+    - name: Can't install Windows Server 2019 on servers with a high processor count
+      href: ./setup-upgrade-and-drivers/cannot-install-windows-server-2019-high-processor-count.md
     - name: Can't open EXE files
       href: ./setup-upgrade-and-drivers/cant-open-exe-files.md
     - name: Chinese IME dictionaries are not ready yet
@@ -2599,6 +2527,8 @@ items:
       href: ./setup-upgrade-and-drivers/error-path-not-found-upgrading-windows-server-2019.md
     - name: Error when you configure a server with Server Manager
       href: ./setup-upgrade-and-drivers/fail-to-configure-server-using-server-manager.md
+    - name: Error 0x800f0906 when you convert Server Core to GUI
+      href: ./setup-upgrade-and-drivers/dism-fails-with-error-0x800f0906.md
     - name: Event ID 307 and 304 logged for deploying Windows
       href: ./setup-upgrade-and-drivers/event-307-and-304-logged-for-deploying.md
     - name: Fail to run applications on Windows Server Core
@@ -2771,6 +2701,8 @@ items:
     items:
     - name: Error 0x8007000d when you run an old scheduled task
       href: ./system-management-components/error-0x8007000d-data-invalid.md
+    - name: Failed to schedule Software Protection service for restart
+      href: ./system-management-components/failed-schedule-software-protection.md
     - name: How To Schedule a Server Process
       href: ./system-management-components/schedule-server-process.md
     - name: Scheduled task may not run upon reboot
@@ -3245,6 +3177,92 @@ items:
     items:
     - name: 'Troubleshooting guidance: Windows LAPS'
       href: ./windows-security/windows-laps-troubleshooting-guidance.md
+- name: Windows Servicing, Updates and Features on Demand
+  items:
+  - name: Windows Servicing, Updates and Features on Demand
+    href: ./installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview.md
+  - name: Clients missing updates, not offered, fail to download
+    items:
+    - name: List of updates
+      href: ./installing-updates-features-roles/list-updates.md
+    - name: WSUS SelfUpdate doesn't send automatic updates
+      href: ./installing-updates-features-roles/wsus-selfupdate-not-send-automatic-updates.md
+  - name: Failure to install Windows Updates
+    items:
+    - name: How the Windows Update client determines which proxy server to use
+      href: ./installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md
+    - name: Windows Server 2008 Service Pack 2
+      href: ./installing-updates-features-roles/windows-server-2008-service-pack-2.md
+    - name: WSUS 3.0 installation package is available
+      href: ./installing-updates-features-roles/wsus-3-installation-package.md
+  - name: Issues installing Features on Demand (FoD)
+    items:
+    - name: Can't install .NET Framework 3.5 on OEM Windows installation
+      href: ./installing-updates-features-roles/cannot-install-dotnet-framework-3dot5-oem.md
+    - name: Error 0x800f0922 when MPIO feature installation fails
+      href: ./installing-updates-features-roles/error-0x800f0922-mpio-feature-installation-fails.md
+    - name: Error 0x800f0922 when you uninstall roles/features
+      href: ./installing-updates-features-roles/error-0x800f0922-uninstall-role-feature.md
+    - name: You can't install features in Windows Server 2012 R2
+      href: ./installing-updates-features-roles/you-cant-install-features.md
+  - name: Issues installing Server Roles
+    items:
+    - name: 'Troubleshooting guidance: Installing Windows features or roles'
+      href: ./installing-updates-features-roles/troubleshoot-install-features-roles-guidance.md
+  - name: Windows Update configuration, settings and management
+    items:
+    - name: Can't connect to WSUS Administration Website
+      href: ./installing-updates-features-roles/cannot-connect-to-wsus-administration-website.md
+    - name: Description of Windows Server Update Services 3.0
+      href: ./installing-updates-features-roles/description-of-windows-server-update-services-3.md
+    - name: How to block user access to Windows Update
+      href: ./installing-updates-features-roles/block-user-access-windows-update.md
+    - name: Re-register Windows client/server in WSUS
+      href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
+    - name: Why you may be prompted to restart your computer
+      href: ./installing-updates-features-roles/why-prompted-restart-computer.md
+    - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
+      href: ./installing-updates-features-roles/windows-server-update-services-3-sp2.md
+    - name: WSUS clients can't install updates
+      href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
+  - name: Windows Update fails - installation stops with error
+    items:
+    - name: 'Troubleshooting guidance: Windows Server update'
+      href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
+    - name: CBS.log file contains entries that some files aren't repaired
+      href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
+    - name: Description of System File Checker (Sfc.exe)
+      href: ./installing-updates-features-roles/system-file-checker.md
+    - name: Error 0x800705aa when Windows Update fails
+      href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
+    - name: Error 0x800f0922 when installing Windows updates
+      href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
+    - name: Error C0190003 after installing updates
+      href: ./installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md
+    - name: Error code 2359302 when installing updates in Windows Server 2019
+      href: ./installing-updates-features-roles/error-2359302-installing-windows-updates.md
+    - name: ERROR_INVALID_DATA error after installing Windows updates
+      href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
+    - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
+      href: ./installing-updates-features-roles/failed-changed-absent-state-status-0x800f0922-error.md
+    - name: Fail to install Network Policy Server role
+      href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
+    - name: Fix Windows Update corruptions and installation failures
+      href: ./installing-updates-features-roles/fix-windows-update-errors.md
+    - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
+      href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
+  - name: Windows Update for Business Reports
+    items:
+    - name: Initial service configuration and Onboarding
+      items:
+      - name: 'Troubleshooting guidance: Windows Update for Business reports'
+        href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
+    - name: Missing data or incomplete report data
+      items:
+      - name: 'WUBr: Troubleshoot diagnostic data transmission'
+        href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
+      - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+        href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
@@ -3269,6 +3287,8 @@ items:
       href: ./support-tools/scripts-compile-registered-mof-files.md
     - name: Scripts to list all running WMI providers
       href: ./support-tools/scripts-list-running-wmi-providers.md
+    - name: Scripts to retrieve profile age and optionally delete aged copies
+      href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)

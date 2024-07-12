@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on plug-in CA certificate troubleshooting
 description: Learn how to do plug-in CA certificate troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 04/26/2024
+ms.date: 07/03/2024
 author: deveshdama
 ms.author: ddama
 editor: v-jsitser
@@ -12,10 +12,10 @@ ms.subservice: troubleshoot-extensions-add-ons
 ---
 # Istio service mesh add-on plug-in CA certificate troubleshooting
 
-This article discusses common troubleshooting issues that involve plug-in certificate authority (CA) certificates for the Istio service mesh add-on, and it offers solutions to fix these issues. The article also reviews the general process of setting up plug-in CA certificates for the service mesh add-on.
+This article discusses common troubleshooting issues for the Istio add-on plug-in certificate authority (CA) certificates feature, and it offers solutions to fix these issues. The article also reviews the general process of setting up plug-in CA certificates for the service mesh add-on.
 
 > [!NOTE]
-> This article assumes that Istio revision `asm-1-17` is deployed on the cluster.
+> This article assumes that Istio revision `asm-1-21` is deployed on the cluster.
 
 ## Prerequisites
 
@@ -41,29 +41,29 @@ This article discusses common troubleshooting issues that involve plug-in certif
 
 - After you grant permission for the user-assigned managed identity to access the Azure Key Vault, you can use the plug-in CA certificates feature together with the Istio add-on. For more information, see the [Enable the Istio add-on to use a plug-in CA certificate](#enable-the-istio-add-on-to-use-a-plug-in-ca-certificate) section.
 
-- For the cluster to auto-detect changes in the Azure Key Vault secrets, you have to enable [auto-rotation](/azure/aks/csi-secrets-store-configuration-options#enable-and-disable-auto-rotation).
+- For the cluster to auto-detect changes in the Azure Key Vault secrets, you have to enable [auto-rotation](/azure/aks/csi-secrets-store-configuration-options#enable-and-disable-auto-rotation) for the Azure Key Vault secrets provider add-on.
 
-- Although changes to the intermediate certificate are applied automatically, the `istiod` deployment has to be restarted after you make changes to the root certificate. The deployment restart is accomplished by using a cronjob, as explained in the [Deployed resources](#deployed-resources) section.
+- Although changes to the intermediate certificate are applied automatically, changes to the root certificate are only picked up by the control plane after the `istiod` deployment is restarted by a cronjob that the add-on deploys, as explained in the [Deployed resources](#deployed-resources) section. This cronjob runs at a 10 minute interval.
 
 ## Enable the Istio add-on to use a plug-in CA certificate
 
-The Istio add-on Istio [plug-in CA certificate](https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/) feature allows you to configure plug-in root and intermediate certificates on the mesh on your cluster. To provide plug-in certificate information when you enable the add-on, specify the following parameters for the [az aks mesh enable](/cli/azure/aks/mesh#az-aks-mesh-enable) command in Azure CLI.
+The Istio add-on [plug-in CA certificate](https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/) feature allows you to configure plug-in root and intermediate certificates for the mesh. To provide plug-in certificate information when you enable the add-on, specify the following parameters for the [az aks mesh enable](/cli/azure/aks/mesh#az-aks-mesh-enable) command in Azure CLI.
 
 | Parameter | Description |
 |--|--|
 | `--key-vault-id` *\<resource-id>* | The Azure Key Vault resource ID. This resource is expected to be in the same tenant as the managed cluster. This resource ID must be in the [Azure Resource Manager template (ARM template) resource ID format](/azure/azure-resource-manager/templates/template-functions-resource#resourceid). |
-| `--root-cert-object-name` *\<root-cert-obj-name>* | The root certificate object name in the Azure key vault. |
-| `--ca-cert-object-name` *\<inter-cert-obj-name>* | The intermediate certificate object name in the Azure key vault. |
-| `--ca-key-object-name` *\<inter-key-obj-name>* | The intermediate certificate private key object name in the Azure key vault. |
-| `--cert-chain-object-name` *\<cert-chain-obj-name>* | The certificate chain object name in the Azure key vault. |
+| `--root-cert-object-name` *\<root-cert-obj-name>* | The root certificate object name in the Azure Key Vault. |
+| `--ca-cert-object-name` *\<inter-cert-obj-name>* | The intermediate certificate object name in the Azure Key Vault. |
+| `--ca-key-object-name` *\<inter-key-obj-name>* | The intermediate certificate private key object name in the Azure Key Vault. |
+| `--cert-chain-object-name` *\<cert-chain-obj-name>* | The certificate chain object name in the Azure Key Vault. |
 
-If you want to use the plug-in CA certificates feature, you must specify all five parameters. All Azure key vault objects are expected to be of the type [Secret](/azure/key-vault/secrets/about-secrets).
+If you want to use the plug-in CA certificates feature, you must specify all five parameters. All Azure Key Vault objects are expected to be of the type [Secret](/azure/key-vault/secrets/about-secrets).
 
 For more information, see [Plug in CA certificates for Istio-based service mesh add-on on Azure Kubernetes Service](/azure/aks/istio-plugin-ca).
 
 ## Deployed resources
 
-As part of the add-on deployment for the plug-in certs feature, the following resources are deployed on the cluster:
+As part of the add-on deployment for the plug-in certs feature, the following resources are deployed onto the cluster:
 
 - The `cacerts` Kubernetes secret is created in the `aks-istio-system` namespace at the time of the add-on deployment. This secret contains synchronized Azure Key Vault secrets:
 
@@ -87,7 +87,7 @@ As part of the add-on deployment for the plug-in certs feature, the following re
   root-cert.pem:   3636 bytes
   ```
 
-- The `istio-spc-asm-1-17` [SecretProviderClass object](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/getting-started/usage/#create-your-own-secretproviderclass-object) is created in the `aks-istio-system` namespace at the time of the add-on deployment. This resource contains Azure-specific parameters for the Secrets Store Container Storage Interface (CSI) driver:
+- The `istio-spc-asm-1-21` [SecretProviderClass object](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/getting-started/usage/#create-your-own-secretproviderclass-object) is created in the `aks-istio-system` namespace at the time of the add-on deployment. This resource contains Azure-specific parameters for the Secrets Store Container Storage Interface (CSI) driver:
 
   ```bash
   kubectl get secretproviderclass --namespace aks-istio-system
@@ -95,10 +95,10 @@ As part of the add-on deployment for the plug-in certs feature, the following re
 
   ```output
   NAME                 AGE
-  istio-spc-asm-1-17   14h
+  istio-spc-asm-1-21   14h
   ```
 
-- The `istio-ca-root-cert` config map is created in the `aks-istio-system` namespace and all other user-managed namespaces. This config map contains the root certificate that the certificate authority uses, and it's used by workloads in the namespaces to validate workload-to-workload communication, as follows:
+- The `istio-ca-root-cert` configmap is created in the `aks-istio-system` namespace as well as all user-managed namespaces. This configmap contains the root certificate that the certificate authority uses, and it's used by workloads in the namespaces to validate workload-to-workload communication, as follows:
 
   ```bash
   kubectl describe configmap istio-ca-root-cert --namespace aks-istio-system
@@ -119,7 +119,7 @@ As part of the add-on deployment for the plug-in certs feature, the following re
   -----END CERTIFICATE-----
   ```
 
-- The `istio-cert-validator-cronjob-asm-1-17` [Cronjob object](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) is created in the `aks-istio-system` namespace. This cronjob is scheduled to run every 10 minutes to check for updates on the root certificate. If the root certificate that's in the `cacerts` Kubernetes secret doesn't match the `istio-ca-root-cert` config map in the `aks-istio-system` namespace, it restarts the `istiod-asm-1-17` deployment:
+- The `istio-cert-validator-cronjob-asm-1-21` [cronjob object](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) is created in the `aks-istio-system` namespace. This cronjob is scheduled to run every 10 minutes to check for updates on the root certificate. If the root certificate that's in the `cacerts` Kubernetes secret doesn't match the `istio-ca-root-cert` configmap in the `aks-istio-system` namespace, it restarts the `istiod-asm-1-21` deployment:
 
   ```bash
   kubectl get cronjob --namespace aks-istio-system
@@ -127,7 +127,7 @@ As part of the add-on deployment for the plug-in certs feature, the following re
 
   ```output
   NAME                                    SCHEDULE       SUSPEND   ACTIVE
-  istio-cert-validator-cronjob-asm-1-17   */10 * * * *   False     0     
+  istio-cert-validator-cronjob-asm-1-21   */10 * * * *   False     0     
   ```
 
   You can run the following command to check the cronjob logs for the last run:
@@ -144,16 +144,16 @@ As part of the add-on deployment for the plug-in certs feature, the following re
 
   ```output
   Root certificate update detected. Restarting deployment...
-  deployment.apps/istiod-asm-1-17 restarted
-  Deployment istiod-asm-1-17 restarted.
+  deployment.apps/istiod-asm-1-21 restarted
+  Deployment istiod-asm-1-21 restarted.
   ```
 
 ## Determine certificate type in deployment logs
 
-You can view the deployment logs to determine whether you have a self-signed CA certificate or a BYO (plug-in) CA certificate. To view the logs, run the following command:
+You can view the `istiod` deployment logs to determine whether you have a self-signed CA certificate or a plug-in CA certificate. To view the logs, run the following command:
 
 ```bash
-kubectl logs deploy/istiod-asm-1-17 --container discovery --namespace aks-istio-system | grep -v validationController
+kubectl logs deploy/istiod-asm-1-21 --container discovery --namespace aks-istio-system | grep -v validationController
 ```
 
 Immediately before each certificate log entry is another log entry that describes that kind of certificate. For a self-signed CA certificate, the entry states "No plugged-in cert at *etc/cacerts/ca-key.pem*; self-signed cert is used." For a plug-in certificate, the entry states "Use plugged-in cert at *etc/cacerts/ca-key.pem*." Sample log entries that pertain to the certificates are shown in the following tables.
@@ -168,7 +168,7 @@ Immediately before each certificate log entry is another log entry that describe
   | 2023-11-20T23:27:36.649552Z | info      | Istiod certificates are reloaded                                           |
   | 2023-11-20T23:27:36.649613Z | info      | spiffe  Added 1 certs to trust domain cluster.local in peer cert verifier  |
 
-- Log entries for a BYO (plug-in) CA certificate
+- Log entries for a plug-in CA certificate
 
   | Timestamp                   | Log level | Message                                                                   |
   |-----------------------------|-----------|---------------------------------------------------------------------------|
@@ -188,7 +188,7 @@ For a self-signed CA certificate, there's one detail entry. Sample values for th
 |-------------------|---------|-----------------------|------------------------|------------------------|
 | "O=cluster.local" | ""      | \<32-digit-hex-value> | "2023-11-20T23:25:36Z" | "2033-11-17T23:27:36Z" |
 
-For a BYO (plug-in) CA certificate, there are three detail entries. The other two entries are for a root certificate update and a change to the intermediate certificate. Sample values for these entries are shown in the following table.
+For a plug-in CA certificate, there are three detail entries. The other two entries are for a root certificate update and a change to the intermediate certificate. Sample values for these entries are shown in the following table.
 
 | Issuer                                        | Subject                                        | SN                    | NotBefore              | NotAfter               |
 |-----------------------------------------------|------------------------------------------------|-----------------------|------------------------|------------------------|
@@ -196,7 +196,7 @@ For a BYO (plug-in) CA certificate, there are three detail entries. The other tw
 | CN=Root A,O=Istio"                            | "CN=Intermediate CA - A1,O=Istio,L=cluster-A1" | \<40-digit-hex-value> | "2023-11-04T01:40:22Z" | "2033-11-01T01:40:22Z" |
 | CN=Root A,O=Istio"                            | "CN=Root A,O=Istio"                            | \<40-digit-hex-value> | "2023-11-04T01:38:27Z" | "2033-11-01T01:38:27Z" |
 
-## Common issues
+## Troubleshoot common issues
 
 ### Issue 1: Access to Azure Key Vault is set up incorrectly
 
@@ -206,14 +206,14 @@ After you enable the Azure Key Vault secrets provider add-on, you have to grant 
 kubectl get pods --namespace aks-istio-system
 ```
 
-In the list of pods, you can see that the `istiod-asm-1-17` pods are stuck in an `Init:0/2` state.
+In the list of pods, you can see that the `istiod-asm-1-21` pods are stuck in an `Init:0/2` state.
 
 | NAME                             | READY | STATUS      | RESTARTS | AGE   |
 |----------------------------------|-------|-------------|----------|-------|
-| istiod-asm-1-17-6fcfd88478-2x95b | 0/1   | Terminating | 0        | 5m55s |
-| istiod-asm-1-17-6fcfd88478-6x5hh | 0/1   | Terminating | 0        | 5m40s |
-| istiod-asm-1-17-6fcfd88478-c48f9 | 0/1   | Init:0/2    | 0        | 54s   |
-| istiod-asm-1-17-6fcfd88478-wl8mw | 0/1   | Init:0/2    | 0        | 39s   |
+| istiod-asm-1-21-6fcfd88478-2x95b | 0/1   | Terminating | 0        | 5m55s |
+| istiod-asm-1-21-6fcfd88478-6x5hh | 0/1   | Terminating | 0        | 5m40s |
+| istiod-asm-1-21-6fcfd88478-c48f9 | 0/1   | Init:0/2    | 0        | 54s   |
+| istiod-asm-1-21-6fcfd88478-wl8mw | 0/1   | Init:0/2    | 0        | 39s   |
 
 To verify the Azure Key Vault access issue, run the `kubectl get pods` command to locate pods that have the `secrets-store-provider-azure` label in the `kube-system` namespace:
 
@@ -221,20 +221,20 @@ To verify the Azure Key Vault access issue, run the `kubectl get pods` command t
 kubectl get pods --selector app=secrets-store-provider-azure --namespace kube-system --output name | xargs -I {} kubectl logs --namespace kube-system {}
 ```
 
-The following sample output shows that a "403 Forbidden" error occurred, and you're denied the "get" permission for secrets on the key vault:
+The following sample output shows that a "403 Forbidden" error occurred because you don't have "get" permissions for secrets on the Key Vault:
 
 > "failed to process mount request" err="failed to get objectType:secret, objectName:\<secret-object-name>, objectVersion:: keyvault.BaseClient#GetSecret: Failure responding to request: StatusCode=403 -- Original Error: autorest/azure: Service returned an error. **Status=403 Code=\\"Forbidden\\" Message=\\"The user, group or application 'appid=\<appid>;oid=\<oid>;iss=\<iss>' does not have secrets get permission on key vault 'MyAzureKeyVault;location=eastus'. For help resolving this issue, please see <https://go.microsoft.com/fwlink/?linkid=2125287>\\" InnerError={\\"code\\":\\"AccessDenied\\"}"**
 
-To fix this problem, set up access to the user-assigned managed identity for the Azure Key Vault add-on by obtaining Get and List permissions on Azure Key Vault secrets and reinstalling the Istio add-on. First, get the object ID of the user-assigned managed identity for the Azure Key Vault add-on by running the [az aks show](/cli/azure/aks#az-aks-show) command:
+To fix this problem, set up access to the user-assigned managed identity for the Azure Key Vault secrets provider add-on by obtaining Get and List permissions on Azure Key Vault secrets and reinstalling the Istio add-on. First, get the object ID of the user-assigned managed identity for the Azure Key Vault secrets provider add-on by running the [az aks show](/cli/azure/aks#az-aks-show) command:
 
-```azurecli
-OBJECT_ID=$(az aks show --resource-group <my-resource-group> --name <my-managed-cluster> --query 'addonProfiles.azureKeyvaultSecretsProvider.identity.objectId')
+```azurecli-interactive
+OBJECT_ID=$(az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER --query 'addonProfiles.azureKeyvaultSecretsProvider.identity.objectId')
 ```
 
 To set the access policy, run the following [az keyvault set-policy](/cli/azure/keyvault#az-keyvault-set-policy) command by specifying the object ID that you obtained:
 
-```azurecli
-az keyvault set-policy --name MyAzureKeyVault --object-id $OBJECT_ID --secret-permissions get list
+```azurecli-interactive
+az keyvault set-policy --name $AKV_NAME --object-id $OBJECT_ID --secret-permissions get list
 ```
 
 > [!NOTE]
@@ -244,32 +244,32 @@ az keyvault set-policy --name MyAzureKeyVault --object-id $OBJECT_ID --secret-pe
 
 For a cluster to auto-detect changes in the Azure Key Vault secrets, you have to enable auto-rotation for the Azure Key Vault provider add-on. Auto-rotation can detect changes in intermediate and root certificates automatically. For a cluster that enables the Azure Key Vault provider add-on, run the following `az aks show` command to check whether auto-rotation is enabled:
 
-```azurecli
-az aks show --resource-group <my-resource-group> --name <my-managed-cluster> | jq -r '.addonProfiles.azureKeyvaultSecretsProvider.config.enableSecretRotation'
+```azurecli-interactive
+az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER | jq -r '.addonProfiles.azureKeyvaultSecretsProvider.config.enableSecretRotation'
 ```
 
 If the cluster enabled the Azure Key Vault provider add-on, run the following `az aks show` command to determine the rotation poll interval: 
 
-```azurecli
-az aks show --resource-group <my-resource-group> --name <my-managed-cluster> | jq -r '.addonProfiles.azureKeyvaultSecretsProvider.config.rotationPollInterval'
+```azurecli-interactive
+az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER | jq -r '.addonProfiles.azureKeyvaultSecretsProvider.config.rotationPollInterval'
 ```
 Azure Key Vault secrets are synchronized with the cluster when the poll interval time elapses after the previous synchronization. The default interval value is two minutes.
 
 ### Issue 3: Certificate values are missing or are configured incorrectly
 
-If secret objects are missing from Azure Key Vault, or if these objects are configured incorrectly, the installation of the add-on can be delayed. The `istiod-asm-1-17` pods don't proceed beyond `Init:0/2` status. To find the underlying cause of this problem, view the deployment logs for that pod by running the following `kubectl describe` command:
+If secret objects are missing from Azure Key Vault, or if these objects are configured incorrectly, it's possible that the `istiod-asm-1-21` pods could end up stuck in an `Init:0/2` status, delaying the installation of the add-on. To find the underlying cause of this problem, view output of running the following `kubectl describe` command against the `istiod` deployment:
 
 ```bash
-kubectl describe deploy/istiod-asm-1-17 --namespace aks-istio-system
+kubectl describe deploy/istiod-asm-1-21 --namespace aks-istio-system
 ```
 
 The command displays events that might resemble the following output table. In this example, a missing secret is the cause of the problem.
 
 | Type | Reason | Age | From | Message |
 |--|--|--|--|--|
-| Normal | Scheduled | 3m9s | default-scheduler | Successfully assigned aks-istio-system/istiod-asm-1-17-6fcfd88478-hqdjj to aks-userpool-24672518-vmss000000 |
+| Normal | Scheduled | 3m9s | default-scheduler | Successfully assigned aks-istio-system/istiod-asm-1-21-6fcfd88478-hqdjj to aks-userpool-24672518-vmss000000 |
 | Warning | FailedMount | 66s | kubelet | Unable to attach or mount volumes: unmounted volumes=[cacerts], unattached volumes=[], failed to process volumes=[]: timed out waiting for the condition |
-| Warning | FailedMount | 61s (x9 over 3m9s) | kubelet | MountVolume.SetUp failed for volume "cacerts" : rpc error: code = Unknown desc = failed to mount secrets store objects for pod aks-istio-system/istiod-asm-1-17-6fcfd88478-hqdjj, err: rpc error: code = Unknown desc = failed to mount objects, error: failed to get objectType:secret, objectName:test-cert-chain, objectVersion:: keyvault.BaseClient#GetSecret: Failure responding to request: StatusCode=404 -- Original Error: autorest/azure: Service returned an error. **Status=404 Code="SecretNotFound" Message="A secret with (name/id) test-cert-chain was not found in this key vault. If you recently deleted this secret you may be able to recover it using the correct recovery command. For help resolving this issue, please see <https://go.microsoft.com/fwlink/?linkid=2125182>"** |
+| Warning | FailedMount | 61s (x9 over 3m9s) | kubelet | MountVolume.SetUp failed for volume "cacerts" : rpc error: code = Unknown desc = failed to mount secrets store objects for pod aks-istio-system/istiod-asm-1-21-6fcfd88478-hqdjj, err: rpc error: code = Unknown desc = failed to mount objects, error: failed to get objectType:secret, objectName:test-cert-chain, objectVersion:: keyvault.BaseClient#GetSecret: Failure responding to request: StatusCode=404 -- Original Error: autorest/azure: Service returned an error. **Status=404 Code="SecretNotFound" Message="A secret with (name/id) test-cert-chain was not found in this key vault. If you recently deleted this secret you may be able to recover it using the correct recovery command. For help resolving this issue, please see <https://go.microsoft.com/fwlink/?linkid=2125182>"** |
 
 ## Resources
 

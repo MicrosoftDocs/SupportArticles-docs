@@ -10,15 +10,18 @@ ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.date: 04/15/2024
+ms.custom: linux-related-content
+ms.date: 07/02/2024
 #customer intent: As an Azure Linux VM administrator, I want troubleshoot issues in the yum and dnf tools so that I can successfully install or update applications on my VMs.
 ---
 # Troubleshoot common issues in the yum and dnf package management tools for Linux
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article discusses common issues that you might encounter when you use `yum` and `dnf` package management tools to install or update applications on Azure virtual machines (VMs), and provides solutions to these issues.
 
 > [!CAUTION]
-> This article references CentOS, a Linux distribution that is nearing End Of Life (EOL) status. Please consider your use and planning accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+> This article references CentOS, a Linux distribution that reached end of life (EOL). Please consider your use and planning accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 ## Overview
 

@@ -16,6 +16,8 @@ ms.custom: sap:Cannot connect to my VM
 ---
 # Cannot RDP to Azure Virtual Machines because the DHCP Client service is disabled
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article describes a problem in which you cannot remote desktop to Azure Windows Virtual Machines (VMs) after the DHCP Client service is disabled in the VM.
 
 ## Symptoms

@@ -15,8 +15,9 @@ ms.date: 06/13/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
-
 # Troubleshoot Windows stop error – directory service initialization failure
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where an Active Directory domain controller virtual machine (VM) in Azure, is stuck in a loop and states that it needs to restart.
 

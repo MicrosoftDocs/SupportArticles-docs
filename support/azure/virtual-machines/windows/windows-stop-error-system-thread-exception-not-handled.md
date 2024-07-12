@@ -12,8 +12,9 @@ ms.topic: troubleshooting-problem-resolution
 ms.date: 05/15/2024
 ms.custom: sap:My VM is not booting
 ---
-
 # Windows stop error - 0x0000007E system thread exception not handled
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues in which the guest operating system (guest OS) encounters a problem and tries to restart your Azure virtual machine (VM). Additionally, you receive the following error message:
 

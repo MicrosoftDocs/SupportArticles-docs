@@ -1,7 +1,7 @@
 ---
 title: Transaction log file grows for databases with In-Memory OLTP in SQL Server 2022
 description: Troubleshoots the issue where transaction log file grows continuously for databases with In-Memory OLTP enabled in SQL Server 2022.
-ms.date: 06/29/2023
+ms.date: 07/03/2023
 ms.custom: sap:File, Filegroup, Database Operations or Corruption\Database shrink, growth or file size issues
 ms.reviewer: jopilov, sureshka, v-sidong
 author: prmadhes-msft
@@ -32,6 +32,9 @@ To solve the issue, follow these steps:
 1. Add *-T9810* as the startup parameter for the SQL Server instance.
 1. Restart the instance.
 1. Issue a checkpoint, take a log backup, observe `log_reuse_wait_desc`, and shrink the log if needed to reclaim space.
+
+> [!NOTE]
+> This issue has been fixed in [Cumulative Update 7 for SQL Server 2022](../../releases/sqlserver-2022/cumulativeupdate7.md#2491363).
 
 ## More information
 

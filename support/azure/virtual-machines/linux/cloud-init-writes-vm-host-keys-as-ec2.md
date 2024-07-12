@@ -2,7 +2,7 @@
 title: Cloud-init writes virtual machine's host keys as ec2
 description: This article describes an issue in which Cloud-init writes virtual machine's host keys as ec2. It provides a workaround.
 ms.date: 10/10/2020
-ms.custom: sap:VM Extensions not operating correctly
+ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 ms.service: virtual-machines
 ms.collection: linux
 ms.author: genli
@@ -11,7 +11,8 @@ ms.reviewer: Timothy.Basham, Scott.L.Roberts
 ---
 # Cloud-init writes virtual machine's host keys as ec2
 
-_Original product version:_ &nbsp; Virtual Machine running Linux  
+**Applies to:** :heavy_check_mark: Linux VMs
+
 _Original KB number:_ &nbsp; 4561944
 
 ## Symptoms

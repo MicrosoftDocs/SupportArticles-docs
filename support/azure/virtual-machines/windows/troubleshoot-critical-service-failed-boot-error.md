@@ -14,8 +14,9 @@ ms.date: 06/13/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
-
 # Windows shows "CRITICAL SERVICE FAILED" on blue screen when booting an Azure VM
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article describes the "CRITICAL SERVICE FAILED" error that you may experience when you boot a Windows Virtual Machine (VM) in Microsoft Azure. It provides troubleshooting steps to help resolve the issues.
 

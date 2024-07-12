@@ -15,6 +15,8 @@ ms.custom: sap:Cannot start or stop my VM, H1Hack27Feb2017
 ---
 # Troubleshoot deployment issues with restarting or resizing an existing Windows VM in Azure
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 When you try to start a stopped Azure Virtual Machine (VM), or resize an existing Azure VM, the common error you encounter is an allocation failure. This error results when the cluster or region either does not have resources available or cannot support the requested VM size.
 
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]

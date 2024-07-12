@@ -9,7 +9,8 @@ ms.custom: sap:Cannot connect to my VM
 ---
 # No Internet access from Azure Windows VM that has multiple IP addresses
 
-_Original product version:_ &nbsp; Virtual Machine running Windows  
+**Applies to:** :heavy_check_mark: Windows VMs
+
 _Original KB number:_ &nbsp; 4040882
 
 ## Symptoms

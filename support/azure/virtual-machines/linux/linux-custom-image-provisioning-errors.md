@@ -8,6 +8,8 @@ ms.reviewer: srijangupta, scotro, jarrettr
 ---
 # Provisioning errors when deploying custom Linux images
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-issue1](../../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-issue1-include.md)]
 
 [!INCLUDE [virtual-machines-linux-troubleshoot-deployment-new-vm-table](../../../includes/azure/virtual-machines-linux-troubleshoot-deployment-new-vm-table.md)]

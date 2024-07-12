@@ -20,6 +20,8 @@ ms.author: genli
 ---
 # Detailed SSH troubleshooting steps for issues connecting to a Linux VM in Azure
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 There are many possible reasons that the SSH client might not be able to reach the SSH service on the VM. If you have followed through the more [general SSH troubleshooting steps](troubleshoot-ssh-connection.md), you need to further troubleshoot the connection issue. This article guides you through detailed troubleshooting steps to determine where the SSH connection is failing and how to resolve it.
 
 ## Take preliminary steps

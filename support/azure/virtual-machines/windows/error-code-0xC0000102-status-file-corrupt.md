@@ -1,7 +1,7 @@
 ---
 title: Windows stop error 0xC0000102 Status File Corrupt
 description: Understand how to fix error 0xC0000102 (Status File Corrupt) that occurs on an Azure virtual machine (VM).
-ms.date: 06/21/2024
+ms.date: 07/12/2024
 ms.reviewer: jarrettr, v-leedennis
 ms.service: virtual-machines
 ms.collection: windows
@@ -9,6 +9,8 @@ ms.custom: sap:My VM is not booting
 ---
 
 # Windows stop error 0xC0000102 Status File Corrupt
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where the Windows operating system (OS) encounters the stop error 0xC0000102, which keeps an Azure virtual machine (VM) from booting.
 
@@ -48,19 +50,9 @@ If you have a recent backup of the VM, you may try [restoring the VM from the ba
 
 ### Step 2: Repair or replace the corrupt file
 
-#### Option 1: Repair the corrupt file
+Repair or replace the corrupted binary (*.sys*) file by following these steps:
 
-Open an elevated CMD prompt and run **chkdsk** on the disk:
-
-```cmd
-chkdsk <drive-letter>: /F
-```
-
-#### Option 2: Replace the corrupt file
-
-Replace the corrupted system binary (*.sys*) file by following these steps:
-
-[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-replace-system-binary-file.md)]
+[!INCLUDE [Repair or replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
 ### Step 3: Enable the Serial Console and memory dump collection
 

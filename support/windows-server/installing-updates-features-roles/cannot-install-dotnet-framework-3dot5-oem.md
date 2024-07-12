@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, match, chadbee, v-miand3
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD), csstroubleshoot
 ---
 # Can't install the .NET Framework 3.5 without a public Internet environment on an OEM Windows installation
 

@@ -1,4 +1,3 @@
-
 items:
 - name: Welcome
   href: welcome-container-registry.yml
@@ -7,3 +6,19 @@ items:
   items:
   - name: Can't get private IP address of an Azure Container Registry FQDN
     href: cant-resolve-container-registry-fqdn-private-ip-address.md
+
+- name: Troubleshoot pull issues
+  href: troubleshoot-issues-pull-container-registry.md
+  items:
+  - name: '"Authentication required" error'
+    href: authentication-required.md
+  - name: '"Client with IP address is not allowed access" error'
+    href: client-ip-address-not-allowed-access.md
+  - name: '"Context deadline exceeded" error'
+    href: context-deadline-exceeded.md
+  - name: '"I/O time-out" error'
+    href: download-failed-443-io-time-out.md
+  - name: '"Manifest tag is not found" error'
+    href: manifest-tag-not-found.md
+  - name: '"Request canceled while waiting for connection" error'
+    href: request-canceled-waiting-connection-timeout-exceeded.md

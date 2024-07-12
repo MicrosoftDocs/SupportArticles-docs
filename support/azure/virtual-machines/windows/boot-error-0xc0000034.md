@@ -9,10 +9,11 @@ ms.custom: sap:My VM is not booting
 ---
 # Windows boot error 0xc0000034 on an Azure VM
 
-This article provides a solution to an issue where Windows VM doesn't start with error code 0xc0000034.
+**Applies to:** :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4010140
+
+This article provides a solution to an issue where Windows VM doesn't start with error code 0xc0000034.
 
 ## Symptoms
 

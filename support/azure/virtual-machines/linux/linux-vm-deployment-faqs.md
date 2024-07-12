@@ -8,9 +8,11 @@ ms.reviewer: srijangupta, scotro, jarrettr
 ---
 # Linux virtual machine deployment FAQs
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 ## How do I activate my monthly credit for Visual studio Enterprise (BizSpark)
 
-To activate your monthly  credit, see this [article](https://azure.microsoft.com/offers/ms-azr-0064p/).
+To activate your monthly credit, see [Microsoft Azure Offer Details](https://azure.microsoft.com/offers/ms-azr-0064p/).
 
 ## Why can I not install the GPU driver for an Ubuntu NV VM?
 
@@ -18,15 +20,15 @@ Currently, Linux GPU support is only available on Azure NC VMs running Ubuntu Se
 
 ## My drivers are missing for my Linux N-Series VM
 
-Instructions to install drivers for Linux-based VMs are located [here](/azure/virtual-machines/sizes-gpu#supported-operating-systems-and-drivers).
+For instructions to install drivers for Linux-based VMs, see [GPU accelerated](/azure/virtual-machines/sizes-gpu#supported-operating-systems-and-drivers).
 
 ## I can't find a GPU instance within my N-Series VM
 
-To take advantage of the GPU capabilities of Azure N-series VMs, you must install graphics drivers on each VM after deployment. Driver setup information is available [here](/azure/virtual-machines/sizes-gpu#supported-operating-systems-and-drivers).
+To take advantage of the GPU capabilities of Azure N-series VMs, you must install graphics drivers on each VM after deployment. For more information about driver setup, see [GPU accelerated](/azure/virtual-machines/sizes-gpu#supported-operating-systems-and-drivers).
 
 ## Are N-Series VMs available in my region?
 
-You can check the availability from the [Products available by region table](https://azure.microsoft.com/regions/services), and pricing [here](https://azure.microsoft.com/pricing/details/virtual-machines/series/#n-series).
+You can check the availability from the [Products available by region table](https://azure.microsoft.com/regions/services), and pricing from [N-Series](https://azure.microsoft.com/pricing/details/virtual-machines/series/#n-series).
 
 ## I'm not able to see VM Size family that I want when resizing my VM
 
