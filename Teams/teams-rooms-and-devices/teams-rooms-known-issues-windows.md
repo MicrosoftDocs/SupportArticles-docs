@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 07/11/2024
+ms.date: 07/12/2024
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -54,6 +54,7 @@ ms.date: 07/11/2024
 |Teams Rooms on Windows device displays error message about a missing license.|After you upgrade the Teams Rooms for Windows app on your device to version 5.0.111.0, you see the following error message:<br/><br/><i>No valid Teams Rooms license found</i><br/><br/>This issue occurs for the following licenses of the Teams Rooms app:<ul><li>MEETING_ROOM_NOAUDIOCONF</li><li>MEETING_ROOM_AR_USGOV_GCCHIGH</li></ul><br/><br/>These licenses are missing the Teams Rooms Standard service plan.|To work around the issue, add the following information to the SkypeSettings.xml file to turn off the Teams Rooms app upgrade to version 5.0.111.0:<br/><br/>\<SkypeSettings><br/>\<EnableTeams21>false\</EnableTeams21><br/>\</SkypeSettings>|
 |QR code to join meetings reappears after being disabled.|You have disabled the QR code that is displayed on the device console and in Front of Room displays to join Teams meetings.<br/><br/>However, the QR code reappears when the device restarts, or after a user either joins or leaves a meeting on the device.|Restart the device so that it picks up a new configuration that fixes the issue.|
 |Volume change indicator not working|When you change the volume of a Teams Rooms device by using the volume controls that are on the device or on an external audio device, the change isn't displayed in the volume setting of the Teams Rooms device.<br/><br/>The change to the volume settings takes effect but the visual display doesn't reflect the change.|No workaround is required because the functionality is working.|
+|Teams Rooms app window doesn't fill the screen on the device console.|The window of the Teams Rooms app takes up only a part of the device console or Front of Room display and doesn't resize to fill the screen.<br/><br/>This issue usually occurs in displays that are disconnected in their Sleep or Wake states.|Make sure that the [scale of the display is set to 100%](/microsoftteams/rooms/rooms-operations#display-resolution-and-scaling).|
 
 ## Hardware issues
 
