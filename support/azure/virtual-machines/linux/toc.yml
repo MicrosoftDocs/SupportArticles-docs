@@ -346,7 +346,7 @@
     - name: Linux VM extensions stop running
       href: extensions-stop-running.md
     - name: Multiple certificates on IaaS VM that uses extensions
-      href: multiple-certificates-iaas-vm-extensions.md
+      href: ../windows/multiple-certificates-iaas-vm-extensions.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: The host keys of Linux VM are written to ec2
       href: cloud-init-writes-vm-host-keys-as-ec2.md
     - name: Update awareness for Linux Image Provisioning Agent
@@ -354,7 +354,7 @@
     - name: Can't process extensions
       href: linux-agent-cannot-process-extensions.md
     - name: Supported operating systems
-      href: extension-supported-os.md
+      href: ../windows/extension-supported-os.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Cloud-init
     items:
     - name: Azure cloud-init support for Linux VMs
