@@ -3,7 +3,7 @@ author: genlin
 ms.author: genli
 ms.service: virtual-machines
 ms.topic: include
-ms.date: 06/30/2024
+ms.date: 07/12/2024
 ms.reviewer: jarrettr
 ---
 1. Delete the VM.
@@ -32,7 +32,7 @@ ms.reviewer: jarrettr
    ```
 
    > [!NOTE]
-   > If there isn't a *bcd* store file in the *boot* folder of the Boot partition, restore the file by following the steps in [Replace the binary file](../../azure/virtual-machines/windows/boot-error-0xc0000098.md#step-2-replace-the-binary-file), except that you're replacing the *\\boot\\bcd* file instead of a system binary (*.sys*) file.
+   > If there isn't a *bcd* store file in the *boot* folder of the Boot partition, restore the file by following the steps in [Repair or replace the binary file](../../azure/virtual-machines/windows/boot-error-0xc0000098.md#step-2-repair-or-replace-the-binary-file), except that you're replacing the *\\boot\\bcd* file instead of a system binary (*.sys*) file.
 
 1. Repair the Boot Configuration data by running the following [BCDEdit /set](/windows-hardware/drivers/devtest/bcdedit--set) commands. Change the placeholders to the actual values, as described in the following table.
 
