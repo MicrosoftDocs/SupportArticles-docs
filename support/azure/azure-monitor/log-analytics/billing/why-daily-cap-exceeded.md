@@ -5,7 +5,7 @@ ms.date: 07/01/2024
 ms.author: neghuman
 ms.service: azure-monitor
 keywords:
-#Customer intent: I want to learn how to manage the data volume of my Azure Log Analytics workspace.
+#Customer intent: As an Azure Monitor user, I want to learn how to manage the data volume of my Azure Log Analytics workspace.
 ms.custom: sap:Log Analytics Billing
 ---
 # How to manage excessive data volumes in a Log Analytics workspace
