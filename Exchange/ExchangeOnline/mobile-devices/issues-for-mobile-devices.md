@@ -39,7 +39,7 @@ To capture ActiveSync device log information, follow these steps:
     Set-CASMailbox -Identity <user email address> -ActiveSyncDebugLogging $true
     ```
 
-    To verify that ActiveSync debug logging is enabled for a user, run the following PowerShell cmdlet:
+    To verify that ActiveSync debug logging is enabled for the user, run the following PowerShell cmdlet:
 
     ```powershell
     Get-CasMailbox -Identity <user email address> -ActiveSyncDebugLogging | FL ActiveSyncDebugLogging
@@ -58,7 +58,3 @@ To capture ActiveSync device log information, follow these steps:
 
     > [!NOTE]
     > This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the log file and sends it to the System Administrator at `admin@contoso.com`.
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
