@@ -112,7 +112,7 @@ Then, create a scheduled task to stop the capture when the reboot occurs. Follow
 
 Now you're ready for the capture. From an elevated Command Prompt window, go to the C:\WMI folder, and then run StartTrace.bat.
 
-> ![NOTE]
+> [!NOTE]
 > A Process Monitor capture has been started at this point. You will be able to see the PML file in that folder. Even with a filter defined, the capture is left running for long time. Multiple PML files will be created that can consume a lot of this space.
 >
 > Make sure to monitor the size and number of these PML files. If the unexpected shutdown doesn't happen, you may want to stop and restart the trace to clear out older PML files that are no longer needed for the investigation.
