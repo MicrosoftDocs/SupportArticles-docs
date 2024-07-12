@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Fence Agent startup issues in SUSE
-description: Provides troubleshooting guidance for Azure Fence Agent failing to start
+description: Provides troubleshooting guidance if Azure Fence Agent does not start
 author: rnirek
 ms.author: rnirek
 ms.reviewer: divargas
@@ -13,21 +13,22 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 # Troubleshoot Azure Fence Agent startup issues in SUSE
 
-This article lists common causes of Azure Fence Agent startup issues and offers guidance on identifying these causes by reviewing the logs. It also provides corresponding solutions to resolve the issues.
+This article lists the common causes of startup issues for Microsoft Azure Fence Agent, offers guidance for identifying the causes through log reviews, and provides resolutions for the issues.
 
 ## How Azure Fence Agent works
 
-The Azure fence agent uses a Python program located at `/usr/sbin/fence_azure_arm`. The cluster Resource Agent (RA), which implements fencing a failed node (STONITH) calls this program with the appropriate parameters. Then uses it to communicate with the Azure platform via API calls.
+Azure Fence Agent uses a Python program that's located at `/usr/sbin/fence_azure_arm`. The cluster resource agent (RA) calls this program together with the appropriate parameters to implement node fencing, or "STONITH," to enable one cluster node to shut down or disable access to another cluster node. That is, the agent fences a failed node, and then it uses the Python program to communicate with the Azure platform through API calls.
+
 As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=msi#1-create-a-custom-role-for-the-fence-agent), the custom role provides the fence agent with permissions to perform the following actions:
 
 - `powerOff`
 - `start`
    
-When the virtual machine (VM) is detected as unhealthy, the fence agent uses the above actions to power off the VM, and then start it up again.
+If the virtual machine (VM) is detected as unhealthy, the fence agent uses these actions to power off the VM and then start it up again.
 
 ## Symptoms
 
-Azure Fencing Agent resource fails to start. When you run `sudo crm status` to check the status of the cluster resource, it reports an "unknown error".
+An Azure Fencing Agent resource doesn't start. When you run `sudo crm status` command to check the status of the cluster resource, the command output it reports an "unknown error."
 
 The following is the sample output of the crm status:
 
@@ -62,7 +63,7 @@ Failed Resource Actions:
 ```
 ## Cause 1: Endpoint connectivity or credential issues
 
-To resolve the issue, check the log in `/var/log/messages`. If 'Azure Error: AuthenticationFailed' appears in the log as as shown below, the problem could be related to endpoint connectivity or credentials issues. 
+To resolve the issue, check the log in `/var/log/messages`. If 'Azure Error: AuthenticationFailed' appears in the log (as shown in the following screenshot), the issue could be related to endpoint connectivity or credentials issues. 
 
 ```output
 /var/log/messages
@@ -71,12 +72,12 @@ To resolve the issue, check the log in `/var/log/messages`. If 'Azure Error: Aut
 ```
 ### Resolution
 
-1. Ensure outbound connectivity on port 443 to the following Azure Management API endpoints:
+1. Make sure that there is outbound connectivity on port 443 to the following Azure Management API endpoints:
 
     * management.azure.com
     * login.microsoftonline.com
 
-    You can test the connectivity by using `nc1, `telnet`, or `curl`. Replace the endpoint value accordingly.
+    You can test the connectivity by using `nc1, `telnet`, or `curl` (replace the endpoint value as appropriate):
 
     ```bash
     nc -z -v <endpoint> 443
@@ -90,14 +91,12 @@ To resolve the issue, check the log in `/var/log/messages`. If 'Azure Error: Aut
     curl -v telnet://<endpoint>:443
     ```
 
-2. Ensure that a valid username and password are set for the STONITH resource. One of the major causes of STONITH resource failures is the use of invalid values for the username or password when using a Service Principal. You can test this using the `fence_azure_arm` command, as shown in the following example. To set username and password for the STONITH resource, see [Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=spn#create-an-azure-fence-agent-device).
+2. Make sure that a valid username and password are set for the STONITH resource. One of the major causes of STONITH resource failure is the use of invalid values for the username or password when you use a service principal. You can test the values by using the `fence_azure_arm` command, as shown in the following example. To set username and password for the STONITH resource, see [Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=spn#create-an-azure-fence-agent-device).
 
     ``` bash
     sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> 
     ```
-    This command should return the node names of the VMs in the cluster.
-
-    If the command doesn't return successfully, it should be re-executed with the `-v` flag to enable verbose output and `-D` flag to enable debug output as shown in the following command:
+    This command should return the node names of the VMs in the cluster. If the command isn't successful, rerun it together with the `-v` flag to enable verbose output and `-D` flag to enable debug output, as shown in the following example:
 
     ```bash
     sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> -v -D /var/tmp/debug-fence.out 
@@ -109,11 +108,11 @@ To resolve the issue, check the log in `/var/log/messages`. If 'Azure Error: Aut
     sudo /usr/sbin/fence_azure_arm --action=list --msi --resourceGroup=<resource group> -v -D /var/tmp/debug-fence.out
     ```
     > [!NOTE]
-    > Replace `<user name>`, `<password>`, `<tenant ID>`, `<resource group>` values accordingly.
+    > Replace the `<user name>`, `<password>`, `<tenant ID>`, and `<resource group>` values as appropriate.
 
 ## Cause 2: Authentication failure
 
-Check the log in `/var/log/messages`. If 'unauthorized_client' appears in the log as shown below, the problem could be related to authentication failure. 
+Check the log in `/var/log/messages`. If 'unauthorized_client' appears in the log, as shown in the following example, the problem could be related to authentication failure.
 
 ```output
 /var/log/messages
@@ -127,22 +126,22 @@ You may have sent your authentication request to the wrong tenant.\r\nTrace ID: 
 
 ### Resolution
 
-Verify the Microsoft Entra ID app's tenant ID, application ID, login, and password details from the Azure portal.
+Verify the Microsoft Entra ID app tenant ID, application ID, login, and password details from the Azure portal. Follow these steps:
 
-1. Once the IDs are verified or updated, reconfigure the fence-agent in the cluster.
+1. After the IDs are verified or updated, reconfigure the fence agent in the cluster:
 
     ```bash
     sudo crm configure property maintenance-mode=true
     sudo crm configure edit <fencing agent resource>
     ```
 
-2. Change the parameters accordingly and save the changes.
+1. Change the parameters as appropriate, and save the changes:
 
    ```bash
     sudo crm configure property maintenance-mode=false
    ```
 
-3. Verify the cluster status to confirm if fencing agent issue is fixed.
+1. Check the cluster status to verify that the fencing agent issue is fixed:
 
     ```bash
     crm status
@@ -150,7 +149,7 @@ Verify the Microsoft Entra ID app's tenant ID, application ID, login, and passwo
 
 ## Cause 3: Insufficient permissions
 
-Check the log in `/var/log/messages`. If 'The client does not have authorization to perform action' appears in the log as as shown below, the problem could be related to Insufficient permissions：
+Check the log in `/var/log/messages`. If an entry for 'The client does not have authorization to perform action' appears in the log, as shown in the following example, the problem could be related to insufficient permissions：
 
 ``` output
 /var/log/messages
@@ -160,13 +159,13 @@ Apr 2 00:49:57 VM1 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: 
 ```
 ### Resolution
 
-1. Referencing [create a custom role for the fence agent](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&tabs=msi#1-create-a-custom-role-for-the-fence-agent), verify the custom role definition configured for the fence agent.
-2. Confirm whether the fencing agent is assigned the necessary custom role on the affected VM. If not, assign the role to the VM using Access Control.
-4. Verify the cluster status to ensure the fencing agent issue is resolved using `crm status`.
+1. [Create a custom role for the fence agent](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&tabs=msi#1-create-a-custom-role-for-the-fence-agent) to verify that the custom role definition is configured for the fence agent.
+1. Verify that the fencing agent is assigned the necessary custom role on the affected VM. If it's not, assign the role to the VM by using Access Control.
+1. Run `crm status` to check the cluster status to make sure that the fencing agent issue is resolved.
 
 ## Cause 4: SSL handshake failure 
 
-If 'Error occurred in request., SSLError' appears in the log as as shown below, the problem could be related to SSL handshake failure：
+If 'Error occurred in request., SSLError' appears in the log, as as shown in the following example, the problem could be related to SSL handshake failure：
 
 ```output
 /var/log/messages
@@ -175,12 +174,13 @@ warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed:
 
 ### Resolution
 
-1. Tested connectivity from affected nodes using `openssl`:
+1. Test connectivity from the affected nodes by using `openssl`:
+
     ```bash
     openssl s_client -connect management.azure.com:443
     ```
 
-2. Check if the output lacks the complete certificate handshake, as shown below:
+2. Check whether the output lacks the complete certificate handshake, as shown in the following example:
 
     ``` output
     CONNECTED(00000003)
@@ -212,17 +212,16 @@ warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed:
         Verify return code: 0 (ok)
         Extended master secret: no
     ```
-   If so, these errors are likely caused by a network appliance or firewall performs packet inspection or modifies Transparent Layer Socket (TLS) connections in a way that disrupts certificate verification. Additionally, issues with maximum transmission unit (MTU) sizes reaching their limit can also contribute to these issues.
+   These errors are most likely caused by a network appliance or firewall running a packet inspection or modifying Transparent Layer Socket (TLS) connections in a manner that disrupts certificate verification. Additionally, these issues can be caused by maximum transmission units (MTU) reaching their size limit.
 
-3. If Azure Firewall is in front of the nodes, ensure that these tags are added to the application or network rules:
+3. If Azure Firewall is in front of the nodes, make sure that these tags are added to the application or network rules:
 
     - Application Rules: ApiManagement , AppServiceManagement, AzureCloud
     - Network Rules: AppServiceEnvironment
 
-
 ## Next Steps
 
-If you require further help, open a support request using the following instructions. When submitting your request, attach a copy of `debug-fence.out` for troubleshooting purposes.
+If you need additional help, open a support request by using the following instructions. When you submit your request, attach a copy of `debug-fence.out` for troubleshooting.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
