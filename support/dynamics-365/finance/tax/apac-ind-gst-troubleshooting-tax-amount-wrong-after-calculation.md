@@ -35,7 +35,7 @@ If the calculated tax on a business document is incorrect, follow the steps in t
 
 ## Verify that the tax base is correct
 
-Follow these steps to verify that the tax base is correct.
+Follow these steps to verify that the tax base is correct.  test
 
 1. Verify that the number of tax document lines matches the number of transaction lines. If the number of lines doesn't match, determine whether any lines don't match the condition that is defined in the tax configuration. For more information, see [Tax isn't calculated on tax documents](apac-ind-gst-troubleshooting-tax-not-calculated.md).
 
