@@ -233,12 +233,12 @@
   items:
   - name: RHEL
     items:
-    - name: Troubleshoot Azure fence agent issues
+    - name: Troubleshoot Azure fence agent startup issues
       href: troubleshoot-azure-fence-agent-rhel.md
   - name: SLES
     items:
-    - name: Troubleshoot Azure Fence Agent Issues in SUSE
-      href: troubleshoot-azure-fence-agent-sles.md`
+    - name: Troubleshoot Azure Fence Agent startup issues in SUSE
+      href: troubleshoot-azure-fence-agent-startup-suse.md`
       
 - name: Linux repositories
   items:
