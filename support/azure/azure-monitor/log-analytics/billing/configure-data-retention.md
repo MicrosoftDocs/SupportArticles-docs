@@ -6,7 +6,7 @@ ms.author: neghuman
 ms.reviewer: neghuman
 ms.service: azure-monitor
 keywords:
-#Customer intent: Help me configure data retention for my Log Analytics workspace.
+#Customer intent: I want to learn how to configure data retention for my Log Analytics workspace.
 ms.custom: sap:Log Analytics Billing
 ---
 # Set Retention for Log Analytics Workspace
