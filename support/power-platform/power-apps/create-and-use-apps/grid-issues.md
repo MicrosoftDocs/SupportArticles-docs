@@ -3,7 +3,7 @@ title: Troubleshoot grid issues in model-driven apps
 description: Provides a resolution for grid issues in model-driven apps in Microsoft Power Apps.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/08/2024
+ms.date: 07/12/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -41,13 +41,13 @@ This guide helps you resolve the following grid issues that occur in a Power App
 
 Here are the screenshots of the terms:
 
-:::image type="content" source="media/grid-issues/grid-control.png" alt-text="Screenshot that shows an entity page that contains the terms 1, 3, 4, 6, 7, 8, 14." lightbox="media/grid-issues/grid-control.png":::
+:::image type="content" source="media/grid-issues/grid-control.png" alt-text="Screenshot of an entity page that contains the terms 1, 3, 4, 6, 7, 8, 14." lightbox="media/grid-issues/grid-control.png":::
 
-:::image type="content" source="media/grid-issues/form-page.png" alt-text="Screenshot that shows a form page that contains the terms 2, 3, 4, 5." lightbox="media/grid-issues/form-page.png":::
+:::image type="content" source="media/grid-issues/form-page.png" alt-text="Screenshot of a form page that contains the terms 2, 3, 4, 5." lightbox="media/grid-issues/form-page.png":::
 
-:::image type="content" source="media/grid-issues/column-filters-sorting-header-status.png" alt-text="Screenshot that shows a page that contains the terms 9, 10, 11, 13." lightbox="media/grid-issues/column-filters-sorting-header-status.png":::
+:::image type="content" source="media/grid-issues/column-filters-sorting-header-status.png" alt-text="Screenshot of a page that contains the terms 9, 10, 11, 13." lightbox="media/grid-issues/column-filters-sorting-header-status.png":::
 
-:::image type="content" source="media/grid-issues/nested-grid.png" alt-text="Screenshot that shows a page that contains the term 12." lightbox="media/grid-issues/nested-grid.png":::
+:::image type="content" source="media/grid-issues/nested-grid.png" alt-text="Screenshot of a page that contains the term 12." lightbox="media/grid-issues/nested-grid.png":::
 
 ## Useful tools
 
@@ -56,7 +56,7 @@ Here are the screenshots of the terms:
 
 ## Steps to perform before starting troubleshooting
 
-1. Remove or disable custom scripts. One of the first steps is to ensure that custom scripts don't interfere with product functionality. It's highly recommended to perform this step even when custom scripts used to work in one of the previous versions.
+1. Remove or disable custom scripts. One of the first steps is to ensure that custom scripts don't interfere with product functionality. It's highly recommended to perform this step even when custom scripts are used to work in one of the previous versions.
 
     - If all custom scripts are attached via form events, follow the steps in [Troubleshoot form issues in model-driven apps](/power-apps/developer/model-driven-apps/troubleshoot-forms) to disable them.
     - Other custom scripts are added directly via web resources, custom solutions, or plugins.

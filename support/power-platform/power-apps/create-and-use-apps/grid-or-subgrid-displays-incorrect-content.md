@@ -3,7 +3,7 @@ title: Grid or subgrid displays incorrect content in a model-driven app
 description: Provides troubleshooting steps for an issue where the grid or subgrid displays incorrect content in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/08/2024
+ms.date: 07/12/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -17,7 +17,7 @@ You might find the grid doesn't display the expected content immediately after n
 
 ## Troubleshooting step
 
-The first step is to check if the grid is receiving the expected data. Use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to investigate the latest "GridChecker" event that's related to the grid or subgrid.
+The first step is to check if the grid receives the expected data. Use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to investigate the latest "GridChecker" event that's related to the grid or subgrid.
 
 :::image type="content" source="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png" alt-text="Screenshot that shows how to use the monitor tool to get page and records information." lightbox="media/grid-or-subgrid-displays-incorrect-content/gridchecker.png":::
 
