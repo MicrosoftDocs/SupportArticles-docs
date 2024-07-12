@@ -9,13 +9,13 @@ A computer is shut down unexpectedly. You found the event 1074 in the System log
 ```output
 Log Name:      System
 Source:        User32
-Date:          7/2/2024 10:45:50 AM
+Date:          <date and time>
 Event ID:      1074
 Level:         Information
-User:          CONTOSO\administrator
-Computer:      W19SRV.contoso.com
+User:          <User>
+Computer:      <FQDN>
 Description:
-The process C:\Windows\system32\wbem\wmiprvse.exe (W19SRV) has initiated the shutdown of computer W19SRV on behalf of user CONTOSO\Administrator for the following reason: No title for this reason could be found
+The process C:\Windows\system32\wbem\wmiprvse.exe (<computer name>) has initiated the shutdown of computer <computer name> on behalf of user <user> for the following reason: No title for this reason could be found
  Reason Code: 0x80070015
  Shutdown Type: shutdown
  Comment:
@@ -27,101 +27,113 @@ WMI can shut down a computer by calling the Win32Shutdown method of the Win32_Op
 
 To troubleshoot unexpected shutdowns caused by WMI, a WMI trace needs to be collected continuously until the behavior occurs. The trace can be collected by enabling the log `Application and Services Logs / Microsoft / Windows / WMI-Activity / Trace` (The log is not visible by default in Event Viewer). To view this log, enable the option **View** -> **Show Analytic and Debug Logs**.
 
-The trace will reveal the Process ID and the user where the request comes from, so you will also need to capture a Process Monitor trace to identify that process.
+The trace reveals the process ID and the user where the request comes from. You will also need to capture a Process Monitor trace to identify that process.
 
-You can download Process Monitor from this link: [Process Monitor](https://learn.microsoft.com/sysinternals/downloads/procmon)
+You can download Process Monitor from [Process Monitor](https://learn.microsoft.com/sysinternals/downloads/procmon).
 
-## Steps for troubleshooting
+## Troubleshooting steps
 
-To start the investigation follow these steps:
+### Preparations
 
-1. Create a folder on the C: drive, such as C:\WMI
-2. Extract the Process Monitor archive file there
-3. Create these two batch files in the folder
+To start the investigation, follow these steps:
 
-StartTrace.bat:
+1. Create a folder on the C: drive, such as *C:\WMI*.
+2. Extract the Process Monitor archive file to the folder.
+3. Create these two batch files in the folder:
 
-```console
-wevtutil sl Microsoft-Windows-WMI-Activity/Trace /e:true /q
-procmon /Quiet /Minimized /Backingfile %0\..\procmon.pml /LoadConfig %0\..\filter.pmc
-```
+   StartTrace.bat:
 
-Stop trace.bat:
+   ```console
+   wevtutil sl Microsoft-Windows-WMI-Activity/Trace /e:true /q
+   procmon /Quiet /Minimized /Backingfile %0\..\procmon.pml /LoadConfig %0\..\filter.pmc
+   ```
 
-```console
-procmon /Terminate
-wevtutil sl Microsoft-Windows-WMI-Activity/Trace /e:false
-wevtutil epl Microsoft-Windows-WMI-Activity/Trace %0\..\WMI-ActivityLog.evtx /ow:true
-```
+   Stop trace.bat:
 
-You will also need to create a Process Monitor configuration with an event filter to only capture what is needed for this investigation, these are the steps:
+   ```console
+   procmon /Terminate
+   wevtutil sl Microsoft-Windows-WMI-Activity/Trace /e:false
+   wevtutil epl Microsoft-Windows-WMI-Activity/Trace %0\..\WMI-ActivityLog.evtx /ow:true
+   ```
 
-1. Start Process Monitor
-2. Click on the Reset button at the Process Monitor Filter dialog box, if it shows up
-3. Click on the third button in the toolbar to stop the automatic capture
-4. Click on the Filter menu then select the Filter option
-5. In the filter definition select Operation is Process Create then click Add
+### Create Process Monitor filters
 
-Also define another filter for Operation is Process Exit then click Add
+Create a Process Monitor configuration with an event filter to only capture what is needed for this investigation. Follow these steps:
 
-1. Click OK to confirm the filter configuration
-2. Click on the File menu then Export Configuration, save the file C:\WMI\filter.pmc
+1. Start Process Monitor.
+2. Select the **Reset** button at the **Process Monitor Filter** dialog box, if it shows up.
+3. Unselect the third button in the toolbar to stop the automatic capture.
+4. Select the **Filter** menu, and then select the **Filter** option.
+5. In the **Process Monitor Filter** dialog box, select **Operation**, **is**, type *Process Create*, and then select **Add**.  
+   Also define another filter by selecting **Operation**, **is**, type *Process Exit*, and then select **Add**.
+6. Click **OK** to confirm the filter configuration.
+7. Select the **File** menu then **Export Configuration...**, save the file *C:\WMI\filter.pmc*.
 
-Then you will have create a scheduled task to stop the capture when the reboot occurs, these are the steps:
+### Create a scheduled task
 
-1. Open Task Scheduler
-2. Right click on the Task Scheduler Library node then Create Task
-3. Give the task a name
-4. Select "Run whether or not user is logged on"
-5. In the Triggers tab click on New then select "On an event"
-   In Log select System
-   In Source type User32
-   in Event ID type 1074 Click OK
-6. In Actions click New
-   Keep the default action "Start a program"
-   Click on Browse then select the StopTrace.bat batch file in the C:\WMI folder
-   Click OK
-7. Click OK to confirm the task, you will be asked for the credentials, the user has to be a member of the Administrators group.
+Then, create a scheduled task to stop the capture when the reboot occurs. Follow these steps:
 
-Now you are ready for the capture, from an elevated Command Prompt go to the C:\WMI folder and execute StartTrace.bat
+1. Open **Task Scheduler**.
+2. Right click the **Task Scheduler Library** node, and then select **Create Task...**.
+3. Type a name for the task.
+4. Select **Run whether or not user is logged on**.
+5. Select the **Triggers** tab.
+   1. select **New...**, and then select **On an event** for the **Begin the task** option.
+   2. In **Log** select **System**.
+   3. In **Source** type *User32*.
+   4. In **Event ID** type *1074*.
+   5. Select **OK**.
+6. Select the **Actions** tab.
+   1. Click **New...**.
+   2. Keep the default for the **Action** option: **Start a program**.
+   3. Select **Browse...**, and then select the **StopTrace.bat** batch file in the *C:\WMI* folder.
+   4. Select **OK**.
+7. Select **OK** to confirm the task. When you are asked for the credentials, provide the user account that is a member of the Administrators group.
 
-Please notice that a Process Monitor capture has been started at this point, you will be able to see the PML file in that folder. Even with a filter defined, the capture is left running for long time, multiple PML files will be created that can consume a lot of this space.
+### Start the capture
 
-Make sure to monitor the size and number of these PML files. If the unexpected shutdown doesn't happen, you may want to stop and restart the trace to clear out older PML files that are no longer needed for the investigation.
+Now you are ready for the capture. From an elevated Command Prompt window, go to the C:\WMI folder, and then run StartTrace.bat.
 
-When the reboot occurs the StopTrace.bat batch files will be called, the Process Monitor trace capture will be stopped and the WMI trace will be saved.
+> ![NOTE]
+> A Process Monitor capture has been started at this point. You will be able to see the PML file in that folder. Even with a filter defined, the capture is left running for long time. Multiple PML files will be created that can consume a lot of this space.
+> 
+> Make sure to monitor the size and number of these PML files. If the unexpected shutdown doesn't happen, you may want to stop and restart the trace to clear out older PML files that are no longer needed for the investigation.
+
+When the reboot occurs, the StopTrace.bat batch file is called. The Process Monitor trace capture will be stopped and the WMI trace will be saved.
+
+### Investigate the trace
 
 After the reboot, follow these steps to conclude the investigation:
 
-1. Go to the folder C:\WMI and double click on the file WMI-ActivityLog.evtx
-2. Right click on the log name in the left pane then click on Filter Current Log
-3. Type 11 in the Event ID text box
-4. Once the filter is applied the first event on the top should be the one with the shutdown request.
-   If not, press CTRL-F and type shutdown
+1. Go to the *C:\WMI* folder, and double click the WMI-ActivityLog.evtx file.
+2. Right click the log name in the left pane then select **Filter Current Log...**.
+3. Type *11* in the **Event ID** text box
+4. Once the filter is applied the first event on the top should be the one with the shutdown request. If not, press the Ctrl key and the F key, and then type *shutdown*.
 
-   This is how the event looks like:
+   Here is a sample of the event log:
 
    ```output
    Log Name:      Microsoft-Windows-WMI-Activity/Trace
    Source:        Microsoft-Windows-WMI-Activity
-   Date:          7/3/2024 10:43:02 AM
+   Date:          <date and time>
    Event ID:      11
    Level:         Information
    User:          SYSTEM
-   Computer:      W19SRV.contoso.com
+   Computer:      <FQDN>
    Description:
-   CorrelationId = {6BE1F66D-CD17-0003-6718-E26B17CDDA01}; GroupOperationId = 11687; OperationId = 11698; Operation = Start IWbemServices::ExecMethod - root\cimv2 : Win32_OperatingSystem=@::Win32Shutdown; ClientMachine = W19SRV; User = CONTOSO\Administrator; ClientProcessId = 2712; NamespaceName = 133644697772514501
+   CorrelationId = {6BE1F66D-CD17-0003-6718-E26B17CDDA01}; GroupOperationId = 11687; OperationId = 11698; Operation = Start IWbemServices::ExecMethod - root\cimv2 : Win32_OperatingSystem=@::Win32Shutdown; ClientMachine = <computer name>; User = <user>; ClientProcessId = 2712; NamespaceName = 133644697772514501
    ```
 
-   Note the Client Process ID
+   Note the **ClientProcessId**.
 
-5. Now double click on the procmon.pml file and find the corresponding line with the same PID
-6. In this example the shutdown method was called by a PowerShell script
+5. Now double click the procmon.pml file and find the corresponding line with the same process ID \(PID\).
+6. In this example, the shutdown method was called by a PowerShell script.  
+   Go to the **Process** tab, in the **Command Line** field, you can find the path of the script.
 
-Go to the Process tab and in the Command Line field you will be able to find the path of the script
+### Cleanup
 
-Once the investigation is finished don’t forget to reset the Process Monitor configuration:
+After the investigation is finished, don't forget to reset the Process Monitor configuration:
 
-1. Click on the File menu then Backing files
-2. Select the option Use virtual memory
-3. Click OK
+1. Select the **File** menu, and then select **Backing files...**.
+2. Select the option **Use virtual memory**.
+3. Select **OK**
