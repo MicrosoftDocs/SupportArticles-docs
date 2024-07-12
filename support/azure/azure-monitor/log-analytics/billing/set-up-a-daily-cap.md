@@ -6,7 +6,7 @@ ms.author: neghuman
 editor: neilghuman
 ms.service: azure-monitor
 keywords:
-#Customer intent: I want to learn how to set up a daily cap limit for my Log Analytics workspace, thereby safeguarding against unexpected surges in data ingestion and unexpected bill spikes.
+#Customer intent: As an Azure Monitor user, I want to learn how to set up a daily cap limit for my Log Analytics workspace, thereby safeguarding against unexpected surges in data ingestion and unexpected bill spikes.
 ms.custom: sap:Log Analytics Billing
 ---
 # Set daily cap limit for Log Analytics workspace
