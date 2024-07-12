@@ -27,7 +27,7 @@ ms.date: 07/11/2024
 ---
 # Known issues with Teams Rooms on Windows
 
-<!-- If you get word that one of these issues no longer applies, contact meerak@microsoft.com or kaushika@microsoft.com and let them know to EoL the corresponding KB.  -->
+<!-- If you get word that one of these issues no longer applies, contact meerak@microsoft.com to EoL the corresponding KB.  -->
 
 ## Software issues
 
