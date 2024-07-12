@@ -27,7 +27,7 @@ When the virtual machine (VM) is detected as unhealthy, the fence agent uses the
 
 ## Symptoms
 
-Azure Fencing Agent resource fails to start. When you run `sudo crm status` to check the status of the cluster resource, it reports an "unknown error."
+Azure Fencing Agent resource fails to start. When you run `sudo crm status` to check the status of the cluster resource, it reports an "unknown error".
 
 The following is the sample output of the crm status:
 
@@ -60,12 +60,9 @@ Failed Resource Actions:
 * rsc_st_azure_start_0 on VM1 'unknown error' (1): call=121, status=complete, exitreason='',
 	last-rc-change='Mon Apr  6 13:50:59 2020', queued=0ms, exec=1760ms
 ```
-
-To resolve the issue, check the log in `/var/log/messages` and take appropriate steps in the following sections.
-
 ## Cause 1: Endpoint connectivity or credential issues
 
-If 'Azure Error: AuthenticationFailed' appears in the log as as shown below, the problem could be related to endpoint connectivity or credentials issues. 
+To resolve the issue, check the log in `/var/log/messages`. If 'Azure Error: AuthenticationFailed' appears in the log as as shown below, the problem could be related to endpoint connectivity or credentials issues. 
 
 ```output
 /var/log/messages
@@ -116,7 +113,7 @@ If 'Azure Error: AuthenticationFailed' appears in the log as as shown below, the
 
 ## Cause 2: Authentication failure
 
-If 'unauthorized_client' appears in the log as shown below, the problem could be related to authentication failure. 
+Check the log in `/var/log/messages`. If 'unauthorized_client' appears in the log as shown below, the problem could be related to authentication failure. 
 
 ```output
 /var/log/messages
@@ -153,7 +150,7 @@ Verify the Microsoft Entra ID app's tenant ID, application ID, login, and passwo
 
 ## Cause 3: Insufficient permissions
 
-If 'The client does not have authorization to perform action' appears in the log as as shown below, the problem could be related to Insufficient permissions：
+Check the log in `/var/log/messages`. If 'The client does not have authorization to perform action' appears in the log as as shown below, the problem could be related to Insufficient permissions：
 
 ``` output
 /var/log/messages
