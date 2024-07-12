@@ -9,7 +9,7 @@ ms.service: virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-ms.date: 06/21/2024
+ms.date: 07/12/2024
 editor: v-jsitser
 ms.reviewer: azurevmcptcic, v-leedennis
 ms.topic: troubleshooting-general

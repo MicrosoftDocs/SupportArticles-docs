@@ -3,7 +3,7 @@ author: genlin
 ms.author: genli
 ms.service: virtual-machines
 ms.topic: include
-ms.date: 06/30/2024
+ms.date: 07/12/2024
 ms.reviewer: jarrettr
 ---
 1. Delete the VM.
