@@ -9,7 +9,7 @@ ms.service: virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-ms.date: 07/10/2024
+ms.date: 07/12/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---

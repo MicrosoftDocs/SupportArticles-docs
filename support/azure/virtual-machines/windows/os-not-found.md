@@ -1,7 +1,7 @@
 ---
 title: Windows can't boot with (An operating system wasn't found) error 
 description: Provides a solution to an issue where Windows VM doesn't start with (An operating system wasn't found) error.
-ms.date: 07/10/2024
+ms.date: 07/12/2024
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows

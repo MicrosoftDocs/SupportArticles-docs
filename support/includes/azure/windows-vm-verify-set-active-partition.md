@@ -1,7 +1,7 @@
 ---
 ms.service: virtual-machines
 ms.topic: include
-ms.date: 07/10/2024
+ms.date: 07/12/2024
 ---
 
 > [!NOTE]

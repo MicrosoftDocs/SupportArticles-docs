@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows VM OS with missing boot manager
 description: Explains when the Windows VM boot manager is missing, and how to solve the problem.
-ms.date: 07/10/2024
+ms.date: 07/12/2024
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows
