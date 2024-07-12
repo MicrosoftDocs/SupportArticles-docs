@@ -40,7 +40,7 @@ To troubleshoot unexpected shutdowns caused by WMI, a WMI trace needs to be coll
 
 The trace reveals the process ID and the user where the request comes from. You'll also need to capture a Process Monitor trace to identify that process.
 
-You can download Process Monitor from [Process Monitor](https://learn.microsoft.com/sysinternals/downloads/procmon).
+You can download Process Monitor from [Process Monitor](/sysinternals/downloads/procmon).
 
 ## Troubleshooting steps
 
