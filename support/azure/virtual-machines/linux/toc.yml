@@ -238,7 +238,7 @@
   - name: SLES
     items:
     - name: Troubleshoot Azure Fence Agent startup issues in SUSE
-      href: troubleshoot-azure-fence-agent-startup-suse.md`
+      href: troubleshoot-azure-fence-agent-startup-suse.md
       
 - name: Linux repositories
   items:
