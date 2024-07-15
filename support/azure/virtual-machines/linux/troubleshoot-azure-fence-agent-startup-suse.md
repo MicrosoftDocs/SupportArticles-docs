@@ -17,9 +17,9 @@ This article lists the common causes of startup issues for Microsoft Azure Fence
 
 ## How Azure Fence Agent works
 
-Azure Fence Agent uses a Python program that's located at `/usr/sbin/fence_azure_arm`. The cluster resource agent (RA) calls this program together with the appropriate parameters to implement node fencing, or "STONITH," to enable one cluster node to shut down or disable access to another cluster node. That is, the agent fences a failed node, and then it uses the Python program to communicate with the Azure platform through API calls.
+Azure Fence Agent uses an Azure API based Python program that's located at `/usr/sbin/fence_azure_arm` to perform VM power off or start actions. When a failed cluster node is detected, the cluster resource agent (RA) calls this program with the appropriate parameters to implement node fencing (also known as STONITH). 
 
-As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=msi#1-create-a-custom-role-for-the-fence-agent), the custom role provides the fence agent with permissions to perform the following actions:
+As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=msi#1-create-a-custom-role-for-the-fence-agent), the custom role should provide the fence agent with permissions to perform the following actions:
 
 - `powerOff`
 - `start`
@@ -165,7 +165,7 @@ Apr 2 00:49:57 VM1 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: 
 
 ## Cause 4: SSL handshake failure 
 
-If 'Error occurred in request., SSLError' appears in the log, as as shown in the following example, the problem could be related to SSL handshake failure：
+If 'SSLError: HTTPSConnectionPool(host='management.azure.com ', port=443): Max retries exceeded with url' appears in the log, as as shown in the following example, the problem could be related to SSL handshake failure：
 
 ```output
 /var/log/messages
