@@ -13,6 +13,8 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 # Troubleshoot Azure Fence Agent startup issues in SUSE
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article lists the common causes of startup issues for Microsoft Azure Fence Agent, offers guidance for identifying the causes through log reviews, and provides resolutions for the issues.
 
 ## How Azure Fence Agent works
