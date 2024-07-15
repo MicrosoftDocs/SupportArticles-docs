@@ -1,5 +1,7 @@
 - name: Azure App Service
   items:
+  - name: Map your own custom domain
+    href: /azure/app-service/app-service-web-tutorial-custom-domain
   - name: Troubleshoot Azure App Service
     href: ./welcome-app-service.yml
   - name: Capture memory dumps in Azure App Service
