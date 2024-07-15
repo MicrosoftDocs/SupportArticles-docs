@@ -237,7 +237,7 @@
       href: troubleshoot-azure-fence-agent-rhel.md
   - name: SLES
     items:
-    - name: Troubleshoot Azure Fence Agent startup issues in SUSE
+    - name: Troubleshoot Azure fence agent startup issues in SUSE
       href: troubleshoot-azure-fence-agent-startup-suse.md
       
 - name: Linux repositories
