@@ -1,7 +1,7 @@
 ---
 title: Understand and resolve blocking problems
 description: This article provides instruction on first understanding what blocking is in terms of SQL Server and furthermore how to investigate its occurrence.
-ms.date: 04/14/2021
+ms.date: 07/15/2024
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: ramakoni
 ---
@@ -247,6 +247,7 @@ By examining the above information, you can determine the cause of most blocking
 * Examine the output of the DMVs `sys.dm_exec_requests` and `sys.dm_exec_sessions` for information on the SPIDs at the head of the blocking chain. Look for the following columns:
 
   * `sys.dm_exec_requests.status`  
+
     This column shows the status of a particular request. Typically, a sleeping status indicates that the SPID has completed execution and is waiting for the application to submit another query or batch. A runnable or running status indicates that the SPID is currently processing a query. The following table gives brief explanations of the various status values.
 
     | Status | Meaning |
@@ -258,15 +259,19 @@ By examining the above information, you can determine the cause of most blocking
     | Suspended | The SPID is waiting for a resource, such as a lock or a latch. |
 
   * `sys.dm_exec_sessions.open_transaction_count`  
-    This column tells you the number of open transactions in this session. If this value is greater than 0, the SPID is within an open transaction and may be holding locks acquired by any statement within the transaction. The open transaction could have been created either by a currently active statement or by a statement request that has run in the past and isn't active any longer. 
+
+    This column tells you the number of open transactions in this session. If this value is greater than 0, the SPID is within an open transaction and may be holding locks acquired by any statement within the transaction. The open transaction could have been created either by a currently active statement or by a statement request that has run in the past and isn't active any longer.
 
   * `sys.dm_exec_requests.open_transaction_count`  
-    Similarly, this column tells you the number of open transactions in this request. If this value is greater than 0, the SPID is within an open transaction and may be holding locks acquired by any active statement within the transaction. Unlike sys.dm_exec_sessions.open_transaction_count, if there isn't an active request, this column will show 0.  
+
+    Similarly, this column tells you the number of open transactions in this request. If this value is greater than 0, the SPID is within an open transaction and may be holding locks acquired by any active statement within the transaction. Unlike `sys.dm_exec_sessions.open_transaction_count`, if there isn't an active request, this column will show 0.  
 
   * `sys.dm_exec_requests.wait_type`, `wait_time`, and `last_wait_type`  
+
     If the `sys.dm_exec_requests.wait_type` is NULL, the request isn't currently waiting for anything and the `last_wait_type` value indicates the last `wait_type` that the request encountered. For more information about `sys.dm_os_wait_stats` and a description of the most common wait types, see [sys.dm_os_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). The `wait_time` value can be used to determine if the request is making progress. When a query against the `sys.dm_exec_requests` table returns a value in the `wait_time` column that is less than the `wait_time` value from a previous query of `sys.dm_exec_requests`, this indicates that the prior lock was acquired and released and is now waiting on a new lock (assuming non-zero `wait_time`). This can be verified by comparing the `wait_resource` between `sys.dm_exec_requests` output, which displays the resource for which the request is waiting.
 
   * `sys.dm_exec_requests.wait_resource`
+
     This column indicates the resource that a blocked request is waiting on. The following table lists common `wait_resource` formats and their meaning:
 
     | Resource | Format | Example | Explanation |
