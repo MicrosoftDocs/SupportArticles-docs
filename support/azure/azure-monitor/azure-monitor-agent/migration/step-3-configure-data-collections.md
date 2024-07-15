@@ -1,7 +1,7 @@
 ---
 title: Step 3 - Configure data collections for Azure Monitor Agent
 description: Learn how to configure data collections for Azure Monitor Agent so that you can migrate from the legacy Log Analytics agent.
-ms.date: 07/11/2024
+ms.date: 07/15/2024
 ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu
 ms.service: azure-monitor
 ms.custom: 
@@ -38,10 +38,6 @@ To use the DCR Config Generator, follow these steps:
 1. Deploy the rules to your Azure Monitor workspace by using the Azure CLI or Azure portal.
 
 1. Associate the rules with your VMs that are running Azure Monitor Agent by using the built-in association policies.
-
-## Related content
-
-[Switch VM Insights to Azure Monitor Agent]()
 
 ## Next steps
 
