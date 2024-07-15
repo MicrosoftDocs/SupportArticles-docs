@@ -1,5 +1,5 @@
 ---
-title: Investigating unexpected cost increases in a Log Analytics workspace
+title: Why did the Azure Log Analytics Workspace costs increase unexpectedly
 description: Describes how to investigate daily billing anomalies and identify the source of excessive charges by using detailed usage reports.
 ms.date: 07/01/2024
 ms.reviewer: neghuman
