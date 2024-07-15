@@ -44,4 +44,11 @@ This problem occurs because the public folder mailbox and associated user accoun
 
 ## Resolution
 
-To fix this problem, use [Active Directory Migration Tool](https://support.microsoft.com/help/4089459) to move the AD account that is associated with the public folder mailbox to the same AD domain that hosts Exchange Server, and then run the **Complete-MigrationBatch** command again.
+To fix this problem, move the AD account that is associated with the public folder mailbox to the same AD domain that hosts Exchange Server. For example, if Exchange server is installed in root AD domain (contoso.com) and AD account associated with the PF mailbox is in Child domain (child.contoso.com), move the AD account with the PF mailbox to the root domain (contoso.com) and then run the **Complete-MigrationBatch** command again. Depending on server version, you can either use [Active Directory Migration Tool](https://support.microsoft.com/help/4089459) OR [Move-ADObject](https://learn.microsoft.com/powershell/module/activedirectory/move-adobject?view=windowsserver2022-ps) to move the AD user between domains. 
+
+Example:
+Following PowerShell command moves AD User associated with PFMBX4, from child.contoso.com to contoso.com:
+
+```
+Move-ADObject -Identity "CN=PFMBX4,CN=Users,DC=Child,DC=contoso,DC=com" -TargetPath "CN=Users,DC=contoso,DC=com" -TargetServer dc1.contoso.com
+```
