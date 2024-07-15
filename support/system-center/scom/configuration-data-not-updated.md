@@ -1,8 +1,8 @@
 ---
 title: Configuration data isn't updated
 description: Fixes some configuration update issues in a System Center Operations Manager management group.
-ms.date: 07/10/2024
-ms.reviewer: RPesenko
+ms.date: 07/15/2024
+ms.reviewer: RPesenko, v-gjeronika
 ---
 # Configuration may not update in System Center Operations Manager
 
