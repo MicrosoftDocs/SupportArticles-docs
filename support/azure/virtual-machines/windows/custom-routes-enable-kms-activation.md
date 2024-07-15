@@ -84,40 +84,6 @@ To add the custom route, follow these steps:
 
 4. Try to activate Windows, and see if the problem is resolved.
 
-### For Classic VMs
-
-[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
-
-1. Open Azure PowerShell, and then [sign in to your Azure subscription](/powershell/azure/authenticate-azureps).
-2. Run the following commands:
-
-    ```powershell
-    # First, create a new route table:
-    New-AzureRouteTable -Name "VNet-DM-KmsRouteGroup" -Label "Route table for KMS" -Location "Central US"
-
-    # Next, get the route table that was created:
-    $rt = Get-AzureRouteTable -Name "VNet-DM-KmsRouteTable"
-
-    # Next, create routes:
-    Set-AzureRoute -RouteTable $rt -RouteName "AzureKMS" -AddressPrefix "23.102.135.246/32" -NextHopType Internet
-    Set-AzureRoute -RouteTable $rt -RouteName "AzureAZKMS01" -AddressPrefix "20.118.99.224/32" -NextHopType Internet
-    Set-AzureRoute -RouteTable $rt -RouteName "AzureAZKMS02" -AddressPrefix "40.83.235.53/32" -NextHopType Internet
-
-    # Apply the KMS route table to the subnet that hosts the problem VMs (in this case, we apply it to the subnet that's named Subnet-1):
-    Set-AzureSubnetRouteTable -VirtualNetworkName "VNet-DM" -SubnetName "Subnet-1" 
-    -RouteTableName "VNet-DM-KmsRouteTable"
-
-    ```
-
-3. Go to the VM that has activation problems. Use [PsPing](/sysinternals/downloads/psping) to test if it can reach the KMS server:
-
-    ```console
-    psping kms.core.windows.net:1688
-    psping azkms.core.windows.net:1688
-    ```
-
-4. Try to activate Windows, and see if the problem is resolved.
-
 ## Next steps
 
 - [KMS Client Setup Keys](/windows-server/get-started/kmsclientkeys)
