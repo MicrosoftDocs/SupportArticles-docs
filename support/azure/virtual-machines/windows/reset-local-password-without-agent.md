@@ -97,7 +97,51 @@ Always try to reset a password using the [Azure portal or Azure PowerShell](rese
       * remove scripts.ini
     * From %windir%\System32\GroupPolicy
       * remove gpt.ini (if gpt.ini existed before, and you renamed it to gpt.ini.bak, rename the .bak file back to gpt.ini)
-        
+ 
+## Alternative Method       
+In certain situations, We are unable to RDP due to incorrect password and guest agent is not reporting in ready state. One effective solution to regain access involves attaching the problematic disk to a rescue VM, modifying the registry, and then booting the VM in Hyper-V to create a new user with administrative privileges.
+
+1. Attach the Problematic Disk to a Rescue VM from azure portal.
+  
+2. Connect to the rescue VM via Remote Desktop Protocol (RDP).
+    Open the Disk Management console and ensure the attached disk is online.
+
+    Launch Command Prompt as Administrator:
+
+3. **Load  SYSTEM Hive**:
+
+   Identify the drive letter assigned to the attached disk (assume it is `G:` for this example).
+   Execute the following commands.
+     
+    ```
+    reg load HKLM\brokenSYSTEM G:\Windows\System32\config\SYSTEM
+    reg add "HKLM\brokenSYSTEM\Setup" /v SetupType /t REG_DWORD /d 2 /f
+    reg add "HKLM\brokenSYSTEM\Setup" /v CmdLine /t REG_SZ /d "cmd.exe" /f
+    ```
+
+    **Unload SYSTEM Hive**
+    ```
+    reg unload HKLM\brokenSYSTEM
+    ```
+    Open the Disk Management console and ensure the attached disk is offline.
+
+    **Boot the VM in Hyper-V**
+
+    VM should boot into a command prompt without requiring a password.
+
+4. Create a New User and Add to Administrators Group
+    In the command prompt, type `lusrmgr.msc` to open the Local Users and Groups management console.
+
+    **Create New User**
+
+    In the console, right-click on the "Users" folder and select "New User".
+   
+    **Add User to Administrators Group:**
+
+    After creating the user, right-click on the new user account.
+    Select "Properties", go to the "Member Of" tab, and add the user to the "Administrators" group.
+
+5. After reboot of the machine, enter the new username and password to gain access.
 
 ## Next steps
 
