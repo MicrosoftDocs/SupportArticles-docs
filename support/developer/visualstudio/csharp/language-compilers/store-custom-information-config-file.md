@@ -9,6 +9,9 @@ ms.custom: sap:Language or Compilers\C#
 
 This article introduces how to store custom information from a configuration file that you can retrieve later during run time by its associated application. It's helpful when you must define data that's associated with an application.
 
+> [!NOTE]
+> The code in this article is targeting .NET Framework 2.0 and later versions. To know which specific versions the `ConfigurationManager` class applies to, see the [Applies to](/dotnet/api/system.configuration.configurationmanager#applies-to) section.
+
 _Original product version:_ &nbsp; Visual C#  
 _Original KB number:_ &nbsp; 815786
 
