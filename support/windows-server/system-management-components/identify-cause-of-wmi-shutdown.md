@@ -76,8 +76,8 @@ Create a Process Monitor configuration with an event filter to only capture what
 3. Unselect the third button in the toolbar to stop the automatic capture.
 4. Select the **Filter** menu, and then select the **Filter** option.
 5. In the **Process Monitor Filter** dialog box, select **Operation**, **is**, type *Process Create*, and then select **Add**.  
-   Also define another filter by selecting **Operation**, **is**, type *Process Exit*, and then select **Add**.|
-   ![Filters that is added.](media/identify-cause-of-wmi-shutdown/filters-added.png)
+   Also define another filter by selecting **Operation**, **is**, type *Process Exit*, and then select **Add**.  
+   :::image type="content" source="media/identify-cause-of-wmi-shutdown/filters-added.png" alt-text="Filters that is added.":::
 6. Select **OK** to confirm the filter configuration.
 7. Select the **File** menu then **Export Configuration...**, save the file *C:\WMI\filter.pmc*.
 
@@ -90,7 +90,7 @@ Then, create a scheduled task to stop the capture when the reboot occurs. Follow
 3. Type a name for the task.
 4. Select the **Run whether or not user is logged on**.
 
-   ![The "Run whether or not user is logged on" option.](media/identify-cause-of-wmi-shutdown/run-whether-or-not-user-is-logged-on-option.png)
+   :::image type="content" source="media/identify-cause-of-wmi-shutdown/run-whether-or-not-user-is-logged-on-option.png" alt-text="The "Run whether or not user is logged on" option.":::
 
 5. Select the **Triggers** tab.
    1. select **New...**, and then select **On an event** for the **Begin the task** option.
@@ -99,7 +99,7 @@ Then, create a scheduled task to stop the capture when the reboot occurs. Follow
    4. In **Event ID** type *1074*.
    5. Select **OK**.
 
-      ![Edit the trigger of the task.](media/identify-cause-of-wmi-shutdown/edit-the-trigger-of-the-task.png)
+      :::image type="content" source="media/identify-cause-of-wmi-shutdown/edit-the-trigger-of-the-task.png" alt-text="Edit the trigger of the task.":::
 
 6. Select the **Actions** tab.
    1. Select **New...**.
@@ -126,11 +126,11 @@ After the reboot, follow these steps to conclude the investigation:
 1. Go to the *C:\WMI* folder, and double click the WMI-ActivityLog.evtx file.
 2. Right click the log name in the left pane then select **Filter Current Log...**.
 
-   ![Filter the opened event log.](media/identify-cause-of-wmi-shutdown/filter-the-opened-event-log.png)
+   :::image type="content" source="media/identify-cause-of-wmi-shutdown/filter-the-opened-event-log.png" alt-text="Filter the opened event log.":::
 
 3. Type *11* in the **Event ID** text box
 
-   ![Add event ID 11.](media/identify-cause-of-wmi-shutdown/add-event-id-11.png)
+   :::image type="content" source="media/identify-cause-of-wmi-shutdown/add-event-id-11.png" alt-text="Add event ID 11.":::
 
 4. After the filter is applied, the first event on the top should be the one with the shutdown request. If not, press the Ctrl key and the F key, and then type *shutdown*.
 
