@@ -118,12 +118,12 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 
 ## Cause
 
-The issue occurs when the destination DC performing inbound replication doesn't receive replication changes within the number of seconds specified in the "RPC Replication Timeout" registry key. You might experience this issue most frequently in one of the following situations:
+The issue occurs when the destination DC performing inbound replication doesn't receive replication changes within the number of seconds specified in the "RPC Replication Timeout" registry key (The default value if the registry entry does not exist is 5 Minutes). You might experience this issue most frequently in one of the following situations:
 
 - You promote a new domain controller into the forest by using the Active Directory Installation Wizard (Dcpromo.exe).
 - Existing domain controllers replicate from source domain controllers that are connected over slow network links.
 
-The default value for the RPC Replication Timeout (mins) registry setting on Windows 2000-based computers is 45 minutes. The default value for the RPC Replication Timeout (mins) registry setting on Windows Server 2003-based computers is 5 minutes. When you upgrade the operating system from Windows 2000 to Windows Server 2003, the value for the RPC Replication Timeout (mins) registry setting is changed from 45 minutes to 5 minutes. If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the RPC Replication Timeout (mins) registry setting specifies, the destination domain controller ends the RPC connection with the non-responsive source domain controller and logs a Warning event.
+If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the RPC Replication Timeout (mins) registry setting specifies, the destination domain controller ends the RPC connection with the non-responsive source domain controller and logs a Warning event.
 
 Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CALL_CANCELLED` include:
 
@@ -136,102 +136,45 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
 
 ## Resolution
 
-1. Increase replication time-out adding the key RPC Replication Timeout (mins) on `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`
+1. Inspect the Network devices between the source and destination domain controllers (increase the bandwidth of your network connection so that the Active Directory changes replicate in the five-minute timeout period.).
 
-    - Start Registry Editor.
-
-    - Locate the following registry subkey:
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`
-
-    - Right-click Parameters, point to New, and then click DWORD Value.
-
-    - Type RPC Replication Timeout (mins), and then press ENTER to name the new value.
-
-    - Right-click RPC Replication Timeout (mins), and then click Modify.
-
-    - In the Value data box, type the number of minutes that you want to use for the RPC timeout for Active Directory replication, and then click OK.
-
-    On a Windows Server 2003-based computer that is part of a Windows 2000 environment or that was upgraded from Windows 2000 Server, you may want to set this value to 45 minutes. This is value may depend on your network configuration and should be adjusted accordingly.
-
-    > [!NOTE]
-    > You must restart the computer to activate any changes that are made to RPC Replication Timeout (mins)
-
-2. Update the network adapter drivers
+1. Update the network adapter drivers
 
     To determine whether an updated network adapter driver is available, contact the network adapter manufacturer or the original equipment manager (OEM) for the computer. The driver must meet Network Driver Interface Specification (NDIS) 5.2 or a later version of this specification.
-
-    - To manually disable RSS and TCP Offload yourself, follow these steps:
-
-    - Click Start, click Run, type regedit, and then click OK.
-
-    - Locate the following registry subkey:  
-        `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
-
-    - Right-click EnableTCPChimney, and then click Modify.
-
-    - In the Value data box, type 0, and then click OK.
-
-    - Right-click EnableRSS, and then click Modify.
-
-    - In the Value data box, type 0, and then click OK.
-
-    - Right-click EnableTCPA, and then click Modify.
-
-    - In the Value data box, type 0, and then click OK.
-
-    - Exit Registry Editor,
-
-    > [!NOTE]
-    > You must restart the computer to activate any changes that are made to EnableTCPChimney.  
-
-3. Enable PMTU Black Hole Detection on the Windows-based hosts that will be communicating over a WAN connection. Follow these steps:
-
-    - Start Registry Editor (`Regedit.exe`).
-
-    - Locate the following key in the registry:  
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\tcpip\parameters`
-
-    - On the Edit menu, click Add Value, and then add the following registry value:
-
-    > Value Name: EnablePMTUBHDetect  
-    Data Type: REG_DWORD  
-    Value: 1  
-    Restart the machine
-
-4. Check the network binding order:
+   
+1. Check the network binding order:
 
     To configure the network binding order:
-
-    1. Quit any programs that are running.
-
-    2. Right-click Network Neighborhood, and then click Properties.
-
-    3. Click the Bindings tab. In the Show Bindings For box, click All Services.
-
-    4. Double-click each listed service to expand it.
-
-    5. Under each service, double-click each protocol to expand it.
-
-    6. Under each protocol, there's a number of network adapter icons. Click the icon for your network adapter, and then click Move Up until the network adapter is at the top of the list. Leave the "Remote Access WAN Wrapper" entries in any order under the network adapter(s).
-
-        > [!NOTE]
-        > If you have more than one network adapter, place the internal adapter (with Internet Protocol [IP] address 10.0.0.2 by default on a Small Business Server network) at the top of the binding order, with the external adapter(s) directly below the internal adapter.
-
-        The final order should appear similar to:  
-        [1] Network adapter one  
-        [2] Network adapter two (if present)  
-        [3] Remote Access WAN Wrapper  
-        .  
-        .  
-        .  
-        [n] Remote Access WAN Wrapper  
-
-    7. Repeat step 6 for each service in the dialog box.
-
-    8. After you've verified the settings for each service, click All Protocols in the Show Bindings For box. The entry for "Remote Access WAN Wrapper" doesn't have a network adapter listed. Skip this item. Repeat steps 4 through 6 for each remaining protocol.
-
-    9. After you've verified that the bindings are set correctly for all services and protocols, click OK. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Click Yes.
-
+   
+   1. Quit any programs that are running.
+      
+   1. Right-click Network Neighborhood, and then click Properties.
+      
+   1. Click the Bindings tab. In the Show Bindings For box, click All Services.
+      
+   1. Double-click each listed service to expand it.
+      
+   1. Under each service, double-click each protocol to expand it.
+      
+   1. Under each protocol, there's a number of network adapter icons. Click the icon for your network adapter, and then click Move Up until the network adapter is at the top of the list. Leave the "Remote Access WAN Wrapper" entries in any order under the network adapter(s).
+   
+      > [!NOTE]
+      > If you have more than one network adapter, place the internal adapter (with Internet Protocol [IP] address 10.0.0.2 by default on a Small Business Server network) at the top of the binding order, with the external adapter(s) directly below the internal adapter.
+       The final order should appear similar to:  
+      [1] Network adapter one  
+      [2] Network adapter two (if present)  
+      [3] Remote Access WAN Wrapper  
+      .  
+      .  
+      .  
+      [n] Remote Access WAN Wrapper  
+      
+   1. Repeat step 6 for each service in the dialog box.
+      
+   1. After you've verified the settings for each service, click All Protocols in the Show Bindings For box. The entry for "Remote Access WAN Wrapper" doesn't have a network adapter listed. Skip this item. Repeat steps 4 through 6 for each remaining protocol.
+      
+   1. After you've verified that the bindings are set correctly for all services and protocols, click OK. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Click Yes.
+      
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
