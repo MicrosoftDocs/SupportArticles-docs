@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 950805
 
 ## Summary
 
-By default, the new security model in Windows Server 2008 or Windows Server 2008 R2 failover clustering includes Kerberos authentication. To create this security model, every Client Access Point (CAP) that is created in a Windows Server 2008 or Windows Server 2008 R2 failover cluster contains a Network Name resource. The Network Name resource has a corresponding Computer Account that is created in the Active Directory directory service when the resource is online for the first time.
+The security model in Windows Server Failover Clustering includes Kerberos authentication. To implement this security model, every Client Access Point (CAP) that is created in a Failover Cluster contains a Network Name resource. The Network Name resource has a corresponding Computer Account that is created in the Active Directory directory service when the resource is online for the first time.
 
 By default, the Computer Account is created in the Computers container. However, the Computer Account can be relocated to another organizational unit (OU). The Computer Account can also be pre-staged in an OU before the CAP is created. If these Computer Accounts are deleted from Active Directory, availability of the Network Name resource will be reduced.
 
@@ -61,7 +61,7 @@ To recover from the deletion of a Computer Object that is associated with a clus
 
 To recover a deleted computer object that corresponds to the CNO, follow these steps:
 
-1. Coordinate with a domain administrator to first recover the deleted Computer Object from the Deleted Objects container in Active Directory.
+1. Coordinate with a domain administrator to first recover the deleted Computer Object from the Active Directory Recycle Bin, if enabled. ** NOTE: If the AD Recycle Bin is not enabled, the ONLY supported method to recover a deleted Cluster Name Object is to delete and recreate the cluster.
 
 2. Verify that the Computer Object has been restored to the correct location, and then enable the account.
 
