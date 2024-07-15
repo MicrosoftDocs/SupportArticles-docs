@@ -90,7 +90,7 @@ Then, create a scheduled task to stop the capture when the reboot occurs. Follow
 3. Type a name for the task.
 4. Select the **Run whether or not user is logged on**.
 
-   :::image type="content" source="media/identify-cause-of-wmi-shutdown/run-whether-or-not-user-is-logged-on-option.png" alt-text="The "Run whether or not user is logged on" option.":::
+   :::image type="content" source="media/identify-cause-of-wmi-shutdown/run-whether-or-not-user-is-logged-on-option.png" alt-text="The 'Run whether or not user is logged on' option.":::
 
 5. Select the **Triggers** tab.
    1. select **New...**, and then select **On an event** for the **Begin the task** option.
