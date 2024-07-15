@@ -1,11 +1,8 @@
 ---
 title: Step 5 - Deploy Azure Monitor Agent at scale
 description: Learn how to use Azure Policy to deploy Azure Monitor Agent at scale so that you can migrate from the legacy Log Analytics agent.
-ms.date: 07/11/2024
-author: neilghuman
-ms.author: neghuman
-ms.reviewer: jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-leedennis
-editor: v-jsitser
+ms.date: 07/15/2024
+ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu
 ms.service: azure-monitor
 ms.custom: 
 #Customer intent: As an Azure Monitor user, I want to learn how to use Azure Policy to deploy Azure Monitor Agent at scale so that I can migrate from the legacy Log Analytics agent.
