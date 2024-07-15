@@ -9,7 +9,7 @@ keywords:
 #Customer intent: As an Azure Monitor user, I want to understand my Log Analytics workspace bill, including what the cost includes and how to read the detailed usage reports.
 ms.custom: sap:Log Analytics Billing
 ---
-# Investigating unexpected cost increases in a Log Analytics workspace
+# Investigate unexpected cost increases in a Log Analytics workspace
 
 This article provides a cost analysis tutorial to investigate daily billing anomalies and identify the services that cause unexpected costs.
 
