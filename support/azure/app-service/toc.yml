@@ -1,7 +1,5 @@
 - name: Azure App Service
   items:
-  - name: Map your own custom domain
-    href: /azure/app-service/app-service-web-tutorial-custom-domain
   - name: Troubleshoot Azure App Service
     href: ./welcome-app-service.yml
   - name: Capture memory dumps in Azure App Service
@@ -22,6 +20,8 @@
     href: ase-migration-faq.yml
   - name: FAQs about scaling web apps
     href: ./scaling-web-app-faq.yml
+  - name: Map your own custom domain
+    href: /azure/app-service/app-service-web-tutorial-custom-domain
   - name: Open-source technologies FAQs for Web Apps
     href: web-apps-open-source-technologies-faqs.md
   - name: Troubleshoot temporary storage
