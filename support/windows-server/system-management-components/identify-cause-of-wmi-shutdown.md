@@ -34,7 +34,7 @@ The process C:\Windows\system32\wbem\wmiprvse.exe (<computer name>) has initiate
 
 ## Analysis
 
-WMI can shut down a computer by calling the Win32Shutdown method of the Win32_OperatingSystem class. However, the difficulty lies in identifying the source of this request. A script or an application can be deployed to call this method without including the information of where and when it runs.
+WMI can shut down a computer by calling the [Win32Shutdown method of the Win32_OperatingSystem class](/windows/win32/cimwin32prov/win32shutdown-method-in-class-win32-operatingsystem). However, the difficulty lies in identifying the source of this request. A script or an application can be deployed to call this method without including the information of where and when it runs.
 
 To troubleshoot unexpected shutdowns caused by WMI, a WMI trace needs to be collected continuously until the behavior occurs. The trace can be collected by enabling the log `Application and Services Logs / Microsoft / Windows / WMI-Activity / Trace` (The log is not visible by default in Event Viewer). To view this log, enable the option **View** -> **Show Analytic and Debug Logs**.
 
@@ -59,7 +59,7 @@ To start the investigation, follow these steps:
    procmon /Quiet /Minimized /Backingfile %0\..\procmon.pml /LoadConfig %0\..\filter.pmc
    ```
 
-   Stop trace.bat:
+   StopTrace.bat:
 
    ```console
    procmon /Terminate
