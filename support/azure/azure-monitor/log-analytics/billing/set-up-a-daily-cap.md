@@ -28,17 +28,19 @@ When data collection stops, you effectively have no monitoring of features or re
 1. Enter **log analytics** in the search bar.
 1. Under **Services**, select **Log Analytics**.
 1. Select your Log Analytics Workspace.  
+    :::image type="content" source="media/set-up-a-daily-cap/log-analytics-workspaces.png" alt-text="Screenshot of selecting Log Analytics workspace." lightbox="media/set-up-a-daily-cap/log-analytics-workspaces.png":::
 1. In the **Settings** secton, select **Usage and estimated costs**.  
-    :::image type="content" source="media/set-up-a-daily-cap/daily-cap-1.png" alt-text="Screenshot that shows how to open the Usage and estimated costs page":::
+    :::image type="content" source="media/set-up-a-daily-cap/daily-cap-1.png" alt-text="Screenshot that shows how to open the Usage and estimated costs page"  lightbox="media/set-up-a-daily-cap/daily-cap-1.png":::
 
 1. On the **Usage and estimated costs** page, select **Daily Cap** at the top of the page.
-    :::image type="content" source="media/set-up-a-daily-cap/daily-cap-2.png" alt-text="Screenshot that shows how to open Daily Cap":::
-1. Configure the Daily Cap settings:
+
+    :::image type="content" source="media/set-up-a-daily-cap/open-daily-cap.png" alt-text="Screenshot that shows how to open Daily Cap" lightbox="media/set-up-a-daily-cap/open-daily-cap.png":::
+1. Configure the Daily Cap settings. Notice that security data types aren't affected by the daily cap. 
 
     1. Select **ON** to enable the daily cap.
     1. Set the data volume limit (in GB per day). 
-    Notice that security data types aren't affected by the daily cap.  
-    :::image type="content" source="media/set-up-a-daily-cap/daily-cap-setting.png" alt-text="Screenshot that shows how to configure Daily Cap settings":::
+
+    :::image type="content" source="media/set-up-a-daily-cap/configure-daily-cap.png" alt-text="Screenshot that shows how to configure Daily Cap settings" lightbox="media/set-up-a-daily-cap/configure-daily-cap.png":::
 
 When the daily cap is reached for a Log Analytics workspace, a banner is displayed in the Azure portal, and an event is written to the Operations table in the workspace. You should create an alert rule to proactively notify yourself when this occurs.
 

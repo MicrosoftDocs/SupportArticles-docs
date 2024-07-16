@@ -34,13 +34,13 @@ You can apply a different setting to specific tables by [configuring the retenti
 1. Enter **log analytics** in the search bar.
 1. Under **Services**, select **Log Analytics**.
 1. Select your Log Analytics workspace.  
+    :::image type="content" source="media/identify-service-cause-unexpected-costs/log-analytics-workspaces.png" alt-text="Screenshot of selecting a log Analytics workspace" lightbox="media/configure-data-retention/log-analytics-workspaces.png":::
 1. In the **Settings** secton, select **Usage and estimated costs**.
     
-    :::image type="content" source="media/configure-data-retention/data-retention.png" alt-text="Screenshot that shows how to open the usage and estimated costs page":::
+    :::image type="content" source="media/configure-data-retention/data-retention-1.png" alt-text="Screenshot of Usage and estimated costs" lightbox="media/identify-service-cause-unexpected-costs/data-retention-1.png":::
 1. At the top of the **Usage and estimated costs** page, select **Data Retention**.
-    :::image type="content" source="media/configure-data-retention/open-data-retention.png" alt-text="Screenshot that shows how to open the Data Retention pane" :::
+    :::image type="content" source="media/configure-data-retention/data-retention.png" alt-text="Screenshot that shows how to open the Data Retention pane" lightbox="media/configure-data-retention/data-retention.png"::::::
 
 1. On the **Data Retention** pane, move the slider to increase or decrease the number of days, and then select **OK**.  
-:::image type="content" source="media/configure-data-retention/data-retention-2.png" alt-text="SCreenshot that shows how to configure Data Retention settings":::
-
+:::image type="content" source="media/configure-data-retention/data-retention-2.png" alt-text="SCreenshot that shows how to configure Data Retention settings"lightbox="media/configure-data-retention/data-retention-2.png"::::::
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
