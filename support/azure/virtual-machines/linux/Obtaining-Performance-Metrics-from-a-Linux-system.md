@@ -29,7 +29,7 @@ The commands can be separated into:
 
 ## Define Environment Variables
 
-The First step in this tutorial is to define environment variables and install the corresponding package, if necessary.
+The First step in this tutorial is to define environment variables, and install the corresponding package, if necessary.
 
 ```azurecli-interactive
 export MY_RESOURCE_GROUP_NAME="myVMResourceGroup89f292"
@@ -159,7 +159,7 @@ Then the metrics for the CPUs are displayed, to explain each of the columns:
 * `%steal`: The percentage of CPU time spent serving other virtual machines (not applicable to Azure due to no overprovisioning of CPU).
 * `%guest`: The percentage of CPU time spent serving virtual CPUs (not applicable to Azure, only applicable to bare metal systems running virtual machines).
 * `%gnice`: The percentage of CPU time spent serving virtual CPUs with a nice value (not applicable to Azure, only applicable to bare metal systems running virtual machines).
-* `%idle`: The percentage of CPU time spent idle and without waiting for I/O requests.
+* `%idle`: The percentage of CPU time spent idle, and without waiting for I/O requests.
 
 #### Things to look out for
 
@@ -170,7 +170,7 @@ Some details to keep in mind when reviewing the output for `mpstat`:
 * Look for `%iowait` percentages as high values could indicate a system that is constantly waiting for I/O requests.
 * High `%soft` usage could indicate high network traffic.
 
-### vmstat
+### `vmstat`
 
 The `vmstat` utility is widely available in most Linux distributions, it provides high level overview for CPU, Memory, and Disk I/O utilization in a single pane.
 The command for `vmstat` is:
@@ -218,7 +218,7 @@ The output:
 
 >Note: `vmstat` shows overall statistics for the entire system (that is, all CPUs, all block devices aggregated).
 
-#### procs
+#### `procs`
 
 The `procs` section has two columns:
 
@@ -231,7 +231,7 @@ The `r` column indicates the number of processes that are waiting for CPU time t
 
 The `b` column indicates the number of processes waiting to run that are being blocked by I/O requests. A high number in this column would indicate a system that's experiencing high I/O, and processes are unable to run due to other processes waiting to completed I/O requests. Which could also indicate high disk latency.
 
-#### memory
+#### `memory`
 
 The memory section has four columns:
 
@@ -245,7 +245,7 @@ The memory section has four columns:
 
 This section provides a high level overview of memory usage.
 
-#### swap
+#### `swap`
 
 The swap section has two columns:
 
@@ -254,7 +254,7 @@ The swap section has two columns:
 
 If high `si` is observed, it might represent a system that is running out of system memory and is moving pages to swap (swapping).
 
-#### io
+#### `io`
 
 The `io` section has two columns:
 
@@ -264,7 +264,7 @@ The `io` section has two columns:
 > [!NOTE]
 > These values are in blocks per second.
 
-#### system
+#### `system`
 
 The `system` section has two columns:
 
@@ -275,7 +275,7 @@ A high number of interrupts per second might indicate a system that is busy with
 
 A high number of context switches might indicate a busy system with many short running processes, there's no good or bad number here.
 
-#### cpu
+#### `cpu`
 
 This section has five columns:
 
@@ -287,7 +287,7 @@ This section has five columns:
 
 The values are presented in percentage. These values are the same as presented by the `mpstat` utility and serve to provide a high level overview of CPU usage. Follow a similar process for "[Things to look out for](#mpstat)" for `mpstat` when reviewing these values.
 
-### uptime
+### `uptime`
 
 Lastly, for CPU related metrics, the `uptime` utility provides a broad overview of the system load with the load average values.
 
@@ -323,7 +323,7 @@ The `1m`, `5m`, `15m` intervals help identify if load is increasing or decreasin
 
 For memory, there are two commands that can obtain details about usage.
 
-### free
+### `free`
 
 The `free` command shows system memory utilization.
 
@@ -358,7 +358,7 @@ From the output, look for the total system memory vs the available, and the used
 
 Some swap usage is normal in modern kernels as some less often used memory pages can be moved to swap.
 
-### swapon
+### `swapon`
 
 The `swapon` command displays where swap is configured and the respective priorities of the swap devices or files.
 
@@ -397,7 +397,7 @@ This information is important to verify if swap is configured on a location that
 
 Disk I/O is one of the areas Azure suffers the most when throttled, as disks can reach `100ms+` latencies. The following commands help to identify these scenarios.
 
-### iostat
+### `iostat`
 
 The `iostat` utility is part of the `sysstat` package. It displays per block device usage statistics and helps identify block related performance issues.
 
@@ -455,9 +455,9 @@ The output has several columns that aren't important (extra columns due to the `
 
 * Look for `r/s` and `w/s` (IOPS) and `rMB/s` and `wMB/s` and verify that these values are within the limits of the given disk. If the values are close or higher the limits, the disk are going to be throttled, leading to high latency. This information can also be corroborated with the `%iowait` metric from `mpstat`.
 * The latency is an excellent metric to verify if the disk is performing as expected. Normally, less than `9ms` is the expected latency for PremiumSSD, other offerings have different latency targets.
-* The queue size is a great indicator of saturation. Normally, requests would be served near real time and the number remains close to one (as the queue never grows). A higher number could indicate disk saturation (that is, requests queuing up). There's no good or bad number for this metric, but understanding that anything higher than one means that requests are queuing up helps determine if there's disk saturation.
+* The queue size is a great indicator of saturation. Normally, requests would be served near real time and the number remains close to one (as the queue never grows). A higher number could indicate disk saturation (that is, requests queuing up). There's no good or bad number for this metric. Understanding that anything higher than one means that requests are queuing up helps determine if there's disk saturation.
 
-### lsblk
+### `lsblk`
 
 The `lsblk` utility shows the block devices attached to the system, while it doesn't provide performance metrics, it allows a quick overview of how these devices are configured and which mountpoints are being used.
 
@@ -478,7 +478,7 @@ zram0  252:0    0   16G  0 disk [SWAP]
 #### Things to look out for
 
 * Look for where the devices are mounted.
-* If swap is enabled, verify that it's not used on a data disk or OS disk.
+* Verify swap it's not configured inside of a data disk or OS disk, if enabled.
 
 > Note: An easy way to correlate the block device to a LUN in Azure is by running `ls -lr /dev/disk/azure`.
 
@@ -488,12 +488,12 @@ Gathering details on a per process basis helps understand where the load of the 
 
 The main utility to gather process statics is `pidstat` as it provides details per process for CPU, Memory, and I/O statistics.
 
-Lastly, a simple `ps` to sort process by top CPU and memory usage complete the metrics.
+Lastly, a simple `ps` to sort process by top CPU, and memory usage complete the metrics.
 
 > [!NOTE]
 > Since these commands display details about running processes, they need to run as root with `sudo`. This command allows all processes to be displayed and not just the user's.
 
-### pidstat
+### `pidstat`
 
 The `pidstat` utility is also part of the `sysstat` package. It's like `mpstat` or iostat where it displays metrics for a given amount of time. By default, `pidstat` only displays metrics for processes with activity.
 
@@ -593,7 +593,7 @@ The metrics collected are:
 
 ##### Things to look out for
 
-* Look for major faults per second, as this value would indicate a process that is swapping pages to or from disk. This behavior could indicate memory exhaustion and could lead to `OOM` events or performance degradation due to slower swap.
+* Look for major faults per second, as this value would indicate a process that is swapping pages to or from disk. This behavior could indicate memory exhaustion, and could lead to `OOM` events or performance degradation due to slower swap.
 * Verify that a single process doesn't consume 100% of the available memory. This behavior could indicate a memory leak.
 
 > [!NOTE]
@@ -645,9 +645,9 @@ The metrics collected are:
 * Look for single processes with high read/write rates per second. This information is a guidance for processes with I/O more than identifying issues.
 Note: the `--human` option can be used to display numbers in human readable format (that is, `Kb`, `Mb`, `GB`).
 
-### ps
+### `ps`
 
-Lastly `ps` command displays system processes and can be either sorted by CPU or Memory.
+Lastly `ps` command displays system processes, and can be either sorted by CPU or Memory.
 
 To sort by CPU and obtain the top 10 processes:
 
@@ -707,13 +707,13 @@ root        2180  0.0  0.0  73524  6968 pts/1    SL+  16:55   0:00 stress-ng --c
 
 ## Putting all together
 
-A simple bash script can collect all details in a single run and append the output to a file for later use:
+A simple bash script can collect all details in a single run, and append the output to a file for later use:
 
 ```bash
 mpstat -P ALL 1 2 && vmstat -w 1 5 && uptime && free -h && swapon && iostat -dxtm 1 1 && lsblk && ls -l /dev/disk/azure && pidstat 1 1 -h --human && pidstat -r 1 1 -h --human && pidstat -d 1 1 -h --human && ps aux --sort=-%cpu | head -20 && ps aux --sort=-%mem | head -20
 ```
 
-To run, create a file with the above contents, add execute permissions by running `chmod +x gather.sh` and run with `sudo ./gather.sh`.
+To run, create a file with the above contents, add execute permissions by running `chmod +x gather.sh`, and run with `sudo ./gather.sh`.
 
 This script saves the output of the commands in a file located in the same directory where the script was invoked.
 
@@ -726,7 +726,7 @@ extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d
 echo "$extracted" 
 ```
 
-Additionally, all the commands in the bash block codes covered in this document, can be run through `az-cli` using the run-command extension and parsing the output through `jq` to obtain a similar output to running the commands locally.
+Additionally, all the commands in the bash block codes covered in this document, can be run through `az-cli` using the run-command extension, and parsing the output through `jq` to obtain a similar output to running the commands locally.
 
 ```azurecli-interactive
 az vm run-command invoke -g $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "ls -l /dev/disk/azure" --query value[0].message | jq 'split("\n")'
