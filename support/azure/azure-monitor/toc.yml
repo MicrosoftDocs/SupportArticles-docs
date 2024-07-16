@@ -96,7 +96,7 @@ items:
       href: log-analytics/billing/understand-log-analytics-workspace-bill.md
     - name: Investigate unexpected cost increase
       href: log-analytics/billing/identify-service-cause-unexpected-costs.md
-    - name: Set daily cap to avoid unexpected increases
+    - name: Set daily cap to avoid unexpected increase
       href: log-analytics/billing/set-up-a-daily-cap.md
     - name: Configure recommended alerts
       href: log-analytics/billing/workspace-recommended-alerts.md
