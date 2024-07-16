@@ -39,8 +39,8 @@ You can apply a different setting to specific tables by [configuring the retenti
     
     :::image type="content" source="media/configure-data-retention/data-retention-1.png" alt-text="Screenshot of Usage and estimated costs" lightbox="media/configure-data-retention/data-retention-1.png":::
 1. At the top of the **Usage and estimated costs** page, select **Data Retention**.
-    :::image type="content" source="media/configure-data-retention/data-retention.png" alt-text="Screenshot that shows how to open the Data Retention pane" lightbox="media/configure-data-retention/data-retention.png"::::::
+    :::image type="content" source="media/configure-data-retention/data-retention.png" alt-text="Screenshot that shows how to open the Data Retention pane" lightbox="media/configure-data-retention/data-retention.png":::
 
 1. On the **Data Retention** pane, move the slider to increase or decrease the number of days, and then select **OK**.  
-:::image type="content" source="media/configure-data-retention/data-retention-2.png" alt-text="SCreenshot that shows how to configure Data Retention settings"lightbox="media/configure-data-retention/data-retention-2.png"::::::
+:::image type="content" source="media/configure-data-retention/data-retention-2.png" alt-text="SCreenshot that shows how to configure Data Retention settings"lightbox="media/configure-data-retention/data-retention-2.png":::
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
