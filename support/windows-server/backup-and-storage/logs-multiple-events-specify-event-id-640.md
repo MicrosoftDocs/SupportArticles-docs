@@ -13,7 +13,7 @@ ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk erro
 
 This article provides some information about Event ID 640.
 
-_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client  
+_Applies to:_ &nbsp; All supported versions of Windows Server and Windows Client  
 _Original KB number:_ &nbsp; 4577004
 
 ## Symptoms
