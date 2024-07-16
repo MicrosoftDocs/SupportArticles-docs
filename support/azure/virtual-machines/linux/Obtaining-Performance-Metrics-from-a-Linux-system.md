@@ -62,6 +62,7 @@ You could also install this package using the Run-Command extension from Azure C
 ```azurecli-interactive
 az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "apt install sysstat -y"
 ```
+
 ---
 
 **Red Hat:**
@@ -410,7 +411,7 @@ To run the command:
 #### [BASH](#tab/swaponbash)
 
 ```bash
-swapon
+swapon -s
 ```
 
 #### [AZ-CLI](#tab/swaponcli)
@@ -418,7 +419,7 @@ swapon
 The following commands can be used if you want to execute it from Azure CLI:
 
 ```azurecli-interactive
-output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'swapon')
+output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'swapon -s')
 value=$(echo "$output" | jq -r '.value[0].message')
 extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
 echo "$extracted"
@@ -429,9 +430,9 @@ echo "$extracted"
 The output:
 
 ```output
-NAME          TYPE      SIZE USED PRIO
-/dev/zram0    partition  16G   0B  100
-/mnt/swapfile file        8G   0B   -2
+Filename      Type          Size          Used   Priority
+/dev/zram0    partition     16G           0B      100
+/mnt/swapfile file          8G            0B      -2
 ```
 
 This information is important to verify if swap is configured on a location that isn't ideal, for example on a data or OS disk. In the Azure frame of reference, swap should be configured on the ephemeral drive as it provides the best performance.
