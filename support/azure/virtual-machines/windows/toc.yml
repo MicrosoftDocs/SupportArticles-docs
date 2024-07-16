@@ -348,8 +348,6 @@
     href: disk-has-been-surprise-removed-event-id-157.md
   - name: Errors when deleting storage resources
     href: storage-resource-deletion-errors.md
-  - name: Errors when deleting classic storage resources
-    href: storage-classic-cannot-delete-storage-account-container-vhd.md
   - name: VHD is not supported when you create a VM in Azure
     href: vhd-not-supported-vm-azure.md
 

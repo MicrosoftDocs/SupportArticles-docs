@@ -3,8 +3,6 @@
 
 - name: General
   items:
-  - name: Map your own custom domain
-    href: /azure/app-service/app-service-web-tutorial-custom-domain
   - name: Azure dependency availability by country/region
     href: dependency-availability-by-country.md
   - name: Azure region access request process
