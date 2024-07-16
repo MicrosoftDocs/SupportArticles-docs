@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows VM OS with missing boot manager
 description: Explains when the Windows VM boot manager is missing, and how to solve the problem.
-ms.date: 12/07/2020
+ms.date: 07/12/2024
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows
@@ -58,51 +58,7 @@ There are several reasons this error could occur:
 
 ### Verify that the OS partition is active
 
-> [!NOTE]
-> This mitigation applies only for Generation 1 VMs. Generation 2 VMs (using UEFI) does not use an active partition
-
-Verify the OS partition which holds the BCD store for the disk is marked as active.
-
-   1. Open an elevated command prompt and open the DISKPART tool.
-
-      `diskpart`
-
-   2. List the disks on the system and look for added disks and proceed to select the new disk. In this example, the new disk is Disk 1.
-
-      ```ps
-      list disk
-      sel disk 1
-      ```
-
-      :::image type="content" source="media/os-bootmgr-missing/list-disk.png" alt-text="The diskpart window shows outputs of list disk and sel disk 1 commands. Disk 0 and Disk 1 are displayed in the table. Disk 1 is the selected disk.":::
-
-   3. List all the partitions on that disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and around 350 Mb in size. In the image below, this partition is Partition 1.
-
-      ```ps
-      list partition
-      sel partition 1
-      ```
-
-      :::image type="content" source="media/os-bootmgr-missing/list-partition.png" alt-text="The diskpart window shows outputs of list partition and sel partition 1 commands. Partition 1 is the selected disk.":::
-
-   4. Check the status of the partition. In our example, Partition 1 is not active.
-
-      `detail partition`
-
-      :::image type="content" source="media/os-bootmgr-missing/detail-partition-not-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is not active.":::
-
-      If the partition isn't active, now change the Active flag and then recheck the change was done properly.
-
-      ```ps
-      active
-      detail partition
-      ```
-
-      :::image type="content" source="media/os-bootmgr-missing/detail-partition-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is active.":::
-
-   5. Now exit the DISKPART tool.
-
-      `exit`
+[!INCLUDE [Verify that Windows partition is active](../../../includes/azure/windows-vm-verify-set-active-partition.md)]
 
 ### Fix the missing reference in the BCD store
 
