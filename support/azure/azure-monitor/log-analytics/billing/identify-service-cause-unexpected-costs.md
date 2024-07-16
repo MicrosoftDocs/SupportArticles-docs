@@ -23,7 +23,7 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 1. Under **Services**, select **Log Analytics**.
 1. Select the Log Analytics workspace that you want to investigate.  
     :::image type="content" source="media/identify-service-cause-unexpected-costs/log-analytics-workspaces.png" alt-text="Screenshot of selecting Log Analytics workspace." lightbox="media/identify-service-cause-unexpected-costs/log-analytics-workspaces.png":::
-1. On the **Overview** page, select **View Cost** to open the **Cost analysis** page for the current Log Analytics service. If you don't see **View Cost**, switch to the [Azure preview portal](https://preview.portal.azure.com/). 
+1. On the **Overview** page, select **View Cost** to open the **Cost analysis** page for the current Log Analytics service. 
 
     :::image type="content" source="media/identify-service-cause-unexpected-costs/view-cost.png" alt-text="Screenshot of opening view cost" lightbox="media/identify-service-cause-unexpected-costs/view-cost.png":::
 
