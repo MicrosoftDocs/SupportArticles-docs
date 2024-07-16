@@ -27,7 +27,7 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 
     :::image type="content" source="media/identify-service-cause-unexpected-costs/view-cost.png" alt-text="Screenshot of opening view cost" lightbox="media/identify-service-cause-unexpected-costs/view-cost.png":::
 
-1. On the **Cost analysis** page, select **View AccumulcatedCosts**, and then select **Services**.
+1. On the **Cost analysis** page, select **View AccumulatedCosts**, and then select **Services**.
 
     :::image type="content" source="media/identify-service-cause-unexpected-costs/high-cost-1.png" alt-text="Screenshot of opening services view" lightbox="media/identify-service-cause-unexpected-costs/high-cost-1.png":::
 

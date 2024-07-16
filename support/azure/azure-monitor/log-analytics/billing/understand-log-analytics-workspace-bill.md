@@ -22,7 +22,7 @@ This article helps you learn how to understand the costs that are associated wit
     :::image type="content" source="media/understand-log-analytics-workspace-bill/log-analytics-workspaces.png" alt-text="Screenshot of a specific Log Analytics workspace." lightbox="media/understand-log-analytics-workspace-bill/log-analytics-workspaces.png":::
 1. On the **Overview** page, select **View Cost** to open the **Cost analysis** page for the current log analytics service.
      :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost.png" alt-text="Screenshot that shows how to open the View Cost page." lightbox="media/understand-log-analytics-workspace-bill/view-cost.png":::
-1. On the **Cost analysis** page, select **View AccumulcatedCosts**, and then select **Resources**.
+1. On the **Cost analysis** page, select **View AccumulatedCosts**, and then select **Resources**.
 
    :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-2.png" alt-text="Screenshot that shows how to open Resources page." lightbox="media/understand-log-analytics-workspace-bill/view-cost-2.png":::
 
@@ -51,7 +51,7 @@ This article helps you learn how to understand the costs that are associated wit
    1. Ensure that the total cost (3) matches your invoice details.
    1. Expand each service to view the charge type per service (4)(5)(6).
    :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-10.png" alt-text="Screenshot of the example of view in the Services page." lightbox="media/understand-log-analytics-workspace-bill/view-cost-10.png":::
-1. Switch to the **Resources** tab, and then:
+1. Switch to the **Resources** tab (1), and then:
    1. Update the date range (2) to match the specific month that you're examining for this billing cycle. The total should now match the invoice details.
 
    1.  The default view of the **Resources** tab shows the total cost of the Log Analytics workspace, including the cost of data ingested from other services.
