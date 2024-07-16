@@ -1,7 +1,7 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 07/09/2024
+ms.date: 07/23/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen
 ms.reviewer: v-six
 ---
@@ -36,7 +36,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Version|Latest service pack|Latest GDR|Latest cumulative update|
 |---|---|---|---|
-|**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5040936) <br/>(16.0.1121.4 - July 2024) |[CU13 for 2022](sqlserver-2022/cumulativeupdate13.md) <br/>(16.0.4125.3 - May 2024) <br/><br/>[CU13 + GDR](https://support.microsoft.com/help/5040939) <br/>(16.0.4131.2 - July 2024)|
+|**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5040936) <br/>(16.0.1121.4 - July 2024) |[CU14 for 2022](sqlserver-2022/cumulativeupdate14.md) <br/>(16.0.4135.4 - July 2024) <br/><br/>[CU13 + GDR](https://support.microsoft.com/help/5040939) <br/>(16.0.4131.2 - July 2024)|
 |**SQL Server 2019**<br/><br/>- [Build information](#sql-server-2019)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5040986) <br/>(15.0.2116.2 - July 2024)|[CU27 for 2019](sqlserver-2019/cumulativeupdate27.md) <br/>(15.0.4375.4 - June 2024)<br/><br/>[CU27 + GDR](https://support.microsoft.com/help/5040948) <br/>(15.0.4382.1 - July 2024)|
 |**SQL Server 2017**<br/><br/>- [Build information](#sql-server-2017)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5040942) <br/>(14.0.2056.2 - July 2024)|[CU31 for 2017](sqlserver-2017/cumulativeupdate31.md) <br/>(14.0.3456.2 - September 2022)<br/><br/>[CU31 + GDR](https://support.microsoft.com/help/5040940) <br/>(14.0.3471.2 - July 2024)|
 |**SQL Server 2016**<br/><br/>- [Build information](#sql-server-2016)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|[Azure Connect pack](sqlserver-2016/servicepack3-azureconnect.md) <br/>(13.0.7000.253 - May 2022)<br/><br/>[SP3](sqlserver-2016/servicepack3.md) <br/>(13.0.6300.2 - September 2021)<br/><br/>[SP2](sqlserver-2016/servicepack2.md) <br/>(13.0.5026.0 - April 2018)<br/><br/>[SP1](sqlserver-2016/servicepack1.md) <br/>(13.0.4001.0 - November 2016)|[GDR for Azure Connect pack](https://support.microsoft.com/help/5040944) <br/>(13.0.7037.1 - July 2024)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/5040946) <br/>(13.0.6441.1 - July 2024)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/5014365) <br/>(13.0.5108.50 - June 2022)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4505219) <br/>(13.0.4259.0 - July 2019)<br/><br/>[GDR for RTM](https://support.microsoft.com/help/4058560) <br/>(13.0.1745.2 - January 2018)|[CU17 + GDR for SP2](https://support.microsoft.com/help/5014351) <br/>(13.0.5893.48 - June 2022)<br/><br/>[CU17 for 2016 SP2](sqlserver-2016/servicepack2-cumulativeupdate17.md) <br/>(13.0.5888.11 - March 2021)<br/><br/>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) <br/>(13.0.4604.0 - July 2019)<br/><br/>[CU15 for SP1](sqlserver-2016/servicepack1-cumulativeupdate15.md) <br/>(13.0.4574.0 - May 2019)<br/><br/>[CU9 for RTM](sqlserver-2016/rtm-cumulativeupdate9.md) <br/>(13.0.2216.0 - November 2017)|
@@ -57,6 +57,7 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update    | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|-----------|-------------------------------------------------------|--------------------|
+| 16.0.4135.4             | None         | CU14| [KB5038325](https://support.microsoft.com/help/5038325) | July 23, 2024    |
 | 16.0.4131.2             | None         | CU13 + GDR| [KB5040939](https://support.microsoft.com/help/5040939) | July 09, 2024    |
 | 16.0.1121.4             | None         | GDR       | [KB5040936](https://support.microsoft.com/help/5040936) | July 09, 2024    |
 | 16.0.4125.3             | None         | CU13| [KB5036432](sqlserver-2022/cumulativeupdate13.md) | May 16, 2024    |
