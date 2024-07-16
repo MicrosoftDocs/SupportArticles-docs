@@ -57,4 +57,9 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 
 After you identify the specific services that are causing the cost spike, you might have to investigate those services to understand why the spike occurred. If you need further assistance to investigate the services, open a support case for the respective service type.
 
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Learn about setting daily cap limit to protect against unexpected cost increase](./set-up-a-daily-cap.md)
+
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

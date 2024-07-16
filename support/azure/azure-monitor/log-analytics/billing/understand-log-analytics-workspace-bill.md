@@ -68,4 +68,9 @@ This article helps you learn how to understand the costs that are associated wit
    1. The bar chart displays a cost increase at the end of the month (5). This can be further investigated to determine the root cause.
    :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-12.png" alt-text="Screenshot of the example of view in the Daily costs tab." lightbox="media/understand-log-analytics-workspace-bill/view-cost-12.png":::
 
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Learn about investigating unexpected cost increases in the Log Analytics workspace](./identify-service-cause-unexpected-costs.md)
+
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
