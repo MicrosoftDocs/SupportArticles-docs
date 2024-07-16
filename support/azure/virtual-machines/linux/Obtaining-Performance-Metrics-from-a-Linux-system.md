@@ -796,6 +796,8 @@ extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d
 echo "$extracted"
 ```
 
+---
+
 ```output
        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root        2200 57.0 43.1 14248092 14175632 pts/1 R+ 16:55   0:08 stress-ng --cpu 12 --vm 2 --vm-bytes 120% --iomix 4 --timeout 240
