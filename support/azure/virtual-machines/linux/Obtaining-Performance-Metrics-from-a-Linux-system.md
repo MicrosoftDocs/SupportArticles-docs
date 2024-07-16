@@ -29,9 +29,9 @@ The commands can be separated into:
 
 ## Define Environment Variables
 
-The First step in this tutorial is to define environment variables and install package(s) if necessary.
+The First step in this tutorial is to define environment variables and install the corresponding package, if necessary.
 
-```bash
+```azurecli-interactive
 export MY_RESOURCE_GROUP_NAME="myVMResourceGroup89f292"
 export MY_VM_NAME="myVM89f292"
 export LINUX_DISTRO="ubuntu"
@@ -51,8 +51,7 @@ The full command for installation of the `sysstat` package on some popular Distr
 sudo apt install sysstat -y
 ```
 
-You could also execute this from Azure CLI using the following command:
-
+You could also install this package using the Run-Command extension from Azure CLI, using the following command:
 
 ```azurecli-interactive
 az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "apt install sysstat -y"
@@ -64,8 +63,7 @@ az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_
 sudo dnf install sysstat -y
 ```
 
-You could also execute this from Azure CLI using the following command:
-
+You could also install this package using the Run-Command extension from Azure CLI, using the following command:
 
 ```azurecli-interactive
 az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "dnf install sysstat -y"
@@ -77,8 +75,7 @@ az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_
 sudo zypper install sysstat --non-interactive
 ```
 
-You could also execute this from Azure CLI using the following command:
-
+You could also install this package using the Run-Command extension from Azure CLI, using the following command:
 
 ```azurecli-interactive
 az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "zypper install sysstat --non-interactive"
@@ -88,7 +85,7 @@ az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_
 
 ### <a id="mpstat"></a>mpstat
 
-The `mpstat` utility is part of the `sysstat` package, it displays per CPU utilization and averages, this is helpful to quickly identify CPU usage. `mpstat` provides an overview of CPU utilization across the available CPUs, helping identify usage balance and if a single CPU is heavily loaded.
+The `mpstat` utility is part of the `sysstat` package. It displays per CPU utilization and averages, which is helpful to quickly identify CPU usage. `mpstat` provides an overview of CPU utilization across the available CPUs, helping identify usage balance and if a single CPU is heavily loaded.
 
 The full command is:
 
@@ -109,7 +106,7 @@ The options and arguments are:
 
 * `-P`: Indicates the processor to display statistics, the ALL argument indicates to display statistics for all the online CPUs in the system.
 * `1`: The first numeric argument indicates how often to refresh the display in seconds.
-* `2`: The second numeric argument indicates how many times the data will refresh.
+* `2`: The second numeric argument indicates how many times the data refreshes.
 
 The number of times the `mpstat` command displays data can be changed by increasing the second numeric argument to accommodate for longer data collection times. Ideally 3 or 5 seconds should suffice, for systems with increased core counts 2 seconds can be used to reduce the amount of data displayed.
 From the output:
@@ -141,13 +138,13 @@ Average:       6   95.65    0.00    4.01    0.00    0.00    0.33    0.00    0.00
 Average:       7   99.67    0.00    0.00    0.00    0.33    0.00    0.00    0.00    0.00    0.00
 ```
 
-There are a couple of important things to note, the first line displays useful information:
+There are a couple of important things to note. The first line displays useful information:
 
 * Kernel and release: `5.14.0-362.8.1.el9_3.x86_64`
 * Hostname: `alma9`
 * Date: `02/21/24`
 * Architecture: `_x86_64_`
-* Total amount of CPUs (this will be useful to interpret the output from other commands): `(8 CPU)`
+* Total amount of CPUs (this information is useful to interpret the output from other commands): `(8 CPU)`
 
 Then the metrics for the CPUs are displayed, to explain each of the columns:
 
@@ -166,10 +163,10 @@ Then the metrics for the CPUs are displayed, to explain each of the columns:
 
 #### Things to look out for
 
-These are some details to keep in mind when reviewing the output for `mpstat`:
+Some details to keep in mind when reviewing the output for `mpstat`:
 
-* Verify that all CPUs are properly loaded and not a single CPU is serving all the load. This could indicate a single threaded application.
-* Look for a healthy balance between `%usr` and `%sys` as this would indicate more time spent on the actual workload than serving kernel processes.
+* Verify that all CPUs are properly loaded and not a single CPU is serving all the load. This information could indicate a single threaded application.
+* Look for a healthy balance between `%usr` and `%sys` as the opposite would indicate more time spent on the actual workload than serving kernel processes.
 * Look for `%iowait` percentages as high values could indicate a system that is constantly waiting for I/O requests.
 * High `%soft` usage could indicate high network traffic.
 
@@ -196,7 +193,7 @@ The options and arguments are:
 
 * `-w`: Use wide printing to keep consistent columns.
 * `1`: The first numeric argument indicates how often to refresh the display in seconds.
-* `5`: The second numeric argument indicates how many times the data will refresh.
+* `5`: The second numeric argument indicates how many times the data refreshes.
 
 The output:
 
@@ -210,7 +207,7 @@ The output:
   15    2            0     19015276          164       175960    0    0     9  8561 3639 15177  73  27   0   0   0
 ```
 
-`vmstat` splits the output in 6 groups:
+`vmstat` splits the output in six groups:
 
 * `procs`: statistics for processes.
 * `memory`: statistics for system memory.
@@ -219,26 +216,26 @@ The output:
 * `system`: statistics for context switches and interrupts.
 * `cpu`: statistics for CPU usage.
 
->Note: `vmstat` shows overall statistics for the entire system (i.e. all CPUs, all block devices aggregated).
+>Note: `vmstat` shows overall statistics for the entire system (that is, all CPUs, all block devices aggregated).
 
 #### procs
 
-The procs section has 2 columns:
+The `procs` section has two columns:
 
 * `r`: The number of runnable processes in the run queue.
 * `b`: The number of processes blocked waiting for I/O.
 
-This section immediately shows if there's any bottleneck on the system as high numbers on either of the columns indicate processes queuing up waiting for resources.
+This section immediately shows if there's any bottleneck on the system. High numbers on either of the columns indicate processes queuing up waiting for resources.
 
-For the `r` column, this indicates the number of processes that are waiting for CPU time to be able to run. An easy way to interpret this number, if the number of processes in the "r" queue is higher than the number of total CPUs, it can be inferred that the system has the CPU heavily loaded and can't allocate CPU time for all the processes waiting to run.
+The `r` column indicates the number of processes that are waiting for CPU time to be able to run. An easy way to interpret this number is as follows: if the number of processes in the `r` queue is higher than the number of total CPUs, then it can be inferred that the system has the CPU heavily loaded, and it can't allocate CPU time for all the processes waiting to run.
 
-For the `b` column, this indicates the number of processes waiting to run that are blocked by I/O requests. A high number in this column would indicate a system that is experiencing high I/O and processes are not able to run due to other processes waiting to completed I/O requests. This could also indicate high disk latency.
+The `b` column indicates the number of processes waiting to run that are being blocked by I/O requests. A high number in this column would indicate a system that's experiencing high I/O, and processes are unable to run due to other processes waiting to completed I/O requests. Which could also indicate high disk latency.
 
 #### memory
 
-The memory section has 4 columns:
+The memory section has four columns:
 
-* `swpd`: The amount  swap memory used.
+* `swpd`: The amount swap memory used.
 * `free`: The amount of memory free.
 * `buff`: The amount of memory used for buffers.
 * `cache`: The amount of memory used for cache.
@@ -250,7 +247,7 @@ This section provides a high level overview of memory usage.
 
 #### swap
 
-The swap section has 2 coumns:
+The swap section has two columns:
 
 * `si`: The amount of memory swapped in (moved from system memory to swap) per second.
 * `so`: The amount of memory swapped out (moved from swap to system memory) per second.
@@ -259,40 +256,40 @@ If high `si` is observed, it might represent a system that is running out of sys
 
 #### io
 
-The io section has 2 columns:
+The `io` section has two columns:
 
-* `bi`: The amount of blocks received from a block device (reads blocks per second) per second.
-* `bo`: The amount of blocks sent to a block device (writes per second) per second.
+* `bi`: The number of blocks received from a block device (reads blocks per second) per second.
+* `bo`: The number of blocks sent to a block device (writes per second) per second.
 
 > [!NOTE]
 > These values are in blocks per second.
 
 #### system
 
-The system section has 2 columns:
+The `system` section has two columns:
 
 * `in`: The number of interrupts per second.
 * `cs`: The number of context switches per second.
 
 A high number of interrupts per second might indicate a system that is busy with hardware devices (for example network operations).
 
-A high number of context switches might indicate a busy system with many short running processes, there is no good or bad number here.
+A high number of context switches might indicate a busy system with many short running processes, there's no good or bad number here.
 
 #### cpu
 
-This section has 5 columns:
+This section has five columns:
 
 * `us`: User space percent utilization.
 * `sy`: System (kernel space) percent utilization.
 * `id`: Percent utilization of the amount of time the CPU is idle.
 * `wa`: Percent utilization of the amount of time the CPU is idle waiting for processes with I/O.
-* `st`: Percent utilization of the amount of time the CPU has spent serving other virtual CPUs (not applicable to Azure).
+* `st`: Percent utilization of the amount of time the CPU spent serving other virtual CPUs (not applicable to Azure).
 
-The values are presented in percentage, these values are the same as presented by the `mpstat` utility and serve to provide a high level overview of CPU usage. Follow a similar process for "[Things to look out for](#mpstat)" for `mpstat` when reviewing these values.
+The values are presented in percentage. These values are the same as presented by the `mpstat` utility and serve to provide a high level overview of CPU usage. Follow a similar process for "[Things to look out for](#mpstat)" for `mpstat` when reviewing these values.
 
 ### uptime
 
-Lastly for CPU related metrics, the uptime `utility` provides a very broad overview of the system load with the load average values.
+Lastly, for CPU related metrics, the `uptime` utility provides a broad overview of the system load with the load average values.
 
 ```bash
 uptime
@@ -311,11 +308,11 @@ echo "$extracted"
 16:55:53 up 9 min,  2 users,  load average: 9.26, 2.91, 1.18
 ```
 
-The load average displays 3 numbers, these are for 1, 5 and 15 minute intervals of system load.
+The load average displays three numbers. These numbers are for `1`, `5` and `15` minute intervals of system load.
 
-To interpret these values, it is important to know the number of available CPUs in the system, obtained from the `mpstat` output before.  The value depends on the total CPUs, so as an example of the `mpstat` output the system has 8 CPUs, a load average of 8 would mean that ALL cores are loaded to a 100%.
+To interpret these values, it's important to know the number of available CPUs in the system, obtained from the `mpstat` output before. The value depends on the total CPUs, so as an example of the `mpstat` output the system has 8 CPUs, a load average of 8 would mean that ALL cores are loaded to a 100%.
 
-A value of 4 would mean that half of the CPUs were loaded at 100% (or a total of 50% load on ALL CPUs). In the output above, the load average is 9.26 which means the CPU is loaded at about 115%.
+A value of `4` would mean that half of the CPUs were loaded at 100% (or a total of 50% load on ALL CPUs). In the previous output, the load average is `9.26`, which means the CPU is loaded at about 115%.
 
 The `1m`, `5m`, `15m` intervals help identify if load is increasing or decreasing over time.
 
@@ -324,7 +321,7 @@ The `1m`, `5m`, `15m` intervals help identify if load is increasing or decreasin
 
 ## Memory
 
-For memory there are two commands that can obtain details about usage.
+For memory, there are two commands that can obtain details about usage.
 
 ### free
 
@@ -347,7 +344,7 @@ echo "$extracted"
 
 The options and arguments are:
 
-* `-h`: Display values dynamically as human readable (i.e. Mib, Gib, Tib)
+* `-h`: Display values dynamically as human readable (for example: Mib, Gib, Tib)
 
 The output:
 
@@ -357,7 +354,7 @@ Mem:            31Gi        19Gi        12Gi        23Mi        87Mi        11Gi
 Swap:           23Gi          0B        23Gi
 ```
 
-From the output look for the total system memory vs the available and the used vs total swap. The available memory takes into consideration memory allocated for cache which can be returned for user applications.
+From the output, look for the total system memory vs the available, and the used vs total swap. The available memory takes into consideration memory allocated for cache, which can be returned for user applications.
 
 Some swap usage is normal in modern kernels as some less often used memory pages can be moved to swap.
 
@@ -388,24 +385,24 @@ NAME          TYPE      SIZE USED PRIO
 /mnt/swapfile file        8G   0B   -2
 ```
 
-This is important to verify if swap has been configured on a location that isn't ideal, for example on a data or OS disk. In the Azure frame of reference, swap should be configured on the ephemeral drive as it provides the best performance.
+This information is important to verify if swap is configured on a location that isn't ideal, for example on a data or OS disk. In the Azure frame of reference, swap should be configured on the ephemeral drive as it provides the best performance.
 
 ### Things to look out for
 
-* Memory is a finite resource, once both system memory (RAM) and swap have been exhausted, processes will be killed by OOM.
-* Verify swap hasn't been configured on a data disk or the OS disk as that would create issues with I/O due to latency differences. Swap should be configured on the ephemeral drive.
-* It is common to see on the free -h output that the free values are close to zero, this is due to page cache, the kernel will release those pages as needed.
+* Keep in mind the memory is a finite resource, once both system memory (RAM) and swap is exhausted, the processes are to be killed by the Out Of Memorry killer (OOM).
+* Verify swap isn't configured on a data disk or the OS disk, as that would create issues with I/O due to latency differences. Swap should be configured on the ephemeral drive.
+* Keep also in consideration that it's common to see on the `free -h` output that the free values are close to zero, this behavior is due to page cache, the kernel releases those pages as needed.
 
 ## I/O
 
-Disk I/O is one of the areas Azure suffers the most when throttled, as disks can reach 100ms+ latencies. The following commands will help identify these scenarios.
+Disk I/O is one of the areas Azure suffers the most when throttled, as disks can reach `100ms+` latencies. The following commands help to identify these scenarios.
 
 ### iostat
 
-The `iostat` utility is part of the sysstat package, it displays per block device usage statistics and helps identify block related performance issues.
+The `iostat` utility is part of the `sysstat` package. It displays per block device usage statistics and helps identify block related performance issues.
 
-The iostat utility provides details for metrics such as throughput, latency, and queue size. These metrics help understand if disk I/O has become a limiting factor.
-To run use the command:
+The `iostat` utility provides details for metrics such as throughput, latency, and queue size. These metrics help understand if disk I/O becomes a limiting factor.
+To run, use the command:
 
 ```bash
 iostat -dxtm 1 5
@@ -422,12 +419,12 @@ echo "$extracted"
 
 The options and arguments are:
 
-* `-d`: Per device usage report
-* `-x`: Extended statistics
-* `-t`: Display the timestamp for each report
-* `-m`: Display in MB/s
+* `-d`: Per device usage report.
+* `-x`: Extended statistics.
+* `-t`: Display the timestamp for each report.
+* `-m`: Display in MB/s.
 * `1`: The first numeric argument indicates how often to refresh the display in seconds.
-* `2`: The second numeric argument indicates how many times the data will refresh.
+* `2`: The second numeric argument indicates how many times the data refreshes.
 
 The output:
 
@@ -456,9 +453,9 @@ The output has several columns that aren't important (extra columns due to the `
 
 #### Things to look out for
 
-* Look for `r/s` and `w/s` (IOPS) and `rMB/s` and `wMB/s` and verify that these are within the limits of the given disk. If close or above the limits, the disk will be throttled, leading to high latency. This can also be corroborated with the `%iowait` metric from `mpstat`.
-* The latency is an excellent metric to verify if the disk is performing as expected. Normally, less than 9ms is the expected latency for PremiumSSD, other offerings will have different latency targets.
-* The queue size is a great indicator of saturation. Normally, requests would be served "near" realtime and the number will remain close to 1 (as the queue never grows). A higher number could indicate disk saturation (i.e. requests queuing up). There's no good or bad number for this metric but understanding that anything higher than 1 means that requests are queuing up helps determine if there is disk saturation.
+* Look for `r/s` and `w/s` (IOPS) and `rMB/s` and `wMB/s` and verify that these values are within the limits of the given disk. If the values are close or higher the limits, the disk are going to be throttled, leading to high latency. This information can also be corroborated with the `%iowait` metric from `mpstat`.
+* The latency is an excellent metric to verify if the disk is performing as expected. Normally, less than `9ms` is the expected latency for PremiumSSD, other offerings have different latency targets.
+* The queue size is a great indicator of saturation. Normally, requests would be served near real time and the number remains close to one (as the queue never grows). A higher number could indicate disk saturation (that is, requests queuing up). There's no good or bad number for this metric, but understanding that anything higher than one means that requests are queuing up helps determine if there's disk saturation.
 
 ### lsblk
 
@@ -481,7 +478,7 @@ zram0  252:0    0   16G  0 disk [SWAP]
 #### Things to look out for
 
 * Look for where the devices are mounted.
-* If swap is enabled, verify that it is not used on a data disk or OS disk.
+* If swap is enabled, verify that it's not used on a data disk or OS disk.
 
 > Note: An easy way to correlate the block device to a LUN in Azure is by running `ls -lr /dev/disk/azure`.
 
@@ -489,28 +486,28 @@ zram0  252:0    0   16G  0 disk [SWAP]
 
 Gathering details on a per process basis helps understand where the load of the system is coming from.
 
-The main utility to gather process statics is `pidstat` as it provides details per process for CPU, Memory and I/O statistics.
+The main utility to gather process statics is `pidstat` as it provides details per process for CPU, Memory, and I/O statistics.
 
-Lastly, a simple ps to sort process by top CPU and memory usage complete the metrics.
+Lastly, a simple `ps` to sort process by top CPU and memory usage complete the metrics.
 
 > [!NOTE]
-> Since these commands display details about running processes, they need to run as root with sudo. This will allow all processes to be displayed and not just the user's.
+> Since these commands display details about running processes, they need to run as root with `sudo`. This command allows all processes to be displayed and not just the user's.
 
 ### pidstat
 
-The `pidstat` utility is also part of the `sysstat` package, it is like mpstat or iostat where it displays metrics for a given amount of time. By default, `pidstat` will only display metrics for processes with activity.
+The `pidstat` utility is also part of the `sysstat` package. It's like `mpstat` or iostat where it displays metrics for a given amount of time. By default, `pidstat` only displays metrics for processes with activity.
 
 Arguments for `pidstat` are the same for other `sysstat` utilities:
 
 * 1: The first numeric argument indicates how often to refresh the display in seconds.
-* 2: The second numeric argument indicates how many times the data will refresh.
+* 2: The second numeric argument indicates how many times the data refreshes.
 
 > [!NOTE]
 > The output can grow considerably if there are many processes with activity.
 
 #### Process CPU statistics
 
-To gather process CPU statistics run `pidstat` without any options:
+To gather process CPU statistics, run `pidstat` without any options:
 
 ```bash
 pidstat 1 2
@@ -545,11 +542,11 @@ Linux 5.14.0-362.8.1.el9_3.x86_64 (alma9)       02/21/24        _x86_64_        
 16:55:48        0      2187   64.1%    0.0%    0.0%   34.0%   64.1%     3  stress-ng-cpu
 ```
 
-The command displays per process usage for `%usr`, `%system`, `%guest` (not applicable to Azure), `%wait` and total `%CPU` usage.
+The command displays per process usage for `%usr`, `%system`, `%guest` (not applicable to Azure), `%wait`, and total `%CPU` usage.
 
 ##### Things to look out for
 
-* Look for processes with high %wait (iowait) percentage as it might indicate processes that are blocked waiting for I/O which might also indicate disk saturation.
+* Look for processes with high %wait (iowait) percentage as it might indicate processes that are blocked waiting for I/O, which might also indicate disk saturation.
 * Verify that no single process consumes 100% of the CPU as it might indicate a single threaded application.
 
 #### Process Memory statistics
@@ -587,8 +584,8 @@ Linux 5.14.0-362.8.1.el9_3.x86_64 (alma9)       02/21/24        _x86_64_        
 
 The metrics collected are:
 
-* `minflt/s`: Minor faults per second, this metric indicates the amount of pages loaded from system memory (RAM).
-* `mjflt/s`: Major faults per second, this metric indicates the amount of pages loaded from disk (SWAP).
+* `minflt/s`: Minor faults per second, this metric indicates the number of pages loaded from system memory (RAM).
+* `mjflt/s`: Major faults per second, this metric indicates the number of pages loaded from disk (SWAP).
 * `VSZ`: Virtual memory used in bytes.
 * `RSS`: Resident memory used (actual allocated memory) in bytes.
 * `%MEM`: Percentage of total memory used.
@@ -596,15 +593,15 @@ The metrics collected are:
 
 ##### Things to look out for
 
-* Look for major faults per second as this would indicate a process that is swapping pages to/from disk. This could indicate memory exhaustion and could lead to OOM events or performance degradation due to slower swap.
-* Verify that a single process doesn't consume 100% of the available memory. This could indicate a memory leak.
+* Look for major faults per second, as this value would indicate a process that is swapping pages to or from disk. This behavior could indicate memory exhaustion and could lead to `OOM` events or performance degradation due to slower swap.
+* Verify that a single process doesn't consume 100% of the available memory. This behavior could indicate a memory leak.
 
 > [!NOTE]
-> the `--human` option can be used to display numbers in human readable format (i.e. `Kb`, `Mb`, `GB`).
+> the `--human` option can be used to display numbers in human readable format (that is, `Kb`, `Mb`, `GB`).
 
 #### Process I/O statistics
 
-To gather process memory statistics use the `-d` option:
+To gather process memory statistics, use the `-d` option:
 
 ```bash
 pidstat -d 1 2
@@ -645,8 +642,8 @@ The metrics collected are:
 
 ##### Things to look out for
 
-* Look for single processes with high read/write rates per second, this is mostly a guidance for processes with I/O more than identifying issues.
-Note: the `--human` option can be used to display numbers in human readable format (i.e. `Kb`, `Mb`, `GB`).
+* Look for single processes with high read/write rates per second. This information is a guidance for processes with I/O more than identifying issues.
+Note: the `--human` option can be used to display numbers in human readable format (that is, `Kb`, `Mb`, `GB`).
 
 ### ps
 
@@ -727,9 +724,9 @@ echo "$extracted"
 
 To run, create a file with the above contents, add execute permissions by running `chmod +x gather.sh` and run with `sudo ./gather.sh`.
 
-This will save the output of the commands in file in the same directory where the script was invoked.
+This script saves the output of the commands in a file located in the same directory where the script was invoked.
 
-Additionally, these commands can be run through `az-cli` using the runcommand extension and parsing the output through `jq` to obtain a similar output to running the commands locally.
+Additionally, these commands can be run through `az-cli` using the run-command extension and parsing the output through `jq` to obtain a similar output to running the commands locally.
 
 ```azurecli-interactive
 az vm run-command invoke -g <rgName> -n <vmName> --command-id RunShellScript --scripts "ls -l /dev/disk/azure" --query value[0].message | jq 'split("\n")'
