@@ -110,3 +110,22 @@ items:
       href: log-analytics/windows-agents/resolve-windows-agent-installation-issues.md
     - name: Troubleshoot erased proxy settings
       href: log-analytics/windows-agents/erased-proxy-settings-microsoft-monitoring-agent.md
+
+- name: Azure Monitor Agent
+  items:
+  - name: Azure Monitor Agent migration
+    items:
+    - name: Best practices for migrating to Azure Monitor Agent
+      href: azure-monitor-agent/migration/best-practices-migrating-from-log-analytics-agent.md
+    - name: Step 1 - Plan your migration
+      href: azure-monitor-agent/migration/step-1-plan-your-migration.md
+    - name: Step 2 - Understand the data that you're collecting
+      href: azure-monitor-agent/migration/step-2-understand-your-data-collection.md
+    - name: Step 3 - Configure data collections
+      href: azure-monitor-agent/migration/step-3-configure-data-collections.md
+    - name: Step 4 - Test data collections in Azure Monitor Agent
+      href: azure-monitor-agent/migration/step-4-test-data-collections-azure-monitor-agent.md
+    - name: Step 5 - Deploy at scale
+      href: azure-monitor-agent/migration/step-5-deploy-at-scale.md
+    - name: Step 6 - Configure other services
+      href: azure-monitor-agent/migration/step-6-configure-other-services.md
