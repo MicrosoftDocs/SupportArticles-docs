@@ -44,6 +44,8 @@ When data collection stops, you effectively have no monitoring of features or re
 
 When the daily cap is reached for a Log Analytics workspace, a banner is displayed in the Azure portal, and an event is written to the Operations table in the workspace. You should create an alert rule to proactively notify yourself when this occurs.
 
+## Next steps
+
 > [!div class="nextstepaction"]
 > [Configure recommended alerts](./workspace-recommended-alerts.md)
 
