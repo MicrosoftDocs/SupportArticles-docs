@@ -48,4 +48,7 @@ Learning to manage data volume is crucial to maintain the health and performance
     
     :::image type="content" source="media/why-daily-cap-exceeded/check-your-current-usage-5.png" alt-text="Screenshot that shows the Usage view in Log Analytics for the AzureDiagnostic table" lightbox="media/why-daily-cap-exceeded/check-your-current-usage-5.png":::
 
+> [!div class="nextstepaction"]
+> [Configure data retention](./configure-data-retention.md)
+
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

@@ -30,4 +30,7 @@ When the daily cap is reached in a Log Analytics workspace, a banner appears in 
 
     :::image type="content" source="media/workspace-recommended-alerts/log-analytics-alert-2.png" alt-text="Screenshot that shows how to configure recommended alerts" lightbox="media/workspace-recommended-alerts/log-analytics-alert-2.png":::
 
+> [!div class="nextstepaction"]
+> [Identify why daily cap exceeded](./why-daily-cap-exceeded.md)
+
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

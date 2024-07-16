@@ -92,18 +92,20 @@ items:
       href: log-analytics/workspaces/workspace-data-export-faq.yml
   - name: Cost management 
     items:
-    - name: Understand cost and usage report
+    - name: Understand cost and analyze usage report
       href: log-analytics/billing/understand-log-analytics-workspace-bill.md
-    - name: Why did costs increase unexpectedly
+    - name: Investigate unexpected cost increase
       href: log-analytics/billing/identify-service-cause-unexpected-costs.md
-    - name: Set up a daily cap limit
+    - name: Set daily cap to avoid unexpected increases
       href: log-analytics/billing/set-up-a-daily-cap.md
+    - name: Configure recommended alerts
+      href: log-analytics/billing/workspace-recommended-alerts.md
+    - name: Identify why daily cap exceeded
+      href: log-analytics/billing/why-daily-cap-exceeded.md
     - name: Configure data retention
       href: log-analytics/billing/configure-data-retention.md
-    - name: Why was daily cap exceeded
-      href: log-analytics/billing/why-daily-cap-exceeded.md
-    - name: Set up recommended alerts
-      href: log-analytics/billing/workspace-recommended-alerts.md
+
+
 
   - name: Linux Agents
     items:
