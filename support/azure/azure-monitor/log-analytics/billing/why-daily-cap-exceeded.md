@@ -18,7 +18,7 @@ Learning to manage data volume is crucial to maintain the health and performance
 1. Enter **log analytics** in the search bar.
 1. Under **Services**, select **Log Analytics**.
 1. Select your specific Log Analytics Workspace.
-    :::image type="content" source="media/why-daily-cap-exceeded/log-analytics-workspaces.png" alt-text="Screenshot that shows how to open Insights" lightbox="media/why-daily-cap-exceeded/log-analytics-workspaces.png":::
+    :::image type="content" source="media/why-daily-cap-exceeded/log-analytics-workspaces.png" alt-text="Screenshot that shows how to select the Log Analytics Workspace." lightbox="media/why-daily-cap-exceeded/log-analytics-workspaces.png":::
 
 1. In the **Monitoring** section, select **Insights**.
 
