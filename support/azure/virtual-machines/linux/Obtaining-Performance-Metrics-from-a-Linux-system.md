@@ -713,6 +713,10 @@ A simple bash script can collect all details in a single run and append the outp
 mpstat -P ALL 1 2 && vmstat -w 1 5 && uptime && free -h && swapon && iostat -dxtm 1 1 && lsblk && ls -l /dev/disk/azure && pidstat 1 1 -h --human && pidstat -r 1 1 -h --human && pidstat -d 1 1 -h --human && ps aux --sort=-%cpu | head -20 && ps aux --sort=-%mem | head -20
 ```
 
+To run, create a file with the above contents, add execute permissions by running `chmod +x gather.sh` and run with `sudo ./gather.sh`.
+
+This script saves the output of the commands in a file located in the same directory where the script was invoked.
+
 The following commands can be used if you want to execute it from Azure CLI:
 
 ```azurecli-interactive
@@ -722,15 +726,8 @@ extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d
 echo "$extracted" 
 ```
 
-To run, create a file with the above contents, add execute permissions by running `chmod +x gather.sh` and run with `sudo ./gather.sh`.
-
-This script saves the output of the commands in a file located in the same directory where the script was invoked.
-
-Additionally, these commands can be run through `az-cli` using the run-command extension and parsing the output through `jq` to obtain a similar output to running the commands locally.
+Additionally, all the commands in the bash block codes covered in this document, can be run through `az-cli` using the run-command extension and parsing the output through `jq` to obtain a similar output to running the commands locally.
 
 ```azurecli-interactive
-az vm run-command invoke -g <rgName> -n <vmName> --command-id RunShellScript --scripts "ls -l /dev/disk/azure" --query value[0].message | jq 'split("\n")'
+az vm run-command invoke -g $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "ls -l /dev/disk/azure" --query value[0].message | jq 'split("\n")'
 ```
-
->[!NOTE:]
-> Replace `<rgName>` and `<vmName>` values accordingly.
