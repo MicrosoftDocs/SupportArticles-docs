@@ -5473,7 +5473,7 @@
       {
         "source_path": "virtual-machines/windows/storage-classic-cannot-delete-storage-account-container-vhd.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/storage-resource-deletion-errors",
-        "redirect_document_id": true
+        "redirect_document_id": false
       }
   ]
 }
