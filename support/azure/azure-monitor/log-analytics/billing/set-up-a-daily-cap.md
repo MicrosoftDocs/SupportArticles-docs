@@ -29,7 +29,7 @@ When data collection stops, you effectively have no monitoring of features or re
 1. Under **Services**, select **Log Analytics**.
 1. Select your Log Analytics Workspace.  
     :::image type="content" source="media/set-up-a-daily-cap/log-analytics-workspaces.png" alt-text="Screenshot of selecting Log Analytics workspace." lightbox="media/set-up-a-daily-cap/log-analytics-workspaces.png":::
-1. In the **Settings** secton, select **Usage and estimated costs**.  
+1. In the **Settings** section, select **Usage and estimated costs**.  
     :::image type="content" source="media/set-up-a-daily-cap/daily-cap-1.png" alt-text="Screenshot that shows how to open the Usage and estimated costs page"  lightbox="media/set-up-a-daily-cap/daily-cap-1.png":::
 
 1. On the **Usage and estimated costs** page, select **Daily Cap** at the top of the page.
