@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files issues in Linux (SMB)
 description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients and possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 06/13/2024
+ms.date: 07/16/2024
 ms.reviewer: kendownie, v-weizhu
 ---
 
@@ -123,7 +123,7 @@ cifs_setup_session: 2 callbacks suppressed
 CIFS VFS: \\contoso.file.core.windows.net Send error in SessSetup = -13
 ```
 
-You'll also see that the server FQDN now resolves to a different IP address than what it's currently connected to.
+You'll also see that the server FQDN now resolves to a different IP address than what it's currently connected to. You might see this issue for any scenario where the server IP address can change. Besides account migration, another known scenario is storage account failover, because the DNS mapping can change.
 
 ### Cause
 
@@ -174,7 +174,14 @@ To better work around this issue, clear the kernel DNS resolver cache:
 
 ### Solution
 
-For a permanent fix, upgrade your client OS to a Linux distro version with account migration support. Several fixes for the Linux SMB kernel client have been submitted to the mainline Linux kernel. Kernel version 5.15+ and Keyutils-1.6.2+ have the fixes. Some distros have backported these fixes, and you can check if the following fixes exist in the distro version you're using:
+For a permanent fix, upgrade your client OS to a Linux distro version with account migration support. Several fixes for the Linux SMB kernel client have been submitted to the mainline Linux kernel. The following distros have the fixes:
+
+- Ubuntu: 20.04, 22.04, 24.04, AKS 22.04 (fix rolling out in 5.15.0-1068)
+- RHEL: 8.6+
+- SLES: 15SP2, 15SP3, 15SP4, 15SP5
+- Azure Linux: 2.0 (Fix rolling out in 5.15.159.1), 3.0
+
+Some distros have backported these fixes, and you can check if the following fixes exist in the distro version you're using:
 
 - [cifs: On cifs_reconnect, resolve the hostname again](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=4e456b30f78c429b183db420e23b26cde7e03a78)
 
@@ -188,9 +195,11 @@ For a permanent fix, upgrade your client OS to a Linux distro version with accou
 
 - [dns: Apply a default TTL to records obtained from getaddrinfo()](https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/commit/?id=75e7568dc516db698093b33ea273e1b4a30b70be)
 
-## Unable to mount SMB file share when FIPS is enabled 
+- [keys: Fix overwrite of key expiration on instantiation](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9da27fb65a14c18efd4473e2e82b76b53ba60252)
 
-When **Federal Information Processing Standard (FIPS)** is enabled in a Linux VM,  the SMB file share cannot be mounted. The Linux dmesg logs on the client display errors such as:
+## Unable to mount SMB file share when FIPS is enabled
+
+When **Federal Information Processing Standard (FIPS)** is enabled in a Linux VM,  the SMB file share can't be mounted. The Linux dmesg logs on the client display errors such as:
 
 ```output
 kernel: CIFS: VFS: Could not allocate crypto hmac(md5)
