@@ -35,7 +35,7 @@ You can apply a different setting to specific tables by [configuring the retenti
 1. Under **Services**, select **Log Analytics**.
 1. Select your Log Analytics workspace.  
     :::image type="content" source="media/identify-service-cause-unexpected-costs/log-analytics-workspaces.png" alt-text="Screenshot of selecting a log Analytics workspace" lightbox="media/configure-data-retention/log-analytics-workspaces.png":::
-1. In the **Settings** secton, select **Usage and estimated costs**.
+1. In the **Settings** section, select **Usage and estimated costs**.
     
     :::image type="content" source="media/configure-data-retention/data-retention-1.png" alt-text="Screenshot of Usage and estimated costs" lightbox="media/identify-service-cause-unexpected-costs/data-retention-1.png":::
 1. At the top of the **Usage and estimated costs** page, select **Data Retention**.

@@ -40,7 +40,7 @@ Learning to manage data volume is crucial to maintain the health and performance
 
 1. Select the **Usage** tab (1) on the **Insights** page. This tab provides information about workspace usage. The dashboard subtab shows the ingestion data that's displayed in tables. It defaults to the five most-ingested tables in the selected time range.
     1. In the Usage table, select a specific row (2) to show the **Ingestion Statistics by Resource** subtable.
-    1. In the following example, the **AVSSyslog** and **AzureDiagnostic** tables contain a significant volume of ingestion. To identify the resource or application that's responsible for sending data to these tables, select the row in VSSyslog. The example shows that that the 'ch1-avs' resource (4) is causing the notable ingestion.
+    1. In the following example, the **AVSSyslog** and **AzureDiagnostic** tables contain a significant volume of ingestion. To identify the resource or application that's responsible for sending data to these tables, select the row in VSSyslog. The example shows that the 'ch1-avs' resource (4) is causing the notable ingestion.
     
     :::image type="content" source="media/why-daily-cap-exceeded/check-your-current-usage-4.png" alt-text="Screenshot that shows the Usage view in Log Analytics for the AVSSyslog table" lightbox="media/why-daily-cap-exceeded/check-your-current-usage-4.png":::
  
