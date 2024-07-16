@@ -1,7 +1,7 @@
 ---
 title: HTTP status code overview
 description: This article provides a list of the HTTP status codes in IIS 7.0 and later versions.
-ms.date: 02/16/2023
+ms.date: 07/16/2024
 ms.custom: sap:Health, Diagnostic, and Performance Features\HTTP error logging
 ms.reviewer: robmcm
 ms.subservice: www-administration-management
@@ -146,10 +146,9 @@ IIS 7.0 and later versions define several HTTP status codes that indicate a more
 | 401.4 | Authorization failed by filter | An Internet Server Application Programming Interface (ISAPI) filter doesn't let the request be processed because of an authorization problem. |
 | 401.5 | Authorization failed by ISAPI/CGI application | An ISAPI application or a Common Gateway Interface (CGI) application doesn't let the request be processed because of an authorization problem. |
 | 404.501 | Access denied: concurrent request rate limit reached | Dynamic IP Restriction: too many concurrent requests were made from the same client IP. |
-| 404.502 | Access denied: maximum request rate limit reached | Dynamic IP Restriction: the maximum number requests from the same client IP within a specified time limit was reached. |
+| 404.502 | Access denied: maximum request rate limit reached | Dynamic IP Restriction: the maximum number of requests from the same client IP within a specified time limit was reached. |
 | 404.503 | Access denied: IP address denied | IP Restriction: the client IP address is included in the deny list. |
 | 404.504 | Access denied: host name denied | IP Restriction: the client host name is included in the deny list. |
-
 
 #### 403 - Forbidden
 
@@ -223,7 +222,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 405.0 | Method not allowed. | The request is made by using an HTTP method that isn't valid. For more information, see [HTTP Error 405.0](../health-diagnostic-performance/http-error-405-website.md). |
 | 406.0 | Not acceptable. | The request is made by using an `Accept` header that contains a MIME value that isn't valid. |
 | 412.0 | Precondition failed. | The request is made by using an `If-Match` request header that contains a value that isn't valid. |
-| 413.0 | Request entity too large. | The request is made by using a payload that is too big. |
+| 413.0 | Request entity too large. | The request is made by using a payload that is too large. |
 
 ### 5**xx** - Server error
 
