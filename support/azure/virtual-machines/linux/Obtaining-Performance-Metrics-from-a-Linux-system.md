@@ -16,6 +16,8 @@ ms.date: 07/16/2024
 
 # Obtaining Performance metrics from a Linux system
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article is going to cover instructions to determine how to quickly obtain performance metrics from a Linux System.
 
 There are several commands that can be used to obtain performance counters on Linux. Commands such as `vmstat` and `uptime`, provide general system metrics such as CPU usage, System Memory, and System load.
