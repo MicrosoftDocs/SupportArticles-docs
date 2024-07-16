@@ -20,7 +20,7 @@ The script needs two mandatory parameters:
 - The file path of the `.msu` or `.cab` file
 - The destination path where the extracted files will be stored
 
-The script checks for the existence of the specified file and destination directory, and creates the destination directory if it doesn't exist. The script then proceeds to extract the contents of the `.msu` or `.cab` files and handles nested `.cab` files.
+The script checks for the existence of the specified file and destination directory, and creates the destination directory if it doesn't exist. The script then proceeds to extract the contents of the `.msu` or `.cab` files and handles nested `.cab` files in the process.
 
 ## Step-by-step instructions for using the script
 
