@@ -29,14 +29,13 @@ The commands can be separated into:
 * Disk I/O
 * Processes
 
-## Define Environment Variables
+## Sysstat utilities installation
 
 The First step in this tutorial is to define environment variables, and install the corresponding package, if necessary.
 
 ```azurecli-interactive
 export MY_RESOURCE_GROUP_NAME="myVMResourceGroup89f292"
 export MY_VM_NAME="myVM89f292"
-export LINUX_DISTRO="ubuntu"
 ```
 
 > [!NOTE]
