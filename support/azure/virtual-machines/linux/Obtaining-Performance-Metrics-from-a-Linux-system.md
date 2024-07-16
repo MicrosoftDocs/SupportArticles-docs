@@ -841,5 +841,5 @@ echo "$extracted"
 Additionally, all the commands in the bash block codes covered in this document, can be run through `az-cli` using the run-command extension, and parsing the output through `jq` to obtain a similar output to running the commands locally.
 
 ```azurecli-interactive
-az vm run-command invoke -g $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "ls -l /dev/disk/azure" --query value[0].message | jq 'split("\n")'
+az vm run-command invoke -g $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "ls -l /dev/disk/azure" | jq -r '.value[0].message'
 ```
