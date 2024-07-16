@@ -47,13 +47,13 @@ The full command for installation of the `sysstat` package on some popular Distr
 
 **Ubuntu:**
 
-[BASH](#tab/sysstatbashubuntu)
+### [BASH](#tab/sysstatbashubuntu)
 
 ```bash
 sudo apt install sysstat -y
 ```
 
-[AZ-CLI](#tab/sysstatcliubuntu)
+### [AZ-CLI](#tab/sysstatcliubuntu)
 
 You could also install this package using the Run-Command extension from Azure CLI, using the following command:
 
@@ -64,13 +64,13 @@ az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_
 
 **Red Hat:**
 
-[BASH](#tab/sysstatbashrhel)
+### [BASH](#tab/sysstatbashrhel)
 
 ```bash
 sudo dnf install sysstat -y
 ```
 
-[AZ-CLI](#tab/sysstatclirhel)
+### [AZ-CLI](#tab/sysstatclirhel)
 
 You could also install this package using the Run-Command extension from Azure CLI, using the following command:
 
@@ -82,13 +82,13 @@ az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_
 
 **SUSE:**
 
-[BASH](#tab/sysstatbashsuse)
+### [BASH](#tab/sysstatbashsuse)
 
 ```bash
 sudo zypper install sysstat --non-interactive
 ```
 
-[AZ-CLI](#tab/sysstatclisuse)
+### [AZ-CLI](#tab/sysstatclisuse)
 
 You could also install this package using the Run-Command extension from Azure CLI, using the following command:
 
@@ -107,13 +107,13 @@ The `mpstat` utility is part of the `sysstat` package. It displays per CPU utili
 
 The full command is:
 
-[BASH](#tab/mpstatbash)
+### [BASH](#tab/mpstatbash)
 
 ```bash
 mpstat -P ALL 1 2
 ```
 
-[AZ-CLI](#tab/mpstatcli)
+### [AZ-CLI](#tab/mpstatcli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -199,13 +199,13 @@ Some details to keep in mind when reviewing the output for `mpstat`:
 The `vmstat` utility is widely available in most Linux distributions, it provides high level overview for CPU, Memory, and Disk I/O utilization in a single pane.
 The command for `vmstat` is:
 
-[BASH](#tab/vmstatbash)
+### [BASH](#tab/vmstatbash)
 
 ```bash
 vmstat -w 1 5
 ```
 
-[AZ-CLI](#tab/vmstatcli)
+### [AZ-CLI](#tab/vmstatcli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -320,13 +320,13 @@ The values are presented in percentage. These values are the same as presented b
 
 Lastly, for CPU related metrics, the `uptime` utility provides a broad overview of the system load with the load average values.
 
-[BASH](#tab/uptimebash)
+#### [BASH](#tab/uptimebash)
 
 ```bash
 uptime
 ```
 
-[AZ-CLI](#tab/uptimecli)
+#### [AZ-CLI](#tab/uptimecli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -364,13 +364,13 @@ The `free` command shows system memory utilization.
 
 To run it:
 
-[BASH](#tab/freebash)
+#### [BASH](#tab/freebash)
 
 ```bash
 free -h
 ```
 
-[AZ-CLI](#tab/freecli)
+#### [AZ-CLI](#tab/freecli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -405,13 +405,13 @@ The `swapon` command displays where swap is configured and the respective priori
 
 To run the command:
 
-[BASH](#tab/swaponbash)
+#### [BASH](#tab/swaponbash)
 
 ```bash
 swapon
 ```
 
-[AZ-CLI](#tab/swaponcli)
+#### [AZ-CLI](#tab/swaponcli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -451,13 +451,13 @@ The `iostat` utility is part of the `sysstat` package. It displays per block dev
 The `iostat` utility provides details for metrics such as throughput, latency, and queue size. These metrics help understand if disk I/O becomes a limiting factor.
 To run, use the command:
 
-[BASH](#tab/iostatbash)
+#### [BASH](#tab/iostatbash)
 
 ```bash
 iostat -dxtm 1 5
 ```
 
-[AZ-CLI](#tab/iostatcli)
+#### [AZ-CLI](#tab/iostatcli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -516,13 +516,13 @@ The `lsblk` utility shows the block devices attached to the system, while it doe
 
 To run, use the command:
 
-[BASH](#tab/lsblkbash)
+#### [BASH](#tab/lsblkbash)
 
 ```bash
 lsblk
 ```
 
-[AZ-CLI](#tab/lsblkcli)
+#### [AZ-CLI](#tab/lsblkcli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -583,13 +583,13 @@ Arguments for `pidstat` are the same for other `sysstat` utilities:
 
 To gather process CPU statistics, run `pidstat` without any options:
 
-[BASH](#tab/pidstatbash)
+##### [BASH](#tab/pidstatbash)
 
 ```bash
 pidstat 1 2
 ```
 
-[AZ-CLI](#tab/pidstatcli)
+##### [AZ-CLI](#tab/pidstatcli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -633,13 +633,13 @@ The command displays per process usage for `%usr`, `%system`, `%guest` (not appl
 
 To gather process memory statistics, use the `-r` option:
 
-[BASH](#tab/pidstatrbash)
+##### [BASH](#tab/pidstatrbash)
 
 ```bash
 pidstat -r 1 2
 ```
 
-[AZ-CLI](#tab/pidstatrcli)
+##### [AZ-CLI](#tab/pidstatrcli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -689,13 +689,13 @@ The metrics collected are:
 
 To gather process memory statistics, use the `-d` option:
 
-[BASH](#tab/pidstatdbash)
+##### [BASH](#tab/pidstatdbash)
 
 ```bash
 pidstat -d 1 2
 ```
 
-[AZ-CLI](#tab/pidstatdcli)
+##### [AZ-CLI](#tab/pidstatdcli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -743,13 +743,13 @@ Lastly `ps` command displays system processes, and can be either sorted by CPU o
 
 To sort by CPU and obtain the top 10 processes:
 
-[BASH](#tab/psbash)
+#### [BASH](#tab/psbash)
 
 ```bash
 ps aux --sort=-%cpu | head -10
 ```
 
-[AZ-CLI](#tab/pscli)
+#### [AZ-CLI](#tab/pscli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -777,13 +777,13 @@ root        2191 41.2  0.0  73524  5592 pts/1    R+   16:55   0:06 stress-ng --c
 
 To sort by `MEM%` and obtain the top 10 processes:
 
-[BASH](#tab/psauxbash)
+##### [BASH](#tab/psauxbash)
 
 ```bash
 ps aux --sort=-%mem| head -10
 ```
 
-[AZ-CLI](#tab/psauxcli)
+##### [AZ-CLI](#tab/psauxcli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
@@ -811,7 +811,7 @@ root        2180  0.0  0.0  73524  6968 pts/1    SL+  16:55   0:00 stress-ng --c
 
 A simple bash script can collect all details in a single run, and append the output to a file for later use:
 
-[BASH](#tab/mpstatpbash)
+### [BASH](#tab/mpstatpbash)
 
 ```bash
 mpstat -P ALL 1 2 && vmstat -w 1 5 && uptime && free -h && swapon && iostat -dxtm 1 1 && lsblk && ls -l /dev/disk/azure && pidstat 1 1 -h --human && pidstat -r 1 1 -h --human && pidstat -d 1 1 -h --human && ps aux --sort=-%cpu | head -20 && ps aux --sort=-%mem | head -20
@@ -821,7 +821,7 @@ To run, create a file with the above contents, add execute permissions by runnin
 
 This script saves the output of the commands in a file located in the same directory where the script was invoked.
 
-[AZ-CLI](#tab/mpstatpcli)
+### [AZ-CLI](#tab/mpstatpcli)
 
 The following commands can be used if you want to execute it from Azure CLI:
 
