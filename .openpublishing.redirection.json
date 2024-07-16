@@ -9671,9 +9671,9 @@
       "redirect_document_id": false
     },
     {
-       "source_path": "support/azure/azure-kubernetes/operationisnotallowed.md",
-       "redirect_url": "/troubleshoot/azure/azure-kubernetes/operationnotallowed",
-       "redirect_document_id": true
+      "source_path": "support/azure/azure-kubernetes/operationisnotallowed.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/operationnotallowed",
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/windows-security/code-31-device-manager-usbccid-smartcard-reader-problem.md",
@@ -9829,7 +9829,7 @@
       "source_path": "support/windows-server/windows-security/decommission-enterprise-certification-authority-and-remove-objects.md",
       "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects",
       "redirect_document_id": true
-    },    
+    },
     {
       "source_path": "support/windows-server/windows-security/remote-desktop-server-certificates-renewed.md",
       "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/remote-desktop-server-certificates-renewed",
@@ -11279,7 +11279,7 @@
       "source_path": "support/windows-server/installing-updates-features-roles/failed-schedule-software-protection.md",
       "redirect_url": "/troubleshoot/windows-server/system-management-components/failed-schedule-software-protection",
       "redirect_document_id": true
-    },	
+    },
     {
       "source_path": "support/windows-server/installing-updates-features-roles/use-recovery-console-not-start.md",
       "redirect_url": "/troubleshoot/windows-server/performance/use-recovery-console-not-start",
@@ -11344,18 +11344,18 @@
       "source_path": "support/windows-client/installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps.md",
       "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/sysprep-fails-remove-or-update-store-apps",
       "redirect_document_id": true
-     },
-     {
-       "source_path": "support/windows-server/installing-updates-features-roles/installing-updates-features-roles-overview.md",
-       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview",
-       "redirect_document_id": true
-     },
-     {
-       "source_path": "support/windows-client/installing-updates-features-roles/installing-updates-features-roles-overview.md",
-       "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview",
-       "redirect_document_id": true
-     },
-      {
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/installing-updates-features-roles-overview.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/installing-updates-features-roles-overview.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/windows-client/installing-updates-features-roles/skype-for-microsoft-update.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/skype-for-microsoft-update",
       "redirect_document_id": false
@@ -11369,6 +11369,71 @@
       "source_path": "support/power-platform/power-automate/desktop-flows/proxy-error-console.md",
       "redirect_url": "/power-automate/desktop-flows/how-to/proxy-settings",
       "redirect_document_id": false
-    }    
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/format-command-not-write-zeros-to-disk.md",
+      "redirect_url": "/previous-versions/troubleshoot/format-command-not-write-zeros-to-disk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/updates-for-windows-server-2012-r2-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/updates-for-windows-server-2012-r2-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/set-up-clustered-print-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/set-up-clustered-print-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/troubleshoot-cluster-service-startup-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/troubleshoot-cluster-service-startup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/physical-disk-resource-not-come-online.md",
+      "redirect_url": "/previous-versions/troubleshoot/physical-disk-resource-not-come-online",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/network-name-resource-not-come-online.md",
+      "redirect_url": "/previous-versions/troubleshoot/network-name-resource-not-come-online",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/local-sas-disks-getting-added-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/local-sas-disks-getting-added-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cannot-share-folder-in-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/cannot-share-folder-in-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/failover-clustering-system-log-events.md",
+      "redirect_url": "/previous-versions/troubleshoot/failover-clustering-system-log-events",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/error-0x8000ffff-catastrophic-failure.md",
+      "redirect_url": "/previous-versions/troubleshoot/error-0x8000ffff-catastrophic-failure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-information-ip-address-failover.md",
+      "redirect_url": "/previous-versions/troubleshoot/cluster-information-ip-address-failover",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-fileshare-resource-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/cluster-fileshare-resource-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-disk-resource-not-come-online.md",
+      "redirect_url": "/previous-versions/troubleshoot/cluster-disk-resource-not-come-online",
+      "redirect_document_id": false
+    }
   ]
 }

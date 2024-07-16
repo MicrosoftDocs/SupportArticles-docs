@@ -678,9 +678,7 @@ items:
     - name: Backup doesn't start after you perform BMR
       href: ./backup-and-storage/backup-not-start-after-performing-bmr.md
     - name: Can't delete files on NTFS file system
-      href: ./backup-and-storage/cannot-delete-file-folder-on-ntfs-file-system.md
-    - name: Change in the behavior of the format command
-      href: ./backup-and-storage/format-command-not-write-zeros-to-disk.md
+      href: ./backup-and-storage/cannot-delete-file-folder-on-ntfs-file-system.md    
     - name: Correct disk space problems on NTFS volumes
       href: ./backup-and-storage/disk-space-problems-on-ntfs-volumes.md
     - name: Disk Event ID 154
@@ -1163,28 +1161,10 @@ items:
       href: ./high-availability/troubleshoot-cannot-bring-physical-disk-online.md
     - name: Active Route removed
       href: ./high-availability/active-route-removed.md
-    - name: Cluster disk resource fails to come online
-      href: ./high-availability/cluster-disk-resource-not-come-online.md
-    - name: Cluster fileshare resource fails
-      href: ./high-availability/cluster-fileshare-resource-fails.md
-    - name: Clustering information on IP address failover
-      href: ./high-availability/cluster-information-ip-address-failover.md
     - name: Cluster validation account causes events or messages
       href: ./high-availability/cluster-validation-account-causes-events-messages.md
     - name: Error messages occur when bringing a cluster group online
-      href: ./high-availability/error-messages-bring-cluster-group-online.md
-    - name: Error 0x8000ffff when you change Shadow Copy settings
-      href: ./high-availability/error-0x8000ffff-catastrophic-failure.md
-    - name: Failover Clustering system log events
-      href: ./high-availability/failover-clustering-system-log-events.md
-    - name: Fail to share folders in failover cluster
-      href: ./high-availability/cannot-share-folder-in-failover-cluster.md
-    - name: Local SAS Disks getting added in Windows Server Failover Cluster
-      href: ./high-availability/local-sas-disks-getting-added-failover-cluster.md
-    - name: Network Name resource fails to come online
-      href: ./high-availability/network-name-resource-not-come-online.md
-    - name: Physical disk resource doesn't come online
-      href: ./high-availability/physical-disk-resource-not-come-online.md
+      href: ./high-availability/error-messages-bring-cluster-group-online.md      
     - name: Recover computer object that supports Network Name resource
       href: ./high-availability/recover-deleted-computer-object-failover-cluster.md
     - name: '"The parameter is incorrect" error'
@@ -1212,9 +1192,7 @@ items:
     - name: How to troubleshoot the Cluster service account
       href: ./high-availability/troubleshoot-cluster-service-account.md
     - name: Troubleshoot cluster issue with Event ID 1135
-      href: ./high-availability/troubleshoot-cluster-event-id-1135.md
-    - name: Troubleshoot Cluster service startup issues
-      href: ./high-availability/troubleshoot-cluster-service-startup-issues.md
+      href: ./high-availability/troubleshoot-cluster-event-id-1135.md    
   - name: Cluster Shared Volume (CSV)
     items:
     - name: 'Troubleshooting guidance: Event ID 5120 Cluster Shared Volume'
@@ -1266,11 +1244,7 @@ items:
     - name: Problem with deleting nodes from active failover cluster membership
       href: ./high-availability/problem-nodes-failover-cluster.md
     - name: Remove nodes from active failover cluster membership
-      href: ./high-availability/nodes-failover-cluster-vmware.md
-  - name: Print clusters and High Availability Printing
-    items:
-    - name: How to set up a clustered print server
-      href: ./high-availability/set-up-clustered-print-server.md
+      href: ./high-availability/nodes-failover-cluster-vmware.md  
   - name: Replacing hardware and updating the operating system
     items:
     - name: Can't upgrade operating system of clustered server
@@ -1286,9 +1260,7 @@ items:
     - name: Failover behavior on clusters of three or more nodes
       href: ./high-availability/groups-fail-logic-three-more-cluster-node-members.md
     - name: Run chkdsk /f command on a shared cluster disk
-      href: ./high-availability/run-chkdsk-f-command-shared-cluster-disk.md
-    - name: Updates for Windows Server 2012 R2-based failover clusters
-      href: ./high-availability/updates-for-windows-server-2012-r2-failover-cluster.md
+      href: ./high-availability/run-chkdsk-f-command-shared-cluster-disk.md    
   - name: Setup and configuration of clustered services and applications
     items:
     - name: Add support for more than eight LUNs
