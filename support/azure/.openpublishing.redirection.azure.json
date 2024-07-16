@@ -5469,6 +5469,11 @@
         "source_path": "virtual-machines/windows/virtual-machines-windows-replace-system-binary-file.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/virtual-machines-windows-repair-replace-system-binary-file",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows/storage-classic-cannot-delete-storage-account-container-vhd.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/storage-resource-deletion-errors",
+        "redirect_document_id": true
       }
   ]
 }
