@@ -11,7 +11,7 @@ ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update 
 ---
 # Scripts: Extract .msu and .cab files
 
-This article provides a guide on how to use a PowerShell script to extract `.msu` and `.cab` files to a specified directory. The script is designed to handle various scenarios and ensure smooth extractions, and even creates directories if needed.
+This article provides a guide on how to use a PowerShell script to extract `.msu` and `.cab` files to a specified directory. The script is designed to handle various scenarios, ensure smooth extractions, and even create directories if needed.
 
 ## Script overview
 
@@ -20,9 +20,9 @@ The script needs two mandatory parameters:
 - The file path of the `.msu` or `.cab` file
 - The destination path where the extracted files will be stored
 
-The script checks for the existence of the specified file and the destination directory, and creates the destination directory if it doesn't exist. The script then proceeds to extract the contents of the `.msu` or `.cab` files, and handles nested `.cab` files in the process.
+The script checks for the existence of the specified file and destination directory, and creates the destination directory if it doesn't exist. The script then proceeds to extract the contents of the `.msu` or `.cab` files and handles nested `.cab` files.
 
-## Step-by-step instructions to use the script
+## Step-by-step instructions for using the script
 
 1. Prepare the script.
 
@@ -30,7 +30,7 @@ The script checks for the existence of the specified file and the destination di
 
 2. Run the script.
 
-    Open PowerShell as an administrator. Go to the directory where your script is saved. Execute the script by running `.\Extract-MSUAndCAB.ps1` in this example.
+    Open PowerShell as an administrator. Go to the directory where your script is saved. In this example, execute the script by running `.\Extract-MSUAndCAB.ps1`.
 
 3. Provide file paths.
 
