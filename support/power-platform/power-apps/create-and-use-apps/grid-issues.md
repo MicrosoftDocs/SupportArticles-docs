@@ -24,20 +24,20 @@ This guide helps you resolve the following grid issues that occur in a Power App
 
 ## Terms
 
-1. [Grid control](/power-apps/maker/model-driven-apps/the-power-apps-grid-control) - a control that's displayed on an entity page.
-2. Subgrid control - a control that's displayed in a form or inside a reference panel.
-3. View selector - a drop-down control that allows selecting the current view.
-4. Ribbon command bar - the content-dependent button bar at the top of a page or form.
-5. Subgrid menu - a content-dependent menu.
-6. Quick Find - a search control that allows filtering the current view by typing a search string.
-7. Column Editor - a tool that allows adding, removing, or reordering columns in the current view.
-8. Modern Advanced Find - a tool that allows applying complex filters to the current view.
-9. Column filters - a tool that allows applying simple filters to the grid.
-10. Column sorting - a tool that allows sorting the grid content by one or more columns.
-11. Status column - a grid column that allows selecting rows. It's also used for displaying row related messages.
-12. Nested grid - a child grid that renders inside a grid or subgrid control.
-13. Column header - the header at the top of the grid or subgrid control.
-14. Jump bar - the alpha-numeric bar at the bottom of the grid.
+1. [_Grid control_](/power-apps/maker/model-driven-apps/the-power-apps-grid-control) - a control that's displayed on an entity page.
+2. _Subgrid control_ - a control that's displayed in a form or inside a reference panel.
+3. _View selector_ - a drop-down control that allows selecting the current view.
+4. _Ribbon command bar_ - the content-dependent button bar at the top of a page or form.
+5. _Subgrid menu_ - a content-dependent menu.
+6. _Quick Find_ - a search control that allows filtering the current view by typing a search string.
+7. _Column Editor_ - a tool that allows adding, removing, or reordering columns in the current view.
+8. _Modern Advanced Find_ - a tool that allows applying complex filters to the current view.
+9. _Column filters_ - a tool that allows applying simple filters to the grid.
+10. _Column sorting_ - a tool that allows sorting the grid content by one or more columns.
+11. _Status column_ - a grid column that allows selecting rows. It's also used for displaying row related messages.
+12. _Nested grid_ - a child grid that renders inside a grid or subgrid control.
+13. _Column header_ - the header at the top of the grid or subgrid control.
+14. _Jump bar_ - the alpha-numeric bar at the bottom of the grid.
 
 Here are the screenshots of the terms:
 

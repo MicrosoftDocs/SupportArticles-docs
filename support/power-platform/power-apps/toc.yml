@@ -30,7 +30,7 @@
       items:
         - name: Can't edit data in the grid after enabling editing mode
           href: create-and-use-apps/cannot-edit-data-in-the-grid-in-editing-mode.md
-        - name: Can't use column filters on a grid or subgrid, or filtering doesn't work correctly
+        - name: Can't use column filters on a grid or subgrid or filtering doesn't work correctly
           href: create-and-use-apps/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly.md
         - name: Can't use sorting or sorting doesn't work correctly
           href: create-and-use-apps/cannot-use-sorting-or-sorting-not-work-correctly.md

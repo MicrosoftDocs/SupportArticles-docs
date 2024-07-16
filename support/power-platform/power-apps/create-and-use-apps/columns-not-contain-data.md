@@ -3,7 +3,7 @@ title: Some columns don't contain data in a model-driven app
 description: Provides troubleshooting steps for an issue where some columns don't contain data in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/12/2024
+ms.date: 07/16/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -23,12 +23,12 @@ This issue is often caused by the discrepancies between the fetchXML request (th
 
 First, you should ensure the issue isn't related to insufficient permissions. The easiest way to check this is to navigate to the page as a user with full administrative privileges. The [Power Apps Monitor tool](/power-apps/maker/monitor-overview) can also be used to ensure the column data is readable.
 
-:::image type="content" source="media/columns-not-contain-data/isreadable.png" alt-text="Screenshot of the isreadable attribute in the Power Apps Monitor tool.":::
+:::image type="content" source="media/columns-not-contain-data/isreadable.png" alt-text="Screenshot of the isreadable attribute in the Power Apps Monitor tool." lightbox="media/columns-not-contain-data/isreadable.png":::
 
 If the issue isn't related to insufficient permissions, use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to check the query and columns definition as shown in the following screenshot.
 
-:::image type="content" source="media/columns-not-contain-data/viewfields-viewfetchxml.png" alt-text="Screenshot of the viewFields section and the  viewFetchXML query in the Power Apps Monitor tool.":::
+:::image type="content" source="media/columns-not-contain-data/viewfields-viewfetchxml.png" alt-text="Screenshot of the viewFields section and the  viewFetchXML query in the Power Apps Monitor tool." lightbox="media/columns-not-contain-data/viewfields-viewfetchxml.png":::
 
-Make sure that all the columns listed in the "viewFields" section are present in the "viewFetchXML" query and that the respective columns aren't marked as "hidden".
+Make sure that all the columns listed in the `viewFields` section are present in the `viewFetchXML` query and that the respective columns aren't marked as `hidden`.
 
 The issue can also be caused by a corrupt view. Resaving and republishing such a view might help solve the problem.

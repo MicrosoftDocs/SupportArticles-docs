@@ -3,7 +3,7 @@ title: Can't use sorting or sorting doesn't work correctly
 description: Fixes an issue in which you can't use sorting or sorting doesn't work correctly in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/12/2024
+ms.date: 07/16/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -15,7 +15,7 @@ This article helps solve an issue where you can't use sorting or sorting doesn't
 
 ### Resolution
 
-Sorting not available on all the columns is a strong indication that sorting is disabled on the grid control. Use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to make sure the `enableSorting` grid property is set to "true".
+Sorting not available on all the columns is a strong indication that sorting is disabled on the grid control. Use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to make sure the `enableSorting` grid property is set to `true`.
 
 :::image type="content" source="media/cannot-use-sorting-or-sorting-not-work-correctly/enablesorting.png" alt-text="Screenshot of the enableFiltering grid property." lightbox="media/cannot-use-sorting-or-sorting-not-work-correctly/enablesorting.png":::
 
@@ -52,9 +52,9 @@ If sorting is disabled (`"disableSorting": true`), this is a strong indication t
 
 2. Check if the data is sorted (ordered) by more than one column. The presence of sorting icons on more than one column indicates multi-column sorting. In this case, the data sorting is performed on the first sorted column (which is not necessarily the leftmost column) and then on the second column. As shown in the following example, the data is sorted first by the **Full Name** column ascending and then by the **Company Name** column descending.
 
-   :::image type="content" source="media/cannot-use-sorting-or-sorting-not-work-correctly/full-name-company-name-column.png" alt-text="Screenshot of the Full Name and Company Name columns.":::
+   :::image type="content" source="media/cannot-use-sorting-or-sorting-not-work-correctly/full-name-company-name-column.png" alt-text="Screenshot of the Full Name and Company Name columns." lightbox="media/cannot-use-sorting-or-sorting-not-work-correctly/full-name-company-name-column.png":::
 
-   The multi-column sorting can be removed by reapplying the sorting on a column (without holding the Shift key down) or by refreshing the app.
+   The multi-column sorting can be removed by reapplying the sorting on a column (without holding the <kbd>Shift</kbd> key down) or by refreshing the app.
 
 3. The data ordering might be affected by [data customizers](/power-apps/developer/component-framework/customize-editable-grid-control).
 
