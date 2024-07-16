@@ -54,9 +54,9 @@ This article helps you learn how to understand the costs that are associated wit
 1. Switch to the **Resources** tab (1), and then:
    1. Update the date range (2) to match the specific month that you're examining for this billing cycle. The total should now match the invoice details.
 
-   1.  The default view of the **Resources** tab shows the total cost of the Log Analytics workspace, including the cost of data ingested from other services.
+   1.  The default view of the **Resources** tab shows the total cost (3) of the Log Analytics workspace, including the cost of data ingested from other services.
 
-   1. To gain a comprehensive view of expenses associated with your Log Analytics workspace, click on the arrow (4) next to its name. Initially, without delving into individual line items, one might incorrectly assume that the Log Analytics workspace incurs prohibitively high costs. However, upon expanding and examining each service's contribution within this workspace, you discover that it is not the Log Analytics workspace itself but rather the data-injecting services that primarily drive the overall cost.
+   1. To gain a comprehensive view of expenses associated with your Log Analytics workspace, select on the arrow (4) next to the Log Analytics workspace name. Initially, without delving into individual line items, one might incorrectly assume that the Log Analytics workspace incurs prohibitively high costs. However, upon expanding and examining each service's contribution within this workspace, you discover that it is not the Log Analytics workspace itself but rather the data-injecting services that primarily drive the overall cost.
 
    :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-11.png" alt-text="Screenshot of the cost of each service." lightbox="media/understand-log-analytics-workspace-bill/view-cost-11.png":::
 
