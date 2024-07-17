@@ -16,14 +16,14 @@ ms.custom:
   - CI 150415
 appliesto: 
   - SharePoint Online
-ms.date: 12/17/2023
+ms.date: 07/17/2024
 ---
 
 # Profile picture not showing in SharePoint Online
 
-Your SharePoint Online profile picture isn't displayed on SharePoint sites or in People web parts. To get your profile picture displayed, try the following resolutions.
+Your SharePoint Online profile picture isn't displayed on SharePoint sites or in People web parts. To get your profile picture displayed, try the following resolution.
 
-## Resolution: Run the Picture Sync diagnostic
+## Run the Picture Sync diagnostic
 
 > [!NOTE]
 > This feature requires a Microsoft 365 administrator account. This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
