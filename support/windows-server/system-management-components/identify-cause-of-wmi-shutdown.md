@@ -101,7 +101,7 @@ Then, create a scheduled task to stop the capture when the reboot occurs. Follow
    4. In **Event ID**, type *1074*.
    5. Select **OK**.
 
-      :::image type="content" source="media/identify-cause-of-wmi-shutdown/edit-trigger-of-task.png" alt-text="Screenshot showing how to edit the trigger of the task.":::
+   :::image type="content" source="media/identify-cause-of-wmi-shutdown/edit-trigger-of-task.png" alt-text="Screenshot showing how to edit the trigger of the task.":::
 
 6. Select the **Actions** tab.
    1. Select **New**.
@@ -154,7 +154,7 @@ After the reboot, follow these steps to conclude the investigation:
 
 5. Double-click the *procmon.pml* file and find the corresponding line with the same PID.
 
-   :::image type="content" source="media/identify-cause-of-wmi-shutdown/find-the-corresponding-process-by-id.png " alt-text="Screenshot showing the procmon.pml file info where two lines with the same PID are selected.":::
+   :::image type="content" source="media/identify-cause-of-wmi-shutdown/find-corresponding-process-by-id.png" alt-text="Screenshot showing the procmon.pml file info where two lines with the same PID are selected.":::
 
    In this example, the shutdown method was called by a PowerShell script.
 
