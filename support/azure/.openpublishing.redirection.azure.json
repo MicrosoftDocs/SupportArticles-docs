@@ -5474,6 +5474,11 @@
         "source_path": "virtual-machines/windows/storage-classic-cannot-delete-storage-account-container-vhd.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/storage-resource-deletion-errors",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "general/error-run-copy-activity-azure.md",
+        "redirect_url": "/azure/data-factory/self-hosted-integration-runtime-troubleshoot-guide",
+        "redirect_document_id": false
       }
   ]
 }
