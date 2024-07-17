@@ -619,6 +619,10 @@
           href: ../installation/office-setup-issues.md
         - name: Use SaRA to collect data about Microsoft 365 Apps installations
           href: ../installation/use-sara-to-collect-install-info.md
+    - name: Loop
+      items:
+        - name: Workspaces are unexpectedly stored in SharePoint Online sites
+          href: ../loop/loop-workspace-unexpectedly-stored-in-sharepoint-online-site.md
     - name: Mobile
       items:
         - name: Block use of Office add-ins from work or school accounts
