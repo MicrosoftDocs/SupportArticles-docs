@@ -3,7 +3,7 @@ title: Quick Find doesn't return correct results in a model-driven app
 description: Troubleshoots an issue where the Quick Find feature doesn't return correct results in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/12/2024
+ms.date: 07/17/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -34,3 +34,4 @@ This article provides troubleshooting steps for an issue where a [quick find sea
 
 - [About quick find queries](/power-apps/developer/data-platform/quick-find)
 - [Best Practices for Dynamics 365 CRM Quick Find View](https://community.dynamics.com/blogs/post/?postid=0ffbe287-8d5e-488f-a50d-737c7c5c0732)
+- [Troubleshooting grid issues in Power Apps](grid-issues.md)

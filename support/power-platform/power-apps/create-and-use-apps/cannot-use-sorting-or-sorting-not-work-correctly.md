@@ -3,7 +3,7 @@ title: Can't use sorting or sorting doesn't work correctly
 description: Fixes an issue in which you can't use sorting or sorting doesn't work correctly in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/16/2024
+ms.date: 07/17/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -60,3 +60,7 @@ If sorting is disabled (`"disableSorting": true`), this is a strong indication t
 
    > [!NOTE]
    > Sorting (data ordering) is always applied to raw data, not enhanced data. A typical example is the case where raw numeric data is replaced by a user-friendly text, in which case the ordering is performed by the numeric data.
+
+## See also
+
+[Troubleshooting grid issues in Power Apps](grid-issues.md)

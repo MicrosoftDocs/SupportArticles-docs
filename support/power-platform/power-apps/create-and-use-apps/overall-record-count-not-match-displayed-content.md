@@ -3,7 +3,7 @@ title: Total record count doesn't match the displayed content
 description: Troubleshoots an issue where the overall record count doesn't match the displayed content in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/12/2024
+ms.date: 07/17/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -34,3 +34,7 @@ The most likely reason is that the data displayed in the grid contains duplicate
   If adding `distinct="true"` doesn't solve the problem, consider changing the query to avoid pulling duplicate records. The primary column (field) can also be found by using the [Power Apps Monitor tool](/power-apps/maker/monitor-overview).
 
   :::image type="content" source="media/overall-record-count-not-match-displayed-content/all-filters-in-fetchxml-query.png" alt-text="Screenshot that shows the primary column in a fetchXML query.":::
+
+## See also
+
+[Troubleshooting grid issues in Power Apps](grid-issues.md)

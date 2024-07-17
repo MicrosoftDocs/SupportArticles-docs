@@ -3,7 +3,7 @@ title: Troubleshoot grid issues in model-driven apps
 description: Provides a resolution for grid issues in model-driven apps in Microsoft Power Apps.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/12/2024
+ms.date: 07/17/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -67,4 +67,4 @@ Here are the screenshots of the terms:
 
 3. Disable all the applicable business rules to see if the issue is caused by a business rule.
 
-4. If reproducing the issue involves the use of third-party tools, try to reproduce the issue with standard out-of-the-box (OOB) tools.
+4. If reproducing the issue involves the use of third-party tools, try to reproduce the issue with standard OOB tools.

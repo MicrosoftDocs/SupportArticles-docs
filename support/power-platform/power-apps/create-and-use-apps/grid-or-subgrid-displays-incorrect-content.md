@@ -3,7 +3,7 @@ title: Grid or subgrid displays incorrect content in a model-driven app
 description: Provides troubleshooting steps for an issue where the grid or subgrid displays incorrect content in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/12/2024
+ms.date: 07/17/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -25,4 +25,5 @@ If the `recordsCount` and `initialPageSize` matches the actual content displayed
 
 ## More information
 
-For similar issues, see [Grid or subgrid doesn't display all the records](grid-or-subgrid-not-display-all-records.md) and [The overall record count doesn't match the displayed content](overall-record-count-not-match-displayed-content.md).
+- For similar issues, see [Grid or subgrid doesn't display all the records](grid-or-subgrid-not-display-all-records.md) and [The overall record count doesn't match the displayed content](overall-record-count-not-match-displayed-content.md).
+- For other grid issues, see [Troubleshooting grid issues in Power Apps](grid-issues.md).

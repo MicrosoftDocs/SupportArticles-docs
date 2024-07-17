@@ -3,7 +3,7 @@ title: Nested grid doesn't display data in a model-driven app
 description: Troubleshoots an issue where a nested grid doesn't display data in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/12/2024
+ms.date: 07/17/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -31,3 +31,7 @@ The most common reason is using an incorrect relationship or applying an incorre
 
    > [!NOTE]
    > The `childRecordsCount` attribute should display the number of records in the nested dataset. If that attribute shows `0`, it's a strong indication of an incorrect relationship specified, the presence of extra filters in the nested grid view, or no records in the nested dataset (`ChildItems`). If that number shows a value greater than zero, and your nested grid still doesn't display any records, the issue is most likely with the extra filtering in the nested grid view or there being no records related to the row expanded from the parent grid. Check the `childViewFetchXML` and `ChildViewFields` and make sure all the filters are correct and that all the column definitions match those specified in the `childViewFetchXML`.
+
+## See also
+
+[Troubleshooting grid issues in Power Apps](grid-issues.md)

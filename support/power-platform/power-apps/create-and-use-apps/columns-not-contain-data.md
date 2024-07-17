@@ -3,7 +3,7 @@ title: Some columns don't contain data in a model-driven app
 description: Provides troubleshooting steps for an issue where some columns don't contain data in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/16/2024
+ms.date: 07/17/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -32,3 +32,7 @@ If the issue isn't related to insufficient permissions, use the [Power Apps Moni
 Make sure that all the columns listed in the `viewFields` section are present in the `viewFetchXML` query and that the respective columns aren't marked as `hidden`.
 
 The issue can also be caused by a corrupt view. Resaving and republishing such a view might help solve the problem.
+
+## See also
+
+[Troubleshooting grid issues in Power Apps](grid-issues.md)

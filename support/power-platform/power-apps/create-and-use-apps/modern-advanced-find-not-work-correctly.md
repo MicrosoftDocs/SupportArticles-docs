@@ -3,7 +3,7 @@ title: Modern Advanced Find doesn't work correctly in a model-driven app
 description: Troubleshoots issues where the Modern Advanced Find feature doesn't work correctly in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/12/2024
+ms.date: 07/17/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -43,3 +43,7 @@ Check if the automatically reapplied filters are related to the page filters. So
    :::image type="content" source="media/modern-advanced-find-not-work-correctly/all-filters-in-fetchxml-query.png" alt-text="Screenshot that shows an example of all the filters in a fetchXML query.":::
 
    If the fetchXML query contains extra filters, check for any extra filters that might be applied. For more information, see [Scenario 3: Column filtering is enabled but not applied correctly](cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly.md#scenario-3-column-filtering-is-enabled-but-not-applied-correctly).
+
+## See also
+
+[Troubleshooting grid issues in Power Apps](grid-issues.md)

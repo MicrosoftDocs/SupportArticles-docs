@@ -3,7 +3,7 @@ title: Can't use column filters on a grid or subgrid or filtering doesn't work c
 description: Provides troubleshooting steps for an issue where you can't use column filters on a grid or subgrid, or filtering doesn't work correctly in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/12/2024
+ms.date: 07/17/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -51,8 +51,12 @@ The most common cause is that extra filters are applied to the current view. Use
 
 - A grid-related filter.
 
-  You can use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to inspect grid-related filters (see the following screenshots) and compare them with the final fetchXML query (see Image 6 above). In the following screenshots, the "name like %Coffee%" or "name contains Coffee" grid column filter is used.
+  You can use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to inspect grid-related filters (see the following screenshots) and compare them with the final fetchXML query (see Image 6 above). In the following screenshots, a grid column filter with a name like `%Coffee%` or a name containing `Coffee` is used.
 
   :::image type="content" source="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/grid-related-filter-1.png" alt-text="Screenshot of a grid-related filter that's inspected by the monitoring tool." lightbox="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/grid-related-filter-1.png":::
 
   :::image type="content" source="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/grid-related-filter-2.png" alt-text="Screenshot of a grid-related filter.":::
+
+## See also
+
+[Troubleshooting grid issues in Power Apps](grid-issues.md)

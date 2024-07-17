@@ -3,7 +3,7 @@ title: Can't edit data in the grid after enabling editing mode
 description: Provides troubleshooting steps for an issue where you can't edit data in the grid after enabling editing mode in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/12/2024
+ms.date: 07/17/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -32,3 +32,7 @@ Use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to check t
 - Dataverse doesn't support editing of the underlying column type. For example, calculated type columns aren't editable.
 - The user might not have permission to edit that column.
 - A [custom script](grid-issues.md#steps-to-perform-before-starting-troubleshooting) alters the cell attribute, making it permanently or conditionally read-only.
+
+## See also
+
+[Troubleshooting grid issues in Power Apps](grid-issues.md)
