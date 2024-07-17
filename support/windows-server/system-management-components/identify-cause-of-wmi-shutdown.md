@@ -166,5 +166,5 @@ After the reboot, follow these steps to conclude the investigation:
 After the investigation is finished, don't forget to reset the Process Monitor configuration:
 
 1. Select the **File** menu, and then select **Backing files**.
-2. Select the option **Use virtual memory** option.
+2. Select the **Use virtual memory** option.
 3. Select **OK**.
