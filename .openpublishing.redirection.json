@@ -11372,67 +11372,67 @@
     },
     {
       "source_path": "support/windows-server/backup-and-storage/format-command-not-write-zeros-to-disk.md",
-      "redirect_url": "/previous-versions/troubleshoot/format-command-not-write-zeros-to-disk",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/format-command-not-write-zeros-to-disk",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/updates-for-windows-server-2012-r2-failover-cluster.md",
-      "redirect_url": "/previous-versions/troubleshoot/updates-for-windows-server-2012-r2-failover-cluster",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/updates-for-windows-server-2012-r2-failover-cluster",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/set-up-clustered-print-server.md",
-      "redirect_url": "/previous-versions/troubleshoot/set-up-clustered-print-server",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/set-up-clustered-print-server",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/troubleshoot-cluster-service-startup-issues.md",
-      "redirect_url": "/previous-versions/troubleshoot/troubleshoot-cluster-service-startup-issues",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-cluster-service-startup-issues",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/physical-disk-resource-not-come-online.md",
-      "redirect_url": "/previous-versions/troubleshoot/physical-disk-resource-not-come-online",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/physical-disk-resource-not-come-online",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/network-name-resource-not-come-online.md",
-      "redirect_url": "/previous-versions/troubleshoot/network-name-resource-not-come-online",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/network-name-resource-not-come-online",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/local-sas-disks-getting-added-failover-cluster.md",
-      "redirect_url": "/previous-versions/troubleshoot/local-sas-disks-getting-added-failover-cluster",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/local-sas-disks-getting-added-failover-cluster",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/cannot-share-folder-in-failover-cluster.md",
-      "redirect_url": "/previous-versions/troubleshoot/cannot-share-folder-in-failover-cluster",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-share-folder-in-failover-cluster",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/failover-clustering-system-log-events.md",
-      "redirect_url": "/previous-versions/troubleshoot/failover-clustering-system-log-events",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/failover-clustering-system-log-events",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/error-0x8000ffff-catastrophic-failure.md",
-      "redirect_url": "/previous-versions/troubleshoot/error-0x8000ffff-catastrophic-failure",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-0x8000ffff-catastrophic-failure",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/cluster-information-ip-address-failover.md",
-      "redirect_url": "/previous-versions/troubleshoot/cluster-information-ip-address-failover",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-information-ip-address-failover",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/cluster-fileshare-resource-fails.md",
-      "redirect_url": "/previous-versions/troubleshoot/cluster-fileshare-resource-fails",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-fileshare-resource-fails",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/cluster-disk-resource-not-come-online.md",
-      "redirect_url": "/previous-versions/troubleshoot/cluster-disk-resource-not-come-online",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-disk-resource-not-come-online",
       "redirect_document_id": false
     }
   ]
