@@ -5478,7 +5478,7 @@
       {
         "source_path": "general/error-run-copy-activity-azure.md",
         "redirect_url": "/azure/data-factory/self-hosted-integration-runtime-troubleshoot-guide",
-        "redirect_document_id": false
+        "redirect_document_id": true
       }
   ]
 }
