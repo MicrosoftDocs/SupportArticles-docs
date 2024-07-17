@@ -1,9 +1,9 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 12/05/2023
+ms.date: 07/17/2024
 search.appverid: MET150
-ms.reviewer: kaushika
+ms.reviewer: kaushika, madakeva
 ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 ---
 # Known issues
