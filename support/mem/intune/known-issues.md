@@ -10,7 +10,7 @@ ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, and a backlog of past known issues.
 
-## Azure enterprise application are not displayed in the Company Portal for Windows and the Intune Company Portal website
+## Azure enterprise applications are not displayed in the Company Portal for Windows and the Intune Company Portal website
 
 - **Status:** Active
 
