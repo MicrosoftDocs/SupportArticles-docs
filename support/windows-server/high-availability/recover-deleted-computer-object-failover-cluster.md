@@ -17,9 +17,9 @@ _Original KB number:_ &nbsp; 950805
 
 ## Summary
 
-The security model in Windows Server Failover Clustering includes Kerberos authentication. To implement this security model, every Client Access Point (CAP) that is created in a failover cluster contains a Network Name resource. The Network Name resource has a corresponding Computer Account that is created in the Active Directory (AD) directory service when the resource is online for the first time.
+The security model in Windows Server Failover Clustering includes Kerberos authentication. To implement this security model, every Client Access Point (CAP) that is created in a failover cluster contains a Network Name resource. The Network Name resource has a corresponding computer account that is created in the Active Directory directory service when the resource is online for the first time.
 
-By default, the Computer Account is created in the Computers container. However, the Computer Account can be relocated to another organizational unit (OU). The Computer Account can also be pre-staged in an OU before the CAP is created. If these Computer Accounts are deleted from Active Directory, availability of the Network Name resource will be reduced.
+By default, the computer account is created in the Computers container. However, the computer account can be relocated to another organizational unit (OU). The computer account can also be pre-staged in an OU before the CAP is created. If these computer accounts are deleted from Active Directory, availability of the Network Name resource will be reduced.
 
 The computer accounts that are created in Active Directory represent the Network Name resources in a failover cluster. These accounts have the following distinct types:
 
@@ -63,8 +63,8 @@ To recover a deleted computer object that corresponds to the CNO, follow these s
 
 1. Coordinate with a domain administrator to first recover the deleted Computer Object from the Active Directory Recycle Bin, if it is enabled.
 
-  >[!NOTE]
-  > If the AD Recycle Bin isn't enabled, the only supported method to recover a deleted Cluster Name Object is to delete and recreate the cluster.
+  > [!NOTE]
+  > If the Active Directory Recycle Bin isn't enabled, the only supported method to recover a deleted Cluster Name Object is to delete and recreate the cluster.
 
 2. Verify that the Computer Object has been restored to the correct location, and then enable the account.
 3. Force domain replication to occur, or wait for the configured replication interval.
