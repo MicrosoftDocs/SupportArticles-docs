@@ -92,11 +92,11 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
 | [401](#401---access-denied) | Access denied | The request hasn't been applied because it lacks valid authentication credentials for the target resource. |
 | [403](#403---forbidden) | Forbidden | The server understood the request but refuses to fulfill it. |
 | [404](#404---not-found) | Not found | The origin server didn't find a current representation for the target resource or isn't willing to disclose that one exists. |
-| [405](#405-406-412-413) | Method not allowed | The method received in the request-line is known by the origin server but not supported by the target resource. |
-| [406](#405-406-412-413) | Not acceptable | The client browser doesn't accept the MIME type of the requested resource. |
-| [408](#405-406-412-413) | Request timed out | The server didn't receive a complete request message within the time that it was prepared to wait. |
-| [412](#405-406-412-413) | Precondition failed | One or more conditions given in the request header fields evaluated to false when tested on the server. |
-| [413](#405-406-412-413) | Request entity too large | The HTTP request payload is too big. |
+| [405](#405-406-408-412-413) | Method not allowed | The method received in the request-line is known by the origin server but not supported by the target resource. |
+| [406](#405-406-408-412-413) | Not acceptable | The client browser doesn't accept the MIME type of the requested resource. |
+| [408](#405-406-408-412-413) | Request timed out | The server didn't receive a complete request message within the time that it was prepared to wait. |
+| [412](#405-406-408-412-413) | Precondition failed | One or more conditions given in the request header fields evaluated to false when tested on the server. |
+| [413](#405-406-408-412-413) | Request entity too large | The HTTP request payload is too big. |
 
 #### 400 - Bad request
 
@@ -145,10 +145,10 @@ IIS 7.0 and later versions define several HTTP status codes that indicate a more
 | 401.3 | Unauthorized due to ACL on resource | This HTTP status code indicates a problem in the NTFS file system permissions. This problem may occur even if the permissions are correct for the file that you try to access. For example, this problem occurs if the IUSR account doesn't have access to the _C:\Winnt\System32\Inetsrv_ directory. |
 | 401.4 | Authorization failed by filter | An Internet Server Application Programming Interface (ISAPI) filter doesn't let the request be processed because of an authorization problem. |
 | 401.5 | Authorization failed by ISAPI/CGI application | An ISAPI application or a Common Gateway Interface (CGI) application doesn't let the request be processed because of an authorization problem. |
-| 404.501 | Access denied: concurrent request rate limit reached | Dynamic IP Restriction: too many concurrent requests were made from the same client IP. |
-| 404.502 | Access denied: maximum request rate limit reached | Dynamic IP Restriction: the maximum number of requests from the same client IP within a specified time limit was reached. |
-| 404.503 | Access denied: IP address denied | IP Restriction: the client IP address is included in the deny list. |
-| 404.504 | Access denied: host name denied | IP Restriction: the client host name is included in the deny list. |
+| 401.501 | Access denied: concurrent request rate limit reached | Dynamic IP Restriction: too many concurrent requests were made from the same client IP. |
+| 401.502 | Access denied: maximum request rate limit reached | Dynamic IP Restriction: the maximum number of requests from the same client IP within a specified time limit was reached. |
+| 401.503 | Access denied: IP address denied | IP Restriction: the client IP address is included in the deny list. |
+| 401.504 | Access denied: host name denied | IP Restriction: the client host name is included in the deny list. |
 
 #### 403 - Forbidden
 
@@ -215,12 +215,13 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 404.503 | Not found: IP address denied | IP Restriction: the client IP address is included in the deny list. |
 | 404.504 | Not found: host name denied | IP Restriction: the client host name is included in the deny list. |
 
-#### 405, 406, 412, 413
+#### 405, 406, 408, 412, 413
 
 | Code | Description | Notes |
 |---|---|---|
 | 405.0 | Method not allowed. | The request is made by using an HTTP method that isn't valid. For more information, see [HTTP Error 405.0](../health-diagnostic-performance/http-error-405-website.md). |
 | 406.0 | Not acceptable. | The request is made by using an `Accept` header that contains a MIME value that isn't valid. |
+| 408.0 | Request timed out. | The server didn't receive a complete request message within the time that it was prepared to wait. |
 | 412.0 | Precondition failed. | The request is made by using an `If-Match` request header that contains a value that isn't valid. |
 | 413.0 | Request entity too large. | The request is made by using a payload that is too large. |
 
