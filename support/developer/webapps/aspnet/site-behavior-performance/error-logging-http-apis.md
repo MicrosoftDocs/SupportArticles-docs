@@ -56,7 +56,7 @@ The following table describes the registry configuration values.
 
 |Registry value|Description|
 |---|---|
-|EnableErrorLogging|A DWORD that you can set to TRUE to enable error logging or to FALSE to disable it. The default value is TRUE.|
+|EnableErrorLogging|A DWORD that can be set to 1 (means True) to enable error logging, or 0 (means False) to disable it. The default value is 1.|
 |ErrorLogFileTruncateSize|A DWORD that specifies the maximum size of an error log file, in bytes. The default value is 1 MB (0x100000).<br/><br/>The specified value can't be smaller than the default value.|
 |ErrorLoggingDir|A String that specifies the folder where the HTTP API puts its logging files.<br/><br/>The HTTP API creates a subfolder HTTPERR in the specified folder, and then stores the log files in the subfolder. This subfolder and the log files receive the same permission settings. The Administrator and Local System Accounts have full access. Other users don't have access. <br/><br/> The following example is the default folder when the folder isn't specified in the registry:<br/> `%SystemRoot%\System32\LogFiles`<br/><br/> The ErrorLoggingDir string value must be a fully qualified local path. However, it can contain `%SystemRoot%`. A network drive or network share can't be used.|
   
