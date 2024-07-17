@@ -9,8 +9,6 @@
     href: region-access-request-process.md
   - name: Container support policy
     href: support-policy-containers.md
-  - name: Error when you try to copy content to Azure
-    href: error-run-copy-activity-azure.md
   - name: Tips for finding Microsoft troubleshooting content
     href: search-tips-find-troubleshooting-content.md
   - name: Use Secure File Exchange to exchange files

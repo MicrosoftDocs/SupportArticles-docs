@@ -11434,6 +11434,16 @@
       "source_path": "support/windows-server/high-availability/cluster-disk-resource-not-come-online.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-disk-resource-not-come-online",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/volume-shadow-copy-service-events.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/volume-shadow-copy-service-events",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/error-0x8000ffff-run-vssadmin-list-writers-command.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-0x8000ffff-run-vssadmin-list-writers-command",
+      "redirect_document_id": false
     }
   ]
 }
