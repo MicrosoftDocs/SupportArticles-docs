@@ -20,7 +20,7 @@ appliesto:
   - Exchange Server 2019
 search.appverid: 
   - MET150
-ms.date: 01/24/2024
+ms.date: 07/17/2024
 ---
 # Public folder permissions and settings don't propagate in EAC
 
@@ -81,13 +81,13 @@ To work around this issue, follow these steps:
    ```
 
    **Note**: Replace \<\PF> with your parent public folder identity.
-1. Apply read and unread information tracking on the child public folders by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
+1. Apply read and unread information tracking on the child public folders by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True** or **False** (depending on your requirement):
 
    ```powershell
    Get-PublicFolder "<\PF>" -Recurse -ResultSize Unlimited | Set-PublicFolder -PerUserReadStateEnabled:<$True or $False>
    ```
 
-   **Note**: Replace \<\PF> with your parent public folder identity and replace $True or $False depending on requirement
+   **Note**: Replace \<\PF> with your parent public folder identity.
 
 ## Age limit settings not applied to subfolders
 
