@@ -16,7 +16,7 @@ ms.reviewer: alexaca, batre, nualex, meerak, v-trisshores
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/17/2024
 ---
 # Proxy address conflict when adding an email address in Exchange Online
 
@@ -72,15 +72,13 @@ Follow these steps to search for existing mail-enabled objects in Exchange Onlin
 
 3. A proxy address can be assigned to only one object at a time. After you determine which object is in conflict, remove or change the proxy address that's associated with that object.
 
-Example:
-If it is a mail enabled public folder (MEPF), use following command to disable the MEPF, which will free-up the email address being used:
+   For example, if the object is a mail-enabled public folder, run the following command to disable the public folder to free up the email address that's used:
 
-```powershell
-Get-MailPublicFolder -ResultSize Unlimited | Where-Object {$_.EmailAddresses -match "<conflicting SMTP address>"} | Disable-MailPublicFolder
-```
+   ```powershell
+   Get-MailPublicFolder -ResultSize Unlimited | Where-Object {$_.EmailAddresses -match "<conflicting SMTP address>"} | Disable-MailPublicFolder
+   ```
+
 <a name='check-for-and-remove-any-conflicting-proxy-address-in-azure-ad'></a>
-
-
 
 #### Check for and remove any conflicting proxy address in Microsoft Entra ID
 
