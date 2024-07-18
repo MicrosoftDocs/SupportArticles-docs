@@ -18,7 +18,7 @@ ms.date: 07/16/2024
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article provides the steps to retrieve performance metrics from a Linux VM in Microsoft Azure.
+This article describe how to retrieve performance metrics from a Linux VM in Microsoft Azure by using Sysstat utilities (Performance monitoring tools). It provides examples of how to use these utilities and read their outputs.
 
 Several commands are available for collecting performance counters on Linux. Commands like `vmstat` and `uptime` provide essential system metrics such as CPU usage, system memory, and system load. Most of these commands are pre-installed by default, while others can be easily accessed from default repositories.
 
@@ -31,7 +31,7 @@ Based on the type of the metrics, these commands can be categorized into:
 
 ## Install Sysstat utilities for Linux
 
-You can install Sysstat utilities (Performance monitoring tools) on a Linux virtual machine (VM) using either a Bash command or [Run Commands feature](/azure/virtual-machines/linux/run-command) with Azure CLI. If you use the Azure CLI commands that provided in this article to install the Sysstat utilities, make sure that the following two envrioment values are set. You must replace the resource group name and the VM name by the actual values.
+You can install Sysstat utilities on a Linux virtual machine (VM) using either a Bash command or [Run Commands feature](/azure/virtual-machines/linux/run-command) with Azure CLI. If you use the Azure CLI commands that provided in this article to install the Sysstat utilities, make sure that the following two envrioment values are set. You must replace the resource group name and the VM name by the actual values.
 
 ```azurecli-interactive
 export MY_RESOURCE_GROUP_NAME="myVMResourceGroup89f292"
@@ -795,5 +795,6 @@ Additionally, all the commands in the bash block codes covered in this document,
 ```azurecli-interactive
 az vm run-command invoke -g $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "ls -l /dev/disk/azure" | jq -r '.value[0].message'
 ```
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
