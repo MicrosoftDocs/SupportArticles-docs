@@ -21,7 +21,7 @@ _Original KB number:_ &nbsp; 2090913
 
 ## Summary
 
-This error occurs when the source domain controller doesn't decrypt the service ticket provided by the destination (target) domain controller.
+This error occurs when the source domain controller doesn't decrypt the service ticket provided by the destination (target) domain controller.  The destination domain controller is the domain controller requesting changes.
 
 ### Top cause
 
@@ -29,13 +29,22 @@ The destination domain controller receives a service ticket from a Kerberos Key 
 
 ### Top resolution
 
-1. Stop the KDC service on the destination domain controller. To do it, run the following command at a command prompt:
+1. Disable the KDC service on the destination domain controller. To do it, run one of the following commands:
 
-    ```console
-    net stop KDC
-    ```  
+    Command Prompt
+   ```console
+    sc config KDC start=Disabled
+    ```
+   PowerShell
+    ```PowerShell
+    Set-Service -Name KDC -StartupType Disabled
+    ```
 
-2. Start replication on the destination domain controller from the source domain controller. Use AD Sites and Services or `Repadmin`.
+
+2. Restart the domain controller.
+    
+
+3. Start replication on the destination domain controller from the source domain controller. Use AD Sites and Services or `Repadmin`.
 
     Using `repadmin`:
 
@@ -49,11 +58,26 @@ The destination domain controller receives a service ticket from a Kerberos Key 
     Repadmin /replicate ContosoDC2.contoso.com ContosoDC1.contoso.com "DC=contoso,DC=com"
     ```
 
-3. Start the Kerberos KDC service on the destination domain controller by running the following command:
+4. Set the KDC service on the destination domain controller back to Automatic:
+   Command Prompt
+   ```console
+    sc config KDC start=auto
+    ```
+   PowerShell
+    ```PowerShell
+    Set-Service -Name KDC -StartupType Auto
+    ```
 
-    ```console
+5. Start the KDC service on the destination domain controller by running the following command:
+
+    Command Prompt
+   ```console
     net start KDC
     ```
+   PowerShell
+   ```PowerShell
+   Start-Service -Name KDC
+   ```
 
 If it doesn't resolve the issue, see the [Resolution](#resolution) section for an alternative solution in which you use the `netdom resetpwd` command to reset the computer account password of the source domain controller. If these steps don't resolve the problem, review the rest of this article.
 
