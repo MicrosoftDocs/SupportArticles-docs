@@ -50,8 +50,8 @@ You can apply a different setting to specific tables by [configuring the retenti
    
 2. Choose the table you want to configure, and then select the ellipsis button (...).
 3. Select **Manage table**.
-     :::image type="content" source="media/configure-data-retention/table-retention-1.png" alt-text="SCreenshot that shows how to open tables."lightbox="media/configure-data-retention/table-retention-1.png":::
+     :::image type="content" source="media/configure-data-retention/table-retention-1.png" alt-text="Screenshot that shows how to open tables."lightbox="media/configure-data-retention/table-retention-1.png":::
 4. Configure the retention and archive duration in the **Data retention settings** section.
-    :::image type="content" source="media/configure-data-retention/table-retention-2.png" alt-text="SCreenshot that shows how to open tables."lightbox="media/configure-data-retention/table-retention-2.png":::
+    :::image type="content" source="media/configure-data-retention/table-retention-2.png" alt-text="Screenshot of Data retention settings."lightbox="media/configure-data-retention/table-retention-2.png":::
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
