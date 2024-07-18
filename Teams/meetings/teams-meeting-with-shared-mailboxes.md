@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 07/17/2024
 ---
 # Teams meeting features for shared mailboxes
 
@@ -31,7 +31,7 @@ For Microsoft Teams meetings that are managed by using a shared mailbox, only a 
 |Update meeting options|Meeting options can be updated only by the delegate who organizes the meeting, or by co-organizers who have delegate access to the shared mailbox.<br/><br/>Depending on how the shared mailbox is added to Microsoft Outlook, in some scenarios, you might not be able to access the meeting options for a meeting that's scheduled by using the shared mailbox. In this case, a workaround is to [remove the shared mailbox](/outlook/troubleshoot/performance/slow-performance-if-having-many-shared-folder-or-mailboxes-open#remove-a-shared-mailbox) and then add it again by using the **File** > **Add Account** option in Outlook.|
 |Manage meeting recordings|The user who initiates recording a meeting can manage the meeting recording if either of the following conditions is met:<ul><li>The shared mailbox is assigned both a Teams license and a custom meeting policy that allows cloud recording.</li><li>The [global meeting policy](/microsoftteams/meetings-policies-recording-and-transcription#meeting-recording) allows cloud recording if the shared mailbox is unlicensed.</li></ul>|
 |Manage breakout rooms|For a user to manage breakout rooms, all the following conditions must be met:<ul><li>The shared mailbox is assigned a Teams license.</li><li>The user is assigned the co-organizer role and has delegate access to the shared mailbox.</li><li>The user must first join the meeting.</li></ul>|
-|Set up audio conferencing|To set up audio conferencing, the shared mailbox must be assigned a [license for Teams Audio Conferencing](/microsoftteams/deploy-audio-conferencing-teams-landing-page#audio-conferencing-prerequisites).<br/><br/>**Note:** Meetings created against a mailbox that does not have an audio conferencing license will be missing PSTN details in the meeting invite.|
+|Set up audio conferencing|To set up audio conferencing, the shared mailbox must be assigned a [license for Teams Audio Conferencing](/microsoftteams/deploy-audio-conferencing-teams-landing-page#audio-conferencing-prerequisites).<br/><br/>**Note:** Meetings created for a mailbox that doesn't have an Audio Conferencing license will lack the Public Switched Telephone Network (PSTN) details in the meeting invitation.|
 |Create custom meeting policies|To create custom meeting policies, the shared mailbox must be assigned a Teams license.|
 
 For more information about Teams license options, see [Microsoft Teams add-on licenses](/microsoftteams/teams-add-on-licensing/microsoft-teams-add-on-licensing).
