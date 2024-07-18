@@ -215,7 +215,7 @@ You can also persist this kernel boot option in the *grub.conf* file. For more i
 
 ### Cause
 
-Permissions for NFS file shares are enforced by the client OS rather than the Azure Files service. If the **Root Squash** setting is enabled on an NFS file share, the root user on the client system is treated as an anonymous (non-privileged) user for the purposes of access control. This means that even if you're logged in as root on the client system, you aren't able to use the `chown` command to change the ownership of files and directories that you don't own.
+Permissions on NFS file shares are enforced by the client OS rather than the Azure Files service. If the **Root Squash** setting is enabled on an NFS file share, the root user on the client system is treated as an anonymous (non-privileged) user for access control purposes. This means that even if you're logged in as root on the client system, you can't use the `chown` command to change the ownership of files and directories that you don't own.
 
 ### Solution
 
