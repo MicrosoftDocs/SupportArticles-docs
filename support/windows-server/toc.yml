@@ -825,8 +825,6 @@ items:
       href: ./backup-and-storage/backup-fails-vss-writer.md
     - name: Backup fails with VSS event 12292 and 11
       href: ./backup-and-storage/backup-fails-event-12292-11.md
-    - name: Error 0x8000FFFF when running "vssadmin list writers" command
-      href: ./backup-and-storage/error-0x8000ffff-run-vssadmin-list-writers-command.md
     - name: Error 0x80042409 when doing a VSS restore
       href: ./backup-and-storage/event-12289-vss-backup-restore.md
     - name: Event ID 32 occurs and shadow copies are unexpectedly deleted
@@ -842,9 +840,7 @@ items:
     - name: Third-party backup warnings after installing a servicing update
       href: ./backup-and-storage/third-party-backup-warnings-install-servicing-update.md
     - name: Volume Shadow Copy Service take longer to go online
-      href: ./backup-and-storage/volume-shadow-copy-service-take-longer-online.md
-    - name: VSS event ID 8019, 20, 8193, or 12302
-      href: ./backup-and-storage/volume-shadow-copy-service-events.md
+      href: ./backup-and-storage/volume-shadow-copy-service-take-longer-online.md    
     - name: VSS event 8193 when restarting the Cryptographic Services service
       href: ./backup-and-storage/vss-error-8193-restart-cryptographic-services.md
     - name: VSS Warnings in Application Event log
