@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant, kenseongtan, guco, johndund
-ms.date: 06/06/2024
+ms.date: 07/18/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -55,4 +55,4 @@ _Original KB number:_ &nbsp; 4555406
 |RdpPermissionNotGranted|400|Unattended|This error occurs when the user specified in the connection doesn't have permissions to create remote desktop sessions on the machine. </br>- Verify that the user in question is included in either the Administrators or Remote Desktop Users group on the machine.|
 |XrmMachineGroupNotFound|404|Attended</br>Unattended|This error occurs when the machine group has been deleted. Please re-create the group and update the connection.|
 |SessionCreationInvalidCredentials|400|Unattended|This error occurs when the unattended session couldn't be created with the provided credentials. This issue might occur due to an incorrectly formatted username. For Microsoft Entra joined machines, ensure the username is in the `user@domain.com` format. For domain-joined machines, the username should be in the `domain\user` format.|
-|UIFlowServiceNoRdpPermissions|400|Unattended|This error occurs when the Power Automate service running on your computer (UIFlowService) cannot list Windows sessions on the machine. Please add the user account that the service is running as (usually "NT SERVICE\UIFlowService") into the "Remote Desktop Users" group on your machine.| 
+|UIFlowServiceNoRdpPermissions|400|Unattended|This error occurs when the Power Automate service running on your computer ([UIFlowService](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account)) can't list Windows sessions on the machine. Add the user account that the service runs as (usually **NT SERVICE\UIFlowService**) to the "Remote Desktop Users" group on your machine.|
