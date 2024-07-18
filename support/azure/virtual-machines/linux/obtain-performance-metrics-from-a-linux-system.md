@@ -24,10 +24,10 @@ Several commands are available for collecting performance counters on Linux. Com
 
 Based on the type of the metrics, these commands can be categorized into:
 
-- **CPU**: [mpstat](#mpstat), vmstat
-- **Memory**: free, swapon
-- **Disk I/O**: iostat, lsblk
-- **Processes**: pidstat, ps
+- **CPU**: [mpstat](#mpstat), [vmstat](#vmstat)
+- **Memory**: (free)(#free), [swapon](#swapon)
+- **Disk I/O**: [iostat](#iostat), [lsblk](#lsblk)
+- **Processes**: [pidstat](#pidstat), [ps](#ps)
 
 ## Install Sysstat utilities for Linux
 
@@ -95,13 +95,13 @@ The `mpstat` command is part of the `sysstat` package. It displays per CPU utili
 
 Here's an example of how to run `mpstat`:
 
-### [BASH](#tab/mpstatbash)
+#### [BASH](#tab/mpstatbash)
 
 ```bash
 mpstat -P ALL 1 2
 ```
 
-### [AZ-CLI](#tab/mpstatcli)
+#### [AZ-CLI](#tab/mpstatcli)
 
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'mpstat -P ALL 1 2')
@@ -118,7 +118,7 @@ echo "$extracted"
 
 You can increase the number of times argument to accommodate longer data collection times. Generally, 3 or 5 seconds should be sufficient. For systems with higher core counts, reducing it to 2 seconds can help manage the volume of displayed data.
 
-### How to read the output
+#### How to read the output
 
 Here's an example output of `mpstat`:
 
@@ -187,13 +187,13 @@ The `vmstat` utility is widely available in most Linux distributions. it provide
 
 Here's an example of how to run `mpstat`:
 
-### [BASH](#tab/vmstatbash)
+#### [BASH](#tab/vmstatbash)
 
 ```bash
 vmstat -w 1 5
 ```
 
-### [AZ-CLI](#tab/vmstatcli)
+#### [AZ-CLI](#tab/vmstatcli)
 
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'vmstat -w 1 5')
@@ -291,7 +291,7 @@ This section has five columns:
 
 The values are presented in percentage. These values are the same as presented by the `mpstat` utility and serve to provide a high level overview of CPU usage. Follow a similar process for "[Things to look out for](#mpstat)" for `mpstat` when reviewing these values.
 
-### uptime
+### uptime<a id="uptime"></a>
 
 The `uptime` utility provides a broad overview of the system load with the load average values.
 
@@ -371,7 +371,7 @@ Swap:           23Gi          0B        23Gi
 
 From the output, observe the **total** system memory versus the **available** memory, and the **used** versus **total** swap. The available memory takes into consideration memory allocated for cache, which can be returned for user applications. Some swap usage is normal in modern kernels as some less often used memory pages can be moved to swap.
 
-### swapon
+### swapon <a id="swapon"></a>
 
 The `swapon` command displays where swap is configured and the respective priorities of the swap devices or files.
 
@@ -414,7 +414,7 @@ This information is important to verify if swap is configured on a location that
 
 Disk I/O is one of the areas Azure suffers the most when throttled, as disks can reach `100ms+` latencies. The following commands help to identify these scenarios.
 
-### iostat
+### iostat <a id="iostat"></a>
 
 The `iostat` utility is part of the `sysstat` package. It displays per block device usage statistics and helps identify block related performance issues. It provides details for metrics such as throughput, latency, and queue size. These metrics help understand if disk I/O becomes a limiting factor.
 
@@ -476,7 +476,7 @@ The output has several columns that aren't important (extra columns due to the `
 * The latency is an excellent metric to verify if the disk is performing as expected. Normally, less than `9ms` is the expected latency for PremiumSSD, other offerings have different latency targets.
 * The queue size is a great indicator of saturation. Normally, requests would be served near real time and the number remains close to one (as the queue never grows). A higher number could indicate disk saturation (that is, requests queuing up). There's no good or bad number for this metric. Understanding that anything higher than one means that requests are queuing up helps determine if there's disk saturation.
 
-### lsblk
+### lsblk <a id="lsblk"></a>
 
 The `lsblk` utility shows the block devices attached to the system, while it doesn't provide performance metrics, it allows a quick overview of how these devices are configured and which mountpoints are being used.
 
@@ -528,7 +528,7 @@ Gathering details on a per process basis helps understand where the load of the 
 > [!NOTE]
 > These commands require root privileges using `sudo` to show details of all running processes, not just those of the current user.
 
-### pidstat
+### pidstat  <a id="pidstat"></a>
 
 The `pidstat` utility is also part of the `sysstat` package. It's like `mpstat` or iostat where it displays metrics for a given amount of time. By default, `pidstat` only displays metrics for processes with activity.
 
@@ -697,7 +697,7 @@ The metrics collected are:
 * Look for single processes with high read/write rates per second. This information is a guidance for processes with I/O more than identifying issues.
 Note: the `--human` option can be used to display numbers in human readable format (that is, `Kb`, `Mb`, `GB`).
 
-### `ps`
+### `ps` <a id="ps"></a>
 
 Lastly `ps` command displays system processes, and can be either sorted by CPU or Memory.
 
