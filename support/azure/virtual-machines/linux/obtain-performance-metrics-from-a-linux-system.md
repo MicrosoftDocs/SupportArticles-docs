@@ -61,6 +61,7 @@ You could also install this package using the Run-Command extension from Azure C
 ```azurecli-interactive
 az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "apt install sysstat -y"
 ```
+---
 **Red Hat:**
 
 ### [BASH](#tab/sysstatbashrhel)
@@ -76,6 +77,7 @@ You could also install this package using the Run-Command extension from Azure C
 ```azurecli-interactive
 az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "dnf install sysstat -y"
 ```
+---
 **SUSE:**
 
 ### [BASH](#tab/sysstatbashsuse)
