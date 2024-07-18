@@ -1,14 +1,20 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 12/05/2023
+ms.date: 07/17/2024
 search.appverid: MET150
-ms.reviewer: kaushika
+ms.reviewer: kaushika, madakeva
 ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 ---
 # Known issues
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, and a backlog of past known issues.
+
+## Azure enterprise applications aren't displayed in the Company Portal for Windows or the Intune Company Portal website
+
+- **Status:** Active
+
+Microsoft is investigating this issue and will update this article when more information becomes available.
 
 ## Remediation message doesn't list all valid builds in Company Portal for Windows 10/11
 
