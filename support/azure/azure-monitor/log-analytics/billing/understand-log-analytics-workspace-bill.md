@@ -18,9 +18,9 @@ This article helps you learn how to understand the costs that are associated wit
 1. Sign in to the [Azure Preview portal](https://preview.portal.azure.com). 
    
    > [!IMPORTANT]
-   > Azure may include preview, beta, or other pre-release features, services, software, or regions offered by Microsoft for optional evaluation ("Previews"). Previews are licensed to you as part of your agreement governing use of Azure, and >subject to terms applicable to "Previews".
+   > The Azure Preview portal may include preview, beta, or other pre-release features, services, software, or regions offered by Microsoft for optional evaluation ("Previews"). Previews are licensed to you as part of [your agreement](https://azure.microsoft.com/en-us/support/legal) governing use of Azure, and subject to terms applicable to "Previews".
    >
-   >Certain named Previews are subject to additional terms set forth below, if any. These Previews are made available to you pursuant to these additional terms, which supplement your agreement governing use of Azure. Capitalized terms not >defined herein shall have the meaning set forth in your agreement. If you do not agree to these terms, do not use the Preview(s).
+   >Certain named Previews are subject to additional terms set forth below, if any. These Previews are made available to you pursuant to these additional terms, which supplement [your agreement](https://azure.microsoft.com/en-us/support/legal) governing use of Azure. Capitalized terms not defined herein shall have the meaning set forth in your agreement. If you do not agree to these terms, do not use the Azure Preview portal.
 
 1. Enter **log analytics** in the search bar.
 1. Under **Services**, select **Log Analytics**.
