@@ -1389,8 +1389,6 @@ items:
       href: ./networking/error-messages-smb-connections.md
     - name: Fail to open file shares or Group Policy snap-ins
       href: ./networking/cannot-open-file-shares-group-policy-snap-ins.md
-    - name: Guest access in SMB2 is disabled by default
-      href: ./networking/guest-access-in-smb2-is-disabled-by-default.md
     - name: High CPU usage issue on the SMB server
       href: ./networking/high-cpu-usage-issue-smb-server.md
     - name: '%HOMEPATH%, %HOMESHARE%, and %HOMEDRIVE% variables are resolved incorrectly'
