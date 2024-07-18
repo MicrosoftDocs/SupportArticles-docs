@@ -682,13 +682,9 @@ items:
     - name: Correct disk space problems on NTFS volumes
       href: ./backup-and-storage/disk-space-problems-on-ntfs-volumes.md
     - name: Disk Event ID 154
-      href: ./backup-and-storage/disk-event-id-154.md
-    - name: Errors occur when you bring a physical disk resource
-      href: ./backup-and-storage/errors-occur-when-bringing-disk-resource.md
+      href: ./backup-and-storage/disk-event-id-154.md    
     - name: Extending a CSV isn't blocked
-      href: ./backup-and-storage/extending-csv-isnt-blocked.md
-    - name: Set Partmgr Attributes registry with PowerShell
-      href: ./backup-and-storage/set-partmgr-attributes-with-powershell.md
+      href: ./backup-and-storage/extending-csv-isnt-blocked.md    
     - name: System logs multiple events that specify Event ID 640
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
   - name: Deduplication
@@ -1168,11 +1164,7 @@ items:
   - name: Cannot failover a group
     items:
     - name: SMB 3.0 features in Windows Server 2012 file server
-      href: ./high-availability/smb-3-file-server-features.md
-  - name: Cluster-Aware Updating (CAU)
-    items:
-    - name: Recommended updates for Windows Server 2012-based failover clusters
-      href: ./high-availability/updates-for-windows-server-2012-failover-cluster.md
+      href: ./high-availability/smb-3-file-server-features.md  
   - name: Cluster node is hanging
     items:
     - name: Memory dump file is corrupted
@@ -1389,8 +1381,6 @@ items:
       href: ./networking/error-messages-smb-connections.md
     - name: Fail to open file shares or Group Policy snap-ins
       href: ./networking/cannot-open-file-shares-group-policy-snap-ins.md
-    - name: Guest access in SMB2 is disabled by default
-      href: ./networking/guest-access-in-smb2-is-disabled-by-default.md
     - name: High CPU usage issue on the SMB server
       href: ./networking/high-cpu-usage-issue-smb-server.md
     - name: '%HOMEPATH%, %HOMESHARE%, and %HOMEDRIVE% variables are resolved incorrectly'
@@ -2689,6 +2679,8 @@ items:
       href: ./system-management-components/wmi-error-0x8004106c.md
     - name: Event 5605 when querying MSCluster namespace by WMI
       href: ./system-management-components/event-5605-query-mscluster-namespace.md
+    - name: Identify the cause of unexpected WMI shutdown
+      href: ./system-management-components/identify-cause-of-wmi-shutdown.md
     - name: Microsoft-Windows-RPC-Events Event 11 after reboot
       href: ./system-management-components/rpc-events-event-11-after-reboot.md
     - name: New WMI arbitrator behavior
@@ -3253,6 +3245,8 @@ items:
     items:
     - name: Scripts to compile all registered MOF files
       href: ./support-tools/scripts-compile-registered-mof-files.md
+    - name: Scripts to extract .msu and .cab files
+      href: ./support-tools/scripts-extract-msu-cab-files.md      
     - name: Scripts to list all running WMI providers
       href: ./support-tools/scripts-list-running-wmi-providers.md
     - name: Scripts to retrieve profile age and optionally delete aged copies
