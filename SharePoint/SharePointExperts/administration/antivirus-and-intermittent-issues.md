@@ -1,6 +1,6 @@
 ---
-title: Antivirus and intermittent issues when you view Office documents by using Microsoft Offices Online or Office Online Server
-description: Fixes antivirus and intermittent issues that occurs when you view Office documents by using Microsoft Microsoft Offices Online or Office Online Server.
+title: Antivirus and intermittent issues when you view Office documents by using Office Online Server
+description: Fixes antivirus and intermittent issues that occurs when you view Office documents by using Office Online Server.
 author: helenclu
 ms.author: luche
 ms.reviewer: jhaak
@@ -22,7 +22,7 @@ ms.date: 12/17/2023
 
 ## Symptoms
 
-When you view Office documents by using Microsoft Offices Online or Office Online Server, you see intermittent errors. All Office file types are affected, most frequently PowerPoint and Word files. Frequently, the same document displays at one time, and then throws an error at another document.
+When you view Office documents by using Office Online Server, you see intermittent errors. All Office file types are affected, most frequently PowerPoint and Word files. Frequently, the same document displays at one time, and then throws an error at another document.
 
 In the Unified Logging Service (ULS) log on the Office Online Server, you see such a "ConversionError" or "Conversion failed" error. In the Windows Event Application log, the AppServerHost.exe process that is ended unexpectedly appear repeatedly.
 
