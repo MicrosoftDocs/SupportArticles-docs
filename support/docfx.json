@@ -54,7 +54,6 @@
     "fileMetadata": {
       "uhfHeaderId": {
         "azure/**.*": "Azure",
-        "developer/browsers/**.*": "MSDocsHeader-MSEdge",
         "developer/dotnet/**.*": "MSDocsHeader-DotNet",
         "developer/host-integration-server/**.*": "MSDocsHeader-His",
         "developer/visualstudio/**.*": "MSDocsHeader-VisualStudio",
@@ -229,7 +228,6 @@
         "developer/visualstudio/csharp/**/*.md": "dotnet",
         "developer/visualstudio/visual-basic/**/*.md": "dotnet",
         "developer/visualstudio/visual-basic/ide/*.md": "visual-basic-6",
-        "developer/browsers/**/*.md": "internet-explorer",
         "developer/host-integration-server/**/*.md": "host-integration-server",
         "developer/webapps/aspnet/**/*.md": "aspnet",
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
@@ -281,7 +279,6 @@
         "windows-hardware/drivers/**/*.md": "Hardware Developer",
         "windows-server/**/*.md": "Windows Server",
         "windows-client/**/*.md": "Windows Client",
-        "developer/browsers/**/*.md": "Browsers",
         "mem/intune/**/*.md": "Intune",
         "mem/configmgr/**/*.md": "Configuration Manager",
         "system-center/dpm/**/*.md": "Data Protection Manager",
@@ -366,10 +363,6 @@
         "windows-client/**/*.md": [
           "Troubleshoot",
           "Windows Client"
-        ],
-        "developer/browsers/**/*.md": [
-          "Troubleshoot",
-          "Browsers"
         ],
         "azure/**/*.md": [
           "Troubleshoot",
