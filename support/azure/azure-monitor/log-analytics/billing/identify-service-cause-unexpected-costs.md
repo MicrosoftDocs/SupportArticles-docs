@@ -18,12 +18,17 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 > [!NOTE]
 > The prices that are shown in the following images are for example only. They do not reflect actual pricing.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [Azure Preview portal](https://preview.portal.azure.com). 
+   
+   > [!IMPORTANT]
+   > Azure may include preview, beta, or other pre-release features, services, software, or regions offered by Microsoft for optional evaluation ("Previews"). Previews are licensed to you as part of your agreement governing use of Azure, and >subject to terms applicable to "Previews".
+   >
+   >Certain named Previews are subject to additional terms set forth below, if any. These Previews are made available to you pursuant to these additional terms, which supplement your agreement governing use of Azure. Capitalized terms not >defined herein shall have the meaning set forth in your agreement. If you do not agree to these terms, do not use the Preview(s).
 1. Enter **Log Analytics** in the search bar.
 1. Under **Services**, select **Log Analytics**.
 1. Select the Log Analytics workspace that you want to investigate.  
     :::image type="content" source="media/identify-service-cause-unexpected-costs/log-analytics-workspaces.png" alt-text="Screenshot of selecting Log Analytics workspace." lightbox="media/identify-service-cause-unexpected-costs/log-analytics-workspaces.png":::
-1. On the **Overview** page, select **View Cost** to open the **Cost analysis** page for the current Log Analytics service. 
+1. On the **Overview** page, select **View Cost** to open the **Cost analysis** page for the current Log Analytics service. If you don't see View Cost, ensure that you are using the [Azure Preview portal](https://preview.portal.azure.com)(2).
 
     :::image type="content" source="media/identify-service-cause-unexpected-costs/view-cost.png" alt-text="Screenshot of opening view cost" lightbox="media/identify-service-cause-unexpected-costs/view-cost.png":::
 
