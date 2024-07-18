@@ -2679,6 +2679,8 @@ items:
       href: ./system-management-components/wmi-error-0x8004106c.md
     - name: Event 5605 when querying MSCluster namespace by WMI
       href: ./system-management-components/event-5605-query-mscluster-namespace.md
+    - name: Identify the cause of unexpected WMI shutdown
+      href: ./system-management-components/identify-cause-of-wmi-shutdown.md
     - name: Microsoft-Windows-RPC-Events Event 11 after reboot
       href: ./system-management-components/rpc-events-event-11-after-reboot.md
     - name: New WMI arbitrator behavior
