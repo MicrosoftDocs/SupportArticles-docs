@@ -113,8 +113,8 @@ echo "$extracted"
 ---
 
 - `-P`: Indicates the processor to display statistics, the ALL argument indicates to display statistics for all the online CPUs in the system.
-- `1`: The first numeric argument specifies the interval (in seconds) at which mpstat should refresh and display new statistics.
-- `2`: The second numeric argument specifies the number of times `mpstat` should display statistics. In this case, it prints 2 records with 1 second time interval.
+- `1`: The first numeric argument specifies the interval (in seconds) at which `mpstat` should refresh and display new statistics.
+- `2`: The second numeric argument specifies the number of times `mpstat` should display statistics. In this case, it prints 2 statistics with 1 second time interval.
 
 You can increase the number of times argument to accommodate longer data collection times. Generally, 3 or 5 seconds should be sufficient. For systems with higher core counts, reducing it to 2 seconds can help manage the volume of displayed data.
 
