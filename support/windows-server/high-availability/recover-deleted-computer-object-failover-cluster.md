@@ -51,9 +51,10 @@ The computer accounts that are created in Active Directory represent the Network
   WARN [RES] Network Name <FSCAP01>: Trying to remove credentials for LocalSystem returned status C0000225, STATUS_NOT_FOUND is a non-critical failure for a remove operation
   WARN [RHS] Resource FSCAP01 has indicated that it cannot come online on this node.
   WARN [RCM] HandleMonitorReply: ONLINERESOURCE for 'FSCAP01', gen(8) result 5015.
-  
-  Note: status 80072030 = There is no such object on the server
   ```
+    
+  > [!NOTE]
+  > Status 80072030 = There is no such object on the server.
 
 However, problems will occur even before the Network Name resource is cycled offline and online. For example, a user or a highly available application may be unable to access resources when a security token that represents the cluster computer object in Active Directory can't be obtained.
 
