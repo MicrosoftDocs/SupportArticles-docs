@@ -25,7 +25,7 @@ Several commands are available for collecting performance counters on Linux. Com
 Based on the type of the metrics, these commands can be categorized into:
 
 - **CPU**: [mpstat](#mpstat), [vmstat](#vmstat)
-- **Memory**: (free)(#free), [swapon](#swapon)
+- **Memory**: [free](#free), [swapon](#swapon)
 - **Disk I/O**: [iostat](#iostat), [lsblk](#lsblk)
 - **Processes**: [pidstat](#pidstat), [ps](#ps)
 
@@ -34,8 +34,8 @@ Based on the type of the metrics, these commands can be categorized into:
 You can install Sysstat utilities on a Linux virtual machine (VM) using either a Bash command or [Run Commands feature](/azure/virtual-machines/linux/run-command) with Azure CLI. If you use the Azure CLI commands that provided in this article to install the Sysstat utilities, make sure that the following two envrioment values are set. You must replace the resource group name and the VM name by the actual values.
 
 ```azurecli-interactive
-export MY_RESOURCE_GROUP_NAME="myVMResourceGroup89f292"
-export MY_VM_NAME="myVM89f292"
+export MY_RESOURCE_GROUP_NAME="yourResourceGroup"
+export MY_VM_NAME="yourVM"
 ```
 
 > [!NOTE]
