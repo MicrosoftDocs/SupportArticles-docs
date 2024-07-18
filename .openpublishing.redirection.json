@@ -11446,17 +11446,17 @@
       "redirect_document_id": false
     },
     {
-        "source_path": "./backup-and-storage/set-partmgr-attributes-with-powershell.md",
+        "source_path": "support/windows-server/backup-and-storage/set-partmgr-attributes-with-powershell.md",
         "redirect_url": "/previous-versions/troubleshoot/set-partmgr-attributes-with-powershell",
         "redirect_document_id": false
     },
     {
-        "source_path": "./backup-and-storage/errors-occur-when-bringing-disk-resource.md",
+        "source_path": "support/windows-server/backup-and-storage/errors-occur-when-bringing-disk-resource.md",
         "redirect_url": "/previous-versions/troubleshoot/errors-occur-when-bringing-disk-resource",
         "redirect_document_id": false
     },
     {
-        "source_path": "./high-availability/updates-for-windows-server-2012-failover-cluster.md",
+        "source_path": "support/windows-server/high-availability/updates-for-windows-server-2012-failover-cluster.md",
         "redirect_url": "/previous-versions/troubleshoot/updates-for-windows-server-2012-failover-cluster",
         "redirect_document_id": false
     }
