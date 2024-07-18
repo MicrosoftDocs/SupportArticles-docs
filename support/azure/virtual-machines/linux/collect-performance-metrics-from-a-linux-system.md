@@ -18,7 +18,7 @@ ms.date: 07/16/2024
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article describe how to retrieve performance metrics from a Linux VM in Microsoft Azure by using Sysstat utilities (Performance monitoring tools). It provides examples of how to use these utilities and read their outputs.
+This article describes how to retrieve performance metrics from a Linux VM in Microsoft Azure by using Sysstat utilities (Performance monitoring tools). It provides examples of how to use these utilities and read their outputs.
 
 Several commands are available for collecting performance counters on Linux. Commands like `vmstat` and `uptime` provide essential system metrics such as CPU usage, system memory, and system load. Most of these commands are pre-installed by default, while others can be easily accessed from default repositories.
 
@@ -31,7 +31,7 @@ Based on the type of the metrics, these commands can be categorized into:
 
 ## Install Sysstat utilities for Linux
 
-You can install Sysstat utilities on a Linux virtual machine (VM) using either a Bash command or [Run Commands feature](/azure/virtual-machines/linux/run-command) with Azure CLI. If you use the Azure CLI commands that provided in this article to install the Sysstat utilities, make sure that the following two envrioment values are set. You must replace the resource group name and the VM name by the actual values.
+You can install Sysstat utilities on a Linux virtual machine (VM) using either a Bash command or [Run Commands feature](/azure/virtual-machines/linux/run-command) with Azure CLI. If you use the Azure CLI commands that provided in this article to install the Sysstat utilities, make sure that the following two environment values are set. You must replace the resource group name and the VM name by the actual values.
 
 ```azurecli-interactive
 export MY_RESOURCE_GROUP_NAME="yourResourceGroup"
@@ -114,7 +114,7 @@ echo "$extracted"
 
 - `-P`: Indicates the processor to display statistics, the ALL argument indicates to display statistics for all the online CPUs in the system.
 - `1`: The first numeric argument specifies the interval (in seconds) at which mpstat should refresh and display new statistics.
-- `2`: The second numeric argument specifies the number of times `mpstat` should refresh and display statistics. In this case, it print 2 reports with 1 second time interval.
+- `2`: The second numeric argument specifies the number of times `mpstat` should refresh and display statistics. In this case, it prints 2 records with 1 second time interval.
 
 You can increase the number of times argument to accommodate longer data collection times. Generally, 3 or 5 seconds should be sufficient. For systems with higher core counts, reducing it to 2 seconds can help manage the volume of displayed data.
 
@@ -183,7 +183,7 @@ Key considerations when reviewing the output from `mpstat`:
 
 ### <a id="vmstat"></a>vmstat
 
-The `vmstat` utility is widely available in most Linux distributions. it provides high level overview for CPU, Memory, and Disk I/O utilization in a single pane.
+The `vmstat` utility is widely available in most Linux distributions. It provides high level overview for CPU, Memory, and Disk I/O utilization in a single pane.
 
 Here's an example of how to run `mpstat`:
 
@@ -406,7 +406,7 @@ This information is important to verify if swap is configured on a location that
 
 ### Key considerations
 
-* Keep in mind that the memory is a finite resource, once both system memory (RAM) and swap is exhausted, the processes are to be killed by the Out Of Memorry killer (OOM).
+* Keep in mind that the memory is a finite resource, once both system memory (RAM) and swap is exhausted, the processes are to be killed by the Out Of Memory killer (OOM).
 * Verify swap isn't configured on a data disk or the OS disk, as that would create issues with I/O due to latency differences. Swap should be configured on the ephemeral drive.
 * Keep also in consideration that it's common to see on the `free -h` output that the free values are close to zero, this behavior is due to page cache, the kernel releases those pages as needed.
 
@@ -472,7 +472,7 @@ The output has several columns that aren't important (extra columns due to the `
 
 #### Key considerations
 
-* Look for `r/s` and `w/s` (IOPS) and `rMB/s` and `wMB/s` and verify that these values are within the limits of the given disk. If the values are close or higher the limits, the disk are going to be throttled, leading to high latency. This information can also be corroborated with the `%iowait` metric from `mpstat`.
+* Look for `r/s` and `w/s` (IOPS) and `rMB/s` and `wMB/s` and verify that these values are within the limits of the given disk. If the values are close or higher the limits, the disk is going to be throttled, leading to high latency. This information can also be corroborated with the `%iowait` metric from `mpstat`.
 * The latency is an excellent metric to verify if the disk is performing as expected. Normally, less than `9ms` is the expected latency for PremiumSSD, other offerings have different latency targets.
 * The queue size is a great indicator of saturation. Normally, requests would be served near real time and the number remains close to one (as the queue never grows). A higher number could indicate disk saturation (that is, requests queuing up). There's no good or bad number for this metric. Understanding that anything higher than one means that requests are queuing up helps determine if there's disk saturation.
 
@@ -694,7 +694,7 @@ The metrics collected are:
 
 ##### Key considerations
 
-* Look for single processes with high read/write rates per second. This information is a guidance for processes with I/O more than identifying issues.
+* Look for single processes with high read/write rates per second. This information is guidance for processes with I/O more than identifying issues.
 Note: the `--human` option can be used to display numbers in human readable format (that is, `Kb`, `Mb`, `GB`).
 
 ### `ps` <a id="ps"></a>
@@ -790,7 +790,7 @@ echo "$extracted"
 
 ---
 
-Additionally, all the commands in the bash block codes covered in this document, can be run through `az-cli` using the run-command extension, and parsing the output through `jq` to obtain a similar output to running the commands locally.
+Additionally, all the commands in the bash block codes covered in this document, can be run-through `az-cli` using the run-command extension, and parsing the output through `jq` to obtain a similar output to running the commands locally.
 
 ```azurecli-interactive
 az vm run-command invoke -g $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "ls -l /dev/disk/azure" | jq -r '.value[0].message'
