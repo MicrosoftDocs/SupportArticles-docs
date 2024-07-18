@@ -81,8 +81,6 @@ sudo zypper install sysstat --non-interactive
 
 ### [AZ-CLI](#tab/sysstatclisuse)
 
-You could also install this package using the Run-Command extension from Azure CLI, using the following command:
-
 ```azurecli-interactive
 az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "zypper install sysstat --non-interactive"
 ```
@@ -223,7 +221,7 @@ Here's an example output of `vmstat`:
   15    2            0     19015276          164       175960    0    0     9  8561 3639 15177  73  27   0   0   0
 ```
 
-The output is categorized into the following six groups:
+The output is categorized into the following six groups. The output shows overall statistics for the entire system (that is, all CPUs, all block devices aggregated).
 
 * `procs`: statistics for processes.
 * `memory`: statistics for system memory.
@@ -231,8 +229,6 @@ The output is categorized into the following six groups:
 * `io`: statistics for disk io.
 * `system`: statistics for context switches and interrupts.
 * `cpu`: statistics for CPU usage.
-
-The output shows overall statistics for the entire system (that is, all CPUs, all block devices aggregated).
 
 **procs**
 
@@ -249,7 +245,7 @@ The `b` column indicates the number of processes waiting to run that are being b
 
 **memory**
 
-The memory section has four columns. The values are shown in bytes. This section provides a high level overview of memory usage.
+The **memory** section has four columns. The values are shown in bytes. This section provides a high level overview of memory usage.
 
 * `swpd`: The amount swap memory used.
 * `free`: The amount of memory free.
@@ -258,7 +254,7 @@ The memory section has four columns. The values are shown in bytes. This section
 
 **swap**
 
-The swap section has two columns:
+The **swap** section has two columns:
 
 * `si`: The amount of memory swapped in (moved from system memory to swap) per second.
 * `so`: The amount of memory swapped out (moved from swap to system memory) per second.
@@ -267,14 +263,14 @@ If high `si` is observed, it might represent a system that is running out of sys
 
 **io**
 
-The `io` section has two columns. These values are in blocks per second.
+The **io** section has two columns. These values are in blocks per second.
 
 * `bi`: The number of blocks received from a block device (reads blocks per second) per second.
 * `bo`: The number of blocks sent to a block device (writes per second) per second.
 
 **system**
 
-The `system` section has two columns:
+The **system** section has two columns:
 
 * `in`: The number of interrupts per second.
 * `cs`: The number of context switches per second.
@@ -297,7 +293,7 @@ The values are presented in percentage. These values are the same as presented b
 
 ### uptime
 
-Lastly, for CPU related metrics, the `uptime` utility provides a broad overview of the system load with the load average values.
+The `uptime` utility provides a broad overview of the system load with the load average values.
 
 #### [BASH](#tab/uptimebash)
 
@@ -307,8 +303,6 @@ uptime
 
 #### [AZ-CLI](#tab/uptimecli)
 
-The following commands can be used if you want to execute it from Azure CLI:
-
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'uptime')
 value=$(echo "$output" | jq -r '.value[0].message')
@@ -317,6 +311,10 @@ echo "$extracted"
 ```
 
 ---
+
+#### How to read the output
+
+Here's an example output of `uptime`:
 
 ```output
 16:55:53 up 9 min,  2 users,  load average: 9.26, 2.91, 1.18
@@ -330,18 +328,17 @@ A value of `4` would mean that half of the CPUs were loaded at 100% (or a total 
 
 The `1m`, `5m`, `15m` intervals help identify if load is increasing or decreasing over time.
 
-> [NOTE]
-> The `nproc` command can also be used to obtain the number of CPUs.
+Additionally, the `nproc` command can be used to retrieve the number of CPUs.
 
 ## Memory
 
-For memory, there are two commands that can obtain details about usage.
+For memory, there are two commands that can retrieve memory details about usage.
 
-### `free`
+### free
 
 The `free` command shows system memory utilization.
 
-To run it:
+Here's an example of how to run `free`:
 
 #### [BASH](#tab/freebash)
 
@@ -350,8 +347,6 @@ free -h
 ```
 
 #### [AZ-CLI](#tab/freecli)
-
-The following commands can be used if you want to execute it from Azure CLI:
 
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'free -h')
@@ -362,11 +357,11 @@ echo "$extracted"
 
 ---
 
-The options and arguments are:
+* `-h`: This option specifies the output format to be human-readable. It converts the memory sizes from bytes to a more readable format (kilobytes, megabytes, gigabytes) and appends appropriate unit labels (K, M, G).
 
-* `-h`: Display values dynamically as human readable (for example: Mib, Gib, Tib)
+#### How to read the output
 
-The output:
+Here's an example output of `free`:
 
 ```output
                total        used        free      shared  buff/cache   available
@@ -374,15 +369,13 @@ Mem:            31Gi        19Gi        12Gi        23Mi        87Mi        11Gi
 Swap:           23Gi          0B        23Gi
 ```
 
-From the output, look for the total system memory vs the available, and the used vs total swap. The available memory takes into consideration memory allocated for cache, which can be returned for user applications.
+From the output, observe the **total** system memory versus the **available** memory, and the **used** versus **total** swap. The available memory takes into consideration memory allocated for cache, which can be returned for user applications. Some swap usage is normal in modern kernels as some less often used memory pages can be moved to swap.
 
-Some swap usage is normal in modern kernels as some less often used memory pages can be moved to swap.
-
-### `swapon`
+### swapon
 
 The `swapon` command displays where swap is configured and the respective priorities of the swap devices or files.
 
-To run the command:
+Here's an example of how to run `free`:
 
 #### [BASH](#tab/swaponbash)
 
@@ -391,8 +384,6 @@ swapon -s
 ```
 
 #### [AZ-CLI](#tab/swaponcli)
-
-The following commands can be used if you want to execute it from Azure CLI:
 
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'swapon -s')
@@ -403,7 +394,7 @@ echo "$extracted"
 
 ---
 
-The output:
+Here's an example output of `swapon`:
 
 ```output
 Filename      Type          Size          Used   Priority
@@ -413,9 +404,9 @@ Filename      Type          Size          Used   Priority
 
 This information is important to verify if swap is configured on a location that isn't ideal, for example on a data or OS disk. In the Azure frame of reference, swap should be configured on the ephemeral drive as it provides the best performance.
 
-### Things to look out for
+### Key considerations
 
-* Keep in mind the memory is a finite resource, once both system memory (RAM) and swap is exhausted, the processes are to be killed by the Out Of Memorry killer (OOM).
+* Keep in mind that the memory is a finite resource, once both system memory (RAM) and swap is exhausted, the processes are to be killed by the Out Of Memorry killer (OOM).
 * Verify swap isn't configured on a data disk or the OS disk, as that would create issues with I/O due to latency differences. Swap should be configured on the ephemeral drive.
 * Keep also in consideration that it's common to see on the `free -h` output that the free values are close to zero, this behavior is due to page cache, the kernel releases those pages as needed.
 
@@ -423,12 +414,11 @@ This information is important to verify if swap is configured on a location that
 
 Disk I/O is one of the areas Azure suffers the most when throttled, as disks can reach `100ms+` latencies. The following commands help to identify these scenarios.
 
-### `iostat`
+### iostat
 
-The `iostat` utility is part of the `sysstat` package. It displays per block device usage statistics and helps identify block related performance issues.
+The `iostat` utility is part of the `sysstat` package. It displays per block device usage statistics and helps identify block related performance issues. It provides details for metrics such as throughput, latency, and queue size. These metrics help understand if disk I/O becomes a limiting factor.
 
-The `iostat` utility provides details for metrics such as throughput, latency, and queue size. These metrics help understand if disk I/O becomes a limiting factor.
-To run, use the command:
+Here's an example of how to run `iostat`:
 
 #### [BASH](#tab/iostatbash)
 
@@ -438,18 +428,13 @@ iostat -dxtm 1 5
 
 #### [AZ-CLI](#tab/iostatcli)
 
-The following commands can be used if you want to execute it from Azure CLI:
-
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'iostat -dxtm 1 5')
 value=$(echo "$output" | jq -r '.value[0].message')
 extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
 echo "$extracted"
 ```
-
 ---
-
-The options and arguments are:
 
 * `-d`: Per device usage report.
 * `-x`: Extended statistics.
@@ -458,7 +443,9 @@ The options and arguments are:
 * `1`: The first numeric argument indicates how often to refresh the display in seconds.
 * `2`: The second numeric argument indicates how many times the data refreshes.
 
-The output:
+#### How to read the output
+
+Here's an example output of `iostat`:
 
 ```output
 Linux 5.14.0-362.8.1.el9_3.x86_64 (alma9)       02/21/24        _x86_64_        (8 CPU)
@@ -483,17 +470,17 @@ The output has several columns that aren't important (extra columns due to the `
 * `wareq-size`: Average write request size in kilobytes.
 * `aqu-sz`: Average queue size.
 
-#### Things to look out for
+#### Key considerations
 
 * Look for `r/s` and `w/s` (IOPS) and `rMB/s` and `wMB/s` and verify that these values are within the limits of the given disk. If the values are close or higher the limits, the disk are going to be throttled, leading to high latency. This information can also be corroborated with the `%iowait` metric from `mpstat`.
 * The latency is an excellent metric to verify if the disk is performing as expected. Normally, less than `9ms` is the expected latency for PremiumSSD, other offerings have different latency targets.
 * The queue size is a great indicator of saturation. Normally, requests would be served near real time and the number remains close to one (as the queue never grows). A higher number could indicate disk saturation (that is, requests queuing up). There's no good or bad number for this metric. Understanding that anything higher than one means that requests are queuing up helps determine if there's disk saturation.
 
-### `lsblk`
+### lsblk
 
 The `lsblk` utility shows the block devices attached to the system, while it doesn't provide performance metrics, it allows a quick overview of how these devices are configured and which mountpoints are being used.
 
-To run, use the command:
+Here's an example of how to run `lsblk`:
 
 #### [BASH](#tab/lsblkbash)
 
@@ -502,8 +489,6 @@ lsblk
 ```
 
 #### [AZ-CLI](#tab/lsblkcli)
-
-The following commands can be used if you want to execute it from Azure CLI:
 
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'lsblk')
@@ -514,7 +499,9 @@ echo "$extracted"
 
 ---
 
-The output:
+#### How to read the output
+
+Here's an example output of `lsblk`:
 
 ```output
 NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
@@ -528,25 +515,20 @@ sdb      8:16   0   30G  0 disk
 zram0  252:0    0   16G  0 disk [SWAP]
 ```
 
-#### Things to look out for
+#### Key considerations
 
 * Look for where the devices are mounted.
 * Verify swap it's not configured inside of a data disk or OS disk, if enabled.
-
-> Note: An easy way to correlate the block device to a LUN in Azure is by running `ls -lr /dev/disk/azure`.
+* An easy way to correlate the block device to a LUN in Azure is by running `ls -lr /dev/disk/azure`.
 
 ## Process
 
-Gathering details on a per process basis helps understand where the load of the system is coming from.
-
-The main utility to gather process statics is `pidstat` as it provides details per process for CPU, Memory, and I/O statistics.
-
-Lastly, a simple `ps` to sort process by top CPU, and memory usage complete the metrics.
+Gathering details on a per process basis helps understand where the load of the system is coming from. The main utility to gather process statics is `pidstat` as it provides details per process for CPU, Memory, and I/O statistics. Lastly, a simple `ps` to sort process by top CPU, and memory usage complete the metrics.
 
 > [!NOTE]
-> Since these commands display details about running processes, they need to run as root with `sudo`. This command allows all processes to be displayed and not just the user's.
+> These commands require root privileges using `sudo` to show details of all running processes, not just those of the current user.
 
-### `pidstat`
+### pidstat
 
 The `pidstat` utility is also part of the `sysstat` package. It's like `mpstat` or iostat where it displays metrics for a given amount of time. By default, `pidstat` only displays metrics for processes with activity.
 
@@ -570,8 +552,6 @@ pidstat 1 2
 
 ##### [AZ-CLI](#tab/pidstatcli)
 
-The following commands can be used if you want to execute it from Azure CLI:
-
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'pidstat 1 2')
 value=$(echo "$output" | jq -r '.value[0].message')
@@ -581,7 +561,9 @@ echo "$extracted"
 
 ---
 
-The output:
+#### How to read the CPU statistics output
+
+Here's an example output of `pidstat`:
 
 ```output
 Linux 5.14.0-362.8.1.el9_3.x86_64 (alma9)       02/21/24        _x86_64_        (8 CPU)
@@ -603,7 +585,7 @@ Linux 5.14.0-362.8.1.el9_3.x86_64 (alma9)       02/21/24        _x86_64_        
 
 The command displays per process usage for `%usr`, `%system`, `%guest` (not applicable to Azure), `%wait`, and total `%CPU` usage.
 
-##### Things to look out for
+##### Key considerations
 
 * Look for processes with high %wait (iowait) percentage as it might indicate processes that are blocked waiting for I/O, which might also indicate disk saturation.
 * Verify that no single process consumes 100% of the CPU as it might indicate a single threaded application.
@@ -620,8 +602,6 @@ pidstat -r 1 2
 
 ##### [AZ-CLI](#tab/pidstatrcli)
 
-The following commands can be used if you want to execute it from Azure CLI:
-
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'pidstat -r 1 2')
 value=$(echo "$output" | jq -r '.value[0].message')
@@ -631,7 +611,10 @@ echo "$extracted"
 
 ---
 
-The output:
+#### How to read the Memory statistics output
+
+Here's an example output of `pidstat`:
+
 
 ```output
 Linux 5.14.0-362.8.1.el9_3.x86_64 (alma9)       02/21/24        _x86_64_        (8 CPU)
@@ -656,12 +639,12 @@ The metrics collected are:
 * `%MEM`: Percentage of total memory used.
 * `Command`: The name of the process.
 
-##### Things to look out for
+##### Key considerations
 
 * Look for major faults per second, as this value would indicate a process that is swapping pages to or from disk. This behavior could indicate memory exhaustion, and could lead to `OOM` events or performance degradation due to slower swap.
 * Verify that a single process doesn't consume 100% of the available memory. This behavior could indicate a memory leak.
 
-> [!NOTE]
+> [!TIP]
 > the `--human` option can be used to display numbers in human readable format (that is, `Kb`, `Mb`, `GB`).
 
 #### Process I/O statistics
@@ -675,8 +658,6 @@ pidstat -d 1 2
 ```
 
 ##### [AZ-CLI](#tab/pidstatdcli)
-
-The following commands can be used if you want to execute it from Azure CLI:
 
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'pidstat -d 1 2')
@@ -711,7 +692,7 @@ The metrics collected are:
 * `kB_wr/s`: Write kilobytes per second.
 * `Command`: Name of the process.
 
-##### Things to look out for
+##### Key considerations
 
 * Look for single processes with high read/write rates per second. This information is a guidance for processes with I/O more than identifying issues.
 Note: the `--human` option can be used to display numbers in human readable format (that is, `Kb`, `Mb`, `GB`).
@@ -729,8 +710,6 @@ ps aux --sort=-%cpu | head -10
 ```
 
 #### [AZ-CLI](#tab/pscli)
-
-The following commands can be used if you want to execute it from Azure CLI:
 
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'ps aux --sort=-%cpu | head -10')
@@ -764,8 +743,6 @@ ps aux --sort=-%mem| head -10
 
 ##### [AZ-CLI](#tab/psauxcli)
 
-The following commands can be used if you want to execute it from Azure CLI:
-
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'ps aux --sort=-%mem| head -10')
 value=$(echo "$output" | jq -r '.value[0].message')
@@ -788,9 +765,9 @@ panzer      1803  0.0  0.0  22360  8220 ?        Ss   16:49   0:00 /usr/lib/syst
 root        2180  0.0  0.0  73524  6968 pts/1    SL+  16:55   0:00 stress-ng --cpu 12 --vm 2 --vm-bytes 120% --iomix 4 --timeout 240
 ```
 
-## Putting all together
+## Consolidate reports
 
-A simple bash script can collect all details in a single run, and append the output to a file for later use:
+The following bash script can gather all details in a single execution and append the output to a file for future reference:
 
 ### [BASH](#tab/mpstatpbash)
 
@@ -803,8 +780,6 @@ To run, create a file with the above contents, add execute permissions by runnin
 This script saves the output of the commands in a file located in the same directory where the script was invoked.
 
 ### [AZ-CLI](#tab/mpstatpcli)
-
-The following commands can be used if you want to execute it from Azure CLI:
 
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'mpstat -P ALL 1 2 && vmstat -w 1 5 && uptime && free -h && swapon && iostat -dxtm 1 1 && lsblk && ls -l /dev/disk/azure && pidstat 1 1 -h --human && pidstat -r 1 1 -h --human && pidstat -d 1 1 -h --human && ps aux --sort=-%cpu | head -20 && ps aux --sort=-%mem | head -20')
@@ -820,3 +795,5 @@ Additionally, all the commands in the bash block codes covered in this document,
 ```azurecli-interactive
 az vm run-command invoke -g $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "ls -l /dev/disk/azure" | jq -r '.value[0].message'
 ```
+
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
