@@ -5477,7 +5477,7 @@
       },
       {
         "source_path": "general/error-run-copy-activity-azure.md",
-        "redirect_url": "/azure/data-factory/self-hosted-integration-runtime-troubleshoot-guide",
+        "redirect_url": "/azure/data-factory/self-hosted-integration-runtime-troubleshoot-guide#usererrorjrenotfound-error-message-when-you-run-a-copy-activity-to-azure",
         "redirect_document_id": false
       }
   ]
