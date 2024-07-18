@@ -1368,7 +1368,7 @@
     {
       "source_path": "support/browsers/welcome-browsers.md",
       "redirect_url": "/troubleshoot/developer/browsers/welcome-browsers",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/browsers/cannot-add-favorites-in-enhanced-protected-mode.md",
@@ -5758,6 +5758,11 @@
     {
       "source_path": "support/developer/browsers/stability-performance/we-were-unable-to-return-you-to-your-webpage-error.md",
       "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/we-were-unable-to-return-you-to-your-webpage-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/welcome-browsers.yml",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/welcome-browsers",
       "redirect_document_id": false
     }
   ]
