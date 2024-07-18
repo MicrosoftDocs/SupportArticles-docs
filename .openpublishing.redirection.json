@@ -11446,6 +11446,21 @@
       "redirect_document_id": false
     },
     {
+        "source_path": "support/windows-server/backup-and-storage/set-partmgr-attributes-with-powershell.md",
+        "redirect_url": "/previous-versions/troubleshoot/set-partmgr-attributes-with-powershell",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "support/windows-server/backup-and-storage/errors-occur-when-bringing-disk-resource.md",
+        "redirect_url": "/previous-versions/troubleshoot/errors-occur-when-bringing-disk-resource",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "support/windows-server/high-availability/updates-for-windows-server-2012-failover-cluster.md",
+        "redirect_url": "/previous-versions/troubleshoot/updates-for-windows-server-2012-failover-cluster",
+        "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/guest-access-in-smb2-is-disabled-by-default.md",
       "redirect_url": "/windows-server/storage/file-server/enable-insecure-guest-logons-smb2-and-smb3",
       "redirect_document_id": false

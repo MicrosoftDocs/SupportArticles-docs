@@ -682,13 +682,9 @@ items:
     - name: Correct disk space problems on NTFS volumes
       href: ./backup-and-storage/disk-space-problems-on-ntfs-volumes.md
     - name: Disk Event ID 154
-      href: ./backup-and-storage/disk-event-id-154.md
-    - name: Errors occur when you bring a physical disk resource
-      href: ./backup-and-storage/errors-occur-when-bringing-disk-resource.md
+      href: ./backup-and-storage/disk-event-id-154.md    
     - name: Extending a CSV isn't blocked
-      href: ./backup-and-storage/extending-csv-isnt-blocked.md
-    - name: Set Partmgr Attributes registry with PowerShell
-      href: ./backup-and-storage/set-partmgr-attributes-with-powershell.md
+      href: ./backup-and-storage/extending-csv-isnt-blocked.md    
     - name: System logs multiple events that specify Event ID 640
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
   - name: Deduplication
@@ -1168,11 +1164,7 @@ items:
   - name: Cannot failover a group
     items:
     - name: SMB 3.0 features in Windows Server 2012 file server
-      href: ./high-availability/smb-3-file-server-features.md
-  - name: Cluster-Aware Updating (CAU)
-    items:
-    - name: Recommended updates for Windows Server 2012-based failover clusters
-      href: ./high-availability/updates-for-windows-server-2012-failover-cluster.md
+      href: ./high-availability/smb-3-file-server-features.md  
   - name: Cluster node is hanging
     items:
     - name: Memory dump file is corrupted
