@@ -797,4 +797,4 @@ az vm run-command invoke -g $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command
 ```
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
