@@ -90,6 +90,22 @@ items:
       href: log-analytics/workspaces/error-code-0x80090016-keyset-does-not-exist.md
     - name: Workspace data export FAQ
       href: log-analytics/workspaces/workspace-data-export-faq.yml
+  - name: Cost management 
+    items:
+    - name: Understand cost and analyze usage report
+      href: log-analytics/billing/understand-log-analytics-workspace-bill.md
+    - name: Investigate unexpected cost increase
+      href: log-analytics/billing/identify-service-cause-unexpected-costs.md
+    - name: Set daily cap to avoid unexpected increase
+      href: log-analytics/billing/set-up-a-daily-cap.md
+    - name: Configure recommended alerts
+      href: log-analytics/billing/workspace-recommended-alerts.md
+    - name: Identify why daily cap exceeded
+      href: log-analytics/billing/why-daily-cap-exceeded.md
+    - name: Configure data retention
+      href: log-analytics/billing/configure-data-retention.md
+
+
 
   - name: Linux Agents
     items:
