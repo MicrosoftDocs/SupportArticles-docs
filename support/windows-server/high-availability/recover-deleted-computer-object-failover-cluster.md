@@ -28,15 +28,10 @@ The computer accounts that are created in Active Directory represent the Network
 
   ```output
   Event Level: Error
-  
   Event Source: FailoverClustering
-  
   Event ID: 1207
-  
   Description: Cluster network name resource <ResourceName> cannot be brought online. The computer object associated with the resource could not be updated in domain <DomainName> for the following reason:
-  
   The text for the associated error code is: There is no such object on the server.
-  
   The cluster identity <CNO$Name> may lack permissions required to update the object. Work with your domain administrator to ensure the cluster identity can update computer objects in the domain.
   ```
 
