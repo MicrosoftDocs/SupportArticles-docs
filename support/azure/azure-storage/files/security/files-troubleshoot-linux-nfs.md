@@ -3,7 +3,7 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 07/16/2024
+ms.date: 07/17/2024
 ms.reviewer: kendownie
 ---
 
@@ -211,17 +211,17 @@ To resolve this issue, use one of the following methods:
 
 You can also persist this kernel boot option in the *grub.conf* file. For more information, see the documentation for your Linux distribution.
 
-## Unable to change ownership of files and directories
+## Unable to change the ownership of files and directories
 
 ### Cause
 
-Permissions for NFS file shares are enforced by the client OS rather than the Azure Files service. If **Root Squash** is enabled on an NFS file share, the root user on the client system is treated as an anonymous (non-privileged) user for the purposes of access control. This means that even if you're logged in as root on the client system, you won't be able to use the **chown** command to change the ownership of files and directories that you don't own.
+Permissions for NFS file shares are enforced by the client OS rather than the Azure Files service. If the **Root Squash** setting is enabled on an NFS file share, the root user on the client system is treated as an anonymous (non-privileged) user for the purposes of access control. This means that even if you're logged in as root on the client system, you aren't able to use the `chown` command to change the ownership of files and directories that you don't own.
 
 ### Solution
 
 In the Azure portal, navigate to the file share and select **Properties**. Change the **Root Squash** setting to **No Root Squash**.
 
-With **No Root Squash** enabled, the root user on the client system has the same privileges as the root user on the server system. You can now use **chown** to change the ownership of any file or directory in the share, regardless of the current owner. After you make the changes, you can re-enable **Root Squash** if desired.
+With **No Root Squash** enabled, the root user on the client system has the same privileges as the root user on the server system. You can now use `chown` to change the ownership of any file or directory in the share, regardless of the current owner. After you make the changes, you can re-enable **Root Squash** if necessary.
 
 ## Need help?
 

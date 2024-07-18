@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files issues in Linux (SMB)
 description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients and possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 07/16/2024
+ms.date: 07/17/2024
 ms.reviewer: kendownie, v-weizhu
 ---
 
@@ -122,8 +122,8 @@ Status code returned 0xc000006d STATUS_LOGON_FAILURE
 cifs_setup_session: 2 callbacks suppressed
 CIFS VFS: \\contoso.file.core.windows.net Send error in SessSetup = -13
 ```
+You'll also see that the server FQDN now resolves to a different IP address than what it's currently connected to. This issue might occur in any scenario where the server IP address can change, such as account migration. Another known scenario is storage account failover, because the DNS mapping can change.
 
-You'll also see that the server FQDN now resolves to a different IP address than what it's currently connected to. You might see this issue for any scenario where the server IP address can change. Besides account migration, another known scenario is storage account failover, because the DNS mapping can change.
 
 ### Cause
 
@@ -176,12 +176,12 @@ To better work around this issue, clear the kernel DNS resolver cache:
 
 For a permanent fix, upgrade your client OS to a Linux distro version with account migration support. Several fixes for the Linux SMB kernel client have been submitted to the mainline Linux kernel. The following distros have the fixes:
 
-- Ubuntu: 20.04, 22.04, 24.04, AKS 22.04 (fix rolling out in 5.15.0-1068)
+- Ubuntu: 20.04, 22.04, 24.04, AKS 22.04 (the fixes are rolled out in kernel version 5.15.0-1068)
 - RHEL: 8.6+
 - SLES: 15SP2, 15SP3, 15SP4, 15SP5
-- Azure Linux: 2.0 (Fix rolling out in 5.15.159.1), 3.0
+- Azure Linux: 2.0 (the fixes are rolled out in kernel version 5.15.159.1), 3.0
 
-Some distros have backported these fixes, and you can check if the following fixes exist in the distro version you're using:
+Some distros have backported these fixes. You can check if the following fixes exist in the distro version you're using:
 
 - [cifs: On cifs_reconnect, resolve the hostname again](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=4e456b30f78c429b183db420e23b26cde7e03a78)
 
