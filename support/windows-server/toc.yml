@@ -3243,6 +3243,8 @@ items:
     items:
     - name: Scripts to compile all registered MOF files
       href: ./support-tools/scripts-compile-registered-mof-files.md
+    - name: Scripts to extract .msu and .cab files
+      href: ./support-tools/scripts-extract-msu-cab-files.md      
     - name: Scripts to list all running WMI providers
       href: ./support-tools/scripts-list-running-wmi-providers.md
     - name: Scripts to retrieve profile age and optionally delete aged copies
