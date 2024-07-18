@@ -1,12 +1,12 @@
 ---
 title: Scripts to extract .msu and .cab files 
 description: Provides a script to extract .msu and .cab files.
-ms.date: 07/16/2024
+ms.date: 07/18/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, v-lianna, jpsantho
 ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
 ---
 # Scripts: Extract .msu and .cab files
