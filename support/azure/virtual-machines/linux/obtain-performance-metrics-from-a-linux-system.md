@@ -1,6 +1,6 @@
 ---
-title: Obtaining Performance metrics from a Linux system
-description: Learn how to obtainer Performance metrics from a Linux system.
+title: Collect performance metrics for a Linux VM in Microsoft Azure
+description: Learn how to collect performance metrics from a Linux VM in Microsoft Azure.
 author: divargas-msft
 ms.author: esflores
 editor: divargas-msft
@@ -14,24 +14,24 @@ ms.date: 07/16/2024
 
 ---
 
-# Obtaining Performance metrics from a Linux system
+# Collect performance metrics for a Linux VM
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article is going to cover instructions to determine how to quickly obtain performance metrics from a Linux System.
+This article provides the steps to retrieve performance metrics from a Linux VM in Microsoft Azure.
 
-There are several commands that can be used to obtain performance counters on Linux. Commands such as `vmstat` and `uptime`, provide general system metrics such as CPU usage, System Memory, and System load.
-Most of the commands are already installed by default with others being readily available in default repositories.
-The commands can be separated into:
+Several commands are available for collecting performance counters on Linux. Commands like `vmstat` and `uptime` provide essential system metrics such as CPU usage, system memory, and system load. Most of these commands are pre-installed by default, while others can be easily accessed from default repositories.
 
-* CPU
-* Memory
-* Disk I/O
-* Processes
+Based on the type of the metrics, these commands can be categorized into:
 
-## Sysstat utilities installation
+- **CPU**: [mpstat](#mpstat), vmstat
+- **Memory**: free, swapon
+- **Disk I/O**: iostat, lsblk
+- **Processes**: pidstat, ps
 
-The First step in this tutorial is to define environment variables, and install the corresponding package, if necessary.
+## Install Sysstat utilities for Linux
+
+You can install Sysstat utilities (Performance monitoring tools) on a Linux virtual machine (VM) using either a Bash command or [Run Commands feature](/azure/virtual-machines/linux/run-command) with Azure CLI. If you use the Azure CLI commands that provided in this article to install the Sysstat utilities, make sure that the following two envrioment values are set. You must replace the resource group name and the VM name by the actual values.
 
 ```azurecli-interactive
 export MY_RESOURCE_GROUP_NAME="myVMResourceGroup89f292"
@@ -39,12 +39,9 @@ export MY_VM_NAME="myVM89f292"
 ```
 
 > [!NOTE]
-> Some of these commands need to be run as `root` to be able to gather all relevant details.
+> Some of these commands below require root privileges.
 
-> [!NOTE]
-> Some commands are part of the `sysstat` package which might not be installed by default. The package can be easily installed with `sudo apt install sysstat`, `dnf install sysstat` or `zypper install sysstat` for those popular distros.
-
-The full command for installation of the `sysstat` package on some popular Distros is:
+To install the sysstat package on a Linux VM, use the following command:
 
 **Ubuntu:**
 
@@ -55,8 +52,6 @@ sudo apt install sysstat -y
 ```
 
 ### [AZ-CLI](#tab/sysstatcliubuntu)
-
-You could also install this package using the Run-Command extension from Azure CLI, using the following command:
 
 ```azurecli-interactive
 az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "apt install sysstat -y"
@@ -71,8 +66,6 @@ sudo dnf install sysstat -y
 ```
 
 ### [AZ-CLI](#tab/sysstatclirhel)
-
-You could also install this package using the Run-Command extension from Azure CLI, using the following command:
 
 ```azurecli-interactive
 az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts "dnf install sysstat -y"
@@ -96,14 +89,13 @@ az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_
 
 ---
 
-
 ## CPU
 
 ### <a id="mpstat"></a>mpstat
 
-The `mpstat` utility is part of the `sysstat` package. It displays per CPU utilization and averages, which is helpful to quickly identify CPU usage. `mpstat` provides an overview of CPU utilization across the available CPUs, helping identify usage balance and if a single CPU is heavily loaded.
+The `mpstat` command is part of the `sysstat` package. It displays per CPU utilization and averages, which is helpful to identify CPU usage. The `mpstat` provides an overview of CPU utilization across the available CPUs, helping identify usage balance and if a single CPU is heavily loaded.
 
-The full command is:
+Here's an example of how to run `mpstat`:
 
 ### [BASH](#tab/mpstatbash)
 
@@ -112,8 +104,6 @@ mpstat -P ALL 1 2
 ```
 
 ### [AZ-CLI](#tab/mpstatcli)
-
-The following commands can be used if you want to execute it from Azure CLI:
 
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'mpstat -P ALL 1 2')
@@ -124,14 +114,15 @@ echo "$extracted"
 
 ---
 
-The options and arguments are:
+- `-P`: Indicates the processor to display statistics, the ALL argument indicates to display statistics for all the online CPUs in the system.
+- `1`: The first numeric argument specifies the interval (in seconds) at which mpstat should refresh and display new statistics.
+- `2`: The second numeric argument specifies the number of times `mpstat` should refresh and display statistics. In this case, it print 2 reports with 1 second time interval.
 
-* `-P`: Indicates the processor to display statistics, the ALL argument indicates to display statistics for all the online CPUs in the system.
-* `1`: The first numeric argument indicates how often to refresh the display in seconds.
-* `2`: The second numeric argument indicates how many times the data refreshes.
+You can increase the number of times argument to accommodate longer data collection times. Generally, 3 or 5 seconds should be sufficient. For systems with higher core counts, reducing it to 2 seconds can help manage the volume of displayed data.
 
-The number of times the `mpstat` command displays data can be changed by increasing the second numeric argument to accommodate for longer data collection times. Ideally 3 or 5 seconds should suffice, for systems with increased core counts 2 seconds can be used to reduce the amount of data displayed.
-From the output:
+### How to read the output
+
+Here's an example output of `mpstat`:
 
 ```output
 Linux 5.14.0-362.8.1.el9_3.x86_64 (alma9)       02/21/24        _x86_64_        (8 CPU)
@@ -160,42 +151,43 @@ Average:       6   95.65    0.00    4.01    0.00    0.00    0.33    0.00    0.00
 Average:       7   99.67    0.00    0.00    0.00    0.33    0.00    0.00    0.00    0.00    0.00
 ```
 
-There are a couple of important things to note. The first line displays useful information:
+There are a couple of important things need to be noted. The first line provides useful information:
 
-* Kernel and release: `5.14.0-362.8.1.el9_3.x86_64`
-* Hostname: `alma9`
-* Date: `02/21/24`
-* Architecture: `_x86_64_`
-* Total amount of CPUs (this information is useful to interpret the output from other commands): `(8 CPU)`
+- Kernel and release: `5.14.0-362.8.1.el9_3.x86_64`
+- Hostname: `alma9`
+- Date: `02/21/24`
+- Architecture: `_x86_64_`
+- Total amount of CPUs (this information is useful to interpret the output from other commands): `(8 CPU)`
 
-Then the metrics for the CPUs are displayed, to explain each of the columns:
+Then the metrics for the CPUs are displayed. Here is the explanation for each of the columns:
 
-* `Time`: The time the sample was collected
-* `CPU`: The CPU numeric identifier, the ALL identifier is an average for all the CPUs.
-* `%usr`: The percentage of CPU utilization for user space, normally user applications.
-* `%nice`: The percentage of CPU utilization for user space processes with a nice (priority) value.
-* `%sys`: The percentage of CPU utilization for kernel space processes.
-* `%iowait`: The percentage of CPU time spent idle waiting for outstanding I/O.
-* `%irq`: The percentage of CPU time spent serving hardware interrupts.
-* `%soft`: The percentage of CPU time spent serving software interrupts.
-* `%steal`: The percentage of CPU time spent serving other virtual machines (not applicable to Azure due to no overprovisioning of CPU).
-* `%guest`: The percentage of CPU time spent serving virtual CPUs (not applicable to Azure, only applicable to bare metal systems running virtual machines).
-* `%gnice`: The percentage of CPU time spent serving virtual CPUs with a nice value (not applicable to Azure, only applicable to bare metal systems running virtual machines).
-* `%idle`: The percentage of CPU time spent idle, and without waiting for I/O requests.
+* `Time`: Timestamp indicating when the sample was collected.
+* `CPU`: Numeric identifier for the CPU. The identifier `ALL` represents an average across all CPUs.
+* `%usr`: Percentage of CPU utilization by user space processes, typically user applications.
+* `%nice`: Percentage of CPU utilization by user space processes with a nice (priority) value.
+* `%sys`: Percentage of CPU utilization by kernel space processes.
+* `%iowait`: Percentage of CPU time spent idle while waiting for outstanding I/O operations.
+* `%irq`: Percentage of CPU time spent servicing hardware interrupts.
+* `%soft`: Percentage of CPU time spent servicing software interrupts.
+* `%steal`: Percentage of CPU time spent by a virtual machine serving other virtual machines (not applicable to Azure due to lack of CPU overprovisioning).
+* `%guest`: Percentage of CPU time spent by a virtual CPU serving virtual machines (not applicable to Azure; relevant only to bare metal systems running virtual machines).
+* `%gnice`: Percentage of CPU time spent by a virtual CPU with a nice value serving virtual machines (not applicable to Azure; relevant only to bare metal systems running virtual machines).
+* `%idle`: Percentage of CPU time spent idle and not waiting for I/O requests.
 
-#### Things to look out for
+#### Key considerations
 
-Some details to keep in mind when reviewing the output for `mpstat`:
+Key considerations when reviewing the output from `mpstat`:
 
 * Verify that all CPUs are properly loaded and not a single CPU is serving all the load. This information could indicate a single threaded application.
 * Look for a healthy balance between `%usr` and `%sys` as the opposite would indicate more time spent on the actual workload than serving kernel processes.
 * Look for `%iowait` percentages as high values could indicate a system that is constantly waiting for I/O requests.
 * High `%soft` usage could indicate high network traffic.
 
-### `vmstat`
+### <a id="vmstat"></a>vmstat
 
-The `vmstat` utility is widely available in most Linux distributions, it provides high level overview for CPU, Memory, and Disk I/O utilization in a single pane.
-The command for `vmstat` is:
+The `vmstat` utility is widely available in most Linux distributions. it provides high level overview for CPU, Memory, and Disk I/O utilization in a single pane.
+
+Here's an example of how to run `mpstat`:
 
 ### [BASH](#tab/vmstatbash)
 
@@ -204,8 +196,6 @@ vmstat -w 1 5
 ```
 
 ### [AZ-CLI](#tab/vmstatcli)
-
-The following commands can be used if you want to execute it from Azure CLI:
 
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'vmstat -w 1 5')
@@ -216,13 +206,12 @@ echo "$extracted"
 
 ---
 
-The options and arguments are:
-
 * `-w`: Use wide printing to keep consistent columns.
-* `1`: The first numeric argument indicates how often to refresh the display in seconds.
-* `5`: The second numeric argument indicates how many times the data refreshes.
+* `1`: The first numeric argument specifies the interval in seconds between each report. In this case, vmstat will output a report every 1 second.
+* `5`: The second numeric argument specifies the number of reports vmstat should generate. With 5 specified here, vmstat will generate a total of 5 reports.
+### How to read the output
 
-The output:
+Here's an example output of `vmstat`:
 
 ```output
 --procs-- -----------------------memory---------------------- ---swap-- -----io---- -system-- --------cpu--------
@@ -234,7 +223,7 @@ The output:
   15    2            0     19015276          164       175960    0    0     9  8561 3639 15177  73  27   0   0   0
 ```
 
-`vmstat` splits the output in six groups:
+The output is categorized into the following six groups:
 
 * `procs`: statistics for processes.
 * `memory`: statistics for system memory.
@@ -243,11 +232,11 @@ The output:
 * `system`: statistics for context switches and interrupts.
 * `cpu`: statistics for CPU usage.
 
->Note: `vmstat` shows overall statistics for the entire system (that is, all CPUs, all block devices aggregated).
+The output shows overall statistics for the entire system (that is, all CPUs, all block devices aggregated).
 
-#### `procs`
+**procs**
 
-The `procs` section has two columns:
+The **procs** section has two columns:
 
 * `r`: The number of runnable processes in the run queue.
 * `b`: The number of processes blocked waiting for I/O.
@@ -258,21 +247,16 @@ The `r` column indicates the number of processes that are waiting for CPU time t
 
 The `b` column indicates the number of processes waiting to run that are being blocked by I/O requests. A high number in this column would indicate a system that's experiencing high I/O, and processes are unable to run due to other processes waiting to completed I/O requests. Which could also indicate high disk latency.
 
-#### `memory`
+**memory**
 
-The memory section has four columns:
+The memory section has four columns. The values are shown in bytes. This section provides a high level overview of memory usage.
 
 * `swpd`: The amount swap memory used.
 * `free`: The amount of memory free.
 * `buff`: The amount of memory used for buffers.
 * `cache`: The amount of memory used for cache.
 
-> [!NOTE]
-> The values are shown in bytes.
-
-This section provides a high level overview of memory usage.
-
-#### `swap`
+**swap**
 
 The swap section has two columns:
 
@@ -281,17 +265,14 @@ The swap section has two columns:
 
 If high `si` is observed, it might represent a system that is running out of system memory and is moving pages to swap (swapping).
 
-#### `io`
+**io**
 
-The `io` section has two columns:
+The `io` section has two columns. These values are in blocks per second.
 
 * `bi`: The number of blocks received from a block device (reads blocks per second) per second.
 * `bo`: The number of blocks sent to a block device (writes per second) per second.
 
-> [!NOTE]
-> These values are in blocks per second.
-
-#### `system`
+**system**
 
 The `system` section has two columns:
 
@@ -302,7 +283,7 @@ A high number of interrupts per second might indicate a system that is busy with
 
 A high number of context switches might indicate a busy system with many short running processes, there's no good or bad number here.
 
-#### `cpu`
+**cpu**
 
 This section has five columns:
 
@@ -314,7 +295,7 @@ This section has five columns:
 
 The values are presented in percentage. These values are the same as presented by the `mpstat` utility and serve to provide a high level overview of CPU usage. Follow a similar process for "[Things to look out for](#mpstat)" for `mpstat` when reviewing these values.
 
-### `uptime`
+### uptime
 
 Lastly, for CPU related metrics, the `uptime` utility provides a broad overview of the system load with the load average values.
 
