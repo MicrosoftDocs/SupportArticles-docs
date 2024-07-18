@@ -1368,7 +1368,7 @@
     {
       "source_path": "support/browsers/welcome-browsers.md",
       "redirect_url": "/troubleshoot/developer/browsers/welcome-browsers",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/browsers/cannot-add-favorites-in-enhanced-protected-mode.md",
@@ -5038,6 +5038,731 @@
     {
       "source_path": "support/sql/general/end-support-sql-server-2008.md",
       "redirect_url": "/previous-versions/troubleshoot/sql/install/end-support-sql-server-2008",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/32-bit-browser-applications-not-working-as-expected.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/32-bit-browser-applications-not-working-as-expected",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/advanced-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/advanced-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/automatically-detect-settings-enabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/automatically-detect-settings-enabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/cannot-add-favorites-in-enhanced-protected-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/cannot-add-favorites-in-enhanced-protected-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/cannot-change-home-page.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/cannot-change-home-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/cannot-read-pac-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/cannot-read-pac-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/change-homepage-and-search-provider.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/change-homepage-and-search-provider",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/check-ie-version.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/check-ie-version",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/configure-home-page-url-no-effect.md",
+      "redirect_url": "/deployedge/microsoft-edge-policies#startup-home-page-and-new-tab-page-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/customized-settings-in-ieak-overtide-settings-defined-in-ie-maintenance-policy.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/customized-settings-in-ieak-overtide-settings-defined-in-ie-maintenance-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/disable-password-caching.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/disable-password-caching",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/empty-ie-policy-shown-as-winning.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/empty-ie-policy-shown-as-winning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/enhanced-protected-mode-add-on-compatibility.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/enhanced-protected-mode-add-on-compatibility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/how-to-configure-group-policy-preference-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/how-to-configure-group-policy-preference-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/how-to-set-ie-to-open-office-documents-in-office-program.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/how-to-set-ie-to-open-office-documents-in-office-program",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/internet-explorer-11-does-not-download-new-enterprise-mode-site-list-xml.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/internet-explorer-11-does-not-download-new-enterprise-mode-site-list-xml",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/internet-explorer-mode-windows-10.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/internet-explorer-mode-windows-10",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/k-12-assessments-reports-apps-background.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/k-12-assessments-reports-apps-background",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/administration/only-secure-content-is-displayed-message.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/administration/only-secure-content-is-displayed-message",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/cannot-access-websites.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/cannot-access-websites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/change-keep-alive-time-out.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/change-keep-alive-time-out",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/cookies-not-shared-with-office.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/cookies-not-shared-with-office",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/how-ie-downloads-html-files.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/how-ie-downloads-html-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/how-to-prevent-caching.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/how-to-prevent-caching",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/how-to-reset-proxy-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/how-to-reset-proxy-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/internet-explorer-cannot-display-the-webpage-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-cannot-display-the-webpage-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/intranet-options-enabled-automatically.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/intranet-options-enabled-automatically",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/no-internet-connectivity-internet-explorer-not-started.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/no-internet-connectivity-internet-explorer-not-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/one-word-intranet-sites.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/one-word-intranet-sites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/optimize-pac-performance.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/optimize-pac-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/page-cannot-be-displayed-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/page-cannot-be-displayed-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/permanent-cookies-for-weboc-lost.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/permanent-cookies-for-weboc-lost",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/repeatedly-prompted-to-enter-credentials-to-use-proxy-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/repeatedly-prompted-to-enter-credentials-to-use-proxy-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/timeout-events-in-ie-get-fired.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/timeout-events-in-ie-get-fired",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/use-proxy-servers-with-ie.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/use-proxy-servers-with-ie",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/connectivity-navigation/variables-not-persist-between-requests.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/connectivity-navigation/variables-not-persist-between-requests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/apply-property-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/apply-property-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/autocomplete-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/autocomplete-not-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/cannot-pin-local-webpage.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/cannot-pin-local-webpage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/cannot-print-from-web-using-another-user.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/cannot-print-from-web-using-another-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/cursor-style-not-change-when-mouse-pressed.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/cursor-style-not-change-when-mouse-pressed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/error-dst-time-zones.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/error-dst-time-zones",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/gpu-hardware-acceleration.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/gpu-hardware-acceleration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/hidden-text-can-copy-from-ie.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/hidden-text-can-copy-from-ie",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/how-to-set-fullscreen.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/how-to-set-fullscreen",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/how-to-set-zoom-level.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/how-to-set-zoom-level",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/microsoft-store-app-does-not-open.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/microsoft-store-app-does-not-open",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/new-window-not-respect-zoom-level.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/new-window-not-respect-zoom-level",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/rss-feeds-not-listed-or-cannot-subscribe.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/rss-feeds-not-listed-or-cannot-subscribe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/core-features/spellcheck-and-autocorrect-not-available-win7.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/core-features/spellcheck-and-autocorrect-not-available-win7",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/activex-not-loaded-modified-codebase.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/activex-not-loaded-modified-codebase",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/add-in-shows-behind-main-window.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/add-in-shows-behind-main-window",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/add-ons-intercept-wm-close-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/add-ons-intercept-wm-close-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/animated-gif-not-animated-separate-instances.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/animated-gif-not-animated-separate-instances",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/browser-default-action-ctrlp-cannot-prevented.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/browser-default-action-ctrlp-cannot-prevented",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/cannot-download-files-from-secure-websites.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/cannot-download-files-from-secure-websites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/cannot-open-in-new-tab-or-window.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/cannot-open-in-new-tab-or-window",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/cannot-return-same-dispid-for-same-property.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/cannot-return-same-dispid-for-same-property",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/cannot-visit-ftp-sites.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/cannot-visit-ftp-sites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/compatibility-view-for-trusted-sites.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/compatibility-view-for-trusted-sites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/connect-to-a-running-instance.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/connect-to-a-running-instance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/css-styles-webpage-renders-wrongly.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/css-styles-webpage-renders-wrongly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/div-tag-hundred-relative-height-not-resized.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/div-tag-hundred-relative-height-not-resized",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/dot-net-control-not-load-in-internet-zone.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/dot-net-control-not-load-in-internet-zone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/existing-named-window-cannot-be-navigated.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/existing-named-window-cannot-be-navigated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/fails-to-load-vbd-documents.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/fails-to-load-vbd-documents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/ftp-with-cern-based-proxy-using-wininet-api.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/ftp-with-cern-based-proxy-using-wininet-api",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/how-to-hide-clear-button-ie-10.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/how-to-hide-clear-button-ie-10",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/ie-document-modes-faq.yml",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/ie-document-modes-faq.yml",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/ie-runtime-errors.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/ie-runtime-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/iframe-content-on-top-scrollbar.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/iframe-content-on-top-scrollbar",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/invalid-html-in-design-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/invalid-html-in-design-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/named-browser-window-cannot-be-found.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/named-browser-window-cannot-be-found",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/nothing-happens-for-clicking-links.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/nothing-happens-for-clicking-links",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/onload-event-not-occur-if-back.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/onload-event-not-occur-if-back",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/permission-denied-for-location-object-properties.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/permission-denied-for-location-object-properties",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/raise-file-download-for-mime-types.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/raise-file-download-for-mime-types",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/scrollheight-return-incorrect-values.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/scrollheight-return-incorrect-values",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/silverlight-addons-not-verified.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/silverlight-addons-not-verified",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/table-text-overlaps-borders-or-missing.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/table-text-overlaps-borders-or-missing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/text-changed-event-not-fire-with-autocomplete.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/text-changed-event-not-fire-with-autocomplete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/textoverlow-ellipsis-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/textoverlow-ellipsis-not-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/third-party-products-break.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/third-party-products-break",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/transfer-bookmarks-from-firefox-to-ie.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/transfer-bookmarks-from-firefox-to-ie",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/troubleshoot-ie-zonemapping-process-group-policy.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/troubleshoot-ie-zonemapping-process-group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/troubleshoot-missing-graphic-icons.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/troubleshoot-missing-graphic-icons",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/troubleshoot-online-games-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/troubleshoot-online-games-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/troubleshoot-script-errors.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/troubleshoot-script-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/unicode-bidi-isolation-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/unicode-bidi-isolation-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/updatepanel-async-postbacks-slow.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/updatepanel-async-postbacks-slow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/using-ftp-wininet-apis-in-vb.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/using-ftp-wininet-apis-in-vb",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/value-of-windowopen-not-reflected.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/value-of-windowopen-not-reflected",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/vml-not-shown-in-strict-standards-compliant.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/vml-not-shown-in-strict-standards-compliant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/webbrowser-control-share-global-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/webbrowser-control-share-global-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/webpage-fails-to-get-focus-ie-9.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/webpage-fails-to-get-focus-ie-9",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/web-page-with-frames-wrongly-shown.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/web-page-with-frames-wrongly-shown",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/wininet-not-supported-in-services.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/wininet-not-supported-in-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/wrong-character-set-for-html-page.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/wrong-character-set-for-html-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/wrong-table-layout-in-standards-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/wrong-table-layout-in-standards-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/development-website/xmlhttprequest-not-correctly-send-formdata.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/development-website/xmlhttprequest-not-correctly-send-formdata",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/general/collected-info-by-data-collector.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/general/collected-info-by-data-collector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/general/edge-icon-show-for-url-shortcut.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/general/edge-icon-show-for-url-shortcut",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/general/ie-diagnostics-collected-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/general/ie-diagnostics-collected-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/general/ie-wpad-diagnostic.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/general/ie-wpad-diagnostic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/general/information-about-ie-version.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/general/information-about-ie-version",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/installation/create-all-inclusive-deploy-package.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/installation/create-all-inclusive-deploy-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/installation/disable-internet-explorer-windows.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/installation/disable-internet-explorer-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/installation/how-to-repair-or-reinstall-ie.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/installation/how-to-repair-or-reinstall-ie",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/installation/how-to-successfully-install-internet-explorer-9.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/installation/how-to-successfully-install-internet-explorer-9",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/installation/ie-installation-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/installation/ie-installation-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/installation/install-ie-9-not-apply-icons-or-customizations.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/installation/install-ie-9-not-apply-icons-or-customizations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/installation/prerequisites-for-installing-ie-9.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/installation/prerequisites-for-installing-ie-9",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/installation/prerequisite-updates-for-ie-11.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/installation/prerequisite-updates-for-ie-11",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/installation/sysprep-fail-after-ie-10-installed.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/installation/sysprep-fail-after-ie-10-installed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/installation/what-to-do-if-you-cannot-uninstall-internet-explorer-9.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/installation/what-to-do-if-you-cannot-uninstall-internet-explorer-9",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/apps-access-admin-web-cache.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/apps-access-admin-web-cache",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/cannot-display-https-site.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/cannot-display-https-site",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/cannot-open-certain-files.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/cannot-open-certain-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/cannot-sign-in-to-vsts.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/cannot-sign-in-to-vsts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/cannot-turn-off-enhanced-security.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/cannot-turn-off-enhanced-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/cannot-view-secure-web-sites.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/cannot-view-secure-web-sites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/csp-shows-loading-for-certificate-request.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/csp-shows-loading-for-certificate-request",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/description-of-cryptography-api-proxy-from-crl.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/description-of-cryptography-api-proxy-from-crl",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/enhanced-security-configuration-faq.yml",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/enhanced-security-configuration-faq.yml",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/how-to-set-java-security.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/how-to-set-java-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/ie-security-zones-registry-entries.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/ie-security-zones-registry-entries",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/information-about-the-unsafe-file-list.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/information-about-the-unsafe-file-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/name-and-password-not-supported-in-website-address.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/name-and-password-not-supported-in-website-address",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/prompt-for-username-and-password.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/prompt-for-username-and-password",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/smartcard-pin-behind-dialog-box.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/smartcard-pin-behind-dialog-box",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/security-privacy/steps-to-identify-and-protect-from-spoofed-web-sites.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/steps-to-identify-and-protect-from-spoofed-web-sites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/cannot-install-ie-on-hybrid-graphics-system.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/cannot-install-ie-on-hybrid-graphics-system",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/decreased-rendering-performance-with-zoom-level.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/decreased-rendering-performance-with-zoom-level",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/document-modes-slow-rendering.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/document-modes-slow-rendering",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/hangs-when-access-to-smartscreen-blocked.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/hangs-when-access-to-smartscreen-blocked",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/ie-11-stops-responding-selecting-strings-selection-gripper.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/ie-11-stops-responding-selecting-strings-selection-gripper",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/ie-flickers-with-hybrid-graphics.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/ie-flickers-with-hybrid-graphics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/ie-opens-flashes-and-closes-immediately-when-starting.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/ie-opens-flashes-and-closes-immediately-when-starting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/memory-usage-rises-with-iframes.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/memory-usage-rises-with-iframes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/preparing-support-calls-browser-crashes.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/preparing-support-calls-browser-crashes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/slow-browsing-internet-explorer.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/slow-browsing-internet-explorer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/typed-characters-slow-or-lost.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/typed-characters-slow-or-lost",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/stability-performance/we-were-unable-to-return-you-to-your-webpage-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/stability-performance/we-were-unable-to-return-you-to-your-webpage-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/welcome-browsers.yml",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/welcome-browsers",
       "redirect_document_id": false
     }
   ]

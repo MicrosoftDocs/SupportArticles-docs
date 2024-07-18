@@ -21,8 +21,6 @@
 - name: System Center
   href: system-center/index.yml
 - name: Welcome
-  href: developer/browsers/welcome-browsers.yml
-- name: Welcome
   href: azure/index.yml
 - name: Welcome
   href: sql/welcome-sql-server.yml
