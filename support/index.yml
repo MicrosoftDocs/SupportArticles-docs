@@ -70,11 +70,6 @@ productDirectory:
     imageSrc: "media/hub-landing/dynamics-365.svg"
     summary: Troubleshooting articles for Microsoft Dynamics 365
     url: dynamics-365/index.yml
-      
-  - title: Microsoft Edge and Internet Explorer
-    imageSrc: "media/hub-landing/Edge.jpg"
-    summary: Troubleshooting articles for Microsoft Edge and Internet Explorer
-    url: developer/browsers/welcome-browsers.yml
 
   - title: Microsoft Power Platform
     imageSrc: "media/hub-landing/microsoft.png"
