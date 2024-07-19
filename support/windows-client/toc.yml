@@ -919,6 +919,8 @@ items:
       href: ./shell-experience/disable-security-tab-use-group-policy.md
     - name: How to use the Windiff.exe Utility
       href: ./shell-experience/how-to-use-windiff-utility.md
+    - name: Recycle Bin is corrupted
+      href: ./shell-experience/recycle-bin-corrupted.md
     - name: Renaming a network folder fails
       href: ./shell-experience/renaming-a-network-folder-fails.md
     - name: Support of whitespace characters in file and folder names
