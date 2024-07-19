@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - Editing\Formulae
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
@@ -19,7 +20,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Excel 2002 Standard Edition
   - Microsoft Excel 2000 Standard Edition
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # SUMIF, COUNTIF, and COUNTBLANK functions return "#VALUE!" Error

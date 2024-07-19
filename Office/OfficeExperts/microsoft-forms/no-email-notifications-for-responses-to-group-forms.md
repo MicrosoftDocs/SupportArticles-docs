@@ -16,7 +16,7 @@ ms.author: luche
 ms.reviwer: zakirh
 appliesto: 
   - Microsoft Forms
-ms.date: 02/15/2023
+ms.date: 06/06/2024
 ---
 # No email notifications for responses to Group Forms
 

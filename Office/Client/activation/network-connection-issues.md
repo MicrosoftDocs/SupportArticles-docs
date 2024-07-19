@@ -9,6 +9,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Errors\We're having trouble activating Office
   - CSSTroubleshoot
   - CI 157765
   - CI 162387
@@ -17,7 +19,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Microsoft 365 Apps activation network connection issues

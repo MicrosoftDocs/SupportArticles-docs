@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # "The field is too small to accept the amount of data you attempted to add" error when running a query
 

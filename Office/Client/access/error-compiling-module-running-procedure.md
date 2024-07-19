@@ -19,7 +19,7 @@ appliesto:
   - Access 2010
   - Microsoft Office Access 2007
 ms.reviewer: aldox
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Error when you compile a module or run a procedure in Access
 

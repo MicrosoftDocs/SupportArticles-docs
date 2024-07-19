@@ -14,7 +14,7 @@ ms.reviewer: bradhugh
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/25/2024
 ---
 
 # Error when you try to enable or disable an archive mailbox for an Exchange Online user or move a mailbox to an on-premises environment
@@ -54,7 +54,7 @@ If management tasks are affected by the move requests, follow these steps:
 
    If the "Display Name" placeholder matches the mailbox for which you want to enable or disable archiving, a mailbox move is in progress. The move is preventing the change from being made.
 1. Examine the output, and then do one of the following, as appropriate:
-   - If the Status is **Queued** or **InProgre**, wait for the move to finish. This should occur in one or two days. If you can't wait that long, remove the move request by running the following command:
+   - If the Status is **Queued** or **InProgress**, wait for the move to finish. This should occur in one or two days. If you can't wait that long, remove the move request by running the following command:
 
         ```powershell
         Remove-MoveRequest -Identity IdentityOfFailedRequest

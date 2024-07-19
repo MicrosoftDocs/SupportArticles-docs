@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Editing\Formulae
   - CSSTroubleshoot
 appliesto: 
   - Excel 2007
@@ -17,7 +18,7 @@ appliesto:
   - Excel 2002
   - Excel 2000
   - Excel 97
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # The result is "FALSE" when you use the ISBLANK() function in an Excel spreadsheet

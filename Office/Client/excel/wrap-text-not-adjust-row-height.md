@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: clayj
 ms.custom: 
+  - Editing\RowsOrColumns
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -16,7 +17,7 @@ appliesto:
   - Microsoft Office Excel 2003
   - Microsoft Office Excel 2007
   - Excel 2010Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Wrap text does not adjust row height in Excel

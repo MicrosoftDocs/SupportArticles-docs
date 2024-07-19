@@ -9,13 +9,14 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Editing\Charts
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Excel 2010
   - Microsoft Office Excel 2007
 ms.reviewer: 
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Chart trendline formula is inaccurate in Excel
 

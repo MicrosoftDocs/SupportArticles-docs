@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: lauraho
 ms.custom: 
+  - DIA
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -16,7 +17,7 @@ appliesto:
   - Microsoft Office Excel 2003
   - Microsoft Office Excel 2007
   - Excel 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Download the latest online Excel Viewer

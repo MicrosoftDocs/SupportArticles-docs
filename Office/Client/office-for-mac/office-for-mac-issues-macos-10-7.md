@@ -1,6 +1,6 @@
 ---
-title: Known issues with Office for Mac on MacOS 10.7 (Lion) and Higher
-description: Lists Office for Mac issues under MacOS 10.7 (Lion).
+title: Known issues with Office for Mac on macOS 10.7 (Lion) and Higher
+description: Lists Office for Mac issues under macOS 10.7 (Lion).
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -9,20 +9,21 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Office for Mac 2004
   - Office for Mac 2008
   - Office for Mac 2011
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
-# Known issues with Office for Mac on MacOS 10.7 (Lion) and Higher
+# Known issues with Office for Mac on macOS 10.7 (Lion) and Higher
 
 ## Summary
 
-This article discusses known issues that may occur with Office for Mac applications on MacOS 10.7 (Lion).
+This article discusses known issues that may occur with Office for Mac applications on macOS 10.7 (Lion).
 
 > [!NOTE]
 > - Microsoft has been working with Apple from the early days of MacOS 10.7 (Lion). Through this partnership, many issues were addressed leading up to the Lion release. Microsoft will continue to work closely with Apple to address problems that may occur with Office for Mac 2008 and 2011 and Lion OS.
@@ -36,22 +37,22 @@ There are two major Office for Mac issues Microsoft is aware of running on Lion:
     > [!NOTE]
     > Microsoft will resolve this issue in an upcoming update to Communicator for Mac.
 
-2. Office for Mac 2004 will not run on Lion.
+2. Office for Mac 2004 won't run on Lion.
     > [!NOTE]
     > Previous MacOS versions supported Rosetta, an Apple Mac OSX bridge technology that enabled applications such as Office for Mac 2004 to run on the latest chip architecture for Mac. Because Lion no longer supports Rosetta, applications that relied on it will no longer function under the new MacOS.
 
-Here is a list of other known issues that Microsoft is currently investigating. These issues will likely only be encountered in specific situations or configurations:
+Here's a list of other known issues that Microsoft is currently investigating. These issues will likely only be encountered in specific situations or configurations:
 
 Excel 2008 or 2011
 
 - Excel may crash when you move a sheet from one workbook to another workbook.   
-- Excel 2011: MSQuery for English will work on Lion. However, it will not work on other language versions of Excel 2011 on Lion.   
-- Excel 2008: MSQuery will not work on any version of Excel 2008 on Lion.   
-- The date format may display the year as 2 digits instead of 4 digits.   
+- Excel 2011: MSQuery for English works on Lion. However, it will not work on other language versions of Excel 2011 on Lion.   
+- Excel 2008: MSQuery won't work on any version of Excel 2008 on Lion.   
+- The date format may display the year as two digits instead of four digits.   
 
 Word 2008 or 2011
 
-- The date format may display the year as 2 digits insead of 4 digits.   
+- The date format may display the year as two digits instead of four digits.   
 
 PowerPoint 2008 or 2011
 
@@ -71,10 +72,10 @@ Office 2008 or 2011
 
 Web Applications
 
-- May not correctly open the file in the rich client application. The following workaround will work with Safari or Firefox:
+- May not correctly open the file in the rich client application. The following workaround works with Safari or Firefox:
   1. Quit Safari or Firefox.   
   2. On the **Go** menu, click **Applications**.   
   3. Select Safari or Firefox.   
   4. On the **File** menu, click **Get Info**.   
   5. Select the check box for **Open in 32-bit mode**.   
-  6. Quit and open Safari or Firefox.   
+  6. Quit and open Safari or Firefox.

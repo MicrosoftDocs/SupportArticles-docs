@@ -175,6 +175,8 @@
           href: ../calendars/cannot-view-another-user-calendar-free-busy-information.md
         - name: Can't view user's free/busy information in Scheduling Assistant
           href: ../calendars/no-free-busy-information-retrieved.md
+        - name: Default calendar isn't returned by Graph REST API
+          href: ../calendars/default-calendar-not-returned-by-graph-rest-api.md
         - name: Delegate can't accept meeting request in OWA
           href: ../calendars/delegate-cannot-accept-meeting-request-using-owa.md
         - name: Delegate only sees free/busy if manager in another forest
@@ -259,10 +261,6 @@
           href: ../email-delivery/imceaex-ndr.md
         - name: Important notice for Microsoft 365
           href: ../email-delivery/office-365-notice.md
-        - name: Inbox rule to forward emails doesn't work
-          href: ../email-delivery/inbox-rule-to-forward-messages-not-work.md
-        - name: Inbox redirection rule not working
-          href: ../email-delivery/inbox-redirect-rule-not-working.md
         - name: Issues with printers, scanners, and LOB apps that send email
           href: ../email-delivery/fix-issues-with-printers-scanners-and-lob-applications-that-send-email-using-off.md
         - name: Length of the property is too long
@@ -611,6 +609,8 @@
           href: ../public-folders/public-folder-not-send-read-receipt.md
         - name: Restored folders cause a migration batch failure
           href: ../public-folders/public-folder-migration-batch-error.md
+        - name: Security group can't access a public folder
+          href: ../public-folders/security-group-cannot-access-public-folder.md
         - name: Show up in address list after removing
           href: ../public-folders/public-folders-display-gal-clean-up.md
         - name: SizeExceeds error in migration of public folders

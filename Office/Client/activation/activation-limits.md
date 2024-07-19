@@ -9,13 +9,15 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - SubscriptionAndLicensing\Office apps install/activate issues due to subscription/licensing
   - CSSTroubleshoot
   - CI 157762
 search.appverid: 
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Microsoft 365 Apps activation limits

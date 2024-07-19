@@ -17,7 +17,7 @@ appliesto:
   - Access 2019
   - Access 2016
   - Access 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Access linked table to SQL Server database returns "#Deleted"

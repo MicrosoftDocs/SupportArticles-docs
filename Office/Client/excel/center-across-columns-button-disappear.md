@@ -9,13 +9,14 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Editing\Functions
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Excel 2000
   - Microsoft Excel 2002
   - Microsoft Office Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # The "Center Across Columns" button doesn't appear on the toolbar or on the Ribbon in Excel

@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Access 2002 Standard Edition
   - Microsoft Access 2000 Standard Edition
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Access may stop responding when you try to create an MDE, ACCDE, or ADE file

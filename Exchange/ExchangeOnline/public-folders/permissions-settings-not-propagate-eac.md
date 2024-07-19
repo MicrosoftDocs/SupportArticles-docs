@@ -20,7 +20,7 @@ appliesto:
   - Exchange Server 2019
 search.appverid: 
   - MET150
-ms.date: 01/24/2024
+ms.date: 07/17/2024
 ---
 # Public folder permissions and settings don't propagate in EAC
 
@@ -81,10 +81,10 @@ To work around this issue, follow these steps:
    ```
 
    **Note**: Replace \<\PF> with your parent public folder identity.
-1. Apply read and unread information tracking on the child public folders by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
+1. Apply read and unread information tracking on the child public folders by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True** or **False** (depending on your requirement):
 
    ```powershell
-   Get-PublicFolder "<\PF>" -Recurse | foreach {Set-PublicFolder -Identity $_.identity -PerUserReadStateEnabled $True}
+   Get-PublicFolder "<\PF>" -Recurse -ResultSize Unlimited | Set-PublicFolder -PerUserReadStateEnabled:<$True or $False>
    ```
 
    **Note**: Replace \<\PF> with your parent public folder identity.
@@ -105,7 +105,7 @@ To work around this issue, follow these steps:
 2. Run the following cmdlet to apply age limit settings to subfolders:
 
    ```powershell
-   Get-PublicFolder "<\ParentPF>" -Recurse | foreach {Set-PublicFolder -Identity $_.identity -AgeLimit "<newagelimit>"}
+   Get-PublicFolder "<\ParentPF>" -Recurse -ResultSize Unlimited | Set-PublicFolder -AgeLimit <newagelimit>
    ```
   
    **Note**: Replace \<\ParentPF> with your parent public folder identity.
@@ -113,7 +113,7 @@ To work around this issue, follow these steps:
    For example, the following command applies an age limit of 10 days to all subfolders under Root1:
 
    ```powershell
-   Get-PublicFolder \Root1 -Recurse | foreach {Set-PublicFolder -Identity $_.identity -AgeLimit "10.00:00:00"}
+   Get-PublicFolder \Root1 -Recurse -ResultSize Unlimited | foreach {Set-PublicFolder -Identity $_.identity -AgeLimit "10.00:00:00"}
    ```
 
 ## RetainDeletedItemsFor settings not applied to subfolders
@@ -130,7 +130,7 @@ To work around this issue, follow these steps:
 2. Run the following cmdlet to apply RetainDeletedItemsFor settings to subfolders:
 
    ```powershell
-   Get-PublicFolder "<\ParentPF>" -Recurse | foreach {Set-PublicFolder -Identity $_.identity -RetainDeletedItemsFor "<newRetainDeletedItemsFor>"}
+   Get-PublicFolder "<\ParentPF>" -Recurse  -ResultSize Unlimited | Set-PublicFolder -RetainDeletedItemsFor "<newRetainDeletedItemsFor>"
    ```
 
    **Note**: Replace \<\ParentPF> with your parent public folder identity.
@@ -138,7 +138,7 @@ To work around this issue, follow these steps:
    For example, the following command applies RetainDeletedItemsFor 10 days to all subfolders under Root1:
 
    ```powershell
-   Get-PublicFolder \Root1 -Recurse | foreach {Set-PublicFolder -Identity $_.identity -RetainDeletedItemsFor "10.00:00:00"}
+   Get-PublicFolder \Root1 -Recurse -ResultSize Unlimited | Set-PublicFolder -RetainDeletedItemsFor "10.00:00:00"
    ```
    
 ## Status

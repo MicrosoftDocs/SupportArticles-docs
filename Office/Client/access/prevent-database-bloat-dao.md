@@ -17,7 +17,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to prevent database bloat after you use Data Access Objects (DAO)
@@ -79,4 +79,4 @@ When you create a Recordset (or a QueryDef) object in code, explicitly close the
     
     ```
 
-4. Run the subCloseObjects routine.   
+4. Run the subCloseObjects routine.

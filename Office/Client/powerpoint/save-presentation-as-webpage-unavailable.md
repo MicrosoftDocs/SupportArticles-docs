@@ -9,12 +9,14 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Save
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - PowerPoint 2010
 ms.reviewer: kemille
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # The save as webpage options are not available in PowerPoint 2010
 

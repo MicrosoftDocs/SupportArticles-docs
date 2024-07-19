@@ -21,7 +21,7 @@ appliesto:
   - Access 2007
   - Access 2003
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # The data in a linked Excel spreadsheet column is truncated to 255 characters in an Access database

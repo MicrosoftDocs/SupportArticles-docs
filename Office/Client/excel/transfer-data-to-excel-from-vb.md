@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 ms.reviewer: grege
 search.appverid: 
@@ -16,7 +17,7 @@ appliesto:
   - Excel 2010
   - Office Excel 2007
   - Office Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Methods for transferring data to Excel from Visual Basic
@@ -406,4 +407,4 @@ Text1.LinkMode = 0
 When using LinkPoke with Excel, you specify the range in row-column (R1C1) notation for the LinkItem. If you are poking data to multiple cells, you can use a string where the columns are delimited by tabs and rows are delimited by carriage returns.
 
 When you use LinkExecute to ask Excel to carry out a command, you must give Excel the command in the syntax of the Excel Macro Language (XLM). The XLM documentation is not included with Excel versions 97 and later.  
-DDE is not a recommended solution for communicating with Excel. Automation provides the greatest flexibility and gives you more access to the new features that Excel has to offer.  
+DDE is not a recommended solution for communicating with Excel. Automation provides the greatest flexibility and gives you more access to the new features that Excel has to offer.

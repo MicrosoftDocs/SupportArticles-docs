@@ -10,10 +10,11 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 appliesto: 
   - Excel 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to convert Excel column numbers into alphabetical characters

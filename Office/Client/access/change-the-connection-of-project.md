@@ -17,7 +17,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to programmatically change the connection of an Access project
@@ -99,4 +99,4 @@ MsgBox bCheckConnection
 
    -OR-
 
-   If you did not supply the correct parameters, you receive the error message. When you click **OK** to the error message, you get the message box that displays False.   
+   If you did not supply the correct parameters, you receive the error message. When you click **OK** to the error message, you get the message box that displays False.

@@ -3,7 +3,7 @@ title: Using printer fonts in Word
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 09/01/2020
+ms.date: 06/06/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -13,6 +13,8 @@ search.appverid:
 appliesto: 
   - Microsoft Word
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Printing
   - CI 122387
   - CSSTroubleshoot
 ms.reviewer: sergeym

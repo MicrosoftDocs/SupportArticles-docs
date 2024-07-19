@@ -8,13 +8,15 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: V-ChaseC
 appliesto: 
   - Office 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # You must accept the Office End User License Agreement every time that you start an Office program
@@ -75,4 +77,3 @@ To work around this behavior, follow these steps:
 
 8. Repeat steps 2 through 4, and then remove the **Full Control** permission that you gave to **Users (Computer_name\Users)** in step 5. To do this, locate **Users (Computer_name\Users)**, and then click to clear the **Allow** check box for the **Full Control** permission.    
 9. Click OK, and then exit Registry Editor.
-

@@ -9,20 +9,21 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Excel 2007
   - Excel 2003
   - Excel 2000
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Hide sheets and use the xlVeryHidden constant in a macro
 
 ## Summary
 
-In Microsoft Excel, you can hide sheets in a workbook so that a user cannot see them. You can hide any type of sheet in a workbook, but you must always leave at least one sheet visible.
+In Microsoft Excel, you can hide sheets in a workbook so that a user can't see them. You can hide any type of sheet in a workbook, but you must always leave at least one sheet visible.
 
 ## More information
 

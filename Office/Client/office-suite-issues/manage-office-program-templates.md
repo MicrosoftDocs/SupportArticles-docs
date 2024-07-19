@@ -8,6 +8,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Templates
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
@@ -15,7 +17,7 @@ ms.reviewer: of12sstr
 appliesto: 
   - Office 2010
   - Office 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to manage templates in 2007 Office programs and in 2010 Office programs

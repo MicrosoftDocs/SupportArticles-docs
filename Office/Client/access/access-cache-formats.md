@@ -18,7 +18,7 @@ appliesto:
   - Access 2013
   - Access 2010
   - Microsoft Office Access 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Access cache formats for SharePoint lists and document libraries

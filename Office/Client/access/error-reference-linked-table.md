@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # "Cannot find the input table or query" or "record source doesn't exist" error when using Access
 
@@ -51,12 +51,12 @@ Error message 3
 
 ## Cause
 
-You may receive this error message if Access cannot find the table or the query in the database, if a link points to an external file that does not exist, or if the external file has been moved to a new location. This error can also occur if a deleted or renamed table or query is referenced on the **Lookup** tab of another table.
+You may receive this error message if Access can't find the table or the query in the database, if a link points to an external file that doesn't exist, or if the external file has been moved to a new location. This error can also occur if a deleted or renamed table or query is referenced on the **Lookup** tab of another table.
 
 ## Resolution
 
 To troubleshoot this behavior, do the following:
 
-- Check to ensure that the table or query exists. If it does not exist, you can remove all references to it, or if it is a missing table, reimport or relink the table. If it is a missing query, reimport or re-create the query. Often the `RecordSource` property of a form or a report contains a reference to a table or a query whose name has changed or which has been deleted.
+- Check to ensure that the table or query exists. If it doesn't exist, you can remove all references to it, or if it's a missing table, reimport or relink the table. If it's a missing query, reimport or re-create the query. Often the `RecordSource` property of a form or a report contains a reference to a table or a query whose name has changed or which has been deleted.
 - If the table or query exists, it is likely that there is a syntax error or a spelling error in the reference to it. If so, correct the syntax error or spelling error in the reference.
 - When you try to open a linked table, the source table may not be in the path that you specified when it was first linked. If you have moved the file, you can use the Linked Table Manager to update the link information.

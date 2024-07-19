@@ -21,7 +21,7 @@ appliesto:
   - Microsoft Office Access 2003
   - Microsoft Office Access 2000
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # You may receive an error message when you try to insert a new record in a table that contains an Autonumber field in Access
 
