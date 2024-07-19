@@ -143,7 +143,7 @@ The most common cause is having a non-linked attribute with a big number of valu
 >
 > For more information, see  
 >
-> - [What's new in Windows Server 2025 Insiders Preview | Microsoft Learn](/windows-server/get-started/whats-new-windows-server-2025)   
+> - [What's new in Windows Server 2025 (preview)](/windows-server/get-started/whats-new-windows-server-2025)   
 > - [Database 32k pages for Active Directory (preview)](/windows-server/identity/ad-ds/32k-pages-optional-feature)
 
 On the source server, when you use a tool like LDP or run the `repadmin /showattr /allvalues /extended` command on the object, the output resembles the following:
