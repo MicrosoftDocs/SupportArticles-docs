@@ -145,11 +145,11 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
     To configure the network binding order:
    
    1. Quit any programs that are running.
-   2. Right-click Network Neighborhood, and then click Properties.      
-   3. Click the Bindings tab. In the Show Bindings For box, click All Services.      
+   2. Right-click **Network Neighborhood**, and then select **Properties**.      
+   3. Select the **Bindings** tab. In the **Show Bindings For** box, select **All Services**.      
    4. Double-click each listed service to expand it.      
    5. Under each service, double-click each protocol to expand it.      
-   6. Under each protocol, there's a number of network adapter icons. Click the icon for your network adapter, and then click Move Up until the network adapter is at the top of the list. Leave the "Remote Access WAN Wrapper" entries in any order under the network adapter(s).
+   6. Under each protocol, there's a number of network adapter icons. Select the icon for your network adapter, and then select **Move Up** until the network adapter is at the top of the list. Leave the **Remote Access WAN Wrapper** entries in any order under the network adapter(s).
    
       > [!NOTE]
       > If you have more than one network adapter, place the internal adapter (with Internet Protocol [IP] address 10.0.0.2 by default on a Small Business Server network) at the top of the binding order, with the external adapter(s) directly below the internal adapter.
@@ -163,8 +163,8 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
       [n] Remote Access WAN Wrapper  
       
    7. Repeat step f for each service in the dialog box.      
-   8. After you've verified the settings for each service, click All Protocols in the Show Bindings For box. The entry for "Remote Access WAN Wrapper" doesn't have a network adapter listed. Skip this item. Repeat steps 4 through 6 for each remaining protocol.    
-   9. After you've verified that the bindings are set correctly for all services and protocols, click OK. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Click Yes.
+   8. After you've verified the settings for each service, select **All Protocols** in the **Show Bindings For** box. The entry for **Remote Access WAN Wrapper** doesn't have a network adapter listed. Skip this item. Repeat steps d through f for each remaining protocol.    
+   9. After you've verified that the bindings are set correctly for all services and protocols, select OK. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Select **Yes**.
       
 ## Data collection
 
