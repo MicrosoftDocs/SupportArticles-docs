@@ -1,12 +1,12 @@
 ---
 title: Active Directory replication error 8304
 description: Provides a resolution for troubleshooting AD Replication error 8304, which is The maximum size on an object has been exceeded.
-ms.date: 12/26/2023
+ms.date: 07/19/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, arrenc, johnbay, herbertm, joflore, v-lianna
+ms.reviewer: kaushika, arrenc, johnbay, herbertm, joflore, v-lianna, sagiv
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Active Directory replication error 8304: "The maximum size on an object has been exceeded"
@@ -139,10 +139,12 @@ The most common cause is having a non-linked attribute with a big number of valu
 
   
 > [!NOTE]
-> In a Forest where all domain controllers are running Windows Server 2025 or later and both Forest and Domain Functional Levels are set to Windows Server 2025 or later with the [Database 32k pages optional feature is enabled](/windows-server/identity/ad-ds/enable-32k-pages-optional-feature?tabs=desktop), multi-valued attributes can now hold approximately 3,200 values. Therefore, the chances of encountering the problem are significantly reduced.
->More information:  
->[What's new in Windows Server 2025 Insiders Preview | Microsoft Learn](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows-server%2Fget-started%2Fwhats-new-windows-server-insiders-preview&data=05%7C02%7Csagiv%40microsoft.com%7Cd94690399bcc4d4b235608dc62df3421%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638493958022016106%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=wlWuG%2B2vwO3%2B%2BkEqy1C62ZIupSuBsilY58eGBV1o61A%3D&reserved=0)   
->[Database 32k pages for Active Directory (preview)](/windows-server/identity/ad-ds/32k-pages-optional-feature)
+> In a forest where all domain controllers are running Windows Server 2025 or later and both forest and Domain Functional Levels are set to Windows Server 2025 or later with the [Database 32k pages optional feature is enabled](/windows-server/identity/ad-ds/enable-32k-pages-optional-feature?tabs=desktop), multi-valued attributes can now hold approximately 3,200 values. Therefore, the chances of encountering the problem are significantly reduced.
+>
+> For more information, see  
+>
+> - [What's new in Windows Server 2025 Insiders Preview | Microsoft Learn](/windows-server/get-started/whats-new-windows-server-2025)   
+> - [Database 32k pages for Active Directory (preview)](/windows-server/identity/ad-ds/32k-pages-optional-feature)
 
 On the source server, when you use a tool like LDP or run the `repadmin /showattr /allvalues /extended` command on the object, the output resembles the following:
 
