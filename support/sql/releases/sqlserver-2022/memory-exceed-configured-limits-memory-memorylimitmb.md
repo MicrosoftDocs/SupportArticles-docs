@@ -18,8 +18,8 @@ SQL Server on Linux might not comply with the memory boundaries that are set by 
 
 This problem is fixed in the following cumulative updates for SQL Server:
 
-[Cumulative Update 14 for SQL Server 2022](cumulativeupdate14.md)
-[Cumulative Update 27 for SQL Server 2019](sqlserver-2019/cumulativeupdate27.md)
+- [Cumulative Update 14 for SQL Server 2022](cumulativeupdate14.md)
+- [Cumulative Update 27 for SQL Server 2019](../sqlserver-2019/cumulativeupdate27.md)
 
 > [!NOTE]
 > If you use Active Directory Authentication together with SQL Server on Linux, you also need to update the version of Kerberos v5 (krb5) packages on Linux to 1.19 or later versions to resolve a `defcred` leak in `krb5 gss_inquire_cred()`.
@@ -32,8 +32,8 @@ After installing SQL Server 2022 Cumulative Update 14 (CU14) or SQL Server 2019 
 
 Each new cumulative update for SQL Server contains all the hotfixes and security fixes that were in the previous build. We recommend that you install the latest build for your version of SQL Server:
 
-[Latest cumulative update for SQL Server 2022](build-versions.md)
-[Latest cumulative update for SQL Server 2019](sqlserver-2019/build-versions.md)
+- [Latest cumulative update for SQL Server 2022](build-versions.md)
+- [Latest cumulative update for SQL Server 2019](../sqlserver-2019/build-versions.md)
 
 ## Status
 
