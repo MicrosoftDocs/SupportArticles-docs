@@ -78,7 +78,7 @@ If you are using certificate authentication, verify that you have these permissi
 
 ## Source 2: Organization edge device
 
-To eliminate your organization edge device as the source of the failure, verify that a computer directly connected to the Internet can make SSH connections to your Azure VM. If you are accessing the VM over a site-to-site VPN or an Azure ExpressRoute connection, skip to [Source 4: Network security groups](#nsg).
+To eliminate your organization edge device as the source of the failure, verify that a computer directly connected to the Internet can make SSH connections to your Azure VM. If you are accessing the VM over a site-to-site VPN or an Azure ExpressRoute connection, skip to [Source 3: Network security groups](#source-3-network-security-groups).
 
 :::image type="content" source="media/detailed-troubleshoot-ssh-connection/organization-edge-device.png" alt-text="Diagram that highlights organization edge device.":::
 
