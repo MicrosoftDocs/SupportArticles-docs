@@ -17,10 +17,12 @@ ms.custom:
   - CI 191994
 appliesto: 
   - Microsoft Purview Data Loss Prevention
-ms.date: 06/26/2024
+ms.date: 07/12/2024
 ---
 
 # Resolve issues that affect DLP policy tips
+
+<!-- This article has been reviewed and approved for the specific use of global admin perms.  -->
 
 If you encounter an issue that's related to Microsoft Purview Data Loss Prevention (DLP) policy tips, [run an automated diagnostic for DLP policy tips](#run-the-diagnostic-for-dlp-policy-tips) in the Microsoft 365 admin center. The diagnostic analyzes the DLP policy and rule configuration for policy tips, identifies any issues, and suggests resolutions.
 

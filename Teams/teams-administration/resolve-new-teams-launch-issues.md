@@ -467,9 +467,9 @@ Pause
    1. Run the following PowerShell command:
 
       ```powershell
-      gci env:* | ?{@("TEMP", "TMP").Contains($_.Name)} %{$_.Value+" - "+((gp $_.Value).Attributes -match 'ReparsePoint')}
+      gci env:* | ?{@("TEMP", "TMP").Contains($_.Name)} | %{$_.Value+" - "+((gp $_.Value).Attributes -match 'ReparsePoint')}
       ```
-| 
+
    1. If the command returns **False**, go to step 3. Otherwise, [set](/windows-server/administration/windows-commands/set_1) the value of the environment variables to a location that isn't a reparse point.
 1. Check whether you have the **Read** permission to access all the following directories in the **AppData** folder:
 
