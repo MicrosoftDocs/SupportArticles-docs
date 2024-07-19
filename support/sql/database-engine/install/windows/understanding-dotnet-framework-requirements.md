@@ -10,12 +10,14 @@ ms.topic: article
 
 This article describes the .NET Framework requirements for various SQL versions starting with SQL Server 2005.
 
-_Original product version:_ &nbsp; SQL Server 2019, SQL Server 2017, SQL Server 2014, SQL Server 2012, SQL Server 2008, SQL Server 2005  
+_Original product version:_ &nbsp; SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2014, SQL Server 2012, SQL Server 2008, SQL Server 2005  
 _Original KB number:_ &nbsp; 2027770
 
 ## Summary
 
 Different versions of Microsoft SQL Server have different .NET Framework versions as a prerequisite for setup, and the procedure to install the .NET Framework may be different on different operating systems. For newer versions of SQL Server, this information is covered as part of Hardware and Software Requirements in the following articles:
+
+- [Hardware and Software Requirements for SQL Server 2022](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022?view=sql-server-ver16)
 
 - [Hardware and Software Requirements for SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15)
 
