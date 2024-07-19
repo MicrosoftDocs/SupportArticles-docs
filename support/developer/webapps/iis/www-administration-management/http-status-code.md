@@ -251,9 +251,9 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 500.15 | Direct requests for Global.asax aren't allowed. | A direct request for the _Global.asa_ file or for the _Global.asax_ file is made. |
 | 500.19 | Configuration data is invalid. | This HTTP status code occurs because of a problem in the associated _applicationhost.config_ file or in the associated _Web.config_ file. For more information, see [HTTP Error 500.19](../health-diagnostic-performance/http-error-500-19-webpage.md). |
 | 500.21 | Module not recognized. |
-| 500.22 | An ASP.NET `httpModules` configuration doesn't apply in Managed Pipeline mode. |
-| 500.23 | An ASP.NET `httpHandlers` configuration doesn't apply in Managed Pipeline mode. |
-| 500.24 | An ASP.NET impersonation configuration doesn't apply in Managed Pipeline mode. |
+| 500.22 | An ASP.NET `httpModules` configuration does not apply in Managed Pipeline mode. |
+| 500.23 | An ASP.NET `httpHandlers` configuration does not apply in Managed Pipeline mode. |
+| 500.24 | An ASP.NET impersonation configuration does not apply in Managed Pipeline mode. |
 | 500.50 | A rewrite error occurred during `RQ_BEGIN_REQUEST` notification handling. A configuration or inbound rule execution error occurred. | Here's where the distributed rules configuration is read for both inbound and outbound rules. |
 | 500.51 | A rewrite error occurred during GL_PRE_BEGIN_REQUEST notification handling. A global configuration or global rule execution error occurred. | Here's where the global rules configuration is read. |
 | 500.52 | A rewrite error occurred during `RQ_SEND_RESPONSE` notification handling. An outbound rule execution occurred. |
