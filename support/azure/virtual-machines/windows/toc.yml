@@ -418,8 +418,6 @@
   items:
   - name: Allocation failures
     href: allocation-failure.md
-  - name: Classic allocation failures
-    href: allocation-failure-classic.md
 
 - name: VM planned maintenance
   items:

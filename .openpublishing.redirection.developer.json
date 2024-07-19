@@ -5764,6 +5764,11 @@
       "source_path": "support/developer/browsers/welcome-browsers.yml",
       "redirect_url": "/previous-versions/troubleshoot/browsers/welcome-browsers",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/error-logging-http-apis.md",
+      "redirect_url": "/windows/win32/http/error-logging-in-the-http-server-api",
+      "redirect_document_id": false
     }
   ]
 }
