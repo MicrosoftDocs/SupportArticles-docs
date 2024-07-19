@@ -1,107 +1,112 @@
----
 title: Self-help diagnostics for Teams administrators
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 05/14/2024
+ms.date: 07/19/2024
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 localization_priority: Normal
-search.appverid: 
+search.appverid:
   - SPO160
   - MET150
-appliesto: 
+appliesto:
   - Teams
-ms.custom: 
+ms.custom:
   - sap:Teams Admin\TAC (Teams Admin Center)
   - CI 124054
+  - CI 188816
+  - CI 193380
   - CSSTroubleshoot
 ms.reviewer: salarson
-description: Describes how to run self-help diagnostics for Teams admins
+description: Describes how to run self-help diagnostics for Teams administrators.
 ---
 
 # Self-help diagnostics for Microsoft Teams administrators
 
-To keep apace with the growth in usage of Microsoft Teams, Microsoft has developed Teams-specific diagnostic scenarios that cover top support topics and the most common tasks for which administrators request help with configuration. It is important to note that while these diagnostics can't make changes to your tenant, they do provide insight into known issues and provide  instructions to fix the issues quickly.
+To keep pace with the growth in usage of Microsoft Teams, Microsoft has developed Teams-specific diagnostics that cover top support issues and configuration tasks for which administrators most commonly request help. These diagnostics can't make changes to your tenant, but they provide insights into the issues that affect them and instructions to fix the issues quickly.
+
+Administrators can run the diagnostics from the Microsoft 365 admin center. For users who don't have administrator permissions, a set of connectivity tests are available in the Microsoft Remote Connectivity Analyzer tool that's used to troubleshoot connectivity issues that affect Teams.  
 
 > [!NOTE]
-> These diagnostics aren't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
+>
+> - The diagnostics in the admin center aren't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
+> - The Microsoft Remote Connectivity Analyzer tool isn't available for the GCC and GCC High Microsoft 365 Government environments.
 
-## Run diagnostics
+## Run diagnostics in the Microsoft 365 admin center
 
-While you’re logged in as an administrator, navigate to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home). In the navigation pane, select **Show all** > **Support** > **New service request**. After you briefly describe your issue (for example, “I can't invite a guest to Teams”), the system determines whether a diagnostic scenario matches your issue.
+1. Sign in to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home) as an administrator.
+1. Select the **Help & Support** floating button in the bottom right corner of the screen to open the **Help** pane.
+1. In the text box, type a brief description of the issue you need help to resolve.
+1. Follow the prompts, and then select **Run tests**.
 
-> [!NOTE]
-> As you type search terms, a type-ahead query assists you to find the topics that you’re searching for.
+After the diagnostic checks finish and the issue is found, you're provided instructions to resolve the issue. If you implement a fix that's based upon the instructions, it's a good practive to rerun the diagnostic to make sure that the issue is completely resolved.
 
-:::image type="content" source="media/admin-self-help-diagnostics/admin-self-help-diagnostics-1.png" alt-text="Screenshot that shows the Teams diagnostic query screen.":::
+When an IT admin runs customer diagnostics in the Microsoft 365 admin center to resolve issues without logging support requests, Microsoft makes a donation to a global nonprofit organization. For more information, see [Diagnostics for Social Good](https://aka.ms/DiagnosticsforSocialGood).
 
-Enter your organization’s root URL. In the Guest Access diagnostic, select the drop-down arrow, select a pre-populated URL from your tenant, and then select **Run tests**.
+## Run connectivity tests in the Microsoft Remote Connectivity Analyzer tool
 
-After the diagnostic checks finish and the configuration issue is found, the system provides the steps to resolve the issue. In this example, the Tenant Admin had not turned on Guest Access:
+1. Open a web browser and navigate to [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/teams).
+1. From the list of available tests, select one that applies to your issue.
+1. Provide the required information.
+1. Enter the verification code that's displayed, and then select **Verify**.
+1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**.
 
-:::image type="content" source="media/admin-self-help-diagnostics/admin-self-help-diagnostics-2.png" alt-text="Screenshot that shows the example diagnostics response screen.":::
+After the test finishes, the screen will display details about the checks that were performed and whether the test succeeded, failed, or was successful but displayed a few warnings. A link is provided to get details about warnings and failures and how to resolve them.
 
-> [!NOTE]
-> If a diagnostic detects an issue, and you implement a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved.
+## Scenarios covered by diagnostics and connectivity tests
 
-When IT admins run customer diagnostics in the Microsoft 365 admin center to resolve issues without logging support requests, Microsoft makes a donation to global nonprofit organizations.
-
-For more information, see [Diagnostics for Social Good](https://aka.ms/DiagnosticsforSocialGood).
-
-## Scenarios covered by diagnostics
-
-> [!NOTE]
-> You must be an M365 Administrator to run diagnostics.
-
-The following tables list the diagnostics organized by category. Each diagnostic has a brief scenario description and a shortcut command.
+The following tables list the diagnostics that are currently available in the Microsoft 365 admin center and the connectivity tests that are available in the Microsoft Remote Connectivity Analyzer tool. The diagnostics are organized by category together with links to access the diagnostics and connectivity tests directly, scenario descriptions, and help articles about the scenarios.
 
 ### Authentication
 
-| Diagnostic | Description | Shortcut Link | Support Article |
+| Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
 |---|---|---|---|
-| Teams Sign-in | Validates that a user can sign in to the Teams app. | [Run Tests: Teams Sign-In](https://aka.ms/TeamsSignInDiag) | [Resolve sign-in errors in Teams](/microsoftteams/troubleshoot/teams-sign-in/resolve-sign-in-errors) |
-| Teams Federation | Validates that the Teams user can communicate with a federated Teams user. | [Run Tests: Teams Federation](https://aka.ms/TeamsFederationDiag) | [Manage external access (federation)]( /microsoftteams/manage-external-access#federation-diagnostic-tool) |
-| Unable to Invite Guest Users to Teams | Validates that a specific guest can sign into Teams.| [Run Tests: Teams Guest Access](https://aka.ms/TeamsGuestAccessDiag) | [Guest access in Microsoft Teams](/microsoftteams/guest-access) |
+|Checks whether a user can sign in to the Teams app.|[Run Tests: Teams Sign-In](https://aka.ms/TeamsSignInDiag)|[Teams Sign in](https://testconnectivity.microsoft.com/tests/TeamsSignin/input)|[Resolve sign-in errors in Teams](../teams-sign-in/resolve-sign-in-errors.md)|
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Teams Android desk phone.||[Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input)||
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Microsoft Teams Rooms device.||[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)|
+|Checks whether the Teams user can communicate with a federated Teams user.|[Run Tests: Teams Federation](https://aka.ms/TeamsFederationDiag)|[Teams Federation and Interoperability](https://testconnectivity.microsoft.com/tests/TeamsFederation/input)|[Manage external access (federation)](/microsoftteams/manage-external-access#federation-diagnostic-tool)<br/><br/>[External federated contacts don't appear in Teams search](../exchange-integration/external-contacts-not-in-search.md)|
+
+### Devices
+
+| Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
+|---|---|---|---|
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Teams Android desk phone.||[Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input)||
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Microsoft Teams Rooms devices: <ul><li>Teams Rooms on Android</li><li>Teams Rooms on Windows</li><li>Teams panels</li></ul>||[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)|
 
 ### Files
 
-| Diagnostic | Description | Shortcut Link | Support Article |
+| Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
 |---|---|---|---|
-| Teams Files Guest Access | Validates that guest users can be added to Teams and the Team is shared with the user. | [Run Tests: Teams Files Guest Access](https://aka.ms/TeamsFilesGuestAccessDiag) | [Guests can't access Files tab for shared files in Teams](/microsoftteams/troubleshoot/files/guests-cannot-access-files) |
-| Unable to upload files to Teams chat | Validates if the specified user can upload files in Teams chat. | [Run Tests: Unable to upload files to Teams chat](https://aka.ms/TeamsUploadFilesInChat) | [Error when uploading files to a Teams chat](/microsoftteams/troubleshoot/files/cannot-upload-files-or-access-onedrive) |
-| Unable to access files shared in Teams chat | Validated that a specified user being unable to access files shared by another user in chats. | [Run Tests: Unable to access files shared in Teams chat](https://aka.ms/TeamsSharedFilesInChat) | [Error (You don't have access to this file) when opening a file in Teams](/microsoftteams/troubleshoot/known-issues/do-not-have-access-to-this-file-teams) |
-| Unable to access files in a team | Validates that a specified user has access to files in the Team. | [Run Tests: Unable to access files in a team](https://aka.ms/TeamsAccessFilesInChat) | [Can't access the Files tab on a Teams channel]( /microsoftteams/troubleshoot/files/access-files-tab-errors) |
+|Checks whether guest users can be added to Teams and the Team is shared with the user.|[Run Tests: Teams Files Guest Access](https://aka.ms/TeamsFilesGuestAccessDiag)||[Guests can't access Files tab for shared files in Teams](../files/guests-cannot-access-files.md)|
+|Checks whether the specified user can upload files in Teams chat.|[Run Tests: Unable to upload files to Teams chat](https://aka.ms/TeamsUploadFilesInChat)||[Error when uploading files to a Teams chat](../files/cannot-upload-files-or-access-onedrive.md)|
+|Checks whether a specified user can't access files that are shared by another user in chats.|[Run Tests: Unable to access files shared in Teams chat](https://aka.ms/TeamsSharedFilesInChat)||[Error (You don't have access to this file) when opening a file in Teams](../files/do-not-have-access-to-this-file-teams.md)|
+|Checks whether a specified user has access to files in the team.|[Run Tests: Unable to access files in a team](https://aka.ms/TeamsAccessFilesInChat)||[Can't access the Files tab on a Teams channel](../files/access-files-tab-errors.md)|
 
 ### Meetings
 
-| Diagnostic | Description | Shortcut Link | Support Article |
+| Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
 |---|---|---|---|
-| Teams Calendar App | Validates that the pre-requisites are properly configured for the Microsoft Teams calendar app to function. | [Run Tests: Teams Calendar App](https://testconnectivity.microsoft.com/tests/TeamsCalendarMissing/input) |[Troubleshoot Microsoft Teams and Exchange Server interaction issues]( /microsoftteams/troubleshoot/exchange-integration/teams-exchange-interaction-issue) |
-| Meeting Recording Missing | Attempts to locate a missing Teams Meeting Recording | [Run Tests: Missing Recording](https://aka.ms/MissingRecordingDiag) | [Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools) |
-| 1:1 Call Recording | Checks a user's policy for 1:1 Call Recording capability | [Run Tests: Teams 1:1 Call Recording](https://aka.ms/Teams11CallRecDiag) | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues#workaround) |
-| Teams Add-in is Missing in Outlook | Validates that a user has the correct policies to enable the Teams Outlook add-in. | [Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-inDiag) |[Resolve issues with Teams Meeting add-in for Outlook](/microsoftteams/troubleshoot/meetings/resolve-teams-meeting-add-in-issues) |
-| Teams Meeting Recordings | Validates that the user is properly configured to record a meeting in Teams. | [Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag) | [Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools) |
+|Checks whether the prerequisites are correctly configured for the Microsoft Teams calendar app to function.||[Teams Calendar App](https://testconnectivity.microsoft.com/tests/TeamsCalendarMissing/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
+|Tries to locate a missing Teams Meeting Recording.|[Run Tests: Missing Recording](https://aka.ms/MissingRecordingDiag)||[Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools)|
+|Checks a user's policy for 1:1 Call Recording capability|[Run Tests: Teams 1:1 Call Recording](https://aka.ms/Teams11CallRecDiag)||[Issues with meeting recordings](../meetings/troubleshoot-meeting-recording-issues.md)|
+|Checks whether a user has the correct policies to enable the Teams Outlook add-in.|[Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-inDiag)||[Resolve issues with Teams Meeting add-in for Outlook](../meetings/resolve-teams-meeting-add-in-issues.md)|
+|Checks whether the user is correctly configured to record a meeting in Teams.|[Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag)|[Teams Meeting Recording](https://testconnectivity.microsoft.com/tests/TeamsRecording/input)|[Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools)<br/><br/>[Issues with meeting recordings](../meetings/troubleshoot-meeting-recording-issues.md)|
 
 ### Presence
 
-| Diagnostic | Description | Shortcut Link | Support Article |
+| Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
 |---|---|---|---|
-| Teams presence | Validates that a user's Teams presence can be correctly displayed. | [Run Tests: Teams presence](https://aka.ms/TeamsPresenceDiag) | [Your actual presence status isn't displayed in Teams](/microsoftteams/troubleshoot/teams-im-presence/presence-not-show-actual-status) |
+|Checks whether a user's Teams presence can be correctly displayed.|[Run Tests: Teams presence](https://aka.ms/TeamsPresenceDiag)|[Teams Calendar Events Based Presence](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input)|[Your actual presence status isn't displayed in Teams](/microsoftteams/troubleshoot/teams-im-presence/presence-not-show-actual-status)|
 
 ### Voice
 
-| Diagnostic | Description | Shortcut Link | Support Article |
+| Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
 |---|---|---|---|
-| Teams Direct Routing | Validates that a user is correctly configured for direct routing. | [Run Tests: Teams Direct Routing](https://aka.ms/TeamsDirectRoutingDiag) | [Diagnose issues with Direct Routing](/microsoftteams/troubleshoot/phone-system/direct-routing/diagnose-direct-routing-issues) |
-| Teams Call Queue | Validates that a call queue is able to receive calls. | [Run Tests: Teams Call Queue](https://aka.ms/TeamsCallQueueDiag) | [Create a call queue in Microsoft Teams](/microsoftteams/create-a-phone-system-call-queue#call-queue-diagnostic-tool) |
-| Teams Dial Pad is Missing | Validates that the dial pad is visible within Teams. | [Run Tests: Teams Dial Pad Missing](https://aka.ms/TeamsDialPadMissingDiag) | [Dial pad in missing in Teams](/microsoftteams/troubleshoot/teams-conferencing/no-dial-pad) |
-| Unable to Make Domestic or International PSTN calls in Teams | Validates that a user has the ability to make or receive domestic or international PSTN calls. | [Run Tests: Teams PSTN](https://aka.ms/TeamsPSTNDiag) |[Set up Microsoft Calling Plans](/microsoftteams/set-up-calling-plans) |
-| Unable to Create a Teams Conference Call | Validates that a user has the ability to create a PSTN conference call. | [Run Tests: Teams Conference](https://aka.ms/TeasConfDiag) |[See a list of users that are enabled for Audio Conferencing in Microsoft Teams](/microsoftteams/see-a-list-of-users-that-are-enabled-for-audio-conferencing-in-teams) |
-| Teams Auto-Attendant | Validates that an auto attendant is able to receive calls. | [Run Tests: Teams Auto Attendant](https://aka.ms/TeamsAADiag) | [Set up an auto attendant for Microsoft Teams](/microsoftteams/create-a-phone-system-auto-attendant#auto-attendant-diagnostic-tool) |
-| Teams Voicemail | Validates that a user is properly configured to use Voicemail in Teams. | [Run Tests: Voicemail](https://aka.ms/TeamsVoicemailDiag) | [Set up Cloud Voicemail](/microsoftteams/set-up-phone-system-voicemail) |
-| Teams Call Forwarding | Validates that a user is properly configured to forward calls to a specified number. | [Run Tests: Teams Call Forwarding](https://aka.ms/TeamsCallForwardingDiag) |[Configure call settings for your users](/microsoftteams/user-call-settings) |
-
-While these diagnostics require admin permissions to be run, your users can run other diagnostics by using the Microsoft Remote Connectivity Analyzer. See [Self-help diagnostics for Teams in Remote Connectivity Analyzer](/connectivity-analyzer/microsoft-teams/self-help-diagnostics-for-microsoft-teams) for more information.
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+|Checks whether a user is correctly configured for direct routing.|[Run Tests: Teams Direct Routing](https://aka.ms/TeamsDirectRoutingDiag)||[Diagnose issues with Direct Routing](../phone-system/direct-routing/diagnose-direct-routing-issues.md)|
+|Checks whether a call queue is able to receive calls.|[Run Tests: Teams Call Queue](https://aka.ms/TeamsCallQueueDiag)||[Create a call queue in Microsoft Teams](/microsoftteams/create-a-phone-system-call-queue#call-queue-diagnostic-tool)|
+|Checks whether the dial pad is visible within Teams.|[Run Tests: Teams Dial Pad Missing](https://aka.ms/TeamsDialPadMissingDiag)|[Teams PSTN Calling Dial Pad](https://testconnectivity.microsoft.com/tests/TeamsDialpadMissing/input)|[Dial pad configuration](/microsoftteams/dial-pad-configuration)|
+|Checks whether a user has the ability to make or receive domestic or international PSTN calls.|[Run Tests: Teams PSTN](https://aka.ms/TeamsPSTNDiag)||[Set up Microsoft Calling Plans](/microsoftteams/set-up-calling-plans)|
+|Checks whether a user has the ability to create a PSTN conference call.|[Run Tests: Teams Conference](https://aka.ms/TeasConfDiag)||[See a list of users that are enabled for Audio Conferencing in Microsoft Teams](/microsoftteams/see-a-list-of-users-that-are-enabled-for-audio-conferencing-in-teams)|
+|Checks whether an auto attendant is able to receive calls.|[Run Tests: Teams Auto Attendant](https://aka.ms/TeamsAADiag)||[Set up an auto attendant for Microsoft Teams](/microsoftteams/create-a-phone-system-auto-attendant#auto-attendant-diagnostic-tool)|
+|Checks whether a user is correctly configured to use Voicemail in Teams.|[Run Tests: Voicemail](https://aka.ms/TeamsVoicemailDiag)|[Teams Voicemail](https://testconnectivity.microsoft.com/tests/TeamsVoicemail/input)|[Set up Cloud Voicemail](/microsoftteams/set-up-phone-system-voicemail)|
+|Checks whether a user is correctly configured to forward calls to a specified number.|[Run Tests: Teams Call Forwarding](https://aka.ms/TeamsCallForwardingDiag)||[Configure call settings for your users](/microsoftteams/user-call-settings)|
