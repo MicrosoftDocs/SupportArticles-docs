@@ -12,7 +12,7 @@ appliesto:
 
 ## Symptoms
 
-SQL Server on Linux might not comply with the memory boundaries that are set by the `memory.memorylimitmb` configuration option, as evidenced by monitoring tools such as top and ps displaying memory usage that exceeding the configured limits.
+SQL Server on Linux might not comply with the memory boundaries that are set by the `memory.memorylimitmb` configuration option, as evidenced by monitoring tools such as top and ps displaying memory usage that exceeds the configured limits.
 
 ## Resolution
 
@@ -26,7 +26,7 @@ This problem is fixed in the following cumulative updates for SQL Server:
 
 ## Monitor memory usage in SQL Server on Linux
 
-After installing SQL Server 2022 Cumulative Update 14 (CU14) or SQL Server 2019 CU27 or later versions, you'll be able to monitor system resource alerts by using the `system_low_memory_signal_state` and `system_high_memory_signal_state` columns in `sys.dm_os_sys_memory` dynamic management view (DMV). If `system_low_memory_signal_state` always shows `1`, consider increasing the memory allocation for SQL Server or review the queries that consume the most memory and then resolve their memory requirements.
+After installing SQL Server 2022 Cumulative Update 14 (CU14) or SQL Server 2019 CU27 or later versions, you'll be able to monitor system resource alerts by using the `system_low_memory_signal_state` and `system_high_memory_signal_state` columns in `sys.dm_os_sys_memory` dynamic management view (DMV). If `system_low_memory_signal_state` consistently shows `1`, consider increasing the memory allocation for SQL Server or review the queries that consume the most memory and then resolve their memory requirements.
 
 ## About cumulative updates for SQL Server
 
