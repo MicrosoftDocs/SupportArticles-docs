@@ -1,12 +1,12 @@
 ---
 title: Troubleshooting AD Replication error 1818
 description: Describes an issue where AD operations fail with error 1818 (The remote procedure call was cancelled (RPC_S_CALL_CANCELLED)).
-ms.date: 12/26/2023
+ms.date: 07/19/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, sagiv
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Troubleshooting AD Replication error 1818: The remote procedure call was cancelled
@@ -118,12 +118,12 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 
 ## Cause
 
-The issue occurs when the destination DC performing inbound replication doesn't receive replication changes within the number of seconds specified in the "RPC Replication Timeout" registry key (The default value if the registry entry does not exist is 5 Minutes). You might experience this issue most frequently in one of the following situations:
+The issue occurs when the destination DC performing inbound replication doesn't receive replication changes within the number of seconds specified in the "RPC Replication Timeout" registry key (the default value is five minutes if the registry entry doesn't exist.) You might experience this issue most frequently in one of the following situations:
 
 - You promote a new domain controller into the forest by using the Active Directory Installation Wizard (Dcpromo.exe).
 - Existing domain controllers replicate from source domain controllers that are connected over slow network links.
 
-If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the RPC Replication Timeout (mins) registry setting specifies, the destination domain controller ends the RPC connection with the non-responsive source domain controller and logs a Warning event.
+If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the **RPC Replication Timeout (mins)** registry setting specifies, the destination domain controller ends the RPC connection with the non-responsive source domain controller and logs a warning event.
 
 Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CALL_CANCELLED` include:
 
@@ -136,27 +136,20 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
 
 ## Resolution
 
-1. Inspect the Network devices between the source and destination domain controllers (increase the bandwidth of your network connection so that the Active Directory changes replicate in the five-minute timeout period.).
-
-1. Update the network adapter drivers
+1. Inspect the network devices between the source and destination domain controllers (increase the bandwidth of your network connection so that the Active Directory changes replicate in the five-minute timeout period.)
+2. Update the network adapter drivers.
 
     To determine whether an updated network adapter driver is available, contact the network adapter manufacturer or the original equipment manager (OEM) for the computer. The driver must meet Network Driver Interface Specification (NDIS) 5.2 or a later version of this specification.
-   
-1. Check the network binding order:
+3. Check the network binding order:
 
     To configure the network binding order:
    
    1. Quit any programs that are running.
-      
-   1. Right-click Network Neighborhood, and then click Properties.
-      
-   1. Click the Bindings tab. In the Show Bindings For box, click All Services.
-      
-   1. Double-click each listed service to expand it.
-      
-   1. Under each service, double-click each protocol to expand it.
-      
-   1. Under each protocol, there's a number of network adapter icons. Click the icon for your network adapter, and then click Move Up until the network adapter is at the top of the list. Leave the "Remote Access WAN Wrapper" entries in any order under the network adapter(s).
+   2. Right-click Network Neighborhood, and then click Properties.      
+   3. Click the Bindings tab. In the Show Bindings For box, click All Services.      
+   4. Double-click each listed service to expand it.      
+   5. Under each service, double-click each protocol to expand it.      
+   6. Under each protocol, there's a number of network adapter icons. Click the icon for your network adapter, and then click Move Up until the network adapter is at the top of the list. Leave the "Remote Access WAN Wrapper" entries in any order under the network adapter(s).
    
       > [!NOTE]
       > If you have more than one network adapter, place the internal adapter (with Internet Protocol [IP] address 10.0.0.2 by default on a Small Business Server network) at the top of the binding order, with the external adapter(s) directly below the internal adapter.
@@ -169,11 +162,9 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
       .  
       [n] Remote Access WAN Wrapper  
       
-   1. Repeat step 6 for each service in the dialog box.
-      
-   1. After you've verified the settings for each service, click All Protocols in the Show Bindings For box. The entry for "Remote Access WAN Wrapper" doesn't have a network adapter listed. Skip this item. Repeat steps 4 through 6 for each remaining protocol.
-      
-   1. After you've verified that the bindings are set correctly for all services and protocols, click OK. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Click Yes.
+   7. Repeat step f for each service in the dialog box.      
+   8. After you've verified the settings for each service, click All Protocols in the Show Bindings For box. The entry for "Remote Access WAN Wrapper" doesn't have a network adapter listed. Skip this item. Repeat steps 4 through 6 for each remaining protocol.    
+   9. After you've verified that the bindings are set correctly for all services and protocols, click OK. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Click Yes.
       
 ## Data collection
 
