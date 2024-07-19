@@ -5483,7 +5483,7 @@
       {
         "source_path": "virtual-machines/windows/allocation-failure-classic.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/allocation-failure",
-        "redirect_document_id": true
+        "redirect_document_id": false
       }
   ]
 }
