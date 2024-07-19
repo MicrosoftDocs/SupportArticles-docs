@@ -40,7 +40,7 @@ This section describes some of the common HTTP status codes.
 > [!NOTE]
 > This article doesn't list every possible HTTP status code as dictated in the HTTP specification. For example, a custom Internet Server API (ISAPI) filter or a custom HTTP module can set its own HTTP status code.
 
-### 1**xx** - Informational
+### 1xx - Informational
 
 These HTTP status codes indicate an interim response for communicating request progress or status before sending a final response to the client computer.
 
@@ -51,7 +51,7 @@ IIS 7.0 and later versions use the following informational HTTP status codes:
 | 100 | Continue | Initial part of the request has been received and hasn't yet been rejected by the server. The server intends to send a final response after the request has been fully received and acted upon. |
 | 101 | Switching protocols | Server understands and is willing to comply with client's request for a change in the application protocol being used. |
 
-### 2**xx** - Successful
+### 2xx - Successful
 
 These HTTP status codes indicate that the server successfully received and accepted the client's request.
 
@@ -64,10 +64,10 @@ IIS 7.0 and later versions use the following success HTTP status codes:
 | 202 | Accepted | The client request has been accepted for processing, but the processing hasn't been completed. |
 | 203 | Nonauthoritative information | The client request was successful but the enclosed content has been modified from that of the origin server's response. |
 | 204 | No content | The server has successfully fulfilled the request and that there's no additional content to send in the response content. |
-| 205 | Reset content | The server has fulfilled the request and desires that the user agent resets the "document view", which caused the request to be sent, to its original state as received from the origin server. |
+| 205 | Reset content | The server has fulfilled the request and expects the user agent to reset the "document view," which caused the request to be sent, to its original state as received from the origin server. |
 | 206 | Partial content | The server is successfully fulfilling a range request for the target resource by transferring one or more parts of the selected representation. |
 
-### 3**xx** - Redirection
+### 3xx - Redirection
 
 These HTTP status codes indicate that the client browser must take more action to fulfill the request. For example, the client browser may have to request a different page on the server. Or, the client browser may have to repeat the request by using a proxy server.
 
@@ -80,7 +80,7 @@ IIS 7.0 and later versions use the following redirection HTTP status codes:
 | 304 | Not modified | A conditional GET or HEAD request has been received and would have resulted in a 200 (OK) response if it weren't for the fact that the condition evaluated to false. |
 | 307 | Temporary redirect | The client browser requests a document that is already in the cache. And the document hasn't been modified since it was cached. The client browser uses the cached copy of the document instead of downloading the document from the server. |
 
-### 4**xx** - Client error
+### 4xx - Client error
 
 These HTTP status codes indicate that an error has occurred and the client browser appears to be at fault. For example, the client browser may have requested a page that doesn't exist. Or, the client browser may not have provided valid authentication information.
 
@@ -92,11 +92,11 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
 | [401](#401---access-denied) | Access denied | The request hasn't been applied because it lacks valid authentication credentials for the target resource. |
 | [403](#403---forbidden) | Forbidden | The server understood the request but refuses to fulfill it. |
 | [404](#404---not-found) | Not found | The origin server didn't find a current representation for the target resource or isn't willing to disclose that one exists. |
-| [405](#405-406-408-412-413) | Method not allowed | The method received in the request-line is known by the origin server but not supported by the target resource. |
-| [406](#405-406-408-412-413) | Not acceptable | The client browser doesn't accept the MIME type of the requested resource. |
-| [408](#405-406-408-412-413) | Request timed out | The server didn't receive a complete request message within the time that it was prepared to wait. |
-| [412](#405-406-408-412-413) | Precondition failed | One or more conditions given in the request header fields evaluated to false when tested on the server. |
-| [413](#405-406-408-412-413) | Request entity too large | The HTTP request payload is too big. |
+| [405](#405-406-408-412-and-413) | Method not allowed | The method received in the request-line is known by the origin server but not supported by the target resource. |
+| [406](#405-406-408-412-and-413) | Not acceptable | The client browser doesn't accept the MIME type of the requested resource. |
+| [408](#405-406-408-412-and-413) | Request timed out | The server didn't receive a complete request message within the time that it was prepared to wait. |
+| [412](#405-406-408-412-and-413) | Precondition failed | One or more conditions given in the request header fields evaluated to false when tested on the server. |
+| [413](#405-406-408-412-and-413) | Request entity too large | The HTTP request payload is too large. |
 
 #### 400 - Bad request
 
@@ -158,25 +158,25 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 |---|---|---|
 | 403.1 | Execute access forbidden | The appropriate level of the Execute permission isn't granted. |
 | 403.2 | Read access forbidden | The appropriate level of the Read permission isn't granted. Verify that you have set up IIS 7.0 and later versions to grant the Read permission to the directory. Additionally, if you use a default document, verify that the default document exists. |
-| 403.3 | Write access forbidden | The appropriate level of the Write permission isn't granted. Check the IIS 7.0 and later versions permissions and the NTFS file system permissions. Make sure that they're set up to grant the Write permission to the directory. |
+| 403.3 | Write access forbidden | The appropriate level of the Write permission isn't granted. Check the IIS 7.0 and later versions permissions and the NTFS file system permissions. Make sure that they're set up to grant the "Write" permission to the directory. |
 | 403.4 | SSL required | The request is made over a non-secure channel. But the web application requires a Secure Sockets Layer (SSL) connection. |
 | 403.5 | SSL 128 required | The server is configured to require a 128-bit SSL connection. But, the request isn't sent by using 128-bit encryption. |
 | 403.6 | IP address rejected | The server is configured to deny access to the current IP address. |
 | 403.7 | Client certificate required | The server is configured to require a certificate for client authentication. But the client browser doesn't have an appropriate client certificate installed. For more information, see [HTTP error 403.7](../health-diagnostic-performance/http-error-403-7-forbidden-web-app.md). |
 | 403.8 | Site access denied | The server is configured to deny requests based on the Domain Name System (DNS) name of the client computer. For more information, see [Dynamic IP Address restrictions](/iis/get-started/whats-new-in-iis-8/iis-80-dynamic-ip-address-restrictions). |
 | 403.9 | Concurrent connections exceeded | Too many clients are trying to connect to the web server. |
-| 403.10 | Forbidden: Execute access denied | The web server is configured to deny Execute access. |
+| 403.10 | Forbidden: Execute access denied | The web server is configured to deny "Execute" access. |
 | 403.11 | Forbidden: Password changed | A password has been changed. |
 | 403.12 | Mapper denied access | The page that you want to access requires a client certificate. But, the user ID that is mapped to the client certificate is denied access to the file. |
 | 403.13 | Client certificate revoked | The client browser tries to use a client certificate that was revoked by the issuing certification authority. |
 | 403.14 | Directory listing denied | The server isn't configured to display a content directory listing, and a default document isn't set. For more information, see [HTTP Error 403.14](../health-diagnostic-performance/http-403-14-forbidden-webpage.md). |
-| 403.15 | Client access licenses exceeded | The number of client access licenses have exceeded limits on the web server. |
+| 403.15 | Client access licenses exceeded | The number of client access licenses has exceeded the limits on the web server. |
 | 403.16 | Client certificate is untrusted or invalid | The client browser tries to use an invalid client certificate. Or the server that is running IIS 7.0 and later versions doesn't trust the client certificate. For more information, see [HTTP Error 403.16](../health-diagnostic-performance/http-403-forbidden-access-website.md). |
-| 403.17 | Client certificate has expired or isn't yet valid | The client browser tries to use a client certificate that is expired or that isn't yet valid. |
-| 403.18 | Can't execute requested URL in the current application pool | A custom error page is configured. And the application pool of the customer error page is different with the application pool of the requested URL. |
-| 403.19 | Can't execute CGI applications for the client browser in this application pool | The identity of the application pool doesn't have the Replace a process level token user right. |
-| 403.20 | Forbidden: Passport logon failed | Client requests using passport logon isn't allowed. |
-| 403.21 | Forbidden: Source access denied | WebDAV requests for the source code of a resource aren't allowed. |
+| 403.17 | Client certificate has expired or is not yet valid | The client browser tries to use a client certificate that is expired or that isn't yet valid. |
+| 403.18 | Cannot execute requested URL in the current application pool | A custom error page is configured. And the application pool of the customer error page is different with the application pool of the requested URL. |
+| 403.19 | Cannot execute CGI applications for the client browser in this application pool | The identity of the application pool doesn't have the Replace a process level token user right. |
+| 403.20 | Forbidden: Passport logon failed | Client requests using passport logon aren't allowed. |
+| 403.21 | Forbidden: Source access denied | WebDAV requests to the source code of a resource aren't allowed. |
 | 403.22 | Forbidden: Infinite depth is denied | WebDAV requests with an infinite depth aren't allowed. |
 | 403.501 | Forbidden: concurrent request rate limit reached | Dynamic IP Restriction: too many concurrent requests were made from the same client IP. |
 | 403.502 | Forbidden: maximum request rate limit reached | Dynamic IP Restriction: the maximum number of requests from the same client IP within a specified time limit was reached. |
@@ -190,7 +190,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | Code | Description | Notes |
 |---|---|---|
 | 404.0 | Not found | The file that you try to access is moved or doesn't exist. |
-| 404.1 | Site not found | The website that was requested doesn't exist. |
+| 404.1 | Site Not Found | The requested website doesn't exist. |
 | 404.2 | ISAPI or CGI restriction. | The requested ISAPI resource or the requested CGI resource is restricted on the computer. For more information, see [HTTP Error 404.2](../site-behavior-performance/http-error-402-webpage.md). |
 | 404.3 | MIME type restriction. | The current MIME mapping for the requested extension type is invalid or isn't configured. |
 | 404.4 | No handler configured. | The file name extension of the requested URL doesn't have a handler that is configured to process the request on the Web server. |
@@ -215,7 +215,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 404.503 | Not found: IP address denied | IP Restriction: the client IP address is included in the deny list. |
 | 404.504 | Not found: host name denied | IP Restriction: the client host name is included in the deny list. |
 
-#### 405, 406, 408, 412, 413
+#### 405, 406, 408, 412, and 413
 
 | Code | Description | Notes |
 |---|---|---|
@@ -225,7 +225,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 412.0 | Precondition failed. | The request is made by using an `If-Match` request header that contains a value that isn't valid. |
 | 413.0 | Request entity too large. | The request is made by using a payload that is too large. |
 
-### 5**xx** - Server error
+### 5xx - Server error
 
 The 5xx HTTP status codes indicate that the server can't complete the request because the server encounters an error.
 
@@ -234,7 +234,7 @@ IIS and later versions use the following server error HTTP status codes:
 | Code | Description | Notes |
 |---|---|---|
 | [500](#500---internal-server-error) | Internal server error | The server encountered an unexpected condition that prevented it from fulfilling the request. |
-| 501 | Header values specify a configuration that isn't implemented | The server doesn't support the functionality required to fulfill the request. |
+| 501 | Header values specify a configuration that is not implemented | The server doesn't support the functionality required to fulfill the request. |
 | [502](#502---bad-gateway) | Web server received an invalid response while acting as a gateway or proxy | The server, while acting as a gateway or proxy, received an invalid response from an inbound server it accessed while attempting to fulfill the request. For more information, see [Troubleshooting 502 Errors in ARR](/iis/extensions/troubleshooting-application-request-routing/troubleshooting-502-errors-in-arr). |
 | [503](#503---service-unavailable) | Service unavailable | The server is currently unable to handle the request due to a temporary overload or scheduled maintenance, which will likely be alleviated after some delay. |
 
@@ -251,11 +251,11 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 500.15 | Direct requests for Global.asax aren't allowed. | A direct request for the _Global.asa_ file or for the _Global.asax_ file is made. |
 | 500.19 | Configuration data is invalid. | This HTTP status code occurs because of a problem in the associated _applicationhost.config_ file or in the associated _Web.config_ file. For more information, see [HTTP Error 500.19](../health-diagnostic-performance/http-error-500-19-webpage.md). |
 | 500.21 | Module not recognized. |
-| 500.22 | An ASP.NET `httpModules` configuration doesn't apply in Managed Pipeline mode.|
+| 500.22 | An ASP.NET `httpModules` configuration doesn't apply in Managed Pipeline mode. |
 | 500.23 | An ASP.NET `httpHandlers` configuration doesn't apply in Managed Pipeline mode. |
 | 500.24 | An ASP.NET impersonation configuration doesn't apply in Managed Pipeline mode. |
-| 500.50 | A rewrite error occurred during `RQ_BEGIN_REQUEST` notification handling. A configuration or inbound rule execution error occurred. | **Note:** Here's where the distributed rules configuration is read for both inbound and outbound rules. |
-| 500.51 | A rewrite error occurred during GL_PRE_BEGIN_REQUEST notification handling. A global configuration or global rule execution error occurred. | **Note:** Here's where the global rules configuration is read. |
+| 500.50 | A rewrite error occurred during `RQ_BEGIN_REQUEST` notification handling. A configuration or inbound rule execution error occurred. | Here's where the distributed rules configuration is read for both inbound and outbound rules. |
+| 500.51 | A rewrite error occurred during GL_PRE_BEGIN_REQUEST notification handling. A global configuration or global rule execution error occurred. | Here's where the global rules configuration is read. |
 | 500.52 | A rewrite error occurred during `RQ_SEND_RESPONSE` notification handling. An outbound rule execution occurred. |
 | 500.53 | A rewrite error occurred during `RQ_RELEASE_REQUEST_STATE` notification handling. An outbound rule execution error occurred. The rule is configured to be executed before the output user cache gets updated. |
 | 500.100 | Internal ASP error. | An error occurs during the processing of an Active Server Pages (ASP) page. To obtain more specific information about the error, disable friendly HTTP error messages in the web browser. Additionally, the IIS log may show an ASP error number that corresponds to the error that occurs. |
