@@ -1,7 +1,7 @@
 ---
 title: HTTP status code overview
 description: This article provides a list of the HTTP status codes in IIS 7.0 and later versions.
-ms.date: 07/16/2024
+ms.date: 07/19/2024
 ms.custom: sap:Health, Diagnostic, and Performance Features\HTTP error logging
 ms.reviewer: robmcm
 ms.subservice: www-administration-management
@@ -178,10 +178,10 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 403.20 | Forbidden: Passport logon failed | Client requests using passport logon isn't allowed. |
 | 403.21 | Forbidden: Source access denied | WebDAV requests for the source code of a resource aren't allowed. |
 | 403.22 | Forbidden: Infinite depth is denied | WebDAV requests with an infinite depth aren't allowed. |
-| 404.501 | Forbidden: concurrent request rate limit reached | Dynamic IP Restriction: too many concurrent requests were made from the same client IP. |
-| 404.502 | Forbidden: maximum request rate limit reached | Dynamic IP Restriction: the maximum number of requests from the same client IP within a specified time limit was reached. |
-| 404.503 | Forbidden: IP address denied | IP Restriction: the client IP address is included in the deny list. |
-| 404.504 | Forbidden: host name denied | IP Restriction: the client host name is included in the deny list. |
+| 403.501 | Forbidden: concurrent request rate limit reached | Dynamic IP Restriction: too many concurrent requests were made from the same client IP. |
+| 403.502 | Forbidden: maximum request rate limit reached | Dynamic IP Restriction: the maximum number of requests from the same client IP within a specified time limit was reached. |
+| 403.503 | Forbidden: IP address denied | IP Restriction: the client IP address is included in the deny list. |
+| 403.504 | Forbidden: host name denied | IP Restriction: the client host name is included in the deny list. |
 
 #### 404 - Not found
 
