@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4135.4
 
 ## Summary
 
-This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Server 2022. This update contains 11 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 13, and it updates components in the following builds:
+This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Server 2022. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 13, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4135.4**, file version: **2022.160.4135.4**
 - Analysis Services - Product version: **16.0.43.233**, file version: **2022.160.43.233**
@@ -42,6 +42,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2897811>[2897811](#2897811) </a> | Fixes an issue in which the remote secondary replica shows **Not Synchronizing** for several minutes after successive failovers between local replicas. It occurs when configured in multi-subnet, multi-region configurations in the cloud with two or more local replicas and one or more remote replicas. | SQL Server Engine | High Availability and Disaster Recovery | Windows|
 | <a id=3088149>[3088149](#3088149) </a> | Fixes an assertion dump issue (Location: hadrlogcapture.cpp:\<LineNumber>; Expression: m_pFsManager->GetEnqueuedBlockId () < capturedLogBlockId \|\| capturedLogBlockId == m_pDbPartner->GetFirstLogBlockIdToCapture ()) that you encounter when there are FILESTREAM transactions in an Always On availability group (AG).| SQL Server Engine | High Availability and Disaster Recovery | All|
 | <a id=3157066>[3157066](#3157066) </a> | Adds performance monitor counters to the cluster log report when the health check timeout is reported.| SQL Server Engine | High Availability and Disaster Recovery | Windows|
+| <a id=3207515>[3207515](#3207515) </a> | [FIX: Memory exceeds the configured limits that are specified by memory.memorylimitmb in SQL Server (KB5042369)](memory-exceed-configured-limits-memory-memorylimitmb.md) | SQL Server Engine | Linux | Linux|
 | <a id=3155852>[3155852](#3155852) </a> | Fixes an assertion failure (Location: sosmemobj.cpp:2744; Expression: pvb->FInUse()) in `CVariableInfo::PviRelease` that you encounter when you use UTF-8 collations and the `WITH RESULT SETS` clause. | SQL Server Engine | Programmability | All|
 | <a id=3308723>[3308723](#3308723) </a> | Adds a validation for the `MODEL` parameter when running `PREDICT` to avoid errors due to the input of wrong models.| SQL Server Engine | Query Execution | All|
 | <a id=3157452>[3157452](#3157452) </a> | Fixes two issues related to cardinality estimation (CE) feedback: plan cache leaks and access violations due to race conditions with statement recompilations.| SQL Server Engine | Query Optimizer | All|
