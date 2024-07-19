@@ -55,9 +55,8 @@ The Remote Desktop client may not be able to reach the Remote Desktop service on
 
 * [Remote Desktop client computer](#source-1-remote-desktop-client-computer)
 * [Organization intranet edge device](#source-2-organization-intranet-edge-device)
-* [Cloud service endpoint and access control list (ACL)](#source-3-cloud-service-endpoint-and-acl)
-* [Network security groups](#source-4-network-security-groups)
-* [Windows-based Azure VM](#source-5-windows-based-azure-vm)
+* [Network security groups](#source-3-network-security-groups)
+* [Windows-based Azure VM](#source-4-windows-based-azure-vm)
 
 ## Source 1: Remote Desktop client computer
 

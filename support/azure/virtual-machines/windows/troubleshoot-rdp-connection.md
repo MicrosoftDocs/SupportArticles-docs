@@ -52,8 +52,6 @@ You can troubleshoot VMs created using the Resource Manager deployment model by 
 * Azure portal - great if you need to quickly reset the RDP configuration or user credentials and you don't have the Azure tools installed.
 * Azure PowerShell - if you are comfortable with a PowerShell prompt, quickly reset the RDP configuration or user credentials using the Azure PowerShell cmdlets.
 
-You can also find steps on troubleshooting VMs created using the [Classic deployment model](#troubleshoot-vms-created-using-the-classic-deployment-model).
-
 <a id="fix-common-remote-desktop-errors"></a>
 
 ## Troubleshoot using the Azure portal

@@ -51,9 +51,8 @@ The SSH client on your computer might fail to connect to the SSH service on the 
 
 * [SSH client computer](#source-1-ssh-client-computer)
 * [Organization edge device](#source-2-organization-edge-device)
-* [Cloud service endpoint and access control list (ACL)](#source-3-cloud-service-endpoint-and-acl)
-* [Network security groups](#source-4-network-security-groups)
-* [Linux-based Azure VM](#source-5-linux-based-azure-virtual-machine)
+* [Network security groups](#source-3-network-security-groups)
+* [Linux-based Azure VM](#source-4-linux-based-azure-virtual-machine)
 
 ## Source 1: SSH client computer
 
