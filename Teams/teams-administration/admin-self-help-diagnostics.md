@@ -1,3 +1,4 @@
+---
 title: Self-help diagnostics for Teams administrators
 ms.author: luche
 author: helenclu
