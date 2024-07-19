@@ -5479,6 +5479,11 @@
         "source_path": "general/error-run-copy-activity-azure.md",
         "redirect_url": "/azure/data-factory/self-hosted-integration-runtime-troubleshoot-guide#usererrorjrenotfound-error-message-when-you-run-a-copy-activity-to-azure",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machines/windows/allocation-failure-classic.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/allocation-failure",
+        "redirect_document_id": true
       }
   ]
 }

@@ -15,7 +15,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 
 ms.topic: troubleshooting
-ms.date: 10/31/2018
+ms.date: 07/22/2024
 ms.author: genli
 ---
 # Detailed SSH troubleshooting steps for issues connecting to a Linux VM in Azure
@@ -93,36 +93,14 @@ If you can create an SSH connection with a computer that's directly connected to
 
 Work with your network administrator to correct the settings of your organization edge devices to allow SSH traffic with the Internet.
 
-## Source 3: Cloud service endpoint and ACL
-
-[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
-
-> [!NOTE]
-> This source applies only to VMs that were created by using the classic deployment model. For VMs that were created by using Resource Manager, skip to [source 4: Network security groups](#nsg).
-
-To eliminate the cloud service endpoint and ACL as the source of the failure, verify that another Azure VM in the same virtual network can connect using SSH.
-
-:::image type="content" source="media/detailed-troubleshoot-ssh-connection/cloud-service-endpoint-acl.png" alt-text="Diagram that highlights cloud service endpoint and ACL.":::
-
-If you don't have another VM in the same virtual network, you can easily create one. For more information, see [Create a Linux VM on Azure using the CLI](/azure/virtual-machines/linux/quick-create-cli). Delete the extra VM when you are done with your testing.
-
-If you can create an SSH connection with a VM in the same virtual network, check the following areas:
-
-* **The endpoint configuration for SSH traffic on the target VM.** The private TCP port of the endpoint should match the TCP port on which the SSH service on the VM is listening. (The default port is 22). Verify the SSH TCP port number in the Azure portal by selecting **Virtual machines** > *VM name* > **Settings** > **Endpoints**.
-* **The ACL for the SSH traffic endpoint on the target virtual machine.** An ACL enables you to specify allowed or denied incoming traffic from the Internet, based on its source IP address. Misconfigured ACLs can prevent incoming SSH traffic to the endpoint. Check your ACLs to ensure that incoming traffic from the public IP addresses of your proxy or other edge server is allowed. For more information, see [About network access control lists (ACLs)](/previous-versions/azure/virtual-network/virtual-networks-acl).
-
-To eliminate the endpoint as a source of the problem, remove the current endpoint, create another endpoint, and specify the SSH name (TCP port 22 for the public and private port number). For more information, see [Set up endpoints on a virtual machine in Azure](/previous-versions/azure/virtual-machines/windows/classic/setup-endpoints?toc=/azure/virtual-machines/windows/classic/toc.json).
-
-<a id="nsg"></a>
-
-## Source 4: Network security groups
+## Source 3: Network security groups
 
 Network security groups enable you to have more granular control of allowed inbound and outbound traffic. You can create rules that span subnets and cloud services in an Azure virtual network. Check your network security group rules to ensure that SSH traffic to and from the Internet is allowed.
 For more information, see [About network security groups](/azure/virtual-network/network-security-groups-overview).
 
 You can also use IP Verify to validate the NSG configuration. For more information, see [Azure network monitoring overview](/azure/network-watcher/network-watcher-monitoring-overview).
 
-## Source 5: Linux-based Azure virtual machine
+## Source 4: Linux-based Azure virtual machine
 
 The last source of possible problems is the Azure virtual machine itself.
 
