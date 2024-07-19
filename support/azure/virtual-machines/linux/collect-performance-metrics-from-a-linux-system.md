@@ -31,7 +31,7 @@ Based on the type of the metrics, these commands can be categorized into:
 
 ## Install Sysstat utilities for Linux
 
-You can install Sysstat utilities on a Linux virtual machine (VM) using either a Bash command or [Run Commands feature](/azure/virtual-machines/linux/run-command) with Azure CLI. If you use the Azure CLI commands that provided in this article to install the Sysstat utilities, make sure that the following two environment values are set. You must replace the resource group name and the VM name by the actual values.
+You can install Sysstat utilities on a Linux virtual machine (VM) using either a Bash command or [Run Commands feature](/azure/virtual-machines/linux/run-command) with Azure CLI. If you use the Azure CLI commands that provided in this article, make sure that the following two environment values are set. You must replace the resource group name and the VM name by the actual values.
 
 ```azurecli-interactive
 export MY_RESOURCE_GROUP_NAME="yourResourceGroup"
