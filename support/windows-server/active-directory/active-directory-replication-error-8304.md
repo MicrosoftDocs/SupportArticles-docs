@@ -138,12 +138,15 @@ The most common cause is having a non-linked attribute with a big number of valu
 
   
 > [!NOTE]
-> In a forest where all domain controllers are running Windows Server 2025 or later and both the forest and domain functional levels are set to Windows Server 2025 or later with the [Database 32k pages optional feature enabled](/windows-server/identity/ad-ds/enable-32k-pages-optional-feature?tabs=desktop), multi-valued attributes can now hold approximately 3,200 values. Therefore, the chances of encountering the problem are significantly reduced.
+> In a forest where all domain controllers are running Windows Server 2025 (preview) or later and both the forest and domain functional levels are set to Windows Server 2025 (preview) or later with the [Database 32k pages optional feature enabled](/windows-server/identity/ad-ds/enable-32k-pages-optional-feature?tabs=desktop), multi-valued attributes can now hold approximately 3,200 values. Therefore, the chances of encountering the problem are significantly reduced.
 >
 > For more information, see:  
 >
 > - [What's new in Windows Server 2025 (preview)](/windows-server/get-started/whats-new-windows-server-2025)   
 > - [Database 32k pages for Active Directory (preview)](/windows-server/identity/ad-ds/32k-pages-optional-feature)
+
+> [!Important]
+> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 On the source server, when you use a tool like LDP or run the `repadmin /showattr /allvalues /extended` command on the object, the output resembles the following:
 
