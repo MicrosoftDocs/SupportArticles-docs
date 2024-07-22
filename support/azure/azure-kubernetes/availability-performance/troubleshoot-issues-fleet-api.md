@@ -65,7 +65,6 @@ To find the latest ClusterSchedulingPolicySnapshot for a ClusterResourcePlacemen
 
     ```bash
     kubectl get clusterschedulingpolicysnapshot -l kubernetes-fleet.io/is-latest-snapshot=true,kubernetes-fleet.io/parent-CRP={CRPName}
-
     ```
 
 And then:
