@@ -3,7 +3,7 @@ title: Memory exceeds the configured limits specified by memory.memorylimitmb in
 description: Fixes an issue where memory exceeds the configured limits that are specified by memory.memorylimitmb in SQL Server.
 ms.date: 07/23/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5042369
-ms.reviewer: rafidl, ericjulien, v-cuichen
+ms.reviewer: rafidl, ericjulien, amitkh, v-cuichen
 appliesto:
 - SQL Server 2022 on Linux
 - SQL Server 2019 on Linux
