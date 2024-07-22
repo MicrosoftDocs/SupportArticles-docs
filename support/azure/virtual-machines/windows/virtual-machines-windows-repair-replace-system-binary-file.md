@@ -1,7 +1,7 @@
 ---
-title: Replace corrupted or missing binary files in Windows VMs
-description: Learn how to replace corrupted or missing binary files in Windows VMs.
-ms.date: 07/12/2024
+title: Repair or replace corrupted or missing binary files in Windows VMs
+description: Learn how to repair or replace corrupted or missing binary files in Windows VMs.
+ms.date: 07/16/2024
 ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.custom: sap:My VM is not booting

@@ -1,8 +1,6 @@
 ---
 title: Troubleshoot Azure Fence Agent startup issues in SUSE
 description: Provides troubleshooting guidance if Azure Fence Agent does not start
-author: rnirek
-ms.author: rnirek
 ms.reviewer: divargas
 ms.topic: troubleshooting
 ms.date: 07/04/2024
@@ -12,6 +10,8 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---
 
 # Troubleshoot Azure Fence Agent startup issues in SUSE
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 This article lists the common causes of startup issues for Microsoft Azure Fence Agent, offers guidance for identifying the causes through log reviews, and provides resolutions for the issues.
 

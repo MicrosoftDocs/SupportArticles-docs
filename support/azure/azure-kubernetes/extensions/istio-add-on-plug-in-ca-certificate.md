@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on plug-in CA certificate troubleshooting
 description: Learn how to do plug-in CA certificate troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 07/03/2024
+ms.date: 07/16/2024
 author: deveshdama
 ms.author: ddama
 editor: v-jsitser
@@ -12,7 +12,7 @@ ms.subservice: troubleshoot-extensions-add-ons
 ---
 # Istio service mesh add-on plug-in CA certificate troubleshooting
 
-This article discusses common troubleshooting issues for the Istio add-on plug-in certificate authority (CA) certificates feature, and it offers solutions to fix these issues. The article also reviews the general process of setting up plug-in CA certificates for the service mesh add-on.
+This article discusses common troubleshooting issues with the Istio add-on plug-in certificate authority (CA) certificates feature, and it offers solutions to fix these issues. The article also reviews the general process of setting up plug-in CA certificates for the service mesh add-on.
 
 > [!NOTE]
 > This article assumes that Istio revision `asm-1-21` is deployed on the cluster.
@@ -43,11 +43,11 @@ This article discusses common troubleshooting issues for the Istio add-on plug-i
 
 - For the cluster to auto-detect changes in the Azure Key Vault secrets, you have to enable [auto-rotation](/azure/aks/csi-secrets-store-configuration-options#enable-and-disable-auto-rotation) for the Azure Key Vault secrets provider add-on.
 
-- Although changes to the intermediate certificate are applied automatically, changes to the root certificate are only picked up by the control plane after the `istiod` deployment is restarted by a cronjob that the add-on deploys, as explained in the [Deployed resources](#deployed-resources) section. This cronjob runs at a 10 minute interval.
+- Although changes to the intermediate certificate are applied automatically, changes to the root certificate are only picked up by the control plane after the `istiod` deployment is restarted by a cronjob that the add-on deploys, as explained in the [Deployed resources](#deployed-resources) section. This cronjob runs at a 10-minute interval.
 
 ## Enable the Istio add-on to use a plug-in CA certificate
 
-The Istio add-on [plug-in CA certificate](https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/) feature allows you to configure plug-in root and intermediate certificates for the mesh. To provide plug-in certificate information when you enable the add-on, specify the following parameters for the [az aks mesh enable](/cli/azure/aks/mesh#az-aks-mesh-enable) command in Azure CLI.
+The Istio add-on [plug-in CA certificates](https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/) feature allows you to configure plug-in root and intermediate certificates for the mesh. To provide plug-in certificate information when you enable the add-on, specify the following parameters for the [az aks mesh enable](/cli/azure/aks/mesh#az-aks-mesh-enable) command in Azure CLI.
 
 | Parameter | Description |
 |--|--|
@@ -63,7 +63,7 @@ For more information, see [Plug in CA certificates for Istio-based service mesh 
 
 ## Deployed resources
 
-As part of the add-on deployment for the plug-in certs feature, the following resources are deployed onto the cluster:
+As part of the add-on deployment for the plug-in certificates feature, the following resources are deployed onto the cluster:
 
 - The `cacerts` Kubernetes secret is created in the `aks-istio-system` namespace at the time of the add-on deployment. This secret contains synchronized Azure Key Vault secrets:
 
@@ -98,7 +98,7 @@ As part of the add-on deployment for the plug-in certs feature, the following re
   istio-spc-asm-1-21   14h
   ```
 
-- The `istio-ca-root-cert` configmap is created in the `aks-istio-system` namespace as well as all user-managed namespaces. This configmap contains the root certificate that the certificate authority uses, and it's used by workloads in the namespaces to validate workload-to-workload communication, as follows:
+- The `istio-ca-root-cert` configmap is created in the `aks-istio-system` namespace and all user-managed namespaces. This configmap contains the root certificate that the certificate authority uses, and it's used by workloads in the namespaces to validate workload-to-workload communication, as follows:
 
   ```bash
   kubectl describe configmap istio-ca-root-cert --namespace aks-istio-system
@@ -257,7 +257,7 @@ Azure Key Vault secrets are synchronized with the cluster when the poll interval
 
 ### Issue 3: Certificate values are missing or are configured incorrectly
 
-If secret objects are missing from Azure Key Vault, or if these objects are configured incorrectly, it's possible that the `istiod-asm-1-21` pods could end up stuck in an `Init:0/2` status, delaying the installation of the add-on. To find the underlying cause of this problem, view output of running the following `kubectl describe` command against the `istiod` deployment:
+If secret objects are missing from Azure Key Vault, or if these objects are configured incorrectly, the `istiod-asm-1-21` pods might get stuck in an `Init:0/2` status, delaying the installation of the add-on. To find the underlying cause of this problem, run the following `kubectl describe` command against the `istiod` deployment and view the output:
 
 ```bash
 kubectl describe deploy/istiod-asm-1-21 --namespace aks-istio-system
