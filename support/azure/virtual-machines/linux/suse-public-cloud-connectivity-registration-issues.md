@@ -30,9 +30,16 @@ It's important to read the output of each command for more clues. We recommend t
 - The [registercloudguest](https://github.com/SUSE-Enceladus/cloud-regionsrv-client/blob/master/man/man1/registercloudguest.1) tool.
 
 > [!Note]
-> If your SLES VM is behind a proxy server, it is recommended to review technical consideration described in [Accessing the Public Cloud Update Infrastructure via a Proxy](https://www.suse.com/c/accessing-the-public-cloud-update-infrastructure-via-a-proxy/) as well.
+> If your SLES VM is behind a proxy server, it is recommended to review the technical considerations described in [Accessing the Public Cloud Update Infrastructure via a Proxy](https://www.suse.com/c/accessing-the-public-cloud-update-infrastructure-via-a-proxy/) as well.
 > For SLES VM on Azure, necessary actions include:
-> 1. Place a record in /etc/hosts on a proxy server, so that the name smt-azure.susecloud.net can be resolved.
+> 1. Connecting to update servers from SLES VM relies upon host name resolution that cannot be resolvable by public DNS servers. Thus, some proxy server implementations may need to manually place a record in /etc/hosts on proxy server side, so that the name "smt-azure" can be resolved.
+>
+>    An example record looks like;
+>    
+>    52.165.88.13 smt-azure.susecloud.net smt-azure
+>
+>    Available IP addresses are different for Azure regions. Please review the IP address list in [https://susepubliccloudinfo.suse.com/v1/microsoft/servers/smt.xml](https://susepubliccloudinfo.suse.com/v1/microsoft/servers/smt.xml)
+> 
 > 2. IP addresses [**168.63.129.16**](https://learn.microsoft.com/azure/virtual-network/what-is-ip-address-168-63-129-16), and **169.254.169.254** used by [Instance Metadata Service (IMDS)](https://learn.microsoft.com/azure/virtual-machines/instance-metadata-service) shoud bypass proxy access. These special IP addresses cannot be accessed through a proxy server and information from IMDS is needed for SLES VM to recognize cloud environment that is running on and to find out a proper SUSE update server.
 >
 >    For instance, NO_PROXY variable in /etc/sysconfig/proxy should be configured like below on SLES VM.
