@@ -11446,23 +11446,63 @@
       "redirect_document_id": false
     },
     {
-        "source_path": "support/windows-server/backup-and-storage/set-partmgr-attributes-with-powershell.md",
-        "redirect_url": "/previous-versions/troubleshoot/set-partmgr-attributes-with-powershell",
-        "redirect_document_id": false
+      "source_path": "support/windows-server/backup-and-storage/set-partmgr-attributes-with-powershell.md",
+      "redirect_url": "/previous-versions/troubleshoot/set-partmgr-attributes-with-powershell",
+      "redirect_document_id": false
     },
     {
-        "source_path": "support/windows-server/backup-and-storage/errors-occur-when-bringing-disk-resource.md",
-        "redirect_url": "/previous-versions/troubleshoot/errors-occur-when-bringing-disk-resource",
-        "redirect_document_id": false
+      "source_path": "support/windows-server/backup-and-storage/errors-occur-when-bringing-disk-resource.md",
+      "redirect_url": "/previous-versions/troubleshoot/errors-occur-when-bringing-disk-resource",
+      "redirect_document_id": false
     },
     {
-        "source_path": "support/windows-server/high-availability/updates-for-windows-server-2012-failover-cluster.md",
-        "redirect_url": "/previous-versions/troubleshoot/updates-for-windows-server-2012-failover-cluster",
-        "redirect_document_id": false
+      "source_path": "support/windows-server/high-availability/updates-for-windows-server-2012-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/updates-for-windows-server-2012-failover-cluster",
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/networking/guest-access-in-smb2-is-disabled-by-default.md",
       "redirect_url": "/windows-server/storage/file-server/enable-insecure-guest-logons-smb2-and-smb3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "./windows-security/trust-relationship-between-workstation-domain-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/trust-relationship-between-workstation-domain-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "./backup-and-storage/shelf-life-system-state-backup-ad.md",
+      "redirect_url": "/previous-versions/troubleshoot/shelf-life-system-state-backup-ad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "./backup-and-storage/access-denied-run-batch-job.md",
+      "redirect_url": "/previous-versions/troubleshoot/access-denied-run-batch-job",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "./backup-and-storage/backup-program-unsuccessful-large-system-volume.md",
+      "redirect_url": "/previous-versions/troubleshoot/backup-program-unsuccessful-large-system-volume",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "./backup-and-storage/fail-to-add-disk-to-schedule-backup.md",
+      "redirect_url": "/previous-versions/troubleshoot/fail-to-add-disk-to-schedule-backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "./backup-and-storage/diskshadow-error-try-to-create-a-vss-snap.md",
+      "redirect_url": "/previous-versions/troubleshoot/diskshadow-error-try-to-create-a-vss-snap",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "./backup-and-storage/enable-debug-tracing-features-vss.md",
+      "redirect_url": "/previous-versions/troubleshoot/enable-debug-tracing-features-vss",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "./backup-and-storage/error-when-you-do-system-state-backup.md",
+      "redirect_url": "/previous-versions/troubleshoot/error-when-you-do-system-state-backup",
       "redirect_document_id": false
     }
   ]
