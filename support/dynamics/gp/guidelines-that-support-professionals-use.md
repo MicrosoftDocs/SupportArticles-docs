@@ -2,7 +2,7 @@
 title: Guidelines that support professionals use
 description: Describes the guidelines we use to determine when a support case becomes a consulting engagement.
 ms.reviewer: theley, kyouells
-ms.date: 03/20/2024
+ms.date: 07/22/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Guidelines that Microsoft support professionals use to determine when a support case becomes a consulting engagement
@@ -87,15 +87,6 @@ If you need help for more than one of each function, the support case becomes a 
   
  However, any request for step-by-step information or detailed steps on a custom Template becomes a consulting engagement.
 
-## SmartList Builder
-
-> [!NOTE]
-> Support for SmartList Builder in **Microsoft Dynamics GP 2013 R2** (build 21 for Product ID 3830 [in the DU000020 table]) **and later versions** has went back to the ISV. Contact **eOne** for assistance with SmartList Builder in Microsoft Dynamics GP 2013 R2 and later versions. Their contact information is:  
-     Email: `support@eonesolutions.com`  
-     Phone: 888-319-3663
-
-For **Microsoft Dynamics GP 2013 SP2 and prior versions,** SmartList Builder is supported by Microsoft Dynamics GP Support using the same criteria as defined in the [SmartList Designer](#smartlist-designer) section below.  
-
 ## SmartList Designer
 
 We offer step-by-step assistance for the following functions in a support case:
@@ -172,22 +163,9 @@ When the support case becomes a consulting engagement:
 - If you need a Microsoft Dynamics GP Support Engineer to engage in a phone call with your bank
 - If assistance has exceeded 30 minutes for an unsupported or custom format or field.
 
-### Extender
-
-We offer the following assistance within a support case:
-
-- Create one calculated field on a single report in Report Writer.
-- Configure an existing Extender object.
-- Link an Extender object to a SmartList.
-- Create an Extender View.
- When the support case becomes a consulting engagement:
-- Data fixing is required.
-- Configuring more than one calculated field on a single report in Report Writer.
-- Creating an Extender object from start to finish.
-
 ### Workflow
 
-If you would like to create a condition for your workflow that isn't in Microsoft Dynamics GP by default, you can use the [Joining in Additional Tables for Workflow Conditions](https://community.dynamics.com/blogs/post/?postid=878cf128-45ad-497d-b586-c7b57df6251c) tool to help with the development of new workflow types or modifications of existing workflow types. This tool is supported in Microsoft Dynamics GP 2015 (14.00.0817) and later versions. Support will be limited to creating one single line in a condition. If your customization for workflow takes more than 30 minutes to test and explain, it's considered a consulting service at the discretion of the Microsoft Engineer.
+Workflow condition editor is limited to creating one single line in a condition. If your customization for workflow takes more than 30 minutes to test and explain, it's considered a consulting service at the discretion of the Microsoft Engineer.
 
 > [!NOTE]
 > Review [Microsoft Dynamics GP Workflow 2.0 AND & OR conditions when setting up approval steps.](https://community.dynamics.com/blogs/post/?postid=a487f20b-e595-4ecd-b51b-81aae053a1e0) to help with `And/Or` statements in workflow conditions.
