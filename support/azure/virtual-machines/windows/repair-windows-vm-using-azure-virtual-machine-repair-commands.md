@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
-ms.date: 07/18/2024
+ms.date: 07/22/2024
 ms.author: genli
 ---
 
@@ -37,13 +37,13 @@ If your Windows virtual machine (VM) in Azure encounters a boot or disk error, y
 
 You can now use Azure VM repair commands to change the OS disk for a VM, and you no longer need to delete and recreate the VM.
 
-The Repair Process Example section below will guide yoiu through the following process:
+The [Repair process example](#repair-process-example) section will guide you through the following process:
 
-1. Launch Azure Cloud Shell
-2. Run **az extension add/update**.
-3. Run **az vm repair create**.
-4. Run **az vm repair run** or perform mitigation steps.
-5. Run **az vm repair restore**.
+1. Launch Azure Cloud Shell.
+2. Run `az extension add` or `az extension update`.
+3. Run `az vm repair create`.
+4. Run `az vm repair run` or perform mitigation steps.
+5. Run `az vm repair restore`.
 
 > [!NOTE]
 > To view all available VM repair commands and parameters, see [az vm repair](/cli/azure/vm/repair).
