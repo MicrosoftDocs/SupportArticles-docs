@@ -75,9 +75,7 @@ To add the Teams processes to either the exclusion list or the Safe list/Allow l
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
 
-### Reference
-
-- [Performance and consistency issues when certain modules or filter drivers are loaded](https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules)
+### Disclaimer
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
