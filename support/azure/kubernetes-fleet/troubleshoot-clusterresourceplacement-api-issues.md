@@ -60,7 +60,7 @@ Check the status of the `ClusterSchedulingPolicySnapshot` to determine which clu
     - If false, see [How to debug ClusterResourcePlacementScheduled condition status set to false]().
     - If true, proceed to step 2.
 2. Verify if the `ClusterResourcePlacementApplied` condition is set to **unknown**, **false**, or **true**.
-    - If **unknown**, wait as the resources are still being applied to the member cluster. If the state remains unknown for a while, create a GitHub issue, as this is an unusual behavior.
+    - If **unknown**, wait as the resources are still being applied to the member cluster. If the state remains unknown for a while, create a [issue](https://github.com/Azure/fleet/issues), as this is an unusual behavior.
     - If **false**, see [How to debug ClusterResourcePlacementApplied condition status set to false]().
     - If **true**, verify if the resource exists on the hub cluster.
 3. Check the `placementStatuses` section in the `ClusterResourcePlacement` status for the particular cluster. The `FailedPlacements` section should provide reasons for any resource application failures.
@@ -75,7 +75,7 @@ kubectl get clusterschedulingpolicysnapshot -l kubernetes-fleet.io/is-latest-sna
 
 And then:
 
-1. Compare the `ClusterSchedulingPolicySnapshot` with the `ClusterResourcePlacement` policy to ensure they match, excluding the `numberOfClusters` field from the `ClusterResourcePlacement spec. 
+1. Compare the `ClusterSchedulingPolicySnapshot` with the `ClusterResourcePlacement` policy to ensure they match, excluding the `numberOfClusters` field from the `ClusterResourcePlacement' spec.
 1. If the placement type is `PickN`, check if the number of clusters requested in the `ClusterResourcePlacement` policy matches the value for the label called number-of-clusters.
 
 ### How to find the latest ClusterResourceBinding resource?
@@ -136,7 +136,7 @@ To find the latest ClusterResourceSnapshot resource, run the following command. 
 kubectl get clusterresourcesnapshot -l kubernetes-fleet.io/is-latest-snapshot=true,kubernetes-fleet.io/parent-CRP={CRPName}
 ```
 
-### How and where to find the correct Work resource for ClusterResourcePlacement?
+### How and where to find the correct Work resource associated with `ClusterResourcePlacement`?
 
 To find the correct Work resource, follow these steps:
 
