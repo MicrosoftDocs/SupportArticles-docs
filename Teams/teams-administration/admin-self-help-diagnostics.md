@@ -3,19 +3,20 @@ title: Self-help diagnostics for Teams administrators
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 05/28/2024
+ms.date: 07/23/2024
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 localization_priority: Normal
-search.appverid: 
+search.appverid:
   - SPO160
   - MET150
-appliesto: 
+appliesto:
   - Teams
-ms.custom: 
+ms.custom:
   - sap:Teams Admin\TAC (Teams Admin Center)
   - CI 124054
   - CI 188816
+  - CI 193380
   - CSSTroubleshoot
 ms.reviewer: salarson
 description: Describes how to run self-help diagnostics for Teams administrators.
@@ -72,6 +73,13 @@ The following tables list the diagnostics that are currently available in the Mi
 |---|---|---|---|
 |Determines the ability of Teams to interact with Microsoft Exchange Server. For Exchange Hybrid, run the test two times by using a Microsoft 365 mailbox and an on-premises mailbox. This is useful for IT administrators who want to troubleshoot Teams and Exchange integration.||[Teams Exchange Integration](https://testconnectivity.microsoft.com/tests/TeamsExchangeIntegration/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
 
+### Devices
+
+| Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
+|---|---|---|---|
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Teams Android desk phone.||[Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input)||
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Microsoft Teams Rooms devices: <ul><li>Teams Rooms on Android</li><li>Teams Rooms on Windows</li><li>Teams panels</li></ul>||[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)|
+
 ### Files
 
 | Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
@@ -85,7 +93,7 @@ The following tables list the diagnostics that are currently available in the Mi
 
 | Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
 |---|---|---|---|
-|Checks whether the prerequisites are correctly configured for the Microsoft Teams calendar app to function.| [Run Tests: Teams Calendar App](https://testconnectivity.microsoft.com/tests/TeamsCalendarMissing/input)|[Teams Calendar App](https://testconnectivity.microsoft.com/tests/TeamsCalendarMissing/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
+|Checks whether the prerequisites are correctly configured for the Microsoft Teams calendar app to function.||[Teams Calendar App](https://testconnectivity.microsoft.com/tests/TeamsCalendarMissing/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
 |Tries to locate a missing Teams Meeting Recording.|[Run Tests: Missing Recording](https://aka.ms/MissingRecordingDiag)||[Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools)|
 |Checks a user's policy for 1:1 Call Recording capability|[Run Tests: Teams 1:1 Call Recording](https://aka.ms/Teams11CallRecDiag)||[Issues with meeting recordings](../meetings/troubleshoot-meeting-recording-issues.md)|
 |Checks whether a user has the correct policies to enable the Teams Outlook add-in.|[Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-inDiag)||[Resolve issues with Teams Meeting add-in for Outlook](../meetings/resolve-teams-meeting-add-in-issues.md)|
