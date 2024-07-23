@@ -57,15 +57,15 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update    | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|-----------|-------------------------------------------------------|--------------------|
-| 16.0.4131.2             | None         | CU13 + GDR| [KB5040939](https://support.microsoft.com/help/5040939) | July 9, 2024    |
-| 16.0.1121.4             | None         | GDR       | [KB5040936](https://support.microsoft.com/help/5040936) | July 9, 2024    |
+| 16.0.4131.2             | None         | CU13 + GDR| [KB5040939](https://support.microsoft.com/help/5040939) | July 09, 2024    |
+| 16.0.1121.4             | None         | GDR       | [KB5040936](https://support.microsoft.com/help/5040936) | July 09, 2024    |
 | 16.0.4125.3             | None         | CU13| [KB5036432](sqlserver-2022/cumulativeupdate13.md) | May 16, 2024    |
-| 16.0.4120.1             | None         | CU12 + GDR| [KB5036343](https://support.microsoft.com/help/5036343) | April 9, 2024    |
-| 16.0.1115.1             | None         | GDR       | [KB5035432](https://support.microsoft.com/help/5035432) | April 9, 2024    |
+| 16.0.4120.1             | None         | CU12 + GDR| [KB5036343](https://support.microsoft.com/help/5036343) | April 09, 2024    |
+| 16.0.1115.1             | None         | GDR       | [KB5035432](https://support.microsoft.com/help/5035432) | April 09, 2024    |
 | 16.0.4115.5             | None         | CU12      | [KB5033663](sqlserver-2022/cumulativeupdate12.md)       | March 14, 2024     |
 | 16.0.4105.2             | None         | CU11      | [KB5032679](sqlserver-2022/cumulativeupdate11.md)       | January 11, 2024   |
-| 16.0.4100.1             | None         | CU10 + GDR| [KB5033592](https://support.microsoft.com/help/5033592) | January 9, 2024    |
-| 16.0.1110.1             | None         | GDR       | [KB5032968](https://support.microsoft.com/help/5032968) | January 9, 2024    |
+| 16.0.4100.1             | None         | CU10 + GDR| [KB5033592](https://support.microsoft.com/help/5033592) | January 09, 2024    |
+| 16.0.1110.1             | None         | GDR       | [KB5032968](https://support.microsoft.com/help/5032968) | January 09, 2024    |
 | 16.0.4095.4             | None         | CU10      | [KB5031778](sqlserver-2022/cumulativeupdate10.md)       | November 16, 2023  |
 | 16.0.4085.2             | None         | CU9       | [KB5030731](sqlserver-2022/cumulativeupdate9.md)        | October 12, 2023   |
 | 16.0.4080.1             | None         | CU8 + GDR | [KB5029503](https://support.microsoft.com/help/5029503) | October 10, 2023   |
@@ -85,12 +85,12 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update     | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|------------|-------------------------------------------------------|--------------------|
-| 15.0.4382.1             | None         | CU27 + GDR | [KB5040948](https://support.microsoft.com/help/5040948)       | July 9, 2024  |
-| 15.0.2116.2             | None         | GDR        | [KB5040986](https://support.microsoft.com/help/5040986)       | July 9, 2024  |
+| 15.0.4382.1             | None         | CU27 + GDR | [KB5040948](https://support.microsoft.com/help/5040948)       | July 09, 2024  |
+| 15.0.2116.2             | None         | GDR        | [KB5040986](https://support.microsoft.com/help/5040986)       | July 09, 2024  |
 | 15.0.4375.4             | None         | CU27       | [KB5037331](sqlserver-2019/cumulativeupdate27.md)       | June 13, 2024  |
 | 15.0.4365.2             | None         | CU26       | [KB5035123](sqlserver-2019/cumulativeupdate26.md)       | April 11, 2024  |
-| 15.0.4360.2             | None         | CU25 + GDR | [KB5036335](https://support.microsoft.com/help/5036335)       | April 9, 2024  |
-| 15.0.2110.4             | None         | GDR        | [KB5035434](https://support.microsoft.com/help/5035434)       | April 9, 2024  |
+| 15.0.4360.2             | None         | CU25 + GDR | [KB5036335](https://support.microsoft.com/help/5036335)       | April 09, 2024  |
+| 15.0.2110.4             | None         | GDR        | [KB5035434](https://support.microsoft.com/help/5035434)       | April 09, 2024  |
 | 15.0.4355.3             | None         | CU25       | [KB5033688](sqlserver-2019/cumulativeupdate25.md)       | February 15, 2024  |
 | 15.0.4345.5             | None         | CU24       | [KB5031908](sqlserver-2019/cumulativeupdate24.md)       | December 14, 2023  |
 | 15.0.4335.1             | None         | CU23       | [KB5030333](sqlserver-2019/cumulativeupdate23.md)       | October 12, 2023   |
@@ -131,8 +131,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update     | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|------------|-------------------------------------------------------|--------------------|
-| 14.0.3471.2             | None         | CU31 + GDR | [KB5040940](https://support.microsoft.com/help/5040940) | July 9, 2024   |
-| 14.0.2056.2             | None         | GDR        | [KB5040942](https://support.microsoft.com/help/5040942) | July 9, 2024   |
+| 14.0.3471.2             | None         | CU31 + GDR | [KB5040940](https://support.microsoft.com/help/5040940) | July 09, 2024   |
+| 14.0.2056.2             | None         | GDR        | [KB5040942](https://support.microsoft.com/help/5040942) | July 09, 2024   |
 | 14.0.3465.1             | None         | CU31 + GDR | [KB5029376](https://support.microsoft.com/help/5029376) | October 10, 2023   |
 | 14.0.2052.1             | None         | GDR        | [KB5029375](https://support.microsoft.com/help/5029375) | October 10, 2023   |
 | 14.0.3460.9             | None         | CU31 + GDR | [KB5021126](https://support.microsoft.com/help/5021126) | February 14, 2023  |
@@ -186,8 +186,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update                   | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|--------------------------|-------------------------------------------------------|--------------------|
-| 13.0.7037.1             | None         | Azure Connect Pack + GDR | [KB5040944](https://support.microsoft.com/help/5040944) | July 9, 2024   |
-| 13.0.6441.1             | None         | SP3 + GDR                | [KB5040946](https://support.microsoft.com/help/5040946) | July 9, 2024   |
+| 13.0.7037.1             | None         | Azure Connect Pack + GDR | [KB5040944](https://support.microsoft.com/help/5040944) | July 09, 2024   |
+| 13.0.6441.1             | None         | SP3 + GDR                | [KB5040946](https://support.microsoft.com/help/5040946) | July 09, 2024   |
 | 13.0.7029.3             | None         | Azure Connect Pack + GDR | [KB5029187](https://support.microsoft.com/help/5029187) | October 10, 2023   |
 | 13.0.6435.1             | None         | SP3 + GDR                | [KB5029186](https://support.microsoft.com/help/5029186) | October 10, 2023   |
 | 13.0.6430.49            | SP3          | GDR                      | [KB5021129](https://support.microsoft.com/help/5021129) | February 14, 2023  |
@@ -260,7 +260,7 @@ Each of the following links provides information for all of the applicable produ
 | 13.0.1722.0             | RTM          | GDR                      | [KB3194716](https://support.microsoft.com/help/3194716) | November 08, 2016   |
 | 13.0.2164.0             | RTM          | CU2                      | [KB3182270](sqlserver-2016/rtm-cumulativeupdate2.md) | September 22, 2016 |
 | 13.0.2149.0             | RTM          | CU1                      | [KB3164674](sqlserver-2016/rtm-cumulativeupdate1.md) | July 25, 2016      |
-| 13.0.1601.5             | None         | RTM                      | NA                                                    | June 1, 2016       |
+| 13.0.1601.5             | None         | RTM                      | NA                                                    | June 01, 2016       |
 
 ### SQL Server 2014
 

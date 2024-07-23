@@ -1,7 +1,7 @@
 ---
 title: Boot error code 0xc0000011 on an Azure VM
 description: Provides the resolution for the error code 0xc0000011 in the Azure VM.
-ms.date: 06/21/2024
+ms.date: 07/12/2024
 ms.reviewer: jarrettr, v-leedennis
 ms.service: virtual-machines
 ms.collection: windows
@@ -42,10 +42,10 @@ To fix the issue, follow these steps.
 2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 
-### Step 2: Replace the corrupted file
+### Step 2: Repair or replace the corrupted file
 
-Replace the corrupted system binary (*.sys*) file by following these steps:
+Repair or replace the corrupted system binary (*.sys*) file by following these steps:
 
-[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-replace-system-binary-file.md)]
+[!INCLUDE [Repair or replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

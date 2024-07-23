@@ -26,10 +26,6 @@ items:
         tocHref: /troubleshoot/windows-hardware/drivers
         topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
 
-    - name: Browsers
-      tocHref: /troubleshoot/developer/browsers/
-      topicHref: /troubleshoot/developer/browsers/welcome-browsers
-
     - name: .NET
       tocHref: /troubleshoot/developer/dotnet/
       topicHref: /troubleshoot/developer/dotnet/welcome-dotnet-landing

@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 27 for SQL Server 2019 (KB5037331)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 27 (KB5037331).
-ms.date: 06/26/2024
+ms.date: 07/22/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5037331
 ms.reviewer: v-qianli2
 appliesto:
@@ -24,7 +24,9 @@ This article describes Cumulative Update package 27 (CU27) for Microsoft SQL Ser
 ## Known issues in this update
 
 ### Issue one: Excessive logging of asynchronous API call warning in the error log
-The newly-created warning message in issue [2901635](#2901635) might fill up the SQL Server error log with thousands of occurrences. The message is "WARNING Long asynchronous API Call: The scheduling fairness of scheduler can be impacted by an asynchronous API invocation unexpectedly exceeding xxx ms." This is due to an incorrect code change during the build process. Microsoft is working on a fix for this issue and it will be available in a future CU.
+The newly-created warning message in issue [2901635](#2901635) might fill up the SQL Server error log with thousands of occurrences. The message is "WARNING Long asynchronous API Call: The scheduling fairness of scheduler can be impacted by an asynchronous API invocation unexpectedly exceeding xxx ms." This is due to an incorrect code change during the build process. If you experience this issue and prefer not to uninstall the CU as a solution, contact [Microsoft Support](https://support.microsoft.com/contactus/?ws=support).
+
+Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ### Issue two: Access violation when session is reset
 

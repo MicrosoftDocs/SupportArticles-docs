@@ -1,7 +1,7 @@
 ---
 title: Windows can't boot with (An operating system wasn't found) error 
 description: Provides a solution to an issue where Windows VM doesn't start with (An operating system wasn't found) error.
-ms.date: 07/21/2020
+ms.date: 07/12/2024
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: windows
@@ -39,66 +39,7 @@ To fix this issue, stop (de-allocate) and restart the VM. Then, check whether th
 
 ### Step 1: Verify whether the Windows partition is marked as active
 
-1. Delete the VM. Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
-3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
-4. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is both the Boot partition and the Windows partition.
-
-    If the OS disk contains more than one partition, you can identify the partitions by viewing the folders in them:  
-
-    - The Windows partition contains a folder that is named "Windows," and this partition is larger than the others.  
-    - The Boot partition contains a folder that is named "Boot." This folder is hidden by default. To see the folder, you must display the hidden files and folders and disable the **Hide protected operating system files (Recommended)** option. The boot partition is typically 300 MB~500 MB.  
-
-5. Run the following command as an administrator. This creates a boot record.
-
-    ```console
-    bcdboot <Windows partition>:\Windows /S <windows partition>:
-    ```
-
-6. Use DISKPART to check whether the Windows partition is active. To do this, follow these steps:
-
-    1. Run the following command to open DISKPART:
-
-        ```console
-        diskpart
-        ```
-
-    2. List the disks on the system, and then select the OS disk that you attached:
-
-        ```console
-        list disk
-        sel disk <number of the disk>
-        ```
-
-    3. List the volume, and then select the volume that contains Windows folder.
-
-        ```console
-        list vol
-        sel vol <number of the volume>
-        ```
-
-    4. List the partition on the disk, and then select the partition that contains the Windows folder.
-
-        ```console
-        list partition
-        sel partition <number of the Windows partition>
-        ```
-
-    5. View the status of the partition:
-
-        ```console
-        detail partition
-        ```
-
-        :::image type="content" source="media/os-not-found/detail-partition.png" alt-text="Screenshot of disk partition output, showing partition 1 is not active.":::
-
-        If the partition is active, go to "Step 2: Repair the Boot Configuration data."
-
-        If the partition is not active, run the `active` command to activate it.
-
-        Then, run **detail partition** again to check whether the partition is active.
-
-    6. Detach the repaired disk from the troubleshooting VM. Then, create a VM from the OS disk.
+[!INCLUDE [Verify that Windows partition is active](../../../includes/azure/windows-vm-verify-set-active-partition.md)]
 
 ### Step 2: Repair the Boot Configuration data
 

@@ -12,6 +12,7 @@ metadata:
    description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
    ms.topic: hub-page  
    ms.date: 06/12/2024
+   ms.date: 07/18/2024
    author: ChristySu
    ms.author: christys
 
@@ -72,11 +73,6 @@ productDirectory:
     imageSrc: "media/hub-landing/dynamics-365.svg"
     summary: Troubleshooting articles for Microsoft Dynamics 365
     url: dynamics-365/index.yml
-      
-  - title: Microsoft Edge and Internet Explorer
-    imageSrc: "media/hub-landing/Edge.jpg"
-    summary: Troubleshooting articles for Microsoft Edge and Internet Explorer
-    url: developer/browsers/welcome-browsers.yml
 
   - title: Microsoft Power Platform
     imageSrc: "media/hub-landing/microsoft.png"

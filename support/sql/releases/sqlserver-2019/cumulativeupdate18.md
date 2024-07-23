@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4261.1
 
 ## Summary
 
-This article describes Cumulative Update package 18 (CU18) for Microsoft SQL Server 2019. This update contains 21 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 17, and it updates components in the following builds:
+This article describes Cumulative Update package 18 (CU18) for Microsoft SQL Server 2019. This update contains 20 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 17, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4261.1**, file version: **2019.150.4261.1**
 - Analysis Services - Product version: **15.0.35.33**, file version: **2018.150.35.33**
@@ -63,7 +63,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="14914170">[14914170](#14914170)</a> | You use the `sp_changereplicationserverpasswords` stored procedure to change the password of the Microsoft SQL Server login used by replication agents. It fails and causes the following error: </br></br>Msg 208, Level 16, State 1, Procedure \<ProcedureName>, Line \<LineNumber> [Batch Start Line \<LineNumber>] </br>Invalid object name 'MSreplservers'. | SQL Server Engine | Replication | Windows |
 | <a id="14942316">[14942316](#14942316)</a> | High CPU usage occurs when you enable change tracking on a large number of tables and do automatic or manual cleanup of the change tracking tables. | SQL Server Engine | Replication | Windows |
 | <a id="14987604">[14987604](#14987604)</a> | Error 9833 "Invalid data for UTF8-encoded characters" can occur in one of the following scenarios: </br></br>- You create a merge publication or merge push subscription on a publication database that has UTF-8 collations. </br></br>- You create a pull subscription to a merge publication, and either the publication database or subscription database has UTF-8 collations. | SQL Server Engine | Replication | Windows |
-| <a id="15016426">[15016426](#15016426)</a> | [Improvement: Add new Azure SQL Database service tier options to the Stretch Database feature (KB5018050)](https://support.microsoft.com/help/5018050) | SQL Server Engine | Stretch DB | Windows |
 | <a id="14979551">[14979551](#14979551)</a> | [FIX: Installing SQL Server CUs may trigger IndexOutOfRangeException (KB5017551)](https://support.microsoft.com/help/5017551) | SQL Setup | Patching | Windows |
 
 ## How to obtain or download this or the latest cumulative update package

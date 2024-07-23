@@ -1,7 +1,7 @@
 ---
 title: Boot error code 0xC000000F in an Azure VM
 description: Fixes a Boot error code 0xc000000f that occurs on an Azure virtual machine (VM).
-ms.date: 06/21/2024
+ms.date: 07/12/2024
 ms.reviewer: jarrettr, v-leedennis
 ms.service: virtual-machines
 ms.collection: windows
@@ -104,8 +104,8 @@ This issue occurs when one of following conditions is true:
 
 ### Resolution for error 3
 
-First, follow the instructions in the [Attach the OS disk of the VM to another VM (troubleshooting VM) as a data disk](#step-1-attach-the-os-disk-of-the-vm-to-another-vm-troubleshooting-vm-as-a-data-disk) section. (This section is from the first part of the [Resolution for errors 1 and 2](#resolution-for-error-1-and-error-2).) Then, repair the system binary (*.sys*) file by following these steps:
+First, follow the instructions in the [Attach the OS disk of the VM to another VM (troubleshooting VM) as a data disk](#step-1-attach-the-os-disk-of-the-vm-to-another-vm-troubleshooting-vm-as-a-data-disk) section. (This section is from the first part of the [Resolution for errors 1 and 2](#resolution-for-error-1-and-error-2).) Then, repair or replace the system binary (*.sys*) file by following these steps:
 
-[!INCLUDE [Replace system binary file procedure](../../../includes/azure/virtual-machines-windows-replace-system-binary-file.md)]
+[!INCLUDE [Repair or replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
