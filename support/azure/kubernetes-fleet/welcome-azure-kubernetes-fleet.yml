@@ -1,13 +1,13 @@
 ### YamlMime:Landing
 
 title: Azure Kubernetes Fleet Manager troubleshooting documentation
-summary: Welcome to Azure Kubernetes Fleet Manager troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Kubernetes Service (AKS). In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+summary: Welcome to Azure Kubernetes Fleet Manager (Fleet) troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Kubernetes Fleet Manager. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 
 metadata:
   title: Troubleshoot Azure Kubernetes Fleet Manager issues
   description: Documentation for troubleshooting common issues with Azure Kubernetes Fleet Manager. # Required; article description that is displayed in search results. < 160 chars.
-  services: cloud-services
-  ms.service: azure-kubernetes-service #Required; service per approved list. service slug assigned to your service by ACOM.
+  services: kubernetes-fleet
+  ms.service: kubernetes-fleet #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
@@ -18,9 +18,9 @@ metadata:
 landingContent:
 
 # Card
-  - title: Learn how to use AKS with these quickstarts, tutorials, and samples
+  - title:  Troubleshooting
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: AKS documentation
-            url: /azure/aks/   
+          - text:  Troubleshooting ClusterResourcePlacement failures
+            url: troubleshoot-clusterresourceplacement-api-issues.md
