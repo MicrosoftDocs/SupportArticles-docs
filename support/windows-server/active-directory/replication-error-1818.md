@@ -30,7 +30,7 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 
 2. The following events get logged
 
-    |Event Source|Event ID|Event String|
+    |Event source|Event ID|Event string|
     |---|---|---|
     |NTDS Replication|1232|Active Directory attempted to perform a remote procedure call (RPC) to the following server. The call timed out and was cancelled.|
     |NTDS Replication|1188|A thread in Active Directory is waiting for the completion of a RPC made to the following domain controller.<br/>Domain controller:<br/>b8b5a0e4-92d5-4a88-a601-61971d7033af._msdcs.Contoso.com<br/>Operation:<br/>get changes<br/>Thread ID:<br/>448<br/>Timeout period (minutes):<br/>5<br/>Active Directory has attempted to cancel the call and recover this thread.<br/>User Action<br/>If this condition continues, restart the domain controller.|
@@ -127,7 +127,7 @@ If a destination domain controller that is performing RPC-based replication does
 
 Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CALL_CANCELLED` include:
 
-1. An old Network Interface Card driver installed on Domain Controllers could cause failure of a few network features like Scalable Networking Pack (SNP)
+1. An earlier Network Interface Card driver installed on Domain Controllers could cause failure of a few network features like Scalable Networking Pack (SNP)
 2. Low bandwidth or network packets drops between source and destination domain controllers.
 3. The networking device between source and destination device dropping packets.  
 
@@ -149,7 +149,7 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
    3. Select the **Bindings** tab. In the **Show Bindings For** box, select **All Services**.      
    4. Double-click each listed service to expand it.      
    5. Under each service, double-click each protocol to expand it.      
-   6. Under each protocol, there's a number of network adapter icons. Select the icon for your network adapter, and then select **Move Up** until the network adapter is at the top of the list. Leave the **Remote Access WAN Wrapper** entries in any order under the network adapter(s).
+   6. Under each protocol, there are many network adapter icons. Select the icon for your network adapter, and then select **Move Up** until the network adapter is at the top of the list. Leave the **Remote Access WAN Wrapper** entries in any order under the network adapter(s).
    
       > [!NOTE]
       > If you have more than one network adapter, place the internal adapter (with Internet Protocol [IP] address 10.0.0.2 by default on a Small Business Server network) at the top of the binding order, with the external adapter(s) directly below the internal adapter.
