@@ -4,4 +4,5 @@
 - name: Propagate resources issues
   items:
     - name: Troubleshooting guide for ClusterResourcePlacement 
-      href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
+      href: troubleshoot-clusterresourceplacement-api-issues.md
+      

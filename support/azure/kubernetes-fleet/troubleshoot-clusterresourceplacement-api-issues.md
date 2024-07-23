@@ -8,7 +8,7 @@ ms.custom: sap:Node/node pool availability and performance,devx-track-azurecli
 ---
 # Troubleshooting ClusterResourcePlacement in Azure Fleet Manager
 
-This troubleshooting guide helps you resolve `ClusterResourcePlacement` related issues when you use Azure Kubernetes Fleet Manager APIs. When troubleshooting these errors on the hub cluster, knowledge of the following internal objects is required:
+This troubleshooting guide helps you resolve `ClusterResourcePlacement` related issues when you use Azure Kubernetes Fleet Manager APIs. When troubleshooting these errors on the hub cluster, knowledge of the following objects is required:
 
 - `ClusterResourceSnapshot`
 - `ClusterSchedulingPolicySnapshot`
@@ -25,7 +25,7 @@ Understanding the progress and the status of the `ClusterResourcePlacement` depl
 kubectl describe clusterresourceplacement <name>
 ```
 
-For more information, see [Use the ClusterResourcePlacement API to propagate resources to member clusters](https://learn.microsoft.com/azure/kubernetes-fleet/quickstart-resource-propagation#use-the-clusterresourceplacement-api-to-propagate-resources-to-member-clusters).
+For more information, see [Use the ClusterResourcePlacement API to propagate resources to member clusters](/azure/kubernetes-fleet/quickstart-resource-propagation#use-the-clusterresourceplacement-api-to-propagate-resources-to-member-clusters).
 
 The complete progress of `ClusterResourcePlacement` is as follows:
 
@@ -63,15 +63,15 @@ Check the status of the `ClusterSchedulingPolicySnapshot` to determine which clu
     - If **unknown**, wait as the resources are still being applied to the member cluster. If the state remains unknown for a while, create a GitHub issue, as this is an unusual behavior.
     - If **false**, see [How to debug ClusterResourcePlacementApplied condition status set to false]().
     - If **true**, verify if the resource exists on the hub cluster.
-3. Check the `placementStatuses` section in the `ClusterResourcePlacement` status for the particular cluster. The `ailedPlacements` section should provide reasons for any resource application failures.
+3. Check the `placementStatuses` section in the `ClusterResourcePlacement` status for the particular cluster. The `FailedPlacements` section should provide reasons for any resource application failures.
 
 ### How to find and verify the latest ClusterSchedulingPolicySnapshot for a ClusterResourcePlacement deployment?
 
 To find the latest `ClusterSchedulingPolicySnapshot` for the `ClusterResourcePlacement` API deployment, run the following command. Replace `{CRPName}` in the following command with your `ClusterResourcePlacement` name.
 
-    ```bash
-    kubectl get clusterschedulingpolicysnapshot -l kubernetes-fleet.io/is-latest-snapshot=true,kubernetes-fleet.io/parent-CRP={CRPName}
-    ```
+```bash
+kubectl get clusterschedulingpolicysnapshot -l kubernetes-fleet.io/is-latest-snapshot=true,kubernetes-fleet.io/parent-CRP={CRPName}
+```
 
 And then:
 
@@ -82,13 +82,13 @@ And then:
 
 The following command lists all `ClusterResourceBindings` associated with `ClusterResourcePlacement`. Replace `{CRPName}` in the following command with your `ClusterResourcePlacement` name.
 
-    ```bash
-    Kubectl get clusterresourcebinding -l kubernetes-fleet.io/parent-CRP={CRPName}
-    ```
+```bash
+Kubectl get clusterresourcebinding -l kubernetes-fleet.io/parent-CRP={CRPName}
+```
 
 **Example**
 
-1. Run the folllwing to view the status of the `ClusterResourcePlacement` deployment. In this case, the `ClusterResourcePlacement` name is called **test-crp**:
+1. Run the following to view the status of the `ClusterResourcePlacement` deployment. In this case, the `ClusterResourcePlacement` name is called **test-crp**:
 
     ```bash
     kubectl describe clusterresourceplacement test-crp
@@ -114,7 +114,7 @@ The following command lists all `ClusterResourceBindings` associated with `Clust
           type: ResourceApplied
     ```
 
-3. Run the following commanad to get the `ClusterResourceBindings`:
+3. Run the following command to get the `ClusterResourceBindings`:
 
 ```bash
 kubectl get clusterresourcebinding -l kubernetes-fleet.io/parent-CRP=test-crp 
@@ -138,12 +138,12 @@ kubectl get clusterresourcesnapshot -l kubernetes-fleet.io/is-latest-snapshot=tr
 
 ### How and where to find the correct Work resource?
 
-To find the correct Work resource
+To find the correct Work resource, follow these steps:
 
-Record the member cluster's namespace, which follows this format `fleet-member-{clusterName}` and `ClusterResourcePlacement` name `{CRPName}`.
-
-```bash
-kubectl get work -n fleet-member-{clusterName} -l kubernetes-fleet.io/parent-CRP={CRPName}
-```
+1. Identify the member cluster's namespace and the `ClusterResourcePlacement` name. The format for the namespace is `fleet-member-{clusterName}`.
+1. Run the following command to get the Work resource. Replace {clusterName} and {CRPName} in the following command with the names you identified in the first step.
+    ```bash
+    kubectl get work -n fleet-member-{clusterName} -l kubernetes-fleet.io/parent-CRP={CRPName}
+    ```
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
