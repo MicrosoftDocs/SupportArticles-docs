@@ -1,7 +1,7 @@
 ---
 title: Active Directory changes don't replicate
 description: Provides a solution to an issue where the replication isn't completed when you replicate Active Directory directory service changes to a domain controller.
-ms.date: 07/19/2024
+ms.date: 07/23/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -11,8 +11,8 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 ---
 # Active Directory changes do not replicate
 
-This article provides a solution to an issue where the replication isn't completed when you replicate Active Directory service changes to a domain controller.  
-   
+This article provides a solution to an issue where the replication isn't completed when you replicate Active Directory service changes to a domain controller.
+
 _Original KB number:_ &nbsp; 830746
 
 ## Symptoms
