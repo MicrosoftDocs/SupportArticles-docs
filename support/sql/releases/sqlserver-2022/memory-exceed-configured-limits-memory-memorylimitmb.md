@@ -51,3 +51,5 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 ## References
 
 Learn about the [terminology](../../../windows-client/deployment/standard-terminology-software-updates.md) that Microsoft uses to describe software updates.
+
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
