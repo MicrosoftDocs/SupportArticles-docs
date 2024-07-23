@@ -32,7 +32,7 @@ It's important to read the output of each command for more clues. We recommend t
 > [!Note]
 > If your SLES VM is behind a proxy server, we recommend reviewing the technical considerations introduced in [Accessing the Public Cloud Update Infrastructure via a Proxy](https://www.suse.com/c/accessing-the-public-cloud-update-infrastructure-via-a-proxy/).
 > For SLES VMs on Azure, necessary actions include:
-> 1. Connecting to update servers from SLES VM relies upon host name resolution that can't be resolvable by public DNS servers. Thus, some proxy server implementations may need to manually place a record in */etc/hosts* on proxy server side, so that the name "smt-azure" can be resolved.
+> 1. Connecting to update servers from SLES VM relies upon host name resolution that can't be resolvable by public DNS servers. Thus, some Linux/Unix proxy server implementations may need to manually place a record in */etc/hosts* on proxy server side, so that the name "smt-azure" can be resolved.
 >
 >    Here's an example record:
 >    
