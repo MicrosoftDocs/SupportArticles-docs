@@ -11466,42 +11466,42 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "./windows-security/trust-relationship-between-workstation-domain-fail.md",
+      "source_path": "support/windows-server/windows-security/trust-relationship-between-workstation-domain-fail.md",
       "redirect_url": "/previous-versions/troubleshoot/trust-relationship-between-workstation-domain-fail",
       "redirect_document_id": false
     },
     {
-      "source_path": "./backup-and-storage/shelf-life-system-state-backup-ad.md",
+      "source_path": "support/windows-server/backup-and-storage/shelf-life-system-state-backup-ad.md",
       "redirect_url": "/previous-versions/troubleshoot/shelf-life-system-state-backup-ad",
       "redirect_document_id": false
     },
     {
-      "source_path": "./backup-and-storage/access-denied-run-batch-job.md",
+      "source_path": "support/windows-server/backup-and-storage/access-denied-run-batch-job.md",
       "redirect_url": "/previous-versions/troubleshoot/access-denied-run-batch-job",
       "redirect_document_id": false
     },
     {
-      "source_path": "./backup-and-storage/backup-program-unsuccessful-large-system-volume.md",
+      "source_path": "support/windows-server/backup-and-storage/backup-program-unsuccessful-large-system-volume.md",
       "redirect_url": "/previous-versions/troubleshoot/backup-program-unsuccessful-large-system-volume",
       "redirect_document_id": false
     },
     {
-      "source_path": "./backup-and-storage/fail-to-add-disk-to-schedule-backup.md",
+      "source_path": "support/windows-server/backup-and-storage/fail-to-add-disk-to-schedule-backup.md",
       "redirect_url": "/previous-versions/troubleshoot/fail-to-add-disk-to-schedule-backup",
       "redirect_document_id": false
     },
     {
-      "source_path": "./backup-and-storage/diskshadow-error-try-to-create-a-vss-snap.md",
+      "source_path": "support/windows-server/backup-and-storage/diskshadow-error-try-to-create-a-vss-snap.md",
       "redirect_url": "/previous-versions/troubleshoot/diskshadow-error-try-to-create-a-vss-snap",
       "redirect_document_id": false
     },
     {
-      "source_path": "./backup-and-storage/enable-debug-tracing-features-vss.md",
+      "source_path": "support/windows-server/backup-and-storage/enable-debug-tracing-features-vss.md",
       "redirect_url": "/previous-versions/troubleshoot/enable-debug-tracing-features-vss",
       "redirect_document_id": false
     },
     {
-      "source_path": "./backup-and-storage/error-when-you-do-system-state-backup.md",
+      "source_path": "support/windows-server/backup-and-storage/error-when-you-do-system-state-backup.md",
       "redirect_url": "/previous-versions/troubleshoot/error-when-you-do-system-state-backup",
       "redirect_document_id": false
     }
