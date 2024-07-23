@@ -31,20 +31,18 @@ The entitlement's entity allocation type mapping records aren't present in the `
 
 ### Resolution
 
-To resolve this issue, you can add the entitlement's entity allocation type mapping records to the `EntitlementEntityAllocationTypeMappingBase` table.
+To resolve this issue, Customer can mitigate by either finding where these records were dropped or recreating them. If they have an org where entitlement is working, they can export the values.
 
-- Use the following query to insert missing mapping records and add a record for allocation type for the **Case** entity type:
-  
-  ```sql
-  Insert INTO [dbo].[EntitlementEntityAllocationTypeMappingBase]
-  (entitlemententityallocationtypemappingid, statecode, statuscode, allocationtype, entitytype, OwnerId) Values('0C537E5C-13E8-410B-A65C-783A113D49FC', 0, 1, 0, 0, 'F5C0B9AD-E076-ED11-81B3-6045BDE41C7D')
-  ```
+:::image type="content" source="media/allocation-type-missing-options/entitlement-entity-allocation-type-mapping.png" alt-text="Entitlement Entity Allocation Type Mapping.":::
 
-- Include the following information for the mandatory fields:
+Customer can recreate these by going to the powerapps admin like in below screenshot and adding row records to match the above screenshot. They should map from Case to the two remaining allocation type options. If they need to recreate (due to deletion) it's best to do this with a user with maximal permissions.
 
-  - **Entitlemententityallocationtypemappingid**: New GUID.
-  - **Statecode**: Provides a state code that explains the status.
-  - **Statuscode**: Provides the reason code that explains the status.
-  - **Allocationtype**: Provides the type of entitlement terms.
-  - **Entitytype**: The entity type for which the entitlement applies.
-  - **OwnerId**: Owner Id.
+:::image type="content" source="media/allocation-type-missing-options/finging-entitlement-entity-allocation-type-mapping-table.png" alt-text="Finding Entitlement Entity Allocation Type Mapping Table.":::
+
+If it doesn't work from the UI, they can try the below webAPI: 
+
+```Xrm
+Xrm.WebApi.createRecord("entitlemententityallocationtypemapping", 
+{name: "incident_numberofcases", entitytype: 0, allocationtype:0}) Xrm.WebApi.createRecord("entitlemententityallocationtypemapping", 
+{name: "incident_numberofhours", entitytype: 0, allocationtype:1})
+```
