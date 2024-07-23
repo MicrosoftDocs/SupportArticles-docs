@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting AD Replication error 1818
 description: Describes an issue where AD operations fail with error 1818 (The remote procedure call was cancelled (RPC_S_CALL_CANCELLED)).
-ms.date: 07/19/2024
+ms.date: 07/23/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -166,7 +166,7 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
       
    8. Repeat step f for each service in the dialog box.      
    9. After you've verified the settings for each service, select **All Protocols** in the **Show Bindings For** box. The entry for **Remote Access WAN Wrapper** doesn't have a network adapter listed. Skip this item. Repeat steps d through f for each remaining protocol.    
-   10. After you've verified that the bindings are set correctly for all services and protocols, select OK. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Select **Yes**.
+   10. After you've verified that the bindings are set correctly for all services and protocols, select **OK**. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Select **Yes**.
       
 ## Data collection
 
