@@ -116,17 +116,17 @@ Kubectl get clusterresourcebinding -l kubernetes-fleet.io/parent-CRP={CRPName}
 
 3. Run the following command to get the `ClusterResourceBindings`:
 
-```bash
-kubectl get clusterresourcebinding -l kubernetes-fleet.io/parent-CRP=test-crp 
-```
+    ```bash
+    kubectl get clusterresourcebinding -l kubernetes-fleet.io/parent-CRP=test-crp 
+    ```
+    
+    ```output
+    NAME                               WORKCREATED   RESOURCESAPPLIED   AGE
+    test-crp-kind-cluster-1-be990c3e   True          True               33s
+    test-crp-kind-cluster-2-ec4d953c   True          True               33s
+    ```
 
-```output
-NAME                               WORKCREATED   RESOURCESAPPLIED   AGE
-test-crp-kind-cluster-1-be990c3e   True          True               33s
-test-crp-kind-cluster-2-ec4d953c   True          True               33s
-```
-
-The output lists all `ClusterResourceBindings` associated with `test-crp`. The `ClusterResourceBinding` resource name follows this format `{CRPName}-{clusterName}-{suffix}`.
+    The output lists all `ClusterResourceBindings` associated with `test-crp`. The `ClusterResourceBinding` resource name follows this format `{CRPName}-{clusterName}-{suffix}`.
 
 ### How to find the latest ClusterResourceSnapshot resource?
 
