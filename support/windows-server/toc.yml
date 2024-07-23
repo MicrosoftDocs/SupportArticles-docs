@@ -629,26 +629,10 @@ items:
   items:
   - name: Backup and Storage
     href: ./backup-and-storage/backup-and-storage-overview.md
-  - name: Active Directory backup and restore, or disaster recovery
-    items:
-    - name: Shelf life of a system-state backup of AD
-      href: ./backup-and-storage/shelf-life-system-state-backup-ad.md
   - name: Configuring and using Backup software
     items:
-    - name: Access Denied when you run batch job
-      href: ./backup-and-storage/access-denied-run-batch-job.md
-    - name: Backup program is unsuccessful for large system volume
-      href: ./backup-and-storage/backup-program-unsuccessful-large-system-volume.md
-    - name: Can't add an additional disk to a scheduled backup
-      href: ./backup-and-storage/fail-to-add-disk-to-schedule-backup.md
     - name: DirectAccess clients connection error 0x274d
       href: ./backup-and-storage/directaccess-clients-connection-error-0x274d.md
-    - name: Diskshadow error when you try to create a VSS snapshot
-      href: ./backup-and-storage/diskshadow-error-try-to-create-a-vss-snap.md
-    - name: Enable debug tracing features of VSS
-      href: ./backup-and-storage/enable-debug-tracing-features-vss.md
-    - name: Error message when you do a system state backup
-      href: ./backup-and-storage/error-when-you-do-system-state-backup.md
     - name: Error 3266/3013 when you perform database backup/restore
       href: ./backup-and-storage/database-backup-error-3266-3013.md
     - name: Event ID 8193 when you perform a backup
@@ -3050,9 +3034,7 @@ items:
     - name: TGS requests for krbtgt account fail
       href: ./windows-security/tgs-request-for-krbtgt-account-fails.md
     - name: The Fingerprint Registration Wizard doesn't run
-      href: ./windows-security/fingerprint-registration-wizard-not-run-install-fingerprint-reader.md
-    - name: Unable to log on to a domain
-      href: ./windows-security/trust-relationship-between-workstation-domain-fail.md
+      href: ./windows-security/fingerprint-registration-wizard-not-run-install-fingerprint-reader.md    
   - name: Legacy authentication (NTLM)
     items:
     - name: Audit event shows authentication package as NTLMv1
