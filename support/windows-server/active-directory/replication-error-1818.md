@@ -33,7 +33,7 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
     |Event source|Event ID|Event string|
     |---|---|---|
     |NTDS Replication|1232|Active Directory attempted to perform a remote procedure call (RPC) to the following server. The call timed out and was cancelled.|
-    |NTDS Replication|1188|A thread in Active Directory is waiting for the completion of a RPC made to the following domain controller.<br/>Domain controller:<br/>b8b5a0e4-92d5-4a88-a601-61971d7033af._msdcs.Contoso.com<br/>Operation:<br/>get changes<br/>Thread ID:<br/>448<br/>Timeout period (minutes):<br/>5<br/>Active Directory has attempted to cancel the call and recover this thread.<br/>User Action<br/>If this condition continues, restart the domain controller.|
+    |NTDS Replication|1188|A thread in Active Directory is waiting for the completion of an RPC made to the following domain controller.<br/>Domain controller:<br/>b8b5a0e4-92d5-4a88-a601-61971d7033af._msdcs.Contoso.com<br/>Operation:<br/>get changes<br/>Thread ID:<br/>448<br/>Timeout period (minutes):<br/>5<br/>Active Directory has attempted to cancel the call and recover this thread.<br/>User Action<br/>If this condition continues, restart the domain controller.|
     |<br/>NTDS Replication|1173 with error status 1818|Internal event: Active Directory has encountered the following exception and associated parameters. Exception: e0010002 Parameter: 0 Additional Data Error value: 1818 Internal ID: 5000ede|
     |NTDS Replication|1085 with error status 1818|Internal event: Active Directory could not synchronize the following directory partition with the domain controller at the following network address.<br/>Directory partition: \<NC><br/>Network address: \<GUID-based DC name><br/>If this error continues, the Knowledge Consistency Checker (KCC) will reconfigure the replication links and bypass the domain controller.<br/>User Action<br/>Verify that the network address can be resolved with a DNS query.<br/>Additional Data Error value: 1818 The remote procedure call was cancelled.|
 
@@ -153,7 +153,9 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
    
       > [!NOTE]
       > If you have more than one network adapter, place the internal adapter (with Internet Protocol [IP] address 10.0.0.2 by default on a Small Business Server network) at the top of the binding order, with the external adapter(s) directly below the internal adapter.
-       The final order should appear similar to:  
+    
+      The final order should appear similar to:
+      
       [1] Network adapter one  
       [2] Network adapter two (if present)  
       [3] Remote Access WAN Wrapper  
@@ -162,9 +164,9 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
       .  
       [n] Remote Access WAN Wrapper  
       
-   7. Repeat step f for each service in the dialog box.      
-   8. After you've verified the settings for each service, select **All Protocols** in the **Show Bindings For** box. The entry for **Remote Access WAN Wrapper** doesn't have a network adapter listed. Skip this item. Repeat steps d through f for each remaining protocol.    
-   9. After you've verified that the bindings are set correctly for all services and protocols, select OK. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Select **Yes**.
+   8. Repeat step f for each service in the dialog box.      
+   9. After you've verified the settings for each service, select **All Protocols** in the **Show Bindings For** box. The entry for **Remote Access WAN Wrapper** doesn't have a network adapter listed. Skip this item. Repeat steps d through f for each remaining protocol.    
+   10. After you've verified that the bindings are set correctly for all services and protocols, select OK. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Select **Yes**.
       
 ## Data collection
 
