@@ -8,7 +8,7 @@ ms.custom: sap:Node/node pool availability and performance,devx-track-azurecli
 ---
 # Troubleshooting ClusterResourcePlacement in Azure Fleet Manager
 
-This troubleshooting guide helps you resolve `ClusterResourcePlacement` related issues when you use Azure Kubernetes Fleet Manager APIs. When troubleshooting these errors on the hub cluster, keep in mind the following internal objects:
+This troubleshooting guide helps you resolve `ClusterResourcePlacement` related issues when you use Azure Kubernetes Fleet Manager APIs. When troubleshooting these errors on the hub cluster, knowledge of the following internal objects is required:
 
 - `ClusterResourceSnapshot`
 - `ClusterSchedulingPolicySnapshot`
@@ -114,20 +114,23 @@ The following command lists all `ClusterResourceBindings` associated with `Clust
           type: ResourceApplied
     ```
 
-3. Run the following commanad In the Output, we receive after running the command listed above to get the `ClusterResourceBindings`,
+3. Run the following commanad to get the `ClusterResourceBindings`:
 
 ```bash
 kubectl get clusterresourcebinding -l kubernetes-fleet.io/parent-CRP=test-crp 
+```
+
+```output
 NAME                               WORKCREATED   RESOURCESAPPLIED   AGE
 test-crp-kind-cluster-1-be990c3e   True          True               33s
 test-crp-kind-cluster-2-ec4d953c   True          True               33s
 ```
 
-The `ClusterResourceBinding` name follows this format `{CRPName}-{clusterName}-{suffix}`, so once we have all ClusterResourceBindings listed find the `ClusterResourceBinding` for the target cluster you're looking for based on the `clusterName`.
+The output lists all `ClusterResourceBindings` associated with `test-crp`. The `ClusterResourceBinding` resource name follows this format `{CRPName}-{clusterName}-{suffix}`.
 
 ### How to find the latest ClusterResourceSnapshot resource?
 
-Replace `{CRPName}` in the command below with name of `ClusterResourcePlacement`:
+To find the latest ClusterResourceSnapshot resource, run the following command. Replace `{CRPName}` in the following command with your `ClusterResourcePlacement` name.
 
 ```bash
 kubectl get clusterresourcesnapshot -l kubernetes-fleet.io/is-latest-snapshot=true,kubernetes-fleet.io/parent-CRP={CRPName}
@@ -135,7 +138,9 @@ kubectl get clusterresourcesnapshot -l kubernetes-fleet.io/is-latest-snapshot=tr
 
 ### How and where to find the correct Work resource?
 
-We need to have the member cluster's namespace, which follows this format `fleet-member-{clusterName}` and `ClusterResourcePlacement` name `{CRPName}`.
+To find the correct Work resource
+
+Record the member cluster's namespace, which follows this format `fleet-member-{clusterName}` and `ClusterResourcePlacement` name `{CRPName}`.
 
 ```bash
 kubectl get work -n fleet-member-{clusterName} -l kubernetes-fleet.io/parent-CRP={CRPName}

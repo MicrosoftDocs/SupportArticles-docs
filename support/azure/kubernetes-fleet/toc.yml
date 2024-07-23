@@ -1,0 +1,7 @@
+- name: Welcome
+  href: welcome-azure-kubernetes-fleet.yml
+
+- name: Propagate resources issues
+  items:
+    - name: Troubleshooting guide for ClusterResourcePlacement 
+      href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
