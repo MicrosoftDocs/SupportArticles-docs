@@ -1,12 +1,12 @@
 ---
 title: Fix Windows Update corruptions and installation failures
 description: Use the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 06/14/2024
+ms.date: 07/23/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: high
-ms.reviewer: kaushika, chkeen, cgibson, jesko
+ms.reviewer: kaushika, chkeen, cgibson, jesko, warrenw
 ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
 adobe-target: true
 ---
@@ -107,6 +107,146 @@ The DISM tool creates a log file that captures any issues that the tool found or
 
 - _%SYSTEMROOT%\Logs\CBS\CBS.log_
 - _%SYSTEMROOT%\Logs\CBS\CBS.persist.log_
+
+## Use the DISM commands
+
+### Step 1: Analyze the CBS.log file
+
+After running the DISM commands, go to *%WinDir%\\Logs\\CBS\\CBS.log* to view the results. The log file provides a summary of the scan and details of any errors found.
+
+Here's an example of the log summary:
+
+```output
+Checking System Update Readiness.
+    (p)      CSI Payload Corrupt              (n)           amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19041.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
+       (p)    CBS MUM Missing                         (n)                 Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4291
+       (p)    CSI Manifest Corrupt             (w)    (Fixed)       wow64_microsoft-windows-audio-mmecore-acm_31bf3856ad364e35_10.0.19041.1_none_a12b40f4b4c7b751
+    (p)      CSI Manifest Corrupt          (n)                    wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19041.3636_none_4514b27cf12f35d5
+
+
+Summary:
+Operation: Detect and Repair 
+Operation result: 0x800f081f
+Last Successful Step: Remove staged packages completes.
+Total Detected Corruption: 2
+    CBS Manifest Corruption: 2
+    CBS Metadata Corruption: 0
+    CSI Manifest Corruption: 0
+    CSI Metadata Corruption: 0
+    CSI Payload Corruption: 0
+Total Repaired Corruption: 1
+    CBS Manifest Repaired: 1
+    CSI Manifest Repaired: 0
+    CSI Payload Repaired: 0
+    CSI Store Metadata refreshed: False
+Staged Packages:
+    CBS Staged packages: 0
+    CBS Staged packages removed: 0
+```
+
+### Step 2: Download the missing files
+
+1. Identify the missing or corrupted files.
+
+	Review the *CBS.log* file to identify the missing or corrupted files. For example:
+	
+	```output
+	(p) CSI Payload Corrupt (n) amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19041.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
+	(p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4291
+	(p) CSI Manifest Corrupt (n) wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19041.3636_none_4514b27cf12f35d5
+	```
+
+2. Determine the version.
+
+	To determine which update has the missing files, you can use the Update Build Revision (UBR) in the file name. For example:
+
+	- 10.0.19041.3636 is a UBR.
+	- 10.0.19041.4291 is a UBR.
+
+	You need to find updates that have these UBR numbers. For example, if you're using Windows 10, version 22H2, find the update history page and locate the UBR number (for example, 3636). Each update has a UBR number, and you can download the corresponding update.
+
+3. Download the missing files.
+
+	Identify and download the update packages that contain the missing files. For example, if the log indicates that `Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4291` is missing, download the respective `.msu` file from the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
+
+### Step 3: Extract the .msu and .cab files
+
+To address the corrupted files identified in the CBS.log file, extract the missing files into a specific folder. Follow these steps to extract the `.msu` and `.cab` files by using the provided [PowerShell script](../support-tools/scripts-extract-msu-cab-files.md), and then copy the necessary files to the *%SYSTEMROOT%\\Source* folder.
+
+1. Create the necessary folders.
+
+	Run the following command to create the *%SYSTEMROOT%\\Source* folder if it doesn't exist:
+	
+	```console
+	mkdir %SYSTEMROOT%\Source
+	```
+
+2. Use the instructions and script in [Scripts: Extract .msu and .cab files](../support-tools/scripts-extract-msu-cab-files.md) to extract the `.msu` files by providing the destination paths of the `.msu` files.
+
+### Step 4: Repair the corrupted files by using the source files
+
+1. Copy the corrupted files.
+
+	Copy all the corrupted files that belong to this update to the %SYSTEMROOT%\Source folder. For example, run the following command:
+	
+	```powershell
+	Copy-Item "C:\path\extractedFiles\corruptedfile.dll" -Destination "C:\Windows\Source"
+	```
+
+	Repeat this process for each corrupted file identified in the log until all the corrupted files are copied to the %SYSTEMROOT%\Source folder.
+
+2. Rerun the DISM command.
+
+	Open a command prompt as an administrator and run the following DISM command with the `/Source` option:
+	
+	```console
+	DISM /Online /Cleanup-Image /RestoreHealth /Source:%SYSTEMROOT%\Source\ /limit
+	```
+
+### Step 5: Verify and confirm
+
+1. Rerun the DISM command.
+
+	Rerun the following DISM command to verify that the issues have been resolved:
+	
+	```console
+	DISM /Online /Cleanup-Image /ScanHealth
+	```
+
+2. Check the *CBS.log* file.
+
+	Review the CBS.log file to ensure there are no remaining errors.
+
+### Example DISM command output
+
+The output of the DISM restore command provides crucial information about the corruption that was detected and repaired:
+
+```output
+Checking System Update Readiness.
+
+(p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4291
+Repair failed: Missing replacement mum/cat pair.
+(p) CBS MUM Missing (w) (Fixed) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4412
+
+Summary:
+Operation: Detect and Repair 
+Operation result: 0x800f081f
+Last Successful Step: Remove staged packages completes.
+Total Detected Corruption: 2
+    CBS Manifest Corruption: 2
+    CBS Metadata Corruption: 0
+    CSI Manifest Corruption: 0
+    CSI Metadata Corruption: 0
+    CSI Payload Corruption: 0
+Total Repaired Corruption: 1
+    CBS Manifest Repaired: 1
+    CSI Manifest Repaired: 0
+    CSI Payload Repaired: 0
+    CSI Store Metadata refreshed: False
+Staged Packages:
+    CBS Staged packages: 0
+    CBS Staged packages removed: 0
+```
 
 ## Fix corruptions found in CBS.log file
 
