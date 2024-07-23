@@ -2,7 +2,7 @@
 title: Guidelines that support professionals use
 description: Describes the guidelines we use to determine when a support case becomes a consulting engagement.
 ms.reviewer: theley, kyouells
-ms.date: 07/22/2024
+ms.date: 07/23/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Guidelines that Microsoft support professionals use to determine when a support case becomes a consulting engagement
@@ -16,17 +16,15 @@ _Original KB number:_ &nbsp; 850201
 
 Microsoft support professionals use to determine when a support case becomes a consulting engagement for the following items:
 
-- Report Writer in Microsoft Dynamics GP
-- Microsoft SQL Server Reporting Services (SSRS)
-- Word Template in Microsoft Dynamics GP
-- SmartList Builder in Microsoft Dynamics GP
-- SmartList Designer in Microsoft Dynamics GP 2013 SP2
-- SQL scripts (including Business Alerts)
-- Integration Manager VB Script customizations
-- Modifier/VBA Customizations
-- Configurator File setup for eBanking modules (RM EFT, PM EFT, SafePay, Lockbox, Electronic Reconcile)
-- Extender in Microsoft Dynamics
-- Workflow
+- [Report Writer in Microsoft Dynamics GP](#report-writer)
+- [Microsoft SQL Server Reporting Services (SSRS)](#microsoft-sql-server-reporting-services-ssrs)
+- [Word Template in Microsoft Dynamics GP](#word-templates-in-microsoft-dynamics-gp-2010)
+- [SmartList Designer in Microsoft Dynamics GP 2013 SP2](#smartlist-designer)
+- [SQL scripts (including Business Alerts)](#sql-scripts-views-and-business-alerts)
+- [Integration Manager VB Script customizations](#integration-manager-vb-script-customizations)
+- [Modifier/VBA Customizations](#modifiervba-customizations)
+- [Configurator File setup for eBanking modules (RM EFT, PM EFT, SafePay, Lockbox, Electronic Reconcile)](#configurator-file-setup-for-ebanking-modules)
+- [Workflow](#workflow)
 
 ## More information
 
@@ -165,7 +163,7 @@ When the support case becomes a consulting engagement:
 
 ### Workflow
 
-Workflow condition editor is limited to creating one single line in a condition. If your customization for workflow takes more than 30 minutes to test and explain, it's considered a consulting service at the discretion of the Microsoft Engineer.
+The Workflow Condition Editor is limited to create one single line in a condition. If your customization for a workflow takes more than 30 minutes to test and explain, it's considered a consulting service at the discretion of the Microsoft Engineer.
 
 > [!NOTE]
 > Review [Microsoft Dynamics GP Workflow 2.0 AND & OR conditions when setting up approval steps.](https://community.dynamics.com/blogs/post/?postid=a487f20b-e595-4ecd-b51b-81aae053a1e0) to help with `And/Or` statements in workflow conditions.
