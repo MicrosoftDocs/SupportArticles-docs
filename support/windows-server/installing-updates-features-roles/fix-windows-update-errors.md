@@ -171,7 +171,7 @@ Staged Packages:
 
 ### Step 3: Extract the .msu and .cab files
 
-To address the corrupted files identified in the CBS.log file, extract the missing files into a specific folder. Follow these steps to extract the `.msu` and `.cab` files by using the provided [PowerShell script](../support-tools/scripts-extract-msu-cab-files.md), and then copy the necessary files to the *%SYSTEMROOT%\\Source* folder.
+To address the corrupted files identified in the *CBS.log* file, extract the missing files into a specific folder. Follow these steps to extract the `.msu` and `.cab` files by using the provided [PowerShell script](../support-tools/scripts-extract-msu-cab-files.md), and then copy the necessary files to the *%SYSTEMROOT%\\Source* folder.
 
 1. Create the necessary folders.
 
@@ -187,13 +187,13 @@ To address the corrupted files identified in the CBS.log file, extract the missi
 
 1. Copy the corrupted files.
 
-	Copy all the corrupted files that belong to this update to the %SYSTEMROOT%\Source folder. For example, run the following command:
+	Copy all the corrupted files that belong to this update to the *%SYSTEMROOT%\\Source* folder. For example, run the following command:
 	
 	```powershell
 	Copy-Item "C:\path\extractedFiles\corruptedfile.dll" -Destination "C:\Windows\Source"
 	```
 
-	Repeat this process for each corrupted file identified in the log until all the corrupted files are copied to the %SYSTEMROOT%\Source folder.
+	Repeat this process for each corrupted file identified in the log until all the corrupted files are copied to the *%SYSTEMROOT%\\Source* folder.
 
 2. Rerun the DISM command.
 
@@ -215,7 +215,7 @@ To address the corrupted files identified in the CBS.log file, extract the missi
 
 2. Check the *CBS.log* file.
 
-	Review the CBS.log file to ensure there are no remaining errors.
+	Review the *CBS.log* file to ensure there are no remaining errors.
 
 ### Example DISM command output
 
