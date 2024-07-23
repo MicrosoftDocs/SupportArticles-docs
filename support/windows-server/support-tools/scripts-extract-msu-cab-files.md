@@ -113,4 +113,3 @@ catch {
 Write-Host "Extraction completed. Files are located in $destinationPath"  
 return $destinationPath
 ```
-
