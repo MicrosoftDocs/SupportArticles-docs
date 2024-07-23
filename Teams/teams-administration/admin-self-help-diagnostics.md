@@ -3,7 +3,7 @@ title: Self-help diagnostics for Teams administrators
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 07/19/2024
+ms.date: 07/23/2024
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 localization_priority: Normal
