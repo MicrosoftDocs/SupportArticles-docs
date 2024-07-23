@@ -23,7 +23,7 @@ Microsoft support professionals use to determine when a support case becomes a c
 - [SQL scripts (including Business Alerts)](#sql-scripts-views-and-business-alerts)
 - [Integration Manager VB Script customizations](#integration-manager-vb-script-customizations)
 - [Modifier/VBA Customizations](#modifiervba-customizations)
-- [Configurator File setup for eBanking modules (RM EFT, PM EFT, SafePay, Lockbox, Electronic Reconcile)](#configurator-file-setup-for-ebanking-modules)
+- [Configurator File setup for eBanking modules (RM EFT, PM EFT, SafePay, Lockbox, and Electronic Reconcile)](#configurator-file-setup-for-ebanking-modules)
 - [Workflow](#workflow)
 
 ## More information
@@ -163,10 +163,10 @@ When the support case becomes a consulting engagement:
 
 ### Workflow
 
-The Workflow Condition Editor is limited to create one single line in a condition. If your customization for a workflow takes more than 30 minutes to test and explain, it's considered a consulting service at the discretion of the Microsoft Engineer.
+The Workflow Condition Editor is limited to creating one single line in a condition. If your customization for a workflow takes more than 30 minutes to test and explain, it's considered a consulting service at the discretion of the Microsoft Engineer.
 
 > [!NOTE]
-> Review [Microsoft Dynamics GP Workflow 2.0 AND & OR conditions when setting up approval steps.](https://community.dynamics.com/blogs/post/?postid=a487f20b-e595-4ecd-b51b-81aae053a1e0) to help with `And/Or` statements in workflow conditions.
+> Review [Microsoft Dynamics GP Workflow 2.0 AND & OR conditions when setting up approval steps](https://community.dynamics.com/blogs/post/?postid=a487f20b-e595-4ecd-b51b-81aae053a1e0) to help with `And/Or` statements in workflow conditions.
 
 ## Additional information
 
