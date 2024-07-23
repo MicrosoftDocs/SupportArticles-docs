@@ -17,11 +17,11 @@ _Original KB number:_ &nbsp; 830746
 
 ## Symptoms
 
-When you try to replicate Active Directory service changes to a supported version of domain controller, the replication is not completed.
+When you try to replicate Active Directory service changes to a supported version of domain controller, the replication isn't completed.
 
 In the event log, you may see events that are similar to the following: 
 
-|Event Source|Event ID|Event String|
+|Event source|Event ID|Event string|
 |---|---|---|
 |NTDS Replication|1232|Active Directory attempted to perform a remote procedure call (RPC) to the following server. The call timed out and was cancelled.|
 |NTDS Replication|1188|A thread in Active Directory is waiting for the completion of a RPC made to the following domain controller. Domain controller: b8b5a0e4-92d5-4a88-a601-61971d7033af._msdcs.Contoso.com Operation: get changes Thread ID: 448 Timeout period (minutes): 5 Active Directory has attempted to cancel the call and recover this thread. User Action If this condition continues, restart the domain controller.|
@@ -42,12 +42,12 @@ DC object GUID: <GUID> Last attempt @ <DateTime> failed, result 1818 (0x71a): Ca
 
 ## Cause
 
-This issue may occur when destination domain controllers that are performing remote procedure call (RPC)-based replication do not receive replication changes from a source domain controller within the time that the RPC Replication Timeout (mins) registry setting specifies (The default value is five minutes if the registry entry doesn't exist). You might experience this issue most frequently in one of the following situations:
+This issue may occur when destination domain controllers that are performing remote procedure call (RPC)-based replication don't receive replication changes from a source domain controller within the time that the RPC Replication Timeout (mins) registry setting specifies (The default value is five minutes if the registry entry doesn't exist). You might experience this issue most frequently in one of the following situations:
 
 - You promote a new domain controller into the forest by using the Active Directory Installation Wizard (Dcpromo.exe).
 - Existing domain controllers replicate from source domain controllers that are connected over slow network links.
 
-The default value for the RPC Replication Timeout (mins) registry setting on Windows 2000-based computers is 45 minutes. The default value for the RPC Replication Timeout (mins) registry setting on Windows Server 2003-based computers is 5 minutes. When you upgrade the operating system from Windows 2000 to Windows Server 2003, the value for the RPC Replication Timeout (mins) registry setting is changed from 45 minutes to 5 minutes. If a destination domain controller that is performing RPC-based replication does not receive the requested replication package within the time that the RPC Replication Timeout (mins) registry setting specifies, the destination domain controller ends the RPC connection with the non-responsive source domain controller and logs a Warning event.
+The default value for the RPC Replication Timeout (mins) registry setting on Windows 2000-based computers is 45 minutes. The default value for the RPC Replication Timeout (mins) registry setting on Windows Server 2003-based computers is 5 minutes. When you upgrade the operating system from Windows 2000 to Windows Server 2003, the value for the RPC Replication Timeout (mins) registry setting is changed from 45 minutes to 5 minutes. If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the RPC Replication Timeout (mins) registry setting specifies, the destination domain controller ends the RPC connection with the non-responsive source domain controller and logs a Warning event.
 
 ## Resolution
 
