@@ -118,7 +118,7 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 
 ## Cause
 
-The issue occurs when the destination DC performing inbound replication doesn't receive replication changes within the number of seconds specified in the "RPC Replication Timeout" registry key (the default value is five minutes if the registry entry doesn't exist.) You might experience this issue most frequently in one of the following situations:
+The issue occurs when the destination DC performing inbound replication doesn't receive replication changes within the number of seconds specified in the "RPC Replication Timeout" registry key (the default value is five minutes if the registry entry doesn't exist). You might experience this issue most frequently in one of the following situations:
 
 - You promote a new domain controller into the forest by using the Active Directory Installation Wizard (Dcpromo.exe).
 - Existing domain controllers replicate from source domain controllers that are connected over slow network links.
@@ -127,7 +127,7 @@ If a destination domain controller that is performing RPC-based replication does
 
 Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CALL_CANCELLED` include:
 
-1. An earlier Network Interface Card driver installed on Domain Controllers could cause failure of a few network features like Scalable Networking Pack (SNP)
+1. An earlier Network Interface Card driver installed on Domain Controllers could cause failure of a few network features like Scalable Networking Pack (SNP).
 2. Low bandwidth or network packets drops between source and destination domain controllers.
 3. The networking device between source and destination device dropping packets.  
 
