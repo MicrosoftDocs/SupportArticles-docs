@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 11/01/2018
+ms.date: 07/23/2024
 ms.author: genli
 ---
 
@@ -39,15 +39,15 @@ The problem occurs because device scanning in Linux is scheduled by the SCSI sub
 
 ## Solution
 
-To resolve this problem, use device names which will be persistent across reboots. There are several ways to use persistent naming: by filesystem label, by UUID, or by a derived device path. For Linux Virtual Machines not using LVM we recommend using the UUID of the filesystem or the [udev created links](#identify-disk-luns). For LVM based filesystems, mounting using the volume group and logical volume names are also valid approaches as the LVM objects will be consistent no matter how the physical volumes are ordered.
+To resolve this problem, use device names which will be persistent across restarts. There are several ways to use persistent naming: by filesystem label, by UUID, or by a derived device path. For Linux VMs that don't use LVM, we recommend using the UUID of the filesystem or the [links created by using udev rules](#identify-disk-luns). For LVM based filesystems, mounting using the volume group and logical volume names are also valid approaches as the LVM objects will be consistent no matter how the physical volumes are ordered.
 
 Most distributions provide the `fstab` **nofail** or **nobootwait** parameters. These parameters enable a system to boot when the disk fails to mount at startup. Check your distribution documentation for more information about these parameters. For information on how to configure a Linux VM to use a UUID when you add a data disk, see [Connect to the Linux VM to mount the new disk](/azure/virtual-machines/linux/add-disk#format-and-mount-the-disk).
 
-If you have already edited your fstab in such a way that your VM is not booting and you are unable to SSH to your VM, you can use the [VM Serial Console](./serial-console-linux.md) to enter [single user mode](./serial-console-grub-single-user-mode.md) and modify your fstab, or [Azure Linux Auto Repair](./repair-linux-vm-using-alar.md#fstab) to automate the repair process.
+If you have already edited your fstab in such a way that your VM is not booting and you are unable to SSH to your VM, you can use the [VM Serial Console](./serial-console-linux.md) to enter [single user mode](./serial-console-grub-single-user-mode.md) and modify your fstab, or use [Azure Linux Auto Repair](./repair-linux-vm-using-alar.md#fstab) to automate the repair process.
 
 ### Identify disk LUNs
 
-When the Azure Linux agent is installed on a VM, the agent uses udev rules to construct a set of symbolic links under the /dev/disk/azure path which correlate the Azure defined LUN attachments to the traditional disk devices:
+When the Azure Linux agent is installed on a VM, the agent uses udev rules to construct a set of symbolic links under the */dev/disk/azure* path which correlate the Azure defined LUN attachments to the traditional disk devices:
 
 ```console
 $ tree /dev/disk/azure
