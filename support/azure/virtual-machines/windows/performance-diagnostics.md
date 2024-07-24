@@ -10,7 +10,8 @@ tags: ''
 ms.service: virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
-ms.date: 05/11/2024
+ms.date: 07/24/2024
+ms.custom: sap:VM Performance
 ms.reviewer: guywild
 ms.author: anandh
 
