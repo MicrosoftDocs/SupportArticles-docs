@@ -12,7 +12,7 @@ This article provides a resolution for the issue where you can't create entitlem
 
 ## Symptoms
 
-You can't create entitlement forms from either the Customer Service Hub or the Customer Service admin center app because of lack of data in the entitlement's entity type mappings with the `EntitlementEntityAllocationTypeMappingBase` table.
+You can't create entitlement forms from the Customer Service admin center app because of lack of data in the entitlement's entity type mappings with the `EntitlementEntityAllocationTypeMappingBase` table.
 
 ## Cause 1
 
