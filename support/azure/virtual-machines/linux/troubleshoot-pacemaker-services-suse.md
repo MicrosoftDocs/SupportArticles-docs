@@ -3,7 +3,7 @@ title: Unable to start Pacemaker services in SUSE
 description: Provides troubleshooting guidance for Pacemaker Services fail to start
 ms.reviewer: rnirek,rmuneer
 ms.topic: troubleshooting
-ms.date: 24/04/2024
+ms.date: 07/24/2024
 ms.service: virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
@@ -17,7 +17,7 @@ This article lists the common causes of pacemaker services failed to start and p
 
 ## Create a Pacemaker cluster
 
-To create a basic Pacemaker cluster in  SUSE Linux Enterprise Server (SLES) in Azure, follow the steps as documented [Set up Pacemaker on SUSE Linux Enterprise Server in Azure](/azure/sap/workloadshigh-availability-guide-suse-pacemaker.md).
+To create a basic Pacemaker cluster in  SUSE Linux Enterprise Server (SLES) in Azure, follow the steps as documented [Set up Pacemaker on SUSE Linux Enterprise Server in Azure](https://learn.microsoft.com/en-us/azure/sap/workloads/high-availability-guide-suse-pacemaker).
 
 ## Cause 1:
 The pacemaker fails to start if a sysrq trigger action caused the last reboot. Manual graceful reboot works fine.
