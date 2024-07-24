@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connectivity and registration for SUSE SLES VMs
 description: Troubleshoot scenarios in which an Azure VM that has a SUSE Linux Enterprise Server image can't connect to the SUSE Subscription Management Tool (SMT) repository.
-ms.date: 07/23/2024
+ms.date: 07/24/2024
 author: DennisLee-DennisLee
 ms.author: hokamath
 ms.reviewer: adelgadohell, mahuss, esanchezvela, scotro, v-weizhu
@@ -30,17 +30,17 @@ It's important to read the output of each command for more clues. We recommend t
 - The [registercloudguest](https://github.com/SUSE-Enceladus/cloud-regionsrv-client/blob/master/man/man1/registercloudguest.1) tool.
 
 > [!Note]
-> If your SLES VM is behind a proxy server, we recommend reviewing the technical considerations introduced in [Accessing the Public Cloud Update Infrastructure via a Proxy](https://www.suse.com/c/accessing-the-public-cloud-update-infrastructure-via-a-proxy/).
-> For SLES VMs on Azure, necessary actions include:
-> 1. Connecting to update servers from SLES VM relies upon host name resolution that can't be resolvable by public DNS servers. Thus, some Linux/Unix proxy server implementations may need to manually place a record in */etc/hosts* on proxy server side, so that the name "smt-azure" can be resolved.
+> If your SLES VM is behind a proxy server, we recommend reviewing the technical considerations described in [Accessing the Public Cloud Update Infrastructure via a Proxy](https://www.suse.com/c/accessing-the-public-cloud-update-infrastructure-via-a-proxy/).
+> For SLES VMs on Azure, the necessary actions include:
+> 1. Connecting to update servers from a SLES VM relies on hostname resolution, which can't be resolved by public DNS servers. Thus, some Linux/Unix proxy server implementations may need to manually place a record in */etc/hosts* on the proxy server side so that the name "smt-azure" can be resolved.
 >
 >    Here's an example record:
 >    
 >    `52.165.88.13 smt-azure.susecloud.net smt-azure`
 >
->    Available IP addresses are different for Azure regions. For more information, review the IP address list in [this smt XML file](https://susepubliccloudinfo.suse.com/v1/microsoft/servers/smt.xml).
+>    The available IP addresses vary by Azure region. For more information, see the IP address list in [this smt XML file](https://susepubliccloudinfo.suse.com/v1/microsoft/servers/smt.xml).
 > 
-> 2. IP addresses [168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16), and 169.254.169.254 used by [Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service) shoud bypass proxy access. These special IP addresses can't be accessed through a proxy server and SLES VMs need information from IMDS to recognize cloud environment that's running on and to find out a proper SUSE update server.
+> 2. The IP addresses [168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16) and 169.254.169.254 used by the [Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service) should bypass proxy access. These special IP addresses can't be accessed through a proxy server, and SLES VMs need information from IMDS to recognize the cloud environment they're running on and to find a proper SUSE update server.
 >
 >    For instance, the `NO_PROXY` variable in */etc/sysconfig/proxy* should be configured on SLES VMs like the following one:
 >
