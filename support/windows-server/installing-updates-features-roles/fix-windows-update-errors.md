@@ -163,7 +163,7 @@ Staged Packages:
 	- 10.0.19041.3636 is a UBR.
 	- 10.0.19041.4291 is a UBR.
 
-	You need to find updates that have these UBR numbers. For example, if you're using Windows 10, version 22H2, find the update history page and locate the UBR number (for example, 3636). Each update has a UBR number, and you can download the corresponding update.
+	You need to find updates that have these UBR numbers. For example, if you're using Windows 10, version 22H2, locate the UBR number (for example, 3636) on the [release history page](/windows/release-health/release-information#windows-10-release-history). Each update has a UBR number, and you can download the corresponding update.
 
 3. Download the missing files.
 
