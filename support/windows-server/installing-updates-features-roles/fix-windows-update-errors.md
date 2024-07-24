@@ -61,7 +61,7 @@ Check this page for [Windows Update troubleshooting scenarios](../../windows-cli
 
 To resolve Windows Update corruptions and address update installation failures, use the DISM tool. Then, install the Windows Update.
 
-1. Open an elevated command prompt. To do this, open the **Start** menu or **Start** screen, type _Command Prompt_, right-click **Command Prompt**, and then select **Run as administrator**. If you're prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
+1. Open an elevated command prompt. To do this, open the **Start** menu, type _Command Prompt_, right-click **Command Prompt**, and then select **Run as administrator**. If you're prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
 
 2. Type the following command, and then press Enter. It may take several minutes for the command operation to be completed.
 
@@ -77,7 +77,7 @@ To resolve Windows Update corruptions and address update installation failures, 
     ```
 
     > [!NOTE]
-    > Replace \<servername\> with the computer name of the computer you are using as a repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the scan result is "The restore operation completed successfully", go to the next step. If not, try to fix errors found in the CBS log file.
+    > Replace \<servername\> with the computer name of the computer you are using as a repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the scan result is "The restore operation completed successfully", go to the next step. If not, try to fix [errors found in the CBS log file](#step-1-analyze-the-cbslog-file).
 
 3. Type the `sfc /scannow` command and press Enter. It may take several minutes for the command operation to be completed.
 
@@ -185,9 +185,9 @@ To address the corrupted files identified in the *CBS.log* file, extract the mis
 
 ### Step 4: Repair the corrupted files by using the source files
 
-1. Copy the corrupted files.
+1. Copy the correct versions of the corrupted files.
 
-	Copy all the corrupted files that belong to this update to the *%SYSTEMROOT%\\Source* folder. For example, run the following command:
+	Copy the correct versions of all the corrupted files that belong to this update to the *%SYSTEMROOT%\\Source* folder. For example, run the following command:
 	
 	```powershell
 	Copy-Item "C:\path\extractedFiles\corruptedfile.dll" -Destination "C:\Windows\Source"
