@@ -1,7 +1,7 @@
 ---
 title: Iterate through a result set by using Transact-SQL
 description: This article describes various methods that you can use to iterate through a result set by using Transact-SQL in SQL Server.
-ms.date: 10/29/2020
+ms.date: 07/24/2024
 ms.custom: sap:Database or Client application Development
 ms.topic: how-to
 ---
@@ -25,27 +25,20 @@ One method is the use of temp tables. With this method, you create a snapshot of
 
 ```SQL
 /********** example 1 **********/
-DECLARE @au_id char( 11 )
+DECLARE @au_id char(11)
 
-SET rowcount 0
 SELECT * INTO #mytemp FROM authors
 
-SET rowcount 1
+SELECT TOP(1) @au_id = au_id FROM #mytemp
 
-SELECT @au_id = au_id FROM #mytemp
-
-WHILE @@rowcount <> 0
-
+WHILE @au_id IS NOT NULL
 BEGIN
-SET rowcount 0
-SELECT * FROM #mytemp WHERE au_id = @au_id
-DELETE #mytemp WHERE au_id = @au_id
+    SELECT * FROM #mytemp WHERE au_id = @au_id
 
-SET rowcount 1
-SELECT @au_id = au_id FROM #mytemp
+    DELETE FROM #mytemp WHERE au_id = @au_id
+
+    SELECT TOP(1) @au_id = au_id FROM #mytemp
 END
-SET rowcount 0
-
 ```
 
 A second method is to use the `min` function to walk a table one row at a time. This method catches new rows that were added after the stored procedure begins execution, provided that the new row has a unique identifier greater than the current row that is being processed in the query. For example:
@@ -68,21 +61,18 @@ END
 
 ```SQL
 /********** example 3 **********/
-SET rowcount 0
-SELECT NULL mykey, * INTO #mytemp FROM authors
+SELECT NULL AS mykey, * INTO #mytemp FROM authors
 
-SET rowcount 1
-UPDATE #mytemp SET mykey = 1
+UPDATE TOP(1) #mytemp SET mykey = 1
 
-WHILE @@rowcount > 0
+WHILE EXISTS (SELECT 1 FROM #mytemp WHERE mykey = 1)
 BEGIN
-SET rowcount 0
-SELECT * FROM #mytemp WHERE mykey = 1
-DELETE #mytemp WHERE mykey = 1
-SET rowcount 1
-UPDATE #mytemp SET mykey = 1
+    SELECT * FROM #mytemp WHERE mykey = 1
+
+    DELETE FROM #mytemp WHERE mykey = 1
+
+    UPDATE TOP(1) #mytemp SET mykey = 1
 END
-SET rowcount 0
 ```
 
 ## References
