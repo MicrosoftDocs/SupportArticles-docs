@@ -3,7 +3,7 @@ title: Can't create entitlements because no options in Allocation Type dropdown
 description: Provides a resolution for the issue where you can't create entitlements because the Allocation Type dropdown doesn't show any options in Dynamics 365 Customer Service.
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
-ms.date: 07/23/2024
+ms.date: 07/24/2024
 ms.custom: sap:Entitlements\Unable to create or reactivate entitlements
 ---
 # Can't create entitlements because the Allocation Type dropdown doesn't show any options
@@ -31,21 +31,21 @@ The entitlement's entity allocation type mapping records aren't present in the `
 
 ### Resolution
 
-To resolve this issue, find where the allocation type mapping records are dropped or recreate them. If you have an organization where the entitlement is working, you can export the allocation type values.
+To resolve this issue, find where the allocation type mapping records are dropped or re-create them. If you have an organization where the entitlement works, you can export the allocation type values.
 
 Here's an example of the **Entitlement Entity Allocation Type Mapping** table that contains the **Number of cases** (`incident_numberofcases`) and **Number of hours** (`incident_numberofhours`) allocation type options.
 
 :::image type="content" source="media/allocation-type-missing-options/entitlement-entity-allocation-type-mapping.png" alt-text="Screenshot that shows the Entitlement Entity Allocation Type Mapping table." lightbox="media/allocation-type-missing-options/entitlement-entity-allocation-type-mapping.png":::
 
-To recreate the records,
+To re-create the records, follow these steps:
 
 1. In [Power Apps](https://admin.powerplatform.microsoft.com/), select **Dataverse** > **Tables**.
 1. Find the **Entitlement Entity Allocation Type Mapping** table.
-1. Select **Edit** to add row records to match the above screenshot. You should map from **Case** to the two remaining allocation type options. If you need to recreate (due to record deletion), it's best to recreate the records by using a user that has maximal permissions.
+1. Select **Edit** to add row records to match the preceding screenshot. You should map from **Case** to the remaining two allocation type options. If you need to re-create the records (due to record deletion), it's best to do so using a user with maximal permissions.
 
-:::image type="content" source="media/allocation-type-missing-options/finding-entitlement-entity-allocation-type-mapping-table.png" alt-text="Screenshot that shows how to find the Entitlement Entity Allocation Type Mapping table to add records in Power Apps." lightbox="media/allocation-type-missing-options/finding-entitlement-entity-allocation-type-mapping-table.png":::
+:::image type="content" source="media/allocation-type-missing-options/find-entitlement-entity-allocation-type-mapping-table.png" alt-text="Screenshot that shows how to find the Entitlement Entity Allocation Type Mapping table to add records in Power Apps." lightbox="media/allocation-type-missing-options/find-entitlement-entity-allocation-type-mapping-table.png":::
 
-If it doesn't work from the UI, you can try the following Web API to recreate the records:
+If it doesn't work from the UI, you can try the following Web API to re-create the records:
 
 ```javascript
 Xrm.WebApi.createRecord("entitlemententityallocationtypemapping", 
