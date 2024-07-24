@@ -27,7 +27,7 @@ To resolve this issue, add the **Allocation Type** field by taking the following
 
 ## Cause 2
 
-The entitlement's entity allocation type mapping records aren't present in the `EntitlementEntityAllocationTypeMappingBase` table when the **Entity Type** field from the entitlement entity has more than one option other than **Case**. **Entity Type** is a type of option set field in the `Entitlement` table that has **Case** as the default option. If **Case** is the only option available for **Entity Type**, then the `Entitlement` table automatically loads **Allocation Type** values for the **Case** option. In a case where more than one option is set for the **Entity Type** field, you'll need to select the **Entity Type** option so that the `Entitlement` table will load **Allocation Type** values based on that **Entity Type** selection.
+The entitlement's entity allocation type mapping records aren't present in the `EntitlementEntityAllocationTypeMappingBase` table when the **Entity Type** field from the entitlement entity has more than one option other than **Case**. **Entity Type** is a type of option set field in the `Entitlement` table that has **Case** as the default option. If **Case** is the only option available for **Entity Type**, then the `Entitlement` table automatically loads **Allocation Type** values for the **Case** option. In a case where more than one option is set for the **Entity Type** field, you'll need to select the **Entity Type** option so that the `Entitlement` table loads the **Allocation Type** values based on that **Entity Type** selection.
 
 ### Resolution
 
