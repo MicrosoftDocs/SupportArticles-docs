@@ -7,7 +7,7 @@ author: anandhms
 manager: dcscontentpm
 editor: przlplx
 tags: ''
-ms.service: azure-monitor
+ms.service: virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
 ms.date: 05/11/2024
