@@ -43,7 +43,7 @@ Although clearing the Microsoft Offices Online cache manually or programmaticall
 
 If the previous two guidelines don't help, contact your Antivirus software support for more help.
 
-A basic list of the Microsoft Office Online processes that you should exclude is provided here. Additional processes might be necessary to exclude, depending on the installed software
+Here is a basic list of Microsoft Office Online processes that you should exclude. Depending on the software that's installed, other processes may need to be excluded.
 
 - AgentManagerWatchdog.exe
 - AppServerHost.exe
