@@ -7,14 +7,12 @@ ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Guidelines that Microsoft support professionals use to determine when a support case becomes a consulting engagement
 
-This article describes the guidelines that Microsoft support professionals use to determine when a support case becomes a consulting engagement.
-
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 850201
 
 ## Introduction
 
-Microsoft support professionals use to determine when a support case becomes a consulting engagement for the following items:
+This article describes the guidelines that Microsoft support professionals use to determine when a support case becomes a consulting engagement:
 
 - [Report Writer in Microsoft Dynamics GP](#report-writer)
 - [Microsoft SQL Server Reporting Services (SSRS)](#microsoft-sql-server-reporting-services-ssrs)
