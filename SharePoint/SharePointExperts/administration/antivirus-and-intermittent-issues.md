@@ -15,7 +15,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Office Online Server
-ms.date: 12/17/2023
+ms.date: 07/24/2024
 ---
 
 # Antivirus and intermittent issues when you view Office documents by using Office Online Server
@@ -24,7 +24,7 @@ ms.date: 12/17/2023
 
 When you view Office documents by using Office Online Server, you see intermittent errors. All Office file types are affected, most frequently PowerPoint and Word files. Frequently, the same document displays at one time, and then throws an error at another document.
 
-In the Unified Logging Service (ULS) log on the Office Online Server, you see such a "ConversionError" or "Conversion failed" error. In the Windows Event Application log, the AppServerHost.exe process that is ended unexpectedly appear repeatedly.
+In the Unified Logging Service (ULS) log on the Office Online Server, you see a "ConversionError" or "Conversion failed" error. In the Windows Event Application log, the AppServerHost.exe process that's ended unexpectedly appears repeatedly.
 
 ## Cause
 
@@ -32,7 +32,7 @@ Antivirus network monitoring processes that monitor the "*\Program Files\Microso
 
 ## Resolution
 
-Although clearing the Microsoft Offices Online cache manually or programmatically has limited success, to fix the issue completely, you need reconfigure the Antivirus network monitoring programs to enable Microsoft Offices Online to freely create and sustain the AppServerHost.exe process and all relating subprocesses. Here are some configuration guidelines:
+Although clearing the Microsoft Offices Online cache manually or programmatically has limited success, to fix the issue completely, you need to reconfigure the Antivirus network monitoring programs to enable Microsoft Offices Online to freely create and sustain the AppServerHost.exe process and all relating subprocesses. Here are some configuration guidelines:
 
 1. Exclude any monitoring within the following directories:
    - C:\Program Files\Microsoft Office Web Apps\
@@ -71,6 +71,6 @@ A basic list of the Microsoft Office Online processes that you should exclude is
 - SandboxHost.exe
 - SpellingWcfProvider.exe
 - ULSControllerService.exe
-- w3wp.exe
+- W3wp.exe
 - WordViewerAppManagerWatchdog.exe
 - WordViewerWfeWatchdog.exe
