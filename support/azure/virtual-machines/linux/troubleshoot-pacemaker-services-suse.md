@@ -17,7 +17,7 @@ This article lists the common causes of pacemaker services failed to start and p
 
 ## Create a Pacemaker cluster
 
-To create a basic Pacemaker cluster, follow the steps in [Set up Pacemaker on SUSE Linux Enterprise Server in Azure](/azure/sap/workloadshigh-availability-guide-suse-pacemaker.md).
+To create a basic Pacemaker cluster in  SUSE Linux Enterprise Server (SLES) in Azure, follow the steps as documented [Set up Pacemaker on SUSE Linux Enterprise Server in Azure](/azure/sap/workloadshigh-availability-guide-suse-pacemaker.md).
 
 ## Cause 1:
 The pacemaker fails to start if a sysrq trigger action caused the last reboot. Manual graceful reboot works fine.
@@ -74,7 +74,7 @@ systemctl status pacemaker.service
 ```
 
 ### Symptom:
-If a node attempts to rejoin the cluster after it's fenced and before the msgwait timeout completes, pacemaker.service will fail to start with an exit status of 100. Enabling the SBD_DELAY_START setting puts a "msgwait" delay on the startup of sbd.service. While this will increase the time for the node to rejoin, it ensures the node can rejoin without experiencing the msgwait conflict. 
+If a node attempts to rejoin the cluster after it's fenced and before the msgwait timeout completes, `pacemaker.service` fails to start with an exit status of 100. Enabling the SBD_DELAY_START setting puts a "msgwait" delay on the startup of sbd.service. While this will increase the time for the node to rejoin, it ensures the node can rejoin without experiencing the msgwait conflict. 
 
 Per SBD man page:
 
@@ -84,7 +84,7 @@ If the SBD_DELAY_START setting is used, and SBD msgwait value is high there's a 
 
 1. The SBD service will timeout during start, as the SBD_DELAY_START might take longer than the default for system services in systemd.
 
-2. The returning node starts corosync and by this blocks the cluster. The symptom looks like everything from a cluster perspective worked, for example fencing. But then the "surviving node waited until the fenced node returned"
+2. The returning node starts corosync and results in  blocking the cluster services. The symptom looks like everything from a cluster perspective worked, for example fencing. But then the "surviving node waited until the fenced node returned".
 
 The logs show entries similar to
 
@@ -92,7 +92,7 @@ The logs show entries similar to
  Dec 03 15:29:25 [3533] animal    pengine:   notice: LogActions: Start   fs_mysap   (animal - blocked)
 ```
 
-You can check SBD msgwait time with below command:
+You can check SBD msgwait time with the command:
 
 ```bash
 sbd -d /dev/sdc dump
@@ -116,7 +116,7 @@ sudo crm configure property maintenance-mode=true
 cp /usr/lib/systemd/system/sbd.service /etc/systemd/system/sbd.service
 ```
 
-4.Edit `/etc/systemd/system/sbd.service` and add below lines in `[Unit]` and `[Service]` section accordingly:
+4.Edit `/etc/systemd/system/sbd.service` and add the following lines in `[Unit]` and `[Service]` section accordingly:
 
 ```bash
    [Unit]
