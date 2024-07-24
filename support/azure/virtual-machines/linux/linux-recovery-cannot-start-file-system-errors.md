@@ -18,6 +18,8 @@ ms.author: genli
 ---
 # Troubleshoot Linux virtual machine boot issues due to filesystem errors
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article provides guidance to troubleshoot Linux virtual machine (VM) boot issues caused by filesystem errors.
 
 ## Symptoms

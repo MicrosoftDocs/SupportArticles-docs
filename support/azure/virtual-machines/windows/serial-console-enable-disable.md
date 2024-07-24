@@ -17,6 +17,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 # Enable and disable the Azure Serial Console
 
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
 Just like any other resource, the Azure Serial Console can be enabled and disabled. Serial Console is enabled by default for all subscriptions in global Azure. Currently, disabling Serial Console will disable the service for your entire subscription. Disabling or re-enabling Serial Console for a subscription requires contributor-level access or above on the subscription.
 
 You can also disable Serial Console for an individual VM or virtual machine scale set instance by disabling boot diagnostics. You will need contributor-level access or above on both the VM/virtual machine scale set and your boot diagnostics storage account.

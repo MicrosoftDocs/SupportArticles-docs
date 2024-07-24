@@ -14,8 +14,9 @@ ms.topic: troubleshooting
 ms.date: 06/15/2020
 ms.custom: sap:My VM is not booting
 ---
-
 # Azure VM is unresponsive while applying Security Policy to the system
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where the OS hangs and becomes unresponsive while it is applying a security policy in an Azure VM.
 

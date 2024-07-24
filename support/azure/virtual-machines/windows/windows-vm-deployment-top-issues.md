@@ -8,6 +8,8 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
 # Azure Windows VM deployment top issues
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 [!INCLUDE [support-disclaimer](../../../includes/azure/virtual-machines-windows-troubleshoot-deploy-vm-top.md)]
 
 ## The cluster cannot support the requested VM size

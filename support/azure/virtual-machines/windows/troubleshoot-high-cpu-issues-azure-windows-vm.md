@@ -16,8 +16,9 @@ ms.date: 09/24/2020
 ms.author: mnanda
 ms.custom: sap:VM Performance
 ---
-
 # Troubleshoot high-CPU issues on Azure Windows virtual machines
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 ## Summary
 

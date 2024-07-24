@@ -12,6 +12,8 @@ ms.topic: troubleshooting
 ---
 # Azure Linux virtual machine fails to boot after VFAT file system type is disabled
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article provides solutions to an issue in which an Azure Linux virtual machine (VM) can't boot after disabling the virtual file allocation table (VFAT) file system type.

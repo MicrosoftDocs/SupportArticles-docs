@@ -16,6 +16,8 @@ ms.date: 03/19/2024
 
 # Troubleshoot Red Hat RHUI connectivity issues
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 Misconfigurations at the networking layer can cause common issues to occur in the Red Hat Update Infrastructure (RHUI). This article helps you identify and resolve some of these issues.
 
 ## Overview

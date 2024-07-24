@@ -19,6 +19,8 @@ ms.author: malachma
 
 # Use Azure Linux Auto Repair (ALAR) to fix a Linux VM
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 The next time that you have to run a repair on your Azure Linux virtual machine (VM), you can automate the job by putting the Azure Linux Auto Repair (ALAR) scripts to work for you. You no longer have to run the job manually. These scripts simplify the recovery process and enable even inexperienced users to recover their Linux VM easily.
 
 ALAR utilizes the VM repair extension that's described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md).

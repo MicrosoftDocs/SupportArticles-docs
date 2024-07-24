@@ -17,6 +17,8 @@ ms.reviewer: ekpathak, v-leedennis, v-weizhu
 
 # Linux virtual machine boots to GRUB rescue
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article discusses multiple conditions that cause GRUB rescue issues and provides troubleshooting guidance.

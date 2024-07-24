@@ -9,6 +9,8 @@ ms.custom: sap:Cannot connect to my VM
 ---
 # Troubleshoot authentication errors when you use RDP to connect to Azure VM
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article can help you troubleshoot authentication errors that occur when you use Remote Desktop Protocol (RDP) connection to connect to an Azure virtual machine (VM).
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]

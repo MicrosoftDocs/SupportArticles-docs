@@ -64,6 +64,7 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 
 After you identify the specific services that are causing the cost spike, you might have to investigate those services to understand why the spike occurred. If you need further assistance to investigate the services, check that respective service’s cost documentation before opening a support case.
 
+
 ## Next steps
 
 > [!div class="nextstepaction"]

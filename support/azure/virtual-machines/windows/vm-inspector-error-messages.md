@@ -11,6 +11,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # VM Inspector error messages and solutions
 
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
 VM Inspector is a self-help diagnostic tool for remote users with privileged access. The tool is used on an Azure VM that runs Windows or Linux. When the Microsoft Azure VM Inspector tool discovers errors on an Azure virtual machine (VM), it returns specific error codes. The following table provides a comprehensive list of these error codes.
 
 ## Error messages

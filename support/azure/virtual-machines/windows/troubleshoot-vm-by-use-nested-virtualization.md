@@ -18,6 +18,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article shows how to create a nested virtualization environment in Microsoft Azure, so you can mount the disk of the faulty VM on the Hyper-V host (Rescue VM) for troubleshooting purposes.
 
 ## Prerequisites

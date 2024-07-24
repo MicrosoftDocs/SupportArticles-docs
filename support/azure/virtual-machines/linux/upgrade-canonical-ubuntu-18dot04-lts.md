@@ -9,6 +9,8 @@ ms.reviewer: patcatun, clausw, divargas, rondom, azurevmlnxcic, v-weizhu
 ---
 # Canonical Ubuntu 18.04 LTS is out of standard support on May 31, 2023
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 Even though Canonical Ubuntu 18.04 LTS is out of standard support on May 31, 2023, you can continue to use existing Azure Linux virtual machines (VMs) running it. However, Canonical no longer provides security, feature, and maintenance updates, which may leave your systems vulnerable. We recommend that you either migrate to the next Ubuntu LTS release or upgrade to Ubuntu Pro to gain access to extended security and maintenance from Canonical.
 
 ## Upgrade to Ubuntu 20.04 LTS or Ubuntu 22.04

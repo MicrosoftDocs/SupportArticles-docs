@@ -10,6 +10,8 @@ ms.custom: sap:Cannot connect to my VM
 
 # Cannot RDP into Azure VM because of a brute force attack
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 Open ports on Internet-facing virtual machines are targets for brute force attacks. This article describes general errors you may experience when your Azure virtual machine (VM) is under attack and best practices for securing your VM.
 
 ## Symptoms

@@ -14,8 +14,9 @@ ms.topic: troubleshooting
 ms.date: 06/13/2024
 ms.custom: sap:My VM is not booting
 ---
-
 # VM is unresponsive when applying Group Policy Local Users and Groups policy
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where the load screen doesn't respond when an Azure virtual machine (VM) applies a policy during startup.
 

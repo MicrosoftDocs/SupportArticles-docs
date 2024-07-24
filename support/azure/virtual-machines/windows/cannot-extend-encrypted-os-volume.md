@@ -12,6 +12,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 # Cannot extend an encrypted OS volume in Windows
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article describes a problem that prevents you from easily extending the OS volume on some Azure VMs that have been encrypted with Azure Disk Encryption (ADE). It also describes a workaround that allows you extend the OS volume as needed.
 
 ## Symptom

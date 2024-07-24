@@ -14,8 +14,9 @@ ms.date: 10/18/2021
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # Can't sign into your account when you try to connect to an Azure Windows VM
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article discusses how to troubleshoot the error "We can't sign into your account" when you try to connect to an Azure Windows VM using Remote Desktop Protocol (RDP).
 

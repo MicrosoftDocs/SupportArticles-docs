@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/24/2024
+  ms.date: 07/08/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -29,3 +29,23 @@ landingContent:
         links:
           - text: Can't get private IP address of an Azure Container Registry FQDN
             url: cant-resolve-container-registry-fqdn-private-ip-address.md
+
+  # Card
+  - title: Troubleshoot pull issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot issues when you pull from Azure Container Registry
+            url: troubleshoot-issues-pull-container-registry.md
+          - text: '"Authentication required" error'
+            url: authentication-required.md
+          - text: '"Client with IP address is not allowed access" error'
+            url: client-ip-address-not-allowed-access.md
+          - text: '"Context deadline exceeded" error'
+            url: context-deadline-exceeded.md
+          - text: '"I/O time-out" error'
+            url: download-failed-443-io-time-out.md
+          - text: '"Manifest tag is not found" error'
+            url: manifest-tag-not-found.md
+          - text: '"Request canceled while waiting for connection" error'
+            url: request-canceled-waiting-connection-timeout-exceeded.md

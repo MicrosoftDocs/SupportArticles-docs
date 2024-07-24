@@ -1,7 +1,7 @@
 ---
 title: Error message when you connect to SQL Server 
 description: This article provides resolutions for the problem that occurs when you connect to SQL Server using SSL.
-ms.date: 06/20/2022
+ms.date: 07/11/2024
 ms.custom: sap:Database Connectivity and Authentication
 ms.reviewer: kayokon, masank
 ---
@@ -110,7 +110,7 @@ For more information on how to do this, see the following topics:
 - [Using Encryption with Sqlclient](/sql/connect/ado-net/sql/sqlclient-support-always-encrypted)
 
 > [!NOTE]
-> If you are using SQL Server Management Studio, select the **Options** tab, and select the **Trust Server certificate** option in the **Connection Properties** tab.
+> If you're connecting to SQL Server with SQL Server Management Studio, select the **Options** tab in the **Connect to Server** window, and then select the **Trust server certificate** option.
 
 **Caution:** SSL connections that are encrypted by using a self-signed certificate don't provide strong security. They are susceptible to `man-in-the-middle` attacks. You shouldn't rely on SSL using self-signed certificates in a production environment or on servers that are connected to the Internet.
 

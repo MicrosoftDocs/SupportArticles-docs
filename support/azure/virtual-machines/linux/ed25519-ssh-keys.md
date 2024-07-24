@@ -9,7 +9,8 @@ ms.collection: linux
 ---
 # Can't use Ed25519 SSH keys for Azure Linux VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Linux  
+**Applies to:** :heavy_check_mark: Linux VMs
+
 _Original KB number:_ &nbsp; 4013792
 
 ## Symptoms

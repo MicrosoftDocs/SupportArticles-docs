@@ -19,6 +19,8 @@ ms.author: genli
 
 # Troubleshoot Linux VM device name changes
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article explains why device names change after you restart a Linux VM or reattach the data disks. The article also provides solutions for this problem.
 
 ## Symptoms

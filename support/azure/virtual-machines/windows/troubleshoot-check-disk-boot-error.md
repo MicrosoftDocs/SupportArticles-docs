@@ -15,10 +15,11 @@ ms.date: 08/31/2018
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
+# Windows shows "checking file system" when booting an Azure VM
 
-# Windows shows “checking file system” when booting an Azure VM
+**Applies to:** :heavy_check_mark: Windows VMs
 
-This article describes the “Checking file system” error that you may encounter when you boot a Windows Virtual Machine (VM) in Microsoft Azure.
+This article describes the "Checking file system" error that you may encounter when you boot a Windows Virtual Machine (VM) in Microsoft Azure.
 
 ## Symptom
 

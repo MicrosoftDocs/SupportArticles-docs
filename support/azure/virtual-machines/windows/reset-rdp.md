@@ -17,6 +17,8 @@ ms.author: genli
 ---
 # Reset Remote Desktop Services or its administrator password in a Windows VM
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 > [!NOTE]

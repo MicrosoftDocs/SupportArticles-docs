@@ -11,7 +11,8 @@ ms.reviewer:
 ---
 # Azure cloud-init support for Linux VMs
 
-_Original product version:_ &nbsp; Azure, Virtual Machine running Linux  
+**Applies to:** :heavy_check_mark: Linux VMs
+
 _Original KB number:_ &nbsp; 4538385
 
 ## Summary

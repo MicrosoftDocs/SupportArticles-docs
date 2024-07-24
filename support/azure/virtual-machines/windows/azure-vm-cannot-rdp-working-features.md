@@ -10,6 +10,8 @@ ms.custom: sap:My VM is not booting
 
 # Azure VM cannot RDP - working on features
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 ## Symptoms
 
 1. When you pull the screenshot of the VM, the screenshot shows the message:

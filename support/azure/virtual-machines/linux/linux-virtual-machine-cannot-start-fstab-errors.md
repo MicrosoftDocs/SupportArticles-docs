@@ -18,6 +18,8 @@ ms.author: saimsh
 ---
 # Troubleshoot Linux VM boot issues due to fstab errors
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 The Linux filesystem table, fstab is a configuration table which is designed to configure rules where specific file systems are detected and mounted in an orderly manner during the system boot process. 

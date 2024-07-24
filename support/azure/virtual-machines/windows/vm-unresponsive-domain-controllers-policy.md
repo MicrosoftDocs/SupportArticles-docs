@@ -15,8 +15,9 @@ ms.date: 05/15/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
-
 # VM is unresponsive when Default Domain Controllers Policy is applied
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve an issue in which the Default Domain Controllers Policy prevents an Azure Virtual Machine (VM) from restarting.
 

@@ -10,6 +10,8 @@ ms.author: esflores
 ---
 # Troubleshoot performance issues and isolate bottlenecks in Linux
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 ## Performance issues and bottlenecks
 
 When performance issues occur in different operating systems and applications, each case requires a unique approach to troubleshoot. CPU, memory, networking, and input/output (I/O) are key areas where issues can occur. Each of these areas displays different symptoms (sometimes simultaneously) and requires different diagnoses and solutions.

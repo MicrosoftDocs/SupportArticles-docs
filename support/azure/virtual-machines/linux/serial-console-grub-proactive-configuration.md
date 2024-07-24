@@ -18,6 +18,8 @@ ms.author: mimckitt
 
 # Proactively ensuring you have access to GRUB and sysrq could save you lots of down time
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 Having access to the Serial Console and GRUB will improve recovery times of your IaaS Linux Virtual Machine in most cases. GRUB offers recovery options that otherwise would take longer to recover your VM.
 
 The reasons to perform a VM recovery are many and can be attributed to scenarios such as:
