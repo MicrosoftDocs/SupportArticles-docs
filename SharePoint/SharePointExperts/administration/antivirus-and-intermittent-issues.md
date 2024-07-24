@@ -1,6 +1,6 @@
 ---
 title: Antivirus and intermittent issues when you view Office documents by using Office Online Server
-description: Fixes antivirus and intermittent issues that occurs when you view Office documents by using Office Online Server.
+description: Fixes antivirus and intermittent issues that occur when you view Office documents by using Office Online Server.
 author: helenclu
 ms.author: luche
 ms.reviewer: jhaak
@@ -32,7 +32,7 @@ Antivirus network monitoring processes that monitor the "*\Program Files\Microso
 
 ## Resolution
 
-Although clearing the Microsoft Offices Online cache manually or programmatically has limited success, to fix the issue completely, you need to reconfigure the Antivirus network monitoring programs to enable Microsoft Offices Online to freely create and sustain the AppServerHost.exe process and all relating subprocesses. Here are some configuration guidelines:
+Although clearing the Microsoft Offices Online cache manually or programmatically has limited success, to fix the issue completely, you need to reconfigure the Antivirus network monitoring programs to enable Microsoft Offices Online to freely create and sustain the AppServerHost.exe process and all related subprocesses. Here are some configuration guidelines:
 
 1. Exclude any monitoring within the following directories:
    - C:\Program Files\Microsoft Office Web Apps\
