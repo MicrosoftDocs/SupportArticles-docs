@@ -61,6 +61,7 @@ Alternatively, you can add the processes to the allowlist for programs in your D
 - zscaler
 - Aternity
 - Beyond Trust, Avecto, PGHook.dll
+- webSense
 
 ### Location of the Teams installation folder
 
