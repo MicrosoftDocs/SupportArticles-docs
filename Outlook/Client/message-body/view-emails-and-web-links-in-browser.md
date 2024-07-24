@@ -14,6 +14,7 @@ ms.custom:
 ms.reviewer: gquintin, aruiz, van.eric; meerak
 appliesto: 
   - Outlook for Microsoft 365
+  - New Outlook for Windows
 search.appverid: MET150
 ms.date: 01/30/2024
 ---
@@ -99,7 +100,8 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
 
 If you prefer to let your users manage this feature, then either leave the _Choose Which Browser Opens Web Links_ policy unconfigured or disable the policy. Microsoft Edge will open as the new default experience when users open a web links from either Outlook or Teams for the first time, and then they can manage this behavior by using the appropriate app settings or through a banner notification:
 
-- Outlook settings: **File** \> **Options** \> **Advanced** \> **File and browser preferences**.
+- New Outlook for Windows: **Settings** \> **General** \> **Files and links** \> **Open hyperlinks from Outlook in**.
+- Classic Outlook for Windows: **File** \> **Options** \> **Advanced** \> **File and browser preferences**.
 - Teams settings: **Settings** \> **Files and links** \> **Link open preference**.
 - Banner notification: A banner notification is shown when users first see the experience. They can either select the **Try Edge** option to keep using the feature or select **Manage my settings** to revert to their system's default browser experience. 
 
