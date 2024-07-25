@@ -9,7 +9,7 @@ ms.custom: sap:Node/node pool availability and performance,devx-track-azurecli
 
 # Resource propagation failure: ClusterResourcePlacementApplied is false
 
-This article describes how to troubleshoot a failure with ClusterResourcePlacementApplied when propagating resources using ClusterResourcePlacement in Azure Kubernetes Fleet Manager.
+This article describes how to troubleshoot `ClusterResourcePlacementApplied` issues when propagating resources using `ClusterResourcePlacement` object API in Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
@@ -17,7 +17,7 @@ When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet
 
 ## Cause
 
-This issue occurs because of one of the following reasons:
+This issue might occur because of one of the following reasons:
 
 - The resource already exists on the cluster and is not managed by the fleet controller. To resolve this, update the `ClusterResourcePlacement` manifest YAML file to use `AllowCoOwnership` within `ApplyStrategy` to allow the fleet controller to manage the resource.
 - Another `ClusterResourcePlacement` deployment is already managing the resource for the selected cluster with a different apply strategy.
