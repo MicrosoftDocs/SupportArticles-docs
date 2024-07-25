@@ -1,15 +1,15 @@
 ---
-title: New SMB file server 3.0 features
-description: Describes new features in the next version of the Server Message Block (SMB) protocol, SMB 3.0. Windows Server introduced SMB 3.0.
-ms.date: 12/26/2023
+title: SMB file server 3.0 features
+description: Describes features in the 3.0 version of the Server Message Block (SMB) protocol.
+ms.date: 07/25/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, jeffhugh
 ms.custom: sap:Clustering and High Availability\Cannot failover a group, csstroubleshoot
 ---
-# New SMB 3.0 features in the Windows Server file server
+# SMB 3.0 features in Windows Server file server
 
 This article describes new features of the Server Message Block (SMB) 3.0 protocol.
 
@@ -17,13 +17,13 @@ _Original KB number:_ &nbsp; 2709568
 
 ## Summary
 
-Windows Server introduces new server message block (SMB) file server features. To take advantage of these new features, the SMB client and SMB server must support SMB 3.0.
+Windows Server 2012 going forward introduced new server message block (SMB) file server features. To take advantage of these features, the SMB client and SMB server must support SMB 3.0.
 
 The SMB 2.x protocol was introduced in Windows Server 2008 and in Windows Vista.
 
 The SMB 3.0 protocol was introduced in Windows Server 2012 and in Windows 8.
 
-## New SMB features introduced in the Windows file server
+## SMB 3.0 features in Windows file server
 
 - SMB Transparent Failover
 - SMB Scale Out
