@@ -1,12 +1,12 @@
 ---
 title: The Recycle Bin is corrupted
 description: Provides a solution to an issue where the Recycle Bin is corrupted.
-ms.date: 07/19/2024
+ms.date: 07/25/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, rafern, v-lianna
 ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe init, themes, colors, icons, recycle bin), csstroubleshoot
 ---
 # The Recycle Bin is corrupted
