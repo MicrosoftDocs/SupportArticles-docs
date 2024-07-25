@@ -19,7 +19,7 @@ This article helps you measure and compare memory consumption between identical 
 - Collect data traces from each server environment.
 - Understand different user workloads and their impacts on resource usage
 
-## Workaround: Restart the servers
+## Quick workaround: restart the servers
 
 1. Restarts both servers to clear any memory usage.
 2. Monitor memory consumption for a predefined period after the reboot.
