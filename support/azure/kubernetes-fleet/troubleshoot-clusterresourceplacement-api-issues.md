@@ -135,8 +135,8 @@ To find the latest ClusterResourceSnapshot resource, run the following command. 
 ```bash
 kubectl get clusterresourcesnapshot -l kubernetes-fleet.io/is-latest-snapshot=true,kubernetes-fleet.io/parent-CRP={CRPName}
 ```
-
-### How and where to find the correct Work resource associated with `ClusterResourcePlacement`?
+<a id="find-work"></a>
+### How to find the correct Work resource associated with `ClusterResourcePlacement`?
 
 To find the correct Work resource, follow these steps:
 
