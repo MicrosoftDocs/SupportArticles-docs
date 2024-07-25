@@ -17,7 +17,7 @@ This article helps you measure and compare memory consumption between identical 
 
 - Install Performance Monitor on all servers.
 - Collect data traces from each server environment.
-- Understand different user workloads and their impact on resource usage
+- Understand different user workloads and their impacts on resource usage
 
 ## Workaround: Restart the servers
 
@@ -28,21 +28,21 @@ This article helps you measure and compare memory consumption between identical 
 
 ### Establish baseline with vanilla installation
 
-Perform a vanilla installation on one server. Collect an 8-hour Performance Monitor trace during a normal working day.
+Perform a vanilla installation on one server. Collect an eight-hour Performance Monitor trace during a normal working day.
 
 ### Collect data from client servers
 
-During the same period as the vanilla installation, collect an 8-hour Performance Monitor trace from another two clients servers, client A and client B.
+During the same period as the vanilla installation, collect an eight-hour Performance Monitor trace from another two clients servers, client A and client B.
 
 ### Analyze user workload impact
 
 1. Identify the workload types (Light, Medium, Heavy, Power) for each environment.
 2. Use examples provided in [session host virtual machine sizing guidelines](/windows-server/remote/remote-desktop-services/virtual-machine-recs) to categorize user workload.
-   - Light: Basic data entry tasks (e.g., database entry applications).
+   - Light: Basic data entry tasks (for example, database entry applications).
    - Medium: Tasks such as market research using static web pages and Microsoft Word.
    - Heavy: Software development involving dynamic web pages, Microsoft Outlook, PowerPoint.
    - Power: Graphic design or 3D modeling with photo/video editing tools.
-3. You can use the following Performance counter objects to compare the activity on the system.
+3. Use the following Performance counter objects to compare the activity on the system.
    - Memory
    - CPU
    - Disk Activity
@@ -54,7 +54,7 @@ During the same period as the vanilla installation, collect an 8-hour Performanc
 - Available MB: Remaining free RAM
 - %committed bytes: Allocated physical resources
 - Paged Pool: Kernel memory that can be paged out
-- Non-Paged Pool: Kernel memory that cannot be paged out
+- Non-Paged Pool: Kernel memory that can't be paged out
 - Cache bytes: disk Usage kernel memory
 - Working Set: Active process memory in RAM
 
@@ -78,7 +78,7 @@ Address discrepancies by adjusting resource allocations or optimizing applicatio
 
 ## Scenario guide: Compare systems using the performance counters
 
-Use tables to compare 3 systems (vanilla / client A / client B) by using the counters that are mentioned in the previous sections.
+Use tables to compare three systems (vanilla / client A / client B) by using the counters that are mentioned in the previous sections.
 
 |Counter|Vanilla installation|client A|client B|
 |---|---|---|---|
@@ -110,9 +110,9 @@ If you want to drill further down on user load behavior, try to check for the fo
 
 - Outlook
 - Office
-- Teams (and with teams you will see the msedgewebview2 processes)
-- Edge
-- Third-party browsers
+- Teams (and with the teams process, there are msedgewebview2 processes)
+- Microsoft Edge
+- non-Microsoft browsers
 
 ## Data collection
 
@@ -121,7 +121,7 @@ If you still need help from Microsoft Support for further analysis and guidance,
 To prepare detailed logs of all performance counters across extended periods, follow these steps:
 
 - Make sure to record the same time and duration if you wish to compare.
-- Run the following command to create a 8h performance data collector set that will overwrite itself:
+- Run the following command to create an eight-hour performance data collector set that overwrites itself:
 
   ```console
   Logman.exe create counter PerfLog-30Sec-%ComputerName% -o "c:\perflogs\%computername%_PerfLog-30sec.blg" -f bincirc -v mmddhhmm -max 800 -c "Hyper-V Dynamic Memory Balancer (*)\*" "Hyper-V Hypervisor Virtual Processor(*)\*" "Hyper-V Hypervisor Logical Processor(*)\*" "\LogicalDisk(*)\*" "\Memory\*" "\Cache\*" "\Network Interface(*)\*" "\Paging File(*)\*" "\PhysicalDisk(*)\*" "\Processor(*)\*" "\Processor Information(*)\*" "\Processor Performance(*)\*" "\Process(*)\*" "\Redirector\*" "\Server\*" "\System\*" "\Server Work Queues(*)\*" "\Terminal Services\*" -si 00:00:30
