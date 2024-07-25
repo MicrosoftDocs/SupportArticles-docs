@@ -122,7 +122,9 @@ This section shows how to create a sample database to store the user name, passw
     ```
 
     This Web Form is used to present a logon form to users so that they can provide their user name and password to log on to the application.
-4. Switch to Design view, and save the page.
+
+   For more information, see [RequiredFieldValidator Class](/dotnet/api/system.web.ui.webcontrols.requiredfieldvalidator).
+5. Switch to Design view, and save the page.
 
 ## Code the event handler so that it validates the user credentials
 
