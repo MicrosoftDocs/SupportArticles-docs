@@ -58,7 +58,7 @@ spec:
 
 ### ClusterResourcePlacement status
 
-```
+```output
 status:
   conditions:
   - lastTransitionTime: "2024-05-07T23:32:40Z"
@@ -195,7 +195,7 @@ In the `failedPlacements` section for `kind-cluster-1`, the `message` fields exp
 
 ### Work status of kind-cluster-1
 
-```
+```output
  status:
   conditions:
   - lastTransitionTime: "2024-05-07T23:32:40Z"
