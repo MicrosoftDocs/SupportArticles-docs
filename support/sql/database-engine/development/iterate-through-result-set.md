@@ -25,19 +25,19 @@ One method is the use of temp tables. With this method, you create a snapshot of
 
 ```SQL
 /********** example 1 **********/
-DECLARE @au_id char(11)
+DECLARE @ProductID int
 
-SELECT * INTO #mytemp FROM authors
+SELECT * INTO #mytemp FROM Production.Product
 
-SELECT TOP(1) @au_id = au_id FROM #mytemp
+SELECT TOP(1) @ProductID = ProductID FROM #mytemp
 
 WHILE @@rowcount <> 0
 BEGIN
-    SELECT * FROM #mytemp WHERE au_id = @au_id
+    SELECT * FROM #mytemp WHERE ProductID = @ProductID
 
-    DELETE FROM #mytemp WHERE au_id = @au_id
+    DELETE FROM #mytemp WHERE ProductID = @ProductID
 
-    SELECT TOP(1) @au_id = au_id FROM #mytemp
+    SELECT TOP(1) @ProductID = ProductID FROM #mytemp
 END
 ```
 
@@ -45,14 +45,14 @@ A second method is to use the `min` function to walk a table one row at a time. 
 
 ```SQL
 /********** example 2 **********/
-DECLARE @au_id char( 11 )
+DECLARE @ProductID int
 
-SELECT @au_id = min( au_id ) FROM authors
-WHILE @au_id IS NOT NULL
+SELECT @ProductID = min( ProductID ) FROM Production.Product
+WHILE @ProductID IS NOT NULL
 
 BEGIN
-SELECT * FROM authors WHERE au_id = @au_id
-SELECT @au_id = min( au_id ) FROM authors WHERE au_id > @au_id
+SELECT * FROM Production.Product WHERE ProductID = @ProductID
+SELECT @ProductID = min( ProductID ) FROM Production.Product WHERE ProductID > @ProductID
 END
 ```
 
@@ -61,7 +61,7 @@ END
 
 ```SQL
 /********** example 3 **********/
-SELECT NULL AS mykey, * INTO #mytemp FROM authors
+SELECT NULL AS mykey, * INTO #mytemp FROM Production.Product
 
 UPDATE TOP(1) #mytemp SET mykey = 1
 
