@@ -31,18 +31,19 @@ The destination domain controller receives a service ticket from a Kerberos Key 
 
 1. Disable the KDC service on the destination domain controller. To do it, run one of the following commands:
 
-    Command Prompt
-   ```console
-    sc config KDC start=Disabled
-    ```
-   PowerShell
-    ```PowerShell
-    Set-Service -Name KDC -StartupType Disabled
-    ```
+   - Command Prompt
 
+     ```console
+     sc config KDC start=Disabled
+     ```
+
+   - PowerShell
+
+     ```PowerShell
+     Set-Service -Name KDC -StartupType Disabled
+     ```
 
 2. Restart the domain controller.
-    
 
 3. Start replication on the destination domain controller from the source domain controller. Use AD Sites and Services or `Repadmin`.
 
@@ -59,25 +60,32 @@ The destination domain controller receives a service ticket from a Kerberos Key 
     ```
 
 4. Set the KDC service on the destination domain controller back to Automatic:
-   Command Prompt
-   ```console
-    sc config KDC start=auto
-    ```
-   PowerShell
-    ```PowerShell
-    Set-Service -Name KDC -StartupType Auto
-    ```
 
-5. Start the KDC service on the destination domain controller by running the following command:
+   - Command Prompt
 
-    Command Prompt
-   ```console
-    net start KDC
-    ```
-   PowerShell
-   ```PowerShell
-   Start-Service -Name KDC
-   ```
+     ```console
+     sc config KDC start=auto
+     ```
+
+   - PowerShell
+
+     ```PowerShell
+     Set-Service -Name KDC -StartupType Auto
+     ```
+
+5. Start the KDC service on the destination domain controller by running one of the following commands:
+
+   - Command Prompt
+
+     ```console
+     net start KDC
+     ```
+
+   - PowerShell
+
+     ```PowerShell
+     Start-Service -Name KDC
+     ```
 
 If it doesn't resolve the issue, see the [Resolution](#resolution) section for an alternative solution in which you use the `netdom resetpwd` command to reset the computer account password of the source domain controller. If these steps don't resolve the problem, review the rest of this article.
 
