@@ -15,8 +15,8 @@ This article helps you measure and compare memory consumption between identical 
 
 ## Prerequisites
 
-- Install Performance Monitor on all servers.
-- Collect data traces from each server environment.
+- Install Performance Monitor on both servers.
+- Ensure that you can collect data traces from each server environment.
 - Understand different user workloads and their impacts on resource usage
 
 ## Quick workaround: restart the servers
