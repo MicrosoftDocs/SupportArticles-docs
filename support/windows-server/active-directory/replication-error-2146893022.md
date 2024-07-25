@@ -59,7 +59,7 @@ The destination domain controller receives a service ticket from a Kerberos Key 
     Repadmin /replicate ContosoDC2.contoso.com ContosoDC1.contoso.com "DC=contoso,DC=com"
     ```
 
-4. Set the KDC service on the destination domain controller back to Automatic:
+4. Set the KDC service on the destination domain controller back to Automatic by running one of the following commands:
 
    - Command Prompt
 
