@@ -31,7 +31,7 @@ SELECT * INTO #mytemp FROM authors
 
 SELECT TOP(1) @au_id = au_id FROM #mytemp
 
-WHILE @au_id IS NOT NULL
+WHILE @@rowcount <> 0
 BEGIN
     SELECT * FROM #mytemp WHERE au_id = @au_id
 
