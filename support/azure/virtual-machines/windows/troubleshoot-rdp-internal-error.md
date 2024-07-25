@@ -295,4 +295,13 @@ To enable dump log and Serial Console, run the following script.
 
 5. [Detach the OS disk and recreate the VM](./troubleshoot-recovery-disks-portal-windows.md), and then check whether the issue is resolved.
 
+#### VM Redeploy
+[Reeploy the VM](./troubleshoot/azure/virtual-machines/windows/redeploy-to-new-node-windows.md)
+This will put the VM on a healthier host node.       
+
+
+> [!Warning]
+> This will require your VM to be restarted which would require downtime.
+```
+   
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
