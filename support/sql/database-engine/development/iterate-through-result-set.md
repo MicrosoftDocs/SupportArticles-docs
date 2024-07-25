@@ -19,16 +19,14 @@ This article describes various methods that you can use to simulate a cursor-lik
 
 ## Use Transact-SQL Statements to Iterate Through a Result Set
 
-There are three methods you can use to iterate through a result set by using Transact-SQL statements.
+Here are three methods you can use to iterate through a result set by using Transact-SQL statements. The examples below use the Production.Product table from the [AdventureWorks sample database](/sql/samples/adventureworks-install-configure)
 
 One method is the use of temp tables. With this method, you create a snapshot of the initial `SELECT` statement and use it as a basis for cursoring. For example:
 
 ```SQL
 /********** example 1 **********/
 SET NOCOUNT ON
-GO
 DROP TABLE IF EXISTS #MYTEMP 
-GO
 DECLARE @ProductID int
 
 SELECT * INTO #mytemp FROM Production.Product
@@ -38,9 +36,7 @@ SELECT TOP(1) @ProductID = ProductID FROM #mytemp
 WHILE @@ROWCOUNT <> 0
 BEGIN
     SELECT * FROM #mytemp WHERE ProductID = @ProductID
-
     DELETE FROM #mytemp WHERE ProductID = @ProductID
-
     SELECT TOP(1) @ProductID = ProductID FROM #mytemp
 END
 ```
@@ -50,17 +46,15 @@ A second method is to use the `min` function to walk a table one row at a time. 
 ```SQL
 /********** example 2 **********/
 SET NOCOUNT ON
-GO
 DROP TABLE IF EXISTS #MYTEMP 
-GO
 DECLARE @ProductID int
 
 SELECT @ProductID = min( ProductID ) FROM Production.Product
 WHILE @ProductID IS NOT NULL
 
 BEGIN
-SELECT * FROM Production.Product WHERE ProductID = @ProductID
-SELECT @ProductID = min( ProductID ) FROM Production.Product WHERE ProductID > @ProductID
+    SELECT * FROM Production.Product WHERE ProductID = @ProductID
+    SELECT @ProductID = min( ProductID ) FROM Production.Product WHERE ProductID > @ProductID
 END
 ```
 
@@ -70,9 +64,8 @@ END
 ```SQL
 /********** example 3 **********/
 SET NOCOUNT ON
-GO
 DROP TABLE IF EXISTS #MYTEMP 
-GO
+
 SELECT NULL AS mykey, * INTO #mytemp FROM Production.Product
 
 UPDATE TOP(1) #mytemp SET mykey = 1
@@ -80,9 +73,7 @@ UPDATE TOP(1) #mytemp SET mykey = 1
 WHILE @@ROWCOUNT > 0
 BEGIN
     SELECT * FROM #mytemp WHERE mykey = 1
-
     DELETE FROM #mytemp WHERE mykey = 1
-
     UPDATE TOP(1) #mytemp SET mykey = 1
 END
 ```
