@@ -29,7 +29,7 @@ This issue occurs because of one of the following reasons:
 2. Locate the `Work` object in the hub cluster: Use the identified `clusterName` to locate the Work object associated with the member cluster. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
 3. Check the status of the `Work` object to understand the specific issues preventing successful resource application.
 
-## Example scenario
+## Case study
 
 In the following example, the `ClusterResourcePlacement` is trying to propagate a namespace containing a deployment to two member clusters. However, the namespace already exists on one member cluster, specifically `kind-cluster-1`.
 
@@ -191,7 +191,7 @@ status:
     version: v1
 ```
 
-In the `failedPlacements` section for `kind-cluster-1`, there is an message explaining why the resource failed to apply on the member cluster.In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` with the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object intended for the member cluster `kind-cluster-1` has not been applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
+In the `failedPlacements` section for `kind-cluster-1`, the `message` fields explaining why the resource failed to apply on the member cluster.In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` with the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object intended for the member cluster `kind-cluster-1` has not been applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
 
 ### Work status of kind-cluster-1
 
@@ -255,6 +255,8 @@ In the `failedPlacements` section for `kind-cluster-1`, there is an message expl
 ```
 
 Check the `Work` status, particularly the `manifestConditions` section, you can see that the namespace could not be applied but the deployment within the namespace got propagated from hub to the member cluster.
+
+### Resolution
 
 In this scenario, a potential solution is to delete the existing namespace on the member cluster. However, it's essential to note that this decision rests with the user, as the namespace might already contain resources.
 
