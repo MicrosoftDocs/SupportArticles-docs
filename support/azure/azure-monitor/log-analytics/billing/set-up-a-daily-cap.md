@@ -44,6 +44,8 @@ When data collection stops, you effectively have no monitoring of features or re
 
 When the daily cap is reached for a Log Analytics workspace, a banner is displayed in the Azure portal, and an event is written to the Operations table in the workspace. You should create an alert rule to proactively notify yourself when this occurs.
 
+The daily cap can't stop data collection at precisely the specified cap level and some excess data is expected. The data collection beyond the daily cap can be particularly large if the workspace is receiving high rates of data. If data is collected above the cap, it's still billed.
+
 ## Next steps
 
 > [!div class="nextstepaction"]

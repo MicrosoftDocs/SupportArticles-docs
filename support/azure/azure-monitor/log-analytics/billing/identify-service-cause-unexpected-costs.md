@@ -62,7 +62,8 @@ This article provides a cost analysis tutorial to investigate daily billing anom
 
     :::image type="content" source="media/identify-service-cause-unexpected-costs/high-cost-6.png" alt-text="Screenshot of the example cost" lightbox="media/identify-service-cause-unexpected-costs/high-cost-6.png":::
 
-After you identify the specific services that are causing the cost spike, you might have to investigate those services to understand why the spike occurred. If you need further assistance to investigate the services, open a support case for the respective service type.
+After you identify the specific services that are causing the cost spike, you might have to investigate those services to understand why the spike occurred. If you need further assistance to investigate the services, check that respective service’s cost documentation before opening a support case.
+
 
 ## Next steps
 
