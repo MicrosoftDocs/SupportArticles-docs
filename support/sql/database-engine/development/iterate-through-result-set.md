@@ -65,7 +65,7 @@ SELECT NULL AS mykey, * INTO #mytemp FROM authors
 
 UPDATE TOP(1) #mytemp SET mykey = 1
 
-WHILE EXISTS (SELECT 1 FROM #mytemp WHERE mykey = 1)
+WHILE @@rowcount > 0
 BEGIN
     SELECT * FROM #mytemp WHERE mykey = 1
 
