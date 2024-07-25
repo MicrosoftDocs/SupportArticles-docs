@@ -16,15 +16,15 @@ This article helps you measure and compare memory consumption between identical 
 ## Prerequisites
 
 - Install Performance Monitor on all servers.
-- Ability to collect data traces from each server environment.
-- Understanding of different user workloads and their impact on resource usage
+- Collect data traces from each server environment.
+- Understand different user workloads and their impact on resource usage
 
 ## Workaround: Restart the servers
 
-1. Restarts all servers to clear any temporary memory usage.
+1. Restarts both servers to clear any memory usage.
 2. Monitor memory consumption for a predefined period after the reboot.
 
-## Measure the performance
+## Measure the memory performance
 
 ### Establish baseline with vanilla installation
 
@@ -64,7 +64,9 @@ Different user workloads lead to varying requirements for physical resources lik
 
 ## Solution: standardize user behavior based on data collection
 
-Identify similar usage patterns across all traces collected from Vanilla, ClientA, and ClientB installations.
+Identify similar usage patterns across all traces collected from the vanilla installation, client A, and client B.
+
+Ensure workloads are comparable by reviewing performance counters under similar conditions:
 
 |Counter|Vanilla installation|client A|client B|
 |---|---|---|---|
@@ -72,14 +74,11 @@ Identify similar usage patterns across all traces collected from Vanilla, Client
 |Available Mbytes|X|Y|Z|
 |Process\Working set (_Total)|X|Y|Z|
 
-
-Ensure workloads are comparable by reviewing performance counters under similar conditions:
-
 Address discrepancies by adjusting resource allocations or optimizing applications accordingly.
 
-## Scenario guide: Compare systems using the performance counters we mentioned
+## Scenario guide: Compare systems using the performance counters
 
-We will use tables to compare 3 systems (Vanilla / ClientA / ClientB) using the counters we mentioned.
+Use tables to compare 3 systems (vanilla / client A / client B) by using the counters that are mentioned in the previous sections.
 
 |Counter|Vanilla installation|client A|client B|
 |---|---|---|---|
@@ -87,13 +86,13 @@ We will use tables to compare 3 systems (Vanilla / ClientA / ClientB) using the 
 |Available MB (Min)|10.8 GB|7.5 GB|2.6 GB|
 |Working set (_Total) (Max)|5.2 GB|8.7 GB|15.8 GB|
 
-This seems to confirm a different user load behavior. We confirm this by looking at the number of processes:
+The result seems to confirm a different user load behavior. The result can be also confirmed by checking the number of processes:
 
 |Counter|Vanilla installation|client A|client B|
 |---|---|---|---|
 |System\Processes (Max)|199|268|338|
 
-If we want further confirmation, we can use the CPU-Usage (Processor\%idle time (_Total)) to identify a different user load pattern:
+If we want further confirmation, we can use the CPU-Usage, **Processor\\%idle time** (**_Total**), to identify a different user load pattern:
 
 Vanilla:
 
@@ -117,15 +116,15 @@ If you want to drill further down on user load behavior, try to check for the fo
 
 ## Data collection
 
-After these steps, if you still need help from contact Microsoft Support for further analysis and guidance, contact us with comprehensive logs.
+If you still need help from Microsoft Support for further analysis and guidance, contact us with comprehensive logs.
 
-Prepare detailed logs of all performance counters across extended periods.
+To prepare detailed logs of all performance counters across extended periods, follow these steps:
 
 - Make sure to record the same time and duration if you wish to compare.
-- Run the following command to create a 8h performance data collector set that will overwrite itself
+- Run the following command to create a 8h performance data collector set that will overwrite itself:
 
   ```console
   Logman.exe create counter PerfLog-30Sec-%ComputerName% -o "c:\perflogs\%computername%_PerfLog-30sec.blg" -f bincirc -v mmddhhmm -max 800 -c "Hyper-V Dynamic Memory Balancer (*)\*" "Hyper-V Hypervisor Virtual Processor(*)\*" "Hyper-V Hypervisor Logical Processor(*)\*" "\LogicalDisk(*)\*" "\Memory\*" "\Cache\*" "\Network Interface(*)\*" "\Paging File(*)\*" "\PhysicalDisk(*)\*" "\Processor(*)\*" "\Processor Information(*)\*" "\Processor Performance(*)\*" "\Process(*)\*" "\Redirector\*" "\Server\*" "\System\*" "\Server Work Queues(*)\*" "\Terminal Services\*" -si 00:00:30
   ```
 
-You still need to start it manually.
+  You still need to start the data collector set manually.
