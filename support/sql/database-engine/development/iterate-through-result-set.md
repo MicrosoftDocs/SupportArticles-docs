@@ -25,13 +25,17 @@ One method is the use of temp tables. With this method, you create a snapshot of
 
 ```SQL
 /********** example 1 **********/
+SET NOCOUNT ON
+GO
+DROP TABLE IF EXISTS #MYTEMP 
+GO
 DECLARE @ProductID int
 
 SELECT * INTO #mytemp FROM Production.Product
 
 SELECT TOP(1) @ProductID = ProductID FROM #mytemp
 
-WHILE @@rowcount <> 0
+WHILE @@ROWCOUNT <> 0
 BEGIN
     SELECT * FROM #mytemp WHERE ProductID = @ProductID
 
@@ -45,6 +49,10 @@ A second method is to use the `min` function to walk a table one row at a time. 
 
 ```SQL
 /********** example 2 **********/
+SET NOCOUNT ON
+GO
+DROP TABLE IF EXISTS #MYTEMP 
+GO
 DECLARE @ProductID int
 
 SELECT @ProductID = min( ProductID ) FROM Production.Product
@@ -61,11 +69,15 @@ END
 
 ```SQL
 /********** example 3 **********/
+SET NOCOUNT ON
+GO
+DROP TABLE IF EXISTS #MYTEMP 
+GO
 SELECT NULL AS mykey, * INTO #mytemp FROM Production.Product
 
 UPDATE TOP(1) #mytemp SET mykey = 1
 
-WHILE @@rowcount > 0
+WHILE @@ROWCOUNT > 0
 BEGIN
     SELECT * FROM #mytemp WHERE mykey = 1
 
