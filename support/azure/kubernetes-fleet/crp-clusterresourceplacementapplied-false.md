@@ -17,8 +17,9 @@ When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet
 
 ## Cause
 
-- The resource already exists on the cluster and is not managed by the fleet controller. To resolve this, update the `ClusterResourcePlacement` manifest YAML file to use `AllowCoOwnership` within `ApplyStrategy` to allow the fleet controller to manage the resource.
+This issue occurs because of one of the following reasons:
 
+- The resource already exists on the cluster and is not managed by the fleet controller. To resolve this, update the `ClusterResourcePlacement` manifest YAML file to use `AllowCoOwnership` within `ApplyStrategy` to allow the fleet controller to manage the resource.
 - Another `ClusterResourcePlacement` deployment is already managing the resource for the selected cluster with a different apply strategy.
 - The `ClusterResourcePlacement` deployment fails to apply the manifest due to syntax errors or invalid resource configurations. This can occur when a resource is propagated through an envelope object.
 
@@ -190,7 +191,7 @@ status:
     version: v1
 ```
 
-In the `failedPlacements` section for `kind-cluster-1`, there is an error message explaining why the resource failed to apply on the member cluster.In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as false  with the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object intended for the member cluster `kind-cluster-1` has not been applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
+In the `failedPlacements` section for `kind-cluster-1`, there is an message explaining why the resource failed to apply on the member cluster.In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` with the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object intended for the member cluster `kind-cluster-1` has not been applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
 
 ### Work status of kind-cluster-1
 
