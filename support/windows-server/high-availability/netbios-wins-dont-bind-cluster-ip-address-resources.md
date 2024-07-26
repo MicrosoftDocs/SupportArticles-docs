@@ -13,7 +13,7 @@ ms.custom: sap:Clustering and High Availability\Setup and configuration of clust
 
 This article provides a workaround for an issue where NetBIOS and WINS don't bind to cluster IP address resources.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019, and Windows Server 2022  
 _Original KB number:_ &nbsp; 4556018
 
 ## Symptoms
