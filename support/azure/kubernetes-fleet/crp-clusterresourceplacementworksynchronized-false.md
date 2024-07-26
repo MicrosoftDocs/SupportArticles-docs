@@ -15,7 +15,7 @@ This article describes how to troubleshoot `ClusterResourcePlacementWorkSynchron
 When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet Manager to propagate resources, if the `ClusterResourcePlacement` is updated, the associated work objects aren't synchronized with the changes and the `ClusterResourcePlacementWorkSynchronized` condition status shows as `False`.
 
 > [!NOTE]
-> To get more information about why the work object synchronization fails, check the [work generator controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/workgenerator/controller.go) logs.
+> To get more information about why the work object synchronization fails, you can check the [work generator controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/workgenerator/controller.go) logs.
 
 ## Cause
 

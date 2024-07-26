@@ -15,7 +15,7 @@ This article describes how to troubleshoot `ClusterResourcePlacementRolloutStart
 When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet Manager to propagate resources, the selected resources aren't rolled out in all scheduled clusters and the `ClusterResourcePlacementRolloutStarted` condition status shows as `False`.
 
 > [!NOTE]
-> To get more information about why the rollout doesn't start, check the [rollout controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/rollout/controller.go) logs.
+> To get more information about why the rollout doesn't start, you can check the [rollout controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/rollout/controller.go) logs.
 
 ## Cause
 
@@ -24,7 +24,7 @@ The Cluster Resource Placement rollout strategy is blocked because the `RollingU
 ## Troubleshooting steps
 
 1. In the `ClusterResourcePlacement` status section, check the `placementStatuses` to identify clusters with the `RolloutStarted` status set to `False`.
-2. Locate the corresponding `ClusterResourceBinding` for the identified cluster. For more information, see [How to find the latest ClusterResourceBinding resource?](#how-to-find-the-latest-clusterresourcebinding-resource). This resource should indicate the status of the `Work` whether it was created or updated.
+2. Locate the corresponding `ClusterResourceBinding` for the identified cluster. For more information, see [How to find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-to-find-the-latest-clusterresourcebinding-resource). This resource should indicate the status of the `Work` whether it was created or updated.
 3. Verify the values for `maxUnavailable` and `maxSurge` to ensure they align with your expectations.
 
 ## Example scenario
@@ -242,7 +242,7 @@ status:
 
 In the previous output, the `ClusterResourcePlacementScheduled` condition status is shown as `False`. The `ClusterResourcePlacementRolloutStarted` status is also shown as `False` with the message `The rollout is being blocked by the rollout strategy in 2 cluster(s)`.
 
-Check the latest `ClusterResourceSnapshot` by running the command in [How to find the latest ClusterResourceSnapshot resource?](#how-to-find-the-latest-clusterresourcesnapshot-resource).
+Check the latest `ClusterResourceSnapshot` by running the command in [How to find the latest ClusterResourceSnapshot resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-to-find-the-latest-clusterresourcesnapshot-resource).
 
 ### Latest ClusterResourceSnapshot
 
