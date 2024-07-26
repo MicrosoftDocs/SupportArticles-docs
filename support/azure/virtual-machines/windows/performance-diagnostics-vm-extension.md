@@ -261,9 +261,6 @@ You should also be able to download the zip file directly from the portal by sel
 * Extension deployment status (in the notification area) might show "Deployment in progress" even though the extension is successfully provisioned.
 
     This issue can be safely ignored, as long as the extension status indicates that the extension is successfully provisioned.
-* You can address some issues during installation by using the extension logs. Extension execution output is logged to files found in the following directory:
-
-    `C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Performance.Diagnostics.AzurePerformanceDiagnostics\<version>`
   
 * You can address some issues during installation by using the extension logs. Extension execution output is logged to files found in the following directory:
 
