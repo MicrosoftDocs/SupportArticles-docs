@@ -3,7 +3,7 @@ title: Exclude antivirus and DLP applications from blocking Teams
 ms.author: meerak
 author: cloud-writer
 manager: dcscontentpm
-ms.date: 10/30/2023
+ms.date: 07/26/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
