@@ -3,7 +3,7 @@ title: Can't create entitlements because no options in Allocation Type dropdown
 description: Provides a resolution for the issue where you can't create entitlements because the Allocation Type dropdown doesn't show any options in Dynamics 365 Customer Service.
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
-ms.date: 07/24/2024
+ms.date: 07/26/2024
 ms.custom: sap:Entitlements\Unable to create or reactivate entitlements
 ---
 # Can't create entitlements because the Allocation Type dropdown doesn't show any options
@@ -39,7 +39,7 @@ Here's an example of the **Entitlement Entity Allocation Type Mapping** table th
 
 To re-create the records, follow these steps:
 
-1. In [Power Apps](https://admin.powerplatform.microsoft.com/), select **Dataverse** > **Tables**.
+1. In [Power Apps](https://make.powerapps.com/), select **Dataverse** > **Tables**.
 1. Find the **Entitlement Entity Allocation Type Mapping** table.
 1. Select **Edit** to add row records to match the preceding screenshot. You should map from **Case** to the remaining two allocation type options. If you need to re-create the records (due to record deletion), it's best to do so using a user with maximal permissions.
 
