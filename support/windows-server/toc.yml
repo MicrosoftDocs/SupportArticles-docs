@@ -633,20 +633,10 @@ items:
     items:
     - name: DirectAccess clients connection error 0x274d
       href: ./backup-and-storage/directaccess-clients-connection-error-0x274d.md
-    - name: Error 3266/3013 when you perform database backup/restore
-      href: ./backup-and-storage/database-backup-error-3266-3013.md
-    - name: Event ID 8193 when you perform a backup
-      href: ./backup-and-storage/event-id-8193-when-you-perform-backup.md
-    - name: How to use the backup feature to back up and restore data
-      href: ./backup-and-storage/use-backup-feature-back-up-restore-data.md
     - name: No VSS writers when running the "vssadmin list writers" command
       href: ./backup-and-storage/no-vss-writers-listed-run-vssadmin-list-writers.md
     - name: Return codes that are used by the Robocopy utility
       href: ./backup-and-storage/return-codes-used-robocopy-utility.md
-    - name: Server backup process fails and error 0x80070005
-      href: ./backup-and-storage/cannot-back-up-server-error-0x80070005.md
-    - name: System event log srv event ID 2012
-      href: ./backup-and-storage/srv-event-id-2012.md
     - name: System State Backup fails
       href: ./backup-and-storage/system-state-backup-fails-invalid-imagepath.md
     - name: The system state backup fails
@@ -674,9 +664,7 @@ items:
   - name: Deduplication
     items:
     - name: Clone or duplicate a Windows installation
-      href: ./backup-and-storage/windows-installations-disk-duplication.md
-    - name: Errors for SMB Read Andx requests for files managed by Data Deduplication
-      href: ./backup-and-storage/request-not-supported-smb-data-deduplication.md
+      href: ./backup-and-storage/windows-installations-disk-duplication.md    
     - name: Files are corrupted on deduplicated volume
       href: ./backup-and-storage/files-are-corrupted-deduplicated-volume.md
     - name: Full garbage collection causes performance issues
