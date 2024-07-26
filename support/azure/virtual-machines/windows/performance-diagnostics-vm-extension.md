@@ -264,5 +264,17 @@ You should also be able to download the zip file directly from the portal by sel
 * You can address some issues during installation by using the extension logs. Extension execution output is logged to files found in the following directory:
 
     `C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Performance.Diagnostics.AzurePerformanceDiagnostics\<version>`
+  
+* You can address some issues during installation by using the extension logs. Extension execution output is logged to files found in the following directory:
+
+    `C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Performance.Diagnostics.AzurePerformanceDiagnostics\<version>`
+
+* If you see the errors below in Portal or in the Performance Diagnostics extension logs (AzPerfDiagExtension.log or PerfInsights.log), this usually means that the HTTPS certificate chain is broken. Please ensure you don't have a NSG blocking access to the Certificate Authority URLs described in [this list](https://learn.microsoft.com/azure/security/fundamentals/tls-certificate-changes#will-this-change-affect-me) - or that you don't have any SSL inspection tool in your Network Virtual Appliance or firewall.
+
+    `Provisioning Failed - message: Failed to upload the PerfInsights result to Azure storage account.`
+
+    `PerfInsights process exited with code 1700`
+
+    `Could not establish trust relationship for the SSL/TLS secure channel. The remote certificate is invalid according to the validation procedure.`
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
