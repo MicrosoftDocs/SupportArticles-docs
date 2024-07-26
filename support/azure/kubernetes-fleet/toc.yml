@@ -5,4 +5,9 @@
   items:
     - name: Troubleshooting guide for ClusterResourcePlacement 
       href: troubleshoot-clusterresourceplacement-api-issues.md
-      
+    - name: ClusterResourcePlacementScheduled is false
+      href: crp-clusterresourceplacementscheduled-false.md
+    - name: ClusterResourcePlacementRolloutStarted is false
+      href: crp-clusterresourceplacementrolloutstarted-false.md
+    - name: ClusterResourcePlacementWorkSynchronized is false 
+      href: crp-clusterresourceplacementworksynchronized-false.md
