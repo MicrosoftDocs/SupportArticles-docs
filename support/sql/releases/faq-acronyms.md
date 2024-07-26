@@ -1,7 +1,7 @@
 ---
 title: Frequently asked questions, used terms and acronyms
 description: This article describes the frequently asked questions, used terms and acronyms of SQL Server.
-ms.date: 07/26/2024
+ms.date: 10/15/2022
 ms.topic: faq
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: v-six
