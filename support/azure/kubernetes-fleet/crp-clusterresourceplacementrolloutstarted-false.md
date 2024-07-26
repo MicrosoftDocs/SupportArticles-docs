@@ -285,7 +285,7 @@ spec:
 
 In the `ClusterResourceSnapshot` spec, the `selectedResources` section now shows the namespace `test-ns`.
 
-Check the `ClusterResourceBinding` for `kind-cluster-1` to see if it gets updated after the namespace `test-ns` is created. For more information, see [How to find the latest ClusterResourceBinding resource?](#how-to-find-the-latest-clusterresourcebinding-resource).
+Check the `ClusterResourceBinding` for `kind-cluster-1` to see if it gets updated after the namespace `test-ns` is created. For more information, see [How to find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-to-find-the-latest-clusterresourcebinding-resource).
 
 ### ClusterResourceBinding for kind-cluster-1
 
