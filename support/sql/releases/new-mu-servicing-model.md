@@ -43,3 +43,4 @@ This new updated detection logic applies to the following CU and GDR releases:
 > For SQL Server 2019, the RTM baseline can be either the RTM (**15.0.2000.5**) version baseline or the RTM + RTM GDR (**15.0.2070.41**) version baseline. Either version will work for this release.
 > For the SQL Server 2014 SP3 (**12.3.6024.0**) version baseline, the new model will be implemented for GDR Security Releases on the CU branch starting in 2021.
 > For information about the old Microsoft Update detection model, see [Non-applicable SQL Server CUs are listed in WSUS, MU, or ConfMgr](../database-engine/install/windows/cu-apply-installation.md).
+
