@@ -1,8 +1,9 @@
 ---
 title: Iterate through a result set by using Transact-SQL
 description: This article describes various methods that you can use to iterate through a result set by using Transact-SQL in SQL Server.
-ms.date: 07/24/2024
+ms.date: 07/26/2024
 ms.custom: sap:Database or Client application Development
+ms.reviewer: jopilov
 ms.topic: how-to
 ---
 
@@ -29,15 +30,15 @@ SET NOCOUNT ON
 DROP TABLE IF EXISTS #MYTEMP 
 DECLARE @ProductID int
 
-SELECT * INTO #mytemp FROM Production.Product
+SELECT * INTO #MYTEMP FROM Production.Product
 
-SELECT TOP(1) @ProductID = ProductID FROM #mytemp
+SELECT TOP(1) @ProductID = ProductID FROM #MYTEMP
 
 WHILE @@ROWCOUNT <> 0
 BEGIN
-    SELECT * FROM #mytemp WHERE ProductID = @ProductID
-    DELETE FROM #mytemp WHERE ProductID = @ProductID
-    SELECT TOP(1) @ProductID = ProductID FROM #mytemp
+    SELECT * FROM #MYTEMP WHERE ProductID = @ProductID
+    DELETE FROM #MYTEMP WHERE ProductID = @ProductID
+    SELECT TOP(1) @ProductID = ProductID FROM #MYTEMP
 END
 ```
 
@@ -66,15 +67,15 @@ END
 SET NOCOUNT ON
 DROP TABLE IF EXISTS #MYTEMP 
 
-SELECT NULL AS mykey, * INTO #mytemp FROM Production.Product
+SELECT NULL AS mykey, * INTO #MYTEMP FROM Production.Product
 
-UPDATE TOP(1) #mytemp SET mykey = 1
+UPDATE TOP(1) #MYTEMP SET mykey = 1
 
 WHILE @@ROWCOUNT > 0
 BEGIN
-    SELECT * FROM #mytemp WHERE mykey = 1
-    DELETE FROM #mytemp WHERE mykey = 1
-    UPDATE TOP(1) #mytemp SET mykey = 1
+    SELECT * FROM #MYTEMP WHERE mykey = 1
+    DELETE FROM #MYTEMP WHERE mykey = 1
+    UPDATE TOP(1) #MYTEMP SET mykey = 1
 END
 ```
 
