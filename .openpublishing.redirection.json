@@ -11504,6 +11504,36 @@
       "source_path": "support/windows-server/backup-and-storage/error-when-you-do-system-state-backup.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/error-when-you-do-system-state-backup",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/database-backup-error-3266-3013.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/database-backup-error-3266-3013",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/event-id-8193-when-you-perform-backup.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-8193-when-you-perform-backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/use-backup-feature-back-up-restore-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/use-backup-feature-back-up-restore-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/cannot-back-up-server-error-0x80070005.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-back-up-server-error-0x80070005",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/srv-event-id-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/srv-event-id-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/request-not-supported-smb-data-deduplication.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/request-not-supported-smb-data-deduplication",
+      "redirect_document_id": false
     }
   ]
 }
