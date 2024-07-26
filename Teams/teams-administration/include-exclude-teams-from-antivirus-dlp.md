@@ -53,16 +53,6 @@ To prevent issues with starting or using the new Teams app, add the following pr
 
 Alternatively, you can add the processes to the allowlist for programs in your DLP application. The method to accomplish this addition varies. For specific instructions, contact your DLP application’s manufacturer.
 
-### Common external DDL or applications which interfer with new teams Desktop client reliability
-
-- Umppc*.dll: Crowdstrike
-- Trellix
-- ControlUp
-- zscaler
-- Aternity
-- Beyond Trust, Avecto, PGHook.dll
-- webSense
-
 ### Location of the Teams installation folder
 
 To add the Teams processes to either the exclusion list or the Safe list/Allow list, you can find their location by using the following steps:
@@ -76,16 +66,3 @@ To add the Teams processes to either the exclusion list or the Safe list/Allow l
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
 
-### Disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
-
-Third-party contact disclaimer
-
-Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.
-
-Third-party information and solution disclaimer
-
-The information and the solution in this document represents the current view of Microsoft Corporation on these issues as of the date of publication. This solution is available through Microsoft or through a third-party provider. Microsoft does not specifically recommend any third-party provider or third-party solution that this article might describe. There might also be other third-party providers or third-party solutions that this article does not describe. Because Microsoft must respond to changing market conditions, this information should not be interpreted to be a commitment by Microsoft. Microsoft cannot guarantee or endorse the accuracy of any information or of any solution that is presented by Microsoft or by any mentioned third-party provider.
-
-Microsoft makes no warranties and excludes all representations, warranties, and conditions whether express, implied, or statutory. These conditions include but are not limited to representations, warranties, or conditions of title, non-infringement, satisfactory condition, merchantability, and fitness for a particular purpose, regarding any service, solution, product, or any other materials or information. In no event will Microsoft be liable for any third-party solution that this article mentions.
