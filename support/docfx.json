@@ -241,13 +241,6 @@
         "windows-client/**/**.*": "windows-client",
         "windows-server/**/**.*": "windows-server"
       },
-      "ms.subservice": {
-        "system-center/orchestrator/**/*.md": "orchestrator",
-        "system-center/vmm/**/*.md": "virtual-machine-manager",
-        "system-center/dpm/**/*.md": "data-protection-manager",
-        "system-center/scsm/**/*.md": "service-manager",
-        "system-center/scom/**/*.md": "operations-manager"
-      },
       "titleSuffix": {
         "developer/dotnet/**/*.md": ".NET",
         "developer/dotnet/framework/**/*.md": ".NET Framework",
