@@ -28,7 +28,7 @@ This issue might occur due to one of the following reasons:
 > [!NOTE]
 > When the placement policy is set to `PickAll`, the `ClusterResourcePlacementScheduled` condition is set to `True`.
 
-## Example scenario
+## Case study
 
 In the following example, the `ClusterResourcePlacement` with a `PickN` placement policy is trying to propagate resources to two clusters labeled `env:prod`. The two clusters, named `kind-cluster-1` and `kind-cluster-2`, are joined to the fleet. But only one member cluster, `kind-cluster-1`, has the label `env:prod`.
 

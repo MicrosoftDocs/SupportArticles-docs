@@ -27,7 +27,7 @@ The Cluster Resource Placement rollout strategy is blocked because the `RollingU
 2. Locate the corresponding `ClusterResourceBinding` for the identified cluster. For more information, see [How to find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-to-find-the-latest-clusterresourcebinding-resource). This resource should indicate the status of the `Work` whether it was created or updated.
 3. Verify the values for `maxUnavailable` and `maxSurge` to ensure they align with your expectations.
 
-## Example scenario
+## Case study
 
 In the following example, the `ClusterResourcePlacement` is trying to propagate a namespace to three member clusters. However, during the initial creation of the `ClusterResourcePlacement`, the namespace doesn't exist on the hub cluster, and the fleet currently comprises two member clusters named `kind-cluster-1` and `kind-cluster-2`.
 

@@ -24,7 +24,7 @@ This issue might occur due to one of the following reasons:
 - When the `ClusterResourceOverride` or `ResourceOverride` is used, it is created with an invalid value for the resource.
 - The selected cluster where the resources will be propagated is terminated.
 
-## Example scenario
+## Case study
 
 In the following example, the `ClusterResourcePlacement` is trying to propagate a resource to a selected cluster, but the work object isn't updated to reflect the latest changes because the selected cluster is terminated.
 
