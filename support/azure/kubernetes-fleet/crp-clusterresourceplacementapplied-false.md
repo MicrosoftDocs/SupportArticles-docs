@@ -4,7 +4,7 @@ description: Helps you resolve ClusterResourcePlacementApplied failure when prop
 ms.date: 07/22/2024
 ms.reviewer: 
 ms.service: azure-kubernetes-service
-ms.custom: sap:Node/node pool availability and performance,devx-track-azurecli
+ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
 # Resource propagation failure: ClusterResourcePlacementApplied is false
