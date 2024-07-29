@@ -8,7 +8,7 @@ ms.custom: sap:Node/node pool availability and performance,devx-track-azurecli
 ---
 # Troubleshooting ClusterResourcePlacement in Azure Kubernetes Fleet Manager
 
-This troubleshooting guide helps you resolve `ClusterResourcePlacement` related issues when you use Azure Kubernetes Fleet Manager APIs. When troubleshooting these errors on the hub cluster, knowledge of the following objects is required:
+This troubleshooting guide helps you resolve the `ClusterResourcePlacement` API object related issues when you use Azure Kubernetes Fleet Manager. When troubleshooting these errors on the hub cluster, knowledge of the following objects is required:
 
 - `ClusterResourceSnapshot`
 - `ClusterSchedulingPolicySnapshot`
