@@ -5,7 +5,6 @@ ms.date: 05/19/2023
 ms.reviewer: cathmill, kirthishkt, v-jayaramanp
 ms.custom: sap:Pipelines
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 
 # Azure RM service connection not listed for task

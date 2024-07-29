@@ -5,7 +5,6 @@ ms.date: 05/10/2023
 ms.custom: sap:Pipelines
 ms.reviewer: dmittal, cathmill, v-sidong
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 # Azure Web App service deployments related issues
 

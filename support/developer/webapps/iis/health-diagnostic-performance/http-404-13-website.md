@@ -4,7 +4,6 @@ description: This article describes a problem that occurs because a client reque
 ms.date: 04/17/2020
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing
-ms.subservice: health-diagnostic-performance
 ---
 # HTTP Error 404.13 - CONTENT_LENGTH_TOO_LARGE when you visit a web site that is hosted on a server that is running IIS 7.0
 

@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem where an imperson
 ms.date: 04/03/2020
 ms.custom: sap:WWW Authentication and Authorization\Windows Authentication
 ms.reviewer: robmcm
-ms.subservice: www-authentication-authorization
 ---
 # Impersonation fails with IIS Express when User Account Control (UAC) is enabled
 

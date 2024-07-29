@@ -4,7 +4,6 @@ description: Describes a problem that occurs because a client request uses an HT
 ms.date: 04/16/2020
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing
-ms.subservice: health-diagnostic-performance
 ---
 # HTTP Error 405.0 when you visit a website that is hosted on a server that is running IIS
 

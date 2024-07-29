@@ -5,7 +5,6 @@ ms.date: 05/19/2023
 ms.reviewer: cathmill, kirthishkt, v-jayaramanp
 ms.custom: sap:Pipelines
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 
 # Troubleshooting subscription related scenarios while creating service connections

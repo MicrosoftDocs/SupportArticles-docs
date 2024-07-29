@@ -12,8 +12,7 @@ metadata:
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
   ms.date: 12/18/2020
-  ms.subservice: azure-devops-starter
-
+  
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:

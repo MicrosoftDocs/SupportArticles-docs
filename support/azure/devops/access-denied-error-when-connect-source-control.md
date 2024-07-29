@@ -6,7 +6,6 @@ ms.custom: sap:Pipelines
 ms.reviewer: manojm, georgea, ccoop, davean
 ms.topic: article
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 # 'Access denied' error message for a different user when you connect to Source Control or build components in Team Foundation Server
 

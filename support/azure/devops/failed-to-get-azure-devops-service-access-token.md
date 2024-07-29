@@ -5,7 +5,6 @@ ms.date: 05/19/2023
 ms.reviewer: v-jayaramanp
 ms.custom: sap:Pipelines
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 
 # "Failed to get Azure DevOps Service access token" error
