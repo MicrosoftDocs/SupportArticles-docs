@@ -77,7 +77,7 @@ To resolve Windows Update corruptions and address update installation failures, 
     ```
 
     > [!NOTE]
-    > Replace \<servername\> with the computer name of the computer you are using as a repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the scan result is "The restore operation completed successfully", go to the next step. If not, try to fix errors found in the CBS log file.
+    > Replace \<servername\> with the computer name of the computer you are using as a repair source. The repair source computer must be running the same Operating System version. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the scan result is "The restore operation completed successfully", go to the next step. If not, try to fix errors found in the CBS log file.
 
 3. Type the `sfc /scannow` command and press Enter. It may take several minutes for the command operation to be completed.
 
