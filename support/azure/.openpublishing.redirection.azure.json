@@ -5459,6 +5459,31 @@
         "source_path": "virtual-machines/windows/gpu-disabled-upgrade-ubuntu.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/gpu-disabled-upgrade-ubuntu",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows/cloud-init-deployment-delay.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/cloud-init-deployment-delay",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows/virtual-machines-windows-replace-system-binary-file.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/virtual-machines-windows-repair-replace-system-binary-file",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows/storage-classic-cannot-delete-storage-account-container-vhd.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/storage-resource-deletion-errors",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "general/error-run-copy-activity-azure.md",
+        "redirect_url": "/azure/data-factory/self-hosted-integration-runtime-troubleshoot-guide#usererrorjrenotfound-error-message-when-you-run-a-copy-activity-to-azure",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machines/windows/allocation-failure-classic.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/allocation-failure",
+        "redirect_document_id": false
       }
   ]
 }

@@ -18,6 +18,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 # Azure Serial Console for Windows
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 The Serial Console in the Azure portal provides access to a text-based console for Windows virtual machines (VMs) and virtual machine scale set instances. This serial connection connects to the COM1 serial port of the VM or virtual machine scale set instance, providing access to it independent of the network or operating system state. The serial console can only be accessed by using the Azure portal and is allowed only for those users who have an access role of Contributor or higher to the VM or virtual machine scale set.

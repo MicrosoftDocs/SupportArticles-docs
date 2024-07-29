@@ -12,6 +12,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # "Disk \<number> has been surprise removed" (event ID 157)
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article discusses how to troubleshoot event ID 157, a scenario in which a data disk disappeared, was lost, or was removed from the Windows guest operating system (OS) of a Microsoft Azure virtual machine (VM).
 
 ## Symptoms

@@ -9,10 +9,11 @@ ms.collection: linux
 ---
 # The CustomScript extension reruns a command in Azure Linux
 
-This article provides a workaround to an issue in which the last command in the Azure Linux CustomScript extension reruns the previous command.
+**Applies to:** :heavy_check_mark: Linux VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Linux  
 _Original KB number:_ &nbsp; 4054277
+
+This article provides a workaround to an issue in which the last command in the Azure Linux CustomScript extension reruns the previous command.
 
 ## Symptoms
 

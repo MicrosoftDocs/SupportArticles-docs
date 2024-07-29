@@ -9,6 +9,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Decrease the size of an Azure data disk without losing data
 
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
 This article shows you how to decrease the size of a disk in Azure without losing any data. Downsizing a disk directly isn't supported because of the risk of data loss. Instead, you can create a smaller disk, copy the data from the original disk, and then delete the old disk.
 
 > [!NOTE]  

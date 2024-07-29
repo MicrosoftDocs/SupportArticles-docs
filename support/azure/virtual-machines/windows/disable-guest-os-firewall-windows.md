@@ -20,6 +20,8 @@ ms.custom: sap:Cannot connect to my VM
 
 # Disable the guest OS Firewall in Azure VM
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article provides a reference for situations in which you suspect that the guest operating system firewall is filtering partial or complete traffic to a virtual machine (VM). This could occur if changes were deliberately made to the firewall that caused RDP connections to fail.
 
 ## Solution

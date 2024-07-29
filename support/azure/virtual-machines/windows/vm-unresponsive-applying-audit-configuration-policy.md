@@ -15,8 +15,9 @@ ms.date: 08/24/2020
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
-
 # Virtual machine is unresponsive while applying audit policy configuration policy
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where the virtual machine (VM) becomes unresponsive while applying the Audit Policy Configuration policy, which prevents the booting of an Azure VM.
 

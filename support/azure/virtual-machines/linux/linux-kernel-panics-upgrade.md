@@ -9,12 +9,13 @@ ms.collection: linux
 ---
 # An Azure Linux VM on a 3.10-based kernel panics after a host node upgrade
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
+_Original KB number:_ &nbsp; 3212236
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article  discusses a problem that occurs when an Azure Linux VM that's running the 3.10-based kernel crashes after a host node upgrade in Azure.
-
-_Original product version:_ &nbsp; Virtual Machine running Linux, Virtual Machine running RedHat  
-_Original KB number:_ &nbsp; 3212236
 
 ## Symptoms
 

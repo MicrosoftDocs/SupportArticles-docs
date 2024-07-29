@@ -12,6 +12,8 @@ ms.custom: sap:VM Performance
 
 # Troubleshoot high memory issues on Azure Windows virtual machines
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 Performance issues occur in different operating systems or applications, and every issue requires a unique approach to troubleshoot. CPU, memory, networking, and input/output (I/O) are often key factors when performance issues occur. Each area generates different symptoms (sometimes simultaneously) and requires a different diagnostic approach and solution.
 
 This article discusses high memory usage (also known as Memory Pressure) issues that occur on Azure virtual machines (VMs) that run the Windows operating system (OS). To get troubleshooting guidance for Azure VMs running Linux distros, see [Troubleshoot performance and isolate bottlenecks in Linux](../linux/troubleshoot-performance-bottlenecks-linux.md).

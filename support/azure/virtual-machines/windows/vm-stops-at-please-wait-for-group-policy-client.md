@@ -15,8 +15,9 @@ ms.date: 05/15/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
-
 # Azure VM stops at "Please wait for the Group Policy Client" screen
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 ## Symptoms
 

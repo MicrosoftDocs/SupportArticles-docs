@@ -13,6 +13,8 @@ ms.date: 06/26/2024
 ---
 # Troubleshooting Red Hat OS upgrade issues
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 Doing a major upgrade on Red Hat Enterprise Linux (RHEL) involves transitioning from one major version to another major version, such as from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9. Major upgrades bring significant changes, including new features, enhancements, and improvements in security and performance. The process can be complex, but Red Hat provides tools and guidance to simplify and streamline the upgrade process. One primary tool that Red Hat provides for performing major upgrades is the leapp utility. The leapp utility is designed to automate the upgrade process of RHEL systems to the next major version. It performs checks, provides recommendations, and helps to resolve issues that arise during the upgrade. This article discusses how to troubleshoot common issues that occur when you use the leapp utility to do a major upgrade of a Red Hat operating system.
 
 > [!CAUTION]

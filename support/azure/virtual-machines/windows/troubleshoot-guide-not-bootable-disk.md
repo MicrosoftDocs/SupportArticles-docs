@@ -11,11 +11,12 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.date: 06/13/2024
+ms.date: 07/10/2024
 ms.custom: sap:My VM is not booting
 ---
-
 # Boot Error – This is not a Bootable Disk
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where the disk isn't bootable in an Azure Virtual Machine (VM).
 
@@ -54,42 +55,7 @@ This error message means the OS boot process couldn't locate an active system pa
 
 ### Set Partition Status to Active
 
-Generation 1 VMs should first verify that the OS partition, which holds the BCD store is marked as *active*. If you have a Generation 2 VM, skip ahead to [Fix the Disk Partition](#fix-the-disk-partition), as the *Status* flag was deprecated in the later generation.
-
-1. Open an elevated command prompt *(cmd.exe)*.
-2. Enter *diskpart* to launch the DISKPART tool.
-3. Enter *list disk* to list the disks on the system and identify the attached OS VHD.
-4. Once the attached OS VHD is located, enter *sel disk #* to select the disk.  See Figure 2, where Disk 1 is the attached OS VHD.
-
-   Figure 2
-
-   :::image type="content" source="media/troubleshoot-guide-not-bootable-disk/list-disk.png" alt-text="The diskpart window shows outputs of list disk and sel disk 1 commands. Disk 0 and Disk 1 are displayed in the table. Disk 1 is the selected disk.":::
-
-5. Once the disk is selected, enter *list partition* to list the partitions of the selected disk.
-6. Once the boot partition is identified, enter *sel partition #* to select the partition.  Usually the boot partition will be around 350 MB in size.  See Figure 3, where Partition 1 is the boot partition.
-
-   Figure 3
-
-   :::image type="content" source="media/troubleshoot-guide-not-bootable-disk/list-partition.png" alt-text="The diskpart window shows outputs of list partition and sel partition 1 commands. Partition 1 is the selected disk.":::
-
-7. Enter 'detail partition' to check the status of the partition. See Figure 4, where the partition is *Active: No*, or Figure 5, where the partition is 'Active: Yes'.
-
-   Figure 4
-
-   :::image type="content" source="media/troubleshoot-guide-not-bootable-disk/detail-partition-active-no.png" alt-text="The diskpart window with output of the detail partition command when Partition 1 is set to Active No.":::
-
-   Figure 5
-
-   :::image type="content" source="media/troubleshoot-guide-not-bootable-disk/detail-partition-active-yes.png" alt-text="The diskpart window with output of the detail partition command when Partition 1 is set to Active Yes.":::
-
-8. If the partition is **Not Active**, enter *active* to change the *Active* flag.
-9. Check that the status change was done properly by typing *detail partition*.
-
-   Figure 6
-
-   :::image type="content" source="media/troubleshoot-guide-not-bootable-disk/detail-partition-active-yes.png" alt-text="The diskpart window with output of the detail partition command when Partition 1 is set to Active Yes.":::
-
-10. Enter *exit* to close the DISKPART tool and save your configuration changes.
+[!INCLUDE [Verify that Windows partition is active](../../../includes/azure/windows-vm-verify-set-active-partition.md)]
 
 ### Fix the Disk Partition
 

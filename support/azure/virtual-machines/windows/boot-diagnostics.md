@@ -14,6 +14,8 @@ ms.custom: sap:My VM is not booting
 
 # How to use boot diagnostics to troubleshoot virtual machines in Azure
 
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
 There can be many reasons that a virtual machine enters a non-bootable state. To address issues with your virtual machines created using Resource Manager deployment model, you can use the following debugging features: Console Output and Screenshot support for Azure virtual machines.
 
 For Linux virtual machines, you can view the output of your console log from the Portal. For both Windows and Linux virtual machines, Azure enables you to see a screenshot of the VM from the hypervisor. Both features are supported for Azure virtual machines in all regions. Note, screenshots and output can take up to 10 minutes to appear in your storage account.

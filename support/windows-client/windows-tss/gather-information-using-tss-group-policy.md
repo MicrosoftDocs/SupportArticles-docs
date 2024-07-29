@@ -1,7 +1,7 @@
 ---
 title: Gather information by using TSS for Group Policy issues
 description: Introduces how to gather information by using the TroubleShootingScript (TSS) toolset for Group Policy issues.
-ms.date: 12/26/2023
+ms.date: 07/04/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -32,7 +32,7 @@ Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-t
     ```
 
     ```powershell
-    .\TSS.ps1 -Scenario -ADS_GPedit -ADS_GPmgmt -ADS_GPO -ADS_GPsvc -GPresult Both
+    .\TSS.ps1 -Scenario ADS_GPOEx -ADS_GPedit -ADS_GPmgmt -ADS_GPO -ADS_GPsvc -GPresult Both
     ```
 
 4. Enter *A* for "Yes to All" for the execution policy change.

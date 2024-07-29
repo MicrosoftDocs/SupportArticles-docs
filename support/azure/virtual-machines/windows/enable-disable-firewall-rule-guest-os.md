@@ -20,6 +20,8 @@ ms.custom: sap:Cannot connect to my VM
 
 # Enable or disable a firewall rule on an Azure VM Guest OS
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article provides a reference for troubleshooting a situation in which you suspect that the guest operating system firewall is filtering partial traffic on a virtual machine (VM). This could be useful for the following reasons:
 
 * If a change was deliberately made to the firewall that caused RDP connections to fail, using the Custom Script Extension feature can resolve the issue.

@@ -10,6 +10,8 @@ ms.custom: sap:Cannot connect to my VM
 
 # Azure Virtual Machine - Netlogon service is not starting
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 ## Symptoms
 
 1. The virtual machine (VM) screenshot shows the operating system (OS) fully loaded and waiting for the credentials:

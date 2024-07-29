@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2016 build versions (KB3177312)
 description: This article lists cumulative update builds for SQL Server 2016.
-ms.date: 10/12/2022
+ms.date: 07/09/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB3177312
 appliesto:
 - SQL Server 2016
@@ -18,6 +18,7 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 
 | Cumulative update name   | Product version | Knowledge Base number                                   | Release date       |
 |--------------------------|-----------------|---------------------------------------------------------|-------------------|
+| Azure Connect Pack + GDR | 13.0.7037.1     | [KB5040944](https://support.microsoft.com/help/5040944) | July 09, 2024  |
 | Azure Connect Pack + GDR | 13.0.7029.3     | [KB5029187](https://support.microsoft.com/help/5029187) | October 10, 2023  |
 | Azure Connect Pack + GDR | 13.0.7024.30    | [KB5021128](https://support.microsoft.com/help/5021128) | February 14, 2023 |
 | Azure Connect Pack + GDR | 13.0.7016.1     | [KB5015371](https://support.microsoft.com/help/5015371) | June 14, 2022     |
@@ -27,6 +28,7 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 
 | Cumulative update name | Product version | Knowledge Base number                                   | Release date        |
 |------------------------|-----------------|---------------------------------------------------------|--------------------|
+| SP3 + GDR              | 13.0.6441.1     | [KB5040946](https://support.microsoft.com/help/5040946) | July 09, 2024   |
 | SP3 + GDR              | 13.0.6435.1     | [KB5029186](https://support.microsoft.com/help/5029186) | October 10, 2023   |
 | SP3 + GDR              | 13.0.6430.49    | [KB5021129](https://support.microsoft.com/help/5021129) | February 14, 2023  |
 | SP3 + GDR              | 13.0.6419.1     | [KB5014355](https://support.microsoft.com/help/5014355) | June 14, 2022      |

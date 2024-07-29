@@ -9,7 +9,8 @@ ms.collection: linux
 ---
 # Can't connect to a specialized Debian Linux VM that is migrated from VMware to Azure
 
-_Original product version:_ &nbsp; Virtual Machine running Linux  
+**Applies to:** :heavy_check_mark: Linux VMs
+
 _Original KB number:_ &nbsp; 4056276
 
 ## Symptoms

@@ -7,10 +7,11 @@ author: anandhms
 manager: dcscontentpm
 editor: przlplx
 tags: ''
-ms.service: azure-monitor
+ms.service: virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
-ms.date: 05/11/2024
+ms.date: 07/24/2024
+ms.custom: sap:VM Performance
 ms.reviewer: guywild
 ms.author: anandh
 
@@ -18,6 +19,8 @@ ms.author: anandh
 ---
 
 # Troubleshoot performance issues on Azure virtual machines using Performance Diagnostics
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 Use the Performance Diagnostics tool to identify and troubleshoot performance issues on your Azure virtual machine (VM) in one of two modes: 
 

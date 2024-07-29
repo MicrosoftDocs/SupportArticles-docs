@@ -10,6 +10,8 @@ ms.custom: sap:My VM is not booting
 
 # Azure VM cannot RDP - driver IRQL not less or equal
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 ## Symptoms
 
 When you pull the screenshot of the virtual machine (VM), the operating system (OS) is stopped with the error `0x000000D1` also known as `DRIVER_IRQL_NOT_LESS_OR_EQUAL:`

@@ -9,10 +9,11 @@ ms.collection: windows
 ---
 # Microsoft Azure IaaS VM logs
 
-This article lists the Microsoft Azure IaaS VM logs and diagnostic information that's collected during troubleshooting by Microsoft Support.
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Azure  
 _Original KB number:_ &nbsp; 3137442
+
+This article lists the Microsoft Azure IaaS VM logs and diagnostic information that's collected during troubleshooting by Microsoft Support.
 
 With your consent, Microsoft Support will collect files from your Azure IaaS virtual machines (VMs) to troubleshoot your issue. These files will include common log files, configuration files, diagnostic information, system-generated event logs, and debug logs.
 

@@ -15,8 +15,9 @@ ms.date: 06/13/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
-
 # Windows stop error - 0x00000074 Bad System Config Info
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where Windows cannot boot and needs to restart due to bad system configuration information in an Azure Virtual Machine (VM).
 

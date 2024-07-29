@@ -15,8 +15,9 @@ ms.date: 11/19/2018
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # Cannot connect remotely to a Windows 10 or Windows Server 2016 VM in Azure because of netvsc.sys
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article explains how to troubleshoot an issue in which there is no network connection when you connect to a Windows 10 or Windows Server 2016 Datacenter virtual machine (VM) on a Hyper-V Server 2016 host.
 

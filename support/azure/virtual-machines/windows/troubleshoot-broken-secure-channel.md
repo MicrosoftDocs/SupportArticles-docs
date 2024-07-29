@@ -19,6 +19,8 @@ ms.custom: sap:Cannot connect to my VM
 
 # Troubleshoot a failed trust relationship in an Azure Windows VM
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article shows how to troubleshoot a failed trust relationship between the workstation and primary domain in an Azure Windows virtual machine (VM).
 
 If your Azure issue isn't addressed in this article, visit the Azure forums on [MSDN and Stack Overflow](https://azure.microsoft.com/support/forums/). You can post your issue in these forums, or post to [@AzureSupport on Twitter](https://twitter.com/AzureSupport). You also can [submit a Microsoft Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).

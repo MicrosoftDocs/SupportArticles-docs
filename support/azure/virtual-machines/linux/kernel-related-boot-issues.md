@@ -12,6 +12,8 @@ ms.topic: troubleshooting
 ---
 # Azure Linux virtual machine fails to boot after applying kernel changes
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article provides solutions to an issue in which a Linux virtual machine (VM) can't boot after applying kernel changes.

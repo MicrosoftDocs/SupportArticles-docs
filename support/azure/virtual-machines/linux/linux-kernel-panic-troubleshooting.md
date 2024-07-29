@@ -12,6 +12,8 @@ ms.collection: linux
 
 # Kernel panic in Azure Linux VMs
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 This article discusses multiple conditions that can lead to a kernel panic and provides troubleshooting guidance.
 
 In general, a kernel panic is a situation when the kernel is unable to load properly, and therefore the system fails to boot. Another form of kernel panic occurs when the kernel encounters a situation it doesn't know how to handle and protects itself by stopping.

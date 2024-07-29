@@ -20,6 +20,8 @@ ms.custom: sap:My VM is not booting
 
 # Windows stop error - Status No Memory
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
 This article provides steps to resolve issues where Windows fails to start and displays the status or error code #0xC0000017, also known as "Status No Memory".
 
 ## Symptom

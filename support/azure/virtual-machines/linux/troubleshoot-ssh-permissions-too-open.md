@@ -14,7 +14,9 @@ ms.topic: troubleshooting
 ms.date: 12/30/2021
 ms.author: genli
 ---
-# Can’t SSH to Azure Linux VM because permissions are too open
+# Can't SSH to Azure Linux VM because permissions are too open
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 ## Symptoms
 

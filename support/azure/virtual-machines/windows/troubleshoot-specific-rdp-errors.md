@@ -14,10 +14,11 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 10/31/2018
 ms.author: genli
-
 ms.custom: sap:Cannot connect to my VM
 ---
 # Troubleshooting specific RDP error messages to a Windows VM in Azure
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 You may receive a specific error message when using Remote Desktop connection to a Windows virtual machine (VM) in Azure. This article details some of the more common error messages encountered, along with troubleshooting steps to resolve them. If you are having issues connecting to your VM using RDP but do not encounter a specific error message, see the [troubleshooting guide for Remote Desktop](troubleshoot-rdp-connection.md).
 

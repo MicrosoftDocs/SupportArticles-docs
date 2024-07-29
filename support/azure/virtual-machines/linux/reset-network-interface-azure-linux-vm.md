@@ -16,6 +16,8 @@ ms.author: tibasham
 ---
 # Reset the network interface for Azure Linux VM
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article shows how to reset the network interface for Azure Linux Virtual Machine (VM) to resolve issues when you can't connect to an Azure Linux VM after:

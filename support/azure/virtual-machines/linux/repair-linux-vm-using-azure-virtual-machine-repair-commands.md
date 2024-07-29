@@ -19,6 +19,8 @@ ms.author: genli
 
 # Repair a Linux VM by using the Azure Virtual Machine repair commands
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
 If your Linux virtual machine (VM) in Azure encounters a boot or disk error, you may need to perform mitigation on the disk itself. A common example would be a failed application update that prevents the VM from being able to boot successfully. This article details how to use Azure Virtual Machine repair commands to connect the disk to another Linux VM to fix any errors, then rebuild your original VM.
 
 > [!IMPORTANT]

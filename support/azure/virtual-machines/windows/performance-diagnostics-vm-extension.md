@@ -13,10 +13,11 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 05/23/2024
 ms.author: genli
-
 ms.custom: sap:VM Performance
 ---
 # Azure Performance Diagnostics (PerfInsights) VM Extension for Windows
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 Azure Performance Diagnostics VM Extension helps collect performance diagnostic data from Windows VMs. The extension performs analysis, and provides a report of findings and recommendations to identify and resolve performance issues on the virtual machine. This extension installs a troubleshooting tool called [PerfInsights](./how-to-use-perfinsights.md).
 

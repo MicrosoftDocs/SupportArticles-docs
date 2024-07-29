@@ -14,8 +14,9 @@ ms.date: 11/12/2018
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # Cannot remote desktop to a VM because the network interface is disabled
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article explains how to resolve a problem in which you cannot make a Remote Desktop connection to Azure Windows Virtual Machines (VMs) if the network interface is disabled.
 

@@ -14,8 +14,9 @@ ms.date: 10/31/2019
 ms.author: genli
 ms.custom: sap:Cannot create a VM
 ---
-
 # Troubleshoot virtual machine deployment due to detached disks
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 ## Symptom
 
