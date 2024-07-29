@@ -119,23 +119,6 @@
         "SkypeServer/**/*.md": "skype-for-business-server",
         "SkypeExperts/**/*.md": "skype-for-business-server"
       },
-      "ms.subservice": {
-        "SkypeHybrid/hybrid-conferencing/**/*.md": "conferencing",
-        "SkypeHybrid/hybrid-exchange-integration/**/*.md": "exchange-integration",
-        "SkypeHybrid/hybrid-im-presence/**/*.md": "im-presence",
-        "SkypeHybrid/hybrid-meetings/**/*.md": "meetings",
-        "SkypeHybrid/hybrid-move-sfb-online/**/*.md": "move-sfb-online",
-        "SkypeHybrid/hybrid-phone-system/**/*.md": "phone-system",
-        "SkypeHybrid/hybrid-sign-in/**/*.md": "sign-in",
-        "SkypeServer/server-mobile-devices/**/*.md": "mobile-devices",
-        "SkypeServer/server-conferencing/**/*.md": "conferencing",
-        "SkypeServer/server-im-presence/**/*.md": "im-presence",
-        "SkypeExperts/quality-of-service/**/*.md": "quality-of-service",
-        "SkypeServer/server-exchange-integration/**/*.md": "exchange-integration",
-        "SkypeServer/server-meetings/**/*.md": "meetings",
-        "SkypeServer/server-contacts/**/*.md": "contacts",
-        "SkypeServer/server-phone-system/**/*.md": "phone-system"
-      },
       "author": {
         "**/*.md": "helenclu"
       },
