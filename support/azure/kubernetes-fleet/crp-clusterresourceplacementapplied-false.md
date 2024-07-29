@@ -19,7 +19,7 @@ When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet
 
 This issue might occur because of one of the following reasons:
 
-- The resource already exists on the cluster and is not managed by the fleet controller. To resolve this, update the `ClusterResourcePlacement` manifest YAML file to use `AllowCoOwnership` within `ApplyStrategy` to allow the fleet controller to manage the resource.
+- The resource already exists on the cluster and isn't managed by the fleet controller. To resolve this issue, update the `ClusterResourcePlacement` manifest YAML file to use `AllowCoOwnership` within `ApplyStrategy` to allow the fleet controller to manage the resource.
 - Another `ClusterResourcePlacement` deployment is already managing the resource for the selected cluster with a different apply strategy.
 - The `ClusterResourcePlacement` deployment fails to apply the manifest due to syntax errors or invalid resource configurations. This can occur when a resource is propagated through an envelope object.
 
@@ -62,7 +62,7 @@ spec:
 status:
   conditions:
   - lastTransitionTime: "2024-05-07T23:32:40Z"
-    message: could not find all the clusters needed as specified by the scheduling
+    message:couldn't find all the clusters needed as specified by the scheduling
       policy
     observedGeneration: 1
     reason: SchedulingPolicyUnfulfilled
@@ -130,7 +130,7 @@ status:
       status: "True"
       type: Applied
     - lastTransitionTime: "2024-05-07T23:32:49Z"
-      message: The availability of work object crp-4-work is not trackable
+      message: The availability of work object crp-4-work isn't trackable
       observedGeneration: 1
       reason: WorkNotTrackable
       status: "True"
@@ -163,7 +163,7 @@ status:
       status: "True"
       type: WorkSynchronized
     - lastTransitionTime: "2024-05-07T23:32:40Z"
-      message: Work object crp-4-work is not applied
+      message: Work object crp-4-work isn't applied
       observedGeneration: 1
       reason: NotAllWorkHaveBeenApplied
       status: "False"
@@ -172,7 +172,7 @@ status:
     - condition:
         lastTransitionTime: "2024-05-07T23:32:40Z"
         message: 'Failed to apply manifest: failed to process the request due to a
-          client error: resource exists and is not managed by the fleet controller
+          client error: resource exists and isn't managed by the fleet controller
           and co-ownernship is disallowed'
         reason: ManifestsAlreadyOwnedByOthers
         status: "False"
@@ -191,7 +191,7 @@ status:
     version: v1
 ```
 
-In the `failedPlacements` section for `kind-cluster-1`, the `message` fields explaining why the resource failed to apply on the member cluster.In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` with the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object intended for the member cluster `kind-cluster-1` has not been applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
+In the `failedPlacements` section for `kind-cluster-1`, the `message` fields explaining why the resource failed to apply on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` with the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object intended for the member cluster `kind-cluster-1` hasn't been applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
 
 ### Work status of kind-cluster-1
 
@@ -215,13 +215,13 @@ In the `failedPlacements` section for `kind-cluster-1`, the `message` fields exp
   - conditions:
     - lastTransitionTime: "2024-05-07T23:32:40Z"
       message: 'Failed to apply manifest: failed to process the request due to a client
-        error: resource exists and is not managed by the fleet controller and co-ownernship
+        error: resource exists and isn't managed by the fleet controller and co-ownernship
         is disallowed'
       reason: ManifestsAlreadyOwnedByOthers
       status: "False"
       type: Applied
     - lastTransitionTime: "2024-05-07T23:32:40Z"
-      message: Manifest is not applied yet
+      message: Manifest isn't applied yet
       reason: ManifestApplyFailed
       status: Unknown
       type: Available
@@ -254,10 +254,12 @@ In the `failedPlacements` section for `kind-cluster-1`, the `message` fields exp
       version: v1
 ```
 
-Check the `Work` status, particularly the `manifestConditions` section, you can see that the namespace could not be applied but the deployment within the namespace got propagated from hub to the member cluster.
+Check the `Work` status, particularly the `manifestConditions` section, you can see that the namespacecouldn't be applied but the deployment within the namespace got propagated from hub to the member cluster.
 
 ### Resolution
 
 In this scenario, a potential solution is to delete the existing namespace on the member cluster. However, it's essential to note that this decision rests with the user, as the namespace might already contain resources.
 
 In addition, reviewing the logs for the [apply work controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/work/apply_controller.go) may provide more insights into why the resources are unavailable.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

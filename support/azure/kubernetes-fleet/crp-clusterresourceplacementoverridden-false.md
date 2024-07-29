@@ -156,11 +156,11 @@ status:
 When the `ClusterResourcePlacementOverridden` condition is false, check the `placementStatuses` section to get the exact cause of the failure.
 
 In this case, The message indicates that the override failed because the path `/metadata/labels/new-label` and its corresponding value are missing.
-Based on the previous example of the cluster role `secret-reader`, it's evident that the path `/metadata/labels/` does not exist, meaning that `labels` does not exist.
-Therefore, a new label cannot be added.
-
+Based on the previous example of the cluster role `secret-reader`, it's evident that the path `/metadata/labels/` doesn't exist, meaning that `labels` doesn't exist.
+Therefore, a new label can't be added.
 
 ### Resolution
+
 To successfully override the ClusterRole `secret-reader`, correct the path and value in the `ClusterResourceOverride` as shown below:
 ```
 jsonPatchOverrides:
@@ -170,4 +170,6 @@ jsonPatchOverrides:
       newlabel: new-value
 ```
 
-This will add the new label `newlabel` with the value `new-value` to the ClusterRole `secret-reader` by creating the labels field and adding the new value newlabel: new-value.
+This will add the new label `newlabel` with the value `new-value` to the ClusterRole `secret-reader`.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

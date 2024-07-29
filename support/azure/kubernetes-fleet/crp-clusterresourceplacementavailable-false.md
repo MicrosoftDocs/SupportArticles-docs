@@ -46,7 +46,7 @@ spec:
     type: RollingUpdate
 ```
 
-#### CRP status:
+#### ClusterResourcePlacement status
 
 ```
 status:
@@ -125,7 +125,7 @@ status:
       status: "True"
       type: Applied
     - lastTransitionTime: "2024-05-14T18:52:31Z"
-      message: Work object crp1-work is not available
+      message: Work object crp1-work isn't available
       observedGeneration: 1
       reason: NotAllWorkAreAvailable
       status: "False"
@@ -153,9 +153,9 @@ status:
     namespace: test-ns
     version: v1
  ```
-In the `failedPlacements` section for `kind-cluster-1`, the `message` field explains why the resource failed to apply on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` with the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object intended for the member cluster `kind-cluster-1` has not been applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
+In the `failedPlacements` section for `kind-cluster-1`, the `message` field explains why the resource failed to apply on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` with the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object intended for the member cluster `kind-cluster-1` hasn't been applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
 
-### Work status of kind-cluster-1:
+### Work status of kind-cluster-1
 ```
 status:
 conditions:
@@ -213,10 +213,12 @@ conditions:
     version: v1
 ```
 
-Check the `Available` status for `kind-cluster-1`, and you can see that the `my-deployment` deployment is not yet available on the member cluster. This suggests there may be an issue with the deployment manifest.
+Check the `Available` status for `kind-cluster-1`, and you can see that the `my-deployment` deployment isn't yet available on the member cluster. This suggests there may be an issue with the deployment manifest.
 
 ### Resolution
 
-In this scenario, a potential solution is to check the deployment in the member cluster, as the message indicates that the root cause of the issue is a bad image name. Once this image name is identified, you can correct the deployment manifest and update it. After fixing and updating the resource manifest, the `ClusterResourcePlacement` object API will automatically propagate the corrected resource to the member cluster.
+In this scenario, a potential solution is to check the deployment in the member cluster, as the message indicates that the root cause of the issue is a bad image name. Once this image name is identified, you can correct the deployment manifest and update it. After you fixi and update the resource manifest, the `ClusterResourcePlacement` object API will automatically propagate the corrected resource to the member cluster.
 
 For all other scenarios, ensure the propagated resource is configured correctly. Additionally, verify that the selected cluster has sufficient available capacity to accommodate the new resources.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
