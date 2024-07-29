@@ -15,9 +15,9 @@ This article helps you measure and compare memory consumption between identical 
 
 ## Prerequisites
 
-- Install Performance Monitor on both servers.
+- Create Performance Monitor data collector sets on both servers.
 - Ensure that you can collect data traces from each server environment.
-- Understand different user workloads and their impacts on resource usage
+- Understand different user workloads and their impacts on resource usage.
 
 ## Quick workaround: restart the servers
 
@@ -92,18 +92,15 @@ The result seems to confirm a different user load behavior. The result can be al
 |---|---|---|---|
 |System\Processes (Max)|199|268|338|
 
-If we want further confirmation, we can use the CPU-Usage, **Processor\\%idle time** (**_Total**), to identify a different user load pattern:
+If you want further confirmation, you can use the CPU-Usage, **Processor\\%idle time** (**_Total**), to identify a different user load pattern. Here are screenshots of some samples (The first one is for vanilla installation, the second one is for client A and the third one is for client B).
 
-Vanilla:
-
+Vanilla:  
 :::image type="content" source="media/memory-consumption-between-identical-windows-server-setup/performance-monitor-trace-on-vanilla-installation.png" alt-text="Performance Monitor trace on vanilla installation." border="true":::
 
-Client A:
-
+Client A:  
 :::image type="content" source="media/memory-consumption-between-identical-windows-server-setup/performance-monitor-trace-on-client-a.png" alt-text="Performance Monitor trace on client A." border="true":::
 
-Client B:
-
+Client B:  
 :::image type="content" source="media/memory-consumption-between-identical-windows-server-setup/performance-monitor-trace-on-client-b.png" alt-text="Performance Monitor trace on client B." border="true":::
 
 If you want to drill further down on user load behavior, try to check for the following processes:
