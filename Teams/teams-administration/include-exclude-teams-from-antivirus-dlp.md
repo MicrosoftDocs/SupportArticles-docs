@@ -64,5 +64,4 @@ To add the Teams processes to either the exclusion list or the Safe list/Allow l
 1. To view the individual files, open **Task Manager** and select **More details**.
 1. On the **Details** tab, locate and right-click **ms-teams.exe** and select **Open file location**.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-
+Still need help? Go to [Microsoft Support Community](https://answers.microsoft.com).
