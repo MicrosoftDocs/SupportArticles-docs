@@ -31,22 +31,22 @@ The complete progress of `ClusterResourcePlacement` is as follows:
 
 1. **ClusterResourcePlacementScheduled**: Indicates a resource has been scheduled for placement.
 
-    If false, see [How to debug ClusterResourcePlacementScheduled condition status set to false](crp-clusterresourceplacementscheduled-false.md).
+    If false, see [How to troubleshoot when the ClusterResourcePlacementScheduled condition status is false](crp-clusterresourceplacementscheduled-false.md).
 1. **ClusterResourcePlacementRolloutStarted**: Indicates the rollout process has begun.
 
-    If false, see [How to debug ClusterResourcePlacementRolloutStarted condition status set to false](crp-clusterresourceplacementrolloutstarted-false.md).
+    If false, see [How to troubleshoot when the ClusterResourcePlacementRolloutStarted condition status is false](crp-clusterresourceplacementrolloutstarted-false.md).
 1. **ClusterResourcePlacementOverridden**: Indicates the resource has been overridden.
 
-    If false, see [How to debug ClusterResourcePlacementOverridden condition status set to false](crp-clusterresourceplacementoverridden-false.md).
+    If false, see [How to troubleshoot when the ClusterResourcePlacementOverridden condition status is false](crp-clusterresourceplacementoverridden-false.md).
 1. **ClusterResourcePlacementWorkSynchronized**: Indicates work objects have been synchronized.
 
-    If false, see [How to debug ClusterResourcePlacementWorkSynchronized condition status set to false](crp-clusterresourceplacementworksynchronized-false.md).
+    If false, see [How to troubleshoot when the ClusterResourcePlacementWorkSynchronized condition status is false](crp-clusterresourceplacementworksynchronized-false.md).
 1. **ClusterResourcePlacementApplied**: Indicates the resource has been applied.
 
-    If false, see [How to debug ClusterResourcePlacementApplied condition status set to false](crp-clusterresourceplacementapplied-false.md).
+    If false, see [How to troubleshoot when the ClusterResourcePlacementApplied condition status is false](crp-clusterresourceplacementapplied-false.md).
 1. **ClusterResourcePlacementAvailable**: Indicates the resource is available.
 
-    If false, see [How to debug ClusterResourcePlacementAvailable condition status set to false](crp-clusterresourceplacementavailable-false.md).
+    If false, see [How to troubleshoot when the ClusterResourcePlacementAvailable condition status is false](crp-clusterresourceplacementavailable-false.md).
 
 ## FAQ
 
