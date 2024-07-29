@@ -217,7 +217,7 @@ Check the `Available` status for `kind-cluster-1`, and you can see that the `my-
 
 ### Resolution
 
-In this scenario, a potential solution is to check the deployment in the member cluster, as the message indicates that the root cause of the issue is a bad image name. Once this image name is identified, you can correct the deployment manifest and update it. After you fixi and update the resource manifest, the `ClusterResourcePlacement` object API will automatically propagate the corrected resource to the member cluster.
+In this scenario, a potential solution is to check the deployment in the member cluster, as the message indicates that the root cause of the issue is a bad image name. Once this image name is identified, you can correct the deployment manifest and update it. After you fix and update the resource manifest, the `ClusterResourcePlacement` object API will automatically propagate the corrected resource to the member cluster.
 
 For all other scenarios, ensure the propagated resource is configured correctly. Additionally, verify that the selected cluster has sufficient available capacity to accommodate the new resources.
 

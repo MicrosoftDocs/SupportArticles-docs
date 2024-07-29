@@ -254,12 +254,12 @@ In the `failedPlacements` section for `kind-cluster-1`, the `message` fields exp
       version: v1
 ```
 
-Check the `Work` status, particularly the `manifestConditions` section, you can see that the namespacecouldn't be applied but the deployment within the namespace got propagated from hub to the member cluster.
+Check the `Work` status, particularly the `manifestConditions` section, you can see that the namespace couldn't be applied but the deployment within the namespace got propagated from hub to the member cluster.
 
 ### Resolution
 
 In this scenario, a potential solution is to delete the existing namespace on the member cluster. However, it's essential to note that this decision rests with the user, as the namespace might already contain resources.
 
-In addition, reviewing the logs for the [apply work controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/work/apply_controller.go) may provide more insights into why the resources are unavailable.
+In addition, reviewing the logs for the [Apply Work Controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/work/apply_controller.go) may provide more insights into why the resources are unavailable.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
