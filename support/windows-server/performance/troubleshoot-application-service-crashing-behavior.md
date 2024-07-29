@@ -93,7 +93,7 @@ For the preceding example of a *netsh.exe* crash, set up the machine to collect 
     reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\Windows Error Reporting\LocalDumps\netsh.exe" /v DumpType /t REG_DWORD /d 2 /f
     ```
 
-    These commands allow up to 10 full process dumps of the netsh.exe process to be collected and stored in the *C:\\WER* folder.
+    These commands allow up to 10 full process dumps of the *netsh.exe* process to be collected and stored in the *C:\\WER* folder.
 
     > [!NOTE]
     > The Windows on Windows 64 (WOW64) registry location is added, which allows 32-bit applications to run on 64-bit systems.
