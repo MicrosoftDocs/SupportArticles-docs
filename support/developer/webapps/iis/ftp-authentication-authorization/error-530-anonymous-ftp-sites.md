@@ -4,7 +4,6 @@ description: This article provides resolutions for the error 530 that occurs whe
 ms.date: 04/07/2020
 ms.custom: sap:FTP Authentication and Authorization\FTP authentication
 ms.reviewer: Robmcm, MLaing
-ms.subservice: ftp-authentication-authorization
 ---
 # Error 530 when you browse anonymous FTP sites configured for Active Directory User Isolation in IIS 7.0 and 7.5
 
