@@ -11447,17 +11447,17 @@
     },
     {
       "source_path": "support/windows-server/backup-and-storage/set-partmgr-attributes-with-powershell.md",
-      "redirect_url": "/previous-versions/troubleshoot/set-partmgr-attributes-with-powershell",
+      "redirect_url": "/windows-hardware/customize/desktop/unattend/microsoft-windows-partitionmanager-sanpolicy",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/errors-occur-when-bringing-disk-resource.md",
-      "redirect_url": "/previous-versions/troubleshoot/errors-occur-when-bringing-disk-resource",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/errors-occur-when-bringing-disk-resource",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/updates-for-windows-server-2012-failover-cluster.md",
-      "redirect_url": "/previous-versions/troubleshoot/updates-for-windows-server-2012-failover-cluster",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/updates-for-windows-server-2012-failover-cluster",
       "redirect_document_id": false
     },
     {
@@ -11467,42 +11467,72 @@
     },
     {
       "source_path": "support/windows-server/windows-security/trust-relationship-between-workstation-domain-fail.md",
-      "redirect_url": "/previous-versions/troubleshoot/trust-relationship-between-workstation-domain-fail",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/trust-relationship-between-workstation-domain-fail",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/shelf-life-system-state-backup-ad.md",
-      "redirect_url": "/previous-versions/troubleshoot/shelf-life-system-state-backup-ad",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/shelf-life-system-state-backup-ad",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/access-denied-run-batch-job.md",
-      "redirect_url": "/previous-versions/troubleshoot/access-denied-run-batch-job",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/access-denied-run-batch-job",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/backup-program-unsuccessful-large-system-volume.md",
-      "redirect_url": "/previous-versions/troubleshoot/backup-program-unsuccessful-large-system-volume",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/backup-program-unsuccessful-large-system-volume",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/fail-to-add-disk-to-schedule-backup.md",
-      "redirect_url": "/previous-versions/troubleshoot/fail-to-add-disk-to-schedule-backup",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fail-to-add-disk-to-schedule-backup",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/diskshadow-error-try-to-create-a-vss-snap.md",
-      "redirect_url": "/previous-versions/troubleshoot/diskshadow-error-try-to-create-a-vss-snap",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/diskshadow-error-try-to-create-a-vss-snap",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/enable-debug-tracing-features-vss.md",
-      "redirect_url": "/previous-versions/troubleshoot/enable-debug-tracing-features-vss",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/enable-debug-tracing-features-vss",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/error-when-you-do-system-state-backup.md",
-      "redirect_url": "/previous-versions/troubleshoot/error-when-you-do-system-state-backup",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-when-you-do-system-state-backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/database-backup-error-3266-3013.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/database-backup-error-3266-3013",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/event-id-8193-when-you-perform-backup.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-8193-when-you-perform-backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/use-backup-feature-back-up-restore-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/use-backup-feature-back-up-restore-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/cannot-back-up-server-error-0x80070005.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-back-up-server-error-0x80070005",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/srv-event-id-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/srv-event-id-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/request-not-supported-smb-data-deduplication.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/request-not-supported-smb-data-deduplication",
       "redirect_document_id": false
     }
   ]

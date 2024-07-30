@@ -4,7 +4,6 @@ description: This article helps to fix the HTTP error 403.6 when you visit a web
 ms.date: 07/17/2020
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: clinth
-ms.subservice: development
 ---
 # HTTP error 403.6 when you open an IIS Webpage
 

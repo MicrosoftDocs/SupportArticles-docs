@@ -1,7 +1,7 @@
 ---
 title: Scripts to extract .msu and .cab files 
 description: Provides a script to extract .msu and .cab files.
-ms.date: 07/18/2024
+ms.date: 07/26/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

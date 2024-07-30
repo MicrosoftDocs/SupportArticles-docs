@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem in which the actu
 ms.date: 01/29/2021
 ms.custom: sap:Other Driver
 ms.reviewer: heikom
-ms.subservice: other-driver
 ---
 # Actual I/O time-out is 10 times shorter than the specified value in User-Mode Driver Framework 2.0
 

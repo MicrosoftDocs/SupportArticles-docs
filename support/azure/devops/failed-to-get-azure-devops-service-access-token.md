@@ -3,9 +3,8 @@ title: Troubleshooting tips for problems while verifying Azure RM service connec
 description: This article explains about the problems that might occur when users verify the automatic Azure RM service connection.
 ms.date: 05/19/2023
 ms.reviewer: v-jayaramanp
-ms.custom: sap:Pipelines
+ms.custom: sap:Pipelines - Service connection configuration and troubleshooting
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 
 # "Failed to get Azure DevOps Service access token" error

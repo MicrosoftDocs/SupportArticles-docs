@@ -5,7 +5,6 @@ ms.date: 03/24/2020
 ms.custom: sap:WWW Authentication and Authorization\SSL client certificates and certificate mapping
 ms.reviewer: cirvin
 ms.topic: how-to
-ms.subservice: www-authentication-authorization
 ---
 # Read and analyze a client certificate
 

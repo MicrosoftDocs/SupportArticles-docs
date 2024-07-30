@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem where server exec
 ms.date: 03/24/2020
 ms.custom: sap:Active Server Pages\COM+ transactions, partitions, side-by-side (SxS), and tracker
 ms.reviewer: jmeier
-ms.subservice: site-behavior-performance
 ---
 # Server execution failed when calling MTS COM component from ASP
 

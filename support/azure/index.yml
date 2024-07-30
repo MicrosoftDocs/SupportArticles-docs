@@ -49,7 +49,7 @@ productDirectory:
     - url: azure-functions/welcome-azure-functions.yml
       text: Troubleshooting articles for Azure Functions
   - title: Azure Kubernetes Service (AKS)
-    imageSrc: "/training/achievements/develop-and-deploy-applications-on-kubernetes.svg"
+    imageSrc: "https://static.docs.com/ui/media/product/azure/kubernetes-services.svg"
     links:
     - url: azure-kubernetes/welcome-azure-kubernetes.yml
       text: Troubleshooting articles for Azure Kubernetes Service (AKS)

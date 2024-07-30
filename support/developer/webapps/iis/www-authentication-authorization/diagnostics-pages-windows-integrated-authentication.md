@@ -4,7 +4,6 @@ description: This article describes the diagnostic pages for troubleshooting Win
 ms.date: 11/03/2023
 ms.custom: sap:WWW Authentication and Authorization\Windows Authentication
 ms.reviewer: paulboc, aartigoyle, v-sidong
-ms.subservice: www-authentication-authorization
 ---
 
 # Diagnostic pages for Windows Integrated Authentication troubleshooting
