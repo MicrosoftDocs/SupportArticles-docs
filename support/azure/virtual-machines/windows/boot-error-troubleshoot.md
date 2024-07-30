@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot boot errors in Azure Virtual Machines
-description: This article helps link you to articles to troubleshoot boot errors in Azure Virtual Machines.
+title: Troubleshoot boot errors in Azure virtual machines
+description: This article helps link you to articles to troubleshoot boot errors in Azure virtual machines.
 ms.service: virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
@@ -25,13 +25,13 @@ This article helps you troubleshoot the common boot errors that you may encounte
 If you can't connect to your Windows virtual machine (VM) and are unsure of the cause, perform the following troubleshooting steps:
 
 - Verify that your VM has been started.
-- If your VM fails to start and you recently applied Windows Updates, see [Troubleshooting VM not booting after Windows Update](troubleshoot-stuck-updating-boot-error).
-- Understand [how to use boot diagnostics to troubleshoot virtual machines](boot-diagnostics) in Azure.
+- If your VM fails to start and you recently applied Windows Updates, see [Troubleshooting VM not booting after Windows Update](troubleshoot-stuck-updating-boot-error.md).
+- Understand [how to use boot diagnostics to troubleshoot virtual machines](boot-diagnostics.md) in Azure.
 
 If your VM is not at the "Ctrl + Alt + Del" screen, it may be experiencing a boot error. To troubleshoot boot issues, follow these steps:
 
-1.	Try restarting the VM.
-2.	Review the [common boot errors and solutions for non-bootable VMs](boot-error-troubleshoot.md) troubleshooting guide.
+1. Try restarting the VM.
+2. Review the [common boot errors and solutions for non-bootable VMs](boot-error-troubleshoot.md) troubleshooting guide.
 
 ## Troubleshooting information for specific boot errors
 
@@ -39,7 +39,7 @@ See the section "Specific boot errors – Windows" in the Table of Contents on t
 
 - [Updating boot error](troubleshoot-stuck-updating-boot-error.md)
 - [Check disk boot error](troubleshoot-check-disk-boot-error.md)
-- [BitLocker boot error](/azure/virtual-machines/windows/troubleshoot-bitlocker-boot-error.md)
+- [BitLocker boot error](troubleshoot-bitlocker-boot-error.md)
 - [Boot configuration update](troubleshoot-vm-boot-configure-update.md)
 - [Common blue screen error](troubleshoot-common-blue-screen-error.md)
 - [Critical service failed boot error](troubleshoot-critical-service-failed-boot-error.md)
