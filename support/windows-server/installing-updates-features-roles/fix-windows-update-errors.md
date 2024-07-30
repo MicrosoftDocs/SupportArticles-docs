@@ -224,9 +224,9 @@ The output of the DISM restore command provides crucial information about the co
 ```output
 Checking System Update Readiness.
 
-(p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291
+(p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4291
 Repair failed: Missing replacement mum/cat pair.
-(p) CBS MUM Missing (w) (Fixed) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4412
+(p) CBS MUM Missing (w) (Fixed) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4412
 
 Summary:
 Operation: Detect and Repair 
