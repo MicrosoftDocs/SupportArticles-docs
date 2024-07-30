@@ -3,7 +3,7 @@ title: Basic troubleshooting of DNS resolution problems in AKS
 description: Learn how to create a troubleshooting workflow to fix DNS resolution problems in Azure Kubernetes Service (AKS).
 author: sturrent
 ms.author: seturren
-ms.date: 06/20/2024
+ms.date: 07/30/2024
 ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
