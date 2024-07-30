@@ -83,10 +83,10 @@ Microsoft supports the failover clusters that are listed under Cluster Solutions
 
 - Windows Server 2016 Standard
 - Windows Server 2016 Datacenter
-- Windows Hyper-V Server 2016
+- Microsoft Hyper-V Server 2016
 - Windows Server 2019 Standard
 - Windows Server 2019 Datacenter
-- Windows Hyper-V Server 2016
+- Microsoft Hyper-V Server 2019
 - Windows Server 2022 Standard
 - Windows Server 2022 Datacenter 
 
