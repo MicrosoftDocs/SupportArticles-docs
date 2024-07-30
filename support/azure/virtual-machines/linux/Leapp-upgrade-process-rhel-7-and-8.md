@@ -1,6 +1,6 @@
 ---
 title: How to do a leapp Upgrade from RHEL 7 to 8 and from 8 to 9 on PAYGO images.
-description: Guide with step by step procedure to do a leaap upgrade..
+description: Guide with step by step procedure to do a leapp upgrade..
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
@@ -10,16 +10,16 @@ ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to do a Leapp Upgrade from RHEL 7 to 8 and from 8 to 9 on PAYGO images.
+# How to do a `Leapp` Upgrade from RHEL 7 to 8 and from 8 to 9 on PAYGO images.
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. In this article, we will guide you through the process of performing a leap upgrade from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9 using a PAYGO (Pay-As-You-Go) image for Red Hat. 
+Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. In this article, we guide you through upgrading from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9 using a PAYGO (Pay-As-You-Go) image for Red Hat.
 
 > [!IMPORTANT]
 > RHUI is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
-For more information on performing a Leapp upgrade process on custom or golden images, as well as pay-as-you-go (PAYG) images provided by Red Hat, please refer to:
+For more information on performing a `Leapp upgrade` process on custom or golden images, and pay-as-you-go (PAYG) images provided by Red Hat, refer to:
 
 [Upgrading from RHEL 7 to 8](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index)
 
@@ -34,13 +34,13 @@ For more information on performing a Leapp upgrade process on custom or golden i
 - Root privileges.
 
 
-## Preparing the VM for the Leapp pre-upgrade and upgrade process
+## Preparing the Virtual Machine for the `Leapp` `pre-upgrade` and upgrade process
 
 This procedure outlines the necessary steps to complete before performing an in-place upgrade to RHEL 8 or RHEL 9 using the Leapp utility.
 
 #### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
 
-At present, you can conduct an in-place upgrade from RHEL 7 to the following RHEL 8 minor versions.
+Now, you can conduct an in-place upgrade from RHEL 7 to the following RHEL 8 minor versions.
 
 
 | Source OS version| Target Version     | End of support      |
@@ -49,14 +49,14 @@ At present, you can conduct an in-place upgrade from RHEL 7 to the following RHE
 | RHEL 7.9         | RHEL 8.10(default) | Jun 30, 2028        |
 
 > [!NOTE]  
-> If you locked the Virtual Machine to a minor release, remove the version lock. For more information, see [Switch a RHEL 7.x VM back to non-EUS](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel7#switch-a-rhel-7x-vm-back-to-non-eus-remove-a-version-lock).
+> If you locked the Virtual Machine to a minor release, remove the version lock. For more information, see, [Switch a RHEL 7.x VM back to non-EUS](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel7#switch-a-rhel-7x-vm-back-to-non-eus-remove-a-version-lock).
 
 1. If you use the `yum-plugin-versionlock` to restrict packages to a certain version, remove the restriction by running
 
 ```bash
 sudo yum versionlock clear
 ```
-2. Enable required RHUI repositories and install required RHUI packages to ensure your system is ready for upgrade.
+2. Enable required `RHUI` repositories and install required RHUI packages to ensure your system is ready for upgrade.
 
 ```bash
 sudo yum-config-manager --enable rhui-microsoft-azure-rhel7
@@ -81,12 +81,12 @@ sudo reboot
 ```
 6. Temporarily disable antivirus software to prevent the upgrade from failing.
 
-7. Before running the leapp preupgrade command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture)
+7. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture)
 
 
 #### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
 
-At present, you can conduct an in-place upgrade from RHEL 8 to the following RHEL 9 minor versions.
+Now, you can conduct an in-place upgrade from RHEL 8 to the following RHEL 9 minor versions.
 
 
 | Source OS version| Target Version  | End of support      |
@@ -127,22 +127,22 @@ sudo reboot
 ```
 6. Temporarily disable antivirus software to prevent the upgrade from failing.
 
-7. Before running the leapp preupgrade command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture)
+7. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture)
 
-8. RHEL 9 no longer supports the legacy network-scripts package, which was deprecated in RHEL 8. Prior to upgrading, transfer your custom network scripts and create a NetworkManager dispatcher script to run your existing custom scripts. For additional details, refer to [Migrating custom network scripts to NetworkManager dispatcher scripts.](https://access.redhat.com/solutions/6900331)
+8. RHEL 9 no longer supports the legacy network-scripts package, which was deprecated in RHEL 8. Before upgrading, migrate your custom network scripts and create a NetworkManager dispatcher script to run your existing custom scripts. For more informartion, see to [Migrating custom network scripts to NetworkManager dispatcher scripts.](https://access.redhat.com/solutions/6900331)
 
 ---
 
-## Leapp pre-upgrade and upgrade process for RHEL 7 and 8
+## `Leapp pre-upgrade` and upgrade process for RHEL 7 and 8
 
-#### Leapp pre-upgrade process
+#### `Leapp pre-upgrade` process
 
-The pre-upgrade report highlights possible issues and provides recommended solutions. It also assists in determining whether it is feasible or advisable to proceed with the upgrade.
+The `pre-upgrade`report highlights possible issues and provides recommended solutions. It also helps in determining whether it's feasible or advisable to proceed with the upgrade.
 
 #### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
 
 
-1. Run the leapp preupgrade command. Replace <target_os_version> with the target OS version, for example 9.4. 
+1. Run the `leapp preupgrade` command. Replace <target_os_version> with the target OS version, for example 9.4. 
 
 
 ```bash
@@ -153,7 +153,7 @@ sudo leapp preupgrade --target <target_os_version> --no-rhsm
 #### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
 
 
-1. Run the leapp preupgrade command. Replace <target_os_version> with the target OS version, for example 8.10. 
+1. Run the `leapp preupgrade` command. Replace <target_os_version> with the target OS version, for example 8.10. 
 
 
 ```bash
@@ -164,25 +164,25 @@ sudo leapp preupgrade --target <target_os_version> --no-rhsm
 Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that may appear in the report, for more information see, [Troubleshoot-red-hat-os-upgrade-issues.](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-red-hat-os-upgrade-issues)
 
 
-#### Leapp upgrade process
+#### `Leapp` upgrade process
 
-Continue to the leapp upgrade process after the pre-upgrade report shows no errors or inhibitors and everything is marked as resolved. The output is typically in green or yellow, indicating that it's safe to proceed with the leapp upgrade.
+Continue to the leapp upgrade process after the `pre-upgrade` report shows no errors or inhibitors and everything is marked as resolved. The output is typically in green or yellow, indicating that it's safe to proceed with the leapp upgrade.
 
 > [!IMPORTANT]  
-> Make sure to run the leapp upgrade command through the serial console to avoid any network interruptions that could affect your SSH terminal and disrupt the upgrade process.
+> Make sure to run the `leapp upgrade` command through the serial console to avoid any network interruptions that could affect your SSH terminal and disrupt the upgrade process.
 
 
 #### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
 
-1. Run the leapp preupgrade command. Replace <target_os_version> with the target OS version, for example 8.10. 
+1. Run the `leapp preupgrade` command. Replace <target_os_version> with the target OS version, for example 8.10. 
 
 > [!NOTE]  
-> Add the --reboot option to the leapp upgrade command if you want to perform an automatic reboot, which is needed during the upgrade process
+> Add the `--reboot` option to the `leapp upgrade` command if you want to perform an automatic reboot, which is needed during the upgrade process
 
 ```bash
 sudo leapp upgrade --target <target_os_version> --no-rhsm
 ```
-2. If the --reboot option was not included in the previous command, monitor the serial console and manually reboot the VM once the upgrade process confirm that a reboot is required to continue with the process. 
+2. If the `--reboot` option wasn't included in the previous command, monitor the serial console and manually reboot the VM once the upgrade process confirms that a reboot is required to continue with the process. 
 
 
 ```output
@@ -198,16 +198,16 @@ sudo reboot
 #### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
 
 
-1. Run the leapp preupgrade command. Replace <target_os_version> with the target OS version, for example 9.4. 
+1. Run the `leapp preupgrade` command. Replace <target_os_version> with the target OS version, for example 9.4. 
 
 > [!NOTE]  
-> Add the --reboot option to the leapp upgrade command if you want to perform an automatic reboot, which is needed during the upgrade process
+> Add the `--reboot` option to the `leapp upgrade` command if you want to perform an automatic reboot, which is needed during the upgrade process
 
 ```bash
 sudo leapp upgrade --target <target_os_version> --no-rhsm
 ```
 
-2. If the --reboot option was not included in the previous command, monitor the serial console and manually reboot the VM once the upgrade process confirm that a reboot is required to continue with the process. 
+2. If the `--reboot` option wasn't included in the previous command, monitor the serial console and manually reboot the VM once the upgrade process confirms that a reboot is required to continue with the process. 
 
 
 ```output
@@ -230,7 +230,7 @@ This procedure outlines the recommended verification steps to take after complet
 
 #### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
 
-1. Verify that the current OS version
+1. Verify that the current OS version belongs tp Red Hat Enterprice Linux 8
 
 ```bash
 sudo cat /etc/redhat-release
@@ -251,7 +251,7 @@ sudo dnf repolist
 #### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
 
 
-1. Verify that the current OS version
+1. Verify that the current OS version belongs tp Red Hat Enterprice Linux 9
 
 ```bash
 sudo cat /etc/redhat-release
@@ -277,12 +277,12 @@ Once the VM is successfully upgraded, complete the following tasks:
 
 #### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
 
-1. Delete any leftover Leapp packages from the exclude list in the /etc/dnf/dnf.conf configuration file, including the snactor package. These Leapp packages were installed during the in-place upgrade
+1. Delete any leftover `Leapp` packages from the exclude list in the /etc/dnf/dnf.conf configuration file, including the snactor package. These Leapp packages were installed during the in-place upgrade
 
 ```bash
 sudo dnf config-manager --save --setopt exclude=''
 ```
-2. Remove any remaining RHEL 7 packages, including any leftover Leapp packages
+2. Remove any remaining RHEL 7 packages, including any leftover `Leapp` packages
 
 a. Locate remaining RHEL 7 packages
 
@@ -295,7 +295,7 @@ b. Remove old packages for RHEL 7
 ```bash
 sudo dnf remove $(rpm -qa | grep \.el[67] | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
 ```
-3. Remove remaining RHEL 7 packages, including remaining Leapp packages
+3. Remove remaining RHEL 7 packages, including remaining `Leapp` packages
 
 a. Determine old kernel versions
 
@@ -340,7 +340,7 @@ a. Remove kernel-workaround
 sudo yum remove kernel-workaround $(rpm -qa | grep \.el7 | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
 ```
 
-b. Remove remaining Leapp dependency packages
+b. Remove remaining `Leapp` dependency packages
 
 ```bash
  sudo yum remove leapp-deps-el8 leapp-repository-deps-el8 leapp-rhui-azure
@@ -359,18 +359,18 @@ sudo rm -rf /var/log/leapp /root/tmp_leapp_py3 /var/lib/leapp
 ```
 
 > [!IMPORTANT]  
->Removing leapp data might limit Microsoft and Red Hat Support’s ability to investigate and troubleshoot post-upgrade problems.
+>Removing `leapp` data might limit Microsoft and Red Hat Support’s ability to investigate and troubleshoot post-upgrade problems.
 
 
 #### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
 
-1. Delete any leftover Leapp packages from the exclude list in the /etc/dnf/dnf.conf configuration file, including the snactor package. These Leapp packages were installed during the in-place upgrade
+1. Delete any leftover `Leapp` packages from the exclude list in the /etc/dnf/dnf.conf configuration file, including the snactor package. These Leapp packages were installed during the in-place upgrade
 
 ```bash
 sudo dnf config-manager --save --setopt exclude=''
 ```
 
-2. Remove any remaining RHEL 8 packages, including any leftover Leapp packages
+2. Remove any remaining RHEL 8 packages, including any leftover `Leapp` packages
 
 a. Locate remaining RHEL 8 packages
 
@@ -384,7 +384,7 @@ b. Remove remaining RHEL 8 packages from your RHEL 9 vm.
 sudo dnf remove $(rpm -qa | grep \.el[78] | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
 ```
 
-c. Remove remaining Leapp dependency packages
+c. Remove remaining `Leapp` dependency packages
 
 ```bash
 sudo dnf remove leapp-deps-el9 leapp-repository-deps-el9
@@ -397,7 +397,7 @@ sudo rm -rf /var/log/leapp /root/tmp_leapp_py3 /var/lib/leapp
 ```
 
 > [!IMPORTANT]  
->Removing leapp data might limit Microsoft and Red Hat Support’s ability to investigate and troubleshoot post-upgrade problems.
+>Removing `leapp` data might limit Microsoft and Red Hat Support’s ability to investigate and troubleshoot post-upgrade problems.
 
 
 ---
