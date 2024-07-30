@@ -1,5 +1,5 @@
 ---
-title: 'Troubleshoot boot errors in Azure Virtual Machines'
+title: Troubleshoot boot errors in Azure Virtual Machines
 description: This article helps link you to articles to troubleshoot boot errors in Azure Virtual Machines.
 ms.service: virtual-machines
 ms.collection: windows
@@ -26,7 +26,7 @@ If you can't connect to your Windows virtual machine (VM) and are unsure of the 
 - If your VM fails to start and you recently applied Windows Updates, see [Troubleshooting VM not booting after Windows Update](/azure/virtual-machines/troubleshooting/troubleshoot-stuck-updating-boot-error).
 - Understand [how to use boot diagnostics to troubleshoot virtual machines](/azure/virtual-machines/troubleshooting/boot-diagnostics) in Azure.
 
-If your VM is not at the ctrl-alt-del screen, it may be experiencing a boot error. To resolve boot issues, follow these steps:
+If your VM is not at the ctrl-alt-del screen, it may be experiencing a boot error. To troubleshoot boot issues, follow these steps:
 
 1.	Try restarting the VM.
 2.	Review the [common boot errors and solutions for non-bootable VMs](/azure/virtual-machines/troubleshooting/boot-error-troubleshoot) troubleshooting guide.
