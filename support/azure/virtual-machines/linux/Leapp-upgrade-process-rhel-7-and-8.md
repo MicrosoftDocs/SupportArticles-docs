@@ -1,5 +1,5 @@
 ---
-title: How to do a leapp Upgrade from RHEL 7 to 8 and from 8 to 9 on PAYGO images.
+title: How to do a leapp Upgrade from RHEL 7 to 8 and from 8 to 9 on pay-as-you-go images.
 description: Guide with step by step procedure to do a leapp upgrade..
 author: msaenzbosupport
 ms.author: msaenzbo
@@ -10,16 +10,16 @@ ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to do a `Leapp` Upgrade from RHEL 7 to 8 and from 8 to 9 on PAYGO images.
+# How to do a `Leapp` Upgrade from RHEL 7 to 8 and from 8 to 9 on `PAYGO` images.
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. In this article, we guide you through upgrading from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9 using a PAYGO (Pay-As-You-Go) image for Red Hat.
+Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. In this article, we guide you through upgrading from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9 using a `PAYGO` (Pay-As-You-Go) image for Red Hat.
 
 > [!IMPORTANT]
 > RHUI is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
-For more information on performing a `Leapp upgrade` process on custom or golden images, and pay-as-you-go (PAYG) images provided by Red Hat, see:
+For more information on performing a `Leapp upgrade` process on custom or golden images, and pay-as-you-go (PAYGO) images provided by Red Hat, see:
 
 [Upgrading from RHEL 7 to 8](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index)
 
@@ -36,7 +36,7 @@ For more information on performing a `Leapp upgrade` process on custom or golden
 
 ## Preparing the Virtual Machine for the `Leapp` `pre-upgrade` and upgrade process
 
-This procedure outlines the necessary steps to complete before performing an in-place upgrade to RHEL 8 or RHEL 9 using the Leapp utility.
+This procedure outlines the necessary steps to complete before performing an in-place upgrade to RHEL 8 or RHEL 9 using the `Leapp` utility.
 
 #### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
 
@@ -161,7 +161,7 @@ sudo leapp preupgrade --target <target_os_version> --no-rhsm
 ```
 ---
 
-Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that may appear in the report, for more information, see, [Troubleshoot-red-hat-os-upgrade-issues.](/azure/virtual-machines/linux/troubleshoot-red-hat-os-upgrade-issues)
+Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that might appear in the report, for more information, see, [Troubleshoot-red-hat-os-upgrade-issues.](/azure/virtual-machines/linux/troubleshoot-red-hat-os-upgrade-issues)
 
 
 #### `Leapp` upgrade process
@@ -277,7 +277,7 @@ Once the virtual machine is successfully upgraded, complete the following tasks:
 
 #### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
 
-1. Delete any leftover `Leapp` packages from the exclude list in the /etc/dnf/dnf.conf configuration file, including the `snactor` package. These Leapp packages were installed during the in-place upgrade
+1. Delete any leftover `Leapp` packages from the exclude list in the /etc/dnf/dnf.conf configuration file, including the `snactor` package. `These` Leapp packages were installed during the in-place upgrade
 
 ```bash
 sudo dnf config-manager --save --setopt exclude=''
@@ -364,7 +364,7 @@ sudo rm -rf /var/log/leapp /root/tmp_leapp_py3 /var/lib/leapp
 
 #### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
 
-1. Delete any leftover `Leapp` packages from the exclude list in the /etc/dnf/dnf.conf configuration file, including the `snactor` package. These Leapp packages were installed during the in-place upgrade
+1. Delete any leftover `Leapp` packages from the exclude list in the /etc/dnf/dnf.conf configuration file, including the `snactor` package. These `Leapp` packages were installed during the in-place upgrade
 
 ```bash
 sudo dnf config-manager --save --setopt exclude=''
