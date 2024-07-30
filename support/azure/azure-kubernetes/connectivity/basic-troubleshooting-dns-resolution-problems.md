@@ -3,7 +3,7 @@ title: Basic troubleshooting of DNS resolution problems in AKS
 description: Learn how to create a troubleshooting workflow to fix DNS resolution problems in Azure Kubernetes Service (AKS).
 author: sturrent
 ms.author: seturren
-ms.date: 06/20/2024
+ms.date: 07/30/2024
 ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -238,10 +238,10 @@ kubectl dumpy capture pod aks-test -f "-i any port 53" --name dns-cap1-aks-test
 To collect captures for the CoreDNS pods, run the following Dumpy command:
 
 ```bash
-kubectl dumpy capture deploy coredns-<coredns-pod-name> \
+kubectl dumpy capture deploy coredns \
     -n kube-system \
     -f "-i any port 53" \
-    --name dns-cap1-coredns-<coredns-pod-name>
+    --name dns-cap1-coredns
 ```
 
 Ideally, you should be running captures while the problem reproduces. This requirement means that different captures might be running for different amounts of time, depending on how often you can reproduce the problem. To collect the captures, run the following commands:
@@ -255,7 +255,7 @@ kubectl dumpy export dns-cap1-coredns ./dns-captures -n kube-system
 To delete the Dumpy pods, run the following Dumpy command:
 
 ```bash
-kubectl dumpy delete dns-cap1-coredns-<coredns-pod-name> -n kube-system
+kubectl dumpy delete dns-cap1-coredns -n kube-system
 kubectl dumpy delete dns-cap1-aks-test
 ```
 
