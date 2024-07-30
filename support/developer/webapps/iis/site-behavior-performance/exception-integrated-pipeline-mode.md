@@ -4,7 +4,6 @@ description: This article provides resolutions for the System.Web.HttpException 
 ms.date: 03/23/2020
 ms.custom: sap:Development\Native HTTP modules
 ms.reviewer: rakkim, mlaing
-ms.subservice: site-behavior-performance
 ---
 # System.Web.HttpException in Internet Information Services
 
