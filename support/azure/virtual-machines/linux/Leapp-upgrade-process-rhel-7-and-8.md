@@ -34,7 +34,7 @@ For more information on performing a `Leapp upgrade` process on custom or golden
 - Root privileges.
 
 
-## Preparing the Virtual Machine for the `Leapp` `pre-upgrade` and upgrade process
+## Preparing the virtual machine for the `Leapp` `pre-upgrade` and upgrade process
 
 This procedure outlines the necessary steps to complete before performing an in-place upgrade to RHEL 8 or RHEL 9 using the `Leapp` utility.
 
@@ -49,7 +49,7 @@ Now, you can conduct an in-place upgrade from RHEL 7 to the following RHEL 8 min
 | RHEL 7.9         | RHEL 8.10(default) | Jun 30, 2028        |
 
 > [!NOTE]  
-> If you locked the Virtual Machine to a minor release, remove the version lock. For more information, see, [Switch a RHEL 7.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel7#switch-a-rhel-7x-vm-back-to-non-eus-remove-a-version-lock).
+> If you locked the virtual machine to a minor release, remove the version lock. For more information, see, [Switch a RHEL 7.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel7#switch-a-rhel-7x-vm-back-to-non-eus-remove-a-version-lock).
 
 1. If you use the `yum-plugin-versionlock` to restrict packages to a certain version, remove the restriction by running
 
@@ -74,7 +74,7 @@ sudo yum install leapp-upgrade
 ```bash
 sudo yum update
 ```
-5. Reboot the Virtual Machine
+5. Reboot the virtual machine
 
 ```bash
 sudo reboot
@@ -96,7 +96,7 @@ Now, you can conduct an in-place upgrade from RHEL 8 to the following RHEL 9 min
 
 
 > [!NOTE]  
-> If you locked the Virtual Machine to a minor release, remove the version lock. For more information, see [Switch a RHEL 8.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel8#switch-a-rhel-7x-vm-back-to-non-eus-remove-a-version-lock).
+> If you locked the virtual machine to a minor release, remove the version lock. For more information, see [Switch a RHEL 8.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel8#switch-a-rhel-7x-vm-back-to-non-eus-remove-a-version-lock).
 
 1. If you use the `yum-plugin-versionlock` to restrict packages to a certain version, remove the restriction by running
 
@@ -120,7 +120,7 @@ sudo dnf install leapp-upgrade
 ```bash
 sudo dnf update
 ```
-5. Reboot the Virtual Machine
+5. Reboot the virtual machine
 
 ```bash
 sudo reboot
