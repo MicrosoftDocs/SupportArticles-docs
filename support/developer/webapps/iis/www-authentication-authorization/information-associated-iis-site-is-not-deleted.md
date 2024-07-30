@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem where information
 ms.date: 12/11/2020
 ms.custom: sap:Development\Using AHAdmin
 ms.reviewer: paulboc
-ms.subservice: www-authentication-authorization
 ---
 # Information associated with IIS site isn't deleted during programmatic site deletion
 

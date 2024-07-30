@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem that allows drive
 ms.date: 09/04/2020
 ms.custom: sap:Other Driver
 ms.reviewer: danielwh, davean, delhan, christys
-ms.subservice: other-driver
 ---
 # Unowned driver updates are installed unexpectedly from Windows Update
 

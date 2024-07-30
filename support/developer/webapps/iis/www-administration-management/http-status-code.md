@@ -4,7 +4,6 @@ description: This article provides a list of the HTTP status codes in IIS 7.0 an
 ms.date: 07/19/2024
 ms.custom: sap:Health, Diagnostic, and Performance Features\HTTP error logging
 ms.reviewer: robmcm
-ms.subservice: www-administration-management
 ---
 
 # HTTP status codes in IIS

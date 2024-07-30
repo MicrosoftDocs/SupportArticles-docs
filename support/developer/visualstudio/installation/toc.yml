@@ -44,6 +44,8 @@
   href: ./msiapplymultiplepatches-error-1601.md
 - name: Network or proxy errors
   href: ./troubleshoot-network-related-errors.md
+- name: Release Management component doesn't work
+  href: ./other-release-management-component-no-work.md
 - name: Running Parallels on Mac may cause error 1606
   href: ./error-1606-psf-folder.md
 - name: Setup crashes due to certain fonts

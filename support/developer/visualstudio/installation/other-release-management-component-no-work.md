@@ -2,10 +2,8 @@
 title: Release Management component doesn't work
 description: This article provides a workaround for the problem that the other component does not work after you uninstall Release Management Client or Release Management Server.
 ms.date: 08/14/2020
-ms.custom: sap:Pipelines
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ms.reviewer: achand, daleche
-ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 # The other Release Management component does not work after you uninstall the client or server
 
@@ -39,6 +37,4 @@ To work around this issue, do one of the following:
 
 ## References
 
-Check out [Known issues when you install Release Management for Visual Studio 2013](../../developer/visualstudio/installation/release-management-installation-issues.md).
-
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+Check out [Known issues when you install Release Management for Visual Studio 2013](release-management-installation-issues.md).
