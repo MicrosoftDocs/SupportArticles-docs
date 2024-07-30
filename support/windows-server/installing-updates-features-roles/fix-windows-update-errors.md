@@ -163,11 +163,11 @@ Staged Packages:
 	- 10.0.19045.3636 is a UBR.
 	- 10.0.19045.4291 is a UBR.
 
-	You need to find updates that have these UBR numbers. For example, if you're using Windows 10, version 22H2, locate the UBR number (for example, 3636) on the [release history page](/windows/release-health/release-information#windows-10-release-history). Each update has a UBR number, and you can download the corresponding update.
+	You need to find updates that have these UBR numbers. For example, if you're using Windows 10, version 22H2, find the [update history page](/windows/release-health/release-information#windows-10-release-history) and locate the UBR number (for example, 3636). Each update has a UBR number, and you can download the corresponding update.
 
 3. Download the missing files.
 
-	Identify and download the update packages that contain the missing files. For example, if the log indicates that `Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4291` is missing, download the respective `.msu` file from the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
+	Identify and download the update packages that contain the missing files. For example, if the log indicates that `Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291` is missing, download the respective `.msu` file from the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
 
 ### Step 3: Extract the .msu and .cab files
 
@@ -224,9 +224,9 @@ The output of the DISM restore command provides crucial information about the co
 ```output
 Checking System Update Readiness.
 
-(p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4291
+(p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291
 Repair failed: Missing replacement mum/cat pair.
-(p) CBS MUM Missing (w) (Fixed) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4412
+(p) CBS MUM Missing (w) (Fixed) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4412
 
 Summary:
 Operation: Detect and Repair 
@@ -261,10 +261,10 @@ To manually fix corruption errors that the DISM tool detects but can't fix, foll
 
     ```output
    Checking System Update Readiness.
-    (p)	CSI Payload Corrupt			(n)	    	amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19041.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
-	(p)	CBS MUM Missing				(n)			Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4291
-	(p)	CSI Manifest Corrupt		(w)	(Fixed)	wow64_microsoft-windows-audio-mmecore-acm_31bf3856ad364e35_10.0.19041.1_none_a12b40f4b4c7b751
-    (p)	CSI Manifest Corrupt	    (n)			wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19041.3636_none_4514b27cf12f35d5
+    (p)	CSI Payload Corrupt			(n)	    	amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19045.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
+	(p)	CBS MUM Missing				(n)			Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291
+	(p)	CSI Manifest Corrupt		(w)	(Fixed)	wow64_microsoft-windows-audio-mmecore-acm_31bf3856ad364e35_10.0.19045.1_none_a12b40f4b4c7b751
+    (p)	CSI Manifest Corrupt	    (n)			wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19045.3636_none_4514b27cf12f35d5
 
     Summary:
     Operation: Detect and Repair
