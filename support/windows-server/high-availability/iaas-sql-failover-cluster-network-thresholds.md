@@ -1,7 +1,7 @@
 ---
 title: Tuning failover cluster network thresholds
 description: Introduces solutions for adjusting the threshold of failover cluster networks.
-ms.date: 12/26/2023
+ms.date: 07/30/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
