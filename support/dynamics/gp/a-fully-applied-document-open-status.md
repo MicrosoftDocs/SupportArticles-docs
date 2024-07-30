@@ -3,7 +3,7 @@ title: A fully applied document is in open status
 description: Provides a solution to an issue where a fully applied document is still in open status in Payables Management.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 07/30/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # A fully applied document is still in open status in Payables Management
@@ -39,7 +39,7 @@ Review these steps:
 4. If the applied records match the total document amount and the document should be in history, you can go to Microsoft Dynamics GP, point to **Maintenance** and select **Check Links**. Select the **Purchasing series**. Insert over the Payables Transaction Logical File and select **OK**. Check links should move all document in the open table with an amount remaining of 0.00 to history.
 
     > [!IMPORTANT]
-    > You aren't able to in-do check links, so make sure to have a current backup first, or do it in a test company first to review what it all did and to make sure you agree before you run it on your live database, to prevent any surprises.
+    > You aren't able to 'undo' a check links process, so make sure to have a current backup first, or do it in a test company first to review what it all did and to make sure you agree before you run it on your live database, to prevent any surprises.
 
 5. Review in Purchasing Inquiry to see if the document has now moved to history.
 
