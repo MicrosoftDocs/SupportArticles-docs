@@ -126,7 +126,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 
 ## Common errors
 
-### UDF driver Blocklisted
+### Disabled UDF module 
 
 **Error** In the serial log:
 
