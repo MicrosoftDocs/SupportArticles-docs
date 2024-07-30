@@ -137,33 +137,6 @@
         "SharePointExperts/**/*.md": "sharepoint-server-itpro",
         "SharePointOnline/migration/**/*.md": "microsoft-365-migration"
       },
-      "ms.subservice": {
-        "SharePointOnline/administration/**/*.md": "administration",
-        "SharePointOnline/apps/**/*.md": "apps",
-        "SharePointOnline/diagnostics/**/*.md": "diagnostics",
-        "SharePointOnline/infopath/**/*.md": "infopath",
-        "SharePointOnline/lists-and-libraries/**/*.md": "lists-and-libraries",
-        "SharePointOnline/performance/**/*.md": "performance",
-        "SharePointOnline/search/**/*.md": "search",
-        "SharePointOnline/security/**/*.md": "security", 
-        "SharePointOnline/sharing-and-permissions/**/*.md": "sharing-and-permissions",
-        "SharePointOnline/sites/**/*.md": "sites",
-        "SharePointOnline/sync/**/*.md": "synchronization",
-        "SharePointOnline/video/**/*.md": "video",
-        "SharePointOnline/web-parts/**/*.md": "web-parts",
-        "SharePointOnline/workflows/**/*.md": "workflows",
-        "SharePointHybrid/infopath/**/*.md": "infopath",
-        "SharePointHybrid/search/**/*.md": "search",
-        "SharePointHybrid/workflows/**/*.md": "workflows",
-        "OneDrive/administration/**/*.md": "administration",
-        "OneDrive/lists-and-libraries/**/*.md": "lists-and-libraries",
-        "OneDrive/search/**/*.md": "search",
-        "OneDrive/security/**/*.md": "security",
-        "OneDrive/setup/**/*.md": "setup",
-        "OneDrive/sharing-and-permissions/**/*.md": "sharing-and-permissions",
-        "OneDrive/storage/**/*.md": "storage",
-        "OneDrive/sync/**/*.md": "synchronization"
-      },
       "author": {
         "**/*.md": "helenclu"
       },
