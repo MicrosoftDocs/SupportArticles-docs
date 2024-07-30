@@ -77,7 +77,7 @@ To resolve Windows Update corruptions and address update installation failures, 
     ```
 
     > [!NOTE]
-    > Replace \<servername\> with the computer name of the computer you are using as a repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the scan result is "The restore operation completed successfully", go to the next step. If not, try to [analyze the CBS.log file](#step-1-analyze-the-cbslog-file) and fix errors.
+    > Replace \<servername\> with the computer name of the computer you are using as a repair source. The repair source computer must be running the same operating system version. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the scan result is "The restore operation completed successfully", go to the next step. If not, try to [analyze the CBS.log file](#step-1-analyze-the-cbslog-file) and fix errors.
 
 3. Type the `sfc /scannow` command and press Enter. It may take several minutes for the command operation to be completed.
 
@@ -118,10 +118,10 @@ Here's an example of the log summary:
 
 ```output
 Checking System Update Readiness.
-    (p)      CSI Payload Corrupt              (n)           amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19041.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
-       (p)    CBS MUM Missing                         (n)                 Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4291
-       (p)    CSI Manifest Corrupt             (w)    (Fixed)       wow64_microsoft-windows-audio-mmecore-acm_31bf3856ad364e35_10.0.19041.1_none_a12b40f4b4c7b751
-    (p)      CSI Manifest Corrupt          (n)                    wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19041.3636_none_4514b27cf12f35d5
+    (p)      CSI Payload Corrupt              (n)           amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19045.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
+       (p)    CBS MUM Missing                         (n)                 Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291
+       (p)    CSI Manifest Corrupt             (w)    (Fixed)       wow64_microsoft-windows-audio-mmecore-acm_31bf3856ad364e35_10.0.19045.1_none_a12b40f4b4c7b751
+    (p)      CSI Manifest Corrupt          (n)                    wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19045.3636_none_4514b27cf12f35d5
 
 
 Summary:
@@ -151,17 +151,17 @@ Staged Packages:
 	Review the *CBS.log* file to identify the missing or corrupted files. For example:
 	
 	```output
-	(p) CSI Payload Corrupt (n) amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19041.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
-	(p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4291
-	(p) CSI Manifest Corrupt (n) wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19041.3636_none_4514b27cf12f35d5
+	(p) CSI Payload Corrupt (n) amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19045.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
+	(p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291
+	(p) CSI Manifest Corrupt (n) wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19045.3636_none_4514b27cf12f35d5
 	```
 
 2. Determine the version.
 
 	To determine which update has the missing files, you can use the Update Build Revision (UBR) in the file name. For example:
 
-	- 10.0.19041.3636 is a UBR.
-	- 10.0.19041.4291 is a UBR.
+	- 10.0.19045.3636 is a UBR.
+	- 10.0.19045.4291 is a UBR.
 
 	You need to find updates that have these UBR numbers. For example, if you're using Windows 10, version 22H2, locate the UBR number (for example, 3636) on the [release history page](/windows/release-health/release-information#windows-10-release-history). Each update has a UBR number, and you can download the corresponding update.
 
