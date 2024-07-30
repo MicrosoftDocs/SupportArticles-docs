@@ -3,7 +3,7 @@ title: Can't create entitlements because no options in Allocation Type dropdown
 description: Provides a resolution for the issue where you can't create entitlements because the Allocation Type dropdown doesn't show any options in Dynamics 365 Customer Service.
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
-ms.date: 07/26/2024
+ms.date: 07/30/2024
 ms.custom: sap:Entitlements\Unable to create or reactivate entitlements
 ---
 # Can't create entitlements because the Allocation Type dropdown doesn't show any options
