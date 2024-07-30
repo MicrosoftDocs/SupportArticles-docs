@@ -69,7 +69,7 @@ Install the [Debugging Tools for Windows](/windows-hardware/drivers/debugger/deb
 
 ## Gather data
 
-For the preceding example of a *netsh.exe* crash, set up the machine to collect dumps for more information on what caused the crash.
+For the preceding example of a *netsh.exe* crash, set up the machine to collect dumps for more information on what caused the crash. Replace *netsh.exe* with the executable file identified in Event ID 1000 on your device.
 
 1. Set up WER to collect full process dumps of the exception by running the following commands from an elevated command prompt:
 
