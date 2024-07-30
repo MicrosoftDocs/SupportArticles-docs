@@ -49,7 +49,7 @@ Now, you can conduct an in-place upgrade from RHEL 7 to the following RHEL 8 min
 | RHEL 7.9         | RHEL 8.10(default) | Jun 30, 2028        |
 
 > [!NOTE]  
-> If you locked the Virtual Machine to a minor release, remove the version lock. For more information, see, [Switch a RHEL 7.x VM back to non-EUS](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel7#switch-a-rhel-7x-vm-back-to-non-eus-remove-a-version-lock).
+> If you locked the Virtual Machine to a minor release, remove the version lock. For more information, see, [Switch a RHEL 7.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel7#switch-a-rhel-7x-vm-back-to-non-eus-remove-a-version-lock).
 
 1. If you use the `yum-plugin-versionlock` to restrict packages to a certain version, remove the restriction by running
 
@@ -96,7 +96,7 @@ Now, you can conduct an in-place upgrade from RHEL 8 to the following RHEL 9 min
 
 
 > [!NOTE]  
-> If you locked the Virtual Machine to a minor release, remove the version lock. For more information, see [Switch a RHEL 8.x VM back to non-EUS](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel8#switch-a-rhel-7x-vm-back-to-non-eus-remove-a-version-lock).
+> If you locked the Virtual Machine to a minor release, remove the version lock. For more information, see [Switch a RHEL 8.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel8#switch-a-rhel-7x-vm-back-to-non-eus-remove-a-version-lock).
 
 1. If you use the `yum-plugin-versionlock` to restrict packages to a certain version, remove the restriction by running
 
@@ -161,7 +161,7 @@ sudo leapp preupgrade --target <target_os_version> --no-rhsm
 ```
 ---
 
-Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that may appear in the report, for more information, see, [Troubleshoot-red-hat-os-upgrade-issues.](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-red-hat-os-upgrade-issues)
+Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that may appear in the report, for more information, see, [Troubleshoot-red-hat-os-upgrade-issues.](/azure/virtual-machines/linux/troubleshoot-red-hat-os-upgrade-issues)
 
 
 #### `Leapp` upgrade process
