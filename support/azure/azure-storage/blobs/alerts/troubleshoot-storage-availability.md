@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot availability issues in Azure Storage accounts
 description: Identifies and troubleshoots availability issues in Azure Storage accounts.
-ms.date: 04/12/2023
+ms.date: 07/30/2024
 ms.reviewer: normesta, azurestocic, jarrettr, v-weizhu
 ms.service: azure-storage
 ms.custom: sap:Alerts, Metrics, Logging and Monitoring
@@ -20,7 +20,7 @@ This article helps you investigate changes in availability (such as the number o
 
 You should monitor the availability of the storage services in your storage account by monitoring the value of the **Availability** metric. The **Availability** metric contains a percentage value. It's calculated by taking the total billable requests value and dividing it by the number of applicable requests, including those requests that produced unexpected errors.
 
-Any value less than 100% indicates that some storage requests are failing. You can see why they're failing by examining the **ResponseType** dimension for error types such as **ServerTimeoutError**. You should expect to see **Availability** fall temporarily below 100% for reasons such as transient server timeouts while the service moves partitions to better load-balance requests; the retry logic in your client application should handle such intermittent conditions.
+Any value less than 100% indicates that some storage requests are failing. You can see why they're failing by examining the **ResponseType** dimension for error types such as **ServerTimeoutError**. You should expect to see **Availability** fall temporarily below 100% for reasons such as transient server timeouts while the service moves partitions to better load-balance requests; the retry logic in your client application should handle such intermittent conditions. The **Availability** metric will only be available for time periods when transactions also occur on the account.
 
 You can use features in Azure Monitor to alert you if **Availability** for a service falls below a threshold that you specify.
 
