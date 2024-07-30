@@ -1,5 +1,5 @@
 ---
-title: How to do a leapp Upgrade from RHEL 7 to 8 and from 8 to 9 on pay-as-you-go images.
+title:  How to Perform a `Leapp` upgrade from RHEL 7 to 8 and 8 to 9 on `PAYGO` images.
 description: Guide with step by step procedure to do a leapp upgrade..
 author: msaenzbosupport
 ms.author: msaenzbo
@@ -10,7 +10,7 @@ ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to do a `Leapp` Upgrade from RHEL 7 to 8 and from 8 to 9 on `PAYGO` images.
+# How to Perform a `Leapp` upgrade from RHEL 7 to 8 and 8 to 9 on `PAYGO` images.
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
