@@ -28,14 +28,14 @@ If you can't connect to your Windows virtual machine (VM) and are unsure of the 
 - If your VM fails to start and you recently applied Windows Updates, see [Troubleshooting VM not booting after Windows Update](troubleshoot-stuck-updating-boot-error.md).
 - Understand [how to use boot diagnostics to troubleshoot virtual machines](boot-diagnostics.md) in Azure.
 
-If your VM is not at the "Ctrl + Alt + Del" screen, it may be experiencing a boot error. To troubleshoot boot issues, follow these steps:
+If your VM is not at the "Ctrl + Alt + Del" screen, it may be experiencing a boot error. To troubleshoot this issue, follow these steps:
 
 1. Try restarting the VM.
 2. Review the [common boot errors and solutions for non-bootable VMs](boot-error-troubleshoot.md) troubleshooting guide.
 
 ## Troubleshooting information for specific boot errors
 
-See the section "Specific boot errors – Windows" in the Table of Contents on the left side of this page for additional boot errors you may encounter. Among the most common issues are:
+See the "Specific boot errors – Windows" section in the Table of Contents on the left side of this page for additional boot errors you may encounter. Among the most common issues are:
 
 - [Updating boot error](troubleshoot-stuck-updating-boot-error.md)
 - [Check disk boot error](troubleshoot-check-disk-boot-error.md)
@@ -47,7 +47,7 @@ See the section "Specific boot errors – Windows" in the Table of Contents on t
 
 ## Other resources
 
-- [Common VM repair procedures](troubleshoot-vm-by-use-nested-virtualization.md) (This article and others in the same section can help you perform tasks such as repairing disks and collecting troubleshooting information).
+- [Common VM repair procedures](troubleshoot-vm-by-use-nested-virtualization.md) (This article and others in the "Procedures to repair a Windows VM" section can help you perform tasks such as repairing disks and collecting troubleshooting information).
 - [Troubleshoot specific Remote Desktop connection errors](troubleshoot-specific-rdp-errors.md)
 - [Detailed troubleshooting across network components](detailed-troubleshoot-rdp.md)
 - [Address Remote Desktop License Server error](troubleshoot-specific-rdp-errors.md#rdplicense)
