@@ -30,9 +30,15 @@ This article helps you measure and compare memory consumption between identical 
 
 Perform a vanilla installation on one server. Collect an eight-hour Performance Monitor trace during a normal working day.
 
-### Collect data from client servers
+### Collect data from systems
 
-During the same period as the vanilla installation, collect an eight-hour Performance Monitor trace from another two clients servers, client A and client B.
+During the same period as the vanilla installation, collect an eight-hour Performance Monitor trace from the two other systems, designated as client A and client B.
+
+Ideally, we have the following three data sets from the same time period for comparison:
+
+- Vanilla
+- Client A
+- Client B
 
 ### Analyze user workload impact
 
