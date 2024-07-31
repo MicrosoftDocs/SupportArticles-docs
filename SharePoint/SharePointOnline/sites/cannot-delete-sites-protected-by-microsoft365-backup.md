@@ -17,10 +17,10 @@ ms.custom:
   - CI 193688
   - CSSTroubleshoot
 ms.reviewer: salarson
-description: Describes an error that occurs when you try to delete a SharePoint or OneDrive for Business sites that are protected by Microsoft 365 Backup. Provides steps to submit a service request to Microsoft.
+description: Describes an error that occurs when you try to delete a SharePoint or OneDrive for Business site that's protected by Microsoft 365 Backup. Provides steps to submit a service request to Microsoft.
 ---
 
-# Error "Site is protected by Microsoft 365 Backup and cannot be deleted"
+# "Site is protected by Microsoft 365 Backup and cannot be deleted" error
 
 ## Symptoms
 
@@ -30,7 +30,7 @@ You try to permanently delete a site from the [SharePoint admin center](https://
 
 ## Cause  
 
-This error occurs because the site is actively protected or was protected in the past 365 days by [Microsoft 365 Backup](/microsoft-365/backup/?view=o365-worldwide&preserve-view=true). To delete a site, its backup needs to be deleted. However, Microsoft 365 Backup can't delete the backups of specific SharePoint or OneDrive for Business sites. This behavior is designed to prevent malicious actors from deleting backups that are intended to quickly restore data if it's compromised.
+This error occurs because the site is actively protected or was protected in the past 365 days by [Microsoft 365 Backup](/microsoft-365/backup/?view=o365-worldwide&preserve-view=true). To be able to delete a site, the site backup has to be deleted. However, Microsoft 365 Backup can't delete the backups of specific SharePoint or OneDrive for Business sites. This behavior is designed to prevent malicious actors from deleting backups that are intended to quickly restore data if it's compromised.
 
 ## Resolution  
 
@@ -41,7 +41,7 @@ To delete the backup of the site that you want to delete, use the following step
 
    [https://aka.ms/ProtectedSiteDeletion](https://aka.ms/ProtectedSiteDeletion)
 
-   This link populates the *Microsoft 365 Backup Protected Site* query in the Microsoft 365 admin center.
+   This link populates the "Microsoft 365 Backup Protected Site" query in the Microsoft 365 admin center.
 1. Select **Contact support**, and then select a contact method.
 1. Leave the prepopulated **Title** field as is and the **Description** field blank.
 1. Fill in the other required fields, and then select **Contact me**.
