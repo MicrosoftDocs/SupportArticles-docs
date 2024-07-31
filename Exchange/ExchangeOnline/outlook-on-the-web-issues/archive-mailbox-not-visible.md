@@ -30,9 +30,7 @@ ms.date: 07/31/2024
 You enable a user's archive mailbox in Microsoft Exchange Online, but the user or a delegate reports that the archive mailbox doesn't display in one or more of the following Microsoft products:
 
 - Classic Outlook for Windows
-
 - New Outlook for Windows
-
 - Outlook on the web
 
 Select the applicable troubleshooting steps depending on which product doesn't display the archive mailbox. If the troubleshooting steps don't help you resolve the issue, contact [Microsoft Support](https://support.microsoft.com/contactus/).
@@ -55,7 +53,7 @@ To troubleshoot the issue, follow these steps:
 
 Select the applicable scenario depending on your Exchange deployment.
 
-### Exchange Online mailboxes in a nonhybrid deployment
+### Scenario: Exchange Online mailboxes in a nonhybrid deployment
 
 To fix the issue, follow these steps: 
 
@@ -76,7 +74,7 @@ To fix the issue, follow these steps:
 
 3. Wait a few minutes for the archive mailbox to show up in the new Outlook for Windows and Outlook on the web.
 
-### Exchange Online mailboxes in a hybrid deployment
+### Scenario: Exchange Online mailboxes in a hybrid deployment
 
 To fix the issue, use one of the following methods.
 
@@ -123,6 +121,6 @@ To fix the issue, use one of the following methods.
 
 6. If you updated the `msExchArchiveName` attribute value in step 5:
 
-   - [Sync](/entra/identity/hybrid/connect/how-to-connect-sync-feature-scheduler#delta-sync-cycle) Active Directory to Exchange Online.
+   1. [Sync](/entra/identity/hybrid/connect/how-to-connect-sync-feature-scheduler#delta-sync-cycle) Active Directory to Exchange Online.
 
-   - Wait a few minutes for the archive mailbox to show up in the new Outlook for Windows and Outlook on the web.
+   2. Wait a few minutes for the archive mailbox to show up in the new Outlook for Windows and Outlook on the web.
