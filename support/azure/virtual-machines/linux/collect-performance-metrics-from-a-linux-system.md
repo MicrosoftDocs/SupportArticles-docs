@@ -31,7 +31,7 @@ Based on the type of the metrics, these commands can be categorized into:
 
 ## Install Sysstat utilities for Linux
 
-You can install the Sysstat utilities on a Linux VM using a Bash command or the [Run Command feature](/azure/virtual-machines/linux/run-command) throught the Azure CLI. If you use the Azure CLI commands provided in this article, make sure that the following two environment variables are set. You need to replace the resource group name and VM name with the actual values.
+You can install the Sysstat utilities on a Linux VM using a Bash command or the [Run Command feature](/azure/virtual-machines/linux/run-command) through the Azure CLI. If you use the Azure CLI commands provided in this article, make sure that the following two environment variables are set. You need to replace the resource group name and VM name with the actual values.
 
 ```azurecli-interactive
 export MY_RESOURCE_GROUP_NAME="yourResourceGroup"
@@ -155,7 +155,7 @@ There are several important things to note. The first line provides useful infor
 - Hostname: `alma9`
 - Date: `02/21/24`
 - Architecture: `_x86_64_`
-- Total amount of CPUs (this information is useful to interpret the output of other commands): `(8 CPU)`
+- Total number of CPUs (this information is useful to interpret the output of other commands): `(8 CPU)`
 
 Then the metrics for the CPUs are displayed. Here's an explanation of each column:
 
@@ -208,7 +208,7 @@ echo "$extracted"
 * `1`: The first numeric argument specifies the interval in seconds between each report. In this case, vmstat will output a report every one second.
 * `5`: The second numeric argument specifies the number of reports vmstat should generate. With `5` specified here, vmstat will generate a total of five reports.
 
-### How to read the vmstat output
+#### How to read the vmstat output
 
 Here's an example output of `vmstat`:
 
@@ -240,7 +240,7 @@ The **procs** section has two columns:
 
 This section immediately shows if there's any bottleneck in the system. High numbers on either column indicate processes queuing up and waiting for resources.
 
-The `r` column indicates the number of processes that are waiting for CPU time to run. An easy way to interpret this number is as follows: if the number of processes in the `r` queue is higher than the toal number of CPUs, it can be inferred that the system's CPU is too heavily loaded to allocate CPU time for all the processes waiting to run.
+The `r` column indicates the number of processes that are waiting for CPU time to run. An easy way to interpret this number is as follows: if the number of processes in the `r` queue is higher than the total number of CPUs, it can be inferred that the system's CPU is too heavily loaded to allocate CPU time for all the processes waiting to run.
 
 The `b` column indicates the number of processes waiting to run and blocked by I/O requests. A high number in this column would indicate a system that's experiencing high I/O, and processes can't run due to other processes waiting for I/O requests to complete. This could also indicate high disk latency.
 
@@ -403,9 +403,9 @@ Filename      Type          Size          Used   Priority
 /mnt/swapfile file          8G            0B      -2
 ```
 
-This information is important to verify if swap is configured in a non-ideal location, for example, on a data or OS disk. In the Azure frame of reference, swap should be configured on the ephemeral drive as it provides the best performance.
+This information is important to verify if swap is configured in a nonideal location, for example, on a data or OS disk. In the Azure frame of reference, swap should be configured on the ephemeral drive as it provides the best performance.
 
-### Key considerations
+#### Key considerations
 
 * Remember that memory is a finite resource. Once both system memory (RAM) and swap are exhausted, the Out Of Memory killer (OOM killer) will kill the processes.
 * Verify that swap isn't configured on a data disk or OS disk, as that can cause issues with I/O due to latency differences. Swap should be configured on the ephemeral drive.
@@ -524,7 +524,7 @@ zram0  252:0    0   16G  0 disk [SWAP]
 
 ## Process
 
-Gathering details on a per-process basis helps understand where the system load is coming from. The main utility for gathering process statisticcs is `pidstat`, as it provides details on CPU, Memory, and I/O statistics for each process. Lastly, a simple `ps` to sort the process by top CPU and memory usage completes the metrics.
+Gathering details on a per-process basis helps understand where the system load is coming from. The main utility for gathering process statistics is `pidstat`, as it provides details on CPU, Memory, and I/O statistics for each process. Lastly, a simple `ps` to sort the process by top CPU and memory usage completes the metrics.
 
 > [!NOTE]
 > These commands require root privileges using `sudo` to show details of all running processes, not just those of the current user.
