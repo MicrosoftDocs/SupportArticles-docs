@@ -95,7 +95,7 @@
   - name: Troubleshoot VM Performance Bottlenecks
     href: troubleshoot-performance-bottlenecks-linux.md
     items:
-    - name: Collect Performance Metrics
+    - name: Collect performance metrics
       href: collect-performance-metrics-from-a-linux-system.md
     - name: Isolate bottlenecks - CPU
       href: troubleshoot-performance-bottlenecks-linux.md#cpu-resource
