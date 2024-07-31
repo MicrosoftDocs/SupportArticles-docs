@@ -5,7 +5,7 @@ ms.service: virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 07/30/2024
+ms.date: 07/31/2024
 ms.topic: landing-page
 page_type: landing
 ms.custom: sap:My VM is not booting
@@ -28,7 +28,7 @@ If you can't connect to your Windows virtual machine (VM) and are unsure of the 
 - If your VM fails to start and you recently applied Windows Updates, see [Troubleshooting VM not booting after Windows Update](troubleshoot-stuck-updating-boot-error.md).
 - Understand [how to use boot diagnostics to troubleshoot virtual machines](boot-diagnostics.md) in Azure.
 
-If your VM is not at the "Ctrl + Alt + Del" screen, it may be experiencing a boot error. To troubleshoot this issue, follow these steps:
+If your VM is not at the <kbd>Ctrl</kbd>+<kbd>Alt<kbd>+<kbd>Del<kbd> security screen, it may be experiencing a boot error. To troubleshoot this issue, follow these steps:
 
 1. Try restarting the VM.
 2. Review the [common boot errors and solutions for non-bootable VMs](boot-error-troubleshoot.md) troubleshooting guide.
