@@ -24,7 +24,7 @@ description: Describes an error that occurs when you try to delete a SharePoint 
 
 ## Symptoms
 
-You try to permanently delete a site from the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) or by using the [SharePoint Online Management Shell](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online). In this scenario, you receive the following error message:
+You try to permanently delete a site from the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) or by using the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online). In this scenario, you receive the following error message:
 
 > Site is protected by Microsoft 365 Backup and cannot be deleted.  
 
