@@ -45,7 +45,7 @@ To troubleshoot the issue, follow these steps:
 
 3. If the affected user is a mailbox delegate, verify that the delegate has [Full Access permission](/exchange/recipients-in-exchange-online/manage-permissions-for-recipients#use-exchange-online-powershell-to-assign-the-full-access-permission-to-mailboxes) on the mailbox. Full Access permission is required for delegate access to an archive mailbox. For delegates who have Full Access permission, Outlook automatically automaps the primary and archive mailboxes to their Outlook profile.
 
-   Note: [Don't assign Full Access permission on the mailbox through a security group](/outlook/troubleshoot/profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile) because Outlook won't automap the primary and archive mailboxes to the Outlook profile of the group members.
+   **Note**: [Don't assign Full Access permission on the mailbox through a security group](/outlook/troubleshoot/profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile) because Outlook won't automap the primary and archive mailboxes to the Outlook profile of the group members.
 
 4. Instruct the affected user to run the [Microsoft Support and Recovery Assistant](https://support.microsoft.com/help/4098558/how-to-scan-outlook-by-using-the-sara-tool) to help diagnose the issue.
 
@@ -63,7 +63,7 @@ To fix the issue, follow these steps:
    Get-Mailbox <user mailbox ID> | FL ArchiveName
    ```
 
-   Note: If the `ArchiveName` property value is empty, the command output displays the value `{}`.
+   **Note**: If the `ArchiveName` property value is empty, the command output displays the value `{}`.
 
 2. Make sure that the `ArchiveName` property value is `In-Place Archive -<display name of user mailbox>`. To set that value, run the following PowerShell cmdlets in Exchange Online PowerShell:
 
@@ -89,7 +89,7 @@ To fix the issue, use one of the following methods.
    Get-RemoteMailbox <user mailbox ID> | FL ArchiveName
    ```
 
-   Note: If the `ArchiveName` property value is empty, the command output displays the value `{}`.
+   **Note**: If the `ArchiveName` property value is empty, the command output displays the value `{}`.
 
 2. Make sure that the `ArchiveName` property value is `In-Place Archive -<display name of user mailbox>`. If you want to set that value, run the following PowerShell cmdlets in the EMS:
 
