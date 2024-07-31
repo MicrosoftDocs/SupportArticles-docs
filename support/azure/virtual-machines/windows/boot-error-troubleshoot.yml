@@ -31,7 +31,7 @@ If you can't connect to your Windows virtual machine (VM) and are unsure of the 
 If your VM is not at the <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> security screen, it may be experiencing a boot error. To troubleshoot this issue, follow these steps:
 
 1. Try restarting the VM.
-2. Review the [common boot errors and solutions for non-bootable VMs](boot-error-troubleshoot.md) troubleshooting guide.
+2. Review the [common boot errors and solutions for non-bootable VMs](boot-error-troubleshoot.yml) troubleshooting guide.
 
 ## Troubleshooting information for specific boot errors
 
