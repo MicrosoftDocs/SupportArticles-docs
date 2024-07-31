@@ -1,5 +1,5 @@
 ---
-title: Site is protected by Microsoft 365 Backup and cannot be deleted
+title: Site is protected by Microsoft 365 Backup and can't be deleted
 manager: dcscontentpm
 ms.date: 07/31/2024
 audience: Admin
@@ -30,7 +30,7 @@ You try to permanently delete a site from the [SharePoint admin center](https://
 
 ## Cause  
 
-This error occurs because the site is actively protected or has been protected in the past 365 days by [Microsoft 365 Backup](/microsoft-365/backup/?view=o365-worldwide&preserve-view=true). To delete a site, its backup needs to be deleted. However, Microsoft 365 Backup can't delete the backups of specific SharePoint or OneDrive for Business sites. This behavior is designed to prevent malicious actors from deleting backups that are intended to quickly restore data if it's compromised.
+This error occurs because the site is actively protected or was protected in the past 365 days by [Microsoft 365 Backup](/microsoft-365/backup/?view=o365-worldwide&preserve-view=true). To delete a site, its backup needs to be deleted. However, Microsoft 365 Backup can't delete the backups of specific SharePoint or OneDrive for Business sites. This behavior is designed to prevent malicious actors from deleting backups that are intended to quickly restore data if it's compromised.
 
 ## Resolution  
 
