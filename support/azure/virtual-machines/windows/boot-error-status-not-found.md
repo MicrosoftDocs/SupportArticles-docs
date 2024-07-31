@@ -166,7 +166,7 @@ If a file name isn't shown in the error screen, and you see a message that state
 
 Repair the boot configuration data by running [BCDEdit](/windows-server/administration/windows-commands/bcdedit) commands as an administrator. To do this, follow these steps:
 
-[!INCLUDE [Repair or replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-boot-configuration-data.md)]
+[!INCLUDE [Repair the boot configuration data](../../../includes/azure/virtual-machines-windows-repair-boot-configuration-data.md)]
 
 
 ## Cause 3: Registry hive corruption
