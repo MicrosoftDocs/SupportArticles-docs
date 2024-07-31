@@ -65,6 +65,10 @@
       href: ./teams-conferencing/teams-meetings-not-available.md
     - name: Teams is slow during video meetings on laptops docked to 4K/HDR monitors
       href: ./teams-conferencing/teams-slow-video-meetings-laptops-4k.md    
+  - name: Contacts
+    items:
+    - name: User appears as Unknown User in Teams
+      href: ./contacts/unknown-user-teams.md
   - name: Exchange integration
     items:
     - name: External federated contacts don't appear in Teams search
