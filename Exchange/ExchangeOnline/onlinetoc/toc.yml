@@ -507,6 +507,8 @@
       items:
         - name: '"Send updates" prompt not displayed'
           href: /outlook/troubleshoot/calendaring/send-updates-prompt-not-displayed?context=/exchange/troubleshoot/context/online-context
+        - name: Archive mailbox doesn't display in Outlook or Outlook on the web
+          href: ../outlook-on-the-web-issues/archive-mailbox-not-visible.md
         - name: Can't create a new message by using OWA
           href: ../outlook-on-the-web-issues/cannot-create-new-message-in-owa.md
         - name: Can't edit an Office document directly from an email message

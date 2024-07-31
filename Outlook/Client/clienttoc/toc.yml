@@ -433,8 +433,6 @@
           href: ../profiles-and-accounts/let-zeroconfigexchange-automatically-create-first-profile.md
         - name: Event 1098 and can't create new profiles
           href: ../profiles-and-accounts/event-1098-and-cannot-create-new-profiles.md
-        - name: Exchange Online Archive mailbox not shown
-          href: ../profiles-and-accounts/troubleshoot-exchange-online-archive-mailbox-not-shown.md
         - name: Focused Inbox disappears
           href: ../profiles-and-accounts/focused-inbox-disappears-switch-folder.md
         - name: How to control AutoDiscover via Group Policy
