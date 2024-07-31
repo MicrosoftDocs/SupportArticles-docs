@@ -370,7 +370,7 @@ Mem:            31Gi        19Gi        12Gi        23Mi        87Mi        11Gi
 Swap:           23Gi          0B        23Gi
 ```
 
-From the output, observe the `total` system memory versus the `available` memory, and the `used` versus `total` swap. The available memory considers memory allocated to the cache, which can be returned to user applications. Some swap usage is normal in modern kernels, as some infrequetnly used memory pages can be moved to swap.
+From the output, observe the `total` system memory versus the `available` memory, and the `used` versus `total` swap. The available memory considers memory allocated to the cache, which can be returned to user applications. Some swap usage is normal in modern kernels, as some infrequently used memory pages can be moved to swap.
 
 ### swapon <a id="swapon"></a>
 
