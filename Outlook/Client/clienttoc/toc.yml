@@ -421,6 +421,8 @@
           href: ../profiles-and-accounts/add-shared-mailbox-as-additional-account.md
         - name: Additional RSS feeds appear
           href: ../profiles-and-accounts/additional-rss-feeds-appear.md
+        - name: Archive mailbox doesn't display in Outlook or Outlook on the web
+          href: /exchange/troubleshoot/outlook-on-the-web-issues/archive-mailbox-not-visible?context=/outlook/troubleshoot/context/client-context
         - name: Can't send email with Metered Connection Warning
           href: ../profiles-and-accounts/metered-connection-warning.md
         - name: Can't subscribe to an RSS feed that needs authentication

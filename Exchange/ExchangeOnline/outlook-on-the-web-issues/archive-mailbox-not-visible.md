@@ -11,16 +11,17 @@ ms.custom:
   - sap:Outlook on the web / OWA
   - Exchange Online
   - Outlook for Windows
-  - Outlook for Microsoft 365
-  - Outlook 2021
-  - Outlook 2019
-  - Outlook 2016
-  - Outlook on the web
   - CSSTroubleshoot
   - CI 191676
 ms.reviewer: shtahir, mhaque, gbratton, sfellman, meerak, v-shorestris
 appliesto: 
   - Exchange Online
+  - Outlook for Microsoft 365
+  - Outlook 2021
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook on the web
+  - New Outlook for Windows
 search.appverid: MET150
 ms.date: 07/31/2024
 ---
