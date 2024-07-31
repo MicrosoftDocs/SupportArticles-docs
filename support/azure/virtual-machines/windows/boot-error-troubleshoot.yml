@@ -1,19 +1,18 @@
----
-title: Troubleshoot boot errors in Azure virtual machines
-description: This article helps link you to articles to troubleshoot boot errors in Azure virtual machines.
-ms.service: virtual-machines
-ms.collection: windows
-ms.tgt_pltfrm: vm-windows
-ms.workload: infrastructure
-ms.date: 07/31/2024
-ms.topic: landing-page
-page_type: landing
-ms.custom: sap:My VM is not booting
----
+### YamlMime:Landing
+metadata:
+  title: Troubleshoot boot errors in Azure virtual machines
+  description: This article helps link you to articles to troubleshoot boot errors in Azure virtual machines.
+  ms.service: virtual-machines
+  ms.collection: windows
+  ms.tgt_pltfrm: vm-windows
+  ms.workload: infrastructure
+  ms.date: 07/31/2024
+  ms.topic: landing-page
+  page_type: landing
+  ms.custom: sap:My VM is not booting
+  appliesto: Windows VMs
 
 # Troubleshoot Azure virtual machines boot errors
-
-**Applies to:** :heavy_check_mark: Windows VMs
 
 This article helps you troubleshoot the common boot errors that you may encounter when you start an Azure Windows virtual machine (VM).
 

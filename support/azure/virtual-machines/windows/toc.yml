@@ -209,7 +209,7 @@
   - name: Boot diagnostics
     href: boot-diagnostics.md
   - name: Specific Boot Errors - Windows
-    href: boot-error-troubleshoot.md
+    href: boot-error-troubleshoot.yml
     items:
     - name: Blue screen errors
       href: troubleshoot-common-blue-screen-error.md
