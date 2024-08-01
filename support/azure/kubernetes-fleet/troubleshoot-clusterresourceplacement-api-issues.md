@@ -19,7 +19,7 @@ For more details about each object, see the [API reference](https://github.com/A
 
 ## Complete progress of the ClusterResourcePlacement deployment
 
-Understanding the progress and the status of the `ClusterResourcePlacement` deployment is crucial for diagnosing and identifying failures. You can view the status of the `ClusterResourcePlacement` deployment using the following command:
+Understanding the progress and the status of the `ClusterResourcePlacement` custom resource is crucial for diagnosing and identifying failures. You can view the status of the `ClusterResourcePlacement` custom resource  using the following command:
 
 ```bash
 kubectl describe clusterresourceplacement <name>
