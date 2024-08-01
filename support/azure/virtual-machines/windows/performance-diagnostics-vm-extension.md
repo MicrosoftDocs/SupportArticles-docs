@@ -11,7 +11,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 07/31/2024
+ms.date: 08/01/2024
 ms.author: genli
 ms.custom: sap:VM Performance
 ---
@@ -266,7 +266,7 @@ You should also be able to download the zip file directly from the portal by sel
 
     `C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Performance.Diagnostics.AzurePerformanceDiagnostics\<version>`
 
-* If you see the following errors in the Azure portal or Performance Diagnostics extension logs (*AzPerfDiagExtension.log* or *PerfInsights.log*), the HTTPS certificate chain is broken:
+* If you see the following errors in the Azure portal or Performance Diagnostics extension logs (*AzPerfDiagExtension.log* or *PerfInsights.log*), this usually means the HTTPS certificate chain is broken:
 
     - > Provisioning Failed - message: Failed to upload the PerfInsights result to Azure storage account.
 
