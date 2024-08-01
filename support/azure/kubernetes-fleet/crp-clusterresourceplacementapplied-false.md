@@ -21,7 +21,7 @@ This issue might occur because of one of the following reasons:
 
 - The resource already exists on the cluster and isn't managed by the fleet controller. To resolve this issue, update the `ClusterResourcePlacement` manifest YAML file to use `AllowCoOwnership` within `ApplyStrategy` to allow the fleet controller to manage the resource.
 - Another `ClusterResourcePlacement` deployment is already managing the resource for the selected cluster with a different apply strategy.
-- The `ClusterResourcePlacement` deployment fails to apply the manifest due to syntax errors or invalid resource configurations. This can occur when a resource is propagated through an envelope object.
+- The `ClusterResourcePlacement` deployment fails to apply the manifest due to syntax errors or invalid resource configurations. This can also occur when a resource is propagated through an envelope object.
 
 ## Troubleshooting steps
 
