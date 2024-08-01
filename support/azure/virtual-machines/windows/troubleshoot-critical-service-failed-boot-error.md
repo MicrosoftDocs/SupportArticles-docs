@@ -10,7 +10,7 @@ ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 08/03/2024
+ms.date: 08/01/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
@@ -41,7 +41,7 @@ There are various causes for stop errors. The most common causes are:
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-To resolve this problem, you first have to gather a dump file for the crash before you contact support. To collect the dump file, follow these steps:
+To resolve this problem, you first have to gather a dump file before you contact support. To collect the dump file, follow these steps:
 
 ### Step 1: Locate the dump file and submit a support ticket
 

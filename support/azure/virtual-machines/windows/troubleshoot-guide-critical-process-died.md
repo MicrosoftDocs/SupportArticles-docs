@@ -12,7 +12,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.date: 08/03/2024
+ms.date: 08/01/2024
 ms.custom: sap:My VM is not booting
 ---
 # Windows Stop Error - #0x000000EF "Critical Process Died"
@@ -63,7 +63,7 @@ Usually, this is due to a critical system process failing during boot. You can r
 3. Next, use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to reassemble the VM and see if it boots.
 4. If the VM is still not booting, then continue to collect the memory dump file.
 
-### Collect the memory dump File
+### Collect the memory dump file
 
 If the issue persists after running SFC, analysis of a memory dump file will be required to determine the cause of the issue. To collect the memory dump file, follow these steps:
 
