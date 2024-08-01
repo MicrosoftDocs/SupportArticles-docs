@@ -41,7 +41,7 @@ There are various causes for stop errors. The most common causes are:
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-To resolve this problem, contact support and submit a dump file. To collect the dump file, follow these steps:
+To resolve this problem, gather the memory dump file and contact support with the file. To collect the dump file, follow these steps:
 
 ### Step 1: Locate the dump file and submit a support ticket
 
