@@ -1,6 +1,6 @@
 ---
 title: Sensitivity labels are missing
-description: Sensitivity labels are missing or the Sensitivity button is not available when you try to apply the sensitivity labels.
+description: Sensitivity labels are missing or the Sensitivity button isn't available when you try to apply the sensitivity labels.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -9,18 +9,45 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CI 165933
+  - CI 193195
   - CSSTroubleshoot
-ms.reviewer: sathyana, lindabr, gbratton
+ms.reviewer: sathyana, lindabr, gbratton, meerak, v-shorestris
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 09/15/2022
+ms.date: 08/01/2024
 ---
+
 # Sensitivity labels are missing in Outlook, Outlook on the web, and other Office apps
+
+<!-- This article has been reviewed and approved for the specific use of global admin perms.  -->
 
 ## Symptoms
 
-You have configured sensitivity labels in the [Microsoft Purview compliance portal](https://compliance.microsoft.com/) to classify and protect user documents and email messages in your organization. When your users try to [apply the sensitivity labels](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in Outlook, Outlook on the web, or other Office apps, the sensitivity labels are missing, or the **Sensitivity** button is not available. This article provides resolutions that you can try for different clients.
+You have configured sensitivity labels in the [Microsoft Purview compliance portal](https://compliance.microsoft.com/) to classify and protect user documents and email messages in your organization. When your users try to [apply the sensitivity labels](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in Outlook, Outlook on the web, or other Office apps, the sensitivity labels are missing, or the **Sensitivity** button isn't available. 
+
+For this and other issues related to sensitivity labels, [run an automated diagnostic for sensitivity labels](#run-the-diagnostic-for-sensitivity-labels) in the Microsoft 365 admin center. The diagnostic analyzes the sensitivity labels, identifies any issues, and suggests resolutions.
+
+## Run the diagnostic for sensitivity labels
+
+> [!NOTE]
+> To run the diagnostic, you must be a Microsoft 365 global administrator.
+
+To run the diagnostic, follow these steps:
+
+1. Select the following button to open the diagnostic in the Microsoft 365 admin center.
+
+   > [!div class="nextstepaction"]
+   > [Run Tests: Sensitivity labels](https://aka.ms/PillarMipLabelDiag)
+
+2. Enter the following information:
+
+   - Label name
+   - User principal name (UPN) or email address of the user
+
+3. Select **Run Tests**.
+
+If you ran the diagnostic but your issue isn't resolved, check the following article sections that provide resolutions for different clients.
 
 ## Outlook
 
