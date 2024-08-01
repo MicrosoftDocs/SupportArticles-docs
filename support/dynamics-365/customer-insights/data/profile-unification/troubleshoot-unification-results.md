@@ -46,7 +46,7 @@ Cleaning and normalizing the data is essential to ensure reliable outcomes.
 
 > [!IMPORTANT]
 >
-> - Validate that no corrupt records are written to the table called "{Datasource}_{Table}_Corrupt." If corrupt records are present, they aren't processed by unification. For more information about how to resolve the corrupt records, see [Troubleshooting corrupt data](/troubleshoot/dynamics-365/customer-insights/data/data-ingestion/common-data-ingestion-errors).
+> - Validate that no corrupt records are written to the table called "{Datasource}_{Table}_Corrupt." If corrupt records are present, they aren't processed by unification. For more information about how to resolve the corrupt records, see [Troubleshooting corrupt data](../data-ingestion/common-data-ingestion-errors.md).
 > - If the columns being deduplicated or matched have low unique counts, they might be skipped by unification for performance reasons. If so, we recommend cleaning the data before ingesting it into Customer Insights - Data.
 
 If there are issues with the source data, resolve them, rerun unification, and revalidate the results. If there are no problems with the source data, continue with the troubleshooting steps.
