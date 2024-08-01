@@ -6,7 +6,6 @@ summary: Welcome to Azure Kubernetes Fleet Manager (Fleet) troubleshooting. Thes
 metadata:
   title: Troubleshoot Azure Kubernetes Fleet Manager issues
   description: Documentation for troubleshooting common issues with Azure Kubernetes Fleet Manager. # Required; article description that is displayed in search results. < 160 chars.
-  services: kubernetes-fleet
   ms.service: kubernetes-fleet #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
