@@ -21,8 +21,8 @@ When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet
 
 This issue might occur due to one of the following reasons:
 
-- When the `ClusterResourceOverride` or `ResourceOverride` is used, it is created with an invalid value for the resource.
-- The selected cluster where the resources will be propagated is terminated.
+- The controller encountered errror while trying to generate the corresponding `work` object.
+- The enveloped object is not well formated
 
 ## Case study
 
