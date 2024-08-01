@@ -116,7 +116,7 @@ To fix the issue, use one of the following methods.
 
 3. Expand the domain, select **Users**, and then locate and double-click the user mailbox to open the **Properties** window.
 
-4. On the **Attribute Editor** tab, locate and double-click the `msExchArchiveName` attribute.
+4. On the **Attribute Editor** tab, locate and double-click the `msExchArchiveName` attribute to open the **Multi-valued String Editor** window.
 
 5. The `msExchArchiveName` attribute value should be `In-Place Archive -<display name of user mailbox>`. If it isn't set to that value, update it. For example, if the display name of the mailbox is `Kayla Lewis`, the `msExchArchiveName` attribute value should be `In-Place Archive -Kayla Lewis`.
 
