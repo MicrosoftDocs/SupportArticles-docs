@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Sensitivity Labels
   - CI 165933
   - CI 193195
   - CSSTroubleshoot
