@@ -3,7 +3,7 @@ title: Troubleshoot Linux virtual machine deployment issues
 description: Troubleshoot deployment issues when you create a new Linux virtual machine in Azure.
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: virtual-machines
-ms.date: 07/31/2024
+ms.date: 08/01/2024
 ms.reviewer: srijangupta, scotro, jarrettr
 ---
 # Troubleshoot issues when deploying Linux virtual machines
@@ -126,7 +126,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 
 ## Common errors
 
-### Missing or blocked UDF drivers
+### Disabled UDF module
 
 **Error** In the serial log:
 
