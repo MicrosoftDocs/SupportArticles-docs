@@ -9,7 +9,7 @@ ms.service: virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-ms.date: 07/30/2024
+ms.date: 08/01/2024
 editor: v-jsitser
 ms.reviewer: azurevmcptcic, v-leedennis
 ms.topic: troubleshooting-general
@@ -183,26 +183,6 @@ These errors occur because the registry hive is corrupted. A registry hive can b
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
-Fix the corrupted hive by following these steps:
-
-1. Delete the VM.
-
-   > [!IMPORTANT]  
-   > When you're prompted to confirm the VM deletion, make sure that you clear the **Delete with VM** option that's associated with the OS disk resource type.
-
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
-3. Connect to the troubleshooting VM.
-4. Select **Start**, and then search for and select **Computer management**. In the console tree of the Computer Management app, select **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
-5. On the OS disk that you attached, navigate to the *\\windows\\system32\\config* directory. Copy all the files to a backup folder in case a rollback is required.
-6. Select **Start**, and then search for and select **Registry Editor** (*regedit.exe*).
-7. In the Registry Editor app, select the `HKEY_USERS` subtree, select **File** > **Load Hive** on the menu, and then load the *\\windows\\system32\\config\SYSTEM* file.
-8. If the hive loads without issues, this means that the hive wasn't closed correctly. In this situation, unload the hive to unlock the file and fix the issue.
-
-   > [!NOTE]  
-   > If you receive the following error message, [contact Azure Support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade):
-   >
-   > > Cannot load \<drive>:\\Windows\\System32\\config\\SYSTEM: Error while loading hive
-
-9. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
+[!INCLUDE [Fix corrupted registry hive](../../../includes/azure/virtual-machines-windows-fix-corrupted-hive.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
