@@ -22,5 +22,5 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text:  Troubleshooting ClusterResourcePlacement failures
+          - text:  Troubleshooting ClusterResourcePlacement API failures
             url: troubleshoot-clusterresourceplacement-api-issues.md
