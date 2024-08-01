@@ -51,9 +51,4 @@ To troubleshoot Azure Monitor Agent, you can use one of the following tools:
 - [Windows operating system (OS) Azure Monitor Agent Troubleshooter](/azure/azure-monitor/agents/troubleshooter-ama-windows)
 - [Linux operating system (OS) Azure Monitor Agent Troubleshooter](/azure/azure-monitor/agents/troubleshooter-ama-linux)
 
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Step 5: Deploy at scale](step-5-deploy-at-scale.md)
-
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
