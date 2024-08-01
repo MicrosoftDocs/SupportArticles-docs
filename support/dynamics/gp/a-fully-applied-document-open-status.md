@@ -3,7 +3,7 @@ title: A fully applied document is in open status
 description: Provides a solution to an issue where a fully applied document is still in open status in Payables Management.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 07/31/2024
+ms.date: 08/01/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # A fully applied document is still in open status in Payables Management
@@ -25,16 +25,16 @@ Fully applied document where the Amount Remaining is $0.00 should automatically 
 
 To solve the issue, follow these steps:
 
-1. In Microsoft Dynamics GP, go to **Inquiry**, select **Purchasing** > **Transaction By Vendor**. Clear the **WORK** and **HISTORY** checkboxes and select **Redisplay** to view documents only in **OPEN** status.
+1. In Microsoft Dynamics GP, go to **Inquiry**, and select **Purchasing** > **Transaction By Vendor**. Clear the **WORK** and **HISTORY** checkboxes and select **Redisplay** to view only documents in an **OPEN** status.
 
     > [!NOTE]
     > Use the **View | Currency | Functional** to view the document in Functional Currency.
 
-2. Select to expand the line, and review all open documents. Locate the problem document. If the **Unapplied Amount** is $0.00, it's fully applied (which is the **CURTRXAM** field in the PM20000 table.)
+2. Select to expand the line, and review all open documents. Locate the problem document. If the **Unapplied Amount** is $0.00, it's fully applied (which is the **CURTRXAM** field in the `PM20000` table.)
 
-3. Next, select/highlight the problem document and select the **Unapplied Amount** link to drill back to view the records applied against it. Verify that the total of the Applied Amount field for all the apply records adds up to the total amount of the document to verify that it's fully applied.
+3. Next, select/highlight the problem document and select the **Unapplied Amount** link to drill back to view the records applied against it. Verify that the total of the **Applied Amount** field for all the applied records adds up to the total amount of the document to verify that it's fully applied.
 
-    If not and there should be dollars left on it to apply to, then update the **CURTRXAM** field in the `PM20000` table for the amount that should still be unapplied on the document.
+    If not, and there should be dollars left on it to apply to, then update the **CURTRXAM** field in the `PM20000` table for the amount that should still be unapplied on the document.
 
 4. If the applied records match the total document amount and the document should be in history, you can go to Microsoft Dynamics GP, point to **Maintenance** and select **Check Links**. Select the **Purchasing series**. Insert over the Payables Transaction Logical File and select **OK**. Check links should move all document in the open table with an amount remaining of 0.00 to history.
 
@@ -43,7 +43,7 @@ To solve the issue, follow these steps:
 
 5. Review in Purchasing Inquiry to see if the document has now moved to history.
 
-6. If not, then use the scripts below to locate the remittance records for it in the `PM20100` table, and delete these records. The `PM20100` remittance table is just a table that stores apply records solely for the purpose of printing them on the next check stub sent to the vendor (if you're printing previously applied documents). Once the records are printed, they're removed from this remittance table, or just build in this table if they aren't printed. This record might hold it up from moving to history and doesn't hurt anything to remove this record. Delete it from the `PM20100` remittance table once you've located it. Below are helpful scripts to use to locate it in this table.
+6. If not, then use the scripts below to locate the remittance records for it in the `PM20100` table, and delete these records. The `PM20100` remittance table is just a table that stores applied records solely for the purpose of printing them on the next check stub sent to the vendor (if you're printing previously applied documents). Once the records are printed, they're removed from this remittance table, or just built into this table if they aren't printed. This record might hold it up from moving to history, and it doesn't hurt anything to remove this record. Delete it from the `PM20100` remittance table once you've located it. Below are helpful scripts to use to locate it in this table.
 
     ```sql
     select * from PM20100 where VENDORID = 'xxx' and DOCDATE = '2017-04-12'
