@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 14 for SQL Server 2022 (KB5038325)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 14 (KB5038325).
-ms.date: 07/23/2024
+ms.date: 08/01/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5038325
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4135.4
 
 ## Summary
 
-This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Server 2022. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 13, and it updates components in the following builds:
+This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Server 2022. This update contains 13 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 13, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4135.4**, file version: **2022.160.4135.4**
 - Analysis Services - Product version: **16.0.43.233**, file version: **2022.160.43.233**
@@ -36,6 +36,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 | Bug reference| Description | Fix area| Component | Platform |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|-----------------------------------------|----------|
+| <a id=3217208>[3217208](#3217208) </a> | Starting with SQL Server 2022 (16.x) CU14, container images include the new [mssql-tools18 package](/sql/linux/sql-server-linux-setup-tools#install-tools-on-linux). The previous directory */opt/mssql-tools/bin* is phased out. The new directory for Microsoft ODBC 18 tools is */opt/mssql-tools18/bin*, aligning with the latest tools offering. For more information about changes and security enhancements, see [ODBC Driver 18.0 for SQL Server Released](https://techcommunity.microsoft.com/t5/sql-server-blog/odbc-driver-18-0-for-sql-server-released/ba-p/3169228).| SQL Server Client Tools | Command Line Tools| Linux|
 | <a id=3110961>[3110961](#3110961) </a> | Fixes an issue in which maintenance plan logs might report garbled characters when the message reported involves non-ASCII characters.| SQL Server Client Tools | Management Services | Windows|
 | <a id=3278705>[3278705](#3278705) </a> | Fixes the following error that you encounter during a Volume Shadow Copy Service (VSS) restore on a SQL Server instance that has previously deleted databases: </br></br>Volume Shadow Copy Service error: Unexpected error calling routine GetVolumePathName is fail on the path \<PathName> ... The system cannot find the file specified.| SQL Server Engine | Backup Restore| Windows|
 | <a id=3285752>[3285752](#3285752) </a> | Fixes an issue in which the SQL Server Launchpad service can't shut down properly when certain errors occur during startup. | SQL Server Engine | Extensibility | Windows|
