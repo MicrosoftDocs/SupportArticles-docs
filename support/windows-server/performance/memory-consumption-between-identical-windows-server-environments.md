@@ -22,7 +22,7 @@ This article helps you measure and compare memory consumption between identical 
 ## Quick workaround: restart the servers
 
 1. Restarts both servers to clear any memory usage.
-2. Monitor memory consumption for a predefined period after the reboot.
+2. Monitors memory consumption for a predefined period after the reboot.
 
 ## Measure the memory performance
 
@@ -46,7 +46,7 @@ Ideally, we have the following three data sets from the same time period for com
 2. Use examples provided in [session host virtual machine sizing guidelines](/windows-server/remote/remote-desktop-services/virtual-machine-recs) to categorize user workload.
    - Light: Basic data entry tasks (for example, database entry applications).
    - Medium: Tasks such as market research using static web pages and Microsoft Word.
-   - Heavy: Software development involving dynamic web pages, Microsoft Outlook, PowerPoint.
+   - Heavy: Software development involving dynamic web pages, Microsoft Outlook, and PowerPoint.
    - Power: Graphic design or 3D modeling with photo/video editing tools.
 3. Use the following Performance counter objects to compare the activity on the system.
    - Memory
@@ -98,7 +98,7 @@ The result seems to confirm a different user load behavior. The result can be al
 |---|---|---|---|
 |System\Processes (Max)|199|268|338|
 
-If you want further confirmation, you can use the CPU-Usage, **Processor\\%idle time** (**_Total**), to identify a different user load pattern. Here are screenshots of some samples (The first one is for the vanilla installation, the second one is for client A and the third one is for client B).
+If you want further confirmation, you can use the CPU-Usage, **Processor\\%idle time** (**_Total**), to identify a different user load pattern. Here are screenshots of some samples (The first one is for the vanilla installation, the second one is for client A, and the third one is for client B).
 
 Vanilla:  
 :::image type="content" source="media/memory-consumption-between-identical-windows-server-setup/performance-monitor-trace-on-vanilla-installation.png" alt-text="Performance Monitor trace on vanilla installation." border="true":::
