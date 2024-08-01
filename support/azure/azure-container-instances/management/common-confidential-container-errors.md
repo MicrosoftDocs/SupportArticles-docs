@@ -3,7 +3,7 @@ title: Common issues with confidential containers
 description: Provides solutions to common issues with confidential containers.
 ms.date: 02/01/2024
 ms.reviewer: tysonfreeman, v-weizhu
-ms.service: container-instances
+ms.service: azure-container-instances
 ms.custom: sap:Management
 ---
 # Troubleshoot common issues with confidential containers
