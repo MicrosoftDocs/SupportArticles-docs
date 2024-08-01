@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4135.4
 
 ## Summary
 
-This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Server 2022. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 13, and it updates components in the following builds:
+This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Server 2022. This update contains 13 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 13, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4135.4**, file version: **2022.160.4135.4**
 - Analysis Services - Product version: **16.0.43.233**, file version: **2022.160.43.233**

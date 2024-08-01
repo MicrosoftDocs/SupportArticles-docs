@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4385.2
 
 ## Summary
 
-This article describes Cumulative Update package 28 (CU28) for Microsoft SQL Server 2019. This update contains 11 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 27, and it updates components in the following builds:
+This article describes Cumulative Update package 28 (CU28) for Microsoft SQL Server 2019. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 27, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4385.2**, file version: **2019.150.4385.2**
 - Analysis Services - Product version: **15.0.35.48**, file version: **2018.150.35.48**
