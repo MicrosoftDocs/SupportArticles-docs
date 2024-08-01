@@ -7,7 +7,6 @@ ms.author: ddama
 editor: v-jsitser
 ms.reviewer: fuyuanbie, shasb, kochhars, nshankar, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-extensions-add-ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot plug-in CA certificates in the Istio add-on so that I can use the Istio service mesh successfully.
 ---
 # Istio service mesh add-on plug-in CA certificate troubleshooting
