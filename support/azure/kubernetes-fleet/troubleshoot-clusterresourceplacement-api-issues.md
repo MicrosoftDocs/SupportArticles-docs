@@ -1,5 +1,5 @@
 ---
-title:  Troubleshooting ClusterResourcePlacement in Azure Kubernetes Fleet Manager
+title:  Troubleshooting ClusterResourcePlacement API in Azure Kubernetes Fleet Manager
 description: Helps you resolve `ClusterResourcePlacement` related issues when you use Azure Kubernetes Fleet Manager APIs.
 ms.date: 07/22/2024
 ms.reviewer: 
