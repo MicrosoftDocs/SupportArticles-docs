@@ -258,7 +258,7 @@ Check the `Work` status, particularly the `manifestConditions` section, you can 
 
 ### Resolution
 
-In this scenario, a potential solution is to delete the existing namespace on the member cluster. However, it's essential to note that this decision rests with the user, as the namespace might already contain resources.
+In this scenario, a potential solution is to set the `AllowCoOwnership` to true in the ApplyStrategy policy. However, it's essential to note that this decision rests with the user, as the resources might not be shared.
 
 In addition, reviewing the logs for the [Apply Work Controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/work/apply_controller.go) may provide more insights into why the resources are unavailable.
 
