@@ -13,20 +13,15 @@ A data collection rule (DCR) is a new way to configure data collection streams f
 
 To use the DCR Config Generator, follow these steps:
 
-1. Download the [latest version of the DCR Config Generator tool](https://github.com/microsoft/AzureMonitorCommunity/tree/master/Azure%20Services/Azure%20Monitor/Agents/Migration%20Tools/DCR%20Config%20Generator) from GitHub.
+1. Download the [latest version of the DCR Config Generator tool](https://github.com/microsoft/AzureMonitorCommunity/blob/master/Azure%20Services/Azure%20Monitor/Agents/Migration%20Tools/DCR%20Config%20Generator/WorkspaceConfigToDCRMigrationTool.ps1) from GitHub.
 
 1. Run the tool and specify the required parameters, such as the following items:
 
-   - Workspace ID
    - Subscription ID
    - Resource group name
-
-   You can also specify optional parameters, such as the following items:
-
-   - Rule name prefix
-   - Rule description
-   - Association scope
-
+   - Workspace Name
+   - DCR Name
+   
    The tool connects to your Log Analytics workspace and retrieves the configuration of the legacy agents. Then, it generates one or more data collection rules in JSON format and stores the rules in a local folder.
 
 1. Review the generated rules. Make any necessary adjustments, such as the following changes:

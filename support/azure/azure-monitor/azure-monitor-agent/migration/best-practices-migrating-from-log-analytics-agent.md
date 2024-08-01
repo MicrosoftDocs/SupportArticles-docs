@@ -1,6 +1,6 @@
 ---
-title: Best practices for migrating to Azure Monitor Agent
-description: Read an overview of best practices for migrating to Azure Monitor Agent from the legacy Log Analytics agent.
+title: Best practices for migrating to Azure Monitor Agent (AMA)
+description: Read an overview of best practices for migrating to Azure Monitor Agent (AMA) from the legacy Log Analytics agent.
 ms.date: 07/16/2024
 ms.reviewer: neghuman， jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu
 ms.service: azure-monitor
@@ -9,7 +9,7 @@ ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 ---
 # Best practices for migrating to Azure Monitor Agent from the legacy Log Analytics agent
 
-This article provides guidance on how to implement a successful migration from the Log Analytics agent to Microsoft Azure Monitor Agent.
+This article provides guidance on how to implement a successful migration from the Log Analytics agent to Microsoft Azure Monitor Agent (AMA).
 
 ## Overview
 
@@ -18,7 +18,6 @@ This article provides guidance on how to implement a successful migration from t
 Azure Monitor Agent replaces the Log Analytics agent (previously known as Microsoft Monitoring Agent (MMA) and Operations Management Suite (OMS)) in the following components:
 
 - Windows and Linux operating systems
-- Azure and non-Azure architectures
 - On-premises and third-party cloud environments
 
 Azure Monitor Agent introduces a simplified and flexible method of configuring data collection by using data collection rules (DCRs).
