@@ -5,7 +5,6 @@ ms.date: 07/17/2020
 ms.custom: sap:WWW Administration and Management\General configuration settings
 ms.reviewer: mlaing
 ms.topic: how-to
-ms.subservice: www-administration-management
 ---
 # Content types for HTTP compression in Internet Information Services
 

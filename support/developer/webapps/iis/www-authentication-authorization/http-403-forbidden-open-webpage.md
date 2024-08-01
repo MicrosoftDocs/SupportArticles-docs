@@ -4,7 +4,6 @@ description: This article describes an HTTP error 403 that occurs when you open 
 ms.date: 03/30/2020
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: Anahith
-ms.subservice: www-authentication-authorization
 ---
 # Error when you open an IIS webpage: 403.7 Forbidden: Client certificate required
 

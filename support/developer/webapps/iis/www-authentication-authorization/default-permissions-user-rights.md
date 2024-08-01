@@ -5,7 +5,6 @@ ms.date: 04/01/2020
 ms.custom: sap:WWW Administration and Management\General configuration settings
 ms.reviewer: mlaing
 ms.topic: article
-ms.subservice: www-authentication-authorization
 ---
 # Default permissions and user rights for IIS 7.0 and later
 

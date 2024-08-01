@@ -7,7 +7,7 @@ ms.reviewer: kirt
 ms.topic: troubleshooting 
 ms.date: 05/19/2023
 ms.service: azure-devops
-ms.subservice: ts-repos
+ms.custom: sap:Repos
 ---
 
 # Troubleshoot issues when Git clone or push fails to an Azure DevOps repository
