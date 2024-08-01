@@ -4,7 +4,7 @@ description: Helps you resolve `ClusterResourcePlacement` related issues when yo
 ms.date: 07/22/2024
 ms.reviewer: 
 ms.service: kubernetes-fleet
-ms.custom: sap:Node/node pool availability and performance,devx-track-azurecli
+ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 # Troubleshooting ClusterResourcePlacement in Azure Kubernetes Fleet Manager
 
