@@ -33,7 +33,7 @@ To overwrite deleted data on a volume by using Cipher.exe, use the `/w` switch w
 
 1. Quit all programs.
 2. Select **Start** > **Run**, type *cmd*, and then press ENTER.
-3. Type `cipher /w: folder`, and then press ENTER, where **folder** is any folder in the volume that you want to clean. For example, the `cipher /w:c:\test` command causes all deallocated space on drive C to be overwritten. If `C:\folder` is a Mount Point or points to a folder on another volume, all deallocated space on that volume will be cleaned.
+3. Type `cipher /w: folder`, and then press ENTER, where **folder** is any folder in the volume that you want to clean. For example, the `cipher /w:c:` command causes all deallocated space on drive C to be overwritten. If `C:\folder` is a Mount Point or points to a folder on another volume, all deallocated space on that volume will be cleaned.
 
 Data that isn't allocated to files or folders is overwritten. The data is permanently removed. It can take a long time if you overwrite a large amount of space.
 
