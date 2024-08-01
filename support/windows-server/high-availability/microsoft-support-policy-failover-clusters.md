@@ -1,7 +1,7 @@
 ---
 title: The Microsoft support policy for Windows Server failover clusters
 description: This article describes Microsoft support policy for Windows Server failover clusters.
-ms.date: 07/30/2024
+ms.date: 08/01/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -42,9 +42,7 @@ To configure a failover cluster in Windows Server, the failover cluster must pas
 
 By default, if the failover cluster validation tests recognize that one or more nodes already exist in a cluster, the cluster configuration function is performed. Also, if the failover cluster validation tests recognize that one or more nodes have the Hyper-V role installed, the Hyper-V configuration function is performed.
 
-For a more information about how to validate hardware for a Windows Server failover cluster, go to the following Microsoft website:
-
-[Validate Hardware for a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134244(v=ws.11))
+For a more information about how to validate hardware for a Windows Server failover cluster, see [Validate Hardware for a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134244(v=ws.11)).
 
 > [!NOTE]
 > All reports that the Validate a Configuration Wizard in the Failover Cluster Manager snap-in generates are stored in the %systemroot%\\cluster\\Reports folder.
@@ -73,9 +71,7 @@ Microsoft Support may also request that you run the validation tests against a p
 
 When an underlying storage configuration change or problem causes a cluster storage failure, Microsoft Support may also request that you run the validation tests on production clusters. The relevant disk resources and the resources on which the disks depend are taken offline during the test. Therefore, run the validation tests when the production environment is not being used. The validation has the ability to specify one or more disks to be included in the failover cluster validation tests.
 
-For more information about advanced failover cluster validation scenarios, go to the following Microsoft website:
-
-[Validate Hardware for a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134244(v=ws.11))
+For more information about advanced failover cluster validation scenarios, see [Validate Hardware for a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134244(v=ws.11)).
 
 ## More information
 
@@ -94,7 +90,7 @@ For more information about the Windows Server Catalog, see [Windows Server Catal
 
 For more information about failover clustering, see [Failover Clustering Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11)).
 
-For more information about the Microsoft support policy for earlier operating systems, click the following article numbers to view the articles in the Microsoft Knowledge Base:
+For more information about the Microsoft support policy for earlier operating systems, see:
 
 - [309395](https://support.microsoft.com/help/309395) The Microsoft support policy for server clusters, the Hardware Compatibility List, and the Windows Server Catalog
 
