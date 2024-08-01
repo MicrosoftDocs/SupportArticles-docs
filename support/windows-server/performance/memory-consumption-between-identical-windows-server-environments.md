@@ -84,7 +84,7 @@ Address discrepancies by adjusting resource allocations or optimizing applicatio
 
 ## Scenario guide: Compare systems using the performance counters
 
-Use tables to compare three systems (vanilla / client A / client B) by using the counters that are mentioned in the previous sections.
+Use tables to compare three systems (vanilla, client A, client B) by using the counters that are mentioned in the previous sections.
 
 |Counter|Vanilla installation|client A|client B|
 |---|---|---|---|
