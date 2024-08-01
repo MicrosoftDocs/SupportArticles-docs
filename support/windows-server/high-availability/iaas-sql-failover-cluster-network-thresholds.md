@@ -1,7 +1,7 @@
 ---
 title: Tuning failover cluster network thresholds
 description: Introduces solutions for adjusting the threshold of failover cluster networks.
-ms.date: 07/30/2024
+ms.date: 08/01/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -71,7 +71,7 @@ There are two settings that are used to configure the connectivity health of the
 
 **Threshold** - This defines the number of heartbeats, which are missed before the cluster takes recovery action. The threshold is a number of heartbeats. Within the same cluster, there can be different thresholds between nodes on the same subnet and between nodes that are on different subnets.
 
-By default Windows Server sets the **SameSubnetThreshold** to 10 and **SameSubnetDelay** to 1000 ms. For example, if connectivity monitoring fails for 10 seconds, the failover Threshold is reached resulting in the unreachable that node being removed from cluster membership. This results in the resources being moved to another available node on the cluster. Cluster errors will be reported, including cluster error 1135 (above) is reported.
+By default, Windows Server sets the **SameSubnetThreshold** to 10 and **SameSubnetDelay** to 1000 ms. For example, if connectivity monitoring fails for 10 seconds, the failover Threshold is reached resulting in the unreachable that node being removed from cluster membership. This results in the resources being moved to another available node on the cluster. Cluster errors will be reported, including cluster error 1135 (above) is reported.
 
 ## Resolution
 
