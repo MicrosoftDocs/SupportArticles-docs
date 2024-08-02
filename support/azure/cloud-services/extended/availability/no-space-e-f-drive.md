@@ -4,7 +4,7 @@ description: "Learn how to resolve a scenario in which there's zero free space o
 ms.date: 04/01/2024
 editor: v-jsitser
 ms.reviewer: piw, v-leedennis
-ms.service: cloud-services-extended-support
+ms.service: azure-cloud-services-extended-support
 #Customer intent: As an Azure Cloud Services user, I want to know what to do if my drive E or F runs out of free space so that I can continue to use this data to help troubleshoot various problems.
 ms.custom: sap:Service Availability and Performance
 ---
