@@ -1,6 +1,6 @@
 ---
-title: clusterResourcePlacementOverridden is false when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
-description: Helps you resolve clusterResourcePlacementOverridden failure when propagating resource by using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
+title: clusterResourcePlacementOverridden is false when you use the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
+description: Helps you resolve clusterResourcePlacementOverridden failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
 ms.date: 07/22/2024
 ms.reviewer: 
 ms.service: kubernetes-fleet
@@ -9,20 +9,20 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 
 # Resource propagation failure: clusterResourcePlacementOverridden is false
 
-This article describes how to troubleshoot `clusterResourcePlacementOverridden` issues when propagating resources using `ClusterResourcePlacement` object API in Azure Kubernetes Fleet Manager.
+This article discusses how to troubleshoot `clusterResourcePlacementOverridden` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
-When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `clusterResourcePlacementOverridden` status shows as false.
+When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `clusterResourcePlacementOverridden` status shows as `false`.
 
 ## Cause
 
-This issue might occur because the `ClusterResourceOverride` or `ResourceOverride` is created with an invalid field path for the resource.
+This issue might occur because the `ClusterResourceOverride` or `ResourceOverride` is created by using an invalid field path for the resource.
 
 ## Case study
 
 In the following example, an attempt is made to override the cluster role `secret-reader` that is propagated by the `ClusterResourcePlacement` to the selected clusters.
-However, the `ClusterResourceOverride` is created with an invalid path for the resource.
+However, the `ClusterResourceOverride` is created by using an invalid path for the resource.
 
 ### ClusterRole
 
@@ -49,7 +49,7 @@ rules:
 ```
 The `ClusterRole` `secret-reader` that is propagated to the member clusters by the `ClusterResourcePlacement`.
 
-### ClusterResourceOverride spec
+### ClusterResourceOverride specifications
 ```YAML
 spec:
   clusterResourceSelectors:
@@ -69,10 +69,10 @@ spec:
         path: /metadata/labels/new-label
         value: new-value
 ```
-The `ClusterResourceOverride` is created to override the `ClusterRole` `secret-reader` by adding a new label `new-label`
-with a value `new-value` for the clusters with the label `env: canary`.
+The `ClusterResourceOverride` is created to override the `ClusterRole` `secret-reader` by adding a new label (`new-label`)
+that has the value `new-value` for the clusters that have the label `env: canary`.
 
-### ClusterResourcePlacement Spec
+### ClusterResourcePlacement specifications
 ```YAML
 spec:
   resourceSelectors:
@@ -153,15 +153,16 @@ status:
     version: v1
 ```
 
-When the `ClusterResourcePlacementOverridden` condition is false, check the `placementStatuses` section to get the exact cause of the failure.
+If the `ClusterResourcePlacementOverridden` condition is `false`, check the `placementStatuses` section to get the exact cause of the failure.
 
-In this case, The message indicates that the override failed because the path `/metadata/labels/new-label` and its corresponding value are missing.
-Based on the previous example of the cluster role `secret-reader`, it's evident that the path `/metadata/labels/` doesn't exist, meaning that `labels` doesn't exist.
+In this situation, the message indicates that the override failed because the path `/metadata/labels/new-label` and its corresponding value are missing.
+Based on the previous example of the cluster role `secret-reader`, you can see that the path `/metadata/labels/` doesn't exist. This means that `labels` doesn't exist.
 Therefore, a new label can't be added.
 
 ### Resolution
 
-To successfully override the ClusterRole `secret-reader`, correct the path and value in the `ClusterResourceOverride` as shown below:
+To successfully override the cluster role `secret-reader`, correct the path and value in `ClusterResourceOverride`, as shown in the following code:
+
 ```
 jsonPatchOverrides:
   - op: add
@@ -170,6 +171,6 @@ jsonPatchOverrides:
       newlabel: new-value
 ```
 
-This will add the new label `newlabel` with the value `new-value` to the ClusterRole `secret-reader`.
+This adds the new label `newlabel` that has the value `new-value` to the ClusterRole `secret-reader`.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
