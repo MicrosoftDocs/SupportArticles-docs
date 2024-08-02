@@ -77,7 +77,7 @@ To fix the issue, follow these steps:
 
 ### Scenario: Exchange Online mailboxes in a hybrid deployment
 
-To fix the issue, use one of the following methods.
+To fix the issue, use one of the following methods. Method A is simpler than Method B but can only be used if your hybrid environment has an on-premises Exchange server. Method B can be used in any hybrid environment.
 
 > [!NOTE]
 > For information about how to configure archive mailboxes in a hybrid deployment, see [Archive provisioning in an Exchange hybrid environment](https://techcommunity.microsoft.com/t5/exchange-team-blog/what-happens-during-archive-provisioning-in-exchange-hybrid/ba-p/3300464).
