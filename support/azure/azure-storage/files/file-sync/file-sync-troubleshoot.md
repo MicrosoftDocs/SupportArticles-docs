@@ -4,7 +4,7 @@ description: Troubleshoot common issues that you might encounter with Azure File
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/03/2024
+ms.date: 08/01/2024
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -93,11 +93,15 @@ After installing or upgrading the Azure File Sync agent (v17.3 or later), you ma
 
 - The Storage Sync Agent service (FileSyncSvc) fails to start with the following error: 
 
-  >	Error 0x80070057: The parameter is incorrect. 
+  ```
+  Error 0x80070057: The parameter is incorrect. 
+  ```
 
 - Registering a server using the Register-AzStorageSyncServer cmdlet fails with the following error: 
 
-  >	Register-AzStorageSyncServer: Exception of type 'Commands.StorageSync.Interop.Exceptions.ServerRegistrationException' was thrown.
+  ```
+  Register-AzStorageSyncServer: Exception of type 'Commands.StorageSync.Interop.Exceptions.ServerRegistrationException' was thrown.
+  ```
 
 - ServerRegistration.exe or AfsUpdater.exe fails to open
 
