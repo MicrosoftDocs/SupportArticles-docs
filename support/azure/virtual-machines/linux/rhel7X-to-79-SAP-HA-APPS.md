@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
 editor: 
-ms.date: 09/02/2024
+ms.date: 08/02/2024
 ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
