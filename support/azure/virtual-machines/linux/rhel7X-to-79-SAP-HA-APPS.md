@@ -1,6 +1,6 @@
 ---
 title:   How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAP APPS on PAYGO images.
-description: Guide with step by step procedure to do a OS update frm RHEL 7.X to 7.9
+description: Guide with step by step procedure to do an OS update frm RHEL 7.X to 7.9
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
@@ -14,9 +14,9 @@ ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-While RHEL for SAP 7.x (where x is not equal to 9) can be accessed in E4S and/or EUS, RHEL for SAP 7.9 follows a different approach. In this case, the related content is found in unversioned repositories. As a result, updating a system that operates SAP on RHEL 7.x to RHEL 7.9 requires several manual steps.
+While RHEL for SAP 7.x (where x isn't equal to 9) can be accessed in `E4S` and/or `EUS`, RHEL for SAP 7.9 follows a different approach. In this case, the related content is found in unversioned repositories. As a result, updating a system that operates SAP on RHEL 7.x to RHEL 7.9 requires several manual steps.
 
-This article will provide the correct steps to update to 7.9 for SAP-HANA or SAPAPPS pay-as-you-go (PAYGO) images.
+This article provides the correct steps to update to 7.9 for SAP-HANA or SAPAPPS pay-as-you-go (PAYGO) images.
 
 > [!IMPORTANT]
 > RHUI is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
@@ -28,7 +28,8 @@ For more information on performing the update process on custom or golden images
 [Recommended Practices for Applying Software Updates to a RHEL High Availability or Resilient Storage Cluster](https://access.redhat.com/articles/2059253#pacemaker)
 
 
-[!NOTE] Please notice that RHEL 7.9 is the final RHEL 7 release and maintenance is defined by the [Maintenance Support 2 Phase policy](https://access.redhat.com/support/policy/updates/errata#Maintenance_Support_2_Phase).
+> [!NOTE] 
+> Notice that RHEL 7.9 is the final RHEL 7 release and maintenance defines its [Maintenance Support 2 Phase policy](https://access.redhat.com/support/policy/updates/errata#Maintenance_Support_2_Phase).
 
 ## Prerequisites
 
@@ -60,7 +61,7 @@ sudo yum remove $(rpm -qa | grep -i rhui)
 ```bash
 sudo yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel7-base-sap-ha.config' install rhui-azure-rhel7-base-sap-ha
 ```
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the yum repolist command
+4. Verify that the corresponding repositories are available and show no errors. To do this task, run the `yum repolist` command.
 
 ```bash
 sudo yum repolist
@@ -113,7 +114,7 @@ sudo yum remove $(rpm -qa | grep -i rhui)
 ```bash
 sudo yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel7-base-sapapps.config' install rhui-azure-rhel7-base-sap-apps
 ```
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the yum repolist command
+4. Verify that the corresponding repositories are available and show no errors. To do this task, run the `yum repolist` command
 
 ```bash
 sudo yum repolist
