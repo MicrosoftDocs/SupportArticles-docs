@@ -1949,6 +1949,8 @@ items:
       href: ./performance/log-files-are-deleted.md
     - name: Manually rebuild performance counters
       href: ./performance/manually-rebuild-performance-counters.md
+    - name: Troubleshoot memory consumption between identical Windows Server setup
+      href: ./performance/memory-consumption-between-identical-windows-server-environments.md
     - name: Monitor performance of remote computers
       href: ./performance/monitor-remote-computer-performance.md
     - name: QueryPerformanceCounter function perform poorly in some program
