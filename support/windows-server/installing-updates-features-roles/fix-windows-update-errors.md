@@ -1,7 +1,7 @@
 ---
 title: Fix Windows Update corruptions and installation failures
 description: Use the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 07/23/2024
+ms.date: 08/02/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -142,10 +142,14 @@ Total Repaired Corruption: 1
 Staged Packages:
     CBS Staged packages: 0
     CBS Staged packages removed: 0
-    CSI Payload Corruption: This indicates that the payload file EnterpriseModernAppMgmtCSP.dll is corrupt.
-    CBS MUM Missing: A required MUM file is missing from the Microsoft-Windows-Client-Features-Package.
-    CSI Manifest Corruption: There were two instances of manifest corruption. One was fixed (wow64_microsoft-windows-audio-mmecore-acm), and the other (wow64_microsoft-windows-audio-volumecontrol) remains corrupt.
 ```
+
+> [!NOTE]
+> CSI Payload Corruption: This indicates that the payload file *EnterpriseModernAppMgmtCSP.dll* is corrupt.
+>
+> CBS MUM Missing: A required MUM file is missing from the package (*Microsoft-Windows-Client-Features-Package*).
+> 
+> CSI Manifest Corruption: There were two instances of manifest corruption. One was fixed (*wow64_microsoft-windows-audio-mmecore-acm*), and the other (*wow64_microsoft-windows-audio-volumecontrol*) remains corrupt.
 
 ### Step 2: Download the missing files
 
