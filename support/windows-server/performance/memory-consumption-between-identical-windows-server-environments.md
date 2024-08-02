@@ -98,7 +98,7 @@ The result seems to confirm a different user load behavior. The result can also 
 |---|---|---|---|
 |**System\Processes** (Max)|199|268|338|
 
-For further confirmation, you can use the CPU usage counter, **Processor\\%Idle Time** (**_Total**), to identify a different user load pattern. Here are screenshots of some samples (the first is for the vanilla installation, the second is for client A, and the third is for client B).
+For further confirmation, you can use the CPU usage counter, **Processor\\% Idle Time** (**_Total**), to identify a different user load pattern. Here are screenshots of some samples (the first is for the vanilla installation, the second is for client A, and the third is for client B).
 
 Vanilla:  
 :::image type="content" source="media/memory-consumption-between-identical-windows-server-setup/performance-monitor-trace-on-vanilla-installation.png" alt-text="Screenshot of a Performance Monitor trace on the vanilla installation." border="true":::
