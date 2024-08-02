@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot ActiveSync with Exchange Server
 description: Resolves ActiveSync issues with Exchange Server.
-ms.date: 01/24/2024
+ms.date: 07/04/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -248,7 +248,7 @@ You need to enable ActiveSync mailbox logging on the Client Access Server and th
 ActiveSync device requests do not always reach the destination as desired. To ensure the device request and response is being sent and received as expected, route the device through an HTTP proxy and review the data. To do this, follow these steps:
 
 1. Download and install [Fiddler](https://www.telerik.com/download/fiddler) onto a workstation.
-2. Download [EAS Inspector for Fiddler](https://archive.codeplex.com/?p=easinspectorforfiddler).
+2. Download [EAS Inspector for Fiddler](https://github.com/dseph/EAS-Inspector-For-Fiddler).
 3. Extract **EASInspectorFiddler.dll** into the **c:\Program Files\Fiddler2\Inspectors** folder.
 4. Launch the Fiddler application.
 5. Select the **Tools** menu and select **Fiddler Options**.
@@ -473,7 +473,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -812,7 +812,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -965,7 +965,7 @@ The first troubleshooting step is enabling mailbox logging on the Client Access 
 ActiveSync device requests do not always reach the destination as desired. To ensure the device request and response is being sent and received as expected, route the device through an HTTP proxy and review the data. To do this, follow these steps:
 
 1. Download and install [Fiddler](https://www.telerik.com/download/fiddler) onto a workstation.
-2. Download [EAS Inspector for Fiddler](https://archive.codeplex.com/?p=easinspectorforfiddler).
+2. Download [EAS Inspector for Fiddler](https://github.com/dseph/EAS-Inspector-For-Fiddler).
 3. Extract **EASInspectorFiddler.dll** into the **c:\Program Files\Fiddler2\Inspectors** folder.
 4. Launch the Fiddler application.
 5. Select the **Tools** menu and select **Fiddler Options**.
@@ -1141,7 +1141,7 @@ We expect the device to send one or more requests to obtain the latest updates f
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -1226,7 +1226,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -1540,7 +1540,7 @@ The first step is to enable mailbox logging on the Client Access Server(s) and t
 ActiveSync device requests do not always reach the destination as desired. To ensure the device request and response is being sent and received as expected, route the device through an HTTP proxy and review the data. To do this, follow these steps:
 
 1. Download and install [Fiddler](https://www.telerik.com/download/fiddler) onto a workstation.
-2. Download [EAS Inspector for Fiddler](https://archive.codeplex.com/?p=easinspectorforfiddler).
+2. Download [EAS Inspector for Fiddler](https://github.com/dseph/EAS-Inspector-For-Fiddler).
 3. Extract **EASInspectorFiddler.dll** into the **c:\Program Files\Fiddler2\Inspectors** folder.
 4. Launch the Fiddler application.
 5. Select the **Tools** menu and select **Fiddler Options**.
@@ -1617,7 +1617,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -1722,7 +1722,7 @@ The first step is to enable mailbox logging on the Client Access Server(s) and t
 ActiveSync device requests do not always reach the destination as desired. To ensure the device request and response is being sent and received as expected, route the device through an HTTP proxy and review the data. To do this, follow these steps:
 
 1. Download and install [Fiddler](https://www.telerik.com/download/fiddler) onto a workstation.
-2. Download [EAS Inspector for Fiddler](https://archive.codeplex.com/?p=easinspectorforfiddler).
+2. Download [EAS Inspector for Fiddler](https://github.com/dseph/EAS-Inspector-For-Fiddler).
 3. Extract **EASInspectorFiddler.dll** into the **c:\Program Files\Fiddler2\Inspectors** folder.
 4. Launch the Fiddler application.
 5. Select the **Tools** menu and select **Fiddler Options**.
@@ -1909,7 +1909,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -1973,7 +1973,7 @@ The ActiveSync client may have encountered errors while attempting to communicat
    - On the Ready to Install screen, select **Install**.
    - On the Completion screen, select **Finish**.
 
-2. Download [Log Parser Studio](https://gallery.technet.microsoft.com/Log-Parser-Studio-cd458765) and extract the files.
+2. Download [Log Parser Studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131) and extract the files.
 
 Once LogParser is installed and Log Parser Studio has been extracted, copy the IIS logs from the Exchange server(s) to the local workstation for analysis.
 
@@ -2127,7 +2127,7 @@ The results also show a Sync command that received a response with a status code
 ActiveSync device requests do not always reach the destination as desired. To ensure the device request and response is being sent and received as expected, route the device through an HTTP proxy and review the data. To do this, follow these steps:
 
 1. Download and install [Fiddler](https://www.telerik.com/download/fiddler) onto a workstation.
-2. Download [EAS Inspector for Fiddler](https://archive.codeplex.com/?p=easinspectorforfiddler).
+2. Download [EAS Inspector for Fiddler](https://github.com/dseph/EAS-Inspector-For-Fiddler).
 3. Extract **EASInspectorFiddler.dll** into the **c:\Program Files\Fiddler2\Inspectors** folder.
 4. Launch the Fiddler application.
 5. Select the **Tools** menu and select **Fiddler Options**.
@@ -2475,7 +2475,7 @@ To determine device traffic, analyze the device activity using the associated Lo
 
 To determine if the Exchange server(s) are experiencing performance issue, capture performance data from each of the Exchange servers. To do this, follow these steps:
 
-1. Download [ExPerfwiz](https://archive.codeplex.com/?p=experfwiz) and extract the contents to the *%ExchangeInstallPath%\Scripts* folder.
+1. Download [ExPerfwiz](https://github.com/microsoft/ExPerfWiz) and extract the contents to the *%ExchangeInstallPath%\Scripts* folder.
 2. Open the [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell).
 3. Run the following to change the folder path:
 

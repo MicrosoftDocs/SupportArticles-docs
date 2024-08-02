@@ -1,10 +1,6 @@
 - name: Microsoft 365 Security Troubleshooting
   href: ../microsoft-365-security-welcome.yml
   items:
-  - name: Antispam
-    items:
-    - name: Sender Rewriting Scheme
-      href: ../antispam/sender-rewriting-scheme.md
   - name: Security
     items:
     - name: Account security alert email message

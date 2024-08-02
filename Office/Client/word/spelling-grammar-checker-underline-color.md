@@ -9,6 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Spellcheck
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
@@ -17,7 +19,7 @@ appliesto:
   - Word 2016
   - Word 2013
   - Word 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to customize the color of the spelling and grammar checker underlines in Microsoft Word

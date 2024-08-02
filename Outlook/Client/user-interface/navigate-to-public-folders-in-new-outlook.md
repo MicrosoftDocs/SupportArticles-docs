@@ -14,7 +14,7 @@ ms.reviewer: meerak, batre, v-trisshores
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 06/25/2024
 ---
 # Access public folders in Outlook for Windows
 
@@ -41,7 +41,7 @@ If your Microsoft Outlook app was updated to the new Outlook for Windows, you ne
    :::image type="content" source="media/navigate-to-public-folders-in-new-outlook/select-add-pf-to-favorites.png" alt-text="Screenshot of the Add public folders to Favorites menu option after you right-click the account name." border="true":::
   
    **Notes**:
-   - If you don't see this option, make sure that public folders are deployed in your tenant.
+   - If you don't see this option, make sure that public folders are deployed in your tenant. Public folders that are deployed in Microsoft Exchange On-premises and hybrid Exchange environments can't be accessed from new Outlook for Windows.
    - If public folders are deployed but you don't see the option, ask an administrator to check the [Microsoft 365 admin center](https://aka.ms/pfcte) for troubleshooting steps.
 1. In the pane that displays the public folder hierarchy, expand **All Public Folders**.
 

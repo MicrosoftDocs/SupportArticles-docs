@@ -9,6 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open
   - CSSTroubleshoot
 ms.author: luche
 ms.reviewer: elzhou, genli, christys
@@ -17,7 +19,7 @@ appliesto:
   - Visio 2019
   - Visio 2016
   - Visio 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # You can't open Visio files in Visio Web Access even if Visio Viewer is installed

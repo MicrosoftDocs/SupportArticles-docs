@@ -9,11 +9,12 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Office for Mac
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Cannot pass the Welcome Screen in Office for Mac

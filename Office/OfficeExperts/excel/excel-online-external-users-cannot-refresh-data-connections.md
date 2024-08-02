@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - Open\DataRefresh
   - sap:office-experts
   - CSSTroubleshoot
 ms.topic: troubleshooting
@@ -15,7 +16,7 @@ ms.author: luche
 ms.reviewer: warrenr
 appliesto: 
   - Excel Online
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # External users can't refresh data connections from Excel Online

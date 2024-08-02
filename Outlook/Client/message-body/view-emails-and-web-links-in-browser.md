@@ -14,8 +14,9 @@ ms.custom:
 ms.reviewer: gquintin, aruiz, van.eric; meerak
 appliesto: 
   - Outlook for Microsoft 365
+  - New Outlook for Windows
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 07/24/2024
 ---
 
 # Web links from Outlook and Teams open in Microsoft Edge in side-by-side view
@@ -97,10 +98,11 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
 
 ## Allow users to manage the new feature
 
-If you prefer to let your users manage this feature, then either leave the _Choose Which Browser Opens Web Links_ policy unconfigured or disable the policy. Microsoft Edge will open as the new default experience when users open a web links from either Outlook or Teams for the first time, and then they can manage this behavior by using the appropriate app settings or through a banner notification:
+If you prefer to let your users manage this feature, then either leave the _Choose Which Browser Opens Web Links_ policy unconfigured or disable the policy. Microsoft Edge will open as the new default experience when users open a web link from either Outlook or Teams for the first time, and then they can manage this behavior by using the appropriate app's settings or through a banner notification:
 
-- Outlook settings: **File** \> **Options** \> **Advanced** \> **File and browser preferences**.
-- Teams settings: **Settings** \> **Files and links** \> **Link open preference**.
+- New Outlook for Windows: **Settings** \> **General** \> **Files and links** \> **Open hyperlinks from Outlook in**.
+- Classic Outlook for Windows: **File** \> **Options** \> **Advanced** \> **File and browser preferences**.
+- Teams: **Settings** \> **Files and links** \> **Link open preference**.
 - Banner notification: A banner notification is shown when users first see the experience. They can either select the **Try Edge** option to keep using the feature or select **Manage my settings** to revert to their system's default browser experience. 
 
   :::image type="content" source="media/view-emails-and-web-links-in-browser/microsoft-edge-banner.png" alt-text="Screenshot of the Microsoft Edge banner that asks users to select how to open email links.":::

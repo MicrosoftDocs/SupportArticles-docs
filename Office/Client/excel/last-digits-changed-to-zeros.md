@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Editing\Cells
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
@@ -17,7 +18,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
 ms.reviewer: 
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Last digits are changed to zeros when you type long numbers in cells of Excel
 

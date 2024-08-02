@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Save
   - CSSTroubleshoot
 appliesto: 
   - Excel for Microsoft 365
@@ -19,7 +20,7 @@ appliesto:
   - Excel 2010
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Troubleshoot why Excel doesn't save changes

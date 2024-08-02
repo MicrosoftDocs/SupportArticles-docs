@@ -11,11 +11,13 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: ericspli
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\SxS\SxSOrPerpetual
   - sap:office-experts
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Office
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Troubleshooting Office installation failures

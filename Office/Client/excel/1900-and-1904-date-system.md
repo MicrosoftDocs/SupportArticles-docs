@@ -6,6 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.custom: 
+  - Editing\Cells
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
@@ -19,7 +20,7 @@ appliesto:
   - Excel 2010
   - Office Excel 2007
   - Excel for Macintosh
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Differences between the 1900 and the 1904 date system in Excel

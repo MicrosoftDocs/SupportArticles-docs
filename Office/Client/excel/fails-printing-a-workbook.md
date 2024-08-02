@@ -8,12 +8,13 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - Printing
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Margins do not fit page size" error when you print an Excel workbook

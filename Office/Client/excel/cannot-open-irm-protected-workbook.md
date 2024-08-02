@@ -8,13 +8,14 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - Open\Security
   - CSSTroubleshoot
 ms.reviewer: anitao, jenl
 search.appverid: 
   - MET150
 appliesto: 
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # You cannot open an IRM protected workbook in Protected View in Excel 2013

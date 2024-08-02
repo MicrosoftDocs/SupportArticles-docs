@@ -21,8 +21,6 @@
       href: ../archive-mailboxes/cannot-see-calendar-folder.md
     - name: Can't use archive mailbox in Outlook for Mac 2011
       href: ../archive-mailboxes/cannot-use-archive-mailbox-mac.md
-    - name: Can't view items
-      href: ../archive-mailboxes/cannot-view-items.md
     - name: Cloud-based archive mailbox is unavailable
       href: ../archive-mailboxes/cloud-based-archive-unavailable.md
     - name: Contents of cloud-based archive are the same as on-premises
@@ -55,24 +53,10 @@
       href: ../data-loss-prevention/data-loss-prevention-policy-tips.md
     - name: Data loss prevention not working
       href: ../data-loss-prevention/data-loss-prevention-not-work.md
-    - name: DLP tips not working
-      href: ../data-loss-prevention/dlp-tips-not-work.md
-    - name: Issues for tips
-      href: ../data-loss-prevention/data-loss-prevention-tips.md
   - name: eDiscovery
     items:
     - name: Can't run In-Place eDiscovery search in EAC
       href: ../ediscovery/cannot-run-ediscovery-search-cloud-mailbox.md
-    - name: Can't search inactive mailboxes
-      href: ../ediscovery/cannot-search-inactive-mailboxes.md
-    - name: Can't start eDiscovery PST Export Tool
-      href: ../ediscovery/cannot-start-ediscovery-pst-export.md
-    - name: eDiscovery search results export fails
-      href: ../ediscovery/ediscovery-results-export-fails.md
-    - name: eDiscovery searches are queued indefinitely
-      href: ../ediscovery/ediscovery-searches-are-queued-indefinitely.md
-    - name: In-Place eDiscovery preview isn't available
-      href: ../ediscovery/in-place-ediscovery-preview-not-available.md
     - name: Resolve eDiscovery search errors
       href: ../ediscovery/resolve-ediscovery-issues.md
     - name: Resolve eDiscovery hold errors
@@ -89,8 +73,6 @@
       href: ../holds/restore-in-place-litigation-hold.md
     - name: Retention policy no longer works after a mailbox is moved
       href: ../holds/retention-policy-not-working-after-mailbox-moved.md
-    - name: Search logic change for Title property
-      href: ../holds/change-to-search-logic-for-title-property.md
   - name: Information barriers
     items:
     - name: Issues related to information barrier policies

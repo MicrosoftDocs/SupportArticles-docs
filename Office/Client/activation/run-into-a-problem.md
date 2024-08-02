@@ -9,6 +9,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Errors\We've run into a problem with your Microsoft 365 subscription
   - CSSTroubleshoot
   - CI 157758
   - CI 159110
@@ -16,7 +18,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Microsoft 365 Apps activation error: “We’ve run into a problem with your Office 365 subscription”

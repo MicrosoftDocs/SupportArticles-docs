@@ -17,7 +17,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 10/19/2023
+ms.date: 06/06/2024
 ---
 
 # "Invalid user name" when you try to create a user name that contains a special character in Microsoft 365

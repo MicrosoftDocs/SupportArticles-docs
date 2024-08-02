@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: warrenr, jhaak
 ms.custom: 
+  - Reliability\LoadingIssues
   - CSSTroubleshoot
   - CI 167550
 search.appverid: 
@@ -17,7 +18,7 @@ appliesto:
   - SharePoint Online
   - SharePoint Server
   - Excel for Microsoft 365
-ms.date: 10/26/2022
+ms.date: 06/06/2024
 ---
 # Excel workbook shows old SharePoint property values
 

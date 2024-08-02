@@ -8,6 +8,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
+  - Open
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
@@ -31,7 +33,7 @@ appliesto:
   - Visio Professional 2016
   - Visio Standard 2016
   - Word 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Background task activation is spurious" when you use an Office 2016 application to access Microsoft 365 resources
@@ -53,6 +55,6 @@ To work around this issue, click **OK** to dismiss the error message, and then a
 
 ## Status 
 
-This is a known issue. We're working to address this issue and will post more information in this article when it becomes available.
+It's a known issue. We're working to address this issue and will post more information in this article when it becomes available.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

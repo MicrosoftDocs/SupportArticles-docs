@@ -15,7 +15,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Office Online Server
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Microsoft Office Web Apps and VMware
@@ -47,5 +47,3 @@ The most reliable resolution is to uninstall Microsoft Office Web Apps or Office
 You can also use the method that is provided in the following article to work around the issue:
 
 [Disabling the HotAdd/HotPlug capability in ESXi 5.x and ESXi/ESX 4.x virtual machines (1012225)](https://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=1012225)
-
-

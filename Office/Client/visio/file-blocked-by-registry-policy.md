@@ -8,6 +8,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Security\Trust
   - CSSTroubleshoot
 ms.reviewer: dkuy, nathanad
 search.appverid: 
@@ -15,14 +17,14 @@ search.appverid:
 appliesto: 
   - Visio Professional 2013
   - Visio Standard 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Error message when you open a file type that is blocked by registry policy settings in Visio 2013
 
 ## Symptoms
 
-A user cannot open a drawing file that uses one of the following formats or save a drawing file to one of the following formats by using Microsoft Visio 2013:
+A user can't open a drawing file that uses one of the following formats or save a drawing file to one of the following formats by using Microsoft Visio 2013:
 
 - Visio 2003-2010 Binary Drawings, Templates and Stencils    
 - Visio 2000-2002 Binary Drawings, Templates and Stencils    

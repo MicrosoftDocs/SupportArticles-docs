@@ -9,13 +9,15 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: mmaxey
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Templates
   - CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
   - Word 2010
   - Word 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # You are prompted to save the changes to the global template every time that you exit Word 2007 or Word 2010

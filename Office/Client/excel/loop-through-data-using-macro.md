@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: mikestow
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -16,7 +17,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
   - Excel 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to loop through a list of data on a worksheet by using macros in Excel

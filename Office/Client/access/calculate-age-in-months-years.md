@@ -17,14 +17,14 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to create two functions to calculate age in months and in years in Access
 
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 
-This article applies to a Microsoft Office Access database (.accdb and .mdb) and to Microsoft Access project (.apd).
+This article applies to a Microsoft Office Access database (.accdb and .mdb) and to Microsoft Access project (`.apd`).
 
 ## Summary
 
@@ -112,7 +112,7 @@ To test the Age() and AgeMonths() functions, follow these steps.
 
 1. By using the Date/Time tool in Control Panel, make a note of the current date, and then set the date to June 3, 2001.   
 2. Open a module or create a new one.   
-3. On the Viewmenu, click Immediate Window.   
+3. On the View menu, click Immediate Window.   
 4. Assume your friend's birth date was November 15, 1967 and today is June 3, 2001. Type the following line in the Immediate window, and then press ENTER: 
 
     ?Age("11/15/67")
@@ -138,4 +138,4 @@ The following procedure explains how to mark old orders by placing the age value
 
 ## References
 
-For more information about date differences, in the Visual Basic Editor, click Microsoft Visual Basic Help on the Help menu, type datediff function in the Office Assistant or the Answer Wizard, and then click Search to view the topic.
+For more information about date differences, in the Visual Basic Editor, click Microsoft Visual Basic Help on the Help menu, type datediff function in the Office Assistant or the Answer Wizard, and then click Search to view the article.

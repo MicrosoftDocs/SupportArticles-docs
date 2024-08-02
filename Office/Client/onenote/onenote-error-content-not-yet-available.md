@@ -3,7 +3,7 @@ title: Content Not Yet Available error in OneNote
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 04/24/2020
+ms.date: 06/06/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -17,6 +17,8 @@ appliesto:
   - OneNote for Mac
   - OneNote on Devices
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\ContentNotYetAvailable
   - CI 117004
   - CSSTroubleshoot
 description: Describes resolutions to the OneNote error message Content Not Yet Available.

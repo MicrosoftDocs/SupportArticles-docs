@@ -12,7 +12,7 @@ ms.custom:
   - CI172717
 ms.reviewer: lindabr, sathyana
 search.appverid: MET150
-ms.date: 03/08/2023
+ms.date: 06/24/2024
 ---
 
 # Resolve Microsoft Purview Message Encryption issues

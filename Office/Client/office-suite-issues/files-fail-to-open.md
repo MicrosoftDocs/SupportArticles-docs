@@ -8,13 +8,15 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open
   - CSSTroubleshoot
 ms.reviewer: zakirh
 search.appverid: 
   - MET150
 appliesto: 
   - Office 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Office files in SharePoint fail to open from an Office 2016 client
@@ -79,4 +81,4 @@ Enable and start **Network List Service** on the client computer. To do this, fo
  
 1. Click Start, type "**services.msc**" (without quotation marks) in the Start Search box and press Enter.    
 2. Double-click **Network List Service**.    
-3. Right-click the service, and then click **Start**.    
+3. Right-click the service, and then click **Start**.

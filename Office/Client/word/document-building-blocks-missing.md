@@ -6,6 +6,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Templates
   - CSSTroubleshoot
 appliesto: 
 - Word 2010
@@ -13,7 +15,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Document building blocks may be missing in a template that is part of a workgroup template in Word 2010
 

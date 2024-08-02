@@ -8,13 +8,15 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Errors\Sorry another account from your organization is already signed in on this computer
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft 365
   - Office 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Sorry, another account from your organization is already signed in on this computer" in Office 2013

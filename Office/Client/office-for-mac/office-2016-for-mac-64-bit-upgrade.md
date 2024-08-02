@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: lauraho
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -18,7 +19,7 @@ appliesto:
   - Outlook for Microsoft 365 for Mac
   - PowerPoint for Microsoft 365 for Mac 
   - Word for Microsoft 365 for Mac
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Office 2016 for Mac 64-bit upgrade
 

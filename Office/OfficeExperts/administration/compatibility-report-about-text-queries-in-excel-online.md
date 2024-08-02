@@ -15,7 +15,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Excel Online
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Compatibility Report about text queries in Excel Online

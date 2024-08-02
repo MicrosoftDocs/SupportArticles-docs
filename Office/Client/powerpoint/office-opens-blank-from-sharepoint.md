@@ -8,6 +8,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\Blanks
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
@@ -21,7 +23,7 @@ appliesto:
   - Office Professional Plus 2010
   - SharePoint Foundation 2010
   - SharePoint Server 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Office applications open blank from SharePoint WebDAV or sites
@@ -157,4 +159,4 @@ On the client computer, add the BasicAuthLevel registry key and an appropriate v
     - 0 - Basic authentication disabled
     - 1 - Basic authentication enabled for SSL connections only
     - 2 - Basic authentication enabled for SSL and for non-SSL connections    
-7. Exit Registry Editor, and then restart the computer.    
+7. Exit Registry Editor, and then restart the computer.

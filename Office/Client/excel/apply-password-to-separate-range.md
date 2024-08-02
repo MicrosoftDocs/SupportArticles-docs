@@ -10,12 +10,13 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Security\Permissions
   - CSSTroubleshoot
 appliesto: 
   - Excel 2007
   - Excel 2003
   - Excel 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Apply different passwords or permissions to separate ranges in workbooks in Excel
@@ -24,9 +25,9 @@ ms.date: 03/31/2022
 
 In Microsoft Excel 2002 and in later versions of Excel, you can now use passwords to protect specific ranges in your worksheets. This is a change from earlier versions of Excel, in which one password applies to the entire worksheet, which might have several protected ranges. In addition, if you use Windows 2000, you can apply group-level passwords and user-level passwords to different ranges.
 
-The features in Microsoft Excel that are related to hiding data and protecting worksheets and workbooks with passwords are not intended to be mechanisms for securing data or protecting confidential information in Excel. You can use these features to present information more clearly by hiding data or formulas that might confuse some users. These features also help prevent other users from making accidental changes to data. 
+The features in Microsoft Excel that are related to hiding data and protecting worksheets and workbooks with passwords aren't intended to be mechanisms for securing data or protecting confidential information in Excel. You can use these features to present information more clearly by hiding data or formulas that might confuse some users. These features also help prevent other users from making accidental changes to data. 
 
-Excel does not encrypt data that is hidden or locked in a workbook. With enough time, users can obtain and modify all the data in a workbook, as long as they have access to it. To help prevent modification of data and to help protect confidential information, limit access to any Excel files that contain such information by storing them in locations available only to authorized users.
+Excel doesn't encrypt data that is hidden or locked in a workbook. With enough time, users can obtain and modify all the data in a workbook, as long as they have access to it. To help prevent modification of data and to help protect confidential information, limit access to any Excel files that contain such information by storing them in locations available only to authorized users.
 
 > [!NOTE]
 > This article describes how to enable specific collaboration scenarios to function correctly in collaboration environments that do not include users who have malicious intent. You cannot enable strong encryption for a file by using password protection. To protect your document or file from a user who has malicious intent, you can restrict permission by using Information Rights Management (IRM).

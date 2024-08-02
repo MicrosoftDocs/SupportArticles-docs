@@ -15,7 +15,7 @@ ms.author: luche
 ms.reviewer: mattbum
 appliesto: 
   - Access 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to store, calculate, and compare Date/Time data in Microsoft Access

@@ -11,13 +11,13 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 186303
-ms.reviewer: sathyana, jovind, meerak, v-trisshores
+ms.reviewer: sathyana, shrshet, jovind, meerak
 appliesto: 
   - Exchange Online
   - Exchange Online Protection
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 01/25/2024
+ms.date: 06/24/2024
 ---
 
 # Collect Microsoft Purview compliance diagnostics
@@ -132,6 +132,9 @@ Follow these steps:
    - **Auto Labeling** \> **SPO/ODB Auto Labeling**
    - **Encryption** \> **Encryption**
    - **Information Barriers** \> **Information Barriers**
+   - **eDiscovery** \> **Hold**
+   - **eDiscovery** \> **Search**
+   - **eDiscovery** \> **Export**
 
    For example, to collect support data for an issue in which a sensitive information type (SIT) is incorrectly detected in a document, select the **Data Classification** \> **Classification** template.
 
@@ -143,7 +146,7 @@ Follow these steps:
 
 4. In the folder dialog box that opens, select a parent folder for the diagnostic data.
 
-   Wait for the tool to finish processing the diagnostic data and write the processed data to an .xmla file. The tool generates a .zip file that packages the .xmla file together with any diagnostic files from the template. The tool then saves the .zip file to the parent folder that you selected, and then opens a completion dialog box.
+   Wait for the tool to finish processing the diagnostic data and write the processed data to an .json file. The tool generates a .zip file that packages the .json file together with any diagnostic files from the template. The tool then saves the .zip file to the parent folder that you selected, and then opens a completion dialog box.
 
    As an example of data processing, if you select the **Data Classification** \> **Classification** template, the tool fetches the applicable rule packs and keyword dictionaries, and then tests data classification on the sample file that you specify in the template.
 
@@ -155,13 +158,20 @@ Follow these steps:
 
 1. Extract the contents of the .zip file.
 
-2. Parse the .xmla file, and view the parsed data objects by running the following PowerShell commands:
+2. Parse the .json file, and view the parsed data objects by running the following PowerShell commands:
 
    ```PowerShell
-   $debugInfo = Import-Clixml -Path <xmla file path>
-   $debugInfo
+   # Get the content of the JSON file
+    $jsonContent = Get-Content -Path "<JSON file path>" -Raw
+   # Load the System.Web.Extensions assembly which is needed for the JavaScriptSerializer class
+    [void][System.Reflection.Assembly]::LoadWithPartialName("System.Web.Extensions")
+   # Create a new instance of JavaScriptSerializer with a specified maximum JSON length for deserialization
+    $serializer = New-Object -TypeName System.Web.Script.Serialization.JavaScriptSerializer -Property @{MaxJsonLength=67108864}
+   # Convert JSON content to PowerShell object
+    $debugInfo = $serializer.DeserializeObject($jsonContent)
+   # Show output
+    $debugInfo
    ```
-
    For example, you might see the following data objects in the command output.
 
    :::image type="content" source="media/collect-compliance-diagnostics/data-objects-example.png" border="false" alt-text="Screenshot of an example data objects list." lightbox="./media/collect-compliance-diagnostics/data-objects-example.png":::

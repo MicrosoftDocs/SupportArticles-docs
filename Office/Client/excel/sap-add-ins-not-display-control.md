@@ -10,12 +10,13 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\AddIns
   - CSSTroubleshoot
 appliesto: 
   - Excel for Microsoft 365
   - PowerPoint for Microsoft 365
   - Word for Microsoft 365
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # SAP add-ins don't display controls after update to Office 1806 or higher
