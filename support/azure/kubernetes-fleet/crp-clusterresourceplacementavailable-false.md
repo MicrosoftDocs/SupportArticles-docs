@@ -1,6 +1,6 @@
 ---
 title: ClusterResourcePlacementAvailable is false when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
-description: Helps you resolve ClusterResourcePlacementAvailable  failure when propagating resource by using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
+description: Helps you resolve ClusterResourcePlacementAvailable failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
 ms.date: 07/22/2024
 ms.reviewer: 
 ms.service: kubernetes-fleet
@@ -9,11 +9,11 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 
 # Resource propagation failure: ClusterResourcePlacementAvailable is false
 
-This article describes how to troubleshoot `ClusterResourcePlacementAvailable` issues when propagating resources using `ClusterResourcePlacement` object API in Azure Kubernetes Fleet Manager.
+This article describes how to troubleshoot `ClusterResourcePlacementAvailable` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
-When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementAvailable` status shows as false.
+When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementAvailable` status shows as `false`.
 
 ## Cause
 
@@ -24,9 +24,9 @@ This issue might occur because of one of the following reasons:
 
 ## Case study
 
-The example below shows how ClusterResourcePlacement can fail to propagate a deployment to a member cluster due to an invalid image name.
+The following example shows that `ClusterResourcePlacement` doesn't propagate a deployment to a member cluster because of an invalid image name.
 
-#### ClusterResourcePlacement spec
+#### ClusterResourcePlacement specifications
 
 ```YAML
 apiVersion: placement.kubernetes-fleet.io/v1beta1
@@ -153,7 +153,7 @@ status:
     namespace: test-ns
     version: v1
  ```
-In the `failedPlacements` section for `kind-cluster-1`, the `message` field explains why the resource failed to apply on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` with the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object intended for the member cluster `kind-cluster-1` hasn't been applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
+In the `failedPlacements` section for `kind-cluster-1`, the `message` field explains why the resource wasn't applied on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` and shows the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object that's intended for the member cluster `kind-cluster-1` wasn't applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
 
 ### Work status of kind-cluster-1
 ```
@@ -213,12 +213,12 @@ conditions:
     version: v1
 ```
 
-Check the `Available` status for `kind-cluster-1`, and you can see that the `my-deployment` deployment isn't yet available on the member cluster. This suggests there may be an issue with the deployment manifest.
+Check the `Available` status for `kind-cluster-1`. You can see that the `my-deployment` deployment isn't yet available on the member cluster. This suggests that an issue might be affecting the deployment manifest.
 
 ### Resolution
 
-In this scenario, a potential solution is to check the deployment in the member cluster, as the message indicates that the root cause of the issue is a bad image name. Once this image name is identified, you can correct the deployment manifest and update it. After you fix and update the resource manifest, the `ClusterResourcePlacement` object API will automatically propagate the corrected resource to the member cluster.
+In this situation, a potential solution is to check the deployment in the member cluster because the message indicates that the root cause of the issue is a bad image name. After this image name is identified, you can correct the deployment manifest and update it. After you fix and update the resource manifest, the `ClusterResourcePlacement` object API automatically propagates the corrected resource to the member cluster.
 
-For all other scenarios, ensure the propagated resource is configured correctly. Additionally, verify that the selected cluster has sufficient available capacity to accommodate the new resources.
+For all other situations, make sure that the propagated resource is configured correctly. Additionally, verify that the selected cluster has sufficient available capacity to accommodate the new resources.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
