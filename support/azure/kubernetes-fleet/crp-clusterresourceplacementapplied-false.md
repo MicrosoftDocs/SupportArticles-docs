@@ -1,6 +1,6 @@
 ---
 title: ClusterResourcePlacementApplied failure when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
-description: Helps you resolve ClusterResourcePlacementApplied failure when propagating resource by using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
+description: Helps you resolve ClusterResourcePlacementApplied failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
 ms.date: 07/22/2024
 ms.reviewer: 
 ms.service: kubernetes-fleet
@@ -9,31 +9,31 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 
 # Resource propagation failure: ClusterResourcePlacementApplied is false
 
-This article describes how to troubleshoot `ClusterResourcePlacementApplied` issues when propagating resources using `ClusterResourcePlacement` object API in Azure Kubernetes Fleet Manager.
+This article describes how to troubleshoot `ClusterResourcePlacementApplied` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
-When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementApplied` status shows as false.
+When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementApplied` status shows as **false**.
 
 ## Cause
 
 This issue might occur because of one of the following reasons:
 
 - The resource already exists on the cluster and isn't managed by the fleet controller. To resolve this issue, update the `ClusterResourcePlacement` manifest YAML file to use `AllowCoOwnership` within `ApplyStrategy` to allow the fleet controller to manage the resource.
-- Another `ClusterResourcePlacement` deployment is already managing the resource for the selected cluster with a different apply strategy.
-- The `ClusterResourcePlacement` deployment fails to apply the manifest due to syntax errors or invalid resource configurations. This can also occur when a resource is propagated through an envelope object.
+- Another `ClusterResourcePlacement` deployment is already managing the resource for the selected cluster by using a different apply strategy.
+- The `ClusterResourcePlacement` deployment doesn't apply the manifest because of syntax errors or invalid resource configurations. This might also occur if a resource is propagated through an envelope object.
 
 ## Troubleshooting steps
 
-1. View the `ClusterResourcePlacement` status and locate the `placementStatuses` section. Check the `placementStatuses` to identify which clusters have the `ResourceApplied` condition set to false and note their clusterName.
-2. Locate the `Work` object in the hub cluster: Use the identified `clusterName` to locate the Work object associated with the member cluster. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
-3. Check the status of the `Work` object to understand the specific issues preventing successful resource application.
+1. View the `ClusterResourcePlacement` status and locate the `placementStatuses` section. Check the `placementStatuses` value to identify which clusters have the `ResourceApplied` condition set to `false`, and note their `clusterName` value.
+2. Locate the `Work` object in the hub cluster. Use the identified `clusterName` to locate the `Work` object that's associated with the member cluster. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
+3. Check the status of the `Work` object to understand the specific issues that are preventing successful resource application.
 
 ## Case study
 
-In the following example, the `ClusterResourcePlacement` is trying to propagate a namespace containing a deployment to two member clusters. However, the namespace already exists on one member cluster, specifically `kind-cluster-1`.
+In the following example, `ClusterResourcePlacement` is trying to propagate a namespace that contains a deployment to two member clusters. However, the namespace already exists on one member cluster, specifically `kind-cluster-1`.
 
-### ClusterResourcePlacement spec
+### ClusterResourcePlacement specifications
 
 ```YAML
 apiVersion: placement.kubernetes-fleet.io/v1beta1
@@ -191,7 +191,7 @@ status:
     version: v1
 ```
 
-In the `failedPlacements` section for `kind-cluster-1`, the `message` fields explaining why the resource failed to apply on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` with the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object intended for the member cluster `kind-cluster-1` hasn't been applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
+In the `failedPlacements` section for `kind-cluster-1`, the `message` fields explain why the resource wasn't applied on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` and shows the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object that's intended for the member cluster `kind-cluster-1` wasn't applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
 
 ### Work status of kind-cluster-1
 
@@ -254,12 +254,12 @@ In the `failedPlacements` section for `kind-cluster-1`, the `message` fields exp
       version: v1
 ```
 
-Check the `Work` status, particularly the `manifestConditions` section, you can see that the namespace couldn't be applied but the deployment within the namespace got propagated from hub to the member cluster.
+Check the `Work` status, particularly the `manifestConditions` section. You can see that the namespace couldn't be applied but the deployment within the namespace got propagated from the hub to the member cluster.
 
 ### Resolution
 
-In this scenario, a potential solution is to set the `AllowCoOwnership` to true in the ApplyStrategy policy. However, it's essential to note that this decision rests with the user, as the resources might not be shared.
+In this situation, a potential solution is to set the `AllowCoOwnership` to `true` in the ApplyStrategy policy. However, it's important to notice that this decision should be made by the user because the resources might not be shared.
 
-In addition, reviewing the logs for the [Apply Work Controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/work/apply_controller.go) may provide more insights into why the resources are unavailable.
+Additionally, you can review the logs for the [Apply Work Controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/work/apply_controller.go) for more insights into why the resources are unavailable.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
