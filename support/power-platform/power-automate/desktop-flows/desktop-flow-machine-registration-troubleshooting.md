@@ -21,6 +21,8 @@ When you register your machine, you receive one of the following error messages:
 
 > We didn't get a response when trying to register your machine. Please click learn more for more details.
 
+> The registration failed because the machine could not communicate with the cloud services due to a TLS error.
+
 ## Resolution
 
 To register your computer to run desktop flows through a Power Automate cloud flow, the Power Automate service on your computer needs to connect to the Power Automate cloud services. Here's a list of what to verify:
