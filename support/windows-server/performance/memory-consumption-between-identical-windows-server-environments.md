@@ -58,7 +58,7 @@ Ideally, we have the following three data sets from the same period for comparis
 ### Compare key performance counters for memory
 
 - **Available MBytes**: Remaining free RAM
-- **%Committed Bytes In Use**: Allocated physical resources
+- **% Committed Bytes In Use**: Allocated physical resources
 - **Pool Paged Bytes**: Kernel memory that can be paged out
 - **Pool Nonpaged Bytes**: Kernel memory that can't be paged out
 - **Cache Bytes**: Disk usage kernel memory
@@ -76,7 +76,7 @@ Ensure workloads are comparable by reviewing performance counters under similar 
 
 |Counter|Vanilla installation|Client A|Client B|
 |---|---|---|---|
-|**%Committed Bytes In Use**|X%|Y%|Z%|
+|**% Committed Bytes In Use**|X%|Y%|Z%|
 |**Available MBytes**|X|Y|Z|
 |**Process\Working Set** (**_Total**)|X|Y|Z|
 
@@ -88,7 +88,7 @@ Use tables to compare the three systems (vanilla, client A, and client B) by usi
 
 |Counter|Vanilla installation|Client A|Client B|
 |---|---|---|---|
-|**%Committed Bytes In Use**|28.5%|42.7%|83%|
+|**% Committed Bytes In Use**|28.5%|42.7%|83%|
 |**Available MBytes** (Min)|10.8 GB|7.5 GB|2.6 GB|
 |**Working Set** (**_Total**) (Max)|5.2 GB|8.7 GB|15.8 GB|
 
@@ -98,7 +98,7 @@ The result seems to confirm a different user load behavior. The result can also 
 |---|---|---|---|
 |**System\Processes** (Max)|199|268|338|
 
-For further confirmation, you can use the CPU usage counter, **Processor\\%Idle Time** (**_Total**), to identify a different user load pattern. Here are screenshots of some samples (the first is for the vanilla installation, the second is for client A, and the third is for client B).
+For further confirmation, you can use the CPU usage counter, **Processor\\% Idle Time** (**_Total**), to identify a different user load pattern. Here are screenshots of some samples (the first is for the vanilla installation, the second is for client A, and the third is for client B).
 
 Vanilla:  
 :::image type="content" source="media/memory-consumption-between-identical-windows-server-setup/performance-monitor-trace-on-vanilla-installation.png" alt-text="Screenshot of a Performance Monitor trace on the vanilla installation." border="true":::
