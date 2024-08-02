@@ -1,7 +1,7 @@
 ---
 title: Use Cipher.exe to overwrite deleted data
 description: Describes how to use Cipher.exe to overwrite deleted data in Windows Server 2003.
-ms.date: 12/26/2023
+ms.date: 08/02/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -32,8 +32,8 @@ When you encrypt plain text files, Encrypting File System (EFS) makes a backup c
 To overwrite deleted data on a volume by using Cipher.exe, use the `/w` switch with the cipher command:
 
 1. Quit all programs.
-2. Select **Start** > **Run**, type *cmd*, and then press ENTER.
-3. Type `cipher /w: folder`, and then press ENTER, where **folder** is any folder in the volume that you want to clean. For example, the `cipher /w:c:\test` command causes all deallocated space on drive C to be overwritten. If `C:\folder` is a Mount Point or points to a folder on another volume, all deallocated space on that volume will be cleaned.
+2. Select **Start** > **Run**, type *cmd*, and then press <kbd>Enter</kbd>.
+3. Type `cipher /w:<directory>`, and then press ENTER, where `<directory>` is any folder in the volume that you want to clean. For example, the `cipher /w:C` command causes all deallocated space on drive C to be overwritten. If `<directory>` is a mount point or points to a folder on another volume, all deallocated space on that volume will be cleaned.
 
 Data that isn't allocated to files or folders is overwritten. The data is permanently removed. It can take a long time if you overwrite a large amount of space.
 
