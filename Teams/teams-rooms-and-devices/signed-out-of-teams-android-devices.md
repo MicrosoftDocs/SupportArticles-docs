@@ -25,11 +25,11 @@ ms.reviewer: kponnus
 Some certified Android devices in your environment are signed out of Microsoft Teams automatically. This issue affects the following devices:
 
 - Teams Rooms on Android
-- Teams phones
 - Teams panels
+- Teams phones
 - Teams displays
 
-If you're a tenant administrator, you can get information about the sign-in state of your devices from the [sign-in logs in the Microsoft Entra admin center](/azure/active-directory/reports-monitoring/concept-sign-ins). To access these logs, navigate to the Microsoft Entra ID menu > **Monitoring** > **Sign-in logs**.
+If you're a tenant administrator, you can get information about the sign-in state of your devices from the [sign-in logs in the Microsoft Entra admin center](/azure/active-directory/reports-monitoring/concept-sign-ins). To access these logs, navigate to the Microsoft Entra ID menu > **Monitoring & health** > **Sign-in logs**.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-log.png" alt-text="Screenshot of a sign-in log with the User sign-ins (non-interactive) tab, the Applications, Status, and Resource columns and their entries highlighted.":::
 
@@ -41,11 +41,11 @@ You can also use the information in the sign-in logs to determine whether this i
 
 These entries indicate that the issue is affecting your device.
 
-To sign in to Teams on an affected device, select the option based on the device type.
+To sign in to Teams on an affected device, select the appropriate option based on the device type.
 
 ## Teams Rooms on Android and Teams panels
 
-If the issue affects Teams Rooms on Android and Teams panels, you can run the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
+If the issue affects Teams Rooms on Android and Teams panels, you can run the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
 
 > [!NOTE]
 >
@@ -54,7 +54,7 @@ If the issue affects Teams Rooms on Android and Teams panels, you can run the [M
 
 To run the connectivity test, follow these steps:
 
-1. Open a web browser and navigate to the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test.
+1. Open a web browser and navigate to the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test.
 1. Sign in by using the credentials of a Global Administrator account.
 1. Specify the username for the account that can't access the Teams Rooms app.
 1. In the **Device Selection** field, select a type for the affected user's device.
@@ -65,7 +65,7 @@ After the test finishes, the screen displays details about all the checks that w
 
 ## Teams phones
 
-If the issue affects Teams phones, you can run the [Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test verifies that the user account meets the requirements for a Teams user to sign in to a Teams Android desk phone. For more information about checks that this test performs, see [Teams Android Desk Phone Diagnostic now available](https://techcommunity.microsoft.com/t5/microsoft-teams-support/new-diagnostic-updated-teams-android-desk-phone-diagnostic-now/ba-p/3957808). 
+If the issue affects Teams phones, you can run the [Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test verifies that the user account meets the requirements for a Teams user to sign in to a Teams Android desk phone. For more information about the checks that this test performs, see [Teams Android Desk Phone Diagnostic now available](https://techcommunity.microsoft.com/t5/microsoft-teams-support/new-diagnostic-updated-teams-android-desk-phone-diagnostic-now/ba-p/3957808).
 
 > [!NOTE]
 >
