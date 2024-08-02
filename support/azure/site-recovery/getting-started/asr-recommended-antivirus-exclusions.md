@@ -2,7 +2,7 @@
 title: Recommended antivirus exclusions for Azure Recovery Services
 description: Describes recommended antivirus (AV) settings for servers that have Microsoft Azure Recovery Services software installed. The various exclusion sets for each role are described.
 ms.date: 10/10/2020
-ms.service: site-recovery
+ms.service: azure-site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: markstan
