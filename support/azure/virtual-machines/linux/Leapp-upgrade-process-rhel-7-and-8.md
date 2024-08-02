@@ -30,6 +30,7 @@ For more information on performing a `Leapp upgrade` process on custom or golden
 
 - Make a backup of the virtual machine or a snapshot of the OS disk.
 - Clear enough space in /var/lib/leapp. Having at least 2-5 GB of free space is a safe practice
+- SAP process must be stopped during the OS update process.
 - Set up access to the serial console
 - Root privileges.
 
