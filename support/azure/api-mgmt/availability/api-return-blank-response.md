@@ -2,7 +2,7 @@
 title: Azure API Management Troubleshooting Scenario 1 - API returning blank response
 description: Provides troubleshooting steps to an issue in which Azure API is returning blank response.
 ms.date: 03/04/2021
-ms.service: api-management
+ms.service: azure-api-management
 ms.author: genli
 author: genlin
 ms.reviewer: 

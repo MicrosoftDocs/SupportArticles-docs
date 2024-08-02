@@ -4,7 +4,7 @@ description: Provides troubleshooting steps to an issue in which SOAP-based API 
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: api-management
+ms.service: azure-api-management
 ms.reviewer: 
 ms.custom: sap:Availability or Unexpected API Responses
 ---
