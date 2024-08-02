@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot ClusterResourcePlacementScheduled failure when using ClusterResourcePlacement in Azure Kubernetes Fleet Manager APIs
 description: Helps you resolve ClusterResourcePlacementScheduled failure when propagating resources by using the ClusterResourcePlacement object in Azure Kubernetes Fleet Manager.
-ms.date: 07/22/2024
+ms.date: 08/02/2024
 ms.reviewer: chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
@@ -149,7 +149,7 @@ status:
   ...
 ```
 
-In the `ClusterResourcePlacement` status, the `ClusterResourcePlacementScheduled` condition status shows as `False`. To figure out why the scheduler fails to schedule the resource for the specified placement policy, check the `ClusterSchedulingPolicySnapshot` spec and status. To learn how to get the latest `ClusterSchedulingPolicySnapshot`, see [How to find and verify the latest ClusterSchedulingPolicySnapshot for a ClusterResourcePlacement deployment](troubleshoot-clusterresourceplacement-api-issues.md#how-to-find-and-verify-the-latest-clusterschedulingpolicysnapshot-for-a-clusterresourceplacement-deployment).
+In the `ClusterResourcePlacement` status, the `ClusterResourcePlacementScheduled` condition status shows as `False`. To figure out why the scheduler fails to schedule the resource for the specified placement policy, check the `ClusterSchedulingPolicySnapshot` spec and status. To learn how to get the latest `ClusterSchedulingPolicySnapshot`, see [How can I find and verify the latest ClusterSchedulingPolicySnapshot for a ClusterResourcePlacement deployment?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-and-verify-the-latest-clusterschedulingpolicysnapshot-for-a-clusterresourceplacement-deployment).
 
 ### Latest ClusterSchedulingPolicySnapshot
 
