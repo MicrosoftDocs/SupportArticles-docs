@@ -105,7 +105,7 @@ After installing or upgrading the Azure File Sync agent (v17.3 or later), you ma
 
 - ServerRegistration.exe or AfsUpdater.exe fails to open
 
-This issue occurs because the Azure File Sync agent has a dependency on a Windows security feature and operating system updates for this security feature are missing.
+This issue occurs because the Azure File Sync agent has a dependency on a Windows security feature and updates for this security feature are not installed.
 
 To resolve this issue, verify your Windows Server has the following updates installed:
 - Windows Server 2012 R2: [KB5021653](https://support.microsoft.com/topic/kb5021653-out-of-band-update-for-windows-server-2012-r2-november-17-2022-8e6ec2e9-6373-46d7-95bc-852f992fd1ff)
