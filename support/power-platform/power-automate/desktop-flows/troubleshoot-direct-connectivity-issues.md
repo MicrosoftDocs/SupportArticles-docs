@@ -2,7 +2,7 @@
 title: Direct connectivity issues in Power Automate for desktop
 description: Provides more information about how to solve the direct connectivity issues in Power Automate for desktop.
 ms.reviewer: guco, madiazor, johndund
-ms.date: 07/06/2023
+ms.date: 08/05/2024
 ms.subservice: power-automate-desktop-flows
 ---
 # Direct connectivity issues in Power Automate for desktop
