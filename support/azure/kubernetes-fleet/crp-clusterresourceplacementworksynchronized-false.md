@@ -1,6 +1,6 @@
 ---
-title: ClusterResourcePlacementWorkSynchronized failure when using ClusterResourcePlacement in Azure Kubernetes Fleet Manager
-description: Helps you resolve the ClusterResourcePlacementWorkSynchronized failure when propagating resources using the ClusterResourcePlacement object in Fleet.
+title: ClusterResourcePlacementWorkSynchronized failure when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
+description: Helps you resolve the ClusterResourcePlacementWorkSynchronized failure when you propagate resources using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager.
 ms.date: 08/05/2024
 ms.reviewer: chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: kubernetes-fleet
@@ -8,7 +8,7 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 # Resource propagation failure: ClusterResourcePlacementWorkSynchronized is false
 
-This article describes how to troubleshoot `ClusterResourcePlacementWorkSynchronized` issues when propagating resources using the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager.
+This article describes how to troubleshoot `ClusterResourcePlacementWorkSynchronized` issues when you propagate resources using the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
@@ -132,7 +132,7 @@ In this situation, here are several potential solutions:
 
 - Modify the `ClusterResourcePlacement` with a newly selected cluster. 
 - Delete the `ClusterResourcePlacement` to remove the work through garbage collection.
-- Rejoin the member cluster. The namespace can only be regenerated if after rejoining the cluster.
+- Rejoin the member cluster. The namespace can only be regenerated after rejoining the cluster.
 
 In other situations, you might opt to wait for the work to finish propagating.
 
