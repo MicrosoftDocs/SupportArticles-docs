@@ -18,19 +18,19 @@ _Original KB number:_ &nbsp; 4513675
 
 > Required field 'assignedTo' contained no valid users in the organization
 
-This error occurs if the input value(s) to the **Assigned To** field of the approval action isn't a well-formatted email address, UPN, or Microsoft Entra object ID. Or, it's well-formatted, but doesn't match any users in Microsoft Graph. If multiple users are specified (semi-colon delimited), this means that all entries couldn't be found in Graph.
+This error occurs if the input value(s) to the **Assigned To** field of the approval action isn't a well-formatted email address, UPN, or Microsoft Entra object ID. Or, it's well-formatted but doesn't match any users in Microsoft Graph. If multiple users are specified (semi-colon delimited), this means that all entries can't be found in Graph.
 
 ### InvalidApprovalCreateRequestAssignedToMissing
 
 > Required field 'assignedTo' is missing or empty.
 
-This error occurs if the **Assigned To** field of the approval action doesn't contain any values. The [flow designer](/power-automate/desktop-flows/flow-designer) prevents any flows from being saved without any value for this field. So, this issue typically occurs if the **Assigned To** field is populated from the output of some other steps and for this flow run, and there is no value for the expression or output field.
+This error occurs if the **Assigned To** field of the approval action doesn't contain any values. The [flow designer](/power-automate/desktop-flows/flow-designer) prevents any flows from being saved without any value for this field. So, this issue typically occurs if the **Assigned To** field is populated from the output of some other steps and for this flow run, there's no value for the expression or output field.
 
 ### InvalidApprovalRequestor
 
 > The approval requestor must be a single, valid user account within your organization
 
-This error occurs if the input value(s) to the **Assigned To** field of the approval action isn't a well-formatted email address, UPN, or Microsoft Entra object ID. Or, it's well-formatted, but doesn't match any users in Microsoft Graph. You also receive this error if multiple users are specified for the **Requestor** field.
+This error occurs if the input value(s) to the **Assigned To** field of the approval action isn't a well-formatted email address, UPN, or Microsoft Entra object ID. Or, it's well-formatted but doesn't match any users in Microsoft Graph. You also receive this error if multiple users are specified for the **Requestor** field.
 
 ### InvalidXrmRecordId
 
@@ -42,7 +42,7 @@ The record identifier passed to "Wait for an approval" is null, empty, or not a 
 
 > Found multiple matching users ('\<ID>, \<ID>') for 'someUserName@contoso.com'.
 
-This error will occur if two users in Microsoft Graph are found for the same **Assigned To** or **Requestor** input (email address or UPN). Rather than potentially assign the approval to the wrong user account, the flow will fail the run. The unique Microsoft Entra object IDs for the two or more matching records are returned in the error message so that users can investigate further with a user administrator in their tenant. The user accounts can be viewed on `graph.microsoft.com`.
+This error occurs if two users in Microsoft Graph are found for the same **Assigned To** or **Requestor** input (email address or UPN). Rather than potentially assigning the approval to the wrong user account, the flow will fail to run. The unique Microsoft Entra object IDs for the two or more matching records are returned in the error message so that users can investigate further with an administrator user in their tenants. The user accounts can be viewed on `graph.microsoft.com`.
 
 ## Attachments
 
@@ -56,13 +56,13 @@ The attachment content must be specified in [base64 format](https://en.wikipedia
 
 > The content for attachment '...' is empty. Attachments with empty content are not supported.
 
-Empty attachments (zero bytes) aren't supported.
+Empty attachments (0 bytes) aren't supported.
 
 ### CdsApiAttachmentSizeLimitExceeded
 
 > Attachment file size limit exceeded. Please contact your admin to make sure the limit is properly configured (The default is 5MB).
 
-The attachment is too large for your Dataverse instance. The default size is five MB per file, but this can be configured by database administrators.
+The attachment is too large for your Dataverse instance. The default size is 5 MB per file, but this can be configured by database administrators.
 
 ### CdsApiAttachmentBlockedFileExtension
 
@@ -80,7 +80,7 @@ The combined size of all attachments on this approval is too large. Only 50 MB o
 
 > The attachment name '...' is invalid.
 
-The specified attachment name is invalid because it contains characters such as (but not limited to), `/`, `\`, `|`, `?`, `*`, `>`, `<`, `"`.
+The specified attachment name is invalid because it contains (but isn't limited to) characters such as `,`, `/`, `\`, `|`, `?`, `*`, `>`, `<`, and `"`.
 
 ## Provisioning errors
 
@@ -90,7 +90,7 @@ For more information about provisioning errors, see [Power Automate Approval Dat
 
 > The Common Data Service database for this environment is disabled
 
-The Microsoft Dataverse (previously known as Common Data Service) instance has been disabled in this environment. This isn't expected, and is might related to the expiration of all flow and Dataverse plans within your Microsoft Entra tenant. To ensure the database can be enabled, make sure at least one user has active plans.
+The Microsoft Dataverse (previously known as Common Data Service) instance has been disabled in this environment. This isn't expected and might be related to the expiration of all flow and Dataverse plans within your Microsoft Entra tenant. To ensure the database can be enabled, provide at least one user that has active plans.
 
 ### CdsInstanceNotReady
 
