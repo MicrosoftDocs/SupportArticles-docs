@@ -1,6 +1,6 @@
 ---
-title: ClusterResourcePlacementScheduled failure when using ClusterResourcePlacement in Azure Kubernetes Fleet Manager
-description: Helps you resolve the ClusterResourcePlacementScheduled failure when propagating resources using the ClusterResourcePlacement object in Fleet.
+title: ClusterResourcePlacementScheduled failure when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
+description: Helps you resolve the ClusterResourcePlacementScheduled failure when you propagate resources using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager.
 ms.date: 08/05/2024
 ms.reviewer: chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: kubernetes-fleet
@@ -8,7 +8,7 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 # Resource propagation failure: ClusterResourcePlacementScheduled is false
 
-This article describes how to troubleshoot `ClusterResourcePlacementScheduled` issues when propagating resources using the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager.
+This article describes how to troubleshoot `ClusterResourcePlacementScheduled` issues when you propagate resources using the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
@@ -149,7 +149,7 @@ status:
   ...
 ```
 
-In the `ClusterResourcePlacement` status, the `ClusterResourcePlacementScheduled` condition status shows as `False`. To figure out why the scheduler can't schedule the resource for the specified placement policy, check the `ClusterSchedulingPolicySnapshot` specification and status. To learn how to get the latest `ClusterSchedulingPolicySnapshot`, see [How to find and verify the latest ClusterSchedulingPolicySnapshot for a ClusterResourcePlacement deployment](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-and-verify-the-latest-clusterschedulingpolicysnapshot-for-a-clusterresourceplacement-deployment).
+In the `ClusterResourcePlacement` status, the `ClusterResourcePlacementScheduled` condition status shows as `False`. To figure out why the scheduler can't schedule the resource for the specified placement policy, check the `ClusterSchedulingPolicySnapshot` specification and status. To learn how to get the latest `ClusterSchedulingPolicySnapshot`, see [How can I find and verify the latest ClusterSchedulingPolicySnapshot for a ClusterResourcePlacement deployment](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-and-verify-the-latest-clusterschedulingpolicysnapshot-for-a-clusterresourceplacement-deployment).
 
 ### Latest ClusterSchedulingPolicySnapshot
 
