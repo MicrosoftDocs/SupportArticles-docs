@@ -84,7 +84,7 @@ Administrators can block Microsoft Store for end users. In such case, Microsoft 
 
 The usual policy to disable the Microsoft Store is **RemoveWindowsStore**. This policy blocks users from opening Microsoft Store, however Microsoft Store Apps aren't restricted from updating.
 
-If the issue is about Microsoft Store Apps packages not getting updated automatically, check [Verify required endpoints aren't blocked from firewall or proxy](#verify-required-endpoints-are-not-blocked-from-firewall-or-proxy).
+If the issue is about Microsoft Store Apps packages not getting updated automatically, check [Verify required endpoints aren't blocked from firewall or proxy](#verify-required-endpoints-arent-blocked-from-firewall-or-proxy).
 
 ## Using `winget` to install packages
 
