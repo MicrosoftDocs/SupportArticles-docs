@@ -31,10 +31,10 @@ When you run the `New-MigrationEndpoint` cmdlet to create a PublicFolder or Publ
 
 ## Cause
 
-These errors occur because the following mailboxes aren't on the same server:
+These errors occur because the following mailboxes aren't on the same mailbox database:
 
 - The primary hierarchy public folder mailbox.
-- The organization mailbox that's named SystemMailbox{*MailboxID*}. (This is a type of arbitration mailbox.)
+- The arbitration mailbox that's named "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}"
 
 ## Resolution
 
@@ -42,34 +42,38 @@ To resolve this problem, make sure that the databases that host these two mailbo
 
 1. Locate the database that hosts the primary hierarchy public folder mailbox by running the one of the following cmdlet options:
 
-   **Option 1**
-
     ```powershell
-    Get-Mailbox -PublicFolder | ?{$_.IsRootPublicFolderMailbox -eq $true} | ft name,database
-    Get-MailboxDatabaseCopyStatus <database returned from the first cmdlet>
-    ```
-
-   **Option 2**
-
-    ```powershell
+    Set-ADServerSettings -ViewEntireForest:$true
     Get-MailboxDatabase (Get-Mailbox -PublicFolder | ?{$_.IsRootPublicFolderMailbox -eq $true}).database | Get-MailboxDatabaseCopyStatus
     ```
 
-1. Locate the database that hosts the primary hierarchy public folder mailbox by running one the following cmdlet options:
-
-   **Option 1**
+2. Locate the database that hosts the arbitration mailbox named "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" by running one the following cmdlet options:
 
     ```powershell
-    Get-Mailbox -Arbitration | ?{$_.name -like "SystemMailbox{MailboxID}"} | ft database
-    Get-MailboxDatabaseCopyStatus <database returned from the first cmdlet>
+    Set-ADServerSettings -ViewEntireForest:$true
+    Get-MailboxDatabase (Get-Mailbox -Arbitration "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}").database | Get-MailboxDatabaseCopyStatus
     ```
 
-    **Option 2**
+3. Use following command to move the arbitration mailbox to the database that hosts Primary hierarchy public folder mailbox.
+
+     ```powershell
+    Set-ADServerSettings -ViewEntireForest:$true
+    Get-Mailbox -Arbitration "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" | New-MoveRequest -TargetDatabase <Database that hosts Primary hierarchy public folder mailbox)
+    ```
+Note:
+In case there is problem with the arbitration mailboxes (like the arbitration mailbox do not exists or are corrupted), use [this](https://learn.microsoft.com/exchange/architecture/mailbox-servers/recreate-arbitration-mailboxes) article to re-create the 
+arbitration mailboxes and ensure the conditions mentioned in the cause section are satisfied.
+
+4. Use following command to ensure the server hosting the arbitration mailbox and primary hierarchy public folder mailbox has MRS Proxy enabled.
 
     ```powershell
-    Get-MailboxDatabase (Get-Mailbox -Arbitration | ?{$_.name -like "SystemMailbox{MailboxID}"}).database | Get-MailboxDatabaseCopyStatus
+    Get-WebServicesVirtualDirectory -Server <servername> |fl *mrsproxy*
     ```
 
-1. If the databases that host the primary hierarchy public folder mailbox and the arbitration mailbox have a copy on the same server, activate both database copies on the same server.
+If MRSProxyEnabled is not True, use following command to enable the MRS Proxy:
 
-    Otherwise, move the arbitration mailbox or the primary hierarchy public folder mailbox so that both mailboxes are on the same server.
+    ```powershell
+    Get-WebServicesVirtualDirectory -Server batexch5 |Set-WebServicesVirtualDirectory -MRSProxyEnabled:$true
+    ```
+
+5. Try creating the migration endpoint
