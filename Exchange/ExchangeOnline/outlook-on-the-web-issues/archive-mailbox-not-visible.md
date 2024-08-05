@@ -1,6 +1,6 @@
 ---
-title: Archive mailbox doesn't display in Outlook or Outlook on the web
-description: Provides resolutions for scenarios in which the archive mailbox in Exchange Online doesn't display in Outlook for Windows or Outlook on the web.
+title: Archive mailbox doesn't appear in Outlook or Outlook on the web
+description: Provides resolutions for scenarios in which the archive mailbox in Exchange Online doesn't appear in Outlook for Windows or Outlook on the web.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -26,9 +26,9 @@ search.appverid: MET150
 ms.date: 08/03/2024
 ---
 
-# Archive mailbox doesn't display in Outlook or Outlook on the web
+# Archive mailbox doesn't appear in Outlook or Outlook on the web
 
-You enable a user's archive mailbox in Microsoft Exchange Online, but for some users or delegates the archive mailbox doesn't display in one or more of the following Microsoft products:
+You enable a user's archive mailbox in Microsoft Exchange Online, but for some users or delegates the archive mailbox doesn't appear in one or more of the following Microsoft products:
 
 - Classic Outlook for Windows
 - New Outlook for Windows
@@ -36,7 +36,7 @@ You enable a user's archive mailbox in Microsoft Exchange Online, but for some u
 
 The following sections provide troubleshooting steps for each of these products. Select the applicable section depending on which product doesn't display the archive mailbox. If the troubleshooting steps don't help you to resolve the issue, contact [Microsoft Support](https://support.microsoft.com/contactus/).
 
-## Archive mailbox doesn't display in classic Outlook for Windows
+## Archive mailbox doesn't appear in classic Outlook for Windows
 
 To troubleshoot the issue, follow these steps:
 
@@ -50,7 +50,7 @@ To troubleshoot the issue, follow these steps:
 
 4. Instruct the affected user to run [Microsoft Support and Recovery Assistant](https://support.microsoft.com/help/4098558/how-to-scan-outlook-by-using-the-sara-tool) to help diagnose the issue.
 
-## Archive mailbox doesn't display in new Outlook for Windows or Outlook on the web
+## Archive mailbox doesn't appear in new Outlook for Windows or Outlook on the web
 
 Select the applicable scenario depending on your Exchange deployment.
 

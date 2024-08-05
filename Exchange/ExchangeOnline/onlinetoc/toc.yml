@@ -425,8 +425,10 @@
           href: ../move-or-migrate-mailboxes/cutover-migration-invalid-smtp-address.md
         - name: Remote mailbox isn't moved when the move shows as Completed
           href: ../move-or-migrate-mailboxes/remote-mailbox-not-moved-when-move-shows-completed.md
-        - name: Resource ‎CiAgeOfLastNotification‎(System)‎ is unhealthy error
+        - name: Resource CiAgeOfLastNotification(System) is unhealthy error
           href: ../move-or-migrate-mailboxes/resource-ciageoflastnotification-system-is-unhealthy-error.md
+        - name: Restore missing folder data after a remote move migration
+          href: ../move-or-migrate-mailboxes/restore-missing-folder-data-after-migration.md
         - name: Server name doesn't update in a new region
           href: ../move-or-migrate-mailboxes/server-name-not-update-after-moved-new-region.md
         - name: StoragePermanentException during a mailbox migration
@@ -507,7 +509,7 @@
       items:
         - name: '"Send updates" prompt not displayed'
           href: /outlook/troubleshoot/calendaring/send-updates-prompt-not-displayed?context=/exchange/troubleshoot/context/online-context
-        - name: Archive mailbox doesn't display in Outlook or Outlook on the web
+        - name: Archive mailbox doesn't appear in Outlook or Outlook on the web
           href: ../outlook-on-the-web-issues/archive-mailbox-not-visible.md
         - name: Can't create a new message by using OWA
           href: ../outlook-on-the-web-issues/cannot-create-new-message-in-owa.md
