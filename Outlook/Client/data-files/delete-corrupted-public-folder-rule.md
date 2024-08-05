@@ -45,3 +45,6 @@ To resolve this issue, use the MFCMAPI tool to find and delete the corrupted rul
 1. For each message whose properties indicate a corrupted rule, right-click the message, and select **Delete Message** to delete the corrupted rule.
 
 After the corrupted rules are deleted, try to access the Folder Assistant again.
+
+Note:<BR>
+If the issue remains after deleting the corrupted rules OR if corrupt rule cannot be identified, follow the steps above to delete all the rules present and then accessing the Folder Assistant again. Alternaively, you can consider using [Exchange Transport Rules](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules)
