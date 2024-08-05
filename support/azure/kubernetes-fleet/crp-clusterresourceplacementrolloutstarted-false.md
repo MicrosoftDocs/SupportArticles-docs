@@ -24,7 +24,7 @@ The Cluster Resource Placement rollout strategy is blocked because the `RollingU
 ## Troubleshooting steps
 
 1. In the `ClusterResourcePlacement` status section, check the `placementStatuses` to identify clusters that have the `RolloutStarted` status set to `False`.
-2. Locate the corresponding `ClusterResourceBinding` for the identified cluster. For more information, see [How can I find the latest ClusterResourceBinding resource](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcebinding-resource). This resource should indicate the `Work` status (whether it was created or updated).
+2. Locate the corresponding `ClusterResourceBinding` for the identified cluster. For more information, see [How can I find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcebinding-resource). This resource should indicate the `Work` status (whether it was created or updated).
 3. Verify the values of `maxUnavailable` and `maxSurge` to ensure they align with your expectations.
 
 ## Case study
@@ -242,7 +242,7 @@ status:
 
 In the preceding output, the `ClusterResourcePlacementScheduled` condition status is shown as `False`. The `ClusterResourcePlacementRolloutStarted` status is also shown as `False` with the message: `The rollout is being blocked by the rollout strategy in 2 cluster(s)`.
 
-Check the latest `ClusterResourceSnapshot` by running the command in [How can I find the latest ClusterResourceBinding resource](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcesnapshot-resource).
+Check the latest `ClusterResourceSnapshot` by running the command in [How can I find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcesnapshot-resource).
 
 ### Latest ClusterResourceSnapshot
 
@@ -285,7 +285,7 @@ spec:
 
 In the `ClusterResourceSnapshot` specification, the `selectedResources` section now shows the namespace `test-ns`.
 
-Check the `ClusterResourceBinding` for `kind-cluster-1` to see if it was updated after the namespace `test-ns` was created. For more information, see [How can I find the latest ClusterResourceBinding resource](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcebinding-resource).
+Check the `ClusterResourceBinding` for `kind-cluster-1` to see if it was updated after the namespace `test-ns` was created. For more information, see [How can I find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcebinding-resource).
 
 ### ClusterResourceBinding for kind-cluster-1
 
