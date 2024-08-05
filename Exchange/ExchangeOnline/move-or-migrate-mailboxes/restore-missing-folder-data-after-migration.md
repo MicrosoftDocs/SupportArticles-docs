@@ -37,10 +37,9 @@ During a remote move migration, data might not migrate to Exchange Online becaus
 ## Resolution
 
 > [!IMPORTANT]
-
 > For data recovery, when you migrate users to Exchange Online, the users' on-premises mailboxes are only [soft-deleted](/exchange/recipients/disconnected-mailboxes/disconnected-mailboxes#working-with-soft-deleted-mailboxes). Exchange Server permanently deletes soft-deleted mailboxes when their retention period expires, if they aren't on hold. The default retention period for soft-deleted mailboxes is 30 days.
 
-If the retention period isn't expired, and the soft-deleted mailbox for a migrated user still exists, use the following steps to restore any missing data in the user's cloud mailbox.
+If the retention period hasn't expired, and the soft-deleted mailbox for a migrated user still exists, use the following steps to restore any missing data in the user's cloud mailbox.
 
 > [!NOTE]
 > Run all PowerShell cmdlets in the Exchange Management Shell (EMS).
