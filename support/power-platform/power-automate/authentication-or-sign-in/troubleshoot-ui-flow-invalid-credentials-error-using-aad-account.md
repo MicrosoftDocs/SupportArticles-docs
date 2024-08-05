@@ -59,7 +59,9 @@ There are many reasons you might receive this error when using a Microsoft Entra
 2. Identify the Microsoft Entra account to use in the machine configuration:
 
     1. Open **Settings** and select **Accounts**.
+
     2. Select **Access work or school**.
+
     3. Make sure you see text that says something like "Connected to <your_organization> Microsoft Entra ID." The account by which it says it's connected can be used in the connection.
 
 3. Synchronize the Microsoft Entra account on the device:
