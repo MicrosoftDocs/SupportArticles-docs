@@ -149,7 +149,7 @@ status:
   ...
 ```
 
-In the `ClusterResourcePlacement` status, the `ClusterResourcePlacementScheduled` condition status shows as `False`. To figure out why the scheduler can't schedule the resource for the specified placement policy, check the `ClusterSchedulingPolicySnapshot` specification and status. To learn how to get the latest `ClusterSchedulingPolicySnapshot`, see [How can I find and verify the latest ClusterSchedulingPolicySnapshot for a ClusterResourcePlacement deployment](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-and-verify-the-latest-clusterschedulingpolicysnapshot-for-a-clusterresourceplacement-deployment).
+In the `ClusterResourcePlacement` status, the `ClusterResourcePlacementScheduled` condition status shows as `False`. To figure out why the scheduler can't schedule the resource for the specified placement policy, check the `ClusterSchedulingPolicySnapshot` specification and status. To learn how to get the latest `ClusterSchedulingPolicySnapshot`, see [How can I find and verify the latest ClusterSchedulingPolicySnapshot for a ClusterResourcePlacement deployment?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-and-verify-the-latest-clusterschedulingpolicysnapshot-for-a-clusterresourceplacement-deployment).
 
 ### Latest ClusterSchedulingPolicySnapshot
 
