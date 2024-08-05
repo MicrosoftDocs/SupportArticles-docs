@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot ClusterResourcePlacementScheduled failure when using ClusterResourcePlacement in Azure Kubernetes Fleet Manager APIs
-description: Helps you resolve ClusterResourcePlacementScheduled failure when propagating resources by using the ClusterResourcePlacement object in Azure Kubernetes Fleet Manager.
-ms.date: 08/02/2024
+title: ClusterResourcePlacementScheduled failure when using ClusterResourcePlacement in Azure Kubernetes Fleet Manager
+description: Helps you resolve the ClusterResourcePlacementScheduled failure when propagating resources using the ClusterResourcePlacement object in Fleet.
+ms.date: 08/05/2024
 ms.reviewer: chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
@@ -12,17 +12,17 @@ This article describes how to troubleshoot `ClusterResourcePlacementScheduled` i
 
 ## Symptoms
 
-When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet Manager to propagate resources, the scheduler for Fleet workloads can't find all the clusters needed as specified by the scheduling policy and the `ClusterResourcePlacementScheduled` condition status shows as `False`.
+When using the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the scheduler for Fleet workloads can't find all the required clusters specified by the scheduling policy, and the `ClusterResourcePlacementScheduled` condition status shows as `False`.
 
 > [!NOTE]
 > To get more information about why the scheduling fails, you can check the [scheduler](https://github.com/Azure/fleet/blob/main/pkg/scheduler/scheduler.go) logs.
 
 ## Cause
 
-This issue might occur due to one of the following reasons:
+This issue might occur for one of the following reasons:
 
 - The placement policy is set to `PickFixed`, but the specified cluster names don't match any joined member cluster name in the fleet, or the specified cluster is no longer connected to the fleet.
-- The placement policy is set to `PickN`, and N clusters are specified, but there are fewer than N clusters that have joined the fleet or satisfy the placement policy.
+- The placement policy is set to `PickN`, and N clusters are specified, but fewer than N clusters have joined the fleet or satisfied the placement policy.
 - The `ClusterResourcePlacement` resource selector selects a reserved namespace.
 
 > [!NOTE]
@@ -30,9 +30,9 @@ This issue might occur due to one of the following reasons:
 
 ## Case study
 
-In the following example, the `ClusterResourcePlacement` with a `PickN` placement policy is trying to propagate resources to two clusters labeled `env:prod`. The two clusters, named `kind-cluster-1` and `kind-cluster-2`, are joined to the fleet. But only one member cluster, `kind-cluster-1`, has the label `env:prod`.
+In the following example, the `ClusterResourcePlacement` with a `PickN` placement policy is trying to propagate resources to two clusters labeled `env:prod`. The two clusters, named `kind-cluster-1` and `kind-cluster-2`, have joined the fleet. However, only one member cluster, `kind-cluster-1`, has the label `env:prod`.
 
-### ClusterResourcePlacement spec
+### ClusterResourcePlacement specification
 
 ```yaml
 spec:
@@ -149,7 +149,7 @@ status:
   ...
 ```
 
-In the `ClusterResourcePlacement` status, the `ClusterResourcePlacementScheduled` condition status shows as `False`. To figure out why the scheduler fails to schedule the resource for the specified placement policy, check the `ClusterSchedulingPolicySnapshot` spec and status. To learn how to get the latest `ClusterSchedulingPolicySnapshot`, see [How can I find and verify the latest ClusterSchedulingPolicySnapshot for a ClusterResourcePlacement deployment?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-and-verify-the-latest-clusterschedulingpolicysnapshot-for-a-clusterresourceplacement-deployment).
+In the `ClusterResourcePlacement` status, the `ClusterResourcePlacementScheduled` condition status shows as `False`. To figure out why the scheduler can't schedule the resource for the specified placement policy, check the `ClusterSchedulingPolicySnapshot` specification and status. To learn how to get the latest `ClusterSchedulingPolicySnapshot`, see [How to find and verify the latest ClusterSchedulingPolicySnapshot for a ClusterResourcePlacement deployment](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-and-verify-the-latest-clusterschedulingpolicysnapshot-for-a-clusterresourceplacement-deployment).
 
 ### Latest ClusterSchedulingPolicySnapshot
 

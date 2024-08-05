@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot ClusterResourcePlacementRolloutStarted failure when using ClusterResourcePlacement in Azure Kubernetes Fleet Manager APIs
-description: Helps you resolve ClusterResourcePlacementRolloutStarted failure when propagating resources by using the ClusterResourcePlacement object in Azure Kubernetes Fleet Manager APIs.
-ms.date: 08/02/2024
+title: ClusterResourcePlacementRolloutStarted failure when using ClusterResourcePlacement in Azure Kubernetes Fleet Manager
+description: Helps you resolve the ClusterResourcePlacementRolloutStarted failure when propagating resources using the ClusterResourcePlacement object in Fleet.
+ms.date: 08/05/2024
 ms.reviewer: chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
@@ -12,7 +12,7 @@ This article describes how to troubleshoot `ClusterResourcePlacementRolloutStart
 
 ## Symptoms
 
-When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet Manager to propagate resources, the selected resources aren't rolled out in all scheduled clusters and the `ClusterResourcePlacementRolloutStarted` condition status shows as `False`.
+When using the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the selected resources aren't rolled out in all scheduled clusters, and the `ClusterResourcePlacementRolloutStarted` condition status shows as `False`.
 
 > [!NOTE]
 > To get more information about why the rollout doesn't start, you can check the [rollout controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/rollout/controller.go) logs.
@@ -23,15 +23,15 @@ The Cluster Resource Placement rollout strategy is blocked because the `RollingU
 
 ## Troubleshooting steps
 
-1. In the `ClusterResourcePlacement` status section, check the `placementStatuses` to identify clusters with the `RolloutStarted` status set to `False`.
-2. Locate the corresponding `ClusterResourceBinding` for the identified cluster. For more information, see [How can I find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcebinding-resource). This resource should indicate the status of the `Work` whether it was created or updated.
-3. Verify the values for `maxUnavailable` and `maxSurge` to ensure they align with your expectations.
+1. In the `ClusterResourcePlacement` status section, check the `placementStatuses` to identify clusters that have the `RolloutStarted` status set to `False`.
+2. Locate the corresponding `ClusterResourceBinding` for the identified cluster. For more information, see [How to find the latest ClusterResourceBinding resource](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcebinding-resource). This resource should indicate the status of the work (whether it was created or updated).
+3. Verify the values of `maxUnavailable` and `maxSurge` to ensure they align with your expectations.
 
 ## Case study
 
-In the following example, the `ClusterResourcePlacement` is trying to propagate a namespace to three member clusters. However, during the initial creation of the `ClusterResourcePlacement`, the namespace doesn't exist on the hub cluster, and the fleet currently comprises two member clusters named `kind-cluster-1` and `kind-cluster-2`.
+In the following example, the `ClusterResourcePlacement` is trying to propagate a namespace to three member clusters. However, during the initial creation of the `ClusterResourcePlacement`, the namespace didn't exist on the hub cluster, and the fleet currently comprises two member clusters named `kind-cluster-1` and `kind-cluster-2`.
 
-### ClusterResourcePlacement spec
+### ClusterResourcePlacement specification
 
 ```yaml
 spec:
@@ -173,18 +173,18 @@ status:
       type: Available
 ```
 
-The previous output indicates that the resource `test-ns` namespace never exists on the hub cluster and shows the following `ClusterResourcePlacement` condition statuses:
+The preceding output indicates that the resource `test-ns` namespace never existed on the hub cluster and shows the following `ClusterResourcePlacement` condition statuses:
 
-- The `ClusterResourcePlacementScheduled` condition status shows as `False`, as the specified policy aims to pick three clusters, but the scheduler can only accommodate placement in two currently available and joined clusters.
-- The `ClusterResourcePlacementRolloutStarted` condition status shows as `True`, as the rollout process has commenced with two clusters being selected.
+- The `ClusterResourcePlacementScheduled` condition status shows as `False`, as the specified policy aims to pick three clusters, but the scheduler can only accommodate placements in two currently available and joined clusters.
+- The `ClusterResourcePlacementRolloutStarted` condition status shows as `True`, as the rollout process has started with two clusters selected.
 - The `ClusterResourcePlacementOverridden` condition status shows as `True`, as no override rules are configured for the selected resources.
 - The `ClusterResourcePlacementWorkSynchronized` condition status shows as `True`.
 - The `ClusterResourcePlacementApplied` condition status shows as `True`.
 - The `ClusterResourcePlacementAvailable` condition status shows as `True`.
 
-To ensure the seamless propagation of the namespace across the relevant clusters, proceed to create the `test-ns` namespace on the hub cluster. 
+To ensure seamless propagation of the namespace across the relevant clusters, proceed to create the `test-ns` namespace on the hub cluster. 
 
-### ClusterResourcePlacement status after the namespace test-ns is created on the hub cluster
+### ClusterResourcePlacement status after the namespace "test-ns" is created on the hub cluster
 
 ```output
 status:
@@ -240,9 +240,9 @@ status:
     version: v1
 ```
 
-In the previous output, the `ClusterResourcePlacementScheduled` condition status is shown as `False`. The `ClusterResourcePlacementRolloutStarted` status is also shown as `False` with the message `The rollout is being blocked by the rollout strategy in 2 cluster(s)`.
+In the preceding output, the `ClusterResourcePlacementScheduled` condition status is shown as `False`. The `ClusterResourcePlacementRolloutStarted` status is also shown as `False` with the message: `The rollout is being blocked by the rollout strategy in 2 cluster(s)`.
 
-Check the latest `ClusterResourceSnapshot` by running the command in [How can I find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcesnapshot-resource).
+Check the latest `ClusterResourceSnapshot` by running the command in [How to find the latest ClusterResourceBinding resource](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcesnapshot-resource).
 
 ### Latest ClusterResourceSnapshot
 
@@ -283,9 +283,9 @@ spec:
       - kubernetes
 ```
 
-In the `ClusterResourceSnapshot` spec, the `selectedResources` section now shows the namespace `test-ns`.
+In the `ClusterResourceSnapshot` specification, the `selectedResources` section now shows the namespace `test-ns`.
 
-Check the `ClusterResourceBinding` for `kind-cluster-1` to see if it gets updated after the namespace `test-ns` is created. For more information, see [How can I find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcebinding-resource).
+Check the `ClusterResourceBinding` for `kind-cluster-1` to see if it was updated after the namespace `test-ns` was created. For more information, see [How to find the latest ClusterResourceBinding resource](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcebinding-resource).
 
 ### ClusterResourceBinding for kind-cluster-1
 
@@ -351,22 +351,22 @@ status:
     type: Available
 ```
 
-The `ClusterResourceBinding` remains unchanged. In the `ClusterResourceBinding` spec, the `resourceSnapshotName` still references the old `ClusterResourceSnapshot` name. This issue occurs when there's no explicit `RollingUpdate` input from the user, because the default values are applied:
+The `ClusterResourceBinding` remains unchanged. In the `ClusterResourceBinding` specification, the `resourceSnapshotName` still references the old `ClusterResourceSnapshot` name. This issue occurs when there's no explicit `RollingUpdate` input from the user because the default values are applied:
 
-- `maxUnavailable` is configured to `25% * 3 (desired number), rounded to 1`.
-- `maxSurge` is configured to `25% * 3 (desired number), rounded to 1`.
+- The `maxUnavailable` value is configured to 25% × 3 (the desired number), rounded to `1`.
+- `maxSurge` is configured to 25% × 3 (the desired number), rounded to `1`.
 
-### Why ClusterResourceBinding doesn't get updated
+### Why ClusterResourceBinding isn't updated
 
-Initially, when the `ClusterResourcePlacement` was created, two `ClusterResourceBindings` were generated. However, since the rollout doesn't apply to the initial phase, the  `ClusterResourcePlacementRolloutStarted` condition was set to `True`.
+Initially, when the `ClusterResourcePlacement` was created, two `ClusterResourceBindings` were generated. However, since the rollout didn't apply to the initial phase, the  `ClusterResourcePlacementRolloutStarted` condition was set to `True`.
 
-Upon creating the `test-ns` namespace on the hub cluster, the rollout controller attempted to update the two existing `ClusterResourceBindings`. However, `maxUnavailable` was set to 1 due to a missing member cluster, which causes that the `RollingUpdate` configuration was too strict. 
+Upon creating the `test-ns` namespace on the hub cluster, the rollout controller attempted to update the two existing `ClusterResourceBindings`. However, `maxUnavailable` was set to `1` due to the lack of member clusters, which caused the `RollingUpdate` configuration to be too strict. 
 
 > [!NOTE]
-> During the update, if one of the bindings failed to apply, it will also violate the `RollingUpdate` configuration, which causes that `maxUnavailable` was set to 1.
+> During the update, if one of the bindings fails to apply, it will also violate the `RollingUpdate` configuration, which causes `maxUnavailable` to be set to `1`.
 
 ### Resolution
 
-In this scenario, to address this issue, consider manually setting `maxUnavailable` to a value greater than one to relax the `RollingUpdate` configuration. Alternatively, you can also join a third member cluster.
+In this situation, to address this issue, consider manually setting `maxUnavailable` to a value greater than `1` to relax the `RollingUpdate` configuration. Alternatively, you can join a third member cluster.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

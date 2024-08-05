@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot ClusterResourcePlacementWorkSynchronized failure when using ClusterResourcePlacement in Azure Kubernetes Fleet Manager APIs
-description: Helps you resolve ClusterResourcePlacementWorkSynchronized failure when propagating resources by using the ClusterResourcePlacement object in Azure Kubernetes Fleet Manager APIs.
-ms.date: 07/22/2024
+title: ClusterResourcePlacementWorkSynchronized failure when using ClusterResourcePlacement in Azure Kubernetes Fleet Manager
+description: Helps you resolve the ClusterResourcePlacementWorkSynchronized failure when propagating resources using the ClusterResourcePlacement object in Fleet.
+ms.date: 08/05/2024
 ms.reviewer: chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
@@ -12,23 +12,23 @@ This article describes how to troubleshoot `ClusterResourcePlacementWorkSynchron
 
 ## Symptoms
 
-When using the `ClusterResourcePlacement` API object with Azure Kubernetes Fleet Manager to propagate resources, if the `ClusterResourcePlacement` is updated, the associated work objects aren't synchronized with the changes and the `ClusterResourcePlacementWorkSynchronized` condition status shows as `False`.
+When using the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, if the `ClusterResourcePlacement` is updated, the associated work objects aren't synchronized with the changes, and the `ClusterResourcePlacementWorkSynchronized` condition status shows as `False`.
 
 > [!NOTE]
 > To get more information about why the work object synchronization fails, you can check the [work generator controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/workgenerator/controller.go) logs.
 
 ## Cause
 
-This issue might occur due to one of the following reasons:
+This issue might occur for one of the following reasons:
 
-- The controller encountered errror while trying to generate the corresponding `work` object.
-- The enveloped object is not well formated
+- The controller encounters an error while trying to generate the corresponding work object.
+- The enveloped object isn't well formatted.
 
 ## Case study
 
-In the following example, the `ClusterResourcePlacement` is trying to propagate a resource to a selected cluster, but the work object isn't updated to reflect the latest changes because the selected cluster is terminated.
+In the following example, the `ClusterResourcePlacement` is trying to propagate a resource to a selected cluster, but the work object isn't updated to reflect the latest changes because the selected cluster has been terminated.
 
-### ClusterResourcePlacement spec
+### ClusterResourcePlacement specification
 
 ```yaml
 spec:
@@ -124,16 +124,16 @@ status:
     version: v1
 ```
 
-In the `ClusterResourcePlacement` status, the `ClusterResourcePlacementWorkSynchronized` condition status shows as `False`. The message for it indicates that the work object `crp1-work` is prohibited from generating new content within the namespace `fleet-member-kind-cluster-1` because it's currently undergoing termination.
+In the `ClusterResourcePlacement` status, the `ClusterResourcePlacementWorkSynchronized` condition status shows as `False`. The message for it indicates that the work object `crp1-work` is prohibited from generating new content within the namespace `fleet-member-kind-cluster-1` because it's currently terminating.
 
 ### Resolution
 
-In this scenario, here are several potential solutions:
+In this situation, here are several potential solutions:
 
 - Modify the CRP with a newly selected cluster. 
-- Delete the CRP to remove work through garbage collection.
-- Rejoin the member cluster. The namespace can only regenerate if the cluster is rejoined.
+- Delete the CRP to remove the work through garbage collection.
+- Rejoin the member cluster. The namespace can only be regenerated if after rejoining the cluster.
 
-In other scenarios, you might opt to wait for the work to finish propagating.
+In other situations, you might opt to wait for the work to finish propagating.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
