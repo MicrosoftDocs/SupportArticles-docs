@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, mikeres
-ms.custom: sap:account-lockouts, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Account lockouts, csstroubleshoot
 ---
 # How to use the EventCombMT utility to search event logs for account lockouts
 
 This article describes how to use the EventCombMT utility (EventCombmt.exe) to search the event logs of multiple computers for account lockouts.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 824209
 
 ## More information

@@ -3,6 +3,7 @@ title: Configuration Manager clients reinstall every five hours
 description: Describes an issue in which the Configuration Manager client reinstalls itself every five hours and may cause an inadvertent client upgrade if a current branch site is already upgraded. Provides a workaround.
 ms.date: 12/05/2023
 ms.reviewer: kaushika, brianhun, jstewart, yohuang, brenduns, cmkbreview
+ms.custom: sap:Client Installation, Registration and Assignment\Client Installation
 ---
 # Configuration Manager clients reinstall every five hours and may cause an inadvertent client upgrade
 

@@ -1,9 +1,10 @@
 ---
 title: The Payables Year-End Closing Report can be printed only at the time of the year-end close in Microsoft Dynamics GP
 description: The Payables Year-End Closing Report can be printed only at the time of the year-end close in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # The Payables Year-End Closing Report can be printed only at the time of the year-end close in Microsoft Dynamics GP
 

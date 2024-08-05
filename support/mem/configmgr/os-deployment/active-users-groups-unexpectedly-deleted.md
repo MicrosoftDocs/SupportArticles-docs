@@ -3,6 +3,7 @@ title: Active users and groups are unexpectedly deleted by the Delete Aged Disco
 description: Fixes an issue in which some active users and groups are unexpectedly deleted by the Delete Aged Discovery Data task in Configuration Manager.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Boundary Groups, Discovery and Collections\Active Directory Discovery (all types)
 ---
 # Active users and groups are unexpectedly deleted by the Delete Aged Discovery Data task in Configuration Manager
 

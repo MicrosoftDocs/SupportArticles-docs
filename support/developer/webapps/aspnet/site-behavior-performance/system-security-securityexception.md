@@ -2,7 +2,7 @@
 title: Can't use a virtual directory to host applications
 description: Security error occurs when the virtual directory points to a remote share in ASP.NET. This article provides a resolution for this problem.
 ms.date: 04/08/2020
-ms.custom: sap:Site behavior and performance
+ms.custom: sap:Performance
 ---
 # System.Security.SecurityException when the virtual directory points to a remote share in ASP.NET
 

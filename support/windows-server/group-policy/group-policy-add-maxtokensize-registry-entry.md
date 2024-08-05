@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, muhasa
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 ---
 # How to use Group Policy to add the MaxTokenSize registry entry to multiple computers
 
 This article describes how to use Group Policy to add the MaxTokenSize registry entry to multiple computers.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 938118
 
 ## Introduction

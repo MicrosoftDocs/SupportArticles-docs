@@ -1,18 +1,18 @@
 ---
 title: Can't uninstall apps in Intune that were installed from Apple App Store
 description: Gives a workaround solution to help uninstall apps that are installed from the Apple App Store can't be uninstalled in Intune.
-ms.date: 12/05/2023
+ms.date: 07/30/2024
 search.appverid: MET150
-ms.custom: sap:Add apps
-ms.reviewer: kaushika
+ms.custom: sap:AppDeployment - iOS\Apple Store
+ms.reviewer: kaushika, kakreh
 ---
 # Intune can't uninstall apps that are installed from Apple App Store
 
-This article gives a workaround solution to help you uninstall apps in Microsoft Intune that were installed from the Apple App Store.
+This article gives a workaround solution to help you uninstall free apps in Microsoft Intune that were installed from the Apple App Store.
 
 ## Symptoms
 
-An iOS device that's enrolled in Intune contains some apps that are installed from the Apple App Store. In this scenario, these apps can't be uninstalled by using Intune.
+An iOS device that's enrolled in Intune contains some apps that are installed from the Apple App Store. For example, non-VPP paid apps. In this scenario, these apps can't be uninstalled by using Intune.
 
 This behavior is by design. Intune can uninstall only apps that are deployed through the mobile device management (MDM) channel.
 

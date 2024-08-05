@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, oweindl
-ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
 ---
 # Inherited permissions are not automatically updated when you move folders
 
 This article provides a solution to an issue where inherited permissions aren't automatically updated when you move folders.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 320246
 
 ## Symptoms

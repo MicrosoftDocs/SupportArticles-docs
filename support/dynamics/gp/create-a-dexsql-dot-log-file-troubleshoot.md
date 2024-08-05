@@ -1,9 +1,10 @@
 ---
 title: Create a Dexsql.log file to troubleshoot
 description: Describes how to create a Dexsql.log file that can help you troubleshoot error messages.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to create a Dexsql.log file to troubleshoot error messages in Microsoft Dynamics GP
 

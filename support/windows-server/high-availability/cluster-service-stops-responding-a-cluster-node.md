@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Cluster service fails to start, csstroubleshoot
 ---
 # Cluster Service Stops Responding on a Cluster Node When You Restart the Active Node
 
 This article provides a resolution for the issue that Cluster Service stops responding on a Cluster Node when you restart the Active Node.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 822050
 
 ## Symptoms

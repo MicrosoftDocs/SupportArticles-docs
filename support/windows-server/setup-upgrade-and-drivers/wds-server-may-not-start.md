@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # The WDS server may not start, and an error is logged in the System log when you start the WDS server
 
 This article provides a solution to an issue that occurs when you start the Windows Deployment Services (WDS) server, the WDS server may not start.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954410
 
 ## Symptoms

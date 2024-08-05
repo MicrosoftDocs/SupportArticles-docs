@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-media-player, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Media issues with in-box apps (Windows Media Player, Groove, Movies and TV), csstroubleshoot
 ---
 # How to enable Windows Vista user experience features on a computer that is running Windows Server 2008
 
 This article describes how to configure the user experience features that are available in Windows Vista on a computer that is running Windows Server 2008.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947036
 
 ## Introduction

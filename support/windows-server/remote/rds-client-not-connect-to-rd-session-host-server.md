@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-desktop-sessions, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
 ---
 # RDS client can't connect to RD Session Host server after the server IP address is changed
 
 This article provides a solution to an issue where Remote Desktop Services (RDS) client can't connect to Remote Desktop (RD) Session Host server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2844958
 
 > [!IMPORTANT]

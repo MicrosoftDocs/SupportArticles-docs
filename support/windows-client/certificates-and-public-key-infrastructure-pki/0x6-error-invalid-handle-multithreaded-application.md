@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, milanmil, herbertm
-ms.custom: sap:smart-card-logon, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Smart card logon, csstroubleshoot
 ---
 # (0x6 ERROR_INVALID_HANDLE) error when a multithreaded application accesses a smart card
 

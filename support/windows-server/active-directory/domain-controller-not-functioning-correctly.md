@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, clandis
-ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # Domain controller is not functioning correctly
 
 This article provides common resolutions to the issue where domain controller is not functioning correctly.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837513
 
 ## Symptoms

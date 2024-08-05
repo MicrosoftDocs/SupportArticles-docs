@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, huiwu
-ms.custom: sap:partition-and-volume-management, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
 ---
 # You can't start a computer from a USB flash drive that is formatted to use the FAT32 file system
 
 This article works around a startup failure when you use a USB flash drive that's formatted to use the FAT32 file system.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954457
 
 ## Symptoms

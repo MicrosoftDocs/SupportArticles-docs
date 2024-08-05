@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-switch-manager-vmswitch, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual switch manager (Vmswitch), csstroubleshoot
 ---
 # Creating V-switches within the hyper-V environment fails
 
 This article provides workarounds for an issue where creating V-switches within the hyper-V environment fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2486812
 
 ## Symptoms

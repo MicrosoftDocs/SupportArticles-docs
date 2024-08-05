@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
+ms.custom: sap:Active Directory\Domain or forest functional level updates, failures and Advisory, csstroubleshoot
 ---
 # How to raise Active Directory domain and forest functional levels
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:1st-party-applications, csstroubleshoot
+ms.custom: sap:System Performance\App, Process, Service Reliability (crash, errors), csstroubleshoot
 ---
 # Register OCX and DLL files as system globals
 

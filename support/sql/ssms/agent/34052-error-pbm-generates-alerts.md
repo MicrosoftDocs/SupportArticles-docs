@@ -2,7 +2,7 @@
 title: Policy-Based Management generates alerts
 description: This article helps you resolve the problem where a SQL Agent job generates false alerts when using Policy-Based Management (PBM).
 ms.date: 09/14/2020
-ms.custom: sap:Administration and Management
+ms.custom: sap:SQL Server Management, Query and Data Tools
 ms.reviewer: ramakoni
 ---
 # 34052 error message and PBM generates alerts on policies that have an evaluation mode in SQL Server

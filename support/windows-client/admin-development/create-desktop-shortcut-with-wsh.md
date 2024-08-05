@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-script-host-wsh, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\Windows Script Host (CScript or WScript), csstroubleshoot
 ---
 # How to create a desktop shortcut with the Windows Script Host
 
 This article describes how to create desktop shortcuts by using the Microsoft Windows Script Host (WSH) from within Visual FoxPro.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 244677
 
 ## Summary

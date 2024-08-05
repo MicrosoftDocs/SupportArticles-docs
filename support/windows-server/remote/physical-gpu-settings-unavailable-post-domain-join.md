@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:performance-audio-and-video-and-remotefx, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Performance (audio and video) and RemoteFX, csstroubleshoot
 ---
 # Physical GPU settings is unavailable post domain join
 
 This article provides a resolution for the issue that Physical GPU settings are unavailable post domain join.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2878821
 
 ## Symptoms

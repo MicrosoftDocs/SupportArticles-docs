@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine settings, csstroubleshoot
 ---
 # After a new Hyper-V VMMS certificate is generated, there are mouse and screen resolution issues when you manage a virtual machine using the Hyper-V Manager Console
 
 This article provides a solution to mouse and screen resolution issues when managing a virtual machine by using the Hyper-V Manager Console.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2413735
 
 ## Symptoms

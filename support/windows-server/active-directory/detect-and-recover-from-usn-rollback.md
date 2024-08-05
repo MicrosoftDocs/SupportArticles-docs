@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
 ---
 # A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback
 
 This article describes how to detect and recover if a Windows Server domain controller is incorrectly rolled back by using an image-based installation of the operating system.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 875495
 
 > [!NOTE]

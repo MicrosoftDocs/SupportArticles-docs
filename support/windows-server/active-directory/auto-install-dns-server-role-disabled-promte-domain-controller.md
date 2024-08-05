@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: arrenc, kaushika
-ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
+ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
 # Unable to select DNS Server role when adding a domain controller into an existing Active Directory domain
 
 This article helps fix an issue where the option to auto-install the DNS Server role is disabled or grayed out in the Active Directory Installation Wizard (DCPROMO) when promoting a Windows Server 2008 or Windows Server 2008 R2 replica domain controller.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2002584
 
 ## Symptoms

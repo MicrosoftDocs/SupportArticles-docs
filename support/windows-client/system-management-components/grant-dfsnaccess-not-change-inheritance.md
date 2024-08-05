@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, huberts
-ms.custom: sap:powershell, csstroubleshoot
+ms.custom: sap:System Management Components\PowerShell, csstroubleshoot
 ---
 # Windows PowerShell cmdlet Grant-DfsnAccess doesn't change inheritance on DFS links
 
 This article provides workarounds for an issue where Windows PowerShell cmdlet `Grant-DfsnAccess` doesn't change inheritance on Distributed File System (DFS) links.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2 Standard, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2938148
 
 ## Symptoms

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, shawnrab, v-jomcc
-ms.custom: sap:active-directory-certificate-services, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
 # Certificate Services may not start on a computer that is running Windows Server 2003 or Windows 2000
 
 This article provides a solution to an issue where Certificate Services(CS) may not start on a computer that is running Windows Server 2003 or Windows 2000.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 842210
 
 ## Symptoms

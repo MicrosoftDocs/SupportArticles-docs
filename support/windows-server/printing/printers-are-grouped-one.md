@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
-ms.custom: sap:management-and-configuration:-installing-print-drivers, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---
 # Printers installed using the same driver and port on Windows are grouped as one when viewed within Devices and Printers
 

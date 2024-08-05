@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, slight
-ms.custom: sap:smart-card-logon, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Smart card logon, csstroubleshoot
 ---
 # Guidelines for enabling smart card logon with third-party certification authorities
 
 This article provides some guidelines for enabling smart card logon with third-party certification authorities.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 281245
 
 ## Summary

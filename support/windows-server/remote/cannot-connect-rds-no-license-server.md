@@ -7,14 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
 keywords: RD Licensing server, RD CAL
 ---
 # Cannot connect to RDS because no RD Licensing servers are available
 
 This article help you troubleshoot the "No licenses available" error in a deployment that includes an Remote Desktop Session Host (RDSH) server and a Remote Desktop Licensing server.
-
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Symptoms
 

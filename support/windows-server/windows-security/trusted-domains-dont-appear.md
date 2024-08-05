@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Domain and forest trusts, csstroubleshoot
 ---
 # Trusted domains don't appear in the Available List for domain logon or setting security permissions
 

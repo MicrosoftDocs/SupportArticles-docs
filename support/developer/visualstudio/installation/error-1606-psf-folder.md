@@ -5,6 +5,7 @@ ms.date: 04/25/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
 # Running Parallels on Mac may cause error 1606

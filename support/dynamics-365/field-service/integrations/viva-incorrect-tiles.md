@@ -5,6 +5,7 @@ author: jasonxian-msft
 ms.author: jasonxian
 ms.reviewer: v-wendysmith
 ms.date: 01/23/2024
+ms.custom: sap:Customizations and Integrations
 ---
 # Viva Connections dashboard doesn't show the correct Dynamics 365 Field Service tiles
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, justintu
-ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Active Directory replication error 8464: Synchronization attempt failed
 
 This article helps you troubleshoot the Active Directory replication error 8464.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3001248
 
 > [!NOTE]

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS) , csstroubleshoot
 ---
 # Backup fails with VSS event ID 12292 and 11 on Windows Server
 
 This article discusses an issue where backup operation using Windows Server Backup or a third-party backup application fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2009513
 
 ## Symptoms

@@ -3,6 +3,7 @@ title: A Configuration Manager in-place upgrade task sequence doesn't continue
 description: Fixes an issue in which a Configuration Manager in-place upgrade task sequence doesn't continue after a Windows 10 in-place upgrade rollback, and errors are logged. 
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Operating Systems Deployment (OSD)\Operating System In-place Upgrade Deployments
 ---
 # A Configuration Manager in-place upgrade task sequence doesn't continue after a Windows 10 in-place upgrade rollback
 

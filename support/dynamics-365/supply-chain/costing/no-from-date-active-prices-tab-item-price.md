@@ -2,7 +2,7 @@
 title: There is no From date value on the Active prices tab of the Item price page
 description: Provides more information about the From date value on the Active prices tab of the Item price page.
 author: JennySong-SH
-ms.date: 04/11/2021
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: InventItemPrice
 audience: Application User
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: yanansong
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Cost management\Issues with cost calculation and posting
 ---
 
 # There is no From date value on the Active prices tab of the Item price page

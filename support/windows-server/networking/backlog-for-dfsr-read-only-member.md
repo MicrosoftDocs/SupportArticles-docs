@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, wincicadsec
-ms.custom: sap:dfsr, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
 ---
 # A backlog is reported for a DFSR Read-Only member after you remove a replication file filter
 
 This article provides a solution to an issue where a backlog is reported for a Read-Only member after you remove a replication file filter.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4021676
 
 ## Symptoms

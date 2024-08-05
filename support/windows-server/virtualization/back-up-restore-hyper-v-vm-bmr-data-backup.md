@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:backup-and-restore-of-virtual-machines, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Backup and restore of virtual machines, csstroubleshoot
 ---
 # Back up and restore a Hyper-V VM by using BMR and data backup
 
 This article provides a resolution to an issue where only critical volumes are backed up when you use Windows Server Backup on your virtual machine (VM) data and bare metal recovery (BMR).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3171712
 
 ## Symptoms

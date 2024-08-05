@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika,joscon
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
+ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
 ---
 # Programs that use the QueryPerformanceCounter function may perform poorly
 
 This article provides a resolution to an issue that occurs on 32-bit computers and x64-based computers that have the AMD Cool'n'Quiet technology enabled in the BIOS.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 895980
 
 ## Symptoms

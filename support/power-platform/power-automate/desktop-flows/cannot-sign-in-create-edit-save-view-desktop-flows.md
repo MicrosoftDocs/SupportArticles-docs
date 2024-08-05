@@ -3,7 +3,7 @@ title: Can't create or edit or save or view desktop flows
 description: Provides a resolution for the error message that occurs when you try to create, edit, save, or view desktop flows in Power Automate.
 ms.reviewer: pefelesk
 ms.date: 03/01/2024
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Can't create, edit, save, or view desktop flows
 
@@ -48,4 +48,4 @@ Approve the [Desktop flows services required for runtime](/power-automate/ip-add
 
 ## Resolution and workaround for the proxy authentication issue
 
-To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](proxy-error-console.md).
+To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](/power-automate/desktop-flows/how-to/proxy-settings).

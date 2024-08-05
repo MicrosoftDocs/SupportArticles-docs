@@ -5,15 +5,13 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom: sap:troubleshoot-issues-in-esu, csstroubleshoot
+ms.custom: sap:Windows Eos\General Information , csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 keywords: Windows Server 2012 R2 ESU, Windows Server 2012 ESU, ESU, ESU product key
 ---
 
 # Error when installing ESU product key for Windows Server 2012 R2 or Windows Server 2012
-
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2012
 
 ## Symptoms
 

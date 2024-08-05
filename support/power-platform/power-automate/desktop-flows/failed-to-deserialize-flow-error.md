@@ -3,7 +3,7 @@ title: Failed to deserialize Flow error
 description: Provides a resolution for the Failed to deserialize Flow error that occurs in Power Automate for desktop.
 ms.reviewer: pefelesk
 ms.date: 09/21/2022
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # "Failed to deserialize Flow" error in Power Automate for desktop
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, waltere
-ms.custom: sap:slow-performance, csstroubleshoot
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
 ---
 # System stops responding, slow file server performance, or delays occur when you work with files that are located on a file server
 
 This article provides a solution to performance issues that occur when you work with files that are located on a file server.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 822219
 
 ## Symptoms

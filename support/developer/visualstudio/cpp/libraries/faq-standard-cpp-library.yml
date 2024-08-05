@@ -3,9 +3,10 @@ metadata:
   title: FAQs about C++ library
   description: Answers common questions about the Standard C++ library.
   ms.date: 04/20/2020
-  ms.custom: sap:C and C++ Libraries
   ms.reviewer: JIANGES
   ms.topic: faq
+  ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
+
 title: Frequently asked questions about the Standard C++ library
 summary: |
   This article provides a list of frequently asked questions (FAQs) about the Standard C++ libraries and the answers to those questions.

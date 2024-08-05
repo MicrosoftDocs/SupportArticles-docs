@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Setup and configuration of clustered services and applications, csstroubleshoot
 ---
 # Antivirus software that isn't cluster-aware may cause problems with Cluster Services
 
 This article provides help to solve problems with Cluster Services that be caused by antivirus software that isn't cluster-aware.
 
-_Applies to:_ &nbsp; Windows Server 2022、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 250355
 
 ## Summary

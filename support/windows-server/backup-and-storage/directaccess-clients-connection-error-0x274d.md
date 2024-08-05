@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
 ---
 # DirectAccess clients are unable to connect over IP-HTTPS with error 0x274d or 0x2afc
 
 This article provides a solution to the error 0x274d that occurs when DirectAccess clients connect to DirectAccess Server by using Internet Protocol over Secure Hypertext Transfer Protocol (IP-HTTPS).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3052855
 
 ## Symptoms

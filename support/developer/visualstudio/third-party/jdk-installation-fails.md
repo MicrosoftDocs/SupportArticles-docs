@@ -2,7 +2,7 @@
 title: Can't install JDK in Visual Studio 2017
 description: You can't install JDK package in Visual Studio 2017. To solve this problem, update to latest version of Visual Studio 2017.
 ms.date: 04/20/2020
-ms.custom: sap:Third Party Tools installed with Visual Studio
+ms.custom: sap:Third Party Tools installed with Visual Studio\Other
 ms.reviewer: vyedin
 ---
 # Error for installation of JDK in Visual Studio 2017: Failed to download

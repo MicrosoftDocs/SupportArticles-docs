@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Information about Network Monitor 3
 
 This article contains download and support information, installation notes, and general usage information about Network Monitor 3.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 933741
 
 ## Summary

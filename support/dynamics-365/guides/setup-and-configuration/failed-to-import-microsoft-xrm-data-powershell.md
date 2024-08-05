@@ -5,7 +5,7 @@ ms.author: brunasi
 author: brunasilvalopes
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
-ms.custom: bap-template 
+ms.custom: sap:Setup and configuration
 ---
 # "Failed to import" error when migrating content with the Dynamics 365 Guides Content Migration Tool (Public Preview)
 

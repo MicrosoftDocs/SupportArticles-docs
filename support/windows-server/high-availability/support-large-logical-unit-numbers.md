@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: stevemat, keithpe, kaushika
-ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Setup and configuration of clustered services and applications, csstroubleshoot
 ---
 # Adding support for more than eight LUNs in Windows Server
 
@@ -16,7 +16,6 @@ This article describes the support for a large number of logical unit numbers (L
 > [!IMPORTANT]
 > This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](../performance/windows-registry-advanced-users.md).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 310072
 
 ## Summary

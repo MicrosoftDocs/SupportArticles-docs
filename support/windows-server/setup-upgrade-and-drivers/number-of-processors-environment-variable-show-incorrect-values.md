@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, stevepar, praveenr, v-lianna
-ms.custom: sap:driver-installation-or-driver-update, csstroubleshoot
+ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
 ---
 # The %NUMBER_OF_PROCESSORS% environment variable may show incorrect values
 

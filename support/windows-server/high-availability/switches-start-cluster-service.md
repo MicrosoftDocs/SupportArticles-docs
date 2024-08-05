@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
-ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Cluster service fails to start, csstroubleshoot
 ---
 # Cluster service startup options
 
 This article lists all the available switches that can be used as startup parameters to start the Cluster service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 258078
 
 ## Summary

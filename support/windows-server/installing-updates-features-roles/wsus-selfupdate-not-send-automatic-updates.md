@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, cclay
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Clients missing updates, not offered, fail to download, csstroubleshoot
 ---
 # WSUS SelfUpdate service doesn't send automatic updates
 
 This article provides a solution to an issue where the client computers don't receive updates when you use a Microsoft Windows Server Update Services (WSUS) SelfUpdate service to send automatic updates.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 920659
 
 ## Symptoms

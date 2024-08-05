@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
 ---
 # DHCP dynamic updates of DNS registrations are delayed or not processed
 
 This article discusses that a change in the DHCP Domain Name System (DNS) update behavior may delay DNS registrations and provides help to solve this issue.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3069564
 
 ## Symptoms

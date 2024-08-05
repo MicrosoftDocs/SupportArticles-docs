@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:msi, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\MSI and MSIX, csstroubleshoot
 ---
 # Enable Windows Installer logging
 
 Windows includes a registry-activated logging service to help diagnose Windows Installer issues. This article describes how to enable this logging service.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 223300
 
 > [!NOTE]

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-volume-activation, csstroubleshoot
+ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 ---
 # You receive an error message when you try to activate Windows Vista or Windows 7 on a computer that was obtained from an OEM
 

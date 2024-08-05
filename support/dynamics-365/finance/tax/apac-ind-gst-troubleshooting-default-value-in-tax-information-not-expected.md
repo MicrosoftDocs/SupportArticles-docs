@@ -4,17 +4,17 @@
 title: Default field value in tax information isn't as expected
 description: Provides troubleshooting information that can help when the default value of a tax information field isn't what you expect.
 author: yungu
-ms.date: 11/02/2022
+ms.date: 04/30/2024
 
 # optional metadata
 
 #ms.search.form:
 audience: Application user
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 
 # ms.tgt_pltfrm: 
-# ms.custom: 
+ms.custom: sap:Tax - India tax\Issues with India goods and service tax (IN GST)
 ms.search.region: India
 # ms.search.industry: 
 ms.author: wangchen

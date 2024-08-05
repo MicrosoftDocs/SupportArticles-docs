@@ -4,6 +4,7 @@ description: General steps to help troubleshoot restricting the cut, copy, and p
 ms.date: 12/05/2023
 ms.reviewer: v-cshields, roblane
 search.appverid: MET150
+ms.custom: sap:Application Protection - Android\Data transfer to other apps
 ---
 # Troubleshoot restricting cut, copy, and paste between applications
 

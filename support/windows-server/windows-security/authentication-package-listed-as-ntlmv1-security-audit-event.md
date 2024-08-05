@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: herbertm, kaushika
-ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
 ---
 # Audit event shows authentication package as NTLMv1 instead of NTLMv2
 
 This article discusses an issue where the authentication was actually using NTLMv2 but reporting NTLMv1 in the event log.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2701704
 
 ## Summary

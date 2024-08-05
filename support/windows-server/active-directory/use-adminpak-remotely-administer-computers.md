@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # How to use the Administration Tools Pack to remotely administer computers that are running Windows Server 2003, Windows XP, or Windows 2000
 
 This article describes how to remotely administer computers by using the Administration Tools Pack.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 304718
 
 ## Summary

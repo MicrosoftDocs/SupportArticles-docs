@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
+ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
 # Domain controller promotion stops responding when NetBIOS over TCPIP is disabled in Windows Server 2012 R2
 
 This article provides a solution to an issue where domain controller promotion stops responding when short credentials are used in an environment that has NetBIOS over TCPIP disabled.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2948052
 
 ## Symptoms

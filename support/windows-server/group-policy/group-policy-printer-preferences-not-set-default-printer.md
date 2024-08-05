@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:managing-printers-through-group-policy, csstroubleshoot
+ms.custom: sap:Group Policy\Managing printers through Group Policy, csstroubleshoot
 ---
 # Group Policy Printer Preferences fails to set the default printer when new user profile is created
 
 This article provides a workaround for an issue where Group Policy Printer Preferences fails to set the default printer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2787598
 
 ## Symptoms

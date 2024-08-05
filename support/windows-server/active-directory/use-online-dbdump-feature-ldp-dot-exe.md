@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ROLANDW, oweindl
-ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # How to use the online dbdump feature of Active Directory
 
 This article describes how to use the online dbdump feature of Active Directory.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315098
 
 ## Summary

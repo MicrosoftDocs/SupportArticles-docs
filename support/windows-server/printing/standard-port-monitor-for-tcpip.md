@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-dgit
-ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---
 # The standard port monitor for TCP/IP
 

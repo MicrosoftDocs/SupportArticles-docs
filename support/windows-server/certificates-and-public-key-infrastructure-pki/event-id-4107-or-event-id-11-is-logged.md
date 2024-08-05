@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, egomes
-ms.custom: sap:certificate-root-update-program, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Microsoft Trusted Root Certificate Program, csstroubleshoot
 ---
 # Event ID 4107 or Event ID 11 is logged in the Application log
 
 This article provides steps to solve the event 4107 and event 11 that are logged in the Application log.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2328240
 
 ## Symptoms

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: jarrettr, kaushika
-ms.custom: sap:dns, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # Microsoft Exchange compatibility with Single Label Domains, Disjointed Namespaces, and Discontiguous Namespaces
 
 This article describes the compatibility of Microsoft Exchange with Single Label Domains, Disjoint Namespaces, and Discontiguous Namespaces.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2269838
 
 ## Single Label Domains

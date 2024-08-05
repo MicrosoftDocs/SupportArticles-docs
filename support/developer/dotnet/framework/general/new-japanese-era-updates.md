@@ -3,6 +3,7 @@ title: New Japanese era update for .NET Framework
 description: This article introduces the new Japanese era update for .NET Framework. This update contains quality and reliability improvements.
 ms.date: 05/06/2020
 ms.reviewer: kaorif
+ms.custom: sap:Installation and Deployment
 ---
 # Summary of new Japanese era updates for .NET Framework
 

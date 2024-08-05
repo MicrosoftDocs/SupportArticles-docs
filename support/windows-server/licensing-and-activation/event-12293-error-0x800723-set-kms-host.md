@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-volume-activation, csstroubleshoot
+ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 ---
 # Security Event 12293 with error 0x80072338 registering KMS host record
 
 This article provides a resolution to fix the event ID 12293 that occurs when setting up a KMS host.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2553863
 
 ## Symptoms

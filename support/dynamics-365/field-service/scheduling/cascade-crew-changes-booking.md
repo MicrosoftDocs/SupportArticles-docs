@@ -5,6 +5,7 @@ author: jshotts
 ms.author: jasonshotts
 ms.reviewer: mhart
 ms.date: 10/19/2023
+ms.custom: sap:Schedule Board
 ---
 # Issue with cascade crew changes when assigning a booking
 

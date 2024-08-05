@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:replacing-hardware-and-updating-the-operating-system, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Replacing hardware and updating the operating system, csstroubleshoot
 ---
 # How to update Windows Server failover clusters
 
 This article describes how to update failover clusters in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 174799
 
 ## Summary

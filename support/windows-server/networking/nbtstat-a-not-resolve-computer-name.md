@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dns, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # NBTSTAT -A command does not resolve computer name with DNS
 
 This article provides a workaround for an issue where the `NBTSTAT -A` command doesn't resolve computer name with Domain Name System (DNS).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 249874
 
 ## Symptoms

@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:storage-hardware, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware , csstroubleshoot
 adobe-target: true
 ---
 # "USB Device not recognized" error when you try to access a USB external hard drive

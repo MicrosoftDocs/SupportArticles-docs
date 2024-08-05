@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, squin, scottmca
-ms.custom: sap:windows-volume-activation, csstroubleshoot
+ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 ---
 # Error 0xC004F015 when you activate Windows 10 Enterprise on a Windows Server 2012 R2 KMS host
 
 This article provides a solution to a 0xC004F015 error that occurs when you activate Windows 10 Enterprise on a Microsoft Windows Server 2012 R2 and Windows Server 2008 R2 KMS host.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3086418
 
 ## Symptoms

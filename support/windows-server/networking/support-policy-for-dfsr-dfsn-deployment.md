@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, luche
-ms.custom: sap:dfsr, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
 ---
 # Information about Microsoft support policy for a DFS-R and DFS-N deployment scenario
 
 This article describes a Distributed File System Replication (DFS-R) and Distributed File System Namespace (DFS-N) deployment scenario that Microsoft does not support.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2533009
 
 ## Unsupported scenario

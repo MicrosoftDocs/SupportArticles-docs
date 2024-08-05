@@ -3,6 +3,7 @@ title: Understand and troubleshoot Updates and Servicing
 description: This article helps administrators understand Updates and Servicing and troubleshoot some common issues in Configuration Manager.
 ms.date: 03/08/2024
 ms.reviewer: kaushika
+ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Updates and Servicing
 ---
 # Understand and troubleshoot Updates and Servicing in Configuration Manager
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 ---
 # Some Group Policy areas are missing from the Group Policy Editor
 
 This article provides a solution to an issue where some Group Policy areas are missing from the Group Policy Editor.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 555218
 
 ## Symptoms

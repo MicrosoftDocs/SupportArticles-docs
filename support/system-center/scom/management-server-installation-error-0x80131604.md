@@ -1,7 +1,7 @@
 ---
 title: Error 0x80131604 installing an OpsMgr management server
 description: Fixes an issue in which you receive an exception error code 0x80131604 during the installation of a System Center 2012 Operations Manager server.
-ms.date: 06/30/2020
+ms.date: 04/15/2024
 ---
 # Installation of a System Center 2012 Operations Manager server fails with error 0x80131604
 

@@ -7,11 +7,10 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
 ---
 # How to remove orphaned domains from Active Directory  
 
-_Applies to:_ &nbsp; Windows 10, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 230306
 
 ## Summary

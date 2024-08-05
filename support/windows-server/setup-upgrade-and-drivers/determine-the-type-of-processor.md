@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, joscon
-ms.custom: sap:driver-installation-or-driver-update, csstroubleshoot
+ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
 ---
 # How to determine the type of processor that your computer uses
 
 This article describes how to determine the type of processor that is used on a computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 888731
 
 ## Introduction

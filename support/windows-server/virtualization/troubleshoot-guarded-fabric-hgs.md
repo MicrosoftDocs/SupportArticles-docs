@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
-ms.custom: sap:shielded-virtual-machines, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Shielded Virtual Machines, csstroubleshoot
 ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
 ---
 # Troubleshoot the Host Guardian Service

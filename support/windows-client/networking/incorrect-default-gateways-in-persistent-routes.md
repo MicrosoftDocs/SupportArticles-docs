@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, Joelch
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Additional default gateways may appear in persistent routes when you use LBFO
 
 This article provides a solution to an issue where additional default gateways appear in persistent routes when you use Load Balancing and Failover (LBFO).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2966111
 
 ## Symptoms

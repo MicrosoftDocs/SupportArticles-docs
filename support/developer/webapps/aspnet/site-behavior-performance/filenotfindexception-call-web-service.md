@@ -2,7 +2,7 @@
 title: FileNotFoundException when you call web service
 description: This article provides resolutions for the System.IO.FileNotFoundException error that occurs when a Microsoft ASP.NET Web application calls a web service.
 ms.date: 03/26/2020
-ms.custom: sap:Site behavior and performance
+ms.custom: sap:Performance
 ---
 # You receive a System.IO.FileNotFoundException error when the client application calls a web service
 

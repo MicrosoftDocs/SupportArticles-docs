@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 ---
 # MBAM troubleshooting guidance
 

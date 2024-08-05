@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, dewitth, ctimon
-ms.custom: sap:partition-and-volume-management, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
 ---
 # "You don't have permission" error message when you try to mount an ISO image
 
 This article helps to fix the error "You don't have permission" when you try to mount an ISO image.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2993573
 
 ## Symptoms

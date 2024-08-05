@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:frs, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
 ---
 # FRS appends "\_*NTFRS*\_\<xxxxxxxx>" to folder names
 
 This article helps you fix an issue in which File Replication Service (FRS) adds "\_*NTFRS*\_\<xxxxxxxx>" to folder names.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 328492
 
 ## Symptoms

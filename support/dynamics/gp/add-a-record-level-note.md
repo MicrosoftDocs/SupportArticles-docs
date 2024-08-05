@@ -1,9 +1,10 @@
 ---
 title: Add a record-level note
 description: Describes how to add a record-level note for the Voucher No. field to the PM Paid Transaction History Detail report.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to add a record-level note to the "PM Paid Transaction History Detail" report in Microsoft Dynamics GP
 

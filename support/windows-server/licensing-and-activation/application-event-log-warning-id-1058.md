@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, match
-ms.custom: sap:windows-volume-activation, csstroubleshoot
+ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 ---
 # Application Event Log Warning ID 1058 (Security-SPP) may be logged after reboot on OEM systems
 
 This article provides some information about Application Event Log Warning ID 1058(Security-SPP) which may be logged after reboot on OEM systems.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2916670
 
 ## Summary

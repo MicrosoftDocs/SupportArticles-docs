@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
 ---
 # How to configure DFS to use fully qualified domain names in referrals
 
 This article describes how to configure a DFSN server to operate in that environment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 244380
 
 ## Summary

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, ELDENC
-ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Setup and configuration of clustered services and applications, csstroubleshoot
 ---
 # How to extend the partition of a cluster shared disk
 
 This article describes how to add additional storage capacity to a cluster if the underlying hardware RAID supports capacity extension technology.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 304736
 
 ## Summary

@@ -25,6 +25,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 - Live Migration
 - Snapshots, checkpoints, and differencing disks
 - Storage configuration
+- Shielded VMs
 - Virtual machine creation
 - Virtual machine state
 - Virtual machine will not boot

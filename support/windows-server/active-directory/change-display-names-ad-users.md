@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, MARCOSA
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # How to change display names of Active Directory users
 
 This article describes how to change display names of Active Directory (AD) users.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 250455
 
 ## Summary

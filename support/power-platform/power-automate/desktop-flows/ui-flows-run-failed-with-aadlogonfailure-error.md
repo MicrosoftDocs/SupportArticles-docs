@@ -5,7 +5,7 @@ ms.reviewer: fredg, johndund
 author: QuentinSele
 ms.author: quseleba
 ms.date: 11/20/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # Desktop flows run failed with the AadLogonFailure error code
 

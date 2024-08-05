@@ -1,7 +1,7 @@
 ---
 title: OpsMgr agent push installation fails with error 800706D3 
 description: Fixes an issue in which you receive error 800706D3 and the installation fails when you try to push a System Center Operations Manager 2012 agent to a Windows Server 2012-based agent server.
-ms.date: 07/13/2020
+ms.date: 04/15/2024
 ms.reviewer: arku, adoyle, jchornbe
 ---
 # Error 800706D3 and a push installation fails for an Operations Manager 2012 agent to Windows Server 2012

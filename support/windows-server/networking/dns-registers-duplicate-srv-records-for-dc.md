@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, Arrenc, Herbertm
-ms.custom: sap:dns, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # Windows DNS registers duplicate SRV records for a DC if its computer name has uppercase letters
 

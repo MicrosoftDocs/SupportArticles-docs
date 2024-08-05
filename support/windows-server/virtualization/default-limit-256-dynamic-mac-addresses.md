@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-switch-manager-vmswitch, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual switch manager (Vmswitch), csstroubleshoot
 ---
 # Windows Hyper-V server has a default limit of 256 dynamic MAC addresses
 
 This article provides a solution to an issue that occurs when you start a guest virtual machine.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2804678
 
 ## Symptoms

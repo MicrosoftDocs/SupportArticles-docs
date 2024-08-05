@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, RKWON
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # You cannot start the Active Directory Users and Computers tool because the server is not operational
 
 This article provides a solution to an issue where you cannot start the Active Directory Users and Computers tool because the server is not operational.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 323542
 
 ## Symptoms

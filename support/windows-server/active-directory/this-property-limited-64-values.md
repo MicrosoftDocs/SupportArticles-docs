@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: v-jomcc, kaushika
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # Error message when you try to add more than 64 logon workstations: "This property is limited to 64 values"
 
 This article provides a solution to an error that occurs when try to add more than 64 logon workstations.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 938458
 
 ## Symptoms

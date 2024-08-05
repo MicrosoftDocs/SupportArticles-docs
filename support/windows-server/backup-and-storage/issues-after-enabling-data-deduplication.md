@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, vimalsh
-ms.custom: sap:deduplication, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication , csstroubleshoot
 ---
 # Known issues after you enable data deduplication on CSV
 
 This article describes some known issues that may occur after you enable data deduplication on CSV.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2906888
 
 ## Summary

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure
 
@@ -15,7 +15,6 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
 > The DSA operation is unable to proceed because of a DNS lookup failure.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2021446
 
 **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com).

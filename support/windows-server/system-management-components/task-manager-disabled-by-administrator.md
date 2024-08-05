@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:task-manager, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Start Menu and Task Bar, csstroubleshoot
 ---
 # Error message: Task Manager has been disabled by your administrator
 
 This article resolves an error "Task Manager has been disabled by your administrator" that occurs when you try to use Task Manager.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 555480
 
 ## Symptoms

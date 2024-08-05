@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:applications, csstroubleshoot
+ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
 ---
 # Registry values for Process Control parameters
 
 This article describes the parameters for the Process Control service components.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 296930
 
 ## Summary

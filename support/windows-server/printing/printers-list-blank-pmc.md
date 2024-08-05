@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, raackley
-ms.custom: sap:errors-and-troubleshooting:-print-spooler, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Printers list blank in Print Management Console
 
 This article provides a solution to an issue that the list of printers will be blank when you view the printers on a remote server through the Print Management Console (PMC).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2253813
 
 ## Symptoms

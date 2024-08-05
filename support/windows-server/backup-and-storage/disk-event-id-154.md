@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: nbassett, kaushika
-ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk errors, csstroubleshoot
 ---
 # Disk Event ID 154: The IO Operation failed due to a hardware error
 
 This article provides a solution to fix event ID 154 that occurs on a computer that's connected to a storage array such as Fibre Channel (FC) storage.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2806730
 
 > [!IMPORTANT]

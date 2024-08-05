@@ -7,11 +7,11 @@ metadata:
   title: Troubleshoot common issues with Azure Automation
   description: Documentation for troubleshooting common issues with Azure Automation. # Required; article description that is displayed in search results. < 160 chars.
   services: azure
-  ms.service: azure-common-issues-support #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: automation #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/04/2024
+  ms.date: 03/26/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -23,12 +23,12 @@ landingContent:
       - linkListType: how-to-guide
         links:                                                               
           - text: Automation modifications aren't reflected in the portal
-            url: modifications-not-reflect-portal.md
+            url: configuration/modifications-not-reflect-portal.md
           - text: Find-AzureRmResource returns error
-            url: find-azurermresource-fails.md
+            url: updates/find-azurermresource-fails.md
           - text: How to capture Azure Automation-scripted diagnostics
-            url: automation-scripted-diagnostic-capture.md
+            url: runbooks/automation-scripted-diagnostic-capture.md
           - text: How to capture debug stream
-            url: capture-debug-stream-automation-runbook.md
+            url: runbooks/capture-debug-stream-automation-runbook.md
           - text: Reinstall Operations Management Suite Agent
-            url: reinstall-oms-agent-linux.md
+            url: runbooks/reinstall-oms-agent-linux.md

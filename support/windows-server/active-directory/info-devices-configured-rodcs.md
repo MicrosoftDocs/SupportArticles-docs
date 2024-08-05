@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, HerbertM, gregcamp, michikos, nedpyle
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # Information about devices from Riverbed Technology that are configured as RODCs
 
 This article describes the information about devices from Riverbed Technology that are configured as RODCs.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3192506
 
 ## Summary  

@@ -5,7 +5,7 @@ ms.reviewer:
 ms.author: cvassallo
 author: V-Camille
 ms.date: 03/15/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Can't create a desktop flows connection from a shared canvas app
 

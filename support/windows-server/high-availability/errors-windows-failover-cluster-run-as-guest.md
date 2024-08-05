@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: ctimon, sdwyer, kaushika
-ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Setup and configuration of clustered services and applications, csstroubleshoot
 ---
 # Unexpected warning and error messages in a virtualized Windows Server failover cluster
 
 This article describes an issue where unexpected warning and error messages occur in a Windows Server failover cluster that has been configured to run as a guest (virtual machine) in a Hyper-V environment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2014304
 
 ## Symptoms

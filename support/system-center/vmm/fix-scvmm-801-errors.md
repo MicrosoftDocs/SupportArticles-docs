@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot 801 errors in VMM console 
 description: Describes an issue that causes a refresh of virtual machines in Virtual Machine Manager to fail and to trigger a 801 error that indicates VMM cannot find the Virtual hard disk object. Occurs because of orphaned object information in the database. A resolution is provided.
-ms.date: 04/29/2020
-ms.reviewer: brenth, DPM-VMM
+ms.date: 04/09/2024
+ms.reviewer: wenca, jarrettr, brenth, DPM-VMM
 ---
 # 801 Missing %ObjectType and VmmAdminUI has stopped working errors in VMM
 

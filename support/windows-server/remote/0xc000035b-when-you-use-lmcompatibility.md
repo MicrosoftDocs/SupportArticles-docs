@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, Randym
-ms.custom: sap:authentication, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Authentication, csstroubleshoot
 ---
 # Terminal Services client connection error 0xC000035B when you use LmCompatibility
 
 This article provides a solution to an error 0xC000035B that occurs when a Terminal Services client connection that uses Remote Desktop Protocol (RDP) 8.0 to connect through a Windows Server 2012 RD Gateway server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2903333
 
 ## Symptoms

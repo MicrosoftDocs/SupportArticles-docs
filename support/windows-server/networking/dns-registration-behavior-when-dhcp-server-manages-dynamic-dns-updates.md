@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:dns, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 keywords: DNS dynamic updates, DHCP option 81, client FQDN option, DHCP client
 ---
 

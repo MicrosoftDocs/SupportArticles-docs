@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-certificate-services, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
 # How to Set an Enterprise Subordinate CA to Have a Different Certificate Validity Period than the Parent CA
 
 This article describes how to set an enterprise subordinate certification authority (CA) to have a different certificate validity period than that of the parent CA.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 281557
 
 ## Summary

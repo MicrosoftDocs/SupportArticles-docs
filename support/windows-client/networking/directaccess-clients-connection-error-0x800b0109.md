@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, AJAYPS
-ms.custom: sap:remote-access, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess), csstroubleshoot
 ---
 # DirectAccess clients may not be able to connect to a DirectAccess server with error 0x800b0109 when using IP-HTTPS
 
 This article provides a solution to an issue where DirectAccess clients fail to connect to a server by using IP-HTTPS.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2980667
 
 ## Symptoms

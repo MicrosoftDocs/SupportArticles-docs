@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # The Internet Protocol (TCP/IP) Properties dialog box displays the default IP address settings after you manually configure a static IP address in Windows Server
 
 This article describes a problem in which the TCP/IP properties revert to the default settings after you manually configure a static IP address.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 937056
 
 > [!IMPORTANT]

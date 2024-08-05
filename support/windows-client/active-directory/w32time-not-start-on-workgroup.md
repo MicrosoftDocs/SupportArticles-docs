@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-time-service, csstroubleshoot
+ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
 ---
 # Windows Time service doesn't start automatically on a workgroup computer
 

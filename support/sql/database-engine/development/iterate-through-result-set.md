@@ -1,8 +1,9 @@
 ---
 title: Iterate through a result set by using Transact-SQL
 description: This article describes various methods that you can use to iterate through a result set by using Transact-SQL in SQL Server.
-ms.date: 10/29/2020
-ms.custom: sap:Administration and Management
+ms.date: 07/26/2024
+ms.custom: sap:Database or Client application Development
+ms.reviewer: jopilov
 ms.topic: how-to
 ---
 
@@ -19,47 +20,42 @@ This article describes various methods that you can use to simulate a cursor-lik
 
 ## Use Transact-SQL Statements to Iterate Through a Result Set
 
-There are three methods you can use to iterate through a result set by using Transact-SQL statements.
+Here are three methods you can use to iterate through a result set by using Transact-SQL statements. The examples below use the Production.Product table from the [AdventureWorks sample database](/sql/samples/adventureworks-install-configure)
 
 One method is the use of temp tables. With this method, you create a snapshot of the initial `SELECT` statement and use it as a basis for cursoring. For example:
 
 ```SQL
 /********** example 1 **********/
-DECLARE @au_id char( 11 )
+SET NOCOUNT ON
+DROP TABLE IF EXISTS #MYTEMP 
+DECLARE @ProductID int
 
-SET rowcount 0
-SELECT * INTO #mytemp FROM authors
+SELECT * INTO #MYTEMP FROM Production.Product
 
-SET rowcount 1
+SELECT TOP(1) @ProductID = ProductID FROM #MYTEMP
 
-SELECT @au_id = au_id FROM #mytemp
-
-WHILE @@rowcount <> 0
-
+WHILE @@ROWCOUNT <> 0
 BEGIN
-SET rowcount 0
-SELECT * FROM #mytemp WHERE au_id = @au_id
-DELETE #mytemp WHERE au_id = @au_id
-
-SET rowcount 1
-SELECT @au_id = au_id FROM #mytemp
+    SELECT * FROM #MYTEMP WHERE ProductID = @ProductID
+    DELETE FROM #MYTEMP WHERE ProductID = @ProductID
+    SELECT TOP(1) @ProductID = ProductID FROM #MYTEMP
 END
-SET rowcount 0
-
 ```
 
 A second method is to use the `min` function to walk a table one row at a time. This method catches new rows that were added after the stored procedure begins execution, provided that the new row has a unique identifier greater than the current row that is being processed in the query. For example:
 
 ```SQL
 /********** example 2 **********/
-DECLARE @au_id char( 11 )
+SET NOCOUNT ON
+DROP TABLE IF EXISTS #MYTEMP 
+DECLARE @ProductID int
 
-SELECT @au_id = min( au_id ) FROM authors
-WHILE @au_id IS NOT NULL
+SELECT @ProductID = min( ProductID ) FROM Production.Product
+WHILE @ProductID IS NOT NULL
 
 BEGIN
-SELECT * FROM authors WHERE au_id = @au_id
-SELECT @au_id = min( au_id ) FROM authors WHERE au_id > @au_id
+    SELECT * FROM Production.Product WHERE ProductID = @ProductID
+    SELECT @ProductID = min( ProductID ) FROM Production.Product WHERE ProductID > @ProductID
 END
 ```
 
@@ -68,21 +64,19 @@ END
 
 ```SQL
 /********** example 3 **********/
-SET rowcount 0
-SELECT NULL mykey, * INTO #mytemp FROM authors
+SET NOCOUNT ON
+DROP TABLE IF EXISTS #MYTEMP 
 
-SET rowcount 1
-UPDATE #mytemp SET mykey = 1
+SELECT NULL AS mykey, * INTO #MYTEMP FROM Production.Product
 
-WHILE @@rowcount > 0
+UPDATE TOP(1) #MYTEMP SET mykey = 1
+
+WHILE @@ROWCOUNT > 0
 BEGIN
-SET rowcount 0
-SELECT * FROM #mytemp WHERE mykey = 1
-DELETE #mytemp WHERE mykey = 1
-SET rowcount 1
-UPDATE #mytemp SET mykey = 1
+    SELECT * FROM #MYTEMP WHERE mykey = 1
+    DELETE FROM #MYTEMP WHERE mykey = 1
+    UPDATE TOP(1) #MYTEMP SET mykey = 1
 END
-SET rowcount 0
 ```
 
 ## References

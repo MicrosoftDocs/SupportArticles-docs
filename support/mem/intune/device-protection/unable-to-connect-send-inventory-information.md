@@ -4,7 +4,7 @@ description: Resolves the Jamf console notification - Unable to connect or send 
 ms.date: 12/05/2023
 ms.reviewer: kaushika, taveil
 search.appverid: MET150
-ms.custom: sap:Mac management Jamf
+ms.custom: sap:Set Up Intune\Integrate Jamf Pro with Intune for Compliance
 ---
 # Unable to connect (send inventory information) to Microsoft Intune in the Jamf console
 

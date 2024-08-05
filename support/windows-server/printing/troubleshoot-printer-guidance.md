@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Printing issue troubleshooting guidance
 

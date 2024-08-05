@@ -4,6 +4,7 @@ description: Provides a resolution for an issue where the flow connection isn't 
 ms.author: jinywang
 ms.reviewer: laalexan
 ms.date: 10/11/2023
+ms.custom: sap:Teams Collaboration\Unable to create a swarm
 ---
 # Flow connection isn't valid when configuring expert notifications in customer support swarming
 

@@ -3,9 +3,9 @@ title: Troubleshoot desktop flow run queue-based errors
 description: Provides solutions to desktop flow queue-based error codes like NoCandidateMachine or No machine able to run the desktop flow has been found.
 author: rpapostolis # GitHub alias
 ms.author: appapaio # Microsoft alias
-ms.reviewer: befrey, lulubran
-ms.subservice: power-automate-desktop-flows
-ms.date: 11/15/2023
+ms.reviewer: befrey, lulubran, johndund, guco, fredg
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
+ms.date: 05/20/2024
 ---
 # Troubleshoot desktop flow run queue errors
 
@@ -20,9 +20,11 @@ Your desktop flow might fail to run with the error code `NoCandidateMachine` or 
 
 You might also receive one of these common sub-error codes:
 
-- `SessionExistsForTheUserWhenUnattended`
-- `NoUnlockedActiveSessionForAttended`
-- `UIFlowAlreadyRunning`
+- [SessionExistsForTheUserWhenUnattended](#sessionexistsfortheuserwhenunattended)
+- [NoUnlockedActiveSessionForAttended](#nounlockedactivesessionforattended)
+- [AttendedUserSessionNotActive](#attendedusersessionnotactive)
+- [AttendedUserNotLoggedIn](#attendedusernotloggedin)
+- [UIFlowAlreadyRunning](#uiflowalreadyrunning)
 
 ## Cause
 
@@ -33,42 +35,54 @@ As mentioned in the error message, this error means that the orchestrator can't 
 > [!IMPORTANT]
 > Power Automate automatically scales the number of concurrent desktop flow runs to the supported maximum value. The machine run queue follows a first-in, first-out approach, which means the first run received is the next one to be executed. If all available machines have reached their maximum concurrent sessions and can't execute the next run in the queue, the queue is blocked until a machine becomes available to run the next run in the queue.
 
-## Resolution
+## SessionExistsForTheUserWhenUnattended
 
-Try these steps to resolve errors with the following sub-error codes.
+This error occurs when you try to run an unattended desktop flow on a target machine where the user used in the desktop flow connection is signed in.
 
-#### SessionExistsForTheUserWhenUnattended
+#### Resolution
 
-This occurs when you try to run an unattended desktop flow on a target machine where the user used in the desktop flow connection is logged in.
+To resolve the issue, sign out of the session (a locked session will lead to this error), and confirm that you aren't signed in with the same user on the machine.
 
-##### Resolution
+## NoUnlockedActiveSessionForAttended
 
-To resolve the issue, sign out of the session (a locked session will lead to this error), and check that you aren't logged in with the same user on the machine.
+This error usually occurs when you try to run an attended desktop flow on a target machine that is locked or has no user signed in. You can also get this error when the Windows user you're currently signed in on the target machine doesn't match the user you entered in your connection. Attended desktop flows can only execute if the machine is unlocked on a session where the current user matches the one in the desktop flow connection.
 
-#### NoUnlockedActiveSessionForAttended
+#### Resolution
 
-This error usually occurs when you try to run an attended desktop flow on a target machine that is locked or has no user signed in. You can also get this error when the Windows user you're currently logged in on the target machine doesn't match the user you entered in your connection. Attended desktop flows can only execute if the machine is unlocked on a session where the current user matches the one in the desktop flow connection.
-
-##### Resolution
-
-To resolve the issue,
+To resolve the issue:
 
 - Check the credentials used in your connection and make sure they're the ones used in the unlocked session. You can verify your identity by typing `whoami` in any command prompt.
 - Verify that you're targeting the right machine. To do so, open the machine runtime application and select **View machine in portal** to verify that it brings you to the machine you're targeting in your run.
 - Verify that the account that runs the Power Automate service (UIFlowService) has Remote Desktop permissions on the machine. By default, the Power Automate service runs as `NT SERVICE\UIFlowService`. If you didn't change this, verify that `NT SERVICE\UIFlowService` is in the **Remote Desktop Users** group. To do so, go to **Start** > **Run**, type *usrmgr.msc*, select **Groups**, double-click the **Remote Desktop Users** group and verify the account is included. If it's not included, include it (this requires administrator permissions) and restart the machine.
 
-#### UIFlowAlreadyRunning
+## AttendedUserSessionNotActive
+
+This error occurs when the user specified in the connection is signed in to the target machine but the target session is either in a locked or disconnected state.
+
+#### Resolution
+
+Try connecting to the target session and running the attended flow again.
+
+## AttendedUserNotLoggedIn
+
+This error occurs when the user specified in the connection isn't signed in to the target machine.
+
+#### Resolution
+
+Sign in to the target machine as the user specified in the connection, leave the session active, and try running your attended flow again.
+
+## UIFlowAlreadyRunning
 
 When a desktop flow is already running on the machine, this error might occur in one of the following situations:
 
 - You run an attended or unattended desktop flow, and the number of active sessions on the machine has reached its limit.
-- You try to open a session for a user who is already logged in.
+- You try to open a session for a user who is already signed in.
 
-##### Resolution
+#### Resolution
 
 To resolve the issue, either wait for the flows that are already running to complete or [cancel their parent cloud flow run](/power-automate/desktop-flows/monitor-desktop-flow-queues#cancel-parent-flow-run).
 
-### Other error codes
+## Other error codes
 
 For information on other error codes that might occur when running desktop flows and steps to mitigate, see [Error code occurs when running an attended or unattended desktop flow](troubleshoot-errors-running-attended-or-unattended-desktop-flows.md).
 
@@ -100,7 +114,7 @@ If the sub-error code isn't provided, check if:
   
   Make sure one of the following is met:
 
-  - You aren't trying to run an unattended flow on a group where all machines are logged in.
+  - You aren't trying to run an unattended flow on a group where all machines are signed in.
   - You aren't trying to run an attended flow on a group where all machines are signed out.
 
 - The machine is no longer usable.

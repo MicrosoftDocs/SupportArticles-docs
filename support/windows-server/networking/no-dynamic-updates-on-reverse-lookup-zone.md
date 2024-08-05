@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dns, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # No dynamic updates on a classless reverse lookup zone
 
 This article provides workarounds for an issue where Domain Name System (DNS) dynamic updates of Pointer (PTR) records can't be performed on a classless reverse lookup zone.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 253575
 
 ## Symptoms

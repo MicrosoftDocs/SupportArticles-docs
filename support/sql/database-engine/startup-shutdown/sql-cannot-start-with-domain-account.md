@@ -2,7 +2,7 @@
 title: SQL Server services using domain credentials fail to start 
 description: This article provides a workaround to troubleshoot an issue when SQL Server fails to start when the startup account doesn't have the right permissions.
 ms.date: 12/12/2022
-ms.custom: sap:Administration and Management
+ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ms.reviewer: ramakoni, v-jayaramanp
 ---
 

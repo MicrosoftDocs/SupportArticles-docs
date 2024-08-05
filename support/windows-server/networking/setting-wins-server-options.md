@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, timball
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # Error or connection problems when you configure WINS addresses for a WINS server
 
@@ -16,7 +16,6 @@ This article provides a solution to problems that occur when you configure the W
 > [!IMPORTANT]  
 > WINS is deprecated. Therefore, you should no longer use it as a name resolution system.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 150737
 
 ## Symptoms

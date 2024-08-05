@@ -3,6 +3,7 @@ title: Error when you use WCF Discovery over UDP
 description: This article provides resolutions for the error that occurs when you use Windows Communication Foundation (WCF) support for WS-Discovery over UDP.
 ms.date: 08/25/2020
 ms.reviewer: rviana, jasonpa
+ms.custom: sap:WCF
 ---
 # WCF Discovery over UDP causes high CPU utilization and network congestion
 

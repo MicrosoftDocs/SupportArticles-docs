@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:boot-is-slow, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
 ---
 # How to troubleshoot startup problems in Windows Server 2003
 

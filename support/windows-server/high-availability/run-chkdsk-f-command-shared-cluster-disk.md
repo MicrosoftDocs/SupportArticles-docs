@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, CTIMON
-ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Root cause of an unexpected failover, csstroubleshoot
 ---
 # Run the chkdsk /f command on a shared cluster disk
 
 This article describes how to run the `chkdsk /f` command on a shared cluster disk.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 176970
 
 ## Summary

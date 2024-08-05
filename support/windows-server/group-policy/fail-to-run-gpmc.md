@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, bjwhalen
-ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
+ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
 ---
 # "The Permissions for This GPO in the sysvol folder Are Inconsistent with Those in Active Directory" Message When You Run GPMC
 
 This article provides help to fix errors that occur when you run Group Policy Management Console (GPMC).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 828760
 
 ## Symptoms

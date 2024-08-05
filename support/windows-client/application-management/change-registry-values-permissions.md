@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-script-host-cscript-or-wscript, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\Windows Script Host (CScript or WScript), csstroubleshoot
 ---
 # How to change registry values or permissions from a command line or a script
 
 This article describes how to change registry values or permissions from a command line or a script.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 264584
 
 ## Summary

@@ -4,6 +4,7 @@ description: For some common error codes, Web Deploy shows an error message. Thi
 ms.date: 04/12/2011
 ms.reviewer: chihshen, bilalaslam, v-jayaramanp
 ms.topic: troubleshooting
+ms.custom: sap:Deployment and Migration\Web Deploy providers and directives
 ---
 
 # Web Deploy error codes

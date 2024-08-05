@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, v-jesits
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 ---
 # AuthZ fails with an Access Denied error when an application does access checks in Windows Server
 
 This article provides a solution to an issue in which AuthZ fails with an Access Denied error when an application does access checks in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4055652
 
 ## Symptoms

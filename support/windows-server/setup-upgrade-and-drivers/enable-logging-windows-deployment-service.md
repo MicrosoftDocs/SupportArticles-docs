@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # How to enable logging in WDS in Windows
 
 This article describes how to enable logging in Windows Deployment Services (WDS) in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 936625
 
 > [!IMPORTANT]

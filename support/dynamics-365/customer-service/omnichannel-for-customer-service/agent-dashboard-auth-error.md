@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where the agent dashboard doesn
 ms.reviewer: nenellim, laalexan
 ms.author: vamullap
 ms.date: 12/04/2023
+ms.custom: sap:Omnichannel dashboards\Agent dashboard isn't loading due to insufficient privileges
 ---
 # Agent dashboard doesn't load or displays an authorization error
 

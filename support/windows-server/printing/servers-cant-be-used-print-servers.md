@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---
 # Servers in a NLB failover cluster can't be used as print servers in Windows Server 2012 R2
 
 This article describes why Network Load Balancing (NLB) failover cluster servers can't be used as print servers in Microsoft Windows Server-based computers. This article also describes the different ways to configure efficient print servers.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954420
 
 ## Summary

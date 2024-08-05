@@ -7,14 +7,13 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr, wincicadsec, jitha, v-tappelgate
-ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
+ms.custom: sap:Active Directory\Domain or forest functional level updates, failures and Advisory, csstroubleshoot
 keywords: KCD, Kerberos constrained delegation, s4u2proxy, s4u2self, service account, computer account, machine account
 ---
 # How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages
 
 The article provides step-by-step instructions to implement Service for User to Proxy (S4U2Proxy) or Kerberos Only Constrained Delegation on a custom service account for Web Enrollment proxy pages.
 
-_Applies to:_ &nbsp; Window Server 2016, Window Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4494313
 
 ## Summary

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # Windows Deployment Service fails to start with error information of 0x5
 
 This article provides help to fix the error 0x5 that occurs when you start the Windows Deployment Service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2009647
 
 ## Symptoms

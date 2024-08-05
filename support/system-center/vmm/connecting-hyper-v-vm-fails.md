@@ -1,8 +1,8 @@
 ---
 title: Can't connect to a Hyper-V virtual machine
 description: Fixes an issue in which you can't connect to a Hyper-V VM and receive error 'Virtual Machine Manager lost the connection to the virtual machine.'
-ms.date: 04/26/2020
-ms.reviewer: jchornbe
+ms.date: 04/09/2024
+ms.reviewer: wenca, jchornbe
 ---
 # Virtual Machine Manager lost the connection to the virtual machine when connecting to a Hyper-V VM
 

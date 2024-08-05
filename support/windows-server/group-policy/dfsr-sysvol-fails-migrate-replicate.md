@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
+ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
 ---
 # DFSR SYSVOL fails to migrate or replicate, SYSVOL not shared, Event IDs 8028 or 6016
 
 This article provides a solution to issues where Distributed File System Replication (DFSR) `SYSVOL` fails to migrate or replicate, or `SYSVOL` isn't shared.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2567421
 
 ## Symptoms

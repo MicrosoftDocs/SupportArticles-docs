@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:partition-and-volume-management, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
 ---
 # Restore the system or boot drive letter in Windows  
 
 This article describes how to change the system or boot drive letter in Windows.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 223188
 
 ## Summary

@@ -4,6 +4,7 @@ description: Provides a resolution for the authentication error that occurs on t
 ms.reviewer: nenellim
 ms.author: vamullap
 ms.date: 05/23/2023
+ms.custom: sap:Licensing, provisioning, and installation\Unable to install or provision Omnichannel solutions on my environment
 ---
 # An authentication error occurs on the agent dashboard after Omnichannel for Customer Service is provisioned
 

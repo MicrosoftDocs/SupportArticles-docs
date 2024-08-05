@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika,  yitzhaks, manojse
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 ---
 # Error when you open Enterprise or Computer Compliance Reports in MBAM
 
 This article provides a solution to an error that occurs when you open Enterprise or Computer Compliance Reports in Microsoft BitLocker Administration and Monitoring (MBAM).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2639518
 
 ## Symptoms

@@ -1,8 +1,9 @@
 ---
 title: Why a PO status changes to Change Order
 description: Describes why a purchase order status changes to Change Order and why the value in the Revision field increases in Purchase Order Processing.
-ms.reviewer: kfrankha, lmuelle
-ms.date: 03/31/2021
+ms.reviewer: theley, kfrankha, lmuelle
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # Information about why a purchase order status changes to "Change Order" and why the value in the "Revision" field increases in Purchase Order Processing in Microsoft Dynamics GP
 

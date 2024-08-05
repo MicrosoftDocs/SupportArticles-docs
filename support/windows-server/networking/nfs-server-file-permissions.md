@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # NFS Server and File Permissions
 
 This article provides some information about NFS Server and File Permissions.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 231964
 
 ## Summary

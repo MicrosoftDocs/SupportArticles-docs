@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ctimon
-ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Adding node, csstroubleshoot
 ---
 # The implications of using the /forcequorum switch to start the Cluster service in Windows Server 2008
 
 This article discusses the implications of starting the Cluster service by using the /forcequorum switch
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947713
 
 ## Beta Information

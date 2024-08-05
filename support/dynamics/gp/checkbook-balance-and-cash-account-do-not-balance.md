@@ -1,9 +1,10 @@
 ---
 title: Checkbook and cash account don't balance
 description: Describes reasons why the checkbook balance in Bank Reconciliation may not match the general ledger cash account in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # The checkbook balance and the general ledger cash account don't balance in Microsoft Dynamics GP
 

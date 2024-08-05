@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ahamad, vipekkan
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # You can't turn on Network Discovery in Network and Sharing Center
 
 This article provides a resolution for the issue that you can't turn on Network Discovery in Network and Sharing Center.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2722035
 
 ## Symptoms

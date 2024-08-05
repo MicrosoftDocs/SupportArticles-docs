@@ -4,7 +4,7 @@ description: Provides a solution to an issue where Microsoft Flow Extension Pack
 ms.reviewer: rishum
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: power-automate-admin
+ms.custom: sap:Administration\Power Automate management for admins
 ---
 # Microsoft Flow Extension Package shows "Installation failed" on PPAC
 

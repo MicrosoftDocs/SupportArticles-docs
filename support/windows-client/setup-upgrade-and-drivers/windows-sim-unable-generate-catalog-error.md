@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: scottmca, kaushika
-ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # Error message: Windows SIM was unable to generate a catalog or Parameter count mismatch
 

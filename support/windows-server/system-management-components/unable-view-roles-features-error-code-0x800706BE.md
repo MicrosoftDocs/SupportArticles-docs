@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:server-manager, csstroubleshoot
+ms.custom: sap:System Management Components\Server Manager, csstroubleshoot
 ---
 # You are unable to view Roles and Features and receive error code 0x800706BE in Server Manager
 
 This article provides a resolution for the issue that you are unable to view Roles and Features and receive error code 0x800706BE in Server Manager.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2461206
 
 ## Symptoms

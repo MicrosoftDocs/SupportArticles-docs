@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, DanMa
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # You may have to wait for a long time to populate the information on shared folder sessions in Computer Management console
 
 This article provides a solution to an issue where information on shared folder sessions is populated slow in Computer Management console.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2454039
 
 ## Symptoms

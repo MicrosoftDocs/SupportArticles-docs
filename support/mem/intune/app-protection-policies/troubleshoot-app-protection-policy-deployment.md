@@ -4,6 +4,7 @@ description: This article gives troubleshooting guidance for IT Admins with issu
 ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Application Protection - Windows\Advisory
 ---
 
 # Troubleshooting app protection policy deployment in Intune

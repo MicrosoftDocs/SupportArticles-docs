@@ -4,7 +4,7 @@ description: Learn to troubleshoot by using the LiveRE tool when Windows does't 
 ms.reviewer: visohra, kaushika
 manager: dcscontentpm
 audience: itpro
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ms.topic: troubleshooting
 ms.date: 12/26/2023
 localization_priority: medium

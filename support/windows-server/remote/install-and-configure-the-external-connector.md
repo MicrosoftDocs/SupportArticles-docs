@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
 ---
 # How to install and configure the external connector for a terminal server or remote desktop server
 
 This article provides a step-by-step description of how to configure the external connector for a Windows Server terminal server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 887432
 
 ## Introduction

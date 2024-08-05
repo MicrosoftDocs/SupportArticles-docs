@@ -4,6 +4,7 @@ description: Provides information about the clone module process and known issue
 author: Bstorie
 ms.author: Brstor
 ms.date: 10/19/2023
+ms.custom: sap:Development and SDKs\Issues with e-commerce module development
 ---
 # Known issues with e-commerce SDK clone modules
 

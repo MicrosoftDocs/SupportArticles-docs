@@ -2,7 +2,7 @@
 title: ThreadAbortException occurs if you use Response.End
 description: This article provides resolutions for ThreadAbortException error that occurs if you use Response.End, Response.Redirect, or Server.Transfer.
 ms.date: 12/11/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ---
 # ThreadAbortException occurs if you use Response.End, Response.Redirect, or Server.Transfer
 

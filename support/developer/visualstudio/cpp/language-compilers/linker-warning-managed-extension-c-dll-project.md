@@ -2,7 +2,7 @@
 title: Linker warning when building managed extension
 description: Describes that you receive error messages at compile time or at link time. Provides a solution to resolve this problem.
 ms.date: 04/20/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C++
 ---
 # You receive linker warnings when you build managed extensions for C++ DLL projects
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:iscsi, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\ISCSI, csstroubleshoot
 ---
 # Supported and tested Microsoft iSCSI Software Target 3.3 limits
 
 This topic provides the supported and tested Microsoft iSCSI Software Target 3.3 limits.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2535811
 
 ## Summary

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, nandve
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # Error (Target account name is incorrect) when a domain user accesses a share on a file server that is running Windows Server 2012 R2
 
 This article provides a solution to an issue where users fail to access a share on a file server that is running Windows Server 2012 R2.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3040803
 
 ## Symptoms

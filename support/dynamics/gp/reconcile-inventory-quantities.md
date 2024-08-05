@@ -1,9 +1,10 @@
 ---
 title: Reconcile inventory quantities
 description: Describes the order in which you reconcile inventory quantities when you use the Inventory Control module, the Field Service module, or the Project Accounting module in Microsoft Great Plains.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # How to reconcile inventory quantities in Microsoft Great Plains when you use Inventory Control, Field Service, or Project Accounting
 

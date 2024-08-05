@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
 ---
 # We are seeing an error where we are unable to access the security log
 
 This article helps to fix the error where we are unable to access the security log.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2751670
 
 ## Symptoms

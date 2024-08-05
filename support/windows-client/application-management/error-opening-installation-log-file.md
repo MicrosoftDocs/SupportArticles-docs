@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:msi, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\MSI and MSIX, csstroubleshoot
 ---
 # Error when trying to uninstall an application: Error opening installation log file. Verify that the specified location exists and is writable
 

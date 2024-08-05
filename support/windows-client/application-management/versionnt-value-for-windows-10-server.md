@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:msi, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\MSI and MSIX, csstroubleshoot
 ---
 # VersionNT value for Windows 10, Windows Server 2016, and Windows Server 2019
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:network-device-enrollment-services-ndes, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Technologies (Auto Enrollment, NDES, CWE, CEP, CES), csstroubleshoot
 ---
 # Renewal of "Enrollment Agent" certificate used by NDES may fail
 

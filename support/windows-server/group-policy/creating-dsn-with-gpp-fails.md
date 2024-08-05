@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, sajijohn, markgray
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 ---
 # Unable to create DSN using Group Policy Preferences, unspecified error 0x80004005
 
 This article provides help to fix the error 0x80004005 that occurs when you configure a Data Source Name (DSN) using Group Policy Preferences (GPP).
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2001454
 
 ## Symptoms

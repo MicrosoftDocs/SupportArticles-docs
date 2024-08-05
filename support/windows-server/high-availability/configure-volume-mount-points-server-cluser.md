@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Setup and configuration of clustered services and applications, csstroubleshoot
 ---
 # Configure volume mount points on a server cluster in Windows Server
 
 This article describes how to create volume mount points on a server cluster by using the NTFS volume mount points functionality.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947021
 
 ## Summary

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
 ---
 # How to relocate a SYSVOL tree that uses FRS for replication
 
 This article describes two options for relocating the system volume (SYSVOL) tree on your domain controller.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 842162
 
 ## Summary

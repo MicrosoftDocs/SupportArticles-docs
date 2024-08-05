@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, ELDENC
-ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Cluster service fails to start, csstroubleshoot
 ---
 # How to troubleshoot the Cluster service account when it modifies computer objects
 
 This article describes how to troubleshoot the Cluster service when it creates or modifies a computer object in Active Directory for a server cluster (virtual server).
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 307532
 
 ## Active Directory access rights for creating a computer object

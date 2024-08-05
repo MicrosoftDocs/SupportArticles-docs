@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dpi-and-display-issues, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\DPI and Display Issues, csstroubleshoot
 ---
 # When using USB-attached monitor, display configuration may not be retained after reboot
 

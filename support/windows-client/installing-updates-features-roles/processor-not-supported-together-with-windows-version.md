@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
 adobe-target: true
 ---
 

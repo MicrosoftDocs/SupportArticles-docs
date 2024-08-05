@@ -2,7 +2,7 @@
 title: Can't print COM objects called from ASP
 description: This article provides a resolution that a COM object sends output to a printer fails when called from Active Server Pages.
 ms.date: 02/27/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ---
 # COM objects fail to print when called from ASP
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
 ---
 # New setting modifies NTLM network authentication behavior
 
 This article describes new behavior that affects NTLM password changes and how to change this behavior by using a registry.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 906305
 
 ## Introduction

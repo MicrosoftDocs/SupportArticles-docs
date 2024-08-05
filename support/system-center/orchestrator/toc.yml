@@ -2,28 +2,16 @@
   href: welcome-orchestrator.yml
 - name: Activities
   items:
-    - name: Invoke REST Service activity fails
-      href: invoke-rest-service-activity-fails.md
     - name: The Run Program activity fails
       href: run-program-activity-fails.md
 - name: Deployment
   items:
-    - name: Determine the version of Orchestrator components
-      href: determine-orchestrator-components-version.md
     - name: Error 0x80004005 starting OpalisActionService
       href: error-0x80004005-start-opalisactionservice.md
     - name: Increase maximum concurrent policy instances
       href: increase-maximum-number-concurrent-policy-instances.md
     - name: License key expired prompt after migrating the database
       href: license-key-expired-after-migrating-database.md
-    - name: Opalis Integration Server connectivity requirements
-      href: opalis-integration-server-connectivity-requirements.md
-    - name: Runbooks, folders or statistics aren't displayed in the Orchestration console
-      href: runbooks-folders-statistics-not-displayed.md
-    - name: Set user permissions in the Opalis Integration Server client
-      href: set-user-permissions.md
-    - name: Setup has detected Opalis 6.3 installed
-      href: setup-has-detected-opalis-installed-error.md
     - name: The Orchestration console can't be opened after upgrade
       href: console-cannot-open-after-upgrade.md
     - name: Unable to generate a temporary class
@@ -36,8 +24,6 @@
       href: install-tivoli-required-rules-classes.md
     - name: Integration packs stop working with TLS 1.2
       href: integration-packs-stop-working.md
-    - name: Invalid ObjectServer data type
-      href: invalid-objectserver-data-type-error.md
 - name: Runbooks
   items:
     - name: Access Denied error in Runbook Designer

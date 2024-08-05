@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubleshoot
 ---
 # Hyper-V virtual machine may not start, and you receive an error 0x80070005: General access denied error
 
 This article helps fix the error 0x80070005 that occurs when a Hyper-V virtual machine fails to start.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2249906
 
 ## Symptoms

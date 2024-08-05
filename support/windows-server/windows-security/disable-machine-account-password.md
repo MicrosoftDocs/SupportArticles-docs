@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, davidg
-ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
 ---
 # How to disable automatic machine account password changes
 
 This article describes how an administrator can disable automatic machine account password changes.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 154501
 
 ## Summary

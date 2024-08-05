@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, btoth, miodon, joelch
-ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
 ---
 # You cannot add a DHCP reservation that is outside of the scope distribution range in Windows Server
 
 This article provides a solution to an issue where you can't add a DHCP reservation that is outside of the scope distribution range.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2005980
 
 ## Symptoms

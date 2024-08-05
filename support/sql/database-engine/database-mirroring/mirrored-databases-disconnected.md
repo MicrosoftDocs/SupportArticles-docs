@@ -2,7 +2,7 @@
 title: Mirrored databases are disconnected
 description: This article provides a resolution for the problem where mirrored databases are left in a Disconnected or In Recovery state.
 ms.date: 11/05/2020
-ms.custom: sap:Database Mirroring
+ms.custom: sap:Database Mirroring (DBM)
 ms.reviewer: ramakoni
 ---
 # Mirrored databases are disconnected after you restart the database mirror in SQL Server

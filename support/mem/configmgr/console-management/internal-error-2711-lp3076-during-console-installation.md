@@ -3,6 +3,7 @@ title: Internal Error 2711.LP3076
 description: Describes an issue that triggers an Internal Error 2711.LP3076 error that occurs during the installation of the Configuration Manager console.
 ms.date: 12/05/2023
 ms.reviewer: kaushika, bhaskark, yvetteo
+ms.custom: sap:Admin Console, Role-Based Access and Reporting\Console Installation or Upgrade
 ---
 # Internal Error 2711.LP3076 occurs during installation of the Configuration Manager console
 

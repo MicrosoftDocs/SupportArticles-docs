@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: manojse, nacan, kaushika
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 ---
 # MBAM and Secure Network Communication
 
 This article discusses how to configure Microsoft's BitLocker Administration and Monitoring (MBAM) with Secure Network Communication.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 2754259
 
 ## Summary

@@ -5,6 +5,7 @@ author: jshotts
 ms.author: jasonshotts
 ms.reviewer: mhart
 ms.date: 10/19/2023
+ms.custom: sap:Administration
 ---
 # Entity record names have duplicated numbers in Dynamics 365 Field Service
 

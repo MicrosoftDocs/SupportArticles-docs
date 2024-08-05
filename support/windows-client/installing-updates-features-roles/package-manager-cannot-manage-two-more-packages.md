@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: tarekr, cochen, kaushika
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
 ---
 # Package Manager can install only the first package when you extract two or more packages to the same folder in Windows Vista
 
 This article describes a problem that occurs because Package Manager can't manage two or more packages in the same sandbox.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 932224
 
 ## Symptoms

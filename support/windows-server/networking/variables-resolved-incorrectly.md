@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, darolt
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # %HOMEPATH%, %HOMESHARE%, and %HOMEDRIVE% variables are resolved incorrectly
 
 This article provides a solution to an issue where the `%HOMEPATH%`, `%HOMESHARE%`, and `%HOMEDRIVE%` variables are resolved incorrectly.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 237566
 
 ## Symptoms

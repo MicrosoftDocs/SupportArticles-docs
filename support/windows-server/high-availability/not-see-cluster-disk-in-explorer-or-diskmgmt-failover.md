@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
 ---
 # You do not see the cluster disk in explorer or diskmgmt on Failover in a Windows 2008 or Windows 2008 R2 Cluster
 
 This article provides a resolution to an issue where cluster disk cannot be found in explorer or diskmgmt on Failover.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2517921
 
 ## Symptoms

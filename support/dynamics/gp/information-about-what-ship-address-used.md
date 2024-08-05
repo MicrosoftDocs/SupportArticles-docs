@@ -1,8 +1,9 @@
 ---
 title: Information about what ship-to address is used
 description: This article describes information about what ship-to address is used when you create a purchase order by using Purchase Order Generator in Microsoft Dynamics GP.
-ms.reviewer: 
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # Information about what ship-to address is used when you create a purchase order by using Purchase Order Generator in Microsoft Dynamics GP
 

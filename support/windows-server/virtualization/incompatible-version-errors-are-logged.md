@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot
 ---
 # Incompatible version errors are logged in the System log when you start Windows Server 2008 R2 as a Windows Server 2008 Hyper-V guest
 
 This article provides a solution to an issue that occurs when you start Windows Server 2008 R2 as a Windows Server 2008 Hyper-V guest.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 972108
 
 ## Symptoms

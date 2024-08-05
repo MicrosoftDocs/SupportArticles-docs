@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, prasadk
-ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
 ---
 # DHCP Server with Deactivated Scope sends a DHCPNAK to clients
 
 This article provides a solution to an issue when you start a Dynamic Host Configuration Protocol (DHCP) client.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 228597
 
 ## Symptoms

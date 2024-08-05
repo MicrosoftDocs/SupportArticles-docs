@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
 ---
 # Description of the standard terminology that is used to describe Microsoft software updates
 

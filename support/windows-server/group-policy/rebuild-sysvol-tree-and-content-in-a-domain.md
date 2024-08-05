@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
+ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
 ---
 # How to rebuild the SYSVOL tree and its content in a domain
 
 The article describes how to use the Burflags registry entry to rebuild each domain controller's copy of the system volume (SYSVOL) tree on all domain controllers in a common Active Directory directory service domain.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315457
 
 ## Introduction

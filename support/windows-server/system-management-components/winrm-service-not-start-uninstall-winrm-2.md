@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:winrm, csstroubleshoot
+ms.custom: sap:System Management Components\WinRM, including event forwarding and collections, csstroubleshoot
 ---
 # The Windows Remote Manager (WinRM) service doesn't start after you uninstall WinRM 2.0  
 
 This article provides a resolution for the issue that Windows Remote Manager (WinRM) service doesn't start after you uninstall WinRM 2.0.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 974504
 
 ## Symptoms

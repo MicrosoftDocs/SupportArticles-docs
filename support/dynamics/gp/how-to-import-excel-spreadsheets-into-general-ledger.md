@@ -1,9 +1,10 @@
 ---
 title: How to import Excel spreadsheets into General Ledger
 description: This article describes how to import a budget using Excel-Based Budgeting.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # How to import Excel spreadsheets into Microsoft Dynamics GP General Ledger
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, cpuckett
-ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
 ---
 # Event IDs 12290 and 16387 are logged when system state backup fails on a Windows Server 2008-based computer
 
 This article provides a solution to an issue where event IDs 12290 and 16387 are logged when system state backup fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 968128
 
 ## Symptoms

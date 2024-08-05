@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, tatec, amanjain
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Windows SMB server is unresponsive
 
 This article explains why a Windows Server Message Block (SMB) server becomes unresponsive and how to troubleshoot the problem.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 3061415
 
 ## Symptoms

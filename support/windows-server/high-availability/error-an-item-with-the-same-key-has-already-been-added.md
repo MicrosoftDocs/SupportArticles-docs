@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
 ---
 # Error: "An item with the same key has already been added"
 
 This article helps to fix the error "An item with the same key has already been added".
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2002405
 
 ## Symptoms

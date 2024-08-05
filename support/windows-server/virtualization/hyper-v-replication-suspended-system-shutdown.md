@@ -7,13 +7,11 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, nookawa
-ms.custom: sap:hyper-v-replica, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Hyper-V Replica (HVR), csstroubleshoot
 ---
 # Hyper-V replication is suspended at system shutdown
 
 This article helps to resolve the issue in which Hyper-V replication is suspended when the primary server or the replica server is shut down.
-
-_Applies to:_ &nbsp; Windows Server 2012, Windows Server 2012 R2
 
 Hyper-V replication is suspended when the primary server or the replica server is shut down. Additionally, the Hyper-V Virtual Machine Management service (VMMS) records a series of event logs with event IDs 32086 and 32022.
 

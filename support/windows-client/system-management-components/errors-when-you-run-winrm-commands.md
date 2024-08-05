@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:winrm, csstroubleshoot
+ms.custom: sap:System Management Components\WinRM, including event forwarding and collections, csstroubleshoot
 ---
 # Errors when you run WinRM commands to check local functionality in a Windows Server 2008 environment
 
 This article provides a solution to errors that occur when you run WinRM commands to check local functionality in a Windows Server 2008 environment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2269634
 
 ## Symptoms

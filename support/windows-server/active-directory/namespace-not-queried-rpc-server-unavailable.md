@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, randt
-ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Error when you attempt to create a DFS namespace: The namespace cannot be queried. The RPC server is unavailable
 
 This article provides a solution to an error that occurs when you create a DFS namespace.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2021914
 
 ## Symptoms

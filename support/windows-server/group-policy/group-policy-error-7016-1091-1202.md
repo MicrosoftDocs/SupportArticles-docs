@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 ---
 # Group Policy error events logged when unknown environment variable is used
 
 This article helps avoid Group Policy error events that are logged when unknown environment variable is used.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2003730
 
 ## Symptoms

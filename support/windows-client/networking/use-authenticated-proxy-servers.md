@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, tode, tonyga
-ms.custom: sap:web-application-proxy-wap-role-service, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Web Application Proxy (WAP) role service, csstroubleshoot
 ---
 # Using authenticated proxy servers together with Windows 8
 
 This article provides help to solve an issue that occurs when you use apps that connect to the Internet if you use an Internet proxy server that requires authentication.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2778122
 
 ## Symptoms

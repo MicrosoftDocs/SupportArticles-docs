@@ -1,9 +1,10 @@
 ---
 title: How to create IMTraceLog.txt for Integration Manager
 description: This article describes how to create the IMTraceLog.txt file for Integration Manager for Microsoft Dynamics GP so that you can view more detailed error messages.
-ms.reviewer: v-anlang, dlanglie
+ms.reviewer: theley, v-anlang, dlanglie
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to create an IMTraceLog.txt file for Integration Manager for Microsoft Dynamics GP
 

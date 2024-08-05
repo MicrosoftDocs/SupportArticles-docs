@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 ---
 # Error after you enter a BitLocker PIN at Windows startup: Too many PIN entry attempts
 
 This article helps fix an error (Too many PIN entry attempts) that occurs after you enter a BitLocker PIN at Windows startup.
 
-_Applies to:_ &nbsp; Windows 10 version 1809 and later versions, Windows Server 2012 R2, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 4009797
 
 ## Symptoms
