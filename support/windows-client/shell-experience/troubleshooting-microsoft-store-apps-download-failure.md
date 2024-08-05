@@ -13,6 +13,9 @@ localization_priority: medium
 
 This article provides guidance on troubleshoot failures of downloading or updating Apps from Microsoft Store.
 
+> [!NOTE]
+> If you're not a support agent or IT professional, you'll find more helpful information about Microsoft Store problems in [Fix problems with apps from Microsoft Store - Microsoft Support](https://support.microsoft.com/account-billing/fix-problems-with-apps-from-microsoft-store-93ed0bcf-9c12-3df6-6dda-92ec5d0415ac).
+
 ## Troubleshooting checklist
 
 1. Verify Microsoft Store is registered or registered for your user.
