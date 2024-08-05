@@ -2,7 +2,7 @@
 title: Common errors creating and assigning flow approvals
 description: Common Power Automate approval errors and potential resolutions.
 ms.reviewer: hamenon, mansong
-ms.date: 02/07/2023
+ms.date: 08/05/2024
 ms.custom: sap:Approvals\Approval action failing
 ---
 # Common errors creating and assigning flow approvals
@@ -90,7 +90,7 @@ For more information about these provisioning errors, see [Flow Approval CDS Pro
 
 > The Common Data Service database for this environment is disabled
 
-The Common Data Service instance has been disabled in this environment. This isn't expected, and is may related to the expiration of all Flow & CDS plans within your Microsoft Entra tenant. To ensure the database can be enabled, make sure at least one user has active plans.
+The Microsoft Dataverse (previously known as Common Data Service) instance has been disabled in this environment. This isn't expected, and is may related to the expiration of all Flow & CDS plans within your Microsoft Entra tenant. To ensure the database can be enabled, make sure at least one user has active plans.
 
 ### CdsInstanceNotReady
 
@@ -102,7 +102,7 @@ The database for this instance is still being provisioned, or has failed provisi
 
 > The current user does not have permissions to create a Common Data Service database for this environment. Please ask an environment administrator to create the database.
 
-For non-Default Flow and Power Apps environments, only environment admins can directly (through the Flow Admin portal) or indirectly (through Flow Approvals) create the Common Data Service database. Either an administrator must
+For non-Default Flow and Power Apps environments, only environment admins can directly (through the Flow Admin portal) or indirectly (through Flow Approvals) create the Dataverse database. Either an administrator must
 
 - Create the environment manually from the Flow Admin portal.
 - Create and run an Approvals Flow.
