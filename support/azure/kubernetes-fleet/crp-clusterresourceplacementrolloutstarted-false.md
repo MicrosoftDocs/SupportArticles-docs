@@ -354,7 +354,7 @@ status:
 The `ClusterResourceBinding` remains unchanged. In the `ClusterResourceBinding` specification, the `resourceSnapshotName` still references the old `ClusterResourceSnapshot` name. This issue occurs when there's no explicit `RollingUpdate` input from the user because the default values are applied:
 
 - The `maxUnavailable` value is configured to 25% × 3 (the desired number), rounded to `1`.
-- `maxSurge` is configured to 25% × 3 (the desired number), rounded to `1`.
+- The `maxSurge` value is configured to 25% × 3 (the desired number), rounded to `1`.
 
 ### Why ClusterResourceBinding isn't updated
 
