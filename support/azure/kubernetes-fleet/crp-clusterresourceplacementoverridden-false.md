@@ -1,15 +1,15 @@
 ---
-title: clusterResourcePlacementOverridden is false when you use the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
+title: ClusterResourcePlacementOverridden is false when you use the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
 description: Helps you resolve clusterResourcePlacementOverridden failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
-ms.date: 07/22/2024
+ms.date: 08/05/2024
 ms.reviewer: 
 ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
-# Resource propagation failure: clusterResourcePlacementOverridden is false
+# Resource propagation failure: ClusterResourcePlacementOverridden is false
 
-This article discusses how to troubleshoot `clusterResourcePlacementOverridden` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
+This article discusses how to troubleshoot `ClusterResourcePlacementOverridden` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 

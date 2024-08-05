@@ -130,8 +130,8 @@ In the `ClusterResourcePlacement` status, the `ClusterResourcePlacementWorkSynch
 
 In this situation, here are several potential solutions:
 
-- Modify the CRP with a newly selected cluster. 
-- Delete the CRP to remove the work through garbage collection.
+- Modify the `ClusterResourcePlacement` with a newly selected cluster. 
+- Delete the `ClusterResourcePlacement` to remove the work through garbage collection.
 - Rejoin the member cluster. The namespace can only be regenerated if after rejoining the cluster.
 
 In other situations, you might opt to wait for the work to finish propagating.

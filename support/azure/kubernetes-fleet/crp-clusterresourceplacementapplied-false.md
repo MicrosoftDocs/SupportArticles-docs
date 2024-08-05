@@ -1,7 +1,7 @@
 ---
 title: ClusterResourcePlacementApplied failure when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
 description: Helps you resolve ClusterResourcePlacementApplied failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
-ms.date: 07/22/2024
+ms.date: 08/05/2024
 ms.reviewer: 
 ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
@@ -13,7 +13,7 @@ This article discusses how to troubleshoot `ClusterResourcePlacementApplied` iss
 
 ## Symptoms
 
-When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementApplied` status shows as **false**.
+When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementApplied` status shows as `false`.
 
 ## Cause
 

@@ -1,7 +1,7 @@
 ---
-title:  Troubleshooting ClusterResourcePlacement API in Azure Kubernetes Fleet Manager
-description: Helps you resolve `ClusterResourcePlacement`-related issues when you use Azure Kubernetes Fleet Manager APIs.
-ms.date: 07/22/2024
+title: Troubleshooting ClusterResourcePlacement API in Azure Kubernetes Fleet Manager
+description: Helps you resolve ClusterResourcePlacement-related issues when you use Azure Kubernetes Fleet Manager APIs.
+ms.date: 08/05/2024
 ms.reviewer: 
 ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
@@ -93,7 +93,7 @@ Kubectl get clusterresourcebinding -l kubernetes-fleet.io/parent-CRP={CRPName}
 
 **Example**
 
-1. Run the following command to view the status of the `ClusterResourcePlacement` deployment. In this case, the `ClusterResourcePlacement` name is **test-crp**.
+1. Run the following command to view the status of the `ClusterResourcePlacement` deployment. In this case, the `ClusterResourcePlacement` name is `test-crp`.
 
     ```bash
     kubectl describe clusterresourceplacement test-crp
@@ -147,7 +147,7 @@ kubectl get clusterresourcesnapshot -l kubernetes-fleet.io/is-latest-snapshot=tr
 > [!NOTE]  
 > In this command, replace `{CRPName}` with your `ClusterResourcePlacement` name.
 
-### How can I find the correct work resource that's associated with `ClusterResourcePlacement`?
+### How can I find the correct work resource that's associated with ClusterResourcePlacement?
 
 To find the correct work resource, follow these steps:
 
@@ -159,6 +159,6 @@ To find the correct work resource, follow these steps:
     ```
 
    > [!NOTE]  
-   > In this command, replace {clusterName} and {CRPName} with the names that you identified in the first step.
+   > In this command, replace `{clusterName}` and `{CRPName}` with the names that you identified in the first step.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
