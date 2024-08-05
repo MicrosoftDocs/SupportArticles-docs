@@ -62,7 +62,7 @@ Empty attachments (0 bytes) aren't supported.
 
 > 'Attachment file size limit exceeded. Please contact your admin to make sure the limit is properly configured (The default is 5MB).'.
 
-The attachment is too large for your CDS instance. The default size is 5 MB per file, but this can be configured by database administrators.
+The attachment is too large for your Dataverse instance. The default size is 5 MB per file, but this can be configured by database administrators.
 
 ### CdsApiAttachmentBlockedFileExtension
 
@@ -84,13 +84,13 @@ The specified attachment name is invalid because it contains characters such as 
 
 ## Provisioning Errors
 
-For more information about these provisioning errors, see [Flow Approval CDS Provisioning Errors and Recommendations](https://support.microsoft.com/help/4513672/flow-approval-cds-provisioning-errors-and-recommendations).
+For more information about these provisioning errors, see [Power Automate Approval Dataverse provisioning errors and recommendations](flow-approval-cds-provisioning-errors.md).
 
 ### CdsInstanceDisabled
 
 > The Common Data Service database for this environment is disabled
 
-The Microsoft Dataverse (previously known as Common Data Service) instance has been disabled in this environment. This isn't expected, and is may related to the expiration of all Flow & CDS plans within your Microsoft Entra tenant. To ensure the database can be enabled, make sure at least one user has active plans.
+The Microsoft Dataverse (previously known as Common Data Service) instance has been disabled in this environment. This isn't expected, and is might related to the expiration of all flow and Dataverse plans within your Microsoft Entra tenant. To ensure the database can be enabled, make sure at least one user has active plans.
 
 ### CdsInstanceNotReady
 
@@ -164,11 +164,11 @@ The approval title was null or empty, which isn't supported.
 
 > Could not create a CDS system record representing user '\<User ID>'. Please ask a database administrator to add the user to the authorized security group.'.
 
-The CDS database for this environment is protected by a security group. An owner of the security group will need to add all approval creators, requestors, and recipients to the security group. The security group can be configured from the Power Platform Admin Center.
+The Dataverse database for this environment is protected by a security group. An owner of the security group will need to add all approval creators, requestors, and recipients to the security group. The security group can be configured from the Power Platform Admin Center.
 
 ### XrmApprovalsGeneralPermissionsError
 
-> 'Encountered a general permissions error trying to access the CDS database. This could be caused by modification of the approvals administrator or user roles, or by an incompatible plugin.
+> 'Encountered a general permissions error trying to access the Dataverse database. This could be caused by modification of the approvals administrator or user roles, or by an incompatible plugin.
 
 Ensure no custom plugins restrict access to the approvals data entities for either organization users for the Power Automate service principal used to provision records (`flowdev@microsoft.com`).
 
