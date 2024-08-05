@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: arrenc, herbertm, warrenw, kaushika, joscon
-ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # Domain Controllers in-place upgrade hangs at black screen
 
 This article provides a resolution for the issue that Domain Controllers in-place upgrade hangs at black screen.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2843034
 
 ## Symptoms

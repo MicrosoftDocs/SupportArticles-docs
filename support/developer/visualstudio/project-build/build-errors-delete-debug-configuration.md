@@ -2,7 +2,7 @@
 title: Build errors when you delete the debug configuration
 description: This article provides a resolution for the problem that occurs after the debug build configuration is removed from a solution and when a referenced .NET project is unloaded from the same solution.
 ms.date: 01/04/2021
-ms.custom: sap:Project/Build system
+ms.custom: sap:Project - Build System\Build Issues
 ms.topic: troubleshooting
 ---
 # Build errors when you delete the debug configuration from a solution

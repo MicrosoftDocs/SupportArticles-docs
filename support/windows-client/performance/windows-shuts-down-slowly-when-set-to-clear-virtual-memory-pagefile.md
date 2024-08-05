@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:shutdown-is-slow-or-hangs, csstroubleshoot
+ms.custom: sap:System Performance\Shutdown Performance (slow, unresponsive), csstroubleshoot
 ---
 # Windows shuts down slowly when it is set to clear the virtual memory pagefile on shutdown
 
 This article provides a solution for the issue Windows shuts down slowly when it is set to clear the virtual memory pagefile on shutdown.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 320423
 
 ## Symptoms

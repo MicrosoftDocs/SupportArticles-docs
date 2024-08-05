@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-logon-fails, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
 ---
 # You experience log-off problems on a Windows XP-based, Windows Server 2003-based, Windows 2000-based, or Windows NT 4.0-based computer
 
 This article contains a step-by-step method to help you resolve the log-off problems in Windows XP, in Windows Server 2003, in Windows 2000, and in Windows NT 4.0.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10  
 _Original KB number:_ &nbsp; 837115
 
 ## Introduction

@@ -1,0 +1,4 @@
+- name: Welcome
+  href: welcome-azure-stack-edge.yml
+- name: Azure Stack Edge support package and device logs
+  href: azure-stack-edge-support-package-device-logs.md

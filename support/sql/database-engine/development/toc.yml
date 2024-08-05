@@ -13,6 +13,8 @@ items:
   href: execution-clr-fails-typeInitializationexception.md
 - name: Iterate through result set using T-SQL
   href: iterate-through-result-set.md
+- name: Policy for untested .NET Framework assemblies
+  href: policy-untested-net-framework-assemblies.md
 - name: Query returns incorrect results
   href: query-typecasts-a-unicode-column.md
 - name: Run a DLL-based COM object

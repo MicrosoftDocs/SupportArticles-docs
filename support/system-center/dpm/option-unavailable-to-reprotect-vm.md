@@ -1,7 +1,8 @@
 ---
 title: Option isn't available to reprotect VMware VMs
 description: The option to reprotect VMware VMs on a new DPM or MABS server isn't available.
-ms.date: 07/27/2020
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet
 ---
 # Option isn't available to reprotect VMware VMs on a new DPM or MABS server
 

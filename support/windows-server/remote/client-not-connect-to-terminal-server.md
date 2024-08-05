@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, mikeres
-ms.custom: sap:authentication, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Authentication, csstroubleshoot
 ---
 # Because of a security error, the client could not connect to the Terminal server
 
 This article provides a solution to an issue where Terminal Services clients are repeatedly denied access to the terminal server after upgrade Windows.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 329896
 
 ## Symptoms

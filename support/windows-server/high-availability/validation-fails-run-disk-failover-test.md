@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
 ---
 # Validation fails when you run the Disk Failover test on a Windows Server 2012 failover cluster
 
 This article provides a solution to an issue where validation fails when you run the Disk Failover test on a Windows Server 2012 failover cluster.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3020013
 
 ## Symptoms

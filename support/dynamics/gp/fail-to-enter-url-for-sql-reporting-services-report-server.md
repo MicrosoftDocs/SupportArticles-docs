@@ -3,7 +3,8 @@ title: Error when you enter URL for SQL Reporting Services report server or repo
 description: Discusses an issue that occurs when you try to enter the URL for the report server or for the report manager server in SQL Reporting Services. You receive an error message.
 ms.topic: troubleshooting
 ms.reviewer: theley, jayneb, kyouells
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error in Microsoft Dynamics GP when you try to enter the URL for the SQL Reporting Services report server or report manager server: "The target server location entered is not valid"
 

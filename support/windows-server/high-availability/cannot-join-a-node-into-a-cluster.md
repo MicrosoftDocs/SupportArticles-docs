@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-yuluo
-ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Adding node, csstroubleshoot
 ---
 # You are unable to join a node into a cluster if UDP port 3343 is blocked
 
 This article provides a solution to an issue where users are unable to join a node into a cluster if UDP port 3343 is blocked.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2455128
 
 ## Symptoms

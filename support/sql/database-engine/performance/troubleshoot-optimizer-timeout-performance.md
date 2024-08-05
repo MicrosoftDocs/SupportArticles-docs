@@ -2,7 +2,7 @@
 title: Troubleshoot slow queries due to query optimizer timeout
 description: Introduces how Optimizer Timeout can affect query performance and how to optimize the performance.
 ms.date: 11/10/2022
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 author: PijoCoder 
 ms.author: jopilov
 ---

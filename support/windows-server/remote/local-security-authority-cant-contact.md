@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, deepku
-ms.custom: sap:authentication, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Authentication, csstroubleshoot
 ---
 # RDP connection to Remote Desktop server running Windows Server 2008 R2 may fail with message The Local Security Authority cannot be contacted
 
 This article provides a solution to an error that occurs when you try to establish a remote desktop connection using RD client (mstsc.exe) to a Remote Desktop server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2493594
 
 ## Symptoms

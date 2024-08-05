@@ -2,7 +2,7 @@
 title: Copy image from database to PictureBox control
 description: This article describes how to copy an image stored in a database directly into a PictureBox control on a Windows Form without needing to save the image to a file.
 ms.date: 10/10/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C#
 ms.topic: how-to
 ---
 # Copy a Picture from a Database Directly to a PictureBox Control with Visual C sharp  

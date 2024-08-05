@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:event-viewer, csstroubleshoot
+ms.custom: sap:System Management Components\WinRM, including event forwarding and collections, csstroubleshoot
 ---
 # How to delete "Saved Logs" from the Event Viewer
 

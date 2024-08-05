@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, Gbrag, jerrycif
-ms.custom: sap:powershell, csstroubleshoot
+ms.custom: sap:System Management Components\PowerShell, csstroubleshoot
 ---
 # Enter-PSSession cmdlet fails when network path is specified in PSModulePath environment variable
 
 This article provides a resolution to an issue that `Enter-PSSession` unexpectedly terminates when a network path is specified in PSModulePath.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4076842
 
 ## Symptom

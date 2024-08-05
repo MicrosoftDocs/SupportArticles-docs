@@ -3,7 +3,7 @@ title: Intermittent or periodic authentication issues
 description: Troubleshoots intermittent or periodic authentication issues in SQL Server connectivity.
 ms.date: 12/13/2023
 ms.reviewer: prmadhes, jopilov, v-sidong
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 # Intermittent or periodic authentication issues in SQL Server
 

@@ -3,7 +3,8 @@ title: Return Code 17 error when retiring an asset
 description: When a user attempts to retire an asset they receive an error Return code 17 (Duplicate record) on script FA_Retire_Asset. Provides a resolution.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # "Return Code 17" error when trying to retire an asset in Microsoft Dynamics GP
 

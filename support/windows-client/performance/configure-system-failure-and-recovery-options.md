@@ -4,7 +4,7 @@ description: Learn how to configure the actions that Windows takes when a system
 ms.date: 12/26/2023
 ms.topic: troubleshooting
 manager: dcscontentpm
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ms.reviewer: dansimp
 audience: itpro
 localization_priority: medium

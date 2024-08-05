@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:frs, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
 ---
 # Troubleshoot the File Replication Service and the Distributed File System
 
 This article discusses how to troubleshoot the File Replication service (FRS) and the Distributed File System (DFS). The main emphasis, however, of this article is to discuss a general procedure that can help you to troubleshoot FRS problems.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 272279
 
 ## Summary

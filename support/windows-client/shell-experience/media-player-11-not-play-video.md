@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, bchee
-ms.custom: sap:windows-media-player, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Media issues with in-box apps (Windows Media Player, Groove, Movies and TV), csstroubleshoot
 ---
 # You receive a codec error message, or audio plays but video doesn't play when you play media files in Windows Media Player 11
 

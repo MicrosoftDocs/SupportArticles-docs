@@ -2,7 +2,7 @@
 title: The blocked column is populated for latch waits
 description: This article describes that the blocked column in the sysprocesses table is populated for latch waits.
 ms.date: 01/20/2021
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: bartd
 ---
 # The blocked column in the sysprocesses table is populated for latch waits

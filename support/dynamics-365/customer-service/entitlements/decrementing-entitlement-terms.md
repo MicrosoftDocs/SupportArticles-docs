@@ -5,6 +5,7 @@ ms.reviewer: sdas, ankugupta
 ms.author: v-psuraty
 author: v-psuraty
 ms.date: 01/17/2024
+ms.custom: sap:Entitlements\Issue with calculating and applying entitlement terms
 ---
 # Remaining terms of entitlements don't decrement as expected
 

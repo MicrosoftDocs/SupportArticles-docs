@@ -5,6 +5,7 @@ ms.date: 04/09/2012
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande, jamesche
+ms.custom: sap:Site Behavior and Performance\High CPU usage
 ---
 # Troubleshooting High CPU in an IIS application pool
 

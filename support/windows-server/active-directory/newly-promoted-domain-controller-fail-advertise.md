@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
+ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
 # A newly promoted domain controller may fail to advertise after completion of DCpromo
 
 This article describes an issue where a newly promoted domain controller fails to advertise after completion of DCpromo.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 967336
 
 ## Symptoms

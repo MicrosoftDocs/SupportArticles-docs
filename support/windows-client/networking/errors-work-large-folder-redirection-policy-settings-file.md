@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: herbertm, kaushika
-ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Offline Files and Folders (CSC), csstroubleshoot
 ---
 # Errors when you have a large "Folder Redirection" policy settings file in Windows
 
 This article provides a workaround for the problems that you may experience when you have a large "Folder Redirection" policy file.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 978098
 
 ## Symptoms

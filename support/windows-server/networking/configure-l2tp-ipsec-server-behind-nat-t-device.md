@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, samirj
-ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
 ---
 # Configure a L2TP/IPsec server behind a NAT-T device
 
 This article describes how to configure a L2TP/IPsec server behind a NAT-T device.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 926179
 
 ## Summary

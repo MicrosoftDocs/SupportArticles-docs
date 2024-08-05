@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, davemm
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # Some applications and APIs require access to authorization information on account objects
 
 This article describes some applications and application programming interfaces (APIs) must have access to the token-groups-global-and-universal (TGGAU) attribute on user account objects, or on computer account objects in the Active Directory directory service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 331951
 
 ## Summary

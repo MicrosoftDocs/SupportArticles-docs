@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, match
-ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Not able to print with Type 4 or Type 3 XPS printer drivers after a Windows Server is promoted to a Domain Controller
 
 This article provides a solution to an issue where you can't print with Type 4 or Type 3 XPS printer drivers after the printer server is promoted to a Domain Controller.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2762101
 
 ## Symptoms

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dfsr, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
 ---
 # DFSR no longer replicates files after restoring a virtualized server's snapshot
 
 This article discusses an issue where the Distributed File System Replication (DFSR) service fails to replicate files after restoring a virtualized server's snapshot.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2517913
 
 ## Symptoms

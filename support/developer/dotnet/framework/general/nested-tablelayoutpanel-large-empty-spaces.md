@@ -3,6 +3,7 @@ title: TableLayoutPanel displays with large spaces
 description: This article describes a layout problem when you use TableLayoutPanel controls in a Windows Forms application on high-DPI monitors.
 ms.date: 05/08/2020
 ms.reviewer: amymcel, davean, danru, valerieg
+ms.custom: sap:Class Library Namespaces
 ---
 # Nested TableLayoutPanel is displayed with large empty spaces in a Windows Forms application on high-DPI monitors
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-profiles, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
 # User may not be able to change their password if you configure the 'User must change password at next logon' setting
 
 This article provides some information about the issue that user may not be able to change their password, if you configure the 'User must change password at next logon' setting.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 320325
 
 ## Summary

@@ -3,7 +3,8 @@ title: How to change Adjusted Bank Balance in Select Bank Transactions reconcili
 description: Introduces how to change Adjusted Bank Balance in Select Bank Transactions reconciliation.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # How to change the Adjusted Bank Balance in Select Bank Transactions reconciliation window in Microsoft Dynamics GP
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 ---
 # Error when you edit a policy in Windows: Microsoft.Policies.Sensors.WindowsLocationProvided is already defined
 
 This article helps fix an issue that triggers an error when the central store contains the .admx files from Windows 10.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 3077013
 
 ## Symptoms

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:dns, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # How to configure DNS dynamic updates in Windows
 
 This article describes how to configure the DNS update functionality in Windows.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows 10  
 _Original KB number:_ &nbsp; 816592
 
 ## Summary

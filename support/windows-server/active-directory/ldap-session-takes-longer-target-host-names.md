@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: wincicadsec, herbertm, kaushika
-ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # New sessions setup for LDAP services take longer than expected if targeting host names
 
 This article discusses a problem in which a new session setup for LDAP services takes longer than expected if it targets host names.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4559609
 
 ## Symptoms

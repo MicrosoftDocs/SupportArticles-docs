@@ -3,7 +3,7 @@ title: Working with Power Automate's JavaScript SDK
 description: Description of the recommended usage of the Power Automate's JavaScript Software Developer Kit (JS SDK).
 ms.reviewer: hamenon, rymacdow
 ms.date: 12/12/2022
-ms.subservice: power-automate-flow-creation
+ms.custom: sap:Flow creation\Other flow creation issues
 ms.topic: how-to
 ---
 # How to use Power Automate's JavaScript Software Developer Kit

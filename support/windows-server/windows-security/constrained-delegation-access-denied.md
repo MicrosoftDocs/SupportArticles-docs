@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:kerberos-authentication, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
 ---
 # Constrained delegation for CIFS fails with ACCESS_DENIED error
 
 This article helps fix an **access denied** error that occurs when you access a service that uses network shares on a middle-tier server.
 
-_Applies to:_ &nbsp; Window 10 – all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 2602377
 
 ## Symptoms

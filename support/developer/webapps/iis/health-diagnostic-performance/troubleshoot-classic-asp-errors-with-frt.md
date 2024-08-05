@@ -5,6 +5,7 @@ ms.date: 02/19/2009
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, robmcm
+ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---
 # Use Failed Request Tracing to troubleshoot Classic ASP errors
 

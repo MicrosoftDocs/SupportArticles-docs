@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, abgupta
-ms.custom: sap:integration-components, csstroubleshoot, linux-related-content
+ms.custom: sap:Virtualization and Hyper-V\Linux Integration Components, csstroubleshoot, linux-related-content
 ---
 # Degraded integration services message for non-Windows guests
 
 This article provides a solution to an error that occurs when you run a non-Windows guest such as Linux on Hyper-V.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2956569
 
 ## Summary

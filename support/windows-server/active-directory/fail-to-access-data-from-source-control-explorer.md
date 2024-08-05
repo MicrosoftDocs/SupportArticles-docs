@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # "Object reference not set to an instance of an object" while accessing Active Directory information from TFS Source Control Explorer
 
 This article provides help to solve an error that occurs when you access Active Directory information from Team Foundation Server Source Control Explorer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 957969
 
 ## Rapid publishing

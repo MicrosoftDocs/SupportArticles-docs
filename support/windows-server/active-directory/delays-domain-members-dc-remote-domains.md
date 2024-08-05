@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:schema-update-failure-or-conflict, csstroubleshoot
+ms.custom: sap:Active Directory\Schema Updates, csstroubleshoot
 ---
 # Delays when domain members are required to communicate to DCs on remote domains
 
 This article provides help to solve the delays that occur when domain members are required to communicate to DCs on remote domains.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4550655
 
 ## Symptoms

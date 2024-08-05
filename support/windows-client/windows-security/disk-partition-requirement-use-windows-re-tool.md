@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 ---
 # Disk partition requirement for using Windows RE tools on a UEFI-based computer
 
 This article discusses the disk partition requirements for using Windows Recovery Environment (RE) tools on a Unified Extensible Firmware Interface (UEFI) computer.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3135522
 
 ## More information

@@ -3,7 +3,8 @@ title: Error when you print EFT checks in the Payables Management module in Micr
 description: Describes an error that occurs when you print EFT checks in the Payables Management module in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Error when you print EFT checks in the Payables Management module in Microsoft Dynamics GP: "Please set up security for the alternate check form to print EFTs with checks"
 

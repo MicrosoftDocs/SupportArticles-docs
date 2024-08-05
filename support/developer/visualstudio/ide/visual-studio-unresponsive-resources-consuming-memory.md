@@ -5,7 +5,7 @@ author: HaiyingYu
 ms.author: haiyingyu
 ms.topic: troubleshooting
 ms.date: 05/10/2022
-ms.custom: sap:Integrated Development Environment (IDE)
+ms.custom: sap:Integrated Development Environment (IDE)\Other
 ---
 
 # Visual Studio might become unresponsive if the system runs out of memory

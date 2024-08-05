@@ -1,19 +1,19 @@
 ---
 title: ReflectionTypeLoadException error
-description: Describes an issue that triggers a ReflectionTypeLoadException error after you apply an update rollup to System Center 2012 R2 Virtual Machine Manager.
-ms.date: 07/15/2020
-ms.reviewer: ctimon, markstan
+description: Describes an issue that triggers a ReflectionTypeLoadException error after you apply an update rollup to System Center Virtual Machine Manager.
+ms.date: 04/09/2024
+ms.reviewer: wenca, ctimon, markstan
 ---
 # VMM service doesn't start and returns ReflectionTypeLoadException after you apply an update rollup
 
 This article helps you fix an issue in which Virtual Machine Manager service doesn't start and returns the **ReflectionTypeLoadException** error after you apply an update rollup.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 R2 Virtual Machine Manager, System Center 2012 Virtual Machine Manager  
+_Original product version:_ &nbsp; Microsoft System Center Virtual Machine Manager  
 _Original KB number:_ &nbsp; 3045931
 
 ## Symptoms
 
-After you apply an update rollup for System Center 2012 R2 Virtual Machine Manager, the System Center Virtual Machine Manager service may not start as expected. When you try to manually start the service, you receive the following pop-up message:
+After you apply an update rollup for System Center Virtual Machine Manager, the System Center Virtual Machine Manager service may not start as expected. When you try to manually start the service, you receive the following pop-up message:
 
 > The System Center Virtual Machine Manager service local computer started and then stopped. Some services stop automatically if they are not in use by other services or programs.
 

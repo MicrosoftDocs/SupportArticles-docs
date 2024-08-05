@@ -3,7 +3,7 @@ title: Fail to list Excel Online tables retrieving values
 description: Creating an Excel-triggered flow and unable to list tables in the Excel file with could not retrieve values, error executing the API error.
 ms.reviewer: jewelden
 ms.date: 03/31/2021
-ms.subservice: power-automate-flow-creation
+ms.custom: sap:Flow creation\Triggers
 ---
 # Fail to list Excel Online tables retrieving values
 

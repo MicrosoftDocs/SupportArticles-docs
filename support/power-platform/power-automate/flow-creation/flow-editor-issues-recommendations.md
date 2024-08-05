@@ -3,7 +3,7 @@ title: Flow Editor Issues and Recommendations
 description: Describes Flow Editor issues and recommendations.
 ms.reviewer: 
 ms.date: 03/31/2021
-ms.subservice: power-automate-flow-creation
+ms.custom: sap:Flow creation\Actions
 ---
 # Flow Editor issues and recommendations
 

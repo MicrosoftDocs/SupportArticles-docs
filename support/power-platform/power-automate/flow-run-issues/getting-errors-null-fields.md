@@ -3,7 +3,7 @@ title: Getting errors with null fields
 description: Provides a solution to an error that occurs when you create a flow in Microsoft Power Automate.
 ms.reviewer: 
 ms.date: 03/31/2021
-ms.subservice: power-automate-flow-run
+ms.custom: sap:Flow run issues\Actions
 ---
 # Getting errors with null fields
 

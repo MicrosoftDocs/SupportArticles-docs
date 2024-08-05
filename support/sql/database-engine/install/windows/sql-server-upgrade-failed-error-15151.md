@@ -2,7 +2,7 @@
 title: SQL Server upgrade fails with error 15151 when executing Update Database scripts
 description: This article describes error 15151 that stops a SQL Server upgrade when update database scripts are run.
 ms.date: 08/17/2023
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: jopilov, v-jayaramanp
 ---
 
@@ -19,7 +19,6 @@ When you apply a CU or SP, the Setup program returns the following error message
 Additionally, the following error entry might be logged in the SQL Server error log:
 
 ```output
-**Error message :**
 Error: 15151, Severity: 16, State: 1.
 Cannot find the login '##MS_SSISServerCleanupJobLogin##', because it does not exist or you do not have permission.
 ```
@@ -59,7 +58,7 @@ To resolve the issue, follow these steps:
    ```sql
    USE [SSISDB]
    GO
-   DROP USER [##MS_SSISServerCleanupJobLogin##]
+   DROP USER [##MS_SSISServerCleanupJobUser##]
    GO
 
    CREATE USER [##MS_SSISServerCleanupJobUser##] FOR LOGIN [##MS_SSISServerCleanupJobLogin##]

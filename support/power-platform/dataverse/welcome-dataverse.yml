@@ -1,0 +1,86 @@
+### YamlMime:Landing
+
+title: Microsoft Dataverse troubleshooting # < 60 chars
+summary: Welcome to Microsoft Dataverse troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Dataverse. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Dataverse troubleshooting
+  description: Landing page for Microsoft Dataverse troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: rahulmital #Required; your GitHub user alias, with correct capitalization.
+  ms.author: rahulmital #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/22/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Card
+- title: Bulk deleting data
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Bulk operation errors
+          url: bulk-deleting-data/bulk-operation-errors.md
+
+# Card
+- title: Dataverse Web API and SDK
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Required fields are missing in Dataverse records
+          url: dataverse-web-api-and-sdk/dataverse-records-missing-required-fields.md
+        - text: Web API client errors
+          url: dataverse-web-api-and-sdk/web-api-client-errors.md
+
+# Card
+- title: Plug-in execution
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Dataverse plug-ins
+          url: plug-in-execution/dataverse-plug-ins-errors.md
+
+# Card
+- title: User permissions
+  linkLists:
+    - linkListType: how-to-guide
+      links:         
+        - text: Clean up inherited access
+          url: user-permissions/cleanup-inherited-access.md
+        - text: Dataverse client errors
+          url: user-permissions/client-errors.md
+# Card
+- title: Working with solutions
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: '"An entitykey with the selected attributes already exists" error'
+          url: working-with-solutions/entitykey-selected-attributes-already-exists.md    
+        - text: '"Failed deleting solution" error due to circular dependencies between solutions'
+          url: working-with-solutions/circular-dependencies-between-solutions.md
+        - text: '"Full formXml is expected to create a form" error'
+          url: working-with-solutions/full-formxml-expected-to-create-form-error.md
+        - text: '"PrimaryName attribute not found for entity" error'
+          url: working-with-solutions/primaryname-attribute-not-found.md
+        - text: '"Solution cannot be deleted due to dependencies" error'
+          url: working-with-solutions/solution-cannot-be-deleted-due-to-dependencies.md
+        - text: '"You cannot delete this form because it is the only fallback form" error'
+          url: working-with-solutions/you-cannot-delete-this-form-only-fallback.md
+
+# Card
+- title: Documentation and training
+  linkLists:
+    - linkListType: reference
+      links:
+        - text: Microsoft Dataverse documentation
+          url: /power-apps/maker/data-platform/data-platform-intro
+        - text: Microsoft Dataverse training
+          url: /training/paths/get-started-cds/
+
+# Card
+- title: Support Resources
+  linkLists:
+    - linkListType: reference
+      links:
+        - text: Microsoft Dataverse Community forum
+          url: https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps

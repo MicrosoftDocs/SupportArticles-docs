@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcpip-performance, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Performance (Congestion, Bandwidth, Latency, MTU, NOT SMB), csstroubleshoot
 ---
 # TCP/IP performance troubleshooting guidance
 

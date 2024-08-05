@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, yizhao
-ms.custom: sap:windows-time-service, csstroubleshoot
+ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
 ---
 # How to configure the Windows Time service against a large time offset
 
 This article describes how to configure the Windows Time service against a large time offset.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 884776
 
 ## Introduction

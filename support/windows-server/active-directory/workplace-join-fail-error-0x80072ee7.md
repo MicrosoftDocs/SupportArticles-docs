@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, willfid, AAdcontent, rkiran
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot
 ---
 # "Workplace Join discovery failed" error with exit code 0x80072EE7
 
 This article provides a solution to an error 0x80072EE7 that occurs when users perform a Workplace Join.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3045385
 
 > [!NOTE]

@@ -5,6 +5,7 @@ ms.date: 11/23/2007
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande
+ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---
 # How to enable Failed Request Tracing and logging for UNC hosting
 

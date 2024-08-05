@@ -3,7 +3,8 @@ title: How to use index file with Dexterity to keep resource IDs
 description: Describes how to use an index file and the Microsoft Dynamics GP Dexterity source code control functionality to make sure that the resources that you create maintain the same resource ID in different builds and versions of your code.
 ms.reviewer: theley,  
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to use an index file with Dexterity to ensure resource IDs do not change in new builds and versions
 

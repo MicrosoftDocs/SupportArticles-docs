@@ -4,6 +4,7 @@ description: This article describes changes in the TSAware flag behavior in .NET
 ms.date: 05/06/2020
 ms.reviewer: dougste
 ms.topic: article
+ms.custom: sap:Class Library Namespaces
 ---
 # Change in the TSAware flag behavior in .NET Framework 3.5 SP1
 

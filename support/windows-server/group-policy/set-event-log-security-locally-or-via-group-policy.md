@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jamirc
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # How to set event log security locally or by using Group Policy  
 

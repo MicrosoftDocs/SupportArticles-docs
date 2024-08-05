@@ -2,7 +2,7 @@
 title: Trigonometry STL functions in Visual C++
 description: This article illustrates how to use the acos, asin, atan, atan2, cos, cosh, sin, sinh, tan, and tanh STL functions in Visual C++.
 ms.date: 04/27/2020
-ms.custom: sap:C and C++ Libraries
+ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
 ms.topic: how-to
 ---
 # Use trigonometry STL functions in Visual C++

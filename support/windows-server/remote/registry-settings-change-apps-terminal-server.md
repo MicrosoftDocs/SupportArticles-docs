@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:application-compatibility, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Application compatibility, csstroubleshoot
 ---
 # Terminal Server registry settings for applications
 
 This article discusses the registry settings that can be used to modify application behavior on a Terminal Server computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186499
 
 ## Controlling Application Execution in Execute Mode

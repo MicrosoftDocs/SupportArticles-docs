@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: manojse, hisingh, avicar, kaushika
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 ---
 # MBAM setup fails if SQL SSRS is not configured properly
 
 This article provides help to fix an error that occurs when you install Microsoft BitLocker Administration and Monitoring (MBAM) Compliance and Audit Reports feature.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2668533
 
 ## Symptoms

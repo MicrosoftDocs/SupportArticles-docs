@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:applications, csstroubleshoot
+ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
 ---
 # Overview of the compatibility considerations for 32-bit programs on 64-bit versions of Windows
 
 This article discusses the compatibility considerations and limitations for 32-bit programs that are running on 64-bit versions of Windows.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 896456
 
 ## Summary

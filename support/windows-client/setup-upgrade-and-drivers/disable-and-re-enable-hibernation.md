@@ -7,14 +7,13 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, patste, v-jomcc
-ms.custom: sap:power-management, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Power management, csstroubleshoot
 adobe-target: true
 ---
 # How to disable and re-enable hibernation on a computer that is running Windows
 
 This article describes how to disable and then re-enable hibernation on a computer that is running Windows.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows 10 - all editions, Windows Server 2016, Windows 7 Service Pack 1, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 920730
 
 > [!WARNING]

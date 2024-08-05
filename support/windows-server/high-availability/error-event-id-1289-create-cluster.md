@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ahmedb, dewitth
-ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Adding node, csstroubleshoot
 ---
 # You receive an error message, and event ID 1289 is logged when you try to create a cluster
 
 This article helps to fix a problem that occurs when you try to create a cluster on a set of computers that have the Failover Clustering feature installed.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 973838
 
 ## Symptoms

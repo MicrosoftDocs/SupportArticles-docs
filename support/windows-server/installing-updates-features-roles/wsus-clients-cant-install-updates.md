@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
 ---
 # WSUS (Windows Server Update Services) clients cannot install updates when Symantec Endpoint Protection is installed on the same Web site with WSUS
 
 This article provides a solution to an issue where Windows Server Update Services (WSUS) clients can't install updates when Symantec Endpoint Protection is installed on the same Web site.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 968248
 
 ## Symptom

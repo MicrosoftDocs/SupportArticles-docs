@@ -4,6 +4,7 @@ description: Provides a resolution for the Nullable object must have a value err
 ms.reviewer: sdas
 ms.author: ankugupta
 ms.date: 08/18/2023
+ms.custom: sap:Service Level Agreements\Unable to create a new SLA
 ---
 # "Nullable object must have a value" error occurs when saving an SLA item
 

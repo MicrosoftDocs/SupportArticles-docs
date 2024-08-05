@@ -2,7 +2,7 @@
 title: ASP.NET inline expressions
 description: This article introduces the usage of ASP.NET inline expressions in the .NET Framework.
 ms.date: 03/26/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ms.reviewer: wawang
 ms.topic: article
 ---

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, anwill
-ms.custom: sap:task-scheduler, csstroubleshoot
+ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
 ---
 # Scheduled tasks reference incorrect user profile paths
 
 This article provides help to solve an issue where the output is written to an incorrect user profile path when you run a script under a user account by using Windows Task Scheduler.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2968540
 
 > [!NOTE]

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation rolls back, csstroubleshoot
 ---
 # Command-line switches supported by a software installation package, an update package, or a hotfix package created with Microsoft Self-Extractor
 

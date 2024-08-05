@@ -1,0 +1,51 @@
+### YamlMime:Landing
+
+title: Azure Container Registry troubleshooting documentation # < 60 chars
+summary: Welcome to Azure Container Registry troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Container Registry. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Troubleshoot Azure Container Registry issues
+  description: Documentation for troubleshooting common issues with Azure Container Registry. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: azure-container-registry
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 07/08/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+ # Card
+  - title: Learn how to use Azure Container Registry by reading these quickstarts, tutorials, and samples
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Azure Container Registry documentation
+            url: /azure/container-registry/
+
+  # Card
+  - title: Troubleshoot container registry issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't get private IP address of an Azure Container Registry FQDN
+            url: cant-resolve-container-registry-fqdn-private-ip-address.md
+
+  # Card
+  - title: Troubleshoot pull issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot issues when you pull from Azure Container Registry
+            url: troubleshoot-issues-pull-container-registry.md
+          - text: '"Authentication required" error'
+            url: authentication-required.md
+          - text: '"Client with IP address is not allowed access" error'
+            url: client-ip-address-not-allowed-access.md
+          - text: '"Context deadline exceeded" error'
+            url: context-deadline-exceeded.md
+          - text: '"I/O time-out" error'
+            url: download-failed-443-io-time-out.md
+          - text: '"Manifest tag is not found" error'
+            url: manifest-tag-not-found.md
+          - text: '"Request canceled while waiting for connection" error'
+            url: request-canceled-waiting-connection-timeout-exceeded.md

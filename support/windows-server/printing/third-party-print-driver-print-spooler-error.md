@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
-ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---
 # You experience Print Spooler error messages after you install or upgrade a Third-Party print driver
 
 This article provides a solution to fix Print Spooler errors that occurs after you install or upgrade a Third-Party print driver.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2793718
 
 ## Symptoms

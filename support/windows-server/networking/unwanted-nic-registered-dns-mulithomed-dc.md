@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dns, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # Steps to avoid registering unwanted NICs in DNS on a multihomed domain controller
 
 This article provides a solution to an issue where unwanted network interface controllers (NICs) are registered in Domain Name System (DNS) on a multihomed domain controller (DC).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2023004
 
 ## Symptoms

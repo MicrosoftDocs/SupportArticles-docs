@@ -3,7 +3,7 @@ title: Can't sign in to OneDrive connector when using office 365 account
 description: You're unable to sign in to OneDrive connector when using office 365 account during flow creation. Provides a resolution.
 ms.reviewer: anaggar
 ms.date: 03/31/2021
-ms.subservice: power-automate-authentication
+ms.custom: sap:Authentication or Sign-in\Connector authentication
 ---
 # Unable to sign in to OneDrive connector when using office 365 account during flow creation
 

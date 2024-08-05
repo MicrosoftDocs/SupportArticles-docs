@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, johnmar
-ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
 ---
 # Active Route removed on Windows Server Failover Cluster
 
 This article provides a solution to an issue that the Active route is removed when you add a static persistent route to a network adapter.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2161341
 
 ## Symptoms

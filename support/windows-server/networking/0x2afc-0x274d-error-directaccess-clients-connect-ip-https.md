@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # 0x2AFC or 0x274D error when DirectAccess clients try to connect over IP-HTTPS
 
 This article provides a resolution to the error 0x2AFC or 0x274D that occurs when DirectAccess clients try to connect over IP-HTTPS.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3056560
 
 ## Symptoms

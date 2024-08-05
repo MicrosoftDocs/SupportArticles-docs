@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ---
 # Error message when you restart Windows Server after a full OS recovery: Windows failed to start. Status: 0xc000000e
 
 This article provides help to solve an error that occurs when you restart Microsoft Windows Server 2008 R2 after you perform a full OS recovery.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2261423
 
 ## Symptoms

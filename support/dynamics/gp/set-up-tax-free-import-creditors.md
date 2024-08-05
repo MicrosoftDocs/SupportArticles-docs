@@ -3,7 +3,8 @@ title: Set up tax-free import creditors
 description: Describes how to set up tax-free import creditors for Australian Goods and Services Tax (GST) in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # How to set up tax-free import creditors for Australian GST in Microsoft Dynamics GP
 

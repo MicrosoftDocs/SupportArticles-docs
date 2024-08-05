@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
+ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
 # Error message occurs when you demote a domain controller
 
 This article provides a solution to an issue where demoting a domain controller by using the Active Directory Installation wizard (Dcpromo.exe) fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 282272
 
 ## Symptoms

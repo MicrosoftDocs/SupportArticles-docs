@@ -2,7 +2,8 @@
 title: FAQs about Advanced Security and Field Level Security
 description: Discusses frequently asked questions about how to set up and use Advanced Security and Field Level Security.
 ms.reviewer: theley, kyouells
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Frequently asked questions about Advanced Security and about Field Level Security in Microsoft Dynamics GP and in Microsoft Great Plains
 

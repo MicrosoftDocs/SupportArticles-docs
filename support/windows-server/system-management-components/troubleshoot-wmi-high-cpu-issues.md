@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, krpg, warrenw, anleito, mistoyan, v-lianna
-ms.custom: sap:wmi, csstroubleshoot
+ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
 # Troubleshoot WMI high CPU usage issues
 

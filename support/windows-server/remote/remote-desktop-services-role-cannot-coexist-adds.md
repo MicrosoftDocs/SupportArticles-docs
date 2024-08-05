@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:load-balancing-and-connection-broker, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Connection Broker and load balancing, csstroubleshoot
 ---
 # Remote Desktop Services role cannot coexist with AD DS role
 
 This article provides a resolution for the issue that Remote Desktop Services role cannot coexist with AD DS role.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2799605
 
 ## Symptoms

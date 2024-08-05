@@ -1,19 +1,19 @@
 ---
 title: Changes to GPO permissions through AGPM aren't saved
 description: Describes an issue that blocks you from changing Group Policy object permissions in Advanced Group Policy Management (AGPM). A workaround is provided.
-ms.date: 12/26/2023
+ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, lindakup, arrenc, ajayps, dnats, herbertm
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # Changes to Group Policy object permissions through AGPM are ignored
 
 This article provides a workaround for an issue where changes to Group Policy object permissions that's controlled in Advanced Group Policy Management (AGPM) aren't saved as expected.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 3174540
 
 ## Symptoms

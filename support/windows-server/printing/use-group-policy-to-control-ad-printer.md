@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-and-configuration:-printers-via-group-policy, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---
 # Use Group Policy settings to control printers in Active Directory
 
 This article describes the policies specific to managing printers and how to use Group Policy settings to manage printers in Active Directory.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 234270
 
 ## Summary

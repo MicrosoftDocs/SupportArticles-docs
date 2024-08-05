@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: whall, kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # How to troubleshoot advanced network performance features such as RSS and NetDMA
 
 This article troubleshoots some networking improvements that were first released in the Windows Server 2003 Scalable Networking Pack. Because they may cause slow or intermittent network performance if the network drivers that are being used are old or don't support the new features.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2643970
 
 ## Summary

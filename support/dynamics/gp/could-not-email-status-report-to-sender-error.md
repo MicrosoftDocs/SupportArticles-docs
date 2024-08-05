@@ -3,7 +3,8 @@ title: Could not email status report to Sender error
 description: Provides a resolution for the Could not email status report to Sender error that occurs when you send Receivables Management statements by email in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # "Could not e-mail status report to Sender. Invalid Recipients" error when emailing Receivables Management Statements
 

@@ -2,7 +2,8 @@
 title: Reconcile process handles a transaction
 description: Discusses how a Reconcile handles a voided transaction in Bank Reconciliation in Microsoft Dynamics GP and in Microsoft Business Solution - Great Plains.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # Information about how the Reconcile process handles a voided transaction in Bank Reconciliation in Microsoft Dynamics GP
 

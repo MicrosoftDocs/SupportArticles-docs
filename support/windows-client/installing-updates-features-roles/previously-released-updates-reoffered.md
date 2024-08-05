@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Clients missing updates, not offered, fail to download, csstroubleshoot
 ---
 # Previously released Windows updates are reoffered for some systems
 
 This article lists the previously released updates that will be reoffered for systems and provides a solution to this issue.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3037986
 
 ## Symptoms

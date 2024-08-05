@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kimnich, kaushika
-ms.custom: sap:multipath-i/o-mpio-and-storport, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Multipath IO (MPIO) and Storport, csstroubleshoot
 ---
 # Windows Setup in a boot from SAN configuration reports: Setup was unable to create a new system partition or locate an existing system partition
 

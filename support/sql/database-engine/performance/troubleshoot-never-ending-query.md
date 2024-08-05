@@ -2,7 +2,7 @@
 title: Troubleshoot queries that seem to never complete in SQL Server
 description: Provides steps to help you identify and resolve issues where a query runs for a long time in SQL Server.
 ms.date: 01/19/2024
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 ms.reviewer: shaunbe, v-jayaramanp
 author: pijocoder

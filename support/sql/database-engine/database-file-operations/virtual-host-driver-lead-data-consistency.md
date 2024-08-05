@@ -2,7 +2,7 @@
 title: Virtual host drivers lead to data consistency
 description: This article provides resolutions for the problem where using virtual host drivers can lead to SQL Server Database Engine data consistency problems.
 ms.date: 09/25/2020
-ms.custom: sap:Administration and Management
+ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: sureshka
 ---
 # Use of virtual host drivers can lead to SQL Server Database Engine data consistency problems

@@ -2,7 +2,7 @@
 title: Impersonation in ASP.NET applications
 description: This article introduces how to implement impersonation by modifying Web.config and running a particular section of code.
 ms.date: 03/26/2020
-ms.custom: sap:FTP authentication and authorization
+ms.custom: sap:General Development
 ms.reviewer: jallen
 ms.topic: how-to
 ---

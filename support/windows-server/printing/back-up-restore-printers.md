@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-and-configuration:-print-queue-backup-and-migration, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---
 # Back up and then restore printers when you upgrade from Windows Server 2003 to Windows Server 2008
 
 This article describes how to back up the printers before you upgrade to Windows Server 2008. It also describes how to restore the printers after you upgrade.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 938923
 
 ## Introduction

@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 ms.topic: troubleshooting
-ms.custom: sap:hello-for-business, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Biometric, Passwordless Authentication, SSO, and Windows Hello, csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---

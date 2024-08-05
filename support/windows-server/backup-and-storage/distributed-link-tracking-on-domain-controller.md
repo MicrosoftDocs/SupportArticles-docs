@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:partition-and-volume-management, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
 ---
 # Distributed Link Tracking on Windows-based domain controllers
 
 This article describes how you can use the Distributed Link Tracking services in Windows to track the creation and movement of linked files across NTFS-formatted volumes and servers.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 312403
 
 ## An overview of Distributed Link Tracking

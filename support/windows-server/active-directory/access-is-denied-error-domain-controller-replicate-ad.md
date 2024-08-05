@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Domain Controller specific boot failures, csstroubleshoot
 ---
 # You receive an "access is denied" error message on a domain controller when you try to replicate the Active Directory directory service
 
 This article helps to fix the error "access is denied" on a domain controller when you try to replicate the Active Directory directory service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 895085
 
 > [!IMPORTANT]

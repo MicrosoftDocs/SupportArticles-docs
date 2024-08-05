@@ -3,6 +3,7 @@ title: Error codes on Flow run
 description: Describes best practices and steps to mitigate common errors when running Microsoft flows in Power Apps.
 ms.reviewer: mlalavat
 ms.date: 03/01/2024
+ms.custom: sap:Connections\Creating or updating connections
 ---
 # Best practices when updating a flow used by a Power App
 

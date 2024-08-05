@@ -1,14 +1,14 @@
 ---
 title: Install Tivoli required rules and classes
 description: Describes how to install the required rules and classes for Opalis Integration Pack for IBM Tivoli Enterprise Console.
-ms.date: 08/04/2020
+ms.date: 06/26/2024
 ms.reviewer: irfanr, jfanjoy
 ---
 # Install Opalis Integration Pack for IBM Tivoli Enterprise Console class and rule definitions
 
 The Opalis Integration Pack for IBM Tivoli Enterprise Console requires that new classes and rules be incorporated into IBM Tivoli Enterprise Console to function properly. This article describes how to install the required rules and classes.
 
-_Original product version:_ &nbsp; System Center Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2491953
 
 The IBM Tivoli Enterprise Console application leverages custom rules and classes by providing the ability to create a rule base and then import desired classes and rules into that rule base. For the purposes of the Integration Pack for IBM Tivoli Enterprise Console, it's recommended to create a new rule base and to import the Opalis Event classes and rules into that new rule base by leveraging the following two files:

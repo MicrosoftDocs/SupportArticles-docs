@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
 ---
 # Terminal Server licensing
 
 This article describes Terminal Server licensing. Terminal Server's licensing requirements are different from those of Microsoft Windows NT Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 187629
 
 ## Licenses to connect to Terminal Server

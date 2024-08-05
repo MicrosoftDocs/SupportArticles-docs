@@ -2,7 +2,7 @@
 title: Script failed error when you merge snapshot
 description: This article provides a workaround for the script failed error that occurs when creating merge publication snapshot.
 ms.date: 07/22/2020
-ms.custom: sap:Replication, change tracking, change data capture
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ---
 # Merge publication snapshot fails with Script failed error in SQL Server
 

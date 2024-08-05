@@ -1,19 +1,19 @@
 ---
 title: Using Group Policy Objects to hide specified drives
 description: Provides some information about using Group Policy Objects to hide specified drives.
-ms.date: 12/26/2023
+ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, davidg
-ms.custom: sap:managing-removable-devices-through-group-policy, csstroubleshoot
+ms.custom: sap:Group Policy\Managing removable devices (USB devices and flash drives) through Group Policy, csstroubleshoot
 ---
 # Using Group Policy Objects to hide specified drives
 
 This article provides some information about using Group Policy Objects to hide specified drives.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 231289
 
 ## Summary
@@ -30,15 +30,13 @@ There are seven default options for restricting access to drives. You can add ot
 - Restrict D drive only
 - Do not restrict drives
 
-Microsoft does not recommend to change the System.adm file, but instead to create a new .adm file and import this .adm into the GPO. The reason is that if you apply changes to the system.adm file, these changes might get overwritten if Microsoft releases a new version of the system.adm file in a Service Pack.
+Microsoft does not recommend to change the WindowsExplorer.admx file, but instead to create a new .admx file and import this .admx into the GPO. The reason is that if you apply changes to the WindowsExplorer.admx file, these changes might get overwritten if Microsoft releases a new version of the WindowsExplorer.admx file in a Service Pack.
 
 ## More Information
 
-The default location of the System.adm file for a default domain policy is:
+The default location of the WindowsExplorer.admx file is:
 
-%SystemRoot%\\Sysvol\\Sysvol\\\<YourDomainName>\\Policies\\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\Adm\\System.adm  
-
-The contents of these folders are replicated throughout a domain by the File Replication service (FRS).
+C:\Windows\PolicyDefinitions\WindowsExplorer.admx
 
 > [!Note]
 > The Adm folder and its contents are not populated until the default domain policy is loaded for the first time.
@@ -47,7 +45,7 @@ To make changes to this policy for one of the seven default values:
 
 1. Start the Microsoft Management Console. On the Console menu, click **Add/Remove Snap-in**.
 2. Add the Group Policy snap-in for the default domain policy. To do this, click **Browse** when you are prompted to select a Group Policy Object (GPO). The default GPO is Local Computer. You can also add GPOs for other domain partitions (specifically, Organizational Units).
-3. Open the following sections: **User Configuration**, **Administrative Templates**, **Windows Components**, and **Windows Explorer**.
+1. Open the following sections: **User Configuration**, **Administrative Templates**, **Windows Components**, and **File Explorer**.
 4. Click **Hide these specified drives in My Computer**.
 5. Click to select the **Hide these specified drives in My Computer** check box.
 6. Click the appropriate option in the drop-down box.
@@ -60,7 +58,7 @@ To use this policy, select a drive or combination of drives in the drop-down box
 
 This policy does not prevent users from using other programs to gain access to local and network drives or prevent them from viewing and changing drive characteristics by using the Disk Management snap-in.
 
-The default values are not the only values that you can use. By editing the System.adm file, you can add your own custom values. This is the portion of the System.adm to be modified:
+The default values are not the only values that you can use. By editing the WindowsExplorer.admx file, you can add your own custom values. This is the portion of the WindowsExplorer.admx to be modified:
 
 ```output
 POLICY !!NoDrives  
@@ -114,7 +112,7 @@ Add this entry in the ITEMLIST section above and save the System.adm file.
 
 NAME !!LMNO_Only VALUE NUMERIC 30720
 
-This creates an eighth entry in the drop-down box to hide drives L, M, N, and O only. Use this method to include more values in the drop-down box. The modified section of the System.adm file appears as follows:
+This creates an eighth entry in the drop-down box to hide drives L, M, N, and O only. Use this method to include more values in the drop-down box. The modified section of the WindowsExplorer.admx file appears as follows:
 
 ```output
 POLICY !!NoDrives  

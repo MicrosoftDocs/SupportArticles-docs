@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:administration, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # How to temporarily disable Terminal Server Client Logons
 
 This article describes how to temporarily disable Terminal Server Client Logons.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186627
 
 ## Summary

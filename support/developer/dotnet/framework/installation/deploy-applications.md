@@ -2,7 +2,7 @@
 title: Deploy applications built on .NET Framework
 description: This article describes important considerations for deploying applications that are built on the .NET Framework.
 ms.date: 05/06/2020
-ms.custom: sap:Installation
+ms.custom: sap:Installation and Deployment
 ms.topic: how-to
 ---
 # Deploy applications that are built on the .NET Framework

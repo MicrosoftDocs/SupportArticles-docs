@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, keithpe
-ms.custom: sap:system-restore-or-resetting-your-computer, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\System Restore, csstroubleshoot
 ---
 # How to restore a Windows 7 installation
 
 This article describes how to create a system state backup on one computer and how to restore it to the same computer or to a different physical computer of the same make and model.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 249694
 
 ## Summary

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
-ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Users can't print after you install a service pack, update rollup, or printer hotfix on a Windows-based server
 
 This article provides help to solve an issue where you can't print after you install a service pack or printer hotfix on a server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 832219
 
 ## Symptoms

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Net Commands On Operating Systems
 
 This article provides some information about Net Commands on Operating Systems.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 556003
 
 This article was written by [Nirmal Sharma](https://mvp.microsoft.com/en-US/PublicProfile/33635?fullName=Nirmal%20K%20Sharma%20%28Ratawa%29), Microsoft MVP.

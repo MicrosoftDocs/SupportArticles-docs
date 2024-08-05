@@ -3,7 +3,8 @@ title: RM Statement balance incorrect when 'Summarize To' Date is used in Receiv
 description: When printing RM statements, the ending statement balance is incorrect when a Summarize To Date is used. This article provides a solution to this issue.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # RM statement balance incorrect when 'Summarize To' Date is used in Receivables Management for Microsoft Dynamics GP
 

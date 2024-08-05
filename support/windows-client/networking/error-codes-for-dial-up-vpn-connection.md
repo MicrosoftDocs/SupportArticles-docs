@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, tode
-ms.custom: sap:remote-access, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
 ---
 # List of error codes for dial-up connections or VPN connections
 
 This article lists the error codes that you may receive when you make a dial-up connection or a VPN connection.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 824864
 
 > [!NOTE]

@@ -3,7 +3,7 @@ title: Power Automate needs an update but we're unable to apply the update right
 description: Provides a resolution for an issue where Power Automate for desktop can't be updated when you open it for the first time.
 ms.reviewer: pefelesk
 ms.date: 07/13/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # "Power Automate needs an update" message occurs when opening Power Automate for desktop
 

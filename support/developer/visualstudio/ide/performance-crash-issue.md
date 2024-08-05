@@ -2,7 +2,7 @@
 title: Performance issues in Visual Studio
 description: This article discusses intermittent performance issue, product crashes, or rendering issues in Visual Studio 2013 if you use hardware acceleration or the default.
 ms.date: 04/13/2020
-ms.custom: sap:Integrated development environment (IDE)
+ms.custom: sap:Integrated Development Environment (IDE)\Other
 ms.reviewer: Ashok Kamath, meyoun
 ---
 # Performance issues, product crashes, or rendering issues in Visual Studio 2013 and later

@@ -1,7 +1,7 @@
 ---
 title: Can't view deleted items in the Service Manager console
 description: Describes an issue in which you can't view deleted items in the System Center Service Manager console and receive SQL Server error 8623 in the event log.
-ms.date: 03/14/2024
+ms.date: 04/08/2024
 ms.reviewer: khusmeno
 ---
 # You can't view deleted items in the System Center Service Manager console

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, lindakup
-ms.custom: sap:folder-redirection, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\Enterprise State Roaming (ESR) and Folder Redirection, csstroubleshoot
 ---
 # Folder Redirection settings aren't applied
 
 This article provides a solution to an issue where folders aren't redirected after you configure Folder redirection.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2811384
 
 ## Symptoms

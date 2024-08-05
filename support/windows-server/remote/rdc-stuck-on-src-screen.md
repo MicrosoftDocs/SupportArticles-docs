@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ryhayash, mmiura, jarrettr, v-isboua
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
 ---
 # Remote desktop connection is sometimes stuck on the Securing remote connection screen
 
 This article provides a solution to the issue in which the remote desktop connection stays in the connecting to status.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2915774
 
 ## Symptoms

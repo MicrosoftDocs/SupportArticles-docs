@@ -3,7 +3,8 @@ title: Experience slow performance
 description: Provides information that you can use to troubleshoot performance problems. Also contains a list of questions that you should answer before you contact a support professional.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 02/20/2024
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # You experience slow performance when you do specific processes in Microsoft Dynamics GP
 

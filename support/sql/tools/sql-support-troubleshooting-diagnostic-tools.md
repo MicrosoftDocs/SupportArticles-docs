@@ -4,7 +4,7 @@ description: This article describes which tools Microsoft technical support uses
 ms.author: jopilov
 ms.reviewer: jopilov
 ms.date: 06/15/2023
-ms.custom: sap:Other tools
+ms.custom: sap:SQL Server Management, Query and Data Tools
 author: PiJoCoder
 ---
 # Troubleshooting and diagnostic tools for SQL Server on-premises and hybrid scenarios

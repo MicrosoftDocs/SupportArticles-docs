@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, trined
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Clients missing updates, not offered, fail to download, csstroubleshoot
 ---
 # List of updates in Windows Server 2003 Service Pack 2
 
 This article lists problems that are fixed in Microsoft Windows Server 2003 Service Pack 2 (SP2).
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 914962
 
 ## Summary

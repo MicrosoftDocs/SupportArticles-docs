@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 2 for SQL Server 2016 (KB3182270)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 cumulative update 2 (KB3182270).
-ms.date: 10/26/2023
-ms.custom: KB3182270
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB3182270
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise

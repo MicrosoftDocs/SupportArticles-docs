@@ -3,7 +3,8 @@ title: Error Number = 9469 Stored Procedure
 description: Error message when you use eConnect in Microsoft Dynamics GP together with a bank transaction in Analytical Accounting.
 ms.reviewer: theley, dclauson, dlanglie
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Error Number = 9469 Stored Procedure taAnalyticsDistribution" Error message when you use eConnect in Microsoft Dynamics GP
 

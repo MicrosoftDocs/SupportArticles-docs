@@ -2,7 +2,7 @@
 title: Logging and data storage algorithms
 description: This article discusses how SQL Server logging and data storage algorithms extend data reliability.
 ms.date: 10/10/2022
-ms.custom: sap:Administration and Management
+ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: rdorr, bobward
 ---
 # Description of logging and data storage algorithms that extend data reliability in SQL Server

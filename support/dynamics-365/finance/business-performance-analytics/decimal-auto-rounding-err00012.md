@@ -1,17 +1,18 @@
 ---
 title: Decimal auto rounding error
-description: Provides information about the Decimal auto rounding error (error code ERR00012) in business performance analytics in Microsoft Dynamics 365 Finance.
+description: Provides information about the Decimal auto rounding error (error code ERR00012) in Business performance analytics in Microsoft Dynamics 365 Finance.
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 02/05/2024
+ms.date: 06/13/2024
 ms.search.form: business-performance-analytics
 audience: Application User
+ms.custom: sap:Business intelligence, reporting, analytics
 ---
 # Decimal auto rounding: Error code: ERR00012 [Type: Warning]
 
 > [!NOTE]
-> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
+> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [Business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
 
 ## Symptoms
 
@@ -19,7 +20,7 @@ Error code *ERR00012* is logged in the **Bpa self help logs** table in Microsoft
 
 ## Resolution
 
-No immediate action is needed because this issue might be caused by a mismatch in the decimal entries.
+No immediate action is needed. This warning is displayed because a mismatch in decimal entries has been detected. The rounding process ensures that values conform to the required format without significantly impacting data accuracy. This warning is for informational purposes only to make you aware of the automatic rounding adjustment.
 
 Here's an example of a record:
 

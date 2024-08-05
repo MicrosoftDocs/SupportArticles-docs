@@ -2,7 +2,7 @@
 title: Cookies or pop-up blocker errors when accessing Unified Interface apps
 description: Resolves the cookies or pop-up blockers errors when accessing Unified Interface apps.
 ms.reviewer: rashb
-ms.topic: troubleshooting
+ms.custom: sap:Running model-driven app forms
 ms.date: 10/19/2021
 ms.author: rashb
 ---

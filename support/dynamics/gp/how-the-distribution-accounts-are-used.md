@@ -3,7 +3,8 @@ title: How the distribution accounts are used
 description: Describes the distribution accounts in the Field Service Series in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Field Service Series
 ---
 # Information about how the distribution accounts are used in the Field Service series in Microsoft Dynamics GP
 

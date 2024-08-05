@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot stuck data warehouse jobs
 description: Provides suggestions for troubleshooting issues that certain data warehouse jobs freeze or hang in System Center 2012 Service Manager and later versions.
-ms.date: 03/14/2024
+ms.date: 04/08/2024
 ms.reviewer: khusmeno
 ---
 # Troubleshoot stuck data warehouse jobs in System Center Service Manager
@@ -238,4 +238,4 @@ If the job completes successfully, go to the next step.
 
 2. Monitor the jobs for a while to make sure that they run correctly.
 
-3. Verify that the issue that you experienced no longer occurs. For report issues, it may take several hours to get the report updated with current results.  
+3. Verify that the issue that you experienced no longer occurs. For report issues, it may take several hours to get the report updated with current results.

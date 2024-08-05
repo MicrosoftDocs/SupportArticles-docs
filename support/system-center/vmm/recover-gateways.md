@@ -1,8 +1,8 @@
 ---
 title: Recover a gateway deployed through VMM
 description: Describes how to recover gateways that are running Windows Server 2012 R2 and were deployed through Virtual Machine Manager.
-ms.date: 03/12/2024
-ms.reviewer: scottnap
+ms.date: 04/09/2024
+ms.reviewer: wenca, scottnap
 ---
 # How to recover a gateway that was deployed through VMM and is running Windows Server 2012 R2
 

@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # How to enable Kerberos event logging
 
 This article describes how to enable Kerberos event logging.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, version 1809 and later versions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 262177
 
 ## Summary

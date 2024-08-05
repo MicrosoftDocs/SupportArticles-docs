@@ -2,7 +2,7 @@
 title: Rotate a table in SQL Server
 description: This article describes how to rotate a table in SQL Server.
 ms.date: 11/03/2020
-ms.custom: sap:Database Design and Development
+ms.custom: sap:Database or Client application Development
 ms.topic: how-to
 ---
 

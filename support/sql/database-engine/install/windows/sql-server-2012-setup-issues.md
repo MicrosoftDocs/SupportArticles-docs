@@ -2,7 +2,7 @@
 title: SQL Server 2012 setup and migration issues
 description: This article describes the SQL Server 2012 setup and migration issues.
 ms.date: 09/17/2020
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: ramakoni
 ---
 

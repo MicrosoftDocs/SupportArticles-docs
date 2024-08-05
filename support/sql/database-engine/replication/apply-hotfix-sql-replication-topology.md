@@ -2,7 +2,7 @@
 title: Apply hotfix in a replication topology
 description: This article describes how to apply a hotfix for Microsoft SQL Server in a replication topology.
 ms.date: 03/16/2020
-ms.custom: sap:Replication, change tracking, change data capture
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ms.reviewer: vijayts
 ---
 # Apply a hotfix for SQL Server in a replication topology

@@ -3,7 +3,8 @@ title: Transaction contains intercompany distributions error when posting financ
 description: When posting a batch in General Ledger, this error message (Transaction contains intercompany distributions; mark as an IC transaction) is returned, but the customer does not have any intercompany relationships set up.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Transaction contains intercompany distributions; mark as an IC transaction" error when posting a financial batch in GL
 

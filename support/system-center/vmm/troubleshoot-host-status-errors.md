@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot host status in Virtual Machine Manager
 description: Provides troubleshooting guidance for the Needs Attention, Not Responding, and Access Denied host status in Virtual Machine Manager.
-ms.date: 07/13/2020
-ms.reviewer: jeffpatt
+ms.date: 04/09/2024
+ms.reviewer: wenca, jeffpatt
 ---
 # Troubleshoot Needs Attention, Not Responding, and Access Denied hosts in Virtual Machine Manager
 

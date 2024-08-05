@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
-ms.custom: sap:remote-access, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess), csstroubleshoot
 ms.assetid: 61040e19-5960-4eb0-b612-d710627988f7
 ---
 # Troubleshoot DirectAccess

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:errors-and-troubleshooting:-print-spooler, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # The size of the EMF spool file may become very large when you print a document that contains lots of raster data
 
 This article provides a resolution for an issue where the size of the Enhanced Metafile (EMF) spool file grows very big when you print a document that contains many groups of raster data.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 919543
 
 ## Symptoms

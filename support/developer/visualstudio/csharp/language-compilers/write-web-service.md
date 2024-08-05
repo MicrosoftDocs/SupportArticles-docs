@@ -4,6 +4,7 @@ description: This article describes steps to write a Web service (MathService) t
 ms.date: 04/28/2020
 ms.reviewer: SRINATHV
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Write a web service by using Visual C# .NET
 

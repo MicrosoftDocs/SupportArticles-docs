@@ -2,10 +2,10 @@
 title: Cookies or pop-up blocker errors when accessing Power Automate embedded experiences
 description: Resolves the cookies or pop-up blocker errors when accessing Power Automate in other apps.
 ms.reviewer: hamenon, tapanm, rymacdow
-ms.date: 02/01/2023
+ms.date: 08/05/2024
 author: hamenon-ms
 ms.author: hamenon
-ms.subservice: power-automate-flow-creation
+ms.custom: sap:Flow creation\Other flow creation issues
 ---
 # Third-party cookies or pop-up blocker errors when accessing Power Automate embedded experiences
 

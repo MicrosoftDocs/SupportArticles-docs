@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tea, v-jesits, dantes, arrenc
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network
 
 This article provides some information about the issue where an Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4494446
 
 ## Symptoms

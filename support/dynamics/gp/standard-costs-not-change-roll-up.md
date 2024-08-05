@@ -3,7 +3,8 @@ title: The standard costs do not change when you roll up
 description: This article provides two resolutions for the problem that occurs when you use the incorrect dialog box to roll up and then revalue the standard costs.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Manufacturing Series
 ---
 # The standard costs do not change as expected when you roll up and then revalue standard costs in Manufacturing Order Processing in Microsoft Dynamics GP2010 and GP10.0
 

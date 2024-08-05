@@ -3,7 +3,7 @@ title: Dynamic content picker missing dynamic content from previous steps
 description: No dynamic content available in dynamic content picker. Provides a resolution.
 ms.reviewer: mehgupta
 ms.date: 03/31/2021
-ms.subservice: power-automate-flow-creation
+ms.custom: sap:Flow creation\Dynamic content
 ---
 # Dynamic content picker missing dynamic content from previous steps
 

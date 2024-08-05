@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, nitkum, v-jesits
-ms.custom: sap:event-viewer, csstroubleshoot
+ms.custom: sap:System Management Components\WinRM, including event forwarding and collections, csstroubleshoot
 ---
 # Security event log forwarding fails with Error 0x138C and 5004 in Windows Server
 

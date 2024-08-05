@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, robtm, taylorb
-ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine settings, csstroubleshoot
 ---
 # Importing a VM that is exported from Windows Server 2012 R2 into Windows Server 2012 is not supported
 
 This article describes a situation in which you receive an error message when you try to move a virtual machine from a Windows Server 2012 R2 Hyper-V host into a Windows Server 2012 Hyper-V host.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2868279
 
 ## Introduction

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:administration, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # The Remote Desktop Services or Terminal Services Role fails to install when FireWall Service is set to disabled
 
 This article provides a solution to an issue where Remote Desktop Services fails to install and you get the error code 0x800706D9.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2027551
 
 ## Symptoms

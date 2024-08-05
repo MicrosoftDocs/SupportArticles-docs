@@ -2,7 +2,7 @@
 title: Remove duplicate rows from a table in SQL Server
 description: This article provides a script that you can use to remove duplicate rows from a SQL Server table.
 ms.date: 10/29/2020
-ms.custom: sap:Database Design and Development
+ms.custom: sap:Database or Client application Development
 ms.topic: how-to
 ---
 

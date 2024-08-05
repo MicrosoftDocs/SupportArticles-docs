@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ajayps, tode, gsilva
-ms.custom: sap:hyper-v-network-virtualization-hnv, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\High availability virtual machines, csstroubleshoot
 ---
 # Event ID 106 when a Hyper-V virtual switch is bound to an LBFO team
 
 This article helps to resolve the event ID 106 when a Hyper-V virtual switch is bound to an LBFO team.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2974384
 
 ## Symptoms

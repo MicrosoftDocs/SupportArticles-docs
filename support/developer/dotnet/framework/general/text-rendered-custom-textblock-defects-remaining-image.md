@@ -2,7 +2,7 @@
 title: Text rendering problem on a TextBlock that's a child of a Viewbox
 description: This article helps you troubleshoot a problem in which the text that's displayed on a custom text block doesn't render correctly.
 ms.date: 04/17/2023
-ms.custom: sap:Tools and utilities
+ms.custom: sap:Class Library Namespaces
 ms.topic: troubleshooting
 ms.reviewer: mihayash, davean, v-jayaramanp
 ---

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
 ---
 # Microsoft-Windows-AppReadiness event ID 215 error after a user first logs on
 
 This article explains the Microsoft-Windows-AppReadiness event ID 215 error that occurs after a user first logs on.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2916750
 
 ## Symptoms

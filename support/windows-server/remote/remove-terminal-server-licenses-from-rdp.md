@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
 ---
 # Remove Terminal Server licenses from an RDP client
 
 This article describes how to remove Terminal Server licenses from a Remote Desktop Protocol (RDP) client.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 187614
 
 ## Summary

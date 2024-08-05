@@ -5,6 +5,7 @@ ms.date: 12/17/2021
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: ramakoni
+ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---
 # SQL Server can't start if all the protocols are disabled
 

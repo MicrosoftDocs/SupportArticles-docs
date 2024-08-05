@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, joramos
-ms.custom: sap:account-lockouts, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Account lockouts, csstroubleshoot
 ---
 # Administrator account password expiration behavior
 
 This article describes a by-design behavior of the administrator account password expiration policy.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2837704
 
 ## Summary

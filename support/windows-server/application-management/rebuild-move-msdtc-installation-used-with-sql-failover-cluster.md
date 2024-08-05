@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dtc-startup-configuration-connectivity-and-cluster, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\DTC startup, configuration, connectivity, and cluster, csstroubleshoot
 ---
 # How to rebuild or move a MSDTC installation for use with a SQL failover cluster
 
 This article describes how to rebuild a broken Microsoft Distributed Transaction Coordinator (MSDTC) installation for use with a failover clustered SQL Server installation.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 294209
 
 ## Summary

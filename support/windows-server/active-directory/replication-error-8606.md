@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Active Directory Replication Error 8606: Insufficient attributes were given to create an object
 
 This article provides help to troubleshoot Active Directory replication error 8606: Insufficient attributes were given to create an object.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2028495
 
 > [!NOTE]

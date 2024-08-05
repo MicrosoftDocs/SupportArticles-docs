@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where the OnHold Time attribute
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 05/23/2023
+ms.custom: sap:Service Level Agreements\SLA timer is running  even if the case is resolved
 ---
 # The OnHold Time attribute isn't populated for a case for the Unified Interface SLA
 

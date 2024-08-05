@@ -1,7 +1,8 @@
 ---
 title: VMMAdminUI has stopped working
 description: Resolves an issue that an unexpected error may be thrown when you import a new console add-in.
-ms.date: 07/15/2020
+ms.date: 04/09/2024
+ms.reviewer: jarrettr
 ---
 # VMMAdminUI has stopped working error when you import a new console add-in
 

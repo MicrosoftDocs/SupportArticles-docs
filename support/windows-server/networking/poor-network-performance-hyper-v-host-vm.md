@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB), csstroubleshoot
 ---
 # Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled
 
 This article provides a workaround for an issue that occurs if you have a Windows Server 2012 Hyper-V host that uses a Broadcom network adapter.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2902166
 
 ## Symptoms  

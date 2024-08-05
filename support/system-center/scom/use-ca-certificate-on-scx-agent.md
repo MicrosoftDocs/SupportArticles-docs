@@ -1,7 +1,7 @@
 ---
 title: Convert self-signed SCX certificates to CA certificates
 description: Introduces how to convert a self-signed certificate on an SCX agent to a Certificate Authority (CA) signed certificate.
-ms.date: 08/23/2023
+ms.date: 04/15/2024
 ms.reviewer: alexkre, blakedrumm, edpaca, stparker, udmudiar, v-weizhu
 ms.topic: how-to
 ms.custom: linux-related-content

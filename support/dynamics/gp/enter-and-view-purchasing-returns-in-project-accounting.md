@@ -3,7 +3,8 @@ title: Enter and view purchasing returns in Project Accounting in Microsoft Dyna
 description: Describes how to enter and view purchasing returns in Project Accounting in Microsoft Dynamics GP.
 ms.topic: how-to
 ms.reviewer: theley, ppeterso
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Project Accounting
 ---
 # How to enter and view purchasing returns in Project Accounting in Microsoft Dynamics GP
 

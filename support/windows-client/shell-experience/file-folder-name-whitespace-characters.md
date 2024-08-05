@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, arichard, kimnich
-ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\File Explorer (app only, folders, Quick Access, File Explorer search), csstroubleshoot
 ---
 # Support for Whitespace characters in File and Folder names for Windows
 
 This article describes support for whitespace characters in file and folder names.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2829981
 
 ## Summary

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, robtm
-ms.custom: sap:partition-and-volume-management, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
 ---
 # A volume may show up as raw in disk management after you extend the partition, but chkdsk shows the file system as NTFS
 
 This article provides solutions to an issue where a volume shows as **raw** in disk management but chkdsk shows the file system as NTFS after you extend the partition.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2261358
 
 ## Symptoms

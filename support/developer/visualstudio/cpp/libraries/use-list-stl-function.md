@@ -2,7 +2,7 @@
 title: Use list STL functions in Visual C++
 description: Describes how to use the [list::remove, list::remove_if] STL function(s) in Visual C++. There are some differences in the implementation of the Standard C++ Library components in Visual C++ version 4.2 versus later revisions.
 ms.date: 04/27/2020
-ms.custom: sap:C and C++ Libraries
+ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
 ms.reviewer: rodneyr, anbrad
 ms.topic: how-to
 ---

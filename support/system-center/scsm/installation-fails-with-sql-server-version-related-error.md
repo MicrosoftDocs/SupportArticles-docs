@@ -1,7 +1,7 @@
 ---
 title: Can't specify SQL Server to host the Service Manager database
 description: Fixes an issue where you can't specify the SQL Server to host the Service Manager database when you install or upgrade System Center 2012 Service Manager.
-ms.date: 03/14/2024
+ms.date: 04/08/2024
 ms.reviewer: khusmeno
 ---
 # System Center Service Manager installation fails with SQL Server version-related error

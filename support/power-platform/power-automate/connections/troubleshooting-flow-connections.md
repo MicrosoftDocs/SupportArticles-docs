@@ -3,7 +3,7 @@ title: Troubleshooting Flow Connections
 description: Defines some errors occur while creating connections in Flow or Power Apps, and provides some troubleshooting steps and possible solutions.
 ms.reviewer: 
 ms.date: 03/31/2021
-ms.subservice: power-automate-connections
+ms.custom: sap:Connections\Creating and managing connections
 ---
 # Troubleshooting Flow Connections
 
