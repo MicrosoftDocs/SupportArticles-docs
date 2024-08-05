@@ -425,7 +425,7 @@
           href: ../move-or-migrate-mailboxes/cutover-migration-invalid-smtp-address.md
         - name: Remote mailbox isn't moved when the move shows as Completed
           href: ../move-or-migrate-mailboxes/remote-mailbox-not-moved-when-move-shows-completed.md
-        - name: Resource ‎CiAgeOfLastNotification‎(System)‎ is unhealthy error
+        - name: Resource CiAgeOfLastNotification(System) is unhealthy error
           href: ../move-or-migrate-mailboxes/resource-ciageoflastnotification-system-is-unhealthy-error.md
         - name: Restore missing folder data after a remote move migration
           href: ../move-or-migrate-mailboxes/restore-missing-folder-data-after-migration.md
