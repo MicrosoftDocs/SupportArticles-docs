@@ -1,6 +1,6 @@
 ---
 title: Restore missing folder data after a remote move migration
-description: Restore folder data that's missing after a remote-move migration in an Exchange hybrid environment.
+description: Restore folder data that's missing after a remote move migration in an Exchange hybrid environment.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -25,14 +25,13 @@ ms.date: 08/05/2024
 
 ## Symptoms
 
-After a remote move migration of mailboxes from Microsoft Exchange Server to Exchange Online in a hybrid Exchange environment, a migrated user reports that data is missing from one or more of their Outlook folders. For example, their _Notes_ folder is empty.
+After a remote move migration of mailboxes from Microsoft Exchange Server to Microsoft Exchange Online in a hybrid Exchange environment, a migrated user reports that data is missing from one or more of their Microsoft Outlook folders. For example, their _Notes_ folder is empty.
 
 ## Cause
 
 During a remote move migration, data might not migrate to Exchange Online because of transient network errors or if folders are corrupted.
 
-> [!NOTE]
-> For information about how to detect and fix mailbox corruption issues, see [New-MailboxRepairRequest](/powershell/module/exchange/new-mailboxrepairrequest).
+**Note**: For information about how to detect and fix mailbox corruption issues, see [New-MailboxRepairRequest](/powershell/module/exchange/new-mailboxrepairrequest).
 
 ## Resolution
 
