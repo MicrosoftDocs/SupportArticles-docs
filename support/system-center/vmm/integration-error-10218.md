@@ -1,8 +1,8 @@
 ---
 title: Integration with OpsMgr fails with error 10218
 description: Fixes an issue where you receive error 10218 when creating the Virtual Machine Manager integration with Operations Manager
-ms.date: 07/17/2020
-ms.reviewer: alvinm
+ms.date: 04/09/2024
+ms.reviewer: wenca, alvinm
 ---
 # Operations Manager integration with System Center 2012 Virtual Machine Manager fails with error 10218
 

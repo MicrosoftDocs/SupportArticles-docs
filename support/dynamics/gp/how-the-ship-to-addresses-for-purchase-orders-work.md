@@ -2,7 +2,8 @@
 title: How the ship-to addresses for purchase orders work
 description: Describes how ship-to addresses for purchase orders work in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How the ship-to addresses for purchase orders work in Microsoft Dynamics GP
 

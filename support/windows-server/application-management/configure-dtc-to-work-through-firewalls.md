@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jmeier, niklase, shaheera, jpierauc
-ms.custom: sap:dtc-startup-configuration-connectivity-and-cluster, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\DTC startup, configuration, connectivity, and cluster, csstroubleshoot
 ---
 # Configure Microsoft Distributed Transaction Coordinator (DTC) to work through a firewall
 
 This article describes how to configure Microsoft Distributed Transaction Coordinator (DTC) to work through firewalls.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 250367
 
 ## More information

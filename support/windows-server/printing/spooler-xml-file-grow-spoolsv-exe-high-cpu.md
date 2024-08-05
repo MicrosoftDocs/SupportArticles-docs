@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Spooler.xml file growth and high CPU in spoolsv.exe process on print server
 
 This article helps resolve an issue where you experience higher CPU utilization in the spoolsv.exe process and the spooler.xml file grows in size.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 960919
 
 ## Symptoms

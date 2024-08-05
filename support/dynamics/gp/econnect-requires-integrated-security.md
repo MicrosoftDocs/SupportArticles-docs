@@ -3,7 +3,8 @@ title: eConnect requires Integrated Security
 description: Provides a solution to an error that occurs when you use eConnect version 8.x.x.x.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # eConnect requires Integrated Security
 

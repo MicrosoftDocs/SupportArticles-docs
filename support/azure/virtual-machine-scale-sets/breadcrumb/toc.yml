@@ -1,0 +1,21 @@
+- name: Docs
+  tocHref: /
+  topicHref: /index
+  items:
+
+  - name: Troubleshoot
+    tocHref: /azure/
+    topicHref: /troubleshoot/index
+    items:
+
+    - name: Azure
+      tocHref: /azure/
+      topicHref: /troubleshoot/azure/index
+      items:
+      - name: Virtual Machine Scale Sets
+        tocHref: /azure/azure-resource-manager/
+        topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets
+      - name: Virtual Machine Scale Sets
+        tocHref: /troubleshoot/azure/virtual-machines/
+        topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets
+

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, monaha
-ms.custom: sap:smart-card-logon, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Smart card logon, csstroubleshoot
 ---
 # Registry keys for smart card PIN caching options are no longer available in Windows 10
 

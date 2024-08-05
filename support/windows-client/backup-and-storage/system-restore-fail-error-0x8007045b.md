@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:system-restore-or-resetting-your-computer, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\System Restore, csstroubleshoot
 ---
 # System Restore may fail with error code 0x8007045b if there is encrypted content in the restore point
 

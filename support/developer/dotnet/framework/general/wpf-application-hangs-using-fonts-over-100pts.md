@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem where applicatio
 ms.date: 01/07/2021
 ms.reviewer: Tatkins
 ms.topic: troubleshooting
+ms.custom: sap:Class Library Namespaces
 ---
 # WPF application hangs when you use fonts over 100 pts in size
 

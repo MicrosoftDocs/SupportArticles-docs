@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: WalterE, cpuckett, kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # List of currently available hotfixes for the File Services technologies
 
 This article lists the hotfixes that are currently available for users who have installed the File Services technologies on a Windows Server 2012-based computer or a Windows Server 2012 R2-based computer.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2899011
 
 ## Summary

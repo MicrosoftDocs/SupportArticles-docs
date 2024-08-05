@@ -2,7 +2,7 @@
 title: Understanding identities in IIS
 description: This article provides background information about identities in Internet Information Services.
 ms.date: 10/09/2020
-ms.custom: sap:WWW Authentication and Authorization
+ms.custom: sap:WAS Service and Svchost Process Operation\Application pool identity
 ms.reviewer: prchanda, jarrettr
 ---
 # Understanding identities in IIS

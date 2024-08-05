@@ -7,14 +7,13 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 adobe-target: true
 ---
 # Service overview and network port requirements for Windows
 
 This article discusses the required network ports, protocols, and services that are used by Microsoft client and server operating systems, server-based programs, and their subcomponents in the Microsoft Windows Server system. Administrators and support professionals may use this article as a roadmap to determine which ports and protocols Microsoft operating systems and programs require for network connectivity in a segmented network.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 832017
 
 > [!IMPORTANT]
@@ -936,8 +935,8 @@ System service name: **WinRM**
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
-|WinRM 1.1 and earlier|TP|The default HTTP port is TCP 80, and the default HTTPS port is TCP 443.|
-|WinRM 2.0|TP|The default HTTP port is TCP 5985, and the default HTTPS port is TCP 5986.|
+|WinRM 1.1 and earlier|TCP|The default HTTP port is TCP 80, and the default HTTPS port is TCP 443.|
+|WinRM 2.0|TCP|The default HTTP port is TCP 5985, and the default HTTPS port is TCP 5986.|
   
 For more information, see [Installation and Configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 

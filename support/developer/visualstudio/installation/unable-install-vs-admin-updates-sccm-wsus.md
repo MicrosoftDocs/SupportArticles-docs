@@ -3,7 +3,7 @@ title: Can't install Visual Studio administrator updates through SCCM and WSUS
 description: Provides a resolution for an issue where you can't install Visual Studio administrator updates through SCCM and WSUS.
 ms.date: 09/26/2023
 ms.reviewer: khgupta, raviuppa, aartigoyle, v-sidong
-ms.custom: sap:installation
+ms.custom: sap:Installation\Servicing updates and service packs
 ---
 # Unable to install Visual Studio administrator updates through SCCM and WSUS
 

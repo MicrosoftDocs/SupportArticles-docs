@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot
 ---
 # ADFS 2.0 error: Access is denied
 
 This article provides a solution to fix the Active Directory Federated Services (AD FS) 2.0 error.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044977
 
 ## Summary

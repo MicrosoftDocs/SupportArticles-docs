@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-certificate-services, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
 # DPAPI MasterKey backup failures when RWDC isn't available
 
 This article provides a solution to solve DPAPI MasterKey backup failures that occur when RWDC isn't available.
 
-_Applies to:_ &nbsp; Windows 10, version 1809, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 3205778
 
 ## Symptoms

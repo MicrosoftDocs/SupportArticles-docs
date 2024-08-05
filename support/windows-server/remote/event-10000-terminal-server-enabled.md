@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
 ---
 # Event ID 10000 is logged in the Application log on a Windows Server 2003-based computer that has Terminal Server enabled
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, mingchen, nasira, jseifert, deverett, justintu, arrenc, christys
-ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # Use Event1644Reader.ps1 to analyze LDAP query performance in Windows Server
 
 This article describes a script that helps analyze Active Directory event ID 1644 in Windows Server. Review the [steps to use the script](#how-to-use-the-script) and then [analyze your problems](#scenario-analysis).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3060643
 
 ## About the Event1644Reader.ps1 script

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:power-management, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Power management, csstroubleshoot
 ---
 # Devices connected through a Thunderbolt Dock stop working after the computer resumes from a power state
 

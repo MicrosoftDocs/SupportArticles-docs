@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: jamirc, kaushika
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # How to reset the Directory Services Restore Mode administrator account password in Windows Server
 
 This article describes how to reset the Directory Services Restore Mode (DSRM) administrator password for any server in your domain without restarting the server in DSRM.
 
-_Applies to:_ &nbsp; Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 322672
 
 ## Summary

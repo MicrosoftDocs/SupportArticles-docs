@@ -5,6 +5,7 @@ ms.date: 03/02/2022
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: maleger
+ms.custom: sap:Integrated Development Environment (IDE)\Designers (WPF, WinForms, XAML, etc.)
 ---
 # Troubleshoot XAML Hot Reload
 

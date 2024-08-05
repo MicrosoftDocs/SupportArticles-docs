@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, wesk
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD), csstroubleshoot
 ---
 # You can't install features in Windows Server 2012 R2
 
 This article provides a solution to an issue that prevents you from adding features to a Windows Server 2012 R2-based computer that's running the Server Core installation option.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2913316
 
 ## Symptoms

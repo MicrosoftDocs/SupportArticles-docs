@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, joelch, waltere
-ms.custom: sap:application-compatibility-toolkit-act, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\Application Compatibility Toolkit (ACT), csstroubleshoot
 ---
 # Direct-X diagnostics tool may report an unexpected value for the display adapters memory
 
 This article describes an issue where Direct-X diagnostics tool (DXDIAG) reports an unexpected value for the display adapters memory.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2026022
 
 ## Symptoms

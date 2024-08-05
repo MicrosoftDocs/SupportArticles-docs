@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, pranayav, amanjain, vineelko
-ms.custom: sap:boot-is-slow, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
 ---
 # Server freezes or user logon is slow when connecting to Windows Server 2012 R2 by using RDP
 
 This article provides a solution to an issue where a computer freezes or user logon is slow when you connect to the computer by using Remote Desktop Protocol (RDP).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4021856
 
 ## Symptoms

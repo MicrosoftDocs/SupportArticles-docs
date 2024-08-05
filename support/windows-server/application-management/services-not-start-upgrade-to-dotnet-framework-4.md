@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:.net-framework-installation, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\.Net Framework Installation , csstroubleshoot
 ---
 # Services that depend on the ASP.NET State Service do not start after you upgrade to the .NET Framework 4.0
 
 This article provides a workaround for an issue where services that depend on the `ASP.NET` State Service don't start after you upgrade to the Microsoft .NET Framework 4.0.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2963657
 
 ## Symptoms

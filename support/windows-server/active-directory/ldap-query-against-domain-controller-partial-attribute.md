@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, fengli
-ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # When you run an LDAP query against a domain controller, you obtain a partial attribute list
 
 This article provides workarounds for the issue when you run an LDAP query against a domain controller, you obtain a partial attribute list.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 976063
 
 ## Symptoms

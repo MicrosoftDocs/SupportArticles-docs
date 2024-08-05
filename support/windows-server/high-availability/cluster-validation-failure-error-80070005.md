@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, eldenc
-ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Adding node, csstroubleshoot
 ---
 # Cluster Validation fails "Validate Cluster Network Configuration" Test with Error 80070005
 
 This article provides a solution to the error 80070005 that occurs when failover cluster validate fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2012835
 
 ## Summary

@@ -5,6 +5,7 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 ms.date: 09/25/2023
+ms.custom: sap:Data Ingestion\Connect to a Power Query data source
 ---
 # Power Query data source refresh issues for data sources based on Power Platform dataflows
 

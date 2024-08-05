@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 ---
 # Folder redirection settings are still applied from Group Policy settings even though you turn on loopback processing in Group Policy
 
 This article provides a solution to an issue that folder redirection settings are being applied from the Group Policy settings that are deployed to the user's computer even though you turn on loopback processing in Group Policy.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 328008
 
 ## Symptoms

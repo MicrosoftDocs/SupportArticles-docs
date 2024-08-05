@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD), csstroubleshoot
 ---
 # Error 0x800f0922 when trying to uninstall Windows Server roles or features
 
 This article helps fix the error 0x800f0922 that occurs when you uninstall Microsoft Windows Server roles or features.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 4094128
 
 ## Symptoms

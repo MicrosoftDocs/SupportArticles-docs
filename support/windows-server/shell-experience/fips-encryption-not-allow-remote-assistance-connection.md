@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-assistance, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Remote Assistance, csstroubleshoot
 ---
 # Remote Assistance connection to Windows Server with FIPS encryption does not work
 
 This article provides workarounds for an issue where Remote Assistance connection to a Windows Server-based server that has FIPS encryption doesn't work.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 811770
 
 ## Symptoms

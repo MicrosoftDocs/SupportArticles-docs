@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
+ms.custom: sap:Active Directory\Domain or forest functional level updates, failures and Advisory, csstroubleshoot
 ---
 # Error when you run the `Adprep /rodcprep` command in Windows Server 2008: Adprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
 
 This article solves a problem that the `Adprep /rodcprep` command isn't completed successfully because the infrastructure master for one or more active directory NDNCs isn't reachable.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 949257
 
 ## Symptoms

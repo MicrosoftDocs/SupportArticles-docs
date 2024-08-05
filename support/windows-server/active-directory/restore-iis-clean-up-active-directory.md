@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, clandis
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot
 ---
 # How to restore IIS and clean up Active Directory when you uninstall Active Directory Federation Services 2.0
 
 This article describes how to restore Internet Information Services (IIS) and clean up Active Directory when you uninstall Active Directory Federation Services 2.0.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 982813
 
 ## Introduction

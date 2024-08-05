@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, samyun
-ms.custom: sap:radius-network-policy-server-nps-or-internet-authentication-service-ias, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB), csstroubleshoot
 ---
 # Certificate requirements when you use EAP-TLS or PEAP with EAP-TLS
 

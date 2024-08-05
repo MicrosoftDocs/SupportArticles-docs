@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # The Netlogon service doesn't start and event IDs 2114 and 7024 are logged
 
 This article provides a solution to an issue where the Netlogon service doesn't start when you start a Windows-based computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 269375
 
 ## Symptoms

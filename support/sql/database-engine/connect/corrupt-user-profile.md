@@ -1,11 +1,11 @@
 ---
-title: Troubleshooting Windows user profile issue in SQL Server
-description: This article addresses SQL Server consistent authentication issues related to the Windows user profile.
-ms.date: 02/28/2024
+title: Windows user profile can't be loaded in SQL Server
+description: This article addresses the SQL Server consistent authentication issue related to the Windows user profile.
+ms.date: 03/13/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 
 # Windows user profile can't be loaded in SQL Server
@@ -27,3 +27,7 @@ If you log in as the affected user, you'll get a [temporary profile](/windows/wi
 If you're a guest user, then you must be added to the appropriate groups. For more information, see [Add or delete users](/entra/fundamentals/add-users).
 
 If you aren't a guest user, follow the steps in [Fix a corrupted user profile in Windows](https://support.microsoft.com/windows/fix-a-corrupted-user-profile-in-windows-1cf41c18-7ce3-12f9-8e1d-95896661c5c9) to either repair the profile or delete and re-create the profile.
+
+## More information
+
+[Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)

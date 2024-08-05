@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: mirzaab
 ms.search.validFrom: 2022-03-11
 ms.dyn365.ops.version: 10.0.18
+ms.custom: sap:Warehouse management
 ---
 
 # Unexpected difference between request and session data during testing

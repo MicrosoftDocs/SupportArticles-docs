@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, kapilth, robhind, jgerend, kumud
-ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\File Server Resource Manager (FSRM) , csstroubleshoot
 ---
 # Error when you access file shares on a SOFS-configured server: Not enough server storage is available to process this command
 
 This article provides a solution to an issue that occurs when you access file shares on a SMB server that has the Scale-Out File Server role configured.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3101545
 
 ## Symptoms

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: waltere, v-dehaas, kaushika
-ms.custom: sap:wins, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\WINS, csstroubleshoot
 ---
 # Troubleshooting WINS error event ID 4102, 4243, 4242, and 4286 messages
 

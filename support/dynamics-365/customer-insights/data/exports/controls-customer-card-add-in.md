@@ -5,6 +5,7 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 ms.date: 09/25/2023
+ms.custom: sap:Export destinations or Outbound connectors\Microsoft connectors
 ---
 # Controls from Customer Card Add-in if they don't find data
 

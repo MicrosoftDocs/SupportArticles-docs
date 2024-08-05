@@ -3,7 +3,8 @@ title: Set up adjusting period in General Ledger
 description: Describes how to set up an adjusting period to record adjustments that are posted to the general ledger after the year-end close process has been performed.
 ms.reviewer: theley, dbader
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # How to set up an adjusting period in General Ledger in Microsoft Dynamics GP
 

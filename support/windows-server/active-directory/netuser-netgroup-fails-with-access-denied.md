@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, josefh
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # Applications using NetUserGetInfo and similar APIs rely on read access to certain AD objects
 
 This article discusses an issue where applications that use down-level APIs of the NetUser or NetGroup class like `NetUserGetInfo` or `NetGroupGetInfo` fails with the ACCESS DENIED error.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2281774
 
 ## Summary

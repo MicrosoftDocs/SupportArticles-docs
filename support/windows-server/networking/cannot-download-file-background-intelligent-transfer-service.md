@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:background-intelligent-transfer-service-bits, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Background Intelligent Transfer Service (BITS), csstroubleshoot
 ---
 # Error when you download a file by using the Background Intelligent Transfer Service: Content file download failed
 
 This article describes a problem that occurs if you're behind a proxy server or behind a firewall that doesn't support HTTP 1.1 range requests.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 922330
 
 ## Symptoms

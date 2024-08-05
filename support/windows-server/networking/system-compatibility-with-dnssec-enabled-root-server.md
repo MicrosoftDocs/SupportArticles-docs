@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, BBenson
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Windows client and server operating system compatibility with DNSSEC enabled root servers
 
 This article describes the impact and compatibility story with DNSSEC enabled root servers for Windows client and server operating systems as well computers hosting the DNS Server role.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2028240
 
 ## Summary

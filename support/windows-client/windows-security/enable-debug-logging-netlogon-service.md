@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
 ---
 # Enabling debug logging for the Netlogon service
 
 This article describes the steps to enable logging of the `Netlogon` service in Windows to monitor or troubleshoot authentication, DC locator, account lockout, or other domain communication-related issues.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 109626
 
 ## More information

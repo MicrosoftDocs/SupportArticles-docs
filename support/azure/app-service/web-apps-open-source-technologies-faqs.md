@@ -96,7 +96,7 @@ If you see this error in your Azure WordPress app, to enable *php_errors.log* an
 When the logs are enabled, reproduce the error, and then check the logs to see if you're running out of connections:
 
 ```output
-[09-Oct-2015 00:03:13 UTC] PHP Warning: mysqli_real_connect(): (HY000/1226): User ‘abcdefghijk79' has exceeded the ‘max_user_connections’ resource (current value: 4) in D:\home\site\wwwroot\wp-includes\wp-db.php on line 1454
+[09-Oct-2015 00:03:13 UTC] PHP Warning: mysqli_real_connect(): (HY000/1226): User 'abcdefghijk79' has exceeded the 'max_user_connections' resource (current value: 4) in D:\home\site\wwwroot\wp-includes\wp-db.php on line 1454
 ```
 
 If you see this error in your *debug.log* or *php_errors.log* files, your app is exceeding the number of connections. If you're hosting on ClearDB, verify the number of connections that are available in your [service plan](https://www.cleardb.com/pricing.view).
@@ -188,24 +188,23 @@ App Service doesn't have a built-in email feature. For some good alternatives fo
 
 If you have recently migrated to Azure, WordPress might redirect to the old domain URL. This issue is caused by a setting in the MySQL database.
 
-WordPress Buddy+ is an Azure Site Extension that you can use to update the redirection URL directly in the database. For more information about using WordPress Buddy+, see [WordPress tools and MySQL migration with WordPress Buddy+](https://sharepointforum.org/threads/wordpress-tools-and-mysql-migration-with-wordpress-buddy.82929/).
+WordPress Buddy+ is an Azure Site Extension that you can use to update the redirection URL directly in the database.
 
 Alternatively, if you prefer to manually update the redirection URL by using SQL queries or PHPMyAdmin, see [WordPress: Redirecting to wrong URL](/archive/blogs/azureossds/wordpress-redirecting-to-wrong-url).
 
 ## How do I change my WordPress sign-in password?
 
-If you have forgotten your WordPress sign-in password, you can use WordPress Buddy+ to update it. To reset your password, install the WordPress Buddy+ Azure Site Extension, and then complete the steps described in [WordPress tools and MySQL migration with WordPress Buddy+](https://sharepointforum.org/threads/wordpress-tools-and-mysql-migration-with-wordpress-buddy.82929/).
+If you have forgotten your WordPress sign-in password, you can use WordPress Buddy+ to update it.
 
 ## I can't sign in to WordPress. How do I resolve this issue?
 
-If you find yourself locked out of WordPress after recently installing a plugin, you might have a faulty plugin. WordPress Buddy+ is an Azure Site Extension that can help you disable plugins in WordPress. For more information, see [WordPress tools and MySQL migration with WordPress Buddy+](https://sharepointforum.org/threads/wordpress-tools-and-mysql-migration-with-wordpress-buddy.82929/).
+If you find yourself locked out of WordPress after recently installing a plugin, you might have a faulty plugin. WordPress Buddy+ is an Azure Site Extension that can help you disable plugins in WordPress.
 
 ## How do I migrate my WordPress database?
 
 You have multiple options for migrating the MySQL database that's connected to your WordPress website:
 
 - Developers: Use the [command prompt or PHPMyAdmin](/archive/blogs/azureossds/migrating-data-between-mysql-databases-using-kudu-console-azure-app-service)
-- Non-developers: Use [WordPress Buddy+](https://sharepointforum.org/threads/wordpress-tools-and-mysql-migration-with-wordpress-buddy.82929/)
 
 ## How do I help make WordPress more secure?
 

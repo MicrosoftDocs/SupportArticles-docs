@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, lindakup, jCaudill
-ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Domain Controller specific boot failures, csstroubleshoot
 ---
 # ADWS service crashes after you upgrade
 
 This article provides a resolution to an issue where Active Directory Web Services (ADWS) service crashes after you upgrade.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3019069
 
 ## Symptoms

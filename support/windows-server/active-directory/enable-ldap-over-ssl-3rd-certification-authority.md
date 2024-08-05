@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # Enable LDAP over SSL with a third-party certification authority
 
 This article describes how to enable Lightweight Directory Access Protocol (LDAP) over Secure Sockets Layer (SSL) with a third-party certification authority.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 321051
 
 ## Summary

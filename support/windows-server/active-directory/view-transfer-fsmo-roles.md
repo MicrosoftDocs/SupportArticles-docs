@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-fsmo, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
 ---
 # How to view and transfer FSMO roles  
 
 This article describes how to view and transfer FSMO roles.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 324801
 
 ## Summary

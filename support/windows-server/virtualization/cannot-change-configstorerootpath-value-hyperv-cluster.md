@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, akshittu, maperric, v-lianna
-ms.custom: sap:high-availability-virtual-machines, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\High availability virtual machines, csstroubleshoot
 ---
 # Can't change the ConfigStoreRootPath value of a Hyper-V cluster in Windows Server
 

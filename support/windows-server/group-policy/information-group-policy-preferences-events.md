@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:security-filtering-and-item-level-targeting, csstroubleshoot
+ms.custom: sap:Group Policy\Security filtering and item-level targeting, csstroubleshoot
 ---
 # Information about Group Policy Preferences events
 
 This article provides some information about Group Policy Preferences Events.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2002507
 
 ## Summary

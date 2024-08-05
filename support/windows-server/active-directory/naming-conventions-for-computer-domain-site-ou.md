@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # Naming conventions in Active Directory for computers, domains, sites, and OUs
 
 This article describes the naming conventions for computer accounts in Windows, NetBIOS domain names, DNS domain names, Active Directory sites, and organizational units (OUs) that are defined in Active Directory Domain Services (AD DS).
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 909264
 
 ## Summary

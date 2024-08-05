@@ -2,7 +2,8 @@
 title: Retirement transaction not included in Fixed Asset Management batch
 description: A retirement transaction may not be included in a Fixed Asset Management batch that was created in General Ledger in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # A retirement transaction may not be included in a Fixed Asset Management batch that was created in General Ledger
 

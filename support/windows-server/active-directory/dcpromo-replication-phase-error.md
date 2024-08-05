@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr, arrenc
-ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
+ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
 # Troubleshoot an Internal error message during the replication phase of dcpromo
 
 This article describes how to troubleshoot an internal error that you receive during the replication phase of the Active Directory Installation Wizard (Dcpromo).
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 265090
 
 > [!NOTE]

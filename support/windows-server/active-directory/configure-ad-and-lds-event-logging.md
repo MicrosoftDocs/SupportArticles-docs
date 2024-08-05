@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Lightweight Directory Services (AD LDS), csstroubleshoot
 ---
 # How to configure Active Directory and LDS diagnostic event logging
 
 This step-by-step article describes how to configure Active Directory diagnostic event logging in Microsoft Windows Server operating systems.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 314980
 
 ## Summary

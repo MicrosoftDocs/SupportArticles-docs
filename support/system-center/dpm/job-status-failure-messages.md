@@ -1,8 +1,8 @@
 ---
 title: Job status failure messages in DPM
 description: Describes an issue that may occur if the real-time monitoring component of an antivirus program is configured to monitor replicas and transfer log files of Data Protection Manager protected volumes.
-ms.date: 08/18/2020
-ms.reviewer: ankito
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet, ankito
 ---
 # You receive job status failure messages in Data Protection Manager
 

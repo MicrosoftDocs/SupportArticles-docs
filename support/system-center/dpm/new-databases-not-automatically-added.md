@@ -1,7 +1,8 @@
 ---
 title: New databases from a secondary DPM server aren't automatically added
 description: Fixes an issue in which new databases from a secondary DPM server aren't automatically added for protection to a SQL Server instance.
-ms.date: 07/27/2020
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet
 ---
 # New databases from a secondary DPM server aren't automatically added to a SQL Server instance
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:redirection-not-printer, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Redirection (not printer), csstroubleshoot
 ---
 # Caps Lock key unexpectedly inverts characters in a remote desktop session to a Windows Server 2012-based computer
 
 This article provides a solution to an issue where the Caps Lock key status change triggered by an application in a remote computer isn't synchronized back to the client computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3120433
 
 ## Symptoms

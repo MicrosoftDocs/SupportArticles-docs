@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, subheetr
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
+ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
 ---
 # Reliability Monitor displays no information in Windows Server
 
 This article provides a solution to an issue that Reliability Monitor displays no information when you open Reliability Monitor on a computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 983386
 
 ## Symptoms

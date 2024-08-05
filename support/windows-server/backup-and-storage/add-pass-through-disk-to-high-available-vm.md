@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ctimon
-ms.custom: sap:storage-hardware, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware , csstroubleshoot
 ---
 # Read-only pass-through disk after you add the disk to a highly available VM in a Windows Server 2008 R2 SP1 failover cluster
 

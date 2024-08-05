@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # How to troubleshoot high Lsass.exe CPU utilization on Active Directory Domain Controllers
 
 This article solves the high Lsass.exe CPU usage on Active Directory Domain Controllers.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2550044
 
 ## Symptoms

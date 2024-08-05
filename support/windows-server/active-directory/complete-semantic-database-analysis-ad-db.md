@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Domain Controller specific boot failures, csstroubleshoot
 ---
 # How to complete a semantic database analysis for the Active Directory database by using Ntdsutil.exe
 
 This article describes the steps to complete a semantic database analysis for the Active Directory database by using Ntdsutil.exe
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315136
 
 ## Summary

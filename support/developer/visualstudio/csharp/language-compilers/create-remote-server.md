@@ -4,6 +4,7 @@ description: This article illustrates how to create a remote server that another
 ms.date: 04/22/2020
 ms.reviewer: ARTHURYA
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Use Visual C# to create a remote server
 

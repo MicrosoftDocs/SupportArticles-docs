@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:wmi, csstroubleshoot
+ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
 # Warning Event ID 5605 is logged in Application log when querying MSCluster namespace through WMI
 

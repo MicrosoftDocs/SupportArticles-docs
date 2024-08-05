@@ -1,7 +1,8 @@
 ---
 title: Maintenance Mode causes refresh errors 13926 and 2606
 description: When using System Center 2012 Virtual Machine Manager SP1 to put a cluster node into the Maintenance Mode, manual or system refreshes of the cluster fail with either error 13926 or 2606.
-ms.date: 07/17/2020
+ms.date: 04/09/2024
+ms.reviewer: wenca
 ---
 # System Center 2012 Virtual Machine Manager SP1 Maintenance Mode causes refresh errors 13926 and 2606
 

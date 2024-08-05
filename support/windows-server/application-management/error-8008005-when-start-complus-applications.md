@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:com+-administration-configuration-and-security, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\DCOM service startup and permissions, csstroubleshoot
 ---
 # Error when you start many COM+ applications: Error code 80080005 -- server execution failed
 
 This article provides a workaround for an issue where you receive error code 80080005 when you start many Microsoft COM+ applications manually from a Component Services Microsoft Management Console (MMC) snap-in.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 870655
 
 ## Symptoms

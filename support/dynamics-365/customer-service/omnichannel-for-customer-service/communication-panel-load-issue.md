@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where the communication panel d
 ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 05/23/2023
+ms.custom: sap:Omnichannel dashboards
 ---
 # Communication panel doesn't load in Omnichannel for Customer Service
 

@@ -7,15 +7,13 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate, herbertm, juriviere
-ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Domain and forest trusts, csstroubleshoot
 keywords: gMSA, golden gMSA, kds root key object
 ---
 
 # How to recover from a Golden gMSA attack
 
 This article describes an approach to repairing the credentials of a group Managed Service Account (gMSA) that are affected by a domain controller database exposure incident.
-
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Symptoms
 

@@ -5,7 +5,7 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
 ms.reviewer: kaushika, warrenw, traceytu, iovoicul, kimberj, v-lianna
 localization_priority: medium
 ---

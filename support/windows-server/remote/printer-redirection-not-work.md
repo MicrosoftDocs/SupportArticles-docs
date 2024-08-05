@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:printing-includes-redirection, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Printing (includes redirection), csstroubleshoot
 ---
 # Windows Server printer redirection isn't working
 
 This article provides a solution to an issue in which the printer redirection isn't working and no event IDs occur.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2003646
 
 ## Symptoms

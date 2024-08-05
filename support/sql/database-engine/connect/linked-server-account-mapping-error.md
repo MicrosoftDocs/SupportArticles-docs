@@ -1,14 +1,14 @@
 ---
-title: Troubleshooting linked server connectivity errors in SQL Server
+title: Linked server connectivity errors in SQL Server
 description: This article provides a resolution for consistent authentication errors that are related to linked server connectivity in SQL Server.
-ms.date: 02/27/2024
+ms.date: 03/26/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 
-# Troubleshoot linked server connectivity issues in SQL Server
+# Connectivity issues with linked servers in SQL Server authentication
 
 This article helps you to resolve the consistent authentication linked server connectivity issue.
 
@@ -52,3 +52,7 @@ In addition to the main mapping settings in the **Linked Server security** dialo
 
 > [!NOTE]
 > Using a SQL Server ODBC driver in a linked server isn't a supported scenario. Other ODBC drivers might have primary support from the vendor and only limited support from Microsoft. For more information, see [SQL Server Linked Server Delegation Issues](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0650-SQL-Server-Linked-Server-Delegation-Issues).
+
+## More information
+
+[Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)

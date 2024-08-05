@@ -7,13 +7,11 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jgerend, v-lianna
-ms.custom: sap:applocker-or-software-restriction-policies, csstroubleshoot
+ms.custom: sap:Group Policy\Applocker or software restriction policies , csstroubleshoot
 ---
 # Troubleshoot software restriction policies
 
 This article describes common problems and solutions when troubleshooting Software Restriction Policies (SRP) beginning with Windows Server 2008 and Windows Vista.
-
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Introduction
 

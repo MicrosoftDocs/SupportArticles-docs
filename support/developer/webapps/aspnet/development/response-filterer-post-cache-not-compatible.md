@@ -2,7 +2,7 @@
 title: Response filtering and post-cache substitution not compatible
 description: This article describes a fact that ASP.NET response filter module and post-cache substitution aren't compatible.
 ms.date: 04/16/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ---
 # ASP.NET response filtering and post-cache substitution aren't compatible
 

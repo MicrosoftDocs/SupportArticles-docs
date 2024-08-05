@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: willfid, aadcontent, rkiran, kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Diagnostic logging for troubleshooting Workplace Join issues
 
 This article describes how to collect diagnostic logs for troubleshooting Workplace Join issues.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3045377
 
 ## Enable Workplace Join Debug logging by using Event Viewer

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ArrenC, GrahamM
-ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Changes to security groups or distribution groups are not replicated to destination domain controllers when you use link value replication in a Windows Server 2003 environment
 
 This article provides a solution to an issue where changes that are made to security groups or distribution groups aren't replicated to destination domain controllers when you use link value replication.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 958838
 
 ## Symptoms

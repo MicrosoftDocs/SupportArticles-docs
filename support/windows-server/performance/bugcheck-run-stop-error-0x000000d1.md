@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jaysenb
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
 # Stop error 0x000000D1 and Windows Server runs a bugcheck when you enable a storage controller
 
 This article discusses an issue where Windows Server runs a bugcheck and you receive Stop error 0x000000D1 when you enable a storage controller.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2916984
 
 ## Symptoms

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-access, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess), csstroubleshoot
 ---
 # Troubleshoot DirectAccess Server console: domain controller and Kerberos
 

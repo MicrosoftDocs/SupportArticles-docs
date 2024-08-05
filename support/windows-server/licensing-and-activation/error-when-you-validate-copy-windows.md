@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:windows-volume-activation, csstroubleshoot
+ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 ---
 # Error message when you try to validate a copy of Windows: The cryptographic operation failed because of a local security option setting
 
 This article provides a solution to an error that occurs when you try to validate a copy of Windows.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2715304
 
 ## Symptoms

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:power-management, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Power management, csstroubleshoot
 ---
 # The Allow the computer to turn off this device to save power option doesn't remain selected after you restart Windows Vista
 

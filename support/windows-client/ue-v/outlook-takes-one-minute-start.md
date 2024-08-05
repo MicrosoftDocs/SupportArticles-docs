@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: narafa, winciccore, kaushika
-ms.custom: sap:uev-2.1, csstroubleshoot
+ms.custom: sap:UEV\Agent\Other, csstroubleshoot
 ---
 # Unexpected one-minute startup of Outlook if UE-V is enabled
 

@@ -4,6 +4,7 @@ description: Describes how to obtain a hash value and how to compare two hash va
 ms.date: 04/13/2020
 ms.reviewer: v-ingor
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Use Visual C# to compute and compare hash values
 
@@ -186,7 +187,7 @@ namespace ComputeAHash_csharp
         {
             int i;
             StringBuilder sOutput = new StringBuilder(arrInput.Length);
-            for (i=0;i < arrInput.Length -1; i++)
+            for (i=0;i < arrInput.Length; i++)
             {
                 sOutput.Append(arrInput[i].ToString("X2"));
             }

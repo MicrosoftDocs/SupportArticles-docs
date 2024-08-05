@@ -3,7 +3,8 @@ title: Transfer GP installation to a new server
 description: Discusses how to transfer your existing financial application to a new server that is running Microsoft SQL Server. Also discusses how to maintain the user logins and databases.
 ms.reviewer: theley, kyouells, 
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to transfer an existing Microsoft Dynamics GP, Small Business Financials, or Small Business Manager installation to a new server that is running SQL Server
 

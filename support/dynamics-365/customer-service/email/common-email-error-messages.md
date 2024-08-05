@@ -4,6 +4,7 @@ description: Provides resolutions for common configuration issues with automatic
 ms.reviewer: sdas
 ms.author: shchaur
 ms.date: 06/08/2023
+ms.custom: sap:E-Mail\Case isn't getting created with record creation rule
 ---
 # Troubleshoot common configuration issues with automatic record creation and update rules
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, clintk
-ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # How to avoid duplicate GUIDs when you image System Management Server 2003 client computers
 
 This article describes how to avoid duplicate globally unique identifiers (GUIDs) when you use disk imaging or cloning to deploy the Microsoft Systems Management Server (SMS) 2003 clients.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 828367
 
 > [!IMPORTANT]

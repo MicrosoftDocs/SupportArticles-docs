@@ -10,6 +10,7 @@ ms.search.region: Global
 ms.author: henrikan
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
+ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
 # A vendor rebate isn't cumulated based on invoices
 

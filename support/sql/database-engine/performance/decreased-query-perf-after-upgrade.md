@@ -2,7 +2,7 @@
 title: Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later
 description: Provides troubleshooting steps for an issue where a query runs slower after upgrade from SQL Server 2012 or earlier versions to 2014 or later versions
 ms.date: 07/20/2022
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 ms.reviewer: jopilov
 author: pijocoder

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
+ms.custom: sap:System Management Components\Microsoft Management Console (MMC), csstroubleshoot
 ---
 # The Windows Trace Session Manager service does not start and Event ID 7000 occurs
 

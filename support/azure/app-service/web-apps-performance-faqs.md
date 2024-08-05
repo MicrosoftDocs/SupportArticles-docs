@@ -4,7 +4,7 @@ description: Get answers to frequently asked questions about availability, perfo
 author: genlin
 ms.author: genli
 ms.service: app-service
-ms.date: 03/09/2022
+ms.date: 03/05/2024
 ms.reviewer: toan, shrahman
 ---
 # Application performance FAQs for Web Apps in Azure

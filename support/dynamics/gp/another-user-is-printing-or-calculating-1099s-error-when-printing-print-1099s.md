@@ -3,7 +3,8 @@ title: Another User is Printing or Calculating 1099s error when printing Print 1
 description: Error message - Another User is Printing or Calculating 1099s occurs when you print the Print 1099s report in Microsoft Dynamics GP Payables Management
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "Another User is Printing or Calculating 1099s" error when you print the Print 1099s report in Microsoft Dynamics GP Payables Management
 

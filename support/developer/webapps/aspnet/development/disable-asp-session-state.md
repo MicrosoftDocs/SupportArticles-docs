@@ -2,7 +2,7 @@
 title: Disable ASP session state in ASP.NET
 description: This article demonstrates how to disable session state in ASP.NET.
 ms.date: 04/03/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ms.topic: how-to
 ---
 # Disable ASP session state in ASP.NET  

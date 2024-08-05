@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroubleshoot
 ---
 # ADMT 3.2 installation incomplete, MMC console error "cannot open database 'ADMT' requested by the login"
 
 This article provides help to an error (Cannot open database "ADMT" requested by the login. The logon failed) that occurs when you run Active Directory Migration Tool (ADMT) console.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2266373
 
 ## Symptoms

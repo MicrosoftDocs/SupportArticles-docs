@@ -2,7 +2,7 @@
 title: Can't restore backups from SQL Server that uses SQL Server Connector for Key Vault
 description: This article helps you resolve the error 33111 while restoring backups from the previous versions of SQL Server.
 ms.date: 10/11/2022
-ms.custom: sap:Administration and Management
+ms.custom: sap:Database Backup and Restore
 ms.reviewer: v-jayaramanp
 ---
 

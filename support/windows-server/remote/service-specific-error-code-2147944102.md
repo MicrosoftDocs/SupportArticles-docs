@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:administration, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # "Service-Specific Error Code -2147944102" error message if you try to start the BITS service
 
 This article provides a solution to an error 2147944102 that occurs when you start the Background Intelligent Transfer Service (BITS) Service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 326460
 
 ## Symptoms

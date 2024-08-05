@@ -1,7 +1,8 @@
 ---
 title: Error 11028 migrating a virtual machine
 description: Describes an issue that you receive error 11028 when migrating a VM with attached shared ISO in Virtual Machine Manager.
-ms.date: 04/29/2020
+ms.date: 04/09/2024
+ms.reviewer: jarrettr
 ---
 # Error ID 11028 when migrating a VM with attached shared ISO in Virtual Machine Manager
 

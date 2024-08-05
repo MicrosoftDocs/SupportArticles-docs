@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # The Post-Deployment Configuration task may fail after you install the Windows Server Essentials Experience role
 
 This article provides a solution to an issue where the Post-Deployment Configuration task fails after you install the Windows Server Essentials Experience role.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2914651
 
 ## Symptoms

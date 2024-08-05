@@ -2,7 +2,7 @@
 title: Recommendations to reduce allocation contention
 description: This article provides resolution for the problem where you notice severe blocking when the server is experiencing a heavy load.
 ms.date: 09/25/2020
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: SureshKa
 ---
 # Recommendations to reduce allocation contention in SQL Server tempdb database

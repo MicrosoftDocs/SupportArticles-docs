@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, prvijay
-ms.custom: sap:hyper-v-replica, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Hyper-V Replica (HVR), csstroubleshoot
 ---
 # Feature and performance optimization of Hyper-V Replica (HVR)
 
 This article describes the registry keys that apply to Hyper-V Replica feature.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2767928
 
 ## Summary

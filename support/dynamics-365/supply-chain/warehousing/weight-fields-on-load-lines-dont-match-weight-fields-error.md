@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: mirzaab
 ms.search.validFrom: 2021-05-15
 ms.dyn365.ops.version: 10.0.18
+ms.custom: sap:Warehouse management
 ---
 
 # The weight fields on load lines don't match the weight fields on the load

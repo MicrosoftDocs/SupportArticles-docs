@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot
 ---
 # Considerations for disabling and replacing TLS 1.0 in AD FS
 
 This article provides guidance and considerations for disabling and replacing TLS 1.0 in Active Directory Federation Services (AD FS).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3194197
 
 ## Summary

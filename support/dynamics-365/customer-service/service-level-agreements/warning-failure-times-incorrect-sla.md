@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where the SLA warning and failu
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 08/18/2023
+ms.custom: sap:Service Level Agreements\SLA time calculation not behaving as expected
 ---
 # Warning and failure duration times are incorrect for the SLA
 

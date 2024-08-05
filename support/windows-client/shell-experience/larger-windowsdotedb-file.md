@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:cortana-and-search, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Windows Search, csstroubleshoot
 ---
 # Windows.edb is larger than expected when a PST file is indexed
 

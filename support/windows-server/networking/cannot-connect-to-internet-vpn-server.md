@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, MASOUDH
-ms.custom: sap:remote-access, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
 ---
 # You can't connect to the Internet after you connect to a VPN server
 
 This article fixes an issue that you can't connect to the Internet after you log on to a server that's running Routing and Remote Access by using VPN.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 317025
 
 ## Symptoms

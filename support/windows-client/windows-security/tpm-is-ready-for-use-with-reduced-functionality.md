@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 ---
 # "TPM is ready for use, with reduced functionality" message when the BIOS is in legacy mode with TPM 2.0
 
 This article helps fix an error that occurs when you have the operating system installed in Legacy MBR mode (PC/AT) with Trusted Platform Module (TPM) version 2.0.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3123365
 
 ## Symptoms  

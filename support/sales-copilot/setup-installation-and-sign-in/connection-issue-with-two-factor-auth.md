@@ -5,6 +5,7 @@ ms.date: 01/25/2024
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
+ms.custom: sap:Setup, Installation and Sign-in\Sales Copilot Teams App Installation
 ---
 # Copilot for Sales doesn't connect to Dynamics 365 with multifactor authentication enabled
 

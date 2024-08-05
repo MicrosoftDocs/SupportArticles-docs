@@ -1,19 +1,19 @@
 ---
 title: CA doesn't publish certificates in trusted domain
 description: Fixes an issue where the issued certificate isn't published in Active Directory when users from a child domain as a certification authority (CA) request a certificate.
-ms.date: 12/26/2023
+ms.date: 03/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
-ms.custom: sap:active-directory-certificate-services-adcs, csstroubleshoot
+ms.reviewer: kaushika, raviks
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
 # Certification Authority configuration to publish certificates in Active Directory of trusted domain
 
 This article solves the issue where the issued certificate isn't published in Active Directory when users from a child domain as a certification authority (CA) request a certificate.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; All supported versions of Windows Server  
 _Original KB number:_ &nbsp; 281271
 
 ## Symptoms

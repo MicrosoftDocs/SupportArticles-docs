@@ -3,7 +3,8 @@ title: A batch is held in the several statuses
 description: Provides a solution to an error that occurs when you try to post a batch and open it in Microsoft Dynamics GP or in Microsoft Business Solutions - Great Plains.
 ms.reviewer: kyouells, melissa, theley
 ms.topic: troubleshooting
-ms.date: 03/12/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP
 

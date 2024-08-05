@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
-ms.custom: sap:remote-access-multisite, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
 ms.assetid: 570c81d6-c4f4-464c-bee9-0acbd4993584
 ---
 # Troubleshoot enabling multisite

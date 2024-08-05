@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, yuvraja
-ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB), csstroubleshoot
 ---
 # Event ID 236 on a Hyper-V server that has SR-IOV enabled on a VM in Windows Server
 

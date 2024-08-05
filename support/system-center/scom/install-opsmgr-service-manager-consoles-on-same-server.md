@@ -1,7 +1,7 @@
 ---
 title: Install OpsMgr and Service Manager consoles on the same server
 description: Describes how to install the System Center 2016 Operations Manager console and System Center 2016 Service Manager console on the same server.
-ms.date: 09/02/2020
+ms.date: 04/15/2024
 ---
 # Install the Operations Manager console and the Service Manager console on the same server
 

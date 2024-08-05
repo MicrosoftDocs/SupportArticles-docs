@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, josefh
-ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk errors, csstroubleshoot
 ---
 # Extending a CSV by using Diskpart or PowerShell isn't blocked from a non-coordinator node
 
 This article provides a solution to an issue where extending a Cluster Shared Volume by using Diskpart or PowerShell isn't blocked from a non-coordinator node.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3189825
 
 ## Symptoms

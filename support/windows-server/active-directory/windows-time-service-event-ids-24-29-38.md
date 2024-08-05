@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtualized-domain-controller-errors-and-questions, csstroubleshoot
+ms.custom: sap:Active Directory\Virtualized domain controller (errors and questions), csstroubleshoot
 ---
 # You receive Windows Time Service event IDs 24, 29, and 38 on a virtualized domain controller
 
 This article provides a solution to an issue where you receive the Windows Time Service event IDs 24, 29, and 38 on a host server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 976924
 
 > [!NOTE]  

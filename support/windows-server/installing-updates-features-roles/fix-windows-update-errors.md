@@ -1,22 +1,22 @@
 ---
-title: Fix Windows Update errors via DISM or System Update Readiness tool
-description: Use the System Update Readiness Tool or the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 12/26/2023
+title: Fix Windows Update corruptions and installation failures
+description: Use the DISM tool to fix problems that prevent Windows Update from installing successfully.
+ms.date: 08/02/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: high
-ms.reviewer: kaushika, chkeen, cgibson, jesko
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.reviewer: kaushika, chkeen, cgibson, jesko, warrenw
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
 adobe-target: true
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
 --->
 
-# Fix Windows Update errors by using the DISM or System Update Readiness tool
+# Fix Windows Update corruptions and installation failures
 
-This article offers you advanced manual methods to fix problems that prevent Windows Update from installing successfully by using the System Update Readiness Tool or the Deployment Image Servicing and Management (DISM) tool.
+This article offers you advanced manual methods to fix problems that prevent Windows Update from installing successfully by using the Deployment Image Servicing and Management (DISM) tool.
 
 > [!NOTE]
 > This article is intended for use by support agents and IT professionals. If you're home users and looking for more information about fixing Windows update errors, see [Fix Windows Update errors](https://support.microsoft.com/help/10164).
@@ -25,11 +25,12 @@ _Original KB number:_ 947821
 
 ## Common corruption errors
 
-Windows updates may fail to install if there are corruption errors. The following table lists the possible error codes for Windows Update for your reference:
+Windows updates may fail to install if there are corruption errors. You can check the Setup event log for errors. The following table lists the possible error codes for Windows Update for your reference:
 
 |Code|Error|Description|
 |---|---|---|
 |0x80070002|ERROR_FILE_NOT_FOUND|The system cannot find the file specified.|
+|0x800f0831|CBS_E_STORE_CORRUPTION|CBS store is corrupted.|
 |0x8007000D|ERROR_INVALID_DATA|The data is invalid.|
 |0x800F081F|CBS_E_SOURCE_MISSING|The source for the package or file not found.|
 |0x80073712|ERROR_SXS_COMPONENT_STORE_CORRUPT|The component store is in an inconsistent state.|
@@ -49,19 +50,18 @@ Windows updates may fail to install if there are corruption errors. The followin
 |0x800f0986|PSFX_E_APPLY_FORWARD_DELTA_FAILED|Applying forward delta failed|
 |0x800f0982|PSFX_E_MATCHING_COMPONENT_NOT_FOUND|Can't identify matching component for hydration|
 
-For example, an update might not install if a system file is damaged. The DISM or [System Update Readiness tool](#what-does-the-system-update-readiness-tool-do) may help you fix some Windows corruption errors.
+For example, an update might not install if a system file is damaged. The DISM may help you fix some Windows corruption errors.
 
 Check this page for [Windows Update troubleshooting scenarios](../../windows-client/deployment/troubleshoot-windows-update-issues.md).
 
-## Solution 1: Use DISM
+## Using DISM to repair Windows Update corruptions
 
 > [!NOTE]
 > The solution mentioned in this section applies to Modern Windows versions like Windows 11, Windows 10, Windows Server 2016, or later.
-> For Windows 7 and Windows Server 2008 R2, check [Solution 2: Use the System Update Readiness tool](#solution-2-use-the-system-update-readiness-tool).
 
-To resolve this problem, use the DISM tool. Then, install the Windows update or service pack again.
+To resolve Windows Update corruptions and address update installation failures, use the DISM tool. Then, install the Windows Update.
 
-1. Open an elevated command prompt. To do this, open the **Start** menu or **Start** screen, type _Command Prompt_, right-click **Command Prompt**, and then select **Run as administrator**. If you're prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
+1. Open an elevated command prompt. To do this, open the **Start** menu, type _Command Prompt_, right-click **Command Prompt**, and then select **Run as administrator**. If you're prompted for an administrator password or for a confirmation, type the password, or select **Yes**.
 
 2. Type the following command, and then press Enter. It may take several minutes for the command operation to be completed.
 
@@ -70,78 +70,26 @@ To resolve this problem, use the DISM tool. Then, install the Windows update or 
     ```
 
     > [!IMPORTANT]
-    > When you run this command, DISM uses Windows Update to provide the files that are required to fix corruptions. However, if your Windows Update client is already broken, use a running Windows installation as the repair source, or use a Windows side-by-side folder from a network share or from a removable media, such as the Windows DVD, as the source of the files. To do this, run the following command instead:
+    > DISM repair works best when you connect to Microsoft Update servers to fetch missing or corrupted files. When you use the proceeding command, DISM gets the files needed to fix any corruptions from Windows Update. However, if your computer can't connect to Windows Update, you can alternatively use a working Windows installation as the repair source, or you can use files from a Windows folder on a network or from a USB or DVD. Instead, use this command:
 
     ```console
-    DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:C:\RepairSource\Windows /LimitAccess
+    DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:\\<servername>\c$\winsxs /LimitAccess
     ```
 
     > [!NOTE]
-    > Replace the _C:\RepairSource\Windows_ placeholder with the location of your repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)).
+    > Replace \<servername\> with the computer name of the computer you are using as a repair source. The repair source computer must be running the same operating system version. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the scan result is "The restore operation completed successfully", go to the next step. If not, try to [analyze the CBS.log file](#step-1-analyze-the-cbslog-file) and fix errors.
 
 3. Type the `sfc /scannow` command and press Enter. It may take several minutes for the command operation to be completed.
 
 4. Close the command prompt, and then run **Windows Update** again.
 
-DISM creates a log file (_%windir%/Logs/CBS/CBS.log_) that captures any issues that the tool found or fixed. _%windir%_ is the folder in which Windows is installed. For example, the _%windir%_ folder is _C:\Windows_.
+DISM creates a log file (_%windir%\\Logs\\CBS\\CBS.log_) that captures any issues that the tool found or fixed. _%windir%_ is the folder in which Windows is installed. For example, the _%windir%_ folder is _C:\\Windows_.
 
-## Solution 2: Use the System Update Readiness tool
+## How does DISM Repair work?
 
-> [!NOTE]
-> The solution mentioned in this section is applicable for Windows 7 and Windows Server 2008 R2.
-> For Modern Windows versions like Windows 11, Windows 10, Windows Server 2016, or later, check [Solution 1: Use DISM](#solution-1-use-dism).
+DISM is a command-line tool that is used to service and repair Windows images, including the Windows Recovery Environment, Windows Setup, and Windows PE (WinPE). It can also be used to repair the local Windows image on your computer.
 
-To resolve this problem, use the System Update Readiness tool. Then, install the Windows update or service pack again.
-
-1. Download the System Update Readiness tool.
-
-    Go to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=947821) and download the tool that corresponds to the version of Windows that's running on your computer. For more information about how to find the version of Windows that you installed, see [Find out if your computer is running the 32-bit or 64-bit version of Windows](https://support.microsoft.com/help/15056).
-
-    > [!NOTE]
-    > This tool is updated regularly, and we recommend that you always download the latest version. This tool isn't available in every supported language.
-2. Install and run the tool.
-   1. Select **Download** on the Download Center webpage, and then do one of the following:
-      - To install the tool immediately, select **Open** or **Run**, and then follow the instructions on your screen.
-      - To install the tool later, select **Save**, and then download the installation file to your computer. When you're ready to install the tool, double-click the file.
-   2. In the Windows Update Standalone Installer dialog box, select **Yes**.
-
-      :::image type="content" source="media/fix-windows-update-errors/windows-update-standalone-installer.svg" alt-text=" Screenshot of the Windows Update Standalone Installer dialog box." border="false":::
-
-3. When the tool is installed, it automatically runs. Although it typically takes less than 15 minutes to run, it might take much longer on some computers. Even if the progress bar seems to have stopped, the scan is still running, so don't select **Cancel**.
-
-    :::image type="content" source="media/fix-windows-update-errors/updates-are-being-installed-progress-window.svg" alt-text="Download and Install Updates window that shows the updates are being installed." border="false":::
-
-4. When you see Installation complete, select **Close**.
-
-    :::image type="content" source="media/fix-windows-update-errors/installation-complete.svg" alt-text="Download and Install Updates window shows installation complete." border="false":::
-
-5. Reinstall the update or service pack you were trying to install previously.
-
-To manually fix corruption errors that the tool detects but can't fix, see [How to fix errors that are found in the CheckSUR log file](#fix-errors-found-in-the-checksur-log-file).
-
-## Solution 3: Use Microsoft Update Catalog
-
-You can also try to download the update package directly from [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/home.aspx), and then install the update package manually.
-
-For example, you may have problems when you try to install updates from Windows Update. In this situation, you can download the update package and try to install the update manually. To do this, follow these steps:
-
-1. Open the [Microsoft Update Catalog page for KB3006137](https://www.catalog.update.microsoft.com/Search.aspx?q=3006137).
-2. Find the update that applies to your operating system appropriately in the search results, and then select the **Download** button.
-
-   :::image type="content" source="./media/fix-windows-update-errors/select-download-button.svg" alt-text="Screenshot of the Download button of the update.":::
-
-3. Select the link of the file to download the update.
-
-   :::image type="content" source="./media/fix-windows-update-errors/download-update-link.svg" alt-text="Microsoft Update Catalog window shows the update download link.":::
-
-4. Select **Close** after the download process is done. Then, you can find a folder that contains the update package in the location that you specified.
-5. Open the folder, and then double-click the update package to install the update.
-
-## What does the System Update Readiness tool do
-
-### Verify the integrity of resources
-
-The System Update Readiness tool verifies the integrity of the following resources:
+To give you a better understanding, here's a summary of the resources that the DISM tool checks for integrity:
 
 - Files that are located in the following directories:
   - _%SYSTEMROOT%\Servicing\Packages_
@@ -151,48 +99,161 @@ The System Update Readiness tool verifies the integrity of the following resourc
   - _HKEY_LOCAL_MACHINE\Schema_
   - _HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing_
 
-This list may be updated at any time.
-
-When the System Update Readiness tool detects incorrect manifests, Cabinets, or registry data, it may replace the incorrect data with a corrected version.
+This list may be updated at any time. When the DISM detects incorrect manifests, Cabinets, or registry data, it may replace the incorrect data with a corrected version.
 
 ### Logging
 
-The System Update Readiness tool creates a log file that captures any issues that the tool found or fixed. The log file is located here:
+The DISM tool creates a log file that captures any issues that the tool found or fixed. The log file is located here:
 
-- _%SYSTEMROOT%\Logs\CBS\CheckSUR.log_
-- _%SYSTEMROOT%\Logs\CBS\CheckSUR.persist.log_
+- _%SYSTEMROOT%\Logs\CBS\CBS.log_
+- _%SYSTEMROOT%\Logs\CBS\CBS.persist.log_
 
-## Fix errors found in the CheckSUR log file
+## Advanced guide to fix CBS corruption manually using DISM utility
 
-To manually fix corruption errors that the System Update Readiness tool detects but can't fix, follow these steps:
+### Step 1: Analyze the CBS.log file
 
-1. Open _%SYSTEMROOT%\Logs\CBS\CheckSUR.log_.
+After running the DISM commands, go to *%WinDir%\\Logs\\CBS\\CBS.log* to view the results. The log file provides a summary of the scan and details of any errors found.
 
-    > [!NOTE]
-    > _%SYSTEMROOT%_ is an environment variable that saves the folder in which Windows is installed. For example, generally, the _%SYSTEMROOT%_ folder is _C:\Windows_.
+Here's an example of the log summary:
 
-2. Identify the packages that the tool can't fix. For example, you may find the following information in the log file:
+```output
+Checking System Update Readiness.
+    (p)      CSI Payload Corrupt              (n)           amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19045.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
+       (p)    CBS MUM Missing                         (n)                 Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291
+       (p)    CSI Manifest Corrupt             (w)    (Fixed)       wow64_microsoft-windows-audio-mmecore-acm_31bf3856ad364e35_10.0.19045.1_none_a12b40f4b4c7b751
+    (p)      CSI Manifest Corrupt          (n)                    wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19045.3636_none_4514b27cf12f35d5
+
+
+Summary:
+Operation: Detect and Repair 
+Operation result: 0x800f081f
+Last Successful Step: Remove staged packages completes.
+Total Detected Corruption: 2
+    CBS Manifest Corruption: 2
+    CBS Metadata Corruption: 0
+    CSI Manifest Corruption: 0
+    CSI Metadata Corruption: 0
+    CSI Payload Corruption: 0
+Total Repaired Corruption: 1
+    CBS Manifest Repaired: 1
+    CSI Manifest Repaired: 0
+    CSI Payload Repaired: 0
+    CSI Store Metadata refreshed: False
+Staged Packages:
+    CBS Staged packages: 0
+    CBS Staged packages removed: 0
+```
+
+> [!NOTE]
+> CSI Payload Corruption: This indicates that the payload file *EnterpriseModernAppMgmtCSP.dll* is corrupt.
+>
+> CBS MUM Missing: A required MUM file is missing from the package (*Microsoft-Windows-Client-Features-Package*).
+> 
+> CSI Manifest Corruption: There were two instances of manifest corruption. One was fixed (*wow64_microsoft-windows-audio-mmecore-acm*), and the other (*wow64_microsoft-windows-audio-volumecontrol*) remains corrupt.
+
+### Step 2: Download the missing files
+
+1. Identify the missing or corrupted files.
+
+    Review the *CBS.log* file to identify the missing or corrupted files. For example:
 
     ```output
-    Summary:
-    
-    Seconds executed: 264
-    Found 3 errors
-    CBS MUM Missing Total Count: 3
-    Unavailable repair files:
-    
-    servicing\packages\Package_for_KB958690_sc_0~31bf3856ad364e35~amd64~~6.0.1.6.mum
-    ...
+    (p) CSI Payload Corrupt (n) amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19045.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
+    (p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291
+    (p) CSI Manifest Corrupt (n) wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19045.3636_none_4514b27cf12f35d5
     ```
 
-    In this case, the package that's corrupted is KB958690.
+2. Determine the version.
 
-3. Download the package from [Microsoft Download Center](https://www.microsoft.com/download) or [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/home.aspx).
+    To determine which update has the missing files, you can use the Update Build Revision (UBR) in the file name. For example:
 
-4. Copy the package (.msu) to the `%SYSTEMROOT%\CheckSUR\packages` directory. By default, this directory doesn't exist, and you need to create it.
-5. Rerun the System Update Readiness tool.
+    - 10.0.19045.3636 is a UBR.
+    - 10.0.19045.4291 is a UBR.
 
-If you're a technical professional, see [How to fix errors found in the CheckSUR.log](../../windows-client/deployment/errors-in-checksur-log.md) for another option on fixing errors in the _CheckSUR.log_.
+    You need to find updates that have these UBR numbers. For example, if you're using Windows 10, version 22H2, find the [update history page](/windows/release-health/release-information#windows-10-release-history) and locate the UBR number (for example, 3636). Each update has a UBR number, and you can download the corresponding update.
+
+3. Download the missing files.
+
+    Identify and download the update packages that contain the missing files. For example, if the log indicates that `Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291` is missing, download the respective `.msu` file from the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
+
+### Step 3: Extract the .msu and .cab files
+
+To address the corrupted files identified in the *CBS.log* file, extract the missing files into a specific folder. Follow these steps to extract the `.msu` and `.cab` files by using the provided [PowerShell script](../support-tools/scripts-extract-msu-cab-files.md), and then copy the necessary files to the *C:\\temp\\Source* folder.
+
+1. Create the necessary folders.
+
+    Run the following command to create the *C:\\temp\\Source* folder if it doesn't exist:
+
+    ```console
+    mkdir C:\temp\Source
+    ```
+
+2. Use the instructions and script in [Scripts: Extract .msu and .cab files](../support-tools/scripts-extract-msu-cab-files.md) to extract the `.msu` files by providing the destination paths of the `.msu` files.
+
+### Step 4: Repair the corrupted files by using the source files
+
+1. Copy the correct versions of the corrupted files.
+
+    Copy the correct versions of all the corrupted files that belong to this update to the *C:\\temp\\Source* folder. For example, run the following command:
+
+    ```powershell
+    Copy-Item "C:\path\extractedFiles\corruptedfile.dll" -Destination "C:\temp\Source"
+    ```
+
+    Repeat this process for each corrupted file identified in the log until all the corrupted files are copied to the *C:\\temp\\Source* folder.
+
+2. Rerun the DISM command.
+
+    Open a command prompt as an administrator and run the following DISM command with the `/Source` option:
+
+    ```console
+    DISM /Online /Cleanup-Image /RestoreHealth /Source:C:\temp\Source\ /limit
+    ```
+
+### Step 5: Verify and confirm
+
+1. Rerun the DISM command.
+
+    Rerun the following DISM command to verify that the issues have been resolved:
+
+    ```console
+    DISM /Online /Cleanup-Image /ScanHealth
+    ```
+
+2. Check the *CBS.log* file.
+
+    Review the *CBS.log* file to ensure there are no remaining errors.
+
+### Example DISM command output
+
+The output of the DISM restore command provides crucial information about the corruption that was detected and repaired:
+
+```output
+Checking System Update Readiness.
+
+(p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291
+Repair failed: Missing replacement mum/cat pair.
+(p) CBS MUM Missing (w) (Fixed) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4412
+
+Summary:
+Operation: Detect and Repair 
+Operation result: 0x800f081f
+Last Successful Step: Remove staged packages completes.
+Total Detected Corruption: 2
+    CBS Manifest Corruption: 2
+    CBS Metadata Corruption: 0
+    CSI Manifest Corruption: 0
+    CSI Metadata Corruption: 0
+    CSI Payload Corruption: 0
+Total Repaired Corruption: 1
+    CBS Manifest Repaired: 1
+    CSI Manifest Repaired: 0
+    CSI Payload Repaired: 0
+    CSI Store Metadata refreshed: False
+Staged Packages:
+    CBS Staged packages: 0
+    CBS Staged packages removed: 0
+```
 
 ## Data collection
 

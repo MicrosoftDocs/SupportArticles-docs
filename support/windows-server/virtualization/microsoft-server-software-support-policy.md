@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-machine-creation, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine creation, csstroubleshoot
 ---
 # Microsoft server software and supported virtualization environments
 
 This article discusses the support policy for running Microsoft server software in the following supported virtualization environments.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008  
 _Original KB number:_ &nbsp; 957006
 
 ## Introduction

@@ -5,6 +5,7 @@ ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
 ms.date: 10/19/2023
+ms.custom: sap:Resource Scheduling Optimization
 ---
 # Troubleshoot issues with bookings in Resource Scheduling Optimization
 

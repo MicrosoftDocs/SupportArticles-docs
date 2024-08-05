@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, hunterm, ronruz, aandrejs
-ms.custom: sap:dst-and-timezones, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\DST and Timezones, csstroubleshoot
 ---
 # Can't set time zone automatically in Windows 10
 

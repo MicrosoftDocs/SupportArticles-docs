@@ -1,8 +1,8 @@
 ---
 title: Power Automate machine registration failure
 description: Provides a set of troubleshooting steps for a failing machine registration in Microsoft Power Automate.
-ms.subservice: power-automate-desktop-flows
 ms.date: 08/05/2024
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ms.reviewer: madiazor, alarnaud, fredg, guco
 ms.author: johndund 
 author: johndund

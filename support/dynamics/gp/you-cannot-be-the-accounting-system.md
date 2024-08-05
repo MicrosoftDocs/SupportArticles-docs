@@ -3,7 +3,8 @@ title: You cannot be in the accounting system
 description: Provides a solution to an error that occurs when you start Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 02/18/2024
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Your login has been removed from the user activity file and you cannot be in the accounting system" Error message when you start Microsoft Dynamics GP
 

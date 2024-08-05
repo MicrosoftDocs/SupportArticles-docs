@@ -20,8 +20,6 @@ The process to request access is relatively straight forward, you can initiate t
 
 1. Log into the [Azure Portal](https://portal.azure.com) and navigate to **Help + support**, then select **Create a new support request**.
 
-    :::image type="content" source="media/region-access-request-process/help-support.png" alt-text="Screenshot of New Support Request." border="true":::
-
 2. In the **New support request** page, complete the following:
  
     1. In **Issue Type**, select **Service and subscription Limit (quotas)**.  

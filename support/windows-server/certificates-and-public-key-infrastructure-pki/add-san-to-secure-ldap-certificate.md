@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:certificate-enrollment, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Technologies (Auto Enrollment, NDES, CWE, CEP, CES), csstroubleshoot
 ---
 # Add a subject alternative name to a secure LDAP certificate
 
 This article describes how to add a subject alternative name (SAN) to a secure Lightweight Directory Access Protocol (LDAP) certificate.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 931351
 
 ## Summary

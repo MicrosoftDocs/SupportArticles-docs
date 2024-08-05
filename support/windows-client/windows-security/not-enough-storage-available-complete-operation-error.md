@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, okang
-ms.custom: sap:kerberos-authentication, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
 ---
 # "Not enough storage is available to complete this operation" error message when you use a domain controller to join a computer to a domain
 
 This article provides a resolution for the error "Not enough storage is available to complete this operation", when you use a domain controller to join a computer to a domain.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 935744
 
 ## Symptoms

@@ -2,7 +2,7 @@
 title: Create SQL Server database programmatically
 description: This article describes how to use ADO.NET and Visual Basic .NET to programmatically create a Microsoft SQL Server database.
 ms.date: 10/10/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\Visual Basic .NET (VB.NET)
 ms.topic: how-to
 ---
 # Create SQL Server database programmatically by using ADO.NET and Visual Basic .NET  

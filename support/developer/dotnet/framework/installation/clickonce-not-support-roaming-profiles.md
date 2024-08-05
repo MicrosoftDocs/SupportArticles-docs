@@ -2,7 +2,7 @@
 title: ClickOnce isn't supported with Roaming User Profiles
 description: ClickOnce deployment isn't supported when using Roaming User Profiles. While variations may sometime work, such configurations are not tested. Such scenarios could be adversely affected by future product updates.
 ms.date: 05/06/2020
-ms.custom: sap:Installation
+ms.custom: sap:Installation and Deployment
 ms.reviewer: LeeCow
 ---
 # ClickOnce deployment isn't supported with Roaming profiles

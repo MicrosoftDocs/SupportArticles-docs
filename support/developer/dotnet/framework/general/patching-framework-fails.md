@@ -3,6 +3,7 @@ title: Patching of .NET Framework fails
 description: .NET Framework patches fail if assemblies are in use or locked. This article provides resolutions for this problem.
 ms.date: 05/06/2020
 ms.reviewer: kelho
+ms.custom: sap:Installation and Deployment
 ---
 # Patching of .NET Framework fails with an error: Access is denied or File in Use
 

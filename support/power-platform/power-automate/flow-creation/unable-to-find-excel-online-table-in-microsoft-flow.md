@@ -3,7 +3,7 @@ title: Can't find Excel Online table in Microsoft Flow
 description: Provides a resolution for finding the Excel Online table in Microsoft Flow.
 ms.reviewer: mehgupta
 ms.date: 03/31/2021
-ms.subservice: power-automate-flow-creation
+ms.custom: sap:Flow creation\Other flow creation issues
 ---
 # Unable to find Excel Online table in Microsoft Flow
 

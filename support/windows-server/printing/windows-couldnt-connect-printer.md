@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jokay
-ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Error message when you try to connect to a printer by using an alias (CNAME) resource record: Windows couldn't connect to the printer
 
 This article provides a solution to an error that occurs when you try to connect to a printer by using an alias (CNAME) resource record.
 
-_Applies to:_ &nbsp; Windows 10 - all editions,  Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 979602
 
 ## Symptoms

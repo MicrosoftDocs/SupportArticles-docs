@@ -3,7 +3,8 @@ title: Use Table Import to import data into Microsoft Dynamics GP
 description: Provides guidelines to perform a successful data import in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains by using the Table Import tool.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to use Table Import to import data into Microsoft Dynamics GP
 

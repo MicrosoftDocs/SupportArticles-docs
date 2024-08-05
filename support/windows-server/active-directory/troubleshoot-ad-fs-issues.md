@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, abizerh, fszita, meerak
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref
+ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot, has-azure-ad-ps-ref
 ---
 # Troubleshoot AD FS issues in Microsoft Entra ID and Office 365
 
 This article discusses workflow troubleshooting for authentication issues for federated users in Microsoft Entra ID or Office 365.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3079872
 
 ## Symptoms
@@ -32,6 +31,8 @@ _Original KB number:_ &nbsp; 3079872
 ## Troubleshooting workflow
 
 1. Access [Microsoft Office Home](https://login.microsoftonline.com/), and then enter the federated user's sign-in name (**someone**@**example**.**com**). After you press **Tab** to remove the focus from the login box, check whether the status of the page changes to **Redirecting** and then you're redirected to your Active Directory Federation Service (AD FS) for sign-in.
+
+    [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
     When redirection occurs, you see the following page:
 
@@ -312,9 +313,7 @@ _Original KB number:_ &nbsp; 3079872
 
         You can also run the following tool to schedule a task on the AD FS server that will monitor for the Auto-certificate rollover of the token-signing certificate and update the Office 365 tenant automatically.
 
-        - [Microsoft Office 365 Federation Metadata Update Automation Installation Tool](https://gallery.technet.microsoft.com/scriptcenter/office-365-federation-27410bdc)
-
-        - [Verify and manage single sign-on with AD FS](/previous-versions/azure/azure-services/jj151809(v=azure.100))
+        [Verify and manage single sign-on with AD FS](/previous-versions/azure/azure-services/jj151809(v=azure.100))
 
    - Issuance Transform claim rules for the Office 365 RP aren't configured correctly.
 

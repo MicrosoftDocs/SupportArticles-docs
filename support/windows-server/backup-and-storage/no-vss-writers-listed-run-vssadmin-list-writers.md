@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: jeffpatt, kaushika
-ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
 ---
 # No VSS writers are listed when you run the vssadmin list writers command in Windows Server
 
 This article helps fix an issue where no VSS writers are listed when you run the `vssadmin list writers` command and events are logged.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2009550
 
 ## Symptoms

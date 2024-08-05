@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: mkoduri, kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # New registry entry for controlling the TCP Acknowledgment (ACK) behavior in Windows
 
 This article introduces the TcpAckFrequency, a new registry entry that determines the number of TCP acknowledgments (ACKs).
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 328890
 
 ## Summary

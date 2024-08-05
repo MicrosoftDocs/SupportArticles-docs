@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, luche
-ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # Windows Server 2012 R2 setup may fail on a virtual machine that is configured to use the minimum required memory
 
 This article provides workarounds for an issue where Windows Server 2012 R2 setup fails with error 0xE0000100 on a virtual machine.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2901152
 
 ## Symptoms

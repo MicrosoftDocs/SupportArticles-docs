@@ -6,6 +6,7 @@ ms.author: josaw
 ms.reviewer: shajain, brstor
 ms.date: 09/08/2023
 ms.search.form: RetailStatementTable_SOCreateFailed, RetailStatementTable_InvoiceFailed, RetailStatementTable_PaymentPosted, RetailStatementTable_Aggregated, RetailStatementTable_CustomerOrderCreated, RetailStatementTable_Invoiced
+ms.custom: sap:Financial statements\Issues with statement posting
 ---
 # Fix common statement posting issues by editing transactions
 

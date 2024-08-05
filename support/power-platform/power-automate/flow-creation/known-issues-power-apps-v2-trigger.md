@@ -3,7 +3,7 @@ title: Known issues with Power Apps V2 trigger in Power Automate
 description: Provides the workarounds for the known issues when you use Power Apps V2 trigger in Microsoft Power Automate.
 ms.reviewer: ralinga
 ms.date: 08/10/2022
-ms.subservice: power-automate-flow-creation
+ms.custom: sap:Flow creation\Triggers
 ---
 # Known issues with Power Apps V2 trigger
 

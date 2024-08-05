@@ -5,6 +5,7 @@ ms.date: 11/04/2016
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: maiak
+ms.custom: sap:Extensibility - Visual Studio SDK (VS SDK)\Extension and add-in development
 ---
 # Can't get a service in Visual Studio SDK
 

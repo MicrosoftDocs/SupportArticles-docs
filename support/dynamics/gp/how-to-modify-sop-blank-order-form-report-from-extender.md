@@ -3,7 +3,8 @@ title: How to modify SOP Blank Order Form report from Extender window
 description: Describes how to modify the SOP Blank Order Form report from an Extender window.
 ms.reviewer: theley, kvogel
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to modify the SOP Blank Order Form report from an Extender window
 

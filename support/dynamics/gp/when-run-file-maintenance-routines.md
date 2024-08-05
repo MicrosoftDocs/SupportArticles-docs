@@ -2,7 +2,8 @@
 title: When to run file maintenance routines
 description: Provides information about when to run file maintenance routines in Project Accounting of Microsoft Dynamics GP.
 ms.reviewer: theley, ppeterso
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Project Accounting
 ---
 # Information about when to run file maintenance routines in Project Accounting
 

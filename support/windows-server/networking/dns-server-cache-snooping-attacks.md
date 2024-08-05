@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, jwesth
-ms.custom: sap:dns, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # DNS Server vulnerability to DNS Server Cache snooping attacks
 
 This article provides a solution to an issue where DNS Server vulnerability to DNS Server Cache snooping attacks.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2678371
 
 ## Symptoms

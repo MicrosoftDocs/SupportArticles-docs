@@ -7,15 +7,13 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:user-profiles, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 keywords: ProfSvc
 ---
 
 # Managing User Profile Service slow link detection
 
 This article describes how to optimize slow link detection to effectively balance the quality of the bandwidth estimate against the amount of time spent calculating the estimate.
-
-_Applies to:_ &nbsp; Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 ## Summary
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
-ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Adding node, csstroubleshoot
 ---
 # Creating a Failover Cluster Fails with Error 0xc000005e
 
 This article provides a solution to fix the error 0xc000005e that occurs when you create a failover cluster with Windows Server 2012.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2830510
 
 ## Symptoms

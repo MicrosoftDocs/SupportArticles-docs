@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: ccraig, wincicadsec, kaushika
-ms.custom: sap:smart-card-logon, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Smart card logon, csstroubleshoot
 ---
 # Can't authenticate because of an incorrect PIV smart card driver update
 

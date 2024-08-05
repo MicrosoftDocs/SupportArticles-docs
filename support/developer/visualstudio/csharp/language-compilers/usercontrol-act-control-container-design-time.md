@@ -3,6 +3,7 @@ title: Make UserControl act as control
 description: Describes how to make a UserControl object act as a control container at design time after you add the UserControl object to a Windows Form.
 ms.date: 04/13/2020
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Use Visual C# to make a UserControl object act as a control container design-time
 

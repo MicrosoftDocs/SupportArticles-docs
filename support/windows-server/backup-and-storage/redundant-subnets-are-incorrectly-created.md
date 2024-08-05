@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, Roger.Blume, winciccore
-ms.custom: sap:iscsi, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\ISCSI, csstroubleshoot
 ---
 # Redundant subnets are incorrectly created in an iSCSI IPv6 network
 

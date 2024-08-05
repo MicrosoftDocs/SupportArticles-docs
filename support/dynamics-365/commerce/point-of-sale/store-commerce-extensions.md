@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: brstor
 ms.date: 09/01/2023
+ms.custom: sap:Development and SDKs\Issues with store commerce extension development
 ---
 # Troubleshoot issues with Store Commerce extension 
 

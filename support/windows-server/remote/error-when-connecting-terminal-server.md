@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:certificate-management, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Certificate management, csstroubleshoot
 ---
 # You receive various certificate-related error messages when connecting to a Terminal server that is running Windows Server 2008 or Windows Server 2008 R2
 
 This article provides a solution to various certificate-related error messages when you connect to a Terminal server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000960
 
 ## Symptoms

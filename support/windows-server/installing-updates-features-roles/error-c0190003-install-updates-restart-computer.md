@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
 ---
 # Error C0190003 after you install updates in Windows Server 2012 R2
 
 This article provides a workaround for an issue that triggers an error when you restart a Windows Server 2012 R2-based computer after you install updates.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3074603
 
 ## Symptoms

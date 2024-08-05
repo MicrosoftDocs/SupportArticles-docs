@@ -2,7 +2,7 @@
 title: Install SQL Server 2008 Reporting services
 description: This article introduces that how to install SQL Server 2008 X64 and SQL Server 2008 Reporting services X86 side by side on Windows 2008 X64.
 ms.date: 07/22/2020
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.topic: how-to
 ---
 # Install SQL Server 2008 X64 and SQL Server 2008 Reporting services X86 side by side on Windows 2008 X64

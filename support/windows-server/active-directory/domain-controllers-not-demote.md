@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: arrenc, kaushika
-ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
+ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
 # Domain controllers do not demote gracefully when you use the Active Directory Installation Wizard to force demotion
 
 This article provides a workaround for an issue where domain controllers don't demote when you use the Active Directory Installation Wizard (Dcpromo.exe) to force demotion.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 332199
 
 ## Symptoms

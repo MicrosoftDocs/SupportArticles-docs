@@ -1,7 +1,7 @@
 ---
 title: Can't receive alert notifications
 description: Fixes an issue in which notifications of Operations Manager alerts may not be received.
-ms.date: 07/06/2020
+ms.date: 04/15/2024
 ms.reviewer: rpesenko
 ---
 # Notification of Operations Manager alerts may not be received

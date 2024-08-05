@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-machine-performance, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubleshoot
 ---
 # Hyper-V virtual machines don't start after you upgrade to Windows 10
 

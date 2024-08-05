@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ctimon, kledman
-ms.custom: sap:live-migration, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Migration, csstroubleshoot
 ---
 # Starting or live migrating Hyper-V virtual machines may fail with error 0x80070569
 
 This article provides workarounds to solve the issue that virtual machines can't start or you can't do a live migration for a Hyper-V virtual machine in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2779204
 
 ## Symptoms

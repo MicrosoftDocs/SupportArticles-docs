@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:domain-join-issues, csstroubleshoot
+ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
 ---
 # Active Directory installation stalls at the Creating the NTDS settings object stage
 
 This article provides a solution to an issue where Active Directory installation fails with an error: Creating the NTDS Settings object for this Active Directory Domain Controller on the remote AD DC.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 2737935
 
 ## Symptoms

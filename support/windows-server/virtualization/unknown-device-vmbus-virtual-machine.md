@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:integration-components, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Integration components, csstroubleshoot
 ---
 # Unknown Device (VMBUS) appears in Device manager in Virtual Machine
 
 On Windows-based virtual machines that are running on a Windows Server based Hyper-V host, you may see unknown devices under **Other Devices** in device manager.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 2925727
 
 ## Unknown devices

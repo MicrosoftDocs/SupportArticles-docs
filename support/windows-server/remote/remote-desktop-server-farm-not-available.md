@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:load-balancing-and-connection-broker, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Connection Broker and load balancing, csstroubleshoot
 ---
 # Remote Desktop Server farm is unavailable over DirectAccess (single/multisite)
 
 This article helps fix an issue that makes a Remote Desktop Server (RDS) farm unavailable in a Windows Server 2008 environment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3123137
 
 ## Symptoms
