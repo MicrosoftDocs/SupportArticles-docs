@@ -82,6 +82,8 @@ Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.WindowsStore_8wekyb
 
 Administrators can block Microsoft Store for end users. In such case, Microsoft Store isn't accessible for end users. When Microsoft Store is turned off from Policy or Configuration Service Provider (CSP), the following message is displayed upon launching Microsoft Store App.
 
+:::image type="content" source="media/troubleshooting-microsoft-store-apps-download-failure/microsoft-store-startup-error.png" alt-text="Microsoft Store startup error.":::
+
 The usual policy to disable the Microsoft Store is **RemoveWindowsStore**. This policy blocks users from opening Microsoft Store, however Microsoft Store Apps aren't restricted from updating.
 
 If the issue is about Microsoft Store Apps packages not getting updated automatically, check [Verify required endpoints aren't blocked from firewall or proxy](#verify-required-endpoints-arent-blocked-from-firewall-or-proxy).
