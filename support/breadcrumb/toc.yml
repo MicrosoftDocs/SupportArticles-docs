@@ -194,7 +194,7 @@ items:
       - name: Virtual Machine Scale Sets
         tocHref: /troubleshoot/azure/virtual-machine-scale-sets/
         topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets
-      - name: Azure Kubernetes Fleet Manager
+      - name: Kubernetes Fleet Manager
         tocHref: /troubleshoot/azure/kubernetes-fleet/
         topicHref: /troubleshoot/azure/kubernetes-fleet/welcome-azure-kubernetes-fleet
 
