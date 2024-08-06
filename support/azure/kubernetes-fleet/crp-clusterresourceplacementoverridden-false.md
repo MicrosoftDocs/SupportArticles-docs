@@ -2,18 +2,18 @@
 title: ClusterResourcePlacementOverridden is false when you use the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
 description: Helps you resolve clusterResourcePlacementOverridden failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
 ms.date: 08/05/2024
-ms.reviewer: 
+ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
 ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
-# Resource propagation failure: ClusterResourcePlacementOverridden is false
+# Resource propagation failure: ClusterResourcePlacementOverridden is False
 
 This article discusses how to troubleshoot `ClusterResourcePlacementOverridden` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
-When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `clusterResourcePlacementOverridden` status shows as `false`.
+When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `clusterResourcePlacementOverridden` status shows as `False`.
 
 ## Cause
 
@@ -153,7 +153,7 @@ status:
     version: v1
 ```
 
-If the `ClusterResourcePlacementOverridden` condition is `false`, check the `placementStatuses` section to get the exact cause of the failure.
+If the `ClusterResourcePlacementOverridden` condition is `False`, check the `placementStatuses` section to get the exact cause of the failure.
 
 In this situation, the message indicates that the override failed because the path `/metadata/labels/new-label` and its corresponding value are missing.
 Based on the previous example of the cluster role `secret-reader`, you can see that the path `/metadata/labels/` doesn't exist. This means that `labels` doesn't exist.
