@@ -6,7 +6,7 @@ ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
 ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
-# Troubleshooting ClusterResourcePlacement in Azure Kubernetes Fleet Manager
+# Troubleshooting ClusterResourcePlacement API in Azure Kubernetes Fleet Manager
 
 This troubleshooting guide helps you resolve `ClusterResourcePlacement` API object-related issues when you use Azure Kubernetes Fleet Manager. Troubleshooting these errors on the hub cluster requires knowledge of the following objects:
 
