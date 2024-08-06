@@ -2,7 +2,7 @@
 title: ClusterResourcePlacementAvailable is false when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
 description: Helps you resolve ClusterResourcePlacementAvailable failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
 ms.date: 08/05/2024
-ms.reviewer: 
+ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
 ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
