@@ -1,13 +1,13 @@
 ---
 title: Desktop flow invalid credentials errors when using a Microsoft Entra account
-description: Resolves the InvalidConnectionCredentials or WindowsIdentityIncorrect error that occurs when you run a desktop flow.
-ms.reviewer: 
-ms.date: 08/05/2024
+description: Resolves the InvalidConnectionCredentials or WindowsIdentityIncorrect error that occurs when you run a desktop flow using a Microsoft Entra account.
+ms.reviewer: guco，aartigoyle
+ms.date: 08/06/2024
 ms.custom: sap:Authentication or sign-in\Connector authentication
 ---
-# Troubleshoot desktop flow invalid credentials errors when using a Microsoft Entra account
+# Desktop flow invalid credentials errors when you use a Microsoft Entra account
 
-This article provides a resolution for the InvalidConnectionCredentials or WindowsIdentityIncorrect error code that occurs when you run a desktop flow using a Microsoft Entra account.
+This article provides a resolution for the InvalidConnectionCredentials or WindowsIdentityIncorrect error code that occurs when you run a desktop flow using a [Microsoft Entra account](/entra/fundamentals/whatis#terminology).
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4555623
@@ -36,10 +36,10 @@ A flow that ran using a Microsoft Entra account fails with the **InvalidConnecti
 
 ## Cause
 
-There are many reasons you might receive this error when using a Microsoft Entra account:
+There are several reasons why you might encounter an error when using a Microsoft Entra account.
 
 - The account credentials entered into the connection might not match those on the machine.
-- The device might not be [Microsoft Entra joined](/entra/identity/devices/concept-directory-join) (or [Microsoft Entra hybrid joined](/entra/identity/devices/concept-hybrid-join)) to support Microsoft Entra authentication.
+- The device might not be [Microsoft Entra joined](/entra/identity/devices/concept-directory-join) or [Microsoft Entra hybrid joined](/entra/identity/devices/concept-hybrid-join) to support [Microsoft Entra authentication](/entra/identity/authentication/overview-authentication).
 - The Microsoft Entra account might not be synchronized to the machine.
 
 ## Resolution
@@ -72,7 +72,7 @@ There are many reasons you might receive this error when using a Microsoft Entra
 
 4. Check that the configured Microsoft Entra account can sign in to the device:
 
-    1. Try to sign in to the machine using the Microsoft Entra account identified in the step 2.
+    1. Try to sign in to the machine using the Microsoft Entra account identified in step 2.
     2. The device login must be successful to be used in a connection.
 
 5. Make sure the flow is configured properly with the right username and password. This must match the account on your computer.
