@@ -2003,6 +2003,8 @@ items:
       href: ./performance/slow-performance-when-using-power-plan.md
     - name: Slow performance with files over the network
       href: ./performance/slow-performance-file-server.md
+    - name: Troubleshoot performance problems in Windows
+      href: ./performance/troubleshoot-performance-problems-in-windows.md
   - name: System Hang
     items:
     - name: Cannot restart a Windows Server computer that uses Credential Guard and Hyper-V
