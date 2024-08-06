@@ -2,18 +2,18 @@
 title: ClusterResourcePlacementApplied failure when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
 description: Helps you resolve ClusterResourcePlacementApplied failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
 ms.date: 08/05/2024
-ms.reviewer: 
+ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
 ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
-# Resource propagation failure: ClusterResourcePlacementApplied is false
+# Resource propagation failure: ClusterResourcePlacementApplied is False
 
 This article discusses how to troubleshoot `ClusterResourcePlacementApplied` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
-When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementApplied` status shows as `false`.
+When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementApplied` status shows as `False`.
 
 ## Cause
 
@@ -25,7 +25,7 @@ This issue might occur because of one of the following reasons:
 
 ## Troubleshooting steps
 
-1. View the `ClusterResourcePlacement` status and locate the `placementStatuses` section. Check the `placementStatuses` value to identify which clusters have the `ResourceApplied` condition set to `false`, and note their `clusterName` value.
+1. View the `ClusterResourcePlacement` status and locate the `placementStatuses` section. Check the `placementStatuses` value to identify which clusters have the `ResourceApplied` condition set to `False`, and note their `clusterName` value.
 2. Locate the `Work` object in the hub cluster. Use the identified `clusterName` to locate the `Work` object that's associated with the member cluster. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
 3. Check the status of the `Work` object to understand the specific issues that are preventing successful resource application.
 
