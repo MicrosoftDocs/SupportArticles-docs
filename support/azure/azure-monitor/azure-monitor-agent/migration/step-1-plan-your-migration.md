@@ -9,9 +9,9 @@ ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 ---
 # Step 1: Plan your migration
 
-Before you start the migration, you should prepare a migration plan. To facilitate this step, it's important to first understand how many agents you must migrate, which legacy solutions you're using, and what prerequisites you need to get in place.
+Before begin migrating, a migration plan should be prepared. To facilitate this step, it's important to first create an inventory.  We need to gather information on the number of subscriptions, the number of workspaces per subscription, the number of legacy solutions enabled in each workspace, and the number of MMA/OMS agents running across your respective subscriptions.
 
-## Understand your estate
+## Understand your environment
 
 You can use the Azure Monitor Agent Migration Helper workbook to understand your environment and how many agents you must migrate. To access this workbook, follow these steps:
 
@@ -27,11 +27,11 @@ In the **Subscriptions Overview** tab, you can see all the subscriptions that yo
 
 :::image type="content" source="media/step-1-plan-your-migration/azure-monitor-migration-helper-subscriptions-overview-tab.png" alt-text="Azure portal screenshot of the Subscriptions Overview tab of the Azure Monitor Agent Migration Helper workbook." lightbox="media/step-1-plan-your-migration/azure-monitor-migration-helper-subscriptions-overview-tab.png":::
 
-After the tabbed sections, the workbook displays the **Migration Status** section, showing an overview of the migration status for each subscription:
+In the **Subscriptions Overview** tab, scroll down to view the **Migration Status** section, which provides an overview of the migration status for each subscription:
 
 :::image type="content" source="media/step-1-plan-your-migration/azure-monitor-migration-helper-migration-status.png" alt-text="Azure portal screenshot of the Migration Status section of the Azure Monitor Agent Migration Helper workbook." lightbox="media/step-1-plan-your-migration/azure-monitor-migration-helper-migration-status.png":::
 
-At the beginning of each workbook, there are corresponding tabs for each resource type (such as Arc-enabled servers and virtual machine scale sets) that are represented in the **Resource Type** column of the **Migration Status** section. For example, to look at your Azure VMs, select the **Azure Virtual Machines** tab:
+There are corresponding tabs for each resource type (**Azure Virtual Machines, Azure Virtual Machine Scale Sets, Arc-Enabled Servers, Hybrid without Arc**). By selecting a resource type tab, columns with data will be displayed to provide you with the current status of your migration:
 
 :::image type="content" source="media/step-1-plan-your-migration/azure-monitor-migration-helper-azure-virtual-machines-tab.png" alt-text="Azure portal screenshot of the Azure Virtual Machines tab of the Azure Monitor Agent Migration Helper workbook." lightbox="media/step-1-plan-your-migration/azure-monitor-migration-helper-azure-virtual-machines-tab.png":::
 

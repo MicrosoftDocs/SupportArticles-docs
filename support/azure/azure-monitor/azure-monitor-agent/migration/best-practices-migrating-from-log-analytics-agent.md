@@ -37,5 +37,3 @@ In addition to consolidating and improving on the legacy Log Analytics agent, Az
 
 > [!div class="nextstepaction"]
 > [Step 1: Plan your migration](step-1-plan-your-migration.md)
-
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
