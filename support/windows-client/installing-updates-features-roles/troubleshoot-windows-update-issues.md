@@ -20,9 +20,9 @@ These solutions designed to get you started on Windows Update troubleshooting sc
 
 ### Step 1: Run the diagnostic tool for your version of Windows
 
-- **Windows 7, Windows 2008 R2 or Windows 2008 SP2:** Run the System Readiness (CheckSUR) tool. For more information, see [Fix errors that are found in the CheckSUR log file](../../windows-server/deployment/fix-windows-update-errors.md#fix-errors-found-in-the-checksur-log-file).
-- **Windows 8 and later version of Windows:** Open an administrative command prompt window, and then run the following command:  
 
+- **For any supported version of Windows:** Open an administrative command prompt window, and then run the following command:
+  [Supported Windows versions](https://learn.microsoft.com/en-us/windows/release-health/supported-versions-windows-client) 
   ```cmd
   Dism /online /cleanup-image /restorehealth
   ```
@@ -33,7 +33,7 @@ If the computer didn't restart after a previous update, pending actions may stil
 
 ### Step 3: Install the latest servicing stack update
 
-For more information, see [Latest Servicing Stack Updates](https://msrc.microsoft.com/update-guide/vulnerability/ADV990001).
+For more information, see [Latest Servicing Stack Updates](https://msrc.microsoft.com/update-guide/vulnerability/ADV990001) or look for the latest Servicing Stack required for Latest Cumulative Update on the Update History for your Windows version.
 
 ### Step 4: Check for and fix any Windows file corruption
 
@@ -51,6 +51,14 @@ To do this, follow these steps:
 1. To choose a destination for the update, select **Browse**, and then select **Continue**.
 1. When the download process finishes, select **Close**.
 1. Browse to the download location, and then double-click the download package to install the update.
+## OR
+1. Use the location you saved the update file to, for this example: C:\temp.
+2. Open an elevated command prompt
+3. Execute command: 
+  ```cmd
+  Dism /online /add-package /packagepath:C:\temp\<KB file name>.msu 
+  ```
+This should skip Windows Update agent applicability checks and can make the installation go further and/or quicker. 
 
 ## Common issues and solutions
 
@@ -72,19 +80,19 @@ Verify that the package that you're trying to install isn't already installed.
 
 1. Verify that the package that you're trying to install matches the Windows version that you're using.  
 
-   The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates can't be installed on Windows Server 2012 R2-based computers.  
+   The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2019 updates can't be installed on Windows Server 2016, or Windows Server updates on a Windows client.  
 1. Verify that the package you want to install matches the processor architecture of the Windows version that you're using.  
 
    For example, an x86-based update can't be installed on x64-based installations of Windows.
 
 #### Step 4: Have all prerequisite updates been installed?
 
-Read the package's related article to find out if the prerequisite updates are installed. For example, if you receive the error message in Windows 8.1 or Windows Server 2012 R2, you might have to install the April 2014 update 2919355 as a prerequisite and one or more prerequisite servicing updates (KB 2919442 and KB 3173424).
+Read the package's related article to find out if the prerequisite updates are installed. For example, if you receive the error message in Windows 10 22H2 July's update KB5040525, you might have to install KB50282445, KB5031539 or more prerequisite servicing updates.
 
 To determine whether these prerequisite updates are installed, open a Windows PowerShell window and run the following command:  
 
 ```powershell
-Get-HotFix KB3173424, KB2919355, KB2919442
+Get-HotFix KB50282445, KB5031539
 ```
 
 If the updates are installed, the command returns the installed date in the **InstalledOn** section of the output.
@@ -132,3 +140,4 @@ If you need assistance from Microsoft support, we recommend you collect the info
 - [Log files created by Windows Update](/windows/deployment/update/windows-update-logs)
 - [Windows Update troubleshooting](/windows/deployment/update/windows-update-troubleshooting)
 - [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors)
+- [Windows 11 Update history](https://support.microsoft.com/en-us/topic/july-25-2024-kb5040527-os-builds-22621-3958-and-22631-3958-preview-de3e1e24-0c07-4210-9777-8e03a1446bae)
