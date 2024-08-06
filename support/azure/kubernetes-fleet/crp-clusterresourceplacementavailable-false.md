@@ -7,13 +7,13 @@ ms.service: kubernetes-fleet
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
-# Resource propagation failure: ClusterResourcePlacementAvailable is false
+# Resource propagation failure: ClusterResourcePlacementAvailable is False
 
 This article discusses how to troubleshoot `ClusterResourcePlacementAvailable` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
-When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementAvailable` status shows as `false`.
+When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementAvailable` status shows as `False`.
 
 ## Cause
 
