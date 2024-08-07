@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication error 8304
 description: Provides a resolution for troubleshooting AD Replication error 8304, which is The maximum size on an object has been exceeded.
-ms.date: 07/22/2024
+ms.date: 08/07/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
