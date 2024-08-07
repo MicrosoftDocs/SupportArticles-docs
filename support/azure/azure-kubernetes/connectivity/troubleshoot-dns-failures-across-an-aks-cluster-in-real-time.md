@@ -4,7 +4,7 @@ description: Learn how to troubleshoot DNS failures across an AKS cluster in rea
 ms.reviewer: qasimsarfraz, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
-ms.date: 07/10/2024
+ms.date: 08/07/2024
 ---
 # Troubleshoot DNS failures across an AKS cluster in real time
 
@@ -32,11 +32,11 @@ The following table outlines common symptoms that you might observe in an AKS cl
 - A tool to connect to the cluster, such as the Kubernetes command-line tool [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/).
 
     To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-- [Inspektor Gadget](https://www.inspektor-gadget.io/).
+- [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072).
 
     This tool is used in most troubleshooting steps covered in this article, so make sure to install it on the cluster. To install it on an AKS cluster, see [How to install Inspektor Gadget in an AKS cluster](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster).
 - Familiarity with [gadgets](../logs/capture-system-insights-from-aks.md#gadgets).
-- [Inspektor Gadget DNS gadget](https://github.com/inspektor-gadget/inspektor-gadget/blob/main/docs/builtin-gadgets/trace/dns.md).
+- [Inspektor Gadget DNS gadget](https://go.microsoft.com/fwlink/?linkid=2260317).
 
   It's used in all the following troubleshooting steps.
 
