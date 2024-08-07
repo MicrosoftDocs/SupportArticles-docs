@@ -36,7 +36,7 @@ Despite quiet hours being active, certain notifications are still allowed:
 
 ## Check if the "Quiet Hours" option is enabled
 
-# [Windows 10](#tab/Windows 10)
+# [Windows 10](#tab/Windows-10)
 
 1. Select **Start** > **Settings** > **System** (Windows logo key+<kbd>I</kbd>).
 2. On the left, select **Focus assist**.
@@ -52,7 +52,7 @@ Despite quiet hours being active, certain notifications are still allowed:
 
         You can set the "Quiet Hours" option to activate automatically at specific times or under specific conditions. For example, you can set this option to activate during work hours or when you're duplicating your display, playing a game, or using an app in full screen mode. The "Quiet Hours" option is also enabled for the first hour after an operation system upgrade.
 
-# [Windows 11](#tab/Windows 11)
+# [Windows 11](#tab/Windows-11)
 
 1. Select **Start** > **Settings** > **System** > **Notifications**.
 2. Check if the **Do not disturb toggle** is turned on.
