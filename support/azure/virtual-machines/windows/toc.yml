@@ -208,7 +208,7 @@
   items:
   - name: Boot diagnostics
     href: boot-diagnostics.md
-  - name: Specific Boot Errors - Windows
+  - name: Specific boot errors in Windows VMs
     href: boot-error-troubleshoot.md
     items:
     - name: Blue screen errors
