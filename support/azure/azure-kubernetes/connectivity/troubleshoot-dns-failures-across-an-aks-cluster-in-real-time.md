@@ -61,8 +61,8 @@ Here are the explanations of the command parameters:
 - `--filter qr:R`: Matches only DNS responses.
 - `--filter qtype:A`: Matches only IPv4 host addresses.
 - `--filter 'rcode:!No Error'`: Matches DNS responses that don't contain `No Error`. For more information, see `gopacket`
-  for [possible values of rcode](https://github.com/google/gopacket/blob/32ee38206866f44a74a6033ec26aeeb474506804/layers/dns.go#L151-L194)
-  or the [relevant RFC](https://github.com/google/gopacket/blob/32ee38206866f44a74a6033ec26aeeb474506804/layers/dns.go#L128-L148).
+  for [possible values of rcode](https://go.microsoft.com/fwlink/?linkid=2282201)
+  or the [relevant RFC](https://go.microsoft.com/fwlink/?linkid=2282202).
 
 Here are some causes of unsuccessful DNS responses:
 
@@ -124,7 +124,7 @@ You can use the `ID`, `RCODE`, and `LATENCY` values to determine the health of t
 - A DNS query (`QR=Q`) with an `ID` (for example, `b256`) has no matching response.
 - A DNS response (`QR=R`) has a high value under the `LATENCY` column (for example, `500.821223ms`).
 - A DNS response (`QR=R`) has an `RCODE` other than `No Error`, for example, "Server failure" and "Query refused." For more
-  information, see `gopacket` for [possible values of rcode](https://github.com/google/gopacket/blob/32ee38206866f44a74a6033ec26aeeb474506804/layers/dns.go#L151-L194).
+  information, see `gopacket` for [possible values of rcode](https://go.microsoft.com/fwlink/?linkid=2282201).
 
 ## Step 4: Verify DNS queries get responses in a timely manner
 
