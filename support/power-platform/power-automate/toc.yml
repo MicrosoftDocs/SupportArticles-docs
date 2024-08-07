@@ -124,6 +124,8 @@
       href: desktop-flows/invalid-private-key-file-error.md
     - name: Internet connection is interrupted after installing Power Automate
       href: desktop-flows/no-ethernet-after-pad-install.md
+    - name: '"Logon type has not been granted" error'
+      href: desktop-flows/logon-type-has-not-been-granted.md
     - name: Machine registration failure
       href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
     - name: Module or action wasn't found error
