@@ -81,12 +81,14 @@ To troubleshoot DHCP issues using network traces, follow these steps:
 5. Reproduce the issue. Trigger the DHCP issue (for example, run `ipconfig /renew` on the client). Wait for the failure scenario to occur.
 6. Stop the packet capture on both devices using the red button in Wireshark.
 
-   ![alt text](image.png)
+   :::image type="content" source="./media/troubleshoot-dhcp-guidance/stop-wireshark-capture.png" alt-text="Stop Wireshark capture.":::
 
 7. Save the captured packets to a specified location by selecting **File** > **Save As**.
 8. Apply a DHCP filter to view DHCP transactions:
    - On the client capture, apply a display filter for "dhcp".
    - On the server capture, use the filter "dhcp.id == \<Transaction ID\>" to track the specific client transaction. You can get the transaction ID from the client-side capture and apply it in the filter on the server-side capture.
+
+     :::image type="content" source="./media/troubleshoot-dhcp-guidance/transaction-id-from-the-client-side-capture.png" alt-text="Transaction ID from the client-side capture.":::
 
 9. Analyze DHCP transactions:
    - Check the client-side capture for all four DHCP packets (DISCOVER, OFFER, REQUEST, ACK). If all are present, the DORA process is likely successful.
