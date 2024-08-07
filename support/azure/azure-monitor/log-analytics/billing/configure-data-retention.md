@@ -7,7 +7,7 @@ ms.reviewer: neghuman
 ms.service: azure-monitor
 keywords:
 #Customer intent: As an Azure Monitor user, I want to learn how to configure data retention for my Log Analytics workspace.
-ms.custom: sap:Log Analytics Billing
+ms.custom: sap:Billing, unexpected volume, data cap and retention
 ---
 # Set Retention for Log Analytics Workspace
 

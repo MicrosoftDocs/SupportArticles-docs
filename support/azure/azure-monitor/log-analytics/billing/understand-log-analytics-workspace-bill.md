@@ -4,7 +4,7 @@ description: Learn how to understand the costs associated with your Log Analytic
 ms.date: 07/01/2024
 ms.author: neghuman
 ms.service: azure-monitor
-ms.custom: sap:Log Analytics Billing
+ms.custom: sap:Billing, unexpected volume, data cap and retention
 ---
 # Understand cost and usage in a Log Analytics workspace
 
