@@ -66,9 +66,9 @@ For DHCP clients, check the following devices and settings:
 - The DHCP Client service is started and running. To check this, run the net start command, and look for DHCP Client.
 - There is no firewall blocking ports 67 and 68 UDP on the client computer.
 
-## Using Network trace to troubleshoot DHCP
+## Using network trace to troubleshoot DHCP
 
-Once you've confirmed the settings on both the DHCP client and server, you can use Wireshark to check whether the DHCP DORA process has completed successfully or if any packet drops are preventing DHCP clients from obtaining an IP address from the server. 
+Once you've confirmed the settings on both the DHCP client and server, you can use Wireshark to check whether the DHCP DORA process has completed successfully or if any packet drops are preventing DHCP clients from obtaining an IP address from the server.
 
 ### Steps to collect a network trace
 
@@ -103,6 +103,8 @@ To troubleshoot DHCP issues using network traces, follow these steps:
 11. After drops are confirmed, involve the network team to investigate and resolve the drop issue.
 
 These steps ensure thorough troubleshooting using Wireshark to pinpoint where DHCP communication breaks down, facilitating quicker resolution of DHCP configuration or network issues.
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
 ## Data collection
 
