@@ -11,7 +11,7 @@ ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe
 ---
 # Notifications don't show in the action or notification center
 
-This article provides basic guidelines to resolve an issue where notifications don't show in the [action or notification center](/windows/change-notification-and-quick-settings-in-windows-ddcbbcd4-0a02-f6e4-fe14-6766d850f294) by checking if the "[Quiet Hours](/windows/turn-off-notifications-in-windows-during-certain-times-81ed1b25-809b-741d-549c-7696474d15d3)" (also known as focus assist) option is enabled.
+This article provides basic guidelines to resolve an issue where notifications don't show in the [action or notification center](https://support.microsoft.com/windows/change-notification-and-quick-settings-in-windows-ddcbbcd4-0a02-f6e4-fe14-6766d850f294) by checking if the "[Quiet Hours](https://support.microsoft.com/windows/turn-off-notifications-in-windows-during-certain-times-81ed1b25-809b-741d-549c-7696474d15d3)" (also known as focus assist) option is enabled.
 
 You experience the issue of notifications not arriving as expected.
 
@@ -56,6 +56,8 @@ Despite quiet hours being active, certain notifications are still allowed:
 
 1. Select **Start** > **Settings** > **System** > **Notifications**.
 2. Check if the **Do not disturb toggle** is turned on.
+
+---
 
 ## Change "Quiet Hours" using the Local Group Policy Editor
 
