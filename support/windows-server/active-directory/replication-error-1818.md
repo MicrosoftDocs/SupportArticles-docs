@@ -75,7 +75,7 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
     >
     > _failure(s). Last success @ (never)._  
 
-4. DCPromo may fail while promoting a new domain controller and you'll see the following error on the DCPROMO GUI
+4. DCPromo fails while promoting a new domain controller and you see the following error on the DCPROMO GUI
 
     > Active Directory Installation wizard.
     >
@@ -84,7 +84,7 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
     CN=Configuration....from the remote domain controller "server name"  
     " The remote procedure call was cancelled "
 
-    The following entries will be logged in the DCPROMO logs
+    The following entries are logged in the DCPROMO logs
 
     > *\<DateTime> [INFO] EVENTLOG (Informational): NTDS General / Service Control : 1004*  
     >
@@ -123,7 +123,7 @@ The issue occurs when the destination DC performing inbound replication doesn't 
 - You promote a new domain controller into the forest by using the Active Directory Domain Services Configuration Wizard from the Server Manager management console or via the `Install-ADDSDomainController` cmdlet.
 - Existing domain controllers replicate from source domain controllers that are connected over slow network links.
 
-If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the **RPC Replication Timeout (mins)** registry setting specifies, the destination domain controller ends the RPC connection with the non-responsive source domain controller and logs a warning event.
+If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the **RPC Replication Timeout (mins)** registry setting specifies, the destination domain controller ends the RPC connection with the nonresponsive source domain controller and logs a warning event.
 
 Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CALL_CANCELLED` include:
 
@@ -165,8 +165,8 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
       [n] Remote Access WAN Wrapper  
       
    8. Repeat step f for each service in the dialog box.      
-   9. After you've verified the settings for each service, select **All Protocols** in the **Show Bindings For** box. The entry for **Remote Access WAN Wrapper** doesn't have a network adapter listed. Skip this item. Repeat steps d through f for each remaining protocol.    
-   10. After you've verified that the bindings are set correctly for all services and protocols, select **OK**. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Select **Yes**.
+   9. After you verify the settings for each service, select **All Protocols** in the **Show Bindings For** box. The entry for **Remote Access WAN Wrapper** doesn't have a network adapter listed. Skip this item. Repeat steps d through f for each remaining protocol.    
+   10. After you verify that the bindings are set correctly for all services and protocols, select **OK**. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Select **Yes**.
       
 ## Data collection
 
@@ -174,4 +174,4 @@ If you need assistance from Microsoft support, we recommend you collect the info
 
 ## More information
 
-[Active Directory changes do not replicate](active-directory-changes-not-replicate.md)
+[Active Directory changes don't replicate](active-directory-changes-not-replicate.md)
