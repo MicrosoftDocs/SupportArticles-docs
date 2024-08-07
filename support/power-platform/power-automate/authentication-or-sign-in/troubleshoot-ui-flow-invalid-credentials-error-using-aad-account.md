@@ -2,7 +2,7 @@
 title: Desktop flow invalid credentials error when using a Microsoft Entra account
 description: Resolves the InvalidConnectionCredentials or WindowsIdentityIncorrect error that occurs when you run a desktop flow using a Microsoft Entra account.
 ms.reviewer: guco，aartigoyle
-ms.date: 08/06/2024
+ms.date: 08/07/2024
 ms.custom: sap:Authentication or sign-in\Connector authentication
 ---
 # Desktop flow invalid credentials error when you use a Microsoft Entra account
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4555623
 
 ## Symptoms
 
-A flow that runs using a Microsoft Entra account fails with the `InvalidConnectionCredentials` or `WindowsIdentityIncorrect` error code.
+When you run a desktop flow using a Microsoft Entra account, it fails with the `InvalidConnectionCredentials` or `WindowsIdentityIncorrect` error code.
 
 ```json
 {
