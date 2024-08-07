@@ -4,7 +4,7 @@ description: Learn how to troubleshoot DNS failures across an AKS cluster in rea
 ms.reviewer: qasimsarfraz, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
-ms.date: 07/10/2024
+ms.date: 08/07/2024
 ---
 # Troubleshoot DNS failures across an AKS cluster in real time
 
