@@ -49,7 +49,7 @@ To use the ComplianceDiagnostics tool, make sure that your environment meets the
   Register-PSRepository -Default
   ```
 
-- You have Global Administrator or Compliance Administrator permissions in [Microsoft Purview](https://compliance.microsoft.com/compliancecenterpermissions).
+- You are a Compliance administrator in [Microsoft Purview](https://compliance.microsoft.com/compliancecenterpermissions).
 
 - Your PowerShell execution policy is set to `RemoteSigned`. To check the setting, run the following PowerShell cmdlet:
 
