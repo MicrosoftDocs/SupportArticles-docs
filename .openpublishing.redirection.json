@@ -11539,6 +11539,11 @@
       "source_path": "support/power-platform/power-automate/desktop-flows/module-action-wasnt-found-error.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/module-action-wasnt-found-error",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/administration/flow-extension-package-shows-installation-failed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate",
+      "redirect_document_id": false
     }
   ]
 }
