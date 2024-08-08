@@ -4,7 +4,7 @@ description: Provides troubleshooting guidance if Azure Fence Agent does not sta
 ms.reviewer: divargas
 ms.topic: troubleshooting
 ms.date: 07/04/2024
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---

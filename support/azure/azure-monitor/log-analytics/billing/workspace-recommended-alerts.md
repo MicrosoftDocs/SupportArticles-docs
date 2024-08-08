@@ -6,7 +6,7 @@ ms.author: neghuman
 ms.service: azure-monitor
 keywords:
 #Customer intent: As an Azure Monitor user, I want to understand my Log Analytics workspace bill including what's included in the cost and how to read the detailed usage reports.
-ms.custom: sap:Log Analytics Billing
+ms.custom: sap:Billing, unexpected volume, data cap and retention
 ---
 # Set recommended alerts for proactive daily cap and ingestion notifications
 

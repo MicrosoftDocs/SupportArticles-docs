@@ -3,7 +3,7 @@ title: Azure VM cannot RDP - driver IRQL not less or equal
 description: Troubleshoot Azure VM cannot RDP - driver IRQL not less or equal.
 ms.date: 12/16/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---

@@ -6,7 +6,7 @@ ms.author: neghuman
 ms.service: azure-monitor
 keywords:
 #Customer intent: As an Azure Monitor user, I want to learn how to manage the data volume of my Azure Log Analytics workspace.
-ms.custom: sap:Log Analytics Billing
+ms.custom: sap:Billing, unexpected volume, data cap and retention
 ---
 # Identify why daily cap was exceeded in a Log Analytics workspace
 

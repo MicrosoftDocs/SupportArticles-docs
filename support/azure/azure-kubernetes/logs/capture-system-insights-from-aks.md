@@ -4,10 +4,10 @@ description:   Learn how to use Inspektor Gadget to capture useful information f
 author:        blanquicet
 ms.author:     josebl
 editor:        v-jsitser
-ms.reviewer:   cssakscic, v-leedennis
+ms.reviewer:   cssakscic, josebl, v-leedennis
 ms.service:    azure-kubernetes-service
 ms.topic:      how-to
-ms.date:       04/02/2024
+ms.date:       08/08/2024
 ms.custom: sap:Monitoring and Logging
 ---
 
@@ -60,7 +60,7 @@ Inspektor Gadget provides a set of built-in tools that are designed to debug and
 
 The gadgets present the information that they collected by using different mechanisms. For instance, some gadgets can inform you about the system status at specific times. Other gadgets can report every time a given event occurs, or they can provide periodic updates.
 
-These are just a few examples. The [official documentation](https://aka.ms/ig-builtin-gadgets) provides detailed descriptions and examples of each gadget so that you can determine the most suitable gadget for your specific use case. However, if you find a use case that the existing gadgets don't currently cover, Inspektor Gadget offers flexibility. You can run scripts that are compatible with the eBPF tracing language [bpftrace](https://github.com/iovisor/bpftrace) by running the [script command](https://aka.ms/ig-builtin-gadgets-script). Or, you can run your own eBPF programs by running the [run command](https://aka.ms/ig-run-ebpf). Because the Inspektor Gadget framework handles the building, packaging, and deployment of your custom programs, it streamlines the process for your unique requirements. Also, it gathers high-level metadata to enrich the data that you collect in your program.
+These are just a few examples. The [official documentation](https://aka.ms/ig-builtin-gadgets) provides detailed descriptions and examples of each gadget so that you can determine the most suitable gadget for your specific use case. However, if you find a use case that the existing gadgets don't currently cover, Inspektor Gadget allows you to run your own eBPF programs by using the [run command](https://aka.ms/ig-run-ebpf). Because the Inspektor Gadget framework handles the building, packaging, and deployment of your custom programs, it streamlines the process for your unique requirements. Also, it gathers high-level metadata to enrich the data that you collect in your program.
 
 ## Use cases
 

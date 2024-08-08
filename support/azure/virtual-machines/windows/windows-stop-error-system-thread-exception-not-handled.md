@@ -4,7 +4,7 @@ description: Resolve issues in which the guest OS encounters a problem and tries
 services: virtual-machines
 author: mibufo
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na

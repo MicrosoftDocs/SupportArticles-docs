@@ -4,7 +4,7 @@ description: Understand how to react to a scenario in which the HealthResources 
 ms.date: 06/07/2023
 editor: v-jsitser
 ms.reviewer: macla, pudesira, v-leedennis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance
 ---
 # HealthResources table in Resource Graph has missing entries

@@ -6,7 +6,7 @@ ms.author: saimsh
 ms.reviewer: divargas
 ms.topic: troubleshooting
 ms.date: 10/11/2022
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
 ---

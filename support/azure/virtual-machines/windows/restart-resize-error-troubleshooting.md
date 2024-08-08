@@ -6,7 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.date: 11/16/2021
 ms.author: genli

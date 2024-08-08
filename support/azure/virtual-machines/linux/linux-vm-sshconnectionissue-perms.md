@@ -4,7 +4,7 @@ description: Resolves an issue in which the SSH service fails because the /var/e
 ms.date: 04/15/2024
 author: saimsh-msft
 ms.reviewer: divargas, adelgadohell
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.collection: linux
 ---

@@ -5,7 +5,7 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
