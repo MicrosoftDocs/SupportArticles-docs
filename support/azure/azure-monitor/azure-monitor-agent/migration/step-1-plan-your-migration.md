@@ -9,11 +9,11 @@ ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 ---
 # Step 1: Plan your migration
 
-Before starting the migration, a migration plan should be prepared. To facilitate this step, it's important to first create an inventory.  You need to gather information on the number of subscriptions, the number of workspaces per subscription, the number of legacy solutions enabled in each workspace, and the number of Log Analytics agents (also known as MMA and OMS)  running across your respective subscriptions.
+Before starting the migration, a migration plan should be prepared. To facilitate this step, it's important to first create an inventory of the environment.  Start by gathering information on the number of subscriptions, the number of workspaces per subscription, the number of legacy solutions enabled in each workspace, and the number of Log Analytics agents (also known as MMA and OMS) running across your respective subscriptions.
 
 ## Understand your environment
 
-You can use the Azure Monitor Agent Migration Helper workbook to understand your environment and how many agents you must migrate. To access this workbook, follow these steps:
+Use the Azure Monitor Agent Migration Helper workbook to understand the environment and how many agents must migrate. To access this workbook, follow these steps:
 
 1. In the [Azure portal][ap], search for and select **Monitor**.
 1. In the **Monitor** menu pane, select **Workbooks**.
@@ -21,9 +21,9 @@ You can use the Azure Monitor Agent Migration Helper workbook to understand your
 
    :::image type="content" source="media/step-1-plan-your-migration/monitor-workbooks-gallery-ama-migration-helper.png" alt-text="Azure portal screenshot of the AMA Migration Helper workbook, from the Monitor | Workbooks | Gallery page." lightbox="media/step-1-plan-your-migration/monitor-workbooks-gallery-ama-migration-helper.png":::
 
-The Azure Monitor Agent Migration Helper workbook has several tabs that help you understand your estate and track your migration progress.
+The Azure Monitor Agent Migration Helper workbook has several tabs that help identify the environment and track the migration progress.
 
-In the **Subscriptions Overview** tab, you can see all the subscriptions that you have selected and have access to, how many Log Analytics workspaces exist across those subscriptions, and how many virtual machines (VMs) exist across those subscriptions:
+In the **Subscriptions Overview** tab, view all the subscriptions that you have selected and have access to, how many Log Analytics workspaces exist across those subscriptions, and how many virtual machines (VMs) exist across those subscriptions:
 
 :::image type="content" source="media/step-1-plan-your-migration/azure-monitor-migration-helper-subscriptions-overview-tab.png" alt-text="Azure portal screenshot of the Subscriptions Overview tab of the Azure Monitor Agent Migration Helper workbook." lightbox="media/step-1-plan-your-migration/azure-monitor-migration-helper-subscriptions-overview-tab.png":::
 
