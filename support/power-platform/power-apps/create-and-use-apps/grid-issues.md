@@ -3,7 +3,7 @@ title: Troubleshoot grid issues in model-driven apps
 description: Provides a resolution for grid issues in model-driven apps in Microsoft Power Apps.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/17/2024
+ms.date: 08/08/2024
 author: fikaradz
 ms.author: fikaradz
 ---

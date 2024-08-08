@@ -3,7 +3,7 @@ title: Can't use column filters on a grid or subgrid or filtering doesn't work c
 description: Provides troubleshooting steps for an issue where you can't use column filters on a grid or subgrid, or filtering doesn't work correctly in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/17/2024
+ms.date: 08/08/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -34,7 +34,11 @@ After checking to ensure there's no [custom code](grid-issues.md#steps-to-perfor
 
 ### Troubleshooting step
 
-The most common cause is that extra filters are applied to the current view. Use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to inspect the fetchXML query (see Image 6) and check all the filters that are shown in the query. Additionally, other filters can be found in:
+The most common cause is that extra filters are applied to the current view. Use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to inspect the fetchXML query (see Image 6) and check all the filters that are shown in the query.
+
+:::image type="content" source="media/columns-not-contain-data/viewfields-viewfetchxml.png" alt-text="Screenshot that shows an example of a quick find search.":::
+
+Additionally, other filters can be found in:
 
 - [A quick find search](/power-apps/user/quick-find).
 - A jump bar filter.
@@ -51,7 +55,11 @@ The most common cause is that extra filters are applied to the current view. Use
 
 - A grid-related filter.
 
-  You can use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to inspect grid-related filters (see the following screenshots) and compare them with the final fetchXML query (see Image 6 above). In the following screenshots, a grid column filter with a name like `%Coffee%` or a name containing `Coffee` is used.
+  You can use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to inspect grid-related filters (see the following screenshots) and compare them with the final fetchXML query.
+
+  :::image type="content" source="media/columns-not-contain-data/viewfields-viewfetchxml.png" alt-text="Screenshot that shows an example of a quick find search.":::
+
+  In the following screenshots, a grid column filter with a name like `%Coffee%` or a name containing `Coffee` is used.
 
   :::image type="content" source="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/grid-related-filter-1.png" alt-text="Screenshot of a grid-related filter that's inspected by the monitoring tool." lightbox="media/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly/grid-related-filter-1.png":::
 

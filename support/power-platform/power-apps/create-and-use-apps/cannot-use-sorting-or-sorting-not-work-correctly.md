@@ -3,7 +3,7 @@ title: Can't use sorting or sorting doesn't work correctly
 description: Fixes an issue in which you can't use sorting or sorting doesn't work correctly in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/17/2024
+ms.date: 08/08/2024
 author: fikaradz
 ms.author: fikaradz
 ---

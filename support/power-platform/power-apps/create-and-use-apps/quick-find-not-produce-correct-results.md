@@ -3,7 +3,7 @@ title: Quick Find doesn't return correct results in a model-driven app
 description: Troubleshoots an issue where the Quick Find feature doesn't return correct results in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 07/17/2024
+ms.date: 08/08/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -15,7 +15,7 @@ This article provides troubleshooting steps for an issue where a [quick find sea
 
 1. Use the [Power Apps Monitor tool](/power-apps/maker/monitor-overview) to inspect the [fetchXML](/power-apps/developer/data-platform/use-fetchxml-construct-query) query that is generated based on a [quick find search](/power-apps/user/quick-find).
 
-   :::image type="content" source="media/grid-or-subgrid-not-display-all-records/maximum-number-of-rows.png" alt-text="Screenshot that shows an example of a quick find search.":::
+   :::image type="content" source="media/columns-not-contain-data/viewfields-viewfetchxml.png" alt-text="Screenshot that shows an example of a quick find search.":::
 
 2. Check the `recordsCount` attribute in the fetchXML query.
 
