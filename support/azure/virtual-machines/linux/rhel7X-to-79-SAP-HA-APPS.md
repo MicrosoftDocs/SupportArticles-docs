@@ -10,7 +10,7 @@ ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAP APPS on pay-as-you-go (PAYG) images.
+# How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAP APPS on (PAYG) images.
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
