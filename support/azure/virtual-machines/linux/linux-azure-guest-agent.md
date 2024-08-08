@@ -3,7 +3,7 @@ title: Troubleshoot the Azure Linux Agent
 description: Resolve issues with the Azure Linux Agent.
 services: virtual-machines
 ms.collection: linux
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 author: axelgMS
 manager: dcscontentpm
 ms.topic: troubleshooting
