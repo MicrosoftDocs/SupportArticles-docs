@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting tips for problems while verifying Azure RM service connection
 description: This article explains about the problems that might occur when users verify the automatic Azure RM service connection.
-ms.date: 05/19/2023
+ms.date: 08/08/2024
 ms.reviewer: v-jayaramanp
 ms.custom: sap:Pipelines - Service connection configuration and troubleshooting
 ms.service: azure-devops
