@@ -126,8 +126,6 @@
       href: desktop-flows/no-ethernet-after-pad-install.md
     - name: Machine registration failure
       href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
-    - name: Module or action wasn't found error
-      href: desktop-flows/module-action-wasnt-found-error.md
     - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'
       href: desktop-flows/cannot-update-power-automate-for-desktop.md
     - name: Power Automate for desktop console doesn't show any flows
