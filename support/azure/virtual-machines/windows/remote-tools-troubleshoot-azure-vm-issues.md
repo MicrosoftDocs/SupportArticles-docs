@@ -13,7 +13,7 @@ ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 07/22/2024
 ms.author: delhan
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ---
 
 # Use remote tools to troubleshoot Azure VM issues

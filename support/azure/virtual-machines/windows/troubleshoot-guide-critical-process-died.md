@@ -7,7 +7,7 @@ author: genlin
 ms.author: genli
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na

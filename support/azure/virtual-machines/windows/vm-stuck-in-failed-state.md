@@ -5,7 +5,7 @@ services: virtual-machines
 author: mimckitt
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.date: 03/26/2024
 ms.author: mimckitt

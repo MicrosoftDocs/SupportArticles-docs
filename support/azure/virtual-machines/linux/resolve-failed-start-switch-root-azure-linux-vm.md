@@ -7,7 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue
 ms.custom: sap:My VM is not booting, linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.date: 08/19/2021
 ms.author: tibasham

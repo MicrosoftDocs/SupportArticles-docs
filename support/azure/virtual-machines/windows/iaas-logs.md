@@ -3,7 +3,7 @@ title: Microsoft Azure IaaS VM logs
 description: Lists the Microsoft Azure IaaS VM logs and diagnostic information that's collected during troubleshooting by Microsoft Support.
 ms.date: 07/21/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS), linux-related-content
 ms.collection: windows
 ---

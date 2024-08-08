@@ -6,7 +6,7 @@ author: genlin
 manager: dcscontentpm
 tags: 
 ms.custom: sap:Cannot connect to my VM, linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux

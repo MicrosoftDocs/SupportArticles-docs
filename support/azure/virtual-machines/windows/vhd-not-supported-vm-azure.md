@@ -5,7 +5,7 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure

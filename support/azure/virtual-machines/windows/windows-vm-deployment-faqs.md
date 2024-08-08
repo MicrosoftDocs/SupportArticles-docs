@@ -1,7 +1,7 @@
 ---
 title: FAQs about Windows virtual machine deployment
 description: Answers frequently asked questions about Windows virtual machine deployment.
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.date: 06/18/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic, v-weizhu

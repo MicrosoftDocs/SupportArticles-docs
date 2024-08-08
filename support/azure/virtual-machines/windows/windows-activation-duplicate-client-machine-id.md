@@ -3,7 +3,7 @@ title: Windows activation - duplicate Client Machine ID
 description: Provides a solution to a duplicate Client Machine ID issue that occurs when you use a self-hosted Key Management Services (KMS) server for Windows activation.
 ms.date: 01/04/2024
 ms.reviewer: cwhitley, v-naqviadil, v-weizhu
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ---
 # Windows activation - duplicate Client Machine ID

@@ -5,7 +5,7 @@ author: divargas-msft
 ms.author: esflores
 editor: divargas-msft
 ms.reviewer: divargas
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
