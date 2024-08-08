@@ -4,10 +4,10 @@ description:   Learn how to use Inspektor Gadget to capture useful information f
 author:        blanquicet
 ms.author:     josebl
 editor:        v-jsitser
-ms.reviewer:   cssakscic, v-leedennis
+ms.reviewer:   cssakscic, josebl, v-leedennis
 ms.service:    azure-kubernetes-service
 ms.topic:      how-to
-ms.date:       04/02/2024
+ms.date:       08/08/2024
 ms.custom: sap:Monitoring and Logging
 ---
 
