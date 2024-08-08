@@ -11547,8 +11547,8 @@
     },
     {
       "source_path": "support/windows-client/installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows-server/address-disk-space-issues-caused-by-winsxs",
-      "redirect_document_id": true
-    },
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/address-disk-space-issues-caused-by-winsxs",
+      "redirect_document_id": false
+    }
   ]
 }
