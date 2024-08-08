@@ -1260,9 +1260,7 @@ items:
     - name: How to downgrade from Windows 8
       href: ./installing-updates-features-roles/downgrade-from-windows-8.md
     - name: How to get updates via Windows Update
-      href: ./installing-updates-features-roles/get-updates-through-windows-update.md
-    - name: How to solve disk space issues caused by WinSxS directory
-      href: ./installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md
+      href: ./installing-updates-features-roles/get-updates-through-windows-update.md    
     - name: Install Service Packs and Hotfixes
       href: ./installing-updates-features-roles/install-service-packs-hotfixes.md
     - name: Package Manager can install only the first package
