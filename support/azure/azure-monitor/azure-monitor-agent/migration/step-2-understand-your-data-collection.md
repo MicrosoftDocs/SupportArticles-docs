@@ -44,15 +44,7 @@ To see which legacy solutions are added to your Log Analytics workspace:
 1.  View your Log Analytics workspaces
 1.  Select your workspace, and then go to the Legacy Solutions section. 
 
-You can search for legacy solutions by name, category, or publisher. On the Legacy solutions page, you can view the details of each legacy solution, including the following fields:
-
-- **Description**
-- **Status**
-- **Configuration settings**
-
-You can also add, remove, or update the legacy solutions as necessary.
-
-  :::image type="content" source="media/step-2-understand-your-data-collection/solutions-tab.png" alt-text="Azure portal screenshot of the legacy solutions page." lightbox="media/step-2-understand-your-data-collection/windows-performance-counters.png":::
+  :::image type="content" source="media/step-2-understand-your-data-collection/solutions-tab.png" alt-text="Azure portal screenshot of the legacy solutions page." lightbox="media/step-2-understand-your-data-collection/solutions-tab.png":::
 Some legacy solutions might require extra steps to enable data collection. Examples of these steps include the following actions:
 
 - Installing agents
