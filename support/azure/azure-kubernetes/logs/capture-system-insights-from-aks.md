@@ -136,7 +136,7 @@ The following command deploys the [DaemonSet](https://kubernetes.io/docs/concept
 > - Deploy to specific nodes
 > - Deploy into a custom namespace
 >
-> To learn about these options, see the [Installing in the cluster](https://go.microsoft.com/fwlink/?linkid=2260075) section of the official documentation.
+> To learn about these options, see the [Installing in the cluster](https://go.microsoft.com/fwlink/?linkid=2260075#installing-in-the-cluster) section of the official documentation.
 
 ```bash
 kubectl gadget deploy
