@@ -5,7 +5,7 @@ services: virtual-machines
 documentationCenter: ''
 author: divargas-msft
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
