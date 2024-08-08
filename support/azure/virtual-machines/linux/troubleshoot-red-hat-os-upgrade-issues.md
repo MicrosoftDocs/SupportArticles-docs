@@ -4,7 +4,7 @@ description: Learn how to resolve common troubleshooting issues that involve the
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
