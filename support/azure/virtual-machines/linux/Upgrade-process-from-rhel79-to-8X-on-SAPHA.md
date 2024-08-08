@@ -50,7 +50,7 @@ System Configuration   | Source OS version| Target Version     |
 - `SAP NetWeaver` is validated by `SAP` for each major RHEL version. The supported in-place upgrade path for this scenario is from `RHEL 7.9` to the `RHEL 8.x` minor version, which is supported by `Leapp` for `non-HANA` systems as per the [Upgrading from RHEL 7 to RHEL 8](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index#con_supported-upgrade-paths-rhel-7-to-rhel-8_upgrading-from-rhel-7-to-rhel-8) document.**Exceptionally for Cloud Providers**, the upgrade of SAP NetWaver systems is supported by two latest `EUS/E4S` releases. [Upgrading SAP NetWeaver System](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/asmb_upgrading_netweaver_asmb_upgrading-hana-system#proc_upgrading_cloud_asmb_upgrading_netweaver) describes certain deviations from the default upgrade procedure. For systems on which both `SAP HANA` and `SAP NetWeaver` are installed, the `SAP HANA` restrictions apply. For more information about supported upgrade paths, see [Supported in-place upgrade paths for Red Hat Enterprise Linux.](https://access.redhat.com/articles/4263361)
 
 
-#### [RHEL 7.9 to 8.X on SAP-HA](#tab/rhel79-rhel8saphana)
+#### [RHEL 7.9 to 8.X SAP-HA](#tab/rhel8saphana)
 
 This procedure outlines the necessary steps to complete before performing an in-place upgrade from 7.9 to 8.8 or 8.10 using the `Leapp` utility on `SAP-HANA` `PAYGO` images on Azure.
 
@@ -104,7 +104,7 @@ d. Before running the `leapp preupgrade` command, disable any configuration mana
 yum install leapp-upgrade
 ```
 
-#### [RHEL 7.9 to 8.X on SAPAPPS](#tab/rhel7-rhel8sapapps)
+#### [RHEL 7.9 to 8.X - SAPAPPS](#tab/rhel8sapapps)
 
 This procedure outlines the necessary steps to complete before performing an in-place upgrade to `RHEL 7` or `RHEL 8` using the `Leapp` utility on `SAPAPPS PAYGO` images on Azure.
 
@@ -131,7 +131,6 @@ sudo yum update
 ```bash
 sudo reboot
 ```
-
 a. After the virtual machine is up and running, make sure that no `SAP` processes are running on your virtual machine.
 
 c. Temporarily disable antivirus software to prevent the upgrade from failing.
@@ -152,7 +151,7 @@ yum install leapp-upgrade
 
 The `pre-upgrade`report highlights possible issues and provides recommended solutions. It also helps in determining whether it's feasible or advisable to proceed with the upgrade.
 
-#### [RHEL 7.9 to 8.X on SAPHA](#tab/rhel79-rhel8saphana)
+#### [RHEL 7.9 to 8.X SAP-HA](#tab/rhel8saphana)
 
 1. Run the `leapp preupgrade` command, replacing <target_os_version> with the target OS version and --channel <eus/e4s> with the appropriate channel
 
@@ -172,10 +171,10 @@ sudo leapp preupgrade  --target 8.8 --channel e4s --no-rhsm
 sudo leapp preupgrade  --target 8.10  --no-rhsm
 ```
 
-#### [RHEL 7.9 to 8.X on SAPAPPS](#tab/rhel7-rhel8sapapps)
+#### [RHEL 7.9 to 8.X - SAPAPPS](#tab/rhel8sapapps)
 
 
-1. Run the `leapp preupgrade` command, replacing <target_os_version> with the target OS version and --channel <eus-e4s> with the appropriate channel
+1. Run the `leapp preupgrade` command, replacing <target_os_version> with the target OS version and --channel <eus> with the appropriate channel
 
 ```bash
 sudo leapp preupgrade --target <target_os_version> --channel <eus> --no-rhsm
@@ -192,8 +191,6 @@ sudo leapp preupgrade  --target 8.8 --channel eus --no-rhsm
 ```bash
 sudo leapp preupgrade  --target 8.10  --no-rhsm
 ```
-
-
 
 --- 
 
@@ -212,10 +209,10 @@ Continue to the `leapp upgrade` process after the `pre-upgrade` report shows no 
 > Add the `--reboot` option to the `leapp upgrade` command if you want to perform an automatic reboot, which is needed during the upgrade process.
 
 
-#### [RHEL 7.9 to 8.X on SAP-HA](#tab/rhel7-rhel8saphana)
+#### [RHEL 7.9 to 8.X SAP-HA](#tab/rhel8saphana)
 
 
-1. Run the `leapp upgrade` command, replacing <target_os_version> with the target OS version and --channel <e4s/eus> with the appropriate channel
+1. Run the `leapp upgrade` command, replacing <target_os_version> with the target OS version and --channel <e4s> with the appropriate channel
 
 > [!NOTE]  
 > Add the `--reboot` option to the `leapp upgrade` command if you want to perform an automatic reboot, which is needed during the upgrade process
@@ -252,7 +249,7 @@ Debug output written to /var/log/leapp/leapp-upgrade.log
 sudo reboot
 ```
 
-#### [RHEL 7.9 to 8.X on SAPAPPS](#tab/rhel7-rhel8sapapps)
+#### [RHEL 7.9 to 8.X - SAPAPPS](#tab/rhel8sapapps)
 
 
 1. Run the `leapp upgrade` command, replacing <target_os_version> with the target OS version and --channel <e4s/eus > with the appropriate channel
@@ -300,7 +297,7 @@ Once the upgrade is finished, check if the system is in the desired state.
 
 This procedure outlines the recommended verification steps to take after completing an in-place upgrade
 
-#### [RHEL 7.9 to 8.X on SAP-HA](#tab/rhel7-rhel8saphana)
+#### [RHEL 7.9 to 8.X SAP-HA](#tab/rhel8saphana)
 
 1. Verify that the current OS version belongs to Red Hat Enterprise Linux 8
 
@@ -331,7 +328,7 @@ rhel-8-for-x86_64-sap-netweaver-e4s-rhui-rpms    Red Hat Enterprise Linux 8 for 
 rhel-8-for-x86_64-sap-solutions-e4s-rhui-rpms    Red Hat Enterprise Linux 8 for x86_64 - SAP Solutions - Update Services for SAP Solutions from RHUI (RPMs)
 rhui-microsoft-azure-rhel8-sap-ha                Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-sap-ha)
 ```
-#### [RHEL 7.9 to 8.X on SAPAPPS](#tab/rhel7-rhel8sapapps)
+#### [RHEL 7.9 to 8.X on SAPAPPS](#tab/rhel8sapapps)
 
 
 1. Verify that the current OS version belongs to Red Hat Enterprise Linux 9
