@@ -26,9 +26,9 @@ When the "Quiet Hours" option is enabled, your computer won't send app notificat
 
 Despite quiet hours being active, certain notifications are still allowed:
 
-- Calls from VOIP (Voice over IP) apps
+- Calls from Voice over Internet Protocol (VoIP) apps
 
-    If you receive calls from apps capable of making VOIP calls, those notifications will come through.
+    If you receive calls from apps capable of making VoIP calls, those notifications will come through.
 
 - Alarms
 
@@ -50,7 +50,7 @@ Despite quiet hours being active, certain notifications are still allowed:
         This option displays alarms.
     - **Automatic rules**
 
-        You can set the "Quiet Hours" option to activate automatically at specific times or under specific conditions. For example, you can set this option to activate during work hours or when you're duplicating your display, playing a game, or using an app in full screen mode. The "Quiet Hours" option is also enabled for the first hour after an operation system upgrade.
+        You can set the "Quiet Hours" option to activate automatically at specific times or under specific conditions. For example, you can set this option to activate during work hours or when you're duplicating your display, playing a game, or using an app in full screen mode. The "Quiet Hours" option is also enabled for the first hour after an operating system upgrade.
 
 # [Windows 11](#tab/Windows-11)
 
