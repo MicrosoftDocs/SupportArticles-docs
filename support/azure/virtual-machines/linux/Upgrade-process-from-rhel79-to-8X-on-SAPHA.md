@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to Perform a `Leapp` upgrade from RHEL 7.9 to 8.X on SAPAPPS and SAP-HANA Pay-As-You-Go (PAYG) images.
+# How to Perform a `Leapp` upgrade from RHEL 7.9 to 8.X on SAPAPPS and SAP-HANA (PAYG) images.
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
