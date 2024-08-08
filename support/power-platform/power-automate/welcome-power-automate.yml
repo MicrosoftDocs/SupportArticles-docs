@@ -19,8 +19,6 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Microsoft Flow Extension Package shows Installation failed
-            url: administration/flow-extension-package-shows-installation-failed.md
           - text: Recommendations for conditional access and multi-factor authentication
             url: administration/conditional-access-and-multi-factor-authentication-in-flow.md
 
