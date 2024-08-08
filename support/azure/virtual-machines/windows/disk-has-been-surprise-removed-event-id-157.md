@@ -5,7 +5,7 @@ author: kegregoi
 ms.author: kegregoi
 ms.reviewer: cssakscic, ruedward, clfuseli, scotro, v-leedennis
 ms.date: 06/19/2024
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting-general
 ms.custom: sap:VM Admin - Windows (Guest OS)
