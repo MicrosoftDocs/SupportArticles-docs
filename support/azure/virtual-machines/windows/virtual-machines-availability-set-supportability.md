@@ -4,7 +4,7 @@ description: This article provides a supportability matrix about which VM series
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.date: 12/07/2021
 ms.author: genli

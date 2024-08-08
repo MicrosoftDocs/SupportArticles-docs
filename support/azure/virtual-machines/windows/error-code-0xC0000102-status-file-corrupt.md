@@ -3,7 +3,7 @@ title: Windows stop error 0xC0000102 Status File Corrupt
 description: Understand how to fix error 0xC0000102 (Status File Corrupt) that occurs on an Azure virtual machine (VM).
 ms.date: 07/12/2024
 ms.reviewer: jarrettr, v-leedennis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---

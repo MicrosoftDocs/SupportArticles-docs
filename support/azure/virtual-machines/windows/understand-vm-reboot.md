@@ -6,7 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: ''
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services

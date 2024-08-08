@@ -3,7 +3,7 @@ title: An Azure virtual machine running an older Linux kernel fails to restart o
 description: Discusses that an Azure virtual machine that is running an older Linux kernel version fails to restart or be provisioned. Provides a resolution.
 ms.date: 04/15/2024
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot start or stop my VM, linux-related-content
 ms.collection: linux
 ---

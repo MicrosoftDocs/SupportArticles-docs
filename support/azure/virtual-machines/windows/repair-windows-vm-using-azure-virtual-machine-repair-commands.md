@@ -7,7 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurecli
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services

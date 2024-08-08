@@ -3,7 +3,7 @@ title: Verify that the Windows partition is active
 description: Learn how to verify that the Windows partition is active.
 ms.date: 07/12/2024
 ms.reviewer: jarrettr
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting
 ---
 # How to verify that the Windows partition is active

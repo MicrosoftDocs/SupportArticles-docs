@@ -3,7 +3,7 @@ title: Enable the serial console and memory dump collection
 description: Learn how to enable the serial console and memory dump collection.
 ms.date: 07/08/2024
 ms.reviewer: jarrettr
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting
 ms.topic: how-to
 ---

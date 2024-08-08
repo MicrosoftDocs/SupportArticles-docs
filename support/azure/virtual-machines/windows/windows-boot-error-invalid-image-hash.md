@@ -7,7 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.custom: sap:My VM is not booting, devx-track-azurepowershell, devx-track-azurecli
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows

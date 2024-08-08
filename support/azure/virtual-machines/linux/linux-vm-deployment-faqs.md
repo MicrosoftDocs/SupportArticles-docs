@@ -1,7 +1,7 @@
 ---
 title: FAQs about Linux virtual machine deployment
 description: Answers frequently asked questions about Linux virtual machine deployment.
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.date: 07/22/2024
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.reviewer: srijangupta, scotro, jarrettr
