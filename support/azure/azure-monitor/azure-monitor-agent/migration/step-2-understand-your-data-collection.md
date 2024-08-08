@@ -9,7 +9,7 @@ ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 ---
 # Step 2: Document your current configuration
 
-Note down the information for **each** workspace in your environment from the Azure portal regarding the data you are collecting. It is important to document your current configuration, as it allows you to double-check and ensure that your configuration remains consistent after the migration..
+Note down the information for **each** workspace in your environment from the Azure portal regarding the data you are collecting. It is important to document your current configuration, as it allows you to double-check and ensure that your configuration remains consistent after the migration.
 
 ## Data collections configured in the workspace
 
