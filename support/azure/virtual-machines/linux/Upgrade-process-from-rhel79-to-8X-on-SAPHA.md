@@ -43,20 +43,20 @@ System Configuration   | Source OS version| Target Version     |
 |Other SAP Applications|                  | RHEL 8.10(default) |
 
 > [!NOTE]  
-> To update an SAP HANA system running on `RHEL 7.7` or earlier, you must first upgrade to `RHEL 7.9` for detailed instructions on upgrading from RHEL 7.7 or earlier to RHEL 7.9 on Azure for `PAYGO` images, please refer to the guide [How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAP APPS on pay-as-you-go (PAYGO) images](/azure/virtual-machines/linux/rhel7x-to-79-sap-ha-apps?branch=pr-en-us-6941&tabs=rhel7x-rhel79ha)" 
+> To update an `SAP HANA` system running on `RHEL 7.7` or earlier, you must first upgrade to `RHEL 7.9` for detailed instructions on upgrading from RHEL 7.7 or earlier to RHEL 7.9 on Azure for `PAYGO` images, please refer to the guide [How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAP APPS on pay-as-you-go (PAYGO) images](/azure/virtual-machines/linux/rhel7x-to-79-sap-ha-apps?branch=pr-en-us-6941&tabs=rhel7x-rhel79ha)" 
 
-- According to the Red Hat documentation, SAP HANA is validated by `SAP` for `RHEL` minor versions, which are getting package updates for longer than 6 months. Therefore, for the `SAP HANA` hosts, the upgrade paths include only `EUS/E4S` releases plus the last minor release for a given major release.[Upgrading SAP HANA System](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/asmb_upgrading-hana-system_asmb_planning-upgrade)
+- According to the Red Hat documentation, `SAP` validates `SAP HANA` for RHEL minor versions, which receive package updates for longer than six months. Therefore, for `SAP HANA` hosts, the upgrade paths include only `EUS/E4S` releases plus the last minor release for a given major release.[Upgrading SAP HANA System](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/asmb_upgrading-hana-system_asmb_planning-upgrade)
 
-- `SAP NetWeaver` is validated by `SAP` for each major RHEL version. The supported in-place upgrade path for this scenario is from `RHEL 7.9` to the `RHEL 8.x` minor version, which is supported by `Leapp` for `non-HANA` systems as per the [Upgrading from RHEL 7 to RHEL 8](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index#con_supported-upgrade-paths-rhel-7-to-rhel-8_upgrading-from-rhel-7-to-rhel-8) document.**Exceptionally for Cloud Providers**, the upgrade of SAP NetWaver systems is supported by two latest `EUS/E4S` releases. [Upgrading SAP NetWeaver System](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/asmb_upgrading_netweaver_asmb_upgrading-hana-system#proc_upgrading_cloud_asmb_upgrading_netweaver) describes certain deviations from the default upgrade procedure. For systems on which both `SAP HANA` and `SAP NetWeaver` are installed, the `SAP HANA` restrictions apply. For more information about supported upgrade paths, see [Supported in-place upgrade paths for Red Hat Enterprise Linux.](https://access.redhat.com/articles/4263361)
+- `SAP NetWeaver` is validated by `SAP` for each major RHEL version. The supported in-place upgrade path for this scenario is from `RHEL 7.9` to the `RHEL 8.x` minor version, which is supported by `Leapp` for `non-HANA` systems as per the [Upgrading from RHEL 7 to RHEL 8](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index#con_supported-upgrade-paths-rhel-7-to-rhel-8_upgrading-from-rhel-7-to-rhel-8) document. **Exceptionally for Cloud Providers**, the upgrade of `SAP NetWaver` systems is supported by two latest `EUS/E4S` releases. [Upgrading SAP NetWeaver System](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/asmb_upgrading_netweaver_asmb_upgrading-hana-system#proc_upgrading_cloud_asmb_upgrading_netweaver) describes certain deviations from the default upgrade procedure. For systems on which both `SAP HANA` and `SAP NetWeaver` are installed, the `SAP HANA` restrictions apply. For more information about supported upgrade paths, see [Supported in-place upgrade paths for Red Hat Enterprise Linux.](https://access.redhat.com/articles/4263361)
 
 
 #### [RHEL 7.9 to 8.X SAP-HA](#tab/rhel8saphana)
 
 This procedure outlines the necessary steps to complete before performing an in-place upgrade from 7.9 to 8.8 or 8.10 using the `Leapp` utility on `SAP-HANA` `PAYGO` images on Azure.
 
-Based on Red Hat documentation, upgrading cluster nodes in place or through rolling upgrades **is not supported** for major `RHEL` releases. For more information, see, [Leapp upgrade from RHEL 7 to RHEL 8 fails for pacemaker cluster](https://access.redhat.com/solutions/7049940).
+Based on Red Hat documentation, upgrading cluster nodes in place or through rolling upgrades **is not supported** for major `RHEL` releases. For more information, see, [`Leapp` upgrade from RHEL 7 to RHEL 8 fails for pacemaker cluster](https://access.redhat.com/solutions/7049940).
 
-In this case, if you are running `SAP HANA` in an `HA` cluster, to perform an `in-place` upgrade, you must destroy the existing cluster and recreate it after the upgrade is complete.
+In this case, if you're running `SAP HANA` in an `HA` cluster, to perform an `in-place` upgrade, you must destroy the existing cluster and recreate it after the upgrade is complete.
 
 1. Enable required `RHUI` repositories and install required `RHUI` packages to ensure your system is ready for upgrade.
 
@@ -64,7 +64,7 @@ In this case, if you are running `SAP HANA` in an `HA` cluster, to perform an `i
 sudo yum-config-manager --enable rhui-rhel-7-server-rhui-extras-rpms
 sudo yum install leapp-rhui-azure-sap
 ```
-2. Stop the `SAP HANA`system(s) and terminate all SAP processes
+2. Stop the `SAP HANA`systems and terminate all SAP processes
 
 > [!IMPORTANT]  
 > Avoid unmounting the `SAP HANA` file systems, as they are necessary for detecting the presence and version of the installed `SAP HANA` system
@@ -75,7 +75,7 @@ If your virtual machine is configured to start `SAP` processes automatically at 
 
 a. The `SAP HANA` installer in `SAP HANA 2.0 SPS05` configures kernel settings in the `/etc/sysctl.conf` file. Keep these settings unchanged
 
-b. Additional settings recommended for `SAP HANA`, according to SAP notes [2382421](https://launchpad.support.sap.com/#/notes/2382421) and [2292690](https://me.sap.com/notes/2292690), are configured using the files `sap.conf` and s`ap_hana.conf` in the `/etc/sysctl.d` directory. The settings in `sap_hana.con` are applicable to both `RHEL 7` and `RHEL 8`. However, the kernel.sem value in `sap.conf` for `RHEL 7` is lower than the default value for `RHEL 8`. Therefore, remove the line that sets `kernel.sem` to 1250 256000 100 1024 from `/etc/sysctl.d/sap.conf`. The `vm.max_map_count` setting is valid for both `RHEL 7` and `RHEL 8`, so keep this setting unchanged
+b. Another settings recommended for `SAP HANA`, according to SAP notes [2382421](https://launchpad.support.sap.com/#/notes/2382421) and [2292690](https://me.sap.com/notes/2292690), are configured using the files `sap.conf` and s`ap_hana.conf` in the `/etc/sysctl.d` directory. The settings in `sap_hana.con` are applicable to both `RHEL 7` and `RHEL 8`. However, the kernel.sem value in `sap.conf` for `RHEL 7` is lower than the default value for `RHEL 8`. Therefore, remove the line that sets `kernel.sem` to 1250 256000 100 1024 from `/etc/sysctl.d/sap.conf`. The `vm.max_map_count` setting is valid for both `RHEL 7` and `RHEL 8`, so keep this setting unchanged
 
 4. Upgrade your `RHEL` 7.9 system to the latest available `RHEL` 7 package versions.
 
@@ -137,7 +137,7 @@ c. Temporarily disable antivirus software to prevent the upgrade from failing.
 
 d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture)
 
-5. Install the leapp utility.
+5. Install the `leapp` utility.
 
 ```bash
 yum install leapp-upgrade
@@ -153,19 +153,19 @@ The `pre-upgrade`report highlights possible issues and provides recommended solu
 
 #### [RHEL 7.9 to 8.X SAP-HA](#tab/rhel8saphana)
 
-1. Run the `leapp preupgrade` command, replacing <target_os_version> with the target OS version and --channel <eus/e4s> with the appropriate channel
+1. Run the `leapp preupgrade` command, replacing <target_os_version> with the target OS version and `--channel` with the appropriate channel
 
 ```bash
 sudo leapp preupgrade --target <target_os_version> --channel <e4s> --no-rhsm
 ```
 
-**Example 1**: Pre upgrading to 8.8 will require E4S repo.
+**Example 1**: `Pre-upgrading` to 8.8 requires E4S repo.
 
 ```bash
 sudo leapp preupgrade  --target 8.8 --channel e4s --no-rhsm
 ```
 
-**Example 2**: Pre-upgrading to 8.10 requires specifying the target without any channel, as it is the final minor release of RHEL 8. It is not an `E4S/EUS` release, and its support cycle differs. For more information, see, [ Red Hat Enterprise Linux Life Cycle.](https://access.redhat.com/support/policy/updates/errata)
+**Example 2**: `Pre-upgrading` to 8.10 requires specifying the target without any channel, as it's the final minor release of RHEL 8. It's not an `E4S/EUS` release, and its support cycle differs. For more information, see, [ Red Hat Enterprise Linux Life Cycle.](https://access.redhat.com/support/policy/updates/errata)
 
 ```bash
 sudo leapp preupgrade  --target 8.10  --no-rhsm
@@ -174,19 +174,19 @@ sudo leapp preupgrade  --target 8.10  --no-rhsm
 #### [RHEL 7.9 to 8.X - SAPAPPS](#tab/rhel8sapapps)
 
 
-1. Run the `leapp preupgrade` command, replacing <target_os_version> with the target OS version and --channel <eus> with the appropriate channel
+1. Run the `leapp preupgrade` command, replacing <target_os_version> with the target OS version and `--channel` with the appropriate channel
 
 ```bash
 sudo leapp preupgrade --target <target_os_version> --channel <eus> --no-rhsm
 ```
 
-**Example 1**: `Pre-upgrading` to 8.8 will require `EUS` repo.
+**Example 1**: `Pre-upgrading` to 8.8 requires `EUS` repo.
 
 ```bash
 sudo leapp preupgrade  --target 8.8 --channel eus --no-rhsm
 ```
 
-**Example 2**: `Pre-upgrading` to 8.10 requires specifying the target without any channel, as it is the final minor release of `RHEL` 8. It is not an `E4S/EUS` release, and its support cycle differs. For more information, see, [ Red Hat Enterprise Linux Life Cycle.](https://access.redhat.com/support/policy/updates/errata)
+**Example 2**: `Pre-upgrading` to 8.10 requires specifying the target without any channel, as it's the final minor release of `RHEL` 8. It isn't an `E4S/EUS` release, and its support cycle differs. For more information, see, [ Red Hat Enterprise Linux Life Cycle.](https://access.redhat.com/support/policy/updates/errata)
 
 ```bash
 sudo leapp preupgrade  --target 8.10  --no-rhsm
@@ -212,7 +212,7 @@ Continue to the `leapp upgrade` process after the `pre-upgrade` report shows no 
 #### [RHEL 7.9 to 8.X SAP-HA](#tab/rhel8saphana)
 
 
-1. Run the `leapp upgrade` command, replacing <target_os_version> with the target OS version and --channel <e4s> with the appropriate channel
+1. Run the `leapp upgrade` command, replacing <target_os_version> with the target OS version and --channel with the appropriate channel
 
 > [!NOTE]  
 > Add the `--reboot` option to the `leapp upgrade` command if you want to perform an automatic reboot, which is needed during the upgrade process
@@ -221,13 +221,13 @@ Continue to the `leapp upgrade` process after the `pre-upgrade` report shows no 
 sudo leapp upgrade --target <target_os_version> --channel <e4s/eus> --no-rhsm
 ```
 
-**Example 1**: Upgrading to 8.8 will require E4S repo.
+**Example 1**: Upgrading to 8.8 requires E4S repo.
 
 ```bash
 sudo leapp upgrade  --target 8.8 --channel e4s --no-rhsm
 ```
 
-**Example 2**: Upgrading to 8.10 requires specifying the target without any channel, as it is the final minor release of `RHEL` 8. It is not an `E4S/EUS` release, and its support cycle differs. For more information, see, [ Red Hat Enterprise Linux Life Cycle.](https://access.redhat.com/support/policy/updates/errata)
+**Example 2**: Upgrading to 8.10 requires specifying the target without any channel, as it's the final minor release of `RHEL` 8. It isn't an `E4S/EUS` release, and its support cycle differs. For more information, see, [ Red Hat Enterprise Linux Life Cycle.](https://access.redhat.com/support/policy/updates/errata)
 
 ```bash
 sudo leapp upgrade  --target 8.10  --no-rhsm
@@ -267,7 +267,7 @@ sudo leapp upgrade --target <target_os_version> --channel <eus> --no-rhsm
 sudo leapp upgrade  --target 8.8 --channel eus --no-rhsm
 ```
 
-**Example 2**: Upgrading to 8.10 requires specifying the target without any channel, as it is the final minor release of RHEL 8. It is not an `E4S/EUS` release, and its support cycle differs. For more information, see, [ Red Hat Enterprise Linux Life Cycle.](https://access.redhat.com/support/policy/updates/errata)
+**Example 2**: Upgrading to 8.10 requires specifying the target without any channel, as it's the final minor release of RHEL 8. It isn't an `E4S/EUS` release, and its support cycle differs. For more information, see, [ Red Hat Enterprise Linux Life Cycle.](https://access.redhat.com/support/policy/updates/errata)
 
 ```bash
 sudo leapp upgrade  --target 8.10  --no-rhsm
@@ -363,10 +363,10 @@ rhui-microsoft-azure-rhel8-sapapps            Microsoft Azure RPMs for Red Hat E
 
 ## Post-Upgrade Tasks
 
-Take further steps once you have confirmed the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9](https://review.learn.microsoft.com/troubleshoot/azure/virtual-machines/linux/leapp-upgrade-process-rhel-7-and-8?branch=pr-en-us-6901&tabs=rhel7-rhel8#post-upgrade-tasks)
+Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9](https://review.learn.microsoft.com/troubleshoot/azure/virtual-machines/linux/leapp-upgrade-process-rhel-7-and-8?branch=pr-en-us-6901&tabs=rhel7-rhel8#post-upgrade-tasks)
 
 
-## Post-configuration of the system for SAP HANA
+## Post-configuration of the system for `SAP HANA`
 
-After you have verified that the upgrade was successful, you must configure the system for SAP HANA according to the applicable SAP notes for RHEL 8. More information, see,[Configuring the system for SAP HANA.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html-single/upgrading_sap_environments_from_rhel_7_to_rhel_8/index#proc_configuring-system-sap-hana_asmb_upgrading-hana-system)
+"After you verify that the upgrade is successful, you must configure the system for `SAP HANA` according to the applicable `SAP` notes for `RHEL` 8. More information, see,[Configuring the system for SAP HANA.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html-single/upgrading_sap_environments_from_rhel_7_to_rhel_8/index#proc_configuring-system-sap-hana_asmb_upgrading-hana-system)
 
