@@ -9,7 +9,7 @@ ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 ---
 # Step 1: Plan your migration
 
-Before begin migrating, a migration plan should be prepared. To facilitate this step, it's important to first create an inventory.  We need to gather information on the number of subscriptions, the number of workspaces per subscription, the number of legacy solutions enabled in each workspace, and the number of MMA/OMS agents running across your respective subscriptions.
+Before starting the migration, a migration plan should be prepared. To facilitate this step, it's important to first create an inventory.  You need to gather information on the number of subscriptions, the number of workspaces per subscription, the number of legacy solutions enabled in each workspace, and the number of Log Analytics agents (also known as MMA and OMS)  running across your respective subscriptions.
 
 ## Understand your environment
 
@@ -31,7 +31,7 @@ In the **Subscriptions Overview** tab, scroll down to view the **Migration Statu
 
 :::image type="content" source="media/step-1-plan-your-migration/azure-monitor-migration-helper-migration-status.png" alt-text="Azure portal screenshot of the Migration Status section of the Azure Monitor Agent Migration Helper workbook." lightbox="media/step-1-plan-your-migration/azure-monitor-migration-helper-migration-status.png":::
 
-There are corresponding tabs for each resource type (**Azure Virtual Machines, Azure Virtual Machine Scale Sets, Arc-Enabled Servers, Hybrid without Arc**). By selecting a resource type tab, columns with data will be displayed to provide you with the current status of your migration:
+There are tabs for each resource type (**Azure Virtual Machines, Azure Virtual Machine Scale Sets, Arc-Enabled Servers, Hybrid without Arc**). By selecting a resource type tab, you'll see columns with data that provide the current status of your migration:
 
 :::image type="content" source="media/step-1-plan-your-migration/azure-monitor-migration-helper-azure-virtual-machines-tab.png" alt-text="Azure portal screenshot of the Azure Virtual Machines tab of the Azure Monitor Agent Migration Helper workbook." lightbox="media/step-1-plan-your-migration/azure-monitor-migration-helper-azure-virtual-machines-tab.png":::
 
