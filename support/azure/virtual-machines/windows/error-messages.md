@@ -6,7 +6,7 @@ documentationcenter: ''
 author: xujing-ms
 manager: dcscontentpm 
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure
 ms.date: 05/22/2017
