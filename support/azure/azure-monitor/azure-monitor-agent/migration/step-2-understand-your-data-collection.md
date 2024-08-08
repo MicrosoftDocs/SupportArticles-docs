@@ -18,15 +18,18 @@ To see which legacy data collections are configured in the Log Analytics workspa
 1. In the [Azure portal][ap], search for and select **Log Analytics workspaces**.
 
 1. In the list of Log Analytics workspaces, select the name of your workspace.
-<!-- log analytics workspaces image -->
+   :::image type="content" source="media/step-2-understand-your-data-collection/log-anlytics-workspaces.png" alt-text="Azure portal screenshot of the Log Analytics workspaces page." lightbox="media/step-2-understand-your-data-collection/log-anlytics-workspaces.png":::
+
 1. In the menu pane of your Log Analytics workspace, select **Classic** > **Legacy agents management**. On the **Legacy agents management** page, you can see the different types of data sources that the workspace can collect.
 
 1. Select one of the following tabs based on the type of legacy data collection that you want to check:
 
    - **Windows event logs**
-   <!-- Windows event log image -->
+         :::image type="content" source="media/step-2-understand-your-data-collection/windows-event-logs.png" alt-text="Azure portal screenshot of the Windows event logs tab." lightbox="media/step-2-understand-your-data-collection/windows-event-logs.png":::
+     
    - **Windows performance counters**
-   <!-- Windows performance counter image -->
+         :::image type="content" source="media/step-2-understand-your-data-collection/windows-performance-counters.png" alt-text="Azure portal screenshot of the Windows performance counters tab." lightbox="media/step-2-understand-your-data-collection/windows-performance-counters.png":::
+     
    - **Linux performance counters**
    - **Syslog**
    - **IIS Logs**
@@ -48,8 +51,8 @@ You can search for legacy solutions by name, category, or publisher. On the Lega
 - **Configuration settings**
 
 You can also add, remove, or update the legacy solutions as necessary.
-<!-- solutions-tab image -->
 
+  :::image type="content" source="media/step-2-understand-your-data-collection/solutions-tab.png" alt-text="Azure portal screenshot of the legacy solutions page." lightbox="media/step-2-understand-your-data-collection/windows-performance-counters.png":::
 Some legacy solutions might require extra steps to enable data collection. Examples of these steps include the following actions:
 
 - Installing agents
