@@ -1,6 +1,6 @@
 ---
 title: Signed out of Teams certified Android devices
-description: Provides workarounds for when Android devices are signed out of Teams automatically.
+description: Provides workarounds for an issue in which Android devices are signed out of Teams automatically.
 ms.date: 08/07/2024
 author: helenclu
 ms.author: luche
@@ -20,7 +20,7 @@ ms.custom:
 ms.reviewer: kponnus
 ---
 
-# Signed out of Teams certified Android devices
+# Certified Android devices get signed out of Teams
 
 Some certified Android devices in your environment are signed out of Microsoft Teams automatically. This issue affects the following devices:
 
@@ -29,19 +29,19 @@ Some certified Android devices in your environment are signed out of Microsoft T
 - Teams phones
 - Teams displays
 
-If you're a tenant administrator, you can get information about the sign-in state of your devices from the [sign-in logs in the Microsoft Entra admin center](/azure/active-directory/reports-monitoring/concept-sign-ins). To access these logs, navigate to the Microsoft Entra ID menu > **Monitoring & health** > **Sign-in logs**.
+If you're a tenant administrator, you can get information about the sign-in state of your devices from the [sign-in logs in the Microsoft Entra admin center](/azure/active-directory/reports-monitoring/concept-sign-ins). To access these logs, navigate to the Microsoft Entra ID menu, and then select **Monitoring & health** > **Sign-in logs**.
 
-   :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-log.png" alt-text="Screenshot of a sign-in log with the User sign-ins (non-interactive) tab, the Applications, Status, and Resource columns and their entries highlighted.":::
+   :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-log.png" alt-text="Screenshot of a sign-in log with the User sign-ins (non-interactive) tab, the Applications, Status, and Resource columns, and their entries highlighted.":::
 
-You can also use the information in the sign-in logs to determine whether this issue is affecting a device in your environment. In the **User sign-ins (non-interactive)** tab, check for the following entries:
+You can also use the information in the sign-in logs to determine whether this issue is affecting a device in your environment. On the **User sign-ins (non-interactive)** tab, check for the following entries:
 
-- In the **Application** column: Microsoft Authentication Broker
-- In the **Status** column: Failure
-- In the **Resource** column: Device Registration Service
+- In the **Application** column: **Microsoft Authentication Broker**
+- In the **Status** column: **Failure**
+- In the **Resource** column: **Device Registration Service**
 
 These entries indicate that the issue is affecting your device.
 
-To resolve the Teams sign in issue on an affected device, select the appropriate option based on the device type.
+To resolve the Teams sign-in issue on an affected device, select the appropriate option based on the device type.
 
 ## Teams Rooms on Android devices and Teams panels
 
@@ -61,7 +61,7 @@ To run the connectivity test, follow these steps:
 1. Enter the verification code that's displayed, and then select **Verify**.
 1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**.
 
-After the test finishes, the screen displays details about all the checks that were performed and whether the test succeeded, failed, or was successful but includes warnings. In the list of failures or warnings, select the provided linksfor more information about each item and how to resolve it.
+After the test finishes, the screen displays details about all the checks that were performed and whether the test succeeded, failed, or was successful but includes warnings. In the list of failures or warnings, select the provided links for more information about each item and how to resolve it.
 
 ## Teams phones
 
@@ -79,7 +79,7 @@ To run the connectivity test, follow these steps:
 1. Enter the verification code that's displayed, and then select **Verify**.
 1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**.
 
-After the test finishes, the screen displays details about all the checks that were performed and whether the test succeeded, failed, or was successful but includes warnings. In the list of failures or warnings, select the provided linksfor more information about each item and how to resolve it.
+After the test finishes, the screen displays details about all the checks that were performed and whether the test succeeded, failed, or was successful but includes warnings. In the list of failures or warnings, select the provided links for more information about each item and how to resolve it.
 
 ## Teams displays
 
@@ -90,31 +90,31 @@ If Teams displays are affected, or if you're using the GCC or GCC High Microsoft
 > [!NOTE]
 >
 > - You must have Teams administrator permissions to use this option.
-> - Also,  make sure that your device is running the [minimum firmware and Teams app versions](/microsoftteams/devices/teams-ip-phones) required for Teams certified Android devices.
+> - Also,  make sure that your device is running the [minimum firmware and Teams app versions](/microsoftteams/devices/teams-ip-phones) that are required for Teams-certified Android devices.
 
 1. Navigate to the [Microsoft Teams admin center](https://admin.teams.microsoft.com/).
-2. Select **Teams devices** in the navigation menu on the left, and then select your Android device.
+2. In the navigation menu on the left, select **Teams devices**, and then select your Android device.
 3. On the page for the Android device, select **Actions** > **Sign out** to sign out of the device.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/select-sign-out.png" alt-text="Screenshot of selecting the sign out option on the device page.":::
 4. After you're signed out, select **Sign in**.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/select-sign-in.png" alt-text="Screenshot of selecting the sign in option on the device page.":::
-5. A pop-up window displays. After a wait time of two to five minutes, the window will be populated with a URL, a code and instructions to sign in. Use the information provided to sign in to the device.
+5. A pop-up window appears. After two to five minutes, the window is populated by a URL, a code, and instructions to sign in. Use the information that's provided to sign in to the device.
 
-   :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-instructions.png" alt-text="Screenshot of the pop-up window that provides sign in instructions.":::
+   :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-instructions.png" alt-text="Screenshot of the pop-up window that provides sign-in instructions.":::
 
-### Option 2: Restart the device and then sign in from the Microsoft Teams admin center
+### Option 2: Sign in from the Microsoft Teams admin center
 
 > [!NOTE]
 >
 > - You must have Teams administrator permissions to use this option.
-> - Also,  make sure that your device is running the [minimum firmware and Teams app versions](/microsoftteams/devices/teams-ip-phones) required for Teams certified Android devices.
+> - Also,  make sure that your device is running the [minimum firmware and Teams app versions](/microsoftteams/devices/teams-ip-phones) that are required for Teams-certified Android devices.
 
-Restart the Android device remotely from the Microsoft Teams admin center and then try to sign in.
+Restart the Android device remotely from the Microsoft Teams admin center, and then try to sign in.
 
 1. Navigate to the [Microsoft Teams admin center](https://admin.teams.microsoft.com/).
-2. Select **Teams devices** in the navigation menu on the left, and then select your Android device.
+2. In the navigation menu on the left, select **Teams devices**, and then select your Android device.
 3. On the page for the Android device, select **Restart** to restart the device.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/select-restart.png" alt-text="Screenshot of the restart option highlighted on the device page.":::
@@ -130,9 +130,9 @@ Restart the Android device remotely from the Microsoft Teams admin center and th
 
      :::image type="content" source="media/signed-out-of-teams-android-devices/username-and-select-sign-in.png" alt-text="Screenshot of the device page with the username field blank and the sign in option selected.":::
 
-5. A pop-up window displays. After a wait time of two to five minutes, the window will be populated with a URL, a code and instructions to sign in. Use the provided information to sign in to the device.
+5. A pop-up window appears. After two to five minutes, the window is populated by a URL, a code, and instructions to sign in. Use the provided information to sign in to the device.
 
-   :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-instructions.png" alt-text="Screenshot of the pop-up window that provides sign in instructions.":::
+   :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-instructions.png" alt-text="Screenshot of the pop-up window that provides sign-in instructions.":::
 
 ### Option 3: Generate a new code on the device to sign in
 
@@ -157,4 +157,4 @@ If you still can't sign in to the device, reset the device to its factory settin
 
 1. Perform a factory reset from the OEM device settings or by using the key combination that's specific to the OEM model.
 2. Delete the device object in Microsoft Entra ID, Microsoft Intune, and the Microsoft Teams admin center. This will enable fresh objects to be created when you sign in.
-3. Use option 1, 2 or 3 to sign in to the device.
+3. Use Option 1, 2, or 3 to sign in to the device.
