@@ -5,7 +5,7 @@ ms.date: 05/09/2022
 author: mukeshnandams
 ms.author: genli
 ms.reviewer: mnanda, mahuss
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Performance
 ---

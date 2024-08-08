@@ -3,7 +3,7 @@ title: A Capacity Reservation is in a "Failed" provisioning state
 description: The following article discusses how to resolve the situation of a Capacity Reservation being in a "failed" provisioning state.
 ms.date: 08/26/2021
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:Cannot create a VM
 ---

@@ -6,7 +6,7 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.assetid: 3f6383b5-81fa-49ea-9434-2fe475e4cbef
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows

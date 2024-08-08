@@ -4,7 +4,7 @@ description: Resolve an issue (two new Key Management Services (KMS) IP addresse
 ms.date: 04/04/2023
 editor: v-jsitser
 ms.reviewer: meijin, danielli, scotro, v-leedennis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ---
 # Windows Virtual Machine activation no longer works in Azure

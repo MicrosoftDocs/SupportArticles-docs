@@ -3,7 +3,7 @@ title: Azure Linux VM extensions stop running
 description: VM Agent fails to process extensions, causing some extensions to stop running and affecting some dependent services, such as Azure Site Recovery.
 ms.date: 07/21/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 ms.collection: linux
 ---
