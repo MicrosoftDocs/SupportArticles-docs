@@ -1,7 +1,7 @@
 ---
-title: Signed out of Teams certified Android devices
-description: Provides workarounds for an issue in which Android devices are signed out of Teams automatically.
-ms.date: 08/07/2024
+title: Certified Android devices get signed out of Teams
+description: Provides workarounds for an issue in which certified Android devices are signed out of Teams automatically.
+ms.date: 08/08/2024
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -104,7 +104,7 @@ If Teams displays are affected, or if you're using the GCC or GCC High Microsoft
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-instructions.png" alt-text="Screenshot of the pop-up window that provides sign-in instructions.":::
 
-### Option 2: Sign in from the Microsoft Teams admin center
+### Option 2: Restart the device and then sign in from the Microsoft Teams admin center
 
 > [!NOTE]
 >
