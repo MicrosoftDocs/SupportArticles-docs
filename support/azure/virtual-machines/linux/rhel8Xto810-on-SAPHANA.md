@@ -100,7 +100,7 @@ sudo reboot
 
 #### [RHEL 8.x to 8.10 on SAPAPPS](#tab/rhel8x-rhel819sapapps)
 
-1. Remove the RHUI(E4S-SAP) package installed.
+1. Remove the RHUI(EUS-SAP) package installed.
 
 ```bash
 sudo yum remove $(rpm -qa | grep -i rhui)
