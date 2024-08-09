@@ -118,7 +118,7 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 
 ## Cause
 
-The issue occurs when the destination DC performing inbound replication doesn't receive replication changes within the number of seconds specified in the `RPC Replication Timeout (mins)` registry key (the default value is five minutes if the registry entry doesn't exist). You might experience this issue most frequently in one of the following situations:
+The issue occurs when the destination DC performing inbound replication doesn't receive replication changes within the number of seconds specified in the `RPC Replication Timeout (mins)` registry value (the default value is five minutes if the registry entry doesn't exist). You might experience this issue most frequently in one of the following situations:
 
 - You promote a new domain controller into the forest by using the Active Directory Domain Services Configuration Wizard from the Server Manager management console or via the `Install-ADDSDomainController` cmdlet.
 - Existing domain controllers replicate from source domain controllers that are connected over slow network links.
