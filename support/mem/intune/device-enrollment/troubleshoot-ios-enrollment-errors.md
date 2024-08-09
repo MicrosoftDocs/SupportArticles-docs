@@ -188,9 +188,9 @@ When you turn on an ADE-managed device that is assigned an enrollment profile, t
 
 When you turn on an ADE-managed device that is assigned an enrollment profile, the initial setup sticks after you enter credentials.
 
-**Cause:** Multi-Factor authentication (MFA) is enabled. Currently MFA doesn't work during enrollment on ADE devices.
+**Cause:** Multi-Factor authentication (MFA) is enabled. Currently MFA doesn't work during enrollment on ADE devices if authentication method is set to "Setup Assistant (legacy)".
 
-**Solution:** Disable MFA, and then re-enroll the device.
+**Solution:** Disable MFA, and then re-enroll the device. Otherwise change Authentication Method to "Setup Assistant with modern authentication" that works with MFA.
 
 ### Authentication doesn't redirect to the government cloud 
 
