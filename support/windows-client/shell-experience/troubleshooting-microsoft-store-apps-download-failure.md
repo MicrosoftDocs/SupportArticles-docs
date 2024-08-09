@@ -111,7 +111,7 @@ Here are the steps for typical situations associated with using `winget` to inst
 
 ## Verify that the required endpoints aren't blocked by the firewall or proxy
 
-Microsoft Store requires specific endpoints to be accessible to install or update Apps. For example, Microsoft Store needs Windows Update endpoints to be accessible to install and update apps.
+Microsoft Store requires specific endpoints to be accessible to install or update apps. For example, Microsoft Store needs Windows Update endpoints to be accessible to install and update apps.
 
 1. See [Manage connection endpoints for Windows 11 Enterprise](/windows/privacy/manage-windows-11-endpoints) for information about the required endpoints and other system components.
 2. See [Issues related to HTTP/Proxy](../installing-updates-features-roles/windows-update-issues-troubleshooting.md#issues-related-to-httpproxy) for information about the required Windows updates and related troubleshooting guidance.
