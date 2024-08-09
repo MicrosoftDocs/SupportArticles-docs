@@ -127,7 +127,7 @@ The issue occurs when the destination DC performing inbound replication doesn't 
 > 
 > - Registry value name: `RPC Replication Timeout (mins)`
 > - Registry value location: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`
-> - Registry value type: REG_DWORD
+> - Registry value type: `REG_DWORD`
 
 If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the `RPC Replication Timeout (mins)` registry setting specifies, the destination domain controller ends the RPC connection with the nonresponsive source domain controller and logs a warning event.
 
