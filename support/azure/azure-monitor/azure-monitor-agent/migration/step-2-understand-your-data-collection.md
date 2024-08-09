@@ -1,6 +1,6 @@
 ---
 title: Step 2 - Document your current configuration
-description: Document your current configuration as the second step to migrate from Log Analytics Agent to Azure Monitor Agent.
+description: Document your current configuration as the second step to upgrade from Log Analytics Agent to Azure Monitor Agent.
 ms.date: 07/16/2024
 ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu
 ms.service: azure-monitor
