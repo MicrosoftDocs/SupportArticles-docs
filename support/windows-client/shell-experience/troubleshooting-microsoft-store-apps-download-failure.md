@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting Microsoft Store Apps download failure
-description: Provides guidance to troubleshooting Microsoft Store Apps download and update failure.
+title: Troubleshoot Microsoft Store app download failures
+description: Provides guidance for troubleshooting Microsoft Store app download and update failures.
 ms.date: 08/15/2024
 manager: dcscontentpm
 audience: itpro
@@ -9,31 +9,31 @@ ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft 
 ms.reviewer: winciccore, warrenw
 localization_priority: medium
 ---
-# Troubleshooting Microsoft Store Apps download failure
+# Troubleshoot Microsoft Store app download failures
 
-This article provides guidance on troubleshoot failures of downloading or updating Apps from Microsoft Store.
+This article provides guidance for troubleshooting failures in downloading or updating apps from Microsoft Store.
 
 > [!NOTE]
-> If you're not a support agent or IT professional, you'll find more helpful information about Microsoft Store problems in [Fix problems with apps from Microsoft Store - Microsoft Support](https://support.microsoft.com/account-billing/fix-problems-with-apps-from-microsoft-store-93ed0bcf-9c12-3df6-6dda-92ec5d0415ac).
+> If you're not a support agent or IT professional, you can find more helpful information about Microsoft Store problems in [Fix problems with apps from Microsoft Store](https://support.microsoft.com/account-billing/fix-problems-with-apps-from-microsoft-store-93ed0bcf-9c12-3df6-6dda-92ec5d0415ac).
 
 ## Troubleshooting checklist
 
-1. Verify Microsoft Store is registered or registered for your user.
-2. Verify you can launch Microsoft Store, and Microsoft Store isn't blocked from downloading updates.
+1. Verify that Microsoft Store is registered for your user.
+2. Verify that you can launch Microsoft Store and that Microsoft Store isn't blocked from downloading updates.
 3. Use `winget` to install packages.
-4. Verify that firewall or proxy doesn't block required endpoints.
+4. Verify that the firewall or proxy doesn't block the required endpoints.
 
-See the following sections for detail steps.
+For detailed steps, see the following sections.
 
-## Verify Microsoft Store is registered or not for the user account
+## Verify that Microsoft Store is registered for the user account
 
-To check whether the user has Microsoft Store installed, run the following cmdlet from a nonelevated PowerShell Prompt.
+To check whether the user has Microsoft Store installed, run the following cmdlet from a non-elevated PowerShell prompt:
 
 ```powershell
 Get-AppxPackage *Microsoft.WindowsStore*
 ```
 
-If Microsoft Store is registered, the output looks like the following.
+If Microsoft Store is registered, the output looks like the following example:
 
 ```output
 Name              : Microsoft.WindowsStore
@@ -61,57 +61,57 @@ Status            : Ok
 
 If the output indicates Microsoft Store isn't installed, you can try re-registering Microsoft Store.
 
-To do this, first check if other users on the machine have Microsoft Store registered. Run the cmdlet from an elevated PowerShell prompt:
+To do so, first check if other users on the machine have Microsoft Store registered. Then, run the following cmdlet from an elevated PowerShell prompt:
 
 ```powershell
 Get-AppxPackage *Microsoft.WindowsStore* -AllUsers
 ```
 
-If there's a successful return of the Appx package details, it means that the package exists.
+If the Appx package details are successfully returned, it means that the package exists.
 
 > [!NOTE]
-> Warning: Completely uninstalling Microsoft Store is not Supported, read this [article](cannot-remove-uninstall-or-reinstall-microsoft-store-app.md) if you are facing this problem.
+> Completely uninstalling Microsoft Store isn't supported. If you encounter this problem, see [Removing, uninstalling, or reinstalling Microsoft Store app isn't supported](cannot-remove-uninstall-or-reinstall-microsoft-store-app.md).
 
-Once you determine that the Appx package exists on the machine, the following command can be used to register the Appx package for the user.
+Once you have determined that the Appx package exists on the machine, you can use the following command to register the Appx package for the user.
 
 > [!IMPORTANT]
-> Be sure not to use the elevated PowerShell prompt unless you wish to register the app to the administrator instead of the user.
+> Be sure not to use an elevated PowerShell prompt unless you want to register the app to the administrator instead of the user.
 
 ```powershell
 Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.WindowsStore_8wekyb3d8bbwe
 ```
 
-## Verify that you can launch Microsoft Store, and Microsoft Store isn't blocked from downloading updates
+## Verify that you can launch Microsoft Store and that Microsoft Store isn't blocked from downloading updates
 
-Administrators can block Microsoft Store for end users. In such case, Microsoft Store isn't accessible for end users. When Microsoft Store is turned off from Policy or Configuration Service Provider (CSP), the following message is displayed upon launching Microsoft Store App.
+Administrators can block end users from using Microsoft Store. In this case, Microsoft Store isn't accessible to end users. When Microsoft Store is turned off from a policy or configuration service provider (CSP), the following message is displayed upon launching the Microsoft Store app:
 
-:::image type="content" source="media/troubleshooting-microsoft-store-apps-download-failure/microsoft-store-startup-error.png" alt-text="Microsoft Store startup error.":::
+:::image type="content" source="media/troubleshooting-microsoft-store-apps-download-failure/microsoft-store-startup-error.png" alt-text="Screenshot of the Microsoft Store startup error." border="false":::
 
-The usual policy to disable the Microsoft Store is **RemoveWindowsStore**. This policy blocks users from opening Microsoft Store, however Microsoft Store Apps aren't restricted from updating.
+A common policy to disable Microsoft Store is **RemoveWindowsStore**. This policy blocks users from opening Microsoft Store. However, Microsoft Store apps aren't restricted from updating.
 
-If the issue is about Microsoft Store Apps packages not getting updated automatically, check [Verify required endpoints aren't blocked from firewall or proxy](#verify-required-endpoints-arent-blocked-from-firewall-or-proxy).
+If the issue is that Microsoft Store app packages aren't updated automatically, check and [verify that the required endpoints aren't blocked by the firewall or proxy](#verify-that-the-required-endpoints-arent-blocked-by-the-firewall-or-proxy).
 
-## Using `winget` to install packages
+## Use winget to install packages
 
-The `winget` (Windows Package Manager) command can be used to install or manage Microsoft Store Apps. See [Use the winget tool to install and manage applications](/windows/package-manager/winget/) for a complete usage instruction for `winget`.
+The `winget` (Windows Package Manager) command can be used to install or manage Microsoft Store apps. For complete instruction for using `winget`, see [Use the WinGet tool to install and manage applications](/windows/package-manager/winget/).
 
-The following guide is about typical situations associated with using `winget` to install Microsoft Store Apps.
+Here are the steps for typical situations associated with using `winget` to install Microsoft Store apps.
 
-1. Search for the Application you want to install.
+1. Search for the application you want to install:
 
    ```powershell
    winget search <App name>
    ```
 
-2. Install the application.
+2. Install the application:
 
    ```powershell
    winget install <App name>
    ```
 
-## Verify required endpoints aren't blocked from firewall or proxy
+## Verify that the required endpoints aren't blocked by the firewall or proxy
 
-Microsoft Store requires specific endpoints to be accessible to install or update Apps. Microsoft Store uses Windows Update endpoints to be accessible to install and update Apps.
+Microsoft Store requires specific endpoints to be accessible to install or update Apps. For example, Microsoft Store needs Windows Update endpoints to be accessible to install and update apps.
 
-1. See [Manage connection endpoints for Windows 11 Enterprise](/windows/privacy/manage-windows-11-endpoints) for required endpoints and other system components.
-2. See [Issues related to HTTP/Proxy](../installing-updates-features-roles/windows-update-issues-troubleshooting.md#issues-related-to-httpproxy) for required Windows Update and related troubleshooting guide.
+1. See [Manage connection endpoints for Windows 11 Enterprise](/windows/privacy/manage-windows-11-endpoints) for information about the required endpoints and other system components.
+2. See [Issues related to HTTP/Proxy](../installing-updates-features-roles/windows-update-issues-troubleshooting.md#issues-related-to-httpproxy) for information about the required Windows updates and related troubleshooting guidance.

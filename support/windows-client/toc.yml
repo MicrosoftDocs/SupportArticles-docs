@@ -967,7 +967,7 @@ items:
       href: ./shell-experience/troubleshoot-apps-start-failure-use-process-monitor.md
     - name: Troubleshoot Apps failing to start using Windows Package Manager
       href: ./shell-experience/troubleshoot-apps-start-failure-use-windows-package-manager.md
-    - name: Troubleshooting Microsoft Store Apps download failure
+    - name: Troubleshoot Microsoft Store app download failures
       href: ./shell-experience/troubleshooting-microsoft-store-apps-download-failure.md
   - name: Start menu
     items:
