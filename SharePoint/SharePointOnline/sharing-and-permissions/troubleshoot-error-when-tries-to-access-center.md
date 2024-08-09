@@ -1,6 +1,6 @@
 ---
 title: External sharing is disabled for the site when a delegated partner administrator tries to access a client's SharePoint Online Admin Center
-description: Describes an issue in which External sharing is disabled for the site when a delegated partner administrator tries to access a client's SharePoint Online Admin Center.
+description: Provides a resolution for an issue in which external sharing is disabled for the site when a delegated partner administrator tries to access a client's SharePoint Online Admin Center.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -14,7 +14,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online
-ms.date: 12/17/2023
+ms.date: 08/09/2024
 ---
 
 # "External sharing is disabled for the site" error when a delegated partner administrator tries to access a client's SharePoint Online Admin Center
@@ -27,10 +27,10 @@ When a delegated partner administrator tries to access the SharePoint Online Adm
 
 ## Solution
 
-To fix this issue, use the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell) to delete the guest account from the client's organization. To do so, run the following cmdlet:
+To fix this issue, use [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell) to delete the guest account from the client's organization. To do so, run the following cmdlet:
 
 > [!NOTE]
-> You must run the cmdlet by using a SharePoint admin or global admin account of the client's organization.
+> You must run the cmdlet by using a SharePoint admin account in the client's organization.
 
 ```powershell
 $user = Get-SPOExternalUser -Filter someone@example.com
