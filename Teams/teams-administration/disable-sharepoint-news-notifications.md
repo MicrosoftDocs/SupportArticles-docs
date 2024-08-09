@@ -48,4 +48,4 @@ You can control which notifications you want to receive in the following manner:
 - On Teams mobile, you can't selectively enable or disable notifications. However, you can toggle all push notifications (including Viva Connections) in the Teams mobile app under **Settings** > **Notifications** > **General Activity** > **Apps on Teams**. Even after you disable the notifications, they're still visible in the Teams activity feed.  
 
 > [!NOTE]
-There is no organization-wide method for an administrator to control Viva Connections notifications.  
+> There is no organization-wide method for an administrator to control Viva Connections notifications.  
