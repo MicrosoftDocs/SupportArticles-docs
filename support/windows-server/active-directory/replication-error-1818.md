@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting AD Replication error 1818
 description: Describes an issue where AD operations fail with error 1818 (The remote procedure call was cancelled (RPC_S_CALL_CANCELLED)).
-ms.date: 08/07/2024
+ms.date: 08/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -118,12 +118,18 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 
 ## Cause
 
-The issue occurs when the destination DC performing inbound replication doesn't receive replication changes within the number of seconds specified in the "RPC Replication Timeout" registry key (the default value is five minutes if the registry entry doesn't exist). You might experience this issue most frequently in one of the following situations:
+The issue occurs when the destination DC performing inbound replication doesn't receive replication changes within the number of seconds specified in the `RPC Replication Timeout (mins)` registry value (the default value is five minutes if the registry entry doesn't exist). You might experience this issue most frequently in one of the following situations:
 
 - You promote a new domain controller into the forest by using the Active Directory Domain Services Configuration Wizard from the Server Manager management console or via the `Install-ADDSDomainController` cmdlet.
 - Existing domain controllers replicate from source domain controllers that are connected over slow network links.
 
-If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the **RPC Replication Timeout (mins)** registry setting specifies, the destination domain controller ends the RPC connection with the nonresponsive source domain controller and logs a warning event.
+> [!NOTE]
+> 
+> - Registry value name: `RPC Replication Timeout (mins)`
+> - Registry value location: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`
+> - Registry value type: `REG_DWORD`
+
+If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the `RPC Replication Timeout (mins)` registry setting specifies, the destination domain controller ends the RPC connection with the nonresponsive source domain controller and logs a warning event.
 
 Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CALL_CANCELLED` include:
 
