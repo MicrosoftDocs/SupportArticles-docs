@@ -10,16 +10,16 @@ ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to Perform a `Leapp` upgrade from RHEL 7.9 to 8.X on SAPAPPS and SAP-HANA (PAYG) images.
+# How to Perform a `Leapp` upgrade from RHEL 7.9 to 8.X on SAPAPPS and SAP-HANA Pay-As-You-Go (PAYG) images.
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. In this article, we guide you through upgrading SAP environments from RHEL 7.9 to RHEL 8 using a `PAYG` (Pay-As-You-Go) image for Red Hat in Azure.
+Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. In this article, we guide you through upgrading SAP environments from RHEL 7.9 to RHEL 8 using a `PAYGO` (Pay-As-You-Go) image for Red Hat in Azure.
 
 > [!IMPORTANT]
 > RHUI is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
-For more information on performing a `Leapp upgrade` process on custom or golden images, and pay-as-you-go (PAYG) images provided by Red Hat, see:
+For more information on performing a `Leapp upgrade` process on custom or golden images, and pay-as-you-go (PAYGO) images provided by Red Hat, see:
 
 [Upgrading SAP environments from RHEL 7 to 8](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/index)
 
@@ -43,7 +43,7 @@ System Configuration   | Source OS version| Target Version     |
 |Other SAP Applications|                  | RHEL 8.10(default) |
 
 > [!NOTE]  
-> To update an `SAP HANA` system running on `RHEL 7.7` or earlier, you must first upgrade to `RHEL 7.9` for detailed instructions on upgrading from RHEL 7.7 or earlier to RHEL 7.9 on Azure for `PAYG` images, please refer to the guide [How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAP APPS on pay-as-you-go (PAYG) images](/azure/virtual-machines/linux/rhel7x-to-79-sap-ha-apps?branch=pr-en-us-6941&tabs=rhel7x-rhel79ha)" 
+> To update an `SAP HANA` system running on `RHEL 7.7` or earlier, you must first upgrade to `RHEL 7.9` for detailed instructions on upgrading from RHEL 7.7 or earlier to RHEL 7.9 on Azure for `PAYGO` images, please refer to the guide [How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAP APPS on pay-as-you-go (PAYGO) images](/azure/virtual-machines/linux/rhel7x-to-79-sap-ha-apps?branch=pr-en-us-6941&tabs=rhel7x-rhel79ha)" 
 
 - According to the Red Hat documentation, `SAP` validates `SAP HANA` for RHEL minor versions, which receive package updates for longer than six months. Therefore, for `SAP HANA` hosts, the upgrade paths include only `EUS/E4S` releases plus the last minor release for a given major release.[Upgrading SAP HANA System](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/asmb_upgrading-hana-system_asmb_planning-upgrade)
 
@@ -52,7 +52,7 @@ System Configuration   | Source OS version| Target Version     |
 
 #### [RHEL 7.9 to 8.X SAP-HA](#tab/rhel8saphana)
 
-This procedure outlines the necessary steps to complete before performing an in-place upgrade from 7.9 to 8.8 or 8.10 using the `Leapp` utility on `SAP-HANA` `PAYG` images on Azure.
+This procedure outlines the necessary steps to complete before performing an in-place upgrade from 7.9 to 8.8 or 8.10 using the `Leapp` utility on `SAP-HANA` `PAYGO` images on Azure.
 
 Based on Red Hat documentation, upgrading cluster nodes in place or through rolling upgrades **is not supported** for major `RHEL` releases. For more information, see, [`Leapp` upgrade from RHEL 7 to RHEL 8 fails for pacemaker cluster](https://access.redhat.com/solutions/7049940).
 
@@ -106,7 +106,7 @@ yum install leapp-upgrade
 
 #### [RHEL 7.9 to 8.X - SAPAPPS](#tab/rhel8sapapps)
 
-This procedure outlines the necessary steps to complete before performing an in-place upgrade to `RHEL 7` or `RHEL 8` using the `Leapp` utility on `SAPAPPS PAYG` images on Azure.
+This procedure outlines the necessary steps to complete before performing an in-place upgrade to `RHEL 7` or `RHEL 8` using the `Leapp` utility on `SAPAPPS PAYGO` images on Azure.
 
 
 1.  Enable required `RHUI` repositories and install required `RHUI` packages to ensure your system is ready for upgrade.
@@ -317,7 +317,7 @@ uname -r
 sudo dnf repolist
 ```
 
-The output should contain:
+The output from 8.8 update should contain:
 
 ```output
 ansible-2-for-rhel-8-x86_64-rhui-rpms            Red Hat Ansible Engine 2 for RHEL 8 x86_64 (RPMs) from RHUI
@@ -327,6 +327,18 @@ rhel-8-for-x86_64-highavailability-e4s-rhui-rpms Red Hat Enterprise Linux 8 for 
 rhel-8-for-x86_64-sap-netweaver-e4s-rhui-rpms    Red Hat Enterprise Linux 8 for x86_64 - SAP NetWeaver - Update Services for SAP Solutions from RHUI (RPMs)
 rhel-8-for-x86_64-sap-solutions-e4s-rhui-rpms    Red Hat Enterprise Linux 8 for x86_64 - SAP Solutions - Update Services for SAP Solutions from RHUI (RPMs)
 rhui-microsoft-azure-rhel8-sap-ha                Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-sap-ha)
+```
+The output from 8.10 update should contain:
+
+```bash
+ansible-2-for-rhel-8-x86_64-rhui-rpms        Red Hat Ansible Engine 2 for RHEL 8 x86_64 (RPMs) from RHUI
+packages-microsoft-com-prod                  packages-microsoft-com-prod
+rhel-8-for-x86_64-appstream-rhui-rpms        Red Hat Enterprise Linux 8 for x86_64 - AppStream from RHUI (RPMs)
+rhel-8-for-x86_64-baseos-rhui-rpms           Red Hat Enterprise Linux 8 for x86_64 - BaseOS from RHUI (RPMs)
+rhel-8-for-x86_64-highavailability-rhui-rpms Red Hat Enterprise Linux 8 for x86_64 - High Availability (RPMs) from RHUI
+rhel-8-for-x86_64-sap-netweaver-rhui-rpms    Red Hat Enterprise Linux 8 for x86_64 - SAP NetWeaver (RPMs) from RHUI
+rhel-8-for-x86_64-sap-solutions-rhui-rpms    Red Hat Enterprise Linux 8 for x86_64 - SAP Solutions (RPMs) from RHUI
+rhui-microsoft-azure-rhel8-base-sap-ha       Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-ha)
 ```
 #### [RHEL 7.9 to 8.X on SAPAPPS](#tab/rhel8sapapps)
 
@@ -349,7 +361,7 @@ uname -r
 sudo dnf repolist
 ```
 
-The output should contain:
+The output from 8.8 should contain:
 
 ```output
 ansible-2-for-rhel-8-x86_64-rhui-rpms         Red Hat Ansible Engine 2 for RHEL 8 x86_64 (RPMs) from RHUI
@@ -357,6 +369,15 @@ rhel-8-for-x86_64-appstream-eus-rhui-rpms     Red Hat Enterprise Linux 8 for x86
 rhel-8-for-x86_64-baseos-eus-rhui-rpms        Red Hat Enterprise Linux 8 for x86_64 - BaseOS - Extended Update Support from RHUI (RPMs)
 rhel-8-for-x86_64-sap-netweaver-eus-rhui-rpms Red Hat Enterprise Linux 8 for x86_64 - SAP NetWeaver - Extended Update Support from RHUI (RPMs)
 rhui-microsoft-azure-rhel8-sapapps            Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-sapapps)
+```
+The output from 8.10 update should contain:
+
+```output
+ansible-2-for-rhel-8-x86_64-rhui-rpms     Red Hat Ansible Engine 2 for RHEL 8 x86_64 (RPMs) from RHUI
+rhel-8-for-x86_64-appstream-rhui-rpms     Red Hat Enterprise Linux 8 for x86_64 - AppStream from RHUI (RPMs)
+rhel-8-for-x86_64-baseos-rhui-rpms        Red Hat Enterprise Linux 8 for x86_64 - BaseOS from RHUI (RPMs)
+rhel-8-for-x86_64-sap-netweaver-rhui-rpms Red Hat Enterprise Linux 8 for x86_64 - SAP NetWeaver (RPMs) from RHUI
+rhui-microsoft-azure-rhel8-base-sap-apps  Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-apps)
 ```
 
 ---
