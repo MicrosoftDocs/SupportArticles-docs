@@ -27,7 +27,7 @@ For detailed steps, see the following sections.
 
 ## Verify that Microsoft Store is registered for the user account
 
-To check whether the user has Microsoft Store installed, run the following cmdlet from a non-elevated PowerShell prompt:
+To check whether the user has Microsoft Store installed, run the following cmdlet from a nonelevated PowerShell prompt:
 
 ```powershell
 Get-AppxPackage *Microsoft.WindowsStore*
@@ -72,7 +72,7 @@ If the Appx package details are successfully returned, it means that the package
 > [!NOTE]
 > Completely uninstalling Microsoft Store isn't supported. If you encounter this problem, see [Removing, uninstalling, or reinstalling Microsoft Store app isn't supported](cannot-remove-uninstall-or-reinstall-microsoft-store-app.md).
 
-Once you have determined that the Appx package exists on the machine, you can use the following command to register the Appx package for the user.
+Once you determine that the Appx package exists on the machine, you can use the following command to register the Appx package for the user.
 
 > [!IMPORTANT]
 > Be sure not to use an elevated PowerShell prompt unless you want to register the app to the administrator instead of the user.
