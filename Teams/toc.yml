@@ -8,7 +8,9 @@
     - name: "\"We couldn't add member\" error when adding users"
       href: ./teams-administration/couldnt-add-member-error.md 
     - name: Clear the Teams client cache
-      href: ./teams-administration/clear-teams-cache.md  
+      href: ./teams-administration/clear-teams-cache.md
+    - name: Disable SharePoint News notifications in Teams
+      href: ./teams-administration/disable-sharepoint-news-notifications.md
     - name: Error switching a tenant to Teams Only mode
       href: ./teams-administration/cannot-switch-to-teams-only-mode.md
     - name: Include or exclude Teams from antivirus or DLP applications
