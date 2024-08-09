@@ -1,6 +1,6 @@
 ---
-title:   How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAP APPS on PAYG images.
-description: Guide with step by step procedure to do an OS update frm RHEL 7.X to 7.9
+title:   How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or `SAPAPPS` on `PAYG` images.
+description: Guide with step by step procedure to do an OS update frm `RHEL` 7.X to 7.9
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
@@ -10,22 +10,22 @@ ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAP APPS on (PAYG) images.
+# How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAPAPPS on (PAYG) images.
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
 While RHEL for SAP 7.x (where x isn't equal to 9) can be accessed in `E4S` and/or `EUS`, RHEL for SAP 7.9 follows a different approach. In this case, the related content is found in unversioned repositories. As a result, updating a system that operates SAP on RHEL 7.x to RHEL 7.9 requires several manual steps.
 
-This article provides the correct steps to update to 7.9 for SAP-HANA or SAPAPPS pay-as-you-go (PAYG) images.
+This article provides the correct steps to update to 7.9 for `SAP-HANA` or `SAPAPPS` pay-as-you-go (PAYG) images.
 
 > [!IMPORTANT]
 > RHUI is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
 For more information on performing the update process on custom or golden images, and pay-as-you-go (PAYG) images provided by Red Hat, see:
 
-[How to update RHEL from 7.* to 7.0 on Cloud Images with the "RHEL for SAP with HA and Update Services":](https://www.bing.com/ck/a?!&&p=5ce48fc498f647bbJmltdHM9MTcyMjU1NjgwMCZpZ3VpZD0yZWZiYTY4Yi03MTE1LTZmNjgtMWRlMS1iMjM0NzAxNDZlYjImaW5zaWQ9NTIxMg&ptn=3&ver=2&hsh=3&fclid=2efba68b-7115-6f68-1de1-b23470146eb2&psq=rehl+7+to+7%2c9+on+sap&u=a1aHR0cHM6Ly9hY2Nlc3MucmVkaGF0LmNvbS9hcnRpY2xlcy81ODA1NTcx&ntb=1)
+- [How to update RHEL from 7.* to 7.0 on Cloud Images with the "RHEL for SAP with HA and Update Services":](https://www.bing.com/ck/a?!&&p=5ce48fc498f647bbJmltdHM9MTcyMjU1NjgwMCZpZ3VpZD0yZWZiYTY4Yi03MTE1LTZmNjgtMWRlMS1iMjM0NzAxNDZlYjImaW5zaWQ9NTIxMg&ptn=3&ver=2&hsh=3&fclid=2efba68b-7115-6f68-1de1-b23470146eb2&psq=rehl+7+to+7%2c9+on+sap&u=a1aHR0cHM6Ly9hY2Nlc3MucmVkaGF0LmNvbS9hcnRpY2xlcy81ODA1NTcx&ntb=1)
 
-[Recommended Practices for Applying Software Updates to a RHEL High Availability or Resilient Storage Cluster](https://access.redhat.com/articles/2059253#pacemaker)
+- [Recommended Practices for Applying Software Updates to a RHEL High Availability or Resilient Storage Cluster](https://access.redhat.com/articles/2059253#pacemaker)
 
 
 > [!NOTE] 
