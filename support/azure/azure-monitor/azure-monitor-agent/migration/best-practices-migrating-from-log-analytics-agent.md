@@ -27,7 +27,7 @@ Azure Monitor Agent introduces a simplified and flexible method of configuring d
 
 ### More benefits of migration
 
-In addition to consolidating and improving on the legacy Log Analytics agent, Azure Monitor Agent provides some immediate benefits:
+In addition to providing a more focused and improved set of features than the legacy Log Analytics agent offers, Azure Monitor Agent provides some immediate benefits:
 
 - Cost savings
 - Simplified management experience
