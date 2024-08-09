@@ -30,9 +30,9 @@ You see many notifications in Microsoft Teams about [News that's posted to Micro
 
 The Viva Connections app delivers notifications in Teams about SharePoint News posts. The notifications link to the Viva Connections app, where you can read the News items.  
 
-Because of a recent update, the Viva Connections app is now pre-installed for all Teams users. Therefore, you now receive notifications about SharePoint News when:
+Because of a recent update, the Viva Connections app is now preinstalled for all Teams users. Therefore, you now receive notifications about SharePoint News when:
 
-- News is published to a SharePoint team site or a communication site that's followed either by you or by someone who works closely with you.
+- News is published to a SharePoint team site or a communication site that you follow or that someone who works closely with you follows.
 - News that's targeted to you is boosted.
 - Someone comments on a new News item that you posted.
 - Someone "Likes" a News item that you posted.
