@@ -42,7 +42,7 @@ DC object GUID: <GUID> Last attempt @ <DateTime> failed, result 1818 (0x71a): Ca
 
 ## Cause
 
-This issue may occur when destination domain controllers that are performing remote procedure call (RPC)-based replication don't receive replication changes from a source domain controller within the time that the RPC Replication Timeout (mins) registry setting specifies (The default value is five minutes if the registry entry doesn't exist). You might experience this issue most frequently in one of the following situations:
+This issue may occur when destination domain controllers that are performing remote procedure call (RPC)-based replication don't receive replication changes from a source domain controller within the time that the `RPC Replication Timeout (mins)` registry setting specifies (The default value is five minutes if the registry entry doesn't exist). You might experience this issue most frequently in one of the following situations:
 
 - You promote a new domain controller into the forest by using the Active Directory Installation Wizard (Dcpromo.exe).
 - Existing domain controllers replicate from source domain controllers that are connected over slow network links.
@@ -53,7 +53,7 @@ This issue may occur when destination domain controllers that are performing rem
 > - Registry value location: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`
 > - Registry value type: `REG_DWORD`
 
-The default value for the RPC Replication Timeout (mins) registry setting on Windows 2000-based computers is 45 minutes. The default value for the RPC Replication Timeout (mins) registry setting on Windows Server 2003-based computers is 5 minutes. When you upgrade the operating system from Windows 2000 to Windows Server 2003, the value for the RPC Replication Timeout (mins) registry setting is changed from 45 minutes to 5 minutes. If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the RPC Replication Timeout (mins) registry setting specifies, the destination domain controller ends the RPC connection with the non-responsive source domain controller and logs a Warning event.
+The default value for the `RPC Replication Timeout (mins)` registry setting on Windows 2000-based computers is 45 minutes. The default value for the `RPC Replication Timeout (mins)` registry setting on Windows Server 2003-based computers is 5 minutes. When you upgrade the operating system from Windows 2000 to Windows Server 2003, the value for the `RPC Replication Timeout (mins)` registry setting is changed from 45 minutes to 5 minutes. If a destination domain controller that is performing RPC-based replication doesn't receive the requested replication package within the time that the `RPC Replication Timeout (mins)` registry setting specifies, the destination domain controller ends the RPC connection with the non-responsive source domain controller and logs a Warning event.
 
 ## Resolution
 
