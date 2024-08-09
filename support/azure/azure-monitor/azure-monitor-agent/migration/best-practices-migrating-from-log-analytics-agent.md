@@ -7,7 +7,7 @@ ms.service: azure-monitor
 ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 #Customer intent: As an Azure Monitor user, I want to learn about best practices for migrating to Azure Monitor Agent so that I can move on from using the legacy Log Analytics agent.
 ---
-# Best practices for migrating to Azure Monitor Agent from Log Analytics agent
+# Best practices for migrating from Log Analytics agent to Azure Monitor Agent
 
 This article provides guidance to implement a successful migration from the legacy Log Analytics agent to Microsoft Azure Monitor Agent (AMA).
 
