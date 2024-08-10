@@ -27,8 +27,6 @@ When people run into unexpected issues after information barriers are in place, 
 > [!IMPORTANT]
 > To perform the tasks described in this article, you must be assigned an appropriate role, such as one of the following:
 >
-> - Microsoft 365 Enterprise Global Administrator
-> - global administrator
 > - Compliance Administrator
 > - IB Compliance Management (this is a new role!)
 >
