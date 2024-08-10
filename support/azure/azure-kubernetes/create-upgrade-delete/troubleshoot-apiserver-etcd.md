@@ -26,6 +26,15 @@ Microsoft has tested the reliability and performance of the API server at a scal
 
 - The [kubectl-aks](https://go.microsoft.com/fwlink/p/?linkid=2259767#install) plugin for running commands directly on AKS nodes without using the Kubernetes control plane.
 
+
+
+## Basic Health Checks
+
+- Start with Resource Health Center
+  AKS exposes Resource Health Events for critical downtime of components.  Before proceeeding, make sure to verify that there are no such critical events in Resource Health.
+  <img width="935" alt="image" src="https://github.com/user-attachments/assets/5a34b4a8-ada1-4a4a-91ea-e76b62eba430">
+
+
 ## Symptoms
 
 The following table outlines the common symptoms of API server failures:
