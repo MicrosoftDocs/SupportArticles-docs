@@ -23,7 +23,8 @@ Choose the approach that best fits your specific requirements and needs.
 ## Prerequisites to run DCR Config Generator tool
 - PowerShell version 7.1.3 or higher is recommended (minimum version 5.1)  
 To determine which version of PowerShell is installed on your machine, copy and run the following command:
-```powershell
+```
+    powershell
 	$PSVersionTable
 ```
 - Az PowerShell module to pull workspace agent configuration information Az PowerShell module. To install the Az PowerShell module, see [Install Azure PowerShell on Windows](/powershell/azure/install-azps-windows)
@@ -42,20 +43,14 @@ To use the DCR Config Generator, follow these steps:
 
 1. Run the tool and specify the required parameters, such as the following items:
 
-   - Subscription ID
-   - Resource group name
-   - Workspace Name
-   - DCR Name
+   - Source Subscription ID (SubscriptionID:)
+   - Source Resource group name (ResourceGroupName:)
+   - Source Workspace Name (WorkspaceName:)
+   - DCR Naming Prefix (DcrName:)
    
-   The tool connects to your Log Analytics workspace and retrieves the configuration of the legacy agents. Then, it generates one or more data collection rules in JSON format and stores the rules in a local folder.
+   The tool establishes a connection with your Log Analytics workspace, retrieves the settings from the existing source workspace, and then generates DCR arm template files in JSON format. These files are subsequently saved in a local directory for your review.
 
-1. Review the generated rules. Make any necessary adjustments, such as the following changes:
-
-   - Adding custom logs or metrics
-   - Modifying the filters
-   - Changing the retention period
-
-1. Deploy the rules to your Azure Monitor workspace by using the Azure CLI or Azure portal.
+1. Choose a template file to deploy one of the created DCR ARM templates to your subscription.
 
 1. Associate the rules with your VMs that are running Azure Monitor Agent by using the built-in association policies.
 
