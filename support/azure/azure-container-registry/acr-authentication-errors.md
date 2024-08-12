@@ -1,16 +1,16 @@
 ---
-title: Troubleshoot the most common ACR authentication errors
-description: Provides solutions to the most common authentication errors when you pull images from a Azure container registry.
+title: Troubleshoot Azure Container Registry authentication issues
+description: Helps resolve the most common authentication errors that occur when you pull images from a Azure container registry.
 ms.date: 08/12/2024
 ms.reviewer: chiragpa, v-rekhanain, v-weizhu
 ms.service: azure-container-instances
 ms.custom: sap:Authenticate to registry
 ---
-# Troubleshoot the most common Azure Container Registry authentication errors
+# Troubleshoot Azure Container Registry authentication issues
 
 Azure Container Registry (ACR) is a private registry service. To perform operations such as push or pull (except the [anonymous pull](/azure/container-registry/anonymous-pull-access) operation), you have to authenticate against the ACR first.
 
-This article helps you troubleshoot the most common authentication errors that occur when you pull images from a container registry and provides solutions to them.
+This article helps you troubleshoot ACR authentication issues and provides solutions to the most common errors that occur when you pull images from a container registry.
 
 ## Initial troubleshooting
 
