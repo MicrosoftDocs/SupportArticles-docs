@@ -26,7 +26,7 @@ This article helps you troubleshoot the most common authentication errors that o
 
     If a problem is detected, the command output provides an error code and description. For more information about the error code and possible solutions, see [Health check error reference](/azure/container-registry/container-registry-health-error-reference).
 
-    > [NOTE]
+    > [!NOTE]
     > If you get Helm-related or Notary-related errors, it doesn't mean that you have an issue affecting Container Registry or your device. It only indicates that Helm or Notary isn't installed, or that Azure CLI isn't compatible with the current installed version of Helm or Notary.
 
 ## Error 1: DOCKER_COMMAND_ERROR "Please verify if Docker client is installed and running"
@@ -35,11 +35,11 @@ Here's an example for the error detail:
 
 ```output
 You may want to use 'az acr login -n <acr-name> --expose-token' to get an access token, which does not require Docker to be installed.
-\<date and time> An error occurred: DOCKER_COMMAND_ERROR
+<date and time> An error occurred: DOCKER_COMMAND_ERROR
 Please verify if Docker client is installed and running.
 ```
 
-### Solution 1: Install Docker
+### Solution 1: Make sure Docker is installed
 
 The `az acr login` command calls the `docker login` command and uses the Microsoft Entra access token to authenticate against the ACR. It requires the Docker client and Docker daemon to be installed on the machine where you're executing the command. To install Docker, see [Install Docker Engine](https://docs.docker.com/engine/install/).
 
@@ -71,15 +71,15 @@ Here's an example for the error detail:
 Error response from daemon: Get "https://<acr-name>.azurecr.io/v2/": unauthorized: {"errors":[{"code":"UNAUTHORIZED","message":"authentication required, visit https://aka.ms/acr/authorization for more information."}]}
 ```
 
-The error indicates authentication failed when accessing the ACR. This error can occur due to running the `az acr login` or `docker login` command with an incorrect username and/or password, an expired credential (when using a service principal, a token with a scope map, or the admin user).
+The error indicates authentication failed when accessing the ACR. This error can occur due to running the `az acr login` or `docker login` command with an incorrect username and/or password, or an expired credential (when using a service principal, a token with a scope map, or the admin user).
 
-### Solution 1: Use the correct username and/or password
+### Solution 1: Use the correct/valid username and/or password
 
 - If you're using the admin user to authenticate, check the credential in the **Access keys** blade and check if they're the ones you're using in your `docker login` or `az acr login` command.
 
-     :::image type="content" source="media/acr-authentication-errors/access-keys-blade.png" alt-text="A screenshot that shows the ACR 'Access keys' blade." lightbox="media/acr-authentication-errors/access-keys-blade.png":::
+     :::image type="content" source="media/acr-authentication-errors/access-keys-blade.png" alt-text="A screenshot that shows the ACR 'Access keys' blade.":::
  
-    > [NOTE!]
+    > [!NOTE]
     > A password that you have been used before might have been regenerated. 
 
 - If you're using a token associated with a scope map, check the used credential. Once you generate a password for a token, you have to retrieve it and store the credential safely because the password won't be displayed anymore after you close the screen. See the message in the following screenshot:
