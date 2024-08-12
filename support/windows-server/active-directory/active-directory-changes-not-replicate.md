@@ -1,7 +1,7 @@
 ---
 title: Active Directory changes don't replicate
 description: Provides a solution to an issue where the replication isn't completed when you replicate Active Directory directory service changes to a domain controller.
-ms.date: 08/09/2024
+ms.date: 08/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -44,7 +44,7 @@ DC object GUID: <GUID> Last attempt @ <DateTime> failed, result 1818 (0x71a): Ca
 
 This issue may occur when destination domain controllers that are performing remote procedure call (RPC)-based replication don't receive replication changes from a source domain controller within the time that the `RPC Replication Timeout (mins)` registry setting specifies (The default value is five minutes if the registry entry doesn't exist). You might experience this issue most frequently in one of the following situations:
 
-- You promote a new domain controller into the forest by using the Active Directory Installation Wizard (Dcpromo.exe).
+- You promote a new domain controller into the forest by using the Active Directory Domain Services Configuration Wizard from the Server Manager management console or via the `Install-ADDSDomainController` cmdlet.
 - Existing domain controllers replicate from source domain controllers that are connected over slow network links.
 
 > [!NOTE]
