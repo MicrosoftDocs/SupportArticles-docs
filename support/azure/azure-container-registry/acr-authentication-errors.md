@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the most common ACR authentication errors
-description: Provides solutions to the most common authentication errors when you pull images from Azure Container Registry.
+description: Provides solutions to the most common authentication errors when you pull images from a Azure container registry.
 ms.date: 08/12/2024
 ms.reviewer: chiragpa, v-rekhanain, v-weizhu
 ms.service: azure-container-instances
@@ -8,7 +8,7 @@ ms.custom: sap:Authenticate to registry
 ---
 # Troubleshoot the most common Azure Container Registry authentication errors
 
-Azure Container Registry (ACR) is a private registry. To perform operations such as push or pull (except the [anonymous pull](/azure/container-registry/anonymous-pull-access) operation), you have to authenticate against the ACR first.
+Azure Container Registry (ACR) is a private registry service. To perform operations such as push or pull (except the [anonymous pull](/azure/container-registry/anonymous-pull-access) operation), you have to authenticate against the ACR first.
 
 This article helps you troubleshoot the most common authentication errors that occur when you pull images from a container registry and provides solutions to them.
 
@@ -27,7 +27,7 @@ This article helps you troubleshoot the most common authentication errors that o
     If a problem is detected, the command output provides an error code and description. For more information about the error code and possible solutions, see [Health check error reference](/azure/container-registry/container-registry-health-error-reference).
 
     > [!NOTE]
-    > If you get Helm-related or Notary-related errors, it doesn't mean that you have an issue affecting Container Registry or your device. It only indicates that Helm or Notary isn't installed, or that Azure CLI isn't compatible with the current installed version of Helm or Notary.
+    > If you get Helm-related or Notary-related errors, it doesn't mean that you have an issue affecting the container registry or your device. It only indicates that Helm or Notary isn't installed, or that Azure CLI isn't compatible with the current installed version of Helm or Notary.
 
 ## Error 1: DOCKER_COMMAND_ERROR "Please verify if Docker client is installed and running"
 
