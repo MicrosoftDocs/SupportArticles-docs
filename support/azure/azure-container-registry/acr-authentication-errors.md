@@ -55,7 +55,7 @@ Here's an example for the error detail:
 This command requires running the docker daemon, which is not supported in Azure Cloud Shell. You may want to use 'az acr login -n <acr-name> --expose-token' to get an access token, which does not require Docker to be installed.
 ```
 
-### Solution 1: Run the "az acr login -n <acr-name>" command in another environment
+### Solution 1: Run the "az acr login -n \<acr-name>" command in another environment
 
 The `az acr login -n <acr-name>` requires the Docker client and Docker daemon to run. The Azure Cloud Shell provides only the Docker client. To resolve this error, run the `az acr login -n <acr-name>` command in an environment where you have the Docker daemon installed.
 
@@ -77,26 +77,26 @@ The error indicates authentication failed when accessing the ACR. This error can
 
 - If you're using the admin user to authenticate, check the credential in the **Access keys** blade and check if they're the ones you're using in your `docker login` or `az acr login` command.
 
-     :::image type="content" source="media/acr-pull-image-authentication-errors/access-keys-blade.png" alt-text="A screenshot that shows the ACR 'Access keys' blade." lightbox="media/acr-pull-image-authentication-errors/access-keys-blade.png":::
+     :::image type="content" source="media/acr-authentication-errors/access-keys-blade.png" alt-text="A screenshot that shows the ACR 'Access keys' blade." lightbox="media/acr-authentication-errors/access-keys-blade.png":::
  
     > [NOTE!]
     > A password that you have been used before might have been regenerated. 
 
 - If you're using a token associated with a scope map, check the used credential. Once you generate a password for a token, you have to retrieve it and store the credential safely because the password won't be displayed anymore after you close the screen. See the message in the following screenshot:
 
-    :::image type="content" source="media/acr-pull-image-authentication-errors/store-your-credentials-safely-after-generation.png" alt-text="A screenshot that shows the 'store the credential safely after generation' message." lightbox="media/acr-pull-image-authentication-errors/store-your-credentials-safely-after-generation.png":::
+    :::image type="content" source="media/acr-authentication-errors/store-your-credentials-safely-after-generation.png" alt-text="A screenshot that shows the 'store the credential safely after generation' message." lightbox="media/acr-authentication-errors/store-your-credentials-safely-after-generation.png":::
  
     If you aren't sure about the used password, you can consider [regenerating](/azure/container-registry/container-registry-repository-scoped-permissions#regenerate-token-passwords) it.
 
 - If you're using a token associated with a scope map, an expiration date can be set for the password. To view the expiration date, you can run the Azure CLI commands described in [Show token details](/azure/container-registry/container-registry-repository-scoped-permissions#show-token-details), or open the token in the Azure portal and check the **Expiration date** as per the following screenshot:
 
-    :::image type="content" source="media/acr-pull-image-authentication-errors/token-expiration-data.png" alt-text="A screenshot that shows the 'Expiration date' column." lightbox="media/acr-pull-image-authentication-errors/token-expiration-data.png":::
+    :::image type="content" source="media/acr-authentication-errors/token-expiration-data.png" alt-text="A screenshot that shows the 'Expiration date' column." lightbox="media/acr-authentication-errors/token-expiration-data.png":::
  
 - If you're using a service principal, make sure it has the specific permissions to authenticate with the ACR. To find the specific permissions and available built-in roles, see [Azure Container Registry roles and permissions](/azure/container-registry/container-registry-roles).
 
 - If you're using a service principal, check the used credential. Once you generate a secret, you have to retrieve it and store the credential safely because the password won't be displayed anymore after you close the screen. See the message in the following screenshot:
 
-    :::image type="content" source="media/acr-pull-image-authentication-errors/save-secret-when-created-before-leaving-page.png" alt-text="A screenshot that shows the 'save the secret when created before leaving the page' message." lightbox="media/acr-pull-image-authentication-errors/save-secret-when-created-before-leaving-page.png":::
+    :::image type="content" source="media/acr-authentication-errors/save-secret-when-created-before-leaving-page.png" alt-text="A screenshot that shows the 'save the secret when created before leaving the page' message." lightbox="media/acr-authentication-errors/save-secret-when-created-before-leaving-page.png":::
  
     If you aren't sure about the used secret value, you can consider [creating a new secret](/entra/identity-platform/quickstart-register-app#add-credentials).
 
@@ -110,7 +110,7 @@ The error indicates authentication failed when accessing the ACR. This error can
 
     Or check the secret validity by verifying the **Expires** column in the Azure portal:
 
-    :::image type="content" source="media/acr-pull-image-authentication-errors/acr-secret-expires-value.png" alt-text="A screenshot that shows the ACR  'Expires' column." lightbox="media/acr-pull-image-authentication-errors/acr-secret-expires-value.png":::
+    :::image type="content" source="media/acr-authentication-errors/acr-secret-expires-value.png" alt-text="A screenshot that shows the ACR  'Expires' column." lightbox="media/acr-authentication-errors/acr-secret-expires-value.png":::
  
     If the secret is expired, you can consider [creating a new secret](/entra/identity-platform/quickstart-register-app#add-credentials).
 
@@ -144,4 +144,4 @@ ACR has a built-in firewall that's a mechanism to restrict public access. It can
 
 Alternative, you can consider to [connect privately to the Azure container registry using Azure Private Link](/azure/container-registry/container-registry-private-link).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
