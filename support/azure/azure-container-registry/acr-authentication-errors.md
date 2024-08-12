@@ -73,7 +73,7 @@ Error response from daemon: Get "https://<acr-name>.azurecr.io/v2/": unauthorize
 
 The error indicates authentication failed when accessing the ACR. This error can occur due to running the `az acr login` or `docker login` command with an incorrect username and/or password, or an expired credential (when using a service principal, a token with a scope map, or the admin user).
 
-### Solution 1: Use the correct/valid username and/or password
+### Solution: Use the correct/valid username and/or password
 
 - If you're using the admin user to authenticate, check the credential in the **Access keys** blade and check if they're the ones you're using in your `docker login` or `az acr login` command.
 
@@ -124,7 +124,7 @@ Access to registry '<acr-name>.azurecr.io' was denied. Response code: 401. Pleas
 Unable to get admin user credentials with message: The resource with name '<acr-name>' and type 'Microsoft.ContainerRegistry/registries' could not be found in subscription '<subscription-name> (<subscription-id>)'.
 ```
 
-### Solution 1: Make sure the used identity has the specific permission
+### Solution: Make sure the used identity has the specific permission
 
 Make sure the identity (such as a user or managed identity) used to authenticate has the specific permission. To find the specific permissions and available built-in roles, [Azure Container Registry roles and permissions](/azure/container-registry/container-registry-roles).
 
@@ -138,7 +138,7 @@ Access to registry '<acr-name>.azurecr.io' was denied. Response code: 403. Pleas
 Error response from daemon: Get "https://<acr-name>.azurecr.io/v2/": denied: {"errors":[{"code":"DENIED","message":"client with IP \u0027<ip-address>\u0027 is not allowed access. Refer https://aka.ms/acr/firewall to grant access."}]}
 ```
 
-### Solution 1: Make sure the device where you're trying to authenticate has connectivity with the ACR
+### Solution: Make sure the device where you're trying to authenticate has connectivity with the ACR
 
 ACR has a built-in firewall that's a mechanism to restrict public access. It can allow full access, allow specific networks only, or fully disable the public access. However, to authenticate successfully, proper connectivity is required. Ensure your IP address is permitted to access and login to the registry. For more information about configuring public access, see [Configure public IP network rules](/azure/container-registry/container-registry-access-selected-networks).
 
