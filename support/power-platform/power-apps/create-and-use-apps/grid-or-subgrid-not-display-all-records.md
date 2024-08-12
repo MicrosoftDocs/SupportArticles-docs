@@ -3,7 +3,7 @@ title: Grid or subgrid doesn't display all the records in a model-driven app
 description: Provides troubleshooting steps for an issue where the grid or subgrid doesn't display all the records in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 08/08/2024
+ms.date: 08/12/2024
 author: fikaradz
 ms.author: fikaradz
 ---

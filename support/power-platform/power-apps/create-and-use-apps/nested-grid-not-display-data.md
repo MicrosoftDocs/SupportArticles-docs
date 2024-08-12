@@ -3,7 +3,7 @@ title: Nested grid doesn't display data in a model-driven app
 description: Troubleshoots an issue where a nested grid doesn't display data in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 08/08/2024
+ms.date: 08/12/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -19,7 +19,7 @@ The most common reason is using an incorrect relationship or applying an incorre
 
 1. Make sure the nested grid is configured with the correct relationship.
 
-   The [Child Items Parent Id](/power-apps/maker/model-driven-apps/the-power-apps-grid-control#configure-the-power-apps-grid-control) parameter must be set to a lookup type field from the entity assigned to the parent grid (the **Accounts** in the following screenshot). The lookup field should point to the nested grid entity. Make sure it's a standard lookup type with a standard N:1 (many-to-one) relationship.
+   The [Child Items Parent Id](/power-apps/maker/model-driven-apps/the-power-apps-grid-control#configure-the-power-apps-grid-control) parameter must be set to a lookup type field from the entity assigned to the parent grid (bound to Accounts entity as shown in the following screenshot). The lookup field should point to the nested grid entity. Make sure it's a standard lookup type with a standard N:1 (many-to-one) relationship.
 
    :::image type="content" source="media/nested-grid-not-display-data/child-items-parent-id.png" alt-text="Screenshot that shows the Child Items Parent ID parameter in Power Apps grid control.":::
 
