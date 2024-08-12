@@ -50,7 +50,7 @@ To do this, follow these steps:
 1. When the download process finishes, select **Close**.
 1. Browse to the download location, and then double-click the download package to install the update.
 
-Or
+Or:
 
 1. Use the location you saved the update file to (for example, C:\\temp).
 2. Open an elevated command prompt and run the following command:
@@ -59,7 +59,7 @@ Or
     Dism /online /add-package /packagepath:C:\temp\<KB file name>.msu
     ```
 
-This should skip Windows Update agent applicability checks and can make the installation go further or quicker. 
+  This should skip Windows Update agent applicability checks and can make the installation go further or quicker. 
 
 ## Common issues and solutions
 
