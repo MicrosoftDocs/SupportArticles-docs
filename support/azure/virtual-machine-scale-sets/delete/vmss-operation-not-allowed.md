@@ -2,7 +2,7 @@
 title: Deletion of Virtual Machine Scale Set isn't allowed as it contains one or more VMs
 description: Learn how to resolve the OperationNotAllowed error when you deploy a Virtual Machine Scale Set by using Flexible orchestration mode.
 ms.date: 01/31/2023
-ms.service: virtual-machine-scale-sets
+ms.service: azure-virtual-machine-scale-sets
 ms.reviewer: mimckitt, v-leedennis
 ms.custom: sap:Cannot delete my scaleset or instances
 ---
