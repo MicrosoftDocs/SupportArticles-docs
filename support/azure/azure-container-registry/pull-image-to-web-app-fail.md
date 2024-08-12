@@ -29,7 +29,7 @@ If a problem is detected, it provides an error code and description. For more in
 Next, identifying the pull-related error message that is essential for troubleshooting:
 
 1. Sign into [Azure portal](https://portal.azure.com).
-1. Move to the your web app > **Deployment Center** > **Log**. Select the commit to view the log details. You can also view the logs for the image pull process in real time by checking **Log stream** under the **Monitoring** section.
+1. Move to your web app > **Deployment Center** > **Log**. Select the commit to view the log details. You can also view the logs for the image pull process in real time by checking **Log stream** under the **Monitoring** section.
 
 The following sections help you troubleshoot the most common errors that are displayed in the Web App logs.
 
@@ -39,7 +39,7 @@ The following sections help you troubleshoot the most common errors that are dis
 
 ### Solution for Admin user based authentication
 
-The unauthorized error can be caused by the admin credentials (username, password, or login server) you configured in the variables environment of the web app is incorrect.
+The unauthorized error can be caused by incorrect admin credentials. This includes the username, password, or login server you configured in the web app's environment variables.
 
 To resolve the issue, follow these steps:
 
@@ -49,7 +49,7 @@ To resolve the issue, follow these steps:
 
 ## Solution for the managed identity based on authentication
 
-When using Azure Web App’s managed based on the authentication, the `Microsoft.ContainerRegistry/registries/pull/read` permission must be assigned to the managed identity to perform the pull action.
+When you use Azure Web App’s managed based on the authentication, the `Microsoft.ContainerRegistry/registries/pull/read` permission must be assigned to the managed identity to perform the pull action.
 
 Azure built-roles that contain the `Microsoft.ContainerRegistry/registries/pull/read` permission are:
 
@@ -60,7 +60,7 @@ Azure built-roles that contain the `Microsoft.ContainerRegistry/registries/pull/
 
 For more information, see [Azure Container Registry roles and permissions](/azure/container-registry/container-registry-roles?tabs=azure-cli)
 
-When you initiate a pull operation from the container registry, the AcrPull role is automatically assigned to the Azure Web App's managed identity. You don’t need to manually add permissions. However, you need to ensure that the role assignment creation isn't blocked (for example, by an Azure Policy) or hasn't been deleted.
+When you initiate a pull operation from the container registry, the AcrPull role is automatically assigned to the Azure Web App's managed identity. You don’t need to manually add permissions. However, you need to ensure that the role assignment creation isn't blocked, for example, by an Azure Policy. Additionally, verify that the role assignment hasn't been deleted.
 
 ## Error 2: manifest tagged by &lt;tag&gt; is not found
 
@@ -76,11 +76,11 @@ To find the tags within the associated repository and registry by using Azure CL
 az acr repository show-tags -n <container_registry_name> --repository <repository_name>
 ```
 
-To find the tags within the associated repository and registry using the Azure Portal:
+To find the tags within the associated repository and registry using the Azure portal:
 
 Navigate to your registry container. Under **Services**, select **Repositories**, open the associated repository, and then check the list of tags.
 
-> [!NOTE] The `az acr repository show-tags` command or checking the Repositories from the Azure Portal only works if the ACR network rules permit it.
+> [!NOTE] The `az acr repository show-tags` command or checking the Repositories from the Azure portal only works if the ACR network rules permit it.
 
 ## Error 3: client with IP is not allowed access
 
@@ -88,11 +88,11 @@ Navigate to your registry container. Under **Services**, select **Repositories**
 
 ### Solution 1: Make sure the container registry built-in firewall allows your device’s IP address
 
-An container registry by default accepts connections over the internet from all networks. To limit the public access, The container registry has a built-in firewall that can restrict the access to specific IP addresses or CIDRs or to fully disable the public network access.
+A container registry by default accepts connections over the internet from all networks. To limit the public access, The container registry has a built-in firewall that can restrict the access to specific IP addresses or CIDRs or to fully disable the public network access.
 
 This issue can occur if the IP addresses of your web app are blocked by the container registry built-in firewall.
 
-To resolve this issue, make sure the the container registry's built-in firewall allows the outbound IP addresses of the web app that needs to pull the image. 
+To resolve this issue, make sure the container registry's built-in firewall allows the outbound IP addresses of the web app that needs to pull the image. 
 
 To find web app’s outbound IP addresses, follow these steps:
 
@@ -112,7 +112,7 @@ You can configure virtual network integration at the web wpp side by using the f
 1. In the **Virtual network configuration** page, make sure that the **Container image pull** option is selected.
     :::image type="content" source="media/pull-image-to-web-app-fail/container-image-pull-option.png" alt-text="Screenshot of the Container image pull option." lightbox="media/pull-image-to-web-app-fail/container-image-pull-option.png":::
 
-To pull the image over the virtual network, you must enable **Pull image over VNet** in the **Deployment Center** of the web app. Additionally, if the container registry has the public access disabled or set to selected networks, you may get the **failed to load ACR Tags - failed.** message as the the following example. That is expected in this scenario. As a result, the drop-down options for **Image** and **Tag** won’t be available.You need to manually enter the image and tag.
+To pull the image over the virtual network, you must enable **Pull image over VNet** in the **Deployment Center** of the web app. Additionally, if the container registry has the public access disabled or set to selected networks, you may get the **failed to load ACR Tags - failed** message as the following example. That is expected in this scenario. As a result, the drop-down options for **Image** and **Tag** won’t be available. You need to manually enter the image and tag.
 
     :::image type="content" source="media/pull-image-to-web-app-fail/failed-to-load-acr-error.png" alt-text="Screenshot of the failed to load ACR Tags error message." lightbox="media/pull-image-to-web-app-fail/failed-to-load-acr-error.png":::
  
