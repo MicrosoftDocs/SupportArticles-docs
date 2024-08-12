@@ -4,7 +4,7 @@ items:
 
 - name: Authentication and Security
   items:
-  - name: Most common authentication errors
+  - name: Troubleshoot authentication errors
     href: acr-authentication-errors.md
 
 - name: Troubleshoot container registry issues
