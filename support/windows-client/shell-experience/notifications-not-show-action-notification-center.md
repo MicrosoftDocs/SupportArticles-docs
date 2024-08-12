@@ -1,12 +1,12 @@
 ---
 title: Notifications don't show in the action or notification center
 description: Provides basic guidelines to resolve the issue in which notifications don't show in the action or notification center by checking if the Quiet Hours (also known as focus assist) option is enabled.
-ms.date: 08/07/2024
+ms.date: 08/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, v-lianna
+ms.reviewer: kaushika, warrenw, rafern, v-lianna
 ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe init, themes, colors, icons, recycle bin), csstroubleshoot
 ---
 # Notifications don't show in the action or notification center
