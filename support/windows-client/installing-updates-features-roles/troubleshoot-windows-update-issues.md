@@ -54,7 +54,7 @@ To do this, follow these steps:
 > To skip Windows Update agent applicability checks and make the installation go further or quicker, open an elevated command prompt and run the following command: 
 >
 > ```cmd
-> Dism /online /add-package /packagepath:C:\temp\<KB file name>.msu
+> Dism /online /add-package /packagepath:<path_to_package>
 > ```
 
 ## Common issues and solutions
