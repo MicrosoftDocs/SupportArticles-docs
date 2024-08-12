@@ -27,11 +27,11 @@ To see which legacy data collections are configured in the Log Analytics workspa
 
    - **Windows event logs**
 
-         :::image type="content" source="media/step-2-understand-your-data-collection/windows-event-logs.png" alt-text="Azure portal screenshot of the Windows event logs tab." lightbox="media/step-2-understand-your-data-collection/windows-event-logs.png":::
+     :::image type="content" source="media/step-2-understand-your-data-collection/windows-event-logs.png" alt-text="Azure portal screenshot of the Windows event logs tab." lightbox="media/step-2-understand-your-data-collection/windows-event-logs.png":::
      
    - **Windows performance counters**
 
-         :::image type="content" source="media/step-2-understand-your-data-collection/windows-performance-counters.png" alt-text="Azure portal screenshot of the Windows performance counters tab." lightbox="media/step-2-understand-your-data-collection/windows-performance-counters.png":::
+     :::image type="content" source="media/step-2-understand-your-data-collection/windows-performance-counters.png" alt-text="Azure portal screenshot of the Windows performance counters tab." lightbox="media/step-2-understand-your-data-collection/windows-performance-counters.png":::
      
    - **Linux performance counters**
    - **Syslog**
