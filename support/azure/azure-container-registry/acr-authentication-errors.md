@@ -14,7 +14,7 @@ This article helps you troubleshoot ACR authentication issues and provides solut
 
 ## Initial troubleshooting
 
-1. Identity the [authentication option](/azure/container-registry/container-registry-authentication#authentication-options) you're using. Once you choose one, reproduce the authentication issue to obtain the error.
+1. Identify the [authentication option](/azure/container-registry/container-registry-authentication#authentication-options) you're using. Once you choose one, reproduce the authentication issue to obtain the error.
 
 1. Start troubleshooting by checking [the health of an Azure container registry](/azure/container-registry/container-registry-check-health).
 
@@ -80,7 +80,7 @@ The error indicates authentication failed when accessing the ACR. This error can
      :::image type="content" source="media/acr-authentication-errors/access-keys-blade.png" alt-text="A screenshot that shows the ACR 'Access keys' blade.":::
  
     > [!NOTE]
-    > A password that you have been used before might have been regenerated. 
+    > A password that was used before might have been regenerated.
 
 - If you're using a token associated with a scope map, check the used credential. Once you generate a password for a token, you have to retrieve it and store the credential safely because the password won't be displayed anymore after you close the screen. See the message in the following screenshot:
 
