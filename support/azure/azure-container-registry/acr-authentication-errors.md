@@ -110,7 +110,7 @@ The error indicates authentication failed when accessing the ACR. This error can
 
     Or check the secret validity by verifying the **Expires** column in the Azure portal:
 
-    :::image type="content" source="media/acr-authentication-errors/acr-secret-expires-value.png" alt-text="A screenshot that shows the ACR  'Expires' column." lightbox="media/acr-authentication-errors/acr-secret-expires-value.png":::
+    :::image type="content" source="media/acr-authentication-errors/acr-secret-expires-value.png" alt-text="A screenshot that shows the ACR  'Expires' column.":::
  
     If the secret is expired, you can consider [creating a new secret](/entra/identity-platform/quickstart-register-app#add-credentials).
 
