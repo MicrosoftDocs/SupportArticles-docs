@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting Windows Update issues
 description: Learn how to troubleshoot scenarios related to Windows Updates
-ms.date: 08/09/2024
+ms.date: 08/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -50,16 +50,12 @@ To do this, follow these steps:
 1. When the download process finishes, select **Close**.
 1. Browse to the download location, and then double-click the download package to install the update.
 
-Or:
-
-1. Use the location you saved the update file to (for example, C:\\temp).
-2. Open an elevated command prompt and run the following command:
-
-    ```cmd
-    Dism /online /add-package /packagepath:C:\temp\<KB file name>.msu
-    ```
-
-  This should skip Windows Update agent applicability checks and can make the installation go further or quicker. 
+> [!NOTE]
+> To skip Windows Update agent applicability checks and make the installation go further or quicker, open an elevated command prompt and run the following command: 
+>
+> ```cmd
+> Dism /online /add-package /packagepath:C:\temp\<KB file name>.msu
+> ```
 
 ## Common issues and solutions
 
