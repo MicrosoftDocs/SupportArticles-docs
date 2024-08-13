@@ -47,7 +47,7 @@ To resolve the issue, follow these steps:
 1. Navigate to your web app. In the **Settings** section, Select **Environment variables**.
 1. Ensure that the three variables you configured for the container registry's login server, username, and password align with the admin user credentials settings in the registry container.
 
-## Solution for the managed identity based on authentication
+### Solution for managed identity based on authentication
 
 When you use Azure Web App’s managed identity based on the authentication, the `Microsoft.ContainerRegistry/registries/pull/read` permission must be assigned to the managed identity to perform the pull action.
 
