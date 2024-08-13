@@ -1,25 +1,25 @@
 ---
-title:  How to Perform a `Leapp` upgrade in Red Hat `PAYG` images.
+title:  How to Perform a leapp upgrade in Red Hat PAYG images.
 description: Guide with step by step procedure to do a leapp upgrade..
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
 editor: 
 ms.date: 07/30/2024
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to Perform a `Leapp` upgrade in Red Hat `PAYG` images
+# How to Perform a `leapp` upgrade in Red Hat PAYG images
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. In this article, we guide you through upgrading from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9 using a `PAYG` (Pay-As-You-Go) image for Red Hat.
+Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. In this article, we guide you through upgrading from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9 using a PAYG (Pay-As-You-Go) image for Red Hat.
 
 > [!IMPORTANT]
 > RHUI is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
-For more information on performing a `Leapp upgrade` process on custom or golden, and pay-as-you-go (PAYG) images provided by Red Hat, see:
+For more information on performing a `leapp upgrade` process on custom or golden, and pay-as-you-go (PAYG) images provided by Red Hat, see:
 
 - [Upgrading from RHEL 7 to 8](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index)
 
@@ -114,7 +114,7 @@ sudo dnf versionlock clear
 sudo dnf config-manager --set-enabled rhui-microsoft-azure-rhel8
 sudo dnf -y install rhui-azure-rhel8 leapp-rhui-azure
 ```
-3. Install the `Leapp` utility:
+3. Install the `leapp` utility:
 
 ```bash
 sudo dnf install leapp-upgrade
@@ -295,34 +295,34 @@ sudo dnf config-manager --save --setopt exclude=''
 
    a. Locate remaining RHEL 7 packages.
 
-```bash
-sudo rpm -qa | grep -e '\.el[67]' | grep -vE '^(gpg-pubkey|libmodulemd|katello-ca-consumer)' | sort
-```
+        ```bash
+        sudo rpm -qa | grep -e '\.el[67]' | grep -vE '^(gpg-pubkey|libmodulemd|katello-ca-consumer)' | sort
+        ```
 
    b. Remove old packages for RHEL 7.
 
-```bash
-sudo dnf remove $(rpm -qa | grep \.el[67] | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
-```
+        ```bash
+        sudo dnf remove $(rpm -qa | grep \.el[67] | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
+        ```
 
 3. Remove remaining RHEL 7 packages, including remaining `leapp` packages.
 
    a. Determine old kernel versions
 
-```bash
-sudo cd /lib/modules && sudo ls -d *.el7*
-```
-
-```output
-3.10.0-1160.119.1.el7.x86_64  3.10.0-1160.el7.x86_64
-3.10.0-1160.59.1.el7.x86_64
-```
+        ```bash
+        sudo cd /lib/modules && sudo ls -d *.el7*
+        ```
+        
+        ```output
+        3.10.0-1160.119.1.el7.x86_64  3.10.0-1160.el7.x86_64
+        3.10.0-1160.59.1.el7.x86_64
+        ```
 
    b. Remove weak modules from the old kernel. If you have multiple old kernels, repeat the following step for each kernel:
 
-```bash
-sudo [ -x /usr/sbin/weak-modules ] && sudo /usr/sbin/weak-modules --remove-kernel 3.10.0-1160.119.1.el7.x86_64
-```
+        ```bash
+        sudo [ -x /usr/sbin/weak-modules ] && sudo /usr/sbin/weak-modules --remove-kernel 3.10.0-1160.119.1.el7.x86_64
+        ```
 
 > [!NOTE]  
 > Replace `3.10.0-1160.119.1.el7.x86_64` accordingly.
@@ -343,28 +343,28 @@ sudo /bin/kernel-install remove 3.10.0-1160.119.1.el7.x86_64 /lib/modules/3.10.0
 5. Remove remaining RHEL 7 packages, including old kernel packages, and the kernel-workaround package from your RHEL 8 VM. To ensure that RPM dependencies are maintained.
 
    a. Remove `kernel-workaround` package.
-
-```bash
-sudo yum remove kernel-workaround $(rpm -qa | grep \.el7 | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
-```
+        
+        ```bash
+        sudo yum remove kernel-workaround $(rpm -qa | grep \.el7 | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
+        ```
 
    b. Remove remaining `Leapp` dependency packages.
 
-```bash
- sudo yum remove leapp-deps-el8 leapp-repository-deps-el8 leapp-rhui-azure
-```
+        ```bash
+         sudo yum remove leapp-deps-el8 leapp-repository-deps-el8 leapp-rhui-azure
+        ```
 
    c. Remove any remaining empty directories.
-
-```bash
-sudo rm -r /lib/modules/*el7*
-```
+        
+        ```bash
+        sudo rm -r /lib/modules/*el7*
+        ```
 
    d. **Optional*** Remove all remaining upgrade-related data from the system.
 
-```bash
-sudo rm -rf /var/log/leapp /root/tmp_leapp_py3 /var/lib/leapp
-```
+        ```bash
+        sudo rm -rf /var/log/leapp /root/tmp_leapp_py3 /var/lib/leapp
+        ```
 
 > [!IMPORTANT]  
 >Removing `leapp` data might limit Microsoft and Red Hat Support’s ability to investigate and troubleshoot post-upgrade problems.
@@ -382,27 +382,27 @@ sudo dnf config-manager --save --setopt exclude=''
 
    a. Locate remaining RHEL 8 packages.
 
-```bash
-sudo rpm -qa | grep -e '\.el[78]' | grep -vE '^(gpg-pubkey|libmodulemd|katello-ca-consumer)' | sort
-```
+        ```bash
+        sudo rpm -qa | grep -e '\.el[78]' | grep -vE '^(gpg-pubkey|libmodulemd|katello-ca-consumer)' | sort
+        ```
 
    b. Remove remaining RHEL 8 packages from your RHEL 9 virtual machine.
 
-```bash
-sudo dnf remove $(rpm -qa | grep \.el[78] | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
-```
+        ```bash
+        sudo dnf remove $(rpm -qa | grep \.el[78] | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
+        ```
 
    c. Remove remaining `Leapp` dependency packages.
 
-```bash
-sudo dnf remove leapp-deps-el9 leapp-repository-deps-el9
-```
+        ```bash
+        sudo dnf remove leapp-deps-el9 leapp-repository-deps-el9
+        ```
 
    d. **Optional*** Remove all remaining upgrade-related data from the system.
 
-```bash
-sudo rm -rf /var/log/leapp /root/tmp_leapp_py3 /var/lib/leapp
-```
+        ```bash
+        sudo rm -rf /var/log/leapp /root/tmp_leapp_py3 /var/lib/leapp
+        ```
 
 > [!IMPORTANT]  
 > Removing `leapp` data might limit Microsoft and Red Hat Support's ability to investigate and troubleshoot post-upgrade problems.
