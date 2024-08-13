@@ -1,14 +1,12 @@
 ---
 title: Access Denied error (Event ID 5566) when you open a form in the browser
 description: Describes how to work around an access denied issue that occurs when you open an InfoPath form.
-author: v-tappelgate
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
-ms.author: v-tappelgate
 ms.custom: 
   - sap:Permissions\Errors
   - CSSTroubleshoot
