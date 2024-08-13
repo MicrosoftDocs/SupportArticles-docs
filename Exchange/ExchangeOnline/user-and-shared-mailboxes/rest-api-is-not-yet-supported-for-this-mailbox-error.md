@@ -35,7 +35,7 @@ This error can occur if the mailbox is on a dedicated Microsoft Exchange Server 
 
 ## Resolution
 
-To get a valid Microsoft 365 mailbox, submit a request to your Exchange or Global administrator to migrate the mailbox account. Users who don't have administrator permissions can't migrate accounts. For  information on how to migrate the mailbox account, see [How to migrate mailbox data by using the Exchange Admin Center in Microsoft 365](/exchange/troubleshoot/mailbox-migration/migrate-data-with-admin-center).
+To get a valid Microsoft 365 mailbox, submit a request to your Exchange administrator to migrate the mailbox account. Users who don't have administrator permissions can't migrate accounts. For information on how to migrate the mailbox account, see [How to migrate mailbox data by using the Exchange Admin Center in Microsoft 365](/exchange/troubleshoot/mailbox-migration/migrate-data-with-admin-center).
 
 ## More information
 
