@@ -2,7 +2,7 @@
 title: How to reinstall Operations Management Suite (OMS) Agent for Linux
 description: Describes how to reinstall Operations Management Suite (OMS) Agent for Linux.
 ms.date: 06/06/2022
-ms.service: automation
+ms.service: azure-automation
 ms.author: genli
 author: genlin
 ms.reviewer:
