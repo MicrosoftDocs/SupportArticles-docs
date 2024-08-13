@@ -198,7 +198,7 @@
         "azure/virtual-machines/*.md": "azure-virtual-machines",
         "azure/cloud-services/*.md": "cloud-services",
         "azure/azure-functions/**/*.md": "azure-functions",
-        "azure/synapse-analytics/**/*.md": "synapse-analytics",
+        "azure/synapse-analytics/**/*.md": "azure-synapse-analytics",
         "azure/cosmos-db/**/*.md": "cosmos-db",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-pages/**/**.*": "power-pages",
