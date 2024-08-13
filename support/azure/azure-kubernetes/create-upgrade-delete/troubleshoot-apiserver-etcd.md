@@ -30,9 +30,14 @@ Microsoft has tested the reliability and performance of the API server at a scal
 
 ## Basic Health Checks
 
-- Start with Resource Health Center
+- Resource Health Center events
   AKS exposes Resource Health Events for critical downtime of components.  Before proceeeding, make sure to verify that there are no such critical events in Resource Health.
   <img width="935" alt="image" src="https://github.com/user-attachments/assets/5a34b4a8-ada1-4a4a-91ea-e76b62eba430">
+- Diagnose and Solve problems
+  AKS has a dedicated troubleshooting category for Control plane availability and performance.
+  ![image](https://github.com/user-attachments/assets/36ef3b6b-d278-4dd7-8e8b-70bbbdbdfd90)
+
+
 
 
 ## Symptoms
