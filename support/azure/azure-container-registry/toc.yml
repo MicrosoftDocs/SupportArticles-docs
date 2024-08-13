@@ -22,3 +22,5 @@ items:
     href: manifest-tag-not-found.md
   - name: '"Request canceled while waiting for connection" error'
     href: request-canceled-waiting-connection-timeout-exceeded.md
+  - name: Fail to pull images to Azure Web App
+    href: pull-image-to-web-app-fail.md
