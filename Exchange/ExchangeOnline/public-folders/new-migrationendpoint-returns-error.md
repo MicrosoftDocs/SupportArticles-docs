@@ -11,7 +11,7 @@ ms.custom:
   - sap:Migration
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: batre, ninob, v-six
+ms.reviewer: batre, ninob, 
 appliesto: 
   - Exchange Online
 search.appverid: MET150
@@ -38,42 +38,42 @@ These errors occur because the following mailboxes aren't on the same mailbox da
 
 ## Resolution
 
-To resolve this problem, make sure that the databases that host these two mailboxes are on the same server. To do this, follow these steps:
+To resolve the errors, make sure that the databases that host the two mailboxes are on the same server. Follow these steps:
 
-1. Locate the database that hosts the primary hierarchy public folder mailbox by running the one of the following cmdlet options:
+1. Run the following commands to locate the database that hosts the primary hierarchy public folder mailbox:
 
     ```powershell
     Set-ADServerSettings -ViewEntireForest:$true
     Get-MailboxDatabase (Get-Mailbox -PublicFolder | ?{$_.IsRootPublicFolderMailbox -eq $true}).database | Get-MailboxDatabaseCopyStatus
     ```
 
-2. Locate the database that hosts the arbitration mailbox named "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" by running one the following cmdlet options:
+2. Run the following commands to locate the database that hosts the arbitration mailbox named "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}":
 
     ```powershell
     Set-ADServerSettings -ViewEntireForest:$true
     Get-MailboxDatabase (Get-Mailbox -Arbitration "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}").database | Get-MailboxDatabaseCopyStatus
     ```
+    
+    > [NOTE!]
+    > If the arbitration mailbox doesn't exist or is corrupted, [re-create the arbitration mailbox](/exchange/architecture/mailbox-servers/recreate-arbitration-mailboxes) and ensure that it is located in the same mailbox database that hosts the primary hierarchy public folder mailbox. 
 
-3. Use following command to move the arbitration mailbox to the database that hosts Primary hierarchy public folder mailbox.
+3. Run the following commands to move the arbitration mailbox to the database that hosts the primary hierarchy public folder mailbox:
 
      ```powershell
     Set-ADServerSettings -ViewEntireForest:$true
     Get-Mailbox -Arbitration "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" | New-MoveRequest -TargetDatabase <Database that hosts Primary hierarchy public folder mailbox)
     ```
-Note:
-In case there is problem with the arbitration mailboxes (like the arbitration mailbox do not exists or are corrupted), use [this](https://learn.microsoft.com/exchange/architecture/mailbox-servers/recreate-arbitration-mailboxes) article to re-create the 
-arbitration mailboxes and ensure the conditions mentioned in the cause section are satisfied.
 
-4. Use following command to ensure the server hosting the arbitration mailbox and primary hierarchy public folder mailbox has MRS Proxy enabled.
+4. Run the following command to check whether MRS Proxy is enabled on the server which hosts the arbitration and primary hierarchy public folder mailboxes.
 
     ```powershell
     Get-WebServicesVirtualDirectory -Server <servername> |fl *mrsproxy*
     ```
 
-If MRSProxyEnabled is not True, use following command to enable the MRS Proxy:
+5. If the value of the MRSProxyEnabled parameter that's returned in is not **True**, run the following command to enable MRS Proxy:
 
     ```powershell
     Get-WebServicesVirtualDirectory -Server batexch5 |Set-WebServicesVirtualDirectory -MRSProxyEnabled:$true
     ```
 
-5. Try creating the migration endpoint
+6. Re-create the migration endpoint. 
