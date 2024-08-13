@@ -14,7 +14,7 @@ This article helps you troubleshoot some issues that occur when you delete image
 
 ## Issue 1: Unable to delete an empty repository
 
-When you try to delete an empty repository from the container registry, the following errors are thrown:
+When you try to delete an empty repository from a container registry, an error like the following one is thrown:
 
 - Error when using the Azure portal: 
 
