@@ -20,7 +20,7 @@ These solutions designed to get you started on Windows Update troubleshooting sc
 
 ### Step 1: Run the diagnostic tool for your version of Windows
 
-For any [supported version of Windows](/windows/release-health/supported-versions-windows-client), open an administrative command prompt window, and then run the following command:  
+For any [supported versions of Windows](/windows/release-health/supported-versions-windows-client), open an administrative command prompt window, and then run the following command:  
 
   ```cmd
   Dism /online /cleanup-image /restorehealth
@@ -85,7 +85,7 @@ Verify that the package that you're trying to install isn't already installed.
 
 #### Step 4: Have all prerequisite updates been installed?
 
-Read the package's related article to find out if the prerequisite updates are installed. For example, if you receive the error message in Windows 10, version 22H2 update [Windows July 23, 2024—KB5040525 (OS Build 19045.4717) Preview](https://support.microsoft.com/topic/july-23-2024-kb5040525-os-build-19045-4717-preview-381f029e-b20e-4a0f-9b7e-695ee7845168), you might have to install KB50282445, KB5031539 or more prerequisite servicing updates.
+Read the package's related article to find out if the prerequisite updates are installed. For example, if you receive the error message in Windows 10, version 22H2 update [Windows July 23, 2024—KB5040525 (OS Build 19045.4717) Preview](https://support.microsoft.com/topic/july-23-2024-kb5040525-os-build-19045-4717-preview-381f029e-b20e-4a0f-9b7e-695ee7845168), you might have to install KB50282445, KB5031539, or more prerequisite servicing updates.
 
 To determine whether these prerequisite updates are installed, open a Windows PowerShell window and run the following command:  
 
