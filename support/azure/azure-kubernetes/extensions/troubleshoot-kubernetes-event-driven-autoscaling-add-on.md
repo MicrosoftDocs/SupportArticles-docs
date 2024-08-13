@@ -2,7 +2,7 @@
 title: Troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on
 description: Learn how to troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on to the Azure Kubernetes Service (AKS).
 ms.service: azure-kubernetes-service
-ms.date: 11/09/2023
+ms.date: 08/13/2024
 editor: v-jsitser
 ms.reviewer: nickoman, v-leedennis, v-weizhu
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot problems that involve the Kubernetes Event-driven Autoscaling (KEDA) add-on so that I can successfully use event-driven autoscaling on Azure Kubernetes Service (AKS).
@@ -131,4 +131,4 @@ If you're using [Microsoft Entra Workload ID](/azure/aks/workload-identity-overv
 
 [aks-firewall-requirements]: /azure/aks/limit-egress-traffic#azure-global-required-network-rules
 [keda-troubleshooting]: https://keda.sh/docs/latest/troubleshooting/
-[keda-faq]: https://keda.sh/docs/latest/faq/
+[keda-faq]: https://keda.sh/docs/latest/reference/faq/
