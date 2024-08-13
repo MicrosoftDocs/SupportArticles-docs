@@ -43,7 +43,7 @@ The unauthorized error can be caused by incorrect admin credentials. This includ
 
 To resolve the issue, follow these steps:
 
-1. In the [Azure portal](ap), navigate to your registry container. In the **Settings** section, select **Access keys**. Check the admin user credentials settings of the **Login server**, **Username**, and **password**.
+1. In the [Azure portal](https://portal.azure.com), navigate to your registry container. In the **Settings** section, select **Access keys**. Check the admin user credentials settings of the **Login server**, **Username**, and **password**.
 1. Navigate to your web app. In the **Settings** section, Select **Environment variables**.
 1. Ensure that the three variables you configured for the container registry's login server, username, and password align with the admin user credentials settings in the registry container.
 
@@ -64,7 +64,7 @@ When you initiate a pull operation from the container registry, the AcrPull role
 
 ## Error 2: manifest tagged by &lt;tag&gt; is not found
 
-> DockerApiException  : Docker API responded with status code=NotFound, response={"message":"manifest for <acr-name>.azurecr.io/<repository>:<tag> not found: manifest unknown: manifest tagged by \"<tag>\" is not found"}
+> `DockerApiException  : Docker API responded with status code=NotFound, response={"message":"manifest for <acr-name>.azurecr.io/<repository>:<tag> not found: manifest unknown: manifest tagged by \"<tag>\" is not found"}`
 
 ### Solution: Make sure the tag exists
 
@@ -80,11 +80,12 @@ To find the tags within the associated repository and registry using the Azure p
 
 Navigate to your registry container. Under **Services**, select **Repositories**, open the associated repository, and then check the list of tags.
 
-> [!NOTE] The `az acr repository show-tags` command or checking the Repositories from the Azure portal only works if the ACR network rules permit it.
+> [!NOTE]
+> The `az acr repository show-tags` command or checking the Repositories from the Azure portal only works if the ACR network rules permit it.
 
 ## Error 3: client with IP is not allowed access
 
-> DockerApiException: Docker API responded with status code=InternalServerError, response={"message":"Head \"https:// <acr-name>.azurecr.io/v2/<repository>/manifests/<tag>\": denied: client with IP '<web-app-outbound-ip>' is not allowed access. Refer https://aka.ms/acr/firewall to grant access."}
+> `DockerApiException: Docker API responded with status code=InternalServerError, response={"message":"Head \"https:// <acr-name>.azurecr.io/v2/<repository>/manifests/<tag>\": denied: client with IP '<web-app-outbound-ip>' is not allowed access. Refer https://aka.ms/acr/firewall to grant access."}`
 
 ### Solution 1: Make sure the container registry built-in firewall allows your device’s IP address
 
@@ -103,7 +104,7 @@ To find web app’s outbound IP addresses by using Azure CLI, see [Find outbound
 
 ### Solution 2: Configure virtual network integration for the Web App
 
-If you need to fully disable the public network access or to allow only selected networks at the container registry without manually adding the web app’s IP addresses, the alternative option is to pull the image privately. To achieve private pulling, you need to [configure the container registry with private endpoint](/azure/container-registry/container-registry-private-link) and [enable virtual network integration for the web app](https://learn.microsoft.com/en-us/azure/app-service/configure-vnet-integration-enable).
+If you need to fully disable the public network access or to allow only selected networks at the container registry without manually adding the web app’s IP addresses, the alternative option is to pull the image privately. To achieve private pulling, you need to [configure the container registry with private endpoint](/azure/container-registry/container-registry-private-link) and [enable virtual network integration for the web app](/azure/app-service/configure-vnet-integration-enable).
 
 You can configure virtual network integration at the web wpp side by using the following steps:
 
@@ -114,7 +115,7 @@ You can configure virtual network integration at the web wpp side by using the f
 
 To pull the image over the virtual network, you must enable **Pull image over VNet** in the **Deployment Center** of the web app. Additionally, if the container registry has the public access disabled or set to selected networks, you may get the **failed to load ACR Tags - failed** message as the following example. That is expected in this scenario. As a result, the drop-down options for **Image** and **Tag** won’t be available. You need to manually enter the image and tag.
 
-    :::image type="content" source="media/pull-image-to-web-app-fail/failed-to-load-acr-error.png" alt-text="Screenshot of the failed to load ACR Tags error message." lightbox="media/pull-image-to-web-app-fail/failed-to-load-acr-error.png":::
+:::image type="content" source="media/pull-image-to-web-app-fail/failed-to-load-acr-error.png" alt-text="Screenshot of the failed to load ACR Tags error message." lightbox="media/pull-image-to-web-app-fail/failed-to-load-acr-error.png":::
  
 **Next step**
 
@@ -122,4 +123,4 @@ If the troubleshooting guidance in this article doesn’t resolve the issue, con
 
 Check the network security groups and route tables associated with your subnets, if applicable.
 If a virtual appliance, like a firewall, controls the traffic between subnets, review the firewall and its access rules.
-Use the [Kudu service](azure/app-service/resources-kudu) for additional troubleshooting. You can connect to the Kudu service. For example, use Bash to test DNS resolution by running `nslookup <acr-name>.azurecr.io` or check connectivity with `tcpping <acr-name>.azurecr.io`.
+Use the [Kudu service](/azure/app-service/resources-kudu) for additional troubleshooting. You can connect to the Kudu service. For example, use Bash to test DNS resolution by running `nslookup <acr-name>.azurecr.io` or check connectivity with `tcpping <acr-name>.azurecr.io`.
