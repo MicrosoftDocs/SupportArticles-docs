@@ -6,8 +6,8 @@ items:
   items:
   - name: Can't get private IP address of an Azure Container Registry FQDN
     href: cant-resolve-container-registry-fqdn-private-ip-address.md
-  - name: Container image delete operation issues
-    href: container-image-delete-operation-issues.md
+  - name: Troubleshoot delete operation issues
+    href: delete-operation-issues.md
 
 - name: Troubleshoot pull issues
   href: troubleshoot-issues-pull-container-registry.md

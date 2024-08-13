@@ -38,7 +38,7 @@ While running the `acr purge` command in an ACR task to delete lots of images, t
 
 In ACR, an image has its corresponding unique manifest and manifest digest. However, different images might share same layers. See the following image for an example:
 
- :::image type="content" source="media/acr-delete-operation-issues/container-image-manifest-layer.png" alt-text="A screenshot that shows how the container image is stored.":::
+ :::image type="content" source="media/delete-operation-issues/container-image-manifest-layer.png" alt-text="A screenshot that shows how the container image is stored.":::
 
 To save the storage in ACR, the layers referenced by multiple different manifests will only be stored once.
 
