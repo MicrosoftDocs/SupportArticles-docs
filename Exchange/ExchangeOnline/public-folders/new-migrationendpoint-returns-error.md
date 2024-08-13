@@ -1,6 +1,6 @@
 ---
 title: Error when creating public folder migration endpoint
-description: Provides a resolution for an issue that occurs when you run the New-MigrationEndpoint cmdlet to create a PublicFolder or PublicFolderToGroups type of migration endpoint in Exchange Online.
+description: Provides a resolution for an issue that occurs when you try to create a PublicFolder or PublicFolderToGroups type of migration endpoint in Exchange Online.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -11,11 +11,11 @@ ms.custom:
   - sap:Migration
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: batre, ninob, 
+ms.reviewer: batre, ninob
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/13/2024
 ---
 # Error when creating public folder migration endpoint
 
