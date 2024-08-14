@@ -24,19 +24,19 @@ ms.date: 08/09/2024
 
 ## Symptoms
 
-When you try to permanently delete a site which is connected to a Microsoft 365 group from the SharePoint admin center, you receive the following error message:
+You try to permanently delete a site that is connected to a Microsoft 365 group by using the SharePoint admin center. However, you receive the following error message:
 
 > This site can't be permanently deleted because it's connected to a Microsoft 365 group.
 
 ## Cause
 
-To delete a team site which is connected to a Microsoft 365 group, you must also delete all the group’s resources.
+To delete a team site that is connected to a Microsoft 365 group, you must also delete all the group’s resources.
 
 ## Resolution
 
 To permanently delete a Microsoft 365 group-connected team site, follow these steps:
 
-1. Install the latest SharePoint Online Management Shell. If the shell is already installed, make sure that it's up-to-date. For the steps to do this, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
+1. Install the latest SharePoint Online Management Shell. If the shell is already installed, make sure that it's up-to-date. For more information, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
 1. Connect to SharePoint as a SharePoint admin in Microsoft 365. To learn how, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
