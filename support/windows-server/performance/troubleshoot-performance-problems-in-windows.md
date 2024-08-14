@@ -99,7 +99,7 @@ Therefore, in theory, we should be able to read any block within 11 ms. If we no
 
 To identify who's using it, we can now check the **Process** counter object.
 
-**Process** counters relate to disk operations:
+**Process** counters related to disk operations:
 
 - **\\Process(*)\\IO Read Operations/sec** (process-specific disk read times)  
 - **\\Process(*)\\IO Write Operations/sec** (process-specific disk write times)
