@@ -23,7 +23,7 @@ ms.date: 08/10/2024
 
 After you successfully sign into your tenant and select the Projects link or navigate to a Project Web App (PWA) site, you may receive one of the following error messages and can't access PWA:
 
-"Sorry this site has not been shared with you".
+"Sorry this site has not been shared with you."
 
 Or
 
@@ -78,7 +78,7 @@ SharePoint Permissions mode details - The PWA Admin must share the root site wit
 
 Project Server Permissions mode details - Users can be added manually or synchronized using Active Directory groups (not SharePoint groups). If users are added manually, the PWA root site must be shared for the users to be listed on the Available Users list in Manage Groups.  
 
-Using Active Directory group synchronization, users are added to the Project Server group and the root PWA site is shared with them at the same time.  
+By using Active Directory group synchronization, users are added to the Project Server group and the root PWA site is shared with them at the same time.  
 
 To check which permissions mode your PWA site is using:
 
@@ -86,7 +86,7 @@ Visual Check - as a PWA admin, select the gear icon in the upper right corner of
 
 SharePoint Admin Check - The SharePoint admin can go to the **Admin** menu and select **SharePoint**. Then select the check box to the left of the Project Web App instance you want to investigate. On the ribbon, select **Project Web App** and select **Settings**. The current permissions mode in use is displayed.
 
-Project Web App can use either Project Server permission mode or SharePoint permission mode to control user access. New Project Web App instances use the SharePoint permission mode by default. SharePoint permissions mode does not synchronize users with the root site or the project sites. This is done only when Project Server permissions mode is in use and configured to synchronize.
+Project Web App can use either Project Server permission mode or SharePoint permission mode to control user access. New Project Web App instances use the SharePoint permission mode by default. SharePoint permissions mode doesn't synchronize users with the root site or the project sites. This is done only when Project Server permissions mode is in use and configured to synchronize.
 
 > [!WARNING]
 > Switching between Project Server permission mode and SharePoint permission mode deletes all security-related settings.
@@ -94,7 +94,7 @@ Project Web App can use either Project Server permission mode or SharePoint perm
 Group Names:
 When you use the SharePoint Permissions mode, the group name is appended with "For Project Web App".  When using Project Server permission mode the group name is appended with "(Project Web App Synchronized)".
 
-Enterprise Resource Pool - User accounts added to the Enterprise Resource Pool are not automatically given permissions to log in to the Project Web App home page. This is new behavior in the 2013 version compared to earlier versions of Project Server, regardless of the security mode. This behavior prevents users from having access to the Project Web App home page automatically. The PWA admin must "Share" the site with specific users or groups for users to have access.
+Enterprise Resource Pool - User accounts added to the Enterprise Resource Pool aren't automatically given permissions to log in to the Project Web App home page. This is new behavior in the 2013 version compared to earlier versions of Project Server, regardless of the security mode. This behavior prevents users from having access to the Project Web App home page automatically. The PWA admin must "Share" the site with specific users or groups for users to have access.
 
 To get more information and best practices see the following article:
 
