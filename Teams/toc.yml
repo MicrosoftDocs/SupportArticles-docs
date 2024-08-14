@@ -8,7 +8,9 @@
     - name: "\"We couldn't add member\" error when adding users"
       href: ./teams-administration/couldnt-add-member-error.md 
     - name: Clear the Teams client cache
-      href: ./teams-administration/clear-teams-cache.md  
+      href: ./teams-administration/clear-teams-cache.md
+    - name: Disable SharePoint News notifications in Teams
+      href: ./teams-administration/disable-sharepoint-news-notifications.md
     - name: Error switching a tenant to Teams Only mode
       href: ./teams-administration/cannot-switch-to-teams-only-mode.md
     - name: Include or exclude Teams from antivirus or DLP applications
@@ -229,6 +231,8 @@
       href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
     items:
+    - name: Certified Android devices get signed out of Teams
+      href: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md
     - name: Collect Android Teams device logs
       href: ./teams-rooms-and-devices/collect-device-logs.md
     - name: Conditional Access-related issues on Teams Android devices
@@ -239,8 +243,6 @@
       href: ./teams-rooms-and-devices/teams-rooms-known-issues-windows.md
     - name: On-screen keyboard size is reduced on some devices
       href: ./teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced.md
-    - name: Signed out of Teams Android devices
-      href: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md
     - name: Teams Rooms app doesn't start automatically after updates
       href: ./teams-rooms-and-devices/teams-rooms-not-auto-start-after-windows-updates.md
     - name: Teams Rooms devices can't fetch calendar
