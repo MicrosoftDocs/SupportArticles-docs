@@ -18,7 +18,7 @@ ms.date: 08/13/2024
 ---
 # Access public folders in Outlook for Windows
 
-The steps to access public folders is different in new Microsoft Outlook for Windows and classic Outlook for Windows. Use the information that's appropriate for your version of Outlook for Windows.
+The steps to access public folders is different in new Outlook for Windows and classic Outlook for Windows. Use the information that's appropriate for your version of Outlook for Windows.
 
 # Access public folders in new Outlook for Windows
 
