@@ -20,7 +20,7 @@ ms.date: 08/13/2024
 
 The steps to access public folders is different in new Outlook for Windows and classic Outlook for Windows. Use the information that's appropriate for your version of Outlook for Windows.
 
-# Access public folders in new Outlook for Windows
+## Access public folders in new Outlook for Windows
 
 In new Microsoft Outlook for Windows, you need to add public folders to **Favorites** before you can access them. Use the following steps:
 
