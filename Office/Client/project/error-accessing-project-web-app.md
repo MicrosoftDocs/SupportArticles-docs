@@ -1,6 +1,6 @@
 ---
 title: Error when accessing Project Web App
-description: Provides resolutions for errors when accessing PWA Online
+description: Provides resolutions for errors that occur when accessing PWA Online
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal

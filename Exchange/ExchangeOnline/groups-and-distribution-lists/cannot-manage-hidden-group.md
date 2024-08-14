@@ -36,5 +36,3 @@ To work around this behavior, the owners of the groups must follow these steps:
 
 1. Create a role group, and then assign the Distribution Group role to that role group. For more information about how to create role groups, see [Manage role groups](/exchange/manage-role-groups-exchange-2013-help).
 2. Add to the role group the users who have to manage groups that are hidden from the GAL. For more information about how to add or remove role group members, see [Manage role groups](/exchange/manage-role-groups-exchange-2013-help).
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

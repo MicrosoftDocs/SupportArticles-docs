@@ -36,5 +36,3 @@ To resolve this issue, make sure that there are no spaces in the VAT ID as follo
 1. On the **Admin Overview** page, select **Manage** in the left navigation pane.
 1. On the **Billing and Subscription Management** page, select the subscription to view the VAT ID.
 1. Make sure that there are no spaces in the VAT ID.
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
