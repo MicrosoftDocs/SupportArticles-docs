@@ -53,7 +53,7 @@ The data collector set also follows the principle of `[Performance counter objec
 
 We now have a data collector set that logs data every 15 seconds. We chose every 15 seconds because of a limitation of the tool we use to analyze the data: Performance Monitor.
 
-A maximus of 1,000 data points can be displayed within a graph. If we configure the data collector to log data every second, the graph can only display the data in 16 minutes and 40 seconds. If we have more data in the log, we start to "summarize and combine" those data points. We call the capture a high-density capture.
+A maximum of 1,000 data points can be displayed within a graph. If we configure the data collector to log data every second, the graph can only display the data in 16 minutes and 40 seconds. If we have more data in the log, we start to "summarize and combine" those data points. We call the capture a high-density capture.
 
 This might lead to a situation where the graph doesn't show accurate numbers. You can spot that by looking at the graph and comparing it with the **Minimum** or **Maximum** values.
 
@@ -91,7 +91,8 @@ To simplify, the following sections introduce the 18 most important counters and
 
 These counters represent latency. Latency is defined by how much time we spend getting the information we want. From a disk performance perspective, we need to look closer at the setup. For a normal hard disk, instead of a solid-state hard drive (SSD), the disk normally has a rotation speed of 5,400 revolutions per minute (RPM). That means we turn the spindle (where we store the information as blocks) 5,400 times per minute. We should be able to calculate the time it takes to read any block from the disk:
 
-One block / (RPM / 60) = latency for one block  
+One block / (RPM / 60) = latency for one block
+
 One block / 5400 RPM / 60 = 0.011111 sec = 11 ms
 
 Therefore, in theory, we should be able to read any block within 11 ms. If we now see a latency of `~100 ms`, we should be able to read the block at least eight times, so why is there a delay? Is the disk overwhelmed, and if so, who is using it?
@@ -134,7 +135,7 @@ Remember that **Memory\\% Committed Bytes In Use** represents the virtual memory
 
 This system has 128 GB of RAM and a page file of 128 GB, so the **Committed** memory is 256 GB. You can also glance at the **Paged pool** and **Non-paged pool** memory.
 
-When investigating memory issues, remember that both areas (Kernel and User) are actually share the *same* physical resource. Therefore, if the computer has low memory, try to find out who's using it.
+When investigating memory issues, remember that both areas (Kernel and User) actually share the *same* physical resource. Therefore, if the computer has low memory, try to find out who's using it.
 
 Let's move on to the next physical resource.
 
