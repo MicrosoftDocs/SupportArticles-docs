@@ -59,7 +59,7 @@ This might lead to a situation where the graph doesn't show accurate numbers. Yo
 
 In this example, we're looking at the counter **% Idle Time** of the instance  **_Total** for the counter object **Processor**. Based on the minimum value, we should see the graph hit the blue line (at 32%), but we don't see that. As the number and the graph don't match, we need to verify how many samples we have within the displayed period (22 minutes and 01 seconds). Upon hovering over, a "fly-out" shows us how many samples there are in this data point. As you can see, we have 10 samples, and therefore, we're forced to summarize and combine them as this was a capture with a one-second interval.
 
-:::image type="content" source="media/troubleshoot-performance-problems-in-windows/performance-monitor-minimum-value.png" alt-text="Screenshot of the Performance Monitor minimum value.":::
+:::image type="content" source="media/troubleshoot-performance-problems-in-windows/performance-monitor-minimum-value.png" alt-text="Screenshot of the Performance Monitor minimum value." lightbox="media/troubleshoot-performance-problems-in-windows/performance-monitor-minimum-value.png":::
 
 ## Simplify Windows
 
@@ -69,7 +69,7 @@ Now that we have the performance counter log, let's try to simplify Windows in a
 
 We have already mapped a few performance monitor objects to the physical resource. In addition, we must remember that Windows is split into two major areas: **Kernel** and **User mode**.
 
-**Kernel** refers to the operating system (OS) and drivers (this also includes your antivirus filter driver). **Kernel** is represented in Windows by a logical construct called **System Process**, which always has the process ID `4`. For security reasons, this area is strongly protected. Even with inbox tools like Performance Monitor, we can only get a little information from it. For example, we can see how much nonpaged Pool we're using, but we don't know who's using it.
+**Kernel** refers to the operating system (OS) and drivers (this also includes your antivirus filter driver). The kernel is represented in Windows by a logical construct called **System Process**, which always has the process ID `4`. For security reasons, this area is strongly protected. Even with inbox tools like Performance Monitor, we can only get a little information from it. For example, we can see how much nonpaged pool we're using, but we don't know who's using it.
 
 **User mode** is where we run all applications (modern Appx, services, and executables). With Performance Monitor, we can get information about each process.
 
@@ -96,9 +96,9 @@ One block / 5400 RPM / 60 = 0.011111 sec = 11 ms
 
 Therefore, in theory, we should be able to read any block within 11 ms. If we now see a latency of `~100 ms`, we should be able to read the block at least eight times, so why is there a delay? Is the disk overwhelmed, and if so, who is using it?
 
-To identify who's using it, we can now check the **Process** counter object:
+To identify who's using it, we can now check the **Process** counter object.
 
-**Process** counter relate to disk operations:
+**Process** counters relate to disk operations:
 
 - **\\Process(*)\\IO Read Operations/sec** (process-specific disk read times)  
 - **\\Process(*)\\IO Write Operations/sec** (process-specific disk write times)
@@ -112,7 +112,7 @@ Let's move on to the next physical component.
 | Virtual memory and physical memory counters      | Healthy                                 | Warning | Critical                 |
 | :----------------------------------------------- | :-------------------------------------- | :------ | :----------------------- |
 | **\\Memory\\Pool Paged Bytes** \| **Pool Nonpaged Bytes** | 0–50%                                   | 60–80%  | 80–100%                  |
-| **\\Memory\\Available MBytes**                       | > 10% or at least 4 gigabytes (GB)) free | < 10%   | < 1% or less than 500 MB |
+| **\\Memory\\Available MBytes**                       | > 10% or at least 4 gigabytes (GB) free | < 10%   | < 1% or less than 500 MB |
 | **\\Memory\\% Committed Bytes In Use**               | 0–50%                                   | 60–80%  | 80–100%                  |
 
 This section describes the following counters:
@@ -130,7 +130,7 @@ To understand the impact of your process on RAM utilization, you can use the fol
 
 Remember that **Memory\\% Committed Bytes In Use** represents the virtual memory you have in Windows. This is the combination of the page file and RAM, which can be viewed in **Task Manager** on the **Performance** tab after selecting **Memory**:
 
-:::image type="content" source="media/troubleshoot-performance-problems-in-windows/memory-displayed-in-task-manager.png" alt-text="Screenshot of the memory displayed in Task Manager.":::
+:::image type="content" source="media/troubleshoot-performance-problems-in-windows/memory-displayed-in-task-manager.png" alt-text="Screenshot of the memory displayed in Task Manager." lightbox="media/troubleshoot-performance-problems-in-windows/memory-displayed-in-task-manager.png":::
 
 This system has 128 GB of RAM and a page file of 128 GB, so the **Committed** memory is 256 GB. You can also glance at the **Paged pool** and **Non-paged pool** memory.
 
@@ -140,7 +140,7 @@ Let's move on to the next physical resource.
 
 ### CPU
 
-When troubleshooting CPU performance, we need to split the OS into **Kernel** and **User mode** again. However, the split is easier to understand. The **user mode** is represented by any application or service, including the applications that run in user mode, which consumes CPU cycles and doesn't involve hardware other than the CPU. If we need to access hardware, this results in kernel mode as we need to talk to drivers to access GPU, storage, or network.
+When troubleshooting CPU performance, we need to split the OS into **Kernel** and **User mode** again. However, the split is easier to understand. The user mode is represented by any application or service, including the applications that run in user mode, which consumes CPU cycles and doesn't involve hardware other than the CPU. If we need to access hardware, this results in kernel mode as we need to talk to drivers to access GPU, storage, or network.
 
 Here are some examples:
 
@@ -167,7 +167,7 @@ Each time a CPU is used, we consume either **% User Time** (user mode) or **% Pr
 
 100% **Process\\% User Time** = one CPU. If you have 16 CPUs, the maximum usage a process can reach is 1600 %. See the following screenshot:
 
-:::image type="content" source="media/troubleshoot-performance-problems-in-windows/process-monitor-graph-for-four-cpus.png" alt-text="Screenshot of a Process Monitor graph for four CPUs.":::
+:::image type="content" source="media/troubleshoot-performance-problems-in-windows/process-monitor-graph-for-four-cpus.png" alt-text="Screenshot of a Process Monitor graph for four CPUs." lightbox="media/troubleshoot-performance-problems-in-windows/process-monitor-graph-for-four-cpus.png":::
 
 In this example, we have used a tool to simulate CPU usage (**% User Time**). We have limited the tool to run on only four CPUs (CPUs 12, 13, 14, and 15). Once we see four threads active, we can see how all the CPUs reach 100% while the application itself (CPU Stress) reaches 400%. This example demonstrates the relationship between the CPU usage of CPU Stress and the CPU load on the CPUs that we have limited the application to run on. We try to create this kind of relationship to fully understand what's going on.
 
