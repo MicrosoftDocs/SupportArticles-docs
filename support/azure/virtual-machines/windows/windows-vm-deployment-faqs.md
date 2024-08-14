@@ -82,7 +82,7 @@ Yes. You can add an existing classic VM to a new or existing Availability Set. F
 
 ## Where can I deploy Azure VMs?
 
-You can deploy Azure VMs in any of the supported regions listed in [Choose the Right Azure Region for You](https://azure.microsoft.com/explore/global-infrastructure/geographies/#geographies). If a region isn't listed, it may be present for redundancy requirements. For example, South West Africa is available as redundancy for South Africa North as a replication point.
+You can deploy Azure VMs in any of the supported regions listed in [Choose the Right Azure Region for You](https://azure.microsoft.com/explore/global-infrastructure/geographies/#geographies). If a region isn't listed, it may be present for redundancy requirements. For example, South Africa West is available as redundancy for South Africa North as a replication point.
 
 ## Additional information
 
