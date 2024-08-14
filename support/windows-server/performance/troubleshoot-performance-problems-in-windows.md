@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot performance problems in Windows
-description: Provides a scenario guide of troubleshooting performance problems in Windows
-ms.date: 08/06/2024
+description: Provides a scenario guide for troubleshooting performance problems in Windows.
+ms.date: 08/14/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -9,182 +9,187 @@ localization_priority: medium
 ms.reviewer: kaushika, waltere
 ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
 ---
-# Scenario guide: troubleshoot performance problems in Windows
+# Scenario guide: Troubleshoot performance problems in Windows
 
-This scenario guide explains how to use Performance Monitor to collect data, and how to use the data to narrow down the bottleneck that makes the computer slow. This article introduces general approaches, and is trying to explain the troubleshooting concepts.
+This scenario guide explains how to use Performance Monitor to collect data, and how to use the data to narrow down the bottleneck that makes the computer slow. It introduces general approaches and tries to explain the troubleshooting concepts.
 
 ## Use Performance Monitor to record performance data
 
-Every full version of Windows comes with an inbox tool called Performance Monitor. We can utilize this tool to track performance related information about various aspects of the Windows system. We do this by using performance counters that are built into windows that provide us with more information on central processing units (CPU) usage or memory usage.
+Every full version of Windows comes with an inbox tool called Performance Monitor. We can utilize this tool to track performance-related information about various aspects of the Windows system. We do this by using performance counters built into Windows, which provide us with more information on central processing unit (CPU) usage or memory usage.
 
 Every counter is constructed in the same simple way:  
-[Performance counter object]\\\<Instance\>\\\<Counter Name\>
+`[Performance counter object]\<Instance>\<Counter Name>`
 
 For example:  
-[Processor Information]\\\<CPU 0\>\\%Processor time
+`[Processor Information]\<CPU 0\>\% Processor Time`
 
-To store the performance data provided by the counters, we can use **Data collector Sets** within the Performance Monitor. See the following screenshot:
+To store the performance data provided by the counters, we can use the **Data collector Sets** in Performance Monitor. See the following screenshot:
 
-:::image type="content" source="media/troubleshoot-performance-problems-in-windows/screenshot-of-performance-monitor-and-data-collector-sets.png" alt-text="Screenshot of Performance Monitor and Data collector Sets.":::
+:::image type="content" source="media/troubleshoot-performance-problems-in-windows/performance-monitor-and-data-collector-sets.png" alt-text="Screenshot of Performance Monitor and Data Collector Sets.":::
 
-To create those **Data Collector Sets**, we can use the graphical user interfaces (GUI) or use the `logman.exe` command. To create a data collector set, you can run the following command in an elevated command console window:
+To create those **Data Collector Sets**, we can use the graphical user interfaces (GUI) or the `logman.exe` command.
+
+To create a data collector set, run the following command in an elevated command prompt window:
 
 ```console
 logman.exe create counter PerfLog-15Sec-Contoso -o "c:\perflogs\Contoso_PerfLog-15sec.blg" -f bincirc -v mmddhhmm -max 800 -c "Hyper-V Dynamic Memory Balancer (*)\*" "Hyper-V Hypervisor Virtual Processor(*)\*" "Hyper-V Hypervisor Logical Processor(*)\*" "\LogicalDisk(*)\*" "\Memory\*" "\Cache\*" "\Network Interface(*)\*" "\Paging File(*)\*" "\PhysicalDisk(*)\*" "\Processor(*)\*" "\Processor Information(*)\*" "\Processor Performance(*)\*" "\Process(*)\*" "\Process V2(*)\*" "\Redirector\*" "\Server\*" "\System\*" "\Server Work Queues(*)\*" "\Terminal Services\*" -si 00:00:15
 ```
 
-Command to start the counter. Run the command in an elevated command prompt window.
+To start the counter, run the following command in an elevated command prompt window:
 
 ```console
 logman.exe start PerfLog-15Sec-Contoso
 ```
 
-Command to stop the counter. Run the command in an elevated command prompt window.
+This command generates a "flight box recorder"-like monitor on your system. The monitor logs performance data every 15 seconds (see `-si 00:00:15` for the interval). Each time the collector set is started, the impact on the system should be less than 1%, and it won't use more than 800 megabytes (MB) of space on your local hard disk. If you restart the computer, you need to run the command to start the monitor again.
+
+To stop the counter, run the following command in an elevated command prompt window:
 
 ```console
 logman.exe stop PerfLog-15Sec-Contoso
 ```
 
-This command generates a "flight box recorder" like monitor on your system. The monitor logs performance data every 15 seconds (see -si 00:00:15 for the interval). The impact on the system should be less than 1% and it will not use more than 800 MB (megabytes) on your local hard disk each time the collector set is started. If you restart the computer, you need to run the command to start the monitor again.
+The data collector set also follows the principle of `[Performance counter object]\<Instance>\<Counter Name>`. The counter object is called "Memory," as this object doesn't have an instance. The reason is that we only have one memory in Windows, but we might have more than one hard disk or CPU.
 
-The data collector set also follows the principle of [Performance counter object]\\\<Instance\>\\\<Counter Name\>. The counter object is called "Memory" as this one doesn't have an instance. The reason is that we only have one memory within Windows, but we might have more than one hard disk or CPU.
+We now have a data collector set that logs data every 15 seconds. We chose every 15 seconds because of a limitation of the tool we use to analyze the data: Performance Monitor.
 
-We now have a data collector set that is logging data every 15 seconds. We choose every 15 seconds because of a limitation of the tool that we use to analyze the data: Performance Monitor.
+A maximus of 1,000 data points can be displayed within a graph. If we configure the data collector to log data every second, the graph can only display the data in 16 minutes and 40 seconds. If we have more data in the log, we start to "summarize and combine" those data points. We call the capture a high-density capture.
 
-There can only display up to 1,000 data points within the graph. If we configure the data collector to log data every second, the graph can only display the data in 16 minutes and 40 seconds. If we have more data in the log, we start to "summarize and combine" those data points. We call the capture a high density capture.
+This might lead to a situation where the graph doesn't show accurate numbers. You can spot that by looking at the graph and comparing it with the **Minimum** or **Maximum** values.
 
-This might lead to a situation where the graph isn't showing you accurate numbers. You can spot that by looking at the graph and compare it with the number of **Minimum** or **Maximum**.
+In this example, we're looking at the counter **% Idle Time** of the instance  **_Total** for the counter object **Processor**. Based on the minimum value, we should see the graph hit the blue line (at 32%), but we don't see that. As the number and the graph don't match, we need to verify how many samples we have within the displayed period (22 minutes and 01 seconds). Upon hovering over, a "fly-out" shows us how many samples there are in this data point. As you can see, we have 10 samples, and therefore, we're forced to summarize and combine them as this was a capture with a one-second interval.
 
-In this example, we're looking at the counter **%Idle Time** of the instance  **_Total** for counter object **Processor**. Based on the minimum value, we should see the graph hitting the blue line (which is placed on 32%) but we don't see that. As the number and the graph don't match, we need to verify how many samples we have within the displayed period (22 minutes 01 seconds). Upon mouse over, "fly out" is displayed to show us how many samples are in this data points. As you can see, we have **10 Samples**, therefore we're forced to **summarize and combine** as this was a capture with a one-second interval.
-
-:::image type="content" source="media/troubleshoot-performance-problems-in-windows/screenshot-of-performance-monitor-minimum-value.png" alt-text="Screenshot of Performance Monitor minimum value.":::
+:::image type="content" source="media/troubleshoot-performance-problems-in-windows/performance-monitor-minimum-value.png" alt-text="Screenshot of the Performance Monitor minimum value.":::
 
 ## Simplify Windows
 
-Now that we have our performance counter log, let's try to simplify Windows in a way that helps us with the analysis. We do this by breaking down a system into its logical components: Memory, Storage, CPU, Network.
+Now that we have the performance counter log, let's try to simplify Windows in a way that helps us with the analysis. We do this by breaking down the system into its logical components: memory, storage, CPU, and network.
 
-:::image type="content" source="media/troubleshoot-performance-problems-in-windows/system-logical-components.png" alt-text="System logical components.":::
+:::image type="content" source="media/troubleshoot-performance-problems-in-windows/system-logical-components.png" alt-text="Screenshot of the system logical components.":::
 
-We already mapped a few performance monitor objects towards the physical resource. In addition, we also must remember that Windows is split into two major areas called **Kernel** and **User mode**.
+We have already mapped a few performance monitor objects to the physical resource. In addition, we must remember that Windows is split into two major areas: **Kernel** and **User mode**.
 
-**Kernel** refers to the operating system and drivers (this also includes your Antivirus Filter driver). **Kernel** is represented in Windows in a logical construct called **System Process** which always has the Process ID 4. For security reasons, this area is strongly protected. Even with inbox tools like Performance Monitor, we only get a little information out of it. For example, we see how much **Non-Paged Pool** we're using, but not who is using it.
+**Kernel** refers to the operating system (OS) and drivers (this also includes your antivirus filter driver). **Kernel** is represented in Windows by a logical construct called **System Process**, which always has the process ID `4`. For security reasons, this area is strongly protected. Even with inbox tools like Performance Monitor, we can only get a little information from it. For example, we can see how much nonpaged Pool we're using, but we don't know who's using it.
 
-The **User mode** is where we run all applications (modern Appx, Services, executables). With Performance Monitor, we can get many information for each process.
+**User mode** is where we run all applications (modern Appx, services, and executables). With Performance Monitor, we can get information about each process.
 
 ## Introduce the 18 most important counters
 
-To simplify, the following sections introduce 18 most important counters and their threshold broken down by the physical resource that they are related to.
+To simplify, the following sections introduce the 18 most important counters and their thresholds, broken down by the physical resources they're related to.
 
 ### Storage
 
 | Primary counters                     | Healthy | Warning | Critical |
 | :----------------------------------- | :------ | :------ | :------- |
-| \\LogicalDisk(*)\\Avg. Disk sec/Read   | < 15 ms | > 25 ms | > 50 ms   |
-| \\LogicalDisk(*)\\Avg. Disk sec/Write  | < 15 ms | > 25 ms | > 50 ms  |
-| \\PhysicalDisk(*)\\Avg. Disk sec/Read  | < 15 ms | > 25 ms | > 50 ms  |
-| \\PhysicalDisk(*)\\Avg. Disk sec/Write | < 15 ms | > 25 ms | > 50 ms  |
+| **\\LogicalDisk(*)\\Avg. Disk sec/Read**   | < 15 ms | > 25 ms | > 50 ms   |
+| **\\LogicalDisk(*)\\Avg. Disk sec/Write**  | < 15 ms | > 25 ms | > 50 ms  |
+| **\\PhysicalDisk(*)\\Avg. Disk sec/Read**  | < 15 ms | > 25 ms | > 50 ms  |
+| **\\PhysicalDisk(*)\\Avg. Disk sec/Write** | < 15 ms | > 25 ms | > 50 ms  |
 
-Comment: Short spikes can be tolerated. We should investigate longer period of latencies (over one-minute time or longer).
+> [!NOTE]
+> Short spikes can be tolerated. We should investigate longer latency periods (over one minute or longer).
 
-This counter represents latency. Latency is defined in how much time we spend getting the information we are after. In disk performance perspective, we need to take a closer look at the setup. For a normal hard disk instead of a solid state hard drives (SSD), normally the disk has a rotation speed mentioned like 5,400 Revolutions Per Minute (RPM). That means we turn the Spindle (where we store the information as blocks) 5,400 times per minute. We should be able to calculate the time that it takes to read any block from the disk:
+These counters represent latency. Latency is defined by how much time we spend getting the information we want. From a disk performance perspective, we need to look closer at the setup. For a normal hard disk, instead of a solid-state hard drive (SSD), the disk normally has a rotation speed of 5,400 revolutions per minute (RPM). That means we turn the spindle (where we store the information as blocks) 5,400 times per minute. We should be able to calculate the time it takes to read any block from the disk:
 
-1 block / (RPM / 60) = latency for one block  
-1 block / 5400 RPM / 60 = 0.011111 sec = 11 ms
+One block / (RPM / 60) = latency for one block  
+One block / 5400 RPM / 60 = 0.011111 sec = 11 ms
 
-Therefore, in theory, we should be able to read any block within 11 ms. If we now see a latency of ~100 ms, we should be able to read the block at least eight times, so why the delay? Is the disk overwhelmed, and if so, who is using it?
+Therefore, in theory, we should be able to read any block within 11 ms. If we now see a latency of `~100 ms`, we should be able to read the block at least eight times, so why is there a delay? Is the disk overwhelmed, and if so, who is using it?
 
-To identify who is using it, we can now check the Process counter object:
+To identify who's using it, we can now check the **Process** counter object:
 
-Process Counter to relate to Disk operations:
+**Process** counter relate to disk operations:
 
-- \\Process(*)\\IO Read Operations/sec (process-specific disk read times)  
-- \\Process(*)\\IO Write Operations/sec (process-specific disk write times)
+- **\\Process(*)\\IO Read Operations/sec** (process-specific disk read times)  
+- **\\Process(*)\\IO Write Operations/sec** (process-specific disk write times)
 
 We can use those counters and try to correlate the latency or disk usage with the process usage.
 
-Let´s move on to our next physical component.
+Let's move on to the next physical component.
 
 ### Memory
 
-| Virtual Memory and Physical Memory counters      | Healthy                                 | Warning | Critical                 |
+| Virtual memory and physical memory counters      | Healthy                                 | Warning | Critical                 |
 | :----------------------------------------------- | :-------------------------------------- | :------ | :----------------------- |
-| \\Memory\\Pool Paged Bytes \| Pool Nonpaged Bytes | 0–50%                                   | 60–80%  | 80–100%                  |
-| \\Memory\\Available MBytes                       | > 10% or at least 4 GB (gigabytes) free | < 10%   | < 1% or less than 500 MB |
-| \\Memory\\% Committed Bytes In Use               | 0–50%                                   | 60–80%  | 80–100%                  |
+| **\\Memory\\Pool Paged Bytes** \| **Pool Nonpaged Bytes** | 0–50%                                   | 60–80%  | 80–100%                  |
+| **\\Memory\\Available MBytes**                       | > 10% or at least 4 gigabytes (GB)) free | < 10%   | < 1% or less than 500 MB |
+| **\\Memory\\% Committed Bytes In Use**               | 0–50%                                   | 60–80%  | 80–100%                  |
 
-This section is about the following counter:  
-Pool Paged Bytes | Pool Nonpaged Bytes
+This section describes the following counters:
 
-This counter represents a kernel resource that is shared by the entire system. Even when processes can claim Paged & Non-Paged Pool, this is mostly done by drivers, and therefore the data is not visible for Performance Monitor. While Paged Pool can be paged out to the page file, this isn't possible for Non-Paged Pool. Keep in mind that those kernel resources are depending on the size of Memory (random access memory (RAM)) you have in the system. The limit of Non-Paged-Pool is 75% of your RAM and they do have a direct impact on your **Available MBytes**. **Available MBytes** is the amount of RAM available to all programs including the kernel.
+- **Pool Paged Bytes**
+- **Pool Nonpaged Bytes**
 
-If you want to understand the impact of your process towards the RAM-Utilization, you can use the following counter:
+These counters represent kernel resources shared by the entire system. Even though processes can claim paged and nonpaged pools, this is mainly done by drivers; therefore, the data isn't visible for Performance Monitor. While the paged Pool can be paged out to the page file, the nonpaged pool can't. Remember that those kernel resources depend on the memory (random access memory (RAM)) size you have in the system. The limit of the nonpaged pool is 75% of your RAM, and they directly impact your **Available MBytes**. **Available MBytes** is the amount of RAM available to all programs, including the kernel.
 
-| Process Counter         | Comment                                                                                                                                                                   |
+To understand the impact of your process on RAM utilization, you can use the following counter:
+
+| Process counter         | Comment                                                                                                                                                                   |
 | :---------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| \Process(*)\Working Set | Try to relate to "Available MB" to identify top consumer of your RAM. Working Set is defined as the amount of RAM (not pagefile) a process is using at any point in time. |
+| **\Process(*)\Working Set** | Try to relate to **Available MBytes** to identify the top consumer of your RAM. **Working Set** is defined as the amount of RAM (not the page file) a process uses at any point in time. |
 
-Keep in mind that **Memory\% Committed Bytes in Use** represents the virtual memory that you have in Windows. This is the combination of Page file and RAM and can be viewed in **Task Manager** within the **Performance** tab after selecting **Memory**:
+Remember that **Memory\\% Committed Bytes In Use** represents the virtual memory you have in Windows. This is the combination of the page file and RAM, which can be viewed in **Task Manager** on the **Performance** tab after selecting **Memory**:
 
-:::image type="content" source="media/troubleshoot-performance-problems-in-windows/memory-displayed-in-task-manager.png" alt-text="Memory displayed in Task Manager.":::
+:::image type="content" source="media/troubleshoot-performance-problems-in-windows/memory-displayed-in-task-manager.png" alt-text="Screenshot of the memory displayed in Task Manager.":::
 
-This system has 128 GB of RAM and a page file of 128 GB, so the **Committed** is 256 GB. You can also get a quick glance on **Paged Pool** and **Non-paged Pool**.
+This system has 128 GB of RAM and a page file of 128 GB, so the **Committed** memory is 256 GB. You can also glance at the **Paged pool** and **Non-paged pool** memory.
 
-When investigating memory issues, you need to keep in mind that both areas (Kernel and User) are in fact sharing the SAME physical resource. Therefore, if the computer has low memory, try to find out who is using it.
+When investigating memory issues, remember that both areas (Kernel and User) are actually share the *same* physical resource. Therefore, if the computer has low memory, try to find out who's using it.
 
-Lets move on the next physical resource.
+Let's move on to the next physical resource.
 
 ### CPU
 
-When troubleshooting CPU performance, we again, need to split the operating systems (OS) into **Kernel** and **User** mode. However, the split's easier to understand. The **user mode** is represented by any application or service, also include the applications that run in user mode, that is consuming CPU-Cycles and don't involve other hardware than the CPU. If we do need to access hardware, this results in kernel mode as we need to talk to drivers to access GPU, Storage, or Network.
+When troubleshooting CPU performance, we need to split the OS into **Kernel** and **User mode** again. However, the split is easier to understand. The **user mode** is represented by any application or service, including the applications that run in user mode, which consumes CPU cycles and doesn't involve hardware other than the CPU. If we need to access hardware, this results in kernel mode as we need to talk to drivers to access GPU, storage, or network.
 
 Here are some examples:
 
 - SQL Server doing a calculation = User mode  
-- SQL Server writing log files to the Disk = Kernel mode  
+- SQL Server writing log files to the disk = Kernel mode  
 - File Server accessing network shares = Kernel mode  
 
-Then, let us look at the primary counters:
+Then, let's look at the primary counters:
 
 | Primary counters                                            | Healthy | Warning | Critical |
 | :---------------------------------------------------------- | :------ | :------ | :------- |
-| \\Processor Information(*)\\% User Time (User mode)         | < 50%   | 50–80%  | > 80%    |
-| \\Processor Information(*)\\% Privileged Time (kernel mode) | < 30%   | 30–50%  | > 50%    |
-| \\Processor Information (*)\\% idle Time                    | >20%    | >10%    | <10%     |
+| **\\Processor Information(*)\\% User Time** (user mode)         | < 50%   | 50–80%  | > 80%    |
+| **\\Processor Information(*)\\% Privileged Time** (kernel mode) | < 30%   | 30–50%  | > 50%    |
+| **\\Processor Information(*)\\% Idle Time**                    | >20%    | >10%    | <10%     |
 
-Again, short spikes are acceptable, but if you do see it for a longer period than 1 minute, start investigating.
+Again, short spikes are acceptable, but if you see it for over one minute, start investigating.
 
-Each time a CPU is used, we either consume **%User time** (User mode) or **%Priviliged time** (Kernel Mode). If you encounter a high CPU-situation (= low % idle Time), we need to find out who is using it by looking at the following secondary counters:
+Each time a CPU is used, we consume either **% User Time** (user mode) or **% Privileged Time** (kernel mode). If you encounter a high CPU situation (= low **% Idle Time**), you need to find out who's using it by looking at the following secondary counters:
 
-| Secondary counters              | comment                                                                                                                                                                                                                      |
+| Secondary counters              | Comment                                                                                                                                                                                                                      |
 | :------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \\Process(*)\\% User Time       | Keep in mind you might have more than one process active                                                                                                                                                                       |
-| \\Process(*)\\% Privileged Time | Keep in mind we only get limited information on the system process. The System Process is normally the top driver for % Priviliged time as we host drives inside this logical construct. However, it is not limited to this. |
+| **\\Process(*)\\% User Time**       | Remember that you might have more than one active process.                                                                                                                                                                       |
+| \**\Process(*)\\% Privileged Time** | Remember that we can only get limited information on the system process. The system process is normally the top driver for **% Privileged Time** as we host drives inside this logical construct. However, it isn't limited to this. |
 
-100% **Process\\% User time** = one CPU. If you have 16 CPUs, the maximum usage a process can reach is 1600 %. See the following screenshot:
+100% **Process\\% User Time** = one CPU. If you have 16 CPUs, the maximum usage a process can reach is 1600 %. See the following screenshot:
 
-:::image type="content" source="media/troubleshoot-performance-problems-in-windows/process-monitor-graph-for-four-cpus.png" alt-text="Process Monitor graph for four CPUs.":::
+:::image type="content" source="media/troubleshoot-performance-problems-in-windows/process-monitor-graph-for-four-cpus.png" alt-text="Screenshot of a Process Monitor graph for four CPUs.":::
 
-In this example, we have used a tool to simulate CPU-Usage (%User mode). We have limited the tool to run only on four CPUs (CPU 12, 13, 14, 15). Once we see four threads active, we can see how all the CPUs reach 100% while the application itself (CPU Stress) reaches 400%. This example demonstrates the relationship between the CPU-Usage of CPU Stress and the CPU-Load on the CPUs that we have limited the application to run on. This is the kind of relationship we try to create to fully understand what is going on.
+In this example, we have used a tool to simulate CPU usage (**% User Time**). We have limited the tool to run on only four CPUs (CPUs 12, 13, 14, and 15). Once we see four threads active, we can see how all the CPUs reach 100% while the application itself (CPU Stress) reaches 400%. This example demonstrates the relationship between the CPU usage of CPU Stress and the CPU load on the CPUs that we have limited the application to run on. We try to create this kind of relationship to fully understand what's going on.
 
 This brings us to the last physical object.
 
 ### Network
 
-Because performance monitor is a local tool, we can get only basic information from the network. Nevertheless, the following counters are still useful:
+Because Performance Monitor is a local tool, we can only get basic information from the network. Nevertheless, the following counters are still useful:
 
 | Primary counters                             | Healthy             | Warning | Critical |
 | :------------------------------------------- | :------------------ | :------ | :------- |
-| \\Network Interface(*)\\Bytes Total / sec    | < 50%               | 50–80%  | > 80%    |
-| \\Network Interface(*)\\Bytes sent  / sec    | Expected behavior?  |         |          |
-| \\Network Interface(*)\\Bytes received / sec | Expected behavior?  |         |          |
+| **\\Network Interface(*)\\Bytes Total/sec**    | < 50%               | 50–80%  | > 80%    |
+| **\\Network Interface(*)\\Bytes Sent/sec**    | Expected behavior?  |         |          |
+| **\\Network Interface(*)\\Bytes Received/sec** | Expected behavior?  |         |          |
 
 > [!NOTE]
-> The values are related to the speed of the network card, and you do need to do the calculation. When doing so, remember that network speed is measured in BIT and 8 BIT = 1 BYTES. Therefore, if you have 1 GB Network card, you can reach up to 125 Megabytes / sec in terms of throughput.
+> The values are related to the speed of the network card, and you need to do the calculation. When doing so, remember that the network speed is measured in bits, and 8 bits = 1 byte. Therefore, if you have a 1 GB network card, your throughput can reach 125 MB/sec.
 
-While the Bytes Total / sec helps you to understand the overall utilization of your network card, the other two counters are helping you to understand if you are receiving or sending more data. If you have this information, you can then compare it with the expected behavior. If you do wish to investigate your network, we will require a different toolset as we will require end-to-end traces from BOTH sides to fully understand the network behavior.
+While the **Bytes Total/sec** counter helps you understand the overall utilization of your network card, the other two counters can help you know if you're receiving or sending more data. If you have this information, you can compare it with the expected behavior. If you want to investigate your network, a different toolset is needed as we require end-to-end traces from *both* sides to fully understand the network behavior.
 
-## Conclusions
+## Conclusion
 
-This concludes the breakdown and the physical components of a Windows system. When we face a bottleneck on any physical components, your system has problems. And with your system, your application is also impacted.
+This scenario guide concludes with the breakdown and physical components of a Windows system. When you face a bottleneck on any physical components, your system has problems. And your application is also impacted.
 
-We hope this Scenario guide helps you to get a basic understanding of Performance Monitor and how to prepare your system for a "black box" capture like a flight recorder. If you do need further help analyzing the data, feel free to reach out to us by opening a support ticket.
+We hope this scenario guide can help you get a basic understanding of Performance Monitor and how to prepare your system for a "black box" capture, like a flight recorder. If you need further help analyzing the data, feel free to contact us by opening a support ticket.
