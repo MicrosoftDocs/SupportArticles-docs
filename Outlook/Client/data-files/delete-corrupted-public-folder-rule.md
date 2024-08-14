@@ -1,5 +1,5 @@
 ---
-title: Delete corrupted public folder rules
+title: Can't access the Folder Assistant in Outlook
 description: Use the MFCMAPI tool to delete corrupted public folder rules that prevent you from accessing the Folder Assistant to manage rules in Outlook.
 author: cloud-writer
 ms.author: meerak
@@ -19,15 +19,15 @@ appliesto:
   - Outlook for Microsoft 365
   - Outlook LTSC 2021
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 08/13/2024
 ---
-# Can't access Folder Assistant in Outlook
+# Can't access the Folder Assistant in Outlook
 
 If you can't access the Folder Assistant to manage the rules for a public folder in Microsoft Outlook, it's possible that one or more of the rules are corrupted.
 
 To resolve this issue, use the MFCMAPI tool to find and delete the corrupted rules.
 
-## Solution: Delete a corrupted rule
+## Delete a corrupted rule
 
 1. Download the latest version of the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases) tool.
 1. Start the MFCMAPI tool, and then select **Tools** > **Options**.
@@ -45,3 +45,7 @@ To resolve this issue, use the MFCMAPI tool to find and delete the corrupted rul
 1. For each message whose properties indicate a corrupted rule, right-click the message, and select **Delete Message** to delete the corrupted rule.
 
 After the corrupted rules are deleted, try to access the Folder Assistant again.
+
+If you're unable to identify the corrupted rule, or if the issue persists after deleting corrupted rules, follow the same steps to delete all the rules and then access the Folder Assistant again. 
+
+Alternatively, you can use [Exchange Transport Rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) to manage public folder rules. 
