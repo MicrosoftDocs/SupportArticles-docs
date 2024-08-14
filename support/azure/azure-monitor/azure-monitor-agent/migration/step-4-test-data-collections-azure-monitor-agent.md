@@ -9,7 +9,7 @@ ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 ---
 # Step 4: Test data collections in Azure Monitor Agent
 
-In this article, you'll find several methods for linking recently formed Data Collector Reports (DCRs) with existing virtual machines. By following these techniques, you can begin gathering data for analysis in either a testing environment or directly in production.
+In this article, you find several methods for linking recently formed Data Collector Reports (DCRs) with existing virtual machines. By following these techniques, you can begin gathering data for analysis in either a testing environment or directly in production.
 
 ## Deploying newly generated data collection rules (DCRs) to a test workspace
 
@@ -58,9 +58,9 @@ Once the data validation is completed:
    1. Remove the Legacy Agent from the Virtual machine by removing the extension from the VM in the portal.
    1. Migration is now been completed.
 
-1. To migrate additional workspaces, repeats steps 1 to 4.
+1. To migrate more workspaces, repeats steps 1 to 4.
 
-1. To check the latest status of your migration, please consult the AMA Migration Helper workbook.
+1. To check the latest status of your migration, consult the AMA Migration Helper workbook.
 
 :::image type="content" source="media/step-1-plan-your-migration/azure-monitor-migration-helper-azure-virtual-machines-tab.png" alt-text="Azure portal screenshot of the Azure Virtual Machines tab of the Azure Monitor Agent Migration Helper workbook." lightbox="media/step-1-plan-your-migration/azure-monitor-migration-helper-azure-virtual-machines-tab.png":::
 
