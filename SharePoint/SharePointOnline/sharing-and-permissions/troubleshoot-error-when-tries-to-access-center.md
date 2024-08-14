@@ -1,6 +1,6 @@
 ---
-title: External sharing is disabled for the site when a delegated partner administrator tries to access a client's SharePoint Online Admin Center
-description: Provides a resolution for an issue in which external sharing is disabled for the site when a delegated partner administrator tries to access a client's SharePoint Online Admin Center.
+title: Error when a delegated partner administrator accesses a client's SharePoint Online admin center
+description: Provides a resolution for an issue in which external sharing is disabled for the site when a delegated partner administrator tries to access a client's SharePoint Online admin center.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -17,17 +17,21 @@ appliesto:
 ms.date: 08/09/2024
 ---
 
-# "External sharing is disabled for the site" error when a delegated partner administrator tries to access a client's SharePoint Online Admin Center
+# Error when a delegated partner administrator accesses a client's SharePoint Online admin center
 
-## Problem
+## Symptoms
 
-When a delegated partner administrator tries to access the SharePoint Online Admin Center of one of the partner's clients in Microsoft SharePoint Online, the following error message is returned:
+When a delegated partner administrator tries to access the SharePoint Online admin center of one of the partner's clients in Microsoft SharePoint Online, the following error message displays:
 
 > External sharing is disabled for the site.
 
+## Cause
+
+This issue occurs when the account that the delegated partner administrator used to sign in is originally invited to the SharePoint Online site of the partner's client as a "Guest". Guest permissions override a delegated partner's permissions. Therefore guests can't access the SharePoint Online admin center.
+
 ## Solution
 
-To fix this issue, use [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell) to delete the guest account from the client's organization. To do so, run the following cmdlet:
+To fix this issue, use [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell) to delete the guest account from the client's organization. Run the following cmdlet:
 
 > [!NOTE]
 > You must run the cmdlet by using a SharePoint admin account in the client's organization.
@@ -40,8 +44,6 @@ Remove-SPOExternalUser -UniqueIDs @($user.UniqueId)
 For more information about this cmdlet, see [Remove-SPOExternalUser](/powershell/module/sharepoint-online/Remove-SPOExternalUser).
 
 ## More information
-
-This issue occurs when the account that the delegated partner administrator uses for sign-in was originally invited to the SharePoint Online site of the partner's client as an guest. Guest permissions override a delegated partner's permissions. This prevents guests from accessing the SharePoint Online Admin Center.
 
 For more information, see [Partners: Build your business and administer your Microsoft 365 partner account](https://support.microsoft.com/topic/partners-build-your-business-and-administer-your-office-365-partner-subscription-30dd1681-47e0-4cbc-abfe-a222cd111319).
 
