@@ -15,9 +15,11 @@ ms.reviewer: farshadt, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/13/2024
 ---
 # Exchange Online Hybrid Free/Busy Diagnostic
+
+<!-- This article has been reviewed and approved for the specific use of global admin perms.  -->
 
 The Exchange Online Hybrid Free/Busy Diagnostic package collects Windows PowerShell command results that Microsoft 365 technical support can use to troubleshoot free/busy issues in an Exchange hybrid deployment. The Support Diagnostics Platform (SDP) diagnostic tool uses this diagnostic package to collect relevant information. The SDP should be run on the hybrid server.
 
@@ -30,7 +32,7 @@ _Original KB number:_ &nbsp; 2957394
 > [!NOTE]
 >
 > - This diagnostic package is created specifically for customers who have a hybrid deployment of on-premises Exchange Server and Exchange Online.
-> - You have to provide global admin credentials for the Microsoft 365 organization with which you are setting up free/busy.
+> - You have to provide Global admin credentials for the Microsoft 365 organization with which you are setting up free/busy.
 > - The SDP package asks you for the primary SMTP address of the on-premises users and the Microsoft 365 users whose free/busy data you want to pull.
 
 ### Exchange Online-related files
