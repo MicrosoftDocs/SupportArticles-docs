@@ -66,7 +66,3 @@ For Skype for Business and Teams interoperability, [a Skype for Business hybrid 
 ### The result of an ongoing service incident
 
 This error can also be caused by any ongoing service incident. For a list of current incidents, see your [service health dashboard](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/servicehealth).
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

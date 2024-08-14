@@ -57,5 +57,3 @@ Listed below are other recommendations that may help resolve the issue.
 4. If the O365 group is deleted but the SharePoint site still exists, the Site Information Panel might show a spinning icon. If so, [restore the O365 group from the recycle bin](/microsoft-365/admin/create-groups/restore-deleted-group?view=o365-worldwide&preserve-view=true) if it was deleted within the past 30 days.
 
 For more information, see [Manage your SharePoint site settings](https://support.office.com/article/manage-your-sharepoint-site-settings-8376034d-d0c7-446e-9178-6ab51c58df42?ui=en-US&rs=en-US&ad=US).
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
