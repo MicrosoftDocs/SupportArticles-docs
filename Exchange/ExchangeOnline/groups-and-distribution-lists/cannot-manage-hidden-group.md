@@ -1,6 +1,6 @@
 ---
-title: Can't manage a group hidden from GAL
-description: Describes an issue in which the owner of a mail-enabled security group or a distribution group can't view or manage the group in Exchange admin center if the group is hidden from the global address list.
+title: Can't manage a group hidden from the GAL
+description: Provides a workaround for an issue in which the owners of security groups and distribution groups can't view or manage them if the groups are hidden from the global address list.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -15,38 +15,26 @@ ms.reviewer: jhayes, kunalsh, ninob, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/10/2024
 ---
-# The owner of a mail-enabled security group or distribution group can't manage the group if it's hidden from the GAL
+# Can't manage a group hidden from the GAL
 
 _Original KB number:_ &nbsp; 2813640
 
-## Problem
+## Symptoms
 
-### Problem 1
+You see the following scenarios occur:
 
-The owner of a security group can't view or manage a mail-enabled security group by using the Exchange admin center in Microsoft 365 if the group is hidden from the global address list (GAL). However, a global admin can view the security group in the Exchange admin center. This occurs even though the owner is listed in the `ManagedBy` attribute of the group.
+> - Owners of security groups can't manage a group in the Exchange admin center if the group is hidden from the Global Address List (GAL).
+> - The distribution group has to be unhidden from the GAL for owners to manage it in Outlook on the web.
 
-### Problem 2
-
-The owner of a distribution group can't manage the group if it is hidden from the GAL.
-
-## Status
-
-This behavior is by design.
-
-> [!NOTE]
->
-> - Owners of security groups can't manage a group in the Exchange admin center if the group is hidden from the GAL.
-> - The distribution group has to be unhidden from GAL for owners to manage in OWA.
+These behaviors are by design. They occur even when the owner is listed in the `ManagedBy` attribute of the groups.
 
 ## Workaround
 
-To work around this behavior, follow these steps:
+To work around this behavior, the owners of the groups must follow these steps:
 
 1. Create a role group, and then assign the Distribution Group role to that role group. For more information about how to create role groups, see [Manage role groups](/exchange/manage-role-groups-exchange-2013-help).
 2. Add to the role group the users who have to manage groups that are hidden from the GAL. For more information about how to add or remove role group members, see [Manage role groups](/exchange/manage-role-groups-exchange-2013-help).
-
-## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

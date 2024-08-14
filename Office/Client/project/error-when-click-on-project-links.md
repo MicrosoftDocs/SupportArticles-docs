@@ -1,6 +1,6 @@
 ---
 title: Error when you click on the Projects link in the top navigation bar in Project Online
-description: Fixes the error that occurs when you click the Project link if your MySite collection has not yet been manually upgraded.
+description: Provides a fix for an error that occurs when you select the Project link.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -13,10 +13,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Project Online
-ms.date: 03/31/2022
+ms.date: 8/10/2024
 ---
 
-# Project Online: Error when you click on the Projects link in the top navigation bar
+# Error when you click on the Projects link in the top navigation bar in Project Online
 
 ## Symptoms
 
@@ -39,7 +39,7 @@ You can still navigate to Project Web App by manually entering the URL in the ad
 
 ## Cause
 
-This issue occurs in the following scenario:
+This issue occurs in the following scenarios:
 
 ### Cause 1
 
@@ -47,28 +47,28 @@ Your Office365 tenant was recently upgraded and your Tenant Admin has not yet ma
 
 ### Cause 2
 
-The default PWA site with the suffix "/sites/PWA" e.g. `https://domainname.sharepoint.com/sites/PWA` has been renamed or deleted.   
+The default PWA site with the suffix "/sites/PWA" e.g. `https://domainname.sharepoint.com/sites/PWA` has been renamed or deleted.
 
 ## Resolution
 
 ### Resolution steps for Cause 1
 
-1. Log into your online tenant with the global Admin account.
+1. Log into your online tenant with a SharePoint admin account.
 
-2. Go to SharePoint admin Center by clicking the Admin dropdown list and clicking SharePoint.
+2. Select the drop-down list for **Admin** and then select SharePoint to open the SharePoint admin center.
 
-3. check the box next to the URL for your My Site collection, example; `https://domainname-my.sharepoint.com`
+3. Check the box next to the URL for your My Site collection, for example `https://domainname-my.sharepoint.com`.
 
-4. On the ribbon, click Upgrade and click Site collection upgrade settings
+4. On the ribbon, select **Upgrade** and then select **Site collection upgrade settings**.
 
-5. In the site collection upgrade settings dialog, click Link to upgrade page.
+5. In the Site collection upgrade settings dialog, select the **Link to upgrade** page.
 
-6. Click the link to REVIEW SITE COLLECTION UPGRADE STATUS and upgrade the site.
+6. Select the link to **REVIEW SITE COLLECTION UPGRADE STATUS** and upgrade the site.
 
-The My Site collection will be upgraded for all users in your tenant and the Projects link will now navigate to the default web site ending in PWA, example `https://domainname.sharepoint.com/sites/PWA`.
+The My Site collection will be upgraded for all users in your tenant and the Projects link will now navigate to the default web site which ends in PWA, for example `https://domainname.sharepoint.com/sites/PWA`.
 
 ### Resolution steps for Cause 2
 
-The Project link in the top navigation bar requires a default PWA site with the following suffix "/sites/PWA" is present in order for the link to work. E.g., `https://domainname.sharepoint.com/sites/PWA`.
+The Project link in the top navigation bar requires a default PWA site which has the following suffix "/sites/PWA" for the link to work, for example `https://domainname.sharepoint.com/sites/PWA`.
 
-You can either restore the default PWA site that may have been deleted but is still in the Recycle bin, or create a new PWA site in the Sharepoint Admin Center and name the new site as "PWA".
+You can either restore the default PWA site that may have been deleted but is still in the Recycle bin, or create a new PWA site in the Sharepoint admin center and name the new site as "PWA".

@@ -15,7 +15,7 @@ ms.reviewer: evsung, rachaudh, brianja, jasonjoh, v-six
 appliesto: 
   - Power Automate
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/13/2024
 ---
 # REST API is not yet supported for this mailbox error for request to a mailbox
 

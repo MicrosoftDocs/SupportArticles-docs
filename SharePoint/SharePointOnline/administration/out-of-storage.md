@@ -21,6 +21,8 @@ ms.date: 08/09/2024
 
 # SharePoint Online out of storage space
 
+<!-- This article has been reviewed and approved for the specific use of global admin perms.  -->
+
 As a Global admin, you might get an email with one of the following messages:
 
 > SharePoint Online is out of storage space.
