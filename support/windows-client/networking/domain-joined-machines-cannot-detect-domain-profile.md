@@ -28,7 +28,7 @@ The Network Location Awareness (NLA) service performs network location detection
 - Disconnecting or reconnecting the network adapter.
 - Disabling or re-enabling the network adapter.
 - Dynamic Host Configuration Protocol (DHCP) events (lease renewals, Domain Name System (DNS) server addition or removal, and so on).
-- Any changes to the Network Connectivity Status Indicator (NCSI) settings, such as the [DomainLocationDeterminationUrl](/windows/client-management/mdm/policy-csp-admx-ncsi#ncsi_domainlocationdeterminationurl) setting.
+- Any changes to the Network Connectivity Status Indicator (NCSI) settings, such as the [DomainLocationDeterminationUrl](https://gpsearch.azurewebsites.net/Default.aspx?PolicyID=2583#1993) setting.
 
 ## Domain authentication for NLA
 
