@@ -4,7 +4,6 @@ description: Introduces how to fix an Outlook 2016 for Mac crash that occurs whe
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Connectivity\
   - CSSTroubleshoot
