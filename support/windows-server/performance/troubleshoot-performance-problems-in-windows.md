@@ -67,11 +67,11 @@ Now that we have the performance counter log, let's try to simplify Windows in a
 
 :::image type="content" source="media/troubleshoot-performance-problems-in-windows/system-logical-components.png" alt-text="Screenshot of the system logical components.":::
 
-We have already mapped a few performance monitor objects to the physical resource. In addition, we must remember that Windows is split into two major areas: **Kernel** and **User mode**.
+We have already mapped a few performance monitor objects to the physical resource. In addition, we must remember that Windows is split into two major areas: **Kernel** and **User** mode.
 
 **Kernel** refers to the operating system (OS) and drivers (this also includes your antivirus filter driver). The kernel is represented in Windows by a logical construct called **System Process**, which always has the process ID `4`. For security reasons, this area is strongly protected. Even with inbox tools like Performance Monitor, we can only get a little information from it. For example, we can see how much nonpaged pool we're using, but we don't know who's using it.
 
-**User mode** is where we run all applications (modern Appx, services, and executables). With Performance Monitor, we can get information about each process.
+**User** mode is where we run all applications (modern Appx, services, and executables). With Performance Monitor, we can get information about each process.
 
 ## Introduce the 18 most important counters
 
@@ -141,7 +141,7 @@ Let's move on to the next physical resource.
 
 ### CPU
 
-When troubleshooting CPU performance, we need to split the OS into **Kernel** and **User mode** again. However, the split is easier to understand. The user mode is represented by any application or service, including the applications that run in user mode, which consumes CPU cycles and doesn't involve hardware other than the CPU. If we need to access hardware, this results in kernel mode as we need to talk to drivers to access GPU, storage, or network.
+When troubleshooting CPU performance, we need to split the OS into **Kernel** and **User** mode again. However, the split is easier to understand. The User mode is represented by any application or service, including the applications that run in User mode, which consumes CPU cycles and doesn't involve hardware other than the CPU. If we need to access hardware, this results in Kernel mode as we need to talk to drivers to access GPU, storage, or network.
 
 Here are some examples:
 
@@ -153,13 +153,13 @@ Then, let's look at the primary counters:
 
 | Primary counters                                            | Healthy | Warning | Critical |
 | :---------------------------------------------------------- | :------ | :------ | :------- |
-| **\\Processor Information(*)\\% User Time** (user mode)         | < 50%   | 50–80%  | > 80%    |
-| **\\Processor Information(*)\\% Privileged Time** (kernel mode) | < 30%   | 30–50%  | > 50%    |
+| **\\Processor Information(*)\\% User Time** (User mode)         | < 50%   | 50–80%  | > 80%    |
+| **\\Processor Information(*)\\% Privileged Time** (Kernel mode) | < 30%   | 30–50%  | > 50%    |
 | **\\Processor Information(*)\\% Idle Time**                    | >20%    | >10%    | <10%     |
 
 Again, short spikes are acceptable, but if you see it for over one minute, start investigating.
 
-Each time a CPU is used, we consume either **% User Time** (user mode) or **% Privileged Time** (kernel mode). If you encounter a high CPU situation (= low **% Idle Time**), you need to find out who's using it by looking at the following secondary counters:
+Each time a CPU is used, we consume either **% User Time** (User mode) or **% Privileged Time** (Kernel mode). If you encounter a high CPU situation (= low **% Idle Time**), you need to find out who's using it by looking at the following secondary counters:
 
 | Secondary counters              | Comment                                                                                                                                                                                                                      |
 | :------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
