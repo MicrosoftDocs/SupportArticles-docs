@@ -3,7 +3,6 @@ title: How to create and use two-input data tables in Excel
 description: Describes how to create and use two-input data tables in  Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

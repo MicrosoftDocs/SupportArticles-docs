@@ -3,7 +3,6 @@ title: Create and insert a calendar in Excel
 description: Describes how to use a Microsoft Excel worksheet to create a monthly calendar. Sample Visual Basic procedures are included. Procedures help you to customize the calendar to meet your personal requirements.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

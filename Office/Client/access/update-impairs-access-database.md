@@ -3,7 +3,6 @@ title: An update impairs functionality of Access Database
 description: Describes an issue in which you may experience problems with your Access database after applying security update MS12-060.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
