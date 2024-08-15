@@ -4,7 +4,6 @@ description: Resolves errors in Microsoft 365 retention and retention label poli
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: kyrachurney, lindabr, meerak
 ms.custom: 
   - CI 171536

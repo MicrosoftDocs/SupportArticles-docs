@@ -3,7 +3,6 @@ title: Cannot create SSL/TLS secure channel when for Project Online OData from S
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
