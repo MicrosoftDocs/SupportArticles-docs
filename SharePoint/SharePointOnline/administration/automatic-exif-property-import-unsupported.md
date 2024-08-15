@@ -3,7 +3,6 @@ title: Can't automatically import the EXIF properties into the image properties
 description: SharePoint Online no longer automatically imports the EXIF properties into the image properties because the feature relied on an underlying platform capability that's no longer available.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -2,7 +2,6 @@
 title: SharePoint site collection admins can't register apps or update permissions
 description: SharePoint site collection admins can no longer register apps or update app permissions unless explicitly authorized by the SharePoint admin after an enhancement change.
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

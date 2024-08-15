@@ -3,7 +3,6 @@ title: Support for changes made by third-party tools in SharePoint Online
 description: Describes the support for changes made by third-party tools in SharePoint Online.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
