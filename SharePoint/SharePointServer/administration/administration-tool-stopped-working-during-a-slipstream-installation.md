@@ -3,7 +3,6 @@ title: SharePoint Foundation administration tool has stopped working error durin
 description: Provides a workaround for an issue in which SharePoint Foundation administration tool stops working when you run a slipstream installation of SharePoint Server 2016.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

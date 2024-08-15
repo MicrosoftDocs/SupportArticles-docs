@@ -3,7 +3,6 @@ title: Active users are not imported through AD Import
 description: Discusses an issue in which active users are not imported into the Profile database through AD Import. Provides a workaround.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

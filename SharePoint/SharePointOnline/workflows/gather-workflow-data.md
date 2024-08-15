@@ -4,7 +4,6 @@ description: Describes how to get troubleshooting information about Workflows.
 author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

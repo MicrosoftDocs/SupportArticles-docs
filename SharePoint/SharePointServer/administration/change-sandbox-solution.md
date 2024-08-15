@@ -3,7 +3,6 @@ title: Changing an existing Sandbox solution created in Visual Studio
 description: Describes how to change an existing Sandbox solution that's created in Visual Studio.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

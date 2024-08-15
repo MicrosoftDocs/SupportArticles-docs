@@ -3,7 +3,6 @@ title: SharePoint item that requires content approval reverts to Pending status
 description: This article describes an issue where SharePoint Online item that requires content approval reverts to Pending status, and provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

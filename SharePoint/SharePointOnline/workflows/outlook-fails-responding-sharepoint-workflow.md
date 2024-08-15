@@ -3,7 +3,6 @@ title: Outlook 2013 doesn't respond when you approve a SharePoint workflow
 description: You created a workflow that contains at least one Start Approval Process action, however, Outlook 2013 doesn't respond when you approve the workflow.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

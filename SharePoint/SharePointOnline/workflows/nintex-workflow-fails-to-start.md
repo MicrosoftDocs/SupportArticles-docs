@@ -4,7 +4,6 @@ description: Describes an issue in which the Nintex workflow for SharePoint Onli
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

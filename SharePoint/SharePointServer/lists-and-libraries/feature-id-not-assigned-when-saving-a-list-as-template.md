@@ -3,7 +3,6 @@ title: Feature ID not assigned when saving a list as a template
 description: Provides a solution for the issue where Feature ID is not assigned when saving a list as a template.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
