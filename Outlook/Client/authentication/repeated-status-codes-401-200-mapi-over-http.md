@@ -4,7 +4,6 @@ description: Works around an expected behavior in which 401 and 200 HTTP status 
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Connectivity\Cannot send or receive new email
   - Outlook for Windows

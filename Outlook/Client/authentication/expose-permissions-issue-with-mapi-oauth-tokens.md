@@ -3,7 +3,6 @@ title: Cannot expose permissions to generate OAuth tokens for Extended MAPI acce
 description: Microsoft doesn't expose permissions to generate OAuth tokens for Extended MAPI access to mailboxes.
 author: cloud-writer
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
