@@ -10,7 +10,6 @@ ms.custom:
   - sap:Administrator Tasks
   - Exchange Online
   - CSSTroubleshoot
-localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 
