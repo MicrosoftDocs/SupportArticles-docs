@@ -1,6 +1,6 @@
 ---
 title: Logon type has not been granted with error code -1073741477
-description: Solves the Logon type has not been granted error that occurs when you run a desktop flow or create a connection in Power Automate.
+description: Solves the Logon type hasn't been granted error that occurs when you run a desktop flow or create a connection in Power Automate.
 ms.reviewer: guco, johndund
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ms.date: 08/15/2024
@@ -46,7 +46,7 @@ On the impacted machine, a local security policy might not allow or deny the sig
     - **Allow log on locally**
     - **Allow log on through Remote Desktop Services**
 
-    :::image type="content" source="media/logon-type-has-ot-been-granted/allow-log-on-locally-properties.png" alt-text="Screenshot of the group or the user account that's added to the Allow log on locally Properties.":::
+    :::image type="content" source="media/logon-type-has-ot-been-granted/allow-log-on-locally-properties.png" alt-text="Screenshot of the group or the user account that is added to the Allow log on locally Properties.":::
 
 5. For the following policies, verify that the group (the account belongs to) or the account itself isn't in the denied account list.
 
