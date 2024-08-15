@@ -3,7 +3,6 @@ title: Text boxes in an email message are converted to bitmap images
 description: Describes the issue in which text boxes in a Publisher 2010 and 2013-created email message are converted to bitmap images when the email is sent.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

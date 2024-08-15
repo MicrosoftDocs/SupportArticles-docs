@@ -10,7 +10,6 @@ ms.custom:
   - sap:Add-Ins\Centralized Deployment of Add-Ins
   - DownloadInstall\AdvancedConfiguration\AddInsOrIntegratedApps
   - CSSTroubleshoot
-localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 

@@ -4,7 +4,6 @@ description: This article describes the behaviors of Auto-Exec and Auto-Open mac
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Extensibility\Macros

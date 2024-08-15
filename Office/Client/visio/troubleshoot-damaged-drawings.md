@@ -3,7 +3,6 @@ title: Troubleshoot damaged drawings in Visio
 description: Contains information about how to troubleshoot damaged drawings in Visio 2013, Visio 2010, Visio 2007, Visio 2003 and Visio 2002. Lists methods that you can use to try to recover the damaged drawing.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 

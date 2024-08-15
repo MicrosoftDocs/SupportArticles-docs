@@ -3,7 +3,6 @@ title: How to merge Word documents
 description: Describes how to merge multiple Word documents into one.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
