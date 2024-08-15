@@ -11,12 +11,12 @@ ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 
 Data collection rule (DCR) represents a modern method for setting up data streams for the Azure Monitor Agent. The Azure Monitor DCR Config Generator is a PowerShell script designed to facilitate the transition from older agents to the Azure Monitor Agent by leveraging existing Log Analytics workspace data to automatically generate and implement data collection rules (DCRs). However, it's important to manually link these rules to the virtual machines (VMs) to initiate data collection.
 
-After using the DCR Config Generator tool in your production workspace, DCRs will be generated and linked to it. To avoid potential issues with duplicate data and disruptions to your production environment, we suggest creating a new, isolated development or staging workspace after running the generator. This allows you to safely test and validate that data flows correctly through the DCRs before deploying them to your production environment. After validation passes in the new workspace, you have the following two options. Select the option that best fits your requirements.
+The DCR Config Generator tool will produce DCRs which will be linked to the Log Analytics workspace. To avoid potential issues with duplicate data and disruptions to your production environment, we suggest creating a new, isolated development or staging workspace after running the generator. This allows you to safely test and validate that data flows correctly through the DCRs before deploying them to your production environment. After validation passes in the new workspace, you have the following two options. Select the option that best fits your requirements.
 
 - **Reconnect the DCRs to the original workspace**
   
   If you select this option while the legacy agent is still connected, data duplication is very likely to occur until the legacy agent is removed.
-- **Retire the old workspace and collect data in the new one**
+- **Retire the old workspace and collect data a new workspace**
   
   This option allows you to seamlessly transition to the updated configuration without disrupting your production environment.
 
