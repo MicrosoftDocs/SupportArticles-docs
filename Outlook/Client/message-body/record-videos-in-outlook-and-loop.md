@@ -4,7 +4,6 @@ description: Provides an overview of a new feature to record videos in Loop page
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 185299

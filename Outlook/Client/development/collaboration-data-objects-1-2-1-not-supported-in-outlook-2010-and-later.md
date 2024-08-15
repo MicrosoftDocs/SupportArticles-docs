@@ -4,7 +4,6 @@ description: Collaboration Data Objects (CDO) 1.2.1 is not supported with Outloo
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Developer Issues\Macros
   - CSSTroubleshoot
