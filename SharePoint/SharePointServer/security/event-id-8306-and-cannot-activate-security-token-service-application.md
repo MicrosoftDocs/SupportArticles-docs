@@ -3,7 +3,6 @@ title: Unable to Activate Security Token Service Application - Event ID 8306
 description: Fixes some issues in SharePoint Foundation 2010. For example, users can't log in to SharePoint sites that are using claims authentication.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

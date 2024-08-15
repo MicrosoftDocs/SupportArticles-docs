@@ -3,7 +3,6 @@ title: Using PageParserPath directive can cause performance problems
 description: Describes performance problems when using PageParserPath directive.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -3,7 +3,6 @@ title: HTTP Unauthorized to /_vti_bin/client.svc/sp.utilities.utility.SendEmail
 description: Describes an issue where access is denied when you send an email to a SharePoint group. Provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

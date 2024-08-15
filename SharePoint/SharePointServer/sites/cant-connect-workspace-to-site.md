@@ -3,7 +3,6 @@ title: Can't connect a workspace to a site
 description: Describes a problem in which you cannot connect SharePoint Workspace 2010 to an Office SharePoint Server 2007 site.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

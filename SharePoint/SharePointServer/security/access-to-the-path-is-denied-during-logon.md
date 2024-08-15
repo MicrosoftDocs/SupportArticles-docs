@@ -3,7 +3,6 @@ title: Server Error in '/' Application. Access to the path is denied when you lo
 description: Describes how you receive an error message and you cannot log on to SharePoint Services installed on a domain controller by using a correct user name and password. To resolve this issue, you must configure the appropriate permissions ASP.NET.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

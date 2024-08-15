@@ -3,7 +3,6 @@ title: SharePoint Workspace does not sync automatically
 description: Describes conditions under which a SharePoint workspace or the SharePoint Files tool does not sync automatically.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

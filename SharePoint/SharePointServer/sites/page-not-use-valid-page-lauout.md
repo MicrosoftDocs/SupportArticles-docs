@@ -3,7 +3,6 @@ title: Error This page is not using a valid page layout
 description: Viewing a SharePoint .aspx page generates the error This page is not using a valid page layout. Provides a solution for this issue.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
