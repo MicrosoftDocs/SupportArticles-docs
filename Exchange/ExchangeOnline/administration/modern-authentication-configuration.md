@@ -4,7 +4,6 @@ description: Configuration requirements by Outlook version for transition from M
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
