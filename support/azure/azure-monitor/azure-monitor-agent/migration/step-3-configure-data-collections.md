@@ -54,7 +54,7 @@ To use the DCR Config Generator, follow these steps:
 
 1. Choose a template file to deploy one of the created DCR ARM templates to your subscription.
 
-1. Associate the rules with your VMs that are running Azure Monitor Agent by using the built-in association policies.
+1. The DCR's are now published and available in the Azure portal.
 
 ## Next steps
 
