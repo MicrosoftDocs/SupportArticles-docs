@@ -18,7 +18,7 @@ In this article, you can find several methods for linking recently formed data c
 To set up a short-term Log Analytics workspace for testing purposes, follow these steps:
 
 1. Sign in to the Azure portal with your Azure account credentials.
-1. In the search bar at the top of the portal, type *Log Analytics* and press <khd>Enter</khd> to open the **Log Analytics** blade.
+1. In the search bar at the top of the portal, type *Log Analytics* and press <kbd>Enter</kbd> to open the **Log Analytics** blade.
 1. Select the **+ Add** or **Add** button to create a new Log Analytics workspace.
 1. Fill in the required details for your new workspace, such as the name and the subscription where you want to create it.
 1. Select a resource group for your new workspace. You can create a new one or use an existing one.
@@ -28,7 +28,7 @@ To set up a short-term Log Analytics workspace for testing purposes, follow thes
 
 ### Swap the production workspace with the test workspace
 
-1. In the search bar at the top of the portal, type *Data Collection Rules* and press <khd>Enter</khd> to open the **Data Collection Rules** blade.
+1. In the search bar at the top of the portal, type *Data Collection Rules* and press <kbd>Enter</kbd> to open the **Data Collection Rules** blade.
 1. Select the data collection rule that you newly created with the DCR tool.
 1. Select **Configuration** > **Data Sources**, and then select a data source.
 1. Validate the data source setting and select the **Destination** tab.
