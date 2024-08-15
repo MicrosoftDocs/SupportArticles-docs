@@ -3,7 +3,6 @@ title: Error 12029 We cannot connect you to this meeting in Skype for Business 2
 description: Discusses a problem in which you receive an 12029 error message and you cannot connect to a meeting in Skype for Business 2016 or 2015.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

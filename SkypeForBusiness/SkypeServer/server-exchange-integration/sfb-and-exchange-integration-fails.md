@@ -3,7 +3,6 @@ title: Skype for Business and Exchange integration fails
 description: Provide a solution when Skype for Business and Exchange integration fails.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
