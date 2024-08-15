@@ -4,7 +4,6 @@ description: The scheduling section of a page is blank after you edit its conten
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

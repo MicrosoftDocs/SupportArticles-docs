@@ -3,7 +3,6 @@ title: The webpage cannot be displayed when you try to open an Office document i
 description: Describes an issue in which you receive The webpage cannot be displayed error message when you try to open an Office document in the client application from inside SharePoint Online.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

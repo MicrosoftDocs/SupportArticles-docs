@@ -4,7 +4,6 @@ description: This article describes an issue where the Task List displays a titl
 author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

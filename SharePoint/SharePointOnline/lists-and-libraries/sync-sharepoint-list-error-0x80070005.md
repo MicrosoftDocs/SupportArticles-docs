@@ -3,7 +3,6 @@ title: 0x80070005 error when syncing a SharePoint Online list in Outlook
 description: You cannot sync a SharePoint Online list in Outlook with the error 0x80070005 that you have no permission to view the SharePoint list.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

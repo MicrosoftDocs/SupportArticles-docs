@@ -3,7 +3,6 @@ title: Error when you try to import a term set into SharePoint Online
 description: Describes an issue when you try to import a term set into SharePoint Online.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
