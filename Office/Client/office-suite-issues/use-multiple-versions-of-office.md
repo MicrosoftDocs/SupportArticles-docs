@@ -3,7 +3,6 @@ title: Use Office 2013 on a computer that's running another version of Office
 description: Describes how to run multiple versions of Office on a computer that has Office 2013 suites and programs installed.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

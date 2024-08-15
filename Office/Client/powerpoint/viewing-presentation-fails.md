@@ -3,7 +3,6 @@ title: Error messages when you view a PowerPoint  presentation
 description: You cannot view a PowerPoint  presentation if the Hlink.dll file is missing, is damaged, or is the wrong version.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

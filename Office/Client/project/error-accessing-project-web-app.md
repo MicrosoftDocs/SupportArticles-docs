@@ -3,7 +3,6 @@ title: Error when accessing Project Web App
 description: Provides resolutions for errors that occur when accessing Project Web App
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

@@ -3,7 +3,6 @@ title: Office application opens blank from SharePoint WebDAV or site when it is 
 description: Describes a problem in which you open up Office files and applications open up blank when authentication is  over a non-SSL connection.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

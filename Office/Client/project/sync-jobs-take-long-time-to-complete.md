@@ -3,7 +3,6 @@ title: Project Server Sync Jobs take a long time to complete
 description: Explains why sync jobs can take a long time and how to mitigate the issue.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

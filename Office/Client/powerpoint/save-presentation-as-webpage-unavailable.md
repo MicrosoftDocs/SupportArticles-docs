@@ -3,7 +3,6 @@ title: The options to save a presentation as a webpage are not available in the 
 description: Describes an issue in which the htm and the mht webpage file type is not available as a save option in PowerPoint 2010.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

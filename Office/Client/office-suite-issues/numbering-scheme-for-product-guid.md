@@ -3,7 +3,6 @@ title: Numbering scheme for product code GUIDs
 description: Describes the numbering scheme for product code GUIDs in Office 2016.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
