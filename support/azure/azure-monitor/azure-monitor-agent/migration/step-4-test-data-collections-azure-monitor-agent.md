@@ -55,9 +55,9 @@ To set up a short-term Log Analytics workspace for testing purposes, follow thes
 Once the data validation is completed, perform these steps:
 
 1. Switch the destination workspace in the DCR from the temporary workspace to the production workspace.
-1. Remove the Legacy Agent extension from the VM in the portal.
+1. Remove the legacy agent extension from the VM in the portal.
 
-Migration is now completed. To migrate more workspaces, repeats the steps.
+Migration is now completed. To migrate more workspaces, repeat the steps.
 
 To check the latest status of your migration, see the AMA Migration Helper workbook:
 
