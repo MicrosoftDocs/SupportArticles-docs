@@ -4,7 +4,6 @@ description: Provides a resolution for when you see an error message the first t
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Install, Update, Activate, and Deploy\Errors during installation
   - CSSTroubleshoot
