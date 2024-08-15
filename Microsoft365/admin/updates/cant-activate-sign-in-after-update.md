@@ -8,7 +8,6 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-localization_priority: Normal
 ms.reviewer: balram
 search.appverid: 
   - MET150

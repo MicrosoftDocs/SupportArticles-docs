@@ -3,7 +3,6 @@ title: Increase the size of diagnostic logs for Microsoft 365 Apps for enterpris
 description: Provides instructions to increase the size of Office diagnostic logs.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
