@@ -7,7 +7,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Migration\Issues with Public Folder Migration
   - Exchange Server

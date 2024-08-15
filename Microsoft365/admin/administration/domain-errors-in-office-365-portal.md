@@ -3,7 +3,6 @@ title: Domain errors in the Microsoft 365 portal
 description: Describes all domain error messages that you may experience in the Microsoft 365 portal.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
