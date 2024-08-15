@@ -3,7 +3,6 @@ title: Can't perform an operation on a table
 description: Describes three methods that you can use to solve the insufficient disk space problem or the insufficient memory problem. You must have knowledge of Registry Editor and also be familiar with the Visual Basic .NET.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

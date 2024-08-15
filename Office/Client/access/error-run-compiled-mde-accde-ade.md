@@ -3,7 +3,6 @@ title: Can't open database compiled as MDE, ACCDE or ADE
 description: Resolves the problem that you receive an error message when you run a compiled Microsoft Access MDE, ACCDE, or ADE file in Access 2010. Resolution is to compile your Access 2010 MDE, ACCDE, or ADE application by using the version of Access 2010 in which you intend to deploy the MDE, ACCDE, or ADE file.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

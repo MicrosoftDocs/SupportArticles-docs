@@ -3,7 +3,6 @@ title: SQL Server Native Client drivers used by Access
 description: Provides download information about the SQL Server Native Client drivers that are used by certain features in Access.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
