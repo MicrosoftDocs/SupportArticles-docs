@@ -43,12 +43,12 @@ To use the DCR Config Generator, follow these steps:
 
 1. After you download the file, please create a *migration* folder on your C drive and move the file there.
 
-1. Run the tool and specify the required parameters, such as the following items:
+1. Run the script with the required parameters:
 
-   - Source Subscription ID (SubscriptionID:)
-   - Source Resource group name (ResourceGroupName:)
-   - Source Workspace Name (WorkspaceName:)
-   - DCR Naming Prefix (DcrName:)
+   - Source Subscription ID (`SubscriptionID`)
+   - Source Resource group name (`ResourceGroupName`)
+   - Source Workspace Name (`WorkspaceName`)
+   - DCR Naming Prefix (`DCRName`)
    
    The tool establishes a connection with your Log Analytics workspace, retrieves the settings from the existing source workspace, and then generates DCR arm template files in JSON format. These files are subsequently saved in a local directory for your review.
 
