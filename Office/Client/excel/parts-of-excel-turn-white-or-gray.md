@@ -3,7 +3,6 @@ title: Parts of Excel 2013 turn white or gray
 description: Describes an issue in which the screen flickers or appears completely white in Excel 2013. This issue occurs when you run VBA code that performs a specific action such as inserting a new worksheet or creating a new workbook.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

@@ -3,7 +3,6 @@ title: Office 2016 for Mac 16.x prompts you for authentication
 description: Describes an issue in which Office 2016 for Mac version 16.9.0 and later versions prompt you for authentication when you open a URL in Excel, Word, or PowerPoint.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

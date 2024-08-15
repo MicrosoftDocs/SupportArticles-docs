@@ -4,7 +4,6 @@ description: This article provides two resolutions for the problem where Object 
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot
