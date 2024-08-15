@@ -9,7 +9,7 @@ ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 ---
 # Step 4: Test data collections in Azure Monitor Agent
 
-In this article, you can find several methods for linking recently formed data collector reports with existing virtual machines (VMs). By following these techniques, you can begin gathering data for analysis in a testing or production environment.
+In this article, you can find several methods for linking recently formed data collection rules with existing virtual machines (VMs). By following these techniques, you can begin gathering data for analysis in a testing or production environment.
 
 ## Deploy newly generated data collection rules (DCRs) to a test workspace
 
