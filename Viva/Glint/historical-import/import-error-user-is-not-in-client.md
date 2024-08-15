@@ -10,7 +10,6 @@ search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
   - CI184016
-localization_priority: Normal
 ---
 
 # "User is not in client" error during historical imports
