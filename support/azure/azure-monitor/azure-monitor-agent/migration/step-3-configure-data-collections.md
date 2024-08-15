@@ -1,7 +1,7 @@
 ---
 title: Step 3 - Configure data collections for Azure Monitor Agent
 description: Learn how to configure data collections for Azure Monitor Agent so that you can migrate from the legacy Log Analytics agent.
-ms.date: 07/16/2024
+ms.date: 08/15/2024
 ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
@@ -9,28 +9,30 @@ ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 ---
 # Step 3: Configure data collections
 
-A Data Collection Rule (DCR) represents a modern method for setting up data streams for the Azure Monitor Agent. The Azure Monitor DCR Config Generator is a PowerShell script designed to facilitate the transition from older agents to the Azure Monitor Agent by leveraging existing Log Analytics workspace data to automatically generate and implement DCRs. However, it's important to manually link these rules to the virtual machines (VMs) to initiate data collection.
+Data collection rule (DCR) represents a modern method for setting up data streams for the Azure Monitor Agent. The Azure Monitor DCR Config Generator is a PowerShell script designed to facilitate the transition from older agents to the Azure Monitor Agent by leveraging existing Log Analytics workspace data to automatically generate and implement data collection rules (DCRs). However, it's important to manually link these rules to the virtual machines (VMs) to initiate data collection.
 
-After using the DCR Config Generator tool on your production workspace, Data Collection Rules (DCRs) will be generated and linked to it. To avoid potential issues with duplicate data and disruptions to your production environment, we suggest creating a new, isolated development or staging workspace after running the generator. This allows you to safely test and validate that data is flowing correctly through the DCRs before deploying them to your production environment.
+After using the DCR Config Generator tool in your production workspace, DCRs will be generated and linked to it. To avoid potential issues with duplicate data and disruptions to your production environment, we suggest creating a new, isolated development or staging workspace after running the generator. This allows you to safely test and validate that data flows correctly through the DCRs before deploying them to your production environment. After validation passes in the new workspace, you have the following two options. Select the option that best fits your requirements.
 
-After validation has passed in this new workspace, you have a few options:
+- **Reconnect the DCRs to the original workspace**
+  
+  If you select this option while the legacy agent is still connected, data duplication is very likely to occur until the legacy agent is removed.
+- **Retire the old workspace and collect data in the new one**
+  
+  This option allows you to seamlessly transition to the updated configuration without disrupting your production environment.
 
-1. **Reconnect the DCRs to the original workspace**: If you do this while the legacy agent is still connected, there's a high likelihood of data duplication until the legacy agent is removed.
-1. **Retire the old workspace and collect data in the new one**: This allows you to seamlessly transition to the updated configuration without disrupting your production environment.
+## Prerequisites to run the DCR Config Generator tool
 
-Choose the approach that best fits your specific requirements and needs.
+- PowerShell version 7.1.3 or later is recommended (the minimum version is 5.1)
 
-## Prerequisites to run DCR Config Generator tool
-- PowerShell version 7.1.3 or higher is recommended (minimum version 5.1)  
-To determine which version of PowerShell is installed on your machine, copy and run the following command:
-```
-    powershell
-	$PSVersionTable
-```
-- Az PowerShell module to pull workspace agent configuration information Az PowerShell module. To install the Az PowerShell module, see [Install Azure PowerShell on Windows](/powershell/azure/install-azps-windows)
-- Read/Write access to the specified workspace resource
+  To determine which version of PowerShell is installed on your machine, run the following command:
+  
+  ```powershell
+  $PSVersionTable
+  ```
+- Az PowerShell module to pull the workspace agent configuration information. To install the Az PowerShell module, see [Install Azure PowerShell on Windows](/powershell/azure/install-azps-windows).
+- Read/Write access to the specified workspace resource.
 
-## DCR Config Generator Tool
+## How to use the DCR Config Generator tool
 
 To use the DCR Config Generator, follow these steps:
 
@@ -39,7 +41,7 @@ To use the DCR Config Generator, follow these steps:
 <!-- Add image displaying to the customer what to select next - image 1 in email -->
 <!-- Add image displaying to the customer where the download button is on github - image 2 in email -->
 
-1. After you download the file, please create a ‘migration’ folder on your C drive and move the file there.
+1. After you download the file, please create a *migration* folder on your C drive and move the file there.
 
 1. Run the tool and specify the required parameters, such as the following items:
 
