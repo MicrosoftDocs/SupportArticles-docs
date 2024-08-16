@@ -81,7 +81,7 @@ To find the tags within the associated repository and registry using the Azure p
 Navigate to your registry container. Under **Services**, select **Repositories**, open the associated repository, and then check the list of tags.
 
 > [!NOTE]
-> The [az acr repository show-tags](/cli/azure/acr/repository?view=azure-cli-latest#az-acr-repository-show-tags) command or checking the Repositories from the Azure portal only works if the [container registry network rules](/azure/container-registry/container-registry-access-selected-networks) permit it.
+> The [az acr repository show-tags](/cli/azure/acr/repository?view=azure-cli-latest#az-acr-repository-show-tags&preserve-view=true) command or checking the Repositories from the Azure portal only works if the [container registry network rules](/azure/container-registry/container-registry-access-selected-networks) permit it.
 
 ## Error 3: client with IP is not allowed access
 
