@@ -17,7 +17,7 @@ ms.custom:
   - CI 123888
   - CSSTroubleshoot
 ms.reviewer: pamgreen
-description: Describes a resolution to an issue where an invitation sent to a distribution list that's accessed by an external user prevents other users from accessing the SharePoint resource.
+description: Resolves an issue in which an invitation sent to a distribution list that's accessed by an external user prevents other users from accessing the SharePoint resource.
 ---
 
 # SharePoint invitation sent to a distribution list works for only one user
@@ -29,7 +29,7 @@ When you send an external user invitation to a shared Microsoft SharePoint resou
 - Access Denied
 - You need permission to access this site.
 - Let us know why you need access to this site.
-- User isn't found in the directory
+- User is not found in the directory
 
 ## Cause
 
@@ -40,8 +40,8 @@ This issue occurs because distribution lists aren't supported methods for assign
 To resolve this issue, use one of the following methods, depending on your specific scenario:
 
 - If you're using directory synchronization, share the resource with security groups and not with a distribution list.
-- Use SharePoint groups. For more information, go to [Customize SharePoint site permissions](/sharepoint/customize-sharepoint-site-permissions).
-- Use Microsoft 365 groups. For more information, go to [Learn about Microsoft 365 Groups](https://support.microsoft.com/office/learn-about-microsoft-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+- Use SharePoint groups. For more information, see [Customize SharePoint site permissions](/sharepoint/customize-sharepoint-site-permissions).
+- Use Microsoft 365 groups. For more information, see [Learn about Microsoft 365 Groups](https://support.microsoft.com/office/learn-about-microsoft-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 ## More information
 

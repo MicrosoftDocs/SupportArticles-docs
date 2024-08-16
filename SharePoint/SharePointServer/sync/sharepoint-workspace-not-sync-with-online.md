@@ -30,13 +30,13 @@ Consider the following scenario:
 
 In this scenario, the first synchronization finishes successfully. However, later synchronization attempts may fail. For a SharePoint workspace, the failure generates a notification, and the SharePoint Files tool may display the following message:
 
-You don't have permission to view this SharePoint Library. Contact the site administrator.
+> You don't have permission to view this SharePoint Library. Contact the site administrator.
 
 ## Cause
 
-The 2007 SharePoint Files tool doesn't support Forms Based Authentication. It's the authentication scheme that's used by Microsoft SharePoint Online. However, the 2007 SharePoint Files tool uses active credentials from Windows Internet Explorer. Initial synchronization works because the SharePoint Files tool prompts you for your credentials during the tool initialization. Later synchronization attempts won't prompt you for your credentials, and you'll be unable to authenticate. Therefore, those attempts work if you have an active SharePoint Online session in your browser, and they fail if you don't.
+The 2007 SharePoint Files tool doesn't support Forms Based Authentication. It's the authentication scheme that's used by Microsoft SharePoint Online. However, the 2007 SharePoint Files tool uses active credentials from Windows Internet Explorer. Initial synchronization works because the SharePoint Files tool prompts you for your credentials during the tool initialization. Later synchronization attempts don't prompt you for your credentials, and you can't authenticate. Therefore, those attempts work if you have an active SharePoint Online session in your browser, and they fail if you don't.
 
-A SharePoint workspace in SharePoint Workspace 2010 also tries to use the active credentials in Internet Explorer. If you don't have a browser open and you try a manual sync, the SharePoint workspace may prompt for credentials. It will not prompt for credentials for a background sync. However, if a background sync fails, a notification is generated that states that credentials are required. To see SharePoint Workspace notifications, point to the SharePoint Workspace icon in the notification area. 
+A SharePoint workspace in SharePoint Workspace 2010 also tries to use the active credentials in Internet Explorer. If you don't have a browser open and you try a manual sync, the SharePoint workspace may prompt for credentials. It doesn't prompt for credentials for a background sync. However, if a background sync fails, a notification is generated that states that credentials are required. To see SharePoint Workspace notifications, point to the SharePoint Workspace icon in the notification area.
 
 ## Resolution
 
