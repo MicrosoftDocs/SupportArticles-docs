@@ -14,12 +14,12 @@ ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-While RHEL for SAP 7.x (where x isn't equal to 9) can be accessed in `E4S` and/or `EUS`, RHEL for SAP 7.9 follows a different approach. In this case, the related content is found in unversioned repositories. As a result, updating a system that operates SAP on RHEL 7.x to RHEL 7.9 requires several manual steps.
+While `RHEL` for SAP 7.x (where x isn't equal to 9) can be accessed in `E4S` and/or `EUS`, `RHEL` for SAP 7.9 follows a different approach. In this case, the related content is found in unversioned repositories. As a result, updating a system that operates SAP on `RHEL 7.x` to `RHEL` 7.9 requires several manual steps.
 
 This article provides the correct steps to update to 7.9 for `SAP-HANA` or `SAPAPPS` pay-as-you-go (PAYG) images.
 
 > [!IMPORTANT]
-> RHUI is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
+> `RHUI` is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
 For more information on performing the update process on custom or golden images, and pay-as-you-go (PAYG) images provided by Red Hat, see:
 
@@ -81,7 +81,7 @@ repolist: 76,118
 ```
 
 >[!IMPORTANT]
->A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this scenario, all the mentioned repositories are required. Optionally, you can modify the `/etc/yum.repos.d/rh-cloud-base-sap-ha.repo` file based on your system's specific requirement
+>A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this scenario, all the mentioned repositories are required. Optionally, you can modify the `/etc/yum.repos.d/rh-cloud-base-sap-ha.repo` file based on your system's specific requirement.
 
 
 5. Update to RHEL 7.9.
@@ -114,7 +114,7 @@ sudo yum remove $(rpm -qa | grep -i rhui)
 sudo yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel7-base-sapapps.config' install rhui-azure-rhel7-base-sap-apps
 ```
 
-4. Verify that the corresponding repositories are available and show no errors. To do this task, run the `yum repolist` command
+4. Verify that the corresponding repositories are available and show no errors. To do this task, run the `yum repolist` command.
 
 ```bash
 sudo yum repolist
@@ -152,4 +152,4 @@ sudo reboot
 ---
 
 > [!IMPORTANT]
-> If your next target is to move to RHEL 8 for SAP environments refer to: [NEW LINK WORKINPROGRESS]
+> If your next target is to move to RHEL 8 for SAP environments refer to: [How to Perform a leapp upgrade from RHEL 7.9 to 8.X for SAP-HANA and SAPAPPS PAYG.](https://review.learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/pgrade-process-from-rhel79-to-8x-on-sap-hana-apps?branch=pr-en-us-7005&tabs=rhel8saphana)
