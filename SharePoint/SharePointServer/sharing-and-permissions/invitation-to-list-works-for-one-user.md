@@ -17,14 +17,14 @@ ms.custom:
   - CI 123888
   - CSSTroubleshoot
 ms.reviewer: pamgreen
-description: Resolves an issue in which an invitation sent to a distribution list that's accessed by an external user prevents other users from accessing the SharePoint resource.
+description: Resolves an issue in which an invitation sent to a distribution list that's accessed by a guest prevents other users from accessing the SharePoint resource.
 ---
 
 # SharePoint invitation sent to a distribution list works for only one user
 
 ## Symptoms
 
-When you send an external user invitation to a shared Microsoft SharePoint resource, and a user accepts and accesses the resource, the others in the group are unable to access the resource. Instead, they receive one of the following messages:
+When you send a guest invitation to a shared Microsoft SharePoint resource, and a user accepts and accesses the resource, the others in the group are unable to access the resource. Instead, they receive one of the following messages:
 
 - Access Denied
 - You need permission to access this site.
@@ -33,7 +33,7 @@ When you send an external user invitation to a shared Microsoft SharePoint resou
 
 ## Cause
 
-This issue occurs because distribution lists aren't supported methods for assigning SharePoint permissions. When you share with a distribution list, the first user who accepts the invitation receives access to the resource as an external user.
+This issue occurs because distribution lists aren't supported methods for assigning SharePoint permissions. When you share with a distribution list, the first user who accepts the invitation receives access to the resource as a guest.
 
 ## Resolution
 
