@@ -10,7 +10,6 @@ search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
   - CI190687
-localization_priority: Normal
 ---
 
 # Resolve file upload errors related to attributes

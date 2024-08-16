@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
   - CI 183792
-localization_priority: Normal
 ms.service: viva-pulse
 ---
 
