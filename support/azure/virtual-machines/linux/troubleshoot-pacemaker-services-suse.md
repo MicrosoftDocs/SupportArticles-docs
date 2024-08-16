@@ -15,17 +15,19 @@ author: rnirek
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article lists the common causes of pacemaker services failed to start and provides resolutions for the issues.
+This article lists the common causes of pacemaker services failed to start and provides resolutions to fix the issues.
 
 ## Create a Pacemaker cluster
 
-To create a basic Pacemaker cluster in  SUSE Linux Enterprise Server (SLES) in Azure, follow the steps as documented [Set up Pacemaker on SUSE Linux Enterprise Server in Azure](/azure/sap/workloads/high-availability-guide-suse-pacemaker).
+To create a basic Pacemaker cluster in SUSE Linux Enterprise Server (SLES) in Azure, follow the steps as documented [Set up Pacemaker on SUSE Linux Enterprise Server in Azure](/azure/sap/workloads/high-availability-guide-suse-pacemaker).
 
-## Cause 1:
-The pacemaker fails to start if a sysrq trigger action caused the last reboot. Manual graceful reboot works fine.
+## Cause 1: 
+
+The pacemaker service fails to start if the previous reboot was triggered by a SysRq action. The pacemaker service can start successfully after a normal reboot.
 
 ### Symptom:
-A conflict between sbd msgwait time and the fast reboot time of these Azure VMs. Documented further in `/etc/sysconfig/sbd`:
+```bash
+A conflict exists between the SBD (STONITH Block Device) `msgwait` time and the fast reboot time of these Azure VMs, as specified in `/etc/sysconfig/sbd`:
 
 ```bash
 ## Type: yesno / integer
@@ -46,43 +48,45 @@ SBD_DELAY_START=no
 
 ### Resolution:
 
-1. Put the cluster under maintenance-mode:
-```bash
-sudo crm configure property maintenance-mode=true
-```
+1. Put the cluster into maintenance-mode:
+
+   ```bash
+   sudo crm configure property maintenance-mode=true
+   ```
 2. Edit the `/etc/sysconfig/sbd` file and change `SBD_DELAY_START` parameter to `yes`.
 
-3. Remove the cluster out of maintenance-mode.
-```bash
-sudo crm configure property maintenance-mode=false
-```
-4.Restart the pacemaker and sbd  service or reboot both nodes
-```bash
-sudo systemctl restart sbd
-sudo systemctl restart pacemaker
-```
+3. Remove the cluster from maintenance mode:
+   ```bash
+   sudo crm configure property maintenance-mode=false
+   ```
+4.Restart the pacemaker and SDB services or reboot both nodes:
+   ```bash
+   sudo systemctl restart sbd
+   sudo systemctl restart pacemaker
+   ```
 
 ## Cause 2:
-After cluster node was fenced, pacemaker service is unable to start and exit with code 100.
-```bash
-systemctl status pacemaker.service
+After cluster node was fenced, the pacemaker service is unable to start and exit with code 100.
 
-● pacemaker.service - Pacemaker High Availability Cluster Manager
-   Loaded: loaded (/usr/lib/systemd/system/pacemaker.service; enabled; vendor preset: disabled)
-   Active: inactive (dead) since Wed 2020-05-13 23:38:21 UTC; 25s ago
-     Docs: man:pacemakerd
-           https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html-single/Pacemaker_Explained/index.html
- Main PID: 1570 (code=exited, status=100)
-```
+   ```bash
+   systemctl status pacemaker.service
+   
+   ● pacemaker.service - Pacemaker High Availability Cluster Manager
+      Loaded: loaded (/usr/lib/systemd/system/pacemaker.service; enabled; vendor preset: disabled)
+      Active: inactive (dead) since Wed 2020-05-13 23:38:21 UTC; 25s ago
+        Docs: man:pacemakerd
+              https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html-single/Pacemaker_Explained/index.html
+    Main PID: 1570 (code=exited, status=100)
+   ```
 
 ### Symptom:
 If a node attempts to rejoin the cluster after it's fenced and before the msgwait timeout completes, `pacemaker.service` fails to start with an exit status of 100. Enabling the SBD_DELAY_START setting puts a "msgwait" delay on the startup of sbd.service. This increases for the node to rejoin, and ensures the node can rejoin without experiencing the msgwait conflict. 
 
 Per SBD man page:
 
-*-4 N Set msgwait timeout to N seconds. This should be twice the watchdog timeout. This is the time after which a message written to the node's slot will be considered delivered. (Or long enough for the node to detect that it needed to self-fence)*
+>-4 N Set msgwait timeout to N seconds. This should be twice the watchdog timeout. This is the time after which a message written to the node's slot will be considered delivered. (Or long enough for the node to detect that it needed to self-fence)
 
-If the SBD_DELAY_START setting is used, and SBD msgwait value is high there's a potential of two other issues:
+If the `SBD_DELAY_START` setting is used, and SBD msgwait value is high there's a potential of two other issues:
 
 1. The SBD service will timeout during start, as the SBD_DELAY_START might take longer than the default for system services in systemd.
 
@@ -101,23 +105,22 @@ sbd -d /dev/sdc dump
 ```
 
 > [!NOTE]
-> Here the sbd device is /dev/sdc. Add your appropriate SBD device that has been configured for STONITH purposes.
+> This command assumes the SBD device is `/dev/sdc`. Replace it with your SBD device configured for STONITH.
 
 ### Resolution 1:
 
-1. Put the cluster under maintenance-mode:
-```bash
-sudo crm configure property maintenance-mode=true
-```
+1. Put the cluster into maintenance-mode:
+   ```bash
+   sudo crm configure property maintenance-mode=true
+   ```
 
 2.Edit the `/etc/sysconfig/sbd` file and change `SBD_DELAY_START` parameter to `yes`.
 
 3. Make a copy of `sbd.service`
 
-```bash
-cp /usr/lib/systemd/system/sbd.service /etc/systemd/system/sbd.service
-```
-
+   ```bash
+   cp /usr/lib/systemd/system/sbd.service /etc/systemd/system/sbd.service
+   ```
 4. Edit `/etc/systemd/system/sbd.service` and add the following lines in `[Unit]` and `[Service]` section:
 
 ```bash
@@ -127,25 +130,21 @@ cp /usr/lib/systemd/system/sbd.service /etc/systemd/system/sbd.service
    TimeoutSec=144
 ```
 
-5. Remove the cluster out of maintenance-mode.
+5. Remove the cluster from maintenance-mode.
 
-```bash
-sudo crm configure property maintenance-mode=false
-```
+   ```bash
+   sudo crm configure property maintenance-mode=false
+   ```
 
-6.Restart the pacemaker and sbd  service or reboot both nodes
+6.Restart the pacemaker and SDB service or reboot both nodes
 
-```bash
-sudo systemctl restart sbd
-sudo systemctl restart pacemaker
-```
+   ```bash
+   sudo systemctl restart sbd
+   sudo systemctl restart pacemaker
+   ```
 
 ### Resolution 2:
-Tweak sbd device msgwait timeout shorter than the time it takes for SBD fencing action to complete and `sbd.service` to start up again after reboot. Modify `watchdog` parameter to 50% of new `msgwait` timeout. This is a process of optimization and must be tuned on a system-by-system basis.
-
-## Next Steps
-
-If you need more help, open a support request by using the following instructions:
+Tweak SDB device `msgwait` timeout shorter than the time it takes for SBD fencing action to complete and `sbd.service` to start up again after reboot. Modify `watchdog` parameter to 50% of new `msgwait` timeout. This is a process of optimization and must be tuned on a system-by-system basis.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
