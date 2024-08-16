@@ -3,7 +3,7 @@ title: Resolve file upload warnings related to invalid or unexpected values
 description: Fix warnings that occur when you upload employee attribute data to Microsoft Viva Glint. These warnings are related to invalid or unexpected values.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 07/04/2024
+ms.date: 08/16/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -174,7 +174,7 @@ Warning message:
 
 > INVALID_LOCALE: Line \<x\> the Locale value \<locale\> is not a valid locale string.
 
-This issue occurs when there are invalid language code values in the file you upload.
+This issue occurs if the file that you upload contains invalid language code values.
 
 ### Resolution
 
@@ -185,7 +185,7 @@ To fix the issue, follow these steps:
 
    **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
 1. Replace the invalid **Locale** value with a valid value. For a list of valid language code values, download the [Viva Glint Employee Attribute Template](https://www.microsoft.com/en-us/download/details.aspx?id=105533), select the **Language Codes** worksheet, and then check the values in the **Language Code** column.
-1. Save the file and then upload it again to Viva Glint.
+1. Save the file and upload it again to Viva Glint.
 
 ## INVALID_USER_TIMEZONE
 
@@ -193,7 +193,7 @@ Warning message:
 
 > INVALID_USER_TIMEZONE: Line \<x\> the User Timezone value \<timezone\> is not a valid international timezone string.
 
-This issue occurs when there are invalid time zone values in the file you upload.
+This issue occurs if the file that you upload contains invalid time zone values. 
 
 ### Resolution
 
@@ -204,4 +204,4 @@ To fix the issue, follow these steps:
 
    **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
 1. Replace the invalid **User Timezone** value with a valid value. For a list of valid time zone values, download the [Viva Glint Employee Attribute Template](https://www.microsoft.com/en-us/download/details.aspx?id=105533), select the **Time Zones** worksheet, and then check the values in the **Canonical Time Zone** column.
-1. Save the file and then upload it again to Viva Glint.
+1. Save the file and upload it again to Viva Glint.
