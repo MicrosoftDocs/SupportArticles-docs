@@ -3,7 +3,6 @@ title: Incomplete search results for choice type columns with multiple values
 description: Fixes an issue in which incomplete search results for choice type columns with multiple values.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
