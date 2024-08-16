@@ -30,7 +30,7 @@ Consider the following scenario.
 
 ## Solution
 
-To work around this issue, disable automatic updating of the workflow status to the current stage name. To do this, follow these steps:
+To work around this issue, disable automatic updating of the workflow status to the current stage name. To do so, follow these steps:
 
 1. Open the affected workflow in SharePoint Designer 2013.
 
@@ -40,6 +40,6 @@ To work around this issue, disable automatic updating of the workflow status to 
 
 ## More information
 
-The status of the item changes when the workflow is run and when the **Automatically update the workflow status to the current stage name** is enabled for the workflow. This starts the approval process for the affected item.
+The status of the item changes when the workflow is run and when the **Automatically update the workflow status to the current stage name** is enabled for the workflow. It starts the approval process for the affected item.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

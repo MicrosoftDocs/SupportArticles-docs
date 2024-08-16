@@ -1,6 +1,6 @@
 ---
-title: Active users are not imported through AD Import
-description: Discusses an issue in which active users are not imported into the Profile database through AD Import. Provides a workaround.
+title: Active users aren't imported through AD Import
+description: Discusses an issue in which active users aren't imported into the Profile database through AD Import. Provides a workaround.
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
@@ -30,7 +30,7 @@ Consider the following scenario:
 - You use an organizational unit (OU) that's named Accounting and that contains a user, Testuser1.
 - TestUser1 is active in the Active Directory domain and is selected during the AD Import sync connection in the User Profile application.
 
-When you run Full or Incremental AD Import process, TestUser1 is not imported into the Profile database. The ULS logs show no errors or entries that are related to this user. All other users from the same OU are imported successfully into the Profile database.
+When you run Full or Incremental AD Import process, TestUser1 isn't imported into the Profile database. The ULS logs show no errors or entries that are related to this user. All other users from the same OU are imported successfully into the Profile database.
 
 ## Cause
 
@@ -53,9 +53,9 @@ This problem occurs when the following conditions are true for a situation that 
 - You have two organizational units, Accounting OU and Sales OU.
 - TestUser1 is included in Accounting OU and has the LastKnownParent attribute set to Sales OU.
 - Accounting OU is selected during the AD Import sync connection.
-- Sales OU is not selected during the AD Import sync connection. 
+- Sales OU isn't selected during the AD Import sync connection. 
 
-In this situation, TestUser1 is not imported into the Profile database by running a Full or Incremental AD Import process.
+In this situation, TestUser1 isn't imported into the Profile database by running a Full or Incremental AD Import process.
 
 **Note** When a user is deleted from the Active Directory domain and is then restored, the Active Directory domain sets the LastKnownParent property to the OU from which the user was deleted.
 
@@ -65,22 +65,22 @@ Scenario 1:
 
 - TestUser1 is included in Sales OU.
 - TestUser1 is deleted from the Active Directory domain.
-- TestUser1 is restored to Sales OU. 
+- TestUser1 is restored to Sales OU.
 
-   **Note** In this case, the **LastKnownParent** property is set to Sales OU. (This is because the user was deleted from Sales OU.)
+   **Note** In this case, the **LastKnownParent** property is set to Sales OU because the user was deleted from Sales OU.
 
 Scenario 2:
 
 - TestUser1 is included in Sales OU.
 - TestUser1 is deleted from the Active Directory domain.
-- TestUser1 is restored to Accounting OU. 
+- TestUser1 is restored to Accounting OU.
 
-   **Note** In this case, the **LastKnownParent** property is set to Sales OU. (This is because the user was deleted from Sales OU.)
+   **Note** In this case, the **LastKnownParent** property is set to Sales OU because the user was deleted from Sales OU.
 
-In Scenario 2, if we select Accounting OU but do not select Sales OU during the AD Import sync connection in the User profile application, TestUser1 is not imported through AD Import because its **LastKnownParent** property is set to Sales OU. (This is because Sales OU isn't selected as part of the AD Import sync connection).
+In Scenario 2, if we select Accounting OU but don't select Sales OU during the AD Import sync connection in the User profile application, TestUser1 isn't imported through AD Import because its **LastKnownParent** property is set to Sales OU. (This is because Sales OU isn't selected as part of the AD Import sync connection).
 
 ## Status
 
-This behavior is by design. This behavior is included to avoid unexpected scenarios in multi-tenant situations. However, it also applies to single tenant, on-premises SharePoint 2019, 2016, and 2013 farms.
+This behavior is by design. This behavior is included to avoid unexpected scenarios in multitenant situations. However, it also applies to single tenant, on-premises SharePoint 2019, 2016, and 2013 farms.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

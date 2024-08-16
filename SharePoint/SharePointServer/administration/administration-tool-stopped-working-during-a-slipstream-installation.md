@@ -20,9 +20,9 @@ ms.date: 12/17/2023
 
 ## Symptoms  
 
-When you run a a slipstream installation of SharePoint Server 2016, you receive the following error message:
+When you run a slipstream installation of SharePoint Server 2016, you receive the following error message:
 
-**"SharePoint Foundation administration tool has stopped working"**  
+> SharePoint Foundation administration tool has stopped working  
 
 ## Cause  
 
@@ -30,7 +30,7 @@ This error occurs because the Microsoft SharePoint Foundation administration too
 
 ## Status  
 
-You can safely ignore this message because the error does not affect the integrity of the SharePoint slipstream installation.
+You can safely ignore this message because the error doesn't affect the integrity of the SharePoint slipstream installation.
 
 ## Workaround  
 
@@ -42,7 +42,7 @@ A slipstream installation installs the product and additional product updates at
 
 When this error occurs, the Windows event log may include the following logged events:
 
-```   
+```output
 Log Name: Application  
 Source: .NET Runtime  
 Date: DateTime  
@@ -62,7 +62,7 @@ Exception Info: System.TypeInitializationException
 at Microsoft.SharePoint.StsAdmin.SPStsAdmin.Main(System.String[])
 ```
 
-```  
+```output
 Log Name: Application  
 Source: Application Error  
 Date: DateTime   
