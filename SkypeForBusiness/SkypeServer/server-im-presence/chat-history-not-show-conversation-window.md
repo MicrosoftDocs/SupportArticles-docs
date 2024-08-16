@@ -4,7 +4,6 @@ description: Describes an issue in which you can't see the chat history in Skype
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

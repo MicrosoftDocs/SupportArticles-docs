@@ -3,7 +3,6 @@ title: Access Denied error when a SharePoint 2010 workflow sends an email to a g
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
