@@ -15,21 +15,13 @@ author: rnirek
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article lists the common causes of pacemaker services failed to start and provides resolutions to fix the issues.
+This article lists the common causes of pacemaker service startup issues and provides resolutions to fix them.
 
-## Create a Pacemaker cluster
+## Scenario 1: Pacemaker Service startup failure due to SysRq triggered reboot
 
-To create a basic Pacemaker cluster in SUSE Linux Enterprise Server (SLES) in Azure, follow the steps as documented [Set up Pacemaker on SUSE Linux Enterprise Server in Azure](/azure/sap/workloads/high-availability-guide-suse-pacemaker).
+The pacemaker service fails to start if the previous reboot was triggered by a SysRq action. The pacemaker service can start successfully after a normal reboot. This issue is caused by a conflict exists between the SBD (STONITH Block Device) `msgwait` time and the fast reboot time of these Azure VMs, as specified in `/etc/sysconfig/sbd`:
 
-## Cause 1: 
-
-The pacemaker service fails to start if the previous reboot was triggered by a SysRq action. The pacemaker service can start successfully after a normal reboot.
-
-### Symptom:
-```bash
-A conflict exists between the SBD (STONITH Block Device) `msgwait` time and the fast reboot time of these Azure VMs, as specified in `/etc/sysconfig/sbd`:
-
-```bash
+```output
 ## Type: yesno / integer
 ## Default: no
 #
@@ -45,7 +37,6 @@ A conflict exists between the SBD (STONITH Block Device) `msgwait` time and the 
 # this case better.
 SBD_DELAY_START=no
 ```
-
 ### Resolution:
 
 1. Put the cluster into maintenance-mode:
@@ -65,7 +56,8 @@ SBD_DELAY_START=no
    sudo systemctl restart pacemaker
    ```
 
-## Cause 2:
+## Scenario 2:  Pacemaker Service fails to start with code 100 after node fencing
+
 After cluster node was fenced, the pacemaker service is unable to start and exit with code 100.
 
    ```bash
@@ -79,33 +71,11 @@ After cluster node was fenced, the pacemaker service is unable to start and exit
     Main PID: 1570 (code=exited, status=100)
    ```
 
-### Symptom:
-If a node attempts to rejoin the cluster after it's fenced and before the msgwait timeout completes, `pacemaker.service` fails to start with an exit status of 100. Enabling the SBD_DELAY_START setting puts a "msgwait" delay on the startup of sbd.service. This increases for the node to rejoin, and ensures the node can rejoin without experiencing the msgwait conflict. 
+### Cause
 
-Per SBD man page:
+If a node attempts to rejoin the cluster after it's fenced and before the `msgwait` timeout completes, the pacemaker service fails to start with an exit status of 100. To resolve the issue, enabling the `SBD_DELAY_START` setting puts a "msgwait" delay on the startup of sbd.service. This increases for the node to rejoin, and ensures the node can rejoin without experiencing the `msgwait` conflict. 
 
->-4 N Set msgwait timeout to N seconds. This should be twice the watchdog timeout. This is the time after which a message written to the node's slot will be considered delivered. (Or long enough for the node to detect that it needed to self-fence)
-
-If the `SBD_DELAY_START` setting is used, and SBD msgwait value is high there's a potential of two other issues:
-
-1. The SBD service will timeout during start, as the SBD_DELAY_START might take longer than the default for system services in systemd.
-
-2. The returning node starts corosync and results in  blocking the cluster services. The symptom looks like everything from a cluster perspective worked, for example fencing. But then "the surviving node waited until the fenced node returned."
-
-The logs show entries similar to
-
-```bash
- Dec 03 15:29:25 [3533] animal    pengine:   notice: LogActions: Start   fs_mysap   (animal - blocked)
-```
-
-You can check SBD msgwait time with the command:
-
-```bash
-sbd -d /dev/sdc dump
-```
-
-> [!NOTE]
-> This command assumes the SBD device is `/dev/sdc`. Replace it with your SBD device configured for STONITH.
+Note that if the `SBD_DELAY_START` setting is used, and SBD `msgwait` value is very high, two other potential problems might occur. For more information, see [Settings for long timeout in SBD_DELAY_START](https://www.suse.com/support/kb/doc/?id=000019356).
 
 ### Resolution 1:
 
@@ -136,7 +106,7 @@ sbd -d /dev/sdc dump
    sudo crm configure property maintenance-mode=false
    ```
 
-6.Restart the pacemaker and SDB service or reboot both nodes
+6.Restart the pacemaker and SDB service or reboot both nodes:
 
    ```bash
    sudo systemctl restart sbd
@@ -149,3 +119,5 @@ Tweak SDB device `msgwait` timeout shorter than the time it takes for SBD fencin
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+
+
