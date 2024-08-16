@@ -3,7 +3,7 @@ title: Resolve file upload warnings related to invalid or unexpected values
 description: Fix warnings that occur when you upload employee attribute data to Microsoft Viva Glint. These warnings are related to invalid or unexpected values.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 07/04/2024
+ms.date: 08/16/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -167,3 +167,41 @@ To fix the issue, use one of the following methods, depending on the cause:
     1. Revert the name to the correct value.
 
 After you update the attributes, upload the file again to Viva Glint.
+
+## INVALID_LOCALE
+
+Warning message:
+
+> INVALID_LOCALE: Line \<x\> the Locale value \<locale\> is not a valid locale string.
+
+This issue occurs if the file that you upload contains invalid language code values.
+
+### Resolution
+
+To fix the issue, follow these steps:
+
+1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+1. Locate the row that's listed in the warning message.
+
+   **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
+1. Replace the invalid **Locale** value with a valid value. For a list of valid language code values, download the [Viva Glint Employee Attribute Template](https://www.microsoft.com/en-us/download/details.aspx?id=105533), select the **Language Codes** worksheet, and then check the values in the **Language Code** column.
+1. Save the file and upload it again to Viva Glint.
+
+## INVALID_USER_TIMEZONE
+
+Warning message:
+
+> INVALID_USER_TIMEZONE: Line \<x\> the User Timezone value \<timezone\> is not a valid international timezone string.
+
+This issue occurs if the file that you upload contains invalid time zone values. 
+
+### Resolution
+
+To fix the issue, follow these steps:
+
+1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+1. Locate the row that's listed in the warning message.
+
+   **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
+1. Replace the invalid **User Timezone** value with a valid value. For a list of valid time zone values, download the [Viva Glint Employee Attribute Template](https://www.microsoft.com/en-us/download/details.aspx?id=105533), select the **Time Zones** worksheet, and then check the values in the **Canonical Time Zone** column.
+1. Save the file and upload it again to Viva Glint.
