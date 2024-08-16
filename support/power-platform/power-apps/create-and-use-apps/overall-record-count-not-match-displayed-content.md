@@ -3,7 +3,7 @@ title: Total record count doesn't match the displayed content
 description: Troubleshoots an issue where the overall record count doesn't match the displayed content in a Power Apps model-driven app.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 08/12/2024
+ms.date: 08/16/2024
 author: fikaradz
 ms.author: fikaradz
 ---
