@@ -45,7 +45,7 @@ To resolve the issue, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), navigate to your registry container. In the **Settings** section, select **Access keys**. Check the admin user credentials settings of the **Login server**, **Username**, and **password**.
 1. Navigate to your web app. In the **Settings** section, Select **Environment variables**.
-1. Ensure that the three variables you configured for the container registry's login server, username, and password align with the admin user credentials settings in the registry container.
+1. Ensure that the three variables configured for the container registry's login server, username, and password align with the admin user credentials settings in the registry container.
 
 ### Solution for managed identity based on authentication
 
@@ -81,7 +81,7 @@ To find the tags within the associated repository and registry using the Azure p
 Navigate to your registry container. Under **Services**, select **Repositories**, open the associated repository, and then check the list of tags.
 
 > [!NOTE]
-> The `az acr repository show-tags` command or checking the Repositories from the Azure portal only works if the ACR network rules permit it.
+> The [az acr repository show-tags](/cli/azure/acr/repository?view=azure-cli-latest#az-acr-repository-show-tags) command or checking the Repositories from the Azure portal only works if the [container registry network rules](/azure/container-registry/container-registry-access-selected-networks) permit it.
 
 ## Error 3: client with IP is not allowed access
 
