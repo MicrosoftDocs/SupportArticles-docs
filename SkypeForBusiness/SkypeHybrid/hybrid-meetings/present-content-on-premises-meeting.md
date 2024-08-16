@@ -3,7 +3,6 @@ title: Online users can't present content in on-premises hosted meetings
 description: Describes an issue that blocks online users from presenting content in on-premises hosted meetings in a Skype for Business Hybrid deployment. This is a DNS issue, and a resolution is provided.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
