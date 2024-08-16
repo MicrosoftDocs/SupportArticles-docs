@@ -25,7 +25,7 @@ By default, the Visual Studio 2015 and 2013 templates for SharePoint Sandbox sol
 
 ## Procedure
 
-To change an existing Sandbox solution that's created in Visual Studio, follow these steps:
+To change an existing Sandbox solution that you create in Visual Studio, follow these steps:
 
 1. Open the existing Visual Studio project for the Sandbox solution.
 1. Open the **Properties** dialog box for the project. To do so, open the Visual Studio project in Solution Explorer, and then press the F4 key.

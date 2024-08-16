@@ -1,6 +1,6 @@
 ---
 title: SharePoint item that requires content approval reverts to Pending status
-description: This article describes an issue where SharePoint Online item that requires content approval reverts to Pending status, and provides a solution.
+description: Describes an issue in which a SharePoint item that requires content approval reverts to Pending status, and provides a solution.
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
@@ -20,11 +20,11 @@ ms.date: 12/17/2023
 
 ## Problem
 
-Consider the following scenario.
+Consider the following scenario:
 
 - In a Microsoft SharePoint Online library, the **Require content approval for submitted items?** option under **Library Settings, Versioning settings** is set to ***Yes***.
 
-- You run a Microsoft SharePoint 2013 workflow on an item that's contained in the library.
+- You run a Microsoft SharePoint 2013 workflow on an item in the library.
 
 - After the workflow is finished, the **Approval Status** of the item changes to ***Pending***.
 
@@ -40,6 +40,6 @@ To work around this issue, disable automatic updating of the workflow status to 
 
 ## More information
 
-The status of the item changes when the workflow is run and when the **Automatically update the workflow status to the current stage name** is enabled for the workflow. It starts the approval process for the affected item.
+The status of the item changes when the workflow is run and the **Automatically update the workflow status to the current stage name** is enabled for the workflow. It starts the approval process for the affected item.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
