@@ -29,7 +29,7 @@ When you send an external user invitation to a shared Microsoft SharePoint resou
 - Access Denied
 - You need permission to access this site.
 - Let us know why you need access to this site.
-- User is not found in the directory
+- User isn't found in the directory
 
 ## Cause
 
