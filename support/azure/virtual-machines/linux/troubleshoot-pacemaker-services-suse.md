@@ -4,7 +4,7 @@ description: Provides troubleshooting guidance for Pacemaker Services fail to st
 ms.reviewer: rnirek,rmuneer
 ms.topic: troubleshooting
 ms.date: 07/24/2024
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ms.author: rnirek
