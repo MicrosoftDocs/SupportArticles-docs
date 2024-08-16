@@ -1,16 +1,16 @@
 ---
-title:   How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or `SAPAPPS` on `PAYG` images.
+title: How to update RHEL from 7.X to 7.9 with RHEL for SAP with High Availability or SAPAPPS (PAYG).
 description: Guide with step by step procedure to do an OS update frm `RHEL` 7.X to 7.9
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
 editor: 
 ms.date: 08/02/2024
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAPAPPS on (PAYG) images.
+# How to update RHEL from 7.X to 7.9 with RHEL for SAP with High Availability or SAPAPPS (PAYG).
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
@@ -27,7 +27,6 @@ For more information on performing the update process on custom or golden images
 
 - [Recommended Practices for Applying Software Updates to a RHEL High Availability or Resilient Storage Cluster](https://access.redhat.com/articles/2059253#pacemaker)
 
-
 > [!NOTE] 
 > Notice that RHEL 7.9 is the final RHEL 7 release and maintenance defines its [Maintenance Support 2 Phase policy](https://access.redhat.com/support/policy/updates/errata#Maintenance_Support_2_Phase).
 
@@ -38,13 +37,12 @@ For more information on performing the update process on custom or golden images
 - SAP process must be stopped during the OS update process.
 - Root privileges.
 
-## Process to upgrade from RHEL 7.X to RHEL 7.9 on SAP HA or SAPAPPS pay-as-you-go (PAYG) images.
-
+## Process to upgrade from RHEL 7.X to RHEL 7.9 on SAP-HANA or SAPAPPS pay-as-you-go (PAYG).
 
 #### [RHEL 7.x to 7.9 on SAP-HA](#tab/rhel7x-rhel79ha)
 
 
-1. Remove the RHUI(E4S) package installed or updated on the VM.
+1. Remove the `RHUI(E4S)` package installed or updated on the VM.
 
 ```bash
 sudo yum remove $(rpm -qa | grep -i rhui)
@@ -56,7 +54,7 @@ sudo yum remove $(rpm -qa | grep -i rhui)
  rm /etc/yum/vars/releasever
 ```
 
-3. Install the `rhui-azure-rhel7-base-sap-ha` package by running the yum install command
+3. Install the `rhui-azure-rhel7-base-sap-ha` package by running the yum install command.
 
 ```bash
 sudo yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel7-base-sap-ha.config' install rhui-azure-rhel7-base-sap-ha
@@ -86,12 +84,12 @@ repolist: 76,118
 >A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this scenario, all the mentioned repositories are required. Optionally, you can modify the `/etc/yum.repos.d/rh-cloud-base-sap-ha.repo` file based on your system's specific requirement
 
 
-5. Update to RHEL 7.9
+5. Update to RHEL 7.9.
 
 ```bash
 sudo yum update
 ```
-6. Reboot the Virtual Machine
+6. Reboot the Virtual Machine.
 
 ```bash
 sudo reboot 
@@ -99,7 +97,7 @@ sudo reboot
 
 #### [RHEL 7.x to 7.9 on SAPAPPS](#tab/rhel7x-rhel79sapapps)
 
-1. Remove the RHUI(EUS-SAP) package installed.
+1. Remove the `RHUI(EUS-SAP)` package installed.
 
 ```bash
 sudo yum remove $(rpm -qa | grep -i rhui)
@@ -109,11 +107,13 @@ sudo yum remove $(rpm -qa | grep -i rhui)
 ```bash
  rm /etc/yum/vars/releasever
 ```
-3. Install the `rhui-azure-rhel7-base-sap-apps` package by running the yum install command
+
+3. Install the `rhui-azure-rhel7-base-sap-apps` package by running the yum install command.
 
 ```bash
 sudo yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel7-base-sapapps.config' install rhui-azure-rhel7-base-sap-apps
 ```
+
 4. Verify that the corresponding repositories are available and show no errors. To do this task, run the `yum repolist` command
 
 ```bash
@@ -137,13 +137,13 @@ rhui-microsoft-azure-rhel7-base-sap-ha                   Microsoft Azure       6
 repolist: 77,105
 ```
 
-5. Update to RHEL 7.9
+5. Update to RHEL 7.9.
 
 ```bash
 sudo yum update
 ```
 
-6. Reboot the Virtual Machine
+6. Reboot the Virtual Machine.
 
 ```bash
 sudo reboot 
