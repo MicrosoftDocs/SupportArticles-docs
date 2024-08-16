@@ -88,7 +88,6 @@ sudo yum update
 ```bash
 sudo reboot
 ```
-
    a. After the virtual machine is up and running, make sure that no `SAP HANA` systems and no `SAP` processes are running on your virtual machine.
 
    b. Make sure the `SAP HANA` file systems are mounted.
@@ -96,7 +95,6 @@ sudo reboot
    c. Temporarily disable antivirus software to prevent the upgrade from failing.
 
    d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture).
-
 
 6. Install the `leapp` utility.
 
@@ -159,7 +157,7 @@ The `pre-upgrade` report highlights possible issues and provides recommended sol
 sudo leapp preupgrade --target <target_os_version> --channel <e4s> --no-rhsm
 ```
 
-**Example 1**: `Pre-upgrading` to 8.8 requires E4S repo.
+**Example 1**: `Pre-upgrading` to 8.8 requires `E4S` repo.
 
 ```bash
 sudo leapp preupgrade  --target 8.8 --channel e4s --no-rhsm
@@ -228,7 +226,7 @@ Continue to the `leapp upgrade` process after the `pre-upgrade` report shows no 
 sudo leapp upgrade --target <target_os_version> --channel <e4s/eus> --no-rhsm
 ```
 
-**Example 1**: Upgrading to 8.8 requires E4S repo.
+**Example 1**: Upgrading to 8.8 requires `E4S` repo.
 
 ```bash
 sudo leapp upgrade  --target 8.8 --channel e4s --no-rhsm
