@@ -50,7 +50,7 @@ SBD_DELAY_START=no
    ```bash
    sudo crm configure property maintenance-mode=false
    ```
-4.Restart the Pacemaker and SDB services or reboot both nodes:
+4. Restart the Pacemaker and SDB services or reboot both nodes:
    ```bash
    sudo systemctl restart sbd
    sudo systemctl restart Pacemaker
@@ -73,7 +73,7 @@ After cluster node was fenced, the Pacemaker service is unable to start and exit
 
 ### Cause
 
-If a node attempts to rejoin the cluster after it's fenced and before the `msgwait` timeout completes, the Pacemaker service fails to start with an exit status of 100. To resolve the issue, enabling the `SBD_DELAY_START` setting puts a "msgwait" delay on the startup of sbd.service. This increases for the node to rejoin, and ensures the node can rejoin without experiencing the `msgwait` conflict. 
+If a node attempts to rejoin the cluster after it's fenced but before the `msgwait` timeout completes, the Pacemaker service fails to start with an exit status of 100. To resolve the issue, enable the `SBD_DELAY_START` setting, and put a `msgwait` delay on the startup of sbd.service. This allows more time for the node to rejoin the cluster, and ensures the node can rejoin without experiencing the `msgwait` conflict. 
 
 Note that if the `SBD_DELAY_START` setting is used, and SBD `msgwait` value is very high, two other potential problems might occur. For more information, see [Settings for long timeout in SBD_DELAY_START](https://www.suse.com/support/kb/doc/?id=000019356).
 
@@ -84,7 +84,7 @@ Note that if the `SBD_DELAY_START` setting is used, and SBD `msgwait` value is v
    sudo crm configure property maintenance-mode=true
    ```
 
-2.Edit the `/etc/sysconfig/sbd` file and change `SBD_DELAY_START` parameter to `yes`.
+2. Edit the `/etc/sysconfig/sbd` file and change `SBD_DELAY_START` parameter to `yes`.
 
 3. Make a copy of `sbd.service`
 
