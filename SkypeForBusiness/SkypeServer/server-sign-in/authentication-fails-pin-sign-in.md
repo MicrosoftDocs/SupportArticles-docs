@@ -3,7 +3,6 @@ title: Authentication fails during PIN sign-in
 description: Describes an issue that prevents the Lync Phone Edition PIN authentication process from working correctly. Occurs when a mismatched Trusted Root Certificate Authorities certificate chain is installed on the Lync Server front-end server role.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

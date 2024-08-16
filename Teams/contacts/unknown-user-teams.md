@@ -4,7 +4,6 @@ description: Describes a behavior in which a user appears as Unknown User in Tea
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Teams People & Presence\Contact Card
   - CI 192483

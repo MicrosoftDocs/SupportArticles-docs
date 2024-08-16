@@ -12,7 +12,6 @@ ms.custom:
   - CSSTroubleshoot
   - CI190695
   - CI192293
-localization_priority: Normal
 ---
 
 # Resolve file upload warnings related to invalid or unexpected values
