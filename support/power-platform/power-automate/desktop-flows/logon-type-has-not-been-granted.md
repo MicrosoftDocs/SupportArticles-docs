@@ -3,7 +3,7 @@ title: Logon type has not been granted with error code -1073741477
 description: Solves the Logon type hasn't been granted error that occurs when you run a desktop flow or create a connection in Power Automate.
 ms.reviewer: guco, johndund
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 08/15/2024
+ms.date: 08/16/2024
 ---
 # "Logon type has not been granted" error when running a desktop flow or creating a connection
 
@@ -27,12 +27,14 @@ When you run a desktop flow or [create a desktop flow connection](/power-automat
 
 ## Cause
 
-On the impacted machine, a local security policy might not allow or deny the sign-in of the account (or a group that contains this account) used in your connection.
+On the impacted machine, a local security policy might not allow (or might deny) the logon of the account (or a group that contains this account) used in your connection.
 
 > [!NOTE]
 > "Deny" permissions take precedence over "Allow" permissions unless specific exceptions are configured at the domain controller level.
 
 ## Resolution
+
+To resolve the issue, ensure that the user account or group used in the connection has logon permissions, and isn't in the list of denied accounts.
 
 1. Sign in to the impacted machine preferably as an administrator.
 2. Go to **Local Security Policy**.
@@ -40,15 +42,16 @@ On the impacted machine, a local security policy might not allow or deny the sig
 
    :::image type="content" source="media/logon-type-has-ot-been-granted/user-rights-assignment.png" alt-text="Screenshot of the User Rights Assignment policy settings.":::
 
-4. For the following policies, verify that the group (the account belongs to) or the account itself is added to the list.
+4. Right-click the **Access this computer from the network** policy and select **Properties**.
+5. Check if the group (the account belongs to) or the account itself is in the list. If it isn't, add it to the list using **Add User or Group...**.
+6. Perform the above two steps for the following policies as well:
 
-    - **Access this computer from the network**
     - **Allow log on locally**
     - **Allow log on through Remote Desktop Services**
 
     :::image type="content" source="media/logon-type-has-ot-been-granted/allow-log-on-locally-properties.png" alt-text="Screenshot of the group or the user account that is added to the Allow log on locally Properties.":::
 
-5. For the following policies, verify that the group (the account belongs to) or the account itself isn't in the denied account list.
+7. For the following policies, check the **Properties** to verify that the group (the account belongs to) or the account itself isn't in the denied account list.
 
     - **Deny access this computer from the network**
     - **Deny log on locally**
