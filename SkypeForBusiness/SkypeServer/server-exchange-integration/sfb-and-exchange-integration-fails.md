@@ -3,7 +3,6 @@ title: Skype for Business and Exchange integration fails
 description: Provide a solution when Skype for Business and Exchange integration fails.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -24,9 +23,9 @@ ms.date: 03/31/2022
 
 Consider the following scenario:
 
-- You have a Microsoft Lync 2013 or Skype for Business server, and you have configured integration with Microsoft Exchange 2013 or 2016.   
-- At least some of the users have contoso.com as primary SMTP.   
-- On the Exchange server, you change the AcceptedDomains settings so that instead of contoso.com you have \*.contoso.com, as described in [Procedures for accepted domains in Exchange 2016](/Exchange/mail-flow/accepted-domains/accepted-domain-procedures).   
+- You have a Microsoft Lync 2013 or Skype for Business server, and you configure integration with Microsoft Exchange 2013 or 2016.
+- At least some of the users have `contoso.com` as primary SMTP.
+- On the Exchange server, you change the AcceptedDomains settings so that instead of contoso.com you have \*.contoso.com, as described in [Procedures for accepted domains in Exchange 2016](/Exchange/mail-flow/accepted-domains/accepted-domain-procedures).
 
 After this change, Skype for Business and Exchange integration starts failing. The following error message is reported in the Lync server log:
 
@@ -54,7 +53,7 @@ request-id: 33086db3-69f9-4cdf-8ffe-ee364539e113x-ms-diagnostics: 2000004;reason
 
 ## Cause
 
-Wildcard domains are not supported for server-to-server communication under AcceptedDomains.
+Wildcard domains aren't supported for server-to-server communication under AcceptedDomains.
 
 ## Resolution
 
