@@ -4,7 +4,6 @@ description: Fixes some meeting chat issues when you join a Teams meeting. For e
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Teams Chat (Messaging)\Meeting Chats
   - CI 154689
