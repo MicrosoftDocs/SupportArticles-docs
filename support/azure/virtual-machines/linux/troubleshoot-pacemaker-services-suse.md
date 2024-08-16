@@ -19,7 +19,7 @@ This article lists the common causes of pacemaker service startup issues and pro
 
 ## Scenario 1: Pacemaker Service startup failure due to SysRq triggered reboot
 
-The pacemaker service fails to start if the previous reboot was triggered by a SysRq action. The pacemaker service can start successfully after a normal reboot. This issue is caused by a conflict exists between the SBD (STONITH Block Device) `msgwait` time and the fast reboot time of these Azure VMs, as specified in `/etc/sysconfig/sbd`:
+The pacemaker service fails to start if the previous reboot was triggered by a SysRq action. The pacemaker service can start successfully after a normal reboot. This issue is caused by a conflict between the SBD `msgwait` time and the fast reboot time of these Azure VMs, as specified in `/etc/sysconfig/sbd`:
 
 ```output
 ## Type: yesno / integer
