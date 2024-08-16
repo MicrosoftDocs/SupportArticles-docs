@@ -4,7 +4,6 @@ description: Describes the Great Skype for Business Memory Mystery.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

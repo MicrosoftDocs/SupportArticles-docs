@@ -3,7 +3,6 @@ title: (Schema validation found non-datatype errors) error when opening an InfoP
 description: Describes the issue in which you receive the (Schema validation found non-datatype errors) error when you open an InfoPath Form Web Part on an external list.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
