@@ -1,7 +1,7 @@
 ---
 title: Step 3 - Configure data collections for Azure Monitor Agent
 description: Learn how to configure data collections for Azure Monitor Agent so that you can migrate from the legacy Log Analytics agent.
-ms.date: 08/15/2024
+ms.date: 08/16/2024
 ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
@@ -13,10 +13,10 @@ Data collection rule (DCR) represents a modern method for setting up data stream
 
 The DCR Config Generator tool will produce DCRs which will be linked to the Log Analytics workspace. To avoid potential issues with duplicate data and disruptions to your production environment, we suggest creating a new, isolated development or staging workspace after running the generator. This allows you to safely test and validate that data flows correctly through the DCRs before deploying them to your production environment. After validation passes in the new workspace, you have the following two options. Select the option that best fits your requirements.
 
-- **Reconnect the DCRs to the original workspace**
+- Reconnect the DCRs to the original workspace
   
   If you select this option while the legacy agent is still connected, data duplication is very likely to occur until the legacy agent is removed.
-- **Retire the old workspace and collect data a new workspace**
+- Retire the old workspace and collect data in a new workspace
   
   This option allows you to seamlessly transition to the updated configuration without disrupting your production environment.
 
@@ -36,25 +36,30 @@ The DCR Config Generator tool will produce DCRs which will be linked to the Log 
 
 To use the DCR Config Generator, follow these steps:
 
-1. Download the [latest version of the DCR Config Generator tool PowerShell script](https://github.com/microsoft/AzureMonitorCommunity/tree/master/Azure%20Services/Azure%20Monitor/Agents/Migration%20Tools/DCR%20Config%20Generator) from GitHub.
+1. Open the [DCR Config Generator GitHub page](https://github.com/microsoft/AzureMonitorCommunity/tree/master/Azure%20Services/Azure%20Monitor/Agents/Migration%20Tools/DCR%20Config%20Generator).
 
-<!-- Add image displaying to the customer what to select next - image 1 in email -->
-<!-- Add image displaying to the customer where the download button is on github - image 2 in email -->
+1. Select **WorkspaceConfigToDCRMigrationTool.ps**.
+
+   :::image type="content" source="media/step-3-configure-data-collections/dcr-config-generator-github-page.png" alt-text="A Screenshot that shows users where the 'WorkspaceConfigToDCRMigrationTool.ps' file is.":::
+
+1. Select the download button to download the *WorkspaceConfigToDCRMigrationTool.ps1* file.
+
+   :::image type="content" source="media/step-3-configure-data-collections/download-workspaceconfigtodcrmigrationtool-script.png" alt-text="A screenshot that shows where the download button is.":::
 
 1. After you download the file, please create a *migration* folder on your C drive and move the file there.
 
-1. Run the script with the required parameters:
+1. Run the file with the required parameters:
 
-   - Source Subscription ID (`SubscriptionID`)
-   - Source Resource group name (`ResourceGroupName`)
-   - Source Workspace Name (`WorkspaceName`)
-   - DCR Naming Prefix (`DCRName`)
+   - `SubscriptionID` (Source Subscription ID)
+   - `ResourceGroupName` (Source Resource group name)
+   - `WorkspaceName` (Source Workspace Name)
+   - `DCRName` (DCR Naming Prefix)
    
    The tool establishes a connection with your Log Analytics workspace, retrieves the settings from the existing source workspace, and then generates DCR arm template files in JSON format. These files are subsequently saved in a local directory for your review.
 
 1. Choose a template file to deploy one of the created DCR ARM templates to your subscription.
 
-1. The DCR's are now published and available in the Azure portal.
+The DCR's are now published and available in the Azure portal.
 
 ## Next steps
 
