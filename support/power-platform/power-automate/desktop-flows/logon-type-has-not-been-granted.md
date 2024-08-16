@@ -34,7 +34,7 @@ On the impacted machine, a local security policy might not allow (or might deny)
 
 ## Resolution
 
-To resolve the issue, ensure that the user account or group used in the connection has logon permissions, and isn't in the list of denied accounts.
+To resolve the issue, ensure that the user account or group used in the connection has logon permissions, and isn't on the denied accounts list.
 
 1. Sign in to the impacted machine preferably as an administrator.
 2. Go to **Local Security Policy**.
@@ -42,17 +42,18 @@ To resolve the issue, ensure that the user account or group used in the connecti
 
    :::image type="content" source="media/logon-type-has-ot-been-granted/user-rights-assignment.png" alt-text="Screenshot of the User Rights Assignment policy settings.":::
 
-4. Right-click the **Access this computer from the network** policy and select **Properties**.
-5. Check if the group (the account belongs to) or the account itself is in the list. If it isn't, add it to the list using **Add User or Group...**.
-6. Perform the above two steps for the following policies as well:
-
-    - **Allow log on locally**
-    - **Allow log on through Remote Desktop Services**
+4. Right-click the **Allow log on locally** policy and select **Properties**.
+5. Check if the group (the account belongs to) or the account itself is on the list. If not, add it to the list using **Add User or Group**.
 
     :::image type="content" source="media/logon-type-has-ot-been-granted/allow-log-on-locally-properties.png" alt-text="Screenshot of the group or the user account that is added to the Allow log on locally Properties.":::
 
-7. For the following policies, check the **Properties** to verify that the group (the account belongs to) or the account itself isn't in the denied account list.
+6. Perform steps 4 to 5 for the following policies as well:
 
-    - **Deny access this computer from the network**
+    - **Access this computer from the network**
+    - **Allow log on through Remote Desktop Services**
+
+7. For the following policies, check the **Properties** to verify that the group (the account belongs to) or the account itself isn't on the denied accounts list.
+
+    - **Deny access to this computer from the network**
     - **Deny log on locally**
     - **Deny log on through Remote Desktop Services**
