@@ -2,7 +2,7 @@
 title: Common errors creating and assigning flow approvals
 description: Common Power Automate approval errors and potential resolutions.
 ms.reviewer: hamenon, mansong
-ms.date: 08/07/2024
+ms.date: 08/16/2024
 ms.custom: sap:Approvals\Approval action failing
 ---
 # Common errors creating and assigning flow approvals
@@ -62,13 +62,33 @@ Empty attachments (0 bytes) aren't supported.
 
 > Attachment file size limit exceeded. Please contact your admin to make sure the limit is properly configured (The default is 5MB).
 
-The attachment is too large for your Dataverse instance. The default size is 5 MB per file, but this can be configured by database administrators.
+The attachment is too large for your Dataverse instance. The default limit is 5 MB per file, but this can be configured by database administrators.
+
+To raise the limit, an administrator can perform these steps:
+
+1. Sign in to [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+2. Select **Environments** and then select the environment to manage.
+3. Select **Settings** from the command bar.
+4. Select **Email** > **Email settings**. 
+5. In the **Attachments** section, update the maximum file size for attachments in kilobytes.
+
+For more information about the Dataverse setting that controls this, see [File size limits](/power-apps/developer/data-platform/attachment-annotation-files?tabs=sdk#file-size-limits).
 
 ### CdsApiAttachmentBlockedFileExtension
 
 > Attachment file extension is blocked. Please contact your admin if changes need to be made to the block list.
 
 An administrator in your organization has blocked attachments of the specified type.
+
+For security and privacy reasons, Dataverse restricts certain file types by extension from being created. An administrator can customize this by performing these steps:
+
+1. Sign in to [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+2. Select **Environments** and then select the environment to manage.
+3. Select **Settings** from the command bar.
+4. Select **Product** > **Privacy + Security**.
+5. Under **Blocked Attachments**, add or remove file extensions from the semi-colon delimited listed.
+
+For more information, see [Manage privacy and security settings](/power-platform/admin/settings-privacy-security).
 
 ### CombinedAttachmentSizeLimitExceeded
 
