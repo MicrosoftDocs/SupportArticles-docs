@@ -1,7 +1,6 @@
 ---
 title: Fix issues with printers, scanners, and LOB apps that send email using Microsoft 365
-ms.date: 01/24/2024
-ms.localizationpriority: medium
+ms.date: 08/13/2024
 description: Fix issues with printers, scanners, and line of business applications that use Microsoft 365 or Office 365 to send email.
 ms.topic: troubleshooting
 author: cloud-writer

@@ -15,7 +15,7 @@ ms.reviewer: jhayes, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/13/2024
 ---
 # On-premises users can't get email messages from Microsoft 365 users in an Exchange hybrid deployment
 
@@ -46,5 +46,3 @@ The Exchange admin center lists the domains that you added to your account throu
 For more information about accepted domains, see [Accepted domains in Exchange Server](/Exchange/mail-flow/accepted-domains/accepted-domains)
 
 For more information about hybrid deployment, see [Exchange Server Deployment Assistant](/exchange/exchange-deployment-assistant?view=exchserver-2019&preserve-view=true)
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
