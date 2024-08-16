@@ -20,15 +20,15 @@ ms.date: 10/30/2023
 
 ## Symptoms
 
-You share a screen with another user on the Microsoft Teams desktop client, and the other user requests control of your screen. In this situation, you see the user's request on the Sharing toolbar. However, you do not see an option to approve or deny the request. Even the Give Control drop-down menu doesn't react when you try to open it.
+You share a screen with another user on the Microsoft Teams desktop client, and the other user requests control of your screen. In this situation, you see the user's request on the Sharing toolbar. However, you don't see an option to approve or deny the request. Even the **Give Control** drop-down menu doesn't react when you try to open it.
 
 ## Cause
 
-This issue occurs because the device that you are using doesn't have a graphics processing unit (GPU) installed, or GPU hardware acceleration is disabled. The Give Control drop-down menu doesn't work unless hardware acceleration is supported on the system. This behavior is by design.
+This issue occurs because the device that you're using doesn't have a graphics processing unit (GPU) installed, or GPU hardware acceleration is disabled. The Give Control drop-down menu doesn't work unless hardware acceleration is supported on the system. This behavior is by design.
 
 ## Resolution
 
-To prevent this behavior, make sure that your system supports hardware acceleration. To verify the same, you can browse `edge://gpu/` in Microsoft Edge or `chrome://gpu/` in Google Chrome. If you can see any value in it stating "Software only" or "hardware acceleration unavailable", that means the system does not support it. For more help, we recommend that you contact your hardware provider.
+To prevent this behavior, make sure that your system supports hardware acceleration. To verify the same, you can browse `edge://gpu/` in Microsoft Edge or `chrome://gpu/` in Google Chrome. If you can see any value in it stating "Software only" or "hardware acceleration unavailable", that means the system doesn't support it. For more help, we recommend that you contact your hardware provider.
 
 ## More information
 

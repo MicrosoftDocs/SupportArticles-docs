@@ -42,4 +42,4 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **531027**
 - SIP response code: **488**
 - Suggested actions:  
-  - Media bypass won't work if the SBC doesn't provide any ICE candidates in its SDP offer. Make sure that you enable ICE Lite on the SBC. For more information about media bypass, see [About Media Bypass with Direct Routing](/microsoftteams/direct-routing-plan-media-bypass#about-media-bypass-with-direct-routing) and [Direct Routing - media protocols](/microsoftteams/direct-routing-protocols-media).
+  - Media bypass doesn't work if the SBC doesn't provide any ICE candidates in its SDP offer. Make sure that you enable ICE Lite on the SBC. For more information about media bypass, see [About Media Bypass with Direct Routing](/microsoftteams/direct-routing-plan-media-bypass#about-media-bypass-with-direct-routing) and [Direct Routing - media protocols](/microsoftteams/direct-routing-protocols-media).
