@@ -1,5 +1,5 @@
 ---
-title: Sync to SharePoint Workspace is not available
+title: Sync to SharePoint Workspace isn't available
 description: This document describes why Sync to SharePoint Workspace might not display for SharePoint 2010 sites.
 author: helenclu
 manager: dcscontentpm
@@ -19,32 +19,32 @@ appliesto:
 ms.date: 12/17/2023
 ---
 
-# "Sync to SharePoint Workspace" is not available on any SharePoint 2010 sites
+# "Sync to SharePoint Workspace" isn't available on any SharePoint 2010 sites
 
 ## Symptoms
 
-Consider the following scenario. You install SharePoint Workspace on your computer. On the Home tab, if you click New and then click SharePoint Workspace, you can create a workspace that synchronizes to a SharePoint 2010 site. However, if you browse to a SharePoint 2010 site in Internet Explorer, the Site Actions menu never includes Sync to SharePoint Workspace. 
+You install SharePoint Workspace on your computer. On the Home tab, if you select New and then select SharePoint Workspace, you can create a workspace that synchronizes to a SharePoint 2010 site. However, if you browse to a SharePoint 2010 site in Internet Explorer, the Site Actions menu never includes Sync to SharePoint Workspace. 
 
 ## Cause
 
-You will experience this problem if Run Active X controls and plug-insis disabled in Internet Explorer security settings. 
+You experience this problem if **Run Active X controls and plug-ins** is disabled in Internet Explorer security settings.
 
 ## Resolution
 
 To resolve this issue, follow these steps:
 
-1. In Internet Explorer, click Tools and then click Internet Options.   
-2. Click the Security tab, click the zone for the SharePoint server, and then click Custom Level.   
-3. Under Run Active X controls and plug-ins, click to select Enable, and then click OK.   
+1. In Internet Explorer, select **Tools**, and then select **Internet Options**.
+2. Select the **Security** tab, select the zone for the SharePoint server, and then select **Custom Level**.
+3. Under **Run Active X controls and plug-ins**, select **Enable**, and then select **OK**.
 
 **Caution** This procedure lessens browser security for all sites in the affected security zone.
 
 ## More Information
 
-If you also cannot create the workspace from the SharePoint Workspace application, Sync to SharePoint Workspace may be unavailable for other reasons, such as: 
+If you also can't create the workspace from the SharePoint Workspace application, Sync to SharePoint Workspace may be unavailable for other reasons, such as: 
 
-- Workspaces are disabled on the server   
-- FSSHTTP is disabled on the server   
-- The server is a 2007 SharePoint sever   
+- Workspaces are disabled on the server
+- FSSHTTP is disabled on the server
+- The server is a 2007 SharePoint server
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

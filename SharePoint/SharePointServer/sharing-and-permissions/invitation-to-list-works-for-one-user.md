@@ -17,7 +17,7 @@ ms.custom:
   - CI 123888
   - CSSTroubleshoot
 ms.reviewer: pamgreen
-description: Describes a resolution to an issue where an invitation sent to a distribution list that is accessed by an external user prevents other users from accessing the SharePoint resource.
+description: Describes a resolution to an issue where an invitation sent to a distribution list that's accessed by an external user prevents other users from accessing the SharePoint resource.
 ---
 
 # SharePoint invitation sent to a distribution list works for only one user
@@ -33,7 +33,7 @@ When you send an external user invitation to a shared Microsoft SharePoint resou
 
 ## Cause
 
-This issue occurs because distribution lists aren't supported methods for assigning SharePoint permissions. When you share with a distribution list, the first user who accepts the invitation receives access to the resource as an external user. 
+This issue occurs because distribution lists aren't supported methods for assigning SharePoint permissions. When you share with a distribution list, the first user who accepts the invitation receives access to the resource as an external user.
 
 ## Resolution
 
