@@ -1,6 +1,6 @@
 ---
 title: Lync contact card displays Maximum Followers Reached
-description: The Lync  contact will not display presence and display a Maximum Followers Reached message when the maximum number of subscriptions for category has been reached or exceeded for that Lync user (contact)
+description: The Lync contact won't display presence and display a Maximum Followers Reached message when the maximum number of subscriptions for category is reached or exceeded for that Lync user (contact)
 author: simonxjx
 manager: dcscontentpm
 search.appverid: 
@@ -22,8 +22,8 @@ ms.date: 03/31/2022
 
 ## Symptoms
 
-- A Lync contact might display no presence and will have a contact card that includes the message - Maximum Followers Reached   
-- The following warning event will be logged in the Lync Server Event log:
+- A Lync contact might display no presence and will have a contact card that includes the message - Maximum Followers Reached
+- The following warning event is logged in the Lync Server Event log:
 
     ```adoc
     Log Name: Lync Server
@@ -48,11 +48,11 @@ ms.date: 03/31/2022
 
 A Lync user has been added as a contact by another Lync user and has reached or exceeded the maximum category subscriptions per publisher limit specified by the current Lync server presence policy. 
 
-InformationWhen one Lync user adds another Lync user as a contact, the first Lync user is subscribing to five categories of information about the second Lync user. Updates for these categories of information are automatically sent to the first Lync user. The user model assumes a default of 1000 category subscriptions per Lync user. This means that a Lync user could be a contact of as many as 200 other Lync users.
+InformationWhen one Lync user adds another Lync user as a contact, the first Lync user is subscribing to five categories of information about the second Lync user. Updates for these categories of information are automatically sent to the first Lync user. The user model assumes a default of 1,000 category subscriptions per Lync user. This means that a Lync user could be a contact of as many as 200 other Lync users.
 
 For detailed information on how the MaxCategorySubscription value of the Lync client presence policy impacts Lync user presence, review the TechNet blog listed below:
 
-[What to do if you are too popular?](/archive/blogs/jenstr/what-to-do-if-you-are-too-popular?commentposted=true#commentmessage)
+[What to do if you're too popular?](/archive/blogs/jenstr/what-to-do-if-you-are-too-popular?commentposted=true#commentmessage)
 
 ## Resolution
 
@@ -61,11 +61,12 @@ The following step-by-step information describes how to analyze and update the c
 **Using Server 2008**
 
 Perform the following steps from a computer that has the Lync Server Administrative Tools installed:
-1. Click on the Start button, then click on All Programs   
-2. Click on Microsoft Lync Server, then select Lync Server Management Shell   
+
+1. Select the Start button, then select All Programs.
+2. Select Microsoft Lync Server, then select Lync Server Management Shell.
 3. In the Lync Server Management Shell enter the following PowerShell command:
 
-   **Get-CsPresencePolicy**   
+   `Get-CsPresencePolicy`
 
 > [!NOTE]
 > The output from the Get-CsPresencePolicy command will display the configurations of the Global, Site, and User level presence policies. The default value for MaxCategorySubscription is 1000.
