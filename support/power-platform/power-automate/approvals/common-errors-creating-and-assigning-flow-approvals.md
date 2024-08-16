@@ -69,7 +69,10 @@ To raise the limit, an administrator can perform these steps:
 1. Sign in to [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. Select **Environments** and then select the environment to manage.
 3. Select **Settings** from the command bar.
-4. Select **Email** > **Email settings**. 
+
+   :::image type="content" source="media/common-errors-creating-and-assigning-flow-approvals/environment-admin-center-settings.png" alt-text="Screenshot that shows Settings button on the command bar.":::
+
+4. Select **Email** > **Email settings**.
 5. In the **Attachments** section, update the maximum file size for attachments in kilobytes.
 
 For more information about the Dataverse setting that controls this, see [File size limits](/power-apps/developer/data-platform/attachment-annotation-files?tabs=sdk#file-size-limits).
