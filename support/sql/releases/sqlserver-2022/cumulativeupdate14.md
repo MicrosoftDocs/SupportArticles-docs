@@ -38,7 +38,7 @@ The patch will fail with the following errors:
 When checking the SQL Server Error Log, you will see the following messages with an invalid Group ID.
 
 >Attempting to copy article resolvers from SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL15.MSSQLSERVER\Replication\ArticleResolver
->Skipping the default startup of database '<YourDatabase>' because the database belongs to an availability group (Group ID:  `-1434378176`). The database will be started by the availability group. This is an informational message only. No user action is required.
+>Skipping the default startup of database <YourDatabase> because the database belongs to an availability group (Group ID:  `-1434378176`). The database will be started by the availability group. This is an informational message only. No user action is required.
 >Error: 912, Severity: 21, State: 2.
 >Script level upgrade for database 'master' failed because upgrade step 'repl_upgrade.sql' encountered error 35262, state 4, severity 10. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
 
@@ -46,7 +46,7 @@ If you want to prevent the patch from reporting an initial failure, you can perf
 
 - Enable trace flag 12347 - This will revert the changes implemented in [2998350](./././cumulativeupdate13.md#2998350). It is recommended after patching, to remove this trace flag.
 
-- Remove Change Data Capture/Replication/SSIS DB or Availability Groups before patching
+- Remove Change Data Capture/Replication/SSISDB or Availability Groups before patching.
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
