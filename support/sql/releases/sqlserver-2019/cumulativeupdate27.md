@@ -50,7 +50,7 @@ The patch fails with the following errors:
 >Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.  
 >Error code: 0x851A001A
 
-When checking the SQL Server Error Log, you'll see the following messages with an invalid Group ID.
+When checking the SQL Server Error Log, you'll see the following messages with an invalid Group ID:
 
 >Attempting to copy article resolvers from SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL15.MSSQLSERVER\Replication\ArticleResolver  
 >Skipping the default startup of database \<YourDatabase\> because the database belongs to an availability group (Group ID:  `-1434378176`). The database will be started by the availability group. This is an informational message only. No user action is required.
