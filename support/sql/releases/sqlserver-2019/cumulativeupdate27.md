@@ -46,16 +46,16 @@ After setup runs and fails, the SQL service will then attempt to come online aga
 
 The patch fails with the following errors:
 
->Error installing SQL Server Database Engine Services Instance Features
->Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.
+>Error installing SQL Server Database Engine Services Instance Features  
+>Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.  
 >Error code: 0x851A001A
 
 When checking the SQL Server Error Log, you'll see the following messages with an invalid Group ID.
 
->Attempting to copy article resolvers from SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL15.MSSQLSERVER\Replication\ArticleResolver
->Skipping the default startup of database <YourDatabase> because the database belongs to an availability group (Group ID:  `-1434378176`). The database will be started by the availability group. This is an informational message only. No user action is required.
+>Attempting to copy article resolvers from SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL15.MSSQLSERVER\Replication\ArticleResolver  
+>Skipping the default startup of database \<YourDatabase\> because the database belongs to an availability group (Group ID:  `-1434378176`). The database will be started by the availability group. This is an informational message only. No user action is required.
 
->Error: 912, Severity: 21, State: 2.
+>Error: 912, Severity: 21, State: 2.  
 
 >Script level upgrade for database 'master' failed because upgrade step 'repl_upgrade.sql' encountered error 35262, state 4, severity 10. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
 
