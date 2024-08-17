@@ -61,7 +61,7 @@ If you want to prevent the patch from reporting an initial failure, you can perf
 
 - Enable trace flag 12347 - This will revert the changes implemented in [2994446](#2994446). It is recommended after patching, to remove this trace flag.
 
-- Remove Change Data Capture/Replication/SSIS DB or Availability Groups before patching
+- Remove Change Data Capture/Replication/SSISDB or Availability Groups before patching.
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
