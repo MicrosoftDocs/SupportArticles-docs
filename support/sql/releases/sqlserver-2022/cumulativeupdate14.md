@@ -44,7 +44,7 @@ When checking the SQL Server Error Log, you'll see the following messages with a
 
 If you want to prevent the patch from reporting an initial failure, you can perform one of the following actions before running the patch:
 
-- Enable trace flag 12347 - reverts the changes implemented in [2998350](./././cumulativeupdate13.md#2998350). It is recommended after patching, to remove this trace flag.
+- Enable trace flag 12347 - reverts the changes implemented in [2998350](./././cumulativeupdate13.md#2998350). It's recommended after patching, to remove this trace flag.
 
 - Remove Change Data Capture/Replication/SSISDB or Availability Groups before patching.
 
