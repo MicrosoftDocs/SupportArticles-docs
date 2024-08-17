@@ -25,17 +25,17 @@ This article describes Cumulative Update package 13 (CU13) for Microsoft SQL Ser
 
 ### Issue one: Patching Error for Secondary Replica in Availability Group with AG Database Enabled for Replication/CDC/SSISDB
 
-This CU introduced fix [2998350](#2998350) to increase reliability of a secondary database coming online in an Availability Group. However, this fix causes an issue with SQL running in single-user mode where AG database(s) are not brought online. SQL setup runs in single-user mode and therefore fails when the upgrade scripts associated to Replication, Change Data Capture, and SSISDB (the catalog for SQL Server Integration Serivces) features try to access the database but fail.
+This CU introduced fix [2998350](#2998350) to increase reliability of a secondary database coming online in an Availability Group. However, this fix causes an issue with SQL running in single-user mode where AG database(s) aren't brought online. SQL setup runs in single-user mode and fails when Replication, Change Data Capture, and SSISDB (the catalog for SQL Server Integration Services) upgrade scripts try to access the database but cannot.
 
-After setup runs and fails, the SQL service will then attempt to come online again without single-user mode, at which time the patch upgrade scripts will finish sucessfully and the patch is complete. This issue is therefore self-resolving and doesn't require any user action despite the original error.
+After setup runs and fails, the SQL service will then attempt to come online again without single-user mode. At that time, the patch upgrade scripts will finish successfully and the patch is complete. This issue is therefore self-resolving and doesn't require any user action despite the original error.
 
-The patch will fail with the following errors:
+The patch fails with the following errors:
 
 >Error installing SQL Server Database Engine Services Instance Features
 >Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.
 >Error code: 0x851A001A
 
-When checking the SQL Server Error Log, you will see the following messages with an invalid Group ID.
+When checking the SQL Server Error Log, you'll see the following messages with an invalid Group ID.
 
 >Attempting to copy article resolvers from SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL15.MSSQLSERVER\Replication\ArticleResolver
 >Skipping the default startup of database <YourDatabase> because the database belongs to an availability group (Group ID:  `-1434378176`). The database will be started by the availability group. This is an informational message only. No user action is required.
@@ -44,7 +44,7 @@ When checking the SQL Server Error Log, you will see the following messages with
 
 If you want to prevent the patch from reporting an initial failure, you can perform one of the following actions before running the patch:
 
-- Enable trace flag 12347 - This will revert the changes implemented in [2998350](#2998350). It is recommended after patching, to remove this trace flag.
+- Enable trace flag 12347 - reverts the changes implemented in [2998350](#2998350). It is recommended after patching, to remove this trace flag.
 
 - Remove Change Data Capture/Replication/SSISDB or Availability Groups before patching.
 
