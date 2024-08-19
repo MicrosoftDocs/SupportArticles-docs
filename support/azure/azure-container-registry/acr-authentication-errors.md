@@ -71,7 +71,7 @@ Here's an example of the error details:
 Error response from daemon: Get "https://<acr-name>.azurecr.io/v2/": unauthorized: {"errors":[{"code":"UNAUTHORIZED","message":"authentication required, visit https://aka.ms/acr/authorization for more information."}]}
 ```
 
-The error indicates authentication failed when accessing the ACR. This error can occur when running the `az acr login` or `docker login` command with an incorrect username and/or password, or due to expired credentials (when using a service principal, a token with a scope map, or an admin user).
+The error indicates authentication failed when accessing the ACR. This error can occur when running the `az acr login` or `docker login` command with an incorrect username and/or password, or expired credentials (when using a service principal, a token with a scope map, or an admin user).
 
 ### Solution: Use the correct/valid username and password
 
