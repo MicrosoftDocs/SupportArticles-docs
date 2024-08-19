@@ -106,7 +106,7 @@ You need to turn on diagnostic logging on all servers you're working with. The s
 
 ### Enable message tracking
 
-To turn on Message Tracking on all servers you're working with. The steps for different Exchange version might be different. Select your Exchange version:
+To turn on Message Tracking on all servers you're working with, the steps for different Exchange version might be different. Select your Exchange version:
 
 #### For Exchange Server 2007 and Exchange Server 2010
 
@@ -261,7 +261,7 @@ If Event ID 3079 contains EcReplStartup, this indicates that the replication thr
 |Event Source|MSExchangeIS|
 |Event Category|General|
 |Event ID|9528|
-|Message|The SID S-1-5-32-544 was found on 2 users in the DS, so the store can't map this SID to a unique user.<br/>The users involved are:<br/>/DC=com/DC=domain/DC=na/OU=Migrated/CN=John, Woods<br/>/DC=com/DC=domain/DC=ad/DC=corp/OU=EUC/OU=AMER/OU=Jersey City/OU=Harborside/OU=Users/CN=John, Woods|
+|Message|The SID S-1-5-32-544 was found on 2 users in the DS, so the store cannot map this SID to a unique user.<br/>The users involved are:<br/>/DC=com/DC=domain/DC=na/OU=Migrated/CN=John, Woods<br/>/DC=com/DC=domain/DC=ad/DC=corp/OU=EUC/OU=AMER/OU=Jersey City/OU=Harborside/OU=Users/CN=John, Woods|
 
 Do you see Event ID 9528?
 
@@ -365,7 +365,7 @@ On the destination server, examine the Application log in Event Viewer for event
 |Time|Time|
 |Users|Not available|
 |Computer|Computer_Name|
-|Description|This event is an SMTP protocol error log for virtual server ID 1, connection #29. The remote host `E2k3server1.contoso.com`, responded to the SMTP command "xexch50" with "504 Need to authenticate first ". The full command sent was "XEXCH50 2336 3 ". This error probably causes the connection to fail.|
+|Description|This is an SMTP protocol error log for virtual server ID 1, connection #29. The remote host `E2k3server1.contoso.com`, responded to the SMTP command "xexch50" with "504 Need to authenticate first ". The full command sent was "XEXCH50 2336 3 ". This will probably cause the connection to fail.|
 
 |Event Type| Error |
 |---|---|
@@ -376,7 +376,7 @@ On the destination server, examine the Application log in Event Viewer for event
 |Time|Time|
 |User|Not available|
 |Computer|Computer_Name|
-|Description:|This event is an SMTP protocol log for virtual server ID 1, connection #30. The client at "6.5.2.4" sent a "xexch50" command, and the SMTP server responded with "504 Need to authenticate first ". The full command sent was "xexch50 1092 2". This will probably cause the connection to fail. These events indicate that the XEXCH50 protocol sink fired, but the exchange of the blobs failed between the servers that are listed in the events.|
+|Description:|This is an SMTP protocol log for virtual server ID 1, connection #30. The client at "6.5.2.4" sent a "xexch50" command, and the SMTP server responded with "504 Need to authenticate first ". The full command sent was "xexch50 1092 2". This will probably cause the connection to fail. These events indicate that the XEXCH50 protocol sink fired, but the exchange of the blobs failed between the servers that are listed in the events.|
 
 **Do you see Event ID 7004 and Event ID 7010 on the destination server?**
 
