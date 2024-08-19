@@ -3,7 +3,6 @@ title: Connection issues in sign-in after update to Office 2016 build 16.0.7967
 description: Office Web Account Manager (WAM) sign-in issues after you update to Office 2016 build 16.0.7967 or later on Windows 10.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
