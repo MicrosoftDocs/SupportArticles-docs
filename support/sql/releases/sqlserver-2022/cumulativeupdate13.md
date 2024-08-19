@@ -44,7 +44,7 @@ If you want to prevent the patch from reporting an initial failure, you can perf
 
 - Enable trace flag 12347 - reverts the changes made in fix [2998350](#2998350). It's recommended to remove this trace flag after patching.
 
-- Remove CDC, replication, SSISDB, or availability groups before patching.
+- Remove CDC, replication, **SSISDB**, or availability groups before patching.
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
