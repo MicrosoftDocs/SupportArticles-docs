@@ -1,6 +1,6 @@
 ---
 title: RPC over HTTP reaches end of support in Microsoft 365 on October 31, 2017
-description: Explains that Remote procedure call (RPC) over HTTP in Microsoft 365 is deprecated on October 31, 2017. Contains information about why RPC over HTTP is being replaced by MAPI over HTTP and describes actions that Microsoft 365 customers may have to take.
+description: Explains that remote procedure call (RPC) over HTTP in Microsoft 365 was deprecated on October 31, 2017. Contains information about why RPC over HTTP is being replaced by MAPI over HTTP and describes actions that Microsoft 365 customers may have to take.
 author: cloud-writer
 ms.author: meerak
 audience: ITPro
@@ -32,7 +32,7 @@ RPC over HTTP is being replaced by MAPI over HTTP, a modern protocol that was la
 
 This change may also affect you if you're running Outlook 2016, Outlook 2013, or Outlook 2010 because you must regularly check that the latest cumulative update for the version of Office that you have is installed.
 
-## What is RPC over HTTP? What happens on October 31, 2017
+## What is RPC over HTTP? What happened on October 31, 2017
 
 RPC over HTTP, also known as Outlook Anywhere, is a legacy method of connectivity and transport between Outlook for Windows and Exchange. In May 2014, Microsoft introduced MAPI over HTTP as a replacement for RPC over HTTP.
 
@@ -56,7 +56,7 @@ MAPI over HTTP offers the following benefits:
 
 Make sure that you use Outlook for Windows clients that are updated to work with MAPI over HTTP.
 
-The best and recommended option is to move to the latest version of Office 2016 as part of Microsoft 365 Apps for enterprise. If you cannot move to Microsoft 365 Apps for enterprise by October 31, 2017, make sure that Office applications in your organization are updated by having the most recent cumulative update.
+The best and recommended option is to move to the latest version of Office 2016 as part of Microsoft 365 Apps for enterprise. If you can't move to Microsoft 365 Apps for enterprise by October 31, 2017, make sure that Office applications in your organization are updated by having the most recent cumulative update.
 
 You should have at least the currently recommended minimum installation of Outlook updates installed for connecting to Exchange Online that uses MAPI over HTTP. To verify the current list, see the following Office article:
 
