@@ -11536,7 +11536,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "/support/power-platform/power-automate/authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md",
+      "source_path": "support/power-platform/power-automate/authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account",
       "redirect_document_id": true
     },
