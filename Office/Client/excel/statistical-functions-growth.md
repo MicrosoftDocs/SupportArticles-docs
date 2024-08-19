@@ -3,7 +3,6 @@ title: Excel statistical functions GROWTH
 description: Explains changes to the GROWTH statistical function in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

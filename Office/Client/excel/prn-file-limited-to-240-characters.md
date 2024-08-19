@@ -3,7 +3,6 @@ title: Formatted text is limited to 240 characters per line
 description: Describes the limit per line when you save a worksheet as a Formatted Text (Space Delimited) (.prn) file.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
