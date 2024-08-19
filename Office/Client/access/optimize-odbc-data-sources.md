@@ -3,7 +3,6 @@ title: Optimize Access when using ODBC data sources
 description: Describes some tips for improving performance when you access data from an ODBC data source in Access 2002, in Access 2003, and in Access 2007.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

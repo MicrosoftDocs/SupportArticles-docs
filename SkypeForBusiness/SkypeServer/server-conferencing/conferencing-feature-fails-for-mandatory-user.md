@@ -3,7 +3,6 @@ title: Lync conferencing feature fails for a mandatory user profile
 description: Describes Lync conferencing feature fails for a mandatory user profile.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

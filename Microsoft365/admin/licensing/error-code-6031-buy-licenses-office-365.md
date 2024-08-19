@@ -3,7 +3,6 @@ title: Error code 6031 when buying licenses in Microsoft 365 portal
 description: Fixes an issue in which you receive an error that we can't process your request when you try to buy licenses in the Microsoft 365 portal.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

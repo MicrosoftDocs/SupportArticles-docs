@@ -3,7 +3,6 @@ title: Need an assigned license in order to retain an Exchange Online mailbox
 description: Discusses a scenario in which you receive a One or more users need an assigned license in order to retain an Exchange Online mailbox or archive message when you view the Users page of the Microsoft 365 portal. A resolution is provided.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

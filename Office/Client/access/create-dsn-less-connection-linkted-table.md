@@ -3,7 +3,6 @@ title: Create DSN-less connection to SQL for linked table
 description: Describes methods for how to create a DSN-less connection to SQL Server for linked tables in Microsoft Access.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

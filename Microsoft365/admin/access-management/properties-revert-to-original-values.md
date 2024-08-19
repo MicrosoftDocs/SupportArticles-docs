@@ -3,7 +3,6 @@ title: Properties changed revert to their original values
 description: Describes an issue in which the properties of user accounts revert to the original values after Windows Server Essentials synchronization when Microsoft 365 is integrated with Windows Server Essentials.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

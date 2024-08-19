@@ -3,7 +3,6 @@ title: Access errors during import or export to Excel
 description: Resolve Access errors during importing or exporting to Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

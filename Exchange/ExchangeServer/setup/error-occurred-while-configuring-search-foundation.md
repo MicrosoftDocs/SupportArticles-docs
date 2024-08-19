@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: andreig, v-six
 ms.custom: 
   - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates

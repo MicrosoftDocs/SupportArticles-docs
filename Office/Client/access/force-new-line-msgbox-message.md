@@ -3,7 +3,6 @@ title: Force a new line in a MsgBox message
 description: Describes the method of forcing a new line in the message box. You can use the method in this article. Alternatively, you can use the vbCrLf constant to create multiple lines in a text box on a form or on a data access page.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

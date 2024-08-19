@@ -7,7 +7,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Mail Flow\Issues with Transport Rules
   - Exchange Server

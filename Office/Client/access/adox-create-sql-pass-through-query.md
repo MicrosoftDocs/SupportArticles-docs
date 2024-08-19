@@ -3,7 +3,6 @@ title: Create an SQL pass-through query by using ADO
 description: Explains how to create an SQL pass-through query in Access by using VBA with ADO. You can use this query to send commands directly to the database server. This article requires you to reference ADO and ADOX libraries to complete the sample.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

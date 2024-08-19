@@ -3,7 +3,6 @@ title: Unable to use the Access ODBC, OLEDB, or DAO interfaces outside Office Cl
 description: You can't create an ODBC DSN for drivers provided by Access in the Data Sources ODBC Administrator if you use an Office C2R installation.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
