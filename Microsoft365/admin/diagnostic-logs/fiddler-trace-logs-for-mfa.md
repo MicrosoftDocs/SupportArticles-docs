@@ -11,7 +11,7 @@ ms.custom:
 search.appverid: 
   - MET150
 appliesto: 
-  - Azure Active Directory
+  - Entra ID
   - Microsoft 365
 ms.date: 10/20/2023
 ---
@@ -23,7 +23,7 @@ ms.date: 10/20/2023
 This article introduces the Fiddler trace log for the following multifactor authentication (MFA) scenarios:
 
 - Working MFA scenarios
-- When the phone is out of coverage or the phone is not picked
+- When the phone is out of coverage or the phone isn't picked
 - When the fraud alert is triggered to block the account in the cloud
 - For a blocked account
 - When MFA is used for managed accounts
@@ -32,7 +32,7 @@ This article introduces the Fiddler trace log for the following multifactor auth
 
 If a user account is federated, the user is redirected to the Service Token Server (STS) for authentication and to login.microsoftonline.com, and the SAML token is issued by the STS. If the user is managed, login.microsoftonline.com authenticates the user by way of the user's password.
 
-MFA starts after the user's password has been verified by Microsoft Entra ID or STS. The `SANeeded=1` cookie is set if the user is enabled for MFA authentication in Microsoft 365 or Azure directory. The communication between the client and login.microsoftonline.com after the user password authentication resembles the following:
+MFA starts after the user's password has been verified by Microsoft Entra ID or STS. The `SANeeded=1` cookie is set if the user is enabled for MFA authentication in Microsoft 365 or Azure directory. The communication between the client and login.microsoftonline.com after the user password authentication resembles the following example:
 
 > POST `https://login.microsoftonline.com/login.srf` HTTP/1.1  
 > Host: login.microsoftonline.com
@@ -51,15 +51,15 @@ MFA starts with BeginAuth, and then the phone call is triggered on the back end 
 
 :::image type="content" source="media/fiddler-trace-logs-for-mfa/begin-auth.png" alt-text="Screenshot shows that M F A starts with the BeginAuth method.":::
 
-After MFA authorization has begun, the client starts to query the same endpoint for the EndAuth method every 10 seconds to check whether authentication has completed. Until the call has been picked and verified, the Resultvalue is returned as `AuthenticationPending`.
+After MFA authorization begins, the client starts to query the same endpoint for the EndAuth method every 10 seconds to check whether authentication completes. Until the call is picked and verified, the Result value is returned as `AuthenticationPending`.
 
 :::image type="content" source="media/fiddler-trace-logs-for-mfa/end-auth-method.png" alt-text="Screenshot shows that ResultValue is set to AuthenticationPending.":::
 
-When the phone has been picked and verified, the answer for the next query for EndAuth will be a ResultValue of Success. Additionally, the user has completed Mulitifactor authentication. Also the Set-Cookie : SANeeded=xxxxxxx cookie is set in the response, which is given to the endpoint : login.srf to complete authentication.
+When the phone has been picked and verified, the answer for the next query for EndAuth will be a ResultValue of Success. Additionally, the user has completed multifactor authentication. Also the Set-Cookie : SANeeded=xxxxxxx cookie is set in the response, which is given to the endpoint : login.srf to complete authentication.
 
 :::image type="content" source="media/fiddler-trace-logs-for-mfa/login-srf.png" alt-text="Screenshot shows login.srf to complete authentication.":::
 
-### Scenario 2: When the phone is out of coverage or the phone is not picked
+### Scenario 2: When the phone is out of coverage or the phone isn't picked
 
 When the phone isn't picked and verified within 60 seconds after the call is made, the ResultValue is set as `UserVoiceAuthFailedPhoneUnreachable`. At the next query for the EndAuth method, UserVoiceAuthFailedPhoneUnreachable is returned, as seen in Fiddler.
 
@@ -77,7 +77,7 @@ If the user is blocked, ResultValue is set as `UserIsBlocked`. At the first quer
 
 :::image type="content" source="media/fiddler-trace-logs-for-mfa/result-value-blocked.png" alt-text="Screenshot shows that ResultValue is set to UserIsBlocked.":::
 
-Solution: In an Azure MFA scenario with an Azure subscription, you can unblock by first logging on to manage.windowsazure.com. Then, select **Directory > Users** and **Manage Multi factor Authentication** > **Service Settings**. At the end of the page, select **Go to portal**. Now, select **Block/Unblock Users** to find the list of blocked users.
+Solution: In a Microsoft Entra multifactor authentication scenario with an Azure subscription, you can unblock by first logging on to manage.windowsazure.com. Then, select **Directory > Users** and **Manage Multi factor Authentication** > **Service Settings**. At the end of the page, select **Go to portal**. Now, select **Block/Unblock Users** to find the list of blocked users.
 
 If MFA is enabled through Microsoft 365, open a support case with Microsoft to unblock it.
 
