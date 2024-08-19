@@ -2,8 +2,8 @@
 title: Desktop flow invalid credentials error when using a Microsoft Entra account
 description: Resolves the InvalidConnectionCredentials or WindowsIdentityIncorrect error that occurs when you run a desktop flow using a Microsoft Entra account.
 ms.reviewer: guco，aartigoyle
-ms.date: 08/07/2024
-ms.custom: sap:Authentication or sign-in\Connector authentication
+ms.date: 08/19/2024
+ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ---
 # Desktop flow invalid credentials error when you use a Microsoft Entra account
 
@@ -79,4 +79,6 @@ You might encounter the error when using a Microsoft Entra account for several r
 
 ## More information
 
-[Create desktop flow connections](/power-automate/desktop-flows/desktop-flow-connections)
+- [Create desktop flow connections](/power-automate/desktop-flows/desktop-flow-connections)
+- [Invalid credentials error when running desktop flows in Power Automate for desktop](invalid-credentials-errors-running-desktop-flows.md)
+- ["Logon type has not been granted" error when running a desktop flow or creating a connection](logon-type-has-not-been-granted.md)

@@ -3,7 +3,7 @@ title: Logon type has not been granted with error code -1073741477
 description: Solves the Logon type hasn't been granted error that occurs when you run a desktop flow or create a connection in Power Automate.
 ms.reviewer: guco, johndund
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 08/16/2024
+ms.date: 08/19/2024
 ---
 # "Logon type has not been granted" error when running a desktop flow or creating a connection
 
@@ -57,3 +57,8 @@ To resolve the issue, ensure that the user account or group used in the connecti
     - **Deny access to this computer from the network**
     - **Deny log on locally**
     - **Deny log on through Remote Desktop Services**
+
+## More information
+
+- [Desktop flow invalid credentials error when you use a Microsoft Entra account](troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md)
+- [Invalid credentials error when running desktop flows in Power Automate for desktop](invalid-credentials-errors-running-desktop-flows.md)

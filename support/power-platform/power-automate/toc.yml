@@ -122,9 +122,11 @@
       href: desktop-flows/invalid-private-key-file-error.md
     - name: Internet connection is interrupted after installing Power Automate
       href: desktop-flows/no-ethernet-after-pad-install.md
+    - name: Invalid credentials error creating connection or running a desktop flow
+      href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
     - name: Invalid credentials error using Microsoft Entra account
-      href: authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
-    - name: '"Logon type has not been granted" error'
+      href: desktop-flows/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
+    - name: '"Logon type has not been granted" error' creating connection or running a desktop flow
       href: desktop-flows/logon-type-has-not-been-granted.md
     - name: Machine registration failure
       href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
