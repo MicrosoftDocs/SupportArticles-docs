@@ -1,6 +1,6 @@
 ---
 title: How to perform a leapp upgrade for RHEL PAYG virtual machines
-description: Provides steps to upgrade virtual machines that use RHEL Pay-As-You-Go images from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9.
+description: Provides steps to upgrade virtual machines that use RHEL pay-as-you-go images from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9.
 ms.reviewer: divargas, msaenzbo
 ms.date: 08/19/2024
 ms.service: azure-virtual-machines
@@ -10,7 +10,7 @@ ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the leapp utility to upgrade Linux virtual machines (VMs) that use RHEL Pay-As-You-Go (PAYG) images from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9.
+Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the leapp utility to upgrade Linux virtual machines (VMs) that use RHEL pay-as-you-go (PAYG) images from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9.
 
 > [!IMPORTANT]
 > Red Hat Update Infrastructure (RHUI) is intended for only PAYG images. If you use custom or golden images (also known as bring-your-own-subscription (BYOS)), the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
