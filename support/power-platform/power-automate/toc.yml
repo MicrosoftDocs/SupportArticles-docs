@@ -68,11 +68,11 @@
       href: desktop-flows/enable-webview-pad-login.md
     - name: Can't access the parent flow
       href: desktop-flows/cannot-access-parent-flow.md
-    - name: Can't automate "Save as", "Open" or "Upload" dialog boxes in web browser
+    - name: Can't automate "Save as," "Open" or "Upload" dialog boxes in web browser
       href: desktop-flows/automate-save-as-open-upload-dialog-box-web-browser.md
     - name: Can't interact with desktop application without an error
       href: desktop-flows/cannot-interact-with-desktop-application.md
-    - name: Can't create, edit, save or view desktop flows
+    - name: Can't create, edit, save, or view desktop flows
       href: desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows.md
     - name: Can't establish connection to Access Database Engine OLE DB
       href: desktop-flows/cannot-connect-access-database-engine-ole-db.md
@@ -124,7 +124,7 @@
       href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
     - name: Invalid credentials error using Microsoft Entra account
       href: desktop-flows/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
-    - name: '"Logon type has not been granted" error creating connection or running a desktop flow'
+    - name: '"Logon type not granted" error creating connection or running a desktop flow'
       href: desktop-flows/logon-type-has-not-been-granted.md
     - name: Machine registration failure
       href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
