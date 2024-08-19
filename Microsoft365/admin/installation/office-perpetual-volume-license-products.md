@@ -3,7 +3,6 @@ title: Office LTSC 2021 and Office 2019 perpetual volume license products availa
 description: Describes the supported installation way of Office LTSC 2021 and Office 2019.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

@@ -5,7 +5,6 @@ author: helenclu
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.collection: 
