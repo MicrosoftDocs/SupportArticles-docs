@@ -18,7 +18,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
-# HCW8011 multiple Send Connectors found for AddressSpace when you run the HCW
+# "HCW8011 multiple Send Connectors found for AddressSpace" when you run the HCW
 
 _Original KB number:_ &nbsp; 3087161
 
@@ -34,7 +34,7 @@ This issue occurs if the Hybrid Configuration wizard detected conflicting or dup
 
 ## Solution
 
-Remove the duplicate Send connectors from the on-premises organization. To do this, follow these steps:
+Remove the duplicate Send connectors from the on-premises organization. Follow these steps:
 
 1. Open the Exchange Management Shell.
 2. Run the following command:
@@ -44,7 +44,7 @@ Remove the duplicate Send connectors from the on-premises organization. To do th
     ```
 
 3. Examine the output to determine whether there are multiple Send connectors that exist for AddressSpace that's mentioned in the error message.
-4. If multiple Send connectors exist, remove the duplicate Send connectors. To do this, run the following command for each duplicate connector:
+4. If multiple Send connectors exist, remove the duplicate Send connectors. To do so, run the following command for each duplicate connector:
 
     ```powershell
     Remove-SendConnector <NameOfSendConnector>

@@ -1,5 +1,5 @@
 ---
-title: Default Receive Connector cannot be found on server
+title: Default Receive Connector can't be found on server
 description: Fixes an issue that returns HCW8010 error when you run the Hybrid Configuration wizard in an Exchange Online or Exchange Server 2013 environment.
 author: cloud-writer
 ms.author: meerak
@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 3087159
 
 When you run the Hybrid Configuration wizard (HCW), you receive the following error message:
 
-> HCW8010 Default Receive Connector cannot be found on server <*ServerName*>.
+> HCW8010 Default Receive Connector cannot be found on server \<ServerName\>.
 
 ## Cause
 
@@ -36,9 +36,9 @@ If you have a Receive connector set up in your environment, this issue typically
 
 To resolve this issue, follow these steps:
 
-1. Enable IPv6 on the Exchange servers in your environment. For more information about how to do this, see [Guidance for configuring IPv6 in Windows for advanced users](/troubleshoot/windows-server/networking/configure-ipv6-in-windows).
+1. Enable IPv6 on the Exchange servers in your environment. For more information about how to enable IPv6, see [Guidance for configuring IPv6 in Windows for advanced users](/troubleshoot/windows-server/networking/configure-ipv6-in-windows).
 
-2. Add the IPv6 binding to the Receive connector. To do this, follow these steps:
+2. Add the IPv6 binding to the Receive connector by following these steps:
   
    1. Open the Exchange Management Shell.
    2. Run the following command to identify the default Receive connector that's using port 25:
