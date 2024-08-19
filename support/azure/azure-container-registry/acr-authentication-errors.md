@@ -86,7 +86,7 @@ The error indicates authentication failed when accessing the ACR. This error can
 
     :::image type="content" source="media/acr-authentication-errors/store-your-credentials-safely-after-generation.png" alt-text="Screenshot that shows the 'store your credentials safely after generation' message." lightbox="media/acr-authentication-errors/store-your-credentials-safely-after-generation.png":::
  
-    If you are unsure of the password you used, consider [regenerating](/azure/container-registry/container-registry-repository-scoped-permissions#regenerate-token-passwords) it.
+    If you're unsure of the password you used, consider [regenerating](/azure/container-registry/container-registry-repository-scoped-permissions#regenerate-token-passwords) it.
 
 - If you're using a token associated with a scope map, an expiration date can be set for the password. To view the expiration date, you can run the Azure CLI commands described in [Show token details](/azure/container-registry/container-registry-repository-scoped-permissions#show-token-details), or open the token in the Azure portal and check the **Expiration date** as per the following screenshot:
 
@@ -98,9 +98,9 @@ The error indicates authentication failed when accessing the ACR. This error can
 
     :::image type="content" source="media/acr-authentication-errors/save-secret-when-created-before-leaving-page.png" alt-text="Screenshot that shows the 'save the secret when created before leaving the page' message." lightbox="media/acr-authentication-errors/save-secret-when-created-before-leaving-page.png":::
  
-    If you are unsure of the secret value you used, consider [creating a new secret](/entra/identity-platform/quickstart-register-app#add-credentials).
+    If you're unsure of the secret value you used, consider [creating a new secret](/entra/identity-platform/quickstart-register-app#add-credentials).
 
-- If you're using a service principal, make sure the secret hasn't expired.
+- If you're using a service principal, make sure the secret isn't expired.
 
     You can check the secret validity by running the [az ad app credential list](/cli/azure/ad/app/credential#az-ad-app-credential-list) command:
 
@@ -112,7 +112,7 @@ The error indicates authentication failed when accessing the ACR. This error can
 
     :::image type="content" source="media/acr-authentication-errors/acr-secret-expires-value.png" alt-text="Screenshot that shows the ACR  'Expires' column.":::
  
-    If the secret has expired, you can consider [creating a new secret](/entra/identity-platform/quickstart-register-app#add-credentials).
+    If the secret is expired, you can consider [creating a new secret](/entra/identity-platform/quickstart-register-app#add-credentials).
 
 ## Error 4: "Unable to get admin user credentials"
 
