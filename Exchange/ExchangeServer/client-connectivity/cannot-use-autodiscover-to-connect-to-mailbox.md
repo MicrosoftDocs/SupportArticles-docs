@@ -43,15 +43,15 @@ The following conditions should also be true:
 
 ## Cause
 
-When a mailbox is being moved across different Exchange forests, the mailbox enabled user in the original forest is converted to a mail enabled user. If that mailbox is also enabled for personal Archive, one of attributes that the original forest object (a mail enabled user) can have is called `msExchArchiveDatabaseLink`. If present on the mail enabled user, the attribute will likely point to a database in the **wrong** forest - as the user's mailbox is now in the forest where it was newly moved.
+When a mailbox is being moved across different Exchange forests, the mailbox-enabled user in the original forest is converted to a mail-enabled user. If that mailbox is also enabled for personal Archive, one of the attributes that the original forest object (a mail-enabled user) can have is called `msExchArchiveDatabaseLink`. If present on the mail-enabled user, the attribute will likely point to a database in the **wrong** forest - as the user's mailbox is now in the forest where it was newly moved.
 
 The conflicting information will then confuse an Outlook client during the Autodiscover process, causing it to report errors as mentioned above.
 
-Exchange Server 2010 SP1 cross forest move doesn't create this problem, as the attribute are cleared properly during the mailbox move.
+Exchange Server 2010 SP1 cross-forest move doesn't create this problem, as the attribute is cleared properly during the mailbox move.
 
 ## Resolution
 
-If you have moved archive-enabled mailboxes cross forest before installing Exchange Server 2010 SP1, we recommend that you clear the value of the `msExchArchiveDatabaseLink` attribute on any mail enabled users that might have them populated. You can use a tool such as ADSIEdit to remove the value of this attribute.
+If you have moved archive-enabled mailboxes cross-forest before installing Exchange Server 2010 SP1, we recommend that you clear the value of the `msExchArchiveDatabaseLink` attribute on any mail-enabled users that might have them populated. You can use a tool such as ADSIEdit to remove the value of this attribute.
 
 ## More information
 
