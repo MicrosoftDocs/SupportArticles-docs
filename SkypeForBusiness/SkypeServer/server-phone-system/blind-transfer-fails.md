@@ -3,7 +3,6 @@ title: Blind transfer from an anonymous response group agent fails
 description: Fixes an issue in which a blind transfer from an anonymous response group to another response group fails in Lync Server.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

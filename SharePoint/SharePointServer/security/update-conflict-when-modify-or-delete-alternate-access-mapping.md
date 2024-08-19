@@ -3,7 +3,6 @@ title: Error message when you try to modify or to delete an alternate access map
 description: Describes an issue that occurs after you perform a system recovery in which the configuration database is restored. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

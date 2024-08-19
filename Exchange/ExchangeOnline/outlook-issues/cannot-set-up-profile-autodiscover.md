@@ -11,7 +11,6 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - OutlookSetupProfile
-localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 
