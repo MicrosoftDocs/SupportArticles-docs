@@ -4,7 +4,6 @@ description: Provide a resolution to an issue in which email messages sending to
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

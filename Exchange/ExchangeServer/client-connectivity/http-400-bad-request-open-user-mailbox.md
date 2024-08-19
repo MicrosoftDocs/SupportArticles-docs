@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: batre, v-six
 ms.custom: 
   - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
