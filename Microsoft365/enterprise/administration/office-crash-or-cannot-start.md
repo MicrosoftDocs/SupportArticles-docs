@@ -3,7 +3,6 @@ title: Office Applications crash or cannot start
 description: Workarounds an issue that Office applications crash or cannot start.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
