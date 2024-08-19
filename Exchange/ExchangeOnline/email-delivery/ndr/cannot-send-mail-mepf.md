@@ -1,6 +1,6 @@
 ---
 title: NDR error 554 5.2.2 mailbox full when sending email to mail-enabled public folders
-description: Email is not able to be delivered to mail-enabled public folders in Microsoft 365 with error 554 5.2.2 mailbox full. This article provides three resolutions.
+description: Email can't be delivered to mail-enabled public folders in Microsoft 365 with error 554 5.2.2 mailbox full. This article provides three resolutions.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -35,13 +35,13 @@ STOREDRV.Deliver.Exception:QuotaExceededException.MapiExceptionQuotaExceeded'
 
 This issue occurs when any of these conditions is met:
 
-- The organization's default public folder post quota (`DefaultPublicFolderProhibitPostQuota`) has been reached.
-- The individual public folder post quota (`PublicFolderProhibitPostQuota`) has been reached.
-- The Content Public Folder mailbox hosting the mail-enabled public folder has reached its quota.
+- The organization's default public folder post quota (`DefaultPublicFolderProhibitPostQuota`) is reached.
+- The individual public folder post quota (`PublicFolderProhibitPostQuota`) is reached.
+- The Content Public Folder mailbox hosting the mail-enabled public folder reaches its quota.
 
 ## Resolution
 
-Here's how to identify which quota has been reached and take corrective steps:
+Here's how to identify which quota is reached and take corrective steps:
 
 ### Step 1: Check individual public folder quota
 
@@ -52,7 +52,7 @@ Here's how to identify which quota has been reached and take corrective steps:
     Get-PublicFolderStatistics \pfname | FL TotalItemSize
     ```
 
-3. Check if the value of `TotalItemSize` has reached or exceeded the value of `ProhibitPostQuota`.
+3. Check if the value of `TotalItemSize` reaches or exceeds the value of `ProhibitPostQuota`.
 
     ```powershell
     Get-PublicFolder \pfname | FL *quota*
@@ -65,7 +65,7 @@ Here's how to identify which quota has been reached and take corrective steps:
 
     For more information, read [Understanding modern public folder quotas](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Understanding-modern-public-folder-quotas/ba-p/607463).
 
-4. Check if the value of `TotalItemSize` has exceeded the value of `DefaultPublicFolderProhibitPostQuota`:
+4. Check if the value of `TotalItemSize` exceeds the value of `DefaultPublicFolderProhibitPostQuota`:
 
     ```powershell
     Get-OrganizationConfig | FL *quota*
@@ -90,11 +90,11 @@ Here are two ways to resolve this issue:
 > [!NOTE]
 > Avoid a large increase of the individual public folder `Prohibitpostquota`. Setting this value too high will impact the auto-split process negatively.
 
-If this quota hasn't been exceeded, proceed to the next step.
+If this quota is exceeded, proceed to the next step.
 
 ### Step 2: Check the content public folder mailbox quota
 
-If the public folder hasn't exceeded the individual or organizational quota as shown in Step 1, check if the public folder mailbox hosting the public folder content has exceeded its quota.
+If the public folder exceeds the individual or organizational quota as shown in Step 1, check if the public folder mailbox hosting the public folder content exceeds its quota.
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Find the content public folder mailbox's name for the mail-enabled public folder:
@@ -109,7 +109,7 @@ If the public folder hasn't exceeded the individual or organizational quota as s
     Get-MailboxStatistics pfmbx | FL TotalItemSize
     ```
 
-4. Check if the value of `TotalItemSize` has exceeded the value of `ProhibitSendRecieveQuota`:
+4. Check if the value of `TotalItemSize` exceeds the value of `ProhibitSendRecieveQuota`:
 
     ```powershell
     Get-Mailbox -PublicFolder pfmbx | FL *quota*
