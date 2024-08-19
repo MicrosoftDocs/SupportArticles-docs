@@ -4,7 +4,6 @@ description: Explains that the Send As and Send on Behalf permissions are not av
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kellybos, ninob, v-six

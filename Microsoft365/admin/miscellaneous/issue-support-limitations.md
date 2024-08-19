@@ -3,7 +3,6 @@ title: Support limitations for issues with Microsoft 365 Apps
 description: Describes support limitations for issues when using Microsoft 365 Apps.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

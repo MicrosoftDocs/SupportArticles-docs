@@ -4,7 +4,6 @@ description: Works around an issue in which running the Search-Mailbox cmdlet fa
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Administrator Tasks
   - CSSTroubleshoot

@@ -7,7 +7,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150
@@ -29,7 +28,7 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **510482**
 - SIP response code: **500**
 - Suggested actions:  
-  - Make sure that there is no infinite call forwarding.
+  - Make sure that there's no infinite call forwarding.
 
 ## 510544 500 Get Outbound Direct routing - no trunk config found
 

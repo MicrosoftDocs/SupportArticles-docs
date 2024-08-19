@@ -10,7 +10,6 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with Active Sync Device
   - Exchange Server
   - CSSTroubleshoot
-localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 

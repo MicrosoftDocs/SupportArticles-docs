@@ -4,7 +4,6 @@ description: This article describes an issue that migration batch will fail with
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.custom: 
   - sap:Migration\Issues with Public Folder Migration

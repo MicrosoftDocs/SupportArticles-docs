@@ -3,7 +3,6 @@ title: Change connection of a project programmatically
 description: Provides step-by-step information to change the connection of a Microsoft Access Project programmatically. A manual way to change the connection is also included.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

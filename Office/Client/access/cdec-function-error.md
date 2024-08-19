@@ -3,7 +3,6 @@ title: Error when you use CDec() function in Access query
 description: Describes that you receive an error message when you use the CDec() function in a Microsoft Access query.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

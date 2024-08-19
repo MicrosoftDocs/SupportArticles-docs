@@ -10,7 +10,6 @@ ms.custom:
   - sap:Migration
   - Exchange Hybrid
   - CSSTroubleshoot
-localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 

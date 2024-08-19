@@ -3,7 +3,6 @@ title: Voicemail messages aren't delivered in Teams or Skype for Business client
 description: Voicemails aren't delivered, or voicemails don't appear in Skype for Business or Teams client even though they're delivered in email clients. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

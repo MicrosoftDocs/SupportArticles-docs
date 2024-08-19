@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: ninob, dpaul, v-six
 ms.custom: 
   - sap:Permissions\Need help with Mailbox permissions (Send As, Send on Behalf, Full Access)
