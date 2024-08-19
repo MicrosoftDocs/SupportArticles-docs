@@ -8,7 +8,6 @@ author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
 audience: Admin
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150
