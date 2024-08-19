@@ -5,7 +5,7 @@ summary: Welcome to Azure App Service troubleshooting. These articles explain ho
 metadata:
   title: Troubleshoot Azure App Service issues
   description: Documentation for troubleshooting common issues with Azure App Service. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: app-service  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: azure-app-service
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.

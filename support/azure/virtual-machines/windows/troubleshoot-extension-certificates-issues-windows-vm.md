@@ -4,7 +4,7 @@ description: Learn how to troubleshoot issues that involve certificates on a Win
 ms.date: 05/05/2023
 editor: v-jsitser
 ms.reviewer: kegregoi, axelg, scotro, v-leedennis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Extensions not operating correctly
 ---
 # Troubleshoot extension certificate issues on a Windows VM in Azure

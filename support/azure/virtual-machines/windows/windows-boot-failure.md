@@ -3,7 +3,7 @@ title: Windows boot error (INACCESSIBLE_BOOT_DEVICE) or (Boot failure) in an Azu
 description: Provides a solution to an issue where a Windows VM doesn't start with error INACCESSIBLE_BOOT_DEVICE or Boot failure.
 ms.date: 07/12/2024
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---

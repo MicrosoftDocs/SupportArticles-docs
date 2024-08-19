@@ -5,7 +5,7 @@ description: Learn how to troubleshoot the issue that the blue screen error is r
 services: virtual-machines
 documentationCenter: ''
 author: genlin
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure

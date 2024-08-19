@@ -36,14 +36,14 @@ This issue occurs because IIS Manager performs a lookup operation to look for a 
 
 To resolve this problem, add a friendly name to the certificate. Follow these steps to resolve this problem:
 
-1. Select **Start**, select **Run**, type **certmgr.msc**, and then select **OK**.
-2. Select **File**, select **Add/Remove Span-ins**.
-3. Select **Certificates**, and select **Add**, and then select **OK**.
+1. Select **Start**, select **Run**, enter _MMC_, and then select **OK**.
+2. Select **File**, select **Add/Remove Snap-ins**.
+3. Select **Certificates**, select **Add >**.
 4. Select **Computer account**, and select **Next**, and then select **Finish**.
 5. Select **OK**.
 6. Expand **Certificates (Local Computer)**, and **Personal**, and then **Certificates**.
-7. Right-click the **certificate**, and then select **Properties**.
-8. Edit the **Friendly name** field.
+7. Right-click the certificate, and then select **Properties**.
+8. Edit the **Friendly name** field, and then select **OK**.
 
 ## More information
 

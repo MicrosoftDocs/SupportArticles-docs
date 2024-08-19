@@ -5,7 +5,7 @@ ms.date: 04/15/2024
 ms.author: divargas
 author: divargas-msft
 ms.reviewer: malachma
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.collection: linux
 ---

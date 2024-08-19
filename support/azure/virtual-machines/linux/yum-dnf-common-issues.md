@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 editor: v-jsitser
 ms.reviewer: divargas, adelgadohell
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services

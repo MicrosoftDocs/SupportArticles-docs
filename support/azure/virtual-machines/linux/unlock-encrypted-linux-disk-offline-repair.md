@@ -3,7 +3,7 @@ title: Unlocking an encrypted Linux disk for offline repair
 description: Describes how to repair a Linux VM that has an encrypted OS disk.
 services: virtual-machines
 ms.collection: linux
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 author: genlin
 manager: dcscontentpm
 editor: v-jesits

@@ -4,6 +4,7 @@ description: Provides steps to remove the unmanaged layer of a ribbon component 
 author: caburk
 ms.author: caburk
 ms.reviewer: sapatadi, matp, brflood
+ms.custom: sap:Configuring model-driven app commands\Command is not shown or hidden as expected
 ms.date: 02/08/2024
 ---
 # Remove an active unmanaged layer of the ribbon in Power Apps

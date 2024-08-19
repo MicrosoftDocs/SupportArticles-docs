@@ -3,7 +3,7 @@ title: Azure Virtual Machine - Netlogon service is not starting
 description: Troubleshoot Netlogon service not starting
 ms.date: 01/11/2021
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:Cannot connect to my VM
 ---

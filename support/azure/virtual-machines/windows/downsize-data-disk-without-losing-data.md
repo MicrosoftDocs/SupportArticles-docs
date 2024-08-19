@@ -4,7 +4,7 @@ description: Learn how to decrease the size of a disk in Azure without losing an
 ms.date: 06/01/2023
 ms.reviewer: scotro, uarshadkhan, v-leedennis
 ms.topic: how-to
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Decrease the size of an Azure data disk without losing data

@@ -6,7 +6,7 @@ documentationcenter: ''
 author: divargas-msft
 tags: Linux chroot LVM
 ms.custom: sap:My VM is not booting, linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux

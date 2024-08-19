@@ -3,7 +3,7 @@ title: Troubleshoot Azure fence agent issues in an RHEL Pacemaker cluster
 description: Provides troubleshooting guidance for Azure fence agent issues that occur in a Red Hat Enterprise Linux (RHEL) Pacemaker cluster.
 ms.reviewer: divargas, rnirek, v-weizhu
 ms.date: 07/10/2024
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---

@@ -3,7 +3,7 @@ title: (Failed to get contents of the log) error in VM Boot Diagnostics in Azure
 description: Discusses an issue in which that you see a (Failed to get contents of the log) error in VM Boot Diagnostics in Azure portal.
 ms.date: 07/21/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Error in VM Boot Diagnostics in Azure portal: Failed to get contents of the log
