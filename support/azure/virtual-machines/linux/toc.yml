@@ -121,7 +121,7 @@
   items:
   - name: Red Hat
     items:
-    - name: How to performance leapp upgrade in RHEL PAYG
+    - name: How to perform leapp upgrade for RHEL PAYG VMs
       href: leapp-upgrade-process-rhel-7-and-8.md
     - name: Troubleshoot Red Hat leapp upgrade issues
       href: troubleshoot-red-hat-os-upgrade-issues.md
