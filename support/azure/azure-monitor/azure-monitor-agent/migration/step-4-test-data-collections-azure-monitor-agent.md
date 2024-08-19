@@ -1,7 +1,7 @@
 ---
 title: Step 4 - Test data collections in Azure Monitor Agent
 description: Learn how to test data collections in Azure Monitor Agent as part of migrating from the legacy Log Analytics agent.
-ms.date: 08/16/2024
+ms.date: 08/19/2024
 ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
