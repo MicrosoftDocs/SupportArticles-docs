@@ -89,7 +89,7 @@ For security and privacy reasons, Dataverse restricts the creation of certain fi
 2. Select **Environments**, and then select the environment you want to manage.
 3. Select **Settings** from the command bar.
 4. Select **Product** > **Privacy + Security**.
-5. Under **Blocked Attachments**, add or remove file extensions from tthe semicolon-delimited list.
+5. Under **Blocked Attachments**, add or remove file extensions from the semicolon-delimited list.
 
 For more information, see [Manage privacy and security settings](/power-platform/admin/settings-privacy-security).
 
