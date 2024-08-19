@@ -1,13 +1,12 @@
 ---
-title: Cannot install Exchange from unattended installation
-description: You cannot install an Exchange Server 2010 Service Pack 1 server from an unattended installation. Provides resolutions.
+title: Can't install Exchange from unattended installation
+description: You can't install an Exchange Server 2010 Service Pack 1 server from an unattended installation. Provides resolutions.
 ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates
   - Exchange Server
@@ -17,7 +16,7 @@ appliesto:
   - Exchange Server 2010 Service Pack 1
 search.appverid: MET150
 ---
-# You cannot install an Exchange Server 2010 SP1 server from an unattended installation
+# You can't install an Exchange Server 2010 SP1 server from an unattended installation
 
 _Original KB number:_ &nbsp; 2280782
 
@@ -46,7 +45,7 @@ In this scenario, receive the following error message:
 ## Resolution
 
 > [!WARNING]
-> If you use the ADSI Edit snap-in, the LDP utility, or any other LDAP version 3 client, and you modify the attributes of Active Directory objects incorrectly, you can cause serious problems. These problems may require you to reinstall Microsoft Windows 2000 Server, Microsoft Windows Server 2003, Microsoft Exchange 2000 Server, Microsoft Exchange Server 2003, or both Windows and Exchange. Microsoft cannot guarantee that problems that occur if you modify Active Directory object attributes incorrectly can be solved. Modify these attributes at your own risk.
+> If you use the ADSI Edit snap-in, the LDP utility, or any other LDAP version 3 client, and you modify the attributes of Active Directory objects incorrectly, you can cause serious problems. These problems may require you to reinstall Microsoft Windows 2000 Server, Microsoft Windows Server 2003, Microsoft Exchange 2000 Server, Microsoft Exchange Server 2003, or both Windows and Exchange. Microsoft can't guarantee that problems that occur if you modify Active Directory object attributes incorrectly can be solved. Modify these attributes at your own risk.
 
 ### Resolution 1
 
@@ -63,8 +62,8 @@ To clean up the environment and install Exchange Server 2010 SP1 in hosting mode
 5. Expand the **Configuration** container in **ADSI Edit**.
 6. Locate and then delete the following two objects:
 
-    Microsoft Exchange  
-    Microsoft Exchange Autodiscover
+    - Microsoft Exchange  
+    - Microsoft Exchange Autodiscover
 
 7. Run the `Setup /PrepareAD` cmdlet with using the `hosting` parameter.
 8. Run the `setup.com` cmdlet with using the `hosting` parameter to install Exchange Server 2010 SP1 in hosting mode.
@@ -93,4 +92,4 @@ To clean up the environment and install Exchange Server 2010 SP1 in non-hosting 
 
 ## More information
 
-There is another article that also resolves the problem of the Exchange Server 2010 SP1 installation failure. For more information, see ["Active Directory wasn't prepared using hosting mode" error when you install Exchange Server 2010 SP1 from an unattended installation](active-directory-wasnt-prepared-using-hosting-mode-error.md).
+There's another article that also resolves the problem of the Exchange Server 2010 SP1 installation failure. For more information, see ["Active Directory wasn't prepared using hosting mode" error when you install Exchange Server 2010 SP1 from an unattended installation](active-directory-wasnt-prepared-using-hosting-mode-error.md).
