@@ -1,6 +1,5 @@
 ---
-title: Unable to start Pacemaker services in SUSE
-description: Provides troubleshooting guidance for Pacemaker Services fail to start
+description: Provides troubleshooting guidance for Pacemaker services that don't start
 ms.reviewer: rnirek,rmuneer
 ms.topic: troubleshooting
 ms.date: 07/24/2024
@@ -11,15 +10,15 @@ ms.author: rnirek
 author: rnirek
 ---
 
-# Troubleshoot Pacemaker Service startup issues in SUSE Pacemaker cluster
+# Troubleshoot startup issues in a SUSE Pacemaker cluster
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
 This article lists the common causes of Pacemaker service startup issues and provides resolutions to fix them.
 
-## Scenario 1: Pacemaker Service startup failure due to SysRq triggered reboot
+## Scenario 1: Pacemaker startup failure because of SysRq-triggered reboot
 
-The Pacemaker service fails to start if the previous reboot was triggered by a SysRq action. The Pacemaker service can start successfully after a normal reboot. This issue is caused by a conflict between the SBD `msgwait` time and the fast reboot time of these Azure VMs, as specified in the `/etc/sysconfig/sbd` file:
+The Pacemaker service doesn't start if the last startup was triggered by a SysRq action. The Pacemaker service can start successfully after a normal restart. This issue is caused by a conflict between the STONITH Block Device (SBD) `msgwait` time and the fast restart time of these Azure virtual machines (VMs), as specified in the `/etc/sysconfig/sbd` file:
 
 ```output
 ## Type: yesno / integer
@@ -37,28 +36,30 @@ The Pacemaker service fails to start if the previous reboot was triggered by a S
 # this case better.
 SBD_DELAY_START=no
 ```
-### Resolution:
+### Resolution
 
 1. Put the cluster into maintenance-mode:
 
    ```bash
    sudo crm configure property maintenance-mode=true
    ```
-2. Edit the `/etc/sysconfig/sbd` file and change `SBD_DELAY_START` parameter to `yes`.
+2. Edit the `/etc/sysconfig/sbd` file to change the `SBD_DELAY_START` parameter to `yes`.
 
 3. Remove the cluster from maintenance mode:
+
    ```bash
    sudo crm configure property maintenance-mode=false
    ```
-4. Restart the Pacemaker and SDB services or reboot both nodes:
+4. Restart the Pacemaker and SDB services, or restart both nodes:
+
    ```bash
    sudo systemctl restart sbd
    sudo systemctl restart Pacemaker
    ```
 
-## Scenario 2:  Pacemaker Service fails to start with code 100 after node fencing
+## Scenario 2:  Pacemaker doesn't start and returns code 100 after node fencing
 
-After cluster node was fenced, the Pacemaker service is unable to start and exit with code 100.
+After the cluster node is fenced, the Pacemaker service exits without starting and returns an exit status code of **100**.
 
    ```bash
    systemctl status Pacemaker.service
@@ -73,40 +74,42 @@ After cluster node was fenced, the Pacemaker service is unable to start and exit
 
 ### Cause
 
-If a node attempts to rejoin the cluster after it's fenced but before the `msgwait` timeout completes, the Pacemaker service fails to start with an exit status of 100. To resolve the issue, enable the `SBD_DELAY_START` setting, and put a `msgwait` delay on the startup of sbd.service. This allows more time for the node to rejoin the cluster, and ensures the node can rejoin without experiencing the `msgwait` conflict. 
+If a node tries to rejoin the cluster after it's fenced but before the `msgwait` time-out finishes, the Pacemaker service doesn't start. Instead, the service returns an exit status code of **100**. To resolve the issue, enable the `SBD_DELAY_START` setting, and specify an `msgwait` delay for the startup of sbd.service. This allows more time for the node to rejoin the cluster, and it makes sure that the node can rejoin without experiencing the `msgwait` conflict. 
 
-Note that if the `SBD_DELAY_START` setting is used, and SBD `msgwait` value is very high, two other potential problems might occur. For more information, see [Settings for long timeout in SBD_DELAY_START](https://www.suse.com/support/kb/doc/?id=000019356).
+Notice that if the `SBD_DELAY_START` setting is used, and the SBD `msgwait` value is very high, other potential issues might occur. For more information, see [Settings for long timeout in SBD_DELAY_START](https://www.suse.com/support/kb/doc/?id=000019356).
 
 ### Resolution 1:
 
 1. Put the cluster into maintenance-mode:
+
    ```bash
    sudo crm configure property maintenance-mode=true
    ```
 
-2. Edit the `/etc/sysconfig/sbd` file and change `SBD_DELAY_START` parameter to `yes`.
+2. Edit the `/etc/sysconfig/sbd` file to change the `SBD_DELAY_START` parameter to `yes`.
 
-3. Make a copy of `sbd.service`
+3. Make a copy of `sbd.service`:
 
    ```bash
    cp /usr/lib/systemd/system/sbd.service /etc/systemd/system/sbd.service
    ```
-4. Edit `/etc/systemd/system/sbd.service` and add the following lines in `[Unit]` and `[Service]` section:
 
-```bash
+4. Edit `/etc/systemd/system/sbd.service` to add the following lines in the `[Unit]` and `[Service]` section:
+
+   ```bash
    [Unit]
    Before=corosync.service
    [Service]
    TimeoutSec=144
-```
+   ```
 
-5. Remove the cluster from maintenance-mode.
+5. Remove the cluster from maintenance-mode:
 
    ```bash
    sudo crm configure property maintenance-mode=false
    ```
 
-6.Restart the Pacemaker and SDB service or reboot both nodes:
+6. Restart the Pacemaker and SDB services, or restart both nodes:
 
    ```bash
    sudo systemctl restart sbd
@@ -114,10 +117,8 @@ Note that if the `SBD_DELAY_START` setting is used, and SBD `msgwait` value is v
    ```
 
 ### Resolution 2:
-Tweak SDB device `msgwait` timeout shorter than the time it takes for SBD fencing action to complete and `sbd.service` to start up again after reboot. Modify `watchdog` parameter to 50% of new `msgwait` timeout. This is a process of optimization and must be tuned on a system-by-system basis.
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+Tweak the SDB device `msgwait` time-out setting to be shorter than the time that's required for the SBD fencing action to finish and the `sbd.service` to be restored after a restart. Edit the `watchdog` parameter to be 50 percent of new `msgwait` time-out value. This is a process of optimization that must be tuned on a system-by-system basis.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
