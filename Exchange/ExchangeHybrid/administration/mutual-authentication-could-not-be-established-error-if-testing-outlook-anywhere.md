@@ -4,7 +4,6 @@ description: Describes an issue in which the Remote Connectivity Analyzer tool d
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Client Connectivity
   - CSSTroubleshoot

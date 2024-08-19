@@ -8,7 +8,6 @@ ms.reviewer: travissnoozy
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150

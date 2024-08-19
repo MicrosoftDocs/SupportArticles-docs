@@ -6,7 +6,6 @@ ms.author: vliorgu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CI 109367
   - CSSTroubleshoot
