@@ -1,6 +1,6 @@
 ---
-title: Cannot browse groups in OWA
-description: Describes an issue in which Exchange Online users cannot browse groups in Outlook Web App because the Browse groups option is missing.
+title: Can't browse groups in OWA
+description: Describes an issue in which Exchange Online users can't browse groups in Outlook Web App because the Browse groups option is missing.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3059279
 
 ## Symptoms
 
-Exchange Online users cannot browse groups in Microsoft Outlook Web App. When a user expands **Groups** in the navigation pane in Outlook Web App, the **Browse groups** option is missing.
+Exchange Online users can't browse groups in Microsoft Outlook Web App. When a user expands **Groups** in the navigation pane in Outlook Web App, the **Browse groups** option is missing.
 
 ## Cause
 
@@ -30,9 +30,9 @@ This problem occurs if you set up custom address book policies (ABPs) in Exchang
 
 ## Resolution
 
-To resolve this problem, add the All Groups address list to the ABP that's assigned to the user. After you do this, wait approximately one hour for the changes to replicate. Then, have users access Outlook Web App again.
+To resolve this problem, add the All Groups address list to the ABP that's assigned to the user. After you add the address list, wait approximately one hour for the changes to replicate. Then, have users access Outlook Web App again.
 
-You can use the `Set-AddressBookPolicy` cmdlet to change the settings of an ABP. The following are examples of how to do this.
+You can use the `Set-AddressBookPolicy` cmdlet to change the settings of an ABP. The following are examples of how to do so.
 
 - The following command adds the All Groups address list to an ABP that's named *Staff*:
 

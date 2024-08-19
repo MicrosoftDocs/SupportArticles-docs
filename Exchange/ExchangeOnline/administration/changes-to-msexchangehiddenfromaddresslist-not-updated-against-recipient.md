@@ -1,6 +1,6 @@
 ---
 title: Changes to msExchangeHiddenFromAddressList not updated
-description: Provides a fix for an issue in which changes made to the msExchangeHiddenFromAddressList attribute are not updated against the recipient object in Exchange Online.
+description: Provides a fix for an issue in which changes made to the msExchangeHiddenFromAddressList attribute aren't updated against the recipient object in Exchange Online.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -27,7 +27,7 @@ Consider the following scenario:
 - You change the `msExchangeHiddenFromAddressList` attribute in on-premises.
 - The attribute is synced by using Microsoft Entra Connect.
 
-In this scenario, the changes are not updated against the recipient object in Microsoft Exchange Online.
+In this scenario, the changes aren't updated against the recipient object in Microsoft Exchange Online.
 
 ## Cause
 
@@ -46,15 +46,15 @@ To resolve this issue, follow these steps:
     Get-Module -ListAvailable activedirectory
     ```  
 
-2. Import the Active Directory module for PowerShell versions earlier than 3.0. To do this, run the following cmdlet:
+2. Run the following cmdlet to import the Active Directory module for PowerShell versions earlier than 3.0:
 
     ```powershell
     Import-Module activedirectory
     ```  
 
-    For PowerShell module 3.0 and later versions, the module will load automatically based on the commands that are issued.
+    For PowerShell module 3.0 and later versions, the module loads automatically based on the commands that are issued.
 
-3. Validate that the `mailnickname` attribute is not set to any value. To do this, run the following cmdlet:
+3. Validate that the `mailnickname` attribute isn't set to any value. To do so, run the following cmdlet:
 
     ```powershell
     Get-ADObject -Filter {Name -eq ObjectName} -Properties * | Out-String -Stream | Select-String mailnickname

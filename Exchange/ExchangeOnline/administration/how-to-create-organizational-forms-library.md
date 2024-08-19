@@ -35,19 +35,19 @@ This article discusses how to create organizational forms in Exchange Online and
    - Connect to Exchange Online by using remote PowerShell. For more information, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
    - In Exchange Server, open the Exchange Management Shell.
 
-2. Create a new public folder mailbox that's named *PFHierarchy*. To do this, run the following command:
+2. Run the following command to create a new public folder mailbox that's named *PFHierarchy*:
 
     ```powershell
     New-Mailbox -PublicFolder -Name PFHierarchy
     ```
 
-3. Create a new public folder in the `NON_IPM_SUBTREE` directory that's named Organizational Forms Library. To do this, run the following command:
+3. Create a new public folder in the `NON_IPM_SUBTREE` directory that's named Organizational Forms Library. To do so, run the following command:
 
     ```powershell
     New-PublicFolder -Path "\NON_IPM_SUBTREE\EFORMS REGISTRY" -Name "Organizational Forms Library"
     ```
 
-4. Set the locale ID on the folder that you created. To do this, run the following command:
+4. Run the following command to set the locale ID on the folder that you created:
 
     ```powershell
     Set-PublicFolder "\NON_IPM_SUBTREE\EFORMS REGISTRY\Organizational Forms Library" -EformsLocaleID EN-US
@@ -55,19 +55,19 @@ This article discusses how to create organizational forms in Exchange Online and
 
     To determine the correct locale ID to use, see [languagecode Field](/previous-versions/office/developer/exchange-server-2007/aa579489(v=exchg.80)).
 
-5. Set read permissions for each regular user. To do this, run the following command:
+5. Run the following command to set read permissions for each regular user:
 
     ```powershell
     Add-PublicFolderClientPermission -identity "\NON_IPM_SUBTREE\EFORMS REGISTRY\Organizational Forms Library" -user User@domain.com -AccessRights ReadItems
     ```
 
-6. Set write permissions for each admin who will be saving the organizational forms to public folders. To do this, run the following command:
+6. Set write permissions for each admin who will be saving the organizational forms to public folders. To do so, run the following command:
 
     ```powershell
     Add-PublicFolderClientPermission -identity "\NON_IPM_SUBTREE\EFORMS REGISTRY\Organizational Forms Library" -user Admin@domain.com -AccessRights CreateItems
     ```
 
-7. Add a user as the owner of the Organizational Forms Library folder if they have to publish or create forms in the library. To do this, run the following command:
+7. Add a user as the owner of the Organizational Forms Library folder if they have to publish or create forms in the library. To do so, run the following command:
 
    ```powershell
    Add-PublicFolderClientPermission "\NON_IPM_SUBTREE\EFORMS REGISTRY\Organizational forms library" -User <User@domain.com> -AccessRights Owner
