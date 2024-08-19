@@ -144,7 +144,7 @@ Run the following `leapp preupgrade` command:
 sudo leapp preupgrade --target <target_os_version> --no-rhsm
 ```
 
-Replace `<target_os_version>` with the target OS version, for example `9.4`. 
+Replace `<target_os_version>` with the target OS version, for example `8.10`. 
 
 ### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
 
@@ -154,7 +154,7 @@ Run the following `leapp preupgrade` command:
 sudo leapp preupgrade --target <target_os_version> --no-rhsm
 ```
 
-Replace `<target_os_version>` with the target OS version, for example `8.10`. 
+Replace `<target_os_version>` with the target OS version, for example `9.4`. 
 
 ---
 
