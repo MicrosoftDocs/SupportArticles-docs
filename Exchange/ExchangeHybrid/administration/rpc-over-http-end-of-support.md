@@ -1,6 +1,6 @@
 ---
 title: RPC over HTTP reaches end of support in Microsoft 365 on October 31, 2017
-description: Explains that RPC over HTTP in Microsoft 365 will be deprecated on October 31, 2017. Contains information about why RPC over HTTP is being replaced by MAPI over HTTP and describes actions that Microsoft 365 customers may have to take.
+description: Explains that Remote procedure call (RPC) over HTTP in Microsoft 365 is deprecated on October 31, 2017. Contains information about why RPC over HTTP is being replaced by MAPI over HTTP and describes actions that Microsoft 365 customers may have to take.
 author: cloud-writer
 ms.author: meerak
 audience: ITPro
@@ -26,7 +26,7 @@ ms.reviewer: v-six
 
 ## Introduction
 
-As of Oct 31, 2017, RPC over HTTP will no longer be a supported protocol for accessing mail data from Exchange Online. Microsoft will no longer provide support or updates for Outlook clients that connect through RPC over HTTP, and the quality of the mail experience will decrease over time.
+As of Oct 31, 2017, RPC over HTTP is no longer a supported protocol for accessing mail data from Exchange Online. Microsoft no longer provides support or updates for Outlook clients that connect through RPC over HTTP, and the quality of the mail experience will decrease over time.
 
 RPC over HTTP is being replaced by MAPI over HTTP, a modern protocol that was launched in May 2014. This change affects you if you're running Outlook 2007 because Outlook 2007 won't work with MAPI over HTTP. To avoid being in an unsupported state, Outlook 2007 customers have to update to a newer version of Outlook or use Outlook on the web.
 
@@ -36,12 +36,12 @@ This change may also affect you if you're running Outlook 2016, Outlook 2013, or
 
 RPC over HTTP, also known as Outlook Anywhere, is a legacy method of connectivity and transport between Outlook for Windows and Exchange. In May 2014, Microsoft introduced MAPI over HTTP as a replacement for RPC over HTTP.
 
-Starting on October 31, 2017, RPC over HTTP will no longer be a supported protocol for accessing mail data from Exchange Online. Starting on this date, the following conditions will apply:
+Starting on October 31, 2017, RPC over HTTP is no longer a supported protocol for accessing mail data from Exchange Online. Starting on this date, the following conditions apply:
 
-1. Microsoft will not provide support for RPC over HTTP issues (regular or custom).
-2. No code fixes or updates to resolve problems that are unrelated to security will be released.
+1. Microsoft doesn't provide support for RPC over HTTP issues (regular or custom).
+2. No code fixes or updates to resolve problems that are unrelated to security are released.
 
-Additionally, for Office versions that support MAPI over HTTP, Microsoft may elect to ignore existing registry keys that customer are using in order to force RPC over HTTP use.
+Additionally, for Office versions that support MAPI over HTTP, Microsoft may elect to ignore existing registry keys that customers are using in order to force RPC over HTTP use.
 
 ## Why is RPC over HTTP being replaced by MAPI over HTTP
 
@@ -66,7 +66,7 @@ Additionally, you may have to make sure that Outlook clients aren't using a regi
 
 ## I'm using Microsoft 365 with Outlook 2007 or an earlier version. What actions do I have to take
 
-MAPI over HTTP was not backported to Outlook 2007 or earlier versions. If you're using Outlook 2007, you will be in an unsupported state on October 31, 2017. If you want to continue to access Exchange Online mailboxes through the Microsoft 365 portal ([portal.office.com](https://portal.office.com/)), we recommend that you move to a current version of Outlook that is under mainstream support,or use Outlook on the web.
+MAPI over HTTP was not backported to Outlook 2007 or earlier versions. If you're using Outlook 2007, you're in an unsupported state on October 31, 2017. If you want to continue to access Exchange Online mailboxes through the Microsoft 365 portal ([portal.office.com](https://portal.office.com/)), we recommend that you move to a current version of Outlook that is under mainstream support, or use Outlook on the web.
 
 Additionally, make sure that you don't have any Outlook add-ins or third-party apps that rely on the RPC over HTTP protocol to connect to Microsoft 365 data.
 
@@ -114,7 +114,7 @@ Microsoft provides reporting on email application usage against Exchange Online 
 
 ## Why is MAPI over HTTP not backported to Outlook 2007
 
-MAPI over HTTP was released after the end of [Mainstream Support for Office 2007](https://support.microsoft.com/lifecycle/search/?p1=8753). When RPC over HTTP reaches end of support on October 31, 2017, Office 2007 will be out of Extended Support.
+MAPI over HTTP was released after the end of [Mainstream Support for Office 2007](https://support.microsoft.com/lifecycle/search/?p1=8753). When RPC over HTTP reaches end of support on October 31, 2017, Office 2007 is out of Extended Support.
 
 ## Does this end of support affect Outlook for Mac, Outlook for iOS and Android, Outlook for Windows 10 Mobile, or Outlook on the web
 
