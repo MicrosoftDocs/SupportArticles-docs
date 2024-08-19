@@ -3,7 +3,6 @@ title: Store selected items as comma-delimited string
 description: Explains how to retrieve selected items from a multiple selection list box and then store the selected items as a comma-delimited string in Microsoft Access.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

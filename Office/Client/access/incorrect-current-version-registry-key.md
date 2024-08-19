@@ -3,7 +3,6 @@ title: Incorrect registry key for Access
 description: Describes an issue in which Access may not detect/repair the registry key that specifies the configured version of Access. Provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -3,7 +3,6 @@ title: Can't enter a large amount of text in Memo field
 description: Discusses a problem in which you receive an error message when you enter a large amount of text in a Memo field that contains an index in Access.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot
