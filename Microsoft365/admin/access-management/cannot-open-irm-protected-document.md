@@ -3,7 +3,6 @@ title: Can't open an IRM-protected document with sign-in prompts
 description: If a domain has Conditional Access requirements, the authentication may fail so that you can't open the IRM-protected content.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

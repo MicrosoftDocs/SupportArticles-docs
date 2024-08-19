@@ -3,7 +3,6 @@ title: Your system is low on virtual memory
 description: Describes the error message that you may receive when you try to start an Office program.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

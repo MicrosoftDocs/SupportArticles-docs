@@ -3,7 +3,6 @@ title: We are unable to connect right now when try to activate Microsoft 365 App
 description: Describes an issue that triggers an error message when users try to activate Microsoft 365 Apps for enterprise. Provides a workaround.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -3,7 +3,6 @@ title: How to turn off Function Argument ToolTips in Excel
 description: Provides instructions to turn off Function Argument ToolTips in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

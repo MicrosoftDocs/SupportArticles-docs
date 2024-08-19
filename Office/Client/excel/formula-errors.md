@@ -3,7 +3,6 @@ title: Formula errors when list separator isn't set correctly
 description: Describes formula errors when list separator isn't set correctly.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

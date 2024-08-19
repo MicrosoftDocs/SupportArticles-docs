@@ -4,7 +4,6 @@ description: Delegate receives an NDR when they send updates to a meeting invite
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Calendaring
   - CSSTroubleshoot

@@ -3,7 +3,6 @@ title: Can't sign in to Microsoft 365 Windows desktop applications
 description: Describes issues that occur when users try to sign in to Microsoft 365 desktop applications on devices that have security software installed.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

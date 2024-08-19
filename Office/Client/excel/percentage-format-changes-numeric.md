@@ -4,7 +4,6 @@ description: Fix a problem where percentage (%) format in chart data table and a
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot

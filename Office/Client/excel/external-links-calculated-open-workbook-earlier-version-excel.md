@@ -4,7 +4,6 @@ description: External links in a workbook from an earlier version of Excel are c
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - Open\Links
   - CSSTroubleshoot

@@ -3,7 +3,6 @@ title: You receive error messages when opening an Office document
 description: Describes the issue that occurs when you receive an error message after you open a specific file in an Office program.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

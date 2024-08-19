@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Messaging Policy and Compliance\Help Configuring MRM, Archive Mailbox, Retention
   - Exchange Server
