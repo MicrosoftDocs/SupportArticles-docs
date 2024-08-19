@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 10042
 
 ## Summary
 
-We'll begin by asking you to enable diagnostic logging and message tracking as a prerequisite. Then we'll take you through a series of steps to resolve your public folder replication issues.
+We begin by asking you to enable diagnostic logging and message tracking as a prerequisite. Then we take you through a series of steps to resolve your public folder replication issues.
 
 Estimated time of completion:  
 45-60 minutes.
@@ -37,11 +37,11 @@ To troubleshoot public folder replication for Exchange Server, you'll first need
 
 - [Enable diagnostic logging](#enable-diagnostic-logging)
 - [Enable Message Tracking](#enable-message-tracking)
-- [I am ready to troubleshoot Public Folder Replication](#troubleshoot-public-folder-replication)
+- [I'm ready to troubleshoot Public Folder Replication](#troubleshoot-public-folder-replication)
 
 ### Enable diagnostic logging
 
-You'll need to turn on diagnostic logging on all servers you'll be working with. The steps for different Exchange version might be different, select your Exchange version:
+You need to turn on diagnostic logging on all servers you're working with. The steps for different Exchange version might be different. Select your Exchange version:
 
 #### For Exchange Server 2007 and Exchange Server 2010
 
@@ -102,11 +102,11 @@ You'll need to turn on diagnostic logging on all servers you'll be working with.
 #### What do you want to do next
 
 - [Enable Message Tracking](#enable-message-tracking)
-- [I am ready to troubleshoot Public Folder Replication](#troubleshoot-public-folder-replication)
+- [I'm ready to troubleshoot Public Folder Replication](#troubleshoot-public-folder-replication)
 
 ### Enable message tracking
 
-To turn on Message Tracking on all servers, you'll be working with. The steps for different Exchange version might be different, select your Exchange version:
+To turn on Message Tracking on all servers you're working with. The steps for different Exchange version might be different. Select your Exchange version:
 
 #### For Exchange Server 2007 and Exchange Server 2010
 
@@ -137,7 +137,7 @@ To turn on Message Tracking on all servers, you'll be working with. The steps fo
 
 ### Troubleshoot Public Folder Replication
 
-Select one folder that includes data on one server but not on another server, and make just that folder the focus of your troubleshooting efforts. In the following steps, the server that contains the data is called the **source** server; the server that does not contain the data is called the **destination** server.
+Select one folder that includes data on one server but not on another server, and make just that folder the focus of your troubleshooting efforts. In the following steps, the server that contains the data is called the **source** server; the server that doesn't contain the data is called the **destination** server.
 
 #### Exchange Server 2007 and Exchange Server 2010
 
@@ -161,7 +161,7 @@ Select one folder that includes data on one server but not on another server, an
 
 #### Replicate Always Interval
 
-Verify that the Replicate Always Interval value is set to 15 or fewer minutes on the source server. If necessary, adjust the setting. Please select your Exchange version to check the steps:
+Verify that the Replicate Always Interval value is set to 15 or fewer minutes on the source server. If necessary, adjust the setting. Select your Exchange version to check the steps:
 
 ##### Exchange Server 2007 and Exchange Server 2010
 
@@ -195,7 +195,7 @@ Next, verify that the folder in question is configured to use the store schedule
 2. Expand your **Administrative Groups** container, and then select the administrative group that contains the public folder server.
 3. Expand the **Servers** container, select the public folder database, and then select **Properties**.
 4. On the **Replication (Policy)** tab, note the value in the **Replication interval for always (minutes)** box.
-5. If the value is not 15, type *15* in the **Replication interval for always (minutes)** box.
+5. If the value isn't 15, type *15* in the **Replication interval for always (minutes)** box.
 6. Select **Apply**, and then select **OK**.
 
 Next, verify that the folder you're troubleshooting is configured to use the store schedule:
@@ -225,7 +225,7 @@ Watch the application log on the source server for Event ID 3018, which indicate
 
 ### Troubleshoot the source server
 
-The source server is not generating outgoing hierarchy replication messages for new changes. We will first focus on troubleshooting on the source server.
+The source server isn't generating outgoing hierarchy replication messages for new changes. We'll first focus on troubleshooting on the source server.
 
 #### Event ID 3079 when the public folder database is mounted
 
@@ -241,7 +241,7 @@ When the public folder database is mounted, Event ID 3079 is recorded in the App
 **Do you see Event ID 3079?**
 
 - If yes, see [EcReplStartup](#ecreplstartup).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. If you contact support about this issue, tell them that the source server is not generating outbound hierarchy replication messages and there is no 3079 event when the database mounts.
+- If no, sorry, we can't resolve an unidentified issue using this guide. If you contact support about this issue, tell them that the source server isn't generating outbound hierarchy replication messages and there is no 3079 event when the database mounts.
 
 ### EcReplStartup
 
@@ -250,7 +250,7 @@ Examine Event ID 3079 for the text: EcReplStartup.
 Does Event ID 3079 contain EcReplStartup?
 
 - If yes, see [Application log Event ID 9528](#application-log-event-id-9528).
-- If no, sorry, we cannot resolve an unidentified issue by using this guide. If you contact support regarding this issue, please tell them that the source server is not generating outbound hierarchy replication messages. There is a 3079 event when the database mounts, but the event does not contain **EcReplStartup**.
+- If no, sorry, we can't resolve an unidentified issue by using this guide. If you contact support regarding this issue,  tell them that the source server isn't generating outbound hierarchy replication messages. There's a 3079 event when the database mounts, but the event doesn't contain **EcReplStartup**.
 
 ### Application log Event ID 9528
 
@@ -261,7 +261,7 @@ If Event ID 3079 contains EcReplStartup, this indicates that the replication thr
 |Event Source|MSExchangeIS|
 |Event Category|General|
 |Event ID|9528|
-|Message|The SID S-1-5-32-544 was found on 2 users in the DS, so the store cannot map this SID to a unique user.<br/>The users involved are:<br/>/DC=com/DC=domain/DC=na/OU=Migrated/CN=John, Woods<br/>/DC=com/DC=domain/DC=ad/DC=corp/OU=EUC/OU=AMER/OU=Jersey City/OU=Harborside/OU=Users/CN=John, Woods|
+|Message|The SID S-1-5-32-544 was found on 2 users in the DS, so the store can't map this SID to a unique user.<br/>The users involved are:<br/>/DC=com/DC=domain/DC=na/OU=Migrated/CN=John, Woods<br/>/DC=com/DC=domain/DC=ad/DC=corp/OU=EUC/OU=AMER/OU=Jersey City/OU=Harborside/OU=Users/CN=John, Woods|
 
 Do you see Event ID 9528?
 
@@ -308,11 +308,11 @@ SMTP: Started Outbound Transfer of Message Message transferred to through SMTP
 
 #### Transport issue
 
-The message was not delivered to the destination server, which indicates that a transport issue is causing the problem. Next, we'll troubleshoot the transport process.
+The message was not delivered to the destination server, which indicates that a transport issue is causing the problem. Next, troubleshoot the transport process.
 
 #### Does the message appear in message tracking
 
-Go to the source server and find the outgoing Message ID. Next, go to the Destination server and run message tracking to see if it received the message. Please select your Exchange version to check the steps to run message tracking.
+Go to the source server and find the outgoing Message ID. Next, go to the Destination server and run message tracking to see if it received the message. Select your Exchange version to check the steps to run message tracking.
 
 ##### For Exchange Server 2007 and Exchange Server 2010
 
@@ -365,7 +365,7 @@ On the destination server, examine the Application log in Event Viewer for event
 |Time|Time|
 |Users|Not available|
 |Computer|Computer_Name|
-|Description|This is an SMTP protocol error log for virtual server ID 1, connection #29. The remote host `E2k3server1.contoso.com`, responded to the SMTP command "xexch50" with "504 Need to authenticate first ". The full command sent was "XEXCH50 2336 3 ". This will probably cause the connection to fail.|
+|Description|This event is an SMTP protocol error log for virtual server ID 1, connection #29. The remote host `E2k3server1.contoso.com`, responded to the SMTP command "xexch50" with "504 Need to authenticate first ". The full command sent was "XEXCH50 2336 3 ". This error probably causes the connection to fail.|
 
 |Event Type| Error |
 |---|---|
@@ -376,7 +376,7 @@ On the destination server, examine the Application log in Event Viewer for event
 |Time|Time|
 |User|Not available|
 |Computer|Computer_Name|
-|Description:|This is an SMTP protocol log for virtual server ID 1, connection #30. The client at "6.5.2.4" sent a "xexch50" command, and the SMTP server responded with "504 Need to authenticate first ". The full command sent was "xexch50 1092 2". This will probably cause the connection to fail. These events indicate that the XEXCH50 protocol sink fired, but the exchange of the blobs failed between the servers that are listed in the events.|
+|Description:|This event is an SMTP protocol log for virtual server ID 1, connection #30. The client at "6.5.2.4" sent a "xexch50" command, and the SMTP server responded with "504 Need to authenticate first ". The full command sent was "xexch50 1092 2". This will probably cause the connection to fail. These events indicate that the XEXCH50 protocol sink fired, but the exchange of the blobs failed between the servers that are listed in the events.|
 
 **Do you see Event ID 7004 and Event ID 7010 on the destination server?**
 
@@ -385,19 +385,19 @@ On the destination server, examine the Application log in Event Viewer for event
 
 ### Resolve issue with the XEXCH50 command
 
-The problem that you are experiencing may be caused by an XEXCH50 command issue.
+The problem that you're experiencing may be caused by an XEXCH50 command issue.
 
 #### To resolve the XEXCH50 command issue
 
-1. Verify that Integrated Windows Authentication is enabled on the SMTP virtual servers on the computers that are running Exchange Server in your organization. If Integrated Windows Authentication is not enabled:
+1. Verify that Integrated Windows Authentication is enabled on the SMTP virtual servers on the computers that are running Exchange Server in your organization. If Integrated Windows Authentication isn't enabled:
 
    1. In Exchange System Manager, expand **Administrative Groups**, expand **Servers**, expand **Exchange Server Name**, expand **Protocols**, and then expand **SMTP**.
    2. Right-click the **SMTP virtual server**.
    3. Select **Properties**, select the **Access** tab, and then select **Authentication**. Make sure that the **Integrated Windows Authentication** check box is selected.
 
-2. If Integrated Windows Authentication is enabled, but the events persist, the sending server in the 7004 event or in the 7010 event may lack or be denied the SendAs right on the receiving server. If the sending server and the receiving server are experiencing these events, the servers may lack the SendAs rights for each other. The SendAs right is not set explicitly. The SendAs right is typically inherited through membership in the Exchange Domain Servers (EDS) group. If the EDS does not have this DENY access control entry (ACE), the affected server may be nested in another group that has the DENY ACE, or the EDS may be nested in some other groups that have the DENY ACE. To run successfully, the **XEXCH50** command has to have the SendAs right for servers in the Exchange organization.
-3. Determine whether you are using Transport Layer Security (TLS) and a security channel between servers in the Exchange organization. In this scenario, the STARTTLS transport event sinks occur before the AUTH command. The **XEXCH50** command fails later in the session because the **AUTH** command is missing.
-4. If Exchange Protocol Security (EXPS) authentication is not working correctly between servers, the **XEXCH50** command does not work. Events 1704 and 1706 indicate EXPS authentication failures in the Application log.
+2. If Integrated Windows Authentication is enabled, but the events persist, the sending server in the 7004 event or in the 7010 event may lack or be denied the SendAs right on the receiving server. If the sending server and the receiving server are experiencing these events, the servers may lack the SendAs rights for each other. The SendAs right isn't set explicitly. The SendAs right is typically inherited through membership in the Exchange Domain Servers (EDS) group. If the EDS doesn't have this DENY access control entry (ACE), the affected server may be nested in another group that has the DENY ACE, or the EDS may be nested in some other groups that have the DENY ACE. To run successfully, the **XEXCH50** command has to have the SendAs right for servers in the Exchange organization.
+3. Determine whether you're using Transport Layer Security (TLS) and a security channel between servers in the Exchange organization. In this scenario, the STARTTLS transport event sinks occur before the AUTH command. The **XEXCH50** command fails later in the session because the **AUTH** command is missing.
+4. If Exchange Protocol Security (EXPS) authentication isn't working correctly between servers, the **XEXCH50** command doesn't work. Events 1704 and 1706 indicate EXPS authentication failures in the Application log.
 
     |Event Type|Warning|
     |---|---|
@@ -410,10 +410,10 @@ The problem that you are experiencing may be caused by an XEXCH50 command issue.
     > The description in Event ID 1706 includes error code 0x8009030c.  
     Error code 0x8009030c is the SEC_E_LOGON_DENIED Hresult value. This code indicates that the account could not be logged on.  
     These problems may be difficult to troubleshoot because the Microsoft Windows credentials of EXPS are required to pass this **AUTH** command. You can use various tools to troubleshoot the combination of Event ID 7004 and 7010; this includes the NLTEST tool and the NETDOM tool. Troubleshooting steps may include resetting computer account passwords.  
-    If you have a combination of Event ID 7004 and 7010 in the Application log as described earlier, and you cannot discover the source of the problem by using EXPS authentication, contact [Microsoft Support Services](https://support.microsoft.com/contactus/?ws=support).  
+    If you have a combination of Event ID 7004 and 7010 in the Application log as described earlier, and you can't discover the source of the problem by using EXPS authentication, contact [Microsoft Support Services](https://support.microsoft.com/contactus/?ws=support).  
     If you do not have the combination of Event ID 7004 and Event ID 7010 in the Application log, go to step 5.
 
-5. Check whether there is a firewall or an antivirus wall between servers in the Exchange organization. If a firewall is operating between servers in the organization, temporarily disable the firewall to determine whether it is causing the problem.
+5. Check whether there is a firewall or an antivirus wall between servers in the Exchange organization. If a firewall is operating between servers in the organization, temporarily disable the firewall to determine whether it's causing the problem.
 
 **Did disabling the firewall resolve the issue?**
 
@@ -429,7 +429,7 @@ Select your Exchange version to verify and adjust the ReplState setting with fol
 ##### For Exchange Server 2007 and Exchange Server 2010
 
 1. Start Exchange Management Console.
-2. Use the `New-PublicFolderDatabaseRepairRequest` cmdlet to detect and fix replication issues in the public folder database. Public folders on the public folder database can still be accessed while the request is running. However, the public folder currently being repaired is not available. After you begin the repair request, it can't be stopped unless you dismount the database.
+2. Use the `New-PublicFolderDatabaseRepairRequest` cmdlet to detect and fix replication issues in the public folder database. Public folders on the public folder database can still be accessed while the request is running. However, the public folder currently being repaired isn't available. After you begin the repair request, it can't be stopped unless you dismount the database.
 3. Run the following cmdlet:
 
     ```powershell
@@ -450,7 +450,7 @@ Next, run a test to determine whether the issue is resolved.
 
 #### Tombstone because of a deletion
 
-This indicates the folder is a tombstone because of a previous deletion that did not replicate. Go back to the source server and copy the folder to create a new folder with the same content, and then start over.
+This indicates the folder is a tombstone because of a previous deletion that didn't replicate. Go back to the source server and copy the folder to create a new folder with the same content, and then start over.
 
 ### New folder visibility
 
@@ -461,7 +461,7 @@ Is the new folder visible in the hierarchy on the destination server?
 
 ### Troubleshoot hierarchy backfill
 
-At this point, we have verified that changes to the hierarchy are replicating correctly. We can now troubleshoot hierarchy backfill. To do this, run **Synchronize Hierarchy** on the destination server. Synchronize Hierarchy causes Event ID 3017 to occur. Event ID 3017 shows that a hierarchy status request (type 0x20) was sent to the source server.
+At this point, we have verified that changes to the hierarchy are replicating correctly. We can now troubleshoot hierarchy backfill. To do so, run **Synchronize Hierarchy** on the destination server. Synchronize Hierarchy causes Event ID 3017 to occur. Event ID 3017 shows that a hierarchy status request (type 0x20) was sent to the source server.
 
 #### For Exchange Server 2007 and Exchange Server 2010
 
@@ -496,7 +496,7 @@ To determine whether the public folder store on the source server has a proxy ad
 #### To examine the value
 
 > [!WARNING]
-> If you use the Active Directory Service Interface (ADSI) Edit snap-in, the LDP utility, or any other LDAP version 3 client, and you incorrectly change the attributes of Active Directory objects, you can cause serious problems. These problems may require you to reinstall Microsoft Windows 2000 Server, Windows Server 2003, Microsoft Exchange Server 2000, Microsoft Exchange Server 2003, or both Windows Server and Exchange Server. Microsoft cannot guarantee that problems that occur if you incorrectly change Active Directory object attributes can be resolved. Change these attributes at your own risk.
+> If you use the Active Directory Service Interface (ADSI) Edit snap-in, the LDP utility, or any other LDAP version 3 client, and you incorrectly change the attributes of Active Directory objects, you can cause serious problems. These problems may require you to reinstall Microsoft Windows 2000 Server, Windows Server 2003, Microsoft Exchange Server 2000, Microsoft Exchange Server 2003, or both Windows Server and Exchange Server. Microsoft can't guarantee that problems that occur if you incorrectly change Active Directory object attributes can be resolved. Change these attributes at your own risk.
 
 > [!NOTE]
 > Depending on your version of Microsoft Windows, the following steps may be different on your computer. If they are, see your product documentation to complete these steps.
@@ -505,7 +505,7 @@ To determine whether the public folder store on the source server has a proxy ad
 
    > [!NOTE]
    > ADSI Edit is included with Microsoft Windows 2000 Server Support Tools and with Windows Server 2003 Support Tools. To install Windows 2000 Support Tools, double-click **Setup.exe** in the Support\Tools folder on the Windows 2000 CD. To install Windows Server 2003 Support Tools, double-click **Suptools.msi** in the Support\Tools folder on the Windows Server 2003 CD.
-2. Connect to a domain controller if you are not already connected.
+2. Connect to a domain controller if you aren't already connected.
 
      > [!NOTE]
      > In this step, `contoso.com` is a placeholder for your domain name; other words in italics are placeholders for the indicated names.Expand **Configuration Container [computername.contoso.com]**, expand **CN=Configuration, DC=contoso, DC=com**, expand **CN=Services**, expand **CN=Microsoft Exchange**, expand **CN=OrganizationName**, expand **CN=Administrative Groups**, expand **CN=AdministrativeGroupName**, expand **CN=Servers**, expand **CN=ExchangeServerName**, expand **CN=InformationStore**, and then select **CN=First Storage Group**.
@@ -519,7 +519,7 @@ To determine whether the public folder store on the source server has a proxy ad
 
 **Does the source public store have an email address?**
 
-- If yes, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If yes, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 - If no, see [Application log Event ID 3018](#application-log-event-id-3018).
 
 ### Event ID 3017 on the source server
@@ -538,7 +538,7 @@ Event ID 3027 is the status response on the source server. In the Application lo
 **Do you see Event ID 3027 on the destination server?**
 
 - If yes, see [Troubleshooting backfill](#troubleshooting-backfill).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Troubleshooting backfill
 
@@ -549,7 +549,7 @@ On the destination server, run **Synchronize Hierarchy** again, and then check t
 **Do you see Event ID 3014 and type 0x8 on the destination server?**
 
 - If yes, see [Event ID 3024 on the source server](#event-id-3024-on-the-source-server).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Event ID 3024 on the source server
 
@@ -567,7 +567,7 @@ Event ID 3019, which has type 0x80000002, is the outgoing hierarchy backfill res
 **Is Event ID 3019 on the Application log on the source server?**
 
 - If yes, see [Event ID 3029](#event-id-3029).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Event ID 3029
 
@@ -585,7 +585,7 @@ On the destination server, look for the folder in the hierarchy.
 **Do you see the folder in the hierarchy on the destination server now?**
 
 - If yes, congratulations! Your Public Folder Replication for Exchange Server 2003 issue is resolved.
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Track the message ID from Event ID 3014
 
@@ -594,7 +594,7 @@ On the destination server, examine Event ID 3014 to obtain the message ID. Use m
 **Does message tracking indicate that the message was delivered to the source server?**
 
 - If yes, see [Focus on content; Replicate Always Interval and Schedule; Create a new item on the source server](#focus-on-content-replicate-always-interval-and-schedule-create-a-new-item-on-the-source-server).
-- If no, sorry, we cannot resolve an unidentified issue using this guide.
+- If no, sorry, we can't resolve an unidentified issue using this guide.
 
 ### Track the message ID from Event ID 3019
 
@@ -603,13 +603,13 @@ On the source server, locate Event ID 3019, and then note the message ID in the 
 **Does message tracking indicate that the message was delivered to the destination server?**
 
 - If yes, see [Replication Receive Queue Size in Performance Monitor](#replication-receive-queue-size-in-performance-monitor).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Focus on content; Replicate Always Interval and Schedule; Create a new item on the source server
 
 #### Focus on content
 
-Because the folder appears in the hierarchy on both servers, this is probably not a hierarchy replication issue. Therefore, we will focus on troubleshooting content.
+Because the folder appears in the hierarchy on both servers, it's probably not a hierarchy replication issue. Therefore, focus on troubleshooting content.
 
 #### Replicate Always Interval and Schedule
 
@@ -628,7 +628,7 @@ Verify that the Replicate Always Interval value is set to 15 minutes or fewer on
 
 3. Make sure all public folder databases have the same `ReplicationMessageSize`.
 
-Next, verify that the folder in question is configured to use the store schedule. To do this:
+Next, verify that the folder in question is configured to use the store schedule:
 
 1. Start Exchange Management Console.
 2. Run the following cmdlet and verify `Replicas` and `UseDatabaseReplicationSchedule` are set:
@@ -662,7 +662,7 @@ Create a new item in the public folder on the source server, and then watch the 
 **Do you see Event ID 3020, and does it include the name of the folder you are testing and the name of the item we created?**
 
 - If yes, see [Event ID 3030](#event-id-3030).
-- If no, see [Source server is not generating outgoing content messages for that folder; Event ID 3079 when the public folder database is mounted](#source-server-is-not-generating-outgoing-content-messages-for-that-folder-event-id-3079-when-the-public-folder-database-is-mounted).
+- If no, see [Source server isn't generating outgoing content messages for that folder; Event ID 3079 when the public folder database is mounted](#source-server-is-not-generating-outgoing-content-messages-for-that-folder-event-id-3079-when-the-public-folder-database-is-mounted).
 
 ### Event ID 3030
 
@@ -677,7 +677,7 @@ On the destination server, examine the Application log for Event ID 3030.
 
 #### Source server is not generating outgoing content messages for that folder
 
-The source server is not generating outgoing content messages for that folder. We'll focus our troubleshooting on the source server.
+The source server isn't generating outgoing content messages for that folder. We'll focus our troubleshooting on the source server.
 
 #### Event ID 3079 when the public folder database is mounted
 
@@ -705,7 +705,7 @@ Select your Exchange version to verify and adjust the ReplState setting with fol
 ##### For Exchange Server 2007 and Exchange Server 2010
 
 1. Start Exchange Management Console.
-2. Use the `New-PublicFolderDatabaseRepairRequest` cmdlet to detect and fix replication issues in the public folder database. Public folders on the public folder database can still be accessed while the request is running. However, the public folder currently being repaired is not available. After you begin the repair request, it can't be stopped unless you dismount the database.
+2. Use the `New-PublicFolderDatabaseRepairRequest` cmdlet to detect and fix replication issues in the public folder database. Public folders on the public folder database can still be accessed while the request is running. However, the public folder currently being repaired isn't available. After you begin the repair request, it can't be stopped unless you dismount the database.
 3. Run the following cmdlet:
 
     ```powershell
@@ -726,10 +726,10 @@ Select your Exchange version to verify and adjust the ReplState setting with fol
 
 Create a new item in the public folder on the source server, and then examine the Application log for Event ID 3020.
 
-Do you see Event ID 3020, and does it include the name of the folder you are testing and the name of the item you created?
+Do you see Event ID 3020, and does it include the name of the folder you're testing and the name of the item you created?
 
 - If yes, see [Event ID 3030](#event-id-3030).
-- If no, sorry, we cannot resolve an unidentified issue by using this guide. If you contact support regarding this issue, please tell them that the source server is not generating outbound hierarchy replication messages. There is a 3079 event when the database mounts, but the event does not contain **EcReplStartup**.
+- If no, sorry, we can't resolve an unidentified issue by using this guide. If you contact support regarding this issue, tell them that the source server isn't generating outbound hierarchy replication messages. There's a 3079 event when the database mounts, but the event doesn't contain **EcReplStartup**.
 
 ### Verify that the item is in the source folder on the destination server
 
@@ -742,9 +742,9 @@ On the destination server, look for the item you created on the source server, a
 
 ### Troubleshoot content backfill
 
-We have verified that changes to content are replicating. Next, we'll troubleshoot content backfill.
+We have verified that changes to content are replicating. Next, troubleshoot content backfill.
 
-To do this, run Synchronize Content on the destination server. This should cause the destination server to ask the source server for the missing data.
+To do so, run Synchronize Content on the destination server. This should cause the destination server to ask the source server for the missing data.
 
 #### To run Synchronize Content in Exchange Server 2007 and Exchange Server 2010
 
@@ -777,7 +777,7 @@ Select your Exchange version to verify and adjust the ReplState setting with fol
 #### For Exchange Server 2007 and Exchange Server 2010
 
 1. Start Exchange Management Console.
-2. Use the `New-PublicFolderDatabaseRepairRequest` cmdlet to detect and fix replication issues in the public folder database. Public folders on the public folder database can still be accessed while the request is running, but you cannot access the public folder currently being repaired. After you begin the repair request, it can't be stopped unless you dismount the database.
+2. Use the `New-PublicFolderDatabaseRepairRequest` cmdlet to detect and fix replication issues in the public folder database. Public folders on the public folder database can still be accessed while the request is running, but you can't access the public folder currently being repaired. After you begin the repair request, it can't be stopped unless you dismount the database.
 3. Run the following cmdlet:
 
     ```powershell
@@ -801,7 +801,7 @@ Select your Exchange version to verify and adjust the ReplState setting with fol
 **Is Event ID 3017 in the Application log on the destination server?**
 
 - If yes, see [Event ID 3027](#event-id-3027).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Event ID 3027
 
@@ -823,17 +823,17 @@ In the Application log on the source server, immediately before Event ID 3027, l
 
 ### Do the servers have different age limits
 
-Typically, if the source server does not generate a status response, it means that the source server has no data that the other server does not also have.
+Typically, if the source server doesn't generate a status response, it means that the source server has no data that the other server doesn't also have.
 
 One situation where servers can be in-sync without having identical content is if they have different age limits. If the destination server has already expired the items in question, it will not backfill the items again.
 
-Be sure to check and make sure that the servers do not have different age limits. There are several types of limits:
+Be sure to check and make sure that the servers don't have different age limits. There are several types of limits:
 
 #### Storage Quotas
 
 ##### Use database quota defaults
 
-Select this check box to use the public folder database quota limits on which the public folder resides. If you do not select the defaults, the **Issue warning at (KB)**, **Prohibit post at (KB)**, and **Maximum item size (KB)** check boxes will become available.
+Select this check box to use the public folder database quota limits on which the public folder resides. If you don't select the defaults, the **Issue warning at (KB)**, **Prohibit post at (KB)**, and **Maximum item size (KB)** check boxes will become available.
 
 ##### Issue warning at (KB)
 
@@ -851,7 +851,7 @@ Select this check box to limit the maximum size of items users can post to the p
 
 ##### Use database retention defaults
 
-Select this check box to use the public folder database item retention limits on the server where this public folder resides. If you do not select this check box, the Retain deleted items for (days) check box becomes available.
+Select this check box to use the public folder database item retention limits on the server where this public folder resides. If you don't select this check box, the Retain deleted items for (days) check box becomes available.
 
 ##### Retain deleted items for (days)
 
@@ -861,7 +861,7 @@ Select this check box to set the number of days deleted items are retained in a 
 
 ##### Use database age defaults
 
-Select this check box to use the public folder database age limits for the server where this public folder resides. If you do not select this check box, the **Age limit for replicas (days)** check box becomes available.
+Select this check box to use the public folder database age limits for the server where this public folder resides. If you don't select this check box, the **Age limit for replicas (days)** check box becomes available.
 
 ##### Age limit for replicas (days)
 
@@ -869,7 +869,7 @@ Select this check box to limit the age of the public folder. Use the correspondi
 
 **Do the servers have different age limits?**
 
-- If the answer is yes, the content difference is by design. You do not have to continue troubleshooting. You can work around the issue by copying the items so they become new items in a new folder.
+- If the answer is yes, the content difference is by design. You don't have to continue troubleshooting. You can work around the issue by copying the items so they become new items in a new folder.
 - If the answer is no, an unknown error has occurred.
 
 ### Event ID 3027 that has type 0x10 on the destination server
@@ -879,11 +879,11 @@ On the destination server, examine the Application log for Event ID 3027 event t
 **Do you see Event ID 3027, and does it have type 0x10?**
 
 - If yes, see [Focus on backfill](#focus-on-backfill).
-- If no, sorry, we cannot resolve an unidentified issue by using this guide. If you contact support regarding this issue, please tell them that the source server is not generating outbound hierarchy replication messages. There is a 3079 event when the database mounts, but the event does not contain **EcReplStartup**.
+- If no, sorry, we can't resolve an unidentified issue by using this guide. If you contact support regarding this issue, tell them that the source server isn't generating outbound hierarchy replication messages. There's a 3079 event when the database mounts, but the event doesn't contain **EcReplStartup**.
 
 ### Focus on backfill
 
-At this point, the destination server has calculated that some data is missing. Therefore, we will focus on backfill.
+At this point, the destination server has calculated that some data is missing. Therefore, focus on backfill.
 
 On the destination server, run **Synchronize Content** again on the destination folder. After you run **Synchronize Content**, Event ID 3016 is recorded in the Application log. Event ID 3016 has message type 0x8 that contains the name of the folder.
 
@@ -908,7 +908,7 @@ In the Application log on the source server, immediately after Event ID 3026, yo
 **Do you see at least one Event ID 3021 that includes message type 0x80000004 for the folder?**
 
 - If yes, see [Compare the number of Event ID 3021 to the number of Event ID 3031](#compare-the-number-of-event-id-3021-to-the-number-of-event-id-3031).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Compare the number of Event ID 3021 to the number of Event ID 3031
 
@@ -926,7 +926,7 @@ On the destination server, look for the content that was synchronized from the s
 **Did you find the content in the same folder on the destination server?**
 
 - If yes, congratulations! Your Public Folder Replication for Exchange Server 2003 issue is resolved.
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Message may have been sent to a different source server
 
@@ -942,13 +942,13 @@ Examine Event ID 3016 to verify that the message was sent to the expected source
 **Is the expected source server identified in Event ID 3016?**
 
 - If yes, see [Event ID 3021 on the source server](#event-id-3021-on-the-source-server).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Outstanding backfill limit
 
 By default, the Public Folders store can hold up to 50 outstanding backfill requests at one time. This is known as the Outstanding Backfill Limit (OBL). When 50 backfill requests are in the store array, those requests are made repeatedly until they are satisfied; no further new requests can be made until at least one request has been completed.
 
-Each time a backfill request is satisfied, an opening occurs in the OBL and a new set of data can be requested. However, if all 50 requests experience issues and cannot be satisfied, no new openings occur, no new requests can be made, and replication cannot continue.
+Each time a backfill request is satisfied, an opening occurs in the OBL and a new set of data can be requested. However, if all 50 requests experience issues and can't be satisfied, no new openings occur, no new requests can be made, and replication can't continue.
 
 To determine whether Outstanding Backfill Limit is the cause of the problem, increase the OBL limit by one (1) on the destination server, and then examine the Application log for at least five minutes for an instance of Event ID 3016.
 
@@ -974,7 +974,7 @@ If Event ID 3016 is recorded for some other folder, troubleshoot using that fold
 **Do you see Event ID 3016 for some other folder?**
 
 - If yes, see [Troubleshoot content backfill](#troubleshoot-content-backfill).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Track the message that is identified in Event ID 3020
 
@@ -989,7 +989,7 @@ On the source server, use message tracking to track the message is identified in
 
 To troubleshoot the XEXCH50 command, increase logging on the destination server for the MSExchangeTransport service, and set the SMTP protocol level to medium.
 
-To verify and adjust the SMTP protocol level setting, please select your Exchange version to check the steps:
+To verify and adjust the SMTP protocol level setting, select your Exchange version to check the steps:
 
 #### For Exchange Server 2007 and Exchange Server 2010
 
@@ -1035,7 +1035,7 @@ Select your Exchange version to verify and adjust the ReplState setting with fol
 #### For Exchange Server 2007 and Exchange Server 2010
 
 1. Start Exchange Management Console.
-2. Use the `New-PublicFolderDatabaseRepairRequest` cmdlet to detect and fix replication issues in the public folder database. Public folders on the public folder database can still be accessed while the request is running, but you cannot access the public folder currently being repaired. After you begin the repair request, it can't be stopped unless you dismount the database.
+2. Use the `New-PublicFolderDatabaseRepairRequest` cmdlet to detect and fix replication issues in the public folder database. Public folders on the public folder database can still be accessed while the request is running, but you can't access the public folder currently being repaired. After you begin the repair request, it can't be stopped unless you dismount the database.
 3. Run the following cmdlet:
 
     ```powershell
@@ -1061,7 +1061,7 @@ Select your Exchange version to verify and adjust the ReplState setting with fol
 **Do you see Event ID 3030 in the Application log on the destination server?**
 
 - If yes, congratulations! Your Public Folder Replication for Exchange Server 2003 issue is resolved.
-- If no, sorry, we cannot resolve an unidentified issue by using this guide. If you contact support regarding this issue, please tell them that the source server is not generating outbound hierarchy replication messages. There is a 3079 event when the database mounts, but the event does not contain **EcReplStartup**.
+- If no, sorry, we can't resolve an unidentified issue by using this guide. If you contact support regarding this issue, tell them that the source server isn't generating outbound hierarchy replication messages. There's a 3079 event when the database mounts, but the event doesn't contain **EcReplStartup**.
 
 ### Replication Receive Queue Size in Performance Monitor
 
@@ -1072,9 +1072,9 @@ The larger the replication queue becomes, the more out of synchronization the co
 No action is required in the two instances where growth in the Replication Receive Queue is expected and can be planned for:
 
 - On a newly introduced public folder server, growth in the Replication Receive Queue can be caused by the expected initial backfill replication.
-- If site consolidation or other major changes in the Exchange topology are occurring, it is expected that there will be lots of replication as the content is moved.
+- If site consolidation or other major changes in the Exchange topology are occurring, it's expected that there will be lots of replication as the content is moved.
 
-For existing, steady state servers where public folder replicas are not being changed in bulk, this error may indicate:
+For existing, steady state servers where public folder replicas aren't being changed in bulk, this error may indicate:
 
 - Server resource performance bottlenecks such as disk, CPU, network, or memory. If there is a resource bottleneck on the server, the Store.exe process will not be able to process the replication messages fast enough and a queue will grow.
 - The public folder replication interval is too short for the replication to complete before the next replication cycle starts.
@@ -1099,18 +1099,18 @@ Pause replication of public folders and let the queues drain or call support.
 3. Monitor the Transport Queues by running `Get-TransportServer | Get-Queue`. Once the queue is reduced, you can resume replication.
 4. Use the `Resume-PublicFolderReplication` cmdlet to restart public folder replication for the entire organization.
 
-Sorry, we cannot resolve an unidentified issue by using this guide. If you contact support about this issue, tell them that Replication is Paused and you are waiting for the queues to reduce.
+Sorry, we can't resolve an unidentified issue by using this guide. If you contact support about this issue, tell them that Replication is Paused and you're waiting for the queues to reduce.
 
 ### Looking for the folder ID (FID) (Isolate?)
 
 Does the Event ID 3028 event show the FID but not the folder's name?
 
 - If yes, see [Tombstone because of a deletion](#tombstone-because-of-a-deletion-event-id-3028-event-shows-the-fid).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Tombstone because of a deletion (Event ID 3028 event shows the FID)
 
-This indicates the folder is a tombstone because of a previous deletion that did not replicate. Go back to the source server and copy the folder to create a new folder with the same content, and then start over.
+This indicates the folder is a tombstone because of a previous deletion that didn't replicate. Go back to the source server and copy the folder to create a new folder with the same content, and then start over.
 
 Is this information helpful?
 
@@ -1128,13 +1128,13 @@ If you need to understand more about performance monitor you can go here: Perfor
 **Does performance monitor show a large number of messages queued for submission?**
 
 - If yes, see [Check services](#check-services).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. If you contact support about this issue, please tell them that the server is generating outbound hierarchy messages, but those messages do not appear in message tracking, and nothing is being queued for submission.
+- If no, sorry, we can't resolve an unidentified issue using this guide. If you contact support about this issue, tell them that the server is generating outbound hierarchy messages, but those messages don't appear in message tracking, and nothing is being queued for submission.
 
 ### Check services
 
 1. Select **Start** > **Run**.
 2. Type *services.msc* in the box.
-3. Find **MSExchangeTransport** and verify it is started
+3. Find **MSExchangeTransport** and verify it's started
 
 If you have PowerShell, open it and run the following cmdlet:
 
@@ -1145,14 +1145,14 @@ Get-Service MSExchangeTransport
 **Is the Transport Service Running?**
 
 - If yes, see [Troubleshoot Public Folder Replication](#troubleshoot-public-folder-replication).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. If you contact support about this issue, please tell them that the server is generating outbound hierarchy messages, but those messages do not appear in message tracking, and nothing is being queued for submission.
+- If no, sorry, we can't resolve an unidentified issue using this guide. If you contact support about this issue, tell them that the server is generating outbound hierarchy messages, but those messages don't appear in message tracking, and nothing is being queued for submission.
 
 ### Does the 3030 event show the message ID (MID) of the item but not the subject
 
 Does the 3030 event show the MID of the item, but not the subject?
 
 - If yes, see [Tombstone](#tombstone).
-- If no, sorry, we cannot resolve an unidentified issue using this guide. If you contact support about this issue, please tell them that the source server is not generating outbound hierarchy replication messages and there is no 3079 event when the database mounts.
+- If no, sorry, we can't resolve an unidentified issue using this guide. If you contact support about this issue, tell them that the source server isn't generating outbound hierarchy replication messages and there is no 3079 event when the database mounts.
 
 ### Tombstone
 
@@ -1213,7 +1213,7 @@ To do this, examine the Application log on the source server. Then, use message 
 Is your issue now resolved?
 
 - If yes, congratulations! Your Public Folder Replication for Exchange Server 2003 issue is resolved.
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Exchange Server 2007 and Exchange Server 2010 in the path
 
@@ -1221,7 +1221,7 @@ The most common reason for a lost content backfill response on Exchange Server 2
 
 The first step for troubleshooting is to track the message and see where it failed.
 
-Usually, the hub transport server will log an event 1020 that describes the problem with that particular content. After tracking the message and determining which hub transport server it failed on, please check 1020 event with source MSExchange Store Driver on that hub transport server.
+Usually, the hub transport server will log an event 1020 that describes the problem with that particular content. After tracking the message and determining which hub transport server it failed on, check 1020 event with source MSExchange Store Driver on that hub transport server.
 
 **Do you see a 1020 event with source MSExchange Store Driver on that hub transport server?**
 
@@ -1233,7 +1233,7 @@ Usually, the hub transport server will log an event 1020 that describes the prob
   - If no, sorry, We can't solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
 - If yes, you see 1020 event and contain the error **The message content has become corrupted**, see [Exchange Server 2007 and Exchange Server 2010 in the path (The message content has become corrupted)](#exchange-server-2007-and-exchange-server-2010-in-the-path-the-message-content-has-become-corrupted).
 - If yes, you see 1020 event but neither of the above error message, see [Exchange Server 2007 and Exchange Server 2010 in the path (see 1020 event but neither of the above error message)](#exchange-server-2007-and-exchange-server-2010-in-the-path-see-1020-event-but-neither-of-the-above-error-message).
-- If no, you don't see 1020 event with source MSExchange Store Driver, sorry, we cannot resolve an unidentified issue using this guide. If you contact support about this issue, tell them that the server is generating outbound hierarchy messages, but those messages do not appear in message tracking, and nothing is being queued for submission.
+- If no, you don't see 1020 event with source MSExchange Store Driver, sorry, we can't resolve an unidentified issue using this guide. If you contact support about this issue, tell them that the server is generating outbound hierarchy messages, but those messages don't appear in message tracking, and nothing is being queued for submission.
 
 ### Exchange Server 2007 and Exchange Server 2010 in the path (The message content has become corrupted)
 
@@ -1278,4 +1278,4 @@ Remove the duplicate accounts mentioned in the event, or delete one of the users
 Is this information helpful?
 
 - If yes, congratulations! Your Public Folder Replication for Exchange Server issue is resolved.
-- If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
+- If no, sorry, we can't resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.

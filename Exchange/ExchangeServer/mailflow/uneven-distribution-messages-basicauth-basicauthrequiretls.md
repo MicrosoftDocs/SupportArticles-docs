@@ -40,7 +40,7 @@ This behavior is by design. When you require **Basic Authentication**, **Basic A
 
 ## Workaround 1
 
-Disable the Client Proxy Prefer Mailbox Mounted Server by setting its value to "false." This distributes the load to other servers in the database availability group (**DAG**). To do this, follow these steps for all smart hosts in the send connector:
+Disable the Client Proxy Prefer Mailbox Mounted Server by setting its value to "false." This action distributes the load to other servers in the database availability group (**DAG**). To do so, follow these steps for all smart hosts in the send connector:
 
 1. Locate the MSExchangeFrontEndTransport.exe configuration file.
 
@@ -70,4 +70,4 @@ Don't use **Basic Authentication** or **NTLM Authentication (Integrated)** on th
 
 ## Workaround 3
 
-Send messages to the Microsoft Exchange Transport Service directly. Do this by sending the mail to port 2525 or to another port the service is listening on. It won't do any load balancing at this point. The server the message is sent to is the server that processes the message. We recommend that you create a new receive connector to allow those connections coming from the SMTP source.
+Send messages to the Microsoft Exchange Transport Service directly. Do so by sending the mail to port 2525 or to another port the service is listening on. It doesn't do any load balancing at this point. The server that the message is sent to is the server that processes the message. We recommend that you create a new receive connector to allow those connections coming from the SMTP source.
