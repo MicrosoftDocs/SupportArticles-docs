@@ -28,7 +28,7 @@ For more information about performing a leapp upgrade on custom, golden, or PAYG
 - Set up access to the Serial Console.
 - Root privileges.
 
-## Prepare the VM for leapp pre-upgrade and upgrade process
+## Prepare the VM for leapp preupgrade and upgrade process
 
 This section outlines the necessary steps before performing an in-place upgrade to RHEL 8 or RHEL 9 using the leapp utility.
 
@@ -131,9 +131,9 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
 
 ---
 
-## Leapp pre-upgrade process
+## Leapp preupgrade process
 
-The leapp pre-upgrade report highlights possible issues and provides recommended solutions, and helps determining whether it's feasible or advisable to proceed with the upgrade.
+The leapp preupgrade report highlights possible issues and provides recommended solutions, and helps determining whether it's feasible or advisable to proceed with the upgrade.
 
 ### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
 
@@ -161,7 +161,7 @@ Check the report located in the */var/log/leapp/leapp-report.txt* file and manua
 
 ## Leapp upgrade process
 
-Continue the leapp upgrade process after the leapp pre-upgrade report shows no errors or inhibitors and everything is marked as resolved. The output is typically in green or yellow, indicating that it's safe to proceed with the leapp upgrade.
+Continue the leapp upgrade process after the leapp preupgrade report shows no errors or inhibitors and everything is marked as resolved. The output is typically in green or yellow, indicating that it's safe to proceed with the leapp upgrade.
 
 > [!IMPORTANT]  
 > Make sure to run the `leapp upgrade` command through the Serial Console to avoid any network interruptions that could affect your secure shell (SSH) terminal and disrupt the upgrade process.
