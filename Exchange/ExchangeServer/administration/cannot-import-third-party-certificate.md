@@ -1,6 +1,6 @@
 ---
 title: Certificate status could not be determined error
-description: This article provides the resolution to solve the certificate status could not be determined because the revocation check failed error that occurs when you try to import a third-party certificate in Exchange Server 2010.
+description: This article provides the resolution to solve the certificate status couldn't be determined because the revocation check failed error that occurs when you try to import a third-party certificate in Exchange Server 2010.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -31,11 +31,11 @@ If you run the `Get-ExchangeCertificate` cmdlet in the Exchange Management Shell
 
 > Status: RevocationCheckFailure
 
-However, if you click the Certificate Revocation List (CRL) link that is specified on the certificate, you can still access the third-party certificate through the Exchange server.
+However, if you select the Certificate Revocation List (CRL) link that is specified on the certificate, you can still access the third-party certificate through the Exchange server.
 
 ## Cause
 
-This issue occurs because Exchange Server 2010 uses Microsoft Windows HTTP Services (WinHTTP) to manage all HTTP and HTTPS traffic, and WinHTTP does not use the proxy settings that are configured for the Internet browser.
+This issue occurs because Exchange Server 2010 uses Microsoft Windows HTTP Services (WinHTTP) to manage all HTTP and HTTPS traffic. And WinHTTP doesn't use the proxy settings that are configured for the Internet browser.
 
 To view the WinHTTP proxy settings, at a command prompt, run the following command:
 
@@ -48,7 +48,7 @@ netsh winhttp show proxy
 To resolve this issue, you must configure the WinHTTP proxy setting and the server FQDN in the WinHTTP bypass list.
 
 > [!NOTE]
-> If you do not configure both the proxy setting and the server FQDN in the WinHTTP bypass list, the Exchange Management Shell and the Exchange Management Console cannot contact the Remote PowerShell.
+> If you don't configure both the proxy setting and the server FQDN in the WinHTTP bypass list, the Exchange Management Shell and the Exchange Management Console cannot contact the Remote PowerShell.
 
 To resolve this issue, open a command prompt, type the following command, and then press ENTER:
 
