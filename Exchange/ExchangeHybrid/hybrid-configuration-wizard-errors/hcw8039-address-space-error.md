@@ -43,7 +43,7 @@ To resolve this issue, follow these steps:
     Get-SendConnector -name "Outbound to Microsoft 365"
     ```
 
-3. In the output, examine the value of the AddressSpace  parameter. You should see either `*` or `contoso.mail.onmicrosoft.com;1`
+3. In the output, examine the value of the AddressSpace  parameter. You should see either `*` or `contoso.mail.onmicrosoft.com;1`.
 4. If you see any addresses other than `*` or `contoso.mail.onmicrosoft.com;1`, remove them. To do so, run the following command:
 
     ```powershell
