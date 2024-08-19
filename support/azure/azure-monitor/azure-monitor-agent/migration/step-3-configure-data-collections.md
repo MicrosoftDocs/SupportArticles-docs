@@ -40,11 +40,11 @@ To use the DCR Config Generator, follow these steps:
 
 1. Select **WorkspaceConfigToDCRMigrationTool.ps1**.
 
-   :::image type="content" source="media/step-3-configure-data-collections/dcr-config-generator-github-page.png" alt-text="A Screenshot that shows users where the 'WorkspaceConfigToDCRMigrationTool.ps' file is."  lightbox="media/step-3-configure-data-collections/dcr-config-generator-github-page.png":::
+   :::image type="content" source="media/step-3-configure-data-collections/dcr-config-generator-github-page.png" alt-text="Screenshot that shows users where the 'WorkspaceConfigToDCRMigrationTool.ps' file is."  lightbox="media/step-3-configure-data-collections/dcr-config-generator-github-page.png":::
 
 1. Select the download button to download the *WorkspaceConfigToDCRMigrationTool.ps1* file.
 
-   :::image type="content" source="media/step-3-configure-data-collections/download-workspaceconfigtodcrmigrationtool-script.png" alt-text="A screenshot that shows where the download button is."  lightbox="media/step-3-configure-data-collections/download-workspaceconfigtodcrmigrationtool-script.png":::
+   :::image type="content" source="media/step-3-configure-data-collections/download-workspaceconfigtodcrmigrationtool-script.png" alt-text="Screenshot that shows where the download button is."  lightbox="media/step-3-configure-data-collections/download-workspaceconfigtodcrmigrationtool-script.png":::
 
 1. After you download the file, create a *migration* folder on your C drive and move the file there.
 
@@ -57,7 +57,7 @@ To use the DCR Config Generator, follow these steps:
    
    See the following screenshot for an example:
    
-   :::image type="content" source="media/step-3-configure-data-collections/run-workspaceconfigtodcrmigrationtool-script.png" alt-text="A screenshot that shows how to run the 'WorkspaceConfigToDCRMigrationTool.ps1' file."  lightbox="media/step-3-configure-data-collections/run-workspaceconfigtodcrmigrationtool-script.png":::
+   :::image type="content" source="media/step-3-configure-data-collections/run-workspaceconfigtodcrmigrationtool-script.png" alt-text="Screenshot that shows how to run the 'WorkspaceConfigToDCRMigrationTool.ps1' file."  lightbox="media/step-3-configure-data-collections/run-workspaceconfigtodcrmigrationtool-script.png":::
 
    The tool establishes a connection with your Log Analytics workspace, retrieves the settings from the existing source workspace, and then generates DCR ARM template files in JSON format. These files are subsequently saved in a local directory for your review.
 
