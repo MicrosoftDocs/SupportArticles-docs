@@ -3,7 +3,7 @@ title: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) wit
 description: The following article discusses why you may not be able to deploy virtual machines (VMs) or Virtual Machine Scale Sets (VMSS) with Capacity Reservation.
 ms.date: 08/26/2021
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:Cannot create a VM
 ---

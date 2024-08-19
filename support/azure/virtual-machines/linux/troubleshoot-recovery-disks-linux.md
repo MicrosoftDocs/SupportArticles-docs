@@ -5,7 +5,7 @@ description: Learn how to troubleshoot Linux VM issues by connecting the OS disk
 services: virtual-machines
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.devlang: azurecli
 ms.custom: sap:VM Admin - Linux (Guest OS), devx-track-azurecli, linux-related-content

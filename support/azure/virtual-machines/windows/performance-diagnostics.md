@@ -7,7 +7,7 @@ author: anandhms
 manager: dcscontentpm
 editor: przlplx
 tags: ''
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
 ms.date: 07/24/2024

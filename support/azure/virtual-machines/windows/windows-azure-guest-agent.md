@@ -2,7 +2,7 @@
 title: Troubleshoot Azure Windows VM Agent issues
 description: Understand how to troubleshoot issues that prevent the Azure Windows VM Agent from running successfully.
 services: virtual-machines
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 author: kegregoi
 ms.tgt_pltfrm: vm-windows

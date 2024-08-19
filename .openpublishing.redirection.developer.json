@@ -5662,7 +5662,7 @@
     },
     {
       "source_path": "support/developer/browsers/security-privacy/enhanced-security-configuration-faq.yml",
-      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/enhanced-security-configuration-faq.yml",
+      "redirect_url": "/previous-versions/troubleshoot/browsers/security-privacy/enhanced-security-configuration-faq",
       "redirect_document_id": false
     },
     {
@@ -5774,6 +5774,11 @@
       "source_path": "support/azure/devops/other-release-management-component-no-work.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/installation/other-release-management-component-no-work",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/visual-basic/ide/mouse-wheel-events-do-not-work.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/mouse-wheel-events-do-not-work",
+      "redirect_document_id": false
     }
   ]
 }

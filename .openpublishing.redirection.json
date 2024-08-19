@@ -11534,6 +11534,21 @@
       "source_path": "support/windows-server/backup-and-storage/request-not-supported-smb-data-deduplication.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/request-not-supported-smb-data-deduplication",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/module-action-wasnt-found-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/module-action-wasnt-found-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/administration/flow-extension-package-shows-installation-failed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/address-disk-space-issues-caused-by-winsxs",
+      "redirect_document_id": false
     }
   ]
 }

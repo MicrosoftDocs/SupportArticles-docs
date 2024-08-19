@@ -5,6 +5,7 @@ ms.date: 04/15/2024
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: meghaanand, v-jayaramanp, jagbal
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
 # Troubleshoot Visual Studio installation and upgrade issues

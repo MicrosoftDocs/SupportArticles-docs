@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 editor: v-jsitser
 ms.reviewer: azurevmlnxcic, divargas, v-leedennis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.collection: linux
 ms.topic: troubleshooting-general

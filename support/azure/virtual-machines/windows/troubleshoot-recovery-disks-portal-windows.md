@@ -4,7 +4,7 @@ author: genlin
 description: This article describes how to attach a disk to a repair VM for offline servicing.
 ms.author: genli
 ms.date: 07/16/2021
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---

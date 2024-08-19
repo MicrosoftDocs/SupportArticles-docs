@@ -3,7 +3,7 @@ title: Computer names of specialized virtual machines are missing or blank in Az
 description: Fixes an issue in which computer names of virtual machines that use specialized disks are missing or blank in Azure.
 ms.date: 07/21/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
