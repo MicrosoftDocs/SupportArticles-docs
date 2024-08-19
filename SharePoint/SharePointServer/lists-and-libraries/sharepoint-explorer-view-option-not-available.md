@@ -4,7 +4,6 @@ description: Describes an issue in which the SharePoint Explorer View option is 
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Administration\Lists and libraries
   - CSSTroubleshoot

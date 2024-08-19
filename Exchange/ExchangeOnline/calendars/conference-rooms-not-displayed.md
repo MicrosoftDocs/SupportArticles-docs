@@ -10,7 +10,6 @@ ms.custom:
   - sap:Calendaring
   - Exchange Online
   - CSSTroubleshoot
-localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 

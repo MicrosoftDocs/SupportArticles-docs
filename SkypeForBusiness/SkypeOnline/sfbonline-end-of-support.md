@@ -3,7 +3,6 @@ title: Support for Skype for Business Online has ended
 description: Announcement about content retirement.
 author: cloud-writer
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak

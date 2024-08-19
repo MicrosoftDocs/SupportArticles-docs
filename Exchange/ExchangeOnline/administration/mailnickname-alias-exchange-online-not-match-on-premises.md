@@ -4,7 +4,6 @@ description: Fixes an issue in which the Alias or Mailnickname attribute in Exch
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Hybrid
   - CSSTroubleshoot

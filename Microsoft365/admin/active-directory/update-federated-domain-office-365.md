@@ -3,7 +3,6 @@ title: Update or repair settings of a federated domain in Microsoft 365, Azure, 
 description: Describes how to update or repair the settings of a federated domain configuration in Microsoft 365, Azure, or Microsoft Intune by using the Azure Active Directory module for Windows PowerShell.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

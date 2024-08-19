@@ -6,7 +6,6 @@ ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - sap:Client Connectivity
   - Exchange Online

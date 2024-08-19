@@ -13,7 +13,6 @@ f1_keywords:
   - 'O365P_AdminMailContact_TSAlias'
   - 'O365E_AdminMailContact_TSAlias'
   - 'AdminMailContact_TSAlias'
-localization_priority: None
 ms.collection: Adm_O365
 search.appverid: 
   - BCS160
