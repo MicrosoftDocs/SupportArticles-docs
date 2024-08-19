@@ -1,9 +1,8 @@
 ---
-title: People Picker field embedded in Office documents does not show Add People dialog box in SharePoint 2013
-description: Discusses a problem in which the embedded People Picker field in Office documents does not show the Add People dialog box in SharePoint 2013.
+title: People Picker field embedded in Office documents doesn't show Add People dialog box in SharePoint 2013
+description: Discusses a problem in which the embedded People Picker field in Office documents doesn't show the Add People dialog box in SharePoint 2013.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -17,25 +16,23 @@ appliesto:
 ms.date: 12/17/2023
 ---
 
-# People Picker field embedded in Office documents does not show "Add People" dialog box
+# People Picker field embedded in Office documents doesn't show "Add People" dialog box
 
-## Symptom   
+## Symptom
 
-Consider the following scenario:   
+Consider the following scenario:
 
-- You are using Office files, such as Word documents or InfoPath forms, that have an embedded People Picker field in the Office Information Panel.    
-- Clients connect to a Microsoft SharePoint site by using an "https" address.   
-- A proxy server or load balancer exists between clients and the SharePoint 2010 or SharePoint 2013 servers. SSL is terminated at the proxy server or load balancer.     
+- You're using Office files, such as Word documents or InfoPath forms, that have an embedded People Picker field in the Office Information Panel.
+- Clients connect to a Microsoft SharePoint site by using an "https" address.
+- A proxy server or load balancer exists between clients and the SharePoint 2010 or SharePoint 2013 servers. SSL is terminated at the proxy server or load balancer.
 
-In this scenario, when the files are opened in the client application, the embedded People Picker fields do not show any visible results. Also, network traces show an "http 500" error for an https request that is sent to the SharePoint site in the following path: 
+In this scenario, when the files are opened in the client application, the embedded People Picker fields don't show any visible results. Also, network traces show an "http 500" error for an https request that's sent to the SharePoint site in the following path:
 
-```
-/_vti_bin/spclaimproviderwebservice.https.svc
-```
+`/_vti_bin/spclaimproviderwebservice.https.svc`
 
 When this problem occurs, the Event Viewer on the SharePoint web front-end server may show an event that resembles the following entry:  
 
-```
+```output
 Log Name: Application  
 Source: System.ServiceModel 4.0.0.0  
 Date: <Date and Time>  

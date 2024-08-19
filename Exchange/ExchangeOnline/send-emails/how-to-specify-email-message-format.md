@@ -4,7 +4,6 @@ description: Describes how Microsoft 365 admins can change the message format so
 manager: dcscontentpm
 audience: ITPro
 ms.topic: how-to
-localization_priority: Normal
 ms.custom: 
   - sap:Mail Flow
   - CSSTroubleshoot

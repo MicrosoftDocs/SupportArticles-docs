@@ -9,7 +9,6 @@ audience: ITPro
 ms.topic: troubleshooting
 f1.keywords: 
   - NOCSH
-localization_priority: Normal
 ms.collection: 
   - M365-collaboration
 ms.custom: 

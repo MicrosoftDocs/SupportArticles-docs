@@ -13,7 +13,6 @@ search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
   - CI 183789
-localization_priority: Normal
 ms.service: viva
 ms.collection:
   - M365initiative-viva
