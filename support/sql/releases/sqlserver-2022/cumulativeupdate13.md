@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 13 for SQL Server 2022 (KB5036432)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 13 (KB5036432).
-ms.date: 05/23/2024
+ms.date: 08/19/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5036432
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,28 +23,28 @@ This article describes Cumulative Update package 13 (CU13) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Issue one: Patching Error for Secondary Replica in Availability Group with AG Database Enabled for Replication/CDC/SSISDB
+### Patching Error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
 
-This CU introduced fix [2998350](#2998350) to increase reliability of a secondary database coming online in an Availability Group. However, this fix causes an issue with SQL running in single-user mode where AG database(s) aren't brought online. SQL setup runs in single-user mode and fails when Replication, Change Data Capture, and SSISDB (the catalog for SQL Server Integration Services) upgrade scripts try to access the database but cannot.
+This CU introduced fix [2998350](#2998350) to increase the reliability of a secondary database to be online in an availability group (AG). However, this fix causes an issue where AG databases can't be online when the SQL Server instance runs in the single-user mode. SQL Server Setup runs in single-user mode and fails when replication, change data capture (CDC), and SQL Server Integration Services database (**SSISDB**) catalog upgrade scripts try to access the database but cannot.
 
-After setup runs and fails, the SQL service will then attempt to come online again without single-user mode. At that time, the patch upgrade scripts will finish successfully and the patch is complete. This issue is therefore self-resolving and doesn't require any user action despite the original error.
+After SQL Server Setup runs and fails, the SQL Server service will then try to be online again without the single-user mode. At that time, the patch upgrade scripts finish successfully and the patch is completed. This issue is therefore resolved and doesn't require any user action despite the initial error.
 
-The patch fails with the following errors:
+The patch fails with the following error:
 
 >Error installing SQL Server Database Engine Services Instance Features  
 >Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.  
 >Error code: 0x851A001A
 
-When checking the SQL Server Error Log, you'll see the following messages with an invalid Group ID:
+When checking the SQL Server error log, you'll see the following messages with an invalid Group ID:
 
 >Attempting to copy article resolvers from SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL15.MSSQLSERVER\Replication\ArticleResolver  
->Skipping the default startup of database \<YourDatabase\> because the database belongs to an availability group (Group ID:  `-1434378176`). The database will be started by the availability group. This is an informational message only. No user action is required.
+>Skipping the default startup of database \<DatabaseName> because the database belongs to an availability group (Group ID: \<GroupID>). The database will be started by the availability group. This is an informational message only. No user action is required.
 
 If you want to prevent the patch from reporting an initial failure, you can perform one of the following actions before running the patch:
 
-- Enable trace flag 12347 - reverts the changes implemented in [2998350](#2998350). It's recommended after patching, to remove this trace flag.
+- Enable trace flag 12347 - reverts the changes made in fix [2998350](#2998350). It's recommended to remove this trace flag after patching.
 
-- Remove Change Data Capture/Replication/SSISDB or Availability Groups before patching.
+- Remove CDC, replication, SSISDB, or availability groups before patching.
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
