@@ -4,7 +4,6 @@ description: Provides a workaround for an issue in which video rendering fails i
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Teams Meetings\Meeting Join
   - CI 186626

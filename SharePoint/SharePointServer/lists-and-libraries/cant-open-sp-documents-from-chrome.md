@@ -3,7 +3,6 @@ title: Can't open documents in a local client from Chrome
 description: Describes an issue that occurs when you open SharePoint-based files in the Chrome browser. Because Chrome has deprecated NPAPI support, SharePoint integration with Chrome has been disrupted. A workaround is provided.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

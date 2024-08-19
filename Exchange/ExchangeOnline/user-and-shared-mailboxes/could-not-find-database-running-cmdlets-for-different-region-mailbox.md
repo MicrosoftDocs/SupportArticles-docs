@@ -4,7 +4,6 @@ description: Discusses an issue in which you can't run cmdlets for a mailbox tha
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Administrator Tasks
   - CSSTroubleshoot

@@ -3,7 +3,6 @@ title: Call to Response Group Agent fails
 description: Provides a solution for call failure to Response Group Agent.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
