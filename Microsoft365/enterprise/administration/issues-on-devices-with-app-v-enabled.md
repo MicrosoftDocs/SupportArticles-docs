@@ -3,7 +3,6 @@ title: Fixes for issues on devices with App-V enabled
 description: Add-ins and LOB apps delivered with App-V fail to interact with installed Office apps, and using Internet Explorer to access documents on SharePoint doesn't interact properly with the installed Office apps.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

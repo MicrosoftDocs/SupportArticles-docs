@@ -3,7 +3,6 @@ title: Set language and regional settings for Microsoft 365
 description: Describes how to set language and regional settings for Microsoft 365 by using Microsoft Graph PowerShell.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

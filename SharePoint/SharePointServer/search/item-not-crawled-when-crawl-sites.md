@@ -3,7 +3,6 @@ title: Item not crawled error when you crawl a SharePoint 2016 or 2013 site
 description: Fixes an issue in which you receive an Item not crawled error when you crawl a SharePoint 2016 or 2013 site.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

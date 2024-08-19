@@ -5,7 +5,6 @@ ms.author: v-six
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.collection: Adm_O365
 ms.custom: 
   - CSSTroubleshoot

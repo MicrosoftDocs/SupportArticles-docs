@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: charw, marcn, genli, v-six
 ms.custom: 
   - sap:High Availability, Health, Performance, Content Indexing\Server Performance Issue (high CPU, high Memory, Disk Utilization)

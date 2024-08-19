@@ -3,7 +3,6 @@ title: Blank is displayed in the ERROR column for one or more objects
 description: Fixes a problem that blank is displayed in the ERROR column when you run the IdFix DirSync Error Remediation Tool in your on-premises AD DS environment.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

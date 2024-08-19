@@ -7,7 +7,6 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: lusassl, v-six
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates
   - Exchange Server

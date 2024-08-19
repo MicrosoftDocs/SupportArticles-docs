@@ -3,7 +3,6 @@ title: Office Click-to-Run Perpetual (C2R-P) release for Project 2016 and Visio 
 description: This article was created to understand the new ODT to allow IT admin a way to role out Project and Visio with their versions of Microsoft 365.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
