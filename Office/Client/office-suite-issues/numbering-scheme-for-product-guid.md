@@ -23,7 +23,7 @@ For a description of the numbering scheme for product code GUIDs in Office 2013,
 
 ## Summary
 
-This article describes how to read the product GUIDs in the Windows registry to determine information about the Microsoft Office 2016 suite, programs, or utilities that you are using. GUIDs contain information about the release type, the release build, and the language of an Office 2016 suite or program.
+This article describes how to read the product GUIDs in the Windows registry to determine information about the Microsoft Office 2016 suite, programs, or utilities that you're using. GUIDs contain information about the release type, the release build, and the language of an Office 2016 suite or program.
 
 > [!NOTE]
 > GUIDs are created only when a user installs a Windows Installer (MSI) version of the Office 2016 suite or of an Office 2016 program. GUIDs are not created when a user installs a Click-to-Run version of the Office 2016 suite or of an Office 2016 program.
@@ -64,7 +64,7 @@ To view the GUIDs for the Office 2016 suites and programs that are installed on 
 
    `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`
 
-The names of the GUIDs start with a brace ({ ). Therefore, GUIDs are the first items that are listed under Uninstall.
+The names of the GUIDs start with a brace (\{). Therefore, GUIDs are the first items that are listed under Uninstall.
 
 |Value name| Description |
 |---|---|
@@ -132,7 +132,7 @@ The product ID is the version of the Office 2016 suite or program, such as Offic
 
 The language identifier (LCID) varies from language to language. Because the LCID is stored in the GUID in a hexadecimal format, you need to convert the LCID value to a decimal value to determine the language. For example, a hexadecimal value of 0409 converts to a decimal value of 1033. This value represents English.
 
-For more information about language identifiers in Office 2016 suites and programs, see [Language identifiers and Option State Id values in Office 2016](https://technet.microsoft.com/library/cc179219.aspx).
+For more information about language identifiers in Office 2016 suites and programs, see [Language identifiers and Option State ID values in Office 2016](https://technet.microsoft.com/library/cc179219.aspx).
 
 ### Sample GUID
 
