@@ -23,7 +23,7 @@ This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Issue one: Patching Error for Secondary Replica in Availability Group with AG Database Enabled for Replication/CDC/SSISDB
+### Patching Error for Secondary Replica in Availability Group with AG Database Enabled for Replication/CDC/SSISDB
 
 SQL Server 2022 CU13 introduced fix [2998350](./././cumulativeupdate13.md#2998350) to increase the reliability of a secondary database to be online in an availability group (AG). However, this fix causes an issue where AG databases can't be online when the SQL Server instance runs in the single-user mode. SQL Server Setup runs in single-user mode and fails when replication, change data capture (CDC), and SQL Server Integration Services database (**SSISDB**) catalog upgrade scripts try to access the database but cannot.
 

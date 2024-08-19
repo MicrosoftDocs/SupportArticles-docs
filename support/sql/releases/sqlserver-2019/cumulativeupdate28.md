@@ -23,7 +23,17 @@ This article describes Cumulative Update package 28 (CU28) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Patching Error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
+### Issue one: Access violation when session is reset
+
+SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
+
+- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
+
+- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
+
+Microsoft is working on a fix for this issue and it will be available in a future CU.
+
+### Issue two: Patching Error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
 
 SQL Server 2019 CU27 introduced fix [2994446](./././cumulativeupdate27.md#2994446) to increase the reliability of a secondary database to be online in an availability group (AG). However, this fix causes an issue where AG databases can't be online when the SQL Server instance runs in the single-user mode. SQL Server Setup runs in single-user mode and fails when replication, change data capture (CDC), and SQL Server Integration Services database (**SSISDB**) catalog upgrade scripts try to access the database but cannot.
 
@@ -45,16 +55,6 @@ If you want to prevent the patch from reporting an initial failure, you can perf
 - Enable trace flag 12347 - reverts the changes made in fix [2994446](./././cumulativeupdate27.md#2994446). It's recommended to remove this trace flag after patching.
 
 - Remove CDC, replication, SSISDB, or availability groups before patching.
-
-Microsoft is working on a fix for this issue and it will be available in a future CU.
-
-### Access violation when session is reset
-
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
-
-- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
-
-- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
