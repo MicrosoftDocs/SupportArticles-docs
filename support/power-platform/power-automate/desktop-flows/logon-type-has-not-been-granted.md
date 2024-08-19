@@ -20,7 +20,7 @@ When you run a desktop flow or [create a desktop flow connection](/power-automat
 {
     "error":{
         "code": "-1073741477",
-        "message": "A user has requested a type of logon (e.g., interactive or network) that has not been granted. An administrator has control over who may logon interactively and through the network."
+        "message": "A user has requested a type of logon (for example, interactive or network) that has not been granted. An administrator has control over who can logon interactively and through the network."
     }    
 }
 ```
