@@ -33,7 +33,7 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
-### Issue two: Patching Error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
+### Issue two: Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
 
 SQL Server 2019 CU27 introduced fix [2994446](./././cumulativeupdate27.md#2994446) to increase the reliability of a secondary database to be online in an availability group (AG). However, this fix causes an issue where AG databases can't be online when the SQL Server instance runs in the single-user mode. SQL Server Setup runs in the single-user mode and fails when replication, change data capture (CDC), and SQL Server Integration Services database (**SSISDB**) catalog upgrade scripts try to access the database but cannot.
 
