@@ -45,7 +45,7 @@ When the error message is displayed, view the comments under "Problem Details an
 If the path in the error message differs, you must move the application folder to its correction location. Follow these steps:
 
 1. Locate the Office 2008 folder.
-2. Select to select the folder.
+2. Select the folder.
 3. On the Finder menu, select **Edit**, and then select **Copy Microsoft Office 2008** or Copy Microsoft Office 2011.
 4. On the Finder menu, select **Go**, and then select **Applications.**
 5. On the Finder menu, select **Edit**, and then select **Paste the Item**.
@@ -75,7 +75,7 @@ Office 2011
 To remove Office 2011, follow these steps:
 
 1. Quit all applications.
-2. In the Finder, select Go select Computer.
+2. In the Finder, select **Go**, and then select **Computer**.
 3. Open your hard drive (Macintosh HD), then open the Application Folder.
 4. Select Microsoft Office 2011, and then drag and drop it to the Trash.
 5. Reinstall Office for Mac 2011.
