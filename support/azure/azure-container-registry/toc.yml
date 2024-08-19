@@ -4,10 +4,10 @@ items:
 
 - name: Authentication and Security
   items:
-  - name: Troubleshoot authentication errors
+  - name: Troubleshoot container registry authentication errors
     href: acr-authentication-errors.md
 
-- name: Troubleshoot container registry container registry issues
+- name: Troubleshoot container registry issues
   items:
   - name: Can't get private IP address of an Azure Container Registry FQDN
     href: cant-resolve-container-registry-fqdn-private-ip-address.md
