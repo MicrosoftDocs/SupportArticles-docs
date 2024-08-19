@@ -30,13 +30,13 @@ This article shows you how to use a form to specify the criteria for a query. Th
 
 In the QBF technique, you create a form in which you enter query criteria. This form contains blank text boxes. Each text box represents a field in a table that you want to query. You make entries only in the text boxes for which you want to specify search criteria.
 
-The QBF form resembles a data entry form that has fields that match the fields in a table. A table that has fields for Name, Address, City, State, and ZIP Code can have a QBF form that has corresponding fields. To select certain records, you can enter any combination of search criteria in the form. You can specify a city only, or a city and a state, or a ZIP code only, or any other combination. Fields that you leave blank are ignored. When you click a command button on the form, Access runs a query that uses the search criteria from your form.
+The QBF form resembles a data entry form that has fields that match the fields in a table. A table that has fields for Name, Address, City, State, and ZIP Code can have a QBF form that has corresponding fields. To select certain records, you can enter any combination of search criteria in the form. You can specify a city only, or a city and a state, or a ZIP code only, or any other combination. Fields that you leave blank are ignored. When you select a command button on the form, Access runs a query that uses the search criteria from your form.
 
 To use the QBF technique, follow these steps:
 
 1. Open the sample database Northwind.mdb.
-2. Create a new form that is not based on any table or query, and save it as QBF_Form.
-3. On the new form, create two text boxes and one command button that has the following properties.Then, save the form:
+2. Create a new form that isn't based on any table or query, and save it as QBF_Form.
+3. On the new form, create two text boxes and one command button that has the following properties. Then, save the form:
 
    ```console
    Text box 1
@@ -79,7 +79,7 @@ To use the QBF technique, follow these steps:
    Field: OrderDate
    ```
 
-6. Open QBF_Form in the Form view. Enter the following combinations of criteria. Click Search after each combination:
+6. Open QBF_Form in the Form view. Enter the following combinations of criteria. Select Search after each combination:
 
    ```console
    Customer ID   Employee ID  Result
@@ -93,7 +93,7 @@ To use the QBF technique, follow these steps:
    <blank>       4            156 orders for employee 4
    ```
 
-After you view the result set for each query, close the Datasheet window. Then, begin your next search. Each time that you click the **Search** button, the parameters in the QBF query filter the data based on the search criteria that you specified on the QBF query form.
+After you view the result set for each query, close the Datasheet window. Then, begin your next search. Each time that you select the **Search** button, the parameters in the QBF query filter the data based on the search criteria that you specified on the QBF query form.
 
 ### Notes on the QBF parameter criteria
 
@@ -120,15 +120,15 @@ Forms!**FormName**!StartDate Is Null
 
 - Like Forms!**FormName**!**ControlName**& "*" Or Is Null
 
-  This criteria statement returns both records that match the criteria and records that are null. If the criteria are null, all the records are returned. Note that the asterisk (\*) is considered a parameter because it is part of a larger Like expression. Because the asterisk is a hard-coded criteria value (for example, Like "*"), records with null values are returned.
+  This criteria statement returns both records that match the criteria and records that are null. If the criteria are null, all the records are returned. Note that the asterisk (\*) is considered a parameter because it's part of a larger Like expression. Because the asterisk is a hard-coded criteria value (for example, Like "*"), records with null values are returned.
 
 - Like IIf(IsNull(Forms!**FormName**![**ControlName**]), _
 "*",[Forms]![**FormName**]![**ControlName**])
 
-  This criteria statement returns all the records that match the criteria. If no criteria are specified in the query form, all records that are *not* null are returned.
+  This criteria statement returns all the records that match the criteria. If no criteria are specified in the query form, all records that aren't null are returned.
 
 - IIf(IsNull(Forms!**FormName**![**ControlName**]), _
 [**FieldName**],[Forms]![**FormName**]![**ControlName**])
 
-  This returns all the records that match the criteria. If no criteria are specified in the query form, all records that are *not* null are returned (the same result as in the example above).
+  This returns all the records that match the criteria. If no criteria are specified in the query form, all records that aren't null are returned (the same result as in the example above).
   
