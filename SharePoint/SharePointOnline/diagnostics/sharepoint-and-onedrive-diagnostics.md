@@ -30,12 +30,6 @@ It's important that administrators are able to diagnose and resolve issues quick
 
 Diagnostic capabilities for a few text queries were first released within the Microsoft 365 admin center support portal in December 2018.
 
-:::image type="content" source="media/sharepoint-and-onedrive-diagnostics/run-diagnostics.png" alt-text="Screenshot of the Run diagnostics page in the Microsoft 365 admin center.":::
-
-When IT admins run customer diagnostics in the Microsoft 365 admin center to resolve issues without logging support requests, Microsoft makes a donation to global nonprofit organizations.
-
-For more information, see [Diagnostics for Social Good](https://aka.ms/DiagnosticsforSocialGood)
-
 ## Scenarios covered by diagnostics
 
 > [!NOTE]
