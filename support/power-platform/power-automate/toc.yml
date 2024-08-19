@@ -124,7 +124,7 @@
       href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
     - name: Invalid credentials error using Microsoft Entra account
       href: desktop-flows/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
-    - name: '"Logon type has not been granted" error' creating connection or running a desktop flow
+    - name: '"Logon type has not been granted" error creating connection or running a desktop flow'
       href: desktop-flows/logon-type-has-not-been-granted.md
     - name: Machine registration failure
       href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
