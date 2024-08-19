@@ -46,18 +46,18 @@ To set up a short-term Log Analytics workspace for testing purposes, follow thes
 
    :::image type="content" source="media/step-4-test-data-collections-azure-monitor-agent/data-collection-rule-select-a-scope-pane.png" alt-text="Azure portal screenshot of the data collection rule's Select a scope pane after you select the Add button." lightbox="media/step-4-test-data-collections-azure-monitor-agent/data-collection-rule-select-a-scope-pane.png":::
 
-1. Locate the VMs that you want to associate with the DCR, and then select the **Apply** button. If Azure Monitor Agent isn't deployed to the VM, it is deployed at this time.
+1. Locate the VMs that you want to associate with the DCR, and then select the **Apply** button. If Azure Monitor Agent isn't deployed to the VM, it's deployed at this time.
 
 You're now ready to validate your configuration.
 
 ### Post validation steps
 
-Once the data validation is completed, perform these steps:
+Once the data validation is complete, perform these steps:
 
 1. Switch the destination workspace in the DCR from the temporary workspace to the production workspace.
 1. Remove the legacy agent extension from the VM in the portal.
 
-Migration is now completed. To migrate more workspaces, repeat the steps.
+Migration is now complete. To migrate more workspaces, repeat the steps.
 
 To check the latest status of your migration, see the AMA Migration Helper workbook:
 
