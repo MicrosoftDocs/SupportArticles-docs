@@ -4,7 +4,6 @@ description: Fixes an issue in which you can't manage disposition reviews from M
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 157046

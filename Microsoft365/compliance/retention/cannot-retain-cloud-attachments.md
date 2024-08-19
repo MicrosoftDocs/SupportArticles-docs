@@ -4,7 +4,6 @@ description: Provides a table to identify which sharing mechanisms are cloud att
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 158295

@@ -3,7 +3,6 @@ title: Open Support cases for GCC High and DoD
 description: Describes that how to open Support cases for GCC High and DoD.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

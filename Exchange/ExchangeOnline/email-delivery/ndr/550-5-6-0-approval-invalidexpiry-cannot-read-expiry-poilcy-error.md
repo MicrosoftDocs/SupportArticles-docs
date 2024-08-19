@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Mail Flow
   - Exchange Online
@@ -22,7 +21,7 @@ ms.date: 01/24/2024
 
 ## Symptoms
 
-You have configured message moderation for a distribution group or a dynamic distribution group so that each message that's sent to the group must be approved by a moderator.
+You configure message moderation for a distribution group or a dynamic distribution group so that each message that's sent to the group must be approved by a moderator.
 
 When an email message is sent to the group, the sender receives a non-deliver report that includes following error message:
 
@@ -37,7 +36,7 @@ The message approval agent requires that the retention policy has a retention po
 
 For moderated distribution groups in your Exchange organization, you must create a retention policy tag that has the `IsDefaultModeratedRecipientsPolicyTag` property set.
 
-To set the retention policy tag, do the following:
+To set the retention policy tag, follow these steps:
 
 1. From a PowerShell prompt, open Exchange Online PowerShell. For more information, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -48,4 +47,4 @@ To set the retention policy tag, do the following:
     New-RetentionPolicyTag -IsDefaultModeratedRecipientsPolicyTag -Name TagforModeration -AgeLimitForRetention 2
     ```
 
-This creates *Personal* retention tag on the retention policy. For more information on retention tag types, see [Retention tags and retention policies in Exchange Server](/Exchange/policy-and-compliance/mrm/retention-tags-and-retention-policies).
+These steps create *Personal* retention tag on the retention policy. For more information on retention tag types, see [Retention tags and retention policies in Exchange Server](/Exchange/policy-and-compliance/mrm/retention-tags-and-retention-policies).

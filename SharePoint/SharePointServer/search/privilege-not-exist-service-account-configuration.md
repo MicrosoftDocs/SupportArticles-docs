@@ -3,7 +3,6 @@ title: Privilege not exist in service account configuration
 description: Describes an issue in which you receive A privilege that the service requires to function properly does not exist in the service account configuration error. Provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

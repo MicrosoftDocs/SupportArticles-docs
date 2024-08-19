@@ -3,7 +3,6 @@ title: Click to Join fails to invoke Skype for Business
 description: Describes an issue in which Click to Join fails to invoke Skype for Business on machines that use Application Virtualization. A workaround is provided.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
