@@ -10,7 +10,6 @@ ms.custom:
   - sap:Mail Flow
   - Exchange Hybrid
   - CSSTroubleshoot
-localization_priority: Normal
 ms.reviewer: kellybos, v-six
 search.appverid: 
   - MET150

@@ -7,7 +7,6 @@ manager: dcscontentpm
 ms.date: 08/27/2019
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150

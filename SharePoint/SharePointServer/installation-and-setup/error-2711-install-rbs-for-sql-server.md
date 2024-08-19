@@ -3,7 +3,6 @@ title: Error 2711 when install RBS client for SQL server
 description: Discusses an issue in which you receive error 2711 when installing the RBS client for SQL server 2016 with SharePoint 2016. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
