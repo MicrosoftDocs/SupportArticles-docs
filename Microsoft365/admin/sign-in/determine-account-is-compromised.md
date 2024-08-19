@@ -3,7 +3,6 @@ title: Determine whether Microsoft 365 account is compromised
 description: Describes how to determine whether your Microsoft 365 account has been compromised.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

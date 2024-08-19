@@ -3,7 +3,6 @@ title: How To parse City, State, and Zip Code into separate values
 description: Describes how to parse a single variable containing US City, State, and Zip Code information into three separate variables.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -1,5 +1,4 @@
 ---
-localization_priority: Normal
 ms.topic: troubleshooting
 author: cloud-writer
 ms.author: meerak

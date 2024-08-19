@@ -1,12 +1,11 @@
 ---
-title: Add-ins will stop working in Outlook on the web
+title: Add-ins stop working in Outlook on the web
 description: Provides the information that users won't be able to launch add-ins in Outlook on the web that's running on Exchange Server 2016 RTM from May 3, 2021.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - Exchange Server
@@ -19,13 +18,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
-# Add-ins will stop working in Outlook on the web for Exchange Server 2016 RTM
+# Add-ins stop working in Outlook on the web for Exchange Server 2016 RTM
 
-Starting on May 3, 2021, you will no longer be able to start add-ins in an instance of Outlook on the web that's running on Microsoft Exchange Server 2016 RTM.
+Starting on May 3, 2021, you can't start add-ins in an instance of Outlook on the web that's running on Microsoft Exchange Server 2016 RTM.
 
-This change will occur because the [Outlook add-ins use the Office JavaScript APIs](/office/dev/add-ins/outlook/apis) that are accessed through the Office JS (Office.js) Content Delivery Network (CDN) to [interact with content](/office/dev/add-ins/develop/develop-overview#interacting-with-content-in-an-office-document) in Outlook on the web. These JavaScript APIs will be deprecated for Exchange Server 2016 RTM.
+This change occurs because the [Outlook add-ins use the Office JavaScript APIs](/office/dev/add-ins/outlook/apis) that are accessed through the Office JS (Office.js) Content Delivery Network (CDN) to [interact with content](/office/dev/add-ins/develop/develop-overview#interacting-with-content-in-an-office-document) in Outlook on the web. These JavaScript APIs are deprecated for Exchange Server 2016 RTM.
 
-After this change is made, you will receive the following error message when you try to open an add-in in Outlook on the web:
+After this change is made, you receive the following error message when you try to open an add-in in Outlook on the web:
 
 > This add-in has been disabled to help keep you safe.
 

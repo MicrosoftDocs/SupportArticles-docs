@@ -4,7 +4,6 @@ description: Fixes an issue in which a Litigation Hold enabled mailbox doesn't t
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 151537

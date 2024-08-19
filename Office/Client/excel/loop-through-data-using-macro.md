@@ -3,7 +3,6 @@ title: Loop through a list of data on a worksheet by using macros
 description: Discusses how to write VBA macro code to go through a list of data on a worksheet in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

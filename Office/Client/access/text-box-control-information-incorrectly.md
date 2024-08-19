@@ -3,7 +3,6 @@ title: Text that is in a text box control of a report or a form may not appear c
 description: Explains that the text that is in a text box control of a report or of a form does not appear correctly when the vertical property of the text box is changed to Yes.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -6,7 +6,6 @@ ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Teams Identity and Auth\Client Sign-in (window, mac, linux, web)
   - CI 156289
