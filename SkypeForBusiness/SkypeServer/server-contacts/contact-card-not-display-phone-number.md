@@ -3,7 +3,6 @@ title: Contact's name not phone number displayed
 description: In Skype for Business 2016, you may find the contact card of a user only shows the user's phone number, not the display name.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

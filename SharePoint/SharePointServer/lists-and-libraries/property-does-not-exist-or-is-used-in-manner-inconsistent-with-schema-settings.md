@@ -3,7 +3,6 @@ title: Property doesn't exist or is used in a manner inconsistent with schema se
 description: Describes Property doesn't exist or is used in a manner inconsistent with schema settings error. Provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

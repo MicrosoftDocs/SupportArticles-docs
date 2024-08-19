@@ -3,7 +3,6 @@ title: +<Country/Region code> is automatically added to all calls
 description: Describes an issue in which Skype for Business for iOS users see +<country/region code> added to the beginning of phone numbers that they want to dial on an iPhone or iPad. Provides a resolution.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
