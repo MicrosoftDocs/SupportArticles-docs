@@ -196,7 +196,7 @@
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
         "azure/virtual-machines/*.md": "azure-virtual-machines",
-        "azure/cloud-services/*.md": "cloud-services",
+        "azure/cloud-services/*.md": "azure-cloud-services-classic",
         "azure/azure-functions/**/*.md": "azure-functions",
         "azure/synapse-analytics/**/*.md": "azure-synapse-analytics",
         "azure/cosmos-db/**/*.md": "cosmos-db",
