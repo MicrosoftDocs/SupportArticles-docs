@@ -108,27 +108,27 @@ You can specify any of the following alternative criteria to return slightly dif
 > [!NOTE]
 > In the following sample criteria, an underscore (_) is used as a line-continuation character. Remove the underscore from the end of the line when you re-create these criteria.
 
-- Like Forms!**FormName**!**ControlName**& "*" Or _
-Forms!**FormName**!**ControlName**Is Null
+- `Like Forms!**FormName**!**ControlName**& "*" Or _
+Forms!**FormName**!**ControlName**Is Null`
 
-  This criteria statement is the same as the QBF sample above, except that you can query by using a wildcard. For example, if you enter "Jo" in a field by using this criteria statement, the query returns every record in the field that begins with "Jo." This includes Johnson, Jones, Johanna, and so on.
+  This criteria statement is the same as the QBF sample, except that you can query by using a wildcard. For example, if you enter "Jo" in a field by using this criteria statement, the query returns every record in the field that begins with "Jo", including Johnson, Jones, Johanna, and so on.
 
-- Between Forms!**FormName**!StartDate And Forms!**FormName**!EndDate Or _
-Forms!**FormName**!StartDate Is Null
+- `Between Forms!**FormName**!StartDate And Forms!**FormName**!EndDate Or _
+Forms!**FormName**!StartDate Is Null`
 
   You can use this criteria statement to query a date field by using Start Date and End Date text boxes on the query form. Records whose start and end dates fall between the values that you specify on the query form are returned. If you omit a Start Date value on the form, however, the query returns all records, regardless of the End Date value.
 
 - Like Forms!**FormName**!**ControlName**& "*" Or Is Null
 
-  This criteria statement returns both records that match the criteria and records that are null. If the criteria are null, all the records are returned. Note that the asterisk (\*) is considered a parameter because it's part of a larger Like expression. Because the asterisk is a hard-coded criteria value (for example, Like "*"), records with null values are returned.
+  This criteria statement returns both records that match the criteria and records that are null. If the criteria are null, all the records are returned. The asterisk (\*) is considered a parameter because it's part of a larger Like expression. Because the asterisk is a hard-coded criteria value (for example, Like "*"), records with null values are returned.
 
-- Like IIf(IsNull(Forms!**FormName**![**ControlName**]), _
-"*",[Forms]![**FormName**]![**ControlName**])
+- `Like IIf(IsNull(Forms!**FormName**![**ControlName**]), _
+"*",[Forms]![**FormName**]![**ControlName**])`
 
   This criteria statement returns all the records that match the criteria. If no criteria are specified in the query form, all records that aren't null are returned.
 
-- IIf(IsNull(Forms!**FormName**![**ControlName**]), _
-[**FieldName**],[Forms]![**FormName**]![**ControlName**])
+- `IIf(IsNull(Forms!**FormName**![**ControlName**]), _
+[**FieldName**],[Forms]![**FormName**]![**ControlName**])`
 
-  This returns all the records that match the criteria. If no criteria are specified in the query form, all records that aren't null are returned (the same result as in the example above).
+  This returns all the records that match the criteria. If no criteria are specified in the query form, all records that aren't null are returned (the same result as in the example).
   
