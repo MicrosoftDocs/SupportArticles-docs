@@ -1,10 +1,9 @@
 ---
-title: Nintex workflow on SharePoint Online does not start
-description: Describes an issue in which the Nintex workflow for SharePoint Online does not start and you receive an error message.
+title: Nintex workflow on SharePoint Online doesn't start
+description: Describes an issue in which the Nintex workflow for SharePoint Online doesn't start and you receive an error message.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -19,13 +18,13 @@ appliesto:
 ms.date: 12/17/2023
 ---
 
-# Nintex workflow on SharePoint Online does not start
+# Nintex workflow on SharePoint Online doesn't start
 
 ## Symptoms
 
 When you try to run the Nintex workflow on SharePoint Online, you receive the following error message:
 
->Oops.. Something went wrong. Please visit status.nintex.com for the latest Nintex service status or contact your system administrator to check the health of your Microsoft 365 tenancy.
+> Oops.. Something went wrong. Please visit status.nintex.com for the latest Nintex service status or contact your system administrator to check the health of your Microsoft 365 tenancy.
 
 :::image type="content" source="./media/nintex-workflow-fails-to-start/nintex-error.png" alt-text="Screenshot that shows the error displaying in a browser window.":::
 
@@ -51,4 +50,4 @@ The third-party products that this article discusses are manufactured by compani
 
 ### Third-party contact disclaimer
 
-Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.
+Microsoft provides third-party contact information to help you find additional information about this article. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of third-party contact information.

@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Hybrid
   - Exchange Hybrid
@@ -31,7 +30,7 @@ When you run the Hybrid Configuration wizard (HCW), you receive the following er
 
 ## Cause
 
-This issue occurs if the Send connector that's created by the Hybrid Configuration wizard has additional namespaces added to it.
+This issue occurs if the Send connector that the Hybrid Configuration wizard creates has other namespaces added to it.
 
 ## Solution
 
@@ -44,8 +43,8 @@ To resolve this issue, follow these steps:
     Get-SendConnector -name "Outbound to Microsoft 365"
     ```
 
-3. In the output, examine the value of the AddressSpace  parameter. You should see either "*" or "contoso.mail.onmicrosoft.com;1."
-4. If you see any addresses other than "*" or "contoso.mail.onmicrosoft.com;1", remove them. To do this, run the following command:
+3. In the output, examine the value of the AddressSpace  parameter. You should see either `*` or `contoso.mail.onmicrosoft.com;1`.
+4. If you see any addresses other than `*` or `contoso.mail.onmicrosoft.com;1`, remove them. To do so, run the following command:
 
     ```powershell
     Set-SendConnector -name "Outbound to Microsoft 365 "smtp:contoso.mail.onmicrosoft.com;1"

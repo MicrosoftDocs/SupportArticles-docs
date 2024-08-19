@@ -3,7 +3,6 @@ title: Information about SharePoint On-Premises 2019
 description: Describes some information about SharePoint On-Premises 2019.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

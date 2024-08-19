@@ -3,7 +3,6 @@ title: Teams doesn't load
 description: Provides a fix for when the Teams client doesn't load.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

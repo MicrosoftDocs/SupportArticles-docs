@@ -10,7 +10,6 @@ search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
   - CI189769
-localization_priority: Normal
 ---
 
 # Tenant provisioning and licensing errors

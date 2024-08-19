@@ -8,7 +8,6 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: Admin
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150

@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article
-localization_priority: Normal
 ms.custom: 
   - sap:Teams Device Management (TAC)\
   - CI 160238
