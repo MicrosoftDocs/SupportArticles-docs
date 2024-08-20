@@ -161,11 +161,13 @@ Serial Console uses the storage account configured for boot diagnostics in its c
 
    The following table lists the IPs that need to be permitted as firewall exclusions based on the region or geography where the VM is located. This is a subset of the complete list of Serial Console IP addresses used in the **SerialConsole** service tag. You can limit access to boot diagnostics storage accounts via the **SerialConsole** service tag. The service tag isn't regionally separated. Traffic on the service tag is inbound only, and the Serial Console doesn't generate traffic to Customer Controllable Destinations. Although Azure storage account firewalls don't currently support service tags, the **SerialConsole** service tag can be programmatically consumed to determine the IP list. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
-   > [!NOTE]
+      > [!NOTE]
    > Storage account firewalls for the Serial Console aren't supported for VMs in geographies with only one region, such as Italy North in Italy.   
 
    |IP address      | Regions | Geography|
    |-----------|--------------------|-----------------|
+   |20.87.80.28|South Africa North, South Africa West|Africa|
+   |102.37.86.194|South Africa North, South Africa West|Africa|
    |20.205.69.28 | East Asia, Southeast Asia | AsiaPacific |
    |20.195.85.180 | East Asia, Southeast Asia | AsiaPacific |
    |20.53.53.224 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia |
@@ -207,12 +209,12 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    |52.235.252.253 | All US Government cloud regions | UsGov|
    |143.64.47.39|China North 3|China|
    |163.228.70.115|China East 3|China|
-
-   > [!IMPORTANT]
+   
+      > [!IMPORTANT]
    > - The IPs that need to be permitted are specific to the region where the VM is located. For example, a virtual machine deployed in the North Europe region needs to add the following IP exclusions to the storage account firewall for the Europe geography: 52.146.139.220 and 20.105.209.72. View the table above to find the correct IPs for your region and geography.
    > - In the current serial console operation, the web socket is opened to an endpoint like `<region>.gateway.serialconsole.azure.com`. Ensure the endpoint `serialconsole.azure.com` is allowed for browser clients in your organization. In the US Government (Fairfax) cloud, the endpoint suffix is `serialconsole.azure.us`.
 
-   For more information about how to add IPs to the storage account firewall, see [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules).
+      For more information about how to add IPs to the storage account firewall, see [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules).
 
 After the IP addresses are successfully added to the storage account firewall, retry the Serial Console connection to the VM. If you still have connection problems, verify that the correct IP addresses are excluded from the storage account firewall for the region of the VM.
 
