@@ -27,9 +27,9 @@ _Original KB number:_ &nbsp; 3044375
 
 ## Symptoms
 
-In Microsoft Outlook, you discover that the server count and offline item count for a particular folder do not match. The following screen shot illustrates this issue.
+In Microsoft Outlook, you discover that the server count and offline item count for a particular folder don't match. The following screenshot illustrates this issue.
 
-:::image type="content" source="media/offline-item-count-for-folder-differs-from-server-count/server-count-and-offline-item-count.png" alt-text="Screenshot of the Synchronization tab in Inbox Properties. In this example, Server folder contains 39 items and Offline folder contains 2 items." border="false":::
+:::image type="content" source="media/offline-item-count-for-folder-differs-from-server-count/server-count-and-offline-item-count.png" alt-text="Screenshot of the Synchronization tab in Inbox Properties. In this example, Server folder contains 39 items and Offline folder contains two items." border="false":::
 
 ## Cause
 
@@ -37,7 +37,7 @@ This issue occurs when a synchronization filter is configured for a folder.
 
 ## Resolution
 
-If you no longer require the filter or if you did not mean to enable it in the first place, follow these steps to remove the filter:
+If you no longer require the filter or if you didn't mean to enable it in the first place, follow these steps to remove the filter:
 
 1. In the **details** pane in Outlook, right-click the folder, and then select **Properties**.
 2. Select the **Synchronization** tab, and then select **Filter**.
@@ -48,4 +48,4 @@ If you no longer require the filter or if you did not mean to enable it in the f
 
 ## More information
 
-Be aware that while Outlook is in Offline mode, the synchronization filter process does not work.
+While Outlook is in Offline mode, the synchronization filter process doesn't work.
