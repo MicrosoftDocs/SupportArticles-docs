@@ -25,9 +25,9 @@ ms.date: 06/06/2024
 
 ## Summary
 
-This article discusses how to troubleshoot damaged drawings in Microsoft Office Visio 2013, Visio 2010, Visio 2007, Microsoft Office Visio 2003, and Microsoft Visio 2002. This article describes some symptoms that may indicate that the drawing that you are working with in Visio is damaged. 
+This article discusses how to troubleshoot damaged drawings in Microsoft Office Visio 2013, Visio 2010, Visio 2007, Microsoft Office Visio 2003, and Microsoft Visio 2002. This article describes some symptoms that may indicate that the drawing that you're working with in Visio is damaged. 
 
-Additionally, this article lists some recovery methods that you can use on the damaged drawing. They include general troubleshooting methods, methods to try if you can or cannot open the drawing, and methods to help prevent damage that may occur to drawings.
+Additionally, this article lists some recovery methods that you can use on the damaged drawing. They include general troubleshooting methods, methods to try if you can or can't open the drawing, and methods to help prevent damage that may occur to drawings.
 
 ## Introduction 
 
@@ -47,48 +47,48 @@ If you experience unexpected behavior when you work with a Visio drawing, the Vi
 > [!NOTE]
 > These error messages do not always mean that your drawing is damaged. However, if you repeatedly experience one or more of these error messages when you work with a particular drawing, that drawing may be damaged. 
 
-This article lists some methods that you can use to try to recover the damaged drawing. The methods that are described in this article do not guarantee the successful recovery of a damaged drawing. Sometimes, depending on the type of damage, you may not be able to recover any data. You may have to re-create the drawing or restore the drawing from your backup files. 
+This article lists some methods that you can use to try to recover the damaged drawing. The methods that are described in this article don't guarantee the successful recovery of a damaged drawing. Sometimes, depending on the type of damage, you may not be able to recover any data. You may have to re-create the drawing or restore the drawing from your backup files. 
 
 ### General troubleshooting methods
 
 #### Start Visio without Automation events and without Microsoft Visual Basic for Applications
 
-Start Visio without Automation events and without Visual Basic for Applications. To do this, use one of the following methods: 
+Start Visio without Automation events and without Visual Basic for Applications by using one of the following methods: 
 
 #### Method 1: Microsoft Office Visio 2013 and Visio 2010
 
 1. Start Visio.    
-2. On the **File** tab, click **Options**, and then click **Trust Center**.    
-3. Click ****Trust Center** Settings**, and then click **Disable all macros without notification**.    
-4. Click **Add-ins**.    
-5. Click to select the **Disable all Application Add-ins** check box.    
-6. Click **OK**.    
+2. On the **File** tab, select **Options**, and then select **Trust Center**.    
+3. Select ****Trust Center** Settings**, and then select **Disable all macros without notification**.    
+4. Select **Add-ins**.    
+5. Select the **Disable all Application Add-ins** check box.    
+6. Select **OK**.    
 7. Exit Visio, and then restart Visio.    
 
 #### Method 2: Microsoft Office Visio 2007
 
 1. Start Visio normally.   
-2. On the **Tools** menu, click **Trust Center**.   
-3. Click **Macro Settings**, and then click **Disable all macros without notification**.   
-4. Click **Add-ins**.   
-5. Click to select the **Disable all Application Add-ins** check box.   
-6. Click **OK**.   
+2. On the **Tools** menu, select **Trust Center**.   
+3. Select **Macro Settings**, and then select **Disable all macros without notification**.   
+4. Select **Add-ins**.   
+5. Select the **Disable all Application Add-ins** check box.   
+6. Select **OK**.   
 7. Exit Visio, and then restart Visio.   
 
 #### Method 3: Microsoft Office Visio 2003 and earlier versions of Visio
 
 1. Start Visio normally.   
-2. Use one of the following procedures, depending on the version of Visio that you are running: 
-   - If you are running Visio 2003, click **Options** on the **Tools** menu, and then click the **Security** tab.   
-   - If you are running Visio 2002, click **Options** on the **Tools** menu, and then click the **Advanced** tab.   
-3. Do the following: 
-   - Click to clear the **Enable Microsoft Visual Basic for Applications** check box. 
+2. Use one of the following procedures, depending on the version of Visio that you're running: 
+   - If you're running Visio 2003, select **Options** on the **Tools** menu, and then select the **Security** tab.   
+   - If you're running Visio 2002, select **Options** on the **Tools** menu, and then select the **Advanced** tab.   
+3. Follow these steps: 
+   - Clear the **Enable Microsoft Visual Basic for Applications** check box. 
 
-     **Note** After you click to clear the **Enable Microsoft Visual Basic for Applications** check box, the **Enable Microsoft Visual Basic for Applications project creation** check box and the **Load Microsoft Visual Basic for Applications project from text** check box becomes unavailable.    
-   - Click to clear the **Enable COM add-ins** check box.   
-   - Click to clear the **Enable Automation events** check box.   
-   
-4. Click **OK**, and then quit Visio.   
+     **Note** After you clear the **Enable Microsoft Visual Basic for Applications** check box, the **Enable Microsoft Visual Basic for Applications project creation** check box and the **Load Microsoft Visual Basic for Applications project from text** check box becomes unavailable.    
+   - Clear the **Enable COM add-ins** check box.   
+   - Clear the **Enable Automation events** check box.   
+
+4. Select **OK**, and then quit Visio.   
 5. Restart Visio.   
 
 #### Method 4: Use the 'Copy Drawing' command to copy each page into a page in a new drawing
@@ -96,22 +96,22 @@ Start Visio without Automation events and without Visual Basic for Applications.
 For Visio 2013 and Visio 2010:
 
 1. Make sure that nothing in the drawing is selected.    
-2. On the **Home** tab, under the **Clipboard** group, click **Copy**.    
-3. Open the document in which you want to embed the drawing, and then on the **Home** tab, in the **Clipboard** group, click **Paste**.   
+2. On the **Home** tab, under the **Clipboard** group, select **Copy**.    
+3. Open the document in which you want to embed the drawing, and then on the **Home** tab, in the **Clipboard** group, select **Paste**.   
 
 For Visio 2007 and Visio 2003:
 
 1. In the Microsoft Office Visio drawing, make sure that nothing is selected. 
-2. On the **Edit** menu, click **Copy Drawing**. 
+2. On the **Edit** menu, select **Copy Drawing**. 
  
    > [!NOTE]
-   > This command copies the entire drawing, including shapes on other drawing pages and on backgrounds. When you embed a multiple-page Visio drawing, the visible page will be the one that is active when you click **Copy Drawing**.
+   > This command copies the entire drawing, including shapes on other drawing pages and on backgrounds. When you embed a multiple-page Visio drawing, the visible page will be the one that is active when you select **Copy Drawing**.
 
-3. Open the document in which you want to embed the drawing, and then on the **Edit** menu, click **Paste**(or the equivalent command). 
+3. Open the document in which you want to embed the drawing, and then on the **Edit** menu, select **Paste**(or the equivalent command). 
 
 #### Start Windows in Safe Mode
 
-Start Windows in Safe Mode. To do this: 
+Start Windows in Safe Mode by following these steps:
 
 > [!NOTE]
 > Because there are several versions of Microsoft Windows, the following steps may be different on your computer. If they are, see your product documentation to complete these steps.
@@ -124,29 +124,29 @@ Start Windows in Safe Mode. To do this:
 
 For more information about Safe Mode, see [Advanced startup options (including safe mode)](https://support.microsoft.com/help/315222).
 
-### Methods to try if you cannot open a drawing
+### Methods to try if you can't open a drawing
 
 #### Method 1: Drag the drawing file to the Visio.exe file icon
 
-Drag the drawing file to the icon that represents the Visio.exe file. To do this: If you are running Visio 2010, the Visio.exe file is located in the following folder: Drive:\Program Files\Microsoft Office\Office14, *If you installed Visio 32-bit on Windows 64-bit the Program Files folder will have a (x86) behind the folder name. Visio 2010 now has a native 64-bit version.
+Drag the drawing file to the icon that represents the Visio.exe file. If you're running Visio 2010, the Visio.exe file is located in the following folder: `Drive:\Program Files\Microsoft Office\Office14`, *If you installed Visio 32-bit on Windows 64-bit the Program Files folder has a (x86) behind the folder name. Visio 2010 now has a native 64-bit version.
 
 1. Quit Visio.   
 2. Start Microsoft Windows Explorer, and then locate the Visio.exe file on your hard disk. If you installed Visio to the default location, the Visio.exe file is located in one of the following folders, depending on the version of Visio that you are running:
-   - If you are running Visio 2013, the Visio.exe file is located in the following folder:**Drive**:\Program Files\Microsoft Office\Office15 
+   - If you are running Visio 2013, the Visio.exe file is located in the following folder: `Drive:\Program Files\Microsoft Office\Office15` 
 
      > [!NOTE]
-     > If you installed a 32-bit version of Visio on a 64-bit version of Windows, the Program Files folder will have a (x86) behind the folder name. Visio 2013 now has a native 64-bit version.   
-   - If you are running Visio 2010, the Visio.exe file is located in the following folder: Drive:\Program Files\Microsoft Office\Office14 NoteIf you installed a 32-bit version of Visio on a 64-bit version of Windows, the Program Files folder will have a (x86) behind the folder name. Visio 2010 now has a native 64-bit version.
+     > If you installed a 32-bit version of Visio on a 64-bit version of Windows, the Program Files folder has a (x86) behind the folder name. Visio 2013 now has a native 64-bit version.   
+   - If you're running Visio 2010, the Visio.exe file is located in the following folder: `Drive:\Program Files\Microsoft Office\Office14` Note: If you installed a 32-bit version of Visio on a 64-bit version of Windows, the Program Files folder will have a (x86) behind the folder name. Visio 2010 now has a native 64-bit version.
 
-     If you are running Visio 2007, the Visio.exe file is located in the following folder: 
+     If you're running Visio 2007, the Visio.exe file is located in the following folder: 
 
      **Drive**:\Program Files\Microsoft Office\Office12
 
-     If you are running Visio 2003, the Visio.exe file is located in the following folder: 
+     If you're running Visio 2003, the Visio.exe file is located in the following folder: 
 
      **Drive**:\Program Files\Microsoft Office\Visio11   
 
-  - If you are running Visio 2002, the Visio.exe file is located in the following folder: 
+  - If you're running Visio 2002, the Visio.exe file is located in the following folder: 
 
      **Drive**:\Program Files\Microsoft Office\Visio10
 
@@ -158,7 +158,7 @@ Drag the drawing file to the icon that represents the Visio.exe file. To do this
 
 #### Method 2: Double-click the drawing file in Windows Explorer
 
-Try to open the drawing file by using Windows Explorer. To do this: 
+Try to open the drawing file by using Windows Explorer: 
 
 1. Quit Visio.   
 2. Start Windows Explorer, and then locate the drawing file that you want to open.   
@@ -168,7 +168,7 @@ Try to open the drawing file by using Windows Explorer. To do this:
 
 When you modify a Visio drawing, a temporary copy of the drawing file is created. The temporary copy of the drawing file is named ~$$**FileName**.~vsd. The temporary copy of the drawing file is typically created and stored in the same folder as where your drawing is located. 
 
-To open the temporary copy of the drawing file, do the following: 
+To open the temporary copy of the drawing file, follow these steps: 
 
 1. Start Visio, and then open your drawing.   
 2. Start Windows Explorer, and then locate the folder where your drawing is stored. Look in this folder for the temporary copy of the drawing file. The temporary copy of the drawing file is named ~$$**FileName**.~vsd.
@@ -176,18 +176,19 @@ To open the temporary copy of the drawing file, do the following:
     > [!NOTE]
     > If the temporary copy of the drawing file is not located in the folder where your drawing is stored, search the hard disk for the temporary copy of the drawing file. 
     
-    To search the hard disk for the temporary copy of the drawing file, do the following: 
+    To search the hard disk for the temporary copy of the drawing file, follow these steps: 
     
     **Note** Because there are several versions of Microsoft Windows, the following steps may be different on your computer. If they are, see your product documentation to complete these steps.
 
-    1. Click **Start**, and then click **Search**.   
-    2. Click **All files and folders**.   
-    3. In the **All or part of the file name** box, type ~$$**FileName**.~vsd, and then click **Search**.   
+    1. Select **Start**, and then select **Search**.   
+    2. Select **All files and folders**.   
+    3. In the **All or part of the file name** box, type` ~$$**FileName**.~vsd`, and then select **Search**.   
    
-3. Change the extension of the temporary copy of the drawing file to .vsd. To do this: 
-   1. Right-click the temporary copy of the drawing file, and then click **Rename**.    
-   2. Change the extension of the temporary copy of the drawing file from ~.vsd to .vsd.   
-   
+3. Change the extension of the temporary copy of the drawing file to .vsd. Follow these steps:
+
+    1. Right-click the temporary copy of the drawing file, and then select **Rename**.    
+    2. Change the extension of the temporary copy of the drawing file from ~.vsd to .vsd.   
+
 4. Try to open the temporary copy of the drawing file that you renamed.   
 
 #### Method 4: Use the Microsoft Office Visio Viewer to open the drawing
@@ -213,11 +214,11 @@ Windows may not be able to read the drawing file from where the drawing file is 
 
 If you are running Microsoft Windows Server 2003, Microsoft Windows XP, Microsoft Windows 2000, or Microsoft Windows NT 4.0, use the Check Disk tool to detect file system errors or bad sectors on your hard disk. 
 
-For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
+For more information, select the following article numbers to view the articles in the Microsoft Knowledge Base:
 
 [Check your hard disk for errors](https://support.microsoft.com/help/2641432)
 
-If you are running Microsoft Windows Millennium Edition (Me) or Microsoft Windows 98, use the Scandisk tool to detect file system errors or bad sectors on your hard disk. 
+If you're running Microsoft Windows Millennium Edition (Me) or Microsoft Windows 98, use the Scandisk tool to detect file system errors or bad sectors on your hard disk. 
 
 > [!NOTE]
 > Although the Check Disk tool or the ScanDisk tool can detect and repair file-system errors or bad sectors on the hard disk, Visio may still not be able to open or read the file. 
@@ -228,26 +229,26 @@ If you are running Microsoft Windows Millennium Edition (Me) or Microsoft Window
 2. Choose **Properties**.
 3. Select the **Previous Versions** tab, give some time for the list to populate.
 4. Select an older version of the file.
-5. Click **Open**.
-6. If the file opens successfully, from the **File** menu click **Save As** and save a copy of the file.
+5. Select **Open**.
+6. If the file opens successfully, from the **File** menu select **Save As** and save a copy of the file.
 
 ### Methods to try if you can open the drawing
 
 #### Method 1: Save the file as an XML drawing
 
- Save the drawing as an XML drawing (.vdx file), and then save the XML drawing as a drawing (.vsd file). To do this:
+ Save the drawing as an XML drawing (.vdx file), and then save the XML drawing as a drawing (.vsd file). Follow these steps:
 
 1. Start Visio, and then open your drawing.   
-2. On the **File** menu, click **Save As**.   
-3. In the **Save As** dialog box, click **XML Drawing (*.vdx)** in the **Save as type** box, and then type a file name in the **File name** box. Specify a location where you want to save the drawing file, and then click **Save**.   
+2. On the **File** menu, select **Save As**.   
+3. In the **Save As** dialog box, select **XML Drawing (*.vdx)** in the **Save as type** box, and then type a file name in the **File name** box. Specify a location where you want to save the drawing file, and then select **Save**.   
 4. Close all the drawings that are currently open.   
-5. On the **File** menu, click **Open**.    
-6. Locate the XML drawing (.vdx) that you saved earlier in step 3, and then click **Open**.   
-7. On the **File** menu, click **Save As**.   
-8. In the **Save As** dialog box, click **Drawing (*.vsd)** in the **Save as type** box, and then type a file name in the **File name** box. Specify a location where you want to save the drawing file, and then click **Save**.   
+5. On the **File** menu, select **Open**.    
+6. Locate the XML drawing (.vdx) that you saved earlier in step 3, and then select **Open**.   
+7. On the **File** menu, select **Save As**.   
+8. In the **Save As** dialog box, select **Drawing (*.vsd)** in the **Save as type** box, and then type a file name in the **File name** box. Specify a location where you want to save the drawing file, and then select **Save**.   
 9. Close the drawing.   
-10. On the **File** menu, click **Open**   
-11. Locate the drawing (.vsd file) that you saved earlier in step 8, and then click **Open**.   
+10. On the **File** menu, select **Open**   
+11. Locate the drawing (.vsd file) that you saved earlier in step 8, and then select **Open**.   
 
 #### Method 2: Insert the drawing to a new blank drawing
 
@@ -256,28 +257,28 @@ Insert the drawing to a new blank drawing. To do this:
 For Visio 2013 and Visio 2010:
 
 1. Start Visio    
-2. Under the **File** tab, under **New**, select **Blank Drawing**, and then click the **Create** button.   
-3. On the **Insert** tab, click **Object**.   
-4. Click **Create from file**, and then click **Browse**.    
-5. Select the drawing, click **Open**, and then click **OK**.    
-6. Depending on your situation, determine whether the drawing file is damaged or whether there is another problem. 
+2. Under the **File** tab, under **New**, select **Blank Drawing**, and then select the **Create** button.   
+3. On the **Insert** tab, select **Object**.   
+4. Select **Create from file**, and then select **Browse**.    
+5. Select the drawing, select **Open**, and then select **OK**.    
+6. Depending on your situation, determine whether the drawing file is damaged or whether there's another problem. 
    - If you receive an "Error 3400" error message, the drawing file may be damaged. Use the methods that are described in this article to try to recover the drawing.    
-   - If you do not receive an "Error 3400" error message, there may be another issue that may be preventing Visio from opening the drawing. For example, a conflict may exist between certain components on the computer that prevent Visio from opening the drawing.    
+   - If you don't receive an "Error 3400" error message, there may be another issue that may be preventing Visio from opening the drawing. For example, a conflict may exist between certain components on the computer that prevent Visio from opening the drawing.    
    
 For Visio 2007 and Visio 2003:
 
 1. Start Visio.   
-2. On the **File** menu, point to **New**, and then click **New Drawing**.   
-3. On the **Insert** menu, click **Object**.    
-4.  Click **Create from file**, and then click **Browse**.   
-5.  Click the drawing, click **Open**, and then click** OK**.   
-6. Depending on your situation, determine whether the drawing file is damaged or whether there is another problem.
+2. On the **File** menu, point to **New**, and then select **New Drawing**.   
+3. On the **Insert** menu, select **Object**.    
+4. Select **Create from file**, and then select **Browse**.   
+5. Select the drawing, select **Open**, and then select** OK**.   
+6. Depending on your situation, determine whether the drawing file is damaged or whether there's another problem.
    - If you receive an "Error 3400" error message, the drawing file may be damaged. Use the methods that are described in this article to try to recover the drawing.   
-   - If you do not receive an "Error 3400" error message, there may be another issue that may be preventing Visio from opening the drawing. For example, a conflict may exist between certain components on the computer that prevent Visio from opening the drawing.      
+   - If you don't receive an "Error 3400" error message, there may be another issue that may be preventing Visio from opening the drawing. For example, a conflict may exist between certain components on the computer that prevent Visio from opening the drawing.      
 
 ### Methods to try to help prevent damage to drawings
 
-You cannot prevent all corruption that may occur to files. Hard disks may wear out, power supplies may fail, and other unforeseeable events may occur that cause files to become damaged. The following tips and suggestions may help reduce the number of damaged files that occur in Visio and in other programs. 
+You can't prevent all corruption that may occur to files. Hard disks may wear out, power supplies may fail, and other unforeseeable events may occur that cause files to become damaged. The following tips and suggestions may help reduce the number of damaged files that occur in Visio and in other programs. 
 
 #### Optimize the AutoRecover setting in Visio
 
@@ -286,19 +287,19 @@ Configure the **AutoRecover** setting to a value that works for you. If your com
 To configure the **AutoRecover** setting in Visio:
 
 1. Start Visio.   
-2. On the **Tools** menu, click **Options**.   
-3. Click the **Save** tab or the **Save/Open** tab.   
+2. On the **Tools** menu, select **Options**.   
+3. select the **Save** tab or the **Save/Open** tab.   
 4. Select the **Save AutoRecover info every** check box, and then specify the time in minutes that you want. By default, the **AutoRecover** setting is set for 10 minutes.    
-5. Click **OK**.   
+5. select **OK**.   
 
 #### Make sure that the power supply is consistent
 
-A power supply that is not consistent can cause damage to files, even if you do not lose power. A power supply that spikes or that is not sufficient can affect the read process and write processes on your computer, and may cause damage. If the power supply in your area is inconsistent, use a surge protector. Surge protectors can help prevent damage on your computer if power spikes occur. You may also consider using an uninterruptible power supply (UPS). UPS units supply your computer with power even if there is a power outage. Contact your hardware vendor for more information about how to obtain either of these devices.
+A power supply that isn't consistent can cause damage to files, even if you don't lose power. A power supply that spikes or that isn't sufficient can affect the read process and write processes on your computer, and may cause damage. If the power supply in your area is inconsistent, use a surge protector. Surge protectors can help prevent damage on your computer if power spikes occur. You may also consider using an uninterruptible power supply (UPS). UPS units supply your computer with power even if there is a power outage. Contact your hardware vendor for more information about how to obtain either of these devices.
 
 
 #### Back up your data
 
-Make sure that you back up your data regularly. For example, store a backup copy of your drawing on a different volume on the hard disk. Or, depending on your requirements and on your environment, implement other backups or other fault-tolerant solutions on your computer. Some fault-tolerant solutions, such as Redundant Array of Independent Disks (RAID), are typically only practical for larger networks. Other backup options include the following: 
+Make sure that you back up your data regularly. For example, store a backup copy of your drawing on a different volume on the hard disk. Or, depending on your requirements and on your environment, implement other backups or other fault-tolerant solutions on your computer. Some fault-tolerant solutions, such as Redundant Array of Independent Disks (RAID), are typically only practical for larger networks. Other backup options include: 
 
 - Tape backup   
 - CD backup   
@@ -309,7 +310,7 @@ Make sure that you back up your data regularly. For example, store a backup copy
 
 #### Work with your data locally
 
-If you work in a network environment and you experience corruption frequently, you may want to consider copying your files to your local computer before you open the file or before you modify the file. Copy the file to your desktop by using My Computer or by using Windows Explorer. When you work with files that are stored on your local computer, you prevent read issues or write issues that may be caused by network connectivity issues such as the following: 
+If you work in a network environment and you experience corruption frequently, you may want to consider copying your files to your local computer before you open the file or before you modify the file. Copy the file to your desktop by using My Computer or by using Windows Explorer. When you work with files that are stored on your local computer, you prevent read issues or write issues that may be caused by network connectivity issues such as: 
 
 - Slow network connections   
 - Dropped network connections   

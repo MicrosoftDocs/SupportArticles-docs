@@ -1,5 +1,5 @@
 ---
-title: This is not a valid win32 application
+title: This isn't a valid Win32 application
 description: Discusses an issue that occurs when you try to install Microsoft 365 Apps for enterprise, Visio Pro for Microsoft 365, or Project for Microsoft 365.
 author: helenclu
 manager: dcscontentpm
@@ -19,13 +19,13 @@ appliesto:
 ms.date: 06/06/2024
 ---
 
-# "This is not a valid win32 application" when you install Microsoft 365 Apps for enterprise, Visio Pro for Microsoft 365, or Project for Microsoft 365
+# "Not a valid win32 application" error when you install Microsoft 365 Apps for enterprise, Visio Pro for Microsoft 365, or Project for Microsoft 365
 
 ## Problem
 
 When you try to install Microsoft 365 Apps for enterprise, Visio Pro for Microsoft 365, or Project for Microsoft 365, you receive the following error message:
 
-**This is not a valid win32 application.** 
+**This is not a valid Win32 application.** 
 
 This issue occurs if you try to install the program on an operating system that's not supported. 
 
