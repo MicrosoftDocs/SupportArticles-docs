@@ -1,6 +1,6 @@
 ---
-title: Emails are not saved to Sent Items
-description: This article provides a resolution for the issue that email messages that are sent by using Microsoft Outlook 2007 or later versions are not saved to the Sent Items folder.
+title: Emails aren't saved to Sent Items
+description: Fixes an issue that email messages that are sent by using Microsoft Outlook 2007 or later versions aren't saved to the Sent Items folder.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -21,13 +21,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/30/2024
 ---
-# Email sent using Outlook are not saved to the Sent Items folder
+# Email sent using Outlook aren't saved to the Sent Items folder
 
 _Original KB number:_ &nbsp; 2958272
 
 ## Symptoms
 
-After you send an email using Microsoft Outlook 2007 or later versions, a copy of the email message is not saved to the Sent Items folder.
+After you send an email using Microsoft Outlook 2007 or later versions, a copy of the email message isn't saved to the Sent Items folder.
 
 ## Cause
 
@@ -35,7 +35,7 @@ The **Save copies of messages in the Sent Items folder** option in Outlook is di
 
 ## Resolution
 
-Enable the **Save copies of messages in the Sent Items folder** option by following the steps below for your version of Outlook.
+Enable the **Save copies of messages in the Sent Items folder** option by following these steps for your version of Outlook.
 
 In Outlook 2010 or later versions:
 
@@ -59,7 +59,7 @@ In Outlook 2007:
 
 ## More information
 
-The **Save copies of messages in Sent Items folder** option can be controlled using the Outlook Group Policy setting. You can find the policy setting below, depending on your version of Outlook.
+The **Save copies of messages in Sent Items folder** option can be controlled using the Outlook Group Policy setting. You can find the following policy setting, depending on your version of Outlook.
 
 - Outlook 2007:
 
@@ -83,7 +83,7 @@ The **Save copies of messages in Sent Items folder** option can be controlled us
 
   Policy Path: User Configuration/Administrative Templates/Microsoft Outlook 2016/Outlook Options/Preferences/E-mail Options
 
-  In the dialog box for the policy setting, select **Enabled** to enable the policy and select the **Save copies of messages in Save Items folder** option (The screenshot for this step is listed below).
+  In the dialog box for the policy setting, select **Enabled** to enable the policy and select the **Save copies of messages in Save Items folder** option.
 
   :::image type="content" source="media/email-sent-are-not-saved-to-sent-items-folder/message-handling.png" alt-text="Screenshot shows steps in the policy setting dialog box." border="false":::
 
@@ -92,7 +92,7 @@ The **Save copies of messages in Sent Items folder** option can be controlled us
   `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\Preferences`  
   `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<x.0>\Outlook\Preferences`
 
-  Where <x.0> is your version of Outlook:
+  Where \<x.0\> is your version of Outlook:
 
   Outlook 2016, Outlook for Microsoft 365 and Outlook 2019 = 16.0  
   Outlook 2013 = 15.0  
@@ -102,5 +102,5 @@ The **Save copies of messages in Sent Items folder** option can be controlled us
   DWORD Value Name: SaveSent  
   Value Data:
 
-  0 = Disabled; Sent emails will not be saved in the Sent Items folder.  
-  1 = Enabled; Sent emails will be saved in the Sent Items folder.
+  0 = Disabled; Sent emails aren't saved in the Sent Items folder.  
+  1 = Enabled; Sent emails are saved in the Sent Items folder.

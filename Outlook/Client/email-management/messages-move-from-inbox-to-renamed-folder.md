@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 3087043
 When you rename a subfolder of the Inbox in Microsoft Outlook 2013, the following symptoms occur:
 
 - The email messages that were in the Inbox folder move to the folder that you renamed.
-- An additional folder appears and has the original name of the folder that you renamed.
+- Another folder appears and has the original name of the folder that you renamed.
 - An email message that contains an error message that resembles the following is added to the **Sync Issues** folder:
 
   > 12:25:00 Synchronizing Hierarchy  
@@ -55,6 +55,6 @@ For an example of this issue, consider the following scenario:
 - You notice that all the email messages that were previously in the Inbox folder are now in the Beta folder.
 - You notice also that the Alpha folder appears in the folder list again together with the Beta folder.
 
-In this scenario, if you select the ellipses button, select **Folders** to open the folder list, and then select the **Sync Issues** folder to view the messages it contains, you will find a message that resembles the message in the following screenshot.
+In this scenario, if you select the ellipses button, select **Folders** to open the folder list, and then select the **Sync Issues** folder to view the messages it contains, you find a message that resembles the message in the following screenshot.
 
 :::image type="content" source="media/messages-move-from-inbox-to-renamed-folder/error-example.png" alt-text="Screenshot of the example message in the Sync Error folder.":::
