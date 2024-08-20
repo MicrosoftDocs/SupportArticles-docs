@@ -43,7 +43,7 @@ You can perform an in-place upgrade from RHEL 7 to the following RHEL 8 minor ve
 | RHEL 7.9         | RHEL 8.10 (default) | Jun 30, 2028        |
 
 > [!NOTE]  
-> If you lock the VM to a minor release, remove the version lock. For more information, see [Switch a RHEL 7.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui##switch-a-rhel-server-to-non-eus-repositories).
+>  If you locked the virtual machine to a minor release, remove the version lock. For more information, see [Switch a RHEL 7.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui##switch-a-rhel-server-to-non-eus-repositories).
 
 1. If you use the `yum-plugin-versionlock` command to restrict packages to a certain version, remove the restriction:
 
@@ -293,7 +293,7 @@ Once the VM is successfully upgraded, perform the following tasks:
        sudo dnf remove $(rpm -qa | grep \.el[67] | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
        ```
 
-3. Remove remaining RHEL 7 packages, including remaining leapp packages.
+3. Remove remaining RHEL 7 modules kernel directories.
 
    1. Determine old kernel versions:
 
