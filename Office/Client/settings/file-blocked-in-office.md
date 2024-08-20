@@ -1,6 +1,6 @@
 ---
-title: Error message in Office when a file is blocked by registry policy settings
-description: Describes an issue that occurs when you try to open or to save a file type that is blocked by your registry policy setting in one of the Office 2019 or Office 2016 apps.
+title: Error message in Office when registry policy settings block a file
+description: Describes an issue that occurs when you try to open or to save a file type in an Office program, but your registry policy setting blocks the file.
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
@@ -28,13 +28,13 @@ ms.date: 06/06/2024
 
 # Error message in Office when a file is blocked by registry policy settings
 
-A file is blocked when you open or save the file in a Microsoft Office program. In this situation, you may receive an error message that resembles one of the following:
+A file is blocked when you open or save the file in a Microsoft Office program. In this situation, you may receive one of the following error messages:
 
 - You are attempting to open a file that is blocked by your registry policy setting.
-- You are attempting to open a file type **\<File Type>** that has been blocked by your File Block settings in the Trust Center.
+- You are attempting to open a file type **\<File Type\>** that has been blocked by your File Block settings in the Trust Center.
 - You are attempting to open a file that was created in an earlier version of Microsoft Office. This file type is blocked from opening in this version by your registry policy setting.
 - You are attempting to save a file that is blocked by your registry policy setting.
-- You are attempting to save a file type **\<File Type>** that has been blocked by your File Block settings in the Trust Center.
+- You are attempting to save a file type **\<File Type\>** that has been blocked by your File Block settings in the Trust Center.
 
 ## Resolution
 
@@ -42,7 +42,7 @@ To resolve this issue, try the following general resolutions to change the File 
 
 1. Select **File** > **Options**.
 
-    If you cannot open a file in Office, open a blank document to start the Office application. For example, if you cannot open a Word file, open a new document in Word 2016 or later versions to see the option.
+    If you can't open a file in Office, open a blank document to start the Office application. For example, if you can't open a Word file, open a new document in Word 2016 or later versions to see the option.
 
 2. In the **Options** window, select **Trust Center** > **Trust Center Settings**.
 3. In the **Trust Center** window, select **File Block Settings**, and then clear the "Open" or "Save" check box for the file type that you want to open or save.
