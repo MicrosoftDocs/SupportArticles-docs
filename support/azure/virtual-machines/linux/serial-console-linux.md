@@ -112,6 +112,8 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    
    |IP address      | Regions | Geography|
    |-----------|--------------------|-----------------|
+   |20.87.80.28|South Africa North, South Africa West|Africa|
+   |102.37.86.194|South Africa North, South Africa West|Africa|
    |20.205.69.28 | East Asia, Southeast Asia | AsiaPacific|
    |20.195.85.180 | East Asia, Southeast Asia | AsiaPacific|
    |20.53.53.224 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia|
@@ -144,8 +146,6 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    |20.58.68.62 | UK South, UK West | UnitedKingdom|
    |51.12.72.223 | Sweden Central, Sweden South | Sweden|
    |51.12.22.174 | Sweden Central, Sweden South | Sweden|
-   |20.87.80.28|South Africa North, South Africa West|Africa|
-   |102.37.86.194|South Africa North, South Africa West|Africa|
    |20.98.146.84 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
    |20.98.194.64 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
    |20.69.5.162 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
