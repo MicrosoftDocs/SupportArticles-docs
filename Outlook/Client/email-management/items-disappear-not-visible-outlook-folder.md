@@ -4,7 +4,6 @@ description: Fixes an issue in which some or all items disappear from an Outlook
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:User Interface features and Configuration\Folder views
   - CSSTroubleshoot
