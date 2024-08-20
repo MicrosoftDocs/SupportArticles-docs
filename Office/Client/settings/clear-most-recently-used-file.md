@@ -3,7 +3,6 @@ title: How to edit Windows registry to clear the list of most recently used file
 description: Provides a step-by-step guide about how to use the Windows registry to clear the most recently used files list that appear in Office programs.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

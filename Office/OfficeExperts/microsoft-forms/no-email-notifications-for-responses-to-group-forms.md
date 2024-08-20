@@ -3,7 +3,6 @@ title: No email notifications for responses to Group Forms
 description: Provides the steps to edit group to receive email notifications.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

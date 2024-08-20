@@ -4,7 +4,6 @@ description: How to configure Teams meeting links in Outlook to open in the Team
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Calendar\Working with meetings or appointments
   - Outlook for Windows

@@ -4,7 +4,6 @@ description: Provides a resolution to solve the issue that your Outlook settings
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:User Interface features and Configuration\Group Policy
   - CSSTroubleshoot

@@ -3,7 +3,6 @@ title: How to create table of contents in Word entries without a page number
 description: Describes how to create table of contents entries without a page number and how to change an entry without a page number in Word.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
