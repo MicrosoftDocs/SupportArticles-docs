@@ -8,7 +8,7 @@ ms.reviewer: kaushika, kakreh
 ---
 # Intune can't uninstall apps that are installed from Apple App Store
 
-This article gives a workaround solution to help you uninstall free apps in Microsoft Intune that were installed from the Apple App Store.
+This article gives a workaround solution to help you **uninstall free apps** in Microsoft Intune that were installed from the Apple App Store.
 
 ## Symptoms
 
@@ -24,6 +24,8 @@ To work around this issue, follow these steps:
 
     > [!NOTE]
     > After the apps are assigned, you are prompted to allow Intune to take over management of the apps on the device.
+    > 
+    > When uninstalling an application from a device enrolled using Device Enrollement Program (DEP) users do not receive the prompt to take over management.
 
 2. To remove the apps from devices in the assigned group, change the assignment type to **Uninstall**.
 
