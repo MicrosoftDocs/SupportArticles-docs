@@ -3,7 +3,6 @@ title: Control settings in the Format Cells dialog box
 description: Explains that you can modify the majority of these settings in the Format Cells dialog box to change the way that your data is presented.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

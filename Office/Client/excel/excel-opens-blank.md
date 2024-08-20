@@ -4,7 +4,6 @@ description: Offers resolutions to an issue where you see a blank screen when yo
 ms.date: 06/06/2024
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

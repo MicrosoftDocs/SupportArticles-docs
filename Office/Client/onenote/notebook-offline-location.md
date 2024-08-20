@@ -3,7 +3,6 @@ title: Warning when a notebook is in an offline location
 description: Describes an issue that occurs when OneNote 2013 detects a notebook that is in an offline folder.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 

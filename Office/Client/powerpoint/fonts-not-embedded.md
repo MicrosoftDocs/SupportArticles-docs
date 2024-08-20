@@ -3,7 +3,6 @@ title: Some fonts not embedded when a PowerPoint 2010 or above presentation is s
 description: Describes an issue with font embedding when you save a presentation in .PPT format.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

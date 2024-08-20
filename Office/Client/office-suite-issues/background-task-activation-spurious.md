@@ -3,7 +3,6 @@ title: Background task activation is spurious
 description: Describes an issue that triggers a Background task activation is spurious error. Occurs when you use an Office 2016 application or OneDrive for Business to access Microsoft 365 resources. Provides a workaround.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

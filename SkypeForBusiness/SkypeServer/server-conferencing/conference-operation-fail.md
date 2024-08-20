@@ -3,7 +3,6 @@ title: Conference creation, modification, or deletion fails for some application
 description: Conference creation, modification, or deletion fails for some application endpoints. Provides a solution for this issue.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

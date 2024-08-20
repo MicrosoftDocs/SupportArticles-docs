@@ -1,12 +1,11 @@
 ---
-title: The encryption type requested is not supported by the KDC
+title: The encryption type requested isn't supported by the KDC
 description: Describes how to resolve errors that occur after changing SharePoint configuration requirements to support Kerberos AES encryption.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Authentication & User Profiles\Windows Authentication
   - CSSTroubleshoot
@@ -25,13 +24,13 @@ _Original KB number:_ &nbsp; 4501051
 
 ## Symptoms
 
-You receive errors after you have modified the setting **Network Security: Configure encryption types allowed for Kerberos** via local policy or GPO from the default values to a value that only allows the following encryption types:
+You receive errors after you modified the setting **Network Security: Configure encryption types allowed for Kerberos** via local policy or GPO from the default values to a value that only allows the following encryption types:
 
 - AES128_HMAC_SHA1
 - AES256_HMAC_SHA1
 - Future encryption types
 
-If errors are written to the SharePoint Universal Logging System (ULS) logs, they indicate that the encryption type requested isn't supported by the KDC. Actions that trigger these errors include (but are not limited to):
+If errors are written to the SharePoint Universal Logging System (ULS) logs, they indicate that the encryption type requested isn't supported by the KDC. Actions that trigger these errors include (but aren't limited to):
 
 - Accessing the Manage Service Account page in Central Administration
 - Accessing the Search Administration page (the Search Topology may not display)
@@ -51,18 +50,18 @@ The Project Server Service Application might also log a similar message:
 > \---> System.Security.Authentication.AuthenticationException: **A call to SSPI failed, see inner exception**.  
 > \---> System.ComponentModel.Win32Exception: **The encryption type requested is not supported by the KDC**
 
-During the process of provisioning User Profile Services, you are unable to start the User Profile Synchronization service.
+During the process of provisioning User Profile Services, you're unable to start the User Profile Synchronization service.
 
 When starting the User Profile Service in Central Administration, the service starts and then stops immediately. Inspection of the SharePoint ULS indicates that the failure to start is a result of the following:
 
 > "UserProfileApplication.SynchronizeMIIS: Failed to configure ILM, will attempt to rerun.  
 > Exception: System.Security.SecurityException: The encryption type requested is not supported by the KDC."
 
-Other components might write error messages indicating that the encryption type requested is not supported by the KDC.
+Other components might write error messages indicating that the encryption type requested isn't supported by the KDC.
 
 ## Cause
 
-This behavior occurs because of a conflict between the custom local policy or group policy and the service account's properties in Active Directory. When you configure the property setting **Network Security: Configure encryption types allowed for Kerberos** so that the server only supports AES encryption types and future encryption types, the server won't support older Kerberos encryption types in Kerberos tickets. It's also important to note that user account objects created in Active Directory aren't configured to support Kerberos AES encryption by default.
+This behavior occurs because of a conflict between the custom local policy or group policy and the service account's properties in Active Directory. When you configure the property setting **Network Security: Configure encryption types allowed for Kerberos** so that the server only supports AES encryption types and future encryption types, the server doesn't support older Kerberos encryption types in Kerberos tickets. It's also important to note that user account objects created in Active Directory aren't configured to support Kerberos AES encryption by default.
 
 If the server is configured to require AES encryption types for Kerberos, but the service account's properties in Active Directory haven't been updated to support AES encryption, the result is a scenario where the server is unable to negotiate a common encryption type for Kerberos tickets.
 
@@ -74,7 +73,7 @@ To resolve this issue, follow these steps:
 2. Locate the accounts in Active Directory Users and Computers.
 3. Select **Properties**.
 4. Select the **Account** tab.
-5. In the section titled **Account Options**, ensure that one or both of the following options are selected. This will enable support for Kerberos AES encryption on these user objects:
+5. In the section titled **Account Options**, ensure that one or both of the following options are selected. This enables support for Kerberos AES encryption on these user objects:
    - This account supports Kerberos AES 128 bit encryption
    - This account supports Kerberos AES 256 bit encryption
 
@@ -99,9 +98,9 @@ If only the following Options are selected:
 
 :::image type="content" source="media/configuration-to-support-kerberos-aes-encryption/encryption-types.png" alt-text="Screenshot of encryption types allowed for Kerberos.":::
 
-Then you will need to enable **Support for Kerberos AES Encryption** on the Active Directory user objects that are used to run SharePoint services and application pools.
+Then you need to enable **Support for Kerberos AES Encryption** on the Active Directory user objects that are used to run SharePoint services and application pools.
 
-You can use the following PowerShell script to identify the SharePoint service accounts and test whether they are configured to support AES encryption types:
+You can use the following PowerShell script to identify the SharePoint service accounts and test whether they're configured to support AES encryption types:
 
 ```powershell
 Add-PSSnapin Microsoft.SharePoint.Powershell

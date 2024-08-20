@@ -3,7 +3,6 @@ title: Custom function may not calculate correct value
 description: Describes an issue in which custom function may not calculate expected value in Excel when you calculate worksheet, and provides a workaround.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

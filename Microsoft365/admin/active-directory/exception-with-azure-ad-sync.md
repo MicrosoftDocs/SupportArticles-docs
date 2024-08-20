@@ -3,7 +3,6 @@ title: Exception has been thrown by the target of an invocation in Azure AD Sync
 description: Describes an issue that triggers an 'Exception has been thrown by the target of an invocation error. Occurs when you run the Azure Active Directory Sync tool Configuration Wizard on a Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials server.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

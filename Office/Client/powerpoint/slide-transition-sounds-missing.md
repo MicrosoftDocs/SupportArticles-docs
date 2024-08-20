@@ -3,7 +3,6 @@ title: Slide transition sounds missing
 description: Works around an issue in which there are no slide transition sounds after you export a PowerPoint 2010 presentation to a video file.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 

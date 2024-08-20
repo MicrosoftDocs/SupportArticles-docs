@@ -4,7 +4,6 @@ description: Resolve the Invalid user name error message when you try to create 
 author: helenclu
 manager: dcscontentpm
 date: 3/16/2020
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

@@ -3,7 +3,6 @@ title: No default mail client error
 description: Describes an issue in which you receive No default mail client error when you attempt to send a file from Office programs. Provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

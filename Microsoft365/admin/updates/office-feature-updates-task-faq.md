@@ -3,7 +3,6 @@ title: The Office Feature Updates task
 description: Describes Office Feature Updates task
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

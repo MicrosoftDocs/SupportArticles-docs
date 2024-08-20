@@ -3,7 +3,6 @@ title: PowerPoint stops responding (spinning wheel)
 description: Fixes an issue in which you cannot open a presentation in PowerPoint for Mac.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

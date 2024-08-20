@@ -3,7 +3,6 @@ title: ODBC Data Source Administrator crashes when you add a system DSN
 description: Discusses a problem in which the ODBC Data Source Administrator crashes when you add a system DSN. Provides a workaround.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

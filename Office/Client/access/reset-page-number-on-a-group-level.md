@@ -3,7 +3,6 @@ title: Reset the page number on a group level in a report
 description: Describes methods for designing a report that breaks the page for each new entry in a group and resetting the page number of the report.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

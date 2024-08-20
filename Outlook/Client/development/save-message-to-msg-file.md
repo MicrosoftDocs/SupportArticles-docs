@@ -4,7 +4,6 @@ description: Describes how to save a message to a compound document, specificall
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Developer Issues\Macros
   - CSSTroubleshoot

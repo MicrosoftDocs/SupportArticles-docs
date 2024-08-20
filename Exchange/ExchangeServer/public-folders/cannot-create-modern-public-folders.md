@@ -4,7 +4,6 @@ description: Resolves an issue in which you cannot create public folders in Outl
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Migration\Issues with Public Folder Migration
   - CSSTroubleshoot
