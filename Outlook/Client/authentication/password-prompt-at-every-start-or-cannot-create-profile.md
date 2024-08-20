@@ -1,6 +1,6 @@
 ---
-title: Password prompt at every start or cannot create profile
-description: Describes an issue that causes you to be prompted for your password every time that Outlook 2016 or Outlook 2013 starts. Provides a resolution. Or, you are unable to create a profile.
+title: Password prompt at every start or can't create profile
+description: Describes an issue that causes you to be prompted for your password every time that Outlook 2016 or Outlook 2013 starts. Provides a resolution. Or, you can't create a profile.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -27,8 +27,8 @@ _Original KB number:_ &nbsp; 3060280
 
 When you connect to a Microsoft Exchange 2016, Exchange 2013, or Microsoft 365 mailbox in Microsoft Outlook 2019, Outlook 2016, Outlook, 2013 or Outlook for Microsoft 365, you experience one of the following symptoms:
 
-- You are prompted for your password every time that Outlook starts, even if you enabled the **Remember my credentials** option.
-- When you start Outlook, it is unable to connect, and it displays **Need Password** in the status bar. When you select **Need Password**, you receive the following message:  
+- You're prompted for your password every time that Outlook starts, even if you enabled the **Remember my credentials** option.
+- When you start Outlook, it's unable to connect, and it displays **Need Password** in the status bar. When you select **Need Password**, you receive the following message:  
   **This feature has been disabled by your administrator.**
 
 - When you try to create a new Outlook profile, you receive one of the following error messages:  
@@ -38,7 +38,7 @@ When you connect to a Microsoft Exchange 2016, Exchange 2013, or Microsoft 365 m
 
 ## Cause
 
-This issue occurs if the **Allow Office to connect to the Internet** check box under **Trust Center Privacy Options** is not selected.
+This issue occurs if the **Allow Office to connect to the Internet** check box under **Trust Center Privacy Options** isn't selected.
 
 ## Resolution
 
@@ -52,7 +52,7 @@ Outlook 2016, Outlook 2019, and Outlook for Microsoft 365:
 4. Select **OK** two times to close the **Outlook Options** dialog box.
 
    > [!NOTE]
-   > If the **Let Office connect to online services from Microsoft to provide functionality that's relevant to your usage and preferences** check box is unavailable, see the More Information section below, for additional details about this setting.
+   > If the **Let Office connect to online services from Microsoft to provide functionality that's relevant to your usage and preferences** check box is unavailable, see the More Information section for additional details about this setting.
 
 Outlook 2013:
 
@@ -62,7 +62,7 @@ Outlook 2013:
 4. Select **OK** two times to close the **Outlook Options** dialog box.
 
     > [!NOTE]
-    > If the Allow Office to connect to the Internet  check box is unavailable, see the More Information section below, for additional details about this setting.
+    > If the Allow Office to connect to the Internet check box is unavailable, see the More Information section for additional details about this setting.
 
 ## More information
 
@@ -75,7 +75,7 @@ If the **Allow Office to connect to the Internet** check box is unavailable, it 
 DWORD: UseOnlineContent  
 Value:
 
-0  - Do not allow user to access Office resources on the Internet (check box is cleared and unavailable).  
+0  - Don't allow user to access Office resources on the Internet (check box is cleared and unavailable).  
 1  - Allows the user to opt in to access of Office resources on the Internet (check box is cleared).  
 2  - (Default) Allows the user to access Office resources on the Internet (check box is selected).
 
@@ -88,11 +88,11 @@ The **Online Content Options** policy setting is located under the Microsoft Off
 
 :::image type="content" source="media/password-prompt-at-every-start-or-cannot-create-profile/online-content-options-policy-setting.png" alt-text="Screenshot of Online Content Options policy setting." border="false":::
 
-You can set this to **Not Configured** or **Enabled** and then select the **Allow Office to connect to the Internet** online content option.
+You can set this setting to **Not Configured** or **Enabled** and then select the **Allow Office to connect to the Internet** online content option.
 
 :::image type="content" source="media/password-prompt-at-every-start-or-cannot-create-profile/onlion-content-options-setting-details.png" alt-text="Screenshot of Online Content Options policy setting details, setting to Not Configured or Enabled and selecting the Allow Office to connect to the Internet option." border="false":::
 
-When you enable the Allow Office to connect to the Internet setting, this affects other features in Office. These include the following:
+When you enable the Allow Office to connect to the Internet setting, it affects other features in Office, including:
 
 - Insertion of Online Pictures is enabled.
 - Insertion of Online Video is enabled.
