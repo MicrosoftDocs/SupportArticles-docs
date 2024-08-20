@@ -36,7 +36,7 @@ This article describes the methods to verify the installation of Microsoft Excha
 - [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
 - [Can't sign in to OWA or EAC](#cant-sign-in-to-owa-or-eac)
 - [Can't access EAC or OWA after Exchange installation](#cant-access-eac-or-owa-after-exchange-installation)
-- [Exchange Server setup doesn't run](#exchange-server-setup-does-not-run)
+- [Exchange Server setup doesn't run](#exchange-server-setup-doesnt-run)
 - [Upgrade patch can't be installed](#upgrade-patch-cant-be-installed)
 - [Installation fails due to services not stopping](#installation-fails-due-to-services-not-stopping)
 - [Services don't start after SU installation](#services-dont-start-after-su-installation)
