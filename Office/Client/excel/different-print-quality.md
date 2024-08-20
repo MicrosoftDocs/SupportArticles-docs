@@ -3,7 +3,6 @@ title: Unexpected behavior when using different print quality for Excel sheets
 description: Provides a workaround for unexpected behavior when you use different print quality for sheets in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

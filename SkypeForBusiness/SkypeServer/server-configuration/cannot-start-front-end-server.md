@@ -3,7 +3,6 @@ title: Can't start a front-end server
 description: Fixes an issue in which you cannot start a front-end server of a server pool in a Lync Server 2013 environment. This issue occurs when the SQL Server transaction log reaches maximum capacity.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

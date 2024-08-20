@@ -4,7 +4,6 @@ description: Describes techniques on how to determine and fix Microsoft Office i
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

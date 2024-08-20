@@ -3,7 +3,6 @@ title: How to install and activate Office Professional Plus 2013 on a terminal s
 description: Provides information about how MSDN and TechNet subscription customers can install and activate Office Professional Plus 2013 on a terminal server.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

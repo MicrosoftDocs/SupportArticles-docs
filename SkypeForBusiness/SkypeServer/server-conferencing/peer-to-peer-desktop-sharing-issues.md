@@ -3,7 +3,6 @@ title: Peer-to-Peer desktop sharing issues for Skype for Business for iOS users
 description: Describes problems that are encountered by Skype for Business for iOS users when a desktop sharing session is started for them in a P2P conversation.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

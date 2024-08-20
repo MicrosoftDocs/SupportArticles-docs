@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Client Connectivity
   - Exchange Online
@@ -36,7 +35,7 @@ This issue may occur if the address book in Outlook isn't updated.
 
 To resolve this issue, follow these steps:
 
-1. Update the address book in Outlook. To do this, follow these steps.
+1. Update the address book in Outlook by following these steps:
 
    1. On the Office ribbon, select the **Send/Receive** tab, select the down arrow next to **Send/Receive Groups**, and then select **Download Address Book**.
 
@@ -48,9 +47,9 @@ To resolve this issue, follow these steps:
 
    3. Test to see whether the issue is resolved by sending an email message as the distribution group. When you create the message, use the global address list (GAL) to populate the **From** field.
 
-      If doing this doesn't resolve the issue, go to step 2.
+      If it doesn't resolve the issue, go to step 2.
 
-2. Delete all files and folders in the Offline Address Books folder. To do this, follow these steps:
+2. Delete all files and folders in the Offline Address Books folder. To do so, follow these steps:
 
    1. Exit Outlook.
    2. Locate the Offline Address Books folder. In Windows 8 and Windows 7, the folder is located along the following path:
@@ -62,7 +61,7 @@ To resolve this issue, follow these steps:
       > [!NOTE]
       > The folder may be hidden. To unhide it, select **Start**, type folder options in the search box, select **Folder Options**, select the **View** tab, select **Show hidden files, folders, and drives**, and then select **OK**.
 
-   3. Delete the contents of the Offline Address Books folder. (The contents of the folder will be re-created when you restart Outlook).
+   3. Delete the contents of the Offline Address Books folder. (The contents of the folder are re-created when you restart Outlook).
    4. Start Outlook, and then test to see whether the issue is resolved by sending an email message as the distribution group.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -3,7 +3,6 @@ title: Apply different passwords or permissions to separate ranges in workbooks
 description: Describes how to apply different passwords or permissions to separate ranges in workbooks in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

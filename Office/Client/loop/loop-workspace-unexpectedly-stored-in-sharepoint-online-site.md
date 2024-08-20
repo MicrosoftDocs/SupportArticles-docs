@@ -4,7 +4,6 @@ description: Describes an issue in which Loop workspaces are stored in SharePoin
 author: helenclu
 ms.reviewer: derekliddell; meerak
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

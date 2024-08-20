@@ -3,7 +3,6 @@ title: Registry keys that control the File Repair feature
 description: Explains how to open an Excel workbook to repair or recover the data.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

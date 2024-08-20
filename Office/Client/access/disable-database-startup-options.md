@@ -3,7 +3,6 @@ title: Enforce or disable startup options in database
 description: Explains how to disable the functionality of the SHIFT key that permits you to bypass the startup options. Explains how to enforce the startup options in an Access database. Requires basic macro, coding, and interoperability skills.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

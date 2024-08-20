@@ -4,7 +4,6 @@ description: Describes an issue in which Outlook doesn't show a reminder for a G
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Calendar\Reminders
   - Outlook for Windows

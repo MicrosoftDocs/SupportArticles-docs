@@ -3,7 +3,6 @@ title: Excel doesn't shut down when automating from JScript
 description: Excel stays in memory after calling the Quit method until you close Internet Explorer or navigate to another page. This issue occurs when you automate Excel from Microsoft JScript.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 

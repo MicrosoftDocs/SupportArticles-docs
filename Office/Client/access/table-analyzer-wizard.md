@@ -3,7 +3,6 @@ title: How Table Analyzer Wizard works
 description: Provides information about how to run the Table Analyzer Wizard and how the Table Analyzer Wizard works.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

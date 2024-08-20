@@ -3,7 +3,6 @@ title: Access Denied when you connect to Microsoft 365, Azure, or Intune
 description: Describes an issue in which you can't connect to a Microsoft cloud service such as Microsoft 365, Azure, or Microsoft Intune by using the connect-MSOLService cmdlet in the Azure Active Directory module for Windows PowerShell.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150

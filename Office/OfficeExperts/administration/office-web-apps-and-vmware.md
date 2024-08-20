@@ -3,7 +3,6 @@ title: Microsoft Office Online and VMware
 description: This article describes some issues that occur when installing Microsoft Offices Online or Office Online Server on a nonsystem Drive by using VMware, and provide solutions.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

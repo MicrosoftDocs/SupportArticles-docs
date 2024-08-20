@@ -4,7 +4,6 @@ description: Explains how to force Outlook to use the online Global Address List
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:People or Contacts\Resolving email addresses and ambiguous name resolution
   - CSSTroubleshoot

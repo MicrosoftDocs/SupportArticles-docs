@@ -4,7 +4,6 @@ description: Describes an issue in which Outlook cannot connect to a Microsoft 3
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Product Stability, startup or Shutdown and perform\Network disconnects, password or credentials prompt
   - CSSTroubleshoot

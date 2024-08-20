@@ -3,7 +3,6 @@ title: Services display incorrectly in Research pane
 description: Resolves the issues in which a service is listed two times when you view the list of available services, and a service returns no result when you query that service in the Research pane.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
