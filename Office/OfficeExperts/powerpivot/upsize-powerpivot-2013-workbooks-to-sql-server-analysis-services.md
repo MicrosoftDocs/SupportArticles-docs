@@ -95,7 +95,7 @@ The only option to have a PowerPoint workbook larger than 2 GB is to upsize or o
 
    :::image type="content" source="media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/model-bim-file.png" alt-text="Screenshot shows the Model.bim file in Visual Studio." border="false":::
 
-1. Select the **Existing Connections** toolbar button and review any existing connection(s) included in the model. The domain account that's used in step 1 should read access to all the data sources used.
+1. Select the **Existing Connections** toolbar button and review any existing connection(s) included in the model. The domain account that's used in step 1 must have Read access to all the data sources used.
 
    :::image type="content" source="media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/existing-connections.png" alt-text="Screenshot to review the existing connections in the model." border="false":::
 1. Deploy the project to the server through selecting **Build** > **Deploy**. You should get the **Success** message.
