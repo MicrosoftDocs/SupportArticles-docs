@@ -1,11 +1,10 @@
 ---
-title: PowerPivot does not work with .atomsvc files
+title: PowerPivot doesn't work with .atomsvc files
 description: Describes a known issue in which PowerPivot doesn't work with .atomsvc files.
 author: helenclu
 ms.author: luche
 ms.reviewer: warrenr
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -18,7 +17,7 @@ appliesto:
 ms.date: 06/06/2024
 ---
 
-# PowerPivot does not work with .atomsvc files
+# PowerPivot doesn't work with .atomsvc files
 
 This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
 
@@ -29,7 +28,7 @@ When you try to create a PowerPivot data model in a Microsoft Excel workbook by 
 > The payload kind 'BinaryValue' of the given data feed is not supported.  
 > Failed to connect to the server. Reason: The payload kind 'BinaryValue' of the given data feed is not supported.
 
-This is a known issue.
+This error is a known issue.
 
 ## Workaround
 

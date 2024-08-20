@@ -4,7 +4,6 @@ description: Provides a resolution for the errors HTTP 0, HTTP 404, and HTTP 500
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:People or Contacts\SharePoint contacts
   - CSSTroubleshoot
