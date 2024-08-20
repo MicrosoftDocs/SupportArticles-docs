@@ -4,7 +4,6 @@ description: Resolve common search errors in Microsoft Purview eDiscovery (Stand
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: jkushwah, lindabr, meerak
 ms.custom: 
   - Exchange Online

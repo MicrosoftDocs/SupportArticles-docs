@@ -3,7 +3,6 @@ title: Office End User License Agreement always appears
 description: Discusses the behavior where you must accept the Office End User License Agreement every time that you start an Office  program.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -4,7 +4,6 @@ description: You can't remove mailbox permissions by using the Remove-ADPermissi
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 

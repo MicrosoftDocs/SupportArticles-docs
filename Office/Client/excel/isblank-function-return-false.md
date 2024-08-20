@@ -3,7 +3,6 @@ title: The result is false when you use the ISBLANK function
 description: Provides a workaround for the false result when you use the ISBLANK() function in a Microsoft Excel spreadsheet.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

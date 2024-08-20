@@ -3,7 +3,6 @@ title: UCWA mobility web service does not accept connections from mobile clients
 description: Describes an issue in which unscheduled and unsynchronized recycling processes for the LyncUcwa application pool cause connectivity issues for existing and new Lync 2013 mobile client sessions. Workarounds are provided.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

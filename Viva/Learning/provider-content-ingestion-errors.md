@@ -12,7 +12,6 @@ ms.service: viva-learning
 search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
-localization_priority: Normal
 ---
 
 # Content ingestion errors when adding a content provider

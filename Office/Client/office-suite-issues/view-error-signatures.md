@@ -3,7 +3,6 @@ title: View error signatures if Office programs experience a serious error and q
 description: Explains how to view the error signatures when an Office program experiences a serious error and quits.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

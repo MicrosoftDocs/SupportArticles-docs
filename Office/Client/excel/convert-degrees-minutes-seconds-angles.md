@@ -3,7 +3,6 @@ title: Convert degrees/minutes/seconds angles to or from decimal angles
 description: Provides a custom function that you can use to convert a degree value that is stored in decimal format to DMS stored in text format, or you can use the custom function to convert DMS to a degree value that is stored in decimal format.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

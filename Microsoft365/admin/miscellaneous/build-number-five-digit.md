@@ -3,7 +3,6 @@ title: Microsoft 365 is changing its build numbers to a five-digit format
 description: Describes that the format of build numbers for Microsoft 365 is changing from four digits to five digits in June 2018.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

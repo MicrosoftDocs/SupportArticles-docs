@@ -3,7 +3,6 @@ title: Lync Server Move-CsUser and Move-CsLegacyUser commands fail
 description: Lync Server Move-CsUser and Move-CsLegacyUser commands fail. Provides a solution for this issue.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
