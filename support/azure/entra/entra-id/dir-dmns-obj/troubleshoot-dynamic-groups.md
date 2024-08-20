@@ -35,7 +35,7 @@ Common issues in creating a dynamic group or rule:
 
 - You can't find the attribute to create a rule. See [Create a dynamic membership rule](#7).
 
-- You receive a **"max groups allowed"** error when trying to create a Dynamic Group in PowerShell: You have reached 5,000 groups, the maximum limit for Dynamic groups in your tenant. To create new Dynamic groups, first delete existing Dynamic groups. There's no way to increase the maximum limit.
+- You receive a **"max groups allowed"** error when trying to create a Dynamic Group in PowerShell: You have reached 15,000 groups, the maximum limit for Dynamic groups in your tenant. To create new Dynamic groups, first delete existing Dynamic groups. There's no way to increase the maximum limit.
 
 ### Dynamic membership update issues
 
