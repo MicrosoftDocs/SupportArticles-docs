@@ -182,7 +182,7 @@ To open the temporary copy of the drawing file, follow these steps:
 
     1. Select **Start**, and then select **Search**.   
     2. Select **All files and folders**.   
-    3. In the **All or part of the file name** box, type` ~$$**FileName**.~vsd`, and then select **Search**.   
+    3. In the **All or part of the file name** box, type `~$$**FileName**.~vsd`, and then select **Search**.   
    
 3. Change the extension of the temporary copy of the drawing file to .vsd. Follow these steps:
 
@@ -230,7 +230,7 @@ If you're running Microsoft Windows Millennium Edition (Me) or Microsoft Windows
 3. Select the **Previous Versions** tab, give some time for the list to populate.
 4. Select an older version of the file.
 5. Select **Open**.
-6. If the file opens successfully, from the **File** menu select **Save As** and save a copy of the file.
+6. If the file opens successfully, from the **File** menu, select **Save As** and save a copy of the file.
 
 ### Methods to try if you can open the drawing
 
@@ -288,9 +288,9 @@ To configure the **AutoRecover** setting in Visio:
 
 1. Start Visio.   
 2. On the **Tools** menu, select **Options**.   
-3. select the **Save** tab or the **Save/Open** tab.   
+3. Select the **Save** tab or the **Save/Open** tab.   
 4. Select the **Save AutoRecover info every** check box, and then specify the time in minutes that you want. By default, the **AutoRecover** setting is set for 10 minutes.    
-5. select **OK**.   
+5. Select **OK**.
 
 #### Make sure that the power supply is consistent
 
