@@ -181,8 +181,8 @@ Because Performance Monitor is a local tool, we can only get basic information f
 | Primary counters                             | Healthy             | Warning | Critical |
 | :------------------------------------------- | :------------------ | :------ | :------- |
 | **\\Network Interface(*)\\Bytes Total/sec**    | < 50%               | 50–80%  | > 80%    |
-| **\\Network Interface(*)\\Bytes Sent/sec**    | Expected behavior?  |         |          |
-| **\\Network Interface(*)\\Bytes Received/sec** | Expected behavior?  |         |          |
+| **\\Network Interface(*)\\Bytes Sent/sec**    | - | - | - |
+| **\\Network Interface(*)\\Bytes Received/sec** | - | - | - |
 
 > [!NOTE]
 > The values are related to the speed of the network card, and you need to do the calculation. When doing so, remember that the network speed is measured in bits, and 8 bits = 1 byte. Therefore, if you have a 1 GB network card, your throughput can reach 125 MB/sec.
