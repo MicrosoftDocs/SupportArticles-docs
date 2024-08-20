@@ -293,7 +293,7 @@ Once the VM is successfully upgraded, perform the following tasks:
        sudo dnf remove $(rpm -qa | grep \.el[67] | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
        ```
 
-3. Remove remaining RHEL 7 modules kernel directories.
+3. Remove remaining RHEL 7 weak modules from old kernel.
 
    1. Determine old kernel versions:
 
