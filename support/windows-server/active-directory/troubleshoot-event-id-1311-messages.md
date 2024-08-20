@@ -144,11 +144,12 @@ The `repadmin /showism` command is useful for locating improperly configured sit
 > 0,    1,    2  
 > ( 0) CN=US-NC,CN=Sites,CN=Configuration,DC=corp,DC=com  0:0:0, 100:15:0, 200:15:0  
 > ( 1) CN=US-TX,CN=Sites,CN=Configuration,DC=corp,DC=com
-     100:15:0, 0:0:0, 100:15:0  
-> ( 2) CN=US-WA,CN=Sites,CN=Configuration,DC=corp,DC=com
-     200:15:0, 100:15:0, 0:0:0
-
-> [!NOTE]
+```
+ 100:15:0, 0:0:0, 100:15:0  
+```> ( 2) CN=US-WA,CN=Sites,CN=Configuration,DC=corp,DC=com
+```
+ 200:15:0, 100:15:0, 0:0:0
+```> [!NOTE]
 > Unlike other arguments for the repadmin command, you cannot run the `repadmin /showism` command from a remote computer. You must run the `repadmin /showism` command from the console of the domain controller that you want to examine (in most cases, this is the ISTG domain controller).
 
 For each site that is configured for IP-based replication or for SMTP-based replication (not shown), the `repadmin /showism` command returns a site matrix that represents the connections to all the sites in the forest. Each entry in the site matrix contains three numbers delimited by colons (:) that represent the cost, replication interval, and options for each replication link to another site in the Active Directory forest. The numbers in an entry appear in the following order:  
@@ -194,7 +195,7 @@ In the following `repadmin /showism` example, site link bridging is enabled in t
 
 ### Detect and remove preferred bridgeheads
 
-Because correct bridgehead selection is difficult in multi-domain forests, and because Windows 2000 has good fail-over logic in case a KCC-selected bridgehead goes offline, Microsoft strongly recommends that you don't define preferred bridgehead servers.
+Because correct bridgehead selection is difficult in multi-domain forests, and because DCs have good fail-over logic in case a KCC-selected bridgehead goes offline, Microsoft strongly recommends that you don't define preferred bridgehead servers.
 
 To search for preferred bridgehead servers:
 
@@ -203,14 +204,19 @@ To search for preferred bridgehead servers:
     ObjectClass: server  
     Attributes: bridgeheadTransportList
 
-2. Use the FINDSTR command against an LDIFDE export file from the CN=Sites,CN=Configuration container:  
+1. Use the FINDSTR command against an LDIFDE export file from the CN=Sites,CN=Configuration container:  
       LDIFDE CN=SITES,CN=CONFIGURATION,DC=\<Root domain in forest> SITEDUMP.LDF  
       FINDSTR /i "bridgeheadTransportList" SITEDUMP.LDF
 
     If the search returns any results, note the name of server in the Domain Name path in which the bridgeheadTransportList attribute is populated.
 
-    If you find any preferred bridgehead servers, use the Site and Services snap-in to remove them, and then wait two times the maximum replication interval in the forest. If event ID 1311 messages continue to be logged, continue to the next method.
-
+    If you find any preferred bridgehead servers, use the Site and Services snap-in to remove them:  
+   Navigate to the site where the Domain Controller reside  
+   Right-click on the Domain Controller and click on Properties  
+   On the lower section of the 'General' tab, remove the IP/SMTP from the list of the 'The server is a preferred bridgehead server for the following transports' box.  
+   Click 'OK'  
+   Wait two times the maximum replication interval in the forest. If event ID 1311 messages continue to be logged, continue to the next method.
+   
 ### Resolve Active Directory replication failures in the forest
 
 Active Directory replication requires the transitive replication of all naming contexts in the forest to all domain controllers that replicate a common partition.
@@ -261,16 +267,16 @@ The following example shows sample output from the `repadmin /failcache` command
 >
 > ==== KCC LINK FAILURES > ==================================  
 > USA-WA-24\C-24-DC03
-        DC object GUID: 134244cd-26be-4944-82a7-ac3eb74fc02f
-        No Failures.
-    USA-WA-24\B-24-DC02
-        DC object GUID: 21b050d6-33b5-424d-aa9b-060fe209233d
-        No Failures.
-    USA-WA-24\Z-24-DC-05
-        DC object GUID: bfb3b008-3849-4e5d-81d8-53dbb76d587a
-        No Failures.
-
-### Determine if source servers are overloaded
+```
+    DC object GUID: 134244cd-26be-4944-82a7-ac3eb74fc02f
+    No Failures.
+USA-WA-24\B-24-DC02
+    DC object GUID: 21b050d6-33b5-424d-aa9b-060fe209233d
+    No Failures.
+USA-WA-24\Z-24-DC-05
+    DC object GUID: bfb3b008-3849-4e5d-81d8-53dbb76d587a
+    No Failures.
+```### Determine if source servers are overloaded
 
 A domain controller that is overloaded with a large number of direct replication partners or a replication schedule that is overly aggressive can create a backlog in which some partners never receive changes from a hub domain controller. In the output from the `repadmin /showreps` command, partner domain controllers of overloaded source domain controllers appear with the *at never* status.
 
@@ -322,50 +328,7 @@ If KCC builds a different path around a site-to-site connection failure, but it 
 
 - Inter-site topology generator (ISTG): For each Active Directory site, a single server, known as the ISTG, is nominated to build the inter-site replication topology.  
 
-- Uncovered Site: An Active Directory site defined in the Sites and Services snap-in that does not currently contain any Windows 2000 domain controllers. An uncovered site may be waiting for its domain controller to arrive from a staging site. Additionally, a site may be defined as uncovered to provide site preference for client operations.
-
-## Truncated output from the REPADMIN /SHOWISM command
-
-In some environments, the `repadmin /showism` command from build 2195 of Windows quits prematurely during execution and its output is truncated because of an internal error. For example, the top portion of this successful `/SHOWISM` output from a domain controller in the `corp.com` domain indicates that 128 sites are defined (0-127).
-
-> ==== TRANSPORT CN=IP,CN=Inter-Site Transports,CN=Sites,CN=Configuration,DC=corp,DC=com
->
-> CONNECTIVITY INFORMATION FOR 128 SITES: ====  
-        0,    1,    2,    3,    4,    5,    6,    7,    8,    9,   10,   11,   12,   13,
->
-> 14,   15,   16,   17,   18,   19,   20,   21,   22,   23,   24,   25,   26,   27,   28,
->
-> 29,   30,   31,   32,   33,   34,   35,   36,   37,   38,   39,   40,   41,   42,   43,
->
-> 44,   45,   46,   47,   48,   49,   50,   51,   52,   53,   54,   55,   56,   57,   58,
->
-> 59,   60,   61,   62,   63,   64,   65,   66,   67,   68,   69,   70,   71,   72,   73,
->
-> 74,   75,   76,   77,   78,   79,   80,   81,   82,   83,   84,   85,   86,   87,   88,
->
-> 89,   90,   91,   92,   93,   94,   95,   96,   97,   98,   99,  100,  101,  102,  103,  
->
-> 104,  105,  106,  107,  108,  109,  110,  111,  112,  113,  114,  115,  116,  117,  118,  
->
-> 119,  120,  121,  122,  123,  124,  125,  126,  127
-
-In the following example, the `repadmin /showism` output stops in the middle of the line for site 115, CN=HeadQuarters.
-
-> All DCs in site CN=Headquarters,CN=Sites,CN=Configuration,DC=corp,DC=com (with trans &amp; hosting NC) are bridgehead candidates.
-(115) CN=headquarters,CN=Sites,CN=Configuration,DC=corp,DC=com
-     -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0,
->
-> -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0,
->
-> -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0,
->
-> -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0,
->
-> -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0,
->
-> -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, 100:0:0, 150:0:0, 150:0:0, 100:0:0,
-
-To resolve this truncation problem, obtain an updated version of the Repadmin.exe file from Microsoft Product Support Services (PSS).
+- Uncovered Site: An Active Directory site defined in the Sites and Services snap-in that does not currently contain any domain controllers. An uncovered site may be waiting for its domain controller to arrive from a staging site. Additionally, a site may be defined as uncovered to provide site preference for client operations.
 
 ## Data collection
 
