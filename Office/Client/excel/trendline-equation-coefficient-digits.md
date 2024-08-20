@@ -3,7 +3,6 @@ title: Display more digits in trendline equation coefficients
 description: Describes how to display more digits in trendline equation coefficients in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

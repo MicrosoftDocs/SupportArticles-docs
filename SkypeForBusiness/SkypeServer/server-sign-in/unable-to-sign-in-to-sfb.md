@@ -5,7 +5,6 @@ author: simonxjx
 ms.author: v-six
 ms.reviewer: corbinm
 manager: dcscontentpm
-localization_priority: Normal
 audience: Admin
 search.appverid: 
   - MET150

@@ -4,7 +4,6 @@ description: Discusses how to resolve common issues when users try to download a
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   -sap:Teams Admin
   - CI 187488

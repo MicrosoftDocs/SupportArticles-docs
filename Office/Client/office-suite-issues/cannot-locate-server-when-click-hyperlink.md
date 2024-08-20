@@ -4,7 +4,6 @@ description: Describes issues when you select hyperlinks in Office. Provides sol
 author: helenclu
 ms.date: 06/06/2024
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

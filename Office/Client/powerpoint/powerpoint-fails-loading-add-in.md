@@ -3,7 +3,6 @@ title: PowerPoint cannot load an add-in when you lower macro security level
 description: Describes an issue in which PowerPoint can't load an add-in when you lower the level of macro security.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

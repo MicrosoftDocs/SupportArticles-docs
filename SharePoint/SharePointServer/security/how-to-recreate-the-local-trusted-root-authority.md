@@ -3,7 +3,6 @@ title: How to re-create the local Trusted Root Authority
 description: Describes that how to re-create the local Trusted Root Authority.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

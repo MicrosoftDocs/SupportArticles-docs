@@ -3,7 +3,6 @@ title: Offer updates for Office programs that you do not have installed
 description: Describes how Microsoft Update or Windows Update may offer updates to programs that you do not have installed on your computer. We provide steps to resolve this issue.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 

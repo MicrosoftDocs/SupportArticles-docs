@@ -4,7 +4,6 @@ description: Describes an issue that prevents you from opening a shared folder i
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - CSSTroubleshoot

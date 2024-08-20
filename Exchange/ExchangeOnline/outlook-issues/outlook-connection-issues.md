@@ -27,7 +27,6 @@ keywords:
   - Outlook doesn't work
   - Outlook 365 doesn't work
   - fix Microsoft 365
-localization_priority: Normal
 manager: dcscontentpm
 appliesto: 
   - Exchange Online

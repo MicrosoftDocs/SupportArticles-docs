@@ -3,7 +3,6 @@ title: Use the left, right, mid, and len functions in visual basic for applicati
 description: Describes how to use the left, right, mid, and len functions in Visual Basic for Applications in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

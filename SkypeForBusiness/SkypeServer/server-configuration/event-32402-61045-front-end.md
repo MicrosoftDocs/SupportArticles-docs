@@ -3,7 +3,6 @@ title: Event IDs 32402, 61045 are logged in Lync Server 2013 Front End servers
 description: Discusses that Event IDs 32402, 61045 are logged in Lync Server 2013 Front End servers that are installed in Windows Server 2012 R2. Provides a workaround.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

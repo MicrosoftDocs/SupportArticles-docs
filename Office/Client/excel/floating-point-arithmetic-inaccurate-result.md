@@ -3,7 +3,6 @@ title: Floating-point arithmetic may give inaccurate result in Excel
 description: Discusses that floating-point arithmetic may give inaccurate results in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

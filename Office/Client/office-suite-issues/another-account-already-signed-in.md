@@ -3,7 +3,6 @@ title: Another account is already signed in computer when signing in to Office 2
 description: Fixes an error message that occurs when you try to sign in to an Office 2013 app by using Microsoft 365 credentials.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -7,7 +7,6 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.service: viva-engage
-localization_priority: Normal
 search.appverid:
  - MET150
 ms.date: 12/20/2023

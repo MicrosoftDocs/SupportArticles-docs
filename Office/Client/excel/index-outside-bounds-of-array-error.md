@@ -9,7 +9,6 @@ ms.topic: troubleshooting
 ms.custom: 
   - Editing\Data\ImportExport
   - CSSTroubleshoot
-localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 

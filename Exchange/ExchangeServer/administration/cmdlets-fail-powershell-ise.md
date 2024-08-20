@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: kartik, v-six
 ms.custom: 
   - sap:OWA  And Exchange Admin Center\Issues connecting to Exchange Management Shell

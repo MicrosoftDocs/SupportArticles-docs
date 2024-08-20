@@ -3,7 +3,6 @@ title: GetObject and CreateObject functions in VBA
 description: Discusses the different behaviors that occur when you use the GetObject and CreateObject functions with various versions of Microsoft Office applications.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

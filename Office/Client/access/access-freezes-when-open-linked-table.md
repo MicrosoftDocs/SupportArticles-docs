@@ -8,7 +8,6 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-localization_priority: Normal
 ms.reviewer: suesch
 search.appverid: 
   - MET150

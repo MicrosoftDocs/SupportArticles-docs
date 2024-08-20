@@ -3,7 +3,6 @@ title: Extra Access report page prints
 description: Printing report results in extra page when Group Footer Force New Page property set to After Section.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

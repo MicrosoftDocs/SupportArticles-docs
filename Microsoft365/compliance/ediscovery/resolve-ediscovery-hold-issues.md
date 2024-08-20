@@ -9,7 +9,6 @@ author: simonxjx
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.collection: M365-security-compliance
 search.appverid: 
   - MOE150

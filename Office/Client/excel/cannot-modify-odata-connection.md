@@ -3,7 +3,6 @@ title: Cannot modify the oData connections in a PowerPivot workbook
 description: Describes an issue in which you receive error message Some properties cannot be changed because the connection was modified using the PowerPivot add-in. When you try to modify the oData connections in a Microsoft Excel 2103 PowerPivot workbook.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -3,7 +3,6 @@ title: No delegation relationship in Lync 2013 (Skype for Business)
 description: Fixes an issue that prevents you from being displayed as a delegate in Lync 2013 (Skype for Business) after you are added by the delegator in Outlook 2013. Therefore, you can't create a meeting. A resolution is provided.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

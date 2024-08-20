@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CI 110828, CI 114761, CI 115829, CI 116348, CI 117120
   - CSSTroubleshoot
