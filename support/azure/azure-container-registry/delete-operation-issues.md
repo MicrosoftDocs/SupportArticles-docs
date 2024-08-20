@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot Azure Container Registry delete operation issues
 description: Discusses some issues you might come across during the ACR deletion process.
-ms.date: 08/13/2024
-ms.reviewer: chiragpa, v-rekhanain, v-weizhu
+ms.date: 08/20/2024
+ms.reviewer: kukondep, chiragpa, v-rekhanain, v-weizhu
 ms.service: azure-container-instances
 ms.custom: sap:Delete images from registry
 ---
 # Troubleshoot Azure Container Registry delete operation issues
 
-Azure Container Registry (ACR) is a private registry service for building, storing, and managing container images and related artifacts. To maintain the registry healthy and reduce storage cost, you might delete the images/artifacts and repositories as per requirement.
+Azure Container Registry (ACR) is a private registry service for building, storing, and managing container images and related artifacts. To maintain the registry health and reduce storage cost, you might delete the images/artifacts and repositories as per requirement.
 
 This article helps you troubleshoot some issues that occur when you delete images/artifacts or repositories.
 
@@ -26,7 +26,7 @@ When you try to delete an empty repository from a container registry, an error l
 
 So, we don't recommend emptying the repository completely. When you try to delete the repository, there might be some orphaned metadata left over from the original deletion, which causes deletion errors. Deleting a repository deletes all the images in the repository, including all tags, unique layers, and manifests. Deleting the entire repository is always simpler than removing individual images.
 
-We recommend using a test or prod repository, where you can delete/create the test repository as per the requirement.
+To avoid this issue, we recommend using a test or prod repository. In this case, you can delete/create the test repository as per the requirement.
 
 ## Issue 2: Unable to delete a container registry associated with private endpoints
 
