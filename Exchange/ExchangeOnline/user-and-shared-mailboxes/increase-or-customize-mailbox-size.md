@@ -4,7 +4,6 @@ description: Describes how to make space in an Exchange Online mailbox that is f
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Administrator Tasks
   - CSSTroubleshoot

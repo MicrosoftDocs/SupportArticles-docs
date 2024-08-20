@@ -3,7 +3,6 @@ title: Unable to start PowerPoint for Mac
 description: Fixes an issue in which you cannot start PowerPoint for Mac with the error Microsoft PowerPoint has encountered a problem and needs to close.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

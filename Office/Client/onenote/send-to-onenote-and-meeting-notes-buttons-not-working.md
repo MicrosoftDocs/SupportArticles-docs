@@ -4,7 +4,6 @@ description: Discusses that the Send to OneNote and Meeting Notes buttons in Out
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Outlook\SendToOneNote

@@ -4,7 +4,6 @@ description: You get an error when adding a .pst or .ost file in Outlook 2016 ve
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Product Stability, startup or Shutdown and perform\Missing data file (.pst or .ost) error
   - CSSTroubleshoot

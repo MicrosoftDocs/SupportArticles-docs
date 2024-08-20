@@ -3,7 +3,6 @@ title: Too Many Fields Defined error
 description: Explains that you may receive an unexpected error message when you try to save a table after adding a new field or changing the properties of an existing field since the internal column count to track the number of fields in the table has reached 255.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

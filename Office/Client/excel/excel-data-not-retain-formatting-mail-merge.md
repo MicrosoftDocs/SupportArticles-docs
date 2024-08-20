@@ -4,7 +4,6 @@ description: This article provides two resolutions for the problem where data in
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - Editing\MailMerge
   - CSSTroubleshoot

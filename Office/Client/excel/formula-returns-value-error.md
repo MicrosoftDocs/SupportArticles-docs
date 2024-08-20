@@ -3,7 +3,6 @@ title: Formula returns #VALUE! error
 description: Fixes an issue in which SUMIF, COUNTIF, and COUNTBLANK functions return #VALUE! error.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

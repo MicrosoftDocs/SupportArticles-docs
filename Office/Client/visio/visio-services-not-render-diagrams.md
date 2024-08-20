@@ -3,7 +3,6 @@ title: Visio Services does not render diagrams
 description: Provides a workaround for a problem in which Visio Services does not render diagrams. This problem occurs when the diagrams are hosted on servers that have IDNs.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

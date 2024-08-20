@@ -3,7 +3,6 @@ title: Outlook continually prompts for password when you try to connect to Micro
 description: Describes an Outlook connection issue referenced in an OffCAT diagnostic rule. Provides a resolution.
 author: cloud-writer
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

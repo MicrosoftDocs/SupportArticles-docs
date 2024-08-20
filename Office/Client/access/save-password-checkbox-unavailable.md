@@ -9,7 +9,6 @@ ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
   - CI 162524
-localization_priority: Normal
 ms.reviewer: 
 search.appverid: 
   - MET150

@@ -3,7 +3,6 @@ title: Expressions to count yes, no, and other responses
 description: Describes how to use the expressions to count yes, no, and other responses in Access.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

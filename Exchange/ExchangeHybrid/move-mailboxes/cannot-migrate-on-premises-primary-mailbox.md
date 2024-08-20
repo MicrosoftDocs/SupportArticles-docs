@@ -6,7 +6,6 @@ ms.topic: troubleshooting
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - sap:Migration
   - Exchange Online

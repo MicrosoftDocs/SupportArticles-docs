@@ -3,7 +3,6 @@ title: Excel works with two-digit year numbers
 description: Describes how Microsoft Excel determines the century when you  type a date using a two-digit year number.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

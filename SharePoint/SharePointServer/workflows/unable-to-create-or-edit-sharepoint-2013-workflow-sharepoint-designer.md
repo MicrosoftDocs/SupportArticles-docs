@@ -4,7 +4,6 @@ description: Resolves a situation where you cannot create or edit a SharePoint 2
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 

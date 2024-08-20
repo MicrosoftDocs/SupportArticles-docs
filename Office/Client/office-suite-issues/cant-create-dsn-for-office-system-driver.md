@@ -3,7 +3,6 @@ title: Can't create DSN for Office System Driver
 description: Describes an issue in which the drivers aren't visible when you attempt to create ODBC connections that utilize the Microsoft Office System Driver, such as connections to Access or Excel, on a 64-bit Operating system like Windows 7.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 

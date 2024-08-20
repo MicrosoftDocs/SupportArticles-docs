@@ -3,7 +3,6 @@ title: No Office entitlement found on device
 description: This article is for OA3.0 enabled devices with Office OOBE setup to check for an entitlement at startup.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 

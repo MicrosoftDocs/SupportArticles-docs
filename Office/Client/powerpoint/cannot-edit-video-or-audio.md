@@ -3,7 +3,6 @@ title: Cannot edit video or audio if Desktop Experience is not installed
 description: Describes an issue where media editing options such as Insert Video or Insert Audio are unavailable within PowerPoint on a server if Desktop Experience is not installed.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

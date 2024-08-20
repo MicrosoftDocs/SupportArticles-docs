@@ -4,7 +4,6 @@ description: Describes an issue in which you receive an error message when you t
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Migration
   - CSSTroubleshoot

@@ -6,7 +6,6 @@ manager: dcscontentpm
 ms.date: 01/24/2024
 audience: Admin
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.collection: 
   - exchange-online
 search.appverid: 

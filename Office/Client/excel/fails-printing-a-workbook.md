@@ -3,7 +3,6 @@ title: Margins do not fit page size when printing an Excel workbook
 description: Describes why you may receive an error message when you print an Excel workbook or when you use the print preview feature. A workaround is provided.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

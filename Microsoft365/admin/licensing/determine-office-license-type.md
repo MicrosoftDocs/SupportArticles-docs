@@ -6,7 +6,6 @@ manager: dcscontentpm
 ms.date: 04/02/2021
 audience: Admin
 ms.topic: troubleshooting
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150
