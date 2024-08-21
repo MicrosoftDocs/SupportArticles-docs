@@ -4,7 +4,6 @@ description: Fix an issue in which you receive a To see this content, sign in to
 author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

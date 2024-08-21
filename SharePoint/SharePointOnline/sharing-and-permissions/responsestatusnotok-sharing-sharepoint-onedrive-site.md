@@ -2,7 +2,6 @@
 title: ResponseStatusNotOK when sharing a SharePoint or OneDrive site
 description: Fix the ResponseStatusNotOK error when users in your organization try to share a site with external users. This error is caused by restrictions in B2B collaboration settings.
 manager: dcscontentpm
-localization_priority: Normal
 ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting

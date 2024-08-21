@@ -4,7 +4,6 @@ description: Describes an issue that may occur when the OneNote 2007 or OneNote 
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Developer Issues\Add-in errors
   - CSSTroubleshoot

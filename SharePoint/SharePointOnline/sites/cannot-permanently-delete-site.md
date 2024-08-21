@@ -4,7 +4,6 @@ description: Provides a resolution to delete a site from the SharePoint admin ce
 author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

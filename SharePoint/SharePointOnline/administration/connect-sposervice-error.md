@@ -1,12 +1,11 @@
 ---
 title: Can't connect to SharePoint Online
-description: Fixes an issue in which you receive a "Could not connect to SharePoint Online" error message when you use the Connect-SPOService cmdlet in SharePoint Online Management Shell.
+description: Fixes an issue in which you receive an error message when you use the Connect-SPOService cmdlet.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Sites\Other
   - CI 166999
@@ -17,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 12/17/2023
 ---
-# "Could not connect to SharePoint Online" error when you run Connect-SPOService
+# Can't connect to SharePoint Online when you run Connect-SPOService
 
 ## Symptoms
 
@@ -31,7 +30,7 @@ By default, the `Connect-SPOService` cmdlet uses the legacy authentication. This
 
 ## Resolution
 
-To resolve this issue, use the `ModernAuth` parameter that's included in SharePoint Online Management Shell version 16.0.22601.12000 and later versions. This parameter must be used together with the `AuthenticationUrl` parameter.  
+To resolve this issue, use the `ModernAuth` parameter included in SharePoint Online Management Shell version 16.0.22601.12000 and later versions. This parameter must be used together with the `AuthenticationUrl` parameter.  
 
 Here's an example of the cmdlet:
 
