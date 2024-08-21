@@ -4,7 +4,6 @@ description: Describes how to access your public folders in multiple versions of
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Exchange Mailbox Accounts\Public folders
   - Outlook for Windows
