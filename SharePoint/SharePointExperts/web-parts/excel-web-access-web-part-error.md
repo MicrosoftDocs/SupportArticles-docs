@@ -4,7 +4,6 @@ description: This article describes SharePoint 2016 Microsoft Excel Online Web P
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

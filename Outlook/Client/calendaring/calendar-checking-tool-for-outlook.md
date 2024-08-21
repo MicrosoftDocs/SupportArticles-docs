@@ -4,7 +4,6 @@ description: Describes the Calendar Checking Tool for Outlook (CalCheck), includ
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Calendar\Other
   - CSSTroubleshoot

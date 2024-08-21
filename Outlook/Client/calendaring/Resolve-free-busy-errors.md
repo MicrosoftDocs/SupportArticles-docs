@@ -4,7 +4,6 @@ description: Provides troubleshooting steps for errors that a user might encount
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Calendar\Working with meetings or appointments
   - Outlook for Windows

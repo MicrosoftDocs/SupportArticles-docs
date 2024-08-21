@@ -3,7 +3,6 @@ title: Info about dragging files into SharePoint libraries by using a web browse
 description: SharePoint that use the SharePoint 2013 experience version has a new feature that lets you drag files into document libraries by using a web browser.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

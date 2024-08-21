@@ -3,7 +3,6 @@ title: Operating parameter limitations and specifications in Word
 description: Describes operating parameter limitations and specifications in Word.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

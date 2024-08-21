@@ -3,7 +3,6 @@ title: Can't open an Access desktop database in SharePoint Online
 description: Fix an issue in which you receive the error Could not execute query; could not find linked table when trying to open an Access desktop database in SharePoint Online.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

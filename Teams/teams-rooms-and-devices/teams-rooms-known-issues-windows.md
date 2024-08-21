@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 07/31/2024
+ms.date: 08/20/2024
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -51,6 +51,7 @@ ms.date: 07/31/2024
 |QR code to join meetings reappears after being disabled.|You have disabled the QR code that is displayed on the device console and in Front of Room displays to join Teams meetings.<br/><br/>However, the QR code reappears when the device restarts, or after a user either joins or leaves a meeting on the device.|Restart the device so that it picks up a new configuration that fixes the issue.|
 |Volume change indicator not working|When you change the volume of a Teams Rooms device by using the volume controls that are on the device or on an external audio device, the change isn't displayed in the volume setting of the Teams Rooms device.<br/><br/>The change to the volume settings takes effect but the visual display doesn't reflect the change.|No workaround is required because the functionality is working.|
 |Teams Rooms app window doesn't fill the screen on the device console.|The window of the Teams Rooms app takes up only a part of the device console or Front of Room display and doesn't resize to fill the screen.<br/><br/>This issue usually occurs in displays that are disconnected in their Sleep or Wake states.|To fix the issue, update to version 5.1.24.0 of the Teams Rooms app.|
+|Chat panel in Gallery view is blank.|You restart a Teams Rooms on Windows device and join a meeting. However you see that the chat panel in Gallery view is empty.<br/><br/>This issue occurs only with the first meeting that you join after restarting your device. Subsequent meetings are not affected.|To work around the issue for the first meeting that's impacted, use the following steps:<ol><li>Select the **Chat** button on the device console to hide the chat panel.</li><li>Select the **Chat** button again to reopen the chat panel. Now you can see incoming messages.</li></ol>|
 
 ## Hardware issues
 

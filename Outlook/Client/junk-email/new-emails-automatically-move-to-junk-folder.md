@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Data Protection and Security\Email incorrectly placed in the Junk Email folder
   - Outlook for Windows

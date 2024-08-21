@@ -3,7 +3,6 @@ title: Error message when view or edit in browser for Word or PowerPoint Online
 description: When attempting to view a PowerPoint Presentation or a Word document in the Office Online, the user receives an error message indicating that the service is temporarily unavailable.  Multiple attempts from the same web application return similar results.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

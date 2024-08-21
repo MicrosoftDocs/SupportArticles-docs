@@ -4,7 +4,6 @@ description: Provide two resolutions to an issue in which only two Excel attachm
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

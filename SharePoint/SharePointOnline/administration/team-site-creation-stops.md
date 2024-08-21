@@ -4,7 +4,6 @@ description: When you try to create a team site from SharePoint Home, the site c
 author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
-localization_priority: Normal
 ms.date: 12/17/2023
 search.appverid: 
   - MET150
