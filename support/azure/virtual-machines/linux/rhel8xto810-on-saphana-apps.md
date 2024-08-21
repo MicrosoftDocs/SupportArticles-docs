@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
 editor: 
-ms.date: 08/20/2024
+ms.date: 08/21/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -51,13 +51,13 @@ For more information on performing the update process on custom or golden images
 1. Remove the RHUI(E4S) package installed or updated on the VM.
 
 ```bash
-sudo yum remove $(rpm -qa | grep -i rhui)
+sudo dnf remove $(rpm -qa | grep -i rhui)
 ```
 
 2. Remove the version lock file.
 
 ```bash
- rm /etc/yum/vars/releasever
+sudo rm /etc/yum/vars/releasever
 ```
 
 3. Install the `rhui-azure-rhel8-base-sap-ha` package by running the dnf install command.
@@ -85,16 +85,16 @@ rhui-microsoft-azure-rhel8-base-sap-ha       Microsoft Azure RPMs for Red Hat En
 ```
 
 >[!IMPORTANT]
->A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this scenario, all the mentioned repositories are required. Optionally, you can modify the `/etc/yum.repos.d/rh-cloud-base-sap-ha.repo` file based on your system's specific requirement.
+> A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this scenario, all the mentioned repositories are required. Optionally, you can modify the `/etc/yum.repos.d/rh-cloud-base-sap-ha.repo` file based on your system's specific requirement.
 
 
-5. Update to RHEL 8.10
+5. Update to RHEL 8.10.
 
 ```bash
 sudo dnf update
 ```
 
-6. Reboot the Virtual Machine
+6. Reboot the Virtual Machine.
 
 ```bash
 sudo reboot 
@@ -105,7 +105,7 @@ sudo reboot
 1. Remove the RHUI(EUS-SAP) package installed.
 
 ```bash
-sudo yum remove $(rpm -qa | grep -i rhui)
+sudo dnf remove $(rpm -qa | grep -i rhui)
 ```
 
 2. Remove the version lock file.
@@ -149,6 +149,7 @@ sudo reboot
 ```
 
 ---
-
+<!-- PLEASE DONT DELETE THE FOLLOWING LINES, IT WILL BE ADDED ONCE THE OTHER DOC IS READY
 > [!IMPORTANT]
 > If your next target is to move to RHEL 9 for SAP environments refer to: [NEW LINK WORKINPROGRESS]
+-->
