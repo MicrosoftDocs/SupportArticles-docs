@@ -19,6 +19,8 @@ ms.date: 08/21/2024
 
 # Resolve validation errors for an archive mailbox
 
+_Original KB number:_ &nbsp; 4053483
+
 ## Symptoms
 
 For some user mailboxes in a hybrid Exchange environment, you find either of the following validation error messages in the Microsoft Entra admin center or Microsoft 365 admin center:
