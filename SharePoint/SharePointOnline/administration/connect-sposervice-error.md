@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 12/17/2023
 ---
-# "Could not connect to SharePoint Online" error when you run Connect-SPOService
+# Can't connect to SharePoint Online when you run Connect-SPOService
 
 ## Symptoms
 

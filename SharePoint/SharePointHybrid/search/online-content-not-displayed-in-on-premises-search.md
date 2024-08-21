@@ -51,27 +51,27 @@ To resolve this issue, determine whether the Search Service Application Proxy wa
 
 - Follow best operational practices and perform a backup before you follow these steps. For more information, go to [Back up Search service applications in SharePoint Server](/SharePoint/administration/back-up-a-search-service-application).
 
-To do this, follow these steps in the SharePoint Management Shell.
+To do so, follow these steps in the SharePoint Management Shell.
 
-1. Obtain the ID of Search Service Application. To do this, run the following cmdlet:
+1. To obtain the ID of Search Service Application, run the following cmdlet:
 
-   ```
+   ```powershell
    $ssa=Get-SPEnterpriseSearchServiceApplication
    ```
 
-2. Obtain the ID of Search Service Application Proxy. To do this, run the following cmdlet:
+2. To obtain the ID of Search Service Application Proxy, run the following cmdlet:
 
-   ```
+   ```powershell
    $ssaproxy=Get-SPServiceApplicationProxy –identity <guid>
    ```
 
    **NOTE** The service application proxy GUID is unique to every farm. Run the Get-SPServiceApplicationProxy cmdlet, and note the GUID of the search service applications proxy.
 
-3. Review the $ssaproxy.properties results. The proxy should be listed as partitioned. If this is the case, go to step 4 to update the Proxy Properties.
+3. Review the $ssaproxy.properties results. The proxy should be listed as partitioned. If so, go to step 4 to update the Proxy Properties.
 
-4. Update the Proxy Properties. To do this, run the following cmdlet:
+4. To update the Proxy Properties, run the following cmdlet:
 
-   ```
+   ```powershell
    $proxy = get-spenterprisesearchserviceapplicationproxy
    $proxy.Properties["Microsoft.Office.Server.Utilities.SPPartitionOptions"] = 0
    $proxy.Update()
@@ -82,15 +82,15 @@ To do this, follow these steps in the SharePoint Management Shell.
 
    After you complete these steps, check whether the issue is resolved. Otherwise, go to step 5 to remove and re-create the proxy.
 
-5. Remove Search Service Application Proxy. To do this, run the following cmdlet:
+5. To remove Search Service Application Proxy, run the following cmdlet:
 
-   ```
+   ```powershell
    Remove-SPServiceApplicationProxy $ssaproxy
    ```
 
-6. Create a new Search Service Application Proxy. To do this, run the following cmdlet:
+6. To create a new Search Service Application Proxy, run the following cmdlet:
 
-   ```
+   ```powershell
    New-SPEnterpriseSearchServiceApplicationProxy -SearchApplication $ssa -Name "Search Service Application Proxy"
    ```
 
@@ -98,6 +98,6 @@ After you follow these steps, the SharePoint 2013 on-premises search farm should
 
 ## More information
 
-For more information, go to [Understanding multi-tenancy in SharePoint Server 2013](/SharePoint/administration/understanding-multi-tenancy).
+For more information, see [Understanding multi-tenancy in SharePoint Server 2013](/SharePoint/administration/understanding-multi-tenancy).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
