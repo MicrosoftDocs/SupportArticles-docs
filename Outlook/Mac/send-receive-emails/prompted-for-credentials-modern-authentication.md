@@ -6,7 +6,6 @@ author: cloud-writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: sercast, tasitae
 ms.custom: 
   - sap:Connectivity\
