@@ -11,7 +11,6 @@ ms.custom:
   - Outlook for Windows
   - CI 167136
   - CSSTroubleshoot
-localization_priority: Normal
 ms.collection: Ent_Office_Outlook
 description: Helps IT Pros learn about what they should consider when they deploy Outlook for Windows to users in their organization
 search.appverid: 

@@ -4,7 +4,6 @@ description: Explains why .XSN forms created in InfoPath Designer 2013 do not ma
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
   - SPO160

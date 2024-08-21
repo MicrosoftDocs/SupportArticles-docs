@@ -4,7 +4,6 @@ description: Provides a resolution to solve the error 0x800ccc80 that may occur 
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Sending, Receiving, Synchronizing, or viewing email\Other
   - CSSTroubleshoot

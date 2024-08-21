@@ -6,7 +6,6 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.collection: 
   - M365-security-compliance
 ms.custom: 

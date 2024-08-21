@@ -4,7 +4,6 @@ description: Provides a resolution to remove duplicate folders in Outlook when c
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:User Interface features and Configuration\Folder views
   - CSSTroubleshoot

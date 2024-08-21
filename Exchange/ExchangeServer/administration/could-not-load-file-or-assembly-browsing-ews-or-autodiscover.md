@@ -4,7 +4,6 @@ description: Provides a resolution to solve the error that occurs when you open 
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Clients and Mobile\Issue with autodiscover
   - CSSTroubleshoot

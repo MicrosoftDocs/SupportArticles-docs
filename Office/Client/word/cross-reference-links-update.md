@@ -3,7 +3,6 @@ title: Cross-reference links do not update to correct heading number
 description: Describes the problem where cross-reference links in Word do not update to the correct heading number after you insert a new heading.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -3,7 +3,6 @@ title: Remove automapping for a shared mailbox
 description: Describes how to disable automapping for a shared mailbox in Outlook for Microsoft 365.
 author: cloud-writer
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak

@@ -4,7 +4,6 @@ description: Provides a resolution for an issue in which Actionable messages ren
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 190031

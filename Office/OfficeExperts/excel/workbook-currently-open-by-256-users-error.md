@@ -6,7 +6,6 @@ manager: dcscontentpm
 ms.date: 06/06/2024
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - Open\Sharing
   - sap:office-experts

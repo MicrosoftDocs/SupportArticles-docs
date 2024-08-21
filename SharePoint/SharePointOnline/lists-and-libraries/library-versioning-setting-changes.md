@@ -3,7 +3,6 @@ title: SharePoint Online document libraries versioning setting changes
 description: Describes previous changes to the default versioning setting for SharePoint Online document libraries.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

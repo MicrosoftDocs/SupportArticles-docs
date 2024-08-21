@@ -4,7 +4,6 @@ description: Provide a resolution to an issue in which users who have sufficient
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

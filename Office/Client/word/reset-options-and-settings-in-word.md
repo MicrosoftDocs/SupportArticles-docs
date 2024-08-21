@@ -3,7 +3,6 @@ title: How to reset user options and registry settings in Word
 description: Provides a step-by-step guide to reset registry settings and user options in Word.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

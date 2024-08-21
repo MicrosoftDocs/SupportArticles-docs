@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:User Interface features and Configuration\Other
   - Outlook for Windows
@@ -28,11 +27,11 @@ _Original KB number:_ &nbsp; 2975407
 
 ## Symptoms
 
-In Microsoft Outlook LTSC 2021, Outlook 2019, Outlook 2016, Outlook, 2013 or Outlook for Microsoft 365, the Weather Bar does not appear above the calendar. Also, the Weather settings are not displayed in the Calendar section of Outlook Options.
+In Microsoft Outlook LTSC 2021, Outlook 2019, Outlook 2016, Outlook, 2013 or Outlook for Microsoft 365, the Weather Bar doesn't appear above the calendar. Also, the Weather settings aren't displayed in the Calendar section of Outlook Options.
 
 ## Cause
 
-This behavior will occur if the option to allow Office to connect to online services is disabled.
+This behavior occurs if the option to allow Office to connect to online services is disabled.
 
 ## Resolution
 
@@ -48,7 +47,7 @@ To restore the Weather Bar settings and functionality, follow these steps to ena
 4. Select **OK** twice.
 
 > [!NOTE]
-> If the Allow Office to connect to the Internet checkbox is grayed out, see the More information section below for additional details on this setting.
+> If the **Allow Office to connect to the Internet** checkbox is grayed out, see the More information section for more information about this setting.
 
 ## More information
 
@@ -56,14 +55,14 @@ The setting documented in the Resolution section corresponds to the following re
 
 `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Common\Internet`
 
-or
+Or
 
 `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<x.0>\Common\Internet`
 
 DWORD: UseOnlineContent  
 Value:
 
-0  - Do not allow user to access Office resources on the Internet (checkbox is unchecked and grayed out)  
+0  - Don't allow user to access Office resources on the Internet (checkbox is unchecked and grayed out)  
 1  - Allows the user to opt in to access of Office resources on the Internet (checkbox is unchecked)  
 2  - (Default) Allows the user to access Office resources on the Internet (checkbox is checked)
 

@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:High Availability, Health, Performance, Content Indexing\Exchange Service or Server Crashed\Stopped, Cluster service issues
   - Exchange Server

@@ -4,7 +4,6 @@ author: helenclu
 ms.author: luche
 ms.reviewer: salarson
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
   - SPO160

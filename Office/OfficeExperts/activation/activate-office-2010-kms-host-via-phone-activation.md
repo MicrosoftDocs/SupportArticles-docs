@@ -4,7 +4,6 @@ description: Describes how to activate the Office 2010 KMS host through telephon
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

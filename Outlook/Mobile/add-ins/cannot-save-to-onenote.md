@@ -4,7 +4,6 @@ description: Describes an issue in which you can't use the Send to OneNote butto
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Data protection and Security\
   - Outlook for iOS and Android

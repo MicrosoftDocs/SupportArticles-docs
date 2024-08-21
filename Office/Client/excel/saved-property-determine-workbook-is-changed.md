@@ -3,7 +3,6 @@ title: Use Saved property to determine if workbook has changed
 description: Describes how to use Saved property to determine if a workbook has changed and provides sample macros.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

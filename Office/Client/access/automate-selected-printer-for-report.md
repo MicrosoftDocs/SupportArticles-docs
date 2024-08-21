@@ -3,7 +3,6 @@ title: Automate process of selecting printer for a report
 description: Describes how to programmatically select a printer and print the reports with the options that you predefine. Assumes you are familiar with the Access database and Visual Basic programming.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

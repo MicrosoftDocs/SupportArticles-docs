@@ -4,7 +4,6 @@ description: This article describes the permissions that can be granted to a pub
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Collaboration and Public Folders\Issues with Public Folder Migration
   - CSSTroubleshoot

@@ -3,7 +3,6 @@ title: Excel process still runs after quitting using a VBA macro programmaticall
 description: Describes a behavior in which an Excel process continues to run after you programmatically quit Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
