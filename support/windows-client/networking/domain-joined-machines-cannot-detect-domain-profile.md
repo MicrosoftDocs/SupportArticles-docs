@@ -1,7 +1,7 @@
 ---
 title: Domain-joined machines can't detect the domain profile
 description: Helps troubleshoot a scenario where a domain-joined machine can't detect the domain profile. 
-ms.date: 08/14/2024
+ms.date: 08/21/2024
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
