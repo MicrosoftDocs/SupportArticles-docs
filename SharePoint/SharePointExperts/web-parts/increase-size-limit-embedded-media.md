@@ -33,13 +33,14 @@ To work round this issue, you can increase the size of the limit as follows:
     
     C:\Program Files\Microsoft Office Web Apps\PPTConversionService\Settings_Service.ini
 2. Add the following lines at the bottom of the file and then save it:
-    
-    PowerPointEditServerMaxFileSizeBytes=(System.UInt64)153600000
-    
+
+    PowerPointEditServerMaxFileSizeBytes=(System.UInt64)153600000  
+
     PowerPointServerMediaEmbeddedMaxSize=(System.UInt64)153600000
 3. Open an Admin PowerShell window on the Microsoft Offices Online Server(s) and the run the following cmdlet:
-    
+
     ```powershell
     Restart-service WACSM
     ```
+
 This should allow up to 150 MB videos to be embedded. You can adjust the byte value to meet your needs.
