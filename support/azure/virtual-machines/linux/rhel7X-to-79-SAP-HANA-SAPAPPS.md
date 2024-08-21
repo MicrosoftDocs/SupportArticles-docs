@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
 editor: 
-ms.date: 08/02/2024
+ms.date: 08/21/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -14,7 +14,7 @@ ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-While `RHEL` for SAP 7.x (where x isn't equal to 9) can be accessed in `E4S` and/or `EUS`, `RHEL` for SAP 7.9 follows a different approach. In this case, the related content is found in unversioned repositories. As a result, updating a system that operates SAP on `RHEL 7.x` to `RHEL` 7.9 requires several manual steps.
+While `RHEL` for SAP 7.x (where x isn't equal to 9) can be accessed in `E4S` and/or `EUS`, `RHEL` for SAP 7.9 follows a different approach. In this case, the related content is found in unversioned repositories. As a result, updating a system that operates SAP on `RHEL 7.x` to `RHEL 7.9` requires several manual steps.
 
 This article provides the correct steps to update to 7.9 for `SAP-HANA` or `SAPAPPS` pay-as-you-go (PAYG) images.
 
@@ -23,7 +23,7 @@ This article provides the correct steps to update to 7.9 for `SAP-HANA` or `SAPA
 
 For more information on performing the update process on custom or golden images, and pay-as-you-go (PAYG) images provided by Red Hat, see:
 
-- [How to update RHEL from 7.* to 7.0 on Cloud Images with the "RHEL for SAP with HA and Update Services":](https://www.bing.com/ck/a?!&&p=5ce48fc498f647bbJmltdHM9MTcyMjU1NjgwMCZpZ3VpZD0yZWZiYTY4Yi03MTE1LTZmNjgtMWRlMS1iMjM0NzAxNDZlYjImaW5zaWQ9NTIxMg&ptn=3&ver=2&hsh=3&fclid=2efba68b-7115-6f68-1de1-b23470146eb2&psq=rehl+7+to+7%2c9+on+sap&u=a1aHR0cHM6Ly9hY2Nlc3MucmVkaGF0LmNvbS9hcnRpY2xlcy81ODA1NTcx&ntb=1)
+- [How to update RHEL from 7.* to 7.0 on Cloud Images with the "RHEL for SAP with HA and Update Services":](https://access.redhat.com/articles/5805571)
 
 - [Recommended Practices for Applying Software Updates to a RHEL High Availability or Resilient Storage Cluster](https://access.redhat.com/articles/2059253#pacemaker)
 
@@ -35,7 +35,7 @@ For more information on performing the update process on custom or golden images
 - Make a backup of the virtual machine or a snapshot of the OS disk.
 - Set up access to the serial console
 - SAP process must be stopped during the OS update process.
-- Root privileges.
+- Run the commands in this article with root privileges.
 
 ## Process to upgrade from RHEL 7.X to RHEL 7.9 on SAP-HANA or SAPAPPS pay-as-you-go (PAYG).
 
@@ -51,7 +51,7 @@ sudo yum remove $(rpm -qa | grep -i rhui)
 2. Remove the version lock file.
 
 ```bash
- rm /etc/yum/vars/releasever
+sudo rm /etc/yum/vars/releasever
 ```
 
 3. Install the `rhui-azure-rhel7-base-sap-ha` package by running the yum install command.
@@ -81,7 +81,7 @@ repolist: 76,118
 ```
 
 >[!IMPORTANT]
->A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this scenario, all the mentioned repositories are required. Optionally, you can modify the `/etc/yum.repos.d/rh-cloud-base-sap-ha.repo` file based on your system's specific requirement.
+> A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this scenario, all the mentioned repositories are required. Optionally, you can modify the `/etc/yum.repos.d/rh-cloud-base-sap-ha.repo` file based on your system's specific requirement.
 
 
 5. Update to RHEL 7.9.
@@ -105,7 +105,7 @@ sudo yum remove $(rpm -qa | grep -i rhui)
 2. Remove the version lock file.
 
 ```bash
- rm /etc/yum/vars/releasever
+sudo rm /etc/yum/vars/releasever
 ```
 
 3. Install the `rhui-azure-rhel7-base-sap-apps` package by running the yum install command.
@@ -151,5 +151,10 @@ sudo reboot
 
 ---
 
+
+<!-- PLEASE DONT DELETE THE FOLLOWING LINES, IT WILL BE ADDED ONCE THE OTHER DOC IS READY
 > [!IMPORTANT]
 > If your next target is to move to RHEL 8 for SAP environments refer to: [How to Perform a leapp upgrade from RHEL 7.9 to 8.X for SAP-HANA and SAPAPPS PAYG.](https://review.learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/pgrade-process-from-rhel79-to-8x-on-sap-hana-apps?branch=pr-en-us-7005&tabs=rhel8saphana)
+-->
+
+
