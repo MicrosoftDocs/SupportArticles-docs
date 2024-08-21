@@ -1,6 +1,6 @@
 ---
-title: Migrated user across forests is not found in People Picker
-description: The user does not exist or is not unique error for migrated users across forests in SharePoint.
+title: Migrated user across forests isn't found in People Picker
+description: The user doesn't exist or isn't unique error for migrated users across forests in SharePoint.
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
@@ -19,21 +19,21 @@ appliesto:
 ms.date: 12/17/2023
 ---
 
-# User accounts migrated with their SID history across forests are not resolved in SharePoint
+# User accounts migrated with their SID history across forests aren't resolved in SharePoint
 
 ## Symptoms
 
 Consider the following scenario:
 
 - You have two forests, ForestA and ForestB.
-- There is a two-way forest trust between the forests.
+- There's a two-way forest trust between the forests.
 - You have SharePoint installed in ForestB.
 - You migrate the user accounts together with their security identifier (SID) history from ForestA to ForestB.
 - The ForestA\user1 and ForestB\user1 user accounts are both enabled.
 
 In this scenario, when you try to add the ForestA\user1 user account to SharePoint resources, you experience errors during the user name resolution. For example, the People Picker displays the following error message:
 
-**The user does not exist or is not unique.**
+> The user does not exist or is not unique.
 
 ## Cause
 
