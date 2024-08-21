@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot View In File Explorer issues in SharePoint Online
-description: Discusses how to troubleshoot issues that you may experience when you use the View In File Explorer command.
+title: Troubleshoot View In File Explorer issues in SharePoint
+description: Discusses how to troubleshoot issues that you experience when you use the View In File Explorer command.
 author: helenclu
 manager: dcscontentpm
 ms.date: 12/17/2023
@@ -21,7 +21,7 @@ ms.custom:
 
 ## Introduction
 
-This article discusses how to troubleshoot issues that you may experience when you use the "View in File Explorer" command in SharePoint Online.
+This article discusses how to troubleshoot issues that you experience when you use the "View in File Explorer" command in SharePoint Online.
 
 > [!NOTE]
 > The View in File Explorer command doesn't work in Google Chrome, Mozilla Firefox, or on the Mac platform.
@@ -53,14 +53,15 @@ Use the following troubleshooting procedures to resolve common issues that occur
 
 ### Authenticate to Microsoft 365
 
-Make sure that you're authenticated to Microsoft 365. To do this, use one of the following methods.
+Make sure that you're authenticated to Microsoft 365. Use one of the following methods.
 
-##### Method 1: Use "Keep me signed in"
+#### Method 1: Use "Keep me signed in"
 
-Sign in to the SharePoint Online site by using your Microsoft 365 work or school account credentials. When you do this, make sure that you select the **Keep me signed in** check box.
+Sign in to the SharePoint Online site by using your Microsoft 365 work or school account credentials. When you do so, make sure that you select the **Keep me signed in** check box.
 
    > [!NOTE]
    > If you didn't previously select this setting, you might find that you're already signed in when you browse to a SharePoint Online site or the Microsoft 365 portal. In this case, you must first sign out and then sign in again by having the **Keep me signed in* check box selected. To do this, follow these steps:
+   >
    > 1. On the Microsoft 365 ribbon, select the arrow next to your user name.
    > 1. Select **Sign out**.
    > 1. Close all browser windows.
@@ -68,11 +69,11 @@ Sign in to the SharePoint Online site by using your Microsoft 365 work or school
    > 1. Select the **Keep me signed in** check box, enter your Microsoft 365 work or school account credentials, and then select **Sign in** (if it is necessary).
    > 1. Open a document library in Explorer view.
 
-##### Method 2: Use a persistent cookie
+#### Method 2: Use a persistent cookie
 
-You can use the **UsePersistentCookiesForExplorerView** parameter for the **Set-SPOTenant** cmdlet that's used in the SharePoint Online Management Shell. This lets SharePoint issue a special cookie that will allow the Authenticate to Microsoft 365 feature to work even if **Keep Me Signed In** isn't selected.
+You can use the **UsePersistentCookiesForExplorerView** parameter for the **Set-SPOTenant** cmdlet that's used in the SharePoint Online Management Shell. It lets SharePoint issue a special cookie that allows the Authenticate to Microsoft 365 feature to work even if **Keep Me Signed In** isn't selected.
 
-After this parameter is enabled, you are prompted by a dialog box when you select **Open with Explorer** in SharePoint Online, as shown in the following screenshot. After you select **This is a private computer**, the persistent cookie is stored. Therefore, you no longer have to select **Keep me signed in**.
+After this parameter is enabled, you're prompted by a dialog box when you select **Open with Explorer** in SharePoint Online, as shown in the following screenshot. After you select **This is a private computer**, the persistent cookie is stored. Therefore, you no longer have to select **Keep me signed in**.
 
 > [!IMPORTANT]
 > This method should be used only on a private computer.
@@ -86,34 +87,34 @@ For more information about the SharePoint Online Management Shell, go to [What i
 
 ### Add your SharePoint Online sites or Open with Explorer URL to trusted sites
 
-Make sure that the SharePoint Online or Open with Explorer URL is added to your trusted sites zone in Internet Explorer. To do this, follow these steps:
+Make sure that the SharePoint Online or Open with Explorer URL is added to your trusted sites zone in Internet Explorer. To do so, follow these steps:
 
 1. Start Internet Explorer.
-1. Depending on your version of Internet Explorer, do one of the following:
+1. Depending on your version of Internet Explorer, use one of the following methods:
 
    - Select the **Tools** menu, and then select **Internet options**.
    - Select the gear icon, and then select **Internet options**.
 
-    :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/internet-options.png" alt-text="Screenshot of Tools menu. Internet options is selected.":::  
+    :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/internet-options.png" alt-text="Screenshot of Tools menu. Internet Options is selected.":::  
 
 1. Select the **Security** tab, select **Trusted sites**, and then select **Sites**.
 
     :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/trusted-sites.png" alt-text="Screenshot of Internet Options window. Under Security tab, showing Trusted sites.":::  
 
-1. In the **Add this website to the zone** box, enter the URL for the website that you want to add to the **Trusted sites** zone, and then select **Add**. The URL will be for one of the following websites:
+1. In the **Add this website to the zone** box, enter the URL for the website that you want to add to the **Trusted sites** zone, and then select **Add**. The URL is for one of the following websites:
 
    - SharePoint Online
-   - OneDrive for Business
-   - Open with Explorer (uses a -files or -myfiles format)  
+   - OneDrive
+   - Open with Explorer (uses a `-files` or `-myfiles` format)  
 
-   For example, enter https://<*contoso*>.sharepoint.com and https://<*contoso*>-files.sharepoint.com for a site. Or, enter https://<*contoso*>-myfiles.sharepoint.com and https://<*contoso*>-my.sharepoint.com for a OneDrive for Business library.
+   For example, enter https://<*contoso*>.sharepoint.com and https://<*contoso*>-files.sharepoint.com for a site. Or, enter https://<*contoso*>-myfiles.sharepoint.com and https://<*contoso*>-my.sharepoint.com for a OneDrive library.
 
    > [!NOTE]
    > In this example, *contoso* represents the domain that you use for your organization.
 
    Repeat this step for any additional sites that you want to add to this zone.
 
-   To make sure that "Open with Explorer" works correctly, you must include the SharePoint site URL or the OneDrive for Business URL in addition to the "-files" (for a site) URL or the "-myfiles" (for a OneDrive for Business library) URL.
+   To make sure that "Open with Explorer" works correctly, you must include the SharePoint site URL or the OneDrive URL in addition to the "-files" (for a site) URL or the "-myfiles" (for a OneDrive library) URL.
 
     :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/adding-site.png" alt-text="Screenshot of Trusted sites window. You can add and remove websites from this zone.":::
   
@@ -121,11 +122,11 @@ Make sure that the SharePoint Online or Open with Explorer URL is added to your 
 
 ### Check the status of the WebClient service
 
-Make sure that the latest Windows updates are applied. If all the latest updates are applied but the issue persists, make sure that the WebClient service is running. To do this, follow these steps:
+Make sure that the latest Windows updates are applied. If all the latest updates are applied but the issue persists, make sure that the WebClient service is running. To do so, follow these steps:
 
 1. Follow the appropriate steps for your operating system:
 
-   - For Windows XP, Windows Vista, or Windows 7, click **Start**, click **Run**, enter **services.msc**, and then press Enter.
+   - For Windows XP, Windows Vista, or Windows 7, select **Start**, select **Run**, enter **services.msc**, and then press Enter.
    - For Windows 8, select **Start**, enter **services.msc**, and then press Enter.
    - For Windows Server 2008 or Windows Server 2012, select Start, enter services.msc, and then press Enter. If the WebClient service isn't present, you must first install the Desktop Experience. For more information about how to install the Desktop Experience, go to [Install Desktop Experience](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754314(v=ws.11)).
 
@@ -136,7 +137,7 @@ Make sure that the latest Windows updates are applied. If all the latest updates
 
 ### Apply hotfix for Internet Explorer 10 on Windows 8 or Windows 7
 
-If you're running Internet Explorer 10 on Windows 8 or Windows 7, a hotfix has been released to resolve this issue. For more information, go to [Error when you open a SharePoint Document Library in Windows Explorer or map a network drive to the library after you install Internet Explorer 10](https://support.microsoft.com/help/2846960).
+If you're running Internet Explorer 10 on Windows 8 or Windows 7, a hotfix is released to resolve this issue. For more information, see [Error when you open a SharePoint Document Library in Windows Explorer or map a network drive to the library after you install Internet Explorer 10](https://support.microsoft.com/help/2846960).
 
 ## More information
 

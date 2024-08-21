@@ -22,13 +22,12 @@ ms.date: 12/17/2023
 
 Consider the following scenario:
 
-- You create a .csv file to import a term set into SharePoint Online.
-
+- You create a `.csv` file to import a term set into SharePoint Online.
 - In the SharePoint admin center, you use the **term store** tool to import the file.
 
 In this scenario, you receive the following error message:
 
-**Not all terms were imported successfully. Please see the server log for more information.**
+> Not all terms were imported successfully. Please see the server log for more information.
 
 ## Solution/Workaround
 
@@ -36,6 +35,6 @@ To work around this issue, only use the term store tool to import term sets that
 
 ## More information
 
-This issue occurs when you try to import more than 5,000 terms by using the term store tool in the SharePoint admin center. This is a known issue in SharePoint Online.
+This issue occurs when you try to import more than 5,000 terms by using the term store tool in the SharePoint admin center. It's a known issue in SharePoint Online.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

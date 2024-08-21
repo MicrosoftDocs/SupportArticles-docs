@@ -1,6 +1,6 @@
 ---
 title: SharePoint Online performance troubleshooter
-description: SharePoint Online client performance diagnostic package collects information that can be used to troubleshoot SharePoint Online client performance issues.
+description: SharePoint Online client performance diagnostic package collects information that can be used to troubleshoot SharePoint client performance issues.
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
@@ -20,7 +20,7 @@ ms.date: 12/17/2023
 
 ## Introduction
 
-The Microsoft 365 SharePoint Online client performance diagnostic package collects information that can be used to troubleshoot SharePoint Online client performance issues. This diagnostic package also lets you capture a Fiddler trace of HTTP(S) traffic while you reproduce these performance issues.
+The Microsoft 365 SharePoint Online client performance diagnostic package collects information that can be used to troubleshoot SharePoint client performance issues. This diagnostic package also lets you capture a Fiddler trace of HTTP(S) traffic while you reproduce these performance issues.
 
 This diagnostic package uploads trace files of up to 2 gigabytes (GB) after the files are compressed.
 
@@ -28,9 +28,9 @@ This diagnostic package uploads trace files of up to 2 gigabytes (GB) after the 
 
 ### Required permissions
 
-The rules in the diagnostic package require that you are the SharePoint Online site collection administrator for the SharePoint Online URL that you enter.
+The rules in the diagnostic package require that you're the site collection administrator for the SharePoint Online URL that you enter.
 
-:::image type="content" source="media/sharepoint-online-performance-troubleshooter/credentials.png" alt-text="Screenshot of the SharePoint Online site collection administrator credentials input dialog." border="false":::
+:::image type="content" source="media/sharepoint-online-performance-troubleshooter/credentials.png" alt-text="Screenshot of the SharePoint site collection administrator credentials input dialog." border="false":::
 
 This article describes the information that may be collected from a computer that's trying to connect to SharePoint Online in Microsoft 365.
 
@@ -53,7 +53,7 @@ If the results files are larger than 2 GB after compression, some files won't be
 
 To install this package, you must have Windows PowerShell 2.0 installed on the computer. For more information, see [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview).
 
-The following checks are performed by the Microsoft 365 SharePoint Online diagnostic package:
+The Microsoft 365 SharePoint Online diagnostic package performs the following checks:
 
 |Rule ID|Title|Reference|
 |----------|----------|----------|

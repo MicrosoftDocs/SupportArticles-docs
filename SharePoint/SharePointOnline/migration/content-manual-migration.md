@@ -20,12 +20,12 @@ ms.date: 12/17/2023
 
 ## Introduction
 
-Offboarding is the ability to move data from Microsoft 365 to file shares or to a local computer. This is a manual process. This document describes the steps to save a SharePoint document library or list content from a SharePoint Online environment to file shares or to a local computer.
+Offboarding is the ability to move data from Microsoft 365 to file shares or to a local computer. It's a manual process. This document describes the steps to save a SharePoint document library or list content from a SharePoint Online environment to file shares or to a local computer.
 
-This document covers the following SharePoint Online archive scenarios:
+This document covers the following SharePoint archive scenarios:
 
-- Administrator or site owner archives the contents of a SharePoint Online document library. This is a manual process when you use SharePoint Online.
-- Administrator or list owner archives the contents of a SharePoint list. This is a manual process when you use SharePoint Online.
+- Administrator or site owner archives the contents of a SharePoint Online document library. It's a manual process when you use SharePoint Online.
+- Administrator or list owner archives the contents of a SharePoint list. It's a manual process when you use SharePoint Online.
 - Administrator or list owner archives the following information from a SharePoint list to Outlook: Calendar items, Contact items, Document libraries, Discussion lists and Tasks.
 
 This document doesn't cover the following scenarios:
@@ -39,7 +39,7 @@ This document doesn't cover the following scenarios:
 
 If you want to migrate lots of SharePoint Online files, we recommend syncing the libraries or folders. Then you can use **File Explorer** on your computer (or **Finder** on a Mac) to move the files to the new location. For more information about syncing SharePoint files, see [Sync SharePoint files with the new OneDrive sync client](https://support.office.com/article/sync-sharepoint-files-with-the-new-onedrive-sync-client-6de9ede8-5b6e-4503-80b2-6190f3354a88).
 
-If you want to migrate only a few files to another SharePoint Online document library, you can do this in your browser. For more information, see [Move or copy files in SharePoint](https://support.office.com/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc).
+If you want to migrate only a few files to another SharePoint Online document library, you can do so in your browser. For more information, see [Move or copy files in SharePoint](https://support.office.com/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc).
 
 You can also use **Open with Explorer** to migrate files to a new location. For more information, see [Copy or move library files by using Open with Explorer](https://support.office.com/article/copy-or-move-library-files-by-using-open-with-explorer-aaee7bfb-e2a1-42ee-8fc0-bcc0754f04d2
 ).
@@ -69,9 +69,9 @@ The following kinds of SharePoint lists can be linked to Outlook:
 To archive SharePoint list data to Excel, follow these steps:
 
 1. Browse to the SharePoint list.
-1. On the **LIST** or **LIBRARY** tab, click **Export to Excel**.
+1. On the **LIST** or **LIBRARY** tab, select **Export to Excel**.
 1. Select **Open**.
-1. Under **Import Data**, select where you want to put the data (if this is applicable). The list is exported to Excel.
+1. Under **Import Data**, select where you want to put the data (if applicable). The list is exported to Excel.
 1. You can save the file to your local directory.
 1. Repeat this process for every SharePoint list.
 
@@ -81,34 +81,34 @@ To archive SharePoint list data to Excel, follow these steps:
 To archive a SharePoint Calendar list to Outlook, follow these steps:
 
 1. Browse to the SharePoint Calendar to be archived.
-1. Click the **CALENDAR** tab, and then click **Connect to Outlook**.
-1. On the **Actions** menu, click **Connect to Outlook**, and in the Outlook dialog box, click **Yes**. The Calendar is saved to Outlook.
+1. Select the **CALENDAR** tab, and then select **Connect to Outlook**.
+1. On the **Actions** menu, select **Connect to Outlook**, and in the Outlook dialog box, select **Yes**. The Calendar is saved to Outlook.
 
 To archive a SharePoint Contacts list to Outlook, follow these steps:
 
 1. Browse to the SharePoint Contact list.
-1. Click **LIST**, and then click **Connect to Outlook**.
-1. In the Outlook dialog box, click **Yes**. The Contact list is saved to Outlook.
+1. Select **LIST**, and then select **Connect to Outlook**.
+1. In the Outlook dialog box, select **Yes**. The Contact list is saved to Outlook.
 
 To archive a SharePoint Tasks list Outlook, follow these steps:
 
 1. Browse to the SharePoint Tasks list.
-1. Click **LIST**, and then click **Connect to Outlook**.
-1. In the Outlook dialog box, click **Yes**. The Tasks list is saved to Outlook.
+1. select **LIST**, and then select **Connect to Outlook**.
+1. In the Outlook dialog box, select **Yes**. The Tasks list is saved to Outlook.
 
 To archive SharePoint Document Libraries to Outlook, follow these steps:
 
 1. Browse to the SharePoint Document Library.
-1. On the ribbon, click **LIBRARY**, and then click **Connect to Outlook**.
-1. In the Outlook dialog box, click Yes. The Library is saved to Outlook.
+1. On the ribbon, select **LIBRARY**, and then select **Connect to Outlook**.
+1. In the Outlook dialog box, select Yes. The Library is saved to Outlook.
 
 To archive a SharePoint Discussion Board list to Outlook, follow these steps:
 
 1. Browse to the SharePoint Discussion list.
-1. On the **LIBRARY** tab, click **Connect to Outlook**.
-1. In the Outlook dialog box, click **Yes**. The Library is saved to Outlook.
+1. On the **LIBRARY** tab, select **Connect to Outlook**.
+1. In the Outlook dialog box, select **Yes**. The Library is saved to Outlook.
 
-The OneDrive for Business sync client is an additional option that provides the functionality to take SharePoint items offline and save them to your local computer. For more information about how to use the OneDrive for Business sync client, go to the following Microsoft website:
+The OneDrive for Business sync client is another option that provides the functionality to take SharePoint items offline and save them to your local computer. For more information about how to use the OneDrive for Business sync client, go to the following Microsoft website:
 
 [Sync files with the OneDrive sync client in Windows](https://support.office.com/article/sync-files-with-the-onedrive-sync-client-in-windows-615391c4-2bd3-4aae-a42a-858262e42a49)
 
@@ -118,7 +118,7 @@ SharePoint list content must be exported to Excel or to an Access database. Simp
 
 SharePoint lists are used to host complex data like wikis and blogs. These complex data forms consist of several tables. For example, blog tables are as follows: Categories, Posts, Comments, Links, and Other Blogs. For the best results, export wikis and blogs to Access. When wikis and blogs are exported to Access, each of these tables is exported correctly. However, all properties, permissions, and relationships between tables and contents are lost.
 
-When you export list data to Access or Excel, list data will be saved. However, attachments and documents within the list won't be archived. To archive attachments and documents, follow the instructions in the "Archive SharePoint Online document library content" section.
+When you export list data to Access or Excel, list data is saved. However, attachments and documents within the list won't be archived. To archive attachments and documents, follow the instructions in the "Archive SharePoint Online document library content" section.
 
 ## Additional resources
 

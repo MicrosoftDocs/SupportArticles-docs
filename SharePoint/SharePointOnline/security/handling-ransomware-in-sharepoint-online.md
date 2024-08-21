@@ -23,17 +23,17 @@ description: Ways to handle ransomware issues in SharePoint Online.
 
 ## Summary
 
-Ransomware is a malware that blocks access to various items on your computer and demands a ransom from you in order for the creator to release the lock they have imposed.  Once the ransom is paid, the creator of the ransomware will presumably provide the information needed to regain access.
+Ransomware is a malware that blocks access to various items on your computer and demands a ransom from you in order for the creator to release the lock they imposed.  Once the ransom is paid, the creator of the ransomware presumably provides the information needed to regain access.
 
 ## More information
 
-### How does it work with SharePoint Online or OneDrive for Business?
+### How does it work with SharePoint Online or OneDrive?
 
-Ransomware is an executable that is run locally on a user's computer.  The ransomware reviewed by Microsoft that affects SharePoint Online or OneDrive for Business manipulates individual files on the user's local machine by way of a OneDrive for Business connection or a mapped drive into a SharePoint Online library. 
+Ransomware is an executable that is run locally on a user's computer. The ransomware reviewed by Microsoft that affects SharePoint Online or OneDrive manipulates individual files on the user's local machine by way of a OneDrive connection or a mapped drive into a SharePoint library.
 
-Once the ransomware is placed, the infected files are then synchronized to the online environment by the sync client tool or by various Web DAV methods. Various manipulations of the files include (but are not limited to):
+Once the ransomware is placed, the infected files are then synchronized to the online environment by the sync client tool or by various WebDAV methods. Various manipulations of the files include but aren't limited to:
 
-- Public/Private key encryption.
+- Public or private key encryption.
 - Appending an unknown extension to the filename.
 - Deleting existing files.
 
@@ -41,17 +41,20 @@ In addition, many new files are added to each directory that create display inst
 
 ### How do I confirm the items of a library are actually being held for ransom?
 
-Signs that a SharePoint Online library has been infected by ransomware include the following:
+Signs that a SharePoint library has been infected by ransomware include:
+
 - Majority of the files within the library have the same **Modified By** timestamp.
-- Files fail to open with a message stating that they are possibly corrupt.
+- Files fail to open with a message stating that they're possibly corrupt.
 - Each directory within the library contains several files named **HELP_DECRYPT**, **HELP_Recover, or similar random names. The files can be opened and contain instructions for paying the ransom.
-- Files have been renamed or have an extension appended to the end.
+- Files are renamed or have an extension appended to the end.
 
 ### How is Microsoft able to help?
 
-If you are affected by ransomware, try the following:
-- Immediately stop OneDrive for Business Sync or disconnect the mapped drive to SharePoint library. 
+If you're affected, try the following methods:
+
+- Immediately stop OneDrive sync or disconnect the mapped drive to SharePoint library. 
 - Ask your Company Administrator (or affected user) to attempt to restore files:
+
    - SharePoint: See [Restore a Document library](https://support.office.com/article/restore-a-document-library-317791c3-8bd0-4dfd-8254-3ca90883d39a)
    - OneDrive: See [Restore a OneDrive library](https://support.office.com/article/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15)
 

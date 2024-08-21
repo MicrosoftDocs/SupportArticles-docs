@@ -1,6 +1,6 @@
 ---
 title: The simple controls are missing for a SharePoint Online document library
-description: This article explains an issue where the simple controls are missing for a SharePoint Online document library, and provides a solution.
+description: This article explains an issue where the simple controls are missing for a SharePoint document library, and provides a solution.
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
@@ -31,9 +31,7 @@ When you browse to a SharePoint Online document library in classic Experience, t
 
 ## Solution
 
-To work around this problem, use the **Default** style within the view for the affected library.
-or
-Switch to Modern Experience 
+To work around this problem, use the **Default** style within the view for the affected library. Or, switch to Modern Experience.
 
 ## More information
 
