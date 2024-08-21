@@ -228,7 +228,7 @@ Continue to the `leapp upgrade` process after the `pre-upgrade` report shows no 
 > Add the `--reboot` option to the `leapp upgrade` command if you want to perform an automatic reboot, which is needed during the upgrade process.
 
 ```bash
-sudo leapp upgrade --target <target_os_version> --channel <e4s/eus> --no-rhsm
+sudo leapp upgrade --target <target_os_version> --channel <e4s> --no-rhsm
 ```
 
 **Example 1**: Upgrading to 8.8 requires `E4S` repo.
