@@ -1,5 +1,5 @@
 ---
-title: How to update RHEL from 8.x to 8.10 on Azure with "RHEL for SAP with High Availability or SAP APPS on PAYG images.
+title: How to update RHEL from 8.x to 8.10 on Azure with RHEL for SAP with High Availability or SAP APPS on PAYG images.
 description: Guide with step by step procedure to do an OS update frm RHEL 8.x to 8.10
 author: msaenzbosupport
 ms.author: msaenzbo
@@ -19,7 +19,7 @@ While RHEL for SAP 8.x (where x isn't equal to 10) can be accessed in `E4S` and/
 This article provides the correct steps to update from 8.x to 8.10 for SAP-HANA or SAPAPPS pay-as-you-go (PAYG) images.
 
 > [!IMPORTANT]
-> `RHUI` is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
+> RHUI is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
 For more information on performing the update process on custom or golden images, and pay-as-you-go (PAYG) images provided by Red Hat, see:
 
