@@ -11,6 +11,8 @@ items:
   items:
   - name: Can't get private IP address of an Azure Container Registry FQDN
     href: cant-resolve-container-registry-fqdn-private-ip-address.md
+  - name: Find image vulnerability scanning results
+    href: image-vulnerability-assessment.md
 
 - name: Troubleshoot pull issues
   href: troubleshoot-issues-pull-container-registry.md
@@ -25,5 +27,7 @@ items:
     href: download-failed-443-io-time-out.md
   - name: '"Manifest tag is not found" error'
     href: manifest-tag-not-found.md
+  - name: Fail to pull images to Azure Web App
+    href: pull-image-to-web-app-fail.md
   - name: '"Request canceled while waiting for connection" error'
     href: request-canceled-waiting-connection-timeout-exceeded.md
