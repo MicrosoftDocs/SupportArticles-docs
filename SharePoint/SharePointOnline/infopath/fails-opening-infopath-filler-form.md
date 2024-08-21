@@ -3,7 +3,6 @@ title: Can't open an InfoPath Filler form published to a SharePoint Online site
 description: InfoPath cannot open the selected form because of an error in the form's code error when trying to open an InfoPath Filler form that's published to a SharePoint Online site with the error.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

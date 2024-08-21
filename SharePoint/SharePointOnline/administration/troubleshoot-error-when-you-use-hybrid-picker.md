@@ -3,7 +3,6 @@ title: Error when you use the SharePoint Hybrid Picker
 description: Describes an issue when you use the SharePoint Hybrid Picker.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

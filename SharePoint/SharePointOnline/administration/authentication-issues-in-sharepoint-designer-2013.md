@@ -6,7 +6,6 @@ author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Identity and Authentication\App Authentication
   - CSSTroubleshoot

@@ -4,7 +4,6 @@ description: When you @mention someone in a SharePoint file for their collaborat
 author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
