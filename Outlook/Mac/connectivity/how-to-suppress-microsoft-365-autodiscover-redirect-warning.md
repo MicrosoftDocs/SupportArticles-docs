@@ -29,7 +29,7 @@ When Microsoft Outlook 2016 for Mac connects to a Microsoft 365 account, `Autodi
 > `https://autodiscover-s.outlook.com/autodiscover/autodiscover.xml`  
 > Click Allow only if you fully trust the source, or if your Exchange administrator instructs you to.
 
-When this warning message occurs, you may select **Always use my response for this server,** and then select **Allow** in order not to be asked about this specific server again for this Outlook 2016 for Mac profile.
+When this warning message occurs, you may select **Always use my response for this server**, and then select **Allow** in order not to be asked about this specific server again for this Outlook 2016 for Mac profile.
 
 You or administrators may want to suppress the initial warning message. This article contains information about how to do so.
 
