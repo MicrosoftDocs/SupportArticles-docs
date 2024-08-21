@@ -184,7 +184,7 @@ Because Performance Monitor is a local tool, we can only get basic information f
 | **\\Network Interface(\*)\\Bytes Sent/sec**    | - | - | - |
 | **\\Network Interface(\*)\\Bytes Received/sec** | - | - | - |
 
-The workload of **\\Network Interface(\*)\\Bytes Sent/sec** and **\\Network Interface(*)\\Bytes Received/sec** should depend on the design of the server role. For example, bytes sent per sec is generally higher than bytes received per sec on a streaming server; Bytes received per sec is generally higher than bytes sent per sec on a FTP server that is used to upload data.
+The workload of **\\Network Interface(\*)\\Bytes Sent/sec** and **\\Network Interface(*)\\Bytes Received/sec** should match the design of the server role. For example, the number of bytes sent per second is typically higher than the number of bytes received per second on a streaming server. In contrast, the number of bytes received per second is generally higher than the bytes sent per second on an FTP server used for uploading data.
 
 > [!NOTE]
 > The values are related to the speed of the network card, and you need to do the calculation. When doing so, remember that the network speed is measured in bits, and 8 bits = 1 byte. Therefore, if you have a 1 GB network card, your throughput can reach 125 MB/sec.
