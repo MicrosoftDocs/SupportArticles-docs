@@ -21,7 +21,7 @@
       href: ../archive-mailboxes/cannot-see-calendar-folder.md
     - name: Can't use archive mailbox in Outlook for Mac 2011
       href: ../archive-mailboxes/cannot-use-archive-mailbox-mac.md
-    - name: Cloud-based archive mailbox is unavailable
+    - name: Can't access cloud-based archive mailbox
       href: ../archive-mailboxes/cloud-based-archive-unavailable.md
     - name: Contents of cloud-based archive are the same as on-premises
       href: ../archive-mailboxes/cloud-based-archive-content-same-as-on-premises.md
