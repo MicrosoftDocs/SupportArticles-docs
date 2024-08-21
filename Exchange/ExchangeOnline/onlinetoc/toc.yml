@@ -133,7 +133,7 @@
           href: ../administration/update-of-client-access-rules-for-office-365-customers.md
         - name: UsageLocation validation error about Enable-UMMailbox
           href: ../administration/enable-ummailbox-cannot-be-performed-error.md
-        - name: Validation errors for a mailbox archive GUID
+        - name: Resolve validation errors for an archive mailbox
           href: ../administration/validation-errors-for-mailbox-archive-guid.md
         - name: View and update address list membership
           href: ../administration/view-update-address-list-membership.md
