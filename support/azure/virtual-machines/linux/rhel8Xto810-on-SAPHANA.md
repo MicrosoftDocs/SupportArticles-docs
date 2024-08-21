@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to update RHEL from 8.X to 8.10 on Azure with "RHEL for SAP with High Availability or SAP APPS on (PAYG) virtual machines.
+# How to update RHEL from 8.x to 8.10 on Azure with RHEL for SAP with High Availability or SAP APPS on (PAYG) virtual machines.
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
