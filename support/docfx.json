@@ -186,9 +186,6 @@
         "dynamics-365/supply-chain/transportation/*.md": "weijiesa",
         "dynamics-365/supply-chain/warehousing/*.md": "mirzaab"
       },
-      "ms.localizationpriority": {
-        "**/*.md": "medium"
-      },
       "ms.topic": {
         "**/*.md": "troubleshooting",
         "sql/releases/**/*.md": "release-notes"
