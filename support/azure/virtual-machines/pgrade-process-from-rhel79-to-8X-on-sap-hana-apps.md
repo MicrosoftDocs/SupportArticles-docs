@@ -54,7 +54,7 @@ System Configuration   | Source OS version| Target Version     |
 
 This procedure outlines the necessary steps to complete before performing an in-place upgrade from 7.9 to 8.8 or 8.10 using the `leapp` utility on `SAP-HANA` `PAYG` images on Azure.
 
-Based on Red Hat documentation, upgrading cluster nodes in place or through rolling upgrades **is not supported** for major `RHEL` releases. For more information, see, [`Leapp` upgrade from RHEL 7 to RHEL 8 fails for pacemaker cluster](https://access.redhat.com/solutions/7049940).
+- Based on Red Hat documentation, upgrading cluster nodes in place or through rolling upgrades **is not supported** for major `RHEL` releases. For more information, see, [`Leapp` upgrade from RHEL 7 to RHEL 8 fails for pacemaker cluster](https://access.redhat.com/solutions/7049940).
 
 In this case, if you're running `SAP HANA` in an `HA` cluster, to perform an `in-place` upgrade, you must destroy the existing cluster and recreate it after the upgrade is complete.
 
