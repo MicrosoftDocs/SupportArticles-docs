@@ -36,16 +36,16 @@ This article describes the information that may be collected from a computer tha
 
 #### Fiddler or network trace output
 
-The following data may be collected by the Network Capture diagnostic that's run by the Microsoft Support Diagnostic Tool.
-
-The files are typically large, and therefore the diagnostic may take several minutes to finish. After this diagnostic runs, the collected traces will be automatically compressed and then uploaded to Microsoft Support. A total size of up to 2 GB can be uploaded.
-
-If the results files are larger than 2 GB after compression, some files won't be uploaded and will be left on your system. In this case, you must contact a support professional to ask for an alternative way to upload the remaining collected information.
+The Microsoft Support Diagnostic Tool runs the Network Capture diagnostic. And the Network Capture diagnostic may collect the following data.
 
 |Description|Filename|
 |----------|----------|
-|Fiddler Trace|{Computer_name}_fiddler.cap|
+|Fiddler Trace|`{Computer_name}_fiddler.cap`|
 |Network capture information from nmcap.exe output|{ComputerName}_netcap.cap; {ComputerName}__NMcap_Trace_DisplayNet.txt}__NMcap_Trace_DisplayNet.txt|
+
+The files are typically large, and therefore the diagnostic may take several minutes to finish. After it runs, the collected traces will be automatically compressed and then uploaded to Microsoft Support. A total size of up to 2 GB can be uploaded.
+
+If the results files are larger than 2 GB after compression, some files aren't uploaded and remain on your system. In this case, you must contact a support professional for an alternative way to upload the remaining collected information.
 
 ### Site performance rules
 
