@@ -3,7 +3,6 @@ title: Error messages or Access crashes after you install security update MS16-0
 description: Discusses a problem in which you receive error messages or Access crashes after you install security update MS16-004. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

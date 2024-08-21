@@ -3,7 +3,6 @@ title: Differences between the 1900 and the 1904 date system
 description: Provides the description of the differences between the 1900 date system and the 1904 date system in Excel. Discusses the problems that you may experience when you use these two different date systems in Excel workbooks.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.custom: 
   - Editing\Cells

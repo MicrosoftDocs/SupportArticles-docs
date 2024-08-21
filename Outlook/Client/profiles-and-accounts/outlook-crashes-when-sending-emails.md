@@ -4,7 +4,6 @@ description: Provides a resolution for the issue that Outlook crashes when you t
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Product Stability, startup or Shutdown and perform\Crash using Outlook
   - CSSTroubleshoot

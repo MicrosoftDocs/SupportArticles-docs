@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: tasitae, paololin
 ms.custom: 
   - sap:Exchange Mailbox Accounts\Organizational forms library

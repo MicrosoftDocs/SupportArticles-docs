@@ -10,7 +10,6 @@ ms.custom:
   - sap:Mail Flow\Issues with Transport Rules
   - Exchange Server
   - CSSTroubleshoot
-localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 

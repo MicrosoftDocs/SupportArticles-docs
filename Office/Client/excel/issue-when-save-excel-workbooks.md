@@ -3,7 +3,6 @@ title: How to troubleshoot errors when you save Excel workbooks
 description: Describes how to troubleshoot errors that occur when you try to save workbooks in Microsoft Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

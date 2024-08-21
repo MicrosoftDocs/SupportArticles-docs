@@ -3,7 +3,6 @@ title: How to use a setup log to troubleshoot setup problems in Office
 description: Explains how to use Office installation log files to troubleshoot Office setup issues.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

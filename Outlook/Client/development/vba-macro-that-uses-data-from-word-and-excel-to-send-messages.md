@@ -4,7 +4,6 @@ description: This article describes a Visual Basic for Applications macro that u
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Developer Issues\Macros
   - CSSTroubleshoot

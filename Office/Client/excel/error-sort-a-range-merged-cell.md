@@ -3,7 +3,6 @@ title: An error message when you sort a range that contains merged cells in Exce
 description: Discusses a problem in which you may receive an error message when you sort a range that contains merged cells in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -4,7 +4,6 @@ description: Describes an issue in which you can't use your Microsoft 365 federa
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Hybrid
   - CSSTroubleshoot

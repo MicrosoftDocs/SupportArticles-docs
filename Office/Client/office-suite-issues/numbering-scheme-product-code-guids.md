@@ -1,12 +1,11 @@
 ---
 title: Description of the numbering scheme for product code GUIDs in Office 2013
-description: Describes how to read the product GUIDs in the Windows registry to determine information about the Office 2013 suite, programs, or utilities that you are using.
+description: Describes how to read the product GUIDs in the Windows registry to determine information about the Office 2013 suite, programs, or utilities that you're using.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: doakm
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
@@ -41,9 +40,9 @@ ms.date: 06/06/2024
 
 ## Summary
 
-This article describes how to read the product GUIDs in the Windows registry to determine information about the Microsoft Office 2013 suite, programs, or utilities that you are using. GUIDs contain information about the release type, the release version, and the language of an Office 2013 suite or program. 
+This article describes how to read the product GUIDs in the Windows registry to determine information about the Microsoft Office 2013 suite, programs, or utilities that you're using. GUIDs contain information about the release type, the release version, and the language of an Office 2013 suite or program.
 
-**Note** GUIDs are created only when a user installs a Windows Installer (MSI) version of the Office 2013 suite or of an Office 2013 program. GUIDs are not created when a user installs a Click-to-Run version of the Office 2013 suite or of an Office 2013 program.
+**Note** GUIDs are created only when a user installs a Windows Installer (MSI) version of the Office 2013 suite or of an Office 2013 program. GUIDs aren't created when a user installs a Click-to-Run version of the Office 2013 suite or of an Office 2013 program.
 
 ## More Information
 
@@ -76,7 +75,7 @@ The following table describes the characters of the GUID.
 
 To view the GUIDs for the Office 2013 suites and programs that are installed on a computer, follow these steps: 
 
-1. Click **Start** > **Run**, type `regedit`, and then click **OK**.
+1. Select **Start** > **Run**, type `regedit`, and then select **OK**.
 2. Locate the following subkey:
 
    **`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`**
@@ -106,10 +105,10 @@ The release version values specify the level of the release, such as a beta vers
   |3|Release Candidate 0 (RC0)|
   |4|Release Candidate 1 (RC1)/OEM Preview release|
   |5-8|Reserved values|
-  |9|RTM. This is the first version that is shipped (the initial release).|
-  |A|Service Pack 1 (SP1). This value is not used if the product code is not changed after the RTM version|
-  |B|Service Pack 2 (SP2). This value is not used if the product code is not changed after the RTM version|
-  |C|Service Pack 3 (SP3). This value is not used if the product code is not changed after the RTM version|
+  |9|RTM. This value is the first version that is shipped (the initial release).|
+  |A|Service Pack 1 (SP1). This value isn't used if the product code isn't changed after the RTM version|
+  |B|Service Pack 2 (SP2). This value isn't used if the product code isn't changed after the RTM version|
+  |C|Service Pack 3 (SP3). This value isn't used if the product code isn't changed after the RTM version|
   |D-F|Reserved values|
 
 ### Release type

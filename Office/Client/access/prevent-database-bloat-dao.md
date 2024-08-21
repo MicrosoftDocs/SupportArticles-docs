@@ -3,7 +3,6 @@ title: Prevent database bloat after you use DAO
 description: Describes how to prevent database bloat that occurs when the database grows rapidly in size after you use Data Access Objects (DAO) to open a recordset. To resolve this issue, you need to call the Close method of the recordset to explicitly close it.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

@@ -3,7 +3,6 @@ title: Blank screen when you log on to a SharePoint site
 description: Describes an issue in which you receive a blank screen when you open a SharePoint site. This issue occurs when FIPS is enabled on the SharePoint server.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

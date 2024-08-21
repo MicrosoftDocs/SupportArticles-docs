@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: aruiz, doakm
 ms.custom: 
   - sap:People or Contacts\Personal Distribution Lists

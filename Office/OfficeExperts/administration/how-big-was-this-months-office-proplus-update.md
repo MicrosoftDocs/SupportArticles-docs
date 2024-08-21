@@ -4,7 +4,6 @@ description: This article explains how to find the size of a package by using Pr
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

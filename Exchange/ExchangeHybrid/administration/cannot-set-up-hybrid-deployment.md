@@ -4,7 +4,6 @@ description: Describes an issue in which you receive an error when you run Set-F
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Hybrid
   - CSSTroubleshoot

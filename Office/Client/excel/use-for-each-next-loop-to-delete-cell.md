@@ -3,7 +3,6 @@ title: Delete cells by using a For Each Next loop
 description: Provides a macro example that illustrates how to delete cells by using a For Each...Next loop.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

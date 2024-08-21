@@ -3,7 +3,6 @@ title: Excel statistical functions RSQ
 description: Describes the Excel statistical function RSQ.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

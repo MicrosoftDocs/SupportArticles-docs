@@ -3,7 +3,6 @@ title: Test-CsFederatedPartner fails
 description: The Test-CsFederatedPartner Lync Server PowerShell cmdlet fails with the use of Office Communicatione Server 2007 R2 Edge Servers
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -3,7 +3,6 @@ title: Populate text boxes with multicolumn Combo Box selections
 description: Provides step-by-step guide to populate several text boxes with the selections made in a multicolumn combo box, and save the contents of the text boxes as one record in a table. Requires basic macro, coding, and interoperability skills
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

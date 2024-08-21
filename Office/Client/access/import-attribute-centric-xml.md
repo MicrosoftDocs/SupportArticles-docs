@@ -3,7 +3,6 @@ title: Can't import attribute-centric XML
 description: Explains why you cannot import all tables of an XML document. This article gives solutions to the problem.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CI 162681
