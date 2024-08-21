@@ -45,6 +45,8 @@ For more information on performing the update process on custom or golden images
 
 #### [RHEL 8.x to 8.10 on SAP-HANA](#tab/rhel8x-rhel810ha)
 
+> [!IMPORTANT]  
+> RHEL 8.10 isn't certified for running SAP HANA currently. It is in process. For more information, see: [Overview Product Availability Matrix for SAP on Red Hat.](https://access.redhat.com/articles/6966927#support-matrix-for-sap-hana-on-intel-64-rhel-5)
 
 1. Remove the RHUI(E4S) package installed or updated on the VM.
 
