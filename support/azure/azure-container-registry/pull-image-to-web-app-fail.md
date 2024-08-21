@@ -24,7 +24,7 @@ az acr check-health --name <myregistry> --ignore-errors --yes
 If an issue is detected, the results include an error code and description. For more information about these errors and possible solutions, see [Health check error reference](/azure/container-registry/container-registry-health-error-reference).
 
 > [!NOTE]
-> Helm-related or Notary-related errors don't indicate issues that affect Container Registry or AKS. Instead, they indicate related issues, such as that Helm or Notary isn't installed, or that Azure CLI isn't compatible with the currently installed version of Helm or Notary.
+> If you receive Helm-related or Notary-related errors, it does not mean that your Container Registry or AKS is not working or has a problem. It just indicate the issues such as that Helm or Notary isn't installed, or that Azure CLI isn't compatible with the currently installed version of Helm or Notary.
 
 Next, identify the pull-related error message that's essential for troubleshooting:
 
