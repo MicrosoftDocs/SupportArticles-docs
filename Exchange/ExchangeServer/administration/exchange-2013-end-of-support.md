@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Medium
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot

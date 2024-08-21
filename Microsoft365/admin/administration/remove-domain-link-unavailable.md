@@ -3,7 +3,6 @@ title: You can't remove the initial domain when removing a domain
 description: Fixes an issue in which you can't remove the initial domain created for you in Microsoft 365.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

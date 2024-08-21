@@ -3,7 +3,6 @@ title: Cannot verify the license for this product when you start an Office app
 description: Describes an issue that triggers a licensing error when you try to start an Office 2016 or 2013 application. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

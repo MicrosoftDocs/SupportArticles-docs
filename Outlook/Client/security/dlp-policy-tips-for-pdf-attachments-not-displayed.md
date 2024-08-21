@@ -1,12 +1,11 @@
 ---
 title: DLP policy tips for PDF attachments not shown
-description: Describes an issue in which Outlook 2016 or 2013 does not display a Data Loss Prevention policy tip for PDF attachments in Windows 7. Provides a resolution.
+description: Describes an issue in which Outlook 2016 or 2013 doesn't display a Data Loss Prevention policy tip for PDF attachments in Windows 7. Provides a resolution.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Data Protection and Security\DLP
   - Outlook for Windows
@@ -44,10 +43,10 @@ Method 2: Try another third-party iFilter.
 
 Possible third-party alternatives are Foxit and Tracker. The third-party iFilter must be the same bitness as Office.
 
-If you use a third-party iFilter, add the `TecDisableHardMemoryLimit` subkey to the registry. To do this, follow these steps:
+If you use a third-party iFilter, add the `TecDisableHardMemoryLimit` subkey to the registry. Follow these steps:
 
 1. Exit Outlook.
-2. Start Registry Editor. To do this in Windows 7, select **Start**, type *regedit.exe* in the search box, and then press Enter.
+2. Start Registry Editor. In Windows 7, select **Start**, type *regedit.exe* in the search box, and then press Enter.
 3. Locate and then select the following registry subkey, where the *x.0* placeholder represents your version of Office (16.0 = Office 2016, 15.0 = Office 2013).
 
    `HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\PolicyNudges`
@@ -67,4 +66,4 @@ For more information about Foxit iFilter and Tracker iFilter, see [Foxit iFilter
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.

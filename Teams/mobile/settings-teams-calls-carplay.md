@@ -6,7 +6,6 @@ ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Teams Calling (PSTN)\Voice Apps
   - CI 157482

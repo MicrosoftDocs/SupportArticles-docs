@@ -4,7 +4,6 @@ description: Use the Outlook Calendar diagnostic to scan the Outlook calendar fo
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Calendar\Other
   - Outlook for Windows

@@ -3,7 +3,6 @@ title: Disable contextual tips in Skype for Business 2016
 description: Discusses how to disable contextual tips in Skype for Business 2016. Although these tips display helpful suggestions about program features for users, you may want to turn them off.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

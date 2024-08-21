@@ -3,7 +3,6 @@ title: Black screen during desktop sharing in Skype for Business on macOS High S
 description: Discusses that you see a black screen during desktop sharing in Skype for Business or Lync Web App on macOS High Sierra. Provides a workaround.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

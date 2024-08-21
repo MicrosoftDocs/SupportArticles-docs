@@ -4,7 +4,6 @@ description: Provides an overview of a new feature to embed and play back videos
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Issues with product features
   - Outlook for Windows

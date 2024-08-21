@@ -5,7 +5,6 @@ author: helenclu
 ms.author: luche
 ms.reviewer: shraycha
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

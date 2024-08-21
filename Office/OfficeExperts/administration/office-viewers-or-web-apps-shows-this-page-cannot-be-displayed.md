@@ -4,7 +4,6 @@ description: Office viewers don't work with the This page can't be displayed err
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

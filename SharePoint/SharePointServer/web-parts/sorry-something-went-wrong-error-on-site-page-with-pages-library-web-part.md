@@ -4,7 +4,6 @@ description: Describes how to resolve a 'Sorry, something went wrong' error on a
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: Admin

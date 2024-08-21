@@ -3,7 +3,6 @@ title: Lync 2010 for Android supports Android smartphone devices
 description: List of tablet devices that have been tested with and are supported for use with Lync 2010 for Android
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

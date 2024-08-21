@@ -427,8 +427,6 @@
           href: ../profiles-and-accounts/metered-connection-warning.md
         - name: Can't subscribe to an RSS feed that needs authentication
           href: ../profiles-and-accounts/error-when-subscribing-to-rss-feed-that-needs-authentication.md
-        - name: Can't set up Microsoft 365 account
-          href: ../profiles-and-accounts/cannot-set-up-office-365-account-outlook.md
         - name: Can't use EAS to connect Outlook to Exchange
           href: ../profiles-and-accounts/outlook-cannot-use-activesync-connect-exchange.md
         - name: Enable ZeroConfigExchange automatically create first profile

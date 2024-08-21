@@ -3,7 +3,6 @@ title: Display issues in Office client applications.
 description: Describes some display issues in Office client applications.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

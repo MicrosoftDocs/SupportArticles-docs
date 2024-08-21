@@ -4,7 +4,6 @@ description: Describes an issue in which time zone settings are incorrect or mis
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Administrator Tasks
   - CSSTroubleshoot

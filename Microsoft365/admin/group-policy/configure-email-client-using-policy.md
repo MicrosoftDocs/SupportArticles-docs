@@ -3,7 +3,6 @@ title: How to configure the default email client using Group Policy
 description: Explains how to configure the default email client using Group Policy
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

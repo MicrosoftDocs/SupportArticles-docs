@@ -3,7 +3,6 @@ title: Create application-level event handlers in Excel
 description: Discusses how to create application-level event handlers in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

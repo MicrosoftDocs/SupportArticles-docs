@@ -3,7 +3,6 @@ title: Spell Check not working in Word 2010
 description: Provides steps to resolve an issue where the spell checker does not catch spelling mistakes in Word 2010.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

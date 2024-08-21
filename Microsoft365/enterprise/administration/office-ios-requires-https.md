@@ -4,7 +4,6 @@ description: Beginning in version 2.57, Office apps for iOS require an HTTPS con
 author: helenclu
 ms.reviewer: dereksn
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -4,7 +4,6 @@ description: Describes how to use Outlook Web App to remotely wipe an ActiveSync
 manager: dcscontentpm
 audience: ITPro
 ms.topic: how-to
-localization_priority: Normal
 ms.custom: 
   - sap:Client Connectivity
   - CSSTroubleshoot

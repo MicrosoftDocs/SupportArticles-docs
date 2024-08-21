@@ -3,7 +3,6 @@ title: Telephone numbers of contacts are missing
 description: Describes an issue in which telephone numbers of contacts are missing in Lync 2013 or Skype for Business. Occurs for users whose photos are disabled. A workaround is provided.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -4,7 +4,6 @@ description: Describes an issue that generates performance and connection proble
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Exchange Mailbox Accounts\Problems after moving a mailbox
   - CSSTroubleshoot

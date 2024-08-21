@@ -3,7 +3,6 @@ title: Cannot enter User Logon Account for new resource
 description: Describes an issue in which users cannot edit the User Logon Account field. Provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -7,7 +7,6 @@ manager: dcscontentpm
 ms.reviewer: v-six
 audience: Admin
 ms.topic: troubleshooting
-ms.localizationpriority: medium
 f1.keywords:
 - CSH
 ms.custom: 
@@ -22,7 +21,7 @@ search.appverid:
 - MBS150
 - MET150
 ms.assetid: 51356082-9fef-4639-a18a-fc7c5beae0c8
-description: Learn how to fix email issues for error code 451 4.7.500-699 (ASxxx) in Exchange Online (IP throttling).
+description: Learn how to fix email issues for non-delivery report (NDR) error code 451 4.7.500-699 (ASxxx) in Exchange Online (IP throttling).
 ---
 
 # Fix NDR error code "451 4.7.500-699 (ASxxx)" in Exchange Online
@@ -33,14 +32,13 @@ It's frustrating when you get an error after sending an email message. This topi
 
 You received this NDR because the source email server (the connecting IP address) changed its previous email sending patterns by sending a much higher volume of messages than in the past.
 
-This error code is part of anti-spam filtering in Microsoft 365 or Office 365. You'll get this error when the source IP address that's sending you email changes **significantly** from its previously-established patterns. This part of a filtering technique known as _graylisting_: when new senders appear, they're treated more suspiciously than senders with a previously-established history of sending email messages (think of it as a probation period).
+This error code is part of anti-spam filtering in Microsoft 365 or Office 365. You get this error when the source IP address that's sending you email changes **significantly** from its previously-established patterns. This part of a filtering technique known as _graylisting_: when new senders appear, they're treated more suspiciously than senders with a previously-established history of sending email messages (think of it as a probation period).
 
 This error response is called _IP throttling_, and it can help reduce the amount of spam that you receive.
 
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 |---|---|---|---|
-|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix it?](#i-got-this-bounce-message-how-do-i-fix-it)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How can I fix this?](#im-an-email-admin-how-do-i-fix-this)|
-|fix-this)|
+|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix it?](#i-got-this-bounce-message-how-do-i-fix-it)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How can I fix this error?](#im-an-email-admin-how-do-i-fix-this-error)|
 
 ## I got this bounce message. How do I fix it?
 
@@ -48,11 +46,11 @@ If you received this NDR in response to a message that you sent, try the followi
 
 1. If your organization uses Exchange Online Protection (EOP) as part of Microsoft 365 or Office 365 or standalone EOP subscription, an email admin can use the steps in the next section to fix the problem.
 
-2. If your organization does not use EOP (for example, if you provide a third-party service), the error will resolve itself as you establish an email sending history with Microsoft 365 or Office 365 over a period of a few days.
+2. If your organization doesn't use EOP (for example, if you provide a third-party service), the error will resolve itself as you establish an email sending history with Microsoft 365 or Office 365 over a period of a few days.
 
-If the problem continues, send the bounce message to your email admin for assistance and refer them to the information in this topic.
+If the problem continues, send the bounce message to your email admin for assistance and refer them to the information in this article.
 
-## I'm an email admin. How do I fix this?
+## I'm an email admin. How do I fix this error?
 
 To remove throttling for these messages, you need to configure a connector:
 

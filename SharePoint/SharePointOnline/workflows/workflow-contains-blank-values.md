@@ -3,7 +3,6 @@ title: Workflow contains blank values in output from Multiple lines of text colu
 description: A Workflow designed to collect information from the Multiple lines of text column contains blank values in output.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

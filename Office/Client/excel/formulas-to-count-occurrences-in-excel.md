@@ -3,7 +3,6 @@ title: Formulas to count the occurrences of text, characters, and words in Excel
 description: Provides examples to describe formulas that calculate the number of occurrences of text, characters, and words.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

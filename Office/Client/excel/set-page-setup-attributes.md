@@ -3,7 +3,6 @@ title: Set page setup attributes for more than one sheet
 description: Describes how to set page setup attributes for a group of Excel worksheets.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
