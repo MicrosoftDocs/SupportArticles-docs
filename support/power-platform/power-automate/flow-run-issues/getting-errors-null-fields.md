@@ -19,9 +19,9 @@ When you create a flow in Power Automate, you might experience the following iss
 - Unexpected behaviors occur when performing an action with a null field.
 - Runtime errors occur if you don't handle null fields correctly. For example:
 
-    > **InvalidTemplate**. Unable to process template language expressions. The provided value is of type 'Null'.
+   > **InvalidTemplate**. Unable to process template language expressions. The provided value is of type 'Null'.
 
-      :::image type="content" source="media/getting-errors-null-fields/invaild-template-error.png" alt-text="Screenshot of the invalid template runtime error." border="false":::
+   :::image type="content" source="media/getting-errors-null-fields/invaild-template-error.png" alt-text="Screenshot of the invalid template runtime error." border="false":::
 
 ## Cause
 
