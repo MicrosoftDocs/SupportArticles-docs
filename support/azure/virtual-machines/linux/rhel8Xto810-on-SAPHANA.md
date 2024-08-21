@@ -33,9 +33,9 @@ For more information on performing the update process on custom or golden images
 ## Prerequisites
 
 - Make a backup of the virtual machine or a snapshot of the OS disk.
-- Set up access to the serial console
+- Set up access to the serial console.
 - SAP process must be stopped during the OS update process.
-- Run the commands in this article with root privileges
+- Run the commands in this article with root privileges.
 
 ## Process to upgrade from RHEL 8.x to RHEL 8.10 on SAP HANA or SAPAPPS pay-as-you-go (PAYG) virtual machines.
 
@@ -58,7 +58,7 @@ sudo yum remove $(rpm -qa | grep -i rhui)
  rm /etc/yum/vars/releasever
 ```
 
-3. Install the `rhui-azure-rhel8-base-sap-ha` package by running the dnf install command
+3. Install the `rhui-azure-rhel8-base-sap-ha` package by running the dnf install command.
 
 ```bash
 sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-base-sap-ha.config' install rhui-azure-rhel8-base-sap-ha
@@ -82,7 +82,7 @@ rhui-microsoft-azure-rhel8-base-sap-ha       Microsoft Azure RPMs for Red Hat En
 ```
 
 >[!IMPORTANT]
->A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this scenario, all the mentioned repositories are required. Optionally, you can modify the `/etc/yum.repos.d/rh-cloud-base-sap-ha.repo` file based on your system's specific requirement
+>A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this scenario, all the mentioned repositories are required. Optionally, you can modify the `/etc/yum.repos.d/rh-cloud-base-sap-ha.repo` file based on your system's specific requirement.
 
 
 5. Update to RHEL 8.10
@@ -108,12 +108,12 @@ sudo yum remove $(rpm -qa | grep -i rhui)
 ```bash
  rm /etc/yum/vars/releasever
 ```
-3. Install the `rhui-azure-rhel8-base-sap-apps` package by running the dnf install command
+3. Install the `rhui-azure-rhel8-base-sap-apps` package by running the dnf install command.
 
 ```bash
 sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-base-sapapps.config' install rhui-azure-rhel8-base-sap-apps
 ```
-4. Verify that the corresponding repositories are available and show no errors. To do this task, run the `dnf repolist` command
+4. Verify that the corresponding repositories are available and show no errors. To do this task, run the `dnf repolist` command.
 
 ```bash
 sudo dnf repolist
@@ -129,13 +129,13 @@ rhel-8-for-x86_64-sap-netweaver-rhui-rpms Red Hat Enterprise Linux 8 for x86_64 
 rhui-microsoft-azure-rhel8-base-sap-apps  Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-apps)
 ```
 
-5. Update to RHEL 8.10
+5. Update to RHEL 8.10.
 
 ```bash
 sudo dnf update
 ```
 
-6. Reboot the Virtual Machine
+6. Reboot the Virtual Machine.
 
 ```bash
 sudo reboot 
