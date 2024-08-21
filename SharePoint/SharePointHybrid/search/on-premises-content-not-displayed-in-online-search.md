@@ -46,16 +46,16 @@ System.Net.WebException: The remote server returned an error: (401) Unauthorized
    at Microsoft.Office.Server.Search.RemoteSharepoint.RemoteSharepointEvaluator.RemoteSharepointProducer.ProcessRecordCore(IRecord record)
 ```
 
+## Workaround
 
-## Workaround   
-
-To work around this issue, change your SharePoint on-premises identity provider so that it works with SharePoint Online. To do this, run the following cmdlet on your on-premises SharePoint farm:
+To work around this issue, change your SharePoint on-premises identity provider so that it works with SharePoint Online. To do so, run the following cmdlet on your on-premises SharePoint farm:
 
 ```powershell
 $config = Get-SPSecurityTokenServiceConfig  
 $config.AuthenticationPipelineClaimMappingRules.AddIdentityProviderNameMappingRule("OrgId Rule", Microsoft.SharePoint.Administration.Claims.SPIdentityProviderTypes]::Forms, "membership", "urn:federation:microsoftonline")  
 $config.Update()   
 ```
+
 ## More information  
 
 In the scenario that's described in the "Symptoms" section, the following exception is logged in the Unified Logging Service (ULS) log of the on-premises SharePoint environment:
@@ -108,8 +108,6 @@ Exception: 'System.InvalidOperationException: Exception of type 'System.Argument
    at Microsoft.SharePoint.IdentityModel.SPSecurityTokenService.GetOutputClaimsIdentity(IClaimsPrincipal principal, RequestSecurityToken request, Scope scope)'.   
 ```
 
-For more information about how to configure hybrid search for SharePoint Server, go to the following Microsoft website:
-
-[SharePoint Server hybrid configuration roadmaps](/SharePoint/hybrid/configuration-roadmaps)  
+For more information about how to configure hybrid search for SharePoint Server, see [SharePoint Server hybrid configuration roadmaps](/SharePoint/hybrid/configuration-roadmaps). 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

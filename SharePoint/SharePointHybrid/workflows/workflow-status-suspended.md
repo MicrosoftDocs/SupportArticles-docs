@@ -28,7 +28,7 @@ When you run a Microsoft SharePoint 2013 workflow that's associated with the Sty
 
 ## Solution/Workaround
 
-To work around this issue, disable automatic updating of the workflow status to the current stage name. To do this, follow these steps:
+To work around this issue, disable automatic updating of the workflow status to the current stage name by following these steps:
 
 1. Open the affected workflow in Microsoft SharePoint Designer 2013.
 1. On the Workflow Settings page for the workflow, clear the **Automatically update the workflow status to the current stage name** check box.
@@ -40,6 +40,6 @@ To work around this issue, disable automatic updating of the workflow status to 
 
 ## More information
 
-This error occurs because the Style Library list requires you to check out items. You expect that the "update status" action within the workflow will perform this operation. However, it does not.
+This error occurs because the Style Library list requires you to check out items. You expect that the "update status" action within the workflow performs this operation. However, it doesn't.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

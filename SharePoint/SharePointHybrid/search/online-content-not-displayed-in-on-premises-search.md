@@ -51,7 +51,6 @@ To resolve this issue, determine whether the Search Service Application Proxy wa
 
 - Follow best operational practices and perform a backup before you follow these steps. For more information, go to [Back up Search service applications in SharePoint Server](/SharePoint/administration/back-up-a-search-service-application).
 
-
 To do this, follow these steps in the SharePoint Management Shell.
 
 1. Obtain the ID of Search Service Application. To do this, run the following cmdlet:
