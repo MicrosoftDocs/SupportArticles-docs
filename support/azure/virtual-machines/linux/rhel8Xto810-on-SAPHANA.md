@@ -65,6 +65,7 @@ sudo yum remove $(rpm -qa | grep -i rhui)
 ```bash
 sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-base-sap-ha.config' install rhui-azure-rhel8-base-sap-ha
 ```
+
 4. Verify that the corresponding repositories are available and show no errors. To do this task, run the `dnf repolist` command.
 
 ```bash
@@ -92,6 +93,7 @@ rhui-microsoft-azure-rhel8-base-sap-ha       Microsoft Azure RPMs for Red Hat En
 ```bash
 sudo dnf update
 ```
+
 6. Reboot the Virtual Machine
 
 ```bash
@@ -105,16 +107,19 @@ sudo reboot
 ```bash
 sudo yum remove $(rpm -qa | grep -i rhui)
 ```
+
 2. Remove the version lock file.
 
 ```bash
- rm /etc/yum/vars/releasever
+sudo rm /etc/yum/vars/releasever
 ```
+
 3. Install the `rhui-azure-rhel8-base-sap-apps` package by running the dnf install command.
 
 ```bash
 sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-base-sapapps.config' install rhui-azure-rhel8-base-sap-apps
 ```
+
 4. Verify that the corresponding repositories are available and show no errors. To do this task, run the `dnf repolist` command.
 
 ```bash
