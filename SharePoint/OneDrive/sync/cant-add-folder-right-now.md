@@ -10,7 +10,6 @@ ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
   - CI 149486
-localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 

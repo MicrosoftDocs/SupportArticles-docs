@@ -4,7 +4,6 @@ description: Fixes an issue in which Office can't check in files when LAN doesn'
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Sharing\Collab

@@ -4,7 +4,6 @@ description: Provides solutions for error messages that indicate SharePoint site
 author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

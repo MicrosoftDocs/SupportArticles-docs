@@ -3,7 +3,6 @@ title: Search results missing in SharePoint Online
 description: This article describes how to resolve an issue where search results are missing in SharePoint Online
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

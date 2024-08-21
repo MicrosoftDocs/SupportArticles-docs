@@ -4,7 +4,6 @@ description: Resolves an issue in which the new Outlook for Mac shows private ev
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Calendar\
   - CI 172845

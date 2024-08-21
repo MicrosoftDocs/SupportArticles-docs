@@ -3,7 +3,6 @@ title: Error when a delegated partner administrator accesses a client's SharePoi
 description: Provides a resolution for an issue in which external sharing is disabled for the site when a delegated partner administrator tries to access a client's SharePoint Online admin center.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

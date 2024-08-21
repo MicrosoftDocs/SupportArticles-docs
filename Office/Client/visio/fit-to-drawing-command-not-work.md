@@ -3,7 +3,6 @@ title: Fit to Drawing command does not resize the page to fit the drawing's dime
 description: Describes the issue in Visio 2010 / 2013 in which the Fit to Drawing command does not resize the page to fit the drawing's dimensions.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

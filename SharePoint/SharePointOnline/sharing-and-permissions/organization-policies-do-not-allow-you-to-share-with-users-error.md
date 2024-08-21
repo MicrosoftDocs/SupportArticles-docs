@@ -5,7 +5,6 @@ author: helenclu
 ms.author: luche
 ms.reviewer: 
 manager: dcscontentpm
-localization_priority: Normal
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 

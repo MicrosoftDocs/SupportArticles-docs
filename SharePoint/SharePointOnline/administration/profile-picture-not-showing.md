@@ -4,7 +4,6 @@ description: Your profile picture isn't shown in SharePoint Online.
 author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

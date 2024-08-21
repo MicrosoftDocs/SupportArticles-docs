@@ -8,7 +8,6 @@ ms.custom:
   - CI 109958
   - CSSTroubleshoot
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

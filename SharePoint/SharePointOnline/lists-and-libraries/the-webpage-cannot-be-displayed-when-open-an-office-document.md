@@ -1,9 +1,8 @@
 ---
-title: The webpage cannot be displayed when you try to open an Office document in the client application from inside SharePoint Online
-description: Describes an issue in which you receive The webpage cannot be displayed error message when you try to open an Office document in the client application from inside SharePoint Online.
+title: The webpage can't be displayed when you try to open an Office document in the client application from inside SharePoint Online
+description: Describes an issue in which you receive an error message when you try to open an Office document in the client application from inside SharePoint Online.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -47,7 +46,7 @@ In this scenario, when you try to open a document from SharePoint Online by usin
 
 ### Scenario 1
 
-To work around this issue, remove the Microsoft SharePoint Foundation Support program component from the Office 2013 installation on the affected computer or computers. To do this, follow the "Install or remove individual Office program components" section of [Install or remove individual Office programs and components](https://support.office.com/article/1b8f3c9b-bdd2-4a4f-8c88-aa756546529d).
+To work around this issue, remove the Microsoft SharePoint Foundation Support program component from the Office 2013 installation on the affected computer or computers. To do so, follow the "Install or remove individual Office program components" section of [Install or remove individual Office programs and components](https://support.office.com/article/1b8f3c9b-bdd2-4a4f-8c88-aa756546529d).
 
 After you complete these steps, repair 2007 Office. For more information about how to repair the installation, see [Repair an Office application](https://support.microsoft.com/office/repair-an-office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b).
 

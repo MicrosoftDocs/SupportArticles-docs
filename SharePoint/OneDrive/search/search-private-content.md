@@ -4,7 +4,6 @@ description: Describes changes to how OneDrive and SharePoint return search resu
 author: helenclu
 ms.reviewer: knutb
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

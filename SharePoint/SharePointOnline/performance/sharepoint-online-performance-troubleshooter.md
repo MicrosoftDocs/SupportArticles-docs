@@ -1,9 +1,8 @@
 ---
 title: SharePoint Online performance troubleshooter
-description: SharePoint Online client performance diagnostic package collects information that can be used to troubleshoot SharePoint Online client performance issues.
+description: SharePoint Online client performance diagnostic package collects information that can be used to troubleshoot SharePoint client performance issues.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -21,7 +20,7 @@ ms.date: 12/17/2023
 
 ## Introduction
 
-The Microsoft 365 SharePoint Online client performance diagnostic package collects information that can be used to troubleshoot SharePoint Online client performance issues. This diagnostic package also lets you capture a Fiddler trace of HTTP(S) traffic while you reproduce these performance issues.
+The Microsoft 365 SharePoint Online client performance diagnostic package collects information that can be used to troubleshoot SharePoint client performance issues. This diagnostic package also lets you capture a Fiddler trace of HTTP(S) traffic while you reproduce these performance issues.
 
 This diagnostic package uploads trace files of up to 2 gigabytes (GB) after the files are compressed.
 
@@ -29,24 +28,24 @@ This diagnostic package uploads trace files of up to 2 gigabytes (GB) after the 
 
 ### Required permissions
 
-The rules in the diagnostic package require that you are the SharePoint Online site collection administrator for the SharePoint Online URL that you enter.
+The rules in the diagnostic package require that you're the site collection administrator for the SharePoint Online URL that you enter.
 
-:::image type="content" source="media/sharepoint-online-performance-troubleshooter/credentials.png" alt-text="Screenshot of the SharePoint Online site collection administrator credentials input dialog." border="false":::
+:::image type="content" source="media/sharepoint-online-performance-troubleshooter/credentials.png" alt-text="Screenshot of the SharePoint site collection administrator credentials input dialog." border="false":::
 
 This article describes the information that may be collected from a computer that's trying to connect to SharePoint Online in Microsoft 365.
 
 #### Fiddler or network trace output
 
-The following data may be collected by the Network Capture diagnostic that's run by the Microsoft Support Diagnostic Tool.
-
-The files are typically large, and therefore the diagnostic may take several minutes to finish. After this diagnostic runs, the collected traces will be automatically compressed and then uploaded to Microsoft Support. A total size of up to 2 GB can be uploaded.
-
-If the results files are larger than 2 GB after compression, some files won't be uploaded and will be left on your system. In this case, you must contact a support professional to ask for an alternative way to upload the remaining collected information.
+The Microsoft Support Diagnostic Tool runs the Network Capture diagnostic. And the Network Capture diagnostic may collect the following data.
 
 |Description|Filename|
 |----------|----------|
-|Fiddler Trace|{Computer_name}_fiddler.cap|
+|Fiddler Trace|`{Computer_name}_fiddler.cap`|
 |Network capture information from nmcap.exe output|{ComputerName}_netcap.cap; {ComputerName}__NMcap_Trace_DisplayNet.txt}__NMcap_Trace_DisplayNet.txt|
+
+The files are typically large, and therefore the diagnostic may take several minutes to finish. After it runs, the collected traces will be automatically compressed and then uploaded to Microsoft Support. A total size of up to 2 GB can be uploaded.
+
+If the results files are larger than 2 GB after compression, some files aren't uploaded and remain on your system. In this case, you must contact a support professional for an alternative way to upload the remaining collected information.
 
 ### Site performance rules
 
@@ -54,7 +53,7 @@ If the results files are larger than 2 GB after compression, some files won't be
 
 To install this package, you must have Windows PowerShell 2.0 installed on the computer. For more information, see [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview).
 
-The following checks are performed by the Microsoft 365 SharePoint Online diagnostic package:
+The Microsoft 365 SharePoint Online diagnostic package performs the following checks:
 
 |Rule ID|Title|Reference|
 |----------|----------|----------|

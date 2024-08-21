@@ -4,7 +4,6 @@ description: Discusses a problem in which an additional time zone shows a one-ho
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Calendar\Other
   - CSSTroubleshoot

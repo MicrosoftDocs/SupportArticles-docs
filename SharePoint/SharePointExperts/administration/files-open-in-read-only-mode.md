@@ -4,7 +4,6 @@ description: Describes that some Office files are opened in read-only mode unexp
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
