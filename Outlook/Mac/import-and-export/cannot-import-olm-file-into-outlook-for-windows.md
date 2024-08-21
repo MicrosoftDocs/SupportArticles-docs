@@ -1,12 +1,11 @@
 ---
-title: Cannot import (.olm) file into Outlook for Windows
+title: Can't import (.olm) file into Outlook for Windows
 description: Provides information about how to migrate the data, such as email and contacts, into Outlook for Windows by using Microsoft Exchange Server.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Errors, Crashes, and Performance\
   - Outlook for Mac
@@ -18,7 +17,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/30/2024
 ---
-# You can't import (.olm) files from Outlook for Mac to Outlook for Windows
+# You can't import `.olm` files from Outlook for Mac to Outlook for Windows
 
 _Original KB number:_ &nbsp; 2649169
 
@@ -26,9 +25,9 @@ _Original KB number:_ &nbsp; 2649169
 
 Consider the following scenario:
 
-You try to transfer data from Outlook 2016 for Mac or Outlook for Mac 2011, such as email and contacts, to Outlook for Windows. To do this, you try to import the `.olm` file that was exported from Outlook for Mac. However, you receive the following error in Outlook for Windows:
+You try to transfer data from Outlook 2016 for Mac or Outlook for Mac 2011, such as email and contacts, to Outlook for Windows. To do so, you try to import the `.olm` file that was exported from Outlook for Mac. However, you receive the following error in Outlook for Windows:
 
-> The file **\<path>**.olm is not an Outlook data file (.pst).
+> The file **\<path\>**.olm is not an Outlook data file (.pst).
 
 ## More information
 
@@ -36,7 +35,7 @@ Microsoft Outlook for Windows doesn't support `.olm` data files. However, there 
 
 ### Synchronize data with Microsoft Exchange Server
 
-If the data is available in a mailbox that is located on an Exchange Server, the Outlook for Windows client can access the data. To do this, the Windows client connects to the Exchange Server by using either Cached Exchange Mode or Online mode.
+If the data is available in a mailbox that's located on an Exchange Server, the Outlook for Windows client can access the data. To do so, the Windows client connects to the Exchange Server by using either Cached Exchange Mode or Online mode.
 
 ### Export data from Microsoft Exchange to an Outlook data (.pst) file
 
