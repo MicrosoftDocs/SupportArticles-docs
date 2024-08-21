@@ -1,13 +1,13 @@
 ---
 title: Getting errors with null fields
-description: Provides a solution to errors and unexpected behaviors that occur when you create a flow in Microsoft Power Automate.
+description: Provides a solution to errors and unexpected behaviors that occur when you run a flow in Microsoft Power Automate.
 ms.reviewer: 
 ms.date: 08/21/2024
 ms.custom: sap:Flow run issues\Actions
 ---
 # Getting errors with null fields 
 
-This article provides information to help you handle runtime errors and unexpected behaviors related to null fields.
+This article provides information to help you handle flow runtime errors and unexpected behaviors related to null fields.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4535432
@@ -30,7 +30,7 @@ When you create a flow in Power Automate, you might experience the following iss
 
 ## Resolution 1: Add a condition check
 
-To check for a null response, you can [add a condition](/power-automate/add-condition) to the flow by following these steps.
+To check for a null response, you can [add a condition](/power-automate/add-condition) to the flow by following these steps. Then you can appropriate action to handle the condition.
 
 1. In the Power Automate flow, add a new **Condition** action.
 
