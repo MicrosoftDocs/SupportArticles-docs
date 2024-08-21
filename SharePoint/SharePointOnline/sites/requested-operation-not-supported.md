@@ -4,7 +4,6 @@ description: When you try to delete a site using the SharePoint management shell
 author: helenclu
 ms.reviewer: PramodBalusu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

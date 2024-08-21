@@ -3,7 +3,6 @@ title: SharePoint customizations revert to the original settings
 description: SharePoint customizations to the Microsoft 365 top navigation revert to the default settings.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

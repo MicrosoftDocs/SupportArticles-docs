@@ -3,7 +3,6 @@ title: SSL certificate authentication issues
 description: This article provides solutions for resolving SSL certificate authentication issues.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
