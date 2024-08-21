@@ -25,5 +25,7 @@ items:
     href: download-failed-443-io-time-out.md
   - name: '"Manifest tag is not found" error'
     href: manifest-tag-not-found.md
+  - name: Fail to pull images to Azure Web App
+    href: pull-image-to-web-app-fail.md
   - name: '"Request canceled while waiting for connection" error'
     href: request-canceled-waiting-connection-timeout-exceeded.md
