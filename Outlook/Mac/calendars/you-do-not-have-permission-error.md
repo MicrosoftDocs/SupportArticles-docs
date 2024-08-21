@@ -1,6 +1,6 @@
 ---
-title: Cannot open a shared Calendar folder
-description: Resolves an Outlook for Mac Calendar issue in which you cannot open a shared folder after the owner assigns permissions for the subcalendar to you.
+title: Can't open a shared Calendar folder
+description: Resolves an Outlook for Mac Calendar issue in which you can't open a shared folder after the owner assigns permissions for the subcalendar to you.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -24,13 +24,13 @@ _Original KB number:_ &nbsp; 2743752
 
 ## Symptoms
 
-When you try to open a shared Calendar folder in Outlook 2016 for Mac or Outlook for Mac 2011, you receive the following error message even though you were granted permission to the folder:
+When you try to open a shared Calendar folder in Outlook 2016 for Mac or Outlook for Mac 2011, you receive the following error message even though you're granted permission to the folder:
 
-> Outlook cannot open the folder. You do not have permission to open this folder. Contact **\<Calendar owner's name>** for permission.
+> Outlook cannot open the folder. You do not have permission to open this folder. Contact **\<Calendar owner's name\>** for permission.
 
 ## Cause
 
-This issue occurs because the owner of the folder that you want to access shares the subcalendar folder with you but does not share their default (primary) Calendar folder.
+This issue occurs because the owner of the folder that you want to access shares the subcalendar folder with you but doesn't share their default (primary) Calendar folder.
 
 ## Resolution
 
@@ -38,7 +38,7 @@ To fix this issue, the calendar owner must share both the primary and the second
 
 ## More information
 
-This issue does not occur for Microsoft 365 accounts that are using the REST protocol for Calendar.
+This issue doesn't occur for Microsoft 365 accounts that are using the REST protocol for Calendar.
 
 This issue is caused by a limitation in the EWS protocol that is used for Exchange on-premises accounts. Microsoft 365 accounts that use REST are no longer affected by this issue.
 
@@ -49,7 +49,7 @@ For example, you have permissions to the following shared Calendar folders:
 - Calendar
 - Second Calendar
 
-In this example, Second Calendar is a subfolder of Calendar. This is displayed as follows.
+In this example, Second Calendar is a subfolder of Calendar, which is displayed as follows.
 
 :::image type="content" source="media/you-do-not-have-permission-error/second-calendar.png" alt-text="Screenshot of Sub Calendar in Calendar folders." border="false":::
 
