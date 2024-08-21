@@ -1,6 +1,6 @@
 ---
 title: How to update RHEL from 7.X to 7.9 with RHEL for SAP with High Availability or SAPAPPS (PAYG).
-description: Guide with step by step procedure to do an OS update frm `RHEL` 7.X to 7.9
+description: Guide with step by step procedure to do an OS update from `RHEL` 7.X to 7.9
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
