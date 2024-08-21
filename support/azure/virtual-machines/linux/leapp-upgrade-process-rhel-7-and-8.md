@@ -2,7 +2,7 @@
 title: Perform leapp upgrade for RHEL PAYG virtual machines
 description: Provides steps to upgrade virtual machines that use RHEL pay-as-you-go images from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9.
 ms.reviewer: divargas, msaenzbo
-ms.date: 08/19/2024
+ms.date: 08/21/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.topic: how-to
@@ -27,7 +27,7 @@ For more information about performing a leapp upgrade on custom, golden, or PAYG
 - Make a backup of the Linux VM or a snapshot of the operating system (OS) disk.
 - Clear enough space in */var/lib/leapp* to accommodate the upgrade. A best practice is to have at least 2-5 GB of free space available.
 - Set up access to the Serial Console.
-- Root privileges.
+- Run the commands in this article with root privileges.
 
 ## Prepare the VM for leapp preupgrade and upgrade process
 
