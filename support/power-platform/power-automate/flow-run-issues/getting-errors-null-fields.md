@@ -28,7 +28,7 @@ When you create a flow in Power Automate, you might experience the following iss
 - If an action receives a null field as input when it expects a different value, it will result in incorrect behavior.
 - If an expression expects its parameter to be a string, an object, or an array but instead receives a null response, it could result in a runtime error.
 
-## Resolution
+## Resolution 1: Condition check
 
 You can [add a condition](/power-automate/add-condition) to the flow to check for a null response.
 
@@ -46,7 +46,7 @@ You can [add a condition](/power-automate/add-condition) to the flow to check fo
 
    :::image type="content" source="media/getting-errors-null-fields/set-condition-expression-not-equal-to-null.png" alt-text="Screenshot of the null expression value that's set up for the condition.":::
 
-## Use coalesce function
+## Resolution 2: Use coalesce function
 
 You can also use the `coalesce` function to provide default values when a value is null. For example, using `coalesce(trigger().outputs, '')` will default to empty string when `trigger().outputs` is null.
 
