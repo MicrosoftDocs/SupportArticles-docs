@@ -1,5 +1,5 @@
 ---
-title:  How to Perform a `leapp` upgrade from RHEL 7.9 to 8.X for SAP-HANA and SAPAPPS PAYG
+title:  How to Perform a leapp upgrade from RHEL 7.9 to 8.x for SAP-HANA and SAPAPPS PAYG virtual machines.
 description: Guide with step by step procedure to do a leapp upgrade..
 author: msaenzbosupport
 ms.author: msaenzbo
@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to Perform a `leapp` upgrade from RHEL 7.9 to 8.X for SAP-HANA and SAPAPPS PAYG.
+# How to Perform a leapp upgrade from RHEL 7.9 to 8.x for SAP-HANA and SAPAPPS PAYG virtual machines.
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
@@ -26,10 +26,10 @@ For more information on performing a `Leapp upgrade` process on custom or golden
 ## Prerequisites
 
 - Make a backup of the virtual machine or a snapshot of the OS disk.
-- Clear enough space in /var/lib/leapp. Having at least 2-5 GB of free space is a safe practice
-- SAP process must be stopped during the OS update process
-- Set up access to the serial console
-- Root privileges.
+- Clear enough space in /var/lib/leapp. Having at least 2-5 GB of free space is a safe practice.
+- SAP process must be stopped during the OS update process.
+- Set up access to the serial console.
+- Run the commands in this article with root privileges.
 
 ## Preparing the virtual machine for the `leapp` pre-upgrade and upgrade process
 
@@ -64,7 +64,7 @@ In this case, if you're running `SAP HANA` in an `HA` cluster, to perform an `in
 sudo yum-config-manager --enable rhui-rhel-7-server-rhui-extras-rpms
 sudo yum install leapp-rhui-azure-sap
 ```
-2. Stop the `SAP HANA`systems and terminate all SAP processes.
+2. Stop the `SAP HANA` systems and terminate all SAP processes.
 
 > [!IMPORTANT]  
 > Avoid unmounting the `SAP HANA` file systems, as they are necessary for detecting the presence and version of the installed `SAP HANA` system.
@@ -75,7 +75,7 @@ If your virtual machine is configured to start `SAP` processes automatically at 
 
    a. The `SAP HANA` installer in `SAP HANA 2.0 SPS05` configures kernel settings in the `/etc/sysctl.conf` file. Keep these settings unchanged
 
-   b. Another settings recommended for `SAP HANA`, according to SAP notes [2382421](https://launchpad.support.sap.com/#/notes/2382421) and [2292690](https://me.sap.com/notes/2292690), are configured using the files `sap.conf` and s`ap_hana.conf` in the `/etc/sysctl.d` directory. The settings in `sap_hana.conf` are applicable to both `RHEL 7` and `RHEL 8`. However, the kernel.sem value in `sap.conf` for `RHEL 7` is lower than the default value for `RHEL 8`. Therefore, remove the line that sets `kernel.sem` to 1250 256000 100 1024 from `/etc/sysctl.d/sap.conf`. The `vm.max_map_count` setting is valid for both `RHEL 7` and `RHEL 8`, so keep this setting unchanged.
+   b. Another settings recommended for `SAP HANA`, according to SAP notes [2382421](https://launchpad.support.sap.com/#/notes/2382421) and [2292690](https://me.sap.com/notes/2292690), are configured using the files `sap.conf` and `sap_hana.conf` in the `/etc/sysctl.d` directory. The settings in `sap_hana.conf` are applicable to both `RHEL 7` and `RHEL 8`. However, the `kernel.sem` value in `sap.conf` for `RHEL 7` is lower than the default value for `RHEL 8`. Therefore, remove the line that sets `kernel.sem` to `1250 256000 100 1024` from `/etc/sysctl.d/sap.conf`. The `vm.max_map_count` setting is valid for both `RHEL 7` and `RHEL 8`, so keep this setting unchanged.
 
 4. Upgrade your `RHEL` 7.9 system to the latest available `RHEL` 7 package versions.
 
@@ -88,6 +88,8 @@ sudo yum update
 ```bash
 sudo reboot
 ```
+
+
    a. After the virtual machine is up and running, make sure that no `SAP HANA` systems and no `SAP` processes are running on your virtual machine.
 
    b. Make sure the `SAP HANA` file systems are mounted.
@@ -95,6 +97,7 @@ sudo reboot
    c. Temporarily disable antivirus software to prevent the upgrade from failing.
 
    d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture).
+   
 
 6. Install the `leapp` utility.
 
@@ -113,7 +116,7 @@ sudo yum-config-manager --enable rhui-rhel-7-server-rhui-extras-rpms
 sudo yum install leapp-rhui-azure-sap
 ```
 
-2. Stop all SAP processes
+2. Stop all SAP processes.
 
 If your virtual machine is configured to start an `SAP` processes automatically at boot time, disable the automatic start of any sap processes.
 
@@ -135,6 +138,7 @@ sudo reboot
 
    d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture).
 
+
 5. Install the `leapp` utility.
 
 ```bash
@@ -143,7 +147,8 @@ sudo yum install leapp-upgrade
 
 ---
 
-## `Leapp pre-upgrade` and upgrade process for `RHEL` 7 and 8
+
+## `Leapp` pre-upgrade and upgrade process for RHEL 7 and 8
 
 #### `Leapp pre-upgrade` process
 
@@ -200,7 +205,7 @@ sudo leapp preupgrade  --target 8.10  --no-rhsm
 --- 
 
 
-Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that might appear in the report, for more information, see, [Troubleshoot-red-hat-os-upgrade-issues.](azure/virtual-machines/linux/troubleshoot-red-hat-os-upgrade-issues)
+Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that might appear in the report, for more information, see: [Troubleshoot-red-hat-os-upgrade-issues.](azure/virtual-machines/linux/troubleshoot-red-hat-os-upgrade-issues)
 
 
 #### `Leapp` upgrade process
@@ -237,6 +242,7 @@ sudo leapp upgrade  --target 8.8 --channel e4s --no-rhsm
 ```bash
 sudo leapp upgrade  --target 8.10  --no-rhsm
 ```
+
 > [!IMPORTANT]  
 > RHEL 8.10 isn't certified for running `SAP HANA` currently. It is in process. For more information, see: [Overview Product Availability Matrix for SAP on Red Hat.](https://access.redhat.com/articles/6966927#support-matrix-for-sap-hana-on-intel-64-rhel-5)
 
