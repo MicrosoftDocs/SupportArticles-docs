@@ -348,7 +348,7 @@ rhui-microsoft-azure-rhel8-sap-ha                Microsoft Azure RPMs for Red Ha
 ```
 The output from 8.10 update should contain:
 
-```bash
+```output
 ansible-2-for-rhel-8-x86_64-rhui-rpms        Red Hat Ansible Engine 2 for RHEL 8 x86_64 (RPMs) from RHUI
 packages-microsoft-com-prod                  packages-microsoft-com-prod
 rhel-8-for-x86_64-appstream-rhui-rpms        Red Hat Enterprise Linux 8 for x86_64 - AppStream from RHUI (RPMs)
@@ -358,6 +358,7 @@ rhel-8-for-x86_64-sap-netweaver-rhui-rpms    Red Hat Enterprise Linux 8 for x86_
 rhel-8-for-x86_64-sap-solutions-rhui-rpms    Red Hat Enterprise Linux 8 for x86_64 - SAP Solutions (RPMs) from RHUI
 rhui-microsoft-azure-rhel8-base-sap-ha       Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-ha)
 ```
+
 #### [RHEL 7.9 to 8.X on SAPAPPS](#tab/rhel8sapapps)
 
 
@@ -388,6 +389,7 @@ rhel-8-for-x86_64-baseos-eus-rhui-rpms        Red Hat Enterprise Linux 8 for x86
 rhel-8-for-x86_64-sap-netweaver-eus-rhui-rpms Red Hat Enterprise Linux 8 for x86_64 - SAP NetWeaver - Extended Update Support from RHUI (RPMs)
 rhui-microsoft-azure-rhel8-sapapps            Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-sapapps)
 ```
+
 The output from 8.10 update should contain:
 
 ```output
@@ -399,6 +401,7 @@ rhui-microsoft-azure-rhel8-base-sap-apps  Microsoft Azure RPMs for Red Hat Enter
 ```
 
 ---
+
 
 ## Post-Upgrade Tasks
 
