@@ -19,14 +19,14 @@ Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensur
 > [!IMPORTANT]
 > RHUI is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
-For more information on performing a `Leapp upgrade` process on custom or golden images, and pay-as-you-go (PAYGO) images provided by Red Hat, see:
+For more information on performing a `leapp upgrade` process on custom or golden images, and pay-as-you-go (PAYGO) images provided by Red Hat, see:
 
 - [Upgrading SAP environments from RHEL 7 to 8](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/index)
 
 ## Prerequisites
 
 - Make a backup of the virtual machine or a snapshot of the OS disk.
-- Clear enough space in /var/lib/leapp. Having at least 2-5 GB of free space is a safe practice.
+- Clear enough space in `/var/lib/leapp`. Having at least 2-5 GB of free space is a safe practice.
 - SAP process must be stopped during the OS update process.
 - Set up access to the serial console.
 - Run the commands in this article with root privileges.
@@ -52,9 +52,9 @@ System Configuration   | Source OS version| Target Version     |
 
 #### [RHEL 7.9 to 8.X SAP-HA](#tab/rhel8saphana)
 
-This procedure outlines the necessary steps to complete before performing an in-place upgrade from 7.9 to 8.8 or 8.10 using the `leapp` utility on `SAP-HANA` `PAYG` images on Azure.
+This procedure outlines the necessary steps to complete before performing an in-place upgrade from 7.9 to 8.8 or 8.10 using the `leapp` utility on `SAP-HANA PAYG` images on Azure.
 
-- Based on Red Hat documentation, upgrading cluster nodes in place or through rolling upgrades **is not supported** for major `RHEL` releases. For more information, see, [`Leapp` upgrade from RHEL 7 to RHEL 8 fails for pacemaker cluster](https://access.redhat.com/solutions/7049940).
+- Based on Red Hat documentation, upgrading **cluster nodes** in place or through rolling upgrades **is not supported** for major `RHEL` releases. For more information, see, [`Leapp` upgrade from RHEL 7 to RHEL 8 fails for pacemaker cluster](https://access.redhat.com/solutions/7049940).
 
 In this case, if you're running `SAP HANA` in an `HA` cluster, to perform an `in-place` upgrade, you must destroy the existing cluster and recreate it after the upgrade is complete.
 
@@ -69,7 +69,7 @@ sudo yum install leapp-rhui-azure-sap
 > [!IMPORTANT]  
 > Avoid unmounting the `SAP HANA` file systems, as they are necessary for detecting the presence and version of the installed `SAP HANA` system.
 
-If your virtual machine is configured to start `SAP` processes automatically at boot time, disable the automatic start of `SAP` processes.
+If your virtual machine is configured to start SAP processes automatically at boot time, disable the automatic start of SAP processes.
 
 3. Configure RHEL settings for `SAP HANA`:
 
@@ -89,7 +89,6 @@ sudo yum update
 sudo reboot
 ```
 
-
    a. After the virtual machine is up and running, make sure that no `SAP HANA` systems and no `SAP` processes are running on your virtual machine.
 
    b. Make sure the `SAP HANA` file systems are mounted.
@@ -99,7 +98,7 @@ sudo reboot
    d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture).
    
 
-6. Install the `leapp` utility.
+7. Install the `leapp` utility.
 
 ```bash
 sudo yum install leapp-upgrade
