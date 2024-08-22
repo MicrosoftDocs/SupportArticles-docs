@@ -5,7 +5,6 @@ ms.date: 08/22/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.custom: sap:Data Ingestion\Connect to data in Delta format
 ---
 # "Delta Lake ingestion job failed to get version" error
 
