@@ -114,7 +114,7 @@ You can configure virtual network integration at the web app side by following t
 
     :::image type="content" source="media/pull-image-to-web-app-fail/container-image-pull-option.png" alt-text="Screenshot of the Container image pull option." lightbox="media/pull-image-to-web-app-fail/container-image-pull-option.png":::
 
-To pull the image over the virtual network, you must enable **Pull image over VNet** in the **Deployment Center** of the web app. Additionally, if the container registry has the public access disabled or set to specific networks, you might receive the "failed to load ACR Tags - failed" message, as shown in the following example. That error is expected in this scenario. If this occurs, the drop-down options for **Image** and **Tag** won’t be available. You'll have to manually enter the image and tag.
+To pull the image over the virtual network, you must enable **Pull image over VNet** in the **Deployment Center** of the web app. Additionally, if the container registry has the public access disabled or set to specific networks, you might receive the "Failed to load ACR Tags - failed" message, as shown in the following example. That error is expected in this scenario. If this occurs, the drop-down options for **Image** and **Tag** won’t be available. You'll have to manually enter the image and tag.
 
 :::image type="content" source="media/pull-image-to-web-app-fail/failed-to-load-acr-error.png" alt-text="Screenshot of the failed to load ACR Tags error message." lightbox="media/pull-image-to-web-app-fail/failed-to-load-acr-error.png":::
  
