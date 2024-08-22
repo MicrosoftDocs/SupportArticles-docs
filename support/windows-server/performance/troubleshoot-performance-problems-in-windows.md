@@ -185,7 +185,7 @@ Because Performance Monitor is a local tool, we can only get basic information f
 | **\\Network Interface(\*)\\Bytes Received/sec** | \* | \* | \* |
 
 > [!NOTE]
-> More information for cells marked with star symbol (\*): the workload of **\\Network Interface(\*)\\Bytes Sent/sec** and **\\Network Interface(*)\\Bytes Received/sec** should depend on the server's role. For example, the number of bytes sent per second is typically higher than the number of bytes received per second on a streaming server. In contrast, the number of bytes received per second is generally higher than the bytes sent per second on an Backup-Server doing a backup.
+> More information for cells marked with star symbols (\*): the workload of **\\Network Interface(\*)\\Bytes Sent/sec** and **\\Network Interface(*)\\Bytes Received/sec** should depend on the server's role. For example, the number of bytes sent per second is typically higher than the number of bytes received per second on a streaming server. In contrast, the number of bytes received per second is generally higher than the bytes sent per second on an Backup-Server doing a backup.
 
 The values are related to the speed of the network card, and you need to do the calculation. When doing so, remember that the network speed is measured in bits, and 8 bits = 1 byte. Therefore, if you have a 1 GB network card, your throughput can reach 125 MB/sec.
 
