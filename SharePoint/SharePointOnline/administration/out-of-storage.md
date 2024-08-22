@@ -4,7 +4,6 @@ description: Run a diagnostic to solve storage space issues.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -20,6 +19,8 @@ ms.date: 08/09/2024
 ---
 
 # SharePoint Online out of storage space
+
+<!-- This article has been reviewed and approved for the specific use of global admin perms.  -->
 
 As a Global admin, you might get an email with one of the following messages:
 

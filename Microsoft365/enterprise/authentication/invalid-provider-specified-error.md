@@ -3,7 +3,6 @@ title: Unable to use an Office 2016 application to access Microsoft 365 resource
 description: Describes an issue that triggers an Invalid provider specified error when you try to access Microsoft 365 resources in a Windows 10 environment. A workaround is provided.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

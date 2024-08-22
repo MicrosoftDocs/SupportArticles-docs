@@ -4,7 +4,6 @@ description: Describes an issue that the Outlook Advanced Diagnostic scenario in
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:User Interface features and Configuration\Other
   - CSSTroubleshoot

@@ -3,7 +3,6 @@ title: Unable to reach the server when sharing files
 description: This article fixes an issue in which you receive an Unable to reach the server message when you share files or folders.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -4,7 +4,6 @@ description: Describes how to add a shared or regular mailbox as an additional a
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Profile, Accounts, and Authentication
   - Outlook for Windows

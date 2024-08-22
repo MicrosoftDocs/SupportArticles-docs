@@ -3,7 +3,6 @@ title: Authentication errors when client doesn't have TLS 1.2 support
 description: You experience authentication and connection errors if the client doesn't support TLS 1.2.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

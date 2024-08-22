@@ -3,7 +3,6 @@ title: Troubleshoot site collection upgrade issues
 description: This article describes how to troubleshoot site collection upgrade issues.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

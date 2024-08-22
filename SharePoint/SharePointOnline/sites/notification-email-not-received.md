@@ -4,7 +4,6 @@ description: Provides a fix for an issue when notifications aren't received by t
 manager: dcscontentpm
 author: cloud-writer
 ms.author: meerak
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

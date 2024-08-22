@@ -5,7 +5,6 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 ms.date: 06/06/2024
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

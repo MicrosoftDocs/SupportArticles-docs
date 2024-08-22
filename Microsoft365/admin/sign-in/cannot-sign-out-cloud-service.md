@@ -3,7 +3,6 @@ title: Problems when signing out of Microsoft 365, Azure, or Intune in a web bro
 description: Describes an issue in which users can't sign out of a Microsoft cloud service such as Microsoft 365, Microsoft Intune, or Azure in a web browser. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

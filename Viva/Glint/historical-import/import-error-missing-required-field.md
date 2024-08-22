@@ -10,7 +10,6 @@ search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
   - CI184015
-localization_priority: Normal
 ---
 
 # "Missing required field" error during historical imports

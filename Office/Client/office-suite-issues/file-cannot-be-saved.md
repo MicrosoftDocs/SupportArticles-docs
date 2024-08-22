@@ -4,7 +4,6 @@ description: Describes workaround for error This file cannot be saved because so
 author: helenclu
 ms.reviewer: warrenr
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

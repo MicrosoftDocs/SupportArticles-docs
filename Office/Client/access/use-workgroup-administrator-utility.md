@@ -3,7 +3,6 @@ title: Use Workgroup Administrator utility
 description: This article describes how to use the Workgroup Administrator utility in Microsoft Access.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

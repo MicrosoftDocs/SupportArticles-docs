@@ -1,69 +1,138 @@
 ---
-title: Your archive appears to be unavailable error in a hybrid deployment.
-description: Describes a scenario in which users can't access a cloud-based archive mailbox by using Outlook Web App and can't update the archive mailbox in Outlook in a hybrid deployment. Provides a resolution.
-author: helenclu
-ms.author: luche
+title: Users can't access their cloud-based archive mailbox
+description: Provides a resolution for an issue in which users in a hybrid Exchange environment can't use Outlook or Outlook on the web to access their cloud-based archive mailbox.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
+  - sap:Administrator Tasks
+  - Exchange Online
+  - Exchange Server
   - CSSTroubleshoot
   - 'Associated content asset: 4555324'
-ms.reviewer: chrisbur, jhayes
+  - CI 193457
+ms.reviewer: alexaca, lusassl, meerak, v-shorestris
 appliesto: 
   - Exchange Online Archiving
   - Exchange Online
-  - Exchange Server 2013 Enterprise
-  - Exchange Server 2013 Standard Edition
-  - Exchange Server 2010 Enterprise
-  - Exchange Server 2010 Standard
+  - Exchange Server 2019
+  - Exchange Server 2016
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 08/21/2024
 ---
 
-# "Your archive appears to be unavailable" error when you try to access a cloud-based archive mailbox in a hybrid deployment
+# Users can't access their cloud-based archive mailbox
 
 _Original KB number:_ &nbsp; 2860302
 
-> [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard that's available at [Microsoft 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+## Symptoms
 
-## Problem
+Users in your hybrid Exchange environment who have a cloud-based archive mailbox encounter one or both of the following issues.
 
-A user experiences the following symptoms in a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Microsoft 365:
+### Issue 1
 
-- When the user tries to access a cloud-based archive mailbox by using Outlook Web App, the user receives the following error message:
+Users can't [access their archive mailbox](/exchange/policy-and-compliance/in-place-archiving/in-place-archiving#client-access-to-archive-mailboxes) in Microsoft Outlook even though the archive mailbox exists in their Outlook profile.
 
-   > Your archive appears to be unavailable. Try to access it again in 10 seconds. If you see this error again, contact your Help Desk.
+### Issue 2
 
-- When the user tries to access the cloud-based archive mailbox by using Microsoft Outlook, the archive mailbox may be present in the profile. However, the user can't update the archive mailbox.
+When users try to access their archive mailbox in Outlook on the web, they receive the following error message:
+
+> Your archive appears to be unavailable. Try to access it again in 10 seconds. If you see this error again, contact your Help Desk.
 
 ## Cause
 
-This issue may occur if the root certificates on the Exchange hybrid server are missing or corrupted. These certificates are used to validate your on-premises Exchange environment.
+Issue 1 can occur because of Cause 1. Issue 2 can occur because of either Cause 1 or Cause 2.
 
-## Solution
+### Cause 1
 
-To resolve this issue, update the root certificates, and then rerun the Hybrid Configuration Wizard on the hybrid server. To do this, follow these steps.
+One or more root certificates on a Windows server that runs Microsoft Exchange Server are missing or corrupted. Root certificates are necessary to validate the on-premises side of your hybrid environment.
 
-These steps must be completed by a Microsoft 365 administrator. If you are a user who is experiencing this issue, contact your administrator to resolve this issue.
+### Cause 2
 
-### Step 1: Update the root certificates
+One or more settings are misconfigured:
 
-To update the root certificates, run Windows Update on the Exchange hybrid server.
+- Domains are missing from the [Exchange Online organization relationship](/exchange/sharing/organization-relationships/organization-relationships) because the organization relationship parameters, `TargetApplicationUri` and `TargetAutodiscoverEpr`, have incorrect values.
 
-For more information about how to update root certificates for a particular version of Windows or about how to use Group Policy to distribute updates, see the following Microsoft Knowledge Base article:
+- The domain in the primary SMTP address of the on-premises [FederatedEmail arbitration mailbox](/exchange/architecture/mailbox-servers/recreate-arbitration-mailboxes) isn't a federated domain. 
 
-> [931125](https://support.microsoft.com/help/931125) Windows Root Certificate Program members
+  **Note**: The primary SMTP address is stored in the `PrimarySMTPAddress` parameter of a mailbox.
 
-### Step 2: Rerun the Hybrid Configuration Wizard
+- The domain in the user's primary SMTP address doesn't exist in the [federated organization identifier](/powershell/module/exchange/get-federatedorganizationidentifier).
 
-Rerun the Hybrid Configuration Wizard to update the deployment and resolve the issue. For more information about how to run the Hybrid Configuration Wizard, go to the following Microsoft websites:
+## Resolution
 
-- Exchange 2013: [Manage a Hybrid Deployment](/previous-versions/exchange-server/exchange-150/jj200791(v=exchg.150))
-- Exchange 2010: [Manage a Hybrid Deployment](/previous-versions/office/exchange-server-2010/hh529933(v=exchg.141))
+For either issue, complete the resolution for Cause 1. If users experience Issue 2 after you complete the resolution for Cause 1, also complete the resolution for Cause 2.
 
-## More information
+### Resolution for Cause 1
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).
+1. Update the root certificates on the Windows servers that run Exchange Server.
+
+2. Rerun the [Hybrid Configuration Wizard](/exchange/hybrid-configuration-wizard) to update the hybrid Exchange environment.
+
+### Resolution for Cause 2
+
+1. Verify that the domain in the user's primary SMTP address is in the cloud organization relationship. Run the following PowerShell cmdlet to list the domains in the cloud organization relationship:
+
+   ```PowerShell
+   (Get-OrganizationRelationship -Identity "<name of organization relationship>").DomainNames
+   ```
+
+   > [!NOTE]
+   > For information about how to add a domain to the organization relationship, see [Modify an organization relationship in Exchange Online](/exchange/sharing/organization-relationships/modify-an-organization-relationship).
+
+2. Run the following cmdlet both to verify that the FederatedEmail arbitration mailbox exists and to determine the primary SMTP address of the mailbox:
+
+   ```PowerShell
+   (Get-Mailbox -Identity "FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042" -Arbitration).EmailAddresses
+   ```
+
+   For information about how to re-create a missing arbitration mailbox, see [Re-create missing arbitration mailboxes](/exchange/architecture/mailbox-servers/recreate-arbitration-mailboxes).
+
+3. Verify that the domain in the primary SMTP address of the FederatedEmail arbitration mailbox is included in the list of domains for the cloud organization relationship from step 1.
+
+4. Use the following steps to verify that the `msExchOrgFederatedMailbox` attribute in on-premises Active Directory is set to the primary SMTP address of the FederatedEmail arbitration mailbox. The domain in the primary SMTP address must be a federated domain.
+
+   1. Run the following PowerShell cmdlet to determine the value of the `msExchOrgFederatedMailbox` attribute:
+
+      ```PowerShell
+      Get-ADObject -SearchBase "CN=Transport Settings,CN=<organization name>,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com" -Filter 'ObjectClass -eq "msExchTransportSettings"' -Properties msExchOrgFederatedMailbox
+      ```
+
+      **Note:** In this cmdlet, substitute your domain for `contoso`.
+
+   2. If the `msExchOrgFederatedMailbox` attribute value isn't set correctly, run the following PowerShell cmdlet to correct it:
+
+      ```PowerShell
+      Set-ADObject -Identity "CN=Transport Settings,CN=<organization name>,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com" -Replace @{msExchOrgFederatedMailbox="FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042@contoso.com"}
+      ```
+
+      **Note**: In this cmdlet, substitute your domain for `contoso`.
+
+5. Run the following PowerShell cmdlet to verify that the values of the `TargetAutodiscoverEpr` and `TargetApplicationUri` parameters in the organization relationship are correct:
+
+   ```PowerShell
+   Get-OrganizationRelationship | FL Name,Target*
+   ```
+
+   - `TargetAutodiscoverEpr` parameter value should be `https://autodiscover-s.outlook.com/autodiscover/autodiscover.svc/WSSecurity`.
+   - `TargetApplicationUri` parameter value should be `outlook.com`.
+
+6. Verify that none of the following PowerShell cmdlets return the error message "Federation information could not be received from the external organization":
+
+   ```PowerShell
+   - Get-FederationInformation contoso.com -Verbose -BypassAdditionalDomainValidation | FL
+   - Get-FederationInformation contoso.onmicrosoft.com -Verbose | FL
+   - Get-FederationInformation contoso.mail.onmicrosoft.com -Verbose | FL
+   ```
+
+   Note: In these cmdlets, substitute your domain for `contoso`.
+
+7. Run the following PowerShell cmdlet to verify that the domains that are listed in the command output include the domain in the user's primary SMTP address:
+
+   ```PowerShell
+   Get-FederatedOrganizationIdentifier | FL Domains
+   ```
+
+After you complete these steps, ask users to try again to access their archive mailbox.

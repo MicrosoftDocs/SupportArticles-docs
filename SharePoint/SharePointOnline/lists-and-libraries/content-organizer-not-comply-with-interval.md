@@ -3,7 +3,6 @@ title: Content Organizer doesn't comply with specified interval
 description: This article describes an issue where Content Organizer doesn't comply with specified interval for sending alerts to rule managers, and provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -3,7 +3,6 @@ title: Wrap text not adjust row height
 description: Describes a behavior in which the Wrap Text feature does not adjust row height in Excel. A workaround is provided.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

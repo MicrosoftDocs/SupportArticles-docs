@@ -4,7 +4,6 @@ description: Volume license editions Office 2010 support KMS activation. This ar
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

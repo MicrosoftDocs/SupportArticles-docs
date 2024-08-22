@@ -3,7 +3,6 @@ title: Event ID 1649 - A TLS failure occurred
 description: Describes a TLS failure that occurred because the remote server disconnected while TLS negotiation was in progress.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

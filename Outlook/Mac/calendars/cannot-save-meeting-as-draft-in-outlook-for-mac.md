@@ -1,12 +1,11 @@
 ---
-title: Cannot save meeting as draft in Outlook for Mac
+title: Can't save meeting as draft in Outlook for Mac
 description: This article provides a workaround for saving a meeting as a draft in the Outlook for Mac using Office JS API.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Calendar\
   - CI 162281
@@ -20,21 +19,21 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/30/2024
 ---
-# Cannot save a meeting as a draft in Outlook for Mac by using Office JS API
+# Can't save a meeting as a draft in Outlook for Mac by using Office JS API
 
 _Original KB number:_ &nbsp; 4505745
 
 ## Symptoms
 
-Microsoft Outlook for Mac does not support [saveAsync](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-1.6&preserve-view=true#outlook-office-appointmentcompose-saveasync-member(1)) on a meeting in Compose mode. Outlook add-ins cannot get the item identifier. This means that the add-ins cannot uniquely identify and communicate with Microsoft Exchange to update or listen for changes on the item.
+Microsoft Outlook for Mac doesn't support [saveAsync](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-1.6&preserve-view=true#outlook-office-appointmentcompose-saveasync-member(1)) on a meeting in Compose mode. Outlook add-ins can't get the item identifier. It means that the add-ins can't uniquely identify and communicate with Microsoft Exchange to update or listen for changes on the item.
 
 ## Workaround
 
-To work around this issue, you can set an extended property ([customProperty](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-1.6&preserve-view=true#outlook-office-appointmentcompose-loadcustompropertiesasync-member(1)): Office JS API) on the item. An extended property is part of the item and will be available on Exchange as soon as the item is sent. Therefore, the add-in can query or listen to items that have this extended property set.
+To work around this issue, you can set an extended property ([customProperty](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-1.6&preserve-view=true#outlook-office-appointmentcompose-loadcustompropertiesasync-member(1)): Office JS API) on the item. An extended property is part of the item and is available on Exchange as soon as the item is sent. Therefore, the add-in can query or listen to items that have this extended property set.
 
 To set the property, follow these steps:
 
-1. Choose one of the following API sets to use:
+1. Select one of the following APIs to use:
     1. EWS
     2. REST
     3. Graph

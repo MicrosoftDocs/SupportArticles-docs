@@ -6,7 +6,6 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.collection: 
   - M365-security-compliance
 ms.custom: 
@@ -16,7 +15,7 @@ ms.custom:
 search.appverid: MET150
 f1.keywords: 
   - NOCSH
-ms.date: 06/24/2024
+ms.date: 08/13/2024
 ---
 # Issues with communications and information barriers
 

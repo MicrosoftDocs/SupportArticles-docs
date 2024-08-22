@@ -3,7 +3,6 @@ title: Enable the Windows Search service if you use Search for Shapes
 description: Explains how to enable the Windows Search service in Windows Server 2008 R2 and in Windows Server 2012. This service is used by Visio 2010 and by Visio 2013 to search for shapes.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
