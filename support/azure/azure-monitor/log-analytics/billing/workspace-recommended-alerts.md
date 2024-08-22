@@ -22,7 +22,7 @@ When the daily cap is reached in a Log Analytics workspace, a banner appears in 
 
 1. In the **Monitoring** section, select **Alerts**.  
 
-:::image type="content" source="media/workspace-recommended-alerts/log-analytics-alert-1.png" alt-text="Screenshot that shows how to open the Alerts page." lightbox="media/workspace-recommended-alerts/log-analytics-alert-1.png":::
+    :::image type="content" source="media/workspace-recommended-alerts/log-analytics-alert-1.png" alt-text="Screenshot that shows how to open the Alerts page." lightbox="media/workspace-recommended-alerts/log-analytics-alert-1.png":::
 
 1. On the **Alerts** page, select **Set up recommendations**, and then configure the alert rules:
    
