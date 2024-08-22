@@ -45,7 +45,7 @@ This article helps you learn how to understand the costs that are associated wit
       :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-6.png" alt-text="Screenshot that shows how to open Daily costs view in the new tab." lightbox="media/understand-log-analytics-workspace-bill/view-cost-5.png":::
 1. Select the plus sign (+) to open a new tab, and then select **Invoice details**.
 
-         :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-8.png" alt-text="Screenshot that shows how to open Invoice details view in the new tab." lightbox="media/understand-log-analytics-workspace-bill/view-cost-5.png":::
+      :::image type="content" source="media/understand-log-analytics-workspace-bill/view-cost-8.png" alt-text="Screenshot that shows how to open Invoice details view in the new tab." lightbox="media/understand-log-analytics-workspace-bill/view-cost-5.png":::
 
 1. You can now start reviewing and analyzing your cost for detailed assessment. 
 
