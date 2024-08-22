@@ -1,11 +1,11 @@
 ---
 title: Delta Lake ingestion job failed to get version error
-description: Resolves an issue with missing or invalid credentials for Power Query connectors in Dynamics 365 Customer Insights - Data.
-ms.date: 01/03/2024
+description: Resolves an issue with a Delta Lake version error in Dynamics 365 Customer Insights - Data.
+ms.date: 08/22/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.custom: sap:Data Ingestion\Connect to a Power Query data source
+ms.custom: sap:Data Ingestion\Connect to data in Delta format
 ---
 # "Delta Lake ingestion job failed to get version" error
 
