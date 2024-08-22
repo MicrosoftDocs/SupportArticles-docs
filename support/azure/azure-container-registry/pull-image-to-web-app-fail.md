@@ -64,7 +64,7 @@ When you initiate a pull operation from the container registry, the AcrPull role
 
 ## Error 2: Manifest tagged by &lt;tag&gt; is not found
 
-> `DockerApiException  : Docker API responded with status code=NotFound, response={"message":"manifest for <acr-name>.azurecr.io/<repository>:<tag> not found: manifest unknown: manifest tagged by "<tag>" is not found"}`
+> `DockerApiException  : Docker API responded with status code=NotFound, response={"message":"manifest for <acr-name>.azurecr.io/<repository>:<tag> not found: manifest unknown: manifest tagged by \"<tag>\" is not found"}`
 
 ### Solution: Make sure the tag exists
 
