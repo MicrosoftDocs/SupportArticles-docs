@@ -49,7 +49,7 @@ To resolve the issue, follow these steps:
 
 ### Solution for managed identity-based authentication
 
-When you use Azure Web App’s managed identity-based the authentication, the `Microsoft.ContainerRegistry/registries/pull/read` permission must be assigned to the managed identity to perform the pull action.
+When you use Azure Web App's managed identity-based authentication, the `Microsoft.ContainerRegistry/registries/pull/read` permission must be assigned to the managed identity to perform the pull action.
 
 The Azure built-in roles that contain the `Microsoft.ContainerRegistry/registries/pull/read` permission are the following:
 
@@ -87,7 +87,7 @@ Navigate to your registry container. Under **Services**, select **Repositories**
 
 > `DockerApiException: Docker API responded with status code=InternalServerError, response={"message":"Head \"https:// <acr-name>.azurecr.io/v2/<repository>/manifests/<tag>\": denied: client with IP '<web-app-outbound-ip>' is not allowed access. Refer https://aka.ms/acr/firewall to grant access."}`
 
-### Solution 1: Make sure the container registry built-in firewall allows your device’s IP address
+### Solution 1: Make sure the container registry built-in firewall allows your device's IP address
 
 By default, a container registry accepts connections over the internet from all networks. The container registry has a built-in firewall that can restrict access to specific IP addresses or CIDRs, or fully disable public network access.
 
@@ -100,11 +100,11 @@ To find web app's outbound IP addresses, follow these steps:
 1. In the [Azure portal](https://portal.azure.com), navigate to your web app.
 1. On the **Overview** page, locate **Outbound IP address**, and then select **Show More** to get the full list of the outbound IP addresses
 
-To use Azure CLI to find web app’s outbound IP addresses, see [Find outbound IP addresses in Azure App Service](/azure/app-service/overview-inbound-outbound-ips#find-outbound-ips).
+To use Azure CLI to find web app's outbound IP addresses, see [Find outbound IP addresses in Azure App Service](/azure/app-service/overview-inbound-outbound-ips#find-outbound-ips).
 
 ### Solution 2: Configure virtual network integration for the Web App
 
-If you have to fully disable the public network access or allow only selected networks at the container registry without manually adding the web app’s IP addresses, the alternative option is to pull the image privately. To pull images privately, you have to [configure the container registry by using a private endpoint](/azure/container-registry/container-registry-private-link) and [enable virtual network integration for the web app](/azure/app-service/configure-vnet-integration-enable).
+If you have to fully disable the public network access or allow only selected networks at the container registry without manually adding the web app's IP addresses, the alternative option is to pull the image privately. To pull images privately, you have to [configure the container registry by using a private endpoint](/azure/container-registry/container-registry-private-link) and [enable virtual network integration for the web app](/azure/app-service/configure-vnet-integration-enable).
 
 You can configure virtual network integration at the web app side by following these steps:
 
@@ -114,13 +114,13 @@ You can configure virtual network integration at the web app side by following t
 
     :::image type="content" source="media/pull-image-to-web-app-fail/container-image-pull-option.png" alt-text="Screenshot of the Container image pull option." lightbox="media/pull-image-to-web-app-fail/container-image-pull-option.png":::
 
-To pull the image over the virtual network, you must enable **Pull image over VNet** in the **Deployment Center** of the web app. Additionally, if the container registry has the public access disabled or set to specific networks, you might receive the "Failed to load ACR Tags - failed" message, as shown in the following example. That error is expected in this scenario. If this occurs, the drop-down options for **Image** and **Tag** won’t be available. You'll have to manually enter the image and tag.
+To pull the image over the virtual network, you must enable **Pull image over VNet** in the **Deployment Center** of the web app. Additionally, if the container registry has the public access disabled or set to specific networks, you might receive the "Failed to load ACR Tags - failed" message, as shown in the following example. That error is expected in this scenario. If this occurs, the drop-down options for **Image** and **Tag** won't be available. You'll have to manually enter the image and tag.
 
 :::image type="content" source="media/pull-image-to-web-app-fail/failed-to-load-acr-error.png" alt-text="Screenshot of the failed to load ACR Tags error message." lightbox="media/pull-image-to-web-app-fail/failed-to-load-acr-error.png":::
  
 ## Next steps
 
-If this troubleshooting guidance doesn’t resolve the issue, consider the following:
+If this troubleshooting guidance doesn't resolve the issue, consider the following:
 
 Check the network security groups and route tables that are associated with your subnets.
 If a virtual appliance, such as a firewall, controls the traffic between subnets, review the firewall and its access rules.
