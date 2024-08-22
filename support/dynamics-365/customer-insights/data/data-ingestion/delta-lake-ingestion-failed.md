@@ -15,7 +15,7 @@ This article helps you resolve the "Delta Lake ingestion job failed to get versi
 
 ## Symptoms
 
-A Delta data source in Dynamics 365 Customer Insights - Data attempts to connect to a table using a feature that requires a Databricks 'minReaderVersion' 3 or later. The following error message appears on the **Data sources** page:
+A Delta data source in Dynamics 365 Customer Insights - Data attempts to connect to a table that is using a feature that requires a Databricks 'minReaderVersion' 3 or later. The following error message appears on the **Data sources** page:
 
 > Delta Lake ingestion job failed to get version DataSourceId.
 
