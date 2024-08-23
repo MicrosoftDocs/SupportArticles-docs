@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant, kenseongtan, guco, johndund
-ms.date: 07/19/2024
+ms.date: 08/23/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -56,4 +56,4 @@ _Original KB number:_ &nbsp; 4555406
 |XrmMachineGroupNotFound|404|Attended</br>Unattended|This error occurs when the machine group has been deleted. Re-create the group and update the connection.|
 |SessionCreationInvalidCredentials|400|Unattended|This error occurs when the unattended session couldn't be created with the provided credentials. This issue might occur due to an incorrectly formatted username. For Microsoft Entra joined machines, ensure the username is in the `user@domain.com` format. For domain-joined machines, the username should be in the `domain\user` format.|
 |UIFlowServiceNoRdpPermissions|400|Unattended|This error occurs when the Power Automate service ([UIFlowService](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account)) running on your computer can't list the Windows sessions on the machine. </br> Add the user account that the service runs as (usually **NT SERVICE\UIFlowService**) to the "Remote Desktop Users" group on your machine.|
-|UnallowedTenantForConnectWithSignIn|403|Unattended</br>Unattended|This error occurs when using a connect with sign-in connection on a machine that is AD-joined without having allow-listed your tenant. </br> see [Troublehoot UnallowedTenantForConnectWithSignIn](troubleshoot-unallowed-tenant-for-connect-with-sign-in.md)|
+|UnallowedTenantForConnectWithSignIn|403|Unattended</br>Unattended|This error occurs when using a [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) connection on a machine that's Active Directory (AD) domain-joined without having allowlisted your tenant. </br> For more information, see [Desktop flow unallowed tenant for connect with sign-in error](troubleshoot-unallowed-tenant-for-connect-with-sign-in.md).|
