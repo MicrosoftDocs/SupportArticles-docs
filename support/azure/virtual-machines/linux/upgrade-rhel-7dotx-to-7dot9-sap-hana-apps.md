@@ -139,10 +139,8 @@ For more information on performing the upgrade process on custom, golden, or PAY
 6. Reboot the VM to complete the upgrade:
 
     ```bash
-    sudo reboot 
+    sudo reboot
     ```
-
----
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
