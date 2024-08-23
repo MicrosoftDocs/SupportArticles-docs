@@ -13,7 +13,7 @@ ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 
 While Red Hat Enterprise Linux (RHEL) for SAP 7.x (where x isn't equal to 9) can be accessed in Update Services for SAP Solutions (E4S) and Extended Update Support (EUS), RHEL for SAP 7.9 follows a different approach. In this case, the related content is available in unversioned repositories. As a result, updating a system that runs SAP on RHEL 7.x to RHEL 7.9 requires several manual steps.
 
-This article provides the steps to upgrade Linux virtual machines (VMs) that use RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go (PAYG) images from 7.x to 7.9.
+This article provides the steps to upgrade Linux virtual machines (VMs) that use RHEL-SAP-HANA or RHEL-SAP-APPS pay-as-you-go (PAYG) images from 7.x to 7.9.
 
 > [!IMPORTANT]
 > Red Hat Update Infrastructure (RHUI) is intended for only PAYG images. If you use custom or golden images (also known as bring-your-own-subscription (BYOS)), the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
