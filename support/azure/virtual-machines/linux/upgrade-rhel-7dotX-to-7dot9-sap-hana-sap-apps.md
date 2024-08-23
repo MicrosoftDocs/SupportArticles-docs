@@ -1,7 +1,8 @@
 ---
-title: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG images from 7.X to 7.9
-description: Helps you upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go images from 7.X to 7.9.
+title: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG images from 7.x to 7.9
+description: Helps you upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go images from 7.x to 7.9.
 ms.reviewer: divargas, msaenzbo
+ms.topic: how-to
 ms.date: 08/23/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
@@ -10,14 +11,14 @@ ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-While Red Hat Enterprise Linux (RHEL) for SAP 7.x (where x isn't equal to 9) can be accessed in Update Services for SAP Solutions(E4S) and Extended Update Support (EUS), RHEL for SAP 7.9 follows a different approach. In this case, the related content is available in unversioned repositories. As a result, updating a system that runs SAP on RHEL 7.x to RHEL 7.9 requires several manual steps.
+While Red Hat Enterprise Linux (RHEL) for SAP 7.x (where x isn't equal to 9) can be accessed in Update Services for SAP Solutions (E4S) and Extended Update Support (EUS), RHEL for SAP 7.9 follows a different approach. In this case, the related content is available in unversioned repositories. As a result, updating a system that runs SAP on RHEL 7.x to RHEL 7.9 requires several manual steps.
 
 This article provides the steps to upgrade Linux virtual machines (VMs) that use RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go (PAYG) images from 7.x to 7.9.
 
 > [!IMPORTANT]
 > Red Hat Update Infrastructure (RHUI) is intended for only PAYG images. If you use custom or golden images (also known as bring-your-own-subscription (BYOS)), the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
-For more information on performing the update process on custom, golden, or PAYG images provided by Red Hat, see:
+For more information on performing the upgrade process on custom, golden, or PAYG images provided by Red Hat, see:
 
 - [How to update RHEL from 7.x to 7.9 on Cloud Images with the "RHEL for SAP with High Availability and Update Services" subscription](https://access.redhat.com/articles/5805571)
 
@@ -30,7 +31,7 @@ For more information on performing the update process on custom, golden, or PAYG
 
 - Make a backup of the Linux VM or a snapshot of the operating system (OS) disk.
 - Set up access to the Serial Console.
-- SAP process must be stopped during the OS update process.
+- Stop SAP process during the OS update process.
 - Run the commands in this article with root privileges.
 
 ## Upgrade RHEL-SAP-HANA PAYG images from 7.x to 7.9
@@ -76,12 +77,12 @@ For more information on performing the update process on custom, golden, or PAYG
     > [!IMPORTANT]
     > A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this case, all the previous repositories are required. Optionally, you can modify the */etc/yum.repos.d/rh-cloud-base-sap-ha.repo* file based on your system's specific requirement.
 
-5. Update the system to RHEL 7.9:
+5. Upgrade the system to RHEL 7.9:
 
     ```bash
     sudo yum update
     ```
-6. Reboot the VM to complete the update:
+6. Reboot the VM to complete the upgrade:
 
     ```bash
     sudo reboot 
@@ -129,13 +130,13 @@ For more information on performing the update process on custom, golden, or PAYG
     repolist: 77,105
     ```
 
-5. Update the system to RHEL 7.9:
+5. Upgrade the system to RHEL 7.9:
 
     ```bash
     sudo yum update
     ```
 
-6. Reboot the VM to complete the update:
+6. Reboot the VM to complete the upgrade:
 
     ```bash
     sudo reboot 
