@@ -43,9 +43,9 @@ System Configuration   | Source OS version| Target Version    |
 |Other SAP Applications| RHEL 8.10        | RHEL 9.4          |
 
 
-- According to the Red Hat documentation, `SAP HANA` is validated by `SAP` for `RHEL` minor versions that receive package updates for more than 6 months. Currently, the supported in-place paths of an `SAP HANA` system are from `RHEL` 8.8 to `RHEL` 9.2 and from `RHEL` 8.10 to `RHEL` 9.4. The rest of this document describes restrictions and detailed steps for upgrading an `SAP HANA` system.
+- According to the Red Hat documentation, `SAP HANA` is validated by `SAP` for `RHEL` minor versions that receive package updates for more than six months. Currently, the supported in-place paths of an `SAP HANA` system are from `RHEL` 8.8 to `RHEL` 9.2 and from `RHEL` 8.10 to `RHEL` 9.4. The rest of this document describes restrictions and detailed steps for upgrading an `SAP HANA` system.
 
-- `SAP NetWeaver` is validated by `SAP` for each major `RHEL` version. The supported `in-place` upgrade paths for this scenario are the two latest `EUS/E4S` releases which are supported by `Leapp `for `non-HANA` systems as per the [Upgrading from `RHEL` 8 to `RHEL` 9](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/upgrading_from_rhel_8_to_rhel_9) document. Certain deviations from the default upgrade procedure are described in [Section 4. Upgrading an SAP NetWeaver system.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html/upgrading_sap_environments_from_rhel_8_to_rhel_9/asmb_upgrading_netweaver_asmb_upgrading-hana-system) For systems on which both `SAP HANA` and `SAP NetWeaver` are installed, the `SAP HANA` restrictions apply.
+- `SAP NetWeaver` is validated by `SAP` for each major `RHEL` version. The supported `in-place` upgrade paths for this scenario are the two latest `EUS/E4S` releases that are supported by `Leapp `for `non-HANA` systems as per the [Upgrading from `RHEL` 8 to `RHEL` 9](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/upgrading_from_rhel_8_to_rhel_9) document. Certain deviations from the default upgrade procedure are described in [Section 4. Upgrading an SAP NetWeaver system.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html/upgrading_sap_environments_from_rhel_8_to_rhel_9/asmb_upgrading_netweaver_asmb_upgrading-hana-system) For systems on which both `SAP HANA` and `SAP NetWeaver` are installed, the `SAP HANA` restrictions apply.
 
 > [!IMPORTANT]  
 > For RHEL designed for SAP HANA and SAP Applications, there is a known issue when upgrading from version 8.10 to 9.4 due to a difference in the RHUI client RPM name in 8.10 compared to earlier versions. As a result, the upgrade is currently not possible, and no workaround is available. However, **the upgrade from 8.8 to 9.2 is unaffected** by this issue." 
@@ -115,7 +115,7 @@ sudo reboot
    d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture).
 
 
-6. Install the leapp utility.
+6. Install the `leapp` utility.
 
 ```bash
 sudo dnf install leapp-upgrade
@@ -157,13 +157,13 @@ If your virtual machine is configured to start SAP processes automatically at bo
 
    a. Check that the RHEL settings for `SAP HANA` are in place by checking the following:
 
-   According to SAP Note 2772999, the following parameter is necessary for SAP applications, including SAP HANA, and is usually configured in the file `/etc/sysctl.d/sap.conf`
+   According to SAP Note 2772999, the following parameter is necessary for SAP applications, including SAP HANA, and is configured in the file `/etc/sysctl.d/sap.conf`
 
 ```bash
 vm.max_map_count = 2147483647
 kernel.pid_max = 4194304
 ```
-   b. All other settings for `SAP HANA`, found in the files `/etc/sysctl.conf` and `/etc/sysctl.d/sap_hana.conf`, are the same for both `RHEL` 8 and `RHEL` 9 and should remain unchanged. For further information, please refer to the `SAP` Notes [2382421.](https://launchpad.support.sap.com/#/notes/2382421)
+   b. All other settings for `SAP HANA`, found in the files `/etc/sysctl.conf` and `/etc/sysctl.d/sap_hana.conf`, are the same for both `RHEL` 8 and `RHEL` 9 and should remain unchanged. For further information, refer to the `SAP` Notes [2382421.](https://launchpad.support.sap.com/#/notes/2382421)
 
 
 4. Upgrade your RHEL 8.10 system to the latest available RHEL 8.10 package versions.
@@ -187,7 +187,7 @@ sudo reboot
    d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture)
 
 
-7. Install the leapp utility.
+7. Install the `leapp` utility.
 
 ```bash
 dnf install leapp-upgrade
@@ -226,13 +226,13 @@ If your virtual machine is configured to start SAP processes automatically at bo
 
    a. Check that the RHEL settings for `SAP` are in place by checking the following:
 
-   According to SAP Note 2772999, the following parameter is necessary for SAP applications, including SAP HANA, and is usually configured in the file `/etc/sysctl.d/sap.conf`
+   According to SAP Note 2772999, the following parameter is necessary for SAP applications, including SAP HANA, and is configured in the file `/etc/sysctl.d/sap.conf`
 
 ```bash
 vm.max_map_count = 2147483647
 kernel.pid_max = 4194304
 ```
-   b. All other settings for `SAP`, found in the files `/etc/sysctl.conf`, are the same for both `RHEL` 8 and `RHEL` 9 and should remain unchanged. For further information, please refer to the `SAP` Notes [2382421.](https://launchpad.support.sap.com/#/notes/2382421)
+   b. All other settings for `SAP`, found in the files `/etc/sysctl.conf`, are the same for both `RHEL` 8 and `RHEL` 9 and should remain unchanged. For further information, refer to the `SAP` Notes [2382421.](https://launchpad.support.sap.com/#/notes/2382421)
 
 
 4. Upgrade your RHEL 8.8 system to the latest available RHEL 8.8 package versions.
@@ -256,7 +256,7 @@ sudo reboot
    d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture).
 
 
-6. Install the leapp utility.
+6. Install the `leapp` utility.
 
 ```bash
 sudo dnf install leapp-upgrade
@@ -298,13 +298,13 @@ If your virtual machine is configured to start SAP processes automatically at bo
 
    a. Check that the RHEL settings for `SAP` are in place by checking the following:
 
-   According to SAP Note 2772999, the following parameter is necessary for SAP applications, including SAP HANA, and is usually configured in the file `/etc/sysctl.d/sap.conf`
+   According to SAP Note 2772999, the following parameter is necessary for SAP applications, including SAP HANA, and is configured in the file `/etc/sysctl.d/sap.conf`
 
 ```bash
 vm.max_map_count = 2147483647
 kernel.pid_max = 4194304
 ```
-   b. All other settings for `SAP`, found in the files `/etc/sysctl.conf`, are the same for both `RHEL` 8 and `RHEL` 9 and should remain unchanged. For further information, please refer to the `SAP` Notes [2382421.](https://launchpad.support.sap.com/#/notes/2382421)
+   b. All other settings for `SAP`, found in the files `/etc/sysctl.conf`, are the same for both `RHEL` 8 and `RHEL` 9 and should remain unchanged. For further information, refer to the `SAP` Notes [2382421.](https://launchpad.support.sap.com/#/notes/2382421)
 
 
 4. Upgrade your RHEL 8.10 system to the latest available RHEL 8.10 package versions.
@@ -328,7 +328,7 @@ sudo reboot
    d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture)
 
 
-7. Install the leapp utility.
+7. Install the `leapp` utility.
 
 ```bash
 dnf install leapp-upgrade
@@ -620,9 +620,9 @@ rhui-microsoft-azure-rhel9-sapapps            Microsoft Azure RPMs for Red Hat E
 
 ## Post-Upgrade Tasks
 
-Take further steps once you have confirmed the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9](https://review.learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/leapp-upgrade-process-rhel-7-and-8?branch=pr-en-us-6901&tabs=rhel8-rhel9#tabpanel_5_rhel8-rhel9)
+Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9](https://review.learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/leapp-upgrade-process-rhel-7-and-8?branch=pr-en-us-6901&tabs=rhel8-rhel9#tabpanel_5_rhel8-rhel9)
 
 
 ## Post-configuration of the system for SAP HANA
 
-After you have verified that the upgrade was successful, you must configure the system for SAP HANA according to the applicable SAP notes for RHEL 8. More information, see,[Configuring the system for SAP HANA.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html-single/upgrading_sap_environments_from_rhel_8_to_rhel_9/index#proc_configuring-system-sap-hana_asmb_upgrading-hana-system)
+After you verify that the upgrade was successful, you must configure the system for SAP HANA according to the applicable SAP notes for RHEL 8. More information, see: [Configuring the system for SAP HANA.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html-single/upgrading_sap_environments_from_rhel_8_to_rhel_9/index#proc_configuring-system-sap-hana_asmb_upgrading-hana-system)
