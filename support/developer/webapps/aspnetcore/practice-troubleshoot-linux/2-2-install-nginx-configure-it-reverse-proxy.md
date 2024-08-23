@@ -1,7 +1,7 @@
 ---
 title: Install Nginx and configure it as a reverse proxy server
 description: This article describes how to install Nginx and configure it as a reverse proxy server.
-ms.date: 10/10/2023
+ms.date: 08/23/2024
 ms.custom: sap:General Development Questions, linux-related-content
 ms.reviewer: ahmetmb
 author: ahmetmithat
