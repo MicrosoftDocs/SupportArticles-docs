@@ -126,7 +126,7 @@
   - name: Red Hat
     items:
     - name: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG images to 7.9
-      href: upgrade-rhel-7dotX-to-7dot9-sap-hana-sap-apps.md
+      href: upgrade-rhel-7dotx-to-7dot9-sap-hana-apps.md
     - name: Troubleshoot Red Hat leapp upgrade issues
       href: troubleshoot-red-hat-os-upgrade-issues.md
   
