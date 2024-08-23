@@ -7,7 +7,7 @@ ms.custom: sap:Flow run issues\Triggers
 ---
 # Missing runs or triggers history for a flow
 
-For a flow, sometimes users can't find trigger or run history on the **Run history** page or the flow's **Details** page in Power Automate.
+For a flow, sometimes you can't find trigger or run history on the **Run history** page or the flow's **Details** page in Power Automate.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4538672
