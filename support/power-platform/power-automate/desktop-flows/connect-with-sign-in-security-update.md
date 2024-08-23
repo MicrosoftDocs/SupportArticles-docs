@@ -6,7 +6,7 @@ ms.date: 08/21/2024
 ---
 # Power Automate Desktop security update for connect with sign-in connections on Active Directory joined machines
 
-A potential security issue was identified in Power Automate Desktop. Please update PAD to the versions provided in this article.
+A potential security issue was identified in Power Automate for Desktop. Please update PAD to the versions provided in this article.
 
 ## Impact
  
