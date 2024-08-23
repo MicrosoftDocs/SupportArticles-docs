@@ -2,7 +2,7 @@
 title: Missing runs or triggers history for a flow
 description: Provides a resolution to show the flow run or trigger history that's longer than 28 days.
 ms.reviewer: anaggar
-ms.date: 09/26/2022
+ms.date: 08/23/2024
 ms.custom: sap:Flow run issues\Triggers
 ---
 # Missing runs or triggers history for a flow
@@ -18,9 +18,9 @@ You can't see your Power Automate flow on the **Run history** page or the flow's
 
 ## Cause
 
-By default, flow run data is stored for 28 days. If you ran your flow more than 28 days ago, it will no longer be shown in the flow's **Run history** page.
+By default, flow run data is stored for 28 days. If you ran your flow more than 28 days ago, it will no longer be shown on the flow's **Run history** page.
 
-Flow run or trigger history is retained for 28 days after the start of the flow. So, if it's past 28 days, the history is deleted and the data you're looking for won't be there.
+:::image type="content" source="media/missing-runs-or-triggers-history-for-a-flow/28-day-run-history.png" alt-text="Screenshot that shows the message that indicates that only run logs for no longer than 28 days will be shown on the Run history page.":::
 
 ## Resolution
 
