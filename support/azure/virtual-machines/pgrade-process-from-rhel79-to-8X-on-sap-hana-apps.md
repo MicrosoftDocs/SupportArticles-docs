@@ -30,6 +30,7 @@ For more information on performing a `leapp upgrade` process on custom or golden
 - SAP process must be stopped during the OS update process.
 - Set up access to the serial console.
 - Run the commands in this article with root privileges.
+- Before upgrading production systems to 8.10, verify that 8.10 is compatible with the required SAP software. For more information, see [SAP Software on Linux: General information - SAP note 2369910](https://launchpad.support.sap.com/#/notes/2369910).
 
 ## Preparing the virtual machine for the `leapp` pre-upgrade and upgrade process
 
