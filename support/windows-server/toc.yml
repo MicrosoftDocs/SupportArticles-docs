@@ -3172,9 +3172,7 @@ items:
     - name: Error 0x800f0922 when installing Windows updates
       href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
     - name: Error C0190003 after installing updates
-      href: ./installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md
-    - name: Error code 2359302 when installing updates in Windows Server 2019
-      href: ./installing-updates-features-roles/error-2359302-installing-windows-updates.md
+      href: ./installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md    
     - name: ERROR_INVALID_DATA error after installing Windows updates
       href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
     - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
