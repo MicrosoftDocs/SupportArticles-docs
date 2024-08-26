@@ -23,7 +23,7 @@ When you view the columns in the table, the "Failed to save data source schema" 
 
 ## Cause
 
-Dynamics 365 Customer Insights - Data supports Databricks'`minReaderVersion` 2 or earlier.
+Dynamics 365 Customer Insights - Data supports Databricks `minReaderVersion` 2 or earlier.
 
 ## Resolution
 
