@@ -126,7 +126,7 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
     ```
 6. Temporarily disable your antivirus software to prevent upgrade failures.
 
-7. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+7. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
 
 8. RHEL 9 no longer supports the legacy network-scripts package, which was deprecated in RHEL 8. Before upgrading, migrate your custom network scripts and create a NetworkManager dispatcher script to run your existing custom scripts. For more information, see [Migrating custom network scripts to NetworkManager dispatcher scripts](https://access.redhat.com/solutions/6900331).
 
@@ -144,7 +144,7 @@ Run the following `leapp preupgrade` command:
 sudo leapp preupgrade --target <target_os_version> --no-rhsm
 ```
 
-Replace `<target_os_version>` with the target OS version, for example `8.10`. 
+Replace `<target_os_version>` with the target OS version, for example, `8.10`. 
 
 ### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
 
@@ -154,7 +154,7 @@ Run the following `leapp preupgrade` command:
 sudo leapp preupgrade --target <target_os_version> --no-rhsm
 ```
 
-Replace `<target_os_version>` with the target OS version, for example `9.4`. 
+Replace `<target_os_version>` with the target OS version, for example, `9.4`. 
 
 ---
 
@@ -162,7 +162,7 @@ Check the report located in the */var/log/leapp/leapp-report.txt* file and resol
 
 ## Leapp upgrade process
 
-Continue the leapp upgrade process after the leapp pre-upgrade report shows no errors or inhibitors and everything is marked as resolved. The output is typically in green or yellow, indicating that it's safe to proceed with the leapp upgrade.
+Continue the leapp upgrade process after the leapp pre-upgrade report shows no errors or inhibitors and everything is marked as resolved. The output is typically green or yellow, indicating that it's safe to proceed with the leapp upgrade.
 
 > [!IMPORTANT]  
 > Make sure to run the `leapp upgrade` command through the Serial Console to avoid any network interruptions that could affect your secure shell (SSH) terminal and disrupt the upgrade process.
@@ -176,7 +176,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     ```
 
     > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example `8.10`. 
+    > - Replace `<target_os_version>` with the target OS version, for example, `8.10`. 
     > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
@@ -201,7 +201,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     ```
     
     > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example `9.4`.  
+    > - Replace `<target_os_version>` with the target OS version, for example, `9.4`.  
     > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process shows that a reboot is required to continue the process as follows, manually reboot the VM:
@@ -273,7 +273,7 @@ Once the VM is successfully upgraded, perform the following tasks:
 
 ### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
 
-1. Delete all remaining leapp packages, including the *snactor* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These leapp packages are installed during the in-place upgrade.
+1. Delete all remaining leapp packages, including the *`snactor`* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These leapp packages are installed during the in-place upgrade.
 
     ```bash
     sudo dnf config-manager --save --setopt exclude=''
@@ -315,9 +315,9 @@ Once the VM is successfully upgraded, perform the following tasks:
         > [!NOTE]  
         > Ignore the following error message, which is generated if the kernel package was previously removed:
         >
-        > /usr/sbin/weak-modules: line \<line number\>: cd: /lib/modules/\<kernel version\>/weak-updates: No such file or directory
+        > > /usr/sbin/weak-modules: line \<line number\>: cd: /lib/modules/\<kernel version\>/weak-updates: No such file or directory
 
-4. Remove the old kernel from the boot loader entry. If you have multiple old kernels, run the following command for each kernel.
+4. Remove the old kernel from the boot loader entry. If you have multiple old kernels, run the following command for each kernel:
 
     ```bash
     sudo /bin/kernel-install remove <kernel version> /lib/modules/<kernel version>/vmlinuz
@@ -354,7 +354,7 @@ Once the VM is successfully upgraded, perform the following tasks:
 
 ### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
 
-1. Delete all remaining leapp packages, including the *snactor* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These leapp packages are installed during the in-place upgrade.
+1. Delete all remaining leapp packages, including the *`snactor`* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These leapp packages are installed during the in-place upgrade.
 
     ```bash
     sudo dnf config-manager --save --setopt exclude=''
