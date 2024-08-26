@@ -2,7 +2,7 @@
 title: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 8.x to 8.10
 description: Helps you upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 8.x to 8.10.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 08/23/2024
+ms.date: 08/26/2024
 ms.topic: how-to
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
@@ -140,7 +140,7 @@ For more information on performing the upgrade process on custom, golden, and PA
     sudo reboot 
     ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 <!-- PLEASE DONT DELETE THE FOLLOWING LINES, IT WILL BE ADDED ONCE THE OTHER DOC IS READY
 > [!IMPORTANT]
