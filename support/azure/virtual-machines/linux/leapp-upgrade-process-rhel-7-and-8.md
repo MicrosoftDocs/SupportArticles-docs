@@ -78,7 +78,7 @@ You can perform an in-place upgrade from RHEL 7 to the following RHEL 8 minor ve
     sudo reboot
     ```
 
-6. Temporarily disable your antivirus software to prevent upgrade failures.
+6. To prevent upgrade failures, temporarily disable your antivirus software.
 
 7. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
 
@@ -103,7 +103,7 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
     sudo dnf versionlock clear
     ```
 
-2. Enable required RHUI repositories and install required RHUI packages to ensure your system is ready for the upgrade:
+2. To ensure your system is ready for the upgrade, enable required RHUI repositories and install required RHUI packages:
 
     ```bash
     sudo dnf config-manager --set-enabled rhui-microsoft-azure-rhel8
@@ -124,7 +124,7 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
     ```bash
     sudo reboot
     ```
-6. Temporarily disable your antivirus software to prevent upgrade failures.
+6. To prevent upgrade failures, temporarily disable your antivirus software.
 
 7. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
 
