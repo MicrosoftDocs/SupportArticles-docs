@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 14 for SQL Server 2022 (KB5038325)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 14 (KB5038325).
-ms.date: 08/01/2024
+ms.date: 08/19/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5038325
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,7 +23,9 @@ This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-There are no known issues in this cumulative update.
+### Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
+
+[!INCLUDE [patching-error-2022](../includes/patching-error-2022.md)]
 
 ## Improvements and fixes included in this update
 

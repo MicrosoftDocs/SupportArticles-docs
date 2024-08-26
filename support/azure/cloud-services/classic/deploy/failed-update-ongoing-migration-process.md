@@ -4,7 +4,7 @@ description: Resolve a cloud service update failure that occurs during a migrati
 ms.date: 09/26/2022
 editor: v-jsitser
 ms.reviewer: v-maallu, piw, prpillai, v-leedennis
-ms.service: cloud-services
+ms.service: azure-cloud-services-classic
 ms.custom: sap:Deployment
 #Customer intent: As a cloud service user, I want to resolve a cloud service update failure that occurs when I migrate from Azure Cloud Services (classic) to Azure Cloud Services (extended support) so that I can avoid or reduce downtime.
 ---
