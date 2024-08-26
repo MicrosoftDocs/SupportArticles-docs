@@ -158,7 +158,7 @@ Replace `<target_os_version>` with the target OS version, for example `9.4`.
 
 ---
 
-Check the report located in the */var/log/leapp/leapp-report.txt* file and resolve any identified issues manually. Some problems come with recommended fixes. Iinhibitor issues must be resolved before you can proceed with the upgrade. For detailed information about the various issues that might appear in the report, see [Troubleshooting Red Hat OS upgrade issues](troubleshoot-red-hat-os-upgrade-issues.md).
+Check the report located in the */var/log/leapp/leapp-report.txt* file and resolve any identified issues manually. Some problems come with recommended fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information about the various issues that might appear in the report, see [Troubleshooting Red Hat OS upgrade issues](troubleshoot-red-hat-os-upgrade-issues.md).
 
 ## Leapp upgrade process
 
