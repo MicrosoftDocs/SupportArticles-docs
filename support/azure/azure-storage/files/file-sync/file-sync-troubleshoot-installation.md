@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 08/23/2024
+ms.date: 08/26/2024
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -119,22 +119,23 @@ To test the network connectivity on the server, run the following PowerShell com
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Debug-StorageSyncServer -TestNetworkConnectivity
 ```
-<a id="server-registration-catastrophic-error"></a>**Server Registration using the Register-AzStorageSyncServer cmdlet fails with error: Catastrophic failure (0x8000FFFF)**
+<a id="server-registration-catastrophic-error"></a>**Server registration using the `Register-AzStorageSyncServer` cmdlet fails with the error: Catastrophic failure (0x8000FFFF)**
 
-Server Registration using the Register-AzStorageSyncServer cmdlet fails with the following error:  
-Catastrophic failure (0x8000FFFF (E_UNEXPECTED)) 'No system-assigned Managed Identity was found for this resource'
- 
-This issue occurs if the Azure Files Sync agent was upgraded from version 17.x to version 18.x and the ServerType registry value is set to an unexpected value.
- 
-To resolve this issue, run the following commands from an elevated command prompt:
+A server registration using the `Register-AzStorageSyncServer` cmdlet fails with the following error:
 
-```
+> Catastrophic failure (0x8000FFFF (E_UNEXPECTED)) 'No system-assigned Managed Identity was found for this resource'
+ 
+This issue occurs when the Azure Files Sync agent is upgraded from version 17.x to 18.x and the `ServerType` registry value is set to an unexpected value.
+ 
+To resolve this issue, delete the `ServerType` registry value by running the following commands from an elevated command prompt:
+
+```console
 reg delete HKLM\SOFTWARE\Microsoft\Azure\StorageSync /v ServerType /f  
 net stop filesyncsvc  
 net start filesyncsvc  
 ```
 
-Once the ServerType registry value is deleted, retry server registration.
+Once the `ServerType` registry value is deleted, retry the server registration.
 
 <a id="server-registration-missing-subscriptions"></a>**Server Registration does not list all Azure Subscriptions**
 
