@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Container Registry delete operation issues
 description: Discusses some issues you might come across during the ACR deletion process.
-ms.date: 08/20/2024
+ms.date: 08/26/2024
 ms.reviewer: kukondep, chiragpa, v-rekhanain, v-weizhu
 ms.service: azure-container-instances
 ms.custom: sap:Delete images from registry
@@ -24,9 +24,9 @@ When you try to delete an empty repository from a container registry, an error l
 
     > 2024-05-08 12:14:04.261355 Error: repository name not known to registry. Correlation ID: dc9f5ca9-4d6a-4ad3-9d31-0bc08c980e55
 
-So, we don't recommend emptying the repository completely. When you try to delete the repository, there might be some orphaned metadata left over from the original deletion, which causes deletion errors. Deleting a repository deletes all the images in the repository, including all tags, unique layers, and manifests. Deleting the entire repository is always simpler than removing individual images.
+This error happens due to some orphaned metadata left over from the original deletion of images. To avoid this error, don't empty the repository completely. Instead, deleting the entire repository is always simpler as it deletes all the images in the repository, including all tags, unique layers, and manifests. 
 
-To avoid this issue, we recommend using a test or prod repository. In this case, you can delete/create the test repository as per the requirement.
+If you really want to delete the repository, you may choose to add a dummy image and then delete the entire repository.
 
 ## Issue 2: Unable to delete a container registry associated with private endpoints
 
