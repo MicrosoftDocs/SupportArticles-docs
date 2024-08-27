@@ -1,7 +1,7 @@
 ---
 title: Capture a TCP dump from a Linux node in an AKS cluster
 description: Understand how to capture a TCP dump from a Linux node within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 02/01/2023
+ms.date: 27/08/2024
 ms.topic: how-to
 ms.reviewer: erbookbi, amaljuna, v-leedennis
 ms.service: azure-kubernetes-service
@@ -68,6 +68,12 @@ To capture the dump, run the [tcpdump command](https://www.tcpdump.org/manpages/
 tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
 Got 6
 ```
+> [!NOTE]
+> Running tcpdump without filtering parameters could increase the pcap file size  specially for long run
+> So we recommend you to add filters like source & destination also port  
+> For example you can filter for destination ip/host or port : 
+> $ tcpdump dst 192.168.1.100 or using FQDN ,  
+> $ tcpdump port http or port ftp or port smtp or port imap or port pop3 or port telnet
 
 While the trace is running, replicate your issue many times. This action ensures the issue has been captured within the TCP dump. Note the time stamp while you replicate the issue. To stop the packet capture when you're done, press Ctrl+C:
 
