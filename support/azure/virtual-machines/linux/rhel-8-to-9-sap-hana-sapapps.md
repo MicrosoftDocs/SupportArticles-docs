@@ -127,7 +127,7 @@ sudo dnf install leapp-upgrade
 This procedure outlines the necessary steps to complete before performing an in-place upgrade to `RHEL` 8.10 to `RHEL` 9.4 using the `Leapp` utility on `SAP-HANA PAYG` images on Azure.
 
 > [!NOTE]  
-> To update an `SAPAPPS` system running from `RHEL 8.10` to `RHEL 9.4`, you must first upgrade to `RHEL 8.10` for detailed instructions on upgrading from RHEL 8.8 or earlier to RHEL 8.10 on Azure for `PAYG` images, please refer to the guide [How to update RHEL from 8.x to 8.10 on Azure with RHEL for SAP with High Availability or SAP APPS on (PAYG) virtual machines.](https://review.learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/rhel8xto810-on-saphana?branch=pr-en-us-7011&tabs=rhel8x-rhel810ha)" 
+> To update an `SAPAPPS` system running from `RHEL 8.10` to `RHEL 9.4`, you must first upgrade to `RHEL 8.10` for detailed instructions on upgrading from RHEL 8.8 or earlier to RHEL 8.10 on Azure for `PAYG` images, please refer to the guide [How to update RHEL from 8.x to 8.10 on Azure with RHEL for SAP with High Availability or SAP APPS on (PAYG) virtual machines.](https://review.learn.microsoft.com/troubleshoot/azure/virtual-machines/linux/rhel8xto810-on-saphana?branch=pr-en-us-7011&tabs=rhel8x-rhel810ha)" 
 
 > [!IMPORTANT]  
 > If your VM is part of a Hight Availability cluster, the upgrade is possible if the cluster nodes are **not** using any packages that are part of [Resilient Storage.](https://access.redhat.com/articles/3130101) For more information, see:  [Procedure to upgrade a RHEL 8 High Availability cluster to RHEL 9](https://access.redhat.com/articles/7012677)
@@ -231,10 +231,10 @@ If your virtual machine is configured to start SAP processes automatically at bo
 
    According to SAP Note 2772999, the following parameter is necessary for SAP applications, including SAP HANA, and is configured in the file `/etc/sysctl.d/sap.conf`.
 
-```bash
-vm.max_map_count = 2147483647
-kernel.pid_max = 4194304
-```
+   ```bash
+   vm.max_map_count = 2147483647
+   kernel.pid_max = 4194304
+   ```
 
    b. All other settings for `SAP`, found in the files `/etc/sysctl.conf`, are the same for both `RHEL` 8 and `RHEL` 9 and should remain unchanged. For further information, refer to the `SAP` Notes [2382421.](https://launchpad.support.sap.com/#/notes/2382421)
 
@@ -306,6 +306,7 @@ If your virtual machine is configured to start SAP processes automatically at bo
    vm.max_map_count = 2147483647
    kernel.pid_max = 4194304
    ```
+   
    b. All other settings for `SAP`, found in the files `/etc/sysctl.conf`, are the same for both `RHEL` 8 and `RHEL` 9 and should remain unchanged. For further information, refer to the 
      `SAP` Notes [2382421.](https://launchpad.support.sap.com/#/notes/2382421)
 
@@ -397,7 +398,7 @@ Replace `<target_os_version>` with the target OS version, for example `9.4`.
 
 --- 
 
-Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that might appear in the report, for more information, see: [Troubleshoot-red-hat-os-upgrade-issues.](/azure/virtual-machines/linux/troubleshoot-red-hat-os-upgrade-issues)
+Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that might appear in the report, for more information, see: [Troubleshoot-red-hat-os-upgrade-issues.](troubleshoot-red-hat-os-upgrade-issues.md)
 
 
 #### `Leapp` upgrade process
@@ -620,7 +621,7 @@ rhui-microsoft-azure-rhel9-sapapps            Microsoft Azure RPMs for Red Hat E
 
 ## Post-Upgrade Tasks
 
-Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/leapp-upgrade-process-rhel-7-and-8?tabs=rhel8-rhel9#post-upgrade-tasks)
+Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9](linux/leapp-upgrade-process-rhel-7-and-8?tabs=rhel8-rhel9#post-upgrade-tasks)
 
 
 ## Post-configuration of the system for SAP HANA
