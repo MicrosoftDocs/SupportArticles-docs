@@ -36,11 +36,11 @@ The following sections guide you through the analysis process.
 
 ## Prerequisites
 
-[Use the Get-CalendarDiagnosticObjectsSummary.ps1 script](./get-calendar-diagnostic-logs.md#use-the-get-calendardiagnosticobjectssummaryps1-script) to output the following Microsoft Excel file:
+[Use the Get-CalendarDiagnosticObjectsSummary.ps1 script](./get-calendar-diagnostic-logs.md#use-the-get-calendardiagnosticobjectssummaryps1-script) to generate the following Microsoft Excel file for a meeting:
 
 *CalLogSummary_\<short meeting ID\>.xlsx*
 
-The file contains the following set of worksheets for each key meeting participant:
+The file contains the following set of worksheets for each key participant:
 
 - A timeline worksheet that's named: `<participant SMTP address>_TimeLine`
 - An enhanced CDL worksheet that's named: `<participant SMTP address>`
