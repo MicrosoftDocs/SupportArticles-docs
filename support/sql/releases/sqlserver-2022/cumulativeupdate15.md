@@ -8,3 +8,8 @@ appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
 ---
+
+# KB5041321 - Cumulative Update 15 for SQL Server 2022
+
+_Release Date:_ &nbsp; September 12, 2024  
+_Version:_ &nbsp; 16.0.4145.2
