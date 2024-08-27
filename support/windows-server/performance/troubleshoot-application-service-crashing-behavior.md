@@ -1,12 +1,12 @@
 ---
 title: The Application or service crashing behavior troubleshooting guidance
 description: Provides guidance on how to troubleshoot application or service crashing behaviors.
-ms.date: 07/29/2024
+ms.date: 08/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, warrenw, vjulio, v-lianna
+ms.reviewer: kaushika, warrenw, vjulio, holgerh, v-lianna
 ms.custom: sap:System Performance\App, Process, Service Performance (slow, unresponsive), csstroubleshoot
 ---
 # The Application or service crashing behavior troubleshooting guidance
@@ -20,6 +20,12 @@ When you see Event ID 1001 and Event ID 1000 repeatedly in the application log, 
 This article details the process of checking the event, understanding the information in the event, and handling the event based on whether it's a first- or third-party application. [Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools) are used in this process.
 
 ## Before you begin
+
+Considerations:
+
+- Verify if you're running the latest updates of the operating system version you have installed.
+- Verify if the impacted application is on the latest version.
+- If an anti-virus software is installed, check if it's running on the latest version and necessary exclusions are in-place.
 
 The Event ID 1001 `level` information shows if Windows Error Reporting (WER) is enabled in the system. However, you need to change this service to collect the `level` information required for the investigation. The system doesn't log this information by default to avoid a slight performance overhead.
 
@@ -124,9 +130,6 @@ Once you have the process dumps, you can:
 
 - Share the relevant dumps with the third party for investigation if the process is a third-party process.
 - Contact Microsoft Support to analyze the data if the process is a first-party process.
-- Extract the *gflags.exe* file from the installed debugger and determine the faulting module by using:
-
-  - [Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools)
-  - [The !analyze Extension](/windows-hardware/drivers/debugger/using-the--analyze-extension)
+- Use the debugger (*windbg.exe*) installed using [Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools), and try to determine the faulting module by using [The !analyze Extension](/windows-hardware/drivers/debugger/using-the--analyze-extension).
 
 After collecting the data and completing the investigation, delete the registry key (the one with the process name) and turn off the **Enable page heap** flag for GFlags.
