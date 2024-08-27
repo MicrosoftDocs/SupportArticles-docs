@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot dynamic groups
 description: This article helps you diagnose and resolve issues with dynamic groups.
-ms.date: 01/16/2024
+ms.date: 08/27/2024
 ms.service: entra-id
 ms.custom: sap:Groups, has-azure-ad-ps-ref
-ms.reviewer: mimart, v-weizhu
+ms.reviewer: mimart, v-weizhu, v-loeide, mbhargav
 ---
 # Troubleshoot dynamic groups
 
@@ -113,7 +113,7 @@ You don't see option to create a dynamic group in the Azure portal, or there was
 
 ### You get a max groups allowed error when creating a Dynamic group in PowerShell<a id="8"></a>
 
-This error means you have reached the max limit for Dynamic groups in your tenant. Check the number of groups in the tenant. The max number of Dynamic groups per tenant is 5,000.
+This error means you have reached the max limit for Dynamic groups in your tenant. Check the number of groups in the tenant. The max number of Dynamic groups per tenant is 15,000.
 
 To create any new Dynamic groups, you'll first need to delete some existing Dynamic groups. There's no way to increase the limit.
 
