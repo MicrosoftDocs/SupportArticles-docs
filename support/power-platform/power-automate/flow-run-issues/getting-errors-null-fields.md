@@ -1,8 +1,8 @@
 ---
 title: Getting errors with null fields
 description: Provides a solution to errors and unexpected behaviors that occur when you run a flow in Microsoft Power Automate.
-ms.reviewer: 
-ms.date: 08/21/2024
+ms.reviewer: hamenon, samathur 
+ms.date: 08/27/2024
 ms.custom: sap:Flow run issues\Actions
 ---
 # Getting errors with null fields 
@@ -55,7 +55,5 @@ You can also use the `coalesce` function to provide default values when a value 
 > [!NOTE]
 > If you still get a runtime error after using the `coalesce` function, it might be caused by referencing null properties in an object. You can use the question mark operator (?) to handle null outputs from a trigger. For example:
 > `@coalesce(trigger().outputs?.body?.<someProperty>, '<property-default-value>').`
-
-## More information
 
 For more information, see [Coalesce](/azure/logic-apps/workflow-definition-language-functions-reference#coalesce) and [Operators](/azure/logic-apps/logic-apps-workflow-definition-language#operators).
