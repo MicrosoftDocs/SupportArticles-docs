@@ -83,7 +83,7 @@ Follow these steps to get raw CDLs, enhanced CDLs, and a concise timeline of mee
 
    > [!NOTE]
    > - Use the **Identity** parameter to specify all key participants of the meeting.
-   > - You must use the **MeetingId** parameter instead of the **Subject** parameter if you specify multiple participants in the **Identity** argument.
+   > - You must use the **MeetingId** parameter instead of the **Subject** parameter if you specify multiple participants.
 
    The script creates the following Excel file in the current folder:
 
