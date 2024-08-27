@@ -32,7 +32,9 @@ ms.date: 08/27/2024
 
 Calendar diagnostic logs (CDLs) contain important calendar-related event data for Microsoft Exchange Online mailboxes. You can use CDLs to get detailed information about calendar items, such as meetings, to help diagnose issues.
 
-The following sections present different ways to get the CDLs for a meeting. To diagnose a meeting issue, we recommend that you [use the Get-CalendarDiagnosticObjectsSummary.ps1 script](#use-the-get-calendardiagnosticobjectssummaryps1-script) because the script processes the raw CDLs to provide enhanced CDLs and a concise timeline of meeting actions. For information about how to analyze the data, see [Analyze calendar diagnostic logs for Exchange Online mailboxes](./analyze-calendar-diagnostic-logs.md).
+The following sections present different ways to get the CDLs for a meeting.
+
+To diagnose a meeting issue, we recommend that you [use the Get-CalendarDiagnosticObjectsSummary.ps1 script](#use-the-get-calendardiagnosticobjectssummaryps1-script) because the script processes the raw CDLs to provide enhanced CDLs and a concise timeline of meeting actions. For information about how to analyze the data, see [Analyze calendar diagnostic logs for Exchange Online mailboxes](./analyze-calendar-diagnostic-logs.md).
 
 ## Use the Get-CalendarDiagnosticObjectsSummary.ps1 script
 
@@ -54,49 +56,48 @@ Follow these steps to get raw CDLs, enhanced CDLs, and a concise timeline of mee
    .\Get-CalendarDiagnosticObjectsSummary.ps1 -Identity "<mailbox SMTP address>" -Subject "<meeting subject>" -Exceptions -ExportToExcel
    ```
 
-   The script outputs the following Microsoft Excel file in the current folder:
+   The script creates the following Microsoft Excel file in the current folder:
 
-   _CalLogSummary_\<short meeting ID\>.xlsx_
+   *CalLogSummary_\<short meeting ID\>.xlsx*
 
    The file contains the following set of worksheets:
 
-   - A timeline worksheet that's named: _\<SMTP address\>_TimeLine_
-   - An enhanced CDL worksheet that's named: _\<SMTP address\>_
-   - A raw CDL worksheet that's named: _\<SMTP address\>_Raw_
+   - A timeline worksheet that's named: `<SMTP address>_TimeLine`
+   - An enhanced CDL worksheet that's named: `<SMTP address>`
+   - A raw CDL worksheet that's named: `<SMTP address>_Raw`
 
-   If more than one meeting matches the meeting subject, the script generates an Excel file for each meeting.
-
-   > [!IMPORTANT]
-   > Each meeting is uniquely identified by a meeting ID (GUID). You can find the meeting ID in the timeline worksheet for the meeting.
+   > [!NOTE]
+   > - If more than one meeting matches the meeting subject, the script generates an Excel file for each meeting.
+   > - Each meeting is uniquely identified by a meeting ID (GUID). You can find the meeting ID in the timeline worksheet for the meeting.
 
 5. Gather the following information:
 
    - The SMTP address of each key participant, such as the meeting organizer, delegates, and attendees.
-   - The meeting ID. For example, the meeting ID might be `040000008200E00074C5B7101A82E00800000000A0D1E89273EFDA010000000000000000100000002D9427567554FA4AA9162A58A8B968CB`.
+   - The meeting ID, such as `040000008200E00074C5B7101A82E00800000000A0D1E89273EFDA010000000000000000100000002D9427567554FA4AA9162A58A8B968CB`.
 
 6. In the folder that contains the script, run the following PowerShell command, and pass in the information from step 5:
 
    ```PowerShell
-   .\Get-CalendarDiagnosticObjectsSummary.ps1 -Identity "<organizer SMTP address>","<delegate1 SMTP address>","<attendee1 SMTP address>" -MeetingId "<meeting ID>" -Exceptions -ExportToExcel
+   .\Get-CalendarDiagnosticObjectsSummary.ps1 -Identity "<organizer SMTP address>","<delegate SMTP address>","<attendee SMTP address>" -MeetingId "<meeting ID>" -Exceptions -ExportToExcel
    ```
 
    > [!NOTE]
    > - Use the **Identity** parameter to specify all key participants of the meeting.
    > - You must use the **MeetingId** parameter instead of the **Subject** parameter if you specify multiple participants in the **Identity** argument.
 
-   The script outputs the following Excel file in the current folder:
+   The script creates the following Excel file in the current folder:
 
-   _CalLogSummary_\<short meeting ID\>.xlsx_
+   *CalLogSummary_\<short meeting ID\>.xlsx*
 
    The file contains the following set of worksheets for each meeting participant:
 
-   - A timeline worksheet that's named: \<participant SMTP address\>_TimeLine
-   - An enhanced CDL worksheet that's named: \<participant SMTP address\>
-   - A raw CDL worksheet that's named: \<participant SMTP address\>_Raw
+   - A timeline worksheet that's named: `<participant SMTP address>_TimeLine`
+   - An enhanced CDL worksheet that's named: `<participant SMTP address>`
+   - A raw CDL worksheet that's named: `<participant SMTP address>_Raw`
 
 ## Use the Get-CalendarDiagnosticObjects cmdlet
 
-Run the [Get-CalendarDiagnosticObjects](/powershell/module/exchange/get-calendardiagnosticobjects#examples) PowerShell cmdlet to download raw CDLs.
+Run the [Get-CalendarDiagnosticObjects](/powershell/module/exchange/get-calendardiagnosticobjects) PowerShell cmdlet to download raw CDLs.
 
 > [!NOTE]
 > - The Get-CalendarDiagnosticObjects cmdlet doesn't generate enhanced CDLs or a meeting timeline.
@@ -120,5 +121,5 @@ Follow these steps to download raw CDLs:
 Exchange Online downloads the raw CDLs to your browser's download folder.
 
 > [!NOTE]
-> - The EAC doesn't generate enhanced CDLs or a meeting timeline.
 > - The EAC **Troubleshoot** menu is being rolled out gradually and might not yet be available in your organization.
+> - The EAC doesn't generate enhanced CDLs or a meeting timeline.

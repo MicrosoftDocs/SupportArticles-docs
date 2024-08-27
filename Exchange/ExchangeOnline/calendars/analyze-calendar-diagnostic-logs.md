@@ -38,13 +38,13 @@ The following sections guide you through the analysis process.
 
 [Use the Get-CalendarDiagnosticObjectsSummary.ps1 script](./get-calendar-diagnostic-logs.md#use-the-get-calendardiagnosticobjectssummaryps1-script) to output the following Microsoft Excel file:
 
-_CalLogSummary_\<short meeting ID\>.xlsx_
+*CalLogSummary_\<short meeting ID\>.xlsx*
 
 The file contains the following set of worksheets for each key meeting participant:
 
-- A timeline worksheet that's named: \<participant SMTP address\>_TimeLine
-- An enhanced CDL worksheet that's named: \<participant SMTP address\>
-- A raw CDL worksheet that's named: \<participant SMTP address\>_Raw
+- A timeline worksheet that's named: `<participant SMTP address>_TimeLine`
+- An enhanced CDL worksheet that's named: `<participant SMTP address>`
+- A raw CDL worksheet that's named: `<participant SMTP address>_Raw`
 
 > [!NOTE]
 > - The script downloads and processes the raw CDLs to provide enhanced CDLs and a concise timeline of meeting actions.
