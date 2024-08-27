@@ -2,7 +2,7 @@
 title: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 8.x to 8.10
 description: Helps you upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 8.x to 8.10.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 08/26/2024
+ms.date: 08/27/2024
 ms.topic: how-to
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
@@ -19,7 +19,7 @@ This article provides the steps to upgrade Linux virtual machines (VMs) that use
 > [!IMPORTANT]
 > Red Hat Update Infrastructure (RHUI) is intended for only PAYG images. If you use custom or golden images (also known as bring-your-own-subscription (BYOS)), the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
-For more information on performing the upgrade process on custom, golden, and PAYG images provided by Red Hat, see:
+For more information about performing the upgrade process on custom, golden, and PAYG images provided by Red Hat, see:
 
 - [How to update RHEL from 8.x to 8.10 on Cloud images with the "RHEL for SAP with High Availability and Update Services" subscription](https://access.redhat.com/articles/7071393)
 - [More recommendations for HA cluster nodes using the RHEL HA add-on](https://access.redhat.com/articles/7071393#cluster)
@@ -80,7 +80,7 @@ For more information on performing the upgrade process on custom, golden, and PA
     > [!IMPORTANT]
     > A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this case, all the previous repositories are required. Optionally, you can modify the */etc/yum.repos.d/rh-cloud-base-sap-ha.repo* file based on your system's specific requirement.
 
-5. Upgrade to RHEL 8.10:
+5. Upgrade the system to RHEL 8.10:
 
     ```bash
     sudo dnf update
@@ -128,7 +128,7 @@ For more information on performing the upgrade process on custom, golden, and PA
     rhui-microsoft-azure-rhel8-base-sap-apps  Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-apps)
     ```
 
-5. Upgrade to RHEL 8.10:
+5. Upgrade the system to RHEL 8.10:
 
     ```bash
     sudo dnf update
