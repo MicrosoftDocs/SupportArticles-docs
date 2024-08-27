@@ -75,14 +75,14 @@ If your virtual machine is configured to start SAP processes automatically at bo
 
 3. Configure RHEL settings for `SAP HANA`:
 
-   1. The `SAP HANA` installer in `SAP HANA 2.0 SPS05` configures kernel settings in the `/etc/sysctl.conf` file. Keep these settings unchanged.
+   a. The `SAP HANA` installer in `SAP HANA 2.0 SPS05` configures kernel settings in the `/etc/sysctl.conf` file. Keep these settings unchanged.
    
-   1. Another settings recommended for `SAP HANA`, according to SAP notes [2382421](https://launchpad.support.sap.com/#/notes/2382421) and [2292690](https://me.sap.com/notes/2292690), are 
+   b. Another settings recommended for `SAP HANA`, according to SAP notes [2382421](https://launchpad.support.sap.com/#/notes/2382421) and [2292690](https://me.sap.com/notes/2292690), are 
       configured using the files `sap.conf` and `sap_hana.conf` in the `/etc/sysctl.d` directory. The settings in `sap_hana.conf` are applicable to both `RHEL 7` and `RHEL 8`. However, the 
       `kernel.sem` value in `sap.conf` for `RHEL 7` is lower than the default value for `RHEL 8`. Therefore, remove the line that sets `kernel.sem` to `1250 256000 100 1024` from 
       `/etc/sysctl.d/sap.conf`. The `vm.max_map_count` setting is valid for both `RHEL 7` and `RHEL 8`, so keep this setting unchanged.
 
-5. Upgrade your `RHEL` 7.9 system to the latest available `RHEL` 7 package versions.
+4. Upgrade your `RHEL` 7.9 system to the latest available `RHEL` 7 package versions.
 
 ```bash
 sudo yum update
@@ -94,17 +94,17 @@ sudo yum update
 sudo reboot
 ```
 
-   1. After the virtual machine is up and running, make sure that no `SAP HANA` systems and no `SAP` processes are running on your virtual machine.
+   a. After the virtual machine is up and running, make sure that no `SAP HANA` systems and no `SAP` processes are running on your virtual machine.
    
-   1. Make sure the `SAP HANA` file systems are mounted.
+   b. Make sure the `SAP HANA` file systems are mounted.
    
-   1. Temporarily disable antivirus software to prevent the upgrade from failing.
+   c. Temporarily disable antivirus software to prevent the upgrade from failing.
    
-   1. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless 
+   d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless 
       architecture).
    
 
-7. Install the `leapp` utility.
+6. Install the `leapp` utility.
 
 ```bash
 sudo yum install leapp-upgrade
@@ -137,11 +137,11 @@ sudo yum update
 sudo reboot
 ```
 
-   1. After the virtual machine is up and running, make sure that no `SAP` processes are running on your virtual machine.
+   a. After the virtual machine is up and running, make sure that no `SAP` processes are running on your virtual machine.
 
-   1. Temporarily disable antivirus software to prevent the upgrade from failing.
+   b. Temporarily disable antivirus software to prevent the upgrade from failing.
 
-   1. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless 
+   c. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless 
       architecture).
 
 
@@ -211,7 +211,7 @@ sudo leapp preupgrade  --target 8.10  --no-rhsm
 --- 
 
 
-Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that might appear in the report, for more information, see: [Troubleshoot-red-hat-os-upgrade-issues.](/azure/virtual-machines/linux/troubleshoot-red-hat-os-upgrade-issues)
+Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that might appear in the report, for more information, see: [Troubleshoot-red-hat-os-upgrade-issues.](troubleshoot-red-hat-os-upgrade-issues)
 
 
 #### `Leapp` upgrade process
