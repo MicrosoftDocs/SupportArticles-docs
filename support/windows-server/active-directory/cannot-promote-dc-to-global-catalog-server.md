@@ -113,9 +113,7 @@ If one of the following conditions is true, rebuild the affected domain:
 
 If NT Directory Services (NTDS) KCC event ID 1265 is logged in the Directory Services log, use that event to determine the cause of the replication failure for the same domain partition. Make sure that the network connectivity is good and that no required network ports are blocked. Required network ports are, for example, TCP 135 and ephemeral ports that are used by Remote Procedure Calls (RPCs). View the Domain Name System (DNS) records to make sure that the registered host and service location (SRV) records are all correctly registered. If there are incorrect records, clear them and register such records.
 
-Remove all stale metadata for any domain controllers and domains in the forest that are listed in the relevant event IDs. 
-
-This is to make sure that the replication doesn't fail because of a non-existent domain controller or domain. 
+Remove all stale metadata for any domain controllers and domains in the forest that are listed in the relevant event IDs. This is to make sure that the replication doesn't fail because of a non-existent domain controller or domain. 
 
 For more information, see:  
 [Clean up server metadata by using GUI tools](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10))  
