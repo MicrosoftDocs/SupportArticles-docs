@@ -580,7 +580,7 @@ rhel-9-for-x86_64-sap-netweaver-e4s-rhui-rpms    Red Hat Enterprise Linux 9 for 
 rhel-9-for-x86_64-sap-solutions-e4s-rhui-rpms    Red Hat Enterprise Linux 9 for x86_64 - SAP Solutions - Update Services for SAP Solutions from RHUI (RPMs)
 ```
 
-#### [RHEL 9.2 or 9.4 on SAPAPPS](#tab/rhel94sapapps)
+#### [RHEL 9.2 or 9.4 on SAPAPPS](#tab/rhel9294sapapps)
 
 
 1. Verify that the current OS version belongs to Red Hat Enterprise Linux 9.
@@ -621,7 +621,7 @@ rhui-microsoft-azure-rhel9-sapapps            Microsoft Azure RPMs for Red Hat E
 
 ## Post-Upgrade Tasks
 
-Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9](linux/leapp-upgrade-process-rhel-7-and-8?tabs=rhel8-rhel9#post-upgrade-tasks)
+Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9](/azure/linux/leapp-upgrade-process-rhel-7-and-8?tabs=rhel8-rhel9#post-upgrade-tasks)
 
 
 ## Post-configuration of the system for SAP HANA
