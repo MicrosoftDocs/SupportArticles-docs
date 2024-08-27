@@ -46,7 +46,6 @@ The VM agent consists of three services that must be running:
 
 - RDAgent
 - Windows Azure Guest Agent
-- Microsoft Azure Telemetry Service
 
 Make sure that these three services are running, and then check the extensions installation and startup.
 
