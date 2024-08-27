@@ -60,7 +60,7 @@ If all cluster nodes regressed to a **Not Ready** status, check whether any chan
 - Added network security groups (NSGs)
 - Applied or changed a route table configurations for AKS traffic
 
-If there were changes at the network level, make any necessary corrections. If you have direct Secure Shell (SSH) access to the node, you can use curl or telnet command to check the connectivity to [AKS outbound requirements](https://learn.microsoft.com/en-us/azure/aks/outbound-rules-control-egress). Stop and restart the nodes running after you've fixed the issues. If the nodes stay in a healthy state after these fixes, you can safely skip the remaining steps.
+If there were changes at the network level, make any necessary corrections. If you have direct Secure Shell (SSH) access to the node, you can use curl or telnet command to check the connectivity to [AKS outbound requirements](/azure/aks/outbound-rules-control-egress). Stop and restart the nodes running after you've fixed the issues. If the nodes stay in a healthy state after these fixes, you can safely skip the remaining steps.
 
 ### Step 2: Stop and restart the nodes
 
@@ -87,13 +87,13 @@ Did AKS diagnostics uncover any SNAT issues? If so, take some of the following a
 
 - Evaluate whether you should mitigate SNAT port exhaustion by using extra outbound IP addresses and more allocated outbound ports. For more information, see [Scale the number of managed outbound public IPs](/azure/aks/load-balancer-standard#scale-the-number-of-managed-outbound-public-ips) and [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
 
-For more information about how to troubleshoot SNAT port exhaution, see [Troubleshoot SNAT port exhaustion on AKS nodes](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/connectivity/snat-port-exhaustion?tabs=for-a-linux-pod).
+For more information about how to troubleshoot SNAT port exhaution, see [Troubleshoot SNAT port exhaustion on AKS nodes](/azure/azure-kubernetes/connectivity/snat-port-exhaustion?tabs=for-a-linux-pod).
 
 ### Step 4: Fix IOPS performance issues
 
 If AKS diagnostics uncover issues that reduce IOPS performance, take some of the following actions, as appropriate:
 
-- To increase IOPS on virtual machine (VM) scale sets, choose bigger disk size that includes better IOPS performance by deploying a new node pool. Resizing VMSS directly isn't supported. You can refer how to resize node pools in [Resize node pools in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/resize-node-pool?tabs=azure-cli).
+- To increase IOPS on virtual machine (VM) scale sets, choose bigger disk size that includes better IOPS performance by deploying a new node pool. Resizing VMSS directly isn't supported. You can refer how to resize node pools in [Resize node pools in Azure Kubernetes Service (AKS)](/azure/aks/resize-node-pool?tabs=azure-cli).
 
 - Increase the node SKU size for more memory and CPU processing capability.
 
