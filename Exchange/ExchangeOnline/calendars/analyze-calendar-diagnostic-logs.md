@@ -42,9 +42,9 @@ The following sections guide you through the analysis process.
 
 The file contains the following set of worksheets for each key participant:
 
-- A timeline worksheet that's named: `<participant SMTP address>_TimeLine`
-- An enhanced CDL worksheet that's named: `<participant SMTP address>`
-- A raw CDL worksheet that's named: `<participant SMTP address>_Raw`
+- `<participant SMTP address>_TimeLine`: Contains the timeline.
+- `<participant SMTP address>`: Contains the enhanced CDLs.
+- `<participant SMTP address>_Raw`: Contains the raw CDLs.
 
 > [!NOTE]
 > - The script downloads and processes the raw CDLs to provide enhanced CDLs and a concise timeline of meeting actions.
@@ -93,7 +93,7 @@ The following table describes each column in the enhanced CDL worksheet from lef
 | **LogClientInfoString** | Long name of the client that performed the action on a calendar item. |
 | **TriggerAction\*** | Upstream action that triggered the meeting action, such as:<ul><li>`Create`: A user creates a calendar item.</li><li>`Update`: A user updates a calendar item.</li><li>`Move`: A user moves a calendar item to a different Outlook folder.</li><li>`MoveToDeletedItems`: A user moves a calendar item to the *Deleted Items* folder in Outlook.</li><li>`SoftDelete`: A user soft-deletes a calendar item.</li><li>`HardDelete`: A user hard-deletes a calendar item.</li></ul>Trigger actions frequently occur in pairs, separated by a few seconds. For example:<ul><li>A `Create` trigger action for a meeting is usually followed by a `Create` or `Update` trigger action on an `IPM.Appointment` meeting item.</li><li>A `Create` trigger action for an acceptance is usually followed by an `Update` trigger action on an `IPM.Appointment` meeting item to set its free/busy status to `Busy`.</li><li>A `Transport` trigger action that occurs when an attendee sends a meeting request response is usually followed by an `Update` trigger action on an `IPM.Appointment` meeting item.</li></ul> |
 | **ItemClass\*** | Class of the calendar item, such as:<ul><li>`IPM.Appointment`: Meeting item.</li><li>`IPM.Schedule.Meeting.Request`: Meeting request item.</li><li>`IPM.Schedule.Meeting.Canceled`: Meeting cancellation item. For this item class, only the `Create` trigger action is of interest.</li><li>`IPM.Schedule.Meeting.Notification.Forward`: Meeting forward notification item that's generated when a meeting is forwarded to a new user. For this item class, only the `Create` trigger action is of interest.</li><li>`IPM.Schedule.Meeting.Resp.Pos`: Accepted meeting response item. For this item class, only the `Create` trigger action is of interest.</li><li>`IPM.Schedule.Meeting.Resp.Tent`: Tentative meeting response item. For this item class, only the `Create` trigger action is of interest.</li><li>`IPM.Schedule.Meeting.Resp.Neg`: Declined meeting response item. For this item class, only the `Create` trigger action is of interest.</li></ul>**Note**: Unless you're troubleshooting a response tracking issue, you can ignore the `IPM.Schedule.Meeting.Resp.Pos/Tent/Neg` item classes. |
-| **Seq**:Exp:ItemVersion | Compound value that consists of:<ul><li>`AppointmentSequenceNumber`: Sequence number of an appointment or meeting. Updated on major changes to the time, date, or location.</li><li>`ExceptionNumber`: Sequence number of an exception.</li><li>`ItemVersion`: Version of the calendar item.</li></ul> |
+| **Seq:Exp:ItemVersion** | Compound value that consists of:<ul><li>`AppointmentSequenceNumber`: Sequence number of an appointment or meeting. Updated on major changes to the time, date, or location.</li><li>`ExceptionNumber`: Sequence number of an exception.</li><li>`ItemVersion`: Version of the calendar item.</li></ul> |
 | **Organizer\*** | Email address of the organizer of an appointment or meeting. For a meeting response, the organizer is the user that replied. |
 | **From** | SMTP address of the organizer of an appointment or meeting. |
 | **FreeBusyStatus** | The free/busy status of a calendar item, such as:<ul><li>`Free`</li><li>`Busy`</li><li>`Tentative`</li><li>`Out of office`</li></ul> |

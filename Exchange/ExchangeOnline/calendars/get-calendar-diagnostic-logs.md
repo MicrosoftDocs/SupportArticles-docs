@@ -62,9 +62,9 @@ Follow these steps to get raw CDLs, enhanced CDLs, and a concise timeline of mee
 
    The file contains the following set of worksheets:
 
-   - A timeline worksheet that's named: `<SMTP address>_TimeLine`
-   - An enhanced CDL worksheet that's named: `<SMTP address>`
-   - A raw CDL worksheet that's named: `<SMTP address>_Raw`
+   - `<SMTP address>_TimeLine`: Contains the timeline.
+   - `<SMTP address>`: Contains the enhanced CDLs.
+   - `<SMTP address>_Raw`: Contains the raw CDLs.
 
    > [!NOTE]
    > - If more than one meeting matches the meeting subject, the script generates an Excel file for each meeting.
@@ -91,9 +91,9 @@ Follow these steps to get raw CDLs, enhanced CDLs, and a concise timeline of mee
 
    The file contains the following set of worksheets for each meeting participant:
 
-   - A timeline worksheet that's named: `<participant SMTP address>_TimeLine`
-   - An enhanced CDL worksheet that's named: `<participant SMTP address>`
-   - A raw CDL worksheet that's named: `<participant SMTP address>_Raw`
+   - `<participant SMTP address>_TimeLine`: Contains the timeline.
+   - `<participant SMTP address>`: Contains the enhanced CDLs.
+   - `<participant SMTP address>_Raw`: Contains the raw CDLs.
 
 ## Use the Get-CalendarDiagnosticObjects cmdlet
 
