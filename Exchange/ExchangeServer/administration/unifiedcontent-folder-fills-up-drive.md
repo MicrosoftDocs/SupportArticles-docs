@@ -64,4 +64,4 @@ Exchange Health Manager will clean the *UnifiedContent* folder during the next m
 
 ### Resolution 2
 
-Use the [SetUnifiedContentPath](https://aka.ms/SetUnifiedContentPath) PowerShell script. The script sets the `CleanupFolderREsponderFolderPaths` in the `AntiMalware.xml` file that is responsible for having Exchange automatically clean up the Unified Content that is left behind.
+Use the [SetUnifiedContentPath](https://aka.ms/SetUnifiedContentPath) PowerShell script on a server that runs Exchange Server in your organization. The script sets the `CleanupFolderREsponderFolderPaths` value in the `AntiMalware.xml` file to force Exchange Server to automatically clean up the unified content that's left behind.
