@@ -243,6 +243,7 @@ Here are possible causes for this error:
 - [Cause 3: Connectivity is via a private link but nodes and the private endpoint are in different VNETs](#aksnotawareprivateipaddress)
 - [Cause 4: Storage account is set to require encryption that the client doesn't support](#akssmbencryption)
 - [Cause 5: Minimum encryption requirement for a storage account isn't met](#minimumencryption)
+- [Cause 6: The Maximum security profile is used without NTLM v2 Authentication enabled](#maximumsecurityprofile)
 
 > [!NOTE]
 >
@@ -452,6 +453,14 @@ Set-SmbClientConfiguration -EncryptionCiphers "AES_256_GCM" -Confirm:$false
 
 > [!NOTE]
 > The `EncryptionCiphers` parameter is available beginning with the 2022-06 Cumulative Update for Windows Server version 21H2 for x64-based systems ([KB5014665](https://support.microsoft.com/help/5014665)) and the Cumulative Update for Windows 11, version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+
+### <a id="maximumsecurityprofile"></a>Cause 6: The Maximum security profile is used without NTLM v2 authentication enabled
+
+When you use the **Maximum security** profile on the Azure file share, to mount it properly in AKS, you have to enable the NTLM v2 authentication mechanisms. Otherwise, the mounting of the file share doesn't work and you get the Mount error(13): Permission denied.
+
+#### Solution: Enable NTLM v2 authentication
+
+To resolve this issue, enable NTLM v2 authentication mechanisms. To do this, go to the **Maximum secuiry** profile page and select the **NTLM v2** checkbox for **Authentication mechanisms**.
 
 ## More information
 
