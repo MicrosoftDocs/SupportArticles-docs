@@ -302,7 +302,8 @@ certutil -viewdelstore -? | findstr "CN=NTAuth"
 
 When Certification Services is uninstalled, the CA database is left intact so that the CA can be re-created on another server.
 
-To remove the CA database, delete the **Certlog** folder containing the database and log. This is stored by default in *%systemroot%\System32\Certlog* folder.
+To remove the CA database, delete the **Certlog** folder containing the database and log. This is stored by default in *%systemroot%\System32\Certlog* folder.  
+
 You can find the location of the database and logs folder from the [Step 5 - Uninstall Certificate Services from the server](#step-5---uninstall-certificate-services-from-the-server) section.
 
 ## Step 9 - Clean up domain controllers
@@ -319,7 +320,7 @@ To remove certificates that were issued to the Windows Server 2003 and newer dom
 
     Certutil.exe tries to validate all the DC certificates that are issued to the domain controllers. Certificates that do not validate are removed.
 
-To force application of the security policy, follow these steps:
+To force application of the group policy, follow these steps:
 
 1. Select **Start**, select **Run**, type *cmd* in the **Open** box, and then press ENTER.
 2. At a command prompt, type the following command, and then press ENTER:
