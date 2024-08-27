@@ -544,7 +544,7 @@ Once the upgrade is finished, check if the system is in the desired state.
 
 This procedure outlines the recommended verification steps to take after completing an in-place upgrade.
 
-#### [RHEL 9.2 or 9.4 on SAP-HANA](#tab/rhel94saphana)
+#### [RHEL 9.2 or 9.4 on SAP-HANA](#tab/rhel9294saphana)
 
 1. Verify that the current OS version belongs to Red Hat Enterprise Linux 9
 
