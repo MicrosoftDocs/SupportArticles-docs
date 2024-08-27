@@ -36,7 +36,7 @@ The following sections guide you through the analysis process.
 
 ## Prerequisites
 
-[Use the Get-CalendarDiagnosticObjectsSummary.ps1 script](./get-calendar-diagnostic-logs.md#use-the-get-calendardiagnosticobjectssummary-ps1-script) to output the following Microsoft Excel file:
+[Use the Get-CalendarDiagnosticObjectsSummary.ps1 script](./get-calendar-diagnostic-logs.md#use-the-get-calendardiagnosticobjectssummaryps1-script) to output the following Microsoft Excel file:
 
 _CalLogSummary_\<short meeting ID\>.xlsx_
 
