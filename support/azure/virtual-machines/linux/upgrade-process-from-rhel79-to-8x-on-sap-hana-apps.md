@@ -410,7 +410,7 @@ rhui-microsoft-azure-rhel8-base-sap-apps  Microsoft Azure RPMs for Red Hat Enter
 
 ## Post-Upgrade Tasks
 
-Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9]([leapp-upgrade-process-rhel-7-and-8?tabs=rhel8-rhel9.md))
+Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9]([leapp-upgrade-process-rhel-7-and-8?tabs=rhel8-rhel9.md)
 
 
 ## Post-configuration of the system for `SAP HANA`
