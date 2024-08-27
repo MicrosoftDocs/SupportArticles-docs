@@ -13,7 +13,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 08/26/2024
+ms.date: 08/27/2024
 ---
 # "404 File not found" error when accessing the OneDrive app in Teams
 
@@ -30,7 +30,7 @@ To work around this issue, follow these steps:
 1. Start a one-on-one chat with another user.
 1. In the compose box, select **Actions and apps** (:::image type="icon" source="media/404-error-access-onedrive-teams/cross-icon.png" alt-text="Screenshot of the Actions and apps icon.":::) > **Attach file** (:::image type="icon" source="media/404-error-access-onedrive-teams/attach-icon.png" alt-text="Screenshot of the Attach file icon.":::) > **Upload from this device** (:::image type="icon" source="media/404-error-access-onedrive-teams/upload-icon.png" alt-text="Screenshot of the upload icon.":::).
 1. Select a file that you want to send, and then select **Open**.
-1. Select :::image type="icon" source="media/404-error-access-onedrive-teams/send-icon.png" alt-text="Screenshot of the send icon."::: (**Send**).
+1. Select **Send** (:::image type="icon" source="media/404-error-access-onedrive-teams/send-icon.png" alt-text="Screenshot of the send icon.":::).
 1. Select the OneDrive app from the left navigation bar in Teams.
 
 For more information about how UPN changes affect OneDrive, see [How UPN changes affect the OneDrive URL and OneDrive features](/sharepoint/upn-changes).
