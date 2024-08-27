@@ -303,7 +303,7 @@ certutil -viewdelstore -? | findstr "CN=NTAuth"
 When Certification Services is uninstalled, the CA database is left intact so that the CA can be re-created on another server.
 
 To remove the CA database, delete the **Certlog** folder containing the database and log. This is stored by default in *%systemroot%\System32\Certlog* folder.
-You can find the location of the database and logs folder from the [Step 5 - Uninstall Certificate Services from the server](#Step-5---Uninstall-Certificate-Services-from-the-server) section.
+You can find the location of the database and logs folder from the [Step 5 - Uninstall Certificate Services from the server](#step-5---uninstall-certificate-services-from-the-server) section.
 
 ## Step 9 - Clean up domain controllers
 
