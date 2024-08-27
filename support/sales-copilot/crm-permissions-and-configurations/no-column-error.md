@@ -1,7 +1,7 @@
 ---
 title: Salesforce CRM users can't see data in Copilot for Sales
 description: Resolves an issue where users are unable to see data in Microsoft Copilot for Sales.
-ms.date: 01/10/2024
+ms.date: 08/28/2024
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -79,6 +79,10 @@ Change the admin settings from the Copilot for Sales admin settings in Microsoft
     - If the issue is related to viewing a field, hover over the field, and select **Remove field** (:::image type="icon" source="media/no-column-error/delete-icon.png ":::).
 
 6. Select **Publish** to save your changes.
+
+## Resolution 3: Refresh data from CRM
+
+If you don't know which field is causing the issue, you can [refresh the data](/microsoft-sales-copilot/customize-forms-and-fields#refresh-data-from-crm) to get recent changes from CRM into Copilot for Sales. This action will sync the latest changes from CRM to Copilot for Sales and remove any fields that have been removed from CRM but are still available in Copilot for Sales. After you refresh the data, you must close and reopen the Copilot for Sales add-in in Outlook.
 
 ## More information
 
