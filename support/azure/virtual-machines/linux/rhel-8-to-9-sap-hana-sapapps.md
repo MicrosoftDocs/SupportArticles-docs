@@ -271,7 +271,7 @@ sudo dnf install leapp-upgrade
 This procedure outlines the necessary steps to complete before performing an in-place upgrade to `RHEL` 8.10 to `RHEL` 9.4 using the `leapp` utility on `SAPAPPS PAYG` images on Azure.
 
 > [!NOTE]  
-> To update an `SAPAPPS` system running from `RHEL 8.10` to `RHEL 9.4`, you must first upgrade to `RHEL 8.10` for detailed instructions on upgrading from RHEL 8.8 or earlier to RHEL 8.10 on Azure for `PAYG` images, please refer to the guide. [How to update RHEL from 8.x to 8.10 on Azure with RHEL for SAP with High Availability or SAP APPS on (PAYG) virtual machines.](https://review.learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/rhel8xto810-on-saphana?branch=pr-en-us-7011&tabs=rhel8x-rhel810ha)" 
+> To update an `SAPAPPS` system running from `RHEL 8.10` to `RHEL 9.4`, you must first upgrade to `RHEL 8.10` for detailed instructions on upgrading from RHEL 8.8 or earlier to RHEL 8.10 on Azure for `PAYG` images, please refer to the guide. [How to update RHEL from 8.x to 8.10 on Azure with RHEL for SAP with High Availability or SAP APPS on (PAYG) virtual machines.](https://review.learn.microsoft.com/troubleshoot/azure/virtual-machines/linux/rhel8xto810-on-saphana?branch=pr-en-us-7011&tabs=rhel8x-rhel810ha)" 
 
 > [!IMPORTANT]  
 > `RHEL` for `SAP HANA` and for `SAPAPPS`, there is a known bug in upgrading from **8.10 to 9.4** due to a `RHUI` client rpm name difference in 8.10 compared to previous releases. The upgrade is not possible at the moment, and there is no workaround. The upgrade from **8.8 to 9.2 is not impacted**." 
