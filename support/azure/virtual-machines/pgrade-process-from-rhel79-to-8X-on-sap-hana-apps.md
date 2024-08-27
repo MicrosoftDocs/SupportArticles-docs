@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
 editor: 
-ms.date: 08/16/2024
+ms.date: 08/27/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -48,14 +48,15 @@ System Configuration   | Source OS version| Target Version     |
 
 - According to the Red Hat documentation, `SAP` validates `SAP HANA` for RHEL minor versions, which receive package updates for longer than six months. Therefore, for `SAP HANA` hosts, the upgrade paths include only `EUS/E4S` releases plus the last minor release for a given major release.[Upgrading SAP HANA System](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/asmb_upgrading-hana-system_asmb_planning-upgrade)
 
-- `SAP NetWeaver` is validated by `SAP` for each major RHEL version. The supported in-place upgrade path for this scenario is from `RHEL 7.9` to the `RHEL 8.x` minor version, which is supported by `Leapp` for `non-HANA` systems as per the [Upgrading from RHEL 7 to RHEL 8](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index#con_supported-upgrade-paths-rhel-7-to-rhel-8_upgrading-from-rhel-7-to-rhel-8) document. **Exceptionally for Cloud Providers**, the upgrade of `SAP NetWaver` systems is supported by two latest `EUS/E4S` releases. [Upgrading SAP NetWeaver System](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/asmb_upgrading_netweaver_asmb_upgrading-hana-system#proc_upgrading_cloud_asmb_upgrading_netweaver) describes certain deviations from the default upgrade procedure. For systems on which both `SAP HANA` and `SAP NetWeaver` are installed, the `SAP HANA` restrictions apply. For more information about supported upgrade paths, see [Supported in-place upgrade paths for Red Hat Enterprise Linux.](https://access.redhat.com/articles/4263361)
+- `SAP NetWeaver` is validated by `SAP` for each major RHEL version. The supported in-place upgrade path for this scenario is from `RHEL 7.9` to the `RHEL 8.x` minor version, which is supported by `Leapp` for `non-HANA` systems as per the [Upgrading from RHEL 7 to RHEL 8](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index#con_supported-upgrade-paths-rhel-7-to-rhel-8_upgrading-from-rhel-7-to-rhel-8) document. **Exceptionally for Cloud Providers**, the upgrade of `SAP NetWeaver` systems is supported by two latest `EUS/E4S` releases. [Upgrading SAP NetWeaver System](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/asmb_upgrading_netweaver_asmb_upgrading-hana-system#proc_upgrading_cloud_asmb_upgrading_netweaver) describes certain deviations from the default upgrade procedure. For systems on which both `SAP HANA` and `SAP NetWeaver` are installed, the `SAP HANA` restrictions apply. For more information about supported upgrade paths, see [Supported in-place upgrade paths for Red Hat Enterprise Linux.](https://access.redhat.com/articles/4263361)
 
 
 #### [RHEL 7.9 to 8.X SAP-HA](#tab/rhel8saphana)
 
 This procedure outlines the necessary steps to complete before performing an in-place upgrade from 7.9 to 8.8 or 8.10 using the `leapp` utility on `SAP-HANA PAYG` images on Azure.
 
-- Based on Red Hat documentation, upgrading **cluster nodes** in place or through rolling upgrades **is not supported** for major `RHEL` releases. For more information, see, [`Leapp` upgrade from RHEL 7 to RHEL 8 fails for pacemaker cluster](https://access.redhat.com/solutions/7049940).
+> [!IMPORTANT]  
+> Based on Red Hat documentation, upgrading **cluster nodes** in place or through rolling upgrades **is not supported** for major `RHEL` releases. For more information, see, [`Leapp` upgrade from RHEL 7 to RHEL 8 fails for pacemaker cluster](https://access.redhat.com/solutions/7049940).
 
 In this case, if you're running `SAP HANA` in an `HA` cluster, to perform an `in-place` upgrade, you must destroy the existing cluster and recreate it after the upgrade is complete.
 
@@ -74,9 +75,11 @@ If your virtual machine is configured to start SAP processes automatically at bo
 
 3. Configure RHEL settings for `SAP HANA`:
 
-   a. The `SAP HANA` installer in `SAP HANA 2.0 SPS05` configures kernel settings in the `/etc/sysctl.conf` file. Keep these settings unchanged
-
-   b. Another settings recommended for `SAP HANA`, according to SAP notes [2382421](https://launchpad.support.sap.com/#/notes/2382421) and [2292690](https://me.sap.com/notes/2292690), are configured using the files `sap.conf` and `sap_hana.conf` in the `/etc/sysctl.d` directory. The settings in `sap_hana.conf` are applicable to both `RHEL 7` and `RHEL 8`. However, the `kernel.sem` value in `sap.conf` for `RHEL 7` is lower than the default value for `RHEL 8`. Therefore, remove the line that sets `kernel.sem` to `1250 256000 100 1024` from `/etc/sysctl.d/sap.conf`. The `vm.max_map_count` setting is valid for both `RHEL 7` and `RHEL 8`, so keep this setting unchanged.
+   a. The `SAP HANA` installer in `SAP HANA 2.0 SPS05` configures kernel settings in the `/etc/sysctl.conf` file. Keep these settings unchanged.
+   b. Another settings recommended for `SAP HANA`, according to SAP notes [2382421](https://launchpad.support.sap.com/#/notes/2382421) and [2292690](https://me.sap.com/notes/2292690), are 
+      configured using the files `sap.conf` and `sap_hana.conf` in the `/etc/sysctl.d` directory. The settings in `sap_hana.conf` are applicable to both `RHEL 7` and `RHEL 8`. However, the 
+      `kernel.sem` value in `sap.conf` for `RHEL 7` is lower than the default value for `RHEL 8`. Therefore, remove the line that sets `kernel.sem` to `1250 256000 100 1024` from 
+      `/etc/sysctl.d/sap.conf`. The `vm.max_map_count` setting is valid for both `RHEL 7` and `RHEL 8`, so keep this setting unchanged.
 
 4. Upgrade your `RHEL` 7.9 system to the latest available `RHEL` 7 package versions.
 
@@ -91,12 +94,10 @@ sudo reboot
 ```
 
    a. After the virtual machine is up and running, make sure that no `SAP HANA` systems and no `SAP` processes are running on your virtual machine.
-
    b. Make sure the `SAP HANA` file systems are mounted.
-
    c. Temporarily disable antivirus software to prevent the upgrade from failing.
-
-   d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless architecture).
+   d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless 
+      architecture).
    
 
 7. Install the `leapp` utility.
@@ -406,7 +407,7 @@ rhui-microsoft-azure-rhel8-base-sap-apps  Microsoft Azure RPMs for Red Hat Enter
 
 ## Post-Upgrade Tasks
 
-Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9]([https://review.learn.microsoft.com/troubleshoot/azure/virtual-machines/linux/leapp-upgrade-process-rhel-7-and-8?branch=pr-en-us-6901&tabs=rhel7-rhel8#post-upgrade-tasks](https://review.learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/leapp-upgrade-process-rhel-7-and-8?branch=pr-en-us-6901&tabs=rhel7-rhel8))
+Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9]([/azure/virtual-machines/linux/leapp-upgrade-process-rhel-7-and-8?tabs=rhel8-rhel9))
 
 
 ## Post-configuration of the system for `SAP HANA`
