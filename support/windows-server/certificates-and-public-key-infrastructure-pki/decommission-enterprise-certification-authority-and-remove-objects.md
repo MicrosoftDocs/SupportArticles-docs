@@ -96,6 +96,7 @@ By default, an enterprise CA does not store certificate requests. However, an ad
      MS IIS DCOM ClientAdministratorS-1-5-21-842925246-1715567821-839522115-500
 
 4. Delete the private key that is associated with the CA. To do this, at a command prompt, type the following command, and then press Enter:
+
    If the CA CSP value is **Microsoft Strong Cryptographic Provider**, or **Microsoft Enhanced Cryptographic Provider v1.0**, type the following command, and then press Enter.
 
    ```console
@@ -132,7 +133,7 @@ By default, an enterprise CA does not store certificate requests. However, an ad
    2. Under **Roles Summary**, select **Remove Roles** to start the Remove Roles Wizard, and then select **Next**.
    3. Select to clear the **Active Directory Certificate Services** check box, and then select **Next**.
    4. On the **Confirm Removal Options** page, review the information, and then select **Remove**.
-   5. If Internet Information Services (IIS) is running and you are prompted to stop the service before you continue with the uninstall process, select **OK**.
+   5. If **Certification Authority Web Enrollment** role is configured and running and you are prompted to uninstall this role before you continue with the uninstall process, select **OK**, uninstall this role first then repeat steps above.
    6. After the Remove Roles Wizard is finished, restart the server. This completes the uninstall process.
 
    The procedure is slightly different if you have multiple Active Directory Certificate Services (AD CS) role services installed on a single server. To uninstall a CA but keep other AD CS role services, follow these steps.
