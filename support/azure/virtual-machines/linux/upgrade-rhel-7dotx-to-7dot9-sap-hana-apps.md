@@ -1,13 +1,13 @@
 ---
-title: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG images from 7.x to 7.9
-description: Helps you upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go images from 7.x to 7.9.
-ms.reviewer: divargas, msaenzbo
+title: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG virtual machines from 7.x to 7.9
+description: Helps you upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 7.x to 7.9.
+ms.reviewer: divargas, msaenzbo, v-weizhu
 ms.topic: how-to
-ms.date: 08/23/2024
+ms.date: 08/27/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
-# How to upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go images from 7.x to 7.9
+# How to upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 7.x to 7.9
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
@@ -18,25 +18,25 @@ This article provides the steps to upgrade Linux virtual machines (VMs) that use
 > [!IMPORTANT]
 > Red Hat Update Infrastructure (RHUI) is intended for only PAYG images. If you use custom or golden images (also known as bring-your-own-subscription (BYOS)), the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
-For more information on performing the upgrade process on custom, golden, or PAYG images provided by Red Hat, see:
+For more information about performing the upgrade process on custom, golden, or PAYG images provided by Red Hat, see:
 
 - [How to update RHEL from 7.x to 7.9 on Cloud Images with the "RHEL for SAP with High Availability and Update Services" subscription](https://access.redhat.com/articles/5805571)
 
 - [Recommended Practices for Applying Software Updates to a RHEL High Availability or Resilient Storage Cluster](https://access.redhat.com/articles/2059253#pacemaker)
 
 > [!NOTE] 
-> RHEL 7.9 is the final RHEL 7 release and maintenance is defined in the [Maintenance Support Phase](https://access.redhat.com/support/policy/updates/errata#Maintenance_Support_2_Phase).
+> RHEL 7.9 is the final RHEL 7 release and maintenance is defined by the [Maintenance Support 2 Phase policy](https://access.redhat.com/support/policy/updates/errata#Maintenance_Support_2_Phase).
 
 ## Prerequisites
 
 - Make a backup of the Linux VM or a snapshot of the operating system (OS) disk.
 - Set up access to the Serial Console.
-- Stop SAP process during the OS update process.
+- Stop the SAP process during the OS update process.
 - Run the commands in this article with root privileges.
 
 ## Upgrade RHEL-SAP-HANA PAYG images from 7.x to 7.9
 
-1. Remove the E4S RHUI package that's installed or updated on the VM:
+1. Remove the RHUI E4S package that's installed or updated on the VM:
 
     ```bash
     sudo yum remove $(rpm -qa | grep -i rhui)
@@ -90,7 +90,7 @@ For more information on performing the upgrade process on custom, golden, or PAY
 
 ## Upgrade RHEL-SAP-APPS PAYG images from 7.x to 7.9
 
-1. Remove the EUS RHUI SAP package installed:
+1. Remove the RHUI EUS SAP package installed:
 
     ```bash
     sudo yum remove $(rpm -qa | grep -i rhui)
