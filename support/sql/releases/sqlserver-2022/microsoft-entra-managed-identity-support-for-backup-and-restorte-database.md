@@ -1,7 +1,6 @@
 ---
 title: Microsoft Entra managed identity support for backup and restore database operations in SQL Server on Azure VM
-description: Fixes an error that occurs when setting or changing the maximum number of job history log rows and job history rows per job.
-ms.date: 09/12/2024
+description: Adds the support of Microsoft Entra managed identity for backup and restore database operations in SQL Server on Azure VM.
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5043526
 ms.reviewer: derekw, pcaronauger, v-qianli2
 appliesto:
