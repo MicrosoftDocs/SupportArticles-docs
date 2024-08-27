@@ -44,7 +44,7 @@ System Configuration   | Source OS version| Target Version     |
 |Other SAP Applications|                  | RHEL 8.10(default) |
 
 > [!NOTE]  
-> To update an `SAP HANA` system running on `RHEL 7.7` or earlier, you must first upgrade to `RHEL 7.9` for detailed instructions on upgrading from RHEL 7.7 or earlier to RHEL 7.9 on Azure for `PAYGO` images, please refer to the guide [How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAP APPS on pay-as-you-go (PAYGO) images](https://review.learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/rhel7x-to-79-sap-hana-sapapps?branch=pr-en-us-6941&tabs=rhel7x-rhel79ha)" 
+> To update an `SAP HANA` system running on `RHEL 7.7` or earlier, you must first upgrade to `RHEL 7.9` for detailed instructions on upgrading from RHEL 7.7 or earlier to RHEL 7.9 on Azure for `PAYGO` images, please refer to the guide [How to update RHEL from 7.7* to 7.9 on Azure with "RHEL for SAP with High Availability or SAP APPS on pay-as-you-go (PAYGO) images](https://review.learn.microsoft.com/troubleshoot/azure/virtual-machines/linux/rhel7x-to-79-sap-hana-sapapps?branch=pr-en-us-6941&tabs=rhel7x-rhel79ha)" 
 
 - According to the Red Hat documentation, `SAP` validates `SAP HANA` for RHEL minor versions, which receive package updates for longer than six months. Therefore, for `SAP HANA` hosts, the upgrade paths include only `EUS/E4S` releases plus the last minor release for a given major release.[Upgrading SAP HANA System](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/asmb_upgrading-hana-system_asmb_planning-upgrade)
 
@@ -209,7 +209,7 @@ sudo leapp preupgrade  --target 8.10  --no-rhsm
 --- 
 
 
-Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that might appear in the report, for more information, see: [Troubleshoot-red-hat-os-upgrade-issues.](troubleshoot-red-hat-os-upgrade-issues)
+Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that might appear in the report, for more information, see: [Troubleshoot-red-hat-os-upgrade-issues.](troubleshoot-red-hat-os-upgrade-issues.md)
 
 
 #### `Leapp` upgrade process
@@ -410,7 +410,7 @@ rhui-microsoft-azure-rhel8-base-sap-apps  Microsoft Azure RPMs for Red Hat Enter
 
 ## Post-Upgrade Tasks
 
-Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9]([/azure/virtual-machines/linux/leapp-upgrade-process-rhel-7-and-8?tabs=rhel8-rhel9))
+Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9]([leapp-upgrade-process-rhel-7-and-8?tabs=rhel8-rhel9.md))
 
 
 ## Post-configuration of the system for `SAP HANA`
