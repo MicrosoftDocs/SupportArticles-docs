@@ -40,7 +40,7 @@ The following sections guide you through the analysis process.
 
 *CalLogSummary_\<short meeting ID\>.xlsx*
 
-The file contains the following set of worksheets for each key participant:
+The file should contain the following set of worksheets for each key participant:
 
 - `<participant SMTP address>_TimeLine`: Contains the timeline.
 - `<participant SMTP address>`: Contains the enhanced CDLs.
