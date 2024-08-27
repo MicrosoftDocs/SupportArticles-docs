@@ -96,13 +96,24 @@ By default, an enterprise CA does not store certificate requests. However, an ad
      MS IIS DCOM ClientAdministratorS-1-5-21-842925246-1715567821-839522115-500
 
 4. Delete the private key that is associated with the CA. To do this, at a command prompt, type the following command, and then press Enter:
+   If the CA CSP value is **Microsoft Strong Cryptographic Provider**, or **Microsoft Enhanced Cryptographic Provider v1.0**, type the following command, and then press Enter.
+
+   ```console
+    certutil -delkey CertificateAuthorityName
+   ```
+   If the CA CSP value is **Microsoft Software Key Storage Provider**, type the following command, and then press Enter.  
+
+   ```console
+    certutil -CSP KSP -delkey CertificateAuthorityName
+    ```
+   If the CA CSP value is something else, type the following command, and then press Enter.
 
     ```console
-    certutil -delkey CertificateAuthorityName
+    certutil -CSP \<PROVIDER NAME\> -delkey CertificateAuthorityName
     ```
 
     > [!NOTE]
-    > If your CA name contains spaces, enclose the name in quotation marks.
+    > If your CA name contains spaces, enclose the name in quotation marks. If your CA has multiple keys you need to run the command above for each key.
 
     In this example, the certificate authority name is **Windows2000 Enterprise Root CA**. Therefore, the command line in this example is as follows:
 
@@ -110,8 +121,8 @@ By default, an enterprise CA does not store certificate requests. However, an ad
     certutil -delkey "Windows2000 Enterprise Root CA"
     ```
 
-5. List the key stores again to verify that the private key for your CA was deleted.
-6. After you delete the private key for your CA, uninstall Certificate Services. To do this, follow these steps, depending on the version of Windows Server that you are running.
+6. List the key stores again to verify that the private key for your CA was deleted.
+7. After you delete the private key for your CA, uninstall Certificate Services. To do this, follow these steps, depending on the version of Windows Server that you are running.
 
    If you are uninstalling an enterprise CA, membership in Enterprise Admins, or the equivalent, is the minimum that is required to complete this procedure. For more information, see [Implement Role-Based Administration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732590(v=ws.11)).
 
