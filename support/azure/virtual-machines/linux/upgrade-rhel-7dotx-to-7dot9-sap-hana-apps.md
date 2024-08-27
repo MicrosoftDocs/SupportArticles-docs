@@ -90,7 +90,7 @@ For more information about performing the upgrade process on custom, golden, or 
 
 ## Upgrade RHEL-SAP-APPS PAYG images from 7.x to 7.9
 
-1. Remove the RHUI EUS SAP package installed:
+1. Remove the RHUI EUS-SAP package installed:
 
     ```bash
     sudo yum remove $(rpm -qa | grep -i rhui)
