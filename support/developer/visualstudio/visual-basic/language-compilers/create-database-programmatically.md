@@ -22,7 +22,7 @@ Programmers often need to create databases programmatically. This article descri
 2. Place a Command button on Form1, and change its `Name` property to `btnCreateDatabase` and its `Text` property to `Create Database`.
 3. Copy and paste the following line of code into Form1's "general declaration" section:
 
-    ```csharp
+    ```vbnet
     Imports System.Data.SqlClient
     ```
 
