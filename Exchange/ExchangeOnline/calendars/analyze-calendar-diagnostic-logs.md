@@ -99,7 +99,7 @@ The following table describes each column in the enhanced CDL worksheet from lef
 | **FreeBusyStatus** | The free/busy status of a calendar item, such as:<ul><li>`Free`</li><li>`Busy`</li><li>`Tentative`</li><li>`Out of office`</li></ul> |
 | **ResponsibleUser\*** | User or component that's responsible for the meeting action. |
 | **Sender** | SMTP address of the calendar item sender. |
-| **LogFolder** | Mailbox folder in which the log entry was found. Typically, you can ignore this column.<br>**Note**: Log entries in the `Calendar Logging` folder are removed after 31 days. |
+| **LogFolder** | Mailbox folder in which the log entry was found. Typically, you can ignore this column.<br>**Note**: Log entries in the *Calendar Logging* folder are removed after 31 days. |
 | **OriginalLogFolder** | Mailbox folder that the calendar item was originally delivered to. |
 | **SharedFolderName** | <ul><li>If the folder is shared, the value is the name of the folder owner.</li><li>If the folder isn't shared, the value is `Not Shared`.</li></ul> |
 | **IsFromSharedCalendar** | Boolean value that indicates whether the calendar item is from a shared calendar. |
@@ -118,7 +118,7 @@ The following table describes each column in the enhanced CDL worksheet from lef
 | **AppointmentAuxiliaryFlags** | Set of flags that provide additional information about the appointment or meeting. If no flags apply, the value is blank. |
 | **DisplayAttendeesAll** | List of attendees for a meeting request. For other calendar items, the value is `NotFound`. |
 | **AttendeeCount** | Number of attendees. |
-| **AppointmentState** | Compound value of appointment or meeting states such as:<ul><li>`Meeting`</li><li>`Received`</li><li>`Cancelled`</li></ul>For example, the value might be `Meeting,Cancelled` to indicate that a meeting was canceled. |
+| **AppointmentState** | Compound value of appointment or meeting states such as:<ul><li>`Meeting`</li><li>`Received`</li><li>`Cancelled`</li></ul>For example, the value might be `Meeting, Cancelled` to indicate that a meeting was canceled. |
 | **ResponseType\*** | Attendee response type, such as:<ul><li>`None`</li><li>`Organizer`</li><li>`Tentative`</li><li>`Accept`</li><li>`Decline`</li><li>`NotResponded`</li></ul> |
 | **ClientIntent** | Intent of the client application that performed the action that triggered the log entry, such as:<ul><li>`None`</li><li>`MeetingMessageDelivery`</li></ul>The value specifies only a few intents and is often blank. |
 | **AppointmentRecurring** | Boolean value that indicates whether the appointment or meeting is recurring. |
