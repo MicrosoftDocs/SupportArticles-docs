@@ -309,18 +309,7 @@ You can find the location of the database and logs folder from the [Step 5 - Uni
 
 After the CA is uninstalled, the certificates that were issued to domain controllers must be removed.
 
-To remove certificates that were issued to the Windows Server 2000 domain controllers, use the Dsstore.exe utility from the Microsoft Windows 2000 Resource Kit.
-
-To remove certificates that have been issued to the Windows Server 2000 domain controllers, follow these steps:
-
-1. Select **Start**, select **Run**, type *cmd*, and then press ENTER.
-2. On a domain controller, type *dsstore -dcmon* at the command prompt, and then press ENTER.
-3. Type *3*, and then press ENTER. This action deletes all certificates on all domain controllers.
-
-    > [!NOTE]
-    > The Dsstore.exe utility will try to validate domain controller certificates that are issued to each domain controller. Certificates that do not validate are removed from their respective domain controller.
-
-To remove certificates that were issued to the Windows Server 2003 domain controllers, follow these steps.
+To remove certificates that were issued to the Windows Server 2003 and newer domain controllers, follow these steps.
 
 > [!IMPORTANT]
 > Do not use this procedure if you are using certificates that are based on version 1 domain controller templates.
@@ -333,14 +322,7 @@ To remove certificates that were issued to the Windows Server 2003 domain contro
 To force application of the security policy, follow these steps:
 
 1. Select **Start**, select **Run**, type *cmd* in the **Open** box, and then press ENTER.
-2. At a command prompt, type the appropriate command for the corresponding version of the operating system, and then press ENTER:
-   - For Windows Server 2000:
-
-     ```console
-     secedit /refreshpolicy machine_policy /enforce
-     ```
-
-   - For Windows Server 2003:
+2. At a command prompt, type the following command, and then press ENTER:
 
      ```console
      gpupdate /force
