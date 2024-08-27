@@ -1,8 +1,8 @@
 ---
 title: Unable to mount Azure file share
 description: Describes errors that cause the mounting of an Azure file share to fail and provides solutions.
-ms.date: 10/25/2023
-ms.reviewer: chiragpa, akscsscic, v-weizhu
+ms.date: 08/27/2024
+ms.reviewer: chiragpa, akscsscic, v-weizhu, v-rekhanain
 ms.service: azure-kubernetes-service
 ms.custom: sap:Storage
 ---
@@ -233,6 +233,9 @@ To create a pod that can be scheduled on a FIPS-enabled node, follow these steps
 
 ## <a id="mounterror13"></a>Mount error(13): Permission denied
 
+> [!NOTE]
+> Because the mounting operation doesn't support the default **Maximum security** profile of Azure file share settings, you need to enable **NTLM v2** authentication.
+
 Here are possible causes for this error:
 
 - [Cause 1: Kubernetes secret doesn't reference the correct storage account name or key](#secretnotusecorrectstorageaccountkey)
@@ -416,16 +419,26 @@ If you want to use the AES-256-GCM encryption only, which is the maximum securit
 Use the following script to check if the client supports AES-256-GCM and enforce it only if it does:
 
 ```bash
-cifsConfPath="/etc/modprobe.d/cifs.conf" 
-echo "`date` before change ${cifsConfPath}:"
+cifsConfPath="/etc/modprobe.d/cifs.conf"
+echo "$(date) before change ${cifsConfPath}:"
 cat ${cifsConfPath}
-if !(( grep require_gcm_256 ${cifsConfPath} ))
-then
-modprobe cifs
-echo 1 > /sys/module/cifs/parameters/require_gcm_256
-echo "options cifs require_gcm_256=1" > ${cifsConfPath}
-echo "`date` after changing ${cifsConfPath}:"
-cat ${cifsConfPath}
+
+# Check if 'require_gcm_256' is already present in the configuration file
+if ! grep -q "require_gcm_256" "${cifsConfPath}"; then
+
+    # Load the CIFS module
+    modprobe cifs
+
+    # Set the parameter at runtime
+    echo 1 > /sys/module/cifs/parameters/require_gcm_256
+
+    # Persist the configuration
+    echo "options cifs require_gcm_256=1" >> "${cifsConfPath}"
+
+    echo "$(date) after changing ${cifsConfPath}:"
+    cat "${cifsConfPath}"
+else
+    echo "require_gcm_256 is already set in ${cifsConfPath}"
 fi
 ```
 
