@@ -33,7 +33,7 @@ For more information about performing a leapp upgrade on custom, golden, or PAYG
 
 This section outlines the necessary steps before performing an in-place upgrade to RHEL 8 or RHEL 9 using the leapp utility.
 
-### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
+### [RHEL 7.9 to RHEL 8.*x*](#tab/rhel7-rhel8)
 
 You can perform an in-place upgrade from RHEL 7 to the following RHEL 8 minor versions.
 
@@ -83,7 +83,7 @@ You can perform an in-place upgrade from RHEL 7 to the following RHEL 8 minor ve
 7. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
 
 
-### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
+### [RHEL 8.*x* to RHEL 9.*x*](#tab/rhel8-rhel9)
 
 You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor versions.
 
@@ -136,7 +136,7 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
 
 The leapp pre-upgrade report highlights possible issues, provides recommended solutions, and helps determine whether it's feasible or advisable to proceed with the upgrade.
 
-### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
+### [RHEL 7.9 to RHEL 8.*x*](#tab/rhel7-rhel8)
 
 Run the following `leapp preupgrade` command:
 
@@ -146,7 +146,7 @@ sudo leapp preupgrade --target <target_os_version> --no-rhsm
 
 Replace `<target_os_version>` with the target OS version, for example, `8.10`. 
 
-### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
+### [RHEL 8.*x* to RHEL 9.*x*](#tab/rhel8-rhel9)
 
 Run the following `leapp preupgrade` command:
 
@@ -167,7 +167,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 > [!IMPORTANT]  
 > Make sure to run the `leapp upgrade` command through the Serial Console to avoid any network interruptions that could affect your secure shell (SSH) terminal and disrupt the upgrade process.
 
-### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
+### [RHEL 7.9 to RHEL 8.*x*](#tab/rhel7-rhel8)
 
 1. Run the following `leapp preupgrade` command:
 
@@ -192,7 +192,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     sudo reboot
     ```
 
-### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
+### [RHEL 8.*x* to RHEL 9.*x*](#tab/rhel8-rhel9)
 
 1. Run the following `leapp upgrade` command:
 
@@ -225,7 +225,7 @@ Once the upgrade is finished, check if the system is in the desired state.
 
 This section outlines the recommended verification steps after completing an in-place upgrade.
 
-### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
+### [RHEL 7.9 to RHEL 8.*x*](#tab/rhel7-rhel8)
 
 1. Verify that the current OS version belongs to RHEL 8:
 
@@ -245,7 +245,7 @@ This section outlines the recommended verification steps after completing an in-
     sudo dnf repolist
     ```
 
-### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
+### [RHEL 8.*x* to RHEL 9.*x*](#tab/rhel8-rhel9)
 
 1. Verify that the current OS version belongs to RHEL 9:
 
@@ -271,7 +271,7 @@ This section outlines the recommended verification steps after completing an in-
 
 Once the VM is successfully upgraded, perform the following tasks:
 
-### [RHEL 7.9 to RHEL 8.X](#tab/rhel7-rhel8)
+### [RHEL 7.9 to RHEL 8.*x*](#tab/rhel7-rhel8)
 
 1. Delete all remaining leapp packages, including the *`snactor`* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These leapp packages are installed during the in-place upgrade.
 
@@ -352,7 +352,7 @@ Once the VM is successfully upgraded, perform the following tasks:
         > [!IMPORTANT]  
         > Removing this data might limit Microsoft and Red Hat Support's ability to investigate and troubleshoot post-upgrade problems.
 
-### [RHEL 8.X to RHEL 9.X](#tab/rhel8-rhel9)
+### [RHEL 8.*x* to RHEL 9.*x*](#tab/rhel8-rhel9)
 
 1. Delete all remaining leapp packages, including the *`snactor`* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These leapp packages are installed during the in-place upgrade.
 
