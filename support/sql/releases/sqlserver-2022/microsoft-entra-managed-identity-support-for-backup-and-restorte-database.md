@@ -4,8 +4,7 @@ description: Adds the support of Microsoft Entra managed identity for backup and
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5043526
 ms.reviewer: derekw, pcaronauger, v-qianli2
 appliesto:
-- SQL Server 2022 on Linux
-- SQL Server 2019 on Linux
+- SQL Server 2022 on Azure VM
 ---
 # Improvement: Microsoft Entra managed identity support for backup and restore database operations in SQL Server on Azure VMs
 
