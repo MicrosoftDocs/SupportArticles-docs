@@ -56,7 +56,21 @@ By default, an enterprise CA does not store certificate requests. However, an ad
 
 1. To stop Certificate Services, select **Start**, select **Run**, type *cmd*, and then select **OK**.
 2. At the command prompt, type *certutil -shutdown*, and then press Enter.
-3. At the command prompt, type *certutil -getreg CA\CSP\Provider*, and then press Enter. Note the **Provider** value in the output. For example:
+3. At the command prompt, type *certutil -getreg DBDirectory*, and then press Enter. Note the **DBLogDirectory** value in the output. For example:
+
+   ```output
+   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\DBDirectory:
+     DBDirectory REG_SZ = C:\Windows\system32\CertLog
+   CertUtil: -getreg command completed successfully.
+   ```
+4. At the command prompt, type *certutil -getreg DBLogDirectory*, and then press Enter. Note the **DBLogDirectory** value in the output. For example:
+
+   ```output
+   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\DBLogDirectory:
+     DBLogDirectory REG_SZ = C:\Windows\system32\CertLog
+   CertUtil: -getreg command completed successfully.
+   ```
+5. At the command prompt, type *certutil -getreg CA\CSP\Provider*, and then press Enter. Note the **Provider** value in the output. For example:
 
    ```output
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\Fabrikam Root CA1 G2\csp:
@@ -94,8 +108,8 @@ By default, an enterprise CA does not store certificate requests. However, an ad
      Microsoft Internet Information Server  
      NetMon  
      MS IIS DCOM ClientAdministratorS-1-5-21-842925246-1715567821-839522115-500
-
-4. Delete the private key that is associated with the CA. To do this, at a command prompt, type the following command, and then press Enter:
+    
+6. Delete the private key that is associated with the CA. To do this, at a command prompt, type the following command, and then press Enter:
 
    If the CA CSP value is **Microsoft Strong Cryptographic Provider**, or **Microsoft Enhanced Cryptographic Provider v1.0**, type the following command, and then press Enter.
 
@@ -122,8 +136,8 @@ By default, an enterprise CA does not store certificate requests. However, an ad
     certutil -delkey "Windows2000 Enterprise Root CA"
     ```
 
-6. List the key stores again to verify that the private key for your CA was deleted.
-7. After you delete the private key for your CA, uninstall Certificate Services. To do this, follow these steps, depending on the version of Windows Server that you are running.
+7. List the key stores again to verify that the private key for your CA was deleted.
+8. After you delete the private key for your CA, uninstall Certificate Services. To do this, follow these steps, depending on the version of Windows Server that you are running.
 
    If you are uninstalling an enterprise CA, membership in Enterprise Admins, or the equivalent, is the minimum that is required to complete this procedure. For more information, see [Implement Role-Based Administration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732590(v=ws.11)).
 
@@ -266,13 +280,11 @@ To remove all Certification Services objects from Active Directory, follow these
 After you delete the CA objects, you have to delete the CA certificates that are published to the `NtAuthCertificates` object. Use either of the following commands to delete certificates from within the `NTAuthCertificates` store:
 
 ```console
-certutil -viewdelstore " ldap:///CN=NtAuthCertificates,CN=Public Key
-Services,...,DC=ForestRoot,DC=com?cACertificate?base?objectclass=certificationAuthority"
+certutil -viewdelstore "ldap:///CN=NtAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=ForestRoot,DC=com?cACertificate?base?objectclass=certificationAuthority"
 ```
 
 ```console
-certutil -viewdelstore " ldap:///CN=NtAuthCertificates,CN=Public Key
-Services,...,DC=ForestRoot,DC=com?cACertificate?base?objectclass=pKIEnrollmentService"
+certutil -viewdelstore "ldap:///CN=NtAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=ForestRoot,DC=com?cACertificate?base?objectclass=pKIEnrollmentService"
 ```
 
 > [!NOTE]
@@ -290,7 +302,17 @@ certutil -viewdelstore -? | findstr "CN=NTAuth"
 
 When Certification Services is uninstalled, the CA database is left intact so that the CA can be re-created on another server.
 
-To remove the CA database, delete the *%systemroot%\System32\Certlog* folder.
+To remove the CA database, delete the **Certlog** folder containing the database and log. This is stored by default in *%systemroot%\System32\Certlog* folder.
+
+To query the CA database you can 
+
+```console
+certutil -getreg DBDirectory
+```
+
+```console
+certutil -getreg DBLogDirectory
+```
 
 ## Step 9 - Clean up domain controllers
 
