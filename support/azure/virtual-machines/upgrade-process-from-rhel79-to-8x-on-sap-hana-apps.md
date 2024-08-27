@@ -103,7 +103,6 @@ sudo reboot
    d. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless 
       architecture).
    
-
 6. Install the `leapp` utility.
 
 ```bash
@@ -143,7 +142,6 @@ sudo reboot
 
    c. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture, like Puppet, Salt, and Chef or Ansible (agentless 
       architecture).
-
 
 5. Install the `leapp` utility.
 
