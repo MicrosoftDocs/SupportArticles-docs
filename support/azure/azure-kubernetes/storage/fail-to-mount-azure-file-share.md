@@ -454,13 +454,13 @@ Set-SmbClientConfiguration -EncryptionCiphers "AES_256_GCM" -Confirm:$false
 > [!NOTE]
 > The `EncryptionCiphers` parameter is available beginning with the 2022-06 Cumulative Update for Windows Server version 21H2 for x64-based systems ([KB5014665](https://support.microsoft.com/help/5014665)) and the Cumulative Update for Windows 11, version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
 
-### <a id="maximumsecurityprofile"></a>Cause 6: The Maximum security profile is used without NTLM v2 authentication enabled
+### <a id="maximumsecurityprofile"></a>Cause 6: The "Maximum compatibility" security profile is used without NTLM v2 authentication enabled
 
-When you use the **Maximum security** profile on the Azure file share, to mount it properly in AKS, you have to enable the NTLM v2 authentication mechanisms. Otherwise, the mounting of the file share doesn't work and you get the Mount error(13): Permission denied.
+When you use the default **Maximum compatibility** security profile on the Azure file share, to mount it properly in AKS, you have to enable the **NTLM v2** authentication mechanism. Otherwise, the mounting of the file share doesn't work and you get the Mount error(13): Permission denied.
 
-#### Solution: Enable NTLM v2 authentication
+#### Solution: Enable the NTLM v2 authentication mechanism
 
-To resolve this issue, enable NTLM v2 authentication mechanisms. To do this, go to the **Maximum secuiry** profile page and select the **NTLM v2** checkbox for **Authentication mechanisms**.
+To resolve this issue, enable the **NTLM v2** authentication mechanism. To do this, go to the security setting page and select the **NTLM v2** checkbox for **Authentication mechanisms**.
 
 ## More information
 
