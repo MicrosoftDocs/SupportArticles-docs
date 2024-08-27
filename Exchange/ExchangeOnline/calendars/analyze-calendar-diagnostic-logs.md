@@ -30,13 +30,13 @@ ms.date: 08/27/2024
 
 # Analyze calendar diagnostic logs for Exchange Online mailboxes
 
-To help diagnose meeting issues for Exchange Online mailboxes, you can analyze calendar diagnostic logs (CDLs). To get the CDLs for a meeting, see [Get calendar diagnostic logs for Exchange Online mailboxes](./get-calendar-diagnostic-logs.mdanalyze-calendar-diagnostic-logs).
+To help diagnose meeting issues for Exchange Online mailboxes, you can analyze calendar diagnostic logs (CDLs). To get the CDLs for a meeting, see [Get calendar diagnostic logs for Exchange Online mailboxes](./get-calendar-diagnostic-logs.md).
 
 The following sections guide you through the analysis process.
 
 ## Prerequisites
 
-[Use the Get-CalendarDiagnosticObjectsSummary.ps1 script](./get-calendar-diagnostic-logs.mdanalyze-calendar-diagnostic-logs#use-the-get-calendardiagnosticobjectssummary-ps1-script) to output the following Microsoft Excel file:
+[Use the Get-CalendarDiagnosticObjectsSummary.ps1 script](./get-calendar-diagnostic-logs.md#use-the-get-calendardiagnosticobjectssummary-ps1-script) to output the following Microsoft Excel file:
 
 _CalLogSummary_\<short meeting ID\>.xlsx_
 
