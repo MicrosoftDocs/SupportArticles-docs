@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
 editor: 
-ms.date: 08/23/2024
+ms.date: 08/27/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -55,7 +55,8 @@ System Configuration   | Source OS version| Target Version    |
 
 This procedure outlines the necessary steps to complete before performing an in-place upgrade to `RHEL` 8.8 to `RHEL` 9.2 using the `leapp` utility on `SAP-HANA PAYG` images on Azure.
 
-- If your VM is part of a Hight Availability cluster, the upgrade is possible if the cluster nodes are **not** using any packages that are part of [Resilient Storage.](https://access.redhat.com/articles/3130101) For more information, see, [Procedure to upgrade a RHEL 8 High Availability cluster to RHEL 9.](https://access.redhat.com/articles/7012677)
+> [!IMPORTANT]
+> If your VM is part of a Hight Availability cluster, the upgrade is possible if the cluster nodes are **not** using any packages that are part of [Resilient Storage.](https://access.redhat.com/articles/3130101) For more information, see, [Procedure to upgrade a RHEL 8 High Availability cluster to RHEL 9.](https://access.redhat.com/articles/7012677)
 
 
 1. Make sure your current Red Hat release is 8.8.
@@ -85,12 +86,12 @@ If your virtual machine is configured to start SAP processes automatically at bo
 
    a. Check that the RHEL settings for `SAP HANA` are in place by checking the following:
 
-   According to SAP Note 2772999, the following parameter is necessary for SAP applications, including SAP HANA, and is usually configured in the file `/etc/sysctl.d/sap.conf`
+   According to SAP Note 2772999, the following parameter is necessary for SAP applications, including SAP HANA, and is usually configured in the file `/etc/sysctl.d/sap.conf`.
 
-```bash
-vm.max_map_count = 2147483647
-kernel.pid_max = 4194304
-```
+   ```bash
+   vm.max_map_count = 2147483647
+   kernel.pid_max = 4194304
+   ```
    b. All other settings for `SAP HANA`, found in the files `/etc/sysctl.conf` and `/etc/sysctl.d/sap_hana.conf`, are the same for both `RHEL` 8 and `RHEL` 9 and should remain unchanged. For further information, please refer to the `SAP` Notes [2382421.](https://launchpad.support.sap.com/#/notes/2382421)
 
 
@@ -100,7 +101,7 @@ kernel.pid_max = 4194304
 sudo dnf update
 ```
 
-5. Reboot the virtual machine
+5. Reboot the virtual machine.
 
 ```bash
 sudo reboot
@@ -582,7 +583,7 @@ rhel-9-for-x86_64-sap-solutions-e4s-rhui-rpms    Red Hat Enterprise Linux 9 for 
 #### [RHEL 9.2 or 9.4 on SAPAPPS](#tab/rhel94sapapps)
 
 
-1. Verify that the current OS version belongs to Red Hat Enterprise Linux 9
+1. Verify that the current OS version belongs to Red Hat Enterprise Linux 9.
 
 ```bash
 sudo cat /etc/redhat-release
@@ -593,7 +594,7 @@ sudo cat /etc/redhat-release
 sudo cat /etc/yum/vars/releasever 
 ```
 
-3. Check the kernel version
+3. Check the kernel version.
 
 ```bash
 uname -r
@@ -620,7 +621,7 @@ rhui-microsoft-azure-rhel9-sapapps            Microsoft Azure RPMs for Red Hat E
 
 ## Post-Upgrade Tasks
 
-Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9](https://review.learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/leapp-upgrade-process-rhel-7-and-8?branch=pr-en-us-6901&tabs=rhel8-rhel9#tabpanel_5_rhel8-rhel9)
+Take further steps once you confirm the upgrade. Adhere to the guidelines in, [Post_upgrade Tasks RHEL 7 to 8 and 8 to 9](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/leapp-upgrade-process-rhel-7-and-8?tabs=rhel8-rhel9#post-upgrade-tasks)
 
 
 ## Post-configuration of the system for SAP HANA
