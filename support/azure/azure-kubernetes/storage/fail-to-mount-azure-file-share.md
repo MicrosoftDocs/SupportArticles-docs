@@ -240,7 +240,7 @@ Here are possible causes for this error:
 - [Cause 3: Connectivity is via a private link but nodes and the private endpoint are in different VNETs](#aksnotawareprivateipaddress)
 - [Cause 4: Storage account is set to require encryption that the client doesn't support](#akssmbencryption)
 - [Cause 5: Minimum encryption requirement for a storage account isn't met](#minimumencryption)
-- [Cause 6: The "Maximum compatibility" security profile is used without NTLM v2 Authentication enabled](#maximumsecurityprofile)
+- [Cause 6: The "Maximum compatibility" security profile is used without NTLM v2 authentication enabled](#maximumsecurityprofile)
 
 > [!NOTE]
 >
@@ -453,7 +453,7 @@ Set-SmbClientConfiguration -EncryptionCiphers "AES_256_GCM" -Confirm:$false
 
 ### <a id="maximumsecurityprofile"></a>Cause 6: The "Maximum compatibility" security profile is used without NTLM v2 authentication enabled
 
-When you use the default **Maximum compatibility** security profile on the Azure file share, to mount it properly in AKS, you have to enable the **NTLM v2** authentication mechanism. Otherwise, the mounting operation will fail with the "Permission denied" error.
+When you use the default **Maximum compatibility** security profile on the Azure file share, to mount it properly in AKS, you have to enable the **NTLM v2** authentication mechanism. Otherwise, the mounting operation will fail with the "Mount error(13): Permission denied" error.
 
 #### Solution: Enable the NTLM v2 authentication mechanism
 
