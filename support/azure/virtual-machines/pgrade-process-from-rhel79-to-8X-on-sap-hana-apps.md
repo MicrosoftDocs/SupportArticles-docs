@@ -205,7 +205,7 @@ sudo leapp preupgrade  --target 8.10  --no-rhsm
 --- 
 
 
-Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that might appear in the report, for more information, see: [Troubleshoot-red-hat-os-upgrade-issues.](azure/virtual-machines/linux/troubleshoot-red-hat-os-upgrade-issues)
+Review the report located in the `/var/log/leapp/leapp-report.txt` file and manually address all identified issues. Some problems come with suggested fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information on the various issues that might appear in the report, for more information, see: [Troubleshoot-red-hat-os-upgrade-issues.](/azure/virtual-machines/linux/troubleshoot-red-hat-os-upgrade-issues)
 
 
 #### `Leapp` upgrade process
