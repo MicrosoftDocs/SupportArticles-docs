@@ -233,9 +233,6 @@ To create a pod that can be scheduled on a FIPS-enabled node, follow these steps
 
 ## <a id="mounterror13"></a>Mount error(13): Permission denied
 
-> [!NOTE]
-> Because the mounting operation doesn't support the default **Maximum security** profile of Azure file share settings, you need to enable **NTLM v2** authentication.
-
 Here are possible causes for this error:
 
 - [Cause 1: Kubernetes secret doesn't reference the correct storage account name or key](#secretnotusecorrectstorageaccountkey)
@@ -456,7 +453,7 @@ Set-SmbClientConfiguration -EncryptionCiphers "AES_256_GCM" -Confirm:$false
 
 ### <a id="maximumsecurityprofile"></a>Cause 6: The "Maximum compatibility" security profile is used without NTLM v2 authentication enabled
 
-When you use the default **Maximum compatibility** security profile on the Azure file share, to mount it properly in AKS, you have to enable the **NTLM v2** authentication mechanism. Otherwise, the mounting of the file share doesn't work and you get the "Mount error(13): Permission denied".
+When you use the default **Maximum compatibility** security profile on the Azure file share, to mount it properly in AKS, you have to enable the **NTLM v2** authentication mechanism. Otherwise, the mounting operation will fail with the "Permission denied" error.
 
 #### Solution: Enable the NTLM v2 authentication mechanism
 
