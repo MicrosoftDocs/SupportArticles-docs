@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/28/2024
 ---
 
 # Exchange UnifiedContent folder fills up the drive
@@ -60,8 +60,8 @@ On each server that runs Exchange Server in your organization, follow these step
 
 4. Save your changes to *Antimalware.xml*, and then restart the Exchange Health Manager service. The service name is MSExchangeHM.
 
-Exchange Health Manager will clean the *UnifiedContent* folder during the next maintenance cycle. By default, maintenance cycles run every four hours.
+Exchange Health Manager cleans the *UnifiedContent* folder during the next maintenance cycle. By default, maintenance cycles run every four hours.
 
 ### Resolution 2
 
-Use the [SetUnifiedContentPath](https://aka.ms/SetUnifiedContentPath) PowerShell script on a server that runs Exchange Server in your organization. The script sets the `CleanupFolderREsponderFolderPaths` value in the `AntiMalware.xml` file to force Exchange Server to automatically clean up the unified content that's left behind.
+Use the [SetUnifiedContentPath](https://aka.ms/SetUnifiedContentPath) PowerShell script. The script sets the `CleanupFolderResponderFolderPaths` value in the `AntiMalware.xml` file. Exchange Health Manager uses this value to locate the *UnifiedContent* folder to clean up.
