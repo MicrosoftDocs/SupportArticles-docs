@@ -23,7 +23,7 @@ When requesting a certificate, once you select the template and click **Enroll**
 
 ## Cause
 
-The behavior occurs because the Authenticated Users group is removed from the template's access control list (ACL). The Authenticated Users group is on a template ACL, by default. (The CA itself is included in this group.) If the Authenticated Users group is removed, the (enterprise) CA itself can no longer read the template in the Active Directory, and that's why certificate requests can be unsuccessful.
+The behavior occurs because the Authenticated Users group is removed from the template's access control list (ACL). The Authenticated Users group is on a template ACL, by default. (The Certification Authority object itself is included in this group.) If the Authenticated Users group is removed, the (enterprise) CA itself can no longer read the template in the Active Directory, and that's why certificate requests can be unsuccessful.
 
 ## Resolution
 
@@ -45,7 +45,7 @@ If authenticated users group is removed from the ACLs of a template, the followi
   
   > Certificate Request Denied  
   Your certificate request was denied.  
-  Your Request Id is RequestID. The disposition message is "Denied by Policy Module 0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services policy: <Template information> 
+  Your Request Id is RequestID. The disposition message is "Denied by Policy Module 0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services policy: Template_information
   
   Enrollment with Microsoft Management Console (MMC):
   The requested certificate template is not supported by this CA.
@@ -54,7 +54,7 @@ If authenticated users group is removed from the ACLs of a template, the followi
   
   Denied by Policy Module 0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services Policy: Template_information. 
   
-  The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE) 
+  The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE)
   
   A certification authority that can issue the requested certificate type is not available.   
   
@@ -65,7 +65,7 @@ If authenticated users group is removed from the ACLs of a template, the followi
   Event ID: 53  
   
   Description:  
-  Active Directory Certificate Services denied request RequestID because The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE).  The request was for Template_name.  Additional information: Denied by Policy Module  0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services policy: Template_Info 
+  Active Directory Certificate Services denied request RequestID because The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE).  The request was for Template_name.  Additional information: Denied by Policy Module  0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services policy: Template_Info
   
 - Error on CA When Certificate Services starts
 
