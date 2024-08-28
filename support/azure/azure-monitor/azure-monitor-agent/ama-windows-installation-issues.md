@@ -337,4 +337,4 @@ If connectivity is successful and there are no errors in the related logs, move 
 If issues can't be mitigated, search for known issues or reach out for assistance in the [Microsoft Q&A forums](/answers/tags/133/azure). Before seeking further help, ensure that you have collected the necessary logs.
 
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
