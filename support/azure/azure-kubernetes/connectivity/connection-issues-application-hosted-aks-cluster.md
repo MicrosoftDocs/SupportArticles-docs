@@ -1,15 +1,15 @@
 ---
-title: Fix connection issues to an app that's hosted on an AKS cluster
+title: Fix connection issues to an app that's hosted in an AKS cluster
 description: Learn about basic troubleshooting steps if you experience connection issues to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 08/19/2022
-ms.reviewer: chiragpa, pkc, rissing, v-leedennis
+ms.date: 08/28/2024
+ms.reviewer: chiragpa, pkc, rissing, v-leedennis, ookour
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting steps so that I can successfully connect to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Connectivity
 ---
-# Troubleshoot connection issues to an app that's hosted on an AKS cluster
+# Troubleshoot connection issues to an app that's hosted in an AKS cluster
 
-Connection issues to a Microsoft Azure Kubernetes Service (AKS) cluster can mean different things. In some cases, it might mean that the connection to the API server is affected (for example, by using kubectl). In other cases, it might mean that common connection issues affect an application that's hosted on the AKS cluster. This article discusses how to troubleshoot AKS cluster connection issues.
+In today's dynamic cloud environments, ensuring seamless connectivity to applications hosted in Azure Kubernetes Service (AKS) clusters is essential for maintaining optimal performance and user experience. This technical guide provides a comprehensive approach to identifying and resolving connectivity issues that may arise due to various factors, including application-side problems, network policies, NSG rules, and others. By following the steps outlined in this guide, you will be equipped with the knowledge and tools necessary to effectively troubleshoot and mitigate connectivity challenges.
 
 > [!NOTE]
 > To troubleshoot common issues when you try to connect to the AKS API server, see [Basic troubleshooting of cluster connection issues with the API server](troubleshoot-cluster-connection-issues-api-server.md).
@@ -19,12 +19,14 @@ Connection issues to a Microsoft Azure Kubernetes Service (AKS) cluster can mean
 - The Client URL ([cURL](https://www.tecmint.com/install-curl-in-linux/)) tool, or a similar command-line tool.
 
 - The [apt-get](https://linux.die.net/man/8/apt-get) command-line tool for handling packages.
+  
+-  The [Netcat](https://linux.die.net/man/1/nc) (`nc`) command-line tool for TCP connections.
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, or a similar tool to connect to the cluster. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Factors to consider
 
-This section covers troubleshooting steps to take if you're having issues when you try to connect to the application that's hosted on an AKS cluster.
+This section covers troubleshooting steps to take if you're having issues when you try to connect to the application that's hosted in an AKS cluster.
 
 In any networking scenario, administrators should consider the following important factors when troubleshooting:
 
@@ -51,12 +53,13 @@ Knowing how to get the HTTP response codes and take packet captures makes it eas
 
 ## Basic network flow for applications on AKS
 
-In general, the request flow for accessing applications that are hosted on an AKS cluster is as follows:
+In general, when applications are exposed using the Azure Load Balancer service type, the request flow for accessing applications is as follows:
 
 > Client >> DNS name >> AKS load balancer IP address >> AKS nodes >> Pods
 
 There are other possible situations in which extra components might be involved. For example:
 
+- Managed NGINX ingress with the [application routing add-on](/azure/aks/app-routing)
 - The application gateway is used through the [Application Gateway Ingress Controller](/azure/application-gateway/ingress-controller-overview) (AGIC) instead of Azure Load Balancer.
 - Azure Front Door and API Management might be used on top of the load balancer.
 - The process uses an internal load balancer.
@@ -64,7 +67,7 @@ There are other possible situations in which extra components might be involved.
 
 It's important to understand the request flow for the application.
 
-A basic request flow to applications on an AKS cluster would resemble the flow that's shown in the following diagram.
+A basic request flow to applications in an AKS cluster would resemble the flow that's shown in the following diagram.
 
 :::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" alt-text="Diagram of a basic request flow to applications on an Azure Kubernetes Service (A K S) cluster." border="false":::
 
@@ -92,7 +95,7 @@ kubectl describe pod <pod-name> -n <namespace-name>
 
 If the pod isn't in a `Ready` or `Running` state, or it restarted many times, check the `kubectl describe` output. The events will reveal any issues that prevent you from being able to start the pod. Or, if the pod has started, the application inside the pod might have failed, causing the pod to be restarted. [Troubleshoot the pod accordingly](https://github.com/feiskyer/kubernetes-handbook/blob/master/en/troubleshooting/pod.md) to make sure that it's in a suitable state.
 
-If the pod is running, it can also be useful to check the logs of the pods and the containers that are inside them. Run the following series of [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) commands:
+If the pod is running, it can also be useful to check the logs of the containers that are inside the pod. Run the following series of [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) commands:
 
 ```bash
 kubectl logs <pod-name> -n <namespace-name>
