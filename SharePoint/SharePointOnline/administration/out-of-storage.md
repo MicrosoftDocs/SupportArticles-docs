@@ -4,7 +4,6 @@ description: Run a diagnostic to solve storage space issues.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

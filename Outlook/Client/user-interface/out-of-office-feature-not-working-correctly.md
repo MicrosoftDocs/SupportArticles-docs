@@ -4,7 +4,6 @@ description: Fixes some OOF issues in Microsoft 365, for example, OOF messages c
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Exchange Mailbox Accounts\Out of Office (00F)
   - CSSTroubleshoot

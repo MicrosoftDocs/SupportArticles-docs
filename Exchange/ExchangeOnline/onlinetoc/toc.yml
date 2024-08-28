@@ -133,7 +133,7 @@
           href: ../administration/update-of-client-access-rules-for-office-365-customers.md
         - name: UsageLocation validation error about Enable-UMMailbox
           href: ../administration/enable-ummailbox-cannot-be-performed-error.md
-        - name: Validation errors for a mailbox archive GUID
+        - name: Resolve validation errors for an archive mailbox
           href: ../administration/validation-errors-for-mailbox-archive-guid.md
         - name: View and update address list membership
           href: ../administration/view-update-address-list-membership.md
@@ -159,6 +159,8 @@
       items:
         - name: ActiveSync can't download attachments to Calendar items
           href: ../calendars/activesync-not-downloading-attachments-to-calendar-items.md
+        - name: Analyze calendar diagnostic logs
+          href: ../calendars/analyze-calendar-diagnostic-logs.md
         - name: Attendees receive multiple meeting invitations
           href: ../calendars/attendees-receive-multiple-meeting-invitations.md
         - name: Calendar on mobile device isn't synced to Online mailbox
@@ -183,6 +185,8 @@
           href: ../calendars/delegate-only-sees-freebusy-info-if-manager-is-in-another-forest.md
         - name: Delegates accept meetings automatically
           href: ../calendars/delegates-accept-meetings-automatically.md
+        - name: Get calendar diagnostic logs
+          href: ../calendars/get-calendar-diagnostic-logs.md
         - name: Meeting requests added to resource delegate's calendar
           href: ../calendars/meeting-requests-sent-to-resource-mailbox-added-to-resource-delegate-calendar.md
         - name: Message store has reached its maximum size

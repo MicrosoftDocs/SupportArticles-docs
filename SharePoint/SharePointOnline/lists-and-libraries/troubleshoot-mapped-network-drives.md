@@ -4,7 +4,6 @@ description: Describes how to troubleshoot mapped network drives that connect to
 author: helenclu
 manager: dcscontentpm
 ms.date: 12/17/2023
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

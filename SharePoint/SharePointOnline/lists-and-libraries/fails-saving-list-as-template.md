@@ -3,7 +3,6 @@ title: Unable to save a list or library as a template in SharePoint Online
 description: Unable to save a list or library as a template with selecting the option to Include Content.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

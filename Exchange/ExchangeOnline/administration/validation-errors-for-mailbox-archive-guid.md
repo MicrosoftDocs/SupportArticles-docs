@@ -1,6 +1,6 @@
 ---
-title: Validation errors for a mailbox archive GUID for Microsoft 365 users
-description: You receive a validation error in the Microsoft 365 admin center or in Microsoft Entra ID.
+title: Resolve validation errors for an archive mailbox
+description: Provides a resolution for an issue in which the Microsoft Entra admin center or the Microsoft 365 admin center display validation error messages for cloud users in a hybrid Exchange environment.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -9,89 +9,73 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Hybrid
   - CSSTroubleshoot
+  - CI 193712
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.reviewer: kellybos, v-six
-ms.date: 01/24/2024
+ms.reviewer: apascual, lusassl, meerak, v-shorestris
+ms.date: 08/21/2024
 ---
-# Validation errors for a mailbox archive GUID for Microsoft 365 users
+
+# Resolve validation errors for an archive mailbox
 
 _Original KB number:_ &nbsp; 4053483
 
 ## Symptoms
 
-An administrator who signs in to Microsoft 365 admin center or Microsoft Entra ID may receive the following validation errors for some users:
+For some user mailboxes in a hybrid Exchange environment, you find either of the following validation error messages in the Microsoft Entra admin center or Microsoft 365 admin center:
 
-> "Failed to sync the ArchiveGuid \<GUID> of mailboxMailboxGuid because one cloud archiveCloudArchiveGuid exists."
+- > Failed to sync the ArchiveGuid \<GUID\> of mailboxMailboxGuid because one cloud archiveCloudArchiveGuid exists.
 
-> "Failed to enable the new cloud archiveCloudArchiveGuid of mailboxMailboxGuid because a different archiveArchiveGuid exists. To enable the new archive, first disable the archive on-premises. After the next Dirsync sync cycle, enable the archive on-premises again."
+- > Failed to enable the new cloud archiveCloudArchiveGuid of mailboxMailboxGuid because a different archiveArchiveGuid exists. To enable the new archive, first disable the archive on-premises. After the next Dirsync sync cycle, enable the archive on-premises again.
 
-In this situation, updates to other property values of these users can't be synchronized from Microsoft Entra ID to Exchange Online.
+Also, you can't update most property and attribute values of these mailboxes, and synchronization from Microsoft Entra ID to Exchange Online fails.
+
+## Cause
+
+For each affected user mailbox, the issue occurs if the `ArchiveGuid` property value in Microsoft Exchange Server doesn't match the `msExchArchiveGUID` attribute value in Exchange Online. The `ArchiveGuid` and `msExchArchiveGUID` values identify the archive mailbox that's associated with a user mailbox.
+
+This inconsistency occurs if either of the following PowerShell cmdlets are run in the on-premises Exchange Management Shell (EMS) to enable an archive mailbox that was originally [enabled from Exchange Online](/purview/enable-archive-mailboxes):
+
+- `Enable-RemoteMailbox <user mailbox ID> -Archive`
+- `Enable-Mailbox <user mailbox ID> -RemoteArchive -ArchiveDomain <domain>.mail.onmicrosoft.com`
+
+> [!IMPORTANT]
+> For cloud mailboxes in an Exchange hybrid environment that are synchronized from on-premises Active Directory, enable archive mailboxes from Exchange Server, not from Exchange Online.
 
 ## Resolution
 
-Update the `msExchArchiveGUID` (`ArchiveGUID`) property value in the on-premises organization to match the Exchange Online value. To do this, follow the steps for the scenario that corresponds to your on-premises configuration.
-
-### Scenario 1: You still have an Exchange server running in the on-premises organization
-
-Here's how to keep the `ArchiveGuid` property value consistent between Exchange environments:
-
-1. Run the following cmdlets from the Exchange Management Shell to retrieve information about `ArchiveGuid` and `RecipientTypeDetails`:
-
-    ```powershell
-    Get-Recipient -Identity user@contoso.com | fl ArchiveGuid, RecipientTypeDetails
-    ```
-
-2. Run these cmdlets to update the value based on different situations, as follows:
-
-    - **Situation 1**: The `RecipientTypeDetails` property is set to `RemoteUserMailbox` and the `ArchiveGuid` property is set to **0**:
-
-        ```powershell
-         Enable-RemoteMailbox user@contoso.com -Archive
-        ```
-
-        ```powershell
-         Set-RemoteMailbox -Identity user@contoso.com -ArchiveGuid <Cloud ArchiveGUID>
-        ```
-
-    - **Situation 2**: The `RecipientTypeDetails` property is set to `RemoteUserMailbox` and the `ArchiveGuid` property is already populated:
-
-        ```powershell
-         Set-RemoteMailbox -Identity user@contoso.com -ArchiveGuid <Cloud ArchiveGUID>
-        ```
-
-    - **Situation 3**: The `RecipientTypeDetails` property value isn't `RemoteUserMailbox` (no remote mailbox is enabled for the affected user):
-
-        ```powershell
-         Enable-RemoteMailbox user@contoso.com -RemoteRoutingAddress user@contoso.mail.onmicrosoft.com
-        ```
-
-        ```powershell
-         Enable-RemoteMailbox user@contoso.com -Archive
-        ```
-
-        ```powershell
-         Set-RemoteMailbox -Identity user@contoso.com -ArchiveGuid <Cloud ArchiveGUID>
-        ```
-
-### Scenario 2: You no longer have any Exchange server running in on-premises, but you still have Exchange-related attributes in AD
-
-In this scenario, you must install an Exchange server to manage the Exchange-related attributes for synchronized users.
-
 > [!NOTE]
-> Managing the Exchange attributes for cloud users from the Active Directory PowerShell or from ADSIEDIT isn't supported. We strongly recommend that you keep at least one active Exchange server in AD to manage the Exchange attributes for synchronized users. For more information, see the "Can third-party management tools be used?" section of [How and when to decommission your on-premises Exchange servers in a hybrid deployment](/exchange/decommission-on-premises-exchange#can-third-party-management-tools-be-used).
+> We recommend that you don't manage Exchange attributes for synchronized users by using Active Directory PowerShell or ADSI Edit. For more information, see [Manage recipients in Exchange Hybrid environments using Management tools](/exchange/manage-hybrid-exchange-recipients-with-management-tools?source=recommendations#will-this-new-method-work-for-me) and [Can third-party management tools be used?](/exchange/decommission-on-premises-exchange#can-third-party-management-tools-be-used)
 
-To update the `ArchiveGuid` property value, run the following cmdlets from Active Directory PowerShell in a domain controller:
+To fix the issue, update the on-premises `ArchiveGuid` property value to match the Exchange Online `msExchArchiveGUID` attribute value. Follow these steps:
 
-```powershell
-Import-Module ActiveDirectory
-```
+1. Run the following PowerShell cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to get the `msExchArchiveGUID` attribute value from Exchange Online:
 
-```powershell
-[guid]$guid = "Cloud ArchiveGUID"
-```
+   ```PowerShell
+   Get-Mailbox -Identity <cloud user mailbox ID> | FL ArchiveGuid 
+   ```
 
-```powershell
-Get-ADUser <user alias> | Set-ADUser -Replace @{msExchArchiveguid=$guid.tobytearray()}
-```
+2. Run the following PowerShell cmdlet in the on-premises EMS to get the `RecipientTypeDetails` and `ArchiveGuid` parameter values:
+
+   ```PowerShell
+   Get-Recipient -Identity <user mailbox ID> | FL RecipientTypeDetails,ArchiveGuid
+   ```
+
+3. Depending on the `RecipientTypeDetails` and `ArchiveGuid` parameter values from step 2, select one of the following options:
+
+   - If the `RecipientTypeDetails` property value is **RemoteUserMailbox** and the `ArchiveGuid` property value is all zeros, run the following PowerShell code in the on-premises EMS:
+
+      ```PowerShell
+      # Create an archive mailbox object for sync to the cloud.
+      Enable-RemoteMailbox <user mailbox ID> -Archive
+      # Set the ArchiveGuid parameter value of the user mailbox to the `msExchArchiveGUID` attribute value.
+      Set-RemoteMailbox -Identity <user mailbox ID> -ArchiveGuid <msExchArchiveGUID attribute value>
+      ```
+
+   - If the `RecipientTypeDetails` property value is **RemoteUserMailbox** and the `ArchiveGuid` property value is not all zeros, run the following PowerShell code in the on-premises EMS:
+
+      ```PowerShell
+      # Set the ArchiveGuid parameter value of the user mailbox to the msExchArchiveGUID attribute value.
+      Set-RemoteMailbox -Identity <user mailbox ID> -ArchiveGuid <msExchArchiveGUID attribute value>
+      ```

@@ -4,7 +4,6 @@ description: Explains why Outlook search folders may include items with a blank 
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

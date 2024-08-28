@@ -3,7 +3,6 @@ title: ERR_INVALID_RESPONSE error when accessing SharePoint site
 description: You receive a This site can't be reached error message and error code ERR_INVALID_RESPONSE when you try to access a SharePoint site from your browser or Microsoft Teams.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -4,7 +4,6 @@ description: Provides a fix for errors that occur when you try to delete a Share
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting

@@ -4,7 +4,6 @@ description: When you use an IMAP or POP account that's added as a secondary acc
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

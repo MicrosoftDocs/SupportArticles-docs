@@ -4,7 +4,6 @@ description: Check if your storage is eligible to be increased to greater than 5
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
