@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 283218
 
 When Certificate Services starts in the Certification Authority (CA), a certificate template is unable to load and certificate requests are unsuccessful using the same template.
 
-When requesting a certificate, after selecting the template and click "Enroll", you get the error: "The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE)"
+When requesting a certificate, once you select the template and click **Enroll**, you get the error: "The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE)"
 
 ## More information
 
@@ -35,7 +35,7 @@ Minimum permissions required for an entity to request a certificate:  
 
 Requesting user/machine: Read & Enroll, Certification Authority Object: Read 
 
-If authenticated users have been removed from the ACLs of a template, the following errors may be observed when the CA starts and when a certificate is requested against the template. 
+If authenticated users group is removed from the ACLs of a template, the following errors may be observed when the CA starts and when a certificate is requested against the template. 
 
 ## Errors observed when enrollment is unsuccessful
 
