@@ -59,7 +59,7 @@ In general, when applications are exposed using the Azure Load Balancer service 
 
 There are other possible situations in which extra components might be involved. For example:
 
-- Managed NGINX ingress with the [application routing add-on](/azure/aks/app-routing)
+- The managed NGINX ingress with the [application routing add-on](/azure/aks/app-routing) feature is enabled.
 - The application gateway is used through the [Application Gateway Ingress Controller](/azure/application-gateway/ingress-controller-overview) (AGIC) instead of Azure Load Balancer.
 - Azure Front Door and API Management might be used on top of the load balancer.
 - The process uses an internal load balancer.
