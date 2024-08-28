@@ -29,7 +29,7 @@ To verify the OS of your VM is supported by the AMA, follow these steps:
 1. Select your VM where the AMA is installed.
 1. In the VM's **Overview** page, check the **Operating system** value to see if it's one of the Windows OS in the [supported operating systems list](/azure/azure-monitor/agents/azure-monitor-agent-supported-operating-systems#windows-operating-systems).
 
-## <a id="determine-issue-type"></a>Determine the issue type: Installation or configuration
+### <a id="determine-issue-type"></a>Determine the issue type: Installation or configuration
 
 1. Check if the *AzureMonitorWindowsAgent* extension status isn't "Provisioning Succeeded."
 
@@ -226,14 +226,14 @@ To ensure that the Azure VM Guest Agent installs and enables the extension corre
      ```
 
 11. Check the extension status:
-   1. Navigate to the directory `C:\Packages\Plugins\Microsoft.Azure.Monitor.AzureMonitorWindowsAgent\*\Status\`.
-   2. Open the files named `*.status` and verify the extension status is sent to Azure.
+    1. Navigate to the directory `C:\Packages\Plugins\Microsoft.Azure.Monitor.AzureMonitorWindowsAgent\*\Status\`.
+    2. Open the files named `*.status` and verify the extension status is sent to Azure.
 
 12. Identify and resolve issues (if you're encountering):
    
     Identify and resolve issues based on the VM Guest Agent logs and then move to [Step 7: Verify if the AMA processes are started](#ama-processes-started).
 
-    > [!Tips]
+    > [!TIP]
     > When you try to resolve the issues, you can refer to Azure official documentations for further assistance.
 
     If you can't identify or resolve the issues, upload the logs to DTM and then seek further help in the [Microsoft Q&A forums](/answers/tags/133/azure).
@@ -243,8 +243,8 @@ To ensure that the Azure VM Guest Agent installs and enables the extension corre
 1. Navigate to the [Azure portal](https://portal.azure.com/).
 
 2. Locate your VM:
-   - In the left-hand menu, select **Virtual Machines**.
-   - Select the VM you want to check from the list.
+   1. In the left-hand menu, select **Virtual Machines**.
+   2. Select the VM you want to check from the list.
 
 3. Connect to your VM:
    1. Use RDP to connect to your VM.
@@ -311,7 +311,7 @@ Collect troubleshooting logs and cross reference with the time of the installati
 1. Connect to your VM using Remote Desktop Connection.
 2. Open Command Prompt as an administrator.
 3. Test connectivity to IMDS:
-    ```sh
+    ```console
     curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2021-01-01"
     ```
 
@@ -323,7 +323,7 @@ If the connection is successful and there are no IMDS errors in the related logs
 2. Open Command Prompt as an administrator.
 3. Test connectivity to handlers:
 
-    ```sh
+    ```console
     curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance/compute/resourceId?api-version=2021-01-01"
     ```
 
