@@ -1,0 +1,340 @@
+---
+title: Troubleshoot Azure Monitor Agent installation issues on Windows virtual machines
+description: Provides steps to troubleshoot installation issues with Azure Monitor Agent on a Windows virtual machine.
+ms.date: 08/28/2024
+ms.reviewer: johnsirmon, v-weizhu
+ms.service: azure-monitor
+ms.custom: sap:Windows Extension not installing
+---
+
+# Troubleshoot installation issues with Azure Monitor Agent on a Windows virtual machine
+
+This article helps you troubleshoot issues when you fail to install the Azure Monitor Agent (AMA) on an Azure virtual machines (VM) running Windows.
+
+## Before troubleshooting
+
+Before you begin troubleshooting, perform the following checks:
+
+- [Ensure the operating system (OS) is supported by AMA](#operating-system-supported)
+- [Determine the issue type: Installation or configuration](#determine-issue-type)
+- [Verify at least one Data Collection Rule (DCR) is associated with the VM](#verify-dcr)
+- [Understand installation options](#installation-options)
+
+### <a id="operating-system-supported"></a>Ensure the operating system (OS) is supported by AMA
+
+To verify the OS of your VM is supported by the AMA, follow these steps:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Navigate to the **Virtual Machines** section.
+1. Select your VM where the AMA is installed.
+1. In the VM's **Overview** page, check the **Operating system** value to see if it's one of the Windows OS in the [supported operating systems list](/azure/azure-monitor/agents/azure-monitor-agent-supported-operating-systems#windows-operating-systems).
+
+## <a id="determine-issue-type"></a>Determine the issue type: Installation or configuration
+
+1. Check if the *AzureMonitorWindowsAgent* extension status isn't "Provisioning Succeeded."
+
+    1. In the Azure portal, go to the **Virtual Machines** section.
+    2. Select the VM where the AMA is installed.
+    3. Under **Settings**, select **Extensions + applications**.
+    4. Check that the `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent` extension status isn't showing "Provisioning Succeeded."
+
+2. Check if one or more of the agent processes aren't start.
+
+    1. Connect to your VM using Remote Desktop Connection.
+    2. Open **Task Manager** by selecting <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd>.
+    3. Select the **Processes** tab.
+    4. Check that one or more of the following processes aren't running:
+       - `AMAExtHealthMonitor`
+       - `MonAgentHost`
+       - `MonAgentLauncher`
+       - `MonAgentManager`
+
+If the `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent` extension status doesn't show "Provisioning Succeeded" or any of the four agent processes aren't running, you're encountering AMA installation issues. In this case, you can troubleshoot the issues by using this article. Otherwise, you need to investigate the AMA Windows configuration.
+
+### <a id="verify-dcr"></a>Verify at least one Data Collection Rule (DCR) is associated with the VM
+
+Adding VMs as DCR resources is a common way to install the AMA. When you create a DCR in the Azure portal, Azure Monitor Agent is installed on any machines that are added as resources for the DCR. Before you begin troubleshooting, verify that at least one DCR is associated with the VM:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+2. Navigate to **Azure Monitor**.
+3. Select **Data Collection Rules**.
+4. Verify there is at least one DCR associated with the VM.
+5. If no DCR is associated to the VM, create a new one:
+   1. Select **Create**.
+   2. Follow the wizard to define the data sources and destinations.
+   3. Associate the DCR with the VM by selecting the **Resource** tab and selecting the VM.
+
+### <a id="installation-options"></a>Understand installation options
+
+Before troubleshooting, know the different ways to install the AMA for Windows. It's useful to know how the AMA is installed. The installation options include: VM extension, Create DCR, VM insights, Container insights, Client installer, and Azure Policy. For more information, see [Install and manage Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-manage#installation-options).
+
+> [!NOTE]
+> To perform the following troubleshooting steps, make sure you know the ResourceID of the VM and have admin access to the VM OS.
+
+## Troubleshooting steps
+
+1. [Start the VM if it's not running](#start-vm)
+2. [Verify if the VM have a managed identity](#verify-vm-managed-identity)
+3. [Verify if the AMA extension exists in the VM configuration](#verify-ama-extension-exists)
+4. [Verify if the VM Guest Agent is running](#verify-vm-guest-agent-running)
+5. [Verify if the VM Guest Agent downloads the extension binaries](#extension-binaries-downloaded)
+6. [Verify if the VM Guest Agent installs and enables the extension](#verify-vm-gust-agent-install-ama)
+7. [Verify if the AMA processes are started](#ama-processes-started)
+
+### <a id="start-vm"></a>Step 1: Start the VM if it's not running
+
+If the VM isn't running, start it first and wait for it to enter a running state. If the VM is running, move to [Verify if the VM has a managed identity](#verify-vm-managed-identity).
+
+### <a id="verify-vm-managed-identity"></a>Step 2: Verify if the VM has a managed identity
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Navigate to the VM and select **Identity** under the **Settings** section.
+1. Check if the "SystemAssigned" or "UserAssigned" identity exists. If neither is displayed, [enable System managed identity](/entra/identity/managed-identities-azure-resources/qs-configure-portal-windows-vm#enable-system-assigned-managed-identity-on-an-existing-vm)  or [assign User managed identity](/entra/identity/managed-identities-azure-resources/qs-configure-portal-windows-vm#assign-a-user-assigned-managed-identity-to-an-existing-vm):
+   - For System managed identity, turn the **Status** to **On** and select **Save**.
+   - For User managed identity, select the appropriate user-assigned identity.
+
+    To determine which identity is appropriate for your environment, see [What are managed identities for Azure resources?](/entra/identity/managed-identities-azure-resources/overview).
+
+    If both "SystemAssigned" and "UserAssigned" identities exist, proceed to the next step.
+
+### <a id="verify-ama-extension-exists"></a>Step 3: Verify if the extension exists in the VM configuration
+
+1. Navigate to the [Azure portal](https://portal.azure.com/).
+
+2. Locate your VM:
+   1. In the left-hand menu, select **Virtual Machines**.
+   2. Find and select the VM you want to check from the list.
+
+3. Check the VM's extensions:
+   1. In the VM's left-hand menu, select **Extensions + applications** under the **Settings** section.
+   2. Look for the extension with Type `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent`.
+   3. If the extension exists, go to the step 4.
+   4. If the extension doesn't exist, go to the step 5.
+
+4. Verify the extension status:
+   1. Check the **Status** column for the `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent` extension.
+   2. If the status is "Provisioning Succeeded," skip step 5 and 6 and move to [Verify if the VM Guest Agent is running](#verify-vm-guest-agent-running).
+   3. If the status isn't "Provisioning Succeeded," proceed to the step 5 and 6.
+
+5. Install the extension:
+   - Select the **Add** button.
+   - Search for and select `AzureMonitorWindowsAgent`.
+   - Follow the prompts to install the extension on the VM.
+
+6. Check the extension and its status again.
+   
+    After the extension is installed, repeat step 3 and 4 to ensure the extension is now present and the status is "Provisioning Succeeded."
+
+### <a id="verify-vm-guest-agent-running"></a>Step 4: Verify if the VM Guest Agent is running
+
+Check the VM Guest Agent. If the VM Guest Agent is running, move to [Step 5: Verify if the VM Guest Agent downloads the extension binaries](#extension-binaries-downloaded).
+
+### <a id="extension-binaries-downloaded"></a>Step 5: Verify if the VM Guest Agent downloads the extension binaries
+
+1. Navigate to the [Azure portal](https://portal.azure.com/):
+
+2. Locate your VM:
+   1. In the left-hand menu, select **Virtual Machines**.
+   2. Find and select the VM you want to check from the list.
+   
+3. Check the VM's extensions:
+   1. In the VM's left-hand menu, select **Extensions + applications** under the **Settings** section.
+   2. Look for the extension with Type `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent`.
+   3. If the extension exists, go to the step 4.
+
+4. Check the VM Guest Agent logs:
+   1. Open the **Boot Diagnostics** tab under **Support + troubleshooting**.
+   2. Select **Serial log** to view the VM's boot and extension logs.
+   3. Look for logs related to the `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent` extension.
+
+5. Verify extension binaries.
+
+   If the logs indicate that the binaries are downloaded and extracted, move to [Step 6: Verify if the VM Guest Agent installs and enables the extension](#verify-vm-gust-agent-install-ama). If the binaries are missing, the VM Guest Agent doesn't successfully download the extension binary files. In this case, go to step 6.
+
+6. Restart the VM Guest Agent.
+   1. Connect to the VM using Remote Desktop Protocol (RDP).
+   2. Open a Command Prompt or PowerShell window.
+   3. Running the following command:
+
+      ```console
+      net stop WindowsAzureGuestAgent
+      net start WindowsAzureGuestAgent
+      ```
+
+7. Verify extension binaries again.
+   
+   Repeat the previous step 5 to verify if the binaries have been successfully downloaded and extracted after the restart.
+
+### <a id="verify-vm-gust-agent-install-ama"></a>Step 6: Verify if the VM Guest Agent installs and enables the extension
+
+To ensure that the Azure VM Guest Agent installs and enables the extension correctly, follow these steps:
+
+1. Navigate to the [Azure portal](https://portal.azure.com/).
+
+2. Locate your VM:
+   1. In the left-hand menu, select **Virtual Machines**.
+   2. Find and select the VM you want to check from the list.
+
+3. Connect to your VM:
+   1. Use RDP to connect to your VM.
+   2. Enter your VM's IP address, username, and password to sign in.
+
+4. Open the File Explorer and then navigate to the `C:\WindowsAzure\Logs\` directory.
+
+5. Check the VM Guest Agent logs:
+   - Open the file *WaAppAgent.log* to view the VM Guest Agent logs.
+   - Look for logs related to the extension `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent`.
+
+6. Verify the plugin environment setup:
+   
+    Check for a log entry indicating the plugin environment is set up:
+     
+     ```output
+     [00000010] YYYY-MM-DDTHH:MM:SS.SSSZ [WARN] Setting up plugin environment (name: Microsoft.Azure.Monitor.AzureMonitorWindowsAgent, version: X.Y.Z.Z)., Code: 0
+     ```
+
+7. Verify the plugin installation:
+   
+    Look for a log entry indicating the plugin installer is run:
+
+     ```output
+     [00000010] YYYY-MM-DDTHH:MM:SS.SSSZ [WARN] Installing plugin (name: Microsoft.Azure.Monitor.AzureMonitorWindowsAgent, version: X.Y.Z.Z), Code: 0
+     [00000010] YYYY-MM-DDTHH:MM:SS.SSSZ [WARN] Started a process with the launch command C:\Packages\Plugins\Microsoft.Azure.Monitor.AzureMonitorWindowsAgent\X.Y.Z.Z\AzureMonitorAgentExtension.exe, params: install.
+     ```
+
+8. Verify plugin installation results:
+   
+    Check for a log entry indicating the installation results:
+
+     ```output
+     [00000010] YYYY-MM-DDTHH:MM:SS.SSSZ [WARN] Installed plugin (name: Microsoft.Azure.Monitor.AzureMonitorWindowsAgent, version: X.Y.Z.Z), Code: 0
+     ```
+
+9. Check command execution logs:
+
+   1. Navigate to the directory `C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Monitor.AzureMonitorWindowsAgent\{version}\`.
+   2. Open the files named `CommandExecution*.log` and check for any stdout or stderr messages during the installation and enablement process.
+
+10. Verify the plugin is enabled:
+   
+    Look for log entries indicating the plugin is enabled:
+
+     ```output
+     [00000010] YYYY-MM-DDTHH:MM:SS.SSSZ [WARN] Enabling plugin (handler name: Microsoft.Azure.Monitor.AzureMonitorWindowsAgent, extension name: , version: X.Y.Z.Z)., Code: 0
+     [00000010] YYYY-MM-DDTHH:MM:SS.SSSZ [INFO] Command C:\Packages\Plugins\Microsoft.Azure.Monitor.AzureMonitorWindowsAgent\X.Y.Z.Z\AzureMonitorAgentExtension.exe of Microsoft.Azure.Monitor.AzureMonitorWindowsAgent has exited with Exit code: 0
+     [00000010] YYYY-MM-DDTHH:MM:SS.SSSZ [WARN] Setting the install state of the handler Microsoft.Azure.Monitor.AzureMonitorWindowsAgent_X.Y.Z.Z to Enabled
+     ```
+
+11. Check the extension status:
+   1. Navigate to the directory `C:\Packages\Plugins\Microsoft.Azure.Monitor.AzureMonitorWindowsAgent\*\Status\`.
+   2. Open the files named `*.status` and verify the extension status is sent to Azure.
+
+12. Identify and resolve issues (if you're encountering):
+   
+    Identify and resolve issues based on the VM Guest Agent logs and then move to [Step 7: Verify if the AMA processes are started](#ama-processes-started).
+
+    > [!Tips]
+    > When you try to resolve the issues, you can refer to Azure official documentations for further assistance.
+
+    If you can't identify or resolve the issues, upload the logs to DTM and then seek further help in the [Microsoft Q&A forums](/answers/tags/133/azure).
+
+### <a id="ama-processes-started"></a>Step 7: Verify if the AMA processes are started
+
+1. Navigate to the [Azure portal](https://portal.azure.com/).
+
+2. Locate your VM:
+   - In the left-hand menu, select **Virtual Machines**.
+   - Select the VM you want to check from the list.
+
+3. Connect to your VM:
+   1. Use RDP to connect to your VM.
+   2. Enter your VM's IP address, username, and password to sign in.
+
+4. Open Task Manager.
+   
+    Once signed in, right-click on the taskbar and select **Task Manager**. You can also select <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd> to open Task Manager directly.
+
+5. Check AMA processes:
+   
+    1. In Task Manager, select the **Processes** tab.
+    2. Look for the following processes:
+     - `AMAExtHealthMonitor`
+     - `MonAgentHost`
+     - `MonAgentLauncher`
+     - `MonAgentManager`
+   
+    > [!NOTE]
+    > The `MonAgentCore` process isn't included in this list. It's part of the agent configuration, so the installation might succeed without starting this process.
+
+6. Verify if all the AMA processes are running.
+   
+    If all four processes (`AMAExtHealthMonitor`, `MonAgentHost`, `MonAgentLauncher`, and `MonAgentManager`) are listed and running, the agent processes have successfully started.
+
+7. Review and analyze related logs (if any of the AMA processes aren't running):
+
+   1. Navigate to the directory `C:\ProgramData\Microsoft\Azure\Azure Monitor Agent\Logs\`.
+   2. Look for log files such as *AMAExtHealthMonitor.log*, *MonAgentHost.log*, *MonAgentLauncher.log*, and *MonAgentManager.log*.
+   3. Open the log files using a text editor (such as Notepad).
+   4. Identify any issues preventing the processes from starting.
+   5. Look for specific error messages or warnings that can help diagnose the issues.
+
+8. Troubleshoot the issues based on log information.
+   
+    Common issues might include configuration errors, missing dependencies, or network-related problems.
+
+## Advanced troubleshooting steps
+
+To troubleshoot more complex installation issues, follow these steps:
+
+1. [Collect AMA troubleshooting logs](#collect-ama-logs)
+2. [Test connectivity to Azure Instance Metadata Service (IMDS)](#tect-imds-connectivity)
+3. [Test connectivity to handlers](#tect-handlers-connectivity)
+4. [Review network trace](#review-network-trace)
+
+### <a id="collect-ama-logs"></a>Step 1: Collect AMA troubleshooting logs
+
+Collect troubleshooting logs and cross reference with the time of the installation issue.
+
+1. Connect to your VM using Remote Desktop Connection.
+2. Open File Explorer and navigate to the following paths:
+   - `...\curl.output.txt`
+   - `...\ImdsMetadataResponse.json`
+   - `...\AgentDataStore\Configuration\MonAgentHost.*.log`
+   - `...\VmExtLogs\Microsoft.Azure.Monitor.AzureMonitorWindowsAgent\{version}\Extension.*.log`
+   - `...\VmExtLogs\Microsoft.Azure.Monitor.AzureMonitorWindowsAgent\{version}\ExtensionHealth.*.log`
+   - `...\nslookup.output.txt`
+   - `...\AgentDataStore\Tables\MAEventTable.csv`
+   - `...\AgentDataStore\Tables\MAQosEvent.csv`
+.
+### <a id="tect-imds-connectivity"></a>Step 2: Test connectivity to Azure Instance Metadata Service (IMDS)
+
+1. Connect to your VM using Remote Desktop Connection.
+2. Open Command Prompt as an administrator.
+3. Test connectivity to IMDS:
+    ```sh
+    curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2021-01-01"
+    ```
+
+If the connection is successful and there are no IMDS errors in the related logs, move to [Step 3: Test connectivity to handlers](#tect-handlers-connectivity). If the connection fails, review the related logs and attempt to mitigate any issues found.
+
+### <a id="tect-handlers-connectivity"></a>Step 3: Test connectivity to handlers
+
+1. Connect to your VM using Remote Desktop Connection.
+2. Open Command Prompt as an administrator.
+3. Test connectivity to handlers:
+
+    ```sh
+    curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance/compute/resourceId?api-version=2021-01-01"
+    ```
+
+If connectivity is successful and there are no errors in the related logs, move to [Step 4: Review network trace](#review-network-trace). If connectivity fails, review common errors and attempt to mitigate any issues found.
+
+### <a id="review-network-trace"></a>Step 4: Review network trace
+
+1. Use a network tracing tool like Wireshark or Fiddler to capture the network trace.
+2. Analyze the trace to identify any issues with connectivity to `global.handler.control.monitor.azure.com`.
+
+If issues can't be mitigated, search for known issues or reach out for assistance in the [Microsoft Q&A forums](/answers/tags/133/azure). Before seeking further help, ensure that you have collected the necessary logs.
+
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
