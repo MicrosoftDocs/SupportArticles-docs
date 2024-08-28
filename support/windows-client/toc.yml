@@ -377,6 +377,8 @@ items:
       href: ./networking/collect-data-using-network-monitor.md
     - name: Device can't connect to mobile broadband
       href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
+    - name: Domain-joined machines can't detect the domain profile
+      href: ./networking/domain-joined-machines-cannot-detect-domain-profile.md
     - name: Enterprise APN lost after SIM change or MBN adapter error
       href: ./networking/enterprise-apn-lost-after-sim-change-mbn-adapter-error.md
     - name: Error 734 when establishing a dial-up connection
@@ -867,6 +869,8 @@ items:
       href: ./shell-experience/command-line-string-limitation.md
     - name: Issues after Autoplay is disabled in Group Policy
       href: ./shell-experience/issues-autoplay-disabled-group-policy.md
+    - name: Notifications don't show in the action or notification center
+      href: ./shell-experience/notifications-not-show-action-notification-center.md
     - name: UPX is displayed in the UI on managed device
       href: ./shell-experience/upx-displayed-in-UI-on-managed-device.md
   - name: DPI and Display Issues
@@ -967,6 +971,8 @@ items:
       href: ./shell-experience/troubleshoot-apps-start-failure-use-process-monitor.md
     - name: Troubleshoot Apps failing to start using Windows Package Manager
       href: ./shell-experience/troubleshoot-apps-start-failure-use-windows-package-manager.md
+    - name: Troubleshoot Microsoft Store app download failures
+      href: ./shell-experience/troubleshooting-microsoft-store-apps-download-failure.md
   - name: Start menu
     items:
     - name: 'Troubleshooting guidance: Start menu'
@@ -1259,12 +1265,6 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
     - name: How to downgrade from Windows 8
       href: ./installing-updates-features-roles/downgrade-from-windows-8.md
-    - name: How to get updates via Windows Update
-      href: ./installing-updates-features-roles/get-updates-through-windows-update.md
-    - name: How to solve disk space issues caused by WinSxS directory
-      href: ./installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md
-    - name: Install Service Packs and Hotfixes
-      href: ./installing-updates-features-roles/install-service-packs-hotfixes.md
     - name: Package Manager can install only the first package
       href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
   - name: Issues installing Features on Demand (FoD)

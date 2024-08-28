@@ -6,7 +6,7 @@ documentationcenter: ''
 manager: dcscontentpm
 tags: azure-resource-manager,azure-service-management
 ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-arm-template
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.date: 04/18/2024

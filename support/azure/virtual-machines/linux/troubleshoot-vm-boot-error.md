@@ -4,7 +4,7 @@ description: Provides troubleshooting guidance for GRUB rescue issues with Linux
 services: virtual-machines
 documentationcenter: ''
 author: divargas
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux

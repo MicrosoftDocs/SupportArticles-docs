@@ -3,7 +3,7 @@ title: Basic troubleshooting of DNS resolution problems in AKS
 description: Learn how to create a troubleshooting workflow to fix DNS resolution problems in Azure Kubernetes Service (AKS).
 author: sturrent
 ms.author: seturren
-ms.date: 07/30/2024
+ms.date: 08/09/2024
 ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -223,7 +223,7 @@ Many traffic-capturing tools are available to assist this process, including the
 
 - [Dumpy](https://github.com/larryTheSlap/dumpy) - an open source traffic capture plug-in for Kubernetes
 
-- [Inspektor Gadget](https://inspektor-gadget.io) - allows checking DNS problems in real time. For more information, see [Troubleshoot DNS failures across an AKS cluster in real time](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md).
+- [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) - allows checking DNS problems in real time. For more information, see [Troubleshoot DNS failures across an AKS cluster in real time](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md).
 
 In this article, we use Dumpy as an example of how to collect DNS traffic captures from each CoreDNS pod and a client DNS pod (in this case, the `aks-test` pod).
 

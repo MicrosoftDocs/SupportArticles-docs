@@ -2,8 +2,6 @@
   href: welcome-power-automate.yml
 - name: Administration
   items:
-    - name: Microsoft Flow Extension Package shows Installation failed
-      href: administration/flow-extension-package-shows-installation-failed.md
     - name: Recommendations for conditional access and multi-factor authentication
       href: administration/conditional-access-and-multi-factor-authentication-in-flow.md
 - name: Approvals
@@ -28,8 +26,6 @@
       href: authentication-or-sign-in/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md
     - name: Can't sign into OneDrive connector
       href: authentication-or-sign-in/cannot-sign-in-to-onedrive-connector-when-using-office-365-account-during-flow-creation.md
-    - name: Desktop flow invalid credentials error using Microsoft Entra account
-      href: authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
 - name: Connections
   items:
     - name: Can't send SMTP Email
@@ -72,11 +68,11 @@
       href: desktop-flows/enable-webview-pad-login.md
     - name: Can't access the parent flow
       href: desktop-flows/cannot-access-parent-flow.md
-    - name: Can't automate "Save as", "Open" or "Upload" dialog boxes in web browser
+    - name: Can't automate "Save as," "Open" or "Upload" dialog boxes in web browser
       href: desktop-flows/automate-save-as-open-upload-dialog-box-web-browser.md
     - name: Can't interact with desktop application without an error
       href: desktop-flows/cannot-interact-with-desktop-application.md
-    - name: Can't create, edit, save or view desktop flows
+    - name: Can't create, edit, save, or view desktop flows
       href: desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows.md
     - name: Can't establish connection to Access Database Engine OLE DB
       href: desktop-flows/cannot-connect-access-database-engine-ole-db.md
@@ -110,8 +106,6 @@
       href: desktop-flows/desktop-flow-run-time-license-check.md
     - name: Failed to get UI element
       href: desktop-flows/failed-get-ui-element.md
-    - name: '"Failed to deserialize Flow" error'
-      href: desktop-flows/failed-to-deserialize-flow-error.md
     - name: '"Failed to assume control of Microsoft Edge/Chrome/Firefox" error'
       href: desktop-flows/failed-to-assume-control-of-edge-chrome-firefox-error.md
     - name: Failed to get element/window or Element/Window wasn't found error
@@ -124,10 +118,14 @@
       href: desktop-flows/invalid-private-key-file-error.md
     - name: Internet connection is interrupted after installing Power Automate
       href: desktop-flows/no-ethernet-after-pad-install.md
+    - name: Invalid credentials error when creating connection or running desktop flow
+      href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
+    - name: Invalid credentials error using Microsoft Entra account
+      href: desktop-flows/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
+    - name: '"Logon type not granted" error when creating connection or running desktop flow'
+      href: desktop-flows/logon-type-has-not-been-granted.md
     - name: Machine registration failure
       href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
-    - name: Module or action wasn't found error
-      href: desktop-flows/module-action-wasnt-found-error.md
     - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'
       href: desktop-flows/cannot-update-power-automate-for-desktop.md
     - name: Power Automate for desktop console doesn't show any flows
@@ -140,8 +138,6 @@
       href: desktop-flows/set-drop-down-list-value-fails.md
     - name: Session creation errors for unattended desktop flow runs
       href: desktop-flows/troubleshoot-session-creation-errrors.md
-    - name: Tips on working with SQL queries
-      href: desktop-flows/troubleshooting-tips-sql-queries.md
     - name: Troubleshoot direct connectivity issues
       href: desktop-flows/troubleshoot-direct-connectivity-issues.md
     - name: Troubleshoot desktop flow run queue-based errors

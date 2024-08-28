@@ -5,7 +5,7 @@ ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: azure-cloud-services-classic
 ms.custom: sap:Development
 ---
 # ZipEngine role is stuck between Restarting and Busy state

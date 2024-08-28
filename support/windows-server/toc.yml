@@ -637,14 +637,6 @@ items:
       href: ./backup-and-storage/no-vss-writers-listed-run-vssadmin-list-writers.md
     - name: Return codes that are used by the Robocopy utility
       href: ./backup-and-storage/return-codes-used-robocopy-utility.md
-    - name: System State Backup fails
-      href: ./backup-and-storage/system-state-backup-fails-invalid-imagepath.md
-    - name: The system state backup fails
-      href: ./backup-and-storage/system-state-backup-fails.md
-    - name: Windows Server Backup MMC fails to open
-      href: ./backup-and-storage/server-backup-mmc-fails-open.md
-    - name: 0x80042306 error when configuring previous versions for a mount point
-      href: ./backup-and-storage/cannot-configure-clustered-mount-points-shadow-copies.md
   - name: Data corruption and disk errors
     items:
     - name: 'Troubleshooting guidance: Data corruption and disk errors'
@@ -652,63 +644,43 @@ items:
     - name: Backup doesn't start after you perform BMR
       href: ./backup-and-storage/backup-not-start-after-performing-bmr.md
     - name: Can't delete files on NTFS file system
-      href: ./backup-and-storage/cannot-delete-file-folder-on-ntfs-file-system.md    
+      href: ./backup-and-storage/cannot-delete-file-folder-on-ntfs-file-system.md
     - name: Correct disk space problems on NTFS volumes
       href: ./backup-and-storage/disk-space-problems-on-ntfs-volumes.md
     - name: Disk Event ID 154
-      href: ./backup-and-storage/disk-event-id-154.md    
+      href: ./backup-and-storage/disk-event-id-154.md
     - name: Extending a CSV isn't blocked
-      href: ./backup-and-storage/extending-csv-isnt-blocked.md    
+      href: ./backup-and-storage/extending-csv-isnt-blocked.md
     - name: System logs multiple events that specify Event ID 640
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
   - name: Deduplication
     items:
     - name: Clone or duplicate a Windows installation
-      href: ./backup-and-storage/windows-installations-disk-duplication.md    
+      href: ./backup-and-storage/windows-installations-disk-duplication.md
     - name: Files are corrupted on deduplicated volume
       href: ./backup-and-storage/files-are-corrupted-deduplicated-volume.md
     - name: Full garbage collection causes performance issues
       href: ./backup-and-storage/full-garbage-collection-performance-issue.md
-    - name: Known issues after you enable data deduplication on CSV
-      href: ./backup-and-storage/issues-after-enabling-data-deduplication.md
   - name: File Server Resource Manager (FSRM)
     items:
     - name: Error 10013 when binding excluded port again
       href: ./backup-and-storage/error-10013-wsaeacces-is-returned.md
-    - name: File Server Resource Manager could not load WMI objects
-      href: ./backup-and-storage/error-file-server-resource-manager-could-not-load-wmi-objects.md
-    - name: FSRM quota usage is incorrect
-      href: ./backup-and-storage/fsrm-quota-usage-incorrect.md
-    - name: Hotfixes for File Services in Windows Server 2008
-      href: ./backup-and-storage/file-services-hotfixes-in-windows-server-2008.md
-    - name: Not enough storage to process this command
-      href: ./backup-and-storage/not-enough-storage-process-this-command.md
     - name: Troubleshoot File Server Resource Manager
       href: ./backup-and-storage/troubleshoot-file-server-resource-manager.md
   - name: iSCSI
     items:
-    - name: File shares on iSCSI devices aren't re-created
-      href: ./backup-and-storage/file-shares-on-iscsi-devices-not-recreated.md
-    - name: iSCSI virtual disk size limits are incorrect
-      href: ./backup-and-storage/iscsi-virtual-disk-size-limits-incorrect.md
-    - name: Microsoft iSCSI Software Target 3.3 limits
-      href: ./backup-and-storage/iscsi-software-target-3dot3-limits.md
     - name: Redundant subnets are incorrectly created
       href: ./backup-and-storage/redundant-subnets-are-incorrectly-created.md
     - name: The iSCSI Initiator can't log in to Favorite Target
       href: ./backup-and-storage/iscsi-initiator-not-login-to-favorite-targets.md
   - name: Multipath I/O (MPIO) and Storport
     items:
-    - name: Can't install Windows to the boot LUN with multiple paths
-      href: ./backup-and-storage/error-setup-unable-create-new-system-partition.md
     - name: Enabling MPIO with SAS disks decreases performance
       href: ./backup-and-storage/enabling-mpio-with-sas-decreases-performance.md
     - name: MPIO option not available in Disk Management
       href: ./backup-and-storage/mpio-option-not-available-disk-management.md
   - name: Partition and volume management
     items:
-    - name: A volume shows up as raw in disk management
-      href: ./backup-and-storage/volume-show-up-as-raw.md
     - name: Best practices for using dynamic disks
       href: ./backup-and-storage/best-practices-using-dynamic-disks.md
     - name: Can't access a CSV volume from a passive node
@@ -723,8 +695,6 @@ items:
       href: ./backup-and-storage/configure-low-disk-space-alert-performance-logs.md
     - name: Disk Defragmenter Limitations
       href: ./backup-and-storage/disk-defragmenter-limitations.md
-    - name: Distributed Link Tracking on domain controllers
-      href: ./backup-and-storage/distributed-link-tracking-on-domain-controller.md
     - name: Establish and boot to GPT mirrors in 64-bit Windows
       href: ./backup-and-storage/establish-boot-to-gpt-mirrors.md
     - name: Extend a data volume
@@ -749,8 +719,6 @@ items:
       href: ./backup-and-storage/intel-ssd-d3-s4510-s4610-series-1-dot-92-3-dot-84-tb-drives-unresponsive.md
     - name: New logging mechanism for VDS
       href: ./backup-and-storage/new-vds-logging-mechanism.md
-    - name: ReFS volume using DPM becomes unresponsive
-      href: ./backup-and-storage/refs-volume-dpm-unresponsive.md
     - name: Restore system/boot drive letter
       href: ./backup-and-storage/restore-system-boot-drive-letter.md
     - name: Simple volumes may become inaccessible
@@ -767,18 +735,12 @@ items:
       href: ./backup-and-storage/you-dont-have-permission-error-mount-iso-image.md
   - name: Storage hardware
     items:
-    - name: How to turn disk write caching on or off
-      href: ./backup-and-storage/turn-disk-write-caching-on-off.md
     - name: Information about Event ID 51
       href: ./backup-and-storage/event-id-51-information.md
-    - name: Pass-through disk in highly available VM is read-only
-      href: ./backup-and-storage/add-pass-through-disk-to-high-available-vm.md
     - name: Replicated Cluster Shared Volumes are offline
       href: ./backup-and-storage/replicated-csvs-offline-azure-stack-hci-upgrade.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
-    - name: USB Device not recognized error
-      href: ./backup-and-storage/usb-device-not-recognized-error.md
   - name: Storage Spaces
     items:
     - name: Extend stand-alone tiered storage spaces
@@ -808,7 +770,7 @@ items:
     - name: Third-party backup warnings after installing a servicing update
       href: ./backup-and-storage/third-party-backup-warnings-install-servicing-update.md
     - name: Volume Shadow Copy Service take longer to go online
-      href: ./backup-and-storage/volume-shadow-copy-service-take-longer-online.md    
+      href: ./backup-and-storage/volume-shadow-copy-service-take-longer-online.md
     - name: VSS event 8193 when restarting the Cryptographic Services service
       href: ./backup-and-storage/vss-error-8193-restart-cryptographic-services.md
     - name: VSS Warnings in Application Event log
@@ -1123,12 +1085,10 @@ items:
       href: ./high-availability/troubleshoot-cannot-bring-ip-address-online.md
     - name: Can't bring a physical disk online
       href: ./high-availability/troubleshoot-cannot-bring-physical-disk-online.md
-    - name: Active Route removed
-      href: ./high-availability/active-route-removed.md
     - name: Cluster validation account causes events or messages
       href: ./high-availability/cluster-validation-account-causes-events-messages.md
     - name: Error messages occur when bringing a cluster group online
-      href: ./high-availability/error-messages-bring-cluster-group-online.md      
+      href: ./high-availability/error-messages-bring-cluster-group-online.md
     - name: Recover computer object that supports Network Name resource
       href: ./high-availability/recover-deleted-computer-object-failover-cluster.md
     - name: '"The parameter is incorrect" error'
@@ -1136,7 +1096,7 @@ items:
   - name: Cannot failover a group
     items:
     - name: SMB 3.0 features in Windows Server 2012 file server
-      href: ./high-availability/smb-3-file-server-features.md  
+      href: ./high-availability/smb-3-file-server-features.md
   - name: Cluster node is hanging
     items:
     - name: Memory dump file is corrupted
@@ -1152,7 +1112,7 @@ items:
     - name: How to troubleshoot the Cluster service account
       href: ./high-availability/troubleshoot-cluster-service-account.md
     - name: Troubleshoot cluster issue with Event ID 1135
-      href: ./high-availability/troubleshoot-cluster-event-id-1135.md    
+      href: ./high-availability/troubleshoot-cluster-event-id-1135.md
   - name: Cluster Shared Volume (CSV)
     items:
     - name: 'Troubleshooting guidance: Event ID 5120 Cluster Shared Volume'
@@ -1163,40 +1123,12 @@ items:
       href: ./high-availability/unable-to-get-computer-object-using-guid.md
     - name: Cluster validation test on Active Directory configuration fails
       href: ./high-availability/cluster-validation-test-fails-multi-site-cluster-scenario.md
-    - name: Error "An item with the same key has already been added"
-      href: ./high-availability/error-an-item-with-the-same-key-has-already-been-added.md
-    - name: Failover cluster validation fails
-      href: ./high-availability/duplicate-address-error-validate-failover-cluster.md
-    - name: SCSI-3 Persistent Reservation test fails
-      href: ./high-availability/scsi-3-persistent-reservation-test-fail.md
     - name: Storage tests on a failover cluster might not discover all shared LUNs
       href: ./high-availability/failover-cluster-storage-validation-tests-dont-discover-all-shared-luns.md
-    - name: Validate Disk Failover test fails
-      href: ./high-availability/validation-fails-run-disk-failover-test.md
-    - name: You do not see the cluster disk in explorer or diskmgmt on Failover
-      href: ./high-availability/not-see-cluster-disk-in-explorer-or-diskmgmt-failover.md
   - name: Initial Cluster Creation or Adding node
     items:
-    - name: Cluster validation fails with error 80070005
-      href: ./high-availability/cluster-validation-failure-error-80070005.md
-    - name: Creating failover cluster fails with error 0xc000005e
-      href: ./high-availability/creating-failover-cluster-fails-error-0xc0000055.md
-    - name: Error message event ID 1289 is logged when you try to create a cluster
-      href: ./high-availability/error-event-id-1289-create-cluster.md
     - name: Error 0x80090327 when adding a node to a cluster
       href: ./high-availability/error-0x80090327-adding-node-to-cluster.md
-    - name: Implications of using /forcequorum switch
-      href: ./high-availability/implications-using-slash-forcequorum-switch.md
-    - name: Move Windows Server cluster to another domain
-      href: ./high-availability/move-server-cluster-to-another-domain.md
-    - name: Provider load failure
-      href: ./high-availability/provider-load-failure.md
-    - name: '"The cluster node already exists" error may appear during cluster setup'
-      href: ./high-availability/cluster-node-already-exists-error.md
-    - name: Troubleshooting for Guest Cluster nodes in Hyper-V not create or join
-      href: ./high-availability/guest-cluster-nodes-in-hyper-v-not-create-or-join.md
-    - name: Unable to join a node into a cluster
-      href: ./high-availability/cannot-join-a-node-into-a-cluster.md
   - name: Node removed from the cluster
     items:
     - name: Cluster IP address resources fail on both nodes when one node disconnects
@@ -1204,15 +1136,9 @@ items:
     - name: Problem with deleting nodes from active failover cluster membership
       href: ./high-availability/problem-nodes-failover-cluster.md
     - name: Remove nodes from active failover cluster membership
-      href: ./high-availability/nodes-failover-cluster-vmware.md  
+      href: ./high-availability/nodes-failover-cluster-vmware.md
   - name: Replacing hardware and updating the operating system
-    items:
-    - name: Can't upgrade operating system of clustered server
-      href: ./high-availability/cannot-upgrade-clustered-server-operating-system.md
-    - name: How to update failover clusters
-      href: ./high-availability/windows-server-failover-clusters-service-packs-hotfixes.md
-    - name: Recommended updates for Windows Server 2008 R2-based server clusters
-      href: ./high-availability/hotfixes-for-windows-server-2008-r2-server-cluster.md
+    items: []
   - name: Root cause of an unexpected failover
     items:
     - name: 'Troubleshooting guidance: Unexpected cluster failover'
@@ -1220,31 +1146,19 @@ items:
     - name: Failover behavior on clusters of three or more nodes
       href: ./high-availability/groups-fail-logic-three-more-cluster-node-members.md
     - name: Run chkdsk /f command on a shared cluster disk
-      href: ./high-availability/run-chkdsk-f-command-shared-cluster-disk.md    
+      href: ./high-availability/run-chkdsk-f-command-shared-cluster-disk.md
   - name: Setup and configuration of clustered services and applications
     items:
-    - name: Add support for more than eight LUNs
-      href: ./high-availability/support-large-logical-unit-numbers.md
     - name: Antivirus software cause problems with Cluster Services
       href: ./high-availability/not-cluster-aware-antivirus-software-cause-issue.md
     - name: Change the IP address of network adapters in a cluster
       href: ./high-availability/change-network-adapters-ip-address-cluster-node.md
     - name: Configure Shadow Copies of Shared Folders feature
       href: ./high-availability/shadow-copies-of-shared-folders.md
-    - name: Configure volume mount points on a server cluster
-      href: ./high-availability/configure-volume-mount-points-server-cluser.md
-    - name: Create file shares on a cluster
-      href: ./high-availability/create-file-shares-on-a-cluster.md
-    - name: Enable support using clustered RAID controllers
-      href: ./high-availability/enable-support-using-raid-controllers.md
     - name: Event ID 1222 when you create failover cluster
       href: ./high-availability/event-id-1222-create-failover-cluster.md
     - name: Extend the partition of a cluster shared disk
       href: ./high-availability/extend-partition-cluster-shared-disk.md
-    - name: Fail to manage cluster with failover cluster manager
-      href: ./high-availability/cannot-manage-cluster-with-failover-cluster-manager.md
-    - name: How Cluster service reserves and brings online disks
-      href: ./high-availability/cluster-service-reserves-brings-disk.md
     - name: How to configure FTP for IIS in a failover cluster
       href: ./high-availability/configure-internet-information-services-ftp.md
     - name: Microsoft support policy for Windows server failover cluster
@@ -1253,8 +1167,6 @@ items:
       href: ./high-availability/netbios-wins-dont-bind-cluster-ip-address-resources.md
     - name: Recommended private "Heartbeat" configuration on a cluster server
       href: ./high-availability/private-heartbeat-configuration-on-cluster-server.md
-    - name: Recommended updates for Windows Server 2008 R2 SP1 Failover Clusters
-      href: ./high-availability/updates-for-windows-server-2008-r2-sp1-failover-cluster.md
     - name: SMB features don't work with non-default Cluster Network Name Configuration
       href: ./high-availability/smb-features-dont-work-non-default-cluster-network-name-configuration.md
     - name: Third-party storage software solutions support policy
@@ -1263,10 +1175,6 @@ items:
       href: ./high-availability/troubleshoot-issues-accounts-used-failover-clusters.md
     - name: Tuning Failover Cluster Network Thresholds
       href: ./high-availability/iaas-sql-failover-cluster-network-thresholds.md
-    - name: Unexpected warning messages in a virtualized failover cluster
-      href: ./high-availability/errors-windows-failover-cluster-run-as-guest.md
-    - name: Use Windows Server cluster nodes as DCs
-      href: ./high-availability/use-cluster-nodes-as-domain-controllers.md
 - name: Licensing and activation
   items:
   - name: Licensing and activation
@@ -1594,7 +1502,7 @@ items:
   - name: Network Connection Status Indicator (NCSI)
     items:
     - name: 'Troubleshooting guidance: Network Connection Status Indicator (NCSI)'
-      href: ./networking/troubleshoot-ncsi-guidance.md  
+      href: ./networking/troubleshoot-ncsi-guidance.md
   - name: Network Load Balancing (NLB)
     items:
     - name: Configure network infrastructure to support NLB operation mode
@@ -1966,7 +1874,7 @@ items:
     - name: Task Manager displays incorrect memory information
       href: ./performance/task-manager-display-incorrect-memory-info.md
     - name: Task Manager displays incorrect processor affinity
-      href: ./performance/task-manager-displays-incorrect-processor-affinity.md      
+      href: ./performance/task-manager-displays-incorrect-processor-affinity.md
     - name: Unable to allocate memory from the system paged pool
       href: ./performance/unable-allocate-memory-system-paged-pool.md
     - name: User-defined data collector set doesn't run as scheduled
@@ -1977,10 +1885,10 @@ items:
     items:
     - name: incorrect shutdown reason code written to SEL
       href: ./performance/incorrect-shutdown-reason-code-sel.md
-    - name: 'System shutdown is slow'
+    - name: System shutdown is slow
       href: ./performance/system-shutdown-is-slow.md
     - name: System shutdown stops responding
-      href: ./performance/system-shutdown-stops-responding-issues.md      
+      href: ./performance/system-shutdown-stops-responding-issues.md
     - name: Use Userdump.exe to create a dump file
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
@@ -2003,6 +1911,8 @@ items:
       href: ./performance/slow-performance-when-using-power-plan.md
     - name: Slow performance with files over the network
       href: ./performance/slow-performance-file-server.md
+    - name: Troubleshoot performance problems in Windows
+      href: ./performance/troubleshoot-performance-problems-in-windows.md
   - name: System Hang
     items:
     - name: Cannot restart a Windows Server computer that uses Credential Guard and Hyper-V
@@ -2192,12 +2102,12 @@ items:
   - name: Connecting to a session or desktop
     items:
     - name: '"An internal error has occurred" when connecting to a remote machine'
-      href: ./remote/internal-error-has-occurred-connecting-remote-machine.md 
+      href: ./remote/internal-error-has-occurred-connecting-remote-machine.md
     - name: Connect to and shadow console session with Terminal Services
       href: ./remote/connect-to-and-shadow-console-session.md
     - name: Error 0xc0000005 when you log on to Terminal Server client
       href: ./remote/0xc0000005-terminal-server-client.md
-    - name: 'Error "Remote Desktop cannot verify the identity of the remote computer"'
+    - name: Error "Remote Desktop cannot verify the identity of the remote computer"
       href: ./remote/remote-desktop-cannot-verify-identity-connecting-remote-machine.md
     - name: Event ID 10000 when Terminal Server is enabled
       href: ./remote/event-10000-terminal-server-enabled.md
@@ -3024,7 +2934,7 @@ items:
     - name: TGS requests for krbtgt account fail
       href: ./windows-security/tgs-request-for-krbtgt-account-fails.md
     - name: The Fingerprint Registration Wizard doesn't run
-      href: ./windows-security/fingerprint-registration-wizard-not-run-install-fingerprint-reader.md    
+      href: ./windows-security/fingerprint-registration-wizard-not-run-install-fingerprint-reader.md
   - name: Legacy authentication (NTLM)
     items:
     - name: Audit event shows authentication package as NTLMv1
@@ -3123,10 +3033,6 @@ items:
     items:
     - name: How the Windows Update client determines which proxy server to use
       href: ./installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md
-    - name: Windows Server 2008 Service Pack 2
-      href: ./installing-updates-features-roles/windows-server-2008-service-pack-2.md
-    - name: WSUS 3.0 installation package is available
-      href: ./installing-updates-features-roles/wsus-3-installation-package.md
   - name: Issues installing Features on Demand (FoD)
     items:
     - name: Can't install .NET Framework 3.5 on OEM Windows installation
@@ -3171,8 +3077,6 @@ items:
       href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
     - name: Error C0190003 after installing updates
       href: ./installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md
-    - name: Error code 2359302 when installing updates in Windows Server 2019
-      href: ./installing-updates-features-roles/error-2359302-installing-windows-updates.md
     - name: ERROR_INVALID_DATA error after installing Windows updates
       href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
     - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
@@ -3218,7 +3122,7 @@ items:
     - name: Scripts to compile all registered MOF files
       href: ./support-tools/scripts-compile-registered-mof-files.md
     - name: Scripts to extract .msu and .cab files
-      href: ./support-tools/scripts-extract-msu-cab-files.md      
+      href: ./support-tools/scripts-extract-msu-cab-files.md
     - name: Scripts to list all running WMI providers
       href: ./support-tools/scripts-list-running-wmi-providers.md
     - name: Scripts to retrieve profile age and optionally delete aged copies

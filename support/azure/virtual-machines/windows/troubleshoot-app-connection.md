@@ -8,7 +8,7 @@ manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
 keywords: cannot start application, program won't open, listen port blocked, unable to start program, listen port blocked
 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting

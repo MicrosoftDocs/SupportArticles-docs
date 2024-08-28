@@ -4,7 +4,7 @@ description: Learn how to resolve common troubleshooting issues that involve the
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
@@ -357,6 +357,76 @@ An issue occurred within the existing *ca-certificates* package that caused the 
 ```bash
 sudo yum reinstall ca-certificates
 sudo update-ca-trust
+```
+
+### preupgrade symptom 6: FileNotFoundError: [Errno 2] No such file or directory: '/etc/leapp/repos.d/system_upgrade/common/files/rhui/azure-XX/content-XX.crt'
+
+If you try to run `leapp preupgrade` on `RHEL` 8 for `SAP-HANA` or `SAPApps` that have the `leapp` tool version `lapp-rhui-azure-sap-1.0.0-14.el8.noarch`, or on base Red Hat images that have version `leapp-rhui-azure-1.0.0-14.el8.noarch`, the following error message is generated:
+
+```output
+====> * target_userspace_creator
+        Initializes a directory to be populated as a minimal environment to run binaries from the target system.
+Process Process-408:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.6/site-packages/leapp/repository/actor_definition.py", line 74, in _do_run
+    actor_instance.run(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/leapp/actors/__init__.py", line 289, in run
+    self.process(*args)
+  File "/etc/leapp/repos.d/system_upgrade/common/actors/targetuserspacecreator/actor.py", line 58, in process
+    userspacegen.perform()
+  File "/usr/lib/python3.6/site-packages/leapp/utils/deprecation.py", line 42, in process_wrapper
+    return target_item(*args, **kwargs)
+  File "/etc/leapp/repos.d/system_upgrade/common/actors/targetuserspacecreator/libraries/userspacegen.py", line 774, in perform
+    target_repoids = _gather_target_repositories(context, indata, prod_cert_path)
+  File "/etc/leapp/repos.d/system_upgrade/common/actors/targetuserspacecreator/libraries/userspacegen.py", line 714, in _gather_target_repositories
+    rhui.copy_rhui_data(context, indata.rhui_info.provider)
+  File "/etc/leapp/repos.d/system_upgrade/common/libraries/rhui.py", line 259, in copy_rhui_data
+    context.copy_to(os.path.join(data_dir, path_[0]), path_[1])
+  File "/etc/leapp/repos.d/system_upgrade/common/libraries/mounting.py", line 232, in copy_to
+    shutil.copy2(src, self.full_path(dst))
+  File "/usr/lib64/python3.6/shutil.py", line 263, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/lib64/python3.6/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/leapp/repos.d/system_upgrade/common/files/rhui/azure-sap-ha/content-sap-ha.crt'
+```
+
+SAP-HA images generate:
+
+```output
+FileNotFoundError: [Errno 2] No such file or directory:'/etc/leapp/repos.d/system_upgrade/common/files/rhui/azure-sap-ha/content-sap-ha.crt'
+```
+
+SAPApps images generate:
+
+```output
+FileNotFoundError: [Errno 2] No such file or directory:'/etc/leapp/repos.d/system_upgrade/common/files/rhui/azure-sap-apps/content-sapapps.crt'
+```
+
+Base images generate:
+
+```output
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/leapp/repos.d/system_upgrade/common/files/rhui/azure/content.crt'
+```
+
+#### preupgrade solution 6
+
+The workaround for this issue is to downgrade the version of `leapp-rhui-azure-sap` to `leapp-rhui-azure-sap-1.0.0-10.el8.noarch` for SAP images, and the version of `leapp-rhui-azure` to `leapp-rhui-azure-1.0.0-10.el8.noarch` for Red Hat base images.
+
+SAP images:
+
+```bash
+sudo dnf downgrade leapp-rhui-azure-sap 
+```
+
+Base images:
+
+```bash
+sudo dnf downgrade leapp-rhui-azure
 ```
 
 After you resolve all the inhibitors, run the preupgrade again, and make sure that all issues are resolved.

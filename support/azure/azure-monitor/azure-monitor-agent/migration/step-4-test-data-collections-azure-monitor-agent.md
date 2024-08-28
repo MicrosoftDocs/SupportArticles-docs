@@ -1,7 +1,7 @@
 ---
 title: Step 4 - Test data collections in Azure Monitor Agent
 description: Learn how to test data collections in Azure Monitor Agent as part of migrating from the legacy Log Analytics agent.
-ms.date: 07/16/2024
+ms.date: 08/19/2024
 ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
@@ -9,40 +9,59 @@ ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 ---
 # Step 4: Test data collections in Azure Monitor Agent
 
-This article discusses how to deploy new data collection rules (DCRs) and associate a pilot group of server agents so that you can test data collections in Azure Monitor Agent.
+In this article, you can find several methods for linking recently formed data collection rules (DCRs) with existing virtual machines (VMs). By following these techniques, you can begin gathering data for analysis in a testing or production environment.
 
-## Deploy new data collection rules (DCRs)
+## Deploy newly generated DCRs to a test workspace
 
-To deploy a new DCR from a Bicep template, follow these steps:
+### Deploy Log Analytics testing workspace
 
-1. Install the Azure CLI and Bicep CLI on your virtual machine (VM).
+To set up a short-term Log Analytics workspace for testing purposes, follow these steps:
 
-1. Create or modify a Bicep file that defines the DCR resource and its properties. You can use the sample template that's provided in the documentation as a reference.
+1. Sign in to the Azure portal with your Azure account credentials.
+1. In the search bar at the top of the portal, type *Log Analytics* and press <kbd>Enter</kbd> to open the **Log Analytics** blade.
+1. Select the **+ Add** or **Add** button to create a new Log Analytics workspace.
+1. Fill in the required details for your new workspace, such as the name and the subscription where you want to create it.
+1. Select a resource group for your new workspace. You can create a new one or use an existing one.
+1. Select the location for your Log Analytics workspace. This should be the same region as your virtual machines.
+1. Select **Create** to start the deployment process. The creation of the Log Analytics workspace may take several minutes.
+1. Once the deployment is complete, navigate to the newly created Log Analytics workspace in the Azure portal.
 
-1. Run the [az login](/cli/azure/reference-index#az-login) command to sign in to your Azure account, and then set the subscription on which you want to deploy the DCR.
+### Swap the production workspace with the test workspace
 
-1. Run the [az deployment group create](/cli/azure/deployment/group#az-deployment-group-create) command to deploy the DCR to a resource group.
+1. In the search bar at the top of the portal, type *Data Collection Rules* and press <kbd>Enter</kbd> to open the **Data Collection Rules** blade.
+1. Select the data collection rule that you newly created with the DCR tool.
+1. Select **Configuration** > **Data Sources**, and then select a data source.
+1. Validate the data source setting and select the **Destination** tab.
+1. Select **Destination Details** to remove the production workspace and replace with testing workspace.
+1. Begin your testing activities within this temporary Log Analytics workspace, ensuring that you have all required permissions and access levels in place.
 
-1. Verify that the DCR is created and configured correctly by running the [az monitor data-collection rule show](/cli/azure/monitor/data-collection/rule#az-monitor-data-collection-rule-show) command or by checking the Azure portal.
+### Associate VMs to the DCR
 
-## Associate pilot agents
-
-To test the data collections, we recommend that you identify a pilot group of servers that are representative of your environment and associate the servers with the DCRs that you created.
-
-To associate a VM with a DCR, follow these steps:
-
-1. In the [Azure portal](https://portal.azure.com), search for and select **Monitor**.
-1. In the **Monitor** menu pane, select **Settings** > **Data Collection Rules**.
-1. In the list of data collection rules, select the DCR that you want to associate with a VM.
-1. In the menu pane of your DCR, locate the **Configuration** heading, and then select **Resources**.
+1. In the list of DCRs, select the DCR that you want to associate with VMs.
+1. In the menu pane of the DCR, locate the **Configuration**, and then select **Resources**.
 
    :::image type="content" source="media/step-4-test-data-collections-azure-monitor-agent/data-collection-rule-resources-page.png" alt-text="Azure portal screenshot of the data collection rule's Resources page." lightbox="media/step-4-test-data-collections-azure-monitor-agent/data-collection-rule-resources-page.png":::
 
-1. Select the **Add** button to search for VMs to associate with the DCR. The **Select a scope** pane appears:
+1. Select the **+ Add** button to search VMs to associate with the DCR. The **Select a scope** pane appears:
 
    :::image type="content" source="media/step-4-test-data-collections-azure-monitor-agent/data-collection-rule-select-a-scope-pane.png" alt-text="Azure portal screenshot of the data collection rule's Select a scope pane after you select the Add button." lightbox="media/step-4-test-data-collections-azure-monitor-agent/data-collection-rule-select-a-scope-pane.png":::
 
-1. Locate the VMs that you want to associate with the DCR, and then select the **Apply** button. If Azure Monitor Agent hasn't been deployed to the VM, it will be deployed at this time.
+1. Locate the VMs that you want to associate with the DCR, and then select the **Apply** button. If Azure Monitor Agent isn't deployed to the VM, it's deployed at this time.
+
+You're now ready to validate your configuration.
+
+### Post validation steps
+
+Once the data validation is complete, perform these steps:
+
+1. Switch the destination workspace in the DCR from the temporary workspace to the production workspace.
+1. Remove the legacy agent extension from the VM in the portal.
+
+Migration is now complete. To migrate more workspaces, repeat the steps.
+
+To check the latest status of your migration, see the AMA Migration Helper workbook:
+
+:::image type="content" source="media/step-1-plan-your-migration/azure-monitor-migration-helper-azure-virtual-machines-tab.png" alt-text="Azure portal screenshot of the Azure Virtual Machines tab of the Azure Monitor Agent Migration Helper workbook." lightbox="media/step-1-plan-your-migration/azure-monitor-migration-helper-azure-virtual-machines-tab.png":::
 
 ## Troubleshoot Azure Monitor Agent
 

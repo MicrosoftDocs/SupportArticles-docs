@@ -7,7 +7,7 @@ ms.author: genli
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: virtual-machine-scale-sets
+ms.service: azure-virtual-machine-scale-sets
 ms.custom: sap:Scaling issue with my scale set
 ---
 
