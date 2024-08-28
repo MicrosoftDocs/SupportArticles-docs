@@ -7,7 +7,7 @@ ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Power Automate for desktop installation logs
 
-If your Power Automate for desktop installation fails, you can use the logs described in this article to diagnose and resolve issues. If you need to contact [Microsoft Support](/power-platform/products/power-automate/) for assistance with installation issues, collect the following logs in a .zip file and include them with the support request to expediate the investigation.
+If your Power Automate for desktop installation fails, you can use the logs described in this article to diagnose and resolve issues. If you need to contact [Microsoft Support](https://www.microsoft.com/power-platform/products/power-automate/) for assistance with installation issues, collect the following logs in a .zip file and include them with the support request to expediate the investigation.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4555577
