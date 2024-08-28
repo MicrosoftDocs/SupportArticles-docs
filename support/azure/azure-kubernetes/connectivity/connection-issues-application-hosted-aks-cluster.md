@@ -118,13 +118,17 @@ kubectl run -it --rm aks-ssh --image=debian:stable
 
 # After the test pod is running, you will gain access to the pod.
 # Then you can run the following commands:
-apt-get update -y && apt-get install dnsutils -y && apt-get install curl -y
+apt-get update -y && apt-get install dnsutils -y && apt-get install curl -y && apt-get install netcat-traditional -y
 
 # After the packages are installed, test the connectivity to the application pod:
 curl -Iv http://<pod-ip-address>:<port>
 ```
 
-For applications that listen on other protocols, you can install relevant tools inside the test pod and then check the connectivity to the application pod.
+For applications that listen on other protocols, you can install relevant tools inside the test pod like netcat tool, then check the connectivity to the application pod as in the below:
+```bash
+# After the packages are installed, test the connectivity to the application pod using netcat/nc command:
+nc -z -v <pod-ip-address> <port>
+```
 
 For more commands to troubleshoot pods, see [Debug running pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/).
 
@@ -183,10 +187,15 @@ kubectl run -it --rm aks-ssh --image=debian:stable
   
 # After the test pod is running, you will gain access to the pod.
 # Then, you can run the following commands:
-apt-get update -y && apt-get install dnsutils -y && apt-get install curl -y
+apt-get update -y && apt-get install dnsutils -y && apt-get install curl -y && apt-get install netcat-traditional -y
   
 # After the packages are installed, test the connectivity to the service:
 curl -Iv http://<service-ip-address>:<port>
+```
+For applications that listen on other protocols, you can install relevant tools inside the test pod like netcat tool, then check the connectivity to the application pod as in the below:
+```bash
+# After the packages are installed, test the connectivity to the application pod using netcat/nc command:
+nc -z -v <pod-ip-address> <port>
 ```
 
 If the previous command doesn't return an appropriate response, check the service events for any errors.
@@ -201,6 +210,11 @@ For the `LoadBalancer` service, you can access the load balancer IP address from
 curl -Iv http://<service-ip-address>:<port>
 ```
 
+For applications that listen on other protocols, you can install relevant tools inside the test pod like netcat tool, then check the connectivity to the application pod as in the below:
+```bash
+nc -z -v <pod-ip-address> <port>
+```
+
 Does the `LoadBalancer` service IP address return a correct response? If it doesn't, follow these steps:
 
 1. Verify the events of the service.
@@ -213,11 +227,11 @@ For more commands to troubleshoot services, see [Debug services](https://kuberne
 
 For scenarios in which the application is exposed by using an `Ingress` resource, the traffic flow resembles the following progression:
 
-> Client >> DNS name >> Load balancer or application gateway IP address >> Ingress pods inside the cluster >> Service or pods
+> Client >> DNS name >> Load balancer or application gateway IP address >> Ingress controller pods inside the cluster >> Service or pods
 
 :::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" alt-text="Diagram of the network traffic flow when an app inside an Azure Kubernetes Service (A K S) cluster is exposed by using an ingress resource." border="false":::
 
-You can apply the inside-out approach of troubleshooting here, too. You can also check the ingress and ingress controller details for more information:
+You can apply the inside-out approach of troubleshooting here, too. You can also check the ingress kubernetes resource and ingress controller details for more information:
 
 ```console
 $ kubectl get ing -n <namespace-of-ingress>  # Checking the ingress details and events.
