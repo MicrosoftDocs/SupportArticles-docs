@@ -21,11 +21,11 @@ When Certificate Services starts in the Certification Authority (CA), a certific
 
 When requesting a certificate, once you select the template and click **Enroll**, you get the error: "The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE)"
 
-## More information
+## Cause
 
 The behavior occurs because the Authenticated Users group is removed from the template's access control list (ACL). The Authenticated Users group is on a template ACL, by default. (The CA itself is included in this group.) If the Authenticated Users group is removed, the (enterprise) CA itself can no longer read the template in the Active Directory, and that's why certificate requests can be unsuccessful.
 
-## More information
+## Resolution
 
 If an administrator wants to remove the Authenticated Users group, each and every CA's computer account must be added to the template ACLs and set to Read.
 
@@ -41,19 +41,18 @@ If authenticated users group is removed from the ACLs of a template, the followi
 
 - For the client:
 
-    Enrollment by means of a Web page:
+    Enrollment with Web Enrollment page:
   
   > Certificate Request Denied  
   Your certificate request was denied.  
-  Your Request Id is <RequestID>. The disposition message is "Denied by Policy Module 0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services policy: <Template information> 
+  Your Request Id is RequestID. The disposition message is "Denied by Policy Module 0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services policy: <Template information> 
   
-  
-  Enrollment by means of the Microsoft Management Console (MMC):
+  Enrollment with Microsoft Management Console (MMC):
   The requested certificate template is not supported by this CA.
   
-  <CA info> 
+  CA info   
   
-  Denied by Policy Module 0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services Policy: <Template information>. 
+  Denied by Policy Module 0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services Policy: Template_information. 
   
   The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE) 
   
@@ -61,12 +60,12 @@ If authenticated users group is removed from the ACLs of a template, the followi
   
 - For the CA:
 
-  > Event Type:Warning  
+> Event Type:Warning  
   Event Source: CertificationAuthority  
   Event ID: 53  
-    
+  
   Description:  
-  Active Directory Certificate Services denied request <request ID> because The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE).  The request was for <Template name>.  Additional information: Denied by Policy Module  0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services policy: <Template info> 
+  Active Directory Certificate Services denied request RequestID because The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE).  The request was for Template_name.  Additional information: Denied by Policy Module  0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services policy: Template_Info 
   
 - Error on CA When Certificate Services starts
 
@@ -74,4 +73,4 @@ If authenticated users group is removed from the ACLs of a template, the followi
 Event Source: CertificationAuthority   
 Event ID: 77  
 Description:  
-The "Windows default" Policy Module logged the following warning: The <template_name> Certificate Template could not be loaded.  Element not found. 0x80070490 (WIN32: 1168 ERROR_NOT_FOUND). 
+The "Windows default" Policy Module logged the following warning: The template_name Certificate Template could not be loaded.  Element not found. 0x80070490 (WIN32: 1168 ERROR_NOT_FOUND). 
