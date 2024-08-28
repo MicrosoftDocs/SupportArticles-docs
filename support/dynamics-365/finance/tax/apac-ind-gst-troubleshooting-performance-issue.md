@@ -31,7 +31,7 @@ For performance issues caused by calling the method `TaxBusinessService::calcula
 ## Enable delayed tax calculation on journal
 By default, sales tax amounts on journal lines are calculated whenever tax-related fields are updated. These fields include the fields for sales tax groups and item sales tax groups. Any update to a journal line causes tax amounts to be recalculated for all journal lines. Although this behavior helps user see tax amounts calculated in real time, it can also affect performance if the number of journal lines is very large.
 
-This article [Enable delayed tax calculation on journals](https://learn.microsoft.com/en-us/dynamics365/finance/general-ledger/enable-delayed-tax-calculation) explains how you can delay sales tax calculation on journals. This capability helps improve the performance of tax calculations when there are many journal lines.
+This article [Enable delayed tax calculation on journals](https://github.com/MicrosoftDocs/Dynamics-365-Unified-Operations-Public/blob/main/articles/finance/general-ledger/enable-delayed-tax-calculation.md) explains how you can delay sales tax calculation on journals. This capability helps improve the performance of tax calculations when there are many journal lines.
 
 
 
