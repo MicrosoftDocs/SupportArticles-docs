@@ -26,7 +26,7 @@ To enable the managed identity support for SQL Server on Azure VMs, the followin
 2.	Create or use Azure Storage with a blob container.
 3.	Assign role-based access control (RBAC) roles for the primary managed identity to access the Azure Storage.
 4.	Run the T-SQL command `CREATE CREDENTIAL` with the `WITH IDENTITY = ‘Managed Identity’`  clause using the Azure Storage URL as a credential name.
-5.	Rxecute the T-SQL command `BACKUP/RESTORE DATABASE` using the Azure Storage URL.
+5.	Run the T-SQL command `BACKUP/RESTORE DATABASE` using the Azure Storage URL.
 
 ```SQL
 -- Create credential with managed identity and credential name set to
@@ -40,9 +40,9 @@ BACKUP DATABASE mydb
 RESTORE DATABASE mydb1  
  FROM URL ='https://<storageaccount>.blob.core.windows.net/<container>/mydb.bak'  
 ```
-Trace flag 4675, disabled by default, allows troubleshooting the server-level credential and can be used to confirm the primary managed identity that is assigned to the SQL Server instance. 
+[Trace flag 4675](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql), disabled by default, allows troubleshooting the server-level credential and can be used to confirm the primary managed identity that is assigned to the SQL Server instance. 
 
-For more information, see [SQL Server backup to URL for Microsoft Azure Blob Storage]( /sql/relational-databases/backup-restore/sql-server-backup-to-url).
+For more information, see [Backup and restore to URL using managed identities](/azure/azure-sql/virtual-machines/windows/backup-restore-to-url-using-managed-identities).
 
 > [!NOTE]
 > - The managed identity support doesn’t introduce any T-SQL syntax or system view changes, since this functionality already exists for Azure SQL Managed Instance. 
@@ -63,5 +63,5 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 - [Configure managed identities on Azure virtual machines (VMs)](/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities)
 - [Enable Microsoft Entra authentication for SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm)
 - [CREATE CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-credential-transact-sql#e-creating-a-credential-for-managed-identity)
-- [SQL Server backup to URL for Microsoft Azure Blob Storage](/sql/relational-databases/backup-restore/sql-server-backup-to-url)
+- [Backup and restore to URL using managed identities](/azure/azure-sql/virtual-machines/windows/backup-restore-to-url-using-managed-identities)
 - [DBCC TRACEON - Trace Flags (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)
