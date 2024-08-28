@@ -9,7 +9,7 @@ tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure
-ms.date: 05/22/2017
+ms.date: 08/28/2024
 ms.author: xujing
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
@@ -71,7 +71,7 @@ This section lists the common error messages you might encounter when managing V
 |  ConflictingUserInput  |  Source and destination storage accounts for disk {0} are different.  |
 |  ContainerAlreadyOnLease  |  There is already a lease on the storage container holding the blob with URI {0}.  |
 |  CrossSubscriptionMoveWithKeyVaultResources  |  The Move resources request contains KeyVault resources, which are referenced by one or more {0}s in the request. This isn't supported currently in Cross subscription Move. Check the error details for the KeyVault resource Ids.  |
-|  DataDisksForceDetached  |  One or more data disks were force detached from the VM {0}. [Redeploy](https://learn.microsoft.com/rest/api/compute/virtual-machines/redeploy) for virtual machine scale sets with uniform Orchestration. For others [reapply](https://learn.microsoft.com/rest/api/compute/virtual-machines/reapply). |
+|  DataDisksForceDetached  |  One or more data disks were force detached from the VM {0}. [Redeploy](/rest/api/compute/virtual-machines/redeploy) for virtual machine scale sets with uniform orchestration. For others, [reapply](/rest/api/compute/virtual-machines/reapply). |
 |  DiagnosticsOperationInternalError  |  An internal error occurred while processing diagnostics profile of VM {0}.  |
 |  DiskBlobAlreadyInUseByAnotherDisk  |  Blob {0} is already in use by another disk belonging to VM '{1}'. You can examine the blob metadata for the disk reference information.  |
 |  DiskBlobNotFound  |  Unable to find VHD blob with URI {0} for disk '{1}'.  |
