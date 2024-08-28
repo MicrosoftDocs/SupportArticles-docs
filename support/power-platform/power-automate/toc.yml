@@ -112,8 +112,6 @@
       href: desktop-flows/ui-automation-action-fails-errors.md
     - name: Focus window action can't bring a window to focus
       href: desktop-flows/focus-window-action-not-working.md
-    - name: How to get Power Automate for desktop installer logs
-      href: desktop-flows/how-to-get-power-automate-desktop-installer-logs.md
     - name: '"Invalid Private key file" error in Open secure FTP connection action'
       href: desktop-flows/invalid-private-key-file-error.md
     - name: Internet connection is interrupted after installing Power Automate
@@ -126,6 +124,8 @@
       href: desktop-flows/logon-type-has-not-been-granted.md
     - name: Machine registration failure
       href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
+    - name: Power Automate for desktop installation logs
+      href: desktop-flows/how-to-get-power-automate-desktop-installer-logs.md
     - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'
       href: desktop-flows/cannot-update-power-automate-for-desktop.md
     - name: Power Automate for desktop console doesn't show any flows
