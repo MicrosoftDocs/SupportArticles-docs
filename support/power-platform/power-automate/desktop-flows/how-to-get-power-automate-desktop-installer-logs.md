@@ -2,12 +2,12 @@
 title: Power Automate for desktop installation logs
 description: Introduces the locations that contain Power Automate for desktop installation logs.
 ms.reviewer: quseleba, guco
-ms.date: 08/28/2024
+ms.date: 08/29/2024
 ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Power Automate for desktop installation logs
 
-If your Power Automate for desktop installation fails, you can use the logs described in this article to diagnose and resolve issues. If you need to contact [Microsoft Support](https://www.microsoft.com/power-platform/products/power-automate/) for assistance with installation issues, collect the following logs in a .zip file and include them in the support request to expedite the investigation.
+If your Power Automate for desktop installation fails, you can use the logs described in this article to diagnose and resolve issues. If you need to contact [Microsoft Support](https://www.microsoft.com/power-platform/products/power-automate/support) for assistance with installation issues, collect the following logs in a .zip file and include them in the support request to expedite the investigation.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4555577
@@ -22,6 +22,12 @@ These logs can be found in the _%temp%_ folder of the user who performed the ins
 The _Power Automate for desktop\_*.log_ file contains the general reason why the installation failed. The _Power Automate for desktop\_\*\_\*\_MicrosoftFlowRPA.log_ file has more detailed information.
 
 :::image type="content" source="media/how-to-get-power-automate-desktop-installer-logs/power-automate-installer-logs.png" alt-text="Screenshot of the Power automate for desktop installer logs.":::
+
+### How to export the Installer logs
+
+If your installation encounters an error and displays the message "There's a problem installing," you can find more details by selecting the "installation log files" link located under the **Troubleshooting tips** section. This will allow you to export the installer logs.
+
+:::image type="content" source="media/how-to-get-power-automate-desktop-installer-logs/installation-log-files.png" alt-text="Screenshot of the page that contains the installation log files link that you can use to export the installer logs.":::
 
 ## Program data logs
 
