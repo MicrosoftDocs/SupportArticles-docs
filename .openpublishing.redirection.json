@@ -11814,6 +11814,21 @@
       "source_path": "support/windows-server/backup-and-storage/not-enough-storage-process-this-command.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/not-enough-storage-process-this-command",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/windows-installations-disk-duplication.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/windows-installations-disk-duplication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/error-10013-wsaeacces-is-returned.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/error-10013-wsaeacces-is-returned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/directaccess-clients-connection-error-0x274d.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/directaccess-clients-connection-error-0x274d",
+      "redirect_document_id": true
     }
   ]
 }
