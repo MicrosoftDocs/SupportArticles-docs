@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Event ID 1311 messages
 description: Describes how to troubleshoot event ID 1311 messages in the Directory Service event.
-ms.date: 12/26/2023
+ms.date: 08/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -143,13 +143,10 @@ The `repadmin /showism` command is useful for locating improperly configured sit
 > ==== TRANSPORT CN=IP,CN=Inter-Site Transports,CN=Sites,CN=Configuration,DC=corp,DC=com CONNECTIVITY INFORMATION FOR 3 SITES: ====  
 > 0,    1,    2  
 > ( 0) CN=US-NC,CN=Sites,CN=Configuration,DC=corp,DC=com  0:0:0, 100:15:0, 200:15:0  
-> ( 1) CN=US-TX,CN=Sites,CN=Configuration,DC=corp,DC=com
-```
- 100:15:0, 0:0:0, 100:15:0  
-```> ( 2) CN=US-WA,CN=Sites,CN=Configuration,DC=corp,DC=com
-```
- 200:15:0, 100:15:0, 0:0:0
-```> [!NOTE]
+> ( 1) CN=US-TX,CN=Sites,CN=Configuration,DC=corp,DC=com  100:15:0, 0:0:0, 100:15:0  
+> ( 2) CN=US-WA,CN=Sites,CN=Configuration,DC=corp,DC=com  200:15:0, 100:15:0, 0:0:0
+
+> [!NOTE]
 > Unlike other arguments for the repadmin command, you cannot run the `repadmin /showism` command from a remote computer. You must run the `repadmin /showism` command from the console of the domain controller that you want to examine (in most cases, this is the ISTG domain controller).
 
 For each site that is configured for IP-based replication or for SMTP-based replication (not shown), the `repadmin /showism` command returns a site matrix that represents the connections to all the sites in the forest. Each entry in the site matrix contains three numbers delimited by colons (:) that represent the cost, replication interval, and options for each replication link to another site in the Active Directory forest. The numbers in an entry appear in the following order:  
@@ -204,7 +201,7 @@ To search for preferred bridgehead servers:
     ObjectClass: server  
     Attributes: bridgeheadTransportList
 
-1. Use the FINDSTR command against an LDIFDE export file from the CN=Sites,CN=Configuration container:  
+2. Use the FINDSTR command against an LDIFDE export file from the CN=Sites,CN=Configuration container:  
       LDIFDE CN=SITES,CN=CONFIGURATION,DC=\<Root domain in forest> SITEDUMP.LDF  
       FINDSTR /i "bridgeheadTransportList" SITEDUMP.LDF
 
@@ -216,7 +213,7 @@ To search for preferred bridgehead servers:
    On the lower section of the 'General' tab, remove the IP/SMTP from the list of the 'The server is a preferred bridgehead server for the following transports' box.  
    Click 'OK'  
    Wait two times the maximum replication interval in the forest. If event ID 1311 messages continue to be logged, continue to the next method.
-   
+
 ### Resolve Active Directory replication failures in the forest
 
 Active Directory replication requires the transitive replication of all naming contexts in the forest to all domain controllers that replicate a common partition.
@@ -261,22 +258,24 @@ The `repadmin /failcache` command differs from the `repadmin /showreps` command 
 
 The following example shows sample output from the `repadmin /failcache` command.
 
-> Z:\>repadmin /failcache
-> ==== KCC CONNECTION FAILURES > ============================  
-> (none)  
->
-> ==== KCC LINK FAILURES > ==================================  
-> USA-WA-24\C-24-DC03
+```console
+Z:\>repadmin /failcache
+==== KCC CONNECTION FAILURES > ============================  
+(none)  
+
+==== KCC LINK FAILURES > ==================================  
+USA-WA-24\C-24-DC03
+      DC object GUID: 134244cd-26be-4944-82a7-ac3eb74fc02f
+      No Failures.
+  USA-WA-24\B-24-DC02
+      DC object GUID: 21b050d6-33b5-424d-aa9b-060fe209233d
+      No Failures.
+  USA-WA-24\Z-24-DC-05
+      DC object GUID: bfb3b008-3849-4e5d-81d8-53dbb76d587a
+      No Failures.
 ```
-    DC object GUID: 134244cd-26be-4944-82a7-ac3eb74fc02f
-    No Failures.
-USA-WA-24\B-24-DC02
-    DC object GUID: 21b050d6-33b5-424d-aa9b-060fe209233d
-    No Failures.
-USA-WA-24\Z-24-DC-05
-    DC object GUID: bfb3b008-3849-4e5d-81d8-53dbb76d587a
-    No Failures.
-```### Determine if source servers are overloaded
+
+### Determine if source servers are overloaded
 
 A domain controller that is overloaded with a large number of direct replication partners or a replication schedule that is overly aggressive can create a backlog in which some partners never receive changes from a hub domain controller. In the output from the `repadmin /showreps` command, partner domain controllers of overloaded source domain controllers appear with the *at never* status.
 
