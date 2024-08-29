@@ -249,6 +249,7 @@ Here are possible causes for this error:
 > - Cause 3 applies to the private scenario only.
 > - Cause 4 applies to public and private scenarios.
 > - Cause 5 applies to public and private scenarios.
+> - Cause 6 applies to public and private scenarios.
 
 ### <a id="secretnotusecorrectstorageaccountkey"></a>Cause 1: Kubernetes secret doesn't reference correct storage account name or key
 
@@ -410,7 +411,7 @@ Enable the AES-128-GCM algorithm by using the **Maximum compatibility** profile 
 
 To successfully mount or access a file share, the AES-128-GCM encryption algorithm should be enabled for all storage accounts.
 
-If you want to use the AES-256-GCM encryption only, which is the maximum security (SMB 3.1.1), do the following:
+If you want to use the AES-256-GCM encryption only, do the following:
 
 #### Linux
 
