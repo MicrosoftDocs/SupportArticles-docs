@@ -89,7 +89,7 @@ If *explorer.exe* and *userinit.exe* aren't running, there could be several reas
         `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting`
 
         > [!NOTE]
-        > If the `Windows Error Reporting` key doesn't exist, create it by right-clicking the `Microsoft` key, select New > Key, and name it as `Windows Error Reporting`.
+        > If the `Windows Error Reporting` key doesn't exist, create it by right-clicking the `Microsoft` key, select **New** > **Key**, and name it as `Windows Error Reporting`.
 
     5. Inside the `Windows Error Reporting` key, create the following registry values:
 
