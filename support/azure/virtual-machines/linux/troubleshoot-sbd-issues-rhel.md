@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot SBD issues in RHEL Pacemaker Cluster
-description: Provides troubleshooting guidance if SBD service do not start
+description: Provides troubleshooting guidance if SBD services don't start
 ms.reviewer: rnirek
 ms.author: sentj,hsisodia
 author: sentj,hsisodia
@@ -21,7 +21,7 @@ This article lists the common issues for SBD in RHEL Pacemaker Cluster and offer
 
 The SBD (Stonith Block Device) device requires at least one additional virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers can, however, be shared with other Pacemaker clusters. The advantage of using an SBD device is that if you're already using SBD devices on-premises, they don't require any changes to how you operate the Pacemaker cluster.
 
-For Azure Pacemaker cluster with SBD fencing mechanism, either of the two options can be used for the setup :
+For Azure Pacemaker cluster with SBD fencing mechanism, either of the two options can be used for the setup:
 
 1. [SBD with an iscsi target server](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#sbd-with-an-iscsi-target-server)
 
@@ -29,13 +29,13 @@ For Azure Pacemaker cluster with SBD fencing mechanism, either of the two option
 
 
 ## Symptom
-If the SBD device is not accessible on the cluster nodes, the daemon will fail to start and inhibit cluster start-up.
-SBD server details can be fetched via message logs or the `iscsiadm` discovery command or `iscsi` service status output as will be evident in scenarios illustrated, where the SBD server IP addresses are reflected.
+If the SBD device isn't accessible on the cluster nodes, the daemon fails to start and inhibit cluster start-up.
+SBD server details can be fetched via message logs or the `iscsiadm` discovery command or `iscsi` service status output as illustrated, where the SBD server IP addresses are reflected.
 
 
 ## Cause 1 : SBD service failed due to iscsi failure
 
-Pacemaker service  not running and  SBD Service is in failed State on both cluster Nodes.The `iscsid` and `iscsi` services on the initiator nodes (Cluster Nodes) communicate using `IQN` with the target nodes (SBD Nodes) to access the SBD disks.  If these services are not running, the SBD disks will not be accessible on cluster nodes, causing the SBD service to fail to start. Consequently, Pacemaker will also fail since the SBD service is a dependency for Pacemaker service.
+Pacemaker service  not running and  SBD Service is in failed State on both cluster Nodes.'iSCSI' services Use 'IQN' for communication between Initiator and Target Nodes,failure to run services results in inaccessible SBD Disks, leading to SBD and pacemaker service failures.
 
 
 ```output
@@ -70,7 +70,7 @@ Aug 01 11:22:45 node1 corosync[12793]:   [QUORUM] Members[2]: 1 2
 Aug 01 11:22:45 node1 corosync[12793]:   [MAIN  ] Completed service synchronization, ready to provide service.
 ```
 
-Pacemaker service is in failed status due to dependency failure as sbd service is required for pacemaker to start.
+Pacemaker service is in failed status due to dependency failure as SBD service is required for pacemaker to start.
 
 ```output
 [node1 ~]# systemctl status pacemaker
@@ -113,7 +113,7 @@ Aug 01 11:24:28 node1 systemd[1]: Failed to start Shared-storage based fencing d
 
 ### Resolution:
 
-1. Ensure the set up has been configured correctly as mentioned in [RHEL - Set up Pacemaker on Red Hat Enterprise Linux in Azure ](/azure/sap/workloads/high-availability-guide-rhel-pacemaker)
+1. Ensure correct configuration of setup as mentioned in [RHEL - Set up Pacemaker on Red Hat Enterprise Linux in Azure ](/azure/sap/workloads/high-availability-guide-rhel-pacemaker)
 
 2. Ensure `iscsid` and `iscsi` service is enabled and running.
 
@@ -146,10 +146,10 @@ Aug 01 10:28:36 nfs-0 systemd[1]: Started Login and scanning of iSCSI devices.
 
 ## Cause 2: Configurations Issues 
 
-Incorrect SBD configurations like missing or incorrect SBD devices names, syntax errors etc can cause SBD service to fail.
+Incorrect SBD configurations like missing or incorrect SBD devices names, syntax errors etc. can cause SBD service to fail.
 
 ### Resolution 1:
-Validate the sbd configuration file `/etc/sysconfig/sbd` and ensure it should have  the recommended parameter and the correct sbd devices:
+Validate the SBD configuration file `/etc/sysconfig/sbd` and ensure it should have  the recommended parameter and the correct SBD devices:
 
 ``` bash
 SBD_PACEMAKER=yes
@@ -178,9 +178,9 @@ Resource: sbd (class=stonith type=fence_sbd)
       timeout=15
 ```
 
-## Cause 3: iscsi devices are not available on Cluster Nodes
+## Cause 3: iscsi devices aren't available on Cluster Nodes
 
-When `lscsi` or `lsblk` command is executed, the SBD disks will not be displayed as shown:
+Executing `lscsi` or `lsblk` commands does not display SBD disks in the output:
 
 ```output
 [node1 /]# lsscsi
@@ -228,7 +228,7 @@ InitiatorName=iqn.2006-04.nfs-1.local:nfs-1
 SBD_DEVICE="/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779;/dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a;/dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb"
 ```
 
-3. Based on the error provided,check if the SBD servers are up and accessible .
+3. Based on the error provided, check if the SBD servers are up and accessible.
 
 ```bash
 node1 /]# /usr/sbin/sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
@@ -245,10 +245,10 @@ node1 /]#
 ```
 
 
-4. To fix above error , perform these steps on both nodes of cluster to connect to the iscsi devices after ensuring that SBD servers are up and accessible .
+4. To fix the error, perform these steps on both nodes of cluster to connect to the iscsi devices after ensuring that SBD servers are up and accessible.
 
 In the following example, `10.0.0.17` is the IP address of one of the `iSCSI` target servers, and `3260` is the default port.
-`iqn.2006-04.nfs.local:nfs` is one of the target names that's listed when you run the first command, `iscsiadm -m discovery`.
+`iqn.2006-04.nfs.local:nfs` is a target name listed when running the first command, `iscsiadm -m discovery`.
 
 ```output
 [node1 /]# iscsiadm -m discovery
@@ -275,7 +275,7 @@ Login to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.17,3
 ```
 Execute the same commands to connect to the rest of the two devices. Moreover execute same set of commands on the other cluster Node.
 
-5. Once iscsi devices detected ,command output should reflect SBD devices:
+5. Once iscsi devices detected, command output should reflect SBD devices:
 ```output
 [node1 /]# lsscsi
 [0:0:0:0]    disk    Msft     Virtual Disk     1.0   /dev/sda
@@ -304,14 +304,14 @@ sdd                 8:48   0   50M  0 disk
 sde                 8:64   0   50M  0 disk
 sr0                11:0    1  628K  0 rom
 ```
-## Cause 4 :  Node Fails to Rejoin Cluster Post-Fencing
+## Cause 4:  Node Fails to Rejoin Cluster Post-Fencing
 
-One of the Node fails to join cluster after fencing. SBD is in a failed state and the other node is in pending state.
+One of the Nodes fails to join cluster after fencing. SBD is in a failed state and the other node is in pending state.
 
 
 ### Resolution 1: 
-It is possible that the SBD slot is not in clean state,hence the Node cannot rejoin the cluster after fencing reboot
-Check the SBD status using the following commands (if not clean, the sbd output will show a reset)
+It's possible that the SBD slot is not in clean state, hence the Node can't rejoin the cluster after fencing reboot.
+Check the SBD status using the following commands (if not clean, the SBD output will show a reset).
 
 ```bash
 #sudo lsscsi
@@ -355,13 +355,12 @@ SBD_STARTMODE=clean
 
 `SBD_STARTMODE` -this determines if Node rejoins or not.
 
-If set to “always”, then even if a node was previously fenced, it will rejoin the cluster. 
+If set to `always`, then even if a node was previously fenced, it rejoins the cluster. 
 
-If set to “clean” , then this will only rejoin after cleaned.
+If set to `clean`, then the node rejoins after cleaned state.
+The action is an expected behavior. It detects a fencing type message in the SBD slot for the node and not allows the Node to join the cluster unless manually cleared.
 
-This is an expected behavior. It detects a fencing type message in the sbd slot for the node and will not allow the Node to join the cluster until it's been manually cleared.
-
-• Syntax to be run on node that was previously fenced:
+• Syntax to be runs on node that was previously fenced:
 
 Example:
 ```bash
@@ -376,26 +375,26 @@ Example:
 sbd -d <DEVICE_NAME> message <NODENAME> clear
 ```
 
-Node name is the node which previously fenced and is not able to join the cluster, here node2
+Node name is the node fenced and is not able to join the cluster:
 ```bash
 #sbd -d /dev/sdc message node2 clear
 ```
 
 Once the node slot is cleared, you should be able to start Clustering services.
  
-•	If this still fails, run the two commands which will fix the issue.
+•	If this still fails, run the commands to fix the issue:
 
 ```bash
 #iscsiadm -m node -u
 #iscsiadm -m node -l
 ```
 
-## Cause 5 : SBD service fails to start after adding new SBD device
+## Cause 5: SBD service fails to start after adding new SBD device
 Getting error message `sbd failed; please check the logs` after creating / adding new sbd device into cluster.
 - `Failed to start sbd.service: Operation refused`.
 - `sbd -d ''` list showing output as a blank shell.
 
-Check if you are getting errors while sending/testing messages by sbd devices
+Check if you're getting errors while sending/testing messages by SBD devices
 
 ```output
 sbd -d  /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 message node1 test
@@ -409,7 +408,8 @@ Mar  2 06:58:06 node1 sbd[11104]: warning: messenger: Process 11105 failed to de
 ```
 
 ### Resolution:
-Whenever we are using sbd as a fencing device and enable it for pacemaker cluster services should be manage under cluster control. Hence, you can not start/stop it manually. While enabeling and adding any new sbd device in cluster you should restart the pacemkaer cluster to take effect under cluster control.
+Whenever we're using SBD as a fencing device and enable it for pacemaker cluster, services should be managed under cluster control. Hence, you cannot start/stop it manually. While enabling and adding any new 
+SBD device in cluster, you should restart the pacemaker cluster to take effect under cluster control.
 
 1. Restart cluster services on all cluster nodes.
 
@@ -418,7 +418,7 @@ Whenever we are using sbd as a fencing device and enable it for pacemaker cluste
 # sudo pcs cluster start --all
 ```
 
-2. Check if sbd service start successfully.
+2. Check if SBD service start successfully.
 
  ```output
 # systemctl status sbd.service 
@@ -427,7 +427,7 @@ Whenever we are using sbd as a fencing device and enable it for pacemaker cluste
    Active: active (running)
    ```
 
-3.Check if sbd device list giving desired output:
+3.Check if SBD device list giving desired output:
 
 ```output
 # sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
@@ -439,7 +439,7 @@ For Reference:  https://access.redhat.com/solutions/6771581
 
 ## Next Steps
 
-If you need additional help, open a support request by using the following instructions. When you submit your request, attach `sosreport` logs for troubleshooting.
+If you need more help, open a support request by using the following instructions. When you submit your request, attach `sosreport` logs for troubleshooting.
 
 Use the following RHEL  article for log collection:
  https://access.redhat.com/solutions/3592
