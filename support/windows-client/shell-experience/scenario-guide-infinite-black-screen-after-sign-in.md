@@ -5,7 +5,6 @@ ms.date: 08/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, warrenw, v-lianna
 ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe init, themes, colors, icons, recycle bin), csstroubleshoot
 ---
@@ -56,7 +55,7 @@ Check if you can access Task Manager by using the following steps:
 
 If *explorer.exe* and *userinit.exe* are running, collect the process dump by using the following steps:
 
-1. Download [ProcDump](https://learn.microsoft.com/sysinternals/downloads/procdump), and extract the ProcDump files to a known directory, such as *C:\\Tools\\*.
+1. Download [ProcDump](/sysinternals/downloads/procdump), and extract the ProcDump files to a known directory, such as *C:\\Tools\\*.
 2. Open an elevated command prompt, and navigate to the directory where ProcDump was extracted in the command prompt.
 3. Run the following commands:
 
@@ -104,7 +103,7 @@ If *explorer.exe* and *userinit.exe* aren't running, there could be several reas
 
 ## Verify if explorer.exe or userinit.exe has exited
 
-Download [Process Monitor (ProcMon)](https://learn.microsoft.com/sysinternals/downloads/procmon) and extract the ProcMon files to a known directory (such as *C:\\Sysinternals\\*).
+Download [Process Monitor (ProcMon)](/sysinternals/downloads/procmon) and extract the ProcMon files to a known directory (such as *C:\\Sysinternals\\*).
 
 For devices with only one user session allowed at a time, use Process Monitor to collect a boot log.
 
@@ -124,7 +123,7 @@ To set up ProcMon for a scenario where one user has already logged in and anothe
 
 After capturing, analyze the log for any instances of *explorer.exe* and *userinit.exe* exiting with a process exit code different than zero. If that is the case, then capture a process dump.
 
-1. Download [ProcDump](https://learn.microsoft.com/sysinternals/downloads/procdump), and extract the ProcDump files to a known directory, such as *C:\\Tools\\*.
+1. Download [ProcDump](/sysinternals/downloads/procdump), and extract the ProcDump files to a known directory, such as *C:\\Tools\\*.
 2. Press Windows logo key + <kbd>R</kbd>, type *cmd* to open an elevated command prompt.
 3. Navigate to the directory where ProcDump was extracted using the `cd` command in the command prompt, and enter the following command to configure ProcDump to capture a dump when *explorer.exe* exits with an error:
 
