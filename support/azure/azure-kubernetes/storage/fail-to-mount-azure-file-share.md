@@ -1,8 +1,8 @@
 ---
 title: Unable to mount Azure file share
 description: Describes errors that cause the mounting of an Azure file share to fail and provides solutions.
-ms.date: 08/27/2024
-ms.reviewer: chiragpa, akscsscic, v-weizhu, v-rekhanain
+ms.date: 08/29/2024
+ms.reviewer: chiragpa, akscsscic, shoguo, v-weizhu, v-rekhanain
 ms.service: azure-kubernetes-service
 ms.custom: sap:Storage
 ---
@@ -439,6 +439,10 @@ else
     echo "require_gcm_256 is already set in ${cifsConfPath}"
 fi
 ```
+
+You also can use a Kubernetes DaemonSet to enforce using AES-256 on every node. See the following exmaple:
+
+[support-cifs-aes-256-gcm.yaml](https://github.com/andyzhangx/demo/blob/master/aks/support-cifs-aes-256-gcm.yaml)
 
 #### Windows
 
