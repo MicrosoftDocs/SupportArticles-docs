@@ -240,7 +240,7 @@ Here are possible causes for this error:
 - [Cause 3: Connectivity is via a private link but nodes and the private endpoint are in different VNETs](#aksnotawareprivateipaddress)
 - [Cause 4: Storage account is set to require encryption that the client doesn't support](#akssmbencryption)
 - [Cause 5: Minimum encryption requirement for a storage account isn't met](#minimumencryption)
-- [Cause 6: Security profile is used without NTLM v2 authentication enabled](#maximumsecurityprofile)
+- [Cause 6: Security profile is used without NTLM v2 authentication enabled](#securityprofile)
 
 > [!NOTE]
 >
@@ -455,9 +455,9 @@ Set-SmbClientConfiguration -EncryptionCiphers "AES_256_GCM" -Confirm:$false
 > [!NOTE]
 > The `EncryptionCiphers` parameter is available beginning with the 2022-06 Cumulative Update for Windows Server version 21H2 for x64-based systems ([KB5014665](https://support.microsoft.com/help/5014665)) and the Cumulative Update for Windows 11, version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
 
-### <a id="maximumsecurityprofile"></a>Cause 6: Security profile is used without NTLM v2 authentication enabled
+### <a id="securityprofile"></a>Cause 6: Security profile is used without NTLM v2 authentication enabled
 
-When you use the **Maximum security** security profile or a **Custom** security profile without the **NTLM v2** authentication mechanism enabled, the mounting operation will fail with the "Mount error(13): Permission denied" error.
+When you use the **Maximum security** profile or a **Custom** security profile without the **NTLM v2** authentication mechanism enabled, the mounting operation will fail with the "Mount error(13): Permission denied" error.
 
 #### Solution: Enable the NTLM v2 authentication mechanism or use the "Maximum compatibility" profile
 
