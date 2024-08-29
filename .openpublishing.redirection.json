@@ -11567,252 +11567,252 @@
     },
     {
       "source_path": "support/windows-client/installing-updates-features-roles/install-service-packs-hotfixes.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-client/install-service-packs-hotfixes",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/install-service-packs-hotfixes",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/installing-updates-features-roles/wsus-3-installation-package.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/wsus-3-installation-package",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/wsus-3-installation-package",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-client/installing-updates-features-roles/get-updates-through-windows-update.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-client/get-updates-through-windows-update",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/get-updates-through-windows-update",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/installing-updates-features-roles/windows-server-2008-service-pack-2.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/windows-server-2008-service-pack-2",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-2008-service-pack-2",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/file-shares-on-iscsi-devices-not-recreated.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/file-shares-on-iscsi-devices-not-recreated",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/file-shares-on-iscsi-devices-not-recreated",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/iscsi-virtual-disk-size-limits-incorrect.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/iscsi-virtual-disk-size-limits-incorrect",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/iscsi-virtual-disk-size-limits-incorrect",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/iscsi-software-target-3dot3-limits.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/iscsi-software-target-3dot3-limits",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/iscsi-software-target-3dot3-limits",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/turn-disk-write-caching-on-off.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/turn-disk-write-caching-on-off",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/turn-disk-write-caching-on-off",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/add-pass-through-disk-to-high-available-vm.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/add-pass-through-disk-to-high-available-vm",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/add-pass-through-disk-to-high-available-vm",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/usb-device-not-recognized-error.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/usb-device-not-recognized-error",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/usb-device-not-recognized-error",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/refs-volume-dpm-unresponsive.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/refs-volume-dpm-unresponsive",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/refs-volume-dpm-unresponsive",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/distributed-link-tracking-on-domain-controller.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/distributed-link-tracking-on-domain-controller",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/distributed-link-tracking-on-domain-controller",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/volume-show-up-as-raw.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/volume-show-up-as-raw",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/volume-show-up-as-raw",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/error-setup-unable-create-new-system-partition.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/error-setup-unable-create-new-system-partition",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-setup-unable-create-new-system-partition",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/active-route-removed.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/active-route-removed",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/active-route-removed",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/error-an-item-with-the-same-key-has-already-been-added.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/error-an-item-with-the-same-key-has-already-been-added",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-an-item-with-the-same-key-has-already-been-added",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/system-state-backup-fails-invalid-imagepath.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/system-state-backup-fails-invalid-imagepath",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/system-state-backup-fails-invalid-imagepath",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/system-state-backup-fails.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/system-state-backup-fails",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/system-state-backup-fails",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/server-backup-mmc-fails-open.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/server-backup-mmc-fails-open",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/server-backup-mmc-fails-open",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/cannot-configure-clustered-mount-points-shadow-copies.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/cannot-configure-clustered-mount-points-shadow-copies",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-configure-clustered-mount-points-shadow-copies",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/cannot-upgrade-clustered-server-operating-system.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/cannot-upgrade-clustered-server-operating-system",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-upgrade-clustered-server-operating-system",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/windows-server-failover-clusters-service-packs-hotfixes.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/windows-server-failover-clusters-service-packs-hotfixes",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-failover-clusters-service-packs-hotfixes",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/hotfixes-for-windows-server-2008-r2-server-cluster.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/hotfixes-for-windows-server-2008-r2-server-cluster",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hotfixes-for-windows-server-2008-r2-server-cluster",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/support-large-logical-unit-numbers.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/support-large-logical-unit-numbers",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/support-large-logical-unit-numbers",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/configure-volume-mount-points-server-cluser.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/configure-volume-mount-points-server-cluser",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/configure-volume-mount-points-server-cluser",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/create-file-shares-on-a-cluster.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/create-file-shares-on-a-cluster",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/create-file-shares-on-a-cluster",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/enable-support-using-raid-controllers.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/enable-support-using-raid-controllers",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/enable-support-using-raid-controllers",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/cannot-manage-cluster-with-failover-cluster-manager.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/cannot-manage-cluster-with-failover-cluster-manager",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-manage-cluster-with-failover-cluster-manager",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/cluster-service-reserves-brings-disk.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/cluster-service-reserves-brings-disk",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-service-reserves-brings-disk",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/duplicate-address-error-validate-failover-cluster.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/duplicate-address-error-validate-failover-cluster",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/duplicate-address-error-validate-failover-cluster",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/scsi-3-persistent-reservation-test-fail.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/scsi-3-persistent-reservation-test-fail",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/scsi-3-persistent-reservation-test-fail",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/validation-fails-run-disk-failover-test.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/validation-fails-run-disk-failover-test",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/validation-fails-run-disk-failover-test",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/not-see-cluster-disk-in-explorer-or-diskmgmt-failover.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/not-see-cluster-disk-in-explorer-or-diskmgmt-failover",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/not-see-cluster-disk-in-explorer-or-diskmgmt-failover",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/cluster-validation-failure-error-80070005.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/cluster-validation-failure-error-80070005",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-validation-failure-error-80070005",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/error-event-id-1289-create-cluster.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/error-event-id-1289-create-cluster",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-event-id-1289-create-cluster",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/creating-failover-cluster-fails-error-0xc0000055.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/creating-failover-cluster-fails-error-0xc0000055",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/creating-failover-cluster-fails-error-0xc0000055",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/implications-using-slash-forcequorum-switch.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/implications-using-slash-forcequorum-switch",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/implications-using-slash-forcequorum-switch",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/move-server-cluster-to-another-domain.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/move-server-cluster-to-another-domain",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/move-server-cluster-to-another-domain",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/provider-load-failure.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/provider-load-failure",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/provider-load-failure",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/cluster-node-already-exists-error.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/cluster-node-already-exists-error",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-node-already-exists-error",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/guest-cluster-nodes-in-hyper-v-not-create-or-join.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/guest-cluster-nodes-in-hyper-v-not-create-or-join",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/guest-cluster-nodes-in-hyper-v-not-create-or-join",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/cannot-join-a-node-into-a-cluster.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/cannot-join-a-node-into-a-cluster",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-join-a-node-into-a-cluster",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/updates-for-windows-server-2008-r2-sp1-failover-cluster.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/updates-for-windows-server-2008-r2-sp1-failover-cluster",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/updates-for-windows-server-2008-r2-sp1-failover-cluster",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/errors-windows-failover-cluster-run-as-guest.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/errors-windows-failover-cluster-run-as-guest",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/errors-windows-failover-cluster-run-as-guest",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/high-availability/use-cluster-nodes-as-domain-controllers.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/use-cluster-nodes-as-domain-controllers",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/use-cluster-nodes-as-domain-controllers",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/issues-after-enabling-data-deduplication.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/issues-after-enabling-data-deduplication",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/issues-after-enabling-data-deduplication",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/error-file-server-resource-manager-could-not-load-wmi-objects.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/error-file-server-resource-manager-could-not-load-wmi-objects",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-file-server-resource-manager-could-not-load-wmi-objects",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/fsrm-quota-usage-incorrect.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/fsrm-quota-usage-incorrect",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fsrm-quota-usage-incorrect",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/file-services-hotfixes-in-windows-server-2008.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/file-services-hotfixes-in-windows-server-2008",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/file-services-hotfixes-in-windows-server-2008",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/backup-and-storage/not-enough-storage-process-this-command.md",
-      "redirect_url": "previous-versions/troubleshoot/windows-server/not-enough-storage-process-this-command",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/not-enough-storage-process-this-command",
       "redirect_document_id": false
     }
   ]
