@@ -441,7 +441,7 @@ else
 fi
 ```
 
-You also can use a Kubernetes DaemonSet to enforce using AES-256 on every node. See the following example:
+You can also use a Kubernetes DaemonSet to enforce AES-256 on every node. See the following example:
 
 [support-cifs-aes-256-gcm.yaml](https://github.com/andyzhangx/demo/blob/master/aks/support-cifs-aes-256-gcm.yaml)
 
