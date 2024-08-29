@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Event ID 1311 messages
 description: Describes how to troubleshoot event ID 1311 messages in the Directory Service event.
-ms.date: 08/29/2024
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -207,12 +207,13 @@ To search for preferred bridgehead servers:
 
     If the search returns any results, note the name of server in the Domain Name path in which the bridgeheadTransportList attribute is populated.
 
-    If you find any preferred bridgehead servers, use the Site and Services snap-in to remove them:  
-   Navigate to the site where the Domain Controller reside  
-   Right-click on the Domain Controller and click on Properties  
-   On the lower section of the 'General' tab, remove the IP/SMTP from the list of the 'The server is a preferred bridgehead server for the following transports' box.  
-   Click 'OK'  
-   Wait two times the maximum replication interval in the forest. If event ID 1311 messages continue to be logged, continue to the next method.
+    If you find any preferred bridgehead servers, use the **Site and Services** snap-in to remove them:
+
+    1. Navigate to the site where the domain controller reside.
+    2. Right-click on the **Domain Controller** and click on **Properties**.
+    3. On the lower section of the **General** tab, remove the IP/SMTP from the list of the **The server is a preferred bridgehead server for the following transports** box.  
+    4. Select **OK**.
+    5. Wait two times the maximum replication interval in the forest. If event ID 1311 messages continue to be logged, continue to the next method.
 
 ### Resolve Active Directory replication failures in the forest
 
