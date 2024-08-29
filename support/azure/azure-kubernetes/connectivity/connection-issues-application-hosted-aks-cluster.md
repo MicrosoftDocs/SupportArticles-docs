@@ -2,7 +2,7 @@
 title: Fix connection issues to an app that's hosted in an AKS cluster
 description: Learn about basic troubleshooting steps if you experience connection issues to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ms.date: 08/28/2024
-ms.reviewer: chiragpa, pkc, rissing, v-leedennis, ookour
+ms.reviewer: chiragpa, pkc, rissing, v-leedennis
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting steps so that I can successfully connect to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Connectivity
