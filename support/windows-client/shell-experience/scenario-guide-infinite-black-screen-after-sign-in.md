@@ -68,15 +68,15 @@ If *explorer.exe* and *userinit.exe* are running, collect the process dump by us
 
 If *explorer.exe* and *userinit.exe* aren't running, there could be several reasons, such as:
 
-- The processes crash.
+- The processes stop responding.
 - The processes exit.
 - The explorer isn't the default shell.
 
-## Check if the processes crash
+## Check if the processes stop responding
 
 1. Press Windows logo key + <kbd>R</kbd>, type *eventvwr.msc*, and press <kbd>Enter</kbd> to open the Event Viewer.
 2. Expand the **Windows Logs** section and select the **Application** log.
-3. Search specifically for "Event ID 1000," which indicates an application crash. Check if the event is related to *explorer.exe* or *userinit.exe* and matches the timeframe of the issue. If so, proceed with the next step. Otherwise, continue to the [Verify if explorer.exe or userinit.exe has exited](#verify-if-explorerexe-or-userinitexe-has-exited) section.
+3. Search specifically for "Event ID 1000," which indicates an application stops responding. Check if the event is related to *explorer.exe* or *userinit.exe* and matches the timeframe of the issue. If so, proceed with the next step. Otherwise, continue to the [Verify if explorer.exe or userinit.exe has exited](#verify-if-explorerexe-or-userinitexe-has-exited) section.
 4. To enable Windows Error Reporting (WER) using the Registry Editor, follow these steps:
 
     [!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
@@ -99,7 +99,7 @@ If *explorer.exe* and *userinit.exe* aren't running, there could be several reas
         |`DumpType`     |`REG_DWORD`         |`2`         |
         |`DumpFolder`     |`REG_EXPAND_SZ`         |`C:\dumps`         |
 
-5. Restart the system or sign in again to reproduce the issue. Once *explorer.exe* or *userinit.exe* crashes, a process dump should be generated in the path you choose to save the dump in the preceding step.
+5. Restart the system or sign in again to reproduce the issue. Once *explorer.exe* or *userinit.exe* stops responding, a process dump should be generated in the path you choose to save the dump in the preceding step.
 
 ## Verify if explorer.exe or userinit.exe has exited
 
