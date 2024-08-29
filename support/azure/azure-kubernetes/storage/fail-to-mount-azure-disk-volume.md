@@ -1,7 +1,7 @@
 ---
 title: Unable to mount Azure disk volumes
 description: Describes errors that occur when mounting Azure disk volumes fails, and provides solutions.
-ms.date: 05/17/2022
+ms.date: 08/29/2024
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
@@ -81,7 +81,7 @@ For more information about parameters, see [Driver Parameters](https://github.co
 
 ### Solution 3: Use Azure File
 
-[Azure File](/azure/storage/files/storage-files-introduction) is mounted by using SMB throughout network, so it's not associated with availability zones.
+[Azure Files](/azure/storage/files/storage-files-introduction) is mounted by using NFS or SMB throughout network and it's not associated with availability zones.
 
 For more information, see the following articles:
 
