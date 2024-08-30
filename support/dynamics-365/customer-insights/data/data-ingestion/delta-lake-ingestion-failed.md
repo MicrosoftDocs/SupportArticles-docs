@@ -1,6 +1,6 @@
 ---
 title: Delta Lake ingestion job failed to get version error
-description: Resolves an issue with a Delta Lake version error in Dynamics 365 Customer Insights - Data.
+description: Resolves an issue about a Delta Lake version error in Dynamics 365 Customer Insights - Data.
 ms.date: 08/26/2024
 author: m-hartmann
 ms.author: mhart
@@ -15,16 +15,16 @@ This article helps you resolve the "Delta Lake ingestion job failed to get versi
 
 ## Symptoms
 
-A Delta data source in Dynamics 365 Customer Insights - Data attempts to connect to a table that uses a feature that requires a Databricks `minReaderVersion` 3 or later. The following error message appears on the **Data sources** page:
+A Delta data source in Dynamics 365 Customer Insights - Data attempts to connect to a table that uses a feature that requires a Databricks `minReaderVersion` of `3` or later. In this case, the following error message appears on the **Data sources** page:
 
-> Delta Lake ingestion job failed to get version DataSourceId.
+> Delta Lake ingestion job failed to get version \<DataSourceId>.
 
 When you view the columns in the table, the "Failed to save data source schema" error appears.
 
 ## Cause
 
-Dynamics 365 Customer Insights - Data supports Databricks `minReaderVersion` 2 or earlier.
+Dynamics 365 Customer Insights - Data supports Databricks features with a `minReaderVersion` of `2` or earlier. Databricks features that require Databricks reader version `3` or later aren't supported.
 
 ## Resolution
 
-To solve this issue, remove the feature from your Databricks installation and return the `minReaderVersion` to 2. For more information, see [Supported Databricks features and versions](/dynamics365/customer-insights/data/connect-delta-lake).
+To solve this issue, remove the feature from your Databricks installation and revert the `minReaderVersion` to `2`. For more information, see [Supported Databricks features and versions](/dynamics365/customer-insights/data/connect-delta-lake#supported-databricks-features-and-versions).
