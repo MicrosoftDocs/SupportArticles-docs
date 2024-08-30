@@ -17,8 +17,11 @@ _Original KB number:_ &nbsp; 5001534
 To ensure a successful installation, make sure that:
 
 - You use the [latest installer for Power Automate for desktop](/power-automate/desktop-flows/install).
-- You have administrator privileges when you use an [MSI installer](/power-automate/desktop-flows/install#install-power-automate-using-the-msi-installer).
+
+  > [!NOTE]
+  > Administrator permissions on your local computer are required to install Power Automate for desktop using [MSI installer](/power-automate/desktop-flows/install#install-power-automate-using-the-msi-installer).
 - You have restarted your machine.
+
   Some Windows changes require a restart to take effect, or it might block your installation.
 - You run an up-to-date version of a supported Windows operating system.
 
@@ -53,11 +56,11 @@ The installation fails with this error if the Power Automate service crashes at 
 
 #### Cause
 
-The installer grants permissions to the Power Automate service to enumerate user sessions on the machine. Your might need to retart your machine for these permissions to take effect.
+The installer grants permissions to the Power Automate service to enumerate user sessions on the machine. You might need to retart your machine for these permissions to take effect.
 
 #### Resolution (requires installer version 2.18 or later)
 
-To work around this issue, you can skip the Power Automate service from starting automatically during the installation by running the installer from a command line and passing the `/SKIPSTARTINGPOWERAUTOMATESERVICE` argument.
+To solve this issue, you can skip the Power Automate service from starting automatically during the installation by running the installer from a command line and passing the `/SKIPSTARTINGPOWERAUTOMATESERVICE` argument.
 
 :::image type="content" source="media/power-automate-desktop-installation-issues/skipstartingpowerautomateservice.png" alt-text="Screenshot that shows how to skip the Power Automate service from starting automatically by using a command.":::
 
@@ -94,11 +97,11 @@ If this registry key doesn't exist, it means that your machine doesn't allow the
 
 As a workaround, you can provide a Windows user account that runs the service instead of the default account. This account needs to be a member of the remote desktop user group and needs to have the "Logon as a service" privilege.
 
-You can run the installer from a command line and pass it the `/SKIPSTARTINGPOWERAUTOMATESERVICE` argument to skip starting the power automate service.
+You can run the installer from a command line and pass it the `/SKIPSTARTINGPOWERAUTOMATESERVICE` argument to skip starting the Power Automate service.
 
 :::image type="content" source="media/power-automate-desktop-installation-issues/skipstartingpowerautomateservice.png" alt-text="Screenshot that shows how to skip the Power Automate service from starting automatically by using a command.":::
 
-When the installation succeeds, run the Power Automate machine runtime app and use the **Troubleshoot** menu to change the service account. For more information on changing the service account, see [Change the on-premises Service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
+When the installation succeeds, run the Power Automate Machine runtime application and use the **Troubleshoot** menu to change the service account. For more information on changing the service account, see [Change the on-premises Service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
 
 ### Power Automate service fails to start: Verify that you have sufficient privileges to install system services
 
@@ -138,6 +141,8 @@ You see the following error message in the [installation logs](how-to-get-power-
 The Power Automate installer depends on the LanmanServer service and attempts to start it if it isn't already running. If the service can't be started, installation steps that depend on it fails.
 
 #### Resolution
+
+To solve this issue,
 
 1. Select Windows logo key + <kbd>R</kbd> and type _services.msc_ or _services_ in the **Run** window to open the Services manager. Find the service named "Server", right-click it and select **Properties**.
 1. In the **General** tab, make sure that its **Startup type** isn't disabled (it should be **Automatic** by default.)
