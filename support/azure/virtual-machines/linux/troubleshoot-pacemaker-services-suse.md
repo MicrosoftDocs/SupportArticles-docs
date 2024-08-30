@@ -1,4 +1,5 @@
 ---
+title: Troubleshoot startup issues in a SUSE Pacemaker cluster
 description: Provides troubleshooting guidance for Pacemaker services that don't start
 ms.reviewer: rnirek,rmuneer
 ms.topic: troubleshooting
