@@ -263,6 +263,8 @@
     items:
     - name: Troubleshoot Azure fence agent startup issues in SUSE
       href: troubleshoot-azure-fence-agent-startup-suse.md
+    - name: Troubleshoot Pacemaker Services startup issues in SUSE
+      href: troubleshoot-pacemaker-services-suse.md
       
 - name: Linux repositories
   items:
