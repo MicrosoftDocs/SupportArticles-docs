@@ -94,7 +94,6 @@ sudo ufw allow ssh
 ```
 ```output
 Rule added
-Rule added (v6)
 ```
 Verify the rule added:
 
@@ -149,7 +148,7 @@ Status: active
 To                         Action      From
 --                         ------      ----
 22/tcp                     ALLOW       10.0.10.10             
-22/tcp                         ALLOW       10.1.0.0/24 
+22/tcp                     ALLOW       10.1.0.0/24 
 ```
 
 #### Scenario 4 : Deny SSH for all other IPs
