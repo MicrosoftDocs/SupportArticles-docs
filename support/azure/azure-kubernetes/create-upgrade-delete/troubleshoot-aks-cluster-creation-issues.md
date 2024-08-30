@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Kubernetes Service cluster creation issues
 description: Learn about basic troubleshooting methods to use when you can't create or deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 04/29/2022
+ms.date: 08/30/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
@@ -21,19 +21,22 @@ This article outlines the basic troubleshooting methods to use if you can't crea
 ## View errors from Azure CLI
 
 When you create clusters by using Azure CLI, errors are recorded as output if the operation fails. Here's how a command, user input, and operation output might appear in a Bash console:
+```azurecli-interactive
+# Create a cluster specifying subnet
 
-> `$ az aks create --resource-group myResourceGroup \` \
-> `> --name MyManagedCluster \` \
-> `> --load-balancer-sku standard \` \
-> `> --vnet-subnet-id /subscriptions/01234567-89ab-cdef-0123-456789abcdef/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/aks_demo_vnet/subnets/AKS`
->
-> `It is highly recommended to use USER assigned identity (option --assign-identity) when you want to bring you own subnet, which will have no latency for the role assignment to take effect. When you SYSTEM assigned identity, azure-cli will grant Network Contributor role to the system assigned identity after the cluster is created, and the role assignment will take some time to take effect, see https://learn.microsoft.com/azure/aks/use-managed-identity, proceed to create cluster with system assigned identity? (y/N): y`
->
-> `(ControlPlaneAddOnsNotReady) Pods not in Running status: konnectivity-agent-67f7f5554f-nsw2g,konnectivity-agent-8686cb54fd-xlsgk,metrics-server-6bc97b47f7-dfhbr,coredns-845757d86-7xjqb,coredns-autoscaler-5f85dc856b-mxkrj`
->
-> `Code: ControlPlaneAddOnsNotReady`
->
-> `Message: Pods not in Running status: konnectivity-agent-67f7f5554f-nsw2g,konnectivity-agent-8686cb54fd-xlsgk,metrics-server-6bc97b47f7-dfhbr,coredns-845757d86-7xjqb,coredns-autoscaler-5f85dc856b-mxkrj`
+az aks create --resource-group myResourceGroup
+--name MyManagedCluster \
+--load-balancer-sku standard \
+--vnet-subnet-id /subscriptions/01234567-89ab-cdef-0123-456789abcdef/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/aks_demo_vnet/subnets/AKS
+```
+Sample of output:
+```console
+It is highly recommended to use USER assigned identity (option --assign-identity)when you want to bring you own subnet, which will have no latency for the role assignment to take effect. When you SYSTEM assigned identity, azure-cli will grant Network Contributor role to the system assigned identity after the cluster is created, and the role assignment will take some time to take effect, see https://learn.microsoft.com/azure/aks/use-managed-identity, proceed to create cluster with system assigned identity? (y/N): y`
+(ControlPlaneAddOnsNotReady) Pods not in Running status: konnectivity-agent-67f7f5554f-nsw2g,konnectivity-agent-8686cb54fd-xlsgk,metrics-server-6bc97b47f7-dfhbr,coredns-845757d86-7xjqb,coredns-autoscaler-5f85dc856b-mxkrj
+```
+[!NOTE]
+>**Code:** `ControlPlaneAddOnsNotReady`
+>**Message:** `Pods not in Running status: konnectivity-agent-67f7f5554f-nsw2g,konnectivity-agent-8686cb54fd-xlsgk,metrics-server-6bc97b47f7-dfhbr,coredns-845757d86-7xjqb,coredns-autoscaler-5f85dc856b-mxkrj`
 
 These errors often contain detailed descriptions of what went wrong in the cluster creation, and they provide links to articles that contain more details. Additionally, you can use our troubleshooting articles as a reference based on the error that an Azure CLI operation produces.
 
@@ -41,7 +44,7 @@ These errors often contain detailed descriptions of what went wrong in the clust
 
 To view the details about errors in the [Azure portal](https://portal.azure.com), examine the [Azure activity log](/azure/azure-monitor/essentials/activity-log). To find the list of activity logs in the Azure portal, search on **Activity log**. Or, select **Notifications** (the bell icon), and then select **More events in the activity log**.
 
-The list of logs on the **Activity log** page contains a line entry in which the **Operation name** column value is named **Create or Update Managed Cluster**. The corresponding **Event initiated by** column value is set to the name of your work or school account. If the operation is successful, the **Status** column value shows **Accepted**. You'll also see suboperation entries for the creation of the cluster components, such as the following operation names:
+The list of logs on the **Activity log** page contains a line entry in which the **Operation name** column value is named **Create or Update Managed Cluster**. The corresponding **Event initiated by** column value is set to the identity name (e.g work, school account or [azure managed identity](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#list-user-assigned-managed-identities). If the operation is successful, the **Status** column value shows **Accepted**. You'll also see suboperation entries for the creation of the cluster components, such as the following operation names:
 
 - **Create or Update Route Table**
 - **Create or Update Network Security Group**
@@ -53,9 +56,37 @@ The list of logs on the **Activity log** page contains a line entry in which the
 
 In these suboperation entries, the **Status** value is **Succeeded**, and the **Event initiated by** field is set to **AzureContainerService**.
 
+![exploring-activitylog-azportal-visualy](media/troubleshoot-aks-cluster-start-issues/exploring-activitylog-azportal-visualy.png)
+
 What if an error occurred instead? In that case, the **Create or Update Managed Cluster** operation **Status** field shows **Failed**. Unlike in the operations to create cluster components, here you must expand the failed operation entry to review the suboperation entries. Typical suboperation names are policy actions, such as **'audit' Policy action** and **'auditIfNotExists' Policy action.** Some of the suboperations will continue to show that they succeeded.
 
 To further investigate, you can select one of the failed suboperations. A side pane opens so that you can review more information about the suboperation. You can troubleshoot values for fields such as **Summary**, **JSON**, and **Change History**. The **JSON** field contains the output text for the error in JSON format, and it usually provides the most helpful information.
+
+![exploring-activitylog-azportal-visualy-json](media/troubleshoot-aks-cluster-start-issues/exploring-activitylog-azportal-visualy-json.png)
+
+<!-- expected_similarity=0.3 -->
+```JSON
+{
+     "status": {
+        "value": "Failed",
+        "localizedValue": "Failed"
+    },
+    "subStatus": {
+        "value": "",
+        "localizedValue": ""
+    },
+    "submissionTimestamp": "2024-08-30T10:06:07Z",
+    "subscriptionId": "12345667-adee-40cf-a993-1233343434",
+    "tenantId": "16b3c013-d300-468d-ac64-7eda0820b6d3",
+    "properties": {
+        "statusMessage": "{\"status\":\"Failed\",\"error\":{\"code\":\"ResourceOperationFailure\",\"message\":\"The resource operation completed with terminal provisioning state 'Failed'.\",\"details\":[{\"code\":\"VMExtensionProvisioningError\",\"message\":\"Unable to establish outbound connection from agents, please see https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/error-code-outboundconnfailvmextensionerror and https://aka.ms/aks-required-ports-and-addresses for more information.\"}]}}",
+}
+```
+
+[!TIP]
+>To best use of Activity Logs on portal reading the findings use filter section and create new to accurate your query.
+
+![exploring-activitylog-azportal-visualy-filtering](media/troubleshoot-aks-cluster-start-issues/exploring-activitylog-azportal-visualy-filtering.png)
 
 ## View cluster insights
 
