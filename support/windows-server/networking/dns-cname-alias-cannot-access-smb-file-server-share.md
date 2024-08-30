@@ -11,19 +11,18 @@ ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB)
 ---
 # Troubleshooting failure to access Windows file server by alias name (CNAME)
 
-This article introduces how to resolve issue with accessing a Server Message Block (SMB) server by using Canonical Name (CNAME).
+This article explains how to resolve issues when accessing a Server Message Block (SMB) server using a Canonical Name (CNAME).
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You have an SMB file server, such as a Windows Server-based computer or a Network Attached Storage (NAS). The server has files and resources that are accessible using their NetBIOS name, the Domain Name System (DNS) fully qualified domain name (FQDN), and their alias (CNAME).
+- You have an SMB file server, such as a Windows Server-based computer or a Network Attached Storage (NAS).
+- The server has files and resources that are accessible using NetBIOS name, the Domain Name System (DNS) fully qualified domain name (FQDN), and alias (CNAME).
 - You have a client that's running Windows 10, Windows 11, Windows Server 2016, or a later version of Windows Server.
 - On the client, you can use the NetBIOS name or the FQDN to access to an SMB share by with an application or a user account.
 
-In this scenario, you use one of the following commands to use
-
-When you use the CNAME to access the SMB share by running one of the following commands, the command fails.
+In this scenario, when you use the CNAME to access the SMB share by running one of the following commands, the command fails.
 
 - `\\CNAME.contoso.com\share_name`
 - `\\CNAME\share_name`
