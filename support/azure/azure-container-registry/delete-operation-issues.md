@@ -24,7 +24,7 @@ When you try to delete an empty repository from a container registry, an error l
 
     > 2024-05-08 12:14:04.261355 Error: repository name not known to registry. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd
 
-This error occurs because some orphaned metadata is left behind when the images were initially deleted. To avoid this error, don't completely empty the repository. Instead, deleting the entire repository is always simpler, as it deletes all images in the repository, including all tags, unique layers, and manifests. 
+This error occurs because some orphaned metadata is left behind when the images were initially deleted. To avoid this error, don't empty the repository. Instead, deleting the entire repository is always simpler, as it deletes all images in the repository, including all tags, unique layers, and manifests. 
 
 If you want to delete the repository, you can add a dummy image and then delete the entire repository.
 
@@ -42,6 +42,6 @@ In ACR, each image has its corresponding unique manifest and manifest digest. Ho
 
 To save the storage in ACR, layers referenced by multiple different manifests are stored only once.
 
-Based on the preceding screenshot, if you delete image B, the manifest and manifest digest will be cleaned up. At the layer level, only layer 4 will be deleted, and the layers 1 and 2 will remain in the ACR storage as another manifest still references them. Hence, the storage reduction will be less than expected.
+Based on the preceding screenshot, if you delete image B, the manifest and manifest digest will be cleaned up. At the layer level, only layer 4 will be deleted, and layers 1 and 2 will remain in the ACR storage as another manifest still references them. Hence, the storage reduction will be less than expected.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
