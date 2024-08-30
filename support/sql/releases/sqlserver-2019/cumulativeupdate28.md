@@ -37,6 +37,29 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 
 [!INCLUDE [patching-error-2019](../includes/patching-error-2019.md)]
 
+
+### Issue three: SQL VSS Writer may fail to perform a backup due to no databases available to Freeze
+
+When backup tools like Azure Recovery Vault perform a backup on a VM, they may fail to achieve application consistency. This leaves the SQL VSS Writer in a non-retryable error state. Enabling SQL VSS Writer trace may reveal the following exception, indicating that there are no databases to freeze, resulting in an unsuccessful snapshot:
+
+```
+[0543739500,0x002948:011b4:0xb87fa68e] sqlwriter.yukon\sqllib\snapsql.cpp(1058): Snapshot::Prepare: Server PROD-SQL01 has no databases to freeze
+```
+
+Additionally, some databases may be detected with online:0:
+
+```
+[0543739390,0x002948:0x11b4:0xb87fa68e] sqlwriter.yukon\sqllib\snapsql.cpp(0408): FrozenServer::FindDatabases2000: Examining database <ReportServerTempDB>
+Online:0 Standby:0 AutoClose:0 Closed:0
+```
+
+The issue arises from a code change in SQL Server 2019 CU28 that checks whether a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2019 CU27 and perform the snapshot backup. 
+Microsoft is working on a fix, which will be available in a future cumulative update (CU).
+
+
+
+
+
 ## Improvements and fixes included in this update
 
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
