@@ -9,7 +9,7 @@ localization_priority: medium
 ms.reviewer: kaushika, waltere, nedpyle, nkechiharris
 ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
-# Troubleshooting failure to access Windows file server by alias name (CNAME)
+# SMB file server share access is unsuccessful through DNS CNAME alias
 
 This article explains how to resolve issues when accessing a Server Message Block (SMB) server using a Canonical Name (CNAME).
 
