@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Assessable value is not as expected
+title: Assessable value is incorrect
 description: Provides troubleshooting information that can help when the assessable value is incorrect.
 author: shaoling
 ms.date: 08/27/2024
@@ -21,7 +21,7 @@ ms.search.validFrom: 2021-04-01
 ms.dyn365.ops.version: 10.0.1
 ---
 
-# The assessable value is not as expected
+# Assessable value is incorrect
 
 The assessable value is typically updated automatically based on the transaction value. If the value doesn't appear as as expected, users can manually update the assessable value on the UI form. If this is not feasible (e.g., the control is not editable, there is no such UI, or it is too tedious to update many lines), you can follow the mitigation steps to resolve the issue using code extension.
 
