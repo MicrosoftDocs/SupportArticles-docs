@@ -23,7 +23,7 @@ Consider the following scenario:
 
 In this scenario, you use one of the following commands to use
 
-When you use the CNAME to access the SMB share by running one of the following commands, the command files.
+When you use the CNAME to access the SMB share by running one of the following commands, the command fails.
 
 - `\\CNAME.contoso.com\share_name`
 - `\\CNAME\share_name`
