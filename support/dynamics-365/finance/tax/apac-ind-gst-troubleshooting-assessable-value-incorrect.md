@@ -3,7 +3,7 @@
 
 title: Assessable value is incorrect
 description: Provides troubleshooting information that can help when the assessable value is incorrect.
-author: shaoling, lingshf
+author: shaoling
 ms.date: 08/27/2024
 
 # optional metadata
