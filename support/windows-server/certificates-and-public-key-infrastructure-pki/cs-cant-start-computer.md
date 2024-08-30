@@ -56,27 +56,26 @@ To look for missing certificates, follow these steps:
 ### Step 2: Import the missing certificates
 
 1. Select **Start**, select **Run**, type mmc, and then select **OK**.
-      2. On the **File** menu, select **Add/Remove Snap-in**.
-      3. Select **Add**.
-      4. In the **Snap-in** list, select **Certificates**, and then select **Add**.
-
-          When the **Certificates snap-in** dialog box appears, select **Computer account**, and then select **Next** and then **Finish**.
-      5. Select **OK**.
-
-          The Certificates directory is now added to Microsoft Management Console (MMC).
-2. Expand **Certificates**, expand **Personal**, right-click **Certificates**, point to **All Tasks**, and then select **Import**.
-3. On the **Welcome** page, select **Next**.
-4. On the **File to Import** page, type the full path of the certificate file that you want to import in the **File name** box, and then select **Next**. Instead, select **Browse**, search for the file, and then select **Next**.
-5. If the file that you want to import is a Personal Information Exchange - PKCS #12 (*.PFX) file, you'll be prompted for the password. Type the password, select the **Mark this key as exportable** import option and then select **Next**.
-6. On the **Certificate Store** page, select **Next**.
-7. On the **Completing the Certificate Import Wizard** page, select **Finish**.
+2. On the **File** menu, select **Add/Remove Snap-in**.
+3. Select **Add**.
+4. In the **Snap-in** list, select **Certificates**, and then select **Add**.
+5. When the **Certificates snap-in** dialog box appears, select **Computer account**, and then select **Next** and then **Finish**.
+6. Select **OK**.
+   The Certificates directory is now added to Microsoft Management Console (MMC).
+   
+8. Expand **Certificates**, expand **Personal**, right-click **Certificates**, point to **All Tasks**, and then select **Import**.
+9. On the **Welcome** page, select **Next**.
+10. On the **File to Import** page, type the full path of the certificate file that you want to import in the **File name** box, and then select **Next**. Instead, select **Browse**, search for the file, and then select **Next**.
+11. If the file that you want to import is a Personal Information Exchange - PKCS #12 (*.PFX) file, you'll be prompted for the password. Type the password, select the **Mark this key as exportable** import option and then select **Next**.
+12. On the **Certificate Store** page, select **Next**.
+13. On the **Completing the Certificate Import Wizard** page, select **Finish**.
 
 > [!NOTE]
-> The CA always publishes its CA certificates to the `%systemroot%\System32\CertSvc\CertEnroll` folder. You may find the missing certificates in that folder.
+> The CA publishes by default its CA certificates to the `%systemroot%\System32\CertSvc\CertEnroll` folder. You may find the missing certificates in that folder.
 
 ### Step 3: Repair the links
 
-After you install the Windows Server 2003 Administration Tools Pack, follow these steps:
+To repair the links, follow these steps:
 
 1. Start Command Prompt.
 2. Type the following, and then press **ENTER**:  
@@ -86,25 +85,35 @@ After you install the Windows Server 2003 Administration Tools Pack, follow thes
     **Your_Server**. **Your_Domain**.com_rootca.crt
 
 4. Type the following commands, and then press **ENTER** after each command:
-    `%systemroot%\system32\certutil -addstore my %systemroot%\system32\certsrv\certenroll\Your_Server.Your_Domain.com_rootca.crt`
-    `%systemroot%\System32\certutil -dump %systemroot%\system32\certsrv\certenroll\Your_Server.Your_Domain.com_rootca.crt`
+
+   `certutil -addstore my %systemroot%\system32\certsrv\certenroll\Your_Server.Your_Domain.com_rootca.crt`
+   
+    `certutil -dump %systemroot%\system32\certsrv\certenroll\Your_Server.Your_Domain.com_rootca.crt`
+
     **Your_Server.Your_Domain**.com_rootca.crt is the name of the certificate in the Certenroll folder that you noted in step 3.
-5. In the output from the last command, near the end, you'll see a line that is similar to the following:  
-    Key Id Hash(sha1): ea c7 7d 7e e8 cd 84 9b e8 aa 71 6d f4 b7 e5 09 d9 b6 32 1b  
+   
+6. In the output from the last command, near the end, you'll see a line that is similar to the following:  
+    `Key Id Hash(sha1): ea c7 7d 7e e8 cd 84 9b e8 aa 71 6d f4 b7 e5 09 d9 b6 32 1b`
+   
     The Key Id Hash data is specific to your computer. Make a note of this line.
-6. Type the following command including the quotation marks, and then press **ENTER**:  
+   
+8. Type the following command including the quotation marks, and then press **ENTER**:  
     %systemroot%\system32\certutil -repairstore my "**Key_Id_Hash_Data**"
 
-    In this command, `Key_Id_Hash_Data` is the line that you noted in step 4. For example, type the following:  
-    %systemroot%\system32\certutil -repairstore my "**ea c7 7d 7e e8 cd 84 9b e8 aa 71 6d f4 b7 e5 09 d9 b6 32 1b**"
+    In this command, `Key_Id_Hash_Data` is the line that you noted in step 4. For example, type the following:
+
+   `certutil -repairstore my "ea c7 7d 7e e8 cd 84 9b e8 aa 71 6d f4 b7 e5 09 d9 b6 32 1b"`
 
     You'll then receive the following output:
-    > CertUtil: -repairstore command completed successfully.
+   `CertUtil: -repairstore command completed successfully.`
 
-7. To verify the certificates, type the following, and then press **ENTER**:  
-    `%systemroot%\system32\certutil -verifykeys`
-    After this command runs, you'll receive the following output:
-    > CertUtil: -verifykeys command completed successfully.
+9. To verify the certificates, type the following, and then press **ENTER**:
+
+   `certutil -verifykeys`
+   
+   After this command runs, you'll receive the following output:
+
+   `CertUtil: -verifykeys command completed successfully.`
 
 ### Step 5: Start the Certificate Services service
 
@@ -117,38 +126,7 @@ You must decommission and replace the CA if one of the following conditions is t
 
 - You can't locate the missing certificates.
 - The certificates can't be reinstalled.
-- The `certutil -repairstore` command can't be completed because the private keys have been removed. To decommission and to replace the CA, follow these steps:
-
-    1. Revoke the certificates for the CA that has stopped working correctly. To do it, follow these steps:
-        1. Sign in as an administrator to the computer that issued the certificates that you want to revoke.
-        2. Select **Start**, point to **Programs**, point to **Administrative Tools**, and then select **Certification Authority**.
-        3. Expand **CA_Name**, and then select **Issued Certificates**.
-        4. In the right-pane, select the certificate that you want to revoke.
-        5. On the **Action** menu, point to **All Tasks**, and then select **Revoke Certificate**.
-        6. In the **Reason code** list, select the reason for revoking the certificate, and then select **Yes**.
-
-        This will revoke all the certificates that were issued by the CA that has stopped working correctly.
-
-    2. Publish the certificate revocation list (CRL) on the next-highest CA. To do it, follow these steps:
-        1. Sign in as an administrator to the computer that is running the next highest CA.
-        2. Select **Start**, point to **Programs**, point to **Administrative Tools**, and then select **Certification Authority**.
-        3. Expand **CA_Name**, and then select **Revoked Certificates**.
-        4. On the **Action** menu, point to **All Tasks**, and then select **Publish**.
-        5. Select **Yes** to overwrite the previously published CRL.
-
-    3. If the CA that has stopped working correctly has been published to Active Directory directory services, remove it. To remove the CA from Active Directory, follow these steps:
-        1. Start Command Prompt.
-        2. Type the following, and then press **ENTER**:  
-            certutil -dsdel **CA_Name**  
-
-    4. Remove Certificate Services from the server where the CA has stopped working correctly. To do it, follow these steps:
-        1. Select **Start**, point to **Settings**, and then select **Control Panel**.
-        2. Double-click **Add/Remove Programs**, and then select **Add/Remove Windows Components**.
-        3. In the **Components** list, click to clear the **Certificate Services** check box, select **Next**, and then select **Finish**.
-    5. Install Certificate Services. To do it, follow these steps:
-        1. Select **Add/Remove Windows Components**.
-        2. In the **Components** list, select to select the **Certificate Services** check box, select **Next**, and then select **Finish**.
-    6. All the users, the computers, or the services with certificates that were issued by the CA that has stopped working correctly must enroll for certificates from the new CA.
+- The `certutil -repairstore` command can't be completed because the private keys have been removed.
 
 > [!NOTE]
 > If this issue occurs on the Root CA of the public key infrastructure (PKI) hierarchy and if the issue cannot be repaired, you will have to replace the whole PKI hierarchy. For more information about how to remove the PKI hierarchy, see [How to decommission a Windows enterprise certification authority and remove all related objects](../windows-security/decommission-enterprise-certification-authority-and-remove-objects.md).
