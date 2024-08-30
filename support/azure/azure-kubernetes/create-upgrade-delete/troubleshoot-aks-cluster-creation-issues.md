@@ -44,7 +44,7 @@ These errors often contain detailed descriptions of what went wrong in the clust
 
 To view the details about errors in the [Azure portal](https://portal.azure.com), examine the [Azure activity log](/azure/azure-monitor/essentials/activity-log). To find the list of activity logs in the Azure portal, search on **Activity log**. Or, select **Notifications** (the bell icon), and then select **More events in the activity log**.
 
-The list of logs on the **Activity log** page contains a line entry in which the **Operation name** column value is named **Create or Update Managed Cluster**. The corresponding **Event initiated by** column value is set to the identity name (e.g work, school account or [azure managed identity](docs/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities.md). If the operation is successful, the **Status** column value shows **Accepted**. You'll also see suboperation entries for the creation of the cluster components, such as the following operation names:
+The list of logs on the **Activity log** page contains a line entry in which the **Operation name** column value is named **Create or Update Managed Cluster**. The corresponding **Event initiated by** column value is set to the identity name (e.g work, school account or [azure managed identity](https://github.com/MicrosoftDocs/entra-docs/blob/main/docs/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities.md). If the operation is successful, the **Status** column value shows **Accepted**. You'll also see suboperation entries for the creation of the cluster components, such as the following operation names:
 
 - **Create or Update Route Table**
 - **Create or Update Network Security Group**
