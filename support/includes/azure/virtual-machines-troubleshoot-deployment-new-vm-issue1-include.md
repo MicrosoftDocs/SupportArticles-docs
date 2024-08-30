@@ -1,6 +1,6 @@
 ---
 author: cynthn
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: include
 ms.date: 06/27/2024
 ms.author: cynthn

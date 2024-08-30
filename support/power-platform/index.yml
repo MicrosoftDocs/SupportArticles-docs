@@ -7,6 +7,8 @@ metadata:
    services: service
    ms.service: power-platform
    ms.date: 04/23/2024
+   author: ChristySu
+   ms.author: christys
 
 productDirectory:
   items:

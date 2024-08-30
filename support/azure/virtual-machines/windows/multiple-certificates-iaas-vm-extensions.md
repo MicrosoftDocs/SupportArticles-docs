@@ -4,7 +4,7 @@ description: Fix an issue that involves multiple certificates generated on an Az
 ms.date: 05/05/2023
 editor: v-jsitser
 ms.reviewer: kegregoi, axelg, scotro, v-leedennis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Extensions not operating correctly
 ---
 # Multiple certificates on an Azure IaaS VM that uses extensions

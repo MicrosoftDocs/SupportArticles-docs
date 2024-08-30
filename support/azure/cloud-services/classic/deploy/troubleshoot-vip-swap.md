@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Cloud Service (classic) VIP swap failures
 description: Troubleshoot cloud service VIP swap failures (VipSwapNotAllowedAsRollingUpgradeIsInProgress exceptions) in Azure Cloud Service (classic).
-ms.service: cloud-services
+ms.service: azure-cloud-services-classic
 ms.date: 09/26/2022
 ms.reviewer: chiragpa, v-leedennis
 articleID: 85d6aaad-fed9-48c4-88e2-8d93e8eecedd

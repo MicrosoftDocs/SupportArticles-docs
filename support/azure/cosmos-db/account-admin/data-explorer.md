@@ -4,7 +4,6 @@ description: Troubleshoot scenarios when the Azure Cosmos DB Data Explorer can't
 author: seesharprun
 ms.author: sidandrews
 ms.reviewer: ouryba, v-sidong
-ms.service: cosmos-db
 ms.date: 02/14/2024
 ms.custom: sap:Account Administration
 ---

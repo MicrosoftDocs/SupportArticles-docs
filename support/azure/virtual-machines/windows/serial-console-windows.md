@@ -6,12 +6,12 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: article
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 06/28/2024
+ms.date: 08/27/2024
 ms.author: mbifeld
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
@@ -166,6 +166,8 @@ Serial Console uses the storage account configured for boot diagnostics in its c
 
    |IP address      | Regions | Geography|
    |-----------|--------------------|-----------------|
+   |102.37.86.194|South Africa North, South Africa West|Africa|
+   |20.87.80.28|South Africa North, South Africa West|Africa|
    |20.205.69.28 | East Asia, Southeast Asia | AsiaPacific |
    |20.195.85.180 | East Asia, Southeast Asia | AsiaPacific |
    |20.53.53.224 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia |

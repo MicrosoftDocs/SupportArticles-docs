@@ -60,8 +60,6 @@
       href: failure-scenarios-related-azure-web-app-tasks.md
   - name: Access denied when you connect to Source Control
     href: access-denied-error-when-connect-source-control.md
-  - name: Release Management component doesn't work
-    href: other-release-management-component-no-work.md
 
 - name: Repos
   items:

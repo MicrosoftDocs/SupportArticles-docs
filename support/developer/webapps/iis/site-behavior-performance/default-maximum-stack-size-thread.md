@@ -4,7 +4,6 @@ description: This article describes the default maximum stack size of a thread t
 ms.date: 12/29/2020
 ms.custom: sap:Site Behavior and Performance
 ms.reviewer: mlaing
-ms.subservice: site-behavior-performance
 ---
 # The default maximum stack size of threads created in a native IIS process is 256 KB
 

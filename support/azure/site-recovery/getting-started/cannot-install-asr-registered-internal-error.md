@@ -2,7 +2,7 @@
 title: Error when you try to install Microsoft Azure Site Recovery Provider
 description: You can't install Microsoft Azure Site Recovery Provider and receive an error message ASR cannot be registered due to an internal error.
 ms.date: 10/10/2020
-ms.service: site-recovery
+ms.service: azure-site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: NicholaD

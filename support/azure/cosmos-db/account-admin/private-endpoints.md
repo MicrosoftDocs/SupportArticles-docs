@@ -5,7 +5,6 @@ author: seesharprun
 editor: v-jsitser
 ms.author: sidandrews
 ms.reviewer: ouryba, v-jayaramanp
-ms.service: cosmos-db
 ms.date: 01/18/2024
 ms.custom: sap:Account Administration, devx-track-arm-template
 ---

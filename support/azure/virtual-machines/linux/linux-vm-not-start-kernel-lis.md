@@ -5,7 +5,7 @@ ms.date: 11/26/2020
 ms.author: genli
 author: genlin
 ms.reviewer: delhan, craigw
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
 ---

@@ -5,7 +5,7 @@ metadata:
   keywords: azure app service, web app, faq, linux, oss, web app for containers, multi-container, multicontainer
   author: genlin
   ms.topic: article
-  ms.service: app-service
+  ms.service: azure-app-service
   ms.date: 04/16/2024
   ms.author: genli
 title: Azure App Service on Linux FAQ

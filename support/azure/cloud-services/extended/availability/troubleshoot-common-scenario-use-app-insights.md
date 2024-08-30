@@ -5,7 +5,7 @@ ms.date: 04/01/2024
 ms.reviewer: patcatun
 author: JerryZhangMS
 ms.author: genli
-ms.service: cloud-services-extended-support
+ms.service: azure-cloud-services-extended-support
 ms.custom: sap:Service Availability and Performance
 ---
 

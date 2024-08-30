@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 27 for SQL Server 2019 (KB5037331)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 27 (KB5037331).
-ms.date: 06/26/2024
+ms.date: 08/19/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5037331
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4375.4
 
 ## Summary
 
-This article describes Cumulative Update package 27 (CU27) for Microsoft SQL Server 2019. This update contains 13 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:
+This article describes Cumulative Update package 27 (CU27) for Microsoft SQL Server 2019. This update contains 14 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4375.4**, file version: **2019.150.4375.4**
 - Analysis Services - Product version: **15.0.35.45**, file version: **2018.150.35.45**
@@ -24,7 +24,10 @@ This article describes Cumulative Update package 27 (CU27) for Microsoft SQL Ser
 ## Known issues in this update
 
 ### Issue one: Excessive logging of asynchronous API call warning in the error log
-The newly-created warning message in issue [2901635](#2901635) might fill up the SQL Server error log with thousands of occurrences. The message is "WARNING Long asynchronous API Call: The scheduling fairness of scheduler can be impacted by an asynchronous API invocation unexpectedly exceeding xxx ms." This is due to an incorrect code change during the build process. Microsoft is working on a fix for this issue and it will be available in a future CU.
+
+The newly-created warning message in issue [2901635](#2901635) might fill up the SQL Server error log with thousands of occurrences. The message is "WARNING Long asynchronous API Call: The scheduling fairness of scheduler can be impacted by an asynchronous API invocation unexpectedly exceeding xxx ms." This is due to an incorrect code change during the build process. If you experience this issue and prefer not to uninstall the CU as a solution, contact [Microsoft Support](https://support.microsoft.com/contactus/?ws=support).
+
+Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ### Issue two: Access violation when session is reset
 
@@ -35,6 +38,10 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 - 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
+
+### Issue three: Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
+
+[!INCLUDE [patching-error-2019](../includes/patching-error-2019.md)]
 
 ## Improvements and fixes included in this update
 
@@ -54,6 +61,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3018480>[3018480](#3018480) </a> | Fixes an assertion failure (Location: HadrArProxy.cpp:4314; Expression: !CFeatureSwitchesMin::GetCurrentInstance()->FHadrCheckXClusterAgUcsSizeEnabled() \|\| cbBlob < x_cbMsgBodyMax) that you might encounter when you use read-scale availability groups without a cluster configuration. | SQL Server Engine | High Availability and Disaster Recovery | All|
 | <a id=3088136>[3088136](#3088136) </a> | Fixes an assertion dump issue (Location: hadrlogcapture.cpp:\<LineNumber>; Expression: m_pFsManager->GetEnqueuedBlockId () < capturedLogBlockId \|\| capturedLogBlockId == m_pDbPartner->GetFirstLogBlockIdToCapture ()) that you encounter when there are FILESTREAM transactions in an Always On availability group (AG). | SQL Server Engine | High Availability and Disaster Recovery | All|
 | <a id=3157054>[3157054](#3157054) </a> | Adds performance monitor counters to the cluster log report when the health check timeout is reported. | SQL Server Engine | High Availability and Disaster Recovery | Windows|
+| <a id=3207518>[3207518](#3207518) </a> | [FIX: Memory exceeds the configured limits that are specified by memory.memorylimitmb in SQL Server (KB5042369)](../sqlserver-2022/memory-exceed-configured-limits-memory-memorylimitmb.md) | SQL Server Engine | Linux | Linux|
 | <a id=3282395>[3282395](#3282395) </a> | Fixes the following error 1204 that you encounter when lock escalation doesn't occur if you apply the fix of [Bug 2830668](cumulativeupdate26.md#2830668): </br></br>SQL Server Database Engine cannot obtain a LOCK resource at this time. | SQL Server Engine | Metadata | All |
 | <a id=2955030>[2955030](#2955030) </a> | Fixes an assertion failure (Location: sosmemobj.cpp:2744; Expression: pvb->FInUse()) in `CVariableInfo::PviRelease` that you encounter when you use UTF-8 collations and the `WITH RESULT SETS` clause. | SQL Server Engine | Programmability | All|
 | <a id=2962248>[2962248](#2962248) </a> | Fixes an issue in which change tracking auto cleanup consumes CPU in cycles every 30 minutes even if change tracking isn't enabled on any databases. </br></br>**Note**: After applying the fix, if you see some rows in `sys.syscommittab` or `dbo.MSchange_tracking_history` tables in databases where change tracking is disabled, you need to re-enable and then disable change tracking on these databases. This will clean all tracking data. For more information, see [Enable and Disable Change Tracking](/sql/relational-databases/track-changes/enable-and-disable-change-tracking-sql-server).| SQL Server Engine | Replication | All|

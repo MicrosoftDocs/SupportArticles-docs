@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2014 build versions (KB2936603)
 description: This article lists cumulative update builds for SQL Server 2014.
-ms.date: 10/12/2022
+ms.date: 07/26/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB2936603
 appliesto:
 - SQL Server 2014
@@ -72,8 +72,8 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 | SQL Server 2014 SP1 CU12             | 12.0.4511.0   | [KB4017793](https://support.microsoft.com/help/4017793) | April 17, 2017    |
 | SQL Server 2014 SP1 CU11             | 12.0.4502.0   | [KB4010392](https://support.microsoft.com/help/4010392) | February 21, 2017 |
 | SQL Server 2014 SP1 CU10             | 12.0.4491.0   | [KB3204399](https://support.microsoft.com/help/3204399) | December 19, 2016 |
-| SQL Server 2014 SP1 GDR              | 12.0.4487.0   | [KB3194722](https://support.microsoft.com/help/3194722) | November 8, 2016  |
-| SQL Server 2014 SP1 GDR              | 12.0.4232.0   | [KB3194720](https://support.microsoft.com/help/3194720) | November 8, 2016  |
+| SQL Server 2014 SP1 GDR              | 12.0.4487.0   | [KB3194722](https://support.microsoft.com/help/3194722) | November 08, 2016  |
+| SQL Server 2014 SP1 GDR              | 12.0.4232.0   | [KB3194720](https://support.microsoft.com/help/3194720) | November 08, 2016  |
 | SQL Server 2014 SP1 CU9              | 12.0.4474.0   | [KB3186964](https://support.microsoft.com/help/3186964) | October 17, 2016  |
 | SQL Server 2014 SP1 CU8              | 12.0.4468.0   | [KB3174038](https://support.microsoft.com/help/3174038) | August 15, 2016   |
 | SQL Server 2014 SP1 CU7              | 12.0.4459.0   | [KB3162659](https://support.microsoft.com/help/3162659) | June 20, 2016     |

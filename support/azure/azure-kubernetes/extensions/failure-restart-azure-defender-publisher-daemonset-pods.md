@@ -1,13 +1,14 @@
 ---
 title: Pods fail and restart after you enable Defender Profile for AKS
 description: Learn how to resolve a scenario in which the azure-defender-publisher DaemonSet pods fail and restart after you enable Defender Profile for AKS.
-ms.date: 05/13/2024
+ms.date: 08/07/2024
 author: mosbahmajed
 ms.author: momajed
 editor: v-jsitser
 ms.reviewer: cssakscic, v-rekhanain, v-leedennis
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-problem-resolution
+ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot failed azure-defender-publisher DaemonSet pods after I enable Defender Profile for Azure Kubernetes Service (AKS) so that I can continue to use Azure Policy Add-on for AKS successfully.
 ---
 # Pods fail and restart after you enable Defender Profile for AKS

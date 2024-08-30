@@ -3,6 +3,7 @@ title: Application Insights logs are missing or incorrect
 description: Ths article helps you resolve issues related to missing or incorrect logs for Application Insights logs in Azure Functions.
 ms.date: 08/24/2023
 ms.reviewer: gasridha, v-jayaramanp
+ms.custom: sap:Monitoring using Application Insights, Metrics and Alerts
 ---
 
 # Application Insights logs are missing or incorrect for Azure Functions apps
