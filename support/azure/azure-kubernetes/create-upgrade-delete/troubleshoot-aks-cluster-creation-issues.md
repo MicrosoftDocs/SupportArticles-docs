@@ -44,7 +44,7 @@ These errors often contain detailed descriptions of what went wrong in the clust
 
 To view the details about errors in the [Azure portal](https://portal.azure.com), examine the [Azure activity log](/azure/azure-monitor/essentials/activity-log). To find the list of activity logs in the Azure portal, search on **Activity log**. Or, select **Notifications** (the bell icon), and then select **More events in the activity log**.
 
-The list of logs on the **Activity log** page contains a line entry in which the **Operation name** column value is named **Create or Update Managed Cluster**. The corresponding **Event initiated by** column value is set to the identity name (e.g work, school account or [azure managed identity](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#list-user-assigned-managed-identities). If the operation is successful, the **Status** column value shows **Accepted**. You'll also see suboperation entries for the creation of the cluster components, such as the following operation names:
+The list of logs on the **Activity log** page contains a line entry in which the **Operation name** column value is named **Create or Update Managed Cluster**. The corresponding **Event initiated by** column value is set to the identity name (e.g work, school account or [azure managed identity](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#list-user-assigned-managed-identities). If the operation is successful, the **Status** column value shows **Accepted**. You'll also see suboperation entries for the creation of the cluster components, such as the following operation names:
 
 - **Create or Update Route Table**
 - **Create or Update Network Security Group**
@@ -56,13 +56,13 @@ The list of logs on the **Activity log** page contains a line entry in which the
 
 In these suboperation entries, the **Status** value is **Succeeded**, and the **Event initiated by** field is set to **AzureContainerService**.
 
-![exploring-activitylog-azportal-visualy](media/troubleshoot-aks-cluster-start-issues/exploring-activitylog-azportal-visualy.png)
+![using azure portal to exploring activity logs tab](media/troubleshoot-aks-cluster-start-issues/exploring-activitylog-azportal-visualy.png)
 
 What if an error occurred instead? In that case, the **Create or Update Managed Cluster** operation **Status** field shows **Failed**. Unlike in the operations to create cluster components, here you must expand the failed operation entry to review the suboperation entries. Typical suboperation names are policy actions, such as **'audit' Policy action** and **'auditIfNotExists' Policy action.** Some of the suboperations will continue to show that they succeeded.
 
 To further investigate, you can select one of the failed suboperations. A side pane opens so that you can review more information about the suboperation. You can troubleshoot values for fields such as **Summary**, **JSON**, and **Change History**. The **JSON** field contains the output text for the error in JSON format, and it usually provides the most helpful information.
 
-![exploring-activitylog-azportal-visualy-json](media/troubleshoot-aks-cluster-start-issues/exploring-activitylog-azportal-visualy-json.png)
+![exploring azure portal activity log looking to json](media/troubleshoot-aks-cluster-start-issues/exploring-activitylog-azportal-visualy-json.png)
 
 <!-- expected_similarity=0.3 -->
 ```JSON
@@ -86,7 +86,7 @@ To further investigate, you can select one of the failed suboperations. A side p
 [!TIP]
 >To best use of Activity Logs on portal reading the findings use filter section and create new to accurate your query.
 
-![exploring-activitylog-azportal-visualy-filtering](media/troubleshoot-aks-cluster-start-issues/exploring-activitylog-azportal-visualy-filtering.png)
+![exploring azure portal activity log filtering by interest](media/troubleshoot-aks-cluster-start-issues/exploring-activitylog-azportal-visualy-filtering.png)
 
 ## View cluster insights
 
