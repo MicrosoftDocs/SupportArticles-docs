@@ -3,7 +3,7 @@ title: An Azure Linux VM on a 3.10-based kernel panics after a host node upgrade
 description: Discusses a problem that occurs when an Azure Linux VM that's running the 3.10-based kernel crashes after a host node upgrade in Azure. Provides a resolution.
 ms.date: 04/15/2024
 ms.reviewer: craigw, scotro, anandram, borisb
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
 ---

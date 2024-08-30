@@ -3,7 +3,7 @@ title: Windows boot error 0xc00000ba in the Azure VM
 description: Provides a solution to an issue where Windows VM doesn't start with error code 0xc00000ba
 ms.date: 07/21/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---

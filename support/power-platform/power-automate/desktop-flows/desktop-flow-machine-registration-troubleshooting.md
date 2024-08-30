@@ -1,8 +1,8 @@
 ---
 title: Power Automate machine registration failure
 description: Provides a set of troubleshooting steps for a failing machine registration in Microsoft Power Automate.
-ms.custom: sap:Desktop flows\Power Automate for desktop errors
-ms.date: 09/22/2023
+ms.custom: sap:Desktop flows\Cannot create desktop flow connection
+ms.date: 08/05/2024
 ms.reviewer: madiazor, alarnaud, fredg, guco
 ms.author: johndund 
 author: johndund
@@ -20,6 +20,8 @@ When you register your machine, you receive one of the following error messages:
 > Error during machine registration. Check your internet connection and try again. If the issue persists, contact your administrator.
 
 > We didn't get a response when trying to register your machine. Please click learn more for more details.
+
+> The registration failed because the machine could not communicate with the cloud services due to a TLS error.
 
 ## Resolution
 

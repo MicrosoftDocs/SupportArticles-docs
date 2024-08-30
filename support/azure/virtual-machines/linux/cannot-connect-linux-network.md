@@ -4,7 +4,7 @@ description: Describes network errors on Azure Linux virtual machines that are l
 ms.date: 04/15/2024
 author: genlin
 ms.author: genli
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.collection: linux
 ms.reviewer: 

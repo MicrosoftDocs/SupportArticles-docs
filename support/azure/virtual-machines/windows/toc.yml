@@ -69,8 +69,10 @@
     href: virtual-machines-windows-fix-corrupted-hive.md
   - name: Repair the boot configuration data
     href: virtual-machines-windows-repair-boot-configuration-data.md
-  - name: Replace corrupted or missing binary files
-    href: virtual-machines-windows-replace-system-binary-file.md
+  - name: Repair or replace corrupted or missing binary files
+    href: virtual-machines-windows-repair-replace-system-binary-file.md
+  - name: Verify that the Windows partition is active
+    href: verify-windows-partition-is-active.md
 
 - name: VM health
   items:
@@ -206,7 +208,7 @@
   items:
   - name: Boot diagnostics
     href: boot-diagnostics.md
-  - name: Specific Boot Errors - Windows
+  - name: Specific boot errors - Windows
     href: boot-error-troubleshoot.md
     items:
     - name: Blue screen errors
@@ -346,8 +348,6 @@
     href: disk-has-been-surprise-removed-event-id-157.md
   - name: Errors when deleting storage resources
     href: storage-resource-deletion-errors.md
-  - name: Errors when deleting classic storage resources
-    href: storage-classic-cannot-delete-storage-account-container-vhd.md
   - name: VHD is not supported when you create a VM in Azure
     href: vhd-not-supported-vm-azure.md
 
@@ -418,8 +418,6 @@
   items:
   - name: Allocation failures
     href: allocation-failure.md
-  - name: Classic allocation failures
-    href: allocation-failure-classic.md
 
 - name: VM planned maintenance
   items:

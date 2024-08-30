@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 8 for SQL Server 2017 (KB4338363)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 8 (KB4338363).
-ms.date: 08/04/2023
+ms.date: 07/26/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4338363, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows

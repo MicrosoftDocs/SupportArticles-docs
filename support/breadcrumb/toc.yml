@@ -26,10 +26,6 @@ items:
         tocHref: /troubleshoot/windows-hardware/drivers
         topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
 
-    - name: Browsers
-      tocHref: /troubleshoot/developer/browsers/
-      topicHref: /troubleshoot/developer/browsers/welcome-browsers
-
     - name: .NET
       tocHref: /troubleshoot/developer/dotnet/
       topicHref: /troubleshoot/developer/dotnet/welcome-dotnet-landing
@@ -198,6 +194,9 @@ items:
       - name: Virtual Machine Scale Sets
         tocHref: /troubleshoot/azure/virtual-machine-scale-sets/
         topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets
+      - name: Kubernetes Fleet Manager
+        tocHref: /troubleshoot/azure/kubernetes-fleet/
+        topicHref: /troubleshoot/azure/kubernetes-fleet/welcome-azure-kubernetes-fleet
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/

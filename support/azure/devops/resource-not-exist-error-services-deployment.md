@@ -2,10 +2,9 @@
 title: Resource doesn't exist error with Azure Web App deployment
 description: Provides a solution for an error Resource doesn't exist with Azure Web App deployment.
 ms.date: 05/10/2023
-ms.custom: sap:Pipelines
+ms.custom: sap:Pipelines - Deploying applications to Azure services
 ms.reviewer: dmittal, cathmill, v-sidong
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 # Resource doesn't exist error with Azure Web App deployment
 

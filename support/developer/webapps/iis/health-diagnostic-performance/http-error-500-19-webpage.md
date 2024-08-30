@@ -4,7 +4,6 @@ description: Resolves the HTTP 500.19 error that occurs when you visit a website
 ms.date: 11/09/2020
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing
-ms.subservice: health-diagnostic-performance
 ---
 # HTTP Error 500.19 - internal server error when you open an IIS Webpage
 

@@ -49,7 +49,7 @@ This configuration isn't recommended. However, it can be used if RPC over TCP is
 The following additional configurations might also be needed to properly support RPC over Named Pipes in the environment.
 
 * Set the **RpcAuthnLevelPrivacyEnabled** registry value to **0** on the server/host machine. See [Managing deployment of Printer RPC binding changes for CVE-2021-1678 (KB4599464) (microsoft.com)](https://support.microsoft.com/topic/managing-deployment-of-printer-rpc-binding-changes-for-cve-2021-1678-kb4599464-12a69652-30b9-3d61-d9f7-7201623a8b25)
-* Some scenarios also require guest access in SMB2/SMB3, which is disabled by default. To enable it, see [Guest access in SMB2 and SMB3 disabled by default in Windows](../../windows-server/networking/guest-access-in-smb2-is-disabled-by-default.md)
+* Some scenarios also require guest access in SMB2/SMB3, which is disabled by default. To enable it, see [How to enable insecure guest logons in SMB2 and SMB3](/windows-server/storage/file-server/enable-insecure-guest-logons-smb2-and-smb3).
 
 ## Configuring RPC to use certain ports
 

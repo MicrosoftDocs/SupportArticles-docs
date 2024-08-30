@@ -7,7 +7,7 @@ author: saimsh-msft
 manager: dcscontentpm
 tags: ''
 ms.custom: sap:My VM is not booting, linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services

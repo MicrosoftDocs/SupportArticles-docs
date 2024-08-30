@@ -1,60 +1,59 @@
 ---
 title: Getting errors with null fields
-description: Provides a solution to an error that occurs when you create a flow in Microsoft Power Automate.
-ms.reviewer: 
-ms.date: 03/31/2021
+description: Provides a solution to errors and unexpected behaviors that occur when you run a flow in Microsoft Power Automate.
+ms.reviewer: hamenon, samathur 
+ms.date: 08/27/2024
 ms.custom: sap:Flow run issues\Actions
 ---
-# Getting errors with null fields
+# Getting errors with null fields 
 
-This article provides a solution to an error that occurs when you create a flow in Microsoft Power Automate.
+This article provides information to help you handle flow runtime errors and unexpected behaviors related to null fields.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4535432
 
 ## Symptoms
 
-In Microsoft Power Automate, when you create a flow, here's what could happen with null field that cause trouble:
+When you create a flow in Power Automate, you might experience the following issues:
 
-1. You might be expecting wrong behavior when doing an action with null field.
-2. If you aren't handling null fields correctly, you might be expecting runtime errors like:
+- Unexpected behaviors occur when performing an action with a null field.
+- Runtime errors occur if you don't handle null fields correctly. For example:
 
-   - > **InvalidTemplate**. Unable to process template language expressions. The provided value is of type 'Null'.
+   > **InvalidTemplate**. Unable to process template language expressions. The provided value is of type 'Null'.
 
    :::image type="content" source="media/getting-errors-null-fields/invaild-template-error.png" alt-text="Screenshot of the invalid template runtime error." border="false":::
 
 ## Cause
 
-- If a flow runs with a null field, it will cause:
-  - **Wrong behavior**: flow action's input is receiving null field, when it expects a different value.
-- Use expression towards null fields. It will cause:
-  - **Runtime error**: expression expects its parameter to be a string, an object, or an array but receives null.
+- If an action receives a null field as input when it expects a different value, it can result in incorrect behavior.
+- If an expression expects its parameter to be a string, an object, or an array but instead receives a null response, it can result in a runtime error.
 
-## Flow error resolution
+## Resolution 1: Add a condition check
 
-You can set up a condition check for null field. Here are the steps to create a condition check for null.
+To check for a null response, you can [add a condition](/power-automate/add-condition) to the flow by following these steps. Then you can appropriate action to handle the condition.
 
-1. Add a new condition action.
+1. In the Power Automate flow, add a new **Condition** action.
 
-    :::image type="content" source="media/getting-errors-null-fields/add-new-condition-action.png" alt-text="Screenshot to add a new condition action in the Choose an action window.":::
+1. Choose the dynamic content output that you want to check. For example, **User email**.
 
-2. Choose dynamic content output (for example, user email) you want to check.
+1. Set the operation to **is not equal to**.
 
-    :::image type="content" source="media/getting-errors-null-fields/choose-user-email.png" alt-text="Screenshot to choose the dynamic content output that you want to check.":::
+   :::image type="content" source="media/getting-errors-null-fields/condition-is-not-equal-to.png" alt-text="Screenshot of the operation setting.":::
 
-3. Set the operation to be (for example) **is not equal to**.
-4. Put the value field as the expression value **null**.
+1. In the value field, add the expression value as **null**.
 
-    :::image type="content" source="media/getting-errors-null-fields/expression-value-null.png" alt-text="Screenshot to put the value field as the expression value null.":::
+   :::image type="content" source="media/getting-errors-null-fields/add-null-expression-value.png" alt-text="Screenshot of the value setting of the condition.":::
 
-## Runtime error resolution
+   :::image type="content" source="media/getting-errors-null-fields/set-condition-expression-not-equal-to-null.png" alt-text="Screenshot of the null expression value set up for the condition.":::
 
-You can also use the coalesce function to provide default values when a value is null. For example, using **coalesce(trigger().outputs, '')** will default to empty string when **trigger().outputs** is null.
+## Resolution 2: Use the coalesce function
 
-:::image type="content" source="media/getting-errors-null-fields/coalesce-function-provide-default-values.png" alt-text="Screenshot to use the coalesce function to provide the default values when a value is null.":::
+You can also use the `coalesce` function to provide default values when a value is null. For example, using `coalesce(trigger().outputs, '')` will default to an empty string when `trigger().outputs` is null.
+
+:::image type="content" source="media/getting-errors-null-fields/coalesce-function.png" alt-text="Screenshot to use the coalesce function to provide the default values when a value is null.":::
 
 > [!NOTE]
-> If you're still getting a runtime error, it may be caused by reference null properties in an object. You should use the question mark operator **?**. For example, to handle null outputs from a trigger, you can use this expression:  
+> If you still get a runtime error after using the `coalesce` function, it might be caused by referencing null properties in an object. You can use the question mark operator (?) to handle null outputs from a trigger. For example:
 > `@coalesce(trigger().outputs?.body?.<someProperty>, '<property-default-value>').`
 
 For more information, see [Coalesce](/azure/logic-apps/workflow-definition-language-functions-reference#coalesce) and [Operators](/azure/logic-apps/logic-apps-workflow-definition-language#operators).

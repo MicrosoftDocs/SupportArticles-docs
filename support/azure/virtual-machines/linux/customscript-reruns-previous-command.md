@@ -3,7 +3,7 @@ title: CustomScript reruns the previous command in Azure Linux
 description: Discusses an issue in which the last command in the Azure Linux CustomScript extension reruns the previous command. Provides a workaround.
 ms.date: 07/21/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 ms.collection: linux
 ---

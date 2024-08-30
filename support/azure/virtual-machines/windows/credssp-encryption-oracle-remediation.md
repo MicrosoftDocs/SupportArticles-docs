@@ -3,7 +3,7 @@ title: Error CredSSP encryption oracle remediation when you try to RDP to a Wind
 description: Fixes an issue that you receive a CredSSP encryption oracle remediation error when you try to RDP to a Windows VM in Azure.
 ms.date: 08/25/2023
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:Cannot connect to my VM
 ---

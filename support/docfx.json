@@ -54,7 +54,6 @@
     "fileMetadata": {
       "uhfHeaderId": {
         "azure/**.*": "Azure",
-        "developer/browsers/**.*": "MSDocsHeader-MSEdge",
         "developer/dotnet/**.*": "MSDocsHeader-DotNet",
         "developer/host-integration-server/**.*": "MSDocsHeader-His",
         "developer/visualstudio/**.*": "MSDocsHeader-VisualStudio",
@@ -187,20 +186,17 @@
         "dynamics-365/supply-chain/transportation/*.md": "weijiesa",
         "dynamics-365/supply-chain/warehousing/*.md": "mirzaab"
       },
-      "ms.localizationpriority": {
-        "**/*.md": "medium"
-      },
       "ms.topic": {
         "**/*.md": "troubleshooting",
         "sql/releases/**/*.md": "release-notes"
       },
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
-        "azure/virtual-machines/*.md": "virtual-machines",
-        "azure/cloud-services/*.md": "cloud-services",
+        "azure/virtual-machines/*.md": "azure-virtual-machines",
+        "azure/cloud-services/*.md": "azure-cloud-services-classic",
         "azure/azure-functions/**/*.md": "azure-functions",
-        "azure/synapse-analytics/**/*.md": "synapse-analytics",
-        "azure/cosmos-db/**/*.md": "cosmos-db",
+        "azure/synapse-analytics/**/*.md": "azure-synapse-analytics",
+        "azure/cosmos-db/**/*.md": "azure-cosmos-db",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-pages/**/**.*": "power-pages",
         "power-platform/power-automate/**/*.md": "power-automate",
@@ -229,7 +225,6 @@
         "developer/visualstudio/csharp/**/*.md": "dotnet",
         "developer/visualstudio/visual-basic/**/*.md": "dotnet",
         "developer/visualstudio/visual-basic/ide/*.md": "visual-basic-6",
-        "developer/browsers/**/*.md": "internet-explorer",
         "developer/host-integration-server/**/*.md": "host-integration-server",
         "developer/webapps/aspnet/**/*.md": "aspnet",
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
@@ -242,25 +237,6 @@
         "windows-hardware/drivers/**/*.md": "windows-hardware-driver-quality",
         "windows-client/**/**.*": "windows-client",
         "windows-server/**/**.*": "windows-server"
-      },
-      "ms.subservice": {
-        "sql/data-quality-services/**/*.md": "sql-dqs",
-        "sql/connect/**/*.md": "sql-client-prog",
-        "sql/integration-services/**/*.md": "sql-integration-services-ssis",
-        "sql/master-data-services/**/*.md": "sql-mds",
-        "sql/analytics-platform-system/**/*.md": "sql-pdw-aps",
-        "sql/linux/**/*.md": "sql-linux",
-        "sql/tools/**/*.md": "sql-tools",
-        "sql/releases/**/*.md": "sql-releases",
-        "azure/azure-functions/deployment/**/*.md": "code-deployment",
-        "azure/azure-functions/config-mgmt/**/*.md": "configuration-management",
-        "azure/azure-functions/creation-deletion/**/*.md": "creation-deletion",
-        "azure/azure-functions/monitoring/**/*.md": "monitoring",
-        "system-center/orchestrator/**/*.md": "orchestrator",
-        "system-center/vmm/**/*.md": "virtual-machine-manager",
-        "system-center/dpm/**/*.md": "data-protection-manager",
-        "system-center/scsm/**/*.md": "service-manager",
-        "system-center/scom/**/*.md": "operations-manager",
       },
       "titleSuffix": {
         "developer/dotnet/**/*.md": ".NET",
@@ -281,7 +257,6 @@
         "windows-hardware/drivers/**/*.md": "Hardware Developer",
         "windows-server/**/*.md": "Windows Server",
         "windows-client/**/*.md": "Windows Client",
-        "developer/browsers/**/*.md": "Browsers",
         "mem/intune/**/*.md": "Intune",
         "mem/configmgr/**/*.md": "Configuration Manager",
         "system-center/dpm/**/*.md": "Data Protection Manager",
@@ -291,9 +266,9 @@
         "system-center/vmm/**/*.md": "Virtual Machine Manager",
         "microsoft-identity-manager/*.md": "Microsoft Identity Manager",
         "azure/**/*.md": "Azure",
-        "azure/cloud-services/*.md": "Cloud Services",
-        "azure/virtual-machines/*.md": "Virtual Machines",
-        "azure/active-directory/*.md": "Active Directory",
+        "azure/cloud-services/**/*.md": "Cloud Services",
+        "azure/virtual-machines/**/*.md": "Virtual Machines",
+        "azure/entra/entra-id/*.md": "Microsoft Entra ID",
         "azure/devops/*.md": "Azure DevOps",
         "azure/synapse-analytics/**/*.md": "Azure Synapse Analytics",
         "azure/cosmos-db/**/*.md": "Azure Cosmos DB",
@@ -366,10 +341,6 @@
         "windows-client/**/*.md": [
           "Troubleshoot",
           "Windows Client"
-        ],
-        "developer/browsers/**/*.md": [
-          "Troubleshoot",
-          "Browsers"
         ],
         "azure/**/*.md": [
           "Troubleshoot",

@@ -4,7 +4,6 @@ description: "This article provides workaround for the problem where Calling Htt
 ms.date: 12/11/2020
 ms.custom: sap:Development\Native HTTP modules
 ms.reviewer: ahmetmb
-ms.subservice: site-behavior-performance
 ---
 # Calling HttpContext::PostCompletion method twice may cause crash
 

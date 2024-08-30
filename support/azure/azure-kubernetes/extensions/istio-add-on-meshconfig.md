@@ -7,7 +7,6 @@ ms.author: nshankar
 editor: v-jsitser
 ms.reviewer: fuyuanbie, shasb, kochhars, ddama, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-extensions-add-ons
 ms.topic: troubleshooting-general
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the global mesh configuration (MeshConfig) of the Istio add-on so that I can use the Istio service mesh successfully.
 ---

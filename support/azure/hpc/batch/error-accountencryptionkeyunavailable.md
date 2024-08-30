@@ -4,7 +4,7 @@ description: This article describes a known issue in Azure Batch that causes an 
 ms.date: 09/21/2022
 editor: v-jsitser
 ms.reviewer: biny, v-leedennis
-ms.service: batch
+ms.service: azure-batch
 #Customer intent: As an Azure Batch user, I want to understand how to proceed when I receive an AccountEncryptionKeyUnavailable error message that prevents me from listing pools so that I can use Azure Batch effectively.
 ms.custom: sap:Azure Batch
 ---

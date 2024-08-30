@@ -5,7 +5,7 @@ author: saimsh-msft
 ms.author: saimsh
 ms.topic: troubleshooting
 ms.date: 04/15/2024
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
 ---

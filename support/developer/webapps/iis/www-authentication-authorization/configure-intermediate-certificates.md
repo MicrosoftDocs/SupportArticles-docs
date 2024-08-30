@@ -5,7 +5,6 @@ ms.date: 03/27/2020
 ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
 ms.reviewer: Mlaing, lprete
 ms.topic: how-to
-ms.subservice: www-authentication-authorization
 ---
 # Configure intermediate certificates on a computer that's running IIS for server authentication
 

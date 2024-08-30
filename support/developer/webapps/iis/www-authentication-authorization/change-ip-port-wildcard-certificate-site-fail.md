@@ -3,7 +3,6 @@ title: Changing IP/port causes other sites to fail
 description: This article provides resolutions for the problem where other sites on the same server don't work as expected when you change the IP/port binding of a site that is configured to use a wildcard certificate.
 ms.date: 03/23/2020
 ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
-ms.subservice: www-authentication-authorization
 ms.reviewer: pattys
 ---
 # Change the IP/port binding of a site that is configured to use a wildcard certificate causes other sites on the same server to fail

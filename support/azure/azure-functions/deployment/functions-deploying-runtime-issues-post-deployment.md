@@ -3,6 +3,7 @@ title: Function app runtime issues post deployment
 description: This article helps you to resolve runtime issues in the function app after content deployment.
 ms.date: 08/24/2023
 ms.reviewer: gasridha, v-jayaramanp
+ms.custom: sap:Application Code Deployment
 ---
 
 # Resolve common runtime issues after deployment
