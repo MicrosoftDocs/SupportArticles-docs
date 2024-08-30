@@ -112,7 +112,9 @@ To                         Action      From
 
 #### Scenario 2: Allow SSH (Port 22) for a Specific IP Address:
 
+```bash
 sudo ufw allow from 10.0.10.10 to any port 22 proto tcp
+```
 
 Verify rule:
 
