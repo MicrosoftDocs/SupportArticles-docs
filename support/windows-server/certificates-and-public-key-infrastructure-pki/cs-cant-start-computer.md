@@ -43,7 +43,7 @@ To look for missing certificates, follow these steps:
 
 1. Select **Start**, select **Run**, type regedit, and then select **OK**.
 2. Locate and then select the following subkey:
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\**Your_Certificate_Authority_Name`*  
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\**Your_Certificate_Authority_Name**`
 
 3. In the right pane, double-click **CaCertHash**.
 4. Make a note of the number of certificate thumbprints that the **Value data** list contains.
@@ -51,29 +51,23 @@ To look for missing certificates, follow these steps:
 6. Type the following command, and then press **ENTER**:
     `certutil -store`
 
-    Compare the number of certificates that are listed in the local computer Personal certificate store to the number of certificate thumbprints that are listed in the CaCertHash registry entry. If the numbers are different, go to [Step 2: Import the missing certificates](#step-2-import-the-missing-certificates). If the numbers are the same, go to [Step 4 : Install the Windows Server 2003 Administration Tools Pack](#step-3-repair-the-links).
+    Compare the number of certificates that are listed in the local computer Personal certificate store to the number of certificate thumbprints that are listed in the CaCertHash registry entry. If the numbers are different, go to [Step 2: Import the missing certificates](#step-2-import-the-missing-certificates). If the numbers are the same, go to [Step 3 : Repair the Links](#step-3-repair-the-links).
 
 ### Step 2: Import the missing certificates
 
-1. Select **Start**, point to **All Programs**, point to **Administrative Tools**, and then select **Certificates**.
-
-    If **Certificates** doesn't appear in the list, follow these steps:
-      1. Select **Start**, select **Run**, type mmc, and then select **OK**.
+1. Select **Start**, select **Run**, type mmc, and then select **OK**.
       2. On the **File** menu, select **Add/Remove Snap-in**.
       3. Select **Add**.
       4. In the **Snap-in** list, select **Certificates**, and then select **Add**.
 
-          If the **Certificates snap-in** dialog box appears, select **My user account**, and then select **Finish**.
-      5. Select **Close**, and then select **OK**.
+          When the **Certificates snap-in** dialog box appears, select **Computer account**, and then select **Next** and then **Finish**.
+      5. Select **OK**.
 
           The Certificates directory is now added to Microsoft Management Console (MMC).
-      6. On the **File** menu, select **Save as**, type Certificates in the **File name** box, and then select **Save**.
-
-          To open Certificates in the future, select **Start**, point to **All Programs**, point to **Administrative Tools**, and then select **Certificates**.
 2. Expand **Certificates**, expand **Personal**, right-click **Certificates**, point to **All Tasks**, and then select **Import**.
 3. On the **Welcome** page, select **Next**.
 4. On the **File to Import** page, type the full path of the certificate file that you want to import in the **File name** box, and then select **Next**. Instead, select **Browse**, search for the file, and then select **Next**.
-5. If the file that you want to import is a Personal Information Exchange - PKCS #12 (*.PFX) file, you'll be prompted for the password. Type the password, and then select **Next**.
+5. If the file that you want to import is a Personal Information Exchange - PKCS #12 (*.PFX) file, you'll be prompted for the password. Type the password, select the **Mark this key as exportable** import option and then select **Next**.
 6. On the **Certificate Store** page, select **Next**.
 7. On the **Completing the Certificate Import Wizard** page, select **Finish**.
 
