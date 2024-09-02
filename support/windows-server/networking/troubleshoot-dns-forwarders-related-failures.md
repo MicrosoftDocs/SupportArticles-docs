@@ -11,7 +11,7 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # Troubleshoot DNS name resolution failures related to DNS forwarders
 
-You have forwarders or conditional forwarders, or Root hints configured to perform name lookup for external names. However, you can't resolve external names from clients by using nslookup or Resolve-DnsName. This article introduces how to troubleshoot DNS forwarders related name resolution failures.
+You have forwarders or conditional forwarders, or Root hints configured to perform name lookup for external names. However, you can't resolve external names from clients by using nslookup or Resolve-DnsName. This article introduces how to troubleshoot Domain Name System (DNS) forwarders related name resolution failures.
 
 ## Analysis of the symptoms
 
