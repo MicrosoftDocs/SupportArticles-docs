@@ -47,20 +47,20 @@ journalctl -u kubelet > kubelet.log
 journalctl -u containerd > containerd.log
 ```
 
-After you run these commands, examine the messages and daemon log files for details about the error.
+After you run these commands, examine the messages and daemon log files for more information about the error.
 
 ## Solution
 
-### Step 1: Check for any network-level changes
+### Step 1: Check for changes in network-level
 
-If all cluster nodes regressed to a **Not Ready** status, check whether any changes have occurred at the network level. Examples of network-level changes include the following items:
+If all cluster nodes regressed to a **Not Ready** status, check whether any changes have occurred at the network level. Examples of network-level changes include:
 
 - Domain name system (DNS) changes
-- Firewall rule changes such as port, FQDN etc.
+- Firewall rule changes such as port, ully qualified domain names (FQDNs) etc.
 - Added network security groups (NSGs)
 - Applied or changed a route table configurations for AKS traffic
 
-If there were changes at the network level, make any necessary corrections. If you have direct Secure Shell (SSH) access to the node, you can use curl or telnet command to check the connectivity to [AKS outbound requirements](/azure/aks/outbound-rules-control-egress). Stop and restart the nodes running after you've fixed the issues. If the nodes stay in a healthy state after these fixes, you can safely skip the remaining steps.
+If there were changes at the network level, make any necessary corrections. If you have direct Secure Shell (SSH) access to the node, you can use the `curl` or `telnet` command to check the connectivity to [AKS outbound requirements](/azure/aks/outbound-rules-control-egress). Stop and restart the nodes running after you've fixed the issues. If the nodes stay in a healthy state after these fixes, you can safely skip the remaining steps.
 
 ### Step 2: Stop and restart the nodes
 
@@ -93,7 +93,7 @@ For more information about how to troubleshoot SNAT port exhaution, see [Trouble
 
 If AKS diagnostics uncover issues that reduce IOPS performance, take some of the following actions, as appropriate:
 
-- To increase IOPS on virtual machine (VM) scale sets, choose bigger disk size that includes better IOPS performance by deploying a new node pool. Resizing VMSS directly isn't supported. You can refer how to resize node pools in [Resize node pools in Azure Kubernetes Service (AKS)](/azure/aks/resize-node-pool?tabs=azure-cli).
+- To increase IOPS on virtual machine (VM) scale sets, choose a a larger disk size that offers better IOPS performance by deploying a new node pool. Direct resizing VMSS directly isn't supported. For more information on resizing node pools,  see [Resize node pools in Azure Kubernetes Service (AKS)](/azure/aks/resize-node-pool?tabs=azure-cli).
 
 - Increase the node SKU size for more memory and CPU processing capability.
 
