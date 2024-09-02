@@ -56,7 +56,7 @@ Use the following steps to check if you can access Task Manager:
 If *explorer.exe* and *userinit.exe* are running, collect the process dump by using the following steps:
 
 1. Download [ProcDump](/sysinternals/downloads/procdump) and extract the ProcDump files to a known directory, such as *C:\\Tools\\*.
-2. In an elevated command prompt, navigate to the directory where ProcDump was extracted.
+2. Navigate to the directory where ProcDump was extracted in an elevated command prompt.
 3. Run the following commands:
 
     ```console
