@@ -5,7 +5,7 @@ ms.date: 09/02/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, rafern, holgerh, v-lianna
 ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe init, themes, colors, icons, recycle bin), csstroubleshoot
 ---
 # Scenario guide: Infinite black screen after you sign in to the system
