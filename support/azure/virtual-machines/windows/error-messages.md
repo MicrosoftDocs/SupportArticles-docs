@@ -52,18 +52,18 @@ This section lists the common error messages you might encounter when managing V
 |  :------| :-------------|  
 |  AcquireDiskLeaseFailed  |  Failed to acquire lease while creating disk '{0}' using blob with URI {1}. Blob is already in use.  |  
 |  AllocationFailed  |  Allocation failed. Please try reducing the VM size or number of VMs, retry later, or try deploying to a different Availability Set or different Azure location.  |  
-|  AllocationFailed  |  The VM allocation failed due to an internal error. Please try later or try deploying to a different location.  |
+|  AllocationFailed  |  The VM allocation failed due to an internal error. Please retry later or try deploying to a different location.  |
 |  ArtifactNotFound  |  The VM extension with publisher '{0}' and type '{1}' could not be found in location '{2}'.  |
 |  ArtifactNotFound  |  Extension with publisher '{0}', type '{1}', and type handler version '{2}' could not be found in the extension repository.  |
 |  ArtifactVersionNotFound  |  No version found in the artifact repository that satisfies the requested version '{0}'.  |
 |  ArtifactVersionNotFound  |  No version found in the artifact repository that satisfies the requested version '{0}' for VM extension with publisher '{1}' and type '{2}'.  |
-|  AttachDiskWhileBeingDetached  | Cannot attach data disk '{0}' to VM '{1}' because the disk is currently being detached. Please wait until the disk is completely detached and then try again.  |
+|  AttachDiskWhileBeingDetached  |  Cannot attach data disk '{0}' to VM '{1}' because the disk is currently being detached. Please wait until the disk is completely detached and then try again.  |
 |  BadRequest  |  Aligned' Availability Sets are not yet supported in this region.  |
 |  BadRequest  |  Addition of a VM with managed disks to non-managed Availability Set or addition of a VM with blob based disks to managed Availability Set is not supported. Please create an Availability Set with 'managed' property set in order to add a VM with managed disks to it.  |
 |  BadRequest  |  Managed Disks are not supported in this region.  |
 |  BadRequest  |  Multiple VMExtensions per handler not supported for OS type '{0}'. VMExtension '{1}' with handler '{2}' already added or specified in input.  |
 |  BadRequest  |  Operation '{0}' is not supported on Resource '{1}' with managed disks.  |
-|  CertificateImproperlyFormatted  |  The secret's JSON representation retrieved from {0} has a data field, which is not a properly formatted PFX file, or the password provided does not decode the PFX file correctly.  |
+|  CertificateImproperlyFormatted  |  The secret's JSON representation retrieved from {0} has a data field which is not a properly formatted PFX file, or the password provided does not decode the PFX file correctly.  |
 |  CertificateImproperlyFormatted  |  The data retrieved from {0} is not deserializable into JSON.  |
 |  Conflict  |  Disk resizing is allowed only when creating a VM or when the VM is deallocated.  |
 |  ConflictingUserInput  |  Disk '{0}' cannot be attached as the disk is already owned by VM '{1}'.  |
@@ -113,26 +113,26 @@ This section lists the common error messages you might encounter when managing V
 |  InvalidParameter  |  Custom data in OSProfile must be in Base64 encoding and with a maximum length of {0} characters.  |
 |  InvalidParameter  |  Blob name in URL {0} must end with '{1}' extension.  |
 |  InvalidParameter  |  {0}' is not a valid captured VHD blob name prefix. A valid prefix matches regex '{1}'.  |
-|  InvalidParameter  |  Certificates can not be added to your VM if the VM agent is not provisioned.  |
+|  InvalidParameter  |  Certificates cannot be added to your VM if the VM agent is not provisioned.  |
 |  InvalidParameter  |  A disk at LUN {0} already exists.  |
 |  InvalidParameter  |  Unable to create the VM because the requested size {0} is not available in the cluster where the availability set is currently allocated. The available sizes are: {1}. Read more on VM resizing strategy at <https://aka.ms/azure-resizevm>.  |
 |  InvalidParameter  |  The requested VM size {0} is not available in the current region. The sizes available in the current region are: {1}. Find out more on the available VM sizes in each region at <https://aka.ms/azure-regions>.  |
 |  InvalidParameter  |  The requested VM size {0} is not available in the current region. Find out more on the available VM sizes in each region at <https://aka.ms/azure-regions>.  |
-|  InvalidParameter  |  Windows admin user name can not be more than {0} characters long, end with a period(.), or contain the following characters: {1}.  |
-|  InvalidParameter  |  Windows computer name can not be more than {0} characters long, be entirely numeric, or contain the following characters: {1}.  |
+|  InvalidParameter  |  Windows admin user name cannot be more than {0} characters long, end with a period(.), or contain the following characters: {1}.  |
+|  InvalidParameter  |  Windows computer name cannot be more than {0} characters long, be entirely numeric, or contain the following characters: {1}.  |
 |  MissingMoveDependentResources  |  The move resources request does not contain all the dependent resources. Please check error details for missing resource IDs.  |
-|  MoveResourcesHaveInvalidState  |  The Move Resources request contains VMs, which are associated with invalid storage accounts. Please check details for these resource IDs and referenced storage account names.  |
+|  MoveResourcesHaveInvalidState  |  The Move Resources request contains VMs which are associated with invalid storage accounts. Please check details for these resource IDs and referenced storage account names.  |
 |  MoveResourcesHavePendingOperations  |  The move resources request contains resources for which an operation is pending. Please check details for these resource IDs. Retry your operation once the pending operations complete.  |
-|  MoveResourcesNotFound  |  The move resources request contains resources that can not be found. Please check details for these resource IDs.  |
+|  MoveResourcesNotFound  |  The move resources request contains resources that cannot be found. Please check details for these resource IDs.  |
 |  NetworkingInternalOperationError  |  Unknown network allocation error.  |
 |  NetworkingInternalOperationError  |  Unknown network allocation error  |
 |  NetworkingInternalOperationError  |  An internal error occurred in processing network profile of the VM.  |
 |  NotFound  |  The Availability Set {0} cannot be found.  |
 |  NotFound  |  Source Virtual Machine '{0}' specified in the request does not exist in this Azure location.  |
 |  NotFound  |  Tenant with id {0} not found.  |
-|  NotFound  |  The Image {0} can not be found.  |
+|  NotFound  |  The Image {0} cannot be found.  |
 |  NotSupported  |  The license type is {0}, but the image blob {1} is not from on-premises.  |
-|  OperationNotAllowed  |  Availability Set {0} can not be deleted. Before deleting an Availability Set please ensure that it does not contain any VM.  |
+|  OperationNotAllowed  |  Availability Set {0} cannot be deleted. Before deleting an Availability Set please ensure that it does not contain any VM.  |
 |  OperationNotAllowed  |  Changing availability set SKU from 'Aligned' to 'Classic' is not allowed.  |
 |  OperationNotAllowed  |  Cannot modify extensions in the VM when the VM is not running.  |
 |  OperationNotAllowed  |  The Capture action is only supported on a Virtual Machine with blob based disks. Please use the 'Image' resource APIs to create an Image from a managed Virtual Machine.  |
@@ -144,7 +144,7 @@ This section lists the common error messages you might encounter when managing V
 |  OperationNotAllowed  |  Operation '{0}' is not allowed on Image '{1}' since the Image is marked for deletion. You can only retry the Delete operation (or wait for an ongoing one to complete).  |
 |  OperationNotAllowed  |  Operation '{0}' is not allowed on VM '{1}' since the VM is generalized.  |
 |  OperationNotAllowed  |  Operation '{0}' is not allowed as Restore point collection '{1}' is marked for deletion.  |
-|  OperationNotAllowed  |  Operation '{0}' is not allowed on VM extension '{1}' since it's marked for deletion. You can only retry the Delete operation (or wait for an ongoing one to complete).  |
+|  OperationNotAllowed  |  Operation '{0}' is not allowed on VM extension '{1}' since it is marked for deletion. You can only retry the Delete operation (or wait for an ongoing one to complete).  |
 |  OperationNotAllowed  |  Operation '{0}' is not allowed since the Virtual Machines '{1}' are being provisioned using the Image '{2}'.  |
 |  OperationNotAllowed  |  Operation '{0}' is not allowed since the Virtual Machine ScaleSet '{1}' is currently using the Image '{2}'.  |
 |  OperationNotAllowed  |  Operation '{0}' is not allowed on VM '{1}' since the VM is marked for deletion. You can only retry the Delete operation (or wait for an ongoing one to complete).  |
@@ -209,6 +209,6 @@ This section lists the common error messages you might encounter when managing V
 |  VMNotFound  |  The VM '{0}' cannot be found.  |
 |  VMRedeploymentFailed  |  VM '{0}' redeployment failed due to an internal error. Please retry later.  |
 |  VMRedeploymentTimedOut  |  Redeployment of VM '{0}' didn't finish in the allotted time. It might finish successfully in sometime. Else, you can retry the request.  |
-|  VMStartTimedOut  |  VM '{0}'  did not start in the allotted time. The VM may still start successfully. Please check the power state later.  |
+|  VMStartTimedOut  |  VM '{0}' did not start in the allotted time. The VM may still start successfully. Please check the power state later.  |
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
