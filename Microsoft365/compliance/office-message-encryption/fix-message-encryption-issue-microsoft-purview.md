@@ -26,6 +26,8 @@ ms.date: 09/02/2024
 
 # Resolve Microsoft Purview Message Encryption issues
 
+<!-- This article has been reviewed and approved for the specific use of global admin perms.  -->
+
 ## Symptoms
 
 Users in your organization experience one or more of the following issues:
