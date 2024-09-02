@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Monitor Agent installation issues on Windows virtual machines
 description: Provides steps to troubleshoot installation issues with Azure Monitor Agent on a Windows virtual machine.
-ms.date: 08/28/2024
+ms.date: 09/02/2024
 ms.reviewer: johnsirmon, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Windows Extension not installing
@@ -236,7 +236,7 @@ To ensure that the Azure VM Guest Agent installs and enables the extension corre
     > [!TIP]
     > When you try to resolve the issues, you can refer to Azure official documentations for further assistance.
 
-    If you can't identify or resolve the issues, upload the logs to DTM and then seek further help in the [Microsoft Q&A forums](/answers/tags/133/azure).
+    If you can't identify or resolve the issues, search for the issues or reach out for assistance in the [Microsoft Q&A forums](/answers/tags/133/azure). Before seeking further help, ensure that you have collected the necessary logs.
 
 ### <a id="ama-processes-started"></a>Step 7: Verify if the AMA processes are started
 
@@ -293,7 +293,7 @@ To troubleshoot more complex installation issues, follow these steps:
 
 ### <a id="collect-ama-logs"></a>Step 1: Collect AMA troubleshooting logs
 
-Collect troubleshooting logs and cross reference with the time of the installation issue.
+Collect troubleshooting logs and find them according to the time when the AMA is instaled or the installation issue occurs.
 
 1. Connect to your VM using Remote Desktop Connection.
 2. Open File Explorer and navigate to the following paths:
