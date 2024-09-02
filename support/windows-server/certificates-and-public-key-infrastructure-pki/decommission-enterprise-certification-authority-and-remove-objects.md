@@ -1,7 +1,7 @@
 ---
 title: Decommission a Windows enterprise CA
 description: Provides step-by-step instructions for removing a CA from Windows Server 2012 R2.
-ms.date: 12/26/2023
+ms.date: 09/03/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -63,6 +63,7 @@ By default, an enterprise CA does not store certificate requests. However, an ad
      DBDirectory REG_SZ = C:\Windows\system32\CertLog
    CertUtil: -getreg command completed successfully.
    ```
+
 4. At the command prompt, type *certutil -getreg DBLogDirectory*, and then press Enter. Note the **DBLogDirectory** value in the output. For example:
 
    ```output
@@ -70,6 +71,7 @@ By default, an enterprise CA does not store certificate requests. However, an ad
      DBLogDirectory REG_SZ = C:\Windows\system32\CertLog
    CertUtil: -getreg command completed successfully.
    ```
+
 5. At the command prompt, type *certutil -getreg CA\CSP\Provider*, and then press Enter. Note the **Provider** value in the output. For example:
 
    ```output
@@ -108,7 +110,7 @@ By default, an enterprise CA does not store certificate requests. However, an ad
      Microsoft Internet Information Server  
      NetMon  
      MS IIS DCOM ClientAdministratorS-1-5-21-842925246-1715567821-839522115-500
-    
+
 6. Delete the private key that is associated with the CA. To do this, at a command prompt, type the following command, and then press Enter:
 
    If the CA CSP value is **Microsoft Strong Cryptographic Provider**, or **Microsoft Enhanced Cryptographic Provider v1.0**, type the following command, and then press Enter.
@@ -116,11 +118,13 @@ By default, an enterprise CA does not store certificate requests. However, an ad
    ```console
     certutil -delkey CertificateAuthorityName
    ```
+
    If the CA CSP value is **Microsoft Software Key Storage Provider**, type the following command, and then press Enter.  
 
    ```console
     certutil -CSP KSP -delkey CertificateAuthorityName
     ```
+
    If the CA CSP value is something else, type the following command, and then press Enter.
 
     ```console
