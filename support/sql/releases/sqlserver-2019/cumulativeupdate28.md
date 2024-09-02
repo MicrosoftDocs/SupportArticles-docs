@@ -37,7 +37,6 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 
 [!INCLUDE [patching-error-2019](../includes/patching-error-2019.md)]
 
-
 ### Issue three: SQL Server VSS Writer might fail to perform a backup because no database is available to freeze
 
 When backup tools such as Azure Recovery Vault perform a backup on a virtual machine (VM), they might fail to achieve application consistency. This leaves the SQL Server Volume Shadow Copy Service (VSS) Writer in a non-retryable error state. Enabling SQL Server VSS Writer trace might show the following exception, indicating that there's no database to freeze, resulting in an unsuccessful snapshot:
