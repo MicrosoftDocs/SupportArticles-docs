@@ -103,17 +103,17 @@ Then collect a network capture:
 
 Analyze Scenarios. The following sections list several scenarios that you might meet one of them. These scenarios involve a conditional forwarder configuration, but the troubleshooting steps are the same if you're dealing with a standard forwarder as well.
 
-#### Scenario 1: Network Latency or Timeout
+#### Scenario 1: Network latency or timeout
 
 DNS name server 192.168.10.10 forwarded the query to the first forwarder 192.168.5.5. Due to network latency or issues with the intermediate network, the response doesn't reach the DNS server within the **ForwarderTimeout** period. Hence, the DNS server forwarded the query to the next forwarder configured out it, which is 192.168.5.6. Again, due to latency or issues with the intermediate network, the response didn't reach DNS server. Since the DNS server couldn't fetch the response for the query nodeA.contoso.com, it sends out **Server failure** response to the client.
 
-![alt text](media/troubleshoot-dns-forwarders-related-failures/image-2.png)
+![Network flow when network latency or timeout happens with DNS forwarder.](media/troubleshoot-dns-forwarders-related-failures/image-2.png)
 
 Resolution: Collaborate with the network team to address the latency. If the latency is expected, we need to make sure DNS server is given ample amount of time to wait for the response from the conditional forwarders before timing out by increasing the **ForwarderTimeout** and **RecursionTimeout** periods.
 
 To do so, see <https://learn.microsoft.com/windows-server/administration/windows-commands/forwarders-resolution-timeouts>
 
-#### Scenario 2: Query Refusal by Forwarder
+#### Scenario 2: Query refusal by forwarder
 
 DNS name server 192.168.10.10 forwarded the query to the conditional forwarder 192.168.5.5. On this server, if there's any policy configured to refuse or deny queries for a particular record or zone, the conditional forwarder responds to the forwarding DNS name server with "Refused" response. Now, the DNS server will in-turn forward this error to the client as a server failure. The DNS server won't contact the second conditional forwarder as we already got a response from the first one (even though it’s an error response)
 
@@ -123,11 +123,11 @@ If there are any such policies which shouldn't be placed, remove them to resolve
 
 If it's a third-party DNS server, contact the respective vendor.
 
-#### Scenario 3: Missing Records on Forwarder
+#### Scenario 3: Missing records on forwarder
 
 DNS name server 192.168.10.10 forwarded the query to the first conditional forwarder 192.168.5.5. On the conditional forwarder, there's no host A record present for the name NodeA under the fab.com zone. In such an event, the conditional forwarder responds to the DNS server with **Name error**. The DNS server will then forward the same response to the client. The DNS server won't contact the second conditional forwarder here as we already got a response from the first one. Usually, if this scenario occurs, you see the symptom to be where the resolution is failing for certain names and not necessarily for all the names of the fab.com domain.
 
-![alt text](media/troubleshoot-dns-forwarders-related-failures/image-3.png)
+![Network flow when when there is missing records on forwarder](media/troubleshoot-dns-forwarders-related-failures/image-3.png)
 
 Resolution: Register the missing records on the forwarder for the zone in question, either statically or dynamically.
 
