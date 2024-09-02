@@ -9,7 +9,7 @@ tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure
-ms.date: 08/28/2024
+ms.date: 09/02/2024
 ms.author: xujing
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
