@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 28 for SQL Server 2019 (KB5039747)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 28 (KB5039747).
-ms.date: 08/19/2024
+ms.date: 09/02/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5039747
 ms.reviewer: v-qianli2
 appliesto:
@@ -38,27 +38,24 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 [!INCLUDE [patching-error-2019](../includes/patching-error-2019.md)]
 
 
-### Issue three: SQL VSS Writer may fail to perform a backup due to no databases available to Freeze
+### Issue three: SQL Server VSS Writer might fail to perform a backup because no database is available to freeze
 
-When backup tools like Azure Recovery Vault perform a backup on a VM, they may fail to achieve application consistency. This leaves the SQL VSS Writer in a non-retryable error state. Enabling SQL VSS Writer trace may reveal the following exception, indicating that there are no databases to freeze, resulting in an unsuccessful snapshot:
+When backup tools such as Azure Recovery Vault perform a backup on a virtual machine (VM), they might fail to achieve application consistency. This leaves the SQL Server Volume Shadow Copy Service (VSS) Writer in a non-retryable error state. Enabling SQL Server VSS Writer trace might show the following exception, indicating that there's no database to freeze, resulting in an unsuccessful snapshot:
 
-```
+```Output
 [0543739500,0x002948:011b4:0xb87fa68e] sqlwriter.yukon\sqllib\snapsql.cpp(1058): Snapshot::Prepare: Server PROD-SQL01 has no databases to freeze
 ```
 
-Additionally, some databases may be detected with online:0:
+Additionally, some databases might be detected with `Online:0`:
 
-```
+```Output
 [0543739390,0x002948:0x11b4:0xb87fa68e] sqlwriter.yukon\sqllib\snapsql.cpp(0408): FrozenServer::FindDatabases2000: Examining database <ReportServerTempDB>
 Online:0 Standby:0 AutoClose:0 Closed:0
 ```
 
-The issue arises from a code change in SQL Server 2019 CU28 that checks whether a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2019 CU27 and perform the snapshot backup. 
-Microsoft is working on a fix, which will be available in a future cumulative update (CU).
+The issue arises from a code change in SQL Server 2019 CU28 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2019 CU27 and perform the snapshot backup.
 
-
-
-
+Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ## Improvements and fixes included in this update
 
