@@ -1,7 +1,7 @@
 ---
 title: Delta Lake ingestion job failed to get version error
 description: Resolves an issue about a Delta Lake version error in Dynamics 365 Customer Insights - Data.
-ms.date: 08/26/2024
+ms.date: 09/02/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
