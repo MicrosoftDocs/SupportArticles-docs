@@ -4,7 +4,7 @@ description: When a DSC Node is registered for the first time, the Configuration
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: automation
+ms.service: azure-automation
 ms.reviewer: pfreitas
 ms.custom: sap:State Configuration (DSC)
 ---

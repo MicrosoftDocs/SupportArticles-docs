@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files issues in Linux (SMB)
 description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients and possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 07/19/2024
+ms.date: 08/20/2024
 ms.reviewer: kendownie, v-weizhu
 ---
 
@@ -170,7 +170,7 @@ To better work around this issue, clear the kernel DNS resolver cache:
 4. Unmount and remount the share to mitigate the issue.
 
 > [!NOTE]
-> On some older Linux distros, the preceding mitigation steps might not work. In such cases, rebooting the client OS is the only known mitigation.
+> On some older Linux distros, the mitigation steps might not work. In such cases, rebooting the client OS will solve the issue temporarily. For a permanent fix, you can add a private endpoint to your storage account and connect to the file share using a private link.
 
 ### Solution
 
