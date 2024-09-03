@@ -53,28 +53,29 @@ GO
 IF OBJECT_ID('dbo.sp_hexadecimal') IS NOT NULL
     DROP PROCEDURE dbo.sp_hexadecimal
 GO
-CREATE PROCEDURE dbo.sp_hexadecimal (
-    @binvalue [varbinary](256)
+CREATE PROCEDURE dbo.sp_hexadecimal
+     @binvalue [varbinary](256)
     ,@hexvalue [nvarchar](514) OUTPUT
-    )
 AS
 BEGIN
-    DECLARE @i [smallint]
-    DECLARE @length [smallint]
     DECLARE @hexDigits [nchar](16)
-    ;
-    SET @hexvalue = N'0x'
-    ;
-    SET @i = 1
-    ;
-    SET @length = DATALENGTH(@binvalue)
     ;
     SET @hexDigits = N'0123456789ABCDEF'
     ;
+    SET @hexvalue = N'0x'
+    ;
+    DECLARE @i [smallint]
+	;
+    SET @i = 1
+    ;
+    DECLARE @length [smallint]
+	;
+    SET @length = DATALENGTH(@binvalue)
+    ;
     WHILE (@i < =  @length)
     BEGIN
-        DECLARE @tempint [smallint]
-        DECLARE @firstint [smallint]
+        DECLARE @tempint   [smallint]
+        DECLARE @firstint  [smallint]
         DECLARE @secondint [smallint]
         ;
         SET @tempint = CONVERT([smallint], SUBSTRING(@binvalue, @i, 1))
@@ -94,27 +95,28 @@ GO
 IF OBJECT_ID('dbo.sp_help_revlogin') IS NOT NULL
     DROP PROCEDURE dbo.sp_help_revlogin
 GO
-CREATE PROCEDURE dbo.sp_help_revlogin (@login_name [sysname] = NULL)
+CREATE PROCEDURE dbo.sp_help_revlogin
+    @login_name [sysname] = NULL
 AS
 BEGIN
-    DECLARE @name [sysname]
-    DECLARE @type [nvarchar](1)
-    DECLARE @hasaccess [int]
-    DECLARE @denylogin [int]
-    DECLARE @is_disabled [int]
-    DECLARE @PWD_varbinary [varbinary](256)
-    DECLARE @PWD_string [nvarchar](514)
-    DECLARE @SID_varbinary [varbinary](85)
-    DECLARE @SID_string [nvarchar](514)
-    DECLARE @tmpstr [nvarchar](4000)
-    DECLARE @is_policy_checked [nvarchar](3)
+    DECLARE @name                  [sysname]
+    DECLARE @type                  [nvarchar](1)
+    DECLARE @hasaccess             [int]
+    DECLARE @denylogin             [int]
+    DECLARE @is_disabled           [int]
+    DECLARE @PWD_varbinary         [varbinary](256)
+    DECLARE @PWD_string            [nvarchar](514)
+    DECLARE @SID_varbinary         [varbinary](85)
+    DECLARE @SID_string            [nvarchar](514)
+    DECLARE @tmpstr                [nvarchar](4000)
+    DECLARE @is_policy_checked     [nvarchar](3)
     DECLARE @is_expiration_checked [nvarchar](3)
-    DECLARE @Prefix [nvarchar](4000)
-    DECLARE @defaultdb [sysname]
-    DECLARE @defaultlanguage [sysname]
-    DECLARE @tmpstrRole [nvarchar](4000)
+    DECLARE @Prefix                [nvarchar](4000)
+    DECLARE @defaultdb             [sysname]
+    DECLARE @defaultlanguage       [sysname]
+    DECLARE @tmpstrRole            [nvarchar](4000)
     ;
-    IF (@login_name IS NULL)
+    IF @login_name IS NULL
     BEGIN
         DECLARE login_curs CURSOR
         FOR
@@ -125,7 +127,7 @@ BEGIN
             ,p.default_database_name
             ,l.hasaccess
             ,l.denylogin
-            ,p.default_language_name
+            ,default_language_name = ISNULL(p.default_language_name,@@LANGUAGE)
 		FROM sys.server_principals p
         LEFT JOIN sys.syslogins l
             ON l.[name] = p.[name]
@@ -148,7 +150,7 @@ BEGIN
             ,p.default_database_name
             ,l.hasaccess
             ,l.denylogin
-            ,p.default_language_name
+            ,default_language_name = ISNULL(p.default_language_name,@@LANGUAGE)
         FROM sys.server_principals p
         LEFT JOIN sys.syslogins l
             ON l.[name] = p.[name]
