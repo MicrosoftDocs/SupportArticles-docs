@@ -22,7 +22,7 @@ The registry value `Svc` with the `REG_BINARY` type under the DFS root is corrup
 
 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Stand-alone\DFS2ST`
 
-See the following Wireshark trace for an example.
+### Wireshark trace example
 
 ```output
 192.168.0.45	192.168.0.42	NETDFS	310	dfs_GetInfo request
