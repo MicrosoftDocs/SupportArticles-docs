@@ -1,5 +1,5 @@
 ---
-title: Error not enough memory resources are available to process this command 
+title: The data is invalid or the Namespace has no targets error
 description: Helps resolve the error "The data is invalid" or "The Namespace has no targets. This may be due to a corrupt or out of sync metadata."
 ms.date: 09/03/2024
 manager: dcscontentpm
