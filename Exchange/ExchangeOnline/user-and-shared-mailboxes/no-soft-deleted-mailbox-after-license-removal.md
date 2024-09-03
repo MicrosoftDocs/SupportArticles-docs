@@ -23,7 +23,7 @@ ms.date: 09/03/2024
 
 ## Symptoms
 
-You want to access the mailbox of an unlicensed user in Exchange Online, but you can't locate the mailbox. For example, the mailbox isn't listed in the Exchange admin center, and the mailbox isn't listed in the output of either of the following PowerShell cmdlets:
+You want to access the mailbox of an unlicensed user in Exchange Online, but you can't locate the mailbox. For example, the mailbox isn't listed in the Exchange admin center or in the output of the following PowerShell cmdlets:
 
 ```PowerShell
 Get-Mailbox -Identity <mailbox ID> -SoftDeletedMailbox
