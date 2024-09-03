@@ -27,7 +27,9 @@ If you check the registry under the following registry key, the registry entry f
 > [!NOTE]
 > If you restart the DFS server service on the affected DFS Namespace server (holding the DFS stand-alone namespace), you'll receive the error "The Namespace cannot be queried. Element not found" while trying to reload or access the DFS stand-alone namespace from the DFS Management console.
 
-See the following Wireshark tracing on a member server or member client with RSAT File Services Tools installed for an example.
+### Wireshark trace example
+
+See the following Wireshark tracing on a member server or member client with RSAT File Services Tools installed.
 
 ```output
 192.168.0.45	192.168.0.42	NETDFS	310	dfs_GetInfo request
