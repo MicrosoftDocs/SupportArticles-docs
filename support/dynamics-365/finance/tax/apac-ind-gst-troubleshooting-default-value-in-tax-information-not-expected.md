@@ -243,7 +243,7 @@ For project-related transactions, set the breakpoint at `TransTaxInformationHelp
 If the tax information is incorrect, you can debug using the [Development tools](/dynamics365/fin-ops-core/dev-itpro/dev-tools/development-tools-overview) with the `TransTaxInformationHelper` class to identify the root cause. Typically, initialization starts from the  `initTransTaxInformation` method. For specific information, you can refer to:
 
 - `initFromCompanyLocation` for the company location
-- `initFromTaxInformation` for the fax information
+- `initFromTaxInformation` for the tax information
 - `initFromVendorLocation` for the vendor location
 
 Once the root cause is identified, you can add a code extension to `TransTaxInformationHelper` to resolve the issue.
