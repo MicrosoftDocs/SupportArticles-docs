@@ -12,7 +12,7 @@ ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replicat
 
 This article helps resolve the error "The namespace cannot be queried. The remote procedure call failed."
 
-You may receive the following error message when you access, modify, or create a Distributed File System (DFS) Namespace on a DFS Namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed.
+You might receive the following error message when you access, modify, or create a Distributed File System (DFS) Namespace on a DFS Namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed.
 
 > The namespace cannot be queried. The remote procedure call failed
 
@@ -21,7 +21,7 @@ You may receive the following error message when you access, modify, or create a
 This issue occurs because the DFS Namespace service stops responding on the DFS Namespace server. You use the DFS Management console on a machine (member server or member client with RSAT File Services tools installed). After the machine connects successfully (via Remote Procedure Call (RPC)) to the DFS Namespace server, it eventually runs into a communication interruption over RPC.
 
 > [!NOTE]
-> If the DFS Namespace service doesn't restart or isn't manually started, subsequent tries to access the namespace via the DFS Management console will result in the error ["The Namespace cannot be queried. The RPC Server is unavailable"](#link of 194991_1 when published).
+> If the DFS Namespace service doesn't restart or isn't manually started, subsequent tries to access the namespace via the DFS Management console will result in the error "The Namespace cannot be queried. The RPC Server is unavailable."
 
 See the following Wireshark trace for an example.
 
