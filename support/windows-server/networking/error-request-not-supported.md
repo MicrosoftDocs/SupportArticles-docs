@@ -27,4 +27,4 @@ See the following Wireshark trace for an example.
 
 Additionally, you might see a DFS Namespace server response with the error `ERROR_NOT_SUPPORTED`.
 
-We recommend starting the data collection with a simultaneous network trace in the bad case scenario and compare your results with the analysis of a good trace scenario.
+We recommend starting the data collection with a simultaneous network trace in the bad case scenario, and comparing your results with the analysis of a good trace scenario.
