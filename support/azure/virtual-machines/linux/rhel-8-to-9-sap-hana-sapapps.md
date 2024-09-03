@@ -1,5 +1,5 @@
 ---
-title: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG virtual machines from 8.x to 9.x using leapp
+title: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs from 8.x to 9.x using leapp
 description: Provides steps to help you upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 8.x to 9.x by using the leapp tool.
 ms.reviewer: divargas, msaenzbo, v-weizhu
 ms.date: 09/03/2024
@@ -8,11 +8,11 @@ ms.topic: how-to
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to perform leapp upgrade from 8.x to 9.x on RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines
+# Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 8.x to 9.x using leapp
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the leapp utility to upgrade Linux virtual machines (VMs) that use RHEL-SAP-HANA or RHEL-SAP-APPS pay-as-you-go (PAYG) images from RHEL 8.*x* to RHEL 9.*x*.
+Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the leapp utility to upgrade Linux virtual machines (VMs) that use RHEL-SAP-HANA or RHEL-SAP-APPS pay-as-you-go (PAYG) images from 8.*x* to 9.*x*.
 
 > [!IMPORTANT]
 > Red Hat Update Infrastructure (RHUI) is intended only for PAYG images. If you use custom or golden images (also known as bring-your-own-subscription (BYOS)), you have to attach the system to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
@@ -46,7 +46,7 @@ SAP NetWeaver is validated by SAP for each major RHEL version. The supported in-
 > [!IMPORTANT]  
 > When upgrading a RHEL system designed for SAP HANA or SAP Applications from version 8.10 to 9.4, there is a known issue due to the RHUI client RPM name difference in 8.10 compared to earlier versions. As a result, the upgrade is currently not possible, and no workaround is available. However, the upgrade from 8.8 to 9.2 is unaffected by this issue.
 
-### [Upgrade from RHEL 8.8 to RHEL 9.2 on SAP-HANA PAYG images](#tab/rhel92saphana)
+### [RHEL 8.8 to RHEL 9.2 on SAP-HANA PAYG images](#tab/rhel92saphana)
 
 This section outlines the necessary steps before performing an in-place upgrade from RHEL 8.8 to RHEL 9.2 using the leapp utility on SAP-HANA PAYG images.
 
@@ -112,7 +112,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
     sudo dnf install leapp-upgrade
     ```
 
-### [Upgrade from RHEL 8.10 to 9.4 on SAP-HANA PAYG images](#tab/rhel94saphana)
+### [RHEL 8.10 to 9.4 on SAP-HANA PAYG images](#tab/rhel94saphana)
 
 This section outlines the necessary steps before performing an in-place upgrade from RHEL 8.10 to RHEL 9.4 using the leapp utility on SAP-HANA PAYG images.
 
@@ -173,7 +173,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
     sudo dnf install leapp-upgrade
     ```
 
-### [Upgrade from RHEL 8.8 to 9.2 on SAP-APPS PAYG images](#tab/rhel92sapapps)
+### [RHEL 8.8 to 9.2 on SAP-APPS PAYG images](#tab/rhel92sapapps)
 
 This section outlines the necessary steps before performing an in-place upgrade from RHEL 8.8 to RHEL 9.2 using the leapp utility on SAP-APPS PAYG images.
 
@@ -236,7 +236,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
     sudo dnf install leapp-upgrade
     ```
 
-### [Upgrade from RHEL 8.10 to 9.4 on SAP-APPS PAYG images](#tab/rhel94sapapps)
+### [RHEL 8.10 to 9.4 on SAP-APPS PAYG images](#tab/rhel94sapapps)
 
 This section outlines the necessary steps before performing an in-place upgrade from RHEL 8.10 to RHEL 9.4 using the leapp utility on SAP-APPS PAYG images. 
 
@@ -304,7 +304,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
 The leapp pre-upgrade report highlights possible issues, provides recommended solutions, and helps determine whether it's feasible or advisable to proceed with the upgrade.
 
-### [Upgrade from RHEL 8.8 to 9.2 on SAP-HANA PAYG images](#tab/rhel92saphana)
+### [RHEL 8.8 to 9.2 on SAP-HANA PAYG images](#tab/rhel92saphana)
 
 Run the `leapp preupgrade` command with the `e4s` channel:
 
@@ -315,7 +315,7 @@ sudo leapp preupgrade --target <target_os_version> --channel e4s --no-rhsm
 Replace `<target_os_version>` with the target OS version, for example `9.2`. 
 
 
-### [Upgrade from RHEL 8.10 to 9.4 on SAP-HANA PAYG images](#tab/rhel94saphana)
+### [RHEL 8.10 to 9.4 on SAP-HANA PAYG images](#tab/rhel94saphana)
 
 Run the `leapp preupgrade` command using  the `e4s` channel:
 
@@ -326,7 +326,7 @@ sudo leapp preupgrade --target <target_os_version> --channel e4s --no-rhsm
 Replace `<target_os_version>` with the target OS version, for example `9.4`.
 
 
-### [Upgrade from RHEL 8.8 to 9.2 on SAP-APPS PAYG images](#tab/rhel92sapapps)
+### [RHEL 8.8 to 9.2 on SAP-APPS PAYG images](#tab/rhel92sapapps)
 
 Run the `leapp preupgrade` command using the `eus` channel:
 
@@ -336,7 +336,7 @@ sudo leapp preupgrade --target <target_os_version> --channel eus --no-rhsm
 
 Replace `<target_os_version>` with the target OS version, for example `9.2`.
 
-### [Upgrade from RHEL 8.10 to 9.4 on SAP-APPS PAYG images](#tab/rhel94sapapps)
+### [RHEL 8.10 to 9.4 on SAP-APPS PAYG images](#tab/rhel94sapapps)
 
 Run the `leapp preupgrade` command using the `eus` channel:
 
@@ -357,7 +357,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 > [!IMPORTANT]  
 > Make sure to run the `leapp upgrade` command through the Serial Console to avoid any network interruptions that could affect your secure shell (SSH) terminal and disrupt the upgrade process.
 
-### [Upgrade from RHEL 8.8 to 9.2 on SAP-HANA PAYG images](#tab/rhel92saphana)
+### [RHEL 8.8 to 9.2 on SAP-HANA PAYG images](#tab/rhel92saphana)
 
 1. Run the `leapp upgrade` command using the `e4s` channel:
 
@@ -383,7 +383,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     sudo reboot
     ```
 
-### [Upgrade from RHEL 8.10 to 9.4 on SAP-HANA PAYG images](#tab/rhel94saphana)
+### [RHEL 8.10 to 9.4 on SAP-HANA PAYG images](#tab/rhel94saphana)
 
 1. Run the `leapp upgrade` command using the `e4s` channel.
 
@@ -409,7 +409,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     sudo reboot
     ```
 
-### [Upgrade from RHEL 8.8 to 9.2 on SAP-APPS PAYG images](#tab/rhel92sapapps)
+### [RHEL 8.8 to 9.2 on SAP-APPS PAYG images](#tab/rhel92sapapps)
 
 1. Run the `leapp upgrade` command using the `eus` channel.
 
@@ -436,7 +436,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     ```
 
 
-### [Upgrade from RHEL 8.10 to 9.4 on SAP-APPS PAYG images](#tab/rhel94sapapps)
+### [RHEL 8.10 to 9.4 on SAP-APPS PAYG images](#tab/rhel94sapapps)
 
 
 1. Run the `leapp upgrade` command, replacing `<target_os_version>` with the target OS version and use the `eus` channel.
@@ -471,7 +471,7 @@ Once the upgrade is finished, check if the system is in the desired state.
 
 This section outlines the recommended verification steps after completing an in-place upgrade.
 
-### [Verify RHEL 9.2 or 9.4 on SAP-HANA PAYG images](#tab/rhel9294saphana)
+### [RHEL 9.2 or 9.4 on SAP-HANA PAYG images](#tab/rhel9294saphana)
 
 1. Verify that the current OS version belongs to Red Hat Enterprise Linux 9:
 
@@ -507,7 +507,7 @@ This section outlines the recommended verification steps after completing an in-
     rhel-9-for-x86_64-sap-solutions-e4s-rhui-rpms    Red Hat Enterprise Linux 9 for x86_64 - SAP Solutions - Update Services for SAP Solutions from RHUI (RPMs)
     ```
 
-### [Verify RHEL 9.2 or 9.4 on SAP-APPS PAYG images](#tab/rhel9294sapapps)
+### [RHEL 9.2 or 9.4 on SAP-APPS PAYG images](#tab/rhel9294sapapps)
 
 
 1. Verify that the current OS version belongs to Red Hat Enterprise Linux 9:
