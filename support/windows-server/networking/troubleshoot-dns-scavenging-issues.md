@@ -69,7 +69,7 @@ The sum of **Refresh** and **No Refresh** intervals need to be greater than or e
 
 4. Consider manually initiating scavenging to test its functionality. This would result in instant deletion of records only if scavenging has run before automatically at least one time on this server. See [Automated and Manually Initiated Scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc757041%28v=ws.10%29#automated-and-manually-initiated-scavenging).
 
-   :::image type="content" source="media/troubleshoot-dns-scavenging-issues/click-the-scavenge-stale-resource-records-option.png" alt-text="Click the "Scavenge Stale Resource Records" option.":::
+   :::image type="content" source="media/troubleshoot-dns-scavenging-issues/click-the-scavenge-stale-resource-records-option.png" alt-text="Click the 'Scavenge Stale Resource Records' option.":::
 
 ## Scenarios
 
