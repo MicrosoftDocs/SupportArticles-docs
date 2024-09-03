@@ -20,7 +20,7 @@ You might receive the following error message when you access, modify, or create
 
 You use the DFS Management console on a machine (DFS Namespace server, member server, or member client with RSAT File Services Tools installed). This issue occurs because the machine can't reach the primary domain controller (PDC) or domain controller (DC) over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port), or the PDC or DC is down.
 
-See the following Wireshark trace example 1:
+### Wireshark trace example 1
 
 Tracing on the DFS Namespace server, a member server or member client with RSAT File Services Tools installed.
 
@@ -41,7 +41,7 @@ However, TCP connection establishment against the PDC doesn't fail during the TC
 192.168.0.42	192.168.0.1	TCP	66	[TCP Retransmission] 49893 → 389 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
 ```
 
-See the following Wireshark trace example 2:
+### Wireshark trace example 2
 
 Member server or member client with RSAT File Services Tools installed.
 
