@@ -239,8 +239,11 @@ For project-related transactions, set the breakpoint at `TransTaxInformationHelp
     Go to **Accounts payable** \> **Vendors** \> **All vendors**. Open the vendor record, and then, on the **Invoice and delivery** FastTab, notice the setting of the **Prices include sales tax** option.
 
 ## How to investigate the root cause and resolve the issue with a code extension
-If the information is incorrect, you can debug using the class **TransTaxInformationHelper** to identify the root cause. Typically, initialization starts from the method **initTransTaxInformation**. For specific information, you can refer to:
-  - **initFromCompanyLocation** for Location
-  - **initFromTaxInformation** for Tax information
-  - **initFromVendorLocation** for Vendor Location
-Once the root cause is identified, you can add a code extension to **TransTaxInformationHelper** to resolve the issue.
+
+If the tax information is incorrect, you can debug using the [Development tools](/dynamics365/fin-ops-core/dev-itpro/dev-tools/development-tools-overview) with the `TransTaxInformationHelper` class to identify the root cause. Typically, initialization starts from the  `initTransTaxInformation` method. For specific information, you can refer to:
+
+- `initFromCompanyLocation` for the company location
+- `initFromTaxInformation` for the fax information
+- `initFromVendorLocation` for the vendor location
+
+Once the root cause is identified, you can add a code extension to `TransTaxInformationHelper` to resolve the issue.

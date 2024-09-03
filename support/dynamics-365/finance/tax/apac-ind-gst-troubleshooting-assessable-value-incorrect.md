@@ -1,42 +1,40 @@
 ---
-# required metadata
-
 title: Assessable value is incorrect
-description: Provides troubleshooting information that can help when the assessable value is incorrect.
+description: Provides mitigation steps that can help when the assessable value is incorrect.
 author: lingshf
-ms.date: 08/27/2024
-
-# optional metadata
-
-#ms.search.form:
+ms.date: 09/02/2024
 audience: Application user
-# ms.devlang: 
 ms.reviewer:
-
-# ms.tgt_pltfrm: 
-ms.search.region: India
-# ms.search.industry: 
+ms.search.region: India 
+ms.custom: sap:Tax - India tax\Issues with India goods and service tax (IN GST)
 ms.author: shaoling
 ms.search.validFrom: 2021-04-01
 ms.dyn365.ops.version: 10.0.1
 ---
-
 # Assessable value is incorrect
 
-The assessable value is typically updated automatically based on the transaction value. If the value doesn't appear as as expected, users can manually update the assessable value on the UI form. If this is not feasible (e.g., the control is not editable, there is no such UI, or it is too tedious to update many lines), you can follow the mitigation steps to resolve the issue using code extension.
+The assessable value is typically updated automatically based on the transaction value. If the value doesn't appear as expected, you can manually update the assessable value on the UI form. If this method isn't feasible (for example, the control isn't editable, there's no such UI, or it's too tedious to update many lines), you can follow the following mitigation steps together with a code extension to resolve the issue.
 
-## Mitigation with code extension
-This section provides guidence on investigating the root cause and adding a code extension, using a purchase order as an example.
+## Mitigation with a code extension
 
-1. Get the table field of the assessable value from UI.<br/>
-  ![GetAssessableField1](attachments/2024-08-27-16-08-31.png)<br/>
-  The field is **AssessableValueTransactionCurrency** of table **PurchLine_IN**, which is extension table of the main table **PurchLine** via [table extension framework](https://daxonline.org/9-table-extension-framework.html).<br/>
-  ![PurchLine_INAssessableValue](attachments/2024-08-27-16-09-40.png)
+This section provides guidance on investigating the root cause and adding a [code extension](/dynamics365/fin-ops-core/dev-itpro/extensibility/writing-extensible-code), using a purchase order as an example.
 
-2. Check the following methods of the main table (**PurchLine** for purchase order) to ensure they update the assessable value accordingly. You can set breakpoints and debug the process. If any issues arise, adding code extension to fix them.
-   - **update**
-   - **insert**
-   - **modifiedField**
-  <br/>
-  For exemple, in **PurchLine.modifiedField**, there is code logic to update the assessable value.
-  ![purchlineModifiedField](attachments/2024-08-27-16-10-43.png)  
+1. Get the table field of the assessable value from UI:
+
+   Go to **Accounts payable** > **Purchase order** > **All purchase orders**. Right-click the **Assessable value** column. Then, go to **Form information** > **Form Name: PurchTable**.
+
+   :::image type="content" source="media/apac-ind-gst-troubleshooting-assessable-value-incorrect/assessable-value-table-field.png" alt-text="Screenshot that shows how to get the table field of the assessable value from UI." lightbox="media/apac-ind-gst-troubleshooting-assessable-value-incorrect/assessable-value-table-field.png":::
+
+   The table field is the **AssessableValueTransactionCurrency** of the **PurchLine_IN** table that's extended from the main table **PurchLine** via [table extension framework](https://daxonline.org/9-table-extension-framework.html).
+
+   :::image type="content" source="media/apac-ind-gst-troubleshooting-assessable-value-incorrect/assessablevaluetransactioncurrency-field.png" alt-text="Screenshot that shows the AssessableValueTransactionCurrency field of the PurchLine_IN table." lightbox="media/apac-ind-gst-troubleshooting-assessable-value-incorrect/assessablevaluetransactioncurrency-field.png":::
+
+2. Use the [Development tools](/dynamics365/fin-ops-core/dev-itpro/dev-tools/development-tools-overview) to check the following methods of the main table (the **PurchLine** table for the purchase order) to ensure they update the assessable value accordingly. You can set breakpoints and debug the process. If an issue occurs, add a code extension to solve the issue.
+
+    - `update`
+    - `insert`
+    - `modifiedField`
+
+    For example, in `PurchLine.modifiedField`, there's code logic to update the assessable value. Review and update the code as needed to update the assessable value.
+
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-assessable-value-incorrect/purchline-modifiedfield.png" alt-text="A code logic example about updating the assessable value." lightbox="media/apac-ind-gst-troubleshooting-assessable-value-incorrect/purchline-modifiedfield.png":::
