@@ -106,13 +106,13 @@ BEGIN
     DECLARE @PWD_string [nvarchar](514)
     DECLARE @SID_varbinary [varbinary](85)
     DECLARE @SID_string [nvarchar](514)
-    DECLARE @tmpstr [nvarchar](1024)
+    DECLARE @tmpstr [nvarchar](4000)
     DECLARE @is_policy_checked [nvarchar](3)
     DECLARE @is_expiration_checked [nvarchar](3)
-    DECLARE @Prefix [nvarchar](255)
+    DECLARE @Prefix [nvarchar](4000)
     DECLARE @defaultdb [sysname]
     DECLARE @defaultlanguage [sysname]
-    DECLARE @tmpstrRole [nvarchar](1024)
+    DECLARE @tmpstrRole [nvarchar](4000)
     ;
     IF (@login_name IS NULL)
     BEGIN
