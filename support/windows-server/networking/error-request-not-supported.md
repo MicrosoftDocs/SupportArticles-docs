@@ -18,7 +18,7 @@ You might receive the following error message when you access, modify, or create
 
 Usually, the cause is the way that the client requests something from the DFS Namespace server. Therefore, the cause should be investigated via data collection and data analysis from the moment of the bad case scenario.
 
-### Wireshark trace example
+See the following Wireshark trace for an example.
 
 ```output
 192.168.0.45	192.168.0.42	NETDFS	310	dfs_GetInfo request
