@@ -13,9 +13,15 @@ This article helps you work around the problem that the default setting for Medi
 
 ## Symptoms
 
-You're developing a PSA for IPP-based printers on Windows 10 22H2 or Windows 11 23H2. When you add extra PageMediaType options to `PrintDeviceCapabilities` in the `PrintSupportExtensionSession.PrintDeviceCapabilitiesChanged` event handler of the PSA, the default option isn't selected as expected.
+Consider the following scenario:
 
-For example, a ContosoMediaType is added to the PageMediaType feature and the print ticket is configured as follows. The default value of `AutoSelect` is set to `true` in the configuration file, but another option is used as the default setting in fact.
+- You're developing a PSA for IPP-based printers.
+- The PSA runs on Windows 10 22H2 or Windows 11 23H2.
+- You add extra PageMediaType options to the Print Device Capabilities (PDC) in the `PrintSupportExtensionSession.PrintDeviceCapabilitiesChanged` event handler of the PSA.
+
+In this scenario, the default option isn't selected as expected when the print settings screen in the PSA is first displayed. Once the settings are saved, the issue no longer occurs.
+
+For instance, a ContosoMediaType is added to the PageMediaType feature and the print ticket is configured as follows. The default value of `AutoSelect` is set to `true` in the Print Schema, but another option is used as the default setting in fact.
 
 ```xml
 <!-- media-type-supported -->
@@ -27,8 +33,6 @@ For example, a ContosoMediaType is added to the PageMediaType feature and the pr
 </psk:PageMediaType>
 ```
 
-This issue only occurs when the print settings screen in the PSA is first displayed. Once the settings are saved, the issue no longer occurs.
-
 ## Cause
 
 This issue occurs because Windows.Graphics.Printing.Workflow.dll doesn't convert the Print Device Capability to a print ticket correctly. It's a problem with the Windows Print Workflow service.
@@ -39,133 +43,133 @@ To work around this issue, save the default option in the `PrintSupportExtension
 
 1. Add the following code to the `LocalStorageUtil` class in the background task of the PSA:
 
-```csharp
-// Method to check if the default option has already been set in the PrintTicket
-public static bool IsAlreadyLoadedDefaultValue()
-{
-    try
+    ```csharp
+    // Method to check if the default option has already been set in the PrintTicket
+    public static bool IsAlreadyLoadedDefaultValue()
     {
-        return (bool)ApplicationData.Current.LocalSettings.Values["IsLoadedDefaultValue"];
+        try
+        {
+            return (bool)ApplicationData.Current.LocalSettings.Values["IsLoadedDefaultValue"];
+        }
+        catch (NullReferenceException e)
+        {
+            return false;
+        }
     }
-    catch (NullReferenceException e)
-    {
-        return false;
-    }
-}
 
-// Method to indicate that the default option has been applied to the PrintTicket
-public static void LoadedDefaultValue(bool _bLoaded)
-{
-    ApplicationData.Current.LocalSettings.Values["IsLoadedDefaultValue"] = _bLoaded;
-}
-
-// Method to save the default option value of the specified feature
-public static void SetPdcDefaultValue(string _Feature, string _DefaultValue)
-{
-    System.Diagnostics.Debug.WriteLine("SetPdcDefaultValue: Feature=" + _Feature + ", Default=" + _DefaultValue);
-    ApplicationData.Current.LocalSettings.Values[_Feature] = _DefaultValue;
-}
-
-// Method to return the default option value of the specified feature
-public static string GetPdcDefaultValue(string _Feature)
-{
-    try
+    // Method to indicate that the default option has been applied to the PrintTicket
+    public static void LoadedDefaultValue(bool _bLoaded)
     {
-        return (string)ApplicationData.Current.LocalSettings.Values[_Feature];
+        ApplicationData.Current.LocalSettings.Values["IsLoadedDefaultValue"] = _bLoaded;
     }
-    catch (NullReferenceException e)
+
+    // Method to save the default option value of the specified feature
+    public static void SetPdcDefaultValue(string _Feature, string _DefaultValue)
     {
-        System.Diagnostics.Debug.WriteLine(e.Message);
-        return null;
+        System.Diagnostics.Debug.WriteLine("SetPdcDefaultValue: Feature=" + _Feature + ", Default=" + _DefaultValue);
+        ApplicationData.Current.LocalSettings.Values[_Feature] = _DefaultValue;
     }
-}
-```
+
+    // Method to return the default option value of the specified feature
+    public static string GetPdcDefaultValue(string _Feature)
+    {
+        try
+        {
+            return (string)ApplicationData.Current.LocalSettings.Values[_Feature];
+        }
+        catch (NullReferenceException e)
+        {
+            System.Diagnostics.Debug.WriteLine(e.Message);
+            return null;
+        }
+    }
+    ```
 
 1. In the `PrintSupportExtensionSession.PrintDeviceCapabilitiesChanged` event handler, call the `SaveDefaultValues()` method to save the default values set in the Print Device Capabilities.
 
-```csharp
-private void OnSessionPrintDeviceCapabilitiesChanged(PrintSupportExtensionSession sender, PrintSupportPrintDeviceCapabilitiesChangedEventArgs args)
-{
-    var pdc = args.GetCurrentPrintDeviceCapabilities();
-    // Add the custom namespace URI to the XML document.
-    pdc.DocumentElement.SetAttribute("xmlns:contoso", "http://schemas.contoso.com/keywords");
-    // Add the custom media type.
-    AddCustomMediaType(ref pdc, "http://schemas.contoso.com/keywords", "contoso:ContosoMediaType");
-
-    // Call the method to save the default values of the PDC
-    SaveDefaultValues(ref pdc);
-
-    args.UpdatePrintDeviceCapabilities(pdc);
-    args.SetPrintDeviceCapabilitiesUpdatePolicy(
-        PrintSupportPrintDeviceCapabilitiesUpdatePolicy.CreatePeriodicRefresh(System.TimeSpan.FromMinutes(1)));
-    args.GetDeferral().Complete();
-}
-```
-
-1. Initialize the ComboBox items during the initial setup by using the default values saved in `LocalStorageUtil`.
-
-```csharp
-    private ComboBox CreatePrintTicketFeatureComboBox(PrintTicketFeature feature, bool useDefaultEventHandler = true)
+    ```csharp
+    private void OnSessionPrintDeviceCapabilitiesChanged(PrintSupportExtensionSession sender, PrintSupportPrintDeviceCapabilitiesChangedEventArgs args)
     {
-        if (feature == null)
-        {
-            return null;
-        }
+        var pdc = args.GetCurrentPrintDeviceCapabilities();
+        // Add the custom namespace URI to the XML document.
+        pdc.DocumentElement.SetAttribute("xmlns:contoso", "http://schemas.contoso.com/keywords");
+        // Add the custom media type.
+        AddCustomMediaType(ref pdc, "http://schemas.contoso.com/keywords", "contoso:ContosoMediaType");
 
-        var comboBox = new ComboBox
-        {
-            // Header is displayed in the UI, ontop of the ComboBox.
-            Header = feature.DisplayName
-        };
-        // Construct a new List since IReadOnlyList does not support the 'IndexOf' method.
-        var options = new ObservableCollection<PrintTicketOption>(feature.Options);
-        // Provide the combo box with a list of options to select from.
-        comboBox.ItemsSource = options;
-        // Set the selected option to the option set in the print ticket.
-        PrintTicketOption selectedOption;
+        // Call the method to save the default values of the PDC
+        SaveDefaultValues(ref pdc);
 
+        args.UpdatePrintDeviceCapabilities(pdc);
+        args.SetPrintDeviceCapabilitiesUpdatePolicy(
+            PrintSupportPrintDeviceCapabilitiesUpdatePolicy.CreatePeriodicRefresh(System.TimeSpan.FromMinutes(1)));
+        args.GetDeferral().Complete();
+    }
+    ```
 
-        // Load the default value of the PDC from LocalStorageUtil only once.
-        string defaultOption = LocalStorageUtil.GetPdcDefaultValue(feature.Name);
-        if (!LocalStorageUtil.IsAlreadyLoadedDefaultValue() && defaultOption != null)
+1. Initialize the ComboBox items during the initial setup by using the default values saved in the `LocalStorageUtil` class.
+
+    ```csharp
+        private ComboBox CreatePrintTicketFeatureComboBox(PrintTicketFeature feature, bool useDefaultEventHandler = true)
         {
-            selectedOption = options[0];
-            foreach (var option in options)
+            if (feature == null)
             {
-                if (option.Name == defaultOption)
+                return null;
+            }
+
+            var comboBox = new ComboBox
+            {
+                // Header is displayed in the UI, ontop of the ComboBox.
+                Header = feature.DisplayName
+            };
+            // Construct a new List since IReadOnlyList does not support the 'IndexOf' method.
+            var options = new ObservableCollection<PrintTicketOption>(feature.Options);
+            // Provide the combo box with a list of options to select from.
+            comboBox.ItemsSource = options;
+            // Set the selected option to the option set in the print ticket.
+            PrintTicketOption selectedOption;
+
+
+            // Load the default value of the PDC from LocalStorageUtil only once.
+            string defaultOption = LocalStorageUtil.GetPdcDefaultValue(feature.Name);
+            if (!LocalStorageUtil.IsAlreadyLoadedDefaultValue() && defaultOption != null)
+            {
+                selectedOption = options[0];
+                foreach (var option in options)
                 {
-                    selectedOption = option;
-                    break;
+                    if (option.Name == defaultOption)
+                    {
+                        selectedOption = option;
+                        break;
+                    }
                 }
             }
-        }
-        else
-        {
-            var featureOption = feature.GetSelectedOption();
-            try
+            else
             {
-                selectedOption = options.Single((option) => (
-                    option.Name == featureOption.Name && option.XmlNamespace == featureOption.XmlNamespace));
-            }
-            // Catch exceptions, because there can be multiple features with the "None" feature name.
-            // We need to handle those features separately.
-            catch (System.SystemException exception)
-            {
-                var nameAttribute = featureOption.XmlNode.Attributes.GetNamedItem("name");
-                var attribute = featureOption.XmlNode.OwnerDocument.CreateAttribute("name");
+                var featureOption = feature.GetSelectedOption();
+                try
+                {
+                    selectedOption = options.Single((option) => (
+                        option.Name == featureOption.Name && option.XmlNamespace == featureOption.XmlNamespace));
+                }
+                // Catch exceptions, because there can be multiple features with the "None" feature name.
+                // We need to handle those features separately.
+                catch (System.SystemException exception)
+                {
+                    var nameAttribute = featureOption.XmlNode.Attributes.GetNamedItem("name");
+                    var attribute = featureOption.XmlNode.OwnerDocument.CreateAttribute("name");
 
-                selectedOption = options.Single((option) => (
-                    option.DisplayName == featureOption.DisplayName
-                    && option.Name == featureOption.Name
-                    && option.XmlNamespace == featureOption.XmlNamespace));
+                    selectedOption = options.Single((option) => (
+                        option.DisplayName == featureOption.DisplayName
+                        && option.Name == featureOption.Name
+                        && option.XmlNamespace == featureOption.XmlNamespace));
+                }
             }
+
+            comboBox.SelectedIndex = options.IndexOf(selectedOption);
+
+            // Indicate that we have completed to loading default value from LocalStorageUtil.
+            LocalStorageUtil.LoadedDefaultValue(true);
+            // ...
         }
 
-        comboBox.SelectedIndex = options.IndexOf(selectedOption);
-
-        // Indicate that we have completed to loading default value from LocalStorageUtil.
-        LocalStorageUtil.LoadedDefaultValue(true);
-        // ...
-    }
-
-```
+    ```
