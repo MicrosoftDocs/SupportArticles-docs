@@ -22,7 +22,7 @@ You use the DFS Management console on a machine (DFS Namespace server, member se
 
 ### Wireshark trace example 1
 
-Tracing on the DFS Namespace server, a member server or member client with RSAT File Services Tools installed.
+Tracing on the DFS Namespace server, a member server or member client with RSAT File Services Tools installed:
 
 The Domain Name System (DNS) queries for LDAP SRV records are successful.
 
@@ -43,7 +43,7 @@ However, TCP connection establishment against the PDC doesn't fail during the TC
 
 ### Wireshark trace example 2
 
-Member server or member client with RSAT File Services Tools installed.
+Member server or member client with RSAT File Services Tools installed:
 
 ```output
 192.168.0.45	192.168.0.42	NETDFS	286	dfs_GetInfo request
