@@ -20,7 +20,7 @@ You might receive the following error message when you access, modify, or create
 
 The registry value `Svc` with the `REG_BINARY` type under the DFS root is corrupt or modified. For example, under the following registry key:
 
-`Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Stand-alone\DFS2ST`
+`Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\DFS2ST`
 
 ### Wireshark trace example
 
