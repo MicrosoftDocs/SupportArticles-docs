@@ -23,7 +23,7 @@ This issue occurs because the DFS Namespace service stops responding on the DFS 
 > [!NOTE]
 > If the DFS Namespace service doesn't restart or isn't manually started, subsequent tries to access the namespace via the DFS Management console will result in the error "The Namespace cannot be queried. The RPC Server is unavailable."
 
-See the following Wireshark trace for an example.
+### Wireshark trace example
 
 Server Message Block (SMB) Create Request for `netdfs` is successful. The DFS Namespace service is still started or running:
 
