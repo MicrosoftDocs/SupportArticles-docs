@@ -125,6 +125,8 @@
     href: linux-upgrade-suse-15sp1.md
   - name: Troubleshoot Red Hat leapp upgrade issues
     href: troubleshoot-red-hat-os-upgrade-issues.md
+  - name: Leapp upgrade from RHEL 8.x to RHEL 9.x on SAP-HANA and SAP-APPS pay-as-you-go VMs
+    href: leapp-upgrade-rhel-8-to-9-sap-hana-sapapps.md
   
 
 - name: My VM is not booting
