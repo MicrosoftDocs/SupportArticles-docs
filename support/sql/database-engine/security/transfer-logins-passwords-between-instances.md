@@ -51,338 +51,334 @@ To transfer the logins, use one of the following methods, as appropriate for you
 USE [master]
 GO
 IF OBJECT_ID('sp_hexadecimal') IS NOT NULL
-	DROP PROCEDURE sp_hexadecimal
+    DROP PROCEDURE sp_hexadecimal
 GO
 CREATE PROCEDURE dbo.sp_hexadecimal (
-	@binvalue [varbinary](256)
-	,@hexvalue [varchar](514) OUTPUT
-	)
+    @binvalue [varbinary](256)
+    ,@hexvalue [varchar](514) OUTPUT
+    )
 AS
 BEGIN
-	DECLARE @charvalue [varchar](514)
-	DECLARE @i [int]
-	DECLARE @length [int]
-	DECLARE @hexDigits [char](16)
-	;
-	SET @charvalue = '0x'
-	;
-	SET @i = 1
-	;
-	SET @length = DATALENGTH(@binvalue)
-	;
-	SET @hexDigits = '0123456789ABCDEF'
-	;
-	WHILE (@i < =  @length)
-	BEGIN
-		DECLARE @tempint [int]
-		DECLARE @firstint [int]
-		DECLARE @secondint [int]
-		;
-		SET @tempint = CONVERT([int], SUBSTRING(@binvalue, @i, 1))
-		;
-		SET @firstint = FLOOR(@tempint / 16)
-		;
-		SET @secondint = @tempint - (@firstint * 16)
-		;
-		SET @charvalue = @charvalue
-			+ SUBSTRING(@hexDigits, @firstint  + 1, 1)
-			+ SUBSTRING(@hexDigits, @secondint + 1, 1)
-		;
-		SET @i = @i + 1
-	END
-	;
-	SET @hexvalue = @charvalue
+    DECLARE @charvalue [varchar](514)
+    DECLARE @i [int]
+    DECLARE @length [int]
+    DECLARE @hexDigits [char](16)
+    ;
+    SET @charvalue = '0x'
+    ;
+    SET @i = 1
+    ;
+    SET @length = DATALENGTH(@binvalue)
+    ;
+    SET @hexDigits = '0123456789ABCDEF'
+    ;
+    WHILE (@i < =  @length)
+    BEGIN
+        DECLARE @tempint [int]
+        DECLARE @firstint [int]
+        DECLARE @secondint [int]
+        ;
+        SET @tempint = CONVERT([int], SUBSTRING(@binvalue, @i, 1))
+        ;
+        SET @firstint = FLOOR(@tempint / 16)
+        ;
+        SET @secondint = @tempint - (@firstint * 16)
+        ;
+        SET @charvalue = @charvalue
+            + SUBSTRING(@hexDigits, @firstint  + 1, 1)
+            + SUBSTRING(@hexDigits, @secondint + 1, 1)
+        ;
+        SET @i = @i + 1
+    END
+    ;
+    SET @hexvalue = @charvalue
 END
 GO
 IF OBJECT_ID('sp_help_revlogin') IS NOT NULL
-	DROP PROCEDURE sp_help_revlogin
+    DROP PROCEDURE sp_help_revlogin
 GO
 CREATE PROCEDURE dbo.sp_help_revlogin (@login_name [sysname] = NULL)
 AS
 BEGIN
-	DECLARE @name [sysname]
-	DECLARE @type [varchar](1)
-	DECLARE @hasaccess [int]
-	DECLARE @denylogin [int]
-	DECLARE @is_disabled [int]
-	DECLARE @PWD_varbinary [varbinary](256)
-	DECLARE @PWD_string [varchar](514)
-	DECLARE @SID_varbinary [varbinary](85)
-	DECLARE @SID_string [varchar](514)
-	DECLARE @tmpstr [varchar](1024)
-	DECLARE @is_policy_checked [varchar](3)
-	DECLARE @is_expiration_checked [varchar](3)
-	DECLARE @Prefix [varchar](255)
-	DECLARE @defaultdb [sysname]
-	DECLARE @defaultlanguage [sysname]
-	DECLARE @tmpstrRole [varchar](1024)
-	;
-	IF (@login_name IS NULL)
-	BEGIN
-		DECLARE login_curs CURSOR
-		FOR
-		SELECT p.[sid]
-			,p.[name]
-			,p.[type]
-			,p.is_disabled
-			,p.default_database_name
-			,l.hasaccess
-			,l.denylogin
-			,p.default_language_name
-		FROM sys.server_principals p
-		LEFT JOIN sys.syslogins l
-			ON l.[name] = p.[name]
-		WHERE p.[type] IN (
-				 'S'
-				,'G'
-				,'U'
-				)
-			AND p.[name] <> 'sa'
-			AND p.[name] NOT LIKE '##%'
-		ORDER BY p.[name]
-	END
-	ELSE
-		DECLARE login_curs CURSOR
-		FOR
-		SELECT p.[sid]
-			,p.[name]
-			,p.[type]
-			,p.is_disabled
-			,p.default_database_name
-			,l.hasaccess
-			,l.denylogin
-			,p.default_language_name
-		FROM sys.server_principals p
-		LEFT JOIN sys.syslogins l
-			ON l.[name] = p.[name]
-		WHERE p.[type] IN (
-				 'S'
-				,'G'
-				,'U'
-				)
-			AND p.[name] <> 'sa'
-			AND p.[name] NOT LIKE '##%'
-			AND p.[name] = @login_name
-		ORDER BY p.[name]
-	;
-	OPEN login_curs
-	;
-	FETCH NEXT
-	FROM login_curs
-	INTO @SID_varbinary
-		,@name
-		,@type
-		,@is_disabled
-		,@defaultdb
-		,@hasaccess
-		,@denylogin
-		,@defaultlanguage
-	;
-	IF (@@fetch_status = - 1)
-	BEGIN
-		PRINT '/* No login(s) found for ' + QUOTENAME(@login_name) + '. */'
-		;
-		CLOSE login_curs
-		;
-		DEALLOCATE login_curs
-		;
-		RETURN - 1
-	END
-	;
-	SET @tmpstr = '/* sp_help_revlogin script
+    DECLARE @name [sysname]
+    DECLARE @type [varchar](1)
+    DECLARE @hasaccess [int]
+    DECLARE @denylogin [int]
+    DECLARE @is_disabled [int]
+    DECLARE @PWD_varbinary [varbinary](256)
+    DECLARE @PWD_string [varchar](514)
+    DECLARE @SID_varbinary [varbinary](85)
+    DECLARE @SID_string [varchar](514)
+    DECLARE @tmpstr [varchar](1024)
+    DECLARE @is_policy_checked [varchar](3)
+    DECLARE @is_expiration_checked [varchar](3)
+    DECLARE @Prefix [varchar](255)
+    DECLARE @defaultdb [sysname]
+    DECLARE @defaultlanguage [sysname]
+    DECLARE @tmpstrRole [varchar](1024)
+    ;
+    IF (@login_name IS NULL)
+    BEGIN
+        DECLARE login_curs CURSOR
+        FOR
+        SELECT p.[sid]
+            ,p.[name]
+            ,p.[type]
+            ,p.is_disabled
+            ,p.default_database_name
+            ,l.hasaccess
+            ,l.denylogin
+            ,p.default_language_name
+        FROM sys.server_principals p
+        LEFT JOIN sys.syslogins l
+            ON l.[name] = p.[name]
+        WHERE p.[type] IN (
+                 'S'
+                ,'G'
+                ,'U'
+                )
+            AND p.[name] <> 'sa'
+            AND p.[name] NOT LIKE '##%'
+        ORDER BY p.[name]
+    END
+    ELSE
+        DECLARE login_curs CURSOR
+        FOR
+        SELECT p.[sid]
+            ,p.[name]
+            ,p.[type]
+            ,p.is_disabled
+            ,p.default_database_name
+            ,l.hasaccess
+            ,l.denylogin
+            ,p.default_language_name
+        FROM sys.server_principals p
+        LEFT JOIN sys.syslogins l
+            ON l.[name] = p.[name]
+        WHERE p.[type] IN (
+                 'S'
+                ,'G'
+                ,'U'
+                )
+            AND p.[name] <> 'sa'
+            AND p.[name] NOT LIKE '##%'
+            AND p.[name] = @login_name
+        ORDER BY p.[name]
+    ;
+    OPEN login_curs
+    ;
+    FETCH NEXT
+    FROM login_curs
+    INTO @SID_varbinary
+        ,@name
+        ,@type
+        ,@is_disabled
+        ,@defaultdb
+        ,@hasaccess
+        ,@denylogin
+        ,@defaultlanguage
+    ;
+    IF (@@fetch_status = - 1)
+    BEGIN
+        PRINT '/* No login(s) found for ' + QUOTENAME(@login_name) + '. */'
+        ;
+        CLOSE login_curs
+        ;
+        DEALLOCATE login_curs
+        ;
+        RETURN - 1
+    END
+    ;
+    SET @tmpstr = '/* sp_help_revlogin script
 ** Generated ' + CONVERT([varchar], GETDATE()) + '
 ** on ' + @@SERVERNAME + '
 */'
-	;
-	PRINT @tmpstr
-	;
-	WHILE (@@fetch_status <> - 1)
-	BEGIN
-		IF (@@fetch_status <> - 2)
-		BEGIN
-			PRINT ''
-			;
-			SET @tmpstr = '/* Login ' + QUOTENAME(@name) + ' */'
-			;
-			PRINT @tmpstr
-			;
-			SET @tmpstr = 'IF NOT EXISTS (
-	SELECT 1
-	FROM sys.server_principals
-	WHERE [name] = N''' + @name + '''
-	)
+    ;
+    PRINT @tmpstr
+    ;
+    WHILE (@@fetch_status <> - 1)
+    BEGIN
+        IF (@@fetch_status <> - 2)
+        BEGIN
+            PRINT ''
+            ;
+            SET @tmpstr = '/* Login ' + QUOTENAME(@name) + ' */'
+            ;
+            PRINT @tmpstr
+            ;
+            SET @tmpstr = 'IF NOT EXISTS (
+    SELECT 1
+    FROM sys.server_principals
+    WHERE [name] = N''' + @name + '''
+    )
 BEGIN'
-			;
-			PRINT @tmpstr
-			;
-			IF @type IN ('G','U') -- NT-authenticated Group/User
-			BEGIN
-				SET @tmpstr = '	CREATE LOGIN ' + QUOTENAME(@name) + '
-	FROM WINDOWS
-	WITH DEFAULT_DATABASE = ' + QUOTENAME(@defaultdb) + '
-		,DEFAULT_LANGUAGE = ' + QUOTENAME(@defaultlanguage)
-			END
-			ELSE
-			BEGIN -- SQL Server authentication
-				-- obtain password and sid
-				SET @PWD_varbinary = CAST(LOGINPROPERTY(@name, 'PasswordHash') AS [varbinary](256))
-				;
-				EXEC sp_hexadecimal @PWD_varbinary, @PWD_string OUT
-				;
-				EXEC sp_hexadecimal @SID_varbinary, @SID_string OUT
-				;
-				-- obtain password policy state
-				SELECT @is_policy_checked = CASE is_policy_checked
-						WHEN 1
-							THEN 'ON'
-						WHEN 0
-							THEN 'OFF'
-						ELSE NULL
-						END
-				FROM sys.sql_logins
-				WHERE [name] = @name
-				;
-				SELECT @is_expiration_checked = CASE is_expiration_checked
-						WHEN 1
-							THEN 'ON'
-						WHEN 0
-							THEN 'OFF'
-						ELSE NULL
-						END
-				FROM sys.sql_logins
-				WHERE [name] = @name
-				;
-				SET @tmpstr = CHAR(9) + 'CREATE LOGIN ' + QUOTENAME(@name) + '
-	WITH PASSWORD = ' + @PWD_string + ' HASHED
-		,SID = ' + @SID_string + '
-		,DEFAULT_DATABASE = ' + QUOTENAME(@defaultdb) + '
-		,DEFAULT_LANGUAGE = ' + QUOTENAME(@defaultlanguage)
-				;
-				IF @is_policy_checked IS NOT NULL
-				BEGIN
-					SET @tmpstr = @tmpstr + '
-		,CHECK_POLICY = ' + @is_policy_checked
-				END
-				;
-				IF @is_expiration_checked IS NOT NULL
-				BEGIN
-					SET @tmpstr = @tmpstr + '
-		,CHECK_EXPIRATION = ' + @is_expiration_checked
-				END
-			END
-			;
-			IF (@denylogin = 1)
-			BEGIN -- login is denied access
-				SET @tmpstr = @tmpstr
-					+ CHAR(13) + CHAR(10) + CHAR(9) + ';'
-					+ CHAR(13) + CHAR(10) + CHAR(9) + 'DENY CONNECT SQL TO ' + QUOTENAME(@name)
-			END
-			ELSE IF (@hasaccess = 0)
-			BEGIN -- login exists but does not have access
-				SET @tmpstr = @tmpstr
-					+ CHAR(13) + CHAR(10) + CHAR(9) + ';'
-					+ CHAR(13) + CHAR(10) + CHAR(9) + 'REVOKE CONNECT SQL TO ' + QUOTENAME(@name)
-			END
-			;
-			IF (@is_disabled = 1)
-			BEGIN -- login is disabled
-				SET @tmpstr = @tmpstr
-					+ CHAR(13) + CHAR(10) + CHAR(9) + ';'
-					+ CHAR(13) + CHAR(10) + CHAR(9) + 'ALTER LOGIN ' + QUOTENAME(@name) + ' DISABLE'
-			END
-			;
-			SET @Prefix =
-				  CHAR(13) + CHAR(10) + CHAR(9) + ';'
-				+ CHAR(13) + CHAR(10) + CHAR(9) + 'EXEC [master].dbo.sp_addsrvrolemember @loginame = '''
-			;
-			SET @tmpstrRole = ''
-			;
-			SELECT @tmpstrRole = @tmpstrRole + CASE 
-					WHEN sysadmin = 1
-						THEN @Prefix + LoginName + ''', @rolename = ''sysadmin'''
-					ELSE ''
-					END + CASE 
-					WHEN securityadmin = 1
-						THEN @Prefix + LoginName + ''', @rolename = ''securityadmin'''
-					ELSE ''
-					END + CASE 
-					WHEN serveradmin = 1
-						THEN @Prefix + LoginName + ''', @rolename = ''serveradmin'''
-					ELSE ''
-					END + CASE 
-					WHEN setupadmin = 1
-						THEN @Prefix + LoginName + ''', @rolename = ''setupadmin'''
-					ELSE ''
-					END + CASE 
-					WHEN processadmin = 1
-						THEN @Prefix + LoginName + ''', @rolename = ''processadmin'''
-					ELSE ''
-					END + CASE 
-					WHEN diskadmin = 1
-						THEN @Prefix + LoginName + ''', @rolename = ''diskadmin'''
-					ELSE ''
-					END + CASE 
-					WHEN dbcreator = 1
-						THEN @Prefix + LoginName + ''', @rolename = ''dbcreator'''
-					ELSE ''
-					END + CASE 
-					WHEN bulkadmin = 1
-						THEN @Prefix + LoginName + ''', @rolename = ''bulkadmin'''
-					ELSE ''
-					END
-			FROM (
-				SELECT
-					 LoginName = CONVERT([varchar](100), SUSER_SNAME([sid]))
-					,sysadmin
-					,securityadmin
-					,serveradmin
-					,setupadmin
-					,processadmin
-					,diskadmin
-					,dbcreator
-					,bulkadmin
-				FROM sys.syslogins
-				WHERE (
-						sysadmin <> 0
-						OR securityadmin <> 0
-						OR serveradmin <> 0
-						OR setupadmin <> 0
-						OR processadmin <> 0
-						OR diskadmin <> 0
-						OR dbcreator <> 0
-						OR bulkadmin <> 0
-						)
-					AND [name] = @name
-				) L
-			;
-			IF @tmpstr <> '' PRINT @tmpstr
-			;
-			IF @tmpstrRole <> '' PRINT @tmpstrRole
-			PRINT 'END'
-		END
-		;
-		FETCH NEXT
-		FROM login_curs
-		INTO @SID_varbinary
-			,@name
-			,@type
-			,@is_disabled
-			,@defaultdb
-			,@hasaccess
-			,@denylogin
-			,@defaultlanguage
-	END
-	;
-	CLOSE login_curs
-	;
-	DEALLOCATE login_curs
-	;
-	RETURN 0
+            ;
+            PRINT @tmpstr
+            ;
+            IF @type IN ('G','U') -- NT-authenticated Group/User
+            BEGIN
+                SET @tmpstr = '    CREATE LOGIN ' + QUOTENAME(@name) + '
+    FROM WINDOWS
+    WITH DEFAULT_DATABASE = ' + QUOTENAME(@defaultdb) + '
+        ,DEFAULT_LANGUAGE = ' + QUOTENAME(@defaultlanguage)
+            END
+            ELSE
+            BEGIN -- SQL Server authentication
+                -- obtain password and sid
+                SET @PWD_varbinary = CAST(LOGINPROPERTY(@name, 'PasswordHash') AS [varbinary](256))
+                ;
+                EXEC sp_hexadecimal @PWD_varbinary, @PWD_string OUT
+                ;
+                EXEC sp_hexadecimal @SID_varbinary, @SID_string OUT
+                ;
+                -- obtain password policy state
+                SELECT @is_policy_checked = CASE is_policy_checked
+                        WHEN 1 THEN 'ON'
+                        WHEN 0 THEN 'OFF'
+                        ELSE NULL
+                        END
+                FROM sys.sql_logins
+                WHERE [name] = @name
+                ;
+                SELECT @is_expiration_checked = CASE is_expiration_checked
+                        WHEN 1 THEN 'ON'
+                        WHEN 0 THEN 'OFF'
+                        ELSE NULL
+                        END
+                FROM sys.sql_logins
+                WHERE [name] = @name
+                ;
+                SET @tmpstr = CHAR(9) + 'CREATE LOGIN ' + QUOTENAME(@name) + '
+    WITH PASSWORD = ' + @PWD_string + ' HASHED
+        ,SID = ' + @SID_string + '
+        ,DEFAULT_DATABASE = ' + QUOTENAME(@defaultdb) + '
+        ,DEFAULT_LANGUAGE = ' + QUOTENAME(@defaultlanguage)
+                ;
+                IF @is_policy_checked IS NOT NULL
+                BEGIN
+                    SET @tmpstr = @tmpstr + '
+        ,CHECK_POLICY = ' + @is_policy_checked
+                END
+                ;
+                IF @is_expiration_checked IS NOT NULL
+                BEGIN
+                    SET @tmpstr = @tmpstr + '
+        ,CHECK_EXPIRATION = ' + @is_expiration_checked
+                END
+            END
+            ;
+            IF (@denylogin = 1)
+            BEGIN -- login is denied access
+                SET @tmpstr = @tmpstr
+                    + CHAR(13) + CHAR(10) + CHAR(9) + ';'
+                    + CHAR(13) + CHAR(10) + CHAR(9) + 'DENY CONNECT SQL TO ' + QUOTENAME(@name)
+            END
+            ELSE IF (@hasaccess = 0)
+            BEGIN -- login exists but does not have access
+                SET @tmpstr = @tmpstr
+                    + CHAR(13) + CHAR(10) + CHAR(9) + ';'
+                    + CHAR(13) + CHAR(10) + CHAR(9) + 'REVOKE CONNECT SQL TO ' + QUOTENAME(@name)
+            END
+            ;
+            IF (@is_disabled = 1)
+            BEGIN -- login is disabled
+                SET @tmpstr = @tmpstr
+                    + CHAR(13) + CHAR(10) + CHAR(9) + ';'
+                    + CHAR(13) + CHAR(10) + CHAR(9) + 'ALTER LOGIN ' + QUOTENAME(@name) + ' DISABLE'
+            END
+            ;
+            SET @Prefix =
+                  CHAR(13) + CHAR(10) + CHAR(9) + ';'
+                + CHAR(13) + CHAR(10) + CHAR(9) + 'EXEC [master].dbo.sp_addsrvrolemember @loginame = '''
+            ;
+            SET @tmpstrRole = ''
+            ;
+            SELECT @tmpstrRole = @tmpstrRole + CASE 
+                    WHEN sysadmin = 1
+                        THEN @Prefix + LoginName + ''', @rolename = ''sysadmin'''
+                    ELSE ''
+                    END + CASE 
+                    WHEN securityadmin = 1
+                        THEN @Prefix + LoginName + ''', @rolename = ''securityadmin'''
+                    ELSE ''
+                    END + CASE 
+                    WHEN serveradmin = 1
+                        THEN @Prefix + LoginName + ''', @rolename = ''serveradmin'''
+                    ELSE ''
+                    END + CASE 
+                    WHEN setupadmin = 1
+                        THEN @Prefix + LoginName + ''', @rolename = ''setupadmin'''
+                    ELSE ''
+                    END + CASE 
+                    WHEN processadmin = 1
+                        THEN @Prefix + LoginName + ''', @rolename = ''processadmin'''
+                    ELSE ''
+                    END + CASE 
+                    WHEN diskadmin = 1
+                        THEN @Prefix + LoginName + ''', @rolename = ''diskadmin'''
+                    ELSE ''
+                    END + CASE 
+                    WHEN dbcreator = 1
+                        THEN @Prefix + LoginName + ''', @rolename = ''dbcreator'''
+                    ELSE ''
+                    END + CASE 
+                    WHEN bulkadmin = 1
+                        THEN @Prefix + LoginName + ''', @rolename = ''bulkadmin'''
+                    ELSE ''
+                    END
+            FROM (
+                SELECT
+                     LoginName = CONVERT([varchar](100), SUSER_SNAME([sid]))
+                    ,sysadmin
+                    ,securityadmin
+                    ,serveradmin
+                    ,setupadmin
+                    ,processadmin
+                    ,diskadmin
+                    ,dbcreator
+                    ,bulkadmin
+                FROM sys.syslogins
+                WHERE (
+                           sysadmin <> 0
+                        OR securityadmin <> 0
+                        OR serveradmin <> 0
+                        OR setupadmin <> 0
+                        OR processadmin <> 0
+                        OR diskadmin <> 0
+                        OR dbcreator <> 0
+                        OR bulkadmin <> 0
+                        )
+                    AND [name] = @name
+                ) L
+            ;
+            IF @tmpstr <> '' PRINT @tmpstr
+            ;
+            IF @tmpstrRole <> '' PRINT @tmpstrRole
+            PRINT 'END'
+        END
+        ;
+        FETCH NEXT
+        FROM login_curs
+        INTO @SID_varbinary
+            ,@name
+            ,@type
+            ,@is_disabled
+            ,@defaultdb
+            ,@hasaccess
+            ,@denylogin
+            ,@defaultlanguage
+    END
+    ;
+    CLOSE login_curs
+    ;
+    DEALLOCATE login_curs
+    ;
+    RETURN 0
 END
 ```
 
-     > [!NOTE]
-     > This script creates two stored procedures in the master database. The procedures are named **sp_hexadecimal** and **sp_help_revlogin**.
+> [!NOTE]
+> This script creates two stored procedures in the master database. The procedures are named **sp_hexadecimal** and **sp_help_revlogin**.
 
   1. In the SSMS query editor, select the **[Results to Text](/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio)** option.
 
