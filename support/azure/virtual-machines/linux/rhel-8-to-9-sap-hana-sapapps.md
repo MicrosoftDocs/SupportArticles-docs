@@ -146,7 +146,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
    kernel.pid_max = 4194304
    ```
    
-   All other settings for SAP HANA, configured in the files */etc/sysctl.conf* and * /etc/sysctl.d/sap_hana.conf*, are the same for both RHEL 8 and RHEL 9 and should remain unchanged. For more information, see the [SAP Notes 2382421](https://launchpad.support.sap.com/#/notes/2382421).
+   All other settings for SAP HANA, configured in the files */etc/sysctl.conf* and */etc/sysctl.d/sap_hana.conf*, are the same for both RHEL 8 and RHEL 9 and should remain unchanged. For more information, see the [SAP Notes 2382421](https://launchpad.support.sap.com/#/notes/2382421).
 
 5. Upgrade your RHEL 8.10 system to the latest available RHEL 8.10 package versions.
 
@@ -360,14 +360,14 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 ### [RHEL 8.8 to 9.2 on SAP-HANA PAYG images](#tab/rhel92saphana)
 
 1. Run the `leapp upgrade` command using the `e4s` channel:
-
-    > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example `9.2`. 
-    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
     
     ```bash
     sudo leapp upgrade --target <target_os_version> --channel e4s --no-rhsm
     ```
+    
+    > [!NOTE]
+    > - Replace `<target_os_version>` with the target OS version, for example `9.2`. 
+    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
 
@@ -386,14 +386,14 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 ### [RHEL 8.10 to 9.4 on SAP-HANA PAYG images](#tab/rhel94saphana)
 
 1. Run the `leapp upgrade` command using the `e4s` channel.
-
-    > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example `9.4`. 
-    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
     
     ```bash
     sudo leapp upgrade --target <target_os_version> --channel e4s --no-rhsm
     ```
+
+    > [!NOTE]
+    > - Replace `<target_os_version>` with the target OS version, for example `9.4`. 
+    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
 
@@ -412,14 +412,14 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 ### [RHEL 8.8 to 9.2 on SAP-APPS PAYG images](#tab/rhel92sapapps)
 
 1. Run the `leapp upgrade` command using the `eus` channel.
-
-    > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example `9.2`. 
-    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
     
     ```bash
     sudo leapp upgrade --target <target_os_version> --channel eus --no-rhsm
     ```
+
+    > [!NOTE]
+    > - Replace `<target_os_version>` with the target OS version, for example `9.2`. 
+    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
 
@@ -438,16 +438,15 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 
 ### [RHEL 8.10 to 9.4 on SAP-APPS PAYG images](#tab/rhel94sapapps)
 
-
 1. Run the `leapp upgrade` command, replacing `<target_os_version>` with the target OS version and use the `eus` channel.
-
-    > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example `9.4`. 
-    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
     
     ```bash
     sudo leapp upgrade --target <target_os_version> --channel eus --no-rhsm
     ```
+    
+    > [!NOTE]
+    > - Replace `<target_os_version>` with the target OS version, for example `9.4`. 
+    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
 
