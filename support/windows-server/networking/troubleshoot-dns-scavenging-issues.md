@@ -31,7 +31,7 @@ There are various scenarios that may lead to DNS scavenging issues. The followin
 
 - Make sure that only one DNS server has scavenging configured to avoid conflict between servers.
 
-  ![Option to enable automatic scavenging of stale records.](media/troubleshoot-dns-scavenging-issues/image-3.png)
+  :::image type="content" source="media/troubleshoot-dns-scavenging-issues/option-to-enable-automatic-scavenging-of-stale-records.png" alt-text="Option to enable automatic scavenging of stale records.":::
 
 - Check zone aging settings on whether there is a global aging set on all zones conflicting with a zone level aging.
 
@@ -39,10 +39,10 @@ There are various scenarios that may lead to DNS scavenging issues. The followin
   > The zone level aging will have higher precedence.
 
   Zone level:  
-  ![Zone level aging settings.](media/troubleshoot-dns-scavenging-issues/image.png)
+  :::image type="content" source="media/troubleshoot-dns-scavenging-issues/zone-level-aging-settings.png" alt-text="Zone level aging settings.":::
 
   All zones level:  
-  ![All zone level aging settings.](media/troubleshoot-dns-scavenging-issues/image-1.png)
+  :::image type="content" source="media/troubleshoot-dns-scavenging-issues/all-zone-level-aging-settings.png" alt-text="All zone level aging settings.":::
 
 - There is no standard setting for what numbers to use when configuring **Refresh**, **No Refresh** and **Scavenging** cycle time, as this depends on each organization configuration and preferences. However, you must ensure the settings follow the following equation:
 
@@ -69,7 +69,7 @@ The sum of **Refresh** and **No Refresh** intervals need to be greater than or e
 
 4. Consider manually initiating scavenging to test its functionality. This would result in instant deletion of records only if scavenging has run before automatically at least one time on this server. See [Automated and Manually Initiated Scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc757041%28v=ws.10%29#automated-and-manually-initiated-scavenging).
 
-   ![Click the "Scavenge Stale Resource Records" option.](media/troubleshoot-dns-scavenging-issues/image-2.png)
+   :::image type="content" source="media/troubleshoot-dns-scavenging-issues/click-the-scavenge-stale-resource-records-option.png" alt-text="Click the "Scavenge Stale Resource Records" option.":::
 
 ## Scenarios
 
