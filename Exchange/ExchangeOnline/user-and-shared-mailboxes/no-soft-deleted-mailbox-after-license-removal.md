@@ -21,6 +21,8 @@ ms.date: 09/03/2024
 
 # Can't access the mailbox of an unlicensed user in Exchange Online
 
+_Original KB number:_ &nbsp; 3158794
+
 ## Symptoms
 
 You want to access the mailbox of an unlicensed user in Exchange Online, but you can't locate the mailbox. For example, the mailbox isn't listed in the Exchange admin center or in the output of the following PowerShell cmdlets:
