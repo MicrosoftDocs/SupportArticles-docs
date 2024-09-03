@@ -62,9 +62,9 @@ You can [customize labels and create translations for classic commands](/power-a
 
 If the correct LocLabel is present in a solution, there might be other solutions that override it. [View label solution layers](#check-if-correct-translations-are-present) and check if a higher solution has defined the same LocLabel.
 
-#### Check the letter casing of label IDs
+#### Check that label IDs match exactly in letter casing
 
-Label IDs are case-sensitive when matching IDs in ribbon XML to localized label values. Check that the IDs in both locations match in terms of letter casing.
+Label IDs are case-sensitive when matching IDs in ribbon XML to localized label values. The button's LabelText should contain a valid LocLabel reference that exactly matches the casing of the Id of a LocLabel record.
 
 ## Reference
 
