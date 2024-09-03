@@ -34,6 +34,22 @@ The network adapter has the protocol used by the Hyper-V virtual switch still bo
 > [!Note]
 > This issue is not currently known to be specific to a particular network adapter or hardware platform.
 
+## Workaround (recommended)
+
+Using PowerShell to modify network bindings is the preferred solution to resolve this issue.
+
+1. `Get-NetAdapterBinding -ComponentID "vms_pp"`
+
+    This will produce a list of all the network adapters and their bindings. Find the adapter on which the error occurred and see if the vms_pp binding is enabled. Make a note of the adapter's `Name`.
+
+2. To disable the vms_pp binding:
+
+    `Disable-NetAdapterBinding -Name "<Adapter Name>" -ComponentID "vms_pp"`
+
+3. To confirm that the binding has been removed, run the first step again and confirm that the value `Enabled` is now false.
+
+    `Get-NetAdapterBinding -ComponentID "vms_pp"`
+
 ## Workaround
 
 Two tools are provided by Microsoft to work around this problem.
