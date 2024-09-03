@@ -675,7 +675,7 @@
           href: ../user-and-shared-mailboxes/increase-or-customize-mailbox-size.md
         - name: Mailbox provision delays
           href: ../user-and-shared-mailboxes/delays-provision-mailbox-sync-changes.md
-        - name: No soft-deleted mailbox after license removal
+        - name: Can't access the mailbox of an unlicensed user
           href: ../user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal.md
         - name: Microsoft 365 groups aren't visible from a shared mailbox
           href: ../user-and-shared-mailboxes/office-365-groups-not-visible-from-shared-mail.md
