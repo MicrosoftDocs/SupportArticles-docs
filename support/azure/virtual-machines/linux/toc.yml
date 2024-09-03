@@ -125,7 +125,7 @@
     href: linux-upgrade-suse-15sp1.md
   - name: Troubleshoot Red Hat leapp upgrade issues
     href: troubleshoot-red-hat-os-upgrade-issues.md
-  - name: Leapp upgrade from RHEL 8.x to RHEL 9.x on SAP-HANA and SAP-APPS pay-as-you-go VMs
+  - name: Leapp upgrade from 8.x to 9.x on RHEL-SAP-HANA and RHEL-SAP-APPS PAYG images
     href: leapp-upgrade-rhel-8-to-9-sap-hana-sapapps.md
   
 
