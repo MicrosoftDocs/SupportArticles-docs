@@ -23,7 +23,9 @@ The registry value `ID` or `Svc` with the `REG_BINARY` type under the DFS root, 
 
 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\DFS2ST`
 
-See the following Wireshark trace for an example. This is for the error "The namespace cannot be queried. The data is invalid."
+### Wireshark trace example
+
+This is for the error "The namespace cannot be queried. The data is invalid."
 
 ```output
 192.168.0.45	192.168.0.42	NETDFS	310	dfs_GetInfo request
