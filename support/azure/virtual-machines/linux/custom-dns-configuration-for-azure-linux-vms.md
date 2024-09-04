@@ -35,7 +35,7 @@ By following the guidelines and procedures outlined in this document, users can 
 
 1. Before Before making any changes, the entries in /etc/resolv.conf file will look something like this:
 
-    Image
+    :::image type="content" source="./media/custom-dns-config-images/rhel-dns-1.png" alt-text="Screenshot of default resolv.conf file.":::
 
 2. Follow the instructions mentioned in this article to configure DNS at VNET or NIC level: https://docs.microsoft.com/en-us/azure/virtual-network/manage-virtual-network#change-dns-servers
 
