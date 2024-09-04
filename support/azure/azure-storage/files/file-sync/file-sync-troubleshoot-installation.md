@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/03/2024
+ms.date: 08/26/2024
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -13,6 +13,19 @@ ms.custom: sap:File Sync
 After deploying the Storage Sync Service, the next steps in deploying Azure File Sync are installing the Azure File Sync agent and registering Windows Server with the Storage Sync Service. This article is designed to help you troubleshoot and resolve issues that you might encounter during these steps.
 
 ## Agent installation
+
+<a id="agent-installation-restart"></a>**How to check if an Azure File Sync agent installation requires a restart**
+
+An Azure File Sync agent installation may require a restart to complete the installation. For example, Azure File Sync agent version 19.1.0.0 requires a restart for servers that have an existing Azure File Sync agent installation if the agent version is older than 18.2.0.0.
+
+If the agent is updated using the auto-upgrade feature, you can run the following PowerShell commands to check if a restart is required to complete the agent installation:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Get-StorageSyncServer
+```
+
+If the value for the **RebootNeeded** property is **True**, a restart is required to complete the agent installation.
 
 <a id="agent-update-hangs"></a>**Agent update does not complete**
 
@@ -96,7 +109,7 @@ After creating a server endpoint on Windows Server 2012 R2, the following error 
 > drive letter:\ is not accessible.  
 > The parameter is incorrect.
 
-To resolve this issue, install [KB2919355](https://support.microsoft.com/help/2919355/windows-rt-8-1-windows-8-1-windows-server-2012-r2-update-april-2014) and restart the server. If this update won't install because a later update is already installed, go to **Windows Update**, install the latest updates for Windows Server 2012 R2 and restart the server.
+To resolve this issue, install [KB2919355](https://support.microsoft.com/help/2919355/windows-rt-8-1-windows-8-1-windows-server-2012-r2-update-april-2014) and restart the server. If this update can't install because a later update is already installed, go to **Windows Update**, install the latest updates for Windows Server 2012 R2 and restart the server.
 
 ## Server registration
 
@@ -119,6 +132,23 @@ To test the network connectivity on the server, run the following PowerShell com
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Debug-StorageSyncServer -TestNetworkConnectivity
 ```
+<a id="server-registration-catastrophic-error"></a>**Server registration using the `Register-AzStorageSyncServer` cmdlet fails with the error: Catastrophic failure (0x8000FFFF)**
+
+A server registration using the `Register-AzStorageSyncServer` cmdlet fails with the following error:
+
+> Catastrophic failure (0x8000FFFF (E_UNEXPECTED)) 'No system-assigned Managed Identity was found for this resource'
+ 
+This issue occurs when the Azure Files Sync agent is upgraded from version 17.x to 18.x and the `ServerType` registry value is set to an unexpected value.
+ 
+To resolve this issue, delete the `ServerType` registry value by running the following commands from an elevated command prompt:
+
+```console
+reg delete HKLM\SOFTWARE\Microsoft\Azure\StorageSync /v ServerType /f  
+net stop filesyncsvc  
+net start filesyncsvc  
+```
+
+Once the `ServerType` registry value is deleted, retry the server registration.
 
 <a id="server-registration-missing-subscriptions"></a>**Server Registration does not list all Azure Subscriptions**
 

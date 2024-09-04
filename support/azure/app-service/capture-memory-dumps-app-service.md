@@ -7,7 +7,7 @@ ms.author: benperk
 editor: v-jsitser
 ms.topic: how-to
 ms.reviewer: kamils, v-leedennis
-ms.service: app-service
+ms.service: azure-app-service
 ---
 # Capture memory dumps on the Azure App Service platform
 

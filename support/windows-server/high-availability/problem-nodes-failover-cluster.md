@@ -23,7 +23,7 @@ This event is logged on all nodes in the Cluster except for the node that was re
 
 ## What caused the node to be marked down
 
-All nodes in a Windows 2008 or 2008 R2 failover cluster talk to each other over the networks that are set to allow cluster network communication on this network. The nodes send out heartbeat packets across these networks to all of the other nodes. These packets are supposed to be received by the other nodes and then a response is sent back. Each node in the Cluster has its own heartbeats that it's going to monitor to ensure the network is up and the other nodes are up. The following example should help clarify this behavior:
+All nodes in a Windows Server Failover Cluster talk to each other over the networks that are set to allow cluster network communication on this network. The nodes send out heartbeat packets across these networks to all of the other nodes. These packets are supposed to be received by the other nodes and then a response is sent back. Each node in the Cluster has its own heartbeats that it's going to monitor to ensure the network is up and the other nodes are up. The following example should help clarify this behavior:
 
 :::image type="content" source="media/problem-nodes-failover-cluster/nodes-talk-each-other.png" alt-text="Diagram of two nodes that are talking to each other.":::
 

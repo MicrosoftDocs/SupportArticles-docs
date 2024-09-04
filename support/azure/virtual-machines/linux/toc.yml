@@ -123,11 +123,22 @@
   items:
   - name: Upgrade to SLES 15 SP1
     href: linux-upgrade-suse-15sp1.md
-  - name: Troubleshoot Red Hat leapp upgrade issues
-    href: troubleshoot-red-hat-os-upgrade-issues.md
-  - name: Leapp upgrade from 7.9 to 8.x on RHEL-SAP-HANA and RHEL-SAP-APPS PAYG images
-    href: leapp-upgrade-rhel7dot9-to-8dotx-saphana-sapapps.md
-  
+  - name: Red Hat
+    items:
+    - name: How to perform leapp upgrade for RHEL PAYG VMs
+      href: leapp-upgrade-process-rhel-7-and-8.md
+    - name: Leapp upgrade from 7.9 to 8.x on RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs
+      href: leapp-upgrade-rhel7dot9-to-8dotx-saphana-sapapps.md
+    - name: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs from 7.x to 7.9
+      href: upgrade-rhel-7dotx-to-7dot9-sap-hana-apps.md
+    - name: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs from 8.x to 8.10
+      href: upgrade-rhel-8-dot-x-to-8-dot-10-on-sap-hana-apps.md
+    - name: Troubleshoot Red Hat leapp upgrade issues
+      href: troubleshoot-red-hat-os-upgrade-issues.md
+  - name: SUSE
+    items:
+    - name: Upgrade to SLES 15 SP1
+      href: linux-upgrade-suse-15sp1.md
 
 - name: My VM is not booting
   items:
@@ -261,6 +272,8 @@
     items:
     - name: Troubleshoot Azure fence agent startup issues in SUSE
       href: troubleshoot-azure-fence-agent-startup-suse.md
+    - name: Troubleshoot Pacemaker Services startup issues in SUSE
+      href: troubleshoot-pacemaker-services-suse.md
       
 - name: Linux repositories
   items:

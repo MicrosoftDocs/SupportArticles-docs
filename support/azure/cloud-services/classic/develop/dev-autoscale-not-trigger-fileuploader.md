@@ -5,7 +5,7 @@ ms.date: 03/13/2024
 ms.reviewer: 
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: azure-cloud-services-classic
 ms.custom: sap:Development
 ---
 # Autoscale is not triggered for FileUploader role
