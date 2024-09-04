@@ -42,7 +42,7 @@ Additionally, some databases might be detected with `Online:0`:
 Online:0 Standby:0 AutoClose:0 Closed:0
 ```
 
-If you're using Azure Recovery Vault, you might see an error like the following one in the events list:
+If you use Azure Recovery Vault, you might see an error like the following one in the event list:
 
 ```output
 App-consistent recovery point generation failed.
@@ -51,7 +51,6 @@ App-consistent recovery point generation failed.
 The issue arises from a code change in SQL Server 2022 CU14 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2022 CU13 and perform the snapshot backup.
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
-
 
 ## Improvements and fixes included in this update
 
