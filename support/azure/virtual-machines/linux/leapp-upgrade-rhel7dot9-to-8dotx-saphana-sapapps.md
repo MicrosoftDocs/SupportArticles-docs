@@ -130,19 +130,18 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
 7. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
 
-5. Install the leapp utility:
+8. Install the leapp utility:
 
     ```bash
     sudo yum install leapp-upgrade
     ```
 ---
 
-
-## Leapp pre-upgrade process for RHEL 7 and 8
+## Leapp pre-upgrade process
 
 The pre-upgrade report highlights possible issues and provides recommended solutions, and helps determine whether it's feasible or advisable to proceed with the upgrade.
 
-### [RHEL 7.9 to RHEL 8.*x* - SAP-HANA PAYG VMs](#tab/rhel8saphana)
+### [RHEL 7.9 to RHEL 8.*x* - SAP-HANA PAYG VMs](#tab/preupgraderhel8saphana)
 
 Run the `leapp preupgrade` command, replacing `<target_os_version>` with the target OS version and `e4s` with the appropriate channel:
 
@@ -165,7 +164,7 @@ sudo leapp preupgrade  --target 8.10  --no-rhsm
 > [!IMPORTANT]  
 > RHEL 8.10 isn't certified for running SAP HANA currently. This certification is in process. For more information, see [Overview Product Availability Matrix for SAP on Red Hat](https://access.redhat.com/articles/6966927#support-matrix-for-sap-hana-on-intel-64-rhel-5).
 
-### [RHEL 7.9 to 8.*x* - SAP-APPS PAYG VMs](#tab/rhel8sapapps)
+### [RHEL 7.9 to 8.*x* - SAP-APPS PAYG VMs](#tab/preupgraderhel8sapapps)
 
 Run the `leapp preupgrade` command, replacing `<target_os_version>` with the target OS version and `eus` with the appropriate channel:
 
@@ -186,13 +185,14 @@ sudo leapp preupgrade  --target 8.10  --no-rhsm
 ```
 
 > [!IMPORTANT]  
-> RHEL 8.10 isn't certified for running `SAP HANA` currently. This certification is in process. For more information, see [Overview Product Availability Matrix for SAP on Red Hat](https://access.redhat.com/articles/6966927#support-matrix-for-sap-hana-on-intel-64-rhel-5).
+> RHEL 8.10 isn't certified for running SAP HANA currently. This certification is in process. For more information, see [Overview Product Availability Matrix for SAP on Red Hat](https://access.redhat.com/articles/6966927#support-matrix-for-sap-hana-on-intel-64-rhel-5).
+
 --- 
 
 Review the report located in the */var/log/leapp/leapp-report.txt* file and manually address all identified issues. Some problems come with recommended fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information about the various issues that might appear in the report, see [Troubleshoot-red-hat-os-upgrade-issues](troubleshoot-red-hat-os-upgrade-issues.md).
 
 
-## Leapp upgrade process for RHEL 7 and 8
+## Leapp upgrade process
 
 Continue the leapp upgrade process after the leapp pre-upgrade report shows no errors or inhibitors and everything is marked as resolved. The output is typically green or yellow, indicating that it's safe to proceed with the leapp upgrade.
 
@@ -200,7 +200,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 > - Make sure to run the `leapp upgrade` command through the Serial Console to avoid any network interruptions that could affect your secure shell (SSH) terminal and disrupt the upgrade process.
 > - Add the `--reboot` option to the `leapp upgrade` command if you want to perform an automatic reboot, which is needed during the upgrade process.
 
-### [RHEL 7.9 to 8.*x* - SAP-HANA PAYG VMs](#tab/rhel8saphana)
+### [RHEL 7.9 to 8.*x* - SAP-HANA PAYG VMs](#tab/upgraderhel8saphana)
 
 1. Run the `leapp upgrade` command, replacing `<target_os_version>` with the target OS version and `e4s` with the appropriate channel.
 
@@ -237,7 +237,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     sudo reboot
     ```
 
-### [RHEL 7.9 to RHEL 8.*x* - SAP-APPS PAYG VMs](#tab/rhel8sapapps)
+### [RHEL 7.9 to RHEL 8.*x* - SAP-APPS PAYG VMs](#tab/upgraderhel8sapapps)
 
 1. Run the `leapp upgrade` command, replacing `<target_os_version>` with the target OS version and `eus` with the appropriate channel:
 
@@ -284,7 +284,7 @@ Once the upgrade is finished, check if the system is in the desired state.
 
 This section outlines the recommended verification steps after completing an in-place upgrade.
 
-### [RHEL 7.9 to RHEL 8.*x* - SAP-HANA PAYG VMs](#tab/rhel8saphana)
+### [RHEL 7.9 to RHEL 8.*x* - SAP-HANA PAYG VMs](#tab/verifyrhel8saphana)
 
 1. Verify that the current OS version belongs to RHEL 8:
 
@@ -329,7 +329,7 @@ This section outlines the recommended verification steps after completing an in-
     rhui-microsoft-azure-rhel8-base-sap-ha       Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-ha)
     ```
 
-### [RHEL 7.9 to RHEL 8.*x* - SAP-APPS PAYG VMs](#tab/rhel8sapapps)
+### [RHEL 7.9 to RHEL 8.*x* - SAP-APPS PAYG VMs](#tab/verifyrhel8sapapps)
 
 1. Verify that the current OS version belongs to RHEL 8:
 
