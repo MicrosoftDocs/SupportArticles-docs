@@ -78,7 +78,7 @@ The error is expected because for Kerberos to work, you have to present the righ
 > [!NOTE]
 > For more information about Kerberos, see [Kerberos for the Busy Admin](/archive/blogs/askds/kerberos-for-the-busy-admin).
 
-This issue doesn't occurs if you use IP address instead of the fully qualified domain name (FQDN), because the New Technology LAN Manager (NTLM) authentication is used instead of the Kerberos authentication. When you use the IP address to connect to the clients, there's no assumption about which client is being connected to, which is why the computer must negotiate NTLM in the first place. Also, in this scenario, the Kerberos returns a valid response so the computer doesn't fail over to use NTLM.
+This issue doesn't occurs if you use IP address instead of the fully qualified domain name (FQDN), because the New Technology LAN Manager (NTLM) authentication is used instead of the Kerberos authentication. When you use the IP address to connect to the clients, there's no assumption about which client is being connected to. Therefore, the computer must negotiate NTLM in the first place. For the example in the [scenario](#scenario) section, the Kerberos actually returns a valid response, so the computer doesn't failover to use NTLM.
 
 ## Resolutions
 
