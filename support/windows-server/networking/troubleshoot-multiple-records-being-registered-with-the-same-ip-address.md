@@ -25,7 +25,7 @@ On a DHCP server, you have the following configurations:
 - Client B is requesting a new IP address.
 - The DHCP server assigns client B the address that was leased to client A.
 
-This scenario is a typical and everything works correctly.
+This scenario is typical and everything works correctly.
 
 On a DNS server, you have the following configurations:
 
