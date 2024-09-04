@@ -1,7 +1,7 @@
 ---
-title: A CA can't use a certificate template
+title: CA can't use a certificate template
 description: Provides a solution to an issue where a certificate template is unable to load and certificate requests are unsuccessful using the same template.
-ms.date: 09/03/2024
+ms.date: 09/04/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -9,9 +9,9 @@ ms.localizationpriority: medium
 ms.reviewer: kaushika, slight
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
-# A Certification Authority can't use a certificate template
+# Certification Authority can't use a certificate template
 
-This article provides a solution to an issue where a certificate template is unable to load and certificate requests are unsuccessful using the template.
+This article provides a solution to an issue where a certificate template can't load, and certificate requests fail to use the template.
 
 _Original KB number:_ &nbsp; 283218
 
