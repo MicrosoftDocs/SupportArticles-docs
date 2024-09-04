@@ -23,7 +23,7 @@ This article provides steps to troubleshoot and resolve the error 0x80072EFE by 
 
 From the following log snippet, the connection attempts to the update server are failing repeatedly with the error code 80072EFE. The retry attempts also suggest that this is likely a network-related issue.
 
-**Example log entry:**
+Example log entry:
 
 > YYYY/MM/DD HH:MM:SS.4926861 22576 27056 SLS             Making request with URL <HTTPS://slscr.update.microsoft.com/SLS/{XXXXXXXXXXXXXXXXXXXXXXX}/x64/XX.xx.xx.xx/0?CH=253&L=en-US&P=&PT=0x7&WUA=10.0.20348>. and send SLS events.  
 > YYYY/MM/DD HH:MM:SS.6134275 22576 27056 Misc            *FAILED* [80072EFE] Send request  
