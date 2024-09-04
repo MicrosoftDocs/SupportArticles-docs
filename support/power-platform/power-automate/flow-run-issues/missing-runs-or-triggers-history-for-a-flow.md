@@ -2,7 +2,7 @@
 title: Missing runs or triggers history for a flow
 description: A flow's execution is stored and displayed on the Run history page only for 28 days.
 ms.reviewer: anaggar
-ms.date: 08/27/2024
+ms.date: 09/04/2024
 ms.custom: sap:Flow run issues\Triggers
 ---
 # Missing runs or triggers history for a flow
