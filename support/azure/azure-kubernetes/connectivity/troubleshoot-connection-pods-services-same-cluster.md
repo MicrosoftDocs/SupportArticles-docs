@@ -85,13 +85,13 @@ Using kubectl and cURL at the command line, follow these steps to check that eve
    kubectl logs <pod-name> -n <namespace-name> -c <container-name>
    ```
 
-1. If the application that's inside the pod restarts repeatedly, view the `stdout` dump pod logs of a previous container instance to get the exit messages:
+1. If the application that's inside the pod restarts repeatedly, view pod logs of a previous container instance to get the exit messages:
 
    ```bash
    kubectl logs <pod-name> --previous                      
    ```
 
-   For the multicontainer case, get the exit messages by viewing the `stdout` dump pod container logs for a previous container instance:
+   For the multicontainer case, use the following command:
 
    ```bash
    kubectl logs <pod-name> -c <container-name> --previous  
