@@ -1,5 +1,5 @@
 ---
-title: Perform leapp upgrade from RHEL 7.9 to RHEL 8.x on SAP-HANA and SAP-APPS pay-as-you-go VMs
+title: Leapp upgrade from RHEL 7.9 to RHEL 8.x on SAP-HANA and SAP-APPS pay-as-you-go VMs
 description: Describes how to perform a leapp upgrade from RHEL 7.9 to RHEL 8.x on SAP-HANA and SAP-APPS pay-as-you-go virtual machines.
 ms.reviewer: divargas, msaenzbo, v-weizhu
 ms.date: 09/04/2024
@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# Upgrade SAP-HANA and SAP-APPS PAYG virtual machines from RHEL 7.9 to RHEL 8.x using leapp
+# How to upgrade SAP-HANA and SAP-APPS PAYG virtual machines from RHEL 7.9 to RHEL 8.x using leapp
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
