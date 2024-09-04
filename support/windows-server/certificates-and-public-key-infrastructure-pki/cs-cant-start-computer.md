@@ -11,7 +11,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 ---
 # Certificate Services may not start on a computer that is running Windows Server
 
-This article provides a solution to an issue where Certificate Services(CS) may not start on a computer that is running Windows Server 2003 or Windows 2000.
+This article provides a solution to an issue where Certificate Services(CS) may not start on a computer that is running Windows Server.
 
 _Original KB number:_ &nbsp; 842210
 
