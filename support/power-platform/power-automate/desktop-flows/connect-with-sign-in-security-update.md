@@ -1,20 +1,20 @@
 ---
-title: Connect with sign-in security update for Power Automate for desktop on Active Directory domain-joined machines
+title: Connect with sign-in security update on AD domain-joined machines
 description: Provides security updates for the connect with sign-in connections on Active Directory domain-joined machines in Microsoft Power Automate for desktop.
 ms.reviewer: padib，aartigoyle, johndund, quseleba
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
-ms.date: 08/23/2024
+ms.date: 09/04/2024
 ---
-# Power Automate for desktop security update for "connect with sign-in" connections on Active Directory domain-joined machines
+# Security update for "connect with sign-in" connections on AD domain-joined machines in Power Automate for desktop
 
 ## Summary
 
 A potential security vulnerability is identified in Power Automate for desktop versions 2.47 and earlier.
 
 > [!IMPORTANT]
-> The issue only affects machines that are joined to an Active Directory (AD) domain and not machines joined to Microsoft Entra ID. If an attacker can access a machine that isn't already registered to your Power Automate environment, they can register it to their own Power Automate environment and then run arbitrary attended desktop flows into your Windows session when it's already opened and unlocked.
+> The issue affects only machines that are joined to an Active Directory (AD) domain,  not those joined to Microsoft Entra ID. If an attacker can access a machine that isn't registered to your Power Automate environment, they can register it to their own Power Automate environment and then run arbitrary attended desktop flows into your Windows session when it's open and unlocked.
 >
-> If a machine is Microsoft Entra joined, or if isn't AD domain-joined, it isn't vulnerable.
+> If a machine is Microsoft Entra-joined or isn't AD domain-joined, it isn't vulnerable.
 
 ## Mitigation
 
@@ -28,22 +28,22 @@ To mitigate the issue, update your Power Automate for desktop to the following p
 - [2.42](https://go.microsoft.com/fwlink/?linkid=2283279)
 
 > [!NOTE]
-> Starting with release 2.48, all future versions will have the security fix already included.
+> Starting with release 2.48, all future versions will include the security fix.
 
 ## Impact of the patch
 
-If you use [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) for attended runs on machines that are [AD domain-joined but not Microsoft Entra joined](#how-to-determine-if-a-machine-is-ad-domain-joined-or-microsoft-entra-joined), the patched versions of Power Automate for desktop will fail your runs with the `UnallowedTenantForConnectWithSignIn` error code.
+If you use "[connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs)" for attended runs on machines that are [AD domain-joined but not Microsoft Entra-joined](#how-to-determine-if-a-machine-is-ad-domain-joined-or-microsoft-entra-joined), the patched versions of Power Automate for desktop will cause your runs to fail with the `UnallowedTenantForConnectWithSignIn` error code.
 
-To use "connect with sign-in" on such machines, you must allowlist the Power Automate tenant that your machine is registered to by following the instructions in [Desktop flow unallowed tenant for connect with sign-in error](troubleshoot-unallowed-tenant-for-connect-with-sign-in.md). We recommend that your AD administrators deploy a Group Policy Object (GPO) in your domain to define the tenant allowlist.
+To use "connect with sign-in" on such machines, you must add the Power Automate tenant where your machine is registered to the allowlist by following the instructions in ["UnallowedTenantForConnectWithSignIn" error in a  Power Automate desktop flow](troubleshoot-unallowed-tenant-for-connect-with-sign-in.md). We recommend that your AD administrators deploy a Group Policy Object (GPO) in your domain to define the tenant allowlist.
 
-## How to determine if a machine is AD domain-joined or Microsoft Entra joined
+## How to determine if a machine is AD domain-joined or Microsoft Entra-joined
 
 To get your machine's join state, run the [dsregcmd command](/entra/identity/devices/troubleshoot-device-dsregcmd) from a Windows command prompt:
 
-```CMD
+```cmd
 dsregcmd /status
 ```
 
-In the `Device State` section of the output, the `AzureAdJoined` indicates whether the machine is joined to Microsoft Entra ID, and the `DomainJoined` indicates whether the machine is joined to an AD domain.
+In the `Device State` section of the output, `AzureAdJoined` indicates whether the machine is joined to Microsoft Entra ID, and `DomainJoined` indicates whether the machine is joined to an AD domain.
 
-:::image type="content" source="media/connect-with-sign-in-security-update/dsrgecmd-output-ad-joined.png" alt-text="Screenshot that shows an output of the dsregcmd status command run on a machine that's joined to an Active Directory domain but not joined to Microsoft Entra ID.":::
+:::image type="content" source="media/connect-with-sign-in-security-update/dsrgecmd-output-ad-joined.png" alt-text="Screenshot that shows an output of the dsregcmd status command run on a machine that's joined to an AD domain but not joined to Microsoft Entra ID.":::
