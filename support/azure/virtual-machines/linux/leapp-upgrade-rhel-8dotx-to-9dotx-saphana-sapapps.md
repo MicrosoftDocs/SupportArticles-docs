@@ -12,7 +12,7 @@ ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the leapp utility to upgrade Linux virtual machines (VMs) that use RHEL-SAP-HANA or RHEL-SAP-APPS pay-as-you-go (PAYG) images from 8.*x* to 9.*x*.
+Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the leapp utility to upgrade Linux virtual machines (VMs) that use SAP-HANA or SAP-APPS pay-as-you-go (PAYG) images from RHEL 8.*x* to RHEL 9.*x*.
 
 > [!IMPORTANT]
 > Red Hat Update Infrastructure (RHUI) is intended only for PAYG images. If you use custom or golden images (also known as bring-your-own-subscription (BYOS)), you have to attach the system to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
