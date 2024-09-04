@@ -14,7 +14,7 @@ ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81
 
 This article describes resolutions to common problems encountered when deploying or operating a guarded Hyper-V host in your guarded fabric.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016
+_Applies to:_ &nbsp; Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 If you're unsure of the nature of your problem, first try running the [guarded fabric diagnostics](troubleshoot-guarded-fabric-diagnostics.md) on your Hyper-V hosts to narrow down the potential causes.
 
