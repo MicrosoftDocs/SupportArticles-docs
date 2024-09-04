@@ -69,13 +69,13 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 byt
 Got 6
 ```
 > [!NOTE]
-> Running tcpdump without filtering parameters can significantly increase the size of the Packet Capture (PCAP) file, especially for long runs. Therefore, we recommend adding filters such as source, destination and port. For example:
+> Running tcpdump without using filtering parameters can significantly increase the size of the Packet Capture (PCAP) file, especially for long runs. Therefore, we recommend that you add filters, such as source, destination, and port. For example:
 >
 > - `tcpdump dst 192.168.1.100`
 > - `tcpdump dst host.mydomain.com`
 > - `tcpdump port http or port ftp or port smtp or port imap or port pop3 or port telnet`
 
-While the trace is running, replicate your issue many times. This action ensures the issue has been captured within the TCP dump. Note the time stamp while you replicate the issue. To stop the packet capture when you're done, press Ctrl+C:
+While the trace is running, replicate your issue many times. This action make sure that the issue is captured within the TCP dump. Note the time stamp while you replicate the issue. To stop the packet capture when you're done, press Ctrl+C: 
 
 ```console
 # tcpdump -s 0 -vvv -w /capture.cap
