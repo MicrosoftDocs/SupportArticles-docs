@@ -1,24 +1,23 @@
 ---
-title: Leapp upgrade from RHEL 8.x to RHEL 9.x on SAP-HANA and SAP-APPS pay-as-you-go virtual machines
+title: Leapp upgrade from RHEL 8.x to RHEL 9.x on SAP-HANA and SAP-APPS pay-as-you-go VMs
 description: Provides steps to help you upgrade SAP-HANA and SAP-APPS pay-as-you-go virtual machines from RHEL 8.x to RHEL 9.x by using the leapp tool.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 09/03/2024
+ms.date: 09/04/2024
 ms.service: azure-virtual-machines
 ms.topic: how-to
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# Upgrade SAP-HANA and SAP-APPS pay-as-you-go virtual machines from RHEL 8.x to RHEL 9.x using leapp
+# How to upgrade SAP-HANA and SAP-APPS pay-as-you-go virtual machines from RHEL 8.x to RHEL 9.x using leapp
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the leapp utility to upgrade Linux virtual machines (VMs) that use RHEL-SAP-HANA or RHEL-SAP-APPS pay-as-you-go (PAYG) images from RHEL 8.*x* to RHEL 9.*x*.
+Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the leapp utility to upgrade Linux virtual machines (VMs) that use RHEL-SAP-HANA or RHEL-SAP-APPS pay-as-you-go (PAYG) images from 8.*x* to 9.*x*.
 
 > [!IMPORTANT]
 > Red Hat Update Infrastructure (RHUI) is intended only for PAYG images. If you use custom or golden images (also known as bring-your-own-subscription (BYOS)), you have to attach the system to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
 For more information about performing a leapp upgrade on custom, golden or PAYG images provided by Red Hat, see [Upgrading SAP environments from RHEL 8 to 9](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html/upgrading_sap_environments_from_rhel_8_to_rhel_9/index).
-
 
 ## Prerequisites
 
@@ -33,18 +32,18 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
 
 |System configuration   | Source OS version| Target version    |
 |----------------------|------------------|-------------------|
-|SAP HANA              | RHEL 8.8         | RHEL 9.2          | 
+|SAP High-performance ANalytic Appliance (HANA)              | RHEL 8.8         | RHEL 9.2          | 
 |SAP HANA              | RHEL 8.10        | RHEL 9.4          | 
 |SAP NetWeaver and other SAP Applications   | RHEL 8.8         | RHEL 9.2          |      
 |SAP NetWeaver and other SAP Applications | RHEL 8.10        | RHEL 9.4          |
 
 
-According to the [Upgrading SAP environments from RHEL 8 to RHEL 9 - Supported upgrade paths](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html/upgrading_sap_environments_from_rhel_8_to_rhel_9/asmb_supported-upgrade-paths_how-to-in-place-upgrade-sap-environments-from-rhel8-to-rhel9#asmb_supported-upgrade-paths_how-to-in-place-upgrade-sap-environments-from-rhel8-to-rhel9) documentation, SAP High-performance ANalytic Appliance (HANA) is validated by SAP for the RHEL minor versions that receive package updates for more than six months. Currently, the supported in-place upgrade paths for an SAP HANA system are from RHEL 8.8 to RHEL 9.2 and from RHEL 8.10 to RHEL 9.4. This documentation also describes restrictions and detailed steps for upgrading an SAP HANA system.
+According to the [Upgrading SAP environments from RHEL 8 to RHEL 9 - Supported upgrade paths](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html/upgrading_sap_environments_from_rhel_8_to_rhel_9/asmb_supported-upgrade-paths_how-to-in-place-upgrade-sap-environments-from-rhel8-to-rhel9#asmb_supported-upgrade-paths_how-to-in-place-upgrade-sap-environments-from-rhel8-to-rhel9) documentation, SAP validates SAP HANA for the RHEL minor versions that receive package updates for more than six months. Currently, the supported in-place upgrade paths for an SAP HANA system are from RHEL 8.8 to RHEL 9.2 and from RHEL 8.10 to RHEL 9.4. This documentation also describes restrictions and detailed steps for upgrading an SAP HANA system.
 
-SAP NetWeaver is validated by SAP for each major RHEL version. The supported in-place upgrade paths for an SAP NetWeaver system are the two latest Extended Update Support (EUS)/Update Services for SAP Solutions (E4S) releases that are supported by leapp for non-HANA systems. For more information, see [Upgrading from RHEL 8 to RHEL 9 - Supported upgrade paths](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/upgrading_from_rhel_8_to_rhel_9). Certain deviations from the default upgrade procedure are described in [Upgrading an SAP NetWeaver system](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html/upgrading_sap_environments_from_rhel_8_to_rhel_9/asmb_upgrading_netweaver_asmb_upgrading-hana-system). For systems where both SAP HANA and SAP NetWeaver are installed, the SAP HANA restrictions apply.
+SAP validates SAP NetWeaver for each major RHEL version. The supported in-place upgrade paths for an SAP NetWeaver system are the two latest Extended Update Support (EUS)/Update Services for SAP Solutions (E4S) releases that the leapp tool supports for non-HANA systems. For more information, see [Upgrading from RHEL 8 to RHEL 9 - Supported upgrade paths](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/upgrading_from_rhel_8_to_rhel_9). Certain deviations from the default upgrade procedure are described in [Upgrading an SAP NetWeaver system](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html/upgrading_sap_environments_from_rhel_8_to_rhel_9/asmb_upgrading_netweaver_asmb_upgrading-hana-system). For systems where both SAP HANA and SAP NetWeaver are installed, the SAP HANA restrictions apply.
 
 > [!IMPORTANT]  
-> When upgrading a RHEL system designed for SAP HANA or SAP Applications from version 8.10 to 9.4, there is a known issue due to the RHUI client RPM name difference in 8.10 compared to earlier versions. As a result, the upgrade is currently not possible, and no workaround is available. However, the upgrade from 8.8 to 9.2 is unaffected by this issue.
+> When upgrading a RHEL VM designed for SAP HANA or SAP Applications from version 8.10 to 9.4, there is a known issue due to the RHUI client RPM name difference in 8.10 compared to earlier versions. As a result, the upgrade is currently not possible, and no workaround is available. However, the upgrade from 8.8 to 9.2 is unaffected by this issue.
 
 ### [RHEL 8.8 to RHEL 9.2 - SAP-HANA PAYG VMs](#tab/rhel92saphana)
 
@@ -99,14 +98,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
     sudo reboot
     ```
 
-7. After the VM is started and running, do the following things:
+7. After the VM is started and running, make sure that the SAP HANA systems and all SAP processes are stopped on it. Also make sure the SAP HANA file systems are mounted.
 
-    1. Make sure that the SAP HANA systems and all SAP processes are stopped on it.
-    2. Make sure the SAP HANA file systems are mounted.
-    3. Temporarily disable antivirus software to prevent the upgrade from failing.
-    4. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+8. Temporarily disable antivirus software to prevent the upgrade from failing.
 
-8. Install the leapp utility.
+9. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+
+10. Install the leapp utility.
 
     ```bash
     sudo dnf install leapp-upgrade
@@ -160,14 +158,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
     sudo reboot
     ```
 
-7. After the VM is started and running, do the following things:
+7. After the VM is started and running, make sure the SAP HANA systems and all SAP processes are stopped on it. Also make sure the SAP HANA file systems are mounted.
 
-    1. make sure the SAP HANA systems and all SAP processes are stopped on it.
-    2. make sure the SAP HANA file systems are mounted.
-    3. Temporarily disable antivirus software to prevent the upgrade from failing.
-    4. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+8. Temporarily disable antivirus software to prevent the upgrade from failing.
 
-8. Install the leapp utility.
+9. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+
+10. Install the leapp utility.
 
     ```bash
     sudo dnf install leapp-upgrade
@@ -223,14 +220,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
     sudo reboot
     ```
 
-7. After the VM is started and running, do the following things:
+7. After the VM is started and running, make sure that the SAP-APPS systems or SAP processes are stopped. Also Make sure the SAP file systems are mounted.
 
-    1. Make sure that the SAP-APPS systems or SAP processes are stopped.
-    2. Make sure the SAP file systems are mounted.
-    3. Temporarily disable antivirus software to prevent the upgrade from failing.
-    4. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+8. Temporarily disable antivirus software to prevent the upgrade from failing.
 
-8. Install the leapp utility.
+9. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+
+10. Install the leapp utility.
 
     ```bash
     sudo dnf install leapp-upgrade
@@ -285,14 +281,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
     sudo reboot
     ```
 
-7. After the VM is started and running, do the following things:
+7. After the VM is started and running, make sure that the SAP-APPS system or SAP processes are stopped. Also make sure the SAP file systems are mounted.
 
-    1. Make sure that the SAP-APPS system or SAP processes are stopped.
-    2. Make sure the SAP file systems are mounted.
-    3. Temporarily disable antivirus software to prevent the upgrade from failing.
-    4. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+8. Temporarily disable antivirus software to prevent the upgrade from failing.
 
-8. Install the leapp utility.
+9. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+
+10. Install the leapp utility.
 
     ```bash
     sudo dnf install leapp-upgrade
@@ -317,7 +312,7 @@ Replace `<target_os_version>` with the target OS version, for example `9.2`.
 
 ### [RHEL 8.10 to RHEL 9.4 - SAP-HANA PAYG VMs](#tab/rhel94saphana)
 
-Run the `leapp preupgrade` command using  the `e4s` channel:
+Run the `leapp preupgrade` command with the `e4s` channel:
 
 ```bash
 sudo leapp preupgrade --target <target_os_version> --channel e4s --no-rhsm
@@ -328,7 +323,7 @@ Replace `<target_os_version>` with the target OS version, for example `9.4`.
 
 ### [RHEL 8.8 to RHEL 9.2 - SAP-APPS PAYG VMs](#tab/rhel92sapapps)
 
-Run the `leapp preupgrade` command using the `eus` channel:
+Run the `leapp preupgrade` command with the `eus` channel:
 
 ```bash
 sudo leapp preupgrade --target <target_os_version> --channel eus --no-rhsm
@@ -338,7 +333,7 @@ Replace `<target_os_version>` with the target OS version, for example `9.2`.
 
 ### [RHEL 8.10 to RHEL 9.4 - SAP-APPS PAYG VMs](#tab/rhel94sapapps)
 
-Run the `leapp preupgrade` command using the `eus` channel:
+Run the `leapp preupgrade` command with the `eus` channel:
 
 ```bash
 sudo leapp preupgrade --target <target_os_version> --channel eus --no-rhsm
@@ -359,7 +354,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 
 ### [RHEL 8.8 to RHEL 9.2 - SAP-HANA PAYG VMs](#tab/rhel92saphana)
 
-1. Run the `leapp upgrade` command using the `e4s` channel:
+1. Run the `leapp upgrade` command with the `e4s` channel:
     
     ```bash
     sudo leapp upgrade --target <target_os_version> --channel e4s --no-rhsm
@@ -385,7 +380,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 
 ### [RHEL 8.10 to RHEL 9.4 - SAP-HANA PAYG VMs](#tab/rhel94saphana)
 
-1. Run the `leapp upgrade` command using the `e4s` channel.
+1. Run the `leapp upgrade` command with the `e4s` channel.
     
     ```bash
     sudo leapp upgrade --target <target_os_version> --channel e4s --no-rhsm
@@ -411,7 +406,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 
 ### [RHEL 8.8 to RHEL 9.2 - SAP-APPS PAYG VMs](#tab/rhel92sapapps)
 
-1. Run the `leapp upgrade` command using the `eus` channel.
+1. Run the `leapp upgrade` command with the `eus` channel.
     
     ```bash
     sudo leapp upgrade --target <target_os_version> --channel eus --no-rhsm
@@ -438,7 +433,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 
 ### [RHEL 8.10 to RHEL 9.4 - SAP-APPS PAYG VMs](#tab/rhel94sapapps)
 
-1. Run the `leapp upgrade` command using the `eus` channel.
+1. Run the `leapp upgrade` command with the `eus` channel.
     
     ```bash
     sudo leapp upgrade --target <target_os_version> --channel eus --no-rhsm
@@ -552,5 +547,7 @@ Once you verify the upgrade is successful, perform the [post_upgrade tasks](leap
 ## Post-configuration for SAP-HANA PAYG VMs
 
 After you verify that the upgrade is successful, you must configure the upgraded system for SAP HANA according to the applicable SAP notes for RHEL 9. For more information, see [Configuring the system for SAP HANA](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html-single/upgrading_sap_environments_from_rhel_8_to_rhel_9/index#proc_configuring-system-sap-hana_asmb_upgrading-hana-system).
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
