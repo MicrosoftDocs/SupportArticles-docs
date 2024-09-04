@@ -109,67 +109,65 @@ To work around this issue, save the default option in the `PrintSupportExtension
 1. Initialize the ComboBox items during the initial setup by using the default values saved in the `LocalStorageUtil` class.
 
     ```csharp
-        private ComboBox CreatePrintTicketFeatureComboBox(PrintTicketFeature feature, bool useDefaultEventHandler = true)
+    private ComboBox CreatePrintTicketFeatureComboBox(PrintTicketFeature feature, bool useDefaultEventHandler = true)
+    {
+        if (feature == null)
         {
-            if (feature == null)
-            {
-                return null;
-            }
-
-            var comboBox = new ComboBox
-            {
-                // Header is displayed in the UI, ontop of the ComboBox.
-                Header = feature.DisplayName
-            };
-            // Construct a new List since IReadOnlyList does not support the 'IndexOf' method.
-            var options = new ObservableCollection<PrintTicketOption>(feature.Options);
-            // Provide the combo box with a list of options to select from.
-            comboBox.ItemsSource = options;
-            // Set the selected option to the option set in the print ticket.
-            PrintTicketOption selectedOption;
-
-
-            // Load the default value of the PDC from LocalStorageUtil only once.
-            string defaultOption = LocalStorageUtil.GetPdcDefaultValue(feature.Name);
-            if (!LocalStorageUtil.IsAlreadyLoadedDefaultValue() && defaultOption != null)
-            {
-                selectedOption = options[0];
-                foreach (var option in options)
-                {
-                    if (option.Name == defaultOption)
-                    {
-                        selectedOption = option;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                var featureOption = feature.GetSelectedOption();
-                try
-                {
-                    selectedOption = options.Single((option) => (
-                        option.Name == featureOption.Name && option.XmlNamespace == featureOption.XmlNamespace));
-                }
-                // Catch exceptions, because there can be multiple features with the "None" feature name.
-                // We need to handle those features separately.
-                catch (System.SystemException exception)
-                {
-                    var nameAttribute = featureOption.XmlNode.Attributes.GetNamedItem("name");
-                    var attribute = featureOption.XmlNode.OwnerDocument.CreateAttribute("name");
-
-                    selectedOption = options.Single((option) => (
-                        option.DisplayName == featureOption.DisplayName
-                        && option.Name == featureOption.Name
-                        && option.XmlNamespace == featureOption.XmlNamespace));
-                }
-            }
-
-            comboBox.SelectedIndex = options.IndexOf(selectedOption);
-
-            // Indicate that we have completed to loading default value from LocalStorageUtil.
-            LocalStorageUtil.LoadedDefaultValue(true);
-            // ...
+            return null;
         }
 
+        var comboBox = new ComboBox
+        {
+            // Header is displayed in the UI, ontop of the ComboBox.
+            Header = feature.DisplayName
+        };
+        // Construct a new List since IReadOnlyList does not support the 'IndexOf' method.
+        var options = new ObservableCollection<PrintTicketOption>(feature.Options);
+        // Provide the combo box with a list of options to select from.
+        comboBox.ItemsSource = options;
+        // Set the selected option to the option set in the print ticket.
+        PrintTicketOption selectedOption;
+
+        // Load the default value of the PDC from LocalStorageUtil only once.
+        string defaultOption = LocalStorageUtil.GetPdcDefaultValue(feature.Name);
+        if (!LocalStorageUtil.IsAlreadyLoadedDefaultValue() && defaultOption != null)
+        {
+            selectedOption = options[0];
+            foreach (var option in options)
+            {
+                if (option.Name == defaultOption)
+                {
+                    selectedOption = option;
+                    break;
+                }
+            }
+        }
+        else
+        {
+            var featureOption = feature.GetSelectedOption();
+            try
+            {
+                selectedOption = options.Single((option) => (
+                    option.Name == featureOption.Name && option.XmlNamespace == featureOption.XmlNamespace));
+            }
+            // Catch exceptions, because there can be multiple features with the "None" feature name.
+            // We need to handle those features separately.
+            catch (System.SystemException exception)
+            {
+                var nameAttribute = featureOption.XmlNode.Attributes.GetNamedItem("name");
+                var attribute = featureOption.XmlNode.OwnerDocument.CreateAttribute("name");
+
+                selectedOption = options.Single((option) => (
+                    option.DisplayName == featureOption.DisplayName
+                    && option.Name == featureOption.Name
+                    && option.XmlNamespace == featureOption.XmlNamespace));
+            }
+        }
+
+        comboBox.SelectedIndex = options.IndexOf(selectedOption);
+
+        // Indicate that we have completed to loading default value from LocalStorageUtil.
+        LocalStorageUtil.LoadedDefaultValue(true);
+        // ...
+    }
     ```
