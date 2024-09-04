@@ -1,40 +1,40 @@
 ---
 title: Script To retrieve profile age
 description: Introduces a script To retrieve profile age.
-ms.date: 04/29/2024
+ms.date: 09/04/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
+ms.localizationpriority: medium
 ms.reviewer: garymu, herbertm
 ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
 ---
 # Script To retrieve profile age
 
-The article provides a sample script that can assist in determining when profiles would be considered for deletion when the group policy [Delete user profiles older than a specified number of days on system restart](https://gpsearch.azurewebsites.net/#2583) is expected to be applied and delete aged profiles on system startup.
+Assume that you have set the [Delete user profiles older than a specified number of days on system restart](https://gpsearch.azurewebsites.net/#2583) group policy to delete aged profiles on system startup. The article provides a sample script that can help determining when profiles would be considered for deletion as a result of applying the group policy.
 
 > [!NOTE]
-> A WMI provider can also be used to configure profile handling which would override the Group Policy setting above when that is configured.  Microsoft System Center Configuration Manager (SCCM) is an example of software that can do this.
+> A WMI provider can also be used to configure profile handling, and could override the Group Policy setting. Microsoft System Center Configuration Manager (SCCM) is an example of software that can do this.
 
-Applies to: Windows 11, Windows 10, Windows Server 2022 and later versions
+Applies to: Windows 11, Windows 10, Windows Server 2022, and later versions of Windows
 
 ## Details
 
-Windows 10 build 2004, Windows Server 2019 (1809), and later versions changed how the profile age is determined and removed the reliance on the modified timestamp of the ntuser.dat file.  It now uses time stamped registry values to represent the Load time, Unload time, and possible cleanup time.  The ntuser.dat timestamp is now used as a fallback determination.
+Windows 10 build 2004, Windows Server 2019 (1809), and later versions changes how the profile age is determined and removed the reliance on the modified timestamp of the ntuser.dat file. It now uses time stamped registry values to represent the Load time, Unload time, and possible cleanup time. The ntuser.dat timestamp is now used as a fallback determination.
 
-Tracks the last load of the profile by the profile service, and used to validate the Unload and Cleanup values:
+The following registry values track the last load of the profile by the profile service, and are used to validate the Unload and Cleanup values:
 
 - **LocalProfileLoadTimeLow**
 - **LocalProfileLoadTimeHigh**
 
-Tracks the last unload of the profile by the profile service:
+The following registry values track the last unload of the profile by the profile service:
 
 - **LocalProfileUnLoadTimeLow**
 - **LocalProfileUnLoadTimeHigh**
 
-Tracks the cleanup time, if either of the other values are invalid or do not exist and the ntuser.dat timestamp is not old enough for deletion during startup with the policy configured.  Age is then calculated from this time stamp.  Should a user logon while this is set, it will be removed, and tracking will revert back to the other values.
+The following registry values track the cleanup time. If either of the other values are invalid or don't exist and the ntuser.dat timestamp isn't old enough for deletion during startup with the policy configured, age is then calculated from this time stamp. If a user signs in while the registry values are set, the registry values are removed, and tracking reverts to the other values.
 
 - **LocalProfileCleanupCheckTimeLow**
 - **LocalProfileCleanupCheckTimeHigh**
@@ -216,7 +216,7 @@ $profoutput | ft *       # NOTE: may not give all columns depending on window wi
 
 ## Sample output
 
-Here is the sample output of the script.  The Table output can be truncated depending on the width of the window so the format of the information can be changed to other available ones as needed:
+Here's the sample output of the script. The Table output can be truncated depending on the width of the window so the format of the information can be changed to other available ones as needed:
 
 ```output
 Current Date........: 8/21/2024
