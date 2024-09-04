@@ -214,7 +214,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     sudo leapp upgrade  --target 8.8 --channel e4s --no-rhsm
     ```
     
-    Upgrading to 8.10 requires specifying the target OS without any channel, as 8.10 is the final minor release of RHEL 8. It isn't an E4S/EUS release, and its support cycle differs. For more information, see [ Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata).
+    Upgrading to 8.10 requires specifying the target OS without any channel, as 8.10 is the final minor release of RHEL 8. It isn't an E4S/EUS release, and its support cycle differs. For more information, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata).
     
     ```bash
     sudo leapp upgrade  --target 8.10  --no-rhsm
@@ -374,7 +374,7 @@ This section outlines the recommended verification steps after completing an in-
 
 ## Post-upgrade tasks
 
-Once the upgrade is complete, perform [post_upgrade tasks](leapp-upgrade-process-rhel-7-and-8.md?tabs=rhel8-rhel9).
+Once the upgrade is complete, perform [post_upgrade tasks](leapp-upgrade-process-rhel-7-and-8.md?tabs=rhel8-rhel9#post-upgrade-tasks).
 
 ## Post-configuration for SAP-HANA PAYG VMs
 
