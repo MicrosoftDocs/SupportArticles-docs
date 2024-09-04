@@ -7,7 +7,7 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to prevent an Azure Kubernetes Service (AKS) cluster node from regressing to a Not Ready status so that I can continue to use the cluster node successfully.
 ms.custom: sap:Node/node pool availability and performance
 ---
-# Troubleshoot when a healthy node changes to Not Ready status
+# Troubleshoot a change in a healthy node to Not Ready status
 
 This article discusses a scenario in which the status of an Azure Kubernetes Service (AKS) cluster node changes to **Not Ready** after the node is in a healthy state for some time. This article outlines the particular cause and provides a possible solution.
 
@@ -53,14 +53,14 @@ After you run these commands, examine the messages and daemon log files for more
 
 ### Step 1: Check for changes in network-level
 
-If all cluster nodes regressed to a **Not Ready** status, check whether any changes have occurred at the network level. Examples of network-level changes include:
+If all cluster nodes regressed to a **Not Ready** status, check whether any changes occurred at the network level. Examples of network-level changes include:
 
 - Domain name system (DNS) changes
-- Firewall rule changes such as port, ully qualified domain names (FQDNs) etc.
+- Firewall rule changes, such as port, fully qualified domain names (FQDNs), and so on.
 - Added network security groups (NSGs)
-- Applied or changed a route table configurations for AKS traffic
+- Applied or changed route table configurations for AKS traffic
 
-If there were changes at the network level, make any necessary corrections. If you have direct Secure Shell (SSH) access to the node, you can use the `curl` or `telnet` command to check the connectivity to [AKS outbound requirements](/azure/aks/outbound-rules-control-egress). Stop and restart the nodes running after you've fixed the issues. If the nodes stay in a healthy state after these fixes, you can safely skip the remaining steps.
+If there were changes at the network level, make any necessary corrections. If you have direct Secure Shell (SSH) access to the node, you can use the `curl` or `telnet` command to check the connectivity to [AKS outbound requirements](/azure/aks/outbound-rules-control-egress). After you've fixed the issues, stop and restart the nodes. If the nodes stay in a healthy state after these fixes, you can safely skip the remaining steps.
 
 ### Step 2: Stop and restart the nodes
 
