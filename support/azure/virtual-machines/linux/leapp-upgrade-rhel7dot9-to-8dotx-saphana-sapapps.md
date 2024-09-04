@@ -374,7 +374,7 @@ This section outlines the recommended verification steps after completing an in-
 
 ## Post-upgrade tasks
 
-Once the upgrade is complete, perform [post_upgrade tasks](leapp-upgrade-process-rhel-7-and-8.md?tabs=rhel8-rhel9#post-upgrade-tasks).
+Once the upgrade is complete, perform [post_upgrade tasks](leapp-upgrade-process-rhel-7-and-8.md?tabs=rhel7-rhel8#post-upgrade-tasks).
 
 ## Post-configuration for SAP-HANA PAYG VMs
 
