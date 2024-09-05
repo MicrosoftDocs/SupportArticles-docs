@@ -3,7 +3,7 @@ title: Check Remittance report in Payables Management
 description: This article describes the Check Remittance report in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 09/5/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # Information about the Check Remittance report in Payables Management in Microsoft Dynamics GP
@@ -21,10 +21,10 @@ This article contains information about the Check Remittance report in Payables 
 
 The Check Remittance report can be printed when one or more of the following conditions are true:
 
-- When you print a check in the **Print Payables Checks** window, select the **Separate Remittance** chec box.
+- When you print a check in the **Print Payables Checks** window, select the **Separate Remittance** checkbox.
 - The check pays more than 12 invoices.
 
-- In the **Select Payables Checks** window, select the **Print Previously Applied Documents** check box, and the previously applied documents contain more than 12 records.
+- In the **Select Payables Checks** window, select the **Print Previously Applied Documents** checkbox, and the previously applied documents contain more than 12 records.
 
 - In the **Select Payables Checks** window, select one or more check boxes under **Automatically Apply Existing Unapplied**, and the total document amount of the credit documents is more than the total document amount of the debit documents.
 
@@ -32,10 +32,9 @@ The Check Remittance report can be printed when one or more of the following con
 > To open the **Print Payables Checks** window, use one of the following methods:
 
 - On the **Transactions** menu, point to **Purchasing**, and then select **Print Checks**.
-- Select the **Print Check** button in the following windows:
-- On the **Transactions** menu, point to **Purchasing**, select **Select Checks** > **Print Checks**.
-- On the **Transactions** menu, point to **Purchasing**, select **Edit Checks** > **Print Checks**.
-- On the **Transactions** menu, point to **Purchasing**, select **Edit Check Batch** > **Print Checks**.
+- Select the **Print Check** button in the following window:
+- On the **Transactions** menu, point to **Purchasing**, select **Build Payment Batch**.
+
 
 ## Reprint the Check Remittance report
 
@@ -51,7 +50,7 @@ To reprint the Check Remittance report, follow these steps:
 
 To edit remittance information on unposted checks, follow these steps:
 
-1. On the **Transactions** menu, point to **Purchasing**, and then select **Edit Check**.
+1. On the **Transactions** menu, point to **Purchasing**, and then select **Build Payment Batch**.
 2. In the **Vendor ID** list, select a vendor ID.
 3. Select **Check Stub**.
 
