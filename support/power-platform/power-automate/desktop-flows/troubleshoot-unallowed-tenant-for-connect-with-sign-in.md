@@ -24,13 +24,13 @@ Your desktop flow fails with the following error:
 
 ## Cause
 
-This error occurs when:
+This error occurs when all of the following apply:
 
 - You use a [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) connection to perform an attended run.
 - The target machine is AD domain-joined but not Microsoft Entra-joined.
 - The tenant of your Power Automate environment isn't added to the `AllowedRegistrationTenants` allowlist in the machine registry.
 
-  This allowlist is required as part of a security patch to prevent unknown tenants from targeting your machine to run desktop flow scripts. For more information, see [Security update for "connect with sign-in" connections on AD domain-joined machines in Power Automate for desktop](connect-with-sign-in-security-update.md).
+Adding the tenant to the allowlist is required as part of a security patch to prevent unknown tenants from targeting your machine to run desktop flow scripts. For more information, see [Security update for "connect with sign-in" connections on AD domain-joined machines in Power Automate for desktop](connect-with-sign-in-security-update.md).
 
 ## Resolution
 
