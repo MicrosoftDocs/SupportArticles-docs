@@ -1,8 +1,8 @@
 ---
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 08/30/2024
-ms.reviewer: chiragpa, rissing, v-leedennis, v-weizhu
+ms.date: 09/05/2024
+ms.reviewer: chiragpa, rissing, jopalhei, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to perform basic troubleshooting of outbound connections from an Azure Kubernetes Service (AKS) cluster so that I don't experience connection issues when I use AKS.
@@ -132,7 +132,7 @@ What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/ge
 >
 > If the DNS resolution or egress traffic doesn't let you install the necessary network packages, you can use the `rishasi/ubuntu-netutil:1.0` docker image. In this image, the required packages are already installed.
 
-Here's an example procedure for checking DNS resolution:
+Here's an example procedure for checking DNS resolution of a Linux pod:
 
 1. Start a test pod in the same namespace as the problematic pod:
 
@@ -197,7 +197,7 @@ Here's an example procedure for checking DNS resolution:
    Received 2121 bytes from 10.0.0.10#53 in 232 ms
    ```
 
-If you have Windows POD's please use the follwing steps to check DNS resolution from Windows POD's.
+Here's an example procedure for checking DNS resolution of a Windows pod:
 
 1. Run a test pod in the Windows node pool:
 
