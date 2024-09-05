@@ -29,18 +29,18 @@ How to use this article:
 
 - Use the links in the **More Information/Limitations** column to find additional information about running SQL server on the specific operating system.
 
-|Windows Version/SQL Version |SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016 |SQL Server 2014 |SQL Server 2012 |SQL Server 2008 R2 |SQL Server 2008|More Information/Limitations|
-|---| -------- |---|---|---|---|---|---|---|---|
-|Windows Server 2022  |Yes  (RTM) |Yes  (RTM) |Yes  (RTM) | Not supported | Not supported | Not supported |Not supported |Not supported |[Additional information for Windows Server 2022 environments](#minimum-sql-server-version-requirements-for-windows-server-2022-and-windows-11)|
-|Windows 11 |Yes  (RTM)|Yes  (RTM) |Yes  (RTM) |Not supported |Not supported |Not supported |Not supported |Not supported |[Additional information for Windows 11 environments](#minimum-sql-server-version-requirements-for-windows-server-2022-and-windows-11)|
-|Windows 10 |Yes  (RTM) |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |[Additional information for Windows 10 environments](#minimum-sql-server-version-requirements-for-windows-10-and-windows-server-2016)|
-|Windows Server 2019  |Yes  (RTM) |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |[Additional information for Windows Server 2019 environments](#minimum-sql-server-version-requirements-for-windows-server-2019)|
-|Windows Server 2016  |Yes  (RTM) |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |[Additional information for Windows Server 2016 environments](#minimum-sql-server-version-requirements-for-windows-10-and-windows-server-2016)|
-|Windows 8.1  |No|No |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Yes (SP3)  |Yes (SP4)|[Additional information for Windows 8.1 environments](#minimum-sql-server-version-requirements-for-windows-server-2012-r2-or-windows-81)|
-|Windows Server 2012 R2 |No|No  |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Yes (SP3)  |Yes (SP4) |[Additional information for Windows Server 2012 R2 environments](#minimum-sql-server-version-requirements-for-windows-server-2012-r2-or-windows-81)|
-|Windows 8 |No|No |Yes  (RTM)  |Yes (SP2) |Yes (SP3) |Yes (SP4) |Yes (SP3)  |Yes (SP4) |[Additional information for Windows 8 environments](#minimum-sql-server-version-requirements-for-windows-server-2012-or-windows-8)|
-|Windows Server 2012 |No|No |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Yes (SP3)  |Yes (SP4) |[Additional information for Windows Server 2012 environments](#minimum-sql-server-version-requirements-for-windows-server-2012-or-windows-8)|
-|Hardware and Software Requirements page |[SQL Server 2022](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022?view=sql-server-ver16&preserve-view=true)|[SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15) |[SQL Server 2017](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)  |[SQL Server 2016](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)  |[SQL Server 2014](/previous-versions/sql/2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)  |[SQL Server 2012](/previous-versions/sql/sql-server-2012/ms143506(v=sql.110))  |[SQL Server 2008 R2](/previous-versions/sql/sql-server-2008-r2/ms143506%28v%3dsql.105%29)  |[SQL Server 2008](/previous-versions/sql/sql-server-2008/ms143506%28v%3dsql.100%29) ||
+|Windows Version/SQL Version |SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016 |SQL Server 2014 |SQL Server 2012 |SQL Server 2008 R2 |SQL Server 2008|
+|---| -------- |---|---|---|---|---|---|---|
+|Windows Server 2022  |Yes  (RTM) |Yes  (RTM) |Yes  (RTM) | Not supported | Not supported | Not supported |Not supported |Not supported |(#minimum-sql-server-version-requirements-for-windows-server-2022-and-windows-11)|
+|Windows 11 |Yes  (RTM)|Yes  (RTM) |Yes  (RTM) |Not supported |Not supported |Not supported |Not supported |Not supported |
+|Windows 10 |Yes  (RTM) |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |
+|Windows Server 2019  |Yes  (RTM) |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |
+|Windows Server 2016  |Yes  (RTM) |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |
+|Windows 8.1  |No|No |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Yes (SP3)  |Yes (SP4)|
+|Windows Server 2012 R2 |No|No  |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Yes (SP3)  |Yes (SP4) |
+|Windows 8 |No|No |Yes  (RTM)  |Yes (SP2) |Yes (SP3) |Yes (SP4) |Yes (SP3)  |Yes (SP4) |
+|Windows Server 2012 |No|No |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Yes (SP3)  |Yes (SP4) |
+|Hardware and Software Requirements page |[SQL Server 2022](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022)|[SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15) |[SQL Server 2017](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)  |[SQL Server 2016](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)  |[SQL Server 2014](/previous-versions/sql/2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)  |[SQL Server 2012](/previous-versions/sql/sql-server-2012/ms143506(v=sql.110))  |[SQL Server 2008 R2](/previous-versions/sql/sql-server-2008-r2/ms143506%28v%3dsql.105%29)  |[SQL Server 2008](/previous-versions/sql/sql-server-2008/ms143506%28v%3dsql.100%29) |
 
 ## Support for switching modes in Windows Server 2012 R2 or Windows Server 2012
 
