@@ -32,9 +32,9 @@ UFW (Uncomplicated Firewall) is a user-friendly interface for managing a `netfil
 sudo ufw status
 ```
 
-Status: active indicates that UFW is running.
+`Status: active` indicates that UFW is running.
 
-If it says Status: inactive, UFW isn't active, and the port won't be blocked by UFW.
+If it says `Status: inactive`, UFW isn't active, and the port won't be blocked by UFW.
 
 
 2. List Current UFW Rules.
@@ -50,7 +50,7 @@ A list of all the rules, showing whether specific ports are allowed or denied. I
 
 If you want to check whether a particular port is closed, look for its status in the UFW rules.
 
-Suppose we want to check if port 22 `SSHD` is closed
+Suppose we want to check if the default SSH port 22 is closed
 
 ```bash
 sudo ufw status | grep '22'
@@ -60,7 +60,7 @@ If the output shows 22/tcp ALLOW, the port is open.
 
 If there's no output or the rule shows DENY, the port is closed.
 
-4. Verify port connectivity is using `netstat` or `ss` command:
+4. Verify port connectivity using the `netstat` or `ss` command:
 
 ```bash
 sudo netstat -tuln | grep ':22'
@@ -70,7 +70,7 @@ sudo netstat -tuln | grep ':22'
 sudo ss -tuln | grep ':22'
 ```
 
-No output means the port isn't being used to or listened to by any service, indicating it's closed.
+No output means the port isn't being used or listened to by any service, indicating there is no service available on that port. If a firewall rule is in place to block the port, it may still appear closed even if a service is running.
 
 5. Test Port Connectivity using `nc`
 
@@ -78,7 +78,7 @@ No output means the port isn't being used to or listened to by any service, indi
 sudo nc -zv <server-ip> 22
 ```
 
-If the connection fails, it confirms that the port is closed.
+If the connection fails but the service is running, it confirms that the port is closed.
 
 Successful connection means the port is open.
 
@@ -195,7 +195,7 @@ Status: active
 ```
 
 ```bash
-sudo ufw delete 1
+sudo ufw delete 3
 ```
 
 For more information about UFW, see: [Ubuntu - UFW community](https://help.ubuntu.com/community/UFW)
