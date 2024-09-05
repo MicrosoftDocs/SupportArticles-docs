@@ -20,8 +20,6 @@ _Original KB number:_ &nbsp; 927521
 
 Windows setup log files are in different locations on the hard disk. These locations depend on the setup phase.
 
-Support for Windows Vista without any service packs installed ended on April 13, 2010. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see [Windows XP support has ended](https://support.microsoft.com/help/14223).
-
 ## Down-level phase
 
 The downlevel phase is the Windows setup phase that is running within the previous operating system. The following table lists important log files in this setup phase.
@@ -55,8 +53,13 @@ The Windows Preinstallation Environment (Windows PE or WinPE) phase is the Windo
 
 ## Online configuration phase
 
-The online configuration phase (the first boot phase) starts when you receive the following message:
-> Please wait a moment while Windows prepares to start for the first time.
+The online configuration phase (the first boot phase) starts when you receive the following messages:
+
+> Please wait a moment while Windows prepares to start for the first time.  
+>   or
+> 
+> Working on updates NN%   
+> Please keep your computer on.
 
 During this phase, basic hardware support is installed. If it's an upgrade installation, data and programs are also migrated. The following table lists important log files in this setup phase.
 
