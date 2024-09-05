@@ -87,7 +87,7 @@ Did AKS diagnostics uncover any SNAT issues? If so, take some of the following a
 
 - Evaluate whether you should mitigate SNAT port exhaustion by using extra outbound IP addresses and more allocated outbound ports. For more information, see [Scale the number of managed outbound public IPs](/azure/aks/load-balancer-standard#scale-the-number-of-managed-outbound-public-ips) and [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
 
-For more information about how to troubleshoot SNAT port exhaution, see [Troubleshoot SNAT port exhaustion on AKS nodes](/azure/azure-kubernetes/connectivity/snat-port-exhaustion?tabs=for-a-linux-pod).
+For more information about how to troubleshoot SNAT port exhaution, see [Troubleshoot SNAT port exhaustion on AKS nodes](../connectivity/snat-port-exhaustion?tabs=for-a-linux-pod).
 
 ### Step 4: Fix IOPS performance issues
 
