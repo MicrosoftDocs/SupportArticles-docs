@@ -29,7 +29,7 @@ The registry values `ID` and `Svc` with the `REG_BINARY` type under the DFS root
 192.168.0.42	192.168.0.45	NETDFS	214	dfs_GetInfo response, Error: WERR_DEVICE_NOT_AVAILABLE
 ```
 
-## Resolution 1: Import the registry key from a valid registry backup
+## Resolution for cause 1: Import the registry key from a valid registry backup
 
 > [!NOTE]
 > After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes to take effect.
@@ -49,7 +49,7 @@ The primary domain controller (PDC) or domain controller (DC) isn’t reachable 
 
 This error variation usually shows for a short time, until the timeout for reaching the PDC or DC occurs. Subsequent tries to view or access the DFS Namespace via the DFS Management console, without applying the solution, can result in other error variations (for example, "The Namespace cannot be queried. The specified domain either does not exist or cannot be contacted").
 
-## Resolution 2: Check the status of TCP/UDP port 389
+## Resolution for cause 2: Check the status of TCP/UDP port 389
 
 > [!NOTE]
 > After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes to take effect.
