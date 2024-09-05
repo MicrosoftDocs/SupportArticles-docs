@@ -8,7 +8,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.service: windows-server
-localization_priority: medium
+ms.localizationpriority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: certificates-and-public-key-infrastructure-pki, csstroubleshoot
 keywords: 
