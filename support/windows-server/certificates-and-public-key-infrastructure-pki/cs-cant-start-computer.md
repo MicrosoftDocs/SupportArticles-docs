@@ -42,7 +42,7 @@ The certificate thumbprints indicate all the certificates that have been issued 
 
 To look for missing certificates, follow these steps:
 
-1. Select **Start**, select **Run**, type regedit, and then select **OK**.
+1. Select **Start** > **Run**, type *regedit*, and then select **OK**.
 2. Locate and then select the following subkey:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\<Your_Certificate_Authority_Name>`  
@@ -134,7 +134,7 @@ To repair the links, follow these steps:
    CertUtil: -verifykeys command completed successfully.
    ```
 
-### Step 5: Start the Certificate Services service
+### Step 4: Start the Certificate Services service
 
 1. Select **Start**, point to **Administrative Tools**, and then select **Services**.
 2. Right-click **Certificate Services**, and then select **Start**.
