@@ -5,7 +5,7 @@ ms.date: 09/04/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.localizationpriority: medium
+localization_priority: medium
 ms.reviewer: kaushika, shawnrab, v-jomcc, flbelea
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
@@ -44,67 +44,95 @@ To look for missing certificates, follow these steps:
 
 1. Select **Start**, select **Run**, type regedit, and then select **OK**.
 2. Locate and then select the following subkey:
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\**Your_Certificate_Authority_Name**`  
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\<Your_Certificate_Authority_Name>`  
 
 3. In the right pane, double-click **CaCertHash**.
 4. Make a note of the number of certificate thumbprints that the **Value data** list contains.
-5. Start Command Prompt.
-6. Type the following command, and then press **ENTER**:
-    `certutil -store`
+5. Start a command prompt.
+6. Type the following command, and then press <kbd>Enter</kbd>:
+
+   ```console
+   certutil -store
+   ```
 
     Compare the number of certificates that are listed in the local computer Personal certificate store to the number of certificate thumbprints that are listed in the CaCertHash registry entry. If the numbers are different, go to [Step 2: Import the missing certificates](#step-2-import-the-missing-certificates). If the numbers are the same, go to [Step 3: Repair the links](#step-3-repair-the-links).
 
 ### Step 2: Import the missing certificates
 
-1. Select **Start**, select **Run**, type mmc, and then select **OK**.
+1. Select **Start** > **Run**. Type *mmc*, and then select **OK**.
 2. On the **File** menu, select **Add/Remove Snap-in**.
-3. Select **Add**.
-4. In the **Snap-in** list, select **Certificates**, and then select **Add**.
-5. When the **Certificates snap-in** dialog box appears, select **Computer account**, and then select **Next** and then **Finish**.
-6. Select **OK**.
-   The Certificates directory is now added to Microsoft Management Console (MMC).
-
-7. Expand **Certificates**, expand **Personal**, right-click **Certificates**, point to **All Tasks**, and then select **Import**.
-8. On the **Welcome** page, select **Next**.
-9. On the **File to Import** page, type the full path of the certificate file that you want to import in the **File name** box, and then select **Next**. Instead, select **Browse**, search for the file, and then select **Next**.
-10. If the file that you want to import is a Personal Information Exchange - PKCS #12 (*.PFX) file, you'll be prompted for the password. Type the password, select the **Mark this key as exportable** import option and then select **Next**.
-11. On the **Certificate Store** page, select **Next**.
-12. On the **Completing the Certificate Import Wizard** page, select **Finish**.
+3. In the **Snap-in** list, select **Certificates**, and then select **Add**.
+4. When the **Certificates snap-in** dialog box appears, select **Computer account**, and then select **Next** > **Finish**.
+5. Select **OK**. The Certificates directory is now added to Microsoft Management Console (MMC).
+6. Expand **Certificates** > **Personal**, right-click **Certificates**, point to **All Tasks**, and then select **Import**.
+7. On the **Welcome** page, select **Next**.
+8. On the **File to Import** page, type the full path of the certificate file that you want to import in the **File name** box, and then select **Next**. Instead, select **Browse**, search for the file, and then select **Next**.
+9. If the file that you want to import is a Personal Information Exchange-PKCS #12 (*.PFX) file, you'll be prompted for the password. Type the password, select the **Mark this key as exportable** import option and then select **Next**.
+10. On the **Certificate Store** page, select **Next**.
+11. On the **Completing the Certificate Import Wizard** page, select **Finish**.
 
 > [!NOTE]
-> The CA publishes by default its CA certificates to the `%systemroot%\System32\CertSvc\CertEnroll` folder. You may find the missing certificates in that folder.
+> The CA publishes its CA certificates to the *%systemroot%\\System32\\CertSvc\\CertEnroll* folder by default. You may find the missing certificates in that folder.
 
 ### Step 3: Repair the links
 
 To repair the links, follow these steps:
 
-1. Start Command Prompt.
-2. Type the following, and then press **ENTER**:  
-    `cd %systemroot%\system32\certsrv\certenroll`
+1. Open a command prompt.
+2. Type the following command, and then press <kbd>Enter</kbd>:
+  
+    ```console
+    cd %systemroot%\system32\certsrv\certenroll
+    ```
 
-3. Make a note of the certificate in the Certenroll folder that looks similar to the following:
-    **Your_Server**. **Your_Domain**.com_rootca.crt
+3. Make a note of the certificate in the *certenroll* folder that looks similar to the following:
 
-4. Type the following commands, and then press **ENTER** after each command:
-   `certutil -addstore my %systemroot%\system32\certsrv\certenroll\Your_Server.Your_Domain.com_rootca.crt`
-   `certutil -dump %systemroot%\system32\certsrv\certenroll\Your_Server.Your_Domain.com_rootca.crt`
-    **Your_Server.Your_Domain**.com_rootca.crt is the name of the certificate in the Certenroll folder that you noted in step 3.
-5. In the output from the last command, near the end, you'll see a line that is similar to the following:  
+    `<Your_Server>. <Your_Domain>.com_rootca.crt`
+
+4. Type the following commands, and then press <kbd>Enter</kbd> after each command:
+   
+   ```console
+   certutil -addstore my %systemroot%\system32\certsrv\certenroll\Your_Server.Your_Domain.com_rootca.crt
+   ```
+
+   ```console
+   `certutil -dump %systemroot%\system32\certsrv\certenroll\Your_Server.Your_Domain.com_rootca.crt
+   ```
+   
+    `<Your_Server>.<Your_Domain>.com_rootca.crt` is the name of the certificate in the *certenroll* folder that you noted in step 3.
+   
+5. In the output from the last command, near the end, you'll see a line that is similar to the following:
+  
     `Key Id Hash(sha1): ea c7 7d 7e e8 cd 84 9b e8 aa 71 6d f4 b7 e5 09 d9 b6 32 1b`
-    The Key Id Hash data is specific to your computer. Make a note of this line.
-6. Type the following command including the quotation marks, and then press **ENTER**:  
-    %systemroot%\system32\certutil -repairstore my "**Key_Id_Hash_Data**"
 
-    In this command, `Key_Id_Hash_Data` is the line that you noted in step 4. For example, type the following:  
+    The `Key Id Hash` data is specific to your computer. Make a note of this line.
+6. Type the following command including the quotation marks, and then press <kbd>Enter</kbd>:
+
+    ```console 
+    %systemroot%\system32\certutil -repairstore my "<Key_Id_Hash_Data>"
+    ```
+
+    In this command, `Key_Id_Hash_Data` is the line that you noted in step 5. For example, type the following:  
      `certutil -repairstore my "ea c7 7d 7e e8 cd 84 9b e8 aa 71 6d f4 b7 e5 09 d9 b6 32 1b"`
 
     You'll then receive the following output:
-    > CertUtil: -repairstore command completed successfully.
 
-7. To verify the certificates, type the following, and then press **ENTER**:  
-   `certutil -verifykeys`
+    ```output
+    CertUtil: -repairstore command completed successfully.
+    ```
+
+7. To verify the certificates, type the following commands, and then press <kbd>Enter</kbd>:
+  
+   ```console
+   certutil -verifykeys
+   ```
+
    After this command runs, you'll receive the following output:
-   `CertUtil: -verifykeys command completed successfully.`
+
+   ```output
+   CertUtil: -verifykeys command completed successfully.
+   ```
 
 ### Step 5: Start the Certificate Services service
 
