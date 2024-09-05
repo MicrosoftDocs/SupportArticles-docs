@@ -86,7 +86,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
     All other settings configured in the files */etc/sysctl.conf* and */etc/sysctl.d/sap_hana.conf* are the same for both RHEL 8 and RHEL 9 and should remain unchanged. For more information, see the [SAP Notes 2382421](https://launchpad.support.sap.com/#/notes/2382421).
 
 
-5. Upgrade your RHEL 8.8 system to make sure the version of all packages is 8.8:
+5. To make sure your RHEL 8.8 system is up-to-date, update all packages:
 
     ```bash
     sudo dnf update
@@ -146,7 +146,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
    
    All other settings for SAP HANA, configured in the files */etc/sysctl.conf* and */etc/sysctl.d/sap_hana.conf*, are the same for both RHEL 8 and RHEL 9 and should remain unchanged. For more information, see the [SAP Notes 2382421](https://launchpad.support.sap.com/#/notes/2382421).
 
-5. Upgrade your RHEL 8.10 system to make sure the version of all packages is 8.10:
+5. To make sure your RHEL 8.10 system is up-to-date, update all packages:
 
     ```bash
     sudo dnf update
@@ -208,7 +208,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
    All other settings for SAP, configured in the file */etc/sysctl.conf*, are the same for both RHEL 8 and RHEL 9 and should remain unchanged. For more information, see the [SAP Notes 2382421](https://launchpad.support.sap.com/#/notes/2382421).
 
 
-5. Upgrade your RHEL 8.8 system to make sure the version of all packages is 8.8:
+5. To make sure your RHEL 8.10 system is up-to-date, update all packages:
 
     ```bash
     sudo dnf update
@@ -269,7 +269,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
    All other settings for SAP, configured in the file */etc/sysctl.conf*, are the same for both RHEL 8 and RHEL 9 and should remain unchanged. For more information, see [SAP Notes 2382421](https://launchpad.support.sap.com/#/notes/2382421).
 
 
-4. Upgrade your RHEL 8.10 system to make sure the version of all packages is 8.10:
+4. To make sure your RHEL 8.10 system is up-to-date, update all packages:
 
     ```bash
     sudo dnf update
