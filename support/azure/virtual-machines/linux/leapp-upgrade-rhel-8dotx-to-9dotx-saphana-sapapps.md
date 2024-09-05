@@ -2,7 +2,7 @@
 title: Leapp upgrade from RHEL 8.x to RHEL 9.x on SAP-HANA and SAP-APPS pay-as-you-go VMs
 description: Provides steps to help you upgrade SAP-HANA and SAP-APPS pay-as-you-go virtual machines from RHEL 8.x to RHEL 9.x by using the leapp tool.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 09/04/2024
+ms.date: 09/05/2024
 ms.service: azure-virtual-machines
 ms.topic: how-to
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
@@ -76,7 +76,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
 4. Configure RHEL settings for SAP HANA:
 
-   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameter is necessary for SAP Applications, including SAP HANA. It's configured in the */etc/sysctl.d/sap.conf* file.
+   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP Applications, including SAP HANA. They are configured in the */etc/sysctl.d/sap.conf* file.
 
    ```bash
    vm.max_map_count = 2147483647
@@ -86,13 +86,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
     All other settings configured in the files */etc/sysctl.conf* and */etc/sysctl.d/sap_hana.conf* are the same for both RHEL 8 and RHEL 9 and should remain unchanged. For more information, see the [SAP Notes 2382421](https://launchpad.support.sap.com/#/notes/2382421).
 
 
-5. Upgrade your RHEL 8.8 system to the latest available RHEL 8.8 package versions.
+5. Upgrade your RHEL 8.8 system to make sure the version of all packages is 8.8:
 
     ```bash
     sudo dnf update
     ```
 
-6. Reboot the VM.
+6. Reboot the VM:
 
     ```bash
     sudo reboot
@@ -117,7 +117,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 > [!NOTE]  
 > - If your VM is part of a Hight Availability cluster, the upgrade is possible if the cluster nodes do *not* use any packages that are part of [Resilient Storage.](https://access.redhat.com/articles/3130101). For more information, see [Procedure to upgrade a RHEL 8 High Availability cluster to RHEL 9](https://access.redhat.com/articles/7012677)
 
-1. Make sure your current Red Hat release is 8.10.
+1. Make sure your current Red Hat release is 8.10:
 
     ```bash
     sudo cat /etc/redhat-release 
@@ -137,7 +137,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
 4. Configure RHEL settings for SAP HANA:
 
-   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/27729990), the following parameter is necessary for SAP applications, including SAP HANA, and it's configured in the file */etc/sysctl.d/sap.conf*.
+   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/27729990), the following parameters are necessary for SAP applications, including SAP HANA, and they are configured in the file */etc/sysctl.d/sap.conf*.
 
    ```bash
    vm.max_map_count = 2147483647
@@ -146,13 +146,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
    
    All other settings for SAP HANA, configured in the files */etc/sysctl.conf* and */etc/sysctl.d/sap_hana.conf*, are the same for both RHEL 8 and RHEL 9 and should remain unchanged. For more information, see the [SAP Notes 2382421](https://launchpad.support.sap.com/#/notes/2382421).
 
-5. Upgrade your RHEL 8.10 system to the latest available RHEL 8.10 package versions.
+5. Upgrade your RHEL 8.10 system to make sure the version of all packages is 8.10:
 
     ```bash
     sudo dnf update
     ```
 
-6. Reboot the VM.
+6. Reboot the VM:
 
     ```bash
     sudo reboot
@@ -198,7 +198,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
 4. Configure RHEL settings for SAPAPPS:
 
-   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameter is necessary for SAP Applications, and it's configured in the file */etc/sysctl.d/sap.conf*.
+   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP Applications, and they are configured in the file */etc/sysctl.d/sap.conf*.
 
    ```bash
    vm.max_map_count = 2147483647
@@ -208,13 +208,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
    All other settings for SAP, configured in the file */etc/sysctl.conf*, are the same for both RHEL 8 and RHEL 9 and should remain unchanged. For more information, see the [SAP Notes 2382421](https://launchpad.support.sap.com/#/notes/2382421).
 
 
-5. Upgrade your RHEL 8.8 system to the latest available RHEL 8.8 package versions.
+5. Upgrade your RHEL 8.8 system to make sure the version of all packages is 8.8:
 
     ```bash
     sudo dnf update
     ```
 
-6. Reboot the VM.
+6. Reboot the VM:
 
     ```bash
     sudo reboot
@@ -259,7 +259,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
 4. Configure RHEL settings for SAP:
 
-   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameter is necessary for SAP applications, and it's configured in the file */etc/sysctl.d/sap.conf*.
+   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP applications, and they are configured in the file */etc/sysctl.d/sap.conf*.
 
    ```bash
    vm.max_map_count = 2147483647
@@ -269,13 +269,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
    All other settings for SAP, configured in the file */etc/sysctl.conf*, are the same for both RHEL 8 and RHEL 9 and should remain unchanged. For more information, see [SAP Notes 2382421](https://launchpad.support.sap.com/#/notes/2382421).
 
 
-4. Upgrade your RHEL 8.10 system to the latest available RHEL 8.10 package versions.
+4. Upgrade your RHEL 8.10 system to make sure the version of all packages is 8.10:
 
     ```bash
     sudo dnf update
     ```
 
-6. Reboot the VM.
+6. Reboot the VM:
 
     ```bash
     sudo reboot
@@ -494,7 +494,7 @@ This section outlines the recommended verification steps after completing an in-
     Here's an example output:
     
     ```output
-    arhel-9-for-x86_64-appstream-e4s-rhui-rpms        Red Hat Enterprise Linux 9 for x86_64 - AppStream - Update Services for SAP Solutions from RHUI (RPMs)
+    rhel-9-for-x86_64-appstream-e4s-rhui-rpms        Red Hat Enterprise Linux 9 for x86_64 - AppStream - Update Services for SAP Solutions from RHUI (RPMs)
     rhel-9-for-x86_64-baseos-e4s-rhui-rpms           Red Hat Enterprise Linux 9 for x86_64 - BaseOS - Update Services for SAP Solutions from RHUI (RPMs)
     rhel-9-for-x86_64-highavailability-e4s-rhui-rpms Red Hat Enterprise Linux 9 for x86_64 - High Availability - Update Services for SAP Solutions from RHUI (RPMs)
     rhel-9-for-x86_64-sap-netweaver-e4s-rhui-rpms    Red Hat Enterprise Linux 9 for x86_64 - SAP NetWeaver - Update Services for SAP Solutions from RHUI (RPMs)
