@@ -36,7 +36,7 @@ kubectl describe nodes
 
 The [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) stopped posting its **Ready** status.
 
-Examine the output of the `kubectl describe nodes` command to find the [Conditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition) field and the [Capacity and Allocatable](https://kubernetes.io/docs/concepts/architecture/nodes/#capacity) blocks. Do the content of these fields appear as expected? (For example, in the **Conditions** field, does the `message` property contain the "kubelet is posting ready status" string?) In this case, if you have direct Secure Shell (SSH) access to the node, check the recent events to understand the error. Look within the */var/log/messages* file. Or, generate the kubelet and container daemon log files by running the following shell commands:
+Examine the output of the `kubectl describe nodes` command to find the [Conditions](https://kubernetes.io/docs/reference/node/node-status/#condition) field and the [Capacity and Allocatable](https://kubernetes.io/docs/reference/node/node-status/#capacity) blocks. Do the content of these fields appear as expected? (For example, in the **Conditions** field, does the `message` property contain the "kubelet is posting ready status" string?) In this case, if you have direct Secure Shell (SSH) access to the node, check the recent events to understand the error. Look within the */var/log/messages* file. Or, generate the kubelet and container daemon log files by running the following shell commands:
 
 ```bash
 # To check messages file,
