@@ -18,11 +18,11 @@ Assume that you have set the [Delete user profiles older than a specified number
 > [!NOTE]
 > A WMI provider can also be used to configure profile handling, and could override the Group Policy setting. Microsoft System Center Configuration Manager (SCCM) is an example of software that can do this.
 
-_Applies to:_ &nbsp; Windows 11, Windows 10, Windows Server 2022, and later versions of Windows
+_Applies to:_ &nbsp; Windows 10, Windows Server 2019, version 1809, Windows 11, Windows Server 2022, and later versions of Windows
 
 ## Details
 
-Windows 10 build 2004, Windows Server 2019 (1809), and later versions changes how the profile age is determined and removed the reliance on the modified timestamp of the ntuser.dat file. It now uses time stamped registry values to represent the Load time, Unload time, and possible cleanup time. The ntuser.dat timestamp is now used as a fallback determination.
+Windows 10 build 2004, Windows Server 2019, version 1809, and later versions changes how the profile age is determined and removed the reliance on the modified timestamp of the ntuser.dat file. It now uses time stamped registry values to represent the Load time, Unload time, and possible cleanup time. The ntuser.dat timestamp is now used as a fallback determination.
 
 The following registry values track the last load of the profile by the profile service, and are used to validate the Unload and Cleanup values:
 
@@ -44,7 +44,7 @@ The following registry values track the cleanup time. If either of the other val
 ## Script
 
 ```powershell
-TranslateSID2Name
+Function TranslateSID2Name
 {
     param(
         [string]$sid
