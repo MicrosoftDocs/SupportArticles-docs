@@ -1,15 +1,13 @@
 ---
 title: Script To retrieve profile age
 description: Introduces a script To retrieve profile age.
-ms.date: 09/04/2024
-author: Deland-Han
-ms.author: delhan
+ms.date: 09/05/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.localizationpriority: medium
 ms.reviewer: garymu, herbertm
-ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
+ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
 # Script To retrieve profile age
 
