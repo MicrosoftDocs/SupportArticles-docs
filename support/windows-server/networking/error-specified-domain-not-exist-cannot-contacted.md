@@ -63,7 +63,7 @@ In addition, you might see the following `NETDFS` response error received from t
 192.168.0.42	192.168.0.45	NETDFS	214	dfs_GetInfo response, Error: WERR_NO_SUCH_DOMAIN 
 ```
 
-## Resolution 1: Check the status of TCP/UDP port 389
+## Resolution for cause 1: Check the status of TCP/UDP port 389
 
 > [!NOTE]
 > After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes to take effect.
@@ -81,7 +81,7 @@ LDAP SRV records for the PDC are missing under the`_ldap._tcp.pdc._msdcs.contoso
 192.168.0.2	192.168.0.42	DNS	151	Standard query response 0x337d No such name SRV _ldap._tcp.pdc._msdcs.contoso.com SOA SRVPdc.contoso.com
 ```
 
-## Resolution 2: Make sure all missing LDAP SRV records are present
+## Resolution for cause 2: Make sure all missing LDAP SRV records are present
 
 > [!NOTE]
 > After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes to take effect.
