@@ -27,8 +27,6 @@ How to use this article:
 
 - Use the links in the **Hardware and Software Requirements page** row to see specific details about the hardware and software requirements for each version of SQL Server.
 
-- Use the links in the **More Information/Limitations** column to find additional information about running SQL server on the specific operating system.
-
 |Windows Version/SQL Version |SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016 |SQL Server 2014 |SQL Server 2012 |SQL Server 2008 R2 |SQL Server 2008|
 |---| -------- |---|---|---|---|---|---|---|
 |Windows Server 2022  |Yes  (RTM) |Yes  (RTM) |Yes  (RTM) | Not supported | Not supported | Not supported |Not supported |Not supported |(#minimum-sql-server-version-requirements-for-windows-server-2022-and-windows-11)|
