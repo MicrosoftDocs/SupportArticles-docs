@@ -1,7 +1,7 @@
 ---
 title: Unable to mount Azure disk volumes
 description: Describes errors that occur when mounting Azure disk volumes fails, and provides solutions.
-ms.date: 05/17/2022
+ms.date: 09/05/2024
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
