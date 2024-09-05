@@ -40,12 +40,14 @@ Example log entry:
 
 If you have specific cipher suites configured in the Windows registry key `HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002`, these settings might be preventing the Windows Update client from establishing a secure connection.
 
-Important Cipher Suites to Check:
+Important cipher suites to check:
 
 - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
 - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA256
 
 Ensure that at least one of these cipher suites is present in your configuration.
+
+For more information about cipher suite, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 ### Step 3: Adjust cipher suite order
 
