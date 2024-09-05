@@ -20,12 +20,13 @@ A potential security vulnerability is identified in Power Automate for desktop v
 
 To mitigate the issue, update your Power Automate for desktop to the following patched versions as soon as possible.
 
-- [2.47](https://go.microsoft.com/fwlink/?linkid=2283602)
-- [2.46](https://go.microsoft.com/fwlink/?linkid=2283601)
-- [2.45](https://go.microsoft.com/fwlink/?linkid=2283504)
-- [2.44](https://go.microsoft.com/fwlink/?linkid=2283503)
-- [2.43](https://go.microsoft.com/fwlink/?linkid=2283280)
-- [2.42](https://go.microsoft.com/fwlink/?linkid=2283279)
+- [2.47.119.24249](https://go.microsoft.com/fwlink/?linkid=2283602)
+- [2.46.181.24249](https://go.microsoft.com/fwlink/?linkid=2283601)
+- [2.45.404.24249](https://go.microsoft.com/fwlink/?linkid=2283504)
+- [2.44.55.24249](https://go.microsoft.com/fwlink/?linkid=2283503)
+- [2.43.249.24249](https://go.microsoft.com/fwlink/?linkid=2283280)
+- [2.42.331.24249](https://go.microsoft.com/fwlink/?linkid=2283279)
+- [2.41.178.24249](https://go.microsoft.com/fwlink/?linkid=2285461)
 
 > [!NOTE]
 > Starting with release 2.48, all future versions will include the security fix.
