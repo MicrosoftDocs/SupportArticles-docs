@@ -2,7 +2,7 @@
 title: Leapp upgrade from RHEL 8.x to RHEL 9.x on SAP-HANA and SAP-APPS pay-as-you-go VMs
 description: Provides steps to help you upgrade SAP-HANA and SAP-APPS pay-as-you-go virtual machines from RHEL 8.x to RHEL 9.x by using the leapp tool.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 09/05/2024
+ms.date: 09/06/2024
 ms.service: azure-virtual-machines
 ms.topic: how-to
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
@@ -11,6 +11,9 @@ ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 # How to upgrade SAP-HANA and SAP-APPS pay-as-you-go virtual machines from RHEL 8.x to RHEL 9.x using leapp
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+> [!CAUTION]
+> Following the process in this article will cause a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure features such as [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [automatic operating system (OS) image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, we recommend to create a new VM using your preferred OS instead of performing an in-place upgrade.
 
 Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the leapp utility to upgrade Linux virtual machines (VMs) that use SAP-HANA or SAP-APPS pay-as-you-go (PAYG) images from RHEL 8.*x* to RHEL 9.*x*.
 
@@ -21,7 +24,7 @@ For more information about performing a leapp upgrade on custom, golden or PAYG 
 
 ## Prerequisites
 
-- Make a backup of the Linux virtual machine (VM) or a snapshot of the operating system (OS) disk.
+- Make a backup of the Linux VM or a snapshot of the OS disk.
 - Clear enough space in */var/lib/leapp* to accommodate the upgrade. A best practice is to have at least 2-5 GB of free space.
 - Set up access to the Serial Console.
 - Run the commands in this article with root privileges.
