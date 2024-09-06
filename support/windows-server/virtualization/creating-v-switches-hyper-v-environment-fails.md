@@ -50,7 +50,7 @@ To work around this issue, modify network bindings by using the following steps:
     Disable-NetAdapterBinding -Name "<Adapter Name>" -ComponentID "vms_pp"
     ```
 
-3. Run the first step again and confirm that the value of the `Enabled` property is `False`. This is to confirm that the binding has been removed.
+3. Take the first step again and confirm that the value of the `Enabled` property is `False`. This is to confirm that the binding has been removed.
 
 ## Workaround 2
 
