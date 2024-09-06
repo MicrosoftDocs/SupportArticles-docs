@@ -60,31 +60,31 @@ In the Serial Console Access instance, you can query the current status of the f
 
 * Query by using the Display Name as a parameter:
 
-    ```cmd
+    ```powershell
     netsh advfirewall firewall show rule dir=in name=all | select-string -pattern "(DisplayName.*<FIREWALL RULE NAME>)" -context 9,4 | more
     ```
 
 * Query by using the Local Port that the application uses:
 
-    ```cmd
+    ```powershell
     netsh advfirewall firewall show rule dir=in name=all | select-string -pattern "(LocalPort.*<APPLICATION PORT>)" -context 9,4 | more
     ```
 
 * Query by using the Local IP address that the application uses:
 
-    ```cmd
+    ```powershell
     netsh advfirewall firewall show rule dir=in name=all | select-string -pattern "(LocalIP.*<CUSTOM IP>)" -context 9,4 | more
     ```
 
 * If you see that the rule is disabled, you can enable it by running the following command:
 
-    ```cmd
+    ```powershell
     netsh advfirewall firewall set rule name="<RULE NAME>" new enable=yes
     ```
 
 * For troubleshooting, you can turn the firewall profiles OFF:
 
-    ```cmd
+    ```powershell
     netsh advfirewall set allprofiles state off
     ```
 
