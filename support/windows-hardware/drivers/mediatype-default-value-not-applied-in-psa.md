@@ -1,7 +1,7 @@
 ---
-title: The default setting for MediaType in the PSA isn't applied
-description: Provides a workaround for the problem where the default setting for MediaType in the print support app isn't applied.
-ms.date: 09/03/2024
+title: The default setting for MediaType in PSA isn't applied
+description: Provides a workaround for an issue where the default setting for MediaType in the print support app isn't applied.
+ms.date: 09/06/2024
 ms.reviewer: davean, jiannche
 ms.author: haiyingyu
 author: HaiyingYu
@@ -9,7 +9,7 @@ ms.custom: sap:Windows Store app UI
 ---
 # The default setting for MediaType in the print support app isn't applied
 
-This article helps you work around the problem that the default setting for MediaType in the [print support app (PSA)](/windows-hardware/drivers/devapps/print-support-app-design-guide) isn't applied in some specific scenarios.
+This article helps you work around an issue where the default setting for MediaType in the [print support app (PSA)](/windows-hardware/drivers/devapps/print-support-app-design-guide) isn't applied in some specific scenarios.
 
 ## Symptoms
 
@@ -21,7 +21,7 @@ Consider the following scenario:
 
 In this scenario, the default option isn't selected as expected when the print settings screen in the PSA is first displayed. Once the settings are saved, the issue no longer occurs.
 
-For instance, a ContosoMediaType is added to the PageMediaType feature and the print ticket is configured as follows. The default value of `AutoSelect` is set to `true` in the Print Schema, but another option is used as the default setting in fact.
+For instance, you add a `ContosoMediaType` to the `PageMediaType` feature and configure the print ticket as follows. In this case, `AutoSelect`, which is set to the default value of `true` in the Print Schema, should be the default setting, but another option is used as the default setting instead.
 
 ```xml
 <!-- media-type-supported -->
@@ -35,11 +35,11 @@ For instance, a ContosoMediaType is added to the PageMediaType feature and the p
 
 ## Cause
 
-This issue occurs because Windows.Graphics.Printing.Workflow.dll doesn't convert the Print Device Capability to a print ticket correctly. It's a problem with the Windows Print Workflow service.
+This issue occurs because *Windows.Graphics.Printing.Workflow.dll* doesn't correctly convert the PDC to a print ticket. It's a problem with the Windows Print Workflow service.
 
 ## Workaround
 
-To work around this issue, save the default option in the `PrintSupportExtensionSession.PrintDeviceCapabilitiesChanged` event handler of the PSA and restore the saved value when displaying the print settings dialog. The code samples in the following steps are based on the generic PSA samples provided by Microsoft.
+To work around this issue, save the default option in the `PrintSupportExtensionSession.PrintDeviceCapabilitiesChanged` event handler of the PSA and restore the saved value when the print settings dialog is displayed. The code samples in the following steps are based on the generic PSA samples provided by Microsoft.
 
 1. Add the following code to the `LocalStorageUtil` class in the background task of the PSA:
 
@@ -85,7 +85,7 @@ To work around this issue, save the default option in the `PrintSupportExtension
     }
     ```
 
-1. In the `PrintSupportExtensionSession.PrintDeviceCapabilitiesChanged` event handler, call the `SaveDefaultValues()` method to save the default values set in the Print Device Capabilities.
+1. In the `PrintSupportExtensionSession.PrintDeviceCapabilitiesChanged` event handler, call the `SaveDefaultValues()` method to save the default values set in the PDC.
 
     ```csharp
     private void OnSessionPrintDeviceCapabilitiesChanged(PrintSupportExtensionSession sender, PrintSupportPrintDeviceCapabilitiesChangedEventArgs args)
@@ -96,7 +96,7 @@ To work around this issue, save the default option in the `PrintSupportExtension
         // Add the custom media type.
         AddCustomMediaType(ref pdc, "http://schemas.contoso.com/keywords", "contoso:ContosoMediaType");
 
-        // Call the method to save the default values of the PDC
+        // Call the method to save the default values of the PDC.
         SaveDefaultValues(ref pdc);
 
         args.UpdatePrintDeviceCapabilities(pdc);
@@ -118,10 +118,10 @@ To work around this issue, save the default option in the `PrintSupportExtension
 
         var comboBox = new ComboBox
         {
-            // Header is displayed in the UI, ontop of the ComboBox.
+            // Header is displayed in the UI, on top of the ComboBox.
             Header = feature.DisplayName
         };
-        // Construct a new List since IReadOnlyList does not support the 'IndexOf' method.
+        // Construct a new list since IReadOnlyList does not support the 'IndexOf' method.
         var options = new ObservableCollection<PrintTicketOption>(feature.Options);
         // Provide the combo box with a list of options to select from.
         comboBox.ItemsSource = options;
@@ -166,7 +166,7 @@ To work around this issue, save the default option in the `PrintSupportExtension
 
         comboBox.SelectedIndex = options.IndexOf(selectedOption);
 
-        // Indicate that we have completed to loading default value from LocalStorageUtil.
+        // Indicate that we have completed loading the default value from LocalStorageUtil.
         LocalStorageUtil.LoadedDefaultValue(true);
         // ...
     }
