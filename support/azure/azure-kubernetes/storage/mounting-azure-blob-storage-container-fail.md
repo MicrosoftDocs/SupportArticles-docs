@@ -5,8 +5,8 @@ author: AndreiBarbu95
 ms.author: andbar
 ms.service: azure-kubernetes-service
 ms,subservice: troubleshoot-azure-storage-issues
-ms.date: 08/29/2024
-ms.reviewer: cssakscic, chiragpa 
+ms.date: 09/06/2024
+ms.reviewer: cssakscic, chiragpa
 ms.custom: sap:Storage
 ---
 # Errors when mounting an Azure Blob storage container
@@ -66,9 +66,9 @@ Here are the possible causes for this error:
 
 ### <a id="cause1-for-blobfuse-error2"></a>Cause 1: Kubernetes secret doesn't reference the correct storage account name or key
 
-If the Blob storage container is created [dynamically](/azure/aks/azure-csi-blob-storage-provision?tabs=mount-blobfuse%2Csecret#dynamically-provision-a-volume), a Kubernetes secret resource is automatically created with the name "azure-storage-account-\<storage-account-name>-secret".
+If the Blob storage container is created [dynamically](/azure/aks/azure-csi-blob-storage-provision#dynamically-provision-a-volume), a Kubernetes secret resource is automatically created with the name "azure-storage-account-\<storage-account-name>-secret".
 
-If the Blob storage container is created [manually](/azure/aks/azure-csi-blob-storage-provision?tabs=mount-blobfuse%2Csecret#statically-provision-a-volume), the Kubernetes secret resource should be created manually.
+If the Blob storage container is created [manually](/azure/aks/azure-csi-blob-storage-provision#statically-provision-a-volume), the Kubernetes secret resource should be created manually.
 
 Regardless of the creation method, if the storage account name or the key that's referenced in the Kubernetes secret mismatches the actual value, the mounting operation will fail with the "Permission denied" error.
 
