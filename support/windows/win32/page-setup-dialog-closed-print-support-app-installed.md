@@ -14,7 +14,7 @@ Consider the following scenario:
 
 - You're using Windows 10 22H2.
 - You're developing a print support app (PSA) for IPP-based printers.
-- You're using Notepad or Paint application.
+- You're using the Notepad or Paint application.
 
 In this scenario, after you install the PSA on the system, toggling the page orientation setting might cause the host application to crash. For example, in *notepad.exe*, you can see the issue in the **Page Setup** dialog, as shown in the following screenshot.
 
@@ -38,4 +38,4 @@ To work around this issue, follow these steps to switch the page orientation set
 
 1. Once you confirm that the PSA has been launched, you can modify the page orientation setting there.
 
-   :::image type="content" source="media/page-setup-dialog-closed-print-support-app-installed/toggle-page-orientation-setting.png" alt-text="Screenshot of toggling the Orientation setting.":::
+   :::image type="content" source="media/page-setup-dialog-closed-print-support-app-installed/modify-page-orientation-setting.png" alt-text="Screenshot of modifying the Orientation setting.":::
