@@ -29,13 +29,13 @@ Once connected, the version information will be displayed in parentheses, along 
 
 ## Method 2: Look at the first few lines of the Errorlog file
 
-Look at the first few lines of the Errorlog file for that instance. By default, the error log is located at `Program Files\Microsoft SQL Server\MSSQL.n\MSSQL\LOG\ERRORLOG` and _ERRORLOG.n_ files. The entries may resemble the following one:
+Look at the first few lines of the Errorlog file for that instance. By default, the error log is located at `Program Files\Microsoft SQL Server\MSSQL.n\MSSQL\LOG\ERRORLOG` in _ERRORLOG.n_ files. The entries may resemble the following one:
 
 ```output
 2024-09-05 16:56:22.35 Server      Microsoft SQL Server 2022 (RTM-CU14) (KB5038325) - 16.0.4135.4 (X64)  
 Jul 10 2024 14:09:09  
 Copyright (C) 2022 Microsoft Corporation 
-Developer Edition (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 22631: ) (Hypervisor)
+Developer Edition (64-bit) on Windows 11 Enterprise 10.0 <X64> (Build 22631: ) (Hypervisor)
 ```
 
 This entry provides information about the product, such as version, product level, 64-bit versus 32-bit, the edition of SQL Server, and the OS version on which SQL Server is running.
@@ -51,7 +51,7 @@ Select @@version
 Here's an example of the output of this query:
 
 ```output
-Microsoft SQL Server 2022 (RTM-CU14) (KB5038325) - 16.0.4135.4 (X64)   Jul 10 2024 14:09:09   Copyright (C) 2022 Microsoft Corporation  Developer Edition (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 22631: ) (Hypervisor) 
+Microsoft SQL Server 2022 (RTM-CU14) (KB5038325) - 16.0.4135.4 (X64)   Jul 10 2024 14:09:09   Copyright (C) 2022 Microsoft Corporation  Developer Edition (64-bit) on Windows 11 Enterprise 10.0 <X64> (Build 22631: ) (Hypervisor) 
 ```
 
 From the output, you're able to determine the version of the SQL Server product, the service pack level, the cumulative update level or the security update level (if applicable).
@@ -66,7 +66,7 @@ SELECT SERVERPROPERTY('productversion'), SERVERPROPERTY ('productlevel'), SERVER
 
 The following results are returned:
 
-- The product version (for example, 10.0.1600.22)
+- The product version (for example, 16.0.4135.4)
 - The product level (for example, RTM)
 - The edition (for example, Enterprise)
 
