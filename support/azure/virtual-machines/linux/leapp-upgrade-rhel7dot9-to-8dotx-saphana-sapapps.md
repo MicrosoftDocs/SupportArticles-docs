@@ -2,7 +2,7 @@
 title: Leapp upgrade from RHEL 7.9 to RHEL 8.x on SAP-HANA and SAP-APPS pay-as-you-go VMs
 description: Describes how to perform a leapp upgrade from RHEL 7.9 to RHEL 8.x on SAP-HANA and SAP-APPS pay-as-you-go virtual machines.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 09/04/2024
+ms.date: 09/06/2024
 ms.service: azure-virtual-machines
 ms.topic: how-to
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
@@ -11,6 +11,9 @@ ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 # How to upgrade SAP-HANA and SAP-APPS PAYG virtual machines from RHEL 7.9 to RHEL 8.x using leapp
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+> [!CAUTION]
+> Following the process in this article will cause a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure features such as [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [automatic operating system (OS) image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, we recommend to create a new VM using your preferred OS instead of performing an in-place upgrade.
 
 Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the leapp utility to upgrade Linux virtual machines (VMs) that use SAP-HANA or SAP-APPS pay-as-you-go (PAYG) images from RHEL 7.9 to RHEL 8.*x*.
 
@@ -21,7 +24,7 @@ For more information about performing a leapp upgrade on custom, golden or PAYG 
 
 ## Prerequisites
 
-- Make a backup of the Linux virtual machine (VM) or a snapshot of the operating system (OS) disk.
+- Make a backup of the Linux VM or a snapshot of the OS disk.
 - Clear enough space in */var/lib/leapp* to accommodate the upgrade. A best practice is to have at least 2-5 GB of free space.
 - Stop SAP processes during the OS update process.
 - Set up access to the Serial Console.
@@ -72,7 +75,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
    2. According to the SAP notes [2382421](https://launchpad.support.sap.com/#/notes/2382421) and [2292690](https://me.sap.com/notes/2292690), other settings recommended for SAP HANA are configured in the files */etc/sysctl.d/sap.conf* and */etc/sysctl.d/sap_hana.conf*. The settings in */etc/sysctl.d/sap_hana.conf* are applicable to both RHEL 7 and RHEL 8. However, the `kernel.sem` value in */etc/sysctl.d/sap.conf* for RHEL 7 is lower than the default value for RHEL 8. Therefore, remove the line that sets `kernel.sem` to `1250 256000 100 1024` from */etc/sysctl.d/sap.conf*. The `vm.max_map_count` setting is valid for both RHEL 7 and RHEL 8, so keep this setting unchanged.
 
-4. Upgrade your RHEL 7.9 system to the latest available RHEL 7 package versions:
+4. To make sure your RHEL 7.9 system is up-to-date, update all packages:
 
     ```bash
     sudo yum update
@@ -112,7 +115,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
     > [!NOTE]
     > If your VM is configured to start SAP processes automatically at boot time, disable this configuration.
 
-3. Upgrade your RHEL 7.9 system to the latest available RHEL 7 package versions:
+3. To make sure your RHEL 7.9 system is up-to-date, update all packages:
 
     ```bash
     sudo yum update
