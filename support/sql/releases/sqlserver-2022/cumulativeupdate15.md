@@ -16,16 +16,41 @@ _Version:_ &nbsp; 16.0.4145.2
 
 ## Summary
 
-This article describes Cumulative Update package 15 (CU15) for Microsoft SQL Server 2022. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 14, and it updates components in the following builds:
+This article describes Cumulative Update package 15 (CU15) for Microsoft SQL Server 2022. This update contains 13 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 14, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4145.2**, file version: **2022.160.4145.2**
 - Analysis Services - Product version: **16.0.43.233**, file version: **2022.160.43.233**
 
 ## Known issues in this update
 
-### Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
+### Issue one: Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
 
 [!INCLUDE [patching-error-2022](../includes/patching-error-2022.md)]
+
+### Issue two: SQL Server VSS Writer might fail to perform a backup because no database is available to freeze
+
+When backup tools such as Azure Recovery Vault perform a backup on a virtual machine (VM), they might fail to achieve application consistency. There might not be any errors. The application runs fast without any backups being done. The SQL Server Volume Shadow Copy Service (VSS) Writer ends up in a non-retryable error state. If you enable SQL Server VSS Writer trace, you might see the following exception, which indicates there's no database to freeze, resulting in an unsuccessful snapshot:
+
+```output
+[0543739500,0x002948:011b4:0xb87fa68e] sqlwriter.yukon\sqllib\snapsql.cpp(1058): Snapshot::Prepare: Server PROD-SQL01 has no databases to freeze
+```
+
+Additionally, some databases might be detected with `Online:0`:
+
+```output
+[0543739390,0x002948:0x11b4:0xb87fa68e] sqlwriter.yukon\sqllib\snapsql.cpp(0408): FrozenServer::FindDatabases2000: Examining database <ReportServerTempDB>
+Online:0 Standby:0 AutoClose:0 Closed:0
+```
+
+If you use Azure Recovery Vault, you might see an error like the following one in the event list:
+
+```output
+App-consistent recovery point generation failed.
+```
+
+The issue arises from a code change in SQL Server 2022 CU14 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2022 CU13 and perform the snapshot backup.
+
+Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ## Improvements and fixes included in this update
 
@@ -43,9 +68,10 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3287656>[3287656](#3287656) </a> | Fixes an assertion failure (Location: ListenerSpec.cpp:480; Expression: totalUsed + cbListenerName <= cbObj) that you encounter when creating a [distributed availability group (DAG)](/sql/database-engine/availability-groups/windows/distributed-availability-groups) and incorrectly specifying the number of availability groups in it to be other than two.| SQL Server Engine| High Availability and Disaster Recovery | All|
 | <a id=3301982>[3301982](#3301982) </a> | Fixes an assertion failure (Location: MetadataVersion.cpp:71; Expression: !CFeatureSwitchesMin::GetCurrentInstance()->FEntityVerStoreCsnCheckEnabled() \|\| newInfo != InvalidXts()) that you encounter when you try to change the database owner on a readable secondary replica of an Always On availability group.| SQL Server Engine| Metadata| All|
 | <a id=3338395>[3338395](#3338395) </a> | Fixes an issue in which PolyBase throws the following error at service startup if the SQL Server instance is configured to listen on multiple TCP ports: </br></br>System.ArgumentException: Unable to parse port, instance = '\<InstanceName>', text = '\<Text>'| SQL Server Engine| PolyBase| All|
+| <a id=3101865>[3101865](#3101865) </a> | Adds a validation for the `MODEL` parameter when running `PREDICT` to avoid errors due to the input of wrong models.| SQL Server Engine| Query Execution| All|
 | <a id=3181615>[3181615](#3181615) </a> | Adds a new security feature to implement change data capture (CDC) metadata data definition language (DDL) lockdown, preventing errors that might occur when running `sp_cdc_vupgrade` against a database with CDC disabled. | SQL Server Engine| Replication | All|
 | <a id=3338274>[3338274](#3338274) </a> | Fixes the following error 21890 that you encounter when you use the case-sensitive collation and run `sp_validate_redirected_publisher`: </br></br>The SQL Server instance '\<InstanceName>' with distributor '\<DistributorName>' and distribution database '\<DatabaseName>' cannot be used with publisher database '\<DatabaseName>'. Reconfigure the publisher to make use of distributor '\<DistributorName>' and distribution database '\<DatabaseName>'.| SQL Server Engine| Replication | All|
-| <a id=3362871>[3362871](#3362871) </a> | Fixes an issue with checkpoint operation in which the following error 2601 occurs when SQL Server tries to checkpoint a database that has change tracking enabled: </br></br>\<DateTime> Error: 2601, Severity: 14, State: 1. </br>\<DateTime> Cannot insert duplicate key row in object '\<ObjectName>' with unique index '\<IndexName>'. The duplicate key value is \<KeyValue>. | SQL Server Engine| Replication | All|
+| <a id=3362871>[3362871](#3362871) </a> | Fixes an issue with checkpoint operation in which the following error 2601 occurs when SQL Server tries to perform a checkpoint operation on the database that has change tracking enabled: </br></br>\<DateTime> Error: 2601, Severity: 14, State: 1. </br>\<DateTime> Cannot insert duplicate key row in object '\<ObjectName>' with unique index '\<IndexName>'. The duplicate key value is \<KeyValue>.  | SQL Server Engine| Replication | All|
 | <a id=3394373>[3394373](#3394373) </a> | Fixes an issue in which error 18752 occurs and transactional replication stops working when you use a heavy workload in combination with availability groups and after a failover occurs. </br></br>Error message: </br></br>Only one Log Reader Agent or log-related procedure (sp_repldone, sp_replcmds, and sp_replshowcmds) can connect to a database at a time. If you executed a log-related procedure, drop the connection with session ID \<SessionID> over which the procedure was executed or execute sp_replflush over that connection before starting the Log Reader Agent or executing another log-related procedure. | SQL Server Engine| Replication | Windows|
 | <a id=3325413>[3325413](#3325413) </a> | Before the fix, the SQL Server error log records many messages regarding starting or stopping extended events (XE) sessions. After applying the fix, starting or stopping XE sessions isn't logged by default. You can enable it by turning trace flag 9714 on. | SQL Server Engine| Storage Management| All|
 | <a id=3409327>[3409327](#3409327) </a> | Fixes an issue in which table and column names that are read from database metadata aren't correctly quoted in some cases when building internal SQL Server batches in stored procedures that manage temporal tables. After applying the fix, quoting is completed correctly.| SQL Server Engine| Temporal| All|
