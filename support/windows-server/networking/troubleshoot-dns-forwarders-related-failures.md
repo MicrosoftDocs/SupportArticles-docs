@@ -11,7 +11,7 @@ ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # Troubleshoot DNS name resolution failures related to DNS forwarders
 
-You have forwarders, conditional forwarders, or root hints configured to perform name lookups for external names. However, you can't resolve external names from clients by using nslookup or Resolve-DnsName. This article introduces how to troubleshoot Domain Name System (DNS) forwarder-related name resolution failures.
+You have forwarders, conditional forwarders, or root hints configured to perform name lookups for external names. However, you can't resolve external names from clients by using `nslookup` or `Resolve-DnsName`. This article introduces how to troubleshoot Domain Name System (DNS) forwarder-related name resolution failures.
 
 ## Analysis of the symptoms
 
@@ -20,14 +20,14 @@ You have forwarders, conditional forwarders, or root hints configured to perform
 2. Check whether all clients are facing the issue or only specific ones are.  
    By doing so, you can help isolate whether the issue is specific to a DNS forwarding server.
 3. Check the DNS server.  
-   - If the name resolution fails from the clients, also check whether the name resolution fails from your preferred DNS server configured.
+   - If the name resolution fails from the clients, check whether the name resolution also fails from your preferred DNS server configured.
    - Check whether the resolution fails from the DNS server itself. If so, you can rule out any issue with the client or the network between the client and the DNS server.
 
    :::image type="content" source="media/troubleshoot-dns-forwarders-related-failures/sample-of-how-dns-forwarder-works.png" alt-text="Screenshot showing a sample of how DNS forwarder works." border="true":::
 
 ## Troubleshooting flowchart
 
-:::image type="content" source="media/troubleshoot-dns-forwarders-related-failures/visual-diagram-of-troubleshooting-flowchart.png" alt-text="Visual diagram of the troubleshooting flowchart." lightbox="media/troubleshoot-dns-forwarders-related-failures/visual-diagram-of-troubleshooting-flowchart.png" border="true":::
+:::image type="content" source="media/troubleshoot-dns-forwarders-related-failures/visual-diagram-of-troubleshooting-flowchart.png" alt-text="Visual diagram of the troubleshooting flowchart." border="true":::
 
 ## Troubleshooting steps
 
@@ -129,7 +129,7 @@ If it's a third-party DNS server, contact the respective vendor.
 
 DNS name server 192.168.10.10 forwards the query to the first conditional forwarder 192.168.5.5. On the conditional forwarder, there's no host A record present for the name `NodeA` under the `fab.com` zone. In this case, the conditional forwarder responds to the DNS server with a "Name error" response. The DNS server will then forward the same response to the client. The DNS server won't contact the second conditional forwarder here as we already got a response from the first one. Usually, if this scenario occurs, you see the symptom that the resolution fails for certain names, not necessarily all the names of the `fab.com` domain.
 
-:::image type="content" source="media/troubleshoot-dns-forwarders-related-failures/network-flow-when-missing-records-on-forwarder.png" alt-text="Screenshot of a network flow when when there is missing records on the forwarder." border="true":::
+:::image type="content" source="media/troubleshoot-dns-forwarders-related-failures/network-flow-when-missing-records-on-forwarder.png" alt-text="Screenshot of a network flow when there are missing records on the forwarder." border="true":::
 
 **Resolution**: Register the missing records on the forwarder for the zone in question, either statically or dynamically.
 
