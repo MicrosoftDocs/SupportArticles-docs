@@ -156,14 +156,19 @@ Intune evaluates the Configuration Manager agent state based on the `ClientHealt
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\MDM`
 
-The following are possible values of `ClientHealthStatus`:
-
+The value found in `ClientHealthStatus` is a combination of multiple flags which include:
 - **1**: Client installed
 - **2**: Client registered
-- **5**: Client installed, but hasn't run Health Evaluation yet
-- **7**: Client healthy
+- **4**: Successful Health Evaluation
 - **8**: Client install or upgrade error
 - **16**: Communication error in management point
+
+The following are common values for `ClientHealthStatus`:
+- **1**: Client installed, but hasn't registered.
+- **3**: Client installed and registered, but hasn't reported a successful Health Evaluation yet.
+- **5**: Client installed, not currently registered, and sent a successful Health Evaluation (previously).
+- **7**: Client healthy
+- **23**: Client was healthy but had an error communicating with a management point.
 
 If the `ClientHealthStatus` value is **7** (healthy), Intune considers the Configuration Manager client as healthy if the `ClientHealthLastSyncTime` is not older than 30 days.
 
