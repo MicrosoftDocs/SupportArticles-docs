@@ -11,8 +11,6 @@ ms.custom: sap:Containers\Management of Containers, csstroubleshoot
 ---
 # Application Programming Interface (API) call of performance counters is delayed inside a container
 
-_Applies to:_ &nbsp; Windows Server Containers, Windows Server, version 1709, Windows Server, version 1803, Windows Server, version 1809, Windows Server, version 1903, Windows Server, version 1909, Windows Server, version 2004
-
 ## Symptoms
 
 Application calls to API performance counters inside a container running a Windows full image are delayed by 3 to 5 minutes. For example:  
