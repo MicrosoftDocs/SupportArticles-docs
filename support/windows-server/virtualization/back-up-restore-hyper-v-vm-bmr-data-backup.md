@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 3171712
 
 Consider the following scenario:
 
-- You have a Hyper-V host that's running Microsoft Windows Server 2012 R2.
+- You have a Hyper-V host that's running Microsoft Windows Server 2016, 2019 or 2022.
 - The Hyper-V Virtual Machines data resides somewhere other than on the system drive.
 - You back up VM data and BMR by using Windows Server Backup (WSB).
 
