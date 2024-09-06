@@ -2,7 +2,7 @@
 title: Perform leapp upgrade for RHEL PAYG virtual machines
 description: Provides steps to upgrade virtual machines that use RHEL pay-as-you-go images from RHEL 7 to RHEL 8 or RHEL 8 to RHEL 9.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 08/26/2024
+ms.date: 09/06/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.topic: how-to
 # How to perform leapp upgrade for RHEL PAYG virtual machines
 
 > [!CAUTION]
-> Following the process in this article will cause a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure capabilities such as [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, it's recommended to create a new VM using your preferred operating system instead of performing an in-place upgrade.
+> Following the process in this article will cause a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure features such as [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [automatic operating system (OS) image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [hotpatching](/windows-server/get-started/hotpatch#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, we recommended creating a new VM using your preferred OS instead of performing an in-place upgrade.
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
@@ -27,7 +27,7 @@ For more information about performing a leapp upgrade on custom, golden, or PAYG
 
 ## Prerequisites
 
-- Make a backup of the Linux VM or a snapshot of the operating system (OS) disk.
+- Make a backup of the Linux VM or a snapshot of the OS disk.
 - Clear enough space in */var/lib/leapp* to accommodate the upgrade. A best practice is to have at least 2-5 GB of free space.
 - Set up access to the Serial Console.
 - Run the commands in this article with root privileges.
