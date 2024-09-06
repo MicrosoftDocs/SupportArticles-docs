@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot cluster connection issues with the API server
 description: Troubleshoot issues that occur when you attempt to connect to the API server of an Azure Kubernetes Service (AKS) cluster.
-ms.date: 12/06/2021
-ms.reviewer: rissing chiragpa, v-leedennis
+ms.date: 08/30/2024
+ms.reviewer: rissing chiragpa, beleite, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting measures so that I can avoid cluster connectivity issues with the API server.
 ms.custom: sap:Connectivity
@@ -65,6 +65,6 @@ You can take these common troubleshooting steps to check the connectivity to the
 
 1. Make sure the [network security group that's associated with AKS nodes](/azure/aks/concepts-security#azure-network-security-groups) allows communication on TCP port 10250 within the AKS nodes.
 
-For other common troubleshooting steps, see [I'm receiving TCP timeouts when using kubectl or other third-party tools connecting to the API server](/azure/aks/troubleshooting#im-receiving-tcp-timeouts-when-using-kubectl-or-other-third-party-tools-connecting-to-the-api-server).
+For other common troubleshooting steps, see [TCP time-outs when kubectl or other third-party tools connect to the API server](tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

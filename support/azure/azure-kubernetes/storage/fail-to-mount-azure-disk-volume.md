@@ -4,7 +4,7 @@ description: Describes errors that occur when mounting Azure disk volumes fails,
 ms.date: 09/06/2024
 author: genlin
 ms.author: genli
-ms.reviewer: chiragpa, akscsscic
+ms.reviewer: chiragpa, akscsscic, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Storage
 ---
@@ -79,14 +79,14 @@ To use a ZRS disk, create a new storage class with `Premium_ZRS` or `StandardSSD
 
 For more information about parameters, see [Driver Parameters](/azure/aks/azure-csi-files-storage-provision#storage-class-parameters-for-dynamic-persistentvolumes)
 
-### Solution 3: Use Azure File
+### Solution 3: Use Azure Files
 
-[Azure File](/azure/storage/files/storage-files-introduction) is mounted by using SMB throughout network, so it's not associated with availability zones.
+[Azure Files](/azure/storage/files/storage-files-introduction) is mounted by using NFS or SMB throughout network and it's not associated with availability zones.
 
 For more information, see the following articles:
 
 - [Dynamically create Azure Files share](/azure/aks/azure-csi-files-storage-provision#dynamically-provision-a-volume)
-- [Statically create Azure Files share](/azure/aks/azure-csi-files-storage-provision#statically-provision-a-volume)
+- [Manually create Azure Files share](/azure/aks/azure-csi-files-storage-provision#statically-provision-a-volume)
 
 ## <a id="error2"></a>Client '\<client-ID>' with object id '\<object-ID>' doesn't have authorization to perform action over scope '\<disk name>' or scope is invalid
 

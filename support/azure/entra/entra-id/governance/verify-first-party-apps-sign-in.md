@@ -110,6 +110,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Microsoft Bing Search for Microsoft Edge|2d7f3606-b07d-41d1-b9d2-0d0c9296a6e8|
 |Microsoft Bing Default Search Engine|1786c5ed-9644-47b2-8aa0-7201292175b6|
 |Microsoft Defender for Cloud Apps|3090ab82-f1c1-4cdf-af2c-5d7a6f3e2cc7|
+|Microsoft Defender for Identity (formerly Radius Aad Syncer)|60ca1954-583c-4d1f-86de-39d835f3e452|
 |Microsoft Docs|18fbca16-2224-45f6-85b0-f7bf2b39b3f3|
 |Microsoft Dynamics ERP|00000015-0000-0000-c000-000000000000|
 |Microsoft Edge Insider Addons Prod|6253bca8-faf2-4587-8f2f-b056d80998a7|
