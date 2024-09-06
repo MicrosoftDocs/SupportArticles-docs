@@ -12,7 +12,7 @@ ms.reviewer: v-six
 
 # Determine which version and edition of SQL Server Database Engine is running
 
-This article describes the procedures to determine the version and edition of SQL Server Database Engine tha is running.
+This article describes the procedures to determine the version and edition of SQL Server Database Engine that is running.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 321185
@@ -48,13 +48,13 @@ Connect to the instance of SQL Server, and then run the following query:
 Select @@version
 ```
 
-An example of the output of this query is the following:
+Here's an example of the output of this query:
 
 ```output
 Microsoft SQL Server 2022 (RTM-CU14) (KB5038325) - 16.0.4135.4 (X64)   Jul 10 2024 14:09:09   Copyright (C) 2022 Microsoft Corporation  Developer Edition (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 22631: ) (Hypervisor) 
 ```
 
-From the output, you will be able to determine the version of the SQL Server product, the service pack level, the cumulative update level or the security update level (if applicable).
+From the output, you're able to determine the version of the SQL Server product, the service pack level, the cumulative update level or the security update level (if applicable).
 
 ## Method 4: Use the function SERVERPROPERTY
 
