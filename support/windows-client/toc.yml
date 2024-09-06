@@ -927,6 +927,8 @@ items:
       href: ./shell-experience/recycle-bin-corrupted.md
     - name: Renaming a network folder fails
       href: ./shell-experience/renaming-a-network-folder-fails.md
+    - name: "Scenario guide: Infinite black screen after you sign in to the system"
+      href: ./shell-experience/scenario-guide-infinite-black-screen-after-sign-in.md
     - name: Support of whitespace characters in file and folder names
       href: ./shell-experience/file-folder-name-whitespace-characters.md
   - name: Kiosk mode
