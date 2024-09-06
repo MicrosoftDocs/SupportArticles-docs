@@ -59,7 +59,7 @@ The Azure portal provides a quick way to reset the SSH configuration or user cre
 
 To begin, select your VM in the Azure portal. Scroll down to the **Help** section and select **Reset password** as in the following example:
 
-:::image type="content" source="media/troubleshoot-ssh-connection/reset-credentials-using-portal.png" alt-text="Screenshot to reset the S S H configuration or credentials in the Azure portal.":::
+:::image type="content" source="media/troubleshoot-ssh-connection/reset-credentials-using-portal.png" alt-text="Screenshot to reset the SSH configuration or credentials in the Azure portal.":::
 
 ### Reset the SSH configuration
 
