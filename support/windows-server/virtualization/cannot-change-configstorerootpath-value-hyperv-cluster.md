@@ -9,11 +9,11 @@ localization_priority: medium
 ms.reviewer: kaushika, akshittu, maperric, v-lianna
 ms.custom: sap:Virtualization and Hyper-V\High availability virtual machines, csstroubleshoot
 ---
-# Can't change the ConfigStoreRootPath value of a Hyper-V cluster in Windows Server
+# Can't change the ConfigStoreRootPath value of a Hyper-V Cluster in Windows Server
 
 _Original KB number:_ &nbsp; 4488568
 
-When configuring the cluster resources of a Hyper-V cluster in Windows Server 2016 and Windows Server 2019, assume that you have already set a value of the `ConfigStoreRootPath` attribute by using the following cmdlet:
+When configuring the cluster resources of a Hyper-V Cluster in Windows Server, assume that you have already set a value of the `ConfigStoreRootPath` attribute by using the following cmdlet:
 
 ```powershell
 Get-ClusterResource -Cluster "Virtual Machine Cluster WMI" | Set-ClusterParameter -Name ConfigStoreRootPath -Value <Value>
