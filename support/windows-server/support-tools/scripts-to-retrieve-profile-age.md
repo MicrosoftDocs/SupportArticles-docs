@@ -16,7 +16,7 @@ Assume that you have set the [Delete user profiles older than a specified number
 > [!NOTE]
 > A WMI provider can also be used to configure profile handling, and could override the Group Policy setting. Microsoft System Center Configuration Manager (SCCM) is an example of software that can do this.
 
-_Applies to:_ &nbsp; Windows 10, Windows 11, Windows Server 2019, Windows Server 2022, and later versions of Windows
+_Applies to:_ &nbsp; Windows 10, Windows 11, Windows Server 2019, and later versions of Windows
 
 ## Details
 
