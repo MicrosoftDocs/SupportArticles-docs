@@ -109,7 +109,7 @@ System audit policy
 Category/Subcategory                      Setting
 Logon/Logoff
   Network Policy Server                   Success and Failure
-
+```
 
 If it says, "No auditing," you can run this command to enable it:
 
