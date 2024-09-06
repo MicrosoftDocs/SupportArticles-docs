@@ -48,9 +48,11 @@ These errors often contain detailed descriptions of what went wrong in the clust
 
 ## View error details in the Azure portal
 
-To view the details about errors in the [Azure portal](https://portal.azure.com), use [Activity Log](/azure/azure-monitor/essentials/activity-log). To open the Activity Log in the Azure portal, search on **Activity log**. Or, select **Notifications** (the bell icon), and then select **More events in the activity log**.
+To view the details about AKS cluster creation errors in the [Azure portal](https://portal.azure.com), open the [Activity Log](/azure/azure-monitor/essentials/activity-log). You can use the filter to refine the results to fit your needs. To do this, select **Add Filter** to add more properties to the filter.
 
-In the **Activity Log** page, you locate log entries where the **Operation name** column shows **Create or Update Managed Cluster**.
+:::image type="content" source="media/troubleshoot-aks-cluster-creation-issues/exploring-activitylog-azportal-visualy-filtering.png" alt-text="Screenshot of how to add filter." lightbox="media/troubleshoot-aks-cluster-creation-issues/exploring-activitylog-azportal-visualy-filtering.png":::
+
+In the **Activity Log** page, locate log entries where the **Operation name** column shows **Create or Update Managed Cluster**.
 
 The **Event initiated by** column shows the user who performed the operation, which could be a work, school account, or [Azure managed identity](/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities).
 
@@ -95,9 +97,6 @@ Here is an example of the detailed log in JSON format:
 }
 ```
 
-To best use of Activity Logs on portal reading the findings use filter section and create new to accurate your query.
-
-![exploring azure portal activity log filtering by interest](media/troubleshoot-aks-cluster-creation-issues/exploring-activitylog-azportal-visualy-filtering.png)
 
 ## View cluster insights
 
