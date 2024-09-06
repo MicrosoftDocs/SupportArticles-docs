@@ -79,7 +79,7 @@ To use a ZRS disk, create a new storage class with `Premium_ZRS` or `StandardSSD
 
 For more information about parameters, see [Driver Parameters](https://github.com/kubernetes-sigs/azuredisk-csi-driver/blob/master/docs/driver-parameters.md)
 
-### Solution 3: Use Azure File
+### Solution 3: Use Azure Files
 
 [Azure Files](/azure/storage/files/storage-files-introduction) is mounted by using NFS or SMB throughout network and it's not associated with availability zones.
 
