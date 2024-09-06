@@ -28,8 +28,8 @@ The correct data for the registry values are:
 
 |Value name  |Value type  |Value data  |
 |---------|---------|---------|
-|LogicalShare     |REG_SZ         |DFS1         |
-|RootShare     |REG_SZ         |DFS1         |
+|`LogicalShare`     |`REG_SZ`         |`DFS1`         |
+|`RootShare`     |`REG_SZ`         |`DFS1`         |
 
 ### For domain stand-alone DFS Namespaces
 
@@ -41,8 +41,8 @@ The correct data for the registry values are:
 
 |Value name  |Value type  |Value data  |
 |---------|---------|---------|
-|LogicalShare     |REG_SZ         |DFS2St         |
-|RootShare     |REG_SZ         |DFS2St         |
+|`LogicalShare`     |`REG_SZ`         |`DFS2St`         |
+|`RootShare`     |`REG_SZ`         |`DFS2St`         |
 
 #### Wireshark trace example
 
