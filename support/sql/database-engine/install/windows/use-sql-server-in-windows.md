@@ -1,7 +1,7 @@
 ---
 title: SQL Server in Windows operating system
 description: This article describes how to use SQL Server in Windows 8, Windows 8.1, Windows Server 2012, and Windows Server 2012 R2 environments.
-ms.date: 05/30/2022
+ms.date: 09/06/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: ramakoni, randolphwest
 ---
@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 2681562
 
 How to use this article:
 
-- Use the following table to find out the minimum requirements for the SQL Server version you are trying to install for the corresponding OS.
+- Use the following table to find out the minimum requirements for the SQL Server version you're trying to install for the corresponding OS.
 
 - Use the links in the **Hardware and Software Requirements page** row to see specific details about the hardware and software requirements for each version of SQL Server.
 
