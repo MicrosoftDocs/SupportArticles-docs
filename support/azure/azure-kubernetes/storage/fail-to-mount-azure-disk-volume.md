@@ -1,7 +1,7 @@
 ---
 title: Unable to mount Azure disk volumes
 description: Describes errors that occur when mounting Azure disk volumes fails, and provides solutions.
-ms.date: 05/17/2022
+ms.date: 09/05/2024
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
@@ -85,8 +85,8 @@ For more information about parameters, see [Driver Parameters](https://github.co
 
 For more information, see the following articles:
 
-- [Dynamically create Azure Files share](/azure/aks/azure-files-dynamic-pv)
-- [Manually create Azure Files share](/azure/aks/azure-files-volume)
+- [Dynamically create Azure Files share](/azure/aks/azure-csi-files-storage-provision#dynamically-provision-a-volume)
+- [Manually create Azure Files share](/azure/aks/azure-csi-files-storage-provision#statically-provision-a-volume)
 
 ## <a id="error2"></a>Client '\<client-ID>' with object id '\<object-ID>' doesn't have authorization to perform action over scope '\<disk name>' or scope is invalid
 

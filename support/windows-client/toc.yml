@@ -927,6 +927,8 @@ items:
       href: ./shell-experience/recycle-bin-corrupted.md
     - name: Renaming a network folder fails
       href: ./shell-experience/renaming-a-network-folder-fails.md
+    - name: "Scenario guide: Infinite black screen after you sign in to the system"
+      href: ./shell-experience/scenario-guide-infinite-black-screen-after-sign-in.md
     - name: Support of whitespace characters in file and folder names
       href: ./shell-experience/file-folder-name-whitespace-characters.md
   - name: Kiosk mode
@@ -1265,10 +1267,6 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
     - name: How to downgrade from Windows 8
       href: ./installing-updates-features-roles/downgrade-from-windows-8.md
-    - name: How to get updates via Windows Update
-      href: ./installing-updates-features-roles/get-updates-through-windows-update.md    
-    - name: Install Service Packs and Hotfixes
-      href: ./installing-updates-features-roles/install-service-packs-hotfixes.md
     - name: Package Manager can install only the first package
       href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
   - name: Issues installing Features on Demand (FoD)
