@@ -39,7 +39,7 @@ This issue occurs because *Windows.Graphics.Printing.Workflow.dll* doesn't corre
 
 ## Workaround
 
-To work around this issue, save the default option in the `PrintSupportExtensionSession.PrintDeviceCapabilitiesChanged` event handler of the PSA and restore the saved value when the print settings dialog is displayed. The code samples in the following steps are based on the generic PSA samples provided by Microsoft.
+To work around this issue, save the default option in the `PrintSupportExtensionSession.PrintDeviceCapabilitiesChanged` event handler of the PSA and restore the saved value when initializing the print settings dialog. The code samples in the following steps are based on the generic PSA samples provided by Microsoft.
 
 1. Add the following code to the `LocalStorageUtil` class in the background task of the PSA:
 
