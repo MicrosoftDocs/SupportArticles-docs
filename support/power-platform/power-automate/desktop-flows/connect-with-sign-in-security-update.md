@@ -12,7 +12,7 @@ ms.date: 09/04/2024
 A potential security vulnerability is identified in Power Automate for desktop versions 2.47 and earlier.
 
 > [!IMPORTANT]
-> The issue affects only machines that are joined to an Active Directory (AD) domain,  not those joined to Microsoft Entra ID. If an attacker can access a machine that isn't registered to your Power Automate environment, they can register it to their own Power Automate environment and then run arbitrary attended desktop flows into your Windows session when it's open and unlocked.
+> The issue affects only machines that are joined to an Active Directory (AD) domain, not those joined to Microsoft Entra ID. If an attacker can access a machine that isn't registered to your Power Automate environment, they can register it to their own Power Automate environment and then run arbitrary attended desktop flows into your Windows session when it's open and unlocked.
 >
 > If a machine is Microsoft Entra-joined or isn't AD domain-joined, it isn't vulnerable.
 
