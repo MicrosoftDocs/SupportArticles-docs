@@ -6,7 +6,7 @@ editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), devx-track-azurecli
-#Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting measures to resolve issues that occur when I try to create or deploy an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to use basic troubleshooting methods to resolve issues that occur when I try to create or deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Basic troubleshooting of AKS cluster creation issues
 
@@ -20,7 +20,7 @@ This article outlines the basic troubleshooting methods to use if you can't crea
 
 ## View errors from Azure CLI
 
-If the operation fails when creating clusters with Azure CLI, errors will be displayed in the output. Here's a sample Azure CLI command and output:
+If the operation fails when you try to create clusters by using Azure CLI, the output displays error information. Here's a sample Azure CLI command and output:
 
 ```azurecli-interactive
 # Create a cluster specifying subnet
@@ -44,19 +44,19 @@ The sample output shows:
 - **Error code**: `ControlPlaneAddOnsNotReady`
 - **Error message**: `Pods not in Running status: konnectivity-agent-67f7f5554f-nsw2g,konnectivity-agent-8686cb54fd-xlsgk,metrics-server-6bc97b47f7-dfhbr,coredns-845757d86-7xjqb,coredns-autoscaler-5f85dc856b-mxkrj`.
 
-These errors often contain detailed descriptions of what went wrong in the cluster creation, and they provide links to articles that contain more details. Additionally, you can use our troubleshooting articles as a reference based on the error that an Azure CLI operation produces.
+These descriptions often contain details of what went wrong in the cluster creation, and they link to articles that contain even more details. Additionally, you can use our troubleshooting articles as a reference, based on the errors that the Azure CLI operation produces.
 
 ## View error details in the Azure portal
 
-To view the details about AKS cluster creation errors in the [Azure portal](https://portal.azure.com), open the [Activity Log](/azure/azure-monitor/essentials/activity-log). You can use the filter to refine the results to fit your needs. To do this, select **Add Filter** to add more properties to the filter.
+To investigate the AKS cluster creation errors in the [Azure portal](https://portal.azure.com), open the [Activity Log](/azure/azure-monitor/essentials/activity-log). You can filter the results to fit your needs. To do this, select **Add Filter** to add more properties to the filter.
 
 :::image type="content" source="media/troubleshoot-aks-cluster-creation-issues/exploring-activitylog-azportal-visualy-filtering.png" alt-text="Screenshot of how to add filter." lightbox="media/troubleshoot-aks-cluster-creation-issues/exploring-activitylog-azportal-visualy-filtering.png":::
 
-In the **Activity Log** page, locate log entries where the **Operation name** column shows **Create or Update Managed Cluster**.
+On the **Activity Log** page, locate log entries in which the **Operation name** column shows **Create or Update Managed Cluster**.
 
-The **Event initiated by** column shows the user who performed the operation, which could be a work, school account, or [Azure managed identity](/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities).
+The **Event initiated by** column shows the user who performed the operation, which could be a work account, a school account, or an [Azure managed identity](/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities).
 
-If the operation is successful, the **Status** column value shows **Accepted**. You'll also see suboperation entries for the creation of the cluster components, such as the following operation names:
+If the operation is successful, the **Status** column value is **Accepted**. You'll also see suboperation entries for the creation of the cluster components, such as the following operation names:
 
 - **Create or Update Route Table**
 - **Create or Update Network Security Group**
@@ -66,17 +66,17 @@ If the operation is successful, the **Status** column value shows **Accepted**. 
 - **Create role assignment**
 - **Update resource group**
 
-In these suboperation entries, the **Status** value is **Succeeded**, and the **Event initiated by** field is set to **AzureContainerService**.
+In these suboperation entries, the **Status** value is **Succeeded** and the **Event initiated by** field is set to **AzureContainerService**.
 
 :::image type="content" source="media/troubleshoot-aks-cluster-creation-issues/exploring-activitylog-azportal-visualy.png" alt-text="Screenshot of the view in Activity log." lightbox="media/troubleshoot-aks-cluster-creation-issues/exploring-activitylog-azportal-visualy.png":::
 
-What if an error occurred instead? In that case, the **Create or Update Managed Cluster** operation **Status** field shows **Failed**. Unlike in the operations to create cluster components, here you must expand the failed operation entry to review the suboperation entries. Typical suboperation names are policy actions, such as **'audit' Policy action** and **'auditIfNotExists' Policy action.** Some of the suboperations will continue to show that they succeeded.
+What if an error occurred instead? In that case, the **Status** value is **Failed**. Unlike in the operations to create cluster components, you must expand the failed suboperation entries to review them. Typical suboperation names are policy actions, such as **'audit' Policy action** and **'auditIfNotExists' Policy action.** Not all suboperations necessarily fail together. You can expect to see some of them succeed.
 
-To further investigate, you can select one of the failed suboperations. Review **Summary**, **JSON**, and **Change History** to troubleshoot the issue. The **JSON** field contains the output text for the error in JSON format, and it usually provides the most helpful information.
+Select one of the failed suboperations to further investigate it. Select the **Summary**, **JSON**, and **Change History** tabs to troubleshoot the issue. The **JSON** tab contains the output text for the error in JSON format, and it usually provides the most helpful information.
 
-:::image type="content" source="media/troubleshoot-aks-cluster-creation-issues/exploring-activitylog-azportal-visualy-json.png" alt-text="Screenshot ofthe detailed log in JSON format." lightbox="media/troubleshoot-aks-cluster-creation-issues/exploring-activitylog-azportal-visualy-json.png":::
+:::image type="content" source="media/troubleshoot-aks-cluster-creation-issues/exploring-activitylog-azportal-visualy-json.png" alt-text="Screenshot of the detailed log in JSON format." lightbox="media/troubleshoot-aks-cluster-creation-issues/exploring-activitylog-azportal-visualy-json.png":::
 
-Here is an example of the detailed log in JSON format:
+Here's an example of the detailed log in JSON format:
 
 ```JSON
 {
@@ -114,14 +114,14 @@ Was the cluster created in the Azure portal, and is it visible there? If this is
 
 ## View resources in the Azure portal
 
-In the Azure portal, you might want to view the resources that were created when the cluster was built. Typically, these resources are in a resource group that begins in *MC_*. The managed cluster resource group might have a name such as **MC_MyResourceGroup_MyManagedCluster_\<location-code>**. However, the name may be different if you built the cluster by using a custom-managed cluster resource group.
+In the Azure portal, you might want to view the resources that were created when the cluster was built. Typically, these resources are in a resource group whose name begins in *MC_*. The managed cluster resource group might have a name such as **MC_MyResourceGroup_MyManagedCluster_\<location-code>**. However, the name may be different if you built the cluster by using a custom-managed cluster resource group.
 
 To find the resource group, search for and select **Resource groups** in the Azure portal, and then select the resource group in which the cluster was created. The resource list is shown in the **Overview** page of the resource group.
 
 > [!WARNING]
-> We recommend that you don't modify resources in the *MC_* resource group. This action might cause unwanted effects on your AKS cluster.
+> We recommend that you don't modify resources in the *MC_* resource group. This action might adversely affect your AKS cluster.
 
-To review the status of a virtual machine scale set, you can select the scale set name within the list of resources for the resource group. It might have a **Name** similar to **aks-nodepool1-12345678-vmss**, and it would have a **Type** value of **Virtual machine scale set**. The status of the scale set appears at the top of the node pool's **Overview** page, and more details are shown in the **Essentials** heading. If deployment was unsuccessful, the displayed status is **Failed**.
+To review the status of a virtual machine scale set, you can select the scale set name within the list of resources for the resource group. It might have a **Name** value that resembles **aks-nodepool1-12345678-vmss**, and it a **Type** value of **Virtual machine scale set**. The status of the scale set appears at the top of the node pool's **Overview** page, and more details are shown in the **Essentials** heading. If deployment was unsuccessful, the displayed status is **Failed**.
 
 For all resources, you can review details to gain a better understanding about why the deployment failed. For a scale set, you can select the **Failed** status text to view details about the failure. The details are in a row that contains **Status**, **Level**, and **Code** columns. The following example shows a row of column values.
 
@@ -138,21 +138,21 @@ Select the row to see the **Message** field. This contains even more information
 Armed with this information, you can conclude that the VMs in the scale set failed and generated exit status 50.
 
 > [!NOTE]
-> If the cluster deployment didn't reach the point where these resources were created, you might not be able to review the managed cluster resource group in the Azure portal.
+> If the cluster deployment didn't reach the point at which these resources would have been created, you might not be able to review the managed cluster resource group in the Azure portal.
 
 ## Use Kubectl commands
 
-For another option to help troubleshoot errors on your cluster, enter kubectl commands to get details about the resources that were deployed in the cluster. To use kubectl, first sign in to your AKS cluster:
+For another option to help troubleshoot errors on your cluster, use kubectl commands to get details about the resources that were deployed in the cluster. To do this, first sign in to your AKS cluster:
 
 ```azurecli-interactive
 az aks get-credentials --resource-group MyResourceGroup --name MyManagedCluster
 ```
 
-Depending on the type of failure and when it occurred, you might not be able to sign in to your cluster to get more details. But in general, if your cluster was created and shows up in the Azure portal, you should be able to sign in and run kubectl commands.
+Depending on the type of failure and when it occurred, you might not be able to sign in to your cluster to get more details. But if your cluster was created and appears in the Azure portal, you should be able to sign in and run kubectl commands.
 
 ### View cluster nodes (kubectl get nodes)
 
-To get more details to determine the state of the nodes, view the cluster nodes by entering the [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) nodes command. In this example, no nodes are reporting in the cluster:
+To determine the state of the cluster nodes, view the nodes by running the kubectl [get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) nodes command. In this example, no nodes are reporting in the cluster:
 
 ```console
 $ kubectl get nodes
@@ -176,7 +176,7 @@ metrics-server-6bc97b47f7-dfhbr       0/1     Pending   0          77m
 
 ### Describe the status of a pod (kubectl describe pod)
 
-By describing the status of the pods, you can view the configuration details and any events that have occurred on the pods. Run the [kubectl describe](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) pod command:
+By describing the status of the pods, you can view the configuration details and any events that have occurred on the pods. Run the kubectl [describe](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) pod command:
 
 ```console
 $ kubectl describe pod coredns-845757d86-7xjqb -n kube-system
