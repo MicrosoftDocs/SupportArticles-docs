@@ -152,7 +152,7 @@ Depending on the type of failure and when it occurred, you might not be able to 
 
 ### View cluster nodes (kubectl get nodes)
 
-To determine the state of the cluster nodes, view the nodes by running the [`kubectl get`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) nodes command. In this example, no nodes are reporting in the cluster:
+To determine the state of the cluster nodes, view the nodes by running the [`kubectl get nodes`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) command. In this example, no nodes are reporting in the cluster:
 
 ```console
 $ kubectl get nodes
@@ -176,7 +176,7 @@ metrics-server-6bc97b47f7-dfhbr       0/1     Pending   0          77m
 
 ### Describe the status of a pod (kubectl describe pod)
 
-By describing the status of the pods, you can view the configuration details and any events that have occurred on the pods. Run the [`kubectl describe`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) pod command:
+By describing the status of the pods, you can view the configuration details and any events that have occurred on the pods. Run the [`kubectl describe pods`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) command:
 
 ```console
 $ kubectl describe pod coredns-845757d86-7xjqb -n kube-system
