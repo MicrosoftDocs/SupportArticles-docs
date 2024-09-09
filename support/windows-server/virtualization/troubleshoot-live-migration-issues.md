@@ -281,11 +281,11 @@ VM cannot be moved to destination computer
 
 HW on destination is not compatible with HW requirements of VM
 
-When a Hyper-V VM is created processor features are exposed to guest VMs. At boot-time guest VM kernels will make decisions based on the availability of these features. Migration of a VM that was booted on the NEW system with side channel mitigation features to an OLD system without side channel mitigation features could expose the customer to these side channel attacks and thus is prevented.
+When a Hyper-V VM is created processor features are exposed to guest VMs. At boot-time guest VM kernels will make decisions based on the availability of these features. Migration of a VM that was booted on the new system with side channel mitigation features to an old system without side channel mitigation features could expose the customer to these side channel attacks and is prevented.
 
 **Action**
 
-As a workaround at a cluster level the best option is to live migrate VMs only from "OLD" to "NEW" uCode revisions. Since VMs on the "OLD" hosts will have software mitigations for side channel attacks enabled they will not become vulnerable when moved to "NEW" hosts.
+As a workaround at a cluster level the best option is to live migrate VMs only from old to new uCode revisions. Since VMs on the old hosts will have software mitigations for side channel attacks enabled they will not become vulnerable when moved to new hosts.
 
 #### Failed live migrate because "Virtual Machine Name" is using processor-specific features not supported on host "Node 1."
 
