@@ -12,7 +12,7 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 07/22/2024
+ms.date: 09/09/2024
 ms.author: genli
 ---
 # Troubleshoot SSH connections to an Azure Linux VM that fails, errors out, or is refused
