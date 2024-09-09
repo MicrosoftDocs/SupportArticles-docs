@@ -1,17 +1,17 @@
 ---
-title: SQL Server in Windows operating system
-description: This article describes how to use SQL Server in Windows 8, Windows 8.1, Windows Server 2012, and Windows Server 2012 R2 environments.
-ms.date: 09/06/2024
+title: Version requirements for SQL Server in Windows operating system
+description: This article describes the version requirements for SQL Server in Windows operating system.
+ms.date: 09/09/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
-ms.reviewer: ramakoni, randolphwest
+ms.reviewer: randolphwest
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
 --->
 
-# Using SQL Server in Windows
+# Version requirements for SQL Server in Windows operating system
 
-This article contains guidance about how to use different versions of Microsoft SQL Server on a computer that is running Windows operating system.
+This article describes the version requirements for SQL Server in Windows operating system.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2681562
@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 2681562
 ## Summary
 
 > [!NOTE]
-> Unless noted otherwise, when an OS is supported for a SQL Major version, it remains supported for all subsequent servicing releases. For example, if SQL Server 2016 RTM is supported on Windows 10, this implies that any CUs on top of SQL Server 2016 RTM or SQL Server 2016 Service Pack 1 (SP1) are supported on Windows 10.
+> Unless noted otherwise, when an OS is supported for a SQL Major version, it remains supported for all subsequent servicing releases. For example, if SQL Server 2016 release to manufacturing (RTM) is supported on Windows 10, this implies that any CUs on top of SQL Server 2016 RTM or SQL Server 2016 Service Pack 1 (SP1) are supported on Windows 10.
 
 How to use this article:
 
