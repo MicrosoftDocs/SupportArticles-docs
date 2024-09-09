@@ -12,7 +12,7 @@ ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replicat
 
 This article helps resolve the error "The namespace cannot be queried. The specified server cannot perform the requested operation."
 
-When you access, modify, or create a Distributed File System (DFS) namespace on a DFS namespace server, domain member server, or Windows client with File Services Tools (included in Remote Server Administration Tools (RSAT)) installed, You might receive the following error message:
+When you access, modify, or create a Distributed File System (DFS) namespace on a DFS namespace server, domain member server, or Windows client with File Services Tools (included in Remote Server Administration Tools (RSAT)) installed, you might receive the following error message:
 
 > The namespace cannot be queried. The specified server cannot perform the requested operation
 
