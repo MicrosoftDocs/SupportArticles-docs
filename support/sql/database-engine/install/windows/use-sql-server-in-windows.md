@@ -9,7 +9,7 @@ ms.reviewer: randolphwest
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
 --->
 
-# Version requirements for SQL Server in the Windows operating system
+# Version requirements for SQL Server in Windows operating system
 
 This article describes the version requirements for SQL Server in Windows operating system (OS).
 
