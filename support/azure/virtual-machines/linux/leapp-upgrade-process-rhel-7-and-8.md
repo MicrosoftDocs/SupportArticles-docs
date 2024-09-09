@@ -2,7 +2,7 @@
 title: Perform leapp upgrade for RHEL PAYG virtual machines
 description: Provides steps to upgrade virtual machines that use RHEL pay-as-you-go images from RHEL 7 to RHEL 8 or RHEL 8 to RHEL 9.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 09/06/2024
+ms.date: 09/09/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.topic: how-to
@@ -21,9 +21,9 @@ Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensur
 
 For more information about performing a leapp upgrade on custom, golden, or PAYG images provided by Red Hat, see the following articles:
 
-- [Upgrading from RHEL 7 to RHEL 8](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index)
+- [Upgrading from RHEL 7 to RHEL 8](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index)
 
-- [Upgrading from RHEL 8 to RHEL 9](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/upgrading_from_rhel_8_to_rhel_9/index)
+- [Upgrading from RHEL 8 to RHEL 9](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/upgrading_from_rhel_8_to_rhel_9/index)
 
 ## Prerequisites
 
