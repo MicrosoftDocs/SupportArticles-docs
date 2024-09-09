@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
-ms.date: 11/04/2021
+ms.date: 09/09/2024
 ms.author: genli
 
 ms.custom: sap:Cannot connect to my VM
@@ -174,7 +174,7 @@ See [How to Enable-Disable a Firewall rule on a Guest OS](enable-disable-firewal
     reg unload HKLM\BROKENSYSTEM
     ```
 
-5. [Detach the system disk and re-create the VM](troubleshoot-recovery-disks-portal-windows#swap-the-failed-vms-os-disk-with-the-repaired-disk).
+5. [Detach the system disk and re-create the VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk).
 
 6. Check whether the issue is resolved.
 
