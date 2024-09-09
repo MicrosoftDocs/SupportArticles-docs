@@ -39,7 +39,7 @@ It is highly recommended to use USER assigned identity (option --assign-identity
 (ControlPlaneAddOnsNotReady) Pods not in Running status: konnectivity-agent-67f7f5554f-nsw2g,konnectivity-agent-8686cb54fd-xlsgk,metrics-server-6bc97b47f7-dfhbr,coredns-845757d86-7xjqb,coredns-autoscaler-5f85dc856b-mxkrj
 ```
 
-The sample output shows:
+You can identify the error code and error message from the output. In this case, they are:
 
 - **Error code**: `ControlPlaneAddOnsNotReady`
 - **Error message**: `Pods not in Running status: konnectivity-agent-67f7f5554f-nsw2g,konnectivity-agent-8686cb54fd-xlsgk,metrics-server-6bc97b47f7-dfhbr,coredns-845757d86-7xjqb,coredns-autoscaler-5f85dc856b-mxkrj`.
