@@ -1,7 +1,7 @@
 ---
 title: Windows setup log file locations
 description: Describes the setup log file locations for each setup phase of Windows Vista, Windows 7, Windows Server 2008 R2, Windows 8.1, and Windows 10 Version 1607.
-ms.date: 12/26/2023
+ms.date: 09/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -56,9 +56,10 @@ The Windows Preinstallation Environment (Windows PE or WinPE) phase is the Windo
 The online configuration phase (the first boot phase) starts when you receive the following messages:
 
 > Please wait a moment while Windows prepares to start for the first time.  
->   or
-> 
-> Working on updates NN%   
+
+Or
+
+> Working on updates NN%
 > Please keep your computer on.
 
 During this phase, basic hardware support is installed. If it's an upgrade installation, data and programs are also migrated. The following table lists important log files in this setup phase.
