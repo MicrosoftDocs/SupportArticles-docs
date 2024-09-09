@@ -1,4 +1,4 @@
---- 
+---
 title: Diagnose common problems that cause your ping tests to fail in Application Insights availability monitoring
 description: This article describes how to diagnose common issues that cause ping tests to fail in Application Insights availability monitoring.
 ms.date: 06/24/2024
@@ -42,14 +42,15 @@ The following table lists the steps, error messages, and possible causes that yo
 |Step | Error message | Possible cause |
 |-----|---------------|----------------|
 | Connection reuse | No specific error message is returned for this issue. | The web test step is dependent on a previously established connection. Therefore, no DNS, connection or SSL step is required. |
-| DNS resolution | The remote name could not be resolved: "\<your-URL>" | The DNS resolution process fails. This most likely occurred because of misconfigured DNS records or temporary DNS server failures. |
+| DNS resolution | The remote name could not be resolved: "<your-URL>" | The DNS resolution process fails. This most likely occurred because of misconfigured DNS records or temporary DNS server failures. |
 | Connection establishment | A connection attempt failed because the connected party did not properly respond after a period of time. | Your server doesn't respond to the HTTP request. A common cause is that a firewall on your server is blocking our test agents. To test within an Azure Virtual Network, add the Availability service tag to your environment.|
 | TLS transport  | The client and server cannot communicate because they do not possess a common algorithm.| Only TLS 1.0, 1.1, and 1.2 are supported. SSL isn't supported. This step doesn't validate SSL certificates, it only establishes a secure connection. This step appears only if an error occurs. |
 | Receiving response header | Unable to read data from the transport connection. The connection was closed. | Your server commits a protocol error in the response header. For example, your server closes the connection if the response isn't fully read. |
 | Receiving response body | Unable to read data from the transport connection: The connection was closed. | Your server commits a protocol error in the response body. For example, your server closes the connection if the response isn't fully read, or the chunk size is wrong in the chunked response body. |
 | Redirect limit validation | This webpage has too many redirects. This loop will be terminated here since this request exceeded the limit for auto redirects. | Redirects are limited to 10 per test. |
 | Status code validation | `200 - OK` does not match the expected status `400 - BadRequest`. | The returned status code is counted as a success. The "200" code indicates that a normal web page was returned. |
-| Content validation | The required text '\<expected-response-text>' did not appear in the response. | <p>The string isn't an exact case-sensitive match in the response. For example, the string "Welcome!" must be a plain string, without wildcard characters (such as an asterisk). If your page content changes, you might have to update the string. Content match supports only English characters.</p> <p>Content match also fails if the response body is more than 1,000,000 bytes long. After the client reads that number of bytes, it stops reading the response body and drops the connection. Because of this behavior, the server experiences a `ClientConnectionFailure` exception, even if the client returns a success status code.</p> |
+| Content validation | The required text '<expected-response-text>' did not appear in the response. | <p>The string isn't an exact case-sensitive match in the response. For example, the string "Welcome!" must be a plain string, without wildcard characters (such as an asterisk). If your page content changes, you might have to update the string. Content match supports only English characters.</p> <p>Content match also fails if the response body is more than 1,000,000 bytes long. After the client reads that number of bytes, it stops reading the response body and drops the connection. Because of this behavior, the server experiences a `ClientConnectionFailure` exception, even if the client returns a success status code.</p> |
+|Missing test results in Azure portal|Test results are missing in the Azure Portal when viewing end-to-end transaction details for an availability test. No specific error message is returned for this issue.   |Ensure there are no **non-utf8 characters** in the response from the endpoint called using the availability test|
 
 > [!NOTE]
 > If the connection reuse step is present, then the following steps won't be present:
