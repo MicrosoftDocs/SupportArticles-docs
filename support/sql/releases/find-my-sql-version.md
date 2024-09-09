@@ -1,7 +1,7 @@
 ---
-title: Determine which version and edition of SQL Server Database Engine
-description: This article describes the procedures to determine the version and edition of SQL Server Database Engine is running.
-ms.date: 09/06/2024
+title: Determine the version and edition of SQL Server Database Engine
+description: This article describes the procedures to determine the version and edition of SQL Server Database Engine that is running.
+ms.date: 09/09/2024
 ms.topic: how-to
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: v-six
@@ -24,8 +24,7 @@ To determine the version of SQL Server, you can use any of the following methods
 
 ## Method 1: Connect to the server by using SQL Server Management Studio
 
-Connect to the server by using Object Explorer in [SQL Server Management Studio (SSMS)](/sql/ssms/sql-server-management-studio-ssms).
-Once connected, the version information will be displayed in parentheses, along with the username used to connect to the specific instance of SQL Server.
+Connect to the server by using Object Explorer in [SQL Server Management Studio (SSMS)](/sql/ssms/sql-server-management-studio-ssms). Once connected, the version information will be displayed in parentheses, along with the username used to connect to the specific instance of SQL Server. For more information on how to connect to SQL Server using Object Explorer, see [Connect to a SQL Server or Azure SQL Database](/sql/ssms/object/connect-to-an-instance-from-object-explorer).
 
 ## Method 2: Look at the first few lines of the Errorlog file
 
@@ -40,12 +39,12 @@ Developer Edition (64-bit) on Windows 11 Enterprise 10.0 <X64> (Build 22631: ) (
 
 This entry provides information about the product, such as version, product level, 64-bit versus 32-bit, the edition of SQL Server, and the OS version on which SQL Server is running.
 
-## Method 3: Look at the output after running the query Select @@version
+## Method 3: Look at the output after running the query SELECT @@VERSION
 
 Connect to the instance of SQL Server, and then run the following query:
 
 ```sql
-Select @@version
+SELECT @@VERSION
 ```
 
 Here's an example of the output of this query:
@@ -68,7 +67,7 @@ The following results are returned:
 
 - The product version (for example, 16.0.4135.4)
 - The product level (for example, RTM)
-- The edition (for example, Enterprise)
+- The edition (for example, Developer)
 
 For example, the results resemble the following.
 
@@ -78,15 +77,15 @@ For example, the results resemble the following.
 
 > [!NOTE]
 >
-> - The SERVERPROPERTY function returns individual properties that relate to the version information, although the @@VERSION function combines the output into one string. If your application requires individual property strings, you can use the SERVERPROPERTY function to return them instead of parsing the @@VERSION results.
+> - The `SERVERPROPERTY` function returns individual properties that relate to the version information, although the `@@VERSION` function combines the output into one string. If your application requires individual property strings, you can use the `SERVERPROPERTY` function to return them instead of parsing the `@@VERSION` results.
 >
-> - This method also works for SQL Azure Database instances. For more information, see the following topic in SQL Server Books Online [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql).
+> - This method also works for SQL Azure Database instances. For more information, see [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql).
 >
-> - Starting with [SQL Server 2014 RTM Cumulative Update 10](https://support.microsoft.com/help/3094220) and [SQL Server 2014 Service Pack 1 Cumulative Update 3](https://support.microsoft.com/help/3094221), additional properties have been added to ServerProperty statement. For a complete list, see [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql).
+> - Starting with [SQL Server 2014 RTM Cumulative Update 10](https://support.microsoft.com/help/3094220) and [SQL Server 2014 Service Pack 1 Cumulative Update 3](https://support.microsoft.com/help/3094221), additional properties have been added to the `SERVERPROPERTY` statement. For a complete list, see [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql).
 
 ## Method 5: Use the Installed SQL Server features discovery report
 
-You can also use the Installed SQL Server features discovery report. You can find this report in the **Tools** page of SQL Server Installation Center. This tool provides information about all the instances of SQL Server that are installed on the system, including client tools such as SQL Server Management Studio. Note that this tool can be run locally only on the system where SQL Server is installed. It can't be used to obtain information about remote servers. For more information, see [Validate a SQL Server Installation](/sql/database-engine/install-windows/validate-a-sql-server-installation).
+You can also use the **Installed SQL Server features discovery report**. You can find this report in the **Tools** page of SQL Server Installation Center. This tool provides information about all the instances of SQL Server that are installed on the system, including client tools such as SQL Server Management Studio. Note that this tool can be run locally only on the system where SQL Server is installed. It can't be used to obtain information about remote servers. For more information, see [Validate a SQL Server Installation](/sql/database-engine/install-windows/validate-a-sql-server-installation).
 
 A snapshot of a sample report is as follows:
 
