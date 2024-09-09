@@ -22,6 +22,10 @@ Your desktop flow fails with the following error:
 }
 ```
 
+Or you are trying to create or test a `connect with sign-in` connection on an Active directory (AD) domain-joined machine and getting one of these errors:
+* "Invalid Credentials"
+* "Tenant [tenantId] needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine."
+
 ## Cause
 
 This error occurs when all of the following apply:
