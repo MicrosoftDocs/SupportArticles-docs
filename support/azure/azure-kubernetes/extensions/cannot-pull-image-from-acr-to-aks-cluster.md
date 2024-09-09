@@ -1,7 +1,7 @@
 ---
 title: Can't pull images from Azure Container Registry to Kubernetes
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from a container registry to an AKS cluster.
-ms.date: 02/12/2024
+ms.date: 09/09/2024
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, andbar, v-weizhu, v-leedennis
@@ -262,7 +262,7 @@ If the AKS cluster connects publicly to the container registry (NOT through a pr
 
       :::image type="content" source="./media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot about how to add AKS Load Balancer's public IP address to Address range":::
 
-## Cause 4: i/o timeout error
+## Cause 4: "i/o timeout error"
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/<repository\:tag>": failed to do request: Head "https://\<acrname>.azurecr.io/v2/\<repository>/manifests/v1": dial tcp \<acrprivateipaddress>:**443: i/o timeout**
 
