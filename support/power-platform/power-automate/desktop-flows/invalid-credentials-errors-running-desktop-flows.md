@@ -46,7 +46,7 @@ If you successfully created your connection earlier but now encounter an error w
 To see an error message with specific details on what went wrong, ensure you have Power Automate version 2.24 or higher installed. Often, this method gives you enough information to solve the problem. The following table shows some specific error codes and the resolutions.
 
 |Error code|Error message|Cause|Resolution|
-|--|--|--|
+|---|---|---|---|
 |-1073741477|A user has requested a type of logon (for example, interactive or network) that has not been granted. An administrator has control over who can logon interactively and through the network.|The user account doesn't have logon rights on the machine, or the administrator changed the policies of the machine (check the [User Rights Assignment](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment) settings).|To solve this issue, see ["Logon type has not been granted" error when running a desktop flow or creating a connection](logon-type-has-not-been-granted.md).|
 |-1073445812|The user's UPN isn't in the expected format|The user signed in using `DOMAIN\user` but should use the `user@domain.com` format instead (or vice versa).|Try to sign in using both the `user@domain.com` and `DOMAIN\user` formats.|
 |-1073741062|Smart card logon is required and was not used||Connections to machines that require smart card logons aren't supported. Use a machine without this requirement.|
@@ -55,6 +55,7 @@ If you don't have a more specific error associated with the problem, the easiest
 
 Other reasons that might prevent you from signing in to the target machine (besides using an incorrect username or password):
 
+- Instead of password, you are specifying a Windows Hello PIN. PINs are not supported.
 - The machine can't connect to its domain or Microsoft Entra ID (formerly Azure Active Directory) because it isn't properly joined. To solve this issue, see [Desktop flow invalid credentials error when you use a Microsoft Entra account](~/power-platform/power-automate/authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md).
 - The machine can't call the authentication endpoint due to a network issue. Make sure to check your network connection.
 
