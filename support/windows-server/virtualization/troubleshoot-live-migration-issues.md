@@ -271,6 +271,22 @@ Here's how to fix this issue:
      PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true  
     ```
 
+#### Failed to live migrate a VM across nodes with different uCode revisions
+
+**Description**
+
+VM Live Migration fails with the error messages below:
+
+VM cannot be moved to destination computer
+
+HW on destination is not compatible with HW requirements of VM
+
+When a Hyper-V VM is created processor features are exposed to guest VMs. At boot-time, guest VM kernels will make decisions based on the availability of these features (e.g. can certain software mitigations be skipped due to hardware/microcode functionality). As such, migration of a VM that was booted on the NEW system (w/ side channel mitigation features) to an OLD system (w/o side channel mitigation features) could expose the customer to these side channel attacks, and thus is prevented.
+
+**Action**
+
+As a workaround at a cluster level the best option is to live migrate VMs only from "OLD" to "NEW" uCode revisions. Since VMs on the "OLD" hosts will have software mitigations for side channel attacks enabled, they will not become vulnerable when moved to "NEW" hosts.
+
 #### Failed live migrate because "Virtual Machine Name" is using processor-specific features not supported on host "Node 1."
 
 **Description**
