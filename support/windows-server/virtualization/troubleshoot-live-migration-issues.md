@@ -271,7 +271,7 @@ Here's how to fix this issue:
      PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true  
     ```
 
-#### Failed to live migrate a VM across nodes with different uCode revisions
+#### Failed to live migrate a VM between nodes with different uCode revisions
 
 **Description**
 
