@@ -1,6 +1,6 @@
 ---
-title: Version requirements for SQL Server in Windows operating system
-description: This article describes the version requirements for SQL Server in Windows operating system.
+title: Version requirements for SQL Server in Windows operating systems
+description: This article describes the version requirements for SQL Server in Windows operating systems.
 ms.date: 09/09/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: randolphwest
@@ -9,9 +9,9 @@ ms.reviewer: randolphwest
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
 --->
 
-# Version requirements for SQL Server in Windows operating system
+# Version requirements for SQL Server in the Windows operating system
 
-This article describes the version requirements for SQL Server in Windows operating system.
+This article describes the version requirements for SQL Server in the Windows operating system (OS).
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2681562
@@ -27,7 +27,7 @@ How to use this article:
 
 - Use the links in the **Hardware and Software Requirements page** row to see specific details about the hardware and software requirements for each version of SQL Server.
 
-|Windows Version/SQL Version |SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016 |SQL Server 2014 |SQL Server 2012 |SQL Server 2008 R2 |SQL Server 2008|
+|Windows version/SQL version |SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016 |SQL Server 2014 |SQL Server 2012 |SQL Server 2008 R2 |SQL Server 2008|
 |---| -------- |---|---|---|---|---|---|---|
 |Windows Server 2022  |Yes  (RTM) |Yes  (RTM) |Yes  (RTM) | Not supported | Not supported | Not supported |Not supported |Not supported |
 |Windows 11 |Yes  (RTM)|Yes  (RTM) |Yes  (RTM) |Not supported |Not supported |Not supported |Not supported |Not supported |
