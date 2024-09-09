@@ -2,7 +2,7 @@
 title: Installation issues in Power Automate for desktop
 description: Helps troubleshoot stallation issues in Power Automate for desktop.
 ms.reviewer: guco, johndund
-ms.date: 08/30/2024
+ms.date: 09/09/2024
 ms.custom: sap:Desktop flows\Installation issues
 ---
 # Troubleshoot installation issues in Power Automate for desktop
@@ -48,7 +48,7 @@ To work around this issue, uninstall "Microsoft Visual C++ 2015-2022 Redistribut
 
 3. Reinstall Power Automate for desktop. The Power Automate for desktop installer reinstalls the C++ redistributable as part of the installation.
 
-### Power Automate service fails to start: Failed to enumerate sessions
+### Power Automate service crashes at startup: Failed to enumerate sessions
 
 The installation fails with this error if the Power Automate service crashes at startup. The Windows Event Viewer shows the "FailedToEnumerateSessions" error.
 
@@ -103,7 +103,7 @@ You can run the installer from a command line and pass the `/SKIPSTARTINGPOWERAU
 
 When the installation succeeds, run the Power Automate Machine runtime application and use the **Troubleshoot** menu to change the service account. For more information on changing the service account, see [Change the on-premises Service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
 
-### Power Automate service fails to start: Verify that you have sufficient privileges to install system services
+### Power Automate service fails to start: Verify that you have sufficient privileges to start system services
 
 You see the following event logged in the Windows Event Viewer:
 
@@ -111,18 +111,19 @@ You see the following event logged in the Windows Event Viewer:
 
 :::image type="content" source="media/power-automate-desktop-installation-issues/event-11920-verify-sufficient-privileges.png" alt-text="Screenshot that shows the event 11920 stating that you need to verify that you have sufficient privileges to start system services.":::
 
-Even though the Power Automate service doesn't crash, you might also find an error like the following, indicating that something is blocking the installation.
-
-> UIFlowService  
-> Exception caught during service startup:
-
-:::image type="content" source="media/power-automate-desktop-installation-issues/exception-caught-during-service-startup-error.png" alt-text="Screenshot that shows the event that occurs even though the Power Automate service doesn't crash.":::
-
 #### Cause
 
 The account used to start the Power Automate service can't start the service because the **Deny log on as a service** security policy prevents it.
 
 During installation, the `UIFlowService` runs as `NT SERVICE\UIFlowService`. The account used by `UIFlowService` can be changed later, but for installation purposes it mustn't be blocked from logging on.
+
+> [!NOTE]
+> Even though the Power Automate service doesn't crash, you might still find an error like the following, indicating that something is blocking the installation. This issue could potentially be associated with the account or group used for sign-in.
+>
+> "UIFlowService  
+> Exception caught during service startup:"
+>
+> :::image type="content" source="media/power-automate-desktop-installation-issues/exception-caught-during-service-startup-error.png" alt-text="Screenshot that shows the event that occurs even though the Power Automate service doesn't crash.":::
 
 #### Resolution
 
