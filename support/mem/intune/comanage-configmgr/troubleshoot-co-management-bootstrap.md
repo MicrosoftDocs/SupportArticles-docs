@@ -162,7 +162,7 @@ The value found in `ClientHealthStatus` is a combination of multiple flags which
 - **2**: Client registered
 - **4**: Successful health evaluation
 - **8**: Client install or upgrade error
-- **16**: Communication error in a management point
+- **16**: Communication error with a management point
 
 The following are common values of `ClientHealthStatus`:
 
@@ -170,7 +170,7 @@ The following are common values of `ClientHealthStatus`:
 - **3**: Client installed and registered, but hasn't reported a successful health evaluation yet
 - **5**: Client installed, not currently registered, and sent a successful health evaluation (previously)
 - **7**: Client healthy
-- **23**: Client was healthy but had a communication error in a management point
+- **23**: Client was healthy but had a communication error with a management point
 
 If the `ClientHealthStatus` value is **7** (healthy), Intune considers the Configuration Manager client as healthy if the `ClientHealthLastSyncTime` is not older than 30 days.
 
