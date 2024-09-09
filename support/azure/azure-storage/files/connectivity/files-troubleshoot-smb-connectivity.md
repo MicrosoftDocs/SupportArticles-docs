@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 04/28/2024
+ms.date: 09/09/2024
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -274,7 +274,23 @@ If virtual network (VNET) and firewall rules are configured on the storage accou
 
 ##### Solution for cause 2
 
-Verify that the VNET and firewall rules are configured properly on the storage account. To test if virtual networks or firewall rules are causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
+Verify that the VNET and firewall rules are configured properly on the storage account and that port 445 is allowlisted. To test if virtual networks or firewall rules are causing the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
+
+##### Cause 3: SMB client is configured to use NTLMv1
+
+Azure Files only supports NTLMv2 and Kerberos for SMB file shares. Kernel 4.4 and onwards enables NTLMv2 by default and disables LANMAN. Under default configurations, NTLMv1 is kept as a negotiation only option. Refer to your OS documentation for details.
+
+##### Solution for cause 3
+
+Ensure that SMB mount commands aren't overriding default authentication of NTLMv2 via the `sec` option. The `sec=` parameter should never use `ntlm` or `ntlmi` when connecting to SMB Azure file shares. If you're using `/etc/samba/smb.conf` to set global options, ensure you haven't disabled NTLMv2.
+
+##### Cause 4: Storage account key access has been disabled and/or enforced via policy.
+
+When storage account key access is disabled for a storage account, SAS tokens and access keys won't work.
+
+##### Solution for cause 4
+
+Use identity-based authentication. The file share must be joined either to an on-premises Active Directory Domain Servies (AD DS) or Microsoft Entra Domain Services domain, and the Linux client must be [configured to use Kerberos authentication](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable).
 
 #### <a id="error115"></a>"Mount error(115): Operation now in progress" when you mount Azure Files by using SMB 3.x
 
