@@ -7,7 +7,7 @@ ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # "UnallowedTenantForConnectWithSignIn" or "Invalid Credentials" error when using "connect with sign-in"
 
-This article provides a resolution for the `UnallowedTenantForConnectWithSignIn`, "Invalid Credentials" or "Tenant \<tenantID\> needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine" error that occurs when you run a desktop flow or create or test a connection by using a [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) on an Active Directory (AD) domain-joined machine.
+This article provides resolution for the `UnallowedTenantForConnectWithSignIn`, "Invalid Credentials" or "Tenant \<tenantID\> needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine" error that occurs when you run a desktop flow or create or test a connection by using a [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) on an Active Directory (AD) domain-joined machine.
 
 ## Symptoms
 
