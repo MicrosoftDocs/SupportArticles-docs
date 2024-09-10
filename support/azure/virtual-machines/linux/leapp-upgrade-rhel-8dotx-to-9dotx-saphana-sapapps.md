@@ -2,7 +2,7 @@
 title: Leapp upgrade from RHEL 8.x to RHEL 9.x on SAP-HANA and SAP-APPS pay-as-you-go VMs
 description: Provides steps to help you upgrade SAP-HANA and SAP-APPS pay-as-you-go virtual machines from RHEL 8.x to RHEL 9.x by using the leapp tool.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 09/06/2024
+ms.date: 09/10/2024
 ms.service: azure-virtual-machines
 ms.topic: how-to
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
@@ -81,7 +81,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
    According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP Applications, including SAP HANA. They're configured in the */etc/sysctl.d/sap.conf* file.
 
-   ```bash
+   ```output
    vm.max_map_count = 2147483647
    kernel.pid_max = 4194304
    ```
@@ -142,7 +142,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
    According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/27729990), the following parameters are necessary for SAP applications, including SAP HANA, and they're configured in the file */etc/sysctl.d/sap.conf*.
 
-   ```bash
+   ```output
    vm.max_map_count = 2147483647
    kernel.pid_max = 4194304
    ```
@@ -203,7 +203,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
    According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP Applications, and they're configured in the file */etc/sysctl.d/sap.conf*.
 
-   ```bash
+   ```output
    vm.max_map_count = 2147483647
    kernel.pid_max = 4194304
    ```
@@ -264,7 +264,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
    According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP applications, and they're configured in the file */etc/sysctl.d/sap.conf*.
 
-   ```bash
+   ```output
    vm.max_map_count = 2147483647
    kernel.pid_max = 4194304
    ```
@@ -353,7 +353,8 @@ Review the report located in the */var/log/leapp/leapp-report.txt* file and reso
 Continue the leapp upgrade process after the leapp pre-upgrade report shows no errors or inhibitors and everything is marked as resolved. The output is typically green or yellow, indicating that it's safe to proceed with the leapp upgrade.
 
 > [!IMPORTANT]  
-> Make sure to run the `leapp upgrade` command through the Serial Console to avoid any network interruptions that could affect your secure shell (SSH) terminal and disrupt the upgrade process.
+> - Make sure to run the `leapp upgrade` command through the Serial Console to avoid any network interruptions that could affect your secure shell (SSH) terminal and disrupt the upgrade process.
+> - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 ### [RHEL 8.8 to RHEL 9.2 - SAP-HANA PAYG VMs](#tab/rhel92saphana)
 
@@ -363,9 +364,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     sudo leapp upgrade --target <target_os_version> --channel e4s --no-rhsm
     ```
     
-    > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example, `9.2`. 
-    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
+    Replace `<target_os_version>` with the target OS version, for example, `9.2`. 
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
 
@@ -389,9 +388,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     sudo leapp upgrade --target <target_os_version> --channel e4s --no-rhsm
     ```
 
-    > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example, `9.4`. 
-    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
+   Replace `<target_os_version>` with the target OS version, for example, `9.4`.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
 
@@ -415,9 +412,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     sudo leapp upgrade --target <target_os_version> --channel eus --no-rhsm
     ```
 
-    > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example, `9.2`. 
-    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
+   Replace `<target_os_version>` with the target OS version, for example, `9.2`. 
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
 
@@ -441,10 +436,8 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     ```bash
     sudo leapp upgrade --target <target_os_version> --channel eus --no-rhsm
     ```
-    
-    > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example, `9.4`. 
-    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
+   
+   Replace `<target_os_version>` with the target OS version, for example, `9.4`. 
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
 
