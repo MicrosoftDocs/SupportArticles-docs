@@ -58,7 +58,7 @@ If you use Azure Recovery Vault, you might see an error like the following one i
 App-consistent recovery point generation failed.
 ```
 
-The issue arises from a code change in SQL Server 2019 CU28 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2019 CU27 and perform the snapshot backup.
+The issue arises from a code change in SQL Server 2019 CU28 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2019 CU27 and perform the snapshot backup. For more information on how to perform a roll back to a previous CU version, see [Uninstall a Cumulative Update from SQL Server](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server)
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
