@@ -71,10 +71,7 @@ UFM is a user-friendly interface for managing a `netfilter` firewall in Linux di
      ```
      ---
  
-
- 
-
-No output indicates that the port is not in use or being listened by any service. If a firewall rule is in place to block the port, it may still appear closed.
+     No output indicates that the port is not in use or being listened by any service. If a firewall rule is in place to block the port, it may still appear closed.
 
 5. Test Port Connectivity using `nc`
 
@@ -82,9 +79,9 @@ No output indicates that the port is not in use or being listened by any service
      sudo nc -zv <server-ip> 22
      ```
 
-If the connection fails but the service is running, it confirms that the port is closed.
+     - If the connection fails but the service is running, it confirms that the port is closed.
 
-Successful connection means the port is open.
+     - Successful connection means the port is open.
 
 If the port you're checking doesn't appear in UFW's rules, or if it's marked as DENY, UFW is blocking the port. Additionally, if you can't connect to the port using external tools, the port is closed.
 
