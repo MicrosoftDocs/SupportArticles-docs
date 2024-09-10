@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 06/05/2024
+ms.date: 09/10/2024
 ms.author: genli
 ---
 # How to reset network interface for Azure Windows VM
@@ -24,11 +24,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
-## Reset network interface
-
-### For VMs deployed in Resource Manager model
-#### Use Azure portal
-
+## Reset network interface using the Azure portal
 
 1. Go to the [Azure portal](https://ms.portal.azure.com).
 2. Select the affected Virtual Machine.
@@ -43,7 +39,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 8. The virtual machine will restart to initialize the new NIC to the system.
 9. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
-#### Use Azure PowerShell
+## Reset network interface using Azure PowerShell
 
 1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed.
 2. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands:
@@ -79,9 +75,32 @@ This article shows how to reset the network interface for Azure Windows VM to re
 
     $nic | Set-AzNetworkInterface
     ```
-
 2. The virtual machine will restart to initialize the new NIC to the system.
 3. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
+
+## Reset network interface using Azure CLI
+
+1. Make sure that you have installed the latest [Azure command-line interface (CLI)](/cli/azure/install-azure-cli).
+
+2. Open [Azure Cloud Shell](/azure/cloud-shell/overview) or preferred shell. Run the following commands:
+
+   ```azurecli
+   #Log in to the subscription  
+
+   az login 
+   
+   az account set --subscription 
+   
+   #Check whether the new IP address is available in the virtual network.
+   
+   az network vnet check-ip-address -g MyResourceGroup -n MyVnet --ip-address 10.0.0.4 
+   
+   #Add/Change static IP. This process won't change MAC address 
+   
+   az network nic ip-config update -g MyResourceGroup --nic-name MyNic -n MyIpConfig --private-ip-address 10.0.0.9 
+   ```
+
+3. Try to SSH to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
 ## Delete the unavailable NICs
 
