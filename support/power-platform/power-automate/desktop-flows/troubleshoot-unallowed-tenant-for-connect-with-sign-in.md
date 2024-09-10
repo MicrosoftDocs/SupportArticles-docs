@@ -1,32 +1,31 @@
 ---
-title: Desktop flow unallowed tenant for connect with sign-in
-description: Resolves an error when you run a desktop flow by using connect with sign-in from a tenant that the target AD domain-joined machine isn't allowed.
+title: UnallowedTenantForConnectWithSignIn or Invalid Credentials error
+description: Resolves errors that occur when you run a desktop flow or create or test a connection by using connect with sign-in.
 ms.reviewer: padib，aartigoyle, johndund, quseleba
 ms.date: 09/10/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
-# "UnallowedTenantForConnectWithSignIn" error in a Power Automate desktop flow
+# "UnallowedTenantForConnectWithSignIn" or "Invalid Credentials" error when using "connect with sign-in"
 
-This article provides a resolution for the `UnallowedTenantForConnectWithSignIn` error code that occurs when you run a desktop flow by using a [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) connection on an Active Directory (AD) domain-joined machine.
+This article provides a resolution for the `UnallowedTenantForConnectWithSignIn`, "Invalid Credentials" or "Tenant \<tenantID\> needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine" error that occurs when you run a desktop flow or create or test a connection by using a [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) on an Active Directory (AD) domain-joined machine.
 
 ## Symptoms
 
-Your desktop flow fails with the following error:
+- Your desktop flow fails with the following error when you run a desktop flow by using a [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) connection on an AD domain-joined machine.
 
-```json
-{
-    "error":{
-        "code": "UnallowedTenantForConnectWithSignIn",
-        "message": "Tenant <tenantId> needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine."  
-    }    
-}
-```
+  ```json
+  {
+      "error":{
+          "code": "UnallowedTenantForConnectWithSignIn",
+          "message": "Tenant <tenantId> needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine."  
+      }    
+  }
+  ```
 
-Or, you receive one of the following errors when you try to create or test a `connect with sign-in` connection on an AD domain-joined machine.
+- You receive one of the following errors when you try to create or test a "connect with sign-in" connection on an AD domain-joined machine:
 
-> Invalid Credentials
-
-> Tenant [tenantId] needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine.
+  - > Invalid Credentials
+  - > Tenant \<tenantID> needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine.
 
 ## Cause
 
