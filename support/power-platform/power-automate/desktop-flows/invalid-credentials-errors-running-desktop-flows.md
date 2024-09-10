@@ -3,7 +3,7 @@ title: Invalid credentials error running desktop flows
 description: Provides a resolution for the invalid credentials error that might occur when you run a desktop flow in Power Automate.
 ms.reviewer: guco, johndund
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 08/20/2024
+ms.date: 09/10/2024
 ---
 # Invalid credentials error when running desktop flows in Power Automate for desktop
 
@@ -55,7 +55,7 @@ If you don't have a more specific error associated with the problem, the easiest
 
 Other reasons that might prevent you from signing in to the target machine (besides using an incorrect username or password):
 
-- Instead of password, you are specifying a Windows Hello PIN. PINs are not supported.
+- PINs aren't supported. Make sure you use a password instead of a Windows Hello PIN.
 - The machine can't connect to its domain or Microsoft Entra ID (formerly Azure Active Directory) because it isn't properly joined. To solve this issue, see [Desktop flow invalid credentials error when you use a Microsoft Entra account](~/power-platform/power-automate/authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md).
 - The machine can't call the authentication endpoint due to a network issue. Make sure to check your network connection.
 
