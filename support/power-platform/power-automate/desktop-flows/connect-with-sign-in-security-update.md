@@ -3,7 +3,7 @@ title: Connect with sign-in security update on AD domain-joined machines
 description: Provides security updates for the connect with sign-in connections on Active Directory domain-joined machines in Microsoft Power Automate for desktop.
 ms.reviewer: padib，aartigoyle, johndund, quseleba
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
-ms.date: 09/04/2024
+ms.date: 09/10/2024
 ---
 # Security update for "connect with sign-in" connections on AD domain-joined machines in Power Automate for desktop
 
@@ -35,7 +35,7 @@ To mitigate the issue, update your Power Automate for desktop to the following p
 
 If you use "[connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs)" for attended runs on machines that are [AD domain-joined but not Microsoft Entra-joined](#how-to-determine-if-a-machine-is-ad-domain-joined-or-microsoft-entra-joined), the patched versions (and future versions) of Power Automate for desktop will cause your runs to fail with the `UnallowedTenantForConnectWithSignIn` error code.
 
-"Connect with sign-in" connection creation and and testing will also fail with either "Invalid Credentials" errors or "Tenant [tenantId] needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine." errors.
+"Connect with sign-in" connection creation and testing will also fail with either "Invalid Credentials" or "Tenant [tenantId] needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine." errors.
 
 To use "connect with sign-in" on such machines, you must add the Power Automate tenant where your machine is registered to the allowlist by following the instructions in ["UnallowedTenantForConnectWithSignIn" error in a  Power Automate desktop flow](troubleshoot-unallowed-tenant-for-connect-with-sign-in.md). We recommend that your AD administrators deploy a Group Policy Object (GPO) in your domain to define the tenant allowlist.
 

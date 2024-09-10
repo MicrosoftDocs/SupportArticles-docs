@@ -2,7 +2,7 @@
 title: Desktop flow unallowed tenant for connect with sign-in
 description: Resolves an error when you run a desktop flow by using connect with sign-in from a tenant that the target AD domain-joined machine isn't allowed.
 ms.reviewer: padib，aartigoyle, johndund, quseleba
-ms.date: 09/04/2024
+ms.date: 09/10/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # "UnallowedTenantForConnectWithSignIn" error in a Power Automate desktop flow
@@ -22,9 +22,11 @@ Your desktop flow fails with the following error:
 }
 ```
 
-Or you are trying to create or test a `connect with sign-in` connection on an Active directory (AD) domain-joined machine and getting one of these errors:
-* "Invalid Credentials"
-* "Tenant [tenantId] needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine."
+Or, you receive one of the following errors when you try to create or test a `connect with sign-in` connection on an AD domain-joined machine.
+
+> Invalid Credentials
+
+> Tenant [tenantId] needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine.
 
 ## Cause
 
