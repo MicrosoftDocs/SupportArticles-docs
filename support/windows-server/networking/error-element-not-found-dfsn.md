@@ -62,7 +62,7 @@ The correct data for the registry values are:
 
 Importing the registry key for the DFS namespace root from any other DFS root server holding the same DFS namespace root or a valid registry backup (if available) of the same registry key can resolve the issue.
 
-If no backup is present, and since you have only a single DFS root serverin a DFS stand-alone namespace configuration, the only option is to delete the Active Directory (AD) configuration of the DFS namespace, perform a DFS namespace cleanup on the DFS namespace server, and re-create the DFS namespace.
+If no backup is present, and since you have only a single DFS root server in a DFS stand-alone namespace configuration, the only option is to delete the Active Directory (AD) configuration of the DFS namespace, perform a DFS namespace cleanup on the DFS namespace server, and re-create the DFS namespace.
 
 > [!NOTE]
 > Restart the DFS server or the DFS server service so that the changes in the registries are loaded into memory again. Not restarting the DFS server or the DFS server service might result in the same error.
