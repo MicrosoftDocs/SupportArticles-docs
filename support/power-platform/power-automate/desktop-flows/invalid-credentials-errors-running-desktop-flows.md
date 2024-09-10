@@ -21,7 +21,7 @@ _Original KB number:_ &nbsp; 5021155
   :::image type="content" source="media/invalid-credentials-errors-running-desktop-flows/connection-failed-error.png" alt-text="Screenshot of the invalid credentials error that you might receive when creating a desktop flows connection.":::
 - When you run a desktop flow, you receive the `WindowsIdentityIncorrect` error code. The message associated with this error code might be "The credentials provided with the request are invalid" or something more specific.
 
-  ```json
+  ```jsonc
   {
       "error":{
           "code": "WindowsIdentityIncorrect",
