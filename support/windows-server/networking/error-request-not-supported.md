@@ -1,5 +1,5 @@
 ---
-title: The request is not supported erro
+title: The request is not supported error
 description: Helps resolve the error - The namespace cannot be queried. The request is not supported.
 ms.date: 09/10/2024
 manager: dcscontentpm
@@ -16,7 +16,7 @@ When you access, modify, or create a Distributed File System (DFS) namespace on 
 
 > The namespace cannot be queried. The request is not supported
 
-Usually, the cause is the way that the client requests something from the DFS namespace server. Therefore, the cause should be investigated via data collection and data analysis from the moment the probelm occurs.
+Usually, the cause is the way that the client requests something from the DFS namespace server. Therefore, the cause should be investigated via data collection and data analysis from the moment the problem occurs.
 
 See the following Wireshark trace for an example.
 
