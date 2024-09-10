@@ -20,7 +20,7 @@ This article lists the common causes of startup issues for Microsoft Azure Fence
 
 Azure Fence Agent uses an Azure API based Python program that's located at `/usr/sbin/fence_azure_arm` to perform VM power off or start actions. When a failed cluster node is detected, the cluster resource agent (RA) calls this program with the appropriate parameters to implement node fencing (also known as STONITH). 
 
-As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=msi#1-create-a-custom-role-for-the-fence-agent), the custom role should provide the fence agent with permissions to perform the following actions:
+As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent), the custom role should provide the fence agent with permissions to perform the following actions:
 
 - `powerOff`
 - `start`
@@ -262,7 +262,7 @@ Check the log in `/var/log/messages`. The fence-agent is unable to read or find 
 
 ### Resolution
 With the recent `python3.11` introduced, SUSE has rebuild the new package for Microsoft as `fence-agents-azure-arm`
-[Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=spn#create-an-azure-fence-agent-device).
+[Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent).
 1. Put the cluster under maintenance-mode
  ```bash
     sudo crm configure property maintenance-mode=true
