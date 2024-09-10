@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
-# How to upgrade SAP-HANA and SAP-APPS pay-as-you-go virtual machines from RHEL 8.x to RHEL 9.x using leapp
+# How to upgrade SAP-HANA and SAP-APPS PAYG virtual machines from RHEL 8.x to RHEL 9.x using leapp
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
@@ -52,7 +52,7 @@ SAP validates SAP NetWeaver for each major RHEL version. The supported in-place 
 
 This section outlines the necessary steps before performing an in-place upgrade from RHEL 8.8 to RHEL 9.2 using the leapp utility on SAP-HANA PAYG VMs.
 
-> [!IMPORTANT]
+> [!NOTE]
 > If your VM is part of a Hight Availability cluster, the upgrade is possible if the cluster nodes do *not* use any packages that are part of [Resilient Storage](https://access.redhat.com/articles/3130101). For more information, see [Procedure to upgrade a RHEL 8 High Availability cluster to RHEL 9](https://access.redhat.com/articles/7012677).
 
 1. Make sure the current Red Hat release is 8.8:
@@ -101,13 +101,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
     sudo reboot
     ```
 
-7. After the VM is started and running, make sure that the SAP HANA systems and all SAP processes are stopped on it. Also make sure the SAP HANA file systems are mounted.
+   After the VM is started and running, make sure that the SAP HANA systems and all SAP processes are stopped on it. Also make sure the SAP HANA file systems are mounted.
 
-8. Temporarily disable antivirus software to prevent the upgrade from failing.
+7. Temporarily disable antivirus software to prevent the upgrade from failing.
 
-9. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+8. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
 
-10. Install the leapp utility.
+9. Install the leapp utility:
 
     ```bash
     sudo dnf install leapp-upgrade
@@ -161,13 +161,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
     sudo reboot
     ```
 
-7. After the VM is started and running, make sure the SAP HANA systems and all SAP processes are stopped on it. Also make sure the SAP HANA file systems are mounted.
+   After the VM is started and running, make sure the SAP HANA systems and all SAP processes are stopped on it. Also make sure the SAP HANA file systems are mounted.
 
-8. Temporarily disable antivirus software to prevent the upgrade from failing.
+7. Temporarily disable antivirus software to prevent the upgrade from failing.
 
-9. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+8. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
 
-10. Install the leapp utility.
+9. Install the leapp utility:
 
     ```bash
     sudo dnf install leapp-upgrade
@@ -223,13 +223,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
     sudo reboot
     ```
 
-7. After the VM is started and running, make sure that the SAP-APPS systems or SAP processes are stopped. Also Make sure the SAP file systems are mounted.
+   After the VM is started and running, make sure that the SAP-APPS systems or SAP processes are stopped. Also Make sure the SAP file systems are mounted.
 
-8. Temporarily disable antivirus software to prevent the upgrade from failing.
+7. Temporarily disable antivirus software to prevent the upgrade from failing.
 
-9. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+8. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
 
-10. Install the leapp utility.
+9. Install the leapp utility:
 
     ```bash
     sudo dnf install leapp-upgrade
@@ -284,13 +284,13 @@ This section outlines the necessary steps before performing an in-place upgrade 
     sudo reboot
     ```
 
-7. After the VM is started and running, make sure that the SAP-APPS system or SAP processes are stopped. Also make sure the SAP file systems are mounted.
+   After the VM is started and running, make sure that the SAP-APPS system or SAP processes are stopped. Also make sure the SAP file systems are mounted.
 
-8. Temporarily disable antivirus software to prevent the upgrade from failing.
+7. Temporarily disable antivirus software to prevent the upgrade from failing.
 
-9. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+8. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
 
-10. Install the leapp utility.
+9. Install the leapp utility:
 
     ```bash
     sudo dnf install leapp-upgrade
@@ -310,7 +310,7 @@ Run the `leapp preupgrade` command with the `e4s` channel:
 sudo leapp preupgrade --target <target_os_version> --channel e4s --no-rhsm
 ```
 
-Replace `<target_os_version>` with the target OS version, for example `9.2`. 
+Replace `<target_os_version>` with the target OS version, for example, `9.2`. 
 
 
 ### [RHEL 8.10 to RHEL 9.4 - SAP-HANA PAYG VMs](#tab/rhel94saphana)
@@ -321,7 +321,7 @@ Run the `leapp preupgrade` command with the `e4s` channel:
 sudo leapp preupgrade --target <target_os_version> --channel e4s --no-rhsm
 ```
 
-Replace `<target_os_version>` with the target OS version, for example `9.4`.
+Replace `<target_os_version>` with the target OS version, for example, `9.4`.
 
 
 ### [RHEL 8.8 to RHEL 9.2 - SAP-APPS PAYG VMs](#tab/rhel92sapapps)
@@ -332,7 +332,7 @@ Run the `leapp preupgrade` command with the `eus` channel:
 sudo leapp preupgrade --target <target_os_version> --channel eus --no-rhsm
 ```
 
-Replace `<target_os_version>` with the target OS version, for example `9.2`.
+Replace `<target_os_version>` with the target OS version, for example, `9.2`.
 
 ### [RHEL 8.10 to RHEL 9.4 - SAP-APPS PAYG VMs](#tab/rhel94sapapps)
 
@@ -342,7 +342,7 @@ Run the `leapp preupgrade` command with the `eus` channel:
 sudo leapp preupgrade --target <target_os_version> --channel eus --no-rhsm
 ```
 
-Replace `<target_os_version>` with the target OS version, for example `9.4`. 
+Replace `<target_os_version>` with the target OS version, for example, `9.4`. 
 
 --- 
 
@@ -364,7 +364,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     ```
     
     > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example `9.2`. 
+    > - Replace `<target_os_version>` with the target OS version, for example, `9.2`. 
     > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
@@ -390,7 +390,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     ```
 
     > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example `9.4`. 
+    > - Replace `<target_os_version>` with the target OS version, for example, `9.4`. 
     > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
@@ -416,7 +416,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     ```
 
     > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example `9.2`. 
+    > - Replace `<target_os_version>` with the target OS version, for example, `9.2`. 
     > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
@@ -443,7 +443,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     ```
     
     > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example `9.4`. 
+    > - Replace `<target_os_version>` with the target OS version, for example, `9.4`. 
     > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process confirms that a reboot is required to continue the process, as shown in the following output, manually reboot the VM:
@@ -470,7 +470,7 @@ This section outlines the recommended verification steps after completing an in-
 
 ### [RHEL 9.2 or RHEL 9.4 - SAP-HANA PAYG VMs](#tab/rhel9294saphana)
 
-1. Verify that the current OS version belongs to Red Hat Enterprise Linux 9:
+1. Verify that the current OS version belongs to RHEL 9:
 
     ```bash
     sudo cat /etc/redhat-release
@@ -507,7 +507,7 @@ This section outlines the recommended verification steps after completing an in-
 ### [RHEL 9.2 or RHEL 9.4 - SAP-APPS PAYG VMs](#tab/rhel9294sapapps)
 
 
-1. Verify that the current OS version belongs to Red Hat Enterprise Linux 9:
+1. Verify that the current OS version belongs to RHEL 9:
 
     ```bash
     sudo cat /etc/redhat-release
