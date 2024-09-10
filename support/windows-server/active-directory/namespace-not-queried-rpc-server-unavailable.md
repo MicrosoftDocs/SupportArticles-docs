@@ -130,7 +130,7 @@ AuthorityRecord: adatum.com of type SOA on class Internet: PrimaryNameServer: ad
 > [!NOTE]
 > After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes to take effect.
 
-Update the "same as parent" A records on the third-party DNS server, or create a HOSTS file on the Windows Server 2008 computer that includes the fully qualified name and the IP addresses of the domain controller.
+Update the "same as parent" A records on the third-party DNS server, or create a HOSTS file on the computer that includes the fully qualified name and the IP addresses of the domain controller.
 
 Sample HOSTS file:
 
