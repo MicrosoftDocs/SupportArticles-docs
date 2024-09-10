@@ -29,22 +29,22 @@ If your Azure issue isn't addressed in this article, visit the Azure forums on [
 
 To submit a support request, go to the [Azure support page](https://azure.microsoft.com/support/options/) and select **Get support**.
 
-## Reset network interface using the Azure portal
+## Use the Azure portal
 
 1. Go to the [Azure portal](https://portal.azure.com/).
-1. Select the affected Virtual Machine.
-1. Select **Networking** and then select the network interface of the VM.
+2. Select the affected Virtual Machine.
+3. Select **Networking** and then select the network interface of the VM.
 
     :::image type="content" source="media/reset-network-interface-azure-linux-vm/select-network-interface-vm.png" alt-text="Screenshot of the Network Interface VM selection under Networking." border="false":::
 
-1. Select **IP configurations**.
-1. Select the IP.
-1. If the **Private IP assignment** isn't set to **Static**, change it to **Static**.
-1. Change the **IP address** to another IP address that is available in the Subnet.
-1. The virtual machine will restart to initialize the new NIC to the system.
-1. Try to log into your machine using secure shell (SSH). If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
+4. Select **IP configurations**.
+5. Select the IP.
+6. If the **Private IP assignment** isn't set to **Static**, change it to **Static**.
+7. Change the **IP address** to another IP address that is available in the Subnet.
+8. The virtual machine will restart to initialize the new NIC to the system.
+9. Try to log into your machine using secure shell (SSH). If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
-## Reset network interface using Azure PowerShell
+## Use Azure PowerShell
 
 1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed.
 2. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands:
@@ -83,7 +83,7 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 2. The virtual machine will restart to initialize the new NIC to the system.
 3. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
-## Reset network interface using Azure CLI
+## Use Azure CLI
 
 1. Make sure that you have installed the latest [Azure command-line interface (CLI)](/cli/azure/install-azure-cli).
 

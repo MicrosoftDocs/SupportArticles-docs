@@ -1,6 +1,6 @@
 ---
 title: How to reset network interface for Azure Windows VM
-description: Shows how to reset network interface for Azure Windows VM
+description: Shows how to reset network interface for Azure Windows VM.
 services: virtual-machines, azure-resource-manager
 author: genlin
 manager: dcscontentpm
@@ -24,7 +24,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
-## Reset network interface using the Azure portal
+## Use the Azure portal
 
 1. Go to the [Azure portal](https://ms.portal.azure.com).
 2. Select the affected Virtual Machine.
@@ -39,7 +39,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 8. The virtual machine will restart to initialize the new NIC to the system.
 9. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
-## Reset network interface using Azure PowerShell
+## Use Azure PowerShell
 
 1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed.
 2. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands:
@@ -78,7 +78,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 2. The virtual machine will restart to initialize the new NIC to the system.
 3. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
-## Reset network interface using Azure CLI
+## Use Azure CLI
 
 1. Make sure that you have installed the latest [Azure command-line interface (CLI)](/cli/azure/install-azure-cli).
 
