@@ -121,12 +121,12 @@
     href: kernel-related-boot-issues.md
 - name: OS upgrades
   items:
-  - name: Upgrade to SLES 15 SP1
-    href: linux-upgrade-suse-15sp1.md
   - name: Red Hat
     items:
     - name: How to perform leapp upgrade for RHEL PAYG VMs
       href: leapp-upgrade-process-rhel-7-and-8.md
+    - name: Leapp upgrade from 7.9 to 8.x on RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs
+      href: leapp-upgrade-rhel7dot9-to-8dotx-saphana-sapapps.md
     - name: Leapp upgrade from 8.x to 9.x on RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs
       href: leapp-upgrade-rhel-8dotx-to-9dotx-saphana-sapapps.md
     - name: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs from 7.x to 7.9
