@@ -249,7 +249,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
     sudo leapp upgrade --target <target_os_version> --channel eus --no-rhsm
     ```
 
-    For example, upgrading to 8.8 requires EUS repo, so the `leapp upgrade` command should be:
+    For example, upgrading to 8.8 requires EUS repo, so the `leapp upgrade` command should be like:
     
     ```bash
     sudo leapp upgrade  --target 8.8 --channel eus --no-rhsm
