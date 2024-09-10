@@ -3,11 +3,7 @@ title: Troubleshoot SBD issues in RHEL Pacemaker Cluster
 description: Provides troubleshooting guidance if SBD services don't start
 ms.reviewer: rnirek
 ms.author: jsenthil4984
-author: jsenthil4984
-ms.author: HimanginiSisodia
 author: HimanginiSisodia
-ms.author: rnirek
-author: rnirek
 ms.topic: troubleshooting
 ms.date: 09/04/2024
 ms.service: azure-virtual-machines
