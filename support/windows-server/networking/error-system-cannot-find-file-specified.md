@@ -29,7 +29,7 @@ For example, under the following registry key, the registry entry for the DFS na
 
 ### Wireshark trace example
 
-See the following Wireshark trace on a member server or a member client with RSAT File Services Tools installed.
+See the following Wireshark trace on a member server or a member client with RSAT File Services tools installed.
 
 ```output
 192.168.0.45	192.168.0.42	NETDFS	310	dfs_GetInfo request
