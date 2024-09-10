@@ -355,7 +355,7 @@ Deleted Microsoft 365 groups are retained for 30 days. Within this period, eithe
 Restoring a Microsoft 365 group restores any services that are related to the group, such as Planner, Teams, and SharePoint sites.
 
 > [!NOTE]
-> It may take several hours to restore all the associated content for a group.
+> It may take up to 48 hours to restore all the associated content for a group.
 
 #### For group owners
 
