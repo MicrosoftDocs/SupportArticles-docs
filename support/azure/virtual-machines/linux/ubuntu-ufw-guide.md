@@ -30,28 +30,28 @@ UFM is a user-friendly interface for managing a `netfilter` firewall in Linux di
 
 1. Verify the UFW status.
 
-```bash
-sudo ufw status
-```
-In the output:
+     ```bash
+     sudo ufw status
+     ```
+     In the output:
 
-     - `Status: active` indicates that UFW is running.
-     
-     - `Status: inactive` indicates UFW isn't active, and the port won't be blocked by UFW.
+   - `Status: active` indicates that UFW is running.
+          
+   - `Status: inactive` indicates UFW isn't active, and the port won't be blocked by UFW.
 
 2. List the current UFW rules.
 
-```bash
-sudo ufw status numbered
-```
+     ```bash
+     sudo ufw status numbered
+     ```
 
-This command lists all the rules. It shows whether specific ports are allowed or denied. If a port doesn't appear in the list, it's closed by default.
+     This command lists all the rules. It shows whether specific ports are allowed or denied. If a port doesn't appear in the list, it's closed by default.
 
 3. Check the UFW rules to determine if a particular port is closed. For example, to verify if SSH port 22 is closed, use the following command:
 
-```bash
-sudo ufw status | grep '22'
-```
+     ```bash
+     sudo ufw status | grep '22'
+     ```
 
      - If the output displays `22/tcp ALLOW`, the port is open.
      - If no output appears or the rule shows `22/tcp DENY`, the port is closed.
