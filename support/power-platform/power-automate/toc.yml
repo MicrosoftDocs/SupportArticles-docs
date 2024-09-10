@@ -150,7 +150,7 @@
       href: desktop-flows/web-extensions-policies.md
     - name: Temporary profile error during machine registration
       href: desktop-flows/temporary-profile-error-machine-registration.md
-    - name: UnallowedTenantForConnectWithSignIn error
+    - name: 'UnallowedTenantForConnectWithSignIn or "Invalid Credentials" error' 
       href: desktop-flows/troubleshoot-unallowed-tenant-for-connect-with-sign-in.md
 - name: Flow creation
   items:
