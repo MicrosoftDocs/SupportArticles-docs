@@ -12,17 +12,17 @@ ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replicat
 
 This article helps resolve the error "The namespace cannot be queried. The specified server cannot perform the requested operation."
 
-When you access, modify, or create a Distributed File System (DFS) namespace on a DFS namespace server, domain member server, or Windows client with File Services Tools (included in Remote Server Administration Tools (RSAT)) installed, you might receive the following error message:
+When you access, modify, or create a Distributed File System (DFS) namespace on a DFS namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed, you might receive the following error message:
 
 > The namespace cannot be queried. The specified server cannot perform the requested operation
 
 ## The PDC or DC can't be reached or is down
 
-You use the DFS Management console on a machine that's a DFS namespace server, member server, or member client with RSAT File Services Tools installed. This issue occurs because the machine can't reach the primary domain controller (PDC) or domain controller (DC) over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port), or the PDC or DC is down.
+You use the DFS Management console on a machine that's a DFS namespace server, member server, or member client with RSAT File Services tools installed. This issue occurs because the machine can't reach the primary domain controller (PDC) or domain controller (DC) over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port), or the PDC or DC is down.
 
 ### Wireshark trace example 1
 
-Tracing on a DFS namespace server, member server, or member client with RSAT File Services Tools installed:
+Tracing on a DFS namespace server, member server, or member client with RSAT File Services tools installed:
 
 The Domain Name System (DNS) queries for LDAP SRV records are successful.
 
@@ -43,7 +43,7 @@ However, establishing a TCP connection to the PDC doesn't fail during the TCP th
 
 ### Wireshark trace example 2
 
-Tracing on a member server or a member client with RSAT File Services Tools installed:
+Tracing on a member server or a member client with RSAT File Services tools installed:
 
 ```output
 192.168.0.45	192.168.0.42	NETDFS	286	dfs_GetInfo request
