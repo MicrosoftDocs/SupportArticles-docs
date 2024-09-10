@@ -165,7 +165,7 @@ $cleanupdays = New-TimeSpan -Days $cleanupvalue
 $curdate = Get-Date
 $Date0 = [datetime]::FromFileTime(0)
 
-"Current Date........: $curdate"
+"Current Date........: $($curdate.ToString())"
 "Run As..............: $($env:USERDOMAIN)\$($env:USERNAME)"
 $OSInfo = Get-ComputerInfo CsName,OsName,WindowsVersion,OsVersion,OsLastBootUpTime,OsUptime
 "Machine Name........: " + $OSInfo.CsName
@@ -173,7 +173,7 @@ $OSInfo = Get-ComputerInfo CsName,OsName,WindowsVersion,OsVersion,OsLastBootUpTi
 "Windows Version.....: " + $OSInfo.WindowsVersion + " (" + $OSInfo.OsVersion + ")"
 $ProfsvcdllVersionInfo = (Get-Item $env:windir\system32\profsvc.dll).VersionInfo
 "Profsvc.dll Version.: $($ProfsvcdllVersionInfo.FileMajorPart).$($ProfsvcdllVersionInfo.FileMinorPart).$($ProfsvcdllVersionInfo.FileBuildPart).$($ProfsvcdllVersionInfo.FilePrivatePart)" 
-"Last boot time......: " + $OSInfo.OsLastBootUpTime + " (Up time: " + $OSInfo.OsUptime + ")"
+"Last boot time......: " + $OSInfo.OsLastBootUpTime.ToString() + " (Up time: " + $OSInfo.OsUptime + ")"
 "-" * 21
 "Profile Cleanup Days: $cleanupvalue$cleanupwarning"
 "Controlled by WMI...: $WMIcontrolled"
