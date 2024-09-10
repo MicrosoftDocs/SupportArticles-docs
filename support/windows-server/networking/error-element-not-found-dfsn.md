@@ -20,7 +20,7 @@ When you access, modify, or create a Distributed File System (DFS) namespace on 
 
 ### For domain-based DFS namespaces
 
-The registry key for the DFS namespace root is missing, or the registry values under the registry key are missing or corrupt. For example, under the following registry key:
+The registry key for the DFS namespace root is missing, or other registry values under the registry subkeys of the DFS root, are missing or corrupt. For example, under the following registry key:
 
 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\domainV2\DFS1`
 
@@ -33,7 +33,7 @@ The correct data for the registry values are:
 
 ### For domain stand-alone DFS namespaces
 
-The registry key for the DFS namespace root is missing, or the registry values under the registry key are missing or corrupt. For example, under the following registry key:
+The registry key for the DFS namespace root is missing, or other registry values under the registry subkeys of the DFS root, are missing or corrupt. For example, under the following registry key:
 
 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\DFS2St`
 
