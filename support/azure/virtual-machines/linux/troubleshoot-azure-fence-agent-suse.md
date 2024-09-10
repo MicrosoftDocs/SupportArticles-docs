@@ -2,8 +2,9 @@
 title: Troubleshoot Azure Fence Agent startup issues in SUSE
 description: Provides troubleshooting guidance if Azure Fence Agent does not start
 ms.reviewer: divargas
+ms.author: rnirek
 ms.topic: troubleshooting
-ms.date: 07/04/2024
+ms.date: 09/10/2024
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
@@ -160,8 +161,8 @@ Apr 2 00:49:57 VM1 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: 
 ### Resolution
 
 1. [Create a custom role for the fence agent](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&tabs=msi#1-create-a-custom-role-for-the-fence-agent) to verify that the custom role definition is configured for the fence agent.
-1. Verify that the fencing agent is assigned the necessary custom role on the affected VM. If it's not, assign the role to the VM by using Access Control.
-1. Run `crm status` to check the cluster status to make sure that the fencing agent issue is resolved.
+2. Verify that the fencing agent is assigned the necessary custom role on the affected VM. If it's not, assign the role to the VM by using Access Control.
+3. Run `crm status` to check the cluster status to make sure that the fencing agent issue is resolved.
 
 ## Cause 4: SSL handshake failure 
 
@@ -218,6 +219,63 @@ warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed:
 
     - Application Rules: ApiManagement , AppServiceManagement, AzureCloud
     - Network Rules: AppServiceEnvironment
+
+## Cause 5: Missing `fence-agents-azure-arm` package
+
+Check the log in `/var/log/messages`. The fence-agent is unable to read or find the `'fence-aagents-azure-arm` package in the system. 
+
+```output
+/var/log/messages
+2024-09-03T02:30:36.264033+00:00 node1 lrmd[5772]:    error: Unknown fence agent: fence_azure_arm
+2024-09-03T02:30:36.271111+00:00 node1 stonith-ng[5771]:   error: Unknown fence agent: fence_azure_arm
+2024-09-03T02:30:36.271426+00:00 node1 stonith-ng[5771]:   error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-09-03T02:30:36.271620+00:00 node1 stonith-ng[5771]:   error: Could not retrieve metadata for fencing agent fence_azure_arm
+2024-09-03T02:30:36.271800+00:00 node1 stonith-ng[5771]: warning: Cannot execute '/usr/sbin/fence_azure_arm': No such file or directory (2)
+2024-09-03T02:30:37.271549+00:00 node1 stonith-ng[5771]: warning: Cannot execute '/usr/sbin/fence_azure_arm': No such file or directory (2)
+2024-09-03T02:30:39.271843+00:00 node1 stonith-ng[5771]: message repeated 2 times: [  warning: Cannot execute '/usr/sbin/fence_azure_arm': No such file or directory (2)]
+2024-09-03T02:30:39.272240+00:00 node1 stonith-ng[5771]:  notice: Operation 'monitor' [0] for device 'rsc_st_azure' returned: -61 (No data available)
+2024-09-03T02:30:39.272486+00:00 node1 lrmd[5772]:   notice: finished - rsc:rsc_st_azure action:start call_id:67  exit-code:1 exec-time:3008ms queue-time:0ms
+2024-09-03T02:30:39.272722+00:00 node1 crmd[5776]:    error: Unknown fence agent: fence_azure_arm
+2024-09-03T02:30:39.272970+00:00 node1 crmd[5776]:    error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-09-03T02:30:39.273207+00:00 node1 crmd[5776]:  warning: Failed to get metadata for rsc_st_azure (stonith:(null):fence_azure_arm)
+2024-09-03T02:30:39.273439+00:00 node1 crmd[5776]:    error: Result of start operation for rsc_st_azure on node1: Error
+2024-09-03T02:30:39.274704+00:00 node1 crmd[5776]:  warning: Action 9 (rsc_st_azure_start_0) on node1 failed (target: 0 vs. rc: 1): Error
+2024-09-03T02:30:39.274984+00:00 node1 crmd[5776]:   notice: Transition 91369 (Complete=3, Pending=0, Fired=0, Skipped=0, Incomplete=1, Source=/var/lib/pacemaker/pengine/pe-input-2563.bz2): Complete
+2024-09-03T02:30:39.307439+00:00 node1 pengine[5775]:  warning: Processing failed start of rsc_st_azure on node1: unknown error
+2024-09-03T02:30:39.307786+00:00 node1 pengine[5775]:  warning: Processing failed start of rsc_st_azure on node1: unknown error
+```
+```output
+/var/log/messages
+2024-08-20T13:28:24.043272+00:00 node1 crmd[6692]:    error: Unknown fence agent: fence_azure_arm
+2024-08-20T13:28:24.043453+00:00 node1 crmd[6692]:    error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-08-20T13:28:24.043554+00:00 node1 crmd[6692]:  warning: Failed to get metadata for rsc_st_azure (stonith:(null):fence_azure_arm)
+2024-08-20T13:28:24.044608+00:00 node1 crmd[6692]:    error: Unknown fence agent: fence_azure_arm
+2024-08-20T13:28:24.044711+00:00 node1 crmd[6692]:    error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-08-20T13:28:24.044833+00:00 node1 crmd[6692]:  warning: Failed to get metadata for rsc_st_azure (stonith:(null):fence_azure_arm)
+2024-08-20T13:28:26.160617+00:00 node1 crmd[6692]:    error: Unknown fence agent: fence_azure_arm
+2024-08-20T13:28:26.160895+00:00 node1 crmd[6692]:    error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-08-20T13:28:26.161008+00:00 node1 crmd[6692]:  warning: Failed to get metadata for rsc_st_azure (stonith:(null):fence_azure_arm)
+2024-08-20T13:28:26.162073+00:00 node1 crmd[6692]:    error: Unknown fence agent: fence_azure_arm
+2024-08-20T13:28:26.162193+00:00 node1 crmd[6692]:    error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-08-20T13:28:26.162294+00:00 node1 crmd[6692]:  warning: Failed to get metadata for rsc_st_azure (stonith:(null):fence_azure_arm)
+```
+
+### Resolution
+With the recent `python3.11` introduced, SUSE has rebuild the new package for Microsoft as `fence-agents-azure-arm`
+[Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=spn#create-an-azure-fence-agent-device).
+1. Put the cluster under maintenance-mode
+ ```bash
+    sudo crm configure property maintenance-mode=true
+ ```
+2. Install the following package in both the VMs.:
+```bash
+   sudo zypper in fence-agents-azure-arm
+```
+3. Remove the cluster out of maintenance-mode
+```bash
+    sudo crm configure property maintenance-mode=false
+```
+4. Run `crm status` to check the cluster status to make sure that the fencing agent issue is resolved.
 
 ## Next Steps
 
