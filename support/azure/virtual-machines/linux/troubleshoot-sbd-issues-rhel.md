@@ -2,11 +2,15 @@
 title: Troubleshoot SBD issues in RHEL Pacemaker Cluster
 description: Provides troubleshooting guidance if SBD services don't start
 ms.reviewer: rnirek
-ms.author: sentj,hsisodia
-author: sentj,hsisodia
+ms.author: jsenthil4984
+author: jsenthil4984
+ms.author: HimanginiSisodia
+author: HimanginiSisodia
+ms.author: rnirek
+author: rnirek
 ms.topic: troubleshooting
-ms.date: 07/23/2024
-ms.service: virtual-machines
+ms.date: 09/04/2024
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---
@@ -25,7 +29,7 @@ For Azure Pacemaker cluster with SBD fencing mechanism, either of the two option
 
 1. [SBD with an iscsi target server](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#sbd-with-an-iscsi-target-server)
 
-2. [SBD with an Azure shared disk](azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#sbd-with-an-azure-shared-disk)
+2. [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#sbd-with-an-azure-shared-disk)
 
 
 ## Symptom
@@ -35,16 +39,21 @@ SBD server details can be fetched via message logs or the `iscsiadm` discovery c
 
 ## Cause 1 : SBD service failed due to iscsi failure
 
-Pacemaker service  not running and  SBD Service is in failed State on both cluster Nodes.'iSCSI' services Use 'IQN' for communication between Initiator and Target Nodes,failure to run services results in inaccessible SBD Disks, leading to SBD and pacemaker service failures.
+Pacemaker service  not running and  SBD Service is in failed State on both cluster Nodes. 'iSCSI' services Use 'IQN' for communication between Initiator and Target Nodes,failure to run services results in inaccessible SBD Disks, leading to SBD and pacemaker service failures.
 
+```bash
+ sudo pcs status
+   ```
 
 ```output
-[node1 ~]# pcs status
 Error: error running crm_mon, is pacemaker running?
   error: Could not connect to launcher: Connection refused
   crm_mon: Connection to cluster failed: Connection refused
-
-[node1 ~]# systemctl status corosync
+```
+```bash
+sudo systemctl status corosync
+```
+```output
 ● corosync.service - Corosync Cluster Engine
      Loaded: loaded (/usr/lib/systemd/system/corosync.service; enabled; preset: disabled)
      Active: active (running) since Thu 2024-08-01 11:22:28 UTC; 1min 22s ago
@@ -72,8 +81,10 @@ Aug 01 11:22:45 node1 corosync[12793]:   [MAIN  ] Completed service synchronizat
 
 Pacemaker service is in failed status due to dependency failure as SBD service is required for pacemaker to start.
 
+```bash
+ sudo systemctl status pacemaker
+```
 ```output
-[node1 ~]# systemctl status pacemaker
 ○ pacemaker.service - Pacemaker High Availability Cluster Manager
      Loaded: loaded (/usr/lib/systemd/system/pacemaker.service; enabled; preset: disabled)
      Active: inactive (dead) since Thu 2024-08-01 11:22:22 UTC; 2min 9s ago
@@ -82,8 +93,12 @@ https://clusterlabs.org/pacemaker/doc/
 
 Aug 01 11:24:28 node1 systemd[1]: Dependency failed for Pacemaker High Availability Cluster Manager.
 Aug 01 11:24:28 node1 systemd[1]: pacemaker.service: Job pacemaker.service/start failed with result 'dependency'.
+```
 
-[node1 ~]# systemctl list-dependencies pacemaker
+``` bash
+sudo systemctl list-dependencies pacemaker
+```
+```output
 pacemaker.service
 ● ├─corosync.service
 ● ├─dbus-broker.service
@@ -91,8 +106,12 @@ pacemaker.service
 ● ├─system.slice
 ● ├─resource-agents-deps.target
 ● └─sysinit.target
+```
 
-[node1 ~]# systemctl status sbd
+```bash
+sudo systemctl status sbd
+```
+```output
 × sbd.service - Shared-storage based fencing daemon
      Loaded: loaded (/usr/lib/systemd/system/sbd.service; enabled; preset: disabled)
     Drop-In: /etc/systemd/system/sbd.service.d
@@ -118,16 +137,24 @@ Aug 01 11:24:28 node1 systemd[1]: Failed to start Shared-storage based fencing d
 2. Ensure `iscsid` and `iscsi` service is enabled and running.
 
 ```  bash
-#sudo systemctl enable iscsi
-#sudo systemctl enable iscsid
-#sudo systemctl status iscsi 
-#sudo systemctl status iscsid
+sudo systemctl enable iscsi
+```
+```bash
+sudo systemctl enable iscsid
+```
+```bash
+sudo systemctl status iscsi 
+```
+```bash
+sudo systemctl status iscsid
 ```
 
 The output should look like this:
 
+```bash
+sudo systemctl status  iscsi
+```
 ```output
-[node1 ~]# systemctl status  iscsi
 ● iscsi.service - Login and scanning of iSCSI devices
      Loaded: loaded (/usr/lib/systemd/system/iscsi.service; enabled; preset: enabled)
      Active: active (exited) since Thu 2024-08-01 10:28:36 UTC; 1h 0min ago
@@ -166,8 +193,10 @@ SBD_DEVICE="/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d77;/dev/disk/by-i
 ### Resolution 2:
 Validate the Stonith resource configuration using the command:
 
+```bash
+sudo pcs stonith config sbd
+```
 ```output
-[node1 ~]# pcs stonith config sbd
 Resource: sbd (class=stonith type=fence_sbd)
   Attributes: sbd-instance_attributes
     devices=/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779,/dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a,/dev/disk/by-
@@ -182,13 +211,19 @@ Resource: sbd (class=stonith type=fence_sbd)
 
 Executing `lscsi` or `lsblk` commands does not display SBD disks in the output:
 
+```bash
+sudo lsscsi
+```
 ```output
-[node1 /]# lsscsi
 [0:0:0:0]    disk    Msft     Virtual Disk     1.0   /dev/sda
 [1:0:1:0]    disk    Msft     Virtual Disk     1.0   /dev/sdb
 [5:0:0:0]    cd/dvd  Msft     Virtual CD/ROM   1.0   /dev/sr0
+```
 
-[node1 /]# lsblk
+```bash
+sudo lsblk
+```
+```output
 NAME              MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
 sda                 8:0    0   64G  0 disk
 ├─sda1              8:1    0  200M  0 part /boot/efi
@@ -210,20 +245,27 @@ Perform the following checks.
 
 1. Validate the initiator name on both Cluster nodes.
 
+* 
 ```bash
- node1:~ # cat /etc/iscsi/initiatorname.iscsi
+sudo  cat /etc/iscsi/initiatorname.iscsi
+```
+```output
 InitiatorName=iqn.2006-04.nfs-0.local:nfs-0
 ```
-
+* 
 ```bash 
-node2:~ #  cat /etc/iscsi/initiatorname.iscsi
+sudo  cat /etc/iscsi/initiatorname.iscsi
+```
+```output
 InitiatorName=iqn.2006-04.nfs-1.local:nfs-1
 ```
 
 2.Try listing all SBD devices mentioned in SBD configuration file.
 
 ```bash
-[node1 /]# grep SBD_DEVICE /etc/sysconfig/sbd
+sudo grep SBD_DEVICE /etc/sysconfig/sbd
+```
+```output
 # SBD_DEVICE specifies the devices to use for exchanging sbd messages
 SBD_DEVICE="/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779;/dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a;/dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb"
 ```
@@ -231,17 +273,25 @@ SBD_DEVICE="/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779;/dev/disk/by-
 3. Based on the error provided, check if the SBD servers are up and accessible.
 
 ```bash
-node1 /]# /usr/sbin/sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
+sudo  /usr/sbin/sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
+```
+```output
 == disk /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 unreadable!
 sbd failed; please check the logs.
-node1 /]# /usr/sbin/sbd -d /dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a list
+```
+```bash
+sudo /usr/sbin/sbd -d /dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a list
+```
+```output
 == disk /dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a unreadable!
 sbd failed; please check the logs.
-node1 /]#
-node1 /]# /usr/sbin/sbd -d /dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb list
+```
+```bash
+sudo /usr/sbin/sbd -d /dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb list
+```
+```output
 == disk /dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb unreadable!
 sbd failed; please check the logs.
-node1 /]#
 ```
 
 
@@ -250,24 +300,37 @@ node1 /]#
 In the following example, `10.0.0.17` is the IP address of one of the `iSCSI` target servers, and `3260` is the default port.
 `iqn.2006-04.nfs.local:nfs` is a target name listed when running the first command, `iscsiadm -m discovery`.
 
+
+```bash
+sudo iscsiadm -m discovery
+```
 ```output
-[node1 /]# iscsiadm -m discovery
 10.0.0.17:3260 via sendtargets
 10.0.0.18:3260 via sendtargets
 10.0.0.19:3260 via sendtargets
-
-[node1 /]# iscsiadm -m discovery --type=st --portal=10.0.0.17:3260
+```
+```bash
+sudo iscsiadm -m discovery --type=st --portal=10.0.0.17:3260
+```
+```output
 10.0.0.17:3260,1 iqn.2006-04.dbnw1.local:dbnw1
 10.0.0.17:3260,1 iqn.2006-04.ascsnw1.local:ascsnw1
 10.0.0.17:3260,1 iqn.2006-04.nfs.local:nfs
-
-[node1 /]# iscsiadm -m node -T iqn.2006-04.nfs.local:nfs --login --portal=10.0.0.17:3260
+```
+```bash
+sudo iscsiadm -m node -T iqn.2006-04.nfs.local:nfs --login --portal=10.0.0.17:3260
+```
+```output
 Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.17,3260]
 Login to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.17,3260] successful.
-
-[node1 /]# iscsiadm -m node -p 10.0.0.17:3260 -T iqn.2006-04.nfs.local:nfs --op=update --name=node.startup --value=automatic
-
-[node1 /]# lsscsi
+```
+```bash
+      sudoiscsiadm -m node -p 10.0.0.17:3260 -T iqn.2006-04.nfs.local:nfs --op=update --name=node.startup --value=automatic
+```
+```bash
+sudo lsscsi
+```
+```output
 [0:0:0:0]    disk    Msft     Virtual Disk     1.0   /dev/sda
 [1:0:1:0]    disk    Msft     Virtual Disk     1.0   /dev/sdb
 [5:0:0:0]    cd/dvd  Msft     Virtual CD/ROM   1.0   /dev/sr0
@@ -276,16 +339,21 @@ Login to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.17,3
 Execute the same commands to connect to the rest of the two devices. Moreover execute same set of commands on the other cluster Node.
 
 5. Once iscsi devices detected, command output should reflect SBD devices:
+```bash
+sudo lsscsi
+```
 ```output
-[node1 /]# lsscsi
 [0:0:0:0]    disk    Msft     Virtual Disk     1.0   /dev/sda
 [1:0:1:0]    disk    Msft     Virtual Disk     1.0   /dev/sdb
 [5:0:0:0]    cd/dvd  Msft     Virtual CD/ROM   1.0   /dev/sr0
 [6:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sdc
 [7:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sdd
 [8:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sde
-
-[node1 /]# lsblk
+```
+```bash
+sudo lsblk
+```
+```output
 NAME              MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
 sda                 8:0    0   64G  0 disk
 ├─sda1              8:1    0  200M  0 part /boot/efi
@@ -314,33 +382,39 @@ It's possible that the SBD slot is not in clean state, hence the Node can't rejo
 Check the SBD status using the following commands (if not clean, the SBD output will show a reset).
 
 ```bash
-#sudo lsscsi
-#sudo ls -l /dev/disk/by-id/scsi-*
-#sudo sbd -d /dev/sd* list
+sudo lsscsi
 ```
-The output should look like this: 
 
 ```output
-node2 ~]# lsscsi
 [0:0:0:0]    disk    Msft     Virtual Disk     1.0   /dev/sda
 [1:0:1:0]    disk    Msft     Virtual Disk     1.0   /dev/sdb
 [5:0:0:0]    cd/dvd  Msft     Virtual CD/ROM   1.0   /dev/sr0
 [6:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sdc
 [7:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sdd
 [8:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sde
+```
 
-node2 ~]# sbd -d /dev/sdc list
+```bash
+sudo sbd -d /dev/sdc list
+```
+```output
 0       node1   clear
 1       node2   reset   node1
-
-node2 ~]# sbd -d /dev/sdd list
+```
+```bash
+sudo sbd -d /dev/sdd list
+```
+```output
 0       node1   clear
 1       node2   reset   node1
-
-node2 ~]# sbd -d /dev/sde list
+```
+* 
+```bash
+sudo  sbd -d /dev/sde list
+```
+```output
 0       node1   clear
 1       node2   reset   node1
-
 ```
 
 ### Resolution 2:
@@ -348,23 +422,21 @@ node2 ~]# sbd -d /dev/sde list
 Validate the `/etc/sysconfig/sbd` and check if the `SBD_STARTMODE` is set to `always` or `clean`:
 
 ```bash
-# grep -i SBD_STARTMODE  /etc/sysconfig/sbd
+sudo grep -i SBD_STARTMODE  /etc/sysconfig/sbd
+```
+```output
 SBD_STARTMODE=clean
-#
 ```
 
-`SBD_STARTMODE` -this determines if Node rejoins or not.
+`SBD_STARTMODE`  determines if Node rejoins or not.If set to `always`, then even if a node was previously fenced, it rejoins the cluster. If set to `clean`, then the node rejoins after cleaned state.
 
-If set to `always`, then even if a node was previously fenced, it rejoins the cluster. 
-
-If set to `clean`, then the node rejoins after cleaned state.
 The action is an expected behavior. It detects a fencing type message in the SBD slot for the node and not allows the Node to join the cluster unless manually cleared.
 
-• Syntax to be runs on node that was previously fenced:
+• Syntax to be run on node that was previously fenced:
 
 Example:
 ```bash
-#sbd -d <SBD_DEVICE> message LOCAL clear
+sudo sbd -d <SBD_DEVICE> message LOCAL clear
 ```
 
 • You may also issue the command from any node in cluster by specifying the node name instead of `LOCAL`
@@ -372,12 +444,12 @@ Example:
 Example:
 
 ```bash
-sbd -d <DEVICE_NAME> message <NODENAME> clear
+sudo sbd -d <DEVICE_NAME> message <NODENAME> clear
 ```
 
 Node name is the node fenced and is not able to join the cluster:
 ```bash
-#sbd -d /dev/sdc message node2 clear
+sudo sbd -d /dev/sdc message node2 clear
 ```
 
 Once the node slot is cleared, you should be able to start Clustering services.
@@ -385,9 +457,13 @@ Once the node slot is cleared, you should be able to start Clustering services.
 •	If this still fails, run the commands to fix the issue:
 
 ```bash
-#iscsiadm -m node -u
-#iscsiadm -m node -l
+sudo iscsiadm -m node -u
 ```
+```bash
+sudo iscsiadm -m node -l
+```
+> [!NOTE]
+> Replace `<DEVICE_NAME>` and `<NODENAME>` accordingly.
 
 ## Cause 5: SBD service fails to start after adding new SBD device
 Getting error message `sbd failed; please check the logs` after creating / adding new sbd device into cluster.
@@ -396,13 +472,15 @@ Getting error message `sbd failed; please check the logs` after creating / addin
 
 Check if you're getting errors while sending/testing messages by SBD devices
 
-```output
+```bash
 sbd -d  /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 message node1 test
+```
+```output
 sbd failed; please check the logs.
 ```
 
- ```bash
-/ var/log/messages logs
+```output
+/ var/log/messages 
 Mar  2 06:58:06 node1 sbd[11105]: /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779:    error: slot_msg: slot_msg(): No recipient / cmd specified.
 Mar  2 06:58:06 node1 sbd[11104]: warning: messenger: Process 11105 failed to deliver!
 ```
@@ -413,24 +491,30 @@ SBD device in cluster, you should restart the pacemaker cluster to take effect u
 
 1. Restart cluster services on all cluster nodes.
 
- ```bash 
-# sudo pcs cluster stop --all
-# sudo pcs cluster start --all
+```bash 
+sudo pcs cluster stop --all
+```
+```bash
+sudo pcs cluster start --all
 ```
 
 2. Check if SBD service start successfully.
 
- ```output
-# systemctl status sbd.service 
+ ```bash
+   sudo systemctl status sbd.service 
+```
+```output
 ● sbd.service - Shared-storage based fencing daemon
    Loaded: loaded (/usr/lib/systemd/system/sbd.service; enabled; vendor preset: disabled)
    Active: active (running)
-   ```
+```
 
 3.Check if SBD device list giving desired output:
 
+```bash
+sudo sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
+```
 ```output
-# sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
 0   node1   clear   
 1   node2   clear   
 ```
@@ -448,5 +532,3 @@ Use the following RHEL  article for log collection:
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
