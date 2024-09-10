@@ -1,7 +1,7 @@
 ---
 title: A button on the command bar has incorrect labels
 description: Introduces how to troubleshoot issues with command buttons not showing the correct label text in Microsoft Power Apps.
-ms.date: 09/09/2024
+ms.date: 09/10/2024
 ms.reviewer: tahoon
 ms.custom: sap:Configuring model-driven app commands\Command is not shown or hidden as expected
 ---
