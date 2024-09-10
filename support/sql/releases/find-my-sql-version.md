@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 321185
 To determine the version of SQL Server, you can use any of the following methods.
 
 > [!NOTE]  
->  The version information follows the *major.minor.build.revision* pattern. The "revision" information isn't typically used when checking the version of SQL Server.
+>  The version information follows the *major.minor.build.revision* pattern. The "revision" information is typically not used when checking the version of SQL Server.
 
 ## Method 1: Connect to the server by using SQL Server Management Studio
 
