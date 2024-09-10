@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Monitor Agent installation issues on Windows virtual machines
 description: Provides steps to troubleshoot installation issues with Azure Monitor Agent on a Windows virtual machine.
-ms.date: 09/02/2024
+ms.date: 09/10/2024
 ms.reviewer: johnsirmon, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Windows Extension not installing
@@ -127,7 +127,12 @@ If the VM isn't running, start it first and wait for it to enter a running state
 
 ### <a id="verify-vm-guest-agent-running"></a>Step 4: Verify if the VM Guest Agent is running
 
-Check the VM Guest Agent. If the VM Guest Agent is running, move to [Step 5: Verify if the VM Guest Agent downloads the extension binaries](#extension-binaries-downloaded).
+Check the VM Guest Agent's status by using one of the following methods:
+
+- Use the `Get-Service WindowsAzureGuestAgent` PowerShell cmdlet.
+- Use the Azure portal.
+  
+If the VM Guest Agent is running, move to [Step 5: Verify if the VM Guest Agent downloads the extension binaries](#extension-binaries-downloaded).
 
 ### <a id="extension-binaries-downloaded"></a>Step 5: Verify if the VM Guest Agent downloads the extension binaries
 
