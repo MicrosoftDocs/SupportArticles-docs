@@ -2,7 +2,7 @@
 title: Installation issues in Power Automate for desktop
 description: Helps troubleshoot stallation issues in Power Automate for desktop.
 ms.reviewer: guco, johndund
-ms.date: 09/09/2024
+ms.date: 09/10/2024
 ms.custom: sap:Desktop flows\Installation issues
 ---
 # Troubleshoot installation issues in Power Automate for desktop
@@ -52,6 +52,10 @@ To work around this issue, uninstall "Microsoft Visual C++ 2015-2022 Redistribut
 
 The installation fails with this error if the Power Automate service crashes at startup. The Windows Event Viewer shows the "FailedToEnumerateSessions" error.
 
+> UIFlowService  
+> Exception caught during service startup:  
+> Microsoft.Flow.RPA.Service.Core.UIFlowServiceException: Error code: FailedToEnumerateSessions
+
 :::image type="content" source="media/power-automate-desktop-installation-issues/failed-to-enumerate-sessions-error.png" alt-text="Screenshot that shows the FailedToEnumerateSessions error logged in Event Viewer.":::
 
 #### Cause
@@ -76,7 +80,7 @@ The installation fails because the Power Automate service crashes at startup, an
 
 :::image type="content" source="media/power-automate-desktop-installation-issues/backing-store-is-unhealthy-error.png" alt-text="Screenshot that shows the UIFlowServiceSecretStore backing store is unhealthy error.":::
 
-> Windows cannot log you on because your profile cannot be loaded. Check that you are connected to the network, and that your network functions correctly.
+> Windows cannot log you on because your profile cannot be loaded. Check that you are connected to the network, and that your network is functioning correctly.
 
 :::image type="content" source="media/power-automate-desktop-installation-issues/profile-cannot-be-loaded-error.png" alt-text="Screenshot that shows the Windows can't log you on because your profile can't be loaded error.":::
 
@@ -95,13 +99,13 @@ If this registry key doesn't exist, it means that your machine doesn't allow the
 
 #### Workaround (requires installer version 2.18 or later)
 
-As a workaround, you can provide a Windows user account that runs the service instead of the default account. This account needs to be a member of the remote desktop user group and needs to have the "Logon as a service" privilege.
+Instead of the default account (`NT SERVICE\UIFlowService`), you can provide a Windows user account to run the service. This account needs to be a member of the remote desktop user group and needs to have the "Logon as a service" privilege.
 
-You can run the installer from a command line and pass the `/SKIPSTARTINGPOWERAUTOMATESERVICE` argument to skip starting the Power Automate service.
+First run the installer from a command line and pass the `/SKIPSTARTINGPOWERAUTOMATESERVICE` argument to prevent the Power Automate service from starting automatically during the installation.
 
 :::image type="content" source="media/power-automate-desktop-installation-issues/skipstartingpowerautomateservice.png" alt-text="Screenshot that shows how to prevent the Power Automate service from starting automatically by using a command.":::
 
-When the installation succeeds, run the Power Automate Machine runtime application and use the **Troubleshoot** menu to change the service account. For more information on changing the service account, see [Change the on-premises Service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
+When the installation completes, run the Power Automate Machine runtime application and use the **Troubleshoot** menu to change the service account. For more information on changing the service account, see [Change the on-premises Service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
 
 ### Power Automate service fails to start: Verify that you have sufficient privileges to start system services
 
@@ -118,12 +122,12 @@ The account used to start the Power Automate service can't start the service bec
 During installation, the `UIFlowService` runs as `NT SERVICE\UIFlowService`. The account used by `UIFlowService` can be changed later, but for installation purposes it mustn't be blocked from logging on.
 
 > [!NOTE]
-> Even though the Power Automate service doesn't crash, you might still find an error like the following, indicating that something is blocking the installation. This issue could potentially be associated with the account or group used for sign-in.
+> If you find a service crash log, similar to the one shown in the following screenshot, it means that the service has sufficient privileges to start, and the installation is blocked by the service crashing on startup. To solve the issue, see the other sections of this article.
 >
 > "UIFlowService  
 > Exception caught during service startup:"
 >
-> :::image type="content" source="media/power-automate-desktop-installation-issues/exception-caught-during-service-startup-error.png" alt-text="Screenshot that shows the event that occurs even though the Power Automate service doesn't crash.":::
+> :::image type="content" source="media/power-automate-desktop-installation-issues/exception-caught-during-service-startup-error.png" alt-text="Screenshot that shows the event that occurs when the Power Automate service crashes during startup.":::
 
 #### Resolution
 
