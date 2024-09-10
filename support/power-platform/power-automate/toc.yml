@@ -212,3 +212,7 @@
       href: https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPACommunity
     - name: Power Automate Ideas forum
       href: https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f
+- name: Process Mining
+  items:
+    - name: Licensing errors when accessing Process Mining Process
+      href: process-mining/process-mining-license-error.md
