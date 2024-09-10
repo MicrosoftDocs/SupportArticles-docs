@@ -18,7 +18,7 @@ When you access, modify, or create a Distributed File System (DFS) namespace on 
 
 ## Cause 1: The PDC or DC can't be reached or is down
 
-You use the DFS Management console on a machine that's a DFS namespace server, member server, or member client with RSAT File Services tools installed). This issue occurs because the machine can't reach the primary domain controller (PDC) or domain controller (DC) over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port), or the PDC or DC is down.
+You use the DFS Management console on a machine that's a DFS namespace server, member server, or member client with RSAT File Services tools installed. This issue occurs because the machine can't reach the primary domain controller (PDC) or domain controller (DC) over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port), or the PDC or DC is down.
 
 ### Wireshark trace example 1
 
