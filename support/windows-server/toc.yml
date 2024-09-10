@@ -1251,7 +1251,7 @@ items:
       href: ./networking/dns-cname-alias-cannot-access-smb-file-server-share.md
     - name: Domain users fail to access a share on a file server
       href: ./networking/target-account-name-incorrect-error-access-file-share.md
-    - name: 'Error "Element not found" with DFS Namespaces'
+    - name: 'Error "Element not found" with DFS namespaces'
       href: ./networking/error-element-not-found-dfsn.md
     - name: Error messages on SMB connections
       href: ./networking/error-messages-smb-connections.md
