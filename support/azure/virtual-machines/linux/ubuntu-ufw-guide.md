@@ -1,6 +1,6 @@
 ---
-title:  Troubleshooting UFW (Uncomplicated Firewall) in Ubuntu distribution.
-description: Verifying UFW rules
+title:  Troubleshooting connectivity issues by using Uncomplicated Firewall (UFW) in Azure Ubuntu VMs
+description: Describes how to use Uncomplicated Firewall (UFM) to diagnose and resolve connectivity problems in Azure Ubuntu VMs. 
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
@@ -9,56 +9,52 @@ ms.date: 08/23/2024
 ms.service: azure-virtual-machines
 ---
 
-# Troubleshooting UFW (Uncomplicated Firewall) in Ubuntu distributions.
+# Use UFM for troubleshooting connectivity in Azure Ubuntu VMs
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-UFW (Uncomplicated Firewall) is a user-friendly interface for managing a `netfilter` firewall in Linux distributions, particularly in Ubuntu. Its primary goal is to make managing a firewall easier for users who might find the complexity of directly configuring iptables daunting and it's the default firewall configuration tool.
+This article describes how to use Uncomplicated Firewall (UFM) to diagnose and resolve connectivity problems in an Azure Ubuntu virtual machine(VM).
+
+UFM is a user-friendly interface for managing a `netfilter` firewall in Linux distributions, particularly in Ubuntu. Its primary goal is to make managing a firewall easier for users who might find the complexity of directly configuring `iptables` daunting. UFM is the default firewall configuration tool.
 
 ## Prerequisites
 
 - Root privileges.
-- Set up access to the serial console.
-- Make sure the net-tools, iproute2, and netcat-openbsd packages are installed.
+- Access to the serial console.
+- Ensure the `net-tools`, `iproute2`, and `netcat-openbsd` packages are installed.
 
-## How to Check if a Port is Closed on my Ubuntu Virtual machine with UFW
+## How to check if a port is closed in the Ubuntu VM with UFM
 
-> [!IMPORTANT]  
-> By default, ufw is disabled on Ubuntu images from the Azure Marketplace. If you enable ufw on your virtual machine, all ports, including port 22 for SSH services, will be closed by default..
+> [!NOTE]  
+> By default, UFW is not enabled on Ubuntu VMs that are created by using images from the Azure Marketplace. Enabling UFW on your virtual machine will close all ports, including port 22 for SSH services.
 
 1. Verify the UFW status.
 
 ```bash
 sudo ufw status
 ```
+In the output:
 
-`Status: active` indicates that UFW is running.
+     - `Status: active` indicates that UFW is running.
+     
+     - `Status: inactive` indicates UFW isn't active, and the port won't be blocked by UFW.
 
-If it says `Status: inactive`, UFW isn't active, and the port won't be blocked by UFW.
-
-
-2. List Current UFW Rules.
+2. List the current UFW rules.
 
 ```bash
 sudo ufw status numbered
 ```
 
-A list of all the rules, showing whether specific ports are allowed or denied. If a port doesn't appear in the list, it's closed by default
+This command lists all the rules. It shows whether specific ports are allowed or denied. If a port doesn't appear in the list, it's closed by default.
 
-
-3. Check if a Specific Port is Closed.
-
-If you want to check whether a particular port is closed, look for its status in the UFW rules.
-
-Suppose we want to check if the default SSH port 22 is closed
+3. Check the UFW rules to determine if a particular port is closed. For example, to verify if SSH port 22 is closed, use the following command:
 
 ```bash
 sudo ufw status | grep '22'
 ```
 
-If the output shows 22/tcp ALLOW, the port is open.
-
-If there's no output or the rule shows DENY, the port is closed.
+     - If the output displays `22/tcp ALLOW`, the port is open.
+     - If no output appears or the rule shows `22/tcp DENY`, the port is closed.
 
 4. Verify port connectivity using the `netstat` or `ss` command:
 
@@ -70,7 +66,7 @@ sudo netstat -tuln | grep ':22'
 sudo ss -tuln | grep ':22'
 ```
 
-No output means the port isn't being used or listened to by any service, indicating there is no service available on that port. If a firewall rule is in place to block the port, it may still appear closed even if a service is running.
+No output indicates that the port is not in use or being listened by any service. If a firewall rule is in place to block the port, it may still appear closed.
 
 5. Test Port Connectivity using `nc`
 
