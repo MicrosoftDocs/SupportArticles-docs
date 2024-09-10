@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
-ms.date: 11/22/2018
+ms.date: 09/10/2024
 ms.author: delhan
 
 ms.custom: sap:Cannot connect to my VM
