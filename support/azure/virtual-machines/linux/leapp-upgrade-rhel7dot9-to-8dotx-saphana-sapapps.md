@@ -2,7 +2,7 @@
 title: Leapp upgrade from RHEL 7.9 to RHEL 8.x on SAP-HANA and SAP-APPS pay-as-you-go VMs
 description: Describes how to perform a leapp upgrade from RHEL 7.9 to RHEL 8.x on SAP-HANA and SAP-APPS pay-as-you-go virtual machines.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 09/06/2024
+ms.date: 09/10/2024
 ms.service: azure-virtual-machines
 ms.topic: how-to
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
@@ -73,7 +73,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 
    1. The SAP HANA installer in `SAP HANA version 2.0 SPS 05` configures kernel settings in the */etc/sysctl.conf* file. Keep these settings unchanged.
 
-   2. According to the SAP notes [2382421](https://launchpad.support.sap.com/#/notes/2382421) and [2292690](https://me.sap.com/notes/2292690), other settings recommended for SAP HANA are configured in the files */etc/sysctl.d/sap.conf* and */etc/sysctl.d/sap_hana.conf*. The settings in */etc/sysctl.d/sap_hana.conf* are applicable to both RHEL 7 and RHEL 8. However, the `kernel.sem` value in */etc/sysctl.d/sap.conf* for RHEL 7 is lower than the default value for RHEL 8. Therefore, remove the line that sets `kernel.sem` to `1250 256000 100 1024` from */etc/sysctl.d/sap.conf*. The `vm.max_map_count` setting is valid for both RHEL 7 and RHEL 8, so keep this setting unchanged.
+   2. According to the SAP notes [2382421](https://launchpad.support.sap.com/#/notes/2382421) and [2292690](https://launchpad.support.sap.com/#/notes/2292690), other settings recommended for SAP HANA are configured in the files */etc/sysctl.d/sap.conf* and */etc/sysctl.d/sap_hana.conf*. The settings in */etc/sysctl.d/sap_hana.conf* are applicable to both RHEL 7 and RHEL 8. However, the `kernel.sem` value in */etc/sysctl.d/sap.conf* for RHEL 7 is lower than the default value for RHEL 8. Therefore, remove the line that sets `kernel.sem` to `1250 256000 100 1024` from */etc/sysctl.d/sap.conf*. The `vm.max_map_count` setting is valid for both RHEL 7 and RHEL 8, so keep this setting unchanged.
 
 4. To make sure your RHEL 7.9 system is up-to-date, update all packages:
 
@@ -377,7 +377,7 @@ This section outlines the recommended verification steps after completing an in-
 
 ## Post-upgrade tasks
 
-Once the upgrade is complete, perform [post_upgrade tasks](leapp-upgrade-process-rhel-7-and-8.md?tabs=rhel7-rhel8#post-upgrade-tasks).
+Once the upgrade is complete, perform [post-upgrade tasks](leapp-upgrade-process-rhel-7-and-8.md?tabs=rhel7-rhel8#post-upgrade-tasks).
 
 ## Post-configuration for SAP-HANA PAYG VMs
 
