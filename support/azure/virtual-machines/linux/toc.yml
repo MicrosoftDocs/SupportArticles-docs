@@ -52,7 +52,7 @@
 
 - name: Cannot connect to my VM
   items:
-  - name: SSH troubleshooting
+  - name: Basic SSH troubleshooting
     href: troubleshoot-ssh-connection.md
   - name: Detailed SSH troubleshooting
     href: detailed-troubleshoot-ssh-connection.md
