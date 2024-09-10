@@ -74,12 +74,12 @@ This section outlines the necessary steps before performing an in-place upgrade 
 3. Stop the SAP HANA systems and terminate all SAP processes.
 
     > [!IMPORTANT]  
-    > - Don't unmount the SAP HANA file systems, as they are necessary for detecting the presence and version of the installed SAP HANA system.
+    > - Don't unmount the SAP HANA file systems, as they're necessary for detecting the presence and version of the installed SAP HANA system.
     > - If your VM is configured to start SAP processes automatically at boot time, disable this configuration.
 
 4. Configure RHEL settings for SAP HANA:
 
-   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP Applications, including SAP HANA. They are configured in the */etc/sysctl.d/sap.conf* file.
+   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP Applications, including SAP HANA. They're configured in the */etc/sysctl.d/sap.conf* file.
 
    ```bash
    vm.max_map_count = 2147483647
@@ -118,7 +118,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 This section outlines the necessary steps before performing an in-place upgrade from RHEL 8.10 to RHEL 9.4 using the leapp utility on SAP-HANA PAYG VMs.
 
 > [!NOTE]  
-> - If your VM is part of a Hight Availability cluster, the upgrade is possible if the cluster nodes do *not* use any packages that are part of [Resilient Storage.](https://access.redhat.com/articles/3130101). For more information, see [Procedure to upgrade a RHEL 8 High Availability cluster to RHEL 9](https://access.redhat.com/articles/7012677)
+> If your VM is part of a Hight Availability cluster, the upgrade is possible if the cluster nodes do *not* use any packages that are part of [Resilient Storage.](https://access.redhat.com/articles/3130101). For more information, see [Procedure to upgrade a RHEL 8 High Availability cluster to RHEL 9](https://access.redhat.com/articles/7012677)
 
 1. Make sure your current Red Hat release is 8.10:
 
@@ -135,12 +135,12 @@ This section outlines the necessary steps before performing an in-place upgrade 
 3. Stop the SAP HANA systems and terminate all SAP processes.
 
     > [!IMPORTANT]  
-    > - Don't unmount the SAP HANA file systems, as they are necessary for detecting the presence and version of the installed SAP HANA systems.
+    > - Don't unmount the SAP HANA file systems, as they're necessary for detecting the presence and version of the installed SAP HANA systems.
     > - If your VM is configured to start SAP processes automatically at boot time, disable this configuration.
 
 4. Configure RHEL settings for SAP HANA:
 
-   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/27729990), the following parameters are necessary for SAP applications, including SAP HANA, and they are configured in the file */etc/sysctl.d/sap.conf*.
+   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/27729990), the following parameters are necessary for SAP applications, including SAP HANA, and they're configured in the file */etc/sysctl.d/sap.conf*.
 
    ```bash
    vm.max_map_count = 2147483647
@@ -196,12 +196,12 @@ This section outlines the necessary steps before performing an in-place upgrade 
 3. Stop all SAP or application processes.
 
     > [!IMPORTANT]  
-    > - Don't unmount the SAP file systems, as they are necessary for detecting the presence and version of the installed SAP systems.
+    > - Don't unmount the SAP file systems, as they're necessary for detecting the presence and version of the installed SAP systems.
     > - If your VM is configured to start SAP processes automatically at boot time, disable this configuration.
 
 4. Configure RHEL settings for SAPAPPS:
 
-   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP Applications, and they are configured in the file */etc/sysctl.d/sap.conf*.
+   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP Applications, and they're configured in the file */etc/sysctl.d/sap.conf*.
 
    ```bash
    vm.max_map_count = 2147483647
@@ -257,12 +257,12 @@ This section outlines the necessary steps before performing an in-place upgrade 
 3. Stop the SAP systems and terminate all SAP processes.
 
     > [!IMPORTANT]  
-    > - Don't unmount the SAP file systems, as they are necessary for detecting the presence and version of the installed SAP systems.
+    > - Don't unmount the SAP file systems, as they're necessary for detecting the presence and version of the installed SAP systems.
     > - If your VM is configured to start SAP processes automatically at boot time, disable this configuration.
 
 4. Configure RHEL settings for SAP:
 
-   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP applications, and they are configured in the file */etc/sysctl.d/sap.conf*.
+   According to [SAP Note 2772999](https://launchpad.support.sap.com/#/notes/2772999), the following parameters are necessary for SAP applications, and they're configured in the file */etc/sysctl.d/sap.conf*.
 
    ```bash
    vm.max_map_count = 2147483647
