@@ -58,21 +58,29 @@ UFM is a user-friendly interface for managing a `netfilter` firewall in Linux di
 
 4. Verify port connectivity using the `netstat` or `ss` command:
 
-```bash
-sudo netstat -tuln | grep ':22'
-``` 
+     # [netstat](#tab/netstat)
 
-```bash
-sudo ss -tuln | grep ':22'
-```
+     ```bash
+     sudo netstat -tuln | grep ':22'
+     ``` 
+     
+     # [ss](#tab/ss)
+     
+     ```bash
+     sudo ss -tuln | grep ':22'
+     ```
+     ---
+ 
+
+ 
 
 No output indicates that the port is not in use or being listened by any service. If a firewall rule is in place to block the port, it may still appear closed.
 
 5. Test Port Connectivity using `nc`
 
-```bash
-sudo nc -zv <server-ip> 22
-```
+     ```bash
+     sudo nc -zv <server-ip> 22
+     ```
 
 If the connection fails but the service is running, it confirms that the port is closed.
 
