@@ -55,7 +55,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 > [!NOTE]
 > If your VM is part of a Hight Availability cluster, the upgrade is possible if the cluster nodes do *not* use any packages that are part of [Resilient Storage](https://access.redhat.com/articles/3130101). For more information, see [Procedure to upgrade a RHEL 8 High Availability cluster to RHEL 9](https://access.redhat.com/articles/7012677).
 
-1. Make sure the current Red Hat release is 8.8:
+1. Make sure your current Red Hat release is 8.8:
 
     ```bash
     sudo cat /etc/redhat-release 
@@ -118,7 +118,7 @@ This section outlines the necessary steps before performing an in-place upgrade 
 This section outlines the necessary steps before performing an in-place upgrade from RHEL 8.10 to RHEL 9.4 using the leapp utility on SAP-HANA PAYG VMs.
 
 > [!NOTE]  
-> If your VM is part of a Hight Availability cluster, the upgrade is possible if the cluster nodes do *not* use any packages that are part of [Resilient Storage.](https://access.redhat.com/articles/3130101). For more information, see [Procedure to upgrade a RHEL 8 High Availability cluster to RHEL 9](https://access.redhat.com/articles/7012677)
+> If your VM is part of a Hight Availability cluster, the upgrade is possible if the cluster nodes do *not* use any packages that are part of [Resilient Storage](https://access.redhat.com/articles/3130101). For more information, see [Procedure to upgrade a RHEL 8 High Availability cluster to RHEL 9](https://access.redhat.com/articles/7012677).
 
 1. Make sure your current Red Hat release is 8.10:
 
