@@ -20,7 +20,7 @@ When you access, modify, or create a Distributed File System (DFS) namespace on 
 
 This error generally occurs when you access a DFS stand-alone namespace using the DFS Management console. The cause is that all or part of the registry key for the DFS stand-alone namespace is missing on the DFS namespace server.
 
-For example, under the following registry key, the registry entry for the DFS namespace root, or other registry values in the registry subkeys of the DFS root, are corrupt, modified, or missing.
+The registry entry for the DFS namespace root, or other registry values under the registry subkeys of the DFS root, are corrupt, modified, or missing. For example, under the following registry key: 
 
 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\`
 
