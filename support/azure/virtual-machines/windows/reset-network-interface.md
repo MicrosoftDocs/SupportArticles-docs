@@ -22,9 +22,9 @@ This article shows how to reset the network interface for Azure Windows VM to re
 * You disable the default Network Interface (NIC).
 * You manually set a static IP for the NIC.
 
-The following article introuces how to view and change settings for a NIC, which might help you:
+The following article also introduces how to view and change settings for a NIC, which might help you:
 
-[Change network interface settings](/azure/virtual-network/virtual-network-network-interface#change-network-interface-settings)
+[Create, change, or delete a network interface](/azure/virtual-network/virtual-network-network-interface)
 
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
