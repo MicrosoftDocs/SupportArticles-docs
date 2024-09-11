@@ -159,6 +159,8 @@
       items:
         - name: ActiveSync can't download attachments to Calendar items
           href: ../calendars/activesync-not-downloading-attachments-to-calendar-items.md
+        - name: Analyze calendar diagnostic logs
+          href: ../calendars/analyze-calendar-diagnostic-logs.md
         - name: Attendees receive multiple meeting invitations
           href: ../calendars/attendees-receive-multiple-meeting-invitations.md
         - name: Calendar on mobile device isn't synced to Online mailbox
@@ -183,6 +185,8 @@
           href: ../calendars/delegate-only-sees-freebusy-info-if-manager-is-in-another-forest.md
         - name: Delegates accept meetings automatically
           href: ../calendars/delegates-accept-meetings-automatically.md
+        - name: Get calendar diagnostic logs
+          href: ../calendars/get-calendar-diagnostic-logs.md
         - name: Meeting requests added to resource delegate's calendar
           href: ../calendars/meeting-requests-sent-to-resource-mailbox-added-to-resource-delegate-calendar.md
         - name: Message store has reached its maximum size
@@ -671,7 +675,7 @@
           href: ../user-and-shared-mailboxes/increase-or-customize-mailbox-size.md
         - name: Mailbox provision delays
           href: ../user-and-shared-mailboxes/delays-provision-mailbox-sync-changes.md
-        - name: No soft-deleted mailbox after license removal
+        - name: Can't access the mailbox of an unlicensed user
           href: ../user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal.md
         - name: Microsoft 365 groups aren't visible from a shared mailbox
           href: ../user-and-shared-mailboxes/office-365-groups-not-visible-from-shared-mail.md
