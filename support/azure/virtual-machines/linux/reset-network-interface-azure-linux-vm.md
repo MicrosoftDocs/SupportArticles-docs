@@ -27,9 +27,9 @@ If your Azure issue isn't addressed in this article, visit the Azure forums on [
 
 To submit a support request, go to the [Azure support page](https://azure.microsoft.com/support/options/) and select **Get support**.
 
-To reset the network interface, use the Azure portal, Azure PowerShell or Azure CLI:
+## Reset the NIC using Azure portal, Azure PowerShell or Azure CLI
 
-## [Portal](#tab/azure-portal)
+### [Portal](#tab/azure-portal)
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 2. Select the affected Virtual Machine.
@@ -44,7 +44,7 @@ To reset the network interface, use the Azure portal, Azure PowerShell or Azure 
 8. The virtual machine will restart to initialize the new NIC to the system.
 9. Try to log into your machine using secure shell (SSH). If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
-## [PowerShell](#tab/azure-powershell)
+### [Azure PowerShell](#tab/azure-powershell)
 
 1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed.
 2. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands:
@@ -83,7 +83,7 @@ To reset the network interface, use the Azure portal, Azure PowerShell or Azure 
 2. The virtual machine will restart to initialize the new NIC to the system.
 3. Try to SSH to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
-## [Azure CLI](#tab/azure-cli)
+### [Azure CLI](#tab/azure-cli)
 
 1. Make sure that you have installed the latest [Azure command-line interface (CLI)](/cli/azure/install-azure-cli).
 
