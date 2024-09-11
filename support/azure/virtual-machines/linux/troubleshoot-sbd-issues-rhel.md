@@ -19,7 +19,7 @@ This article lists the common issues for SBD in RHEL Pacemaker Cluster and offer
 
 ## How SBD works
 
-The SBD (Stonith Block Device) device requires at least one additional virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers can, however, be shared with other Pacemaker clusters. The advantage of using an SBD device is that if you're already using SBD devices on-premises, they don't require any changes to how you operate the Pacemaker cluster.
+The SBD (Stonith Block Device) device requires at least one more virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers can, however, be shared with other Pacemaker clusters. The advantage of using an SBD device is that if you're already using SBD devices on-premises, they don't require any changes to how you operate the Pacemaker cluster.
 
 For Azure Pacemaker cluster with SBD fencing mechanism, either of the two options can be used for the setup:
 
@@ -35,7 +35,7 @@ SBD server details can be fetched via message logs or the `iscsiadm` discovery c
 
 ## Cause 1 : SBD service failed due to iscsi failure
 
-Pacemaker service  not running and  SBD Service is in failed State on both cluster Nodes. 'iSCSI' services Use 'IQN' for communication between Initiator and Target Nodes,failure to run services results in inaccessible SBD Disks, leading to SBD and pacemaker service failures.
+Pacemaker service  not running and  SBD Service is in failed State on both cluster Nodes. 'iSCSI' services Use "IQN" for communication between Initiator and Target Nodes,failure to run services results in inaccessible SBD Disks, leading to SBD and pacemaker service failures.
 
 ```bash
  sudo pcs status
@@ -205,7 +205,7 @@ Resource: sbd (class=stonith type=fence_sbd)
 
 ## Cause 3: iscsi devices aren't available on Cluster Nodes
 
-Executing `lscsi` or `lsblk` commands does not display SBD disks in the output:
+Executing `lscsi` or `lsblk` commands doesn't display SBD disks in the output:
 
 ```bash
 sudo lsscsi
@@ -372,8 +372,8 @@ One of the Nodes fails to join cluster after fencing. SBD is in a failed state a
 
 
 ### Resolution 1: 
-It's possible that the SBD slot is not in clean state, hence the Node can't rejoin the cluster after fencing reboot.
-Check the SBD status using the following commands (if not clean, the SBD output will show a reset).
+It's possible that the SBD slot isn't in clean state, hence the Node can't rejoin the cluster after fencing reboot.
+Check the SBD status using the following commands (if not clean, the SBD output shows a reset).
 
 ```bash
 sudo lsscsi
@@ -425,7 +425,7 @@ SBD_STARTMODE=clean
 
 The action is an expected behavior. It detects a fencing type message in the SBD slot for the node and not allows the Node to join the cluster unless manually cleared.
 
-• Syntax to be run on node that was previously fenced:
+• Syntaxes to be run on node that was previously fenced:
 
 Example:
 ```bash
@@ -440,14 +440,14 @@ Example:
 sudo sbd -d <DEVICE_NAME> message <NODENAME> clear
 ```
 
-Node name is the node fenced and is not able to join the cluster:
+Node name is the node fenced and isn't able to join the cluster:
 ```bash
 sudo sbd -d /dev/sdc message node2 clear
 ```
 
 Once the node slot is cleared, you should be able to start Clustering services.
  
-•	If this still fails, run the commands to fix the issue:
+•	If the service fails again, run the commands to fix the issue:
 
 ```bash
 sudo iscsiadm -m node -u
