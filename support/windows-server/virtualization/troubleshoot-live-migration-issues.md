@@ -278,7 +278,7 @@ Here's how to fix this issue:
 VM live migration fails with the error messages:
 
 > VM cannot be moved to destination computer
->
+
 > HW on destination is not compatible with HW requirements of VM
 
 When a Hyper-V VM is created, processor features are exposed to guest VMs. At boot time, guest VM kernels make decisions based on the availability of these features. Migration of a VM that is booted on the new system with side channel mitigation features to an old system without side channel mitigation features can expose the customer to these side channel attacks, and is prevented.
