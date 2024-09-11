@@ -46,7 +46,7 @@ There are various scenarios that may lead to DNS scavenging issues. The followin
 
 - There is no standard setting for what numbers to use when configuring **Refresh**, **No Refresh** and **Scavenging** cycle time, as this depends on each organization configuration and preferences. However, you must ensure the settings follow the following equation:
 
-Refresh + No Refresh > = Biggest DHCP lease
+  Refresh + No Refresh >= Biggest DHCP lease
 
 The sum of **Refresh** and **No Refresh** intervals need to be greater than or equal the biggest Dynamic Host Configuration Protocol (DHCP) lease, highlighting the critical relationship between DHCP lease duration and scavenging. The Scenarios section in the article demonstrates the reason to consider this equation.
 
@@ -113,7 +113,7 @@ Replication Check:
 If the decommissioned DC is no longer needed, removing the DC would solve the issue. To list all domain controllers in all domains, run the following command:
 
 ```console
-nltest/ dclist:
+nltest /dclist:<DomainName>
 ```
 
 ### Records for Azure machines in DNS get deleted causing resolution issues
