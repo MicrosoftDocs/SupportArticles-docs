@@ -1,7 +1,7 @@
 --- 
 title: Troubleshoot memory saturation in AKS clusters
 description: Troubleshoot memory saturation in Azure Kubernetes Service (AKS) clusters across namespaces and containers. Learn how to identify the hosting node.
-ms.date: 05/31/2023
+ms.date: 08/30/2024
 editor: v-jsitser
 ms.reviewer: chiragpa, aritraghosh, v-leedennis
 ms.service: azure-kubernetes-service
