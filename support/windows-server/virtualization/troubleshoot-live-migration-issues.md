@@ -271,7 +271,7 @@ Here's how to fix this issue:
      PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true  
     ```
 
-#### Failed to live migrate a VM between nodes with different uCode revisions
+#### Failed to live migrate a VM between nodes with different microcode (uCode) revisions
 
 **Description**
 
@@ -285,7 +285,7 @@ When a Hyper-V VM is created, processor features are exposed to guest VMs. At b
 
 **Action**
 
-As a workaround at a cluster level, the best option is to live migrate VMs only from old to new uCode revisions. Since VMs on the old hosts have software mitigations for side channel attacks enabled, they won't become vulnerable when moved to new hosts.
+As a workaround at a cluster level, the best option is to live migrate VMs only from old to new microcode (uCode) revisions. Since VMs on the old hosts have software mitigations for side channel attacks enabled, they won't become vulnerable when moved to new hosts.
 
 #### Failed live migrate because "Virtual Machine Name" is using processor-specific features not supported on host "Node 1."
 
