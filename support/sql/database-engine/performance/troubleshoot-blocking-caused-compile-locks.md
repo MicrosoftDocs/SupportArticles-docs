@@ -19,9 +19,9 @@ The following are some typical characteristics of compile blocking that can be o
 
 - `waittype` for the blocked and (usually) blocking session SPIDs is `LCK_M_X` (exclusive) and `waitresource` is of the form `OBJECT: dbid: object_id [[COMPILE]]`, where `object_id` is the object ID of the stored procedure.
 
-- Blockers have `waittype` NULL, status runnable. Blockees have `waittype` `LCK_M_X` (exclusive lock), status sleeping.
+- Blockers have `waittype` NULL, status runnable. Blockers have `waittype` `LCK_M_X` (exclusive lock), status sleeping.
 
-- Although the overall duration of the blocking incident may be long, there is no single session (SPID) that is blocking the other SPIDs for a long time. There's rolling blocking; as soon as one compilation is complete, another SPID takes over the role of head blocker for several seconds or less, and so on.
+- Although the overall duration of the blocking incident might be long, there's no single session (SPID) that is blocking the other SPIDs for a long time. There's rolling blocking; as soon as one compilation is complete, another SPID takes over the role of head blocker for several seconds or less, and so on.
 
 The following information is from a snapshot of `sys.dm_exec_requests` during this kind of blocking:
 
@@ -51,7 +51,7 @@ For example, if user dbo owns object `dbo.mystoredproc` and another user, `Harry
 
 If an existing plan is found, SQL Server reuses the cached plan and doesn't actually compile the stored procedure. However, the lack of owner-qualification forces SQL Server to perform a second cache lookup and obtain an exclusive compile lock before the program determines that the existing cached execution plan can be reused. Obtaining the lock and performing lookups and other work that is needed to reach this point can introduce a delay for the compile locks that leads to blocking. This is especially true if many users who aren't the stored procedure's owner, concurrently run the procedure without supplying the owner's name. Even if you don't see SPIDs waiting for compile locks, lack of owner-qualification can introduce delays in stored procedure execution and cause high CPU utilization.
 
-The following sequence of events is be recorded in a SQL Server Extended Event session when this problem occurs.
+The following sequence of events is recorded in a SQL Server Extended Event session when this problem occurs.
 
 |Event Name  |Text  |
 |---------|---------|
@@ -63,13 +63,13 @@ The following sequence of events is be recorded in a SQL Server Extended Event s
 
 `sp_cache_miss` occurs when the cache lookup by name fails, but then a matching cached plan was ultimately found in cache after the ambiguous object name was resolved to an object ID and there's a `sp_cache_hit` event.
 
-The solution to this problem of compile locking is to make sure that references to stored procedures are owner-qualified. (Instead of exec `mystoredproc`, use exec `dbo.mystoredproc`.) While owner-qualification is important for performance reasons, you do not have to qualify the stored proc with the database name to prevent the extra cache lookup.
+The solution to this problem of compile locking is to make sure that references to stored procedures are owner-qualified. (Instead of exec `mystoredproc`, use exec `dbo.mystoredproc`.) While owner-qualification is important for performance reasons, you don't have to qualify the stored proc with the database name to prevent the extra cache lookup.
 
 Blocking that is caused by compile locks can be detected by using standard blocking troubleshooting methods.
 
 ### Stored procedure is recompiled frequently
 
-Recompilation is one explanation for compile locks on a stored procedure or trigger. Ways to cause a stored procedure to recompile include EXECUTE... WITH RECOMPILE, CREATE PROCEDURE ...WITH RECOMPILE, or using sp_recompile. For, more information, see [Recompile a Stored Procedure](/sql/relational-databases/stored-procedures/recompile-a-stored-procedure). The solution in this case is to reduce or to eliminate the recompiles.
+Recompilation is one explanation for compile locks on a stored procedure or trigger. Ways to cause a stored procedure to recompile include `EXECUTE... WITH RECOMPILE`, `CREATE PROCEDURE ...WITH RECOMPILE`, or using `sp_recompile`. For more information, see [Recompile a Stored Procedure](/sql/relational-databases/stored-procedures/recompile-a-stored-procedure). The solution in this case is to reduce or to eliminate the recompilation.
 
 ### Stored procedure is prefixed with sp_**  
 
