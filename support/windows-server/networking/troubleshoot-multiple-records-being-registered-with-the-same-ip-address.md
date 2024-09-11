@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot multiple records being registered with the same IP address
 description: Describes how to configure DNS scavenging and the DHCP lease duration to prevent multiple records with the same IP address.
-ms.date: 09/04/2024
+ms.date: 09/11/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -30,14 +30,14 @@ This scenario is typical and everything works correctly.
 On a DNS server, you have the following configurations:
 
 - An Active Directory (AD) integrated DNS zone is set to scavenge stale resource records.
-- The DNS record scavenging uses default settings: **No-refresh interval = 7 days**, **Refresh interval = 7 days** and **Scavenging period = 7 days**.
+- The DNS record scavenging uses default settings: **No-refresh interval = 7 days**, **Refresh interval = 7 days**, and **Scavenging period = 7 days**.
 - Client A renewed its DNS record eight days ago when the client's DHCP lease was last updated.
 - By default, client A is the owner of its DNS record, so the record can't be deleted by the DHCP server.
 - Client B registers its DNS record with the new IP address received from the DHCP server, which is the same as the record registered to client A.
 
 In this scenario, the DNS server can't scavenge client A's DNS record for another six days. Now, client A and client B have the same IP address registered in DNS.
 
-![Client A and client B have the same DNS records.](media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/image.png)
+:::image type="content" source="media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/client-a-client-b-same-records.png" alt-text="Screenshot that shows client A and client B have the same DNS records.":::
 
 ## Issue analysis
 
@@ -45,33 +45,35 @@ Several issues occur because of the same DNS record for different names. For exa
 
 Here's another example. When you access a share on client A, you receive the following error message, even when client A isn't turned on.
 
-![Error message received when you access a share folder on client A.](media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/image-1.png)
+:::image type="content" source="media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/logon-failure.png" alt-text="Screenshot of an error message received when you access a share folder on client A.":::
 
 This error is caused because a Kerberos ticket intended for one computer is sent to another computer. The following section walks through the whole process.
 
 ### Network flows during the logon failure
 
-The computer (Infra-App1) does a DNS query for **client-a.corp.contoso.com**. DNS responses back with the IP address 10.0.0.100.
+The computer (Infra-App1) does a DNS query for `client-a.corp.contoso.com`. DNS responses back with the IP address 10.0.0.100.
 
-![Network trace during the DNS query.](media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/image-2.png)
+:::image type="content" source="media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/network-trace.png" alt-text="Screenshot of network trace during the DNS query.":::
 
 As far as DNS is concerned, the result is correct. Client A has 10.0.0.100 listed as its IP address, so does client B.
 
 Then, the computer Infra-App1 requests a Kerberos ticket. The DNS query is for client A, so the Ticket Granting Service (TGS) request is also for client A.
 
-The TGS request:  
-![TGS request is sent for client A.](media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/image-3.png)
+The TGS request:
 
-The domain controller's response:  
-![domain controller's response for the TGS request.](media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/image-4.png)
+:::image type="content" source="media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/tgs-request-client-a.png" alt-text="Screenshot that shows TGS request is sent for client A.":::
+
+The domain controller's response:
+
+:::image type="content" source="media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/response-tgs-request.png" alt-text="Screenshot that shows domain concoller's response for the TGS request." :::
 
 After the computer Infra-App1 receives the ticket, the computer tries to connect to client A. The Kerberos ticket is included in this frame.
 
-![Infra-App1 tries to connect to client A.](media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/image-5.png)
+:::image type="content" source="media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/infra-app1-connect-client-a.png" alt-text="Screenshot shows that Infrra-App1 tries to connect to client A." :::
 
 Finally, the remote client returns an error because the computer Infra-App1 connects to client B.
 
-![Error packet returned from client B.](media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/image-6.png)
+:::image type="content" source="media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/error-packet-client-b.png" alt-text="Screenshot that shows error packet returned from client B." :::
 
 The error is expected because you must present the right ticket to the right account to make Kerberos work.
 
@@ -109,7 +111,7 @@ Advantage:
 
 The existing DNS record is scavenged sooner affectively achieving the same results as in the first solution.
 
-Disvantage:
+Disadvantage:
 
 If these are AD integrated DNS zones, AD replication frequency increases. This is because the DNS records will be refreshed by the clients more frequently. For example, every four days instead of every seven days.
 
@@ -123,7 +125,7 @@ Advantage:
 
 The DHCP server can remove the DNS record as soon as the lease expires. If setup is correct, no duplicate records should exist.
 
-Disdvantage:
+Disadvantage:
 
 The setup is more involved.
 
@@ -181,6 +183,6 @@ $duplicate_comp | ft name,ipv4address -a
 
 Here’s a sample of the output:
 
-![Output of the PowerShell script](media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/image-7.png)
+:::image type="content" source="media/troubleshoot-multiple-records-being-registered-with-the-same-ip-address/output-powershell-script.png" alt-text="Screenshot that shows output of the PowerShell script." :::
 
 This PowerShell script is straightforward. Consider the script as a sample. This script only returns duplicate IP addresses registered to actual computer accounts in AD. Keep in mind that the script queries every computer in an AD domain. Then, it does a DNS query to get the IP address. If you have many computers, use the `-searchbase` switch with `get-adcomputer` to limit the number of computers returned each time. If the computer isn't joined to AD, the computer isn't returned from the `get-adcomputer` command.
