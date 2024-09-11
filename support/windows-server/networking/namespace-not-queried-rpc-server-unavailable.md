@@ -1,7 +1,7 @@
 ---
 title: Fail to create a DFS namespace
-description: Provides solutions to an error "The namespace cannot be queried. The RPC server is unavailable" that occurs when you access, modify, or create a Distributed File System (DFS) Namespace.
-ms.date: 09/10/2024
+description: Provides solutions to the error - The namespace cannot be queried. The RPC server is unavailable when you access, modify, or create a DFS namespace.
+ms.date: 09/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -11,22 +11,22 @@ ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replicat
 ---
 # Error when you attempt to create a DFS namespace: The namespace cannot be queried. The RPC server is unavailable
 
-This article provides solutions to an error "The namespace cannot be queried. The RPC server is unavailable" that occurs when you access, modify, or create a Distributed File System (DFS) Namespace.
+This article provides solutions to the error "The namespace cannot be queried. The RPC server is unavailable" that occurs when you access, modify, or create a Distributed File System (DFS) namespace.
 
 _Original KB number:_ &nbsp; 2021914
 
-You might receive the following error when you access, modify, or create a DFS Namespace on a DFS Namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed.
+When you access, modify, or create a DFS namespace on a DFS namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed, you might receive the following error message:
 
 > The namespace cannot be queried. The RPC server is unavailable.
 
 ## Cause 1: The DFS Namespace service is stopped or in an undefined state
 
-You use the DFS Management console locally, and get this error on the DFS Namespace server. It might indicate that the DFS Namespace service on the DFS Namespace server is stopped or in an undefined state but not "Running."
+You use the DFS Management console locally and receive this error on the DFS namespace server. It might indicate that the DFS Namespace service on the DFS namespace server is stopped or in an undefined state but not "Running."
 
 ## Resolution for cause 1: Start the DFS Namespace service
 
 > [!NOTE]
-> After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes to take effect.
+> After you apply the solution, remove the DFS namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
 
 To resolve the issue, start the DFS Namespace service.
 
@@ -45,12 +45,12 @@ Start-Service -Name Dfs
 > [!NOTE]
 > If you can't start the DFS Namespace service, it indicates a registry corruption or a service dependency issue. Ensure the dependency services of the DFS Namespace service are running properly, or import the registry settings from a backup. Then, start the DFS Namespace service again. For more information, see [Resolution for cause 4: Import the registry key from a valid registry backup](#resolution-for-cause-4-import-the-registry-key-from-a-valid-registry-backup).
 
-## Cause 2: The DFS Namespace service is stopped or the DFS Namespace server can't be reached
+## Cause 2: The DFS Namespace service is stopped or the DFS namespace server can't be reached
 
 If you use the DFS Management console from a domain-joined member server (not a DFSN server) or a domain client with RSAT File Services tools installed, this error might occur when:
 
-- The DFS Namespace service on the DFS Namespace server is stopped or in an undefined state but not "Running."
-- The domain-joined member server (not a DFS Namespace) or the Windows client with RSAT File Services tools installed, where you run the DFS Management console from, can't reach the DFS Namespace server over TCP port 445 (used by  Server Message Block (SMB)).
+- The DFS Namespace service on the DFS namespace server is stopped or in an undefined state but not "Running."
+- The domain-joined member server (not a DFS namespace) or the Windows client with RSAT File Services tools installed, where you run the DFS Management console, can't reach the DFS namespace server over TCP port 445 (used by  Server Message Block (SMB)).
 
 ### Wireshark trace example 1
 
@@ -61,14 +61,14 @@ If you use the DFS Management console from a domain-joined member server (not a 
 
 ### Wireshark trace example 2
 
-The Domain Name System (DNS) queries for A records of the DFS Namespace servers.
+The Domain Name System (DNS) queries for A records of the DFS namespace servers.
 
 ```output
 192.168.0.45	192.168.0.1	DNS	79	Standard query 0x429a A SRV2022.contoso.com
 192.168.0.1	192.168.0.45	DNS	95	Standard query response 0x429a A SRV2022.contoso.com A 192.168.0.42
 ```
 
-However, establishing a TCP connection to the DFS Namespace server on TCP port 445 (used by SMB) fails.
+However, establishing a TCP connection to the DFS namespace server on TCP port 445 (used by SMB) fails.
 
 ```output
 192.168.0.45	192.168.0.42	TCP	66	60345 → 445 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
@@ -81,7 +81,7 @@ However, establishing a TCP connection to the DFS Namespace server on TCP port 4
 ## Resolution for cause 2: Start the DFS Namespace service or allow TCP port 445
 
 > [!NOTE]
-> After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes to take effect.
+> After you apply the solution, remove the DFS namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
 
 To resolve the issue, use one of the following methods:
 
@@ -99,20 +99,21 @@ To resolve the issue, use one of the following methods:
     Start-Service -Name Dfs
     ```
 
-- Make sure that TCP port 445 (used by SMB) to the DFS Namespace server in question is allowed and the server service (LanmanServer) is started.
+- Make sure that TCP port 445 (used by SMB) to the DFS namespace server is allowed and that the server service (LanmanServer) is started.
 
 ## Cause 3: No DomainDNSName records are registered for the domain
 
-This error is typically seen in an environment using a third-party DNS server. It can occur when no DomainDNSName records are registered for the domain. These records are updated by the Netlogon service on domain controllers. These are the "same as parent" A records in domain's forward lookup zone.
+This error is typically seen in an environment using a third-party DNS server. It can occur when no DomainDNSName records are registered for the domain. These records are updated by the Netlogon service on domain controllers. These are the "same as parent" A records in the domain's forward lookup zone.
 
-The following documentation indicates these records are not a requirement and are only used for DNS clients that do not understand SRV records:  
-[How DNS Support for Active Directory Works](/previous-versions/windows/it-pro/windows-server-2003/cc759550(v=ws.10)).
+The following documentation indicates these records aren't a requirement and are only used for DNS clients that don't understand SRV records:  
+
+[How DNS Support for Active Directory Works](/previous-versions/windows/it-pro/windows-server-2003/cc759550(v=ws.10))
 
 DnsDomainName:
 
 Enables a non-SRV-aware client to locate any domain controller in the domain by looking up an A record. A name in this form is returned to the LDAP client through an LDAP referral. A non-SRV-aware client looks up the name; an SRV-aware client looks up the appropriate SRV resource record.
 
-In a network trace, you will see a DNS lookup for the DomainDNSname A record and the DNS server will respond with the SOA record if these A records do not exist.
+In a network trace, you'll see a DNS lookup for the DomainDNSname A record and the DNS server will respond with the SOA record if these A records don't exist.
 
 DNS lookup query:
 
@@ -128,7 +129,7 @@ AuthorityRecord: adatum.com of type SOA on class Internet: PrimaryNameServer: ad
 ## Resolution for cause 3: Update the A records on the DNS server or create a HOSTS file
 
 > [!NOTE]
-> After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes to take effect.
+> After you apply the solution, remove the DFS namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
 
 Update the "same as parent" A records on the third-party DNS server, or create a HOSTS file on the computer that includes the fully qualified name and the IP addresses of the domain controller.
 
@@ -139,7 +140,7 @@ adatum.com      192.168.3.10
 adatum.com      192.168.4.10
 
 > [!NOTE]
-> Restarting the Netlogon service on Windows domain controllers repopulates all the missing SRV records under the `_msdcs.contoso.com` zone. Make sure that AD replication is possible or runs successfully, so that the changes about the SRV records are replicated correctly trough out your domain.
+> Restarting the Netlogon service on Windows domain controllers repopulates all the missing SRV records under the `_msdcs.contoso.com` zone. Make sure that AD replication is possible or runs successfully so that the changes about the SRV records are replicated correctly troughout your domain.
 
 ## Cause 4: Registry values are missing
 
@@ -152,13 +153,13 @@ In this case, the DFS Namespace service stops responding or fails to start, resu
 ## Resolution for cause 4: Import the registry key from a valid registry backup
 
 > [!NOTE]
-> After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes to take effect.
+> After you apply the solution, remove the DFS namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
 
 [!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
-Importing the registry Key for the DFS Namespace root from a valid registry backup (if available) of the same registry key can resolve the issue.
+Importing the registry key for the DFS namespace root from a valid registry backup (if available) of the same registry key can resolve the issue.
 
-If no backup is present and since in a DFS stand-alone namespace configuration you have only a single DFS root server for your namespace, the only option is to delete the DFS Namespace, perform a DFS Namespace cleanup on the DFS root server and re-create the DFS Namespace.
+If no backup is present, and since you have only a single DFS root server for your namespace in a DFS stand-alone namespace configuration, the only option is to delete the DFS namespace, perform a DFS namespace cleanup on the DFS root server, and re-create the DFS namespace.
 
 > [!NOTE]
-> Restart the DFS server or the DFS server service, so that the changes in the registries are loaded again into memory. Not restarting the DFS server or the DFS server service may result in the same error.
+> Restart the DFS server or the DFS server service so that the changes in the registries are loaded into memory again. Not restarting the DFS server or the DFS server service might result in the same error.
