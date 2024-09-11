@@ -140,11 +140,12 @@ For more information about performing the upgrade process on custom, golden, and
     sudo reboot 
     ```
 
+> [!IMPORTANT]
+> If your next target is to move to RHEL 9 for SAP environments refer to: [How to upgrade SAP-HANA and SAP-APPS PAYG virtual machines from RHEL 8.x to RHEL 9.x using leapp](/azure/virtual-machines/linux/leapp-upgrade-rhel-8dotx-to-9dotx-saphana-sapapps)
+
+
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
-<!-- PLEASE DONT DELETE THE FOLLOWING LINES, IT WILL BE ADDED ONCE THE OTHER DOC IS READY
-> [!IMPORTANT]
-> If your next target is to move to RHEL 9 for SAP environments refer to: [NEW LINK WORKINPROGRESS]
--->
+
