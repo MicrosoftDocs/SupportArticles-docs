@@ -1,7 +1,7 @@
 ---
 title: Can't create a domain-based DFS namespace
 description: Describes how to resolve an issue in which you see an access denied error when you try to create a domain-based namespace.
-ms.date: 09/09/2024
+ms.date: 09/11/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -20,7 +20,7 @@ This article describes how to resolve an issue in which you see an access denied
 
 _Applies to:_ &nbsp; Windows Server 2019
 
-When you sign in to Windows by using an account that belongs to the Domain Admins group, and then you try to create a domain-based namespace on any Distributed File System (DFS) namespace server, the operation fails. Windows returns an error message that resembles the following:
+When you sign in to Windows by using an account that belongs to the **Domain Admins** group, and then you try to create a domain-based namespace on any Distributed File System (DFS) namespace server, the operation fails. Windows returns an error message that resembles the following:
 
 > \\contoso.com\Public The namespace cannot be queried. Access is denied.
 
@@ -30,9 +30,9 @@ However, when this error occurs, you can still successfully create a standalone 
 
 When you create a new domain-based namespace, a Domain Name System (DNS) query for the domain name is sent to the DNS server to receive a list of the A records for domain controllers (DCs). After receiving the DNS response, New Technology LAN Manager (NTLM) authentication is performed against one of these DCs.
 
-Since the used account is a member of the Protected Users group, NTLM authentication fails with the `STATUS_ACCOUNT_RESTRICTION` error.
+Since the used account is a member of the **Protected Users** group, NTLM authentication fails with the `STATUS_ACCOUNT_RESTRICTION` error.
 
-By default, accounts that are members of the Protected Users group can’t authenticate with NTLM authentication.
+By default, accounts that are members of the **Protected Users** group can't authenticate with NTLM authentication.
 
 ### Wireshark trace example
 
@@ -41,19 +41,20 @@ By default, accounts that are members of the Protected Users group can’t authe
 192.168.0.1	    192.168.0.42	SMB2	130	Session Setup Response, Error: STATUS_ACCOUNT_RESTRICTION
 ```
 
-## Resolution for cause 1: Remove the used account from the Protected Users group
+## Resolution for cause 1: Remove the used account from the "Protected Users" group
 
 > [!NOTE]
-> After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes to take effect.
-Remove the used account from the Protected Users group to perform the NTLM authentication. For more information, see [Protected Users Security Group](/windows-server/security/credentials-protection-and-management/protected-users-security-group).
+> After you apply the solution, remove the DFS namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
+
+To solve this issue, remove the used account from the **Protected Users** group to perform NTLM authentication. For more information, see [Protected Users Security Group](/windows-server/security/credentials-protection-and-management/protected-users-security-group).
 
 ## Cause 2: The SMB session isn't mutually authenticated
 
-This error can also occur when you have implemented hardening (Server Message Block (SMB) mutual authentication) on the paths for the domain (for example, `\\Contoso.com\*` or `\\CONTOSO\*`).
+This error can also occur when you have implemented hardening (Server Message Block (SMB) mutual authentication) on the paths of the domain (for example, `\\Contoso.com\*` or `\\CONTOSO\*`).
 
-The machine applying the hardening configuration fails to create a `netdfs` pipe, because that SMB session isn't mutually authenticated.
+The machine applying the hardening configuration can't create a `netdfs` pipe because the SMB session isn't mutually authenticated.
 
-You can check if the hardening setting is implemented in your environment by running the `Gpresult /h` command. You can also check the registry setting on the affected machine under:
+You can check if the hardening setting is implemented in your environment by running the `gpresult /h` command. You can also check the registry setting on the affected machine under:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths`
 
@@ -67,10 +68,10 @@ You should find entries for the domain name, like:
 ## Resolution for cause 2: Set the RequireMutualAuthentication value to zero
 
 > [!NOTE]
-> After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes to take effect.
+> After you apply the solution, remove the DFS namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
 [!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
-To solve this issue, set the `RequireMutualAuthentication` value for `\\Contoso\*` and `\\contoso.com\*` to zero. After making these changes, you can create a namespace.
+To solve this issue, set the `RequireMutualAuthentication` value for `\\Contoso\*` and `\\contoso.com\*` to zero. After making these changes, you can create the namespace.
 
 For example:
 
@@ -79,19 +80,19 @@ For example:
 |`\\corp.contoso.com\*`     |`RequireMutualAuthentication=0`<br>`RequireIntegrity=1`         |
 |`\\corp\*`     |`RequireMutualAuthentication=0`<br>`RequireIntegrity=1`         |
 
-### Process Monitor Log file example in this scenario
+### Example of a Process Monitor log file for this scenario
 
 ```output
 10:32:48.8093671 AM	mmc.exe	3488	CreateFile	\\contoso.com\pipe\netdfs	0xC0000201	Desired Access: Generic Read/Write, Disposition: Open, Options: , Attributes: n/a, ShareMode: Read, Write, AllocationSize: n/a
 ```
 
-Error c0000201 indicates "A remote open failed because the network open restrictions were not satisfied."
+Error c0000201 indicates, "A remote open failed because the network open restrictions were not satisfied."
 
 > [!NOTE]
-> The following Process Monitor filters are helpful to be used:
+> The following Process Monitor filters are helpful:
 >
-> - "PID is 3488", which is the PID for the DFS Management console
-> - "Path contains `\\contoso.com`" (or `\\contoso`)
+> - `PID is 3488`, which is the PID of the DFS Management console
+> - `Path contains \\contoso.com` (or `\\contoso`)
 
 ## More information
 
