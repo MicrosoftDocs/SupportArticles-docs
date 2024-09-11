@@ -241,14 +241,12 @@ Perform the following checks.
 
 1. Validate the initiator name on both Cluster nodes.
 
-* 
 ```bash
 sudo  cat /etc/iscsi/initiatorname.iscsi
 ```
 ```output
 InitiatorName=iqn.2006-04.nfs-0.local:nfs-0
-```
-* 
+``` 
 ```bash 
 sudo  cat /etc/iscsi/initiatorname.iscsi
 ```
@@ -321,7 +319,7 @@ Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0
 Login to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.17,3260] successful.
 ```
 ```bash
-      sudoiscsiadm -m node -p 10.0.0.17:3260 -T iqn.2006-04.nfs.local:nfs --op=update --name=node.startup --value=automatic
+      sudo iscsiadm -m node -p 10.0.0.17:3260 -T iqn.2006-04.nfs.local:nfs --op=update --name=node.startup --value=automatic
 ```
 ```bash
 sudo lsscsi
@@ -404,7 +402,6 @@ sudo sbd -d /dev/sdd list
 0       node1   clear
 1       node2   reset   node1
 ```
-* 
 ```bash
 sudo  sbd -d /dev/sde list
 ```
@@ -459,7 +456,7 @@ sudo iscsiadm -m node -u
 sudo iscsiadm -m node -l
 ```
 > [!NOTE]
-> Replace `<DEVICE_NAME>` and `<NODENAME>` accordingly.
+> Replace `<SBD_DEVICE>`,`<DEVICE_NAME>` and `<NODENAME>` accordingly.
 
 ## Cause 5: SBD service fails to start after adding new SBD device
 Getting error message `sbd failed; please check the logs` after creating / adding new sbd device into cluster.
@@ -469,21 +466,19 @@ Getting error message `sbd failed; please check the logs` after creating / addin
 Check if you're getting errors while sending/testing messages by SBD devices
 
 ```bash
-sbd -d  /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 message node1 test
+sudo sbd -d  /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 message node1 test
 ```
 ```output
 sbd failed; please check the logs.
 ```
 
-```output
-/ var/log/messages 
+
+From /var/log/messages logs:
 Mar  2 06:58:06 node1 sbd[11105]: /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779:    error: slot_msg: slot_msg(): No recipient / cmd specified.
 Mar  2 06:58:06 node1 sbd[11104]: warning: messenger: Process 11105 failed to deliver!
-```
 
 ### Resolution:
-Whenever we're using SBD as a fencing device and enable it for pacemaker cluster, services should be managed under cluster control. Hence, you cannot start/stop it manually. While enabling and adding any new 
-SBD device in cluster, you should restart the pacemaker cluster to take effect under cluster control.
+Whenever we're using SBD as a fencing device and enable it for pacemaker cluster, services should be managed under cluster control. Hence, you cannot start/stop it manually. While enabling and adding any new SBD device in cluster, you should restart the pacemaker cluster to take effect under cluster control.
 
 1. Restart cluster services on all cluster nodes.
 
@@ -515,14 +510,11 @@ sudo sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
 1   node2   clear   
 ```
 
-For Reference:  https://access.redhat.com/solutions/6771581
+For more information, see [SBD device list showing blank output](https://access.redhat.com/solutions/6771581) from Red Hat Knowledge base.
 
 ## Next Steps
 
-If you need more help, open a support request by using the following instructions. When you submit your request, attach `sosreport` logs for troubleshooting.
-
-Use the following RHEL  article for log collection:
- https://access.redhat.com/solutions/3592
+For more information about Log collection in Red Hat systems, see [What is an sos report and how to create one in Red Hat Enterprise Linux?](https://access.redhat.com/solutions/3592).
 
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
