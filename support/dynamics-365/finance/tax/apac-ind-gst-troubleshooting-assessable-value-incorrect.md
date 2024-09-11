@@ -37,4 +37,4 @@ This section provides guidance on investigating the root cause and adding a [cod
 
     For example, in `PurchLine.modifiedField`, there's code logic to update the assessable value. Review and update the code as needed to update the assessable value.
 
-    :::image type="content" source="media/apac-ind-gst-troubleshooting-assessable-value-incorrect/purchline-modifiedfield.png" alt-text="A code logic example about updating the assessable value." lightbox="media/apac-ind-gst-troubleshooting-assessable-value-incorrect/purchline-modifiedfield.png":::
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-assessable-value-incorrect/purchline-modifiedfield.png" alt-text="Screenshot that shows a code logic example about updating the assessable value." lightbox="media/apac-ind-gst-troubleshooting-assessable-value-incorrect/purchline-modifiedfield.png":::
