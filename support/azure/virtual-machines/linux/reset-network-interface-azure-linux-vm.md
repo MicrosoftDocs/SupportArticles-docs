@@ -107,4 +107,6 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 
 3. Try to SSH to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
+---
+
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -102,7 +102,9 @@ This article shows how to reset the network interface for Azure Windows VM to re
    az network nic ip-config update -g MyResourceGroup --nic-name MyNic -n MyIpConfig --private-ip-address 10.0.0.9 
    ```
 
-3. Try to SSH to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
+3. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
+
+---
 
 ## Delete the unavailable NICs
 
