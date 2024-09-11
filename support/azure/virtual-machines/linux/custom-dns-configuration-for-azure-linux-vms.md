@@ -17,15 +17,15 @@ This article discusses how to configure custom DNS and search domains in Azure L
 
 ## Overview of DNS
 
-Domain Name System (DNS) is a hierarchical and decentralized naming system used to translate human-readable domain names (like www.example.com) into IP addresses (like 192.0.2.1) that computers use to identify each other on the network. Essentially, DNS acts as the phonebook of the internet.
+Domain Name System (DNS) translates human-readable domain names (like www.example.com) into IP addresses (like 192.0.2.1) that computers use to identify each other on the network. Essentially, DNS acts as the internet's phonebook.".
 
 > [!NOTE]
 > In Azure you can configure multiple custom DNS servers at the Virtual Network(VNET) level or at the Network Interface(NIC) level. The DNS servers configured at the NIC level will override the configuration done at VNET level.
 
 ## Purpose of this Document
 
-The purpose of this document is to provide a comprehensive guide on configuring custom DNS servers and search domain, across different Linux distributions, specifically Redhat, SUSE, and Ubuntu.
-By following the guidelines and procedures outlined in this document, users can ensure their Linux systems are configured with optimal and secure DNS settings, leading to improved network performance and reliability.
+The purpose of this document is to provide a comprehensive guide on configuring custom DNS servers and search domain, across different Linux distributions, such as, Redhat, SUSE, and Ubuntu.
+Following the guidelines in this document ensures optimal and secure DNS settings for Linux systems in Azure.
 
 > [!NOTE]
 > This document uses the DNS servers “1.2.3.4” and “5.6.7.8” and the search domain “test.example.com” as examples. Please replace these with your actual DNS server addresses and search domain entries.
@@ -33,11 +33,11 @@ By following the guidelines and procedures outlined in this document, users can 
 
 ## [RHEL 8.x/9._x_](#tab/RHEL)
 
-1. Before Before making any changes, the entries in /etc/resolv.conf file will look something like this:
+1. Prior to making any modifications, the entries in /etc/resolv.conf file will look something like this:
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-1.png" alt-text="Screenshot of default resolv.conf file in RHEL.":::
 
-2. Follow the instructions mentioned in this article to configure DNS at VNET or NIC level: [Steps to Change DNS Servers at VNET/NIC Level](https://learn.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers)
+2. To configure DNS at the VNET or NIC level, follow the instructions mentioned in this article: [Steps to Change DNS Servers at VNET/NIC Level](https://learn.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers)
 
 3. Restart the NetworkManager service to see the updated entries in /etc/resolv.conf file.
 
@@ -45,23 +45,23 @@ By following the guidelines and procedures outlined in this document, users can 
       sudo systemctl restart NetworkManager
     ```
 
-    After restarting the NetworkManager service, /etc/resolv.conf file will look like this:
+    Post restarting the NetworkManager service, /etc/resolv.conf file will look like this:
     
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-2.png" alt-text="Screenshot of resolv.conf file post changing the DNS servers at portal level.":::
 
-4. You can verify that the updated entries are reflected under the eth0 section in DNS queries by running the command below:
+4. You can verify that the updated entries are reflected under the eth0 section in DNS queries by running the command mentioned here:
 
     ```bash
     sudo systemd-resolve --status
     ```
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-3.png" alt-text="Screenshot of above mentioned command's partial output.":::
 
-5. To change the search domain as per your requirement, need to add a line as mentioned below in /etc/dhcp/dhclient.conf
+5. To change the search domain as per your requirement, need to add a line like this in /etc/dhcp/dhclient.conf
 
     ```bash
     append domain-search "test.example.com";
     ```
-    After adding the above mentioned line, the file looks like this:
+    Post appending the line as mentioned above, the file looks like this:
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-4.png" alt-text="Screenshot of dhclient.conf file post modification.":::
 
@@ -75,7 +75,7 @@ By following the guidelines and procedures outlined in this document, users can 
     ```
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-5.png" alt-text="Screenshot of resolv.conf file after restarting NM service.":::
 
-7. You can also verify the same by running the command below and checking under the eth0 section:
+7. You can also verify by running this command and checking the eth0 section in the output:
 
     ```bash
     sudo systemd-resolve --status
@@ -84,7 +84,7 @@ By following the guidelines and procedures outlined in this document, users can 
 
 ## [Ubuntu 20.04/22.04](#tab/Ubuntu)
 
-1. Before making any changes, the entries in /etc/resolv.conf file will look something like this:
+1. Prior to making any modifications, the entries in /etc/resolv.conf file will look something like this:
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-1.png" alt-text="Screenshot of default resolv.conf file in Ubuntu.":::
 
@@ -92,16 +92,16 @@ By following the guidelines and procedures outlined in this document, users can 
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-2.png" alt-text="Screenshot of symlink for default resolv.conf file":::
 
-3. Follow the instructions mentioned in this article to configure DNS at VNET or NIC level: [Steps to Change DNS Servers at VNET/NIC Level](https://learn.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers)
+3. To configure DNS at the VNET or NIC level, follow the instructions mentioned in this article: [Steps to Change DNS Servers at VNET/NIC Level](https://learn.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers)
 
 4. Run the following command to apply the custom DNS entries:
     
    ```bash
    sudo netplan apply
    ```
-   Please note that the updated custom entries will be reflected in **/run/systemd/resolve/resolv.conf** file.
+   Note that the updated custom entries will be reflected in **/run/systemd/resolve/resolv.conf** file.
 
-   More information about this stub file, significance and usage of different resolv.conf files, systemd-resolved service can be found in this man page:
+   More information about this stub file, significance, and usage of different resolv.conf files, systemd-resolved service can be found in this man-page:
    https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:~:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder.
     
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-3.png" alt-text="Screenshot of non-stub resolv.conf file after making changes at portal level":::
@@ -114,7 +114,7 @@ By following the guidelines and procedures outlined in this document, users can 
     
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-4.png" alt-text="Screenshot of resolvectl status command output.":::
 
-6. To add a custom search domain, create a file similar to the one mentioned below:
+6. To add a custom search domain, create a file similar to the one mentioned here:
 
    ```bash
    root@Ubuntu22:~# cat /etc/netplan/99-dns.yaml
@@ -145,11 +145,11 @@ By following the guidelines and procedures outlined in this document, users can 
   	
 ## [SLES 12.x/15.x](#tab/SLES)
 
-1. Before making any changes, the entries in /etc/resolv.conf file will look something like this:
+1. Prior to making any modifications, the entries in /etc/resolv.conf file will look something like this:
 
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-1.png" alt-text="Screenshot of default resolv.conf file in SUSE.":::
 
-2. Follow the instructions mentioned in this article to configure DNS at VNET or NIC level: [Steps to Change DNS Servers at VNET/NIC Level](https://learn.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers)
+2. To configure DNS at the VNET or NIC level, follow the instructions mentioned in this article: [Steps to Change DNS Servers at VNET/NIC Level](https://learn.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers)
 
 3. Restart the wicked service to see the updated entries in /etc/resolv.conf file.
 
@@ -164,7 +164,7 @@ By following the guidelines and procedures outlined in this document, users can 
    ```bash
    NETCONFIG_DNS_STATIC_SEARCHLIST="test.example.com"
    ```
-   Multiple domains can be declared using a space separator as shown below
+   Multiple domains can be declared using a space separator, as demonstrated here:
 
    ```bash
    NETCONFIG_DNS_STATIC_SEARCHLIST="test.example.com test1.example.com"
@@ -175,7 +175,7 @@ By following the guidelines and procedures outlined in this document, users can 
    ```bash
    sudo systemctl restart wicked.service
    ```
-   Alternatively, you can use below command as well to get this configuration updated:
+   Alternatively, you can also use this command to get this configuration updated:
 
    ```bash
    sudo netconfig update
