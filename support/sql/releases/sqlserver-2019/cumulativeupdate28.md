@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 28 for SQL Server 2019 (KB5039747)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 28 (KB5039747).
-ms.date: 09/04/2024
+ms.date: 09/11/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5039747
 ms.reviewer: v-qianli2
 appliesto:
@@ -58,7 +58,7 @@ If you use Azure Recovery Vault, you might see an error like the following one i
 App-consistent recovery point generation failed.
 ```
 
-The issue arises from a code change in SQL Server 2019 CU28 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2019 CU27 and perform the snapshot backup.
+The issue arises from a code change in SQL Server 2019 CU28 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2019 CU27 and perform the snapshot backup. For more information about how to roll back the package to a previous version, see [Uninstall a Cumulative Update from SQL Server](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server).
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 

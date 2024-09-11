@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 08/26/2024
+ms.date: 09/06/2024
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -16,16 +16,16 @@ After deploying the Storage Sync Service, the next steps in deploying Azure File
 
 <a id="agent-installation-restart"></a>**How to check if an Azure File Sync agent installation requires a restart**
 
-An Azure File Sync agent installation may require a restart to complete the installation. For example, Azure File Sync agent version 19.1.0.0 requires a restart for servers that have an existing Azure File Sync agent installation if the agent version is older than 18.2.0.0.
+Installing an Azure File Sync agent might need a restart to finish. For example, Azure File Sync agent version 19.1.0.0 requires a restart on servers if updating from a version earlier than 18.2.0.0.
 
-If the agent is updated using the auto-upgrade feature, you can run the following PowerShell commands to check if a restart is required to complete the agent installation:
+If the agent is updated using the auto-upgrade feature, run the following PowerShell commands to check if a restart is required to complete the agent auto-upgrade:
 
 ```powershell
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Get-StorageSyncServer
 ```
 
-If the value for the **RebootNeeded** property is **True**, a restart is required to complete the agent installation.
+If the value for the `RebootNeeded` property is `True`, a restart is required.
 
 <a id="agent-update-hangs"></a>**Agent update does not complete**
 
