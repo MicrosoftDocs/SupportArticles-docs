@@ -129,8 +129,6 @@
       href: ../diagnostic-logs/diagnostic-log-collection-in-support-and-recovery-assistant.md
     - name: Increase the size of diagnostic logs
       href: ../diagnostic-logs/collect-office-diagnostic-logs.md
-    - name: Run SaRA Fiddler Trace
-      href: ../diagnostic-logs/run-fiddler-trace.md
     - name: Sign-in and authentication diagnostic
       href: ../diagnostic-logs/office-sign-in-and-auth-diagnostic.md
     - name: Use Fiddler trace logs for MFA
