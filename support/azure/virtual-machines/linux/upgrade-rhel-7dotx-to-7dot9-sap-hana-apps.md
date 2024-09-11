@@ -142,12 +142,15 @@ For more information about performing the upgrade process on custom, golden, or 
     sudo reboot
     ```
 
+
+> [!IMPORTANT]
+> If your next target is to move to RHEL 8 for SAP environments, see [How to Perform a leapp upgrade from RHEL 7.9 to 8.X for SAP-HANA and SAPAPPS PAYG.](/azure/virtual-machines/linux/leapp-upgrade-rhel7dot9-to-8dotx-saphana-sapapps)
+
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 
-<!-- PLEASE DONT DELETE THE FOLLOWING LINES, IT WILL BE ADDED ONCE THE OTHER DOC IS READY
-> [!IMPORTANT]
-> If your next target is to move to RHEL 8 for SAP environments, see [How to Perform a leapp upgrade from RHEL 7.9 to 8.X for SAP-HANA and SAPAPPS PAYG.](https://review.learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/pgrade-process-from-rhel79-to-8x-on-sap-hana-apps?branch=pr-en-us-7005&tabs=rhel8saphana)
--->
+
+
+
