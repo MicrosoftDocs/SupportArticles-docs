@@ -23,6 +23,10 @@ This article shows how to reset the network interface for Azure Linux Virtual Ma
 - You disable the default network interface (NIC).
 - You manually set a static IP for the NIC.
 
+The following article introuces how to view and change settings for a NIC, which might help you:
+
+[Change network interface settings](/azure/virtual-network/virtual-network-network-interface#change-network-interface-settings)
+
 If your Azure issue isn't addressed in this article, visit the Azure forums on [MSDN and Stack Overflow](https://azure.microsoft.com/support/forums/). You can post your issue in these forums, or post to [@AzureSupport on Twitter](https://twitter.com/AzureSupport). You also can submit an Azure support request.
 
 To submit a support request, go to the [Azure support page](https://azure.microsoft.com/support/options/) and select **Get support**.
