@@ -17,7 +17,7 @@ This article provides detailed information on how to troubleshoot issues related
 
 There are various scenarios that might lead to DNS scavenging issues. The following common checks can be used to ensure that scavenging is configured correctly in all cases:
 
-- For scavenging to take effect, it must be configured on three levels: record, zone and server. For more information, see [DNS scavenging setup](dns-scavenging-setup.md). If any of those levels is missing, scavenging doesn't take place.
+- For scavenging to take effect, it must be configured on three levels: record, zone, and server. For more information, see [DNS scavenging setup](dns-scavenging-setup.md). If any of those levels is missing, scavenging doesn't take place.
 
   The records that are prone to scavenging are the records that are registered with a timestamp in DNS, which can be either of the following ones:
 
@@ -46,7 +46,7 @@ There are various scenarios that might lead to DNS scavenging issues. The follow
 
   :::image type="content" source="media/troubleshoot-dns-scavenging-issues/all-zone-level-aging-settings.png" alt-text="Screenshot showing the all zones level aging settings." lightbox="media/troubleshoot-dns-scavenging-issues/all-zone-level-aging-settings.png":::
 
-- There's no standard setting for which numbers to use when configuring the **Refresh**, **No-refresh** and **Scavenging** cycle time, as this depends on each organization's configuration and preferences. However, you must ensure the settings follow this equation:
+- There's no standard setting for which numbers to use when configuring the **Refresh**, **No-refresh**, and **Scavenging** cycle time, as this depends on each organization's configuration and preferences. However, you must ensure the settings follow this equation:
 
   Refresh + No-refresh >= The maximus DHCP lease
 
@@ -88,7 +88,7 @@ Assume that you have the following configuration in an environment:
 - Scavenging is set to **7 days**.
 - The last scavenging cycle occurred on July 17, 2024, at 11:00 PM.
 
-By default, statically configured IPs register themselves every 24 hours. With the preceding configuration, the record will become stale on July 24, 2024, at 10:00 PM. With the next scavenging cycle occurring on July 24, 2024, at 11:00 PM (July 17, 2024, plus seven days), the DNS server will find that the record is stale and delete it. In this scenario, you might encounter resolution issues with this server from 11:00 PM till the next working day when you register manually, or after 24 hours have passed from the previous registration time when it registers itself again.
+By default, statically configured IPs register themselves every 24 hours. With the preceding configuration, the record will become stale on July 24, 2024, at 10:00 PM. With the next scavenging cycle occurring on July 24, 2024, at 11:00 PM (July 17, 2024, plus seven days), the DNS server will find that the record is stale and delete it. In this scenario, you might encounter resolution issues with this server from 11:00 PM to the next working day when you register manually, or after 24 hours have passed from the previous registration time when it registers itself again.
 
 The cause is that the **Refresh** + **No-refresh** interval is less than 24 hours. Therefore, the DNS records are lost.
 
