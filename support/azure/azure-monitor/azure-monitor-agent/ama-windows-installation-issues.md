@@ -88,14 +88,35 @@ If the VM isn't running, start it first and wait for it to enter a running state
 ### <a id="verify-vm-managed-identity"></a>Step 2: Verify if the VM has a managed identity
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Navigate to the VM and select **Identity** under the **Settings** section.
-1. Check if the "SystemAssigned" or "UserAssigned" identity exists. If neither is displayed, [enable System managed identity](/entra/identity/managed-identities-azure-resources/qs-configure-portal-windows-vm#enable-system-assigned-managed-identity-on-an-existing-vm)  or [assign User managed identity](/entra/identity/managed-identities-azure-resources/qs-configure-portal-windows-vm#assign-a-user-assigned-managed-identity-to-an-existing-vm):
-   - For System managed identity, turn the **Status** to **On** and select **Save**.
-   - For User managed identity, select the appropriate user-assigned identity.
+2. Navigate to the VM and select **Identity** under the **Settings** section.
+3. Check if the "SystemAssigned" or "UserAssigned" identity exists.
+
+   If one or both identities exist, go to [Step 3: Verify if the extension exists in the VM configuration](#verify-ama-extension-exists). If neither is displayed, [enable System managed identity](#enable-system-assigned-identity)  or [assign User managed identity](#assign-user-assigned-identity).
 
     To determine which identity is appropriate for your environment, see [What are managed identities for Azure resources?](/entra/identity/managed-identities-azure-resources/overview).
 
-    If both "SystemAssigned" and "UserAssigned" identities exist, proceed to the next step.
+#### <a id="enable-system-assigned-identity"></a>Enable system-assigned managed identity on an existing VM
+
+To enable system-assigned managed identity on a VM that was originally provisioned without it, your account needs the [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) role assignment. No other Microsoft Entra directory role assignments are required.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/) using an account associated with the Azure subscription that contains the VM.
+2. Navigate to the desired Virtual Machine and select **Identity**.
+3. Under **System assigned**, **Status**, select **On** and then select **Save**:
+
+    :::image type="content" source="media/ama-windows-installation-issues/turn-on-system-managed-identity.png" alt-text="Screenshot that shows how to turn on the system managed identity." lightbox="media/ama-windows-installation-issues/turn-on-system-managed-identity.png" border="true":::
+
+#### <a id="assign-user-assigned-identity"></a>Assign a user-assigned managed identity to an existing VM
+
+To assign a user-assigned identity to a VM, your account needs the [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) and [Managed Identity Operator](/azure/role-based-access-control/built-in-roles#managed-identity-operator) role assignments. No other Microsoft Entra directory role assignments are required.
+
+1. Sign in to the Azure portal using an account associated with the Azure subscription that contains the VM.
+2. Navigate to the desired VM and select **Identity**, **User assigned** and then **+Add**.
+
+   :::image type="content" source="media/ama-windows-installation-issues/add-user-assigned-identity.png" alt-text="Screenshot that shows how to add a user-assigned identity." lightbox="media/ama-windows-installation-issues/add-user-assigned-identity.png" border="true":::
+
+3. Select the user-assigned identity you want to add to the VM and then select **Add**.
+
+   :::image type="content" source="media/ama-windows-installation-issues/select-expected-user-identity.png" alt-text="Screenshot that shows a user-assigned identity is already slected." lightbox="media/ama-windows-installation-issues/select-expected-user-identity.png" border="true":::
 
 ### <a id="verify-ama-extension-exists"></a>Step 3: Verify if the extension exists in the VM configuration
 
