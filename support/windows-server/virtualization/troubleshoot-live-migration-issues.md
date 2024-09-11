@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot live migration issues
 description: Provides information on solving the problem of live migration in windows server 2016.
-ms.date: 06/17/2024
+ms.date: 09/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: adjudele, cpuckett, kaushika, shsadash
+ms.reviewer: adjudele, cpuckett, kaushika, shsadash, rblume
 ms.custom: sap:Clustering and High Availability\Hyper-V Clusters and VM Mobility (Migration), csstroubleshoot
 ---
 # Troubleshoot live migration issues
@@ -275,17 +275,17 @@ Here's how to fix this issue:
 
 **Description**
 
-VM Live Migration fails with the error messages below:
+VM live migration fails with the error messages:
 
-VM cannot be moved to destination computer
+> VM cannot be moved to destination computer
+>
+> HW on destination is not compatible with HW requirements of VM
 
-HW on destination is not compatible with HW requirements of VM
-
-When a Hyper-V VM is created processor features are exposed to guest VMs. At boot-time guest VM kernels will make decisions based on the availability of these features. Migration of a VM that was booted on the new system with side channel mitigation features to an old system without side channel mitigation features could expose the customer to these side channel attacks and is prevented.
+When a Hyper-V VM is created, processor features are exposed to guest VMs. At boot time, guest VM kernels make decisions based on the availability of these features. Migration of a VM that is booted on the new system with side channel mitigation features to an old system without side channel mitigation features can expose the customer to these side channel attacks, and is prevented.
 
 **Action**
 
-As a workaround at a cluster level the best option is to live migrate VMs only from old to new uCode revisions. Since VMs on the old hosts will have software mitigations for side channel attacks enabled they will not become vulnerable when moved to new hosts.
+As a workaround at a cluster level, the best option is to live migrate VMs only from old to new uCode revisions. Since VMs on the old hosts have software mitigations for side channel attacks enabled, they won't become vulnerable when moved to new hosts.
 
 #### Failed live migrate because "Virtual Machine Name" is using processor-specific features not supported on host "Node 1."
 
