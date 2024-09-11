@@ -48,7 +48,7 @@ There are various scenarios that might lead to DNS scavenging issues. The follow
 
 - There's no standard setting for which numbers to use when configuring the **Refresh**, **No-refresh**, and **Scavenging** cycle time, as this depends on each organization's configuration and preferences. However, you must ensure the settings follow this equation:
 
-  > Refresh + No Refresh >= Biggest DHCP lease
+  > Refresh + No-refresh >= The maximum DHCP lease
 
 The sum of the **Refresh** and **No-refresh** intervals needs to be greater than or equal to the maximum Dynamic Host Configuration Protocol (DHCP) lease, highlighting the critical relationship between DHCP lease duration and scavenging. The [Scenarios](#scenarios) section of the article demonstrates the reason for considering this equation.
 
