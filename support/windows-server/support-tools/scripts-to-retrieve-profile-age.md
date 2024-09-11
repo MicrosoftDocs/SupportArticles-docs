@@ -20,7 +20,7 @@ _Applies to:_ &nbsp; Windows 10, version 1809, Windows 11, Windows Server 2019, 
 
 ## Details
 
-Windows 10 May 2020 Update (Windows 10, version 2004), Windows Server 2019 (version 1809), and later versions changes how the profile age is determined and removed the reliance on the modified timestamp of the ntuser.dat file. It now uses time stamped registry values to represent the Load time, Unload time, and possible cleanup time. The ntuser.dat timestamp is now used as a fallback determination.
+Windows 10, version 1809, Windows Server 2019 (version 1809), and later versions changes how the profile age is determined and removed the reliance on the modified timestamp of the ntuser.dat file. It now uses time stamped registry values to represent the Load time, Unload time, and possible cleanup time. The ntuser.dat timestamp is now used as a fallback determination.
 
 The following registry values track the last load of the profile by the profile service, and are used to validate the Unload and Cleanup values:
 
