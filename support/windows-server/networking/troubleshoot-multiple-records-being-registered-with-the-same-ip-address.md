@@ -135,7 +135,7 @@ To do so, see [How to configure DNS dynamic updates in Windows](configure-dns-dy
 
 Experiment with the DHCP lease duration, **No-refresh** interval, and **Refresh** interval. You may find a need to depart completely from the defaults. Low DHCP lease durations (in the hours) are sometimes used for wireless subnets. Be mindful of the performance of your servers though, especially if you have a DNS server set to scavenge every few hours on large DNS zones.
 
-## Identifying Records with Duplicate IPs
+## Identify records with duplicate IPs
 
 This section introduces how to use PowerShell to identify the duplicate records. The script aims at finding records in DNS that contain duplicate IP addresses.
 
