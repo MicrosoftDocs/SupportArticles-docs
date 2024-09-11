@@ -17,7 +17,7 @@ adobe-target: true
 
 This article provides guidelines for troubleshooting poor Windows Search performance.
 
-_Applies to:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 and Windows 11 – all editions  
 _Original KB number:_ &nbsp; 4558579
 
 ## Summary
@@ -43,7 +43,7 @@ The Indexer can index up to 1 million items. If the Indexer tries to index beyon
 > [!NOTE]
 > By default, the Indexer indexes any Outlook mailboxes on the computer. If a mailbox contains more than 6 million items, the performance of the Indexer may degrade. For more information, go to the "Change Outlook settings" section.
 
-To check the number of indexed items, select **Settings** > **Search** > **Searching Windows**, and then check the value of **Indexed items**.
+To check the number of indexed items on Windows 10, select **Settings** > **Search** > **Searching Windows**, and then check the value of **Indexed items**. On Windows 11, the path is **Settings** > **Privacy & Security** > **Searching Windows.**
 
 :::image type="content" source="media/windows-search-performance-issues/indexing-status.png" alt-text="Screenshot of the Indexing Status value in the Searching Windows page of Settings.":::
 
@@ -56,7 +56,8 @@ As the number of indexed items grows beyond 400,000, the index database grows co
 
 By default, Windows.edb is located in the C:\ProgramData\Microsoft\Search\Data\Applications\Windows folder. To check the size of the file, follow these steps:
 
-1. Right-click Windows.edb, and select **Properties**.
+1. Right-click Windows.edb, and select **Properties**. On Windows 11 it is Windows.db.
+
 2. Check the **Size on disk** value. This property reflects the actual disk space that the database uses.
 
     :::image type="content" source="media/windows-search-performance-issues/disk-size.png" alt-text="Screenshot of the Size on disk property of the Windows.edb file.":::
@@ -66,13 +67,12 @@ By default, Windows.edb is located in the C:\ProgramData\Microsoft\Search\Data\A
 You can use any of several approaches to improve the performance of Search and the Search Indexer.
 
 > [!IMPORTANT]
-> To make sure that the index reflects your changes, select **Settings** > **Search** > **Searching Windows >** **Advanced Search Indexer Settings** > **Advanced** > **Rebuild**.
-
+> To make sure that the index reflects your changes, on Windows 10 select **Settings** > **Search** > **Searching Windows >** **Advanced Search Indexer Settings** > **Advanced** > **Rebuild**. On Windows 11, select **Settings** > **Privacy & Security** > **Searching Windows >** **Advanced indexing options** > **Advanced** > **Rebuild**.
 Let the Indexer run for up to 24 hours to rebuild the index database.
 
 ##### Exclude folders  
 
-You can use this approach to reduce the number of items that are indexed and to reduce the size of the index database. To exclude whole folders from the index, select **Settings** > **Search** > **Searching Windows** > **Add an excluded folder**. And then select a folder to exclude.
+You can use this approach to reduce the number of items that are indexed and to reduce the size of the index database. To exclude whole folders from the index, on Windows 10 select **Settings** > **Search** > **Searching Windows** > **Add an excluded folder**. And then select a folder to exclude. On Windows 11 the path is **Settings** > **Privacy & Security** > **Searching Windows** > **Add an excluded folder**.
 
 For a more granular method to include or exclude items, open **Searching Windows**, and select **Advanced Search Indexer Settings**. In **Indexing Options**, select **Modify**, and then select or deselect locations to index.
 
@@ -112,7 +112,7 @@ If a different message appears, see the following table for more information abo
 
 | **Status message**| **Explanation**| **Possible actions** |
 |---|---|---|
-|Indexing complete|The Indexer is running as usual, and has finished indexing.|Indexing should be complete, and all results available. If you're still missing files, make sure that the correct folders are selected to search. To see a detailed list of the locations that are indexed, open **Searching Windows**, and select **Advanced Search Indexer Settings**. In **Indexing Options**, select **Modify**.|
+|Indexing complete|The Indexer is running as usual, and has finished indexing.|Indexing should be complete, and all results available. If you're still missing files, make sure that the correct folders are selected to search. To see a detailed list of the locations that are indexed, open **Searching Windows**, and select **Advanced Search Indexer Settings** (Windows 10) **or** **Advanced indexing options** (Windows 11). In **Indexing Options**, select **Modify**|
 |Indexing in progress. Search results might not be complete during this time.|The Indexer has found new files on the system and is adding them to the index. Depending on the number of files that have recently changed, it could take a few hours|Leave the computer turned on and connected to power (if applicable) for a few hours to let indexing finish.|
 |Indexing speed is reduced because of user activity.|The Indexer is adding new items to be searched, but has slowed its progress because the user is interacting with the device.|The indexing process will complete slowly. Wait a few hours, or leave the device unattended and connected to a power source.|
 |Indexing is waiting for computer to become idle.|The Indexer has detected items that have to be indexed, but the device is too busy for the indexing process to continue.|Find out what is causing device to be busy. If the disk or CPU use is high, the indexer stops running to maximize the resources for foreground activities.|
@@ -127,4 +127,4 @@ If a different message appears, see the following table for more information abo
 |Indexing is shutting down.|The Indexer has received the signal to shut down either because the operating system is shutting down or because the user requested it.|Make sure that the user hasn't manually stopped the service. Check the status of the Windows Search Service (`wsearch`) in services.msc.|
 |Index is performing maintenance. Please wait.|The Indexer is trying to recover and optimize the index database. It could occur because lots of content was added recently, or because the Indexer encountered a problem while writing out data to the hard disk.|Wait a few minutes for the Indexer to finish. It can take up to 30 minutes on a slow computer. Make sure that the system hard disk isn't generating failures. Usually, Indexer writing issues precede drive failure. Make sure that the user has backed up personal data.|
 |Indexing is paused by an external application.|An application on the computer requested the Indexer to stop. It commonly occurs during Game mode or during an upgrade.|Make sure that the device isn't in Game mode. Use services.msc or Task Manager to restart the Windows Search service. It resumes indexing until the next time that an external app requests a pause.|
-|The status message is missing, and the entire page is greyed out.|Something has corrupted the Indexer registry keys or database. The service can no longer start or report status.|Delete the contents of C:\ProgramData\Microsoft\Search\Data.Refresh the operating system.|
+|The status message is missing, and the entire page is greyed out.|Something has corrupted the Indexer registry keys or database. The service can no longer start or report status.|Delete the contents of C:\ProgramData\Microsoft\Search\Data. Refresh the operating system.|
