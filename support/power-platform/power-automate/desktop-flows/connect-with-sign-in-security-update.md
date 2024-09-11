@@ -9,7 +9,7 @@ ms.date: 09/11/2024
 
 ## Summary
 
-A potential security vulnerability is identified in Power Automate for desktop versions 2.47 and earlier.
+A potential security vulnerability is identified in Power Automate for desktop versions 2.47 and earlier. Microsoft has issued a [CVE about this issue](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43479).
 
 > [!IMPORTANT]
 > The issue affects only machines that are joined to an Active Directory (AD) domain, not those joined to Microsoft Entra ID. If an attacker can access a machine that isn't registered to your Power Automate environment, they can register it to their own Power Automate environment and then run arbitrary attended desktop flows into your Windows session when it's open and unlocked.
@@ -39,7 +39,7 @@ Creating and testing connections with sign-in option will also fail with one of 
 
 > Unable to connect. The credentials for the machine are incorrect.
 
-> Tenant \<tenantID> needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine.
+> Tenant \<tenantID> needs to be explicitly allow-listed to authorize 'connect with sign-in' runs on the machine.
 
 To use "connect with sign-in" on such machines, you must add the Power Automate tenant where your machine is registered to the allowlist by following the instructions in ["UnallowedTenantForConnectWithSignIn" error in a  Power Automate desktop flow](troubleshoot-unallowed-tenant-for-connect-with-sign-in.md). We recommend that your AD administrators deploy a Group Policy Object (GPO) in your domain to define the tenant allowlist.
 

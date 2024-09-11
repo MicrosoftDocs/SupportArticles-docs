@@ -25,7 +25,7 @@ This article provides a resolution for errors that might occur when you run a de
 - You receive one of the following errors when you try to create or test a "connect with sign-in" connection on an AD domain-joined machine:
 
   - > Unable to connect. The credentials for the machine are incorrect.
-  - > Tenant \<tenantID> needs to be explicitly allowlisted to authorize 'connect with sign-in' runs on the machine.
+  - > Tenant \<tenantID> needs to be explicitly allow-listed to authorize 'connect with sign-in' runs on the machine.
 
 ## Cause
 
