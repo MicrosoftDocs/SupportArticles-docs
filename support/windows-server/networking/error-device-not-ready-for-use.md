@@ -45,7 +45,7 @@ If no backup is present, and since you have only a single DFS root server for yo
 
 ## Cause 2: The PDC or DC can't be reached
 
-The primary domain controller (PDC) or domain controller (DC) isn't reachable over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port). The DFS namespace server tries to reach the PDC or DC until it runs into an error or times out. Therefore, on the machine (that's a DFS namespace server, member server, or member client with RSAT File Services tools installed) where you use the DFS Management console, you get the error message "The device is not ready for use." This error occurs because the DFS namespace server is still trying to reach the PDC or DC while you request the DFS namespace information.
+The primary domain controller (PDC) or domain controller (DC) isn't reachable over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port). The DFS namespace server tries to reach the PDC or DC until it runs into an error or times out. Therefore, on the machine (that's a DFS namespace server, member server, or member client with RSAT File Services tools installed) where you use the DFS Management console, you receive the error message "The device is not ready for use." This error occurs because the DFS namespace server is still trying to reach the PDC or DC while you request the DFS namespace information.
 
 This error variant usually shows for a short time until reaching the PDC or DC times out. Subsequent tries to view or access the DFS namespace via the DFS Management console without applying the solution can result in other error variants (for example, "The Namespace cannot be queried. The specified domain either does not exist or cannot be contacted").
 
