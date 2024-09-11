@@ -282,9 +282,9 @@ Azure Files only supports NTLMv2 and Kerberos for SMB file shares. Kernel 4.4 an
 
 ##### Solution for cause 3
 
-Ensure that SMB mount commands don't override the default NTLM v2 authentication via the `sec` option. The `sec` option should never use `ntlm` or `ntlmi` when connecting to SMB Azure file shares. If you use `/etc/samba/smb.conf` to set global options, ensure you don't disable NTLM v2.
+Ensure that SMB mount commands don't override the default NTLMv2 authentication via the `sec` option. The `sec` option should never use `ntlm` or `ntlmi` when connecting to SMB Azure file shares. If you set global options in */etc/samba/smb.conf*, ensure that you don't disable NTLMv2.
 
-##### Cause 4: Storage account key access is disabled or enforced via a policy
+##### Cause 4: Storage account key access is disabled via a policy
 
 When storage account key access is disabled for a storage account, SAS tokens and access keys won't work.
 
