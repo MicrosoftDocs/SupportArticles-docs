@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 28 for SQL Server 2019 (KB5039747)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 28 (KB5039747).
-ms.date: 09/04/2024
+ms.date: 09/11/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5039747
 ms.reviewer: v-qianli2
 appliesto:
