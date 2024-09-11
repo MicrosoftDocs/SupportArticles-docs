@@ -81,7 +81,7 @@ To submit a support request, go to the [Azure support page](https://azure.micros
     $nic | Set-AzNetworkInterface
     ```
 2. The virtual machine will restart to initialize the new NIC to the system.
-3. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
+3. Try to SSH to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
 ## Use Azure CLI
 
@@ -89,7 +89,7 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 
 2. Open [Azure Cloud Shell](/azure/cloud-shell/overview) or preferred shell. Run the following commands:
 
-   ```azurecli
+   ```azurecli-interactive
    #Log in to the subscription  
 
    az login 
