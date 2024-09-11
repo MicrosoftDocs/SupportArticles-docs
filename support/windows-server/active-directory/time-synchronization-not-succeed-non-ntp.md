@@ -13,12 +13,12 @@ ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, an
 
 When you try to synchronize a Windows-based computer to a Network Time Protocol (NTP) server that isn't running Windows, the synchronization may not succeed. This article provides a resolution to this issue.
 
-_Applies to:_ &nbsp; Support versions of Windows Server  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 875424
 
 ## Cause
 
-This problem may occur when your computer sends synchronization requests by using symmetric active mode. By default, Windows Server 2003 domain controllers are configured as time servers and use symmetric active mode to send synchronization requests. Some NTP servers that don't run Windows respond only to requests that use client mode.
+This problem may occur when your computer sends synchronization requests by using symmetric active mode. By default, Windows Server domain controllers are configured as time servers and use symmetric active mode to send synchronization requests. Some NTP servers that don't run Windows respond only to requests that use client mode.
 
 ## Resolution
 
