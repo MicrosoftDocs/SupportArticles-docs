@@ -68,6 +68,8 @@
     href: linux-selinux-troubleshooting.md
   - name: Debian Linux VM
     href: cannot-connect-debian-linux.md
+  - name: Use UFM to troubleshoot connectivity issues in Ubuntu
+    href: troubleshoot-ssh-permissions-too-open.md
   - name: Troubleshoot "permissions are too open" error
     href: troubleshoot-ssh-permissions-too-open.md
   - name: Application access issues
