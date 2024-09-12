@@ -1,5 +1,5 @@
 ---
-title: Can't access SMB file server
+title: Can't access SMB file server through DNS CNAME
 description: Describes an issue in which you can't access SMB file server share by using the DNS CNAME. Provides a resolution.
 ms.date: 09/12/2024
 manager: dcscontentpm
@@ -11,16 +11,16 @@ ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB)
 ---
 # SMB file server share access is unsuccessful through DNS CNAME alias
 
-This article explains how to resolve issues when accessing a Server Message Block (SMB) server using a Canonical Name (CNAME).
+This article explains how to resolve issues when accessing a Server Message Block (SMB) server by using a canonical name (CNAME).
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You have an SMB file server, such as a Windows Server-based computer or a Network Attached Storage (NAS).
-- The server has files and resources that are accessible using NetBIOS name, the Domain Name System (DNS) fully qualified domain name (FQDN), and alias (CNAME).
+- You have an SMB file server, such as a Windows Server-based computer or a network attached storage (NAS).
+- The server has files and resources that are accessible by using their NetBIOS name, Domain Name System (DNS) fully qualified domain name (FQDN), and alias (CNAME).
 - You have a client that's running Windows 10, Windows 11, Windows Server 2016, or a later version of Windows Server.
-- On the client, you can use the NetBIOS name or the FQDN to access to an SMB share by with an application or a user account.
+- On the client, you can use the NetBIOS name or FQDN to access the SMB share with an application or a user account.
 
 In this scenario, when you use the CNAME to access the SMB share by running one of the following commands, the command fails.
 
@@ -31,9 +31,9 @@ In this scenario, when you use the CNAME to access the SMB share by running one 
 - `New-PSDrive -Name "x" -PSProvider "FileSystem" -Root "\\CNAME\share_name" -Persist`
 - `New-PSDrive -Name "x" -PSProvider "FileSystem" -Root "\\CNAME.contoso.com\share_name" -Persist`
 
-And you might receive an error message that reassembles the following:
+And you might receive an error message that resembles the following example:
 
-> \\\\CNAME.contoso.com\\share_name is not accessible. You might not have permissions to use this network resource. Contact the administrator of this server to find out if you have access permissions.
+> \\\\CNAME.contoso.com\\share_name is not accessible. You might not have permission to use this network resource. Contact the administrator of this server to find out if you have access permissions.
 >
 > Logon Failure: The target account name is incorrect.
 
@@ -42,16 +42,14 @@ And you might receive an error message that reassembles the following:
 This issue can be caused by one of the following reasons:
 
 - Configuration issue or SMB server service hardening issue.
-- Missing Service Principal Name (SPN) for DNS Alias (CNAME) record for the File Share Server.
+- The service principal name (SPN) for the DNS alias (CNAME) record for the file share server is missing.
 
 ## Resolution
 
-To resolve this issue, avoid using DNS CNAMEs to configure alternative names for file servers. Instead, configure it by defining an alias by using the netdom command:
+To resolve this issue, avoid using the DNS CNAME to configure the file server's alternative name. Instead, configure it by defining an alias by using the netdom command:
 
 ```console
-Netdom computername <COMPUTEROriginalName> /add:<ALIAS>
+Netdom computername <ComputerOriginalName> /add:<Alias>
 ```
-
-## More information
 
 For more information, see [Using Computer Name Aliases in place of DNS CNAME Records](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-computer-name-aliases-in-place-of-dns-cname-records/ba-p/259064).
