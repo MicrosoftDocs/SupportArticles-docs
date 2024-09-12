@@ -222,7 +222,7 @@ warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed:
 
 ## Cause 5: Missing `fence-agents-azure-arm` package
 
-Check the log in `/var/log/messages`. The fence-agent is unable to read or find the `'fence-aagents-azure-arm` package in the system. 
+Check the log in `/var/log/messages`. The following logs indicate the fence-agent is unable to read or find the `fence-agents-azure-arm` package in the system. 
 
 ```output
 /var/log/messages
@@ -261,17 +261,18 @@ Check the log in `/var/log/messages`. The fence-agent is unable to read or find 
 ```
 
 ### Resolution
-With the recent `python3.11` introduced, SUSE has rebuild the new package for Microsoft as `fence-agents-azure-arm`
-[Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent).
-1. Put the cluster under maintenance-mode
+With the release of Python 3.11, SUSE has rebuilt the package as `fence-agents-azure-arm`.
+[Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent). To installl new package, follow these steps:
+ 
+1. Put the cluster under maintenance-mode:
  ```bash
     sudo crm configure property maintenance-mode=true
  ```
-2. Install the following package in both the VMs.:
+2. Install the following package in both the VMs:
 ```bash
    sudo zypper in fence-agents-azure-arm
 ```
-3. Remove the cluster out of maintenance-mode
+3. Remove the cluster out of maintenance-mode:
 ```bash
     sudo crm configure property maintenance-mode=false
 ```
