@@ -26,7 +26,7 @@ UFM is a user-friendly interface for managing a `netfilter` firewall in Linux di
 ## How to check if a port is closed in the Ubuntu VM with UFM
 
 > [!NOTE]  
-> By default, UFW is not enabled on Ubuntu VMs that are created by using images from the Azure Marketplace. Enabling UFW on your virtual machine will close all ports, including port 22 for SSH services. 
+> By default, UFW isn't enabled on Ubuntu VMs that are created by using images from the Azure Marketplace. Enabling UFW on your VM will close all ports, including port 22 for SSH services. 
 Make sure you can access the serial console from the VM before enabling UFW.
 
 1. Verify the UFW status:
@@ -45,7 +45,6 @@ Make sure you can access the serial console from the VM before enabling UFW.
      ```bash
      sudo ufw status numbered
      ```
-
      This command lists all the rules. It shows whether specific ports are allowed or denied. If a port doesn't appear in the list, it's denied by default.
 
 3. Check the UFW rules to determine if a particular port is denied. For example, to verify if SSH port 22 is denied, use the following command:
@@ -75,8 +74,8 @@ Make sure you can access the serial console from the VM before enabling UFW.
      ```
      ---
 
-   - The example output indicates that the port is being used or listening to by a service. However, this does not confirm that the port is allowed or unblocked by the firewall. Even if a port is blocked by the firewall, it may still appear as **LISTEN** in the output.
-   - No output indicates that the port is not being listened by any service.
+   - The example output indicates that the port is being used or listened to by a service. However, this doesn't confirm that the port is allowed or unblocked by the firewall. Even if a port is blocked by the firewall, it may still appear as **LISTEN** in the output.
+   - No output indicates that the port isn't being listened by any service.
 
 6. Test Port Connectivity using `nc`:
 
@@ -84,7 +83,7 @@ Make sure you can access the serial console from the VM before enabling UFW.
      sudo nc -zv <server-ip> 22
      ```
 
-     - If the connection fails but the port is be listening, it confirms that the port is denied by the firewall.
+     - If the connection fails but the port is being listening, it confirms that the port is denied by the firewall.
 
      - Successful connection means the port is allowed.
 
@@ -134,9 +133,7 @@ To                         Action      From
 22/tcp                     ALLOW       10.0.10.10             
 ```
 
-
 #### Scenario 3: Allow a subnet to connect to the port 22
-
 
 ```bash
 sudo ufw allow from 10.1.0.0/24 to any port 22 proto tcp
@@ -178,10 +175,9 @@ To                         Action      From
 > [!IMPORTANT]  
 > The order of the rules are important because UFW processes the rules in the order they are listed. This means that once a rule matches, ufw will apply that rule and stop processing further rules for that connection
 
-
 ## Deleting a Rule
 
-If your rules are not in the correct order, you can delete a rule and then readd it to change the order:
+If your rules aren't in the correct order, you can delete a rule and then readd it to change the order:
 
 To delete a rule, you can use its number from the `ufw status numbered` output. For example, if the rule you want to delete is rule number 3:
 
