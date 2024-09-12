@@ -1,7 +1,7 @@
 ---
-title: Script To retrieve profile age
-description: Introduces a script To retrieve profile age.
-ms.date: 09/05/2024
+title: Scripts to retrieve profile age
+description: Introduces a script to retrieve profile age.
+ms.date: 09/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -9,20 +9,20 @@ ms.localizationpriority: medium
 ms.reviewer: garymu, herbertm
 ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
-# Script To retrieve profile age
+# Scripts: Retrieve profile age
 
-Assume that you have set the [Delete user profiles older than a specified number of days on system restart](https://gpsearch.azurewebsites.net/#2583) group policy to delete aged profiles on system startup. The article provides a sample script that can help determining when profiles would be considered for deletion as a result of applying the group policy.
+Assume that you have set the "[Delete user profiles older than a specified number of days on system restart](https://gpsearch.azurewebsites.net/#2583)" group policy to delete aged profiles on system startup. The article provides a sample script that can help determine when profiles are considered for deletion because of applying the group policy.
 
 > [!NOTE]
-> A WMI provider can also be used to configure profile handling, and could override the Group Policy setting. Microsoft System Center Configuration Manager (SCCM) is an example of software that can do this.
+> A Windows Management Instrumentation (WMI) provider can also be used to configure profile handling and can override the group policy setting. Microsoft System Center Configuration Manager (SCCM) is an example of software that can do this.
 
 _Applies to:_ &nbsp; Windows 10, version 1809, Windows 11, Windows Server 2019, and later versions of Windows
 
 ## Details
 
-Windows 10, version 1809, Windows Server 2019 (version 1809), and later versions changes how the profile age is determined and removed the reliance on the modified timestamp of the ntuser.dat file. It now uses time stamped registry values to represent the Load time, Unload time, and possible cleanup time. The ntuser.dat timestamp is now used as a fallback determination.
+Windows 10, version 1809, Windows Server 2019 (version 1809), and later versions change how the profile age is determined and remove the reliance on the modified timestamp of the *ntuser.dat* file. Windows now uses timestamped registry values to represent the load time, unload time, and possible cleanup time. The *ntuser.dat* timestamp is now used as a fallback decision.
 
-The following registry values track the last load of the profile by the profile service, and are used to validate the Unload and Cleanup values:
+The following registry values track the last load of the profile by the profile service, and are used to validate the **Unload** and **Cleanup** values:
 
 - **LocalProfileLoadTimeLow**
 - **LocalProfileLoadTimeHigh**
@@ -32,7 +32,7 @@ The following registry values track the last unload of the profile by the profil
 - **LocalProfileUnLoadTimeLow**
 - **LocalProfileUnLoadTimeHigh**
 
-The following registry values track the cleanup time. If either of the other values are invalid or don't exist and the ntuser.dat timestamp isn't old enough for deletion during startup with the policy configured, age is then calculated from this time stamp. If a user signs in while the registry values are set, the registry values are removed, and tracking reverts to the other values.
+The following registry values track the cleanup time. If either of the other values is invalid or doesn't exist and the *ntuser.dat* timestamp isn't old enough for deletion during startup with the policy configured, the age is then calculated from this timestamp. If a user signs in when the registry values are set, the registry values are removed, and tracking reverts to the other values.
 
 - **LocalProfileCleanupCheckTimeLow**
 - **LocalProfileCleanupCheckTimeHigh**
@@ -125,7 +125,7 @@ Function Get-ProfileLoadUnloadDate
     END{}
 }
 
-# Get unloaded profiles information on machine
+# Get unloaded profiles' information on the machine
 $profinfo = (gwmi win32_userprofile -Filter "Loaded = 'False' and Special = 'False'").sid | Get-ProfileLoadUnloadDate
 
 $SaveErrorActionPreference = $ErrorActionPreference
@@ -207,14 +207,14 @@ $profoutput = $profinfo | Select-Object `
 
 # Different output options
 #$profoutput | fl *
-$profoutput | ft *       # NOTE: may not give all columns depending on window width.
+$profoutput | ft *       # NOTE: may not give all columns depending on the window width.
 #$profoutput | Out-GridView
 #$profoutput | Export-Csv -Path ProfileAge.csv -NoTypeInformation
 ```
 
 ## Sample output
 
-Here's the sample output of the script. The Table output can be truncated depending on the width of the window so the format of the information can be changed to other available ones as needed:
+Here's a sample output of the script. The tabular output can be truncated depending on the width of the window, so the format of the information can be changed to other available ones as needed:
 
 ```output
 Current Date........: 8/21/2024
