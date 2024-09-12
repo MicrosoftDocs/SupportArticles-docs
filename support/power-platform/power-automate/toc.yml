@@ -132,6 +132,8 @@
       href: desktop-flows/console-not-show-desktop-flows.md
     - name: Power Automate service doesn't start automatically after restarting
       href: desktop-flows/windows-services-not-start-after-restart.md
+    - name: 'Security update for "connect with sign-in" connections on AD domain-joined machines'
+      href: desktop-flows/connect-with-sign-in-security-update.md
     - name: Some actions appear to be missing or aren't visible
       href: desktop-flows/actions-not-available.md
     - name: Set drop-down list value in window/on web page action fails
@@ -148,6 +150,8 @@
       href: desktop-flows/web-extensions-policies.md
     - name: Temporary profile error during machine registration
       href: desktop-flows/temporary-profile-error-machine-registration.md
+    - name: 'UnallowedTenantForConnectWithSignIn or connection errors when using "connect with sign-in"'
+      href: desktop-flows/troubleshoot-unallowed-tenant-for-connect-with-sign-in.md
 - name: Flow creation
   items:
     - name: Can't find Excel Online table in Microsoft Flow

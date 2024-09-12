@@ -8114,12 +8114,7 @@
       "source_path": "support/windows-server/deployment/error-0xc004f06c-activate-windows.md",
       "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-0xc004f06c-activate-windows",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "support/windows-server/deployment/error-2359302-installing-windows-updates.md",
-      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-2359302-installing-windows-updates",
-      "redirect_document_id": true
-    },
+    },    
     {
       "source_path": "support/windows-server/deployment/error-invalid-data-startup-installing-updates.md",
       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates",
