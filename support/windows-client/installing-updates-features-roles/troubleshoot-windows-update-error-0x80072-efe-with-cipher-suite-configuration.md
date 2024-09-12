@@ -18,7 +18,7 @@ This article provides steps to troubleshoot and resolve the error 0x80072EFE by 
 *Applies to*: &nbsp; Windows 10 or later, Windows Server 2016, and later versions of Windows
 
 
-### Step 1: Review the Windows Update log
+## Step 1: Review the Windows Update log
 
 From the following log snippet, the connection attempts to the update server repeatedly fail with the error code 80072EFE. The retry attempts also suggest that this is likely a network-related issue.
 
@@ -37,7 +37,7 @@ YYYY/MM/DD HH:MM:SS.8197827 22576 27056 Misc            FAILED [80072EFE] Librar
 0x80072efe -2147012866 WININET_E_CONNECTION_ABORTED The connection with the server was terminated abnormally winerror.h  
 ```
 
-### Step 2: Verify the cipher suite configuration
+## Step 2: Verify the cipher suite configuration
 
 If you have specific cipher suites configured in the Windows registry key `HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002`, these settings might be preventing the Windows Update client from establishing a secure connection.
 
@@ -50,7 +50,7 @@ Ensure that at least one of these cipher suites is present in your configuration
 
 For more information about cipher suites, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
-### Step 3: Adjust the cipher suite order
+## Step 3: Adjust the cipher suite order
 
 If the required cipher suites are present but you're still experiencing issues, consider adjusting their order in the registry. Sometimes, the sequence in which the cipher suites are listed can affect their selection during the handshake process.
 
@@ -64,11 +64,11 @@ How to modify the cipher suites:
 3. Locate the cipher suites mentioned in [Step 2](#step-2-verify-the-cipher-suite-configuration) and ensure they're listed. If they're present but lower in the list, try to move them higher or even to the top.
 4. If any of the cipher suites is missing, add it manually. To do so, right-click the registry key, select **Modify**, and then enter the correct suite name in the appropriate order.
 
-### Step 4: Restart the computer
+## Step 4: Restart the computer
 
 After making changes to the cipher suite configuration, you need to restart the computer for the settings to take effect.
 
-### Step 5: Test the Windows Update connection
+## Step 5: Test the Windows Update connection
 
 After the computer restarts, follow these steps to try Windows Update again:
 
