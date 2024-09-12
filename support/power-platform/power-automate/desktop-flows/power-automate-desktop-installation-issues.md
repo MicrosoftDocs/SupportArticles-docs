@@ -2,7 +2,7 @@
 title: Installation issues in Power Automate for desktop
 description: Helps troubleshoot stallation issues in Power Automate for desktop.
 ms.reviewer: guco, johndund
-ms.date: 09/10/2024
+ms.date: 09/12/2024
 ms.custom: sap:Desktop flows\Installation issues
 ---
 # Troubleshoot installation issues in Power Automate for desktop
@@ -62,7 +62,7 @@ The installation fails with this error if the Power Automate service crashes at 
 
 The installer grants permissions to the Power Automate service to enumerate user sessions on the machine. You might need to retart your machine for these permissions to take effect.
 
-#### Resolution (requires installer version 2.18 or later)
+#### Resolution
 
 To solve this issue, you can prevent the Power Automate service from starting automatically during the installation by running the installer from a command line and passing the `/SKIPSTARTINGPOWERAUTOMATESERVICE` argument.
 
@@ -97,7 +97,7 @@ If this registry key doesn't exist, it means that your machine doesn't allow the
 > [!NOTE]
 > The registry key won't exist if Power Automate for desktop isn't installed.
 
-#### Workaround (requires installer version 2.18 or later)
+#### Workaround
 
 Instead of the default account (`NT SERVICE\UIFlowService`), you can provide a Windows user account to run the service. This account needs to be a member of the remote desktop user group and needs to have the "Logon as a service" privilege.
 
