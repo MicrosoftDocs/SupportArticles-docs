@@ -1409,6 +1409,8 @@ items:
       href: ./networking/move-zone-files-dns-server.md
     - name: Integrate Windows DNS into an existing DNS namespace
       href: ./networking/integrate-windows-dns-into-existing-dns-namespace.md
+    - name: Multiple records with the same IP address
+      href: ./networking/troubleshoot-multiple-records-being-registered-with-the-same-ip-address.md
     - name: Name resolution and connectivity issues
       href: ./networking/name-resolution-connectivity-issues.md
     - name: NBTSTAT -A doesn't resolve computer name with DNS
@@ -1430,7 +1432,7 @@ items:
     - name: Troubleshoot DNS Event ID 4013
       href: ./networking/troubleshoot-dns-event-id-4013.md
     - name: Troubleshoot DNS name resolution on the Internet
-      href: ./networking/troubleshoot-dns-name-resolution.md
+      href: ./networking/troubleshoot-dns-name-resolution.md    
     - name: Verify that SRV DNS records have been created
       href: ./networking/verify-srv-dns-records-have-been-created.md
     - name: WINS registration fails if a server points to itself for WINS name resolution
