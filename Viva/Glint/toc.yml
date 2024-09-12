@@ -1,6 +1,8 @@
 - name: Viva Glint troubleshooting
   href: viva-glint-welcome.yml
   items:
+    - name: Contact support
+      href: ./contact-support/get-support-viva-glint.md
     - name: Data File Uploads
       items:
         - name: Resolve upload errors related to attributes
