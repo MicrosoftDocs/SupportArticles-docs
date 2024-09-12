@@ -26,14 +26,14 @@ Example log entry:
 
 ```output
 YYYY/MM/DD HH:MM:SS.4926861 22576 27056 SLS             Making request with URL <HTTPS://slscr.update.microsoft.com/SLS/{<GUID>>}/x64/<build>/0?CH=253&L=en-US&P=&PT=0x7&WUA=10.0.20348>. and send SLS events.  
-YYYY/MM/DD HH:MM:SS.6134275 22576 27056 Misc            *FAILED* [80072EFE] Send request  
-YYYY/MM/DD HH:MM:SS.6134448 22576 27056 Misc            *FAILED* [80072EFE] WinHttp: SendRequestToServerForFileInformation (retrying with default proxy)  
-YYYY/MM/DD HH:MM:SS.6852866 22576 27056 Misc            *FAILED* [80072EFE] Send request  
-YYYY/MM/DD HH:MM:SS.6853083 22576 27056 Misc            *FAILED* [80072EFE] Library download error. Will retry. Retry Counter:0  
-YYYY/MM/DD HH:MM:SS.7565671 22576 27056 Misc            *FAILED* [80072EFE] Send request  
-YYYY/MM/DD HH:MM:SS.7565831 22576 27056 Misc            *FAILED* [80072EFE] WinHttp: SendRequestToServerForFileInformation (retrying with default proxy)  
-YYYY/MM/DD HH:MM:SS.8197611 22576 27056 Misc            *FAILED* [80072EFE] Send request  
-YYYY/MM/DD HH:MM:SS.8197827 22576 27056 Misc            *FAILED* [80072EFE] Library download error. Will retry. Retry Counter:1  
+YYYY/MM/DD HH:MM:SS.6134275 22576 27056 Misc            FAILED [80072EFE] Send request  
+YYYY/MM/DD HH:MM:SS.6134448 22576 27056 Misc            FAILED [80072EFE] WinHttp: SendRequestToServerForFileInformation (retrying with default proxy)  
+YYYY/MM/DD HH:MM:SS.6852866 22576 27056 Misc            FAILED [80072EFE] Send request  
+YYYY/MM/DD HH:MM:SS.6853083 22576 27056 Misc            FAILED [80072EFE] Library download error. Will retry. Retry Counter:0  
+YYYY/MM/DD HH:MM:SS.7565671 22576 27056 Misc            FAILED [80072EFE] Send request  
+YYYY/MM/DD HH:MM:SS.7565831 22576 27056 Misc            FAILED [80072EFE] WinHttp: SendRequestToServerForFileInformation (retrying with default proxy)  
+YYYY/MM/DD HH:MM:SS.8197611 22576 27056 Misc            FAILED [80072EFE] Send request  
+YYYY/MM/DD HH:MM:SS.8197827 22576 27056 Misc            FAILED [80072EFE] Library download error. Will retry. Retry Counter:1  
 0x80072efe -2147012866 WININET_E_CONNECTION_ABORTED The connection with the server was terminated abnormally winerror.h  
 ```
 
