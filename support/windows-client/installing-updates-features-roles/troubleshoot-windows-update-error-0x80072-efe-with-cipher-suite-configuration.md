@@ -25,16 +25,16 @@ From the following log snippet, the connection attempts to the update server rep
 Example log entry:
 
 ```output
-> YYYY/MM/DD HH:MM:SS.4926861 22576 27056 SLS             Making request with URL <HTTPS://slscr.update.microsoft.com/SLS/{<GUID>>}/x64/<build>/0?CH=253&L=en-US&P=&PT=0x7&WUA=10.0.20348>. and send SLS events.  
-> YYYY/MM/DD HH:MM:SS.6134275 22576 27056 Misc            *FAILED* [80072EFE] Send request  
-> YYYY/MM/DD HH:MM:SS.6134448 22576 27056 Misc            *FAILED* [80072EFE] WinHttp: SendRequestToServerForFileInformation (retrying with default proxy)  
-> YYYY/MM/DD HH:MM:SS.6852866 22576 27056 Misc            *FAILED* [80072EFE] Send request  
-> YYYY/MM/DD HH:MM:SS.6853083 22576 27056 Misc            *FAILED* [80072EFE] Library download error. Will retry. Retry Counter:0  
-> YYYY/MM/DD HH:MM:SS.7565671 22576 27056 Misc            *FAILED* [80072EFE] Send request  
-> YYYY/MM/DD HH:MM:SS.7565831 22576 27056 Misc            *FAILED* [80072EFE] WinHttp: SendRequestToServerForFileInformation (retrying with default proxy)  
-> YYYY/MM/DD HH:MM:SS.8197611 22576 27056 Misc            *FAILED* [80072EFE] Send request  
-> YYYY/MM/DD HH:MM:SS.8197827 22576 27056 Misc            *FAILED* [80072EFE] Library download error. Will retry. Retry Counter:1  
-> 0x80072efe -2147012866 WININET_E_CONNECTION_ABORTED The connection with the server was terminated abnormally winerror.h  
+YYYY/MM/DD HH:MM:SS.4926861 22576 27056 SLS             Making request with URL <HTTPS://slscr.update.microsoft.com/SLS/{<GUID>>}/x64/<build>/0?CH=253&L=en-US&P=&PT=0x7&WUA=10.0.20348>. and send SLS events.  
+YYYY/MM/DD HH:MM:SS.6134275 22576 27056 Misc            *FAILED* [80072EFE] Send request  
+YYYY/MM/DD HH:MM:SS.6134448 22576 27056 Misc            *FAILED* [80072EFE] WinHttp: SendRequestToServerForFileInformation (retrying with default proxy)  
+YYYY/MM/DD HH:MM:SS.6852866 22576 27056 Misc            *FAILED* [80072EFE] Send request  
+YYYY/MM/DD HH:MM:SS.6853083 22576 27056 Misc            *FAILED* [80072EFE] Library download error. Will retry. Retry Counter:0  
+YYYY/MM/DD HH:MM:SS.7565671 22576 27056 Misc            *FAILED* [80072EFE] Send request  
+YYYY/MM/DD HH:MM:SS.7565831 22576 27056 Misc            *FAILED* [80072EFE] WinHttp: SendRequestToServerForFileInformation (retrying with default proxy)  
+YYYY/MM/DD HH:MM:SS.8197611 22576 27056 Misc            *FAILED* [80072EFE] Send request  
+YYYY/MM/DD HH:MM:SS.8197827 22576 27056 Misc            *FAILED* [80072EFE] Library download error. Will retry. Retry Counter:1  
+0x80072efe -2147012866 WININET_E_CONNECTION_ABORTED The connection with the server was terminated abnormally winerror.h  
 ```
 
 ### Step 2: Verify the cipher suite configuration
@@ -61,7 +61,7 @@ How to modify the cipher suites:
 
    `HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002`
 
-3. Locate the cipher suites mentioned in [Step 2](#step-2-verify-cipher-suite-configuration) and ensure they're listed. If they're present but lower in the list, try to move them higher or even to the top.
+3. Locate the cipher suites mentioned in [Step 2](#step-2-verify-the-cipher-suite-configuration) and ensure they're listed. If they're present but lower in the list, try to move them higher or even to the top.
 4. If any of the cipher suites is missing, add it manually. To do so, right-click the registry key, select **Modify**, and then enter the correct suite name in the appropriate order.
 
 ### Step 4: Restart the computer
