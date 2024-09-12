@@ -63,17 +63,15 @@ Make sure you can access the serial console from the VM before enabling UFW.
      ```bash
      sudo netstat -tuln | grep ':22'
      ```
-   ```output
-   tcp6   0   0 :::22     :::*   LISTEN   
-   ```
-     
      # [ss](#tab/ss)
      
      ```bash
      sudo ss -tuln | grep ':22'
      ```
      ---
-
+     ```output
+     tcp6   0   0 :::22     :::*   LISTEN   
+     ```
    - The example output indicates that the port is being used or listened to by a service. However, this doesn't confirm that the port is allowed or unblocked by the firewall. Even if a port is blocked by the firewall, it may still appear as **LISTEN** in the output.
    - No output indicates that the port isn't being listened by any service.
 
@@ -84,7 +82,6 @@ Make sure you can access the serial console from the VM before enabling UFW.
      ```
 
      - If the connection fails but the port is being listening, it confirms that the port is denied by the firewall.
-
      - Successful connection means the port is allowed.
 
 If the port you're checking doesn't appear in UFW's rules, or if it's marked as `DENY`, UFW is blocking the port. Additionally, if you can't connect to the port using external tools, the port is blocked.
