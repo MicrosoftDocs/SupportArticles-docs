@@ -41,7 +41,7 @@ Follow these steps:
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/adminportal/home?#/homepage) by using your Microsoft credentials.
 1. At the bottom-right corner of the page, select **Help & support**.
-1. In the **How can we help?** pane that appears, enter *Viva Glint* in the text box. If you get a list of suggested topics, select the one that's closest to your issue. If none of the suggested topics apply, eneter your specific issue, and then press **Enter**.
+1. In the **How can we help?** pane that appears, enter *Viva Glint* in the text box. If you get a list of suggested topics, select the one that's closest to your issue. If none of the suggested topics apply, enter your specific issue, and then press **Enter**.
 1. If the results aren't helpful, select **Contact support** at the bottom of the pane.
 
    :::image type="content" source="./media/get-support-viva-glint/select-contact-support.png" alt-text="Screenshot of the Contact Support option.":::
