@@ -1432,7 +1432,9 @@ items:
     - name: Troubleshoot DNS Event ID 4013
       href: ./networking/troubleshoot-dns-event-id-4013.md
     - name: Troubleshoot DNS name resolution on the Internet
-      href: ./networking/troubleshoot-dns-name-resolution.md    
+      href: ./networking/troubleshoot-dns-name-resolution.md
+    - name: Troubleshoot DNS name resolution failures related to DNS forwarders
+      href: ./networking/troubleshoot-dns-forwarders-related-failures.md
     - name: Verify that SRV DNS records have been created
       href: ./networking/verify-srv-dns-records-have-been-created.md
     - name: WINS registration fails if a server points to itself for WINS name resolution
