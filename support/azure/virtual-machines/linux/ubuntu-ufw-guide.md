@@ -13,7 +13,7 @@ ms.service: azure-virtual-machines
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article describes how to use Uncomplicated Firewall (UFW) to diagnose and resolve connectivity problems in an Azure Ubuntu virtual machine(VM).
+This article describes how to use Uncomplicated Firewall (UFW) to diagnose and resolve connectivity problems in an Azure Ubuntu virtual machine (VM).
 
 UFW is a user-friendly interface for managing a `netfilter` firewall in Linux distributions, particularly in Ubuntu. Its primary goal is to make managing a firewall easier for users who might find the complexity of directly configuring `iptables` daunting. UFW is the default firewall configuration tool.
 
@@ -84,7 +84,7 @@ Make sure you can access the serial console from the VM before enabling UFW.
      - If the connection fails but the port is being listening, it confirms that the port is denied by the firewall.
      - Successful connection means the port is allowed.
 
-If the port you're checking doesn't appear in UFW's rules, or if it's marked as `DENY`, UFW is blocking the port. Additionally, if you can't connect to the port using external tools, the port is blocked.
+If the port you're checking doesn't appear in UFW's rules, or it's marked as `DENY`, UFW is blocking the port. Additionally, if you can't connect to the port using external tools, the port is blocked.
 
 ## Working with UFW
 
@@ -170,7 +170,7 @@ To                         Action      From
 ```
 
 > [!IMPORTANT]  
-> The order of the rules are important because UFW processes the rules in the order they are listed. This means that once a rule matches, ufw will apply that rule and stop processing further rules for that connection
+> The order of the rules is important because UFW processes the rules in the order they are listed. This means that once a rule matches, ufw will apply that rule and stop processing further rules for that connection
 
 ## Deleting a Rule
 
