@@ -22,7 +22,7 @@ _Applies to:_ &nbsp; Windows 10, version 1809, Windows 11, Windows Server 2019, 
 
 Windows 10, version 1809, Windows Server 2019 (version 1809), and later versions change how the profile age is determined and remove the reliance on the modified timestamp of the *ntuser.dat* file. Windows now uses timestamped registry values to represent the load time, unload time, and possible cleanup time. The *ntuser.dat* timestamp is now used as a fallback decision.
 
-The following registry values track the last load of the profile by the profile service, and are used to validate the **Unload** and **Cleanup** values:
+The following registry values track the last load of the profile by the profile service and are used to validate the **Unload** and **Cleanup** values:
 
 - **LocalProfileLoadTimeLow**
 - **LocalProfileLoadTimeHigh**
