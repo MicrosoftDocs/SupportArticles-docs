@@ -1,6 +1,6 @@
 ---
 title:  Troubleshooting connectivity issues by using Uncomplicated Firewall (UFW) in Azure Ubuntu VMs
-description: Describes how to use Uncomplicated Firewall (UFM) to diagnose and resolve connectivity problems in Azure Ubuntu VMs. 
+description: Describes how to use Uncomplicated Firewall (UFW) to diagnose and resolve connectivity problems in Azure Ubuntu VMs. 
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
@@ -9,13 +9,13 @@ ms.date: 08/23/2024
 ms.service: azure-virtual-machines
 ---
 
-# Use UFM for troubleshooting connectivity issues in Azure Ubuntu VMs
+# Use UFW for troubleshooting connectivity issues in Azure Ubuntu VMs
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article describes how to use Uncomplicated Firewall (UFM) to diagnose and resolve connectivity problems in an Azure Ubuntu virtual machine(VM).
+This article describes how to use Uncomplicated Firewall (UFW) to diagnose and resolve connectivity problems in an Azure Ubuntu virtual machine(VM).
 
-UFM is a user-friendly interface for managing a `netfilter` firewall in Linux distributions, particularly in Ubuntu. Its primary goal is to make managing a firewall easier for users who might find the complexity of directly configuring `iptables` daunting. UFM is the default firewall configuration tool.
+UFW is a user-friendly interface for managing a `netfilter` firewall in Linux distributions, particularly in Ubuntu. Its primary goal is to make managing a firewall easier for users who might find the complexity of directly configuring `iptables` daunting. UFW is the default firewall configuration tool.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ UFM is a user-friendly interface for managing a `netfilter` firewall in Linux di
 - Access to the serial console.
 - Ensure the `net-tools`, `iproute2`, and `netcat-openbsd` packages are installed.
 
-## How to check if a port is closed in the Ubuntu VM with UFM
+## How to check if a port is closed in the Ubuntu VM with UFW
 
 > [!NOTE]  
 > By default, UFW isn't enabled on Ubuntu VMs that are created by using images from the Azure Marketplace. Enabling UFW on your VM will close all ports, including port 22 for SSH services. 
