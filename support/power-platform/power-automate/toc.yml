@@ -198,6 +198,10 @@
       href: flow-run-issues/there-is-a-problem-with-the-flows-trigger.md
     - name: Troubleshoot slow running flows
       href: flow-run-issues/troubleshoot-slow-running-flows.md
+- name: Process Mining
+  items:
+    - name: '"The user has not been assigned any license" error when accessing a process'
+      href: process-mining/process-mining-license-error.md
 - name: Solutions
   items:
     - name: Can't import solutions or publish changes
@@ -212,7 +216,3 @@
       href: https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPACommunity
     - name: Power Automate Ideas forum
       href: https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f
-- name: Process Mining
-  items:
-    - name: Licensing errors when accessing Process Mining Process
-      href: process-mining/process-mining-license-error.md

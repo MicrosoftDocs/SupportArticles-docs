@@ -1,45 +1,51 @@
 ---
-title: License errors when accessing Process Mining Process
-description: Common Power Automate Process Mining license errors.
+title: Licensing error when accessing the process mining capability
+description: Provides resolutions for the user has not been assigned any license error that occurs when accessing a process in Power Automate.
 ms.reviewer: hamenon
-ms.date: 09/10/2024
-ms.custom: 
+ms.date: 09/12/2024
+ms.custom: sap:Process advisor\Process Mining
 ---
-# Licensing errors when accessing Process Mining Process
+# "The user has not been assigned any license" error when accessing a process in the process mining capability
 
-This article highlights common Licensing errors when accessing Process Mining Processes.  For more information about Process Mining in Power Automate, see [Overview of process mining](/power-automate/process-advisors-overview).
+This article resolves a licensing error that occurs when you access a process in the [process mining](/power-automate/process-mining-overview) capability in Power Automate.
 
 _Applies to:_ &nbsp; Power Automate Process Mining
 
+## Symptoms
 
-## License error when accessing a process which is shared with a user without a license
+When you access a process that is shared with a user without a license, the following error occurs:
 
-### Error loading users for this process
+> Error loading users for this process: the user (id=\<guid>) has not been assigned any License. Please contact your system administrator to assign license to this user for the action to succeed.
 
-> Error loading users for this process: the user (id=*guid*) has not been assigned any License. Please contact your system administrator to assign license to this user for the action to succeed. 
+## Cause
 
-This error occurs if the user that the process is shared with does not have an associated power automate license. In most cases this occurs when the user the process has been shared with has left the organization. 
+The error occurs because the user that the process is shared with doesn't have an associated Power Automate license. In most cases, this issue occurs when the user the process is shared with already left the organization.
 
-Use one of the following methods in order to address this issue:
+For more information about licensing and process mining capabilities offered with different licenses, see [Overview of process mining and task mining in Power Automate](/power-automate/process-advisor-overview#licensing).
 
-#### Solution 1: Delete the user from Dataverse
-Follow the documentation detailed here to remove the user from the environment: [Delete a user](https://learn.microsoft.com/power-apps/developer/data-platform/user-team-entities#delete-a-user)
+## Resolution 1: Delete the user from Dataverse
 
-#### Solution 2: Revoke sharing permissions from the user using a Power Automate flow
-Go to My flows in the Power automate portal and select "“+ New flows” at the top and choose“Instant cloud flow”.
+For more information, see [Delete a user](/power-apps/developer/data-platform/user-team-entities#delete-a-user).
 
-Then, add an action “Perform an unbound action”
+## Resolution 2: Revoke sharing permissions from the user using a Power Automate flow
 
-Enter: 
+1. In [Power Automate](https://make.powerautomate.com/), on the left pane, select **My flows**, select **+ New flows**, and then select **Instant cloud flow**.
 
-Action name: “Revoke Access”
+2. Add a **Perform an unbound action** action. Enter the following details:
 
-Target: “/msdyn_pminferredtasks(PROCESS-ID)”, with PROCESS-ID being the process id that needs to be revoked. This can be found in the url
+    **Action Name**: Revoke Access
 
-Revokee: 
-{
-  "systemuserid": "USER-ID",
-  "@{string('@odata.type')}": "#Microsoft.Dynamics.CRM.systemuser"
-}
+    **Target**: /msdyn_pminferredtasks(_\<PROCESS-ID>_).
 
-With USER-ID being the id of the user that needs to be revoked. This id would appear in the error message
+    The "PROCESS-ID" should be the process ID that needs to be revoked. The ID can be found in the url.
+
+    **Revoke**:
+
+    ```http
+    {
+      "systemuserid": "USER-ID",
+      "@{string('@odata.type')}": "#Microsoft.Dynamics.CRM.systemuser"
+    }
+    ```
+
+    The `USER-ID` should be the ID of the user that needs to be revoked. The ID can be found in the error message.
