@@ -3127,12 +3127,14 @@ items:
     items:
     - name: Scripts to compile all registered MOF files
       href: ./support-tools/scripts-compile-registered-mof-files.md
+    - name: Scripts to cleanup profile folder information and prevent TEMP user profiles from being created
+      href: ./support-tools/scripts-to-cleanup-profile-folder-information-and-prevent-temp-user-profiles-from-being-created.md
     - name: Scripts to extract .msu and .cab files
       href: ./support-tools/scripts-extract-msu-cab-files.md
     - name: Scripts to list all running WMI providers
       href: ./support-tools/scripts-list-running-wmi-providers.md
     - name: Scripts to retrieve profile age and optionally delete aged copies
-      href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
+      href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md    
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
