@@ -9,7 +9,7 @@ ms.date: 08/23/2024
 ms.service: azure-virtual-machines
 ---
 
-# Use UFM for troubleshooting connectivity in Azure Ubuntu VMs
+# Use UFM for troubleshooting connectivity issues in Azure Ubuntu VMs
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
@@ -26,9 +26,10 @@ UFM is a user-friendly interface for managing a `netfilter` firewall in Linux di
 ## How to check if a port is closed in the Ubuntu VM with UFM
 
 > [!NOTE]  
-> By default, UFW is not enabled on Ubuntu VMs that are created by using images from the Azure Marketplace. Enabling UFW on your virtual machine will close all ports, including port 22 for SSH services.
+> By default, UFW is not enabled on Ubuntu VMs that are created by using images from the Azure Marketplace. Enabling UFW on your virtual machine will close all ports, including port 22 for SSH services. 
+Make sure you can access the serial console from the VM before enabling UFW.
 
-1. Verify the UFW status.
+1. Verify the UFW status:
 
      ```bash
      sudo ufw status
@@ -39,24 +40,24 @@ UFM is a user-friendly interface for managing a `netfilter` firewall in Linux di
           
    - `Status: inactive` indicates UFW isn't active, and the port won't be blocked by UFW.
 
-2. List the current UFW rules.
+2. List the current UFW rules:
 
      ```bash
      sudo ufw status numbered
      ```
 
-     This command lists all the rules. It shows whether specific ports are allowed or denied. If a port doesn't appear in the list, it's closed by default.
+     This command lists all the rules. It shows whether specific ports are allowed or denied. If a port doesn't appear in the list, it's denied by default.
 
-3. Check the UFW rules to determine if a particular port is closed. For example, to verify if SSH port 22 is closed, use the following command:
+3. Check the UFW rules to determine if a particular port is denied. For example, to verify if SSH port 22 is denied, use the following command:
 
      ```bash
      sudo ufw status | grep '22'
      ```
 
-     - If the output displays `22/tcp ALLOW`, the port is open.
-     - If no output appears or the rule shows `22/tcp DENY`, the port is closed.
+     - If the output displays `22/tcp ALLOW`, the port is allowed through the firewall.
+     - If no output appears or the rule shows `22/tcp DENY`, the port is denied.
 
-4. Verify port connectivity using the `netstat` or `ss` command:
+4. Use the `netstat` or `ss` command to check if a port is in use:
 
      # [netstat](#tab/netstat)
 
@@ -70,25 +71,29 @@ UFM is a user-friendly interface for managing a `netfilter` firewall in Linux di
      sudo ss -tuln | grep ':22'
      ```
      ---
- 
-     No output indicates that the port is not in use or being listened by any service. If a firewall rule is in place to block the port, it may still appear closed.
 
-5. Test Port Connectivity using `nc`
+   ```output
+   tcp6   0   0 :::22     :::*   LISTEN   
+   ```
+ 
+   - The example output indicates that the port is being used or listening to by a service. However, this does not confirm that the port is allowed or unblocked by the firewall. Even if a port is blocked by the firewall, it may still appear as **LISTEN** in the output.
+   - No output indicates that the port is not being listened by any service.
+
+6. Test Port Connectivity using `nc`:
 
      ```bash
      sudo nc -zv <server-ip> 22
      ```
 
-     - If the connection fails but the service is running, it confirms that the port is closed.
+     - If the connection fails but the port is be listening, it confirms that the port is denied by the firewall.
 
-     - Successful connection means the port is open.
+     - Successful connection means the port is allowed.
 
-If the port you're checking doesn't appear in UFW's rules, or if it's marked as DENY, UFW is blocking the port. Additionally, if you can't connect to the port using external tools, the port is closed.
-
+If the port you're checking doesn't appear in UFW's rules, or if it's marked as `DENY`, UFW is blocking the port. Additionally, if you can't connect to the port using external tools, the port is blocked.
 
 ## Working with UFW
 
-#### Scenario 1: Allow SSH connectivity for everybody
+#### Scenario 1: Allow SSH connectivity for all IP addresses
 
 ```bash
 sudo ufw allow ssh
@@ -110,7 +115,7 @@ To                         Action      From
 22/tcp                     ALLOW       Anywhere                  
 ```
 
-#### Scenario 2: Allow SSH (Port 22) for a Specific IP Address:
+#### Scenario 2: Allow SSH (Port 22) for a specific IP address
 
 ```bash
 sudo ufw allow from 10.0.10.10 to any port 22 proto tcp
@@ -131,7 +136,7 @@ To                         Action      From
 ```
 
 
-#### Scenario 3: Allow the following subnet to reach port 22.
+#### Scenario 3: Allow a subnet to connect to the port 22
 
 
 ```bash
@@ -152,7 +157,7 @@ To                         Action      From
 22/tcp                     ALLOW       10.1.0.0/24 
 ```
 
-#### Scenario 4: Deny SSH for all other IPs
+#### Scenario 4: Deny SSH for all IP addresses
 
 ```bash
 sudo ufw deny ssh
@@ -177,7 +182,7 @@ To                         Action      From
 
 ## Deleting a Rule
 
-If your rules are out of order, you can delete a rule and then readd it to change the order:
+If your rules are not in the correct order, you can delete a rule and then readd it to change the order:
 
 To delete a rule, you can use its number from the `ufw status numbered` output. For example, if the rule you want to delete is rule number 3:
 
@@ -199,5 +204,5 @@ Status: active
 sudo ufw delete 3
 ```
 
-For more information about UFW, see: [Ubuntu - UFW community](https://help.ubuntu.com/community/UFW)
+For more information, see: [Ubuntu - UFW community](https://help.ubuntu.com/community/UFW)
 
