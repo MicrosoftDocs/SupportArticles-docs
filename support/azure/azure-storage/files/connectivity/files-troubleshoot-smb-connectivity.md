@@ -143,7 +143,7 @@ Revert the `LmCompatibilityLevel` value to the default value of 3 in the followi
 
 ### <a id="error-0x800704b3"></a> Failed with error code 0x800704b3
 
-When you try to mount an Azure file share, you recieve the following error:
+When you try to mount an Azure file share, you receive the following error:
 
 > Error code: 0x800704b3  
 > Symbolic Name: ERROR_NO_NET_OR_BAD_PATH  
@@ -274,11 +274,11 @@ If virtual network (VNET) and firewall rules are configured on the storage accou
 
 ##### Solution for cause 2
 
-Verify that the VNET and firewall rules are configured properly on the storage account and the port 445 is allowlisted. To test if virtual networks or firewall rules are causing the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
+Verify that the VNET and firewall rules are configured properly on the storage account and the port 445 is allowlisted. To test if virtual networks or firewall rules cause the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
 ##### Cause 3: SMB client is configured to use NTLMv1
 
-Azure Files only supports NTLMv2 and Kerberos for SMB file shares. Kernel 4.4 and later versions enable NTLMv2 by default and disable LANMAN. Under default configurations, NTLMv1 is kept as a negotiation only option. For more informaiotn, see your OS documentation.
+Azure Files only supports NTLMv2 and Kerberos for SMB file shares. Kernel 4.4 and later versions enable NTLMv2 by default and disable LANMAN. Under default configurations, NTLMv1 is kept as a negotiation only option. For more information, see your OS documentation.
 
 ##### Solution for cause 3
 
