@@ -1,11 +1,11 @@
 ---
 title: Can't access SMB file server
 description: Describes an issue in which you can't access SMB file server share by using the DNS CNAME. Provides a resolution.
-ms.date: 09/02/2024
+ms.date: 09/12/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: medium
+ms.localizationpriority: medium
 ms.reviewer: kaushika, waltere, nedpyle, nkechiharris
 ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
