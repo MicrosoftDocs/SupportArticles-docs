@@ -72,7 +72,7 @@ Make sure you can access the serial console from the VM before enabling UFW.
      ```output
      tcp6   0   0 :::22     :::*   LISTEN   
      ```
-   - The example output indicates that the port is being used or listened to by a service. However, this doesn't confirm that the port is allowed or unblocked by the firewall. Even if a port is blocked by the firewall, it may still appear as **LISTEN** in the output.
+   - The example output shows that a service is using or listening on the port 22. However, this doesn't confirm that the port is allowed or unblocked by the firewall. Even if a port is blocked by the firewall, it may still appear as **LISTEN** in the output.
    - No output indicates that the port isn't being listened by any service.
 
 6. Test Port Connectivity using `nc`:
