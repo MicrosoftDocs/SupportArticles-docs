@@ -70,10 +70,11 @@ Function ConvertToDate
     [datetime]::FromFileTime( $ft64 )
 }
 
-Function Get-ProfileLoadUnloadDate
+Function Get-ProfileLoadUnloadInfo
 {
     param(
-        [Parameter(Mandatory=$true, ValueFromPipeline=$true)][String] $Name
+        [Parameter(Mandatory=$true, ValueFromPipeline=$true)][String] $Name,
+        [int] $CleanUpDays
     )
 
     BEGIN {}
@@ -81,28 +82,32 @@ Function Get-ProfileLoadUnloadDate
     PROCESS{
         $SaveErrorActionPreference = $ErrorActionPreference
         $ErrorActionPreference = "SilentlyContinue"
+        $date0 = [datetime]::FromFileTime(0)
 
         $profilelistsidkey = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\$Name"
         $localprofileloadtimelow = 0
         $localprofileloadtimelow = Get-ItemPropertyValue -Path $profilelistsidkey -Name LocalProfileLoadTimeLow
         $localprofileloadtimehigh = 0
         $localprofileloadtimehigh = Get-ItemPropertyValue -Path $profilelistsidkey -Name LocalProfileLoadTimeHigh
+        $localprofileloadtime = ConvertToDate $localprofileloadtimelow $localprofileloadtimehigh
 
         $localprofileunloadtimelow = 0
         $localprofileunloadtimelow = Get-ItemPropertyValue -Path $profilelistsidkey -Name LocalProfileUnLoadTimeLow
         $localprofileunloadtimehigh = 0
         $localprofileunloadtimehigh = Get-ItemPropertyValue -Path $profilelistsidkey -Name LocalProfileUnLoadTimeHigh
+        $localprofileunloadtime = ConvertToDate $localprofileunloadtimelow $localprofileunloadtimehigh
 
         $localprofilecleanupchecktimelow = 0
         $localprofilecleanupchecktimelow = Get-ItemPropertyValue -Path $profilelistsidkey -Name LocalProfileCleanupCheckTimeLow
         $localprofilecleanupchecktimehigh = 0
         $localprofilecleanupchecktimehigh = Get-ItemPropertyValue -Path $profilelistsidkey -Name LocalProfileCleanupCheckTimeHigh
+        $localprofilecleanupchecktime = ConvertToDate $localprofilecleanupchecktimelow $localprofilecleanupchecktimehigh
 
         $profilepath = "-"
         $profilepath = Get-ItemPropertyValue -Path $profilelistsidkey -Name ProfileImagePath
         $manprofilepath = $profilepath + "\NTUSER.MAN"
         $datprofilepath = $profilepath + "\NTUSER.DAT"
-        $ntusermodified = [datetime]::FromFileTime(0)
+        $ntusermodified = $date0
         if( Test-Path $manprofilepath ){
             $ntusermodified = Get-ItemPropertyValue $manprofilepath -Name LastWriteTime
         }
@@ -112,21 +117,62 @@ Function Get-ProfileLoadUnloadDate
 
         $ErrorActionPreference = $SaveErrorActionPreference
 
+        $determinedfrom = "NtUserDate"
+        $basedate = $ntusermodified
+        switch( ($localprofileloadtime, $localprofileunloadtime, $localprofilecleanupchecktime | Measure-Object -Maximum).Maximum )
+        {
+            $date0 
+                {
+                    break
+                }
+            #$localprofileloadtime 
+            #{
+            #    $determinedfrom = "-" # shouldn't happen since would most likely indicate profile currently loaded or machine crashed
+            #    $basedate = $date0
+            #}
+            $localprofileunloadtime 
+                {
+                    $determinedfrom = "UnloadDate"
+                    $basedate = $localprofileunloadtime
+                }
+            $localprofilecleanupchecktime 
+                {
+                    $determinedfrom = "CleanupCheckDate"
+                    $basedate = $localprofilecleanupchecktime
+                }
+        }
+
+        $profileagedays = "?"
+        if( ($basedate -gt $date0) )
+        {
+            $profileagedays = [Math]::Truncate( (New-TimeSpan -Start $basedate -End (Get-Date)).TotalDays )
+        }
+
+        if( ($cleanupdays -gt 0) -and ($basedate -gt $date0) )
+        {
+            $cleanupdate = $basedate.AddDays($cleanupdays)
+        }
+        else 
+        {
+            $cleanupdate = $date0
+        }
+
         [PSCustomObject] @{
             Sid = $Name
             ProfilePath = $profilepath
-            LoadDate = ConvertToDate $localprofileloadtimelow $localprofileloadtimehigh
-            UnLoadDate = ConvertToDate $localprofileunloadtimelow $localprofileunloadtimehigh
-            CleanupCheckDate = ConvertToDate $localprofilecleanupchecktimelow $localprofilecleanupchecktimehigh
+            LoadDate = $localprofileloadtime
+            UnLoadDate = $localprofileunloadtime
+            CleanupCheckDate = $localprofilecleanupchecktime
             NTUserDate = $ntusermodified
+            DeterminedFrom = $determinedfrom
+            ProfileAgeDays = $profileagedays
+            CleanupDate = $cleanupdate
         }
     }
 
     END{}
 }
 
-# Get unloaded profiles' information on the machine
-$profinfo = (gwmi win32_userprofile -Filter "Loaded = 'False' and Special = 'False'").sid | Get-ProfileLoadUnloadDate
 
 $SaveErrorActionPreference = $ErrorActionPreference
 $ErrorActionPreference = "SilentlyContinue"
@@ -160,13 +206,13 @@ if( $cleanupvalue -eq 0)
 
 $ErrorActionPreference = $SaveErrorActionPreference
 
-$cleanupdays = New-TimeSpan -Days $cleanupvalue
+# Get unloaded profiles information on machine
+$profinfo = (gwmi win32_userprofile -Filter "Loaded = 'False' and Special = 'False'").sid | Get-ProfileLoadUnloadInfo -CleanUpDays $cleanupvalue | Sort-Object -Property @{E="CleanupDate"; Descending = $false}, @{E="ProfileAgeDays"; Descending = $true}
 
-$curdate = Get-Date
 $Date0 = [datetime]::FromFileTime(0)
 
-"Current Date........: $($curdate.ToString())"
-"Run As..............: $($env:USERDOMAIN)\$($env:USERNAME)"
+"Current Date........: $((Get-Date).ToString())"
+"Run By..............: $($env:USERDOMAIN)\$($env:USERNAME)"
 $OSInfo = Get-ComputerInfo CsName,OsName,WindowsVersion,OsVersion,OsLastBootUpTime,OsUptime
 "Machine Name........: " + $OSInfo.CsName
 "Operating System....: " + $OSInfo.OsName
@@ -187,27 +233,14 @@ $profoutput = $profinfo | Select-Object `
     @{L="UnLoadDate"; E={if( $_.UnLoadDate -gt $Date0 ){ $_.UnLoadDate } else {"-"}}}, `
     @{L="CleanupCheckDate"; E={if( $_.CleanupCheckDate -gt $Date0 ){ $_.CleanupCheckDate } else {"-"}}}, `
     @{L="NtUserDate"; E={if( $_.NtUserDate -gt $Date0 ) { $_.NtUserDate } else { "-" }}}, `
-    @{L="DeterminedFrom"; E={
-        if( $_.CleanupCheckDate -gt $Date0 ){ "CleanupCheckDate" } 
-        elseif( $_.UnLoadDate -gt $Date0 ){ "UnloadDate" } 
-        elseif( $_.NtUserDate -gt $Date0 ){ "NtUserDate" }  
-        else { "-" } }}, `
-    @{L="ProfileAgeDays"; E={ 
-        if( $_.CleanupCheckDate -gt $Date0 ){ [Math]::Truncate( ($curdate - $_.CleanupCheckDate).TotalDays ) } 
-        elseif( $_.UnLoadDate -gt $Date0 ){ [Math]::Truncate( ($curdate - $_.UnLoadDate).TotalDays ) } 
-        elseif( $_.NtUserDate -gt $Date0 ){ [Math]::Truncate( ($curdate - $_.NtUserDate).TotalDays ) } 
-        else { "-" } }}, `
-    @{L="CleanupDate"; E={ 
-        if( $cleanupdays -eq 0 ){ "-" }
-        elseif( $_.CleanupCheckDate -gt $Date0 ){ $_.CleanupCheckDate + $cleanupdays } 
-        elseif( $_.UnLoadDate -gt $Date0 ){ $_.UnloadDate + $cleanupdays } 
-        elseif( $_.NtUserDate -gt $Date0 ){ $_.NtUserDate + $cleanupdays } 
-        else { "-" } }} `
-    | Sort-Object -Property @{E="CleanupDate"; Descending = $false}, @{E="ProfileAgeDays"; Descending = $true}
+    DeterminedFrom, `
+    ProfileAgeDays, `
+    @{L="CleanupDate"; E={if( $_.CleanupDate -gt $Date0 ) { $_.CleanupDate } else { "-" }}}
+
 
 # Different output options
 #$profoutput | fl *
-$profoutput | ft *       # NOTE: may not give all columns depending on the window width.
+$profoutput | ft *       # NOTE: may not give all columns depending on window width.
 #$profoutput | Out-GridView
 #$profoutput | Export-Csv -Path ProfileAge.csv -NoTypeInformation
 ```
@@ -229,7 +262,7 @@ Profile Cleanup Days: 30
 Controlled by WMI...: False
 Profile count.......: 
 
-Sid                                          User            ProfilePath       LoadDate              UnLoadDate            CleanupCheckDate NtUserDate            DeterminedFrom ProfileAgeDays CleanupDate
----                                          ----            -----------       --------              ----------            ---------------- ----------            -------------- -------------- -----------
-S-1-5-21-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxx-xxx DOMAIN\username C:\Users\username 8/21/2024 10:23:52 AM 8/21/2024 11:23:52 AM        -         8/21/2024 10:23:52 AM UnLoadDate                  0 9/20/2024 11:23:52 AM  
+Sid                                              User               ProfilePath           LoadDate            UnLoadDate          CleanupCheckDate NtUserDate          DeterminedFrom ProfileAgeDays
+---                                              ----               -----------           --------            ----------          ---------------- ----------          -------------- -------------
+S-1-5-21-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxx-xxx     DOMAIN\username    C:\Users\username     11.07.2024 13:19:07 11.07.2024 13:20:11 -                11.07.2024 13:20:11 UnloadDate                61
 ```
