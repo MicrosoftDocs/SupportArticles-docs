@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot blocking issues caused by compile locks
 description: This article describes how to troubleshoot and resolve blocking issues caused by compile locks.
-ms.date: 09/10/2024
+ms.date: 09/12/2024
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ---
 # Troubleshoot blocking issues caused by compile locks
@@ -19,7 +19,7 @@ The following are some typical characteristics of compile blocking that can be o
 
 - `waittype` for the blocked and (usually) blocking session SPIDs is `LCK_M_X` (exclusive) and `waitresource` is of the form `OBJECT: dbid: object_id [[COMPILE]]`, where `object_id` is the object ID of the stored procedure.
 
-- Blockers have `waittype` NULL, status runnable. Blockers have `waittype` `LCK_M_X` (exclusive lock), status sleeping.
+- Blockers have `waittype` NULL, status runnable. Blocked sessions have `waittype` `LCK_M_X` (exclusive lock), status sleeping.
 
 - Although the overall duration of the blocking incident might be long, there's no single session (SPID) that is blocking the other SPIDs for a long time. There's rolling blocking; as soon as one compilation is complete, another SPID takes over the role of head blocker for several seconds or less, and so on.
 

@@ -2,7 +2,7 @@
 title: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs from 8.x to 8.10
 description: Provides steps to help you upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 8.x to 8.10.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 09/02/2024
+ms.date: 09/12/2024
 ms.topic: how-to
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
@@ -140,11 +140,11 @@ For more information about performing the upgrade process on custom, golden, and
     sudo reboot 
     ```
 
+## Next steps
+
+If your next target is to move to RHEL 9 for SAP environments, see [How to upgrade SAP-HANA and SAP-APPS PAYG virtual machines from RHEL 8.x to RHEL 9.x using leapp](leapp-upgrade-rhel-8dotx-to-9dotx-saphana-sapapps.md) for more details.
+
+
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-
-<!-- PLEASE DONT DELETE THE FOLLOWING LINES, IT WILL BE ADDED ONCE THE OTHER DOC IS READY
-> [!IMPORTANT]
-> If your next target is to move to RHEL 9 for SAP environments refer to: [NEW LINK WORKINPROGRESS]
--->
