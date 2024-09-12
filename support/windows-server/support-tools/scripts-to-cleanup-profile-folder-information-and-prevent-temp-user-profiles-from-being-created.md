@@ -5,7 +5,7 @@ ms.date: 09/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
+ms.localizationpriority: medium
 ms.reviewer: kaushika, gbrag, v-lianna
 ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
