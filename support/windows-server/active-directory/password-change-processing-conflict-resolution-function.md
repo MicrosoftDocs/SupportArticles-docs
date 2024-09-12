@@ -1,7 +1,7 @@
 ---
 title: Password change processing and conflict resolution functionality in Windows
 description: Describes a registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
-ms.date: 09/11/2024
+ms.date: 09/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -111,7 +111,7 @@ The user may experience temporary authentication failures until the updated cred
 ```
 
 > [!IMPORTANT]
-> Event ID 3036 with error code 8440 may be seen on PDCs running Windows Server 2022 or later versions when processing a password update notification from a BDC running Windows Server 2019 or earlier versions. Given this newer PDC and older BDC combination, Event ID 3036 with error code 8440 occurs on the PDC when the BDC sends a password update notification for a new user account which hasn't yet replicated to the PDC. To prevent this issue, upgrade the BDC to Windows Server 2022 or later versions.
+> Event ID 3036 with error code 8440 may be seen on PDCs running Windows Server 2022 or later when processing a password update notification from a BDC running Windows Server 2019 or earlier. Given this newer PDC and older BDC combination, Event ID 3036 with error code 8440 occurs on the PDC when the BDC sends a password update notification for a new user account that hasn't yet replicated to the PDC. To prevent this issue, upgrade the BDC to Windows Server 2022 or later.
 
 #### Event ID 3037
 
