@@ -198,3 +198,6 @@ sudo ufw delete 3
 
 For more information, see: [Ubuntu - UFW community](https://help.ubuntu.com/community/UFW)
 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
