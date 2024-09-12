@@ -109,15 +109,15 @@ To submit a support request, go to the [Azure support page](https://azure.micros
    az network nic ip-config update -g MyResourceGroup --nic-name MyNic -n MyIpConfig --private-ip-address 10.0.0.9 
    ```
 
+   You can also run the following command to reset the NIC:
+
+    ```azurecli-interactive
+    az vm repair reset-nic -g <resourceGroupName> -n <vmName> --subscription <subscriptionId> --yes
+    ```
+    
+    For more information, see [az vm repair reset-nic](/cli/azure/vm/repair#az-vm-repair-reset-nic).
+
 3. Try to SSH to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
-
-You can also run the following command to reset the NIC:
-
-```azurecli-interactive
-az vm repair reset-nic -g <resourceGroupName> -n <vmName> --subscription <subscriptionId> --yes
-```
-
-For more information, see [az vm repair reset-nic](/cli/azure/vm/repair?view=azure-cli-latest#az-vm-repair-reset-nic).
 
 ---
 
