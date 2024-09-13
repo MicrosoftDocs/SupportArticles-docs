@@ -13,13 +13,13 @@ _Applies to:_ &nbsp; Power Automate Process Mining
 
 ## Symptoms
 
-When you access a process that's shared with a user without a license, the following error occurs:
+When you access a process that is shared with a user without a license, the following error occurs:
 
 > Error loading users for this process: the user (id=\<GUID>) has not been assigned any License. Please contact your system administrator to assign license to this user for the action to succeed.
 
 ## Cause
 
-The error occurs because the user that the process is shared with doesn't have an associated Power Automate license. In most cases, this issue occurs when the user the process is shared with has left the organization.
+The error occurs because the user that the process is shared with doesn't have an associated Power Automate license. In most cases, this issue occurs when the user the process is shared with already left the organization.
 
 For more information about licensing and process mining capabilities offered with different licenses, see [Overview of process mining and task mining in Power Automate](/power-automate/process-advisor-overview#licensing).
 
