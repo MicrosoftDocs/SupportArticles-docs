@@ -74,7 +74,7 @@ The following screenshot shows an example of the command output.
 
 :::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-messagetrace.png" border="false" alt-text="Screenshot of the command output from the Get-MessageTraceDetail cmdlet." lightbox="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-messagetrace.png":::
 
-For this cause, the value of the **Detail** parameter is: `The message was successfully delivered to the folder: DefaultFolderType:LegacySchedule`.
+For this cause, the value of the **Detail** parameter for the deliver event is: `The message was successfully delivered to the folder: DefaultFolderType:LegacySchedule`.
 
 ### Cause 2
 
@@ -91,7 +91,7 @@ If you tested for Cause 1 in Exchange Online PowerShell and found that Cause 1 i
 
 1. In Outlook, select **File** > **Office account** > **About Outlook** to determine whether the desktop client is the [32-bit or 64-bit version](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
 
-2. Download and extract the latest version of MFCMAPI, either 32-bit or 64-bit to match the Outlook installation.
+2. Download and extract the latest version of [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases), either 32-bit or 64-bit to match the Outlook installation.
 
    > [!IMPORTANT]
    > Although the MFCMAPI editor is supported, be careful when you use it to edit mailbox settings. Using the MFCMAPI editor incorrectly can permanently damage a mailbox.
