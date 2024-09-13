@@ -70,7 +70,7 @@ To look for the second error, follow these steps:
 
 ## Solution
 
-To resolve this issue, create a Docker account and use the Docker account credentials to authenticate the image pulls. This can immediately increase the rate limit. However, we strongly recommend using the Artifact Cache feature within Azure Container Registry (ACR) in conjunction with your Docker subscription. This allows you to configure an authenticated cache rule for caching images from Docker Hub to your ACR. Moreover, Artifact Cache is the only way to radically increase the reliability of the connection to the images.
+To resolve this issue, create a Docker account and use the Docker account credentials to authenticate the image pulls. This can immediately increase the rate limit. However, we strongly recommend using the Artifact Cache feature within Azure Container Registry (ACR) in conjunction with your Docker subscription. This allows you to configure an authenticated cache rule for caching images from Docker Hub to your ACR. You can then modify your build and deployment scripts to pull those same images directly from ACR.
 
 > [!NOTE]
 > Docker offers a free subscription that allows customers to get 200 pulls every 6 hours. If 200 pulls aren't enough for you, we recommend purchasing a paid Docker subscription. A paid Docker Subscription gives you 5,000 pulls every 24 hours, which can be increased by reaching out to Docker Directly.
