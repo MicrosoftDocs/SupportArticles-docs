@@ -31,7 +31,7 @@ The following article also introduces how to view and change settings for a NIC,
 ## Reset the NIC using Azure portal, Azure PowerShell or Azure CLI
 
 > [!NOTE]
-> We recommend using the [az vm repair reset-nic](/cli/azure/vm/repair#az-vm-repair-reset-nic) command to reset the NIC. To run this command, see the [Azure CLI](#azure-cli) tab below.
+> We recommend using the [az vm repair reset-nic](/cli/azure/vm/repair#az-vm-repair-reset-nic) command to reset the NIC. To run this command, see the "Azure CLI" tab below.
 
 ### [Portal](#tab/azure-portal)
 
