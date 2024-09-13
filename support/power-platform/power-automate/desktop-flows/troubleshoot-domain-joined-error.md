@@ -2,7 +2,7 @@
 title: Connection Creation failing with "MissingOnPremSidForMachineDomainJoined"
 description: This article describes how to troubleshoot a failure related to connect with sign option.
 author: QuentinSele
-ms.author: 
+ms.author: QuentinSele
 ms.topic: troubleshooting 
 ms.date: 09/13/2024
 ---
