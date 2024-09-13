@@ -261,22 +261,22 @@ Check the log in `/var/log/messages`. The following logs indicate the fence-agen
 ```
 
 ### Resolution
-With the release of Python 3.11, SUSE has rebuilt the package as `fence-agents-azure-arm`.
-[Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent). To installl new package, follow these steps:
+With the release of Python 3.11, SUSE has rebuilt the Azure Fence Agent package as `fence-agents-azure-arm`. For more information, see [Azure Fence Agent "fence_azure_arm" failed to start after Python 3.11 interpreter was installed](https://www.suse.com/support/kb/doc/?id=000021504). To fix the issue, follow these steps to install the package:
  
 1. Put the cluster under maintenance-mode:
- ```bash
-    sudo crm configure property maintenance-mode=true
- ```
+	 ```bash
+	 sudo crm configure property maintenance-mode=true
+	 ```
 2. Install the following package in both the VMs:
-```bash
-   sudo zypper in fence-agents-azure-arm
-```
+	```bash
+	sudo zypper in fence-agents-azure-arm
+	```
 3. Remove the cluster out of maintenance-mode:
-```bash
-    sudo crm configure property maintenance-mode=false
-```
+	```bash
+	sudo crm configure property maintenance-mode=false
+	```
 4. Run `crm status` to check the cluster status to make sure that the fencing agent issue is resolved.
+
 
 ## Next Steps
 
