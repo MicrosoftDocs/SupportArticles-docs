@@ -114,8 +114,6 @@
           href: tax/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report.md
         - name: Setoff rule error when running a tax settlement
           href: tax/apac-ind-gst-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance.md
-        - name: Tips for troubleshooting India GST performance issues
-          href: tax/apac-ind-gst-troubleshooting-performance-issue.md
         - name: Troubleshoot issues with tax engine (GTE)
           href: tax/troubleshoot-tax-engine-gte-issues.md
         - name: The calculated tax amount is incorrect
