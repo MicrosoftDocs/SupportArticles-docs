@@ -2,7 +2,7 @@
 title: Connection Creation failing with "This computer has not-joined Microsoft Entra or the domain." or "MachineNotJoined"
 description: Run with connection using sign-in authentication requires to have a machine Microsoft Entra joined
 author: QuentinSele
-ms.author: 
+ms.author: QuentinSele
 ms.topic: troubleshooting 
 ms.date: 09/13/2024
 ---
