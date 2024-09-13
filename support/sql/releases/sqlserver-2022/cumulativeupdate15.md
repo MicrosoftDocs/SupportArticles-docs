@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 15 for SQL Server 2022 (KB5041321)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 15 (KB5041321).
-ms.date: 09/13/2024
+ms.date: 09/16/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5041321
 ms.reviewer: v-qianli2
 appliesto:
@@ -11,7 +11,7 @@ appliesto:
 
 # KB5041321 - Cumulative Update 15 for SQL Server 2022
 
-_Release Date:_ &nbsp; September 13, 2024  
+_Release Date:_ &nbsp; September 16, 2024  
 _Version:_ &nbsp; 16.0.4145.3
 
 ## Summary
