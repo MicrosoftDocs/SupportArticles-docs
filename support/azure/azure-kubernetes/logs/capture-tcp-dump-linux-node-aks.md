@@ -1,7 +1,7 @@
 ---
 title: Capture a TCP dump from a Linux node in an AKS cluster
 description: Understand how to capture a TCP dump from a Linux node within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 08/27/2024
+ms.date: 09/13/2024
 ms.topic: how-to
 ms.reviewer: erbookbi, amaljuna, v-leedennis
 ms.service: azure-kubernetes-service
