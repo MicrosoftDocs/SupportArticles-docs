@@ -4,8 +4,9 @@ description: Provides a solution for errors when you try to create or update an 
 ms.date: 09/13/2024
 ms.reviewer: chiragpa, albarqaw, v-weizhu
 ms.service: azure-container-instances
-ms.custom: sap: Create, Upgrade, Scale and Delete operations (cluster or nodepool)
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
+
 # Anonymous image pulls from Docker Hub to Azure Container Instances fail due to rate limits
 
 This article provides a solution for errors that occur during anonymous image pulls from Docker Hub when you try to create or update an Azure container instance.
