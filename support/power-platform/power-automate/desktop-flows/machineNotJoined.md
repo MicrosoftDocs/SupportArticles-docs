@@ -13,7 +13,7 @@ ms.date: 09/13/2024
 
 <!--- Recommended: Remove all the comments in this template before you sign-off or merge to main branch.--->
 
-# Connection Creation failing with "This computer has not-joined Microsoft Entra or the domain." or "MachineNotJoined"
+# Connection Creation failing with "This computer is not joined Microsoft Entra or the domain." or "MachineNotJoined"
 
 <!---Required: Include the word "troubleshoot" --->
 
@@ -24,8 +24,7 @@ ms.date: 09/13/2024
 
 ## Cause
 
-Your machine isn't properly joined to either Microsoft Entra or a Domain. 
-Power Automate requires this as a prerequiste to be able to use the "Connect with Sign-in" feature.
+Your machine isn't properly joined to either Microsoft Entra or a Domain which is a prerequisite to be able to use the "Connect with Sign-in" feature.
 <!---Optional: An issue might be able to be temporarily resolved with a quick fix. If known, list any workarounds that can be implemented quickly to resolve the issue. Link to information about  longer-term solutions in the Solution section.--->
 
 ## Resolution
