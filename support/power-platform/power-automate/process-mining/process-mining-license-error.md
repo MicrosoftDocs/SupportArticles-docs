@@ -2,7 +2,7 @@
 title: Licensing error when accessing the process mining capability
 description: Provides resolutions for the user has not been assigned any license error that occurs when accessing a process in Power Automate.
 ms.reviewer: hamenon
-ms.date: 09/12/2024
+ms.date: 09/13/2024
 ms.custom: sap:Process advisor\Process Mining
 ---
 # "The user has not been assigned any license" error when accessing a process in the process mining capability
@@ -13,13 +13,13 @@ _Applies to:_ &nbsp; Power Automate Process Mining
 
 ## Symptoms
 
-When you access a process that is shared with a user without a license, the following error occurs:
+When you access a process that's shared with a user without a license, the following error occurs:
 
-> Error loading users for this process: the user (id=\<guid>) has not been assigned any License. Please contact your system administrator to assign license to this user for the action to succeed.
+> Error loading users for this process: the user (id=\<GUID>) has not been assigned any License. Please contact your system administrator to assign license to this user for the action to succeed.
 
 ## Cause
 
-The error occurs because the user that the process is shared with doesn't have an associated Power Automate license. In most cases, this issue occurs when the user the process is shared with already left the organization.
+The error occurs because the user that the process is shared with doesn't have an associated Power Automate license. In most cases, this issue occurs when the user the process is shared with has left the organization.
 
 For more information about licensing and process mining capabilities offered with different licenses, see [Overview of process mining and task mining in Power Automate](/power-automate/process-advisor-overview#licensing).
 
@@ -29,15 +29,15 @@ For more information, see [Delete a user](/power-apps/developer/data-platform/us
 
 ## Resolution 2: Revoke sharing permissions from the user using a Power Automate flow
 
-1. In [Power Automate](https://make.powerautomate.com/), on the left pane, select **My flows**, select **+ New flows**, and then select **Instant cloud flow**.
+1. In [Power Automate](https://make.powerautomate.com/), on the left pane, select **My flows** > **+ New flows** > **Instant cloud flow**.
 
-2. Add a **Perform an unbound action** action. Enter the following details:
+2. Add a **Perform an unbound action**. Enter the following details:
 
-    **Action Name**: Revoke Access
+    **Action Name**: *Revoke Access*
 
-    **Target**: /msdyn_pminferredtasks(_\<PROCESS-ID>_).
+    **Target**: */msdyn_pminferredtasks(\<PROCESS-ID>)*.
 
-    The "PROCESS-ID" should be the process ID that needs to be revoked. The ID can be found in the url.
+    The `PROCESS-ID` should be the process ID that needs to be revoked. The ID can be found in the URL.
 
     **Revoke**:
 
