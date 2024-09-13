@@ -3,7 +3,7 @@ title: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs from 7.x to 7.9
 description: Provides steps to help you upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 7.x to 7.9.
 ms.reviewer: divargas, msaenzbo, v-weizhu
 ms.topic: how-to
-ms.date: 09/02/2024
+ms.date: 09/12/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -142,12 +142,15 @@ For more information about performing the upgrade process on custom, golden, or 
     sudo reboot
     ```
 
+## Next steps
+
+If your next target is to move to RHEL 8 for SAP environments, see [How to upgrade SAP-HANA and SAP-APPS PAYG virtual machines from RHEL 7.9 to RHEL 8.x using leapp](leapp-upgrade-rhel7dot9-to-8dotx-saphana-sapapps.md) for details.
+
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 
-<!-- PLEASE DONT DELETE THE FOLLOWING LINES, IT WILL BE ADDED ONCE THE OTHER DOC IS READY
-> [!IMPORTANT]
-> If your next target is to move to RHEL 8 for SAP environments, see [How to Perform a leapp upgrade from RHEL 7.9 to 8.X for SAP-HANA and SAPAPPS PAYG.](https://review.learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/pgrade-process-from-rhel79-to-8x-on-sap-hana-apps?branch=pr-en-us-7005&tabs=rhel8saphana)
--->
+
+
+
