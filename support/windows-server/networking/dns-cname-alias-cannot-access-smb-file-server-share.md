@@ -31,7 +31,11 @@ In this scenario, when you use the CNAME to access the SMB share by running one 
 - `New-PSDrive -Name "x" -PSProvider "FileSystem" -Root "\\CNAME\share_name" -Persist`
 - `New-PSDrive -Name "x" -PSProvider "FileSystem" -Root "\\CNAME.contoso.com\share_name" -Persist`
 
-And you might receive an error message that resembles the following example:
+And you might receive an error message that resembles one of the following examples:
+
+> \\\\CNAME.contoso.com\\share_name is not accessible. You might not have permission to use this network resource. Contact the administrator of this server to find out if you have access permissions.
+>
+> Account restriction is preventing this user from signing in. For example: blank passwords are not allowed, sign-in times are limited or a policy restriction has been enforced.
 
 > \\\\CNAME.contoso.com\\share_name is not accessible. You might not have permission to use this network resource. Contact the administrator of this server to find out if you have access permissions.
 >
