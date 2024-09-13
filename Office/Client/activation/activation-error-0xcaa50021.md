@@ -16,7 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 06/06/2024
+ms.date: 09/13/2024
 ---
 
 # Microsoft 365 Apps activation error 0xCAA50021
@@ -99,12 +99,12 @@ For manual troubleshooting for step 7, or for more information, see [Fix authent
 <details>
 <summary><b>Check if user device registration is enabled in Microsoft Entra ID</b></summary>
 
-1.	Sign in to the [Microsoft 365 Admin Center](https://admin.microsoft.com/) with a global administrator account.  
-1.	Select **Microsoft Entra ID** from the menu. If **Microsoft Entra ID** is not displayed in the menu, select **Show All**.  
-1.	Select **Microsoft Entra ID** in the menu of the Microsoft Entra admin center.  
-1.	Select **Device** > **Device Settings**.
-1.	Make sure **Users can join devices to Microsoft Entra ID** is set to **All**.  
-1.	Make sure **Users can register their devices with Microsoft Entra ID** is set to **All**.
+1.	Sign in to the [Microsoft 365 Admin Center](https://admin.microsoft.com/).  
+1.	Select **Identity** from the **Admin centers** section of the menu. If **Admin centers** isn't displayed in the menu, select **Show All**.  
+1.	Expand **Identity** in the menu of the Microsoft Entra admin center.  
+1.	Select **Device** > **All devices**, then select **Device settings** under the **Manage** section.
+1.	Make sure that **Users may join devices to Microsoft Entra ID** is set to **All**.  
+1.	Make sure that **Users may register their devices with Microsoft Entra ID** is set to **All**.
 <br/><br/>
 </details>
 
