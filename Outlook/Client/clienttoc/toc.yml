@@ -41,7 +41,7 @@
           href: ../calendaring/cannot-delete-calendar-items.md
         - name: Can't send a response to a meeting request
           href: ../calendaring/cannot-send-response-to-meeting-request.md
-        - name: Can't receive tentative meeting requests or responses
+        - name: Meeting requests or responses don't appear in the Inbox
           href: ../calendaring/cannot-receive-requests-of-tentative-meeting-or-responses.md
         - name: Can't add an Internet calendar
           href: ../calendaring/cannot-add-an-internet-calendar.md
