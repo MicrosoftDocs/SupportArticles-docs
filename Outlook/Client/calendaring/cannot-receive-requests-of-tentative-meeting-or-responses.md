@@ -103,11 +103,10 @@ If you tested for Cause 1 in Exchange Online PowerShell and found that Cause 1 i
 5. Select both of the following options to set MFCMAPI to online mode, and then select **OK**:
 
    - **Use the MDB_ONLINE flag when calling OpenMsgStore**
-
    - **Use the MAPI_NO_CACHE flag when calling OpenEntry**
 
    > [!IMPORTANT]
-   > Make sure that you complete this step.
+   > Make sure that you complete step 5.
 
 6. Select **Session** > **Logon** to open the **Choose Profile** window.
 
