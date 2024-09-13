@@ -41,8 +41,6 @@
           href: ../calendaring/cannot-delete-calendar-items.md
         - name: Can't send a response to a meeting request
           href: ../calendaring/cannot-send-response-to-meeting-request.md
-        - name: Can't receive tentative meeting requests or responses
-          href: ../calendaring/cannot-receive-requests-of-tentative-meeting-or-responses.md
         - name: Can't add an Internet calendar
           href: ../calendaring/cannot-add-an-internet-calendar.md
         - name: Configure rooms and workspaces for Room Finder
@@ -81,6 +79,8 @@
           href: ../calendaring/room-finder.md
         - name: Manager can't respond to a meeting invite
           href: ../calendaring/manager-cannot-respond-to-meeting-invite.md
+        - name: Meeting requests or responses don't appear in the Inbox
+          href: ../calendaring/cannot-receive-requests-of-tentative-meeting-or-responses.md
         - name: Meeting tracking tab isn't updated
           href: ../calendaring/meeting-tracking-tab-not-updated.md
         - name: More than 12 months of free/busy data not shown

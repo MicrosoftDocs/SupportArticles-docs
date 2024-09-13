@@ -1,6 +1,6 @@
 ---
-title: Cannot receive tentative meetings requests or responses
-description: Describes an issue in which a user doesn't receive meeting invitations in their inbox but the meetings appear in the user's calendar as Tentative.  Or, meeting responses from other users don't appear in the user's inbox.
+title: Meeting requests or responses don't appear in the Inbox
+description: Provides a resolution for an issue in which a user doesn't receive meeting requests or responses in the Outlook Inbox.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,93 +10,148 @@ ms.custom:
   - sap:Calendar\Other
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: shahmul, chrispol
+  - CI 193685
+ms.reviewer: mburuiana, meerak, v-shorestris
 appliesto: 
+  - Outlook for Microsoft 365
   - Outlook 2019
   - Outlook 2016
-  - Outlook 2013
-  - Microsoft Outlook 2010
-  - Microsoft Office Outlook 2007
   - Exchange Online
-  - Exchange Server 2016 Enterprise Edition
-  - Exchange Server 2016 Standard Edition
-  - Exchange Server 2013 Enterprise
-  - Exchange Server 2013 Standard Edition
-  - Exchange Server 2010 Enterprise
-  - Exchange Server 2010 Standard
-  - Outlook for Microsoft 365
+  - Exchange Server 2019
+  - Exchange Server 2016.
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 09/13/2024
 ---
-# Meetings are Tentative but not receiving requests or meeting responses from others don't show in inbox
+
+# Meeting requests or responses don't appear in the Inbox
 
 _Original KB number:_ &nbsp; 2966790
 
 ## Symptoms
 
-A user experiences one or both the following symptoms in Outlook:
+A user who doesn't have a mailbox delegate encounters one or both of the following issues in Microsoft Outlook:
 
-- The user doesn't receive meeting requests in their inbox. However, the meetings appear in the user's calendar as Tentative.
-- When the user creates a meeting request, the user doesn't see meeting responses from attendees. However, tracking information for the meeting is updated in the user's calendar.
+- When a meeting request is sent to the user, the meeting correctly appears as Tentative in the user's calendar, but Outlook doesn't route the request to the Inbox. For example, the request appears in the Deleted Items folder.
 
-In this scenario, the user does not have a delegate set up.
+- When an attendee responds to a meeting request that the user creates, the meeting tracking information in the user's calendar correctly reflects the response, but Outlook doesn't route the response to the Inbox. For example, the response appears in the Deleted Items folder.
 
 ## Cause
 
-This issue occurs if the meeting requests were processed incorrectly in the user's mailbox and they get delivered to the user's Deleted Items folder instead of the Inbox folder or the meeting requests were processed incorrectly as if a delegate was set up.
+The issues can occur for the following reasons.
 
-This can occur if the Receive folder for the `IPM.SCHEDULE.MEETING` message class was changed to the /Schedule folder or if the `PR_RULE_MSG_PROVIDER` property of messages that have as message class of `IPM.Rule.Version2.Message` is set to **Schedule+ EMS Interface**.
+### Cause 1
+
+The [MAPI Receive folder](/office/client-developer/outlook/mapi/mapi-receive-folders) that holds inbound messages for the **IPM.SCHEDULE.MEETING** message class isn't set to the Inbox folder. Instead, meeting items appear in the Deleted Items folder.
+
+You can use [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to test for this cause. Use either of the following methods.
+
+> [!NOTE]
+> Both methods provide useful information. For example, method A shows how many meeting items were misdirected to the Deleted Items folder, and method B confirms which folder a specific item was delivered to.
+
+#### Method A
+
+Run the following [Get-MailboxFolderStatistics](/powershell/module/exchange/get-mailboxfolderstatistics) PowerShell cmdlet:
+
+```PowerShell
+Get-MailboxFolderStatistics -Identity <user ID> -FolderScope NonIpmRoot -IncludeOldestAndNewestItems | ? Name -eq "Schedule" | FL Name,FolderType,NewestItemReceivedDate,ItemsInFolder
+```
+
+The following screenshot shows an example of the cmdlet output.
+
+:::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-mailboxfolderstatistics.png" border="false" alt-text="Screenshot of the command output from the Get-MailboxFolderStatistics cmdlet." lightbox="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-mailboxfolderstatistics.png":::
+
+For this cause, the **ItemsInFolder** count value is nonzero and the **NewestItemReceivedDate** timestamp value matches the date and time of the most recent misdelivered meeting item.
+
+#### Method B
+
+Run the following [Get-MessageTrace](/powershell/module/exchange/get-messagetrace) and [Get-MessageTraceDetail](/powershell/module/exchange/get-messagetracedetail) PowerShell cmdlets: 
+
+```PowerShell
+Get-MessageTrace -StartDate <search start date> -EndDate <search end date> | ? Subject -match <item subject> | Get-MessageTraceDetail
+```
+
+The following screenshot shows an example of the command output.
+
+:::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-messagetrace.png" border="false" alt-text="Screenshot of the command output from the Get-MessageTraceDetail cmdlet." lightbox="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-messagetrace.png":::
+
+For this cause, the value of the **Detail** parameter for the deliver event is: `The message was successfully delivered to the folder: DefaultFolderType:LegacySchedule`.
+
+### Cause 2
+
+For messages that have an **IPM.Rule.Version2.Message** message class, the value of the **PR_RULE_MSG_PROVIDER** property is incorrectly set to `Schedule+ EMS Interface`.
 
 ## Resolution
 
-To resolve this issue, start by following the steps in resolution 1. Depending on the scenario, you may have to use the steps in resolution 2. You will not know which solution applies to the user until you start troubleshooting by using the steps in resolution 1.
+If you tested for Cause 1 in Exchange Online PowerShell and found that Cause 1 isn't applicable, start at [Resolution for Cause 2](#resolution-for-cause-2). Otherwise, start at [Resolution for Cause 1](#resolution-for-cause-1).
+
+### Resolution for Cause 1
 
 > [!NOTE]
-> The exact steps will vary based on the version of the MFCMAPI tool that you're using. Use caution when you modify mailboxes by using MFCMAPI. Using this tool incorrectly can cause permanent damage to a mailbox.
+> To use the following procedure, you must be the user or have full access permissions to the user's mailbox. Run the procedure on a Microsoft Windows-based computer that has the Outlook desktop client installed and an Outlook profile for the mailbox. 
 
-### Resolution 1
+1. In Outlook, select **File** > **Office account** > **About Outlook** to determine whether the desktop client is the [32-bit or 64-bit version](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
 
-1. Download [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
-2. Start MFCMAPI.
-3. On the **Session** menu, select **Logon**.
-4. Select the user's online mode Outlook profile, and then select **OK**.
+2. Download and extract the latest version of [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases), either 32-bit or 64-bit to match the Outlook installation.
 
-    > [!NOTE]
-    > If the user doesn't have an online mode profile, create a profile. Or, on the **Tools** menu, select **Options**, and then make sure that both the **Use the MBD_ONLINE flag when calling OpenMsgStore** check box and the **Use the MAPI_NO_CACHE flag when calling OpenEntry** check box are selected.
+   > [!IMPORTANT]
+   > Although the MFCMAPI editor is supported, be careful when you use it to edit mailbox settings. Using the MFCMAPI editor incorrectly can permanently damage a mailbox.
 
-5. In the list, double-click the user's primary mailbox.
-6. In the new window that appears, on the **MDB** menu, point to **Display**, and then select **Receive folder table**.
-7. In the window, look for IPM.SCHEDULE.MEETING. Then, do one of the following:
-   - If IPM.SCHEDULE.MEETING is not present, go to resolution 2.
-   - If IPM.SCHEDULE.MEETING is present, go to step 8 of this procedure.
-8. Expand the **Root** container.
-9. Right-click **Schedule**, select **Advanced**, and then select **Set Receive Folder**.
-10. Enter *IPM.SCHEDULE.MEETING* in the box.
-11. Select **Delete Association**, and then select **OK**.
-12. Repeat step 6 and 7 to make sure that the IPM.SCHEDULE.MEETING association is removed from the list.
-13. Test to see whether the user can receive meeting responses and meeting requests in their inbox.
+3. Close Outlook and then run MFCMapi.exe. If the MFCMAPI startup screen appears, close it. 
 
-### Resolution 2
+4. Select **Tools** > **Options** to open the **Options** window.
 
-1. Download [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/).
-2. Start MFCMAPI.
-3. On the **Session** menu, select **Logon**.
-4. Select the user's online mode Outlook profile, and then select **OK**.
+5. Select both of the following options to set MFCMAPI to online mode, and then select **OK**:
 
-    > [!NOTE]
-    > If the user doesn't have an online mode profile, create a profile. Or, on the **Tools** menu, select **Options**, and then make sure that both the **Use the MBD_ONLINE flag when calling OpenMsgStore** check box and the **Use the MAPI_NO_CACHE flag when calling OpenEntry** check box are selected.
+   - **Use the MDB_ONLINE flag when calling OpenMsgStore**
+   - **Use the MAPI_NO_CACHE flag when calling OpenEntry**
 
-5. In the list, double-click the user's primary mailbox.
-6. Expand the **Root** container, and then expand **Top of Information Store**.
-7. Right-click **Inbox**, and then select **Open Associated Contents Table**.
-8. In the upper part of the window, scroll to locate the **Message Class** column.
-9. Select **Message Class** to sort the Message Class column.
-10. Look for all messages that have a message class of `IPM.Rule.Version2.Message`.
-11. Select each message that has a message class of `IPM.Rule.Version2.Message`, and then in the lower part of the window, look for a property that's called `PR_RULE_MSG_PROVIDER`.
-12. Check whether the `PR_RULE_MSG_PROVIDER` property has a value of **Schedule+ EMS Interface**.
-13. In the upper part of the window, delete messages whose `PR_RULE_MSG_PROVIDER` property has a value of **Schedule+ EMS Interface**.
-14. Test to see whether the user can receive meeting responses and meeting requests in their inbox.
+   > [!IMPORTANT]
+   > Make sure that you complete step 5.
 
-## More information
+6. Select **Session** > **Logon** to open the **Choose Profile** window.
 
-For more information about Receive folders, see [MAPI Receive Folders](/office/client-developer/outlook/mapi/mapi-receive-folders).
+7. Select the Outlook profile for the affected user, and then select **OK**.
+
+8. Double-click the applicable mailbox in the **Display Name** column to open it.
+
+9. In the new window that appears, select **MDB** > **Display** > **Receive folder table**.
+
+10. In the **Receive Folder Table** window, verify that the **Message Class** column has an **IPM.SCHEDULE.MEETING** entry. The following example screenshot shows that entry.
+
+    :::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/receive-folder-table.png" border="true" alt-text="Screenshot of the IPM.SCHEDULE.MEETING entry in the Receive Folder Table window.":::
+
+    If the **Receive Folder Table** window doesn't contain an **IPM.SCHEDULE.MEETING** entry, double-check that you completed step 5 (sets MFCMAPI to online mode). If you did complete step 5, skip the remaining steps and instead try [Resolution for Cause 2](#resolution-for-cause-2) if you haven't already done so.
+
+11. Expand the **Root** container.
+
+12. Right-click **Schedule**, and then select **Advanced** > **Set receive folder** to open the **SetReceiveFolder** window.
+
+13. Enter _IPM.SCHEDULE.MEETING_ in the **Class** field, select **Delete association**, and then select **OK**.
+
+14. Refresh the **Receive Folder Table** window, and then verify that the **IPM.SCHEDULE.MEETING** entry no longer exists.
+
+15. Check whether the issue is resolved for the user. If the issue persists, try [Resolution for Cause 2](#resolution-for-cause-2) if you haven't already done so.
+
+### Resolution for Cause 2
+
+1. Complete steps 1-8 in [Resolution for Cause 1](#resolution-for-cause-1) to initialize MFCMAPI.
+
+2. Expand the **Root** container, and then expand **Top of Information Store**.
+
+3. Right-click **Inbox**, and then select **Open associated contents table**.
+
+4. In the upper pane, select the **Message Class** column header to sort the column.
+
+5. For each message in the **Message Class** column that has a value of `IPM.Rule.Version2.Message`:
+
+   1. Select the message.
+
+   2. In the lower pane, check the value of the **PR_RULE_MSG_PROVIDER** property.
+
+   3. If the **PR_RULE_MSG_PROVIDER** property value is `Schedule+ EMS Interface`, delete the message in the upper pane.
+
+   The following example screenshot shows how to delete a message that has a message class of `IPM.Rule.Version2.Message` and a **PR_RULE_MSG_PROVIDER** property value of `Schedule+ EMS Interface`.
+
+   :::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/mfcmapi-messageclass.png" border="true" alt-text="Screenshot of the Inbox associated contents table that shows a message of message class 'IPM.Rule.Version2.Message' and a PR_RULE_MSG_PROVIDER property value of 'Schedule+ EMS Interface'.":::
+
+6. Check whether the issue is resolved for the user. If the issue persists, try [Resolution for Cause 1](#resolution-for-cause-1) if you haven't already done so.
