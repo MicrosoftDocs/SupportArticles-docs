@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 09/11/2024
+ms.date: 09/13/2024
 ms.author: genli
 ---
 # How to reset network interface for Azure Windows VM
@@ -29,6 +29,9 @@ The following article also introduces how to view and change settings for a NIC,
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
 ## Reset the NIC using Azure portal, Azure PowerShell or Azure CLI
+
+> [!NOTE]
+> We recommend running the [az vm repair reset-nic](/cli/azure/vm/repair#az-vm-repair-reset-nic) command with the Azure CLI.
 
 ### [Portal](#tab/azure-portal)
 
@@ -86,11 +89,16 @@ The following article also introduces how to view and change settings for a NIC,
 
 ### [Azure CLI](#tab/azure-cli)
 
-1. Make sure that you have installed the latest [Azure command-line interface (CLI)](/cli/azure/install-azure-cli).
+1. Launch [Azure Cloud Shell](/azure/cloud-shell/overview) from the top navigation of the Azure portal. 
+2. Run the following commands:
 
-2. Open [Azure Cloud Shell](/azure/cloud-shell/overview) or preferred shell. Run the following commands:
+   ```azurecli-interactive
+   az vm repair reset-nic -g MyResourceGroup -n vmName --subscription subscriptionId --yes
+   ```
 
-   ```azurecli
+    Or 
+   
+   ```azurecli-interactive
    #Log in to the subscription  
 
    az login 

@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.custom: sap:Cannot connect to my VM, devx-track-azurecli, linux-related-content
 ms.workload: infrastructure-services
-ms.date: 09/12/2024
+ms.date: 09/13/2024
 ms.author: tibasham
 ---
 # Reset the network interface for Azure Linux VM
@@ -32,6 +32,9 @@ If your Azure issue isn't addressed in this article, visit the Azure forums on [
 To submit a support request, go to the [Azure support page](https://azure.microsoft.com/support/options/) and select **Get support**.
 
 ## Reset the NIC using Azure portal, Azure PowerShell or Azure CLI
+
+> [!NOTE]
+> We recommend running the [az vm repair reset-nic](/cli/azure/vm/repair#az-vm-repair-reset-nic) command with the Azure CLI. 
 
 ### [Portal](#tab/azure-portal)
 
@@ -89,10 +92,15 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 
 ### [Azure CLI](#tab/azure-cli)
 
-1. Make sure that you have installed the latest [Azure command-line interface (CLI)](/cli/azure/install-azure-cli).
+1. Launch [Azure Cloud Shell](/azure/cloud-shell/overview) from the top navigation of the Azure portal. 
+2. Run the following commands:
 
-2. Open [Azure Cloud Shell](/azure/cloud-shell/overview) or preferred shell. Run the following commands:
+    ```azurecli-interactive
+    az vm repair reset-nic -g MyResourceGroup -n vmName --subscription subscriptionId --yes
+    ```
 
+    Or 
+   
    ```azurecli-interactive
    #Log in to the subscription  
 
@@ -108,14 +116,6 @@ To submit a support request, go to the [Azure support page](https://azure.micros
    
    az network nic ip-config update -g MyResourceGroup --nic-name MyNic -n MyIpConfig --private-ip-address 10.0.0.9 
    ```
-
-   You can also run the following command to reset the NIC:
-
-    ```azurecli-interactive
-    az vm repair reset-nic -g <resourceGroupName> -n <vmName> --subscription <subscriptionId> --yes
-    ```
-    
-    For more information, see [az vm repair reset-nic](/cli/azure/vm/repair#az-vm-repair-reset-nic).
 
 3. Try to SSH to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
