@@ -58,7 +58,7 @@ Get-MailboxFolderStatistics -Identity <user ID> -FolderScope NonIpmRoot -Include
 
 The following screenshot shows an example of the cmdlet output.
 
-:::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-mailboxfolderstatistics.png" border="true" alt-text="Screenshot of the command output from the Get-MailboxFolderStatistics cmdlet." lightbox="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-mailboxfolderstatistics.png":::
+:::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-mailboxfolderstatistics.png" border="false" alt-text="Screenshot of the command output from the Get-MailboxFolderStatistics cmdlet." lightbox="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-mailboxfolderstatistics.png":::
 
 For this cause, the **ItemsInFolder** count value is nonzero and the **NewestItemReceivedDate** timestamp value matches the date and time of the most recent misdelivered meeting item.
 
@@ -72,13 +72,13 @@ Get-MessageTrace -StartDate <search start date> -EndDate <search end date> | ? S
 
 The following screenshot shows an example of the command output.
 
-:::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-messagetrace.png" border="true" alt-text="Screenshot of the command output from the Get-MessageTraceDetail cmdlet." lightbox="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-messagetrace.png":::
+:::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-messagetrace.png" border="false" alt-text="Screenshot of the command output from the Get-MessageTraceDetail cmdlet." lightbox="media/cannot-receive-requests-of-tentative-meeting-or-responses/get-messagetrace.png":::
 
 For this cause, the value of the **Detail** parameter is: `The message was successfully delivered to the folder: DefaultFolderType:LegacySchedule`.
 
 ### Cause 2
 
-For messages that have an **IPM.Rule.Version2.Message** message class, the value of the **PR_RULE_MSG_PROVIDER** property is incorrectly set to `Schedule+ EMS Interface**`**.
+For messages that have an **IPM.Rule.Version2.Message** message class, the value of the **PR_RULE_MSG_PROVIDER** property is incorrectly set to `Schedule+ EMS Interface`.
 
 ## Resolution
 
@@ -119,9 +119,9 @@ If you tested for Cause 1 in Exchange Online PowerShell and found that Cause 1 i
 
 10. In the **Receive Folder Table** window, verify that the **Message Class** column has an **IPM.SCHEDULE.MEETING** entry. The following example screenshot shows that entry.
 
-   :::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/receive-folder-table.png" border="true" alt-text="Screenshot of the IPM.SCHEDULE.MEETING entry in the Receive Folder Table window." lightbox="media/cannot-receive-requests-of-tentative-meeting-or-responses/receive-folder-table.png":::
+    :::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/receive-folder-table.png" border="true" alt-text="Screenshot of the IPM.SCHEDULE.MEETING entry in the Receive Folder Table window.":::
 
-   If the **Receive Folder Table** window doesn't contain an **IPM.SCHEDULE.MEETING** entry, double-check that you completed step 5 (sets MFCMAPI to online mode). If you did complete step 5, skip the remaining steps and instead try [Resolution for Cause 2](#resolution-for-cause-2) if you haven't already done so.
+    If the **Receive Folder Table** window doesn't contain an **IPM.SCHEDULE.MEETING** entry, double-check that you completed step 5 (sets MFCMAPI to online mode). If you did complete step 5, skip the remaining steps and instead try [Resolution for Cause 2](#resolution-for-cause-2) if you haven't already done so.
 
 11. Expand the **Root** container.
 
@@ -129,7 +129,7 @@ If you tested for Cause 1 in Exchange Online PowerShell and found that Cause 1 i
 
 13. Enter _IPM.SCHEDULE.MEETING_ in the **Class** field, select **Delete association**, and then select **OK**.
 
-14. Refresh the **Receive Folder Table** window, and then verify that the IPM.SCHEDULE.MEETING entry no longer exists.
+14. Refresh the **Receive Folder Table** window, and then verify that the **IPM.SCHEDULE.MEETING** entry no longer exists.
 
 15. Check whether the issue is resolved for the user. If the issue persists, try [Resolution for Cause 2](#resolution-for-cause-2) if you haven't already done so.
 
@@ -149,10 +149,10 @@ If you tested for Cause 1 in Exchange Online PowerShell and found that Cause 1 i
 
    2. In the lower pane, check the value of the **PR_RULE_MSG_PROVIDER** property.
 
-   3. If the **PR_RULE_MSG_PROVIDER** property value is `Schedule+ EMS Interface**`**, delete the message in the upper pane.
+   3. If the **PR_RULE_MSG_PROVIDER** property value is `Schedule+ EMS Interface`, delete the message in the upper pane.
 
-   The following example screenshot shows how to delete a message that has a message class of `IPM.Rule.Version2.Message` and a **PR_RULE_MSG_PROVIDER** property value of `Schedule+ EMS Interface**`**.
+   The following example screenshot shows how to delete a message that has a message class of `IPM.Rule.Version2.Message` and a **PR_RULE_MSG_PROVIDER** property value of `Schedule+ EMS Interface`.
 
-   :::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/mfcmapi-messageclass.png" border="true" alt-text="Screenshot of the Inbox associated contents table that shows a message of message class 'IPM.Rule.Version2.Message' and a PR_RULE_MSG_PROVIDER property value of 'Schedule+ EMS Interface'." lightbox="media/cannot-receive-requests-of-tentative-meeting-or-responses/mfcmapi-messageclass.png":::
+   :::image type="content" source="media/cannot-receive-requests-of-tentative-meeting-or-responses/mfcmapi-messageclass.png" border="true" alt-text="Screenshot of the Inbox associated contents table that shows a message of message class 'IPM.Rule.Version2.Message' and a PR_RULE_MSG_PROVIDER property value of 'Schedule+ EMS Interface'.":::
 
 6. Check whether the issue is resolved for the user. If the issue persists, try [Resolution for Cause 1](#resolution-for-cause-1) if you haven't already done so.
