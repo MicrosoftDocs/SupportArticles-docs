@@ -1,25 +1,25 @@
 ---
-title: Perform leapp upgrade for RHEL PAYG virtual machines
+title: Upgrade RHEL PAYG virtual machines using Leapp
 description: Provides steps to upgrade virtual machines that use RHEL pay-as-you-go images from RHEL 7 to RHEL 8 or RHEL 8 to RHEL 9.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 09/09/2024
+ms.date: 09/14/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.topic: how-to
 ---
-# How to perform leapp upgrade for RHEL PAYG virtual machines
+# How to perform an upgrade for RHEL PAYG virtual machines using Leapp
 
 > [!CAUTION]
 > Following the process in this article will cause a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure features such as [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [automatic operating system (OS) image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [hotpatching](/windows-server/get-started/hotpatch#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, we recommend creating a new VM using your preferred OS instead of performing an in-place upgrade.
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the leapp utility to upgrade Linux virtual machines (VMs) that use RHEL pay-as-you-go (PAYG) images from RHEL 7 to RHEL 8 or RHEL 8 to RHEL 9.
+Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the Leapp utility to upgrade Linux virtual machines (VMs) that use RHEL pay-as-you-go (PAYG) images from RHEL 7 to RHEL 8 or RHEL 8 to RHEL 9.
 
 > [!IMPORTANT]
 > Red Hat Update Infrastructure (RHUI) is intended only for PAYG images. If you use custom or golden images (also known as bring-your-own-subscription (BYOS)), you must attach the system to Red Hat Subscription Manager (RHSM) or Satellite to receive updates. For more information, see [How to register and subscribe a RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
-For more information about performing a leapp upgrade on custom, golden, or PAYG images provided by Red Hat, see the following articles:
+For more information about performing a Leapp upgrade on custom, golden, or PAYG images provided by Red Hat, see the following articles:
 
 - [Upgrading from RHEL 7 to RHEL 8](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index)
 
@@ -28,13 +28,13 @@ For more information about performing a leapp upgrade on custom, golden, or PAYG
 ## Prerequisites
 
 - Make a backup of the Linux VM or a snapshot of the OS disk.
-- Clear enough space in */var/lib/leapp* to accommodate the upgrade. A best practice is to have at least 2-5 GB of free space.
+- Clear enough space in `/var/lib/leapp` to accommodate the upgrade. A best practice is to have at least 2-5 GB of free space.
 - Set up access to the Serial Console.
 - Run the commands in this article with root privileges.
 
-## Prepare the VM for the leapp pre-upgrade and upgrade process
+## Prepare the VM for the Leapp pre-upgrade and upgrade process
 
-This section outlines the necessary steps before performing an in-place upgrade to RHEL 8 or RHEL 9 using the leapp utility.
+This section outlines the necessary steps before performing an in-place upgrade to RHEL 8 or RHEL 9 using the Leapp utility.
 
 ### [RHEL 7.9 to RHEL 8.*x*](#tab/rhel7-rhel8)
 
@@ -63,7 +63,7 @@ You can perform an in-place upgrade from RHEL 7 to the following RHEL 8 minor ve
     sudo yum -y install leapp-rhui-azure
     ```
 
-3. Install the leapp utility:
+3. Install the Leapp utility:
 
     ```bash
     sudo yum install leapp-upgrade
@@ -112,7 +112,7 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
     sudo dnf config-manager --set-enabled rhui-microsoft-azure-rhel8
     sudo dnf -y install rhui-azure-rhel8 leapp-rhui-azure
     ```
-3. Install the leapp utility:
+3. Install the Leapp utility:
 
     ```bash
     sudo dnf install leapp-upgrade
@@ -137,7 +137,7 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
 
 ## Leapp pre-upgrade process
 
-The leapp pre-upgrade report highlights possible issues, provides recommended solutions, and helps determine whether it's feasible or advisable to proceed with the upgrade.
+The Leapp pre-upgrade report highlights possible issues, provides recommended solutions, and helps determine whether it's feasible or advisable to proceed with the upgrade.
 
 ### [RHEL 7.9 to RHEL 8.*x*](#tab/rhel7-rhel8)
 
@@ -161,11 +161,11 @@ Replace `<target_os_version>` with the target OS version, for example, `9.4`.
 
 ---
 
-Check the report located in the */var/log/leapp/leapp-report.txt* file and resolve any identified issues manually. Some problems come with recommended fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information about the various issues that might appear in the report, see [Troubleshooting Red Hat OS upgrade issues](troubleshoot-red-hat-os-upgrade-issues.md).
+Check the report located in the `/var/log/leapp/leapp-report.txt` file and resolve any identified issues manually. Some problems come with recommended fixes. Inhibitor issues must be resolved before you can proceed with the upgrade. For detailed information about the various issues that might appear in the report, see [Troubleshooting Red Hat OS upgrade issues](troubleshoot-red-hat-os-upgrade-issues.md).
 
 ## Leapp upgrade process
 
-Continue the leapp upgrade process after the leapp pre-upgrade report shows no errors or inhibitors and everything is marked as resolved. The output is typically green or yellow, indicating that it's safe to proceed with the leapp upgrade.
+Continue the Leapp upgrade process after the Leapp pre-upgrade report shows no errors or inhibitors and everything is marked as resolved. The output is typically green or yellow, indicating that it's safe to proceed with the Leapp upgrade.
 
 > [!IMPORTANT]  
 > Make sure to run the `leapp upgrade` command through the Serial Console to avoid any network interruptions that could affect your secure shell (SSH) terminal and disrupt the upgrade process.
@@ -224,7 +224,7 @@ Continue the leapp upgrade process after the leapp pre-upgrade report shows no e
 
 Once the upgrade is finished, check if the system is in the desired state.
 
-## Verify the leapp upgrade process
+## Verify the Leapp upgrade process
 
 This section outlines the recommended verification steps after completing an in-place upgrade.
 
@@ -276,13 +276,13 @@ Once the VM is successfully upgraded, perform the following tasks:
 
 ### [RHEL 7.9 to RHEL 8.*x*](#tab/rhel7-rhel8)
 
-1. Delete all remaining leapp packages, including the *`snactor`* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These leapp packages are installed during the in-place upgrade.
+1. Delete all remaining Leapp packages, including the *`snactor`* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These Leapp packages are installed during the in-place upgrade.
 
     ```bash
     sudo dnf config-manager --save --setopt exclude=''
     ```
 
-2. Remove all remaining RHEL 7 packages, including any remaining leapp packages.
+2. Remove all remaining RHEL 7 packages, including any remaining Leapp packages.
 
    1. Locate remaining RHEL 7 packages:
 
@@ -334,7 +334,7 @@ Once the VM is successfully upgraded, perform the following tasks:
        sudo yum remove kernel-workaround $(rpm -qa | grep \.el7 | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
        ```
 
-   1. Remove remaining leapp dependency packages:
+   1. Remove remaining Leapp dependency packages:
 
        ```bash
        sudo yum remove leapp-deps-el8 leapp-repository-deps-el8 leapp-rhui-azure
@@ -357,13 +357,13 @@ Once the VM is successfully upgraded, perform the following tasks:
 
 ### [RHEL 8.*x* to RHEL 9.*x*](#tab/rhel8-rhel9)
 
-1. Delete all remaining leapp packages, including the *`snactor`* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These leapp packages are installed during the in-place upgrade.
+1. Delete all remaining Leapp packages, including the *`snactor`* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These Leapp packages are installed during the in-place upgrade.
 
     ```bash
     sudo dnf config-manager --save --setopt exclude=''
     ```
 
-2. Remove all remaining RHEL 8 packages, including any remaining leapp packages.
+2. Remove all remaining RHEL 8 packages, including any remaining Leapp packages.
 
    1. Locate remaining RHEL 8 packages.
 
@@ -377,7 +377,7 @@ Once the VM is successfully upgraded, perform the following tasks:
        sudo dnf remove $(rpm -qa | grep \.el[78] | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
        ```
 
-   3. Remove remaining leapp dependency packages:
+   3. Remove remaining Leapp dependency packages:
 
        ```bash
        sudo dnf remove leapp-deps-el9 leapp-repository-deps-el9
