@@ -18,9 +18,9 @@ In the Certification Authority snap-in, right-click the CA and select **All Task
 
 For a CA certificate using a KSP provider, the Key Specification (KeySpec) property is expected to have a KeySpec value of `0`. However, when the issue occurs, the KeySpec value is `2` which causes the CA certificate renewal to fail.
 
-## Update the KeySpec from 2 to 0
+## Update the KeySpec value from 2 to 0
 
-To resolve this issue, update the KeySpec from `2` to `0` by using the following steps:
+To resolve this issue, update the KeySpec value from `2` to `0` by using the following steps:
 
 1. Export the local machine store using the command:
 
