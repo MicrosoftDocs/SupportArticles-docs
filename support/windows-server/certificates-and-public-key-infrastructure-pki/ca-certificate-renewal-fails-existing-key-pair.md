@@ -107,6 +107,7 @@ Once all the CA certificates have the KeySpec value of `0`, you can try to renew
 ## More information
 
 For certificates whose keys are generated using Cryptography Next Generation (CNG) providers, there's no concept of key specification, and the KeySpec value is always zero.
+
 KeySpec values and associated meanings:
 
 |Keyspec value  |Value  |Means  |
