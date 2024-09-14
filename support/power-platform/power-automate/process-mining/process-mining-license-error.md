@@ -2,7 +2,7 @@
 title: Licensing error when accessing the process mining capability
 description: Provides resolutions for the user has not been assigned any license error that occurs when accessing a process in Power Automate.
 ms.reviewer: hamenon
-ms.date: 09/13/2024
+ms.date: 09/14/2024
 ms.custom: sap:Process advisor\Process Mining
 ---
 # "The user has not been assigned any license" error when accessing a process in the process mining capability
