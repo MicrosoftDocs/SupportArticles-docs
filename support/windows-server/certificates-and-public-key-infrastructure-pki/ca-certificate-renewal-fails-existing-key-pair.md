@@ -34,7 +34,7 @@ To resolve this issue, update the KeySpec value from `2` to `0` by using the fol
     ================ Certificate 3 ================
     X509 Certificate:
     Version: 3
-    Serial Number: 21000000044a30cde9ac9e7b08000000000004
+    Serial Number: 21000000044a30cdeaaaae7b08000000000004
     Signature Algorithm:
     Algorithm ObjectId: 1.2.840.113549.1.1.11 sha256RSA
     Algorithm Parameters:
@@ -42,8 +42,8 @@ To resolve this issue, update the KeySpec value from `2` to `0` by using the fol
     
     Issuer:
     CN=ROOTCA-CA
-    Name Hash(sha1): a07626cca03482b0f562364300973304401cd3fb
-    Name Hash(md5): 78ac82e59f355cd429e860f908f29b29
+    Name Hash(sha1): a07626ccaaaaabbbb562364300973304401cd3fb
+    Name Hash(md5): 78ac82e59faaaabbbbe860f908f29b29
     
     NotBefore: <DateTime>
     NotAfter: <DateTime>
@@ -53,16 +53,16 @@ To resolve this issue, update the KeySpec value from `2` to `0` by using the fol
     DC=Contoso
     DC=com
     ...
-    Name Hash(sha1): 01aad90ff6a6812f368a509eed47be8ea0a3b78d
-    Name Hash(md5): 278a394cad15b44f27fbd177c498ca02
-    Cert Hash(md5): 1b425d0974eaeaf29c6747e9e0b6f093
-    Cert Hash(sha1): 35599a36f5bb10438686dd79915e943895d1e276
-    Cert Hash(sha256): 96ebd75a96e8ceab0db31f7a83891533eeada0351ce56b84f3918941c9cba610
-    Signature Hash: f905cf5cd6131832548c592c593ee6864c9c2dc3ec305da3f4d6751a6ff17afd
+    Name Hash(sha1): 01aad90aaaabbbbf368a509eed47be8ea0a3b78d
+    Name Hash(md5): 278a394aaaabbbbf27fbd177c498ca02
+    Cert Hash(md5): 1b425aaaabbbbaf29c6747e9e0b6f093
+    Cert Hash(sha1): 35599aaaabbbb0438686dd79915e943895d1e276
+    Cert Hash(sha256): 96ebd75aaaabbbbb0db31f7a83891533eeada0351ce56b84f3918941c9cba610
+    Signature Hash: f905cf5aaaabbbb2548c592c593ee6864c9c2dc3ec305da3f4d6751a6ff17afd
     ...
     CERT_KEY_PROV_INFO_PROP_ID(2):
     Key Container = Contoso CA
-    Unique container name: 944d5680c0c53e2295b1cb4f50ba2b71_6e4d3030-8aae-40f0-9282-d69ccdd4ff34
+    Unique container name: 944d5680aaaabbbb95b1cb4f50ba2b71_6e4d3030-8aae-40f0-9282-d69ccdd4ff34
     Provider = Microsoft Software Key Storage Provider
     ProviderType = 0
     Flags = 20 (32)
@@ -78,7 +78,7 @@ To resolve this issue, update the KeySpec value from `2` to `0` by using the fol
         ```output
         [Properties]
         2 = "{text}" ; Add Key Provider Information property
-        _continue_="Container = CONTAINER_NAME&"   // Replace the "CONTAINER_NAME" with the CA Key Container name of the certificate that has the Serial Number "21000000044a30cde9ac9e7b08000000000004"; Keep the sign '&' in the end;
+        _continue_="Container = CONTAINER_NAME&"   // Replace the "CONTAINER_NAME" with the CA Key Container name of the certificate that has the Serial Number "21000000044a30cdeaaaae7b08000000000004"; Keep the sign '&' in the end;
         _continue_="Provider = Microsoft Software Key Storage Provider&"
         _continue_="ProviderType = 0&"
         _continue_="Flags = 0x20&"
@@ -88,7 +88,7 @@ To resolve this issue, update the KeySpec value from `2` to `0` by using the fol
     3. Run the command using the certificate Serial Number where the KeySpec value is `2`:
 
         ```console
-        certutil -repairstore my "21000000044a30cde9ac9e7b08000000000004" KeyProv.inf
+        certutil -repairstore my "21000000044a30cdeaaaae7b08000000000004" KeyProv.inf
         ```
 
         > [!NOTE]
