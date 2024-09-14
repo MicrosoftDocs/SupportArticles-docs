@@ -33,7 +33,7 @@ Here are the most common reasons and corresponding solutions:
 
     4. Retry the original operation. This second operation should bring your cluster to a successful state.
 
-- Scaling a cluster that uses advanced networking such as Azure CNI, Azure CNI for Dynamic IP Allocation but has insufficient subnet (networking) resources.
+- Scaling a cluster that uses advanced networking such as Azure Container Networking Interface (CNI), Azure CNI for dynamic IP allocation but has insufficient subnet (networking) resources.
 
     To resolve this issue, see [Troubleshoot the SubnetIsFull error code](error-code-subnetisfull.md).
 
