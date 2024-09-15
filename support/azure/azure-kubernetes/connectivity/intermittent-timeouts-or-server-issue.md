@@ -1,7 +1,7 @@
 ---
 title: Fix intermittent time-outs or server issues during app access
 description: Troubleshoot intermittent time-outs or server issues that occur when you try to access an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/17/2022
+ms.date: 09/15/2024
 ms.reviewer: chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to fix intermittent time-outs or server issues so that I can successfully access an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
@@ -123,6 +123,15 @@ Started increasing memory
 
 Log entries were made the previous time that the container was run. The existence of these entries suggests that the application did start, but it closed because of some issues.
 
+Check service associated with the deployment and try to curl the ClusterIP of the service from inside cluster to isolate the issue.
+
+```console
+$ kubectl get svc # Check the service associated with deployment 
+NAME                    TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)        AGE
+kubernetes              ClusterIP      10.0.0.1      <none>         443/TCP        3h21m
+my-deployment-service   LoadBalancer   10.0.136.71   20.62.x.x      80:30790/TCP   21m
+```
+
 The next step is to check the events of the pod by running the [kubectl describe](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) command:
 
 ```console
@@ -172,6 +181,10 @@ Observations:
 - The memory limit specified for the container is 500 Mi.
 
 You can tell from the events that the container is being killed because it's exceeding the memory limits. When the container memory limit is reached, the application becomes intermittently inaccessible, and the container is killed and restarted.
+
+> [!NOTE]
+> Its Recomended to configure probes (liveness,readiness,startup) in your pod definition and based on your application behavior, it will recover application from unwanted issues  
+> And should be careful configuring Liveness probes , to read more about it [configure-liveness-readiness-startup-probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
 ## Solution
 
