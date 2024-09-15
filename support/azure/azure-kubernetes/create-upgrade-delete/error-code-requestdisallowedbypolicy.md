@@ -40,7 +40,7 @@ To fix this issue, follow these steps:
 To get details about the policy that blocked your cluster deployment operation, see [RequestDisallowedByPolicy error with Azure resource policy](/azure/azure-resource-manager/troubleshooting/error-policy-requestdisallowedbypolicy).
 
 > [!NOTE]
-> After fixing the policy that prevent AKS cluster creation you can to bring the cluster from failed to success by running `az aks update -g MyResourceGroup -n MyManagedCluster` This will  Reconcile the cluster and retry last failed operation , for more info about cluster in failed state see [Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/availability-performance/cluster-node-virtual-machine-failed-state) .
+> After fixing the policy that prevent AKS cluster creation you can to bring the cluster from failed to success by running `az aks update -g MyResourceGroup -n MyManagedCluster` This will  Reconcile the cluster and retry last failed operation , for more info about cluster in failed state see [Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state](../availability-performance/cluster-node-virtual-machine-failed-state.md) .
 
 
 
