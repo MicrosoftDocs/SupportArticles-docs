@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the VMExtensionProvisioningTimeout error code
 description: Learn how to troubleshoot the VMExtensionProvisioningTimeout error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/23/2022
+ms.date: 09/16/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
@@ -18,29 +18,23 @@ This article discusses how to identify and resolve the `VMExtensionProvisioningT
 
 ## Symptoms
 
-When you try to create an AKS cluster, you receive the following error message:
-
-> Failed to reconcile agent pool agentpool0: err: **VMSSAgentPoolReconciler retry failed:**
->
-> **Category: InternalError;**
->
-> **SubCode: VMExtensionProvisioningTimeout;**
->
-> Dependency: Microsoft.Compute/VirtualMachineScaleSet;
->
-> OrginalError:
->
-> Code="VMExtensionProvisioningTimeout"
->
-> Message="Provisioning of VM extension vmssCSE has timed out. Extension provisioning has taken too long to complete. The extension last reported \"Plugin enabled\".\r\n\r\nMore information on troubleshooting is available at <https://aka.ms/VMExtensionCSELinuxTroubleshoot>";
->
-> AKSTeam: NodeProvisioning,
->
-> Retriable: true
+When you try to create an AKS cluster, you will receive the samples of following error message:   
+Output from **azure cli**, these errors are visible in **azure portal** [click here to get more details](https://github.com/azmmft/SupportArticles-docs/blob/patch-1/support/azure/azure-kubernetes/create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal)
+```output
+Failed to reconcile agent pool agentpool0: err: **VMSSAgentPoolReconciler retry failed:**
+**Category: InternalError;**
+**SubCode: VMExtensionProvisioningTimeout;**
+Dependency: Microsoft.Compute/VirtualMachineScaleSet;
+OrginalError:
+Code="VMExtensionProvisioningTimeout"
+Message="Provisioning of VM extension vmssCSE has timed out. Extension provisioning has taken too long to complete. The extension last reported \"Plugin enabled\".\r\n\r\nMore information on troubleshooting is available at <https://aka.ms/VMExtensionCSELinuxTroubleshoot>";
+AKSTeam: NodeProvisioning,
+Retriable: true
+```
 
 ## Cause
 
-Several different issues can cause the VMExtensionProvisioningError class of errors. However, the troubleshooting steps are the same for all the issues. Possible causes are as follows:
+Several different issues can cause the `VMExtensionProvisioningError` class of errors. However, the troubleshooting steps are the same for all the issues. Possible causes are as follows:
 
 - The custom script extension that provisions the virtual machines (VMs) can't establish a connection to the endpoint that's used for downloading the Kubernetes binaries.
 
@@ -50,13 +44,13 @@ Several different issues can cause the VMExtensionProvisioningError class of err
 
 - The cluster can't resolve the necessary Domain Name System (DNS) address to correctly provision the node.
 
-- The custom script extension that provisions the VMs reached a timeout while running the [apt-get](https://manpages.ubuntu.com/manpages/xenial/man8/apt-get.8.html) update.
+- The custom script extension that provisions the VMs reached a timeout while running the packets managment (eg. [apt-get](https://manpages.ubuntu.com/manpages/xenial/man8/apt-get.8.html) update in case the nodepool uses linux).
 
 ## Solution
 
 Follow these steps:
 
-1. If egress filtering is set up on the cluster, see [Control egress traffic for cluster nodes in AKS](/azure/aks/limit-egress-traffic) to view the necessary prerequisites, and make sure that your setup meets the prerequisites.
+1. If egress filtering is set up on the cluster (eg. [Customs user defined routes](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/virtual-network/virtual-networks-udr-overview.md)), see [Control egress traffic for cluster nodes in AKS](/azure/aks/limit-egress-traffic) and [Outbound network and FQDN rules for AKS clusters](https://github.com/MicrosoftDocs/azure-aks-docs/blob/main/articles/aks/outbound-rules-control-egress.md) to view the necessary prerequisites, and make sure that your setup meets the prerequisites.
 
 1. On your DNS servers and firewall, make sure that nothing blocks the resolution of your cluster's fully qualified domain name (FQDN).
 
