@@ -164,6 +164,10 @@ A [rollup for AD FS 2.0](https://support.microsoft.com/help/2607496) works in co
 1. Confirm that the device doesn't already have a management profile installed.
 1. For iOS/iPadOS devices, confirm that Safari is the default browser and that cookies are enabled. For Android devices, confirm that Chrome is the default browser and that cookies are enabled.
 
+## Expired certificates within Intune management profile
+
+This IOSProfileSigning.manage.microsoft.com certificate is required to install the management profile on iOS/iPadOS devices at enrollment time. Afterwards the certificate is not needed but by iOS/iPadOS design, stays on the device. Enrolled device will work as expected, while new enrollments will get the same certificate but with a new date. Some unverified expired certificates will show due to the platform design, but this has no effect on existing enrollments. 
+ 
 ## IT admin needs to assign license for access
 
 Users see the message "Your IT admin hasn't given you access to use this app. Get help from your IT admin or try again later."
