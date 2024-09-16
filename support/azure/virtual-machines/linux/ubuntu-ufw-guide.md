@@ -186,7 +186,7 @@ To                         Action      From
 
 If your rules aren't in the correct order, you can delete a rule and then restore it to change the order.
 
-To delete a rule, you can use its number from the `ufw status numbered` output. For example, if you want to delete rule number 3:
+To delete a rule, you can use its number from the `ufw status numbered` output. For example, to delete rule number 3:
 
 ```bash
 sudo ufw status numbered
