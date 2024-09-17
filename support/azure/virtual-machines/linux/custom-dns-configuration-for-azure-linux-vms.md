@@ -17,15 +17,16 @@ This article discusses how to configure custom DNS and search domains in Azure L
 
 ## Overview of DNS
 
-Domain Name System (DNS) translates human-readable domain names (like www.example.com) into IP addresses (like 192.0.2.1) that computers use to identify each other on the network. Essentially, DNS acts as the internet's phonebook.".
+Domain Name System (DNS) translates human-readable domain names into IP addresses that servers use to identify each other on the network. Essentially, DNS acts as the internet's phonebook.".
 
 > [!NOTE]
 > In Azure you can configure multiple custom DNS servers at the Virtual Network(VNET) level or at the Network Interface(NIC) level. The DNS servers configured at the NIC level will override the configuration done at VNET level.
 
-## Purpose of this Document
+## Summary
 
-The purpose of this document is to provide a comprehensive guide on configuring custom DNS servers and search domain, across different Linux distributions, such as, Redhat, SUSE, and Ubuntu.
-Following the guidelines in this document ensures optimal and secure DNS settings for Linux systems in Azure.
+You can configure multiple custom DNS servers and 'search domains' across various Linux distributions, such as, Redhat, SUSE, and Ubuntu. A common use case is configuring different custom DNS servers at the OS level, after setting them up at the Virtual Network or Network Interface level.
+
+This article provides the necessary steps to add multiple DNS servers and search domains in Azure Linux Virtual Machines.
 
 > [!NOTE]
 > This document uses the DNS servers “1.2.3.4” and “5.6.7.8” and the search domain “test.example.com” as examples. Please replace these with your actual DNS server addresses and search domain entries.
@@ -37,7 +38,7 @@ Following the guidelines in this document ensures optimal and secure DNS setting
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-1.png" alt-text="Screenshot of default resolv.conf file in RHEL.":::
 
-2. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level](https://learn.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers)
+2. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level] (/azure/virtual-network/manage-virtual-network.yml)
 
 3. Restart the NetworkManager service to see the updated entries in /etc/resolv.conf file.
 
@@ -92,7 +93,7 @@ Following the guidelines in this document ensures optimal and secure DNS setting
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-2.png" alt-text="Screenshot of symlink for default resolv.conf file":::
 
-3. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level](https://learn.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers)
+3. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level] (/azure/virtual-network/manage-virtual-network#change-dns-servers)
 
 4. Run the following command to apply the custom DNS entries:
     
@@ -132,7 +133,7 @@ Following the guidelines in this document ensures optimal and secure DNS setting
 7. Run the following command to apply the search domain changes.
   
    ```bash
-   sudo neplan apply
+   sudo netplan apply
    ```
 
 8. Verify the updated search domain by running the following command:
@@ -149,7 +150,7 @@ Following the guidelines in this document ensures optimal and secure DNS setting
 
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-1.png" alt-text="Screenshot of default resolv.conf file in SUSE.":::
 
-2. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level](https://learn.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers)
+2. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level] (/azure/virtual-network/manage-virtual-network.yml#change-dns-servers)
 
 3. Restart the wicked service to see the updated entries in /etc/resolv.conf file.
 
