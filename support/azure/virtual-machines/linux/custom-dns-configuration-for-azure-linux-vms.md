@@ -38,7 +38,7 @@ This article provides the necessary steps to add multiple DNS servers and search
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-1.png" alt-text="Screenshot of default resolv.conf file in RHEL.":::
 
-2. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level] (/azure/virtual-network/manage-virtual-network.yml)
+2. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network)
 
 3. Restart the NetworkManager service to see the updated entries in /etc/resolv.conf file.
 
@@ -93,7 +93,7 @@ This article provides the necessary steps to add multiple DNS servers and search
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-2.png" alt-text="Screenshot of symlink for default resolv.conf file":::
 
-3. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level] (/azure/virtual-network/manage-virtual-network#change-dns-servers)
+3. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network#change-dns-servers)
 
 4. Run the following command to apply the custom DNS entries:
     
@@ -150,7 +150,7 @@ This article provides the necessary steps to add multiple DNS servers and search
 
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-1.png" alt-text="Screenshot of default resolv.conf file in SUSE.":::
 
-2. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level] (/azure/virtual-network/manage-virtual-network.yml#change-dns-servers)
+2. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network#change-dns-servers)
 
 3. Restart the wicked service to see the updated entries in /etc/resolv.conf file.
 
