@@ -281,8 +281,6 @@
       href: ../sign-in/unable-remove-domain-office-365.md
     - name: Can't reset this user's password
       href: ../sign-in/unable-reset-user-password-sso.md
-    - name: Determine whether account is compromised
-      href: ../sign-in/determine-account-is-compromised.md
     - name: Error when federated users sign in to Microsoft 365
       href: ../sign-in/federated-users-sign-in-error-ad-fs.md
     - name: Error when you access emails in Microsoft 365
