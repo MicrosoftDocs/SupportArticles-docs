@@ -13,7 +13,7 @@ ms.custom: sap:System Performance\System Performance (slow, unresponsive, high C
 
 This article provides resolutions of a problem in which the LSAISO process experiences high CPU usage on a computer that's running Windows.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 11 - all editions, Windows Server 2016, Windows Server 2019, Windows Server 2022
 _Original KB number:_ &nbsp; 4032786
 
 ## Symptoms
