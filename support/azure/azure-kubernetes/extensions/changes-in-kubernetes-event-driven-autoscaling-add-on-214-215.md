@@ -13,7 +13,7 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 The Event-driven Autoscaling (KEDA) add-on is upgraded to version 2.15, introducing breaking changes such as removing support for [Microsoft Entra pod-managed identities authentication](/azure/aks/use-azure-ad-pod-identity).
 
-Your Azure Kubernetes Services (AKS) cluster Kubernetes version determines what KEDA version will be installed on your AKS cluster. We have integrated KEDA version 2.14 into AKS clusters that running Kubernetes version 1.30. The upcoming release of Kubernetes 1.31 on Azure will ship with KEDA add-on version 2.15.
+Your Azure Kubernetes Services (AKS) cluster Kubernetes version determines what KEDA version will be installed on your AKS cluster. For AKS clusters running Kubernetes version 1.30, KEDA add-on version 2.14 is installed. The upcoming release of Kubernetes 1.31 on Azure will ship with KEDA add-on version 2.15.
 
 ## Breaking Changes in KEDA 2.14 and 2.15
 
