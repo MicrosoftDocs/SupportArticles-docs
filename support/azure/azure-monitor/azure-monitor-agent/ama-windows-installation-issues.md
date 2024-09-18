@@ -88,7 +88,7 @@ Before troubleshooting, understand the different ways to install the AMA for Win
 2. Select the VM where the AMA agent is installed.
 3. In the VM **Overview** page, check if the VM **Status** is **Running**.
 
-   :::image type="content" source="media/ama-windows-installation-issues/check-vm-status.png" alt-text="Screenshot that shows the VM status.":::
+   :::image type="content" source="media/ama-windows-installation-issues/check-vm-status.png" alt-text="Screenshot that shows the VM status." lightbox="media/ama-windows-installation-issues/check-vm-status.png":::
 
    If the VM is in the running state, move to [Verify if the VM has a managed identity](#verify-vm-managed-identity). If the VM isn't currently running, start it and wait for it to fully boot and become operational.
 
@@ -124,7 +124,7 @@ To assign a user-assigned identity to a VM, your account needs the [Virtual Mach
 
 3. Select the user-assigned identity you want to add to the VM and then select **Add**.
 
-   :::image type="content" source="media/ama-windows-installation-issues/select-expected-user-identity.png" alt-text="Screenshot that shows a user-assigned identity is already slected." lightbox="media/ama-windows-installation-issues/select-expected-user-identity.png" border="true":::
+   :::image type="content" source="media/ama-windows-installation-issues/select-expected-user-identity.png" alt-text="Screenshot that shows a user-assigned identity is already slected." border="true":::
 
 ### <a id="verify-ama-extension-exists"></a>Step 3: Verify if the extension exists in the VM configuration
 
