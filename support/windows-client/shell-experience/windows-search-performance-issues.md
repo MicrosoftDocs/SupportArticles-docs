@@ -42,7 +42,10 @@ The Indexer can index up to 1 million items. If the Indexer tries to index beyon
 > [!NOTE]
 > By default, the Indexer indexes any Outlook mailboxes on the computer. If a mailbox contains more than 6 million items, the performance of the Indexer may degrade. For more information, go to the "Change Outlook settings" section.
 
-To check the number of indexed items, select **Settings** > **Search** > **Searching Windows** and check the value of **Indexed items** in Windows 10, or select **Settings** > **Privacy & security** > **Searching Windows** and check the value of **Indexed** in Windows 11.
+You can check the number of indexed items as follows:
+
+- Windows 11: Select **Settings** > **Privacy & security** > **Searching Windows**, and then check the value of **Indexed**.
+- Windows 10: Select **Settings** > **Search** > **Searching Windows**, and then check the value of **Indexed items**.
 
 :::image type="content" source="media/windows-search-performance-issues/indexing-status.png" alt-text="Screenshot of the Indexing Status value in the Searching Windows page of Settings.":::
 
@@ -51,11 +54,11 @@ To check the number of indexed items, select **Settings** > **Search** > **Searc
 As the number of indexed items grows beyond 400,000, the index database grows considerably regardless of the size of those items. The size of the items also affects database size. A database that contains either a few large files or a large number of smaller files can affect performance. Both factors together can compound the problem. The Indexer tries to compress the index data. However, this approach becomes less effective as the index database grows.
 
 > [!IMPORTANT]
-> To check the size of the index database, use the **Size on disk** property of the *Windows.edb* (*Windows.db* in Windows 11) file instead of relying on the **Size** property or the file size that's listed in Explorer. Because of the compression algorithms that the Indexer uses on sparse ESE and NTFS files, the value that's listed in Explorer may not be accurate. Additionally, this **Size** value might include space that was used by or allocated to the file in the past, instead of using the current size.
+> To check the size of the index database, use the **Size on disk** property of the *Windows.edb* (Windows 10) or *Windows.db* (Windows 11) file instead of relying on the **Size** property or the file size that's listed in Explorer. Because of the compression algorithms that the Indexer uses on sparse ESE and NTFS files, the value that's listed in Explorer may not be accurate. Additionally, this **Size** value might include space that was used by or allocated to the file in the past, instead of using the current size.
 
-By default, *Windows.edb* is located in the *C:\\ProgramData\\Microsoft\\Search\\Data\\Applications\\Windows* folder. To check the size of the file, follow these steps:
+By default, *Windows.edb* or *Windows.db* is located in the *C:\\ProgramData\\Microsoft\\Search\\Data\\Applications\\Windows* folder. To check the size of the file, follow these steps:
 
-1. Right-click *Windows.edb*, and select **Properties**.
+1. Right-click *Windows.edb* or *Windows.db*, and select **Properties**.
 2. Check the **Size on disk** value. This property reflects the actual disk space that the database uses.
 
     :::image type="content" source="media/windows-search-performance-issues/disk-size.png" alt-text="Screenshot of the Size on disk property of the Windows.edb file.":::
