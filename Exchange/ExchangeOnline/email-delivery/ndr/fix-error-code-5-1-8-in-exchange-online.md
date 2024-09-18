@@ -28,13 +28,9 @@ This NDR is generated if a user tries to send an email message after their accou
 
 ## How do I fix this?
 
-If you're a user, follow these steps:
+1. If your account is compromised, follow the steps in [Responding to a compromised account](/defender-office-365/responding-to-a-compromised-email-account).
 
-1. [Determine whether your account is compromised](/microsoft-365/troubleshoot/sign-in/determine-account-is-compromised).
-
-2. If your account is compromised, follow the steps in [Respond to a compromised email account in Exchange Online](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account).
-
-3. Ask your administrator to unblock your account so that you can send email.
+2. Ask your administrator to unblock your account so that you can send email.
 
 If you're an email admin, you can unblock user accounts on the **Restricted entities** page in the [Microsoft 365 Defender portal](https://security.microsoft.com/restrictedusers). After you unblock a user account, all restrictions are usually removed within one hour.
 
