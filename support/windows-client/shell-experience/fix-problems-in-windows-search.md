@@ -54,12 +54,12 @@ For more information about Search and Indexing, see the following articles:
 
 ## Solution 4: Restart Windows Search
 
-Follow these steps to end the **SearchUI** process. Stopping this process stops Windows Search. The next time that you search, Windows Search automatically starts.
+Follow these steps to end the **SearchUI** (Windows 10) or **SearchHost.exe** (Windows 11) process. Stopping this process stops Windows Search. The next time that you search, Windows Search automatically starts.
 
 1. Select <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Delete</kbd>, and then select **Task Manager**.
 2. In **Task Manager**, select **Details**.
-3. In the **Name** column, right-click **SearchUI.exe** (Windows 10) or **SearchHost.exe** (Windows 11) and then select **End task**.
-4. When you're prompted to end *SearchUI.exe*, select **End process**.
+3. In the **Name** column, right-click the **SearchUI.exe** or **SearchHost.exe** process, and then select **End task**.
+4. When you're prompted to end the **SearchUI.exe** or **SearchHost.exe** process, select **End process**.
 
 If this solution doesn't fix your problem, try restarting your device. Restarting also installs any pending updates.
 
