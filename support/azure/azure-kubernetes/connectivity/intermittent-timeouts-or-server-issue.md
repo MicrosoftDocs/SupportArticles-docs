@@ -184,7 +184,7 @@ You can tell from the events that the container is being killed because it's exc
 
 > [!NOTE]
 > Its Recomended to configure probes (liveness,readiness,startup) in your pod definition and based on your application behavior, it will recover application from unwanted issues  
-> And should be careful configuring Liveness probes , to read more about it [configure-liveness-readiness-startup-probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+> And should be careful configuring Liveness probes, to read more about it [configure-liveness-readiness-startup-probes].(https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
 ## Solution
 
