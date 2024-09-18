@@ -138,7 +138,7 @@ To assign a user-assigned identity to a VM, your account needs the [Virtual Mach
    1. In the VM's left-hand menu, select **Extensions + applications** under the **Settings** section.
    2. Look for the extension with Type `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent`.
 
-      :::image type="content" source="media/ama-windows-installation-issues/verify-azuremonitorwindowsagent-exists.png" alt-text="Screenshot that shows the AzureMonitorWindowsAgent extension." lightbox="media/ama-windows-installation-issues/verify-azuremonitorwindowsagent-exists.png":::
+      :::image type="content" source="media/ama-windows-installation-issues/verify-ama-extension-exists.png" alt-text="Screenshot that shows the AzureMonitorWindowsAgent extension." lightbox="media/ama-windows-installation-issues/verify-ama-extension-exists.png":::
 
    3. If the extension exists, go to the step 4.
    4. If the extension doesn't exist, go to the step 5.
@@ -146,6 +146,8 @@ To assign a user-assigned identity to a VM, your account needs the [Virtual Mach
 4. Verify the extension status:
    1. Check the **Status** column for the `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent` extension.
    2. If the status is "Provisioning Succeeded," skip step 5 and 6 and move to [Verify if the VM Guest Agent is running](#verify-vm-guest-agent-running).
+
+      :::image type="content" source="media/ama-windows-installation-issues/verify-ama-extension-status.png" alt-text="Screenshot that shows the AzureMonitorWindowsAgent extension's status." lightbox="media/ama-windows-installation-issues/verify-ama-extension-status.png":::
    3. If the status isn't "Provisioning Succeeded," proceed to the step 5 and 6.
 
 5. Install the extension:
