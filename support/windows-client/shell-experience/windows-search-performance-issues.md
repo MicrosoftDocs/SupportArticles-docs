@@ -45,9 +45,9 @@ The Indexer can index up to 1 million items. If the Indexer tries to index beyon
 You can check the number of indexed items as follows:
 
 - Windows 11: Select **Settings** > **Privacy & security** > **Searching Windows**, and then check the value of **Indexed**.
-- Windows 10: Select **Settings** > **Search** > **Searching Windows**, and then check the value of **Indexed items**.
+- Windows 10: Select **Settings** > **Search** > **Searching Windows**, and then check the value of **Indexed Items**.
 
-:::image type="content" source="media/windows-search-performance-issues/indexing-status.png" alt-text="Screenshot of the Indexing Status value in the Searching Windows page of Settings.":::
+    :::image type="content" source="media/windows-search-performance-issues/indexing-status.png" alt-text="Screenshot of the Indexing Status value in the Searching Windows page of Settings.":::
 
 #### Size of the index database
 
@@ -114,7 +114,7 @@ If a different message appears, see the following table for more information abo
 
 | **Status message**| **Explanation**| **Possible actions** |
 |---|---|---|
-|Indexing complete|The Indexer is running as usual, and has finished indexing.|Indexing should be complete, and all results available. If you're still missing files, make sure that the correct folders are selected to search. To see a detailed list of the locations that are indexed, open **Searching Windows**, and select **Advanced Search Indexer Settings** (Windows 10) or **Advanced indexing options** (Windows 11). In **Indexing Options**, select **Modify**.|
+|Indexing complete|The Indexer is running as usual, and has finished indexing.|Indexing should be complete, and all results should be available. If you're still missing files, make sure that the correct folders are selected to search. To see a detailed list of the locations that are indexed, open **Searching Windows**, and select **Advanced Search Indexer Settings** (Windows 10) or **Advanced indexing options** (Windows 11). In **Indexing Options**, select **Modify**.|
 |Indexing in progress. Search results might not be complete during this time.|The Indexer has found new files on the system and is adding them to the index. Depending on the number of files that have recently changed, it could take a few hours|Leave the computer turned on and connected to power (if applicable) for a few hours to let indexing finish.|
 |Indexing speed is reduced because of user activity.|The Indexer is adding new items to be searched, but has slowed its progress because the user is interacting with the device.|The indexing process will complete slowly. Wait a few hours, or leave the device unattended and connected to a power source.|
 |Indexing is waiting for computer to become idle.|The Indexer has detected items that have to be indexed, but the device is too busy for the indexing process to continue.|Find out what is causing device to be busy. If the disk or CPU use is high, the indexer stops running to maximize the resources for foreground activities.|
