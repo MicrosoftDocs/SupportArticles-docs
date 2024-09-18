@@ -1,41 +1,30 @@
 ---
-title: Connection Creation failing with "MissingOnPremSidForMachineDomainJoined"
-description: This article describes how to troubleshoot a failure related to connect with sign option.
+title: Connection creation fails with MissingOnPremSidForMachineDomainJoined
+description: Solves the error that occurs when you create a desktop flow connection using the connect with sign-in option in Microsoft Power Automate for desktop.
 author: QuentinSele
-ms.author: QuentinSele
-ms.topic: troubleshooting 
-ms.date: 09/13/2024
+ms.author: quseleba
+ms.date: 09/18/2024
+ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ---
+# Connection creation fails with "MissingOnPremSidForMachineDomainJoined"
 
-<!---For SEO metadata, refer to the SEO cheat sheet provided at https://review.learn.microsoft.com/help/contribute/contribute-how-to-write-seo-basics?branch=main. It has complete information on metadata that impacts SEO, specifically the page title and meta description.--->
-
-<!--- We write general troubleshooting articles when a specific error message isn't known. The customer has come across an issue that they need to resolve, but it's not clear what's causing the issue.--->
-
-<!--- Recommended: Remove all the comments in this template before you sign-off or merge to main branch.--->
-
-# Connection Creation failing with "MissingOnPremSidForMachineDomainJoined"
-
-<!---Required: Include the word "troubleshoot" --->
+This aritcle provides resolutions for the "MissingOnPremSidForMachineDomainJoined" error code that occurs when you create a desktop flow connection using the [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) option in Microsoft Power Automate for desktop.
 
 ## Symptoms
 
-When creating a Desktop Flow connection using the "Connect with Sign-In" option, the connection creation fails with 
-1. error code `MissingOnPremSidForMachineDomainJoined` 
+When you create a desktop flow connection using the [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) option, the connection creation fails with the following error:
 
-2. error message: `Could not map connection MSEntraID to AD user on the target machine domain-joined. Please check with your Domain Controller admin that onpremisesSecurityIdentifier is synced with MSEntra.`
+> Error code: MissingOnPremSidForMachineDomainJoined  
+> Error message: Could not map connection MSEntraID to AD user on the target domain-joined machine. Please check with your domain admin that onpremisesSecurityIdentifier is synced with MSEntra.
 
 ## Cause
 
-You're using a Domain Joined machine and the Synchronization between the Domain Controller and MS Entra isn't properly done. When you are using a Domain Joined machine, this synchronization is a requirement to be able to use Sign-in Connections for Desktop Flows.
-<!---Optional: An issue might be able to be temporarily resolved with a quick fix. If known, list any workarounds that can be implemented quickly to resolve the issue. Link to information about  longer-term solutions in the Solution section.--->
+You use an Active Directory domain-joined machine and the synchronization between the domain controller and Microsoft Entra ID isn't properly done. When you use an Active Directory domain-joined machine, this synchronization is a prerequisite to be able to use sign-in connections for desktop flows.
 
-## Resolution
+## Resolution 1: Contact your administrator
 
-### Option 1: Contact your administrator
+Check with your administrator if the domain controller properly synchronizes the domain identities with Microsoft Entra ID.
 
-Check with your administrator if the Domain Controller properly synchronizes the Domain Identities with Microsoft Entra.
+## Resolution 2: Use another connection option
 
-### Option 2: Use another connection option
-
-If you can't join your device to Microsoft Entra ID, you can update your connections and select the option to connect with username and password.
-You can read more about [connection with username and password](https://learn.microsoft.com/power-automate/desktop-flows/desktop-flow-connections#connect-with-username-and-password)
+If you can't join your device to Microsoft Entra ID, you can update your connections and select the option to [connect with username and password](/power-automate/desktop-flows/desktop-flow-connections#connect-with-username-and-password).

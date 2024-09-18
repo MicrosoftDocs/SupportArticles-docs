@@ -1,29 +1,31 @@
 ---
-title: Connection Creation failing with "This computer has not-joined Microsoft Entra or the domain." or "MachineNotJoined"
-description: Run with connection using sign-in authentication requires to have a machine Microsoft Entra joined
+title: This computer has not joined Microsoft Entra or domain or MachineNotJoined
+description: Solves the errors that occur when you create a desktop flow connection using the connect with sign-in option in Microsoft Power Automate for desktop.
 author: QuentinSele
-ms.author: QuentinSele
+ms.author: quseleba
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ms.date: 09/18/2024
 ---
-# Connection Creation failing with "This computer is not joined Microsoft Entra or the domain." or "MachineNotJoined"
+# Connection creation fails with "This computer has not joined Microsoft Entra or the domain" or "MachineNotJoined"
+
+This aritcle provides resolutions for errors that occur when you create a desktop flow connection using the [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) option in Microsoft Power Automate for desktop.
 
 ## Symptoms
 
-- Error Message: `Failed to create OAuth connection: ClientError: Test connection failed. Details: Connection failed: [Machine <machineid>] This computer has not joined Microsoft Entra or the domain.`
-- Error Code `MachineNotJoined` and error message `The machine is neither Microsoft Entra nor domain joined`.
+When you create a desktop flow connection using the [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) option, the connection creation fails with one of the following errors:
+
+- > Error message: Failed to create OAuth connection: ClientError: Test connection failed. Details: Connection failed: [Machine \<machineID>] This computer has not joined Microsoft Entra or the domain.
+- > Error code: MachineNotJoined  
+  > Error message: The machine is neither Microsoft Entra nor domain joined.
 
 ## Cause
 
-Your machine isn't properly joined to either Microsoft Entra or a Domain which is a prerequisite to be able to use the "Connect with Sign-in" feature.
+Your machine isn't properly joined to either Microsoft Entra ID or an Active Directory domain, which is a prerequisite to be able to use the "connect with sign-in" feature.
 
-## Resolution
+## Resolution 1: Join your device to Microsoft Entra ID
 
-### Option 1: Join your device to Microsoft Entra ID
+Microsoft Entra join can be accomplished using self-service options like the Windows Out of Box Experience (OOBE), bulk enrollment, or Windows Autopilot. For more information, see [Microsoft Entra joined devices](/entra/identity/devices/concept-directory-join).
 
-Microsoft Entra join can be accomplished using self-service options like the Out of Box Experience (OOBE), bulk enrollment, or Windows Autopilot. You can read more about [Microsoft Entra joined devices](https://learn.microsoft.com/entra/identity/devices/concept-directory-join)
+## Resolution 2: Use another connection option
 
-### Option 2: Use another connection option
-
-If you can't join your device to Microsoft Entra ID, you can update your connections and select the option to connect with username and password.
-You can read more about [connection with username and password](https://learn.microsoft.com/power-automate/desktop-flows/desktop-flow-connections#connect-with-username-and-password)
+If you can't join your device to Microsoft Entra ID, you can update your connections and select the option to [connect with username and password](/power-automate/desktop-flows/desktop-flow-connections#connect-with-username-and-password).

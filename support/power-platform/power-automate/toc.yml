@@ -86,10 +86,10 @@
       href: desktop-flows/cloud-flow-suspended-missing-unattended-rpa-capability.md 
     - name: Communication error when launching Power Automate for desktop
       href: desktop-flows/communication-error-console.md
-    - name: Connection Creation failing with "MissingOnPremSidForMachineDomainJoined"
+    - name: Connection creation fails with MissingOnPremSidForMachineDomainJoined
       href: desktop-flows/troubleshoot-domain-joined-error.md
-    - name: Connection Creation failing with This computer has not joined Microsoft Entra or the domain. or MachineNotJoined
-      href: desktop-flows/machineNotJoined.md
+    - name: Connection creation fails with This computer has not joined Microsoft Entra or the domain or MachineNotJoined
+      href: desktop-flows/machine-not-joined-error.md
     - name: Desktop flows don't show in console if license expired or unassigned
       href: desktop-flows/desktop-flows-not-show-console-license-expired-unassigned.md
     - name: Desktop flow runs are missing from the list
