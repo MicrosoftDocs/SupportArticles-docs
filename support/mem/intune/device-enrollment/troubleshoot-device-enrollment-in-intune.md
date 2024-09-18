@@ -166,7 +166,7 @@ A [rollup for AD FS 2.0](https://support.microsoft.com/help/2607496) works in co
 
 ## Expired certificates within the management profile
 
-The `IOSProfileSigning.manage.microsoft.com` certificate is required to install the management profile on iOS/iPadOS devices during the enrollment process. When the certificate is no longer needed after initial use, it remains on the devices due to the design of iOS/iPadOS. Enrolled devices will work as expected, while new enrollments will receive the same certificate but with a new date. Because of the platform design, some expired certificates that are unverified may appear, but this doesn't impact existing enrollments.
+The `IOSProfileSigning.manage.microsoft.com` certificate is required to install the management profile on iOS/iPadOS devices during the enrollment process. When the certificate is no longer needed after initial use, it remains on the devices due to the design of iOS/iPadOS. Enrolled devices will work as expected, while new enrollments will receive the same certificate but with a new date. Because of the platform design, some expired certificates that are unverified might appear, but this doesn't affect existing enrollments.
 
 ## IT admin needs to assign license for access
 
