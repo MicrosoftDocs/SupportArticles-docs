@@ -1,21 +1,21 @@
 ---
-title:  Breaking changes in Event-driven Autoscaling Add-ons 2.15 and 2.14 for ASK version 1.30
-description: Describes changes in Event-driven Autoscaling Add-ons 2.15 and 2.14 that may impact your Azure Kubernetes cluster.
+title: Guide to KEDA 2.14 and 2.15 breaking changes and preparing AKS clusters
+description: Explores the key breaking changes introduced in KEDA 2.14 and 2.15 and provides a guide on how to prepare your Azure Kubernetes Service (AKS) clusters for these updates. 
 ms.service: azure-kubernetes-service
 ms.date: 08/13/2024
 editor: 
 ms.reviewer: 
-#Customer intent: As an Azure Kubernetes user, I want to understand  changes in Event-driven Autoscaling Add-ons version 2.15 and version 2.14 
+#Customer intent: As an Azure Kubernetes user, I want to understand changes in Event-driven Autoscaling Add-ons version 2.15 and version 2.14 
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
-# Breaking changes in Event-driven Autoscaling Add-ons 2.15 and 2.14 for AKS version 1.30+
+# Breaking changes in Event-driven Autoscaling add-ons 2.15 and 2.14
 
-The Event-driven Autoscaling (KEDA) add-on is upgraded to version 2.15, introducing breaking changes such as removing support for [Microsoft Entra pod-managed identities authentication](/azure/aks/use-azure-ad-pod-identity).
+This article explores the key breaking changes introduced in Event-driven Autoscaling (KEDA) add-on 2.14 and 2.15. It also provides a guide on how to prepare your Azure Kubernetes Service (AKS) clusters for these updates. 
 
-Your Azure Kubernetes Services (AKS) cluster Kubernetes version determines what KEDA version will be installed on your AKS cluster. For AKS clusters running Kubernetes version 1.30, KEDA add-on version 2.14 is installed. The upcoming release of Kubernetes 1.31 on Azure will ship with KEDA add-on version 2.15.
+## Breaking changes in KEDA 2.14 and 2.15
 
-## Breaking Changes in KEDA 2.14 and 2.15
+Your AKS cluster Kubernetes version determines what KEDA version will be installed on your AKS cluster. For AKS clusters running Kubernetes version 1.30, KEDA add-on version 2.14 is installed. The upcoming release of Kubernetes 1.31 on Azure will ship with KEDA add-on version 2.15.
 
 ### KEDA 2.15
 
@@ -52,7 +52,7 @@ Your Azure Kubernetes Services (AKS) cluster Kubernetes version determines what 
 
 ## Frequently asked questions
 
-**How can I confirm if my cluster is impacted?**
+### How can I confirm if my cluster is impacted?
 
 To determine if your cluster is affected by the recent KEDA upgrades, follow these steps:
 
@@ -77,7 +77,7 @@ To determine if your cluster is affected by the recent KEDA upgrades, follow the
 
     Look for any deprecation warnings or errors related to the removed or changed fields in KEDA, such as `metricName` or `metadata.clientSecret`.
 
-**What steps can I take to mitigate the issues?**
+### What steps can I take to mitigate the issues?
 
 1. Migrate from Microsoft Entra pod-managed identities to workload identity for authentication. For more information, see [Use Microsoft Entra Workload ID with AKS](/azure/aks/workload-identity-overview?tabs=dotnet) and [Migrate from pod managed-identity to workload identity](/azure/aks/workload-identity-migrate-from-pod-identity).
 2. Update Scaler Configurations to align with the new configuration requirements:
