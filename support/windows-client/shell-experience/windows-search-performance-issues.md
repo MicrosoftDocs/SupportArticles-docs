@@ -53,7 +53,7 @@ As the number of indexed items grows beyond 400,000, the index database grows co
 > [!IMPORTANT]
 > To check the size of the index database, use the **Size on disk** property of the *Windows.edb* (*Windows.db* in Windows 11) file instead of relying on the **Size** property or the file size that's listed in Explorer. Because of the compression algorithms that the Indexer uses on sparse ESE and NTFS files, the value that's listed in Explorer may not be accurate. Additionally, this **Size** value might include space that was used by or allocated to the file in the past, instead of using the current size.
 
-By default, *Windows.edb* is located in the C:\ProgramData\Microsoft\Search\Data\Applications\Windows folder. To check the size of the file, follow these steps:
+By default, *Windows.edb* is located in the *C:\\ProgramData\\Microsoft\\Search\\Data\\Applications\\Windows* folder. To check the size of the file, follow these steps:
 
 1. Right-click *Windows.edb*, and select **Properties**.
 2. Check the **Size on disk** value. This property reflects the actual disk space that the database uses.
@@ -126,4 +126,4 @@ If a different message appears, see the following table for more information abo
 |Indexing is shutting down.|The Indexer has received the signal to shut down either because the operating system is shutting down or because the user requested it.|Make sure that the user hasn't manually stopped the service. Check the status of the Windows Search Service (`wsearch`) in services.msc.|
 |Index is performing maintenance. Please wait.|The Indexer is trying to recover and optimize the index database. It could occur because lots of content was added recently, or because the Indexer encountered a problem while writing out data to the hard disk.|Wait a few minutes for the Indexer to finish. It can take up to 30 minutes on a slow computer. Make sure that the system hard disk isn't generating failures. Usually, Indexer writing issues precede drive failure. Make sure that the user has backed up personal data.|
 |Indexing is paused by an external application.|An application on the computer requested the Indexer to stop. It commonly occurs during Game mode or during an upgrade.|Make sure that the device isn't in Game mode. Use services.msc or Task Manager to restart the Windows Search service. It resumes indexing until the next time that an external app requests a pause.|
-|The status message is missing, and the entire page is greyed out.|Something has corrupted the Indexer registry keys or database. The service can no longer start or report status.|Delete the contents of C:\ProgramData\Microsoft\Search\Data. Refresh the operating system.|
+|The status message is missing, and the entire page is greyed out.|Something has corrupted the Indexer registry keys or database. The service can no longer start or report status.|Delete the contents of *C:\\ProgramData\\Microsoft\\Search\\Data*. Refresh the operating system.|
