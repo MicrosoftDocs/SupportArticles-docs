@@ -1,5 +1,5 @@
 ---
-title: Guide to KEDA 2.14 and 2.15 breaking changes and preparing AKS clusters
+title: Guide to prepare AKS clusters for KEDA 2.14 and 2.15 breaking changes
 description: Explores the key breaking changes introduced in KEDA 2.14 and 2.15 and provides a guide on how to prepare your Azure Kubernetes Service (AKS) clusters for these updates. 
 ms.service: azure-kubernetes-service
 ms.date: 08/13/2024
@@ -15,7 +15,7 @@ This article explores the key breaking changes introduced in Event-driven Autosc
 
 ## Breaking changes in KEDA 2.14 and 2.15
 
-Your AKS cluster Kubernetes version determines what KEDA version will be installed on your AKS cluster. For AKS clusters running Kubernetes version 1.30, KEDA add-on version 2.14 is installed. The upcoming release of Kubernetes 1.31 on Azure will ship with KEDA add-on version 2.15.
+Your AKS cluster Kubernetes version determines which KEDA version will be installed on your AKS cluster. For AKS clusters running Kubernetes version 1.30, KEDA add-on version 2.14 is installed. The upcoming release of Kubernetes 1.31 on Azure will ship with KEDA add-on version 2.15.
 
 ### KEDA 2.15
 
@@ -32,7 +32,7 @@ Your AKS cluster Kubernetes version determines what KEDA version will be install
 
     The two impacted Azure Scalers are **Azure Blob Scaler** and **Azure Log Analytics Scaler**. If you're using `metricName`, move `metricName` outside of trigger metadata section to `trigger.name` in the trigger section to optionally name your trigger.
 
-     An example before KEDA 2.14
+     Example before KEDA 2.14
 
      ```yaml
      triggers:
@@ -41,7 +41,7 @@ Your AKS cluster Kubernetes version determines what KEDA version will be install
      metricName: "my-custom-name"
      ```
 
-     An example with KEDA 2.14 or 2.15
+     Example with KEDA 2.14 or 2.15
 
      ```yaml
      triggers:
@@ -60,20 +60,20 @@ To determine if your cluster is affected by the recent KEDA upgrades, follow the
 
     Clusters running Kubernetes versions 1.30 or later will be impacted by the KEDA upgrades (2.14 or 2.15). If you're on version 1.29 or earlier, these updates will not affect you. However, if you plan to upgrade your AKS cluster to Kubernetes version 1.30 or 1.31, be sure to review the changes and prepare accordingly before upgrading.
      
-    To check cluster version, run the following the Azure CLI command:
+    To check the cluster version, run the following the Azure CLI command:
 
      ```
      az aks show --resource-group <your-resource-group> --name <your-cluster-name> --query kubernetesVersion
      ```
-2. Audit KEDA Scalers in Use:
+2. Audit KEDA Scalers in use:
 
     - Review the configurations of KEDA Scalers currently deployed in your cluster.
-    - Check if Microsoft Entra Pod-Managed Identities are used for authentication. The following command will display output if you're using Pod Identity with KEDA:
+    - Check if Microsoft Entra pod-managed Identities are used for authentication. The following command will display output if you're using Pod Identity with KEDA:
     
         ```bash
         kubectl get TriggerAuthentication --all-namespaces -o jsonpath='{range .items[?(@.spec.podIdentity.provider=="azure")]}{.metadata.namespace}{"/"}{.metadata.name}{"\n"}{end}'
         ```
-3. Review the cluster Logs:
+3. Review the cluster logs:
 
     Look for any deprecation warnings or errors related to the removed or changed fields in KEDA, such as `metricName` or `metadata.clientSecret`.
 
