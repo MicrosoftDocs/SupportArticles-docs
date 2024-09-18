@@ -29,7 +29,7 @@ Only customers (not Microsoft) can manage the policies in their environment. Mic
 
 To fix this issue, follow these steps:
 
-1. Find the policy that blocks the action. These policies are listed in the error message , The name of a policyAssignment or policyDefinition is the last segment of the id string.
+1. Find the policy that blocks the action. These policies are listed in the error message, The name of a policyAssignment or policyDefinition is the last segment of the id string.
 
 1. If possible, change your deployment to meet the limitations of the policy, and then retry the deploy operation.
 
@@ -40,7 +40,7 @@ To fix this issue, follow these steps:
 To get details about the policy that blocked your cluster deployment operation, see [RequestDisallowedByPolicy error with Azure resource policy](/azure/azure-resource-manager/troubleshooting/error-policy-requestdisallowedbypolicy).
 
 > [!NOTE]
-> After fixing the policy that prevent AKS cluster creation you can to bring the cluster from failed to success by running `az aks update -g MyResourceGroup -n MyManagedCluster` This will  Reconcile the cluster and retry last failed operation , for more info about cluster in failed state see [Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state](/availability-performance/availability-performance/cluster-node-virtual-machine-failed-state.md) .
+> After fixing the policy that prevent AKS cluster creation you can bring the cluster from failed to success state by running `az aks update -g MyResourceGroup -n MyManagedCluster` This will  Reconcile the cluster and retry last failed operation, for more info about cluster in failed state see [Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state](/availability-performance/availability-performance/cluster-node-virtual-machine-failed-state.md).
 
 
 
