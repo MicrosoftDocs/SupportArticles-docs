@@ -22,13 +22,13 @@ _Applies to:_ &nbsp; Windows 10, Windows 11, Windows Server 2016 and later versi
 ```powershell
 #
 # usage:
-# PowerShell /file OrhanedProfile.ps1 [-clean] [-AcceptEula]
+# PowerShell /file OrhanedProfile.ps1 [-clean]
 #
 # The clean switch enables the deletion to take place.  Otherwise, it reports what it could do.
 #
 
 Param(
-    [switch]$bClean = $false,
+    [switch]$bClean = $false
 )
 
 
