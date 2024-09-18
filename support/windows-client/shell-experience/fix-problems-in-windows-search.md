@@ -133,7 +133,7 @@ To reset Windows Search by using PowerShell, follow these steps:
       Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <PreviousValue>
       ```
 
-       In this command, \<PreviousValue\> represents the original value of the `Get-ExecutionPolicy` cmdlet. As you did previously, accept the policy change by selecting <kbd>Y</kbd> and then selecting <kbd>Enter</kbd>.
+       In this command, *`<PreviousValue>`* represents the original value of the `Get-ExecutionPolicy` cmdlet. As you did previously, accept the policy change by selecting <kbd>Y</kbd> and then selecting <kbd>Enter</kbd>.
 
 1. Close the PowerShell Window.
 
@@ -171,4 +171,4 @@ To reset Windows Search by using PowerShell, follow these steps:
 
 ## Help us improve Search in Windows
 
-If the previous suggestions don't fix the problem, let us know by sending feedback in the Feedback Hub. Provide details, such as a description of the problem, screenshots, log files, and any other information that might be helpful. In the Feedback Hub, select the appropriate category and subcategory. In this case, submit your feedback in the **Desktop Environment** category with the **Search** subcategory.
+If the previous suggestions don't fix the problem, let us know by sending feedback in the Feedback Hub. Provide details, such as a description of the problem, screenshots, log files, and any other information that might be helpful. In the Feedback Hub, select the appropriate category and subcategory. In this case, submit your feedback in the **Desktop Environment** category and the **Search** subcategory.
