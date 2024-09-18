@@ -267,7 +267,7 @@ In the Python 3.11 release, SUSE has rebuilt the Azure Fence Agent package as `f
 	 ```bash
 	 sudo crm configure property maintenance-mode=true
 	 ```
-2. Install the following package on both the VMs:
+2. Install the following package on all nodes (VMs) of the cluster:
 	```bash
 	sudo zypper in fence-agents-azure-arm
 	```
