@@ -8,9 +8,9 @@ ms.service: azure-monitor
 ms.custom: sap:Availability Tests
 ---
 
-# Diagnose ping test failure in Application Insights availability monitoring
+# Diagnose Availability Test failures in Application Insights 
 
-This article discusses how to access the Application Insights troubleshooting report. This report enables you to easily diagnose common problems that cause your ping tests to fail.  
+This article discusses how to access the Application Insights troubleshooting report. This report enables you to easily diagnose common problems that cause your Availability tests to fail.  
 
 :::image type="content" source="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif" alt-text="Azure portal animation that shows how to view the end-to-end transaction details to find the troubleshooting report in Application Insights." lightbox="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif":::
 
@@ -50,7 +50,8 @@ The following table lists the steps, error messages, and possible causes that yo
 | Redirect limit validation | This webpage has too many redirects. This loop will be terminated here since this request exceeded the limit for auto redirects. | Redirects are limited to 10 per test. |
 | Status code validation | `200 - OK` does not match the expected status `400 - BadRequest`. | The returned status code is counted as a success. The "200" code indicates that a normal web page was returned. |
 | Content validation | The required text '<expected-response-text>' did not appear in the response. | <p>The string isn't an exact case-sensitive match in the response. For example, the string "Welcome!" must be a plain string, without wildcard characters (such as an asterisk). If your page content changes, you might have to update the string. Content match supports only English characters.</p> <p>Content match also fails if the response body is more than 1,000,000 bytes long. After the client reads that number of bytes, it stops reading the response body and drops the connection. Because of this behavior, the server experiences a `ClientConnectionFailure` exception, even if the client returns a success status code.</p> |
-|Missing test results in Azure portal|Test results are missing in the Azure Portal when viewing end-to-end transaction details for an availability test. No specific error message is returned for this issue.   |Ensure there are no **non-utf8 characters** in the response from the endpoint called using the availability test|
+|Missing test results in Azure portal|No specific error message is returned for this issue.   Test results are missing in the Azure Portal when viewing end-to-end transaction details for an availability test. |Non-UTF8 characters are not supported for viewing web test results. Ensure there are no non-UTF8 characters in the response from the endpoint called using the availability test|
+|Unsupported URL|This URL is not supported|<p>Availability Tests only allows communicating over publicly available IP addresses and hostnames. It is possible that you are trying to communicate with an internal only IP address that is not routable via the public internet.</p> <p>To get around this error, please ensure only Public IP addresses are defined in your webtest and that any DNS lookups your webtest depends on only returns valid publicly routable IP addresses. For what IP addresses your webtest tried to use during execution, please refer to the `DNS Resolution` troubleshooting step</p>|
 
 > [!NOTE]
 > If the connection reuse step is present, then the following steps won't be present:
