@@ -111,7 +111,7 @@ To enable system-assigned managed identity on a VM that was originally provision
 2. Navigate to the desired Virtual Machine and select **Identity**.
 3. Under **System assigned**, **Status**, select **On** and then select **Save**:
 
-    :::image type="content" source="media/ama-windows-installation-issues/turn-on-system-managed-identity.png" alt-text="Screenshot that shows how to turn on the system managed identity." lightbox="media/ama-windows-installation-issues/turn-on-system-managed-identity.png" border="true":::
+    :::image type="content" source="media/ama-windows-installation-issues/turn-on-system-assigned-identity.png" alt-text="Screenshot that shows how to turn on the system managed identity." lightbox="media/ama-windows-installation-issues/turn-on-system-assigned-identity.png" border="true":::
 
 #### <a id="assign-user-assigned-identity"></a>Assign a user-assigned managed identity to an existing VM
 
@@ -120,7 +120,7 @@ To assign a user-assigned identity to a VM, your account needs the [Virtual Mach
 1. Sign in to the Azure portal using an account associated with the Azure subscription that contains the VM.
 2. Navigate to the desired VM and select **Identity**, **User assigned** and then **+Add**.
 
-   :::image type="content" source="media/ama-windows-installation-issues/add-user-assigned-identity.png" alt-text="Screenshot that shows how to add a user-assigned identity." lightbox="media/ama-windows-installation-issues/add-user-assigned-identity.png" border="true":::
+   :::image type="content" source="media/ama-windows-installation-issues/add-user-assigned-managed-identity.png" alt-text="Screenshot that shows how to add a user-assigned identity." lightbox="media/ama-windows-installation-issues/add-user-assigned-managed-identity.png" border="true":::
 
 3. Select the user-assigned identity you want to add to the VM and then select **Add**.
 
