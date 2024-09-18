@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot Windows Search performance
 description: Provides guidelines for troubleshooting poor Windows Search performance.
-ms.date: 12/26/2023
+ms.date: 09/18/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: winciccore, kaushika
+ms.reviewer: winciccore, kaushika, rafern
 ms.custom: sap:Windows Desktop and Shell Experience\Windows Search, csstroubleshoot
 adobe-target: true
 ---
@@ -17,7 +17,6 @@ adobe-target: true
 
 This article provides guidelines for troubleshooting poor Windows Search performance.
 
-_Applies to:_ &nbsp; Windows 10 and Windows 11 – all editions  
 _Original KB number:_ &nbsp; 4558579
 
 ## Summary
@@ -43,7 +42,7 @@ The Indexer can index up to 1 million items. If the Indexer tries to index beyon
 > [!NOTE]
 > By default, the Indexer indexes any Outlook mailboxes on the computer. If a mailbox contains more than 6 million items, the performance of the Indexer may degrade. For more information, go to the "Change Outlook settings" section.
 
-To check the number of indexed items on Windows 10, select **Settings** > **Search** > **Searching Windows**, and then check the value of **Indexed items**. On Windows 11, the path is **Settings** > **Privacy & Security** > **Searching Windows.**
+To check the number of indexed items, select **Settings** > **Search** > **Searching Windows** and check the value of **Indexed items** in Windows 10, or select **Settings** > **Privacy & security** > **Searching Windows** and check the value of **Indexed** in Windows 11.
 
 :::image type="content" source="media/windows-search-performance-issues/indexing-status.png" alt-text="Screenshot of the Indexing Status value in the Searching Windows page of Settings.":::
 
@@ -52,12 +51,11 @@ To check the number of indexed items on Windows 10, select **Settings** > **Sear
 As the number of indexed items grows beyond 400,000, the index database grows considerably regardless of the size of those items. The size of the items also affects database size. A database that contains either a few large files or a large number of smaller files can affect performance. Both factors together can compound the problem. The Indexer tries to compress the index data. However, this approach becomes less effective as the index database grows.
 
 > [!IMPORTANT]
-> To check the size of the index database, use the **Size on disk** property of the Windows.edb file instead of relying on the **Size** property or the file size that's listed in Explorer. Because of the compression algorithms that the Indexer uses on sparse ESE and NTFS files, the value that's listed in Explorer may not be accurate. Additionally, this **Size** value might include space that was used by or allocated to the file in the past, instead of using the current size.
+> To check the size of the index database, use the **Size on disk** property of the *Windows.edb* (*Windows.db* in Windows 11) file instead of relying on the **Size** property or the file size that's listed in Explorer. Because of the compression algorithms that the Indexer uses on sparse ESE and NTFS files, the value that's listed in Explorer may not be accurate. Additionally, this **Size** value might include space that was used by or allocated to the file in the past, instead of using the current size.
 
-By default, Windows.edb is located in the C:\ProgramData\Microsoft\Search\Data\Applications\Windows folder. To check the size of the file, follow these steps:
+By default, *Windows.edb* is located in the C:\ProgramData\Microsoft\Search\Data\Applications\Windows folder. To check the size of the file, follow these steps:
 
-1. Right-click Windows.edb, and select **Properties**. On Windows 11 it is Windows.db.
-
+1. Right-click *Windows.edb*, and select **Properties**.
 2. Check the **Size on disk** value. This property reflects the actual disk space that the database uses.
 
     :::image type="content" source="media/windows-search-performance-issues/disk-size.png" alt-text="Screenshot of the Size on disk property of the Windows.edb file.":::
@@ -67,12 +65,13 @@ By default, Windows.edb is located in the C:\ProgramData\Microsoft\Search\Data\A
 You can use any of several approaches to improve the performance of Search and the Search Indexer.
 
 > [!IMPORTANT]
-> To make sure that the index reflects your changes, on Windows 10 select **Settings** > **Search** > **Searching Windows >** **Advanced Search Indexer Settings** > **Advanced** > **Rebuild**. On Windows 11, select **Settings** > **Privacy & Security** > **Searching Windows >** **Advanced indexing options** > **Advanced** > **Rebuild**.
+> To make sure that the index reflects your changes, select **Settings** > **Search** > **Searching Windows** > **Advanced Search Indexer Settings** > **Advanced** > **Rebuild** in Windows 10, or select **Settings** > **Privacy & security** > **Searching Windows** > **Advanced indexing options** > **Advanced** > **Rebuild** in Windows 11.
+
 Let the Indexer run for up to 24 hours to rebuild the index database.
 
 ##### Exclude folders  
 
-You can use this approach to reduce the number of items that are indexed and to reduce the size of the index database. To exclude whole folders from the index, on Windows 10 select **Settings** > **Search** > **Searching Windows** > **Add an excluded folder**. And then select a folder to exclude. On Windows 11 the path is **Settings** > **Privacy & Security** > **Searching Windows** > **Add an excluded folder**.
+You can use this approach to reduce the number of items that are indexed and to reduce the size of the index database. To exclude whole folders from the index, select **Settings** > **Search** > **Searching Windows** > **Add an excluded folder** in Windows 10, or select **Settings** > **Privacy & security** > **Searching Windows** > **Add an excluded folder** in Windows 11. And then select a folder to exclude.
 
 For a more granular method to include or exclude items, open **Searching Windows**, and select **Advanced Search Indexer Settings**. In **Indexing Options**, select **Modify**, and then select or deselect locations to index.
 
@@ -112,7 +111,7 @@ If a different message appears, see the following table for more information abo
 
 | **Status message**| **Explanation**| **Possible actions** |
 |---|---|---|
-|Indexing complete|The Indexer is running as usual, and has finished indexing.|Indexing should be complete, and all results available. If you're still missing files, make sure that the correct folders are selected to search. To see a detailed list of the locations that are indexed, open **Searching Windows**, and select **Advanced Search Indexer Settings** (Windows 10) **or** **Advanced indexing options** (Windows 11). In **Indexing Options**, select **Modify**|
+|Indexing complete|The Indexer is running as usual, and has finished indexing.|Indexing should be complete, and all results available. If you're still missing files, make sure that the correct folders are selected to search. To see a detailed list of the locations that are indexed, open **Searching Windows**, and select **Advanced Search Indexer Settings** (Windows 10) or **Advanced indexing options** (Windows 11). In **Indexing Options**, select **Modify**.|
 |Indexing in progress. Search results might not be complete during this time.|The Indexer has found new files on the system and is adding them to the index. Depending on the number of files that have recently changed, it could take a few hours|Leave the computer turned on and connected to power (if applicable) for a few hours to let indexing finish.|
 |Indexing speed is reduced because of user activity.|The Indexer is adding new items to be searched, but has slowed its progress because the user is interacting with the device.|The indexing process will complete slowly. Wait a few hours, or leave the device unattended and connected to a power source.|
 |Indexing is waiting for computer to become idle.|The Indexer has detected items that have to be indexed, but the device is too busy for the indexing process to continue.|Find out what is causing device to be busy. If the disk or CPU use is high, the indexer stops running to maximize the resources for foreground activities.|
