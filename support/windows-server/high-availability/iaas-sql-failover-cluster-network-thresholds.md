@@ -1,7 +1,7 @@
 ---
 title: Tuning failover cluster network thresholds
-description: Introduces solutions for adjusting the threshold of failover cluster network settings.
-ms.date: 09/14/2024
+description: Introduces solutions to adjust the thresholds of failover cluster network settings.
+ms.date: 09/17/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -11,11 +11,11 @@ ms.custom: sap:Clustering and High Availability\Setup and configuration of clust
 ---
 # Tuning failover cluster network thresholds
 
-This article introduces solutions for adjusting the threshold of failover cluster network settings. Increasing these values for the settings might help the cluster to be less sensitive to transient network issues.
+This article introduces solutions to adjust the thresholds of failover cluster network settings. Increasing the values of these settings might help reduce the cluster's sensitivity to transient network issues.
 
 ## Symptom
 
-When you run Windows failover cluster nodes, changing the cluster setting to a more relaxed monitoring state is recommended. Cluster settings out of the box are restrictive and could cause unneeded outages. The default settings are designed for highly tuned on premises networks and don't take into account the possibility of induced latency caused by a multitenant environment such as Microsoft Azure (IaaS).
+When you run Windows failover cluster nodes, changing the cluster setting to a more relaxed monitoring state is recommended. Cluster settings that are out of the box are restrictive and could cause unneeded outages. The default settings are designed for highly tuned on-premises networks and don't consider the possibility of induced latency caused by a multitenant environment such as Microsoft Azure (IaaS).
 
 Windows Server Failover Clustering is constantly monitoring the network connections and health of the nodes in a Windows Cluster. If a node is not reachable over the network, then recovery action is taken to recover and bring applications and services online on another node in the cluster. Latency in communication between cluster nodes can lead to the following error:
 
