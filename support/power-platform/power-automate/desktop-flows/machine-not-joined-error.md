@@ -8,7 +8,7 @@ ms.date: 09/18/2024
 ---
 # Connection creation fails with "This computer has not joined Microsoft Entra or the domain" or "MachineNotJoined"
 
-This aritcle provides resolutions for errors that occur when you create a desktop flow connection using the [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) option in Microsoft Power Automate for desktop.
+This article provides resolutions for errors that occur when you create a desktop flow connection using the [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) option in Microsoft Power Automate for desktop.
 
 ## Symptoms
 

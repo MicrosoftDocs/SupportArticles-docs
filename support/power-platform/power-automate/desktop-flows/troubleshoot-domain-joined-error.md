@@ -8,7 +8,7 @@ ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ---
 # Connection creation fails with "MissingOnPremSidForMachineDomainJoined"
 
-This aritcle provides resolutions for the "MissingOnPremSidForMachineDomainJoined" error code that occurs when you create a desktop flow connection using the [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) option in Microsoft Power Automate for desktop.
+This article provides resolutions for the "MissingOnPremSidForMachineDomainJoined" error code that occurs when you create a desktop flow connection using the [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) option in Microsoft Power Automate for desktop.
 
 ## Symptoms
 
