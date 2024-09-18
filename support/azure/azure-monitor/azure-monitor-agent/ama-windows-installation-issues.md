@@ -84,7 +84,13 @@ Before troubleshooting, understand the different ways to install the AMA for Win
 
 ### <a id="start-vm"></a>Step 1: Start the VM if it's not running
 
-If the VM isn't currently running, power it on and wait for it to fully boot and become operational. If the VM is in the running state, move to [Verify if the VM has a managed identity](#verify-vm-managed-identity).
+1. Sign in to the [Azure portal](https://portal.azure.com).
+2. Select the VM where the AMA agent is installed.
+3. In the VM **Overview** page, check if the VM **Status** is **Running**.
+
+   :::image type="content" source="media/ama-windows-installation-issues/check-vm-status.png" alt-text="Screenshot that shows the VM status.":::
+
+   If the VM is in the running state, move to [Verify if the VM has a managed identity](#verify-vm-managed-identity). If the VM isn't currently running, start it and wait for it to fully boot and become operational.
 
 ### <a id="verify-vm-managed-identity"></a>Step 2: Verify if the VM has a managed identity
 
@@ -132,6 +138,9 @@ To assign a user-assigned identity to a VM, your account needs the [Virtual Mach
    1. In the VM's left-hand menu, select **Extensions + applications** under the **Settings** section.
    2. Look for the extension with Type `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent`.
    3. If the extension exists, go to the step 4.
+
+      :::image type="content" source="media/ama-windows-installation-issues/verify-azuremonitorwindowsagent-exists.png" alt-text="Screenshot that shows the AzureMonitorWindowsAgent extension.":::
+
    4. If the extension doesn't exist, go to the step 5.
 
 4. Verify the extension status:
@@ -163,7 +172,7 @@ Check the VM Guest Agent's status by using one of the following methods:
        2. Look for the extension with Type `Microsoft.Azure.Monitor.VirtualMachines.GuestHealth.GuestHealthWindowsAgent`.
     4. Verify the status is "Provisioning Succeeded."
   
-- Run the `Get-Service WindowsAzureGuestAgent` PowerShell cmdlet as follows:
+- Run the `Get-Service WindowsAzureGuestAgent` PowerShell cmdlet and check the `Status` column in the command output:
 
     :::image type="content" source="media/ama-windows-installation-issues/powershell-command.png" alt-text="Screenshot that shows how to run the 'Get-Service WindowsAzureGuestAgent' cmdlet.":::
 
