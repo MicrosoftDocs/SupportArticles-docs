@@ -11,7 +11,7 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 # Breaking changes in Event-driven Autoscaling add-ons 2.15 and 2.14
 
-This article explores the key breaking changes introduced in Event-driven Autoscaling (KEDA) add-on 2.14 and 2.15. It also provides a guide on how to prepare your Azure Kubernetes Service (AKS) clusters for these updates. 
+This article explores the key breaking changes introduced in Event-driven Autoscaling (KEDA) add-on 2.14 and 2.15. It also provides information on how to prepare your Azure Kubernetes Service (AKS) clusters for these updates.
 
 ## Breaking changes in KEDA 2.14 and 2.15
 
