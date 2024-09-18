@@ -137,10 +137,10 @@ To assign a user-assigned identity to a VM, your account needs the [Virtual Mach
 3. Check the VM's extensions:
    1. In the VM's left-hand menu, select **Extensions + applications** under the **Settings** section.
    2. Look for the extension with Type `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent`.
-   3. If the extension exists, go to the step 4.
 
       :::image type="content" source="media/ama-windows-installation-issues/verify-azuremonitorwindowsagent-exists.png" alt-text="Screenshot that shows the AzureMonitorWindowsAgent extension.":::
 
+   3. If the extension exists, go to the step 4.
    4. If the extension doesn't exist, go to the step 5.
 
 4. Verify the extension status:
