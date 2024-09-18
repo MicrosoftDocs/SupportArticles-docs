@@ -25,9 +25,9 @@ Before you begin troubleshooting, perform the following checks:
 To confirm the OS on your VM is supported by the AMA, follow these steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Navigate to the **Virtual Machines** section.
-1. Select the Virtual Machine (VM) where the AMA agent is installed.
-1. In the VM's **Overview** page, check the **Operating system** value to see if it's one of the Windows OS in the [supported operating systems list](/azure/azure-monitor/agents/azure-monitor-agent-supported-operating-systems#windows-operating-systems).
+2. Navigate to the **Virtual Machines** section.
+3. Select the Virtual Machine (VM) where the AMA agent is installed.
+4. In the VM's **Overview** page, check the **Operating system** value to see if it's one of the Windows OS in the [supported operating systems list](/azure/azure-monitor/agents/azure-monitor-agent-supported-operating-systems#windows-operating-systems).
 
 ### <a id="determine-issue-type"></a>Determine the issue type: Installation or configuration
 
@@ -70,7 +70,7 @@ Adding VMs as DCR resources is a common way to install the AMA. When you create 
 Before troubleshooting, understand the different ways to install the AMA for Windows. It's useful to know how the AMA is installed. The installation options include: VM extension, Create DCR, VM insights, Container insights, Client installer, and Azure Policy. For more information, see [Install and manage Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-manage#installation-options).
 
 > [!NOTE]
-> To complete the troubleshooting process, ensure that you are aware of the Resource ID for the virtual machine (VM) and have administrative access to its operating system.
+> To complete the troubleshooting process, ensure that you are aware of the Resource ID for the VM and have administrative access to its operating system.
 
 ## Troubleshooting steps
 
@@ -84,12 +84,12 @@ Before troubleshooting, understand the different ways to install the AMA for Win
 
 ### <a id="start-vm"></a>Step 1: Start the VM if it's not running
 
-Power on the VM if it’s not already running, then allow it to complete its boot process and reach an operational state. If the VM is in the running state, move to [Verify if the VM has a managed identity](#verify-vm-managed-identity).
+If the VM isn't currently running, power it on and wait for it to fully boot and become operational. If the VM is in the running state, move to [Verify if the VM has a managed identity](#verify-vm-managed-identity).
 
 ### <a id="verify-vm-managed-identity"></a>Step 2: Verify if the VM has a managed identity
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-2. Select the Virtual Machine (VM) where the AMA agent is installed.
+2. Select the VM where the AMA agent is installed.
 3. Under the **Security** blade, and select **Identity** 
 4. Check if the "SystemAssigned" or "UserAssigned" identity exists.
 
@@ -154,17 +154,14 @@ Check the VM Guest Agent's status by using one of the following methods:
 
 - Use the Azure portal.
 
-1. Navigate to the [Azure portal](https://portal.azure.com/).
-
-2. Locate your VM:
-   1. In the left-hand menu, select **Virtual Machines**.
-   2. Find and select the VM you want to check from the list.
-
-3. Check the VM's extension:
-   1. In the VM's left-hand menu, select **Extensions + applications** under the **Settings** section.
-   2. Look for the extension with Type `Microsoft.Azure.Monitor.VirtualMachines.GuestHealth.GuestHealthWindowsAgent`.
-
-4. Verify the status is "Provisioning Succeeded."
+    1. Navigate to the [Azure portal](https://portal.azure.com/).
+    2. Locate your VM:
+       1. In the left-hand menu, select **Virtual Machines**.
+       2. Find and select the VM you want to check from the list.
+    3. Check the VM's extension:
+       1. In the VM's left-hand menu, select **Extensions + applications** under the **Settings** section.
+       2. Look for the extension with Type `Microsoft.Azure.Monitor.VirtualMachines.GuestHealth.GuestHealthWindowsAgent`.
+    4. Verify the status is "Provisioning Succeeded."
   
 - Use the `Get-Service WindowsAzureGuestAgent` PowerShell cmdlet.
 
@@ -177,7 +174,7 @@ If the VM Guest Agent is running, move to [Step 5: Verify if the VM Guest Agent 
 2. Locate your VM:
    1. In the left-hand menu, select **Virtual Machines**.
    2. Find and select the VM you want to check from the list.
-   
+
 3. Check the VM's extensions:
    1. In the VM's left-hand menu, select **Extensions + applications** under the **Settings** section.
    2. Look for the extension with Type `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent`.
@@ -189,7 +186,7 @@ If the VM Guest Agent is running, move to [Step 5: Verify if the VM Guest Agent 
    3. Look for logs related to the `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent` extension.
 
 5. Verify extension binaries.
-
+   
    If the logs indicate that the binaries are downloaded and extracted, move to [Step 6: Verify if the VM Guest Agent installs and enables the extension](#verify-vm-gust-agent-install-ama). If the binaries are missing, the VM Guest Agent doesn't successfully download the extension binary files. In this case, go to step 6.
 
 6. Restart the VM Guest Agent.
@@ -202,7 +199,7 @@ If the VM Guest Agent is running, move to [Step 5: Verify if the VM Guest Agent 
       net start WindowsAzureGuestAgent
       ```
 
-7. Verify extension binaries again.
+8. Verify extension binaries again.
    
    Repeat the previous step 5 to verify if the binaries have been successfully downloaded and extracted after the restart.
 
