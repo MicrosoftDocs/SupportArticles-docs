@@ -70,7 +70,7 @@ Adding VMs as DCR resources is a common way to install the AMA. When you create 
 Before troubleshooting, understand the different ways to install the AMA for Windows. It's useful to know how the AMA is installed. The installation options include: VM extension, Create DCR, VM insights, Container insights, Client installer, and Azure Policy. For more information, see [Install and manage Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-manage#installation-options).
 
 > [!NOTE]
-> To complete the troubleshooting process, ensure that you are aware of the Resource ID for the VM and have administrative access to its operating system.
+> To complete the troubleshooting process, ensure that you are aware of the Resource ID for the VM and have administrative access to its OS.
 
 ## Troubleshooting steps
 
@@ -146,7 +146,7 @@ To assign a user-assigned identity to a VM, your account needs the [Virtual Mach
 
 6. Check the extension and its status again.
    
-    After the extension is installed, repeat step 3 and 4 to ensure the extension is now present and the status is "Provisioning Succeeded."
+After the extension is installed, repeat step 3 and 4 to ensure the extension is now present and the status is "Provisioning Succeeded."
 
 ### <a id="verify-vm-guest-agent-running"></a>Step 4: Verify if the VM Guest Agent is running
 
@@ -165,7 +165,7 @@ Check the VM Guest Agent's status by using one of the following methods:
   
 - Run the `Get-Service WindowsAzureGuestAgent` PowerShell cmdlet as follows:
 
-    :::image type="content" source="media/ama-windows-installation-issues/powershell-cmdlet.png" alt-text="Screenshot that shows how to run the 'Get-Service WindowsAzureGuestAgent' cmdlet.":::
+    :::image type="content" source="media/ama-windows-installation-issues/powershell-command.png" alt-text="Screenshot that shows how to run the 'Get-Service WindowsAzureGuestAgent' cmdlet.":::
 
 If the VM Guest Agent is running, move to [Step 5: Verify if the VM Guest Agent downloads the extension binaries](#extension-binaries-downloaded).
 
@@ -180,7 +180,6 @@ If the VM Guest Agent is running, move to [Step 5: Verify if the VM Guest Agent 
 3. Check the VM's extensions:
    1. In the VM's left-hand menu, select **Extensions + applications** under the **Settings** section.
    2. Look for the extension with Type `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent`.
-   3. If the extension exists, go to the step 4.
 
 4. Check the VM Guest Agent logs:
    1. Open the **Boot Diagnostics** tab under **Support + troubleshooting**.
@@ -194,14 +193,13 @@ If the VM Guest Agent is running, move to [Step 5: Verify if the VM Guest Agent 
 6. Restart the VM Guest Agent.
    1. Connect to the VM using Remote Desktop Protocol (RDP).
    2. Open a Command Prompt or PowerShell window.
-   3. Running the following command:
-
+   3. Run the following command:
       ```console
       net stop WindowsAzureGuestAgent
       net start WindowsAzureGuestAgent
       ```
 
-8. Verify extension binaries again.
+7. Verify extension binaries again.
    
    Repeat the previous step 5 to verify if the binaries have been successfully downloaded and extracted after the restart.
 
@@ -327,7 +325,7 @@ To troubleshoot more complex installation issues, follow these steps:
     curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2021-01-01"
     ```
 
-If the connection is successful and there are no IMDS errors in the related logs, move to [Step 3: Test connectivity to handlers](#tect-handlers-connectivity). If the connection fails, review the related logs and attempt to mitigate any issues found.
+If the connection is successful and there are no IMDS errors in the related logs, move to [Step 2: Test connectivity to handlers](#tect-handlers-connectivity). If the connection fails, review the related logs and attempt to mitigate any issues found.
 
 ### <a id="tect-handlers-connectivity"></a>Step 2: Test connectivity to handlers
 
@@ -339,7 +337,7 @@ If the connection is successful and there are no IMDS errors in the related logs
     curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance/compute/resourceId?api-version=2021-01-01"
     ```
 
-If connectivity is successful and there are no errors in the related logs, move to [Step 4: Review network trace](#review-network-trace). If connectivity fails, review common errors and attempt to mitigate any issues found.
+If connectivity is successful and there are no errors in the related logs, move to [Step 3: Review network trace](#review-network-trace). If connectivity fails, review common errors and attempt to mitigate any issues found.
 
 ### <a id="review-network-trace"></a>Step 3: Review network trace
 
