@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Monitor Agent installation issues on Windows virtual machines
 description: Provides steps to troubleshoot installation issues with Azure Monitor Agent on a Windows virtual machine.
-ms.date: 09/10/2024
+ms.date: 09/18/2024
 ms.reviewer: johnsirmon, v-weizhu, neghuman
 ms.service: azure-monitor
 ms.custom: sap:Windows Extension not installing
@@ -163,7 +163,9 @@ Check the VM Guest Agent's status by using one of the following methods:
        2. Look for the extension with Type `Microsoft.Azure.Monitor.VirtualMachines.GuestHealth.GuestHealthWindowsAgent`.
     4. Verify the status is "Provisioning Succeeded."
   
-- Use the `Get-Service WindowsAzureGuestAgent` PowerShell cmdlet.
+- Run the `Get-Service WindowsAzureGuestAgent` PowerShell cmdlet as follows:
+
+    :::image type="content" source="media/ama-windows-installation-issues/powershell-cmdlet.png" alt-text="Screenshot that shows how to run the 'Get-Service WindowsAzureGuestAgent' cmdlet.":::
 
 If the VM Guest Agent is running, move to [Step 5: Verify if the VM Guest Agent downloads the extension binaries](#extension-binaries-downloaded).
 
@@ -313,10 +315,10 @@ To ensure that the Azure VM Guest Agent installs and enables the extension corre
 To troubleshoot more complex installation issues, follow these steps:
 
 1. [Test connectivity to Azure Instance Metadata Service (IMDS)](#tect-imds-connectivity)
-1. [Test connectivity to handlers](#tect-handlers-connectivity)
-1. [Review network trace](#review-network-trace)
+2. [Test connectivity to handlers](#tect-handlers-connectivity)
+3. [Review network trace](#review-network-trace)
 
-### <a id="tect-imds-connectivity"></a>Step 2: Test connectivity to Azure Instance Metadata Service (IMDS)
+### <a id="tect-imds-connectivity"></a>Step 1: Test connectivity to Azure Instance Metadata Service (IMDS)
 
 1. Connect to your VM using Remote Desktop Connection.
 2. Open Command Prompt as an administrator.
@@ -327,7 +329,7 @@ To troubleshoot more complex installation issues, follow these steps:
 
 If the connection is successful and there are no IMDS errors in the related logs, move to [Step 3: Test connectivity to handlers](#tect-handlers-connectivity). If the connection fails, review the related logs and attempt to mitigate any issues found.
 
-### <a id="tect-handlers-connectivity"></a>Step 3: Test connectivity to handlers
+### <a id="tect-handlers-connectivity"></a>Step 2: Test connectivity to handlers
 
 1. Connect to your VM using Remote Desktop Connection.
 2. Open Command Prompt as an administrator.
@@ -339,7 +341,7 @@ If the connection is successful and there are no IMDS errors in the related logs
 
 If connectivity is successful and there are no errors in the related logs, move to [Step 4: Review network trace](#review-network-trace). If connectivity fails, review common errors and attempt to mitigate any issues found.
 
-### <a id="review-network-trace"></a>Step 4: Review network trace
+### <a id="review-network-trace"></a>Step 3: Review network trace
 
 1. Use a network tracing tool like Wireshark or Fiddler to capture the network trace.
 2. Analyze the trace to identify any issues with connectivity to `global.handler.control.monitor.azure.com`.
