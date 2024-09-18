@@ -1,9 +1,9 @@
 ---
 title: Page setup dialog might unexpectedly close after PSA is installed
 description: Provides a workaround for an issue where the page setup dialog closes unexpectedly after installing the print support app.
-ms.date: 09/06/2024
+ms.date: 09/18/2024
 ms.custom: sap:Graphics and Multimedia development\Printing and the Print Spooler API
-ms.reviewer: davean, v-sidong
+ms.reviewer: riwaida, jinsshi, jiannche, sarpuri, mamanian, niclar, v-sidong
 ms.topic: troubleshooting
 ---
 # Page setup dialog might unexpectedly close after the print support app is installed
