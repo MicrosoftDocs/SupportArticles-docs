@@ -26,9 +26,7 @@ UFW is a user-friendly interface for managing a Netfilter firewall in Linux dist
 ## How to check whether a port is closed in the Ubuntu VM with UFW
 
 > [!NOTE]  
-> By default, UFW isn't enabled on Ubuntu VMs that are created by using images from the Azure Marketplace. Enabling UFW on your VM will close all ports, including port 22 for SSH services. 
-
-Before you enable UFW, make sure that you can access the VM by using the serial console:
+> By default, UFW isn't enabled on Ubuntu VMs that are created by using images from the Azure Marketplace. Enabling UFW on your VM will close all ports, including port 22 for SSH services. Therefore, before you enable UFW, make sure that you can access the VM by using the serial console to avoid losing access to the VM.
 
 1. Verify the UFW status:
 
