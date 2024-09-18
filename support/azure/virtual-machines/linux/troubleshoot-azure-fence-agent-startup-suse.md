@@ -261,7 +261,7 @@ Check the log in `/var/log/messages`. The following log entries indicate that th
 ```
 
 ### Resolution
-In the Python 3.11 release, SUSE has rebuilt the Azure Fence Agent package as `fence-agents-azure-arm`. For more information, see [Azure Fence Agent failed to start after Python 3.11 interpreter was installed](https://www.suse.com/support/kb/doc/?id=000021504). To fix the issue, follow these steps to install the package:
+SUSE has rebuilt the Azure Fence Agent package as `fence-agents-azure-arm` for Python 3.11. For more information, see [Azure Fence Agent failed to start after Python 3.11 interpreter was installed](https://www.suse.com/support/kb/doc/?id=000021504). To fix the issue, follow these steps to install the package:
  
 1. Put the cluster under maintenance mode:
 	 ```bash
