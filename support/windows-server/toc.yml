@@ -669,8 +669,6 @@ items:
       href: ./backup-and-storage/iscsi-initiator-not-login-to-favorite-targets.md
   - name: Multipath I/O (MPIO) and Storport
     items:
-    - name: Enabling MPIO with SAS disks decreases performance
-      href: ./backup-and-storage/enabling-mpio-with-sas-decreases-performance.md
     - name: MPIO option not available in Disk Management
       href: ./backup-and-storage/mpio-option-not-available-disk-management.md
   - name: Partition and volume management
@@ -1130,9 +1128,7 @@ items:
     - name: Problem with deleting nodes from active failover cluster membership
       href: ./high-availability/problem-nodes-failover-cluster.md
     - name: Remove nodes from active failover cluster membership
-      href: ./high-availability/nodes-failover-cluster-vmware.md
-  - name: Replacing hardware and updating the operating system
-    items: []
+      href: ./high-availability/nodes-failover-cluster-vmware.md  
   - name: Root cause of an unexpected failover
     items:
     - name: 'Troubleshooting guidance: Unexpected cluster failover'
@@ -2653,42 +2649,12 @@ items:
       href: ./virtualization/back-up-restore-hyper-v-vm-bmr-data-backup.md
     - name: Back up virtual machines from parent partition
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
-    - name: Can't export a virtual machine
-      href: ./virtualization/error-occurred-attempt-export-virtual-machine.md
-    - name: Error 0x80070005 when exporting VMs to network share
-      href: ./virtualization/error-0x80070005-export-vms.md
   - name: Configuration of virtual machine settings
     items:
-    - name: Caching in the virtual storage stack
-      href: ./virtualization/hyper-v-storage-caching-layers-data-consistency-requirements.md
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
       href: ./virtualization/copy-paste-not-work-hyper-v-vm-vmconnect-enhanced-session-mode.md
-    - name: Dynamic Memory allocation in a Virtual Machine does not change
-      href: ./virtualization/dynamic-memory-allocation-virtual-machine-not-change.md
-    - name: Ghost NIC built from VMware Templates
-      href: ./virtualization/ghost-nic-built-vmware-templates.md
     - name: Hyper-V limits the maximum number of processors
       href: ./virtualization/hyper-v-limits-maximum-number-processors-host-os.md
-    - name: Hyper-V virtual machine doesn't start and triggers 0x80070057 error
-      href: ./virtualization/hyper-v-virtual-machine-doesnt-start.md
-    - name: Hyper-V virtual machine supported file locations
-      href: ./virtualization/hyper-v-vm-supported-file-locations.md
-    - name: Importing a virtual machine
-      href: ./virtualization/importing-a-virtual-machine.md
-    - name: Mouse and screen resolution issues
-      href: ./virtualization/mouse-screen-resolution-issues.md
-    - name: Slow startup and shutdown on virtual machines
-      href: ./virtualization/virtual-machines-slow-startup-shutdown.md
-    - name: The security ID structure is invalid (0x80070539)
-      href: ./virtualization/security-id-structure-invalid.md
-    - name: Using Hyper-V with large-sector drives
-      href: ./virtualization/using-hyper-v-large-sector-drives.md
-    - name: Using Vmconnect.exe to connect to virtual machine fails
-      href: ./virtualization/vmconnect-fail-to-connect-to-virtual-machine.md
-    - name: VDS Basic Provider event ID 1
-      href: ./virtualization/vds-basic-provider-event-id-1.md
-    - name: VM can't reach network when vLan tagging is enabled
-      href: ./virtualization/vm-not-reach-vlan-tagging-enabled-network.md
   - name: Container
     items:
     - name: API call of performance counters is delayed
@@ -2699,16 +2665,8 @@ items:
       href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
-  - name: Hyper-V Network Virtualization (HNV)
-    items:
-    - name: Event ID 106
-      href: ./virtualization/event-id-106-hyper-v-virtual-switch-bound-lbfo-team.md
   - name: Hyper-V Replica
     items:
-    - name: Events 18210 and 3041 when Hyper-V Replica is configured
-      href: ./virtualization/events-18210-3041-and-1-hyper-v-replica.md
-    - name: Events when backing up a disk on Replica machine
-      href: ./virtualization/event-19050-32022-32032-32056-32315-32546-33680.md
     - name: Feature and performance optimization of HVR
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
     - name: Hyper-V replication is suspended at system shutdown
