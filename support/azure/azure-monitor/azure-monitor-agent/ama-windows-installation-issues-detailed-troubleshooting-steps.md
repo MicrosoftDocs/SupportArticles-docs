@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Azure Monitor Agent installation issues on Windows VMs
+title: Troubleshoot AMA installation issues on Windows VMs
 description: Provides detailed steps to troubleshoot installation issues with Azure Monitor Agent on Windows virtual machines.
 ms.date: 09/20/2024
 ms.reviewer: johnsirmon, v-weizhu, neghuman
