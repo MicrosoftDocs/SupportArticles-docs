@@ -14,8 +14,9 @@ ms.subservice: troubleshoot
 ---
 # Grid filter for Lookup column not showing any suggestions in a model-driven app
 
-The grid column filter for lookup type field does not show any record suggestions or it says, "No Records Found".
+## Symptoms
 
+When you try to filter data on a lookup column, you do not see a list of values, or it says, "No Records Found". For example, the filter on the Parent Business column doesn't show any results as shown in the screenshot below.
 ![emptyfiltersuggestions](media/grid-filter-not-showing-any-suggestions/emptyfiltersuggestions.png)
 
 ## Cause
@@ -23,7 +24,7 @@ The grid column filter for lookup type field does not show any record suggestion
 This can happen in two situations:
 
 1. The records for this lookup field do not have their primary field populated, so the filter dropdown will show blank.
-1. The lookup view for the entity associated with the column does not have the primary field added as part of its view as shown below
+1. The lookup view for the entity associated with the column does not have the primary field added as part of its view as shown in the screenshot below.
 ![primaryfieldabsent](media/grid-filter-not-showing-any-suggestions/primaryfieldabsent.png)
 
 ## Mitigation
