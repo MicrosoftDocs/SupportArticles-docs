@@ -5,8 +5,8 @@
 
 title: Grid filter for lookup column not showing any suggestions
 description: The grid column filter for lookup type field does not show any record suggestions or it says "No Records Found"
-author:      akshay-viz # GitHub alias
-ms.author:   akshay.maloo # Microsoft alias
+author: akmaloo
+ms.author: akmaloo
 ms.service: powerapps
 ms.topic: troubleshooting
 ms.date:     09/19/2024
