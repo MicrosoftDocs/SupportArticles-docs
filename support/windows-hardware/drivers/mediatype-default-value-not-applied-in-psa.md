@@ -2,7 +2,7 @@
 title: The default setting for MediaType in PSA isn't applied
 description: Provides a workaround for an issue where the default setting for MediaType in the print support app isn't applied.
 ms.date: 09/06/2024
-ms.reviewer: davean, jiannche
+ms.reviewer: riwaida
 ms.author: haiyingyu
 author: HaiyingYu
 ms.custom: sap:Windows Store app UI
