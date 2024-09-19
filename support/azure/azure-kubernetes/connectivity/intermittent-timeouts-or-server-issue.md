@@ -123,7 +123,7 @@ Started increasing memory
 
 Log entries were made the previous time that the container was run. The existence of these entries suggests that the application did start, but it closed because of some issues.
 
-Check the service associated with the deployment and try to curl the cluster IP of the service from inside cluster to identify the issue:
+Check the service associated with the deployment and try to curl the cluster IP of the service from inside the cluster to identify the issue:
 
 ```console
 $ kubectl get svc # Check the service associated with deployment 
@@ -183,7 +183,7 @@ Observations:
 You can tell from the events that the container is being killed because it's exceeding the memory limits. When the container memory limit is reached, the application becomes intermittently inaccessible, and the container is killed and restarted.
 
 > [!NOTE]
-> We recommend [configuring liveness, readiness and startup probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) in your pod definition. Depending on your application's behavior, this configuration can help recover the application from unexpected issues. Be cautious when configuring liveness probes.
+> We recommend [configuring liveness, readiness, and startup probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) in your pod definition. Depending on your application's behavior, this configuration can help recover the application from unexpected issues. Be cautious when configuring liveness probes.
 
 ## Solution
 
