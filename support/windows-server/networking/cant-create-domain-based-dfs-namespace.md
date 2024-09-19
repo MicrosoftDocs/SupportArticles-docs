@@ -91,7 +91,9 @@ Error c0000201 indicates, "A remote open failed because the network open restric
 > [!NOTE]
 > The following Process Monitor filters are helpful:
 >
-> - In the preceding Process Monitor output, 3488 is the PID of the DFS Management console process. Before you use this filter, identify the PID of the DFS Management console process first.
+> - `PID is 3488`, which is the PID of the DFS Management console
+>
+>     In the preceding Process Monitor output, 3488 is the PID of the DFS Management console process. Before you use this filter, identify the PID of the DFS Management console process first.
 > - `Path contains \\contoso.com` (or `\\contoso`)
 
 ## More information
