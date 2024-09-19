@@ -1,6 +1,6 @@
 ---
-title: Scripts to cleanup profile folder information and prevent TEMP user profiles from being created
-description: Provides a script to cleanup profile folder information and prevent TEMP user profiles from being created.
+title: Scripts to clean profile folder and prevent TEMP user profile creation
+description: Provides a script to clean up profile folder information and prevent TEMP user profiles from being created.
 ms.date: 09/19/2024
 manager: dcscontentpm
 audience: itpro
@@ -9,13 +9,13 @@ ms.localizationpriority: medium
 ms.reviewer: kaushika, gbrag, v-lianna
 ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
-# Scripts: Cleanup profile folder information and prevent TEMP user profiles from being created
+# Scripts: Clean up profile folder information and prevent TEMP user profiles from being created
 
 The sample script provided in this article can help clean up orphaned profile information from the registry and the _C:\\users_ folder.
 
-If profiles are incompletely or improperly removed, additional user folders can be created, or users may receive TEMP profiles upon logging in. In some cases, there can be many profiles in a state where TEMP profiles are used, even though these profile haven't been logged into yet.
+If profiles are incompletely or improperly removed, additional user folders can be created, or users may receive TEMP profiles upon logging in. In some cases, there can be many profiles in a state where TEMP profiles are used, even though these profiles haven't been logged into yet.
 
-_Applies to:_ &nbsp; Windows 10, Windows 11, Windows Server 2016 and later versions
+_Applies to:_ &nbsp; Windows 10, Windows 11, Windows Server 2016, and later versions
 
 [!INCLUDE [Script disclaimer](../../includes/script-disclaimer.md)]
 
@@ -24,7 +24,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11, Windows Server 2016 and later versi
 # usage:
 # PowerShell /file OrhanedProfile.ps1 [-clean]
 #
-# The clean switch enables the deletion to take place.  Otherwise, it reports what it could do.
+# The clean switch enables the deletion to take place. Otherwise, it reports what it could do.
 #
 
 Param(
@@ -40,7 +40,7 @@ if( -NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 
-# get Profiles folder
+# Get Profiles folder
 $ProfilesListRegPath = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList"
 $ProfilesFolder = $null
 $ProfilesFolder = Get-ItemPropertyValue -Path $ProfilesListRegPath -Name "ProfilesDirectory"
@@ -53,7 +53,7 @@ If( $ProfilesFolder -eq $null )
 
 
 #######################################
-# Begin to get and check ProfileList key for information
+# Begin to get and check ProfileList key information
 "Collecting ProfileList key information..."
 "=" * 40
 $WellKnownProfiles = @("S-1-5-18","S-1-5-19","S-1-5-20")
