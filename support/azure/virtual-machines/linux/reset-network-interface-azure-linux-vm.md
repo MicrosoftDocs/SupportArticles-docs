@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.custom: sap:Cannot connect to my VM, devx-track-azurecli, linux-related-content
 ms.workload: infrastructure-services
-ms.date: 09/13/2024
+ms.date: 09/19/2024
 ms.author: tibasham
 ---
 # Reset the network interface for Azure Linux VM
@@ -34,7 +34,7 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 ## Reset the NIC using Azure portal, Azure PowerShell or Azure CLI
 
 > [!NOTE]
-> We recommend using the [az vm repair reset-nic](/cli/azure/vm/repair#az-vm-repair-reset-nic) command to reset the NIC. To run this command, see the "Azure CLI" tab below.
+> We recommend using the [az vm repair reset-nic](/cli/azure/vm/repair#az-vm-repair-reset-nic) command to reset the NIC. To run this command, see the following "Azure CLI" tab.
 
 ### [Portal](#tab/azure-portal)
 
@@ -48,13 +48,13 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 5. Select the IP.
 6. If the **Private IP assignment** isn't set to **Static**, change it to **Static**.
 7. Change the **IP address** to another IP address that is available in the Subnet.
-8. The virtual machine will restart to initialize the new NIC to the system.
-9. Try to log into your machine using secure shell (SSH). If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
+8. The virtual machine restarts to initialize the new NIC to the system.
+9. Try to sign in to your machine using secure shell (SSH). If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
 1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed.
-2. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands:
+2. Open an elevated Azure PowerShell session. Run the following commands:
 
     ```powershell
     #Set the variables 
@@ -87,8 +87,8 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 
     $nic | Set-AzNetworkInterface
     ```
-2. The virtual machine will restart to initialize the new NIC to the system.
-3. Try to SSH to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
+2. The virtual machine restarts to initialize the new NIC to the system.
+3. Try to use SSH to connect to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -117,7 +117,7 @@ To submit a support request, go to the [Azure support page](https://azure.micros
    az network nic ip-config update -g MyResourceGroup --nic-name MyNic -n MyIpConfig --private-ip-address 10.0.0.9 
    ```
 
-3. Try to SSH to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
+3. Try to use SSH to connect to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
 ---
 
