@@ -27,9 +27,9 @@ Windows prompts for a BitLocker recovery password. However, a BitLocker recovery
 
 The BitLocker and Active Directory Domain Services (AD DS) FAQ address situations that may produce this symptom, and provides information about the procedure to resolve the issue:
 
-- [What if BitLocker is enabled on a computer before the computer joins the domain?](windows/security/operating-system-security/data-protection/bitlocker/faq#what-if-bitlocker-is-enabled-on-a-computer-before-the-computer-joins-the-domain-)
+- [What if BitLocker is enabled on a computer before the computer joins the domain?](/windows/security/operating-system-security/data-protection/bitlocker/faq#what-if-bitlocker-is-enabled-on-a-computer-before-the-computer-joins-the-domain-)
 
-- [What happens if the backup initially fails? Will BitLocker retry it?](windows/security/operating-system-security/data-protection/bitlocker/faq#what-happens-if-the-backup-initially-fails--will-bitlocker-retry-it-)
+- [What happens if the backup initially fails? Will BitLocker retry it?](/windows/security/operating-system-security/data-protection/bitlocker/faq#what-happens-if-the-backup-initially-fails--will-bitlocker-retry-it-)
 
 ## The recovery password for a laptop wasn't backed up, and the laptop is locked
 
