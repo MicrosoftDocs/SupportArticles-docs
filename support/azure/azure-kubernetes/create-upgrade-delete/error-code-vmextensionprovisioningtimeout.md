@@ -21,9 +21,9 @@ This article discusses how to identify and resolve the `VMExtensionProvisioningT
 When you try to create an AKS cluster by using the Azure CLI, you receive the "VMExtensionProvisioningTimeout" error with text like the following example:
 
 ```output
-Failed to reconcile agent pool agentpool0: err: **VMSSAgentPoolReconciler retry failed:**
-**Category: InternalError;**
-**SubCode: VMExtensionProvisioningTimeout;**
+Failed to reconcile agent pool agentpool0: err: VMSSAgentPoolReconciler retry failed:
+Category: InternalError;
+SubCode: VMExtensionProvisioningTimeout;
 Dependency: Microsoft.Compute/VirtualMachineScaleSet;
 OrginalError:
 Code="VMExtensionProvisioningTimeout"
