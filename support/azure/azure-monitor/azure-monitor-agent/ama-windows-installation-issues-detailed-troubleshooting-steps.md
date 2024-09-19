@@ -264,6 +264,6 @@ To ensure that the Azure VM Guest Agent installs and enables the extension corre
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Detailed troubleshooting steps](ama-windows-installation-issues-advanced-troubleshooting-steps.md)
+> [Advanced troubleshooting steps](ama-windows-installation-issues-advanced-troubleshooting-steps.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
