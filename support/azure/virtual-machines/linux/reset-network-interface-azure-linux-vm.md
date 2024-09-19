@@ -27,9 +27,7 @@ The following article also introduces how to view and change settings for a NIC,
 
 [Create, change, or delete a network interface](/azure/virtual-network/virtual-network-network-interface)
 
-If your Azure issue isn't addressed in this article, visit the Azure forums on [MSDN and Stack Overflow](https://azure.microsoft.com/support/forums/). You can post your issue in these forums, or post to [@AzureSupport on Twitter](https://twitter.com/AzureSupport). You also can submit an Azure support request.
-
-To submit a support request, go to the [Azure support page](https://azure.microsoft.com/support/options/) and select **Get support**.
+[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
 ## Reset the NIC using Azure portal, Azure PowerShell or Azure CLI
 
