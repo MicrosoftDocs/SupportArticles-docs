@@ -21,7 +21,7 @@ If a cluster is in a `failed` state, `upgrade` or `scale` operations won't succe
 
 Here are the most common reasons and corresponding solutions:
 
-- Scaling while having an insufficient **Compute Resource Provider (CRP)** quota.
+- Scaling while having an insufficient Compute Resource Provider (CRP) quota.
 
     To resolve this issue, increase your resource quota before you scale by following these steps:
 
