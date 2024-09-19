@@ -20,6 +20,7 @@ This guide helps you resolve the following grid issues that occur in a Power App
 - [Nested grid doesn't display data](nested-grid-not-display-data.md).
 - [Quick Find doesn't return correct results](quick-find-not-produce-correct-results.md).
 - [Some columns don't contain data](columns-not-contain-data.md).
+- [Some columns don't contain data](grid-filter-not-showing-any-suggestions.md).
 - [The overall record count doesn't match the displayed content](overall-record-count-not-match-displayed-content.md).
 
 ## Terms
