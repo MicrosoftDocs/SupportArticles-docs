@@ -1,78 +1,19 @@
 ---
-title: Troubleshoot Azure Monitor Agent installation issues on Windows virtual machines
-description: Provides steps to troubleshoot installation issues with Azure Monitor Agent on a Windows virtual machine.
-ms.date: 09/18/2024
+title: Detailed troubleshooting steps for Azure Monitor Agent installation issues on Windows virtual machines
+description: Provides detailed steps to troubleshoot installation issues with Azure Monitor Agent on Windows virtual machines.
+ms.date: 09/20/2024
 ms.reviewer: johnsirmon, v-weizhu, neghuman
 ms.service: azure-monitor
 ms.custom: sap:Windows Extension not installing
 ---
+# Detailed troubleshooting steps for Azure Monitor Agent installation issues on Windows virtual machines
 
-# Troubleshoot installation issues with Azure Monitor Agent on a Windows virtual machine
-
-This article helps you troubleshoot issues when you fail to install the Azure Monitor Agent (AMA) on an Azure virtual machines (VM) running Windows.
-
-## Before troubleshooting
-
-Before you begin troubleshooting, perform the following checks:
-
-- [Ensure the operating system (OS) is supported by AMA](#operating-system-supported)
-- [Determine the issue type: Installation or configuration](#determine-issue-type)
-- [Verify at least one Data Collection Rule (DCR) is associated with the VM](#verify-dcr)
-- [Understand installation options](#installation-options)
-
-### <a id="operating-system-supported"></a>Ensure the operating system (OS) is supported by AMA
-
-To confirm the OS on your VM is supported by the AMA, follow these steps:
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-2. Navigate to the **Virtual Machines** section.
-3. Select the Virtual Machine (VM) where the AMA agent is installed.
-4. In the VM's **Overview** page, check the **Operating system** value to see if it's one of the Windows OS in the [supported operating systems list](/azure/azure-monitor/agents/azure-monitor-agent-supported-operating-systems#windows-operating-systems).
-
-### <a id="determine-issue-type"></a>Determine the issue type: Installation or configuration
-
-1. Verify if the *AzureMonitorWindowsAgent* extension status isn't "Provisioning Succeeded."
-
-    1. In the Azure portal, go to the **Virtual Machines** section.
-    2. Select the VM where the AMA is installed.
-    3. Verify the VM is powered on and running.
-    4. Under **Settings**, select **Extensions + applications**.
-    5. Check that the `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent` extension status **isn't** displaying "Provisioning Succeeded."
-
-2. Check if one or more of the agent processes have failed to start.
-
-    1. Connect to your VM using Remote Desktop Connection.
-    2. Open **Task Manager** by selecting <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd>.
-    3. Select the **Processes** tab.
-    4. Check that one or more of the following processes aren't running:
-       - `AMAExtHealthMonitor`
-       - `MonAgentHost`
-       - `MonAgentLauncher`
-       - `MonAgentManager`
-
-If the `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent` extension status doesn't show "Provisioning Succeeded" or any of the four agent processes aren't running, you're encountering AMA installation issues. In this case, you can troubleshoot the issues by using this article. Otherwise, you need to investigate the AMA Windows configuration.
-
-### <a id="verify-dcr"></a>Verify at least one Data Collection Rule (DCR) is associated with the VM
-
-Adding VMs as DCR resources is a common way to install the AMA. When you create a DCR in the Azure portal, Azure Monitor Agent is installed on any machines that are added as resources for the DCR. Before you begin troubleshooting, verify that at least one DCR is associated with the VM:
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-2. Navigate to **Azure Monitor**.
-3. Select **Data Collection Rules**.
-4. Verify there is at least one DCR associated with the VM.
-5. If no DCR is associated to the VM, create a new DCR:
-   1. Select **Create**.
-   2. Follow the wizard to define the data sources and destinations.
-   3. Associate the DCR with the VM by selecting the **Resource** tab and selecting the VM.
-
-### <a id="installation-options"></a>Understand installation options
-
-Before troubleshooting, understand the different ways to install the AMA for Windows. It's useful to know how the AMA is installed. The installation options include: VM extension, Create DCR, VM insights, Container insights, Client installer, and Azure Policy. For more information, see [Install and manage Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-manage#installation-options).
+This article provides detailed steps to troubleshoot issues when the installation of the Azure Monitor Agent (AMA) fails on Azure Windows virtual machines (VMs).
 
 > [!NOTE]
 > To complete the troubleshooting process, ensure that you are aware of the Resource ID for the VM and have administrative access to its OS.
 
-## Troubleshooting steps
+## Detailed troubleshooting steps
 
 1. [Start the VM if it's not running](#start-vm)
 2. [Verify if the VM have a managed identity](#verify-vm-managed-identity)
@@ -88,7 +29,7 @@ Before troubleshooting, understand the different ways to install the AMA for Win
 2. Select the VM where the AMA agent is installed.
 3. In the VM **Overview** page, check if the VM **Status** is **Running**.
 
-   :::image type="content" source="media/ama-windows-installation-issues/check-vm-status.png" alt-text="Screenshot that shows the VM status." lightbox="media/ama-windows-installation-issues/check-vm-status.png":::
+   :::image type="content" source="media/ama-windows-installation-issues-detailed-troubleshooting-steps/check-vm-status.png" alt-text="Screenshot that shows the VM status." lightbox="media/ama-windows-installation-issues-detailed-troubleshooting-steps/check-vm-status.png":::
 
    If the VM is in the running state, move to [Verify if the VM has a managed identity](#verify-vm-managed-identity). If the VM isn't currently running, start it and wait for it to fully boot and become operational.
 
@@ -111,7 +52,7 @@ To enable system-assigned managed identity on a VM that was originally provision
 2. Navigate to the desired Virtual Machine and select **Identity**.
 3. Under **System assigned**, **Status**, select **On** and then select **Save**:
 
-    :::image type="content" source="media/ama-windows-installation-issues/turn-on-system-assigned-identity.png" alt-text="Screenshot that shows how to turn on the system managed identity." lightbox="media/ama-windows-installation-issues/turn-on-system-assigned-identity.png" border="true":::
+    :::image type="content" source="media/ama-windows-installation-issues-detailed-troubleshooting-steps/turn-on-system-assigned-identity.png" alt-text="Screenshot that shows how to turn on the system managed identity." lightbox="media/ama-windows-installation-issues-detailed-troubleshooting-steps/turn-on-system-assigned-identity.png" border="true":::
 
 #### <a id="assign-user-assigned-identity"></a>Assign a user-assigned managed identity to an existing VM
 
@@ -120,11 +61,11 @@ To assign a user-assigned identity to a VM, your account needs the [Virtual Mach
 1. Sign in to the Azure portal using an account associated with the Azure subscription that contains the VM.
 2. Navigate to the desired VM and select **Identity**, **User assigned** and then **+Add**.
 
-   :::image type="content" source="media/ama-windows-installation-issues/add-user-assigned-managed-identity.png" alt-text="Screenshot that shows how to add a user-assigned identity." lightbox="media/ama-windows-installation-issues/add-user-assigned-managed-identity.png" border="true":::
+   :::image type="content" source="media/ama-windows-installation-issues-detailed-troubleshooting-steps/add-user-assigned-managed-identity.png" alt-text="Screenshot that shows how to add a user-assigned identity." lightbox="media/ama-windows-installation-issues-detailed-troubleshooting-steps/add-user-assigned-managed-identity.png" border="true":::
 
 3. Select the user-assigned identity you want to add to the VM and then select **Add**.
 
-   :::image type="content" source="media/ama-windows-installation-issues/select-expected-user-identity.png" alt-text="Screenshot that shows a user-assigned identity is already slected." border="true":::
+   :::image type="content" source="media/ama-windows-installation-issues-detailed-troubleshooting-steps/select-expected-user-identity.png" alt-text="Screenshot that shows a user-assigned identity is already slected." border="true":::
 
 ### <a id="verify-ama-extension-exists"></a>Step 3: Verify if the extension exists in the VM configuration
 
@@ -138,7 +79,7 @@ To assign a user-assigned identity to a VM, your account needs the [Virtual Mach
    1. In the VM's left-hand menu, select **Extensions + applications** under the **Settings** section.
    2. Look for the extension with Type `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent`.
 
-      :::image type="content" source="media/ama-windows-installation-issues/verify-ama-extension-exists.png" alt-text="Screenshot that shows the AzureMonitorWindowsAgent extension." lightbox="media/ama-windows-installation-issues/verify-ama-extension-exists.png":::
+      :::image type="content" source="media/ama-windows-installation-issues-detailed-troubleshooting-steps/verify-ama-extension-exists.png" alt-text="Screenshot that shows the AzureMonitorWindowsAgent extension." lightbox="media/ama-windows-installation-issues-detailed-troubleshooting-steps/verify-ama-extension-exists.png":::
 
    3. If the extension exists, go to the step 4.
    4. If the extension doesn't exist, go to the step 5.
@@ -147,7 +88,7 @@ To assign a user-assigned identity to a VM, your account needs the [Virtual Mach
    1. Check the **Status** column for the `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent` extension.
    2. If the status is "Provisioning Succeeded," skip step 5 and 6 and move to [Verify if the VM Guest Agent is running](#verify-vm-guest-agent-running).
 
-      :::image type="content" source="media/ama-windows-installation-issues/verify-ama-extension-status.png" alt-text="Screenshot that shows the AzureMonitorWindowsAgent extension's status." lightbox="media/ama-windows-installation-issues/verify-ama-extension-status.png":::
+      :::image type="content" source="media/ama-windows-installation-issues-detailed-troubleshooting-steps/verify-ama-extension-status.png" alt-text="Screenshot that shows the AzureMonitorWindowsAgent extension's status." lightbox="media/ama-windows-installation-issues-detailed-troubleshooting-steps/verify-ama-extension-status.png":::
    3. If the status isn't "Provisioning Succeeded," proceed to the step 5 and 6.
 
 5. Install the extension:
@@ -176,7 +117,7 @@ Check the VM Guest Agent's status by using one of the following methods:
   
 - Run the `Get-Service WindowsAzureGuestAgent` PowerShell cmdlet and check the `Status` column in the command output:
 
-    :::image type="content" source="media/ama-windows-installation-issues/powershell-command.png" alt-text="Screenshot that shows how to run the 'Get-Service WindowsAzureGuestAgent' cmdlet.":::
+    :::image type="content" source="media/ama-windows-installation-issues-detailed-troubleshooting-steps/powershell-command.png" alt-text="Screenshot that shows how to run the 'Get-Service WindowsAzureGuestAgent' cmdlet.":::
 
 If the VM Guest Agent is running, move to [Step 5: Verify if the VM Guest Agent downloads the extension binaries](#extension-binaries-downloaded).
 
@@ -319,43 +260,10 @@ To ensure that the Azure VM Guest Agent installs and enables the extension corre
    
     If all four processes (`AMAExtHealthMonitor`, `MonAgentHost`, `MonAgentLauncher`, and `MonAgentManager`) are listed and running, the agent processes have successfully started.
 
-## Advanced troubleshooting steps
 
-To troubleshoot more complex installation issues, follow these steps:
+## Next steps
 
-1. [Test connectivity to Azure Instance Metadata Service (IMDS)](#tect-imds-connectivity)
-2. [Test connectivity to handlers](#tect-handlers-connectivity)
-3. [Review network trace](#review-network-trace)
-
-### <a id="tect-imds-connectivity"></a>Step 1: Test connectivity to Azure Instance Metadata Service (IMDS)
-
-1. Connect to your VM using Remote Desktop Connection.
-2. Open Command Prompt as an administrator.
-3. Test connectivity to IMDS:
-    ```console
-    curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2021-01-01"
-    ```
-
-If the connection is successful and there are no IMDS errors in the related logs, move to [Step 2: Test connectivity to handlers](#tect-handlers-connectivity). If the connection fails, review the related logs and attempt to mitigate any issues found.
-
-### <a id="tect-handlers-connectivity"></a>Step 2: Test connectivity to handlers
-
-1. Connect to your VM using Remote Desktop Connection.
-2. Open Command Prompt as an administrator.
-3. Test connectivity to handlers:
-
-    ```console
-    curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance/compute/resourceId?api-version=2021-01-01"
-    ```
-
-If connectivity is successful and there are no errors in the related logs, move to [Step 3: Review network trace](#review-network-trace). If connectivity fails, review common errors and attempt to mitigate any issues found.
-
-### <a id="review-network-trace"></a>Step 3: Review network trace
-
-1. Use a network tracing tool like Wireshark or Fiddler to capture the network trace.
-2. Analyze the trace to identify any issues with connectivity to `global.handler.control.monitor.azure.com`.
-
-If issues can't be mitigated, search for known issues or reach out for assistance in the [Microsoft Q&A forums](/answers/tags/133/azure). Before seeking further help, ensure that you have collected the necessary logs.
-
+> [!div class="nextstepaction"]
+> [Detailed troubleshooting steps](ama-windows-installation-issues-advanced-troubleshooting-steps.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
