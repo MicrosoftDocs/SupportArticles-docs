@@ -36,7 +36,7 @@ You also can [view the error details in the Azure portal](troubleshoot-aks-clust
 
 ## Cause
 
-Several different issues can cause the `VMExtensionProvisioningError` class of errors. However, the troubleshooting steps are the same for all the issues. Possible causes are as follows:
+Several different issues can cause the "VMExtensionProvisioningError" class of errors. However, the troubleshooting steps are the same for all the issues. Possible causes are as follows:
 
 - The custom script extension that provisions the virtual machines (VMs) can't establish a connection to the endpoint that's used for downloading the Kubernetes binaries.
 
