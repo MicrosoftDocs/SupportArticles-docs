@@ -2665,8 +2665,6 @@ items:
       href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
-  - name: Hyper-V Network Virtualization (HNV)
-    items: []
   - name: Hyper-V Replica
     items:
     - name: Feature and performance optimization of HVR
