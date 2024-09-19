@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot cluster upgrading and scaling errors
 description: Troubleshoot errors that occur when you try to upgrade or scale an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/14/2024
+ms.date: 09/19/2024
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
@@ -21,9 +21,9 @@ If a cluster is in a `failed` state, `upgrade` or `scale` operations won't succe
 
 Here are the most common reasons and corresponding solutions:
 
-- Scaling while having an insufficient computer (CRP) quota.
+- Scaling while having an insufficient **Compute Resource Provider (CRP)** quota.
 
-    To resolve this issue, increase your resource quota before you scale as follow these steps:
+    To resolve this issue, increase your resource quota before you scale by following these steps:
 
     1. Scale your cluster back to a stable goal state within the quota.
 
