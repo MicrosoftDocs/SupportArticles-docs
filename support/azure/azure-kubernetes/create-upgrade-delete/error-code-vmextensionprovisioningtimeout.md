@@ -46,7 +46,7 @@ Several different issues can cause the "VMExtensionProvisioningError" class of e
 
 - The cluster can't resolve the necessary Domain Name System (DNS) address to correctly provision the node.
 
-- The custom script extension that provisions the VMs reached a timeout while running the packets managment update (such as [apt-get](https://manpages.ubuntu.com/manpages/xenial/man8/apt-get.8.html) in case the node pool uses Linux).
+- The custom script extension that provisions the VMs reached a timeout while running the packets management update (such as [apt-get](https://manpages.ubuntu.com/manpages/xenial/man8/apt-get.8.html) in case the node pool uses Linux).
 
 ## Solution
 
