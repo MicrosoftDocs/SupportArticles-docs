@@ -3,7 +3,7 @@ title: Troubleshoot the VMExtensionProvisioningTimeout error code
 description: Learn how to troubleshoot the VMExtensionProvisioningTimeout error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 09/19/2024
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, mariochaves, v-leedennis
+ms.reviewer: rissing, chiragpa, erbookbi, mariochaves, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionProvisioningTimeout error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
@@ -18,7 +18,7 @@ This article discusses how to identify and resolve the `VMExtensionProvisioningT
 
 ## Symptoms
 
-When you try to create an AKS cluster by using the Azure CLI, you will receive the "VMExtensionProvisioningTimeout" error like the following text:
+When you try to create an AKS cluster by using the Azure CLI, you receive the "VMExtensionProvisioningTimeout" error with text like the following example:
 
 ```output
 Failed to reconcile agent pool agentpool0: err: **VMSSAgentPoolReconciler retry failed:**
@@ -46,7 +46,7 @@ Several different issues can cause the `VMExtensionProvisioningError` class of e
 
 - The cluster can't resolve the necessary Domain Name System (DNS) address to correctly provision the node.
 
-- The custom script extension that provisions the VMs reached a timeout while running the packets managment (such as [apt-get](https://manpages.ubuntu.com/manpages/xenial/man8/apt-get.8.html) update in case the nodepool uses linux).
+- The custom script extension that provisions the VMs reached a timeout while running the packets managment update (such as [apt-get](https://manpages.ubuntu.com/manpages/xenial/man8/apt-get.8.html)) in case the node pool uses Linux).
 
 ## Solution
 
