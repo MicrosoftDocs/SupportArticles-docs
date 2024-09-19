@@ -1,8 +1,8 @@
 ---
 title: Fix intermittent time-outs or server issues during app access
 description: Troubleshoot intermittent time-outs or server issues that occur when you try to access an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/15/2024
-ms.reviewer: chiragpa, v-leedennis
+ms.date: 09/19/2024
+ms.reviewer: chiragpa, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to fix intermittent time-outs or server issues so that I can successfully access an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Connectivity
@@ -123,7 +123,7 @@ Started increasing memory
 
 Log entries were made the previous time that the container was run. The existence of these entries suggests that the application did start, but it closed because of some issues.
 
-Check service associated with the deployment and try to curl the ClusterIP of the service from inside cluster to isolate the issue.
+Check the service associated with the deployment and try to curl the cluster IP of the service from inside cluster to identify the issue:
 
 ```console
 $ kubectl get svc # Check the service associated with deployment 
@@ -183,8 +183,7 @@ Observations:
 You can tell from the events that the container is being killed because it's exceeding the memory limits. When the container memory limit is reached, the application becomes intermittently inaccessible, and the container is killed and restarted.
 
 > [!NOTE]
-> Its Recomended to configure probes (liveness,readiness,startup) in your pod definition and based on your application behavior, it will recover application from unwanted issues  
-> And should be careful configuring Liveness probes, to read more about it [configure-liveness-readiness-startup-probes].(https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+> We recommend [configuring liveness, readiness and startup probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) in your pod definition. Depending on your application's behavior, this configuration can help recover the application from unexpected issues. Be cautious when configuring liveness probes.
 
 ## Solution
 
