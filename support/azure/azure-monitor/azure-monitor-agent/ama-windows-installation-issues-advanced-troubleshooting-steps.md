@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot Azure Monitor Agent installation issues on Windows virtual machines
+title: Advanced troubleshooting for AMA installation issues on Windows VMs
 description: Provides advanced steps to troubleshoot complex installation issues with Azure Monitor Agent on Windows virtual machines.
 ms.date: 09/18/2024
 ms.reviewer: johnsirmon, v-weizhu, neghuman
 ms.service: azure-monitor
 ms.custom: sap:Windows Extension not installing
 ---
-# Advanced troubleshooting steps for Azure Monitor Agent installation issues on Windows virtual machines
+# Advanced troubleshooting for Azure Monitor Agent installation issues on Windows VMs
 
 This article provides advanced steps to troubleshoot complex issues when the installation of the Azure Monitor Agent (AMA) fails on Azure Windows virtual machines (VMs).
 
