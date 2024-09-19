@@ -3,14 +3,14 @@
 # For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
+title: Grid filter for lookup column not showing any suggestions
+description: The grid column filter for lookup type field does not show any record suggestions or it says "No Records Found"
 author:      akshay-viz # GitHub alias
 ms.author:   akshay.maloo # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
+ms.service: powerapps
+ms.topic: troubleshooting
 ms.date:     09/19/2024
+ms.subservice: troubleshoot
 ---
 # Grid filter for Lookup column not showing any suggestions in a model-driven app
 
