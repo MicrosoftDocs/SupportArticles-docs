@@ -1128,9 +1128,7 @@ items:
     - name: Problem with deleting nodes from active failover cluster membership
       href: ./high-availability/problem-nodes-failover-cluster.md
     - name: Remove nodes from active failover cluster membership
-      href: ./high-availability/nodes-failover-cluster-vmware.md
-  - name: Replacing hardware and updating the operating system
-    items: []
+      href: ./high-availability/nodes-failover-cluster-vmware.md  
   - name: Root cause of an unexpected failover
     items:
     - name: 'Troubleshooting guidance: Unexpected cluster failover'
