@@ -3,7 +3,7 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 07/19/2024
+ms.date: 09/16/2024
 ms.reviewer: kendownie
 ---
 
@@ -219,7 +219,7 @@ Permissions on NFS file shares are enforced by the client OS rather than the Azu
 
 ### Solution
 
-In the Azure portal, navigate to the file share and select **Properties**. Change the **Root Squash** setting to **No Root Squash**.
+In the Azure portal, navigate to the file share and select **Properties**. Change the **Root Squash** setting to **No Root Squash**. For more information, see [Configure root squash for Azure Files](/azure/storage/files/nfs-root-squash).
 
 With **No Root Squash** enabled, the root user on the client system has the same privileges as the root user on the server system. You can now use `chown` to change the ownership of any file or directory in the share, regardless of the current owner. After you make the changes, you can re-enable **Root Squash** if necessary.
 

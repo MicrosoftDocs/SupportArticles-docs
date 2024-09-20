@@ -200,6 +200,10 @@
       href: flow-run-issues/there-is-a-problem-with-the-flows-trigger.md
     - name: Troubleshoot slow running flows
       href: flow-run-issues/troubleshoot-slow-running-flows.md
+- name: Process Mining
+  items:
+    - name: '"The user has not been assigned any license" error when accessing a process'
+      href: process-mining/process-mining-license-error.md
 - name: Solutions
   items:
     - name: Can't import solutions or publish changes
