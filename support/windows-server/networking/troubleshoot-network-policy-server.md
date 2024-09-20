@@ -80,7 +80,7 @@ If you're using NPS and Microsoft Entra multifactor authentication (MFA), try to
 
 ### Emerging and known issues
 
-Windows release health page is designed to inform you about emerging and known issues you may be experiencing. Check sections of [Windows release health page](/windows/release-health/) for each impacted operating system version.
+The Windows release health page is designed to inform you about emerging and known issues you may be experiencing. Check sections of the [Windows release health page](/windows/release-health/) for each impacted operating system version.
 
 ### NPS Event ID 13: A RADIUS message was received from the invalid RADIUS client IP address xx.xx.xx.xx
 
