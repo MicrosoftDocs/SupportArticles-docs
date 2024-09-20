@@ -1,7 +1,7 @@
 ---
 title: How to disable HTTP proxy features
 description: Describes how to disable specific features of Windows HTTP proxies.
-ms.date: 12/26/2023
+ms.date: 09/21/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -54,3 +54,6 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\Disable
 ```
 
 After you disable WPAD, you have to manually configure all proxies.
+
+> [!IMPORTANT]
+> In addition to setting the registry key, WPAD should also be disabled in the **Windows Settings** UI, as third-party apps and Internet browsers may rely on these settings for Proxy Auto-Discovery.
