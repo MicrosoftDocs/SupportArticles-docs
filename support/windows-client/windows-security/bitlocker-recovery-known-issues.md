@@ -1,8 +1,8 @@
 ---
 title: 'BitLocker recovery: known issues'
 description: Describes common issues that can occur that prevent BitLocker from behaving as expected when recovering a drive, or may cause BitLocker to start recovery unexpectedly. The article provides guidance for addressing those issues.
-ms.date: 12/26/2023
-ms.reviewer: kaushika, v-tappelgate
+ms.date: 09/20/2024
+ms.reviewer: kaushika, v-tappelgate, hirito
 manager: dcscontentpm
 ms.collection:
 - Windows Security Technologies\BitLocker
