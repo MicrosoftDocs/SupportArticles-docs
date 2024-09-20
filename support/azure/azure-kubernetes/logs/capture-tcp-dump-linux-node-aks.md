@@ -99,6 +99,9 @@ node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2   1/1     Running   0     
 
 The helper pod has a prefix of `node-debugger-aks`, as shown in the third row. Replace the pod name, and then run the following kubectl command. These commands retrieve the packet capture for your Linux node.
 
+> [!NOTE]
+> If the command ```chroot /host``` was used when entering the debug pod, add ```/host``` in front of ```/capture.cap``` for the source file.
+
 ```bash
 kubectl cp node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2:/capture.cap capture.cap
 ```
