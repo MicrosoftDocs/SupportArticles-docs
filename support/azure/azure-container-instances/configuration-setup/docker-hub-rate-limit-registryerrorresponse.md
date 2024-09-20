@@ -18,7 +18,9 @@ When you try to create or update a container instance and pull images anonymousl
 > Error code: RegistryErrorResponse  
 > An error response is received from the docker registry 'index.docker.io'. Please retry later.
 
-You can find this error in the Azure portal by navigating to the ACI resource group and then selecting **Activity log**.
+To find this error in the Azure portal, navigate to the container instance and select **Activity log**. In the **Activity log** page, select the failed operation to check the error message.
+
+ :::image type="content" source="media/docker-hub-rate-limit-registryerrorresponse/registryerrorresponse-error-message.png" alt-text="Screenshot that shows the 'RegistryErrorResponse' error message." lightbox="media/docker-hub-rate-limit-registryerrorresponse/registryerrorresponse-error-message.png":::
 
 You also might see the following error messages:
 
