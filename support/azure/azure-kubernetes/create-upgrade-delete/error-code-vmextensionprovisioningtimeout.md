@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the VMExtensionProvisioningTimeout error code
 description: Learn how to troubleshoot the VMExtensionProvisioningTimeout error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/19/2024
+ms.date: 09/20/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, mariochaves, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
