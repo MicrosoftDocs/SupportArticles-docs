@@ -14,6 +14,8 @@
   items:
     - name: Server side synchronization
       items:
+        - name: Emails aren't automatically tracked or synchronized
+          href: email-m365-integration/emails-not-automatically-tracked-or-synchronized.md
         - name: Error code 8005E259
           href: email-m365-integration/server-side-synchronization/error-code-8005e259.md
         - name: Error code 8005E272
@@ -23,7 +25,9 @@
         - name: Error code 8005E274
           href: email-m365-integration/server-side-synchronization/error-code-8005e274.md        
         - name: Error code 8005E276
-          href: email-m365-integration/server-side-synchronization/error-code-8005e276.md   
+          href: email-m365-integration/server-side-synchronization/error-code-8005e276.md
+        - name: Incoming emails are unexpectedly synchronized or have unexpected or missing data
+          href: email-m365-integration/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md
 - name: Plug-in execution
   items:
     - name: Dataverse plug-ins
