@@ -1,11 +1,11 @@
 ---
 title: Registry entries about Kerberos protocol and Key Distribution Center (KDC)
 description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and troubleshooting Kerberos authentication issues.
-ms.date: 05/21/2024
+ms.date: 09/20/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
+ms.localizationpriority: medium
 ms.reviewer: kaushika, herbertm
 ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
 ---
@@ -98,12 +98,11 @@ The registry entries that are listed in this section must be added to the follow
   - Type: REG_DWORD
 
     This value indicates the default encryption type for pre-authentication.
-    Default value for RC4 is 23 (decimal) or 0x17 (hexadecimal)
+    Default value is 18 decimal for AES256
 
-    When you want to use AES, set the value to one of the following values:
-
-    - aes256-cts-hmac-sha1-96: 18 or 0x12
-    - aes128-cts-hmac-sha1-96: 17 or 0x11
+    Possible other values:
+    17 decimal for AES128
+    23 decimal for RC4 HMAC
 
     This value indicates the default encryption type for pre-authentication.
 
