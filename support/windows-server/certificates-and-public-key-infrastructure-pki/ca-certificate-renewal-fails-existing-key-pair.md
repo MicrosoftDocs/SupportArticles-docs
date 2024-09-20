@@ -1,34 +1,34 @@
 ---
 title: CA certificate renewal fails when using a KSP provider
-description: Helps resolve the issue in which the Certificate Authority (CA) certificate renewal fails with the existing public and private key pair when using a Key Storage Provider (KSP) provider.
-ms.date: 09/14/2024
+description: Helps resolve an issue where the CA certificate renewal with the existing public and private key pair fails when using a KSP provider.
+ms.date: 09/20/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, flbelea, v-lianna
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
-# The CA certificate renewal fails with the existing public and private key pair when using a KSP provider
+# CA certificate renewal with the existing public and private key pair fails when using a KSP provider
 
-This article helps resolve the issue in which the Certificate Authority (CA) certificate renewal fails with the existing public and private key pair when using a Key Storage Provider (KSP) provider.
+This article helps resolve an issue in which the Certificate Authority (CA) certificate renewal with the existing public and private key pair fails when using a Key Storage Provider (KSP) provider.
 
-In the Certification Authority snap-in, right-click the CA and select **All Tasks** > **Renew CA Certificate**. Then, select **No** on generating a new public and private key pair in the **Renew CA Certificate** dialog, which means to reuse the existing key pair. You aren't prompted to save the request or send the request to an offline CA as expected. The CA service restarts automatically, and the renewal fails.
+In the Certification Authority snap-in, you right-click the CA and select **All Tasks** > **Renew CA Certificate**. Then, in the **Renew CA Certificate** dialog, when asked to generate a new public and private key pair, you select **No**, which means to reuse the existing key pair. In this case, you aren't prompted to save the request or send the request to an offline CA as expected. The CA service restarts automatically, and the renewal fails.
 
 ## The KeySpec value is 2
 
-For a CA certificate using a KSP provider, the Key Specification (KeySpec) property is expected to have a KeySpec value of `0`. However, when the issue occurs, the KeySpec value is `2` which causes the CA certificate renewal to fail.
+For a CA certificate using a KSP provider, the Key Specification (KeySpec) property is expected to have a `KeySpec` value of `0`. However, when the issue occurs, the `KeySpec` value is `2`, which causes the CA certificate renewal to fail.
 
 ## Update the KeySpec value from 2 to 0
 
-To resolve this issue, update the KeySpec value from `2` to `0` by using the following steps:
+To resolve this issue, update the `KeySpec` value from `2` to `0` by using the following steps:
 
-1. Export the local machine store using the command:
+1. Export the local machine store using the following command:
 
     ```console
     certutil -v -store my > c:\temp\machine.txt
     ```
 
-2. Check the KeySpec values for all certificates used by the CA during the renewal. For example:
+2. Check the `KeySpec` values for all certificates used by the CA during the renewal. For example:
 
     ```output
     ================ Certificate 3 ================
@@ -70,10 +70,10 @@ To resolve this issue, update the KeySpec value from `2` to `0` by using the fol
         KeySpec = 2 -- AT_SIGNATURE
     ```
 
-3. If the value shows `KeySpec = 2 -- AT_SIGNATURE`, change the KeySpec value to `0` (`KeySpec = 0 -- XCN_AT_NONE`):
+3. If the `KeySpec` value is `2 -- AT_SIGNATURE`, change it to `0 -- XCN_AT_NONE`:
 
     1. [Back up the CA and private keys](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486805%28v=ws.11%29#backing-up-a-ca-database-and-private-key).
-    2. Create a file with the `.inf` extension. The contents of the file (*KeyProv.inf*) resembles:
+    2. Create a file with the `.inf` extension. The contents of the file (*KeyProv.inf*) resemble:
 
         ```output
         [Properties]
@@ -85,32 +85,32 @@ To resolve this issue, update the KeySpec value from `2` to `0` by using the fol
         _continue_="KeySpec = 0"
         ```
 
-    3. Run the command using the certificate Serial Number where the KeySpec value is `2`:
+    3. Run the following command using the certificate serial number where the `KeySpec` value is `2`:
 
         ```console
         certutil -repairstore my "21000000044a30cdeaaaae7b08000000000004" KeyProv.inf
         ```
 
         > [!NOTE]
-        > You can check the hash for each of the CA certificate in the CA properties by selecting each certificate and selecting **View Certificate** on the **General** tab. Then, on the **Details** tab, select **Serial number**.
+        > You can check the hash for each CA certificate in the CA properties by selecting each certificate and selecting **View Certificate** on the **General** tab. Then, on the **Details** tab, select **Serial number**.
 
-4. Re-execute the following command, and check if the KeySpec value is `0`:
+4. Re-execute the following command, and then check if the `KeySpec` value is `0`:
 
     ```console
     certutil -v -store my > c:\temp\machine-new.txt
     ```
 
-5. Use the preceding steps for each of the other CA certificates with the KeySpec value of `2`.
+5. Use the preceding steps for each of the other CA certificates with a `KeySpec` value of `2`.
 
-Once all the CA certificates have the KeySpec value of `0`, you can try to renew the CA certificate with the existing key pair again.
+Once all the CA certificates have a `KeySpec` value of `0`, you can try to renew the CA certificate again with the existing key pair.
 
 ## More information
 
-For certificates whose keys are generated using Cryptography Next Generation (CNG) providers, there's no concept of key specification, and the KeySpec value is always zero.
+For certificates whose keys are generated using Cryptography Next Generation (CNG) providers, there's no concept of key specification, and the `KeySpec` value is always `0`.
 
-KeySpec values and associated meanings:
+`KeySpec` values and associated meanings:
 
-|Keyspec value  |Value  |Means  |
+|Keyspec value  |Value  |Meaning  |
 |---------|---------|---------|
 |`0`     |`AT_NONE`         |The certificate is a CNG certificate.         |
 |`1`     |`AT_KEYEXCHANGE`         |For a legacy CAPI (non-CNG) certificate, the key can be used for signing and decryption.         |
