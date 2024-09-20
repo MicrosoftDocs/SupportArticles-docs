@@ -15,14 +15,10 @@ This article provides a solution for errors that occur during anonymous image pu
 
 When you try to create or update a container instance and pull images anonymously from Docker Hub using the Azure portal or Azure CLI, you receive an error message that resembles the following text:
 
-> Error code: RegistryErrorResponse
+> Error code: RegistryErrorResponse  
 > An error response is received from the docker registry 'index.docker.io'. Please retry later.
 
-## Cause
-
-The "RegistryErrorResponse" error might occur due to the rate limits on image pulls from Docker Hub. An agreement between Microsoft and Docker to allow Azure IP addresses to make unlimited anonymous image pulls from Docker Hub ended on June 30, 2024.
-
-You might see the following errors that indicate the "RegistryErrorResponse" error is caused by Docker Hub rate limit:
+You also might see the following error messages:
 
 - > ERROR: toomanyrequests: Too Many Requests.
 
@@ -30,6 +26,9 @@ You might see the following errors that indicate the "RegistryErrorResponse" err
 
 - > TOOMANYREQUESTS: too many requests to source registry for cache rule (name of customer's cache rule)
 
+## Cause
+
+The "RegistryErrorResponse" error might occur due to the rate limits on image pulls from Docker Hub. An agreement between Microsoft and Docker to allow Azure IP addresses to make unlimited anonymous image pulls from Docker Hub ended on June 30, 2024.
 
 ## Solution
 
