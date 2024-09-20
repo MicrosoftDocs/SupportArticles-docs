@@ -13,10 +13,12 @@ This article provides a solution for errors that occur during anonymous image pu
 
 ## Symptoms
 
-When you try to create or update a container instance and pull images anonymously from Docker Hub using the Azure portal or Azure CLI, you receive an error message that resembles the following text:
+When you try to create or update a container instance and pull images anonymously from Docker Hub using the Azure portal or Azure CLI, an error message that resembles the following text is displayed:
 
 > Error code: RegistryErrorResponse  
 > An error response is received from the docker registry 'index.docker.io'. Please retry later.
+
+You can find this error in the Azure portal by navigating to the ACI resource group and then selecting **Activity log**.
 
 You also might see the following error messages:
 
