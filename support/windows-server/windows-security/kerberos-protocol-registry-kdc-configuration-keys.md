@@ -191,9 +191,9 @@ The registry entries that are listed in this section must be added to the follow
     1. Open an elevated command prompt window.
     2. Run the following command:
 
-         ```console
-         ksetup /setrealmflags <your Kerberos realm name> sendaddress
-         ```
+        ```console
+        ksetup /setrealmflags <your Kerberos realm name> sendaddress
+        ```
 
     3. You can use the `/server` switch to let [ksetup](/windows-server/administration/windows-commands/ksetup) make the changes on a remote computer.
 
