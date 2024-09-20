@@ -4,12 +4,12 @@ description: Resolves missing Date Window Start/End fields in Dynamics 365 Field
 author: jshotts
 ms.author: jasonshotts
 ms.reviewer: mhart
-ms.date: 10/19/2023
+ms.date: 09/20/2024
 ms.custom: sap:Administration
 ---
 # Date Window Start/End fields don't exist in Dynamics 365 Field Service
 
-This article discusses missing **Date Window Start** and **Date Window End** fields in Microsoft Dynamics 365 Field Service.
+This article discusses the missing **Date Window Start** and **Date Window End** fields in Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
