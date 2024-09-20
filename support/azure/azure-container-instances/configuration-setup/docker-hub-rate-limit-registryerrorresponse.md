@@ -44,6 +44,6 @@ To resolve this issue, create a Docker account and use the Docker account creden
 - [Configure Artifact Cache to consume public content](/azure/container-registry/buffer-gate-public-content#configure-artifact-cache-to-consume-public-content)
 - [Artifact cache in Azure Container Registry](/azure/container-registry/container-registry-artifact-cache)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
