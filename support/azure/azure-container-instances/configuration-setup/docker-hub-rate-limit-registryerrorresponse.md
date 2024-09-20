@@ -28,7 +28,7 @@ You also might see the following error messages:
 
 ## Cause
 
-The "RegistryErrorResponse" error might occur due to the rate limits on image pulls from Docker Hub. An agreement between Microsoft and Docker to allow Azure IP addresses to make unlimited anonymous image pulls from Docker Hub ended on June 30, 2024.
+This issue might occur due to the rate limits on image pulls from Docker Hub. An agreement between Microsoft and Docker to allow Azure IP addresses to make unlimited anonymous image pulls from Docker Hub ended on June 30, 2024.
 
 ## Solution
 
