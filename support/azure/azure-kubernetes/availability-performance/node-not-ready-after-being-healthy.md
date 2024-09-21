@@ -7,7 +7,7 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to prevent an Azure Kubernetes Service (AKS) cluster node from regressing to a Not Ready status so that I can continue to use the cluster node successfully.
 ms.custom: sap:Node/node pool availability and performance
 ---
-# Troubleshoot when a healthy node changes to Not Ready status
+# Troubleshoot a change in a healthy node to Not Ready status
 
 This article discusses a scenario in which the status of an Azure Kubernetes Service (AKS) cluster node changes to **Not Ready** after the node is in a healthy state for some time. This article outlines the particular cause and provides a possible solution.
 
@@ -36,7 +36,7 @@ kubectl describe nodes
 
 The [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) stopped posting its **Ready** status.
 
-Examine the output of the `kubectl describe nodes` command to find the [Conditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition) field and the [Capacity and Allocatable](https://kubernetes.io/docs/concepts/architecture/nodes/#capacity) blocks. Do the content of these fields appear as expected? (For example, in the **Conditions** field, does the `message` property contain the "kubelet is posting ready status" string?) In this case, if you have direct Secure Shell (SSH) access to the node, check the recent events to understand the error. Look within the */var/log/messages* file. Or, generate the kubelet and container daemon log files by running the following shell commands:
+Examine the output of the `kubectl describe nodes` command to find the [Conditions](https://kubernetes.io/docs/reference/node/node-status/#condition) field and the [Capacity and Allocatable](https://kubernetes.io/docs/reference/node/node-status/#capacity) blocks. Do the content of these fields appear as expected? (For example, in the **Conditions** field, does the `message` property contain the "kubelet is posting ready status" string?) In this case, if you have direct Secure Shell (SSH) access to the node, check the recent events to understand the error. Look within the */var/log/messages* file. Or, generate the kubelet and container daemon log files by running the following shell commands:
 
 ```bash
 # To check messages file,
@@ -47,20 +47,20 @@ journalctl -u kubelet > kubelet.log
 journalctl -u containerd > containerd.log
 ```
 
-After you run these commands, examine the messages and daemon log files for details about the error.
+After you run these commands, examine the messages and daemon log files for more information about the error.
 
 ## Solution
 
-### Step 1: Check for any network-level changes
+### Step 1: Check for changes in network-level
 
-If all cluster nodes regressed to a **Not Ready** status, check whether any changes have occurred at the network level. Examples of network-level changes include the following items:
+If all cluster nodes regressed to a **Not Ready** status, check whether any changes occurred at the network level. Examples of network-level changes include:
 
 - Domain name system (DNS) changes
-- Firewall rule changes such as port, FQDN etc.
+- Firewall rule changes, such as port, fully qualified domain names (FQDNs), and so on.
 - Added network security groups (NSGs)
-- Applied or changed a route table configurations for AKS traffic
+- Applied or changed route table configurations for AKS traffic
 
-If there were changes at the network level, make any necessary corrections. If you have direct Secure Shell (SSH) access to the node, you can use curl or telnet command to check the connectivity to [AKS outbound requirements](/azure/aks/outbound-rules-control-egress). Stop and restart the nodes running after you've fixed the issues. If the nodes stay in a healthy state after these fixes, you can safely skip the remaining steps.
+If there were changes at the network level, make any necessary corrections. If you have direct Secure Shell (SSH) access to the node, you can use the `curl` or `telnet` command to check the connectivity to [AKS outbound requirements](/azure/aks/outbound-rules-control-egress). After you've fixed the issues, stop and restart the nodes. If the nodes stay in a healthy state after these fixes, you can safely skip the remaining steps.
 
 ### Step 2: Stop and restart the nodes
 
@@ -87,13 +87,13 @@ Did AKS diagnostics uncover any SNAT issues? If so, take some of the following a
 
 - Evaluate whether you should mitigate SNAT port exhaustion by using extra outbound IP addresses and more allocated outbound ports. For more information, see [Scale the number of managed outbound public IPs](/azure/aks/load-balancer-standard#scale-the-number-of-managed-outbound-public-ips) and [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
 
-For more information about how to troubleshoot SNAT port exhaution, see [Troubleshoot SNAT port exhaustion on AKS nodes](/azure/azure-kubernetes/connectivity/snat-port-exhaustion?tabs=for-a-linux-pod).
+For more information about how to troubleshoot SNAT port exhaution, see [Troubleshoot SNAT port exhaustion on AKS nodes](../connectivity/snat-port-exhaustion.md?tabs=for-a-linux-pod).
 
 ### Step 4: Fix IOPS performance issues
 
 If AKS diagnostics uncover issues that reduce IOPS performance, take some of the following actions, as appropriate:
 
-- To increase IOPS on virtual machine (VM) scale sets, choose bigger disk size that includes better IOPS performance by deploying a new node pool. Resizing VMSS directly isn't supported. You can refer how to resize node pools in [Resize node pools in Azure Kubernetes Service (AKS)](/azure/aks/resize-node-pool?tabs=azure-cli).
+- To increase IOPS on virtual machine (VM) scale sets, choose a a larger disk size that offers better IOPS performance by deploying a new node pool. Direct resizing VMSS directly isn't supported. For more information on resizing node pools,  see [Resize node pools in Azure Kubernetes Service (AKS)](/azure/aks/resize-node-pool?tabs=azure-cli).
 
 - Increase the node SKU size for more memory and CPU processing capability.
 

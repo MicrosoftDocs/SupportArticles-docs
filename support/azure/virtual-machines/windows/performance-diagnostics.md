@@ -10,7 +10,7 @@ tags: ''
 ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
-ms.date: 07/24/2024
+ms.date: 09/04/2024
 ms.custom: sap:VM Performance
 ms.reviewer: guywild
 ms.author: anandh
@@ -174,7 +174,14 @@ Select the **Download report** button to download an HTML report that contains r
 
 ## View and manage storage account and stored data
 
-Performance Diagnostics stores all insights and reports in a storage account, which you can [configure for short data retention](/azure/storage/blobs/lifecycle-management-policy-configure) to minimize costs. 
+Performance Diagnostics stores all insights and reports in a storage account, which you can [configure for short data retention](/azure/storage/blobs/lifecycle-management-policy-configure) to minimize costs.
+
+To ensure Performance Diagnostics functions correctly, you must enable the **Allow storage account key access** setting for the storage account. To enable this setting, follow these steps:
+
+1. Navigate to your storage account. 
+2. In the storage account settings, locate the **Configuration** section.
+3. Find the **Allow storage account key access** option and set it to **Enabled**.
+4. Save your changes.
 
 You can use the same storage account for multiple VMs that use Performance Diagnostics. When you change the storage account, the old reports and insights aren't deleted. However, they'll no longer be displayed in the list of diagnostics reports.
 
