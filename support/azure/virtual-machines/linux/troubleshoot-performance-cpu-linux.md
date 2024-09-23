@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot performance CPU issues in Linux
+title: Troubleshoot Performance CPU issues in Linux
 description: Troubleshoot CPU performance issues on Linux virtual machines in Azure.
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance, linux-related-content
@@ -22,7 +22,7 @@ You can obtain performance CPU metric using the tools in the following table.
 
 
 ## `top`
-The `top` utility is the first resource monitoring tool to provide an in-depth representation of CPU utilization. `Top` gives you a real-time look at what’s going on with the server. Here's a `Top` report from a two-processor virtual machine (VM):
+The `top` utility is the first resource monitoring tool to provide an in-depth representation of CPU utilization. `top` gives you a real-time look at what’s going on with the server. Here's a `top` report from a two-processor virtual machine (VM):
 
 ```output
 top - 03:12:38 up  1:53,  3 users,  load average: 1.72, 0.62, 0.25
@@ -106,7 +106,7 @@ PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
 
 **%CPU** indicates CPU load percentage of a single core used. You may see the value exceeds 100% which means it's occupying a full core plus another (or more).
 
-The column **'S'** lists the state of the process. Here **"D"** state (TASK_UNINTERRUPTIBLE) is a state which occurs in a kernel code path where the execution cannot be interrupted while a task is processed. 
+The column **'S'** lists the state of the process. Here **"D"** state (TASK_UNINTERRUPTIBLE) is a state which occurs in a kernel code path where the execution can't be interrupted while a task is processed. 
 
 An example of D state might be a low level driver interacts with hardware, which includes:
 
@@ -134,18 +134,18 @@ The following sections discuss CPU related metrics.
 
 The utilization of a CPU is dependent on which resource is trying to access it. A scheduler exists in the kernel which is responsible for scheduling resources. It gives different priorities to the different resources. The next lists explain the priorities from highest to lowest.
 
-Hardware Interrupts - requests created by hardware on the system to process data. Hardware interrupt sends requests without waiting for current program to finish. It's unconditional and immediate. For example, it could be a key stroke, mouse movement, a Network Card Interface signal when a packet arrived.
+`Hardware Interrupts` - requests created by hardware on the system to process data. Hardware interrupt sends requests without waiting for current program to finish. It's unconditional and immediate. For example, it could be a key stroke, mouse movement, a Network Card Interface signal when a packet arrived.
 
-Soft Interrupts - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval, it checks and makes sure that a process does't pass its allotted time on a processor.
+`Soft Interrupts` - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval, it checks and makes sure that a process doesn't pass its allotted time on a processor.
 
-Real Time Threads - A real time process may come on the CPU and preempt the kernel..
+`Real Time Threads` - real time processes may come on the CPU and preempt the kernel..
 
-Kernel Threads - A kernel thread is a kernel entity, like processes and interrupt handlers. It's the entity handled by the system scheduler. The operating system handles Kernel-level threads directly.
+`Kernel Threads` - A kernel thread is a kernel entity, like processes and interrupt handlers. It's the entity handled by the system scheduler. The operating system handles Kernel-level threads directly.
 
-User Threads - This space is often referred to as "user land" and all software applications run in the user space. This space has the lowest priority in the kernel scheduling mechanism. In order to understand how the kernel manages these different resources, we need understand some key concepts such as context switches, run queues, and utilization.
+`User Threads` - This space is often referred to as "user land" and all software applications run in the user space. This space has the lowest priority in the kernel scheduling mechanism. In order to understand how the kernel manages these different resources, we need understand some key concepts such as context switches, run queues, and utilization.
 
 
-## `sar` (System Activity Reporter)
+## `sar` (System Activity Reporte)
 
 How to use SAR (System Activity Reporter) from the sysstat package to Monitor System Performance
 
@@ -165,7 +165,7 @@ Configure and enable SAR to start on boot with the below commands:
 
 `SAR` is useful in many ways, both directly and indirectly.
 
-* It is an overall barometer of system performance. When working with a system and not knowing what the "normal" state is, looking at SAR data over the last several production days is useful to establish a baseline of standard activity.
+* It's an overall barometer of system performance. When working with a system and not knowing what the "normal" state is, looking at SAR data over the last several production days is useful to establish a baseline of standard activity.
 
 * It gets a feel for CPU load, load average, memory usage, etc.
 
@@ -269,7 +269,7 @@ pidstat -wt 2 5
 
 <br>
 
-Here's an `pidstat` output while running stess-ng command `stress-ng --cpu 2 --switch 50 --timeout 60s` which purposely generate high CPU context switch:
+Here's an `pidstat` output while running `stess-ng` command `stress-ng --cpu 2 --switch 50 --timeout 60s` which purposely generate high CPU context switch:
 
 <br>
 
@@ -316,8 +316,8 @@ Linux 4.18.0-553.16.1.el8_10.x86_64 (rhel8)     09/19/2024      _x86_64_       (
 <details>
 <summary> Q: I need root cause of a high CPU issue occurring in the past or intermittently, is it possible or what logs do we need? </summary>
 <BR>
-A: Is sysstat enabled and running? Do we have the `sar` logs (which is also included in `sosreport` log bundle) while issue is occurring?
-   Without sysstat enable active, there is no baseline we can use for comparison if a performance issue arises. It's hard to tell how much performance downgrade during peak usage periods.
+A: Is sysstat enabled and running? Do we have the SAR logs (which is also included in SOSREPORT log bundle) while issue is occurring?
+   Without sysstat enable active, there's no baseline we can use for comparison if a performance issue arises. It's hard to tell how much performance downgrade during peak usage periods.
    If you're using 3rd-party monitoring tools, explains how it works because we need understand and compare it with the metrics retrieved from native Linux command tools.
 
 </details>
