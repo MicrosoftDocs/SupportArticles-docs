@@ -21,10 +21,10 @@ This article provides instructions on configuring multiple DNS servers and searc
 ## [RHEL 8.x/9._x_](#tab/RHEL)
 
 ### Configure DNS servers
-1. Before making updates to the `/etc/resolv.conf` file in the Azure Linux VM, its initial configuration is as follows:
+1. The initial configuration of the `/etc/resolv.conf` file in an Azure Linux VM is as follows:
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-1.png" alt-text="Screenshot of default resolv.conf file in RHEL.":::
-2. Configure DNS at the virtual network or network interface level. For more information see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
+2. Configure DNS at the virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
 3. Restart the `NetworkManager` service, and then check  `/etc/resolv.conf` file. It should contain the DNS servers you configured in the step 2.
 
@@ -48,12 +48,12 @@ This article provides instructions on configuring multiple DNS servers and searc
 
 ### Configure search domains
 
-1. To change the search domain according, add a search path as the following in the `/etc/dhcp/dhclient.conf`.  You can specify multiple search domains, separated by commas, like `"test.example.com, test1.example.com, test2.example.com"`.
+1. To change the search domain according, add the search domain as the following in the `/etc/dhcp/dhclient.conf`.  You can specify multiple search domains, separated by commas, like `"test.example.com, test1.example.com, test2.example.com"`.
  
     ```config
     append domain-search "test.example.com";
     ```
-     Example of `/etc/dhcp/dhclient.conf` file after adding the search path:
+     Example of `/etc/dhcp/dhclient.conf` file after adding the search domain:
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-4.png" alt-text="Screenshot of dhclient.conf file post modification.":::
 
@@ -80,11 +80,11 @@ This article provides instructions on configuring multiple DNS servers and searc
 
 ### Configure DNS servers
 
-1. Before making updates to the `/etc/resolv.conf` file in an Azure Ubuntu VM, its initial configuration is as follows:
+1. The initial configuration of the `/etc/resolv.conf` file in an Azure Ubuntu VM is as follows:
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-1.png" alt-text="Screenshot of default resolv.conf file in Ubuntu.":::
 
-2. Configure DNS at the Azure virtual network or network interface level. For more information see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
+2. Configure DNS at the Azure virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
 3. Run the following command to apply the custom DNS entries:
 
@@ -111,29 +111,27 @@ This article provides instructions on configuring multiple DNS servers and searc
 
 ### Configure search domains
 
-1. To add a custom search domain, create a yaml file in the `/etc/netplan/` path with the following configuration:
+1. Use a text editor (like nano or vim) to create the YAML configuration file in the `/etc/netplan/`. For example:
 
-   ```yaml
-   network:
-   ethernets:
-     eth0:
-       nameservers:
-         search: [ test.example.com ]
-   ```
+      ```
+      sudo nano /etc/netplan/01-netcfg.yaml
+      ```
+2. Add the following configuration, and then Save and Exit: If you’re using nano, press `CTRL + O` to save and `CTRL + X` to exit. If you’re using vim, press ESC, type `:wq`, and then hit Enter to save and exit.
 
-   1. You can a text editor (like nano or vim) to create a new YAML configuration file in the /etc/netplan/ directory. For example, you can create a file named 01-netcfg.yaml:
-
-        ```
-        sudo nano /etc/netplan/01-netcfg.yaml
-        ```
-   1. Add the configuraiton, and then Save and Exit: If you’re using nano, press `CTRL + O` to save and `CTRL + X` to exit. If you’re using vim, press ESC, type `:wq`, and then hit Enter to save and exit.
-2. Run the following command to apply the search domain changes.
+    ```yaml
+    network:
+    ethernets:
+      eth0:
+        nameservers:
+          search: [ test.example.com ]
+    ```
+3. Run the following command to apply the search domain changes.
   
    ```bash
    sudo netplan apply
    ```
 
-3. Verify the updated search domain is add successfully by running the following command:
+4. View the `resolvectl` status to confirm that the search domain is added successfully:
 
    ```bash
    sudo resolvectl status
@@ -149,7 +147,7 @@ This article provides instructions on configuring multiple DNS servers and searc
 
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-1.png" alt-text="Screenshot of default resolv.conf file in SUSE.":::
 
-2. Configure DNS at the Azure virtual network or network interface level. For more information see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
+2. Configure DNS at the Azure virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
 3. Restart the `wicked.service` service, and then check  `/etc/resolv.conf` file. It should contain the DNS servers you configured in the step 2.
 
@@ -173,7 +171,7 @@ This article provides instructions on configuring multiple DNS servers and searc
    NETCONFIG_DNS_STATIC_SEARCHLIST="test.example.com test1.example.com"
    ```
     
-1. Restart `wicked.service` or update `netconfig`, and check if the search domains is updated in `/etc/resolv.conf` file.
+1. Restart `wicked.service` or update `netconfig`, and check if the search domain is updated in `/etc/resolv.conf` file.
 
    ```bash
    sudo systemctl restart wicked.service
