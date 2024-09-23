@@ -1,6 +1,6 @@
 ---
-title: Custom DNS configuration in Azure Linux Virtual Machines
-description: Describes how to configure custom DNS and search domains in Azure Linux virtual machines running the most common Linux distributions.
+title: Custom DNS configuration in Azure Linux virtual machines
+description: Learn how to configure custom DNS and search domains on Azure Linux virtual machines running common Linux distributions.
 ms.date: 09/09/2024
 ms.author: vkchilak
 author: vkchilak
@@ -13,130 +13,127 @@ ms.collection: linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article discusses how to configure custom DNS and search domains in Azure Linux virtual machines (VMs) that run the most common Linux distributions.
-
-## Overview of DNS
-
-Domain Name System (DNS) translates human-readable domain names into IP addresses that servers use to identify each other on the network. Essentially, DNS acts as the internet's phonebook.".
+This article provides instructions on configuring multiple DNS servers and search domains in Azure Linux virtual machines (VMs).
 
 > [!NOTE]
-> In Azure you can configure multiple custom DNS servers at the Virtual Network(VNET) level or at the Network Interface(NIC) level. The DNS servers configured at the NIC level will override the configuration done at VNET level.
-
-## Summary
-
-You can configure multiple custom DNS servers and 'search domains' across various Linux distributions, such as, Redhat, SUSE, and Ubuntu. A common use case is configuring different custom DNS servers at the OS level, after setting them up at the Virtual Network or Network Interface level.
-
-This article provides the necessary steps to add multiple DNS servers and search domains in Azure Linux Virtual Machines.
-
-> [!NOTE]
-> This document uses the DNS servers “1.2.3.4” and “5.6.7.8” and the search domain “test.example.com” as examples. Please replace these with your actual DNS server addresses and search domain entries.
-
+> This article uses the DNS servers `1.2.3.4` and `5.6.7.8` and the search domain “test.example.com” as examples. Replace these with your actual DNS server addresses and search domain path.
 
 ## [RHEL 8.x/9._x_](#tab/RHEL)
 
-1. Prior to making any modifications, the entries in /etc/resolv.conf file will look something like this:
+### Configure DNS servers
+1. Before making updates to the `/etc/resolv.conf` file in the Azure Linux VM, its initial configuration is as follows:
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-1.png" alt-text="Screenshot of default resolv.conf file in RHEL.":::
+2. Configure DNS at the virtual network or network interface level. For more information see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
-2. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network)
-
-3. Restart the NetworkManager service to see the updated entries in /etc/resolv.conf file.
+3. Restart the `NetworkManager` service, and then check  `/etc/resolv.conf` file. It should contain the DNS servers you configured in the step 2.
 
     ```bash
       sudo systemctl restart NetworkManager
     ```
 
-    Post restarting the NetworkManager service, /etc/resolv.conf file will look like this:
+    Example of `/etc/resolv.conf` after configuring the DNS servers:
     
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-2.png" alt-text="Screenshot of resolv.conf file post changing the DNS servers at portal level.":::
 
-4. You can verify that the updated entries are reflected under the eth0 section in DNS queries by running the command mentioned here:
+4. Alternatively, run the following command to confirm whether the custom DNS servers are successfully added to the `eth0` network interface.
 
     ```bash
     sudo systemd-resolve --status
     ```
+    
+   Example of `eth0` network interface after configuring the DNS servers:
+
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-3.png" alt-text="Screenshot of above mentioned command's partial output.":::
 
-5. To change the search domain as per your requirement, need to add a line like this in /etc/dhcp/dhclient.conf
+### Configure search domains
 
-    ```bash
+1. To change the search domain according, add a search path as the following in the `/etc/dhcp/dhclient.conf`.  You can specify multiple search domains, separated by commas, like `"test.example.com, test1.example.com, test2.example.com"`.
+ 
+    ```config
     append domain-search "test.example.com";
     ```
-    Post appending the line as mentioned above, the file looks like this:
+     Example of `/etc/dhcp/dhclient.conf` file after adding the search path:
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-4.png" alt-text="Screenshot of dhclient.conf file post modification.":::
 
-    > [!NOTE]
-    > Multiple search domains can be given, separated by commas, like “test.example.com”,”test1.example.com”,”test2.example.com”
-
-6. Restart the NetworkManager service to see the search domain being updated in /etc/resolv.conf file.
+2. Restart the `NetworkManager` service, and then check if the search domain is updated in `/etc/resolv.conf`file.
     
     ```bash
     sudo systemctl restart NetworkManager
     ```
+    Example of `/etc/resolv.conf` file after configuring the search domain:
+    
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-5.png" alt-text="Screenshot of resolv.conf file after restarting NM service.":::
 
-7. You can also verify by running this command and checking the eth0 section in the output:
+3. Run the following command to confirm whether the search domain is successfully added to the `eth0` network interface.
 
     ```bash
     sudo systemd-resolve --status
     ```
+
+     Example of `eth0` network interface after configuring search domain:
+
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-6.png" alt-text="Screenshot showing the search domain.":::
 
 ## [Ubuntu 20.04/22.04](#tab/Ubuntu)
 
-1. Prior to making any modifications, the entries in /etc/resolv.conf file will look something like this:
+### Configure DNS servers
+
+1. Before making updates to the `/etc/resolv.conf` file in an Azure Ubuntu VM, its initial configuration is as follows:
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-1.png" alt-text="Screenshot of default resolv.conf file in Ubuntu.":::
 
-2. Starting from Ubuntu 20, resolv.conf file is a symbolic link of /run/systemd/resolve/stub-resolv.conf file:
+2. Configure DNS at the Azure virtual network or network interface level. For more information see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
-   :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-2.png" alt-text="Screenshot of symlink for default resolv.conf file":::
+3. Run the following command to apply the custom DNS entries:
 
-3. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network#change-dns-servers)
-
-4. Run the following command to apply the custom DNS entries:
-    
    ```bash
    sudo netplan apply
-   ```
-   Note that the updated custom entries will be reflected in **/run/systemd/resolve/resolv.conf** file.
 
-   More information about this stub file, significance, and usage of different resolv.conf files, systemd-resolved service can be found in this man-page:
-   https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:~:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder.
+4. Check  `/run/systemd/resolve/stub-resolv.conf` file. It should contain the DNS servers you configured in the step 2.
+  
+    Starting from Ubuntu 20, `resolv.conf` file is a symbolic link of `/run/systemd/resolve/stub-resolv.conf` file. So that the updated DNS server will be reflected in **/run/systemd/resolve/resolv.conf** file. For more information, see [systemd-resolved](https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:~:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder).
     
+   Example of `/run/systemd/resolve/stub-resolv.conf` after configuring custom DNS server.
+
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-3.png" alt-text="Screenshot of non-stub resolv.conf file after making changes at portal level":::
 
-5. Alternatively, you can verify the updated DNS entries using the following command as well:
+5. Alternatively, run the following command to check if the custom DNS servers are successfully added to the network interface.
 
    ```bash
    sudo resolvectl status
    ```
-    
+
+   Example of `eth0` network interface after configuring search domain:
+
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-4.png" alt-text="Screenshot of resolvectl status command output.":::
 
-6. To add a custom search domain, create a file similar to the one mentioned here:
+### Configure search domains
 
-   ```bash
-   root@Ubuntu22:~# cat /etc/netplan/99-dns.yaml
+1. To add a custom search domain, create a yaml file in the `/etc/netplan/` path with the following configuration:
+
+   ```yaml
    network:
    ethernets:
      eth0:
        nameservers:
          search: [ test.example.com ]
-   root@Ubuntu22:~#
    ```
 
-   > [!NOTE]
-   > Multiple search domains can be given, separated by commas, like “test.example.com”,”test1.example.com”,”test2.example.com”
+   1. You can a text editor (like nano or vim) to create a new YAML configuration file in the /etc/netplan/ directory. For example, you can create a file named 01-netcfg.yaml:
 
-7. Run the following command to apply the search domain changes.
+        ```
+        sudo nano /etc/netplan/01-netcfg.yaml
+        ```
+   1. Add the configuraiton, and then Save and Exit: If you’re using nano, press `CTRL + O` to save and `CTRL + X` to exit. If you’re using vim, press ESC, type `:wq`, and then hit Enter to save and exit.
+2. Run the following command to apply the search domain changes.
   
    ```bash
    sudo netplan apply
    ```
 
-8. Verify the updated search domain by running the following command:
+3. Verify the updated search domain is add successfully by running the following command:
 
    ```bash
    sudo resolvectl status
@@ -146,13 +143,15 @@ This article provides the necessary steps to add multiple DNS servers and search
   	
 ## [SLES 12.x/15.x](#tab/SLES)
 
-1. Prior to making any modifications, the entries in /etc/resolv.conf file will look something like this:
+### Configure DNS servers
+
+1. Before making updates to the `/etc/resolv.conf` file in an Azure SLES VM, its initial configuration is as follows:
 
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-1.png" alt-text="Screenshot of default resolv.conf file in SUSE.":::
 
-2. To configure DNS at the Virtual Network or Network Interface level, follow the instructions mentioned in this article: [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network#change-dns-servers)
+2. Configure DNS at the Azure virtual network or network interface level. For more information see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
-3. Restart the wicked service to see the updated entries in /etc/resolv.conf file.
+3. Restart the `wicked.service` service, and then check  `/etc/resolv.conf` file. It should contain the DNS servers you configured in the step 2.
 
    ```bash
    sudo systemctl restart wicked.service
@@ -160,30 +159,32 @@ This article provides the necessary steps to add multiple DNS servers and search
 
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-2.png" alt-text="Screenshot of resolv.conf after restarting wicked service.":::
 
-4. To have the custom search domains listed, need to update the file **/etc/sysconfig/network/config** with your search domain entry. For example:
+### Configure search domains
 
-   ```bash
+1. Edit the `/etc/sysconfig/network/config` file.
+1. Add a line for the search domain, as shown in the example below:
+
+   ```config
    NETCONFIG_DNS_STATIC_SEARCHLIST="test.example.com"
    ```
    Multiple domains can be declared using a space separator, as demonstrated here:
 
-   ```bash
+   ```config
    NETCONFIG_DNS_STATIC_SEARCHLIST="test.example.com test1.example.com"
    ```
     
-5. Then, restart wicked service or update netconfig, to see the search domains being updated in /etc/resolv.conf file.
+1. Restart `wicked.service` or update `netconfig`, and check if the search domains is updated in `/etc/resolv.conf` file.
 
    ```bash
    sudo systemctl restart wicked.service
    ```
-   Alternatively, you can also use this command to get this configuration updated:
+    or
 
    ```bash
    sudo netconfig update
    ```
 
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-3.png" alt-text="Screenshot of resolv.conf after final changes":::
-
 ---
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
