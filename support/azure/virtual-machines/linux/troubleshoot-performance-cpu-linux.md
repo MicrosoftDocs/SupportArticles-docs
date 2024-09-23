@@ -22,7 +22,7 @@ You can obtain performance CPU metric using the tools in the following table.
 
 
 ## top
-The `top` utility is the first resource monitoring tool to provide an in-depth representation of CPU utilization, it gives you a real-time look at what’s going on with the server. Here is a top report from a 2-processor VM:
+The `top` utility is the first resource monitoring tool to provide an in-depth representation of CPU utilization. It gives you a real-time look at what’s going on with the server. Here is a top report from a 2-processor virtual machine:
 
 ```output
 top - 03:12:38 up  1:53,  3 users,  load average: 1.72, 0.62, 0.25
@@ -54,7 +54,7 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6838.4 avail Mem
 
 Some things to look for in this view would be the load average (displayed on the right side of the top row), and the value of the following for each CPU:
 
-**load**: It refers to the number of processes which are either currently being executed by the CPU or are waiting for execution.
+**load**: It refers to the number of processes which are either currently being executed on the CPU or are waiting for execution.
 The load average is broken down into three time increments. The first shows the load for the last one minute, the second for the last five minutes, and the final value for the last 15 minutes.
 Use the load average as a quick overview of how the system is performing.
 
@@ -62,21 +62,21 @@ Use the load average as a quick overview of how the system is performing.
 
 This section provides an overview of the total number of processes currently managed by the system.
 
-**total**: Indicates the total count of processes currently being tracked by the system.
+**total**: total count of processes currently being tracked on the system.
 
-**running**: Represents the number of processes currently actively using CPU time.
+**running**: the number of processes actively using CPU time.
 
-**zombie**: Indicates processes that have completed execution but still have an entry in the process table.
+**zombie**: processes completed execution but still have an entry in the process table.
 
-**us**: This percentage represents the amount of CPU consumed by user processes.
+**us**: percentage represents the amount of CPU consumed by user processes.
 
-**sy**: This percentage represents the amount of CPU consumed by system processes.
+**sy**: percentage represents the amount of CPU consumed by system processes.
 
-**id**: This percentage represents how idle each CPU is.
+**id**: percentage represents how idle each CPU is.
 
-**wa**: This represents the percentage of CPU time spent waiting for I/O operations to complete.
+**wa**: percentage of CPU time spent waiting for I/O operations to complete.
 
-In the previous example, the load average is at 1.72. This is a two-CPU system, meaning that the system load is approaching full. 
+In the previous example, the load average is at 1.72. This virtual machine is a two-CPU system, meaning that the system load is approaching full. 
 
 You can verify this result if you notice the 15.2 percent idle CPU value. (In the `top` command output, the idle CPU value is shown before the **id** label.)
 
@@ -96,7 +96,7 @@ You can verify this result if you notice the 15.2 percent idle CPU value. (In th
 >
 
 
-Now, look at the `dd` process lines from above output:
+Now, look at the `dd` process lines from the example output:
 
 ```output
 PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
@@ -104,14 +104,14 @@ PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
 17039 root      20   0    8476   2928   1916 D   3.7   0.0   0:01.14 dd
 ```
 
-**%CPU** indicates CPU load percentage of a single core used. You may see this exceeds 100% which means it's occupying a full core plus another (or more).
+**%CPU** indicates CPU load percentage of a single core used. You may see the value exceeds 100% which means it's occupying a full core plus another (or more).
 
-The column **'S'** lists the state of the process. Here **"D"** state (TASK_UNINTERRUPTIBLE) is a state which occurs in a kernel code path where the execution can not be interrupted whilst a task is processed. 
+The column **'S'** lists the state of the process. Here **"D"** state (TASK_UNINTERRUPTIBLE) is a state which occurs in a kernel code path where the execution can not be interrupted while a task is processed. 
 
-An example of this might be a low level driver talking to hardware, either retrieving network packet data from NIC or accessing a block of data on a hard disk drive -- read and write I/O.
+An example of D state might be a low level driver interacts with hardware, which includes:
 
-In above example it's writing to block disk using dd command.
-
+* retrieve network packet data from network interface card 
+* access a block of data on a hard disk drive
 
 
 ## ps
@@ -132,11 +132,11 @@ The following sections discuss CPU related metrics.
 
 ## CPU resource metrics
 
-The utilization of a CPU is mainly dependent on which resource is trying to access it. A scheduler exists in the kernel which is responsible for scheduling resources, mainly two and those are threads (single or multi) and interrupts. The scheduler gives different priorities to the different resources. Below list explain the priorities from highest to lowest.
+The utilization of a CPU is dependent on which resource is trying to access it. A scheduler exists in the kernel which is responsible for scheduling resources. It gives different priorities to the different resources. The next list explain the priorities from highest to lowest.
 
-Hardware Interrupts - These are requests created by hardware on the system to process data. This interrupt does this without waiting for current program to finish. It is unconditional and immediate. For example, a key stroke, mouse movement, a NIC may signal that a packet has been received.
+Hardware Interrupts - requests created by hardware on the system to process data. This interrupt does this without waiting for current program to finish. It is unconditional and immediate. For example, a key stroke, mouse movement, a Network Card Interface may signal that a packet arrived.
 
-Soft Interrupts - These are kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval it checks and make sure that a process has not passed its allotted time on a processor.
+Soft Interrupts - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval it checks and make sure that a process has not passed its allotted time on a processor.
 
 Real Time Threads - A real time process may come on the CPU and preempt (or “kick off) the kernel..
 
