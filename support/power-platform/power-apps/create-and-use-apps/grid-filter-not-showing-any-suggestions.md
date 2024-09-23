@@ -31,6 +31,7 @@ This can happen in two situations:
 
 1. The records need to populate their primary field.
 1. Edit the Lookup View for the entity and add the primary field.
+![addColumn](media/grid-filter-not-showing-any-suggestions/addcolumn.png)
 
 ## See also
 
