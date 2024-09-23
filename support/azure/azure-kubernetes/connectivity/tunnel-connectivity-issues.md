@@ -1,8 +1,8 @@
 ---
 title: Tunnel connectivity issues
 description: Resolve communication issues that are related to tunnel connectivity in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 07/14/2022
-ms.reviewer: chiragpa, andbar, v-leedennis
+ms.date: 09/23/2024
+ms.reviewer: chiragpa, andbar, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link
 #Customer intent: As an Azure Kubernetes user, I want to avoid tunnel connectivity issues so that I can use an Azure Kubernetes Service (AKS) cluster successfully.
@@ -15,7 +15,7 @@ Microsoft Azure Kubernetes Service (AKS) uses a specific component for tunneled,
 :::image type="content" source="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png" alt-text="Diagram of the Azure-managed AKS underlay, customer-managed Azure virtual network and subnet, and the tunnel from the API to the tunnel pod." border="false" lightbox="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png":::
 
 > [!NOTE]
-> In the past, the tunnel component was `tunnel-front`. AKS migrated to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service). This is a Kubernetes upstream component. For more information about migration to Konnectivity as the tunnel component, see the [AKS release notes and changelog](https://github.com/Azure/AKS/blob/master/CHANGELOG.md).
+> Previously, the AKS tunnel component was `tunnel-front`. It has now been migrated to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), an upstream Kubernetes component. For more information about this migration, see the [AKS release notes and changelog](https://github.com/Azure/AKS/blob/master/CHANGELOG.md).
 
 ## Prerequisites
 
@@ -180,7 +180,7 @@ Konnectivity relies on port 443. By default, this port is open. Therefore, you d
 
 ### Solution 4: Open port 9000
 
-Even though AKS migrated to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), some AKS clusters are still using tunnel-front, which relies on the port 9000. Make sure that the virtual appliance or any networking filtering device or software allows access to the port 9000. For more information about the required rules and dependencies, see [Azure Global required network rules](/azure/aks/limit-egress-traffic#azure-global-required-network-rules).
+Although `tunnel-front` has moved to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), some AKS clusters still use `tunnel-front`, relying on port 9000. Make sure that the virtual appliance or any network device/software allows access to port 9000. For more information about the required rules and dependencies, see [Azure Global required network rules](/azure/aks/limit-egress-traffic#azure-global-required-network-rules).
 
 ## Cause 5: Source Network Address Translation (SNAT) port exhaustion
 
