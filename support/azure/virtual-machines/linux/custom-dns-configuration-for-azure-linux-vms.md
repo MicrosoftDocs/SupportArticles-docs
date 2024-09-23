@@ -149,7 +149,7 @@ This article provides instructions on configuring multiple DNS servers and searc
 
 2. Configure DNS at the Azure virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
-3. Restart the `wicked.service` service, and then check  `/etc/resolv.conf` file. It should contain the DNS servers you configured in the step 2.
+3. Restart the `wicked.service`, and then check  `/etc/resolv.conf` file. It should contain the DNS servers you configured in the step 2.
 
    ```bash
    sudo systemctl restart wicked.service
