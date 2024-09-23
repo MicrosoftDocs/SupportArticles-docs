@@ -1,7 +1,7 @@
 ---
 title: Common issues when you run or scale large AKS clusters FAQ
 description: Review common issues when you run or scale large AKS clusters. The article includes troubleshooting tips for resolving these issues.
-ms.date: 04/23/2024
+ms.date: 09/23/2024
 ms.reviewer: paahluwalia, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -83,6 +83,15 @@ Run the following command to increase or customize the max surge for an existing
 az aks nodepool update --resource-group MyResourceGroup --name mynodepool --cluster-name MyManagedCluster --max-surge 5
 ```
 
+Another crucial point to consider is how your deployment design might be causing delays in successfully completing the upgrade/scale operations:
+
+- Using sku family b-* series is [not supported](https://github.com/MicrosoftDocs/azure-aks-docs/blob/main/articles/aks/use-system-pools.md) by aks in system nodepool and are known as low performance during and after updates.
+- Verify the PDB resource settings in your deployment if is accurated to perfom the upgrade successfully, following this [AKS workload best practices](https://github.com/microsoftdocs/architecture-center/blob/main/docs/operator-guides/aks/aks-upgrade-practices.md)
+
+[!TIP]
+>To get more insigths about this behaviuor you could look at [view activity logs blade in your AKS at portal](https://github.com/azmmft/SupportArticles-docs/blob/patch-1/support/azure/azure-kubernetes/create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal) or by reviewing the [resource logs](https://github.com/MicrosoftDocs/azure-aks-docs/blob/main/articles/aks/monitor-aks-reference.md) on your cluster.
+
+  
 ## My upgrade is reaching the quota (5,000 cluster) limit
 
 To resolve this issue, see [Increase regional vCPU quotas][Increase regional vCPU quotas].
