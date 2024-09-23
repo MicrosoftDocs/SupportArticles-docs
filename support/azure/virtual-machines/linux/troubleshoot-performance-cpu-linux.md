@@ -145,7 +145,7 @@ The utilization of a CPU is dependent on which resource is trying to access it. 
 `User Threads` - This space is often referred to as "user land" and all software applications run in the user space. This space has the lowest priority in the kernel scheduling mechanism. In order to understand how the kernel manages these different resources, we need understand some key concepts such as context switches, run queues, and utilization.
 
 
-## `sar` (System Activity Reporte)
+## `sar`
 
 How to use SAR (System Activity Reporter) from the sysstat package to Monitor System Performance
 
@@ -315,32 +315,36 @@ Linux 4.18.0-553.16.1.el8_10.x86_64 (rhel8)     09/19/2024      _x86_64_       (
 ## Q & A scenario
 <details>
 <summary> Q: I need root cause of a high CPU issue occurring in the past or intermittently, is it possible or what logs do we need? </summary>
-<BR>
+<br>
 A: Is sysstat enabled and running? Do we have the SAR logs (which is also included in SOSREPORT log bundle) while issue is occurring?
    Without sysstat enable active, there's no baseline we can use for comparison if a performance issue arises. It's hard to tell how much performance downgrade during peak usage periods.
    If you're using 3rd-party monitoring tools, explains how it works because we need understand and compare it with the metrics retrieved from native Linux command tools.
 
 </details>
+<br>
 
 <details>
 <summary> Q: The VM is currently going through high CPU usage. </summary>
-<BR>
+<br>
 A: You can utilize the tools in a script to identify the issue.
 </details>
+<br>
 
 <details>
 <summary> Q: I identified the high CPU process, is there any way to debug it? </summary>
-<BR>
+<br>
 A: The following codes obtain the list of threads and show the stack of each thread of Top 3 High CPU processes:
     
 ```
    for H_PID in $(ps -eo pcpu,pid,ppid,user,args | sort -k1 -r | grep -v PID | head -3 | awk '{print $2}'); do ps -Llp $H_PID; sudo cat /proc/$H_PID/stack; echo; done
 ```
 </details>
+<br>
 
 <details>
 <summary> Q: The high CPU issue occurs intermittently and keeps short time every few minutes. We also have the sosreport with sysstat enabled. </summary>
-<BR>
+<br>
 A: The default SAR collection interval is 10 minutes. If the issue is occurring in a short time, `SAR` may not reveal the problem because the metric result is aggregated.
    If the default 10-minute interval isn't giving the resolution needed, remember that SAR's time interval can be tuned so that is appropriate for the problem.
 </details>
+<br>
