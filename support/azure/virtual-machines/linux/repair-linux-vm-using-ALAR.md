@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 07/24/2023
+ms.date: 09/23/2024
 ms.author: malachma
 ---
 
@@ -83,8 +83,8 @@ This action can be used to reinstall the required software to boot from a GEN2 V
 
 If your VM shuts down immediately upon startup due to the audit daemon configuration, use this action. This action modifies the audit daemon configuration (in the */etc/audit/auditd.conf* file) by changing the `HALT` value configured for any `action` parameters to `SYSLOG`, which doesn't force the system to shut down. In a Logical Volume Manager (LVM) environment, if the logical volume that contains the audit logs is full and there's available space in the volume group, the logical volume will also be extended by 10% of the current size. However, if you're not using an LVM environment or there's no available space, only the configuration file is altered.
 
->[!IMPORTANT]
->This action will make a change to the security posture of the virtual machine by altering the auditd configuration, so that the issues causing the operating system to shut down can be remedied. Once you have regained access to the running virtual machine it is important to return the auditd configuration to the original state.  There will be a backup of the original configuration file for this purpose.
+> [!IMPORTANT]
+> This action will change the VM's security posture by altering the auditd configuration so that the VM shut down issue can be resolved. Once the VM is running and accessible, revert the auditd configuration to the original state. For this purpose, you have to back up the original configuration file before using this action.
 
 ## How to use ALAR
 
