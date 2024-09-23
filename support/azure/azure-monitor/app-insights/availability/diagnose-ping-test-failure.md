@@ -8,9 +8,9 @@ ms.service: azure-monitor
 ms.custom: sap:Availability Tests
 ---
 
-# Diagnose Availability Test failures in Application Insights 
+# Diagnose availability test failures in Application Insights 
 
-This article discusses how to access the Application Insights troubleshooting report. This report enables you to easily diagnose common problems that cause your Availability tests to fail.  
+This article discusses how to access the Application Insights troubleshooting report. This report enables you to easily diagnose common problems that cause your availability tests to fail.  
 
 :::image type="content" source="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif" alt-text="Azure portal animation that shows how to view the end-to-end transaction details to find the troubleshooting report in Application Insights." lightbox="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif":::
 
