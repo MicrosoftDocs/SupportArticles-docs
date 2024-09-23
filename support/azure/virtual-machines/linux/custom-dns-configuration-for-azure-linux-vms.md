@@ -13,18 +13,18 @@ ms.collection: linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article provides instructions on configuring multiple DNS servers and search domains in Azure Linux virtual machines (VMs).
+This article provides instructions on configuring custom DNS servers and search domains in Azure Linux virtual machines (VMs).
 
 > [!NOTE]
 > This article uses the DNS servers `1.2.3.4` and `5.6.7.8` and the search domain “test.example.com” as examples. Replace these with your actual DNS server addresses and search domain path.
 
 ## [RHEL 8.x/9._x_](#tab/RHEL)
 
-### Configure DNS servers
+### Configure custom DNS servers
 1. The initial configuration of the `/etc/resolv.conf` file in an Azure Linux VM is as follows:
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-1.png" alt-text="Screenshot of default resolv.conf file in RHEL.":::
-2. Configure DNS at the virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
+2. Configure custom DNS servers at the virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
 3. Restart the `NetworkManager` service, and then check  `/etc/resolv.conf` file. It should contain the DNS servers you configured in the step 2.
 
@@ -36,7 +36,7 @@ This article provides instructions on configuring multiple DNS servers and searc
     
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-2.png" alt-text="Screenshot of resolv.conf file post changing the DNS servers at portal level.":::
 
-4. Alternatively, run the following command to confirm whether the custom DNS servers are successfully added to the `eth0` network interface.
+4. Alternatively, run the following command to confirm whether the DNS servers are successfully added to the `eth0` network interface.
 
     ```bash
     sudo systemd-resolve --status
@@ -48,7 +48,7 @@ This article provides instructions on configuring multiple DNS servers and searc
 
 ### Configure search domains
 
-1. To change the search domain according, add the search domain as the following in the `/etc/dhcp/dhclient.conf`.  You can specify multiple search domains, separated by commas, like `"test.example.com, test1.example.com, test2.example.com"`.
+1. To change the search domain, add the domain name as the following in `/etc/dhcp/dhclient.conf`. To specify multiple search domains, separate them with commas, such as "test.example.com, test1.example.com, test2.example.com".
  
     ```config
     append domain-search "test.example.com";
@@ -66,7 +66,7 @@ This article provides instructions on configuring multiple DNS servers and searc
     
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-5.png" alt-text="Screenshot of resolv.conf file after restarting NM service.":::
 
-3. Run the following command to confirm whether the search domain is successfully added to the `eth0` network interface.
+3. Alternatively, run the following command to confirm whether the search domain is successfully added to the network interface.
 
     ```bash
     sudo systemd-resolve --status
@@ -84,7 +84,7 @@ This article provides instructions on configuring multiple DNS servers and searc
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-1.png" alt-text="Screenshot of default resolv.conf file in Ubuntu.":::
 
-2. Configure DNS at the Azure virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
+2. Configure custom DNS servers at the Azure virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
 3. Run the following command to apply the custom DNS entries:
 
@@ -147,7 +147,7 @@ This article provides instructions on configuring multiple DNS servers and searc
 
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-1.png" alt-text="Screenshot of default resolv.conf file in SUSE.":::
 
-2. Configure DNS at the Azure virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
+2. Configure custom DNS servers at the Azure virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
 3. Restart the `wicked.service`, and then check  `/etc/resolv.conf` file. It should contain the DNS servers you configured in the step 2.
 
