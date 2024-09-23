@@ -12,7 +12,7 @@ ms.author: jianpingxi
 
 ## Introduction to CPU
 
-Monitoring CPU utilization is straightforward. From a percentage of CPU utilization in `top` utility output, to the more in-depth statistics reported by `ps` (stands for "process status") or `sar` (stands for "System Activity Report") command, it is possible to accurately determine how much CPU power is being consumed and by what.
+Monitoring CPU utilization is straightforward. From a percentage of CPU utilization in `top` utility output, to the more in-depth statistics reported by `ps` (stands for "process status") or `sar` (stands for "System Activity Report") command, it's possible to accurately determine how much CPU power is being consumed and by what.
 
 You can obtain performance CPU metric using the tools in the following table.
 
@@ -21,8 +21,8 @@ You can obtain performance CPU metric using the tools in the following table.
 |CPU|`top`, `vmstat`, `sysstat`, `pidstat`, `htop`, `mpstat`|
 
 
-## top
-The `top` utility is the first resource monitoring tool to provide an in-depth representation of CPU utilization. `Top` gives you a real-time look at what’s going on with the server. Here is a `Top` report from a 2-processor virtual machine (VM):
+## `top`
+The `top` utility is the first resource monitoring tool to provide an in-depth representation of CPU utilization. `Top` gives you a real-time look at what’s going on with the server. Here's a `Top` report from a two-processor virtual machine (VM):
 
 ```output
 top - 03:12:38 up  1:53,  3 users,  load average: 1.72, 0.62, 0.25
@@ -62,19 +62,19 @@ Use the load average as a quick overview of how the system is performing.
 
 This section provides an overview of the total number of processes currently managed by the system.
 
-**total**: total count of processes currently being tracked on the system.
+`total`: total count of processes currently being tracked on the system.
 
-**running**: the number of processes actively using CPU time.
+`running`: the number of processes actively using CPU time.
 
-**zombie**: processes completed execution but still have an entry in the process table.
+`zombie`: processes completed execution but still have an entry in the process table.
 
-**us**: percentage represents the amount of CPU consumed by user processes.
+`us`: percentage represents the amount of CPU consumed by user processes.
 
-**sy**: percentage represents the amount of CPU consumed by system processes.
+`sy`: percentage represents the amount of CPU consumed by system processes.
 
-**id**: percentage represents how idle each CPU is.
+`id`: percentage represents how idle each CPU is.
 
-**wa**: percentage of CPU time spent waiting for I/O operations to complete.
+`wa`: percentage of CPU time spent waiting for I/O operations to complete.
 
 In the previous example, the load average is at 1.72. This virtual machine is a two-CPU system, meaning that the system load is approaching full. 
 
@@ -106,7 +106,7 @@ PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
 
 **%CPU** indicates CPU load percentage of a single core used. You may see the value exceeds 100% which means it's occupying a full core plus another (or more).
 
-The column **'S'** lists the state of the process. Here **"D"** state (TASK_UNINTERRUPTIBLE) is a state which occurs in a kernel code path where the execution can not be interrupted while a task is processed. 
+The column **'S'** lists the state of the process. Here **"D"** state (TASK_UNINTERRUPTIBLE) is a state which occurs in a kernel code path where the execution cannot be interrupted while a task is processed. 
 
 An example of D state might be a low level driver interacts with hardware, which includes:
 
@@ -114,7 +114,7 @@ An example of D state might be a low level driver interacts with hardware, which
 * access a block of data on a hard disk drive
 
 
-## ps
+## `ps`
 Using `ps` to list the Top 5 CPU consuming processes:
 ```
 # ps -eo pcpu,pmem,pid,user,args | sort -r -k1 | head -6
@@ -132,26 +132,26 @@ The following sections discuss CPU related metrics.
 
 ## CPU resource metrics
 
-The utilization of a CPU is dependent on which resource is trying to access it. A scheduler exists in the kernel which is responsible for scheduling resources. It gives different priorities to the different resources. The next list explain the priorities from highest to lowest.
+The utilization of a CPU is dependent on which resource is trying to access it. A scheduler exists in the kernel which is responsible for scheduling resources. It gives different priorities to the different resources. The next lists explain the priorities from highest to lowest.
 
-Hardware Interrupts - requests created by hardware on the system to process data. Hardware interrupt does this without waiting for current program to finish. It is unconditional and immediate. For example, it could be a key stroke, mouse movement, a Network Card Interface signal when a packet arrived.
+Hardware Interrupts - requests created by hardware on the system to process data. Hardware interrupt sends requests without waiting for current program to finish. It's unconditional and immediate. For example, it could be a key stroke, mouse movement, a Network Card Interface signal when a packet arrived.
 
-Soft Interrupts - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval, it checks and makes sure that a process does not pass its allotted time on a processor.
+Soft Interrupts - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval, it checks and makes sure that a process does't pass its allotted time on a processor.
 
-Real Time Threads - A real time process may come on the CPU and preempt (or “kick off) the kernel..
+Real Time Threads - A real time process may come on the CPU and preempt the kernel..
 
-Kernel Threads - A kernel thread is a kernel entity, like processes and interrupt handlers. It is the entity handled by the system scheduler. The operating system handles Kernel-level threads directly.
+Kernel Threads - A kernel thread is a kernel entity, like processes and interrupt handlers. It's the entity handled by the system scheduler. The operating system handles Kernel-level threads directly.
 
-User Threads - This space is often referred to as “user land” and all software applications run in the user space. This space has the lowest priority in the kernel scheduling mechanism. In order to understand how the kernel manages these different resources, we need understand some key concepts such as context switches, run queues, and utilization.
+User Threads - This space is often referred to as "user land" and all software applications run in the user space. This space has the lowest priority in the kernel scheduling mechanism. In order to understand how the kernel manages these different resources, we need understand some key concepts such as context switches, run queues, and utilization.
 
 
-## SAR (System Activity Reporter)
+## `sar` (System Activity Reporter)
 
 How to use SAR (System Activity Reporter) from the sysstat package to Monitor System Performance
 
 https://access.redhat.com/solutions/276533
 
-SAR is provided by the **sysstat** package, which also provides other statistical reporting tools, such as iostat. The sysstat package is not installed by default.
+SAR is provided by the **sysstat** package, which also provides other statistical reporting tools, such as iostat. The sysstat package isn't installed by default.
 
 Configure and enable SAR to start on boot with the below commands:
 ```
@@ -163,19 +163,19 @@ Configure and enable SAR to start on boot with the below commands:
 
 **How is SAR useful?**
 
-SAR is useful in many ways, both directly and indirectly.
+`SAR` is useful in many ways, both directly and indirectly.
 
-* Overall barometer of system performance. When working with a system and not knowing what the "normal" state is, looking at SAR data over the last several production days is useful to establish a baseline of standard activity.
+* It is an overall barometer of system performance. When working with a system and not knowing what the "normal" state is, looking at SAR data over the last several production days is useful to establish a baseline of standard activity.
 
-* To get a feel for CPU load, load average, memory usage, etc.
+* It gets a feel for CPU load, load average, memory usage, etc.
 
-* Detecting system activity leading up to a crash or hang. Again, you can watch system statistics leading up to a fatal event.
+* It detects system activity leading up to a crash or hang. You can watch system statistics leading up to a fatal event.
 
   Did CPU or other resources usage creep up?
 
   Did the IO-wait climb to 100%?
 
-* By default SAR record statistics every 10 minutes. 
+* It records statistics every 10 minutes by default.
 
 <br>
 
@@ -192,7 +192,7 @@ Display CPU utilization statistics from file sa10:
 ```
 
 
-## vmstat:
+## `vmstat`
 
 `vmstat` (virtual memory statistics) provides information about block IO and CPU activity in addition to memory.
 
@@ -201,11 +201,11 @@ Display CPU utilization statistics from file sa10:
 vmstat [delay] [count]
 ```
 
-[delay]: specifies the refresh interval in second. 
+`delay`: specifies the refresh interval in second. 
 
-[count]: specifies the times of refreshes. 
+`count`: specifies the times of refreshes. 
 
-If you specify only one parameter, it is taken as the refresh interval, then output refreshes unlimited.
+If you specify only one parameter, it's taken as the refresh interval, then output refreshes unlimited.
 
 <br>
 
@@ -230,18 +230,18 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 
 Meaning of the individual metrics:
 
-
-**Procs**
+```
+Procs
 
     r: The number of processes waiting for run time.
     b: The number of processes in uninterruptible sleep.
 
-**System**
+System
 
     in: The number of interrupts per second, including the clock.
     cs: The number of context switches per second.
 
-**CPU**
+CPU
 
     These are percentages of total CPU time.
     us: Time spent running non-kernel code. (user time, including nice time)
@@ -249,6 +249,7 @@ Meaning of the individual metrics:
     id: Time spent idle.
     wa: Time spent waiting for IO.
     st: Time stolen from a virtual machine.
+```
 
 <br>
 
@@ -256,7 +257,7 @@ Meaning of the individual metrics:
 
 The `pidstat` command is used for monitoring individual tasks currently which the Linux kernel manages. 
 
-Run following command to check which process is causing issue. Like vmstat option usage, it runs 5 times with 2 seconds interval.
+Run following command to check which process is causing issue. Like vmstat option usage, it runs **five** times with **2-second** interval.
 
 ```
 pidstat -wt 2 5
@@ -268,7 +269,7 @@ pidstat -wt 2 5
 
 <br>
 
-Here is an pidstat output while running stess-ng command `stress-ng --cpu 2 --switch 50 --timeout 60s` which purposely generate high CPU context switch:
+Here's an `pidstat` output while running stess-ng command `stress-ng --cpu 2 --switch 50 --timeout 60s` which purposely generate high CPU context switch:
 
 <br>
 
@@ -315,22 +316,22 @@ Linux 4.18.0-553.16.1.el8_10.x86_64 (rhel8)     09/19/2024      _x86_64_       (
 <details>
 <summary> Q: I need root cause of a high CPU issue occurring in the past or intermittently, is it possible or what logs do we need? </summary>
 <BR>
-A: Is sysstat enabled and running? Do we have the sar logs (which is also included in sosreport log bundle) while issue is occurring?
-   Without sysstat enable active, there is no baseline we can use for comparison if a performance issue arises. It is hard to tell how much performance downgrade during peak usage periods.
-   If you are using 3rd-party monitoring tools, explains how it works because we need understand and compare it with the metrics retrieved from native Linux command tools.
+A: Is sysstat enabled and running? Do we have the `sar` logs (which is also included in `sosreport` log bundle) while issue is occurring?
+   Without sysstat enable active, there is no baseline we can use for comparison if a performance issue arises. It's hard to tell how much performance downgrade during peak usage periods.
+   If you're using 3rd-party monitoring tools, explains how it works because we need understand and compare it with the metrics retrieved from native Linux command tools.
 
 </details>
 
 <details>
 <summary> Q: The VM is currently going through high CPU usage. </summary>
 <BR>
-A: Using the tools mentioned (top, ps, vmstat) to identify the issue.
+A: You can utilize the tools in a script to identify the issue.
 </details>
 
 <details>
 <summary> Q: I identified the high CPU process, is there any way to debug it? </summary>
 <BR>
-A: The following code obtain the the list of threads and show the stack of each thread of Top 3 High CPU processes:
+A: The following codes obtain the list of threads and show the stack of each thread of Top 3 High CPU processes:
     
 ```
    for H_PID in $(ps -eo pcpu,pid,ppid,user,args | sort -k1 -r | grep -v PID | head -3 | awk '{print $2}'); do ps -Llp $H_PID; sudo cat /proc/$H_PID/stack; echo; done
@@ -341,5 +342,5 @@ A: The following code obtain the the list of threads and show the stack of each 
 <summary> Q: The high CPU issue occurs intermittently and keeps short time every few minutes. We also have the sosreport with sysstat enabled. </summary>
 <BR>
 A: The default SAR collection interval is 10 minutes. If the issue is occurring in a short time, `SAR` may not reveal the problem because the metric result is aggregated.
-   If the default 10 minute interval isn't giving the resolution needed, remember that SAR's time interval can be tuned so that is appropriate for the problem.
+   If the default 10-minute interval isn't giving the resolution needed, remember that SAR's time interval can be tuned so that is appropriate for the problem.
 </details>
