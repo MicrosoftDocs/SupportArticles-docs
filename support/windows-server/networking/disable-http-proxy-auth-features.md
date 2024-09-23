@@ -56,4 +56,4 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\Disable
 After you disable WPAD, you have to manually configure all proxies.
 
 > [!IMPORTANT]
-> In addition to setting the registry key, WPAD should also be disabled in the Windows **Settings** UI, as third-party apps and Internet browsers may rely on these settings for Proxy Auto-Discovery.
+> In addition to setting the registry key, WPAD should also be disabled in the Windows **Settings** UI, because third-party apps and Internet browsers may rely on these settings for Proxy Auto-Discovery.
