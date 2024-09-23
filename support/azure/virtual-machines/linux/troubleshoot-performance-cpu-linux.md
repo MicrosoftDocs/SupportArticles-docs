@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot performance CPU issues in Linux
 description: Troubleshoot CPU performance issues on Linux virtual machines in Azure.
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance, linux-related-content
 author: paulxjp
 ms.author: jianpingxi
@@ -22,7 +22,7 @@ You can obtain performance CPU metric using the tools in the following table.
 
 
 ## top
-The `top` utility is the first resource monitoring tool to provide an in-depth representation of CPU utilization. It gives you a real-time look at what’s going on with the server. Here is a top report from a 2-processor virtual machine:
+The `top` utility is the first resource monitoring tool to provide an in-depth representation of CPU utilization. `Top` gives you a real-time look at what’s going on with the server. Here is a `Top` report from a 2-processor virtual machine (VM):
 
 ```output
 top - 03:12:38 up  1:53,  3 users,  load average: 1.72, 0.62, 0.25
@@ -134,13 +134,13 @@ The following sections discuss CPU related metrics.
 
 The utilization of a CPU is dependent on which resource is trying to access it. A scheduler exists in the kernel which is responsible for scheduling resources. It gives different priorities to the different resources. The next list explain the priorities from highest to lowest.
 
-Hardware Interrupts - requests created by hardware on the system to process data. This interrupt does this without waiting for current program to finish. It is unconditional and immediate. For example, a key stroke, mouse movement, a Network Card Interface may signal that a packet arrived.
+Hardware Interrupts - requests created by hardware on the system to process data. Hardware interrupt does this without waiting for current program to finish. It is unconditional and immediate. For example, it could be a key stroke, mouse movement, a Network Card Interface signal when a packet arrived.
 
-Soft Interrupts - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval it checks and make sure that a process has not passed its allotted time on a processor.
+Soft Interrupts - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval, it checks and makes sure that a process does not pass its allotted time on a processor.
 
 Real Time Threads - A real time process may come on the CPU and preempt (or “kick off) the kernel..
 
-Kernel Threads - A kernel thread is a kernel entity, like processes and interrupt handlers; it is the entity handled by the system scheduler. Kernel-level threads are handled by the operating system directly and the thread management is done by the kernel.
+Kernel Threads - A kernel thread is a kernel entity, like processes and interrupt handlers. It is the entity handled by the system scheduler. The operating system handles Kernel-level threads directly.
 
 User Threads - This space is often referred to as “user land” and all software applications run in the user space. This space has the lowest priority in the kernel scheduling mechanism. In order to understand how the kernel manages these different resources, we need understand some key concepts such as context switches, run queues, and utilization.
 
@@ -151,7 +151,7 @@ How to use SAR (System Activity Reporter) from the sysstat package to Monitor Sy
 
 https://access.redhat.com/solutions/276533
 
-SAR is provided by the **sysstat** package, which also provides other statistical reporting tools, such as iostat. Note that the sysstat package is not installed by default.
+SAR is provided by the **sysstat** package, which also provides other statistical reporting tools, such as iostat. The sysstat package is not installed by default.
 
 Configure and enable SAR to start on boot with the below commands:
 ```
@@ -196,7 +196,7 @@ Display CPU utilization statistics from file sa10:
 
 `vmstat` (virtual memory statistics) provides information about block IO and CPU activity in addition to memory.
 
-vmstat will typically be called using two numerical parameters.
+`vmstat` is typically called using two numerical parameters.
 ```
 vmstat [delay] [count]
 ```
@@ -205,13 +205,13 @@ vmstat [delay] [count]
 
 [count]: specifies the times of refreshes. 
 
-If you specify only one parameter, it will be taken as the refresh interval, then output will refresh unlimited.
+If you specify only one parameter, it is taken as the refresh interval, then output refreshes unlimited.
 
 <br>
 
 **vmstat outputs while high I/O activity command dd is running**
 
-The first line of the report will contain the average values since the last time the computer was rebooted. All other lines in the report will represent their respective current values. 
+The first line of the report contains the average values since the last time the computer was rebooted. All other lines in the report represent their respective current values. 
 
 ```
 # vmstat 2
@@ -254,7 +254,7 @@ Meaning of the individual metrics:
 
 **How to identify which process is causing high context switches**
 
-The `pidstat` command is used for monitoring individual  tasks  currently being managed by the Linux kernel. 
+The `pidstat` command is used for monitoring individual tasks currently which the Linux kernel manages. 
 
 Run following command to check which process is causing issue. Like vmstat option usage, it runs 5 times with 2 seconds interval.
 
@@ -316,7 +316,7 @@ Linux 4.18.0-553.16.1.el8_10.x86_64 (rhel8)     09/19/2024      _x86_64_       (
 <summary> Q: I need root cause of a high CPU issue occurring in the past or intermittently, is it possible or what logs do we need? </summary>
 <BR>
 A: Is sysstat enabled and running? Do we have the sar logs (which is also included in sosreport log bundle) while issue is occurring?
-   Without sysstat running active, which means there is no baseline we can use for comparison if a performance issue arises, it will be hard to tell how much the performance downgrade during peak usage periods.
+   Without sysstat enable active, there is no baseline we can use for comparison if a performance issue arises. It is hard to tell how much performance downgrade during peak usage periods.
    If you are using 3rd-party monitoring tools, explains how it works because we need understand and compare it with the metrics retrieved from native Linux command tools.
 
 </details>
@@ -328,7 +328,7 @@ A: Using the tools mentioned (top, ps, vmstat) to identify the issue.
 </details>
 
 <details>
-<summary> Q: I have identified the high CPU process, is there any way to debug it? </summary>
+<summary> Q: I identified the high CPU process, is there any way to debug it? </summary>
 <BR>
 A: The following code obtain the the list of threads and show the stack of each thread of Top 3 High CPU processes:
     
@@ -338,8 +338,8 @@ A: The following code obtain the the list of threads and show the stack of each 
 </details>
 
 <details>
-<summary> Q: The high CPU issue occurs intermittently and keeps very short time every few minutes. We also have the sosreport with sysstat enabled. </summary>
+<summary> Q: The high CPU issue occurs intermittently and keeps short time every few minutes. We also have the sosreport with sysstat enabled. </summary>
 <BR>
-A: The default SAR collection interval is 10 minutes, if the issue is occurring in a very short time, SAR may not reveal the problem because the metric result is aggregated.
+A: The default SAR collection interval is 10 minutes. If the issue is occurring in a short time, `SAR` may not reveal the problem because the metric result is aggregated.
    If the default 10 minute interval isn't giving the resolution needed, remember that SAR's time interval can be tuned so that is appropriate for the problem.
 </details>
