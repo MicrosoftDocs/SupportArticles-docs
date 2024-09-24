@@ -15,10 +15,13 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/19/2024
+ms.date: 09/24/2024
 ---
 
 # Resolve issues that affect the Teams Meeting add-in for classic Outlook
+
+> [!IMPORTANT]
+> The new Outlook doesn't support the Teams COM add-in, also known as Teams add-in for Outlook. There is a native Teams meeting capability in New Outlook that allows users to schedule meetings. For more information, see [Schedule a Teams meeting](https://support.microsoft.com/office/schedule-a-microsoft-teams-meeting-from-outlook-883cc15c-580f-441a-92ea-0992c00a9b0f#bkmk_schedule) > New Outlook (desktop & web).
 
 If you're a Microsoft Teams administrator, and your users can't install the Teams Meeting add-in for classic Microsoft Outlook, schedule Outlook meetings from Teams, or schedule Teams meetings from Outlook, the issue might be caused by a problem with the installation of the Teams Meeting add-in or with the user's mailbox being hidden from the Global Address List (GAL).
 
@@ -57,7 +60,7 @@ If the policies are assigned correctly, but you still can't install the add-in, 
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
 
-If you have multiple users affected by the issues, you can use the Enterprise version of the Assistant. This is a command-line version of the Assistant that can be scripted to detect and fix most issues automatically without requiring user interaction. For details about how to use the Enterprise version of the Assistant, see [Enterprise version of Microsoft Support and Recovery Assistant](/microsoft-365/troubleshoot/administration/sara-command-line-version#supported-switches).  
+If you have multiple users affected by the issues, you can use the [Enterprise version of Microsoft Support and Recovery Assistant](/microsoft-365/troubleshoot/administration/sara-command-line-version#supported-switches). This is a command-line version of the Assistant that can be scripted to detect and fix most issues automatically without requiring user interaction.
 
 ### Fix the issue manually
 
@@ -142,7 +145,7 @@ When a delegate schedules a Teams meeting in a delegated calendar on behalf of t
 
 This issue occurs if the delegator's mailbox is hidden from the global address list (GAL). In this case, the Teams Meeting add-in can't get the required information and populate the meeting details.
 
-To fix the issue, you can use the following Exchange Online PowerShell cmdlet to unhide the delegator's mailbox:
+To fix the issue, run the following Exchange Online PowerShell cmdlet to unhide the delegator's mailbox:
 
 ```powershell
 Set-Mailbox -Identity <delegator’s email address> -HiddenFromAddressListsEnabled $false
