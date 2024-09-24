@@ -165,8 +165,6 @@
 
 - name: Node/node pool availability and performance
   items:
-  - name: Improve container image pull performance in AKS
-    href: availability-performance/container-image-pull-performance.md
   - name: AKS cluster/node is in failed state
     href: availability-performance/cluster-node-virtual-machine-failed-state.md
   - name: Identify nodes and containers consuming high CPU
