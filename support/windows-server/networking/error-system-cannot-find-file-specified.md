@@ -1,11 +1,11 @@
 ---
 title: The system cannot find the file specified error
 description: Helps resolve the error - The namespace cannot be queried. The system cannot find the file specified.
-ms.date: 09/10/2024
+ms.date: 09/24/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, v-lianna, albugn
 ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
 ---
 # Error "The namespace cannot be queried. The system cannot find the file specified" with DFS namespaces
@@ -18,14 +18,14 @@ When you access, modify, or create a Distributed File System (DFS) namespace on 
 
 ## The registry entry or values are corrupt, modified, or missing
 
-This error generally occurs when you access a DFS stand-alone namespace using the DFS Management console. The cause is that all or part of the registry key for the DFS stand-alone namespace is missing on the DFS namespace server.
+This error generally occurs when you access a DFS stand-alone namespace using the DFS Management console. The cause is that the entire registry key path or subkeys under the DFS  stand-alone root registry are missing, corrupt or modified, on the DFS namespace server hosting the DFS stand-alone namespace root.
 
-The registry entry for the DFS namespace root, or other registry values under the registry subkeys of the DFS root, are corrupt, modified, or missing. For example, under the following registry key: 
+A DFS stand-alone namespace configuration will be stored under the following registry path:
 
 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\`
 
 > [!NOTE]
-> If you restart the DFS server service on the affected DFS namespace server (holding the DFS stand-alone namespace), you'll receive the error "The Namespace cannot be queried. Element not found" while trying to reload or access the DFS stand-alone namespace from the DFS Management console.
+> If in this current broken configuration state, you would restart the DFS server service on the affected DFS namespace server (holding the DFS stand-alone namespace), you'll receive the error "The Namespace cannot be queried. Element not found" while trying to reload or access the DFS stand-alone namespace from the DFS Management console.
 
 ### Wireshark trace example
 
