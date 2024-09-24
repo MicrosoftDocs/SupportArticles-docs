@@ -117,12 +117,19 @@ This article provides instructions on configuring custom DNS servers and search 
 
 ### Configure search domains
 
-1. Use a text editor (like nano or vim) to create the YAML configuration file in the `/etc/netplan/`. For example:
+1. Use a text editor (like nano or vim) to create a YAML configuration file in the `/etc/netplan/` for the DNS servers. For example:
 
       ```
-      sudo nano /etc/netplan/01-netcfg.yaml
+      sudo nano /etc/netplan/custom-dns-01.yaml
       ```
-2. Add the following configuration, and then Save and Exit: If you’re using nano, press `CTRL + O` to save and `CTRL + X` to exit. If you’re using vim, press ESC, type `:wq`, and then hit Enter to save and exit.
+
+      or
+   
+      ```
+      sudo vi /etc/netplan/custom-dns-01.yaml
+      ```
+   
+3. Add the following configuration, and then save and exit: If you’re using nano, press `CTRL + O` to save and `CTRL + X` to exit. If you’re using vim, press ESC, type `:wq`, and then hit Enter to save and exit.
 
     ```yaml
     network:
@@ -131,13 +138,13 @@ This article provides instructions on configuring custom DNS servers and search 
         nameservers:
           search: [ test.example.com ]
     ```
-3. Run the following command to apply the search domain changes.
+4. Run the following command to apply the search domain changes.
   
    ```bash
    sudo netplan apply
    ```
 
-4. View the `resolvectl` status to determinate whether the search domain is added successfully:
+5. View the `resolvectl` status to determinate whether the search domain is added successfully:
 
    ```bash
    sudo resolvectl status
