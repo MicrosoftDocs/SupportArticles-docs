@@ -69,11 +69,8 @@ To determine whether your cluster is affected by the recent KEDA upgrades, follo
       
     ```output
     "2.14"
-    ```bash
-2. Review the currently deployed KEDA Scalers:
-
-    - Review the configurations of KEDA Scalers that are currently deployed in your cluster.
-    - Check whether Microsoft Entra pod-managed Identities are used for authentication. The following command displays output only if you're using Pod Identity together with KEDA:
+    ```
+2. Review the configurations of KEDA Scalers that are currently deployed in your cluster. Check whether Microsoft Entra pod-managed Identities are used for authentication. The following command displays output only if you're using Pod Identity together with KEDA:
     
         ```bash
         kubectl get TriggerAuthentication --all-namespaces -o jsonpath='{range .items[?(@.spec.podIdentity.provider=="azure")]}{.metadata.namespace}{"/"}{.metadata.name}{"\n"}{end}'
@@ -84,7 +81,7 @@ To determine whether your cluster is affected by the recent KEDA upgrades, follo
         NAME                      PODIDENTITY                 SECRET                 ENV            VAULTADDRESS
         keda-trigger-auth-azure     yourPodIdentity    azure-secret                     <URL>
 
-        ```bash
+        ```
 ### What steps can I take to mitigate the issues?
 
 1. Migrate from Microsoft Entra pod-managed identities to workload identity for authentication. For more information, see [Use Microsoft Entra Workload ID with AKS](/azure/aks/workload-identity-overview?tabs=dotnet) and [Migrate from pod managed-identity to workload identity](/azure/aks/workload-identity-migrate-from-pod-identity).
@@ -98,6 +95,6 @@ To determine whether your cluster is affected by the recent KEDA upgrades, follo
 
 ### How can I get support if I have follow-up questions?
 
-If you have questions or need help, [create a support request for KEDA (Event driven autoscaling) add-on](https://ms.portal.azure.com/#create/Microsoft.Support/Parameters/%7B%0D%0A%09%22subId%22%3A+%22%22%2C%0D%0A%09%22pesId%22%3A+%2216450%22%2C%0D%0A%09%22supportTopicId%22%3A+%2232844723%22%2C%0D%0A%09%22contextInfo%22%3A+%22Keda214215%22%2C%0D%0A%09%22caller%22%3A+%22Keda214215comms%22%2C%0D%0A%09%22severity%22%3A+%223%22%0D%0A%7D).
+If you have questions or need help, [create a support request for KEDA add-on](https://ms.portal.azure.com/#create/Microsoft.Support/Parameters/%7B%0D%0A%09%22subId%22%3A+%22%22%2C%0D%0A%09%22pesId%22%3A+%2216450%22%2C%0D%0A%09%22supportTopicId%22%3A+%2232844723%22%2C%0D%0A%09%22contextInfo%22%3A+%22Keda214215%22%2C%0D%0A%09%22caller%22%3A+%22Keda214215comms%22%2C%0D%0A%09%22severity%22%3A+%223%22%0D%0A%7D).
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
