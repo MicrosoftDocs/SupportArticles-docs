@@ -40,7 +40,7 @@ You can't schedule a pod on a node that has a status of `NotReady` or `Unknown`.
 
 If your node is in the `MemoryPressure`, `DiskPressure`, or `PIDPressure` state, you must manage your resources in order to schedule extra pods on the node. If your node is in `NetworkUnavailable` mode, you must configure the network on the node correctly. 
 
-AKS manages the lifecycle and operations of agent nodes for you. Modifying the IaaS resources associated with the agent nodes isn't supported. For example, customizing a node through direct SSH connections, updating packages, or changing the network configuration on the node isn't supported. For more information, see [AKS support coverage for agent nodes](/azure/aks/support-policies#user-customization-of-agent-nodes).
+AKS manages the lifecycle and operations of agent nodes for you. Modifying the IaaS resources associated with the agent nodes isn't supported. For example, customizing a node through SSH connections, updating packages, or changing the network configuration on the node isn't supported. For more information, see [AKS support coverage for agent nodes](/azure/aks/support-policies#user-customization-of-agent-nodes).
 
 Make sure that the following conditions are met:
 
