@@ -48,4 +48,4 @@ If DC Locator doesn't work as expected in Active Directory domains, troubleshoot
 
 6. Use the *Ldp.exe* tool to connect and bind to the domain controller to verify appropriate Lightweight Directory Access Protocol (LDAP) connectivity.
 7. If you suspect that a particular domain controller has issues, turn on Netlogon debug logging. Use the Nltest tool by running the `nltest /dbflag:0x2000ffff` command. The information is then logged in the *Netlogon.log* file under the *%windir%\\Debug* folder.
-8. If you still haven't isolated the issue, use network monitor tools like WireShark to capture and analyze network traffic between the client and the domain controller.
+8. If you still haven't isolated the issue, use network monitor tools like Wireshark to capture and analyze network traffic between the client and the domain controller.
