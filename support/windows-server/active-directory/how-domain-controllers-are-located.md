@@ -27,30 +27,17 @@ If DC Locator doesn't work as expected in Active Directory domains, troubleshoot
     ```
 
 3. Use the Ping utility to verify network connectivity and the name resolution. Ping the IP address, the server name, and the domain name.
-4. Use the Netdiag tool to determine whether networking components are working correctly. To send a detailed output to a text file, run the following command:
-
-    ```console
-    netdiag /v >test.txt
-    ```
-
-    Review the output file for any issues, and investigate any implicated components. This file also contains other network configuration details.
-5. To fix minor issues, use the Netdiag tool with the following command:
-
-    ```console
-    netdiag /fix
-    ```
-
-6. Run the `nltest /dsgetdc:domainname` command to verify that you can locate domain controller for a specific domain.
-7. Use the `nslookup` tool to verify that DNS entries are correctly registered in DNS. Verify that the server host records and the globally unique identifier (GUID) SRV records can be resolved.
+4. Run the `nltest /dsgetdc:domainname` command to verify that you can locate domain controller for a specific domain.
+5. Use the `nslookup` tool to verify that DNS entries are correctly registered in DNS. Verify that the server host records and the globally unique identifier (GUID) SRV records can be resolved.
 
     For example, to verify record registrations, run the following commands:
 
     ```console
-    nslookup servername. childofrootdomain. rootdomain.com
+    nslookup servername.childofrootdomain.rootdomain.com
     ```
 
     ```console
-    nslookup guid._msdcs. rootdomain.com
+    nslookup guid._msdcs.rootdomain.com
     ```
 
     If either of these commands doesn't succeed, use one of the following methods to reregister records with DNS:
@@ -59,6 +46,6 @@ If DC Locator doesn't work as expected in Active Directory domains, troubleshoot
     - To force the domain controller service registration, stop and restart the Netlogon service.
     - To detect domain controller issues, run the DCdiag utility from a command prompt. The utility runs many tests to verify that a domain controller is running correctly. Use the dcdiag /v >dcdiag.txt command to send the results to a text file.
 
-8. Use the *Ldp.exe* tool to connect and bind to the domain controller to verify appropriate Lightweight Directory Access Protocol (LDAP) connectivity.
-9. If you suspect that a particular domain controller has issues, turn on Netlogon debug logging. Use the Nltest tool by running the `nltest /dbflag:0x2000ffff` command. The information is then logged in the *Netlogon.log* file under the *Debug* folder.
-10. If you still haven't isolated the issue, use Microsoft Network Monitor to monitor network traffic between the client and the domain controller.
+6. Use the *Ldp.exe* tool to connect and bind to the domain controller to verify appropriate Lightweight Directory Access Protocol (LDAP) connectivity.
+7. If you suspect that a particular domain controller has issues, turn on Netlogon debug logging. Use the Nltest tool by running the `nltest /dbflag:0x2000ffff` command. The information is then logged in the *Netlogon.log* file under the *%windir%\\Debug* folder.
+8. If you still haven't isolated the issue, use network monitor tools like WireShark to capture and analyze network traffic between the client and the domain controller.
