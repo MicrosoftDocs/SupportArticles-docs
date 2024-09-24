@@ -168,7 +168,7 @@ Staged Packages:
     From the log entries, identify the Update Build Revision (UBR) number within the file paths:
 
     - In the *EnterpriseModernAppMgmtCSP.dll* file, the UBR number is `10.0.19045.3636`.
-    - In the `Microsoft-Windows-Client-Features-Package package, the UBR number is `10.0.19045.4291`.
+    - In the `Microsoft-Windows-Client-Features-Package` package, the UBR number is `10.0.19045.4291`.
 
 3. Match the UBR number to the KB number:
 
@@ -176,10 +176,11 @@ Staged Packages:
    2. Match the UBR number (`3636` or `4291`) with the listed updates to find the KB number.
 
    For example:
-       UBR `3636` might correspond to KB5031445.
-       UBR `4291` might correspond to KB5036892.
 
-4. Search for and download the update by the KB number.
+    - UBR `3636` might correspond to KB5031445.
+    - UBR `4291` might correspond to KB5036892.
+
+4. Search for and download the update by the KB number:
 
     1. Use the identified KB numbers to search on the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
     2. Download the updates associated with each KB number to restore the missing or corrupted files.
