@@ -16,7 +16,7 @@ ms.collection: linux
 This article provides instructions on configuring custom DNS servers and search domains in Azure Linux virtual machines (VMs).
 
 > [!NOTE]
-> This article uses the DNS servers `1.2.3.4` and `5.6.7.8` and the search domain “test.example.com” as examples. Replace these with your actual DNS server addresses and search domain path.
+> This article uses the DNS servers `1.2.3.4` and `5.6.7.8` and the search domain `"test.example.com"` as examples. Replace these with your actual DNS server addresses and search domain path.
 
 ## [RHEL 8.x/9._x_](#tab/RHEL)
 
@@ -52,7 +52,7 @@ This article provides instructions on configuring custom DNS servers and search 
 
 ### Configure search domains
 
-1. To change the search domain, add the domain name as the following in `/etc/dhcp/dhclient.conf`. To specify multiple search domains, separate them with commas, such as "test.example.com, test1.example.com, test2.example.com".
+1. To change the search domain, add the domain name as the following in `/etc/dhcp/dhclient.conf`. To specify multiple search domains, separate them with commas, such as `"test.example.com, test1.example.com, test2.example.com"`.
  
     ```config
     append domain-search "test.example.com";
