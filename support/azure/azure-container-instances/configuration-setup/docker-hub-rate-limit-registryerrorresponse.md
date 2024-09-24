@@ -28,7 +28,7 @@ You might also see the following error messages:
 
 - > You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.
 
-- > TOOMANYREQUESTS: too many requests to source registry for cache rule (name of customer's cache rule)
+- > TOOMANYREQUESTS: too many requests to source registry for cache rule \<name of the cache rule>
 
 ## Cause
 
