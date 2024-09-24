@@ -11919,6 +11919,11 @@
       "source_path": "support/windows-server/backup-and-storage/enabling-mpio-with-sas-decreases-performance.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/enabling-mpio-with-sas-decreases-performance",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/namespace-not-queried-rpc-server-unavailable.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/namespace-not-queried-rpc-server-unavailable",
+      "redirect_document_id": true
     }
   ]
 }

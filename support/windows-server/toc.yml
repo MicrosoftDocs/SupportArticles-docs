@@ -269,8 +269,6 @@ items:
     items:
     - name: Can't promote a DC to global catalog server
       href: ./active-directory/cannot-promote-dc-to-global-catalog-server.md
-    - name: Fail to create a DFS namespace
-      href: ./active-directory/namespace-not-queried-rpc-server-unavailable.md
     - name: Issues when renaming sites in the AD forest
       href: ./active-directory/problems-rename-active-directory-forest-sites.md
     - name: KFSO doesn't work in external trust
@@ -1247,6 +1245,8 @@ items:
       href: ./networking/dns-cname-alias-cannot-access-smb-file-server-share.md
     - name: Domain users fail to access a share on a file server
       href: ./networking/target-account-name-incorrect-error-access-file-share.md
+    - name: 'Error "The RPC server is unavailable"'
+      href: ./networking/namespace-not-queried-rpc-server-unavailable.md
     - name: Error messages on SMB connections
       href: ./networking/error-messages-smb-connections.md
     - name: Fail to open file shares or Group Policy snap-ins
