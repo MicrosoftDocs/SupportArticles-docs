@@ -1,11 +1,11 @@
 ---
 title: The remote procedure call failed error
 description: Helps resolve the error - The namespace cannot be queried. The remote procedure call failed.
-ms.date: 09/09/2024
+ms.date: 09/24/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, v-lianna, albugn
 ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
 ---
 # Error "The namespace cannot be queried. The remote procedure call failed" with DFS namespaces
@@ -18,10 +18,10 @@ When you access, modify, or create a Distributed File System (DFS) namespace on 
 
 ## The DFS Namespace service stops responding
 
-You use the DFS Management console on a machine that's a member server or a member client with RSAT File Services tools installed. This issue occurs because the DFS Namespace service stops responding on the DFS namespace server. After the machine connects successfully to the DFS namespace server via Remote Procedure Call (RPC), it eventually runs into a communication interruption over the RPC.
+You use the DFS Management console on a machine that's a member server or a member client with RSAT File Services tools installed, to connect to and mange a DFS namespace server. This issue occurs because the DFS namespace service stops responding on the DFS namespace server, after the machine (member server or member client with RSAT File Services tools installed), from where you are using the DFS Management console, initiated successfully to connect (via Remote Procedure Call (RPC) over Transmission Control Protocol (TCP)) to the  DFS namespace server.
 
 > [!NOTE]
-> If the DFS Namespace service doesn't restart or isn't manually started, subsequent tries to access the namespace via the DFS Management console will result in the error "The Namespace cannot be queried. The RPC Server is unavailable."
+> If the DFS Namespace service doesn't restart or isn't manually started on the DFS namespace server, subsequent tries to access the namespace via the DFS Management console will result in the error "[The Namespace cannot be queried. The RPC Server is unavailable](/troubleshoot/windows-server/active-directory/namespace-not-queried-rpc-server-unavailable)."
 
 ### Wireshark trace example
 
