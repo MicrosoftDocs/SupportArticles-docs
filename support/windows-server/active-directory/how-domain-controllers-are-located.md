@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot domain controller location issues in Windows
 description: Helps troubleshoot domain controller location issues in Windows.
-ms.date: 09/23/2024
+ms.date: 09/24/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, roharwoo
+ms.reviewer: kaushika, roharwoo, herbertm
 ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
 ---
 # Troubleshoot domain controller location issues in Windows
