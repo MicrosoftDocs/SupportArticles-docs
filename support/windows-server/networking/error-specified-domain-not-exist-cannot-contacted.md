@@ -1,11 +1,11 @@
 ---
 title: The specified domain either does not exist or cannot be contacted error
 description: Helps resolve the error - The namespace cannot be queried. The specified domain either does not exist or cannot be contacted.
-ms.date: 09/09/2024
+ms.date: 09/24/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, v-lianna, albugn
 ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
 ---
 # Error "The namespace cannot be queried. The specified domain either does not exist or cannot be contacted" with DFS namespaces
@@ -18,9 +18,9 @@ When you access, modify, or create a Distributed File System (DFS) namespace on 
 
 ## Cause 1: The PDC or DC can't be reached or is down
 
-You use the DFS Management console on a machine that's a DFS namespace server, member server, or member client with RSAT File Services tools installed. This issue occurs because the machine can't reach the primary domain controller (PDC) or domain controller (DC) over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port), or the PDC or DC is down.
+You use the DFS Management console on a machine that's a DFS namespace server, member server, or member client with RSAT File Services tools installed. This issue occurs because the machine, from where you are using the DFS Management console, can't reach the primary domain controller (PDC) or local domain controller (DC) over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port), or the PDC or DC is down..
 
-### Wireshark trace example 1
+### Wireshark trace scenario 1
 
 Tracing on a DFS namespace server:
 
@@ -38,7 +38,7 @@ However, Connectionless Lightweight Directory Access Protocol (CLDAP) requests s
 192.168.0.42	192.168.0.1	CLDAP	242	searchRequest(49) "<ROOT>" baseObject
 ```
 
-### Wireshark trace example 2
+### Wireshark trace scenario 2
 
 Tracing on a member server or a member client with RSAT File Services tools installed:
 
