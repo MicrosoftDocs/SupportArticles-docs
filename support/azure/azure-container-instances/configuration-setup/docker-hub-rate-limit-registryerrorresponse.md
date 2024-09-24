@@ -20,7 +20,7 @@ When you try to create or update a container instance and pull images anonymousl
 
 To find this error in the Azure portal, navigate to the container instance and select **Activity log**. On the **Activity log** page, select the failed operation to check the error message.
 
- :::image type="content" source="media/docker-hub-rate-limit-registryerrorresponse/registryerrorresponse-error-message.png" alt-text="Screenshot that shows the 'RegistryErrorResponse' error message." lightbox="media/docker-hub-rate-limit-registryerrorresponse/registryerrorresponse-error-message.png":::
+:::image type="content" source="media/docker-hub-rate-limit-registryerrorresponse/registryerrorresponse-error-message.png" alt-text="Screenshot that shows the 'RegistryErrorResponse' error message." lightbox="media/docker-hub-rate-limit-registryerrorresponse/registryerrorresponse-error-message.png":::
 
 You might also see the following error messages:
 
