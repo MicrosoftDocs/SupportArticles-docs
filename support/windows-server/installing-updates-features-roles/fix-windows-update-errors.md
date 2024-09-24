@@ -165,24 +165,24 @@ Staged Packages:
 
 2. Determine the update containing the missing files.
 
-    From the log entries, identify the UBR (Update Build Revision) number within the file paths:
+    From the log entries, identify the Update Build Revision (UBR) number within the file paths:
 
-    - In the first log entry (EnterpriseModernAppMgmtCSP.dll), the UBR is 10.0.19045.3636..
-    - In the second log entry (Microsoft-Windows-Client-Features-Package), the UBR is 10.0.19045.4291.
+    - In the *EnterpriseModernAppMgmtCSP.dll* file, the UBR number is `10.0.19045.3636`.
+    - In the `Microsoft-Windows-Client-Features-Package package, the UBR number is `10.0.19045.4291`.
 
-3. Match the UBR to the KB Number:
+3. Match the UBR number to the KB number:
 
-    - Go to the Windows [update history page](/windows/release-health/release-information#windows-10-release-history) for your version (e.g., Windows 10, version 22H2).
-    - Match the UBR (3636 or 4291) with the listed updates to find the KB number for each UBR.
+   1. Go to the Windows [update history page](/windows/release-health/release-information#windows-10-release-history) for your version (for example, Windows 10, version 22H2).
+   2. Match the UBR number (`3636` or `4291`) with the listed updates to find the KB number.
 
    For example:
-       UBR 3636 might correspond to KB5005565.
-       UBR 4291 might correspond to KB5021234.
+       UBR `3636` might correspond to KB5031445.
+       UBR `4291` might correspond to KB5036892.
 
-4. Search for and Download the Update by KB Number.
+4. Search for and download the update by the KB number.
 
-    Use the identified KB numbers to search on the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
-    Download the updates associated with each KB number to restore the missing or corrupted files
+    1. Use the identified KB numbers to search on the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
+    2. Download the updates associated with each KB number to restore the missing or corrupted files.
 
 ### Step 3: Extract the .msu and .cab files
 
