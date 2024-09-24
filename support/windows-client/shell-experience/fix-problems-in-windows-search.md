@@ -1,7 +1,7 @@
 ---
 title: Fix problems in Windows Search
 description: Provides troubleshooting options for problems that affect the search results for the Windows Search feature in Windows 11 and Windows 10.
-ms.date: 09/18/2024
+ms.date: 09/24/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
