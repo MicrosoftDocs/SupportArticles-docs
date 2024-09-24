@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
 ms.reviewer: kaushika, warrenw, traceytu, iovoicul, kimberj, raviks, v-lianna
-localization_priority: medium
+ms.localizationpriority: medium
 ---
 # Modern, Inbox, and Microsoft Store Apps troubleshooting guidance
 
@@ -166,7 +166,7 @@ Here's the detailed troubleshooting checklist:
 
 ### Remove Appx Package with PowerShell
 
-Appx packages can be removed by using [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage?view=windowsserver2022-ps) appx cmdlet. The cmdlet can be used in one of the following scenarios:
+Appx packages can be removed by using [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage) appx cmdlet. The cmdlet can be used in one of the following scenarios:
 
 - An App isn't working. You want to reinstall the App if it malfunctions.
 - You need to remove unwanted inbox Apps.
@@ -176,7 +176,7 @@ Appx packages can be removed by using [Remove-AppxPackage](/powershell/module/ap
 > Removing an Appx Package can be irreversible. Make sure you are running these commands from the correct User's context, and for the correct Package.
 
 > [!WARNING]
-> Removing the Microsoft Store App is not supported. You can find more information [here](https://learn.microsoft.com/en-us/troubleshoot/windows-client/shell-experience/cannot-remove-uninstall-or-reinstall-microsoft-store-app).
+> Removing the Microsoft Store App is not supported. You can find more information [here](cannot-remove-uninstall-or-reinstall-microsoft-store-app.md).
 
 To do so, follow these steps:
 
@@ -205,7 +205,7 @@ Remove-AppxPackage -Package '<package_name>' -AllUsers
 > [!NOTE]
 > Replace the \<package_name\> with the package that you want to remove.
 
-The Remove-AppxPackage command has other switches that can be used to customize its behavior. For more information about the command, see [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage?view=windowsserver2022-ps).
+The Remove-AppxPackage command has other switches that can be used to customize its behavior. For more information about the command, see [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage).
 
 ### Application is blocked
 
