@@ -2,7 +2,7 @@
 title: Guide to prepare AKS clusters for KEDA 2.15 and 2.14 breaking changes
 description: Explores the key breaking changes that are introduced in KEDA 2.15 and 2.14 and provides a guide to prepare your Azure Kubernetes Service (AKS) clusters for these updates. 
 ms.service: azure-kubernetes-service
-ms.date: 08/13/2024
+ms.date: 09/24/2024
 editor: 
 ms.reviewer: 
 #Customer intent: As an Azure Kubernetes user, I want to understand changes in Event-driven Autoscaling Add-ons version 2.15 and version 2.14. 
@@ -65,18 +65,26 @@ To determine whether your cluster is affected by the recent KEDA upgrades, follo
      ```
      az aks show --resource-group <your-resource-group> --name <your-cluster-name> --query kubernetesVersion
      ```
-2. Audit KEDA Scalers in use:
+   Example of the output:
+      
+    ```output
+    "2.14"
+    ```bash
+2. Review the currently deployed KEDA Scalers:
 
     - Review the configurations of KEDA Scalers that are currently deployed in your cluster.
-    - Check whether Microsoft Entra pod-managed Identities are used for authentication. The following command displays output if you're using Pod Identity together with KEDA:
+    - Check whether Microsoft Entra pod-managed Identities are used for authentication. The following command displays output only if you're using Pod Identity together with KEDA:
     
         ```bash
         kubectl get TriggerAuthentication --all-namespaces -o jsonpath='{range .items[?(@.spec.podIdentity.provider=="azure")]}{.metadata.namespace}{"/"}{.metadata.name}{"\n"}{end}'
         ```
-3. Review the cluster logs:
+        Example of the output:
+      
+        ```output
+        NAME                      PODIDENTITY                 SECRET                 ENV            VAULTADDRESS
+        keda-trigger-auth-azure     yourPodIdentity    azure-secret                     <URL>
 
-    Look for any deprecation warnings or error messages that are related to the removed or changed fields in KEDA, such as `metricName` or `metadata.clientSecret`.
-
+        ```bash
 ### What steps can I take to mitigate the issues?
 
 1. Migrate from Microsoft Entra pod-managed identities to workload identity for authentication. For more information, see [Use Microsoft Entra Workload ID with AKS](/azure/aks/workload-identity-overview?tabs=dotnet) and [Migrate from pod managed-identity to workload identity](/azure/aks/workload-identity-migrate-from-pod-identity).
