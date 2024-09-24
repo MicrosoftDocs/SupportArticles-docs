@@ -30,7 +30,7 @@ The entire registry key for the DFS Namespace root is missing or other registry 
 
   `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\domainV2\<YourDfsDomainNamespace>`
 
-  Example of the correct entry for a DFS domain based root called "Public":  
+  Example of the correct entry for a DFS domain based root called `Public`:  
   Path: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\domainV2\Public`
 
   |Value name  |Value type  |Value data  |
@@ -39,7 +39,7 @@ The entire registry key for the DFS Namespace root is missing or other registry 
   |`RootShare`     |`REG_SZ`         |`Public`         |
 
   > [!NOTE]
-  > In the preceding example, "Public" is the name of the DFS domain-based namespace root and `LogicalShare` and `RootShare` are the registry keys of type `REG_SZ`, that need to have as value data of the name of the DFS Namespace root, "Public".
+  > In the preceding example, `Public` is the name of the DFS domain-based namespace root and `LogicalShare` and `RootShare` are the registry keys of type `REG_SZ`, that need to have as value data of the name of the DFS Namespace root, `Public`.
   
 ### For domain stand-alone DFS namespaces
 
@@ -51,9 +51,9 @@ The entire registry key for the DFS Namespace root is missing or other registry 
 
 - If the following registry values under the DFS Namespace root name registry key path are either missing or are corrupt:
 
-  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\<YourDfsStandaloneNamespace>'
+  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\<YourDfsStandaloneNamespace>`
 
-  Example of the correct entry for a DFS stand-alone root called "StandaloneData":  
+  Example of the correct entry for a DFS stand-alone root called `StandaloneData`:  
 
   |Value name  |Value type  |Value data  |
   |---------|---------|---------|
@@ -61,7 +61,7 @@ The entire registry key for the DFS Namespace root is missing or other registry 
   |`RootShare`     |`REG_SZ`         |`StandaloneData`         |
 
   > [!NOTE]
-  > In the preceding example, "StandaloneData" is the name of the DFS stand-alone namespace root (domain based) and "LogicalShare" and "RootShare" are the registry keys of type `REG_SZ`, that need to have as value data of the name of the DFS namespace root, "StandaloneData".  
+  > In the preceding example, `StandaloneData` is the name of the DFS stand-alone namespace root (domain based) and `LogicalShare` and `RootShare` are the registry keys of type `REG_SZ`, that need to have as value data of the name of the DFS namespace root, `StandaloneData`.  
 
 Wireshark trace error example when trying to access a DFS Namespace, which is hosted on a remote DFS Namespace server, using the DFS Management console:
 
