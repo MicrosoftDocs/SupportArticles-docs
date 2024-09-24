@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 09/23/2024
+ms.date: 09/24/2024
 ms.author: malachma
 ---
 
