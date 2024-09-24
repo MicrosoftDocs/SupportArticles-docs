@@ -36,13 +36,13 @@ This article provides instructions on configuring custom DNS servers and search 
     
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-2.png" alt-text="Screenshot of resolv.conf file post changing the DNS servers at portal level.":::
 
-4. Alternatively, run the following command to confirm whether the DNS servers are successfully added to the `eth0` network interface.
+4. Run the following command to determinate whether the DNS servers are successfully added to the network interface.
 
     ```bash
     sudo systemd-resolve --status
     ```
     
-   Example of `eth0` network interface after configuring the DNS servers:
+   Example of the network interface after configuring the DNS servers:
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-3.png" alt-text="Screenshot of above mentioned command's partial output.":::
 
@@ -66,13 +66,13 @@ This article provides instructions on configuring custom DNS servers and search 
     
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-5.png" alt-text="Screenshot of resolv.conf file after restarting NM service.":::
 
-3. Alternatively, run the following command to confirm whether the search domain is successfully added to the network interface.
+3. Run the following command to determinate whether the search domain is successfully added to the network interface.
 
     ```bash
     sudo systemd-resolve --status
     ```
 
-     Example of `eth0` network interface after configuring search domain:
+     Example of the network interface after configuring search domain:
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-6.png" alt-text="Screenshot showing the search domain.":::
 
@@ -99,13 +99,13 @@ This article provides instructions on configuring custom DNS servers and search 
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-3.png" alt-text="Screenshot of non-stub resolv.conf file after making changes at portal level":::
 
-5. Alternatively, run the following command to check if the custom DNS servers are successfully added to the network interface.
+5. Run the following command to check if the custom DNS servers are successfully added to the network interface.
 
    ```bash
    sudo resolvectl status
    ```
 
-   Example of `eth0` network interface after configuring search domain:
+   Example of the network interface after configuring search domain:
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-4.png" alt-text="Screenshot of resolvectl status command output.":::
 
@@ -131,7 +131,7 @@ This article provides instructions on configuring custom DNS servers and search 
    sudo netplan apply
    ```
 
-4. View the `resolvectl` status to confirm that the search domain is added successfully:
+4. View the `resolvectl` status to determinate whether the search domain is added successfully:
 
    ```bash
    sudo resolvectl status
