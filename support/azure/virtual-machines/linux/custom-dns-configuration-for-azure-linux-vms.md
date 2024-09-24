@@ -27,7 +27,7 @@ This article provides instructions on configuring custom DNS servers and search 
 2. Configure custom DNS servers at the virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
     > [!NOTE]
-    > In Azure, you can set custom DNS servers at the virtual network level or the network interface level. If you set custom DNS servers at the network interface level, it will override the the custom DNS servers configuration in virtual network.
+    > In Azure, you can set custom DNS servers at the virtual network level or the network interface level. If you set custom DNS servers at the network interface level, it will override the the custom DNS servers configuration in the virtual network.
 
 
 3. Restart the `NetworkManager` service, and then check  `/etc/resolv.conf` file. It should contain the DNS servers you configured in the step 2.
@@ -90,6 +90,8 @@ This article provides instructions on configuring custom DNS servers and search 
 
 2. Configure custom DNS servers at the Azure virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
 
+    > [!NOTE]
+    > In Azure, you can set custom DNS servers at the virtual network level or the network interface level. If you set custom DNS servers at the network interface level, it will override the the custom DNS servers configuration in the virtual network.
 3. Run the following command to apply the custom DNS entries:
 
    ```bash
@@ -152,7 +154,8 @@ This article provides instructions on configuring custom DNS servers and search 
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-1.png" alt-text="Screenshot of default resolv.conf file in SUSE.":::
 
 2. Configure custom DNS servers at the Azure virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network).
-
+    > [!NOTE]
+    > In Azure, you can set custom DNS servers at the virtual network level or the network interface level. If you set custom DNS servers at the network interface level, it will override the the custom DNS servers configuration in the virtual network.
 3. Restart the `wicked.service`, and then check  `/etc/resolv.conf` file. It should contain the DNS servers you configured in the step 2.
 
    ```bash
