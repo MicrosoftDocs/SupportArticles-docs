@@ -42,9 +42,9 @@ If DC Locator doesn't work as expected in Active Directory domains, troubleshoot
 
     If either of these commands doesn't succeed, use one of the following methods to reregister records with DNS:
 
-    - To force the host record registration, use the ipconfig /registerdns command.
+    - To force the host record registration, use the `ipconfig /registerdns` command.
     - To force the domain controller service registration, stop and restart the Netlogon service.
-    - To detect domain controller issues, run the DCdiag utility from a command prompt. The utility runs many tests to verify that a domain controller is running correctly. Use the dcdiag /v >dcdiag.txt command to send the results to a text file.
+    - To detect domain controller issues, run the DCdiag utility from a command prompt. The utility runs many tests to verify that a domain controller is running correctly. Use the `dcdiag /v >dcdiag.txt` command to send the results to a text file.
 
 6. Use the *Ldp.exe* tool to connect and bind to the domain controller to verify appropriate Lightweight Directory Access Protocol (LDAP) connectivity.
 7. If you suspect that a particular domain controller has issues, turn on Netlogon debug logging. Use the Nltest tool by running the `nltest /dbflag:0x2000ffff` command. The information is then logged in the *Netlogon.log* file under the *%windir%\\Debug* folder.
