@@ -166,9 +166,9 @@ Here's the detailed troubleshooting checklist:
 
 ### Remove Appx Package with PowerShell
 
-Appx packages can be removed by using [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage) appx cmdlet. The cmdlet can be used in one of the following scenarios:
+Appx packages can be removed by using the [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage) appx cmdlet. The cmdlet can be used in one of the following scenarios:
 
-- An App isn't working. You want to reinstall the App if it malfunctions.
+- An App isn't working. You want to reinstall the App to resolve the malfunction.
 - You need to remove unwanted inbox Apps.
 - You need to uninstall Apps flagged as vulnerable by security software.
 
@@ -178,25 +178,25 @@ Appx packages can be removed by using [Remove-AppxPackage](/powershell/module/ap
 > [!WARNING]
 > Removing the Microsoft Store App is not supported. You can find more information [here](cannot-remove-uninstall-or-reinstall-microsoft-store-app.md).
 
-To do so, follow these steps:
+To remove the App, follow these steps:
 
-Determine whether the application that you want to remove is registered or installed for the user account.
+Determine whether the App that you want to remove is registered or installed for the user account.
 
 ```powershell
-Get-AppxPackage -Name <Application Name>
+Get-AppxPackage -Name <App_name>
 ```
 
-If you can see an output for the above command, the application is registered for the user's account.
+If you can see an output for the above command, the App is registered for the user's account.
 
 Certain Appx packages, such as System Apps, can't be removed. The **NonRemovable** attribute in the output of the `Get-AppxPackage` cmdlet indicates whether an Appx package can be removed. Make sure the package you're trying to remove doesn't have **NonRemovable** attribute set to **True**.
 
-Now we can use the `Remove-AppxPackage` cmdlet to remove the application for the user's account.
+Now you can use the `Remove-AppxPackage` cmdlet to remove the App for the user's account.
 
 ```powershell
 Remove-AppxPackage -Package '<package_name>'
 ```
 
-To remove the application for all user accounts on the computer, you can add the `-AllUsers` switch. Running the command requires Administrator permission.
+To remove the App for all user accounts on the computer, you can add the `-AllUsers` switch. Running the command requires Administrator permission.
 
 ```powershell
 Remove-AppxPackage -Package '<package_name>' -AllUsers
