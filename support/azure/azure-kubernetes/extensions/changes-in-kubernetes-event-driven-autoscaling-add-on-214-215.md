@@ -98,10 +98,6 @@ To determine whether your cluster is affected by the recent KEDA upgrades, follo
 
 ### How can I get support if I have follow-up questions?
 
-If you have questions or need help, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) and include the following information:
-
-- **Service**: Kubernetes Service (AKS)
-- **Problem type**: Extensions, Polices and Add-Ons
-- **Problem subtype**: KEDA (Event driven autoscaling) add-on
+If you have questions or need help, [create a support request for KEDA (Event driven autoscaling) add-on](https://ms.portal.azure.com/#create/Microsoft.Support/Parameters/%7B%0D%0A%09%22subId%22%3A+%22%22%2C%0D%0A%09%22pesId%22%3A+%2216450%22%2C%0D%0A%09%22supportTopicId%22%3A+%2232844723%22%2C%0D%0A%09%22contextInfo%22%3A+%22Keda214215%22%2C%0D%0A%09%22caller%22%3A+%22Keda214215comms%22%2C%0D%0A%09%22severity%22%3A+%223%22%0D%0A%7D).
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
