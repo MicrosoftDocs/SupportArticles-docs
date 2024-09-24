@@ -129,7 +129,7 @@ This article provides instructions on configuring custom DNS servers and search 
       sudo vi /etc/netplan/custom-dns-01.yaml
       ```
    
-3. Add the following configuration, and then save and exit: If you’re using nano, press `CTRL + O` to save and `CTRL + X` to exit. If you’re using vim, press ESC, type `:wq`, and then hit Enter to save and exit.
+3. Add the following configuration, and then save and exit: If you’re using nano, press `CTRL + O` to save and `CTRL + X` to exit. If you’re using vim, press ESC, type `:wq`, and then hit Enter to save and exit. 
 
     ```yaml
     network:
@@ -138,6 +138,7 @@ This article provides instructions on configuring custom DNS servers and search 
         nameservers:
           search: [ test.example.com ]
     ```
+    Multiple search domains can be given, separated by commas, like `[test.example.com, test1.example.com, test2.example.com]`
 4. Run the following command to apply the search domain changes.
   
    ```bash
@@ -156,7 +157,7 @@ This article provides instructions on configuring custom DNS servers and search 
 
 ### Configure DNS servers
 
-1. The initial configuration of the /etc/resolv.conf file in an Azure SLES VM is as follows:
+1. The initial configuration of the `/etc/resolv.conf` file in an Azure SLES VM is as follows:
 
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-1.png" alt-text="Screenshot of default resolv.conf file in SUSE.":::
 
@@ -179,7 +180,7 @@ This article provides instructions on configuring custom DNS servers and search 
    ```config
    NETCONFIG_DNS_STATIC_SEARCHLIST="test.example.com"
    ```
-   Multiple domains can be declared using a space separator, as demonstrated here:
+   Multiple search domains can be declared using a space separator, as demonstrated here:
 
    ```config
    NETCONFIG_DNS_STATIC_SEARCHLIST="test.example.com test1.example.com"
@@ -195,7 +196,7 @@ This article provides instructions on configuring custom DNS servers and search 
    ```bash
    sudo netconfig update
    ```
-
+   Example of the `/etc/resolv.conf` file after configuring the search domains.
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-3.png" alt-text="Screenshot of resolv.conf after final changes":::
 ---
 
