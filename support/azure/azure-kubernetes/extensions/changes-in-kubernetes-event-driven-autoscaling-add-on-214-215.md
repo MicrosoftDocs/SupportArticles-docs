@@ -80,7 +80,6 @@ To determine whether your cluster is affected by the recent KEDA upgrades, follo
         ```output
         NAME                      PODIDENTITY                 SECRET                 ENV            VAULTADDRESS
         keda-trigger-auth-azure     yourPodIdentity    azure-secret                     <URL>
-
         ```
 ### What steps can I take to mitigate the issues?
 
