@@ -19,7 +19,7 @@ If DC Locator doesn't work as expected in Active Directory domains, troubleshoot
 > [!NOTE]
 > Authentication is the first step in almost all functional scenarios in an Active Directory enterprise environment. However, authentication occurs after the client communicates with an Active Directory domain controller.
 
-1. Check the system logs on both the client and the server. Also check the Directory Service logs on the server and Domain Name System (DNS) logs on the DNS server.
+1. Check the system logs (for example, the event source is **NETLOGON**) on both the client and the server. Also check the Directory Service logs (for example, the event source is **NTDS KCC**) on the server and Domain Name System (DNS) logs on the DNS server.
 2. Open an elevated command prompt, and check the IP configuration by running the following command:
 
     ```console
