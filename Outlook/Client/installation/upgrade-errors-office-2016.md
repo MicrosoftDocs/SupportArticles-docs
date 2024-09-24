@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: gbratton, tasitae
 ms.custom: 
   - sap:Install, Update, Activate, and Deploy\Update

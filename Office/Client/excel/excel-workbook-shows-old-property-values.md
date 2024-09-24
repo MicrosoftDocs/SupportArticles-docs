@@ -3,12 +3,12 @@ title: Excel workbook shows old property values
 description: An Excel workbook shows old property values instead of the current SharePoint property values when it's opened from SharePoint in the Excel desktop.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: warrenr, jhaak
 ms.custom: 
+  - Reliability\LoadingIssues
   - CSSTroubleshoot
   - CI 167550
 search.appverid: 
@@ -17,7 +17,7 @@ appliesto:
   - SharePoint Online
   - SharePoint Server
   - Excel for Microsoft 365
-ms.date: 10/26/2022
+ms.date: 06/06/2024
 ---
 # Excel workbook shows old SharePoint property values
 

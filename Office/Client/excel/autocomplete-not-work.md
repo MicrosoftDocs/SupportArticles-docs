@@ -3,17 +3,17 @@ title: Auto-Complete may not work
 description: Describes an issue in which the Auto-Complete feature may not work when you type text in a cell in Microsoft Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Editing\Cells
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Auto-Complete may not work

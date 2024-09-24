@@ -3,17 +3,18 @@ title: Spell Check not working in Word 2010
 description: Provides steps to resolve an issue where the spell checker does not catch spelling mistakes in Word 2010.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Spellcheck
   - CSSTroubleshoot
 appliesto: 
   - Word 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Spell Check does not work in Word 2010

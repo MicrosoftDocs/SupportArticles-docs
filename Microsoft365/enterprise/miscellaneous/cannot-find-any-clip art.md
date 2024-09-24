@@ -8,7 +8,6 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
-localization_priority: Normal
 search.appverid: 
   - MET150
 ms.reviewer: samwilli, ctronent

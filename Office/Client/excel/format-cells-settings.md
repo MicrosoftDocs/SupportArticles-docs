@@ -3,12 +3,12 @@ title: Control settings in the Format Cells dialog box
 description: Explains that you can modify the majority of these settings in the Format Cells dialog box to change the way that your data is presented.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: emmersp
 ms.custom: 
+  - Editing\Cells
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -18,7 +18,7 @@ appliesto:
   - Excel 2010
   - Office Excel 2007
   - Office Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to control and understand settings in the Format Cells dialog box in Excel

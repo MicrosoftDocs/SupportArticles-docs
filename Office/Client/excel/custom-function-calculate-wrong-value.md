@@ -3,17 +3,17 @@ title: Custom function may not calculate correct value
 description: Describes an issue in which custom function may not calculate expected value in Excel when you calculate worksheet, and provides a workaround.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Custom function may not calculate expected value in Excel

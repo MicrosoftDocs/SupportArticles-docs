@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CI 114797
   - CSSTroubleshoot
@@ -19,7 +18,7 @@ appliesto:
   - Access 2010
   - Access 2007
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Access Error: Data on the Clipboard is damaged, so Microsoft Access can't paste it
 

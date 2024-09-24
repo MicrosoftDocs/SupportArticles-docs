@@ -3,17 +3,17 @@ title: Sample macro to insert and delete rows or columns on multiple sheets
 description: Describes a sample macro that you can use to insert or delete rows or columns in multiple worksheets in Microsoft Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Sample macro to insert/delete rows or columns on multiple sheets in Excel

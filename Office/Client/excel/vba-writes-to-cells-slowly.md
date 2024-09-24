@@ -3,19 +3,19 @@ title: VBA writes to cells slowly when ActiveX controls are invisible
 description: Discusses that VBA code writes formulas to cells slowly when ActiveX controls are invisible in Excel 2016. Provides a workaround.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 appliesto: 
   - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # VBA code writes to cells slowly when many ActiveX controls are invisible in Excel 2016

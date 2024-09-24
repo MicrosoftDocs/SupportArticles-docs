@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CI 106913
   - CSSTroubleshoot
@@ -18,7 +17,7 @@ appliesto:
   - Access 2019
   - Access for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Switchboard Manager does not appear in the ribbon
 

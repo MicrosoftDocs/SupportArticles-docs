@@ -1,9 +1,8 @@
 ---
 title: Unable to set a value for publishing column using SharePoint 2013 workflow
-description: Fixes an issue in which you receive an error saying the property does not exist when setting a value for Hyperlink with formatting and constraints for publishing column.
+description: Fixes an issue in which you receive an error saying the property doesn't exist when setting a value for Hyperlink with formatting and constraints for publishing column.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -24,17 +23,15 @@ ms.date: 12/17/2023
 
 When you set a value for the **Hyperlink with formatting and constraints for publishing** column in Microsoft SharePoint Online, a SharePoint 2013 workflow is canceled. Additionally, you receive the following error message:
 
-**The property PropertyName does not exist on type 'SP.Data.ListNameListItem'. Make sure to only use property names that are defined by the type.**
+> The property PropertyName does not exist on type `SP.Data.ListNameListItem`. Make sure to only use property names that are defined by the type.
 
 ## Cause
 
-The REST endpoint that the workflow uses is the following:
-
-`https://tenant.sharepoint.com/sites/SiteCol/_api/web/lists(guid'GUID')/Items(N)`
+The REST endpoint that the workflow uses is `https://tenant.sharepoint.com/sites/SiteCol/_api/web/lists(guid'GUID')/Items(N)`.
 
 But it doesn't return the field value—for the **Hyperlink with formatting and constraints for publishing** field type.
 
-This is a limitation of the underlying REST layer that currently cannot be changed.
+It's a limitation of the underlying REST layer that currently can't be changed.
 
 ## Solution/Workaround
 

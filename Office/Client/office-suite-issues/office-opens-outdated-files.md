@@ -3,10 +3,9 @@ title: Microsoft 365 apps open files from SharePoint on-premises that aren’t t
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 03/08/2021
+ms.date: 06/06/2024
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150
@@ -14,6 +13,8 @@ appliesto:
   - SharePoint Server
   - Microsoft 365
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
+  - Open
   - CI 144436
   - CSSTroubleshoot
 ms.reviewer: sharepoint_triage

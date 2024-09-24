@@ -4,18 +4,19 @@ description: Describes how to discover Office and Windows KMS hosts through DNS,
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: ericspli
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Perpetual
   - sap:office-experts
   - CSSTroubleshoot
 appliesto: 
   - Office 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to discover Office and Windows KMS hosts through DNS and remove unauthorized instances

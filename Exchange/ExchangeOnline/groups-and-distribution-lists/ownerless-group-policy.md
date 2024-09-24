@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Groups, Lists, Contacts, Public Folders
   - Exchange Online
@@ -17,11 +16,11 @@ appliesto:
   - Exchange Online via Office 365 E Plans
   - Exchange Online via Office 365 P Plans
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/10/2024
 ---
 # Microsoft 365 ownerless group policy
 
-Global administrators can [set or edit a policy](/microsoft-365/admin/create-groups/ownerless-groups-teams) for ownerless Microsoft 365 groups and teams. The policy queries active members of an ownerless group about whether they'll accept the group ownership. Notifications are sent weekly starting within 24 hours of the policy creation. This article answers questions that you might have about ownerless groups and this policy.
+Exchange administrators or Group administrators can [set or edit a policy](/microsoft-365/admin/create-groups/ownerless-groups-teams) for ownerless Microsoft 365 groups and teams. The policy queries active members of an ownerless group about whether they'll accept the group ownership. Notifications are sent weekly starting within 24 hours of the policy creation. This article answers questions that you might have about ownerless groups and this policy.
 
 ## Does the policy for ownerless groups apply to Viva Engage, SharePoint, Stream and so on?
 

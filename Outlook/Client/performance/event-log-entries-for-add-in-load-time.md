@@ -4,7 +4,6 @@ description: Introduces the Outlook application event log entries for add-in loa
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Product Stability, startup or Shutdown and perform\Add-in error
   - CSSTroubleshoot

@@ -3,18 +3,19 @@ title: Office has detected a problem with this file
 description: Works around a problem that generates an Office has detected a problem with this file error message  when an Office 2010 file fails validation.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: mdandige
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Security\Trust
   - CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
   - Office 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Office has detected a problem with this file" error in Microsoft Office 2010

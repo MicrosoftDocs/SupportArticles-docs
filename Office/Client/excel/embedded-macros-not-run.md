@@ -3,20 +3,20 @@ title: Macros in embedded Excel workbook are blocked from running
 description: Describes an issue that macros in embedded workbook are blocked from running when the Block macros from running in Office files from the Internet policy is enabled.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Security\Trust
   - CSSTroubleshoot
   - CI 169809
 appliesto: 
   - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Macros in embedded Excel workbook are blocked from running

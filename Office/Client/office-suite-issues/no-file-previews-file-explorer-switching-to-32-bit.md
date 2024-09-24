@@ -4,16 +4,17 @@ description: What to do if document previews don't show up after uninstalling th
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 06/04/2021
+ms.date: 06/06/2024
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150
 appliesto: 
   - Office
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Save
   - CI 113658
   - CI 146008
   - CI 150116

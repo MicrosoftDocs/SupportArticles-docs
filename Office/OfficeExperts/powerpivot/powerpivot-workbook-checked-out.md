@@ -5,7 +5,6 @@ author: helenclu
 ms.author: luche
 ms.reviwer: zakirh
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -15,7 +14,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "The workbook must be checked out before it can be replaced. You can save this file with another name." when you run a scheduled data refresh on a PowerPivot workbook

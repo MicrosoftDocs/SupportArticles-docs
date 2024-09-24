@@ -8,14 +8,18 @@
     - name: "\"We couldn't add member\" error when adding users"
       href: ./teams-administration/couldnt-add-member-error.md 
     - name: Clear the Teams client cache
-      href: ./teams-administration/clear-teams-cache.md  
+      href: ./teams-administration/clear-teams-cache.md
+    - name: Disable SharePoint News notifications in Teams
+      href: ./teams-administration/disable-sharepoint-news-notifications.md
     - name: Error switching a tenant to Teams Only mode
       href: ./teams-administration/cannot-switch-to-teams-only-mode.md
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Issues receiving messages and calls
       href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
-    - name: Resolve the new Teams installation issues
+    - name: Resolve issues when starting the new Teams app
+      href: ./teams-sign-in/resolve-new-teams-launch-issues.md
+    - name: Resolve new Teams installation issues
       href: ./teams-administration/fix-new-teams-installation-issues.md
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
@@ -47,8 +51,6 @@
       href: ./teams-conferencing/cvi-info-does-not-populate-in-meet-now.md
     - name: Dialing out requires five or more digits 
       href: ./teams-conferencing/teams-call-requires-five-or-more-digits.md
-    - name: Dial pad is missing
-      href: ./teams-conferencing/no-dial-pad.md
     - name: Give Control doesn't work
       href: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
     - name: Organizer can't start Outlook meeting and stuck in virtual lobby
@@ -65,6 +67,10 @@
       href: ./teams-conferencing/teams-meetings-not-available.md
     - name: Teams is slow during video meetings on laptops docked to 4K/HDR monitors
       href: ./teams-conferencing/teams-slow-video-meetings-laptops-4k.md    
+  - name: Contacts
+    items:
+    - name: User appears as Unknown User in Teams
+      href: ./contacts/unknown-user-teams.md
   - name: Exchange integration
     items:
     - name: External federated contacts don't appear in Teams search
@@ -73,6 +79,8 @@
       href: ./exchange-integration/teams-exchange-interaction-issue.md
   - name: Files
     items:
+    - name: Error 404 when accessing the OneDrive app in Teams
+      href: ./files/404-error-access-onedrive-teams.md
     - name: Error uploading files to chats
       href: ./files/cannot-upload-files-or-access-onedrive.md
     - name: Error when selecting Files tab
@@ -123,6 +131,8 @@
       href: ./meetings/new-teams-desktop-app-fail-render-video.md
     - name: Resolve Teams Meeting add-in issues
       href: ./meetings/resolve-teams-meeting-add-in-issues.md
+    - name: Teams meeting add-in is missing
+      href: ./meetings/teams-meeting-add-in-missing.md
     - name: Teams meeting features for shared mailboxes
       href: ./meetings/teams-meeting-with-shared-mailboxes.md
   - name: Mobile
@@ -223,6 +233,8 @@
       href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
     items:
+    - name: Certified Android devices get signed out of Teams
+      href: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md
     - name: Collect Android Teams device logs
       href: ./teams-rooms-and-devices/collect-device-logs.md
     - name: Conditional Access-related issues on Teams Android devices
@@ -233,8 +245,6 @@
       href: ./teams-rooms-and-devices/teams-rooms-known-issues-windows.md
     - name: On-screen keyboard size is reduced on some devices
       href: ./teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced.md
-    - name: Signed out of Teams Android devices
-      href: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md
     - name: Teams Rooms app doesn't start automatically after updates
       href: ./teams-rooms-and-devices/teams-rooms-not-auto-start-after-windows-updates.md
     - name: Teams Rooms devices can't fetch calendar

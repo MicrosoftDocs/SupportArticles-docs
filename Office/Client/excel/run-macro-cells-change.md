@@ -3,20 +3,20 @@ title: Run a macro when certain cells change in Excel
 description: Describes how to run a macro when certain cells change in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 appliesto: 
   - Excel 2007
   - Excel 2003
   - Excel 2002
   - Excel 2000
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to run a macro when certain cells change in Excel

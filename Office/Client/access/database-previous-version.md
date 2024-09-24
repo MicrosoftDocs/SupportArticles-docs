@@ -3,7 +3,6 @@ title: Cannot Open an Access database created with a previous version of your ap
 description: Works around an issue in which you receive an error message when you try to open an Access 97 database in Access 2013 or Access 2016.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -16,7 +15,7 @@ appliesto:
   - Access 2019
   - Access 2016
   - Access 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Cannot Open a database created with a previous version of your application" in Access 2013 and Access 2016
@@ -29,11 +28,11 @@ This issue occurs when you try to use Access 2013 or later version of Microsoft 
 4. Exit Access 2003.    
 5. Open the database in Access 2013 or later version of Access.    
 6. On the File tab, click Save As, select Access Database (*.accdb), and then click Save As.   
-7. In the Save Asdialog box, click Save.   
+7. In the Save As dialog box, click Save.   
 
 ## Cause
 
-This issue occurs because recent versions of Access cannot convert Access 97 files. 
+This issue occurs because recent versions of Access can't convert Access 97 files. 
 
 ## More Information
 

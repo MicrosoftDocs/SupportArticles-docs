@@ -3,7 +3,6 @@ title: 500 Server Internal error and calls to Subscriber Access or Auto Attendan
 description: You receive a 500 Server Internal error message and a fast busy signal, and calls to Subscriber Access or Auto Attendant fail after you migrate contact objects to Skype for Business Server 2019. Provides a workaround.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

@@ -3,12 +3,13 @@ title: Error when you open a Word document or an Excel worksheet
 description: Discusses the problem where you may receive an error message when you open a Word or an Excel file. You may experience the problem when the file is added in the list of disabled files for the Office program.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
@@ -16,7 +17,7 @@ appliesto:
   - Excel 2007
   - Word 2003
   - Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "The document caused a serious error the last time it was opened" when you open a file

@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.localizationpriority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
@@ -17,7 +16,7 @@ appliesto:
   - Office 365 Enterprise
 ms.reviewer: johage, v-trisshores
 search.appverid: MET150
-ms.date: 04/18/2024
+ms.date: 06/28/2024
 ---
 
 # Exchange Server 2013 end of support roadmap

@@ -3,7 +3,6 @@ title: Error when you try to update, remove, or add a Send To connection in Shar
 description: Describes an issue when you try to update, remove, or add a Send To connection in SharePoint Online in Microsoft 365.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

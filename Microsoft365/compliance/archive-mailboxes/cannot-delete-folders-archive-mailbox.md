@@ -1,19 +1,18 @@
 ---
 title: Can't delete folders in the Deleted Items folder of an archive mailbox in Exchange Online
-description: Describes behavior in Exchange Online that prevents users from deleting folders in the Deleted Items folder of an archive mailbox that's been automatically expanded.
+description: Describes behavior in Exchange Online that prevents users from deleting folders in the Deleted Items folder of an archive mailbox that was automatically expanded.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # Can't delete folders in the Deleted Items folder of an archive mailbox in Exchange Online

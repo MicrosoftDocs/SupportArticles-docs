@@ -3,12 +3,12 @@ title: You receive a Too many different cell formats error message in Excel
 description: Discusses that you receive a Too many different cell formats error message in Excel. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Editing\Cells
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
@@ -19,7 +19,7 @@ appliesto:
   - Excel 2010
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # You receive a "Too many different cell formats" error message in Excel

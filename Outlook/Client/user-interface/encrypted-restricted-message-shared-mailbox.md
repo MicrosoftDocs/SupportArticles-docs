@@ -4,7 +4,6 @@ description: Provide two workarounds to an issue in which a user who was granted
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

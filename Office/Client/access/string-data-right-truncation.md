@@ -4,7 +4,6 @@ description: Describes an issue that causes the Access error String data, right 
 author: helenclu
 ms.reviewer: denniwil
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 152768
   - CSSTroubleshoot

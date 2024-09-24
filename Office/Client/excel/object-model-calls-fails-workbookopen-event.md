@@ -1,11 +1,11 @@
 ---
 title: Object Model calls fails from WorkbookOpen event
-description: This article provides two resolutions for the problem where Object Model calls may fail with a runtime error 1004 - Method of Object failed.
+description: This article provides two resolutions for the problem where Object Model calls fail with a runtime error 1004 - Method of Object failed.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 appliesto:
 - Excel 2013
@@ -16,7 +16,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Object Model calls may fail from WorkbookOpen event when exiting Protected View
 
@@ -28,11 +28,11 @@ Consider the following scenario:
 
 - You open a Workbook in protected view (because of opening workbook from Internet, email attachment etc.) and select **Enable Editing**.
 
-- Some Object Model calls (for example, Sheet.Activate) being made from the `WorkbookOpen` event handler fail with a runtime error 1004 - Method of Object failed.
+- Some Object Model calls (for example, `Sheet.Activate`) being made from the `WorkbookOpen` event handler fail with a runtime error 1004 - Method of Object failed.
 
 ## Cause
 
-Clicking on **Enable Editing** transitions the workbook from protected view to normal view. While transitioning, the `WorkbookOpen` event is fired before the protect view workbook is closed, resulting into failure on object model calls.
+Clicking on **Enable Editing** transitions the workbook from protected view to normal view. While transitioning, the `WorkbookOpen` event is fired before the protected view workbook is closed, resulting into failure on object model calls.
 
 ## Resolution
 
@@ -44,11 +44,11 @@ You can work around the issue by either:
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+Microsoft has confirmed that it's a problem in the Microsoft products that are listed in the "Applies to" section.
 
 ## More information
 
-Below is a sample VBA code that demonstrates how you could defer Object Model calls to the `WorkbookActivate` event.
+Here's a sample VBA code that demonstrates how you could defer Object Model calls to the `WorkbookActivate` event.
 
 ```vba
 Option Explicit

@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CI 111898
   - CSSTroubleshoot
@@ -17,7 +16,7 @@ appliesto:
   - Exchange Server 2016
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 06/25/2024
 ---
 
 # Can't run In-Place eDiscovery search for Exchange Online mailbox in Exchange Server 2019 or 2016 by using EAC

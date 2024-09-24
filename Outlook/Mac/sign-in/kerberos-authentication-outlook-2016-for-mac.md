@@ -5,7 +5,6 @@ author: cloud-writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.collection: Ent_Office_Outlook
 ms.custom: 
   - sap:Connectivity\

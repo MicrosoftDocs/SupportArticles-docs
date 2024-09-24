@@ -4,18 +4,19 @@ description: This article explains how to find the size of a package by using Pr
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\Updates\ProblemsInstallingUpdates
   - sap:office-experts
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.reviewer: ericspli
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to check the size of this month's Office ProPlus update

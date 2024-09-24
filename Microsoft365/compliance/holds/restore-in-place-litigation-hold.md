@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: jgagnon
@@ -18,7 +17,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Lync Server 2013
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/25/2024
 ---
 # How to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment
 

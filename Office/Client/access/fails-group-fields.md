@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CI 114797
   - CSSTroubleshoot
@@ -15,7 +14,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # "Cannot group on fields selected with '*'" error when you run a query in Access
 

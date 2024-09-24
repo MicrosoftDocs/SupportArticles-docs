@@ -3,17 +3,17 @@ title: Formatted text is limited to 240 characters per line
 description: Describes the limit per line when you save a worksheet as a Formatted Text (Space Delimited) (.prn) file.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Formatted text (.prn) is limited to 240 characters per line in Excel

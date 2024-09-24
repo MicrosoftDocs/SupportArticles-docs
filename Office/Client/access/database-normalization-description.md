@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CI 114797
   - CSSTroubleshoot
@@ -17,7 +16,7 @@ appliesto:
   - Access 2016
   - Access 2013
 search.appverid: MET150
-ms.date: 07/07/2023
+ms.date: 06/06/2024
 ---
 
 # Description of the database normalization basics

@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.
@@ -14,7 +13,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Archiving
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # ArchiveStatus is set to "None" for an active archive mailbox in Microsoft 365

@@ -19,6 +19,8 @@
       href: ../administration/authentication-errors-tls12-support.md
     - name: Authentication errors occur when connecting to SharePoint or OneDrive from Windows 7 or 8
       href: ../administration/authentication-errors-windows7.md
+    - name: Authentication issues in SharePoint Designer 2013
+      href: ../administration/authentication-issues-in-sharepoint-designer-2013.md
     - name: Automatic EXIF property import unsupported
       href: ../administration/automatic-exif-property-import-unsupported.md
     - name: Create a default Site collection Term Set if none is present
@@ -335,6 +337,8 @@
       href: ../Sites/cannot-permanently-delete-site.md    
     - name: Customizations of the top navigation bar are reverted
       href: ../Sites/customizations-revert-to-default-settings.md
+    - name: Error "Site is protected by Microsoft 365 Backup and cannot be deleted"
+      href: ../sites/cannot-delete-sites-protected-by-microsoft365-backup.md
     - name: Error when trying to change site logo on Microsoft 365 group SharePoint site
       href: ../sites/error-when-changing-o365-site-logo.md
     - name: Error when trying to delete a SharePoint site

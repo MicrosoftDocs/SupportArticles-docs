@@ -3,12 +3,12 @@ title: Use a logical AND or OR in a SUM+IF statement
 description: Describes how to use a logical AND or OR in a SUM+IF statement in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: SISHAM
 ms.custom: 
+  - Editing\Formulae
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Office Excel 2003
   - Microsoft Office Excel 2007
   - Excel 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to use a logical AND or OR in a SUM+IF statement in Excel

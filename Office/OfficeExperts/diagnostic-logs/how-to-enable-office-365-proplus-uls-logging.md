@@ -4,13 +4,14 @@ description: There are times during troubleshooting an Office issue when the tra
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-ms.date: 01/31/2020
-localization_priority: Normal
+ms.date: 06/06/2024
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\InstallErrors\ErrorCodes
   - sap:office-experts
   - CSSTroubleshoot
   - CI 113644
@@ -84,4 +85,4 @@ The Inventory feature is available in version 2008 (16.0.13127.21064) or later. 
 > [!NOTE]
 > Note the time stamp when you run the repro so that you can collect the correct logs.
 
-After you collect the logs, **disable Office verbose logging**. Otherwise, the logs will become very large. 
+After you collect the logs, **disable Office verbose logging**. Otherwise, the logs will become very large.

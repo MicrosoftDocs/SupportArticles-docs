@@ -4,7 +4,6 @@ description: Provides a resolution for the issue that the Outlook policy templat
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Developer Issues\Macros
   - CSSTroubleshoot

@@ -3,7 +3,6 @@ title: 401 error when you use Graph API to access OneDrive data with location-ba
 description: Describes an issue in which you receive 401 Unauthorized error message when you use Microsoft Graph API to query OneDrive resources.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

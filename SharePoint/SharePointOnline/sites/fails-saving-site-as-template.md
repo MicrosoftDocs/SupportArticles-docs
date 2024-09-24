@@ -3,7 +3,6 @@ title: Unable to save a site as a template in SharePoint Online or SharePoint Se
 description: A site contains apps that don't work in templates when saving it as a template in SharePoint Online or SharePoint Server
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

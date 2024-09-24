@@ -4,8 +4,9 @@ description: This article describes the behaviors of Auto-Exec and Auto-Open mac
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Extensibility\Macros
   - CSSTroubleshoot
 appliesto:
 - Office Products
@@ -13,7 +14,7 @@ search.appverid: MET150
 ms.reviewer:
 author: simonxjx
 ms.author: v-six
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Description of behaviors of Auto-Exec and Auto-Open macros in Word
 
@@ -21,11 +22,11 @@ You can use the Auto-Exec and Auto-Open macros in Word to establish default path
 
 ## Auto-Exec
 
-An Auto-Exec macro runs when Word starts if the Auto-Exec macro is saved as part of the default (Normal.dot) template, or if it is saved as part of a global add-in. By using an Auto-Exec macro, you can make adjustments when Word starts but before a document is created or loaded. For example, you can use an Auto-Exec macro to change the default directory when Word starts.
+An Auto-Exec macro runs when Word starts if the Auto-Exec macro is saved as part of the default (Normal.dot) template, or if it's saved as part of a global add-in. By using an Auto-Exec macro, you can make adjustments when Word starts but before a document is created or loaded. For example, you can use an Auto-Exec macro to change the default directory when Word starts.
 
-You can suppress the Auto-Exec macro in several ways. One way is to start Word from the command line by using either the /m or the /embedding switch. To use these switches, select **Start**, select **Run**, type either *winword /m* or *winword /embedding*, and then select **OK**.
+You can suppress the Auto-Exec macro in several ways. One way is to start Word from the command line by using either the /m or the /embedding switch. To use these switches, select **Start**, select **Run**, type either `winword /m` or `winword /embedding`, and then select **OK**.
 
-Another method you may use to suppress an Auto-Exec macro is to press the Shift key while Word starts. Auto-Exec macros are also suppressed when Word is started from an Automation client.
+Another method to suppress an Auto-Exec macro is to press the Shift key while Word starts. Auto-Exec macros are also suppressed when Word is started from an Automation client.
 
 ## Auto-Open
 
@@ -35,9 +36,9 @@ The Auto-Open macro runs after you open a new document. Auto-Open runs when you 
 - Use the `FileOpen` or `FileFind` commands.
 - Select a document from the Most Recently Used (MRU) list on the **File** menu.
 
-When a document is opened, an Auto-Open macro runs if the Auto-Open macro is saved as part of that document or if the macro is saved as part of the template on which the document is based. An Auto-Open macro does not run when it saved as part of a global add-in.
+When a document is opened, an Auto-Open macro runs if the Auto-Open macro is saved as part of that document or if the macro is saved as part of the template on which the document is based. An Auto-Open macro doesn't run when it saved as part of a global add-in.
 
-You may prevent an Auto-Open macro from running by holding down the Shift key when you open a document.
+You can prevent an Auto-Open macro from running by holding down the Shift key when you open a document.
 
 ## Create an Auto-Exec Macro and an Auto-Open Macro
 
@@ -46,7 +47,7 @@ You may prevent an Auto-Open macro from running by holding down the Shift key wh
     1. Create a new blank document in Word.
     2. On the **Tools** menu, point to **Macro** and then select **Security**.
     3. In the **Security** dialog box, select **Security Level** and then select **Medium**. select **Trusted Sources**, select **Trust all installed Add-ins and Templates**, and then select **OK**.
-    4. Create an Auto-Exec macro. To do this, follow these steps:
+    4. Create an Auto-Exec macro by following these steps:
 
         1. On the **Tools** menu, point to **Macro** and then select **Record New Macro**.
         2. In the **Record Macro** dialog box, type *AutoExec* under Macro name, and then select **OK**. By default, the macro is saved in the Normal template. A small two-button command bar appears on your Word document or elsewhere on the Word desktop. Find the command bar and then select the square (Stop Recording) button to stop recording.
@@ -61,7 +62,7 @@ You may prevent an Auto-Open macro from running by holding down the Shift key wh
 
     5. Follow the same steps that you used for the Auto-Exec macro to create an Auto-Open macro. This time, use the Auto-Open expression to replace the Auto-Exec expression in each step.
     6. Save the document as *C:\Yourfile.doc*, close the document, and then exit Word.
-    7. Open the document in Word by using the different methods that are described in the table below. Observe when the macros run and when the macros do not run.
+    7. Open the document in Word by using the different methods that are described in the table below. Observe when the macros run and when the macros don't run.
 
 Word 2007
 
@@ -69,7 +70,7 @@ Word 2007
 2. Select the **Microsoft Office Button**, and then select **Word Options**.
 3. Select **Trust Center**, select **Trust Center Settings**, and then select **Trusted Locations**.
 4. Add the trusted locations that you want, and then select **OK** two times.
-5. Create an Auto-Exec macro. To do this, follow these steps:
+5. Create an Auto-Exec macro by following these steps:
 
     1. Select the **Developer** tab, and then select **Record Macro** in the **Code** group.
     2. In the **Record Macro** dialog box, type Auto-Exec under **Macro name**, and then select **OK**. By default, the macro is saved in the Normal template. select **Stop Recording** in the **Code** group.
@@ -84,18 +85,18 @@ Word 2007
 
 6. Follow the same steps that you used for the Auto-Exec macro to create an Auto-Open macro. This time, use the Auto-Open expression to replace the Auto-Exec expression in each step.
 7. Save the document as *C:\Yourfile.doc*, close the document, and then exit Word.
-8. Open the document in Word by using the different methods that are described in the table in the [Macro Behaviors in Different Situations](#macro-behaviors-in-different-situations) section. Notice when the macros run and when the macros do not run.
+8. Open the document in Word by using the different methods that are described in the table in the [Macro Behaviors in Different Situations](#macro-behaviors-in-different-situations) section. Notice when the macros run and when the macros don't run.
 
 ## Macro Behaviors in Different Situations
 
 The following table summarizes the behavior of these two macros when Word is started, or when a document is opened by various means:
 
-|Action |AutoExec |AutoOpen|
+|Action |Auto-Exec |Auto-Open|
 |-|-|-|
-|Start Word with a blank document by typing Runs Does not run the following at a command prompt:   Winword.exe|Runs |Does not run|
+|Start Word with a blank document by typing Runs Does not run the following at a command prompt:   Winword.exe|Runs |Doesn't run|
 |Start Word with a saved document by typing the following at a command prompt:</br>Winword.exe C:\<Yourfile>.doc|Runs|Runs|
-|Embed a Word document in an OLE container by typing the following at a command prompt:</br>WinWord.exe /embedding C:\<Yourfile>.doc|Does not run|Runs|
-|Use code to automate Word and open Does not run Runs C:\<Yourfile>.doc by using the following code:</br> Set oWord = CreateObject("Word.Application")</br>oWord.Visible = True </br>oWord.Documents. Open "C:\YourFile.doc"|Does not run|Runs|
+|Embed a Word document in an OLE container by typing the following at a command prompt:</br>WinWord.exe /embedding C:\<Yourfile>.doc|Doesn't run|Runs|
+|Use code to automate Word and open Does not run Runs C:\<Yourfile\>.doc by using the following code:</br> `Set oWord = CreateObject("Word.Application")`</br>`oWord.Visible = True` </br>`oWord.Documents. Open "C:\YourFile.doc"`|Doesn't run|Runs|
 |Browse to the document in Internet Explorer or the WebBrowser control|Does not run|Runs|
 
 ## References

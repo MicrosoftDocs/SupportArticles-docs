@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Mail Flow\Issues with Internal Mail Flow
   - Exchange Server
@@ -29,7 +28,7 @@ _Original KB number:_ &nbsp; 979174
 
 ## Symptoms
 
-In an Exchange server environment, some e-mail messages are stuck in a remote delivery queue that should have been transferred to another internal Exchange server in the Exchange organization.
+In an Exchange server environment, some e-mail messages are stuck in a remote delivery queue that should be transferred to another internal Exchange server in the Exchange organization.
 
 If you open the **Queue Viewer** tool from the **Toolbox** node on the Exchange Management Console, the **Last Error** field displays an error message that resembles the following:
 
@@ -41,10 +40,10 @@ Additionally, you may find the following error message in the Application log fi
 
 ## Cause
 
-This issue occurs if the Exchange server can't authenticate with the remote Exchange server. Exchange servers require authentication to route internal user messages between servers. The issue can be caused by one of the following reasons:
+This issue occurs if the Exchange server can't authenticate with the remote Exchange server. Exchange servers require authentication to route internal user messages between servers. The issue can occur for the following reasons:
 
 - The Exchange server is experiencing Time synchronization issues.
-- There is a replication issue between the domain controllers.
+- There's a replication issue between the domain controllers.
 - The Exchange server is experiencing Service Principal Name (SPN) issues.
 - The required TCP/UDP ports for the Kerberos protocol are blocked by the firewall.
 
@@ -54,7 +53,7 @@ To resolve this issue, follow these steps:
 
 1. Check the clock on both servers and domain controllers that might be used to authenticate the servers. All clocks should be synchronized to within 5 minutes of one other.
 
-1. [Force replication between domain controllers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816926(v=ws.10)) to see if there is a replication issue.
+1. [Force replication between domain controllers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816926(v=ws.10)) to see if there's a replication issue.
 
 1. Verify that the Service Principal Name (SPN) for `SMTPSVC` is registered correctly on the target server.
 
@@ -74,7 +73,7 @@ To resolve this issue, follow these steps:
 
 1. Verify that the ports required for Kerberos are enabled.
 
-1. If the previous steps do not work, you can turn on logging for Kerberos on the Server that is registering the Event 1035 message, which may provide additional information. To do this, follow these steps:
+1. If the previous steps don't work, you can turn on logging for Kerberos on the Server that is registering the Event 1035 message, which may provide additional information. To do so, follow these steps:
 
     1. Select **Start**, select **Run**, type *Regedit*, and then select **OK**.
     2. Locate the registry key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters`.

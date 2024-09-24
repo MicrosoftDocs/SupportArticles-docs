@@ -3,17 +3,17 @@ title: Use OnEntry macro to create a running total in a cell comment
 description: Provides step-by-step instruction to create a running total in a cell comment in Excel by using the OnEntry macro.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Use the OnEntry macro to create a running total in a cell comment in Excel
@@ -115,4 +115,4 @@ To use the running total, follow these steps:
 To remove the running total, follow these steps: 
 
 1. Select the cell that contains the running total that you want removed.   
-2. Right-click the cell and click Delete Comment on the shortcut menu.   
+2. Right-click the cell and click Delete Comment on the shortcut menu.

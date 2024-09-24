@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CI 110828, CI 114761, CI 115829, CI 116348, CI 117120
   - CSSTroubleshoot
@@ -105,6 +104,10 @@ A new build of the Assistant is released every 90 days. The following table prov
 
 |Release date|Version of the Assistant|
 |--------|--------|
+|Aug 13, 2024|17.01.2176.000|
+|Jul 9, 2024|17.01.2011.000|
+|Jun 11, 2024|17.01.1903.000|
+|May 14, 2024|17.01.1814.000|
 |April 9, 2024|17.01.1659.000|
 |March 12, 2024|17.01.1602.000|
 |February 20, 2024|17.01.1440.000|

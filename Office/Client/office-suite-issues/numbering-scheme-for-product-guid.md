@@ -3,17 +3,18 @@ title: Numbering scheme for product code GUIDs
 description: Describes the numbering scheme for product code GUIDs in Office 2016.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\AdvancedConfiguration\OfficeDeploymentTool
   - CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
   - Office 2016
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Description of the numbering scheme for product code GUIDs in Office 2016
@@ -22,7 +23,7 @@ For a description of the numbering scheme for product code GUIDs in Office 2013,
 
 ## Summary
 
-This article describes how to read the product GUIDs in the Windows registry to determine information about the Microsoft Office 2016 suite, programs, or utilities that you are using. GUIDs contain information about the release type, the release build, and the language of an Office 2016 suite or program.
+This article describes how to read the product GUIDs in the Windows registry to determine information about the Microsoft Office 2016 suite, programs, or utilities that you're using. GUIDs contain information about the release type, the release build, and the language of an Office 2016 suite or program.
 
 > [!NOTE]
 > GUIDs are created only when a user installs a Windows Installer (MSI) version of the Office 2016 suite or of an Office 2016 program. GUIDs are not created when a user installs a Click-to-Run version of the Office 2016 suite or of an Office 2016 program.
@@ -58,12 +59,12 @@ The following table describes the characters of the GUID.
 
 To view the GUIDs for the Office 2016 suites and programs that are installed on a computer, follow these steps:
 
-1. Click **Start**, click **Run**, type regedit, and then click **OK**.
+1. Select **Start**, select **Run**, type regedit, and then select **OK**.
 2. Locate the following registry subkey:
 
    `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`
 
-The names of the GUIDs start with a brace ({ ). Therefore, GUIDs are the first items that are listed under Uninstall.
+The names of the GUIDs start with a brace (\{). Therefore, GUIDs are the first items that are listed under Uninstall.
 
 |Value name| Description |
 |---|---|
@@ -86,10 +87,10 @@ The release build values specify the level of the release, such as a beta build 
 |3|Release Candidate 0 (RC0) |
 |4|Release Candidate 1 (RC1)/OEM Preview release |
 |5-8|Reserved values |
-|9|RTM. This is the first build that is shipped (the initial release). |
-|A|Service Pack 1 (SP1). This value is not used if the product code is not changed after the RTM build. |
-|B|Service Pack 2 (SP2). This value is not used if the product code is not changed after the RTM build. |
-|C|Service Pack 3 (SP3). This value is not used if the product code is not changed after the RTM build. |
+|9|RTM. This value is the first build that's shipped (the initial release). |
+|A|Service Pack 1 (SP1). This value isn't used if the product code isn't changed after the RTM build. |
+|B|Service Pack 2 (SP2). This value isn't used if the product code isn't changed after the RTM build. |
+|C|Service Pack 3 (SP3). This value isn't used if the product code isn't changed after the RTM build. |
 |D-F|Reserved values |
 
 ### Release type
@@ -129,9 +130,9 @@ The product ID is the version of the Office 2016 suite or program, such as Offic
 
 ### Language identifier
 
-The language identifier (LCID) varies from language to language. Because the LCID is stored in the GUID in a hexadecimal format, you may have to convert the LCID value to a decimal value to determine the language. For example, a hexadecimal value of 0409 converts to a decimal value of 1033. This value represents English.
+The language identifier (LCID) varies from language to language. Because the LCID is stored in the GUID in a hexadecimal format, you need to convert the LCID value to a decimal value to determine the language. For example, a hexadecimal value of 0409 converts to a decimal value of 1033. This value represents English.
 
-For more information about language identifiers in Office 2016 suites and programs, see [Language identifiers and Option State Id values in Office 2016](https://technet.microsoft.com/library/cc179219.aspx).
+For more information about language identifiers in Office 2016 suites and programs, see [Language identifiers and Option State ID values in Office 2016](https://technet.microsoft.com/library/cc179219.aspx).
 
 ### Sample GUID
 

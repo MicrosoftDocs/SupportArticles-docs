@@ -4,7 +4,6 @@ description: Fixes an issue in which you can't manage disposition reviews from M
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 157046
@@ -12,7 +11,7 @@ ms.reviewer: subansal; lindabr; meerak
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # "(401) Rbac check failed" error when trying to manage disposition reviews

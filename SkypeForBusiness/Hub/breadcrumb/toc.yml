@@ -3,5 +3,9 @@
   topicHref: /
   items:
   - name: Skype for Business
-    tocHref: /skypeforbusiness/troubleshoot/
-    topicHref: /skypeforbusiness/troubleshoot/index
+    tocHref: /skypeforbusiness/
+    topicHref: /skypeforbusiness/index
+    items:
+    - name: Troubleshooting
+      tocHref: /skypeforbusiness/troubleshoot/
+      topicHref: /skypeforbusiness/troubleshoot/index

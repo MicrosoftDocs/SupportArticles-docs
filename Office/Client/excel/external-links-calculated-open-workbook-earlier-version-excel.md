@@ -4,8 +4,8 @@ description: External links in a workbook from an earlier version of Excel are c
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
+  - Open\Links
   - CSSTroubleshoot
 appliesto:
 - Office Products
@@ -17,7 +17,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # External links may be calculated when you open a workbook that was last saved in an earlier version of Excel
 

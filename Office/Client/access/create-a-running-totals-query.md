@@ -3,7 +3,6 @@ title: Create a running totals query
 description: Demonstrates two methods that you can use to create a running totals query in Microsoft Access.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot
@@ -17,7 +16,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to create a running totals query in Microsoft Access

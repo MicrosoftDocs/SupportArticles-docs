@@ -4,7 +4,6 @@ description: Resolve the Invalid user name error message when you try to create 
 author: helenclu
 manager: dcscontentpm
 date: 3/16/2020
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
@@ -17,7 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 10/19/2023
+ms.date: 06/06/2024
 ---
 
 # "Invalid user name" when you try to create a user name that contains a special character in Microsoft 365

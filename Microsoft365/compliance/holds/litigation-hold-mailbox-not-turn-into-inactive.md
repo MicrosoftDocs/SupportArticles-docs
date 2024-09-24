@@ -4,7 +4,6 @@ description: Fixes an issue in which a Litigation Hold enabled mailbox doesn't t
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 151537
@@ -12,7 +11,7 @@ ms.reviewer: kellybos, lindabr, meerak
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # A mailbox that's on Litigation Hold or assigned to a retention policy doesn't turn into an inactive mailbox after license removal

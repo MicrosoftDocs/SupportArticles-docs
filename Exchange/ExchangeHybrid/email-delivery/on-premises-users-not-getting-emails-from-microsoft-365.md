@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Mail Flow
   - Exchange Hybrid
@@ -15,7 +14,7 @@ ms.reviewer: jhayes, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/13/2024
 ---
 # On-premises users can't get email messages from Microsoft 365 users in an Exchange hybrid deployment
 
@@ -33,7 +32,7 @@ Additionally, when a Microsoft 365 user sends an email message to an on-premises
 
 This occurs if the domain that's set up in the hybrid deployment isn't set as an internal relay domain in Microsoft 365. To fix this issue, set up the domain as an internal relay domain:
 
-1. Sign in to the [Exchange admin center](https://admin.exchange.microsoft.com) as a Global admin or Exchange admin.
+1. Sign in to the [Exchange admin center](https://admin.exchange.microsoft.com) as a Microsoft 365 Exchange administrator.
 2. Go to **Mail flow** > **Accepted domains**.
 3. Select the domain that's set up for the hybrid deployment, and then select **Edit**.
 4. In the **Accepted Domain** window, in the **This accepted domain is** section, select **Internal relay** as the domain type.
@@ -46,5 +45,3 @@ The Exchange admin center lists the domains that you added to your account throu
 For more information about accepted domains, see [Accepted domains in Exchange Server](/Exchange/mail-flow/accepted-domains/accepted-domains)
 
 For more information about hybrid deployment, see [Exchange Server Deployment Assistant](/exchange/exchange-deployment-assistant?view=exchserver-2019&preserve-view=true)
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

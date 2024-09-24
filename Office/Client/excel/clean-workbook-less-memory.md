@@ -3,18 +3,18 @@ title: Clean up an Excel workbook so that it uses less memory
 description: Identifies areas in Excel workbooks that use lots of memory and describes how you can make your workbook files work more efficiently.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Reliability
   - CSSTroubleshoot
 appliesto: 
   - Excel 2016
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to clean up an Excel workbook so that it uses less memory

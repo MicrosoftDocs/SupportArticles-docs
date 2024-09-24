@@ -7,7 +7,6 @@ manager: dcscontentpm
 ms.reviewer: v-six
 audience: Admin
 ms.topic: troubleshooting
-ms.localizationpriority: high
 f1.keywords:
 - CSH
 ms.custom: 
@@ -110,7 +109,7 @@ Check your recent messages in the **Sent Items** folder for strange or unknown m
 
 If you believe that your account has been compromised, follow these steps:
 
-- Reset your password and scan your devices for malware. However, the hacker might have configured other settings on your mailbox (for example, created Inbox rules to auto-forward email messages or added additional mailbox delegates). So, follow the additional steps in [How to determine whether your account has been compromised](/office365/troubleshoot/sign-In/determine-account-is-compromised).
+- Reset your password and scan your devices for malware. However, the hacker might have configured other settings on your mailbox (for example, created Inbox rules to auto-forward email messages or added additional mailbox delegates). So, follow the additional steps in [Responding to a compromised account](/defender-office-365/responding-to-a-compromised-email-account).
 
 - Notify your email admin. Your admin will need to unblock your account before you can send email again.
 

@@ -3,11 +3,11 @@ title: Delete every other row on a worksheet
 description: Provides a sample VBA macro that you can use to remove every other row in a selected range on an Excel worksheet. If you have a list of data that contains multiple columns, select only the first column of data when you run the macro.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 ms.reviewer: clarkmc
 search.appverid: 
@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Excel 2010
   - Excel 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to delete every other row on an Excel worksheet

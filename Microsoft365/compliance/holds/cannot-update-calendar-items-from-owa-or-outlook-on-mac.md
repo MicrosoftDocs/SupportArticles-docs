@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: gapart, munatara
 appliesto: 
   - Exchange Online Archiving
 search.appverid: MET150
-ms.date: 02/13/2024
+ms.date: 06/24/2024
 ---
 # Couldn't update the following event error when editing calendar items from OWA or Outlook
 

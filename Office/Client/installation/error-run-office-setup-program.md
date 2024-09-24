@@ -3,18 +3,19 @@ title: Error when you install an Office program
 description: Describes an error message that you receive when you install an Office program.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\SxS\SxSOrPerpetual
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: jenl
 appliesto: 
   - Office 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Error 1919. Error configuring ODBC data source" when you run the Setup program for Office

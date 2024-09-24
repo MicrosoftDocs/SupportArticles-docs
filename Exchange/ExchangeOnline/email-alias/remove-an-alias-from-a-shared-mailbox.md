@@ -14,7 +14,6 @@ f1_keywords:
   - 'O365M_AdminSharedMbx_TSAlias'
   - 'O365E_AdminSharedMbx_TSAlias'
   - 'AdminSharedMbx_TSAlias'
-localization_priority: None
 ms.collection: 
   - M365-subscription-management
   - Adm_O365
