@@ -1,7 +1,7 @@
 ---
 title: ACI fails to pull images anonymously due to Docker Hub rate limits
 description: Provides a solution for errors when you try to create or update an Azure container instance and pull images anonymously from Docker Hub.
-ms.date: 09/23/2024
+ms.date: 09/24/2024
 ms.reviewer: chiragpa, albarqaw, v-weizhu
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
