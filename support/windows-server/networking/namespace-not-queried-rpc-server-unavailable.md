@@ -51,11 +51,11 @@ If you use the DFS Management console from a domain-joined member server (not a 
 
 - Scenario 1
 
-      The DFS Namespace service on the DFS namespace server is stopped or in an undefined state but not "Running."
+  The DFS Namespace service on the DFS namespace server is stopped or in an undefined state but not "Running."
 
 - Scenario 2
 
-      The domain-joined member server (not a DFS namespace) or the Windows client with RSAT File Services tools installed, where you run the DFS Management console, can't reach the DFS namespace server over TCP port 445 (used by  Server Message Block (SMB)).
+  The domain-joined member server (not a DFS namespace) or the Windows client with RSAT File Services tools installed, where you run the DFS Management console, can't reach the DFS namespace server over TCP port 445 (used by  Server Message Block (SMB)).
 
 ### Wireshark trace
 
@@ -152,11 +152,12 @@ As an exceptional workaround for exceptional situations:
 If the preceding solution doesn't show positive results within 30 minutes after applying, you can implement the following method as a temporary workaround. Only use this workaround until you’ve updated the "same as parent" A records on the third-party DNS servers.
 
 On the computer you'll use the DFS Management console, create a HOSTS file that includes the fully qualified name and the IP addresses of the domain controllers.
+
 Sample for the HOSTS file entry:
 
-contoso.com 192.168.0.1
-contoso.com 192.168.0.2
-contoso.com 192.168.0.3
+- contoso.com 192.168.0.1
+- contoso.com 192.168.0.2
+- contoso.com 192.168.0.3
 
 ## Cause 4: Registry values for stand-alone DFS Namespaces are missing
 
