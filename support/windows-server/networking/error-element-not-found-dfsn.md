@@ -1,11 +1,11 @@
 ---
 title: Element not found error with NFS namespaces
 description: Helps resolve the error - The namespace cannot be queried. Element not found.
-ms.date: 09/10/2024
+ms.date: 09/24/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, v-lianna, albugn
 ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
 ---
 # Error "The namespace cannot be queried. Element not found" with DFS namespaces
@@ -20,31 +20,50 @@ When you access, modify, or create a Distributed File System (DFS) namespace on 
 
 ### For domain-based DFS namespaces
 
-The registry key for the DFS namespace root is missing, or other registry values under the registry subkeys of the DFS root, are missing or corrupt. For example, under the following registry key:
+The entire registry key for the DFS Namespace root is missing or other registry values under the registry subkeys of the DFS Namespace root, are missing or corrupt.
 
-`Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\domainV2\DFS1`
+- If the DFS Namespace root is missing, you will not find the DFS Namespace root name under:
 
-The correct data for the registry values are:
+  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\domainV2`
 
-|Value name  |Value type  |Value data  |
-|---------|---------|---------|
-|`LogicalShare`     |`REG_SZ`         |`DFS1`         |
-|`RootShare`     |`REG_SZ`         |`DFS1`         |
+- If the following registry values under the DFS Namespace root name registry key path are either missing or are corrupt:
 
+  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\domainV2\<YourDfsDomainNamespace>`
+
+  Example of the correct entry for a DFS domain based root called "Public":  
+  Path: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\domainV2\Public`
+
+  |Value name  |Value type  |Value data  |
+  |---------|---------|---------|
+  |`LogicalShare`     |`REG_SZ`         |`Public`         |
+  |`RootShare`     |`REG_SZ`         |`Public`         |
+
+  > [!NOTE]
+  > In the preceding example, "Public" is the name of the DFS domain-based namespace root and `LogicalShare` and `RootShare` are the registry keys of type `REG_SZ`, that need to have as value data of the name of the DFS Namespace root, "Public".
+  
 ### For domain stand-alone DFS namespaces
 
-The registry key for the DFS namespace root is missing, or other registry values under the registry subkeys of the DFS root, are missing or corrupt. For example, under the following registry key:
+The entire registry key for the DFS Namespace root is missing or other registry values under the registry subkeys of the DFS Namespace root, are missing or corrupt.
 
-`Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\DFS2St`
+- If the DFS Namespace root is missing, you will not find the DFS Namespace root name under:
 
-The correct data for the registry values are:
+  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone`
 
-|Value name  |Value type  |Value data  |
-|---------|---------|---------|
-|`LogicalShare`     |`REG_SZ`         |`DFS2St`         |
-|`RootShare`     |`REG_SZ`         |`DFS2St`         |
+- If the following registry values under the DFS Namespace root name registry key path are either missing or are corrupt:
 
-#### Wireshark trace example
+  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\<YourDfsStandaloneNamespace>'
+
+  Example of the correct entry for a DFS stand-alone root called "StandaloneData":  
+
+  |Value name  |Value type  |Value data  |
+  |---------|---------|---------|
+  |`LogicalShare`     |`REG_SZ`         |`StandaloneData`         |
+  |`RootShare`     |`REG_SZ`         |`StandaloneData`         |
+
+  > [!NOTE]
+  > In the preceding example, "StandaloneData" is the name of the DFS stand-alone namespace root (domain based) and "LogicalShare" and "RootShare" are the registry keys of type `REG_SZ`, that need to have as value data of the name of the DFS namespace root, "StandaloneData".  
+
+Wireshark trace error example when trying to access a DFS Namespace, which is hosted on a remote DFS Namespace server, using the DFS Management console:
 
 ```output
 192.168.0.45	192.168.0.42	NETDFS	310	dfs_GetInfo request 
@@ -62,10 +81,9 @@ The correct data for the registry values are:
 
 Importing the registry key for the DFS namespace root from any other DFS root server holding the same DFS namespace root or a valid registry backup (if available) of the same registry key can resolve the issue.
 
-If no backup is present, and since you have only a single DFS root server in a DFS stand-alone namespace configuration, the only option is to delete the Active Directory (AD) configuration of the DFS namespace, perform a DFS namespace cleanup on the DFS namespace server, and re-create the DFS namespace.
+If no backup is present and you have only a single DFS root server holding the DFS domain namespace, the fastest option is to delete the AD configuration of the DFS Namespace, run a DFS Namespaces cleanup on the DFS Namespace server and re-create the DFS Namespace. 
 
-> [!NOTE]
-> Restart the DFS server or the DFS server service so that the changes in the registries are loaded into memory again. Not restarting the DFS server or the DFS server service might result in the same error.
+For more information about recovering a DFS namespace, see [Recovery process of a DFS namespace](/troubleshoot/windows-server/networking/recovery-process-of-dfs-namespace).
 
 ### For domain stand-alone DFS namespaces
 
@@ -78,7 +96,7 @@ If no backup is present, and since you have only a single DFS root server in a D
 
 ## Cause 2: The PDC or DC can't be reached or is down
 
-You use the DFS Management console on a machine that's a DFS namespace server, member server, or member client with RSAT File Services tools installed. This issue occurs because the machine can't reach the primary domain controller (PDC) or domain controller (DC) over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port), or the PDC or DC is down.
+You use the DFS Management console on a machine that's a DFS namespace server, member server, or member client with RSAT File Services tools installed. In rare occasions this issue might also occur because the machine can't reach the primary domain controller (PDC) or domain controller (DC) over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port), or the PDC or DC is down.
   
 ### Wireshark trace example
 
@@ -101,7 +119,7 @@ However, establishing a TCP connection to the PDC doesn't fail during the TCP th
 192.168.0.42	192.168.0.1	TCP	66	[TCP Retransmission] 49893 → 389 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
 ```
 
-You might see the following error:
+Or you might see the following error in the trace:
 
 ```output
 192.168.0.45	192.168.0.42	NETDFS	310	dfs_GetInfo request 
