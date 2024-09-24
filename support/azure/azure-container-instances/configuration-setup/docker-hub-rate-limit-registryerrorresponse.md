@@ -1,6 +1,6 @@
 ---
-title: ACI fails to pull images anonymously due to Docker Hub rate limits
-description: Provides a solution for errors when you try to create or update an Azure container instance and pull images anonymously from Docker Hub.
+title: ACI can't pull images anonymously from Docker Hub
+description: Provides a solution to errors when you try to create or update an Azure container instance and pull images anonymously from Docker Hub.
 ms.date: 09/24/2024
 ms.reviewer: chiragpa, albarqaw, v-weizhu
 ms.service: azure-container-instances
@@ -9,7 +9,7 @@ ms.custom: sap:Configuration and Setup
 
 # Anonymous image pulls from Docker Hub to Azure Container Instances fail due to rate limits
 
-This article provides a solution for errors that occur during anonymous image pulls from Docker Hub when you try to create or update an Azure container instance.
+This article provides a solution to errors that occur during anonymous image pulls from Docker Hub when you try to create or update an Azure container instance.
 
 ## Symptoms
 
@@ -26,7 +26,7 @@ You might also see the following error messages:
 
 - > ERROR: toomanyrequests: Too Many Requests.
 
-- > You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.
+- > You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: `https://www.docker.com/increase-rate-limits`.
 
 - > TOOMANYREQUESTS: too many requests to source registry for cache rule \<name of the cache rule>
 
@@ -36,10 +36,10 @@ This issue might occur due to the rate limits on image pulls from Docker Hub. An
 
 ## Solution
 
-To resolve this issue, create a Docker account and use the Docker account credentials to authenticate the image pulls. This can immediately increase the rate limit. However, we strongly recommend using the Artifact Cache feature within Azure Container Registry (ACR) in conjunction with your Docker subscription. This allows you to configure an authenticated cache rule for caching images from Docker Hub to your ACR. You can then modify your build and deployment scripts to pull those same images directly from ACR.
+To resolve this issue, create a Docker account and use the Docker account credentials to authenticate the image pulls. This can immediately increase the rate limit. However, we strongly recommend using the Artifact Cache feature within Azure Container Registry (ACR) with your Docker subscription. This allows you to configure an authenticated cache rule for caching images from Docker Hub to your ACR. You can then modify your build and deployment scripts to pull those same images directly from ACR.
 
 > [!NOTE]
-> Docker offers a free subscription that allows customers to get 200 pulls every 6 hours. If 200 pulls aren't enough for you, we recommend purchasing a paid Docker subscription. A paid Docker Subscription gives you 5,000 pulls every 24 hours, which can be increased by reaching out to Docker Directly.
+> Docker offers a free subscription that allows customers to get 200 pulls every six hours. If 200 pulls aren't enough for you, we recommend purchasing a paid Docker subscription. A paid Docker subscription gives you 5,000 pulls every 24 hours, which can be increased by contacting Docker directly.
 
 ## References
 
