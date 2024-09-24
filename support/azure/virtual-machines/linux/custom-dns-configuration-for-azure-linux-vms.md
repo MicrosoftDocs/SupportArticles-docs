@@ -92,14 +92,14 @@ This article provides instructions on configuring custom DNS servers and search 
 
     > [!NOTE]
     > In Azure, you can set custom DNS servers at the virtual network level or the network interface level. If you set custom DNS servers at the network interface level, it will override the the custom DNS servers configuration in the virtual network.
-3. Run the following command to apply the custom DNS entries:
+3. Run the following command to apply the configuration of the custom DNS servers:
 
    ```bash
    sudo netplan apply
 
 4. Check  `/run/systemd/resolve/stub-resolv.conf` file. It should contain the DNS servers you configured in the step 2.
   
-    Starting from Ubuntu 20, `resolv.conf` file is a symbolic link of `/run/systemd/resolve/stub-resolv.conf` file. So that the updated DNS server will be reflected in **/run/systemd/resolve/resolv.conf** file. For more information, see [systemd-resolved](https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:~:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder).
+    Starting from Ubuntu 20, `resolv.conf` file is a symbolic link of `/run/systemd/resolve/stub-resolv.conf` file. So that the updated DNS servers will be reflected in **/run/systemd/resolve/resolv.conf** file. For more information, see [systemd-resolved](https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:~:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder).
     
    Example of `/run/systemd/resolve/stub-resolv.conf` after configuring custom DNS server.
 
