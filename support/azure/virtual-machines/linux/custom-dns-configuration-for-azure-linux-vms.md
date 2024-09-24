@@ -133,10 +133,10 @@ This article provides instructions on configuring custom DNS servers and search 
 
     ```yaml
     network:
-    ethernets:
-      eth0:
-        nameservers:
-          search: [ test.example.com ]
+        ethernets:
+          eth0:
+            nameservers:
+              search: [ test.example.com ]
     ```
     Multiple search domains can be given, separated by commas, like `["test.example.com", "test1.example.com", "test2.example.com"]`
 4. Run the following command to apply the search domain changes.
