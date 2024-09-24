@@ -72,15 +72,14 @@ To determine whether your cluster is affected by the recent KEDA upgrades, follo
     ```
 2. Review the configurations of KEDA Scalers that are currently deployed in your cluster. Check whether Microsoft Entra pod-managed Identities are used for authentication. The following command displays output only if you're using Pod Identity together with KEDA:
     
-        ```bash
-        kubectl get TriggerAuthentication --all-namespaces -o jsonpath='{range .items[?(@.spec.podIdentity.provider=="azure")]}{.metadata.namespace}{"/"}{.metadata.name}{"\n"}{end}'
-        ```
-        Example of the output:
-      
-        ```output
-        NAME                      PODIDENTITY                 SECRET                 ENV            VAULTADDRESS
-        keda-trigger-auth-azure     yourPodIdentity    azure-secret                     <URL>
-        ```
+    ```bash
+    kubectl get TriggerAuthentication --all-namespaces -o jsonpath='{range .items[?(@.spec.podIdentity.provider=="azure")]}{.metadata.namespace}{"/"}{.metadata.name}{"\n"}{end}'
+    ```
+    Example of the output:
+    ```output
+    NAME                      PODIDENTITY                 SECRET                 ENV            VAULTADDRESS  
+    keda-trigger-auth-azure     yourPodIdentity    azure-secret                                  <URL>
+    ```
 ### What steps can I take to mitigate the issues?
 
 1. Migrate from Microsoft Entra pod-managed identities to workload identity for authentication. For more information, see [Use Microsoft Entra Workload ID with AKS](/azure/aks/workload-identity-overview?tabs=dotnet) and [Migrate from pod managed-identity to workload identity](/azure/aks/workload-identity-migrate-from-pod-identity).
