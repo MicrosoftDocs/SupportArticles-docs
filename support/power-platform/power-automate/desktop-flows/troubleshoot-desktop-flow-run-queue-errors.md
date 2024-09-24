@@ -59,6 +59,18 @@ This error occurs when you try to run an unattended desktop flow on a target mac
 
 To resolve the issue, sign out of the locked session, and confirm that you aren't signed in with the same user on the machine.
 
+## NoUnlockedActiveSessionForAttended
+
+This error usually occurs when you try to run an attended desktop flow on a target machine that is locked or has no user signed in. You can also get this error when the Windows user you're currently signed in on the target machine doesn't match the user you entered in your connection. Attended desktop flows can only execute if the machine is unlocked on a session where the current user matches the one in the desktop flow connection.
+
+#### Resolution
+
+To resolve the issue:
+
+- Check the credentials used in your connection and make sure they're the ones used in the unlocked session. You can verify your identity by typing `whoami` in any command prompt.
+- Verify that you're targeting the right machine. To do so, open the machine runtime application and select **View machine in portal** to verify that it brings you to the machine you're targeting in your run.
+- Verify that the account that runs the Power Automate service (UIFlowService) has Remote Desktop permissions on the machine. By default, the Power Automate service runs as `NT SERVICE\UIFlowService`. If you didn't change this, verify that `NT SERVICE\UIFlowService` is in the **Remote Desktop Users** group. To do so, go to **Start** > **Run**, type *usrmgr.msc*, select **Groups**, double-click the **Remote Desktop Users** group and verify the account is included. If it's not included, include it (this requires administrator permissions) and restart the machine.
+
 ## AttendedUserSessionNotActive
 
 This error occurs when the user specified in the connection is signed in to the target machine but the target session is either in a locked or disconnected state.
