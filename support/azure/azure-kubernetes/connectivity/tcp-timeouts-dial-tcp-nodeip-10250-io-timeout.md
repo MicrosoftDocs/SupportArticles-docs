@@ -13,7 +13,7 @@ ms.custom: sap:Connectivity
 TCP timeouts may be related to blockages of internal traffic between nodes. Verify that this traffic isn't being blocked, such as by [network security groups](/azure/aks/concepts-security#azure-network-security-groups) (NSGs) on the subnet for your cluster's nodes.
 
 ## Symptoms
-Tunnel functionalities, such as logs and code execution, work only for pods hosted on nodes where tunnel service pods are deployed. Pods on other nodes without tunnel service pods cannot reach to the tunnel. You receive the following error when viewing the logs of these pod.
+Tunnel functionalities, such as logs and code execution, work only for pods hosted on nodes where tunnel service pods are deployed. Pods on other nodes without tunnel service pods cannot reach to the tunnel. You receive the following error when viewing the logs of these pods.
 
 ```bash
 kubectl logs <pod>
