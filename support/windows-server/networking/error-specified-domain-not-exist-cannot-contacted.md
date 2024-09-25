@@ -12,7 +12,7 @@ ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replicat
 
 This article helps resolve the error "The namespace cannot be queried. The specified domain either does not exist or cannot be contacted."
 
-When you access, modify, or create a Distributed File System (DFS) namespace on a DFS Namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed, you might receive the following error message: 
+When you access, modify, or create a Distributed File System (DFS) Namespace on a DFS Namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed, you might receive the following error message: 
 
 > The namespace cannot be queried. The specified domain either does not exist or cannot be contacted
 
