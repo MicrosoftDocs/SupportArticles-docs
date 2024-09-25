@@ -5,6 +5,8 @@ items:
 
 - name: Troubleshoot container group startup
   items:
+  - name: Anonymous image pulls from Docker Hub fail
+    href: configuration-setup/docker-hub-rate-limit-registryerrorresponse.md
   - name: Container group deployment remains in Waiting state
     href: configuration-setup/container-group-deployment-waiting-state.md
   - name: Container group remains in transitioning state

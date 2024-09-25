@@ -1,8 +1,8 @@
 ---
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 06/12/2024
-ms.reviewer: chiragpa, rissing, v-leedennis, v-weizhu
+ms.date: 09/10/2024
+ms.reviewer: chiragpa, rissing, jopalhei, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to perform basic troubleshooting of outbound connections from an Azure Kubernetes Service (AKS) cluster so that I don't experience connection issues when I use AKS.
@@ -132,12 +132,12 @@ What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/ge
 >
 > If the DNS resolution or egress traffic doesn't let you install the necessary network packages, you can use the `rishasi/ubuntu-netutil:1.0` docker image. In this image, the required packages are already installed.
 
-Here's an example procedure for checking DNS resolution:
+Here's an example procedure for checking DNS resolution of a Linux pod:
 
 1. Start a test pod in the same namespace as the problematic pod:
 
    ```bash
-   kubectl run -it --rm aks-ssh --namespace <namespace> --image=debian:stable
+   kubectl run -it --rm aks-ssh --namespace <namespace> --image=debian:stable --overrides='{"spec": { "nodeSelector": {"kubernetes.io/os": "linux"}}}'
    ```
 
    After the test pod is running, you'll gain access to the pod.
@@ -145,10 +145,8 @@ Here's an example procedure for checking DNS resolution:
 1. Run the following `apt-get` commands to install other tool packages:
 
    ```bash
-   apt-get update -y
-   apt-get install dnsutils -y
-   apt-get install curl -y
-   apt-get install netcat -y
+   apt-get update -y   
+   apt-get install -y dnsutils && apt-get install netcat-traditional -y && apt-get install curl -y
    ```
 
 1. After the packages are installed, run the [nslookup](/windows-server/administration/windows-commands/nslookup) command to test the DNS resolution to the endpoint:
@@ -199,17 +197,19 @@ Here's an example procedure for checking DNS resolution:
    Received 2121 bytes from 10.0.0.10#53 in 232 ms
    ```
 
+Here's an example procedure for checking DNS resolution of a Windows pod:
+
 1. Run a test pod in the Windows node pool:
 
    ```bash
    # For a Windows environment, use the Resolve-DnsName cmdlet.
-   kubectl run dnsutil-win --image='mcr.microsoft.com/windows/servercore:1809' --overrides='{"spec": { "nodeSelector": {"kubernetes.io/os": "windows"}}}' -- powershell "Start-Sleep -s 3600"
+   kubectl run dnsutil-win --image='mcr.microsoft.com/windows/servercore:ltsc2022' --overrides='{"spec": { "nodeSelector": {"kubernetes.io/os": "windows"}}}' -- powershell "Start-Sleep -s 3600"
    ```
 
 1. Run the [kubectl exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) command to connect to the pod by using PowerShell:
 
    ```bash
-   kubectl exec -it dnsutil-win powershell
+   kubectl exec -it dnsutil-win -- powershell
    ```
 
 1. Run the [Resolve-DnsName](/powershell/module/dnsclient/resolve-dnsname) cmdlet in PowerShell to check whether the DNS resolution is working for the endpoint:
@@ -288,8 +288,9 @@ To determine whether you can reach the endpoint through the network from your cl
 1. Check the route to the endpoint to determine whether there's a time-out at a specific operation:
 
    ```bash
-   kubectl run -it --rm aks-ssh --namespace <namespace> --image=debian:stable
-   apt-get install -y traceroute && apt-get install netcat -y
+   kubectl run -it --rm aks-ssh --namespace <namespace> --image=debian:stable --overrides='{"spec": { "nodeSelector": {"kubernetes.io/os": "linux"}}}'
+   apt-get update -y
+   apt-get install -y traceroute && apt-get install netcat-traditional -y && apt-get install curl -y
    traceroute -T microsoft.com -m 50 -p 443
    ```
 
