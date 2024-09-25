@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS) , csstroubleshoot
 ---
 # No VSS writers are listed when you run vssadmin list writers
 
 This article provides a resolution for the issue that no VSS writers are listed when you run vssadmin list writers.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2009533
 
 ## Symptoms

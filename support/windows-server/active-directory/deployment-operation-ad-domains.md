@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
+ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
 # Deployment and operation of Active Directory domains that are configured by using single-label DNS names
 
 This article contains information about the deployment and operation of Active Directory (AD) domains that are configured by using single-label DNS names.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 300684
 
 ## Summary

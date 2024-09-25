@@ -5,6 +5,7 @@ ms.date: 07/02/2008
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande
+ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---
 # Using Failed Request Tracing rules to troubleshoot Application Request Routing
 

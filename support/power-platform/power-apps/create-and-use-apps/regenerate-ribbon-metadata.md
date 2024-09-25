@@ -3,6 +3,7 @@ title: How to regenerate ribbon metadata
 description: Describes how to start the regeneration ribbon metadata operation and check the status.
 ms.reviewer: krgoldie, srihas, tahoon
 ms.date: 09/25/2023
+ms.custom: sap:Configuring model-driven app commands\Command is not shown or hidden as expected
 ---
 # How to regenerate ribbon metadata
 

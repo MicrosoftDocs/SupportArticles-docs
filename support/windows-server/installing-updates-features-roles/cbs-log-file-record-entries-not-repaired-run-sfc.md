@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kmcniel, kaushika
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
 ---
 # The CBS.log file contains entries that some files aren't repaired even after you successfully run the SFC utility on a Windows Server based computer
 
 This article describes an issue where the CBS.log file records entries when a static file changes. Because the static file isn't protected by the Windows Resource Protection feature, the feature reports the change in the CBS.log file.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954402
 
 ## Symptoms

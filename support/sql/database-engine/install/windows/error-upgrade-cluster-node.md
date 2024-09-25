@@ -2,7 +2,7 @@
 title: Error when you upgrade the cluster node
 description: This article provides a resolution for the problem that occurs when you try to upgrade a SQL Server 2008 or SQL Server 2008 R2 instance to SQL Server 2012 on a failover cluster.
 ms.date: 10/23/2020
-ms.custom: sap:Database Engine
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: ramakoni
 ---
 # Error when you try to upgrade the cluster node to SQL Server 2012

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, robsim, cpuckett, v-jesits, v-six
-ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS) , csstroubleshoot
 ---
 # Most recent previous versions are missing for a share that has Previous Versions enabled in Windows
 
 This article provides a workaround for an issue in which most recent previous versions aren't displayed for a share in Windows that has the **Previous Versions** feature enabled.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4032986
 
 ## Symptoms

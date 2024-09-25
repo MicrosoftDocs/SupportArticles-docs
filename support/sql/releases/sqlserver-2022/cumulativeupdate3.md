@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 3 for SQL Server 2022 (KB5024396)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 3 (KB5024396).
-ms.date: 04/13/2023
-ms.custom: KB5024396
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5024396
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows

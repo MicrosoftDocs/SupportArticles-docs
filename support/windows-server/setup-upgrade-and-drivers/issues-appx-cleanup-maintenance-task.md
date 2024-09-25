@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
 # Known issues that affect the AppX cleanup maintenance task in Windows 8.1 and Windows Server 2012 R2
 
 This article provides solutions to known issues that involve the AppX cleanup maintenance task.
 
-_Applies to:_ &nbsp; Windows 8.1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2928948
 
 ## Introduction

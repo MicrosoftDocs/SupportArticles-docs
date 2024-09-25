@@ -7,7 +7,7 @@ ms.date: 12/26/2023
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jasone, v-lianna
-ms.custom: sap:system-hang, csstroubleshoot, ikb2lmc
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot, ikb2lmc
 ---
 # Windows Server stops responding when a Trigger Start service crashes with a failed restart
 

@@ -1,19 +1,18 @@
 ---
 title: How to enable LDAP signing
 description: Describes how to enable LDAP signing in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows 10.
-ms.date: 02/22/2024
+ms.date: 09/05/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, hjerez, jarrettr, herbertm, wincicadsec
-ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # How to enable LDAP signing in Windows Server
 
 This article describes how to enable LDAP signing in Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, and Windows 11.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 11 - all editions, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 935834
 
 ## Summary
@@ -206,8 +205,8 @@ Client IP address:
 Identity the client attempted to authenticate as:
 contoso\<username>
 Binding Type:
-0 – Simple Bind that does not support signing
-1 – SASL Bind that does not use signing
+0 – SASL Bind that does not use signing
+1 – Simple Bind that does not support signing
 ```
 
 ## References

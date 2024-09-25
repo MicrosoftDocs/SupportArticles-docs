@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dtc-startup-configuration-connectivity-and-cluster, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\DTC startup, configuration, connectivity, and cluster, csstroubleshoot
 ---
 # How to troubleshoot connectivity issues in MS DTC by using the DTCPing tool
 
 This article describes how to troubleshoot connectivity issues in Microsoft Distributed Transaction Coordinator (MS DTC) by using the DTCPing tool.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 918331
 
 ## Introduction

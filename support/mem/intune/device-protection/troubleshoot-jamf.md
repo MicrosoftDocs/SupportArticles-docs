@@ -4,6 +4,7 @@ description: Suggestions for troubleshooting some of the most common problems wh
 ms.date: 12/05/2023
 ms.reviewer: kaushika, taveil
 search.appverid: MET150
+ms.custom: sap:Set Up Intune\Integrate Jamf Pro with Intune for Compliance
 ---
 
 # Troubleshooting integration of Jamf Pro with Microsoft Intune

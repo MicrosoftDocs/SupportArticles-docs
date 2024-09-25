@@ -2,7 +2,7 @@
 title: Update or slipstream an installation
 description: This article describes how to update or slipstream an installation of SQL Server 2008.
 ms.date: 09/25/2020
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: bobward
 ms.topic: how-to
 ---

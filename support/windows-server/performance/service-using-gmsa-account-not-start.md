@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:boot-is-slow, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
 ---
 # Service configured to use gMSA account on a Windows Server 2012 R2-based DC doesn't start
 
 This article provides workaround for an issue where service can't start when the service is configured to use gMSA account on a Windows Server 2012 R2-based domain controller (DC).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4294429
 
 ## Symptom

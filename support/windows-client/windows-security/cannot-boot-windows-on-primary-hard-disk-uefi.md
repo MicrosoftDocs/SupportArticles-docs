@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:secure-boot-and-uefi, csstroubleshoot
+ms.custom: sap:System Performance\Startup configuration (general, secure boot, UEFI), csstroubleshoot
 ---
 # Unable to boot if more than one EFI system partition is present
 
 This article helps work around an issue where you can't boot Windows that was on the primary hard disk and may only have the option to boot to the new installation of Windows on the second hard disk.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 2879602
 
 ## Symptoms

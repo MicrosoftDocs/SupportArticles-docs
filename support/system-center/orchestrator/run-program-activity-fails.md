@@ -1,13 +1,13 @@
 ---
 title: Run Program activity returns error
 description: Fixes an issue where you receive the Process creation failed - The system cannot find the file specified error when executing the Run Program activity.
-ms.date: 08/04/2020
+ms.date: 06/26/2024
 ---
 # The Run Program activity returns the Process creation failed error
 
 This article helps you fix an issue where you receive the **Process creation failed on \<computer> - The system cannot find the file specified** error when executing the **Run Program** activity.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2748718
 
 ## Symptoms
@@ -30,7 +30,7 @@ There are three resolution options available:
 
 ### Resolution 1
 
-Stop and delete the Orchestrator Run Program service (orunprogram) from the target computer allowing System Center 2012 Orchestrator to reinstall the service automatically using the default LocalSystem user account at next execution of the **Run Program** activity.
+Stop and delete the Orchestrator Run Program service (orunprogram) from the target computer allowing System Center Orchestrator to reinstall the service automatically using the default LocalSystem user account at next execution of the **Run Program** activity.
 
 Execute the following commands using an elevated Command Prompt on the computer that's the target of the **Run Program** activity to stop and delete the Orchestrator Run Program (orunprogram) service:
 

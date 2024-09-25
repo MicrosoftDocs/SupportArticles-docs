@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, imranu
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
 # You receive a "Stop error code 0x0000007F (UNEXPECTED_KERNEL_MODE_TRAP)" error message, or your computer unexpectedly restarts
 
 This article helps to fix the error "Stop error code 0x0000007F (UNEXPECTED_KERNEL_MODE_TRAP)".  
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 822789
 
 ## Symptoms

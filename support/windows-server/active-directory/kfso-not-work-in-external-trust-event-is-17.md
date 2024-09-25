@@ -1,24 +1,24 @@
 ---
 title: KFSO doesn't work in external trust
 description: Describes a situation in which Kerberos Forest Search Order may not work in an external trust. In this situation, Kerberos authentication is not offered.
-ms.date: 12/26/2023
+ms.date: 05/21/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jaml
-ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Kerberos Forest Search Order may not work in an external trust and event ID 17 is returned
 
 This article discusses a situation where Kerberos Forest Search Order (KFSO) doesn't work in an external trust.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 2977475
 
 ## Symptoms
 
-In Windows Server 2008 R2 and later versions of Windows Server, the following Group Policy settings can be used to configure KFSO:
+In a supported version of Windows Server, the following Group Policy settings can be used to configure KFSO:
 
 **Computer Configuration** \ **Administrative Templates** \ **System** \ **Kerberos** \ **Use Forest Search Order**  
 
@@ -30,7 +30,7 @@ In this situation, InitializeSecurityContext may return "SEC_E_TARGET_UNKNOWN." 
 
 ## Cause
 
-The KFSO feature offers the convenience of allowing for short name (host name) service principal name (SPN) resolution in a forest trust environment instead of offering the support of Kerberos authentication over external trusts. 
+The KFSO feature offers the convenience of allowing for short name (host name) service principal name (SPN) resolution in a forest trust environment instead of offering the support of Kerberos authentication over external trusts.
 
 If Kerberos authentication is required, then a forest trust is necessary. On an external trust, you have to change the application to use FQDN server names and three-part SPNs. For more information, see [Technologies for Federating Multiple Forests](https://technet.microsoft.com/library/dd560679%28ws.10%29.aspx).
 

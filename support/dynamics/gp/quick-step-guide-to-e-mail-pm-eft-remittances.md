@@ -2,7 +2,8 @@
 title: Quick step guide to E-mail PM EFT Remittances
 description: Quick step guide to E-mail PM EFT Remittances in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 02/20/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Quick step guide to E-mail PM EFT Remittances in Microsoft Dynamics GP
 

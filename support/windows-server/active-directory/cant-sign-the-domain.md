@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, PATCH
-ms.custom: sap:active-directory-fsmo, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
 ---
 # Users can't sign in to the domain after password changes on a Remote Domain Controller
 

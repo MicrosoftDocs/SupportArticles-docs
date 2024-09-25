@@ -2,7 +2,9 @@
 title: Error when you open a lookup window in Dexterity debug Test Mode
 description: Provides a solution to an error that occurs when you open a lookup window in Dexterity debug Test Mode in Microsoft Dynamics GP 10.0.
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.reviewer: theley
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error message when you try to open a lookup window in Dexterity debug Test Mode in Microsoft Dynamics GP 10.0: "Form Load Failed"
 

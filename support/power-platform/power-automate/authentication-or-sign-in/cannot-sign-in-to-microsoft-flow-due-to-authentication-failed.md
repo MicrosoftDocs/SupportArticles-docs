@@ -3,7 +3,7 @@ title: Authentication failed when signing in to Microsoft Flow
 description: You receive the Authentication failed error when trying to sign in to Microsoft Flow.
 ms.reviewer: trbaratc
 ms.date: 03/31/2021
-ms.subservice: power-automate-authentication
+ms.custom: sap:Authentication or Sign-in\Licensing
 ---
 # You can't sign in to Microsoft Flow and you receive an "Authentication failed" error
 
@@ -42,11 +42,7 @@ To resolve this problem, follow these steps.
 1. Open the [Azure portal](https://portal.azure.com)), and sign in.
 2. In the navigation bar, open Microsoft Entra Settings.
 
-    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/add-settings-icon.png" alt-text="Screenshot of the Microsoft Entra Settings icon in the navigation bar.":::
-
 3. Navigate to **Enterprise applications** > **All applications**.
-
-    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/all-applications.png" alt-text="Screenshot to select the All applications item after selecting the Enterprise applications item.":::
 
 4. Paste **7df0a125-d3be-4c96-aa54-591f83ff541c** into the filter input.
 

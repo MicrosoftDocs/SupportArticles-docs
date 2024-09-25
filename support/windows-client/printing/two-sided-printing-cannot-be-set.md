@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, naokioh, juesaigo
-ms.custom: sap:errors-and-troubleshooting:-print-output-or-print-failures, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Two-sided (duplex) printing options cannot be set for applications in Windows 8.1 and Windows 8
 

@@ -2,8 +2,9 @@
 title: Error when you integrate a sales transaction in Integration Manager in Microsoft Dynamics GP
 description: Describes a problem that occurs when you integrate a sales transaction in Integration Manager in Microsoft Dynamics GP. Provides a resolution.
 ms.topic: troubleshooting
-ms.reviewer: kvogel
-ms.date: 03/31/2021
+ms.reviewer: theley, kvogel
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error message when you integrate a sales transaction in Integration Manager in Microsoft Dynamics GP: "Quantities for item '[Item Number]' must be allocated before they can be fulfilled"
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:shutdown-is-slow-or-hangs, csstroubleshoot
+ms.custom: sap:System Performance\Shutdown Performance (slow, unresponsive), csstroubleshoot
 ---
 # Use the Userdump.exe tool to create a dump file
 
 This article provides the steps to use the Userdump.exe tool to create a dump file of a process that shuts down with an exception or that stops responding.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 241215
 
 ## Summary

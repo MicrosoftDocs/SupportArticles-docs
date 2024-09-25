@@ -3,7 +3,7 @@ title: Unable to add attachment due to IO error - Android Enterprise device in I
 description: Gives a workaround for the issue where Android Enterprise enrolled devices can't attach photos to applications.
 ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Use app protection policies
+ms.custom: sap:AppDeployment - Android\EnterpriseSystem
 ms.reviewer: kaushika, kakimble, intunecic, joelste
 ---
 # Can't attach photos to applications on Android Enterprise work profile enrolled devices

@@ -6,6 +6,7 @@ ms.author: luche
 ms.reviewer: kaushika, anziob
 ms.date: 12/05/2023
 search.appverid: MET150
+ms.custom: sap:Configure Devices - Android\Device restrictions
 ---
 # Assigning device password settings to Android Enterprise fully managed devices in Intune
 

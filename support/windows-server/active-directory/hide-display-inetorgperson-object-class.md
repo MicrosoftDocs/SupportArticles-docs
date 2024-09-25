@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, TIMTHO
-ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Lightweight Directory Services (AD LDS), csstroubleshoot
 ---
 # Hide or Display the InetOrgPerson Object Class in Active Directory Users and Computers
 
 This article describes how to Hide or Display the InetOrgPerson object class in Active Directory Users and Computers.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 311555
 
 ## Summary

@@ -3,6 +3,7 @@ title: Turn on the DebugLogging key
 description: Describes how to turn on the DebugLogging key on Configuration Manager clients and management points.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Client Operations\Other
 ---
 # Turn on the DebugLogging key on Configuration Manager clients and management points
 

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:storage-hardware, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware , csstroubleshoot
 ---
 # Information about Event ID 51
 
   Event ID 51 may occur when you write information to the physical disk. This article describes how to decode the data section of an Event ID 51 event message.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 244780
 
 ## Summary

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, akhleshs
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 ---
 # User GPP Scheduled Task item fails to apply and logs event ID: 4098 with 0x80070005 Access is denied
 
 This article provides a solution to an issue where User Group Policy Preference (GPP) Scheduled Task item fails to apply.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2447414
 
 ## Symptoms

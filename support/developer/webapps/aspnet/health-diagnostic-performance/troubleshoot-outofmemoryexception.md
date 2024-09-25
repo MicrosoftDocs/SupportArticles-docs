@@ -2,8 +2,8 @@
 title: Troubleshoot Out of Memory issues
 description: This article describes the Out of Memory issues that occur in ASP.NET.
 ms.date: 03/26/2020
-ms.custom: sap:Health, diagnostic, and performance features
 ms.reviewer: bretb, kaorif
+ms.custom: sap:Performance
 ---
 # Troubleshoot Out of Memory issues (System.OutOfMemoryException) in ASP.NET
 

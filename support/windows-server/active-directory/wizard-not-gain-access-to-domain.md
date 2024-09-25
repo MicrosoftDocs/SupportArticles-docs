@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
+ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
 # Error message: The wizard cannot gain access to the list of domains in the forest
 
 This article helps fix the error (The wizard cannot gain access to the list of domains in the forest) that occurs when you use Dcpromo.exe to move a Windows Server into an existing domain.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 259374
 
 ## Symptoms

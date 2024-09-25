@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:redirection-not-printer, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Redirection (not printer), csstroubleshoot
 ---
 # Copying files larger than 2 GB over a Remote Desktop Services or Terminal Services session by using Clipboard redirection (copy and paste) fails silently
 
 This article works around an issue where copying files larger than 2 GB over a Remote Desktop Services or Terminal Services session by using Clipboard redirection fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2258090
 
 ## Symptoms

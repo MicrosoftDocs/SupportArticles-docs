@@ -1,7 +1,7 @@
 ---
 title: Microsoft Monitoring Agent service freezes during startup
 description: Fixes an issue that causes the Microsoft Monitoring Agent service to hang in the Starting state.
-ms.date: 06/23/2020
+ms.date: 04/15/2024
 ---
 # Microsoft Monitoring Agent service freezes during the startup process
 

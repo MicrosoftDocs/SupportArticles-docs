@@ -2,7 +2,7 @@
 title: Spawn process under impersonated user
 description: This article describes how to spawn a process that runs under the context of the impersonated user.
 ms.date: 08/07/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ms.reviewer: earlb
 ms.topic: how-to
 ---

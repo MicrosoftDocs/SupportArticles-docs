@@ -1,8 +1,9 @@
 ---
 title: Values on the Received/Not Invoiced report may not match the general ledger in Microsoft Dynamics GP
 description: Information about why the values on the Received/Not Invoiced report may not match the general ledger in Microsoft Dynamics GP.
-ms.reviewer: ppeterso
-ms.date: 03/31/2021
+ms.reviewer: theley, ppeterso
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Information about why the values on the Received/Not Invoiced report may not match the general ledger in Microsoft Dynamics GP
 

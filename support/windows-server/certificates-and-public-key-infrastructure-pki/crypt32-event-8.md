@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:certificate-root-update-program, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Microsoft Trusted Root Certificate Program, csstroubleshoot
 ---
 # Crypt32 8 events continuously reported in Windows
 
 This article provides help to solve an issue where Crypt32 event 8 is continuously reported in the Application log.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2253680
 
 ## Symptoms

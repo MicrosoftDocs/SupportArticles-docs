@@ -1,14 +1,14 @@
 ---
-title: Troubleshooting the explicit misplaced SPN issue in SQL Server
-description: This article provides a workaround for the SQL Server consistent authentication problem where the explicit SPN is missing.
-ms.date: 02/27/2024
+title: Explicit misplaced SPN error in SQL Server
+description: This article provides a workaround for the SQL Server consistent authentication problem where the explicit SPN is misplaced.
+ms.date: 03/28/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 
-# Explicit misplaced SPN issue in SQL Server
+# Explicit misplaced SPN problem in SQL Server
 
 This article helps you resolve a SQL Server consistent authentication problem that affects the explicit misplaced Service Principal Name (SPN).
 
@@ -37,3 +37,7 @@ If you are experiencing explicit misplaced SPNs, you might have to create or re-
 1. Run the `SETSPN -D` command to remove the SPN from the service.
 1. Run the `SETSPN -A` command to add the SPN to the service.
 1. Move the SPN by using `SETSPN -D`, or select an SPN that already exists in the correct account.
+
+## More information
+
+[Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)

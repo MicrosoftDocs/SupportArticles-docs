@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ajayps
-ms.custom: sap:remote-access, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess), csstroubleshoot
 ---
 # DirectAccess clients may not be able to connect to DirectAccess server with error code 0x103, 0x2AFC, or 0x2AF9 when using IP-HTTPS
 
 This article provides help to fix error 0x103, 0x2AFC, or 0x2AF9 that occurs when you use IP-HTTPS to connect DirectAccess clients to the DirectAccess server.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2980635
 
 ## Symptoms

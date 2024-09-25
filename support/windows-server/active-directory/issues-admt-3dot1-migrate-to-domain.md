@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, scheung
-ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroubleshoot
 ---
 # Known issues that may occur when you use ADMT 3.1 to migrate to a domain that contains Windows Server 2008 R2 domain controllers
 
 This article describes known issues that you may experience when you use Active Directory Migration Tool 3.1 to migrate Active Directory data to a domain, and provides help to resolve these issues.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 976659
 
 ## Summary

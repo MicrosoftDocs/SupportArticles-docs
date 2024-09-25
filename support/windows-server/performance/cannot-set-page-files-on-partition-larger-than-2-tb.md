@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: adityah, kaushika
-ms.custom: sap:applications, csstroubleshoot
+ms.custom: sap:System Performance\App, Process, Service Performance (slow, unresponsive), csstroubleshoot
 ---
 # You cannot set page files on a partition that is larger than 2 terabytes
 
 This article provides a workaround for an issue that occurs when you try to set page files on a partition that is larger than 2 terabytes.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 973423
 
 ## Symptoms

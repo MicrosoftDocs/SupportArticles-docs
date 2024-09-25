@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot issues that occur when you send e-mail statements
 description: Discusses several troubleshooting methods and items that you can review to troubleshoot issues that occur when you send e-mail statements in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Troubleshoot issues that occur when you send e-mail statements in Microsoft Dynamics GP
 

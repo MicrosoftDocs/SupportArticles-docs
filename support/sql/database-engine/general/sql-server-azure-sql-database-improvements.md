@@ -2,7 +2,7 @@
 title: SQL Server Database improvements
 description: This article describes how persisted structures in your SQL Server database can be validated as part of the upgrade compatibility level, and how any affected structures can be rebuilt after you upgrade the compatibility level.
 ms.date: 02/17/2020
-ms.custom: sap:Database Design and Development
+ms.custom: sap:Queries, stored procedures, views, functions, triggers (T-SQL)\Create, Alter, Drop, Select, Insert, Delete, Update
 ---
 
 # SQL Server and Azure SQL Database improvements in handling some data types and uncommon operations

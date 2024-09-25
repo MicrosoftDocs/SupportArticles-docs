@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, leons, v-srisan
-ms.custom: sap:integration-components, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Integration components, csstroubleshoot
 ---
 # The VMBus device doesn't load on a virtual machine that is running on a computer with Hyper-V installed
 
 This article provides help to fix an issue where the VMBus device doesn't load on a virtual machine that's created by using Virtual Server 2005 or Virtual PC 2007.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954282
 
 ## Symptoms

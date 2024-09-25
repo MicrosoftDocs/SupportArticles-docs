@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-volume-activation, csstroubleshoot
+ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 ---
 # Windows installation fails with error: The product key entered does not match any of the Windows images available for installation. Enter a different product key
 
 This article describes the **The product key entered does not match any of the Windows images available for installation. Enter a different product key** error that occurs when you install Windows.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2796988
 
 ## Symptoms

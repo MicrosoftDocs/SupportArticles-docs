@@ -4,20 +4,21 @@
 title: Troubleshoot issues with tax engine (GTE)
 description: Provides information about the issues you might encounter while using the tax engine (GTE) and explains how to fix them.
 author: EricWangChen
-ms.date: 10/21/2022
+ms.date: 04/30/2024
 
 # optional metadata
 
 ms.search.form: ERSolutionTable, ERDataModelDesigner, ERModelMappingTable
 audience: Application User
 # ms.devlang:
-ms.reviewer: kfend
+ms.reviewer: kfend, maplnan
 # ms.tgt_pltfrm:
 ms.search.region: India
 # ms.search.industry:
 ms.author: wangchen
 ms.search.validFrom: 07/30/2019
 ms.dyn365.ops.version: 7.3
+ms.custom: sap:Tax - India tax\Issues with generic tax engine (GTE)
 ---
 
 # Troubleshoot issues with tax engine (GTE)

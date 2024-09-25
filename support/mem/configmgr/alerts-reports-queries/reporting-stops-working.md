@@ -2,7 +2,7 @@
 title: Reporting doesn't work 
 description: Fixes an issue in which Configuration Manager reporting doesn't work after you move the reporting services point role to a new server or you enable TLS 1.2 on the site servers.
 ms.date: 12/05/2023
-ms.custom: sap:SQL Server Reporting Services
+ms.custom: sap:Admin Console, Role-Based Access and Reporting\Reports and subscriptions
 ms.reviewer: kaushika
 ---
 # Reporting stops working after you move a reporting services point or enable TLS 1.2 in Configuration Manager

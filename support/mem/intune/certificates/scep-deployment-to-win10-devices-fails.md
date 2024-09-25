@@ -3,7 +3,7 @@ title: SCEP deployment to Windows 10 devices fails after CA renewal
 description: Describes an issue in which SCEP certificates can't be deployed to Windows 10 devices after you renew the CA certificate.
 ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Microsoft Intune
+ms.custom: sap:Configure Devices - Windows\SCEP Certificates
 ms.reviewer: kaushika
 ---
 # SCEP deployment to Windows 10 devices fails after you renew the CA certificate

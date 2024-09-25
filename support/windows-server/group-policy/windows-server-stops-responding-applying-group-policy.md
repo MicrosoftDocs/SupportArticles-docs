@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, dennhu, teterenc, v-lianna
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot, ikb2lmc
 ---
 # Windows Server stops responding on startup when applying Group Policy
 

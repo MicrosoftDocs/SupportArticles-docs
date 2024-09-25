@@ -3,6 +3,8 @@ title: Servicing models for SQL Server
 description: This article describes the information regarding servicing channels for currently supported versions of SQL Server.
 ms.date: 02/15/2023
 ms.reviewer: ramakoni, v-sidong
+ms.topic: conceptual
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ---
 
 # Servicing models for SQL Server
@@ -82,7 +84,7 @@ If you're a customer who opted for only GDR updates to the RTM version and no CU
 
 **Determine the latest GDRs for a CU baseline:**
 
-If you're using CUs for your SQL Server instance, you can check whether there's a GDR available for a given CU by reviewing the **Cumulative Update or Security ID** column for the corresponding version in the builds spreadsheet, and checking the CU\<nn>-GDR entry (where nn is the current CU that's installed for your SQL Server version). For example, if you want to know whether there are any GDRs for SQL Server 2019 CU29, checking for "CU29-GDR" in *Cumulative Update or Security ID*
+If you're using CUs for your SQL Server instance, you can check whether there's a GDR available for a given CU by reviewing the **Cumulative Update or Security ID** column for the corresponding version in the builds spreadsheet, and checking the CU\<nn>-GDR entry (where nn is the current CU that's installed for your SQL Server version). For example, if you want to know whether there are any GDRs for SQL Server 2017 CU29, checking for "CU29-GDR" in *Cumulative Update or Security ID*
  reveals the following row.
 
 |Build number|KB number|KB URL|Release Date|Service Pack Level|Cumulative Update or Security ID|Servicing Model|

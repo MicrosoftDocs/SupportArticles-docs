@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:deduplication, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication , csstroubleshoot
 ---
 # Churn from Full Garbage Collection during deduplication can cause performance problems in Windows Server
 
 This article provides workarounds for performance problems that are caused by the churn from full garbage collection during deduplication.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3066175
 
 ## Symptoms

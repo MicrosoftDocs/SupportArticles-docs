@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot
 ---
 # Recommended antivirus exclusions for Hyper-V hosts
 
 This article describes the recommended antivirus exclusions for Hyper-V hosts for optimal operation.
 
-_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3105657
 
 ## Summary

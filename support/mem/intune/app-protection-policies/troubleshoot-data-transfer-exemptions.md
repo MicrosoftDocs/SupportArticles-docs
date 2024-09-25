@@ -4,6 +4,7 @@ description: Troubleshooting guidance for scenarios when an exemption to Microso
 ms.date: 12/05/2023
 ms.reviewer: chauntain, roblane-msft, kkreh
 search.appverid: MET150
+ms.custom: sap:Application Protection - Android\Conditional Launch
 ---
 # Troubleshooting exemptions to data transfer policies
 

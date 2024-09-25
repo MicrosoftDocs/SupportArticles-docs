@@ -1,24 +1,24 @@
 ---
 title: Use GPOs to change default logon domain name
 description: Describes how to use Group Policy Objects (GPOs) to change default logon domain name.
-ms.date: 12/26/2023
+ms.date: 04/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # Use GPOs to change default logon domain name in the logon screen
 
 This article describes how to use Group Policy Objects (GPOs) to change default logon domain name.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 2908796
 
 ## Symptoms
 
-In multi domain environment, there are scenarios where users consistently login to workstations that are joined to a different domain than that of the logged in user. By default the domain that the workstation is joined to is listed as the default domain name and other domain users have to always provide the user name as *domain\username* to login correctly. Also there are scenarios where the machine is domain joined but the logins are almost always happening with local user accounts (using .\username).
+In multi domain environment, there are scenarios where users consistently login to workstations that are joined to a different domain than that of the logged in user. By default the domain that the workstation is joined to is listed as the default domain name and other domain users have to always provide the user name as _domain\\username_ to login correctly. Also there are scenarios where the machine is domain joined but the logins are almost always happening with local user accounts (using .\\username).
 
 ## Cause
 
@@ -41,7 +41,7 @@ To enable default domain for logon, follow these steps:
   > [!NOTE]
   > Use Group Policy Management console(GPMC.msc) to create a GPO and configure the settings at domain or OU level.
 
-The **Assign a default domain for logon** group policy specifies a default logon domain that may be different domain than the machine joined domain. You can enable this policy setting and add the preferred domain name so that the default logon domain name will be set to the specified domain that may not be the machine joined domain. If you enable this policy and set the domain name as a period (.), once the policy is applied to the machine, users will see a period (.) as their default domain and unless users specify a domainname\username to login, all users will be treated as local users. (.\username)
+The **Assign a default domain for logon** group policy specifies a default logon domain that may be different domain than the machine joined domain. You can enable this policy setting and add the preferred domain name so that the default logon domain name will be set to the specified domain that may not be the machine joined domain. If you enable this policy and set the domain name as a period (.), once the policy is applied to the machine, users will see a period (.) as their default domain and unless users specify a domainname\\username to login, all users will be treated as local users. (.\\username)
 
 > [!NOTE]
 > Requirements: This policy is applicable to Windows Vista or later.

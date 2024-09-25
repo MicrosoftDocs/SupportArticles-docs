@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dns, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # DNS: Scavenging: Records aren't deleted if scavenging manually disabled with DNSCMD
 
 This article provides a solution to an issue where you enable Scavenging on the Windows DNS Server to get rid of some old and stale records on the zone.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2791165
 
 ## Symptoms

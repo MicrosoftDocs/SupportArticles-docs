@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:applications, csstroubleshoot
+ms.custom: sap:System Performance\App, Process, Service Performance (slow, unresponsive), csstroubleshoot
 ---
 # ESENT Event ID 327 and 326 fill up the Application log
 

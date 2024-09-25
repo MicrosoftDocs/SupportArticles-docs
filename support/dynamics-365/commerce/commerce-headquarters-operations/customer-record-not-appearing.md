@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: rassadi, brstor
 ms.date: 09/01/2023
+ms.custom: sap:Customer accounts and loyalty\Issues with customer account in point of sale (POS)
 ---
 # Customer records don't appear in Commerce headquarters
 

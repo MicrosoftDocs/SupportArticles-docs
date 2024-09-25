@@ -1,20 +1,19 @@
 ---
 title: Configure an authoritative time
 description: Explains how to configure the Windows Time service in Windows Server. Provides information about troubleshooting and Windows Time service synchronization.
-ms.date: 12/26/2023
+ms.date: 09/06/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: medium
+ms.localizationpriority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-time-service, csstroubleshoot
+ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
 adobe-target: true
 ---
 # How to configure an authoritative time server in Windows Server
 
 This article describes how to configure the Windows Time service and troubleshoot when the Windows Time service doesn't work correctly.
 
-_Applies to:_ &nbsp; Windows Server 2012 Standard, Windows Server 2012 Essentials  
 _Original KB number:_ &nbsp; 816042
 
 To configure an internal time server to synchronize with an external time source, use the following method:

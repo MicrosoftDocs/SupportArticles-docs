@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: tdimli, ronsto, ravikiran.s, gipauli, warrenw
-ms.custom: sap:windows-tss, csstroubleshoot
+ms.custom: sap:Support Tools\Xray, csstroubleshoot
 ---
 # Identify known issues by using the xray feature of TSS
 

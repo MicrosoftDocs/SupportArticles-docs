@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Windows Firewall with Advanced Security (WFAS), csstroubleshoot
 ---
 # Error 0x000006D9 when you try to share a printer on a computer that is running Windows 7 or Windows Server 2008 R2
 

@@ -5,6 +5,7 @@ ms.date: 04/09/2012
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart
+ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ---
 # Troubleshoot HTTP 502.2 Bad Gateway error in CGI applications
 

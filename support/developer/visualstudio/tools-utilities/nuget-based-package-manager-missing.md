@@ -2,7 +2,7 @@
 title: NuGet-Based Package Manager is missing
 description: This article describes a problem where NuGet-Based Microsoft Package Manager 1.5 or later isn't installed on a computer, and provides a resolution.
 ms.date: 04/27/2020
-ms.custom: sap:Tools and utilities
+ms.custom: sap:Project - Build System\Build Issues
 ms.reviewer: riande
 ---
 # NuGet-Based Microsoft Package Manager is missing or out of date

@@ -5,6 +5,7 @@ ms.reviewer: sdas, v-zolu, mpanduranga
 ms.author: v-psuraty
 author: v-psuraty
 ms.date: 01/22/2024
+ms.custom: sap:Service Level Agreements\Unable to create a new SLA
 ---
 # "String or binary data would be truncated" error when activating an SLA
 

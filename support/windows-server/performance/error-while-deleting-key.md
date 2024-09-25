@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-parapa
-ms.custom: sap:slow-performance, csstroubleshoot
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
 ---
 # Can't delete certain registry keys and Error while deleting key occurs
 
 This article provides a resolution to solve the **Error while deleting key** error that occurs when trying to remove certain registry keys.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2021860
 
 ## Symptoms

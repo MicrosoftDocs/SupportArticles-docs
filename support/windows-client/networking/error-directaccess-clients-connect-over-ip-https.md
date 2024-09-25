@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: ajayps, kaushika
-ms.custom: sap:remote-access, csstroubleshoot
+ms.custom: sap:Networking\Remote Access , csstroubleshoot
 ---
 # DirectAccess clients can connect over Teredo but not through IP-HTTPS
 
 This article describes an issue that prevents DirectAccess clients from connecting by using IP-HTTPS even though they can connect over Teredo.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 2980660
 
 ## Symptoms

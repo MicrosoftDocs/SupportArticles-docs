@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, steved
-ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Windows NIC Teaming (Load Balance Failover), csstroubleshoot
 ---
 # Kernel event ID 2 is logged when the MSFT_NetLbfoTeamNic class is called in Windows Server 2012 R2
 
 This article provides a workaround for an issue that triggers kernel event ID 2 when the MSFT_NetLbfoTeamNic class is called in Windows Server 2012 R2.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3087042
 
 ## Symptoms

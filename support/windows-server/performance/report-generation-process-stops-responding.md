@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, gregue
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
+ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
 ---
 # The report generation process may stop responding when you run Perfmon.exe with the Active Directory Diagnostics template to generate a report on a domain controller
 
 This article provides help to fix an issue where the report generation process stops responding when you run Perfmon.exe with the Active Directory Diagnostics template to generate a report.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 971714
 
 ## Symptoms

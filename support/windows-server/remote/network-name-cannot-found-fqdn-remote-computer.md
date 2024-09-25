@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: markusr, kaushika
-ms.custom: sap:remote-desktop-sessions, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
 ---
 # Error when you use the fully qualified domain name to connect to a remote computer from a Windows Server based computer: The network name cannot be found
 
 This article describes an issue where you receive an error message when you try to connect to a remote computer by using an FQDN.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 875441
 
 ## Symptoms

@@ -7,13 +7,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, steved, cmyu, ssutari
-ms.custom: sap:wmi, csstroubleshoot
+ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
 # WMI-Activity Event 5858 logged frequently with ResultCode 0x80041032
 
 This article provides a resolution to solve the WMI-Activity event ID 5858 that's logged with ResultCode = 0x80041032 in Windows Server 2012 R2.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3124914
 
 ## Symptoms

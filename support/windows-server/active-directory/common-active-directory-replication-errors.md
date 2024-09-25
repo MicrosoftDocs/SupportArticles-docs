@@ -1,19 +1,19 @@
 ---
 title: Troubleshoot common AD replication errors
 description: Contains troubleshooting information to help you fix Active Directory replication errors.
-ms.date: 12/26/2023
+ms.date: 04/10/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, justintu
-ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Troubleshoot common Active Directory replication errors
 
 This article contains information and links to help you troubleshoot Active Directory Replication errors. It is intended to provide Active Directory administrators with a method to diagnose replication failures and to determine where those failures are occurring.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 3108513
 
 > [!NOTE]
@@ -48,7 +48,7 @@ To troubleshoot specific errors, refer to the following table.
 |8524|This is a catch-all error for all possible DNS failures that affect Active Directory on post-Windows Server 2003 SP1-based domain controllers.| [Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure](replication-error-8524.md) |
 |8614|Causes of this error (and for NTDS Replication Event 2042) include the following:<ul><li> The destination domain controller that is logging the 8614 error did not inbound-replicate a directory partition from one or more source domain controllers for Tombstone lifetime number of days.</li><li>System time on the destination domain controller moved, or jumped, Tombstone lifetime one or more days into the future after the last successful replication.</li></ul>| [Troubleshoot Active Directory replication error 8614](replication-error-8614.md) |
 |8545|This Active Directory replication error is logged when the source domain controller tries to send changes for a recently migrated object when the destination domain controller has the object present in a different partition.| [Active Directory replication error 8545: Replication update could not be applied](active-directory-replication-error-8545.md) |
-|5|This Active Directory replication error has multiple causes.| [Active Directory replication error 5 - Access is denied](replication-error-5.md) |
+|5|This Active Directory replication error has multiple causes.| [How to troubleshoot Active Directory replication error 5 in Windows Server: Access is denied](replications-fail-with-error-5.md) |
   
 ## Event IDs
 

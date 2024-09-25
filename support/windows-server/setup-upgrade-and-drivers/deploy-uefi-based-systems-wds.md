@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: scottmca, kaushika, scottmca
-ms.custom: sap:driver-installation-or-driver-update, csstroubleshoot
+ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
 ---
 # Windows Deployment Services (WDS) support for UEFI
 
 This article discusses the support for deploying to UEFI-based systems from Windows Deployment Services (WDS).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2938884
 
 ## More information

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Domain and forest trusts, csstroubleshoot
 ---
 # Error when you try to add a trusted domain user to a trusting domain in Windows Server 2003 or in Windows 2000: The server is not operational
 
 This article explains that when you try to add a trusted domain user to a trusting domain, you may receive an error message if the guest account on the trusted domain is turned on.
 
-_Applies to:_ &nbsp; Windows 10, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837328
 
 ## Symptoms

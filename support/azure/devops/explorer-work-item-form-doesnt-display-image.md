@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem that prevents in
 ms.date: 08/14/2020
 ms.custom: sap:Boards
 ms.service: azure-devops
-ms.subservice: ts-boards
 ---
 # Visual Studio Team Explorer work item form doesn't display inline images
 

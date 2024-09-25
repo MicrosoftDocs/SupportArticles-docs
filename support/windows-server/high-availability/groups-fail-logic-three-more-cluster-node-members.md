@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: stevemat, jeffwade, kaushika
-ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Root cause of an unexpected failover, csstroubleshoot
 ---
 # Failover behavior on clusters of three or more nodes
 
 This article documents the logic by which groups fail from one node to another when there are three or more cluster node members.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 299631
 
 ## Summary

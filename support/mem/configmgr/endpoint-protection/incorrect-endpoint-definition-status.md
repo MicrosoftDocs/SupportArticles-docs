@@ -3,6 +3,7 @@ title: Incorrect Endpoint Definition status
 description: Describes an issue in which the v_GS_AntimalwareHealthStatus view reports incorrect Endpoint Definition status in Configuration Manager.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Endpoint Protection\Antimalware Policies
 ---
 # v_GS_AntimalwareHealthStatus view reports incorrect Endpoint Definition status in Configuration Manager 2012
 

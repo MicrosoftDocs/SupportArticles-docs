@@ -1,9 +1,10 @@
 ---
 title: Use Default field option is unavailable for GL Account Description
 description: Describes that even though Microsoft Dynamics GP 9.0 lets you set a default value for the GL Account Description field, the Use Default field option is unavailable in Integration Manager. A service pack is now available to resolve this problem.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 04/22/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # The Use Default field option is unavailable for the GL Account Description field in Integration Manager
 

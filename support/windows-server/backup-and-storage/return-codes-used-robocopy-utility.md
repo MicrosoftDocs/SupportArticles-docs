@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
 ---
 # Return codes that are used by the Robocopy utility in Windows Server 2008 or Windows Server 2008 R2
 
 This article discusses the return codes that are used by the Robocopy utility in Windows Server 2008 or Windows Server 2008 R2.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954404
 
 ## Introduction

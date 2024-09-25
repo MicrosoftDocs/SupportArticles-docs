@@ -1,9 +1,10 @@
 ---
 title: A Get Change First operation on table SY Users MSTR failed accessing SQL data error when you start Microsoft Dynamics GP
 description: Describes an error message that you receive when you start Microsoft Dynamics GP or Microsoft Business Solutions - Great Plains 8.0. Provides a resolution.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
-ms.date: 04/22/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "A Get/Change First operation on table SY_Users_MSTR failed accessing SQL data" error when you start Microsoft Dynamics GP
 

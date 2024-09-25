@@ -7,11 +7,10 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # Known issues managing a Windows 10 Group Policy client in Windows Server 2012 R2
 
-_Applies to:_ &nbsp; Window 10 - all editions, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4015786
 
 ## Summary

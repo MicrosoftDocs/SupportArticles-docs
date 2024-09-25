@@ -2,7 +2,7 @@
 title: System administrators can't clear order holds because they aren't authorized
 description: System administrators aren't typically allowed to clear sales order holds.
 author: Henrikan
-ms.date: 04/11/2021
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: SalesTable
 audience: Application User
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: henrikan
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Sales order processing\Issues with sales order processing
 ---
 
 # System administrators can't clear order holds because they aren't authorized

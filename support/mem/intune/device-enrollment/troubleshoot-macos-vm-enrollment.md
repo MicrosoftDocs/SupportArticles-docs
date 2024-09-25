@@ -4,6 +4,7 @@ description: Troubleshooting guidance to help resolve errors when you enroll mac
 ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Enroll Devices - macOS\Advisory
 ---
 
 # Troubleshoot macOS virtual machine enrollment in Microsoft Intune

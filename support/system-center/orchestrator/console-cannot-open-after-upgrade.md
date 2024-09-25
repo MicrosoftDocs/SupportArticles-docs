@@ -1,19 +1,19 @@
 ---
 title: Orchestration console can't open after upgrade
-description: Fixes an issue that prevents the Orchestration web console from starting after you upgrade to System Center 2012 R2 Orchestrator.
-ms.date: 08/04/2020
+description: Fixes an issue that prevents the Orchestration web console from starting after you upgrade System Center Orchestrator.
+ms.date: 06/26/2024
 ms.reviewer: matthofa, dewitth
 ---
-# The Orchestration console can't be opened after upgrading to System Center 2012 R2 Orchestrator
+# The Orchestration console can't be opened after upgrading System Center Orchestrator
 
-This article helps you fix an issue where you can't open the Orchestration console after upgrading to Microsoft System Center 2012 R2 Orchestrator.
+This article helps you fix an issue where you can't open the Orchestration console after upgrading Microsoft System Center Orchestrator.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 Orchestrator, Microsoft System Center 2012 R2 Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2919041
 
 ## Symptoms
 
-After you upgrade to System Center 2012 R2 Orchestrator, you can no longer start the Orchestration web console. In this situation, you receive the following pop-up error messages in the browser:
+After you upgrade System Center Orchestrator, you can no longer start the Orchestration web console. In this situation, you receive the following pop-up error messages in the browser:
 
 > Error Executing the current operation  
 > [httpwebrequest_webexception_remoteserver]  
@@ -23,7 +23,7 @@ After you upgrade to System Center 2012 R2 Orchestrator, you can no longer start
 
 ## Cause
 
-This is a known problem in the Orchestrator 2012 R2 upgrade process.
+This is a known problem in the Orchestrator upgrade process.
 
 ## Resolution
 

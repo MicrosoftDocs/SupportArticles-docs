@@ -5,7 +5,7 @@ author: pijocoder
 ms.author: jopilov
 ms.reviewer: pijocoder
 ms.date: 05/05/2023
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ---
 
 # Troubleshoot slow performance or low memory issues caused by memory grants in SQL Server

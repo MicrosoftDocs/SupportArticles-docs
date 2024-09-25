@@ -1,7 +1,8 @@
 ---
 title: Troubleshoot scheduled backup job failures
 description: Discusses techniques for troubleshooting scheduled backup job failures in System Center 2012 Data Protection Manager and later versions.
-ms.date: 07/23/2020
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet
 ---
 # Troubleshoot scheduled backup job failures in Data Protection Manager
 

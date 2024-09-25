@@ -3,7 +3,7 @@ title: Troubleshoot when you cannot delete a Windows Autopilot deployment profil
 description: Describes an issue in which you can't delete a Windows Autopilot deployment profile in Microsoft Intune, and receive an error.
 ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Windows enrollment
+ms.custom: sap:Autopilot\Profile Assignment
 ms.reviewer: kaushika
 ---
 

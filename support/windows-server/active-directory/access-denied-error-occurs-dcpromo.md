@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, Arrenc
-ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
+ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
 # DCPROMO fails with error "Access is denied" if the user does the promotion isn't granted the "trusted for delegation" user right
 
 This article provides a solution to an Access is denied error that occurs with DCPROMO (Domain Controller Promoter).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 2002413
 
 ## Symptoms

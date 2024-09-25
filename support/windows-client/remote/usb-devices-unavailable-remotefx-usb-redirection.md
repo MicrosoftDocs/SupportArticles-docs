@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:redirection-not-printer, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Redirection (not printer), csstroubleshoot
 ---
 # Some USB devices are not available through RemoteFX USB redirection
 

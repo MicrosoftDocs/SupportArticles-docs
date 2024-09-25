@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ---
 # Not boot in Normal Mode - driver issue
 
 This article provides some information about Windows does not boot in Normal Mode due to a driver issue.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 555996
 
 This article was written by [`Nirmal Sharma`](https://mvp.microsoft.com/en-US/PublicProfile/33635), Microsoft MVP.

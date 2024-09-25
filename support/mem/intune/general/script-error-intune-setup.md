@@ -4,6 +4,7 @@ description: Fixes an issue in which you receive script error when you set up Mi
 ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 ---
 # Wizard generates a script error when you configure a Microsoft Intune subscription in Configuration Manager
 

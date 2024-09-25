@@ -4,6 +4,7 @@ description: This article explains how to configure compression and lists freque
 ms.date: 04/09/2012
 ms.reviewer: riande, johnhart, sudixi, v-jayaramanp
 ms.topic: troubleshooting
+ms.custom: sap:WWW Modules and Features\Static Compression
 ---
 
 # Troubleshooting IIS Compression issues in IIS 6 or IIS 7.x

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, mghazai
-ms.custom: sap:remoteapp-applications, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\RemoteApp applications, csstroubleshoot
 ---
 # An application does not start in a Windows Server Terminal Services RemoteApp session
 
 This article provides workarounds for an issue where you can't run an application that relies on the Explorer.exe file in a Terminal Services RemoteApp session.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951048
 
 ## Symptoms

@@ -4,9 +4,10 @@ description: This article contains the release history for SQL Server 2017 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 02/15/2024
-appliesto: SQL Server 2017
-ms.custom: linux-related-content
+ms.date: 09/10/2024
+appliesto:
+  - SQL Server 2017
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-related-content
 ---
 # <a id="release-history"></a> Release history for SQL Server 2017 on Linux
 
@@ -17,6 +18,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 
 | Release                    | Version       | Release date |
 | -------------------------- | ------------- | ------------ |
+| [CU 31 GDR 3](#CU31-GDR3)  | 14.0.3475.1   | 2024-09-10   |
 | [CU 31 GDR 2](#CU31-GDR2)  | 14.0.3465.1   | 2023-10-10   |
 | [CU 31 GDR](#CU31-GDR)     | 14.0.3460.9   | 2023-02-14   |
 | [CU 31](#CU31)             | 14.0.3456.2   | 2022-09-20   |
@@ -59,6 +61,25 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 | [CU 1](#CU1)               | 14.0.3006.16  | 2017-10-24   |
 | [GA](#GA)                  | 14.0.1000.169 | 2017-10-02   |
 
+## <a id="CU31-GDR3"></a> CU 31 GDR 3 (September 2024)
+
+This is the Cumulative Update 31-GDR3 (CU 31 GDR 3) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. This is a security update that also includes the previously released CU (CU 31). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3475.1. For information about the fixes and improvements in this release, see [KB 5042215](https://support.microsoft.com/help/5042215).
+
+> [!IMPORTANT]  
+> This is the final cumulative update for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)].
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 8.x RPM packages** | 14.0.3475.1-4 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3475.1-4.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3475.1-4.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3475.1-4.x86_64.rpm) |
+| **SLES 12 RPM packages** | 14.0.3475.1-4 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3475.1-4.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3475.1-4.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3475.1-4.x86_64.rpm) |
+| **Ubuntu 18.04 Debian packages** | 14.0.3475.1-4 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3475.1-4_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3475.1-4_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3475.1-4_amd64.deb) |
+
+Go back to the [release history](#release-history).
+
 ## <a id="CU31-GDR2"></a> CU 31 GDR 2 (October 2023)
 
 This is the Cumulative Update 31-GDR2 (CU 31 GDR 2) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. This is a security update that also includes the previously released CU (CU 31). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3465.1. For information about the fixes and improvements in this release, see [KB 5029376](https://support.microsoft.com/help/5029376).
@@ -72,9 +93,9 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3465.1-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3465.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3465.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3465.1-1.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3465.1-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3465.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3465.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3465.1-1.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3465.1-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3465.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3465.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3465.1-1.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3465.1-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3465.1-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3465.1-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3465.1-1_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3465.1-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3465.1-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3465.1-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3465.1-1_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
@@ -91,15 +112,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3460.9-3 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3460.9-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3460.9-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3460.9-3.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3460.9-3 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3460.9-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3460.9-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3460.9-3.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3460.9-3 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3460.9-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3460.9-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3460.9-3.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3460.9-3 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3460.9-3_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3460.9-3_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3460.9-3_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3460.9-3 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3460.9-3_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3460.9-3_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3460.9-3_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU31"></a> CU 31 (September 2022)
 
-This is the Cumulative Update 31 (CU 31) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3456.2. For information about the fixes and improvements in this release, see [KB 5016884](https://support.microsoft.com/help/5016884).
+This is the Cumulative Update 31 (CU 31) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3456.2. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate31.md).
 
 > [!IMPORTANT]  
 > This is the final cumulative update for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)].
@@ -110,15 +131,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3456.2-3 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3456.2-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3456.2-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3456.2-3.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3456.2-3 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3456.2-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3456.2-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3456.2-3.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3456.2-3 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3456.2-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3456.2-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3456.2-3.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3456.2-3 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3456.2-3_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3456.2-3_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3456.2-3_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3456.2-3 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3456.2-3_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3456.2-3_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3456.2-3_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU30"></a> CU 30 (July 2022)
 
-This is the Cumulative Update 30 (CU 30) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3451.2. For information about the fixes and improvements in this release, see [KB 5013756](https://support.microsoft.com/help/5013756).
+This is the Cumulative Update 30 (CU 30) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3451.2. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate30.md).
 
 ### Package details
 
@@ -126,9 +147,9 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3451.2-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3451.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3451.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3451.2-1.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3451.2-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3451.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3451.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3451.2-1.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3451.2-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3451.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3451.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3451.2-1.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3451.2-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3451.2-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3451.2-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3451.2-1_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3451.2-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3451.2-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3451.2-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3451.2-1_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
@@ -142,15 +163,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3445.2-4 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3445.2-4.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3445.2-4.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3445.2-4.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3445.2-4 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3445.2-4.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3445.2-4.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3445.2-4.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3445.2-4 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3445.2-4.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3445.2-4.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3445.2-4.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3445.2-4 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3445.2-4_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3445.2-4_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3445.2-4_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3445.2-4 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3445.2-4_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3445.2-4_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3445.2-4_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU29"></a> CU 29 (March 2022)
 
-This is the Cumulative Update 29 (CU 29) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3436.1. For information about the fixes and improvements in this release, see [KB 5010786](https://support.microsoft.com/help/5010786).
+This is the Cumulative Update 29 (CU 29) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3436.1. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate29.md).
 
 ### Package details
 
@@ -158,15 +179,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3436.1-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3436.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3436.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3436.1-1.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3436.1-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3436.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3436.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3436.1-1.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3436.1-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3436.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3436.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3436.1-1.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3436.1-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3436.1-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3436.1-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3436.1-1_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3436.1-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3436.1-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3436.1-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3436.1-1_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU28"></a> CU 28 (January 2022)
 
-This is the Cumulative Update 28 (CU 28) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3430.2. For information about the fixes and improvements in this release, see [KB 5008084](https://support.microsoft.com/help/5008084).
+This is the Cumulative Update 28 (CU 28) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3430.2. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate28.md).
 
 ### Package details
 
@@ -174,15 +195,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3430.2-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3430.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3430.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3430.2-1.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3430.2-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3430.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3430.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3430.2-1.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3430.2-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3430.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3430.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3430.2-1.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3430.2-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3430.2-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3430.2-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3430.2-1_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3430.2-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3430.2-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3430.2-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3430.2-1_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU27"></a> CU 27 (October 2021)
 
-This is the Cumulative Update 27 (CU 27) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3421.10. For information about the fixes and improvements in this release, see [KB 5006944](https://support.microsoft.com/help/5006944).
+This is the Cumulative Update 27 (CU 27) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3421.10. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate27.md).
 
 ### Package details
 
@@ -190,15 +211,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3421.10-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3421.10-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3421.10-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3421.10-2.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3421.10-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3421.10-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3421.10-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3421.10-2.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3421.10-2 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3421.10-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3421.10-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3421.10-2.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3421.10-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3421.10-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3421.10-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3421.10-2_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3421.10-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3421.10-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3421.10-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3421.10-2_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU26"></a> CU 26 (September 2021)
 
-This is the Cumulative Update 26 (CU 26) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3411.3. For information about the fixes and improvements in this release, see [KB 5005226](https://support.microsoft.com/help/5005226).
+This is the Cumulative Update 26 (CU 26) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3411.3. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate26.md).
 
 ### Package details
 
@@ -206,15 +227,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3411.3-16 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3411.3-16.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3411.3-16.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3411.3-16.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3411.3-16 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3411.3-16.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3411.3-16.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3411.3-16.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3411.3-16 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3411.3-16.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3411.3-16.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3411.3-16.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3411.3-16 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3411.3-16_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3411.3-16_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3411.3-16_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3411.3-16 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3411.3-16_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3411.3-16_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3411.3-16_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU25"></a> CU 25 (July 2021)
 
-This is the Cumulative Update 25 (CU 25) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3401.7. For information about the fixes and improvements in this release, see [KB 5003830](https://support.microsoft.com/help/5003830).
+This is the Cumulative Update 25 (CU 25) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3401.7. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate25.md).
 
 ### Package details
 
@@ -222,15 +243,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3401.7-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3401.7-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3401.7-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3401.7-2.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3401.7-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3401.7-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3401.7-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3401.7-2.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3401.7-2 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3401.7-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3401.7-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3401.7-2.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3401.7-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3401.7-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3401.7-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3401.7-2_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3401.7-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3401.7-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3401.7-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3401.7-2_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU24"></a> CU 24 (May 2021)
 
-This is the Cumulative Update 24 (CU 24) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3391.2. For information about the fixes and improvements in this release, see [KB 5001228](https://support.microsoft.com/help/5001228).
+This is the Cumulative Update 24 (CU 24) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3391.2. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate24.md).
 
 ### Package details
 
@@ -238,15 +259,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3391.2-12 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3391.2-12.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3391.2-12.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3391.2-12.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3391.2-12 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3391.2-12.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3391.2-12.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3391.2-12.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3391.2-12 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3391.2-12.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3391.2-12.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3391.2-12.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3391.2-12 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3391.2-12_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3391.2-12_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3391.2-12_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3391.2-12 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3391.2-12_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3391.2-12_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3391.2-12_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU23"></a> CU 23 (February 2021)
 
-This is the Cumulative Update 23 (CU 23) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3381.3. For information about the fixes and improvements in this release, see [KB 5000685](https://support.microsoft.com/help/5000685).
+This is the Cumulative Update 23 (CU 23) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3381.3. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate23.md).
 
 ### Package details
 
@@ -254,9 +275,9 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3381.3-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3381.3-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3381.3-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3381.3-2.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3381.3-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3381.3-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3381.3-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3381.3-2.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3381.3-2 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3381.3-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3381.3-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3381.3-2.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3381.3-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3381.3-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3381.3-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3381.3-2_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3381.3-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3381.3-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3381.3-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3381.3-2_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
@@ -270,9 +291,9 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3370.1-18 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3370.1-18.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3370.1-18.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3370.1-18.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3370.1-18 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3370.1-18.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3370.1-18.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3370.1-18.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3370.1-18 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3370.1-18.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3370.1-18.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3370.1-18.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3370.1-18 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3370.1-18_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3370.1-18_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3370.1-18_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3370.1-18 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3370.1-18_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3370.1-18_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3370.1-18_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
@@ -294,7 +315,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU22"></a> CU 22 (September 2020)
 
-This is the Cumulative Update 22 (CU 22) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3356.20. For information about the fixes and improvements in this release, see [KB 4577467](https://support.microsoft.com/help/4577467).
+This is the Cumulative Update 22 (CU 22) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3356.20. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate22.md).
 
 ### Package details
 
@@ -302,15 +323,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3356.20-23 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3356.20-23.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3356.20-23.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3356.20-23.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3356.20-23 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3356.20-23.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3356.20-23.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3356.20-23.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3356.20-23 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3356.20-23.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3356.20-23.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3356.20-23.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3356.20-23 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3356.20-23_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3356.20-23_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3356.20-23_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3356.20-23 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3356.20-23_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3356.20-23_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3356.20-23_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU21"></a> CU 21 (July 2020)
 
-This is the Cumulative Update 21 (CU 21) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3335.7. For information about the fixes and improvements in this release, see [KB 4557397](https://support.microsoft.com/help/4557397).
+This is the Cumulative Update 21 (CU 21) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3335.7. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate21.md).
 
 ### Package details
 
@@ -318,15 +339,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3335.7-17 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3335.7-17.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3335.7-17.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3335.7-17.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3335.7-17 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3335.7-17.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3335.7-17.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3335.7-17.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3335.7-17 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3335.7-17.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3335.7-17.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3335.7-17.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3335.7-17 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3335.7-17_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3335.7-17_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3335.7-17_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3335.7-17 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3335.7-17_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3335.7-17_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3335.7-17_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU20"></a> CU 20 (April 2020)
 
-This is the Cumulative Update 20 (CU 20) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3294.2. For information about the fixes and improvements in this release, see [KB 4541283](https://support.microsoft.com/help/4541283).
+This is the Cumulative Update 20 (CU 20) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3294.2. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate20.md).
 
 > [!NOTE]  
 > **Ubuntu 18.04** and **RHEL 8** are now supported on [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] starting with CU 20.
@@ -341,15 +362,15 @@ For manual or offline package installations, you can download the RPM and Debian
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3294.2-27 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3294.2-27.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3294.2-27.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3294.2-27.x86_64.rpm) |
+| **RHEL 8.x RPM packages**<br /><br />(Get RPM packages for [RHEL 7.x](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3294.2-27 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3294.2-27.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3294.2-27.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3294.2-27.x86_64.rpm) |
 | **SLES 12 RPM packages** | 14.0.3294.2-27 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3294.2-27.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3294.2-27.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3294.2-27.x86_64.rpm) |
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3294.2-27 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3294.2-27_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3294.2-27_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3294.2-27_amd64.deb) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3294.2-27 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3294.2-27_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3294.2-27_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3294.2-27_amd64.deb) |
 
 Go back to the [release history](#release-history).
 
 ## <a id="CU19"></a> CU 19 (February 2020)
 
-This is the Cumulative Update 19 (CU 19) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3281.6. For information about the fixes and improvements in this release, see [KB 4535007](https://support.microsoft.com/help/4535007).
+This is the Cumulative Update 19 (CU 19) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3281.6. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate19.md).
 
 ### Package details
 
@@ -365,7 +386,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU18"></a> CU 18 (December 2019)
 
-This is the Cumulative Update 18 (CU 18) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3257.3. For information about the fixes and improvements in this release, see [KB 4527377](https://support.microsoft.com/help/4527377).
+This is the Cumulative Update 18 (CU 18) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3257.3. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate18.md).
 
 ### Added support
 
@@ -374,25 +395,25 @@ This is the Cumulative Update 18 (CU 18) release of [!INCLUDE [sql-server-2017](
 
 ### Remarks
 
-[!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] containers now have a new tagging pattern as described below with examples.
+[!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] containers now have a new tagging pattern as described in the following examples.
 
 - `mcr.microsoft.com/mssql/server:<SQL Server Version>-<update>-<Linux Distribution>-<Linux Distribution Version>`
 
-  This will pull the container image with the combination described in the tag.
+  This command pulls the container image with the combination described in the tag.
 
 - `mcr.microsoft.com/mssql/server:<SQL Server Version>-latest`
 
-  This will pull the latest [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)] version on the latest supported Ubuntu version.
+  This command pulls the latest [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)] version on the latest supported Ubuntu version.
 
 #### Examples
 
 - `mcr.microsoft.com/mssql/server:2017-CU18-ubuntu-16.04`
 
-  This will pull [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] CU 18 based on the Ubuntu 16.04 container.
+  This command pulls [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] CU 18 based on the Ubuntu 16.04 container.
 
 - `mcr.microsoft.com/mssql/server:2017-latest`
 
-  This will pull the latest [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] version (CU 18 as the time of this writing) based on the %%LATESTUBUNTU%% container.
+  This command pulls the latest [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] version (CU 18 as the time of this writing) based on the %%LATESTUBUNTU%% container.
 
 > [!NOTE]
 >  
@@ -412,7 +433,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU17"></a> CU 17 (October 2019)
 
-This is the Cumulative Update 17 (CU 17) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3238.1. For information about the fixes and improvements in this release, see [KB 4515579](https://support.microsoft.com/help/4515579).
+This is the Cumulative Update 17 (CU 17) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3238.1. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate17.md).
 
 ### Package details
 
@@ -428,7 +449,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU16"></a> CU 16 (August 2019)
 
-This is the Cumulative Update 16 (CU 16) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3223.3. For information about the fixes and improvements in this release, see [KB 4508218](https://support.microsoft.com/help/4508218).
+This is the Cumulative Update 16 (CU 16) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3223.3. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate16.md).
 
 ### What's new
 
@@ -466,7 +487,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU15"></a> CU 15 (May 2019)
 
-This is the Cumulative Update 15 (CU 15) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3162.1. For information about the fixes and improvements in this release, see [KB 4498951](https://support.microsoft.com/help/4498951).
+This is the Cumulative Update 15 (CU 15) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3162.1. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate15.md).
 
 ### Package details
 
@@ -482,7 +503,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU14"></a> CU 14 (March 2019)
 
-This is the Cumulative Update 14 (CU 14) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3076.1. For information about the fixes and improvements in this release, see [KB 4484710](https://support.microsoft.com/help/4484710).
+This is the Cumulative Update 14 (CU 14) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3076.1. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate14.md).
 
 ### Package details
 
@@ -498,7 +519,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU13"></a> CU 13 (December 2018)
 
-This is the Cumulative Update 13 (CU 13) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3048.4. For information about the fixes and improvements in this release, see [KB 4466404](https://support.microsoft.com/help/4466404).
+This is the Cumulative Update 13 (CU 13) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3048.4. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate13.md).
 
 ### Package details
 
@@ -514,7 +535,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU12"></a> CU 12 (October 2018)
 
-This is the Cumulative Update 12 (CU 12) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3045.24. For information about the fixes and improvements in this release, see [KB 4464082](https://support.microsoft.com/help/4464082).
+This is the Cumulative Update 12 (CU 12) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3045.24. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate12.md).
 
 ### Package details
 
@@ -530,7 +551,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU11"></a> CU 11 (September 2018)
 
-This is the Cumulative Update 11 (CU 11) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3038.14. For information about the fixes and improvements in this release, see [KB 4462262](https://support.microsoft.com/help/4462262).
+This is the Cumulative Update 11 (CU 11) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3038.14. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate11.md).
 
 ### Package details
 
@@ -546,7 +567,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU10"></a> CU 10 (August 2018)
 
-This is the Cumulative Update 10 (CU 10) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3037.1. For information about the fixes and improvements in this release, see [KB 4342123](https://support.microsoft.com/help/4342123).
+This is the Cumulative Update 10 (CU 10) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3037.1. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate10.md).
 
 ### Package details
 
@@ -594,7 +615,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU9"></a> CU 9 (July 2018)
 
-This is the Cumulative Update 9 (CU 9) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3030.27. For information about the fixes and improvements in this release, see [KB 4341265](https://support.microsoft.com/help/4341265).
+This is the Cumulative Update 9 (CU 9) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3030.27. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate9.md).
 
 ### Package details
 
@@ -610,7 +631,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU8"></a> CU 8 (June 2018)
 
-This is the Cumulative Update 8 (CU 8) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3029.16. For information about the fixes and improvements in this release, see [KB 4338363](https://support.microsoft.com/help/4338363).
+This is the Cumulative Update 8 (CU 8) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3029.16. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate8.md).
 
 ### Package details
 
@@ -626,7 +647,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU7"></a> CU 7 (May 2018)
 
-This is the Cumulative Update 7 (CU 7) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3026.27. For information about the fixes and improvements in this release, see [KB 4229789](https://support.microsoft.com/help/4229789).
+This is the Cumulative Update 7 (CU 7) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3026.27. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate7.md).
 
 ### Package details
 
@@ -642,7 +663,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU6"></a> CU 6 (April 2018)
 
-This is the Cumulative Update 6 (CU 6) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3025.34. For information about the fixes and improvements in this release, see [KB 4101464](https://support.microsoft.com/help/4101464).
+This is the Cumulative Update 6 (CU 6) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3025.34. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate6.md).
 
 ### Package details
 
@@ -658,7 +679,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU5"></a> CU 5 (March 2018)
 
-This is the Cumulative Update 5 (CU 5) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3023.8. For information about the fixes and improvements in this release, see [KB 4092643](https://support.microsoft.com/help/4092643).
+This is the Cumulative Update 5 (CU 5) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3023.8. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate5.md).
 
 ### Known upgrade issue
 
@@ -692,7 +713,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU4"></a> CU 4 (February 2018)
 
-This is the Cumulative Update 4 (CU 4) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3022.28. For information about the fixes and improvements in this release, see [KB 4056498](https://support.microsoft.com/help/4056498).
+This is the Cumulative Update 4 (CU 4) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3022.28. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate4.md).
 
 > [!NOTE]  
 > As of CU 4, [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)] Agent is no longer installed as a separate package. It's installed with the Database Engine package and must be enabled to use.
@@ -711,7 +732,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU3"></a> CU 3 (January 2018)
 
-This is the Cumulative Update 3 (CU 3) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3015.40. For information about the fixes and improvements in this release, see [KB 4052987](https://support.microsoft.com/help/4052987).
+This is the Cumulative Update 3 (CU 3) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3015.40. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate3.md).
 
 ### Package details
 
@@ -745,7 +766,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU2"></a> CU 2 (November 2017)
 
-This is the Cumulative Update 2 (CU 2) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3008.27. For information about the fixes and improvements in this release, see [KB 4052574](https://support.microsoft.com/help/4052574).
+This is the Cumulative Update 2 (CU 2) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3008.27. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate2.md).
 
 ### Package details
 
@@ -761,7 +782,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU1"></a> CU 1 (October 2017)
 
-This is the Cumulative Update 1 (CU 1) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3006.16. For information about the fixes and improvements in this release, see [KB 4038634](https://support.microsoft.com/help/4038634).
+This is the Cumulative Update 1 (CU 1) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3006.16. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/cumulativeupdate1.md).
 
 ### Package details
 

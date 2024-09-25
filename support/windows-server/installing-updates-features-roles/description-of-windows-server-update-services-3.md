@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, edwardr, danalb, mandarg, oscarlee, davidhen, sudheer, sivsha, bmoore, cecils
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
 ---
 # Description of the Windows Server Update Services 3.0 Service Pack 1 package
 
 This article provides some information about Windows Server Update Services 3.0 Service Pack 1 package.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 948014
 
 ## Introduction

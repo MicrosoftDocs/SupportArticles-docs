@@ -2,7 +2,7 @@
 title: Windows Installer may display inaccurate progress
 description: This article describes that the percentage, progress bar, and time remaining during an install or uninstall is not always accurate.
 ms.date: 01/04/2021
-ms.custom: sap:Installation
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ms.reviewer: 
 ms.topic: article
 ---

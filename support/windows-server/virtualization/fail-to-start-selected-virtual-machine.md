@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubleshoot
 ---
 # An error occurred while attempting to start the selected virtual machine
 
 This article provides a solution to an error that occurs while you try to  start the selected virtual machine.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000800
 
 ## Symptoms

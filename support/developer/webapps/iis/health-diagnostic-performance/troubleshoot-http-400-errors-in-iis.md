@@ -5,6 +5,7 @@ ms.date: 11/27/2012
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande, mlaing
+ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ---
 # Troubleshooting HTTP 400 errors in IIS
 

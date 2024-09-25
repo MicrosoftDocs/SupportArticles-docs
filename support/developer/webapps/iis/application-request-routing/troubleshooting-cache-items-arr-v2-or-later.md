@@ -4,6 +4,7 @@ description: This article provides resolutions for troubleshooting cache items A
 ms.date: 04/09/2012
 ms.reviewer: apurvajo, chihshen, v-jayaramanp
 ms.topic: troubleshooting
+ms.custom: sap:Application Request and Routing (ARR)\Disk cache
 ---
 
 # Troubleshooting cache items in ARR version 2.0 or later

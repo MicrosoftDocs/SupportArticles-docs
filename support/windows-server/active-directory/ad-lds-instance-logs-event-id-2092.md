@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, akhleshs, tspring, lindakup, justintu
-ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroubleshoot
 ---
 # AD LDS instance logs Event ID 2092 in Windows Server
 
 This article provides a solution to an issue that occurs when you reboot an AD LDS server that holds FSMO roles or restart an AD LDS instance on that server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2547569
 
 ## Symptoms

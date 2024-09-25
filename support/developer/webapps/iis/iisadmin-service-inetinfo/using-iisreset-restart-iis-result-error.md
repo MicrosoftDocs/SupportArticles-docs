@@ -2,8 +2,7 @@
 title: Error when you use IISReset.exe to restart IIS
 description: This article provides resolutions for the error that occurs when you use the  IISReset.exe to restart IIS service.
 ms.date: 12/11/2020
-ms.custom: sap:IISAdmin Service and Inetinfo Process Operation
-ms.subservice: iisadmin-service-inetinfo
+ms.custom: sap:WWW Administration and Management\Legacy IIS administration scripts
 ---
 # Using IISReset.exe to restart IIS results in an error message
 

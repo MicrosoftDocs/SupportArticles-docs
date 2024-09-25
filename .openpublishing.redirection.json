@@ -1,6 +1,46 @@
 {
   "redirections": [
     {
+      "source_path": "support/power-platform/power-automate/desktop-flows/desktop-flow-runs-not-show-monitor-runs.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/desktop-flow-runs-missing-from-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/configure-isa-server-computer.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/maxconcurrentapi-overview-identify-and-remediate-mca-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/troubleshooting-system-shutdown-is-slow-scenario.md",
+      "redirect_url": "/troubleshoot/windows-server/performance/system-shutdown-is-slow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/give-users-access-group-policy-objects.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/periodic-smbclient-event-id-30818.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance#windows-server-2012-r2-periodically-logs-SMBClient-event-id-30818",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/event-1-smb-witness-client-initialization.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance#when-you-install-windows-server-windows-logs-event-id-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/delete-active-connections-from-local-computer.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance#disconnecting-all-shared-resources-from-local-computer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/support-policy-for-dns-client-side-caching.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-dns-guidance#support-policy-for-dns-client-side-caching-on-dns-clients",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/value-does-not-fall-within-the-expected-range.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/value-does-not-fall-within-the-expected-range",
       "redirect_document_id": false
@@ -1607,7 +1647,7 @@
     },
     {
       "source_path": "support/azure/virtual-machines/index.md",
-      "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/welcome-virtual-machines",
       "redirect_document_id": false
     },
     {
@@ -3358,7 +3398,7 @@
     {
       "source_path": "support/azure/azure-monitor/index.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/virtual-machines/rdp.md",
@@ -6871,6 +6911,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/virtual-desktop/windows-virtual-desktop-blank-screen.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-virtual-desktop-blank-screen",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-desktop/welcome-virtual-desktop.yml",
+      "redirect_url": "/azure/virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss",
       "redirect_document_id": true
@@ -7703,7 +7753,7 @@
     {
       "source_path": "support/windows-server/deployment/cannot-install-windows-server-2019-high-processor-count.md",
       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/cannot-install-windows-server-2019-high-processor-count",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/deployment/cannot-install-dotnet-framework-3dot5-oem.md",
@@ -8063,11 +8113,6 @@
     {
       "source_path": "support/windows-server/deployment/error-0xc004f06c-activate-windows.md",
       "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-0xc004f06c-activate-windows",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "support/windows-server/deployment/error-2359302-installing-windows-updates.md",
-      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-2359302-installing-windows-updates",
       "redirect_document_id": true
     },
     {
@@ -9263,7 +9308,7 @@
     {
       "source_path": "support/windows-server/identity/replications-fail-with-error-5.md",
       "redirect_url": "/troubleshoot/windows-server/active-directory/replications-fail-with-error-5",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/identity/reset-directory-services-restore-mode-admin-pwd.md",
@@ -9417,7 +9462,7 @@
     },
     {
       "source_path": "support/windows-server/identity/troubleshoot-adreplication-guidance.md",
-      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-adreplication-guidance",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance",
       "redirect_document_id": true
     },
     {
@@ -9621,9 +9666,9 @@
       "redirect_document_id": false
     },
     {
-       "source_path": "support/azure/azure-kubernetes/operationisnotallowed.md",
-       "redirect_url": "/troubleshoot/azure/azure-kubernetes/operationnotallowed",
-       "redirect_document_id": true
+      "source_path": "support/azure/azure-kubernetes/operationisnotallowed.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/operationnotallowed",
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/windows-security/code-31-device-manager-usbccid-smartcard-reader-problem.md",
@@ -9746,8 +9791,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/windows-server/active-directory/troubleshoot-adreplication-guidance.md",
-      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance",
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-adreplication-guidance",
       "redirect_document_id": true
     },
     {
@@ -9778,11 +9823,6 @@
     {
       "source_path": "support/windows-server/windows-security/decommission-enterprise-certification-authority-and-remove-objects.md",
       "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "support/windows-server/windows-security/description-support-suite-b-cryptographic-ipsec.md",
-      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/description-support-suite-b-cryptographic-ipsec",
       "redirect_document_id": true
     },
     {
@@ -10124,6 +10164,1766 @@
       "source_path": "support/windows-server/networking/event-id-7023-is-logged.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-7023-is-logged",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-solve-alignment-issues-in-1099-reports.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/execution-of-user-code-in-net-framework-is-disabled-error-after-restoring-sql-database.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/unknown-error-when-sending-email.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/not-allowed-delete-unposted-documents.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/errors-when-you-run-an-integration.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/available-packages-integration-manager.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/print-a-purchase-order-from-history.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/submit-1099-misc-forms-electronically.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-when-sending-a-report-a-dot-pdf-file.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/execute-permission-was-denied-on-the-object-when-signing-in.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/you-do-not-have-security-privileges.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/input-string-was-not-in-correct-format-error-when-processing-message-in-econnect.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/repeatedly-prompted-for-exchange-login-id-and-password-when-emailing.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/unhandled-object-exception-errors.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/not-privileged-to-run-report.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-message-perform-bulk-copy-process.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/common-errors-and-troubleshooting-steps-for-network-connectivity-issues.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/cash-receipt-batches-post-as-individual-deposits.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/checks-cannot-be-calculated.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/changes-a-modified-report-do-not-print.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-registering-table.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/incompatible-dynamics-dot-dic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/enter-an-australian-domestic-telephone-no-dot.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-sutafuta-calculates.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/run-dynamics-gp-64-bit-os.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-install-microsoft-dynamics-gp-2015-using-command-line.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-obtain-the-database-schemas.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-was-encountered-while-exporting-data-when-exporting-store.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-configure-store-operations-quickbooks-integration.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/dynamics-gp-crashes-or-closes-when-emailing.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/microsoft-dynamics-gp-does-not-respond.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/dynamics-sql-database-has-not-been-setup-for-this-version-error-when-starting-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/consolidate-companies-that-have-different-year-ends-produce-wrong-results.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-set-up-pto-manager-to-accrue-specific-number-of-hours.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/new-exclude-inactive-accounts-feature-not-work.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/upgrade-integrations-for-great-plains-integration-manager.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/gps-error-54-sql-error-2601-or-odbc-error-2300.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/dynamics-gp-support-virtual-environment.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-0xc0000005-when-you-start-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-create-calculated-field-in-report-writer-to-print-extender-fields.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/human-resources-is-registered.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/direct-deposit-ach-file-not-updated-void-payroll-check.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/frequently-asked-questions-about-extender-objects.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-electronically-submit-the-vat-return-or-vat-daybook-report.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/product-6499-does-not-support-upgrading.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/microsoft-dynamics-rms-store-operations-sql-baseline-information-collector.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/resynchronize-audit-trail-codes.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/this-module-is-not-registered-error-in-hr-training-or-license-window.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/check-register-does-not-print-in-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/cpp-and-ei-taxes-not-stopping-at-yearly-maximum-in-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/edit-attendance-transaction-in-human-resources.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/a-pdf-hangs-when-sending-emails.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/documentation-for-workflow-2-0.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/pdf-attachement-is-sent-as-dat-file-or-missing-if-using-dexterity-custom-code-to-send-email.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/you-must-activate-email-functionality.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-enable-an-ingenico-i6550-device.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/cannot-use-payroll-clerk-security-to-calculate-payroll-checks.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/set-up-a-health-savings-account.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/aca-blog-links-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/information-that-management-reporter-client-diagnostic-collects.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-modify-pop-purchase-order-blank-to-include-information-from-extender.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/dex-procedure-to-create-hr-attendance-transactions.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/dynamics-gp-crashes-when-emailing-with-mapi-after-updating-office.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-dictionary-dynamics-reports-dic-needs-upgraded.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/fail-to-install-web-services-for-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/information-about-the-check-amount-to-words-tool.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/new-feature-documentation-for-microsoft-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/right-margin-cut-off-in-emails.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/user-cannot-tab-between-fields.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/you-do-not-have-security-privileges-to-open-this-window.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/benefit-setup-based-on-deductions-calculates-incorrectly.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/changes-occur-in-the-luxury-automobile-tax-limits-for-depreciation-schedules.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/fail-to-save-future-effective-record.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/human-resource-and-payroll-workflow-setup.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/management-reporter-2012-exception-call-stack-diagnostic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/class-id-not-updated-between-human-resources-and-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/check-payroll-extensions-version.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/time-management-app-hr-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/a-few-employees-set-up-for-direct-deposit-receive-a-check.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/box-84-not-available-on-t4-in-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/description-of-management-reporter-base-collector-diagnostic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/get-change-operation-on-table-mc-currency-account-mstr-failed-accessing-sql-data.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/correct-negative-fmla-hours.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/management-reporter-2012-wcf-diagnostic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/new-feature-documentation.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/getchange-operation-on-table-cmtransactioneft-table-failed-accessing-sql-data.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/slow-performance-when-selecting-the-button.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/stop-audit-trail-triggers-in-the-test-company-from-updating-live-audit-database.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/unwanted-data-in-project-accounting-after-starting-over.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/use-the-new-retrieveglobals9-dot-dll-file.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/life-insurance-calculate-for-life-insurance-enrollment.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/7973-error-when-importing-items-from-headquarters.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/a-newer-version-of-the-hunman-resources-app-has-been-found-error-when-starting.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/reprinted-employee-id-appears-in-payroll-tables.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/credit-card-number-field-removed-smartlist-advanced-lookups.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/duplicate-entries-tracked-when-signing-out-of-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/enable-email-functionality-on-all-formats.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/fail-to-view-home-page.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/human-resources-reports-for-osha-300-300a-301-are-wrong.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/management-reporter-2012-company-code-update-diagnostic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/problems-integrate-blanket-purchase-order-transaction-type.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/pte-transactions-do-not-flow-pa-tables.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/the-table-is-not-updated-the-values.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/add-remove-features-window-blank.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-could-not-determine-scrolling-window.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/microsoft-dynamics-rms-diagnostic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/performance-issue-with-checkbook-register-inquiry-window.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/no-option-to-email-rm-statement-templates.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/safepay-file-not-pick-up-reissued-check-from-payables-management-or-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/features-in-dynamics-gp-specific-to-argentina.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/modify-employer-number-on-releve-1-form-for-quebec.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/frequently-asked-questions-about-file-exchange-system.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/frequently-asked-questions-about-file-exchange-system",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/maxitemsinobjectgraph-error-in-management-reporter-ax-2012-ddm-task.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/maxitemsinobjectgraph-error-in-management-reporter-ax-2012-ddm-task",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/removal-of-dynamics-ax-2012-legacy-data-provider-for-management-reporter-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/removal-of-dynamics-ax-2012-legacy-data-provider-for-management-reporter-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/management-reporter-2012-ax-2012-user-validation-diagnostic.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/management-reporter-2012-ax-2012-user-validation-diagnostic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/cannot-create-inventory-valuation-and-gmroi-and-inventory-turns-reports.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/guidelines-to-determine-when-support-case-becomes-consulting-engagement.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/must-use-sql-server-management-studio-error-when-connecting-to-store-database-server.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/requirements-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/requirements-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/expand-maximum-extension-size-limit-ad-cs.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/customer-service/service-level-agreements/sla-deletion-error-messages.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-service/import-export-or-upgrade/sla-deletion-error-messages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/common-issues-and-resolutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-canvas-app-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-common-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-common-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-model-app-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/minimal-canvas-app-repro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-canvas-app-date-time-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-canvas-app-date-time-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/sign-in/troubleshooting-startup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-model-driven-app-date-time-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-lookup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-model-driven-app-lookup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/connections/troubleshoot-power-query-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/vanilla-model-driven-app-repro.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/vanilla-model-driven-app-repro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps/dataverse-records-missing-required-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/dataverse-records-missing-required-fields",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/the-training-document-is-not-displayed-on-the-form-processing-model-details-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aibuilder-actions-are-disabled-deactivated.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/aibuilder-actions-are-disabled-deactivated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aibuilder-show-trial-license-but-license-purchased.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/aibuilder-show-trial-license-but-license-purchased",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aimodels-fail-to-be-imported-in-a-new-environment.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/aimodels-fail-to-be-imported-in-a-new-environment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/all-ai-builder-credits-have-been-consumed.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/all-ai-builder-credits-have-been-consumed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/business-card-reader-do-not-work-for-some-users.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/business-card-reader-do-not-work-for-some-users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/dependency-timeout-error-when-using-a-form-processing-model-in-power-automate.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/dependency-timeout-error-when-using-a-form-processing-model-in-power-automate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/fields-could-not-be-loaded-for-this-document-error-in-form-processing.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/fields-could-not-be-loaded-for-this-document-error-in-form-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/pages-parameter-generates-an-error-when-saving-a-form-processing-flow.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/pages-parameter-generates-an-error-when-saving-a-form-processing-flow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/prevent-users-from-creating-ai-builder-custom-models.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/prevent-users-from-creating-ai-builder-custom-models",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/the-current-environment-donot-meet-the-minimum-requirements-error-message.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/the-current-environment-donot-meet-the-minimum-requirements-error-message",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/too-many-requests-error-in-power-automate.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/too-many-requests-error-in-power-automate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/training-failed-and-the-model-cannot-be-used-error-in-form-processing.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/training-failed-and-the-model-cannot-be-used-error-in-form-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/when-i-scan-images-using-aibuilder-components-in-powerapps-the-output-image-rotation-is-wrong.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/when-i-scan-images-using-aibuilder-components-in-powerapps-the-output-image-rotation-is-wrong",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/your-model-uses-a-preview-functionality-which-has-expired.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/your-model-uses-a-preview-functionality-which-has-expired",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/information-mats-sdp.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/bulk-operation-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/bulk-deleting-data/bulk-operation-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/dataverse-records-missing-required-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/dataverse-records-missing-required-fields",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/web-api-client-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/web-api-client-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/dataverse-plug-ins-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/plug-in-execution/dataverse-plug-ins-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/cleanup-inherited-access.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/user-permissions/cleanup-inherited-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse/client-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/user-permissions/client-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/missing-dependency-on-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/missing-dependency-on-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/circular-dependencies-between-solutions.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/circular-dependencies-between-solutions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/solution-cannot-be-deleted-due-to-dependencies.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/solution-cannot-be-deleted-due-to-dependencies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/you-cannot-delete-this-form-only-fallback.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/you-cannot-delete-this-form-only-fallback",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/solution-checker-enforcement-import-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/solution-checker-enforcement-import-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/changes-not-effective-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/changes-not-effective-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/form-not-appear-after-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/form-not-appear-after-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/newly-added-components-dont-appear.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/newly-added-components-dont-appear",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/cannot-import-solutions-publish-changes.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/cannot-import-solutions-publish-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/concurrent-solution-operation-failures.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/concurrent-solution-operation-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/dataverse-environment-variables.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/dataverse-environment-variables",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/duplicate-security-roles.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/duplicate-security-roles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/entitykey-selected-attributes-already-exists.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/entitykey-selected-attributes-already-exists",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/failure-converting-to-managed-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/full-formxml-expected-to-create-form-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/full-formxml-expected-to-create-form-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/install-failure-priviledge-not-assigned.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/install-failure-priviledge-not-assigned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/label-text-not-displayed.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/label-text-not-displayed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/maximum-row-size-exceeds.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/maximum-row-size-exceeds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/primaryname-attribute-not-found.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/primaryname-attribute-not-found",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/multiple-publisher-shared-component-failure.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/multiple-publisher-shared-component-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/unmanaged-active-layer-created-after-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/unmanaged-active-layer-created-after-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/solutions/upgrade-fails-pending-upgrade.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/upgrade-fails-pending-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/get-use-active-directory-replication-status-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/get-use-active-directory-replication-status-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/connect/bad-server-name-connection-string-error.md",
+      "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/backflush-costing-calculation-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/batch-number-cleared-new-lot-id-selected.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/bom-consumption-cost-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/in-progress-jobs-ended.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/bundle-item-intercompany-process.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/cancel-intercompany-purchase-order.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/sales-update-history-cleanup-job-performance-issues.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/sales/service-item-sales-quantity.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-800046.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e276",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/system-center/vmm/deploying-vm-error-2912.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreement-currencies.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreement-currencies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreement-not-applied.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreement-not-applied",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/trade-agreements-from-rejected-rfq.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/sales/trade-agreements-from-rejected-rfq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/syntax-build-answer-files-unattended-installation-ad-ds.md",
+      "redirect_url": "/windows-server/identity/ad-ds/deploy/dcpromo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/dcdiag-verifyreferences-test-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dcdiag-verifyreferences-test-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/lingering-objects-remain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/lingering-objects-remain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/distributed-file-system-hotfixes.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/distributed-file-system-hotfixes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/find-current-schema-version.md",
+      "redirect_url": "/windows-server/identity/ad-ds/deploy/find-active-directory-schema",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/item-rm-not-reserved.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/production/item-rm-not-reserved",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/picking-list-warehouse-not-updated-bom-line.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/production/picking-list-warehouse-not-updated-bom-line",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/production/resource-name-not-updated.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/production/resource-name-not-updated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/index.yml",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/promoting-dc-to-global-catalog-server-issues.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-promote-dc-to-global-catalog-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/replication-error-5.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replications-fail-with-error-5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/create-upgrade-delete/avoid-running-as-root-in-containers.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/avoid-running-as-root-in-containers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/system-center/orchestrator/invoke-rest-service-activity-fails.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/determine-orchestrator-components-version.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/opalis-integration-server-connectivity-requirements.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/runbooks-folders-statistics-not-displayed.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/set-user-permissions.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/setup-has-detected-opalis-installed-error.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/invalid-objectserver-data-type-error.md",
+      "redirect_url": "/troubleshoot/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/systeminfo-not-display-all-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/systeminfo-not-display-all-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/microsoft-product-support-reporting-tool-v5220030.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/microsoft-product-support-reporting-tool-v5220030",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/cannot-install-updates-programs.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-install-updates-programs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/deactivate-kernel-mode-filter-driver.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/deactivate-kernel-mode-filter-driver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/dotnet-framework-1dot1-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/dotnet-framework-1dot1-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/how-to-use-automatic-updates-feature.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/how-to-use-automatic-updates-feature",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/missing-windows-installer-cache.md",
+      "redirect_url": "/troubleshoot/windows-client/application-management/missing-windows-installer-cache",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/cannot-use-imagex-tool-backup.md",
+      "redirect_url": "/troubleshoot/windows-client/backup-and-storage/cannot-use-imagex-tool-backup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/failed-schedule-software-protection.md",
+      "redirect_url": "/troubleshoot/windows-server/system-management-components/failed-schedule-software-protection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/use-recovery-console-not-start.md",
+      "redirect_url": "/troubleshoot/windows-server/performance/use-recovery-console-not-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/view-system-registry-with-64-bit-windows.md",
+      "redirect_url": "/troubleshoot/windows-client/performance/view-system-registry-with-64-bit-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/system-partition-offline-install-3rd-party-disk.md",
+      "redirect_url": "/troubleshoot/windows-server/performance/system-partition-offline-install-3rd-party-disk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/error-0x80070005-access-denied.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-0x80070005-access-denied",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/cannot-install-may-2019-update-windows-10-amd-raid-drivers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/dism-apply-image-command-fails-error-code-5.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/dism-apply-image-command-fails-error-code-5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/dism-error-87-apply-windows-10-image.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/dism-error-87-apply-windows-10-image",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/drive-reassignment-block-update.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/drive-reassignment-block-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/in-place-upgrade-to-windows-10-problems.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/in-place-upgrade-to-windows-10-problems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/cannot-install-windows-server-2019-high-processor-count.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/cannot-install-windows-server-2019-high-processor-count",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/dism-fails-with-error-0x800f0906.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/dism-fails-with-error-0x800f0906",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/sysprep-fails-remove-or-update-store-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/installing-updates-features-roles-overview.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/installing-updates-features-roles-overview.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/skype-for-microsoft-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/skype-for-microsoft-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/switches-with-xcopy-and-xcopy32-command.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/switches-with-xcopy-and-xcopy32-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/proxy-error-console.md",
+      "redirect_url": "/power-automate/desktop-flows/how-to/proxy-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/format-command-not-write-zeros-to-disk.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/format-command-not-write-zeros-to-disk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/updates-for-windows-server-2012-r2-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/updates-for-windows-server-2012-r2-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/set-up-clustered-print-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/set-up-clustered-print-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/troubleshoot-cluster-service-startup-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-cluster-service-startup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/physical-disk-resource-not-come-online.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/physical-disk-resource-not-come-online",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/network-name-resource-not-come-online.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/network-name-resource-not-come-online",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/local-sas-disks-getting-added-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/local-sas-disks-getting-added-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cannot-share-folder-in-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-share-folder-in-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/failover-clustering-system-log-events.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/failover-clustering-system-log-events",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/error-0x8000ffff-catastrophic-failure.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-0x8000ffff-catastrophic-failure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-information-ip-address-failover.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-information-ip-address-failover",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-fileshare-resource-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-fileshare-resource-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-disk-resource-not-come-online.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-disk-resource-not-come-online",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/volume-shadow-copy-service-events.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/volume-shadow-copy-service-events",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/error-0x8000ffff-run-vssadmin-list-writers-command.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-0x8000ffff-run-vssadmin-list-writers-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/set-partmgr-attributes-with-powershell.md",
+      "redirect_url": "/windows-hardware/customize/desktop/unattend/microsoft-windows-partitionmanager-sanpolicy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/errors-occur-when-bringing-disk-resource.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/errors-occur-when-bringing-disk-resource",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/updates-for-windows-server-2012-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/updates-for-windows-server-2012-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/guest-access-in-smb2-is-disabled-by-default.md",
+      "redirect_url": "/windows-server/storage/file-server/enable-insecure-guest-logons-smb2-and-smb3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/trust-relationship-between-workstation-domain-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/trust-relationship-between-workstation-domain-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/shelf-life-system-state-backup-ad.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/shelf-life-system-state-backup-ad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/access-denied-run-batch-job.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/access-denied-run-batch-job",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/backup-program-unsuccessful-large-system-volume.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/backup-program-unsuccessful-large-system-volume",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/fail-to-add-disk-to-schedule-backup.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fail-to-add-disk-to-schedule-backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/diskshadow-error-try-to-create-a-vss-snap.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/diskshadow-error-try-to-create-a-vss-snap",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/enable-debug-tracing-features-vss.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/enable-debug-tracing-features-vss",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/error-when-you-do-system-state-backup.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-when-you-do-system-state-backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/database-backup-error-3266-3013.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/database-backup-error-3266-3013",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/event-id-8193-when-you-perform-backup.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-8193-when-you-perform-backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/use-backup-feature-back-up-restore-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/use-backup-feature-back-up-restore-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/cannot-back-up-server-error-0x80070005.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-back-up-server-error-0x80070005",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/srv-event-id-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/srv-event-id-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/request-not-supported-smb-data-deduplication.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/request-not-supported-smb-data-deduplication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/module-action-wasnt-found-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/module-action-wasnt-found-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/administration/flow-extension-package-shows-installation-failed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/address-disk-space-issues-caused-by-winsxs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/troubleshooting-tips-sql-queries.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/troubleshooting-tips-sql-queries",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/failed-to-deserialize-flow-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/failed-to-deserialize-flow-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/install-service-packs-hotfixes.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/install-service-packs-hotfixes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/wsus-3-installation-package.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/wsus-3-installation-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/get-updates-through-windows-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/get-updates-through-windows-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/windows-server-2008-service-pack-2.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-2008-service-pack-2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/file-shares-on-iscsi-devices-not-recreated.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/file-shares-on-iscsi-devices-not-recreated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/iscsi-virtual-disk-size-limits-incorrect.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/iscsi-virtual-disk-size-limits-incorrect",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/iscsi-software-target-3dot3-limits.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/iscsi-software-target-3dot3-limits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/turn-disk-write-caching-on-off.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/turn-disk-write-caching-on-off",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/add-pass-through-disk-to-high-available-vm.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/add-pass-through-disk-to-high-available-vm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/usb-device-not-recognized-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/usb-device-not-recognized-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/refs-volume-dpm-unresponsive.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/refs-volume-dpm-unresponsive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/distributed-link-tracking-on-domain-controller.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/distributed-link-tracking-on-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/volume-show-up-as-raw.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/volume-show-up-as-raw",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/error-setup-unable-create-new-system-partition.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-setup-unable-create-new-system-partition",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/active-route-removed.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/active-route-removed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/error-an-item-with-the-same-key-has-already-been-added.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-an-item-with-the-same-key-has-already-been-added",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/system-state-backup-fails-invalid-imagepath.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/system-state-backup-fails-invalid-imagepath",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/system-state-backup-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/system-state-backup-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/server-backup-mmc-fails-open.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/server-backup-mmc-fails-open",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/cannot-configure-clustered-mount-points-shadow-copies.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-configure-clustered-mount-points-shadow-copies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cannot-upgrade-clustered-server-operating-system.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-upgrade-clustered-server-operating-system",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/windows-server-failover-clusters-service-packs-hotfixes.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-failover-clusters-service-packs-hotfixes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/hotfixes-for-windows-server-2008-r2-server-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hotfixes-for-windows-server-2008-r2-server-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/support-large-logical-unit-numbers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/support-large-logical-unit-numbers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/configure-volume-mount-points-server-cluser.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/configure-volume-mount-points-server-cluser",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/create-file-shares-on-a-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/create-file-shares-on-a-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/enable-support-using-raid-controllers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/enable-support-using-raid-controllers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cannot-manage-cluster-with-failover-cluster-manager.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-manage-cluster-with-failover-cluster-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-service-reserves-brings-disk.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-service-reserves-brings-disk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/duplicate-address-error-validate-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/duplicate-address-error-validate-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/scsi-3-persistent-reservation-test-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/scsi-3-persistent-reservation-test-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/validation-fails-run-disk-failover-test.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/validation-fails-run-disk-failover-test",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/not-see-cluster-disk-in-explorer-or-diskmgmt-failover.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/not-see-cluster-disk-in-explorer-or-diskmgmt-failover",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-validation-failure-error-80070005.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-validation-failure-error-80070005",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/error-event-id-1289-create-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-event-id-1289-create-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/creating-failover-cluster-fails-error-0xc0000055.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/creating-failover-cluster-fails-error-0xc0000055",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/implications-using-slash-forcequorum-switch.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/implications-using-slash-forcequorum-switch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/move-server-cluster-to-another-domain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/move-server-cluster-to-another-domain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/provider-load-failure.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/provider-load-failure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-node-already-exists-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-node-already-exists-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/guest-cluster-nodes-in-hyper-v-not-create-or-join.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/guest-cluster-nodes-in-hyper-v-not-create-or-join",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cannot-join-a-node-into-a-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-join-a-node-into-a-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/updates-for-windows-server-2008-r2-sp1-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/updates-for-windows-server-2008-r2-sp1-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/errors-windows-failover-cluster-run-as-guest.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/errors-windows-failover-cluster-run-as-guest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/use-cluster-nodes-as-domain-controllers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/use-cluster-nodes-as-domain-controllers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/issues-after-enabling-data-deduplication.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/issues-after-enabling-data-deduplication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/error-file-server-resource-manager-could-not-load-wmi-objects.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-file-server-resource-manager-could-not-load-wmi-objects",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/fsrm-quota-usage-incorrect.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fsrm-quota-usage-incorrect",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/file-services-hotfixes-in-windows-server-2008.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/file-services-hotfixes-in-windows-server-2008",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/not-enough-storage-process-this-command.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/not-enough-storage-process-this-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/windows-installations-disk-duplication.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/windows-installations-disk-duplication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/error-10013-wsaeacces-is-returned.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/error-10013-wsaeacces-is-returned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/directaccess-clients-connection-error-0x274d.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/directaccess-clients-connection-error-0x274d",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/virtualization/error-occurred-attempt-export-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-occurred-attempt-export-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/event-19050-32022-32032-32056-32315-32546-33680.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-19050-32022-32032-32056-32315-32546-33680",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/events-18210-3041-and-1-hyper-v-replica.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/events-18210-3041-and-1-hyper-v-replica",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/event-id-106-hyper-v-virtual-switch-bound-lbfo-team.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-106-hyper-v-virtual-switch-bound-lbfo-team",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vm-not-reach-vlan-tagging-enabled-network.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vm-not-reach-vlan-tagging-enabled-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vmconnect-fail-to-connect-to-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vmconnect-fail-to-connect-to-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vds-basic-provider-event-id-1.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vds-basic-provider-event-id-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/using-hyper-v-large-sector-drives.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/using-hyper-v-large-sector-drives",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/security-id-structure-invalid.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/security-id-structure-invalid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/virtual-machines-slow-startup-shutdown.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/virtual-machines-slow-startup-shutdown",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/mouse-screen-resolution-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/mouse-screen-resolution-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/importing-a-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/importing-a-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-vm-supported-file-locations.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-vm-supported-file-locations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-virtual-machine-doesnt-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-virtual-machine-doesnt-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/ghost-nic-built-vmware-templates.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/ghost-nic-built-vmware-templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/dynamic-memory-allocation-virtual-machine-not-change.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dynamic-memory-allocation-virtual-machine-not-change",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-storage-caching-layers-data-consistency-requirements.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-storage-caching-layers-data-consistency-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/error-0x80070005-export-vms.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-0x80070005-export-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/enabling-mpio-with-sas-decreases-performance.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/enabling-mpio-with-sas-decreases-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/namespace-not-queried-rpc-server-unavailable.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/namespace-not-queried-rpc-server-unavailable",
+      "redirect_document_id": true
     }
   ]
 }

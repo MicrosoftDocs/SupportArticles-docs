@@ -4,6 +4,7 @@ description: See common messages and possible solution when using and troublesho
 ms.date: 12/05/2023
 ms.reviewer: kaushika, tscott
 search.appverid: MET150
+ms.custom: sap:Configure Devices - Windows\Endpoint Protection
 ---
 # Endpoint protection issues and possible solutions in Intune
 

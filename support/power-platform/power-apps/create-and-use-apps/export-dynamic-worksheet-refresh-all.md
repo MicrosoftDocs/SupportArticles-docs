@@ -5,6 +5,7 @@ author: sriharibs-msft
 ms.reviewer: aartigoyle
 ms.date: 10/25/2023
 ms.author: srihas
+ms.custom: sap:Working with Data
 search.audienceType: 
   - maker
 search.app: 

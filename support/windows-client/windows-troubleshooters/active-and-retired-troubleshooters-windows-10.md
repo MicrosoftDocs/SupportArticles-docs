@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, fangmikko
-ms.custom: sap:windows-troubleshooters, csstroubleshoot
+ms.custom: sap:Support Tools\Windows Troubleshooters , csstroubleshoot
 ---
 # Active and retired troubleshooters for Windows 10 and Windows 11
 

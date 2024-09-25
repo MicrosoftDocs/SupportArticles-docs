@@ -3,7 +3,7 @@ title: Windows 10 devices show incorrect compliance status in Intune
 description: Describes an issue in which Windows 10 devices that have firewall enabled show an incorrect compliance status in Microsoft Intune because of a known issue in Windows 10.
 ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Create Windows policy
+ms.custom: sap:Device Compliance\Monitor device compliance
 ms.reviewer: kaushika
 ---
 # Incorrect compliance status reported for Windows 10 devices with firewall enabled

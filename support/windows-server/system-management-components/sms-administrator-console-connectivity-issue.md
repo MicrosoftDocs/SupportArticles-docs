@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr
-ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
+ms.custom: sap:System Management Components\Microsoft Management Console (MMC), csstroubleshoot
 ---
 # How to troubleshoot SMS Administrator console connectivity
 
 This article describes how to troubleshoot a new or an existing SMS Administrator console to determine why it cannot connect to the site server.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 317872
 
 ## Summary

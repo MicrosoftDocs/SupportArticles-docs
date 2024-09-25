@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, dennhu, rahugoyal, v-lianna
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot, ikb2lmc
 ---
 # User profiles older than a specified number of days aren't deleted as expected on system restart
 

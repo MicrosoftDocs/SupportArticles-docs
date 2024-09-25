@@ -2,7 +2,7 @@
 title: High CPU or memory usage in applications on VMs
 description: This article fixes a problem in which high CPU or memory usage occurs in the .NET Framework because of the Pause Latency change.
 ms.date: 05/04/2023
-ms.custom: sap:.NET Framework, Virtual Machine running Windows
+ms.custom: sap:Common Language Runtime (CLR)
 ms.reviewer: joelpell
 ---
 # High CPU or memory usage and increased spin-wait loops in .NET Framework on VMs by using Intel Skylake processors

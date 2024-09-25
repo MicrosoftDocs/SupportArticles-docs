@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # Get-ADGroupMember returns error for domain local group to members from remote forests
 
 This article helps fix an error that occurs when you run the `Get-ADGroupMember` cmdlet in a scenario where a group has a member from a remote forest.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3171600
 
 ## Symptoms

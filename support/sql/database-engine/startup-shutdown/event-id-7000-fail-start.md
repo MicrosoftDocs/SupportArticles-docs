@@ -5,6 +5,7 @@ ms.date: 01/28/2020
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: ramakoni
+ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---
 # Event ID 7000 and SQL Server doesn't start
 

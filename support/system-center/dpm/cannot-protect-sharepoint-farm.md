@@ -1,8 +1,8 @@
 ---
 title: Unable to protect a SharePoint farm
 description: Trying to protect a SharePoint farm with DPM may result in errors if SQL Server aliasing is used incorrectly.
-ms.date: 07/27/2020
-ms.reviewer: wawhit, cbutch
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet, wawhit, cbutch
 ---
 # Unable to protect a SharePoint farm with System Center Data Protection Manager
 

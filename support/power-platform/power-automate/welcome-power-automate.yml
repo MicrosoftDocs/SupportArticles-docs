@@ -7,9 +7,9 @@ metadata:
   description: Landing page for Power Automate troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: power-automate #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: #Required; your GitHub user alias, with correct capitalization.
-  ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 01/31/2024
+  author: ChristySu #Required; your GitHub user alias, with correct capitalization.
+  ms.author: christys #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/27/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -19,8 +19,6 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Microsoft Flow Extension Package shows Installation failed
-            url: administration/flow-extension-package-shows-installation-failed.md
           - text: Recommendations for conditional access and multi-factor authentication
             url: administration/conditional-access-and-multi-factor-authentication-in-flow.md
 
@@ -45,10 +43,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Check if the gateway is in the right region
-            url: connections/check-if-gateway-is-the-right-region.md
           - text: Client Request Aborted or Failed to fetch error
-            url: connections/client-request-aborted-failed-fetch.md        
+            url: connections/client-request-aborted-failed-fetch.md   
+          - text: Missing on-premises data gateway
+            url: connections/check-if-gateway-is-the-right-region.md     
 
   # Card
   - title: Desktop flows

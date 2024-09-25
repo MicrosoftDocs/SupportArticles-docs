@@ -5,6 +5,7 @@ ms.date: 12/05/2023
 ms.reviewer: kaushika, payur
 author: helenclu
 ms.author: luche
+ms.custom: sap:Admin Console, Role-Based Access and Reporting\Console Performance
 ---
 # Console crashes after you upgrade to Configuration Manager, version 2107
 

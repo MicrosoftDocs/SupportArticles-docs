@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, WalterE
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Settings for minimizing periodic WAN traffic
 
 This article provides some suggested settings for the problem that occurs when a dial-on-demand link is activated by periodic WAN traffic.  
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 819108
 
 ## Summary

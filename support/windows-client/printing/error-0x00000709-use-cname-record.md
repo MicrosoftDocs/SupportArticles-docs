@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---
 # Error 0x00000709 when you use a CNAME record for a print server in Windows Server 2008 R2: Operation could not be completed
 
 This article helps fix the error 0x00000709 (Operation could not be completed). The error occurs when you use a CNAME record for a print server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2546625
 
 ## Symptoms

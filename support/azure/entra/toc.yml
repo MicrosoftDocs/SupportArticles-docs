@@ -1,0 +1,17 @@
+- name: Welcome
+  href: welcome-entra.yml
+
+- name: Microsoft Entra ID
+  items:
+  - name: Microsoft Entra ID troubleshooting documentation
+    href: entra-id/welcome-entra-id.yml
+- name: Global Secure Access
+  items:
+  - name: Global Secure Access troubleshooting documentation
+    href: global-secure-access/welcome-global-secure-access.yml
+- name: Get support
+  items:
+  - name: Send Microsoft Authenticator logs and get an incident ID
+    href: entra-id/ad-dmn-services/send-microsoft-authenticator-logs.md
+  - name: Support data collection
+    href: entra-id/ad-dmn-services/support-data-collection-diagnostic-logs.md

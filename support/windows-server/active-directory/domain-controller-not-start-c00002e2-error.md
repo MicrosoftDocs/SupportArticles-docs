@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
 ---
 # Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed
 
 This article helps to fix the error c00002e2 or "Choose an option" when Domain controller does not start.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2737463
 
 ## Symptoms

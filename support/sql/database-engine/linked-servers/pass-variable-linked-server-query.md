@@ -2,7 +2,7 @@
 title: Pass a variable to a linked server query
 description: This article describes how to pass a variable to a linked server query.
 ms.date: 10/29/2020
-ms.custom: sap:Administration and Management
+ms.custom: sap:Linked Server and distributed queries
 ms.topic: how-to
 ---
 # Pass a variable to a linked server query

@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:administration, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # Incorrect TLS is displayed when you use RDP with SSL encryption
 
 This article provides a solution to an issue where SSL (TLS 1.0) is displayed as the Security Layer protocol instead of the actual TLS 1.2 protocol.
 
-_Applies to:_ &nbsp; Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 3097192
 
 ## Symptoms

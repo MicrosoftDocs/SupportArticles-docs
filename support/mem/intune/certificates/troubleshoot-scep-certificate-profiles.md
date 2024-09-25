@@ -4,6 +4,7 @@ description: Troubleshoot the use of SCEP by devices to request certificates for
 ms.date: 12/05/2023
 ms.reviewer: kaushika, lacranda
 search.appverid: MET150
+ms.custom: sap:Configure Devices - iOS\SCEP Certificates
 ---
 # Troubleshooting SCEP certificate profiles with Intune
 

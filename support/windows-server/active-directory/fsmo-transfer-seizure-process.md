@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-fsmo, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
 ---
 # Flexible Single Master Operation transfer and seizure process  
 
 This article describes how Flexible Single Master Operations (FSMO) roles are transferred from one domain controller to another and how this role can be forcefully appointed in the event that the domain controller that previously held the role is no longer available.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 223787
 
 ## Transferring the Flexible Single Master Operation role

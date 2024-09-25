@@ -2,7 +2,7 @@
 title: Error if you change shared component directory
 description: This article provides workarounds for the problem that occurs when you change the path in the shared component directory box on the Feature Selection screen of the Install SQL Server 2008 Setup wizard.
 ms.date: 11/09/2020
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: amylewis, mcimfl
 ---
 # Error if you change the shared component directory path on the Feature Selection screen when you install SQL Server 2008 on a computer

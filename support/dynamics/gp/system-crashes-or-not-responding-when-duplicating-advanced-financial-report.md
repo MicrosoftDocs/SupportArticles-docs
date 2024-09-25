@@ -1,9 +1,10 @@
 ---
 title: System crashes or not responding when duplicating Advanced Financial report
 description: Microsoft Dynamics GP crashes or not responding when you try to copy or duplicate Advanced Financial (AFA) Reports.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # System crashes or not responding when you duplicate an Advanced Financial report in General Ledger
 

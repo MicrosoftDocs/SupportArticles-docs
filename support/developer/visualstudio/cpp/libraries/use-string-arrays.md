@@ -2,7 +2,7 @@
 title: Use string arrays in Visual C++
 description: Describes a code sample that shows how to create and use string arrays in Visual C++.
 ms.date: 04/22/2020
-ms.custom: sap:C and C++ Libraries
+ms.custom: sap:Language or Compilers\C++
 ms.reviewer: V-JEFFBO
 ms.topic: how-to
 ---

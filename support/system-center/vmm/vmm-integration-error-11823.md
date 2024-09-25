@@ -1,7 +1,8 @@
 ---
 title: Error 11823 integrating VMM with Operations Manager
 description: Describes an error (11823) issue that occurs when you try to integrate VMM with System Center Operations Manager. A resolution is provided.
-ms.date: 04/29/2020
+ms.date: 04/09/2024
+ms.reviewer: wenca
 ---
 # Error 11823 when Operations Manager integration is refreshed from the VMM 2012 console
 

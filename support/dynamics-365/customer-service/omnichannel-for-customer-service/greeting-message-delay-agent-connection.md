@@ -4,6 +4,7 @@ description: Resolves an issue where voice call greeting messages delay an agent
 ms.reviewer: laalexan
 ms.author: srubinstein
 ms.date: 02/23/2024
+ms.custom: sap:Voice channel
 ---
 # Incoming voice calls with long greeting messages cause connection delays
 

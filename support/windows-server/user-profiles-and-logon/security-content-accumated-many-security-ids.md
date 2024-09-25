@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, richfl
-ms.custom: sap:user-logon-fails, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
 ---
 # Error message: During a logon attempt, the user's security context accumulated too many security IDs
 
 This article discusses an issue where you get a 1384 error when you log on to a domain or connect to a network share on a server.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 275266
 
 ## Symptoms

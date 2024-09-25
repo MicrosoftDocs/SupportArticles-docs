@@ -5,7 +5,7 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 ms.date: 12/14/2023
-ms.custom: sap:environment-licensing
+ms.custom: sap:Environment management\Environment licensing
 ---
 # Can't access a new Customer Insights - Data environment
 

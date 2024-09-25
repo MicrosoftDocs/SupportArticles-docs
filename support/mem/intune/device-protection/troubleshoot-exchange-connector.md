@@ -4,6 +4,7 @@ description: Troubleshoot the configuration of and issues related to the Intune 
 ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 ---
 # Troubleshooting the Intune Exchange Connector
 

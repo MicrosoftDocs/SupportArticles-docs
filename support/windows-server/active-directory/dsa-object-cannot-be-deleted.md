@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, RKWON
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # Error Message: DSA Object Cannot Be Deleted
 
 This article provides a solution to an issue where you fail to delete an orphaned NTDS Settings from Active Directory Sites and Services.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 318698
 
 ## Symptoms

@@ -8,8 +8,7 @@ ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 keywords: amd processor, cisco VIC
-ms.custom: sap:Kerberos authentication
-ms.subservice: general
+ms.custom: sap:Other Driver
 ---
 # Target server that has AMD processor and CISCO VIC cannot start if KDNET debugging is enabled
 

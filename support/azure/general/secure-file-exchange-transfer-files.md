@@ -40,10 +40,6 @@ Open the Secure File Exchange workspace by using the link provided to in the ema
 
 If you sign in with a "work or school, or personal Microsoft account" that hasn't been added to your service request by the Microsoft Support Professional, you can't add, download, or delete files from the workspace. If you need other accounts added to the Secure File Transfer Workspace, ask your Microsoft Support Professional and they will add them to the account allowed to interact with the workspace.
 
-If you can't use that "work or school, or personal Microsoft account" to sign in, and you need to **view**, **download**, or **delete** files in your workspace, the Microsoft Support Professional assigned to your service request can provide you with a temporary "work or school Microsoft account" to sign in with.
-
-:::image type="content" source="media/secure-file-exchange-transfer-files/sign-in-dialog.png" alt-text="Screenshot of the Microsoft Account sign in dialog." border="false":::
-
 #### Authentication (Have you signed in using a "work or school, or personal Microsoft account")
 
 - A [personal Microsoft account](https://account.microsoft.com/account), is the combination of an email address and a password that you can use to sign in to all consumer-oriented Microsoft products and cloud services. For example, Outlook (Hotmail), Messenger, OneDrive, MSN, Windows Phone, or Xbox Live. If you use an email address and password to sign in to these or other services, you'll have a Microsoft account. You can also sign up for a new one at any time. Here are some examples of personal Microsoft accounts: username@yahoo.com, username@hotmail.com.

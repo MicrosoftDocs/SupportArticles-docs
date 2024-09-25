@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, shenry, liexgu
-ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubleshoot
 ---
 # Catastrophic failure (0x8000FFFF) error when you start a VM on a Windows Server 2012 R2-based Hyper-V server
 
 This article provides a solution to fix the 0x8000FFFF error that occurs when you start a Virtual Machine (VM) on a Windows Server 2012 R2-based Hyper-V server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2960802
 
 ## Symptoms

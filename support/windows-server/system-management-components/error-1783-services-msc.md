@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
+ms.custom: sap:System Management Components\Microsoft Management Console (MMC), csstroubleshoot
 ---
 # Error 1783: The stub received bad data
 
 This article helps fix the error 1783 that occurs when you open Services.msc.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2028588
 
 ## Symptoms

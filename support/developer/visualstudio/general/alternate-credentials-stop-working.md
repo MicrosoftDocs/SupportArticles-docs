@@ -3,6 +3,7 @@ title: Alternate credentials don't working
 description: This article discusses a problem in which alternate credentials stop working for existing Visual Studio Online account users after you connect to Microsoft Entra ID.
 ms.date: 04/22/2020
 ms.reviewer: acabello, daleche
+ms.custom: sap:Team Explorer - Version Control\Connecting to Azure DevOps Services
 ---
 # Alternate credentials stop working for existing Visual Studio Online account users
 

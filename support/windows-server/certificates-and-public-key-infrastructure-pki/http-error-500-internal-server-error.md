@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: jkuehler, kaushika
-ms.custom: sap:network-device-enrollment-services-ndes, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Technologies (Auto Enrollment, NDES, CWE, CEP, CES), csstroubleshoot
 ---
 # Error message when generating NDES enrollment challenge password on an NDES server that is running Windows Server 2012: Http error 500.0 - internal server error
 
 This article helps work around an error that occurs when trying to get the NDES enrollment challenge password.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2800975
 
 ## Symptoms

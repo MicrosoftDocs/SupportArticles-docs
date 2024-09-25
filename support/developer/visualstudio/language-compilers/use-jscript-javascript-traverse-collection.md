@@ -2,7 +2,7 @@
 title: Use JScript or JavaScript to traverse a collection
 description: This article describes how to use JScript or JavaScript to traverse through a collection.
 ms.date: 09/24/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\JavaScript and TypeScript
 ms.reviewer: TFERRAND
 ms.topic: how-to
 ---

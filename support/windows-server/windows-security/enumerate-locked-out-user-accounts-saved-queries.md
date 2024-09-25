@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:account-lockouts, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Account lockouts, csstroubleshoot
 ---
 # Enumerate locked out user accounts using Saved Queries
 
 This article provides some step-by-step instructions to enumerate locked out user accounts using Saved Queries.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 555131
 
 This article was written by [Simon Geary](https://social.msdn.microsoft.com/profile/simon%20geary/), Microsoft MVP.

@@ -2,7 +2,7 @@
 title: Function sequence error in Smsdbmon.log
 description: Describes an issue in which a Function sequence error entry is repeatedly logged in Smsdbmon.log in Configuration Manager current branch version 1902.
 ms.date: 12/05/2023
-ms.custom: sap:Site Role Operations and Installation
+ms.custom: sap:Site Server and Roles\Site and Component Status Monitoring
 ms.reviewer: kaushika
 ---
 # Function sequence error repeatedly logged in Smsdbmon.log in Configuration Manager current branch version 1902

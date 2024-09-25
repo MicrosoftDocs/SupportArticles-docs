@@ -5,6 +5,7 @@ author: jialinhuang
 ms.author: jialinhuang
 ms.reviewer: josaw, brstor
 ms.date: 02/01/2024
+ms.custom: sap:Globalization\Issues with fiscal integration
 ---
 # "PKCS12 (PFX) without a supplied password has exceeded maximum allowed iterations" error in fiscal integration
 

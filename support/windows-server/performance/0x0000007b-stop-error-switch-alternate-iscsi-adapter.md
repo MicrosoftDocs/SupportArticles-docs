@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ---
 # 0x0000007B Stop error after replacing or switching to an alternate iSCSI boot adapter on a Windows Server 2008 R2-based or Windows 7-based computer
 
 This article describes an issue where you receive a STOP 0X0000007B error when you switch to an alternate iSCSI boot adapter on a Windows Server 2008 R2-based or Windows 7-based computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2507616
 
 ## Symptoms

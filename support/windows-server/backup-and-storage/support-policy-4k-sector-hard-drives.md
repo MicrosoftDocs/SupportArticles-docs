@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:storage-hardware, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware , csstroubleshoot
 ---
 # Microsoft support policy for 4K sector hard drives in Windows
 
 This article describes the support information for the large-sector (4K) drives when they're used with Windows and other Microsoft products.
 
-_Applies to:_ &nbsp; Windows 10, version 1809, and later versions, Windows Server 2019, Windows 7 Service Pack 1, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2510009
 
 ## Summary

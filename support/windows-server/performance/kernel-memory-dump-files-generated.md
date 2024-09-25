@@ -7,13 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, chwall
-ms.custom: sap:slow-performance, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
 ---
 # Kernel memory dump files may not be generated on Windows Server 2008-based and Windows Vista SP1 or later based computers when physical memory is larger than the size of the page file
 
 This article provides help to solve an issue where Kernel memory dump files are generated on computers when physical memory is larger than the size of the page file.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 949052
 
 > [!NOTE]

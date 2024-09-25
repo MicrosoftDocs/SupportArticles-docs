@@ -4,6 +4,7 @@ description: Suggestions for troubleshooting some of the most common error messa
 ms.date: 12/05/2023
 ms.reviewer: kaushika, mghadial
 search.appverid: MET150
+ms.custom: sap:Enroll Device - Windows\MDM only
 ---
 # Troubleshooting Windows device enrollment errors in Intune
 
