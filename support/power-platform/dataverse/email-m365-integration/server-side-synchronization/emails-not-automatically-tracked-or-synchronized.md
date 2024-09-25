@@ -73,10 +73,10 @@ Emails in the _Inbox_ folder are automatically tracked by server-side synchroniz
 
 To narrow down why an email might not be automatically tracked, check each of the following:
 
-1. For the email in question, ensure the email is in the _Inbox_ folder of the target Dataverse mailbox. Emails outside the _Inbox_ folder can't be reliably processed, even if they're moved back to the _Inbox_ later. For example, if an email is initially sent to your _Spam_ folder or is moved to a subfolder by a Microsoft Outlook rule, server-side synchronization won't be able to process those emails, even if they're eventually moved back to the _Inbox_ folder.
+1. For the email in question, ensure the email is in the _Inbox_ folder of the target Dataverse mailbox. Emails outside the _Inbox_ folder can't be processed, even if they're moved back to the _Inbox_ later.
 
-    - If you need to reprocess an email that was moved back to the _Inbox_ folder, you can reset the processing date (`ProcessEmailsReceivedAfter`) on the Dataverse mailbox record, which will allow server-side synchronization to discover and process the email. The details are outlined in [the "Note" section](/power-platform/admin/best-practices-server-side-synchronization#considerations).
-    - If you try to automatically track email responses sent from Outlook (which are in your _Sent Items_ folder), see [Welcome to Alchemy Portal](https://alchemyportal.azurewebsites.net/#autotracksentfolderitems).
+    - If you need to reprocess an email that was moved back to the _Inbox_ folder, you can reset the processing date (`ProcessEmailsReceivedAfter`) on the Dataverse mailbox record. This action allows server-side synchronization to discover and process the email. The details are outlined in [the "Note" section](/power-platform/admin/best-practices-server-side-synchronization#considerations).
+    - If you try to automatically track email responses sent from Outlook (in your _Sent Items_ folder), see [Welcome to Alchemy Portal](https://alchemyportal.azurewebsites.net/#autotracksentfolderitems).
     - If you want to track emails that were moved to subfolders, you need to enable [Folder-Based tracking](/power-platform/admin/configure-outlook-exchange-folder-level-tracking).
 
 2. Examine the recipient email addresses in the **To:** and **Cc:** lines and ensure that at least one of them is associated with a Dataverse mailbox, which is tested and enabled for server-side synchronization and is configured to automatically track the email based on its associated [incoming email filtering method](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange). If the email is sent to a distribution group or has a "BCC" recipient, see [this topic](https://alchemyportal.azurewebsites.net/#DLNote) to ensure that the underlining Dataverse mailbox is correctly configured.
@@ -85,7 +85,7 @@ To narrow down why an email might not be automatically tracked, check each of th
 
 ## Distribution groups and BCC recipients can't be automatically tracked
 
-Dataverse will resolve the recipient email addresses on the email to known Dataverse users or queue records. Therefore, if the recipient email addresses include a distribution group or have been included as "BCC" recipients, Dataverse can't resolve these recipients to known Dataverse users or queues.
+Dataverse will resolve the recipient email addresses on the email to known Dataverse users or queue records. Therefore, if the recipient email addresses include a distribution group or are included as "BCC" recipients, Dataverse can't resolve these recipients to known Dataverse users or queues.
 
 To automatically track emails from distribution groups or "BCC" recipients, the underlining Dataverse user or queue mailbox that receives the email must be configured to accept **All Email Messages**.
 
@@ -101,11 +101,11 @@ You can review information about **Failed Emails** by inspecting the [Server-Sid
 
 ## Email replies sent from Outlook aren't automatically synchronized using server-side synchronization
 
-An administrator can configure the **AutoTrackSentFolderItems** value of [OrgDBOrgSettings](/power-platform/admin/orgdborgsettings), which will enable server-side synchronization to process emails in the _Sent items_ folder in Exchange and automatically track reply emails to Microsoft Dynamics 365 by honoring the email acceptance options in [Set Personal Options](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
+An administrator can configure the **AutoTrackSentFolderItems** value of [OrgDBOrgSettings](/power-platform/admin/orgdborgsettings). This action will enable server-side synchronization to process emails in the _Sent Items_ folder in Exchange and automatically track reply emails to Microsoft Dynamics 365 by honoring the email acceptance options in [Set Personal Options](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
 
 > [!IMPORTANT]
 >
-> - Automatic tracking of sent items is disabled by default and you must enable it by configuring the **AutoTrackSentFolderItems** value in **OrgDBOrgSettings**.
+> - Automatic tracking of sent items is disabled by default, and you must enable it by configuring the **AutoTrackSentFolderItems** value in **OrgDBOrgSettings**.
 > - Enabling tracking for sent items is only supported with a Microsoft Exchange mailbox.
 
 For more information, see [Automatically track sent folder items with server-side synchronization](/power-platform/admin/track-sent-folder-items).
