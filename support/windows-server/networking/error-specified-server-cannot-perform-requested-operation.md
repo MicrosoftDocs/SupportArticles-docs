@@ -1,28 +1,28 @@
 ---
 title: The specified server cannot perform the requested operation error
 description: Helps resolve the error - The namespace cannot be queried. The specified server cannot perform the requested operation.
-ms.date: 09/24/2024
+ms.date: 09/25/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, v-lianna, albugn
 ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
 ---
-# Error "The namespace cannot be queried. The specified server cannot perform the requested operation" with DFS namespaces
+# Error "The namespace cannot be queried. The specified server cannot perform the requested operation" with DFS Namespaces
 
 This article helps resolve the error "The namespace cannot be queried. The specified server cannot perform the requested operation."
 
-When you access, modify, or create a Distributed File System (DFS) namespace on a DFS namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed, you might receive the following error message:
+When you access, modify, or create a Distributed File System (DFS) Namespace on a DFS Namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed, you might receive the following error message:
 
 > The namespace cannot be queried. The specified server cannot perform the requested operation
 
 ## The PDC or DC can't be reached or is down
 
-You use the DFS Management console on a machine that's a DFS namespace server, member server, or member client with RSAT File Services tools installed. This issue occurs because the machine, from where you are using the DFS Management console, can't reach the primary domain controller (PDC) or local domain controller (DC) over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port), or the PDC or DC is down.
+You use the DFS Management console on a machine that's a DFS Namespace server, member server, or member client with RSAT File Services tools installed. This issue occurs because the machine, from where you are using the DFS Management console, can't reach the primary domain controller (PDC) or local domain controller (DC) over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port), or the PDC or DC is down.
 
 ### Wireshark trace scenario 1
 
-Tracing on a DFS namespace server, member server, or member client with RSAT File Services tools installed:
+Tracing on a DFS Namespace server, member server, or member client with RSAT File Services tools installed:
 
 The Domain Name System (DNS) queries for LDAP SRV records are successful.
 
@@ -31,7 +31,7 @@ The Domain Name System (DNS) queries for LDAP SRV records are successful.
 192.168.0.2		192.168.0.42	DNS	168	Standard query response 0x7685 SRV _ldap._tcp.pdc._msdcs.contoso.com SRV 0 100 389 SRVPdc.contoso.com A 192.168.0.1
 ```
 
-However, establishing a TCP connection to the PDC doesn't fail during the TCP three-way handshake.
+However, establishing a TCP connection to the PDC will fail during the TCP three-way handshake.
 
 ```output
 192.168.0.42	192.168.0.1	TCP	66	49893 → 389 [SYN, ECE, CWR] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
@@ -53,6 +53,6 @@ Tracing on a member server or a member client with RSAT File Services tools inst
 ## Check the status of TCP/UDP port 389
 
 > [!NOTE]
-> After you apply the solution, remove the DFS namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
+> After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
 
 To resolve this issue, check the status of TCP/UDP port 389 (LDAP port) in your network and on the PDC or DC. Make sure that communication over this port is allowed. The PDC or DC should be up and running.
