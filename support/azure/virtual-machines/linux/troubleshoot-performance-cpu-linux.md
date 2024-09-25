@@ -3,8 +3,12 @@ title: Troubleshoot Performance CPU issues in Linux
 description: Troubleshoot CPU performance issues on Linux virtual machines in Azure.
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance, linux-related-content
+ms.topic: troubleshooting
+ms.collection: linux
 author: paulxjp
 ms.author: jianpingxi
+ms.reviewer: divargas
+
 ---
 # Troubleshoot performance CPU issues in Linux
 
@@ -54,27 +58,25 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6838.4 avail Mem
 
 Some things to look for in this view would be the load average (displayed on the right side of the top row), and the value of the following for each CPU:
 
-**load**: It refers to the number of processes which are either currently being executed on the CPU or are waiting for execution.
+- `load`: It refers to the number of processes which are either currently being executed on the CPU or are waiting for execution.
 The load average is broken down into three time increments. The first shows the load for the last one minute, the second for the last five minutes, and the final value for the last 15 minutes.
 Use the load average as a quick overview of how the system is performing.
 
-**Tasks**
+- `Tasks`: This section provides an overview of the total number of processes currently managed by the system.
 
-This section provides an overview of the total number of processes currently managed by the system.
+- `total`: total count of processes currently being tracked on the system.
 
-`total`: total count of processes currently being tracked on the system.
+- `running`: the number of processes actively using CPU time.
 
-`running`: the number of processes actively using CPU time.
+- `zombie`: processes completed execution but still have an entry in the process table.
 
-`zombie`: processes completed execution but still have an entry in the process table.
+- `us`: percentage represents the amount of CPU consumed by user processes.
 
-`us`: percentage represents the amount of CPU consumed by user processes.
+- `sy`: percentage represents the amount of CPU consumed by system processes.
 
-`sy`: percentage represents the amount of CPU consumed by system processes.
+- `id`: percentage represents how idle each CPU is.
 
-`id`: percentage represents how idle each CPU is.
-
-`wa`: percentage of CPU time spent waiting for I/O operations to complete.
+- `wa`: percentage of CPU time spent waiting for I/O operations to complete.
 
 In the previous example, the load average is at 1.72. This virtual machine is a two-CPU system, meaning that the system load is approaching full. 
 
@@ -82,9 +84,8 @@ You can verify this result if you notice the 15.2 percent idle CPU value. (In th
 
 > [!NOTE]
 > You can quickly obtain the CPU count by running the `nproc` command.
-```
-[root@rhel8 ~]# nproc
-2
+```bash
+nproc
 ```
 >
 
@@ -116,8 +117,11 @@ An example of D state might be a low level driver interacts with hardware, which
 
 ## `ps`
 Using `ps` to list the Top 5 CPU consuming processes:
+```bash 
+sudo ps -eo pcpu,pmem,pid,user,args | sort -r -k1 | head -6
 ```
-# ps -eo pcpu,pmem,pid,user,args | sort -r -k1 | head -6
+
+```output
 %CPU %MEM     PID USER     COMMAND
 33.3  0.0   17039 root     dd if=/dev/zero of=/cases/file1.bin bs=1M count=2048 status=progress
 21.0  0.0   17038 root     dd if=/dev/zero of=/cases/file2.bin bs=1M count=2048 status=progress
@@ -134,15 +138,15 @@ The following sections discuss CPU related metrics.
 
 The utilization of a CPU is dependent on which resource is trying to access it. A scheduler exists in the kernel which is responsible for scheduling resources. It gives different priorities to the different resources. The next lists explain the priorities from highest to lowest.
 
-`Hardware Interrupts` - requests created by hardware on the system to process data. Hardware interrupt sends requests without waiting for current program to finish. It's unconditional and immediate. For example, it could be a key stroke, mouse movement, a Network Card Interface signal when a packet arrived.
+- `Hardware Interrupts` - requests created by hardware on the system to process data. Hardware interrupt sends requests without waiting for current program to finish. It's unconditional and immediate. For example, it could be a key stroke, mouse movement, a Network Card Interface signal when a packet arrived.
 
-`Soft Interrupts` - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval, it checks and makes sure that a process doesn't pass its allotted time on a processor.
+- `Soft Interrupts` - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval, it checks and makes sure that a process doesn't pass its allotted time on a processor.
 
-`Real Time Threads` - real time processes may come on the CPU and preempt the kernel..
+- `Real Time Threads` - real time processes may come on the CPU and preempt the kernel..
 
-`Kernel Threads` - A kernel thread is a kernel entity, like processes and interrupt handlers. It's the entity handled by the system scheduler. The operating system handles Kernel-level threads directly.
+- `Kernel Threads` - A kernel thread is a kernel entity, like processes and interrupt handlers. It's the entity handled by the system scheduler. The operating system handles Kernel-level threads directly.
 
-`User Threads` - This space is often referred to as "user land" and all software applications run in the user space. This space has the lowest priority in the kernel scheduling mechanism. In order to understand how the kernel manages these different resources, we need understand some key concepts such as context switches, run queues, and utilization.
+- `User Threads` - This space is often referred to as "user land" and all software applications run in the user space. This space has the lowest priority in the kernel scheduling mechanism. In order to understand how the kernel manages these different resources, we need understand some key concepts such as context switches, run queues, and utilization.
 
 
 ## `sar`
@@ -154,9 +158,9 @@ https://access.redhat.com/solutions/276533
 SAR is provided by the **sysstat** package, which also provides other statistical reporting tools, such as iostat. The sysstat package isn't installed by default.
 
 Configure and enable SAR to start on boot with the below commands:
-```
-# systemctl enable sysstat
-# systemctl start sysstat
+```bash
+sudo systemctl enable sysstat
+sudo systemctl start sysstat
 ```
 
 <br>
@@ -182,13 +186,13 @@ Configure and enable SAR to start on boot with the below commands:
 **Basic Usage**
 
 Print all CPU statistics for today:
-```
-# sar -t -P ALL
+```bash
+sudo sar -t -P ALL
 ```
 
 Display CPU utilization statistics from file sa10:
-```
-# sar -t -u -f /var/log/sa/sa10
+```bash
+sar -t -u -f /var/log/sa/sa10
 ```
 
 
@@ -213,8 +217,11 @@ If you specify only one parameter, it's taken as the refresh interval, then outp
 
 The first line of the report contains the average values since the last time the computer was rebooted. All other lines in the report represent their respective current values. 
 
+```bash
+vmstat 2 5
 ```
-# vmstat 2
+
+```output
 procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
  r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
  2  3      0 3639696   9500 3634812    0    0    43   326   45  357  2  1 96  1  0
@@ -230,7 +237,7 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 
 Meaning of the individual metrics:
 
-```
+```output
 Procs
 
     r: The number of processes waiting for run time.
@@ -259,8 +266,8 @@ The `pidstat` command is used for monitoring individual tasks currently which th
 
 Run following command to check which process is causing issue. Like vmstat option usage, it runs **five** times with **2-second** interval.
 
-```
-pidstat -wt 2 5
+```bash
+sudo pidstat -wt 2 5
 ```
 
 **-w**:  Report task switching activity
@@ -274,7 +281,7 @@ Here's an `pidstat` output while running `stess-ng` command `stress-ng --cpu 2 -
 <br>
 
 **vmstat outputs while high CPU context switch is running**
-```
+```output
 procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
  r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
 107  0      0 5632724  11576 1571512    0    0    41    33   45   33  2  2 96  0  0
@@ -288,7 +295,7 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 
 **pidstat outputs while high CPU context switch is running**
 
-```
+```output
 Linux 4.18.0-553.16.1.el8_10.x86_64 (rhel8)     09/19/2024      _x86_64_       (2 CPU)
 
 06:05:09 AM   UID      TGID       TID   cswch/s nvcswch/s  Command
@@ -335,7 +342,7 @@ A: You can utilize the tools in a script to identify the issue.
 <br>
 A: The following codes obtain the list of threads and show the stack of each thread of Top 3 High CPU processes:
     
-```
+```bash
    for H_PID in $(ps -eo pcpu,pid,ppid,user,args | sort -k1 -r | grep -v PID | head -3 | awk '{print $2}'); do ps -Llp $H_PID; sudo cat /proc/$H_PID/stack; echo; done
 ```
 </details>
