@@ -3,7 +3,7 @@ title: Troubleshoot SBD issues in SUSE Pacemaker Cluster
 description: Provides troubleshooting guidance if SBD services fail
 ms.reviewer: rnirek
 reviwer: rnirek
-ms.author: jsenthil4984
+ms.author: jsenthil
 author: rnirek
 ms.topic: troubleshooting
 ms.date: 09/24/2024
@@ -22,13 +22,13 @@ This article lists the common issues for SBD in SLES Pacemaker Cluster and offer
 
 The SBD (Stonith Block Device) device requires at least one more virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers can, however, be shared with other Pacemaker clusters. The advantage of using an SBD device is that if you're already using SBD devices on-premises, they don't require any changes to how you operate the Pacemaker cluster.
 
-For Azure Pacemaker cluster with SBD fencing mechanism, either of the two options can be used for the setup:
+For Azure Pacemaker cluster with SBD fencing mechanism, either of the two options can be used for the setup. For more information on the two mechanisms, see:
 
 1. [SBD with an iscsi target server](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#sbd-with-an-iscsi-target-server)
 
 2. [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#sbd-with-an-azure-shared-disk)
 
-## Symptom
+## How to diagnose the issue
 If the SBD device isn't accessible on the cluster nodes, the daemon fails to start and inhibit cluster start-up.
 SBD server details can be fetched via message logs or the `iscsiadm` discovery command or `iscsi` service status output as illustrated, where the SBD server IP addresses are reflected.
 
@@ -64,7 +64,7 @@ Aug 01 04:49:15 nfs-0 corosync[24094]:   [QUORUM] Members[2]: 1 2
 Aug 01 04:49:15 nfs-0 corosync[24094]:   [MAIN ] Completed service synchronization, ready to provide service.
 Aug 01 04:49:15 nfs-0 corosync[24075]: Starting Corosync Cluster Engine (corosync): [ OK ]
 ```
-•  Pacemaker service is in failed status due to dependency failure as SBD service is required for pacemaker to start.
+* Pacemaker service is in failed status due to dependency failure as SBD service is required for pacemaker to start.
 
 ```bash
 sudo systemctl status pacemaker
@@ -108,7 +108,7 @@ Aug 01 04:59:07 nfs-0 systemd[1]: Failed to start Shared-storage based fencing d
 Aug 01 04:59:07 nfs-0 systemd[1]: sbd.service: Unit entered failed state.
 Aug 01 04:59:07 nfs-0 systemd[1]: sbd.service: Failed with result 'timeout'.
 ```
-### Resolution:
+### Resolution
 
 1. Ensure correct configuration of setup as mentioned in [SUSE - set up Pacemaker on SUSE Linux Enterprise Server in Azure ](/azure/sap/workloads/high-availability-guide-suse-pacemaker).
 
@@ -126,7 +126,7 @@ sudo systemctl status iscsi
 ```bash
 sudo systemctl status iscsid
 ```
-• The output should look like this:
+* The output should look like this:
 
 ```bash
 sudo systemctl status  iscsi
@@ -151,7 +151,7 @@ Aug 01 04:18:51 nfs-0 systemd[1]: Started Login and scanning of iSCSI devices.
 
 Incorrect SBD configurations like missing or incorrect SBD devices names, syntax errors etc. can cause SBD service to fail.
 
-### Resolution 1:
+### Resolution 1
 Validate the SBD configuration file `/etc/sysconfig/sbd` and ensure it should have  the recommended parameter and the correct SBD devices:
 
 ``` bash
@@ -165,7 +165,7 @@ SBD_MOVE_TO_ROOT_CGROUP=auto
 SBD_OPTS=
 SBD_DEVICE="/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxxx;/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxx;/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxxx”
 ```
-### Resolution 2:
+### Resolution 2
 Validate the Stonith resource configuration using the command:
 
 ```bash
@@ -288,7 +288,7 @@ sudo  lsscsi
 [1:0:0:1]    disk    Msft     Virtual Disk     1.0   /dev/sdd
 [2:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sde
 ```
-• Execute the same commands to connect to the rest of the two devices. Moreover execute same set of commands on the other cluster Node.
+* Execute the same commands to connect to the rest of the two devices. Moreover execute same set of commands on the other cluster Node.
 
 5. Once iscsi devices detected, command output should reflect SBD devices:
 ```bash
@@ -329,7 +329,7 @@ sdg                   8:96   0   50M  0 disk
 
 One of the Nodes fails to join cluster after fencing. SBD is in a failed state and the other node is in pending state.
 
-### Resolution 1: 
+### Resolution 1
 It's possible that the SBD slot isn't in clean state, hence the Node can't rejoin the cluster after fencing reboot.
 Check the SBD status using the following commands (if not clean, the SBD output shows a reset).
 
@@ -349,10 +349,9 @@ sudo lsscsi
 sudo ls -l /dev/disk/by-id/scsi-*
 ```
 ```bash
-sudo sbd -d /dev/sd* list
+sudo sbd -d /dev/sde list
 ```
 ``` output
-sbd -d /dev/sde list
 0       nfs-0   clear
 1       nfs-1   reset  nfs-0
 ```
@@ -367,30 +366,30 @@ sudo grep -i SBD_STARTMODE  /etc/sysconfig/sbd
 ```output
 SBD_STARTMODE=clean
 ```
-• `SBD_STARTMODE`  determines if Node rejoins or not.If set to `always`, then even if a node was previously fenced, it rejoins the cluster. If set to `clean`, then the node rejoins after cleaned state.
+* `SBD_STARTMODE`  determines if Node rejoins or not.If set to `always`, then even if a node was previously fenced, it rejoins the cluster. If set to `clean`, then the node rejoins after cleaned state.
 
 The action is an expected behavior. It detects a fencing type message in the SBD slot for the node and not allows the Node to join the cluster unless manually cleared.
 
-• Syntaxes to be run on node that was previously fenced:
+* Syntaxes to be run on node that was previously fenced:
 
 Example:
 ```bash
 sudo sbd -d <SBD_DEVICE> message LOCAL clear
 ```
-• You may also issue the command from any node in cluster by specifying the node name instead of `LOCAL`
+* You may also issue the command from any node in cluster by specifying the node name instead of `LOCAL`
 
 Example:
 ```bash
 sudo sbd -d <DEVICE_NAME> message <NODENAME> clear
 ```
-• Node name is the node fenced and isn't able to join the cluster:
+* Node name is the node fenced and isn't able to join the cluster:
 ```bash
 sudo sbd -d /dev/sde message nfs-1 clear
 ```
 
 Once the node slot is cleared, you should be able to start Clustering services.
  
-•	If the service fails again, run the commands to fix the issue:
+* If the service fails again, run the commands to fix the issue:
 ```bash
 sudo iscsiadm -m node -u
 ```
@@ -408,7 +407,7 @@ Getting error message `sbd failed; please check the logs` after creating / addin
 Check if you're getting errors while sending/testing messages by SBD devices.
 
 ```bash
-sbd -d  /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 message node1 test
+sudo sbd -d  /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 message node1 test
 ```
 ```output
 sbd failed; please check the logs.
@@ -420,7 +419,7 @@ Mar  2 06:58:06 node1 sbd[11105]: /dev/disk/by-id/scsi-360014056eadbecfeca042d4a
 Mar  2 06:58:06 node1 sbd[11104]: warning: messenger: Process 11105 failed to deliver!
 ```
 
-### Resolution:
+### Resolution
 Whenever we're using SBD as a fencing device and enable it for pacemaker cluster, services should be managed under cluster control. Hence, you cannot start/stop it manually. While enabling and adding any new SBD device in cluster, you should restart the pacemaker cluster to take effect under cluster control.
 
 1. Restart cluster services on all cluster nodes.
@@ -453,14 +452,14 @@ sudo sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
  ## Cause 6: SBD fails to start after SLES 12 to SLES 15 upgrade
  After update or upgrade of a SLES 12 system to SLES 15, iSCSI client information may not be present, causing a failure to connect to remote filesystems over iSCSI.
 
- ### Resoultion:
+ ### Resoultion
+In SLES 15, the deprecated targetcli-fb package was replaced with python3-targetcli-fb or python2-targetcli-fb, resetting systemd service to default (disabled/stopped), requiring manual re-enabling and starting of the targetcli service.
 https://www.suse.com/support/kb/doc/?id=000020323
 
 ## Next Steps
 
 For additional help, open a support request by using the following instructions. When you submit your request, attach `supportconfig` and `hb_report` logs for troubleshooting.
-
-For Reference:
+To get further information about data log collection in SUSE, see:
 https://www.suse.com/support/kb/doc/?id=000019142
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
