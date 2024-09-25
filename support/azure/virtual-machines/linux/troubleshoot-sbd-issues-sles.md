@@ -3,10 +3,10 @@ title: Troubleshoot SBD issues in SUSE Pacemaker Cluster
 description: Provides troubleshooting guidance if SBD services fail
 ms.reviewer: rnirek
 reviwer: rnirek
-ms.author: sentj
-author: HimanginiSisodia
+ms.author: jsenthil4984
+author: rnirek
 ms.topic: troubleshooting
-ms.date: 09/11/2024
+ms.date: 09/24/2024
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
