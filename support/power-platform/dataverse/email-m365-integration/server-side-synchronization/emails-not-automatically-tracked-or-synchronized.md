@@ -18,7 +18,7 @@ Common reasons why an email isn't automatically synchronized include:
 - No known Dataverse users or email queue recipients automatically accept the email based on their [incoming email filtering method configurations](/power-platform/admin/email-message-filtering-correlation).
 - The Dataverse user who owns the receiving mailbox or queue record doesn't have a license or sufficient privileges to synchronize emails. Learn more about [the required privileges for email synchronization](/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync#more-information).
 - The received email isn't in the root inbox of the target mailbox. Emails must remain in the root inbox until they're tracked. Moving emails between folders can cause server-side synchronization to omit them.
-- The mailbox isn't properly configured in the remote email system (Microsoft Exchange or Google Gmail), or there are connectivity issues bewteen the mailbox and the remote email system. Configuration and connectivity errors can be found on the mailbox alert wall.
+- The mailbox isn't properly configured in the remote email system (Microsoft Exchange or Google Gmail), or there are connectivity issues between the mailbox and the remote email system. Configuration and connectivity errors can be found on the mailbox alert wall.
 
 ### Troubleshooting with the "Server-Side Synchronization Item Level Monitoring" dashboard
 
@@ -95,7 +95,7 @@ For more information, see [Set personal options that affect tracking and synchro
 
 :::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/undeliverable-email.png" alt-text="Screenshot that shows an email that is assigned to the Undeliverable category.":::
 
-When server-side synchronization processes an email but can't create an email activity record in Dataverse, the "Undeliverable" category is assigned to the email. This issue typically occurs due to a custom plugin, workflow failure, or privilege issue when processing the email. Privilege issues usually occurs when the user who owns the receiving mailbox or queue doesn't have sufficient privileges to synchronize the email records. Learn more about [the required privileges for email synchronization](/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync#more-information).
+When server-side synchronization processes an email but can't create an email activity record in Dataverse, the "Undeliverable" category is assigned to the email. This issue typically occurs due to a custom plugin, workflow failure, or privilege issue when processing the email. Privilege issues usually occur when the user who owns the receiving mailbox or queue doesn't have sufficient privileges to synchronize the email records. Learn more about [the required privileges for email synchronization](/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync#more-information).
 
 You can review information about **Failed Emails** by inspecting the [Server-Side Synchronization Item Level Monitoring dashboard](#troubleshooting-with-the-server-side-synchronization-item-level-monitoring-dashboard).
 
