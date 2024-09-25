@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot desktop flow run queue-based errors
 description: Provides solutions to desktop flow queue-based error codes like NoCandidateMachine or No machine able to run the desktop flow has been found.
-author: rpapostolis
-ms.author: appapaio
-ms.reviewer: befrey, lulubran
-ms.subservice: power-automate-desktop-flows
+author: rpapostolis # GitHub alias
+ms.author: appapaio # Microsoft alias
+ms.reviewer: befrey, lulubran, johndund, guco, fredg
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ms.date: 09/25/2024
 ---
 # Troubleshoot desktop flow run queue errors
