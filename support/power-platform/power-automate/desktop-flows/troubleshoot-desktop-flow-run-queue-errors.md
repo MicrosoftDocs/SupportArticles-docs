@@ -21,6 +21,8 @@ Your desktop flow might fail to run with the error code `NoCandidateMachine` or 
 You might also receive one of these common sub-error codes:
 
 - [SessionExistsForTheUserWhenUnattended](#sessionexistsfortheuserwhenunattended)
+- [UnattendedUserSessionDisconnected](#unattendedusersessiondisconnected)
+- [UnattendedUserSessionLocked](#unattendedusersessionlocked)
 - [AttendedUserSessionNotActive](#attendedusersessionnotactive)
 - [AttendedUserNotLoggedIn](#attendedusernotloggedin)
 - [UIFlowAlreadyRunning](#uiflowalreadyrunning)
@@ -41,6 +43,22 @@ This occurs when you try to run an unattended desktop flow on a target machine w
 #### Resolution
 
 To resolve the issue, sign out of the session (a locked session will lead to this error), and check that you aren't logged in with the same user on the machine.
+
+## UnattendedUserSessionDisconnected
+
+This error occurs when you try to run an unattended desktop flow on a target machine where there is a disconnected session for the user used in the desktop flow connection.
+
+#### Resolution
+
+To resolve the issue, sign out of the disconnected session, and confirm that you aren't signed in with the same user on the machine.
+
+## UnattendedUserSessionLocked
+
+This error occurs when you try to run an unattended desktop flow on a target machine where there is a locked session for the user used in the desktop flow connection.
+
+#### Resolution
+
+To resolve the issue, sign out of the locked session, and confirm that you aren't signed in with the same user on the machine.
 
 ## AttendedUserSessionNotActive
 
