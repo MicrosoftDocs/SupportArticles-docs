@@ -89,7 +89,7 @@ It's also important to consider how your deployment settings might be delaying t
 - Check your deployment's PDB resource settings to ensure they are accurate for a successful upgrade. For more information, see [AKS workload best practices](/azure/architecture/operator-guides/aks/aks-upgrade-practices).
 
 > [!TIP]
-> To get more insigths about this behavior, you can [view error details on the Activity Log page in the Azure portal](troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal) or review the [resource logs](/azure/aks/monitor-aks-reference#resource-logs) on your cluster.
+> To get more insights about this behavior, you can [view error details on the Activity Log page in the Azure portal](troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal) or review the [resource logs](/azure/aks/monitor-aks-reference#resource-logs) on your cluster.
 
   
 ## My upgrade is reaching the quota (5,000 cluster) limit
