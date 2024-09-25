@@ -109,7 +109,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| NA | This issue occurs when the Windows Update service stops working or isn't running. | Check if the Windows Update service is running. |
+| ERROR_SERVICE_DISABLED| This issue occurs when the Windows Update service stops working or isn't running. | Check if the Windows Update service is running. |
 
 ## 0x800f0821
 

@@ -8114,7 +8114,7 @@
       "source_path": "support/windows-server/deployment/error-0xc004f06c-activate-windows.md",
       "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-0xc004f06c-activate-windows",
       "redirect_document_id": true
-    },    
+    },
     {
       "source_path": "support/windows-server/deployment/error-invalid-data-startup-installing-updates.md",
       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates",
@@ -11823,6 +11823,106 @@
     {
       "source_path": "support/windows-server/backup-and-storage/directaccess-clients-connection-error-0x274d.md",
       "redirect_url": "/troubleshoot/windows-server/networking/directaccess-clients-connection-error-0x274d",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/virtualization/error-occurred-attempt-export-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-occurred-attempt-export-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/event-19050-32022-32032-32056-32315-32546-33680.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-19050-32022-32032-32056-32315-32546-33680",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/events-18210-3041-and-1-hyper-v-replica.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/events-18210-3041-and-1-hyper-v-replica",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/event-id-106-hyper-v-virtual-switch-bound-lbfo-team.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-106-hyper-v-virtual-switch-bound-lbfo-team",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vm-not-reach-vlan-tagging-enabled-network.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vm-not-reach-vlan-tagging-enabled-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vmconnect-fail-to-connect-to-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vmconnect-fail-to-connect-to-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vds-basic-provider-event-id-1.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vds-basic-provider-event-id-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/using-hyper-v-large-sector-drives.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/using-hyper-v-large-sector-drives",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/security-id-structure-invalid.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/security-id-structure-invalid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/virtual-machines-slow-startup-shutdown.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/virtual-machines-slow-startup-shutdown",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/mouse-screen-resolution-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/mouse-screen-resolution-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/importing-a-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/importing-a-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-vm-supported-file-locations.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-vm-supported-file-locations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-virtual-machine-doesnt-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-virtual-machine-doesnt-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/ghost-nic-built-vmware-templates.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/ghost-nic-built-vmware-templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/dynamic-memory-allocation-virtual-machine-not-change.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dynamic-memory-allocation-virtual-machine-not-change",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-storage-caching-layers-data-consistency-requirements.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-storage-caching-layers-data-consistency-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/error-0x80070005-export-vms.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-0x80070005-export-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/enabling-mpio-with-sas-decreases-performance.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/enabling-mpio-with-sas-decreases-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/namespace-not-queried-rpc-server-unavailable.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/namespace-not-queried-rpc-server-unavailable",
       "redirect_document_id": true
     }
   ]

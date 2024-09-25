@@ -98,6 +98,8 @@
       items:
         - name: Activating the setoff rule takes a long time
           href: tax/apac-ind-gst-troubleshooting-setoff-rule-activate-take-long-time.md
+        - name: Assessable value is incorrect
+          href: tax/apac-ind-gst-troubleshooting-assessable-value-incorrect.md
         - name: Default value in tax information fields isn't as expected
           href: tax/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected.md
         - name: Field values are incorrect on the GSTR report
