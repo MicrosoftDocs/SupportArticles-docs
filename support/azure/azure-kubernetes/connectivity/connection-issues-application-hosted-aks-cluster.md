@@ -1,15 +1,15 @@
 ---
 title: Fix connection issues to an app that's hosted in an AKS cluster
 description: Learn about basic troubleshooting steps if you experience connection issues to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 08/28/2024
-ms.reviewer: chiragpa, pkc, rissing, v-leedennis
+ms.date: 09/25/2024
+ms.reviewer: chiragpa, pkc, rissing, ookour, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting steps so that I can successfully connect to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Connectivity
 ---
 # Troubleshoot connection issues to an app that's hosted in an AKS cluster
 
-In today's dynamic cloud environments, ensuring seamless connectivity to applications hosted in Azure Kubernetes Service (AKS) clusters is essential for maintaining optimal performance and user experience. This technical guide provides a comprehensive approach to identifying and resolving connectivity issues that may arise due to various factors, including application-side problems, network policies, NSG rules, and others. By following the steps outlined in this guide, you will be equipped with the knowledge and tools necessary to effectively troubleshoot and mitigate connectivity challenges.
+In current dynamic cloud environments, ensuring seamless connectivity to applications hosted in Azure Kubernetes Service (AKS) clusters is crucial for maintaining optimal performance and user experience. This article covers how to troubleshoot and resolve connectivity issues caused by various factors, including application-side problems, network policies, Network security group (NSG) rules or others.
 
 > [!NOTE]
 > To troubleshoot common issues when you try to connect to the AKS API server, see [Basic troubleshooting of cluster connection issues with the API server](troubleshoot-cluster-connection-issues-api-server.md).
@@ -20,7 +20,7 @@ In today's dynamic cloud environments, ensuring seamless connectivity to applica
 
 - The [apt-get](https://linux.die.net/man/8/apt-get) command-line tool for handling packages.
   
--  The [Netcat](https://linux.die.net/man/1/nc) (`nc`) command-line tool for TCP connections.
+- The [Netcat](https://linux.die.net/man/1/nc) (`nc`) command-line tool for TCP connections.
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, or a similar tool to connect to the cluster. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
@@ -53,7 +53,7 @@ Knowing how to get the HTTP response codes and take packet captures makes it eas
 
 ## Basic network flow for applications on AKS
 
-In general, when applications are exposed using the Azure Load Balancer service type, the request flow for accessing applications is as follows:
+In general, when applications are exposed using the Azure Load Balancer service type, the request flow to access them is as follows:
 
 > Client >> DNS name >> AKS load balancer IP address >> AKS nodes >> Pods
 
@@ -124,7 +124,8 @@ apt-get update -y && apt-get install dnsutils -y && apt-get install curl -y && a
 curl -Iv http://<pod-ip-address>:<port>
 ```
 
-For applications that listen on other protocols, you can install relevant tools inside the test pod like netcat tool, then check the connectivity to the application pod as in the below:
+For applications that listen on other protocols, you can install relevant tools inside the test pod like the netcat tool, and then check the connectivity to the application pod by running the following command:
+
 ```bash
 # After the packages are installed, test the connectivity to the application pod using netcat/nc command:
 nc -z -v <pod-ip-address> <port>
@@ -192,7 +193,9 @@ apt-get update -y && apt-get install dnsutils -y && apt-get install curl -y && a
 # After the packages are installed, test the connectivity to the service:
 curl -Iv http://<service-ip-address>:<port>
 ```
-For applications that listen on other protocols, you can install relevant tools inside the test pod like netcat tool, then check the connectivity to the application pod as in the below:
+
+For applications that listen on other protocols, you can install relevant tools inside the test pod like the netcat tool, and then check the connectivity to the application pod by running the following command:
+
 ```bash
 # After the packages are installed, test the connectivity to the application pod using netcat/nc command:
 nc -z -v <pod-ip-address> <port>
@@ -210,7 +213,8 @@ For the `LoadBalancer` service, you can access the load balancer IP address from
 curl -Iv http://<service-ip-address>:<port>
 ```
 
-For applications that listen on other protocols, you can install relevant tools inside the test pod like netcat tool, then check the connectivity to the application pod as in the below:
+For applications that listen on other protocols, you can install relevant tools inside the test pod like the netcat tool, and then check the connectivity to the application pod by running the following command:
+
 ```bash
 nc -z -v <pod-ip-address> <port>
 ```
