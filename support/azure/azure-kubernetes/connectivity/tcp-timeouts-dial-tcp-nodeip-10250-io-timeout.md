@@ -21,7 +21,7 @@ kubectl logs <pod>
 Error from server: Get "https://aks-agentpool-000000000-vmss000002:10250/containerLogs/vsm-mba-prod/mba-api-app-794f756bc5-5zfpw/technosvc": dial tcp <IP-Address>:10250: i/o timeout
 ```
 ## Solution
-To resolve this issue, allow port 10250 in the network security group as described in this [article](tunnel-connectivity-issues.md).
 
+To resolve this issue, allows traffic for port 10250 as described in this [article](tunnel-connectivity-issues.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
