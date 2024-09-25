@@ -1,7 +1,7 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 09/20/2024
+ms.date: 09/25/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen
 ms.reviewer: v-six
 ---
@@ -57,7 +57,7 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update    | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|-----------|-------------------------------------------------------|--------------------|
-| 16.0.4145.4             | None         | CU15| [KB5041321](sqlserver-2022/cumulativeupdate15.md) | September 20, 2024    |
+| 16.0.4145.4             | None         | CU15| [KB5041321](sqlserver-2022/cumulativeupdate15.md) | September 25, 2024    |
 | 16.0.4140.3             | None         | CU14 + GDR| [KB5042578](https://support.microsoft.com/help/5042578) | September 10, 2024    |
 | 16.0.1125.1             | None         | GDR       | [KB5042211](https://support.microsoft.com/help/5042211) | September 10, 2024    |
 | 16.0.4135.4             | None         | CU14| [KB5038325](sqlserver-2022/cumulativeupdate14.md) | July 23, 2024    |
