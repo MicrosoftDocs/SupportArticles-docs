@@ -13,16 +13,15 @@ ms.custom: sap:Connectivity
 TCP timeouts may be related to blockages of internal traffic between nodes. Verify that this traffic isn't being blocked, such as by [network security groups](/azure/aks/concepts-security#azure-network-security-groups) (NSGs) on the subnet for your cluster's nodes.
 
 ## Symptoms
-Tunnel functionalities (such as logs and code execution) will work for only the pods that are scheduled on the nodes where tunnel pods are scheduled. The other pods won't work because their nodes won't be able to reach the tunnel, and the tunnel is scheduled on other nodes.
+Tunnel functionalities, such as logs and code execution, work only for pods hosted on nodes where tunnel service pods are deployed. Pods on other nodes without tunnel service pods cannot reach to the tunnel. You receive the following error when viewing the logs of these pod.
 
 ```bash
-//commands like `kubectl logs` and `kubectl exec`.
-kubectl logs po/mba-api-app-794f756bc5-5zfpw -n vsm-mba-prod
-Error from server: Get "https://aks-agentpool-12774896-vmss000002:10250/containerLogs/vsm-mba-prod/mba-api-app-794f756bc5-5zfpw/technosvc": dial tcp 10.254.40.226:10250: i/o timeout
+kubectl logs <pod>
+
+Error from server: Get "https://aks-agentpool-000000000-vmss000002:10250/containerLogs/vsm-mba-prod/mba-api-app-794f756bc5-5zfpw/technosvc": dial tcp <IP-Address>:10250: i/o timeout
 ```
 ## Solution
-You need to allow port 10250 as described in this [article](tunnel-connectivity-issues.md).
-
+To resolve this issue, allow port 10250 in the network security group as described in this [article](tunnel-connectivity-issues.md).
 
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
