@@ -1,7 +1,7 @@
 ---
 title: The system cannot find the file specified error
 description: Helps resolve the error - The namespace cannot be queried. The system cannot find the file specified.
-ms.date: 09/24/2024
+ms.date: 09/25/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replicat
 
 This article helps resolve the error "The namespace cannot be queried. The system cannot find the file specified."
 
-When you access, modify, or create a Distributed File System (DFS) namespace on a DFS namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed, you might receive the following error message: 
+When you access, modify, or create a Distributed File System (DFS) namespace on a DFS namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed, you might receive the following error message:
 
 > The namespace cannot be queried. The system cannot find the file specified
 
@@ -25,15 +25,15 @@ A DFS stand-alone namespace configuration will be stored under the following reg
 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\`
 
 > [!NOTE]
-> If in this current broken configuration state, you would restart the DFS server service on the affected DFS namespace server (holding the DFS stand-alone namespace), you'll receive the error "The Namespace cannot be queried. Element not found" while trying to reload or access the DFS stand-alone namespace from the DFS Management console.
+> If in this current broken configuration state, you would restart the DFS server service on the affected DFS namespace server (holding the DFS stand-alone namespace), you'll receive the error "[The Namespace cannot be queried. Element not found](error-element-not-found-dfsn.md)" while trying to reload or access the DFS stand-alone namespace from the DFS Management console.
 
 ### Wireshark trace example
 
 See the following Wireshark trace on a member server or a member client with RSAT File Services tools installed.
 
 ```output
-192.168.0.45	192.168.0.42	NETDFS	310	dfs_GetInfo request
-192.168.0.42	192.168.0.45	NETDFS	214	dfs_GetInfo response, Error: WERR_FILE_NOT_FOUND
+192.168.0.45    192.168.0.42    NETDFS    310    dfs_GetInfo request
+192.168.0.42    192.168.0.45    NETDFS    214    dfs_GetInfo response, Error: WERR_FILE_NOT_FOUND
 ```
 
 ## Import the registry key from a valid registry backup
