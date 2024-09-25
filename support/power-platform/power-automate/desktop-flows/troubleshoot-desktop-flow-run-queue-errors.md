@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot desktop flow run queue-based errors
 description: Provides solutions to desktop flow queue-based error codes like NoCandidateMachine or No machine able to run the desktop flow has been found.
-author: rpapostolis # GitHub alias
-ms.author: appapaio # Microsoft alias
+author: rpapostolis
+ms.author: appapaio
 ms.reviewer: befrey, lulubran
 ms.subservice: power-automate-desktop-flows
-ms.date: 11/15/2023
+ms.date: 09/25/2024
 ---
 # Troubleshoot desktop flow run queue errors
 
@@ -20,10 +20,10 @@ Your desktop flow might fail to run with the error code `NoCandidateMachine` or 
 
 You might also receive one of these common sub-error codes:
 
-- `SessionExistsForTheUserWhenUnattended`
-- `AttendedUserSessionNotActive`
-- `AttendedUserNotLoggedIn`
-- `UIFlowAlreadyRunning`
+- [SessionExistsForTheUserWhenUnattended](#sessionexistsfortheuserwhenunattended)
+- [AttendedUserSessionNotActive](#attendedusersessionnotactive)
+- [AttendedUserNotLoggedIn](#attendedusernotloggedin)
+- [UIFlowAlreadyRunning](#uiflowalreadyrunning)
 
 ## Cause
 
@@ -34,55 +34,52 @@ As mentioned in the error message, this error means that the orchestrator can't 
 > [!IMPORTANT]
 > Power Automate automatically scales the number of concurrent desktop flow runs to the supported maximum value. The machine run queue follows a first-in, first-out approach, which means the first run received is the next one to be executed. If all available machines have reached their maximum concurrent sessions and can't execute the next run in the queue, the queue is blocked until a machine becomes available to run the next run in the queue.
 
-
-## Resolution
-
-Try these steps to resolve errors with the following sub-error codes.
-
-#### SessionExistsForTheUserWhenUnattended
+## SessionExistsForTheUserWhenUnattended
 
 This occurs when you try to run an unattended desktop flow on a target machine where the user used in the desktop flow connection is logged in.
 
-##### Resolution
+#### Resolution
 
 To resolve the issue, sign out of the session (a locked session will lead to this error), and check that you aren't logged in with the same user on the machine.
 
-#### AttendedUserSessionNotActive
+## AttendedUserSessionNotActive
 
 This error usually occurs when you try to run an attended desktop flow on a target machine where the user session is either locked or disconneted. Attended desktop flows can only execute if the machine is unlocked on a session where the current user matches the one in the desktop flow connection.
 
-##### Resolution
+#### Resolution
 
-To resolve the issue:
+To resolve the issue,
+
 - Reconnect on the machine with the user used for attended run and let the session active on the machine.
 - Verify that you're targeting the right machine. To do so, open the machine runtime application and select **View machine in portal** to verify that it brings you to the machine you're targeting in your run.
 
+## AttendedUserNotLoggedIn
 
-#### AttendedUserNotLoggedIn
+This error usually occurs when you try to run an attended desktop flow on a target machine where the user isn't signed in to the machine.
 
-This error usually occurs when you try to run an attended desktop flow on a target machine where the user is not logged into the machine.
+#### Resolution
 
-##### Resolution
+To resolve the issue,
 
-To resolve the issue
 - Connect on the machine with the user used for attended run and let the session active on the machine.
 - Verify that you're targeting the right machine. To do so, open the machine runtime application and select **View machine in portal** to verify that it brings you to the machine you're targeting in your run.
 - Check the credentials used in your connection and make sure they're the ones used in the unlocked session. You can verify your identity by typing `whoami` in any command prompt.
 
->[!NOTE]
-For `AttendedUserSessionNotActive` or `AttendedUserNotLoggedIn` errors, verify that the account that runs the Power Automate service (UIFlowService) has Remote Desktop permissions on the machine. By default, the Power Automate service runs as `NT SERVICE\UIFlowService`. If you didn't change this, verify that `NT SERVICE\UIFlowService` is in the **Remote Desktop Users** group. To do so, go to **Start** > **Run**, type *usrmgr.msc*, select **Groups**, double-click the **Remote Desktop Users** group and verify the account is included. If it's not included, include it (this requires administrator permissions) and restart the machine.
-#### UIFlowAlreadyRunning
+> [!NOTE]
+> For `AttendedUserSessionNotActive` or `AttendedUserNotLoggedIn` errors, verify that the account that runs the Power Automate service (UIFlowService) has Remote Desktop permissions on the machine. By default, the Power Automate service runs as `NT SERVICE\UIFlowService`. If you didn't change this, verify that `NT SERVICE\UIFlowService` is in the **Remote Desktop Users** group. To do so, go to **Start** > **Run**, type _usrmgr.msc_, select **Groups**, double-click the **Remote Desktop Users** group and verify the account is included. If it's not included, include it (this requires administrator permissions) and restart the machine.
+
+## UIFlowAlreadyRunning
 
 When a desktop flow is already running on the machine, this error might occur in one of the following situations:
 
 - You run an attended or unattended desktop flow, and the number of active sessions on the machine has reached its limit.
 - You try to open a session for a user who is already logged in.
 
-##### Resolution
+#### Resolution
 
 To resolve the issue, either wait for the flows that are already running to complete or [cancel their parent cloud flow run](/power-automate/desktop-flows/monitor-desktop-flow-queues#cancel-parent-flow-run).
 
-### Other error codes
+## Other error codes
 
 For information on other error codes that might occur when running desktop flows and steps to mitigate, see [Error code occurs when running an attended or unattended desktop flow](troubleshoot-errors-running-attended-or-unattended-desktop-flows.md).
 
