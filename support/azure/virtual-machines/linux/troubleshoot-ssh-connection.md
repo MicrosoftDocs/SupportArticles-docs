@@ -12,7 +12,7 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 07/22/2024
+ms.date: 09/09/2024
 ms.author: genli
 ---
 # Troubleshoot SSH connections to an Azure Linux VM that fails, errors out, or is refused
@@ -59,7 +59,7 @@ The Azure portal provides a quick way to reset the SSH configuration or user cre
 
 To begin, select your VM in the Azure portal. Scroll down to the **Help** section and select **Reset password** as in the following example:
 
-:::image type="content" source="media/troubleshoot-ssh-connection/reset-credentials-using-portal.png" alt-text="Screenshot to reset the S S H configuration or credentials in the Azure portal.":::
+:::image type="content" source="media/troubleshoot-ssh-connection/reset-credentials-using-portal.png" alt-text="Screenshot to reset the SSH configuration or credentials in the Azure portal.":::
 
 ### Reset the SSH configuration
 

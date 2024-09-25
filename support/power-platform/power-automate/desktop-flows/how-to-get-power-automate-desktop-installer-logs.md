@@ -2,7 +2,7 @@
 title: Power Automate for desktop installation logs
 description: Introduces the locations that contain Power Automate for desktop installation logs.
 ms.reviewer: quseleba, guco
-ms.date: 08/29/2024
+ms.date: 09/13/2024
 ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Power Automate for desktop installation logs
@@ -48,3 +48,7 @@ Follow these steps to view and save the logs:
 4. To save the filtered log file, select **Save Filtered Log File As** and save it as an event file.
 
 :::image type="content" source="media/how-to-get-power-automate-desktop-installer-logs/power-automate-event-viewer-logs.png" alt-text="Screenshot of an example error logged in the Event Viewer.":::
+
+## More information
+
+[Troubleshoot installation issues in Power Automate for desktop](power-automate-desktop-installation-issues.md)
