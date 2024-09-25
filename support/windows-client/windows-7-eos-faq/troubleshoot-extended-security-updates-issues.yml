@@ -8,8 +8,7 @@ metadata:
   manager: dcscontentpm
   audience: itpro
   ms.topic: faq  
-  localization_priority: medium
-  ms.reviewer: v-elj, chawong, squin, scottmca, winciccore, kaushika
+    ms.reviewer: v-elj, chawong, squin, scottmca, winciccore, kaushika
   ms.custom: sap:Windows Eos\Troubleshoot Issues In Esu, csstroubleshoot
   adobe-target: true
 title: Troubleshoot issues in ESU

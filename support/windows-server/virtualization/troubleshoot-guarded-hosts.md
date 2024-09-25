@@ -5,7 +5,6 @@ ms.date: 09/05/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.localizationpriority: medium
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna, ashrana
 ms.custom: sap:Virtualization and Hyper-V\Shielded Virtual Machines, csstroubleshoot
 ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81

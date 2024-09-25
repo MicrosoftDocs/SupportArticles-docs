@@ -8,8 +8,7 @@ metadata:
   manager: dcscontentpm
   audience: itpro
   ms.topic: faq  
-  localization_priority: medium
-  ms.reviewer: kaushika, MBIAS
+    ms.reviewer: kaushika, MBIAS
   ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot  
 title: Frequently asked questions about the GUID Partitioning Table disk architecture
 summary: |

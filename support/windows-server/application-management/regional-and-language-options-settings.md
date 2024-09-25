@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: markreno, kaushika
 ms.custom: sap:Windows Desktop and Shell Experience\Language Packs, Multilingual User Interface (MUI) and Input (IME), csstroubleshoot
 ---

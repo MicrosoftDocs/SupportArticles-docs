@@ -8,8 +8,7 @@ metadata:
   manager: dcscontentpm
   audience: itpro
   ms.topic: faq  
-  localization_priority: medium
-  ms.reviewer: v-elj, chawong, winciccore, kaushika
+    ms.reviewer: v-elj, chawong, winciccore, kaushika
   ms.custom: sap:Windows Eos\General Information, csstroubleshoot  
 title: Frequently asked questions about the Windows 7 end of support
 summary: |
