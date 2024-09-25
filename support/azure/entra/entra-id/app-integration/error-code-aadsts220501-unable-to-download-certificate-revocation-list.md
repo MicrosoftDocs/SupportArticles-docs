@@ -12,4 +12,17 @@ ms.service:  # Add the ms.service or ms.prod value
 ms.topic:    # Add the ms.topic value
 ms.date:     09/25/2024
 ---
-Error AADSTS220501- Unable to download Certificate Revocation List (CRL)
+# Error AADSTS220501- Unable to download Certificate Revocation List (CRL)
+
+![User's image](media/error-code-aadsts220501-unable-to-download-certificate-revocation-list/image.png)
+
+![User's image](media/error-code-aadsts220501-unable-to-download-certificate-revocation-list/image1.png)
+
+![User's image](media/error-code-aadsts220502.png)
+
+![User's image](media/error-code-aadsts220504.png)
+
+![User's image](media/error-code-aadsts220505.png)
+
+
+
