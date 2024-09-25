@@ -1,7 +1,7 @@
 ---
 title: Emails aren't automatically tracked or synchronized
 description: Provides troubleshooting information for the email synchronization issues when you use server-side synchronization in Microsoft Dataverse.
-ms.date: 09/20/2024
+ms.date: 09/25/2024
 ms.custom: sap:E-mail and Microsoft 365 Integration\Set up and configuration of server-side synchronization
 author: rahulmital
 ms.author: rahulmital
@@ -20,24 +20,30 @@ Generally, when an email isn't automatically synchronized, it's commonly due to 
 4. The received email isn't in the _root inbox_ folder of the target mailbox. Emails must remain in the _root inbox_ folder until after they are tracked. Moving emails between folders can cause them to be missed by server-side synchronization.
 5. The mailbox isn't properly configured in the remote email system (Exchange or Gmail), or has connectivity issues to the remote email system. Configuration and connectivity errors can be found on the mailbox alerts wall.
 
-### Using the Server-Side Synchronization Item Level Monitoring dashboard
+### Troubleshooting with the Server-Side Synchronization Item Level Monitoring dashboard
 
-The **Server-Side Synchronization Item Level Monitoring** dashboard can be accessed by selecting the following navigation link in the **Email Configuration Area** within Dataverse.
+You can use the [Server-Side Synchronization Item Level Monitoring](/power-platform/admin/troubleshooting-monitoring-server-side-synchronization#the-server-side-synchronization-item-monitoring-dashboard) dashboard to understand why emails, appointments, contacts, and tasks aren't synchronized.
 
-:::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/server-side -synchronization-item-level-monitoring-dashboard.png" alt-text="Screenshot that shows how to open the Server-Side Synchronization Item Level Monitoring dashboard.":::
+To open the **Server-Side Synchronization Item Level Monitoring** dashboard:
 
-> [!NOTE]
-> Dashboard failures are visible to the user who owns the mailbox or users who have been assigned the out-of-the-box System Administrator security role.
+1. In Microsoft Dataverse, go to **Email Configuration** area, select the following navigation link.
 
-The following screenshot shows a "Question about service" email that isn't automatically tracked due to an [IsvAborted](/troubleshoot/dynamics-365/sales/unknownincomingemailintegrationerror-2147220891) error that occurs during processing. This error indicates a failure within a plugin or workflow which would need to be addressed by the solution owner.
+   :::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/server-side -synchronization-item-level-monitoring-dashboard.png" alt-text="Screenshot that shows how to open the Server-Side Synchronization Item Level Monitoring dashboard.":::
 
-:::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/question-about-service-email-example.png" alt-text="Screenshot that shows an IsvAborted error that occurs in a Question about service email.":::
+   > [!NOTE]
+   > Dashboard failures are visible to the user who owns the mailbox or users who has the out-of-the-box System Administrator security role.
 
-In the following example, the "Can we meet tomorrow?" email isn't automatically tracked due to a [NoCorrelationMatch](/troubleshoot/dynamics-365/sales/email-fails-to-create-with-nocorrelationmatch-error) error. This error occurs because none of the resolved (known) Dataverse recipients of the email automatically accept it based on their [personal option settings](/power-platform/admin/email-message-filtering-correlation).
+2. The **Sync Error** column contains information about why the item didn't synchronize. Selecting the link directs you to an article for the error, if one exists. For example,
 
-:::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/can-we-meet-tomorrow-email-example.png" alt-text="Screenshot that shows an NoCorrelationMatch error that ccurs in a Can we meet tomorrow email.":::
+   - This screenshot shows a "Question about service" email that isn't automatically tracked due to an [IsvAborted](/troubleshoot/dynamics-365/sales/unknownincomingemailintegrationerror-2147220891) error that occurs during processing. This error indicates a failure within a plugin or workflow which would need to be addressed by the solution owner.
 
-### Review mailbox alerts
+     :::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/question-about-service-email-example.png" alt-text="Screenshot that shows an IsvAborted error that occurs in a Question about service email.":::
+
+   - This screenshot shows a "Can we meet tomorrow?" email that isn't automatically tracked due to a [NoCorrelationMatch](/troubleshoot/dynamics-365/sales/email-fails-to-create-with-nocorrelationmatch-error) error. This error occurs because none of the resolved (known) Dataverse recipients of the email automatically accept it based on their [personal option settings](/power-platform/admin/email-message-filtering-correlation).
+
+     :::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/can-we-meet-tomorrow-email-example.png" alt-text="Screenshot that shows an NoCorrelationMatch error that ccurs in a Can we meet tomorrow email.":::
+
+### Troubleshooting by reviewing mailbox alerts
 
 You can also review the **Alerts** in the intended Dataverse recipient mailboxes. It also contain helpful information about processing errors. To get the information,
 
@@ -56,7 +62,7 @@ For example, the following alert message indicates that emails can't be processe
 
 A close examination of the error reveals that the workflow tries to set regarding to a contact which no longer exists in the system, thus causing the creation of the email to fail.
 
-### Specific emails aren't automatically tracked as expected
+## Specific emails aren't automatically tracked as expected
 
 Emails in the _Inbox_ folder are automatically tracked by server-side synchronization into Dataverse if any of the resolved (known) user or queue recipients of a given email accept the email based on their [incoming email filtering method configuration](/power-platform/admin/email-message-filtering-correlation). For more information, see:
 
@@ -75,7 +81,7 @@ To narrow down why an email might not be automatically tracked, check each of th
 
 3. Ensure that the recipient email addresses in Exchange or Gmail match the corresponding email address of the Dataverse user or queue mailbox.
 
-### Distribution groups and BCC recipients
+## Troublechooting issues with distribution groups and BCC recipients
 
 Dataverse will resolve the recipient email addresses on the email to known Dataverse user or queue records. As such, if the recipient email addresses include a dstribution group or have been included as "BCC" recipients, Dataverse can't resolve these recipients to known Dataverse users or queues.
 
@@ -89,7 +95,7 @@ For more information, see [Set personal options that affect tracking and synchro
 
 The "Undeliverable" category is assigned to emails if server-side synchronization processes the email but can't create the email activity record in Dataverse. This will typically occur due to a custom plugin or workflow failure, or a privilege issue when processing the email. Privilege issues will commonly occur when the user who owns the receiving mailbox or queue doesn't have sufficient privileges to synchronize email records. [Learn more about the required privileges for email synchronization](/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync).
 
-You can review information about **Failed Emails** by inspecting the [Server-Side Synchronization Item Level Monitoring dashboard](#using-the-server-side-synchronization-item-level-monitoring-dashboard).
+You can review information about **Failed Emails** by inspecting the [Server-Side Synchronization Item Level Monitoring dashboard](#troubleshooting-with-the-server-side-synchronization-item-level-monitoring-dashboard).
 
 ## Emails replies sent from Outlook aren't automatically synchronized using server-side synchronization
 
