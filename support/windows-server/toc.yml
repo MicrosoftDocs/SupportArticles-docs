@@ -1247,6 +1247,8 @@ items:
       href: ./networking/target-account-name-incorrect-error-access-file-share.md
     - name: 'Error "The RPC server is unavailable"'
       href: ./networking/namespace-not-queried-rpc-server-unavailable.md
+    - name: 'Error "The specified domain either does not exist or cannot be contacted"'
+      href: ./networking/error-specified-domain-not-exist-cannot-contacted.md
     - name: Error messages on SMB connections
       href: ./networking/error-messages-smb-connections.md
     - name: Fail to open file shares or Group Policy snap-ins
