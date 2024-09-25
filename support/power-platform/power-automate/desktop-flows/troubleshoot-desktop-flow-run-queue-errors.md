@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 5004537
 
 Your desktop flow might fail to run with the error code `NoCandidateMachine` or the error details "No machine able to run the desktop flow has been found."
 
-You might also receive one of these common sub-error codes:
+You might also receive one of these common suberror codes:
 
 - [SessionExistsForTheUserWhenUnattended](#sessionexistsfortheuserwhenunattended)
 - [UnattendedUserSessionDisconnected](#unattendedusersessiondisconnected)
@@ -46,7 +46,7 @@ To resolve the issue, sign out of the session (a locked session will lead to thi
 
 ## UnattendedUserSessionDisconnected
 
-This error occurs when you try to run an unattended desktop flow on a target machine where there is a disconnected session for the user used in the desktop flow connection.
+This error occurs when you try to run an unattended desktop flow on a target machine where there's a disconnected session for the user used in the desktop flow connection.
 
 #### Resolution
 
@@ -54,7 +54,7 @@ To resolve the issue, sign out of the disconnected session, and confirm that you
 
 ## UnattendedUserSessionLocked
 
-This error occurs when you try to run an unattended desktop flow on a target machine where there is a locked session for the user used in the desktop flow connection.
+This error occurs when you try to run an unattended desktop flow on a target machine where there's a locked session for the user used in the desktop flow connection.
 
 #### Resolution
 
@@ -62,7 +62,7 @@ To resolve the issue, sign out of the locked session, and confirm that you aren'
 
 ## AttendedUserSessionNotActive
 
-This error usually occurs when you try to run an attended desktop flow on a target machine where the user session is either locked or disconneted. Attended desktop flows can only execute if the machine is unlocked on a session where the current user matches the one in the desktop flow connection.
+This error usually occurs when you try to run an attended desktop flow on a target machine where the user session is either locked or disconnected. Attended desktop flows can only execute if the machine is unlocked on a session where the current user matches the one in the desktop flow connection.
 
 #### Resolution
 
@@ -103,7 +103,7 @@ For information on other error codes that might occur when running desktop flows
 
 ## More information
 
-If the sub-error code isn't provided, check if:
+If the suberror code isn't provided, check if:
 
 - The machine or all machines in the machine group are offline.
 
