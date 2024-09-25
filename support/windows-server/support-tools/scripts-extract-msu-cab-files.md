@@ -5,7 +5,7 @@ ms.date: 09/25/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.localizationpriority: medium
+localization_priority: medium
 ms.reviewer: kaushika, warrenw, v-lianna, jpsantho, abjos
 ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
 ---
