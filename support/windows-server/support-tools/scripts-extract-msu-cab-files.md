@@ -1,7 +1,7 @@
 ---
 title: Scripts to extract .msu and .cab files 
 description: Provides a script to extract .msu and .cab files.
-ms.date: 07/26/2024
+ms.date: 09/25/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -64,6 +64,9 @@ Write-Host
 # Remove quotes if present
 $filePath = $filePath -replace '"', ''
 $destinationPath = $destinationPath -replace '"', ''
+
+# Trim trailing backslash if present
+$destinationPath = $destinationPath.TrimEnd('\')
 
 if (-not (Test-Path $filePath -PathType Leaf)) {
     Write-Host "The specified file does not exist: $filePath"
