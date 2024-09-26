@@ -1,8 +1,8 @@
 ---
 title: Client IP address can't access the API server
 description: Troubleshoot issues caused when the client IP address can't access the API server on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 04/16/2024
-ms.reviewer: rissing, chiragpa, v-leedennis
+ms.date: 09/26/2024
+ms.reviewer: rissing, chiragpa, jaewonpark, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want the AKS API server to allow access to my client IP address so that I can successfully connect to my AKS cluster.
 ms.custom: sap:Connectivity
@@ -18,13 +18,29 @@ This article describes how to fix issues that occur when you can't connect to an
 
 ## Symptoms
 
-You may see such errors as:
+### [Azure portal](#tab/azure-portal)
+
+When you try to access Kubernetes resources such as Namespaces and Workloads from the Azure portal, you might encounter the following errors:
+
+> Network error
+>
+> Unable to reach the api server 'https://<API-SERVER-FQDN>' or api server is too busy to respond. Check your network settings and refresh to try again.
+
+:::image type="content" source="media/client-ip-address-cannot-access-api-server/network-error.png" alt-text="Screenshot of Namespaces in the AKS resource." lightbox="media/client-ip-address-cannot-access-api-server/network-error.png":::
+
+### [Azure CLI](#tab/azure-cli)
+
+When you try to connect to a cluster using the Azure CLI, you might see the following errors:
 
 ```output
+"Unhandled Error" err="couldn't get current server API group list: Get \"https://<API-SERVER-FQDN>:443/api?timeout=32s\": dial tcp <API-SERVER-IP>:443: i/o timeout"
+
 Unable to connect to the server: dial tcp <API-SERVER-IP>:443: i/o timeout
 
 Unable to connect to the server: dial tcp <API-SERVER-IP>:443: connectex: A connection attempt failed because the connected party did not properly respond after a period, or established connection failed because connected host has failed to respond.
 ```
+
+---
 
 ## Cause
 
@@ -46,6 +62,14 @@ Look at the cluster's API server-authorized ranges, and add your client's IP add
 >
 > 1. Also ask your cluster administrator before you add your client IP address, because there might be security concerns with adding a temporary IP address to the list of authorized ranges.
 
+### [Azure portal](#tab/azure-portal)
+
+Update the API server-authorized range as shown in the following screenshot:
+
+:::image type="content" source="media/client-ip-address-cannot-access-api-server/authorized-ip-ranges.png" alt-text="Screenshot of Authorized-ip-ranges pane."  lightbox="media/client-ip-address-cannot-access-api-server/authorized-ip-ranges.png":::
+
+### [Azure CLI](#tab/azure-cli)
+
 1. Get your client IP address by running this [curl](https://curl.se/docs/manpage.html) command:
 
     ```output
@@ -60,5 +84,6 @@ Look at the cluster's API server-authorized ranges, and add your client's IP add
         --name <cluster-name> \
         --api-server-authorized-ip-ranges <ip-ranges-that-include-your-client-ip-address>
     ```
+---
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
