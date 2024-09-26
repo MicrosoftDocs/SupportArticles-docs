@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot domain controller location issues in Windows
 description: Helps troubleshoot domain controller location issues in Windows.
-ms.date: 09/24/2024
+ms.date: 09/26/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
