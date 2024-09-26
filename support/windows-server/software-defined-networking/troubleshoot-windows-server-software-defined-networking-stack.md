@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, grcusanz, anpaul, v-lianna
 ms.custom: sap:Software Defined Networking\Internal Name Resolution for SDN, csstroubleshoot
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5

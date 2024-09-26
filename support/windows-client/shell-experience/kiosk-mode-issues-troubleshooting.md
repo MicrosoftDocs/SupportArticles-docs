@@ -7,7 +7,6 @@ ms.topic: troubleshooting
 ms.custom: sap:Windows Desktop and Shell Experience\Kiosk Mode , csstroubleshoot
 ms.reviewer: sybruckm, aaroncz,lizlong
 audience: itpro
-localization_priority: medium
 ---
 # Troubleshoot kiosk mode issues
 

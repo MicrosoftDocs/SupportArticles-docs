@@ -5,7 +5,6 @@ ms.date: 09/12/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.localizationpriority: medium
 ms.reviewer: kaushika, waltere, nedpyle, nkechiharris
 ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---

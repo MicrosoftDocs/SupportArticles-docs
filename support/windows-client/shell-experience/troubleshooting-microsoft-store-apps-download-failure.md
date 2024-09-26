@@ -7,7 +7,6 @@ audience: itpro
 ms.topic: troubleshooting
 ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
 ms.reviewer: winciccore, warrenw
-localization_priority: medium
 ---
 # Troubleshoot Microsoft Store app download failures
 

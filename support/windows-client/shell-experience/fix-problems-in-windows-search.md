@@ -5,7 +5,6 @@ ms.date: 09/24/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: high
 ms.reviewer: kaushika, v-tappelgate, rafern
 ms.custom: sap:Windows Desktop and Shell Experience\Windows Search, csstroubleshoot
 ---

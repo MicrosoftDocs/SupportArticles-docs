@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, vlvasque, shasankp, ansol, v-lianna
 ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Adding node, csstroubleshoot, ikb2lmc
 ---

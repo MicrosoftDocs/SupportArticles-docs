@@ -5,7 +5,6 @@ ms.date: 04/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Group Policy\Managing network configuration (mapped drives, 802.1x) via group policy, csstroubleshoot
 ---

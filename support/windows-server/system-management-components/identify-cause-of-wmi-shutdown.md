@@ -5,7 +5,6 @@ ms.date: 07/23/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: gbrag
 ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
