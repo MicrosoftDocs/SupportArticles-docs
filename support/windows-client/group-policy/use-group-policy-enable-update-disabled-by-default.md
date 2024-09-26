@@ -5,7 +5,6 @@ ms.date: 05/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-lianna, v-tanjoh, ptomas
 ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 ---

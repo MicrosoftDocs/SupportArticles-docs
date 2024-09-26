@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, bchee
 ms.custom: sap:Windows Desktop and Shell Experience\Media issues with in-box apps (Windows Media Player, Groove, Movies and TV), csstroubleshoot
 ---

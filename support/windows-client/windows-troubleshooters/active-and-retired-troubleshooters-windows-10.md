@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, fangmikko
 ms.custom: sap:Support Tools\Windows Troubleshooters , csstroubleshoot
 ---

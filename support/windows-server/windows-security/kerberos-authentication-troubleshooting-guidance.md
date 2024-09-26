@@ -6,7 +6,6 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
-localization_priority: medium
 ms.reviewer: kaushika, raviks, v-lianna
 ---
 # Kerberos authentication troubleshooting guidance
