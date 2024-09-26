@@ -24,7 +24,7 @@ When you try to access Kubernetes resources such as Namespaces and Workloads fro
 
 > Network error
 >
-> Unable to reach the api server 'https://<API-SERVER-FQDN>' or api server is too busy to respond. Check your network settings and refresh to try again.
+> Unable to reach the api server 'https://<API-server-FQDN>' or api server is too busy to respond. Check your network settings and refresh to try again.
 
 :::image type="content" source="media/client-ip-address-cannot-access-api-server/network-error.png" alt-text="Screenshot of Namespaces in the AKS resource." lightbox="media/client-ip-address-cannot-access-api-server/network-error.png":::
 
