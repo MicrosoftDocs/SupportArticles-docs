@@ -180,7 +180,7 @@ Konnectivity relies on port 443. By default, this port is open. Therefore, you d
 
 ### Solution 4: Open port 9000
 
-Although `tunnel-front` has moved to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), some AKS clusters still use `tunnel-front`, relying on port 9000. Make sure that the virtual appliance or any network device/software allows access to port 9000. For more information about the required rules and dependencies, see [Azure Global required network rules](/azure/aks/limit-egress-traffic#azure-global-required-network-rules).
+Although `tunnel-front` has been moved to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), some AKS clusters still use `tunnel-front`, which relies on port 9000. Make sure that the virtual appliance or any network device or software allows access to port 9000. For more information about the required rules and dependencies, see [Azure Global required network rules](/azure/aks/limit-egress-traffic#azure-global-required-network-rules).
 
 ## Cause 5: Source Network Address Translation (SNAT) port exhaustion
 
