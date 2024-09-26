@@ -1126,7 +1126,7 @@ items:
     - name: Problem with deleting nodes from active failover cluster membership
       href: ./high-availability/problem-nodes-failover-cluster.md
     - name: Remove nodes from active failover cluster membership
-      href: ./high-availability/nodes-failover-cluster-vmware.md  
+      href: ./high-availability/nodes-failover-cluster-vmware.md
   - name: Root cause of an unexpected failover
     items:
     - name: 'Troubleshooting guidance: Unexpected cluster failover'
@@ -1245,16 +1245,18 @@ items:
       href: ./networking/dns-cname-alias-cannot-access-smb-file-server-share.md
     - name: Domain users fail to access a share on a file server
       href: ./networking/target-account-name-incorrect-error-access-file-share.md
-    - name: 'Error "Element not found" with DFS namespaces'
+    - name: Error "Element not found" with DFS namespaces
       href: ./networking/error-element-not-found-dfsn.md
-    - name: 'Error "The remote procedure call failed"'
+    - name: Error "The remote procedure call failed"
       href: ./networking/error-remote-procedure-call-failed.md
-    - name: 'Error "The RPC server is unavailable"'
+    - name: Error "The RPC server is unavailable"
       href: ./networking/namespace-not-queried-rpc-server-unavailable.md
-    - name: 'Error "The specified domain either does not exist or cannot be contacted"'
+    - name: Error "The specified domain either does not exist or cannot be contacted"
       href: ./networking/error-specified-domain-not-exist-cannot-contacted.md
-    - name: 'Error "The specified server cannot perform the requested operation"'
+    - name: Error "The specified server cannot perform the requested operation"
       href: ./networking/error-specified-server-cannot-perform-requested-operation.md
+    - name: 'Error "The system cannot find the file specified"'
+      href: ./networking/error-system-cannot-find-file-specified.md
     - name: Error messages on SMB connections
       href: ./networking/error-messages-smb-connections.md
     - name: Fail to open file shares or Group Policy snap-ins
@@ -2677,32 +2679,16 @@ items:
     items:
     - name: Feature and performance optimization of HVR
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
-    - name: Hyper-V replication is suspended at system shutdown
-      href: ./virtualization/hyper-v-replication-suspended-system-shutdown.md
   - name: Installation and configuration of Hyper-V
     items:
     - name: Antivirus exclusions for Hyper-V hosts
       href: ./virtualization/antivirus-exclusions-for-hyper-v-hosts.md
-    - name: Can't import a virtual machine
-      href: ./virtualization/cant-import-virtual-machine.md
-    - name: Event 7000 after installing the Hyper-V role
-      href: ./virtualization/event-7000-installing-hyper-v-role-windows-server.md
-    - name: Hyper-V VMM service fails with event ID 14050
-      href: ./virtualization/hyper-v-vmm-service-fails-event-id-14050.md
-    - name: Incompatible version errors are logged
-      href: ./virtualization/incompatible-version-errors-are-logged.md
     - name: Issues when starting VM or installing Hyper-V
       href: ./virtualization/bios-update-for-hyper-v.md
-    - name: Recommended hotfixes, updates, and known solutions
-      href: ./virtualization/hotfixes-updates-known-solutions.md
-    - name: Recommended updates for Windows Server 2012 R2 Hyper-V environments
-      href: ./virtualization/updates-for-windows-server-2012-r2-hyper-v.md
     - name: Run programs on non-Microsoft hardware virtualization software
       href: ./virtualization/software-runs-on-non-microsoft-virtualization-software.md
     - name: SCVMM P2V fails with error 0x80070005
       href: ./virtualization/scvmm-p2v-fails-with-error-2910.md
-    - name: Specifications for supported emulated and synthetic hardware
-      href: ./virtualization/emulated-synthetic-hardware-specification.md
     - name: Support and installation instructions for AMD EPYC 9004 Series server processors
       href: ./virtualization/support-and-installation-instructions-for-amd-epyc-9004-series-server-processors.md
     - name: Support Policy for NIC Teaming with Hyper-V
@@ -2715,8 +2701,6 @@ items:
     items:
     - name: Degraded integration services message for non-Windows guests
       href: ./virtualization/degraded-integration-services-message.md
-    - name: Event ID 4096 is logged in Hyper-V host
-      href: ./virtualization/event-id-4096.md
     - name: Hyper-V Time Synchronization doesn't adjust the VM system clock
       href: ./virtualization/virtual-machine-time-not-synced.md
     - name: Unknown devices in Device manager
@@ -3102,7 +3086,7 @@ items:
     - name: Scripts to retrieve profile age
       href: ./support-tools/scripts-to-retrieve-profile-age.md
     - name: Scripts to retrieve profile age and optionally delete aged copies
-      href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md    
+      href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
