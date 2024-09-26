@@ -1,7 +1,7 @@
 ---
 title: Incoming emails are unexpectedly synchronized or contain unexpected or missing data
 description: Provides troubleshooting information for the incoming emails are unexpectedly synchronized or contain unexpected or missing data issue in Microsoft Dataverse.
-ms.date: 09/25/2024
+ms.date: 09/26/2024
 ms.custom: sap:E-mail and Microsoft 365 Integration\Set up and configuration of server-side synchronization
 author: rahulmital
 ms.author: rahulmital
@@ -14,7 +14,7 @@ This article provides troubleshooting information for the incoming email synchro
 
 ### Symptoms
 
-The following email is addressed to a single recipient in Exchange, but it's resolved to both a user and queue that share the same email address in Dataverse.
+The following email is addressed to a single recipient in Microsoft Exchange, but it's resolved to both a user and queue that share the same email address in Dataverse.
 
 :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/email-resolved-to-user-and-queue.png" alt-text="Screenshot that shows an email example that is resolved to both a user and queue that share the same email address in Dataverse.":::
 
@@ -30,15 +30,15 @@ Paul Cannon's user settings:
 
 ### Cause
 
-Server-side synchronization will automatically track emails based on the [incoming email filtering method configuration](/power-platform/admin/email-message-filtering-correlation) specified for each identified (resolved) Dataverse recipient. A Dataverse recipient is resolved by locating the applicable user and queue mailboxes associated with the email addresses found in the **To**, **Cc**, and **Bcc** fields on the received email from the external system (Exchange or Gmail). Therefore, if an email address is associated with more than one Dataverse mailbox with different incoming email filtering method settings, emails might unexpectedly synchronize into the system. You can examine the **To**, **Cc**, and **Bcc** fields on the email in Dataverse to identify unexpected Dataverse recipients.
+Server-side synchronization automatically tracks emails based on the [incoming email filtering method configuration](/power-platform/admin/email-message-filtering-correlation) specified for each identified (resolved) Dataverse recipient. A Dataverse recipient is resolved by locating the applicable user and queue mailboxes associated with the email addresses found in the **To**, **Cc**, and **Bcc** fields on the received email from the external system (Exchange or Google Gmail). Therefore, if an email address is associated with more than one Dataverse mailbox with different incoming email filtering method settings, emails might unexpectedly synchronize into the system. You can examine the **To**, **Cc**, and **Bcc** fields on the email in Dataverse to identify unexpected Dataverse recipients.
 
 ### Resolution
 
 If an email is unexpectedly synchronized into the system, you can identify the Dataverse mailbox that automatically accepted the email by examining the following properties of the synchronized email in Dataverse.
 
-- **Accepting Entity**: The user or queue that receives the email and is configured to automatically track it. For example, if a queue named "Customer Service" that is configured to track all emails receives an email, then the "Customer Service" queue is considered the Accepting Entity.
+- **Accepting Entity**: The user or queue that receives the email and is configured to automatically track it. For example, if a queue named "Customer Service" that is configured to track all emails receives an email, the "Customer Service" queue is considered the Accepting Entity.
   > [!NOTE]
-  > This column will be empty for manually tracked emails. In this case, you can refer to the **Created by** column.
+  > This column is empty for manually tracked emails. In this case, you can refer to the **Created by** column.
 - **Receiving Mailbox**: The mailbox that's processed when server-side synchronization detects that an email contains a user or queue that's configured to automatically track it.
   > [!IMPORTANT]
   > The value of this column can be different from the **Accepting Entity**. For example, suppose Paul Cannon, who is set up to automatically track replies to existing emails, receives a message. The "Customer Service" queue, which is set up to track all emails, receives the same message. Server-side synchronization might process Paul's mailbox first and recognize that another recipient, "Customer Service", is configured to automatically track the email. In this case, the **Accepting Entity** is the "Sales" queue, but the **Receiving Mailbox** is Paul's.
@@ -47,15 +47,15 @@ If an email is unexpectedly synchronized into the system, you can identify the D
 > These fields don't appear on the Email form by default. You can add them to the form or to an **Advanced Find** view to see their values.
 > :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/accepting-entity-receiving-mailbox.png" alt-text="Screenshot that shows the Accepting Entity and Receiving Mailbox properties.":::
 
-Once the **Accepting Entity** is identified, you can change the incoming email filtering method of the user or queue to prevent future occurrences if needed by referring to [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
+Once the **Accepting Entity** is identified, you can change the incoming email filtering method of the user or queue to prevent future occurrences. To do so, see [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
 
 ## Duplicate emails are tracked or synchronized in Dataverse
 
-Server-side synchronization can be configured to allow users to automatically create sent and received copies of the same email if the email meets the user's [incoming email filtering method](/power-platform/admin/email-message-filtering-correlation). To avoid duliplicate emails to be tracked or synchronized,
+Server-side synchronization can be configured to allow users to automatically create sent and received copies of the same email if the email meets the user's [incoming email filtering method](/power-platform/admin/email-message-filtering-correlation). To avoid duplicate emails to be tracked or synchronized:
 
-1. In Dataverse, select the gear icon > **Advanced Settings**
+1. In Dataverse, select the gear icon > **Advanced Settings**.
 2. Navigate to **Settings** > **Email Configuration** > **Email Configuration Settings**.
-3. Clear the **Track emails sent between Dyanmics 365 users as two activities** option under the **Set tracking options for emails between Microsoft Dynamics 365 users** setting.
+3. Under the **Set tracking options for emails between Microsoft Dynamics 365 users** setting, clear the **Track emails sent between Dyanmics 365 users as two activities** option.
 
    :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/track-emails-sent-between-dynamics-365-as-two-activities.png" alt-text="Screenshot that shows the Set tracking options for emails between Microsoft Dynamics 365 users setting.":::
 
@@ -63,7 +63,7 @@ For more information about how the system detects if an email should be automati
 
 ### More scenarios
 
-The previous system setting is intended to apply to email messages sent between users. However, even if the **Track emails sent between Dyanmics 365 users as two activities** setting is disabled, duplicate emails can still be created based on a recipient's incoming email filtering method if a queue is a sender or recipient of an email.
+The previous system setting is intended to apply to email messages sent between users. However, even if the **Track emails sent between Dynamics 365 users as two activities** setting is disabled, duplicate emails can still be created based on a recipient's incoming email filtering method if a queue is a sender or recipient of an email.
 
 These scenarios are:
 
@@ -90,19 +90,19 @@ Server-side synchronization uses the [Process Email From](/power-platform/admin/
 - If you have already tested and enabled a mailbox that uses an old date, you can customize the mailbox form and add the **Process Email From** attribute so that you can update it to use a newer value. The update takes effect on the next cycle.
 
   > [!NOTE]
-  > The system will always utilize the greater value between the **Process Email From** date on the email server profile and the mailbox.
+  > The system always utilizes the greater value between the **Process Email From** date on the email server profile and the mailbox.
 
-For more information about how the Process Email From date influences synchronization, see [Best practices for server-side synchronization](/power-platform/admin/best-practices-server-side-synchronization#considerations).
+For more information about how the **Process Email From** date influences synchronization, see [Best practices for server-side synchronization](/power-platform/admin/best-practices-server-side-synchronization#considerations).
 
 ## Synchronized emails contain unexpected sender or recipient parties in Dataverse
 
 Server-side synchronization performs email address resolution on all sender and recipient email addresses when synchronizing incoming emails into the system. This is done by retrieving all records in Dataverse which are associated with a given email address. When a match is found, the system associates one or more located records as an [activity party](/power-apps/developer/data-platform/activityparty-entity) on the email.
 
 > [!NOTE]
-> A column in Dataverse that has a format type of "[Email](/power-apps/developer/data-platform/data-type-format-conversions)" will participate in email address resolution.
+> A column in Dataverse that has a format type of "[Email](/power-apps/developer/data-platform/data-type-format-conversions)" is involved in email address resolution.
 > :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/format-type-is-email.png" alt-text="Screenshot that shows the Email format type of a column.":::
 
-As a result, if an email address is associated with more than one Dataverse record (such as an email address being shared between a user and queue), then all resolved recipients appear in their respective recipient fields. For example, in the below screenshot, Paul Cannon's email address is associated with both the user's mailbox and a queue, causing both of them to appear as recipients even though Paul Cannon's email address only appears a single time in the received email in Exchange.
+As a result, if an email address is associated with more than one Dataverse record (such as an email address shared between a user and queue), all resolved recipients appear in their respective recipient fields. For example, in the following screenshot, Paul Cannon's email address is associated with both the user's mailbox and a queue. Even though Paul Cannon's email address only appears once in the received email in Exchange, both of them appear as recipients.
 
 :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/email-address-associated-with-user-and-queue.png" alt-text="Screenshot that shows an email address that's associated with both the user's mailbox as well as a queue.":::
 
@@ -115,7 +115,7 @@ Likewise, if an email address isn't associated with a known Dataverse record, th
 
 #### Sender resolution order
 
-Because an email can only have a single sender, when the sender's email address is associated with multiple Dataverse records, the system utilizes a priority order to determine the sender activity party. For more information about this behavior, see [Associate an email address with a row](/power-platform/admin/associate-email-address).
+Because an email can only have a single sender, when the sender's email address is associated with multiple Dataverse records, the system utilizes a priority order to determine the sender activity party. For more information, see [Associate an email address with a row](/power-platform/admin/associate-email-address).
 
 ## Synchronized emails have unexpected owners in Dataverse
 
