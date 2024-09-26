@@ -76,17 +76,17 @@ To narrow down why an email might not be automatically tracked, check each of th
     - If you try to automatically track email responses sent from Outlook (in your _Sent Items_ folder), see [Welcome to Alchemy Portal](https://alchemyportal.azurewebsites.net/#autotracksentfolderitems).
     - If you want to track emails that were moved to subfolders, you need to enable [Folder-Based tracking](/power-platform/admin/configure-outlook-exchange-folder-level-tracking).
 
-2. Examine the recipient email addresses in the **To:** and **Cc:** lines and ensure that at least one of them is associated with a Dataverse mailbox, which is [tested and enabled](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) for server-side synchronization and is configured to automatically track the email based on its associated incoming email filtering method. If the email is sent to a distribution group or has a "BCC" recipient, see [this topic](https://alchemyportal.azurewebsites.net/#DLNote) to ensure that the underlining Dataverse mailbox is correctly configured.
+2. Examine the recipient email addresses in the **To:** and **Cc:** lines and ensure that at least one of them is associated with a Dataverse mailbox, which is [tested and enabled](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) for server-side synchronization and is configured to automatically track the email based on its associated incoming email filtering method. If the email is sent to a distribution group or has a Bcc recipient, see [this topic](https://alchemyportal.azurewebsites.net/#DLNote) to ensure that the underlining Dataverse mailbox is correctly configured.
 
 3. Ensure that the recipient email addresses in Exchange or Gmail match the corresponding email address of the Dataverse user or queue mailbox.
 
-## Distribution groups and BCC recipients can't be automatically tracked
+## Distribution groups and Bcc recipients can't be automatically tracked
 
-Dataverse will resolve the recipient email addresses on the email to known Dataverse users or queue records. Therefore, if the recipient email addresses include a distribution group or are included as "BCC" recipients, Dataverse can't resolve these recipients to known Dataverse users or queues.
+Dataverse will resolve the recipient email addresses on the email to known Dataverse users or queue records. Therefore, if the recipient email addresses include a distribution group or are included as Bcc recipients, Dataverse can't resolve these recipients to known Dataverse users or queues.
 
 ### Resolution
 
-To automatically track emails from distribution groups or "BCC" recipients, set up the underlining Dataverse user or queue mailbox that receives the email to accept **All Email Messages**. For more information, see [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
+To automatically track emails from distribution groups or Bcc recipients, set up the underlining Dataverse user or queue mailbox that receives the email to accept **All Email Messages**. For more information, see [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
 
 ## Emails can't be tracked or synchronized to Dataverse and are assigned the Undeliverable category in Exchange
 
