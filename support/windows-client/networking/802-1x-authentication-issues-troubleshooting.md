@@ -8,7 +8,6 @@ ms.collection: highpri
 ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
 ms.reviewer: dougeby,aaroncz
 audience: itpro
-localization_priority: medium
 ---
 # Advanced troubleshooting 802.1X authentication
 
@@ -109,7 +108,7 @@ System audit policy
 Category/Subcategory                      Setting
 Logon/Logoff
   Network Policy Server                   Success and Failure
-
+```
 
 If it says, "No auditing," you can run this command to enable it:
 

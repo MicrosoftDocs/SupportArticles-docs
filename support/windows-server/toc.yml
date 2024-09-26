@@ -269,8 +269,6 @@ items:
     items:
     - name: Can't promote a DC to global catalog server
       href: ./active-directory/cannot-promote-dc-to-global-catalog-server.md
-    - name: Fail to create a DFS namespace
-      href: ./active-directory/namespace-not-queried-rpc-server-unavailable.md
     - name: Issues when renaming sites in the AD forest
       href: ./active-directory/problems-rename-active-directory-forest-sites.md
     - name: KFSO doesn't work in external trust
@@ -669,8 +667,6 @@ items:
       href: ./backup-and-storage/iscsi-initiator-not-login-to-favorite-targets.md
   - name: Multipath I/O (MPIO) and Storport
     items:
-    - name: Enabling MPIO with SAS disks decreases performance
-      href: ./backup-and-storage/enabling-mpio-with-sas-decreases-performance.md
     - name: MPIO option not available in Disk Management
       href: ./backup-and-storage/mpio-option-not-available-disk-management.md
   - name: Partition and volume management
@@ -1131,8 +1127,6 @@ items:
       href: ./high-availability/problem-nodes-failover-cluster.md
     - name: Remove nodes from active failover cluster membership
       href: ./high-availability/nodes-failover-cluster-vmware.md
-  - name: Replacing hardware and updating the operating system
-    items: []
   - name: Root cause of an unexpected failover
     items:
     - name: 'Troubleshooting guidance: Unexpected cluster failover'
@@ -1251,8 +1245,20 @@ items:
       href: ./networking/dns-cname-alias-cannot-access-smb-file-server-share.md
     - name: Domain users fail to access a share on a file server
       href: ./networking/target-account-name-incorrect-error-access-file-share.md
+    - name: Error "Element not found" with DFS namespaces
+      href: ./networking/error-element-not-found-dfsn.md
     - name: 'Error "The data is invalid" or "The Namespace has no targets"'
       href: ./networking/error-data-invalid-namespace-no-targets.md
+    - name: Error "The remote procedure call failed"
+      href: ./networking/error-remote-procedure-call-failed.md
+    - name: Error "The RPC server is unavailable"
+      href: ./networking/namespace-not-queried-rpc-server-unavailable.md
+    - name: Error "The specified domain either does not exist or cannot be contacted"
+      href: ./networking/error-specified-domain-not-exist-cannot-contacted.md
+    - name: Error "The specified server cannot perform the requested operation"
+      href: ./networking/error-specified-server-cannot-perform-requested-operation.md
+    - name: 'Error "The system cannot find the file specified"'
+      href: ./networking/error-system-cannot-find-file-specified.md
     - name: Error messages on SMB connections
       href: ./networking/error-messages-smb-connections.md
     - name: Fail to open file shares or Group Policy snap-ins
@@ -1411,6 +1417,8 @@ items:
       href: ./networking/move-zone-files-dns-server.md
     - name: Integrate Windows DNS into an existing DNS namespace
       href: ./networking/integrate-windows-dns-into-existing-dns-namespace.md
+    - name: Multiple records with the same IP address
+      href: ./networking/troubleshoot-multiple-records-being-registered-with-the-same-ip-address.md
     - name: Name resolution and connectivity issues
       href: ./networking/name-resolution-connectivity-issues.md
     - name: NBTSTAT -A doesn't resolve computer name with DNS
@@ -1433,6 +1441,8 @@ items:
       href: ./networking/troubleshoot-dns-event-id-4013.md
     - name: Troubleshoot DNS name resolution on the Internet
       href: ./networking/troubleshoot-dns-name-resolution.md
+    - name: Troubleshoot DNS name resolution failures related to DNS forwarders
+      href: ./networking/troubleshoot-dns-forwarders-related-failures.md
     - name: Verify that SRV DNS records have been created
       href: ./networking/verify-srv-dns-records-have-been-created.md
     - name: WINS registration fails if a server points to itself for WINS name resolution
@@ -2651,42 +2661,12 @@ items:
       href: ./virtualization/back-up-restore-hyper-v-vm-bmr-data-backup.md
     - name: Back up virtual machines from parent partition
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
-    - name: Can't export a virtual machine
-      href: ./virtualization/error-occurred-attempt-export-virtual-machine.md
-    - name: Error 0x80070005 when exporting VMs to network share
-      href: ./virtualization/error-0x80070005-export-vms.md
   - name: Configuration of virtual machine settings
     items:
-    - name: Caching in the virtual storage stack
-      href: ./virtualization/hyper-v-storage-caching-layers-data-consistency-requirements.md
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
       href: ./virtualization/copy-paste-not-work-hyper-v-vm-vmconnect-enhanced-session-mode.md
-    - name: Dynamic Memory allocation in a Virtual Machine does not change
-      href: ./virtualization/dynamic-memory-allocation-virtual-machine-not-change.md
-    - name: Ghost NIC built from VMware Templates
-      href: ./virtualization/ghost-nic-built-vmware-templates.md
     - name: Hyper-V limits the maximum number of processors
       href: ./virtualization/hyper-v-limits-maximum-number-processors-host-os.md
-    - name: Hyper-V virtual machine doesn't start and triggers 0x80070057 error
-      href: ./virtualization/hyper-v-virtual-machine-doesnt-start.md
-    - name: Hyper-V virtual machine supported file locations
-      href: ./virtualization/hyper-v-vm-supported-file-locations.md
-    - name: Importing a virtual machine
-      href: ./virtualization/importing-a-virtual-machine.md
-    - name: Mouse and screen resolution issues
-      href: ./virtualization/mouse-screen-resolution-issues.md
-    - name: Slow startup and shutdown on virtual machines
-      href: ./virtualization/virtual-machines-slow-startup-shutdown.md
-    - name: The security ID structure is invalid (0x80070539)
-      href: ./virtualization/security-id-structure-invalid.md
-    - name: Using Hyper-V with large-sector drives
-      href: ./virtualization/using-hyper-v-large-sector-drives.md
-    - name: Using Vmconnect.exe to connect to virtual machine fails
-      href: ./virtualization/vmconnect-fail-to-connect-to-virtual-machine.md
-    - name: VDS Basic Provider event ID 1
-      href: ./virtualization/vds-basic-provider-event-id-1.md
-    - name: VM can't reach network when vLan tagging is enabled
-      href: ./virtualization/vm-not-reach-vlan-tagging-enabled-network.md
   - name: Container
     items:
     - name: API call of performance counters is delayed
@@ -2697,44 +2677,20 @@ items:
       href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
-  - name: Hyper-V Network Virtualization (HNV)
-    items:
-    - name: Event ID 106
-      href: ./virtualization/event-id-106-hyper-v-virtual-switch-bound-lbfo-team.md
   - name: Hyper-V Replica
     items:
-    - name: Events 18210 and 3041 when Hyper-V Replica is configured
-      href: ./virtualization/events-18210-3041-and-1-hyper-v-replica.md
-    - name: Events when backing up a disk on Replica machine
-      href: ./virtualization/event-19050-32022-32032-32056-32315-32546-33680.md
     - name: Feature and performance optimization of HVR
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
-    - name: Hyper-V replication is suspended at system shutdown
-      href: ./virtualization/hyper-v-replication-suspended-system-shutdown.md
   - name: Installation and configuration of Hyper-V
     items:
     - name: Antivirus exclusions for Hyper-V hosts
       href: ./virtualization/antivirus-exclusions-for-hyper-v-hosts.md
-    - name: Can't import a virtual machine
-      href: ./virtualization/cant-import-virtual-machine.md
-    - name: Event 7000 after installing the Hyper-V role
-      href: ./virtualization/event-7000-installing-hyper-v-role-windows-server.md
-    - name: Hyper-V VMM service fails with event ID 14050
-      href: ./virtualization/hyper-v-vmm-service-fails-event-id-14050.md
-    - name: Incompatible version errors are logged
-      href: ./virtualization/incompatible-version-errors-are-logged.md
     - name: Issues when starting VM or installing Hyper-V
       href: ./virtualization/bios-update-for-hyper-v.md
-    - name: Recommended hotfixes, updates, and known solutions
-      href: ./virtualization/hotfixes-updates-known-solutions.md
-    - name: Recommended updates for Windows Server 2012 R2 Hyper-V environments
-      href: ./virtualization/updates-for-windows-server-2012-r2-hyper-v.md
     - name: Run programs on non-Microsoft hardware virtualization software
       href: ./virtualization/software-runs-on-non-microsoft-virtualization-software.md
     - name: SCVMM P2V fails with error 0x80070005
       href: ./virtualization/scvmm-p2v-fails-with-error-2910.md
-    - name: Specifications for supported emulated and synthetic hardware
-      href: ./virtualization/emulated-synthetic-hardware-specification.md
     - name: Support and installation instructions for AMD EPYC 9004 Series server processors
       href: ./virtualization/support-and-installation-instructions-for-amd-epyc-9004-series-server-processors.md
     - name: Support Policy for NIC Teaming with Hyper-V
@@ -2747,8 +2703,6 @@ items:
     items:
     - name: Degraded integration services message for non-Windows guests
       href: ./virtualization/degraded-integration-services-message.md
-    - name: Event ID 4096 is logged in Hyper-V host
-      href: ./virtualization/event-id-4096.md
     - name: Hyper-V Time Synchronization doesn't adjust the VM system clock
       href: ./virtualization/virtual-machine-time-not-synced.md
     - name: Unknown devices in Device manager
@@ -3125,10 +3079,14 @@ items:
     items:
     - name: Scripts to compile all registered MOF files
       href: ./support-tools/scripts-compile-registered-mof-files.md
+    - name: Scripts to clean up profile folder information
+      href: ./support-tools/scripts-to-cleanup-profile-folder-information-and-prevent-temp-user-profiles-from-being-created.md
     - name: Scripts to extract .msu and .cab files
       href: ./support-tools/scripts-extract-msu-cab-files.md
     - name: Scripts to list all running WMI providers
       href: ./support-tools/scripts-list-running-wmi-providers.md
+    - name: Scripts to retrieve profile age
+      href: ./support-tools/scripts-to-retrieve-profile-age.md
     - name: Scripts to retrieve profile age and optionally delete aged copies
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
   - name: TroubleShootingScript toolset (TSS)

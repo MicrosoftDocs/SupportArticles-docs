@@ -1,12 +1,11 @@
 ---
 title: Password change processing and conflict resolution functionality in Windows
 description: Describes a registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
-ms.date: 12/26/2023
+ms.date: 09/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
-ms.reviewer: kaushika, herbertm
+ms.reviewer: kaushika, herbertm, jsimmons
 ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
 ---
 # Password change processing and conflict resolution functionality in Windows
@@ -86,7 +85,6 @@ Task Category: PDC Password Updates
 Level:         Informational
 Description:
 Active Directory Domain Services successfully processed a password update notification sent from a Backup Domain Controller (BDC).
-The user may experience temporary authentication failures until the updated credentials are successfully replicated to the PDC via normal replication schedules.
  BDC:      <Computer Name>
  User:      <User Name>
  User RID:  <RID>
@@ -110,6 +108,9 @@ The user may experience temporary authentication failures until the updated cred
  User RID:  <RID>
  Error:     <Error Code>
 ```
+
+> [!IMPORTANT]
+> Event ID 3036 with error code 8440 may be seen on PDCs running Windows Server 2022 or later when processing a password update notification from a BDC running Windows Server 2019 or earlier. Given this newer PDC and older BDC combination, Event ID 3036 with error code 8440 occurs on the PDC when the BDC sends a password update notification for a new user account that hasn't yet replicated to the PDC. To prevent this issue, upgrade the BDC to Windows Server 2022 or later.
 
 #### Event ID 3037
 
@@ -147,7 +148,7 @@ The user may experience temporary authentication failures until the updated cred
  Error:     <Error Code>
 ```
 
-For exmaple, error code c0000225 maps to STATUS_NOT_FOUND. This error is expected when the user is newly created on the local domain controller, and the user's password is set within the replication latency of the PDC.
+For example, error code c0000225 maps to STATUS_NOT_FOUND. This error is expected when the user is newly created on the local domain controller, and the user's password is set within the replication latency of the PDC.
 
 You may also see network or RPC related errors in Event ID 3038. For example, when a firewall blocks the communication between the BDC and PDC, you may receive this event.
 

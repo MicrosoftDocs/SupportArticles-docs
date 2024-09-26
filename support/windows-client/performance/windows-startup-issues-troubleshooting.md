@@ -4,7 +4,6 @@ description: Learn advanced options for how to troubleshoot common Windows start
 ms.date: 05/10/2024
 ms.topic: troubleshooting
 audience: itpro
-localization_priority: medium
 manager: dcscontentpm
 ms.reviewer: kaushika,dansimp
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot

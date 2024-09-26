@@ -1313,6 +1313,8 @@ items:
       href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
     - name: System Error 126 when you start TrustedInstaller
       href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
+    - name: Troubleshoot Windows Update error 0x80072EFE
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072efe-with-cipher-suite-configuration.md
     - name: Windows Update common errors and mitigation
       href: ./installing-updates-features-roles/common-windows-update-errors.md
 - name: Windows Troubleshooters

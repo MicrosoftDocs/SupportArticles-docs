@@ -1,7 +1,7 @@
 ---
 title: Unable to get log analytics workspace info
 description: Provides solutions to an error that occurs when you upgrade or scale a Microsoft Azure Kubernetes Service cluster.
-ms.date: 06/11/2024
+ms.date: 09/11/2024
 ms.reviewer: chiragpa, cssakscic, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
