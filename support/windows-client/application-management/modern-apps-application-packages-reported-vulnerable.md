@@ -17,15 +17,15 @@ This article provides troubleshooting suggestions when there are multiple versio
 
 ## Issue symptoms
 
-On recent Windows versions, several parts of the shell are moved to **Packaged applications**. Those applications are brought as .msix or .appx files and need to be registered per-user at every first user logon on Windows or after an App update.
+On recent Windows versions, several parts of the shell are moved to **Packaged applications**. Those applications are brought as .msix or .appx files and need to be registered per-user at every first user sign-in to Windows or after an App update.
 
-Those packaged applications may be **SystemApps** (such as **StartMenuExperienceHost**, **ShellExperienceHost** and so on) brought within Windows Cumulative Updates, or **WindowsApps** which are updated through Windows Update connecting to Windows Store endpoints.
+Those packaged applications might be **SystemApps** (such as **StartMenuExperienceHost**, **ShellExperienceHost** and so on) brought within Windows Cumulative Updates, or **WindowsApps** which are updated through Windows Update connecting to Windows Store endpoints.
 
 Because of this inherent design, you might encounter one of the following issues:
 
 ### Multiple App folders in the system
 
-If there are multiple user profiles in the system, Apps installed per users may create multiple App folders because of the different versions. The folders are in the *C:\\Program Files\\WindowsApps* hidden folder.
+If there are multiple user profiles in the system, Apps installed per users might create multiple App folders because of the different versions. The folders are in the *C:\\Program Files\\WindowsApps* hidden folder.
 
 ### Multiple App versions in the system
 
@@ -40,9 +40,9 @@ In these scenarios, there are multiple versions of the App per users in the syst
 
 To resolve this issue, use one or more of the following methods:
 
-1. Ensure that the App is updated for all users in the system by reconnecting to the machine with user Profiles, who don't frequently log in.
+1. Ensure that the App is updated for all users in the system by reconnecting to the machine with user profiles.
 
-   1. Identify the User Profiles in which the old Appx version package is installed with Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) from an elevated Powershell prompt.
+   1. Identify the user profiles in which the old Appx version package is installed by using the Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) from an elevated PowerShell window.
 
       ```powershell
       Get-AppxPackage <Application Name> -AllUsers
@@ -52,7 +52,7 @@ To resolve this issue, use one or more of the following methods:
 
 2. Remove the old packages (.appx)
 
-   1. Identify the User Profiles in which the Appx package is installed with Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) from an elevated Powershell prompt.
+   1. Identify the User Profiles in which the Appx package is installed with Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) from an elevated PowerShell prompt.
 
       ```powershell
       Get-AppxPackage <Application Name> -AllUsers
@@ -71,7 +71,7 @@ To resolve this issue, use one or more of the following methods:
       ```
 
    > [!NOTE]
-   > For further information and usage examples regarding the management of Appx packages via Powershell cmdlets, please refer to the articles below.
+   > For more information and usage examples regarding the management of Appx packages via Powershell cmdlets, see the following articles.
    >
    > - [Get-AppxPackage](/powershell/module/appx/get-appxpackage)
    > - [Get-AppxProvisionedPackage (DISM) | Microsoft Learn](/powershell/module/dism/get-appxprovisionedpackage)
