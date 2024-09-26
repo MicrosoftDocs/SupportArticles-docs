@@ -10,7 +10,7 @@ ms.author: rahulmital
 
 This article provides troubleshooting information for the incoming email synchronization issues when you use server-side synchronization in Microsoft Dataverse.
 
-## Emails are unexpectedly tracked or synchronized
+## Incoming emails are unexpectedly tracked or synchronized
 
 ### Symptoms
 
@@ -96,7 +96,11 @@ For more information about how the Process Email From date influences synchroniz
 
 ## Synchronized emails contain unexpected sender or recipient parties in Dataverse
 
-Server-side synchronization performs email address resolution on all sender and recipient email addresses when synchronizing incoming emails into the system. This is done by retrieving all records in Dataverse which are associated with a given email address. When a match is found, the system associates one or more located records as an activity party on the email.
+Server-side synchronization performs email address resolution on all sender and recipient email addresses when synchronizing incoming emails into the system. This is done by retrieving all records in Dataverse which are associated with a given email address. When a match is found, the system associates one or more located records as an [activity party](/power-apps/developer/data-platform/activityparty-entity) on the email.
+
+> [!NOTE]
+> A column in Dataverse that has a format type of "[Email](/power-apps/developer/data-platform/data-type-format-conversions)" will participate in email address resolution.
+> :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/format-type-is-email.png" alt-text="Screenshot that shows the Email format type of a column.":::
 
 As a result, if an email address is associated with more than one Dataverse record (such as an email address being shared between a user and queue), then all resolved recipients appear in their respective recipient fields. For example, in the below screenshot, Paul Cannon's email address is associated with both the user's mailbox and a queue, causing both of them to appear as recipients even though Paul Cannon's email address only appears a single time in the received email in Exchange.
 
@@ -109,16 +113,10 @@ For more information, see:
 
 Likewise, if an email address isn't associated with a known Dataverse record, the email address appears unresolved.
 
-#### How does the system know which email address fields to check?
-
-A column in Dataverse that has a format type of "[Email](/power-apps/developer/data-platform/data-type-format-conversions)" will participate in email address resolution.
-
-:::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/format-type-is-email.png" alt-text="Screenshot that shows the Email format type of a column.":::
-
 #### Sender resolution order
 
 Because an email can only have a single sender, when the sender's email address is associated with multiple Dataverse records, the system utilizes a priority order to determine the sender activity party. For more information about this behavior, see [Associate an email address with a row](/power-platform/admin/associate-email-address).
 
 ## Synchronized emails have unexpected owners in Dataverse
 
-When server-side synchronization synchronizes an email message to Dynamics 365, the system determines the email owner based on some factors. To avoid unexpected owners in the synchronized emails, see [How is an email record owner determined](/power-platform/admin/email-record-owner).
+When server-side synchronization synchronizes an email message to Dynamics 365, the system determines the email owner based on some factors. For more information, see [How is an email record owner determined](/power-platform/admin/email-record-owner).

@@ -1,7 +1,7 @@
 ---
 title: Emails aren't automatically tracked or synchronized
 description: Provides troubleshooting information for the email synchronization issues when you use server-side synchronization in Microsoft Dataverse.
-ms.date: 09/25/2024
+ms.date: 09/26/2024
 ms.custom: sap:E-mail and Microsoft 365 Integration\Set up and configuration of server-side synchronization
 author: rahulmital
 ms.author: rahulmital
@@ -17,16 +17,16 @@ Common reasons why an email isn't automatically synchronized include:
 - A failure occurs when processing the email due to a customization (plugin or workflow) error in Dataverse.
 - No known Dataverse users or email queue recipients automatically accept the email based on their [incoming email filtering method configurations](/power-platform/admin/email-message-filtering-correlation).
 - The Dataverse user who owns the receiving mailbox or queue record doesn't have a license or sufficient privileges to synchronize emails. Learn more about [the required privileges for email synchronization](/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync#more-information).
-- The received email isn't in the root inbox of the target mailbox. Emails must remain in the root inbox until they're tracked. Moving emails between folders can cause server-side synchronization to omit them.
+- The received email isn't in the root _Inbox_ of the target mailbox. Emails must remain in the root _Inbox_ until they're tracked. Moving emails between folders can cause server-side synchronization to omit them.
 - The mailbox isn't properly configured in the remote email system (Microsoft Exchange or Google Gmail), or there are connectivity issues between the mailbox and the remote email system. Configuration and connectivity errors can be found on the mailbox alert wall.
 
 ### Troubleshooting with the "Server-Side Synchronization Item Level Monitoring" dashboard
 
 You can use the [Server-Side Synchronization Item Level Monitoring](/power-platform/admin/troubleshooting-monitoring-server-side-synchronization#the-server-side-synchronization-item-monitoring-dashboard) dashboard to understand why emails, appointments, contacts, and tasks aren't synchronized.
 
-To open the **Server-Side Synchronization Item Level Monitoring** dashboard:
+To get troubleshooting information in the **Server-Side Synchronization Item Level Monitoring** dashboard:
 
-1. In Microsoft Dataverse, go to the **Email Configuration** area, and then select the following navigation link.
+1. In Microsoft Dataverse, go to the **Email Configuration** area, and then select the **Server-Side Synchronization Item Level Monitoring** navigation link.
 
    :::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/server-side -synchronization-item-level-monitoring-dashboard.png" alt-text="Screenshot that shows how to open the Server-Side Synchronization Item Level Monitoring dashboard.":::
 
@@ -66,10 +66,7 @@ A closer examination of the error reveals that the workflow was trying to set a 
 
 ## Specific emails aren't automatically tracked as expected
 
-Emails in the _Inbox_ folder are automatically tracked by server-side synchronization into Dataverse if any of the resolved (known) users or email queue recipients accept them based on their [incoming email filtering method configurations](/power-platform/admin/email-message-filtering-correlation). For more information, see:
-
-- [Specify which emails are automatically tracked](/power-platform/admin/email-message-filtering-correlation)
-- [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange)
+Emails in the _Inbox_ folder are [automatically tracked](/power-platform/admin/email-message-filtering-correlation) by server-side synchronization into Dataverse if any of the resolved (known) users or email queue recipients accept them based on their [incoming email filtering method configurations](/power-platform/admin/email-message-filtering-correlation). For more information, see [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/dynamics365/outlook-addin/user-guide/set-personal-options-affect-tracking-synchronization-exchange).
 
 To narrow down why an email might not be automatically tracked, check each of the following:
 
@@ -79,7 +76,7 @@ To narrow down why an email might not be automatically tracked, check each of th
     - If you try to automatically track email responses sent from Outlook (in your _Sent Items_ folder), see [Welcome to Alchemy Portal](https://alchemyportal.azurewebsites.net/#autotracksentfolderitems).
     - If you want to track emails that were moved to subfolders, you need to enable [Folder-Based tracking](/power-platform/admin/configure-outlook-exchange-folder-level-tracking).
 
-2. Examine the recipient email addresses in the **To:** and **Cc:** lines and ensure that at least one of them is associated with a Dataverse mailbox, which is tested and enabled for server-side synchronization and is configured to automatically track the email based on its associated [incoming email filtering method](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange). If the email is sent to a distribution group or has a "BCC" recipient, see [this topic](https://alchemyportal.azurewebsites.net/#DLNote) to ensure that the underlining Dataverse mailbox is correctly configured.
+2. Examine the recipient email addresses in the **To:** and **Cc:** lines and ensure that at least one of them is associated with a Dataverse mailbox, which is [tested and enabled](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) for server-side synchronization and is configured to automatically track the email based on its associated incoming email filtering method. If the email is sent to a distribution group or has a "BCC" recipient, see [this topic](https://alchemyportal.azurewebsites.net/#DLNote) to ensure that the underlining Dataverse mailbox is correctly configured.
 
 3. Ensure that the recipient email addresses in Exchange or Gmail match the corresponding email address of the Dataverse user or queue mailbox.
 
@@ -87,17 +84,23 @@ To narrow down why an email might not be automatically tracked, check each of th
 
 Dataverse will resolve the recipient email addresses on the email to known Dataverse users or queue records. Therefore, if the recipient email addresses include a distribution group or are included as "BCC" recipients, Dataverse can't resolve these recipients to known Dataverse users or queues.
 
-To automatically track emails from distribution groups or "BCC" recipients, the underlining Dataverse user or queue mailbox that receives the email must be configured to accept **All Email Messages**.
+### Resolution
 
-For more information, see [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
+To automatically track emails from distribution groups or "BCC" recipients, set up the underlining Dataverse user or queue mailbox that receives the email to accept **All Email Messages**. For more information, see [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
 
 ## Emails can't be tracked or synchronized to Dataverse and are assigned the Undeliverable category in Exchange
 
+### Cause
+
+When server-side synchronization processes an email but can't create an email activity record in Dataverse, the "Undeliverable" category is assigned to the email. This issue typically occurs due to a custom plugin, workflow failure, or privilege issue when processing the email. Privilege issues usually occur when the user who owns the receiving mailbox or queue doesn't have sufficient [privileges]((/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync#more-information)) to synchronize the email records.
+
 :::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/undeliverable-email.png" alt-text="Screenshot that shows an email that is assigned to the Undeliverable category.":::
 
-When server-side synchronization processes an email but can't create an email activity record in Dataverse, the "Undeliverable" category is assigned to the email. This issue typically occurs due to a custom plugin, workflow failure, or privilege issue when processing the email. Privilege issues usually occur when the user who owns the receiving mailbox or queue doesn't have sufficient privileges to synchronize the email records. Learn more about [the required privileges for email synchronization](/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync#more-information).
+### Resolution
 
-You can review information about **Failed Emails** by inspecting the [Server-Side Synchronization Item Level Monitoring dashboard](#troubleshooting-with-the-server-side-synchronization-item-level-monitoring-dashboard).
+To solve this issue, see [the required privileges for email synchronization](/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync#more-information).
+
+You can review information about failed emails by inspecting the [Server-Side Synchronization Item Level Monitoring dashboard](#troubleshooting-with-the-server-side-synchronization-item-level-monitoring-dashboard).
 
 ## Email replies sent from Outlook aren't automatically synchronized using server-side synchronization
 
@@ -109,3 +112,7 @@ An administrator can configure the **AutoTrackSentFolderItems** value of [OrgDBO
 > - Enabling tracking for sent items is only supported with a Microsoft Exchange mailbox.
 
 For more information, see [Automatically track sent folder items with server-side synchronization](/power-platform/admin/track-sent-folder-items).
+
+## More inforamtion
+
+[Incoming emails are unexpectedly synchronized or contain unexpected or missing data](incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md)
