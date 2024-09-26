@@ -1,7 +1,7 @@
 ---
 title: Take basic troubleshooting steps to avoid Node Not Ready issues
 description: Learn about basic troubleshooting steps to avoid Node Not Ready issues in Azure Kubernetes Service (AKS) cluster nodes.
-ms.date: 09/24/2024
+ms.date: 09/26/2024
 ms.reviewer: rissing, chiragpa, momajed, v-leedennis, wonkilee, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting steps so that I can avoid Node Not Ready issues in Azure Kubernetes Service (AKS) cluster nodes.
@@ -33,14 +33,14 @@ Compared to updates to the *.status* of a `Node`, a `Lease` is a lightweight res
 
 The [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) is responsible for creating and updating the *.status* for `Node` objects. It's also responsible for updating the `Lease` objects that are related to the `Node` objects.
 
-- The kubelet updates the node's `.status` when there is change in status or if there has been no update for a configured interval. The default interval for `.status` updates to nodes is five minutes, which is much longer than the 40 second default timeout for unreachable nodes.
-- The kubelet creates and then updates its `Lease` object every 10 seconds (the default update interval). `Lease` updates occur independently from updates to the node's `.status`. If the `Lease` update fails, the kubelet retries, using exponential backoff that starts at 200 milliseconds and capped at seven seconds.
+- The kubelet updates the node `.status` when there's a change in status or if there has been no update for a configured interval. The default interval for `.status` updates to nodes is five minutes, which is much longer than the 40-second default time-out for unreachable nodes.
+- The kubelet creates and then updates its `Lease` object every 10 seconds (the default update interval). `Lease` updates occur independently from updates to the node `.status`. If the `Lease` update fails, the kubelet retries, using an exponential backoff that starts at 200 milliseconds and is capped at seven seconds.
 
 You can't schedule a pod on a node that has a status of `NotReady` or `Unknown`. You can schedule a pod only on nodes that are in the `Ready` state.
 
 If your node is in the `MemoryPressure`, `DiskPressure`, or `PIDPressure` state, you must manage your resources in order to schedule extra pods on the node. If your node is in `NetworkUnavailable` mode, you must configure the network on the node correctly. 
 
-AKS manages the lifecycle and operations of agent nodes for you. Modifying the IaaS resources associated with the agent nodes isn't supported. For example, customizing a node through SSH connections, updating packages, or changing the network configuration on the node isn't supported. For more information, see [AKS support coverage for agent nodes](/azure/aks/support-policies#user-customization-of-agent-nodes).
+AKS manages the lifecycle and operations of agent nodes for you. Modifying the IaaS resources associated with the agent nodes isn't supported. For example, customizing a node through SSH connections, updating packages, or changing the network configuration on a node isn't supported. For more information, see [AKS support coverage for agent nodes](/azure/aks/support-policies#user-customization-of-agent-nodes).
 
 Make sure that the following conditions are met:
 
@@ -62,6 +62,6 @@ Make sure that the following conditions are met:
 
 ## More information
 
-To troubleshoot the node `Not Ready` status, see [Troubleshoot a change in a healthy node to Not Ready status](node-not-ready-after-being-healthy.md).
+To troubleshoot the `Not Ready` status of a node, see [Troubleshoot a change in a healthy node to Not Ready status](node-not-ready-after-being-healthy.md).
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
