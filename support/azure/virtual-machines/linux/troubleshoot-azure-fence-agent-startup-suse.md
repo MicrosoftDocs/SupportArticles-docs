@@ -2,8 +2,9 @@
 title: Troubleshoot Azure Fence Agent startup issues in SUSE
 description: Provides troubleshooting guidance if Azure Fence Agent does not start
 ms.reviewer: divargas
+ms.author: rnirek
 ms.topic: troubleshooting
-ms.date: 07/04/2024
+ms.date: 09/10/2024
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
@@ -17,18 +18,18 @@ This article lists the common causes of startup issues for Microsoft Azure Fence
 
 ## How Azure Fence Agent works
 
-Azure Fence Agent uses an Azure API based Python program that's located at `/usr/sbin/fence_azure_arm` to perform VM power off or start actions. When a failed cluster node is detected, the cluster resource agent (RA) calls this program with the appropriate parameters to implement node fencing (also known as STONITH). 
+Azure Fence Agent uses an Azure API-based Python program that's located at `/usr/sbin/fence_azure_arm` to perform VM power off or start actions. When a failed cluster node is detected, the cluster resource agent (RA) calls this program together with the appropriate parameters to implement node fencing (also known as STONITH). 
 
-As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=msi#1-create-a-custom-role-for-the-fence-agent), the custom role should provide the fence agent with permissions to perform the following actions:
+As documented in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#1-create-a-custom-role-for-the-fence-agent), the custom role should provide permissions to the fence agent to perform the following actions:
 
 - `powerOff`
 - `start`
    
-If the virtual machine (VM) is detected as unhealthy, the fence agent uses these actions to power off the VM and then start it up again.
+If the virtual machine (VM) is detected as unhealthy, the fence agent uses these actions to power off the VM and then restart it.
 
 ## Symptoms
 
-An Azure Fencing Agent resource doesn't start. When you run `sudo crm status` command to check the status of the cluster resource, the command output it reports an "unknown error."
+An Azure Fencing Agent resource doesn't start. When you run `sudo crm status` command to check the status of the cluster resource, the command output reports an "unknown error."
 
 The following is the sample output of the crm status:
 
@@ -63,7 +64,7 @@ Failed Resource Actions:
 ```
 ## Cause 1: Endpoint connectivity or credential issues
 
-To resolve the issue, check the log in `/var/log/messages`. If 'Azure Error: AuthenticationFailed' appears in the log (as shown in the following screenshot), the issue could be related to endpoint connectivity or credentials issues. 
+To resolve the issue, check the log in `/var/log/messages`. If an entry that contains "Azure Error: AuthenticationFailed" appears in the log (as shown in the following screenshot), the issue could be related to endpoint connectivity or credentials issues. 
 
 ```output
 /var/log/messages
@@ -91,7 +92,7 @@ To resolve the issue, check the log in `/var/log/messages`. If 'Azure Error: Aut
     curl -v telnet://<endpoint>:443
     ```
 
-2. Make sure that a valid username and password are set for the STONITH resource. One of the major causes of STONITH resource failure is the use of invalid values for the username or password when you use a service principal. You can test the values by using the `fence_azure_arm` command, as shown in the following example. To set username and password for the STONITH resource, see [Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=spn#create-an-azure-fence-agent-device).
+2. Make sure that a valid username and password are set for the STONITH resource. One of the major causes of STONITH resource failure is the use of invalid values for the username or password when you use a service principal. You can test the values by using the `fence_azure_arm` command, as shown in the following example. To set the username and password for the STONITH resource, see [Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&branchFallbackFrom=pr-en-us-6719&tabs=spn#create-an-azure-fence-agent-device).
 
     ``` bash
     sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> 
@@ -108,11 +109,11 @@ To resolve the issue, check the log in `/var/log/messages`. If 'Azure Error: Aut
     sudo /usr/sbin/fence_azure_arm --action=list --msi --resourceGroup=<resource group> -v -D /var/tmp/debug-fence.out
     ```
     > [!NOTE]
-    > Replace the `<user name>`, `<password>`, `<tenant ID>`, and `<resource group>` values as appropriate.
+    > In ths command, replace the `<user name>`, `<password>`, `<tenant ID>`, and `<resource group>` values as appropriate.
 
 ## Cause 2: Authentication failure
 
-Check the log in `/var/log/messages`. If 'unauthorized_client' appears in the log, as shown in the following example, the problem could be related to authentication failure.
+Check the log in `/var/log/messages`. If an entry that contains "unauthorized_client" appears in the log, as shown in the following example, the issue could be related to authentication failure.
 
 ```output
 /var/log/messages
@@ -149,7 +150,7 @@ Verify the Microsoft Entra ID app tenant ID, application ID, login, and password
 
 ## Cause 3: Insufficient permissions
 
-Check the log in `/var/log/messages`. If an entry for 'The client does not have authorization to perform action' appears in the log, as shown in the following example, the problem could be related to insufficient permissions：
+Check the log in `/var/log/messages`. If an entry that contains "The client does not have authorization to perform action" appears in the log, as shown in the following example, the issue could be related to insufficient permissions：
 
 ``` output
 /var/log/messages
@@ -160,12 +161,12 @@ Apr 2 00:49:57 VM1 stonith-ng[105424]: warning: fence_azure_arm[109393] stderr: 
 ### Resolution
 
 1. [Create a custom role for the fence agent](/azure/sap/workloads/high-availability-guide-suse-pacemaker?branch=main&tabs=msi#1-create-a-custom-role-for-the-fence-agent) to verify that the custom role definition is configured for the fence agent.
-1. Verify that the fencing agent is assigned the necessary custom role on the affected VM. If it's not, assign the role to the VM by using Access Control.
-1. Run `crm status` to check the cluster status to make sure that the fencing agent issue is resolved.
+2. Verify that the fencing agent is assigned the necessary custom role on the affected VM. If the agent isn't assigned the role, assign the role to the VM by using Access Control.
+3. Run `crm status` to check the cluster status to make sure that the fencing agent issue is resolved.
 
 ## Cause 4: SSL handshake failure 
 
-If 'SSLError: HTTPSConnectionPool(host='management.azure.com ', port=443): Max retries exceeded with url' appears in the log, as as shown in the following example, the problem could be related to SSL handshake failure：
+If an entry that contains "SSLError: HTTPSConnectionPool(host='management.azure.com ', port=443): Max retries exceeded with url" appears in the log, as as shown in the following example, the issue could be related to SSL handshake failure：
 
 ```output
 /var/log/messages
@@ -214,15 +215,74 @@ warning: fence_azure_arm[28114] stderr: [ 2021-06-24 07:59:29,832 ERROR: Failed:
     ```
    These errors are most likely caused by a network appliance or firewall running a packet inspection or modifying Transparent Layer Socket (TLS) connections in a manner that disrupts certificate verification. Additionally, these issues can be caused by maximum transmission units (MTU) reaching their size limit.
 
-3. If Azure Firewall is in front of the nodes, make sure that these tags are added to the application or network rules:
+3. If Azure Firewall is in front of the nodes, make sure that the following tags are added to the application or network rules:
 
     - Application Rules: ApiManagement , AppServiceManagement, AzureCloud
     - Network Rules: AppServiceEnvironment
 
-## Next Steps
+## Cause 5: Missing `fence-agents-azure-arm` package
 
-If you need additional help, open a support request by using the following instructions. When you submit your request, attach a copy of `debug-fence.out` for troubleshooting.
+Check the log in `/var/log/messages`. The following log entries indicate that the fence-agent can't read or find the `fence-agents-azure-arm` package in the system. 
+
+```output
+/var/log/messages
+2024-09-03T02:30:36.264033+00:00 node1 lrmd[5772]:    error: Unknown fence agent: fence_azure_arm
+2024-09-03T02:30:36.271111+00:00 node1 stonith-ng[5771]:   error: Unknown fence agent: fence_azure_arm
+2024-09-03T02:30:36.271426+00:00 node1 stonith-ng[5771]:   error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-09-03T02:30:36.271620+00:00 node1 stonith-ng[5771]:   error: Could not retrieve metadata for fencing agent fence_azure_arm
+2024-09-03T02:30:36.271800+00:00 node1 stonith-ng[5771]: warning: Cannot execute '/usr/sbin/fence_azure_arm': No such file or directory (2)
+2024-09-03T02:30:37.271549+00:00 node1 stonith-ng[5771]: warning: Cannot execute '/usr/sbin/fence_azure_arm': No such file or directory (2)
+2024-09-03T02:30:39.271843+00:00 node1 stonith-ng[5771]: message repeated 2 times: [  warning: Cannot execute '/usr/sbin/fence_azure_arm': No such file or directory (2)]
+2024-09-03T02:30:39.272240+00:00 node1 stonith-ng[5771]:  notice: Operation 'monitor' [0] for device 'rsc_st_azure' returned: -61 (No data available)
+2024-09-03T02:30:39.272486+00:00 node1 lrmd[5772]:   notice: finished - rsc:rsc_st_azure action:start call_id:67  exit-code:1 exec-time:3008ms queue-time:0ms
+2024-09-03T02:30:39.272722+00:00 node1 crmd[5776]:    error: Unknown fence agent: fence_azure_arm
+2024-09-03T02:30:39.272970+00:00 node1 crmd[5776]:    error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-09-03T02:30:39.273207+00:00 node1 crmd[5776]:  warning: Failed to get metadata for rsc_st_azure (stonith:(null):fence_azure_arm)
+2024-09-03T02:30:39.273439+00:00 node1 crmd[5776]:    error: Result of start operation for rsc_st_azure on node1: Error
+2024-09-03T02:30:39.274704+00:00 node1 crmd[5776]:  warning: Action 9 (rsc_st_azure_start_0) on node1 failed (target: 0 vs. rc: 1): Error
+2024-09-03T02:30:39.274984+00:00 node1 crmd[5776]:   notice: Transition 91369 (Complete=3, Pending=0, Fired=0, Skipped=0, Incomplete=1, Source=/var/lib/pacemaker/pengine/pe-input-2563.bz2): Complete
+2024-09-03T02:30:39.307439+00:00 node1 pengine[5775]:  warning: Processing failed start of rsc_st_azure on node1: unknown error
+2024-09-03T02:30:39.307786+00:00 node1 pengine[5775]:  warning: Processing failed start of rsc_st_azure on node1: unknown error
+```
+```output
+/var/log/messages
+2024-08-20T13:28:24.043272+00:00 node1 crmd[6692]:    error: Unknown fence agent: fence_azure_arm
+2024-08-20T13:28:24.043453+00:00 node1 crmd[6692]:    error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-08-20T13:28:24.043554+00:00 node1 crmd[6692]:  warning: Failed to get metadata for rsc_st_azure (stonith:(null):fence_azure_arm)
+2024-08-20T13:28:24.044608+00:00 node1 crmd[6692]:    error: Unknown fence agent: fence_azure_arm
+2024-08-20T13:28:24.044711+00:00 node1 crmd[6692]:    error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-08-20T13:28:24.044833+00:00 node1 crmd[6692]:  warning: Failed to get metadata for rsc_st_azure (stonith:(null):fence_azure_arm)
+2024-08-20T13:28:26.160617+00:00 node1 crmd[6692]:    error: Unknown fence agent: fence_azure_arm
+2024-08-20T13:28:26.160895+00:00 node1 crmd[6692]:    error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-08-20T13:28:26.161008+00:00 node1 crmd[6692]:  warning: Failed to get metadata for rsc_st_azure (stonith:(null):fence_azure_arm)
+2024-08-20T13:28:26.162073+00:00 node1 crmd[6692]:    error: Unknown fence agent: fence_azure_arm
+2024-08-20T13:28:26.162193+00:00 node1 crmd[6692]:    error: Agent fence_azure_arm not found or does not support meta-data: Invalid argument (22)
+2024-08-20T13:28:26.162294+00:00 node1 crmd[6692]:  warning: Failed to get metadata for rsc_st_azure (stonith:(null):fence_azure_arm)
+```
+
+### Resolution
+SUSE has rebuilt the Azure Fence Agent package as `fence-agents-azure-arm` for Python 3.11. For more information, see [Azure Fence Agent failed to start after Python 3.11 interpreter was installed](https://www.suse.com/support/kb/doc/?id=000021504). To fix the issue, follow these steps to install the package:
+ 
+1. Put the cluster under maintenance mode:
+	 ```bash
+	 sudo crm configure property maintenance-mode=true
+	 ```
+2. Install the following package on all nodes (VMs) of the cluster:
+	```bash
+	sudo zypper in fence-agents-azure-arm
+	```
+3. Remove the cluster from maintenance mode:
+	```bash
+	sudo crm configure property maintenance-mode=false
+	```
+4. Make sure that the fencing agent issue is resolved. To do this, run `crm status` to check the cluster status.
+
+## Next steps
+
+If you need additional help, use the following instructions to open a support request:
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+When you submit your request, attach a copy of `debug-fence.out` for troubleshooting.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

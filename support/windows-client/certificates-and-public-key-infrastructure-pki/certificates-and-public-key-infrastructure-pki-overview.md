@@ -5,7 +5,6 @@ ms.date: 2/23/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ---
 # Certificates and Public Key Infrastructure (PKI) troubleshooting documentation for Windows clients

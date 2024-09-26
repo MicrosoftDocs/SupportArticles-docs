@@ -1,10 +1,10 @@
 ---
 title: Unable to mount Azure disk volumes
 description: Describes errors that occur when mounting Azure disk volumes fails, and provides solutions.
-ms.date: 05/17/2022
+ms.date: 09/06/2024
 author: genlin
 ms.author: genli
-ms.reviewer: chiragpa, akscsscic
+ms.reviewer: chiragpa, akscsscic, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Storage
 ---
@@ -77,16 +77,16 @@ affinity:
 
 To use a ZRS disk, create a new storage class with `Premium_ZRS` or `StandardSSD_ZRS`, and then deploy the PersistentVolumeClaim (PVC) referencing the storage.
 
-For more information about parameters, see [Driver Parameters](https://github.com/kubernetes-sigs/azuredisk-csi-driver/blob/master/docs/driver-parameters.md)
+For more information about parameters, see [Driver Parameters](/azure/aks/azure-csi-files-storage-provision#storage-class-parameters-for-dynamic-persistentvolumes)
 
-### Solution 3: Use Azure File
+### Solution 3: Use Azure Files
 
-[Azure File](/azure/storage/files/storage-files-introduction) is mounted by using SMB throughout network, so it's not associated with availability zones.
+[Azure Files](/azure/storage/files/storage-files-introduction) is mounted by using NFS or SMB throughout network and it's not associated with availability zones.
 
 For more information, see the following articles:
 
-- [Dynamically create Azure Files share](/azure/aks/azure-files-dynamic-pv)
-- [Manually create Azure Files share](/azure/aks/azure-files-volume)
+- [Dynamically create Azure Files share](/azure/aks/azure-csi-files-storage-provision#dynamically-provision-a-volume)
+- [Manually create Azure Files share](/azure/aks/azure-csi-files-storage-provision#statically-provision-a-volume)
 
 ## <a id="error2"></a>Client '\<client-ID>' with object id '\<object-ID>' doesn't have authorization to perform action over scope '\<disk name>' or scope is invalid
 
@@ -111,7 +111,7 @@ AKS cluster's identity doesn't have the required authorization over the Azure di
 
 ### Solution: Create role assignment that includes required authorization
 
-Create a role assignment that includes the authorization required as per the error. We recommend that you use a [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role. If you want to use another built-in role, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
+Create a role assignment that includes the authorization required as per the error. We recommend that you use a [Contributor](/azure/role-based-access-control/built-in-roles/general#contributor) role. If you want to use another built-in role, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
 
 To assign a Contributor role, use one of the following methods:
 
@@ -125,7 +125,7 @@ To assign a Contributor role, use one of the following methods:
 
 - Use the Azure portal
 
-    Refer to detailed steps that are introduced in [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) to assign a Contributor role. If you assign the Contributor role to a managed identity, use the [control plane identity](/azure/aks/use-managed-identity#summary-of-managed-identities) to manage Azure disks.
+    Refer to detailed steps that are introduced in [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) to assign a Contributor role. If you assign the Contributor role to a managed identity, use the [control plane identity](/azure/aks/use-managed-identity) to manage Azure disks.
 
 ## <a id="error3"></a>Volume is already used by pod
 
@@ -141,7 +141,7 @@ An Azure disk can be mounted only as [ReadWriteOnce](https://kubernetes.io/docs/
 
 To resolve this error, refer to [Multi-Attach error](https://github.com/andyzhangx/demo/blob/master/issues/azuredisk-issues.md#25-multi-attach-error).
 
-To share a PersistentVolume across multiple nodes, use [Azure Files](/azure/aks/azure-files-dynamic-pv).
+To share a PersistentVolume across multiple nodes, use [Azure Files](/azure/aks/azure-csi-files-storage-provision).
 
 ## <a id="error4"></a>StorageAccountType UltraSSD_LRS can be used only when additionalCapabilities.ultraSSDEnabled is set
 
