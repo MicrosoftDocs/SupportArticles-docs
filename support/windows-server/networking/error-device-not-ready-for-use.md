@@ -1,11 +1,11 @@
 ---
 title: The device is not ready for use error
 description: Helps resolve the error - The namespace cannot be queried. The device is not ready for use.
-ms.date: 09/10/2024
+ms.date: 09/26/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, v-lianna, albugn
 ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
 ---
 # Error "The namespace cannot be queried. The device is not ready for use" with DFS Namespaces
@@ -18,11 +18,16 @@ When you access, modify, or create a Distributed File System (DFS) namespace on 
 
 ## Cause 1: The registry values are missing
 
-The registry values `ID` and `Svc` with the `REG_BINARY` type under the DFS root, or other registry values under the registry subkeys of the DFS root, are missing. For example, under the following registry key:
+This error occurs in relation to DFS stand-alone namespaces. The error can occur if the registry value `ID` or `Svc` (or both) is missing. These registry keys have a `REG_BINARY` type and are located in a registry subkey (displayed like a unique identifier (UID) number) one level under the DFS stand-alone namespace root registry path.
 
-`Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\DFS2ST\1e2e08a9-75f1-43d9-b3df-3c3614d843c1`
+Here is an example of where these registry values `ID` and `SVC` are stored under a UID looking subkey registry, under the DFS stand-alone namespace root registry path:
 
-### Wireshark trace example
+`Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\<YourDfsStandaloneNamespace>\<xxxxxxx-yyyy-zzzz>\`
+
+> [!NOTE]
+> For each DFS intermediate folder or DFS link that you create under the DFS stand-alone namespace root, a new UID subkey under the DFS stand-alone namespace root registry path `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DFS\Roots\Standalone\<YourDfsStandaloneNamespace>` will be created.
+
+Wireshark trace error example when trying to access a DFS Namespace, which is hosted on a remote DFS Namespace server, using the DFS Management console:
 
 ```output
 192.168.0.45	192.168.0.42	NETDFS	286	dfs_GetInfo request
@@ -47,7 +52,7 @@ If no backup is present, and since you have only a single DFS root server for yo
 
 The primary domain controller (PDC) or domain controller (DC) isn't reachable over TCP/UDP port 389 (Lightweight Directory Access Protocol (LDAP) port). The DFS namespace server tries to reach the PDC or DC until it runs into an error or times out. Therefore, on the machine (that's a DFS namespace server, member server, or member client with RSAT File Services tools installed) where you use the DFS Management console, you receive the error message "The device is not ready for use." This error occurs because the DFS namespace server is still trying to reach the PDC or DC while you request the DFS namespace information.
 
-This error variant usually shows for a short time until reaching the PDC or DC times out. Subsequent tries to view or access the DFS namespace via the DFS Management console without applying the solution can result in other error variants (for example, "The Namespace cannot be queried. The specified domain either does not exist or cannot be contacted").
+This error in such a scenario, usually shows for a short time, until all tries to reach the PDC or DC, will time out. Subsequent tries to view or access the DFS Namespace, via the DFS Management console, without applying the solution, can result in another known error (for example, "[The Namespace cannot be queried. The specified domain either does not exist or cannot be contacted](error-specified-domain-not-exist-cannot-contacted.md)"). 
 
 ## Resolution for cause 2: Check the status of TCP/UDP port 389
 
