@@ -27,7 +27,15 @@ If DC Locator doesn't work as expected in Active Directory domains, troubleshoot
     ```
 
 3. Use the Ping utility to verify network connectivity and the name resolution. Ping the IP address, the server name, and the domain name.
-4. Run the `nltest /dsgetdc:domainname` command to verify that you can locate domain controller for a specific domain.
+4. Use the [PortQryUI](https://www.microsoft.com/en-us/download/details.aspx?id=24009&msockid=010f589c35de634f3bee4ca4341562b2) tool to probe for availability of important domain controller services. When you start the tool, specify the domain controller fully qualified domain name (FQDN), and query the **Domains and Trusts** set of services as follows:
+
+    :::image type="content" source="media/how-domain-controllers-are-located/port-query-udp-389.png" alt-text="Screenshot of the Port Query tool window showing the query result with UDP port 389.":::
+
+    The screenshot shows one important port for DC discovery which is UDP/389, and in this case, it is successful.
+
+    > [!NOTE]
+    > UDP/389: This port is required to discover AD services.
+
 5. Use the `nslookup` tool to verify that DNS entries are correctly registered in DNS. Verify that the server host records and the globally unique identifier (GUID) SRV records can be resolved.
 
     For example, to verify record registrations, run the following commands:
