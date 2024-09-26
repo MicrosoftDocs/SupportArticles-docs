@@ -26,8 +26,8 @@
           href: email-m365-integration/server-side-synchronization/error-code-8005e274.md        
         - name: Error code 8005E276
           href: email-m365-integration/server-side-synchronization/error-code-8005e276.md
-        - name: Incoming emails are unexpectedly synchronized or have unexpected or missing data
-          href: email-m365-integration/server-side-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md
+        - name: Incoming emails are unexpectedly synchronized
+          href: email-m365-integration/server-side-synchronization/incoming-emails-unexpectedly-synchronized.md
 - name: Plug-in execution
   items:
     - name: Dataverse plug-ins
