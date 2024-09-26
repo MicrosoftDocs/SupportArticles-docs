@@ -23,9 +23,10 @@ To work around this issue, follow these steps:
 1. [Add the apps](/mem/intune/apps/store-apps-ios) to Intune, then [assign the apps](/mem/intune/apps/apps-deploy) as **Available** or **Required**.
 
     > [!NOTE]
+    >
     > After the apps are assigned, you are prompted to allow Intune to take over management of the apps on the device.
-    > 
-    > When you uninstall an application from a device enrolled using Device Enrollment Program (DEP) as **supervised mode**, you aren't prompted to take over management.
+    >
+    > When you uninstall an application from a device enrolled using Device Enrollment Program (DEP) as **supervised mode**, this step is not needed and you aren't prompted to take over management.
 
 2. To remove the apps from devices in the assigned group, change the assignment type to **Uninstall**.
 
