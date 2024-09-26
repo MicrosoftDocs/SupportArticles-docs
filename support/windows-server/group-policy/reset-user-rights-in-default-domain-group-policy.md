@@ -5,7 +5,6 @@ ms.date: 05/07/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, cenki, esolomou
 ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---

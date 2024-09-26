@@ -5,7 +5,6 @@ ms.date: 05/10/2024
 ms.reviewer: v-sidong,milanmil
 ms.custom: sap:System Management Components\PowerShell, Fix, csstroubleshoot
 audience: itpro
-localization_priority: medium
 ---
 # Hash of the file does not match when running signed PowerShell script
 

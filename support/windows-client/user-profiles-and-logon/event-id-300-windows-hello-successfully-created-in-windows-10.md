@@ -8,7 +8,6 @@ ms.collection: M365-identity-device-management
 ms.topic: troubleshooting
 ms.custom: sap:Windows Security Technologies\Biometric, Passwordless Authentication, SSO, and Windows Hello, csstroubleshoot
 audience: itpro
-localization_priority: medium
 ---
 # Event ID 300 - Windows Hello successfully created
 

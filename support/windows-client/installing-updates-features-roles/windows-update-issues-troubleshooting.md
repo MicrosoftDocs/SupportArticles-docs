@@ -8,7 +8,6 @@ ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update 
 ms.collection: highpri
 ms.reviewer: dougeby,aaroncz
 audience: itpro
-localization_priority: medium
 ---
 # Windows Update issues troubleshooting
 

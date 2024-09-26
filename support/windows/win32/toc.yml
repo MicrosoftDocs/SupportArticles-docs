@@ -63,6 +63,8 @@
       href: memory-leak-occurs-printing-document.md
     - name: Modify printer settings with DocumentProperties
       href: modify-printer-settings-documentproperties.md
+    - name: Page setup dialog might be closed when PSA is installed
+      href: page-setup-dialog-closed-print-support-app-installed.md
   - name: Networking development
     items:
     - name: Win32_NetworkAdapterConfiguration class is unable to retrieve information

@@ -68,6 +68,8 @@
     href: linux-selinux-troubleshooting.md
   - name: Debian Linux VM
     href: cannot-connect-debian-linux.md
+  - name: Troubleshoot connectivity issues with UFW in Ubuntu
+    href: ubuntu-ufw-guide.md
   - name: Troubleshoot "permissions are too open" error
     href: troubleshoot-ssh-permissions-too-open.md
   - name: Application access issues

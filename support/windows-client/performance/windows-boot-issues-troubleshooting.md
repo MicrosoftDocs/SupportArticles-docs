@@ -8,7 +8,6 @@ ms.collection: highpri
 ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ms.reviewer: dougeby,aaroncz
 audience: itpro
-localization_priority: medium
 ---
 # Advanced troubleshooting for Windows boot problems
 

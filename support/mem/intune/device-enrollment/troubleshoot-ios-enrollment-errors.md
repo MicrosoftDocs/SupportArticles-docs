@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common enrollment and sync token errors when enrolling iOS/iPadOS devices in Intune.
-ms.reviewer: kaushika, mghadial, annovich, caher
-ms.date: 06/19/2024
+ms.reviewer: kaushika, mghadial, annovich, caher, jtogashi
+ms.date: 09/25/2024
 search.appverid: MET150
 ms.custom: sap:Enroll Devices - iOS\ADE/ ABM
 ---
@@ -188,9 +188,9 @@ When you turn on an ADE-managed device that is assigned an enrollment profile, t
 
 When you turn on an ADE-managed device that is assigned an enrollment profile, the initial setup sticks after you enter credentials.
 
-**Cause:** Multi-Factor authentication (MFA) is enabled. Currently MFA doesn't work during enrollment on ADE devices.
+**Cause:** Multi-Factor authentication (MFA) is enabled. Currently, MFA doesn't work during enrollment on ADE devices if the authentication method is set to **Setup Assistant (legacy)**.
 
-**Solution:** Disable MFA, and then re-enroll the device.
+**Solution:** Disable MFA, and then re-enroll the device. Alternatively, change the authentication method to **Setup Assistant with modern authentication**.
 
 ### Authentication doesn't redirect to the government cloud 
 

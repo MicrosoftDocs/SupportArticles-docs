@@ -5,7 +5,6 @@ ms.date: 10/27/2020
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 keywords: amd processor, cisco VIC
 ms.custom: sap:Other Driver
