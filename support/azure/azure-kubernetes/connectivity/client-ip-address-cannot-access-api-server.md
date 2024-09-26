@@ -54,7 +54,7 @@ az aks show --resource-group <cluster-resource-group> \
 
 ## Solution
 
-Look at the cluster's API server-authorized ranges, and add your client's IP address within that range using the following steps:
+Look at the cluster's API server-authorized ranges, and add your client's IP address within that range.
 
 > [!NOTE]
 >
@@ -64,13 +64,11 @@ Look at the cluster's API server-authorized ranges, and add your client's IP add
 
 ### [Azure portal](#tab/azure-portal)
 
-To resolve this issue, update the API server-authorized range as shown in the following screenshot:
+Update the API server-authorized range as shown in the following screenshot:
 
 :::image type="content" source="media/client-ip-address-cannot-access-api-server/authorized-ip-ranges.png" alt-text="Screenshot of Authorized-ip-ranges pane."  lightbox="media/client-ip-address-cannot-access-api-server/authorized-ip-ranges.png":::
 
 ### [Azure CLI](#tab/azure-cli)
-
-To resolve this issue, follow these steps:
 
 1. Get your client IP address by running this [curl](https://curl.se/docs/manpage.html) command:
 
