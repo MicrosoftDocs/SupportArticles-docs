@@ -30,7 +30,9 @@ Paul Cannon's user settings:
 
 ### Cause
 
-Server-side synchronization automatically tracks emails based on the [incoming email filtering method configuration](/power-platform/admin/email-message-filtering-correlation) specified for each identified (resolved) Dataverse recipient. A Dataverse recipient is resolved by locating the applicable user and queue mailboxes associated with the email addresses found in the **To**, **Cc**, and **Bcc** fields on the received email from the external system (Exchange or Google Gmail). Therefore, if an email address is associated with more than one Dataverse mailbox with different incoming email filtering method settings, emails might unexpectedly synchronize into the system. You can examine the **To**, **Cc**, and **Bcc** fields on the email in Dataverse to identify unexpected Dataverse recipients.
+Server-side synchronization automatically tracks emails based on the [incoming email filtering method configuration](/power-platform/admin/email-message-filtering-correlation) specified for each identified (resolved) Dataverse recipient. A Dataverse recipient is resolved by locating the applicable user and queue mailboxes associated with the email addresses found in the **To**, **Cc**, and **Bcc** fields on the received email from the external system (Exchange or Google Gmail). Therefore, if an email address is associated with more than one Dataverse mailbox with different incoming email filtering method settings, emails might unexpectedly synchronize into the system.
+
+You can examine the **To**, **Cc**, and **Bcc** fields on the email in Dataverse to identify unexpected Dataverse recipients.
 
 ### Resolution
 
@@ -53,6 +55,7 @@ Once the **Accepting Entity** is identified, you can change the incoming email f
 ## Duplicate emails are tracked or synchronized in Dataverse
 
 Server-side synchronization can be configured to allow users to automatically create sent and received copies of the same email if the email meets the user's [incoming email filtering method](/power-platform/admin/email-message-filtering-correlation). 
+
 To avoid duplicate emails to be tracked or synchronized:
 
 1. In Dataverse, select the gear icon > **Advanced Settings**.
@@ -105,14 +108,16 @@ Server-side synchronization performs email address resolution on all sender and 
 > 
 > :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/format-type-is-email.png" alt-text="Screenshot that shows the Email format type of a column.":::
 
-As a result, if an email address is associated with more than one Dataverse record (such as an email address shared between a user and queue), all resolved recipients appear in their respective recipient fields. For example, in the following screenshot, Paul Cannon's email address is associated with both the user's mailbox and a queue. Even though Paul Cannon's email address only appears once in the received email in Exchange, both of them appear as recipients.
+As a result, if an email address is associated with more than one Dataverse record (such as an email address shared between a user and queue), all resolved recipients appear in their respective recipient fields.
+
+For example, in the following screenshot, Paul Cannon's email address is associated with both the user's mailbox and a queue. Even though Paul Cannon's email address only appears once in the received email in Exchange, both of them appear as recipients.
 
 :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/email-address-associated-with-user-and-queue.png" alt-text="Screenshot that shows an email address that's associated with both the user's mailbox as well as a queue.":::
 
 For more information, see:
 
-1. [When resolving recipient email addresses to rows in Dynamics 365, if there is more than one row in Dynamics 365 with the same email address, which row is it resolved to?](/dynamics365/outlook-app/user/faq-email-tracking#2-when-resolving-recipient-email-addresses-to-rows-in-dynamics-365-if-there-is-more-than-one-row-in-dynamics-365-with-the-same-email-address-which-row-is-it-resolved-to)
-2. [Multiple row types exist in Dynamics 365 with the same email addresses](/dynamics365/outlook-app/user/faq-email-tracking#5-multiple-row-types-exist-in-dynamics-365-with-the-same-email-addresses).
+- [When resolving recipient email addresses to rows in Dynamics 365, if there is more than one row in Dynamics 365 with the same email address, which row is it resolved to?](/dynamics365/outlook-app/user/faq-email-tracking#2-when-resolving-recipient-email-addresses-to-rows-in-dynamics-365-if-there-is-more-than-one-row-in-dynamics-365-with-the-same-email-address-which-row-is-it-resolved-to)
+- [Multiple row types exist in Dynamics 365 with the same email addresses](/dynamics365/outlook-app/user/faq-email-tracking#5-multiple-row-types-exist-in-dynamics-365-with-the-same-email-addresses)
 
 Likewise, if an email address isn't associated with a known Dataverse record, the email address appears unresolved.
 
