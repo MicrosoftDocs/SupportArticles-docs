@@ -1,7 +1,7 @@
 ---
 title: Fix Windows Update corruptions and installation failures
 description: Use the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 09/24/2024
+ms.date: 09/26/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
