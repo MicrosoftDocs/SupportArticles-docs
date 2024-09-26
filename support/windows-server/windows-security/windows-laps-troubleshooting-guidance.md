@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, jsimmons, sandeo, mimanans, sdabbiru, deverett, raviks, v-lianna
 ms.custom: sap:Windows Local Admin Password Solution (LAPS), csstroubleshoot
 ---

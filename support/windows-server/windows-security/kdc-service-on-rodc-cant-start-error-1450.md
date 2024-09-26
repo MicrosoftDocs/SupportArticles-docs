@@ -6,7 +6,6 @@ manager: dcscontentpm
 audience: itpro
 keywords: ad, security,KDC service, RODC, error 1450, handle invalid
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
 ---

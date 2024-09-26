@@ -8,7 +8,6 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
-localization_priority: medium
 ms.reviewer: kaushika
 ---
 # Applying Group Policy troubleshooting guidance

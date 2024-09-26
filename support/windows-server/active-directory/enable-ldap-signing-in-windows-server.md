@@ -5,7 +5,6 @@ ms.date: 09/05/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, hjerez, jarrettr, herbertm, wincicadsec
 ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---

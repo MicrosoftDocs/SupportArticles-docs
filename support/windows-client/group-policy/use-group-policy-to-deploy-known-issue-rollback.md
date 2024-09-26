@@ -5,7 +5,6 @@ ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 keywords: Windows Update, known issue, kir, group policy, rollback

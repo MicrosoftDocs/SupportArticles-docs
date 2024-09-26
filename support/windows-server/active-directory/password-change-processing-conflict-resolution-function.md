@@ -5,7 +5,6 @@ ms.date: 09/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, herbertm, jsimmons
 ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
 ---
