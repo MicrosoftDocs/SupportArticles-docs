@@ -45,13 +45,15 @@ If an email is unexpectedly synchronized into the system, you can identify the D
 
 > [!NOTE]
 > These fields don't appear on the Email form by default. You can add them to the form or to an **Advanced Find** view to see their values.
+
 > :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/accepting-entity-receiving-mailbox.png" alt-text="Screenshot that shows the Accepting Entity and Receiving Mailbox properties.":::
 
 Once the **Accepting Entity** is identified, you can change the incoming email filtering method of the user or queue to prevent future occurrences. To do so, see [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
 
 ## Duplicate emails are tracked or synchronized in Dataverse
 
-Server-side synchronization can be configured to allow users to automatically create sent and received copies of the same email if the email meets the user's [incoming email filtering method](/power-platform/admin/email-message-filtering-correlation). To avoid duplicate emails to be tracked or synchronized:
+Server-side synchronization can be configured to allow users to automatically create sent and received copies of the same email if the email meets the user's [incoming email filtering method](/power-platform/admin/email-message-filtering-correlation). 
+To avoid duplicate emails to be tracked or synchronized:
 
 1. In Dataverse, select the gear icon > **Advanced Settings**.
 2. Navigate to **Settings** > **Email Configuration** > **Email Configuration Settings**.
@@ -100,6 +102,7 @@ Server-side synchronization performs email address resolution on all sender and 
 
 > [!NOTE]
 > A column in Dataverse that has a format type of "[Email](/power-apps/developer/data-platform/data-type-format-conversions)" is involved in email address resolution.
+
 > :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/format-type-is-email.png" alt-text="Screenshot that shows the Email format type of a column.":::
 
 As a result, if an email address is associated with more than one Dataverse record (such as an email address shared between a user and queue), all resolved recipients appear in their respective recipient fields. For example, in the following screenshot, Paul Cannon's email address is associated with both the user's mailbox and a queue. Even though Paul Cannon's email address only appears once in the received email in Exchange, both of them appear as recipients.
