@@ -5,7 +5,6 @@ ms.date: 06/28/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ---
 # Windows Servicing, Updates and Features on Demand troubleshooting documentation for Windows Server

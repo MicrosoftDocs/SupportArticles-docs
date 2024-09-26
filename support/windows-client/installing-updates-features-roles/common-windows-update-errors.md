@@ -10,7 +10,6 @@ ms.topic: troubleshooting
 ms.collection: highpri
 ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
 audience: itpro
-localization_priority: medium
 ---
 
 # Windows Update common errors and mitigation

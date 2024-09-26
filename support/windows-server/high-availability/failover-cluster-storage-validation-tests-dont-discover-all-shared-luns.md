@@ -7,7 +7,6 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
 keywords: Windows failover cluster, SAN, shared LUNs, Validate a Configuration Wizard

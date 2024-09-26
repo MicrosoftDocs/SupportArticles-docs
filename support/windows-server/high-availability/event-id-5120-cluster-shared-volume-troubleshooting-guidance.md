@@ -8,7 +8,6 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.custom: sap:Clustering and High Availability\Cluster Shared Volume (CSV), csstroubleshoot
-localization_priority: medium
 ms.reviewer: kaushika
 ---
 # Event ID 5120 Cluster Shared Volume troubleshooting guidance

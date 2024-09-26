@@ -8,7 +8,6 @@ manager: dcscontentpm
 ms.collection: highpri
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 audience: itpro
-localization_priority: medium
 ---
 # How to determine the appropriate page file size for 64-bit versions of Windows
 

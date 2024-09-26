@@ -7,7 +7,6 @@ ms.topic: troubleshooting
 ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
 ms.reviewer: dansimp
 audience: itpro
-localization_priority: medium
 ---
 # Data collection for troubleshooting 802.1X authentication
 

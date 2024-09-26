@@ -5,7 +5,6 @@ ms.date: 09/03/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.localizationpriority: medium
 ms.reviewer: kaushika, lanaef, alrad, ckinder
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
