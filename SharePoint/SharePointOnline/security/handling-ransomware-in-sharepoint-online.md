@@ -57,6 +57,8 @@ If you're affected, try the following methods:
 
    - SharePoint: See [Restore a Document library](https://support.office.com/article/restore-a-document-library-317791c3-8bd0-4dfd-8254-3ca90883d39a)
    - OneDrive: See [Restore a OneDrive library](https://support.office.com/article/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15)
+ 
+In addition to the above, customers also have the option to utilize Microsoft 365 Backup for data recovery. [Microsoft 365 Backup](https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview) offers a longer protection time and provides uniquely fast recovery from common business continuity and disaster recovery (BCDR) scenarios like ransomware or accidental/malicious employee content overwrite/deletion. Additional BCDR scenario protections are also built directly into the service, offering an enhanced level of data protection. 
 
 > [!NOTE]
 > SharePoint Online retains backups of all content for 14 additional days beyond actual deletion. [If content cannot be restored](https://support.office.com/article/Restore-a-previous-version-of-an-item-or-file-in-SharePoint-F66DBDA0-81F4-4D1E-B08C-793265C58934), an administrator can contact Microsoft Support to request a restore any time inside the 14-day window. Be sure to note the following details:
