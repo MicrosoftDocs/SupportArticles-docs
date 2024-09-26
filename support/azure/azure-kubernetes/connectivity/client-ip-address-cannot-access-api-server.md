@@ -20,7 +20,7 @@ This article describes how to fix issues that occur when you can't connect to an
 
 ### [Azure portal](#tab/azure-portal)
 
-When you try to access Kubernetes resources such as Namespaces and Workloads from the Azure portal, you might encounter the following errors:
+When you try to access Kubernetes resources such as mamespaces and workloads from the Azure portal, you might encounter the following errors:
 
 > Network error
 >
@@ -64,11 +64,13 @@ Look at the cluster's API server-authorized ranges, and add your client's IP add
 
 ### [Azure portal](#tab/azure-portal)
 
-Update the API server-authorized range as shown in the following screenshot:
+To resolve this issue, update the API server-authorized range as shown in the following screenshot:
 
 :::image type="content" source="media/client-ip-address-cannot-access-api-server/authorized-ip-ranges.png" alt-text="Screenshot of Authorized-ip-ranges pane."  lightbox="media/client-ip-address-cannot-access-api-server/authorized-ip-ranges.png":::
 
 ### [Azure CLI](#tab/azure-cli)
+
+To resolve this issue, follow these steps:
 
 1. Get your client IP address by running this [curl](https://curl.se/docs/manpage.html) command:
 
