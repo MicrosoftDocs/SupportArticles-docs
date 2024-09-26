@@ -165,15 +165,15 @@ Staged Packages:
 
 2. Determine the update containing the missing files.
 
-    From the log entries, identify the Update Build Revision (UBR) number within the file paths:
+    From the log entries, identify the Update Build Revision (UBR) numbers within the file paths:
 
     - In the *EnterpriseModernAppMgmtCSP.dll* file, the UBR number is `10.0.19045.3636`.
     - In the `Microsoft-Windows-Client-Features-Package` package, the UBR number is `10.0.19045.4291`.
 
 3. Match the UBR number to the KB number:
 
-   1. Go to the Windows [update history page](/windows/release-health/release-information#windows-10-release-history) for your version (for example, Windows 10, version 22H2).
-   2. Match the UBR number (`3636` or `4291`) with the listed updates to find the KB number.
+   1. Go to the [Windows update history page](/windows/release-health/release-information#windows-10-release-history) for your version (for example, Windows 10, version 22H2).
+   2. Match the UBR number (`3636` or `4291`) to the listed updates to find the KB number.
 
    For example:
 
@@ -182,7 +182,7 @@ Staged Packages:
 
 4. Search for and download the update by the KB number:
 
-    1. Use the identified KB numbers to search on the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
+    1. Use the identified KB numbers to search for the updates in the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
     2. Download the updates associated with each KB number to restore the missing or corrupted files.
 
 ### Step 3: Extract the .msu and .cab files
