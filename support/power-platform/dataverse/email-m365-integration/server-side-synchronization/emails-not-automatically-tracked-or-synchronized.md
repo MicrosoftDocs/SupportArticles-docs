@@ -92,7 +92,7 @@ To automatically track emails from distribution groups or "BCC" recipients, set 
 
 ### Cause
 
-When server-side synchronization processes an email but can't create an email activity record in Dataverse, the "Undeliverable" category is assigned to the email. This issue typically occurs due to a custom plugin, workflow failure, or privilege issue when processing the email. Privilege issues usually occur when the user who owns the receiving mailbox or queue doesn't have sufficient [privileges]((/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync#more-information)) to synchronize the email records.
+When server-side synchronization processes an email but can't create an email activity record in Dataverse, the "Undeliverable" category is assigned to the email. This issue typically occurs due to a custom plugin, workflow failure, or privilege issue when processing the email. Privilege issues usually occur when the user who owns the receiving mailbox or queue doesn't have sufficient [privileges](/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync#more-information) to synchronize the email records.
 
 :::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/undeliverable-email.png" alt-text="Screenshot that shows an email that is assigned to the Undeliverable category.":::
 
