@@ -64,9 +64,13 @@ Look at the cluster's API server-authorized ranges, and add your client's IP add
 
 ### [Azure portal](#tab/azure-portal)
 
-Update the API server-authorized range as shown in the following screenshot:
+1. Navigate to the cluster from the Azure portal.
+2. In the left menu, locate **Settings** and then select **Networking**.
+3. In the **Networking** page, select the **Overview** tab.
+4. Select **Manage** under **Resource settings**.
+5. In the **Authorized IP ranges** pane, add your client IP address as shown in the following screenshot:
 
-:::image type="content" source="media/client-ip-address-cannot-access-api-server/authorized-ip-ranges.png" alt-text="Screenshot of Authorized-ip-ranges pane."  lightbox="media/client-ip-address-cannot-access-api-server/authorized-ip-ranges.png":::
+    :::image type="content" source="media/client-ip-address-cannot-access-api-server/authorized-ip-ranges.png" alt-text="Screenshot of Authorized-ip-ranges pane."  lightbox="media/client-ip-address-cannot-access-api-server/authorized-ip-ranges.png":::
 
 ### [Azure CLI](#tab/azure-cli)
 
