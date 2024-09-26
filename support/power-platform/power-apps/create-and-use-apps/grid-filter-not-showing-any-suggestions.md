@@ -1,38 +1,40 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
 title: Grid filter for lookup column not showing any suggestions
-description: The grid column filter for lookup type field does not show any record suggestions or it says "No Records Found"
-author: akmaloo
+description: The grid column filter for lookup type field doesn't show any record suggestions or it says no records found.
+author: akshay-viz
 ms.author: akmaloo
-ms.service: powerapps
-ms.topic: troubleshooting
-ms.date:     09/19/2024
-ms.subservice: troubleshoot
+ms.reviewer: akmaloo
+ms.date: 09/26/2024
+ms.custom: sap:Using grids and lists in model-driven apps
 ---
 # Grid filter for Lookup column not showing any suggestions in a model-driven app
 
 ## Symptoms
 
-When you try to filter data on a lookup column, you do not see a list of values, or it says, "No Records Found". For example, the filter on the Parent Business column doesn't show any results as shown in the screenshot below.
-![emptyfiltersuggestions](media/grid-filter-not-showing-any-suggestions/emptyfiltersuggestions.png)
+When you try to [filter data on a lookup column](/power-apps/user/grid-filters#filtering-on-a-lookup-column), you don't see a list of values, or it says, "No Records Found." For example, the filter on the **Parent Business** column doesn't show any results as shown in the following screenshot.
 
-## Cause
+:::image type="content" source="media/grid-filter-not-showing-any-suggestions/empty-filter-suggestions.png" alt-text="Screenshot of the iParent Business column that doesn't show any values.":::
 
-This can happen in two situations:
+## Cause 1
 
-1. The records for this lookup field do not have their primary field populated, so the filter dropdown will show blank.
-1. The lookup view for the entity associated with the column does not have the primary field added as part of its view as shown in the screenshot below.
-![primaryfieldabsent](media/grid-filter-not-showing-any-suggestions/primaryfieldabsent.png)
+The records for this lookup field don't have their primary field populated, so the filter dropdown is blank.
 
-## Mitigation
+#### Resolution
 
-1. The records need to populate their primary field.
-1. Edit the Lookup View for the entity and add the primary field.
-![addColumn](media/grid-filter-not-showing-any-suggestions/addcolumn.png)
+The records need to populate their primary field.
 
-## See also
+## Cause 2
+
+The **Lookup View** for the entity associated with the column doesn't have the primary field added as part of its view as shown in the following screenshot.
+
+:::image type="content" source="media/grid-filter-not-showing-any-suggestions/primary-field-absent.png" alt-text="Screenshot of the entity associated with the column doesn't have the primary field." lightbox="media/grid-filter-not-showing-any-suggestions/primary-field-absent.png":::
+
+#### Resolution
+
+Edit the **Lookup View** for the entity and add the primary field.
+
+:::image type="content" source="media/grid-filter-not-showing-any-suggestions/add-column.png" alt-text="Screenshot of the Add Columns option that you can use to add the primary field for the Lookup View.":::
+
+## More information
 
 [Troubleshooting grid issues in Power Apps](grid-issues.md)
