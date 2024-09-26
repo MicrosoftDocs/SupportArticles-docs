@@ -5,7 +5,6 @@ ms.date: 09/26/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: high
 ms.reviewer: kaushika, chkeen, cgibson, jesko, warrenw, abjos
 ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
 adobe-target: true
