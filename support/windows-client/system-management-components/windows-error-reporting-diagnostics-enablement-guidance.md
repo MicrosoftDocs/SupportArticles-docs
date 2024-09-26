@@ -6,7 +6,6 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.custom: sap:System Management Components\Windows Diagnostic Data Processor Configuration, csstroubleshoot
-localization_priority: medium
 ms.reviewer: kaushika, sangar, plingadevaru, v-lianna
 ---
 # Windows Error Reporting and Windows diagnostics enablement guidance

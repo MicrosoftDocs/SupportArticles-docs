@@ -7,7 +7,6 @@ ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Win
 ms.topic: troubleshooting
 ms.reviewer: dougeby,aaroncz
 audience: itpro
-localization_priority: medium
 ---
 
 # Windows 10 upgrade quick fixes

@@ -1,12 +1,11 @@
 ---
 title: Guidance for troubleshooting Network Policy Server
 description: Learn how to troubleshoot scenarios related to Network Policy Server (NPS).
-ms.date: 12/26/2023
+ms.date: 09/20/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
-ms.reviewer: kaushika, v-tappelgate
+ms.reviewer: kaushika, v-tappelgate, hoz
 ms.custom: sap:Network Connectivity and File Sharing\RADIUS - Network Policy Server (NPS) or Internet Authentication Service (IAS), csstroubleshoot
 ---
 
@@ -80,7 +79,7 @@ If you're using NPS and Microsoft Entra multifactor authentication (MFA), try to
 
 ### Emerging and known issues
 
-For descriptions and summaries of emerging and known issues, see [Windows release health page](https://admin.microsoft.com/adminportal/home?#/windowsreleasehealth) in the Microsoft 365 admin center. The Windows release health page is designed to provide troubleshooting information for known issues that your users may be experience. This page is available to customers who have a Microsoft 365 subscription.
+The Windows release health page is designed to inform you about emerging and known issues you may be experiencing. Check sections of the [Windows release health page](/windows/release-health/) for each impacted operating system version.
 
 ### NPS Event ID 13: A RADIUS message was received from the invalid RADIUS client IP address xx.xx.xx.xx
 

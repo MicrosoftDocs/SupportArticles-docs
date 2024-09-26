@@ -7,7 +7,6 @@ audience: itpro
 ms.topic: troubleshooting
 ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
 ms.reviewer: kaushika, warrenw, traceytu, iovoicul, kimberj, raviks, v-lianna
-localization_priority: medium
 ---
 # Modern, Inbox, and Microsoft Store Apps troubleshooting guidance
 

@@ -1,12 +1,11 @@
 ---
 title: Troubleshoot guarded hosts
 description: Provides resolutions to common problems encountered when deploying or operating a guarded Hyper-V host in your guarded fabric.
-ms.date: 12/26/2023
+ms.date: 09/05/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
-ms.reviewer: kaushika, dongill, inhenkel, v-lianna
+ms.reviewer: kaushika, dongill, inhenkel, v-lianna, ashrana
 ms.custom: sap:Virtualization and Hyper-V\Shielded Virtual Machines, csstroubleshoot
 ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81
 ---
@@ -14,7 +13,7 @@ ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81
 
 This article describes resolutions to common problems encountered when deploying or operating a guarded Hyper-V host in your guarded fabric.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016
+_Applies to:_ &nbsp; All supported versions of Windows Server
 
 If you're unsure of the nature of your problem, first try running the [guarded fabric diagnostics](troubleshoot-guarded-fabric-diagnostics.md) on your Hyper-V hosts to narrow down the potential causes.
 

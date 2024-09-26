@@ -17,22 +17,22 @@ ms.date: 06/26/2024
 
 Doing a major upgrade on Red Hat Enterprise Linux (RHEL) involves transitioning from one major version to another major version, such as from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9. Major upgrades bring significant changes, including new features, enhancements, and improvements in security and performance. The process can be complex, but Red Hat provides tools and guidance to simplify and streamline the upgrade process. 
 
-One example is the leapp tool. The leapp tool is designed to automate the upgrade process of RHEL systems to the next major version. It performs checks, provides recommendations, and helps to resolve any issues that occur during the upgrade. This article discusses how to troubleshoot common issues that occur when you use the leapp tool during a major upgrade of a Red Hat operating system.
+One example is the Leapp tool. The Leapp tool is designed to automate the upgrade process of RHEL systems to the next major version. It performs checks, provides recommendations, and helps to resolve any issues that occur during the upgrade. This article discusses how to troubleshoot common issues that occur when you use the Leapp tool during a major upgrade of a Red Hat operating system.
 
 > [!CAUTION]
 >On June 30, 2024, Red Hat Enterprise Linux 7 reached the end of maintenance support 2 phase. The maintenance phase is followed by the Extended Life Phase. As Red Hat Enterprise Linux 7 transitions out of the Full and Maintenance phases, you should upgrade to Red Hat Enterprise Linux 8 or 9. If you must stay on Red Hat Enterprise Linux 7, we recommend that you add the [Red Hat Enterprise Linux Extended Life Cycle Support (ELS) Add-On](/azure/virtual-machines/workloads/redhat/redhat-extended-lifecycle-support).
 
 ## Recommendations before you upgrade
 
-Before you begin the leapp preupgrade and upgrade process, make sure that you take the following actions:
+Before you begin the Leapp preupgrade and upgrade process, make sure that you take the following actions:
 
 - Make a backup of the virtual machine (VM) or a snapshot of the OS disk.
 
-- Clear enough space in */var/lib/leapp* to accommodate the upgrade. A best practice is to have at least 2-5 GB of free space available.
+- Clear enough space in `/var/lib/leapp` to accommodate the upgrade. A best practice is to have at least 2-5 GB of free space available.
 
 - Set up access to the serial console.
 
-After you complete these tasks, you can start the leapp preupgrade and upgrade processes through the serial console.
+After you complete these tasks, you can start the Leapp preupgrade and upgrade processes through the serial console.
 
 ## Inhibitor problems and errors
 
@@ -61,9 +61,9 @@ After you complete these tasks, you can start the leapp preupgrade and upgrade p
 | File system issues    | Problems that involve disk space, file corruption, or mount points                 |
 | Network issues        | Network connectivity problems that affect the download or installation of packages |
 
-### Find inhibitors or errors in the leapp report
+### Find inhibitors or errors in the Leapp report
 
-The leapp report is located at */var/log/leapp/leapp-report.txt*. Open the report and look for sections that are marked as inhibitors. These sections list issues that must be resolved.
+The Leapp report is located at `/var/log/leapp/leapp-report.txt`. Open the report and look for sections that are marked as inhibitors. These sections list issues that must be resolved.
 
 For each inhibitor, the report typically provides detailed remediation steps. These steps can include commands to run, packages to install, or configuration changes to make.
 
@@ -268,7 +268,7 @@ Allow connectivity to RHUI. For more information, see [Linux RHUI connectivity i
 
 ### Preupgrade symptom 3: A subscription-manager command didn't run
 
-If you run the leapp upgrade that has Red Hat Subscription Manager on a pay-as-you-go (PayGo) image, you might receive the following error message:
+If you run the Leapp upgrade that has Red Hat Subscription Manager on a pay-as-you-go (PayGo) image, you might receive the following error message:
 
 ```output
 [ERROR] Actor: scan_subscription_manager_info
@@ -283,9 +283,9 @@ Summary:
 
  When you use a PayGo image on Azure, you can't run the `subscription-manager` tool because the system is designed to use RHUI instead. You have to specify the `--no-rhsm` flag to bypass `subscription-manager` during the upgrade.
 
-### preupgrade symptom 4: The leapp preupgrade doesn't install RHEL 8 userspace packages ("execv() failed: No such file or directory")
+### preupgrade symptom 4: The Leapp preupgrade doesn't install RHEL 8 userspace packages ("execv() failed: No such file or directory")
 
-If you run the leapp preupgrade, you might receive the following "Unable to install RHEL 8 userspace packages" error message:
+If you run the Leapp preupgrade, you might receive the following "Unable to install RHEL 8 userspace packages" error message:
 
 ```output
 Risk Factor: high
@@ -337,7 +337,7 @@ sudo rpm -Va dnf\* leapp\*
 
 ### preupgrade symptom 5: /var/lib/leapp/el8userspace', '/bin/bash', '-c', 'su - -c update-ca-trust'] failed with exit code 1
 
-If you run leapp preupgrade, you might receive the following "Actor target_userspace_creator unexpectedly terminated" error message:
+If you run Leapp preupgrade, you might receive the following "Actor target_userspace_creator unexpectedly terminated" error message:
 
 ```output
 Factor: high error
@@ -433,13 +433,13 @@ After you resolve all the inhibitors, run the preupgrade again, and make sure th
 
 ## Leapp upgrade common issues
 
-After the preupgrade report shows no errors or inhibitors and everything is marked as resolved, continue to the leapp upgrade. In this report, the output is typically shown in green or yellow, indicating that it's safe to run the leapp upgrade.
+After the preupgrade report shows no errors or inhibitors and everything is marked as resolved, continue to the Leapp upgrade. In this report, the output is typically shown in green or yellow, indicating that it's safe to run the Leapp upgrade.
 
-The following symptoms indicate some common errors that are reported during the leapp upgrade process.
+The following symptoms indicate some common errors that are reported during the Leapp upgrade process.
 
 ### Upgrade symptom 1: Not enough space available on /var/lib/leapp/scratch
 
-If you run the leapp upgrade, you might receive the following "Not enough space available" error message:
+If you run the Leapp upgrade, you might receive the following "Not enough space available" error message:
 
 ```output
 2024-06-14 19:31:45.552155 [ERROR] Actor: dnf_dry_run
@@ -452,9 +452,9 @@ Summary:
 
 #### Upgrade solution 1: Extend the file system
 
-Extend the file system on which */var/lib/leapp* is mounted. Typically, the mounting is on */dev/mapper/rootvg-varlv*.
+Extend the file system on which `/var/lib/leapp` is mounted. Typically, the mounting is on */dev/mapper/rootvg-varlv*.
 
-Typically, the output is shown in green or yellow, indicating that you can safely do the leapp upgrade.
+Typically, the output is shown in green or yellow, indicating that you can safely do the Leapp upgrade.
 
 ### Upgrade symptom 2: The openssl-libs-1:1.1.1k-12.el8_9.x86_64 conflicts with file from package openssl11-libs-1:1.1.1k-7.el7.x86_64
 
@@ -510,7 +510,7 @@ Removing for dependencies:
 
 ### Upgrade symptom 3: Problem with installed package ansible-2.9.27-1.el7ae.noarch and ansible-test-2.9.27-1.el7ae.noarch
 
-If you run the leapp upgrade, you might receive the following "DNF execution failed with non zero exit code" error message:
+If you run the Leapp upgrade, you might receive the following "DNF execution failed with non zero exit code" error message:
 
 ```output
 Risk Factor: high (error)
@@ -556,7 +556,7 @@ This action makes sure that the system uses the correct versions of the OpenSSL 
 
 ### Upgrade symptom 5: Leapp upgrade doesn't mount a device during the upgrade
 
-If you run the leapp upgrade, you might receive the following device mounting error message:
+If you run the Leapp upgrade, you might receive the following device mounting error message:
 
 ```output
 [    4.509104] upgrade[569]: Mounting /usr with -o defaults,ro
@@ -586,11 +586,11 @@ If you run the leapp upgrade, you might receive the following device mounting er
    sudo cat /etc/fstab
    ```
 
-1. Run the leapp upgrade command again.
+1. Run the Leapp upgrade command again.
 
 ### Upgrade symptom 6: Failed to mount n/a on /sys/fs/cgroup on RHEL 7.9
 
-If you run the leapp upgrade, you might receive the following "Failed to mount" error message:
+If you run the Leapp upgrade, you might receive the following "Failed to mount" error message:
 
 ```output
 [ 4.815758]  upgrade[599]: Failed to mount n/a on /sys/fs/cgroup (MS_RDONLY|MS_NOSUID|MS_NODEV|MS_NOEXEC|MS_REMOUNT|MS_STRICTATIME "mode=755"): Invalid argument
@@ -603,12 +603,12 @@ The mounting failure occurs because version 2 of the control group (cgroup v2) i
 
 1. Restore the VM from the snapshot or a backup.
 
-1. Before you run the leapp upgrade, verify whether the parameter `systemd.unified_cgroup_hierarchy=1` is located in */proc/cmdline* or */etc/default/grub*.
+1. Before you run the Leapp upgrade, verify whether the parameter `systemd.unified_cgroup_hierarchy=1` is located in */proc/cmdline* or */etc/default/grub*.
 
-1. If that parameter is in one of those files, remove the parameter from the file, and then run the leapp upgrade process again.
+1. If that parameter is in one of those files, remove the parameter from the file, and then run the Leapp upgrade process again.
 
 > [!IMPORTANT]
-> If the leapp upgrade is still failing for no apparent reason (such as when upgrading from version 7.9 to version 8.10 or from version 8.10 to version 9.4), don't upgrade to the latest version. Instead, try to upgrade to an intermediate version (such as from version 7.9 to version 8.8 or version 8.10 to version 9.2) by specifying the `--target x.y` flag. After the intermediate upgrade is successful, you can try to upgrade to the latest release.
+> If the Leapp upgrade is still failing for no apparent reason (such as when upgrading from version 7.9 to version 8.10 or from version 8.10 to version 9.4), don't upgrade to the latest version. Instead, try to upgrade to an intermediate version (such as from version 7.9 to version 8.8 or version 8.10 to version 9.2) by specifying the `--target x.y` flag. After the intermediate upgrade is successful, you can try to upgrade to the latest release.
 
 ## Related content
 

@@ -5,7 +5,6 @@ ms.date: 03/08/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: manojse, yitzhaks, avicar, kaushika
 ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 ---
