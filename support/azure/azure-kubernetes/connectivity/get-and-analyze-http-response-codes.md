@@ -1,8 +1,8 @@
 ---
 title: Get and analyze HTTP response codes to determine app behavior
 description: Learn how to get HTTP response codes using cURL or a browser to analyze the behavior of an app that's hosted on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/24/2024
-ms.reviewer: chiragpa, v-leedennis
+ms.date: 09/26/2024
+ms.reviewer: chiragpa, jopalhei, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to get HTTP response codes by using the Client ULR (cURL) command or a browser so that I can analyze the behavior of an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Connectivity
@@ -63,9 +63,9 @@ You can also get the HTTP response of an HTTP endpoint from a browser. Follow th
 
 1. Select the **Network** tab, and then access the endpoint. The details about the HTTP response appear in the developer tools window or pane.
 
-## Get HTTP response codes by issuing API Call's
+## Get HTTP response codes by issuing API requests
 
-To make API requests to the application and get details about the response, you can choose from many other command-line and GUI tools. These tools include the following.
+To make API requests to the application and get details about the response, you can choose from many other command-line and GUI tools. These tools include the following:
 
 | Tool | Link |
 | ---- | ---- |
@@ -73,8 +73,7 @@ To make API requests to the application and get details about the response, you 
 | wget | [GNU Wget 1.21.1-dirty Manual](https://www.gnu.org/software/wget/manual/wget.html) |
 | PowerShell | [Invoke-WebRequest cmdlet](/powershell/module/microsoft.powershell.utility/invoke-webrequest) |
 
-After obtaining an HTTP Response Code, you should begin troubleshooting to gain a clearer understanding of the application’s behavior. 
-For more information about the HTTP status codes and the behavior that they indicate, see the following content.
+After you get an HTTP response code, start troubleshooting to better understand the application's behavior. For more information about the HTTP status codes and the behavior that they indicate, see the following content:
 
 | Information source | Link |
 | ------------------ | ---- |
