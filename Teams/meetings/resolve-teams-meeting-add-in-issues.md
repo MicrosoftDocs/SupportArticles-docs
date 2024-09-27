@@ -15,10 +15,10 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 09/24/2024
+ms.date: 09/27/2024
 ---
 
-# Resolve issues in the Teams Meeting add-in for classic Outlook
+# Resolve issues that affect the Teams Meeting add-in for classic Outlook
 
 > [!IMPORTANT]
 > The new Outlook for Windows doesn't support the Teams COM add-in, also known as Teams add-in for Outlook. The new Outlook contains a native Teams meeting capability that enables users to schedule meetings. For more information, see [Schedule a Teams meeting](https://support.microsoft.com/office/schedule-a-microsoft-teams-meeting-from-outlook-883cc15c-580f-441a-92ea-0992c00a9b0f#bkmk_schedule) > **New Outlook (desktop & web)**.
