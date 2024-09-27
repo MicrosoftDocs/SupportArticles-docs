@@ -1251,6 +1251,8 @@ items:
       href: ./networking/error-not-enough-memory-resources-available.md
     - name: 'Error "The data is invalid" or "The Namespace has no targets"'
       href: ./networking/error-data-invalid-namespace-no-targets.md
+    - name: 'Error "The device is not ready for use"'
+      href: ./networking/error-device-not-ready-for-use.md
     - name: Error "The remote procedure call failed"
       href: ./networking/error-remote-procedure-call-failed.md
     - name: Error "The RPC server is unavailable"
