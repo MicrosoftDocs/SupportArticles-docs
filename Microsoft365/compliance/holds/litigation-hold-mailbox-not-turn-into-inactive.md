@@ -38,7 +38,7 @@ To convert a regular user mailbox that has a hold to an inactive mailbox, follow
 
 1. [Reassign a license to the user](/microsoft-365/admin/manage/assign-licenses-to-users#use-the-active-users-page-to-assign-or-unassign-licenses) to resolve the error.
 
-2. If the cloud user account is synced from on-premises, delete or turn off sync.
+2. If the cloud user account is synced from on-premises, delete the on-premises account or turn off sync.
 
 3. If the user account was created directly in the cloud:
 
