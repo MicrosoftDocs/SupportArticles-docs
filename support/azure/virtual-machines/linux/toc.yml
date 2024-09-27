@@ -263,6 +263,8 @@
     href: create-swap-file-linux-vm.md
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
+  - name: Configure custom DNS servers
+    href: custom-dns-configuration-for-azure-linux-vms.md
 
 - name: Linux High Availability Pacemaker cluster
   items:

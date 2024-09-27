@@ -353,8 +353,6 @@ items:
       href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
       href: ./active-directory/default-workstation-numbers-join-domain.md
-    - name: Mechanism to locate a domain controller
-      href: ./active-directory/how-domain-controllers-are-located.md
     - name: Netlogon service doesn't keep settings after in-place upgrade
       href: ./active-directory/netlogon-service-not-start-automatically.md
     - name: Support boundaries for Active Directory over NAT
@@ -363,6 +361,8 @@ items:
       href: ./active-directory/sync-center-slow-syncing-of-offline-files.md
     - name: '"The account is not authorized to login from this station" error'
       href: ./active-directory/account-not-authorized-login-from-this-station.md
+    - name: Troubleshoot domain controller location issues
+      href: ./active-directory/how-domain-controllers-are-located.md
     - name: Troubleshoot errors when joining computers to a domain
       href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
     - name: Troubleshooting AD Replication error 1908
@@ -1247,6 +1247,10 @@ items:
       href: ./networking/target-account-name-incorrect-error-access-file-share.md
     - name: Error "Element not found" with DFS namespaces
       href: ./networking/error-element-not-found-dfsn.md
+    - name: 'Error "Not enough memory resources are available to process this command"'
+      href: ./networking/error-not-enough-memory-resources-available.md
+    - name: 'Error "The data is invalid" or "The Namespace has no targets"'
+      href: ./networking/error-data-invalid-namespace-no-targets.md
     - name: 'Error "The device is not ready for use"'
       href: ./networking/error-device-not-ready-for-use.md
     - name: Error "The remote procedure call failed"
