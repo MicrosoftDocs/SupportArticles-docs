@@ -60,6 +60,6 @@ Use one of the following workarounds:
 
     :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/search-in-token-picker.png" alt-text="Screenshot to search for the dynamic content in the dynamic content picker.":::
 
-- Use the **Compose** action card. The output of the **Compose** action, namely **Outputs**, will appear in the dynamic content picker, and you can then use it in the flow.
+- Use the **Compose** action card. The output of the **Compose** action, namely **Outputs**, will appear in the dynamic content picker, and you can select it to use in the flow.
 
     :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/compose-action-card.png" alt-text="Screenshot to use the Compose action card, which will produce an output of type any.":::
