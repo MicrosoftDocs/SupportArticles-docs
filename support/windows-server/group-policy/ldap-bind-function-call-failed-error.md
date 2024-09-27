@@ -5,7 +5,6 @@ manager: dcscontentpm
 audience: itpro
 ms.date: 12/26/2023
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, dennhu, pkalamkar, v-lianna
 ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot, ikb2lmc
 ---

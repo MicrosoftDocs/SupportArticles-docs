@@ -1,11 +1,10 @@
 ---
 title: Windows setup log file locations
 description: Describes the setup log file locations for each setup phase of Windows Vista, Windows 7, Windows Server 2008 R2, Windows 8.1, and Windows 10 Version 1607.
-ms.date: 12/26/2023
+ms.date: 09/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, kimnle
 ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ---
@@ -19,8 +18,6 @@ _Original KB number:_ &nbsp; 927521
 ## Introduction
 
 Windows setup log files are in different locations on the hard disk. These locations depend on the setup phase.
-
-Support for Windows Vista without any service packs installed ended on April 13, 2010. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see [Windows XP support has ended](https://support.microsoft.com/help/14223).
 
 ## Down-level phase
 
@@ -55,8 +52,14 @@ The Windows Preinstallation Environment (Windows PE or WinPE) phase is the Windo
 
 ## Online configuration phase
 
-The online configuration phase (the first boot phase) starts when you receive the following message:
-> Please wait a moment while Windows prepares to start for the first time.
+The online configuration phase (the first boot phase) starts when you receive the following messages:
+
+> Please wait a moment while Windows prepares to start for the first time.  
+
+Or
+
+> Working on updates NN%
+> Please keep your computer on.
 
 During this phase, basic hardware support is installed. If it's an upgrade installation, data and programs are also migrated. The following table lists important log files in this setup phase.
 

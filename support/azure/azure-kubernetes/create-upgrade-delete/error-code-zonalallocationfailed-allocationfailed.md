@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
 description: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error when you create, deploy, or update a Kubernetes cluster.
-ms.date: 05/27/2024
+ms.date: 09/05/2024
 author: axelgMS
 ms.author: axelg
 editor: v-jsitser
@@ -51,7 +51,7 @@ Or, when you use dedicated hosts in a cluster and try to create or scale up a no
 
 ## Cause 1: Limited zone availability in a SKU
 
-You're trying to deploy a cluster in a zone that has limited availability for the specific SKU.
+You're trying to deploy, upgrade or scale up a cluster in a zone that has limited availability for the specific SKU.
 
 ## Solution 1: Use a different SKU, zone, or region
 
@@ -60,7 +60,7 @@ Try one or more of the following methods:
 - Redeploy the cluster in the same region by using a different SKU.
 - Redeploy the cluster in a different zone in that region.
 - Redeploy the cluster in a different region.
-- Create a new node pool in a different region or zone.
+- Create a new node pool in a different zone or use a different SKU.
 
 For more information about how to fix this error, see [Resolve errors for SKU not available](/azure/azure-resource-manager/troubleshooting/error-sku-not-available).
 

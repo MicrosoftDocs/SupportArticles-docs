@@ -5,7 +5,6 @@ ms.date: 03/05/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, jtrox
 ms.custom: sap:System Management Components\Server Manager, csstroubleshoot
 adobe-target: true

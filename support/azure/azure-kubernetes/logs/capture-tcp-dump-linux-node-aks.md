@@ -1,9 +1,9 @@
 ---
 title: Capture a TCP dump from a Linux node in an AKS cluster
 description: Understand how to capture a TCP dump from a Linux node within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 02/01/2023
+ms.date: 09/26/2024
 ms.topic: how-to
-ms.reviewer: erbookbi, amaljuna, v-leedennis
+ms.reviewer: erbookbi, amaljuna, kuzhao, v-rekhanain, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Monitoring and Logging, linux-related-content
 ---
@@ -68,8 +68,14 @@ To capture the dump, run the [tcpdump command](https://www.tcpdump.org/manpages/
 tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
 Got 6
 ```
+> [!NOTE]
+> Running tcpdump without using filtering parameters can significantly increase the size of the Packet Capture (PCAP) file, especially for long runs. Therefore, we recommend that you add filters, such as source, destination, and port. For example:
+>
+> - `tcpdump dst 192.168.1.100`
+> - `tcpdump dst host.mydomain.com`
+> - `tcpdump port http or port ftp or port smtp or port imap or port pop3 or port telnet`
 
-While the trace is running, replicate your issue many times. This action ensures the issue has been captured within the TCP dump. Note the time stamp while you replicate the issue. To stop the packet capture when you're done, press Ctrl+C:
+While the trace is running, replicate your issue many times. This action make sure that the issue is captured within the TCP dump. Note the time stamp while you replicate the issue. To stop the packet capture when you're done, press Ctrl+C: 
 
 ```console
 # tcpdump -s 0 -vvv -w /capture.cap
@@ -96,6 +102,8 @@ The helper pod has a prefix of `node-debugger-aks`, as shown in the third row. R
 ```bash
 kubectl cp node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2:/capture.cap capture.cap
 ```
+> [!NOTE]
+> If the `chroot /host` command was used when entering the debug pod, add `/host` before `/capture.cap` for the source file.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 

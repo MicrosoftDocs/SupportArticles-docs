@@ -10,7 +10,6 @@ ms.collection:
 ms.topic: troubleshooting
 ms.custom: sap:Windows Security Technologies\Biometric, Passwordless Authentication, SSO, and Windows Hello, csstroubleshoot
 audience: itpro
-localization_priority: medium
 ---
 # Windows Hello errors during PIN creation
 

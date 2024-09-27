@@ -52,7 +52,7 @@
 
 - name: Cannot connect to my VM
   items:
-  - name: SSH troubleshooting
+  - name: Basic SSH troubleshooting
     href: troubleshoot-ssh-connection.md
   - name: Detailed SSH troubleshooting
     href: detailed-troubleshoot-ssh-connection.md
@@ -68,6 +68,8 @@
     href: linux-selinux-troubleshooting.md
   - name: Debian Linux VM
     href: cannot-connect-debian-linux.md
+  - name: Troubleshoot connectivity issues with UFW in Ubuntu
+    href: ubuntu-ufw-guide.md
   - name: Troubleshoot "permissions are too open" error
     href: troubleshoot-ssh-permissions-too-open.md
   - name: Application access issues
@@ -121,15 +123,17 @@
     href: kernel-related-boot-issues.md
 - name: OS upgrades
   items:
-  - name: Upgrade to SLES 15 SP1
-    href: linux-upgrade-suse-15sp1.md
   - name: Red Hat
     items:
     - name: How to perform leapp upgrade for RHEL PAYG VMs
       href: leapp-upgrade-process-rhel-7-and-8.md
-    - name: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG images from 7.x to 7.9
+    - name: Leapp upgrade from 7.9 to 8.x on RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs
+      href: leapp-upgrade-rhel7dot9-to-8dotx-saphana-sapapps.md
+    - name: Leapp upgrade from 8.x to 9.x on RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs
+      href: leapp-upgrade-rhel-8dotx-to-9dotx-saphana-sapapps.md
+    - name: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs from 7.x to 7.9
       href: upgrade-rhel-7dotx-to-7dot9-sap-hana-apps.md
-    - name: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG images from 8.x to 8.10
+    - name: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs from 8.x to 8.10
       href: upgrade-rhel-8-dot-x-to-8-dot-10-on-sap-hana-apps.md
     - name: Troubleshoot Red Hat leapp upgrade issues
       href: troubleshoot-red-hat-os-upgrade-issues.md
@@ -259,6 +263,8 @@
     href: create-swap-file-linux-vm.md
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
+  - name: Configure custom DNS servers
+    href: custom-dns-configuration-for-azure-linux-vms.md
 
 - name: Linux High Availability Pacemaker cluster
   items:

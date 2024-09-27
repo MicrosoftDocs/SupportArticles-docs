@@ -5,7 +5,6 @@ manager: dcscontentpm
 ms.date: 12/26/2023
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, hamansoor, v-lianna
 ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot, ikb2lmc
 ---
