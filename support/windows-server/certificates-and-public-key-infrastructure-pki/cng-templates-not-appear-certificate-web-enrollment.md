@@ -10,7 +10,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 ---
 # Version 3 (CNG) templates won't appear in Windows Server Certificate Services Web Enrollment
 
-This article helps fix an issue where the CNG or 2008 templates don't appear in the Advanced Certificate Request template pulldown menu.
+This article helps fix an issue where the CNG templates don't appear in the Advanced Certificate Request template pulldown menu.
 
 _Original KB number:_ &nbsp; 2015796
 
