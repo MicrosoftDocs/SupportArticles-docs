@@ -1,11 +1,11 @@
 ---
 title: The data is invalid or the namespace has no targets error
 description: Helps resolve the error - The data is invalid or The namespace has no targets. This may be due to a corrupt or out of sync metadata.
-ms.date: 09/26/2024
+ms.date: 09/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, v-lianna, albugn
 ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
 ---
 # Error "The data is invalid" or "The namespace has no targets. This may be due to a corrupt or out of sync metadata" with DFS Namespaces
