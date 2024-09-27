@@ -37,11 +37,10 @@ A simultaneous trace in this case means you would run a network trace on:
 - In a DFS domain-based namespace configuration:  
   - one network trace on the machine from where you access the DFS Namespace remotely 
   - one network trace on the DFS Namespace server(s) holding the DFS domain-based namespace root
-> [!NOTE]
-> If you have only one DFS Namespace server holding the DFS domain-based namespace root  (not recommended), it will be straightforward to know the DFS Namespace server the source machine will connect to. However, if you have multiple DFS Namespace servers holding the DFS domain-based namespace root (recommended configuration), you might need to control or conclude on which DFS Namespace server your source machine will connect or just start a trace on all your DFS Namespace servers, of equal costs or priority.
->
-> For more information about priority or referral ordering, see:
->
-> - [Set the Ordering Method for Targets in Referrals](/windows-server/storage/dfs-namespaces/set-the-ordering-method-for-targets-in-referrals)
-> - [Set target priority to override referral ordering](/windows-server/storage/dfs-namespaces/set-target-priority-to-override-referral-ordering)
-
+    > [!NOTE]
+    > If you have only one DFS Namespace server holding the DFS domain-based namespace root  (not recommended), it will be straightforward to know the DFS Namespace server the source machine will connect to. However, if you have multiple DFS Namespace servers holding the DFS domain-based namespace root (recommended configuration), you might need to control or conclude on which DFS Namespace server your source machine will connect or just start a trace on all your DFS Namespace servers, of equal costs or priority.
+    >
+    > For more information about priority or referral ordering, see:
+    >
+    > - [Set the Ordering Method for Targets in Referrals](/windows-server/storage/dfs-namespaces/set-the-ordering-method-for-targets-in-referrals)
+    > - [Set target priority to override referral ordering](/windows-server/storage/dfs-namespaces/set-target-priority-to-override-referral-ordering)
