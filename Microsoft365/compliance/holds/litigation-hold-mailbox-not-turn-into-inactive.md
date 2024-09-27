@@ -23,7 +23,7 @@ You try to convert a regular user mailbox to an [inactive mailbox](/purview/crea
 
 > The execution of cmdlet Disable-Mailbox failed..; Exchange: An unknown error has occurred.
 
-The issue occurs for user mailboxes in both on-premises Exchange hybrid and Exchange Online environments.
+The issue can occur for user mailboxes in both on-premises Exchange hybrid and Exchange Online environments.
 
 ## Cause
 
