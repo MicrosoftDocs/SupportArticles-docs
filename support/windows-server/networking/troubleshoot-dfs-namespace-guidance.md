@@ -45,7 +45,7 @@ Look for the DFS client to resolve DNS (assuming it isn't cached) and make a con
 
 ## Common issues and solutions
 
-When you access, modify or, create a DFS Namespace on a DFS Namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed, you may receive the following error variations of the "The namespace cannot be queried" error message.
+When you access, modify, or create a DFS Namespace on a DFS Namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed, you may receive the following error variations of the "The namespace cannot be queried" error message.
 
 > [!NOTE]
 > After you apply the solutions, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
