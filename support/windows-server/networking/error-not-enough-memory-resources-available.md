@@ -1,11 +1,11 @@
 ---
 title: Not enough memory resources are available to process this command error
 description: Helps resolve the error - The namespace cannot be queried. Not enough memory resources are available to process this command.
-ms.date: 09/10/2024
+ms.date: 09/27/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, v-lianna, albugn
 ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
 ---
 # Error "The namespace cannot be queried. Not enough memory resources are available to process this command" with DFS Namespaces
