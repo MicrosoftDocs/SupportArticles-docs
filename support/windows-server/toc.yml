@@ -1247,8 +1247,16 @@ items:
       href: ./networking/target-account-name-incorrect-error-access-file-share.md
     - name: Error "Element not found" with DFS namespaces
       href: ./networking/error-element-not-found-dfsn.md
+    - name: 'Error "Not enough memory resources are available to process this command"'
+      href: ./networking/error-not-enough-memory-resources-available.md
+    - name: 'Error "The data is invalid" or "The Namespace has no targets"'
+      href: ./networking/error-data-invalid-namespace-no-targets.md
+    - name: 'Error "The device is not ready for use"'
+      href: ./networking/error-device-not-ready-for-use.md
     - name: Error "The remote procedure call failed"
       href: ./networking/error-remote-procedure-call-failed.md
+    - name: 'Error "The request is not supported"'
+      href: ./networking/error-request-not-supported.md
     - name: Error "The RPC server is unavailable"
       href: ./networking/namespace-not-queried-rpc-server-unavailable.md
     - name: Error "The specified domain either does not exist or cannot be contacted"
