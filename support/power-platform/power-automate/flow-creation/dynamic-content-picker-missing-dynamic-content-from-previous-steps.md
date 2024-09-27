@@ -46,7 +46,7 @@ Turn off the **Split On** option for the trigger card by taking the following st
 
 ## Cause 2: The data type of the dynamic content differs from the data type of the parameter
 
-The default behavior is that the dynamic content picker filters the dynamic content based on the data type of the parameter. For instance, the dynamic content picker for a string parameter will only show a filtered list of dynamic content, which is strings.
+The default behavior is that the dynamic content picker filters the dynamic content based on the data type of the parameter. For instance, the dynamic content picker for a string parameter will only show a filtered list of dynamic content that are of type string.
 
 In this example, the parameter is a number, which isn't visible in the dynamic content picker.
 
@@ -60,6 +60,6 @@ Use one of the following workarounds:
 
     :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/search-in-token-picker.png" alt-text="Screenshot to search for the dynamic content in the dynamic content picker.":::
 
-- Use the **Compose** action card. The output of the **Outputs** action will appear in the dynamic content picker, and you can then use it in the flow.
+- Use the **Compose** action card. The output of the **Compose** action, namely **Outputs**, will appear in the dynamic content picker, and you can then use it in the flow.
 
     :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/compose-action-card.png" alt-text="Screenshot to use the Compose action card, which will produce an output of type any.":::
