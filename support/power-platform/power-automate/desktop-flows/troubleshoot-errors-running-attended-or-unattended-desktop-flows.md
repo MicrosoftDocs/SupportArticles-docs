@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant, kenseongtan, guco, johndund
-ms.date: 09/25/2024
+ms.date: 09/27/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -20,10 +20,12 @@ _Original KB number:_ &nbsp; 4555406
 |UnsupportedRpaScriptSchemaVersion|400|Attended</br>Unattended|The selected flow was issued by a later version of Power Automate for desktop. You'll need to install the latest version of Power Automate for desktop on your machine.|
 |InvalidUIFlowsCertificates|401|Attended</br>Unattended|You'll need to install the latest version of desktop flows on your machine as the security certificate of the desktop flows app has expired.|
 |WindowsIdentityIncorrect|401|Attended</br>Unattended|Check that you can sign in to the machine using the connection credentials. Below are supported format:</br>- domain\username -> domain account (domain and Microsoft Entra ID)</br>- username@domain... -> Microsoft Entra account</br>- username -> local account</br>- machine name\username -> local account</br>- local\username -> local account</br>- .\username -> local account|
-|AttendedUserSessionNotActive<br>AttendedUserNotLoggedIn|400|Attended|Check that you're logged in with the correct user and that the session is unlocked on the machine. For more information about the error codes, see [AttendedUserSessionNotActive](troubleshoot-desktop-flow-run-queue-errors.md#attendedusersessionnotactive) and [AttendedUserSessionNotActive](troubleshoot-desktop-flow-run-queue-errors.md#attendedusernotloggedin).|
+|AttendedUserSessionNotActive<br>AttendedUserNotLoggedIn|400|Attended|Check that you're logged in with the correct user and that the session is unlocked on the machine. For more information about the error codes, see [AttendedUserSessionNotActive](troubleshoot-desktop-flow-run-queue-errors.md#attendedusersessionnotactive) and [AttendedUserNotLoggedIn](troubleshoot-desktop-flow-run-queue-errors.md#attendedusernotloggedin).|
 |SessionCreationError|400|Unattended|We couldn't create the session on the machine for an unknown reason. Check the following:<br>- Ensure that you can remote desktop to the machine from another machine on your network. If you're using a Windows server, you can try to remote desktop to "localhost" from the local machine itself when logged in as another account. If these fail, use [general remote desktop troubleshooting](../../../windows-server/remote/rdp-error-general-troubleshooting.md).<br>- Ensure that no third-party software is installed that may affect login or interfere with creating a remote desktop connection.<br>- If you have a legal notice enabled for login, work with your system administrator to try disabling it.|
 |SessionCreationWinLogonFailure|400|Unattended|We can't create a Windows session to run your unattended desktop flow. You need to restart your machine.|
 |SessionExistsForTheUserWhenUnattended|400|Unattended|Check that you aren't logged in with the same user (regardless of the state of the session) on the machine. For more information about this error code, see [SessionExistsForTheUserWhenUnattended](troubleshoot-desktop-flow-run-queue-errors.md#sessionexistsfortheuserwhenunattended).|
+|UnattendedUserSessionDisconnected|400|Unattended|For more information about this error code, see [UnattendedUserSessionDisconnected](troubleshoot-desktop-flow-run-queue-errors.md#unattendedusersessiondisconnected).|
+|UnattendedUserSessionLocked|400|Unattended|For more information about this error code, see [UnattendedUserSessionLocked](troubleshoot-desktop-flow-run-queue-errors.md#unattendedusersessionlocked).|
 |SessionNotFound|400|Unattended|The Windows session on the machine for the given run can't be found. This issue can occur in the following cases:<br>- The machine reboots during the run.<br>- You're using a virtual machine that was cloned after installing Power Automate. If it was cloned after the installation and was registered, delete your machine from the Power Automate portal and re-register the machine.|
 |TooManyActiveSessions|400|Unattended|Windows Server only.</br>You need to sign out at least one active session on the machine.|
 |ExistingRecordingSession|400|Local|Windows Server only.</br> Check that there's no other user connected to the machine launching a recording or a test playback.|
