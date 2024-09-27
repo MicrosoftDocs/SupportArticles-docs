@@ -40,7 +40,7 @@ The issues occur if a meeting item is created in the Apple iOS Calendar app.
 
 To work around the issues, use either of the following methods:
 
-- Create meetings by using Outlook on the web or the new Outlook for Windows.
+- Create meetings by using Outlook on the web, Outlook for Mac, or the new Outlook for Windows.
 
 - View meetings in Outlook on the web or the new Outlook for Windows.
 
