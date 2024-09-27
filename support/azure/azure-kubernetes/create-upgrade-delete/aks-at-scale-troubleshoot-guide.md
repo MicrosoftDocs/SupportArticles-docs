@@ -1,7 +1,7 @@
 ---
 title: Common issues when you run or scale large AKS clusters FAQ
 description: Review common issues when you run or scale large AKS clusters. The article includes troubleshooting tips for resolving these issues.
-ms.date: 09/25/2024
+ms.date: 09/26/2024
 ms.reviewer: paahluwalia, mariochaves, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -83,7 +83,7 @@ Run the following command to increase or customize the max surge for an existing
 az aks nodepool update --resource-group MyResourceGroup --name mynodepool --cluster-name MyManagedCluster --max-surge 5
 ```
 
-It's also important to consider how your deployment settings might be delaying the completion of the upgrade or scale operation:
+It's also important to consider how your deployment settings might delay the completion of the upgrade or scale operation:
 
 - [SKU family B series VMs are not supported](/azure/aks/use-system-pools#system-and-user-node-pools) by AKS in the system nodepool and they can experience low performance during and after updates.
 - Check your deployment's PDB resource settings to ensure they are accurate for a successful upgrade. For more information, see [AKS workload best practices](/azure/architecture/operator-guides/aks/aks-upgrade-practices).
