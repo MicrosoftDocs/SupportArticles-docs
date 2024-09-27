@@ -5,7 +5,7 @@ author: rpapostolis # GitHub alias
 ms.author: appapaio # Microsoft alias
 ms.reviewer: befrey, lulubran, johndund, guco, fredg
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
-ms.date: 09/25/2024
+ms.date: 09/27/2024
 ---
 # Troubleshoot desktop flow run queue errors
 
@@ -38,11 +38,11 @@ As mentioned in the error message, this error means that the orchestrator can't 
 
 ## SessionExistsForTheUserWhenUnattended
 
-This occurs when you try to run an unattended desktop flow on a target machine where the user used in the desktop flow connection is signed in.
+This error occurs when you try to run an unattended desktop flow on a target machine where the user used in the desktop flow connection is signed in.
 
 #### Resolution
 
-To resolve the issue, sign out of the session (a locked session will lead to this error), and check that you aren't signed in with the same user on the machine.
+To resolve the issue, sign out of the session (a locked session will lead to this error), and confirm that you aren't signed in with the same user on the machine.
 
 ## UnattendedUserSessionDisconnected
 
