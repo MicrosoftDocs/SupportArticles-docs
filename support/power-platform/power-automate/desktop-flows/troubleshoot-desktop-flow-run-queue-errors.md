@@ -38,11 +38,11 @@ As mentioned in the error message, this error means that the orchestrator can't 
 
 ## SessionExistsForTheUserWhenUnattended
 
-This occurs when you try to run an unattended desktop flow on a target machine where the user used in the desktop flow connection is logged in.
+This occurs when you try to run an unattended desktop flow on a target machine where the user used in the desktop flow connection is signed in.
 
 #### Resolution
 
-To resolve the issue, sign out of the session (a locked session will lead to this error), and check that you aren't logged in with the same user on the machine.
+To resolve the issue, sign out of the session (a locked session will lead to this error), and check that you aren't signed in with the same user on the machine.
 
 ## UnattendedUserSessionDisconnected
 
@@ -62,7 +62,7 @@ To resolve the issue, sign out of the locked session, and confirm that you aren'
 
 ## AttendedUserSessionNotActive
 
-This error usually occurs when you try to run an attended desktop flow on a target machine where the user session is either locked or disconnected. Attended desktop flows can only execute if the machine is unlocked on a session where the current user matches the one in the desktop flow connection.
+This error occurs when you try to run an attended desktop flow on a target machine where the user session is either locked or disconnected. Attended desktop flows can only execute if the machine is unlocked on a session where the current user matches the one in the desktop flow connection.
 
 #### Resolution
 
@@ -73,7 +73,7 @@ To resolve the issue,
 
 ## AttendedUserNotLoggedIn
 
-This error usually occurs when you try to run an attended desktop flow on a target machine where the user isn't signed in to the machine.
+This error occurs when you try to run an attended desktop flow on a target machine where the user isn't signed in to the machine.
 
 #### Resolution
 
@@ -91,7 +91,7 @@ To resolve the issue,
 When a desktop flow is already running on the machine, this error might occur in one of the following situations:
 
 - You run an attended or unattended desktop flow, and the number of active sessions on the machine has reached its limit.
-- You try to open a session for a user who is already logged in.
+- You try to open a session for a user who is already signed in.
 
 #### Resolution
 
@@ -129,7 +129,7 @@ If the suberror code isn't provided, check if:
   
   Make sure one of the following is met:
 
-  - You aren't trying to run an unattended flow on a group where all machines are logged in.
+  - You aren't trying to run an unattended flow on a group where all machines are signed in.
   - You aren't trying to run an attended flow on a group where all machines are signed out.
 
 - The machine is no longer usable.
