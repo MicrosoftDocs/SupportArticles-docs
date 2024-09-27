@@ -454,13 +454,12 @@ sudo sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
 
  ### Resoultion
 In SLES 15, the deprecated targetcli-fb package was replaced with python3-targetcli-fb or python2-targetcli-fb, resetting systemd service to default (disabled/stopped), requiring manual re-enabling and starting of the targetcli service.
-https://www.suse.com/support/kb/doc/?id=000020323
+For detailed information about the resolution steps see, [SBD Failure After SLES15 Upgrade](https://www.suse.com/support/kb/doc/?id=000020323)
 
 ## Next Steps
+For additional help, open a support request by using the following instructions. When you submit your request, attach [supportconfig](https://documentation.suse.com/smart/systems-management/html/supportconfig/index.html) and [hb_report](https://www.suse.com/support/kb/doc/?id=000019142) logs for troubleshooting.
 
-For additional help, open a support request by using the following instructions. When you submit your request, attach `supportconfig` and `hb_report` logs for troubleshooting.
-To get further information about data log collection in SUSE, see:
-https://www.suse.com/support/kb/doc/?id=000019142
+
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
