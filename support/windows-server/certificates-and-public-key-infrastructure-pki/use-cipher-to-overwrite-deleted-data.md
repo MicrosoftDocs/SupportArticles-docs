@@ -5,7 +5,6 @@ ms.date: 08/02/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Encrypting File System (EFS), csstroubleshoot
 ---

@@ -5,7 +5,6 @@ ms.date: 09/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, akshittu, maperric, v-lianna
 ms.custom: sap:Virtualization and Hyper-V\High availability virtual machines, csstroubleshoot
 ---

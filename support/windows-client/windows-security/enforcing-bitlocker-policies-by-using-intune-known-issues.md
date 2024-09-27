@@ -10,7 +10,6 @@ ms.collection:
 ms.topic: troubleshooting
 ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 audience: itpro
-localization_priority: medium
 ---
 # Enforcing BitLocker policies by using Intune: known issues
 

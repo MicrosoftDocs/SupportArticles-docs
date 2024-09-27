@@ -5,7 +5,6 @@ ms.date: 09/21/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.localizationpriority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 keywords: http proxy, authentication, loopback, WPAD

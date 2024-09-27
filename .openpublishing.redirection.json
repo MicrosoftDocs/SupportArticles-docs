@@ -11919,6 +11919,56 @@
       "source_path": "support/windows-server/backup-and-storage/enabling-mpio-with-sas-decreases-performance.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/enabling-mpio-with-sas-decreases-performance",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/namespace-not-queried-rpc-server-unavailable.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/namespace-not-queried-rpc-server-unavailable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-replication-suspended-system-shutdown.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-replication-suspended-system-shutdown",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/cant-import-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cant-import-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/event-7000-installing-hyper-v-role-windows-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-7000-installing-hyper-v-role-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/updates-for-windows-server-2012-r2-hyper-v.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/updates-for-windows-server-2012-r2-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hotfixes-updates-known-solutions.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hotfixes-updates-known-solutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-vmm-service-fails-event-id-14050.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-vmm-service-fails-event-id-14050",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/incompatible-version-errors-are-logged.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/incompatible-version-errors-are-logged",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/emulated-synthetic-hardware-specification.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/emulated-synthetic-hardware-specification",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/event-id-4096.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-4096",
+      "redirect_document_id": false
     }
   ]
 }

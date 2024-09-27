@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-jesits, monaha
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Smart card logon, csstroubleshoot
 ---

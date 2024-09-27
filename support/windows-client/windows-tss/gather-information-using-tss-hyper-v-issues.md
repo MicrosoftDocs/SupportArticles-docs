@@ -5,7 +5,6 @@ ms.date: 03/08/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, warrenw, v-lianna
 ms.custom: sap:Support Tools\TSS SHA, csstroubleshoot
 ---

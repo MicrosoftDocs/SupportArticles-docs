@@ -1,9 +1,9 @@
 ---
 title: Capture a TCP dump from a Linux node in an AKS cluster
 description: Understand how to capture a TCP dump from a Linux node within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/13/2024
+ms.date: 09/26/2024
 ms.topic: how-to
-ms.reviewer: erbookbi, amaljuna, kuzhao, v-leedennis
+ms.reviewer: erbookbi, amaljuna, kuzhao, v-rekhanain, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Monitoring and Logging, linux-related-content
 ---
@@ -102,6 +102,8 @@ The helper pod has a prefix of `node-debugger-aks`, as shown in the third row. R
 ```bash
 kubectl cp node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2:/capture.cap capture.cap
 ```
+> [!NOTE]
+> If the `chroot /host` command was used when entering the debug pod, add `/host` before `/capture.cap` for the source file.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 

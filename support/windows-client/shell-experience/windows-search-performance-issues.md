@@ -5,7 +5,6 @@ ms.date: 09/24/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: winciccore, kaushika, rafern
 ms.custom: sap:Windows Desktop and Shell Experience\Windows Search, csstroubleshoot
 adobe-target: true

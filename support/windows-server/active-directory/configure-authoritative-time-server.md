@@ -5,7 +5,6 @@ ms.date: 09/06/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.localizationpriority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
 adobe-target: true

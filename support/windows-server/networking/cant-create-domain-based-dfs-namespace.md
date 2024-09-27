@@ -1,5 +1,5 @@
 ---
-title: Can't create a domain-based DFS namespace
+title: Can't create a domain-based DFS Namespace
 description: Describes how to resolve an issue in which you see an access denied error when you try to create a domain-based namespace.
 ms.date: 09/20/2024
 author: Deland-Han
@@ -8,13 +8,12 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.service: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate, warrenw, albugn
 ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
-keywords: DFS namespace
+keywords: DFS Namespace
 ---
 
-# "The namespace cannot be queried. Access is denied" error when you try to create a domain-based DFS namespace 
+# "The namespace cannot be queried. Access is denied" error when you try to create a domain-based DFS Namespace 
 
 This article describes how to resolve an issue in which you see an access denied error when you try to create a domain-based namespace.
 
@@ -37,14 +36,14 @@ By default, accounts that are members of the **Protected Users** group can't aut
 ### Wireshark trace example
 
 ```output
-192.168.0.42	192.168.0.1	    SMB2	681	Session Setup Request, NTLMSSP_AUTH, User: CONTOSO\Testuser
-192.168.0.1	    192.168.0.42	SMB2	130	Session Setup Response, Error: STATUS_ACCOUNT_RESTRICTION
+192.168.0.42    192.168.0.1        SMB2    681    Session Setup Request, NTLMSSP_AUTH, User: CONTOSO\Testuser
+192.168.0.1        192.168.0.42    SMB2    130    Session Setup Response, Error: STATUS_ACCOUNT_RESTRICTION
 ```
 
 ## Resolution for cause 1: Remove the used account from the "Protected Users" group
 
 > [!NOTE]
-> After you apply the solution, remove the DFS namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
+> After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
 
 To solve this issue, remove the used account from the **Protected Users** group to perform NTLM authentication. For more information, see [Protected Users Security Group](/windows-server/security/credentials-protection-and-management/protected-users-security-group).
 
@@ -68,7 +67,7 @@ You should find entries for the domain name, like:
 ## Resolution for cause 2: Set the RequireMutualAuthentication value to zero
 
 > [!NOTE]
-> After you apply the solution, remove the DFS namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
+> After you apply the solution, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
 [!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
 To solve this issue, set the `RequireMutualAuthentication` value for `\\Contoso\*` and `\\contoso.com\*` to zero. After making these changes, you can create the namespace.
@@ -83,7 +82,7 @@ For example:
 ### Example of a Process Monitor log file for this scenario
 
 ```output
-10:32:48.8093671 AM	mmc.exe	3488	CreateFile	\\contoso.com\pipe\netdfs	0xC0000201	Desired Access: Generic Read/Write, Disposition: Open, Options: , Attributes: n/a, ShareMode: Read, Write, AllocationSize: n/a
+10:32:48.8093671 AM    mmc.exe    3488    CreateFile    \\contoso.com\pipe\netdfs    0xC0000201    Desired Access: Generic Read/Write, Disposition: Open, Options: , Attributes: n/a, ShareMode: Read, Write, AllocationSize: n/a
 ```
 
 Error c0000201 indicates, "A remote open failed because the network open restrictions were not satisfied."

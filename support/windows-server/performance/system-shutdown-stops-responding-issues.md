@@ -5,7 +5,6 @@ ms.date: 06/07/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, warrenw, v-lianna
 ms.custom: sap:System Performance\Shutdown Performance (slow, unresponsive), csstroubleshoot
 ---
