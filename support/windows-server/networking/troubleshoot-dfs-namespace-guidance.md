@@ -45,23 +45,23 @@ Look for the DFS client to resolve DNS (assuming it isn't cached) and make a con
 
 ## Common issues and solutions
 
-You may receive the following error variations of the "The namespace cannot be queried." error message, when you access, modify or create a DFS Namespace on a DFS Namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed.
-
-- [The namespace cannot be queried. The RPC server is unavailable](namespace-not-queried-rpc-server-unavailable.md)
-- [The namespace cannot be queried. The remote procedure call failed](error-remote-procedure-call-failed.md)
-- [The namespace cannot be queried. The specified server cannot perform the requested operation](error-specified-server-cannot-perform-requested-operation.md)
-- [The namespace cannot be queried. The specified domain either does not exist or cannot be contacted](error-specified-domain-not-exist-cannot-contacted.md)
-- [The namespace cannot be queried. Element not found](error-element-not-found-dfsn.md)
-- [The namespace cannot be queried. The system cannot find the file specified](error-system-cannot-find-file-specified.md)
-- [The namespace cannot be queried. Not enough memory resources are available to process this command](error-not-enough-memory-resources-available.md)  
-- [The namespace cannot be queried. The data is invalid](error-data-invalid-namespace-no-targets.md)
-- [The namespace cannot be queried. The namespace has no targets. This may be due to a corrupt or out of sync metadata.](error-data-invalid-namespace-no-targets.md)
-- [The namespace cannot be queried. The device is not ready for use](error-device-not-ready-for-use.md)
-- [Delegation information for the namespace cannot be queried. The request is not supported](error-request-not-supported.md)
-- [The namespace cannot be queried. Access is denied](cant-create-domain-based-dfs-namespace.md)
+You may receive the following error variations of the "The namespace cannot be queried" error message, when you access, modify or create a DFS Namespace on a DFS Namespace server, domain member server, or Windows client with File Services tools (included in Remote Server Administration Tools (RSAT)) installed.
 
 > [!NOTE]
-> After you apply the solutions to the preceding errors, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
+> After you apply the solutions, remove the DFS Namespace from the DFS Management console and add it back, or close and reopen the console to make the changes take effect.
+
+- [Delegation information for the namespace cannot be queried. The request is not supported](error-request-not-supported.md)
+- [The namespace cannot be queried. Access is denied](cant-create-domain-based-dfs-namespace.md)
+- [The namespace cannot be queried. Element not found](error-element-not-found-dfsn.md)
+- [The namespace cannot be queried. Not enough memory resources are available to process this command](error-not-enough-memory-resources-available.md)
+- [The namespace cannot be queried. The data is invalid](error-data-invalid-namespace-no-targets.md)
+- [The namespace cannot be queried. The device is not ready for use](error-device-not-ready-for-use.md)
+- [The namespace cannot be queried. The namespace has no targets. This may be due to a corrupt or out of sync metadata](error-data-invalid-namespace-no-targets.md)
+- [The namespace cannot be queried. The remote procedure call failed](error-remote-procedure-call-failed.md)
+- [The namespace cannot be queried. The RPC server is unavailable](namespace-not-queried-rpc-server-unavailable.md)
+- [The namespace cannot be queried. The specified domain either does not exist or cannot be contacted](error-specified-domain-not-exist-cannot-contacted.md)
+- [The namespace cannot be queried. The specified server cannot perform the requested operation](error-specified-server-cannot-perform-requested-operation.md)
+- [The namespace cannot be queried. The system cannot find the file specified](error-system-cannot-find-file-specified.md)
 
 For more information, see:
 
