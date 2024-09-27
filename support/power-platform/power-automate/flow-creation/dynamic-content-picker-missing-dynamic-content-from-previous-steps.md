@@ -7,7 +7,7 @@ ms.custom: sap:Flow creation\Dynamic content
 ---
 # Dynamic content picker missing dynamic content from previous steps
 
-This article can help you understand and resolve issues when dynamic content from previous steps aren't available in a Power Automate flow.
+This article can help you understand and resolve issues when dynamic content from previous steps isn't available in a Power Automate flow.
 
 > [!NOTE]
 > The screenshots in this article are for the classic designer user interface. Although the cloud flows designer is visually different, the same concepts and procedures apply to both.
@@ -26,11 +26,11 @@ You experience the following issues when you try to add dynamic content to a Pow
 
 ## Cause 1: Using a trigger that supports Split On option and the option is turned on
 
-This issue may occur when using a trigger that supports **Split On** (such as **When a new response is submitted**) and the option is turned on.
+This issue might occur when you use a trigger that supports **Split On** (such as **When a new response is submitted**) and the option is turned on.
 
 ### Resolution
 
-Try turning off the **Split On** option for the trigger card by following the steps below. After completing the steps, the dynamic content should be available in the dynamic content picker.
+Try turning off the **Split On** option for the trigger card by taking the following steps. After you complete the steps, the dynamic content should be available in the dynamic content picker.
 
 1. On the trigger card, selected the three dots (...).
 
@@ -46,9 +46,9 @@ Try turning off the **Split On** option for the trigger card by following the st
 
 ## Cause 2: The data type of the dynamic content differs from the data type of the parameter
 
-The default behavior is that the dynamic content picker filters the dynamic content based on the data type of the parameter. For instance, the dynamic content picker for a string parameter will only show a filtered list of dynamic content that are strings.
+The default behavior is that the dynamic content picker filters the dynamic content based on the data type of the parameter. For instance, the dynamic content picker for a string parameter will only show a filtered list of dynamic content that is strings.
 
-In this example, the parameter is a number, which is not visible in the dynamic content picker.
+In this example, the parameter is a number, which isn't visible in the dynamic content picker.
 
 :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/dynamic-content-picker.png" alt-text="Screenshot shows the dynamic content picker filters the dynamic content based on the data type of the parameter.":::
 
@@ -60,6 +60,6 @@ Try one of the following workarounds:
 
     :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/search-in-token-picker.png" alt-text="Screenshot to search for the dynamic content in the dynamic content picker.":::
 
-- Use the **Compose** action card. The output of the action **Outputs** will appear in the dynamic content picker, which you can then use in the flow.
+- Use the **Compose** action card. The output of the **Outputs** action will appear in the dynamic content picker, which you can then use in the flow.
 
     :::image type="content" source="media/dynamic-content-picker-missing-dynamic-content-from-previous-steps/compose-action-card.png" alt-text="Screenshot to use the Compose action card, which will produce an output of type any.":::
