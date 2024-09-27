@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
-# Version 3 (CNG) templates won't appear in Windows Server 2008 or Windows Server 2008 R2 certificate web enrollment
+# Version 3 (CNG) templates won't appear in Windows Server certificate services web enrollment
 
 This article helps fix an issue where the CNG or 2008 templates don't appear in the Advanced Certificate Request template pulldown menu.
 
@@ -24,9 +24,7 @@ Frequent other causes of not being able to blanket request a certificate may be 
 
 ## Cause
 
-This behavior is by design. Version 3 templates may have additional request requirements that the web enrollment method may not fulfill.
-
-## Resolution
+This behavior is by design. Version 3 templates have additional request options and requirements that the certificate services web enrollment method cannot fulfill.  More about Certificate template concepts here - https://learn.microsoft.com/en-us/windows-server/identity/ad-cs/certificate-template-concepts]Resolution
 
 Use a different request method for these certificates. Aside from web enrollment, all other request methods work in this scenario.
 
