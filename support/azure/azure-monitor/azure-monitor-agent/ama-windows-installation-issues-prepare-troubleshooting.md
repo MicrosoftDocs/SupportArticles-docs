@@ -14,7 +14,7 @@ This article describes the preparations you need to make before troubleshooting 
 Before you begin troubleshooting, perform the following checks.
 
 
-### <a id="operating-system-supported"></a>Ensure the operating system is supported by AMA
+## <a id="operating-system-supported"></a>Ensure the operating system is supported by AMA
 
 To confirm the operating system on your VM is supported by AMA, follow these steps:
 
@@ -23,7 +23,7 @@ To confirm the operating system on your VM is supported by AMA, follow these ste
 3. Select the VM where the AMA agent is installed.
 4. On the VM's **Overview** page, check the **Operating system** value to see if it's one of the Windows operating systems in the [supported operating systems list](/azure/azure-monitor/agents/azure-monitor-agent-supported-operating-systems#windows-operating-systems).
 
-### <a id="determine-issue-type"></a>Determine the issue type: Installation or configuration
+## <a id="determine-issue-type"></a>Determine the issue type: Installation or configuration
 
 1. Verify that the `AzureMonitorWindowsAgent` extension status isn't "Provisioning Succeeded."
 
@@ -46,7 +46,7 @@ To confirm the operating system on your VM is supported by AMA, follow these ste
 
 If the `Microsoft.Azure.Monitor.AzureMonitorWindowsAgent` extension status doesn't show "Provisioning Succeeded," or if any of the four agent processes aren't running, you're encountering AMA installation issues. In this case, you can troubleshoot the issues by using this article. Otherwise, you need to investigate the AMA Windows configuration.
 
-### <a id="verify-dcr"></a>Verify that at least one DCR is associated with the VM
+## <a id="verify-dcr"></a>Verify that at least one DCR is associated with the VM
 
 Adding VMs as data collection rule (DCR) resources is a common way to install AMA. When you create a DCR in the Azure portal, Azure Monitor Agent is installed on any machines that are added as resources for the DCR. Before you begin troubleshooting, verify that at least one DCR is associated with the VM:
 
@@ -59,7 +59,7 @@ Adding VMs as data collection rule (DCR) resources is a common way to install AM
    2. Follow the wizard to define the data source and destination.
    3. Associate the DCR with the VM by selecting the **Resource** tab and selecting the VM.
 
-### <a id="installation-options"></a>Understand installation options
+## <a id="installation-options"></a>Understand installation options
 
 Before troubleshooting, understand the different ways to install AMA for Windows. It's useful to know how AMA is installed. The installation options include VM extension, Create a DCR, VM insights, Container insights, Client installer, and Azure Policy. For more information, see [Install and manage Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-manage#installation-options).
 
