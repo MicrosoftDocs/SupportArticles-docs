@@ -34,7 +34,7 @@ If the connection is successful and there are no IMDS errors in the related logs
     curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance/compute/resourceId?api-version=2021-01-01"
     ```
 
-If the connection is successful and there are no errors in the related logs, move to [Step 3: Review the network trace](#review-the-network-trace). If the connection fails, review common errors and try to mitigate any issues found.
+If the connection is successful and there are no errors in the related logs, move to [Step 3: Review the network trace](#review-network-trace). If the connection fails, review common errors and try to mitigate any issues found.
 
 ## <a id="review-network-trace"></a>Step 3: Review the network trace
 
