@@ -27,7 +27,7 @@ When you create a desktop flow connection using the [connect with sign-in](/powe
 
 ## Cause
 
-Your machine isn't properly joined to either Microsoft Entra ID or an Active Directory domain, which is a [prerequisite]((/power-automate/desktop-flows/desktop-flow-connections#prerequisites)) to be able to use the "connect with sign-in" feature.
+Your machine isn't properly joined to either Microsoft Entra ID or an Active Directory domain, which is a [prerequisite](/power-automate/desktop-flows/desktop-flow-connections#prerequisites) to be able to use the "connect with sign-in" feature.
 
 ## Resolution 1: Join your device to Microsoft Entra ID
 
