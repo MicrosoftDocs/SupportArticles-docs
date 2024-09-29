@@ -3,7 +3,7 @@ title: Connection creation fails with MissingOnPremSidForMachineDomainJoined
 description: Solves the error that occurs when you create a desktop flow connection using the connect with sign-in option in Microsoft Power Automate for desktop.
 author: QuentinSele
 ms.author: quseleba
-ms.date: 09/18/2024
+ms.date: 09/29/2024
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ---
 # Connection creation fails with "MissingOnPremSidForMachineDomainJoined"
@@ -14,8 +14,14 @@ This article provides resolutions for the "MissingOnPremSidForMachineDomainJoine
 
 When you create a desktop flow connection using the [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) option, the connection creation fails with the following error:
 
-> Error code: MissingOnPremSidForMachineDomainJoined  
-> Error message: Could not map connection MSEntraID to AD user on the target domain-joined machine. Please check with your domain admin that onpremisesSecurityIdentifier is synced with MSEntra.
+```json
+{
+    "error":{
+        "code": "MissingOnPremSidForMachineDomainJoined",
+        "message": "Could not map connection MSEntraID to AD user on the target domain-joined machine. Please check with your domain admin that onpremisesSecurityIdentifier is synced with MSEntra."  
+    }    
+}
+```
 
 ## Cause
 

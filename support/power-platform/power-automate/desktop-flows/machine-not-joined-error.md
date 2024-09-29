@@ -4,7 +4,7 @@ description: Solves the errors that occur when you create a desktop flow connect
 author: QuentinSele
 ms.author: quseleba
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 09/18/2024
+ms.date: 09/29/2024
 ---
 # Connection creation fails with "This computer has not joined Microsoft Entra or the domain" or "MachineNotJoined"
 
@@ -14,13 +14,20 @@ This article provides resolutions for errors that occur when you create a deskto
 
 When you create a desktop flow connection using the [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) option, the connection creation fails with one of the following errors:
 
-- > Error message: Failed to create OAuth connection: ClientError: Test connection failed. Details: Connection failed: [Machine \<machineID>] This computer has not joined Microsoft Entra or the domain.
-- > Error code: MachineNotJoined  
-  > Error message: The machine is neither Microsoft Entra nor domain joined.
+> Failed to create OAuth connection: ClientError: Test connection failed. Details: Connection failed: [Machine \<machineID>] This computer has not joined Microsoft Entra or the domain.
+
+```json
+{
+    "error":{
+        "code": "MachineNotJoined",
+        "message": "The machine is neither Microsoft Entra nor domain joined."  
+    }    
+}
+```
 
 ## Cause
 
-Your machine isn't properly joined to either Microsoft Entra ID or an Active Directory domain, which is a prerequisite to be able to use the "connect with sign-in" feature.
+Your machine isn't properly joined to either Microsoft Entra ID or an Active Directory domain, which is a [prerequisite]((/power-automate/desktop-flows/desktop-flow-connections#prerequisites)) to be able to use the "connect with sign-in" feature.
 
 ## Resolution 1: Join your device to Microsoft Entra ID
 
