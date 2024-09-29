@@ -1,6 +1,6 @@
 ---
-title: Infinite black screen after you sign in to the system
-description: Explains how to troubleshoot and collect data for the issue of an infinite black screen after you sign in to the system.
+title: Black screen after you sign in to the system
+description: Explains how to troubleshoot and collect data for the issue of a black screen after you sign in to the system.
 ms.date: 09/02/2024
 manager: dcscontentpm
 audience: itpro
@@ -8,9 +8,9 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, rafern, holgerh, v-lianna
 ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe init, themes, colors, icons, recycle bin), csstroubleshoot
 ---
-# Scenario guide: Infinite black screen after you sign in to the system
+# Scenario guide: Black screen after you sign in to the system
 
-This scenario guide explains how to troubleshoot and collect data for an issue where an infinite black screen appears after you sign in to the system.
+This scenario guide explains how to troubleshoot and collect data for an issue where a black screen appears after you sign in to the system.
 
 > [!NOTE]
 > This article doesn't cover the following issues:
@@ -18,7 +18,7 @@ This scenario guide explains how to troubleshoot and collect data for an issue w
 > - A black screen appears right after a boot before you're prompted for credentials.
 > - After a few minutes of black screen, you successfully sign in to the system.
 
-You're prompted for credentials to sign in to the system. After you enter the credentials, the system fails to load the user profile and desktop, and an infinite black screen appears (possibly with a visible mouse cursor).
+You're prompted for credentials to sign in to the system. After you enter the credentials, the system fails to load the user profile and desktop, and a black screen appears (possibly with a visible mouse cursor).
 
 ## Reset the graphics driver
 
@@ -38,9 +38,9 @@ Reset the graphics driver by pressing the Windows logo key+<kbd>Ctrl</kbd>+<kbd>
 
 If the issue persists, [perform a clean boot in Windows](https://support.microsoft.com/topic/how-to-perform-a-clean-boot-in-windows-da2f9573-6eec-00ad-2f8a-a97a1807f3dd) to determine which startup application or service is causing the issue.
 
-## Collect process dumps of explorer.exe and userinit.exe
+## Capture process dumps of explorer.exe and userinit.exe
 
-If the clean boot doesn't allow you to find the cause of the issue, prepare to create a support ticket or proceed with the following steps to collect data by using ProcDump or Windows Error Reporting (WER), as appropriate.
+If the clean boot doesn't allow you to find the cause of the issue, proceed with the following steps to capture data by using ProcDump or Windows Error Reporting (WER), as appropriate.
 
 Use the following steps to check if you can access Task Manager:
 
