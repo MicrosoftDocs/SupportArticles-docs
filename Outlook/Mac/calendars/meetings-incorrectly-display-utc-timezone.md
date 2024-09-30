@@ -1,6 +1,6 @@
 ---
-title: Meetings incorrectly display the '(UTC) Monrovia, Reykjavik' time zone
-description: Provides a workaround for an issue in which a meeting incorrectly shows the '(UTC) Monrovia, Reykjavik' time zone.
+title: Meetings incorrectly display the (UTC) Monrovia, Reykjavik time zone
+description: Provides a workaround for an issue in which a meeting incorrectly shows the (UTC) Monrovia, Reykjavik time zone.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
