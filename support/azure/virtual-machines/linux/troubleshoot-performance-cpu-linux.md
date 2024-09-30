@@ -22,7 +22,9 @@ This article explains how to troubleshoot CPU performance issues on Azure Linux 
 
 ## top
 
-The `top` utility is a primary resource monitoring tool that offers a detailed view of CPU utilization. It provides real-time insights into server performance. The following is a example `top` report from a two-processor VM:
+The `top` utility is a primary resource monitoring tool that offers a detailed view of CPU utilization. It provides real-time insights into server performance. The following is an example of a `top` report from a VM with two CPU cores:
+
+bash
 
 ```output
 top - 03:12:38 up  1:53,  3 users,  load average: 1.72, 0.62, 0.25
@@ -69,7 +71,7 @@ Key metrics:
 
 ### Analyze the report
 
-In this example, the `load average` over the last 1 minute is 1.72. This VM contains 2 CPU cores, so a load average of 2.0 would mean that both cores are fully utilized. The `15.2 id` value indicates that the CPU is operating at low capacity, with an idle rate of 15.2% for each CPU.
+In this example, the `load average` over the last 1 minute is 1.72. This VM contains two CPU cores, so a load average of 2.0 would mean that both cores are fully utilized. The `15.2 id` value indicates that the CPU is operating at low capacity, with an idle rate of 15.2% for each CPU.
 
 > [!TIP]
 > - You can quickly determine the CPU count by running the `nproc` command.
@@ -95,7 +97,7 @@ An example of `D` state might be a low level driver interacts with hardware, whi
 
 ## ps
 
-The `ps` command displays running processes and can be sorted by CPU or memory. You can use the following `ps` command  to lists the top 5 CPU consuming processes:
+The `ps` command displays running processes and can be sorted by CPU or memory. You can use the following `ps` command  to list the top five CPU consuming processes:
 
 ```bash
 sudo ps -eo pcpu,pmem,pid,user,args | sort -r -k1 | head -6
@@ -120,7 +122,7 @@ The utilization of a CPU is dependent on which resource is trying to access it. 
 
 - `Soft Interrupts` - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval, it checks and makes sure that a process doesn't pass its allotted time on a processor.
 
-- `Real Time Threads` - real time processes may come on the CPU and preempt the kernel..
+- `Real Time Threads` - real time processes may come on the CPU and preempt the kernel.
 
 - `Kernel Threads` - A kernel thread is a kernel entity, like processes and interrupt handlers. It's the entity handled by the system scheduler. The operating system handles Kernel-level threads directly.
 
@@ -128,7 +130,7 @@ The utilization of a CPU is dependent on which resource is trying to access it. 
 
 ### sar
 
-The System Activity Report (sar) is provided by the **sysstat** package, which also provides other statistical reporting tools, such as `iostat`. The `sysstat` package isn't installed by default. 
+The `sar` utility is provided by the **sysstat** package, which also provides other statistical reporting tools, such as `iostat`. The `sysstat` package isn't installed by default. 
 
 To configure and enable `sar` to start on boot, run the following command:
 
@@ -139,7 +141,7 @@ sudo systemctl start sysstat
 
 ### How to use sar
 
-The sar` provides value in various ways, both directly and indirectly:
+The `sar` provides value in various ways, both directly and indirectly:
 
 - It's an overall barometer of system performance. When working with a system without a clear understanding of its "normal" state, check `sar` data from the past few days is useful to establish a baseline of standard activity.
 - It offers insights into CPU load, load average, memory usage, etc.
@@ -285,7 +287,7 @@ You can utilize the tools in a script to identify the issue. You can use tools l
 
 ### I identified the high CPU process. Is there any way to debug it?
 
-You use the following script to retrieves the list of threads. It shows the stack of each thread of top 3 high CPU processes:
+You use the following script to retrieves the list of threads. It shows the stack of each thread of top three high CPU processes:
     
 ```bash
 for H_PID in $(ps -eo pcpu,pid,ppid,user,args | sort -k1 -r | grep -v PID | head -3 | awk '{print $2}'); do ps -Llp $H_PID; sudo cat /proc/$H_PID/stack; echo; done
