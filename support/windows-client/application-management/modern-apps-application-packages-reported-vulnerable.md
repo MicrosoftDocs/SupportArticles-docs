@@ -40,35 +40,35 @@ In these scenarios, there are multiple versions of the app per user in the syste
 
 To resolve this issue, use one or more of the following methods:
 
-### Method 1: Ensure that the app is updated for all users in the system by reconnecting to the machine with user profiles
+**Method 1**: Ensure that the app is updated for all users in the system by reconnecting to the machine with user profiles
 
-   1. Identify the user profiles in which the old Appx version package is installed by using the Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) from an elevated PowerShell window:
+1. Identify the user profiles in which the old Appx version package is installed by using the Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) from an elevated PowerShell window:
 
-      ```powershell
-      Get-AppxPackage <Application Name> -AllUsers
-      ```
+   ```powershell
+   Get-AppxPackage <Application Name> -AllUsers
+   ```
 
-   2. Reconnect to the machine with the identified user.
+2. Reconnect to the machine with the identified user.
 
-### Method 2: Remove the old packages (.appx)
+**Method 2**: Remove the old packages (.appx)
 
-   1. Identify the user profiles in which the Appx package is installed with the Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) from an elevated PowerShell prompt:
+1. Identify the user profiles in which the Appx package is installed with the Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) from an elevated PowerShell prompt:
 
-      ```powershell
-      Get-AppxPackage <Application Name> -AllUsers
-      ```
+   ```powershell
+   Get-AppxPackage <Application Name> -AllUsers
+   ```
 
-   2. Identify if the application is provisioned. To get a list of all provisioned apps, use [Get-AppxProvisionedPackage](/powershell/module/dism/get-appxprovisionedpackage):
+2. Identify if the application is provisioned. To get a list of all provisioned apps, use [Get-AppxProvisionedPackage](/powershell/module/dism/get-appxprovisionedpackage):
 
-      ```powershell
-      Get-AppxProvisionedPackage -Online | Format-Table DisplayName, PackageName
-      ```
+   ```powershell
+   Get-AppxProvisionedPackage -Online | Format-Table DisplayName, PackageName
+   ```
 
-   3. Remove the Appx package for all users in the system:
+3. Remove the Appx package for all users in the system:
 
-      ```powershell
-      Get-AppxPackage <Application Name> -AllUsers | Remove-AppxPackage -AllUsers
-      ```
+   ```powershell
+   Get-AppxPackage <Application Name> -AllUsers | Remove-AppxPackage -AllUsers
+   ```
 
    > [!NOTE]
    > For more information and usage examples regarding the management of Appx packages via PowerShell cmdlets, see the following articles.
@@ -78,7 +78,7 @@ To resolve this issue, use one or more of the following methods:
    > - [Remove-AppxPackage (Appx)](/powershell/module/appx/remove-appxpackage)
    > - [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage)
 
-### Method 3: Delete the user profiles pointing to the old version of the app
+**Method 3**: Delete the user profiles pointing to the old version of the app
 
 To do so, see the following articles:
 
