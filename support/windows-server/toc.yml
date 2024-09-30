@@ -777,6 +777,8 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/ca-certificate-renewal-fails-existing-key-pair.md
     - name: CA doesn't publish certificates in trusted domain
       href: ./certificates-and-public-key-infrastructure-pki/cannot-publish-certificate-trusted-domain.md
+    - name: Certificate Services may not start on a computer
+      href: ./certificates-and-public-key-infrastructure-pki/cs-cant-start-computer.md
     - name: How to decommission Windows enterprise CA and remove related objects
       href: ./certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects.md
     - name: How to expand the maximum extension size limit at AD CS
@@ -825,6 +827,8 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/cannot-request-certificate-with-web-enrollment.md
   - name: Encrypting File System (EFS)
     items:
+    - name: Can't share files with multiple EFS certificates
+      href: ./certificates-and-public-key-infrastructure-pki/cant-share-files-multiple-efs-certificates.md
     - name: Client computers can't encrypt a file in a domain
       href: ./certificates-and-public-key-infrastructure-pki/recovery-policy-contains-invalid-recovery-certificate.md
     - name: Use Cipher.exe to overwrite deleted data
@@ -848,13 +852,9 @@ items:
     - name: Back up recovery agent EFS private key
       href: ./certificates-and-public-key-infrastructure-pki/back-up-recovery-agent-efs-private-key.md
     - name: Can't select CA-compatible certificate templates
-      href: ./certificates-and-public-key-infrastructure-pki/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md
-    - name: Can't share files with multiple EFS certificates
-      href: ./certificates-and-public-key-infrastructure-pki/cant-share-files-multiple-efs-certificates.md
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md    
     - name: Certificate Services doesn't start
-      href: ./certificates-and-public-key-infrastructure-pki/certificate-services-not-start.md
-    - name: Certificate Services may not start on a computer
-      href: ./certificates-and-public-key-infrastructure-pki/cs-cant-start-computer.md
+      href: ./certificates-and-public-key-infrastructure-pki/certificate-services-not-start.md    
     - name: Change expiration date of certificates issued by CA
       href: ./certificates-and-public-key-infrastructure-pki/change-certificates-expiration-date.md
     - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2

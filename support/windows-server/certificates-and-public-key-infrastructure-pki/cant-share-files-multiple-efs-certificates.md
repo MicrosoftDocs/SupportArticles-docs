@@ -1,7 +1,7 @@
 ---
 title: Can't share files that have multiple EFS certificates
 description: Describes an issue that occurs when you enable users to share files that are encrypted by using multiple EFS certificates.
-ms.date: 12/26/2023
+ms.date: 09/30/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
