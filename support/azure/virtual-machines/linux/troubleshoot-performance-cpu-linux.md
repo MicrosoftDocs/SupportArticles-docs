@@ -54,7 +54,7 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6838.4 avail Mem
 
 Key metrics:
 
-- `load average` (located on the right side of the top row): Represents the average number of processes that are either running or waiting for CPU time over specific time intervals. In the example `load average: 1.72, 0.62, 0.25`, it represents:
+- `load average` (located on the right side of the top row): Represents the average number of processes that are running or waiting for CPU time over specific time intervals. In the example `load average: 1.72, 0.62, 0.25`, it represents:
 
     - 1.72: The average load over the last 1 minute.
     - 0.62: The average load over the last 5 minutes.
@@ -73,7 +73,7 @@ This VM contains two CPU cores, so a load average of 2.0 would mean that both co
 
 > [!TIP]
 > - You can quickly determine the CPU count by running the `nproc` command.
-> - To display per-CPU usage in the `top` report, press the 1 key.
+> - To display per-CPU usage in the `top` report, press the "1" key.
 > - If a process is multithreaded and spans multiple CPUs, the top report will display a total usage exceeding 100%.
 
 Next, check the `dd` process lines in the example output:
@@ -84,7 +84,7 @@ PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
 17039 root      20   0    8476   2928   1916 D   3.7   0.0   0:01.14 dd
 ```
 
-- `%CPU`: Indicates the CPU load percentage for a single core. You may see the value exceeds 100%, which means it is occupying a full CPU core and other CPU cores.
+- `%CPU`: Indicates the CPU load percentage for a single core. You may see the value exceed 100%, which means it is occupying a full CPU core and other CPU cores.
 
 - `S`: Lists the state of the process. Here `D` state (TASK_UNINTERRUPTIBLE) is a state which occurs in a kernel code path where the execution can't be interrupted while a task is processed.
 
@@ -101,7 +101,7 @@ The `ps` command displays running processes and can be sorted by CPU or memory. 
 sudo ps -eo pcpu,pmem,pid,user,args | sort -r -k1 | head -6
 ```
 
-Example of the output
+Example output:
 
 ```output
 %CPU %MEM     PID USER     COMMAND
@@ -116,15 +116,15 @@ Example of the output
 
 The utilization of a CPU is dependent on which resource is trying to access it. A scheduler exists in the kernel which is responsible for scheduling resources. It gives different priorities to the different resources. The next lists explain the priorities from highest to lowest.
 
-- `Hardware Interrupts` - requests created by hardware on the system to process data. Hardware interrupt sends requests without waiting for current program to finish. It's unconditional and immediate. For example, it could be a key stroke, mouse movement, a Network Card Interface signal when a packet arrived.
+- `Hardware Interrupts` - requests created by hardware on the system to process data. Hardware interrupt sends requests without waiting for current program to finish. It's unconditional and immediate. For example, it could be a keystroke, mouse movement, a Network Card Interface signal when a packet arrives.
 
-- `Soft Interrupts` - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. On a regular interval, it checks and makes sure that a process doesn't pass its allotted time on a processor.
+- `Soft Interrupts` - kernel software interrupts to do maintenance of the kernel. For example, the kernel clock tick thread is a soft interrupt. At a regular interval, it checks and makes sure that a process doesn't pass its allotted time on a processor.
 
 - `Real Time Threads` - real time processes may come on the CPU and preempt the kernel.
 
 - `Kernel Threads` - A kernel thread is a kernel entity, like processes and interrupt handlers. It's the entity handled by the system scheduler. The operating system handles Kernel-level threads directly.
 
-- `User Threads` - This space is often referred to as "user land" and all software applications run in the user space. This space has the lowest priority in the kernel scheduling mechanism. In order to understand how the kernel manages these different resources, we need understand some key concepts such as context switches, run queues, and utilization.
+- `User Threads` - This space is often referred to as "user land" and all software applications run in the user space. This space has the lowest priority in the kernel scheduling mechanism. In order to understand how the kernel manages these different resources, we need to understand some key concepts such as context switches, run queues, and utilization.
 
 ### sar
 
@@ -176,7 +176,7 @@ vmstat [delay] [count]
 
 If you provide only one parameter, it’s treated as the refresh interval, and the output will refresh on an infinite loop.
 
-### Outputs example during high I/O activity command `dd` is running
+### Example output during high I/O activity command dd is running
 
 In the following example, the first line of the report `2 3 0 33639696 ...` contains the average values since the last time the computer was rebooted. All other lines in the report represent their respective current values. 
 
@@ -222,7 +222,7 @@ These are percentages of total CPU time.
 
 To identify which process is causing high I/O activity, you can use the `pidstat` command.  It monitors individual tasks currently which the Linux kernel manages.
 
-Run following command to check which process is causing issue. Like `vmstat` option usage, it runs **five** times with **2-second** interval.
+Run following command to check which process is causing the issue. Like `vmstat` option usage, it runs **five** times with **2-second** interval.
 
 ```bash
 sudo pidstat -wt 2 5
@@ -231,7 +231,7 @@ sudo pidstat -wt 2 5
 - `-w`:  Report task switching activity.
 - `-t`: Display statistics for threads associated with selected tasks.
 
-The following are the `vmstat` rerport and  the `pidstat` output while running `stess-ng` command `stress-ng --cpu 2 --switch 50 --timeout 60s` which purposely generate high CPU context switch:
+The following are the `vmstat` report and  the `pidstat` report while running the command `stress-ng --cpu 2 --switch 50 --timeout 60s` which purposely generates high CPU context switches:
 
 **The vmstat outputs while high CPU context switch is running**
 
