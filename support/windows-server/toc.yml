@@ -773,6 +773,8 @@ items:
     href: ./certificates-and-public-key-infrastructure-pki/certificates-and-public-key-infrastructure-pki-overview.md
   - name: Active Directory Certificate Services (ADCS)
     items:
+    - name: CA certificate renewal fails when using a KSP provider
+      href: ./certificates-and-public-key-infrastructure-pki/ca-certificate-renewal-fails-existing-key-pair.md
     - name: CA doesn't publish certificates in trusted domain
       href: ./certificates-and-public-key-infrastructure-pki/cannot-publish-certificate-trusted-domain.md
     - name: How to decommission Windows enterprise CA and remove related objects
