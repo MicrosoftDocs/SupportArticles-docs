@@ -11,7 +11,7 @@ ms.custom: sap:Using grids and lists in model-driven apps
 
 ## Symptoms
 
-When you try to [filter data on a lookup column](/power-apps/user/grid-filters#filtering-on-a-lookup-column), you don't see a list of values, or it says, "No Records Found." For example, the filter on the **Parent Business** column doesn't show any results, as shown in the following screenshot.
+When you try to [filter data on a lookup column](/power-apps/user/grid-filters#filtering-on-a-lookup-column), you don't see a list of values, or it says "No Records Found." For example, the filter on the **Parent Business** column doesn't show any results, as shown in the following screenshot.
 
 :::image type="content" source="media/grid-filter-not-showing-any-suggestions/empty-filter-suggestions.png" alt-text="Screenshot of the Parent Business column that doesn't show any values.":::
 
