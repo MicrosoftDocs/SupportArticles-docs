@@ -26,7 +26,7 @@ To set up an Azure Pacemaker cluster with SBD fencing mechanism, use either of t
 
 ## Symptoms
 
-The SBD device isn't accessible on cluster nodes. In this case, the SBD service fails and prevents the Pacemaker cluster from starting up.
+The SBD device isn't accessible on cluster nodes. In this case, the SBD service fails to start and prevents the Pacemaker cluster from starting up.
 
 To get SBD server details, use the following methods:
 
@@ -164,7 +164,7 @@ To verify SBD and Pacemaker service failures, follow these steps:
 
 To resolve this issue, follow these steps:
  
-1. Ensure you set up correct configuration as mentioned in [RHEL - Set up Pacemaker on Red Hat Enterprise Linux in Azure ](/azure/sap/workloads/high-availability-guide-rhel-pacemaker)
+1. Ensure you set up correct configuration as mentioned in [RHEL - Set up Pacemaker on Red Hat Enterprise Linux in Azure ](/azure/sap/workloads/high-availability-guide-rhel-pacemaker).
 
 2. Ensure `iscsid` and `iscsi` service is enabled and running by running the following commands:
 
@@ -206,7 +206,7 @@ To resolve this issue, follow these steps:
 
 ## Cause 2: SBD configurations issues
 
-The SBD service fails due to the following configurations issues:
+The SBD service fails to start due to the following configurations issues:
 
 - Missing SBD configurations.
 - Incorrect SBD configurations such as incorrect SBD devices names or syntax errors.
@@ -224,7 +224,7 @@ SBD_WATCHDOG_TIMEOUT=5
 SBD_TIMEOUT_ACTION=flush,reboot
 SBD_MOVE_TO_ROOT_CGROUP=auto
 SBD_OPTS=
-SBD_DEVICE="/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d77;/dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a;/dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb”
+SBD_DEVICE="/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d77;/dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a;/dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb"
 ```
 
 ### Resolution 2:
