@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 842210
 
 ## Symptoms
 
-On a computer that is running Windows Server, Certificate Services may not start.
+On a computer that is running Windows Server, the Certificate Services Service may not start.
 
 Additionally, the following error message may be logged in the Application log in Event Viewer.
 
