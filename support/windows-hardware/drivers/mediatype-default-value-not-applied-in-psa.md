@@ -16,7 +16,7 @@ This article helps you work around an issue where the default setting for MediaT
 Consider the following scenario:
 
 - You're developing a PSA for IPP-based printers.
-- The PSA runs on Windows 10 22H2 or Windows 11 23H2.
+- The PSA runs on Windows 10, version 22H2 or Windows 11, version 23H2.
 - You add extra PageMediaType options to the Print Device Capabilities (PDC) in the `PrintSupportExtensionSession.PrintDeviceCapabilitiesChanged` event handler of the PSA.
 
 In this scenario, the default option isn't selected as expected when the print settings screen in the PSA is first displayed. Once the settings are saved, the issue no longer occurs.
