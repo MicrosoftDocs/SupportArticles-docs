@@ -233,7 +233,7 @@ sudo pidstat -wt 2 5
 
 The following are the `vmstat` rerport and  the `pidstat` output while running `stess-ng` command `stress-ng --cpu 2 --switch 50 --timeout 60s` which purposely generate high CPU context switch:
 
-**vmstat outputs while high CPU context switch is running**
+**The vmstat outputs while high CPU context switch is running**
 
 ```output
 procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
@@ -245,7 +245,7 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 
 ```
 
-**pidstat outputs while high CPU context switch is running**
+**The pidstat outputs while high CPU context switch is running**
 
 ```output
 Linux 4.18.0-553.16.1.el8_10.x86_64 (rhel8)     09/19/2024      _x86_64_       (2 CPU)
@@ -273,9 +273,9 @@ Linux 4.18.0-553.16.1.el8_10.x86_64 (rhel8)     09/19/2024      _x86_64_       (
 
 ### How to identify the root cause of a high CPU issue that has occurred recently or intermittently. What logs should I check?
 
-To identify the root cause of the high CPU issue, the performance monitor tool like `sysstat` must be enabled and running during the issue occurs, and we need the sar logs (included in the `SOSREPORT` log bundle) from the time the issue occurred.
+To identify the root cause of the high CPU issue, the performance monitor tool like `sysstat` must be enabled and running during the issue occurs, and we need the `sar` logs (included in the `SOSREPORT` log bundle) from the time the issue occurred.
 
-Without the sar logs, we cannot establish a baseline for comparison when a performance issue occurs. This makes it challenging to determine how much performance downgrade during peak usage periods.
+Without the `sar` logs, we cannot establish a baseline for comparison when a performance issue occurs. This makes it challenging to determine how much performance downgrade during peak usage periods.
 
 If you are using third-party monitoring tools, provide details about these tools when contacting our support team. Understanding the details such metrics is essential for comparing them with data retrieved from native Linux command-line tools.
 
