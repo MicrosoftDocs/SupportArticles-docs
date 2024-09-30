@@ -1,7 +1,7 @@
 ---
 title: Script to inspect the content of the WMI repository
 description: Introduces a script to inspect the content of the WMI repository.
-ms.date: 09/29/2024
+ms.date: 09/30/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -462,7 +462,7 @@ Write-Host "Writing Security.csv"
 $tbSec | Export-Csv $resDir"\Security.csv" -noType
 ```
 
-The script can be executed without any parameters, and it creates a subfolder for each run. If the script is executed with the -DataPath parameter, the subfolder is created in that specified path. Inside the folder, you can find four CSV files that can be imported into Excel:
+The script can be executed without any parameters, and it creates a subfolder for each run. If the script is executed with the `-DataPath` parameter, the subfolder is created in that specified path. Inside the folder, you can find four CSV files that can be imported into Excel:
 
 ### Dynamic.csv
 
@@ -478,21 +478,13 @@ This file contains the list of dynamic classes with the following columns:
 This file contains the list of registered providers with the following columns:
 
 - NameSpace: Where the provider is registered
-
 - Name: Name of the provider
-
 - HostingModel: See Provider Hosting and Security
-
 - ThreadingModel: See COM+ Threading Models
-
 - DLL Path: Path where the provider is implemented
-
 - dtDLL: Date of the DLL
-
 - verDLL: Version of the DLL
-
 - UnloadTimeout: Configured unload timeout for the provider
-
 - CLSID: Assigned CLSID for the provider
 
 ### Static.csv
@@ -500,11 +492,8 @@ This file contains the list of registered providers with the following columns:
 This file contains the list of static classes with the following columns:
 
 - Namespace: Where the static class is registered
-
 - Name: Name of the static class
-
 - Inst: Number of instances stored in the class
-
 - Size: Estimated size in bytes for the class
 
 ### Security.csv
@@ -512,7 +501,6 @@ This file contains the list of static classes with the following columns:
 This file contains the security configuration for each namespace with the following columns:
 
 - NameSpace: Namespace with defined security
-
 - Security setting: Type of access granted to each account
 
 If you're troubleshooting repository bloating, the Static.csv file helps you identify which static class is using the most space.
