@@ -22,9 +22,7 @@ This article explains how to troubleshoot CPU performance issues on Azure Linux 
 
 ## top
 
-The `top` utility is a primary resource monitoring tool that offers a detailed view of CPU utilization. It provides real-time insights into server performance. The following is an example of a `top` report from a VM with two CPU cores:
-
-bash
+The `top` utility is a primary CPU monitoring tool that offers a detailed view of CPU utilization. It provides real-time insights into server performance. The following is an example of a `top` report from a VM with two CPU cores:
 
 ```output
 top - 03:12:38 up  1:53,  3 users,  load average: 1.72, 0.62, 0.25
@@ -71,7 +69,7 @@ Key metrics:
 
 ### Analyze the report
 
-In this example, the `load average` over the last 1 minute is 1.72. This VM contains two CPU cores, so a load average of 2.0 would mean that both cores are fully utilized. The `15.2 id` value indicates that the CPU is operating at low capacity, with an idle rate of 15.2% for each CPU.
+This VM contains two CPU cores, so a load average of 2.0 would mean that both cores are fully utilized. In this example, the `load average` over the last 1 minute is 1.72, which indicates that the system load is approaching its full capacity. The `15.2 id` value also indicates that the CPU is operating at low capacity, with an idle rate of 15.2% for CPUs.
 
 > [!TIP]
 > - You can quickly determine the CPU count by running the `nproc` command.
@@ -231,7 +229,7 @@ sudo pidstat -wt 2 5
 ```
 
 - `-w`:  Report task switching activity.
- `-t`: Display statistics for threads associated with selected tasks.
+- `-t`: Display statistics for threads associated with selected tasks.
 
 The following are the `vmstat` rerport and  the `pidstat` output while running `stess-ng` command `stress-ng --cpu 2 --switch 50 --timeout 60s` which purposely generate high CPU context switch:
 
