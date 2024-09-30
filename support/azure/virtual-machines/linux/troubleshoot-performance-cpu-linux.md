@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Performance CPU issues in Linux
+title: Troubleshoot high CPU Usage issues in Linux
 description: Troubleshoot CPU performance issues on Linux virtual machines in Azure.
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance, linux-related-content
@@ -10,7 +10,7 @@ ms.author: jianpingxi
 ms.reviewer: divargas
 ms.date: 09/30/2024
 ---
-# Troubleshoot performance CPU issues in Linux
+# Troubleshoot CPU performance issues in Linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
