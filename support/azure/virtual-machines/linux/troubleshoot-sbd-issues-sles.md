@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot SBD issues in SUSE Pacemaker Cluster
+title: Troubleshoot SBD issues in SUSE Pacemaker clusters
 description: Provides troubleshooting guidance if SBD services fail
 ms.reviewer: rnirek
 ms.author: rnirek
@@ -15,31 +15,30 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article lists the common issues for SBD in SLES Pacemaker Cluster and offers guidance for identifying and resolving issues.
+This article lists common issues that affect the STONITH Block Device (SBD) fencing mechanism in a SUSE Linux Enterprise (SLES) Pacemaker cluster, and offers guidance for identifying and resolving the issues.
 
 ## How SBD works
 
-The SBD (Stonith Block Device) device requires at least one more virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers can also be shared with other Pacemaker clusters. The advantage of using an SBD device is that if you're already using SBD devices on-premises, they don't require any changes to how you operate the Pacemaker cluster.
+An SBD device requires at least one additional virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers can also be shared with other Pacemaker clusters. The advantage in using SBD is that, if you're already using them on-premises, SBD devices don't require you to change how you operate the Pacemaker cluster.
 
-For Azure Pacemaker cluster with SBD fencing mechanism, either of the two options can be used for the setup. For more information on the two mechanisms, see:
+For a Microsoft Azure Pacemaker cluster that has SBD storage protection, you can use either of the following options for the setup. For more information about these mechanisms, see:
 
 - [SBD with an iscsi target server](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#sbd-with-an-iscsi-target-server)
 - [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#sbd-with-an-azure-shared-disk)
 
-## How to diagnose the issue
-
-If the SBD device isn't accessible on the cluster nodes, the daemon fails to start and interrupt cluster startup. To diagnose the issue, you check `crm` logs, the `iscsiadm` result or `iscsi` service status that includes the SBD server IP addresses. 
+ To diagnose the issue, you can check the `crm` logs, the `iscsiadm` result, or the `iscsi` service status that includes the SBD server IP addresses. 
 
 The following examples show how to use these commands to diagnose the issue:
 
-1. Check the status of the cluster. 
+1. Check the status of the cluster:
+
     ```bash
     sudo crm status
     ```
     ```output
     ERROR: status: crm_mon (rc=102): Error: cluster is not available on this node
     ```
-2. Check the pacemaker service stauts. The following example output indicates that the Pacemaker service has failed because one or more dependent services are not functioning.
+2. Check the pacemaker service stauts. The following example output indicates that the Pacemaker service has failed because one or more dependent services are not functioning:
 
     ```bash
     sudo systemctl status pacemaker
@@ -55,6 +54,7 @@ The following examples show how to use these commands to diagnose the issue:
     Aug 01 04:59:07 nfs-0 systemd[1]: pacemaker.service: Job pacemaker.service/start failed with result 'dependency'.
     ```
 3. Check the dependency services tree of the Pacemaker service:
+
       ```bash
       sudo  systemctl list-dependencies pacemaker
       ```
@@ -67,7 +67,7 @@ The following examples show how to use these commands to diagnose the issue:
       ● ├─resource-agents-deps.target
       ● └─sysinit.target
       ```
-4. Check each service's status. In the following example, you can find that all dependency services such as Corosync are active, but the SBD service is not running. 
+4. Check the status of each service. In the following example, you can see that all dependency services, such as Corosync, are active, but the SBD service is not running: 
 
   ```bash
 sudo systemctl status corosync
@@ -91,7 +91,8 @@ Aug 01 04:49:15 nfs-0 corosync[24094]:   [QUORUM] Members[2]: 1 2
 Aug 01 04:49:15 nfs-0 corosync[24094]:   [MAIN ] Completed service synchronization, ready to provide service.
 Aug 01 04:49:15 nfs-0 corosync[24075]: Starting Corosync Cluster Engine (corosync): [ OK ]
 
-5. Check SBD service status. The service fail to start with the error `Failed to start Shared-storage based fencing daemon`.
+5. Check the SBD service status. The service doesn't start, and it returns a `Failed to start Shared-storage based fencing daemon` error message:
+
       ```bash
       sudo systemctl status sbd
       ```
@@ -110,17 +111,15 @@ Aug 01 04:49:15 nfs-0 corosync[24075]: Starting Corosync Cluster Engine (corosyn
       Aug 01 04:59:07 nfs-0 systemd[1]: sbd.service: Unit entered failed state.
       Aug 01 04:59:07 nfs-0 systemd[1]: sbd.service: Failed with result 'timeout'.
       ```
-## Cause 1 : SBD service failed due to iscsi failure
+## Cause 1 : SBD service failed because of iSCSI failure
 
-Pacemaker service is not running and SBD Service is in failed State on both cluster nodes. 'iSCSI' services Use "IQN" for communication between Initiator and Target nodes,failure to run services results in inaccessible SBD Disks, leading to SBD and pacemaker service failures.
-
-The Pacemaker service is not running, and the SBD service is in a failed state on both cluster nodes. The iSCSI services use the iSCSI Qualified Name (IQN) for communication between initiator and target nodes. Failure to run these services results in inaccessible SBD disks, leading to failures in both the SBD and Pacemaker services.
+The Pacemaker service is not running, and the SBD service is in a failed state on both cluster nodes. The iSCSI services use the iSCSI Qualified Name (IQN) for communication between the initiator and target nodes. Failing to run services causes SBD disks to become inaccessible. This, in turn, causes the SBD and Pacemaker services to fail.
 
 ### Resolution
 
-1. Ensure that the setup is correctly configured as documented in [SUSE - set up Pacemaker on SUSE Linux Enterprise Server in Azure ](/azure/sap/workloads/high-availability-guide-suse-pacemaker).
+1. Make sure that the setup is correctly configured as documented in [SUSE - set up Pacemaker on SUSE Linux Enterprise Server in Azure ](/azure/sap/workloads/high-availability-guide-suse-pacemaker).
 
-2. Ensure that the `iscsid` and `iscsi` service is enabled and running.
+2. Make sure that the `iscsid` and `iscsi` services are enabled and running:
 
   ```  bash
   sudo systemctl enable iscsi
@@ -134,7 +133,7 @@ The Pacemaker service is not running, and the SBD service is in a failed state o
   ```bash
   sudo systemctl status iscsid
   ```
- If the service is working, the output should look like this:
+ If the services are working, the output should resemble the following:
 
   ```output
   iscsi.service - Login and scanning of iSCSI devices
@@ -154,10 +153,10 @@ The Pacemaker service is not running, and the SBD service is in a failed state o
 ```
 ## Cause 2: Configurations issues 
 
-Incorrect SBD configurations, such as missing or incorrectly named SBD devices and syntax errors, can cause the SBD service to fail.
+Incorrect SBD configurations that have, for example, missing or incorrectly named SBD devices or syntax errors can cause the SBD service to fail.
 
 ### Resolution 1
-Validate the SBD configuration file `/etc/sysconfig/sbd` and ensure it should have the recommended parameter and the correct SBD devices:
+Verify that the SBD configuration file, `/etc/sysconfig/sbd`, contains the recommended parameter and the correct SBD devices:
 
 ``` bash
 SBD_PACEMAKER=yes
@@ -170,8 +169,9 @@ SBD_MOVE_TO_ROOT_CGROUP=auto
 SBD_OPTS=
 SBD_DEVICE="/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxxx;/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxx;/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxxx”
 ```
+
 ### Resolution 2
-Validate the Stonith resource configuration using the command:
+Verify the STONITH resource configuration by using the following command:
 
 ```bash
 sudo crm configure show
@@ -183,9 +183,10 @@ op monitor interval="600" timeout="15"
 stonith-enabled=true \
 stonith-timeout=144 \
 ```
+
 ## Cause 3: iSCSI devices aren't available on cluster nodes
 
-When you run `lscsi` or `lsblk` commands, it doesn't display SBD disks in the output:
+When you run the `lscsi` or `lsblk` command, SBD disks are not displayed in the output:
 
 ```bash
 sudo lsscsi
@@ -219,7 +220,7 @@ sdd                   8:48   0  100G  0 disk
 
 Perform the following checks:
 
-1. Validate the initiator name on both Cluster nodes.
+1. Verify the initiator name on both cluster nodes:
 
     ```bash
     sudo cat /etc/iscsi/initiatorname.iscsi
@@ -233,7 +234,7 @@ Perform the following checks:
     ```output
     InitiatorName=iqn.2006-04.nfs-1.local:nfs-1
     ```
-2. Try listing all SBD devices mentioned in SBD configuration file.
+2. Try listing all SBD devices that are mentioned in SBD configuration file:
 
     ```bash
     sudo grep SBD_DEVICE /etc/sysconfig/sbd
@@ -242,7 +243,7 @@ Perform the following checks:
     # SBD_DEVICE specifies the devices to use for exchanging sbd messages
     SBD_DEVICE="/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779;/dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a;/dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb"
   ```
-3. Based on the error provided, check if the SBD servers are up and accessible.
+3. Based on the error message that's provided, check whether the SBD servers are running and accessible:
 
     ```bash
     sudo /usr/sbin/sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
@@ -251,7 +252,8 @@ Perform the following checks:
     == disk /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 unreadable!
     sbd failed; please check the logs.
     ```
-4. To fix the error, perform these steps on both nodes of cluster to connect to the iSCSI devices after ensuring that SBD servers are up and accessible. In the following example, `iqn.2006-04.nfs.local:nfs` is a target name listed when running the first command, `iscsiadm -m discovery`.
+
+4. To fix the error, run these steps on both nodes of the cluster to connect to the iSCSI devices after you make sure that SBD servers are running and accessible. In the following example, `iqn.2006-04.nfs.local:nfs` is a target name that's listed when you run the first command, `iscsiadm -m discovery`:
 
     ```bash
     sudo iscsiadm -m discovery
@@ -289,9 +291,10 @@ Perform the following checks:
     [1:0:0:1]    disk    Msft     Virtual Disk     1.0   /dev/sdd
     [2:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sde
     ```
-    Execute the same commands to connect to the rest of the two devices. Moreover execute same set of commands on the other cluster node.
+    Run the same commands to connect to the rest of the devices. Also, run the same set of commands on the other cluster node.
 
-5. Once iscsi devices detected, command output should reflect SBD devices:
+5. After iSCSI devices are detected, the command output should reflect the SBD devices:
+
     ```bash
     sudo lsscsi
     ```
@@ -326,12 +329,13 @@ Perform the following checks:
     sdf                   8:80   0   50M  0 disk
     sdg                   8:96   0   50M  0 disk
     ```
-## Cause 4:  Node Fails to Rejoin Cluster Post-Fencing
+## Cause 4: Node doesn't rejoin cluster after fencing
 
-One of the nodes fails to join cluster after fencing. SBD is in a failed state and the other node is in pending state.
+One of the nodes doesn't rejoin the cluster after the fencing process is finished. SBD is in a failed state, and the other node is in a pending state.
 
 ### Resolution 1
-It's possible that the SBD slot isn't in clean state, hence the node can't rejoin the cluster after fencing reboot. Check the SBD status using the following commands. If SBD slot not clean, the SBD status shows `reset`.
+
+It's possible that the SBD slot isn't in a clean state. Therefore, the node can't rejoin the cluster after a fencing restart. Check the SBD status by running the following commands. If the SBD slot is not clean, the SBD status shows `reset`:
 
 ```bash
 sudo lsscsi
@@ -358,7 +362,7 @@ sudo sbd -d /dev/sde list
 
 ### Resolution 2
 
-Validate the `/etc/sysconfig/sbd` and check if the `SBD_STARTMODE` is set to `always` or `clean`:
+Verify the `/etc/sysconfig/sbd` configuration file, and check whether the `SBD_STARTMODE` parameter is set to `always` or `clean`:
 
 ```bash
 sudo grep -i SBD_STARTMODE  /etc/sysconfig/sbd
@@ -366,42 +370,46 @@ sudo grep -i SBD_STARTMODE  /etc/sysconfig/sbd
 ```output
 SBD_STARTMODE=clean
 ```
-The `SBD_STARTMODE` parameter determines whether a node can rejoin the cluster. If set to `always`, the node will rejoin the cluster even if it was previously fenced. If set to `clean`, the node will only rejoin after it has been brought to a clean state.
+The `SBD_STARTMODE` parameter determines whether a node can rejoin the cluster. If it's set to `always`, the node will rejoin the cluster even if it was previously fenced. If parameter is set to `clean`, the node will rejoin only after it's brought to a clean state.
 
-This behavior is expected: SBD detects a fencing message in the slot for the node and prevents it from joining the cluster until the issue is manually cleared.
+This behavior is expected. SBD detects a fencing message in the slot for the node and prevents it from joining the cluster until the issue is manually cleared.
 
-To clear clear node slot, follow these steps:
+To clear the node slot, follow these steps:
 
 1.  Clear the fencing message for the local node:
+
     Example:
     ```bash
     sudo sbd -d <SBD_DEVICE> message LOCAL clear
     ```
-    You may also run the command from any node in cluster by specifying the node name instead of `LOCAL`:
+    You can also run the command from any node in the cluster by specifying the node name instead of `LOCAL`:
     
     Example:
     ```bash
     sudo sbd -d <DEVICE_NAME> message <NODENAME> clear
     ```
-    The node name you specified should be the node fenced and isn't able to join the cluster:
+    The node name that you specified should be the node fenced and can't join the cluster:
     ```bash
     sudo sbd -d /dev/sde message nfs-1 clear
     ```
     
-2. Once the node slot is cleared, you should be able to start Clustering services. If the service fails again, run the commands to fix the issue:
+2. After the node slot is cleared, you should be able to start the Clustering service. If the service fails again, run the following commands to fix the issue:
+
     ```bash
     sudo iscsiadm -m node -u
     ```
     ```bash
     sudo iscsiadm -m node -l
     ```
+
 > [!NOTE]
-> Replace `<SBD_DEVICE>`,`<DEVICE_NAME>` and `<NODENAME>` accordingly.
+> In these commands, replace `<SBD_DEVICE>`,`<DEVICE_NAME>`, and `<NODENAME>` with the actual values.
 
-## Cause 5: SBD service fails to start after adding new SBD device
-Getting error message `sbd failed; please check the logs` after you create or add new SBD device into cluster.
+## Cause 5: SBD service doesn't start after you add new SBD device
 
-Check if you're getting errors while sending or testing messages by SBD devices.
+After you create an SBD device or add one to a cluster, you receive an `sbd failed; please check the logs` error message.
+
+Check whether you're receiving error messages while you're sending or testing messages by SBD devices.
 
 ```bash
 sudo sbd -d  /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 message node1 test
@@ -419,16 +427,16 @@ Mar  2 06:58:06 node1 sbd[11104]: warning: messenger: Process 11105 failed to de
 ```
 
 ### Resolution
-When using SBD as a fencing device and enabling it for a Pacemaker cluster, services must be managed under cluster control. Therefore, you cannot start or stop them manually. Additionally, when enabling or adding a new SBD device to the cluster, you should restart the Pacemaker cluster for the changes to take effect under cluster control.
+When you use SBD as a fencing device and enable it for a Pacemaker cluster, services must be managed under cluster control. Therefore, you can't start or stop them manually. Additionally, when you enable an SBD device or add it to the cluster, you should restart the Pacemaker cluster in order for the changes to take effect under cluster control:
 
-1. Restart cluster services on all cluster nodes.
+1. Restart cluster services on all cluster nodes:
 
      ```bash 
     sudo crm cluster stop
     sudo crm cluster start
     ```
 
-2.Check if SBD service start successfully.
+2.Check whether the SBD service start successfully:
 
      ```bash
     sudo systemctl status sbd.service 
@@ -438,7 +446,7 @@ When using SBD as a fencing device and enabling it for a Pacemaker cluster, serv
        Loaded: loaded (/usr/lib/systemd/system/sbd.service; enabled; vendor preset: disabled)
        Active: active (running)
     ```
-3.Check if SBD device list giving desired output:
+3.Check whether the SBD device list provides the desired output:
 
      ```bash 
     sudo sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
@@ -447,16 +455,14 @@ When using SBD as a fencing device and enabling it for a Pacemaker cluster, serv
     0   node1   clear   
     1   node2   clear   
     ```
- ## Cause 6: SBD fails to start after SLES 12 to SLES 15 upgrade
- After update or upgrade of a SLES 12 system to SLES 15, iSCSI client information may not be present, causing a failure to connect to remote filesystems over iSCSI.
+## Cause 6: SBD doesn't start after SLES 12 to SLES 15 upgrade
+After you upgrade an SLES 12 system to SLES 15, iSCSI client information might not exist. This condition causes connections to remote file systems over iSCSI to fail.
 
- ### Resoultion
-In SLES 15, the deprecated `targetcli-fb` package was replaced with `python3-targetcli-fb` or `python2-targetcli-fb`, which results in systemd service information being reset to the default (disabled/stopped). To resolve the issue, the `targetcli` service must be manually enabled and started. For more information, see [SBD Failure After SLES15 Upgrade](https://www.suse.com/support/kb/doc/?id=000020323).
+### Resolution
+In SLES 15, the deprecated `targetcli-fb` package was replaced with `python3-targetcli-fb` or `python2-targetcli-fb`. This causes system service information to be reset to the default value (disabled/stopped). To resolve the issue, you must manually enable and start the `targetcli` service. For more information, see [SBD Failure After SLES15 Upgrade](https://www.suse.com/support/kb/doc/?id=000020323).
 
-## Next Steps
+## Next steps
 For additional help, open a support request by using the following instructions. When you submit your request, attach [supportconfig](https://documentation.suse.com/smart/systems-management/html/supportconfig/index.html) and [hb_report](https://www.suse.com/support/kb/doc/?id=000019142) logs for troubleshooting.
-
-
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
