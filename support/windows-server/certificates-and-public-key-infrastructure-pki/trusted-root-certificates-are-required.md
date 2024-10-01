@@ -21,20 +21,13 @@ As part of a public key infrastructure (PKI) trust management procedure, some ad
 
 ## Necessary and trusted root certificates
 
-The following certificates are necessary and trusted in:
+The following certificates are necessary and trusted in Windows 10 and newer operating systems:
 
-- Windows 7
-- Windows Vista
-- Windows Server 2008 R2
-- Windows Server 2008
-
-|Issued to|Issued by|Serial number|Expiration date|Intended purposes|Friendly name|Status|
+|Issued to|Issued by|Serial number|Expiration date|Intended purposes|Friendly name||
 |---|---|---|---|---|---|---|
-|Microsoft Root Authority|Microsoft Root Authority|00c1008b3c3c8811d13ef663ecdf40|12/31/2020|All|Microsoft Root Authority|R|
-|Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|R|
-|Microsoft Root Certificate Authority|Microsoft Root Certificate Authority|79ad16a14aa0a5ad4c7358f407132e65|5/9/2021|All|Microsoft Root Certificate Authority|R|
-
-The follow certificates are necessary and trusted in Windows XP and in Windows Server 2003:
+|Microsoft Root Certificate Authority 2010|Microsoft Root Certificate Authority 2010|28cc3a25bfba44ac449a9b586b4339aa|6/23/2035|All|Microsoft Root Certificate Authority 2010||
+|Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA||
+|*Microsoft Root Certificate Authority*|*Microsoft Root Certificate Authority*|*79ad16a14aa0a5ad4c7358f407132e65*|*5/9/2021*|*All*|*Microsoft Root Certificate Authority*||
 
 |Issued to|Issued by|Serial number|Expiration date|Intended purposes|Friendly name|Status|
 |---|---|---|---|---|---|---|
@@ -45,8 +38,6 @@ The follow certificates are necessary and trusted in Windows XP and in Windows S
 |VeriSign Commercial Software Publishers CA|VeriSign Commercial Software Publishers CA|03c78f37db9228df3cbb1aad82fa6710|1/7/2004|Secure E-mail, Code Signing|VeriSign Commercial Software Publishers CA|R|
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|R|
 |Microsoft Root Certificate Authority|Microsoft Root Certificate Authority|79ad16a14aa0a5ad4c7358f407132e65|5/9/2021|All|Microsoft Root Certificate Authority|R|
-
-The follow certificates are necessary and trusted in Microsoft Windows 2000:
 
 |Issued to|Issued by|Serial number|Expiration date|Intended purposes|Friendly name|Status|
 |---|---|---|---|---|---|---|
