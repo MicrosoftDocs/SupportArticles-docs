@@ -8,12 +8,9 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
-# How to remove administrative shares in Windows Server
+# How to remove administrative shares in Windows
 
-This article describes how to remove default administrative shares, and how to prevent these shares from being automatically created in Windows Server.
-
-_Applies to:_ &nbsp; Windows Server  
-_Original KB number:_ &nbsp; 954422
+This article describes how to remove default administrative shares, and how to prevent these shares from being automatically created in Windows.
 
 ## Introduction
 
