@@ -30,7 +30,7 @@ The following ROOT certificates are necessary and trusted in Windows 10 and newe
 |Microsoft Root Certificate Authority 2011|Microsoft Root Certificate Authority 2011|3f8bc8b5fc9fb29643b569d66c42e144|3/22/2036|All|Microsoft Root Certificate Authority 2011|
 |Copyright (c) 1997 Microsoft Corp.|Copyright (c) 1997 Microsoft Corp.|01|12/30/1999|Time Stamping|Microsoft Timestamp Root|
 |Microsoft Authenticode(tm) Root Authority|Microsoft Authenticode(tm) Root Authority|01|12/31/1999|Secure E-mail, Code Signing|Microsoft Authenticode(tm) Root|
-|Microsoft Root Authority 2010|Microsoft Root Authority 2010|28cc3a25bfba44ac449a9b586b4339aa|6/23/2035|All|Microsoft Root Certificate Authority 2010|
+|Microsoft Root Certificate Authority 2010|Microsoft Root Certificate Authority 2010|28cc3a25bfba44ac449a9b586b4339aa|6/23/2035|All|Microsoft Root Certificate Authority 2010|
 |NO LIABILITY ACCEPTED, (c)97 VeriSign, Inc.|NO LIABILITY ACCEPTED, (c)97 VeriSign, Inc.|4a19d2388c82591ca55d735f155ddca3|1/7/2004|Time Stamping|VeriSign Time Stamping CA|
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|
 
