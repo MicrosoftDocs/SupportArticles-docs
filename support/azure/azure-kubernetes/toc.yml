@@ -185,6 +185,8 @@
       href: availability-performance/node-not-ready-after-being-healthy.md
     - name: Node not ready but then recovers
       href: availability-performance/node-not-ready-then-recovers.md
+    - name: Troubleshoot node auto-repair errors
+      href: availability-performance/node-auto-repair-errors.md
 - name: Connectivity
   items:
   - name: Cannot connect to application hosted on AKS cluster
