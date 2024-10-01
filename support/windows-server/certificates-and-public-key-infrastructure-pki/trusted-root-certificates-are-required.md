@@ -39,7 +39,7 @@ The following ROOT certificates were not included in Windows 8 / Windows Server 
 |Issued to|Issued by|Serial number|Expiration date|Intended purposes|Friendly name|
 |---|---|---|---|---|---|
 |Symantec Enterprise Mobile Root for Microsoft|Symantec Enterprise Mobile Root for Microsoft|0f6b552f9ebf907b0f6629a9bdf4d8ce|3/14/2032|Code Signing|None|
-|Microsoft ECC Product Root Certificate Authority 2018|Microsoft ECC Product Root Certificate Authority 2018|14982666dc7ccd8f4053677bb999ec85|2/24/2043|All|Microsoft ECC Product Root Certificate Authority 2018|
+|Microsoft ECC Product Root Certificate Authority 2018|Microsoft ECC Product Root Certificate Authority 2018|14982666dc7ccd8f4053677bb999ec85|2/27/2043|All|Microsoft ECC Product Root Certificate Authority 2018|
 |Microsoft ECC TS Root Certificate Authority 2018|Microsoft ECC TS Root Certificate Authority 2018|153875e1647ed1b047b4efaf41128245|2/27/2043|All|Microsoft ECC TS Root Certificate Authority 2018|
 |Microsoft Time Stamp Root Certificate Authority 2014|Microsoft Time Stamp Root Certificate Authority 2014|2fd67a432293329045e953343ee27466|10/22/2039|All|Microsoft Time Stamp Root Certificate Authority 2014|
 
