@@ -38,20 +38,7 @@ By default, Windows Server automatically creates special hidden administrative s
 
 Generally, we recommend that you don't modify these special shared resources. However, if you want to remove the special shared resources and prevent them from being created automatically, you can do it by editing the registry.
 
-## Remove administrative shares by editing the registry
-
-To have us do this for you, go to the [Fix it for me](#fix-it-for-me) section. If you would rather fix this problem yourself, go to the [Let me fix it myself](#let-me-fix-it-myself) section.
-
-### Fix it for me
-
-To fix this problem automatically, select the Fix this problem link. Then, select **Run** in the **File Download** dialog box, and follow the steps in this wizard.
-
-Notes
-
-- This wizard may be in English only; however, the automatic fix also works for other language versions of Windows.
-- If you aren't on the computer that has the problem, you can save the automatic fix to a flash drive or to a CD, and then you can run it on the computer that has the problem. Now go to the [Did this fix the problem?](#did-this-fix-the-problem) section.
-
-### Let me fix it myself
+### Editing registry to remove administrative shares
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
@@ -59,29 +46,24 @@ Notes
 To remove administrative shares and prevent them from being automatically created in Windows, follow these steps:
 
 1. Select **Start**, and then select **Run**.
-2. In the **Open** box, type regedit, and then select **OK**.
-3. Locate, and then select the following registry subkey:
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters\AutoShareServer`  
+1. In the **Open** box, type regedit, and then select **OK**.
+1. Locate, and then select the following registry subkey:
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters\AutoShareServer`  
 
-    > [!NOTE]
-    > The registry subkey AutoShareServer must be set as type REG_DWORD. When this value is set to 0 (zero), Windows does not automatically create administrative shares. Be aware that this does not apply to the IPC$ share or shares that you create manually.
-4. On the **Edit** menu, select **Modify**. In the **Value data** box, type 0, and then select **OK**.
-5. Exit Registry Editor.
-6. Stop and then start the Server service. To do it, follow these steps:
+   > [!NOTE]
+   > The registry subkey AutoShareServer must be set as type REG_DWORD. When this value is set to 0 (zero), Windows does not automatically create administrative shares. Be aware that this does not apply to the IPC$ share or shares that you create manually.
+1. On the **Edit** menu, select **Modify**. In the **Value data** box, type 0, and then select **OK**.
+1. Exit Registry Editor.
+1. Stop and then start the Server service. To do it, follow these steps:
 
-    1. Select **Start**, and then select **Run**.
-    2. In the **Open** box, type cmd, and then select **OK**.
-    3. At the command prompt, type the following lines. Press **Enter** after each line:  
-        net stop server  
-        net start server
-    4. Type exit to close the Command Prompt window.
+   1. Select **Start**, and then select **Run**.
+   1. In the **Open** box, type cmd, and then select **OK**.
+   1. At the command prompt, type the following lines. Press **Enter** after each line:  
+   net stop server  
+   net start server
+1. To verify that the administrative shares are now gone run:
 
-Now go to the [Did this fix the problem](#did-this-fix-the-problem) section.
+   net share
+   
+1. Type exit to close the Command Prompt window.
 
-### Did this fix the problem
-
-Check whether the problem is fixed. If the problem is fixed, you're finished with this article. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
-
-## References
-
-For more information about how to manage shared resources by using Shared Folders in Windows Server, see the Shared Folders Help files. To do it, select **Start**, point to **Administrative Tools**, and then select **Computer Management**. In the console tree, right-click **Shared Folders**, and then select **Help**.
