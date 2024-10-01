@@ -1,18 +1,18 @@
 ---
 title: Install and configure IP version 6
-description: Describes how to install and configure IP version 6 (IPv6) in a Windows Server 2003 Enterprise Edition environment.
+description: Describes how to install and configure IP version 6 (IPv6) in a Windows Server Enterprise Edition environment.
 ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, JAMIRC
-ms.custom: sap:Network Connectivity and File Sharing\IP Address Management (IPAM), csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Communications, csstroubleshoot
 ---
-# Install and configure IP version 6 in Windows Server 2003 Enterprise Server
+# Install and configure IP version 6 in Windows Server Enterprise Server
 
-This article describes how to install and configure IP version 6 (IPv6) in a Microsoft Windows Server 2003 Enterprise Edition environment.
+This article describes how to install and configure IP version 6 (IPv6) in a Microsoft Windows Server Enterprise Edition environment.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server  
 _Original KB number:_ &nbsp; 325449
 
 ## Summary
@@ -61,7 +61,7 @@ While standards for QoS exist for IPv4, real-time traffic support relies on the 
 
 ## Configuring IPv6 with Manual Addresses
 
-1. Click **Start**, point to **Programs**, point to **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, right click **Command Prompt** select **Run As Administrator**.
 2. At the command prompt, type `netsh`, and then press ENTER.
 3. Type `interface ipv6`, and then press ENTER.
 4. Type the following command, and then press ENTER:
@@ -80,7 +80,7 @@ While standards for QoS exist for IPv4, real-time traffic support relies on the 
 
 ## Configuring Interface Attributes
 
-1. Click **Start**, point to **All Programs**, point to **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, right click **Command Prompt** select **Run As Administrator**.
 2. At the command prompt, type *netsh*, and then press ENTER.
 3. Type interface ipv6, and then press ENTER.
 4. Type the following command, and then press ENTER:
@@ -103,7 +103,7 @@ This command uses the following values:
 
 ## View the IPv6 Routing Table
 
-1. Click **Start**, point to **All Programs**, point to **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
 2. At the command prompt, type `netsh`, and then press ENTER.
 3. Type `interface ipv6`, and then press ENTER.
 4. Type `show routes`, and then press ENTER.
@@ -113,7 +113,7 @@ This command uses the following values:
 
 ## Add an IPv6 Route
 
-1. Click **Start** , point to **All Programs**, point to **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, right click **Command Prompt** select **Run As Administrator**.
 2. At the command prompt, type `netsh`, and then press ENTER.
 3. Type `interface ipv6`, and then press ENTER.
 4. Type the following command, and then press ENTER:
@@ -142,7 +142,7 @@ When publish is set to no or age, the route is deleted after the end of the vali
 
 ## Remove an IPv6 Route
 
-1. Click **Start**, point to **All Programs**, point to **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, right click **Command Prompt** select **Run As Administrator**.
 2. At the command prompt, type `netsh`, and then press ENTER.
 3. Type `interface ipv6`, and then press ENTER.
 4. Type show routes to obtain the route prefix and the interface index of the interface over which the addresses for the route prefix are reachable.
@@ -165,7 +165,7 @@ When publish is set to no or age, the route is deleted after the end of the vali
 
 ## Enable IPv6 forwarding
 
-1. Click **Start**, point to **All Programs**, point to **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, right click **Command Prompt** select **Run As Administrator**.
 2. At the command prompt, type `netsh`, and then press ENTER.
 3. Type `interface ipv6`, and then press ENTER.
 4. Type the following command, and then press ENTER:
@@ -191,7 +191,7 @@ When publish is set to no or age, the route is deleted after the end of the vali
 
 To obtain the IPv6 configuration for a computer:
 
-1. Click **Start**, point to **All Programs**, point to **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
 2. At the command prompt type, the following command, and then press ENTER:
 
     ```console
@@ -224,7 +224,7 @@ To obtain the IPv6 configuration for a computer:
 
 ## Test IPv6 connectivity by using the PING command
 
-1. Click **Start**, point to **All Programs**, **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
 2. At the command prompt, type the following command, and then press ENTER:
 
     ```console
@@ -261,7 +261,7 @@ To obtain the IPv6 configuration for a computer:
 
 ## Trace a path by using the TRACERT command
 
-1. Click **Start**, point to **All Programs**, point to **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
 2. At the command prompt, type either of the following commands:
 
     - tracert -6  
@@ -282,7 +282,7 @@ To obtain the IPv6 configuration for a computer:
 
 ## View the interface configuration
 
-1. Click **Start**, point to **All Programs**, point to **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
 2. At the command prompt, type `netsh -c "interface ipv6"` , and then press ENTER.
 3. Type `show interface [interface=] string`, and then press ENTER.
 
@@ -295,7 +295,7 @@ To obtain the IPv6 configuration for a computer:
 
 ## View the neighbor cache
 
-1. Click **Start**, point to **All Programs**, point to **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
 2. At the command prompt, type `netsh`, and then press ENTER.
 3. Type `interface ipv6`, and then press ENTER.
 4. Type `show neighbors`, and then press ENTER.
@@ -305,7 +305,7 @@ To obtain the IPv6 configuration for a computer:
 
 ## View the destination cache
 
-1. Click **Start**, point to **All Programs**, point to **Accessories**, and then click **Command Prompt**.
+1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
 2. At the command prompt, type `netsh`, and then press ENTER.
 3. Type `interface ipv6`, and then press ENTER.
 4. Type `show destinationcache`, and then press ENTER.
