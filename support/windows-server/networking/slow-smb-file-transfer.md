@@ -156,4 +156,7 @@ You should verify that the Office and SMB binaries are up-to-date, and then test
 
 2. This works immediately on a new SMB client connection. There's no need to restart the SMB server or client machines. 
 
+This change should be  used  with caution.  Leasing  is a integral  part of the SMB protocol and is  generally  expected to be  available on a  SMB2/3 Server.
+multiple features depend on the availibility  of  Leasing - such as  read caching, write caching  and handle caching.
+while disabling leasing might make some slow performance  cases  disappear, it will negatively  impact other applications and usecases that rely  on the benefits  of  Leasing.
 To avoid this issue, you can also replicate the file to a local file server. For more information, see [saving Office documents to a network server is slow when using EFS](/office/troubleshoot/office/saving-file-to-network-server-slow).
