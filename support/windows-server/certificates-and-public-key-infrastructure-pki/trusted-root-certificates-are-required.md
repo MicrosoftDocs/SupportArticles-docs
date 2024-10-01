@@ -34,7 +34,7 @@ The following ROOT certificates are necessary and trusted in Windows 10 and newe
 |NO LIABILITY ACCEPTED, (c)97 VeriSign, Inc.|NO LIABILITY ACCEPTED, (c)97 VeriSign, Inc.|4a19d2388c82591ca55d735f155ddca3|1/7/2004|Time Stamping|VeriSign Time Stamping CA|
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|
 
-The following ROOT certificates were not included in Windows 8 / Windows Server 2012, but are included in Windows 10 and newer operating systems:
+The following trusted root certificates were not included in Windows 8 / Windows Server 2012, but are included in Windows 10 and newer operating systems:
 
 |Issued to|Issued by|Serial number|Expiration date|Intended purposes|Friendly name|
 |---|---|---|---|---|---|
