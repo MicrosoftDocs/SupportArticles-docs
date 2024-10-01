@@ -43,7 +43,7 @@ To fix the issue, follow these steps:
 
 Warning message:
 
-> MANAGER_HIERARCHY_UPDATE_WARNING: external user id \<x\> is mapped to manager reference \<y\> which is not on file or system. This will cause your manager's hierarchy to be incomplete and employee results don't roll into Manager Hierarchy views in reporting.
+> MANAGER_HIERARCHY_UPDATE_WARNING: external user id \<`x`\> is mapped to manager reference \<`y`\> which is not on file or system. This will cause your manager's hierarchy to be incomplete and employee results don't roll into Manager Hierarchy views in reporting.
 
 This issue occurs if the uploaded file contains employees who are shown to report to a manager whose Manager ID doesn't have a corresponding employee record.
 
