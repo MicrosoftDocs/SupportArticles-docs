@@ -29,8 +29,6 @@ The following certificates are necessary and trusted in Windows 10 and newer ope
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|R|
 |Microsoft Root Certificate Authority|Microsoft Root Certificate Authority|79ad16a14aa0a5ad4c7358f407132e65|5/9/2021|All|Microsoft Root Certificate Authority|
 |Microsoft Root Certificate Authority 2011|Microsoft Root Certificate Authority 2011|3f8bc8b5fc9fb29643b569d66c42e144|3/22/2036|All|Microsoft Root Certificate Authority 2011
-|Issued to|Issued by|Serial number|Expiration date|Intended purposes|Friendly name|
-|---|---|---|---|---|---|---|
 |Copyright (c) 1997 Microsoft Corp.|Copyright (c) 1997 Microsoft Corp.|01|12/30/1999|Time Stamping|Microsoft Timestamp Root|
 |Microsoft Authenticode(tm) Root Authority|Microsoft Authenticode(tm) Root Authority|01|12/31/1999|Secure E-mail, Code Signing|Microsoft Authenticode(tm) Root|
 |Microsoft Root Authority|Microsoft Root Authority|00c1008b3c3c8811d13ef663ecdf40|12/31/2020|All|Microsoft Root Authority|
@@ -38,9 +36,6 @@ The following certificates are necessary and trusted in Windows 10 and newer ope
 |VeriSign Commercial Software Publishers CA|VeriSign Commercial Software Publishers CA|03c78f37db9228df3cbb1aad82fa6710|1/7/2004|Secure E-mail, Code Signing|VeriSign Commercial Software Publishers CA|
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|
 |Microsoft Root Certificate Authority|Microsoft Root Certificate Authority|79ad16a14aa0a5ad4c7358f407132e65|5/9/2021|All|Microsoft Root Certificate Authority|
-
-|Issued to|Issued by|Serial number|Expiration date|Intended purposes|Friendly name|
-|---|---|---|---|---|---|---|
 |*Copyright (c) 1997 Microsoft Corp.*|*Copyright (c) 1997 Microsoft Corp.*|*01*|*12/30/1999*|*Time Stamping*|*Microsoft Timestamp Root*|
 |*Microsoft Authenticode(tm) Root Authority*|*Microsoft Authenticode(tm) Root Authority*|*01*|*12/31/1999*|*Secure E-mail, Code Signing*|*Microsoft Authenticode(tm) Root*||
 |*Microsoft Root Authority*|*Microsoft Root Authority*|*00c1008b3c3c8811d13ef663ecdf40*|*12/31/2020*|*All*|*Microsoft Root Authority*|
