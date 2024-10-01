@@ -8,15 +8,13 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc, dpracht, kellyv, stegag
 ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
-# NET: DNS: Forwarders and conditional forwarders resolution timeouts
+# Forwarders and conditional forwarders resolution timeouts
 
 This article describes the fallback and timeout behavior that exist when one or more DNS Servers IPs are configured as forwarders or conditional forwarders on a DNS server.
 
 _Original KB number:_ &nbsp; 2834250
 
 ## Summary
-
-Check [NET: DNS: DNS client resolution timeouts](https://support.microsoft.com/kb/2834226) for more information about DNS client resolution timeouts.
 
 Similarly to DNS clients, configuring DNS servers with more than one Forwarder or Conditional Forwarder adds additional fault tolerance to your DNS infrastructure. Adding multiple DNS Servers as Forwarders or Conditional Forwarders allows DNS names to continue to be resolved in the event of failures of the only configured Server, of the underlying network link or the supporting network infrastructure.
 
@@ -30,25 +28,23 @@ In order to understand how this works, the key variables are:
 
 - **RecursionTimeout** - how long the Domain Name System (DNS) waits for remote servers to respond to a recursive client query before terminating the search.
 
-    It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\**RecursionTimeout`, and configurable `via dnscmd /config /RecursionTimeout <value>`.
-
-    The default value is:  
-  - 15 seconds on Windows Server 2003  
-  - 8 seconds on Windows Server 2008, 2008 R2 and 2012
-
+  It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\**RecursionTimeout`, and configurable `via dnscmd /config /RecursionTimeout <value>. `and can be verified through power shell command **Get-DnsServerRecursion **
+  
+  The default value is:  
+  - 8 seconds on Windows Server 2012, 2012R2, 2016, 2019 and 2022
+  
     The **RecursionTimeout** is defined at DNS server level and is independent from the specific zone queried.
-
+    
 - **ForwardingTimeout** - how long the Domain Name System (DNS) waits for each server in the list in Forwarders to respond to a query.
 
-    It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\**ForwardingTimeout` and configurable via `dnscmd /config /ForwardingTimeout <value>`.
-
+  It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\**ForwardingTimeout` and configurable via `dnscmd /config /ForwardingTimeout <value> `This can also be verified through power shell command Get**-DnsServerForwarder** 
+  
     The default value is:
-
-  - 5 seconds on Windows Server 2003
-  - 3 seconds on Windows Server 2008, 2008R2 and 2012
-
+  
+  - 3 seconds on Windows Server 2012, 2012R2, 2016, 2019 and 2022
+  
     The **ForwardingTimeout** is defined at DNS server level and is independent from the specific zone queried.
-
+    
 When the DNS server receives a query for a record in a zone that it is not authoritative for, and needs to use forwarders, the default behavior is the following:
 
 | Time (seconds since start)| Action |
@@ -71,7 +67,7 @@ If the **RecursionTimeout** expires, the DNS server will reply back to the clien
 
 If the server manages to contact all forwarders before the RecursionTimeout expires without getting answers, it will try to use the root hints for the name resolution (default setting, unless recursion was disabled at the server level).
 
-This means that with default settings, a 2008R2 server will be able to query at most 3 forwarders. There will not be enough time to arrive to use the fourth forwarder. In fact, with default settings on 2008R2 the server will:
+This means that with default settings, a Windows DNS server will be able to query at most 3 forwarders. There will not be enough time to arrive to use the fourth forwarder. In fact, with default settings the Windows DNS server will:
 
 - Query the first forwarder after 0 seconds
 - Query the second forwarder after 3.5 seconds
@@ -103,24 +99,23 @@ Similar to forwarders, there are two key variables for Conditional Forwarders. W
 - **RecursionTimeout** - how long the Domain Name System (DNS) waits for remote servers to respond to a recursive client query before terminating the search.
 
     It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\RecursionTimeout`
-
+  
     It's configurable via `dnscmd /config /RecursionTimeout <value>`.
-
+  
     The default value is:
-  - 15 seconds on Windows Server 2003
-  - 8 seconds on Windows Server 2008 and 2008R2
-
+  - 8 seconds on Windows Server 2012, 2012R2, 2016, 2019 and 2022
+  
     The **RecursionTimeout** is defined at DNS server level and is independent from the specific zone queried  
-
+    
 - **ForwarderTimeout** - how long the Domain Name System (DNS) waits for each server in the list of Conditional Forwarders to respond to a query.
 
     Since Conditional Forwarders are configured for specific zones, the **ForwarderTimeout** is zone-dependent as well.
 
     It's saved in the registry under `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\DNS Server\Zones\ <zone_name>\ForwarderTimeout`.
 
-    The default value is 5 seconds on Windows Server 2003, 2008, 2008R2 and 2012.
-
-    This is also the setting you can see in the Conditional Forwarders GUI.
+    The default value is 5 seconds on Windows Server 2012, 2012R2, 2016, 2019 and 2022
+  
+      This is also the setting you can see in the Conditional Forwarders GUI.
 
 When the DNS server receives a query for a record in a zone that it is not authoritative for, and is configured to use Conditional Forwarders for it, the default behavior is the following:
 
@@ -142,7 +137,7 @@ If the **RecursionTimeout** expires, the DNS server will reply back to the clien
 > [!NOTE]
 > We don't send the Server Failure immediately after the **RecursionTimeout** expiration, but only when it is the time to try the next conditional forwarder.
 
-This means that with default settings, a 2008 R2 server will be able to query at most 2 conditional forwarders. There will not be enough time to arrive to use the third conditional forwarder. In fact, with default settings on 2008R2 the server will:
+This means that with default settings, a Windows DNS server will be able to query at most 2 conditional forwarders. There will not be enough time to arrive to use the third conditional forwarder. In fact, with default settings on the Windows DNS server will:
 
 - Query the first forwarder after 0 seconds
 - Query the second forwarder after 5.5 seconds
