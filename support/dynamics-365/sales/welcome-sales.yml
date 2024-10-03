@@ -62,6 +62,22 @@ landingContent:
             url: the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
 
  # Card
+  - title: LinkedIn Sales Navigator
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Error in enabling LinkedIn updates
+            url: lisn-error-enabling-linkedin-updates.md
+          - text: Unable to upgrade the LinkedInSalesNavigatorForUnifiedClient solution
+            url: lisn-unable-upgrade-lisn-solution.md
+          - text: LinkedIn Sales Navigator display widgets are not loading properly
+            url: lisn-display-widgets-not-loading-properly.md
+          - text: Unable to view photos on custom contact and lead forms in Unified Interface
+            url: lisn-unable-view-photos-custom-contact-lead-forms.md
+          - text: Solution for configuring LinkedIn Sales Navigator is not available in the organization
+            url: lisn-solution-not-available-configure-lisn.md    
+
+ # Card
   - title: Sales Hub
     linkLists:
       - linkListType: how-to-guide
