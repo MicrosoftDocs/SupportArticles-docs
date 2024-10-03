@@ -1,7 +1,7 @@
 ---
 title: Verify dataverse process RegisterFlowMachine 
 description: Instruction to verify that the process RegisterFlowMachine is activated.
-ms.custom: sap:Desktop flows\erify dataverse process RegisterFlowMachine 
+ms.custom: sap:Desktop flows\Verify dataverse process RegisterFlowMachine 
 ms.date: 10/03/2024
 ms.reviewer: alarnaud, johndund, guco
 ms.author: fredg
