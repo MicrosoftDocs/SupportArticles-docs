@@ -8,7 +8,7 @@ ms.author: fredg
 author: fredg
 ---
 
-# Verify dataverse process RegisterFlowMachine 
+# Verify dataverse process RegisterFlowMachine
 This article provides a resolution for an issue where you can't register your machine with Microsoft Power Automate for desktop.
 
 ## Symptoms
@@ -17,8 +17,8 @@ When you want to register your machine with Power Automate for desktop and it fa
 
 ## Cause
 
-This issue is caused by a specific process deactivated in Dataverse which is needed for machine registration.
-([see list of processes which needs to be activated for Power Automate for desktop]("#processes-which-should-be-activated-for-Power-Automate"))
+This issue is caused by **RegisterFlowMachine** process deactivated in Dataverse which is needed for machine registration.
+See [the list of processes](#processes-which-should-be-activated-for-power-automate) which needs to be activated for Power Automate for desktop.
 
 ## Resolution
 
