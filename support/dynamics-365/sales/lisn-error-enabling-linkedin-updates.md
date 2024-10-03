@@ -23,7 +23,7 @@ When enabling the data validation option (**Enable LinkedIn updates**) in the **
 
 :::image type="content" source="media/linkedin/lisn-update-error.png" alt-text="Screenshot of Error in enabling LinkedIn updates.":::
 
-For more information about the data validation capability of LinkedIn Sales Navigator, see [Data validation](dynamics365/sales/linkedin/data-validation).
+For more information about the data validation capability of LinkedIn Sales Navigator, see [Data validation](/dynamics365/sales/linkedin/data-validation).
 
 ## Resolution
 
