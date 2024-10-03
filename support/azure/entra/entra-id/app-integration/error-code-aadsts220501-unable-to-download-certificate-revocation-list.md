@@ -26,12 +26,15 @@ Certificate revocation list (CRL) either inaccessible or expired.
 
 ## Solution
 
-1) Check if the CRL file path is accessible at the client side. Exmple, access the CRL distribution point http://domain.com/CRL's/crlfinename.CRL (replace example path with your CRL URL). </br> Copy the complete CRL path in a web browser and try to access it.
+1) Check if the CRL file path is accessible at the client side. Example, access the CRL distribution point http://Contoso.com/CRL's/crlfinename.CRL (replace example path with your CRL URL). </br> Copy the complete CRL path in a web browser and try to access it.
+
+You can find the CRL configuration for the tenant using the steps from article https://learn.microsoft.com/entra/identity/authentication/how-to-certificate-based-authentication#configure-certification-authorities-using-the-microsoft-entra-admin-center 
+   
 2) If the CRL file  is accessible, open the CRL file -> go to General Tab -> Check the Date and time value for "Next Update".
 
    Next update: **The date and time that a Windows client considers as the expiration date of the CRL.  If this date and time passes to current date , Windows computers will invalidate certificates that are checked against this CRL.**
 
-   You need to renew the CRL manually  and replace with the expired  CRL.
+   You need to renew the CRL manually and replace the expired CRL.
 
 ## More Information
 
