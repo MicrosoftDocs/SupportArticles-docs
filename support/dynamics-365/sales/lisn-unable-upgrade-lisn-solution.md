@@ -22,6 +22,6 @@ You're unable to upgrade the **LinkedInSalesNavigatorForUnifiedClient** solution
 
 To resolve this issue, you must remove the existing dependencies for the **LinkedInSalesNavigatorForUnifiedClient** solution. Follow these steps:  
 
-1. For the current **LinkedInSalesNavigatorForUnifiedClient** solution, remove the dependencies and uninstall the solution. For more information, see step 4 in [Uninstall LinkedIn Sales Navigator](/dynamics365/sales/linkedin/uninstall-sales-navigator).  
+1. For the current **LinkedInSalesNavigatorForUnifiedClient** solution, remove the dependencies and uninstall the solution. For more information, see step 4 in [Uninstall LinkedIn Sales Navigator](dynamics365/sales/linkedin/uninstall-sales-navigator).  
 1. Uninstall the **msdyn_LinkedInSalesNavigatorAnchor** solution.  
-1. After the solutions are successfully deleted, install them again. More information: [Install and enable LinkedIn Sales Navigator](/dynamics365/sales/linkedin/install-sales-navigator).  
+1. After the solutions are successfully deleted, install them again. More information: [Install and enable LinkedIn Sales Navigator](dynamics365/sales/linkedin/install-sales-navigator).  

@@ -32,7 +32,7 @@ Follow these steps:
     1. Go to **Advanced settings** > **Customization** > **Solutions**.  
     1. Select the LinkedIn solution and then **Show Dependency**.  
 
-        :::image type="content" source="media/ts-solution-dependencies.png" alt-text="Screenshot of LinkedIn solution dependencies.":::
+        :::image type="content" source="media/linkedin/ts-solution-dependencies.png" alt-text="Screenshot of LinkedIn solution dependencies.":::
 
     1. Select **Required by** entity name and the dependent entity opens in a page.  
     1. Select **Form Properties** and under the **Events** tab go to the **Event Handlers** section.  
