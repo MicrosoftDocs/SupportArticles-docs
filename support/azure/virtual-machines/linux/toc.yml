@@ -272,12 +272,15 @@
     items:
     - name: Troubleshoot Azure fence agent startup issues
       href: troubleshoot-azure-fence-agent-rhel.md
+    - name: Troubleshoot SBD issues in RHEL
+      href: troubleshoot-sbd-issues-rhel.md
   - name: SLES
     items:
     - name: Troubleshoot Azure fence agent startup issues in SUSE
       href: troubleshoot-azure-fence-agent-startup-suse.md
     - name: Troubleshoot Pacemaker Services startup issues in SUSE
       href: troubleshoot-pacemaker-services-suse.md
+      
       
 - name: Linux repositories
   items:
