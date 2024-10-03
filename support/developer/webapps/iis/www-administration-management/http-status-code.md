@@ -27,7 +27,7 @@ The first digit of the status code defines the class of response. The last two d
 
 ## Log file locations
 
-The HTTP status code is recorded in the IIS log. IIS 7.0 and later versions put log files in the following folder by default:  
+The HTTP status code is recorded in the IIS log. Internet Information Services (IIS) puts log files in the following folder by default:  
 `inetpub\logs\Logfiles`
 
 This folder contains separate directories for each website. The log files are created in the directories daily and are named by using the date by default. For example, a log file may be named as _exYYMMDD.log_.
@@ -43,7 +43,7 @@ This section describes some of the common HTTP status codes.
 
 These HTTP status codes indicate an interim response for communicating request progress or status before sending a final response to the client computer.
 
-IIS 7.0 and later versions use the following informational HTTP status codes:
+IIS on Windows 2016 and later versions use the following informational HTTP status codes:
 
 | Code | Description | Notes |
 |--|--|--|
@@ -54,7 +54,7 @@ IIS 7.0 and later versions use the following informational HTTP status codes:
 
 These HTTP status codes indicate that the server successfully received and accepted the client's request.
 
-IIS 7.0 and later versions use the following success HTTP status codes:
+IIS on Windows 2016 and later versions use the following success HTTP status codes:
 
 | Code | Description | Notes |
 |--|--|--|
@@ -83,7 +83,7 @@ IIS 7.0 and later versions use the following redirection HTTP status codes:
 
 These HTTP status codes indicate that an error has occurred and the client browser appears to be at fault. For example, the client browser may have requested a page that doesn't exist. Or, the client browser may not have provided valid authentication information.
 
-IIS 7.0 and later versions use the following client error HTTP status codes:
+IIS on Windows 2016 and later versions use the following client error HTTP status codes:
 
 | Code | Description | Notes |
 |---|---|---|
@@ -99,9 +99,9 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
 
 #### 400 - Bad request
 
-The Hypertext Transfer Protocol Stack (_Http.sys_) file blocks IIS 7.0 and later versions from processing the request because of a problem in the request. Typically, this HTTP status code means that the request contains invalid characters or sequences, or that the request goes against the security settings in the _Http.sys_ file.
+The Hypertext Transfer Protocol Stack (_Http.sys_) file blocks IIS on Windows 2016 and later versions from processing the request because of a problem in the request. Typically, this HTTP status code means that the request contains invalid characters or sequences, or that the request goes against the security settings in the _Http.sys_ file.
 
-IIS 7.0 and later versions define the following HTTP status codes that indicate a more specific cause of an error 400:
+IIS on Windows 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 400:
 
 | Code | Description |
 |---|---|
@@ -115,14 +115,14 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 400.8 | Invalid Timeout |
 | 400.9 | Invalid Lock Token |
 
-The following HTTP sub-status codes are introduced in IIS 8.0:
+The following HTTP sub-status codes were introduced as of IIS 8.0 that was included in Windows Server 2012 (operating system that is now out of support):
 
 | Code | Description |
 |---|---|
 | 400.10 | Invalid X-Forwarded-For (XFF) header |
 | 400.11 | Invalid WebSocket request |
 
-The following HTTP sub-status codes are introduced in ARR 3.0.1916:
+The following HTTP sub-status codes are introduced in Application Request Routing (ARR) version 3.0.1916:
 
 | Code | Description |
 |---|---|
@@ -135,7 +135,7 @@ The following HTTP sub-status codes are introduced in ARR 3.0.1916:
 
 #### 401 - Access denied
 
-IIS 7.0 and later versions define several HTTP status codes that indicate a more specific cause of an error 401. The following specific HTTP status codes are displayed in the client browser but aren't displayed in the IIS log:
+IIS on Windows Server 2016 and later versions define several HTTP status codes that indicate a more specific cause of an error 401. The following specific HTTP status codes are displayed in the client browser but aren't displayed in the IIS log:
 
 | Code | Description | Notes |
 |---|---|---|
@@ -151,13 +151,13 @@ IIS 7.0 and later versions define several HTTP status codes that indicate a more
 
 #### 403 - Forbidden
 
-IIS 7.0 and later versions define the following HTTP status codes that indicate a more specific cause of an error 403:
+IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 403:
 
 | Code | Description | Notes |
 |---|---|---|
 | 403.1 | Execute access forbidden | The appropriate level of the Execute permission isn't granted. |
-| 403.2 | Read access forbidden | The appropriate level of the Read permission isn't granted. Verify that you have set up IIS 7.0 and later versions to grant the Read permission to the directory. Additionally, if you use a default document, verify that the default document exists. |
-| 403.3 | Write access forbidden | The appropriate level of the Write permission isn't granted. Check the IIS 7.0 and later versions permissions and the NTFS file system permissions. Make sure that they're set up to grant the "Write" permission to the directory. |
+| 403.2 | Read access forbidden | The appropriate level of the Read permission isn't granted. Verify that you have set up IIS to grant the Read permission to the directory. Additionally, if you use a default document, verify that the default document exists. |
+| 403.3 | Write access forbidden | The appropriate level of the Write permission isn't granted. Check the IIS permissions and the NTFS file system permissions. Make sure that they're set up to grant the "Write" permission to the directory. |
 | 403.4 | SSL required | The request is made over a non-secure channel. But the web application requires a Secure Sockets Layer (SSL) connection. |
 | 403.5 | SSL 128 required | The server is configured to require a 128-bit SSL connection. But, the request isn't sent by using 128-bit encryption. |
 | 403.6 | IP address rejected | The server is configured to deny access to the current IP address. |
@@ -184,7 +184,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 
 #### 404 - Not found
 
-IIS 7.0 and later versions define the following HTTP status codes that indicate a more specific cause of an error 404:
+IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 404:
 
 | Code | Description | Notes |
 |---|---|---|
@@ -228,7 +228,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 
 The 5xx HTTP status codes indicate that the server can't complete the request because the server encounters an error.
 
-IIS and later versions use the following server error HTTP status codes:
+IIS on Windows Server 2016 and later versions use the following server error HTTP status codes:
 
 | Code | Description | Notes |
 |---|---|---|
@@ -239,14 +239,14 @@ IIS and later versions use the following server error HTTP status codes:
 
 #### 500 - Internal server error
 
-IIS 7.0 and later versions define the following HTTP status codes that indicate a more specific cause of an error 500:
+IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 500:
 
 | Code | Description | Notes |
 |---|---|---|
 | 500.0 | Module or ISAPI error occurred. | This HTTP status code may occur for many server-side reasons. For more information, see [HTTP Error 500.0 - Internal Server Error](./http-error-500-when-you-visit-web-site.md). |
 | 500.11 | Application is shutting down on the web server. | The request isn't processed because the destination application pool is shutting down. Wait for the worker process to finish shutting down, and then try the request again. If this problem persists, the web application may be experiencing problems that prevent the web application from shutting down correctly. |
 | 500.12 | Application is busy restarting on the web server. | The request isn't processed because the destination application pool is restarting. This HTTP status code should disappear when you refresh the page. If this HTTP status code appears again after you refresh the page, the problem may be caused by antivirus software that is scanning the Global.asa file. If this problem persists, the web application may be experiencing problems that prevent the web application from restarting correctly. |
-| 500.13 | Web server is too busy. | The request isn't processed because the server is too busy to accept any new incoming requests. Typically, this HTTP status code means that the number of incoming concurrent requests exceeds the number that the IIS 7.0 and later versions web application can process. This problem may occur when the performance configuration settings are set too low, the hardware is insufficient, or a bottleneck occurs in the IIS 7.0 and later versions web application. A common troubleshooting method is to generate a memory dump file of the IIS 7.0 and later versions processes when the error is occurring and then to debug the memory dump file. |
+| 500.13 | Web server is too busy. | The request isn't processed because the server is too busy to accept any new incoming requests. Typically, this HTTP status code means that the number of incoming concurrent requests exceeds the number that the IIS web application can process. This problem may occur when the performance configuration settings are set too low, the hardware is insufficient, or a bottleneck occurs in the IIS web application. A common troubleshooting method is to generate a memory dump file of the IIS processes when the error is occurring and then to debug the memory dump file. |
 | 500.15 | Direct requests for Global.asax aren't allowed. | A direct request for the _Global.asa_ file or for the _Global.asax_ file is made. |
 | 500.19 | Configuration data is invalid. | This HTTP status code occurs because of a problem in the associated _applicationhost.config_ file or in the associated _Web.config_ file. For more information, see [HTTP Error 500.19](../health-diagnostic-performance/http-error-500-19-webpage.md). |
 | 500.21 | Module not recognized. |
@@ -261,7 +261,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 
 #### 502 - Bad gateway
 
-IIS 7.0 and later versions define the following HTTP status codes that indicate a more specific cause of an error 502:
+IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 502:
 
 | Code | Description |
 |---|---|
@@ -270,7 +270,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 502.3 | Bad Gateway: Forwarder Connection Error (ARR). |
 | 502.4 | Bad Gateway: No Server (ARR). |
 
-The following HTTP status codes are added in ARR 3.0.1916:
+The following HTTP status codes are added in Application Request Routing (ARR) version 3.0.1916:
 
 | Code | Description |
 |---|---|
@@ -283,12 +283,12 @@ The following HTTP status codes are added in ARR 3.0.1916:
 
 #### 503 - Service unavailable
 
-IIS 7.0 and later versions define the following HTTP status codes that indicate a more specific cause of an error 503:
+IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 503:
 
 | Code | Description | Notes |
 |---|---|---|
 | 503.0 | Application pool unavailable. | The request is sent to an application pool that is currently stopped or disabled. To resolve this issue, make sure that the destination application pool is started. The event log may give information about why the application pool is stopped or disabled. |
-| 503.2 | Concurrent request limit exceeded. | The `appConcurrentRequestLimit` property is set to a value that is lower than the current number of concurrent requests. IIS 7.0 and later versions don't allow more concurrent requests than the value of the `appConcurrentRequestLimit` property. |
+| 503.2 | Concurrent request limit exceeded. | The `appConcurrentRequestLimit` property is set to a value that is lower than the current number of concurrent requests. IIS on Windows Server 2016 and above does not allow more concurrent requests than the value of the `appConcurrentRequestLimit` property. |
 | 503.3 | ASP.NET queue full |
 | 503.4 | FastCGI queue full |
 
