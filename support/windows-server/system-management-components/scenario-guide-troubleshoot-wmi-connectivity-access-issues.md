@@ -406,22 +406,3 @@ This can help determine if the issue is a network connectivity issue.
 ## Data collection
 
 Before opening a support case to further investigate the issue, you can collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-tss/gather-information-using-tss-user-experience.md#wmi).
-You can also gather information by using the WMI-Collect tool on the machine that has recently experienced the issue. Here are the steps:
-
-> [!NOTE]
-> The following steps can be performed on the source and the target machines while reproducing the issue.
-
-1. Download [WMI-Collect.zip](https://aka.ms/WMI-Collect) and extract it to a folder, such as *C:\\temp*.
-2. From an elevated PowerShell command prompt, run the *WMI-Collect.ps1* script from the folder where the script is saved. For example:
-
-    ```powershell
-        C:\temp\WMI-Collect.ps1 -Logs -Trace -Network
-    ```
-
-3. Keep the PowerShell command prompt open with the "Press ENTER to stop the capture:" message.
-
-    > [!NOTE]
-    > Don't keep the tracing enabled for more than one minute.
-
-4. Stop the tracing by pressing <kbd>Enter</kbd>.
-5. The script creates a subfolder containing the results of all traces and diagnostic information. Compress the folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
