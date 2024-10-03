@@ -1,14 +1,14 @@
 ---
-title: Power Automate verify dataverse process RegisterFlowMachine 
+title: Verify dataverse process RegisterFlowMachine 
 description: Instruction to verify that the process RegisterFlowMachine is activated.
-ms.custom: sap:Desktop flows\Power Automate for desktop machine registration
+ms.custom: sap:Desktop flows\erify dataverse process RegisterFlowMachine 
 ms.date: 10/03/2024
 ms.reviewer: alarnaud, johndund, guco
 ms.author: fredg
 author: fredg
 ---
 
-# Machine registration failure in Power Automate
+# Verify dataverse process RegisterFlowMachine 
 This article provides a resolution for an issue where you can't register your machine with Microsoft Power Automate for desktop.
 
 ## Symptoms
