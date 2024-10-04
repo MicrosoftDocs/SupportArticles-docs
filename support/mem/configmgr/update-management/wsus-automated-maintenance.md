@@ -20,7 +20,7 @@ Routine maintenance of the database for Windows Server Update Services (WSUS) is
 
 ### How long do the steps take?
 
-Your mileage varies depending on the machine resources such as CPU, Memory, Disk. How long has it been since maintenance was last done, how many Products and Classifications have been selected and how many updates need to be cleaned up are a few of the variables. In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, this most likely takes under a minute to run automated with the [RA] option in the automated script. On the other hand, I've seen it take 10+ days to run all the steps. If the steps run for over 10 days or you can't complete the maintenance successfully, they most likely won't succeed, and a new SUSDB needs to be created
+Your mileage varies depending on the machine resources such as CPU, Memory, Disk. Some of the variables include the time since the last maintenance, the number of Products and Classifications selected, and the number of updates that need to be cleaned up. In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, these steps most likely takes under a minute to run automated with the [RA] option in the automated script. On the other hand, I observed it taking over 10 days to run all the steps. If the steps run for over 10 days, they most likely will fail. If you can’t complete the maintenance successfully, you need to create a new SUSDB.
 
 ## Manual SUSDB-Maintenance
 
