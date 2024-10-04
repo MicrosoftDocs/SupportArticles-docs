@@ -1,7 +1,7 @@
 ---
 title: Incoming emails are unexpectedly synchronized or contain unexpected or missing data
 description: Provides troubleshooting information for the incoming emails are unexpectedly synchronized or contain unexpected or missing data issue in Microsoft Dataverse.
-ms.date: 09/26/2024
+ms.date: 10/04/2024
 ms.custom: sap:E-mail and Microsoft 365 Integration\Set up and configuration of server-side synchronization
 author: rahulmital
 ms.author: rahulmital
@@ -36,7 +36,7 @@ You can examine the **To**, **Cc**, and **Bcc** fields on the email in Dataverse
 
 ### Resolution
 
-If an email is unexpectedly synchronized into the system, you can identify the Dataverse mailbox that automatically accepted the email by examining the following properties of the synchronized email in Dataverse.
+If an email is unexpectedly synchronized into the system, first identify the Dataverse mailbox that automatically accepted the email by examining the following properties of the synchronized email in Dataverse.
 
 - **Accepting Entity**: The user or queue that receives the email and is configured to automatically track it. For example, if a queue named "Customer Service" that is configured to track all emails receives an email, the "Customer Service" queue is considered the Accepting Entity.
   > [!NOTE]
@@ -47,20 +47,20 @@ If an email is unexpectedly synchronized into the system, you can identify the D
 
 > [!NOTE]
 > These fields don't appear on the Email form by default. You can add them to the form or to an **Advanced Find** view to see their values.
-> 
+>
 > :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/accepting-entity-receiving-mailbox.png" alt-text="Screenshot that shows the Accepting Entity and Receiving Mailbox properties.":::
 
 Once the **Accepting Entity** is identified, you can change the incoming email filtering method of the user or queue to prevent future occurrences. To do so, see [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
 
-## Duplicate emails are tracked or synchronized in Dataverse
+## Duplicate emails are tracked or synchronized
 
-Server-side synchronization can be configured to allow users to automatically create sent and received copies of the same email if the email meets the user's [incoming email filtering method](/power-platform/admin/email-message-filtering-correlation). 
+Server-side synchronization can be configured to allow users to automatically create sent and received copies of the same email if the email meets the user's [incoming email filtering method](/power-platform/admin/email-message-filtering-correlation).
 
 To avoid duplicate emails to be tracked or synchronized:
 
 1. In Dataverse, select the gear icon > **Advanced Settings**.
 2. Navigate to **Settings** > **Email Configuration** > **Email Configuration Settings**.
-3. Under the **Set tracking options for emails between Microsoft Dynamics 365 users** setting, clear the **Track emails sent between Dyanmics 365 users as two activities** option.
+3. Under the **Set tracking options for emails between Microsoft Dynamics 365 users** setting, clear the **Track emails sent between Dynamics 365 users as two activities** option.
 
    :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/track-emails-sent-between-dynamics-365-as-two-activities.png" alt-text="Screenshot that shows the Set tracking options for emails between Microsoft Dynamics 365 users setting.":::
 
@@ -68,7 +68,7 @@ For more information about how the system detects if an email should be automati
 
 ### More scenarios
 
-The previous system setting is intended to apply to email messages sent between users. However, even if the **Track emails sent between Dynamics 365 users as two activities** setting is disabled, duplicate emails can still be created based on a recipient's incoming email filtering method if a queue is a sender or recipient of an email.
+The **Track emails sent between Dynamics 365 users as two activities** setting is intended to apply to email messages sent between users. However, even if the setting is disabled, duplicate emails can still be created based on a recipient's incoming email filtering method if a queue is a sender or recipient of an email.
 
 These scenarios are:
 
@@ -84,7 +84,7 @@ For more information about how to set database settings, see [How to change defa
 
 For more information about different database settings that affect server-side synchronization, see [default OrgDBOrgSettings for server-side synchronization](/power-platform/admin/orgdborgsettings).
 
-## Old, past, or historic emails are unexpectedly tracked or synchronized to Dataverse
+## Old, past, or historic emails are unexpectedly tracked or synchronized
 
 Server-side synchronization uses the [Process Email From](/power-platform/admin/best-practices-server-side-synchronization#configure-server-side-synchronization-for-customer-engagement-apps-and-exchange-online) ([ProcessEmailsReceivedAfter](/power-apps/developer/data-platform/reference/entities/emailserverprofile#BKMK_ProcessEmailsReceivedAfter)) date on each mailbox record to determine how far back the system should go to process emails. This value is maintained and updated by the system when new emails are processed in subsequent synchronization cycles after initial onboarding.
 
@@ -99,13 +99,13 @@ Server-side synchronization uses the [Process Email From](/power-platform/admin/
 
 For more information about how the **Process Email From** date influences synchronization, see [Best practices for server-side synchronization](/power-platform/admin/best-practices-server-side-synchronization#considerations).
 
-## Synchronized emails contain unexpected sender or recipient parties in Dataverse
+## Synchronized emails contain unexpected sender or recipient parties
 
 Server-side synchronization performs email address resolution on all sender and recipient email addresses when synchronizing incoming emails into the system. This is done by retrieving all records in Dataverse which are associated with a given email address. When a match is found, the system associates one or more located records as an [activity party](/power-apps/developer/data-platform/activityparty-entity) on the email.
 
 > [!NOTE]
 > A column in Dataverse that has a format type of "[Email](/power-apps/developer/data-platform/data-type-format-conversions)" is involved in email address resolution.
-> 
+>
 > :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/format-type-is-email.png" alt-text="Screenshot that shows the Email format type of a column.":::
 
 As a result, if an email address is associated with more than one Dataverse record (such as an email address shared between a user and queue), all resolved recipients appear in their respective recipient fields.
@@ -125,6 +125,6 @@ Likewise, if an email address isn't associated with a known Dataverse record, th
 
 Because an email can only have a single sender, when the sender's email address is associated with multiple Dataverse records, the system utilizes a priority order to determine the sender activity party. For more information, see [Associate an email address with a row](/power-platform/admin/associate-email-address).
 
-## Synchronized emails have unexpected owners in Dataverse
+## Synchronized emails have unexpected owners
 
-When server-side synchronization synchronizes an email message to Dynamics 365, the system determines the email owner based on some factors. For more information, see [How is an email record owner determined](/power-platform/admin/email-record-owner).
+When server-side synchronization synchronizes an email message to Dynamics 365, the system determines the email owner based on some factors. To understand why an email has an unexpected owner, see [How is an email record owner determined](/power-platform/admin/email-record-owner).
