@@ -445,6 +445,9 @@ items:
           href: update-management/wsus-console-crashes.md
         - name: WSUS maintenance guide
           href: update-management/wsus-maintenance-guide.md
+        - name: WSUS SUSDB Automated Maintenance
+          href: ./update-management/wsus-automated-maintenance.md
+          displayName: wsus, susdb, script, maintenance
         - name: WSUS sync fails in Windows Server 2008 R2
           href: update-management/wsus-not-sync-with-certificate-error-800B0109.md
         - name: WSUS synchronization fails with SoapException
