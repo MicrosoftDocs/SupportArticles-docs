@@ -28,7 +28,7 @@ Certificate revocation list (CRL) either inaccessible or expired.
 
 1) Check if the CRL file path is accessible at the client side. Example, access the CRL distribution point http://Contoso.com/CRL's/crlfinename.CRL (replace example path with your CRL URL). </br> Copy the complete CRL path in a web browser and try to access it.
 
-You can find the CRL configuration for the tenant using the steps from article https://learn.microsoft.com/entra/identity/authentication/how-to-certificate-based-authentication#configure-certification-authorities-using-the-microsoft-entra-admin-center 
+You can find the CRL configuration for the tenant using the steps from article [Quickstart: How to certificate based authentication configure certification authorities using the microsoft entra admin center ](/entra/identity/authentication/how-to-certificate-based-authentication#configure-certification-authorities-using-the-microsoft-entra-admin-center )
    
 2) If the CRL file  is accessible, open the CRL file -> go to General Tab -> Check the Date and time value for "Next Update".
 
