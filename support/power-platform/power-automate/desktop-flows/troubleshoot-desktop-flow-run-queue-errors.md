@@ -5,7 +5,7 @@ author: rpapostolis # GitHub alias
 ms.author: appapaio # Microsoft alias
 ms.reviewer: befrey, lulubran, johndund, guco, fredg
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
-ms.date: 09/27/2024
+ms.date: 10/04/2024
 ---
 # Troubleshoot desktop flow run queue errors
 
@@ -73,7 +73,7 @@ To resolve the issue,
 
 ## AttendedUserNotLoggedIn
 
-This error occurs when you try to run an attended desktop flow on a target machine where the user isn't signed in to the machine.
+This error occurs when the user specified in the connection isn't signed in to the target machine.
 
 #### Resolution
 
