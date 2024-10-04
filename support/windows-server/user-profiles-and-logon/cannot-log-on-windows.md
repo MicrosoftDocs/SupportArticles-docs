@@ -10,14 +10,14 @@ ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logo
 ---
 # Windows logs on and logs off immediately
 
-This article describes an issue where you can't sign in to the system and you're prompted for user name and password repeatedly.
+This article describes an issue where you can't sign in to the system and you're prompted for username and password repeatedly.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2012 and newer  
 _Original KB number:_ &nbsp; 555648
 
 ## Symptoms
 
-Windows logs on and logs off immediately when you try logging on to Windows. When you type the user name and password, you're again presented with User name and Password dialogue box. You try hard to get in but to no avail.
+Windows logs on and logs off immediately when you try logging on to Windows. When you type the username and password, you're again presented with Username and Password dialogue box. You try hard to get in but to no avail.
 
 ## Cause
 
@@ -30,7 +30,7 @@ You can't log on to system using either Normal Mode or Safe Mode. This occurs on
 Edit these values and type the correct path of shell:
 
 Shell = explorer.exe  
-Userinit=X:\windows\system32\userinit.exe
+Userinit=C:\windows\system32\userinit.exe
 
 > [!NOTE]
 > These files may also be deleted by spywares. You may need to extract them using Windows CD.
@@ -53,7 +53,8 @@ Userinit=X:\windows\system32\userinit.exe
 - Change these two values to
 
     Shell=explorer.exe  
-    Userinit = x:\windows\system32\userinit.exe
+  Userinit = C:\windows\system32\userinit.exe
+  
 - Exit from Registry.
 - Restart the infected computer.
 - You should be able to log on to the computer.
