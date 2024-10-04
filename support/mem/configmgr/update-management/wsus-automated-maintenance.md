@@ -16,15 +16,15 @@ ms.subservice: software-updates
 
 ## Introduction
 
-The following steps are a more concise process very similar to [The complete guide to WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide).  We will cover how to perform the 12 steps manually first then the automated script which mirrors the manual steps.
+The following steps are a more concise process very similar to [The complete guide to WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide). We'll cover how to perform the 12 steps manually first then the automated script which mirrors the manual steps.
 
-### How long will the steps take?
+### How long do the steps take?
 
-Your mileage will vary depending on the machine resources (CPU, Memory, Disk, etc), how long it's been since maintenance was last done, how many Products and Classifications are selected and how many updates need to be cleaned up are a few of the variables.  In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, this most likely will take under a minute to run automated with the [RA] option in the automated script.  On the other hand, I've seen it take 10+ days to run all the steps.  If the steps have been running 10+ days or you are not able to complete the maintenance successfully they most likely will not succeed and a new SUSDB will need to be created.
+Your mileage varies depending on the machine resources such as CPU, Memory, Disk. How long has it been since maintenance was last done, how many Products and Classifications have been selected and how many updates need cleaning up are a few of the variables. In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, this most likely takes under a minute to run automated with the [RA] option in the automated script. On the other hand, I've seen it take 10+ days to run all the steps. If the steps run for over 10 days or you cannot complete the maintenance successfully, they most likely will not succeed, and a new SUSDB needs to be created
 
 ## Manual SUSDB-Maintenance
 
-The poor health of the SUSDB can often be attributed to having too many superseded, declined and obsolete updates.  Anything more than a few hundred of any of these and maintenance should be performed.  To get a count of updates, run this SQL query.
+The poor health of the SUSDB can often be attributed to having too many superseded, declined, and obsolete updates. Anything more than a few hundred in the last three columns of this query and maintenance should be performed. To get a count of updates, run this SQL query.
 
 ```sql
 use SUSDB;
@@ -47,21 +47,19 @@ select
 
 ```
 
-## Maintenance
-
-Run the steps below on each WSUS in the hierarchy.  When performing a cleanup and removing items from WSUS servers, you should start at the **bottom** of the hierarchy.
+Run the steps on each WSUS in the hierarchy. When performing a cleanup and removing items from WSUS servers, you should start at the **bottom** of the hierarchy.
 
 > [!IMPORTANT]
 > Make sure you've turned off any scheduled synchronizations, either in Configuration Manager if using that or in the WSUS console if standalone WSUS.
-Steps 9-12 you may need to run multiple times due to the large number of declined updates.  After each run, execute the Count of Declined Updates query to verify the number is going down and to monitor progress.  Step 8 may end in error each time you run it, hence the reason for steps 9-12 and running it again.  This is normal and to be expected.  Some of these steps, especially #9 could take several hours to run.
+Steps 9-12 you may need to run multiple times due to the large number of declined updates. After each run, execute the Count of Declined Updates query to verify the number is going down and to monitor progress. Step 8 may end in error each time you run it, hence the reason for steps 9-12 and running it again. This is normal and to be expected.  Some of these steps, especially #9 could take several hours to run.
 
 This is a long and repetitive, but I have seen it resolve many issues with scanning and syncing.  
 
 1. Run this SQL first.  [Slow performance of the spDeleteUpdate procedure - Configuration Manager | Microsoft Docs](/troubleshoot/mem/configmgr/spdeleteupdate-slow-performance)
 
-1. Shrink Files
-1. Shrink Database
-1. Reindex and update stats on the SUSDB.
+2. Shrink Files
+3. Shrink Database
+4. Reindex and update stats on the SUSDB.
 
 Run to **reindex** first
 
@@ -75,7 +73,7 @@ Run **update statistics** second
 Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS" 
 ```
 
-1. Cleanup of sync history. If there is a large number of syncs, it can crash the WSUS console.
+5. Cleanup of sync history. If there's a large number of syncs, it can crash the WSUS console.
 
 ```sql
 USE SUSDB 
@@ -83,11 +81,11 @@ GO
 DELETE FROM tbEventInstance WHERE EventNamespaceID = '2' AND EVENTID IN ('381', '382', '384', '386', '387', '389')
 ```
 
-1. Cleanup of all superseded updates older than 30 days OR based on what you set it to cleanup.
+1. Cleanup of all superseded updates older than 30 days OR based on what you set it to clean up.
 
 > [!NOTE]
-> This is the only step that you may need to modify.  On the first line, the value **30** represents the number of days between today and the release date for which the superseded updates must not be declined. This should match the configuration of supersedence rules in SUP component properties, if ConfigMgr is being used.
-> If standalone WSUS, specify how many days you require to keep superseded updates. i.e. Put 60 here instead of 30 to keep two months of superseded updates.  Anything older than this will be declined and cleaned up.
+> This is the only step that you may need to modify. On the first line, the value **30** represents the number of days between today and the release date for which the superseded updates must not be declined. This should match the configuration of supersedence rules in SUP component properties, if ConfigMgr is being used.
+> If standalone WSUS, specify how many days you require to keep superseded updates. i.e. Put 60 here instead of 30 to keep two months of superseded updates. Anything older than this will be declined and cleaned up.
 > ```
 > DECLARE @thresholdDays INT = 30
 > ```
@@ -145,9 +143,7 @@ CLOSE WC
         DROP TABLE #results
 ```
 
-1. Run PowerShell ISE s Admin - WSUS Cleanup Wizard via PowerShell  
-
-Save the below as a Cleanup.PS1 then you can later setup to run on a regular basis via a Scheduled Task
+1. Run PowerShell ISE as Admin - WSUS Cleanup Wizard via PowerShell  
 
 ```powershell
 [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | out-null
@@ -165,8 +161,6 @@ $cleanupManager.PerformCleanup($cleanupScope);
 
 1. Run PowerShell ISE as Admin - Cleanup Declined  
 
-Save the below as a Cleanup_Declined.PS1 then you can later setup to run on a regular basis via a Scheduled Task
-
 ```powershell
 [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")
 $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
@@ -175,7 +169,7 @@ $wsus.GetUpdates() | Where {$_.IsDeclined -eq $true} | ForEach-Object {$wsus.Del
 
 10. Shrink Files
 11. Shrink Database
-1. Reindex and update stats on the SUSDB.
+12. Reindex and update stats on the SUSDB.
 
 Run to **reindex** first
 
@@ -191,7 +185,7 @@ Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS"
 
 ## Automated Maintenance
 
-This PowerShell script mirrors the manual steps above.
+This PowerShell script mirrors the manual steps.
 
 > [!NOTE]
 > **Requirements**
@@ -208,7 +202,7 @@ This PowerShell script mirrors the manual steps above.
 > 
 > 
 > - Must be using v22 or higher of SQL Server PowerShell Module.
-This script will present the following menu options for performing SUSDB Maintenance.  SUSDB-Maintenance.log will be created and opened when the script is run.
+This script will present the following menu options for performing SUSDB Maintenance. SUSDB-Maintenance.log will be created and opened when the script is run.
 
 [S] Change SQL Server, currently set to 
 
@@ -241,6 +235,8 @@ This script will present the following menu options for performing SUSDB Mainten
 [RA] Run all above steps sequentially
 
 
+> [!IMPORTANT]
+> Make sure you've turned off any scheduled synchronizations, either in Configuration Manager if using that or in the WSUS console if standalone WSUS.
 ```powershell 
 <# SUSDB-Maintenance
 
