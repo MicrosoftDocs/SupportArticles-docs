@@ -18,7 +18,7 @@ ms.subservice: software-updates
 
 The following steps are a more concise process very similar to [The complete guide to WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide).  We will cover how to perform the 12 steps manually first then the automated script which mirrors the manual steps.
 
-## How long will the steps take?
+### How long will the steps take?
 
 Your mileage will vary depending on the machine resources (CPU, Memory, Disk, etc), how long it's been since maintenance was last done, how many Products and Classifications are selected and how many updates need to be cleaned up are a few of the variables.  In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, this most likely will take under a minute to run automated with the [RA] option in the automated script.  On the other hand, I've seen it take 10+ days to run all the steps.  If the steps have been running 10+ days or you are not able to complete the maintenance successfully they most likely will not succeed and a new SUSDB will need to be created.
 
@@ -189,7 +189,7 @@ Run **update statistics** second
 Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS" 
 ```
 
-# Automated Maintenance
+## Automated Maintenance
 
 This PowerShell script mirrors the manual steps above.
 
