@@ -100,7 +100,7 @@ When server-side synchronization processes an email but can't create an email ac
 
 To solve this issue, review the [the required privileges for email synchronization](/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync#more-information) and ensure the required privileges are set up.
 
-You can review information about failed emails by inspecting the [Server-Side Synchronization Item Level Monitoring dashboard](#troubleshooting-with-the-server-side-synchronization-item-level-monitoring-dashboard).
+You can review information about failed emails by inspecting the [Server-Side Synchronization Item Level Monitoring dashboard](#troubleshoot-using-the-server-side-synchronization-item-level-monitoring-dashboard).
 
 ## Outlook replies aren't automatically synchronized
 
