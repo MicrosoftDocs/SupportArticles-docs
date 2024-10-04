@@ -16,11 +16,11 @@ ms.subservice: software-updates
 
 ## Introduction
 
-The following steps are a more concise process very similar to [The complete guide to WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide). We'll cover how to perform the 12 steps manually first then the automated script which mirrors the manual steps.
+Routine maintenance of the database for Windows Server Update Services (WSUS) is important for the health and proper function of the application. The following 12 steps are a more concise process very similar to [The complete guide to WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide).
 
 ### How long do the steps take?
 
-Your mileage varies depending on the machine resources such as CPU, Memory, Disk. How long has it been since maintenance was last done, how many Products and Classifications have been selected and how many updates need cleaning up are a few of the variables. In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, this most likely takes under a minute to run automated with the [RA] option in the automated script. On the other hand, I've seen it take 10+ days to run all the steps. If the steps run for over 10 days or you cannot complete the maintenance successfully, they most likely will not succeed, and a new SUSDB needs to be created
+Your mileage varies depending on the machine resources such as CPU, Memory, Disk. How long has it been since maintenance was last done, how many Products and Classifications have been selected and how many updates need to be cleaned up are a few of the variables. In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, this most likely takes under a minute to run automated with the [RA] option in the automated script. On the other hand, I've seen it take 10+ days to run all the steps. If the steps run for over 10 days or you can't complete the maintenance successfully, they most likely won't succeed, and a new SUSDB needs to be created
 
 ## Manual SUSDB-Maintenance
 
@@ -61,7 +61,7 @@ This is a long and repetitive, but I have seen it resolve many issues with scann
 3. Shrink Database
 4. Reindex and update stats on the SUSDB.
 
-Run to **reindex** first
+Run **reindex** first
 
 ```sql
 EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
@@ -143,7 +143,7 @@ CLOSE WC
         DROP TABLE #results
 ```
 
-1. Run PowerShell ISE as Admin - WSUS Cleanup Wizard via PowerShell  
+8. Run PowerShell ISE as Admin - WSUS Cleanup Wizard via PowerShell  
 
 ```powershell
 [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | out-null
@@ -159,7 +159,7 @@ $cleanupManager = $wsus.GetCleanupManager();
 $cleanupManager.PerformCleanup($cleanupScope); 
 ```
 
-1. Run PowerShell ISE as Admin - Cleanup Declined  
+9. Run PowerShell ISE as Admin - Cleanup Declined  
 
 ```powershell
 [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")
@@ -171,7 +171,7 @@ $wsus.GetUpdates() | Where {$_.IsDeclined -eq $true} | ForEach-Object {$wsus.Del
 11. Shrink Database
 12. Reindex and update stats on the SUSDB.
 
-Run to **reindex** first
+Run **reindex** first
 
 ```sql
 EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
