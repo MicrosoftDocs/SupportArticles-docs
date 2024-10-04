@@ -15,7 +15,7 @@ This article describes how to use the new .admx and .adml files to create and ad
 _Original KB number:_ &nbsp; 3087759
 
 ## Links to download the Administrative Templates files based on the operating system version
-
+- [Administrative Templates (.admx) for Windows 11 2023 Update (23H2)](https://www.microsoft.com/download/details.aspx?id=105667)
 - [Administrative Templates (.admx) for Windows 11 2022 Update (22H2) - v3.0](https://www.microsoft.com/download/details.aspx?id=105390)
 - [Administrative Templates (.admx) for Windows 11 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104593)
 - [Administrative Templates (.admx) for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103507)
