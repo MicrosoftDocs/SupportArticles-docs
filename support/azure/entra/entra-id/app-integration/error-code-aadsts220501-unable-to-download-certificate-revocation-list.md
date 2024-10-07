@@ -32,9 +32,11 @@ You can find the CRL configuration for the tenant using the steps from article [
    
 2) If the CRL file  is accessible, open the CRL file -> go to General Tab -> Check the Date and time value for "Next Update".
 
-   Next update: **The date and time that a Windows client considers as the expiration date of the CRL.  If this date and time passes to current date , Windows computers will invalidate certificates that are checked against this CRL.**
+  **Next update:** A field that denotes the expiry date for the CRL.
 
-   You need to renew the CRL manually and replace the expired CRL.
+> [!Note]
+> If this date and time passes to current system date, Windows computers will invalidate certificates that are checked against this CRL. You need to renew the CRL manually and replace the expired CRL
+
 
 ## More Information
 
