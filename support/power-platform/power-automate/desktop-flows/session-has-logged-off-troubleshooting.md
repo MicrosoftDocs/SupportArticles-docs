@@ -16,13 +16,15 @@ In the middle of your desktop flow run, you receive the error message SessionHas
 
 ## Troubleshooting
 
-The SessionHasLoggedOff error code means that the Windows session that was running your dekstop flow was logged off by the system. This can come from either a manual user action or another piece of software running on your machine.
+The SessionHasLoggedOff error code means that the Windows session that was running your desktop flow was logged off by the system. This can come from either a manual user action or another piece of software running on your machine.
 
 Steps to investigate:
 
-1. Note the time of when the desktop flow run completed
+1. Verify that there is no custom sript (such as a batch file or powershell execution) in your desktop flow which may cause the session to be logged off or for the machine to reboot.
 
-1. Go to the machine that ran the flow and open the Windows Event Viewer. Look in the local session manager logs by going to Application and Serices Logs > Microosft > Windows > TerminalServices-LocalSessionManager. Attempt to find the log corresponding to the time when the logoff occurred by using the time when the run completed and looking at logs at that time up to many minutes before. 
+1. Note the time of when the desktop flow run completed.
+
+1. Go to the machine that ran the flow and open the Windows Event Viewer. Look in the local session manager logs by going to Application and Service Logs > Microosft > Windows > TerminalServices-LocalSessionManager. Attempt to find the log corresponding to the time when the logoff occurred by using the time when the run completed and looking at logs at that time up to many minutes before. 
 
 1. Look for indications of what may have caused the disconnection of the session, including whether it may have come from a process running in session 0, or come from a user.
 
