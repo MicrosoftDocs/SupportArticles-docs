@@ -52,6 +52,7 @@ select
 > [!IMPORTANT]
 > Run the steps on each WSUS in the hierarchy. When performing a cleanup and removing items from WSUS servers, you should start at the **bottom** of the hierarchy.
 > Make sure you've turned off any scheduled synchronizations, either in Configuration Manager if using that or in the WSUS console if standalone WSUS.
+
 Steps 9-12 you may need to run multiple times due to the large number of declined updates. After each run, execute the **Updates Count** query to verify the number is going down and to monitor progress. Step 8 and\or 9 may end in error each time you run it, hence the reason for steps 9-12 and running it again. This is normal and to be expected.  Some of these steps, especially #9 could take several hours to run.
 
 This process is a long and repetitive, but it can resolve many issues with scanning and syncing.  
@@ -82,7 +83,7 @@ GO
 DELETE FROM tbEventInstance WHERE EventNamespaceID = '2' AND EVENTID IN ('381', '382', '384', '386', '387', '389')
 ```
 
-1. Cleanup of all superseded updates older than 30 days OR based on what you set it to clean up.
+6. Cleanup of all superseded updates older than 30 days OR based on what you set it to clean up.
 
 > [!NOTE]
 > This is the only step that you may need to modify. On the first line, the value **30** represents the number of days between today and the release date for which the superseded updates must not be declined. This should match the configuration of supersedence rules in SUP component properties, if ConfigMgr is being used.
@@ -190,19 +191,6 @@ This PowerShell script mirrors the manual steps.
 
 > [!NOTE]
 > **Requirements**
-- WID must be local (if using WID).
-
-
-> - Remote connections to SQL are supported, choose [S] Change SQL Server from menu to set the SQL Server.
-> 
-> 
-- WSUS Console must be installed locally where the script is executed.
-
-
-> - Must have internet access to download SQL PowerShell Module.
-> 
-> 
-- Must be using v22 or higher of SQL Server PowerShell Module.
 This script presents the following menu options for performing SUSDB Maintenance. SUSDB-Maintenance.log is created and opened when the script is run.
 
 [S] Change SQL Server, currently set to 
