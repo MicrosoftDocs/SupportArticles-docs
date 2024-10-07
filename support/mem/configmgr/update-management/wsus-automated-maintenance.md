@@ -55,7 +55,7 @@ select
 
 Steps 9-12 you may need to run multiple times due to the large number of declined updates. After each run, execute the **Updates Count** query to verify the number is going down and to monitor progress. Step 8 and\or 9 may end in error each time you run it, hence the reason for steps 9-12 and running it again. This is normal and to be expected.  Some of these steps, especially #9 could take several hours to run.
 
-This process is a long and repetitive, but it can resolve many issues with scanning and syncing.  
+This process is long and repetitive, but it can resolve many issues with scanning and syncing.  
 
 1. Run this SQL first.  [Slow performance of the spDeleteUpdate procedure - Configuration Manager | Microsoft Docs](/troubleshoot/mem/configmgr/spdeleteupdate-slow-performance)
 
@@ -187,11 +187,11 @@ Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS"
 
 ## Automated SUSDB-Maintenance
 
-This PowerShell script mirrors the manual steps.
+This PowerShell script mirrors the manual steps.   SUSDB-Maintenance.log is created and opened when the script is run.
 
 > [!NOTE]
 > **Requirements**
-This script presents the following menu options for performing SUSDB Maintenance. SUSDB-Maintenance.log is created and opened when the script is run.
+> This script presents the following menu options for performing SUSDB Maintenance.
 
 [S] Change SQL Server, currently set to 
 
