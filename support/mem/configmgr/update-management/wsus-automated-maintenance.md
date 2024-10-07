@@ -20,11 +20,13 @@ Routine maintenance of the database for Windows Server Update Services (WSUS) is
 
 ### How long do the steps take?
 
-Your mileage varies depending on the machine resources such as CPU, Memory, Disk. Some of the variables include the time since the last maintenance, the number of Products and Classifications selected, and the number of updates that need to be cleaned up. In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, these steps most likely takes under a minute to run automated with the [RA] option in the automated script. On the other hand, I observed it taking over 10 days to run all the steps. If the steps run for over 10 days, they most likely will fail. If you can’t complete the maintenance successfully, you need to create a new SUSDB.
+Your mileage may vary depending on the machine resources such as CPU, Memory, Disk. Some of the variables include the time since the last maintenance, the number of Products and Classifications selected, and the number of updates that need to be cleaned up. In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, these steps will most likely take under a minute to run automated with the [RA] option in the automated script. On the other hand, I have observed it taking over 10 days to run all the steps. If the steps run for over 10 days, they most likely will fail. If you can’t complete the maintenance successfully, you need to create a new SUSDB.
 
 ## Manual SUSDB-Maintenance
 
-The poor health of the SUSDB can often be attributed to having too many superseded, declined, and obsolete updates. Anything more than a few hundred in the last three columns of this query and maintenance should be performed. To get a count of updates, run this SQL query.
+The poor health of the SUSDB can often be attributed to having too many superseded, declined, and obsolete updates. Anything more than a few hundred in the last three columns of this **Update Count** query and maintenance should be performed. To get a count of updates, run this SQL query.
+
+### Update Count Query
 
 ```sql
 use SUSDB;
@@ -47,11 +49,10 @@ select
 
 ```
 
-Run the steps on each WSUS in the hierarchy. When performing a cleanup and removing items from WSUS servers, you should start at the **bottom** of the hierarchy.
-
 > [!IMPORTANT]
+> Run the steps on each WSUS in the hierarchy. When performing a cleanup and removing items from WSUS servers, you should start at the **bottom** of the hierarchy.
 > Make sure you've turned off any scheduled synchronizations, either in Configuration Manager if using that or in the WSUS console if standalone WSUS.
-Steps 9-12 you may need to run multiple times due to the large number of declined updates. After each run, execute the Count of Declined Updates query to verify the number is going down and to monitor progress. Step 8 may end in error each time you run it, hence the reason for steps 9-12 and running it again. This is normal and to be expected.  Some of these steps, especially #9 could take several hours to run.
+Steps 9-12 you may need to run multiple times due to the large number of declined updates. After each run, execute the **Updates Count** query to verify the number is going down and to monitor progress. Step 8 and\or 9 may end in error each time you run it, hence the reason for steps 9-12 and running it again. This is normal and to be expected.  Some of these steps, especially #9 could take several hours to run.
 
 This is a long and repetitive, but I have seen it resolve many issues with scanning and syncing.  
 
@@ -183,25 +184,25 @@ Run **update statistics** second
 Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS" 
 ```
 
-## Automated Maintenance
+## Automated SUSDB-Maintenance
 
 This PowerShell script mirrors the manual steps.
 
 > [!NOTE]
 > **Requirements**
-> - WID must be local (if using WID).
+- WID must be local (if using WID).
+
+
+> - Remote connections to SQL are supported, choose [S] Change SQL Server from menu to set the SQL Server.
 > 
 > 
-> - Remote connections for SQL now supported, choose [S] Change SQL Server from menu to set the SQL Server.
-> 
-> 
-> - WSUS Console must be installed locally where the script is executed.
-> 
-> 
+- WSUS Console must be installed locally where the script is executed.
+
+
 > - Must have internet access to download SQL PowerShell Module.
 > 
 > 
-> - Must be using v22 or higher of SQL Server PowerShell Module.
+- Must be using v22 or higher of SQL Server PowerShell Module.
 This script will present the following menu options for performing SUSDB Maintenance. SUSDB-Maintenance.log will be created and opened when the script is run.
 
 [S] Change SQL Server, currently set to 
