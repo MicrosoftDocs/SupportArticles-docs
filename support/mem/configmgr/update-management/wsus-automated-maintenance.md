@@ -20,7 +20,7 @@ Routine maintenance of the database for Windows Server Update Services (WSUS) is
 
 ### How long do the steps take?
 
-Your mileage may vary depending on the machine resources such as CPU, Memory, Disk. Some of the variables include the time since the last maintenance, the number of Products and Classifications selected, and the number of updates that need to be cleaned up. In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, these steps will most likely take under a minute to run automated with the [RA] option in the automated script. On the other hand, I have observed it taking over 10 days to run all the steps. If the steps run for over 10 days, they most likely will fail. If you can’t complete the maintenance successfully, you need to create a new SUSDB.
+Your mileage may vary depending on the machine resources such as CPU, Memory, Disk. Some of the variables include the time since the last maintenance, the number of Products and Classifications selected, and the number of updates that need to be cleaned up. In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, these steps most likely take under a minute to run automated with the [RA] option in the automated script. On the other hand, I observed it taking over 10 days to run all the steps. If the steps run for over 10 days, they most likely fail. If you can’t complete the maintenance successfully, you need to create a new SUSDB.
 
 ## Manual SUSDB-Maintenance
 
@@ -54,7 +54,7 @@ select
 > Make sure you've turned off any scheduled synchronizations, either in Configuration Manager if using that or in the WSUS console if standalone WSUS.
 Steps 9-12 you may need to run multiple times due to the large number of declined updates. After each run, execute the **Updates Count** query to verify the number is going down and to monitor progress. Step 8 and\or 9 may end in error each time you run it, hence the reason for steps 9-12 and running it again. This is normal and to be expected.  Some of these steps, especially #9 could take several hours to run.
 
-This is a long and repetitive, but I have seen it resolve many issues with scanning and syncing.  
+This process is a long and repetitive, but it can resolve many issues with scanning and syncing.  
 
 1. Run this SQL first.  [Slow performance of the spDeleteUpdate procedure - Configuration Manager | Microsoft Docs](/troubleshoot/mem/configmgr/spdeleteupdate-slow-performance)
 
@@ -203,7 +203,7 @@ This PowerShell script mirrors the manual steps.
 > 
 > 
 - Must be using v22 or higher of SQL Server PowerShell Module.
-This script will present the following menu options for performing SUSDB Maintenance. SUSDB-Maintenance.log will be created and opened when the script is run.
+This script presents the following menu options for performing SUSDB Maintenance. SUSDB-Maintenance.log is created and opened when the script is run.
 
 [S] Change SQL Server, currently set to 
 
