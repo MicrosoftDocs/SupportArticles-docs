@@ -8,17 +8,16 @@ ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, incl
 
 This article helps you resolve the "HTTP Error 403.14 - Forbidden - The web server is configured to not list the contents of this directory" error that occurs when you open an Internet Information Services (IIS) webpage.
 
-_Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
+_Original product version:_ &nbsp; Internet Information Services 10.0 and later versions  
 _Original KB number:_ &nbsp; 942062
 
 > [!NOTE]
 >
-> - The target audience for this article is website administrators and web developers.
-> - This article only applies to traditional ASP.Net Form applications.
+> The target audience for this article is website administrators and web developers.
 
 ## Symptoms
 
-When you visit a website hosted on IIS 7.0 or a later version, you receive an error message that resembles the following:
+When you visit a website hosted on IIS 10.0 or a later version, you receive an error message that resembles the following:
 
 > Server Error in Application "**application name**"  
 > HTTP Error 403.14 - Forbidden  
@@ -31,9 +30,9 @@ If you're a user, you should contact the website administrators to notify them t
 
 ## Resolution for site administrators
 
-This problem occurs because the website doesn't have the Directory Browsing feature enabled. Also, the default document isn't configured. To resolve this problem, use one of the following methods:
+This problem occurs because the website doesn't have the Directory Browsing feature enabled or the default document isn't enabled or configured properly. To resolve this problem, use one of the following methods:
 
-**Method 1: Enable the Directory Browsing feature in IIS (recommended)**
+**Method 1: Enable the Directory Browsing feature in IIS**
 
 To resolve this problem, follow these steps:
 
@@ -50,7 +49,7 @@ To resolve this problem, follow these steps:
 2. In IIS Manager, expand **server name**, expand **Web sites**, and then select the website that you want to change.
 3. In the **Features** view, double-click **Default Document**.
 4. In the **Actions** pane, select **Enable**.
-5. In the **File Name** box, type the name of the default document, and then select **OK**.
+5. In the Feature view, the default document must be listed (preferably 1st). If not, in the Action pane, click Add, type the name of the default document in the Add Default Document box and then select OK. The file must exist in the site's root folder.
 
 **Method 3: Enable the Directory Browsing feature in IIS Express**
 
@@ -60,7 +59,7 @@ To resolve this problem, follow these steps:
 1. Open a Command Prompt window, and navigate to the IIS Express folder on your computer. For example, type the following command at the command prompt, and then press Enter:
 
     ```console
-    C:\Program Files\IIS Express
+    cd C:\Program Files\IIS Express
     ```
 
 2. Type the following command, and then press Enter:
