@@ -34,7 +34,7 @@ You can find the CRL configuration for the tenant using the steps from article [
 
   **Next update:** A field that denotes the expiry date for the CRL.
 
-> [!Note]
+> [!TIP]
 > If this date and time passes to current system date, Windows computers will invalidate certificates that are checked against this CRL. You need to renew the CRL manually and replace the expired CRL.
 
 
