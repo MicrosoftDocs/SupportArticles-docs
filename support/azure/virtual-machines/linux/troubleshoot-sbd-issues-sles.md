@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot SBD issues in SUSE Pacemaker clusters
+title: Troubleshoot SBD service failure in SUSE Pacemaker clusters
 description: Provides troubleshooting guidance if SBD services fail
 ms.reviewer: rnirek
 ms.author: rnirek
@@ -11,11 +11,11 @@ ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---
 
-# Troubleshoot SBD issues in SUSE
+# Troubleshoot SBD service failure in SUSE Pacemaker clusters
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article outlines common scenarios where the STONITH Block Device (SBD) service fails to start in a SUSE Enterprise Linux Pacemaker cluster and provides guidance for identifying and resolving this issue.
+This article outlines common scenarios where the STONITH Block Device (SBD) service doesn't start in a SUSE Enterprise Linux Pacemaker cluster and provides guidance for identifying and resolving this issue.
 
 ## How SBD works
 
@@ -28,9 +28,7 @@ For a Microsoft Azure Pacemaker cluster that has SBD storage protection, you can
 
 ## How to diagnose the issue
 
-If the cluster nodes cannot access the SBD device, the daemon startup fails, which disrupts the cluster startup. To diagnose the issue, you can check the `crm` logs, the `iscsiadm` result, or the `iscsi` service status that includes the SBD server IP addresses. 
-
-The following examples show how to use these commands to diagnose the issue:
+The following example demonstrates how to determine that the cluster startup issue is due to the SBD service failure.
 
 1. Check the status of the cluster:
 
@@ -71,29 +69,29 @@ The following examples show how to use these commands to diagnose the issue:
       ```
 4. Check the status of each service. In the following example, you can see that all dependency services, such as Corosync, are active, but the SBD service is not running: 
 
-  ```bash
-sudo systemctl status corosync
-```
-```output
-corosync.service - Corosync Cluster Engine
-  Loaded: loaded (/usr/lib/systemd/system/corosync.service; disabled; vendor preset: disabled)
-  Active: active (running) since Thu 2024-08-01 04:49:15 UTC; 38s ago
- Process: 23972 ExecStop=/usr/share/corosync/corosync stop (code=exited, status=0/SUCCESS)
- Process: 24075 ExecStart=/usr/share/corosync/corosync start (code=exited, status=0/SUCCESS)
-Main PID: 24094 (corosync)
-   Tasks: 2 (limit: 4096)
-  CGroup: /system.slice/corosync.service
-          └─24094 corosync
- 
-Aug 01 04:49:15 nfs-0 corosync[24094]:   [TOTEM ] A new membership (10.0.0.6:32) was formed. Members joined: 2
-Aug 01 04:49:15 nfs-0 corosync[24094]:   [CPG  ] downlist left_list: 0 received in state 2
-Aug 01 04:49:15 nfs-0 corosync[24094]:   [VOTEQ ] Waiting for all cluster members. Current votes: 1 expected_votes: 2
-Aug 01 04:49:15 nfs-0 corosync[24094]:   [QUORUM] This node is within the primary component and will provide service.
-Aug 01 04:49:15 nfs-0 corosync[24094]:   [QUORUM] Members[2]: 1 2
-Aug 01 04:49:15 nfs-0 corosync[24094]:   [MAIN ] Completed service synchronization, ready to provide service.
-Aug 01 04:49:15 nfs-0 corosync[24075]: Starting Corosync Cluster Engine (corosync): [ OK ]
+      ```bash
+    sudo systemctl status corosync
+    ```
+    ```output
+    corosync.service - Corosync Cluster Engine
+      Loaded: loaded (/usr/lib/systemd/system/corosync.service; disabled; vendor preset: disabled)
+      Active: active (running) since Thu 2024-08-01 04:49:15 UTC; 38s ago
+     Process: 23972 ExecStop=/usr/share/corosync/corosync stop (code=exited, status=0/SUCCESS)
+     Process: 24075 ExecStart=/usr/share/corosync/corosync start (code=exited, status=0/SUCCESS)
+    Main PID: 24094 (corosync)
+       Tasks: 2 (limit: 4096)
+      CGroup: /system.slice/corosync.service
+              └─24094 corosync
+     
+    Aug 01 04:49:15 nfs-0 corosync[24094]:   [TOTEM ] A new membership (10.0.0.6:32) was formed. Members joined: 2
+    Aug 01 04:49:15 nfs-0 corosync[24094]:   [CPG  ] downlist left_list: 0 received in state 2
+    Aug 01 04:49:15 nfs-0 corosync[24094]:   [VOTEQ ] Waiting for all cluster members. Current votes: 1 expected_votes: 2
+    Aug 01 04:49:15 nfs-0 corosync[24094]:   [QUORUM] This node is within the primary component and will provide service.
+    Aug 01 04:49:15 nfs-0 corosync[24094]:   [QUORUM] Members[2]: 1 2
+    Aug 01 04:49:15 nfs-0 corosync[24094]:   [MAIN ] Completed service synchronization, ready to provide service.
+    Aug 01 04:49:15 nfs-0 corosync[24075]: Starting Corosync Cluster Engine (corosync): [ OK ]
 
-5. Check the SBD service status. The service doesn't start, and it returns a `Failed to start Shared-storage based fencing daemon` error message:
+5. Check the SBD service status. The service doesn't start, and it returns a `Failed to start Shared-storage based fencing daemon` error message. 
 
       ```bash
       sudo systemctl status sbd
