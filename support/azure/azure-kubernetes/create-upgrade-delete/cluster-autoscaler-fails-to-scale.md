@@ -1,7 +1,7 @@
 ---
 title: Cluster autoscaler fails to scale with failed to fix group sizes error
 description: Learn how to troubleshoot the failed to fix group sizes error that occurs when your autoscaler isn't scaling up or down.
-ms.date: 05/17/2022
+ms.date: 10/08/2024
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
@@ -23,7 +23,7 @@ E1114 09:58:55.367731 1 static_autoscaler.go:239] Failed to fix node group sizes
 
 ## Cause
 
-This error is caused by an upstream cluster autoscaler race condition. In such a case, cluster autoscaler ends with a different value than the one that's actually in the cluster.  
+This error is caused by an upstream cluster autoscaler race condition. In such a case, cluster autoscaler gets stuck in a deadlock, described in this [github link](https://github.com/kubernetes/autoscaler/issues/6128).
 
 ## Solution
 
