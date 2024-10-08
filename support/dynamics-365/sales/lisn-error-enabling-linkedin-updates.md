@@ -13,7 +13,7 @@ This article provides a resolution for the data validation failure related to en
 
 ## Symptoms
 
-When you enable the **Enable LinkedIn updates** option in the **Sales Navigator Integration Settings** dialog box during the [data validation](/dynamics365/sales/linkedin/data-validation), you might see the following message.
+When you enable the **Enable LinkedIn updates** option in the **Sales Navigator Integration Settings** dialog box during the [data validation](/dynamics365/linkedin/data-validation), you might see the following message.
 
 > Status: Disabled, An unexpected error occured.
 
