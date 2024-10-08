@@ -434,7 +434,7 @@ When you use SBD as a fencing device and enable it for a Pacemaker cluster, serv
     sudo crm cluster start
     ```
 
-2.Check whether the SBD service start successfully:
+2. Check whether the SBD service start successfully:
 
      ```bash
     sudo systemctl status sbd.service 
@@ -445,7 +445,7 @@ When you use SBD as a fencing device and enable it for a Pacemaker cluster, serv
        Loaded: loaded (/usr/lib/systemd/system/sbd.service; enabled; vendor preset: disabled)
        Active: active (running)
     ```
-3.Check whether the SBD device list provides the desired output:
+3. Check whether the SBD device list provides the desired output:
 
      ```bash 
     sudo sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
