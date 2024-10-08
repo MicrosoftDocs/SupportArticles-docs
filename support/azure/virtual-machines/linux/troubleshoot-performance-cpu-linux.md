@@ -180,7 +180,7 @@ vmstat [delay] [count]
 
 If you provide only one of these parameters, it’s treated as the refresh interval, and the output will refresh on an infinite loop.
 
-### Example output during high I/O activity command dd is running
+### Example output during high I/O activity while command dd is running
 
 In the following example, the first line of the report, `2 3 0 33639696 ...`, contains the average values since the last time that the computer was restarted. All other lines in the report represent their respective current values. 
 
@@ -216,7 +216,7 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 
 These are percentages of total CPU time:
 
-- us: Time spent running non-kernel code (user time, including nice time)
+- us: Time spent running non-kernel code (user time, including CPU low-priority processing time)
 - sy: Time spent running kernel code (system time)
 - id: Time spent idle
 - wa: Time spent waiting for I/O
@@ -297,5 +297,5 @@ for H_PID in $(ps -eo pcpu,pid,ppid,user,args | sort -k1 -r | grep -v PID | head
 
 ### A high CPU issue occurs intermittently and persists briefly every few minutes. We have the `sosreport` that has `sysstat` enabled. How can I check the sar log to identify the root cause?
 
-The default `sar` collection interval is 10 minutes. If the issue is occurring in a short time, `sar` might not reveal the problem because the metric result is aggregated.
+The default `sar` collection interval is 10 minutes. If the issue is occurring in too short an interval or too briefly, `sar` might not reveal the problem because the metric result is aggregated.
 If the default 10-minute interval isn't providing the necessary resolution, you can adjust the `sar` time interval to make it more suitable for diagnosing the problem.
