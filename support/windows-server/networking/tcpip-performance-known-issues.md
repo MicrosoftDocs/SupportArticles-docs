@@ -5,7 +5,7 @@ ms.date: 10/08/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, rabhardw, anupamk， bihua
+ms.reviewer: kaushika, rabhardw, anupamk, bihua
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Known issues of TCP/IP performance
