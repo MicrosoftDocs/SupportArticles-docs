@@ -15,7 +15,7 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article lists common issues that affect the STONITH Block Device (SBD) fencing mechanism in a SUSE Linux Enterprise (SLES) Pacemaker cluster, and offers guidance for identifying and resolving the issues.
+This article lists common issues that affect the STONITH Block Device (SBD) fencing mechanism in a SUSE Enterprise Linux Pacemaker cluster, and offers guidance for identifying and resolving the issues.
 
 ## How SBD works
 
