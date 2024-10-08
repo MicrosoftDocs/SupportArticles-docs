@@ -5,7 +5,7 @@ ms.date: 10/08/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, dbansal, tayasuta, tayasuta
+ms.reviewer: kaushika, dbansal, tayasuta
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 adobe-target: true
 ---
