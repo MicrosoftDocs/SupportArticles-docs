@@ -1,7 +1,7 @@
 ---
 title: Create and manage Central Store
 description: Describes how to create a Central Store on a domain controller to store and replicate registry-based policies for Windows.
-ms.date: 04/11/2024
+ms.date: 10/08/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,6 +15,7 @@ This article describes how to use the new .admx and .adml files to create and ad
 _Original KB number:_ &nbsp; 3087759
 
 ## Links to download the Administrative Templates files based on the operating system version
+
 - [Administrative Templates (.admx) for Windows 11 2024 Update (24H2)](https://www.microsoft.com/download/details.aspx?id=106254)
 - [Administrative Templates (.admx) for Windows 11 2023 Update (23H2)](https://www.microsoft.com/download/details.aspx?id=105667)
 - [Administrative Templates (.admx) for Windows 11 2022 Update (22H2) - v3.0](https://www.microsoft.com/download/details.aspx?id=105390)
