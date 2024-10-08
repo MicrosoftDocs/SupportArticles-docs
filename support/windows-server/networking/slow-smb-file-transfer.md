@@ -1,11 +1,11 @@
 ---
 title: Slow SMB files transfer speed
 description: Learn how to resolve transfer performance issues with SMB files by using the provided troubleshooting steps.
-ms.date: 06/21/2024
+ms.date: 10/08/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-lianna, jakehr, nedpyle
+ms.reviewer: kaushika, v-lianna, jakehr, nedpyle, cstrassn
 ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # Slow SMB files transfer speed
@@ -148,6 +148,9 @@ Office documents can open slowly, which generally occurs on a WAN connection. Th
 
 You should verify that the Office and SMB binaries are up-to-date, and then test by having leasing disabled on the SMB server. To verify both conditions have resolved, follow these steps:
 
+> [!NOTE]
+> This method should be used with caution. Leasing is an integral part of the SMB protocol and is generally expected to be available on an SMBv2 or SMBv3 server. Multiple features depend on the availability of leasing, such as read caching, write caching and handle caching. While disabling leasing might make some slow performance cases disappear, it will negatively impact other applications that rely on the benefits of leasing.
+
 1. Run the following PowerShell cmdlet in Windows 8 and Windows Server 2012 or later versions of Windows:
 
    ```powershell
@@ -156,7 +159,4 @@ You should verify that the Office and SMB binaries are up-to-date, and then test
 
 2. This works immediately on a new SMB client connection. There's no need to restart the SMB server or client machines. 
 
-This change should be  used  with caution.  Leasing  is a integral  part of the SMB protocol and is  generally  expected to be  available on a  SMB2/3 Server.
-multiple features depend on the availibility  of  Leasing - such as  read caching, write caching  and handle caching.
-while disabling leasing might make some slow performance  cases  disappear, it will negatively  impact other applications and usecases that rely  on the benefits  of  Leasing.
 To avoid this issue, you can also replicate the file to a local file server. For more information, see [saving Office documents to a network server is slow when using EFS](/office/troubleshoot/office/saving-file-to-network-server-slow).
