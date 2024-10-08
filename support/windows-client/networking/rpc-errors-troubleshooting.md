@@ -233,9 +233,9 @@ These procedures use the [TroubleShootingScript (TSS)](../windows-troubleshooter
 1. Start traces on the problem computer by running the following cmdlet:
 
     ```powershell
-    TSS.ps1 -Scenario NET_RPC
+   .\TSS.ps1 -Scenario NET_RPC
     ```
-
+    
 1. Respond to the EULA prompt.
 1. Reproduce the issue. You can use tools such as Event Viewer or [wbemtest](/mem/configmgr/develop/core/understand/introduction-to-wbemtest) to monitor or test the issue.
 1. After you reproduce the issue, immediately stop collecting data.
