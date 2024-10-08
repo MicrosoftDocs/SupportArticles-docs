@@ -1,7 +1,7 @@
 ---
 title: Client IP address can't access the API server
 description: Troubleshoot issues caused when the client IP address can't access the API server on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/26/2024
+ms.date: 10/08/2024
 ms.reviewer: rissing, chiragpa, jaewonpark, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want the AKS API server to allow access to my client IP address so that I can successfully connect to my AKS cluster.
@@ -66,7 +66,7 @@ Look at the cluster's API server-authorized ranges, and add your client's IP add
 
 1. Navigate to the cluster from the Azure portal.
 2. In the left menu, locate **Settings** and then select **Networking**.
-3. In the **Networking** page, select the **Overview** tab.
+3. On the **Networking** page, select the **Overview** tab.
 4. Select **Manage** under **Resource settings**.
 5. In the **Authorized IP ranges** pane, add your client IP address as shown in the following screenshot:
 
