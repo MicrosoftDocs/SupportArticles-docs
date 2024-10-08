@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the OperationPreempted error code
 description: Learn how to troubleshoot the OperationPreempted error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/10/2022
+ms.date: 10/08/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
@@ -20,7 +20,7 @@ When you try to perform a new operation on an AKS cluster, you receive the follo
 > 
 > Message: "This operation has been preempted by another operation with ID xxxx"
 
-OR 
+Or
 
 > Code: "AKSOperationPreemptedByDelete"
 > 
@@ -28,7 +28,7 @@ OR
 
 ## Cause
 
-This error usually occurs when an in-progress operation is interrupted by a subsequent operation that was issued before the previous cluster operation is finished. The error itself would give an indication of the in-progress operation, which can be Delete or any other operations.
+This error usually occurs when an in-progress operation is interrupted by a subsequent operation that was issued before the previous operation is finished. The error indicates the in-progress operation, which can be Delete or any other operations.
 
 ## Solution
 
