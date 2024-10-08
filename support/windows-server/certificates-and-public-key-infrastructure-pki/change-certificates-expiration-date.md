@@ -20,7 +20,7 @@ By default, the lifetime of a certificate that is issued by a Stand-alone Certif
 
 The validity period that is defined in the registry affects all certificates that are issued by Stand-alone and Enterprise CAs. For Enterprise CAs, the default registry setting is two years. For Stand-alone CAs, the default registry setting is one year. For certificates that are issued by Stand-alone CAs, the validity period is determined by the registry entry that is described later in this article. This value applies to all certificates that are issued by the CA.
 
-For certificates that are issued by Enterprise CAs, the validity period is defined in the template that is used to create the certificate. Windows 2000 and Windows Server 2003 Standard Edition do not support modification of these templates. Windows Server 2003 Enterprise Edition supports Version 2 certificate templates that can be modified. The validity period defined in the template applies to all certificates issued by any Enterprise CA in the Active Directory forest. A certificate that is issued by a CA is valid for the minimum of the following periods of time:
+For certificates that are issued by Enterprise CAs, the validity period is defined in the template that is used to create the certificate. The validity period defined in the template applies to all certificates issued by any Enterprise CA in the Active Directory forest. A certificate that is issued by a CA is valid for the minimum of the following periods of time:
 
 - The registry validity period that is noted earlier in this article.
 
@@ -28,7 +28,7 @@ For certificates that are issued by Enterprise CAs, the validity period is defin
 
 - The template validity period.
 
-This applies to the Enterprise CA. Templates supported by Windows 2000 and Windows Server 2003 Standard Edition cannot be modified. Templates supported by Windows Server Enterprise Edition (Version 2 templates) do support modification.
+This applies to the Enterprise CA. Templates supported by Windows Server Enterprise Edition (Version 2 templates) do support modification.
 
 For an Enterprise CA, the validity period of an issued certificate is set to the minimum of all the following:
 
@@ -38,9 +38,7 @@ For an Enterprise CA, the validity period of an issued certificate is set to the
 - If the EDITF_ATTRIBUTEENDDATE bit is enabled in the policy module's EditFlags registry value, the validity period specified through the request attributes (ExpirationDate:Date or ValidityPeriod:Years\nValidityPeriodUnits:1)
 
 > [!NOTE]
->
-> - The ExpirationDate:Date syntax was not supported until Windows Server 2008.
-> - For a stand-alone CA, no templates are processed. Therefore, the template validity period does not apply.
+- For a stand-alone CA, no templates are processed. Therefore, the template validity period does not apply.
 
 ## The expiration date of the CA certificate
 
