@@ -112,7 +112,7 @@
     - name: Out of memory error in Linux VM
       href: oom-swap-file-linux-vm.md
 
-  - name: Troubleshoot Linux Performance CPU
+  - name: Troubleshoot Linux CPU performance issues
     href: troubleshoot-performance-cpu-linux.md
     
 - name: Windows Update and OS Updates
