@@ -67,11 +67,11 @@ Failed to FinalizeEx using worker session [HRESULT = 0x800f0922]
 
 ## Cause
 
-This issue can occur if there are more than 65,000 files in the Windows Temp directory. The Windows Temp directory is located at `C:\Windows\Temp`. Check Windows environment variables to confirm the location of the Windows Temp directory.
+This issue can occur if there are more than 65,000 files in the Windows Temp directory. The Windows Temp directory is located at *C:\Windows\Temp*. Check Windows environment variables to confirm the location of the Windows Temp directory.
 
 ## Resolution
 
-To resolve the problem, delete the contents of the Windows Temp folder (normally `C:\Windows\Temp`), and then again try to remove the Windows Server role or feature.
+To resolve the problem, delete the contents of the Windows Temp folder (normally *C:\Windows\Temp*), and then again try to remove the Windows Server role or feature.
 
 ## Data collection
 
