@@ -28,6 +28,8 @@ The WMI repository includes the following types of objects:
 
 - Namespaces: These namespaces are groupings used by all the other objects, and each namespace has a security descriptor that defines the permissions for accessing the objects within it.
 
+[!INCLUDE [Script disclaimer](../../includes/script-disclaimer.md)]
+
 ## Script
 
 ```powershell
@@ -480,7 +482,7 @@ This file contains the list of registered providers with the following columns:
 - **NameSpace**: Where the provider is registered
 - **Name**: Name of the provider
 - **HostingModel**: See [Provider Hosting and Security](/windows/win32/wmisdk/provider-hosting-and-security)
-- **ThreadingModel**: See [COM+ Threading Models]((/windows/win32/cossdk/com--threading-models)
+- **ThreadingModel**: See [COM+ Threading Models](/windows/win32/cossdk/com--threading-models)
 - **DLL Path**: Path where the provider is implemented
 - **dtDLL**: Date of the DLL
 - **verDLL**: Version of the DLL
