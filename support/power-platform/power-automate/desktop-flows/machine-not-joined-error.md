@@ -4,7 +4,7 @@ description: Solves the errors that occur when you create a desktop flow connect
 author: QuentinSele
 ms.author: quseleba
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 09/29/2024
+ms.date: 10/08/2024
 ---
 # Connection creation fails with "This computer has not joined Microsoft Entra or the domain" or "MachineNotJoined"
 
@@ -36,3 +36,7 @@ Microsoft Entra join can be accomplished using self-service options like the Win
 ## Resolution 2: Use another connection option
 
 If you can't join your device to Microsoft Entra ID, you can update your connections and select the option to [connect with username and password](/power-automate/desktop-flows/desktop-flow-connections#connect-with-username-and-password).
+
+## Resolution 3: Join your machine to an Active Directory domain and synchronize the domain to Microsoft Entra ID
+
+Join your machine to an Active Directory domain and [synchronize the domain to Microsoft Entra ID](/entra/identity/hybrid/cloud-sync/how-to-configure#configure-provisioning).
