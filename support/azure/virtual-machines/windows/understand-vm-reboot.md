@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services
-ms.date: 02/18/2024
+ms.date: 10/08/2024
 ms.author: genli
 ms.reviewer: yutorigo, v-weizhu
 ms.custom: sap:VM restarted or stopped unexpectedly
@@ -58,7 +58,8 @@ However, some updates do require a reboot. In such cases, the VMs are shut down 
 To understand what Azure planned maintenance is and how it can affect the availability of your Linux VMs, see the articles listed here. The articles provide background about the Azure planned maintenance process and how to schedule planned maintenance to further reduce the impact.
 
 - [Planned maintenance for VMs in Azure](/azure/virtual-machines/maintenance-and-updates?bc=/azure/virtual-machines/windows/breadcrumb/toc.json&toc=/azure/virtual-machines/windows/toc.json)
-- [How to schedule planned maintenance on Azure VMs](/azure/virtual-machines/maintenance-and-updates?bc=/azure/virtual-machines/windows/breadcrumb/toc.json&toc=/azure/virtual-machines/windows/toc.json)
+- [How to schedule planned maintenance on Azure Windows VMs](/azure/virtual-machines/windows/scheduled-events)
+- [How to schedule planned maintenance on Azure Linux VMs](/azure/virtual-machines/linux/scheduled-events)
 
 ### Memory-preserving updates
 
