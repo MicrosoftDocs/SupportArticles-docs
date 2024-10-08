@@ -10,9 +10,7 @@ ms.custom: sap:Windows Extension not installing
 
 This article describes the preparations you need to make before troubleshooting issues when the Azure Monitor Agent (AMA) installation fails on Azure Windows virtual machines (VMs).
 
-
 Before you begin troubleshooting, perform the following checks.
-
 
 ## <a id="operating-system-supported"></a>Ensure the operating system is supported by AMA
 
