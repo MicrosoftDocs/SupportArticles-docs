@@ -1,30 +1,30 @@
 ---
-title: Script to inspect the content of the WMI repository
+title: Scripts to inspect the content of the WMI repository
 description: Introduces a script to inspect the content of the WMI repository.
-ms.date: 09/30/2024
+ms.date: 10/08/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
-# Script: Inspect the content of the WMI repository
+# Scripts: Inspect the content of the WMI repository
 
-This article provides a script to inspect the contents of the WMI Repository.
+This article provides a script to inspect the contents of the Windows Management Instrumentation (WMI) repository.
 
 ## Details
 
-The Windows Management Instrumentation (WMI) Repository includes the following types of objects:
+The WMI repository includes the following types of objects:
 
-- Dynamic Classes: These classes retrieve results by executing code in a DLL or an external executable. The results come from a system component or an application and aren't stored in the WMI Repository.
+- Dynamic classes: These classes retrieve results by executing code in a dynamic link library (DLL) or an external executable. The results come from a system component or an application and aren't stored in the WMI repository.
 
-  - DLLs are used by Coupled Providers that run in WMIPrvSE processes.
+  - DLLs are used by coupled providers that run in *WMIPrvSE* processes.
 
-  - Executables are used by Decoupled Providers that run in their own processes.
+  - Executables are used by decoupled providers that run in their own processes.
 
-- Providers: These providers are DLL and executable registrations used by Dynamic Classes. Providers implement the logic that Dynamic Classes use to return the results.
+- Providers: These providers are DLL and executable registrations used by dynamic classes. Providers implement the logic that dynamic classes use to return the results.
 
-- Static Classes: These classes contain static content, typically used by components and applications to store configurations or results, such as RSOP or SCCM. With Static Classes, WMI is used like a database to store and retrieve this information.
+- Static classes: These classes contain static content, typically used by components and applications to store configurations or results, such as RSOP or SCCM. With static classes, WMI is used like a database to store and retrieve this information.
 
 - Namespaces: These namespaces are groupings used by all the other objects, and each namespace has a security descriptor that defines the permissions for accessing the objects within it.
 
@@ -462,45 +462,45 @@ Write-Host "Writing Security.csv"
 $tbSec | Export-Csv $resDir"\Security.csv" -noType
 ```
 
-The script can be executed without any parameters, and it creates a subfolder for each run. If the script is executed with the `-DataPath` parameter, the subfolder is created in that specified path. Inside the folder, you can find four CSV files that can be imported into Excel:
+The script can be executed without any parameters, and it creates a subfolder for each run. If the script is executed with the `-DataPath` parameter, a subfolder is created in that specified path. Inside the folder, you can find four CSV files that can be imported into Excel:
 
 ### Dynamic.csv
 
 This file contains the list of dynamic classes with the following columns:
 
-- NameSpace: Where the class is registered
-- Name: Name of the class
-- Provider: The provider on which the class relies
-- Methods: Methods exposed by the class
+- **NameSpace**: Where the class is registered
+- **Name**: Name of the class
+- **Provider**: The provider on which the class relies
+- **Methods**: Methods exposed by the class
 
 ### Providers.csv
 
 This file contains the list of registered providers with the following columns:
 
-- NameSpace: Where the provider is registered
-- Name: Name of the provider
-- HostingModel: See Provider Hosting and Security
-- ThreadingModel: See COM+ Threading Models
-- DLL Path: Path where the provider is implemented
-- dtDLL: Date of the DLL
-- verDLL: Version of the DLL
-- UnloadTimeout: Configured unload timeout for the provider
-- CLSID: Assigned CLSID for the provider
+- **NameSpace**: Where the provider is registered
+- **Name**: Name of the provider
+- **HostingModel**: See [Provider Hosting and Security](/windows/win32/wmisdk/provider-hosting-and-security)
+- **ThreadingModel**: See [COM+ Threading Models]((/windows/win32/cossdk/com--threading-models)
+- **DLL Path**: Path where the provider is implemented
+- **dtDLL**: Date of the DLL
+- **verDLL**: Version of the DLL
+- **UnloadTimeout**: Configured unload timeout for the provider
+- **CLSID**: Assigned CLSID for the provider
 
 ### Static.csv
 
 This file contains the list of static classes with the following columns:
 
-- Namespace: Where the static class is registered
-- Name: Name of the static class
-- Inst: Number of instances stored in the class
-- Size: Estimated size in bytes for the class
+- **Namespace**: Where the static class is registered
+- **Name**: Name of the static class
+- **Inst**: Number of instances stored in the class
+- **Size**: Estimated size of the class in bytes 
 
 ### Security.csv
 
 This file contains the security configuration for each namespace with the following columns:
 
-- NameSpace: Namespace with defined security
-- Security setting: Type of access granted to each account
+- **NameSpace**: Namespace with defined security
+- **Security setting**: Type of access granted to each account
 
-If you're troubleshooting repository bloating, the Static.csv file helps you identify which static class is using the most space.
+If you're troubleshooting repository bloating, the *Static.csv* file can help you identify which static class is using the most space.
