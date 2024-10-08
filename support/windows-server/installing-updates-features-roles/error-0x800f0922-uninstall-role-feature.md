@@ -1,11 +1,11 @@
 ---
 title: Error 0x800f0922 when you uninstall roles
 description: Provides a solution to an issue where uninstalling Windows Server roles or features fails with error 0x800f0922.
-ms.date: 12/26/2023
+ms.date: 10/08/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, chrialle
 ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD), csstroubleshoot
 ---
 # Error 0x800f0922 when trying to uninstall Windows Server roles or features
@@ -23,7 +23,7 @@ Processing advanced installers and generic commands failed
 
 For example, when uninstalling Windows Deployment Services (WDS), the following errors were logged in the **CBS.log** under `C:\Windows\Logs\CBS`:
 
-```
+```output
 SQM: Reporting selectable update change for package: Microsoft-Windows-Deployment-Services-Package~31bf3856ad364e35~amd64`~~`6.3.9600.16384, update: Microsoft-Windows-Deployment-Services, start: Installed, applicable: Resolved, target: Resolved, client id: DISM Package Manager Provider, initiated offline: False, execution sequence: 1433, first merged sequence: 1433, download source: 0, download time (secs): 4294967295, download status: 0x0 (S_OK),reboot required: False, overall result:0x800f0922 (CBS_E_INSTALLERS_FAILED)  
 SQM: Upload requested for report:  UpdateChange_Microsoft-Windows-Deployment-Services_Microsoft-Windows-Deployment-Services-Package~31bf3856ad364e35~amd64`~~`6.3.9600.16384, session id: 142860, sample type: Standard  
 SQM: Ignoring upload request because the sample type is not enabled: Standard  
