@@ -26,7 +26,9 @@ For a Microsoft Azure Pacemaker cluster that has SBD storage protection, you can
 - [SBD with an iscsi target server](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#sbd-with-an-iscsi-target-server)
 - [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#sbd-with-an-azure-shared-disk)
 
- To diagnose the issue, you can check the `crm` logs, the `iscsiadm` result, or the `iscsi` service status that includes the SBD server IP addresses. 
+## How to diagnose the issue
+
+If the cluster nodes cannot access the SBD device, the daemon startup fails, which disrupts the cluster startup. To diagnose the issue, you can check the `crm` logs, the `iscsiadm` result, or the `iscsi` service status that includes the SBD server IP addresses. 
 
 The following examples show how to use these commands to diagnose the issue:
 
@@ -409,12 +411,12 @@ To clear the node slot, follow these steps:
 
 After you create an SBD device or add one to a cluster, you receive an `sbd failed; please check the logs` error message.
 
-Check whether you're receiving error messages while you're sending or testing messages by SBD devices.
+Check if you're receiving error messages when sending messages to SBD devices:
 
 ```bash
 sudo sbd -d  /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 message node1 test
 ```
-If you reach this issue, you will see  the following error:
+If you reach this issue, you will see the following error:
 
 ```output
 sbd failed; please check the logs.
