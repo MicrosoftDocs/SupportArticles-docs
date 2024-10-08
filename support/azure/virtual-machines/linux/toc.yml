@@ -276,7 +276,7 @@
       href: troubleshoot-azure-fence-agent-startup-suse.md
     - name: Troubleshoot Pacemaker Services startup issues in SUSE
       href: troubleshoot-pacemaker-services-suse.md
-    - name: Troubleshoot SBD SBD service failure in SUSE
+    - name: Troubleshoot SBD service failure in SUSE
       href: troubleshoot-sbd-issues-sles.md
       
 - name: Linux repositories
