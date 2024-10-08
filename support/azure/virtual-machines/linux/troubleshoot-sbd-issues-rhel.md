@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot SBD service failure in RHEL Pacemaker clusters
-description: Provides troubleshooting guidance to an issue where the SBD service don't fail to start.
+description: Provides troubleshooting guidance to an issue where the SBD service doesn't fail to start in a Red Hat Enterprise Server Pacemaker cluster.
 ms.reviewer: rnirek, sentj, hsisodia, divargas, v-weizhu
-ms.date: 09/30/2024
+ms.date: 10/08/2024
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
@@ -26,7 +26,7 @@ To set up an Azure Pacemaker cluster with the SBD fencing mechanism, use either 
 
 ## Symptoms
 
-The SBD device isn't accessible on cluster nodes. In this case, the SBD daemon fails to start and prevents the Pacemaker cluster from starting up.
+When the SBD device isn't accessible on cluster nodes, the SBD daemon fails to start and prevents the Pacemaker cluster from starting up.
 
 To get the SBD server details, use the following methods on cluster nodes:
 
@@ -177,7 +177,7 @@ To resolve this issue, follow these steps:
     sudo systemctl status iscsid
     ```
 
-    If the services are enabled and run, you will see the command output that resembles the following text:
+    If the services are enabled and running, you will see the command output that resembles the following text:
   
     ```output
     ● iscsi.service - Login and scanning of iSCSI devices
@@ -203,7 +203,7 @@ The SBD service fails to start due to the following issues:
 - Missing SBD configurations.
 - Incorrect SBD configurations such as incorrect SBD devices names or syntax errors.
 
-### Resolution: Ensure the correct SBD configuration exists
+### Resolution: Ensure the correct SBD configuration
 
 1. Validate the SBD configuration exists:
 
@@ -222,6 +222,7 @@ The SBD service fails to start due to the following issues:
           interval=600
           timeout=15
     ```
+
 2. Validate and ensure the SBD configuration file */etc/sysconfig/sbd* has the following recommended parameters and the correct SBD devices:
 
     ```output
@@ -431,7 +432,7 @@ sr0                11:0    1  628K  0 rom
 
 ## Scenario 4: The node fails to rejoin the cluster after being fenced
 
-If the SBD slot isn't in a clean state, the node will fail to rejoin the cluster after being fenced. This causes that the SBD device is in failed state and another node is in pending state.
+If the SBD slot isn't in a clean state, the node will fail to rejoin the cluster after being fenced. This causes that the SBD device on the node is in failed state and another node is in pending state.
 
 To validate the state of the SBD slot, run the following commands:
 
@@ -529,7 +530,7 @@ After you add a new SBD device into the cluster, you see the following symptoms:
 
 - When you check the SBD service status by running the `sudo systemctl status sbd` command, you get the error message "sbd failed; please check the logs" and "Failed to start sbd.service: Operation refused".
 
-- When you send a test message to a node by SBD devices by running the following command, you also get the same error message: 
+- When you send a test message to a node by a SBD device, you also get the same error message: 
 
     ```bash
     sudo sbd -d  /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 message node1 test
