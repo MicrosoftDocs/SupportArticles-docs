@@ -21,7 +21,7 @@ When you try to uninstall a Windows Server role or feature by using **Server Man
 > CBS_E_INSTALLERS_FAILED  
 Processing advanced installers and generic commands failed
 
-For example, when uninstalling Windows Deployment Services (WDS), the following errors were logged in the **CBS.log** under `C:\Windows\Logs\CBS`:
+For example, when uninstalling Windows Deployment Services (WDS), the following errors were logged in the *CBS.log* file under *C:\\Windows\\Logs\\CBS*:
 
 ```output
 SQM: Reporting selectable update change for package: Microsoft-Windows-Deployment-Services-Package~31bf3856ad364e35~amd64`~~`6.3.9600.16384, update: Microsoft-Windows-Deployment-Services, start: Installed, applicable: Resolved, target: Resolved, client id: DISM Package Manager Provider, initiated offline: False, execution sequence: 1433, first merged sequence: 1433, download source: 0, download time (secs): 4294967295, download status: 0x0 (S_OK),reboot required: False, overall result:0x800f0922 (CBS_E_INSTALLERS_FAILED)  
