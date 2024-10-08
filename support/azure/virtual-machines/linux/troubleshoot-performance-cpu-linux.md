@@ -285,7 +285,7 @@ If you are using third-party monitoring tools, provide details about these tools
 
 ### The VM is currently experiencing high CPU usage. How can I identify the root cause?
 
-You can use the tools in a script to identify the issue. You can use tools such as top and ps to identify the issue, as explained earlier.
+You can use tools such as `top` and `ps` to identify the issue, as explained earlier.
 
 ### I've identified the high CPU process. Is it possible to debug it?
 
