@@ -28,9 +28,9 @@ The WMI repository includes the following types of objects:
 
 - Namespaces: These namespaces are groupings used by all the other objects, and each namespace has a security descriptor that defines the permissions for accessing the objects within it.
 
-[!INCLUDE [Script disclaimer](../../includes/script-disclaimer.md)]
-
 ## Script
+
+[!INCLUDE [Script disclaimer](../../includes/script-disclaimer.md)]
 
 ```powershell
 param( [string]$DataPath)
