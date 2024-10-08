@@ -21,7 +21,7 @@ To set up an Azure Pacemaker cluster with the SBD fencing mechanism, use either 
 
 - [SBD with an iSCSI target server](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#sbd-with-an-iscsi-target-server)
 
-- [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-rhel-pacemakersbd-with-an-azure-shared-disk)
+- [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#sbd-with-an-azure-shared-disk)
 
 
 ## Symptoms
@@ -387,7 +387,7 @@ sr0                11:0    1  628K  0 rom
         [6:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sdc
         ```
 
-    6. Repeat step b-f to ensure other iSCSI devices are available.
+    6. Repeat step b-e to ensure other iSCSI devices are available.
     7. Repeat step a-f on another cluster node to ensure that all iSCSI devices on another cluster node are available.
 
 
