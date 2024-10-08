@@ -149,7 +149,7 @@ Office documents can open slowly, which generally occurs on a WAN connection. Th
 You should verify that the Office and SMB binaries are up-to-date, and then test by having leasing disabled on the SMB server. To verify both conditions have resolved, follow these steps:
 
 > [!NOTE]
-> This method should be used with caution. Leasing is an integral part of the SMB protocol and is typically expected to be available on an SMBv2 or SMBv3 server. Multiple features depend on the availability of leasing, such as read caching, write caching, and handle caching. While disabling leasing might resolve some slow performance issues, it will negatively affect other applications that rely on the benefits of leasing.
+> This method should be used with caution. Leasing is an integral part of the SMB protocol and is typically expected to be available on an SMBv2 or SMBv3 server. Multiple features depend on the availability of leasing, such as read caching, write caching, and handle caching. While disabling leasing might resolve some slow performance issues, it can negatively affect other applications that rely on the benefits of leasing.
 
 1. Run the following PowerShell cmdlet in Windows 8 and Windows Server 2012 or later versions of Windows:
 
