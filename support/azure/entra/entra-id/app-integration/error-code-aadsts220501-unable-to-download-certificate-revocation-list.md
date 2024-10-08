@@ -14,7 +14,7 @@ titleSuffix: Azure Directory
 ---
 # Error AADSTS220501-Unable to download Certificate Revocation List (CRL)
 
-This article describes a problem in which you receive the error message `Error AAD AADSTS220501 - Unable to download Certificate Revocation List (CRL).` that occurs when a user is trying to authenticate with a certificate-based authentication.
+This article describes a problem in which you receive the error message `Error AADSTS220501 - Unable to download Certificate Revocation List (CRL).` that occurs when a user is trying to authenticate with a certificate-based authentication.
 
 ## Symptoms
 
@@ -26,7 +26,7 @@ Certificate revocation list (CRL) either inaccessible or expired.
 
 ## Solution
 
-1) Check if the CRL file path is accessible at the client side. Example, access the CRL distribution point http://Contoso.com/CRL's/crlfinename.CRL (replace example path with your CRL URL). </br> Copy the complete CRL path in a web browser and try to access it.
+1) Verify if the CRL file path is accessible publicly. Example, access the CRL distribution point http://Contoso.com/CRL's/crlfinename.CRL (replace example path with your CRL URL). </br> Copy the complete CRL path in a web browser and try to access it.
 
 You can find the CRL configuration for the tenant using the steps from article [Quickstart: "How to configure Microsoft Entra certificate-based authentication - Microsoft Entra ID ](/azure/active-directory/authentication/how-to-certificate-based-authentication#configure-certification-authorities-using-the-microsoft-entra-admin-center)
    
