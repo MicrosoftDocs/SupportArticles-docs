@@ -12,7 +12,7 @@ This article provides troubleshooting steps for when you receive SessionHasLogge
 
 ## Symptoms
 
-In the middle of your desktop flow run, you receive the error message SessionHasLoggedOff
+In the middle of your desktop flow run, you receive the error message SessionHasLoggedOff with the message "The session logged off during run execution".
 
 ## Troubleshooting
 
