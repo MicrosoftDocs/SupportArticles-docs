@@ -1,18 +1,18 @@
 ---
 title: Install and configure IP version 6
 description: Describes how to install and configure IP version 6 (IPv6) in a Windows Server Enterprise Edition environment.
-ms.date: 12/26/2023
+ms.date: 10/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, JAMIRC
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Communications, csstroubleshoot
+ms.reviewer: kaushika, JAMIRC, hoz
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Install and configure IP version 6 in Windows Server Enterprise Server
 
 This article describes how to install and configure IP version 6 (IPv6) in a Microsoft Windows Server Enterprise Edition environment.
 
-_Applies to:_ &nbsp; Windows Server  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 325449
 
 ## Summary
@@ -45,26 +45,26 @@ While standards for QoS exist for IPv4, real-time traffic support relies on the 
 
 ## Install IPv6
 
-1. Click **Start**, click **Control Panel**, and then double-click **Network Connections**.
-2. Right-click any local area connection, and then click **Properties**.
-3. Click **Install**.
-4. Click **Protocol**, and then click **Add**.
-5. Click **Microsoft TCP/IP version 6**, and then click **OK**.
-6. Click **Close** to save changes to your network connection.
+1. Select **Start**, select **Control Panel**, and then double-click **Network Connections**.
+2. Right-click any local area connection, and then select **Properties**.
+3. Select **Install**.
+4. Select **Protocol**, and then select **Add**.
+5. Select **Microsoft TCP/IP version 6**, and then select **OK**.
+6. Select **Close** to save changes to your network connection.
 
 ## Remove IPv6
 
-1. Click **Start**, click **Control Panel**, and then double-click **Network Connections**.
-2. Right-click any local area connection, and then click **Properties**.
-3. Click **Microsoft TCP/IP version 6** in the list of installed components, and then click **Uninstall**.
-4. Click **Yes**, and then click **Close** to save changes to your network connection.
+1. Select **Start**, select **Control Panel**, and then double-click **Network Connections**.
+2. Right-click any local area connection, and then select **Properties**.
+3. Select **Microsoft TCP/IP version 6** in the list of installed components, and then select **Uninstall**.
+4. Select **Yes**, and then select **Close** to save changes to your network connection.
 
 ## Configuring IPv6 with Manual Addresses
 
-1. Click **Start**, and then search **Command Prompt**, right click **Command Prompt** select **Run As Administrator**.
-2. At the command prompt, type `netsh`, and then press ENTER.
-3. Type `interface ipv6`, and then press ENTER.
-4. Type the following command, and then press ENTER:
+1. Select **Start**, type *cmd*, right-click **Command Prompt** and then select **Run as administrator**.
+2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
+3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
+4. Type the following command, and then press <kbd>Enter</kbd>:
 
     ```console
     add address [interface=] string [address=] ipv6address
@@ -80,10 +80,10 @@ While standards for QoS exist for IPv4, real-time traffic support relies on the 
 
 ## Configuring Interface Attributes
 
-1. Click **Start**, and then search **Command Prompt**, right click **Command Prompt** select **Run As Administrator**.
-2. At the command prompt, type *netsh*, and then press ENTER.
-3. Type interface ipv6, and then press ENTER.
-4. Type the following command, and then press ENTER:
+1. Select **Start**, type *cmd*, right-click **Command Prompt** and then select **Run as administrator**.
+2. At the command prompt, type *netsh*, and then press <kbd>Enter</kbd>.
+3. Type interface ipv6, and then press <kbd>Enter</kbd>.
+4. Type the following command, and then press <kbd>Enter</kbd>:
 
     ```console
     set interface [interface=] string [[forwarding=]enabled|disabled] [[advertise=]enabled|disabled] [[mtu=] integer] [[siteid=] integer] [[metric=] integer] [[firewall=]{enabled | disabled}] [[siteprefixlength=] integer] [[store=]{active|persistent]}
@@ -103,20 +103,20 @@ This command uses the following values:
 
 ## View the IPv6 Routing Table
 
-1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
-2. At the command prompt, type `netsh`, and then press ENTER.
-3. Type `interface ipv6`, and then press ENTER.
-4. Type `show routes`, and then press ENTER.
+1. Select **Start**, type *cmd*, and then select **Command Prompt**.
+2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
+3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
+4. Type `show routes`, and then press <kbd>Enter</kbd>.
 
 > [!NOTE]
 > To view the additional parameters that are available for this command, type `show routes /?`.
 
 ## Add an IPv6 Route
 
-1. Click **Start**, and then search **Command Prompt**, right click **Command Prompt** select **Run As Administrator**.
-2. At the command prompt, type `netsh`, and then press ENTER.
-3. Type `interface ipv6`, and then press ENTER.
-4. Type the following command, and then press ENTER:
+1. Select **Start**, type *cmd*, right-click **Command Prompt** and then select **Run as administrator**.
+2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
+3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
+4. Type the following command, and then press <kbd>Enter</kbd>:
 
     ```console
     add route [prefix=]ipv6address/integer [[interface=] string] [[nexthop=]ipv6address] [[siteprefixlength=] integer] [[metric=] integer] [[publish=]{no | age | yes}] [[validlifetime=]{integer | infinite}] [[preferredlifetime=]{integer | infinite}] [[store=]{active | persistent}]
@@ -142,11 +142,11 @@ When publish is set to no or age, the route is deleted after the end of the vali
 
 ## Remove an IPv6 Route
 
-1. Click **Start**, and then search **Command Prompt**, right click **Command Prompt** select **Run As Administrator**.
-2. At the command prompt, type `netsh`, and then press ENTER.
-3. Type `interface ipv6`, and then press ENTER.
+1. Select **Start**, type *cmd*, right-click **Command Prompt** and then select **Run as administrator**.
+2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
+3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
 4. Type show routes to obtain the route prefix and the interface index of the interface over which the addresses for the route prefix are reachable.
-5. To delete a route, type the following command, and then press ENTER:
+5. To delete a route, type the following command, and then press <kbd>Enter</kbd>:
 
     ```console
     delete route [prefix=] ipv6address / integer [interface=] string
@@ -165,10 +165,10 @@ When publish is set to no or age, the route is deleted after the end of the vali
 
 ## Enable IPv6 forwarding
 
-1. Click **Start**, and then search **Command Prompt**, right click **Command Prompt** select **Run As Administrator**.
-2. At the command prompt, type `netsh`, and then press ENTER.
-3. Type `interface ipv6`, and then press ENTER.
-4. Type the following command, and then press ENTER:
+1. Select **Start**, type *cmd*, right-click **Command Prompt** and then select **Run as administrator**.
+2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
+3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
+4. Type the following command, and then press <kbd>Enter</kbd>:
 
     ```console
     set interface [interface=] string [forwarding=]enabled
@@ -191,8 +191,8 @@ When publish is set to no or age, the route is deleted after the end of the vali
 
 To obtain the IPv6 configuration for a computer:
 
-1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
-2. At the command prompt type, the following command, and then press ENTER:
+1. Select **Start**, type *cmd*, and then select **Command Prompt**.
+2. At the command prompt type, the following command, and then press <kbd>Enter</kbd>:
 
     ```console
     netsh interface ipv6 show interface
@@ -224,8 +224,8 @@ To obtain the IPv6 configuration for a computer:
 
 ## Test IPv6 connectivity by using the PING command
 
-1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
-2. At the command prompt, type the following command, and then press ENTER:
+1. Select **Start**, type *cmd*, and then select **Command Prompt**.
+2. At the command prompt, type the following command, and then press <kbd>Enter</kbd>:
 
     ```console
     netsh interface ipv6 show interface interface_name
@@ -261,7 +261,7 @@ To obtain the IPv6 configuration for a computer:
 
 ## Trace a path by using the TRACERT command
 
-1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
+1. Select **Start**, type *cmd*, and then select **Command Prompt**.
 2. At the command prompt, type either of the following commands:
 
     - tracert -6  
@@ -282,9 +282,9 @@ To obtain the IPv6 configuration for a computer:
 
 ## View the interface configuration
 
-1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
-2. At the command prompt, type `netsh -c "interface ipv6"` , and then press ENTER.
-3. Type `show interface [interface=] string`, and then press ENTER.
+1. Select **Start**, type *cmd*, and then select **Command Prompt**.
+2. At the command prompt, type `netsh -c "interface ipv6"`, and then press <kbd>Enter</kbd>.
+3. Type `show interface [interface=] string`, and then press <kbd>Enter</kbd>.
 
     This command uses the following value:
 
@@ -295,20 +295,20 @@ To obtain the IPv6 configuration for a computer:
 
 ## View the neighbor cache
 
-1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
-2. At the command prompt, type `netsh`, and then press ENTER.
-3. Type `interface ipv6`, and then press ENTER.
-4. Type `show neighbors`, and then press ENTER.
+1. Select **Start**, type *cmd*, and then select **Command Prompt**.
+2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
+3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
+4. Type `show neighbors`, and then press <kbd>Enter</kbd>.
 
 > [!NOTE]
 > To view the additional parameters that are available for this command, type `show neighbors /?`.
 
 ## View the destination cache
 
-1. Click **Start**, and then search **Command Prompt**, click **Command Prompt**.
-2. At the command prompt, type `netsh`, and then press ENTER.
-3. Type `interface ipv6`, and then press ENTER.
-4. Type `show destinationcache`, and then press ENTER.
+1. Select **Start**, type *cmd*, and then select **Command Prompt**.
+2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
+3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
+4. Type `show destinationcache`, and then press <kbd>Enter</kbd>.
 
 > [!NOTE]
 > To view the additional parameters that are available for this command, type `show destinationcache /?`.
