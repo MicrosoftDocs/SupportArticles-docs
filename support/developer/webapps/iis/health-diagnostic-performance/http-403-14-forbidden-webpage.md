@@ -69,4 +69,4 @@ To resolve this problem, follow these steps:
     appcmd set config /section:directoryBrowse /enabled:true
     ```
 
-For more information about *Appcmd.exe* command lines, see [Getting Started with AppCmd.exe](/iis/get-started/getting-started-with-iis/getting-started-with-appcmdexe).
+    For more information about *Appcmd.exe* command lines, see [Getting Started with AppCmd.exe](/iis/get-started/getting-started-with-iis/getting-started-with-appcmdexe).
