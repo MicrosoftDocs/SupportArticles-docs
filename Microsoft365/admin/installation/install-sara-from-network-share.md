@@ -17,6 +17,9 @@ appliesto:
 search.appverid: MET150
 ms.date: 02/22/2024
 ---
+> [!Important]
+> Microsoft Support and Recovery Assistant features have migrated to [Get Help](https://support.microsoft.com/en-us/windows/about-get-help-717c7ae9-5c45-45f0-b637-900b7437a395).
+
 # Install Microsoft Support and Recovery Assistant from a network share or internet location
 
 You can install Microsoft Support and Recovery Assistant on your company's Windows-based devices from the following locations:
