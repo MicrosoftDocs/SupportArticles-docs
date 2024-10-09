@@ -3,7 +3,7 @@ title: Unable to upgrade the LinkedInSalesNavigatorForUnifiedClient solution
 description: Resolves issues related to upgrading the LinkedInSalesNavigatorForUnifiedClient solution in Microsoft Dynamics 365 Sales.
 author: udaykirang
 ms.author: udag
-ms.reviewer: udag
+ms.reviewer: sagarwwal
 ms.date: 10/09/2024
 ms.custom: sap:LinkedIn Sales Navigator\LinkedIn Sales Navigator integration errors
 ---

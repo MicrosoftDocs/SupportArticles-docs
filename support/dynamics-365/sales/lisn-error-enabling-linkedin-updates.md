@@ -3,7 +3,7 @@ title: Data validation fails when you enable LinkedIn updates
 description: Resolves the data validation failure that occurs when you enable LinkedIn updates in Microsoft Dynamics 365 Sales. 
 author: udaykirang
 ms.author: udag
-ms.reviewer: udag
+ms.reviewer: sagarwwal
 ms.date: 10/09/2024
 ms.custom: sap:LinkedIn Sales Navigator\LinkedIn Sales Navigator integration errors
 ---

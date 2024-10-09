@@ -3,7 +3,7 @@ title: LinkedInSalesNavigatorControlsForUnifiedClient isn't available in the org
 description: Resolves the issue where the LinkedInSalesNavigatorControlsForUnifiedClient solution isn't available in the organization to configure LinkedIn Sales Navigator.
 author: udaykirang
 ms.author: udag
-ms.reviewer: udag
+ms.reviewer: sagarwwal
 ms.date: 10/09/2024
 ms.custom: sap:LinkedIn Sales Navigator\LinkedIn Sales Navigator integration errors
 ---
@@ -29,7 +29,7 @@ Follow these steps:
     1. Go to **Advanced settings** > **Settings** > **Customizations** > **Solutions**.
     1. Select the **LinkedIn** solution and then select **Show Dependencies**.
 
-        :::image type="content" source="media/lisn-solution-not-available-configure-lisn/ts-solution-dependencies.png" alt-text="Screenshot of LinkedIn solution dependencies.":::
+        :::image type="content" source="media/lisn-solution-not-available-configure-lisn/ts-solution-dependencies.png" alt-text="Screenshot of LinkedIn solution dependencies." lightbox="media/lisn-solution-not-available-configure-lisn/ts-solution-dependencies.png":::
 
     1. Select the **Required by** entity name and the dependent entity opens in a page.  
     1. Select **Form Properties** and under the **Events** tab go to the **Event Handlers** section.  

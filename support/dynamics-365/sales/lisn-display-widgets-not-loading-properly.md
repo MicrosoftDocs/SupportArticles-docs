@@ -3,7 +3,7 @@ title: LinkedIn Sales Navigator display widgets don't load properly
 description: Resolves the LinkedIn Sales Navigator subscription not found error or display widgets don't load in different web browsers in Microsoft Dynamics 365 Sales.
 author: udaykirang
 ms.author: udag
-ms.reviewer: udag
+ms.reviewer: sagarwwal
 ms.date: 10/09/2024
 ms.custom: sap:LinkedIn Sales Navigator\LinkedIn Sales Navigator integration errors
 ---
@@ -17,7 +17,7 @@ When you try to sign in to [LinkedIn Sales Navigator](/dynamics365/linkedin/inte
 
 > LinkedIn Sales Navigator subscription not found. You need a LinkedIn Sales Navigator Team contract in order to gain access.  
 
-:::image type="content" source="media/lisn-display-widgets-not-loading-properly/display-widget-subscription-not-found-error.png" alt-text="Screenshot of display widgets show subscription not found error.":::
+:::image type="content" source="media/lisn-display-widgets-not-loading-properly/display-widget-subscription-not-found-error.png" alt-text="Screenshot of display widgets show subscription not found error." lightbox="media/lisn-display-widgets-not-loading-properly/display-widget-subscription-not-found-error.png":::
 
 Or, the display widgets don't load in different browsers.
 

@@ -3,8 +3,7 @@ title: Can't view photos on custom contact and lead forms in Unified Interface
 description: Resolves an issue where you can't view photos on custom contact and lead forms in Unified Interface in Microsoft Dynamics 365 Sales.
 author: udaykirang
 ms.author: udag
-ms.reviewer: udag
-ms.reviewer: udagd
+ms.reviewer: sagarwwal
 ms.date: 10/09/2024
 ms.custom: sap:LinkedIn Sales Navigator\LinkedIn Sales Navigator integration errors
 ---
@@ -27,13 +26,13 @@ To resolve this issue, add the `msdyn_linkedinintegrationcommon.js` library and 
     > [!NOTE]
     > In this procedure, we are using contact custom form.
 
-1. Select the **Form Properties** option.
+1. Select the **Form Properties** option. The **Form Properties** dialog box opens.
 
     :::image type="content" source="media/lisn-unable-view-photos-custom-contact-lead-forms/ts-linkedin-contact-form-properties.png" alt-text="Screenshot of the Form Properties dialog box.":::
 
 1. In the **Form Libraries** section, search and add the `msdyn_linkedinintegrationcommon.js` library to the form.
 1. In the **Event Handlers** section, search and add the `LinkedInIntegration.LinkedInIntegrationCommon.Instance.Form_OnLoad` function to the form.
 
-    :::image type="content" source="media/lisn-unable-view-photos-custom-contact-lead-forms/ts-linkedin-contact-form-properties-added.png" alt-text="Screenshot of adding LinkedIn library and function to the form.":::
+    :::image type="content" source="media/lisn-unable-view-photos-custom-contact-lead-forms/ts-linkedin-contact-form-properties-added.png" alt-text="Screenshot of adding LinkedIn library and function to the form." lightbox="media/lisn-unable-view-photos-custom-contact-lead-forms/ts-linkedin-contact-form-properties-added.png":::
 
 1. Save and publish the form.
