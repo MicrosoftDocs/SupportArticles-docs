@@ -24,7 +24,9 @@ The Certificate Revocation List (CRL) is inaccessible or expired.
 
 1. Verify if the CRL file path is accessible publicly by opening the CRL distribution point URL via a web browser.
 
-    Here's an example of the CRL distribution point URL: `http://Contoso.com/CRLfilepath/CRLfinename.crl`.
+    Here's an example of the CRL distribution point URL:
+    
+    `http://Contoso.com/CRLfilepath/CRLfinename.crl`
 
     To find the CRL distribution point URL for the tenant, see [Configure certification authorities using the Microsoft Entra admin center](/entra/identity/authentication/how-to-certificate-based-authentication#configure-certification-authorities-using-the-microsoft-entra-admin-center).
 
