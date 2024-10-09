@@ -25,7 +25,7 @@ The table below contains the most common node auto-repair errors.
 
 | Error code | Causes & Solution |
 |---|---|
-| ARM ErrorCode: VMExtensionProvisioningError | One or more VM extensions failed to be provisioned on the VM. Read more on possible error types and troubleshooting steps at [Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (124)](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-vhdfilenotfound). |
+| ARM ErrorCode: VMExtensionProvisioningError | One or more VM extensions failed to be provisioned on the VM. Read more on possible error types and troubleshooting steps at [Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (124)](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-vhdfilenotfound). This may also occur as a result of custom script extension (CSE) errors on the node. Learn more at [Troubleshoot node not ready failures caused by CSE errors](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/availability-performance/node-not-ready-custom-script-extension-errors). |
 | ARM ErrorCode: InvalidParameter | This occurs due to a parameter causes errors when new nodes are created for an AKS cluster. Read more on causes and solution at [Troubleshoot the InvalidParameter error code](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-invalidparameter#cause). |
 | scaleSetNameAndInstanceIDFromProviderID failed |  |
 | ManagedIdentityCredential authentication failed |  |
