@@ -15,7 +15,7 @@ appliesto:
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 06/25/2024
+ms.date: 10/09/2024
 ---
 # Teams meeting add-in missing from Outlook and new Teams
 
@@ -37,79 +37,29 @@ When a version of classic Teams that is earlier than 1.7.00.6058 is uninstalled,
 
 ## Resolution
 
-For non-VDI environments, follow these steps to reinstall the Teams meeting add-in.
+For non-VDI environments, follow these steps to reinstall the Teams meeting add-in:
 
-1. Use the following PowerShell script to verify that classic Teams was uninstalled correctly:
+1. Use the [Uninstall-ClassicTeams.ps1](https://aka.ms/AAslsri) PowerShell script to verify that classic Teams was uninstalled correctly.
+1. Use the [UninstallTMA.ps1](https://aka.ms/AAsllbb) PowerShell script to verify that the Teams meeting add-in was uninstalled correctly. If this script returns an error message, follow these steps:
 
-    ```powershell
-    $userLocalAppData = [Environment]::GetFolderPath("LocalApplicationData")
-    $teamsUpdater = Join-Path -Path $userLocalAppData -ChildPath 'Microsoft\Teams\Update.exe'
-    
-    if (Test-Path -Path $teamsUpdater)
-    {
-        $process = Start-Process -Filepath $teamsUpdater -ArgumentList "--uninstall -s" -PassThru
-        $handle = $process.Handle;
-        $process.WaitForExit();
-        $exitCode = $process.ExitCode;
-    
-        if ($exitCode -ne 0) 
-        {
-            Write-Warning "classic Teams uninstallation failed with $($exitCode)"
-        }
-        else
-        {
-            Write-Output "classic Teams uninstallation was successful."
-        }
-    }
-    else
-    {
-        Write-Output "Could not find a classic Teams installation, could it already have been uninstalled?"
-    }
-    ```
+   1. Check the version of the Teams meeting add-in. Select **Start** > **Settings** > **Apps** > **Installed apps**, type *Teams Meeting Add-in* in the search box, and then check the version of **Microsoft Teams Meeting Add-in for Microsoft Office**.
+   1. If the version starts with *1.23*, follow these steps:
 
-1. Use the following PowerShell script to verify that the Teams meeting add-in was uninstalled correctly:
+      1. Download the [UninstallOldTMA.ps1](https://aka.ms/AAsllbh) PowerShell script.
+      1. Open the script in Notepad.
+      1. Check whether your version of the Teams meeting add-in is included in the `$msixDictionary` variable. If it's not included, [find the version of Microsoft Teams you're using](https://support.microsoft.com/office/find-the-version-of-microsoft-teams-you-re-using-e6d3421f-b4f2-4fc6-a69e-ebc528fb1216#ID0EBBD=Desktop), add the following entry to the `$msixDictionary` variable, and then save the script.
 
-    ```powershell
-    try {  
-       $tmaMsiPath = "{0}\MicrosoftTeamsMeetingAddinInstaller.msi" -f (get-appxpackage -name MSTeams).InstallLocation  
-       $process = Start-Process -FilePath "msiexec.exe" -ArgumentList "/x `"$tmaMsiPath`" InstallerVersion=v3 /quiet /l `"$env:USERPROFILE\Downloads\tma-uninstall.log`"" -PassThru -Wait -ErrorAction Stop
-      
-       if ($process.ExitCode -ne 0) {  
-          throw "msiexec.exe exited with code $($process.ExitCode)"  
-       }  
-       else  
-       {  
-          Write-Host "Successfully uninstalled teams meeting addin." -ForegroundColor Green  
-       }  
-    }  
-    catch {  
-       Write-Error "Failed to uninstall: $_. We'll try repairing MSI"   
-       $process = Start-Process -FilePath "msiexec.exe" -ArgumentList "/fav `"$tmaMsiPath`" /quiet /l `"$env:USERPROFILE\Downloads\tma-uninstall-repair.log`"" -PassThru -Wait -ErrorAction Stop  
-
-       if ($process.ExitCode -ne 0) {    
-          Write-Error "Repair failed with code $($process.ExitCode)"  
-       }  
-       else  
-       {  
-          Write-Output "Repair succeeded! We'll try to uninstall again"          
-          $process = Start-Process -FilePath "msiexec.exe" -ArgumentList "/x `"$tmaMsiPath`" /quiet InstallerVersion=v3 /l `"$env:USERPROFILE\Downloads\tma-uninstall-retry.log`"" -PassThru -Wait -ErrorAction Stop  
-
-          if ($process.ExitCode -eq 0) {  
-             Write-Host "Successfully uninstalled teams meeting addin." -ForegroundColor Green  
-          }
-          else  
-          {  
-             Write-Error "Could not uninstall teams meeting addin"  
-          }  
-       } 
-    }  
-    ```
-
+           "\<the version of Teams meeting add-in\>" = "\<the version of Teams\>"
+      1. Close the new Teams app.
+      1. Close the Outlook app.
+      1. Run the UninstallOldTMA.ps1 script to uninstall the Teams meeting add-in, and then go to step 5.
 1. Close the new Teams app.
 1. Close the Outlook app.
 1. Start the new Teams app.
 1. Wait until the Teams meeting add-in appears in the list in **Start** > **Settings** > **Apps** > **Installed apps**.
 1. Restart the Outlook app.
+
+If the Teams meeting add-in still doesn't work correctly, use the [TeamsMeetingAddinFixKnownIssues.ps1](https://aka.ms/AAsmdxd) PowerShell script to resolve common issues that affect the add-in.
 
 ## More information
 
