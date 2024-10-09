@@ -3091,6 +3091,8 @@ items:
       href: ./support-tools/scripts-to-cleanup-profile-folder-information-and-prevent-temp-user-profiles-from-being-created.md
     - name: Scripts to extract .msu and .cab files
       href: ./support-tools/scripts-extract-msu-cab-files.md
+    - name: Scripts to inspect the content of the WMI repository
+      href: ./support-tools/script-inspect-the-content-of-the-wmi-repository.md
     - name: Scripts to list all running WMI providers
       href: ./support-tools/scripts-list-running-wmi-providers.md
     - name: Scripts to retrieve profile age
