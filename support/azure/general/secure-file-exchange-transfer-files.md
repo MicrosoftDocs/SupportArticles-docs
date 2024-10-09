@@ -15,7 +15,7 @@ This article provides information on using Secure File Exchange.
 _Original product version:_ &nbsp; Azure  
 _Original KB number:_ &nbsp; 4012140
 
-## Summary
+## What is Secure File Exchange?
 
 When you work with Microsoft Support, it's frequently necessary to transfer files to help the troubleshooting process. We recognize that these files may contain sensitive data and must be handled securely. **Secure File Exchange** was built to enable the fast and secure transfer and storage of files.
 
@@ -30,9 +30,11 @@ The main features of Secure File Exchange are as follows:
 
 ## Guidance
 
-### Communication
+### How can I access Secure File Exchange?
 
-If a file transfer is required to assist with the resolution of a support case, you'll receive an email message from a Microsoft Support Professional. It contains a link that provides access to your Secure File Exchange workspace.
+- Check Your Email: Look for an email from a Microsoft Support Professional. The subject line will typically indicate that it pertains to your support case and the need for a file transfer.
+- Locate the Secure Link: Within the email, you will find a link to your Secure File Exchange workspace. This link is unique to your support case and should not be shared with others.
+- Access the Workspace: Click on the link provided in the email. This will direct you to the Secure File Exchange portal.
 
 ### Secure File Exchange "Sign in" and capabilities
 
@@ -40,7 +42,7 @@ Open the Secure File Exchange workspace by using the link provided to in the ema
 
 If you sign in with a "work or school, or personal Microsoft account" that hasn't been added to your service request by the Microsoft Support Professional, you can't add, download, or delete files from the workspace. If you need other accounts added to the Secure File Transfer Workspace, ask your Microsoft Support Professional and they will add them to the account allowed to interact with the workspace.
 
-#### Authentication (Have you signed in using a "work or school, or personal Microsoft account")
+#### Authentication (Have you signed in using a "work or school, or personal Microsoft account"?)
 
 - A [personal Microsoft account](https://account.microsoft.com/account), is the combination of an email address and a password that you can use to sign in to all consumer-oriented Microsoft products and cloud services. For example, Outlook (Hotmail), Messenger, OneDrive, MSN, Windows Phone, or Xbox Live. If you use an email address and password to sign in to these or other services, you'll have a Microsoft account. You can also sign up for a new one at any time. Here are some examples of personal Microsoft accounts: username@yahoo.com, username@hotmail.com.
 - A work or school Microsoft account is an account created by an organization's administrator. It enables you, as a member of your organization, access to all Microsoft cloud services, such as Microsoft Azure, Microsoft Intune, or Office 365. A work account can take the form of your work email address when an organization federates or synchronizes its Active Directory accounts with Microsoft Entra ID. For example, **username@contoso.com**.
