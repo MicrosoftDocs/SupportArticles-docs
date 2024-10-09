@@ -63,10 +63,10 @@ To resolve this problem, follow these steps:
     cd C:\Program Files\IIS Express
     ```
 
-2. Type the following command, and then select <kbd>Enter</kbd>:
+1. Type the following command, and then select <kbd>Enter</kbd>:
 
     ```console
     appcmd set config /section:directoryBrowse /enabled:true
     ```
 
-    For more information about *Appcmd.exe* command lines, see [Getting Started with AppCmd.exe](/iis/get-started/getting-started-with-iis/getting-started-with-appcmdexe).
+    For more information about `Appcmd.exe` command lines, see [Getting Started with AppCmd.exe](/iis/get-started/getting-started-with-iis/getting-started-with-appcmdexe).
