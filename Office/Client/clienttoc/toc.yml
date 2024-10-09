@@ -779,6 +779,8 @@
           href: ../onenote/notebook-offline-location.md
         - name: We couldn't start OneNote the last time we tried
           href: ../onenote/couldnt-start-onenote-the-last-time-error.md
+    - name: Outlook
+      href: /outlook/troubleshoot/outlook-client-welcome      
     - name: Performance
       items:
         - name: Some Office applications are not responding
