@@ -214,7 +214,7 @@
         "devices/**.*": "surface",
         "mem/intune/**/*.md": "microsoft-intune",
         "sales-copilot/**/*.md": "microsoft-sales-copilot",
-        "power-platform/ai-builder/**/**.*": "aibuilder",
+        "power-platform/ai-builder/**/**.*": "ai-builder",
         "sql/**/*.md": "sql",
         "sql/analysis-services/**/*.md": "analysis-services",
         "sql/azure-sql/**/*.md": "virtual-machines-sql",
