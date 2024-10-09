@@ -1,7 +1,7 @@
 ---
 title: Microsoft Entra authentication error AADSTS220501
 description: Provides a solution to the Microsoft Entra authentication error AADSTS220501.
-ms.reviewer: laks, v-weizhu
+ms.reviewer: laks, custorod, v-weizhu
 ms.service: entra-id
 ms.date: 10/10/2024
 ms.custom: sap:Issues Signing In to Applications
