@@ -52,7 +52,7 @@ Primary countries/regions that have Azure dependencies availability as of Octobe
 
 Countries/regions with an asterisk (\*) appended have recently obtained Azure dependencies. All solutions are working on unlocking their features in these regions. Check Microsoft Center documentations to see when specific solutions will go live for these regions.
 
-Azure dependencies will be coming soon to the following primary countries/regions:
+Azure dependencies will be available in the following primary countries/regions:
 - Taiwan
 - New Zealand
 
