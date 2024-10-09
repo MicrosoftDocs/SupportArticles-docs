@@ -7,18 +7,18 @@ ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hype
 ---
 # Windows Server support and installation instructions for the AMD EPYC 9004 and AMD EPYC 9005 series server processors
 
-This article introduces the Windows Server operating system support statements and installation instructions for AMD EPYC 9004 and AMD EPYC 9005 series server processors.
+This article introduces the Windows Server operating system support statements and installation instructions for systems with greater than 64 cores per CPU socket.
 
 _Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019
 
 ## Windows Server support
 
-The following Windows Server releases are supported for AMD EPYC 9004 and AMD EPYC 9005 series processors.
+The following Windows Server releases are supported on AMD EPYC 9004 and AMD EPYC 9005 series processors.
 
 * Windows Server 2019
 * Windows Server 2022
 
-## AMD EPYC Processor SKU support
+## AMD EPYC Processor OPN support
 
 AMD offers a wide range of AMD EPYC 9004 Series Processors. You can determine the specific processor model in [AMD EPYC 9004 Series Processors](https://www.amd.com/en/products/processors/server/epyc/4th-generation-9004-and-8004-series.html).
 
@@ -28,7 +28,7 @@ AMD offers a wide range of AMD EPYC 9005 Series Processors. You can determine th
 
 When installing Windows Server operating system (OS), use the latest installation media image from an appropriate licensing channel. After the initial installation is completed, update the system to the latest Windows Update release.
 
-To install Windows Server on systems that use AMD EPYC 9004/9005 models that have more than 64 cores, the following OS media images are required:
+To install Windows Server on systems that use AMD EPYC 9004/9005 parts that have more than 64 cores, the following OS media images are required:
 
 * Windows Server 2019: Build 17763.3532 (2022 October) or later
 * Windows Server 2022: Build 20348.859 (2022 July) or later
@@ -52,7 +52,7 @@ To use earlier OS media releases prior to aforementioned releases, use one of th
 
 ## Known Issues and Limitations
 
-In systems running Windows Server 2019 with the Hyper-V virtualization feature enabled, when number of logical processors is greater than 320, the operating system runs Hyper-V Minroot configuration. In such systems, the followings are issues and limitations that may be observed in AMD EPYC 9004/9005 series-based systems have more than total of 320 logical processors.
+In systems running Windows Server 2019 with many logical processors and the Hyper-V virtualization feature enabled, the operating system runs Hyper-V Minroot configuration. In such systems, the followings are issues and limitations that may be observed in AMD EPYC 9004/9005 series-based systems have more than 320 logical processors.
 
 * Task Manager in the root partition does not show CPU utilization accounting for virtual machines' workloads.
 * The operating system does not use Collaborative Processor Performance Control (CPPC) for processor power management despite CPPC being set to enable in BIOS.
