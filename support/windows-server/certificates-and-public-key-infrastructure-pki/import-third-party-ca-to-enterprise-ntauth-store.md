@@ -22,7 +22,7 @@ CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=For
 
 Certificates that are published to the NTAuth store are written to the cACertificate multiple-valued attribute. There are two supported methods to append a certificate to this attribute.
 
-## Method 1 - Import a certificate by using the Enterprise PKI Tool
+## Method 1 - Import a certificate by using the Enterprise PKI tool
 
 Enterprise PKI tool (PKIView) is an MMC snap-in component. It displays the status of one or more Microsoft Windows CAs that comprise a PKI. It's available as part of the Windows Server Remote Server Administration Tools (RSAT).
 
