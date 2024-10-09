@@ -4,7 +4,7 @@ description: Resolves the LinkedIn Sales Navigator subscription not found error 
 author: udaykirang
 ms.author: udag
 ms.reviewer: udag
-ms.date: 10/08/2024
+ms.date: 10/09/2024
 ms.custom: sap:LinkedIn Sales Navigator\LinkedIn Sales Navigator integration errors
 ---
 # LinkedIn Sales Navigator display widgets don't load properly
@@ -17,11 +17,11 @@ When you try to sign in to [LinkedIn Sales Navigator](/dynamics365/linkedin/inte
 
 > LinkedIn Sales Navigator subscription not found. You need a LinkedIn Sales Navigator Team contract in order to gain access.  
 
-:::image type="content" source="media/linkedin/display-widget-subscription-not-found-error.png" alt-text="Screenshot of display widgets show subscription not found error.":::
+:::image type="content" source="media/lisn-display-widgets-not-loading-properly/display-widget-subscription-not-found-error.png" alt-text="Screenshot of display widgets show subscription not found error.":::
 
 Or, the display widgets don't load in different browsers.
 
-:::image type="content" source="media/linkedin/display-widget-not-loading-error.png" alt-text="Screenshot of display widgets are not loading.":::
+:::image type="content" source="media/lisn-display-widgets-not-loading-properly/display-widget-not-loading-error.png" alt-text="Screenshot of display widgets are not loading.":::
 
 ## Cause
 
@@ -29,7 +29,7 @@ This issue occurs because the track protection is enabled in the browser.
 
 ## Resolution
 
-To resolve the issue, you must disable the track protection in ([Microsoft Edge](#microsoft-edge), [Mozilla FireFox](#mozilla-firefox), [Google Chrome](#google-chrome), and [Apple Safari](#apple-safari)).
+To resolve the issue, you must disable the track protection in your web browser ([Microsoft Edge](#microsoft-edge), [Mozilla FireFox](#mozilla-firefox), [Google Chrome](#google-chrome), and [Apple Safari](#apple-safari)).
 
 #### Microsoft Edge
 
@@ -37,7 +37,7 @@ To resolve the issue, you must disable the track protection in ([Microsoft Edge]
 1. From the site map, go to **Privacy, search, and services**.
 1. In the **Tracking prevention** section, select **Balanced** and disable the **Always use "Strict" tracking prevention when browsing InPrivate** option.  
 
-    :::image type="content" source="media/linkedin/edge-select-browser-settings.png" alt-text="Screenshot of configuring track prevention section in edge.":::
+    :::image type="content" source="media/lisn-display-widgets-not-loading-properly/edge-select-browser-settings.png" alt-text="Screenshot of configuring track prevention section in edge.":::
 
 #### Mozilla FireFox
 
@@ -45,7 +45,7 @@ To resolve the issue, you must disable the track protection in ([Microsoft Edge]
 1. Before the address bar, select the shield icon and the enhanced tracking protection details appears.  
 1. Disable the **Enhanced tracking protection is ON for the site** option and refresh the browser.  
 
-    :::image type="content" source="media/linkedin/firefox-select-browser-settings.png" alt-text="Screenshot of configuring track prevention section in firefox.":::
+    :::image type="content" source="media/lisn-display-widgets-not-loading-properly/firefox-select-browser-settings.png" alt-text="Screenshot of configuring track prevention section in firefox.":::
 
 1. Refresh the page and the display widgets start loading as expected.
 
@@ -55,7 +55,7 @@ In Google Chrome, the display widgets loading issue could occur in Incognito mod
 
 When you browse your organization in Incognito mode, disable the **Block third-party cookies** option. The display widgets will load as expected.  
 
-:::image type="content" source="media/linkedin/chrome-select-browser-settings.png" alt-text="Screenshot of configuring track prevention section in chrome.":::
+:::image type="content" source="media/lisn-display-widgets-not-loading-properly/chrome-select-browser-settings.png" alt-text="Screenshot of configuring track prevention section in chrome.":::
 
 #### Apple Safari
 

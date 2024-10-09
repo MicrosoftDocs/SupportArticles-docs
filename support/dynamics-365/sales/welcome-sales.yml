@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: ChristySu #Required; your GitHub user alias, with correct capitalization.
   ms.author: christys #Required; microsoft alias of author; optional team alias.
-  ms.date: 11/08/2023
+  ms.date: 10/09/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -66,15 +66,15 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Error in enabling LinkedIn updates
-            url: lisn-error-enabling-linkedin-updates.md
-          - text: Unable to upgrade the LinkedInSalesNavigatorForUnifiedClient solution
-            url: lisn-unable-upgrade-lisn-solution.md
-          - text: LinkedIn Sales Navigator display widgets are not loading properly
-            url: lisn-display-widgets-not-loading-properly.md
-          - text: Unable to view photos on custom contact and lead forms in Unified Interface
+          - text: Can't view photos on custom contact and lead forms in Unified Interface
             url: lisn-unable-view-photos-custom-contact-lead-forms.md
-          - text: Solution for configuring LinkedIn Sales Navigator is not available in the organization
+          - text: Can't upgrade the LinkedInSalesNavigatorForUnifiedClient solution
+            url: lisn-unable-upgrade-lisn-solution.md
+          - text: Data validation fails when you enable LinkedIn updates
+            url: lisn-error-enabling-linkedin-updates.md
+          - text: LinkedIn Sales Navigator display widgets don't load properly
+            url: lisn-display-widgets-not-loading-properly.md
+          - text: LinkedInSalesNavigatorControlsForUnifiedClient isn't available in the organization
             url: lisn-solution-not-available-configure-lisn.md    
 
  # Card

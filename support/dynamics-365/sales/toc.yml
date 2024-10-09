@@ -426,6 +426,18 @@
       href: you-do-not-have-required-role-privilege.md
     - name: You don't have the required role or privilege to complete this action
       href: you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
+- name: LinkedIn Sales Navigator
+  items:
+    - name: Can't view photos on custom contact and lead forms in Unified Interface
+      href: lisn-unable-view-photos-custom-contact-lead-forms.md
+    - name: Can't upgrade the LinkedInSalesNavigatorForUnifiedClient solution
+      href: lisn-unable-upgrade-lisn-solution.md
+    - name: Data validation fails when you enable LinkedIn updates
+      href: lisn-error-enabling-linkedin-updates.md
+    - name: LinkedIn Sales Navigator display widgets don't load properly
+      href: lisn-display-widgets-not-loading-properly.md
+    - name: LinkedInSalesNavigatorControlsForUnifiedClient isn't available in the organization
+      href: lisn-solution-not-available-configure-lisn.md 
 - name: Microsoft Teams Integration
   items:
     - name: Can't enable Teams dialer
@@ -448,18 +460,6 @@
       href: dialer-not-available-in-custom-app.md
     - name: Teams dialer isn't visible in the Sales Hub
       href: dialer-not-visible-in-sales.md
-- name: LinkedIn Sales Navigator
-  items:
-    - name: Error in enabling LinkedIn updates
-      href: lisn-error-enabling-linkedin-updates.md
-    - name: Unable to upgrade the LinkedInSalesNavigatorForUnifiedClient solution
-      href: lisn-unable-upgrade-lisn-solution.md
-    - name: LinkedIn Sales Navigator display widgets are not loading properly
-      href: lisn-display-widgets-not-loading-properly.md
-    - name: Unable to view photos on custom contact and lead forms in Unified Interface
-      href: lisn-unable-view-photos-custom-contact-lead-forms.md
-    - name: Solution for configuring LinkedIn Sales Navigator is not available in the organization
-      href: lisn-solution-not-available-configure-lisn.md 
 - name: Mobile Apps
   items:
     - name: We can't find any apps for your role
