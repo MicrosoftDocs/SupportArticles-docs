@@ -1,14 +1,14 @@
 ---
 title: Manual and automatic WSUS database maintenance
-description: Describes steps and scripts to perform the maintenance of the Windows Server Update Services (WSUS) database manually and automatically.
+description: Describes steps and scripts to perform the maintenance of the Windows Server Update Services (WSUS) database manually or automatically.
 author: danschuh
 ms.author: daschuh
 ms.date: 10/10/2024
 ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ---
-# Maintain the Windows Server Update Services (WSUS) database manually and automatically
+# Maintain the Windows Server Update Services (WSUS) database manually or automatically
 
-Routine maintenance of the WSUS database (SUSDB) is important to ensure the application's health and optimal performance. This article describes concise steps and scripts to maintain the SUSDB manually and automatically.
+Routine maintenance of the WSUS database (SUSDB) is important to ensure the application's health and optimal performance. This article describes concise steps and scripts to maintain the SUSDB manually or automatically.
 
 For more information, see [The complete guide to WSUS and Configuration Manager SUP maintenance](wsus-maintenance-guide.md).
 
