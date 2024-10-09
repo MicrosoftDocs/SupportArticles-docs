@@ -21,7 +21,7 @@ When you try to sign in to [LinkedIn Sales Navigator](/dynamics365/linkedin/inte
 
 Or, the display widgets don't load in different browsers.
 
-:::image type="content" source="media/lisn-display-widgets-not-loading-properly/display-widget-not-loading-error.png" alt-text="Screenshot of display widgets are not loading.":::
+:::image type="content" source="media/lisn-display-widgets-not-loading-properly/display-widget-not-loading-error.png" alt-text="Screenshot of display widgets don't load in the web browser.":::
 
 ## Cause
 

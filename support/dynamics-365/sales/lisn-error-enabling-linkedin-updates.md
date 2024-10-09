@@ -28,8 +28,8 @@ This issue occurs because CRM sync is disabled in LinkedIn Sales Navigator.
 To solve this issue, verify the following settings:
 
 - CRM sync is enabled in LinkedIn Sales Navigator.
-- The data validation setting is enabled in LinkedIn Sales Navigator. If not, you'll see the CRM sync disabled status even though CRM sync is enabled. If you can't see the data validation setting in LinkedIn Sales Navigator, ensure that you have an appropriate Sales Navigator license. For more information, see [Sales Navigator Data Validation - Overview](https://www.linkedin.com/help/sales-navigator/answer/a120992).
-- If you've enabled both the settings, ensure that you've enabled the **Enable LinkedIn updates** setting at least once.
+- The data validation setting is enabled in LinkedIn Sales Navigator. If not, you see the CRM sync disabled status even though CRM sync is enabled. If you can't see the data validation setting in LinkedIn Sales Navigator, ensure that you have an appropriate Sales Navigator license. For more information, see [Sales Navigator Data Validation - Overview](https://www.linkedin.com/help/sales-navigator/answer/a120992).
+- If you enabled both the settings, ensure that you enable the **Enable LinkedIn updates** setting at least once.
 
 ## Cause 2
 
