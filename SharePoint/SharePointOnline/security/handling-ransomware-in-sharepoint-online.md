@@ -16,7 +16,7 @@ ms.custom:
   - CI 113549
   - CSSTroubleshoot
 ms.reviewer: salarson
-description: Methods to handle ransomware issues in SharePoint Online.
+description: Methods to handle ransomware issues in SharePoint.
 ---
 
 # Handling ransomware in Sharepoint Online
@@ -29,7 +29,7 @@ Ransomware is malware that blocks access to various items on your computer. The 
 
 ### How ransomware works with SharePoint Online or OneDrive
 
-Ransomware is an executable that's run locally. The specific ransomware that's been reviewed by Microsoft that affects SharePoint Online or OneDrive manipulates individual files on the user's computer through a mapped drive into a SharePoint library or a OneDrive connection.
+Ransomware is an executable that runs locally. The specific ransomware that's been reviewed by Microsoft that affects SharePoint or OneDrive manipulates individual files on the user's computer through a mapped drive into a SharePoint library or a OneDrive connection.
 
 After the ransomware is established, the infected files are synchronized to the online environment by the sync client tool or by various WebDAV methods. Various manipulations of the files include but aren't limited to:
 
@@ -37,7 +37,7 @@ After the ransomware is established, the infected files are synchronized to the 
 - Appending an unknown extension to the filename
 - Deleting existing files
 
-Additionally, many new files are added to each directory that contain instructions regarding who to pay the ransom to.
+Additionally, many new files are added to each directory that contains instructions regarding who to pay the ransom to.
 
 ### How to verify that library items are being held for ransom
 
@@ -52,16 +52,16 @@ The signs that a SharePoint library is infected by ransomware include:
 
 If you're affected by ransomware, try the following methods:
 
-- Immediately stop OneDrive sync or disconnect the mapped drive to SharePoint library. 
+- Immediately stop OneDrive sync or disconnect the mapped drive to a SharePoint library. 
 - Ask your company administrator (or affected user) to try to restore the files by using the appropriate procedure:
 
    - SharePoint: See [Restore a document library](https://support.office.com/article/restore-a-document-library-317791c3-8bd0-4dfd-8254-3ca90883d39a)
    - OneDrive: See [Restore a OneDrive library](https://support.office.com/article/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15)
  
-Customers also have the option to use Microsoft 365 Backup for data recovery. [Microsoft 365 Backup](/microsoft-365/backup/backup-overview) offers a longer protection time and provides uniquely fast recovery from common business continuity and disaster recovery (BCDR) scenarios such as ransomware or accidental or malicious employee content overwrite or deletion. Additional BCDR scenario protections are also built directly into the service to provide an enhanced level of data protection.
+Customers can also use Microsoft 365 Backup for data recovery. [Microsoft 365 Backup](/microsoft-365/backup/backup-overview) offers a longer protection time and provides uniquely fast recovery from common business continuity and disaster recovery (BCDR) scenarios such as ransomware or accidental or malicious employee content overwrite or deletion. Additional BCDR scenario protections are also built directly into the service to provide an enhanced level of data protection.
 
 > [!NOTE]
-> SharePoint Online retains backups of all content for 14 additional days beyond actual deletion. [If content cannot be restored](https://support.office.com/article/Restore-a-previous-version-of-an-item-or-file-in-SharePoint-F66DBDA0-81F4-4D1E-B08C-793265C58934), an administrator can contact Microsoft Support to request a restoration any time inside the 14-day window. Make sure to note the following details:
+> SharePoint retains backups of all content for 14 additional days beyond actual deletion. [If content cannot be restored](https://support.office.com/article/Restore-a-previous-version-of-an-item-or-file-in-SharePoint-F66DBDA0-81F4-4D1E-B08C-793265C58934), an administrator can contact Microsoft Support to request a restoration any time inside the 14-day window. Make sure to note the following details:
 > - Which site collection URLs have been affected by ransomware?
 > - When was the last known time that the files were not modified by the ransomware?
 
