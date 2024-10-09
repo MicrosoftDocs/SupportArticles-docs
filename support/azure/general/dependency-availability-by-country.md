@@ -1,11 +1,11 @@
 ---
 title: Azure dependency availability by country/region
 description: Many product features have Azure dependencies that might not be available in all countries/regions.
-ms.date: 11/01/2023
+ms.date: 10/09/2024
 ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
-ms.reviewer: tiffanyyu
+ms.reviewer: tiffanyyu, v-weizhu
 ---
 
 # Azure dependency availability by primary country/region
@@ -52,7 +52,7 @@ Primary countries/regions that have Azure dependencies availability as of Octobe
 
 Countries/regions with an asterisk (\*) appended have recently obtained Azure dependencies. All solutions are working on unlocking their features in these regions. Check Microsoft Center documentations to see when specific solutions will go live for these regions.
 
-Coming soon:
+Azure dependencies will be coming soon to the following primary countries/regions:
 - Taiwan
 - New Zealand
 
