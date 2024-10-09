@@ -23,7 +23,7 @@ E1114 09:58:55.367731 1 static_autoscaler.go:239] Failed to fix node group sizes
 
 ## Cause
 
-This error is caused by an upstream cluster autoscaler race condition. In such a case, cluster autoscaler gets stuck in a deadlock. For more information, see [cluster-autoscaler gets stuck with "Failed to fix node group sizes" error ](https://github.com/kubernetes/autoscaler/issues/6128).
+This error is caused by an upstream cluster autoscaler race condition. In such a case, cluster autoscaler gets stuck in a deadlock. For more information, see [cluster-autoscaler gets stuck with "Failed to fix node group sizes" error](https://github.com/kubernetes/autoscaler/issues/6128).
 
 ## Solution
 
