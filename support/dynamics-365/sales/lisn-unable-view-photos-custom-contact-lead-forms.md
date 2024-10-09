@@ -1,15 +1,15 @@
 ---
 title: Can't view photos on custom contact and lead forms in Unified Interface
-description: Resolves an issue where you can't view photos on custom contact and lead forms in Unified Interface in Microsoft Dynamics 365 Sales.
+description: Resolves an issue where you can't view photos in custom contact and lead forms in Unified Interface in Microsoft Dynamics 365 Sales.
 author: udaykirang
 ms.author: udag
 ms.reviewer: sagarwwal
 ms.date: 10/09/2024
 ms.custom: sap:LinkedIn Sales Navigator\LinkedIn Sales Navigator integration errors
 ---
-# Can't view photos on custom contact and lead forms in Unified Interface
+# Can't view photos in custom contact and lead forms in Unified Interface
 
-This article provides a resolution for an issue where you can't view photos on custom contact and lead forms in Unified Interface in Microsoft Dynamics 365 Sales.
+This article provides a resolution for an issue where you can't view photos in custom contact and lead forms in Unified Interface in Microsoft Dynamics 365 Sales.
 
 ## Symptoms
 
@@ -21,12 +21,10 @@ To resolve this issue, add the `msdyn_linkedinintegrationcommon.js` library and 
 
 1. Sign in to your Dynamics 365 app.
 1. Go to **Advanced Settings** > **Customizations** > **Customize the System**.
-1. From the **Entities** site map, select the entity and then custom form for which you want to display the photo.  
 
-    > [!NOTE]
-    > In this procedure, we are using contact custom form.
+1. From the **Entities** site map, select the entity and then select the custom form (for example, a contact custom form) for which you want to display the photo.
 
-1. Select the **Form Properties** option. The **Form Properties** dialog box opens.
+1. Select the **Form Properties** option to open the **Form Properties** dialog box.
 
     :::image type="content" source="media/lisn-unable-view-photos-custom-contact-lead-forms/ts-linkedin-contact-form-properties.png" alt-text="Screenshot of the Form Properties dialog box.":::
 
