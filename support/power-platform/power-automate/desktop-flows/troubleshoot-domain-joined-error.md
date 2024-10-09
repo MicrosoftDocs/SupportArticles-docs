@@ -1,6 +1,6 @@
 ---
 title: Connection creation fails with MissingOnPremSidForMachineDomainJoined
-description: Solves the error that occurs when you create a desktop flow connection using the connect with sign-in option in Microsoft Power Automate for desktop.
+description: Solves an error that occurs when you create a desktop flow connection using the connect with sign-in option in Microsoft Power Automate for desktop.
 author: QuentinSele
 ms.author: quseleba
 ms.date: 10/08/2024
@@ -25,7 +25,7 @@ When you create a desktop flow connection using the [connect with sign-in](/powe
 
 ## Cause
 
-You use an Active Directory domain-joined machine and the synchronization between the domain controller and Microsoft Entra ID isn't properly done. When you use an Active Directory domain-joined machine, this synchronization is a [prerequisite](/power-automate/desktop-flows/desktop-flow-connections#prerequisites) to be able to use sign-in connections for desktop flows.
+You use an Active Directory (AD) domain-joined machine and the synchronization between the domain controller and Microsoft Entra ID isn't properly done. When you use an AD domain-joined machine, this synchronization is a [prerequisite](/power-automate/desktop-flows/desktop-flow-connections#prerequisites) to using sign-in connections for desktop flows.
 
 ## Resolution 1: Contact your administrator
 
