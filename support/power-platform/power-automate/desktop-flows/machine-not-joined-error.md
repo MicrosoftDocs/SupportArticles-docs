@@ -14,17 +14,18 @@ This article provides resolutions for errors that occur when you create a deskto
 
 When you create a desktop flow connection using the [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) option, the connection creation fails with one of the following errors:
 
-- > Failed to create OAuth connection: ClientError: Test connection failed.
-  > 
-  > Details: Connection failed: [Machine \<machineID>] This computer has not joined Microsoft Entra or the domain.
+> Failed to create OAuth connection: ClientError: Test connection failed.
+> 
+> Details: Connection failed: [Machine \<machineID>] This computer has not joined Microsoft Entra or the domain.
 
-- > ```json
-  > {
-  >    "error":{
-  >        "code": "MachineNotJoined",
-  >        "message": "The machine is neither Microsoft Entra nor domain joined."  
-  >    }    
-  > }
+
+```json
+ {
+    "error":{
+        "code": "MachineNotJoined",
+        "message": "The machine is neither Microsoft Entra nor domain joined."  
+    }    
+  }
 ```
 
 ## Cause
