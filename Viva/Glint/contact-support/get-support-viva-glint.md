@@ -3,7 +3,7 @@ title: Get support for Viva Glint
 description: Provides steps to submit an online support request for Microsoft Viva Glint issues.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 09/11/2024
+ms.date: 09/23/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -49,8 +49,8 @@ Follow these steps:
 
    - **Title**: Enter **Viva Glint**, and then add a brief summary. If the issue is urgent, include the word **Urgent**.
    - **Description**: Add a detailed description of the issue, including steps to reproduce and the date and approximate time that the issue occurred.
-   - **Confirm your number**: Confirm your telephone number.
-   - **Confirm email address of authorized contacts**: Confirm your email address, and then add the email addresses of other users who should receive updates.
+   - **Confirm your number**: Check whether the telephone number listed is correct. If not, update it as appropriate.
+   - **Confirm email address of authorized contacts**: Check whether the email address listed for you is correct. If not, update it as appropriate and then add the email addresses of other users who should receive updates.
    - **Consent to the recording of all calls**: Select **Yes** or **No**.
    - **Attachments**: Add any relevant attachments, including network trace files that you generated and saved.
    - **Accessibility settings**: Select or clear the **I have accessibility related needs** option.
