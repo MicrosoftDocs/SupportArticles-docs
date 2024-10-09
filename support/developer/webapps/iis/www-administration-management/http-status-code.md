@@ -1,16 +1,16 @@
 ---
 title: HTTP status code overview
-description: This article provides a list of the HTTP status codes in IIS 7.0 and later versions.
+description: This article provides a list of the HTTP status codes in IIS on Windows 2016 and later versions.
 ms.date: 07/19/2024
 ms.custom: sap:Health, Diagnostic, and Performance Features\HTTP error logging
-ms.reviewer: robmcm
+ms.reviewer: robmcm, paulboc
 ---
 
 # HTTP status codes in IIS
 
-This article provides a list of the Hypertext Transfer Protocol (HTTP) status codes in Microsoft Internet Information Services (IIS) 7.0 and later versions.
+This article provides a list of the Hypertext Transfer Protocol (HTTP) status codes in Microsoft Internet Information Services (IIS) on Windows 2016 and later versions.
 
-_Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
+_Original product version:_ &nbsp; Internet Information Services on Windows 2016 and later versions 
 _Original KB number:_ &nbsp; 943891
 
 ## Introduction
@@ -27,8 +27,7 @@ The first digit of the status code defines the class of response. The last two d
 
 ## Log file locations
 
-The HTTP status code is recorded in the IIS log. Internet Information Services (IIS) puts log files in the following folder by default:  
-`inetpub\logs\Logfiles`
+The HTTP status code is recorded in the IIS log. IIS puts log files in the folder by default: `inetpub\logs\Logfiles`.
 
 This folder contains separate directories for each website. The log files are created in the directories daily and are named by using the date by default. For example, a log file may be named as _exYYMMDD.log_.
 
@@ -70,7 +69,7 @@ IIS on Windows 2016 and later versions use the following success HTTP status cod
 
 These HTTP status codes indicate that the client browser must take more action to fulfill the request. For example, the client browser may have to request a different page on the server. Or, the client browser may have to repeat the request by using a proxy server.
 
-IIS 7.0 and later versions use the following redirection HTTP status codes:
+IIS uses the following redirection HTTP status codes:
 
 | Code | Description | Notes |
 |--|--|--|
@@ -170,7 +169,7 @@ IIS on Windows Server 2016 and later versions define the following HTTP status c
 | 403.13 | Client certificate revoked | The client browser tries to use a client certificate that was revoked by the issuing certification authority. |
 | 403.14 | Directory listing denied | The server isn't configured to display a content directory listing, and a default document isn't set. For more information, see [HTTP Error 403.14](../health-diagnostic-performance/http-403-14-forbidden-webpage.md). |
 | 403.15 | Client access licenses exceeded | The number of client access licenses has exceeded the limits on the web server. |
-| 403.16 | Client certificate is untrusted or invalid | The client browser tries to use an invalid client certificate. Or the server that is running IIS 7.0 and later versions doesn't trust the client certificate. For more information, see [HTTP Error 403.16](../health-diagnostic-performance/http-403-forbidden-access-website.md). |
+| 403.16 | Client certificate is untrusted or invalid | The client browser tries to use an invalid client certificate. Or the server that is running IIS on Windows 2016 and later versions doesn't trust the client certificate. For more information, see [HTTP Error 403.16](../health-diagnostic-performance/http-403-forbidden-access-website.md). |
 | 403.17 | Client certificate has expired or is not yet valid | The client browser tries to use a client certificate that is expired or that isn't yet valid. |
 | 403.18 | Cannot execute requested URL in the current application pool | A custom error page is configured. And the application pool of the customer error page is different with the application pool of the requested URL. |
 | 403.19 | Cannot execute CGI applications for the client browser in this application pool | The identity of the application pool doesn't have the Replace a process level token user right. |
