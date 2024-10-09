@@ -1,32 +1,26 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
-title: WSUS SUSDB Automated Maintenance
-description: Automating SUSDB routine maintenance.
-author:      danschuh # GitHub alias
-ms.author:   daschuh # Microsoft alias
-ms.service: configuration-manager
-ms.topic: troubleshooting
-ms.date:     10/04/2024
-ms.subservice: software-updates
+title: Manual and automatic WSUS database maintenance
+description: Describes steps and scripts to perform the maintenance of the Windows Server Update Services (WSUS) database manually and automatically.
+author: danschuh
+ms.author: daschuh
+ms.date: 10/10/2024
+ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ---
-# WSUS SUSDB Automated Maintenance
+# Maintain the Windows Server Update Services (WSUS) database manually and automatically
 
-## Introduction
+Routine maintenance of the WSUS database (SUSDB) is important to ensure the application's health and optimal performance. This article describes concise steps and scripts to maintain the SUSDB manually and automatically.
 
-Routine maintenance of the database for Windows Server Update Services (WSUS) is important for the health and proper function of the application. The following 12 steps are a more concise process very similar to [The complete guide to WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide).
+For more information, see [The complete guide to WSUS and Configuration Manager SUP maintenance](wsus-maintenance-guide.md).
 
-### How long do the steps take?
+## How long does the maintenance take?
 
-Your mileage may vary depending on the machine resources such as CPU, Memory, Disk. Some of the variables include the time since the last maintenance, the number of Products and Classifications selected, and the number of updates that need to be cleaned up. In a small environment with minimal Products and Categories and maintenance on SUSDB recently done, these steps most likely take under a minute to run automated with the [RA] option in the automated script. On the other hand, I observed it taking over 10 days to run all the steps. If the steps run for over 10 days, they most likely fail. If you can’t complete the maintenance successfully, you need to create a new SUSDB.
+The maintenance duration might vary depending on the machine's resources, including CPU, memory, and disk capacity. Factors affecting the maintenance duration include the time since the last maintenance, the number of selected products and classifications, and the volume of updates that need to be cleaned up.
 
-## Manual SUSDB-Maintenance
+In a small environment with minimal products and classifications, and with recent maintenance on the SUSDB, the automatic scripts with the `RA` option might take less than one minute to run. However, in some cases, it might take several days to complete. If it takes longer than expected and you're unable to complete the maintenance successfully, you need to create a new SUSDB.
 
-The poor health of the SUSDB can often be attributed to having too many superseded, declined, and obsolete updates. Anything more than a few hundred in the last three columns of this **Update Count** query and maintenance should be performed. To get a count of updates, run this SQL query.
+## Query to obtain the update count
 
-### Update Count Query
+An excessive number of superseded, declined, and obsolete updates often causes the poor health of the SUSDB. To obtain the update count, run the following SQL query. If the counts in the last three columns of the query result exceed a few hundred, maintenance should be performed.
 
 ```sql
 use SUSDB;
@@ -46,187 +40,155 @@ select
 (Select count (*) from vwMinimalUpdate where declined=1) as 'Declined',
 (Select count (*) from vwMinimalUpdate where IsSuperseded =1 and declined=1) 'Superseded & Declined',
 (select Count(*)  From @tmpTable ) 'Obsolete Updates Needed to be cleaned'
-
 ```
+
+## Maintain the WSUS database (SUSDB) manually
 
 > [!IMPORTANT]
-> Run the steps on each WSUS in the hierarchy. When performing a cleanup and removing items from WSUS servers, you should start at the **bottom** of the hierarchy.
-> Make sure you've turned off any scheduled synchronizations, either in Configuration Manager if using that or in the WSUS console if standalone WSUS.
+>
+> - Run the steps on each WSUS server in the hierarchy. When performing a cleanup and removing items from WSUS servers, start at the lowest level of the hierarchy.
+> - Ensure that any scheduled synchronizations are disabled, either in Configuration Manager (if in use) or on standalone WSUS servers.
 
-Steps 9-12 you may need to run multiple times due to the large number of declined updates. After each run, execute the **Updates Count** query to verify the number is going down and to monitor progress. Step 8 and\or 9 may end in error each time you run it, hence the reason for steps 9-12 and running it again. This is normal and to be expected.  Some of these steps, especially #9 could take several hours to run.
+The following steps can resolve many issues with scanning and synchronization. You might need to repeat steps 9 through 12 multiple times if there's a large number of declined updates. After each run, execute the [SQL query](#query-to-obtain-the-update-count) to confirm that the update count is decreasing. Steps 8 and 9 might result in errors each time, which is expected. Therefore, you need to repeat steps 9 through 12 multiple times. Some steps especially step 9 might take several hours to complete.
 
-This process is long and repetitive, but it can resolve many issues with scanning and syncing.  
+1. Run the SQL script that is described in [Slow performance of the spDeleteUpdate procedure](spdeleteupdate-slow-performance.md).
+2. Shrink the SUSDB files.
+3. Shrink the SUSDB.
+4. Reindex and update statistics on the SUSDB.
 
-1. Run this SQL first.  [Slow performance of the spDeleteUpdate procedure - Configuration Manager | Microsoft Docs](/troubleshoot/mem/configmgr/spdeleteupdate-slow-performance)
+    1. To reindex the SUSDB, run the following SQL script:
 
-2. Shrink Files
-3. Shrink Database
-4. Reindex and update stats on the SUSDB.
+        ```sql
+        EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
+        ```
 
-Run **reindex** first
+    2. To update statistics, run the following SQL script:
 
-```sql
-EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
-```
+        ```sql
+        Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS" 
+        ```
 
-Run **update statistics** second
+5. Perform a cleanup of synchronization history.
 
-```sql
-Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS" 
-```
+    > [!NOTE]
+    > If there is a large number of synchronizations, the WSUS console may crash.
 
-5. Cleanup of sync history. If there's a large number of syncs, it can crash the WSUS console.
+    ```sql
+    USE SUSDB 
+    GO 
+    DELETE FROM tbEventInstance WHERE EventNamespaceID = '2' AND EVENTID IN ('381', '382', '384', '386', '387', '389')
+    ```
 
-```sql
-USE SUSDB 
-GO 
-DELETE FROM tbEventInstance WHERE EventNamespaceID = '2' AND EVENTID IN ('381', '382', '384', '386', '387', '389')
-```
+6. Perform a cleanup of superseded updates older than 30 days, or according to your specific configuration.
 
-6. Cleanup of all superseded updates older than 30 days OR based on what you set it to clean up.
+    > [!NOTE]
+    >
+    > - The value of `30` in the first line indicates the number of days between today and the release date, during which superseded updates should not be marked as declined.
+    > - In Configuration Manager, this value should align with the [supersedence rules](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_SupersedenceRules) configured in the Software Update Point (SUP) component properties.
+    > - On standalone WSUS servers, specify the number of days you want to retain superseded updates. For instance, set the value to `60` instead of `30` to keep two months' superseded updates. Any updates older than this period will be marked as declined and subsequently cleaned up.
 
-> [!NOTE]
-> This is the only step that you may need to modify. On the first line, the value **30** represents the number of days between today and the release date for which the superseded updates must not be declined. This should match the configuration of supersedence rules in SUP component properties, if ConfigMgr is being used.
-> If standalone WSUS, specify how many days you require to keep superseded updates. i.e. Put 60 here instead of 30 to keep two months of superseded updates. Anything older than this will be declined and cleaned up.
-> ```
-> DECLARE @thresholdDays INT = 30
-> ```
-```sql
-DECLARE @thresholdDays INT = 30   -- Specify the number of days between today and the release date for which the superseded updates must not be declined. This should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.
-DECLARE @testRun BIT = 0          -- Set this to 1 to test without declining anything. 
--- There shouldn't be any need to modify anything after this line.
-DECLARE @uid UNIQUEIDENTIFIER
-DECLARE @title NVARCHAR(500)
-DECLARE @date DATETIME
-DECLARE @userName NVARCHAR(100) = SYSTEM_USER 
-DECLARE @count INT = 0 
-DECLARE DU CURSOR FOR
-       SELECT MU.UpdateID, U.DefaultTitle, U.CreationDate FROM vwMinimalUpdate MU 
-       JOIN PUBLIC_VIEWS.vUpdate U ON MU.UpdateID = U.UpdateId
-       WHERE MU.IsSuperseded = 1 AND MU.Declined = 0 AND MU.IsLatestRevision = 1
-       AND MU.CreationDate < DATEADD(dd,-@thresholdDays,GETDATE())
-       ORDER BY MU.CreationDate 
-PRINT 'Declining superseded updates older than ' + CONVERT(NVARCHAR(5), @thresholdDays) + ' days.' + CHAR(10) 
-OPEN DU
-FETCH NEXT FROM DU INTO @uid, @title, @date
-WHILE (@@FETCH_STATUS > - 1)
-BEGIN  
-       SET @count = @count + 1
-       PRINT 'Declining update ' + CONVERT(NVARCHAR(50), @uid) + ' (Creation Date ' + CONVERT(NVARCHAR(50), @date) + ') - ' + @title + ' ...'
-       IF @testRun = 0
-              EXEC spDeclineUpdate @updateID = @uid, @adminName = @userName, @failIfReplica = 1 
-       FETCH NEXT FROM DU INTO @uid, @title, @date
-END 
-CLOSE DU
-DEALLOCATE DU 
-PRINT CHAR(10) + 'Attempted to decline ' + CONVERT(NVARCHAR(10), @count) + ' updates.'
-```
+    ```sql
+    DECLARE @thresholdDays INT = 30   -- Specify the number of days between today and the release date during which superseded updates should not be marked as declined. If Configuration Manager is being used with WSUS, this value should match the configuration of supersedence rules in software update point (SUP) component properties.
+    DECLARE @testRun BIT = 0          -- Set this value to 1 to test without declining anything. 
+    -- There shouldn't be any need to modify anything after this line.
+    DECLARE @uid UNIQUEIDENTIFIER
+    DECLARE @title NVARCHAR(500)
+    DECLARE @date DATETIME
+    DECLARE @userName NVARCHAR(100) = SYSTEM_USER 
+    DECLARE @count INT = 0 
+    DECLARE DU CURSOR FOR
+           SELECT MU.UpdateID, U.DefaultTitle, U.CreationDate FROM vwMinimalUpdate MU 
+           JOIN PUBLIC_VIEWS.vUpdate U ON MU.UpdateID = U.UpdateId
+           WHERE MU.IsSuperseded = 1 AND MU.Declined = 0 AND MU.IsLatestRevision = 1
+           AND MU.CreationDate < DATEADD(dd,-@thresholdDays,GETDATE())
+           ORDER BY MU.CreationDate 
+    PRINT 'Declining superseded updates older than ' + CONVERT(NVARCHAR(5), @thresholdDays) + ' days.' + CHAR(10) 
+    OPEN DU
+    FETCH NEXT FROM DU INTO @uid, @title, @date
+    WHILE (@@FETCH_STATUS > - 1)
+    BEGIN  
+           SET @count = @count + 1
+           PRINT 'Declining update ' + CONVERT(NVARCHAR(50), @uid) + ' (Creation Date ' + CONVERT(NVARCHAR(50), @date) + ') - ' + @title + ' ...'
+           IF @testRun = 0
+                  EXEC spDeclineUpdate @updateID = @uid, @adminName = @userName, @failIfReplica = 1 
+           FETCH NEXT FROM DU INTO @uid, @title, @date
+    END 
+    CLOSE DU
+    DEALLOCATE DU 
+    PRINT CHAR(10) + 'Attempted to decline ' + CONVERT(NVARCHAR(10), @count) + ' updates.'
+    ```
 
-7. Cleanup of all obsolete updates
+7. Perform a cleanup of obsolete updates.
 
-```sql
-DECLARE @var1 INT
-DECLARE @msg nvarchar(100)
-CREATE TABLE #results (Col1 INT)
-        INSERT INTO #results(Col1) EXEC spGetObsoleteUpdatesToCleanup
-DECLARE WC Cursor
-        FOR
-        SELECT Col1 FROM #results
-OPEN WC
-        FETCH NEXT FROM WC
-        INTO @var1
-        WHILE (@@FETCH_STATUS > -1)
-        BEGIN SET @msg = 'Deleting' + CONVERT(varchar(10), @var1)
-        RAISERROR(@msg,0,1) WITH NOWAIT EXEC spDeleteUpdate @localUpdateID=@var1
-        FETCH NEXT FROM WC INTO @var1 END        
-CLOSE WC
-        DEALLOCATE WC
-        
-        DROP TABLE #results
-```
+    ```sql
+    DECLARE @var1 INT
+    DECLARE @msg nvarchar(100)
+    CREATE TABLE #results (Col1 INT)
+            INSERT INTO #results(Col1) EXEC spGetObsoleteUpdatesToCleanup
+    DECLARE WC Cursor
+            FOR
+            SELECT Col1 FROM #results
+    OPEN WC
+            FETCH NEXT FROM WC
+            INTO @var1
+            WHILE (@@FETCH_STATUS > -1)
+            BEGIN SET @msg = 'Deleting' + CONVERT(varchar(10), @var1)
+            RAISERROR(@msg,0,1) WITH NOWAIT EXEC spDeleteUpdate @localUpdateID=@var1
+            FETCH NEXT FROM WC INTO @var1 END        
+    CLOSE WC
+            DEALLOCATE WC
+            
+            DROP TABLE #results
+    ```
 
-8. Run PowerShell ISE as Admin - WSUS Cleanup Wizard via PowerShell  
+8. From an elevated Windows PowerShell prompt, run the following script to initiate the WSUS Cleanup wizard:
 
-```powershell
-[reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | out-null
-$wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
-$cleanupScope = new-object Microsoft.UpdateServices.Administration.CleanupScope;
-$cleanupScope.DeclineSupersededUpdates = $true
-$cleanupScope.DeclineExpiredUpdates = $true
-$cleanupScope.CleanupObsoleteUpdates = $true
-$cleanupScope.CompressUpdates = $true
-$cleanupScope.CleanupObsoleteComputers = $true
-$cleanupScope.CleanupUnneededContentFiles = $true
-$cleanupManager = $wsus.GetCleanupManager();
-$cleanupManager.PerformCleanup($cleanupScope); 
-```
+    ```powershell
+    [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | out-null
+    $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
+    $cleanupScope = new-object Microsoft.UpdateServices.Administration.CleanupScope;
+    $cleanupScope.DeclineSupersededUpdates = $true
+    $cleanupScope.DeclineExpiredUpdates = $true
+    $cleanupScope.CleanupObsoleteUpdates = $true
+    $cleanupScope.CompressUpdates = $true
+    $cleanupScope.CleanupObsoleteComputers = $true
+    $cleanupScope.CleanupUnneededContentFiles = $true
+    $cleanupManager = $wsus.GetCleanupManager();
+    $cleanupManager.PerformCleanup($cleanupScope); 
+    ```
 
-9. Run PowerShell ISE as Admin - Cleanup Declined  
+9. From an elevated Windows PowerShell prompt, run the following script to perform a cleanup of declined updates:
 
-```powershell
-[reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")
-$wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
-$wsus.GetUpdates() | Where {$_.IsDeclined -eq $true} | ForEach-Object {$wsus.DeleteUpdate($_.Id.UpdateId.ToString()); Write-Host $_.Title removed } 
- ```
+    ```powershell
+    [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")
+    $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
+    $wsus.GetUpdates() | Where {$_.IsDeclined -eq $true} | ForEach-Object {$wsus.DeleteUpdate($_.Id.UpdateId.ToString()); Write-Host $_.Title removed } 
+    ```
 
-10. Shrink Files
-11. Shrink Database
-12. Reindex and update stats on the SUSDB.
+10. Shrink the SUSDB files.
+11. Shrink the SUSDB.
+12. Reindex and update statistics on the SUSDB.
 
-Run **reindex** first
+    1. To reindex the SUSDB, run the following SQL script:
 
-```sql
-EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
-```
+        ```sql
+        EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
+        ```
 
-Run **update statistics** second
+    2. To update statistics, run the following SQL script:
 
-```sql
-Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS" 
-```
+        ```sql
+        Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS" 
+        ```
 
-## Automated SUSDB-Maintenance
+## Maintain the WSUS database (SUSDB) automatically
 
-This PowerShell script mirrors the manual steps.   SUSDB-Maintenance.log is created and opened when the script is run.
-
-> [!NOTE]
-> **Requirements**
-> This script presents the following menu options for performing SUSDB Maintenance.
-
-[S] Change SQL Server, currently set to 
-
-[A] Update Count
-
-[1] Update spDeleteUpdate procedure
-
-[2] Shrink Files
-
-[3] Shrink Database
-
-[4] Reindex and Update Statistics
-
-[5] Cleanup Sync History
-
-[6] Cleanup Superseded Updates Older than x Days
-
-[7] Cleanup Obsolete Updates
-
-[8] WSUS Cleanup Wizard
-
-[9] Cleanup Declined
-
-[10] Shrink Files
-
-[11] Shrink Database
-
-[12] Reindex and Update Statistics
-
-[RA] Run all above steps sequentially
-
+The following PowerShell script replicates the manual steps, and a *SUSDB-Maintenance.log* file is created and opened when the script is executed.
 
 > [!IMPORTANT]
-> Make sure you've turned off any scheduled synchronizations, either in Configuration Manager if using that or in the WSUS console if standalone WSUS.
-```powershell 
+> Ensure that any scheduled synchronizations are disabled, either in Configuration Manager (if in use) or on standalone WSUS servers.
+
+```powershell
 <# SUSDB-Maintenance
 
 Requirements
@@ -236,7 +198,7 @@ Requirements
 * Must have internet access to download SQL PowerShell Module.
 * Must be using v22 or higher of SQL Server PowerShell Module.
 
-This script will present the following menu options for performing SUSDB Maintenance.  SUSDB-Maintenance.log will be created and opened when the script is run.
+This script will present the following menu options for performing SUSDB Maintenance. A SUSDB-Maintenance.log file will be created and opened when the script is executed.
 
 [S] Change SQL Server, currently set to 
 [A] Update Count
