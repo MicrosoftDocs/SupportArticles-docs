@@ -1,6 +1,6 @@
 ---
 title: HTTP Error 403.14 when you open IIS webpages
-description: Provides resolutions for the "HTTP 403.14 The web server is configured to not list the contents of this directory" error message that occurs when you visit an Internet Information Services webpage.
+description: Helps resolve the HTTP 403.14 The web server is configured to not list the contents of this directory error when you visit an Internet Information Services webpage.
 ms.date: 10/09/2024
 ms.reviewer: damatei
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 942062
 
 When you visit a website hosted on IIS 10.0 or a later version, you receive an error message that resembles the following one:
 
-> Server Error in Application "**application name**"  
+> Server Error in Application "\<application name\>"  
 > HTTP Error 403.14 - Forbidden  
 > HRESULT: 0x00000000  
 > Description of HRESULT : The Web server is configured to not list the contents of this directory.
@@ -37,7 +37,7 @@ This problem occurs because the website doesn't have the Directory Browsing feat
 
 To resolve this problem, follow these steps:
 
-1. Select **Start** > **Run**, type **inetmgr.exe**, and then select **OK** to start IIS Manager.
+1. Select **Start** > **Run**, type *inetmgr.exe*, and then select **OK** to start IIS Manager.
 1. In IIS Manager, expand **server name** > **Web sites**, and select the website that you want to change.
 1. In the **Features** view, double-click **Directory Browsing**.
 1. In the **Actions** pane, select **Enable**.
@@ -46,18 +46,18 @@ To resolve this problem, follow these steps:
 
 To resolve this problem, follow these steps:
 
-1. Select **Start** > **Run**, type **inetmgr.exe**, and then select **OK** to start IIS Manager.
-1. In IIS Manager, expand **server name**, expand **Web sites**, and then select the website that you want to change.
+1. Select **Start** > **Run**, type *inetmgr.exe*, and then select **OK** to start IIS Manager.
+1. In IIS Manager, expand **server name** > **Web sites**, and then select the website that you want to change.
 1. In the **Features** view, double-click **Default Document**.
 1. In the **Actions** pane, select **Enable**.
-1. In the **Features** view, the **Default Document** must be listed (preferably first). If not, in the **Actions** pane, select **Add**, type the name of the default document in the **Add Default Document** box and then select **OK**. The file must exist in the site's root folder.
+1. In the **Features** view, the **Default Document** must be listed (preferably first). If not, in the **Actions** pane, select **Add**, type the name of the default document in the **Add Default Document** box, and then select **OK**. The file must exist in the site's root folder.
 
 ### Method 3: Enable the Directory Browsing feature in IIS Express
 
 > [!NOTE]
 > This method is for the web developers who experience this issue when they use IIS Express.
 
-1. Open a **Command Prompt** window, and navigate to the IIS Express folder on your computer. For example, type the following command at the command prompt, and then select <kbd>Enter</kbd>:
+1. Open a **Command Prompt** window, and navigate to the *IIS Express* folder on your computer. For example, type the following command at the command prompt, and then select <kbd>Enter</kbd>:
 
     ```console
     cd C:\Program Files\IIS Express
@@ -69,4 +69,4 @@ To resolve this problem, follow these steps:
     appcmd set config /section:directoryBrowse /enabled:true
     ```
 
-For more information about Appcmd.exe command lines, see [Getting Started with AppCmd.exe](/iis/get-started/getting-started-with-iis/getting-started-with-appcmdexe).
+For more information about *Appcmd.exe* command lines, see [Getting Started with AppCmd.exe](/iis/get-started/getting-started-with-iis/getting-started-with-appcmdexe).
