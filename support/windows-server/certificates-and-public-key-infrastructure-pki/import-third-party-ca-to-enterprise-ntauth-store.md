@@ -1,6 +1,6 @@
 ---
 title: Import third-party certification authorities (CAs) into Enterprise NTAuth store
-description: Describes two methods you can use to import the certificates of third-party CAs into the Enterprise NTAuth store. You can use the public key infrastructure (PKI) Enterprise PKI Tool, or Certutil.exe.
+description: Describes two methods you can use to import the certificates of third-party CAs into the Enterprise NTAuth store. You can use the Enterprise Public Key Infrastructure (PKI) tool, or Certutil.exe.
 ms.date: 10/09/2024
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 ---
 # How to import third-party certification authority (CA) certificates into the Enterprise NTAuth store
 
-There are two methods you can use to import the certificates of third-party CAs into the Enterprise NTAuth store. This process is required if you're using a third-party CA to issue certificate based authentication, for example smart card logon or domain controller certificates. By publishing the CA certificate to the Enterprise NTAuth store, the Administrator indicates that the CA is trusted to issue certificates of these types. Windows CAs automatically publish their CA certificates to this store.
+There are two methods you can use to import the certificates of third-party CAs into the Enterprise NTAuth store. This process is required if you're using a third-party CA to issue certificate based authentication, for example, smart card logon or domain controller certificates. By publishing the CA certificate to the Enterprise NTAuth store, the Administrator indicates that the CA is trusted to issue certificates of these types. Windows CAs automatically publish their CA certificates to this store.
 
 _Original KB number:_ &nbsp; 295663
 
@@ -24,14 +24,14 @@ Certificates that are published to the NTAuth store are written to the cACertifi
 
 ## Method 1 - Import a certificate by using the Enterprise PKI Tool
 
-Enterprise PKI Tool (PKIView) is an MMC snap-in component. It displays the status of one or more Microsoft Windows CAs that comprise a PKI. It's available as part of the Windows Server RSAT Tools.
+Enterprise PKI tool (PKIView) is an MMC snap-in component. It displays the status of one or more Microsoft Windows CAs that comprise a PKI. It's available as part of the Windows Server Remote Server Administration Tools (RSAT).
 
 PKIView gathers information about the CA certificates and certificate revocation lists (CRLs) from each CA in the enterprise. Then it validates the certificates and CRLs to ensure that they're working correctly. If they aren't working correctly, or they're about to fail, PKIView provides a detailed warning or some error information.
 
 PKIView displays the status of Windows Server CAs that are installed in an Active Directory forest. You can use PKIView to discover all PKI components, including subordinate and root CAs that are associated with an enterprise CA. The tool can also manage important PKI containers, such as root CA trust and NTAuth stores, that are also contained in the configuration partition of an Active Directory forest. This article discusses this latter functionality.
 
 > [!NOTE]
-> You can use PKIView to manage important PKI containers from Windows Server Enterprise CAs or from an administrative workstation using RSAT Tools.
+> You can use PKIView to manage important PKI containers from Windows Server Enterprise CAs or from an administrative workstation using RSAT.
 
 To import a CA certificate into the Enterprise NTAuth store, follow these steps:
 
@@ -39,7 +39,7 @@ To import a CA certificate into the Enterprise NTAuth store, follow these steps:
    - DER encoded binary X.509 (.cer)
    - Base-64 encoded X.509 (.cer)
 
-2. Logon to Windows Server Enterprise CAs or to an administrative workstation with RSAT Tools installed.
+2. Sign in to Windows Server Enterprise CAs or to an administrative workstation with RSAT installed.
 3. Start Microsoft Management Console (Mmc.exe), and then add the Enterprise PKI snap-in:
 
    1. On the Console menu, select **Add/Remove Snap-in**.
