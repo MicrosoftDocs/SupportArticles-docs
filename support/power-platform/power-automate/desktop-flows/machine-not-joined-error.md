@@ -32,14 +32,16 @@ When you create a desktop flow connection using the [connect with sign-in](/powe
 
 Your machine isn't properly joined to either Microsoft Entra ID or an Active Directory (AD) domain, which is a [prerequisite](/power-automate/desktop-flows/desktop-flow-connections#prerequisites) to using the "connect with sign-in" feature.
 
-## Resolution 1: Join your device to Microsoft Entra ID
+## Resolution
+
+#### Resolution 1: Join your device to Microsoft Entra ID
 
 Microsoft Entra join can be accomplished using self-service options like the Windows Out of Box Experience (OOBE), bulk enrollment, or Windows Autopilot. For more information, see [Microsoft Entra joined devices](/entra/identity/devices/concept-directory-join).
 
-## Resolution 2: Use another connection option
+#### Resolution 2: Use another connection option
 
 If you can't join your device to Microsoft Entra ID, you can update your connections and select the option to [connect with username and password](/power-automate/desktop-flows/desktop-flow-connections#connect-with-username-and-password).
 
-## Resolution 3: Join your machine to an AD domain and synchronize the domain to Microsoft Entra ID
+#### Resolution 3: Join your machine to an AD domain and synchronize the domain to Microsoft Entra ID
 
 Join your machine to an AD domain and [synchronize the domain to Microsoft Entra ID](/entra/identity/hybrid/cloud-sync/how-to-configure#configure-provisioning).
