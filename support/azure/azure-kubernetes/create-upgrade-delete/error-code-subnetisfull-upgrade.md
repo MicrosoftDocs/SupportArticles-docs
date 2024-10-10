@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot a SubnetIsFull error code that occurs during an AKS cluster upgrade
 description: Learn how to troubleshoot the SubnetIsFull error when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/09/2024
+ms.date: 10/10/2024
 editor: v-jsitser
 ms.reviewer: chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
@@ -31,7 +31,7 @@ An AKS cluster upgrade fails, and you receive a "SubnetIsFull" error message.
 
 This error occurs if your cluster doesn't have enough IP addresses to create a new node.
 
-When you plan to do an upgrade or scaling operation, consider the number of required IP addresses. If the IP address range that you configured in the cluster supports only a fixed number of nodes, the upgrade or scaling operation will fail. For more information, see [CNI networking overview (AKS)](/azure/aks/concepts-network-cni-overview).
+When you plan to do an upgrade or scaling operation, consider the number of required IP addresses. If the IP address range that you configured in the cluster supports only a fixed number of nodes, the upgrade or scaling operation will fail. For more information, see [IP address planning for your Azure Kubernetes Service (AKS) clusters](/azure/aks/concepts-network-ip-address-planning).
 
 ## Solution
 
