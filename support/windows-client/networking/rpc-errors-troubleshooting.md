@@ -15,7 +15,9 @@ _Applies to:_ &nbsp; Windows 8, Windows 8.1, Windows 10 , Windows 11, Windows Se
 
 You might encounter an "RPC server unavailable" error when you connect to Windows Management Instrumentation (WMI) or Microsoft SQL Server, during a Remote Procedure Call (RPC) session, or when you use various Microsoft Management Console (MMC) snap-ins. The following image shows an example of an RPC error.
 
-![User's image](media/rpc-errors-troubleshooting/image.png)
+![RPCunavailable](media/rpc-errors-troubleshooting/rpcunavailable.png)
+
+
 
 
 
