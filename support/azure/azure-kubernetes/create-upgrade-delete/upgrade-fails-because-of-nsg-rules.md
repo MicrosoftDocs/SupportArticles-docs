@@ -1,7 +1,7 @@
 ---
 title: AKS cluster upgrade fails because of NSG rules
 description: Learn how to troubleshoot a Kubernetes upgrade failure because of network security group (NSG) rules. 
-ms.date: 07/28/2022
+ms.date: 10/01/2024
 editor: v-jsitser
 ms.reviewer: chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
@@ -31,7 +31,7 @@ An NSG rule is blocking the cluster from downloading required resources.
 
 To resolve this issue, follow these steps:
 
-1. Run `az network nsg list -o table`, and then locate the NSG that's linked to your cluster. The NSG is located in a resource group that's named `MC_<RG name>_<your AKS cluster name>`.
+1. Run `az network nsg list -o table`, and then locate the NSG that's linked to your cluster. The NSG is typically located in the infrastructure or node resource group, by convention named `MC_<RG name>_<your AKS cluster name>_<location code>`.
 
 1. Run the following command to view the NSG rules:
 
