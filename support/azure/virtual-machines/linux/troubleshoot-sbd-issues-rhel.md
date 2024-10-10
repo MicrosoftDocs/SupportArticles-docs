@@ -15,7 +15,7 @@ This article outlines common scenarios where the STONITH Block Device (SBD) serv
 
 ## How SBD works
 
-The SBD device requires at least one additional virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers also can be shared with other Pacemaker clusters. The advantage of using an SBD device is that if you're already using SBD devices on-premises, they don't require any changes to how you operate the Pacemaker cluster.
+The SBD device requires at least one more virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers also can be shared with other Pacemaker clusters. The advantage of using an SBD device is that if you're already using SBD devices on-premises, they don't require any changes to how you operate the Pacemaker cluster.
 
 To set up an Azure Pacemaker cluster with the SBD fencing mechanism, use either of the two options:
 
@@ -46,7 +46,7 @@ The following examples show how to diagnose SBD and Pacemaker service failures:
     sudo pcs status
     ```
 
-    If the Pacemaker cluster doesn't run, you will see the command output that resembles the following text:
+    If the Pacemaker cluster doesn't run, you'll see the command output that resembles the following text:
 
     ```output
     Error: error running crm_mon, is pacemaker running?
@@ -60,7 +60,7 @@ The following examples show how to diagnose SBD and Pacemaker service failures:
     sudo systemctl status corosync
     ```
     
-    If the Corosync service is running, you will see the command output that resembles the following text:
+    If the Corosync service is running, you'll see the command output that resembles the following text:
 
     ```output
     ● corosync.service - Corosync Cluster Engine
@@ -94,7 +94,7 @@ The following examples show how to diagnose SBD and Pacemaker service failures:
     sudo systemctl status pacemaker
     ```
     
-    The SBD service is needed for the Pacemaker service to start. If the Pacemaker service fails to start due to dependency failures, you will see the command output that resembles the following text:
+    The SBD service is needed for the Pacemaker service to start. If the Pacemaker service fails to start due to dependency failures, you'll see the command output that resembles the following text:
 
     ```output
     ○ pacemaker.service - Pacemaker High Availability Cluster Manager
@@ -112,7 +112,7 @@ The following examples show how to diagnose SBD and Pacemaker service failures:
     sudo systemctl list-dependencies pacemaker
     ```
     
-    If the Pacemaker service doesn't have the SBD service as a dependency, you will see the command output that resembles the following text:
+    If the Pacemaker service doesn't have the SBD service as a dependency, you'll see the command output that resembles the following text:
     
     ```output
     pacemaker.service
@@ -130,7 +130,7 @@ The following examples show how to diagnose SBD and Pacemaker service failures:
     sudo systemctl status sbd
     ```
     
-    If the SBD service fails to run, you will see the command output that resembles the following text:
+    If the SBD service fails to run, you'll see the command output that resembles the following text:
 
     ```output
     × sbd.service - Shared-storage based fencing daemon
@@ -177,7 +177,7 @@ To resolve this issue, follow these steps:
     sudo systemctl status iscsid
     ```
 
-    If the services are enabled and running, you will see the command output that resembles the following text:
+    If the services are enabled and running, you'll see the command output that resembles the following text:
   
     ```output
     ● iscsi.service - Login and scanning of iSCSI devices
@@ -210,7 +210,7 @@ The SBD service fails to start due to the following issues:
     ```bash
     sudo pcs stonith config sbd
     ```
-    If the SBD configuration exists, you will see the command output that resembles the following text:
+    If the SBD configuration exists, you'll see the command output that resembles the following text:
     
     ```output
     Resource: sbd (class=stonith type=fence_sbd)
@@ -303,7 +303,7 @@ sr0                11:0    1  628K  0 rom
     SBD_DEVICE="/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779;/dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a;/dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb"
     ```
 
-3. Check if the SBD devices are running and accessible. If the SBD services aren't running and accessible, you will see the "sbd failed; please check the logs." error message.
+3. Check if the SBD devices are running and accessible. If the SBD services aren't running and accessible, you'll see the "sbd failed; please check the logs." error message.
 
     ```bash
     sudo  /usr/sbin/sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
