@@ -1,7 +1,5 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
-- name: Create an unmanaged ingress controller
-  href: ingress-basic.md
 - name: Create, Upgrade, Scale and Delete operations (cluster or nodepool)
   items:
   - name: Create operations
@@ -159,6 +157,11 @@
     - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
       href: create-upgrade-delete/error-code-invalidloadbalancerprofileallocatedoutboundports.md
 
+- name: Load balancer and Ingress controller
+  items:
+  - name: Create an unmanaged ingress controller
+    href: ingress-basic.md
+    
 - name: Troubleshoot Kubernetes control plane
   items:
   - name: Troubleshoot API server and etcd
