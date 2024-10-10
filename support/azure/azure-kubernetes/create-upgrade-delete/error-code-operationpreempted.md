@@ -31,7 +31,7 @@ This error usually occurs when an in-progress operation is interrupted by a subs
 
 ## Solution
 
-Retry the operation after the in-progress operation finishes or abort the long-running operation.
+Retry the operation after the subsequent operation finishes or abort the long-running operation.
 
 ## More information
 
