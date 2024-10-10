@@ -3,7 +3,7 @@ title: Troubleshoot a SubnetIsFull error code that occurs during an AKS cluster 
 description: Learn how to troubleshoot the SubnetIsFull error when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
 ms.date: 10/10/2024
 editor: v-jsitser
-ms.reviewer: chiragpa, v-leedennis
+ms.reviewer: chiragpa, albarqaw, v-leedennis
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a SubnetIsFull error so that I can upgrade the cluster successfully.
@@ -46,6 +46,6 @@ If scaling down isn't an option, and your virtual network CIDR has enough IP add
 
 ## More information
 
-- [InsufficientSubnetSize error code](../../../connectivity/insufficientsubnetsize-error-advanced-networking.md)
+- [InsufficientSubnetSize error code](../connectivity/insufficientsubnetsize-error-advanced-networking.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
