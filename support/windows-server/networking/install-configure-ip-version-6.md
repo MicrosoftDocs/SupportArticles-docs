@@ -1,7 +1,7 @@
 ---
 title: Install and configure IP version 6
 description: Describes how to install and configure IP version 6 (IPv6) in a Windows Server Enterprise Edition environment.
-ms.date: 10/09/2024
+ms.date: 10/10/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -45,23 +45,23 @@ While standards for QoS exist for IPv4, real-time traffic support relies on the 
 
 ## Install IPv6
 
-1. Select **Start**, select **Control Panel**, and then double-click **Network Connections**.
+1. Select **Start** > **Control Panel**, and then double-click **Network Connections**.
 2. Right-click any local area connection, and then select **Properties**.
 3. Select **Install**.
-4. Select **Protocol**, and then select **Add**.
-5. Select **Microsoft TCP/IP version 6**, and then select **OK**.
+4. Select **Protocol** > **Add**.
+5. Select **Microsoft TCP/IP version 6** > **OK**.
 6. Select **Close** to save changes to your network connection.
 
 ## Remove IPv6
 
-1. Select **Start**, select **Control Panel**, and then double-click **Network Connections**.
+1. Select **Start** > **Control Panel**, and then double-click **Network Connections**.
 2. Right-click any local area connection, and then select **Properties**.
 3. Select **Microsoft TCP/IP version 6** in the list of installed components, and then select **Uninstall**.
-4. Select **Yes**, and then select **Close** to save changes to your network connection.
+4. Select **Yes** > **Close** to save changes to your network connection.
 
 ## Configuring IPv6 with Manual Addresses
 
-1. Select **Start**, type *cmd*, right-click **Command Prompt** and then select **Run as administrator**.
+1. Select **Start**, type *cmd*, right-click **Command Prompt**, and then select **Run as administrator**.
 2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
 3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
 4. Type the following command, and then press <kbd>Enter</kbd>:
@@ -70,7 +70,7 @@ While standards for QoS exist for IPv4, real-time traffic support relies on the 
     add address [interface=] string [address=] ipv6address
     ```
 
-    This command uses the following values
+    This command uses the following values:
 
     - [interface =] **string**: Specifies the name for the interface.
     - [address =] **ipv6address**: Specifies the IPv6 address.
@@ -80,8 +80,8 @@ While standards for QoS exist for IPv4, real-time traffic support relies on the 
 
 ## Configuring Interface Attributes
 
-1. Select **Start**, type *cmd*, right-click **Command Prompt** and then select **Run as administrator**.
-2. At the command prompt, type *netsh*, and then press <kbd>Enter</kbd>.
+1. Select **Start**, type *cmd*, right-click **Command Prompt**, and then select **Run as administrator**.
+2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
 3. Type interface ipv6, and then press <kbd>Enter</kbd>.
 4. Type the following command, and then press <kbd>Enter</kbd>:
 
@@ -89,17 +89,17 @@ While standards for QoS exist for IPv4, real-time traffic support relies on the 
     set interface [interface=] string [[forwarding=]enabled|disabled] [[advertise=]enabled|disabled] [[mtu=] integer] [[siteid=] integer] [[metric=] integer] [[firewall=]{enabled | disabled}] [[siteprefixlength=] integer] [[store=]{active|persistent]}
     ```
 
-This command uses the following values:
-
-- [interface =] **string**: Specifies the interface name.
-- [[forwarding =] enabled | disabled]: Specifies whether packets that arrive on this interface can be forwarded to other interfaces. The default setting is disabled.
-- [[advertise =]enabled|disabled]: Specifies whether Router Advertisements are sent on this interface. The default setting is disabled.
-- [[mtu =] **integer**]: Specifies the maximum transmission unit (MTU) of this interface. If mtu is not specified, the default MTU of the link is used.
-- [[siteid =] **integer**]: Specifies the site scope zone identifier. The site identifier is used to distinguish among interfaces that belong to different administrative regions that use site-local addressing.
-- [[metric =] **integer**]: Specifies the interface metric that is added to route metrics for all routes over the interface.
-- [[firewall =]{ enabled | disabled }]: Specifies whether to operate in firewall mode.
-- [[siteprefixlength =] **integer**]: Specifies the default length of the global prefix for the whole site.
-- [[store =] active | persistent]: If you specify active, the change only lasts until the computer is restarted. If you specify persistent, the change is permanent. The default setting is persistent.
+    This command uses the following values:
+    
+    - [interface =] **string**: Specifies the interface name.
+    - [[forwarding =] enabled | disabled]: Specifies whether packets that arrive on this interface can be forwarded to other interfaces. The default setting is disabled.
+    - [[advertise =]enabled|disabled]: Specifies whether Router Advertisements are sent on this interface. The default setting is disabled.
+    - [[mtu =] **integer**]: Specifies the maximum transmission unit (MTU) of this interface. If mtu is not specified, the default MTU of the link is used.
+    - [[siteid =] **integer**]: Specifies the site scope zone identifier. The site identifier is used to distinguish among interfaces that belong to different administrative regions that use site-local addressing.
+    - [[metric =] **integer**]: Specifies the interface metric that is added to route metrics for all routes over the interface.
+    - [[firewall =]{ enabled | disabled }]: Specifies whether to operate in firewall mode.
+    - [[siteprefixlength =] **integer**]: Specifies the default length of the global prefix for the whole site.
+    - [[store =] active | persistent]: If you specify active, the change only lasts until the computer is restarted. If you specify persistent, the change is permanent. The default setting is persistent.
 
 ## View the IPv6 Routing Table
 
@@ -108,12 +108,12 @@ This command uses the following values:
 3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
 4. Type `show routes`, and then press <kbd>Enter</kbd>.
 
-> [!NOTE]
-> To view the additional parameters that are available for this command, type `show routes /?`.
+    > [!NOTE]
+    > To view the additional parameters that are available for this command, type `show routes /?`.
 
 ## Add an IPv6 Route
 
-1. Select **Start**, type *cmd*, right-click **Command Prompt** and then select **Run as administrator**.
+1. Select **Start**, type *cmd*, right-click **Command Prompt**, and then select **Run as administrator**.
 2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
 3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
 4. Type the following command, and then press <kbd>Enter</kbd>:
@@ -135,14 +135,14 @@ This command uses the following values:
     - [[preferredlifetime =]{ **integer** | infinite }]: Specifies the lifetime over which the route is preferred. The default value is equal to the valid lifetime.
     - [[store =]{ active | persistent }]: Specifies whether the change lasts only until the next startup (active) or if it is persistent (persistent). The default setting is persistent.
 
-> [!NOTE]
-> This parameter adds a route for a specific prefix. The time value can be expressed in days, hours, minutes, and seconds (for example, 1d2h3m4s).
-
-When publish is set to no or age, the route is deleted after the end of the valid lifetime. When publish is set to age, the Route Advertisement contains the valid lifetime remaining until deletion. When publish is set to yes, the route will never be deleted, regardless of the valid lifetime value, and every Route Advertisement contain the "same" specified valid lifetime.
+        > [!NOTE]
+        > This parameter adds a route for a specific prefix. The time value can be expressed in days, hours, minutes, and seconds (for example, 1d2h3m4s).
+    
+    When publish is set to no or age, the route is deleted after the end of the valid lifetime. When publish is set to age, the Route Advertisement contains the valid lifetime remaining until deletion. When publish is set to yes, the route will never be deleted, regardless of the valid lifetime value, and every Route Advertisement contain the "same" specified valid lifetime.
 
 ## Remove an IPv6 Route
 
-1. Select **Start**, type *cmd*, right-click **Command Prompt** and then select **Run as administrator**.
+1. Select **Start**, type *cmd*, right-click **Command Prompt**, and then select **Run as administrator**.
 2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
 3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
 4. Type show routes to obtain the route prefix and the interface index of the interface over which the addresses for the route prefix are reachable.
@@ -165,7 +165,7 @@ When publish is set to no or age, the route is deleted after the end of the vali
 
 ## Enable IPv6 forwarding
 
-1. Select **Start**, type *cmd*, right-click **Command Prompt** and then select **Run as administrator**.
+1. Select **Start**, type *cmd*, right-click **Command Prompt**, and then select **Run as administrator**.
 2. At the command prompt, type `netsh`, and then press <kbd>Enter</kbd>.
 3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
 4. Type the following command, and then press <kbd>Enter</kbd>:
@@ -300,8 +300,8 @@ To obtain the IPv6 configuration for a computer:
 3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
 4. Type `show neighbors`, and then press <kbd>Enter</kbd>.
 
-> [!NOTE]
-> To view the additional parameters that are available for this command, type `show neighbors /?`.
+    > [!NOTE]
+    > To view the additional parameters that are available for this command, type `show neighbors /?`.
 
 ## View the destination cache
 
@@ -310,5 +310,5 @@ To obtain the IPv6 configuration for a computer:
 3. Type `interface ipv6`, and then press <kbd>Enter</kbd>.
 4. Type `show destinationcache`, and then press <kbd>Enter</kbd>.
 
-> [!NOTE]
-> To view the additional parameters that are available for this command, type `show destinationcache /?`.
+    > [!NOTE]
+    > To view the additional parameters that are available for this command, type `show destinationcache /?`.
