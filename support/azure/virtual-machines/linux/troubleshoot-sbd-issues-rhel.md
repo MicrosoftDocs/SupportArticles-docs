@@ -2,7 +2,7 @@
 title: Troubleshoot SBD service failure in RHEL Pacemaker clusters
 description: Provides troubleshooting guidance to an issue where the SBD service doesn't fail to start in a Red Hat Enterprise Server Pacemaker cluster.
 ms.reviewer: rnirek, sentj, hsisodia, divargas, v-weizhu
-ms.date: 10/08/2024
+ms.date: 10/10/2024
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
