@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the AKSOperationPreempted error code
 description: Helps resolve the AKSOperationPreempted or AKSOperationPreemptedByDelete error when you perform a new operation on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/08/2024
+ms.date: 10/10/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
@@ -27,7 +27,7 @@ When you try to perform a new operation on an AKS cluster, you receive one of th
 
 ## Cause
 
-This error usually occurs when an in-progress operation is interrupted by a subsequent operation that was issued before the in-progress operation is finished. The error will indicate the in-progress operation, which can be a delete or any other operation.
+This error usually occurs when an in-progress operation is interrupted by a subsequent operation that was issued before the in-progress operation is finished. The error will indicate the subsequent operation, which can be a delete or any other operation.
 
 ## Solution
 
