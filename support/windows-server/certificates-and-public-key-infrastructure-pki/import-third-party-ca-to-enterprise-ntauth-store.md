@@ -1,7 +1,7 @@
 ---
 title: Import third-party certification authorities (CAs) into Enterprise NTAuth store
 description: Describes two methods you can use to import the certificates of third-party CAs into the Enterprise NTAuth store. You can use the Enterprise Public Key Infrastructure (PKI) tool, or Certutil.exe.
-ms.date: 10/09/2024
+ms.date: 10/10/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 ---
 # How to import third-party certification authority (CA) certificates into the Enterprise NTAuth store
 
-There are two methods you can use to import the certificates of third-party CAs into the Enterprise NTAuth store. This process is required if you're using a third-party CA to issue certificate based authentication, for example, smart card logon or domain controller certificates. By publishing the CA certificate to the Enterprise NTAuth store, the Administrator indicates that the CA is trusted to issue certificates of these types. Windows CAs automatically publish their CA certificates to this store.
+You can use two methods to import the certificates of third-party CAs into the Enterprise NTAuth store. This process is required if you're using a third-party CA to issue certificate based authentication, for example, smart card logon or domain controller certificates. By publishing the CA certificate to the Enterprise NTAuth store, the Administrator indicates that the CA is trusted to issue certificates of these types. Windows CAs automatically publish their CA certificates to this store.
 
 _Original KB number:_ &nbsp; 295663
 
