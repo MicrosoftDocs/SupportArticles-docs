@@ -11,7 +11,7 @@ audience: itpro
 ---
 # Remote Procedure Call (RPC) errors troubleshooting guidance
 
-_Applies to:_ &nbsp; Windows 7, Windows 8, Windows 8.1, Windows 10 , Windows 11, Windows Server 2012, Windows Server 2012R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista
+_Applies to:_ &nbsp;  Windows 8, Windows 8.1, Windows 10 , Windows 11, Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019 , Windows Server 2022.
 
 You might encounter an "RPC server unavailable" error when you connect to Windows Management Instrumentation (WMI) or Microsoft SQL Server, during a Remote Procedure Call (RPC) session, or when you use various Microsoft Management Console (MMC) snap-ins. The following image shows an example of an RPC error.
 
@@ -19,9 +19,12 @@ You might encounter an "RPC server unavailable" error when you connect to Window
 
 
 
+
+
 This is a common networking error that requires some basic familiarity with the process to successfully troubleshoot. To begin, there are several important terms to understand:
 
-- **Endpoint mapper (EPM)**: A service that listens on the server and guides client apps to server apps by using port and UUID information.
+- **Endpoint mapper (EPM)**: A service that listens on the server and guides client apps to server apps by using port and UUID information. And a Part of the RPC subsystem that resolves dynamic endpoints in response to client requests and, in some configurations, dynamically assigns endpoints to servers.
+
 - **Tower**: Describes the RPC protocol to enable the client and server to negotiate a connection.
 - **Floors**: The layers of contents within a tower that contain specific data, such as ports, IP addresses, and identifiers.
 - **UUID**: A well-known GUID that identifies an RPC application. During troubleshooting, you can use the UUID to track the RPC conversations of a single type of application (among the many types that occur on a single computer at one time).
