@@ -1,7 +1,7 @@
 ---
 title: Change expiration date of certificates
 description: Describes how to change the validity period of a certificate that is issued by Certificate Authority (CA).
-ms.date: 12/26/2023
+ms.date: 10/10/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -24,7 +24,7 @@ For certificates that are issued by Enterprise CAs, the validity period is defin
 
 - The registry validity period that is noted earlier in this article.
 
-    This applies to the stand-alone CA, and Subordinate CA certificates issued by the Enterprise CA.
+  This applies to the stand-alone CA, and Subordinate CA certificates issued by the Enterprise CA.
 
 - The template validity period.
 
@@ -38,7 +38,7 @@ For an Enterprise CA, the validity period of an issued certificate is set to the
 - If the EDITF_ATTRIBUTEENDDATE bit is enabled in the policy module's EditFlags registry value, the validity period specified through the request attributes (ExpirationDate:Date or ValidityPeriod:Years\nValidityPeriodUnits:1)
 
 > [!NOTE]
-- For a stand-alone CA, no templates are processed. Therefore, the template validity period does not apply.
+> For a stand-alone CA, no templates are processed. Therefore, the template validity period does not apply.
 
 ## The expiration date of the CA certificate
 
@@ -58,26 +58,27 @@ To change the validity period settings for a CA, follow these steps.
 2. In the **Open** box, type *regedit*, and then click **OK**.
 3. Locate, and then click the following registry key:
 
-    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\CertSvc\Configuration\<CAName>`
+   `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\CertSvc\Configuration\<CAName>`
 
 4. In the right pane, double-click **ValidityPeriod**.
 5. In the **Value data** box, type one of the following, and then click **OK**:
 
-    - Days
-    - Weeks
-    - Months
-    - Years
+   - Days
+   - Weeks
+   - Months
+   - Years
+
 6. In the right pane, double-click **ValidityPeriodUnits**.
 7. In the **Value data** box, type the numeric value that you want, and then click **OK**. For example, type *2*.
 8. Stop, and then restart the Certificate Services service. To do so:
 
-    1. Click **Start**, and then click **Run**.
-    2. In the **Open** box, type *cmd*, and then click **OK**.
-    3. At the command prompt, type the following lines. Press ENTER after each line.
+   1. Click **Start**, and then click **Run**.
+   2. In the **Open** box, type *cmd*, and then click **OK**.
+   3. At the command prompt, type the following lines. Press ENTER after each line.
 
-        ```console
-        net stop certsvc
-        net start certsvc
-        ```
+      ```console
+      net stop certsvc
+      net start certsvc
+      ```
 
-    4. Type exit to quit Command Prompt.
+   4. Type exit to quit Command Prompt.
