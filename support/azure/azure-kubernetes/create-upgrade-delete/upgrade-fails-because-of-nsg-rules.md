@@ -31,7 +31,7 @@ An NSG rule is blocking the cluster from downloading required resources.
 
 To resolve this issue, follow these steps:
 
-1. Run `az network nsg list -o table`, and then locate the NSG that's linked to your cluster, usually located in the infrastructure or node resource group, by convention named `MC_<RG name>_<your AKS cluster name>_<location code>`.
+1. Run `az network nsg list -o table`, and then locate the NSG that's linked to your cluster. The NSG is typically located in the infrastructure or node resource group, by convention named `MC_<RG name>_<your AKS cluster name>_<location code>`.
 
 1. Run the following command to view the NSG rules:
 
