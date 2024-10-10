@@ -328,6 +328,8 @@
       href: extensions/istio-add-on-general-troubleshooting.md
     - name: Feature-specific troubleshooting
       items:
+      - name: 
+        href: extensions/ingress-basic.md
       - name: Istio add-on ingress gateway troubleshooting
         href: extensions/istio-add-on-ingress-gateway.md
       - name: Istio add-on MeshConfig troubleshooting
