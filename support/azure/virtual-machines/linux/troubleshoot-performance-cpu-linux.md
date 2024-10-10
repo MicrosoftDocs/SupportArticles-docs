@@ -128,7 +128,7 @@ The CPU usage is dependent on which resource is trying to access the CPU. The ke
 
 To understand how the kernel manages these different resources, we have to first understand some key concepts such as context switches, run queues, and usage.
 
-### sar
+## sar
 
 The `sar` tool is provided by the **sysstat** package that provides other statistical reporting tools, such as `iostat`. By default, the `sysstat` package isn't installed. 
 
