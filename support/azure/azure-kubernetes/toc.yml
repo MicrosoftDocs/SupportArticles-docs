@@ -27,7 +27,7 @@
       href: create-upgrade-delete/error-code-missingsubscriptionregistration.md
     - name: OperationNotAllowed or PublicIPCountLimitReached error
       href: create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md
-    - name: OperationPreempted error
+    - name: AKSOperationPreempted error
       href: create-upgrade-delete/error-code-operationpreempted.md
     - name: OutboundConnFailVMExtensionError error (50)
       href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
