@@ -11,7 +11,7 @@ audience: itpro
 ---
 # Remote Procedure Call (RPC) errors troubleshooting guidance
 
-_Applies to:_ &nbsp;  Windows 8, Windows 8.1, Windows 10 , Windows 11, Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019 , Windows Server 2022.
+_Applies to:_ &nbsp; Windows 8, Windows 8.1, Windows 10 , Windows 11, Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019 , Windows Server 2022.
 
 You might encounter an "RPC server unavailable" error when you connect to Windows Management Instrumentation (WMI) or Microsoft SQL Server, during a Remote Procedure Call (RPC) session, or when you use various Microsoft Management Console (MMC) snap-ins. The following image shows an example of an RPC error.
 
