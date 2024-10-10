@@ -91,6 +91,10 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 
 [Upload a generalized VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed)
 
+   > [!NOTE]  
+   > The source image information, including Publisher, offer, and plan, does not change after performing an in-place upgrade. The image used to deploy the VM remains the same; only the OS is upgraded.
+
+
 ## References
 
 [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672).
