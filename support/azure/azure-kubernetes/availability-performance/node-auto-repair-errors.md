@@ -9,7 +9,7 @@ ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot common node auto-repair errors
 
-When AKS detects a node which reports the NotReady status for more than 5 minutes, we will attempt to automatically repair your node. Learn more about the node auto-repair process [here](https://learn.microsoft.com/en-us/azure/aks/node-auto-repair).
+When AKS detects a node which reports the NotReady status for more than 5 minutes, we will attempt to automatically repair your node. Node auto-repair is a best-effort service and does not guarantee that your node will be restored to a healthy state. Learn more about the node auto-repair process [here](https://learn.microsoft.com/en-us/azure/aks/node-auto-repair).
 
 During this process, AKS will initiate reboot, reimage, and redeploy actions on your unhealthy node. These repair actions may encounter errors due underlying causes, which will result in an error code. This article will discuss common errors with their potential causes and next steps, as well as best practices for monitoring node auto-repair.
 
@@ -17,8 +17,8 @@ During this process, AKS will initiate reboot, reimage, and redeploy actions on 
 To determine what type of node auto-repair error has occured, you will need to look for the following Kubernetes event: 
 "Node auto-repair [reboot/reimage/redeploy] action failed due to an operation failure: [error code]."
 
-!Note
-Node auto-repair is In most cases, node auto-repair errors will not cause any impact to your cluster or applications. When encountering a node auto-repair error, we recommend that you attempt to repair the node yourself by following the instructions here: [Basic troubleshooting of Node Not Ready failures](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/availability-performance/node-not-ready-basic-troubleshooting). If you notice persistent errors reported by node auto-repair which are indicative of , you can 
+> [!NOTE]
+> In most cases, node auto-repair errors will not cause any impact to your cluster or applications. When encountering a node auto-repair error, we recommend that you attempt to repair the node yourself by following the instructions here: [Basic troubleshooting of Node Not Ready failures](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/availability-performance/node-not-ready-basic-troubleshooting). If you are unable to restore your node back to a Succeeded status and are noticing persistent errors reported by node auto-repair, you may be encountering a rare issue and should reach out to Azure support.
 
 ## Common error codes
 The table below contains the most common node auto-repair errors.
