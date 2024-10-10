@@ -216,7 +216,7 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 
 These are percentages of total CPU time:
 
-- us: Time spent running non-kernel code (user time, including CPU low-priority processing time)
+- us: Time spent running nonkernel code (user time, including CPU low-priority processing time)
 - sy: Time spent running kernel code (system time)
 - id: Time spent idle
 - wa: Time spent waiting for I/O
@@ -235,7 +235,7 @@ sudo pidstat -wt 2 5
 - `-w`: Report task switching activity
 - `-t`: Display statistics for threads that are associated with selected tasks
 
-The following `vmstat` report and `pidstat` report are generated wen you run the `stress-ng --cpu 2 --switch 50 --timeout 60s` command. This command purposely generates high CPU context switches.
+The following `vmstat` report and `pidstat` report are generated when you run the `stress-ng --cpu 2 --switch 50 --timeout 60s` command. This command purposely generates high CPU context switches.
 
 **The vmstat outputs while high CPU context switch is running**
 
