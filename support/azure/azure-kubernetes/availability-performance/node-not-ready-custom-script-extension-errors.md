@@ -1,7 +1,7 @@
 ---
 title: Node Not Ready because of custom script extension (CSE) errors
 description: Troubleshoot scenarios in which custom script extension (CSE) errors cause Node Not Ready states in an Azure Kubernetes Service (AKS) cluster node pool.
-ms.date: 04/15/2022
+ms.date: 10/08/2022
 ms.reviewer: rissing, chiragpa, momajed, v-leedennis
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance, devx-track-azurecli
@@ -49,9 +49,9 @@ Set up your custom Domain Name System (DNS) server so that it can do name resolu
 
 - Don't use the Azure DNS IP address with the IP addresses of your custom DNS server. Doing this isn't recommended.
 
-- Avoid using IP addresses instead of the DNS server in DNS settings. You can use Azure CLI commands to check for this situation on a virtual machine (VM) scale set or availability set.
+- Avoid using IP addresses instead of the DNS server in DNS settings. You can use Azure CLI commands to check for this situation on a Virtual Machine Scale Set or availability set.
 
-  - For VM scale set nodes, use the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command:
+  - For Virtual Machine Scale Set nodes, use the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command:
 
     ```azurecli
     az vmss run-command invoke \
@@ -108,9 +108,9 @@ Make sure that the API server can be reached and isn't subject to delays. To do 
   | Set type | Action |
   | -------- | ------ |
   | VM availability set | Delete the node from the Azure portal and the AKS API by using the [kubectl delete](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#delete) node command, and then scale up the cluster again. |
-  | VM scale set | Either reimage the node, or delete the node, and then scale up the cluster again. |
+  | Virtual Machine Scale Set | Either reimage the node from the Azure Portal, or delete the node, and then scale up the cluster again. To delete the specific node, use [az aks nodepool delete-machines](/azure/aks/nodepool#az-aks-nodepool-delete-machines) command. It will cordon & drain first and then delete the node. |
 
-- If the requests are being throttled by the AKS API server, upgrade to a higher service tier. For more information, see [AKS Uptime SLA](/azure/aks/uptime-sla).
+- If the requests are being throttled by the AKS API server, upgrade to a higher service tier. For more information, see [Pricing tiers for AKS](/azure/aks/free-standard-pricing-tiers).
 
 ## More information
 
