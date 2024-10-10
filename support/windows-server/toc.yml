@@ -835,6 +835,8 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate.md
     - name: Clients can't authenticate with a server
       href: ./certificates-and-public-key-infrastructure-pki/clients-cant-authenticate-server.md
+    - name: Error 0x800706ba during certificate enrollment
+      href: ./certificates-and-public-key-infrastructure-pki/error-0x800706ba-certificate-enrollment.md
     - name: How to install imported certificates on a Web server
       href: ./certificates-and-public-key-infrastructure-pki/install-imported-certificates.md
     - name: Remote Desktop server certificates are renewed two times daily
@@ -855,6 +857,8 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/cannot-request-certificate-with-web-enrollment.md
   - name: Encrypting File System (EFS)
     items:
+    - name: Back up recovery agent EFS private key
+      href: ./certificates-and-public-key-infrastructure-pki/back-up-recovery-agent-efs-private-key.md
     - name: Can't share files with multiple EFS certificates
       href: ./certificates-and-public-key-infrastructure-pki/cant-share-files-multiple-efs-certificates.md
     - name: Client computers can't encrypt a file in a domain
@@ -875,22 +879,18 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail.md
   - name: Smart card logon
     items:
-    - name: Back up recovery agent EFS private key
-      href: ./certificates-and-public-key-infrastructure-pki/back-up-recovery-agent-efs-private-key.md
-    - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
-      href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
     - name: DPAPI MasterKey backup failures
       href: ./certificates-and-public-key-infrastructure-pki/dpapi-masterkey-backup-failures.md
     - name: Enabling smart card logon
       href: ./certificates-and-public-key-infrastructure-pki/enabling-smart-card-logon-third-party-certification-authorities.md
     - name: Errors when applications try to connect to SQL Server
       href: ./certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors.md
-    - name: Error 0x800706ba during certificate enrollment
-      href: ./certificates-and-public-key-infrastructure-pki/error-0x800706ba-certificate-enrollment.md
     - name: Required trusted root certificates
       href: ./certificates-and-public-key-infrastructure-pki/trusted-root-certificates-are-required.md
   - name: SSL or TLS
     items:
+    - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
+      href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
     - name: Restrict cryptographic algorithms and protocols
       href: ./certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md
 - name: Containers
