@@ -20,7 +20,7 @@ The SessionHasLoggedOff error code means that the Windows session that was runni
 
 Steps to investigate:
 
-1. Verify that there is no custom sript (such as a batch file or powershell execution) in your desktop flow which may cause the session to be logged off or for the machine to reboot.
+1. Verify that there is no custom sript (such as a batch file or any powershell script execution) in your desktop flow which may cause the session to be logged off or for the machine to reboot.
 
 1. Verify that no group policy setting may be logging off the remote desktop session due to time limits. You can verify settings opening the Local Group Policy Editor and navigating to Computer Configuration > Administrative Templates > Windows Components > Remote Desktop Services > Session Time Limits.
 
